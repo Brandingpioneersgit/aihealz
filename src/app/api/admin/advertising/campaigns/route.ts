@@ -3,8 +3,6 @@ import prisma from '@/lib/db';
 import { verifyAdminAuth } from '@/lib/admin-auth';
 import { AdStatus } from '@prisma/client';
 
-// Local type until AdCampaign/AdStatus are added to Prisma schema
-type AdStatus = 'draft' | 'pending_review' | 'active' | 'paused' | 'cancelled' | 'completed';
 
 /**
  * GET /api/admin/advertising/campaigns
@@ -27,7 +25,8 @@ export async function GET(request: NextRequest) {
 
         const campaigns = await prisma.adCampaign.findMany({
             where: {
-                ...(status && { status: status as AdStatus }),
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                ...(status && { status: status as any }),
                 ...(advertiserId && { advertiserId: parseInt(advertiserId) }),
             },
             include: {
