@@ -1,0 +1,14 @@
+[0;1;31m×[0m postgresql-16.service - PostgreSQL 16 database server
+     Loaded: loaded (]8;;file://srv1396855.hstgr.cloud/usr/lib/systemd/system/postgresql-16.service/usr/lib/systemd/system/postgresql-16.service]8;;; [0;1;32menabled[0m; preset: [0;1;38;5;185mdisabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Wed 2026-03-25 13:14:45 UTC; 11s ago
+       Docs: ]8;;https://www.postgresql.org/docs/16/static/https://www.postgresql.org/docs/16/static/]8;;
+    Process: 364322 ExecStartPre=/usr/pgsql-16/bin/postgresql-16-check-db-dir ${PGDATA} (code=exited, status=0/SUCCESS)
+    Process: 364327 ExecStart=/usr/pgsql-16/bin/postgres -D ${PGDATA} [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 364327 (code=exited, status=1/FAILURE)
+        CPU: 40ms
+
+Mar 25 13:14:45 srv1396855.hstgr.cloud systemd[1]: postgresql-16.service: Scheduled restart job, restart counter is at 6.
+Mar 25 13:14:45 srv1396855.hstgr.cloud systemd[1]: Stopped PostgreSQL 16 database server.
+Mar 25 13:14:45 srv1396855.hstgr.cloud systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mpostgresql-16.service: Start request repeated too quickly.[0m
+Mar 25 13:14:45 srv1396855.hstgr.cloud systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mpostgresql-16.service: Failed with result 'exit-code'.[0m
+Mar 25 13:14:45 srv1396855.hstgr.cloud systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start PostgreSQL 16 database server.[0m
