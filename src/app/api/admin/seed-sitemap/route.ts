@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import * as fs from 'fs';
+import { promises as fs } from 'fs';
 import * as path from 'path';
 import prisma from '@/lib/db';
 
@@ -363,15 +363,16 @@ export async function POST(request: NextRequest) {
         let treatmentSlugs: string[] = [];
         try {
             const treatmentsFile = path.join(process.cwd(), 'public', 'data', 'treatments.json');
-            const treatmentsData = JSON.parse(fs.readFileSync(treatmentsFile, 'utf8'));
+            const raw = await fs.readFile(treatmentsFile, 'utf8');
+            const treatmentsData = JSON.parse(raw) as Array<{ name: string; simpleName?: string }>;
             const slugSet = new Set<string>();
             for (const t of treatmentsData) {
                 const slug = slugify(t.simpleName || t.name);
                 if (slug) slugSet.add(slug);
             }
             treatmentSlugs = Array.from(slugSet);
-        } catch {
-            console.log('Could not read treatments.json, falling back to TreatmentCost table');
+        } catch (err) {
+            console.warn('Could not read treatments.json, falling back to TreatmentCost table:', err);
             const treatmentCosts = await prisma.treatmentCost.findMany({
                 distinct: ['treatmentName'],
                 select: { treatmentName: true },

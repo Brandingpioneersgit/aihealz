@@ -35,7 +35,9 @@ function EnquiryForm() {
             .then(data => {
                 if (data.name) setHospitalName(data.name);
             })
-            .catch(() => {});
+            .catch((err) => {
+                console.warn('Failed to load hospital name:', err);
+            });
     }, [hospitalSlug]);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -374,7 +376,7 @@ function LoadingFallback() {
 
 export default function HospitalEnquirePage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-200 pt-24 pb-16">
+        <main className="v4-root min-h-screen pt-24 pb-16" style={{background:"var(--bg)",color:"var(--ink)"}}>
             <div className="max-w-xl mx-auto px-6">
                 <Suspense fallback={<LoadingFallback />}>
                     <EnquiryForm />

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
 import { checkAdminAuth, unauthorizedResponse } from '@/lib/admin-auth';
-import fs from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 
 export async function GET(req: NextRequest) {
@@ -35,10 +35,11 @@ export async function GET(req: NextRequest) {
         let treatmentsCount = 0;
         try {
             const treatmentsPath = path.join(process.cwd(), 'public', 'data', 'treatments.json');
-            const treatmentsData = JSON.parse(fs.readFileSync(treatmentsPath, 'utf-8'));
+            const raw = await fs.readFile(treatmentsPath, 'utf-8');
+            const treatmentsData = JSON.parse(raw);
             treatmentsCount = Array.isArray(treatmentsData) ? treatmentsData.length : 0;
-        } catch {
-            console.warn('Could not count treatments from JSON file');
+        } catch (err) {
+            console.warn('Could not count treatments from JSON file:', err);
         }
 
         // Count remedies from conditions (those with home remedies in their treatments)
