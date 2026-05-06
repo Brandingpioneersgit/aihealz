@@ -46,8 +46,6 @@ const nextConfig: NextConfig = {
       // Medical image APIs
       { protocol: 'https', hostname: 'pollinations.ai' },
       { protocol: 'https', hostname: 'image.pollinations.ai' },
-      // Allow any HTTPS source as fallback (for user-submitted URLs)
-      { protocol: 'https', hostname: '**' },
     ],
     // Image formats to generate
     formats: ['image/avif', 'image/webp'],
@@ -62,7 +60,7 @@ const nextConfig: NextConfig = {
   },
 
   // Enable strict mode for better debugging
-  reactStrictMode: false,
+  reactStrictMode: true,
 
   // Experimental features
   experimental: {

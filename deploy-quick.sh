@@ -3,12 +3,13 @@
 # AIHEALZ Quick Deploy Script
 # Syncs code to server and builds on production (where database is available)
 
-set -e
+set -euo pipefail
 
-SERVER_USER="root"
-SERVER_IP="72.61.224.90"
-SERVER_PORT="22"
-DEPLOY_PATH="/home/aihealz.com/public_html"
+# Override via env: SERVER_IP=1.2.3.4 ./deploy-quick.sh
+SERVER_USER="${SERVER_USER:-root}"
+SERVER_IP="${SERVER_IP:?Set SERVER_IP=<ip-or-hostname> before running}"
+SERVER_PORT="${SERVER_PORT:-22}"
+DEPLOY_PATH="${DEPLOY_PATH:-/home/aihealz.com/public_html}"
 
 echo "🚀 AIHEALZ Production Deploy"
 echo "============================"

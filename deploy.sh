@@ -3,14 +3,14 @@
 # AIHEALZ Deployment Script
 # Deploys to Hostinger VPS with CyberPanel
 
-set -e
+set -euo pipefail
 
-# Configuration
-SERVER_USER="root"
-SERVER_IP="72.61.224.90"
-SERVER_PORT="22"
-DEPLOY_PATH="/home/aihealz.com/public_html"
-APP_NAME="aihealz"
+# Configuration — override via env vars before invoking
+SERVER_USER="${SERVER_USER:-root}"
+SERVER_IP="${SERVER_IP:?Set SERVER_IP=<ip-or-hostname> before running}"
+SERVER_PORT="${SERVER_PORT:-22}"
+DEPLOY_PATH="${DEPLOY_PATH:-/home/aihealz.com/public_html}"
+APP_NAME="${APP_NAME:-aihealz}"
 
 echo "🚀 Starting AIHEALZ deployment..."
 echo "================================="
@@ -30,7 +30,13 @@ echo "📤 Step 3: Syncing files to server..."
 rsync -avz --delete \
     --exclude 'node_modules' \
     --exclude '.git' \
+    --exclude '.env' \
     --exclude '.env.local' \
+    --exclude '.env.production' \
+    --exclude 'secrets/' \
+    --exclude '*.sql.gz' \
+    --exclude '*.dump' \
+    --exclude 'prisma/dev.db*' \
     --exclude '.next/cache' \
     -e "ssh -p ${SERVER_PORT}" \
     ./ ${SERVER_USER}@${SERVER_IP}:${DEPLOY_PATH}/

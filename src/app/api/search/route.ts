@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
-import fs from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 import { normalizeSpecialty, SPECIALTY_ICON_MAP } from '@/lib/normalize-specialty';
 import { checkRateLimit, getClientIdentifier, rateLimitHeaders } from '@/lib/rate-limit';
@@ -46,20 +46,38 @@ interface TreatmentData {
 }
 let treatmentsCache: TreatmentData[] | null = null;
 let treatmentsCacheTime: number = 0;
+let treatmentsLoadPromise: Promise<TreatmentData[]> | null = null;
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
-function getTreatments(): TreatmentData[] {
-    const now = Date.now();
-    if (!treatmentsCache || now - treatmentsCacheTime > CACHE_TTL) {
-        try {
-            const filePath = path.join(process.cwd(), 'public', 'data', 'treatments.json');
-            treatmentsCache = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-            treatmentsCacheTime = now;
-        } catch {
-            treatmentsCache = [];
-        }
+async function loadTreatmentsFromDisk(): Promise<TreatmentData[]> {
+    try {
+        const filePath = path.join(process.cwd(), 'public', 'data', 'treatments.json');
+        const raw = await fs.readFile(filePath, 'utf-8');
+        return JSON.parse(raw) as TreatmentData[];
+    } catch (err) {
+        console.error('Failed to load treatments.json:', err);
+        return [];
     }
-    return treatmentsCache!;
+}
+
+async function getTreatments(): Promise<TreatmentData[]> {
+    const now = Date.now();
+    if (treatmentsCache && now - treatmentsCacheTime <= CACHE_TTL) {
+        return treatmentsCache;
+    }
+    // Dedupe concurrent loads so the file is only read once per cache miss.
+    if (!treatmentsLoadPromise) {
+        treatmentsLoadPromise = loadTreatmentsFromDisk()
+            .then((data) => {
+                treatmentsCache = data;
+                treatmentsCacheTime = Date.now();
+                return data;
+            })
+            .finally(() => {
+                treatmentsLoadPromise = null;
+            });
+    }
+    return treatmentsLoadPromise;
 }
 
 // Known specialties for matching
@@ -284,7 +302,7 @@ export async function GET(req: NextRequest) {
         // 4. Search treatments (from JSON) - skip if filtering for conditions only
         // Search by name, simpleName, brandNames, and searchTags
         if (!typeFilter || typeFilter === 'treatment') {
-            const treatments = getTreatments();
+            const treatments = await getTreatments();
             const maxResults = typeFilter === 'treatment' ? 10 : 5;
 
             // Score treatments by match quality
