@@ -168,6 +168,16 @@ export default function SeoSettingsPage() {
 
     return (
         <div className="space-y-6 max-w-4xl">
+            <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
+                <div className="font-semibold mb-1">SEO toggles are partially live.</div>
+                <div className="text-amber-800">
+                    Schema markup and meta-title templates on individual pages (homepage,
+                    conditions, treatments, doctors) are currently hardcoded in their respective
+                    page components. Toggles on this screen are saved but do not yet flip the live
+                    schemas. Treat this as a configuration staging area until the page components
+                    are refactored to read from the persisted SEO settings.
+                </div>
+            </div>
             <div className="flex items-center justify-between">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">

@@ -1,15 +1,26 @@
 import type { Metadata, Viewport } from 'next';
+import { headers } from 'next/headers';
 import Script from 'next/script';
-import ContextualFooter from '@/components/contextual-footer';
-import GeoAutoDetect from '@/components/geo-auto-detect';
-import AIGuide from '@/components/ui/ai-guide';
-import CookieConsent from '@/components/ui/cookie-consent';
-import NavbarWrapper from '@/components/ui/navbar-wrapper';
-import WhatsAppCTA from '@/components/ui/whatsapp-cta';
+import { Inter, JetBrains_Mono } from 'next/font/google';
+import V4Navbar from '@/components/v4/Navbar';
+import V4Footer from '@/components/v4/Footer';
 import { DefaultSiteSchemas } from '@/lib/structured-data';
+import ClientWidgets from '@/components/ClientWidgets';
 import './globals.css';
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+});
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+  weight: ['400', '500'],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -41,20 +52,38 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0f172a',
+  themeColor: '#F4F6FA',
   width: 'device-width',
   initialScale: 1,
 };
 
-export default function RootLayout({
+const SUPPORTED_LANGS = new Set([
+  'en', 'hi', 'ar', 'bn', 'de', 'es', 'fr', 'gu', 'kn',
+  'ml', 'mr', 'or', 'pa', 'pt', 'ta', 'te', 'ur',
+]);
+const RTL_LANGS = new Set(['ar', 'ur', 'he']);
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Middleware sets x-aihealz-lang per request; assistive tech needs the real
+  // <html lang>/<html dir>, not just meta tags.
+  const h = await headers();
+  const rawLang = (h.get('x-aihealz-lang') || 'en').toLowerCase();
+  const lang = SUPPORTED_LANGS.has(rawLang) ? rawLang : 'en';
+  const dir = RTL_LANGS.has(lang) ? 'rtl' : 'ltr';
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang={lang}
+      dir={dir}
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager (also injects GA4 via container) */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -62,30 +91,8 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-N698KG2Z');`}
         </Script>
-        {/* Google Analytics (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NGENLNWQL1"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-NGENLNWQL1');`}
-        </Script>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-          crossOrigin="anonymous"
-        />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-N698KG2Z"
@@ -94,39 +101,23 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        {/* ── Skip Link for Accessibility ──────────── */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-lg focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:font-semibold"
         >
           Skip to main content
         </a>
-
-        {/* ── Structured Data for AI/Voice/Search ───── */}
         <DefaultSiteSchemas />
-
-        {/* ── Geo Auto-Detection ───────────────────── */}
-        <GeoAutoDetect />
-
-        {/* ── Navigation ─────────────────────────────── */}
-        <NavbarWrapper />
-
-        {/* ── Main Content ───────────────────────────── */}
-        <main id="main-content" className="flex-1 pt-16" role="main">
+        <div className="v4-root">
+          <V4Navbar />
+        </div>
+        <main id="main-content" className="flex-1">
           {children}
         </main>
-
-        {/* ── Global Interactive AI Guide ─────────────── */}
-        <AIGuide />
-
-        {/* ── Global WhatsApp CTA ────────────────────── */}
-        <WhatsAppCTA />
-
-        {/* ── Contextual Footer ──────────────────────── */}
-        <ContextualFooter />
-
-        {/* ── Cookie Consent Banner ───────────────────── */}
-        <CookieConsent />
+        <div className="v4-root">
+          <V4Footer />
+        </div>
+        <ClientWidgets />
       </body>
     </html>
   );

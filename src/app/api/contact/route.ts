@@ -15,7 +15,7 @@ const contactSchema = z.object({
 export async function POST(req: NextRequest) {
     // Apply strict rate limiting to prevent spam
     const clientId = getClientIdentifier(req);
-    const rateLimit = checkRateLimit(`contact:${clientId}`, RATE_LIMITS.contact);
+    const rateLimit = await checkRateLimit(`contact:${clientId}`, RATE_LIMITS.contact);
 
     if (!rateLimit.success) {
         return NextResponse.json(
@@ -59,11 +59,9 @@ export async function POST(req: NextRequest) {
             },
         });
 
-        // Log for monitoring
+        // Log for monitoring — PII (name/email) is intentionally NOT logged.
         console.log('[Contact Form Submission]', {
             id: submission.id,
-            name,
-            email,
             messageLength: message.length,
             timestamp: submission.createdAt.toISOString(),
         });

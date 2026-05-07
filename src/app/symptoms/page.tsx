@@ -85,6 +85,25 @@ export default function SymptomsPage() {
                     </div>
                 </div>
 
+                {/* Primary follow-on CTAs */}
+                <div className="mt-12 grid md:grid-cols-3 gap-4">
+                    <Link href="/doctors" className="block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-400/40 transition-colors">
+                        <p className="text-[10px] uppercase tracking-widest text-primary-400 mb-1">Next step</p>
+                        <p className="text-base font-semibold text-white mb-1">Talk to a doctor →</p>
+                        <p className="text-xs text-slate-400">Get matched with a verified specialist near you.</p>
+                    </Link>
+                    <Link href="/conditions" className="block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-400/40 transition-colors">
+                        <p className="text-[10px] uppercase tracking-widest text-primary-400 mb-1">Or</p>
+                        <p className="text-base font-semibold text-white mb-1">Search by condition →</p>
+                        <p className="text-xs text-slate-400">Browse our condition library A–Z with treatment paths.</p>
+                    </Link>
+                    <Link href="/blog" className="block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-400/40 transition-colors">
+                        <p className="text-[10px] uppercase tracking-widest text-primary-400 mb-1">Related articles</p>
+                        <p className="text-base font-semibold text-white mb-1">Read patient guides →</p>
+                        <p className="text-xs text-slate-400">Editorial-reviewed articles by clinicians.</p>
+                    </Link>
+                </div>
+
                 {/* Related Links */}
                 <div className="mt-12 flex flex-wrap justify-center gap-3">
                     <Link href="/conditions" className="px-4 py-2 bg-white/5 text-slate-400 text-sm rounded-full border border-white/10 hover:border-primary-500/30 hover:text-primary-400 transition-colors">

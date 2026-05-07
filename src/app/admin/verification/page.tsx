@@ -226,12 +226,12 @@ export default function VerificationPage() {
                     <table className="w-full text-sm">
                         <thead className="bg-slate-50 border-b border-slate-200">
                             <tr>
-                                <th className="text-left p-4 font-bold text-slate-700">Doctor</th>
-                                <th className="text-left p-4 font-bold text-slate-700">License Info</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Registry Match</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Confidence</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Submitted</th>
-                                <th className="text-right p-4 font-bold text-slate-700">Actions</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Doctor</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">License Info</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Registry Match</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Confidence</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Submitted</th>
+                                <th scope="col" className="text-right p-4 font-bold text-slate-700">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">

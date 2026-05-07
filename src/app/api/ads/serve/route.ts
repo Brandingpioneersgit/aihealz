@@ -9,7 +9,7 @@ const AD_SERVE_RATE_LIMIT = { maxRequests: 120, windowMs: 60 * 1000 }; // 120 pe
 export async function GET(request: NextRequest) {
     // Apply rate limiting to prevent abuse
     const clientId = getClientIdentifier(request);
-    const rateLimit = checkRateLimit(`adServe:${clientId}`, AD_SERVE_RATE_LIMIT);
+    const rateLimit = await checkRateLimit(`adServe:${clientId}`, AD_SERVE_RATE_LIMIT);
 
     if (!rateLimit.success) {
         return NextResponse.json(

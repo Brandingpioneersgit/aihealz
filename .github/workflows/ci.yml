@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: lint / typecheck / build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        env:
+          # Build-time placeholders so Next can resolve env-aware imports.
+          # Real secrets are injected at deploy time, not in CI.
+          DATABASE_URL: postgresql://user:pass@localhost:5432/db
+          NEXT_PUBLIC_SITE_URL: https://aihealz.com
+        run: npm run build

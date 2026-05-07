@@ -231,7 +231,9 @@ export default function SymptomChecker() {
     return (
         <div className="space-y-8">
             {/* ── Symptom Input Area ─────────────────────── */}
-            <div className="bg-white rounded-3xl border border-surface-200 p-8 shadow-sm">
+            <fieldset className="bg-white rounded-3xl border border-surface-200 p-8 shadow-sm">
+                <legend className="sr-only">Symptom checker — Step 1 of 1</legend>
+                <p className="text-xs font-bold text-primary-600 uppercase tracking-widest mb-2" aria-hidden="true">Step 1 of 1</p>
                 <h2 className="text-lg font-extrabold text-surface-900 mb-1">Describe Your Symptoms</h2>
                 <p className="text-sm text-surface-500 mb-6">Type a symptom and press Enter. Add as many as you're experiencing.</p>
 
@@ -240,7 +242,7 @@ export default function SymptomChecker() {
                         {symptoms.map((s, i) => (
                             <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary-100 text-primary-800 rounded-full text-sm font-semibold border border-primary-200">
                                 {s}
-                                <button onClick={() => removeSymptom(i)} className="hover:text-primary-900 transition-colors">
+                                <button onClick={() => removeSymptom(i)} aria-label={`Remove symptom: ${s}`} className="hover:text-primary-900 transition-colors">
                                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                                 </button>
                             </span>
@@ -253,6 +255,7 @@ export default function SymptomChecker() {
                             onKeyDown={handleKeyDown}
                             onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
                             placeholder={symptoms.length === 0 ? 'e.g. headache, nausea, chest pain...' : 'Add another symptom...'}
+                            aria-label="Add a symptom"
                             className="flex-1 min-w-[200px] py-1.5 bg-transparent outline-none text-surface-900 placeholder:text-surface-400 text-sm font-medium"
                         />
                     </div>
@@ -285,8 +288,8 @@ export default function SymptomChecker() {
                 {/* Optional context */}
                 <div className="flex flex-wrap gap-4 mb-6">
                     <div className="flex-1 min-w-[140px]">
-                        <label className="text-xs font-bold text-surface-500 uppercase tracking-wider mb-1.5 block">Age Range (optional)</label>
-                        <select value={age} onChange={e => setAge(e.target.value)} className="w-full py-2.5 px-4 bg-surface-50 border border-surface-200 rounded-xl text-sm font-medium text-surface-700 outline-none focus:ring-2 focus:ring-primary-400">
+                        <label htmlFor="symptom-age" className="text-xs font-bold text-surface-500 uppercase tracking-wider mb-1.5 block">Age Range (optional)</label>
+                        <select id="symptom-age" value={age} onChange={e => setAge(e.target.value)} className="w-full py-2.5 px-4 bg-surface-50 border border-surface-200 rounded-xl text-sm font-medium text-surface-700 outline-none focus:ring-2 focus:ring-primary-400">
                             <option value="">Select</option>
                             <option value="0-12">Child (0-12)</option>
                             <option value="13-17">Teen (13-17)</option>
@@ -297,8 +300,8 @@ export default function SymptomChecker() {
                         </select>
                     </div>
                     <div className="flex-1 min-w-[140px]">
-                        <label className="text-xs font-bold text-surface-500 uppercase tracking-wider mb-1.5 block">Gender (optional)</label>
-                        <select value={gender} onChange={e => setGender(e.target.value)} className="w-full py-2.5 px-4 bg-surface-50 border border-surface-200 rounded-xl text-sm font-medium text-surface-700 outline-none focus:ring-2 focus:ring-primary-400">
+                        <label htmlFor="symptom-gender" className="text-xs font-bold text-surface-500 uppercase tracking-wider mb-1.5 block">Gender (optional)</label>
+                        <select id="symptom-gender" value={gender} onChange={e => setGender(e.target.value)} className="w-full py-2.5 px-4 bg-surface-50 border border-surface-200 rounded-xl text-sm font-medium text-surface-700 outline-none focus:ring-2 focus:ring-primary-400">
                             <option value="">Select</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -325,7 +328,7 @@ export default function SymptomChecker() {
                         </>
                     )}
                 </button>
-            </div>
+            </fieldset>
 
             {/* ── Error ──────────────────────────────────── */}
             {error && (

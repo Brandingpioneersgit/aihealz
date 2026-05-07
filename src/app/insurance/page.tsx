@@ -302,11 +302,11 @@ export default async function InsurancePage() {
               <table className="w-full">
                 <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
                   <tr>
-                    <th className="px-6 py-3 text-left">TPA Name</th>
-                    <th className="px-6 py-3 text-center">Insurance Partners</th>
-                    <th className="px-6 py-3 text-center">Network Hospitals</th>
-                    <th className="px-6 py-3 text-left">Contact</th>
-                    <th className="px-6 py-3 text-right">Actions</th>
+                    <th scope="col" className="px-6 py-3 text-left">TPA Name</th>
+                    <th scope="col" className="px-6 py-3 text-center">Insurance Partners</th>
+                    <th scope="col" className="px-6 py-3 text-center">Network Hospitals</th>
+                    <th scope="col" className="px-6 py-3 text-left">Contact</th>
+                    <th scope="col" className="px-6 py-3 text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">

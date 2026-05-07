@@ -687,9 +687,9 @@ export default function EndocarditisPage() {
                                     <table className="w-full text-xs">
                                         <thead>
                                             <tr className="bg-slate-800/80">
-                                                <th className="text-left p-4 text-slate-300 font-semibold">Organism</th>
-                                                <th className="text-left p-4 text-teal-400 font-semibold">First-line Regimen</th>
-                                                <th className="text-left p-4 text-blue-400 font-semibold">Alternative</th>
+                                                <th scope="col" className="text-left p-4 text-slate-300 font-semibold">Organism</th>
+                                                <th scope="col" className="text-left p-4 text-teal-400 font-semibold">First-line Regimen</th>
+                                                <th scope="col" className="text-left p-4 text-blue-400 font-semibold">Alternative</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-white/5">

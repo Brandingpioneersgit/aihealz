@@ -1,12 +1,48 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "metadata": {
+    "version": "1.0",
+    "lastReviewed": "2025-01-15",
+    "reviewedBy": "Aihealz Editorial Board",
+    "source": "https://www.fda.gov/drugs",
+    "clinicalDisclaimer": "Dosing recommendations are educational summaries only. Always verify against current FDA labeling, institutional protocols, and clinical context. Adjust for renal/hepatic function, age, weight, and drug interactions. Not a substitute for clinical judgment."
+  },
   "categories": [
-    { "id": "antibiotics", "name": "Antibiotics", "icon": "💊" },
-    { "id": "cardiac", "name": "Cardiac", "icon": "❤️" },
-    { "id": "sedation", "name": "Sedation/Analgesia", "icon": "💉" },
-    { "id": "emergency", "name": "Emergency/ACLS", "icon": "🚨" },
-    { "id": "anticoagulation", "name": "Anticoagulation", "icon": "🩸" },
-    { "id": "electrolytes", "name": "Electrolytes", "icon": "⚡" },
-    { "id": "pediatric", "name": "Pediatric", "icon": "👶" }
+    {
+      "id": "antibiotics",
+      "name": "Antibiotics",
+      "icon": "💊"
+    },
+    {
+      "id": "cardiac",
+      "name": "Cardiac",
+      "icon": "❤️"
+    },
+    {
+      "id": "sedation",
+      "name": "Sedation/Analgesia",
+      "icon": "💉"
+    },
+    {
+      "id": "emergency",
+      "name": "Emergency/ACLS",
+      "icon": "🚨"
+    },
+    {
+      "id": "anticoagulation",
+      "name": "Anticoagulation",
+      "icon": "🩸"
+    },
+    {
+      "id": "electrolytes",
+      "name": "Electrolytes",
+      "icon": "⚡"
+    },
+    {
+      "id": "pediatric",
+      "name": "Pediatric",
+      "icon": "👶"
+    }
   ],
   "drugs": [
     {
@@ -18,17 +54,47 @@
       "loading_dose": "25-30 mg/kg IV × 1 for serious infections",
       "max_dose": "4.5 g/day",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 15, "frequency": "q12h", "route": "IV" },
-        { "type": "weight_based", "dose_per_kg": 20, "frequency": "q8h", "route": "IV", "label": "Serious infections" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 15,
+          "frequency": "q12h",
+          "route": "IV"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 20,
+          "frequency": "q8h",
+          "route": "IV",
+          "label": "Serious infections"
+        }
       ],
       "renal_adjustments": [
-        { "crcl_min": 50, "crcl_max": 999, "adjustment": "No adjustment; monitor trough" },
-        { "crcl_min": 30, "crcl_max": 49, "adjustment": "15 mg/kg q24h" },
-        { "crcl_min": 10, "crcl_max": 29, "adjustment": "15 mg/kg q24-48h" },
-        { "crcl_min": 0, "crcl_max": 9, "adjustment": "15 mg/kg × 1, then redose based on levels" }
+        {
+          "crcl_min": 50,
+          "crcl_max": 999,
+          "adjustment": "No adjustment; monitor trough"
+        },
+        {
+          "crcl_min": 30,
+          "crcl_max": 49,
+          "adjustment": "15 mg/kg q24h"
+        },
+        {
+          "crcl_min": 10,
+          "crcl_max": 29,
+          "adjustment": "15 mg/kg q24-48h"
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 9,
+          "adjustment": "15 mg/kg × 1, then redose based on levels"
+        }
       ],
       "monitoring": "Trough 15-20 mcg/mL (serious infections); AUC/MIC preferred",
-      "notes": "Infuse over ≥1 hour to avoid Red Man Syndrome. Requires TDM."
+      "notes": "Infuse over ≥1 hour to avoid Red Man Syndrome. Requires TDM.",
+      "guidelineYear": 2020,
+      "guidelineSource": "IDSA/ASHP/PIDS/SIDP 2020 vancomycin therapeutic drug monitoring consensus",
+      "note": "Modern guidelines (IDSA 2020) prefer AUC-based dosing over trough-based; adjust per local protocol."
     },
     {
       "id": "piptazo",
@@ -37,15 +103,40 @@
       "class": "Beta-lactam/Beta-lactamase inhibitor",
       "standard_dose": "3.375 g IV q6h or 4.5 g IV q6-8h",
       "calculations": [
-        { "type": "fixed", "dose": "3.375 g", "frequency": "q6h", "route": "IV" },
-        { "type": "fixed", "dose": "4.5 g", "frequency": "q6h", "route": "IV", "label": "Severe infections/Pseudomonas" }
+        {
+          "type": "fixed",
+          "dose": "3.375 g",
+          "frequency": "q6h",
+          "route": "IV"
+        },
+        {
+          "type": "fixed",
+          "dose": "4.5 g",
+          "frequency": "q6h",
+          "route": "IV",
+          "label": "Severe infections/Pseudomonas"
+        }
       ],
       "renal_adjustments": [
-        { "crcl_min": 40, "crcl_max": 999, "adjustment": "No adjustment" },
-        { "crcl_min": 20, "crcl_max": 39, "adjustment": "2.25 g q6h or 3.375 g q8h" },
-        { "crcl_min": 0, "crcl_max": 19, "adjustment": "2.25 g q8h" }
+        {
+          "crcl_min": 40,
+          "crcl_max": 999,
+          "adjustment": "No adjustment"
+        },
+        {
+          "crcl_min": 20,
+          "crcl_max": 39,
+          "adjustment": "2.25 g q6h or 3.375 g q8h"
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 19,
+          "adjustment": "2.25 g q8h"
+        }
       ],
-      "notes": "Extended infusion (4h) may improve outcomes. Covers Pseudomonas."
+      "notes": "Extended infusion (4h) may improve outcomes. Covers Pseudomonas.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "meropenem",
@@ -54,16 +145,45 @@
       "class": "Carbapenem",
       "standard_dose": "1 g IV q8h (up to 2 g q8h for CNS)",
       "calculations": [
-        { "type": "fixed", "dose": "1 g", "frequency": "q8h", "route": "IV" },
-        { "type": "fixed", "dose": "2 g", "frequency": "q8h", "route": "IV", "label": "CNS infections" }
+        {
+          "type": "fixed",
+          "dose": "1 g",
+          "frequency": "q8h",
+          "route": "IV"
+        },
+        {
+          "type": "fixed",
+          "dose": "2 g",
+          "frequency": "q8h",
+          "route": "IV",
+          "label": "CNS infections"
+        }
       ],
       "renal_adjustments": [
-        { "crcl_min": 50, "crcl_max": 999, "adjustment": "No adjustment" },
-        { "crcl_min": 26, "crcl_max": 49, "adjustment": "1 g q12h" },
-        { "crcl_min": 10, "crcl_max": 25, "adjustment": "500 mg q12h" },
-        { "crcl_min": 0, "crcl_max": 9, "adjustment": "500 mg q24h" }
+        {
+          "crcl_min": 50,
+          "crcl_max": 999,
+          "adjustment": "No adjustment"
+        },
+        {
+          "crcl_min": 26,
+          "crcl_max": 49,
+          "adjustment": "1 g q12h"
+        },
+        {
+          "crcl_min": 10,
+          "crcl_max": 25,
+          "adjustment": "500 mg q12h"
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 9,
+          "adjustment": "500 mg q24h"
+        }
       ],
-      "notes": "Consider extended infusion. Lower seizure risk than imipenem."
+      "notes": "Consider extended infusion. Lower seizure risk than imipenem.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "ceftriaxone",
@@ -72,14 +192,37 @@
       "class": "Third-generation cephalosporin",
       "standard_dose": "1-2 g IV q24h",
       "calculations": [
-        { "type": "fixed", "dose": "1 g", "frequency": "q24h", "route": "IV" },
-        { "type": "fixed", "dose": "2 g", "frequency": "q24h", "route": "IV", "label": "Severe infections" },
-        { "type": "fixed", "dose": "2 g", "frequency": "q12h", "route": "IV", "label": "Meningitis" }
+        {
+          "type": "fixed",
+          "dose": "1 g",
+          "frequency": "q24h",
+          "route": "IV"
+        },
+        {
+          "type": "fixed",
+          "dose": "2 g",
+          "frequency": "q24h",
+          "route": "IV",
+          "label": "Severe infections"
+        },
+        {
+          "type": "fixed",
+          "dose": "2 g",
+          "frequency": "q12h",
+          "route": "IV",
+          "label": "Meningitis"
+        }
       ],
       "renal_adjustments": [
-        { "crcl_min": 0, "crcl_max": 999, "adjustment": "No adjustment needed" }
+        {
+          "crcl_min": 0,
+          "crcl_max": 999,
+          "adjustment": "No adjustment needed"
+        }
       ],
-      "notes": "Hepatic elimination. Avoid with calcium-containing solutions. Do not exceed 4g/day."
+      "notes": "Hepatic elimination. Avoid with calcium-containing solutions. Do not exceed 4g/day.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "heparin",
@@ -88,13 +231,39 @@
       "class": "Anticoagulant",
       "standard_dose": "See protocol-based dosing",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 80, "unit": "units", "route": "IV bolus", "label": "VTE treatment bolus" },
-        { "type": "weight_based", "dose_per_kg": 18, "unit": "units/hr", "route": "IV infusion", "label": "VTE treatment infusion" },
-        { "type": "weight_based", "dose_per_kg": 60, "unit": "units", "route": "IV bolus", "label": "ACS bolus (max 4000 units)" },
-        { "type": "weight_based", "dose_per_kg": 12, "unit": "units/hr", "route": "IV infusion", "label": "ACS infusion (max 1000 units/hr)" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 80,
+          "unit": "units",
+          "route": "IV bolus",
+          "label": "VTE treatment bolus"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 18,
+          "unit": "units/hr",
+          "route": "IV infusion",
+          "label": "VTE treatment infusion"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 60,
+          "unit": "units",
+          "route": "IV bolus",
+          "label": "ACS bolus (max 4000 units)"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 12,
+          "unit": "units/hr",
+          "route": "IV infusion",
+          "label": "ACS infusion (max 1000 units/hr)"
+        }
       ],
       "monitoring": "aPTT q6h until therapeutic (1.5-2.5× control), then q24h",
-      "notes": "Use actual body weight. Requires anti-Xa monitoring if aPTT unreliable. HIT risk ~1-3%."
+      "notes": "Use actual body weight. Requires anti-Xa monitoring if aPTT unreliable. HIT risk ~1-3%.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "enoxaparin",
@@ -103,17 +272,53 @@
       "class": "Low molecular weight heparin",
       "standard_dose": "1 mg/kg SC q12h (treatment) or 40 mg SC daily (prophylaxis)",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 1, "unit": "mg", "frequency": "q12h", "route": "SC", "label": "VTE treatment" },
-        { "type": "weight_based", "dose_per_kg": 1.5, "unit": "mg", "frequency": "q24h", "route": "SC", "label": "VTE treatment (once daily)" },
-        { "type": "fixed", "dose": "40 mg", "frequency": "q24h", "route": "SC", "label": "VTE prophylaxis" },
-        { "type": "fixed", "dose": "30 mg", "frequency": "q12h", "route": "SC", "label": "VTE prophylaxis (high risk)" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 1,
+          "unit": "mg",
+          "frequency": "q12h",
+          "route": "SC",
+          "label": "VTE treatment"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 1.5,
+          "unit": "mg",
+          "frequency": "q24h",
+          "route": "SC",
+          "label": "VTE treatment (once daily)"
+        },
+        {
+          "type": "fixed",
+          "dose": "40 mg",
+          "frequency": "q24h",
+          "route": "SC",
+          "label": "VTE prophylaxis"
+        },
+        {
+          "type": "fixed",
+          "dose": "30 mg",
+          "frequency": "q12h",
+          "route": "SC",
+          "label": "VTE prophylaxis (high risk)"
+        }
       ],
       "renal_adjustments": [
-        { "crcl_min": 30, "crcl_max": 999, "adjustment": "No adjustment" },
-        { "crcl_min": 0, "crcl_max": 29, "adjustment": "Treatment: 1 mg/kg q24h; Prophylaxis: 30 mg q24h" }
+        {
+          "crcl_min": 30,
+          "crcl_max": 999,
+          "adjustment": "No adjustment"
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 29,
+          "adjustment": "Treatment: 1 mg/kg q24h; Prophylaxis: 30 mg q24h"
+        }
       ],
       "monitoring": "Anti-Xa levels if CrCl <30, obesity, pregnancy",
-      "notes": "Use actual body weight up to 150 kg. Consider UFH for severe renal impairment."
+      "notes": "Use actual body weight up to 150 kg. Consider UFH for severe renal impairment.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "epinephrine",
@@ -122,11 +327,30 @@
       "class": "Vasopressor/Inotrope",
       "standard_dose": "Varies by indication",
       "calculations": [
-        { "type": "fixed", "dose": "1 mg (1:10,000)", "frequency": "q3-5min", "route": "IV push", "label": "Cardiac arrest" },
-        { "type": "infusion_range", "min_mcg_kg_min": 0.01, "max_mcg_kg_min": 0.5, "route": "IV infusion", "label": "Vasopressor" },
-        { "type": "fixed", "dose": "0.3-0.5 mg (1:1000)", "route": "IM", "label": "Anaphylaxis" }
+        {
+          "type": "fixed",
+          "dose": "1 mg (1:10,000)",
+          "frequency": "q3-5min",
+          "route": "IV push",
+          "label": "Cardiac arrest"
+        },
+        {
+          "type": "infusion_range",
+          "min_mcg_kg_min": 0.01,
+          "max_mcg_kg_min": 0.5,
+          "route": "IV infusion",
+          "label": "Vasopressor"
+        },
+        {
+          "type": "fixed",
+          "dose": "0.3-0.5 mg (1:1000)",
+          "route": "IM",
+          "label": "Anaphylaxis"
+        }
       ],
-      "notes": "1:10,000 = 0.1 mg/mL (IV). 1:1,000 = 1 mg/mL (IM). Central line preferred for infusion."
+      "notes": "1:10,000 = 0.1 mg/mL (IV). 1:1,000 = 1 mg/mL (IM). Central line preferred for infusion.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "norepinephrine",
@@ -135,9 +359,18 @@
       "class": "Vasopressor",
       "standard_dose": "0.01-3 mcg/kg/min IV infusion",
       "calculations": [
-        { "type": "infusion_range", "min_mcg_kg_min": 0.01, "max_mcg_kg_min": 0.5, "typical_start": 0.05, "route": "IV infusion", "label": "Septic shock" }
+        {
+          "type": "infusion_range",
+          "min_mcg_kg_min": 0.01,
+          "max_mcg_kg_min": 0.5,
+          "typical_start": 0.05,
+          "route": "IV infusion",
+          "label": "Septic shock"
+        }
       ],
-      "notes": "First-line vasopressor for septic shock. Central line preferred. Titrate to MAP ≥65."
+      "notes": "First-line vasopressor for septic shock. Central line preferred. Titrate to MAP ≥65.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "dobutamine",
@@ -146,9 +379,17 @@
       "class": "Inotrope",
       "standard_dose": "2.5-20 mcg/kg/min IV infusion",
       "calculations": [
-        { "type": "infusion_range", "min_mcg_kg_min": 2.5, "max_mcg_kg_min": 20, "typical_start": 2.5, "route": "IV infusion" }
+        {
+          "type": "infusion_range",
+          "min_mcg_kg_min": 2.5,
+          "max_mcg_kg_min": 20,
+          "typical_start": 2.5,
+          "route": "IV infusion"
+        }
       ],
-      "notes": "May cause hypotension (vasodilation). Consider adding vasopressor if needed."
+      "notes": "May cause hypotension (vasodilation). Consider adding vasopressor if needed.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "propofol",
@@ -157,11 +398,32 @@
       "class": "Sedative-hypnotic",
       "standard_dose": "5-50 mcg/kg/min for sedation",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 1.5, "unit": "mg", "route": "IV push", "label": "Induction (elderly/debilitated: 1 mg/kg)" },
-        { "type": "weight_based", "dose_per_kg": 2.5, "unit": "mg", "route": "IV push", "label": "Induction (healthy adult)" },
-        { "type": "infusion_range", "min_mcg_kg_min": 5, "max_mcg_kg_min": 50, "typical_start": 10, "route": "IV infusion", "label": "ICU sedation" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 1.5,
+          "unit": "mg",
+          "route": "IV push",
+          "label": "Induction (elderly/debilitated: 1 mg/kg)"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 2.5,
+          "unit": "mg",
+          "route": "IV push",
+          "label": "Induction (healthy adult)"
+        },
+        {
+          "type": "infusion_range",
+          "min_mcg_kg_min": 5,
+          "max_mcg_kg_min": 50,
+          "typical_start": 10,
+          "route": "IV infusion",
+          "label": "ICU sedation"
+        }
       ],
-      "notes": "Contains soy/egg lecithin. Monitor for PRIS with prolonged use >48h. Count as 1.1 kcal/mL."
+      "notes": "Contains soy/egg lecithin. Monitor for PRIS with prolonged use >48h. Count as 1.1 kcal/mL.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "fentanyl",
@@ -170,13 +432,32 @@
       "class": "Opioid analgesic",
       "standard_dose": "25-100 mcg IV q1-2h PRN",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 1, "unit": "mcg", "route": "IV push", "label": "Analgesia" },
-        { "type": "infusion_range", "min_mcg_kg_hr": 0.5, "max_mcg_kg_hr": 5, "typical_start": 1, "route": "IV infusion", "label": "ICU analgesia" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 1,
+          "unit": "mcg",
+          "route": "IV push",
+          "label": "Analgesia"
+        },
+        {
+          "type": "infusion_range",
+          "min_mcg_kg_hr": 0.5,
+          "max_mcg_kg_hr": 5,
+          "typical_start": 1,
+          "route": "IV infusion",
+          "label": "ICU analgesia"
+        }
       ],
       "renal_adjustments": [
-        { "crcl_min": 0, "crcl_max": 999, "adjustment": "Preferred opioid in renal impairment; no active metabolites" }
+        {
+          "crcl_min": 0,
+          "crcl_max": 999,
+          "adjustment": "Preferred opioid in renal impairment; no active metabolites"
+        }
       ],
-      "notes": "Chest wall rigidity with rapid high-dose administration. 100× morphine potency."
+      "notes": "Chest wall rigidity with rapid high-dose administration. 100× morphine potency.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "ketamine",
@@ -185,11 +466,31 @@
       "class": "Dissociative anesthetic",
       "standard_dose": "0.5-2 mg/kg IV for induction",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 0.5, "unit": "mg", "route": "IV push", "label": "Procedural sedation" },
-        { "type": "weight_based", "dose_per_kg": 1.5, "unit": "mg", "route": "IV push", "label": "Induction" },
-        { "type": "weight_based", "dose_per_kg": 0.1, "unit": "mg", "route": "IV push", "label": "Low-dose analgesia" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 0.5,
+          "unit": "mg",
+          "route": "IV push",
+          "label": "Procedural sedation"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 1.5,
+          "unit": "mg",
+          "route": "IV push",
+          "label": "Induction"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 0.1,
+          "unit": "mg",
+          "route": "IV push",
+          "label": "Low-dose analgesia"
+        }
       ],
-      "notes": "Maintains airway reflexes. Consider for hemodynamically unstable patients. Emergence reactions."
+      "notes": "Maintains airway reflexes. Consider for hemodynamically unstable patients. Emergence reactions.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "amiodarone",
@@ -198,11 +499,28 @@
       "class": "Class III antiarrhythmic",
       "standard_dose": "150 mg IV over 10 min (VT/VF)",
       "calculations": [
-        { "type": "fixed", "dose": "300 mg", "route": "IV push", "label": "Cardiac arrest (VF/pVT)" },
-        { "type": "fixed", "dose": "150 mg", "route": "IV over 10 min", "label": "Stable VT" },
-        { "type": "fixed", "dose": "1 mg/min × 6h, then 0.5 mg/min × 18h", "route": "IV infusion", "label": "Maintenance" }
+        {
+          "type": "fixed",
+          "dose": "300 mg",
+          "route": "IV push",
+          "label": "Cardiac arrest (VF/pVT)"
+        },
+        {
+          "type": "fixed",
+          "dose": "150 mg",
+          "route": "IV over 10 min",
+          "label": "Stable VT"
+        },
+        {
+          "type": "fixed",
+          "dose": "1 mg/min × 6h, then 0.5 mg/min × 18h",
+          "route": "IV infusion",
+          "label": "Maintenance"
+        }
       ],
-      "notes": "Max 2.2 g/24h. QTc prolongation. Avoid in severe sinus node dysfunction."
+      "notes": "Max 2.2 g/24h. QTc prolongation. Avoid in severe sinus node dysfunction.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "potassium_chloride",
@@ -211,12 +529,29 @@
       "class": "Electrolyte replacement",
       "standard_dose": "10-40 mEq IV/PO based on level",
       "calculations": [
-        { "type": "fixed", "dose": "10-20 mEq", "route": "IV over 1-2h", "label": "Mild hypokalemia (3.0-3.4)" },
-        { "type": "fixed", "dose": "20-40 mEq", "route": "IV over 2-4h", "label": "Moderate hypokalemia (2.5-2.9)" },
-        { "type": "fixed", "dose": "40 mEq", "route": "IV over 2-4h", "label": "Severe hypokalemia (<2.5)" }
+        {
+          "type": "fixed",
+          "dose": "10-20 mEq",
+          "route": "IV over 1-2h",
+          "label": "Mild hypokalemia (3.0-3.4)"
+        },
+        {
+          "type": "fixed",
+          "dose": "20-40 mEq",
+          "route": "IV over 2-4h",
+          "label": "Moderate hypokalemia (2.5-2.9)"
+        },
+        {
+          "type": "fixed",
+          "dose": "40 mEq",
+          "route": "IV over 2-4h",
+          "label": "Severe hypokalemia (<2.5)"
+        }
       ],
       "monitoring": "Recheck K+ 2-4h after repletion. ECG if severe.",
-      "notes": "Max 10 mEq/hr peripheral, 20 mEq/hr central. 40 mEq raises K+ by ~0.3-0.4 mEq/L."
+      "notes": "Max 10 mEq/hr peripheral, 20 mEq/hr central. 40 mEq raises K+ by ~0.3-0.4 mEq/L.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "magnesium_sulfate",
@@ -225,12 +560,34 @@
       "class": "Electrolyte replacement",
       "standard_dose": "1-4 g IV based on level",
       "calculations": [
-        { "type": "fixed", "dose": "1-2 g", "route": "IV over 1h", "label": "Mild hypomagnesemia (1.5-1.9)" },
-        { "type": "fixed", "dose": "2-4 g", "route": "IV over 2-4h", "label": "Moderate hypomagnesemia (1.0-1.4)" },
-        { "type": "fixed", "dose": "2 g", "route": "IV over 2 min", "label": "Torsades de Pointes" },
-        { "type": "fixed", "dose": "4-6 g", "route": "IV over 15-20 min", "label": "Eclampsia" }
+        {
+          "type": "fixed",
+          "dose": "1-2 g",
+          "route": "IV over 1h",
+          "label": "Mild hypomagnesemia (1.5-1.9)"
+        },
+        {
+          "type": "fixed",
+          "dose": "2-4 g",
+          "route": "IV over 2-4h",
+          "label": "Moderate hypomagnesemia (1.0-1.4)"
+        },
+        {
+          "type": "fixed",
+          "dose": "2 g",
+          "route": "IV over 2 min",
+          "label": "Torsades de Pointes"
+        },
+        {
+          "type": "fixed",
+          "dose": "4-6 g",
+          "route": "IV over 15-20 min",
+          "label": "Eclampsia"
+        }
       ],
-      "notes": "1 g MgSO4 = 8 mEq Mg. Monitor deep tendon reflexes. Hold if reflexes absent."
+      "notes": "1 g MgSO4 = 8 mEq Mg. Monitor deep tendon reflexes. Hold if reflexes absent.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "acetaminophen_peds",
@@ -239,11 +596,26 @@
       "class": "Analgesic/Antipyretic",
       "standard_dose": "10-15 mg/kg PO/PR q4-6h",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 15, "unit": "mg", "frequency": "q4-6h", "route": "PO/PR", "label": "Standard dose" },
-        { "type": "weight_based", "dose_per_kg": 20, "unit": "mg", "route": "PR", "label": "Rectal loading dose" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 15,
+          "unit": "mg",
+          "frequency": "q4-6h",
+          "route": "PO/PR",
+          "label": "Standard dose"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 20,
+          "unit": "mg",
+          "route": "PR",
+          "label": "Rectal loading dose"
+        }
       ],
       "max_dose": "75 mg/kg/day (max 4 g/day)",
-      "notes": "Max 5 doses/24h. Reduce dose in hepatic impairment."
+      "notes": "Max 5 doses/24h. Reduce dose in hepatic impairment.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "ibuprofen_peds",
@@ -252,10 +624,18 @@
       "class": "NSAID",
       "standard_dose": "5-10 mg/kg PO q6-8h",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 10, "unit": "mg", "frequency": "q6-8h", "route": "PO" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 10,
+          "unit": "mg",
+          "frequency": "q6-8h",
+          "route": "PO"
+        }
       ],
       "max_dose": "40 mg/kg/day (max 2.4 g/day)",
-      "notes": "Not for infants <6 months. Avoid in renal impairment, GI bleeding, dehydration."
+      "notes": "Not for infants <6 months. Avoid in renal impairment, GI bleeding, dehydration.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     },
     {
       "id": "amoxicillin_peds",
@@ -264,12 +644,35 @@
       "class": "Penicillin antibiotic",
       "standard_dose": "25-50 mg/kg/day divided q8-12h",
       "calculations": [
-        { "type": "weight_based", "dose_per_kg": 25, "unit": "mg", "frequency": "q12h", "route": "PO", "label": "Standard dose" },
-        { "type": "weight_based", "dose_per_kg": 45, "unit": "mg", "frequency": "q12h", "route": "PO", "label": "High dose (AOM, sinusitis)" },
-        { "type": "weight_based", "dose_per_kg": 50, "unit": "mg", "frequency": "q8h", "route": "PO", "label": "Severe infections" }
+        {
+          "type": "weight_based",
+          "dose_per_kg": 25,
+          "unit": "mg",
+          "frequency": "q12h",
+          "route": "PO",
+          "label": "Standard dose"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 45,
+          "unit": "mg",
+          "frequency": "q12h",
+          "route": "PO",
+          "label": "High dose (AOM, sinusitis)"
+        },
+        {
+          "type": "weight_based",
+          "dose_per_kg": 50,
+          "unit": "mg",
+          "frequency": "q8h",
+          "route": "PO",
+          "label": "Severe infections"
+        }
       ],
       "max_dose": "3 g/day",
-      "notes": "High-dose for resistant S. pneumoniae. Adjust for renal impairment."
+      "notes": "High-dose for resistant S. pneumoniae. Adjust for renal impairment.",
+      "guidelineYear": 2024,
+      "guidelineSource": "FDA labeling and institutional protocols (composite)"
     }
   ],
   "calculators": [
@@ -277,28 +680,43 @@
       "id": "crcl",
       "name": "Creatinine Clearance (Cockcroft-Gault)",
       "formula": "CrCl = [(140-age) × weight × (0.85 if female)] / (72 × SCr)",
-      "inputs": ["age", "weight", "scr", "sex"],
+      "inputs": [
+        "age",
+        "weight",
+        "scr",
+        "sex"
+      ],
       "unit": "mL/min"
     },
     {
       "id": "ibw",
       "name": "Ideal Body Weight",
       "formula": "IBW = 50 kg + 2.3 kg per inch over 5 feet (males) or 45.5 kg + 2.3 kg per inch over 5 feet (females)",
-      "inputs": ["height", "sex"],
+      "inputs": [
+        "height",
+        "sex"
+      ],
       "unit": "kg"
     },
     {
       "id": "abw",
       "name": "Adjusted Body Weight",
       "formula": "ABW = IBW + 0.4 × (Actual - IBW)",
-      "inputs": ["weight", "ibw"],
+      "inputs": [
+        "weight",
+        "ibw"
+      ],
       "unit": "kg"
     },
     {
       "id": "infusion_rate",
       "name": "IV Infusion Rate",
       "formula": "Rate (mL/hr) = (Dose × Weight × 60) / Concentration",
-      "inputs": ["dose_mcg_kg_min", "weight", "concentration_mg_ml"],
+      "inputs": [
+        "dose_mcg_kg_min",
+        "weight",
+        "concentration_mg_ml"
+      ],
       "unit": "mL/hr"
     }
   ]

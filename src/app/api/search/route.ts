@@ -100,7 +100,7 @@ const TOOLS: SearchResult[] = [
 export async function GET(req: NextRequest) {
     // Apply rate limiting
     const clientId = getClientIdentifier(req);
-    const rateLimit = checkRateLimit(`search:${clientId}`, SEARCH_RATE_LIMIT);
+    const rateLimit = await checkRateLimit(`search:${clientId}`, SEARCH_RATE_LIMIT);
 
     if (!rateLimit.success) {
         return NextResponse.json(

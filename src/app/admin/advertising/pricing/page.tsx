@@ -95,14 +95,14 @@ export default async function PricingAdminPage() {
                                 <table className="w-full">
                                     <thead>
                                         <tr className="border-b border-slate-100">
-                                            <th className="text-left py-3 px-4 text-xs font-medium text-slate-500">Region</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Min CPM</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Suggested CPM</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Min CPC</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Suggested CPC</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Flat Rate/mo</th>
-                                            <th className="text-center py-3 px-4 text-xs font-medium text-slate-500">Status</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Actions</th>
+                                            <th scope="col" className="text-left py-3 px-4 text-xs font-medium text-slate-500">Region</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Min CPM</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Suggested CPM</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Min CPC</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Suggested CPC</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Flat Rate/mo</th>
+                                            <th scope="col" className="text-center py-3 px-4 text-xs font-medium text-slate-500">Status</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-slate-50">

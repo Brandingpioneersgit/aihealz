@@ -69,7 +69,7 @@ const labRegisterSchema = z.object({
 export async function POST(req: NextRequest) {
     // Apply rate limiting
     const clientId = getClientIdentifier(req);
-    const rateLimit = checkRateLimit(`labRegister:${clientId}`, RATE_LIMITS.form);
+    const rateLimit = await checkRateLimit(`labRegister:${clientId}`, RATE_LIMITS.form);
 
     if (!rateLimit.success) {
         return NextResponse.json(

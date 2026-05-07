@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "hospitals": [
     {
       "name": "Apollo Hospitals Chennai",
@@ -52,20 +53,16 @@
         { "year": 2022, "award": "Excellence in Cardiac Care", "org": "FICCI Healthcare Awards" },
         { "year": 2021, "award": "Best Hospital for Medical Tourism", "org": "MTQUA" }
       ],
-      "notablePatients": [
-        { "name": "Multiple Chief Ministers", "category": "Political Leaders", "treatment": "Various surgeries" },
-        { "name": "International Cricketers", "category": "Sports Personalities", "treatment": "Orthopedic surgeries" }
-      ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 350, "usd": 4, "gbp": 3, "aed": 15 },
-        "Lipid Profile": { "inr": 600, "usd": 7, "gbp": 6, "aed": 26 },
-        "Liver Function Test": { "inr": 800, "usd": 10, "gbp": 8, "aed": 35 },
-        "Thyroid Profile": { "inr": 1000, "usd": 12, "gbp": 10, "aed": 44 },
-        "CT Scan Brain": { "inr": 3500, "usd": 42, "gbp": 33, "aed": 154 },
-        "MRI Brain": { "inr": 8000, "usd": 96, "gbp": 76, "aed": 352 },
-        "PET-CT Scan": { "inr": 25000, "usd": 300, "gbp": 238, "aed": 1100 },
-        "Coronary Angiography": { "inr": 15000, "usd": 180, "gbp": 143, "aed": 660 },
-        "Full Body Health Checkup": { "inr": 5500, "usd": 66, "gbp": 52, "aed": 242 }
+        "Complete Blood Count (CBC)": { "inr": 350, "usd_estimated": 4, "gbp_estimated": 3, "aed_estimated": 15, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 600, "usd_estimated": 7, "gbp_estimated": 6, "aed_estimated": 26, "fxAsOf": "2025-01" },
+        "Liver Function Test": { "inr": 800, "usd_estimated": 10, "gbp_estimated": 8, "aed_estimated": 35, "fxAsOf": "2025-01" },
+        "Thyroid Profile": { "inr": 1000, "usd_estimated": 12, "gbp_estimated": 10, "aed_estimated": 44, "fxAsOf": "2025-01" },
+        "CT Scan Brain": { "inr": 3500, "usd_estimated": 42, "gbp_estimated": 33, "aed_estimated": 154, "fxAsOf": "2025-01" },
+        "MRI Brain": { "inr": 8000, "usd_estimated": 96, "gbp_estimated": 76, "aed_estimated": 352, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 25000, "usd_estimated": 300, "gbp_estimated": 238, "aed_estimated": 1100, "fxAsOf": "2025-01" },
+        "Coronary Angiography": { "inr": 15000, "usd_estimated": 180, "gbp_estimated": 143, "aed_estimated": 660, "fxAsOf": "2025-01" },
+        "Full Body Health Checkup": { "inr": 5500, "usd_estimated": 66, "gbp_estimated": 52, "aed_estimated": 242, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -118,12 +115,12 @@
         { "year": 2022, "award": "Excellence in BMT", "org": "Economic Times Healthcare Awards" }
       ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 400, "usd": 5, "gbp": 4, "aed": 18 },
-        "Lipid Profile": { "inr": 700, "usd": 8, "gbp": 7, "aed": 31 },
-        "HbA1c": { "inr": 500, "usd": 6, "gbp": 5, "aed": 22 },
-        "MRI Spine": { "inr": 9000, "usd": 108, "gbp": 86, "aed": 396 },
-        "CT Angiography": { "inr": 12000, "usd": 144, "gbp": 114, "aed": 528 },
-        "PET-CT Scan": { "inr": 28000, "usd": 336, "gbp": 267, "aed": 1232 }
+        "Complete Blood Count (CBC)": { "inr": 400, "usd_estimated": 5, "gbp_estimated": 4, "aed_estimated": 18, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 700, "usd_estimated": 8, "gbp_estimated": 7, "aed_estimated": 31, "fxAsOf": "2025-01" },
+        "HbA1c": { "inr": 500, "usd_estimated": 6, "gbp_estimated": 5, "aed_estimated": 22, "fxAsOf": "2025-01" },
+        "MRI Spine": { "inr": 9000, "usd_estimated": 108, "gbp_estimated": 86, "aed_estimated": 396, "fxAsOf": "2025-01" },
+        "CT Angiography": { "inr": 12000, "usd_estimated": 144, "gbp_estimated": 114, "aed_estimated": 528, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 28000, "usd_estimated": 336, "gbp_estimated": 267, "aed_estimated": 1232, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -171,17 +168,13 @@
         "Bureaucratic processes",
         "Basic amenities compared to private hospitals"
       ],
-      "scandals": [
-        { "year": 2019, "title": "Fire incidents in patient areas", "description": "Multiple minor fire incidents raised safety concerns" },
-        { "year": 2017, "title": "Overcrowding and patient management issues", "description": "Patient overflow leading to management challenges" }
-      ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 50, "usd": 1, "gbp": 1, "aed": 2 },
-        "Lipid Profile": { "inr": 100, "usd": 1, "gbp": 1, "aed": 4 },
-        "Liver Function Test": { "inr": 100, "usd": 1, "gbp": 1, "aed": 4 },
-        "MRI Brain": { "inr": 1500, "usd": 18, "gbp": 14, "aed": 66 },
-        "CT Scan": { "inr": 500, "usd": 6, "gbp": 5, "aed": 22 },
-        "PET-CT Scan": { "inr": 8000, "usd": 96, "gbp": 76, "aed": 352 }
+        "Complete Blood Count (CBC)": { "inr": 50, "usd_estimated": 1, "gbp_estimated": 1, "aed_estimated": 2, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 100, "usd_estimated": 1, "gbp_estimated": 1, "aed_estimated": 4, "fxAsOf": "2025-01" },
+        "Liver Function Test": { "inr": 100, "usd_estimated": 1, "gbp_estimated": 1, "aed_estimated": 4, "fxAsOf": "2025-01" },
+        "MRI Brain": { "inr": 1500, "usd_estimated": 18, "gbp_estimated": 14, "aed_estimated": 66, "fxAsOf": "2025-01" },
+        "CT Scan": { "inr": 500, "usd_estimated": 6, "gbp_estimated": 5, "aed_estimated": 22, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 8000, "usd_estimated": 96, "gbp_estimated": 76, "aed_estimated": 352, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -233,11 +226,11 @@
         { "year": 2022, "award": "Excellence in Kidney Transplant", "org": "Times Health Survey" }
       ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 450, "usd": 5, "gbp": 4, "aed": 20 },
-        "Lipid Profile": { "inr": 750, "usd": 9, "gbp": 7, "aed": 33 },
-        "Cardiac CT": { "inr": 15000, "usd": 180, "gbp": 143, "aed": 660 },
-        "MRI Heart": { "inr": 12000, "usd": 144, "gbp": 114, "aed": 528 },
-        "Full Body PET-CT": { "inr": 30000, "usd": 360, "gbp": 286, "aed": 1320 }
+        "Complete Blood Count (CBC)": { "inr": 450, "usd_estimated": 5, "gbp_estimated": 4, "aed_estimated": 20, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 750, "usd_estimated": 9, "gbp_estimated": 7, "aed_estimated": 33, "fxAsOf": "2025-01" },
+        "Cardiac CT": { "inr": 15000, "usd_estimated": 180, "gbp_estimated": 143, "aed_estimated": 660, "fxAsOf": "2025-01" },
+        "MRI Heart": { "inr": 12000, "usd_estimated": 144, "gbp_estimated": 114, "aed_estimated": 528, "fxAsOf": "2025-01" },
+        "Full Body PET-CT": { "inr": 30000, "usd_estimated": 360, "gbp_estimated": 286, "aed_estimated": 1320, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -289,10 +282,10 @@
         { "year": 2022, "award": "Excellence in Oncology Research", "org": "ICMR" }
       ],
       "testPrices": {
-        "Tumor Markers Panel": { "inr": 2000, "usd": 24, "gbp": 19, "aed": 88 },
-        "PET-CT Scan": { "inr": 12000, "usd": 144, "gbp": 114, "aed": 528 },
-        "Bone Marrow Biopsy": { "inr": 3000, "usd": 36, "gbp": 29, "aed": 132 },
-        "Immunohistochemistry": { "inr": 5000, "usd": 60, "gbp": 48, "aed": 220 }
+        "Tumor Markers Panel": { "inr": 2000, "usd_estimated": 24, "gbp_estimated": 19, "aed_estimated": 88, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 12000, "usd_estimated": 144, "gbp_estimated": 114, "aed_estimated": 528, "fxAsOf": "2025-01" },
+        "Bone Marrow Biopsy": { "inr": 3000, "usd_estimated": 36, "gbp_estimated": 29, "aed_estimated": 132, "fxAsOf": "2025-01" },
+        "Immunohistochemistry": { "inr": 5000, "usd_estimated": 60, "gbp_estimated": 48, "aed_estimated": 220, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -344,11 +337,11 @@
         { "year": 2022, "award": "Excellence in Cardiac Care", "org": "Arab Health Awards" }
       ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 1500, "usd": 18, "gbp": 14, "aed": 65 },
-        "Lipid Profile": { "inr": 2500, "usd": 30, "gbp": 24, "aed": 110 },
-        "MRI Brain": { "inr": 25000, "usd": 300, "gbp": 238, "aed": 1100 },
-        "CT Scan Chest": { "inr": 12000, "usd": 144, "gbp": 114, "aed": 525 },
-        "PET-CT Scan": { "inr": 83000, "usd": 1000, "gbp": 794, "aed": 3660 }
+        "Complete Blood Count (CBC)": { "inr": 1500, "usd_estimated": 18, "gbp_estimated": 14, "aed_estimated": 65, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 2500, "usd_estimated": 30, "gbp_estimated": 24, "aed_estimated": 110, "fxAsOf": "2025-01" },
+        "MRI Brain": { "inr": 25000, "usd_estimated": 300, "gbp_estimated": 238, "aed_estimated": 1100, "fxAsOf": "2025-01" },
+        "CT Scan Chest": { "inr": 12000, "usd_estimated": 144, "gbp_estimated": 114, "aed_estimated": 525, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 83000, "usd_estimated": 1000, "gbp_estimated": 794, "aed_estimated": 3660, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -394,10 +387,10 @@
         "Some specialists on specific days only"
       ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 1200, "usd": 14, "gbp": 11, "aed": 52 },
-        "Lipid Profile": { "inr": 2000, "usd": 24, "gbp": 19, "aed": 88 },
-        "Thyroid Profile": { "inr": 2500, "usd": 30, "gbp": 24, "aed": 110 },
-        "MRI Knee": { "inr": 20000, "usd": 240, "gbp": 190, "aed": 880 }
+        "Complete Blood Count (CBC)": { "inr": 1200, "usd_estimated": 14, "gbp_estimated": 11, "aed_estimated": 52, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 2000, "usd_estimated": 24, "gbp_estimated": 19, "aed_estimated": 88, "fxAsOf": "2025-01" },
+        "Thyroid Profile": { "inr": 2500, "usd_estimated": 30, "gbp_estimated": 24, "aed_estimated": 110, "fxAsOf": "2025-01" },
+        "MRI Knee": { "inr": 20000, "usd_estimated": 240, "gbp_estimated": 190, "aed_estimated": 880, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -449,11 +442,11 @@
         { "year": 2022, "award": "Best International Hospital", "org": "International Hospital Federation" }
       ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 800, "usd": 10, "gbp": 8, "aed": 35 },
-        "Lipid Profile": { "inr": 1200, "usd": 14, "gbp": 11, "aed": 52 },
-        "Full Health Checkup": { "inr": 25000, "usd": 300, "gbp": 238, "aed": 1100 },
-        "MRI Brain": { "inr": 15000, "usd": 180, "gbp": 143, "aed": 660 },
-        "PET-CT Scan": { "inr": 50000, "usd": 600, "gbp": 476, "aed": 2200 }
+        "Complete Blood Count (CBC)": { "inr": 800, "usd_estimated": 10, "gbp_estimated": 8, "aed_estimated": 35, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 1200, "usd_estimated": 14, "gbp_estimated": 11, "aed_estimated": 52, "fxAsOf": "2025-01" },
+        "Full Health Checkup": { "inr": 25000, "usd_estimated": 300, "gbp_estimated": 238, "aed_estimated": 1100, "fxAsOf": "2025-01" },
+        "MRI Brain": { "inr": 15000, "usd_estimated": 180, "gbp_estimated": 143, "aed_estimated": 660, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 50000, "usd_estimated": 600, "gbp_estimated": 476, "aed_estimated": 2200, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -500,10 +493,10 @@
         "Insurance claims may require additional paperwork"
       ],
       "testPrices": {
-        "Complete Blood Count (CBC)": { "inr": 500, "usd": 6, "gbp": 5, "aed": 22 },
-        "Lipid Profile": { "inr": 800, "usd": 10, "gbp": 8, "aed": 35 },
-        "MRI Brain": { "inr": 8000, "usd": 96, "gbp": 76, "aed": 352 },
-        "PET-CT Scan": { "inr": 35000, "usd": 420, "gbp": 333, "aed": 1540 }
+        "Complete Blood Count (CBC)": { "inr": 500, "usd_estimated": 6, "gbp_estimated": 5, "aed_estimated": 22, "fxAsOf": "2025-01" },
+        "Lipid Profile": { "inr": 800, "usd_estimated": 10, "gbp_estimated": 8, "aed_estimated": 35, "fxAsOf": "2025-01" },
+        "MRI Brain": { "inr": 8000, "usd_estimated": 96, "gbp_estimated": 76, "aed_estimated": 352, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 35000, "usd_estimated": 420, "gbp_estimated": 333, "aed_estimated": 1540, "fxAsOf": "2025-01" }
       }
     },
     {
@@ -549,9 +542,9 @@
         "Not all locations easily accessible"
       ],
       "testPrices": {
-        "Tumor Markers": { "inr": 5000, "usd": 60, "gbp": 48, "aed": 220 },
-        "PET-CT Scan": { "inr": 75000, "usd": 900, "gbp": 714, "aed": 3300 },
-        "MRI": { "inr": 35000, "usd": 420, "gbp": 333, "aed": 1540 }
+        "Tumor Markers": { "inr": 5000, "usd_estimated": 60, "gbp_estimated": 48, "aed_estimated": 220, "fxAsOf": "2025-01" },
+        "PET-CT Scan": { "inr": 75000, "usd_estimated": 900, "gbp_estimated": 714, "aed_estimated": 3300, "fxAsOf": "2025-01" },
+        "MRI": { "inr": 35000, "usd_estimated": 420, "gbp_estimated": 333, "aed_estimated": 1540, "fxAsOf": "2025-01" }
       }
     }
   ]

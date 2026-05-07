@@ -324,11 +324,12 @@ export default function LabTestsDirectory() {
                                         </h4>
                                         <div className="bg-slate-800/50 rounded-xl overflow-hidden mb-4">
                                             <table className="w-full text-sm">
+                                                <caption className="sr-only">Lab test components and normal reference ranges</caption>
                                                 <thead className="bg-slate-800">
                                                     <tr>
-                                                        <th className="text-left p-3 text-slate-400 font-medium">Component</th>
-                                                        <th className="text-left p-3 text-slate-400 font-medium">Normal Range</th>
-                                                        <th className="text-left p-3 text-slate-400 font-medium">Unit</th>
+                                                        <th scope="col" className="text-left p-3 text-slate-400 font-medium">Component</th>
+                                                        <th scope="col" className="text-left p-3 text-slate-400 font-medium">Normal Range</th>
+                                                        <th scope="col" className="text-left p-3 text-slate-400 font-medium">Unit</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody className="divide-y divide-white/5">

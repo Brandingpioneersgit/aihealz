@@ -23,7 +23,7 @@ const clickSchema = z.object({
 export async function POST(request: NextRequest) {
     // Apply rate limiting to prevent click fraud
     const clientId = getClientIdentifier(request);
-    const rateLimit = checkRateLimit(`adclick:${clientId}`, RATE_LIMITS.adClick);
+    const rateLimit = await checkRateLimit(`adclick:${clientId}`, RATE_LIMITS.adClick);
 
     if (!rateLimit.success) {
         return NextResponse.json(

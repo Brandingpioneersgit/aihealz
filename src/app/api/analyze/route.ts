@@ -28,7 +28,7 @@ const analyzeSchema = z.object({
 export async function POST(request: NextRequest) {
     // Apply rate limiting
     const clientId = getClientIdentifier(request);
-    const rateLimit = checkRateLimit(`analyze:${clientId}`, RATE_LIMITS.analyze);
+    const rateLimit = await checkRateLimit(`analyze:${clientId}`, RATE_LIMITS.analyze);
 
     if (!rateLimit.success) {
         return NextResponse.json(

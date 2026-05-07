@@ -266,25 +266,28 @@ export default function ConditionsTable({ specialties }: { specialties: string[]
             {!loading && (
                 <div className="overflow-x-auto">
                     <table className="w-full">
+                        <caption className="sr-only">Medical conditions list with specialist, body system, content count, doctor count, status, and actions</caption>
                         <thead className="bg-slate-50 border-b border-slate-200">
                             <tr>
                                 <th
+                                    scope="col"
                                     className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase cursor-pointer hover:text-teal-600"
                                     onClick={() => toggleSort('commonName')}
                                 >
                                     Condition <SortIcon field="commonName" />
                                 </th>
                                 <th
+                                    scope="col"
                                     className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase cursor-pointer hover:text-teal-600"
                                     onClick={() => toggleSort('specialistType')}
                                 >
                                     Specialist <SortIcon field="specialistType" />
                                 </th>
-                                <th className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Body System</th>
-                                <th className="px-4 py-3 text-center text-xs font-bold text-slate-600 uppercase">Content</th>
-                                <th className="px-4 py-3 text-center text-xs font-bold text-slate-600 uppercase">Doctors</th>
-                                <th className="px-4 py-3 text-center text-xs font-bold text-slate-600 uppercase">Status</th>
-                                <th className="px-4 py-3 text-right text-xs font-bold text-slate-600 uppercase">Actions</th>
+                                <th scope="col" className="px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase">Body System</th>
+                                <th scope="col" className="px-4 py-3 text-center text-xs font-bold text-slate-600 uppercase">Content</th>
+                                <th scope="col" className="px-4 py-3 text-center text-xs font-bold text-slate-600 uppercase">Doctors</th>
+                                <th scope="col" className="px-4 py-3 text-center text-xs font-bold text-slate-600 uppercase">Status</th>
+                                <th scope="col" className="px-4 py-3 text-right text-xs font-bold text-slate-600 uppercase">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">

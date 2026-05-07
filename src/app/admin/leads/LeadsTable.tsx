@@ -137,16 +137,17 @@ export default function LeadsTable({ leads }: LeadsTableProps) {
             {/* Table */}
             <div className="overflow-x-auto">
                 <table className="w-full">
+                    <caption className="sr-only">Leads list with date, doctor, condition, location, intent, status, outcome, and actions</caption>
                     <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Date</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Doctor</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Condition</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Location</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Intent</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Status</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Outcome</th>
-                            <th className="text-right px-4 py-3 text-sm font-semibold text-slate-600">Actions</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Date</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Doctor</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Condition</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Location</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Intent</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Status</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Outcome</th>
+                            <th scope="col" className="text-right px-4 py-3 text-sm font-semibold text-slate-600">Actions</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">

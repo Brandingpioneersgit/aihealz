@@ -168,15 +168,15 @@ export default function AdminDiagnosticProvidersPage() {
           <table className="w-full">
             <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
               <tr>
-                <th className="px-6 py-3 text-left">Provider</th>
-                <th className="px-6 py-3 text-left">Type</th>
-                <th className="px-6 py-3 text-left">Location</th>
-                <th className="px-6 py-3 text-center">Tests</th>
-                <th className="px-6 py-3 text-center">Packages</th>
-                <th className="px-6 py-3 text-center">Bookings</th>
-                <th className="px-6 py-3 text-center">Rating</th>
-                <th className="px-6 py-3 text-center">Status</th>
-                <th className="px-6 py-3 text-right">Actions</th>
+                <th scope="col" className="px-6 py-3 text-left">Provider</th>
+                <th scope="col" className="px-6 py-3 text-left">Type</th>
+                <th scope="col" className="px-6 py-3 text-left">Location</th>
+                <th scope="col" className="px-6 py-3 text-center">Tests</th>
+                <th scope="col" className="px-6 py-3 text-center">Packages</th>
+                <th scope="col" className="px-6 py-3 text-center">Bookings</th>
+                <th scope="col" className="px-6 py-3 text-center">Rating</th>
+                <th scope="col" className="px-6 py-3 text-center">Status</th>
+                <th scope="col" className="px-6 py-3 text-right">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">

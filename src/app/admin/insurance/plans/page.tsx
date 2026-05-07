@@ -120,12 +120,12 @@ export default async function InsurancePlansPage() {
                                 <table className="w-full">
                                     <thead>
                                         <tr className="border-b border-slate-100">
-                                            <th className="text-left py-3 px-4 text-xs font-medium text-slate-500">Plan Name</th>
-                                            <th className="text-left py-3 px-4 text-xs font-medium text-slate-500">Type</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Sum Insured</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Base Premium</th>
-                                            <th className="text-center py-3 px-4 text-xs font-medium text-slate-500">Status</th>
-                                            <th className="text-right py-3 px-4 text-xs font-medium text-slate-500">Actions</th>
+                                            <th scope="col" className="text-left py-3 px-4 text-xs font-medium text-slate-500">Plan Name</th>
+                                            <th scope="col" className="text-left py-3 px-4 text-xs font-medium text-slate-500">Type</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Sum Insured</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Base Premium</th>
+                                            <th scope="col" className="text-center py-3 px-4 text-xs font-medium text-slate-500">Status</th>
+                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-slate-50">

@@ -263,10 +263,11 @@ export default function DataTable<T extends Record<string, unknown>>({
             {/* Table */}
             <div className="overflow-x-auto">
                 <table className="w-full">
+                    <caption className="sr-only">Data table</caption>
                     <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
                             {selectable && (
-                                <th className="px-4 py-3 w-10">
+                                <th scope="col" className="px-4 py-3 w-10">
                                     <input
                                         type="checkbox"
                                         checked={isAllSelected}
@@ -274,12 +275,14 @@ export default function DataTable<T extends Record<string, unknown>>({
                                             if (el) el.indeterminate = isSomeSelected && !isAllSelected;
                                         }}
                                         onChange={toggleSelectAll}
+                                        aria-label="Select all rows"
                                         className="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500"
                                     />
                                 </th>
                             )}
                             {columns.map((col) => (
                                 <th
+                                    scope="col"
                                     key={String(col.key)}
                                     className={`px-4 py-3 text-left text-xs font-bold text-slate-600 uppercase tracking-wider ${
                                         col.sortable ? 'cursor-pointer hover:bg-slate-100' : ''
@@ -299,7 +302,7 @@ export default function DataTable<T extends Record<string, unknown>>({
                                 </th>
                             ))}
                             {(actions || onDelete || editHref) && (
-                                <th className="px-4 py-3 text-right text-xs font-bold text-slate-600 uppercase tracking-wider">
+                                <th scope="col" className="px-4 py-3 text-right text-xs font-bold text-slate-600 uppercase tracking-wider">
                                     Actions
                                 </th>
                             )}

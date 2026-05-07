@@ -194,6 +194,17 @@ export default function FooterPage() {
                 onCancel={() => setDeleteModal({ isOpen: false, templateId: null, templateName: '' })}
             />
             <div className="space-y-6 max-w-5xl">
+            <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
+                <div className="font-semibold mb-1">Footer templates are not yet wired to the v4 footer.</div>
+                <div className="text-amber-800">
+                    The public site footer is rendered from a hardcoded{' '}
+                    <code className="bg-amber-100 px-1 rounded">SECTIONS</code> constant in{' '}
+                    <code className="bg-amber-100 px-1 rounded">src/components/v4/Footer.tsx</code>.
+                    Templates created on this screen are stored as{' '}
+                    <code className="bg-amber-100 px-1 rounded">FooterTemplate</code> rows but not
+                    consumed by the v4 footer yet.
+                </div>
+            </div>
             {errorMessage && (
                 <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
                     {errorMessage}
@@ -294,12 +305,12 @@ export default function FooterPage() {
                     <table className="w-full text-sm">
                         <thead className="bg-slate-50 border-b border-slate-200">
                             <tr>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Rule Name</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Match Type</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Match Value</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Priority</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
-                                <th className="text-right p-4 font-bold text-slate-600 text-xs uppercase">Actions</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Rule Name</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Match Type</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Match Value</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Priority</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
+                                <th scope="col" className="text-right p-4 font-bold text-slate-600 text-xs uppercase">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">

@@ -161,12 +161,12 @@ export default function SitemapMonitorPage() {
                     <table className="w-full text-left text-sm">
                         <thead className="bg-slate-50 text-slate-500 border-b border-slate-200 uppercase text-xs font-bold">
                             <tr>
-                                <th className="px-6 py-4">Sitemap File</th>
-                                <th className="px-6 py-4">Type</th>
-                                <th className="px-6 py-4">URLs</th>
-                                <th className="px-6 py-4">Generation Time</th>
-                                <th className="px-6 py-4">Last Generated</th>
-                                <th className="px-6 py-4 text-right">Actions</th>
+                                <th scope="col" className="px-6 py-4">Sitemap File</th>
+                                <th scope="col" className="px-6 py-4">Type</th>
+                                <th scope="col" className="px-6 py-4">URLs</th>
+                                <th scope="col" className="px-6 py-4">Generation Time</th>
+                                <th scope="col" className="px-6 py-4">Last Generated</th>
+                                <th scope="col" className="px-6 py-4 text-right">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">

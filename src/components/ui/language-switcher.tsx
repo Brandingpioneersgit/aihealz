@@ -81,7 +81,7 @@ export default function LanguageSwitcher({
     };
 
     return (
-        <div className="bg-gradient-to-r from-primary-900/60 to-primary-800/60 backdrop-blur-md border-b border-primary-500/20">
+        <div role="region" aria-label="Choose language" className="bg-gradient-to-r from-primary-900/60 to-primary-800/60 backdrop-blur-md border-b border-primary-500/20">
             <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4 flex-wrap">
                 <div className="flex items-center gap-3 text-sm">
                     <Globe className="w-4 h-4 text-primary-400 shrink-0" />
@@ -98,6 +98,9 @@ export default function LanguageSwitcher({
 
                 <div className="flex items-center gap-2">
                     <button
+                        lang="en"
+                        aria-label="Switch to English"
+                        aria-pressed={activeLang === 'en'}
                         className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${activeLang === 'en'
                             ? 'bg-white/15 text-white border border-white/20'
                             : 'text-slate-400 hover:text-white hover:bg-white/5'
@@ -107,6 +110,9 @@ export default function LanguageSwitcher({
                         English
                     </button>
                     <button
+                        lang={regionalLang}
+                        aria-label={`Switch to ${regName}`}
+                        aria-pressed={activeLang === regionalLang}
                         className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${activeLang === regionalLang
                             ? 'bg-white/15 text-white border border-white/20'
                             : 'text-slate-400 hover:text-white hover:bg-white/5'

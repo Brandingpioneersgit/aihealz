@@ -201,13 +201,13 @@ export default function KeywordGapsPage() {
                     <table className="w-full text-left text-sm">
                         <thead className="bg-slate-50 text-slate-500 border-b border-slate-200 uppercase text-[10px] tracking-wider font-bold">
                             <tr>
-                                <th className="px-6 py-4">Keyword</th>
-                                <th className="px-6 py-4">Volume</th>
-                                <th className="px-6 py-4">KD</th>
-                                <th className="px-6 py-4">Opp. Score</th>
-                                <th className="px-6 py-4">Target Page</th>
-                                <th className="px-6 py-4">Status</th>
-                                <th className="px-6 py-4 text-right">Action</th>
+                                <th scope="col" className="px-6 py-4">Keyword</th>
+                                <th scope="col" className="px-6 py-4">Volume</th>
+                                <th scope="col" className="px-6 py-4">KD</th>
+                                <th scope="col" className="px-6 py-4">Opp. Score</th>
+                                <th scope="col" className="px-6 py-4">Target Page</th>
+                                <th scope="col" className="px-6 py-4">Status</th>
+                                <th scope="col" className="px-6 py-4 text-right">Action</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">

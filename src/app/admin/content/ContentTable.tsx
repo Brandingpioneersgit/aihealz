@@ -171,16 +171,17 @@ export default function ContentTable({ content }: ContentTableProps) {
             {/* Table */}
             <div className="overflow-x-auto">
                 <table className="w-full">
+                    <caption className="sr-only">Content list with title, condition, language, region, status, word count, last updated, and actions</caption>
                     <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Title</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Condition</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Language</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Region</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Status</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Words</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Updated</th>
-                            <th className="text-right px-4 py-3 text-sm font-semibold text-slate-600">Actions</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Title</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Condition</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Language</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Region</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Status</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Words</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Updated</th>
+                            <th scope="col" className="text-right px-4 py-3 text-sm font-semibold text-slate-600">Actions</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">

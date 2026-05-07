@@ -18,8 +18,8 @@ export default async function AdminTreatmentsPage() {
                 <table className="w-full text-sm">
                     <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
-                            <th className="text-left p-4 font-bold text-slate-700">Specialty</th>
-                            <th className="text-left p-4 font-bold text-slate-700">Conditions</th>
+                            <th scope="col" className="text-left p-4 font-bold text-slate-700">Specialty</th>
+                            <th scope="col" className="text-left p-4 font-bold text-slate-700">Conditions</th>
                         </tr>
                     </thead>
                     <tbody>

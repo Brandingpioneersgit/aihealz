@@ -245,14 +245,14 @@ export default function ReportsPage() {
                     <table className="w-full text-sm">
                         <thead className="bg-slate-50 border-b border-slate-200">
                             <tr>
-                                <th className="text-left p-4 font-bold text-slate-700">Report ID</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Type</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Urgency</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Confidence</th>
-                                <th className="text-left p-4 font-bold text-slate-700">PII Removed</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Processing</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Specialty</th>
-                                <th className="text-left p-4 font-bold text-slate-700">Date</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Report ID</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Type</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Urgency</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Confidence</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">PII Removed</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Processing</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Specialty</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-700">Date</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">

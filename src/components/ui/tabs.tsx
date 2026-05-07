@@ -49,10 +49,30 @@ interface TabsListProps {
 }
 
 export function TabsList({ children, className = '' }: TabsListProps) {
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+        const target = e.target as HTMLElement;
+        if (target.getAttribute('role') !== 'tab') return;
+        const tabs = Array.from(
+            (e.currentTarget as HTMLElement).querySelectorAll<HTMLElement>('[role="tab"]:not([disabled])')
+        );
+        const idx = tabs.indexOf(target);
+        if (idx === -1) return;
+        let nextIdx = idx;
+        if (e.key === 'ArrowRight') nextIdx = (idx + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') nextIdx = 0;
+        else if (e.key === 'End') nextIdx = tabs.length - 1;
+        else return;
+        e.preventDefault();
+        tabs[nextIdx]?.focus();
+        tabs[nextIdx]?.click();
+    };
+
     return (
         <div
             className={`flex border-b border-gray-200 dark:border-gray-700 ${className}`}
             role="tablist"
+            onKeyDown={handleKeyDown}
         >
             {children}
         </div>
@@ -74,8 +94,10 @@ export function TabsTrigger({ value, children, disabled = false, className = '' 
         <button
             type="button"
             role="tab"
+            id={`tab-${value}`}
             aria-selected={isActive}
             aria-controls={`tabpanel-${value}`}
+            tabIndex={isActive ? 0 : -1}
             disabled={disabled}
             onClick={() => setActiveTab(value)}
             className={`

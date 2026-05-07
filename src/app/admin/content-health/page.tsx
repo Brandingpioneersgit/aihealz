@@ -373,11 +373,11 @@ export default function ContentHealthPage() {
                         <table className="w-full text-sm">
                             <thead className="bg-slate-50 border-b border-slate-200">
                                 <tr>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">URL</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">API</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Response</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Submitted</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">URL</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">API</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Response</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Submitted</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-100">
@@ -418,12 +418,12 @@ export default function ContentHealthPage() {
                         <table className="w-full text-sm">
                             <thead className="bg-slate-50 border-b border-slate-200">
                                 <tr>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Keyword</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Volume</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Your Rank</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Competitor</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Opportunity</th>
-                                    <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Action</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Keyword</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Volume</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Your Rank</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Competitor</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Opportunity</th>
+                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Action</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-100">

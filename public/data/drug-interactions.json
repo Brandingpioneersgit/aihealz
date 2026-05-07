@@ -1,55 +1,560 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "metadata": {
+    "version": "1.0",
+    "lastReviewed": "2025-01-15",
+    "reviewedBy": "Aihealz Editorial Board",
+    "source": "https://www.fda.gov/drugs",
+    "clinicalDisclaimer": "This information is for educational purposes only and does not constitute medical advice. Drug interaction data is not exhaustive. Always consult a licensed healthcare professional or pharmacist before starting, stopping, or combining medications. Verify dosing, interactions, and contraindications against current drug references (e.g., FDA label, Lexicomp, Micromedex) and local clinical guidelines."
+  },
   "drugs": [
-    { "id": "warfarin", "name": "Warfarin", "brands": ["Coumadin", "Jantoven", "Warf"], "class": "Anticoagulant" },
-    { "id": "aspirin", "name": "Aspirin", "brands": ["Bayer", "Ecotrin", "Disprin"], "class": "NSAID/Antiplatelet" },
-    { "id": "ibuprofen", "name": "Ibuprofen", "brands": ["Advil", "Motrin", "Brufen", "Nurofen"], "class": "NSAID" },
-    { "id": "metformin", "name": "Metformin", "brands": ["Glucophage", "Glycomet", "Fortamet"], "class": "Antidiabetic" },
-    { "id": "lisinopril", "name": "Lisinopril", "brands": ["Zestril", "Prinivil", "Listril"], "class": "ACE Inhibitor" },
-    { "id": "atorvastatin", "name": "Atorvastatin", "brands": ["Lipitor", "Atorva", "Torvast"], "class": "Statin" },
-    { "id": "simvastatin", "name": "Simvastatin", "brands": ["Zocor", "Simcard", "Simvor"], "class": "Statin" },
-    { "id": "omeprazole", "name": "Omeprazole", "brands": ["Prilosec", "Omez", "Losec"], "class": "PPI" },
-    { "id": "metoprolol", "name": "Metoprolol", "brands": ["Lopressor", "Toprol-XL", "Betaloc"], "class": "Beta Blocker" },
-    { "id": "amlodipine", "name": "Amlodipine", "brands": ["Norvasc", "Amlong", "Amlip"], "class": "Calcium Channel Blocker" },
-    { "id": "losartan", "name": "Losartan", "brands": ["Cozaar", "Losar", "Losacar"], "class": "ARB" },
-    { "id": "gabapentin", "name": "Gabapentin", "brands": ["Neurontin", "Gabapin", "Gralise"], "class": "Anticonvulsant" },
-    { "id": "sertraline", "name": "Sertraline", "brands": ["Zoloft", "Serlift", "Lustral"], "class": "SSRI" },
-    { "id": "fluoxetine", "name": "Fluoxetine", "brands": ["Prozac", "Fludac", "Sarafem"], "class": "SSRI" },
-    { "id": "escitalopram", "name": "Escitalopram", "brands": ["Lexapro", "Nexito", "Cipralex"], "class": "SSRI" },
-    { "id": "tramadol", "name": "Tramadol", "brands": ["Ultram", "Contramal", "Tramacet"], "class": "Opioid Analgesic" },
-    { "id": "hydrocodone", "name": "Hydrocodone", "brands": ["Vicodin", "Norco", "Lortab"], "class": "Opioid Analgesic" },
-    { "id": "oxycodone", "name": "Oxycodone", "brands": ["OxyContin", "Percocet", "Roxicodone"], "class": "Opioid Analgesic" },
-    { "id": "alprazolam", "name": "Alprazolam", "brands": ["Xanax", "Alprax", "Niravam"], "class": "Benzodiazepine" },
-    { "id": "lorazepam", "name": "Lorazepam", "brands": ["Ativan", "Loraz", "Temesta"], "class": "Benzodiazepine" },
-    { "id": "diazepam", "name": "Diazepam", "brands": ["Valium", "Calmpose", "Diastat"], "class": "Benzodiazepine" },
-    { "id": "prednisone", "name": "Prednisone", "brands": ["Deltasone", "Rayos", "Omnacortil"], "class": "Corticosteroid" },
-    { "id": "amoxicillin", "name": "Amoxicillin", "brands": ["Amoxil", "Mox", "Trimox"], "class": "Antibiotic" },
-    { "id": "azithromycin", "name": "Azithromycin", "brands": ["Zithromax", "Azithral", "Z-Pack"], "class": "Antibiotic" },
-    { "id": "ciprofloxacin", "name": "Ciprofloxacin", "brands": ["Cipro", "Ciplox", "Cifran"], "class": "Antibiotic" },
-    { "id": "levothyroxine", "name": "Levothyroxine", "brands": ["Synthroid", "Eltroxin", "Levoxyl"], "class": "Thyroid Hormone" },
-    { "id": "insulin", "name": "Insulin", "brands": ["Humalog", "Lantus", "Novolog"], "class": "Antidiabetic" },
-    { "id": "clopidogrel", "name": "Clopidogrel", "brands": ["Plavix", "Clopilet", "Deplatt"], "class": "Antiplatelet" },
-    { "id": "rivaroxaban", "name": "Rivaroxaban", "brands": ["Xarelto"], "class": "Anticoagulant" },
-    { "id": "apixaban", "name": "Apixaban", "brands": ["Eliquis"], "class": "Anticoagulant" },
-    { "id": "sildenafil", "name": "Sildenafil", "brands": ["Viagra", "Revatio", "Manforce"], "class": "PDE5 Inhibitor" },
-    { "id": "tadalafil", "name": "Tadalafil", "brands": ["Cialis", "Megalis", "Adcirca"], "class": "PDE5 Inhibitor" },
-    { "id": "acetaminophen", "name": "Acetaminophen", "brands": ["Tylenol", "Paracetamol", "Crocin", "Panadol"], "class": "Analgesic" },
-    { "id": "naproxen", "name": "Naproxen", "brands": ["Aleve", "Naprosyn", "Naprelan"], "class": "NSAID" },
-    { "id": "furosemide", "name": "Furosemide", "brands": ["Lasix", "Frusenex", "Frusemide"], "class": "Diuretic" },
-    { "id": "spironolactone", "name": "Spironolactone", "brands": ["Aldactone", "Spiromide"], "class": "Diuretic" },
-    { "id": "pantoprazole", "name": "Pantoprazole", "brands": ["Protonix", "Pan", "Pantocid"], "class": "PPI" },
-    { "id": "esomeprazole", "name": "Esomeprazole", "brands": ["Nexium", "Nexpro", "Esoz"], "class": "PPI" },
-    { "id": "duloxetine", "name": "Duloxetine", "brands": ["Cymbalta", "Duzela", "Irenka"], "class": "SNRI" },
-    { "id": "venlafaxine", "name": "Venlafaxine", "brands": ["Effexor", "Venla", "Venlor"], "class": "SNRI" },
-    { "id": "bupropion", "name": "Bupropion", "brands": ["Wellbutrin", "Zyban", "Bupron"], "class": "Antidepressant" },
-    { "id": "quetiapine", "name": "Quetiapine", "brands": ["Seroquel", "Qutan", "Qutipin"], "class": "Antipsychotic" },
-    { "id": "aripiprazole", "name": "Aripiprazole", "brands": ["Abilify", "Arip MT", "Asprito"], "class": "Antipsychotic" },
-    { "id": "lithium", "name": "Lithium", "brands": ["Lithobid", "Licab", "Eskalith"], "class": "Mood Stabilizer" },
-    { "id": "carbamazepine", "name": "Carbamazepine", "brands": ["Tegretol", "Zen Retard", "Carbatol"], "class": "Anticonvulsant" },
-    { "id": "phenytoin", "name": "Phenytoin", "brands": ["Dilantin", "Eptoin", "Phenytek"], "class": "Anticonvulsant" },
-    { "id": "valproic_acid", "name": "Valproic Acid", "brands": ["Depakote", "Valparin", "Epilim"], "class": "Anticonvulsant" },
-    { "id": "methotrexate", "name": "Methotrexate", "brands": ["Trexall", "Folitrax", "Rheumatrex"], "class": "Immunosuppressant" },
-    { "id": "cyclosporine", "name": "Cyclosporine", "brands": ["Sandimmune", "Neoral", "Panimun"], "class": "Immunosuppressant" },
-    { "id": "allopurinol", "name": "Allopurinol", "brands": ["Zyloprim", "Zyloric", "Allopur"], "class": "Antigout" }
+    {
+      "id": "warfarin",
+      "name": "Warfarin",
+      "brands": [
+        "Coumadin",
+        "Jantoven",
+        "Warf"
+      ],
+      "class": "Anticoagulant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "aspirin",
+      "name": "Aspirin",
+      "brands": [
+        "Bayer",
+        "Ecotrin",
+        "Disprin"
+      ],
+      "class": "NSAID/Antiplatelet",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "ibuprofen",
+      "name": "Ibuprofen",
+      "brands": [
+        "Advil",
+        "Motrin",
+        "Brufen",
+        "Nurofen"
+      ],
+      "class": "NSAID",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "metformin",
+      "name": "Metformin",
+      "brands": [
+        "Glucophage",
+        "Glycomet",
+        "Fortamet"
+      ],
+      "class": "Antidiabetic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "lisinopril",
+      "name": "Lisinopril",
+      "brands": [
+        "Zestril",
+        "Prinivil",
+        "Listril"
+      ],
+      "class": "ACE Inhibitor",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "atorvastatin",
+      "name": "Atorvastatin",
+      "brands": [
+        "Lipitor",
+        "Atorva",
+        "Torvast"
+      ],
+      "class": "Statin",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "simvastatin",
+      "name": "Simvastatin",
+      "brands": [
+        "Zocor",
+        "Simcard",
+        "Simvor"
+      ],
+      "class": "Statin",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "omeprazole",
+      "name": "Omeprazole",
+      "brands": [
+        "Prilosec",
+        "Omez",
+        "Losec"
+      ],
+      "class": "PPI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "metoprolol",
+      "name": "Metoprolol",
+      "brands": [
+        "Lopressor",
+        "Toprol-XL",
+        "Betaloc"
+      ],
+      "class": "Beta Blocker",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "amlodipine",
+      "name": "Amlodipine",
+      "brands": [
+        "Norvasc",
+        "Amlong",
+        "Amlip"
+      ],
+      "class": "Calcium Channel Blocker",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "losartan",
+      "name": "Losartan",
+      "brands": [
+        "Cozaar",
+        "Losar",
+        "Losacar"
+      ],
+      "class": "ARB",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "gabapentin",
+      "name": "Gabapentin",
+      "brands": [
+        "Neurontin",
+        "Gabapin",
+        "Gralise"
+      ],
+      "class": "Anticonvulsant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "sertraline",
+      "name": "Sertraline",
+      "brands": [
+        "Zoloft",
+        "Serlift",
+        "Lustral"
+      ],
+      "class": "SSRI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "fluoxetine",
+      "name": "Fluoxetine",
+      "brands": [
+        "Prozac",
+        "Fludac",
+        "Sarafem"
+      ],
+      "class": "SSRI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "escitalopram",
+      "name": "Escitalopram",
+      "brands": [
+        "Lexapro",
+        "Nexito",
+        "Cipralex"
+      ],
+      "class": "SSRI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "tramadol",
+      "name": "Tramadol",
+      "brands": [
+        "Ultram",
+        "Contramal",
+        "Tramacet"
+      ],
+      "class": "Opioid Analgesic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "hydrocodone",
+      "name": "Hydrocodone",
+      "brands": [
+        "Vicodin",
+        "Norco",
+        "Lortab"
+      ],
+      "class": "Opioid Analgesic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "oxycodone",
+      "name": "Oxycodone",
+      "brands": [
+        "OxyContin",
+        "Percocet",
+        "Roxicodone"
+      ],
+      "class": "Opioid Analgesic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "alprazolam",
+      "name": "Alprazolam",
+      "brands": [
+        "Xanax",
+        "Alprax",
+        "Niravam"
+      ],
+      "class": "Benzodiazepine",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "lorazepam",
+      "name": "Lorazepam",
+      "brands": [
+        "Ativan",
+        "Loraz",
+        "Temesta"
+      ],
+      "class": "Benzodiazepine",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "diazepam",
+      "name": "Diazepam",
+      "brands": [
+        "Valium",
+        "Calmpose",
+        "Diastat"
+      ],
+      "class": "Benzodiazepine",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "prednisone",
+      "name": "Prednisone",
+      "brands": [
+        "Deltasone",
+        "Rayos",
+        "Omnacortil"
+      ],
+      "class": "Corticosteroid",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "amoxicillin",
+      "name": "Amoxicillin",
+      "brands": [
+        "Amoxil",
+        "Mox",
+        "Trimox"
+      ],
+      "class": "Antibiotic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin",
+      "brands": [
+        "Zithromax",
+        "Azithral",
+        "Z-Pack"
+      ],
+      "class": "Antibiotic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "ciprofloxacin",
+      "name": "Ciprofloxacin",
+      "brands": [
+        "Cipro",
+        "Ciplox",
+        "Cifran"
+      ],
+      "class": "Antibiotic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "levothyroxine",
+      "name": "Levothyroxine",
+      "brands": [
+        "Synthroid",
+        "Eltroxin",
+        "Levoxyl"
+      ],
+      "class": "Thyroid Hormone",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "insulin",
+      "name": "Insulin",
+      "brands": [
+        "Humalog",
+        "Lantus",
+        "Novolog"
+      ],
+      "class": "Antidiabetic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "clopidogrel",
+      "name": "Clopidogrel",
+      "brands": [
+        "Plavix",
+        "Clopilet",
+        "Deplatt"
+      ],
+      "class": "Antiplatelet",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "rivaroxaban",
+      "name": "Rivaroxaban",
+      "brands": [
+        "Xarelto"
+      ],
+      "class": "Anticoagulant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "apixaban",
+      "name": "Apixaban",
+      "brands": [
+        "Eliquis"
+      ],
+      "class": "Anticoagulant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "sildenafil",
+      "name": "Sildenafil",
+      "brands": [
+        "Viagra",
+        "Revatio",
+        "Manforce"
+      ],
+      "class": "PDE5 Inhibitor",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "tadalafil",
+      "name": "Tadalafil",
+      "brands": [
+        "Cialis",
+        "Megalis",
+        "Adcirca"
+      ],
+      "class": "PDE5 Inhibitor",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "acetaminophen",
+      "name": "Acetaminophen",
+      "brands": [
+        "Tylenol",
+        "Paracetamol",
+        "Crocin",
+        "Panadol"
+      ],
+      "class": "Analgesic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "naproxen",
+      "name": "Naproxen",
+      "brands": [
+        "Aleve",
+        "Naprosyn",
+        "Naprelan"
+      ],
+      "class": "NSAID",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "furosemide",
+      "name": "Furosemide",
+      "brands": [
+        "Lasix",
+        "Frusenex",
+        "Frusemide"
+      ],
+      "class": "Diuretic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "spironolactone",
+      "name": "Spironolactone",
+      "brands": [
+        "Aldactone",
+        "Spiromide"
+      ],
+      "class": "Diuretic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "pantoprazole",
+      "name": "Pantoprazole",
+      "brands": [
+        "Protonix",
+        "Pan",
+        "Pantocid"
+      ],
+      "class": "PPI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "esomeprazole",
+      "name": "Esomeprazole",
+      "brands": [
+        "Nexium",
+        "Nexpro",
+        "Esoz"
+      ],
+      "class": "PPI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "duloxetine",
+      "name": "Duloxetine",
+      "brands": [
+        "Cymbalta",
+        "Duzela",
+        "Irenka"
+      ],
+      "class": "SNRI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "venlafaxine",
+      "name": "Venlafaxine",
+      "brands": [
+        "Effexor",
+        "Venla",
+        "Venlor"
+      ],
+      "class": "SNRI",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "bupropion",
+      "name": "Bupropion",
+      "brands": [
+        "Wellbutrin",
+        "Zyban",
+        "Bupron"
+      ],
+      "class": "Antidepressant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "quetiapine",
+      "name": "Quetiapine",
+      "brands": [
+        "Seroquel",
+        "Qutan",
+        "Qutipin"
+      ],
+      "class": "Antipsychotic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "aripiprazole",
+      "name": "Aripiprazole",
+      "brands": [
+        "Abilify",
+        "Arip MT",
+        "Asprito"
+      ],
+      "class": "Antipsychotic",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "lithium",
+      "name": "Lithium",
+      "brands": [
+        "Lithobid",
+        "Licab",
+        "Eskalith"
+      ],
+      "class": "Mood Stabilizer",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "carbamazepine",
+      "name": "Carbamazepine",
+      "brands": [
+        "Tegretol",
+        "Zen Retard",
+        "Carbatol"
+      ],
+      "class": "Anticonvulsant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "phenytoin",
+      "name": "Phenytoin",
+      "brands": [
+        "Dilantin",
+        "Eptoin",
+        "Phenytek"
+      ],
+      "class": "Anticonvulsant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "valproic_acid",
+      "name": "Valproic Acid",
+      "brands": [
+        "Depakote",
+        "Valparin",
+        "Epilim"
+      ],
+      "class": "Anticonvulsant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "methotrexate",
+      "name": "Methotrexate",
+      "brands": [
+        "Trexall",
+        "Folitrax",
+        "Rheumatrex"
+      ],
+      "class": "Immunosuppressant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "cyclosporine",
+      "name": "Cyclosporine",
+      "brands": [
+        "Sandimmune",
+        "Neoral",
+        "Panimun"
+      ],
+      "class": "Immunosuppressant",
+      "lastReviewed": "2025-01-15"
+    },
+    {
+      "id": "allopurinol",
+      "name": "Allopurinol",
+      "brands": [
+        "Zyloprim",
+        "Zyloric",
+        "Allopur"
+      ],
+      "class": "Antigout",
+      "lastReviewed": "2025-01-15"
+    }
   ],
   "interactions": [
     {
@@ -300,70 +805,113 @@
     {
       "drug": "warfarin",
       "food": "Vitamin K rich foods",
-      "examples": ["Spinach", "Kale", "Broccoli", "Brussels sprouts"],
+      "examples": [
+        "Spinach",
+        "Kale",
+        "Broccoli",
+        "Brussels sprouts"
+      ],
       "effect": "Reduced anticoagulant effect",
       "recommendation": "Maintain consistent intake - don't suddenly increase or decrease"
     },
     {
       "drug": "statins",
       "food": "Grapefruit",
-      "examples": ["Grapefruit juice", "Pomelo", "Seville oranges"],
+      "examples": [
+        "Grapefruit juice",
+        "Pomelo",
+        "Seville oranges"
+      ],
       "effect": "Increased drug levels, risk of muscle damage",
       "recommendation": "Avoid completely with simvastatin/lovastatin. Limit with others"
     },
     {
       "drug": "tetracyclines",
       "food": "Dairy products",
-      "examples": ["Milk", "Cheese", "Yogurt", "Calcium supplements"],
+      "examples": [
+        "Milk",
+        "Cheese",
+        "Yogurt",
+        "Calcium supplements"
+      ],
       "effect": "Reduced antibiotic absorption",
       "recommendation": "Take 2 hours before or after dairy"
     },
     {
       "drug": "maois",
       "food": "Tyramine-rich foods",
-      "examples": ["Aged cheese", "Cured meats", "Soy sauce", "Draft beer", "Sauerkraut"],
+      "examples": [
+        "Aged cheese",
+        "Cured meats",
+        "Soy sauce",
+        "Draft beer",
+        "Sauerkraut"
+      ],
       "effect": "Dangerous blood pressure spike",
       "recommendation": "Avoid completely while on MAOIs"
     },
     {
       "drug": "levothyroxine",
       "food": "Soy products",
-      "examples": ["Tofu", "Soy milk", "Edamame"],
+      "examples": [
+        "Tofu",
+        "Soy milk",
+        "Edamame"
+      ],
       "effect": "Reduced thyroid hormone absorption",
       "recommendation": "Take levothyroxine 4 hours before soy"
     },
     {
       "drug": "metronidazole",
       "food": "Alcohol",
-      "examples": ["Wine", "Beer", "Spirits", "Alcohol-containing medications"],
+      "examples": [
+        "Wine",
+        "Beer",
+        "Spirits",
+        "Alcohol-containing medications"
+      ],
       "effect": "Severe nausea, vomiting, flushing (disulfiram reaction)",
       "recommendation": "Avoid alcohol during and 3 days after treatment"
     },
     {
       "drug": "blood_thinners",
       "food": "Alcohol",
-      "examples": ["All alcoholic beverages"],
+      "examples": [
+        "All alcoholic beverages"
+      ],
       "effect": "Increased bleeding risk",
       "recommendation": "Limit to 1-2 drinks occasionally"
     },
     {
       "drug": "potassium_sparing_diuretics",
       "food": "High potassium foods",
-      "examples": ["Bananas", "Oranges", "Potatoes", "Salt substitutes"],
+      "examples": [
+        "Bananas",
+        "Oranges",
+        "Potatoes",
+        "Salt substitutes"
+      ],
       "effect": "Dangerously high potassium levels",
       "recommendation": "Moderate intake. Regular potassium monitoring"
     },
     {
       "drug": "calcium_channel_blockers",
       "food": "Grapefruit",
-      "examples": ["Grapefruit", "Grapefruit juice"],
+      "examples": [
+        "Grapefruit",
+        "Grapefruit juice"
+      ],
       "effect": "Enhanced drug effects, low blood pressure",
       "recommendation": "Avoid or separate by several hours"
     },
     {
       "drug": "fluoroquinolones",
       "food": "Dairy and antacids",
-      "examples": ["Milk", "Calcium supplements", "Iron supplements"],
+      "examples": [
+        "Milk",
+        "Calcium supplements",
+        "Iron supplements"
+      ],
       "effect": "Reduced antibiotic absorption",
       "recommendation": "Take antibiotic 2 hours before or 6 hours after"
     }
@@ -371,70 +919,109 @@
   "alcohol_interactions": [
     {
       "drugClass": "Benzodiazepines",
-      "examples": ["Alprazolam", "Lorazepam", "Diazepam"],
+      "examples": [
+        "Alprazolam",
+        "Lorazepam",
+        "Diazepam"
+      ],
       "severity": "severe",
       "effect": "Severe sedation, respiratory depression, death",
       "recommendation": "Avoid alcohol completely"
     },
     {
       "drugClass": "Opioids",
-      "examples": ["Oxycodone", "Hydrocodone", "Morphine", "Tramadol"],
+      "examples": [
+        "Oxycodone",
+        "Hydrocodone",
+        "Morphine",
+        "Tramadol"
+      ],
       "severity": "severe",
       "effect": "Life-threatening respiratory depression",
       "recommendation": "Avoid alcohol completely"
     },
     {
       "drugClass": "Antidepressants",
-      "examples": ["Sertraline", "Fluoxetine", "Duloxetine"],
+      "examples": [
+        "Sertraline",
+        "Fluoxetine",
+        "Duloxetine"
+      ],
       "severity": "moderate",
       "effect": "Increased sedation, worsened depression",
       "recommendation": "Limit alcohol. Avoid initially"
     },
     {
       "drugClass": "Blood Pressure Medications",
-      "examples": ["Lisinopril", "Metoprolol", "Amlodipine"],
+      "examples": [
+        "Lisinopril",
+        "Metoprolol",
+        "Amlodipine"
+      ],
       "severity": "moderate",
       "effect": "Dizziness, fainting from low blood pressure",
       "recommendation": "Limit alcohol. Rise slowly from sitting"
     },
     {
       "drugClass": "Diabetes Medications",
-      "examples": ["Metformin", "Glimepiride", "Insulin"],
+      "examples": [
+        "Metformin",
+        "Glimepiride",
+        "Insulin"
+      ],
       "severity": "severe",
       "effect": "Severe hypoglycemia, lactic acidosis",
       "recommendation": "Limit alcohol. Never drink on empty stomach"
     },
     {
       "drugClass": "Antihistamines",
-      "examples": ["Diphenhydramine", "Cetirizine", "Loratadine"],
+      "examples": [
+        "Diphenhydramine",
+        "Cetirizine",
+        "Loratadine"
+      ],
       "severity": "moderate",
       "effect": "Extreme drowsiness, impaired coordination",
       "recommendation": "Avoid alcohol, especially with sedating antihistamines"
     },
     {
       "drugClass": "Acetaminophen",
-      "examples": ["Tylenol", "Paracetamol"],
+      "examples": [
+        "Tylenol",
+        "Paracetamol"
+      ],
       "severity": "severe",
       "effect": "Liver damage, especially with chronic use",
       "recommendation": "Limit to 2g/day if drinking. Avoid in alcoholism"
     },
     {
       "drugClass": "NSAIDs",
-      "examples": ["Ibuprofen", "Naproxen", "Aspirin"],
+      "examples": [
+        "Ibuprofen",
+        "Naproxen",
+        "Aspirin"
+      ],
       "severity": "moderate",
       "effect": "Increased GI bleeding risk",
       "recommendation": "Limit alcohol. Watch for stomach pain/black stool"
     },
     {
       "drugClass": "Antibiotics (Metronidazole)",
-      "examples": ["Flagyl", "Metrogyl"],
+      "examples": [
+        "Flagyl",
+        "Metrogyl"
+      ],
       "severity": "severe",
       "effect": "Severe vomiting, headache, rapid heartbeat",
       "recommendation": "No alcohol during + 3 days after treatment"
     },
     {
       "drugClass": "Sleep Medications",
-      "examples": ["Zolpidem", "Eszopiclone", "Trazodone"],
+      "examples": [
+        "Zolpidem",
+        "Eszopiclone",
+        "Trazodone"
+      ],
       "severity": "severe",
       "effect": "Excessive sedation, memory blackouts, dangerous behaviors",
       "recommendation": "Avoid alcohol completely"

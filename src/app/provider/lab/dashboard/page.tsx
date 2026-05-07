@@ -312,24 +312,7 @@ function LabDashboardContent() {
           )}
 
           {activeTab !== 'overview' && (
-            <div className="bg-white rounded-xl border border-slate-200 p-12 text-center">
-              <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                {(() => {
-                  const item = sidebarItems.find(i => i.id === activeTab);
-                  if (item) {
-                    const IconComponent = item.icon;
-                    return <IconComponent size={32} className="text-slate-400" />;
-                  }
-                  return null;
-                })()}
-              </div>
-              <h2 className="text-xl font-semibold text-slate-900 mb-2">
-                {sidebarItems.find(i => i.id === activeTab)?.label}
-              </h2>
-              <p className="text-slate-500">
-                This section is under development. Content coming soon.
-              </p>
-            </div>
+            <LabTabs activeTab={activeTab} session={session} sidebarItems={sidebarItems} />
           )}
         </div>
       </main>

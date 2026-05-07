@@ -110,15 +110,15 @@ export default async function AdminDiagnosticBookingsPage() {
           <table className="w-full">
             <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
               <tr>
-                <th className="px-6 py-3 text-left">Booking ID</th>
-                <th className="px-6 py-3 text-left">Patient</th>
-                <th className="px-6 py-3 text-left">Test/Package</th>
-                <th className="px-6 py-3 text-left">Provider</th>
-                <th className="px-6 py-3 text-center">Collection</th>
-                <th className="px-6 py-3 text-center">Status</th>
-                <th className="px-6 py-3 text-center">Payment</th>
-                <th className="px-6 py-3 text-right">Amount</th>
-                <th className="px-6 py-3 text-right">Date</th>
+                <th scope="col" className="px-6 py-3 text-left">Booking ID</th>
+                <th scope="col" className="px-6 py-3 text-left">Patient</th>
+                <th scope="col" className="px-6 py-3 text-left">Test/Package</th>
+                <th scope="col" className="px-6 py-3 text-left">Provider</th>
+                <th scope="col" className="px-6 py-3 text-center">Collection</th>
+                <th scope="col" className="px-6 py-3 text-center">Status</th>
+                <th scope="col" className="px-6 py-3 text-center">Payment</th>
+                <th scope="col" className="px-6 py-3 text-right">Amount</th>
+                <th scope="col" className="px-6 py-3 text-right">Date</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">

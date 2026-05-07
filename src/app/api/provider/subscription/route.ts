@@ -61,13 +61,26 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        const { doctorId, planId: planSlug } = body; // planSlug is like 'premium', 'enterprise'
+        const { doctorId, planId: planSlug } = body;
 
         if (!doctorId || !planSlug) {
             return NextResponse.json(
                 { error: 'doctorId and planId required' },
                 { status: 400 }
             );
+        }
+
+        // Authorization: provider must own this doctorId, OR admin.
+        // Real upgrades flow through Stripe checkout + webhook; this is a
+        // fallback admin path only.
+        const { verifyProviderOwnership } = await import('@/lib/provider-auth');
+        const { verifyAdminAuth } = await import('@/lib/admin-auth');
+        const ownership = await verifyProviderOwnership(request, Number(doctorId));
+        if (!ownership.authorized) {
+            const adminAuth = await verifyAdminAuth(request);
+            if (!adminAuth.authenticated) {
+                return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+            }
         }
 
         const config = PLAN_CONFIG[planSlug];

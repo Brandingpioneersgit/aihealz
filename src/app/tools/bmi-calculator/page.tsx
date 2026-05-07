@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { categorizeBmi } from './lib';
 
 export default function BMICalculatorPage() {
     const [weight, setWeight] = useState('');
@@ -38,9 +39,18 @@ export default function BMICalculatorPage() {
 
         const heightInMeters = h / 100;
         const bmi = w / (heightInMeters * heightInMeters);
-        const category = bmi < 18.5 ? 'Underweight' : bmi < 25 ? 'Normal Weight' : bmi < 30 ? 'Overweight' : 'Obese';
-        const color = bmi < 18.5 ? 'text-blue-400' : bmi < 25 ? 'text-emerald-400' : bmi < 30 ? 'text-amber-400' : 'text-red-400';
-        setResult({ bmi, category, color });
+        const category = categorizeBmi(bmi);
+        const colorByCategory: Record<string, string> = {
+            'Severe thinness': 'text-blue-500',
+            'Moderate thinness': 'text-blue-400',
+            'Mild thinness': 'text-blue-300',
+            'Normal weight': 'text-emerald-400',
+            'Overweight (pre-obese)': 'text-amber-400',
+            'Obesity class I': 'text-orange-400',
+            'Obesity class II': 'text-red-400',
+            'Obesity class III': 'text-red-500',
+        };
+        setResult({ bmi, category, color: colorByCategory[category] });
     }
 
     return (

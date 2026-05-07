@@ -134,15 +134,15 @@ export default async function TpasAdminPage() {
                         <table className="w-full">
                             <thead>
                                 <tr className="bg-slate-50 border-b border-slate-200">
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">TPA</th>
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Type</th>
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">HQ</th>
-                                    <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Insurers</th>
-                                    <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Hospitals</th>
-                                    <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Presence</th>
-                                    <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Rating</th>
-                                    <th className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Actions</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">TPA</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Type</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">HQ</th>
+                                    <th scope="col" className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Insurers</th>
+                                    <th scope="col" className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Hospitals</th>
+                                    <th scope="col" className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Presence</th>
+                                    <th scope="col" className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Rating</th>
+                                    <th scope="col" className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-100">

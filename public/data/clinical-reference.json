@@ -1,4 +1,12 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "metadata": {
+    "version": "1.0",
+    "lastReviewed": "2025-01-15",
+    "reviewedBy": "Aihealz Editorial Board",
+    "source": "Composite of major society guidelines (AHA, IDSA, SCCM, ASA)",
+    "clinicalDisclaimer": "Quick-reference content for educational use by trained clinicians. Always cross-check against current institutional protocols and society guidelines before use at the bedside."
+  },
   "cards": [
     {
       "id": "rass",
@@ -6,16 +14,56 @@
       "category": "Sedation",
       "icon": "😴",
       "items": [
-        { "score": "+4", "term": "Combative", "description": "Overtly combative, violent, immediate danger to staff" },
-        { "score": "+3", "term": "Very Agitated", "description": "Pulls or removes tubes/catheters, aggressive" },
-        { "score": "+2", "term": "Agitated", "description": "Frequent non-purposeful movement, fights ventilator" },
-        { "score": "+1", "term": "Restless", "description": "Anxious, apprehensive, movements not aggressive" },
-        { "score": "0", "term": "Alert & Calm", "description": "Spontaneously pays attention to caregiver" },
-        { "score": "-1", "term": "Drowsy", "description": "Not fully alert but sustained awakening to voice (>10 sec)" },
-        { "score": "-2", "term": "Light Sedation", "description": "Briefly awakens to voice, eye contact (<10 sec)" },
-        { "score": "-3", "term": "Moderate Sedation", "description": "Movement or eye opening to voice, no eye contact" },
-        { "score": "-4", "term": "Deep Sedation", "description": "No response to voice, movement to physical stimulation" },
-        { "score": "-5", "term": "Unarousable", "description": "No response to voice or physical stimulation" }
+        {
+          "score": "+4",
+          "term": "Combative",
+          "description": "Overtly combative, violent, immediate danger to staff"
+        },
+        {
+          "score": "+3",
+          "term": "Very Agitated",
+          "description": "Pulls or removes tubes/catheters, aggressive"
+        },
+        {
+          "score": "+2",
+          "term": "Agitated",
+          "description": "Frequent non-purposeful movement, fights ventilator"
+        },
+        {
+          "score": "+1",
+          "term": "Restless",
+          "description": "Anxious, apprehensive, movements not aggressive"
+        },
+        {
+          "score": "0",
+          "term": "Alert & Calm",
+          "description": "Spontaneously pays attention to caregiver"
+        },
+        {
+          "score": "-1",
+          "term": "Drowsy",
+          "description": "Not fully alert but sustained awakening to voice (>10 sec)"
+        },
+        {
+          "score": "-2",
+          "term": "Light Sedation",
+          "description": "Briefly awakens to voice, eye contact (<10 sec)"
+        },
+        {
+          "score": "-3",
+          "term": "Moderate Sedation",
+          "description": "Movement or eye opening to voice, no eye contact"
+        },
+        {
+          "score": "-4",
+          "term": "Deep Sedation",
+          "description": "No response to voice, movement to physical stimulation"
+        },
+        {
+          "score": "-5",
+          "term": "Unarousable",
+          "description": "No response to voice or physical stimulation"
+        }
       ],
       "target": "Goal: -2 to 0 for most ICU patients; -4 to -5 for specific indications (paralysis, severe ARDS)"
     },
@@ -25,10 +73,42 @@
       "category": "Sedation",
       "icon": "🧠",
       "steps": [
-        { "step": 1, "name": "Acute Change or Fluctuation", "question": "Is there an acute change from mental status baseline OR fluctuation in mental status in the past 24 hours?", "yes": "Continue to Step 2", "no": "CAM-ICU Negative (No Delirium)" },
-        { "step": 2, "name": "Inattention", "question": "Letters Test: 'SAVEAHAART' - squeeze on letter 'A'. Errors: fail to squeeze on 'A' or squeeze on other letter.", "threshold": ">2 errors", "yes": "Continue to Step 3", "no": "CAM-ICU Negative" },
-        { "step": 3, "name": "Altered Level of Consciousness", "question": "Current RASS score other than 0?", "yes": "CAM-ICU Positive (Delirium)", "no": "Continue to Step 4" },
-        { "step": 4, "name": "Disorganized Thinking", "questions": ["Will a stone float on water?", "Are there fish in the sea?", "Does 1 pound weigh more than 2?", "Can you use a hammer to pound a nail?", "Command: Hold up this many fingers (2). Now do the same with the other hand (repeat)."], "threshold": ">1 error", "yes": "CAM-ICU Positive", "no": "CAM-ICU Negative" }
+        {
+          "step": 1,
+          "name": "Acute Change or Fluctuation",
+          "question": "Is there an acute change from mental status baseline OR fluctuation in mental status in the past 24 hours?",
+          "yes": "Continue to Step 2",
+          "no": "CAM-ICU Negative (No Delirium)"
+        },
+        {
+          "step": 2,
+          "name": "Inattention",
+          "question": "Letters Test: 'SAVEAHAART' - squeeze on letter 'A'. Errors: fail to squeeze on 'A' or squeeze on other letter.",
+          "threshold": ">2 errors",
+          "yes": "Continue to Step 3",
+          "no": "CAM-ICU Negative"
+        },
+        {
+          "step": 3,
+          "name": "Altered Level of Consciousness",
+          "question": "Current RASS score other than 0?",
+          "yes": "CAM-ICU Positive (Delirium)",
+          "no": "Continue to Step 4"
+        },
+        {
+          "step": 4,
+          "name": "Disorganized Thinking",
+          "questions": [
+            "Will a stone float on water?",
+            "Are there fish in the sea?",
+            "Does 1 pound weigh more than 2?",
+            "Can you use a hammer to pound a nail?",
+            "Command: Hold up this many fingers (2). Now do the same with the other hand (repeat)."
+          ],
+          "threshold": ">1 error",
+          "yes": "CAM-ICU Positive",
+          "no": "CAM-ICU Negative"
+        }
       ],
       "note": "Assess daily. Delirium associated with increased mortality, longer ICU stay, cognitive impairment."
     },
@@ -38,15 +118,57 @@
       "category": "Emergency",
       "icon": "🚨",
       "drugs": [
-        { "name": "Epinephrine", "indication": "VF/pVT, Asystole, PEA", "dose": "1 mg IV/IO q3-5 min", "notes": "1:10,000 concentration for IV" },
-        { "name": "Amiodarone", "indication": "VF/pVT (refractory)", "dose": "300 mg IV, then 150 mg IV", "notes": "Max 2.2 g/24 hr" },
-        { "name": "Lidocaine", "indication": "VF/pVT (alternative)", "dose": "1-1.5 mg/kg IV, then 0.5-0.75 mg/kg q5-10 min", "notes": "Max 3 mg/kg" },
-        { "name": "Atropine", "indication": "Symptomatic bradycardia", "dose": "1 mg IV q3-5 min", "notes": "Max 3 mg. NOT for AV block type II or III" },
-        { "name": "Adenosine", "indication": "Stable narrow-complex SVT", "dose": "6 mg rapid IV push, then 12 mg × 2", "notes": "Follow with NS flush. Half dose if via central line" },
-        { "name": "Calcium Chloride", "indication": "Hyperkalemia, Ca-channel blocker OD", "dose": "1 g (10 mL of 10%) IV over 2-5 min", "notes": "Central line preferred; causes tissue necrosis" },
-        { "name": "Sodium Bicarbonate", "indication": "Hyperkalemia, TCA OD, prolonged arrest", "dose": "1 mEq/kg IV", "notes": "Not routine in arrest; consider if pH <7.1" },
-        { "name": "Magnesium Sulfate", "indication": "Torsades de Pointes, hypomagnesemia", "dose": "2 g IV over 2-5 min", "notes": "Can repeat once" }
-      ]
+        {
+          "name": "Epinephrine",
+          "indication": "VF/pVT, Asystole, PEA",
+          "dose": "1 mg IV/IO q3-5 min",
+          "notes": "1:10,000 concentration for IV"
+        },
+        {
+          "name": "Amiodarone",
+          "indication": "VF/pVT (refractory)",
+          "dose": "300 mg IV, then 150 mg IV",
+          "notes": "Max 2.2 g/24 hr"
+        },
+        {
+          "name": "Lidocaine",
+          "indication": "VF/pVT (alternative)",
+          "dose": "1-1.5 mg/kg IV, then 0.5-0.75 mg/kg q5-10 min",
+          "notes": "Max 3 mg/kg"
+        },
+        {
+          "name": "Atropine",
+          "indication": "Symptomatic bradycardia",
+          "dose": "1 mg IV q3-5 min",
+          "notes": "Max 3 mg. NOT for AV block type II or III"
+        },
+        {
+          "name": "Adenosine",
+          "indication": "Stable narrow-complex SVT",
+          "dose": "6 mg rapid IV push, then 12 mg × 2",
+          "notes": "Follow with NS flush. Half dose if via central line"
+        },
+        {
+          "name": "Calcium Chloride",
+          "indication": "Hyperkalemia, Ca-channel blocker OD",
+          "dose": "1 g (10 mL of 10%) IV over 2-5 min",
+          "notes": "Central line preferred; causes tissue necrosis"
+        },
+        {
+          "name": "Sodium Bicarbonate",
+          "indication": "Hyperkalemia, TCA OD, prolonged arrest",
+          "dose": "1 mEq/kg IV",
+          "notes": "Not routine in arrest; consider if pH <7.1"
+        },
+        {
+          "name": "Magnesium Sulfate",
+          "indication": "Torsades de Pointes, hypomagnesemia",
+          "dose": "2 g IV over 2-5 min",
+          "notes": "Can repeat once"
+        }
+      ],
+      "guidelineYear": 2020,
+      "guidelineSource": "AHA 2020 Guidelines for CPR and ECC"
     },
     {
       "id": "antidotes",
@@ -54,19 +176,84 @@
       "category": "Toxicology",
       "icon": "💉",
       "antidotes": [
-        { "toxin": "Acetaminophen", "antidote": "N-Acetylcysteine (NAC)", "dose": "150 mg/kg IV over 1h, then 50 mg/kg over 4h, then 100 mg/kg over 16h", "notes": "Most effective within 8 hours" },
-        { "toxin": "Opioids", "antidote": "Naloxone (Narcan)", "dose": "0.4-2 mg IV/IM/SC q2-3 min PRN", "notes": "Titrate to respiratory effort; may precipitate withdrawal" },
-        { "toxin": "Benzodiazepines", "antidote": "Flumazenil (Romazicon)", "dose": "0.2 mg IV over 30 sec, repeat 0.3-0.5 mg q1min", "notes": "Max 3-5 mg. Avoid if chronic benzo use or seizure risk" },
-        { "toxin": "Beta-blockers", "antidote": "Glucagon", "dose": "3-10 mg IV bolus, then 3-5 mg/hr infusion", "notes": "High-dose insulin-euglycemia also effective" },
-        { "toxin": "Calcium channel blockers", "antidote": "Calcium + High-dose insulin", "dose": "CaCl 1-2 g IV + Insulin 1 unit/kg bolus, then 0.5-2 units/kg/hr", "notes": "Maintain glucose; may need vasopressors" },
-        { "toxin": "Digoxin", "antidote": "Digoxin Immune Fab (DigiFab)", "dose": "Empiric: 10-20 vials; Calculated: vials = (level × weight)/100", "notes": "Each vial binds 0.5 mg digoxin" },
-        { "toxin": "Warfarin", "antidote": "Vitamin K + 4-factor PCC", "dose": "Vitamin K 10 mg IV + PCC 25-50 units/kg", "notes": "FFP if PCC unavailable. Vitamin K takes 6-24h" },
-        { "toxin": "Heparin", "antidote": "Protamine", "dose": "1 mg per 100 units heparin (max 50 mg)", "notes": "Give slowly; anaphylaxis risk" },
-        { "toxin": "Methanol/Ethylene glycol", "antidote": "Fomepizole (Antizol)", "dose": "15 mg/kg IV load, then 10 mg/kg q12h", "notes": "Dialysis if severe. Ethanol alternative if fomepizole unavailable" },
-        { "toxin": "Organophosphates", "antidote": "Atropine + Pralidoxime", "dose": "Atropine 2-4 mg IV q5 min until dry; Pralidoxime 1-2 g IV over 15-30 min", "notes": "Atropine for muscarinic effects; pralidoxime reactivates AChE" },
-        { "toxin": "Cyanide", "antidote": "Hydroxocobalamin (Cyanokit)", "dose": "5 g IV over 15 min, may repeat", "notes": "Preferred over nitrite/thiosulfate. Turns urine red" },
-        { "toxin": "Iron", "antidote": "Deferoxamine", "dose": "15 mg/kg/hr IV (max 6 g/day)", "notes": "Vin rosé urine indicates chelation" },
-        { "toxin": "Tricyclic antidepressants", "antidote": "Sodium Bicarbonate", "dose": "1-2 mEq/kg IV bolus, then infusion to maintain pH 7.45-7.55", "notes": "For QRS >100ms or hypotension" }
+        {
+          "toxin": "Acetaminophen",
+          "antidote": "N-Acetylcysteine (NAC)",
+          "dose": "150 mg/kg IV over 1h, then 50 mg/kg over 4h, then 100 mg/kg over 16h",
+          "notes": "Most effective within 8 hours"
+        },
+        {
+          "toxin": "Opioids",
+          "antidote": "Naloxone (Narcan)",
+          "dose": "0.4-2 mg IV/IM/SC q2-3 min PRN",
+          "notes": "Titrate to respiratory effort; may precipitate withdrawal"
+        },
+        {
+          "toxin": "Benzodiazepines",
+          "antidote": "Flumazenil (Romazicon)",
+          "dose": "0.2 mg IV over 30 sec, repeat 0.3-0.5 mg q1min",
+          "notes": "Max 3-5 mg. Avoid if chronic benzo use or seizure risk"
+        },
+        {
+          "toxin": "Beta-blockers",
+          "antidote": "Glucagon",
+          "dose": "3-10 mg IV bolus, then 3-5 mg/hr infusion",
+          "notes": "High-dose insulin-euglycemia also effective"
+        },
+        {
+          "toxin": "Calcium channel blockers",
+          "antidote": "Calcium + High-dose insulin",
+          "dose": "CaCl 1-2 g IV + Insulin 1 unit/kg bolus, then 0.5-2 units/kg/hr",
+          "notes": "Maintain glucose; may need vasopressors"
+        },
+        {
+          "toxin": "Digoxin",
+          "antidote": "Digoxin Immune Fab (DigiFab)",
+          "dose": "Empiric: 10-20 vials; Calculated: vials = (level × weight)/100",
+          "notes": "Each vial binds 0.5 mg digoxin"
+        },
+        {
+          "toxin": "Warfarin",
+          "antidote": "Vitamin K + 4-factor PCC",
+          "dose": "Vitamin K 10 mg IV + PCC 25-50 units/kg",
+          "notes": "FFP if PCC unavailable. Vitamin K takes 6-24h"
+        },
+        {
+          "toxin": "Heparin",
+          "antidote": "Protamine",
+          "dose": "1 mg per 100 units heparin (max 50 mg)",
+          "notes": "Give slowly; anaphylaxis risk"
+        },
+        {
+          "toxin": "Methanol/Ethylene glycol",
+          "antidote": "Fomepizole (Antizol)",
+          "dose": "15 mg/kg IV load, then 10 mg/kg q12h",
+          "notes": "Dialysis if severe. Ethanol alternative if fomepizole unavailable"
+        },
+        {
+          "toxin": "Organophosphates",
+          "antidote": "Atropine + Pralidoxime",
+          "dose": "Atropine 2-4 mg IV q5 min until dry; Pralidoxime 1-2 g IV over 15-30 min",
+          "notes": "Atropine for muscarinic effects; pralidoxime reactivates AChE"
+        },
+        {
+          "toxin": "Cyanide",
+          "antidote": "Hydroxocobalamin (Cyanokit)",
+          "dose": "5 g IV over 15 min, may repeat",
+          "notes": "Preferred over nitrite/thiosulfate. Turns urine red"
+        },
+        {
+          "toxin": "Iron",
+          "antidote": "Deferoxamine",
+          "dose": "15 mg/kg/hr IV (max 6 g/day)",
+          "notes": "Vin rosé urine indicates chelation"
+        },
+        {
+          "toxin": "Tricyclic antidepressants",
+          "antidote": "Sodium Bicarbonate",
+          "dose": "1-2 mEq/kg IV bolus, then infusion to maintain pH 7.45-7.55",
+          "notes": "For QRS >100ms or hypotension"
+        }
       ]
     },
     {
@@ -75,15 +262,141 @@
       "category": "Infectious Disease",
       "icon": "🦠",
       "antibiotics": [
-        { "name": "Vancomycin", "spectrum": "Gram-positive only", "covers": ["MRSA", "Enterococcus (not VRE)", "Strep", "C. diff (PO)"], "gaps": ["Gram-negatives", "VRE"] },
-        { "name": "Piperacillin-Tazobactam", "spectrum": "Broad", "covers": ["Strep", "MSSA", "Enterococcus", "Gram-negatives", "Pseudomonas", "Anaerobes"], "gaps": ["MRSA", "Atypicals", "ESBL (variable)"] },
-        { "name": "Ceftriaxone", "spectrum": "Broad (no Pseudomonas)", "covers": ["Strep", "MSSA", "Gram-negatives", "N. meningitidis", "N. gonorrhoeae"], "gaps": ["MRSA", "Pseudomonas", "Enterococcus", "Anaerobes"] },
-        { "name": "Meropenem", "spectrum": "Very broad", "covers": ["Strep", "MSSA", "Gram-negatives", "ESBL", "Pseudomonas", "Anaerobes"], "gaps": ["MRSA", "VRE", "Atypicals", "Stenotrophomonas"] },
-        { "name": "Azithromycin", "spectrum": "Atypicals + some GP", "covers": ["Atypicals (Mycoplasma, Chlamydia, Legionella)", "Strep", "H. flu"], "gaps": ["Gram-negatives", "MRSA", "Anaerobes"] },
-        { "name": "Ciprofloxacin", "spectrum": "Gram-negatives + Pseudomonas", "covers": ["Gram-negatives", "Pseudomonas", "Atypicals"], "gaps": ["Strep (weak)", "MRSA", "Anaerobes"] },
-        { "name": "Metronidazole", "spectrum": "Anaerobes only", "covers": ["Anaerobes (B. fragilis)", "C. diff", "Giardia", "Trichomonas"], "gaps": ["Aerobes", "Gram-positives", "Gram-negatives"] },
-        { "name": "Daptomycin", "spectrum": "Gram-positive only", "covers": ["MRSA", "VRE", "Strep"], "gaps": ["Gram-negatives", "Pneumonia (inactivated by surfactant)"] },
-        { "name": "Linezolid", "spectrum": "Gram-positive only", "covers": ["MRSA", "VRE", "Strep"], "gaps": ["Gram-negatives"], "note": "Good lung penetration; serotonin syndrome risk" }
+        {
+          "name": "Vancomycin",
+          "spectrum": "Gram-positive only",
+          "covers": [
+            "MRSA",
+            "Enterococcus (not VRE)",
+            "Strep",
+            "C. diff (PO)"
+          ],
+          "gaps": [
+            "Gram-negatives",
+            "VRE"
+          ]
+        },
+        {
+          "name": "Piperacillin-Tazobactam",
+          "spectrum": "Broad",
+          "covers": [
+            "Strep",
+            "MSSA",
+            "Enterococcus",
+            "Gram-negatives",
+            "Pseudomonas",
+            "Anaerobes"
+          ],
+          "gaps": [
+            "MRSA",
+            "Atypicals",
+            "ESBL (variable)"
+          ]
+        },
+        {
+          "name": "Ceftriaxone",
+          "spectrum": "Broad (no Pseudomonas)",
+          "covers": [
+            "Strep",
+            "MSSA",
+            "Gram-negatives",
+            "N. meningitidis",
+            "N. gonorrhoeae"
+          ],
+          "gaps": [
+            "MRSA",
+            "Pseudomonas",
+            "Enterococcus",
+            "Anaerobes"
+          ]
+        },
+        {
+          "name": "Meropenem",
+          "spectrum": "Very broad",
+          "covers": [
+            "Strep",
+            "MSSA",
+            "Gram-negatives",
+            "ESBL",
+            "Pseudomonas",
+            "Anaerobes"
+          ],
+          "gaps": [
+            "MRSA",
+            "VRE",
+            "Atypicals",
+            "Stenotrophomonas"
+          ]
+        },
+        {
+          "name": "Azithromycin",
+          "spectrum": "Atypicals + some GP",
+          "covers": [
+            "Atypicals (Mycoplasma, Chlamydia, Legionella)",
+            "Strep",
+            "H. flu"
+          ],
+          "gaps": [
+            "Gram-negatives",
+            "MRSA",
+            "Anaerobes"
+          ]
+        },
+        {
+          "name": "Ciprofloxacin",
+          "spectrum": "Gram-negatives + Pseudomonas",
+          "covers": [
+            "Gram-negatives",
+            "Pseudomonas",
+            "Atypicals"
+          ],
+          "gaps": [
+            "Strep (weak)",
+            "MRSA",
+            "Anaerobes"
+          ]
+        },
+        {
+          "name": "Metronidazole",
+          "spectrum": "Anaerobes only",
+          "covers": [
+            "Anaerobes (B. fragilis)",
+            "C. diff",
+            "Giardia",
+            "Trichomonas"
+          ],
+          "gaps": [
+            "Aerobes",
+            "Gram-positives",
+            "Gram-negatives"
+          ]
+        },
+        {
+          "name": "Daptomycin",
+          "spectrum": "Gram-positive only",
+          "covers": [
+            "MRSA",
+            "VRE",
+            "Strep"
+          ],
+          "gaps": [
+            "Gram-negatives",
+            "Pneumonia (inactivated by surfactant)"
+          ]
+        },
+        {
+          "name": "Linezolid",
+          "spectrum": "Gram-positive only",
+          "covers": [
+            "MRSA",
+            "VRE",
+            "Strep"
+          ],
+          "gaps": [
+            "Gram-negatives"
+          ],
+          "note": "Good lung penetration; serotonin syndrome risk"
+        }
       ]
     },
     {
@@ -138,10 +451,22 @@
           "range": "0-10",
           "description": "Patient self-reports pain intensity",
           "interpretation": [
-            { "range": "0", "level": "No pain" },
-            { "range": "1-3", "level": "Mild pain" },
-            { "range": "4-6", "level": "Moderate pain" },
-            { "range": "7-10", "level": "Severe pain" }
+            {
+              "range": "0",
+              "level": "No pain"
+            },
+            {
+              "range": "1-3",
+              "level": "Mild pain"
+            },
+            {
+              "range": "4-6",
+              "level": "Moderate pain"
+            },
+            {
+              "range": "7-10",
+              "level": "Severe pain"
+            }
           ]
         },
         {
@@ -149,10 +474,38 @@
           "range": "0-8",
           "use": "Non-verbal/sedated patients",
           "components": [
-            { "domain": "Facial Expression", "scores": ["Relaxed (0)", "Tense (1)", "Grimacing (2)"] },
-            { "domain": "Body Movements", "scores": ["Absence (0)", "Protection (1)", "Restlessness (2)"] },
-            { "domain": "Muscle Tension", "scores": ["Relaxed (0)", "Tense/rigid (1)", "Very tense (2)"] },
-            { "domain": "Ventilator Compliance (or Vocalization)", "scores": ["Tolerating (0)", "Coughing (1)", "Fighting (2)"] }
+            {
+              "domain": "Facial Expression",
+              "scores": [
+                "Relaxed (0)",
+                "Tense (1)",
+                "Grimacing (2)"
+              ]
+            },
+            {
+              "domain": "Body Movements",
+              "scores": [
+                "Absence (0)",
+                "Protection (1)",
+                "Restlessness (2)"
+              ]
+            },
+            {
+              "domain": "Muscle Tension",
+              "scores": [
+                "Relaxed (0)",
+                "Tense/rigid (1)",
+                "Very tense (2)"
+              ]
+            },
+            {
+              "domain": "Ventilator Compliance (or Vocalization)",
+              "scores": [
+                "Tolerating (0)",
+                "Coughing (1)",
+                "Fighting (2)"
+              ]
+            }
           ],
           "interpretation": "Score ≥3 suggests significant pain"
         },
@@ -161,9 +514,18 @@
           "range": "3-12",
           "use": "Intubated ICU patients",
           "components": [
-            { "domain": "Facial Expression", "range": "1-4" },
-            { "domain": "Upper Limb Movements", "range": "1-4" },
-            { "domain": "Compliance with Ventilation", "range": "1-4" }
+            {
+              "domain": "Facial Expression",
+              "range": "1-4"
+            },
+            {
+              "domain": "Upper Limb Movements",
+              "range": "1-4"
+            },
+            {
+              "domain": "Compliance with Ventilation",
+              "range": "1-4"
+            }
           ],
           "interpretation": "Score >5 suggests unacceptable pain"
         }
@@ -178,9 +540,21 @@
         {
           "product": "Packed Red Blood Cells (pRBC)",
           "thresholds": [
-            { "population": "Stable, non-cardiac", "threshold": "Hgb <7 g/dL", "target": "7-9 g/dL" },
-            { "population": "Cardiac surgery, ACS", "threshold": "Hgb <8 g/dL", "target": "8-10 g/dL" },
-            { "population": "Active bleeding, hemodynamic instability", "threshold": "Clinical judgment", "target": "Stabilize patient" }
+            {
+              "population": "Stable, non-cardiac",
+              "threshold": "Hgb <7 g/dL",
+              "target": "7-9 g/dL"
+            },
+            {
+              "population": "Cardiac surgery, ACS",
+              "threshold": "Hgb <8 g/dL",
+              "target": "8-10 g/dL"
+            },
+            {
+              "population": "Active bleeding, hemodynamic instability",
+              "threshold": "Clinical judgment",
+              "target": "Stabilize patient"
+            }
           ],
           "dose": "1 unit raises Hgb ~1 g/dL",
           "notes": "Leukoreduced for all. CMV-negative for immunocompromised. Irradiated for BMT."
@@ -188,9 +562,21 @@
         {
           "product": "Platelets",
           "thresholds": [
-            { "population": "Stable, no bleeding", "threshold": "<10,000/μL", "target": ">10,000" },
-            { "population": "Minor procedure", "threshold": "<50,000/μL", "target": ">50,000" },
-            { "population": "Major surgery, CNS procedure", "threshold": "<100,000/μL", "target": ">100,000" }
+            {
+              "population": "Stable, no bleeding",
+              "threshold": "<10,000/μL",
+              "target": ">10,000"
+            },
+            {
+              "population": "Minor procedure",
+              "threshold": "<50,000/μL",
+              "target": ">50,000"
+            },
+            {
+              "population": "Major surgery, CNS procedure",
+              "threshold": "<100,000/μL",
+              "target": ">100,000"
+            }
           ],
           "dose": "1 apheresis unit raises ~30,000-50,000/μL",
           "notes": "ABO-compatible preferred. May need HLA-matched if refractory."
@@ -198,17 +584,32 @@
         {
           "product": "Fresh Frozen Plasma (FFP)",
           "thresholds": [
-            { "indication": "Bleeding + INR >1.5", "dose": "10-15 mL/kg" },
-            { "indication": "Massive transfusion", "dose": "1:1:1 ratio with pRBC and platelets" },
-            { "indication": "TTP (plasmapheresis)", "dose": "1-1.5 plasma volumes" }
+            {
+              "indication": "Bleeding + INR >1.5",
+              "dose": "10-15 mL/kg"
+            },
+            {
+              "indication": "Massive transfusion",
+              "dose": "1:1:1 ratio with pRBC and platelets"
+            },
+            {
+              "indication": "TTP (plasmapheresis)",
+              "dose": "1-1.5 plasma volumes"
+            }
           ],
           "notes": "Must be ABO-compatible. Thaw takes 20-30 min."
         },
         {
           "product": "Cryoprecipitate",
           "thresholds": [
-            { "indication": "Fibrinogen <100 mg/dL (bleeding)", "dose": "10 units" },
-            { "indication": "Fibrinogen <200 mg/dL (DIC, massive transfusion)", "dose": "10 units" }
+            {
+              "indication": "Fibrinogen <100 mg/dL (bleeding)",
+              "dose": "10 units"
+            },
+            {
+              "indication": "Fibrinogen <200 mg/dL (DIC, massive transfusion)",
+              "dose": "10 units"
+            }
           ],
           "content": "Fibrinogen, Factor VIII, vWF, Factor XIII",
           "notes": "1 unit raises fibrinogen ~5-10 mg/dL"
@@ -223,16 +624,39 @@
       "target": "140-180 mg/dL (per NICE-SUGAR)",
       "protocol": {
         "initiation": [
-          { "glucose": ">180 mg/dL", "action": "Start insulin drip" },
-          { "starting_rate": "Based on BG and insulin sensitivity" }
+          {
+            "glucose": ">180 mg/dL",
+            "action": "Start insulin drip"
+          },
+          {
+            "starting_rate": "Based on BG and insulin sensitivity"
+          }
         ],
         "adjustments": [
-          { "bg_range": ">300", "action": "Increase rate by 2 units/hr" },
-          { "bg_range": "181-300", "action": "Increase rate by 1 unit/hr" },
-          { "bg_range": "140-180", "action": "No change" },
-          { "bg_range": "110-139", "action": "Decrease rate by 0.5 units/hr" },
-          { "bg_range": "70-109", "action": "Hold infusion, recheck in 1 hr" },
-          { "bg_range": "<70", "action": "Hold infusion, give D50 25mL IV, recheck in 30 min" }
+          {
+            "bg_range": ">300",
+            "action": "Increase rate by 2 units/hr"
+          },
+          {
+            "bg_range": "181-300",
+            "action": "Increase rate by 1 unit/hr"
+          },
+          {
+            "bg_range": "140-180",
+            "action": "No change"
+          },
+          {
+            "bg_range": "110-139",
+            "action": "Decrease rate by 0.5 units/hr"
+          },
+          {
+            "bg_range": "70-109",
+            "action": "Hold infusion, recheck in 1 hr"
+          },
+          {
+            "bg_range": "<70",
+            "action": "Hold infusion, give D50 25mL IV, recheck in 30 min"
+          }
         ],
         "monitoring": "BG q1h until stable × 4h, then q2h"
       },

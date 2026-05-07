@@ -259,8 +259,8 @@ export default async function TestDetailPage({ params }: PageProps) {
                     <table className="w-full">
                       <thead>
                         <tr className="border-b border-white/10">
-                          <th className="text-left py-3 px-4 text-sm font-semibold text-slate-400">Parameter</th>
-                          <th className="text-left py-3 px-4 text-sm font-semibold text-slate-400">Normal Range</th>
+                          <th scope="col" className="text-left py-3 px-4 text-sm font-semibold text-slate-400">Parameter</th>
+                          <th scope="col" className="text-left py-3 px-4 text-sm font-semibold text-slate-400">Normal Range</th>
                         </tr>
                       </thead>
                       <tbody>

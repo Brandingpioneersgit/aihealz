@@ -203,12 +203,12 @@ export default async function ReportsPage() {
                         <table className="w-full">
                             <thead>
                                 <tr className="bg-slate-50 border-b border-slate-100">
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500">Date</th>
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500">Campaign</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500">Impressions</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500">Clicks</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500">CTR</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500">Spend</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500">Date</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500">Campaign</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500">Impressions</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500">Clicks</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500">CTR</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500">Spend</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-50">

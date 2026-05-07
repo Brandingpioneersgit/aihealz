@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
 import { headers, cookies } from 'next/headers';
+import prisma from '@/lib/db';
 
 // ─── Types ───────────────────────────────────────────────────
 
@@ -185,6 +186,43 @@ export default async function TreatmentPage({ params }: { params: Promise<{ trea
         const simpleSlug = t.simpleName?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         return nameSlug === treatmentSlug || simpleSlug === treatmentSlug;
     });
+
+    // Merge DB-backed treatment_costs over JSON. DB rows win on conflict.
+    if (treatmentData) {
+        try {
+            const dbCosts = await prisma.treatmentCost.findMany({
+                where: { conditionSlug: treatmentSlug },
+            });
+            if (dbCosts.length > 0) {
+                const COUNTRY_BY_CODE: Record<string, CountryKey> = {
+                    US: 'usa', UK: 'uk', GB: 'uk', IN: 'india', TH: 'thailand',
+                    MX: 'mexico', TR: 'turkey', AE: 'uae',
+                };
+                const merged: Record<string, TreatmentCost> = {
+                    ...((treatmentData.costs as unknown as Record<string, TreatmentCost>) || {}),
+                };
+                for (const row of dbCosts) {
+                    const key = COUNTRY_BY_CODE[(row.countryCode || '').toUpperCase()];
+                    if (!key) continue;
+                    if ((row.currency || '').toUpperCase() !== 'USD') continue;
+                    const minN = Number(row.minCost);
+                    const maxN = Number(row.maxCost);
+                    const avgN = Number(row.avgCost);
+                    if (!Number.isFinite(avgN) || avgN <= 0) continue;
+                    merged[key] = {
+                        usd: avgN,
+                        currency: 'USD',
+                        ...(Number.isFinite(minN) && Number.isFinite(maxN) && minN > 0 && maxN > 0
+                            ? { range: [minN, maxN] as [number, number] }
+                            : {}),
+                    };
+                }
+                (treatmentData as unknown as { costs: Record<string, TreatmentCost> }).costs = merged;
+            }
+        } catch (err) {
+            console.warn('[treatments/page] DB cost merge skipped:', (err as Error).message);
+        }
+    }
 
     // Build display name (show both simple name and medical name if different)
     const medicalName = treatmentData?.translatedName || treatmentData?.name;

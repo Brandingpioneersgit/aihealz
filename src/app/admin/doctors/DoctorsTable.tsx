@@ -237,13 +237,13 @@ export default function DoctorsTable({ doctors }: DoctorsTableProps) {
                 <table className="w-full">
                     <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Doctor</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Specialties</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Location</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Status</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Tier</th>
-                            <th className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Leads</th>
-                            <th className="text-right px-4 py-3 text-sm font-semibold text-slate-600">Actions</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Doctor</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Specialties</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Location</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Status</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Tier</th>
+                            <th scope="col" className="text-left px-4 py-3 text-sm font-semibold text-slate-600">Leads</th>
+                            <th scope="col" className="text-right px-4 py-3 text-sm font-semibold text-slate-600">Actions</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">

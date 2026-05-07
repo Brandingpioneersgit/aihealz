@@ -26,7 +26,7 @@ const impressionSchema = z.object({
 export async function POST(request: NextRequest) {
     // Apply rate limiting to prevent impression fraud
     const clientId = getClientIdentifier(request);
-    const rateLimit = checkRateLimit(`adImpression:${clientId}`, IMPRESSION_RATE_LIMIT);
+    const rateLimit = await checkRateLimit(`adImpression:${clientId}`, IMPRESSION_RATE_LIMIT);
 
     if (!rateLimit.success) {
         return NextResponse.json(

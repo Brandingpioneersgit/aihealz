@@ -394,12 +394,12 @@ export default function HospitalDashboardPage() {
                 <table className="w-full">
                   <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wide">
                     <tr>
-                      <th className="px-6 py-4 text-left">Doctor</th>
-                      <th className="px-6 py-4 text-left">Specialty</th>
-                      <th className="px-6 py-4 text-center">Profile Views</th>
-                      <th className="px-6 py-4 text-center">Appointments</th>
-                      <th className="px-6 py-4 text-center">Status</th>
-                      <th className="px-6 py-4 text-right">Actions</th>
+                      <th scope="col" className="px-6 py-4 text-left">Doctor</th>
+                      <th scope="col" className="px-6 py-4 text-left">Specialty</th>
+                      <th scope="col" className="px-6 py-4 text-center">Profile Views</th>
+                      <th scope="col" className="px-6 py-4 text-center">Appointments</th>
+                      <th scope="col" className="px-6 py-4 text-center">Status</th>
+                      <th scope="col" className="px-6 py-4 text-right">Actions</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">

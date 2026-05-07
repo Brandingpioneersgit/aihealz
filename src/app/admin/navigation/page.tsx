@@ -144,6 +144,17 @@ export default function NavigationPage() {
 
     return (
         <div className="space-y-6 max-w-5xl">
+            <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
+                <div className="font-semibold mb-1">Edits here are not yet live.</div>
+                <div className="text-amber-800">
+                    The public site navigation is currently rendered from a hardcoded{' '}
+                    <code className="bg-amber-100 px-1 rounded">NAV_ITEMS</code> array in{' '}
+                    <code className="bg-amber-100 px-1 rounded">src/components/v4/Navbar.tsx</code>.
+                    Changes saved on this screen are stored but not consumed by the v4 Navbar.
+                    Update the file directly, or refactor the Navbar to read from this admin source
+                    (e.g. a <code className="bg-amber-100 px-1 rounded">nav_items</code> table).
+                </div>
+            </div>
             <div className="flex items-center justify-between">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">

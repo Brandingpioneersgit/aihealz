@@ -115,6 +115,19 @@ const nextConfig: NextConfig = {
   },
 
   // Turbopack configuration (Next.js 15+ default bundler)
+  //
+  // SECURITY / CORRECTNESS RISK:
+  // The `fs`/`net`/`tls` aliases below silently replace those Node-only
+  // modules with an empty stub when bundled for the browser. That hides
+  // real bugs: any server-only module that accidentally gets pulled into
+  // a Client Component will *appear* to compile and ship to the browser
+  // as a no-op, instead of failing the build. It can also mask data
+  // leaks (a server util that reads from disk becomes a silent noop on
+  // the client rather than an obvious error).
+  //
+  // TODO: Remove these aliases once every server-only module declares
+  // `import 'server-only'` at the top, so accidental client imports fail
+  // loudly at build time.
   turbopack: {
     resolveAlias: {
       // Polyfill Node.js modules for client-side

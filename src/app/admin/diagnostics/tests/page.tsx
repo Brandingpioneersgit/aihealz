@@ -103,14 +103,14 @@ export default async function AdminDiagnosticTestsPage() {
           <table className="w-full">
             <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
               <tr>
-                <th className="px-6 py-3 text-left">Test Name</th>
-                <th className="px-6 py-3 text-left">Category</th>
-                <th className="px-6 py-3 text-left">Type</th>
-                <th className="px-6 py-3 text-center">Providers</th>
-                <th className="px-6 py-3 text-center">Bookings</th>
-                <th className="px-6 py-3 text-right">Avg Price</th>
-                <th className="px-6 py-3 text-center">Status</th>
-                <th className="px-6 py-3 text-right">Actions</th>
+                <th scope="col" className="px-6 py-3 text-left">Test Name</th>
+                <th scope="col" className="px-6 py-3 text-left">Category</th>
+                <th scope="col" className="px-6 py-3 text-left">Type</th>
+                <th scope="col" className="px-6 py-3 text-center">Providers</th>
+                <th scope="col" className="px-6 py-3 text-center">Bookings</th>
+                <th scope="col" className="px-6 py-3 text-right">Avg Price</th>
+                <th scope="col" className="px-6 py-3 text-center">Status</th>
+                <th scope="col" className="px-6 py-3 text-right">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">

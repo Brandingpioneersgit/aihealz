@@ -32,11 +32,14 @@ export default function MedicalTravelBot() {
     };
 
     const generatePDF = () => {
+        // Honest UX: open the browser print dialog. The user can choose
+        // "Save as PDF" from there. We do not pretend to render a server-side PDF.
         setIsGenerating(true);
-        setTimeout(() => {
+        try {
             window.print();
+        } finally {
             setIsGenerating(false);
-        }, 1000);
+        }
     };
 
     return (
@@ -150,7 +153,7 @@ export default function MedicalTravelBot() {
                                 disabled={step === 1 && !formData.patientName}
                                 className="px-8 py-3 rounded-xl font-extrabold text-white bg-gradient-to-r from-primary-600 to-accent-600 hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:shadow-none"
                             >
-                                {step === 3 ? 'Generate Estimate PDF' : 'Continue →'}
+                                {step === 3 ? 'Review & print summary' : 'Continue →'}
                             </button>
                         </div>
                     </div>
@@ -168,7 +171,7 @@ export default function MedicalTravelBot() {
                             </button>
                             <button onClick={generatePDF} className="px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-bold hover:bg-primary-700 transition-colors flex items-center gap-2">
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
-                                {isGenerating ? 'Prepping Doc...' : 'Download / Print Form'}
+                                {isGenerating ? 'Opening print…' : 'Download printable summary'}
                             </button>
                         </div>
 
@@ -234,11 +237,12 @@ export default function MedicalTravelBot() {
                             </h3>
                             <div className="rounded-xl border border-surface-200 overflow-hidden">
                                 <table className="w-full text-left border-collapse">
+                                    <caption className="sr-only">Estimated medical travel cost breakdown</caption>
                                     <thead className="bg-surface-50 border-b border-surface-200">
                                         <tr>
-                                            <th className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider">Item / Category</th>
-                                            <th className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider">Details</th>
-                                            <th className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider text-right">Est. Range</th>
+                                            <th scope="col" className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider">Item / Category</th>
+                                            <th scope="col" className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider">Details</th>
+                                            <th scope="col" className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider text-right">Est. Range</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-surface-200">

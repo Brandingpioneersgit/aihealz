@@ -3,6 +3,7 @@ import prisma from '@/lib/db';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
 import { z } from 'zod';
+import { checkRateLimit as sharedCheckRateLimit, getClientIdentifier } from '@/lib/rate-limit';
 
 /**
  * Provider Login API
@@ -21,56 +22,10 @@ const loginSchema = z.object({
     password: z.string().min(8, 'Password must be at least 8 characters').max(128),
 });
 
-// Rate limiting config (in-memory for now, should use Redis in production)
-const loginAttempts = new Map<string, { count: number; lastAttempt: number; lockedUntil?: number }>();
-const MAX_ATTEMPTS = 5;
-const LOCKOUT_DURATION = 15 * 60 * 1000; // 15 minutes
-const ATTEMPT_WINDOW = 15 * 60 * 1000; // 15 minutes
-
-function checkRateLimit(email: string): { allowed: boolean; retryAfter?: number } {
-    const normalizedEmail = email.toLowerCase();
-    const now = Date.now();
-    const record = loginAttempts.get(normalizedEmail);
-
-    if (!record) {
-        return { allowed: true };
-    }
-
-    // Check if locked out
-    if (record.lockedUntil && record.lockedUntil > now) {
-        return {
-            allowed: false,
-            retryAfter: Math.ceil((record.lockedUntil - now) / 1000)
-        };
-    }
-
-    // Reset if window expired
-    if (now - record.lastAttempt > ATTEMPT_WINDOW) {
-        loginAttempts.delete(normalizedEmail);
-        return { allowed: true };
-    }
-
-    return { allowed: record.count < MAX_ATTEMPTS };
-}
-
-function recordFailedAttempt(email: string): void {
-    const normalizedEmail = email.toLowerCase();
-    const now = Date.now();
-    const record = loginAttempts.get(normalizedEmail) || { count: 0, lastAttempt: now };
-
-    record.count += 1;
-    record.lastAttempt = now;
-
-    if (record.count >= MAX_ATTEMPTS) {
-        record.lockedUntil = now + LOCKOUT_DURATION;
-    }
-
-    loginAttempts.set(normalizedEmail, record);
-}
-
-function clearFailedAttempts(email: string): void {
-    loginAttempts.delete(email.toLowerCase());
-}
+// Rate limiting: 5 attempts / 15 min, keyed on IP+email (so attackers can't
+// enumerate by hopping emails on a single IP). Backed by Redis when
+// REDIS_URL is set, otherwise in-memory fallback.
+const PROVIDER_LOGIN_LIMIT = { maxRequests: 5, windowMs: 15 * 60 * 1000 };
 
 export async function POST(request: Request) {
     try {
@@ -88,9 +43,10 @@ export async function POST(request: Request) {
         const { email, password } = validation.data;
         const normalizedEmail = email.toLowerCase().trim();
 
-        // Check rate limiting
-        const rateLimit = checkRateLimit(normalizedEmail);
-        if (!rateLimit.allowed) {
+        // Check rate limiting (keyed on IP + email)
+        const clientId = getClientIdentifier(request);
+        const rateLimit = await sharedCheckRateLimit(`provider-login:${clientId}:${normalizedEmail}`, PROVIDER_LOGIN_LIMIT);
+        if (!rateLimit.success) {
             return NextResponse.json(
                 {
                     error: 'Too many login attempts. Please try again later.',
@@ -127,7 +83,6 @@ export async function POST(request: Request) {
 
         if (!doctor) {
             // Record failed attempt - use generic error to prevent email enumeration
-            recordFailedAttempt(normalizedEmail);
             // Perform a dummy bcrypt compare to make timing consistent
             await bcrypt.compare(password, '$2a$12$dummy.hash.for.timing.attack.prevention');
             return NextResponse.json(
@@ -143,7 +98,6 @@ export async function POST(request: Request) {
 
         if (!authRecord || authRecord.length === 0) {
             // No auth record - use same generic error to prevent enumeration
-            recordFailedAttempt(normalizedEmail);
             // Perform a dummy bcrypt compare to make timing consistent
             await bcrypt.compare(password, '$2a$12$dummy.hash.for.timing.attack.prevention');
             return NextResponse.json(
@@ -156,15 +110,12 @@ export async function POST(request: Request) {
         const isValidPassword = await bcrypt.compare(password, authRecord[0].password_hash);
 
         if (!isValidPassword) {
-            recordFailedAttempt(normalizedEmail);
             return NextResponse.json(
                 { error: GENERIC_AUTH_ERROR },
                 { status: 401 }
             );
         }
 
-        // Clear failed attempts on successful login
-        clearFailedAttempts(normalizedEmail);
 
         // Generate secure session token
         const token = crypto.randomBytes(32).toString('hex');

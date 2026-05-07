@@ -101,14 +101,14 @@ export default async function CampaignsPage() {
                         <table className="w-full">
                             <thead>
                                 <tr className="bg-slate-50 border-b border-slate-200">
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Campaign</th>
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Advertiser</th>
-                                    <th className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Budget</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Impressions</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Clicks</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">CTR</th>
-                                    <th className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Actions</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Campaign</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Advertiser</th>
+                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Budget</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Impressions</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Clicks</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">CTR</th>
+                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-100">

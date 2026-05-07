@@ -318,12 +318,12 @@ export default function EncountersPage() {
                     <table className="w-full text-sm">
                         <thead className="bg-slate-50 border-b border-slate-200">
                             <tr>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">City</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Enquiries</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Verified Doctors</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Premium Doctors</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Ratio</th>
-                                <th className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">City</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Enquiries</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Verified Doctors</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Premium Doctors</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Ratio</th>
+                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">

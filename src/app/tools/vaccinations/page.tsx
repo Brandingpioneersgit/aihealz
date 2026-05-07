@@ -266,11 +266,12 @@ export default function VaccinationsPage() {
                         <div className="bg-slate-900/60 border border-white/5 rounded-2xl overflow-hidden mb-8">
                             <div className="overflow-x-auto">
                                 <table className="w-full">
+                                    <caption className="sr-only">Vaccination schedule by age group</caption>
                                     <thead>
                                         <tr className="border-b border-white/5">
-                                            <th className="text-left p-4 text-sm font-semibold text-slate-400">Vaccine</th>
-                                            <th className="text-left p-4 text-sm font-semibold text-slate-400">Full Name</th>
-                                            <th className="text-left p-4 text-sm font-semibold text-slate-400">Doses & Timing</th>
+                                            <th scope="col" className="text-left p-4 text-sm font-semibold text-slate-400">Vaccine</th>
+                                            <th scope="col" className="text-left p-4 text-sm font-semibold text-slate-400">Full Name</th>
+                                            <th scope="col" className="text-left p-4 text-sm font-semibold text-slate-400">Doses & Timing</th>
                                         </tr>
                                     </thead>
                                     <tbody>

@@ -158,6 +158,12 @@ export default function SearchAutocomplete({
                     onKeyDown={handleKeyDown}
                     onFocus={() => results.length > 0 && setIsOpen(true)}
                     placeholder={placeholder}
+                    role="combobox"
+                    aria-expanded={isOpen}
+                    aria-controls="search-listbox"
+                    aria-autocomplete="list"
+                    aria-label="Search"
+                    aria-activedescendant={activeIdx >= 0 ? `search-option-${activeIdx}` : undefined}
                     className={`flex-1 py-4 px-4 bg-transparent outline-none font-medium text-sm ${inputClasses}`}
                 />
                 {isLoading && (
@@ -165,6 +171,8 @@ export default function SearchAutocomplete({
                 )}
                 {!isLoading && query.length > 0 && (
                     <button
+                        type="button"
+                        aria-label="Clear search"
                         onClick={() => { setQuery(''); setResults([]); setIsOpen(false); inputRef.current?.focus(); }}
                         className={`mr-4 p-1 rounded-full hover:bg-white/10 transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-400 hover:text-slate-600'}`}
                     >
@@ -176,7 +184,11 @@ export default function SearchAutocomplete({
             </div>
 
             {isOpen && (
-                <div className={`absolute top-full mt-2 left-0 right-0 rounded-xl overflow-hidden z-50 max-h-96 overflow-y-auto ${dropdownClasses}`}>
+                <div
+                    id="search-listbox"
+                    role="listbox"
+                    className={`absolute top-full mt-2 left-0 right-0 rounded-xl overflow-hidden z-50 max-h-96 overflow-y-auto ${dropdownClasses}`}
+                >
                     {Object.entries(grouped).map(([type, items]) => (
                         <div key={type}>
                             {/* Section header */}
@@ -191,6 +203,9 @@ export default function SearchAutocomplete({
                                 return (
                                     <button
                                         key={`${r.type}-${r.slug}`}
+                                        id={`search-option-${idx}`}
+                                        role="option"
+                                        aria-selected={idx === activeIdx}
                                         onMouseEnter={() => setActiveIdx(idx)}
                                         onClick={() => navigate(r.url)}
                                         className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-colors last:border-b-0

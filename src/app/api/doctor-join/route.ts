@@ -37,7 +37,7 @@ const doctorJoinSchema = z.object({
 export async function POST(req: NextRequest) {
     // Apply rate limiting to prevent spam
     const clientId = getClientIdentifier(req);
-    const rateLimit = checkRateLimit(`doctorJoin:${clientId}`, RATE_LIMITS.form);
+    const rateLimit = await checkRateLimit(`doctorJoin:${clientId}`, RATE_LIMITS.form);
 
     if (!rateLimit.success) {
         return NextResponse.json(

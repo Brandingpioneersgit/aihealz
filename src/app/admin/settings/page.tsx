@@ -15,7 +15,7 @@ export default function SettingsPage() {
     const [saveMessage, setSaveMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
     const [features, setFeatures] = useState<FeatureFlag[]>([
         { name: 'Symptom Checker UI', key: 'symptom_checker', enabled: true },
-        { name: 'Patient Vault (Coming Soon)', key: 'patient_vault', enabled: false, disabled: true },
+        { name: 'Patient Vault', key: 'patient_vault', enabled: true },
         { name: 'Stripe Payments Checkout', key: 'stripe_payments', enabled: true },
         { name: 'Teleconsultation Video Rooms', key: 'teleconsultation', enabled: false, disabled: true },
     ]);

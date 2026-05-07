@@ -24,7 +24,7 @@ function parseNumericId(val: unknown, fieldName: string): number {
 export async function POST(request: NextRequest) {
     // Rate limit onboarding requests
     const clientId = getClientIdentifier(request);
-    const rateLimit = checkRateLimit(`onboard:${clientId}`, RATE_LIMITS.form);
+    const rateLimit = await checkRateLimit(`onboard:${clientId}`, RATE_LIMITS.form);
 
     if (!rateLimit.success) {
         return NextResponse.json(

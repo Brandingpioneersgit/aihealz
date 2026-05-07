@@ -22,7 +22,7 @@ const enquirySchema = z.object({
 export async function POST(request: NextRequest) {
     // Apply rate limiting
     const clientId = getClientIdentifier(request);
-    const rateLimit = checkRateLimit(`adEnquiry:${clientId}`, RATE_LIMITS.form);
+    const rateLimit = await checkRateLimit(`adEnquiry:${clientId}`, RATE_LIMITS.form);
 
     if (!rateLimit.success) {
         return NextResponse.json(

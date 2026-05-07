@@ -211,11 +211,11 @@ export default function AdvertisePricingPage() {
                             <table className="w-full">
                                 <thead>
                                     <tr className="border-b border-white/10">
-                                        <th className="text-left py-4 px-6 text-sm font-semibold text-slate-400">Placement</th>
-                                        <th className="text-left py-4 px-6 text-sm font-semibold text-slate-400">Size</th>
-                                        <th className="text-center py-4 px-6 text-sm font-semibold text-slate-400">CPM</th>
-                                        <th className="text-center py-4 px-6 text-sm font-semibold text-slate-400">CPC</th>
-                                        <th className="text-center py-4 px-6 text-sm font-semibold text-slate-400">Flat Rate</th>
+                                        <th scope="col" className="text-left py-4 px-6 text-sm font-semibold text-slate-400">Placement</th>
+                                        <th scope="col" className="text-left py-4 px-6 text-sm font-semibold text-slate-400">Size</th>
+                                        <th scope="col" className="text-center py-4 px-6 text-sm font-semibold text-slate-400">CPM</th>
+                                        <th scope="col" className="text-center py-4 px-6 text-sm font-semibold text-slate-400">CPC</th>
+                                        <th scope="col" className="text-center py-4 px-6 text-sm font-semibold text-slate-400">Flat Rate</th>
                                     </tr>
                                 </thead>
                                 <tbody>

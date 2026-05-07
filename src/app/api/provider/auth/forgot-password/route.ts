@@ -106,12 +106,26 @@ export async function POST(request: Request) {
                 console.error('Failed to store reset token:', err);
             });
 
-            // TODO: Send email with reset link
-            // const resetUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/provider/reset-password?token=${resetToken}`;
-            // await sendPasswordResetEmail(normalizedEmail, doctor.name, resetUrl);
-
-            console.log(`[Password Reset] Token generated for doctor ${doctor.id}`);
-            console.log(`[Password Reset] Reset URL would be: /provider/reset-password?token=${resetToken}`);
+            // Queue email with reset link via email_queue.
+            // We never log the plaintext token — log files would otherwise let
+            // any log-reader hijack accounts.
+            const resetUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aihealz.com'}/provider/reset-password?token=${resetToken}`;
+            try {
+                await prisma.$executeRaw`
+                    INSERT INTO email_queue (to_email, subject, body, status, created_at)
+                    VALUES (
+                        ${normalizedEmail},
+                        ${'Reset your aihealz provider password'},
+                        ${`Hello ${doctor.name || ''},\n\nA password reset was requested for your aihealz provider account. Click the link below within 1 hour to set a new password:\n\n${resetUrl}\n\nIf you did not request this, you can ignore this email.`},
+                        'pending',
+                        NOW()
+                    )
+                `;
+            } catch (err) {
+                console.error('[Password Reset] failed to enqueue email');
+                console.error(err);
+            }
+            console.log(`[Password Reset] Reset link queued for doctor ${doctor.id}`);
         }
 
         // Always return success to prevent email enumeration

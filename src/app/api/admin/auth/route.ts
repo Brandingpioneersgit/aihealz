@@ -2,14 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs';
 import { createAdminSession } from '@/lib/admin-auth';
+import { checkRateLimit as sharedCheckRateLimit } from '@/lib/rate-limit';
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@aihealz.com';
 const ADMIN_PASSWORD_HASH = process.env.ADMIN_PASSWORD_HASH;
 
-// Rate limiting for auth attempts
-const authAttempts = new Map<string, { count: number; lastAttempt: number }>();
-const MAX_ATTEMPTS = 5;
-const LOCKOUT_DURATION = 15 * 60 * 1000; // 15 minutes
+// Rate limiting: 5 attempts / 15 min / IP. Backed by Redis when REDIS_URL
+// is set (durable across processes); otherwise in-memory.
+const ADMIN_AUTH_LIMIT = { maxRequests: 5, windowMs: 15 * 60 * 1000 };
 
 function sha256Hex(input: string): string {
     return crypto.createHash('sha256').update(input).digest('hex');
@@ -45,42 +45,6 @@ function getClientIP(req: NextRequest): string {
     return forwarded?.split(',')[0]?.trim() || realIP || 'unknown';
 }
 
-function checkRateLimit(clientIP: string): { allowed: boolean; remainingAttempts: number } {
-    const now = Date.now();
-    const record = authAttempts.get(clientIP);
-
-    if (!record) {
-        return { allowed: true, remainingAttempts: MAX_ATTEMPTS };
-    }
-
-    if (now - record.lastAttempt > LOCKOUT_DURATION) {
-        authAttempts.delete(clientIP);
-        return { allowed: true, remainingAttempts: MAX_ATTEMPTS };
-    }
-
-    if (record.count >= MAX_ATTEMPTS) {
-        return { allowed: false, remainingAttempts: 0 };
-    }
-
-    return { allowed: true, remainingAttempts: MAX_ATTEMPTS - record.count };
-}
-
-function recordFailedAttempt(clientIP: string): void {
-    const now = Date.now();
-    const record = authAttempts.get(clientIP);
-
-    if (!record) {
-        authAttempts.set(clientIP, { count: 1, lastAttempt: now });
-    } else {
-        record.count++;
-        record.lastAttempt = now;
-    }
-}
-
-function clearAttempts(clientIP: string): void {
-    authAttempts.delete(clientIP);
-}
-
 export async function POST(req: NextRequest) {
     const clientIP = getClientIP(req);
 
@@ -92,8 +56,8 @@ export async function POST(req: NextRequest) {
         );
     }
 
-    const rateCheck = checkRateLimit(clientIP);
-    if (!rateCheck.allowed) {
+    const rateCheck = await sharedCheckRateLimit(`admin-auth:${clientIP}`, ADMIN_AUTH_LIMIT);
+    if (!rateCheck.success) {
         return NextResponse.json(
             { error: 'Too many login attempts. Please try again in 15 minutes.' },
             { status: 429 }
@@ -116,7 +80,7 @@ export async function POST(req: NextRequest) {
         const passwordMatches = await verifyPassword(password, ADMIN_PASSWORD_HASH);
 
         if (!emailMatches || !passwordMatches) {
-            recordFailedAttempt(clientIP);
+            // Rate limiter above already counted this attempt against the budget.
             return NextResponse.json(
                 { error: 'Invalid credentials' },
                 { status: 401 }
@@ -125,8 +89,6 @@ export async function POST(req: NextRequest) {
 
         // Issue a real signed session token (HMAC, 8h expiry).
         const token = createAdminSession(ADMIN_EMAIL.toLowerCase(), 8 * 60 * 60 * 1000);
-
-        clearAttempts(clientIP);
 
         console.log(`[ADMIN AUTH] Successful login from ${clientIP} at ${new Date().toISOString()}`);
 

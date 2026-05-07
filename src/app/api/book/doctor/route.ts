@@ -7,7 +7,7 @@ const BOOK_RATE_LIMIT = { maxRequests: 5, windowMs: 60 * 1000 };
 export async function POST(req: NextRequest) {
     // Apply rate limiting
     const clientId = getClientIdentifier(req);
-    const rateLimit = checkRateLimit(`book-doctor:${clientId}`, BOOK_RATE_LIMIT);
+    const rateLimit = await checkRateLimit(`book-doctor:${clientId}`, BOOK_RATE_LIMIT);
 
     if (!rateLimit.success) {
         return NextResponse.json(
