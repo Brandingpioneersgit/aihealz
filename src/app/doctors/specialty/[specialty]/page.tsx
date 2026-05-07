@@ -102,6 +102,12 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
 
 export default async function SpecialtyDoctorsPage({ params }: { params: PageParams }) {
     const { specialty } = await params;
+
+    // Reject obviously invalid slugs (must be lowercase alphanum with optional hyphens, 2–60 chars)
+    if (!/^[a-z][a-z0-9-]{1,59}$/.test(specialty)) {
+        notFound();
+    }
+
     const specialtyTitle = formatSpecialtyTitle(specialty);
 
     // Get user's geo context for location-aware results

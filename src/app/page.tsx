@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import prisma from '@/lib/db';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -5,6 +6,28 @@ import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import HomepageSpecialties from '@/components/ui/homepage-specialties';
 import { normalizeSpecialty, SPECIALTY_ICON_MAP } from '@/lib/normalize-specialty';
 import { getGeoContext } from '@/lib/geo-context';
+
+export const metadata: Metadata = {
+  title: 'AIHealz — AI-powered medical search, doctors, and health tools',
+  description:
+    'Search verified doctors, hospitals, treatments, diagnostic labs, and clinical references. Ask Healz AI for evidence-based answers and book care across India, the US, UK, and beyond.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'AIHealz — AI-powered medical search and care',
+    description:
+      'Verified doctors, hospitals, treatments, lab tests, and AI symptom checking — all in one place.',
+    url: 'https://aihealz.com/',
+    siteName: 'aihealz',
+    type: 'website',
+    images: [{ url: '/og-default.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AIHealz — AI-powered medical search and care',
+    description: 'Verified doctors, hospitals, treatments, and AI medical assistant.',
+    images: ['/og-default.jpg'],
+  },
+};
 
 // Country display names
 const COUNTRY_NAMES: Record<string, string> = {

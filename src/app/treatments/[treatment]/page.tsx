@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
 import { headers, cookies } from 'next/headers';
+import { notFound } from 'next/navigation';
 import prisma from '@/lib/db';
 
 // ─── Types ───────────────────────────────────────────────────
@@ -186,6 +187,10 @@ export default async function TreatmentPage({ params }: { params: Promise<{ trea
         const simpleSlug = t.simpleName?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         return nameSlug === treatmentSlug || simpleSlug === treatmentSlug;
     });
+
+    if (!treatmentData) {
+        notFound();
+    }
 
     // Merge DB-backed treatment_costs over JSON. DB rows win on conflict.
     if (treatmentData) {

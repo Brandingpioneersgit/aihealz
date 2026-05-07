@@ -9,6 +9,7 @@ export const metadata: Metadata = {
         description: 'Store and organize your medical records securely. Access your health history anytime, anywhere.',
         type: 'website',
     },
+    robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 };
 
 export default function VaultLayout({

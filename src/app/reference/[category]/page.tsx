@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import ReferenceChat from '@/components/ui/reference-chat';
 
 type CategorySlug =
@@ -80,6 +81,10 @@ const CATEGORY_MAP: Record<CategorySlug, { title: string; desc: string; heroIcon
     }
 };
 
+export function generateStaticParams() {
+    return (Object.keys(CATEGORY_MAP) as CategorySlug[]).map((category) => ({ category }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
     const { category } = await params;
     const categoryKey = category as CategorySlug;
@@ -97,22 +102,7 @@ export default async function ReferencePage({ params }: { params: Promise<{ cate
     const data = CATEGORY_MAP[categoryKey];
 
     if (!data) {
-        return (
-            <main className="min-h-screen bg-[#050B14] text-white flex flex-col items-center justify-center px-6">
-                <div className="text-center max-w-md">
-                    <div className="w-20 h-20 mx-auto mb-6 bg-teal-500/10 rounded-2xl flex items-center justify-center">
-                        <svg className="w-10 h-10 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                    </div>
-                    <h1 className="text-3xl font-extrabold mb-4">Reference Not Found</h1>
-                    <p className="text-slate-400 mb-8">The clinical reference category &quot;{category}&quot; doesn&apos;t exist.</p>
-                    <Link href="/clinical-reference" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-slate-900 font-bold rounded-xl hover:bg-teal-400 transition-colors">
-                        Browse All References
-                    </Link>
-                </div>
-            </main>
-        );
+        notFound();
     }
 
     return (

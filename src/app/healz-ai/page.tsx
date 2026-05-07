@@ -140,7 +140,7 @@ function HealzAIContent() {
                     <span className="section-mark" style={{ marginBottom: 6 }}>
                         healz ai
                     </span>
-                    <div
+                    <h1
                         className="display"
                         style={{
                             fontSize: 32,
@@ -148,13 +148,11 @@ function HealzAIContent() {
                             marginBottom: 8,
                             letterSpacing: '-0.035em',
                             fontWeight: 600,
+                            margin: 0,
                         }}
                     >
-                        Ask anything
-                        <br />
-                        medical
-                        <span style={{ color: 'var(--orange)' }}>.</span>
-                    </div>
+                        Ask Healz — AI medical assistant
+                    </h1>
                     <div className="muted" style={{ fontSize: 12, marginBottom: 14 }}>
                         Trained on the full aihealz library + 47 board-certified reviewers.
                     </div>
