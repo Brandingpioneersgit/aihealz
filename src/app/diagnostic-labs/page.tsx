@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
+import Image from 'next/image';
 import Script from 'next/script';
 import { Metadata } from 'next';
 import { getGeoContext } from '@/lib/geo-context';
@@ -201,7 +202,14 @@ export default async function DiagnosticLabsPage() {
                 >
                   <div className="flex items-start gap-4 mb-4">
                     {provider.logo ? (
-                      <img src={provider.logo} alt={provider.name} className="w-16 h-16 rounded-xl object-cover" />
+                      <Image
+                        src={provider.logo}
+                        alt={provider.name}
+                        width={64}
+                        height={64}
+                        unoptimized
+                        className="w-16 h-16 rounded-xl object-cover"
+                      />
                     ) : (
                       <div className="w-16 h-16 rounded-xl bg-emerald-500/20 flex items-center justify-center">
                         <span className="text-emerald-400 font-bold text-2xl">{provider.name.charAt(0)}</span>
@@ -272,7 +280,14 @@ export default async function DiagnosticLabsPage() {
               >
                 <div className="flex items-center gap-3 mb-3">
                   {provider.logo ? (
-                    <img src={provider.logo} alt={provider.name} className="w-12 h-12 rounded-xl object-cover" />
+                    <Image
+                      src={provider.logo}
+                      alt={provider.name}
+                      width={48}
+                      height={48}
+                      unoptimized
+                      className="w-12 h-12 rounded-xl object-cover"
+                    />
                   ) : (
                     <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
                       <span className="text-emerald-400 font-bold">{provider.name.charAt(0)}</span>

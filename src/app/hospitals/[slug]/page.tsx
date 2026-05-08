@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ReactElement } from 'react';
@@ -460,7 +461,14 @@ export default async function HospitalDetailPage({ params }: Props) {
                       className="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-white/5 hover:border-teal-500/30 transition-colors"
                     >
                       {hd.doctor?.profileImage ? (
-                        <img src={hd.doctor.profileImage} alt={hd.doctor.name} className="w-12 h-12 rounded-full object-cover" />
+                        <Image
+                          src={hd.doctor.profileImage}
+                          alt={hd.doctor.name}
+                          width={48}
+                          height={48}
+                          unoptimized
+                          className="w-12 h-12 rounded-full object-cover"
+                        />
                       ) : (
                         <div className="w-12 h-12 rounded-full bg-teal-900/50 flex items-center justify-center border border-teal-500/20">
                           <span className="text-lg font-bold text-teal-400">{hd.doctor?.name?.charAt(0) || hd.name.charAt(0)}</span>
@@ -749,7 +757,14 @@ export default async function HospitalDetailPage({ params }: Props) {
                       >
                         <div className="flex items-center gap-2 min-w-0">
                           {tie.insurer.logo ? (
-                            <img src={tie.insurer.logo} alt={tie.insurer.name} className="h-6 w-6 object-contain flex-shrink-0" />
+                            <Image
+                              src={tie.insurer.logo}
+                              alt={tie.insurer.name}
+                              width={24}
+                              height={24}
+                              unoptimized
+                              className="h-6 w-6 object-contain flex-shrink-0"
+                            />
                           ) : (
                             <div className="w-6 h-6 rounded bg-teal-900/50 flex items-center justify-center flex-shrink-0 border border-teal-500/20">
                               <span className="text-xs font-bold text-teal-400">{tie.insurer.name.charAt(0)}</span>

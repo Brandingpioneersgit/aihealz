@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import {
@@ -315,7 +316,14 @@ export default async function InsurancePage() {
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
                           {tpa.logo ? (
-                            <img src={tpa.logo} alt={tpa.name} className="w-10 h-10 rounded object-contain bg-slate-50" />
+                            <Image
+                              src={tpa.logo}
+                              alt={tpa.name}
+                              width={40}
+                              height={40}
+                              unoptimized
+                              className="w-10 h-10 rounded object-contain bg-slate-50"
+                            />
                           ) : (
                             <div className="w-10 h-10 rounded bg-purple-100 flex items-center justify-center">
                               <span className="font-bold text-purple-600">{tpa.name.charAt(0)}</span>

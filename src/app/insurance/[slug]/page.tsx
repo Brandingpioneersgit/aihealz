@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -280,7 +281,14 @@ export default async function InsuranceDetailPage({ params }: Props) {
                       className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-teal-200 hover:bg-teal-50 transition-colors"
                     >
                       {tie.hospital.logo ? (
-                        <img src={tie.hospital.logo} alt={tie.hospital.name} className="w-10 h-10 rounded object-contain bg-white" />
+                        <Image
+                          src={tie.hospital.logo}
+                          alt={tie.hospital.name}
+                          width={40}
+                          height={40}
+                          unoptimized
+                          className="w-10 h-10 rounded object-contain bg-white"
+                        />
                       ) : (
                         <div className="w-10 h-10 rounded bg-teal-100 flex items-center justify-center">
                           <span className="font-bold text-teal-600">{tie.hospital.name.charAt(0)}</span>
@@ -323,7 +331,14 @@ export default async function InsuranceDetailPage({ params }: Props) {
                       className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg hover:bg-purple-50 transition-colors"
                     >
                       {link.tpa.logo ? (
-                        <img src={link.tpa.logo} alt={link.tpa.name} className="w-10 h-10 rounded object-contain bg-white" />
+                        <Image
+                          src={link.tpa.logo}
+                          alt={link.tpa.name}
+                          width={40}
+                          height={40}
+                          unoptimized
+                          className="w-10 h-10 rounded object-contain bg-white"
+                        />
                       ) : (
                         <div className="w-10 h-10 rounded bg-purple-100 flex items-center justify-center">
                           <span className="font-bold text-purple-600">{link.tpa.name.charAt(0)}</span>

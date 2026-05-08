@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -154,7 +155,14 @@ export default async function ProviderDetailPage({ params }: PageProps) {
               {/* Logo & Basic Info */}
               <div className="flex items-start gap-6 flex-1">
                 {provider.logo ? (
-                  <img src={provider.logo} alt={provider.name} className="w-24 h-24 rounded-2xl object-cover" />
+                  <Image
+                    src={provider.logo}
+                    alt={provider.name}
+                    width={96}
+                    height={96}
+                    unoptimized
+                    className="w-24 h-24 rounded-2xl object-cover"
+                  />
                 ) : (
                   <div className="w-24 h-24 rounded-2xl bg-emerald-500/20 flex items-center justify-center">
                     <span className="text-emerald-400 font-bold text-4xl">{provider.name.charAt(0)}</span>
