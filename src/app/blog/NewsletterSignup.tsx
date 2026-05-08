@@ -23,45 +23,24 @@ export default function NewsletterSignup() {
   };
 
   return (
-    <form
-      onSubmit={submit}
-      style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}
-    >
+    <form onSubmit={submit} className="flex flex-wrap items-center gap-2">
       <input
         type="email"
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@example.com"
-        style={{
-          flex: 1,
-          minWidth: 220,
-          padding: '10px 14px',
-          borderRadius: 10,
-          border: '1px solid var(--line, rgba(0,0,0,0.12))',
-          fontSize: 14,
-          background: 'var(--card, #fff)',
-        }}
+        className="flex-1 min-w-[220px] px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-white placeholder:text-slate-500 text-sm focus:outline-none focus:border-teal-500/50 focus:bg-white/[0.07]"
       />
       <button
         type="submit"
         disabled={state === 'loading'}
-        style={{
-          padding: '10px 18px',
-          borderRadius: 10,
-          background: 'var(--cobalt)',
-          color: '#fff',
-          fontSize: 14,
-          fontWeight: 500,
-          border: 'none',
-          cursor: state === 'loading' ? 'wait' : 'pointer',
-          opacity: state === 'loading' ? 0.7 : 1,
-        }}
+        className="px-5 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-900 text-sm font-bold transition-colors disabled:opacity-60 disabled:cursor-wait"
       >
         {state === 'loading' ? 'Subscribing…' : 'Subscribe'}
       </button>
-      {state === 'ok' && <p style={{ width: '100%', fontSize: 13, color: '#059669' }}>Subscribed. Welcome aboard.</p>}
-      {state === 'err' && <p style={{ width: '100%', fontSize: 13, color: '#dc2626' }}>Could not subscribe. Try again later.</p>}
+      {state === 'ok' && <p className="w-full text-sm text-emerald-400">Subscribed. Welcome aboard.</p>}
+      {state === 'err' && <p className="w-full text-sm text-rose-400">Could not subscribe. Try again later.</p>}
     </form>
   );
 }

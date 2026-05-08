@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import V4Page from '@/components/v4/Shell';
 import FAQAccordion from './FAQAccordion';
 
 export const metadata: Metadata = {
@@ -90,55 +89,45 @@ const faqSchema = {
 
 export default function FAQPage() {
   return (
-    <V4Page>
+    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div
-        className="v4-root"
-        style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}
-      >
-        <div style={{ maxWidth: 880, margin: '0 auto' }}>
-          <nav
-            className="row gap-2 mono"
-            style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}
-          >
-            <Link href="/">Home</Link>
-            <span>/</span>
-            <span style={{ color: 'var(--ink)' }}>FAQ</span>
-          </nav>
 
-          <h1
-            className="display"
-            style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: '0 0 16px', fontWeight: 600 }}
-          >
-            Questions, answered.
-          </h1>
-          <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 640, marginBottom: 48 }}>
-            The things people ask us most often, grouped by what you came here for.
+      <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-white">FAQ</span>
+        </nav>
+
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.05] mb-4">
+          Questions, <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">answered.</span>
+        </h1>
+        <p className="text-lg text-slate-400 max-w-xl mb-12 leading-relaxed">
+          The things people ask us most often, grouped by what you came here for.
+        </p>
+
+        {SECTIONS.map((section) => (
+          <section key={section.title} className="mb-10">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-4">{section.title}</h2>
+            <FAQAccordion items={section.qa.map(([q, a]) => ({ q, a }))} />
+          </section>
+        ))}
+
+        <div className="mt-12 bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-6">
+          <p className="text-sm text-slate-300">
+            Still stuck?{' '}
+            <Link href="/contact" className="text-teal-400 hover:text-teal-300 font-medium">
+              Talk to our team →
+            </Link>
           </p>
-
-          {SECTIONS.map((section) => (
-            <section key={section.title} style={{ marginBottom: 40 }}>
-              <h2 style={{ fontSize: 22, fontWeight: 600, marginBottom: 16 }}>{section.title}</h2>
-              <FAQAccordion items={section.qa.map(([q, a]) => ({ q, a }))} />
-            </section>
-          ))}
-
-          <div
-            className="card-flat"
-            style={{ padding: 24, marginTop: 32, borderRadius: 16 }}
-          >
-            <p style={{ fontSize: 14, color: 'var(--ink-2)' }}>
-              Still stuck?{' '}
-              <Link href="/contact" style={{ color: 'var(--cobalt)', fontWeight: 500 }}>
-                Talk to our team →
-              </Link>
-            </p>
-          </div>
         </div>
       </div>
-    </V4Page>
+    </main>
   );
 }

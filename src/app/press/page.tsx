@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import V4Page from '@/components/v4/Shell';
 
 export const metadata: Metadata = {
   title: 'Press & Media — aihealz',
@@ -29,69 +28,71 @@ const COVERAGE: { outlet: string; title: string; href: string; date: string }[] 
 
 export default function PressPage() {
   return (
-    <V4Page>
-      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}>
-        <div style={{ maxWidth: 880, margin: '0 auto' }}>
-          <nav className="row gap-2 mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}>
-            <Link href="/">Home</Link><span>/</span><span style={{ color: 'var(--ink)' }}>Press</span>
-          </nav>
+    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
+      <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
 
-          <h1 className="display" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: '0 0 16px', fontWeight: 600 }}>
-            Press & media.
-          </h1>
-          <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 640, marginBottom: 32 }}>
-            Brand assets, founder bios, and recent coverage. For interviews and media requests, email{' '}
-            <a href="mailto:press@aihealz.com" style={{ color: 'var(--cobalt)' }}>press@aihealz.com</a>.
-          </p>
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-white">Press</span>
+        </nav>
 
-          <section style={{ marginBottom: 48 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Brand assets</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
-              <a href="/og-default.jpg" download className="card-flat" style={{ padding: 20, borderRadius: 12, textDecoration: 'none', color: 'inherit' }}>
-                <p style={{ fontSize: 14, fontWeight: 600 }}>Logo (PNG)</p>
-                <p style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 4 }}>Download →</p>
-              </a>
-              <a href="/og-default.jpg" download className="card-flat" style={{ padding: 20, borderRadius: 12, textDecoration: 'none', color: 'inherit' }}>
-                <p style={{ fontSize: 14, fontWeight: 600 }}>OG image</p>
-                <p style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 4 }}>1200×630 →</p>
-              </a>
-            </div>
-          </section>
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.05] mb-4">
+          Press &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">media.</span>
+        </h1>
+        <p className="text-lg text-slate-400 max-w-xl mb-12 leading-relaxed">
+          Brand assets, founder bios, and recent coverage. For interviews and media requests, email{' '}
+          <a href="mailto:press@aihealz.com" className="text-teal-400 hover:text-teal-300 font-medium">press@aihealz.com</a>.
+        </p>
 
-          <section style={{ marginBottom: 48 }}>
-            <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Founder bios</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {FOUNDERS.map((f) => (
-                <div key={f.name} className="card-flat" style={{ padding: 20, borderRadius: 12 }}>
-                  <p style={{ fontSize: 15, fontWeight: 600 }}>{f.name}</p>
-                  <p style={{ fontSize: 12, color: 'var(--ink-3)', marginBottom: 8 }}>{f.role}</p>
-                  <p style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.55 }}>{f.bio}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-white mb-4">Brand assets</h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <a href="/og-default.jpg" download className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/5 hover:border-teal-500/30 p-5 transition-colors block">
+              <p className="text-sm font-semibold text-white">Logo (PNG)</p>
+              <p className="text-xs text-slate-500 mt-1">Download →</p>
+            </a>
+            <a href="/og-default.jpg" download className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/5 hover:border-teal-500/30 p-5 transition-colors block">
+              <p className="text-sm font-semibold text-white">OG image</p>
+              <p className="text-xs text-slate-500 mt-1">1200×630 →</p>
+            </a>
+          </div>
+        </section>
 
-          <section>
-            <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Recent coverage</h2>
-            {COVERAGE.length === 0 ? (
-              <div className="card-flat" style={{ padding: 20, borderRadius: 12, fontSize: 14, color: 'var(--ink-2)' }}>
-                Recent coverage will appear here as it lands. Press inquiries: <a href="mailto:press@aihealz.com" style={{ color: 'var(--cobalt)' }}>press@aihealz.com</a>.
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-white mb-4">Founder bios</h2>
+          <div className="flex flex-col gap-3">
+            {FOUNDERS.map((f) => (
+              <div key={f.name} className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/5 p-5">
+                <p className="text-base font-semibold text-white">{f.name}</p>
+                <p className="text-xs text-slate-500 mb-2">{f.role}</p>
+                <p className="text-sm text-slate-400 leading-relaxed">{f.bio}</p>
               </div>
-            ) : (
-              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                {COVERAGE.map((c) => (
-                  <li key={c.href} className="card-flat" style={{ padding: 16, borderRadius: 10 }}>
-                    <a href={c.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      <p style={{ fontSize: 14, fontWeight: 600 }}>{c.title}</p>
-                      <p style={{ fontSize: 12, color: 'var(--ink-3)' }}>{c.outlet} · {c.date}</p>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-        </div>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-bold text-white mb-4">Recent coverage</h2>
+          {COVERAGE.length === 0 ? (
+            <div className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/5 p-5 text-sm text-slate-400">
+              Recent coverage will appear here as it lands. Press inquiries: <a href="mailto:press@aihealz.com" className="text-teal-400 hover:text-teal-300 font-medium">press@aihealz.com</a>.
+            </div>
+          ) : (
+            <ul className="flex flex-col gap-2 list-none">
+              {COVERAGE.map((c) => (
+                <li key={c.href} className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/5 hover:border-teal-500/30 p-4 transition-colors">
+                  <a href={c.href} target="_blank" rel="noopener noreferrer" className="block">
+                    <p className="text-sm font-semibold text-white">{c.title}</p>
+                    <p className="text-xs text-slate-500">{c.outlet} · {c.date}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
       </div>
-    </V4Page>
+    </main>
   );
 }
