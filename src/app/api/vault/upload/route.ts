@@ -90,10 +90,22 @@ export async function POST(request: NextRequest) {
         // Detect file type
         const fileType = detectFileType(file.name, file.type);
 
-        // Read file as buffer for potential processing
+        // Read file as buffer
         const arrayBuffer = await file.arrayBuffer();
         const buffer = Buffer.from(arrayBuffer);
-        const base64Content = buffer.toString('base64');
+
+        // Persist the FULL file as a data URI in driveWebLink so the vault
+        // viewer can display it without losing bytes. The prior implementation
+        // jammed truncated base64 into ocrText (an OCR-output column) which
+        // both corrupted files >37KB and broke the analyze pipeline that
+        // expects ocrText to hold extracted text. (audit item 429)
+        //
+        // When GOOGLE_DRIVE_SERVICE_ACCOUNT is configured a separate
+        // background pipeline can copy the bytes to Drive and replace the
+        // inline data URI with a real driveFileId / driveWebLink — the read
+        // side handles either form transparently because data URIs and https
+        // URLs both work in <a href> / <img src>.
+        const inlineDataUri = `data:${file.type};base64,${buffer.toString('base64')}`;
 
         // Create vault file record
         const vaultFile = await prisma.vaultFile.create({
@@ -103,8 +115,7 @@ export async function POST(request: NextRequest) {
                 fileType: fileType,
                 mimeType: file.type,
                 fileSizeBytes: file.size,
-                // Store base64 in ocrText field temporarily (or create a separate storage solution)
-                ocrText: base64Content.substring(0, 50000), // Truncate for DB limits
+                driveWebLink: inlineDataUri,
                 isProcessed: false,
             },
         });

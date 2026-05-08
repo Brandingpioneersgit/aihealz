@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import prisma from '@/lib/db';
 import { checkRateLimit, getClientIdentifier, rateLimitHeaders } from '@/lib/rate-limit';
 
 // Rate limit: 5 booking requests per minute
@@ -21,8 +22,14 @@ export async function POST(req: NextRequest) {
         const {
             patientName,
             phone,
+            email,
             preferredDate,
-        } = body;
+            preferredTime,
+            reason,
+            isNewPatient,
+            doctorSlug,
+            doctorName,
+        } = body as Record<string, string | undefined>;
 
         // Validate required fields
         if (!patientName || !phone || !preferredDate) {
@@ -41,18 +48,36 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // In production, this would:
-        // 1. Store in database
-        // 2. Send email/SMS notification to doctor
-        // 3. Trigger CRM workflow
-        // For now, just log and return success
-        console.log('Doctor appointment request:', {
-            ...body,
-            timestamp: new Date().toISOString(),
+        // Persist to ContactSubmission so the admin team has a queryable
+        // record. We don't have a dedicated DoctorBooking model yet, so the
+        // booking details are serialized into the message payload with a
+        // distinct `source` so the admin UI can filter for them later.
+        const message = JSON.stringify({
+            doctor: { slug: doctorSlug || null, name: doctorName || null },
+            patient: { name: patientName, phone: cleanPhone, isNewPatient: isNewPatient || null },
+            requested: { date: preferredDate, time: preferredTime || null },
+            reason: reason || null,
             clientId,
+            timestamp: new Date().toISOString(),
+        }, null, 2);
+
+        const ipAddress = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+            || req.headers.get('x-real-ip')
+            || null;
+
+        const submission = await prisma.contactSubmission.create({
+            data: {
+                name: patientName.slice(0, 100),
+                email: (email || `${cleanPhone}@no-email.aihealz.local`).slice(0, 200),
+                message,
+                source: 'book_doctor',
+                ipAddress: ipAddress?.slice(0, 45) || null,
+                userAgent: req.headers.get('user-agent')?.slice(0, 500) || null,
+            },
+            select: { id: true },
         });
 
-        return NextResponse.json({ success: true });
+        return NextResponse.json({ success: true, id: submission.id });
     } catch (error) {
         console.error('Booking error:', error);
         return NextResponse.json(
