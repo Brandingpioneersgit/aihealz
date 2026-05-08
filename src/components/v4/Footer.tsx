@@ -90,6 +90,9 @@ const SECTIONS: Section[] = [
         heading: 'Company',
         items: [
             { label: 'About', href: '/about' },
+            { label: 'Editorial board', href: '/editorial-board' },
+            { label: 'Careers', href: '/careers' },
+            { label: 'Press', href: '/press' },
             { label: 'Contact', href: '/contact' },
             { label: 'Pricing', href: '/pricing' },
             { label: 'Advertise', href: '/advertise' },
@@ -97,10 +100,21 @@ const SECTIONS: Section[] = [
         ],
     },
     {
+        heading: 'Help',
+        items: [
+            { label: 'Help center', href: '/help' },
+            { label: 'FAQ', href: '/faq' },
+            { label: 'Patient sign-in', href: '/login' },
+            { label: 'Create account', href: '/register' },
+            { label: 'Provider sign-in', href: '/provider/login' },
+        ],
+    },
+    {
         heading: 'Legal',
         items: [
             { label: 'Privacy', href: '/privacy' },
             { label: 'Terms', href: '/terms' },
+            { label: 'Partner agreement', href: '/partner-agreement' },
             { label: 'Sitemap', href: '/sitemap.xml' },
         ],
     },
