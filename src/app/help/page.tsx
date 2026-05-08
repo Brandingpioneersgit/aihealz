@@ -51,31 +51,41 @@ const TOPICS = [
 
 export default function HelpPage() {
     return (
-        <main className="mx-auto max-w-4xl px-6 py-12">
-            <h1 className="text-4xl font-semibold tracking-tight">Help Center</h1>
-            <p className="mt-3 text-lg text-neutral-600">
-                Quick answers and direct links to everything on AIHealz. Can&apos;t find what you need?{' '}
-                <Link href="/contact" className="text-emerald-700 underline">
-                    Contact our team
-                </Link>
-                .
-            </p>
+        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
+            <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
+            <div className="max-w-4xl mx-auto px-6 relative z-10">
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                    <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    <span className="text-white">Help</span>
+                </nav>
 
-            <div className="mt-10 grid gap-8 sm:grid-cols-2">
-                {TOPICS.map(({ heading, items }) => (
-                    <section key={heading}>
-                        <h2 className="text-lg font-semibold">{heading}</h2>
-                        <ul className="mt-3 space-y-2">
-                            {items.map(({ label, href }) => (
-                                <li key={href}>
-                                    <Link href={href} className="text-emerald-700 hover:underline">
-                                        {label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
-                ))}
+                <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">Help Center</h1>
+                <p className="text-lg text-slate-400 leading-relaxed mb-12">
+                    Quick answers and direct links to everything on aihealz. Can&apos;t find what you need?{' '}
+                    <Link href="/contact" className="text-teal-400 hover:text-teal-300 font-medium">
+                        Contact our team
+                    </Link>
+                    .
+                </p>
+
+                <div className="grid gap-6 sm:grid-cols-2">
+                    {TOPICS.map(({ heading, items }) => (
+                        <section key={heading} className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-6">
+                            <h2 className="text-lg font-semibold text-white mb-4">{heading}</h2>
+                            <ul className="space-y-2">
+                                {items.map(({ label, href }) => (
+                                    <li key={href}>
+                                        <Link href={href} className="text-teal-400 hover:text-teal-300 transition-colors inline-flex items-center gap-1.5">
+                                            <span>→</span>
+                                            {label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ))}
+                </div>
             </div>
         </main>
     );

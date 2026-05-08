@@ -312,7 +312,14 @@ function LabDashboardContent() {
           )}
 
           {activeTab !== 'overview' && (
-            <LabTabs activeTab={activeTab} session={session} sidebarItems={sidebarItems} />
+            <div className="bg-white rounded-xl border border-slate-200 p-12 text-center">
+              <p className="text-slate-500 font-medium">
+                {sidebarItems.find(s => s.id === activeTab)?.label || activeTab} — coming soon.
+              </p>
+              <p className="text-sm text-slate-400 mt-2">
+                This module is not yet wired up in the lab portal.
+              </p>
+            </div>
           )}
         </div>
       </main>
