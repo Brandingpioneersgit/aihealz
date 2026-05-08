@@ -140,7 +140,10 @@ export default async function HospitalDetailPage({ params }: Props) {
         worstRating: 1,
       },
     }),
-    medicalSpecialty: hospital.specialties.map(s => s.specialty),
+    medicalSpecialty: hospital.specialties.map(s => ({
+      '@type': 'MedicalSpecialty',
+      name: s.specialty,
+    })),
     availableService: hospital.departments.map(d => ({
       '@type': 'MedicalProcedure',
       name: d.name,

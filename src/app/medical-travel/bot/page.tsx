@@ -54,6 +54,8 @@ export default function MedicalTravelBot() {
                     </Link>
                 </div>
 
+                <h1 className="sr-only">Medical Travel Concierge — Build Your Estimate</h1>
+
                 {/* Progress Bar (Hidden on Print) */}
                 {step < 4 && (
                     <div className="mb-10 print:hidden">
@@ -75,7 +77,7 @@ export default function MedicalTravelBot() {
                         {/* Interactive Steps */}
                         {step === 1 && (
                             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                                <h1 className="text-3xl font-extrabold text-surface-900 mb-2">Patient Details</h1>
+                                <h2 className="text-3xl font-extrabold text-surface-900 mb-2">Patient Details</h2>
                                 <p className="text-surface-500 mb-8">Let's start with who needs care and what procedures you are looking for.</p>
 
                                 <div className="space-y-6">
@@ -93,7 +95,7 @@ export default function MedicalTravelBot() {
 
                         {step === 2 && (
                             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                                <h1 className="text-3xl font-extrabold text-surface-900 mb-2">Travel Itinerary</h1>
+                                <h2 className="text-3xl font-extrabold text-surface-900 mb-2">Travel Itinerary</h2>
                                 <p className="text-surface-500 mb-8">When are you planning to travel and how many people will accompany you?</p>
 
                                 <div className="space-y-6">
@@ -116,7 +118,7 @@ export default function MedicalTravelBot() {
 
                         {step === 3 && (
                             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                                <h1 className="text-3xl font-extrabold text-surface-900 mb-2">Stay & Concierge</h1>
+                                <h2 className="text-3xl font-extrabold text-surface-900 mb-2">Stay & Concierge</h2>
                                 <p className="text-surface-500 mb-8">Customize your recovery experience with our premium partners.</p>
 
                                 <div className="space-y-6">
@@ -178,7 +180,7 @@ export default function MedicalTravelBot() {
                         {/* Document Header */}
                         <div className="flex justify-between items-start border-b-2 border-primary-600 pb-8 mb-8">
                             <div>
-                                <h1 className="text-4xl font-black text-surface-900 tracking-tight">aihealz<span className="text-primary-600">.</span></h1>
+                                <p className="text-4xl font-black text-surface-900 tracking-tight" aria-label="aihealz">aihealz<span className="text-primary-600">.</span></p>
                                 <p className="text-sm text-surface-500 font-semibold mt-1 uppercase tracking-widest">Medical Travel Concierge</p>
                             </div>
                             <div className="text-right">
