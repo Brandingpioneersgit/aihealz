@@ -1,6 +1,40 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
 
+// Active conditions list rarely changes between requests; loading 70k+ rows
+// per symptom analysis was the dominant DB cost on this endpoint. Cache the
+// (slug, commonName) pairs in module scope with a short TTL — invalidates
+// naturally on Next.js process restart.
+type CondRow = { slug: string; commonName: string };
+let _conditionsCache: CondRow[] | null = null;
+let _conditionsCacheAt = 0;
+const CONDITIONS_TTL_MS = 5 * 60 * 1000;
+let _conditionsLoadPromise: Promise<CondRow[]> | null = null;
+
+async function getActiveConditions(): Promise<CondRow[]> {
+    const now = Date.now();
+    if (_conditionsCache && now - _conditionsCacheAt < CONDITIONS_TTL_MS) {
+        return _conditionsCache;
+    }
+    if (_conditionsLoadPromise) return _conditionsLoadPromise;
+    _conditionsLoadPromise = prisma.medicalCondition
+        .findMany({ where: { isActive: true }, select: { slug: true, commonName: true } })
+        .then((rows) => {
+            _conditionsCache = rows;
+            _conditionsCacheAt = Date.now();
+            return rows;
+        })
+        .finally(() => {
+            _conditionsLoadPromise = null;
+        });
+    return _conditionsLoadPromise;
+}
+
+const SUPPORTED_LANGS = new Set([
+    'en', 'hi', 'ar', 'bn', 'de', 'es', 'fr', 'gu', 'kn',
+    'ml', 'mr', 'or', 'pa', 'pt', 'ta', 'te', 'ur',
+]);
+
 export async function POST(req: NextRequest) {
     try {
         const body = await req.json();
@@ -132,10 +166,7 @@ Analyze these symptoms and provide the most likely medical conditions as a JSON 
         }
 
         // ── Cross-reference with our database ──────────
-        const allConditions = await prisma.medicalCondition.findMany({
-            where: { isActive: true },
-            select: { slug: true, commonName: true },
-        });
+        const allConditions = await getActiveConditions();
 
         // Build a lookup map (lowercase name → slug)
         const nameToSlug = new Map<string, string>();
@@ -143,18 +174,27 @@ Analyze these symptoms and provide the most likely medical conditions as a JSON 
             nameToSlug.set(c.commonName.toLowerCase(), c.slug);
         }
 
+        // Resolve geo prefix from middleware headers so suggested links
+        // honor the user's selected country/language instead of always
+        // pointing at /india/en/ regardless of locale.
+        const headerCountry = req.headers.get('x-aihealz-country')?.toLowerCase();
+        const headerLang = req.headers.get('x-aihealz-lang')?.toLowerCase();
+        const country = headerCountry && /^[a-z-]{2,40}$/.test(headerCountry) ? headerCountry : 'india';
+        const lang = headerLang && SUPPORTED_LANGS.has(headerLang) ? headerLang : 'en';
+        const geoPrefix = `/${country}/${lang}`;
+
         // Try to match each AI condition to our database
         for (const cond of conditions) {
             const exactMatch = nameToSlug.get(cond.name.toLowerCase());
             if (exactMatch) {
                 cond.slug = exactMatch;
-                cond.url = `/india/en/${exactMatch}`;
+                cond.url = `${geoPrefix}/${exactMatch}`;
             } else {
                 // Fuzzy: check if any DB condition name contains the AI condition name or vice versa
                 for (const [dbName, dbSlug] of nameToSlug) {
                     if (dbName.includes(cond.name.toLowerCase()) || cond.name.toLowerCase().includes(dbName)) {
                         cond.slug = dbSlug;
-                        cond.url = `/india/en/${dbSlug}`;
+                        cond.url = `${geoPrefix}/${dbSlug}`;
                         break;
                     }
                 }

@@ -17,91 +17,101 @@ export async function GET(request: NextRequest) {
         const citySlug = searchParams.get('city');
         const lang = searchParams.get('lang') || 'en';
 
-        // Resolve geography
+        // Resolve geography — look up city + country in parallel; we keep
+        // city when it resolves and otherwise fall back to country, but
+        // hitting Postgres twice serially used to cost ~25–60ms per nav.
+        const [cityRow, countryRow] = await Promise.all([
+            citySlug
+                ? prisma.geography.findFirst({
+                    where: { slug: citySlug, isActive: true },
+                    select: { id: true, name: true, parentId: true },
+                })
+                : Promise.resolve(null),
+            prisma.geography.findFirst({
+                where: { slug: countrySlug, isActive: true, level: 'country' },
+                select: { id: true, name: true },
+            }),
+        ]);
+
         let geoId: number | null = null;
         let geoName = '';
-
-    if (citySlug) {
-        const city = await prisma.geography.findFirst({
-            where: { slug: citySlug, isActive: true },
-            select: { id: true, name: true },
-        });
-        if (city) {
-            geoId = city.id;
-            geoName = city.name;
+        let cityParentId: number | null = null;
+        if (cityRow) {
+            geoId = cityRow.id;
+            geoName = cityRow.name;
+            cityParentId = cityRow.parentId ?? null;
+        } else if (countryRow) {
+            geoId = countryRow.id;
+            geoName = countryRow.name;
         }
-    }
 
-    if (!geoId) {
-        const country = await prisma.geography.findFirst({
-            where: { slug: countrySlug, isActive: true, level: 'country' },
-            select: { id: true, name: true },
-        });
-        if (country) {
-            geoId = country.id;
-            geoName = country.name;
-        }
-    }
+        // pinnedConditions and parentGeo both depend on geoId but are
+        // independent of each other — fetch in parallel. parentGeo is only
+        // needed if we resolved at country level (we already have parentId
+        // from cityRow when the user picked a city).
+        const [pinnedConditions, parentGeoRow] = await Promise.all([
+            geoId
+                ? prisma.pinnedCondition.findMany({
+                    where: { geographyId: geoId, isActive: true },
+                    orderBy: { displayOrder: 'asc' },
+                    include: {
+                        condition: { select: { commonName: true, slug: true } },
+                    },
+                    take: 10,
+                })
+                : Promise.resolve([] as Array<{ condition: { commonName: string; slug: string } }>),
+            geoId && cityParentId === null
+                ? prisma.geography.findFirst({
+                    where: { id: geoId },
+                    select: { parentId: true },
+                })
+                : Promise.resolve(null),
+        ]);
 
-    // Fetch pinned conditions
-    const pinnedConditions = geoId
-        ? await prisma.pinnedCondition.findMany({
-            where: { geographyId: geoId, isActive: true },
-            orderBy: { displayOrder: 'asc' },
-            include: {
-                condition: { select: { commonName: true, slug: true } },
-            },
-            take: 10,
-        })
-        : [];
+        const parentForCities = cityParentId ?? parentGeoRow?.parentId ?? null;
+        const pinnedSlugs = pinnedConditions.map((p) => p.condition.slug);
 
-    // Fetch additional popular conditions
-    const pinnedSlugs = pinnedConditions.map((p) => p.condition.slug);
-    const additionalConditions = await prisma.medicalCondition.findMany({
-        where: {
-            isActive: true,
-            slug: { notIn: pinnedSlugs },
-        },
-        select: { commonName: true, slug: true },
-        take: 20 - pinnedConditions.length,
-        orderBy: { createdAt: 'asc' },
-    });
+        // additionalConditions and nearbyCities have no dependency on each
+        // other — last parallel batch.
+        const [additionalConditions, citiesRows] = await Promise.all([
+            prisma.medicalCondition.findMany({
+                where: {
+                    isActive: true,
+                    slug: { notIn: pinnedSlugs },
+                },
+                select: { commonName: true, slug: true },
+                take: 20 - pinnedConditions.length,
+                orderBy: { createdAt: 'asc' },
+            }),
+            parentForCities
+                ? prisma.geography.findMany({
+                    where: { level: 'city', isActive: true, parentId: parentForCities },
+                    select: { name: true, slug: true },
+                    take: 8,
+                })
+                : Promise.resolve([] as Array<{ name: string; slug: string }>),
+        ]);
 
-    const conditions = [
-        ...pinnedConditions.map((p) => ({
-            name: p.condition.commonName,
-            slug: p.condition.slug,
-            isPinned: true,
-            url: `/${countrySlug}/${lang}/${p.condition.slug}${citySlug ? `/${citySlug}` : ''}`,
-        })),
-        ...additionalConditions.map((c) => ({
-            name: c.commonName,
-            slug: c.slug,
-            isPinned: false,
-            url: `/${countrySlug}/${lang}/${c.slug}${citySlug ? `/${citySlug}` : ''}`,
-        })),
-    ];
-
-    // Fetch nearby cities
-    let nearbyCities: Array<{ name: string; slug: string; url: string }> = [];
-    if (geoId) {
-        const parentGeo = await prisma.geography.findFirst({
-            where: { id: geoId },
-            select: { parentId: true },
-        });
-        if (parentGeo?.parentId) {
-            const cities = await prisma.geography.findMany({
-                where: { level: 'city', isActive: true, parentId: parentGeo.parentId },
-                select: { name: true, slug: true },
-                take: 8,
-            });
-            nearbyCities = cities.map((c) => ({
-                name: c.name,
+        const conditions = [
+            ...pinnedConditions.map((p) => ({
+                name: p.condition.commonName,
+                slug: p.condition.slug,
+                isPinned: true,
+                url: `/${countrySlug}/${lang}/${p.condition.slug}${citySlug ? `/${citySlug}` : ''}`,
+            })),
+            ...additionalConditions.map((c) => ({
+                name: c.commonName,
                 slug: c.slug,
-                url: `/${countrySlug}/${lang}/${c.slug}`,
-            }));
-        }
-    }
+                isPinned: false,
+                url: `/${countrySlug}/${lang}/${c.slug}${citySlug ? `/${citySlug}` : ''}`,
+            })),
+        ];
+
+        const nearbyCities = citiesRows.map((c) => ({
+            name: c.name,
+            slug: c.slug,
+            url: `/${countrySlug}/${lang}/${c.slug}`,
+        }));
 
         return NextResponse.json(
             {
