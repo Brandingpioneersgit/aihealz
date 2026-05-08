@@ -68,26 +68,62 @@ Crawl-delay: 1
 # ── Sitemaps ──────────────────────────────────────
 Sitemap: ${SITE_URL}/sitemap.xml
 
-# ── AI training opt-out ───────────────────────────
+# ── AI / answer-engine bots ───────────────────────
+# aihealz is intentionally optimized for AEO/GEO — ChatGPT, Claude,
+# Perplexity, Google AI Overviews and Common Crawl downstreams should
+# all be able to read public content. Internal /api, /admin, /vault
+# paths above already remain off-limits.
 User-agent: GPTBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
 
 User-agent: CCBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
 
 User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
 
 User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /vault/
+
+# Bytespider scrapes aggressively without much downstream answer-engine
+# value; keep blocked to protect crawl budget.
+User-agent: Bytespider
 Disallow: /
 `;
 
