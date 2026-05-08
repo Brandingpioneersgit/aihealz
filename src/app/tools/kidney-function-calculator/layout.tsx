@@ -21,6 +21,26 @@ export const metadata: Metadata = {
     },
 };
 
+const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Kidney Function (eGFR) Calculator',
+    url: 'https://aihealz.com/tools/kidney-function-calculator',
+    description: 'Estimate your Glomerular Filtration Rate to assess kidney health and CKD stage.',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+    publisher: { '@type': 'Organization', name: 'aihealz', url: 'https://aihealz.com' },
+};
+
 export default function KidneyCalculatorLayout({ children }: { children: React.ReactNode }) {
-    return children;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+            {children}
+        </>
+    );
 }

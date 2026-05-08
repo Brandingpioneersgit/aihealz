@@ -21,6 +21,26 @@ export const metadata: Metadata = {
     },
 };
 
+const schema = {
+    '@context': 'https://schema.org',
+    '@type': ['WebApplication', 'MedicalRiskEstimator'],
+    name: 'Type 2 Diabetes Risk Calculator',
+    url: 'https://aihealz.com/tools/diabetes-risk-calculator',
+    description: 'Assess your risk of developing Type 2 diabetes based on age, BMI, family history and lifestyle.',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+    publisher: { '@type': 'Organization', name: 'aihealz', url: 'https://aihealz.com' },
+};
+
 export default function DiabetesRiskCalculatorLayout({ children }: { children: React.ReactNode }) {
-    return children;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+            {children}
+        </>
+    );
 }

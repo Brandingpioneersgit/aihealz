@@ -21,6 +21,26 @@ export const metadata: Metadata = {
     },
 };
 
+const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'BMR & Daily Calorie Calculator',
+    url: 'https://aihealz.com/tools/bmr-calculator',
+    description: 'Calculate your Basal Metabolic Rate and daily calorie needs.',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+    publisher: { '@type': 'Organization', name: 'aihealz', url: 'https://aihealz.com' },
+};
+
 export default function BMRCalculatorLayout({ children }: { children: React.ReactNode }) {
-    return children;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+            {children}
+        </>
+    );
 }

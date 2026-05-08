@@ -21,6 +21,26 @@ export const metadata: Metadata = {
     },
 };
 
+const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Daily Water Intake Calculator',
+    url: 'https://aihealz.com/tools/water-intake-calculator',
+    description: 'Calculate your optimal daily water intake based on weight, activity, and climate.',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+    publisher: { '@type': 'Organization', name: 'aihealz', url: 'https://aihealz.com' },
+};
+
 export default function WaterIntakeCalculatorLayout({ children }: { children: React.ReactNode }) {
-    return children;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+            {children}
+        </>
+    );
 }

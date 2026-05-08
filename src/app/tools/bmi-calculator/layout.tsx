@@ -21,6 +21,26 @@ export const metadata: Metadata = {
     },
 };
 
+const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'BMI Calculator',
+    url: 'https://aihealz.com/tools/bmi-calculator',
+    description: 'Free BMI calculator to check your body mass index instantly.',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+    publisher: { '@type': 'Organization', name: 'aihealz', url: 'https://aihealz.com' },
+};
+
 export default function BMICalculatorLayout({ children }: { children: React.ReactNode }) {
-    return children;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+            {children}
+        </>
+    );
 }
