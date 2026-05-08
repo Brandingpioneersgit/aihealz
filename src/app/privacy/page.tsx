@@ -10,12 +10,19 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | aihealz',
     description: 'Privacy Policy for aihealz. Learn how we collect, use, and protect your healthcare data securely.',
     keywords: 'privacy policy aihealz, medical data protection, healthcare privacy, GDPR compliance aihealz',
+    alternates: { canonical: '/privacy' },
     openGraph: {
+        type: 'website',
         title: 'Privacy Policy | aihealz',
         description: 'How we protect your medical data.',
         url: 'https://aihealz.com/privacy',
         siteName: 'aihealz',
-    }
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Privacy Policy | aihealz',
+        description: 'How we protect your medical data.',
+    },
 };
 
 const structuredData = [

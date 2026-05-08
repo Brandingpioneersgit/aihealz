@@ -5,6 +5,19 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Clinical Reference & Tools | AIHealz',
     description: 'Access comprehensive medical references, drug databases, clinical guidelines, health calculators, and diagnostic tools for healthcare professionals and patients.',
+    alternates: { canonical: '/clinical-reference' },
+    openGraph: {
+        type: 'website',
+        siteName: 'aihealz',
+        title: 'Clinical Reference & Tools | AIHealz',
+        description: 'Drug databases, guidelines, calculators, and diagnostic tools for clinicians and patients.',
+        url: 'https://aihealz.com/clinical-reference',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Clinical Reference & Tools | AIHealz',
+        description: 'Drug databases, guidelines, calculators, and diagnostic tools for clinicians and patients.',
+    },
 };
 
 const REFERENCE_CATEGORIES = [

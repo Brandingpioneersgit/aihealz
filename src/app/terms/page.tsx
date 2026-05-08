@@ -10,12 +10,19 @@ export const metadata: Metadata = {
     title: 'Terms of Service | aihealz',
     description: 'Terms of Service for using aihealz directories, AI tools, and medical concierge platform.',
     keywords: 'terms of service aihealz, terms and conditions, medical disclaimer, aihealz rules',
+    alternates: { canonical: '/terms' },
     openGraph: {
+        type: 'website',
         title: 'Terms of Service | aihealz',
         description: 'Read the Terms of Service for using aihealz.',
         url: 'https://aihealz.com/terms',
         siteName: 'aihealz',
-    }
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Terms of Service | aihealz',
+        description: 'Read the Terms of Service for using aihealz.',
+    },
 };
 
 const structuredData = [
