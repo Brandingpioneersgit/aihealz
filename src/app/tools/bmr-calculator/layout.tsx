@@ -5,9 +5,16 @@ export const metadata: Metadata = {
     description: 'Calculate your Basal Metabolic Rate (BMR) and daily calorie needs. Find calories for weight loss, maintenance, or muscle gain. Free BMR calculator.',
     keywords: 'BMR calculator, basal metabolic rate, calorie calculator, daily calories, TDEE calculator, calorie needs, weight loss calories, metabolism calculator',
     openGraph: {
+        type: 'website',
+        siteName: 'aihealz',
         title: 'BMR & Calorie Calculator - Find Your Daily Calorie Needs',
         description: 'Calculate your BMR and daily calorie requirements for weight loss, maintenance, or gain. Free online calculator.',
         url: 'https://aihealz.com/tools/bmr-calculator',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'BMR & Calorie Calculator - Find Your Daily Calorie Needs',
+        description: 'Calculate your BMR and daily calorie requirements for weight loss, maintenance, or gain. Free online calculator.',
     },
     alternates: {
         canonical: 'https://aihealz.com/tools/bmr-calculator',

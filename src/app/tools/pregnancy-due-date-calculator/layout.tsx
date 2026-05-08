@@ -5,9 +5,16 @@ export const metadata: Metadata = {
     description: 'Calculate your estimated due date and current pregnancy week. Track your pregnancy trimester with our free due date calculator based on your last menstrual period.',
     keywords: 'due date calculator, pregnancy calculator, estimated due date, EDD calculator, pregnancy week calculator, trimester calculator, LMP calculator, pregnancy tracker',
     openGraph: {
+        type: 'website',
+        siteName: 'aihealz',
         title: 'Pregnancy Due Date Calculator - When Is Your Baby Due?',
         description: 'Calculate your estimated due date, pregnancy week, and trimester. Free pregnancy calculator based on LMP.',
         url: 'https://aihealz.com/tools/pregnancy-due-date-calculator',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Pregnancy Due Date Calculator - When Is Your Baby Due?',
+        description: 'Calculate your estimated due date, pregnancy week, and trimester. Free pregnancy calculator based on LMP.',
     },
     alternates: {
         canonical: 'https://aihealz.com/tools/pregnancy-due-date-calculator',
