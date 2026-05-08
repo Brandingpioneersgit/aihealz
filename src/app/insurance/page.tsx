@@ -140,53 +140,63 @@ export default async function InsurancePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern-medical.svg')] opacity-10"></div>
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Health Insurance & TPAs
-            </h1>
-            <p className="text-xl text-indigo-200 mb-8">
-              Compare {stats._count}+ insurance providers by claim settlement ratio, network hospitals, and plans.
-              Find the right coverage for you and your family.
-            </p>
+      {/* Background gradients */}
+      <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
 
-            {/* Stats Row */}
-            <div className="flex flex-wrap gap-6 text-sm">
-              <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-2">
-                <span className="font-bold text-2xl">{stats._count}</span>
-                <span className="ml-2 text-indigo-200">Insurers</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-2">
-                <span className="font-bold text-2xl">{tpas.length}</span>
-                <span className="ml-2 text-indigo-200">TPAs</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-2">
-                <span className="font-bold text-2xl">{formatRatio(stats._avg.claimSettlementRatio as number | null)}</span>
-                <span className="ml-2 text-indigo-200">Avg CSR</span>
-              </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8 mt-6">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-white">Insurance</span>
+        </nav>
+
+        {/* Hero */}
+        <div className="max-w-3xl mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-900/30 border border-teal-500/30 text-teal-400 text-xs font-bold uppercase tracking-wider mb-6">
+            <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span></span>
+            Health Insurance & TPAs
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white leading-tight">
+            Compare <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Health Insurance</span> Plans
+          </h1>
+          <p className="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
+            Compare {stats._count}+ insurance providers by claim settlement ratio, network hospitals,
+            and plan options. Find the right coverage for you and your family.
+          </p>
+
+          {/* Stats Row */}
+          <div className="flex flex-wrap gap-3">
+            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3 backdrop-blur-md">
+              <span className="text-2xl font-bold text-white">{stats._count}</span>
+              <span className="ml-2 text-slate-500 text-sm">Insurers</span>
+            </div>
+            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3 backdrop-blur-md">
+              <span className="text-2xl font-bold text-white">{tpas.length}</span>
+              <span className="ml-2 text-slate-500 text-sm">TPAs</span>
+            </div>
+            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3 backdrop-blur-md">
+              <span className="text-2xl font-bold text-white">{formatRatio(stats._avg.claimSettlementRatio as number | null)}</span>
+              <span className="ml-2 text-slate-500 text-sm">Avg CSR</span>
             </div>
           </div>
         </div>
-      </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Quick Filters */}
-        <div className="mb-8">
-          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Browse by Type</h2>
+        <div className="mb-12">
+          <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">Browse by Type</h2>
           <div className="flex flex-wrap gap-2">
             <Link
               href="/insurance"
-              className="px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium hover:bg-indigo-200 transition-colors"
+              className="px-4 py-2 rounded-full bg-teal-500/20 text-teal-400 text-sm font-medium hover:bg-teal-500/30 transition-colors border border-teal-500/30"
             >
               All Providers
             </Link>
@@ -194,7 +204,7 @@ export default async function InsurancePage() {
               <Link
                 key={key}
                 href={`/insurance?type=${key}`}
-                className="px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-sm font-medium hover:bg-slate-200 transition-colors"
+                className="px-4 py-2 rounded-full bg-slate-900/50 text-slate-400 text-sm font-medium hover:text-white hover:bg-slate-800 transition-colors border border-white/5"
               >
                 {label}
               </Link>
@@ -203,14 +213,14 @@ export default async function InsurancePage() {
         </div>
 
         {/* Insurance Providers Grid */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Insurance Providers</h2>
+        <section className="mb-20">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Insurance Providers</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {insurers.map((insurer) => (
               <Link
                 key={insurer.id}
                 href={`/insurance/${insurer.slug}`}
-                className="bg-white rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 hover:border-teal-500/40 hover:bg-slate-900/60 transition-all duration-300 overflow-hidden group"
               >
                 <div className="p-6">
                   {/* Header */}
@@ -219,20 +229,20 @@ export default async function InsurancePage() {
                       <img
                         src={insurer.logo}
                         alt={insurer.name}
-                        className="w-16 h-16 object-contain rounded-lg bg-slate-50 p-2"
+                        className="w-16 h-16 object-contain rounded-lg bg-white/5 p-2 border border-white/5"
                       />
                     ) : (
-                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
-                        <span className="text-2xl font-bold text-indigo-600">{insurer.name.charAt(0)}</span>
+                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center border border-teal-500/20">
+                        <span className="text-2xl font-bold text-teal-400">{insurer.name.charAt(0)}</span>
                       </div>
                     )}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start gap-2">
-                        <h3 className="font-bold text-slate-900 group-hover:text-indigo-600 transition-colors truncate">
+                        <h3 className="font-bold text-white group-hover:text-teal-400 transition-colors truncate">
                           {insurer.name}
                         </h3>
                         {Number(insurer.claimSettlementRatio) >= 95 && (
-                          <span className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 text-xs font-semibold flex-shrink-0">
+                          <span className="px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-400 text-xs font-semibold flex-shrink-0 border border-amber-500/30">
                             Top Rated
                           </span>
                         )}
@@ -245,13 +255,13 @@ export default async function InsurancePage() {
 
                   {/* CSR Badge */}
                   {insurer.claimSettlementRatio && (
-                    <div className="flex items-center gap-2 mb-4 p-3 bg-green-50 rounded-lg border border-green-100">
-                      <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                        <span className="text-sm font-bold text-white">{Number(insurer.claimSettlementRatio).toFixed(0)}%</span>
+                    <div className="flex items-center gap-3 mb-4 p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                      <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                        <span className="text-sm font-bold text-slate-900">{Number(insurer.claimSettlementRatio).toFixed(0)}%</span>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-green-700">Claim Settlement Ratio</p>
-                        <p className="text-xs text-green-600">
+                        <p className="text-sm font-semibold text-emerald-400">Claim Settlement Ratio</p>
+                        <p className="text-xs text-emerald-500/80">
                           {Number(insurer.claimSettlementRatio) >= 95 ? 'Excellent' :
                            Number(insurer.claimSettlementRatio) >= 90 ? 'Very Good' :
                            Number(insurer.claimSettlementRatio) >= 80 ? 'Good' : 'Average'}
@@ -262,16 +272,16 @@ export default async function InsurancePage() {
 
                   {/* Quick Stats */}
                   <div className="grid grid-cols-3 gap-2 mb-4 text-center">
-                    <div className="p-2 bg-slate-50 rounded-lg">
-                      <p className="text-lg font-bold text-slate-900">{insurer._count.plans}</p>
+                    <div className="p-2 bg-white/5 rounded-lg border border-white/5">
+                      <p className="text-lg font-bold text-white">{insurer._count.plans}</p>
                       <p className="text-xs text-slate-500">Plans</p>
                     </div>
-                    <div className="p-2 bg-slate-50 rounded-lg">
-                      <p className="text-lg font-bold text-slate-900">{insurer._count.hospitalTies}</p>
+                    <div className="p-2 bg-white/5 rounded-lg border border-white/5">
+                      <p className="text-lg font-bold text-white">{insurer._count.hospitalTies}</p>
                       <p className="text-xs text-slate-500">Hospitals</p>
                     </div>
-                    <div className="p-2 bg-slate-50 rounded-lg">
-                      <p className="text-lg font-bold text-slate-900">{insurer._count.claims || 0}</p>
+                    <div className="p-2 bg-white/5 rounded-lg border border-white/5">
+                      <p className="text-lg font-bold text-white">{insurer._count.claims || 0}</p>
                       <p className="text-xs text-slate-500">Claims</p>
                     </div>
                   </div>
@@ -279,12 +289,12 @@ export default async function InsurancePage() {
                   {/* Sample Plans */}
                   {insurer.plans.length > 0 && (
                     <div className="space-y-2">
-                      <p className="text-xs font-semibold text-slate-500 uppercase">Popular Plans</p>
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Popular Plans</p>
                       {insurer.plans.map((plan, i) => (
                         <div key={i} className="flex items-center justify-between text-sm">
-                          <span className="text-slate-700 truncate">{plan.name}</span>
+                          <span className="text-slate-300 truncate">{plan.name}</span>
                           {plan.premiumStartsAt && (
-                            <span className="text-indigo-600 font-medium flex-shrink-0">
+                            <span className="text-teal-400 font-medium flex-shrink-0">
                               from {formatCurrency(Number(plan.premiumStartsAt))}/yr
                             </span>
                           )}
@@ -299,28 +309,28 @@ export default async function InsurancePage() {
         </section>
 
         {/* TPAs Section */}
-        <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Third Party Administrators (TPAs)</h2>
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-            <div className="p-4 bg-slate-50 border-b border-slate-200">
-              <p className="text-sm text-slate-600">
+        <section className="mb-20">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Third Party Administrators (TPAs)</h2>
+          <div className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden">
+            <div className="p-4 bg-white/5 border-b border-white/5">
+              <p className="text-sm text-slate-400">
                 TPAs handle claim processing and cashless hospitalization on behalf of insurance companies.
               </p>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
+                <thead className="bg-white/5 text-xs text-slate-500 uppercase tracking-widest">
                   <tr>
-                    <th scope="col" className="px-6 py-3 text-left">TPA Name</th>
-                    <th scope="col" className="px-6 py-3 text-center">Insurance Partners</th>
-                    <th scope="col" className="px-6 py-3 text-center">Network Hospitals</th>
-                    <th scope="col" className="px-6 py-3 text-left">Contact</th>
-                    <th scope="col" className="px-6 py-3 text-right">Actions</th>
+                    <th scope="col" className="px-6 py-3 text-left font-semibold">TPA Name</th>
+                    <th scope="col" className="px-6 py-3 text-center font-semibold">Insurance Partners</th>
+                    <th scope="col" className="px-6 py-3 text-center font-semibold">Network Hospitals</th>
+                    <th scope="col" className="px-6 py-3 text-left font-semibold">Contact</th>
+                    <th scope="col" className="px-6 py-3 text-right font-semibold">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100">
+                <tbody className="divide-y divide-white/5">
                   {tpas.map((tpa) => (
-                    <tr key={tpa.id} className="hover:bg-slate-50">
+                    <tr key={tpa.id} className="hover:bg-white/5 transition-colors">
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
                           {tpa.logo ? (
@@ -330,15 +340,15 @@ export default async function InsurancePage() {
                               width={40}
                               height={40}
                               unoptimized
-                              className="w-10 h-10 rounded object-contain bg-slate-50"
+                              className="w-10 h-10 rounded object-contain bg-white/5 border border-white/5"
                             />
                           ) : (
-                            <div className="w-10 h-10 rounded bg-purple-100 flex items-center justify-center">
-                              <span className="font-bold text-purple-600">{tpa.name.charAt(0)}</span>
+                            <div className="w-10 h-10 rounded bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
+                              <span className="font-bold text-purple-400">{tpa.name.charAt(0)}</span>
                             </div>
                           )}
                           <div>
-                            <p className="font-medium text-slate-900">{tpa.name}</p>
+                            <p className="font-medium text-white">{tpa.name}</p>
                             {tpa.licenseNumber && (
                               <p className="text-xs text-slate-500">License: {tpa.licenseNumber}</p>
                             )}
@@ -346,15 +356,15 @@ export default async function InsurancePage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center">
-                        <span className="text-lg font-semibold text-indigo-600">{tpa._count.insuranceLinks}</span>
+                        <span className="text-lg font-semibold text-teal-400">{tpa._count.insuranceLinks}</span>
                       </td>
                       <td className="px-6 py-4 text-center">
-                        <span className="text-lg font-semibold text-teal-600">{tpa._count.hospitalLinks}</span>
+                        <span className="text-lg font-semibold text-cyan-400">{tpa._count.hospitalLinks}</span>
                       </td>
                       <td className="px-6 py-4">
                         <div className="text-sm">
                           {tpa.customerCarePhone && (
-                            <p className="text-slate-600">{tpa.customerCarePhone}</p>
+                            <p className="text-slate-300">{tpa.customerCarePhone}</p>
                           )}
                           {tpa.email && (
                             <p className="text-slate-500 text-xs">{tpa.email}</p>
@@ -364,9 +374,9 @@ export default async function InsurancePage() {
                       <td className="px-6 py-4 text-right">
                         <Link
                           href={`/insurance/tpa/${tpa.slug}`}
-                          className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
+                          className="text-teal-400 hover:text-teal-300 text-sm font-medium"
                         >
-                          View Details
+                          View Details →
                         </Link>
                       </td>
                     </tr>
@@ -378,17 +388,17 @@ export default async function InsurancePage() {
         </section>
 
         {/* Plan Types Info */}
-        <section className="mt-16">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Types of Health Insurance Plans</h2>
+        <section>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Types of Health Insurance Plans</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {Object.entries(PLAN_TYPE_LABELS).map(([key, label]) => (
               <Link
                 key={key}
                 href={`/insurance/plans?type=${key}`}
-                className="p-4 bg-white rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all"
+                className="p-5 bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/5 hover:border-teal-500/40 hover:bg-slate-900/60 transition-all group"
               >
-                <h3 className="font-semibold text-slate-900 mb-2">{label}</h3>
-                <p className="text-sm text-slate-500">
+                <h3 className="font-semibold text-white mb-2 group-hover:text-teal-400 transition-colors">{label}</h3>
+                <p className="text-sm text-slate-400">
                   {key === 'individual' && 'Coverage for a single person'}
                   {key === 'family_floater' && 'Single sum insured for entire family'}
                   {key === 'senior_citizen' && 'Specialized plans for 60+ age group'}
