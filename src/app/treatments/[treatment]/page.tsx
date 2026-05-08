@@ -249,23 +249,25 @@ export default async function TreatmentPage({ params }: { params: Promise<{ trea
         .filter(t => t.specialty === treatmentData?.specialty && t.name !== treatmentData?.name)
         .slice(0, 6);
 
-    // Structured data
-    const treatmentSchema = {
+    // Structured data — pick @type by treatment kind so search engines
+    // see Drug for medications, MedicalTherapy for remedies, and
+    // MedicalProcedure for actual procedures.
+    const treatmentType = treatmentData?.type || 'medical';
+    const isDrug = ['drug', 'prescription', 'otc', 'injection'].includes(treatmentType);
+    const isTherapy = ['home_remedy', 'therapy', 'medical'].includes(treatmentType);
+    const schemaType = isDrug ? 'Drug' : isTherapy ? 'MedicalTherapy' : 'MedicalProcedure';
+
+    const treatmentSchema: Record<string, unknown> = {
         '@context': 'https://schema.org',
-        '@type': 'MedicalProcedure',
+        '@type': schemaType,
         name: displayName,
-        alternateName: medicalName !== displayName ? medicalName : undefined,
-        procedureType: treatmentData?.type || 'medical',
+        ...(medicalName !== displayName && { alternateName: medicalName }),
         description: treatmentData?.description || `${displayName} is a ${typeConfig.label.toLowerCase()} used in ${treatmentData?.specialty || 'General'} medicine.`,
-        ...(treatmentData?.mechanism && { howPerformed: treatmentData.mechanism }),
         ...(treatmentData?.indications && treatmentData.indications.length > 0 && {
             indication: treatmentData.indications.map(ind => ({
                 '@type': 'MedicalIndication',
                 name: ind,
             })),
-        }),
-        ...(treatmentData?.sideEffects && treatmentData.sideEffects.length > 0 && {
-            risks: treatmentData.sideEffects.join(', '),
         }),
         ...(treatmentData?.specialty && {
             relevantSpecialty: {
@@ -273,19 +275,49 @@ export default async function TreatmentPage({ params }: { params: Promise<{ trea
                 name: treatmentData.specialty,
             },
         }),
-        ...(treatmentData?.costs && {
-            offers: COUNTRIES.map(c => ({
-                '@type': 'Offer',
-                price: treatmentData.costs?.[c.key]?.range?.[0] || 0,
-                priceCurrency: treatmentData.costs?.[c.key]?.currency || 'USD',
-                priceValidUntil: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-                eligibleRegion: {
-                    '@type': 'Country',
-                    name: c.label,
-                },
-            })),
-        }),
     };
+
+    if (isDrug) {
+        if (treatmentData?.brandNames && treatmentData.brandNames.length > 0) {
+            treatmentSchema.nonProprietaryName = displayName;
+            treatmentSchema.proprietaryName = treatmentData.brandNames;
+        }
+        if (treatmentData?.requiresPrescription !== undefined) {
+            treatmentSchema.prescriptionStatus = treatmentData.requiresPrescription
+                ? 'PrescriptionOnly'
+                : 'OTC';
+        }
+        if (treatmentData?.mechanism) {
+            treatmentSchema.mechanismOfAction = treatmentData.mechanism;
+        }
+        if (treatmentData?.sideEffects && treatmentData.sideEffects.length > 0) {
+            treatmentSchema.adverseOutcome = treatmentData.sideEffects.map(s => ({
+                '@type': 'MedicalEntity',
+                name: s,
+            }));
+        }
+    } else {
+        if (schemaType === 'MedicalProcedure') {
+            treatmentSchema.procedureType = treatmentType;
+            if (treatmentData?.mechanism) treatmentSchema.howPerformed = treatmentData.mechanism;
+        }
+        if (treatmentData?.sideEffects && treatmentData.sideEffects.length > 0) {
+            treatmentSchema.risks = treatmentData.sideEffects.join(', ');
+        }
+    }
+
+    if (treatmentData?.costs) {
+        treatmentSchema.offers = COUNTRIES.map(c => ({
+            '@type': 'Offer',
+            price: treatmentData.costs?.[c.key]?.range?.[0] || 0,
+            priceCurrency: treatmentData.costs?.[c.key]?.currency || 'USD',
+            priceValidUntil: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+            eligibleRegion: {
+                '@type': 'Country',
+                name: c.label,
+            },
+        }));
+    }
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
