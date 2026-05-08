@@ -15,10 +15,18 @@ export const metadata: Metadata = {
   title: 'Health Insurance Providers - Compare Plans & TPAs | AIHealz',
   description: 'Compare health insurance providers, plans, TPAs, and claim settlement ratios. Find the best insurance for your needs with cashless hospital networks.',
   keywords: 'health insurance, insurance providers, TPA, claim settlement, cashless hospitals, medical insurance',
+  alternates: { canonical: '/insurance' },
   openGraph: {
+    type: 'website',
+    siteName: 'aihealz',
     title: 'Compare Health Insurance Plans | AIHealz',
     description: 'Compare insurance providers by claim settlement ratio, network hospitals, and plan options.',
     url: 'https://aihealz.com/insurance',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Compare Health Insurance Plans | AIHealz',
+    description: 'Compare insurance providers by claim settlement ratio, network hospitals, and plan options.',
   },
 };
 

@@ -14,10 +14,18 @@ export const metadata: Metadata = {
   title: 'Top Hospitals - Rankings, Reviews & Specialties | AIHealz',
   description: 'Find the best hospitals with patient reviews, specialties, bed availability, accreditations, and detailed information for both domestic and international patients.',
   keywords: 'best hospitals, top hospitals, hospital rankings, medical tourism hospitals, NABH hospitals, JCI accredited',
+  alternates: { canonical: '/hospitals' },
   openGraph: {
+    type: 'website',
+    siteName: 'aihealz',
     title: 'Find Top Hospitals Worldwide | AIHealz',
     description: 'Compare hospital rankings, specialties, accreditations, and patient reviews.',
     url: 'https://aihealz.com/hospitals',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Find Top Hospitals Worldwide | AIHealz',
+    description: 'Compare hospital rankings, specialties, accreditations, and patient reviews.',
   },
 };
 

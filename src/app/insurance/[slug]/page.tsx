@@ -17,9 +17,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!insurer) return { title: 'Insurance Provider Not Found' };
 
+  const description = insurer.metaDescription || `Compare ${insurer.name} health insurance plans, network hospitals, TPAs, and claim settlement ratio.`;
+  const title = insurer.metaTitle || `${insurer.name} - Health Insurance Plans, Network Hospitals & Claim Settlement | AIHealz`;
+
   return {
-    title: insurer.metaTitle || `${insurer.name} - Health Insurance Plans, Network Hospitals & Claim Settlement | AIHealz`,
-    description: insurer.metaDescription || `Compare ${insurer.name} health insurance plans, network hospitals, TPAs, and claim settlement ratio.`,
+    title,
+    description,
+    alternates: { canonical: `/insurance/${slug}` },
+    openGraph: {
+      type: 'website',
+      siteName: 'aihealz',
+      url: `https://aihealz.com/insurance/${slug}`,
+      title,
+      description,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   };
 }
 
@@ -63,6 +79,59 @@ export default async function InsuranceDetailPage({ params }: Props) {
 
   if (!insurer) notFound();
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aihealz.com';
+  const insurerUrl = `${siteUrl}/insurance/${insurer.slug}`;
+  const insuranceAgencySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'InsuranceAgency',
+    name: insurer.name,
+    url: insurerUrl,
+    ...(insurer.logo ? { logo: insurer.logo } : {}),
+    ...(insurer.website ? { sameAs: [insurer.website] } : {}),
+    ...(insurer.description
+      ? { description: insurer.description.replace(/<[^>]*>/g, '').slice(0, 500) }
+      : {}),
+    ...(insurer.headquartersCity
+      ? { address: { '@type': 'PostalAddress', addressLocality: insurer.headquartersCity } }
+      : {}),
+    ...(insurer.customerCarePhone || insurer.email
+      ? {
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'customer service',
+            ...(insurer.customerCarePhone ? { telephone: insurer.customerCarePhone } : {}),
+            ...(insurer.email ? { email: insurer.email } : {}),
+          },
+        }
+      : {}),
+    ...(insurer.establishedYear ? { foundingDate: String(insurer.establishedYear) } : {}),
+    ...(insurer._count.plans > 0
+      ? {
+          makesOffer: insurer.plans.slice(0, 10).map((plan) => ({
+            '@type': 'Offer',
+            name: plan.name,
+            url: `${siteUrl}/insurance/${insurer.slug}/plans/${plan.slug}`,
+            ...(plan.premiumStartsAt
+              ? {
+                  price: Number(plan.premiumStartsAt),
+                  priceCurrency: 'INR',
+                }
+              : {}),
+            category: plan.planType,
+          })),
+        }
+      : {}),
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Insurance', item: `${siteUrl}/insurance` },
+      { '@type': 'ListItem', position: 3, name: insurer.name, item: insurerUrl },
+    ],
+  };
+
   const formatCurrency = (amount: number | null | undefined) => {
     if (!amount) return '-';
     if (amount >= 10000000) return `${(amount / 10000000).toFixed(1)} Cr`;
@@ -77,6 +146,14 @@ export default async function InsuranceDetailPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(insuranceAgencySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-8">

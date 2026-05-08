@@ -27,11 +27,18 @@ export const metadata: Metadata = {
     title: 'Top Rated Doctors & Specialists | AIHealz',
     description: 'Find, compare, and connect with the highest-rated medical professionals across the world. Browse verified doctors by country, state, or city.',
     keywords: 'find doctors, top doctors, medical specialists, verified physicians, doctor directory, healthcare providers',
+    alternates: { canonical: '/doctors' },
     openGraph: {
+        type: 'website',
         title: 'Find Top Doctors & Specialists Worldwide',
         description: 'Browse verified doctors across 50+ countries. Compare ratings, specialties, and book consultations.',
         url: 'https://aihealz.com/doctors',
         siteName: 'AIHealz',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Find Top Doctors & Specialists Worldwide',
+        description: 'Browse verified doctors across 50+ countries. Compare ratings, specialties, and book consultations.',
     },
 };
 

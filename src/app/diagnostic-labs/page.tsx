@@ -10,10 +10,18 @@ export const metadata: Metadata = {
   title: 'Diagnostic Labs & Imaging Centers Near You | aihealz',
   description: 'Find certified diagnostic labs and imaging centers near you. Compare prices, read reviews, and book lab tests with home sample collection available.',
   keywords: 'diagnostic labs, pathology labs, imaging centers, MRI scan, CT scan, blood test, lab test near me, home collection',
+  alternates: { canonical: '/diagnostic-labs' },
   openGraph: {
+    type: 'website',
+    siteName: 'aihealz',
+    url: 'https://aihealz.com/diagnostic-labs',
     title: 'Diagnostic Labs & Imaging Centers | aihealz',
     description: 'Find certified diagnostic labs and imaging centers with best prices.',
-    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Diagnostic Labs & Imaging Centers | aihealz',
+    description: 'Find certified diagnostic labs and imaging centers with best prices.',
   },
 };
 
