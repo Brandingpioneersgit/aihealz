@@ -80,7 +80,8 @@
       "Bash(ping:*)",
       "Bash(__NEW_LINE_6822ef52c9cc6356__ echo \"Synced admin-auth.ts\")",
       "Read(//Users/taps/.claude/projects/-Users-taps-Desktop-AIHEALZ/memory/**)",
-      "Read(//Users/taps/.claude/projects/-Users-taps-Desktop-Aihealz/memory/**)"
+      "Read(//Users/taps/.claude/projects/-Users-taps-Desktop-Aihealz/memory/**)",
+      "Bash(awk '/^model __TRACKED_VAR__ /{flag=1} flag{print} /^}/ && flag{flag=0}' /Users/taps/Desktop/Aihealz/prisma/schema.prisma)"
     ]
   }
 }
