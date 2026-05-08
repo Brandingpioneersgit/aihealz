@@ -6,6 +6,7 @@ import Script from 'next/script';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { isRTL, getLanguageConfig, getUITranslations } from '@/lib/i18n';
+import { buildAlternateLanguages } from '@/lib/countries';
 
 // ─── Types ───────────────────────────────────────────────────
 
@@ -151,10 +152,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
         },
         alternates: {
             canonical: `https://aihealz.com/${country}/${lang}/treatments/${treatment}`,
-            languages: {
-                'en': `https://aihealz.com/${country}/en/treatments/${treatment}`,
-                [lang]: `https://aihealz.com/${country}/${lang}/treatments/${treatment}`,
-            },
+            languages: buildAlternateLanguages(country, `/treatments/${treatment}`),
         },
         robots: {
             index: true,

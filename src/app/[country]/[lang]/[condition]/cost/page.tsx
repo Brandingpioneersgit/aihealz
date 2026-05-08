@@ -2,7 +2,7 @@ import prisma from '@/lib/db';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { SLUG_TO_CODE, getCountryBySlug } from '@/lib/countries';
+import { SLUG_TO_CODE, getCountryBySlug, buildAlternateLanguages } from '@/lib/countries';
 
 // ── Locale map for currency formatting ──────────────────────
 const LOCALE_MAP: Record<string, string> = {
@@ -32,7 +32,10 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
     return {
         title: mc ? `Cost of ${mc.commonName} Treatment in ${countryName} | aihealz` : 'Treatment Costs | aihealz',
         description: mc ? `Compare treatment costs for ${mc.commonName} in ${countryName}. AI-estimated pricing from verified hospitals.` : 'Compare medical treatment costs.',
-        alternates: { canonical },
+        alternates: {
+            canonical,
+            languages: buildAlternateLanguages(country, `/${condition}/cost`),
+        },
     };
 }
 

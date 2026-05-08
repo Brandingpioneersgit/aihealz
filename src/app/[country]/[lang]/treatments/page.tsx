@@ -9,7 +9,7 @@ import TreatmentsExplorer, { type TreatmentType } from '@/components/ui/treatmen
 import { normalizeSpecialty, SPECIALTY_ICON_DATA } from '@/lib/normalize-specialty';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { isRTL, getLanguageConfig, getUITranslations } from '@/lib/i18n';
-import { COUNTRIES } from '@/lib/countries';
+import { COUNTRIES, buildAlternateLanguages } from '@/lib/countries';
 
 /**
  * Localized Treatments Directory Page
@@ -72,10 +72,7 @@ export async function generateMetadata({
         description,
         alternates: {
             canonical: `https://aihealz.com/${country}/${lang}/treatments`,
-            languages: {
-                'en': `https://aihealz.com/${country}/en/treatments`,
-                [lang]: `https://aihealz.com/${country}/${lang}/treatments`,
-            },
+            languages: buildAlternateLanguages(country, '/treatments'),
         },
         openGraph: {
             title,

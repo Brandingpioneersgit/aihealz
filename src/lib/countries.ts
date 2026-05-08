@@ -936,6 +936,28 @@ export function generateHreflangEntries(countrySlug: string, basePath: string): 
     }));
 }
 
+/**
+ * Build the alternates.languages record for Next.js Metadata.
+ * Returns absolute URLs keyed by language-region tag, plus an x-default
+ * pointing to the English variant (or the first supported language).
+ */
+export function buildAlternateLanguages(
+    countrySlug: string,
+    basePath: string,
+    siteUrl: string = process.env.NEXT_PUBLIC_SITE_URL || 'https://aihealz.com'
+): Record<string, string> {
+    const country = COUNTRIES.find(c => c.slug === countrySlug);
+    if (!country) return {};
+
+    const out: Record<string, string> = {};
+    for (const langCode of country.languages) {
+        out[`${langCode}-${country.code}`] = `${siteUrl}/${countrySlug}/${langCode}${basePath}`;
+    }
+    const defaultLang = country.languages.includes('en') ? 'en' : country.languages[0];
+    out['x-default'] = `${siteUrl}/${countrySlug}/${defaultLang}${basePath}`;
+    return out;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // HELPER FUNCTIONS
 // ═══════════════════════════════════════════════════════════════════════════════
