@@ -35,15 +35,26 @@ export default function ContactForm() {
                 body: JSON.stringify(formData),
             });
 
-            if (!response.ok) {
-                throw new Error('Failed to send message');
+            // Read the body once and validate shape so we can surface real
+            // server errors (rate limits, validation) instead of a generic
+            // "failed to send" no matter what came back.
+            const payload: { success?: boolean; error?: string; id?: number } | null =
+                await response.json().catch(() => null);
+
+            if (!response.ok || !payload?.success) {
+                const remote = payload?.error?.trim();
+                throw new Error(remote || `Failed to send message (status ${response.status})`);
             }
 
             setStatus('success');
             setFormData({ name: '', email: '', message: '' });
-        } catch {
+        } catch (err) {
             setStatus('error');
-            setErrorMessage('Failed to send message. Please try again or email us directly.');
+            setErrorMessage(
+                err instanceof Error && err.message
+                    ? err.message
+                    : 'Failed to send message. Please try again or email us directly.'
+            );
         }
     };
 
