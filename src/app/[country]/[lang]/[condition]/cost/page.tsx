@@ -58,8 +58,57 @@ export default async function CostPage({ params }: { params: Promise<{ country: 
         where: { conditionSlug: condition, countryCode: countryCode }
     });
 
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aihealz.com';
+    const pageUrl = `${siteUrl}/${country}/${lang}/${condition}/cost`;
+    const serviceSchema = costData ? {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: `${costData.treatmentName || medicalCondition.commonName} treatment`,
+        serviceType: 'MedicalProcedure',
+        provider: { '@type': 'Organization', name: 'aihealz', url: siteUrl },
+        ...(countryConfig && {
+            areaServed: { '@type': 'Country', name: countryConfig.name },
+        }),
+        about: {
+            '@type': 'MedicalCondition',
+            name: medicalCondition.commonName,
+        },
+        offers: {
+            '@type': 'AggregateOffer',
+            priceCurrency: costData.currency,
+            lowPrice: Number(costData.minCost),
+            highPrice: Number(costData.maxCost),
+            priceSpecification: {
+                '@type': 'PriceSpecification',
+                price: Number(costData.avgCost),
+                priceCurrency: costData.currency,
+                valueAddedTaxIncluded: false,
+            },
+            url: pageUrl,
+        },
+    } : null;
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: medicalCondition.commonName, item: `${siteUrl}/${country}/${lang}/${condition}` },
+            { '@type': 'ListItem', position: 3, name: 'Cost Analysis', item: pageUrl },
+        ],
+    };
+
     return (
         <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
+            {serviceSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+                />
+            )}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             {/* Background Effects */}
             <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
