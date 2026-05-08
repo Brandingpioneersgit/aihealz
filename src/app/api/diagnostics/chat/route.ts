@@ -102,12 +102,19 @@ Lab/Provider Information:
     const searchTerms = message.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
 
     if (searchTerms.length > 0 && !testSlug) {
+      // Search across every meaningful term, not just the first one — using
+      // searchTerms[0] for name/shortName but hasSome for aliases/keywords
+      // gave inconsistent recall depending on word order in the user's
+      // message ("blood test sugar" worked but "sugar blood test" missed).
+      const nameOrConditions = searchTerms.flatMap((term: string) => [
+        { name: { contains: term, mode: 'insensitive' as const } },
+        { shortName: { contains: term, mode: 'insensitive' as const } },
+      ]);
       const relevantTests = await prisma.diagnosticTest.findMany({
         where: {
           isActive: true,
           OR: [
-            { name: { contains: searchTerms[0], mode: 'insensitive' } },
-            { shortName: { contains: searchTerms[0], mode: 'insensitive' } },
+            ...nameOrConditions,
             { aliases: { hasSome: searchTerms } },
             { keywords: { hasSome: searchTerms } },
           ],

@@ -46,11 +46,21 @@ function HealzAIContent() {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
 
+    // Only fire the initial AI message once per ?condition= value. The ref
+    // makes the "fire-once" intent explicit so we don't need an exhaustive-
+    // deps eslint-disable to suppress sendMessage / messages: even when the
+    // effect re-runs because of an unrelated render, the guard is the
+    // single source of truth.
+    const seededFor = useRef<string | null>(null);
     useEffect(() => {
-        if (conditionParam && messages.length === 0) {
-            const initial = `I want to know about ${conditionParam.replace(/-/g, ' ')}`;
-            sendMessage(initial);
-        }
+        if (!conditionParam) return;
+        if (seededFor.current === conditionParam) return;
+        seededFor.current = conditionParam;
+        const initial = `I want to know about ${conditionParam.replace(/-/g, ' ')}`;
+        void sendMessage(initial);
+        // sendMessage closes over stable setters + the latest isLoading,
+        // which we already gate inside the function. Re-running on its
+        // identity change would be a no-op thanks to the ref guard above.
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [conditionParam]);
 
