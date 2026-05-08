@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Metadata } from 'next';
 import { getGeoContext } from '@/lib/geo-context';
 import AIKioskFinder from '@/components/diagnostic/AIKioskFinder';
@@ -90,8 +91,60 @@ export default async function DiagnosticLabsPage() {
     _count: true,
   });
 
+  const labsSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://aihealz.com/diagnostic-labs#page',
+        url: 'https://aihealz.com/diagnostic-labs',
+        name: 'Diagnostic Labs & Imaging Centers',
+        description:
+          'Certified diagnostic labs and imaging centers with prices, accreditations, and home sample collection.',
+        isPartOf: { '@id': 'https://aihealz.com/#website' },
+      },
+      {
+        '@type': 'ItemList',
+        '@id': 'https://aihealz.com/diagnostic-labs#labs',
+        name: 'Diagnostic providers',
+        numberOfItems: allProviders.length,
+        itemListElement: allProviders.slice(0, 30).map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          item: {
+            '@type': 'MedicalBusiness',
+            name: p.name,
+            url: `https://aihealz.com/diagnostic-labs/${p.slug}`,
+            ...(p.geography?.name ? { areaServed: p.geography.name } : {}),
+            ...(p.rating
+              ? {
+                  aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: p.rating,
+                    reviewCount: p.reviewCount || 1,
+                  },
+                }
+              : {}),
+          },
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aihealz.com' },
+          { '@type': 'ListItem', position: 2, name: 'Diagnostic Labs', item: 'https://aihealz.com/diagnostic-labs' },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
+      <Script
+        id="diagnostic-labs-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(labsSchema) }}
+      />
       {/* Background Effects */}
       <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-emerald-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />

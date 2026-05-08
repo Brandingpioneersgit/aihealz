@@ -1,7 +1,43 @@
 import { Metadata } from 'next';
+import Script from 'next/script';
 import Link from 'next/link';
 import SymptomChecker from '@/components/ui/symptom-checker';
 import { FindDoctorCTA, BookTestCTA, MedicalTravelCTA } from '@/components/ui/cta-sections';
+
+const symptomsSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'MedicalWebPage',
+            '@id': 'https://aihealz.com/symptoms#page',
+            url: 'https://aihealz.com/symptoms',
+            name: 'AI Diagnosis & Care — Analyze Your Symptoms',
+            description:
+                'Describe your symptoms and our clinical-grade AI will analyze possible conditions, recommend diagnostic tests, and suggest OTC and home-care options.',
+            inLanguage: 'en',
+            audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+            specialty: { '@type': 'MedicalSpecialty', name: 'PrimaryCare' },
+            isPartOf: { '@id': 'https://aihealz.com/#website' },
+            lastReviewed: new Date().toISOString().slice(0, 10),
+        },
+        {
+            '@type': 'WebApplication',
+            name: 'AIHealz Symptom Checker',
+            url: 'https://aihealz.com/symptoms',
+            applicationCategory: 'HealthApplication',
+            operatingSystem: 'Web',
+            offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+            publisher: { '@id': 'https://aihealz.com/#organization' },
+        },
+        {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aihealz.com' },
+                { '@type': 'ListItem', position: 2, name: 'Symptom Checker', item: 'https://aihealz.com/symptoms' },
+            ],
+        },
+    ],
+};
 
 export const metadata: Metadata = {
     title: 'AI Diagnosis & Care — Analyze Your Symptoms',
@@ -18,6 +54,11 @@ export const metadata: Metadata = {
 export default function SymptomsPage() {
     return (
         <main className="min-h-screen bg-[#050B14] text-slate-50 pt-24 pb-16 relative overflow-hidden">
+            <Script
+                id="symptoms-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(symptomsSchema) }}
+            />
             {/* Ambient Lighting Background */}
             <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-primary-900/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none" />

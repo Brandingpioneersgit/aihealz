@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'AI Remedies & OTC Guides | aihealz',
     description: 'Evidence-based home remedies, OTC guidelines, and natural treatments for common health conditions, powered by AI analysis.',
+    alternates: { canonical: '/remedies' },
 };
 
 const OTC_GUIDES = [
@@ -96,9 +98,59 @@ const REMEDY_CATEGORIES = [
     }
 ];
 
+const remediesSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'MedicalWebPage',
+            '@id': 'https://aihealz.com/remedies#page',
+            url: 'https://aihealz.com/remedies',
+            name: 'AI Remedies & OTC Guides',
+            description:
+                'Evidence-based home remedies, OTC guidelines, and natural treatments for common health conditions.',
+            inLanguage: 'en',
+            audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+            isPartOf: { '@id': 'https://aihealz.com/#website' },
+        },
+        ...OTC_GUIDES.map((g, i) => ({
+            '@type': 'HowTo',
+            '@id': `https://aihealz.com/remedies#howto-${i}`,
+            name: `${g.condition} — home care & OTC steps`,
+            description: g.whenToSeeDoctor,
+            totalTime: 'PT15M',
+            step: [
+                ...g.tips.map((tip, idx) => ({
+                    '@type': 'HowToStep',
+                    position: idx + 1,
+                    name: `Self-care step ${idx + 1}`,
+                    text: tip,
+                })),
+                ...g.medicines.map((m, idx) => ({
+                    '@type': 'HowToStep',
+                    position: g.tips.length + idx + 1,
+                    name: `OTC option: ${m.name}`,
+                    text: `${m.dosage} — ${m.warning}`,
+                })),
+            ],
+        })),
+        {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aihealz.com' },
+                { '@type': 'ListItem', position: 2, name: 'Remedies', item: 'https://aihealz.com/remedies' },
+            ],
+        },
+    ],
+};
+
 export default function RemediesPage() {
     return (
         <main className="min-h-screen bg-slate-50 text-slate-900 pt-24 pb-16">
+            <Script
+                id="remedies-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(remediesSchema) }}
+            />
             <div className="max-w-7xl mx-auto px-6 mt-10">
 
                 {/* Hero Section */}
