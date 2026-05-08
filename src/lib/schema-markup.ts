@@ -183,10 +183,19 @@ export function generateBreadcrumbSchema(
 // ─── FAQ Schema (for voice assistants) ─────────────────────
 
 export function generateFAQSchema(faqs: { question: string; answer: string }[]): object {
+    // Dedupe by normalized question — emitting the same Q across many URLs
+    // gets flagged by Google as boilerplate / spammy FAQ markup.
+    const seen = new Set<string>();
+    const unique = faqs.filter(faq => {
+        const key = faq.question.trim().toLowerCase().replace(/\s+/g, ' ');
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+    });
     return {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: faqs.map(faq => ({
+        mainEntity: unique.map(faq => ({
             '@type': 'Question',
             name: faq.question,
             acceptedAnswer: {
