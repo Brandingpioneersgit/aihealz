@@ -1,13 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-function getStripe() {
+let _stripe: Stripe | null = null;
+function getStripe(): Stripe {
     if (!process.env.STRIPE_SECRET_KEY) {
         throw new Error('STRIPE_SECRET_KEY is not set');
     }
-    return new Stripe(process.env.STRIPE_SECRET_KEY, {
-        apiVersion: '2023-10-16' as Stripe.LatestApiVersion,
-    });
+    if (!_stripe) {
+        _stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+            apiVersion: '2023-10-16' as Stripe.LatestApiVersion,
+        });
+    }
+    return _stripe;
 }
 
 export async function GET(req: NextRequest) {

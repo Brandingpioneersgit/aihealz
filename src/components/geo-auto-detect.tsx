@@ -166,10 +166,12 @@ export default function GeoAutoDetect() {
                     if (data.success && data.countrySlug) {
                         detectedCountrySlug = data.countrySlug;
                         detectedCity = data.city;
-                        console.log('IP geolocation detected:', data.countrySlug, data.city);
                     }
-                } catch (error) {
-                    console.log('IP geolocation API failed, trying fallbacks');
+                } catch {
+                    // Network or parse error — silently fall through to
+                    // timezone / browser geolocation. Logging here would
+                    // fire on every page load when the user is offline or
+                    // an ad blocker rewrites the request.
                 }
 
                 // FALLBACK 1: Timezone detection (instant, no permission needed)
@@ -182,7 +184,6 @@ export default function GeoAutoDetect() {
                         // Find slug from country name
                         detectedCountrySlug = Object.entries(COUNTRY_DISPLAY)
                             .find(([, name]) => name === tzRegion.country)?.[0] || null;
-                        console.log('Timezone detection:', detectedCountrySlug, detectedCity);
                     }
                 }
 
@@ -207,8 +208,9 @@ export default function GeoAutoDetect() {
                             detectedCity = geoData.city;
                         }
                     } catch {
-                        // Geolocation failed or denied
-                        console.log('Browser geolocation unavailable');
+                        // Browser geolocation denied or failed; the
+                        // remaining fallbacks (default country / locale)
+                        // continue silently.
                     }
                 }
 

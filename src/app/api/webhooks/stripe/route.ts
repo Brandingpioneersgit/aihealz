@@ -2,10 +2,17 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import prisma from '@/lib/db';
 
-function getStripe() {
-    return new Stripe(process.env.STRIPE_SECRET_KEY || '', {
-        apiVersion: '2026-02-25.clover',
-    });
+// Memoize the Stripe client at module scope. Constructing it per-request
+// re-allocates the keepalive HTTP agent and the underlying TLS pool, which
+// shows up as added latency on bursty webhook traffic.
+let _stripe: Stripe | null = null;
+function getStripe(): Stripe {
+    if (!_stripe) {
+        _stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+            apiVersion: '2026-02-25.clover',
+        });
+    }
+    return _stripe;
 }
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || '';
