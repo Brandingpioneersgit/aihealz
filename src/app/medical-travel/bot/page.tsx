@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -27,6 +27,18 @@ export default function MedicalTravelBot() {
 
     const handleNext = () => setStep(s => Math.min(s + 1, 4));
     const handlePrev = () => setStep(s => Math.max(s - 1, 1));
+
+    // Ref ID + date are computed once on mount (client only) so they never
+    // generate a server/client hydration mismatch and stay stable across
+    // the print preview.
+    const [refId, setRefId] = useState<string>('');
+    const [todayLabel, setTodayLabel] = useState<string>('');
+    useEffect(() => {
+        const now = new Date();
+        const random = Math.floor(Math.random() * 100000).toString().padStart(5, '0');
+        setRefId(`${random}-${now.getFullYear()}`);
+        setTodayLabel(now.toLocaleDateString());
+    }, []);
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -185,8 +197,8 @@ export default function MedicalTravelBot() {
                             </div>
                             <div className="text-right">
                                 <h2 className="text-xl font-bold text-surface-900">Official Estimate Sheet</h2>
-                                <p className="text-surface-500 text-sm mt-1">Ref ID: {(Math.random() * 100000).toFixed(0)}-{new Date().getFullYear()}</p>
-                                <p className="text-surface-500 text-sm mt-0.5">Date: {new Date().toLocaleDateString()}</p>
+                                <p className="text-surface-500 text-sm mt-1">Ref ID: {refId || '—'}</p>
+                                <p className="text-surface-500 text-sm mt-0.5">Date: {todayLabel || '—'}</p>
                             </div>
                         </div>
 
