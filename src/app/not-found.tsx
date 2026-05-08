@@ -1,4 +1,12 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Page not found (404)',
+    description:
+        "We couldn't find that page. Browse conditions, doctors, or use Healz AI to get back on track.",
+    robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
     return (

@@ -24,12 +24,15 @@ function formatCost(amount: number | { toNumber?: () => number }, currency: stri
 
 // ── Dynamic SEO Metadata ────────────────────────────────────
 export async function generateMetadata({ params }: { params: Promise<{ country: string; lang: string; condition: string }> }): Promise<Metadata> {
-    const { country, condition } = await params;
+    const { country, lang, condition } = await params;
     const mc = await prisma.medicalCondition.findUnique({ where: { slug: condition } });
-    const countryName = country.toUpperCase();
+    const countryName = getCountryBySlug(country)?.name
+        ?? country.charAt(0).toUpperCase() + country.slice(1);
+    const canonical = `/${country}/${lang}/${condition}/cost`;
     return {
         title: mc ? `Cost of ${mc.commonName} Treatment in ${countryName} | aihealz` : 'Treatment Costs | aihealz',
         description: mc ? `Compare treatment costs for ${mc.commonName} in ${countryName}. AI-estimated pricing from verified hospitals.` : 'Compare medical treatment costs.',
+        alternates: { canonical },
     };
 }
 

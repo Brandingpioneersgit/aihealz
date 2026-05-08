@@ -429,7 +429,7 @@ export default async function ConditionPage({ params }: PageProps) {
 
                 {/* ── Breadcrumbs ── */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2 relative z-10">
-                    <nav className="text-sm text-slate-500 flex flex-wrap gap-1.5 items-center">
+                    <nav aria-label="Breadcrumb" className="text-sm text-slate-500 flex flex-wrap gap-1.5 items-center">
                         <Link href="/" className="hover:text-teal-400 transition-colors">{t['cond.home'] || 'Home'}</Link>
                         <svg className="w-3.5 h-3.5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                         <Link href={`/${country}/${lang}`} className="hover:text-teal-400 transition-colors">{t['nav.conditions'] || 'Conditions'}</Link>
