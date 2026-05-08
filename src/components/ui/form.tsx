@@ -1,6 +1,6 @@
 'use client';
 
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 
 // ============================================================================
 // INPUT COMPONENT
@@ -21,7 +21,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         { label, error, hint, leftIcon, rightIcon, leftAddon, rightAddon, className = '', id, ...props },
         ref
     ) => {
-        const inputId = id || props.name || `input-${Math.random().toString(36).slice(2)}`;
+        const reactId = useId();
+        const inputId = id || props.name || `input-${reactId}`;
 
         return (
             <div className="w-full">
@@ -96,7 +97,8 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     ({ label, error, hint, showCount, className = '', id, maxLength, ...props }, ref) => {
-        const textareaId = id || props.name || `textarea-${Math.random().toString(36).slice(2)}`;
+        const reactId = useId();
+        const textareaId = id || props.name || `textarea-${reactId}`;
         const [charCount, setCharCount] = React.useState(0);
 
         return (
@@ -241,7 +243,8 @@ interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     ({ label, description, error, className = '', id, ...props }, ref) => {
-        const checkboxId = id || props.name || `checkbox-${Math.random().toString(36).slice(2)}`;
+        const reactId = useId();
+        const checkboxId = id || props.name || `checkbox-${reactId}`;
 
         return (
             <div className={`flex items-start ${className}`}>

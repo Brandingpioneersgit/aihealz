@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useId as useReactId, useRef, useState } from 'react';
 
 /**
  * Accessibility Utilities
@@ -256,8 +256,8 @@ export function useReducedMotion(): boolean {
  * Generate unique IDs for ARIA relationships
  */
 export function useId(prefix = 'aria'): string {
-    const [id] = useState(() => `${prefix}-${Math.random().toString(36).slice(2, 9)}`);
-    return id;
+    const reactId = useReactId();
+    return `${prefix}-${reactId}`;
 }
 
 /**

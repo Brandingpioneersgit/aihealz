@@ -86,9 +86,11 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // Generate unique slug
+        // Generate unique slug — use crypto-random suffix so two providers
+        // submitting at the same instant don't collide on Math.random()'s
+        // weak entropy.
         const baseSlug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        const randomStr = Math.random().toString(36).substring(2, 8);
+        const randomStr = crypto.randomBytes(4).toString('hex');
         const slug = `${baseSlug}-${randomStr}`;
 
         // Try to find matching geography
