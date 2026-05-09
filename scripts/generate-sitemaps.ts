@@ -481,17 +481,17 @@ async function generateSitemapEntries() {
     }
     console.log(`  ✓ tests: ${tests.length} canonical + per-city variants`);
 
-    // Test categories
+    // Test categories — DiagnosticCategory has no updatedAt column; use createdAt.
     const categories = await prisma.diagnosticCategory
-        .findMany({ select: { slug: true, updatedAt: true } })
-        .catch(() => [] as Array<{ slug: string; updatedAt: Date }>);
+        .findMany({ select: { slug: true, createdAt: true } })
+        .catch(() => [] as Array<{ slug: string; createdAt: Date }>);
     for (const c of categories) {
         await sink.push({
             urlPath: `/tests/category/${c.slug}`,
             changefreq: 'weekly',
             priority: 0.6,
             languageCode: 'en',
-            lastModified: c.updatedAt,
+            lastModified: c.createdAt,
         }, 'test_category');
     }
     if (categories.length) console.log(`  ✓ test-categories: ${categories.length}`);
