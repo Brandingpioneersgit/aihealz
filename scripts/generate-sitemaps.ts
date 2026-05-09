@@ -1,5 +1,5 @@
 /**
- * Sitemap Generator Script
+ * Sitemap Generator Script — streaming version
  *
  * Generates sitemap entries for:
  *  - Curated static pages (homepage, tools, marketing, AEO/GEO surfaces)
@@ -7,8 +7,16 @@
  *  - Cost variants per condition × country
  *  - Treatments (en + per-country) from public/data/treatments.json
  *  - Doctor / hospital / diagnostic-lab / diagnostic-test / insurance slugs
+ *  - Per-city test variants
+ *  - Doctors-by-location + doctors-by-specialty pages
+ *  - Conditions-by-specialty pages
  *
- * Run via: npx tsx scripts/generate-sitemaps.ts
+ * The previous buffered version OOMed at ~4M URLs because it held the entire
+ * entry list in memory before inserting. This streaming version flushes every
+ * BATCH_SIZE rows directly to the DB and keeps a single dedup Set of URL paths
+ * (~50 bytes per string × ~5M strings = ~250 MB — well within 8 GB heap).
+ *
+ * Run via: NODE_OPTIONS="--max-old-space-size=4096" node --env-file=.env --import tsx scripts/generate-sitemaps.ts
  * Schedule as a cron job: run daily or after content updates.
  */
 
@@ -17,6 +25,7 @@ import path from 'path';
 import prisma from '../src/lib/db';
 
 const URLS_PER_SITEMAP = parseInt(process.env.SITEMAP_URLS_PER_FILE || '45000', 10);
+const BATCH_SIZE = parseInt(process.env.SITEMAP_BATCH_SIZE || '1000', 10);
 
 interface GeoRecord {
     id: number;
@@ -25,6 +34,17 @@ interface GeoRecord {
     parentId: number | null;
     supportedLanguages: string[];
 }
+
+type EntryRow = {
+    urlPath: string;
+    sitemapIndex: number;
+    changefreq: string;
+    priority: number;
+    languageCode: string | null;
+    conditionId: number | null;
+    geographyId: number | null;
+    lastModified: Date;
+};
 
 type EntryInput = {
     urlPath: string;
@@ -90,28 +110,100 @@ const STATIC_PAGES: Array<Pick<EntryInput, 'urlPath' | 'changefreq' | 'priority'
     { urlPath: '/tools/vaccinations', changefreq: 'monthly', priority: 0.6 },
 ];
 
+/**
+ * Streaming entry sink. Buffers up to BATCH_SIZE rows in memory, then flushes
+ * to the DB and clears the buffer. Tracks a global dedup Set so the same
+ * urlPath isn't inserted twice across the run, and increments a global counter
+ * to assign sitemapIndex without re-shuffling later.
+ */
+class EntrySink {
+    private buffer: EntryRow[] = [];
+    private seen = new Set<string>();
+    private accepted = 0;
+    private inserted = 0;
+    private categoryCounts: Record<string, number> = {};
+
+    async push(input: EntryInput, category: string) {
+        if (this.seen.has(input.urlPath)) return;
+        this.seen.add(input.urlPath);
+
+        const idx = Math.floor(this.accepted / URLS_PER_SITEMAP);
+        this.accepted += 1;
+        this.categoryCounts[category] = (this.categoryCounts[category] || 0) + 1;
+
+        this.buffer.push({
+            urlPath: input.urlPath,
+            sitemapIndex: idx,
+            changefreq: input.changefreq,
+            priority: input.priority,
+            languageCode: input.languageCode,
+            conditionId: input.conditionId ?? null,
+            geographyId: input.geographyId ?? null,
+            lastModified: input.lastModified ?? new Date(),
+        });
+
+        if (this.buffer.length >= BATCH_SIZE) {
+            await this.flush();
+        }
+    }
+
+    async flush() {
+        if (this.buffer.length === 0) return;
+        const batch = this.buffer;
+        this.buffer = [];
+        await prisma.sitemapEntry.createMany({ data: batch, skipDuplicates: true });
+        this.inserted += batch.length;
+        if (this.inserted % 50_000 === 0 || this.inserted - batch.length === 0) {
+            process.stdout.write(`\r  inserted ${this.inserted.toLocaleString()} entries`);
+        }
+    }
+
+    stats() {
+        return {
+            accepted: this.accepted,
+            inserted: this.inserted,
+            chunks: Math.ceil(this.accepted / URLS_PER_SITEMAP),
+            categories: this.categoryCounts,
+        };
+    }
+}
+
 async function generateSitemapEntries() {
-    console.log('🗺️  Starting sitemap generation...');
+    console.log('🗺️  Starting sitemap generation (streaming)...');
+    console.time('total');
 
     await prisma.sitemapEntry.deleteMany();
+    console.log('  ✓ wiped sitemap_entries table');
+
+    const sink = new EntrySink();
 
     // ── 1. Static curated pages ─────────────────────────────────
-    const entries: EntryInput[] = STATIC_PAGES.map((p) => ({
-        ...p,
-        languageCode: 'en',
-        lastModified: new Date(),
-    }));
+    for (const p of STATIC_PAGES) {
+        await sink.push({ ...p, languageCode: 'en', lastModified: new Date() }, 'static');
+    }
+    console.log(`  ✓ static pages: ${STATIC_PAGES.length}`);
 
-    // ── 2. Condition × geography × language fan-out ────────────
-    const conditions = await prisma.medicalCondition.findMany({
+    // ── shared lookups ──────────────────────────────────────────
+    // Active language codes — geographies.supportedLanguages may reference
+    // codes that aren't seeded into the languages table (e.g. fil, he, sv,
+    // ne, si, am, af, kha, kok, lus, mni, nag). Filter those out so the FK
+    // constraint on sitemap_entries.language_code never fires.
+    const activeLanguages = await prisma.language.findMany({
         where: { isActive: true },
-        select: { id: true, slug: true, updatedAt: true },
+        select: { code: true },
     });
+    const validLangCodes = new Set(activeLanguages.map((l) => l.code));
+    console.log(`  ✓ active languages: ${validLangCodes.size}`);
 
-    const geographies: GeoRecord[] = await prisma.geography.findMany({
+    const rawGeographies: GeoRecord[] = await prisma.geography.findMany({
         where: { isActive: true },
         select: { id: true, slug: true, level: true, parentId: true, supportedLanguages: true },
     });
+    // Drop any unsupported language codes from each geography's list.
+    const geographies: GeoRecord[] = rawGeographies.map((g) => ({
+        ...g,
+        supportedLanguages: g.supportedLanguages.filter((l) => validLangCodes.has(l)),
+    }));
     const geoMap = new Map<number, GeoRecord>(geographies.map((g) => [g.id, g]));
 
     function buildGeoUrlPath(geoId: number): string {
@@ -125,55 +217,93 @@ async function generateSitemapEntries() {
     }
 
     const countryGeos = geographies.filter((g) => g.level === 'country');
+    const cityGeos = geographies.filter((g) => g.level === 'city');
+    console.log(`  ✓ geographies: ${geographies.length} (${countryGeos.length} countries / ${cityGeos.length} cities)`);
 
-    for (const condition of conditions) {
-        for (const geo of geographies) {
-            for (const lang of geo.supportedLanguages) {
-                const geoPath = buildGeoUrlPath(geo.id);
-                const parts = geoPath.split('/');
-                const country = parts[0];
-                const subPath = parts.slice(1).join('/');
-                const urlPath = `/${country}/${lang}/${condition.slug}${subPath ? '/' + subPath : ''}`;
+    // ── 2. Condition × COUNTRY × language fan-out ─────────────
+    // Country-level only — fanning out 72k conditions × ~1k geographies ×
+    // multiple languages explodes to 150M+ thin URLs that Google would
+    // rightly downrank. Sub-country geography (state/city/locality) is
+    // covered by /doctors, /tests/[slug]/[city], /hospitals etc., not by
+    // multiplying every condition page across every city.
+    //
+    // Stream conditions in pages so we don't pull all 70k+ rows at once.
+    const CONDITION_PAGE = 5000;
+    let condCursor: number | undefined = undefined;
+    let condProcessed = 0;
+    while (true) {
+        const conditions: { id: number; slug: string; updatedAt: Date }[] =
+            await prisma.medicalCondition.findMany({
+                where: { isActive: true },
+                select: { id: true, slug: true, updatedAt: true },
+                orderBy: { id: 'asc' },
+                take: CONDITION_PAGE,
+                ...(condCursor ? { cursor: { id: condCursor }, skip: 1 } : {}),
+            });
+        if (conditions.length === 0) break;
 
-                let priority = 0.5;
-                switch (geo.level) {
-                    case 'country': priority = 0.6; break;
-                    case 'state': priority = 0.7; break;
-                    case 'city': priority = 0.8; break;
-                    case 'locality': priority = 0.9; break;
+        for (const condition of conditions) {
+            for (const geo of countryGeos) {
+                for (const lang of geo.supportedLanguages) {
+                    await sink.push({
+                        urlPath: `/${geo.slug}/${lang}/${condition.slug}`,
+                        changefreq: 'weekly',
+                        priority: 0.6,
+                        languageCode: lang,
+                        conditionId: condition.id,
+                        geographyId: geo.id,
+                        lastModified: condition.updatedAt,
+                    }, 'condition_geo');
+
+                    // Per-condition cost pages, country level
+                    await sink.push({
+                        urlPath: `/${geo.slug}/${lang}/${condition.slug}/cost`,
+                        changefreq: 'weekly',
+                        priority: 0.7,
+                        languageCode: lang,
+                        conditionId: condition.id,
+                        geographyId: geo.id,
+                        lastModified: condition.updatedAt,
+                    }, 'condition_cost');
                 }
-
-                entries.push({
-                    urlPath,
-                    changefreq: 'weekly',
-                    priority,
-                    languageCode: lang,
-                    conditionId: condition.id,
-                    geographyId: geo.id,
-                    lastModified: condition.updatedAt,
-                });
             }
         }
-    }
 
-    // ── 3. Per-condition cost pages, country level ─────────────
-    for (const condition of conditions) {
-        for (const geo of countryGeos) {
-            for (const lang of geo.supportedLanguages) {
-                entries.push({
-                    urlPath: `/${geo.slug}/${lang}/${condition.slug}/cost`,
-                    changefreq: 'weekly',
-                    priority: 0.7,
-                    languageCode: lang,
-                    conditionId: condition.id,
-                    geographyId: geo.id,
-                    lastModified: condition.updatedAt,
-                });
-            }
-        }
-    }
+        condProcessed += conditions.length;
+        process.stdout.write(`\r  conditions processed: ${condProcessed.toLocaleString()}`);
 
-    // ── 4. Treatments (canonical + per-country) ────────────────
+        if (conditions.length < CONDITION_PAGE) break;
+        condCursor = conditions[conditions.length - 1].id;
+    }
+    process.stdout.write(`\n  ✓ condition fan-out + cost variants done\n`);
+
+    // ── 3. Conditions-by-specialty index pages ─────────────────
+    // Prisma 7 rejects `{ not: null }` shorthand — filter null in JS.
+    const specialtiesRaw = await prisma.medicalCondition.findMany({
+        where: { isActive: true },
+        select: { specialistType: true },
+        distinct: ['specialistType'],
+    });
+    const specialtyNames = Array.from(
+        new Set(
+            specialtiesRaw
+                .map((s) => s.specialistType)
+                .filter((s): s is string => typeof s === 'string' && s.length > 0)
+                .map((s) => slugify(s))
+        )
+    );
+    for (const slug of specialtyNames) {
+        await sink.push({
+            urlPath: `/conditions/${slug}`,
+            changefreq: 'weekly',
+            priority: 0.7,
+            languageCode: 'en',
+        }, 'condition_specialty');
+    }
+    console.log(`  ✓ conditions-by-specialty: ${specialtyNames.length}`);
+
+    // ── 4. Treatments (canonical + per-country + per-locale index) ──
+    let treatmentCount = 0;
     try {
         const treatmentsPath = path.resolve(__dirname, '../public/data/treatments.json');
         if (fs.existsSync(treatmentsPath)) {
@@ -184,41 +314,42 @@ async function generateSitemapEntries() {
                 const slug = slugify(t.simpleName || t.name);
                 if (!slug || seenTreatmentSlugs.has(slug)) continue;
                 seenTreatmentSlugs.add(slug);
+                treatmentCount += 1;
 
-                entries.push({
+                await sink.push({
                     urlPath: `/treatments/${slug}`,
                     changefreq: 'monthly',
                     priority: 0.7,
                     languageCode: 'en',
-                });
+                }, 'treatment_canonical');
                 for (const geo of countryGeos) {
                     for (const lang of geo.supportedLanguages) {
-                        entries.push({
+                        await sink.push({
                             urlPath: `/${geo.slug}/${lang}/treatments/${slug}`,
                             changefreq: 'monthly',
                             priority: 0.6,
                             languageCode: lang,
                             geographyId: geo.id,
-                        });
+                        }, 'treatment_geo');
                     }
                 }
             }
-            // Treatments index per locale
             for (const geo of countryGeos) {
                 for (const lang of geo.supportedLanguages) {
-                    entries.push({
+                    await sink.push({
                         urlPath: `/${geo.slug}/${lang}/treatments`,
                         changefreq: 'weekly',
                         priority: 0.7,
                         languageCode: lang,
                         geographyId: geo.id,
-                    });
+                    }, 'treatment_index');
                 }
             }
         }
     } catch (err) {
         console.warn('  ⚠ skipping treatments slugs:', (err as Error).message);
     }
+    console.log(`  ✓ treatments: ${treatmentCount} canonical + per-country variants`);
 
     // ── 5. Doctor profile slugs ────────────────────────────────
     const doctors = await prisma.doctorProvider.findMany({
@@ -226,14 +357,55 @@ async function generateSitemapEntries() {
         select: { slug: true, updatedAt: true },
     });
     for (const d of doctors) {
-        entries.push({
+        await sink.push({
             urlPath: `/doctor/${d.slug}`,
             changefreq: 'weekly',
             priority: 0.7,
             languageCode: 'en',
             lastModified: d.updatedAt,
-        });
+        }, 'doctor_profile');
     }
+    console.log(`  ✓ doctor profiles: ${doctors.length}`);
+
+    // ── 5b. Doctors-by-location pages ──────────────────────────
+    for (const geo of geographies) {
+        await sink.push({
+            urlPath: `/doctors/${geo.slug}`,
+            changefreq: 'weekly',
+            priority: geo.level === 'city' ? 0.7 : geo.level === 'state' ? 0.6 : 0.5,
+            languageCode: 'en',
+            geographyId: geo.id,
+        }, 'doctor_location');
+        for (const lang of geo.supportedLanguages) {
+            if (lang === 'en') continue; // already covered by base path
+            await sink.push({
+                urlPath: `/doctors/${geo.slug}/${lang}`,
+                changefreq: 'weekly',
+                priority: 0.5,
+                languageCode: lang,
+                geographyId: geo.id,
+            }, 'doctor_location_lang');
+        }
+    }
+    console.log(`  ✓ doctors-by-location: ${geographies.length} base + per-language variants`);
+
+    // ── 5c. Doctors-by-specialty pages ─────────────────────────
+    const DOCTOR_SPECIALTIES = [
+        'general-physician', 'cardiologist', 'dermatologist', 'neurologist',
+        'orthopedist', 'pediatrician', 'gynecologist', 'dentist', 'psychiatrist',
+        'ophthalmologist', 'ent-specialist', 'general-surgeon', 'urologist',
+        'oncologist', 'endocrinologist', 'pulmonologist', 'gastroenterologist',
+        'nephrologist', 'rheumatologist', 'radiologist', 'pathologist',
+    ];
+    for (const slug of DOCTOR_SPECIALTIES) {
+        await sink.push({
+            urlPath: `/doctors/specialty/${slug}`,
+            changefreq: 'weekly',
+            priority: 0.7,
+            languageCode: 'en',
+        }, 'doctor_specialty');
+    }
+    console.log(`  ✓ doctors-by-specialty: ${DOCTOR_SPECIALTIES.length}`);
 
     // ── 6. Hospital slugs ──────────────────────────────────────
     const hospitals = await prisma.hospital.findMany({
@@ -241,14 +413,15 @@ async function generateSitemapEntries() {
         select: { slug: true, updatedAt: true },
     });
     for (const h of hospitals) {
-        entries.push({
+        await sink.push({
             urlPath: `/hospitals/${h.slug}`,
             changefreq: 'weekly',
             priority: 0.7,
             languageCode: 'en',
             lastModified: h.updatedAt,
-        });
+        }, 'hospital');
     }
+    console.log(`  ✓ hospitals: ${hospitals.length}`);
 
     // ── 7. Diagnostic-lab slugs ────────────────────────────────
     const diagProviders = await prisma.diagnosticProvider.findMany({
@@ -256,14 +429,15 @@ async function generateSitemapEntries() {
         select: { slug: true, updatedAt: true },
     });
     for (const p of diagProviders) {
-        entries.push({
+        await sink.push({
             urlPath: `/diagnostic-labs/${p.slug}`,
             changefreq: 'weekly',
             priority: 0.6,
             languageCode: 'en',
             lastModified: p.updatedAt,
-        });
+        }, 'diagnostic_lab');
     }
+    console.log(`  ✓ diagnostic-labs: ${diagProviders.length}`);
 
     // ── 8. Insurance slugs ─────────────────────────────────────
     const insurers = await prisma.insuranceProvider.findMany({
@@ -271,76 +445,69 @@ async function generateSitemapEntries() {
         select: { slug: true, updatedAt: true },
     });
     for (const ins of insurers) {
-        entries.push({
+        await sink.push({
             urlPath: `/insurance/${ins.slug}`,
             changefreq: 'monthly',
             priority: 0.6,
             languageCode: 'en',
             lastModified: ins.updatedAt,
-        });
+        }, 'insurance');
     }
+    console.log(`  ✓ insurance: ${insurers.length}`);
 
-    // ── 9. Diagnostic-test slugs ───────────────────────────────
+    // ── 9. Diagnostic-test slugs + per-city variants + categories ──
     const tests = await prisma.diagnosticTest.findMany({
         where: { isActive: true },
         select: { slug: true, updatedAt: true },
     });
-    const cityGeos = geographies.filter((g) => g.level === 'city');
     for (const t of tests) {
-        entries.push({
+        await sink.push({
             urlPath: `/tests/${t.slug}`,
             changefreq: 'weekly',
             priority: 0.7,
             languageCode: 'en',
             lastModified: t.updatedAt,
-        });
-        // Per-city test variant — high SEO leverage
+        }, 'test_canonical');
         for (const c of cityGeos) {
-            entries.push({
+            await sink.push({
                 urlPath: `/tests/${t.slug}/${c.slug}`,
                 changefreq: 'weekly',
                 priority: 0.6,
                 languageCode: 'en',
                 geographyId: c.id,
                 lastModified: t.updatedAt,
-            });
+            }, 'test_city');
         }
     }
+    console.log(`  ✓ tests: ${tests.length} canonical + per-city variants`);
 
-    // ── 10. De-duplicate & assign sitemap shards ───────────────
-    const seen = new Set<string>();
-    const uniqueEntries = entries.filter((e) => {
-        if (seen.has(e.urlPath)) return false;
-        seen.add(e.urlPath);
-        return true;
-    });
-
-    const final = uniqueEntries.map((e, i) => ({
-        urlPath: e.urlPath,
-        sitemapIndex: Math.floor(i / URLS_PER_SITEMAP),
-        changefreq: e.changefreq,
-        priority: e.priority,
-        languageCode: e.languageCode,
-        conditionId: e.conditionId ?? null,
-        geographyId: e.geographyId ?? null,
-        lastModified: e.lastModified ?? new Date(),
-    }));
-
-    // Batch insert (chunks of 1000)
-    const BATCH_SIZE = 1000;
-    for (let i = 0; i < final.length; i += BATCH_SIZE) {
-        const batch = final.slice(i, i + BATCH_SIZE);
-        await prisma.sitemapEntry.createMany({ data: batch, skipDuplicates: true });
-        process.stdout.write(`\r  Inserted ${Math.min(i + BATCH_SIZE, final.length)} / ${final.length} entries`);
+    // Test categories
+    const categories = await prisma.diagnosticCategory
+        .findMany({ select: { slug: true, updatedAt: true } })
+        .catch(() => [] as Array<{ slug: string; updatedAt: Date }>);
+    for (const c of categories) {
+        await sink.push({
+            urlPath: `/tests/category/${c.slug}`,
+            changefreq: 'weekly',
+            priority: 0.6,
+            languageCode: 'en',
+            lastModified: c.updatedAt,
+        }, 'test_category');
     }
+    if (categories.length) console.log(`  ✓ test-categories: ${categories.length}`);
 
-    console.log(
-        `\n✅ Generated ${final.length} sitemap entries (` +
-        `static=${STATIC_PAGES.length}, ` +
-        `doctors=${doctors.length}, hospitals=${hospitals.length}, ` +
-        `labs=${diagProviders.length}, insurers=${insurers.length}, tests=${tests.length}` +
-        `) across ${Math.ceil(final.length / URLS_PER_SITEMAP)} sub-sitemaps`
-    );
+    // ── final flush ────────────────────────────────────────────
+    await sink.flush();
+    process.stdout.write('\n');
+
+    const stats = sink.stats();
+    console.log('\n──────────────────────────────────────────');
+    console.log(`✅ Generated ${stats.accepted.toLocaleString()} sitemap entries across ${stats.chunks} sub-sitemaps`);
+    console.log('   Breakdown by category:');
+    for (const [cat, count] of Object.entries(stats.categories).sort((a, b) => b[1] - a[1])) {
+        console.log(`     ${cat.padEnd(28)} ${count.toLocaleString()}`);
+    }
+    console.timeEnd('total');
 }
 
 generateSitemapEntries()
