@@ -30,8 +30,8 @@ const PROVIDER_TYPE_LABELS: Record<string, string> = {
   imaging_center: 'Imaging Center',
   hospital: 'Hospital Diagnostics',
   clinic: 'Clinic',
-  home_collection: 'Home Collection Service',
-  full_service: 'Full Service Diagnostics',
+  home_collection: 'Home Collection',
+  full_service: 'Full Service',
 };
 
 export default async function DiagnosticLabsPage() {
@@ -45,7 +45,6 @@ export default async function DiagnosticLabsPage() {
       select: { id: true },
     });
     if (userGeo) {
-      // Get all geographies under this country
       const childGeos = await prisma.geography.findMany({
         where: {
           OR: [
@@ -61,7 +60,7 @@ export default async function DiagnosticLabsPage() {
     }
   }
 
-  // Fetch featured partners first
+  // Featured partners
   const featuredProviders = await prisma.diagnosticProvider.findMany({
     where: {
       isActive: true,
@@ -76,7 +75,7 @@ export default async function DiagnosticLabsPage() {
     take: 6,
   });
 
-  // Fetch all providers
+  // All providers
   const providers = await prisma.diagnosticProvider.findMany({
     where: {
       isActive: true,
@@ -93,7 +92,7 @@ export default async function DiagnosticLabsPage() {
 
   const allProviders = [...featuredProviders, ...providers];
 
-  // Get provider type counts
+  // Type counts
   const typeCounts = await prisma.diagnosticProvider.groupBy({
     by: ['providerType'],
     where: { isActive: true, ...geoFilter },
@@ -147,127 +146,194 @@ export default async function DiagnosticLabsPage() {
     ],
   };
 
+  const totalTypeCount = typeCounts.reduce((sum, t) => sum + t._count, 0);
+
   return (
-    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
+    <main style={{ background: 'var(--bg)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
       <Script
         id="diagnostic-labs-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(labsSchema) }}
       />
-      {/* Background Effects */}
-      <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-emerald-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Hero */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-            <span className="text-white">Diagnostic Labs &</span>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
-              Imaging Centers
-            </span>
-          </h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Find certified diagnostic centers near you. Compare prices, read reviews, and book with home sample collection.
-          </p>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-7">
+
+        {/* Breadcrumb */}
+        <div
+          className="row gap-2 mono"
+          style={{
+            fontSize: 11,
+            color: 'var(--ink-3)',
+            letterSpacing: '0.06em',
+            textTransform: 'uppercase',
+          }}
+          aria-label="Breadcrumb"
+        >
+          <Link href="/">Home</Link>
+          <span>/</span>
+          <span style={{ color: 'var(--ink)' }}>Diagnostic Labs</span>
         </div>
 
-        {/* Filter Pills */}
-        <div className="flex flex-wrap gap-3 mb-10 justify-center">
-          <Link
-            href="/diagnostic-labs"
-            className="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-medium text-sm"
+        {/* Hero */}
+        <header className="col gap-4">
+          <span className="section-mark">the index / diagnostic providers</span>
+          <h1
+            className="display"
+            style={{
+              fontSize: 'clamp(40px, 7vw, 84px)',
+              lineHeight: 0.95,
+              letterSpacing: '-0.045em',
+              margin: 0,
+              fontWeight: 600,
+              maxWidth: 920,
+            }}
           >
-            All Centers
-          </Link>
-          {typeCounts.map((tc) => (
-            <Link
-              key={tc.providerType}
-              href={`/diagnostic-labs?type=${tc.providerType}`}
-              className="px-4 py-2 rounded-full bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-white/5 font-medium text-sm transition-colors"
-            >
-              {PROVIDER_TYPE_LABELS[tc.providerType] || tc.providerType} ({tc._count})
+            Diagnostic labs &{' '}
+            <span style={{ color: 'var(--cobalt)' }}>imaging centers</span>
+            <span style={{ color: 'var(--orange)' }}>.</span>
+          </h1>
+          <p className="lede" style={{ fontSize: 'clamp(16px, 1.55vw, 19px)', maxWidth: 680 }}>
+            Certified diagnostic centers near you — compare prices, read reviews, and book lab tests with home sample collection where available.
+          </p>
+          <div className="row gap-3 ai-center" style={{ marginTop: 4, flexWrap: 'wrap' }}>
+            <span className="pill pill-cobalt">{totalTypeCount.toLocaleString()} verified providers</span>
+            <span className="pill pill-mint">{featuredProviders.length} partner labs</span>
+            <span className="kicker">prices · accreditations · ratings</span>
+          </div>
+        </header>
+
+        {/* Filter Pills */}
+        <div className="col gap-3" style={{ marginTop: 8 }}>
+          <span className="kicker">filter by type</span>
+          <div className="row" style={{ flexWrap: 'wrap', gap: 8 }}>
+            <Link href="/diagnostic-labs" className="pill pill-ink">
+              all centers · {totalTypeCount}
             </Link>
-          ))}
+            {typeCounts.map((tc) => (
+              <Link
+                key={tc.providerType}
+                href={`/diagnostic-labs?type=${tc.providerType}`}
+                className="pill"
+              >
+                {PROVIDER_TYPE_LABELS[tc.providerType] || tc.providerType} · {tc._count}
+              </Link>
+            ))}
+          </div>
         </div>
 
         {/* Featured Partners */}
         {featuredProviders.length > 0 && (
-          <section className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <h2 className="text-xl font-bold text-white">Partner Labs</h2>
-              <span className="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-medium border border-orange-500/20">
-                Exclusive Discounts
-              </span>
+          <section className="col gap-5" style={{ marginTop: 24 }}>
+            <div className="row between ai-end">
+              <div className="col gap-2">
+                <span className="section-mark">I / partner labs</span>
+                <h2 className="display" style={{ fontSize: 28, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}>
+                  Verified partners.
+                </h2>
+              </div>
+              <span className="pill pill-orange">exclusive discounts</span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                gap: 16,
+              }}
+            >
               {featuredProviders.map((provider) => (
                 <Link
                   key={provider.id}
                   href={`/diagnostic-labs/${provider.slug}`}
-                  className="group bg-gradient-to-br from-emerald-900/30 to-slate-900/50 backdrop-blur-sm border border-emerald-500/20 rounded-2xl p-6 hover:border-emerald-500/40 transition-all"
+                  className="card col gap-4"
+                  style={{ padding: 22 }}
                 >
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="row gap-3 ai-start">
                     {provider.logo ? (
                       <Image
                         src={provider.logo}
                         alt={provider.name}
-                        width={64}
-                        height={64}
+                        width={56}
+                        height={56}
                         unoptimized
-                        className="w-16 h-16 rounded-xl object-cover"
+                        style={{
+                          width: 56,
+                          height: 56,
+                          borderRadius: 'var(--r-2)',
+                          objectFit: 'cover',
+                          border: '1px solid var(--rule)',
+                        }}
                       />
                     ) : (
-                      <div className="w-16 h-16 rounded-xl bg-emerald-500/20 flex items-center justify-center">
-                        <span className="text-emerald-400 font-bold text-2xl">{provider.name.charAt(0)}</span>
-                      </div>
+                      <span
+                        className="spec-icon"
+                        aria-hidden="true"
+                        style={{ width: 56, height: 56, fontSize: 22 }}
+                      >
+                        {provider.name.charAt(0)}
+                      </span>
                     )}
-                    <div className="flex-1">
-                      <h3 className="font-bold text-white text-lg group-hover:text-emerald-400 transition-colors">
+                    <div className="col gap-1" style={{ flex: 1, minWidth: 0 }}>
+                      <span className="kicker">{PROVIDER_TYPE_LABELS[provider.providerType] || provider.providerType}</span>
+                      <h3 className="display" style={{ fontSize: 17, margin: 0, fontWeight: 600, letterSpacing: '-0.015em' }}>
                         {provider.name}
                       </h3>
-                      <p className="text-sm text-slate-400">{PROVIDER_TYPE_LABELS[provider.providerType] || provider.providerType}</p>
                       {provider.geography && (
-                        <p className="text-xs text-slate-500 mt-1">{provider.geography.name}</p>
+                        <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>
+                          {provider.geography.name}
+                        </span>
                       )}
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="row gap-3 ai-center" style={{ flexWrap: 'wrap' }}>
                     {provider.rating && (
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="row gap-1 ai-center">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="var(--lemon-2)" aria-hidden="true">
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-                        <span className="text-white font-medium">{Number(provider.rating).toFixed(1)}</span>
-                        <span className="text-slate-500 text-sm">({provider.reviewCount})</span>
+                        <span className="num" style={{ fontSize: 13, color: 'var(--ink)', fontWeight: 600 }}>
+                          {Number(provider.rating).toFixed(1)}
+                        </span>
+                        <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>
+                          ({provider.reviewCount})
+                        </span>
                       </div>
                     )}
                     {provider.partnerDiscount && (
-                      <span className="px-2 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-medium">
-                        {Number(provider.partnerDiscount)}% OFF
+                      <span className="pill pill-orange">
+                        {Number(provider.partnerDiscount)}% off
                       </span>
                     )}
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                     {provider.homeCollectionAvailable && (
-                      <span className="text-xs px-2 py-1 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
-                        Home Collection
-                      </span>
+                      <span className="pill pill-mint">home collection</span>
                     )}
                     {provider.accreditations.slice(0, 2).map((acc, i) => (
-                      <span key={i} className="text-xs px-2 py-1 rounded-full bg-slate-800 text-slate-400">
+                      <span key={i} className="pill">
                         {acc}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-slate-400 pt-4 border-t border-white/5">
-                    <span>{provider._count.testPrices} tests</span>
-                    <span>{provider._count.packages} packages</span>
-                    <span className="text-emerald-400 font-medium group-hover:underline">View Lab</span>
+                  <div className="row between ai-center hairline-t" style={{ paddingTop: 14 }}>
+                    <div className="row gap-4">
+                      <div className="col">
+                        <span className="num" style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)' }}>
+                          {provider._count.testPrices}
+                        </span>
+                        <span className="kicker">tests</span>
+                      </div>
+                      <div className="col">
+                        <span className="num" style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)' }}>
+                          {provider._count.packages}
+                        </span>
+                        <span className="kicker">packages</span>
+                      </div>
+                    </div>
+                    <span className="kicker" style={{ color: 'var(--cobalt)' }}>view lab →</span>
                   </div>
                 </Link>
               ))}
@@ -276,106 +342,185 @@ export default async function DiagnosticLabsPage() {
         )}
 
         {/* All Providers */}
-        <section>
-          <h2 className="text-xl font-bold text-white mb-6">All Diagnostic Centers</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {providers.map((provider) => (
-              <Link
-                key={provider.id}
-                href={`/diagnostic-labs/${provider.slug}`}
-                className="group bg-slate-900/50 backdrop-blur-sm border border-white/5 hover:border-emerald-500/30 rounded-2xl p-5 transition-all hover:bg-slate-800/50"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  {provider.logo ? (
-                    <Image
-                      src={provider.logo}
-                      alt={provider.name}
-                      width={48}
-                      height={48}
-                      unoptimized
-                      className="w-12 h-12 rounded-xl object-cover"
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                      <span className="text-emerald-400 font-bold">{provider.name.charAt(0)}</span>
-                    </div>
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors truncate">
-                      {provider.name}
-                    </h3>
-                    <p className="text-xs text-slate-500 truncate">
-                      {provider.geography?.name || PROVIDER_TYPE_LABELS[provider.providerType]}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 mb-3">
-                  {provider.rating && (
-                    <div className="flex items-center gap-1 text-sm">
-                      <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <span className="text-white">{Number(provider.rating).toFixed(1)}</span>
-                    </div>
-                  )}
-                  {provider.homeCollectionAvailable && (
-                    <span className="text-xs text-teal-400">Home Collection</span>
-                  )}
-                </div>
-
-                <div className="flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-white/5">
-                  <span>{provider._count.testPrices} tests</span>
-                  <span className="text-emerald-400 font-medium">View Details</span>
-                </div>
-              </Link>
-            ))}
+        <section className="col gap-5" style={{ marginTop: 32 }}>
+          <div className="row between ai-end">
+            <div className="col gap-2">
+              <span className="section-mark">II / all providers</span>
+              <h2 className="display" style={{ fontSize: 28, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}>
+                Diagnostic centers.
+              </h2>
+            </div>
+            <span className="kicker">{providers.length} listed</span>
           </div>
 
+          {providers.length > 0 ? (
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                gap: 0,
+                border: '1px solid var(--rule)',
+                borderRadius: 'var(--r-3)',
+                background: 'var(--paper)',
+                overflow: 'hidden',
+              }}
+            >
+              {providers.map((provider, i) => {
+                const cols = 4;
+                const isLastRow = i >= providers.length - (providers.length % cols || cols);
+                const isLastCol = (i + 1) % cols === 0;
+                return (
+                  <Link
+                    key={provider.id}
+                    href={`/diagnostic-labs/${provider.slug}`}
+                    className="col gap-3"
+                    style={{
+                      padding: 18,
+                      borderRight: !isLastCol ? '1px solid var(--rule)' : 'none',
+                      borderBottom: !isLastRow ? '1px solid var(--rule)' : 'none',
+                    }}
+                  >
+                    <div className="row gap-3 ai-start">
+                      {provider.logo ? (
+                        <Image
+                          src={provider.logo}
+                          alt={provider.name}
+                          width={40}
+                          height={40}
+                          unoptimized
+                          style={{
+                            width: 40,
+                            height: 40,
+                            borderRadius: 'var(--r-2)',
+                            objectFit: 'cover',
+                            border: '1px solid var(--rule)',
+                          }}
+                        />
+                      ) : (
+                        <span className="spec-icon" aria-hidden="true">
+                          {provider.name.charAt(0)}
+                        </span>
+                      )}
+                      <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                        <h3
+                          className="display"
+                          style={{
+                            fontSize: 14,
+                            margin: 0,
+                            fontWeight: 600,
+                            letterSpacing: '-0.015em',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          {provider.name}
+                        </h3>
+                        <span
+                          style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          {provider.geography?.name || PROVIDER_TYPE_LABELS[provider.providerType]}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="row gap-3 ai-center" style={{ flexWrap: 'wrap' }}>
+                      {provider.rating && (
+                        <div className="row gap-1 ai-center">
+                          <svg width="12" height="12" viewBox="0 0 20 20" fill="var(--lemon-2)" aria-hidden="true">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                          <span className="num" style={{ fontSize: 12, fontWeight: 600 }}>
+                            {Number(provider.rating).toFixed(1)}
+                          </span>
+                        </div>
+                      )}
+                      {provider.homeCollectionAvailable && (
+                        <span className="kicker" style={{ color: 'var(--mint-3)' }}>home collection</span>
+                      )}
+                    </div>
+
+                    <div className="row between ai-center hairline-t" style={{ paddingTop: 10 }}>
+                      <span className="kicker">{provider._count.testPrices} tests</span>
+                      <span className="kicker" style={{ color: 'var(--cobalt)' }}>view →</span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          ) : null}
+
           {allProviders.length === 0 && (
-            <div className="text-center py-16">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-slate-800 flex items-center justify-center">
-                <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No labs found in your area</h3>
-              <p className="text-slate-400 mb-6">We&apos;re adding diagnostic centers near you soon.</p>
-              <Link
-                href="/tests"
-                className="inline-flex items-center px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-colors"
-              >
-                Browse All Tests
+            <div className="card col ai-center" style={{ padding: 56, textAlign: 'center' }}>
+              <span className="spec-icon" aria-hidden="true" style={{ width: 48, height: 48, fontSize: 18, marginBottom: 16 }}>
+                ?
+              </span>
+              <h3 className="display" style={{ fontSize: 20, margin: '0 0 8px', fontWeight: 600 }}>
+                No labs found in your area.
+              </h3>
+              <p className="muted" style={{ margin: '0 0 20px', fontSize: 14 }}>
+                We&apos;re adding diagnostic centers near you soon.
+              </p>
+              <Link href="/tests" className="btn btn-cobalt">
+                Browse all tests
               </Link>
             </div>
           )}
         </section>
 
         {/* AI Health Kiosks Section */}
-        <section className="mt-16">
+        <section style={{ marginTop: 32 }}>
           <AIKioskFinder />
         </section>
 
         {/* Partner CTA */}
-        <section className="mt-16 text-center">
-          <div className="bg-gradient-to-br from-emerald-900/30 to-slate-900/50 backdrop-blur-sm border border-emerald-500/20 rounded-3xl p-10">
-            <h2 className="text-2xl font-bold text-white mb-3">Own a Diagnostic Lab?</h2>
-            <p className="text-slate-400 mb-6 max-w-lg mx-auto">
-              Partner with AIHealz to reach more patients. Get online bookings, home collection management, and real-time analytics.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/provider/lab/register"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-colors"
+        <section style={{ marginTop: 32 }}>
+          <div className="card-ink col gap-5" style={{ padding: 40 }}>
+            <span
+              className="section-mark"
+              style={{ color: 'rgba(255,255,255,0.6)' }}
+            >
+              IV / for partners
+            </span>
+            <div className="col gap-3">
+              <h2
+                className="display"
+                style={{
+                  fontSize: 'clamp(28px, 3.5vw, 40px)',
+                  margin: 0,
+                  fontWeight: 600,
+                  letterSpacing: '-0.03em',
+                  color: 'var(--paper)',
+                  maxWidth: 720,
+                }}
               >
-                Register Your Lab
+                Own a diagnostic lab? Reach more patients
+                <span style={{ color: 'var(--cobalt-3)' }}>.</span>
+              </h2>
+              <p style={{ margin: 0, fontSize: 16, lineHeight: 1.6, color: 'rgba(255,255,255,0.75)', maxWidth: 600 }}>
+                Partner with aihealz to run online bookings, manage home collection, and surface real-time analytics — all from one console.
+              </p>
+            </div>
+            <div className="row gap-3" style={{ flexWrap: 'wrap', marginTop: 8 }}>
+              <Link href="/provider/lab/register" className="btn btn-cobalt">
+                Register your lab
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/20 transition-colors"
+                className="btn"
+                style={{
+                  background: 'transparent',
+                  color: 'var(--paper)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                }}
               >
-                View Pricing
+                View pricing
               </Link>
             </div>
           </div>

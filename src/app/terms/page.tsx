@@ -39,71 +39,210 @@ const structuredData = [
     ]),
 ];
 
+const SECTIONS = [
+    {
+        id: 'acceptance',
+        num: '01',
+        title: 'Acceptance of terms',
+        body: (
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)', margin: 0 }}>
+                By accessing or using aihealz (the &ldquo;Service&rdquo;), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, then you may not access the Service. The Service includes our global directory, Medical Travel Concierge, AI Diagnosis Bots, and B2B SaaS portals.
+            </p>
+        ),
+    },
+    {
+        id: 'medical',
+        num: '02',
+        title: 'Medical disclaimer (not medical advice)',
+        body: (
+            <div className="card-quiet" style={{ padding: 24, borderLeft: '3px solid var(--orange)' }}>
+                <div className="row ai-center gap-2" style={{ marginBottom: 12 }}>
+                    <span className="pill pill-orange">critical legal notice</span>
+                </div>
+                <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)' }}>
+                    The content provided by aihealz, including text, graphics, images, symptom checkers, and AI-generated analyses, is for informational and educational purposes only. It is <strong style={{ color: 'var(--ink)' }}>not</strong> a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+                </p>
+                <p style={{ margin: '14px 0 0', fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)' }}>
+                    Never disregard professional medical advice or delay seeking it because of something you have read on this website. If you think you may have a medical emergency, call your doctor or 911 immediately.
+                </p>
+            </div>
+        ),
+    },
+    {
+        id: 'use',
+        num: '03',
+        title: 'Use of the service',
+        body: (
+            <ul className="clean col gap-2" style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)' }}>
+                <li className="row gap-3 ai-baseline">
+                    <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', marginTop: 8, flexShrink: 0 }} />
+                    <span>You must be at least 18 years old to use this Service.</span>
+                </li>
+                <li className="row gap-3 ai-baseline">
+                    <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', marginTop: 8, flexShrink: 0 }} />
+                    <span>You are responsible for any activity that occurs through your use of the Service.</span>
+                </li>
+                <li className="row gap-3 ai-baseline">
+                    <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', marginTop: 8, flexShrink: 0 }} />
+                    <span>You must not use the Service for any illegal or unauthorized purpose.</span>
+                </li>
+                <li className="row gap-3 ai-baseline">
+                    <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', marginTop: 8, flexShrink: 0 }} />
+                    <span>You must not transmit any worms, viruses, or any code of a destructive nature.</span>
+                </li>
+            </ul>
+        ),
+    },
+    {
+        id: 'ai',
+        num: '04',
+        title: 'AI tools and accuracy',
+        body: (
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)', margin: 0 }}>
+                aihealz utilizes advanced Artificial Intelligence (AI), including Large Language Models, to organize medical data and provide general insights. While we strive for extreme accuracy, AI is not perfect and can make mistakes (hallucinations or algorithmic bias). You agree that aihealz and its parent company, ATZ Medappz Pvt Ltd, are not liable for any inaccuracies, errors, or omissions in the AI-generated content. You must independently verify critical information with a licensed board-certified medical professional.
+            </p>
+        ),
+    },
+    {
+        id: 'directory',
+        num: '05',
+        title: 'Doctor profiles and directory',
+        body: (
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)', margin: 0 }}>
+                We list medical professionals based on public data, user submissions, and partnerships. We attempt to verify credentials where indicated (designated by a &ldquo;Verified&rdquo; badge), but we do not endorse or guarantee the quality of care of any specific provider. It is your ultimate responsibility to verify a doctor&apos;s qualifications before seeking surgical or medical treatment.
+            </p>
+        ),
+    },
+    {
+        id: 'ip',
+        num: '06',
+        title: 'Intellectual property',
+        body: (
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)', margin: 0 }}>
+                The Service and its original content, features, proprietary search indexes, and functionality are and will remain the exclusive property of aihealz and its licensors. The Service is protected by copyright, trademark, and other laws of both the country of operation and foreign countries. Scraping our directory is strictly prohibited without explicit written enterprise API access.
+            </p>
+        ),
+    },
+    {
+        id: 'changes',
+        num: '07',
+        title: 'Changes',
+        body: (
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)', margin: 0 }}>
+                We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+            </p>
+        ),
+    },
+    {
+        id: 'contact',
+        num: '08',
+        title: 'Contact us',
+        body: (
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-2)', margin: 0 }}>
+                If you have any questions about these Terms, please{' '}
+                <Link href="/contact" style={{ color: 'var(--cobalt)', textDecoration: 'underline', textDecorationColor: 'var(--cobalt-100)' }}>
+                    contact us
+                </Link>
+                .
+            </p>
+        ),
+    },
+];
+
 export default function TermsOfServicePage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-50 pt-24 pb-16 relative overflow-hidden">
-            {/* Structured Data */}
+        <main style={{ background: 'var(--bg)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
 
-            {/* Ambient Lighting */}
-            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
-
-            <div className="max-w-4xl mx-auto px-6 mt-10 relative z-10">
-                <div className="mb-12">
-                    <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white drop-shadow-md">
-                        Terms of Service
-                    </h1>
-                    <p className="text-primary-400 font-bold tracking-widest uppercase text-xs">Last Updated: October 2026</p>
+            <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 28px' }}>
+                {/* Breadcrumb */}
+                <div
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        marginBottom: 24,
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
+                    <span>/</span>
+                    <span style={{ color: 'var(--ink)' }}>Terms of Service</span>
                 </div>
 
-                <div className="bg-[#0A1128]/80 backdrop-blur-xl p-8 md:p-12 rounded-[2rem] shadow-2xl border border-white/10 prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-primary-400 hover:prose-a:text-primary-300 prose-strong:text-white">
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-0 mb-6">1. Acceptance of Terms</h2>
-                    <p className="text-slate-400">
-                        By accessing or using aihealz ("the Service"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, then you may not access the Service. The Service includes our global directory, Medical Travel Concierge, AI Diagnosis Bots, and B2B SaaS portals.
+                {/* Hero */}
+                <header className="col gap-4" style={{ marginBottom: 56 }}>
+                    <span className="section-mark">legal / terms</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 6vw, 72px)',
+                            lineHeight: 0.98,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        <span style={{ color: 'var(--cobalt)' }}>Terms</span> of service
+                        <span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 'clamp(16px, 1.55vw, 19px)', maxWidth: 640 }}>
+                        The rules for using aihealz directories, AI tools, and the medical concierge platform. Read these in full — by using the Service you agree to them.
                     </p>
-
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-12 mb-6">2. Medical Disclaimer (Not Medical Advice)</h2>
-                    <div className="bg-rose-950/40 border border-rose-500/30 p-8 rounded-2xl not-prose mb-10 text-rose-100 shadow-[0_0_30px_rgba(225,29,72,0.1)]">
-                        <strong className="block mb-3 text-rose-400 font-black tracking-widest uppercase text-xs">CRITICAL LEGAL NOTICE:</strong>
-                        <p className="leading-relaxed font-medium">The content provided by aihealz, including text, graphics, images, symptom checkers, and AI-generated analyses, is for <strong>informational and educational purposes only</strong>. It is <strong>NOT</strong> a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
-                        <p className="mt-4 leading-relaxed font-medium">Never disregard professional medical advice or delay seeking it because of something you have read on this website. If you think you may have a medical emergency, call your doctor or 911 immediately.</p>
+                    <div className="row gap-3 ai-center" style={{ marginTop: 8 }}>
+                        <span className="pill pill-cobalt">last updated · oct 2026</span>
+                        <span className="kicker">jurisdiction · global</span>
                     </div>
+                </header>
 
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-12 mb-6">3. Use of the Service</h2>
-                    <ul className="text-slate-400 list-disc pl-6 space-y-2">
-                        <li>You must be at least 18 years old to use this Service.</li>
-                        <li>You are responsible for any activity that occurs through your use of the Service.</li>
-                        <li>You must not use the Service for any illegal or unauthorized purpose.</li>
-                        <li>You must not transmit any worms, viruses, or any code of a destructive nature.</li>
-                    </ul>
+                <div className="hairline" style={{ marginBottom: 56 }} />
 
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-12 mb-6">4. AI Tools and Accuracy</h2>
-                    <p className="text-slate-400">
-                        aihealz utilizes advanced Artificial Intelligence (AI), including Large Language Models, to organize medical data and provide general insights. While we strive for extreme accuracy, AI is not perfect and can make mistakes (hallucinations or algorithmic bias). You agree that aihealz and its parent company, ATZ Medappz Pvt Ltd, are not liable for any inaccuracies, errors, or omissions in the AI-generated content. You must independently verify critical information with a licensed board-certified medical professional.
+                <div className="col gap-8">
+                    {SECTIONS.map((s) => (
+                        <section key={s.id} id={s.id} className="col gap-4">
+                            <div className="row gap-3 ai-baseline">
+                                <span className="num" style={{ color: 'var(--cobalt)', fontSize: 13, fontWeight: 500, letterSpacing: '0.05em' }}>
+                                    {s.num}
+                                </span>
+                                <h2
+                                    className="display"
+                                    style={{
+                                        fontSize: 24,
+                                        lineHeight: 1.2,
+                                        letterSpacing: '-0.025em',
+                                        margin: 0,
+                                        fontWeight: 600,
+                                    }}
+                                >
+                                    {s.title}
+                                </h2>
+                            </div>
+                            <div>{s.body}</div>
+                            <div className="hairline" style={{ marginTop: 16 }} />
+                        </section>
+                    ))}
+                </div>
+
+                <div className="card" style={{ padding: 28, marginTop: 56 }}>
+                    <span className="kicker" style={{ marginBottom: 8, display: 'block' }}>
+                        <span className="dot" />
+                        questions
+                    </span>
+                    <h3 className="display" style={{ fontSize: 20, margin: '0 0 8px', fontWeight: 600 }}>
+                        Reach the legal team.
+                    </h3>
+                    <p style={{ margin: '0 0 16px', fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.6 }}>
+                        Specific clauses unclear? Need an enterprise data agreement? We respond within 5 business days.
                     </p>
-
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-12 mb-6">5. Doctor Profiles and Directory</h2>
-                    <p className="text-slate-400">
-                        We list medical professionals based on public data, user submissions, and partnerships. We attempt to verify credentials where indicated (designated by a "Verified" badge), but we do not endorse or guarantee the quality of care of any specific provider. It is your ultimate responsibility to verify a doctor's qualifications before seeking surgical or medical treatment.
-                    </p>
-
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-12 mb-6">6. Intellectual Property</h2>
-                    <p className="text-slate-400">
-                        The Service and its original content, features, proprietary search indexes, and functionality are and will remain the exclusive property of aihealz and its licensors. The Service is protected by copyright, trademark, and other laws of both the country of operation and foreign countries. Scraping our directory is strictly prohibited without explicit written enterprise API access.
-                    </p>
-
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-12 mb-6">7. Changes</h2>
-                    <p className="text-slate-400">
-                        We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
-                    </p>
-
-                    <h2 className="text-2xl font-bold border-b border-white/10 pb-2 mt-12 mb-6">8. Contact Us</h2>
-                    <p className="text-slate-400">
-                        If you have any questions about these Terms, please <Link href="/contact" className="font-bold underline">contact us</Link>.
-                    </p>
+                    <div className="row gap-3" style={{ flexWrap: 'wrap' }}>
+                        <Link href="/contact" className="btn btn-cobalt">Contact us</Link>
+                        <Link href="/privacy" className="btn btn-paper">Privacy policy</Link>
+                    </div>
                 </div>
             </div>
         </main>

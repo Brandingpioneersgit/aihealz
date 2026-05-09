@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 
 const OTC_GUIDES = [
     {
-        condition: 'Mild Fever / Body Ache',
+        condition: 'Mild fever / body ache',
+        code: 'FV',
         safeToTreat: true,
         tips: [
             'Stay extremely well hydrated (water, broths, electrolyte solutions).',
@@ -19,44 +20,47 @@ const OTC_GUIDES = [
             'Use a lukewarm sponge bath if fever is uncomfortable.'
         ],
         medicines: [
-            { name: 'Paracetamol (Acetaminophen)', dosage: '500mg - 650mg every 6-8 hours as needed.', warning: 'Max 4000mg/day. Avoid alcohol.' },
-            { name: 'Ibuprofen', dosage: '400mg every 6-8 hours with food.', warning: 'Avoid if you have a history of stomach ulcers.' }
+            { name: 'Paracetamol (Acetaminophen)', dosage: '500mg – 650mg every 6–8 hours as needed.', warning: 'Max 4000mg/day. Avoid alcohol.' },
+            { name: 'Ibuprofen', dosage: '400mg every 6–8 hours with food.', warning: 'Avoid if you have a history of stomach ulcers.' }
         ],
         whenToSeeDoctor: 'Fever above 103°F (39.4°C), lasts more than 3 days, accompanied by severe headache, stiff neck, or chest pain.'
     },
     {
-        condition: 'Common Cold & Congestion',
+        condition: 'Common cold & congestion',
+        code: 'CC',
         safeToTreat: true,
         tips: [
             'Inhale steam from a bowl of hot water or use a humidifier.',
-            'Gargle with warm salt water 3-4 times a day for a sore throat.',
+            'Gargle with warm salt water 3–4 times a day for a sore throat.',
             'Use saline nasal drops/spray to clear blockages naturally.'
         ],
         medicines: [
             { name: 'Cetirizine / Loratadine', dosage: '10mg once daily.', warning: 'May cause mild drowsiness (Cetirizine).' },
-            { name: 'Xylometazoline Nasal Drops', dosage: '1-2 drops per nostril, twice daily.', warning: 'Do not use for more than 5-7 consecutive days (rebound congestion).' }
+            { name: 'Xylometazoline Nasal Drops', dosage: '1–2 drops per nostril, twice daily.', warning: 'Do not use for more than 5–7 consecutive days (rebound congestion).' }
         ],
         whenToSeeDoctor: 'Symptoms last >10 days, green/yellow phlegm with high fever, or severe shortness of breath.'
     },
     {
-        condition: 'Acid Reflux / Mild Heartburn',
+        condition: 'Acid reflux / mild heartburn',
+        code: 'AR',
         safeToTreat: true,
         tips: [
-            'Avoid lying down for at least 2-3 hours after eating.',
-            'Elevate the head of your bed by 6-8 inches.',
+            'Avoid lying down for at least 2–3 hours after eating.',
+            'Elevate the head of your bed by 6–8 inches.',
             'Avoid trigger foods: spicy, fried, citrus, caffeine, and alcohol.'
         ],
         medicines: [
-            { name: 'Calcium Carbonate Antacids', dosage: '1-2 tablets chewed as symptoms occur.', warning: 'Do not exceed maximum daily dose on label.' },
-            { name: 'Pantoprazole / Omeprazole', dosage: '20mg - 40mg once daily before breakfast.', warning: 'For short-term use (up to 14 days) unless prescribed.' }
+            { name: 'Calcium Carbonate Antacids', dosage: '1–2 tablets chewed as symptoms occur.', warning: 'Do not exceed maximum daily dose on label.' },
+            { name: 'Pantoprazole / Omeprazole', dosage: '20mg – 40mg once daily before breakfast.', warning: 'For short-term use (up to 14 days) unless prescribed.' }
         ],
         whenToSeeDoctor: 'Difficulty swallowing, black/tarry stools, unexplained weight loss, or severe chest pain (which could mimic a heart attack).'
     },
     {
-        condition: 'Mild Acute Diarrhea',
+        condition: 'Mild acute diarrhea',
+        code: 'DR',
         safeToTreat: true,
         tips: [
-            'Focus completely on fluid replacement (ORS - Oral Rehydration Salts).',
+            'Focus completely on fluid replacement (ORS — Oral Rehydration Salts).',
             'Eat a bland BRAT diet: Bananas, Rice, Applesauce, Toast.',
             'Avoid dairy, caffeine, and very greasy or sweet foods.'
         ],
@@ -70,29 +74,29 @@ const OTC_GUIDES = [
 
 const REMEDY_CATEGORIES = [
     {
-        name: 'Digestive Health',
-        icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+        name: 'Digestive health',
+        code: 'DG',
         items: [
-            { name: 'Bloating & Gas', remedies: 'Peppermint oil, Chamomile tea, Probiotics, Fennel seeds' },
+            { name: 'Bloating & gas', remedies: 'Peppermint oil, Chamomile tea, Probiotics, Fennel seeds' },
             { name: 'Constipation', remedies: 'Psyllium husk, Prune juice, Magnesium citrate, Hydration' },
             { name: 'Nausea', remedies: 'Ginger root, Vitamin B6, Acupressure wristbands' }
         ]
     },
     {
-        name: 'Skin & Dermatology',
-        icon: 'M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5',
+        name: 'Skin & dermatology',
+        code: 'SK',
         items: [
-            { name: 'Acne & Blemishes', remedies: 'Tea tree oil, Salicylic acid (Willow bark), Green tea extract' },
-            { name: 'Dry Skin / Eczema', remedies: 'Colloidal oatmeal bath, Coconut oil, Ceramide creams' },
-            { name: 'Minor Burns', remedies: 'Cool water running, Honey dressing, Calendula ointment' }
+            { name: 'Acne & blemishes', remedies: 'Tea tree oil, Salicylic acid (Willow bark), Green tea extract' },
+            { name: 'Dry skin / eczema', remedies: 'Colloidal oatmeal bath, Coconut oil, Ceramide creams' },
+            { name: 'Minor burns', remedies: 'Cool water running, Honey dressing, Calendula ointment' }
         ]
     },
     {
-        name: 'Pain & Stress',
-        icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+        name: 'Pain & stress',
+        code: 'PS',
         items: [
-            { name: 'Headaches (Tension)', remedies: 'Peppermint oil on temples, Magnesium, Hydration' },
-            { name: 'Muscle Aches', remedies: 'Epsom salt baths, Arnica gel, Heat/Ice therapy' },
+            { name: 'Headaches (tension)', remedies: 'Peppermint oil on temples, Magnesium, Hydration' },
+            { name: 'Muscle aches', remedies: 'Epsom salt baths, Arnica gel, Heat/Ice therapy' },
             { name: 'Insomnia', remedies: 'Melatonin, Valerian root, Tart cherry juice, Sleep hygiene' }
         ]
     }
@@ -145,157 +149,266 @@ const remediesSchema = {
 
 export default function RemediesPage() {
     return (
-        <main className="min-h-screen bg-slate-50 text-slate-900 pt-24 pb-16">
+        <main style={{ background: 'var(--bg)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
             <Script
                 id="remedies-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(remediesSchema) }}
             />
-            <div className="max-w-7xl mx-auto px-6 mt-10">
 
-                {/* Hero Section */}
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 px-5 py-2.5 rounded-2xl bg-teal-50 border border-teal-100 mb-8 max-w-fit mx-auto">
-                        <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
-                        </span>
-                        <div className="flex items-center gap-1.5">
-                            <span className="text-sm font-bold text-teal-800 tracking-wide uppercase">AI-Curated Pharmacy & Care</span>
-                        </div>
-                    </div>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-7">
 
-                    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-cyan-600">
-                            Safe OTC Medicines
-                        </span> & Home Care
+                {/* Breadcrumb */}
+                <div
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
+                    <span>/</span>
+                    <span style={{ color: 'var(--ink)' }}>Remedies</span>
+                </div>
+
+                {/* Hero */}
+                <header className="col gap-4">
+                    <span className="section-mark">the desk / safe self-care</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 7vw, 84px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                            maxWidth: 920,
+                        }}
+                    >
+                        Safe <span style={{ color: 'var(--cobalt)' }}>OTC medicines</span> & home care
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                        Evidence-based over-the-counter (OTC) medication guides and natural home remedies for minor, safe-to-treat conditions.
+                    <p className="lede" style={{ fontSize: 'clamp(16px, 1.55vw, 19px)', maxWidth: 680 }}>
+                        Evidence-based over-the-counter (OTC) medication guides and natural home remedies for minor, safe-to-treat conditions. Reviewed against authoritative sources before publication.
                     </p>
-                </div>
+                    <div className="row gap-3 ai-center" style={{ marginTop: 4, flexWrap: 'wrap' }}>
+                        <span className="pill pill-mint">{OTC_GUIDES.length} OTC guides</span>
+                        <span className="pill pill-cobalt">{REMEDY_CATEGORIES.length} natural-remedy categories</span>
+                        <span className="kicker">verified · updated continuously</span>
+                    </div>
 
-                {/* ── HIGH PRIORITY MEDICAL DISCLAIMER ── */}
-                <div className="mb-16 p-6 md:p-8 bg-rose-50 border-2 border-rose-200 rounded-3xl relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-2 h-full bg-rose-500" />
-                    <div className="flex items-start gap-4">
-                        <div className="p-3 bg-white rounded-2xl shadow-sm text-rose-600 shrink-0 border border-rose-100">
-                            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 className="text-xl font-extrabold text-rose-900 mb-2">Important Medical Disclaimer</h2>
-                            <p className="text-rose-800/80 leading-relaxed">
-                                The information provided here is strictly for <strong>educational and informational purposes</strong> regarding minor health issues. It is <strong>NOT a substitute for professional medical advice, diagnosis, or treatment</strong>. Always read medication labels carefully, check for allergies, and consult a qualified healthcare provider if your symptoms are severe, persistent, or worsening. Always consult a pediatrician before giving OTC medications to children.
-                            </p>
+                    {/* Search */}
+                    <div className="row ai-center" style={{ position: 'relative', maxWidth: 640, marginTop: 12 }}>
+                        <span
+                            className="mono"
+                            style={{
+                                position: 'absolute',
+                                left: 14,
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                color: 'var(--ink-4)',
+                                fontSize: 13,
+                                pointerEvents: 'none',
+                            }}
+                            aria-hidden="true"
+                        >
+                            ⌕
+                        </span>
+                        <input
+                            className="input"
+                            placeholder="Search a symptom, remedy, or OTC medicine"
+                            style={{ paddingLeft: 36 }}
+                            aria-label="Search remedies"
+                        />
+                    </div>
+                </header>
+
+                {/* Critical disclaimer */}
+                <section style={{ marginTop: 16 }}>
+                    <div className="card-quiet" style={{ padding: 24, borderLeft: '3px solid var(--orange)' }}>
+                        <div className="row gap-3 ai-start">
+                            <span className="pill pill-orange" style={{ flexShrink: 0 }}>important medical disclaimer</span>
+                            <div>
+                                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: 'var(--ink-2)' }}>
+                                    The information provided here is strictly for <strong style={{ color: 'var(--ink)' }}>educational and informational purposes</strong> regarding minor health issues. It is <strong style={{ color: 'var(--ink)' }}>not</strong> a substitute for professional medical advice, diagnosis, or treatment. Always read medication labels carefully, check for allergies, and consult a qualified healthcare provider if your symptoms are severe, persistent, or worsening. Always consult a pediatrician before giving OTC medications to children.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                {/* ── OTC MEDICATIONS SECTION ── */}
-                <div className="mb-20">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                        <svg className="w-8 h-8 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-                        Safe to Treat at Home: OTC Guides
-                    </h2>
-                    <div className="grid lg:grid-cols-2 gap-8">
+                {/* OTC Guides */}
+                <section className="col gap-5" style={{ marginTop: 32 }}>
+                    <div className="row between ai-end">
+                        <div className="col gap-2">
+                            <span className="section-mark">I / OTC guides</span>
+                            <h2 className="display" style={{ fontSize: 28, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}>
+                                Safe to treat at home.
+                            </h2>
+                        </div>
+                        <span className="kicker">{OTC_GUIDES.length} conditions</span>
+                    </div>
+
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
                         {OTC_GUIDES.map((guide, idx) => (
-                            <div key={idx} className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                                <div className="px-6 py-5 border-b border-slate-100 bg-slate-50/50 flex items-center justify-between">
-                                    <h3 className="text-lg font-bold text-slate-900">{guide.condition}</h3>
-                                    <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider rounded-full border border-emerald-200">
-                                        Safe to self-treat
-                                    </span>
+                            <article key={idx} className="card col" style={{ overflow: 'hidden' }}>
+                                {/* Header */}
+                                <div className="row between ai-center hairline-b" style={{ padding: '18px 22px' }}>
+                                    <div className="row gap-3 ai-center">
+                                        <span className="spec-icon" aria-hidden="true">{guide.code}</span>
+                                        <h3 className="display" style={{ fontSize: 17, margin: 0, fontWeight: 600, letterSpacing: '-0.015em' }}>
+                                            {guide.condition}
+                                        </h3>
+                                    </div>
+                                    <span className="pill pill-mint">safe · self-treat</span>
                                 </div>
-                                <div className="p-6 space-y-6">
-                                    {/* Actionable Tips */}
-                                    <div>
-                                        <h4 className="text-sm font-extrabold text-slate-500 uppercase tracking-wider mb-3">General Tips</h4>
-                                        <ul className="space-y-2">
+
+                                <div className="col gap-5" style={{ padding: 22 }}>
+                                    {/* General Tips */}
+                                    <div className="col gap-3">
+                                        <span className="kicker">general tips</span>
+                                        <ul className="clean col gap-2">
                                             {guide.tips.map((tip, i) => (
-                                                <li key={i} className="flex gap-2 text-sm text-slate-700">
-                                                    <svg className="w-5 h-5 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                                    {tip}
+                                                <li key={i} className="row gap-3 ai-baseline" style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55 }}>
+                                                    <span style={{ width: 5, height: 5, borderRadius: 999, background: 'var(--mint-2)', marginTop: 8, flexShrink: 0 }} />
+                                                    <span>{tip}</span>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
 
                                     {/* Medicines */}
-                                    <div>
-                                        <h4 className="text-sm font-extrabold text-slate-500 uppercase tracking-wider mb-3">Suggested OTC Medicines</h4>
-                                        <div className="space-y-3">
+                                    <div className="col gap-3">
+                                        <span className="kicker">suggested OTC medicines</span>
+                                        <div className="col gap-3">
                                             {guide.medicines.map((med, i) => (
-                                                <div key={i} className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                                                    <div className="font-bold text-slate-900 mb-1">{med.name}</div>
-                                                    <div className="text-sm text-slate-600 mb-2"><span className="font-medium text-slate-500">Dosage:</span> {med.dosage}</div>
-                                                    <div className="text-xs text-amber-700 bg-amber-50 px-3 py-2 rounded-xl flex gap-2 items-start mt-3">
-                                                        <svg className="w-4 h-4 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                                                        {med.warning}
+                                                <div key={i} className="card-flat" style={{ padding: 14, background: 'var(--paper-2)' }}>
+                                                    <div className="row between ai-baseline" style={{ marginBottom: 6 }}>
+                                                        <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)' }}>{med.name}</div>
+                                                    </div>
+                                                    <div style={{ fontSize: 13, color: 'var(--ink-2)', marginBottom: 8 }}>
+                                                        <span className="kicker" style={{ marginRight: 8 }}>dosage</span>
+                                                        {med.dosage}
+                                                    </div>
+                                                    <div className="row gap-2 ai-baseline" style={{ fontSize: 12, color: 'var(--ink-2)', borderTop: '1px solid var(--rule-2)', paddingTop: 8 }}>
+                                                        <span className="pill pill-lemon" style={{ flexShrink: 0 }}>warning</span>
+                                                        <span style={{ lineHeight: 1.5 }}>{med.warning}</span>
                                                     </div>
                                                 </div>
                                             ))}
                                         </div>
                                     </div>
 
-                                    {/* Warnings */}
-                                    <div className="pt-4 border-t border-slate-100">
-                                        <h4 className="text-sm font-extrabold text-rose-600 uppercase tracking-wider mb-2 flex items-center gap-2">
-                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                            When to see a Doctor
-                                        </h4>
-                                        <p className="text-sm text-rose-800 bg-rose-50/50 p-3 rounded-xl border border-rose-100">
+                                    {/* When to see doctor */}
+                                    <div className="col gap-3 hairline-t" style={{ paddingTop: 16 }}>
+                                        <div className="row gap-2 ai-center">
+                                            <span className="pill pill-orange">when to see a doctor</span>
+                                        </div>
+                                        <p style={{ margin: 0, fontSize: 13.5, color: 'var(--ink-2)', lineHeight: 1.6 }}>
                                             {guide.whenToSeeDoctor}
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* ── HOME REMEDIES SECTION ── */}
-                <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                    <svg className="w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                    Natural Relief & Lifestyle Interventions
-                </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {REMEDY_CATEGORIES.map((category) => (
-                        <div key={category.name} className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2.5 bg-teal-50 rounded-xl">
-                                    <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                        <path strokeLinecap="round" strokeLinejoin="round" d={category.icon} />
-                                    </svg>
-                                </div>
-                                <h2 className="text-xl font-bold text-slate-900">{category.name}</h2>
-                            </div>
-
-                            <div className="space-y-4">
-                                {category.items.map((item, idx) => (
-                                    <div key={idx} className="p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-teal-200 transition-colors">
-                                        <h3 className="font-semibold text-slate-800 mb-2 flex justify-between items-center">
-                                            {item.name}
-                                            <Link href={`/symptoms`} className="text-teal-600 hover:text-teal-700">
-                                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                </svg>
-                                            </Link>
-                                        </h3>
-                                        <div className="flex gap-2">
-                                            <svg className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                            </svg>
-                                            <p className="text-sm text-slate-600 leading-relaxed">{item.remedies}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                {/* Natural Remedies */}
+                <section className="col gap-5" style={{ marginTop: 32 }}>
+                    <div className="row between ai-end">
+                        <div className="col gap-2">
+                            <span className="section-mark">II / natural relief</span>
+                            <h2 className="display" style={{ fontSize: 28, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}>
+                                Lifestyle interventions.
+                            </h2>
                         </div>
-                    ))}
-                </div>
+                        <span className="kicker">{REMEDY_CATEGORIES.length} categories</span>
+                    </div>
 
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {REMEDY_CATEGORIES.map((category, ci) => {
+                            const isLastCol = ci === REMEDY_CATEGORIES.length - 1;
+                            return (
+                                <div
+                                    key={category.name}
+                                    className="col gap-4"
+                                    style={{
+                                        padding: 22,
+                                        borderRight: !isLastCol ? '1px solid var(--rule)' : 'none',
+                                    }}
+                                >
+                                    <div className="row between ai-center">
+                                        <span className="spec-icon" aria-hidden="true">{category.code}</span>
+                                        <span className="kicker">{category.items.length} entries</span>
+                                    </div>
+                                    <h3 className="display" style={{ fontSize: 18, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}>
+                                        {category.name}
+                                    </h3>
+                                    <div className="col gap-3">
+                                        {category.items.map((item, idx) => (
+                                            <div key={idx} className="col gap-2 hairline-t" style={{ paddingTop: 12 }}>
+                                                <div className="row between ai-center">
+                                                    <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)' }}>{item.name}</span>
+                                                    <Link
+                                                        href="/symptoms"
+                                                        aria-label={`Find specialists for ${item.name}`}
+                                                        className="kicker"
+                                                        style={{ color: 'var(--cobalt)' }}
+                                                    >
+                                                        →
+                                                    </Link>
+                                                </div>
+                                                <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--ink-2)' }}>
+                                                    {item.remedies}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                {/* CTA */}
+                <section style={{ marginTop: 32 }}>
+                    <div className="card" style={{ padding: 28 }}>
+                        <span className="kicker" style={{ display: 'block', marginBottom: 8 }}>
+                            <span className="dot" />
+                            symptoms not improving?
+                        </span>
+                        <h3 className="display" style={{ fontSize: 22, margin: '0 0 8px', fontWeight: 600, letterSpacing: '-0.02em' }}>
+                            Talk to a verified specialist.
+                        </h3>
+                        <p className="muted" style={{ margin: '0 0 18px', fontSize: 14, lineHeight: 1.6 }}>
+                            If self-care isn&apos;t working or your symptoms are escalating, escalate to a board-certified clinician — don&apos;t wait it out.
+                        </p>
+                        <div className="row gap-3" style={{ flexWrap: 'wrap' }}>
+                            <Link href="/symptoms" className="btn btn-cobalt">Run symptom check</Link>
+                            <Link href="/doctors" className="btn btn-paper">Find a specialist</Link>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     );
