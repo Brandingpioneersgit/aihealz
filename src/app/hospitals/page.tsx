@@ -2,6 +2,7 @@ import prisma from '@/lib/db';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { cookies } from 'next/headers';
+import { AvatarWithFallback } from '@/components/ui/image-with-fallback';
 import {
   generateItemListSchema,
   generateOrganizationSchema,
@@ -56,6 +57,13 @@ async function getGeoFromCookie() {
   };
 }
 
+function hospitalInitials(name: string): string {
+  const words = name.replace(/[^A-Za-z\s]/g, '').trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return 'HX';
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  return (words[0][0] + words[1][0]).toUpperCase();
+}
+
 export default async function HospitalsPage() {
   const geo = await getGeoFromCookie();
 
@@ -71,20 +79,17 @@ export default async function HospitalsPage() {
       where: { slug: geo.countrySlug, level: 'country' },
     });
     if (country) {
-      // Get all descendant geographies (states and cities under the country)
       const states = await prisma.geography.findMany({
         where: { parentId: country.id },
         select: { id: true },
       });
       const stateIds = states.map(s => s.id);
 
-      // Get cities under states
       const cities = await prisma.geography.findMany({
         where: { parentId: { in: stateIds } },
         select: { id: true },
       });
 
-      // Include country ID, state IDs, and city IDs
       const allGeoIds = [country.id, ...stateIds, ...cities.map(c => c.id)];
       geoFilter = { geographyId: { in: allGeoIds } };
     }
@@ -135,7 +140,7 @@ export default async function HospitalsPage() {
   const cityMap = new Map(cities.map(c => [c.id, c]));
 
   const formatRating = (rating: number | null) => {
-    if (!rating) return '-';
+    if (!rating) return '–';
     return Number(rating).toFixed(1);
   };
 
@@ -171,62 +176,143 @@ export default async function HospitalsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-      {/* Structured Data */}
+    <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Background */}
-      <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
-
-      {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-6 mt-10 relative z-10">
-        {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-          <span className="text-white">Hospitals</span>
-        </nav>
-
-        <div className="max-w-3xl mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-white">
-            Find the Best Hospitals
-            {geo?.citySlug && <span className="text-teal-400"> in Your City</span>}
-          </h1>
-          <p className="text-lg text-slate-400 mb-8">
-            Compare {stats._count}+ hospitals by patient reviews, specialties, accreditations, and more.
-            Trusted by domestic and international patients.
-          </p>
-
-          {/* Stats Row */}
-          <div className="flex flex-wrap gap-4">
-            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3">
-              <span className="text-2xl font-bold text-white">{stats._count}</span>
-              <span className="ml-2 text-slate-500">Hospitals</span>
-            </div>
-            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3">
-              <span className="text-2xl font-bold text-white">{formatRating(stats._avg.overallRating as number | null)}</span>
-              <span className="ml-2 text-slate-500">Avg Rating</span>
-            </div>
-            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3">
-              <span className="text-2xl font-bold text-white">{formatRating(stats._avg.internationalRating as number | null)}</span>
-              <span className="ml-2 text-slate-500">Int&apos;l Rating</span>
-            </div>
+      <div
+        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+        className="col gap-7"
+      >
+        {/* ── Hero ──────────────────────────────────── */}
+        <header className="col gap-4">
+          <div
+            className="row gap-2 mono"
+            style={{
+              fontSize: 11,
+              color: 'var(--ink-3)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+            }}
+            aria-label="Breadcrumb"
+          >
+            <Link href="/">Home</Link>
+            <span>/</span>
+            <span style={{ color: 'var(--ink)' }}>Hospitals</span>
           </div>
+
+          <span className="section-mark">the index / by hospital</span>
+
+          <h1
+            className="display"
+            style={{
+              fontSize: 'clamp(40px, 7vw, 88px)',
+              lineHeight: 0.95,
+              letterSpacing: '-0.045em',
+              margin: 0,
+              fontWeight: 600,
+            }}
+          >
+            <span className="num" style={{ color: 'var(--cobalt)', fontWeight: 600 }}>
+              {(stats._count as number).toLocaleString()}
+            </span>{' '}
+            hospitals
+            <span style={{ color: 'var(--orange)' }}>.</span>
+          </h1>
+
+          <p
+            className="lede"
+            style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 680 }}
+          >
+            Patient-reviewed, accreditation-verified, specialty-indexed. Compare bed count, JCI/NABH credentials, and outcome data — for both domestic and international patients.
+          </p>
+        </header>
+
+        {/* ── Stats strip ────────────────────────────── */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: 0,
+            border: '1px solid var(--rule)',
+            borderRadius: 'var(--r-3)',
+            background: 'var(--paper)',
+            overflow: 'hidden',
+          }}
+        >
+          {[
+            { v: (stats._count as number).toLocaleString(), l: 'hospitals indexed' },
+            { v: formatRating(stats._avg.overallRating as number | null), l: 'avg overall rating' },
+            { v: formatRating(stats._avg.domesticRating as number | null), l: 'avg domestic rating' },
+            { v: formatRating(stats._avg.internationalRating as number | null), l: 'avg int’l rating' },
+          ].map((s, i, arr) => (
+            <div
+              key={s.l}
+              className="col gap-1"
+              style={{
+                padding: '20px 24px',
+                borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+              }}
+            >
+              <div
+                className="display num"
+                style={{
+                  fontSize: 32,
+                  fontWeight: 500,
+                  letterSpacing: '-0.025em',
+                  lineHeight: 1,
+                  color: 'var(--ink)',
+                }}
+              >
+                {s.v}
+              </div>
+              <div
+                className="mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--ink-3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                }}
+              >
+                {s.l}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* City Filters */}
+        {/* ── City Filters ───────────────────────────── */}
         {topCities.length > 0 && (
-          <div className="mb-8">
-            <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Browse by City</h2>
-            <div className="flex flex-wrap gap-2">
+          <section className="col gap-3" aria-labelledby="cities-heading">
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+              <h2
+                id="cities-heading"
+                className="display"
+                style={{ fontSize: 22, margin: 0, letterSpacing: '-0.02em', fontWeight: 600 }}
+              >
+                Browse by city
+              </h2>
+              <span
+                className="mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--ink-3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                }}
+              >
+                {topCities.length} cities
+              </span>
+            </div>
+            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
               <Link
                 href="/hospitals"
-                className="px-4 py-2 rounded-full bg-teal-500/20 text-teal-400 text-sm font-medium hover:bg-teal-500/30 transition-colors border border-teal-500/30"
+                className="pill pill-cobalt"
+                style={{ textTransform: 'none', cursor: 'pointer' }}
               >
-                All Cities
+                All cities
               </Link>
               {topCities.map(tc => {
                 const city = cityMap.get(tc.geographyId!);
@@ -235,183 +321,269 @@ export default async function HospitalsPage() {
                   <Link
                     key={city.id}
                     href={`/hospitals?city=${city.slug}`}
-                    className="px-4 py-2 rounded-full bg-slate-800/50 text-slate-300 text-sm font-medium hover:bg-slate-700/50 transition-colors border border-white/5"
+                    className="pill"
+                    style={{ textTransform: 'none', cursor: 'pointer' }}
                   >
-                    {city.name} ({tc._count})
+                    {city.name}
+                    <span className="mono muted" style={{ marginLeft: 6 }}>
+                      {tc._count}
+                    </span>
                   </Link>
                 );
               })}
             </div>
-          </div>
+          </section>
         )}
 
-        {/* Hospital Cards */}
-        <div className="grid gap-5">
-          {hospitals.map((hospital) => (
-            <Link
-              key={hospital.id}
-              href={`/hospitals/${hospital.slug}`}
-              className="bg-slate-900/50 rounded-2xl border border-white/5 hover:border-teal-500/30 transition-all duration-300 overflow-hidden group"
-            >
-              <div className="p-6">
-                <div className="flex flex-col lg:flex-row gap-6">
-                  {/* Hospital Image */}
-                  <div className="lg:w-48 lg:h-32 flex-shrink-0">
-                    {hospital.logo ? (
-                      <img
-                        src={hospital.logo}
-                        alt={hospital.name}
-                        className="w-full h-32 lg:h-full object-contain rounded-xl bg-slate-800 p-4"
-                      />
-                    ) : (
-                      <div className="w-full h-32 lg:h-full rounded-xl bg-gradient-to-br from-teal-900/50 to-emerald-900/50 flex items-center justify-center border border-white/5">
-                        <svg className="w-16 h-16 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                      </div>
-                    )}
-                  </div>
+        {/* ── Hospital list ──────────────────────────── */}
+        {hospitals.length > 0 ? (
+          <section className="col gap-4" aria-labelledby="hospitals-heading">
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+              <h2
+                id="hospitals-heading"
+                className="display"
+                style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+              >
+                Top hospitals
+              </h2>
+              <span
+                className="mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--ink-3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                }}
+              >
+                {hospitals.length} shown
+              </span>
+            </div>
 
-                  {/* Hospital Info */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-start gap-2 mb-2">
-                      <h2 className="text-xl font-bold text-white group-hover:text-teal-400 transition-colors">
-                        {hospital.name}
-                      </h2>
-                      {hospital.isFeatured && (
-                        <span className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 text-xs font-semibold border border-amber-500/30">
-                          Featured
-                        </span>
-                      )}
-                      {hospital.isVerified && (
-                        <span className="px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 text-xs font-semibold flex items-center gap-1 border border-green-500/30">
-                          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                          Verified
-                        </span>
-                      )}
-                    </div>
+            <div className="col gap-3">
+              {hospitals.map(hospital => {
+                const isTop = hospital.isFeatured;
+                const initials = hospitalInitials(hospital.name);
+                const overall = hospital.overallRating as number | null;
+                const intl = hospital.internationalRating as number | null;
+                const dom = hospital.domesticRating as number | null;
 
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        {hospital.geography?.name || hospital.city}
-                      </span>
-                      <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-medium border border-white/5">
-                        {HOSPITAL_TYPE_LABELS[hospital.hospitalType] || hospital.hospitalType}
-                      </span>
-                      {hospital.ownershipType &&
-                       hospital.ownershipType.toLowerCase() !== hospital.hospitalType.toLowerCase() &&
-                       hospital.ownershipType.toLowerCase() !== (HOSPITAL_TYPE_LABELS[hospital.hospitalType] || '').toLowerCase() && (
-                        <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-medium border border-white/5">
-                          {hospital.ownershipType}
-                        </span>
-                      )}
-                      {hospital.bedCount && (
-                        <span className="text-slate-500">
-                          {hospital.bedCount} Beds
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Accreditations */}
-                    {hospital.accreditations.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {[...new Set(hospital.accreditations)].slice(0, 4).map((acc, i) => (
-                          <span key={i} className="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 text-xs font-medium border border-blue-500/20">
-                            {acc}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Specialties */}
-                    {hospital.specialties.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {hospital.specialties.map((spec, idx) => (
-                          <span key={idx} className="px-2 py-0.5 rounded bg-teal-500/20 text-teal-400 text-xs font-medium border border-teal-500/20">
-                            {spec.specialty}
-                          </span>
-                        ))}
-                        {hospital._count.departments > 5 && (
-                          <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-500 text-xs border border-white/5">
-                            +{hospital._count.departments - 5} more
-                          </span>
+                return (
+                  <Link
+                    key={hospital.id}
+                    href={`/hospitals/${hospital.slug}`}
+                    className="card"
+                    style={{
+                      padding: 20,
+                      display: 'block',
+                      borderColor: isTop ? 'var(--cobalt)' : 'var(--rule)',
+                      color: 'var(--ink)',
+                    }}
+                  >
+                    <div className="row gap-4 ai-start" style={{ flexWrap: 'wrap' }}>
+                      {/* Logo / monogram */}
+                      <div
+                        style={{
+                          width: 72,
+                          height: 72,
+                          borderRadius: 'var(--r-2)',
+                          overflow: 'hidden',
+                          flexShrink: 0,
+                          background: 'var(--bg-2)',
+                          border: '1px solid var(--rule)',
+                        }}
+                      >
+                        {hospital.logo ? (
+                          <AvatarWithFallback
+                            src={hospital.logo}
+                            alt={hospital.name}
+                            className="w-full h-full object-contain"
+                          />
+                        ) : (
+                          <div
+                            className="row ai-center center"
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              fontFamily: 'var(--display)',
+                              fontSize: 22,
+                              fontWeight: 600,
+                              color: 'var(--ink-2)',
+                              letterSpacing: '-0.02em',
+                            }}
+                          >
+                            {initials}
+                          </div>
                         )}
                       </div>
-                    )}
 
-                    {/* Quick Stats */}
-                    <div className="flex flex-wrap items-center gap-4 text-sm">
-                      <span className="text-slate-500">{hospital._count.doctors} Doctors</span>
-                      <span className="text-slate-500">{hospital._count.reviews} Reviews</span>
-                    </div>
-                  </div>
+                      {/* Body */}
+                      <div className="col gap-2" style={{ flex: 1, minWidth: 0 }}>
+                        <div className="row between ai-start" style={{ gap: 12, flexWrap: 'wrap' }}>
+                          <div className="col gap-1" style={{ minWidth: 0 }}>
+                            <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                              <span
+                                className="display"
+                                style={{
+                                  fontSize: 20,
+                                  fontWeight: 500,
+                                  letterSpacing: '-0.02em',
+                                }}
+                              >
+                                {hospital.name}
+                              </span>
+                              {hospital.isFeatured && (
+                                <span className="pill pill-cobalt">featured</span>
+                              )}
+                              {hospital.isVerified && (
+                                <span className="pill pill-mint">verified</span>
+                              )}
+                            </div>
+                            <div className="row gap-3 ai-center muted" style={{ fontSize: 13, flexWrap: 'wrap' }}>
+                              <span className="mono" style={{ fontSize: 12 }}>
+                                {hospital.geography?.name || hospital.city || '—'}
+                              </span>
+                              <span style={{ color: 'var(--ink-4)' }}>·</span>
+                              <span style={{ fontSize: 13 }}>
+                                {HOSPITAL_TYPE_LABELS[hospital.hospitalType] || hospital.hospitalType}
+                              </span>
+                              {hospital.bedCount && (
+                                <>
+                                  <span style={{ color: 'var(--ink-4)' }}>·</span>
+                                  <span className="mono num" style={{ fontSize: 12 }}>
+                                    {hospital.bedCount} beds
+                                  </span>
+                                </>
+                              )}
+                            </div>
+                          </div>
 
-                  {/* Ratings */}
-                  <div className="lg:w-48 flex-shrink-0 flex flex-row lg:flex-col gap-3 lg:items-end lg:text-right">
-                    {/* Overall Rating */}
-                    <div className="flex items-center gap-2 lg:flex-row-reverse">
-                      <div className="flex items-center gap-1 px-3 py-1.5 bg-teal-500 text-slate-900 rounded-lg font-bold">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        {formatRating(hospital.overallRating as number | null)}
+                          {/* Ratings column */}
+                          <div className="col ai-end gap-1">
+                            <div className="num" style={{ fontSize: 18, fontWeight: 500 }}>
+                              ★ {formatRating(overall)}
+                            </div>
+                            {dom !== null && (
+                              <div
+                                className="mono"
+                                style={{ fontSize: 11, color: 'var(--ink-3)' }}
+                              >
+                                dom {formatRating(dom)}
+                              </div>
+                            )}
+                            {intl !== null && (
+                              <div
+                                className="mono"
+                                style={{ fontSize: 11, color: 'var(--cobalt)' }}
+                              >
+                                int’l {formatRating(intl)}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Accreditation pills */}
+                        {hospital.accreditations.length > 0 && (
+                          <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                            {[...new Set(hospital.accreditations)].slice(0, 4).map((acc, i) => (
+                              <span key={i} className="pill pill-cobalt">
+                                {acc}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Specialty pills */}
+                        {hospital.specialties.length > 0 && (
+                          <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                            {hospital.specialties.map((spec, idx) => (
+                              <span key={idx} className="pill" style={{ textTransform: 'none' }}>
+                                {spec.specialty}
+                              </span>
+                            ))}
+                            {hospital._count.departments > 5 && (
+                              <span className="pill muted" style={{ textTransform: 'none' }}>
+                                +{hospital._count.departments - 5} more
+                              </span>
+                            )}
+                          </div>
+                        )}
+
+                        {/* Meta row */}
+                        <div
+                          className="row gap-4 mono"
+                          style={{ flexWrap: 'wrap', fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.06em', textTransform: 'uppercase' }}
+                        >
+                          <span>
+                            <span className="num" style={{ color: 'var(--ink-2)' }}>
+                              {hospital._count.doctors}
+                            </span>{' '}
+                            doctors
+                          </span>
+                          <span>
+                            <span className="num" style={{ color: 'var(--ink-2)' }}>
+                              {hospital._count.reviews}
+                            </span>{' '}
+                            reviews
+                          </span>
+                        </div>
+
+                        {/* Pros & awards */}
+                        {(hospital.prosForPatients.length > 0 ||
+                          (Array.isArray(hospital.awards) && hospital.awards.length > 0)) && (
+                          <div
+                            className="row gap-3 hairline-t"
+                            style={{ flexWrap: 'wrap', paddingTop: 10, marginTop: 4 }}
+                          >
+                            {hospital.prosForPatients.slice(0, 2).map((pro, i) => (
+                              <span
+                                key={i}
+                                className="row gap-1 ai-center"
+                                style={{ fontSize: 12, color: 'var(--mint-3)' }}
+                              >
+                                <span aria-hidden="true">✓</span>
+                                {pro}
+                              </span>
+                            ))}
+                            {Array.isArray(hospital.awards) &&
+                              (hospital.awards as Array<{ award: string }>)
+                                .slice(0, 2)
+                                .map((award, i) => (
+                                  <span
+                                    key={i}
+                                    className="row gap-1 ai-center"
+                                    style={{ fontSize: 12, color: 'var(--ink-2)' }}
+                                  >
+                                    <span aria-hidden="true" style={{ color: 'var(--lemon-2)' }}>★</span>
+                                    {award.award}
+                                  </span>
+                                ))}
+                          </div>
+                        )}
                       </div>
-                      <span className="text-xs text-slate-500">Overall</span>
                     </div>
-
-                    {/* Domestic vs International */}
-                    <div className="flex flex-col gap-1 text-xs">
-                      <div className="flex items-center gap-2 lg:flex-row-reverse">
-                        <span className="font-semibold text-slate-300">{formatRating(hospital.domesticRating as number | null)}</span>
-                        <span className="text-slate-500">Domestic</span>
-                      </div>
-                      <div className="flex items-center gap-2 lg:flex-row-reverse">
-                        <span className="font-semibold text-purple-400">{formatRating(hospital.internationalRating as number | null)}</span>
-                        <span className="text-slate-500">Int&apos;l Patients</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Pros & Awards */}
-                {(hospital.prosForPatients.length > 0 || (Array.isArray(hospital.awards) && hospital.awards.length > 0)) && (
-                  <div className="mt-4 pt-4 border-t border-white/5 flex flex-wrap gap-4">
-                    {hospital.prosForPatients.slice(0, 2).map((pro, i) => (
-                      <span key={i} className="flex items-center gap-1 text-sm text-green-400">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {pro}
-                      </span>
-                    ))}
-                    {Array.isArray(hospital.awards) && (hospital.awards as Array<{ award: string }>).slice(0, 2).map((award, i) => (
-                      <span key={i} className="flex items-center gap-1 text-sm text-amber-400">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
-                        </svg>
-                        {award.award}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {hospitals.length === 0 && (
-          <div className="text-center py-16 bg-slate-900/50 rounded-2xl border border-white/5">
-            <svg className="w-16 h-16 mx-auto text-slate-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-            <h3 className="text-xl font-semibold text-white mb-2">No hospitals found</h3>
-            <p className="text-slate-500">Try selecting a different city or check back later.</p>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        ) : (
+          <div
+            className="card"
+            style={{
+              padding: 48,
+              textAlign: 'center',
+              borderStyle: 'dashed',
+            }}
+          >
+            <h3
+              className="display"
+              style={{ fontSize: 22, fontWeight: 600, marginBottom: 6, letterSpacing: '-0.02em' }}
+            >
+              Network syncing
+            </h3>
+            <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+              No hospitals match this filter yet — try a different city, or check back shortly.
+            </p>
           </div>
         )}
       </div>

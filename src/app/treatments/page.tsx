@@ -5,7 +5,7 @@ import Script from 'next/script';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
 import TreatmentsExplorer, { type TreatmentType } from '@/components/ui/treatments-explorer';
-import { normalizeSpecialty, SPECIALTY_ICON_DATA } from '@/lib/normalize-specialty';
+import { normalizeSpecialty } from '@/lib/normalize-specialty';
 import LanguageSwitcher from '@/components/ui/language-switcher';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { AIDiagnosisCTA, FindDoctorCTA, BookTestCTA } from '@/components/ui/cta-sections';
@@ -85,14 +85,14 @@ interface TreatmentEntry {
 
 const VALID_TYPES = new Set(['medical', 'surgical', 'otc', 'home_remedy', 'therapy', 'drug', 'injection', 'prescription']);
 
-// Treatment type icons and colors for featured section
-const TREATMENT_TYPES = [
-    { type: 'prescription', label: 'Prescription Drugs', iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', color: 'cyan', iconColor: 'text-cyan-400', description: 'FDA-approved medications requiring a prescription' },
-    { type: 'injection', label: 'Injectable Therapies', iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', color: 'pink', iconColor: 'text-pink-400', description: 'Biologics, vaccines, and injectable medications' },
-    { type: 'surgical', label: 'Surgical Procedures', iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4', color: 'rose', iconColor: 'text-rose-400', description: 'Minimally invasive and major surgical operations' },
-    { type: 'therapy', label: 'Therapy & Rehabilitation', iconPath: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z', color: 'violet', iconColor: 'text-violet-400', description: 'Physical therapy, occupational therapy, and rehabilitation' },
-    { type: 'otc', label: 'OTC Medications', iconPath: 'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z', color: 'emerald', iconColor: 'text-emerald-400', description: 'Over-the-counter drugs available without prescription' },
-    { type: 'home_remedy', label: 'Home Remedies', iconPath: 'M5 13l4 4L19 7', color: 'green', iconColor: 'text-green-400', description: 'Natural and traditional remedies for common ailments' },
+// Treatment type tiles — Bureau monogram style
+const TREATMENT_TYPES: { type: string; label: string; abbr: string; description: string }[] = [
+    { type: 'prescription', label: 'Prescription Drugs', abbr: 'RX', description: 'FDA-approved medications requiring a prescription' },
+    { type: 'injection', label: 'Injectable Therapies', abbr: 'IN', description: 'Biologics, vaccines, and injectable medications' },
+    { type: 'surgical', label: 'Surgical Procedures', abbr: 'SU', description: 'Minimally invasive and major surgical operations' },
+    { type: 'therapy', label: 'Therapy & Rehabilitation', abbr: 'TH', description: 'Physical therapy, occupational therapy, rehabilitation' },
+    { type: 'otc', label: 'OTC Medications', abbr: 'OT', description: 'Over-the-counter drugs available without prescription' },
+    { type: 'home_remedy', label: 'Home Remedies', abbr: 'HR', description: 'Natural and traditional remedies for common ailments' },
 ];
 
 // FAQs for both schema and visible display
@@ -337,7 +337,7 @@ export default async function TreatmentsDirectory() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(treatmentTypesSchema) }}
             />
 
-            <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
                 {/* Language Switcher Banner */}
                 <LanguageSwitcher
                     country={country}
@@ -347,316 +347,536 @@ export default async function TreatmentsDirectory() {
                     regionalDisplay={regionalDisplay}
                 />
 
-                {/* Background Effects */}
-                <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-blue-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-                <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
-                <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-teal-600/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none" />
+                <div
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                    className="col gap-7"
+                >
+                    {/* ── Hero ──────────────────────────────── */}
+                    <header className="col gap-4">
+                        <div
+                            className="row gap-2 mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                letterSpacing: '0.06em',
+                                textTransform: 'uppercase',
+                            }}
+                            aria-label="Breadcrumb"
+                        >
+                            <Link href="/">Home</Link>
+                            <span>/</span>
+                            <span style={{ color: 'var(--ink)' }}>Treatments Directory</span>
+                        </div>
 
-                <div className="max-w-7xl mx-auto px-6 relative z-10 mt-8">
+                        <span className="section-mark">the index / by treatment</span>
 
-                    {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" className="mb-6">
-                        <ol className="flex items-center gap-2 text-sm text-slate-400">
-                            <li>
-                                <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                            </li>
-                            <li aria-hidden="true">
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                            </li>
-                            <li>
-                                <span className="text-white font-medium">Treatments Directory</span>
-                            </li>
-                        </ol>
-                    </nav>
-
-                    {/* Hero Header */}
-                    <header className="mb-10 text-center max-w-4xl mx-auto">
-                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white leading-tight">
-                            Medical Treatments, Drugs & <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-500">Procedures Directory</span>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(40px, 7vw, 88px)',
+                                lineHeight: 0.95,
+                                letterSpacing: '-0.045em',
+                                margin: 0,
+                                fontWeight: 600,
+                            }}
+                        >
+                            <span className="num" style={{ color: 'var(--cobalt)', fontWeight: 600 }}>
+                                {totalTreatments.toLocaleString()}
+                            </span>{' '}
+                            treatments
+                            <span style={{ color: 'var(--orange)' }}>.</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-6 treatment-description">
-                            Browse {totalTreatments.toLocaleString()}+ treatments with cost estimates across 7 countries.
-                            Compare drug prices, find generic alternatives, and discover treatment options for your health needs.
+
+                        <p
+                            className="lede treatment-description"
+                            style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 680 }}
+                        >
+                            Drugs, surgeries, injections, therapies, home remedies — cost compared across seven countries. Find generic alternatives and save up to 90% on procedures abroad.
                         </p>
 
-                        {/* Search Bar - filtered to treatments only */}
-                        <div className="max-w-2xl mx-auto mb-8">
+                        <div style={{ maxWidth: 720 }}>
                             <SearchAutocomplete
-                                placeholder="Search treatments, drugs, procedures..."
-                                className="w-full"
+                                variant="bureau"
+                                placeholder="Search treatments, drugs, procedures…"
                                 typeFilter="treatment"
                             />
                         </div>
                     </header>
 
-                    {/* Stats Bar */}
-                    <section aria-label="Treatment Statistics" className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-white mb-1">{totalTreatments.toLocaleString()}+</div>
-                            <div className="text-sm text-slate-400">Total Treatments</div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-cyan-400 mb-1">{categories.length}</div>
-                            <div className="text-sm text-slate-400">Specialties</div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-emerald-400 mb-1">7</div>
-                            <div className="text-sm text-slate-400">Countries</div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-amber-400 mb-1">90%</div>
-                            <div className="text-sm text-slate-400">Potential Savings</div>
-                        </div>
-                    </section>
-
-                    {/* AI Diagnosis Inline CTA */}
-                    <section className="mb-12">
-                        <AIDiagnosisCTA
-                            variant="inline"
-                            title="Not sure which treatment you need?"
-                            subtitle="Our AI can help identify the right treatment based on your symptoms"
-                        />
-                    </section>
-
-                    {/* Featured Treatment Types */}
-                    <section aria-labelledby="treatment-types-heading" className="mb-12">
-                        <h2 id="treatment-types-heading" className="text-2xl font-bold text-white mb-6 text-center">
-                            Browse by Treatment Type
-                        </h2>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                            {TREATMENT_TYPES.map(t => (
-                                <Link
-                                    key={t.type}
-                                    href={`/treatments?type=${t.type}`}
-                                    className={`group bg-slate-900/60 border border-white/5 hover:border-${t.color}-500/30 rounded-xl p-4 text-center transition-all hover:bg-slate-800/60`}
+                    {/* ── Stats strip ──────────────────────────── */}
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {[
+                            { v: totalTreatments.toLocaleString(), l: 'treatments indexed' },
+                            { v: categories.length.toLocaleString(), l: 'specialties' },
+                            { v: '7', l: 'countries · cost mapped' },
+                            { v: '90%', l: 'potential savings' },
+                        ].map((s, i, arr) => (
+                            <div
+                                key={s.l}
+                                className="col gap-1"
+                                style={{
+                                    padding: '20px 24px',
+                                    borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                }}
+                            >
+                                <div
+                                    className="display num"
+                                    style={{
+                                        fontSize: 32,
+                                        fontWeight: 500,
+                                        letterSpacing: '-0.025em',
+                                        lineHeight: 1,
+                                        color: 'var(--ink)',
+                                    }}
                                 >
-                                    <div className={`w-10 h-10 mx-auto rounded-xl bg-slate-800/80 flex items-center justify-center mb-2 ${t.iconColor}`}>
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={t.iconPath} />
-                                        </svg>
-                                    </div>
-                                    <div className="text-sm font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors">
-                                        {t.label}
-                                    </div>
-                                    <div className="text-xs text-slate-500">
-                                        {typeCounts[t.type] || 0}+ options
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </section>
+                                    {s.v}
+                                </div>
+                                <div
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    {s.l}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
-                    {/* Featured Specialties */}
-                    <section aria-labelledby="specialties-heading" className="mb-12">
-                        <h2 id="specialties-heading" className="text-2xl font-bold text-white mb-6 text-center">
-                            Browse by Medical Specialty
-                        </h2>
-                        <div className="flex flex-wrap justify-center gap-3">
-                            {categories.slice(0, 16).map(cat => {
-                                const iconData = SPECIALTY_ICON_DATA[cat.specialty];
+                    {/* ── AI Diagnosis CTA ─────────────────────── */}
+                    <AIDiagnosisCTA
+                        variant="inline"
+                        title="Not sure which treatment you need?"
+                        subtitle="Drop your symptoms or lab report — we'll narrow this list to the treatments most likely to help."
+                    />
+
+                    {/* ── Browse by Treatment Type ─────────────── */}
+                    <section className="col gap-4" aria-labelledby="treatment-types-heading">
+                        <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                            <h2
+                                id="treatment-types-heading"
+                                className="display"
+                                style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+                            >
+                                Browse by treatment type
+                            </h2>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {TREATMENT_TYPES.length} categories
+                            </span>
+                        </div>
+
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                                gap: 0,
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--paper)',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {TREATMENT_TYPES.map((t, i) => {
+                                const cols = 3;
+                                const isLastCol = (i + 1) % cols === 0;
+                                const isLastRow = i >= TREATMENT_TYPES.length - cols;
                                 return (
                                     <Link
-                                        key={cat.specialty}
-                                        href={`/treatments?specialty=${encodeURIComponent(cat.specialty)}`}
-                                        className="px-4 py-2 bg-slate-800/60 border border-white/5 hover:border-cyan-500/30 rounded-full text-sm font-medium text-slate-300 hover:text-white transition-all flex items-center gap-2"
+                                        key={t.type}
+                                        href={`/treatments?type=${t.type}`}
+                                        className="col gap-3"
+                                        style={{
+                                            padding: '20px 22px',
+                                            borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                            borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                            cursor: 'pointer',
+                                        }}
                                     >
-                                        <span className={`w-4 h-4 ${iconData?.color || 'text-teal-400'}`}>
-                                            <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={iconData?.path || 'M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z'} />
-                                            </svg>
-                                        </span>
-                                        <span>{cat.specialty}</span>
-                                        <span className="text-xs text-slate-500">({cat.treatments.length})</span>
+                                        <div className="row between ai-center">
+                                            <div className="spec-icon">{t.abbr}</div>
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 11,
+                                                    color: 'var(--ink-3)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                }}
+                                            >
+                                                {(typeCounts[t.type] || 0).toLocaleString()} options
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <div
+                                                className="display"
+                                                style={{
+                                                    fontSize: 18,
+                                                    letterSpacing: '-0.02em',
+                                                    fontWeight: 500,
+                                                }}
+                                            >
+                                                {t.label}
+                                            </div>
+                                            <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
+                                                {t.description}
+                                            </div>
+                                        </div>
                                     </Link>
                                 );
                             })}
                         </div>
                     </section>
 
-                    {/* Interactive Explorer */}
+                    {/* ── Browse by Specialty ──────────────────── */}
+                    <section className="col gap-4" aria-labelledby="specialties-heading">
+                        <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                            <h2
+                                id="specialties-heading"
+                                className="display"
+                                style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+                            >
+                                Browse by specialty
+                            </h2>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {categories.length} specialties
+                            </span>
+                        </div>
+
+                        <div
+                            className="row gap-2"
+                            style={{ flexWrap: 'wrap' }}
+                        >
+                            {categories.slice(0, 18).map(cat => (
+                                <Link
+                                    key={cat.specialty}
+                                    href={`/treatments?specialty=${encodeURIComponent(cat.specialty)}`}
+                                    className="pill"
+                                    style={{ textTransform: 'none', cursor: 'pointer' }}
+                                >
+                                    {cat.specialty}
+                                    <span className="mono muted" style={{ marginLeft: 6 }}>
+                                        {cat.treatments.length}
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* ── Interactive Explorer ─────────────────── */}
                     <article aria-labelledby="explorer-heading">
-                        <h2 id="explorer-heading" className="sr-only">Browse All Treatments</h2>
+                        <h2 id="explorer-heading" className="sr-only">Browse all treatments</h2>
                         <TreatmentsExplorer categories={categories} defaultCountry={country} />
                     </article>
 
-                    {/* Mid-Page CTA - Medical Travel */}
-                    <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-900/40 via-teal-900/20 to-slate-900 border border-blue-500/20 p-8 md:p-12 shadow-2xl shadow-blue-900/20 my-16 group" aria-labelledby="medical-travel-heading">
-                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[80px] group-hover:bg-blue-500/20 transition-colors duration-1000 -translate-y-1/2 pointer-events-none" />
-
-                        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                            <div className="max-w-xl">
-                                <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                                    Concierge Medical Travel
+                    {/* ── Medical Travel CTA — dark ink card ──── */}
+                    <section
+                        className="card-ink"
+                        style={{ padding: 'clamp(28px, 4vw, 48px)' }}
+                        aria-labelledby="medical-travel-heading"
+                    >
+                        <div
+                            className="row between ai-center"
+                            style={{ flexWrap: 'wrap', gap: 24 }}
+                        >
+                            <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--cobalt-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.10em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    concierge medical travel
                                 </span>
-                                <h3 id="medical-travel-heading" className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-                                    Traveling for Surgery? Let us handle it all.
+                                <h3
+                                    id="medical-travel-heading"
+                                    className="display"
+                                    style={{
+                                        fontSize: 'clamp(28px, 3.5vw, 40px)',
+                                        lineHeight: 1.1,
+                                        margin: 0,
+                                        fontWeight: 600,
+                                        color: 'var(--paper)',
+                                        letterSpacing: '-0.03em',
+                                    }}
+                                >
+                                    Same surgery, <span style={{ color: 'var(--cobalt-3)' }}>a fraction of the bill</span><span style={{ color: 'var(--orange)' }}>.</span>
                                 </h3>
-                                <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                                    Save 50-90% on surgeries abroad. Our end-to-end concierge matches you with JCI-accredited hospitals, negotiates exact costs, and handles your entire travel itinerary seamlessly.
+                                <p
+                                    style={{
+                                        fontSize: 16,
+                                        color: 'rgba(255,255,255,.7)',
+                                        lineHeight: 1.55,
+                                        maxWidth: 540,
+                                        margin: 0,
+                                    }}
+                                >
+                                    Save 50–90% on surgeries abroad. Our concierge matches you with JCI-accredited hospitals, negotiates exact costs, and handles your entire itinerary end-to-end.
                                 </p>
-                                <div className="flex flex-wrap gap-4">
-                                    <Link href="/medical-travel/bot" className="px-8 py-4 bg-blue-500 hover:bg-blue-400 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all hover:-translate-y-1 flex items-center gap-2">
-                                        Build Your Estimate
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                    </Link>
-                                    <Link href="/medical-travel" className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all">
-                                        Learn More
-                                    </Link>
-                                </div>
+                            </div>
+                            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                <Link href="/medical-travel/bot" className="btn btn-cobalt btn-lg">
+                                    Build your estimate →
+                                </Link>
+                                <Link
+                                    href="/medical-travel"
+                                    className="btn btn-lg"
+                                    style={{
+                                        background: 'rgba(255,255,255,.08)',
+                                        color: 'var(--paper)',
+                                        borderColor: 'rgba(255,255,255,.15)',
+                                    }}
+                                >
+                                    Learn more
+                                </Link>
                             </div>
                         </div>
                     </section>
 
-                    {/* Cost Comparison Info Cards */}
-                    <section aria-labelledby="features-heading" className="grid md:grid-cols-3 gap-6 mb-16">
-                        <h2 id="features-heading" className="sr-only">Treatment Directory Features</h2>
-                        <article className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                            <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                    {/* ── Feature info cards ───────────────────── */}
+                    <section
+                        aria-labelledby="features-heading"
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
+                        <h2 id="features-heading" className="sr-only">Treatment directory features</h2>
+
+                        <article className="card col gap-3" style={{ padding: 24 }}>
+                            <div className="kicker">
+                                <span className="dot" />
+                                cost transparency
                             </div>
-                            <h3 className="text-lg font-bold text-white mb-2">Compare Costs Globally</h3>
-                            <p className="text-sm text-slate-400">
-                                View treatment costs across USA, UK, India, Thailand, Mexico, Turkey, and UAE. Find savings of up to 90% on procedures abroad with transparent pricing.
+                            <h3
+                                className="display"
+                                style={{ fontSize: 20, fontWeight: 600, margin: 0, letterSpacing: '-0.02em' }}
+                            >
+                                Compare costs globally
+                            </h3>
+                            <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, margin: 0 }}>
+                                Treatment costs across USA, UK, India, Thailand, Mexico, Turkey, and UAE. Find savings of up to 90% on procedures abroad with transparent pricing.
                             </p>
                         </article>
-                        <article className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                            <div className="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                                </svg>
+
+                        <article className="card col gap-3" style={{ padding: 24 }}>
+                            <div className="kicker">
+                                <span className="dot" style={{ background: 'var(--mint)' }} />
+                                savings
                             </div>
-                            <h3 className="text-lg font-bold text-white mb-2">Generic Alternatives</h3>
-                            <p className="text-sm text-slate-400">
-                                Find FDA-approved generic drugs that cost 80-85% less than brand names. Look for the &ldquo;Generic Available&rdquo; badge on medications.
+                            <h3
+                                className="display"
+                                style={{ fontSize: 20, fontWeight: 600, margin: 0, letterSpacing: '-0.02em' }}
+                            >
+                                Generic alternatives
+                            </h3>
+                            <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, margin: 0 }}>
+                                Find FDA-approved generic drugs that cost 80–85% less than brand names. Look for the &ldquo;Generic Available&rdquo; badge on medications.
                             </p>
                         </article>
-                        <article className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                            <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
+
+                        <article className="card col gap-3" style={{ padding: 24 }}>
+                            <div className="kicker">
+                                <span className="dot" style={{ background: 'var(--lemon-2)' }} />
+                                verified
                             </div>
-                            <h3 className="text-lg font-bold text-white mb-2">Verified Information</h3>
-                            <p className="text-sm text-slate-400">
+                            <h3
+                                className="display"
+                                style={{ fontSize: 20, fontWeight: 600, margin: 0, letterSpacing: '-0.02em' }}
+                            >
+                                Verified information
+                            </h3>
+                            <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, margin: 0 }}>
                                 All drug information includes brand names, prescription requirements, and is regularly updated from trusted medical databases and sources.
                             </p>
                         </article>
                     </section>
 
-                    {/* FAQ Section (Visible for users AND LLMs) */}
-                    <section aria-labelledby="faq-heading" className="mb-16">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 id="faq-heading" className="text-3xl font-bold text-white mb-8 text-center">
-                                Frequently Asked Questions About Medical Treatments
+                    {/* ── FAQ ──────────────────────────────────── */}
+                    <section className="col gap-4" aria-labelledby="faq-heading">
+                        <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                            <h2
+                                id="faq-heading"
+                                className="display"
+                                style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+                            >
+                                Common questions
                             </h2>
-                            <div className="space-y-4">
-                                {FAQS.map((faq, i) => (
-                                    <article key={i} className="bg-slate-900/60 border border-white/5 rounded-xl p-6">
-                                        <h3 className="text-lg font-semibold text-white mb-3 flex items-start gap-3">
-                                            <span className="flex-shrink-0 w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-sm font-bold">
-                                                Q
-                                            </span>
-                                            {faq.question}
-                                        </h3>
-                                        <p className="text-slate-400 leading-relaxed pl-9 faq-answer">
-                                            {faq.answer}
-                                        </p>
-                                    </article>
-                                ))}
-                            </div>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {FAQS.length} answered
+                            </span>
+                        </div>
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                                gap: 16,
+                            }}
+                        >
+                            {FAQS.map(faq => (
+                                <article key={faq.question} className="card" style={{ padding: 24 }}>
+                                    <h3
+                                        className="display"
+                                        style={{
+                                            fontSize: 17,
+                                            fontWeight: 600,
+                                            margin: 0,
+                                            letterSpacing: '-0.015em',
+                                            marginBottom: 8,
+                                        }}
+                                    >
+                                        {faq.question}
+                                    </h3>
+                                    <p
+                                        className="faq-answer"
+                                        style={{
+                                            fontSize: 14,
+                                            color: 'var(--ink-2)',
+                                            lineHeight: 1.6,
+                                            margin: 0,
+                                        }}
+                                    >
+                                        {faq.answer}
+                                    </p>
+                                </article>
+                            ))}
                         </div>
                     </section>
 
-                    {/* Find Doctor CTA */}
-                    <section className="mb-16">
-                        <FindDoctorCTA variant="banner" />
+                    {/* ── Find Doctor / Book Test CTAs ─────────── */}
+                    <FindDoctorCTA variant="banner" />
+                    <BookTestCTA variant="card" />
+
+                    {/* ── Related directories ──────────────────── */}
+                    <section
+                        aria-labelledby="related-heading"
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
+                        <h2 id="related-heading" className="sr-only">Explore more health resources</h2>
+                        {[
+                            {
+                                href: '/conditions',
+                                kicker: 'conditions',
+                                title: 'Medical conditions',
+                                blurb: '70,000+ conditions A–Z with plain-English explainers.',
+                            },
+                            {
+                                href: '/symptoms',
+                                kicker: 'symptoms',
+                                title: 'AI symptom checker',
+                                blurb: 'Get AI-powered insights on what your symptoms mean.',
+                            },
+                            {
+                                href: '/reference/drugs',
+                                kicker: 'drugs',
+                                title: 'Drug reference',
+                                blurb: 'Dosages, interactions, and pharmacology details.',
+                            },
+                            {
+                                href: '/doctors',
+                                kicker: 'doctors',
+                                title: 'Find a specialist',
+                                blurb: 'Verified doctors across 50+ countries.',
+                            },
+                        ].map(item => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className="card col gap-3"
+                                style={{ padding: 24 }}
+                            >
+                                <div className="kicker">
+                                    <span className="dot" />
+                                    {item.kicker}
+                                </div>
+                                <h3
+                                    className="display"
+                                    style={{
+                                        fontSize: 20,
+                                        fontWeight: 600,
+                                        margin: 0,
+                                        letterSpacing: '-0.025em',
+                                    }}
+                                >
+                                    {item.title}
+                                </h3>
+                                <p className="muted" style={{ fontSize: 14, margin: 0, lineHeight: 1.55 }}>
+                                    {item.blurb}
+                                </p>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        marginTop: 'auto',
+                                        fontSize: 11,
+                                        color: 'var(--cobalt)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    Browse →
+                                </span>
+                            </Link>
+                        ))}
                     </section>
 
-                    {/* Book Test CTA */}
-                    <section className="mb-16">
-                        <BookTestCTA variant="card" />
-                    </section>
-
-                    {/* Related Pages - Internal Linking */}
-                    <section aria-labelledby="related-heading" className="mb-12">
-                        <h2 id="related-heading" className="text-2xl font-bold text-white mb-6 text-center">
-                            Explore More Health Resources
-                        </h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <Link
-                                href="/conditions"
-                                className="bg-slate-900/60 border border-white/5 hover:border-cyan-500/30 rounded-xl p-5 transition-all group"
-                            >
-                                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-2">
-                                    <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                    </svg>
-                                </div>
-                                <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors mb-1">
-                                    Medical Conditions
-                                </h3>
-                                <p className="text-xs text-slate-500">70,000+ conditions A-Z</p>
-                            </Link>
-                            <Link
-                                href="/symptoms"
-                                className="bg-slate-900/60 border border-white/5 hover:border-cyan-500/30 rounded-xl p-5 transition-all group"
-                            >
-                                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-2">
-                                    <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </div>
-                                <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors mb-1">
-                                    AI Symptom Checker
-                                </h3>
-                                <p className="text-xs text-slate-500">Get AI-powered insights</p>
-                            </Link>
-                            <Link
-                                href="/reference/drugs"
-                                className="bg-slate-900/60 border border-white/5 hover:border-cyan-500/30 rounded-xl p-5 transition-all group"
-                            >
-                                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-2">
-                                    <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                                    </svg>
-                                </div>
-                                <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors mb-1">
-                                    Drug Reference
-                                </h3>
-                                <p className="text-xs text-slate-500">Dosages & interactions</p>
-                            </Link>
-                            <Link
-                                href="/doctors"
-                                className="bg-slate-900/60 border border-white/5 hover:border-cyan-500/30 rounded-xl p-5 transition-all group"
-                            >
-                                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-2">
-                                    <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                </div>
-                                <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors mb-1">
-                                    Find Doctors
-                                </h3>
-                                <p className="text-xs text-slate-500">Search specialists near you</p>
-                            </Link>
-                        </div>
-                    </section>
-
-                    {/* Bottom SEO Text Block */}
-                    <article className="max-w-4xl mx-auto text-center mb-8">
-                        <p className="text-sm text-slate-500 leading-relaxed">
-                            The aihealz Medical Treatments Directory is the world&apos;s most comprehensive resource for comparing healthcare costs globally.
-                            Whether you&apos;re looking for prescription medications, surgical procedures, injectable therapies, or natural home remedies,
-                            our database covers {totalTreatments.toLocaleString()}+ treatment options across {categories.length} medical specialties.
-                            Compare costs across USA, UK, India, Thailand, Mexico, Turkey, and UAE to make informed healthcare decisions.
-                            All information is regularly updated and verified from trusted medical sources.
-                        </p>
-                    </article>
+                    {/* ── Bottom SEO note ──────────────────────── */}
+                    <p
+                        className="muted"
+                        style={{
+                            fontSize: 13,
+                            lineHeight: 1.65,
+                            margin: 0,
+                            maxWidth: 880,
+                        }}
+                    >
+                        The aihealz Medical Treatments Directory is the world&apos;s most comprehensive resource for comparing healthcare costs globally. Whether you&apos;re looking for prescription medications, surgical procedures, injectable therapies, or natural home remedies, our database covers {totalTreatments.toLocaleString()}+ treatment options across {categories.length} medical specialties. Compare costs across USA, UK, India, Thailand, Mexico, Turkey, and UAE to make informed healthcare decisions. All information is regularly updated and verified from trusted medical sources.
+                    </p>
                 </div>
             </main>
         </>

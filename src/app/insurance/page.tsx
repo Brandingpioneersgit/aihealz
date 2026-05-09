@@ -48,6 +48,17 @@ const PLAN_TYPE_LABELS: Record<string, string> = {
   personal_accident: 'Personal Accident',
 };
 
+const PLAN_TYPE_DESCRIPTIONS: Record<string, string> = {
+  individual: 'Coverage for a single person',
+  family_floater: 'Single sum insured for entire family',
+  senior_citizen: 'Specialized plans for the 60+ age group',
+  group: 'Corporate and group coverage',
+  critical_illness: 'Lump sum on diagnosis of listed illnesses',
+  top_up: 'Extra coverage above a base policy',
+  super_top_up: 'Aggregate-deductible based coverage',
+  personal_accident: 'Coverage for accidental injuries',
+};
+
 async function getGeoFromCookie() {
   const cookieStore = await cookies();
   const geoCookie = cookieStore.get('aihealz-geo')?.value;
@@ -60,8 +71,16 @@ async function getGeoFromCookie() {
   };
 }
 
+function providerInitials(name: string): string {
+  const words = name.replace(/[^A-Za-z\s]/g, '').trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return 'IN';
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  return (words[0][0] + words[1][0]).toUpperCase();
+}
+
 export default async function InsurancePage() {
-  const geo = await getGeoFromCookie();
+  // Read geo cookie for downstream usage / parity with prior route logic
+  await getGeoFromCookie();
 
   const [insurers, tpas, stats] = await Promise.all([
     prisma.insuranceProvider.findMany({
@@ -97,12 +116,12 @@ export default async function InsurancePage() {
   ]);
 
   const formatRatio = (ratio: number | null) => {
-    if (!ratio) return '-';
+    if (!ratio) return '–';
     return `${Number(ratio).toFixed(1)}%`;
   };
 
   const formatCurrency = (amount: number | null) => {
-    if (!amount) return '-';
+    if (!amount) return '–';
     if (amount >= 10000000) return `${(amount / 10000000).toFixed(1)} Cr`;
     if (amount >= 100000) return `${(amount / 100000).toFixed(0)} L`;
     return `${amount.toLocaleString('en-IN')}`;
@@ -140,243 +159,628 @@ export default async function InsurancePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-      {/* Structured Data */}
+    <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Background gradients */}
-      <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8 mt-6">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-          <span className="text-white">Insurance</span>
-        </nav>
-
-        {/* Hero */}
-        <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-900/30 border border-teal-500/30 text-teal-400 text-xs font-bold uppercase tracking-wider mb-6">
-            <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span></span>
-            Health Insurance & TPAs
+      <div
+        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+        className="col gap-7"
+      >
+        {/* ── Hero ──────────────────────────────────── */}
+        <header className="col gap-4">
+          <div
+            className="row gap-2 mono"
+            style={{
+              fontSize: 11,
+              color: 'var(--ink-3)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+            }}
+            aria-label="Breadcrumb"
+          >
+            <Link href="/">Home</Link>
+            <span>/</span>
+            <span style={{ color: 'var(--ink)' }}>Insurance</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white leading-tight">
-            Compare <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Health Insurance</span> Plans
+
+          <span className="section-mark">the index / insurance & TPAs</span>
+
+          <h1
+            className="display"
+            style={{
+              fontSize: 'clamp(40px, 7vw, 88px)',
+              lineHeight: 0.95,
+              letterSpacing: '-0.045em',
+              margin: 0,
+              fontWeight: 600,
+            }}
+          >
+            <span className="num" style={{ color: 'var(--cobalt)', fontWeight: 600 }}>
+              {(stats._count as number).toLocaleString()}
+            </span>{' '}
+            insurers
+            <span style={{ color: 'var(--orange)' }}>.</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
-            Compare {stats._count}+ insurance providers by claim settlement ratio, network hospitals,
-            and plan options. Find the right coverage for you and your family.
-          </p>
 
-          {/* Stats Row */}
-          <div className="flex flex-wrap gap-3">
-            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3 backdrop-blur-md">
-              <span className="text-2xl font-bold text-white">{stats._count}</span>
-              <span className="ml-2 text-slate-500 text-sm">Insurers</span>
+          <p
+            className="lede"
+            style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 680 }}
+          >
+            Health insurance compared on what actually matters — claim settlement ratio, network hospitals, plan options. Trusted by domestic and international patients.
+          </p>
+        </header>
+
+        {/* ── Stats strip ────────────────────────────── */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: 0,
+            border: '1px solid var(--rule)',
+            borderRadius: 'var(--r-3)',
+            background: 'var(--paper)',
+            overflow: 'hidden',
+          }}
+        >
+          {[
+            { v: (stats._count as number).toLocaleString(), l: 'insurers indexed' },
+            { v: tpas.length.toLocaleString(), l: 'TPAs tracked' },
+            { v: formatRatio(stats._avg.claimSettlementRatio as number | null), l: 'avg claim settlement' },
+            { v: Object.keys(PLAN_TYPE_LABELS).length.toString(), l: 'plan types' },
+          ].map((s, i, arr) => (
+            <div
+              key={s.l}
+              className="col gap-1"
+              style={{
+                padding: '20px 24px',
+                borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+              }}
+            >
+              <div
+                className="display num"
+                style={{
+                  fontSize: 32,
+                  fontWeight: 500,
+                  letterSpacing: '-0.025em',
+                  lineHeight: 1,
+                  color: 'var(--ink)',
+                }}
+              >
+                {s.v}
+              </div>
+              <div
+                className="mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--ink-3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                }}
+              >
+                {s.l}
+              </div>
             </div>
-            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3 backdrop-blur-md">
-              <span className="text-2xl font-bold text-white">{tpas.length}</span>
-              <span className="ml-2 text-slate-500 text-sm">TPAs</span>
-            </div>
-            <div className="bg-slate-900/50 border border-white/5 rounded-xl px-5 py-3 backdrop-blur-md">
-              <span className="text-2xl font-bold text-white">{formatRatio(stats._avg.claimSettlementRatio as number | null)}</span>
-              <span className="ml-2 text-slate-500 text-sm">Avg CSR</span>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* Quick Filters */}
-        <div className="mb-12">
-          <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">Browse by Type</h2>
-          <div className="flex flex-wrap gap-2">
+        {/* ── Provider type filters ──────────────────── */}
+        <section className="col gap-3" aria-labelledby="types-heading">
+          <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+            <h2
+              id="types-heading"
+              className="display"
+              style={{ fontSize: 22, margin: 0, letterSpacing: '-0.02em', fontWeight: 600 }}
+            >
+              Browse by provider type
+            </h2>
+          </div>
+          <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
             <Link
               href="/insurance"
-              className="px-4 py-2 rounded-full bg-teal-500/20 text-teal-400 text-sm font-medium hover:bg-teal-500/30 transition-colors border border-teal-500/30"
+              className="pill pill-cobalt"
+              style={{ textTransform: 'none', cursor: 'pointer' }}
             >
-              All Providers
+              All providers
             </Link>
             {Object.entries(PROVIDER_TYPE_LABELS).map(([key, label]) => (
               <Link
                 key={key}
                 href={`/insurance?type=${key}`}
-                className="px-4 py-2 rounded-full bg-slate-900/50 text-slate-400 text-sm font-medium hover:text-white hover:bg-slate-800 transition-colors border border-white/5"
+                className="pill"
+                style={{ textTransform: 'none', cursor: 'pointer' }}
               >
                 {label}
               </Link>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Insurance Providers Grid */}
-        <section className="mb-20">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Insurance Providers</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {insurers.map((insurer) => (
-              <Link
-                key={insurer.id}
-                href={`/insurance/${insurer.slug}`}
-                className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 hover:border-teal-500/40 hover:bg-slate-900/60 transition-all duration-300 overflow-hidden group"
-              >
-                <div className="p-6">
+        {/* ── Insurance Providers ─────────────────────── */}
+        <section className="col gap-4" aria-labelledby="providers-heading">
+          <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+            <h2
+              id="providers-heading"
+              className="display"
+              style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+            >
+              Insurance providers
+            </h2>
+            <span
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: 'var(--ink-3)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
+              {insurers.length} shown · ranked by CSR
+            </span>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+              gap: 16,
+            }}
+          >
+            {insurers.map(insurer => {
+              const csr = Number(insurer.claimSettlementRatio || 0);
+              const isTopRated = csr >= 95;
+              const initials = providerInitials(insurer.name);
+              const csrLabel =
+                csr >= 95 ? 'excellent' :
+                csr >= 90 ? 'very good' :
+                csr >= 80 ? 'good' :
+                csr > 0 ? 'average' : '—';
+
+              return (
+                <Link
+                  key={insurer.id}
+                  href={`/insurance/${insurer.slug}`}
+                  className="card col gap-4"
+                  style={{
+                    padding: 20,
+                    color: 'var(--ink)',
+                    borderColor: isTopRated ? 'var(--cobalt)' : 'var(--rule)',
+                  }}
+                >
                   {/* Header */}
-                  <div className="flex items-start gap-4 mb-4">
-                    {insurer.logo ? (
-                      <img
-                        src={insurer.logo}
-                        alt={insurer.name}
-                        className="w-16 h-16 object-contain rounded-lg bg-white/5 p-2 border border-white/5"
-                      />
-                    ) : (
-                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center border border-teal-500/20">
-                        <span className="text-2xl font-bold text-teal-400">{insurer.name.charAt(0)}</span>
-                      </div>
-                    )}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start gap-2">
-                        <h3 className="font-bold text-white group-hover:text-teal-400 transition-colors truncate">
+                  <div className="row gap-3 ai-start">
+                    <div
+                      style={{
+                        width: 56,
+                        height: 56,
+                        borderRadius: 'var(--r-2)',
+                        overflow: 'hidden',
+                        flexShrink: 0,
+                        background: 'var(--bg-2)',
+                        border: '1px solid var(--rule)',
+                      }}
+                    >
+                      {insurer.logo ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={insurer.logo}
+                          alt={insurer.name}
+                          style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 6 }}
+                        />
+                      ) : (
+                        <div
+                          className="row ai-center center"
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            fontFamily: 'var(--display)',
+                            fontSize: 18,
+                            fontWeight: 600,
+                            color: 'var(--ink-2)',
+                            letterSpacing: '-0.02em',
+                          }}
+                        >
+                          {initials}
+                        </div>
+                      )}
+                    </div>
+                    <div className="col gap-1" style={{ flex: 1, minWidth: 0 }}>
+                      <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                        <span
+                          className="display"
+                          style={{
+                            fontSize: 17,
+                            fontWeight: 600,
+                            letterSpacing: '-0.015em',
+                            margin: 0,
+                          }}
+                        >
                           {insurer.name}
-                        </h3>
-                        {Number(insurer.claimSettlementRatio) >= 95 && (
-                          <span className="px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-400 text-xs font-semibold flex-shrink-0 border border-amber-500/30">
-                            Top Rated
-                          </span>
+                        </span>
+                        {isTopRated && (
+                          <span className="pill pill-cobalt">top rated</span>
                         )}
                       </div>
-                      <p className="text-xs text-slate-500 mt-0.5">
+                      <div
+                        className="mono"
+                        style={{
+                          fontSize: 11,
+                          color: 'var(--ink-3)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.08em',
+                        }}
+                      >
                         {PROVIDER_TYPE_LABELS[insurer.providerType] || insurer.providerType}
-                      </p>
+                      </div>
                     </div>
                   </div>
 
-                  {/* CSR Badge */}
+                  {/* CSR strip */}
                   {insurer.claimSettlementRatio && (
-                    <div className="flex items-center gap-3 mb-4 p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
-                      <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
-                        <span className="text-sm font-bold text-slate-900">{Number(insurer.claimSettlementRatio).toFixed(0)}%</span>
+                    <div
+                      className="row ai-center between hairline-t hairline-b"
+                      style={{ padding: '12px 0' }}
+                    >
+                      <div className="col gap-0">
+                        <div
+                          className="mono"
+                          style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                          }}
+                        >
+                          claim settlement
+                        </div>
+                        <div className="muted" style={{ fontSize: 12, textTransform: 'capitalize' }}>
+                          {csrLabel}
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-emerald-400">Claim Settlement Ratio</p>
-                        <p className="text-xs text-emerald-500/80">
-                          {Number(insurer.claimSettlementRatio) >= 95 ? 'Excellent' :
-                           Number(insurer.claimSettlementRatio) >= 90 ? 'Very Good' :
-                           Number(insurer.claimSettlementRatio) >= 80 ? 'Good' : 'Average'}
-                        </p>
+                      <div
+                        className="num display"
+                        style={{
+                          fontSize: 28,
+                          fontWeight: 500,
+                          letterSpacing: '-0.025em',
+                          color: isTopRated ? 'var(--cobalt)' : 'var(--ink)',
+                        }}
+                      >
+                        {csr.toFixed(0)}%
                       </div>
                     </div>
                   )}
 
-                  {/* Quick Stats */}
-                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
-                    <div className="p-2 bg-white/5 rounded-lg border border-white/5">
-                      <p className="text-lg font-bold text-white">{insurer._count.plans}</p>
-                      <p className="text-xs text-slate-500">Plans</p>
-                    </div>
-                    <div className="p-2 bg-white/5 rounded-lg border border-white/5">
-                      <p className="text-lg font-bold text-white">{insurer._count.hospitalTies}</p>
-                      <p className="text-xs text-slate-500">Hospitals</p>
-                    </div>
-                    <div className="p-2 bg-white/5 rounded-lg border border-white/5">
-                      <p className="text-lg font-bold text-white">{insurer._count.claims || 0}</p>
-                      <p className="text-xs text-slate-500">Claims</p>
-                    </div>
+                  {/* Quick numerical stats */}
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(3, 1fr)',
+                      gap: 0,
+                      borderTop: insurer.claimSettlementRatio ? 'none' : '1px solid var(--rule)',
+                    }}
+                  >
+                    {[
+                      { v: insurer._count.plans, l: 'plans' },
+                      { v: insurer._count.hospitalTies, l: 'hospitals' },
+                      { v: insurer._count.claims || 0, l: 'claims' },
+                    ].map((stat, idx) => (
+                      <div
+                        key={stat.l}
+                        className="col gap-0"
+                        style={{
+                          padding: '4px 8px',
+                          borderRight: idx < 2 ? '1px solid var(--rule)' : 'none',
+                          textAlign: 'center',
+                        }}
+                      >
+                        <div
+                          className="num display"
+                          style={{
+                            fontSize: 20,
+                            fontWeight: 500,
+                            color: 'var(--ink)',
+                            letterSpacing: '-0.02em',
+                          }}
+                        >
+                          {stat.v.toLocaleString()}
+                        </div>
+                        <div
+                          className="mono"
+                          style={{
+                            fontSize: 10,
+                            color: 'var(--ink-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                          }}
+                        >
+                          {stat.l}
+                        </div>
+                      </div>
+                    ))}
                   </div>
 
-                  {/* Sample Plans */}
+                  {/* Sample plans */}
                   {insurer.plans.length > 0 && (
-                    <div className="space-y-2">
-                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Popular Plans</p>
-                      {insurer.plans.map((plan, i) => (
-                        <div key={i} className="flex items-center justify-between text-sm">
-                          <span className="text-slate-300 truncate">{plan.name}</span>
-                          {plan.premiumStartsAt && (
-                            <span className="text-teal-400 font-medium flex-shrink-0">
-                              from {formatCurrency(Number(plan.premiumStartsAt))}/yr
+                    <div className="col gap-2">
+                      <div
+                        className="mono"
+                        style={{
+                          fontSize: 11,
+                          color: 'var(--ink-3)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.08em',
+                        }}
+                      >
+                        popular plans
+                      </div>
+                      <div className="col gap-1">
+                        {insurer.plans.map((plan, i) => (
+                          <div
+                            key={i}
+                            className="row between ai-center"
+                            style={{ fontSize: 13 }}
+                          >
+                            <span style={{ color: 'var(--ink-2)', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {plan.name}
                             </span>
-                          )}
-                        </div>
-                      ))}
+                            {plan.premiumStartsAt && (
+                              <span
+                                className="num"
+                                style={{
+                                  fontSize: 12,
+                                  color: 'var(--cobalt)',
+                                  flexShrink: 0,
+                                  marginLeft: 8,
+                                }}
+                              >
+                                from {formatCurrency(Number(plan.premiumStartsAt))}/yr
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   )}
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </section>
 
-        {/* TPAs Section */}
-        <section className="mb-20">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Third Party Administrators (TPAs)</h2>
-          <div className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden">
-            <div className="p-4 bg-white/5 border-b border-white/5">
-              <p className="text-sm text-slate-400">
+        {/* ── TPAs Section ───────────────────────────── */}
+        <section className="col gap-4" aria-labelledby="tpas-heading">
+          <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+            <h2
+              id="tpas-heading"
+              className="display"
+              style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+            >
+              Third-party administrators
+            </h2>
+            <span
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: 'var(--ink-3)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
+              {tpas.length} TPAs
+            </span>
+          </div>
+
+          <div
+            className="card"
+            style={{ padding: 0, overflow: 'hidden' }}
+          >
+            <div
+              className="hairline-b"
+              style={{ padding: '14px 20px', background: 'var(--bg-2)' }}
+            >
+              <p style={{ fontSize: 13, color: 'var(--ink-2)', margin: 0 }}>
                 TPAs handle claim processing and cashless hospitalization on behalf of insurance companies.
               </p>
             </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-white/5 text-xs text-slate-500 uppercase tracking-widest">
-                  <tr>
-                    <th scope="col" className="px-6 py-3 text-left font-semibold">TPA Name</th>
-                    <th scope="col" className="px-6 py-3 text-center font-semibold">Insurance Partners</th>
-                    <th scope="col" className="px-6 py-3 text-center font-semibold">Network Hospitals</th>
-                    <th scope="col" className="px-6 py-3 text-left font-semibold">Contact</th>
-                    <th scope="col" className="px-6 py-3 text-right font-semibold">Actions</th>
+
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr style={{ background: 'var(--bg-2)' }}>
+                    <th
+                      scope="col"
+                      className="mono"
+                      style={{
+                        padding: '12px 20px',
+                        textAlign: 'left',
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        fontWeight: 500,
+                        borderBottom: '1px solid var(--rule)',
+                      }}
+                    >
+                      TPA
+                    </th>
+                    <th
+                      scope="col"
+                      className="mono"
+                      style={{
+                        padding: '12px 20px',
+                        textAlign: 'center',
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        fontWeight: 500,
+                        borderBottom: '1px solid var(--rule)',
+                      }}
+                    >
+                      Insurance partners
+                    </th>
+                    <th
+                      scope="col"
+                      className="mono"
+                      style={{
+                        padding: '12px 20px',
+                        textAlign: 'center',
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        fontWeight: 500,
+                        borderBottom: '1px solid var(--rule)',
+                      }}
+                    >
+                      Network hospitals
+                    </th>
+                    <th
+                      scope="col"
+                      className="mono"
+                      style={{
+                        padding: '12px 20px',
+                        textAlign: 'left',
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        fontWeight: 500,
+                        borderBottom: '1px solid var(--rule)',
+                      }}
+                    >
+                      Contact
+                    </th>
+                    <th
+                      scope="col"
+                      className="mono"
+                      style={{
+                        padding: '12px 20px',
+                        textAlign: 'right',
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        fontWeight: 500,
+                        borderBottom: '1px solid var(--rule)',
+                      }}
+                    ></th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5">
-                  {tpas.map((tpa) => (
-                    <tr key={tpa.id} className="hover:bg-white/5 transition-colors">
-                      <td className="px-6 py-4">
-                        <div className="flex items-center gap-3">
-                          {tpa.logo ? (
-                            <Image
-                              src={tpa.logo}
-                              alt={tpa.name}
-                              width={40}
-                              height={40}
-                              unoptimized
-                              className="w-10 h-10 rounded object-contain bg-white/5 border border-white/5"
-                            />
-                          ) : (
-                            <div className="w-10 h-10 rounded bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
-                              <span className="font-bold text-purple-400">{tpa.name.charAt(0)}</span>
-                            </div>
-                          )}
-                          <div>
-                            <p className="font-medium text-white">{tpa.name}</p>
+                <tbody>
+                  {tpas.map((tpa, idx) => (
+                    <tr
+                      key={tpa.id}
+                      style={{
+                        borderBottom: idx < tpas.length - 1 ? '1px solid var(--rule)' : 'none',
+                      }}
+                    >
+                      <td style={{ padding: '14px 20px' }}>
+                        <div className="row gap-3 ai-center">
+                          <div
+                            style={{
+                              width: 40,
+                              height: 40,
+                              borderRadius: 'var(--r-2)',
+                              overflow: 'hidden',
+                              flexShrink: 0,
+                              background: 'var(--bg-2)',
+                              border: '1px solid var(--rule)',
+                            }}
+                          >
+                            {tpa.logo ? (
+                              <Image
+                                src={tpa.logo}
+                                alt={tpa.name}
+                                width={40}
+                                height={40}
+                                unoptimized
+                                style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 4 }}
+                              />
+                            ) : (
+                              <div
+                                className="row ai-center center"
+                                style={{
+                                  width: '100%',
+                                  height: '100%',
+                                  fontFamily: 'var(--display)',
+                                  fontSize: 14,
+                                  fontWeight: 600,
+                                  color: 'var(--ink-2)',
+                                }}
+                              >
+                                {providerInitials(tpa.name)}
+                              </div>
+                            )}
+                          </div>
+                          <div className="col gap-0">
+                            <span
+                              style={{
+                                fontSize: 14,
+                                fontWeight: 500,
+                                color: 'var(--ink)',
+                              }}
+                            >
+                              {tpa.name}
+                            </span>
                             {tpa.licenseNumber && (
-                              <p className="text-xs text-slate-500">License: {tpa.licenseNumber}</p>
+                              <span
+                                className="mono"
+                                style={{
+                                  fontSize: 11,
+                                  color: 'var(--ink-3)',
+                                }}
+                              >
+                                License: {tpa.licenseNumber}
+                              </span>
                             )}
                           </div>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-center">
-                        <span className="text-lg font-semibold text-teal-400">{tpa._count.insuranceLinks}</span>
+                      <td
+                        style={{ padding: '14px 20px', textAlign: 'center' }}
+                        className="num"
+                      >
+                        <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--cobalt)' }}>
+                          {tpa._count.insuranceLinks}
+                        </span>
                       </td>
-                      <td className="px-6 py-4 text-center">
-                        <span className="text-lg font-semibold text-cyan-400">{tpa._count.hospitalLinks}</span>
+                      <td
+                        style={{ padding: '14px 20px', textAlign: 'center' }}
+                        className="num"
+                      >
+                        <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)' }}>
+                          {tpa._count.hospitalLinks}
+                        </span>
                       </td>
-                      <td className="px-6 py-4">
-                        <div className="text-sm">
+                      <td style={{ padding: '14px 20px' }}>
+                        <div className="col gap-0" style={{ fontSize: 12 }}>
                           {tpa.customerCarePhone && (
-                            <p className="text-slate-300">{tpa.customerCarePhone}</p>
+                            <span style={{ color: 'var(--ink-2)' }}>{tpa.customerCarePhone}</span>
                           )}
                           {tpa.email && (
-                            <p className="text-slate-500 text-xs">{tpa.email}</p>
+                            <span className="mono" style={{ color: 'var(--ink-3)', fontSize: 11 }}>
+                              {tpa.email}
+                            </span>
                           )}
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-right">
+                      <td style={{ padding: '14px 20px', textAlign: 'right' }}>
                         <Link
                           href={`/insurance/tpa/${tpa.slug}`}
-                          className="text-teal-400 hover:text-teal-300 text-sm font-medium"
+                          className="mono"
+                          style={{
+                            fontSize: 11,
+                            color: 'var(--cobalt)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                            fontWeight: 500,
+                          }}
                         >
-                          View Details →
+                          View →
                         </Link>
                       </td>
                     </tr>
@@ -387,28 +791,126 @@ export default async function InsurancePage() {
           </div>
         </section>
 
-        {/* Plan Types Info */}
-        <section>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Types of Health Insurance Plans</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {Object.entries(PLAN_TYPE_LABELS).map(([key, label]) => (
-              <Link
-                key={key}
-                href={`/insurance/plans?type=${key}`}
-                className="p-5 bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/5 hover:border-teal-500/40 hover:bg-slate-900/60 transition-all group"
-              >
-                <h3 className="font-semibold text-white mb-2 group-hover:text-teal-400 transition-colors">{label}</h3>
-                <p className="text-sm text-slate-400">
-                  {key === 'individual' && 'Coverage for a single person'}
-                  {key === 'family_floater' && 'Single sum insured for entire family'}
-                  {key === 'senior_citizen' && 'Specialized plans for 60+ age group'}
-                  {key === 'group' && 'Corporate and group coverage'}
-                  {key === 'critical_illness' && 'Lump sum on diagnosis of listed illnesses'}
-                  {key === 'top_up' && 'Extra coverage above base policy'}
-                  {key === 'super_top_up' && 'Aggregate deductible based coverage'}
-                  {key === 'personal_accident' && 'Coverage for accidental injuries'}
+        {/* ── Plan Types ─────────────────────────────── */}
+        <section className="col gap-4" aria-labelledby="plan-types-heading">
+          <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+            <h2
+              id="plan-types-heading"
+              className="display"
+              style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+            >
+              Health insurance plan types
+            </h2>
+            <span
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: 'var(--ink-3)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
+              {Object.keys(PLAN_TYPE_LABELS).length} types
+            </span>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+              gap: 0,
+              border: '1px solid var(--rule)',
+              borderRadius: 'var(--r-3)',
+              background: 'var(--paper)',
+              overflow: 'hidden',
+            }}
+          >
+            {Object.entries(PLAN_TYPE_LABELS).map(([key, label], i, arr) => {
+              const cols = 4;
+              const isLastCol = (i + 1) % cols === 0;
+              const isLastRow = i >= arr.length - cols;
+              return (
+                <Link
+                  key={key}
+                  href={`/insurance/plans?type=${key}`}
+                  className="col gap-2"
+                  style={{
+                    padding: '20px 22px',
+                    borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                    borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                  }}
+                >
+                  <div
+                    className="display"
+                    style={{ fontSize: 17, letterSpacing: '-0.02em', fontWeight: 500 }}
+                  >
+                    {label}
+                  </div>
+                  <div className="muted" style={{ fontSize: 13, lineHeight: 1.5 }}>
+                    {PLAN_TYPE_DESCRIPTIONS[key]}
+                  </div>
+                  <span
+                    className="mono"
+                    style={{
+                      marginTop: 'auto',
+                      fontSize: 11,
+                      color: 'var(--cobalt)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                      fontWeight: 500,
+                    }}
+                  >
+                    Browse →
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ── FAQ ────────────────────────────────────── */}
+        <section className="col gap-4" aria-labelledby="faq-heading">
+          <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+            <h2
+              id="faq-heading"
+              className="display"
+              style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+            >
+              Common questions
+            </h2>
+          </div>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: 16,
+            }}
+          >
+            {insuranceFaqs.map(faq => (
+              <article key={faq.question} className="card" style={{ padding: 24 }}>
+                <h3
+                  className="display"
+                  style={{
+                    fontSize: 17,
+                    fontWeight: 600,
+                    margin: 0,
+                    letterSpacing: '-0.015em',
+                    marginBottom: 8,
+                  }}
+                >
+                  {faq.question}
+                </h3>
+                <p
+                  style={{
+                    fontSize: 14,
+                    color: 'var(--ink-2)',
+                    lineHeight: 1.6,
+                    margin: 0,
+                  }}
+                >
+                  {faq.answer}
                 </p>
-              </Link>
+              </article>
             ))}
           </div>
         </section>
