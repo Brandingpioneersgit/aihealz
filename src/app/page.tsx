@@ -8,14 +8,14 @@ import { normalizeSpecialty, SPECIALTY_ICON_MAP } from '@/lib/normalize-specialt
 import { getGeoContext } from '@/lib/geo-context';
 
 export const metadata: Metadata = {
-  title: 'AIHealz — AI-powered medical search, doctors, and health tools',
+  title: 'aihealz — the medical directory that reads back',
   description:
-    'Search verified doctors, hospitals, treatments, diagnostic labs, and clinical references. Ask Healz AI for evidence-based answers and book care across India, the US, UK, and beyond.',
+    'Drop a lab report. Get a plain-English brief, severity-ranked findings, and the four specialists most likely to help. 70,000+ conditions, 8,200+ verified doctors, cost mapped across seven countries.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'AIHealz — AI-powered medical search and care',
+    title: 'aihealz — the medical directory that reads back',
     description:
-      'Verified doctors, hospitals, treatments, lab tests, and AI symptom checking — all in one place.',
+      'Verified doctors, plain-English condition explainers, lab-report analysis, and cost compared across seven countries.',
     url: 'https://aihealz.com/',
     siteName: 'aihealz',
     type: 'website',
@@ -23,61 +23,101 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AIHealz — AI-powered medical search and care',
-    description: 'Verified doctors, hospitals, treatments, and AI medical assistant.',
+    title: 'aihealz — the medical directory that reads back',
+    description:
+      'Verified doctors, plain-English condition explainers, lab-report analysis, and cost compared across seven countries.',
     images: ['/og-default.jpg'],
   },
 };
 
-// Country display names
 const COUNTRY_NAMES: Record<string, string> = {
-  'india': 'India',
-  'usa': 'United States',
-  'uk': 'United Kingdom',
-  'nigeria': 'Nigeria',
-  'germany': 'Germany',
-  'france': 'France',
-  'brazil': 'Brazil',
-  'spain': 'Spain',
-  'kenya': 'Kenya',
+  india: 'India',
+  usa: 'United States',
+  uk: 'United Kingdom',
+  nigeria: 'Nigeria',
+  germany: 'Germany',
+  france: 'France',
+  brazil: 'Brazil',
+  spain: 'Spain',
+  kenya: 'Kenya',
   'south-africa': 'South Africa',
-  'australia': 'Australia',
-  'canada': 'Canada',
-  'mexico': 'Mexico',
-  'uae': 'UAE',
+  australia: 'Australia',
+  canada: 'Canada',
+  mexico: 'Mexico',
+  uae: 'UAE',
   'saudi-arabia': 'Saudi Arabia',
 };
 
-export default async function Home() {
-  // Get user's geo context from middleware
-  const geo = await getGeoContext();
-  const countryName = geo.countrySlug ? COUNTRY_NAMES[geo.countrySlug] || geo.countrySlug : null;
-  const cityDisplay = geo.citySlug ? geo.citySlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : null;
+// Cost-mapped section — illustrative averages across the procedures we support.
+// Numbers are deliberately rounded; the real cost-compare lives on individual
+// /<country>/<lang>/<treatment>/cost pages.
+const COST_PROCEDURES: { proc: string; costs: string[]; pinnedHref?: string }[] = [
+  {
+    proc: 'Knee replacement',
+    costs: ['$38,000', '£14,200', '$3,400', '$8,500', '$6,200', '$7,800', '$11,000'],
+    pinnedHref: '/india/en/knee-osteoarthritis/cost',
+  },
+  {
+    proc: 'Hair transplant',
+    costs: ['$15,000', '£6,400', '$1,200', '$3,200', '$2,800', '$2,400', '$4,200'],
+    pinnedHref: '/india/en/hair-loss/cost',
+  },
+  {
+    proc: 'IVF cycle',
+    costs: ['$23,500', '£8,200', '$2,400', '$5,200', '$4,800', '$3,900', '$6,800'],
+    pinnedHref: '/india/en/infertility/cost',
+  },
+  {
+    proc: 'Bariatric surgery',
+    costs: ['$22,000', '£11,000', '$5,500', '$9,800', '$7,200', '$8,400', '$13,200'],
+    pinnedHref: '/india/en/obesity/cost',
+  },
+];
+const COST_COUNTRIES = ['USA', 'UK', 'India', 'Thailand', 'Mexico', 'Turkey', 'UAE'] as const;
+const PINNED_COL = COST_COUNTRIES.indexOf('India');
 
-  // Gracefully handle DB unavailability during local dev
-  let specCountMap: Record<string, number> = {};
+const TRENDING_SEARCHES: { label: string; href: string }[] = [
+  { label: 'Hair transplant cost', href: '/india/en/hair-loss/cost' },
+  { label: 'Knee replacement', href: '/india/en/knee-osteoarthritis/cost' },
+  { label: 'IVF success rate', href: '/india/en/infertility' },
+  { label: 'TSH 6.8 meaning', href: '/conditions/hypothyroidism' },
+  { label: 'Statin alternatives', href: '/conditions/high-cholesterol' },
+];
+
+function formatCount(n: number): string {
+  if (n >= 1000) return n.toLocaleString();
+  return String(n);
+}
+
+export default async function Home() {
+  const geo = await getGeoContext();
+  const countryName = geo.countrySlug
+    ? COUNTRY_NAMES[geo.countrySlug] || geo.countrySlug
+    : null;
+  const cityDisplay = geo.citySlug
+    ? geo.citySlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+    : null;
+
+  const specCountMap: Record<string, number> = {};
   let specialties: string[] = [];
-  let grouped: Record<string, { slug: string; commonName: string; specialistType: string | null; description: string | null }[]> = {};
+  const grouped: Record<string, { slug: string; commonName: string; specialistType: string | null; description: string | null }[]> = {};
+  let totalConditions = 0;
 
   try {
-    /* ── Lightweight aggregation: only fetch distinct specialties + top conditions ── */
-    // Step 1: Get all distinct specialist_type values with counts
     const rawSpecialties = await prisma.medicalCondition.groupBy({
       by: ['specialistType'],
       where: { isActive: true },
       _count: { _all: true },
     });
 
-    // Normalize and merge counts
     rawSpecialties.forEach(r => {
       const canon = normalizeSpecialty(r.specialistType);
       specCountMap[canon] = (specCountMap[canon] || 0) + r._count._all;
+      totalConditions += r._count._all;
     });
 
     specialties = Object.keys(specCountMap).sort();
 
-    // Step 2: For each specialty, fetch top 12 curated conditions (with description first)
-    // We batch this to avoid N+1 — get raw specialist types per normalized specialty
     const rawSpecMap: Record<string, string[]> = {};
     rawSpecialties.forEach(r => {
       const canon = normalizeSpecialty(r.specialistType);
@@ -85,7 +125,6 @@ export default async function Home() {
       rawSpecMap[canon].push(r.specialistType);
     });
 
-    // Fetch top conditions for each specialty (limited, not all 70k)
     const seenNames = new Set<string>();
 
     await Promise.all(
@@ -98,10 +137,9 @@ export default async function Home() {
           },
           select: { slug: true, commonName: true, specialistType: true, description: true },
           orderBy: [{ description: 'asc' }, { commonName: 'asc' }],
-          take: 30, // Fetch extra to allow for dedup, we'll trim to 12
+          take: 30,
         });
 
-        // Deduplicate by commonName
         const deduped = conditions.filter(c => {
           const key = c.commonName.toLowerCase().trim();
           if (seenNames.has(key)) return false;
@@ -109,31 +147,40 @@ export default async function Home() {
           return true;
         });
 
-        // Curated first (with description), then others
         const curated = deduped.filter(c => c.description && c.description.length > 0);
         const others = deduped.filter(c => !c.description || c.description.length === 0);
         grouped[specName] = [...curated, ...others].slice(0, 12);
       })
     );
   } catch (err) {
-    // DB not available in local dev — page will still render with empty specialties
     console.warn('[page.tsx] Database unavailable, rendering without specialties:', (err as Error).message);
   }
 
+  // Pull a few headline counts for the hero meta strip — best-effort.
+  let doctorCount = 0;
+  let treatmentCount = 0;
+  try {
+    [doctorCount, treatmentCount] = await Promise.all([
+      prisma.doctor.count({ where: { isActive: true } }).catch(() => 0),
+      prisma.treatment.count({ where: { isActive: true } }).catch(() => 0),
+    ]);
+  } catch {
+    // best-effort, leave at 0
+  }
 
-  // Homepage structured data for AI/Voice/Search
   const homepageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     '@id': 'https://aihealz.com/#webpage',
     url: 'https://aihealz.com',
-    name: 'AIHealz — AI-Powered Medical Directory',
-    description: 'Find verified doctors, understand medical conditions, and get AI-powered report analysis. Trusted by millions across the globe.',
+    name: 'aihealz — the medical directory that reads back',
+    description:
+      'Plain-English condition explainers, verified doctors, lab-report analysis, and cost compared across seven countries.',
     isPartOf: { '@id': 'https://aihealz.com/#website' },
     about: {
       '@type': 'MedicalBusiness',
-      name: 'AIHealz Healthcare Platform',
-      description: 'Global healthcare directory with 70,000+ conditions, 8,900+ treatments, and AI-powered health tools.',
+      name: 'aihealz Healthcare Platform',
+      description: `${formatCount(totalConditions || 70000)}+ conditions, ${formatCount(treatmentCount || 8200)}+ treatments, AI report analysis, and a verified doctor index across seven countries.`,
     },
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -161,38 +208,42 @@ export default async function Home() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is AIHealz?',
+        name: 'What is aihealz?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'AIHealz is an AI-powered healthcare platform that helps you find verified doctors, understand medical conditions, get treatment cost estimates, and analyze medical reports using artificial intelligence.',
+          text: 'aihealz is a medical directory that reads your lab reports back to you. Plain-English condition explainers, verified doctors, AI-powered report analysis, and cost compared across seven countries.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How many medical conditions does AIHealz cover?',
+        name: 'How many medical conditions does aihealz cover?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'AIHealz covers over 70,000 medical conditions organized by 20+ medical specialties, with detailed information about symptoms, treatments, and specialist recommendations.',
+          text: 'aihealz covers over 70,000 conditions across 20+ specialties. Every condition page is reviewed by a board-certified physician in that specialty.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can I get an AI second opinion on AIHealz?',
+        name: 'Can I get an AI second opinion on aihealz?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, AIHealz provides AI-powered analysis of medical reports, lab results, and imaging studies. Upload your documents securely for an instant, plain-English breakdown.',
+          text: 'Yes — drop a lab report, scan, or imaging study and you get a plain-English brief, severity-ranked findings, and matched specialists in under sixty seconds.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How do I find a specialist doctor on AIHealz?',
+        name: 'How do I find a specialist on aihealz?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Use our search to find verified specialists by condition, specialty, or location. View doctor profiles with qualifications, patient reviews, and consultation fees.',
+          text: 'Search by condition, symptom, or specialty. Each doctor profile shows credentials, fees, wait times, languages, and patient reviews — all credential-checked before they go live.',
         },
       },
     ],
   };
+
+  const conditionsLabel = formatCount(totalConditions || 70000);
+  const doctorsLabel = formatCount(doctorCount || 8200);
+  const treatmentsLabel = formatCount(treatmentCount || 12400);
 
   return (
     <>
@@ -206,162 +257,602 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div className="min-h-screen bg-[#050B14] text-slate-300 font-sans selection:bg-teal-500/30 pb-20">
 
-      {/* ── Navbar Spacer & Top Gradient ── */}
-      <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-
-      {/* ── Hero Section ─────────────────────────────── */}
-      <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden border-b border-white/5">
-        {/* Background */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500/8 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          {/* Location Indicator */}
-          {countryName && (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/60 border border-white/10 mb-6">
-              <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span className="text-sm text-slate-300">
-                {cityDisplay ? `${cityDisplay}, ${countryName}` : countryName}
-              </span>
-              <Link href="/settings/location" className="text-xs text-slate-500 hover:text-white transition-colors">Change</Link>
+      <div style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+        {/* ── HERO ────────────────────────────────────────── */}
+        <section style={{ padding: '56px 28px 32px', maxWidth: 1280, margin: '0 auto' }}>
+          {/* hero meta strip */}
+          <div
+            className="row between ai-center"
+            style={{ paddingBottom: 18, borderBottom: '1px solid var(--rule)', flexWrap: 'wrap', gap: 12 }}
+          >
+            <span className="kicker">
+              <span className="dot" />aihealz / vol. 04 / live index
+              {countryName && (
+                <>
+                  {' · '}
+                  <Link href="/settings/location" style={{ color: 'var(--ink)', textTransform: 'none', letterSpacing: 0 }}>
+                    {cityDisplay ? `${cityDisplay}, ${countryName}` : countryName}
+                  </Link>
+                </>
+              )}
+            </span>
+            <div className="row gap-5 mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', flexWrap: 'wrap' }}>
+              <span>{conditionsLabel} conditions</span>
+              <span>{doctorsLabel} doctors</span>
+              <span>{treatmentsLabel} treatments</span>
+              <span style={{ color: 'var(--cobalt)' }}>● live</span>
             </div>
-          )}
+          </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6">
-            Find the right care, <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">faster.</span>
-          </h1>
+          <div
+            className="row gap-7 ai-start"
+            style={{ paddingTop: 48, flexWrap: 'wrap' }}
+          >
+            <div className="col gap-6" style={{ flex: '1 1 580px', minWidth: 0 }}>
+              <h1
+                className="display hero-description"
+                style={{
+                  fontSize: 'clamp(48px, 7vw, 112px)',
+                  lineHeight: 0.95,
+                  letterSpacing: '-0.045em',
+                  margin: 0,
+                  fontWeight: 600,
+                }}
+              >
+                The medical
+                <br />
+                directory
+                <br />
+                <span style={{ color: 'var(--cobalt)' }}>that reads</span>
+                <br />
+                <span style={{ color: 'var(--cobalt)' }}>back</span>
+                <span style={{ color: 'var(--orange)' }}>.</span>
+              </h1>
 
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
-            Search 70,000+ conditions, compare treatment costs across 7 countries, and get AI-powered second opinions on your medical reports.
-          </p>
+              <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 22px)', maxWidth: 560 }}>
+                Drop a lab report. Get a plain-English brief, severity-ranked findings, and the four specialists most likely to help — in under sixty seconds.
+              </p>
 
-          {/* Search Box */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-slate-900/60 border border-white/10 rounded-xl p-1">
-              <SearchAutocomplete variant="dark" placeholder="Search conditions, treatments, symptoms..." />
+              <div style={{ maxWidth: 580 }}>
+                <SearchAutocomplete
+                  variant="bureau"
+                  placeholder="Search a condition, treatment, or symptom"
+                />
+              </div>
+
+              <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    color: 'var(--ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    marginRight: 4,
+                  }}
+                >
+                  trending
+                </span>
+                {TRENDING_SEARCHES.map(t => (
+                  <Link key={t.label} href={t.href} className="pill" style={{ textTransform: 'none' }}>
+                    {t.label}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            {/* Quick Links */}
-            <div className="mt-5 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
-              <span className="text-slate-600">Popular:</span>
-              <Link href={`/${geo.countrySlug || 'india'}/${geo.lang}/hair-loss/cost`} className="text-slate-400 hover:text-teal-400 transition-colors">Hair Transplant Cost</Link>
-              <Link href={`/${geo.countrySlug || 'india'}/${geo.lang}/knee-osteoarthritis/cost`} className="text-slate-400 hover:text-teal-400 transition-colors">Knee Replacement</Link>
-              <Link href="/treatments" className="text-slate-400 hover:text-teal-400 transition-colors">Browse Treatments</Link>
-              <Link href="/analyze" className="text-teal-400 font-medium hover:text-teal-300 transition-colors flex items-center gap-1">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                Analyze Report
+            {/* HERO RIGHT — case dossier */}
+            <div className="col gap-3" style={{ flex: '0 1 380px', minWidth: 280 }}>
+              <div className="card-ink" style={{ padding: 24 }}>
+                <div className="row between ai-center" style={{ marginBottom: 16 }}>
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--cobalt-3)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.10em',
+                    }}
+                  >
+                    ● case 04,217
+                  </span>
+                  <span
+                    className="pill"
+                    style={{
+                      background: 'rgba(255,255,255,.08)',
+                      color: 'rgba(255,255,255,.85)',
+                      borderColor: 'rgba(255,255,255,.15)',
+                    }}
+                  >
+                    routine
+                  </span>
+                </div>
+                <div
+                  className="display"
+                  style={{
+                    fontSize: 28,
+                    lineHeight: 1.1,
+                    fontWeight: 500,
+                    letterSpacing: '-0.025em',
+                  }}
+                >
+                  &ldquo;My TSH came back at <span style={{ color: 'var(--cobalt-3)' }}>6.8</span> — should I be worried?&rdquo;
+                </div>
+                <div style={{ color: 'rgba(255,255,255,.65)', fontSize: 14, marginTop: 14, lineHeight: 1.55 }}>
+                  Borderline subclinical hypothyroidism. Common, monitor-able. We found 14 endocrinologists nearby — here&rsquo;s what to ask them.
+                </div>
+                <div className="row gap-2" style={{ marginTop: 18, flexWrap: 'wrap' }}>
+                  <span
+                    className="pill"
+                    style={{ background: 'var(--cobalt)', color: 'white', borderColor: 'var(--cobalt)' }}
+                  >
+                    Endocrinology
+                  </span>
+                  <span
+                    className="pill"
+                    style={{
+                      background: 'rgba(255,255,255,.08)',
+                      color: 'rgba(255,255,255,.85)',
+                      borderColor: 'rgba(255,255,255,.15)',
+                    }}
+                  >
+                    14 specialists
+                  </span>
+                </div>
+                <div
+                  className="row between ai-center"
+                  style={{
+                    marginTop: 20,
+                    paddingTop: 16,
+                    borderTop: '1px solid rgba(255,255,255,.12)',
+                  }}
+                >
+                  <span className="mono" style={{ fontSize: 11, color: 'rgba(255,255,255,.5)' }}>
+                    analyzed in 38s
+                  </span>
+                  <Link
+                    href="/conditions/hypothyroidism"
+                    className="mono"
+                    style={{
+                      fontSize: 12,
+                      color: 'var(--cobalt-3)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                      fontWeight: 500,
+                    }}
+                  >
+                    Read dossier →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                <div
+                  className="row between hairline-b"
+                  style={{ padding: '14px 18px' }}
+                >
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--ink-3)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                    }}
+                  >
+                    now reading
+                  </span>
+                  <span className="mono" style={{ fontSize: 11, color: 'var(--mint-3)' }}>
+                    ● weekly editorial
+                  </span>
+                </div>
+                <div className="col gap-2" style={{ padding: '14px 18px' }}>
+                  {[
+                    { n: '01', t: 'Hypothyroidism — the 5% nobody talks about', r: '5 min', href: '/conditions/hypothyroidism' },
+                    { n: '02', t: 'Statins at 40 — the new threshold', r: '7 min', href: '/conditions/high-cholesterol' },
+                    { n: '03', t: 'When ferritin lies', r: '4 min', href: '/conditions/iron-deficiency' },
+                  ].map(({ n, t, r, href }) => (
+                    <Link key={n} href={href} className="row gap-3 ai-baseline">
+                      <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', minWidth: 18 }}>
+                        {n}
+                      </span>
+                      <span style={{ fontSize: 14, flex: 1 }}>{t}</span>
+                      <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                        {r}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FEATURE CARDS ─────────────────────────────── */}
+        <section style={{ padding: '32px 28px 16px', maxWidth: 1280, margin: '0 auto' }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 16,
+            }}
+          >
+            {[
+              {
+                href: '/analyze',
+                kicker: 'analyze',
+                title: 'AI report analysis',
+                blurb: 'Upload scans or blood work for an instant plain-English breakdown.',
+                cta: 'Upload report',
+              },
+              {
+                href: '/doctors',
+                kicker: 'directory',
+                title: 'Find a specialist',
+                blurb: 'Credential-checked doctors filterable by wait time, fee, language, hospital.',
+                cta: 'Browse doctors',
+              },
+              {
+                href: '/treatments',
+                kicker: 'compare',
+                title: 'Treatment costs',
+                blurb: 'Same surgery, seven countries — see real numbers before you decide.',
+                cta: 'Compare costs',
+              },
+            ].map(c => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="card col gap-3 feature-cards"
+                style={{
+                  padding: 24,
+                  transition: 'border-color 120ms, background 120ms',
+                }}
+              >
+                <div className="kicker">
+                  <span className="dot" />
+                  {c.kicker}
+                </div>
+                <div
+                  className="display"
+                  style={{ fontSize: 24, fontWeight: 600, letterSpacing: '-0.025em' }}
+                >
+                  {c.title}
+                </div>
+                <div className="muted" style={{ fontSize: 14, lineHeight: 1.55 }}>{c.blurb}</div>
+                <div
+                  className="mono"
+                  style={{
+                    marginTop: 'auto',
+                    fontSize: 11,
+                    color: 'var(--cobalt)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    fontWeight: 500,
+                  }}
+                >
+                  {c.cta} →
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── SPECIALTY INDEX ───────────────────────────── */}
+        {specialties.length > 0 && (
+          <section style={{ padding: '64px 28px 48px', maxWidth: 1280, margin: '0 auto' }}>
+            <div
+              className="row between ai-end"
+              style={{ marginBottom: 32, flexWrap: 'wrap', gap: 16 }}
+            >
+              <div className="col gap-2">
+                <span className="section-mark">II / by specialty</span>
+                <h2
+                  className="display"
+                  style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', margin: 0, letterSpacing: '-0.035em', fontWeight: 600 }}
+                >
+                  The whole index, browsable.
+                </h2>
+              </div>
+              <Link href="/conditions" className="btn btn-paper btn-sm">
+                View all {specialties.length} →
+              </Link>
+            </div>
+
+            <HomepageSpecialties
+              specialties={specialties}
+              grouped={grouped}
+              counts={specCountMap}
+              icons={SPECIALTY_ICON_MAP}
+              country={geo.countrySlug || 'india'}
+              lang={geo.lang}
+            />
+          </section>
+        )}
+
+        {/* ── COST COMPARE (ink) ────────────────────────── */}
+        <section style={{ padding: '72px 28px', background: 'var(--ink)', color: 'var(--paper)' }}>
+          <div style={{ maxWidth: 1280, margin: '0 auto' }} className="col gap-6">
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+              <div className="col gap-2">
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    color: 'var(--cobalt-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.10em',
+                    fontWeight: 500,
+                  }}
+                >
+                  III / cost, mapped
+                </span>
+                <h2
+                  className="display"
+                  style={{
+                    fontSize: 'clamp(36px, 5vw, 64px)',
+                    margin: 0,
+                    letterSpacing: '-0.04em',
+                    fontWeight: 600,
+                    color: 'var(--paper)',
+                  }}
+                >
+                  Same surgery.
+                  <br />
+                  <span style={{ color: 'var(--cobalt-3)' }}>Seven countries.</span>
+                </h2>
+              </div>
+              <Link
+                href="/medical-travel"
+                className="btn"
+                style={{
+                  background: 'rgba(255,255,255,.08)',
+                  color: 'var(--paper)',
+                  borderColor: 'rgba(255,255,255,.15)',
+                }}
+              >
+                Compare any procedure →
+              </Link>
+            </div>
+
+            <div
+              style={{
+                background: 'rgba(255,255,255,.04)',
+                border: '1px solid rgba(255,255,255,.10)',
+                borderRadius: 'var(--r-3)',
+                overflow: 'hidden',
+              }}
+            >
+              <div
+                className="row"
+                style={{ padding: '14px 24px', borderBottom: '1px solid rgba(255,255,255,.10)' }}
+              >
+                <span
+                  className="mono"
+                  style={{
+                    flex: 2,
+                    fontSize: 11,
+                    color: 'rgba(255,255,255,.5)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                  }}
+                >
+                  Procedure
+                </span>
+                {COST_COUNTRIES.map(c => (
+                  <span
+                    key={c}
+                    className="mono"
+                    style={{
+                      flex: 1,
+                      fontSize: 11,
+                      color: c === 'India' ? 'var(--cobalt-3)' : 'rgba(255,255,255,.5)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                    }}
+                  >
+                    {c}{c === 'India' ? ' ★' : ''}
+                  </span>
+                ))}
+              </div>
+              {COST_PROCEDURES.map((row, i, arr) => (
+                <div
+                  key={row.proc}
+                  className="row ai-center"
+                  style={{
+                    padding: '18px 24px',
+                    borderBottom:
+                      i < arr.length - 1 ? '1px solid rgba(255,255,255,.06)' : 'none',
+                  }}
+                >
+                  <span
+                    className="display"
+                    style={{ flex: 2, fontSize: 18, color: 'var(--paper)', fontWeight: 500 }}
+                  >
+                    {row.pinnedHref ? (
+                      <Link href={row.pinnedHref} style={{ color: 'inherit' }}>
+                        {row.proc}
+                      </Link>
+                    ) : (
+                      row.proc
+                    )}
+                  </span>
+                  {row.costs.map((c, j) => (
+                    <span
+                      key={j}
+                      className="num"
+                      style={{
+                        flex: 1,
+                        fontSize: 14,
+                        color: j === PINNED_COL ? 'var(--cobalt-3)' : 'rgba(255,255,255,.7)',
+                        fontWeight: j === PINNED_COL ? 500 : 400,
+                      }}
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── EDITORIAL BOARD STRIP ──────────────────────── */}
+        <section style={{ padding: '80px 28px' }}>
+          <div className="row gap-7" style={{ maxWidth: 1280, margin: '0 auto', flexWrap: 'wrap' }}>
+            <div className="col gap-5" style={{ flex: '1 1 380px', minWidth: 0 }}>
+              <span className="section-mark">IV / our editorial board</span>
+              <div
+                className="display"
+                style={{
+                  fontSize: 'clamp(36px, 5vw, 64px)',
+                  lineHeight: 1,
+                  letterSpacing: '-0.04em',
+                  fontWeight: 600,
+                }}
+              >
+                Written like
+                <br />
+                you&rsquo;d want it
+                <br />
+                <span style={{ color: 'var(--cobalt)' }}>for your parents</span>
+                <span style={{ color: 'var(--orange)' }}>.</span>
+              </div>
+              <p className="lede" style={{ fontSize: 18, maxWidth: 520 }}>
+                Every condition page reviewed by a board-certified physician in that specialty before it goes live. We cite sources. We update yearly. We don&rsquo;t push miracle cures.
+              </p>
+              <div className="row gap-3 ai-center" style={{ flexWrap: 'wrap' }}>
+                <div className="row" aria-hidden="true">
+                  {['MP', 'AR', 'JO', 'KE'].map((n, i) => (
+                    <div
+                      key={n}
+                      className="placeholder"
+                      style={{
+                        width: 48,
+                        height: 48,
+                        borderRadius: 99,
+                        fontSize: 11,
+                        marginLeft: i ? -12 : 0,
+                        background: 'var(--paper)',
+                        color: 'var(--ink-3)',
+                        borderColor: 'var(--rule)',
+                      }}
+                    >
+                      {n}
+                    </div>
+                  ))}
+                </div>
+                <div className="col">
+                  <div className="num" style={{ fontSize: 16, fontWeight: 500 }}>47 reviewers</div>
+                  <div className="muted" style={{ fontSize: 12 }}>19 specialties · 6 continents</div>
+                </div>
+                <Link
+                  href="/editorial-board"
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    color: 'var(--cobalt)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    fontWeight: 500,
+                    marginLeft: 'auto',
+                  }}
+                >
+                  Meet the board →
+                </Link>
+              </div>
+            </div>
+
+            <div className="col gap-5" style={{ flex: '1 1 280px', minWidth: 0 }}>
+              <div className="card" style={{ padding: 24 }}>
+                <div className="kicker" style={{ marginBottom: 10 }}>
+                  <span className="dot" />the rules we keep
+                </div>
+                <ol className="clean col gap-3">
+                  {[
+                    'Cite ranges, never adjectives. "TSH 6.8 (ref 0.4–4.0)" beats "elevated TSH".',
+                    'Lead with reassurance when warranted. Borderline ≠ broken.',
+                    'Talk to a smart, scared, hurried adult — not a journal, not a child.',
+                    'Never push a miracle cure. We say "common", "monitor-able", "treatable".',
+                  ].map((q, i) => (
+                    <li key={i} className="row gap-3 ai-baseline">
+                      <span
+                        className="num"
+                        style={{
+                          fontSize: 18,
+                          color: 'var(--cobalt)',
+                          minWidth: 30,
+                          fontWeight: 500,
+                          letterSpacing: '-0.03em',
+                        }}
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.5 }}>{q}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── MEDICAL TRAVEL CTA ─────────────────────────── */}
+        <section style={{ padding: '0 28px 96px' }}>
+          <div
+            className="card-ink"
+            style={{ maxWidth: 1280, margin: '0 auto', padding: '40px 36px' }}
+          >
+            <div
+              className="row ai-center between"
+              style={{ flexWrap: 'wrap', gap: 24 }}
+            >
+              <div className="col gap-2" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    color: 'var(--cobalt-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.10em',
+                    fontWeight: 500,
+                  }}
+                >
+                  V / the concierge
+                </span>
+                <h2
+                  className="display"
+                  style={{
+                    fontSize: 'clamp(28px, 3.5vw, 40px)',
+                    lineHeight: 1.05,
+                    margin: 0,
+                    letterSpacing: '-0.03em',
+                    fontWeight: 600,
+                    color: 'var(--paper)',
+                  }}
+                >
+                  Planning surgery abroad? <span style={{ color: 'var(--cobalt-3)' }}>End-to-end, handled</span><span style={{ color: 'var(--orange)' }}>.</span>
+                </h2>
+                <p
+                  style={{
+                    color: 'rgba(255,255,255,.7)',
+                    fontSize: 16,
+                    lineHeight: 1.55,
+                    maxWidth: 560,
+                    margin: 0,
+                  }}
+                >
+                  Surgeon match-making. Pre-negotiated package pricing. Visa, flight, recovery suite, native-speaking translator. Twelve cities, one number.
+                </p>
+              </div>
+              <Link href="/medical-travel/bot" className="btn btn-cobalt btn-lg">
+                Build my estimate →
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── Feature Action Cards ──────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <Link
-            href="/doctors"
-            className="group bg-slate-900/50 border border-white/5 hover:border-blue-500/30 rounded-2xl p-6 flex flex-col gap-4 hover:bg-slate-800/60 transition-all"
-          >
-            <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">Find Specialists</h3>
-              <p className="text-sm text-slate-500">Browse verified doctors by specialty and location.</p>
-            </div>
-            <div className="mt-auto flex items-center text-sm text-slate-500 group-hover:text-white transition-colors">
-              Browse doctors
-              <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </div>
-          </Link>
-
-          <Link
-            href="/analyze"
-            className="group bg-slate-900/50 border border-white/5 hover:border-teal-500/30 rounded-2xl p-6 flex flex-col gap-4 hover:bg-slate-800/60 transition-all"
-          >
-            <div className="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-teal-400 transition-colors">AI Report Analysis</h3>
-              <p className="text-sm text-slate-500">Upload scans or blood work for instant breakdown.</p>
-            </div>
-            <div className="mt-auto flex items-center text-sm text-slate-500 group-hover:text-white transition-colors">
-              Upload report
-              <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </div>
-          </Link>
-
-          <Link
-            href="/treatments"
-            className="group bg-slate-900/50 border border-white/5 hover:border-emerald-500/30 rounded-2xl p-6 flex flex-col gap-4 hover:bg-slate-800/60 transition-all"
-          >
-            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-emerald-400 transition-colors">Treatment Costs</h3>
-              <p className="text-sm text-slate-500">Compare surgery costs across 7 countries.</p>
-            </div>
-            <div className="mt-auto flex items-center text-sm text-slate-500 group-hover:text-white transition-colors">
-              Compare costs
-              <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* ── Browse by Medical Specialty ── */}
-      <section className="py-16 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">Browse by Specialty</h2>
-            <p className="text-slate-400 max-w-xl mx-auto">
-              Explore 70,000+ conditions across {specialties.length} medical specialties.
-            </p>
-          </div>
-
-          <HomepageSpecialties
-            specialties={specialties}
-            grouped={grouped}
-            counts={specCountMap}
-            icons={SPECIALTY_ICON_MAP}
-            country={geo.countrySlug || 'india'}
-            lang={geo.lang}
-          />
-        </div>
-      </section>
-
-      {/* ── Medical Travel Banner ─────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-start gap-5">
-            <div className="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400 shrink-0">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" /></svg>
-            </div>
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-2">
-                Planning surgery abroad?
-              </h2>
-              <p className="text-slate-400 max-w-lg">
-                Get a free, detailed cost estimate for your treatment including hospital stay and travel logistics.
-              </p>
-            </div>
-          </div>
-
-          <Link href="/medical-travel/bot" className="shrink-0 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold rounded-xl transition-colors flex items-center gap-2">
-            Get Free Estimate
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </Link>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
     </>
   );
 }

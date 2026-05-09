@@ -13,35 +13,40 @@ interface SearchResult {
     matchedSymptom?: string;
 }
 
-const TYPE_STYLES: Record<string, { bg: string; text: string; label: string }> = {
-    condition: { bg: 'bg-teal-500/20', text: 'text-teal-400', label: 'Condition' },
-    treatment: { bg: 'bg-emerald-500/20', text: 'text-emerald-400', label: 'Treatment' },
-    specialty: { bg: 'bg-violet-500/20', text: 'text-violet-400', label: 'Specialty' },
-    tool: { bg: 'bg-amber-500/20', text: 'text-amber-400', label: 'Tool' },
-    symptom: { bg: 'bg-rose-500/20', text: 'text-rose-400', label: 'Matching Symptom' },
-    test: { bg: 'bg-cyan-500/20', text: 'text-cyan-400', label: 'Lab Test' },
+const TYPE_LABELS: Record<string, string> = {
+    condition: 'condition',
+    treatment: 'treatment',
+    specialty: 'specialty',
+    tool: 'tool',
+    symptom: 'matching symptom',
+    test: 'lab test',
 };
 
-const TYPE_ICONS: Record<string, React.ReactNode> = {
-    condition: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
-    treatment: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>,
-    specialty: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>,
-    tool: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
-    symptom: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>,
-    test: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>,
+const TYPE_PILL_CLASS: Record<string, string> = {
+    condition: 'pill pill-cobalt',
+    treatment: 'pill pill-mint',
+    specialty: 'pill pill-magenta',
+    tool: 'pill pill-orange',
+    symptom: 'pill pill-lemon',
+    test: 'pill pill-cobalt',
 };
 
 interface SearchAutocompleteProps {
     className?: string;
-    variant?: 'light' | 'dark';
+    /**
+     * Visual variant. Bureau is the default; "ink" is for dark surfaces (e.g.
+     * an ink section). The legacy "dark"/"light" props from the previous
+     * design map onto Bureau ("light"/anything else) and ink ("dark").
+     */
+    variant?: 'bureau' | 'ink' | 'light' | 'dark';
     placeholder?: string;
-    typeFilter?: 'condition' | 'treatment' | 'specialty' | 'tool' | 'test'; // Filter search to specific type
+    typeFilter?: 'condition' | 'treatment' | 'specialty' | 'tool' | 'test';
 }
 
 export default function SearchAutocomplete({
     className = '',
-    variant = 'dark',
-    placeholder = 'Search conditions, symptoms, treatments...',
+    variant = 'bureau',
+    placeholder = 'Search a condition, treatment, or symptom',
     typeFilter,
 }: SearchAutocompleteProps) {
     const [query, setQuery] = useState('');
@@ -54,8 +59,14 @@ export default function SearchAutocomplete({
     const inputRef = useRef<HTMLInputElement>(null);
     const debounceRef = useRef<NodeJS.Timeout | null>(null);
 
+    const isInk = variant === 'ink' || variant === 'dark';
+
     const fetchResults = useCallback(async (q: string) => {
-        if (q.length < 2) { setResults([]); setIsOpen(false); return; }
+        if (q.length < 2) {
+            setResults([]);
+            setIsOpen(false);
+            return;
+        }
         setIsLoading(true);
         try {
             const typeParam = typeFilter ? `&type=${typeFilter}` : '';
@@ -64,7 +75,9 @@ export default function SearchAutocomplete({
             setResults(data);
             setIsOpen(data.length > 0);
             setActiveIdx(-1);
-        } catch { setResults([]); }
+        } catch {
+            setResults([]);
+        }
         setIsLoading(false);
     }, [typeFilter]);
 
@@ -74,10 +87,11 @@ export default function SearchAutocomplete({
         return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
     }, [query, fetchResults]);
 
-    // Close on outside click
     useEffect(() => {
         const handler = (e: MouseEvent) => {
-            if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) setIsOpen(false);
+            if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+                setIsOpen(false);
+            }
         };
         document.addEventListener('mousedown', handler);
         return () => document.removeEventListener('mousedown', handler);
@@ -90,13 +104,20 @@ export default function SearchAutocomplete({
     };
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
-        if (e.key === 'ArrowDown') { e.preventDefault(); setActiveIdx(i => Math.min(i + 1, results.length - 1)); }
-        else if (e.key === 'ArrowUp') { e.preventDefault(); setActiveIdx(i => Math.max(i - 1, 0)); }
-        else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); navigate(results[activeIdx].url); }
-        else if (e.key === 'Escape') setIsOpen(false);
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            setActiveIdx(i => Math.min(i + 1, results.length - 1));
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            setActiveIdx(i => Math.max(i - 1, 0));
+        } else if (e.key === 'Enter' && activeIdx >= 0) {
+            e.preventDefault();
+            navigate(results[activeIdx].url);
+        } else if (e.key === 'Escape') {
+            setIsOpen(false);
+        }
     };
 
-    // Group results by type for section headers
     const grouped = results.reduce<Record<string, SearchResult[]>>((acc, r) => {
         if (!acc[r.type]) acc[r.type] = [];
         acc[r.type].push(r);
@@ -105,51 +126,39 @@ export default function SearchAutocomplete({
 
     let flatIdx = 0;
 
-    // Dark variant styles (for homepage)
-    const isDark = variant === 'dark';
+    const wrapperBg = isInk ? 'rgba(255,255,255,.04)' : 'var(--paper)';
+    const wrapperBorder = isInk ? 'rgba(255,255,255,.12)' : 'var(--rule)';
+    const inputColor = isInk ? 'var(--paper)' : 'var(--ink)';
+    const placeholderColor = isInk ? 'rgba(255,255,255,.5)' : 'var(--ink-4)';
+    const iconColor = isInk ? 'rgba(255,255,255,.5)' : 'var(--ink-3)';
 
-    const inputWrapperClasses = isDark
-        ? 'bg-slate-800/60 backdrop-blur-xl border border-white/10 hover:border-white/20 focus-within:border-teal-500/50 focus-within:ring-2 focus-within:ring-teal-500/20'
-        : 'bg-white border border-slate-200 hover:border-slate-300 focus-within:border-primary-400 focus-within:ring-2 focus-within:ring-primary-400/20';
-
-    const inputClasses = isDark
-        ? 'text-white placeholder:text-slate-400'
-        : 'text-slate-900 placeholder:text-slate-400';
-
-    const iconClasses = isDark
-        ? 'text-teal-500'
-        : 'text-slate-400';
-
-    const dropdownClasses = isDark
-        ? 'bg-slate-900/95 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50'
-        : 'bg-white border border-slate-200 shadow-2xl';
-
-    const sectionHeaderClasses = isDark
-        ? 'bg-slate-800/50 border-b border-white/5 text-slate-500'
-        : 'bg-slate-50 border-b border-slate-100 text-slate-400';
-
-    const itemClasses = isDark
-        ? 'hover:bg-white/5 border-b border-white/5'
-        : 'hover:bg-slate-50 border-b border-slate-100';
-
-    const itemActiveClasses = isDark
-        ? 'bg-teal-500/10'
-        : 'bg-primary-50';
-
-    const itemTextClasses = isDark
-        ? 'text-white'
-        : 'text-slate-900';
-
-    const itemSubtitleClasses = isDark
-        ? 'text-slate-400'
-        : 'text-slate-500';
+    const dropdownBg = isInk ? '#102036' : 'var(--paper)';
+    const dropdownBorder = isInk ? 'rgba(255,255,255,.12)' : 'var(--rule)';
+    const dropdownDivider = isInk ? 'rgba(255,255,255,.08)' : 'var(--rule)';
+    const itemTextColor = isInk ? 'var(--paper)' : 'var(--ink)';
+    const itemSubColor = isInk ? 'rgba(255,255,255,.6)' : 'var(--ink-3)';
+    const itemActiveBg = isInk ? 'rgba(28,91,255,.18)' : 'var(--cobalt-50)';
 
     return (
         <div ref={wrapperRef} className={`relative ${className}`}>
-            <div className={`flex items-center rounded-xl overflow-hidden transition-all duration-200 ${inputWrapperClasses}`}>
-                <svg className={`w-5 h-5 ml-4 shrink-0 ${iconClasses}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+            <div
+                className="row ai-center"
+                style={{
+                    background: wrapperBg,
+                    border: `1px solid ${wrapperBorder}`,
+                    borderRadius: 'var(--r-3)',
+                    padding: 6,
+                    gap: 6,
+                    transition: 'border-color 120ms',
+                }}
+            >
+                <div
+                    className="row ai-center"
+                    aria-hidden="true"
+                    style={{ padding: '0 12px', borderRight: `1px solid ${wrapperBorder}`, height: 36 }}
+                >
+                    <span className="mono" style={{ color: iconColor, fontSize: 13 }}>⌕</span>
+                </div>
                 <input
                     ref={inputRef}
                     type="text"
@@ -164,84 +173,165 @@ export default function SearchAutocomplete({
                     aria-autocomplete="list"
                     aria-label="Search"
                     aria-activedescendant={activeIdx >= 0 ? `search-option-${activeIdx}` : undefined}
-                    className={`flex-1 py-4 px-4 bg-transparent outline-none font-medium text-sm ${inputClasses}`}
+                    className="sans"
+                    style={{
+                        flex: 1,
+                        padding: '8px 4px',
+                        background: 'transparent',
+                        border: 'none',
+                        outline: 'none',
+                        fontSize: 14,
+                        color: inputColor,
+                        minWidth: 0,
+                    }}
                 />
+                <style>{`.search-ac-input::placeholder{color:${placeholderColor};}`}</style>
                 {isLoading && (
-                    <div className="mr-4 animate-spin w-4 h-4 border-2 border-teal-500 border-t-transparent rounded-full"></div>
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            width: 14,
+                            height: 14,
+                            border: `2px solid ${isInk ? 'rgba(255,255,255,.4)' : 'var(--rule)'}`,
+                            borderTopColor: 'var(--cobalt)',
+                            borderRadius: '50%',
+                            margin: '0 8px',
+                            animation: 'spin 0.7s linear infinite',
+                        }}
+                    />
                 )}
                 {!isLoading && query.length > 0 && (
                     <button
                         type="button"
                         aria-label="Clear search"
-                        onClick={() => { setQuery(''); setResults([]); setIsOpen(false); inputRef.current?.focus(); }}
-                        className={`mr-4 p-1 rounded-full hover:bg-white/10 transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-400 hover:text-slate-600'}`}
+                        onClick={() => {
+                            setQuery('');
+                            setResults([]);
+                            setIsOpen(false);
+                            inputRef.current?.focus();
+                        }}
+                        className="btn btn-ghost btn-sm"
+                        style={{ color: iconColor, padding: '4px 8px' }}
                     >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        ✕
                     </button>
                 )}
+                <button
+                    type="button"
+                    onClick={() => activeIdx >= 0 ? navigate(results[activeIdx].url) : null}
+                    className="btn btn-cobalt btn-sm"
+                >
+                    Search
+                </button>
             </div>
 
             {isOpen && (
                 <div
                     id="search-listbox"
                     role="listbox"
-                    className={`absolute top-full mt-2 left-0 right-0 rounded-xl overflow-hidden z-50 max-h-96 overflow-y-auto ${dropdownClasses}`}
+                    style={{
+                        position: 'absolute',
+                        top: '100%',
+                        marginTop: 8,
+                        left: 0,
+                        right: 0,
+                        background: dropdownBg,
+                        border: `1px solid ${dropdownBorder}`,
+                        borderRadius: 'var(--r-3)',
+                        boxShadow: 'var(--shadow-2)',
+                        overflow: 'hidden',
+                        zIndex: 50,
+                        maxHeight: 384,
+                        overflowY: 'auto',
+                    }}
                 >
                     {Object.entries(grouped).map(([type, items]) => (
                         <div key={type}>
-                            {/* Section header */}
-                            <div className={`px-4 py-2 ${sectionHeaderClasses}`}>
-                                <span className="text-[10px] font-bold uppercase tracking-widest">
-                                    {TYPE_STYLES[type]?.label || type}
-                                </span>
+                            <div
+                                className="mono"
+                                style={{
+                                    padding: '8px 14px',
+                                    fontSize: 11,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    color: itemSubColor,
+                                    background: isInk ? 'rgba(255,255,255,.03)' : 'var(--bg-2)',
+                                    borderBottom: `1px solid ${dropdownDivider}`,
+                                    fontWeight: 500,
+                                }}
+                            >
+                                {TYPE_LABELS[type] || type}
                             </div>
                             {items.map((r) => {
                                 const idx = flatIdx++;
-                                const style = TYPE_STYLES[r.type] || TYPE_STYLES.condition;
+                                const isActive = idx === activeIdx;
+                                const pillClass = TYPE_PILL_CLASS[r.type] || 'pill';
                                 return (
                                     <button
                                         key={`${r.type}-${r.slug}`}
                                         id={`search-option-${idx}`}
                                         role="option"
-                                        aria-selected={idx === activeIdx}
+                                        aria-selected={isActive}
                                         onMouseEnter={() => setActiveIdx(idx)}
                                         onClick={() => navigate(r.url)}
-                                        className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-colors last:border-b-0
-                                            ${itemClasses}
-                                            ${idx === activeIdx ? itemActiveClasses : ''}
-                                        `}
+                                        className="row ai-center gap-3"
+                                        style={{
+                                            width: '100%',
+                                            textAlign: 'left',
+                                            padding: '10px 14px',
+                                            background: isActive ? itemActiveBg : 'transparent',
+                                            borderBottom: `1px solid ${dropdownDivider}`,
+                                            border: 'none',
+                                            borderTop: 'none',
+                                            borderLeft: 'none',
+                                            borderRight: 'none',
+                                            cursor: 'pointer',
+                                            transition: 'background 100ms',
+                                            color: itemTextColor,
+                                        }}
                                     >
-                                        <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 ${style.bg} ${style.text}`}>
-                                            {r.icon ? (
-                                                <span className="text-base">{r.icon}</span>
-                                            ) : (
-                                                TYPE_ICONS[r.type] || TYPE_ICONS.condition
-                                            )}
+                                        <span className={pillClass} style={{ flexShrink: 0 }}>
+                                            {r.icon ? r.icon : TYPE_LABELS[r.type]?.slice(0, 3)}
+                                        </span>
+                                        <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                                            <span style={{
+                                                fontSize: 14,
+                                                fontWeight: 500,
+                                                color: itemTextColor,
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
+                                                whiteSpace: 'nowrap',
+                                            }}>{r.name}</span>
+                                            <span style={{
+                                                fontSize: 12,
+                                                color: itemSubColor,
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
+                                                whiteSpace: 'nowrap',
+                                            }}>{r.subtitle}</span>
                                         </div>
-                                        <div className="flex-1 min-w-0">
-                                            <p className={`text-sm font-semibold truncate ${itemTextClasses}`}>{r.name}</p>
-                                            <p className={`text-xs truncate ${itemSubtitleClasses}`}>{r.subtitle}</p>
-                                        </div>
-                                        <svg className={`w-4 h-4 shrink-0 ${isDark ? 'text-slate-600' : 'text-slate-300'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
+                                        <span
+                                            aria-hidden="true"
+                                            className="mono"
+                                            style={{ color: isActive ? 'var(--cobalt)' : itemSubColor, fontSize: 13 }}
+                                        >→</span>
                                     </button>
                                 );
                             })}
                         </div>
                     ))}
 
-                    {/* No results message */}
                     {results.length === 0 && query.length >= 2 && !isLoading && (
-                        <div className={`px-4 py-8 text-center ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
-                            <p className="text-sm">No results found for &quot;{query}&quot;</p>
-                            <p className="text-xs mt-1">Try a different search term</p>
+                        <div
+                            style={{ padding: '32px 16px', textAlign: 'center', color: itemSubColor }}
+                        >
+                            <p style={{ fontSize: 13, margin: 0 }}>No results for &quot;{query}&quot;.</p>
+                            <p className="muted" style={{ fontSize: 12, margin: '4px 0 0' }}>Try a different term.</p>
                         </div>
                     )}
                 </div>
             )}
+            <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
         </div>
     );
 }
