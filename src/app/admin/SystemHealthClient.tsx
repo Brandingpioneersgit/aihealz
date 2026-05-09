@@ -16,6 +16,39 @@ interface HealthData {
     checks: HealthCheck[];
 }
 
+const STATUS_PALETTE: Record<
+    HealthData['status'],
+    {
+        dot: string;
+        textColor: string;
+        pillClass: string;
+        accent: string;
+        label: string;
+    }
+> = {
+    healthy: {
+        dot: 'var(--mint)',
+        textColor: 'var(--mint-3)',
+        pillClass: 'pill pill-mint',
+        accent: 'var(--mint)',
+        label: 'operational',
+    },
+    degraded: {
+        dot: 'var(--lemon-2)',
+        textColor: '#8C6A00',
+        pillClass: 'pill pill-lemon',
+        accent: 'var(--lemon-2)',
+        label: 'degraded',
+    },
+    unhealthy: {
+        dot: 'var(--orange)',
+        textColor: 'var(--orange-2)',
+        pillClass: 'pill pill-orange',
+        accent: 'var(--orange)',
+        label: 'incident',
+    },
+};
+
 export function SystemHealthClient() {
     const [health, setHealth] = useState<HealthData | null>(null);
     const [loading, setLoading] = useState(true);
@@ -36,11 +69,13 @@ export function SystemHealthClient() {
                 status: 'unhealthy',
                 timestamp: new Date().toISOString(),
                 totalCheckTime: 0,
-                checks: [{
-                    service: 'Health Check',
-                    status: 'unhealthy',
-                    message: 'Failed to connect',
-                }],
+                checks: [
+                    {
+                        service: 'Health Check',
+                        status: 'unhealthy',
+                        message: 'Failed to connect',
+                    },
+                ],
             });
         } finally {
             setLoading(false);
@@ -49,34 +84,45 @@ export function SystemHealthClient() {
 
     useEffect(() => {
         fetchHealth();
-        // Refresh every 60 seconds
         const interval = setInterval(fetchHealth, 60000);
         return () => clearInterval(interval);
     }, []);
 
-    const statusColors = {
-        healthy: { bg: 'bg-green-50', border: 'border-green-200', dot: 'bg-green-500', text: 'text-green-700' },
-        degraded: { bg: 'bg-yellow-50', border: 'border-yellow-200', dot: 'bg-yellow-500', text: 'text-yellow-700' },
-        unhealthy: { bg: 'bg-red-50', border: 'border-red-200', dot: 'bg-red-500', text: 'text-red-700' },
-    };
-
     return (
-        <div className="bg-white rounded-xl border border-slate-200 p-6">
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-bold text-slate-900">System Status</h2>
-                <div className="flex items-center gap-3">
+        <div className="card col gap-5" style={{ padding: 24 }}>
+            <div className="row between ai-center">
+                <div className="col gap-1">
+                    <span className="section-mark">infra / system status</span>
+                    <h2 className="display" style={{ fontSize: 18, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}>
+                        Live health probes.
+                    </h2>
+                </div>
+                <div className="row gap-3 ai-center">
                     {lastChecked && (
-                        <span className="text-xs text-slate-400">
-                            Last checked: {lastChecked.toLocaleTimeString()}
+                        <span className="kicker">
+                            checked · {lastChecked.toLocaleTimeString()}
                         </span>
                     )}
                     <button
                         onClick={fetchHealth}
                         disabled={loading}
-                        className="text-sm text-teal-600 hover:text-teal-700 font-medium flex items-center gap-1 disabled:opacity-50"
+                        className="btn btn-paper btn-sm"
+                        style={{ minHeight: 32 }}
                     >
-                        <svg className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            style={{
+                                animation: loading ? 'spin 1s linear infinite' : 'none',
+                            }}
+                        >
+                            <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                         </svg>
                         Refresh
                     </button>
@@ -84,42 +130,148 @@ export function SystemHealthClient() {
             </div>
 
             {loading && !health ? (
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="p-4 bg-slate-50 rounded-lg animate-pulse">
-                            <div className="h-4 bg-slate-200 rounded w-24 mb-2" />
-                            <div className="h-3 bg-slate-200 rounded w-16" />
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                        gap: 0,
+                        border: '1px solid var(--rule)',
+                        borderRadius: 'var(--r-3)',
+                        background: 'var(--paper)',
+                        overflow: 'hidden',
+                    }}
+                >
+                    {[1, 2, 3, 4].map((i, idx, arr) => (
+                        <div
+                            key={i}
+                            className="col gap-2"
+                            style={{
+                                padding: 18,
+                                borderRight: idx < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                animation: 'pulse-subtle 2s ease-in-out infinite',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    height: 10,
+                                    width: '60%',
+                                    background: 'var(--bg-3)',
+                                    borderRadius: 2,
+                                }}
+                            />
+                            <div
+                                style={{
+                                    height: 8,
+                                    width: '40%',
+                                    background: 'var(--bg-3)',
+                                    borderRadius: 2,
+                                }}
+                            />
                         </div>
                     ))}
                 </div>
             ) : health ? (
                 <>
-                    {/* Overall Status Banner */}
-                    <div className={`mb-4 p-3 rounded-lg ${statusColors[health.status].bg} ${statusColors[health.status].border} border flex items-center justify-between`}>
-                        <div className="flex items-center gap-2">
-                            <span className={`w-3 h-3 rounded-full ${statusColors[health.status].dot} ${health.status === 'healthy' ? 'animate-pulse' : ''}`} />
-                            <span className={`font-medium ${statusColors[health.status].text}`}>
-                                System is {health.status === 'healthy' ? 'Operational' : health.status === 'degraded' ? 'Degraded' : 'Having Issues'}
-                            </span>
-                        </div>
-                        <span className="text-xs text-slate-500">
-                            Check completed in {health.totalCheckTime}ms
-                        </span>
-                    </div>
+                    {/* Overall status banner */}
+                    {(() => {
+                        const palette = STATUS_PALETTE[health.status];
+                        return (
+                            <div
+                                className="row between ai-center"
+                                style={{
+                                    padding: '14px 18px',
+                                    borderRadius: 'var(--r-3)',
+                                    background: 'var(--paper-2)',
+                                    border: '1px solid var(--rule)',
+                                    borderLeft: `3px solid ${palette.accent}`,
+                                }}
+                            >
+                                <div className="row gap-3 ai-center">
+                                    <span
+                                        style={{
+                                            width: 10,
+                                            height: 10,
+                                            borderRadius: 999,
+                                            background: palette.dot,
+                                            animation: health.status === 'healthy' ? 'pulse-subtle 3s infinite' : 'none',
+                                        }}
+                                    />
+                                    <span
+                                        className="display"
+                                        style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)' }}
+                                    >
+                                        System is{' '}
+                                        <span style={{ color: palette.textColor }}>
+                                            {palette.label}
+                                        </span>
+                                    </span>
+                                </div>
+                                <span className="kicker">
+                                    probe · {health.totalCheckTime}ms
+                                </span>
+                            </div>
+                        );
+                    })()}
 
-                    {/* Individual Services */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {health.checks.map((check) => {
-                            const colors = statusColors[check.status];
+                    {/* Individual services */}
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {health.checks.map((check, i) => {
+                            const palette = STATUS_PALETTE[check.status];
+                            const cols = 4;
+                            const isLastCol = (i + 1) % cols === 0;
+                            const isLastRow = i >= health.checks.length - (health.checks.length % cols || cols);
                             return (
-                                <div key={check.service} className={`p-4 ${colors.bg} rounded-lg border ${colors.border}`}>
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className={`w-2 h-2 ${colors.dot} rounded-full`} />
-                                        <span className={`text-sm font-medium ${colors.text}`}>{check.service}</span>
+                                <div
+                                    key={check.service}
+                                    className="col gap-2"
+                                    style={{
+                                        padding: 16,
+                                        borderRight: !isLastCol ? '1px solid var(--rule)' : 'none',
+                                        borderBottom: !isLastRow ? '1px solid var(--rule)' : 'none',
+                                    }}
+                                >
+                                    <div className="row between ai-center">
+                                        <div className="row gap-2 ai-center">
+                                            <span
+                                                style={{
+                                                    width: 8,
+                                                    height: 8,
+                                                    borderRadius: 999,
+                                                    background: palette.dot,
+                                                }}
+                                            />
+                                            <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)' }}>
+                                                {check.service}
+                                            </span>
+                                        </div>
+                                        <span className={palette.pillClass} style={{ fontSize: 10, padding: '2px 6px' }}>
+                                            {palette.label}
+                                        </span>
                                     </div>
-                                    <p className={`text-xs ${colors.text} opacity-80`}>{check.message}</p>
+                                    <p
+                                        style={{
+                                            margin: 0,
+                                            fontSize: 12,
+                                            color: 'var(--ink-3)',
+                                            lineHeight: 1.5,
+                                        }}
+                                    >
+                                        {check.message}
+                                    </p>
                                     {check.latency !== undefined && (
-                                        <p className="text-xs text-slate-400 mt-1">{check.latency}ms</p>
+                                        <span className="kicker">
+                                            <span className="num">{check.latency}</span>ms
+                                        </span>
                                     )}
                                 </div>
                             );
@@ -127,6 +279,8 @@ export function SystemHealthClient() {
                     </div>
                 </>
             ) : null}
+
+            <style>{`@keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }`}</style>
         </div>
     );
 }

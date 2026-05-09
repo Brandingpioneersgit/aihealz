@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 // Admin session interface
 interface AdminSession {
@@ -134,11 +134,10 @@ function AdminLoginForm({ onSuccess }: { onSuccess: () => void }) {
                 return;
             }
 
-            // Store session
             const session: AdminSession = {
                 email: data.email,
                 token: data.token,
-                expiresAt: Date.now() + (24 * 60 * 60 * 1000), // 24 hours
+                expiresAt: Date.now() + (24 * 60 * 60 * 1000),
             };
             localStorage.setItem('admin_session', JSON.stringify(session));
             onSuccess();
@@ -149,47 +148,58 @@ function AdminLoginForm({ onSuccess }: { onSuccess: () => void }) {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-            <div className="w-full max-w-md">
-                <div className="bg-white rounded-2xl shadow-2xl p-8">
-                    <div className="text-center mb-8">
-                        <h1 className="text-2xl font-bold text-slate-900">
-                            AIHealz <span className="text-teal-600">Admin</span>
+        <div
+            style={{
+                minHeight: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 16,
+                background: 'var(--bg)',
+            }}
+        >
+            <div style={{ width: '100%', maxWidth: 420 }}>
+                <div className="card" style={{ padding: 36 }}>
+                    <div className="col gap-2" style={{ marginBottom: 28 }}>
+                        <span className="section-mark">admin / sign in</span>
+                        <h1 className="display" style={{ fontSize: 28, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}>
+                            <span style={{ color: 'var(--cobalt)' }}>aihealz</span> admin
+                            <span style={{ color: 'var(--orange)' }}>.</span>
                         </h1>
-                        <p className="text-slate-500 mt-2">Sign in to access the admin panel</p>
+                        <p className="muted" style={{ margin: 0, fontSize: 14 }}>
+                            Sign in to access the admin panel.
+                        </p>
                     </div>
 
-                    <form onSubmit={handleLogin} className="space-y-4">
+                    <form onSubmit={handleLogin} className="col gap-4">
                         {error && (
-                            <div className="p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
-                                {error}
+                            <div className="card-quiet" style={{ padding: 12, borderLeft: '3px solid var(--orange)' }}>
+                                <span style={{ fontSize: 13, color: 'var(--orange-2)' }}>{error}</span>
                             </div>
                         )}
 
-                        <div>
-                            <label className="block text-sm font-medium text-slate-700 mb-1">
-                                Email
-                            </label>
+                        <div className="form-group">
+                            <label className="form-label" htmlFor="admin-email">Email</label>
                             <input
+                                id="admin-email"
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                                className="input"
                                 placeholder="admin@aihealz.com"
                                 required
                                 autoComplete="email"
                             />
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium text-slate-700 mb-1">
-                                Password
-                            </label>
+                        <div className="form-group">
+                            <label className="form-label" htmlFor="admin-password">Password</label>
                             <input
+                                id="admin-password"
                                 type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                                className="input"
                                 placeholder="Enter your password"
                                 required
                                 autoComplete="current-password"
@@ -199,15 +209,17 @@ function AdminLoginForm({ onSuccess }: { onSuccess: () => void }) {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full py-3 px-4 bg-teal-600 hover:bg-teal-700 disabled:bg-teal-400 text-white font-semibold rounded-lg transition-colors"
+                            className="btn btn-cobalt btn-lg"
+                            style={{ width: '100%' }}
                         >
-                            {loading ? 'Signing in...' : 'Sign In'}
+                            {loading ? 'Signing in…' : 'Sign in'}
                         </button>
                     </form>
 
-                    <div className="mt-6 text-center text-sm text-slate-500">
-                        Protected area. Unauthorized access is prohibited.
-                    </div>
+                    <div className="hairline" style={{ margin: '24px 0 16px' }} />
+                    <p className="kicker" style={{ textAlign: 'center', margin: 0 }}>
+                        protected area · unauthorized access prohibited
+                    </p>
                 </div>
             </div>
         </div>
@@ -220,12 +232,10 @@ export default function AdminLayoutClient({
     children: React.ReactNode;
 }) {
     const pathname = usePathname();
-    const router = useRouter();
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Check admin authentication on mount and route changes
     useEffect(() => {
         const checkAuth = () => {
             try {
@@ -238,7 +248,6 @@ export default function AdminLayoutClient({
 
                 const session: AdminSession = JSON.parse(sessionStr);
 
-                // Check if session is expired
                 if (session.expiresAt < Date.now()) {
                     localStorage.removeItem('admin_session');
                     setIsAuthenticated(false);
@@ -246,7 +255,6 @@ export default function AdminLayoutClient({
                     return;
                 }
 
-                // Validate token format (basic check)
                 if (!session.token || !session.email) {
                     localStorage.removeItem('admin_session');
                     setIsAuthenticated(false);
@@ -266,12 +274,10 @@ export default function AdminLayoutClient({
         checkAuth();
     }, [pathname]);
 
-    // Close sidebar when route changes
     useEffect(() => {
         setSidebarOpen(false);
     }, [pathname]);
 
-    // Prevent body scroll when sidebar is open on mobile
     useEffect(() => {
         if (sidebarOpen) {
             document.body.style.overflow = 'hidden';
@@ -288,131 +294,240 @@ export default function AdminLayoutClient({
         return pathname.startsWith(href);
     };
 
-    // Show loading state while checking authentication
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-slate-100 flex items-center justify-center">
-                <div className="text-center">
-                    <div className="w-12 h-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <p className="text-slate-600">Loading...</p>
+            <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className="col ai-center gap-3">
+                    <div
+                        style={{
+                            width: 36,
+                            height: 36,
+                            border: '2px solid var(--rule)',
+                            borderTopColor: 'var(--cobalt)',
+                            borderRadius: '50%',
+                            animation: 'spin 1s linear infinite',
+                        }}
+                    />
+                    <span className="kicker">loading admin console</span>
                 </div>
+                <style>{`@keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }`}</style>
             </div>
         );
     }
 
-    // Show login form if not authenticated
     if (!isAuthenticated) {
         return <AdminLoginForm onSuccess={() => setIsAuthenticated(true)} />;
     }
 
     return (
-        <div className="min-h-screen bg-slate-100 flex">
+        <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex' }}>
             {/* Mobile sidebar overlay */}
             {sidebarOpen && (
                 <div
-                    className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+                    className="lg:hidden"
+                    style={{
+                        position: 'fixed',
+                        inset: 0,
+                        background: 'rgba(10, 26, 47, 0.5)',
+                        zIndex: 40,
+                    }}
                     onClick={() => setSidebarOpen(false)}
                 />
             )}
 
-            {/* Sidebar Navigation */}
-            <aside className={`
-                w-72 bg-slate-900 text-slate-300 flex flex-col fixed h-full z-50 transition-transform duration-300
-                ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-            `}>
-                <div className="h-16 flex items-center justify-between px-6 border-b border-slate-800 shrink-0 bg-slate-950">
-                    <Link href="/admin" className="flex items-center gap-2">
-                        <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-400">
-                            AIHealz<span className="text-slate-500 font-normal">CMS</span>
+            {/* Sidebar */}
+            <aside
+                className={sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+                style={{
+                    width: 280,
+                    background: 'var(--ink)',
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    position: 'fixed',
+                    height: '100%',
+                    zIndex: 50,
+                    transition: 'transform 300ms ease',
+                    borderRight: '1px solid rgba(255,255,255,0.06)',
+                }}
+            >
+                {/* Brand */}
+                <div
+                    className="row between ai-center"
+                    style={{
+                        height: 64,
+                        padding: '0 22px',
+                        borderBottom: '1px solid rgba(255,255,255,0.08)',
+                        flexShrink: 0,
+                    }}
+                >
+                    <Link href="/admin" className="row gap-2 ai-center">
+                        <span
+                            style={{
+                                width: 28,
+                                height: 28,
+                                borderRadius: 'var(--r-2)',
+                                background: 'var(--cobalt)',
+                                color: '#fff',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontFamily: 'var(--display)',
+                                fontWeight: 600,
+                                fontSize: 13,
+                                letterSpacing: '-0.02em',
+                            }}
+                        >
+                            AH
+                        </span>
+                        <span style={{ color: 'var(--paper)', fontFamily: 'var(--display)', fontSize: 16, fontWeight: 600, letterSpacing: '-0.02em' }}>
+                            aihealz<span style={{ color: 'var(--ink-4)', fontWeight: 400, marginLeft: 4 }}>cms</span>
                         </span>
                     </Link>
                     <button
-                        className="lg:hidden text-slate-400 hover:text-white"
+                        className="lg:hidden"
                         onClick={() => setSidebarOpen(false)}
+                        style={{
+                            background: 'transparent',
+                            border: 'none',
+                            color: 'rgba(255,255,255,0.6)',
+                            padding: 4,
+                        }}
+                        aria-label="Close sidebar"
                     >
                         <Icon d="M6 18L18 6M6 6l12 12" />
                     </button>
                 </div>
 
-                <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-6">
+                {/* Nav */}
+                <nav style={{ flex: 1, overflowY: 'auto', padding: '16px 12px' }} className="col gap-5">
                     {navItems.map((section) => (
-                        <div key={section.section}>
-                            <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2 px-3">
+                        <div key={section.section} className="col gap-1">
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 10,
+                                    color: 'rgba(255,255,255,0.4)',
+                                    letterSpacing: '0.1em',
+                                    textTransform: 'uppercase',
+                                    fontWeight: 500,
+                                    padding: '6px 10px 4px',
+                                }}
+                            >
                                 {section.section}
                             </div>
-                            <div className="space-y-0.5">
-                                {section.items.map((item) => (
-                                    <Link
-                                        key={item.href}
-                                        href={item.href}
-                                        className={`
-                                            flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all
-                                            ${isActive(item.href)
-                                                ? 'bg-teal-500/10 text-teal-400 border border-teal-500/20'
-                                                : 'hover:bg-slate-800 hover:text-white'
-                                            }
-                                        `}
-                                    >
-                                        <Icon d={item.icon} />
-                                        {item.name}
-                                    </Link>
-                                ))}
+                            <div className="col" style={{ gap: 1 }}>
+                                {section.items.map((item) => {
+                                    const active = isActive(item.href);
+                                    return (
+                                        <Link
+                                            key={item.href}
+                                            href={item.href}
+                                            className="row gap-3 ai-center"
+                                            style={{
+                                                padding: '8px 10px',
+                                                borderRadius: 'var(--r-2)',
+                                                fontSize: 13,
+                                                fontWeight: 500,
+                                                color: active ? 'var(--cobalt-3)' : 'rgba(255,255,255,0.72)',
+                                                background: active ? 'rgba(77, 125, 255, 0.12)' : 'transparent',
+                                                border: active ? '1px solid rgba(77, 125, 255, 0.25)' : '1px solid transparent',
+                                                transition: 'background var(--transition-fast), color var(--transition-fast)',
+                                            }}
+                                        >
+                                            <Icon d={item.icon} />
+                                            {item.name}
+                                        </Link>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}
                 </nav>
 
-                <div className="p-4 border-t border-slate-800 bg-slate-950 shrink-0">
-                    <div className="flex items-center gap-3 px-2">
-                        <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-teal-500 to-emerald-500 flex items-center justify-center text-white font-bold text-sm">
+                {/* User footer */}
+                <div
+                    style={{
+                        padding: 16,
+                        borderTop: '1px solid rgba(255,255,255,0.08)',
+                        flexShrink: 0,
+                    }}
+                >
+                    <div className="row gap-3 ai-center" style={{ padding: '0 4px' }}>
+                        <span
+                            className="spec-icon"
+                            aria-hidden="true"
+                            style={{ background: 'var(--cobalt)' }}
+                        >
                             SA
+                        </span>
+                        <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                            <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--paper)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                Super Admin
+                            </span>
+                            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)' }}>
+                                admin@aihealz.com
+                            </span>
                         </div>
-                        <div className="flex-1 min-w-0">
-                            <p className="text-sm font-bold text-white leading-tight truncate">Super Admin</p>
-                            <p className="text-xs text-slate-500">admin@aihealz.com</p>
-                        </div>
-                        <Link href="/admin/settings" className="text-slate-400 hover:text-white">
+                        <Link
+                            href="/admin/settings"
+                            style={{ color: 'rgba(255,255,255,0.6)' }}
+                            aria-label="Settings"
+                        >
                             <Icon d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </Link>
                     </div>
                 </div>
             </aside>
 
-            {/* Main Content Area */}
-            <main className="flex-1 lg:pl-72 min-w-0">
-                {/* Top Header */}
-                <div className="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-4 lg:px-8 sticky top-0 z-30 shadow-sm">
-                    <div className="flex items-center gap-4">
+            {/* Main */}
+            <main className="lg:pl-[280px]" style={{ flex: 1, minWidth: 0 }}>
+                {/* Top header */}
+                <div
+                    className="row between ai-center"
+                    style={{
+                        height: 64,
+                        background: 'var(--paper)',
+                        borderBottom: '1px solid var(--rule)',
+                        padding: '0 24px',
+                        position: 'sticky',
+                        top: 0,
+                        zIndex: 30,
+                    }}
+                >
+                    <div className="row gap-3 ai-center">
                         <button
-                            className="lg:hidden p-2 text-slate-600 hover:text-slate-900"
+                            className="lg:hidden"
                             onClick={() => setSidebarOpen(true)}
+                            style={{
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'var(--ink-2)',
+                                padding: 8,
+                            }}
+                            aria-label="Open sidebar"
                         >
                             <Icon d="M4 6h16M4 12h16M4 18h16" className="w-6 h-6" />
                         </button>
-                        <div className="text-sm font-medium text-slate-500 hidden sm:block">
-                            Admin Panel
-                        </div>
+                        <span className="kicker hidden sm:inline-flex">admin panel · console</span>
                     </div>
-                    <div className="flex gap-3 items-center">
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 rounded-full">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                            </span>
-                            <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">Live</span>
-                        </div>
+                    <div className="row gap-3 ai-center">
+                        <span className="pill pill-mint">
+                            <span className="pill-dot" style={{ background: 'var(--mint)' }} />
+                            live
+                        </span>
                         <Link
                             href="/"
                             target="_blank"
-                            className="text-sm font-medium text-blue-600 hover:text-blue-800 border border-blue-200 px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors"
+                            className="btn btn-paper btn-sm"
                         >
-                            View Site
+                            View site →
                         </Link>
                     </div>
                 </div>
 
-                {/* Page Content */}
-                <div className="p-4 lg:p-8">
+                {/* Page content */}
+                <div style={{ padding: '24px' }} className="lg:p-8">
                     {children}
                 </div>
             </main>
