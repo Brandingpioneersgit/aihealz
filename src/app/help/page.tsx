@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import V4Page from '@/components/v4/Shell';
 
 export const metadata = {
     title: 'Help Center',
@@ -51,34 +52,94 @@ const TOPICS = [
 
 export default function HelpPage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-            <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
-            <div className="max-w-4xl mx-auto px-6 relative z-10">
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                    <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    <span className="text-white">Help</span>
+        <V4Page>
+            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '48px 28px 80px' }}>
+                {/* Breadcrumb */}
+                <nav
+                    aria-label="Breadcrumb"
+                    className="row gap-2 mono"
+                    style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 32 }}
+                >
+                    <Link href="/">Home</Link>
+                    <span>/</span>
+                    <span style={{ color: 'var(--ink)' }}>Help</span>
                 </nav>
 
-                <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">Help Center</h1>
-                <p className="text-lg text-slate-400 leading-relaxed mb-12">
-                    Quick answers and direct links to everything on aihealz. Can&apos;t find what you need?{' '}
-                    <Link href="/contact" className="text-teal-400 hover:text-teal-300 font-medium">
-                        Contact our team
-                    </Link>
-                    .
-                </p>
+                {/* Hero */}
+                <section className="col gap-4" style={{ marginBottom: 56, maxWidth: 880 }}>
+                    <span className="section-mark">Help center</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 6vw, 88px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            fontWeight: 600,
+                            margin: 0,
+                        }}
+                    >
+                        Quick answers<span style={{ color: 'var(--cobalt)' }}>,</span> direct{' '}
+                        <span style={{ color: 'var(--cobalt)' }}>links</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p
+                        className="lede"
+                        style={{ fontSize: 20, color: 'var(--ink-2)', maxWidth: 640, marginTop: 4 }}
+                    >
+                        Everything on aihealz, indexed by what you came here for. Can&apos;t find what you
+                        need?{' '}
+                        <Link
+                            href="/contact"
+                            style={{ color: 'var(--cobalt)', fontWeight: 500 }}
+                        >
+                            Talk to our team →
+                        </Link>
+                    </p>
+                </section>
 
-                <div className="grid gap-6 sm:grid-cols-2">
+                {/* Topic grid */}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: 16,
+                    }}
+                >
                     {TOPICS.map(({ heading, items }) => (
-                        <section key={heading} className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-6">
-                            <h2 className="text-lg font-semibold text-white mb-4">{heading}</h2>
-                            <ul className="space-y-2">
-                                {items.map(({ label, href }) => (
-                                    <li key={href}>
-                                        <Link href={href} className="text-teal-400 hover:text-teal-300 transition-colors inline-flex items-center gap-1.5">
-                                            <span>→</span>
-                                            {label}
+                        <section key={heading} className="card" style={{ padding: 28 }}>
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '.10em',
+                                    marginBottom: 16,
+                                    fontWeight: 500,
+                                }}
+                            >
+                                {heading}
+                            </div>
+                            <ul className="clean col">
+                                {items.map(({ label, href }, i) => (
+                                    <li
+                                        key={href}
+                                        style={{
+                                            borderTop: i === 0 ? 'none' : '1px solid var(--rule)',
+                                        }}
+                                    >
+                                        <Link
+                                            href={href}
+                                            className="row between ai-center"
+                                            style={{
+                                                padding: '14px 0',
+                                                fontSize: 15,
+                                                color: 'var(--ink)',
+                                                fontWeight: 500,
+                                            }}
+                                        >
+                                            <span>{label}</span>
+                                            <span style={{ color: 'var(--cobalt)', fontSize: 14 }}>→</span>
                                         </Link>
                                     </li>
                                 ))}
@@ -86,7 +147,42 @@ export default function HelpPage() {
                         </section>
                     ))}
                 </div>
+
+                {/* Footer CTA */}
+                <div
+                    className="card-flat"
+                    style={{
+                        marginTop: 32,
+                        padding: 24,
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: 16,
+                    }}
+                >
+                    <div>
+                        <div
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '.10em',
+                                marginBottom: 6,
+                            }}
+                        >
+                            Still stuck?
+                        </div>
+                        <p style={{ fontSize: 15, color: 'var(--ink-2)', margin: 0 }}>
+                            We answer real emails within one working day.
+                        </p>
+                    </div>
+                    <Link href="/contact" className="btn btn-cobalt">
+                        Contact support →
+                    </Link>
+                </div>
             </div>
-        </main>
+        </V4Page>
     );
 }

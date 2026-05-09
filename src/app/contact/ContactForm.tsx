@@ -60,67 +60,97 @@ export default function ContactForm() {
 
     if (status === 'success') {
         return (
-            <div className="text-center py-8">
-                <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-2">Message Sent</h4>
-                <p className="text-sm text-slate-400 mb-6">We&apos;ll respond within 24 hours.</p>
-                <button
-                    onClick={() => setStatus('idle')}
-                    className="px-5 py-2.5 bg-slate-800 text-white text-sm font-medium rounded-lg hover:bg-slate-700 transition-colors"
+            <div style={{ textAlign: 'center', padding: '24px 0' }}>
+                <div
+                    className="mono"
+                    style={{
+                        display: 'inline-block',
+                        padding: '4px 10px',
+                        background: 'var(--mint-50)',
+                        color: 'var(--mint-3)',
+                        border: '1px solid rgba(40, 212, 168, .30)',
+                        borderRadius: 'var(--r-2)',
+                        fontSize: 11,
+                        textTransform: 'uppercase',
+                        letterSpacing: '.08em',
+                        marginBottom: 16,
+                    }}
                 >
-                    Send Another
+                    ✓ Sent
+                </div>
+                <h4
+                    className="display"
+                    style={{ fontSize: 22, letterSpacing: '-0.02em', fontWeight: 600, margin: '0 0 8px' }}
+                >
+                    Message received.
+                </h4>
+                <p style={{ fontSize: 14, color: 'var(--ink-3)', margin: '0 0 20px' }}>
+                    We&apos;ll respond within 24 hours.
+                </p>
+                <button
+                    type="button"
+                    onClick={() => setStatus('idle')}
+                    className="btn btn-paper"
+                >
+                    Send another
                 </button>
             </div>
         );
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-                <label htmlFor="contact-name" className="block text-sm text-slate-400 mb-2">Name</label>
+        <form onSubmit={handleSubmit} className="col gap-4">
+            <div className="form-group">
+                <label htmlFor="contact-name" className="form-label">Name</label>
                 <input
                     id="contact-name"
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800/60 border border-white/10 focus:border-teal-500/50 outline-none transition-all text-white placeholder:text-slate-600"
+                    className="input"
                     placeholder="Your name"
                 />
             </div>
-            <div>
-                <label htmlFor="contact-email" className="block text-sm text-slate-400 mb-2">Email</label>
+            <div className="form-group">
+                <label htmlFor="contact-email" className="form-label">Email</label>
                 <input
                     id="contact-email"
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800/60 border border-white/10 focus:border-teal-500/50 outline-none transition-all text-white placeholder:text-slate-600"
+                    className="input"
                     placeholder="you@email.com"
                 />
             </div>
-            <div>
-                <label htmlFor="contact-message" className="block text-sm text-slate-400 mb-2">Message</label>
+            <div className="form-group">
+                <label htmlFor="contact-message" className="form-label">Message</label>
                 <textarea
                     id="contact-message"
-                    rows={4}
+                    rows={5}
                     required
                     minLength={10}
                     maxLength={2000}
                     value={formData.message}
                     onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800/60 border border-white/10 focus:border-teal-500/50 outline-none transition-all resize-none text-white placeholder:text-slate-600"
+                    className="textarea"
                     placeholder="How can we help?"
                 />
             </div>
 
             {status === 'error' && (
-                <div role="alert" className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
+                <div
+                    role="alert"
+                    style={{
+                        padding: 12,
+                        background: 'var(--orange-50)',
+                        border: '1px solid rgba(255, 90, 46, .28)',
+                        borderRadius: 'var(--r-2)',
+                        color: 'var(--orange-2)',
+                        fontSize: 13,
+                    }}
+                >
                     {errorMessage}
                 </div>
             )}
@@ -128,18 +158,24 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full py-3 bg-teal-500 hover:bg-teal-400 text-slate-900 font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="btn btn-cobalt btn-lg"
+                style={{ width: '100%' }}
             >
                 {status === 'loading' ? (
                     <>
-                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        <svg
+                            className="animate-spin"
+                            style={{ width: 14, height: 14 }}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                            <circle style={{ opacity: 0.25 }} cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path style={{ opacity: 0.75 }} fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                         </svg>
-                        Sending...
+                        Sending…
                     </>
                 ) : (
-                    'Send Message'
+                    <>Send message →</>
                 )}
             </button>
         </form>

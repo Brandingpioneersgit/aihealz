@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import V4Page from '@/components/v4/Shell';
 
 export const metadata = {
     title: 'Create an account',
@@ -9,49 +10,100 @@ export const metadata = {
 
 export default function RegisterPage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden flex items-center">
-            <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
-
-            <div className="max-w-md mx-auto px-6 w-full relative z-10">
-                <div className="bg-slate-900/40 backdrop-blur-md rounded-[2rem] border border-white/5 p-8 md:p-10 shadow-2xl">
-                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-3">Create your aihealz account</h1>
-                    <p className="text-slate-400 leading-relaxed mb-8">
-                        Patient registration is launching soon. Until then, all our public tools work without an
-                        account.
-                    </p>
-
-                    <div className="space-y-3">
-                        <Link
-                            href="/healz-ai"
-                            className="block rounded-xl bg-teal-500 hover:bg-teal-400 px-4 py-3 text-center text-slate-900 font-bold transition-colors shadow-lg shadow-teal-500/20"
-                        >
-                            Use Healz AI now
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className="block rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 px-4 py-3 text-center text-white font-medium transition-colors"
-                        >
-                            Request early access
-                        </Link>
+        <V4Page>
+            <div
+                style={{
+                    minHeight: 'calc(100vh - 120px)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '64px 24px',
+                }}
+            >
+                <div style={{ width: '100%', maxWidth: 440 }}>
+                    <div className="col gap-3" style={{ marginBottom: 24, textAlign: 'center' }}>
+                        <span className="section-mark" style={{ justifyContent: 'center' }}>
+                            Create account
+                        </span>
                     </div>
 
-                    <hr className="my-8 border-white/5" />
+                    <div className="card" style={{ padding: 36 }}>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(28px, 4vw, 40px)',
+                                lineHeight: 1.0,
+                                letterSpacing: '-0.035em',
+                                fontWeight: 600,
+                                margin: '0 0 12px',
+                            }}
+                        >
+                            Join{' '}
+                            <span style={{ color: 'var(--cobalt)' }}>aihealz</span>
+                            <span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.6, margin: '0 0 28px' }}>
+                            Patient registration is launching soon. Until then, every public tool on the
+                            site works without an account.
+                        </p>
 
-                    <p className="text-sm text-slate-400">
-                        Healthcare provider?{' '}
-                        <Link href="/provider/login" className="text-teal-400 hover:text-teal-300 font-medium">
-                            Provider sign-in
-                        </Link>
-                    </p>
-                    <p className="mt-2 text-sm text-slate-400">
-                        Already have access?{' '}
-                        <Link href="/login" className="text-teal-400 hover:text-teal-300 font-medium">
-                            Sign in
-                        </Link>
-                    </p>
+                        <div className="col gap-2">
+                            <Link
+                                href="/healz-ai"
+                                className="btn btn-cobalt btn-lg"
+                                style={{ width: '100%' }}
+                            >
+                                Use Healz AI now →
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="btn btn-paper btn-lg"
+                                style={{ width: '100%' }}
+                            >
+                                Request early access
+                            </Link>
+                        </div>
+
+                        <div
+                            className="row ai-center gap-3"
+                            style={{ margin: '28px 0 20px' }}
+                        >
+                            <div className="hairline" style={{ flex: 1 }} />
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    letterSpacing: '.10em',
+                                    textTransform: 'uppercase',
+                                }}
+                            >
+                                Or
+                            </span>
+                            <div className="hairline" style={{ flex: 1 }} />
+                        </div>
+
+                        <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: '0 0 8px' }}>
+                            Healthcare provider?{' '}
+                            <Link
+                                href="/provider/login"
+                                style={{ color: 'var(--cobalt)', fontWeight: 500 }}
+                            >
+                                Provider sign-in →
+                            </Link>
+                        </p>
+                        <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0 }}>
+                            Already have access?{' '}
+                            <Link
+                                href="/login"
+                                style={{ color: 'var(--cobalt)', fontWeight: 500 }}
+                            >
+                                Sign in →
+                            </Link>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </main>
+        </V4Page>
     );
 }

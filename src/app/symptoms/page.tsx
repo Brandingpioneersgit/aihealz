@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
 import Link from 'next/link';
+import V4Page from '@/components/v4/Shell';
 import SymptomChecker from '@/components/ui/symptom-checker';
-import { FindDoctorCTA, BookTestCTA, MedicalTravelCTA } from '@/components/ui/cta-sections';
+import { FindDoctorCTA, BookTestCTA } from '@/components/ui/cta-sections';
 
 const symptomsSchema = {
     '@context': 'https://schema.org',
@@ -51,117 +52,303 @@ export const metadata: Metadata = {
     }
 };
 
+const TRUST_BADGES: Array<{ label: string; sub: string }> = [
+    { label: 'Encrypted', sub: 'End-to-end' },
+    { label: '24h purge', sub: 'Auto-deleted' },
+    { label: 'HIPAA + GDPR', sub: 'Compliant' },
+];
+
+const RELATED: Array<{ href: string; label: string }> = [
+    { href: '/conditions', label: 'Conditions A–Z' },
+    { href: '/treatments', label: 'Treatment options' },
+    { href: '/analyze', label: 'Upload medical report' },
+    { href: '/remedies', label: 'Home remedies' },
+];
+
 export default function SymptomsPage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-50 pt-24 pb-16 relative overflow-hidden">
+        <V4Page>
             <Script
                 id="symptoms-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(symptomsSchema) }}
             />
-            {/* Ambient Lighting Background */}
-            <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-primary-900/10 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="max-w-3xl mx-auto px-6 relative z-10">
+            <div style={{ maxWidth: 980, margin: '0 auto', padding: '48px 28px 80px' }}>
+                {/* Breadcrumb */}
+                <nav
+                    aria-label="Breadcrumb"
+                    className="row gap-2 mono"
+                    style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 32 }}
+                >
+                    <Link href="/">Home</Link>
+                    <span>/</span>
+                    <span style={{ color: 'var(--ink)' }}>Symptoms</span>
+                </nav>
 
                 {/* Hero */}
-                <div className="mb-12 text-center mt-6">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-900/30 border border-primary-500/30 text-primary-400 text-xs font-bold uppercase tracking-wider mb-8 backdrop-blur-md shadow-[0_0_15px_rgba(45,212,191,0.2)]">
-                        <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span></span>
-                        AI-Powered Analysis & Care
-                    </div>
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 drop-shadow-md text-white">
-                        AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.3)]">Diagnosis & Care</span>
+                <section className="col gap-4" style={{ marginBottom: 48, maxWidth: 880 }}>
+                    <span className="section-mark">The symptom checker</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 6vw, 96px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            fontWeight: 600,
+                            margin: 0,
+                        }}
+                    >
+                        Tell us what hurts<span style={{ color: 'var(--cobalt)' }}>,</span> we&apos;ll{' '}
+                        <span style={{ color: 'var(--cobalt)' }}>narrow it down</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
-                        Describe your symptoms and our clinical-grade AI will analyze possible conditions, recommend diagnostic tests, and prescribe safe OTC options and natural home remedies.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 20, color: 'var(--ink-2)', maxWidth: 640, marginTop: 4 }}
+                    >
+                        Describe your symptoms and our clinical-grade AI will surface likely conditions,
+                        recommend tests, and suggest safe OTC and home-care options. Reviewed by clinicians.
                     </p>
-                </div>
 
-                {/* Symptom Checker Component */}
-                <div className="shadow-2xl shadow-black/50 rounded-[2.5rem] overflow-hidden border border-white/5 relative bg-[#0A1128]/80 backdrop-blur-xl">
+                    {/* CTA pair */}
+                    <div className="row gap-2" style={{ marginTop: 8, flexWrap: 'wrap' }}>
+                        <Link href="/healz-ai" className="btn btn-cobalt btn-lg">
+                            Start with Healz AI →
+                        </Link>
+                        <Link href="/conditions" className="btn btn-paper btn-lg">
+                            Browse conditions A–Z
+                        </Link>
+                    </div>
+                </section>
+
+                {/* Symptom checker — preserved component */}
+                <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: 32 }}>
                     <SymptomChecker />
                 </div>
 
-                {/* Trust Badges */}
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    {[
-                        { icon: <svg className="w-5 h-5 mx-auto text-primary-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>, label: 'End-to-end Encrypted' },
-                        { icon: <svg className="w-5 h-5 mx-auto text-primary-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>, label: 'Deleted After 24h' },
-                        { icon: <svg className="w-5 h-5 mx-auto text-primary-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, label: 'HIPAA & GDPR Ready' },
-                    ].map((badge, i) => (
-                        <div key={i} className="py-5 px-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 flex flex-col items-center justify-center gap-3 hover:bg-white/10 transition-colors">
-                            {badge.icon}
-                            <span className="text-[11px] font-black text-slate-400 uppercase tracking-widest leading-tight">{badge.label}</span>
+                {/* Healz AI promo card */}
+                <Link
+                    href="/healz-ai"
+                    className="card-ink"
+                    style={{
+                        display: 'block',
+                        padding: 32,
+                        marginBottom: 56,
+                        textDecoration: 'none',
+                    }}
+                >
+                    <div
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--cobalt-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '.10em',
+                            marginBottom: 12,
+                            fontWeight: 500,
+                        }}
+                    >
+                        Want a longer conversation?
+                    </div>
+                    <div
+                        className="row between ai-center"
+                        style={{ flexWrap: 'wrap', gap: 16 }}
+                    >
+                        <div style={{ maxWidth: 540 }}>
+                            <h2
+                                className="display"
+                                style={{
+                                    fontSize: 32,
+                                    lineHeight: 1.0,
+                                    letterSpacing: '-0.025em',
+                                    fontWeight: 600,
+                                    margin: '0 0 8px',
+                                    color: 'var(--paper)',
+                                }}
+                            >
+                                Talk to Healz AI.
+                            </h2>
+                            <p style={{ fontSize: 15, color: 'rgba(255,255,255,.72)', margin: 0, lineHeight: 1.6 }}>
+                                Multi-turn medical chat with full context — symptoms, history, follow-ups,
+                                and triage in one place.
+                            </p>
+                        </div>
+                        <span
+                            className="btn btn-cobalt"
+                            style={{ pointerEvents: 'none' }}
+                        >
+                            Open Healz AI →
+                        </span>
+                    </div>
+                </Link>
+
+                {/* Trust strip */}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                        gap: 12,
+                        marginBottom: 56,
+                    }}
+                >
+                    {TRUST_BADGES.map((b) => (
+                        <div key={b.label} className="card-flat" style={{ padding: 20 }}>
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '.10em',
+                                    marginBottom: 6,
+                                    fontWeight: 500,
+                                }}
+                            >
+                                {b.sub}
+                            </div>
+                            <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)' }}>
+                                {b.label}
+                            </div>
                         </div>
                     ))}
                 </div>
 
-                {/* Next Steps CTAs */}
-                <div className="mt-16">
-                    <h2 className="text-xl font-bold text-white text-center mb-8">What Would You Like to Do Next?</h2>
-                    <div className="grid md:grid-cols-3 gap-4">
+                {/* Next steps */}
+                <section style={{ marginBottom: 48 }}>
+                    <div className="kicker" style={{ marginBottom: 20 }}>
+                        <span className="dot" />
+                        Next steps
+                    </div>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
                         <FindDoctorCTA variant="sidebar" />
                         <BookTestCTA variant="card" />
-                        <div className="bg-amber-500/10 rounded-xl p-4 border border-amber-500/20">
-                            <div className="flex items-center gap-3 mb-3">
-                                <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center">
-                                    <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="font-semibold text-white text-sm">Compare Treatment Costs</p>
-                                    <p className="text-xs text-slate-400">Save up to 90% abroad</p>
-                                </div>
-                            </div>
-                            <Link
-                                href="/medical-travel/bot"
-                                className="block w-full text-center px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-lg transition-colors text-sm"
+                        <Link
+                            href="/medical-travel/bot"
+                            className="card"
+                            style={{ display: 'block', padding: 24, textDecoration: 'none' }}
+                        >
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--orange-2)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '.10em',
+                                    marginBottom: 10,
+                                    fontWeight: 500,
+                                }}
                             >
-                                Get Free Quote
-                            </Link>
-                        </div>
+                                Compare costs
+                            </div>
+                            <h3
+                                className="display"
+                                style={{
+                                    fontSize: 20,
+                                    letterSpacing: '-0.02em',
+                                    fontWeight: 600,
+                                    margin: '0 0 8px',
+                                }}
+                            >
+                                Treatment abroad.
+                            </h3>
+                            <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: '0 0 16px', lineHeight: 1.5 }}>
+                                Save up to 90% on the same procedure — we handle quotes, visas, and follow-ups.
+                            </p>
+                            <span
+                                className="mono"
+                                style={{ color: 'var(--cobalt)', fontSize: 13, fontWeight: 500 }}
+                            >
+                                Get a free quote →
+                            </span>
+                        </Link>
                     </div>
-                </div>
+                </section>
 
-                {/* Primary follow-on CTAs */}
-                <div className="mt-12 grid md:grid-cols-3 gap-4">
-                    <Link href="/doctors" className="block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-400/40 transition-colors">
-                        <p className="text-[10px] uppercase tracking-widest text-primary-400 mb-1">Next step</p>
-                        <p className="text-base font-semibold text-white mb-1">Talk to a doctor →</p>
-                        <p className="text-xs text-slate-400">Get matched with a verified specialist near you.</p>
-                    </Link>
-                    <Link href="/conditions" className="block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-400/40 transition-colors">
-                        <p className="text-[10px] uppercase tracking-widest text-primary-400 mb-1">Or</p>
-                        <p className="text-base font-semibold text-white mb-1">Search by condition →</p>
-                        <p className="text-xs text-slate-400">Browse our condition library A–Z with treatment paths.</p>
-                    </Link>
-                    <Link href="/blog" className="block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-400/40 transition-colors">
-                        <p className="text-[10px] uppercase tracking-widest text-primary-400 mb-1">Related articles</p>
-                        <p className="text-base font-semibold text-white mb-1">Read patient guides →</p>
-                        <p className="text-xs text-slate-400">Editorial-reviewed articles by clinicians.</p>
-                    </Link>
-                </div>
+                {/* Follow-on links */}
+                <section style={{ marginBottom: 48 }}>
+                    <div className="kicker" style={{ marginBottom: 20 }}>
+                        <span className="dot" />
+                        Or
+                    </div>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
+                        <Link
+                            href="/doctors"
+                            className="card-flat"
+                            style={{ display: 'block', padding: 20, textDecoration: 'none' }}
+                        >
+                            <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '.10em', marginBottom: 6 }}>
+                                Talk to a person
+                            </div>
+                            <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 4 }}>
+                                Find a verified doctor →
+                            </div>
+                            <p style={{ fontSize: 13, color: 'var(--ink-3)', margin: 0 }}>
+                                Matched specialists near you, by condition.
+                            </p>
+                        </Link>
+                        <Link
+                            href="/conditions"
+                            className="card-flat"
+                            style={{ display: 'block', padding: 20, textDecoration: 'none' }}
+                        >
+                            <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '.10em', marginBottom: 6 }}>
+                                Self-serve
+                            </div>
+                            <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 4 }}>
+                                Search by condition →
+                            </div>
+                            <p style={{ fontSize: 13, color: 'var(--ink-3)', margin: 0 }}>
+                                A–Z library with treatment paths and cost ranges.
+                            </p>
+                        </Link>
+                        <Link
+                            href="/blog"
+                            className="card-flat"
+                            style={{ display: 'block', padding: 20, textDecoration: 'none' }}
+                        >
+                            <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '.10em', marginBottom: 6 }}>
+                                Read
+                            </div>
+                            <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 4 }}>
+                                Patient guides →
+                            </div>
+                            <p style={{ fontSize: 13, color: 'var(--ink-3)', margin: 0 }}>
+                                Editorial-reviewed articles, written by clinicians.
+                            </p>
+                        </Link>
+                    </div>
+                </section>
 
-                {/* Related Links */}
-                <div className="mt-12 flex flex-wrap justify-center gap-3">
-                    <Link href="/conditions" className="px-4 py-2 bg-white/5 text-slate-400 text-sm rounded-full border border-white/10 hover:border-primary-500/30 hover:text-primary-400 transition-colors">
-                        Browse Conditions A-Z
-                    </Link>
-                    <Link href="/treatments" className="px-4 py-2 bg-white/5 text-slate-400 text-sm rounded-full border border-white/10 hover:border-primary-500/30 hover:text-primary-400 transition-colors">
-                        Treatment Options
-                    </Link>
-                    <Link href="/analyze" className="px-4 py-2 bg-white/5 text-slate-400 text-sm rounded-full border border-white/10 hover:border-primary-500/30 hover:text-primary-400 transition-colors">
-                        Upload Medical Report
-                    </Link>
-                    <Link href="/remedies" className="px-4 py-2 bg-white/5 text-slate-400 text-sm rounded-full border border-white/10 hover:border-primary-500/30 hover:text-primary-400 transition-colors">
-                        Home Remedies
-                    </Link>
+                {/* Related pills */}
+                <div
+                    className="hairline-t"
+                    style={{ paddingTop: 24, display: 'flex', flexWrap: 'wrap', gap: 8 }}
+                >
+                    {RELATED.map((r) => (
+                        <Link
+                            key={r.href}
+                            href={r.href}
+                            className="pill"
+                            style={{ textDecoration: 'none' }}
+                        >
+                            {r.label}
+                        </Link>
+                    ))}
                 </div>
-
             </div>
-        </main>
+        </V4Page>
     );
 }
