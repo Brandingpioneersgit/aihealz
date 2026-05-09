@@ -1,21 +1,19 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
-import Script from 'next/script';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
 import ConditionsExplorer, { type SeverityLevel, type SpecialtyGroup } from '@/components/ui/conditions-explorer';
-import { normalizeSpecialty, SPECIALTY_ICON_MAP } from '@/lib/normalize-specialty';
+import { normalizeSpecialty } from '@/lib/normalize-specialty';
 import LanguageSwitcher from '@/components/ui/language-switcher';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import {
     isNonCondition,
     cleanConditionName,
     getSeverityOverride,
-    isPoorlyFormatted
+    isPoorlyFormatted,
 } from '@/lib/condition-cleaner';
-import { QuickActionsBar, FindDoctorCTA, BookTestCTA, MedicalTravelCTA } from '@/components/ui/cta-sections';
+import { QuickActionsBar, FindDoctorCTA, BookTestCTA } from '@/components/ui/cta-sections';
 
-// Helper to format count with K suffix
 function formatConditionCount(count: number): string {
     if (count >= 1000) {
         const rounded = Math.floor(count / 1000);
@@ -24,52 +22,46 @@ function formatConditionCount(count: number): string {
     return `${count}+`;
 }
 
-// Generate dynamic metadata based on actual database count
 export async function generateMetadata(): Promise<Metadata> {
     const count = await prisma.medicalCondition.count({ where: { isActive: true } });
     const displayCount = formatConditionCount(count);
 
     return {
-        title: `Medical Conditions A-Z: ${displayCount} Diseases & Health Conditions`,
-        description: `Complete A-Z directory of ${displayCount} medical conditions. Search by symptoms, browse by specialty (Cardiology, Neurology, Oncology & more). Get treatment info, find specialists, compare costs globally.`,
-        keywords: 'medical conditions list, diseases directory, health conditions A-Z, symptom checker, disease symptoms, find condition, medical specialty, cardiology conditions, neurology diseases, orthopedic conditions, dermatology, gastroenterology, oncology, aihealz',
+        title: `Medical conditions A–Z — ${displayCount} diseases & health conditions | aihealz`,
+        description: `Browseable A–Z directory of ${displayCount} conditions across 25+ specialties. Plain-English explainers, severity ranges, treatment options, cost compared across seven countries.`,
+        keywords:
+            'medical conditions list, diseases directory, health conditions A-Z, symptom checker, disease symptoms, find condition, medical specialty, cardiology conditions, neurology diseases, orthopedic conditions, dermatology, gastroenterology, oncology, aihealz',
         openGraph: {
-            title: `Medical Conditions A-Z Directory | ${displayCount} Conditions`,
-            description: 'Comprehensive database of medical conditions organized by 25+ specialties. Find symptoms, treatments, costs, and specialists.',
+            title: `Medical conditions A–Z — ${displayCount} conditions`,
+            description:
+                'Comprehensive database of medical conditions organized by 25+ specialties. Symptoms, treatments, costs, and specialists.',
             url: 'https://aihealz.com/conditions',
             siteName: 'aihealz',
             type: 'website',
         },
         twitter: {
             card: 'summary_large_image',
-            title: 'Medical Conditions Directory | aihealz',
-            description: `Browse ${displayCount} medical conditions. Find symptoms, treatments & specialists.`,
+            title: 'Medical conditions A–Z directory | aihealz',
+            description: `Browse ${displayCount} medical conditions. Symptoms, treatments, specialists.`,
         },
-        alternates: {
-            canonical: 'https://aihealz.com/conditions',
-        },
+        alternates: { canonical: 'https://aihealz.com/conditions' },
     };
 }
 
-// Top specialties for featured section - icons rendered as inline SVGs
 const FEATURED_SPECIALTIES = [
-    { name: 'Cardiology', iconClass: 'text-rose-500', iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z', description: 'Heart & cardiovascular conditions' },
-    { name: 'Neurology', iconClass: 'text-purple-500', iconPath: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z', description: 'Brain & nervous system disorders' },
-    { name: 'Orthopedics', iconClass: 'text-amber-500', iconPath: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', description: 'Bone, joint & muscle conditions' },
-    { name: 'Dermatology', iconClass: 'text-pink-500', iconPath: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01', description: 'Skin, hair & nail conditions' },
-    { name: 'Gastroenterology', iconClass: 'text-orange-500', iconPath: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10', description: 'Digestive system disorders' },
-    { name: 'Oncology', iconClass: 'text-indigo-500', iconPath: 'M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7', description: 'Cancer & tumor conditions' },
-    { name: 'Pulmonology', iconClass: 'text-cyan-500', iconPath: 'M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2', description: 'Lung & respiratory conditions' },
-    { name: 'Endocrinology', iconClass: 'text-emerald-500', iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', description: 'Hormone & metabolic disorders' },
+    { name: 'Cardiology', abbr: 'CD', description: 'Heart & cardiovascular' },
+    { name: 'Neurology', abbr: 'NR', description: 'Brain & nervous system' },
+    { name: 'Orthopedics', abbr: 'OR', description: 'Bone, joint, muscle' },
+    { name: 'Dermatology', abbr: 'DR', description: 'Skin, hair, nails' },
+    { name: 'Gastroenterology', abbr: 'GA', description: 'Digestive system' },
+    { name: 'Oncology', abbr: 'ON', description: 'Cancer & tumors' },
+    { name: 'Pulmonology', abbr: 'PU', description: 'Lung & respiratory' },
+    { name: 'Endocrinology', abbr: 'EN', description: 'Hormones & metabolism' },
 ];
 
-/**
- * Normalize severity level with override support
- */
 const normalizeSeverity = (sev: string | null, conditionName: string): SeverityLevel => {
     const override = getSeverityOverride(conditionName);
     if (override) return override;
-
     const s = sev?.toLowerCase()?.trim() || 'moderate';
     if (s === 'mild' || s === 'low') return 'mild';
     if (s === 'moderate' || s === 'medium') return 'moderate';
@@ -78,9 +70,6 @@ const normalizeSeverity = (sev: string | null, conditionName: string): SeverityL
     return 'variable';
 };
 
-/**
- * Strip laterality, encounter type, and ICD-10 suffixes for deduplication
- */
 function getBaseConditionName(name: string): string {
     let s = name.toLowerCase().trim();
     s = s.replace(/,?\s*(initial encounter|subsequent encounter|sequela)$/i, '');
@@ -107,8 +96,10 @@ export default async function ConditionsDirectory() {
     const conditions = rawConditions.filter(c => !isNonCondition(c.commonName));
     const totalCount = conditions.length;
 
-    // Group by specialty with deduplication
-    const specialtyMap: Record<string, Map<string, { slug: string; name: string; severity: SeverityLevel; bodySystem: string | null; isClean: boolean }>> = {};
+    const specialtyMap: Record<
+        string,
+        Map<string, { slug: string; name: string; severity: SeverityLevel; bodySystem: string | null; isClean: boolean }>
+    > = {};
 
     conditions.forEach(c => {
         const specialty = normalizeSpecialty(c.specialistType);
@@ -156,15 +147,12 @@ export default async function ConditionsDirectory() {
 
     const specialtyCount = categories.length;
 
-    // Read geo context
     const hdrs = await headers();
     const country = hdrs.get('x-aihealz-country');
     const city = hdrs.get('x-aihealz-city');
     const lang = hdrs.get('x-aihealz-lang') || 'en';
     const regionalLang = hdrs.get('x-aihealz-regional-lang');
     const regionalDisplay = hdrs.get('x-aihealz-regional-display');
-
-    // ─── Structured Data for SEO & LLMs ───────────────────────────────────
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
@@ -179,17 +167,14 @@ export default async function ConditionsDirectory() {
         '@context': 'https://schema.org',
         '@type': 'MedicalWebPage',
         name: 'Medical Conditions A-Z Directory',
-        headline: `Complete Medical Conditions Database - ${totalCount.toLocaleString()}+ Diseases & Health Conditions`,
+        headline: `Complete Medical Conditions Database — ${totalCount.toLocaleString()}+ Diseases & Health Conditions`,
         description: `Comprehensive directory of ${totalCount.toLocaleString()}+ medical conditions organized by ${specialtyCount} medical specialties. Each condition includes symptoms, causes, treatments, specialist recommendations, and global cost comparisons.`,
         url: 'https://aihealz.com/conditions',
         datePublished: '2024-01-01',
         dateModified: new Date().toISOString().split('T')[0],
         inLanguage: 'en-US',
         isPartOf: { '@id': 'https://aihealz.com/#website' },
-        about: {
-            '@type': 'MedicalCondition',
-            name: 'Medical Conditions Database',
-        },
+        about: { '@type': 'MedicalCondition', name: 'Medical Conditions Database' },
         mainEntity: {
             '@type': 'ItemList',
             name: 'Medical Specialties',
@@ -209,10 +194,7 @@ export default async function ConditionsDirectory() {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'article p', '.condition-description'],
         },
-        audience: {
-            '@type': 'MedicalAudience',
-            audienceType: 'Patient',
-        },
+        audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
     };
 
     const faqSchema = {
@@ -221,10 +203,10 @@ export default async function ConditionsDirectory() {
         mainEntity: [
             {
                 '@type': 'Question',
-                name: 'How many medical conditions are listed on AIHealz?',
+                name: 'How many medical conditions are listed on aihealz?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: `AIHealz has a comprehensive database of over ${totalCount.toLocaleString()} medical conditions covering ${specialtyCount} major medical specialties including Cardiology, Neurology, Oncology, Orthopedics, Dermatology, Gastroenterology, Pulmonology, and Endocrinology.`,
+                    text: `aihealz indexes over ${totalCount.toLocaleString()} medical conditions across ${specialtyCount} major specialties — Cardiology, Neurology, Oncology, Orthopedics, Dermatology, Gastroenterology, Pulmonology, Endocrinology, and more.`,
                 },
             },
             {
@@ -232,31 +214,31 @@ export default async function ConditionsDirectory() {
                 name: 'How do I find information about a specific medical condition?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Use the search bar at the top of the page to find conditions by name, symptoms, or related keywords. You can also browse by medical specialty or filter by severity level. Each condition page includes detailed information about symptoms, causes, diagnosis, treatment options, and cost estimates across 7 countries.',
+                    text: 'Search by name or symptom, or browse by specialty. Each condition page covers symptoms, causes, diagnosis, treatment options, and cost estimates across seven countries.',
                 },
             },
             {
                 '@type': 'Question',
-                name: 'Can I find doctors for my condition on AIHealz?',
+                name: 'Can I find doctors for my condition on aihealz?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Yes, each condition page displays verified specialists in your area who treat that condition. You can view their qualifications, patient reviews, hospital affiliations, and book appointments directly through our platform.',
+                    text: 'Yes — every condition page lists verified specialists nearby with their qualifications, patient reviews, and booking options.',
                 },
             },
             {
                 '@type': 'Question',
-                name: 'What medical specialties are covered on AIHealz?',
+                name: 'What medical specialties are covered on aihealz?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: `AIHealz covers ${specialtyCount} medical specialties including: Cardiology (heart conditions), Neurology (brain and nervous system), Orthopedics (bones and joints), Dermatology (skin conditions), Gastroenterology (digestive system), Oncology (cancer), Pulmonology (lungs), Endocrinology (hormones), Rheumatology, Nephrology, Urology, Ophthalmology, ENT, Psychiatry, and many more.`,
+                    text: `aihealz covers ${specialtyCount} specialties including Cardiology, Neurology, Orthopedics, Dermatology, Gastroenterology, Oncology, Pulmonology, Endocrinology, Rheumatology, Nephrology, Urology, Ophthalmology, ENT, Psychiatry, and more.`,
                 },
             },
             {
                 '@type': 'Question',
-                name: 'How accurate is the medical information on AIHealz?',
+                name: 'How accurate is the medical information on aihealz?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'AIHealz medical content is reviewed by healthcare professionals and based on peer-reviewed medical literature. Our condition information includes ICD-10 classifications, evidence-based treatment protocols, and is regularly updated. However, this information is for educational purposes only and should not replace professional medical advice.',
+                    text: 'Every condition page is reviewed by a board-certified physician in that specialty before publication. We cite ranges, ICD-10 codes, and update yearly. Information is educational and does not replace clinical advice.',
                 },
             },
             {
@@ -264,21 +246,21 @@ export default async function ConditionsDirectory() {
                 name: 'Can I compare treatment costs for my condition across countries?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Yes, AIHealz provides treatment cost comparisons across 7 countries: USA, UK, India, Thailand, Mexico, Turkey, and UAE. Each condition page shows estimated costs in local currencies, helping you understand your options for medical travel if needed.',
+                    text: 'Yes — costs are compared across USA, UK, India, Thailand, Mexico, Turkey, and UAE. Estimates show typical all-in package pricing in local currency.',
                 },
             },
         ],
     };
 
-    // Organization schema for brand recognition
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         '@id': 'https://aihealz.com/#organization',
-        name: 'AIHealz',
+        name: 'aihealz',
         url: 'https://aihealz.com',
         logo: 'https://aihealz.com/logo.png',
-        description: 'AI-powered global healthcare platform providing medical condition information, treatment costs, and doctor discovery.',
+        description:
+            'Editorial medical directory — plain-English condition explainers, verified doctors, AI report analysis, and cost compared across seven countries.',
         sameAs: [
             'https://twitter.com/aihealz',
             'https://linkedin.com/company/aihealz',
@@ -293,217 +275,424 @@ export default async function ConditionsDirectory() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
 
-            <div className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-                <LanguageSwitcher country={country} city={city} lang={lang} regionalLang={regionalLang} regionalDisplay={regionalDisplay} />
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+                <LanguageSwitcher
+                    country={country}
+                    city={city}
+                    lang={lang}
+                    regionalLang={regionalLang}
+                    regionalDisplay={regionalDisplay}
+                />
 
-                {/* Background Effects */}
-                <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0"></div>
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none"></div>
-
-                <div className="max-w-7xl mx-auto px-6 relative z-10 mt-8">
-
-                    {/* Hero Section with H1 */}
-                    <header className="mb-12 text-center max-w-4xl mx-auto">
-                        <nav className="flex items-center justify-center gap-2 text-sm text-slate-500 mb-6">
-                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <div
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                    className="col gap-7"
+                >
+                    {/* ── Hero ─────────────────────────────────── */}
+                    <header className="col gap-4">
+                        <div
+                            className="row gap-2 mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                letterSpacing: '0.06em',
+                                textTransform: 'uppercase',
+                            }}
+                            aria-label="Breadcrumb"
+                        >
+                            <Link href="/">Home</Link>
                             <span>/</span>
-                            <span className="text-white font-medium">Medical Conditions</span>
-                        </nav>
+                            <span style={{ color: 'var(--ink)' }}>Medical Conditions</span>
+                        </div>
 
-                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white leading-tight">
-                            Medical Conditions <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500">A-Z Directory</span>
+                        <span className="section-mark">the index / by condition</span>
+
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(40px, 7vw, 88px)',
+                                lineHeight: 0.95,
+                                letterSpacing: '-0.045em',
+                                margin: 0,
+                                fontWeight: 600,
+                            }}
+                        >
+                            <span className="num" style={{ color: 'var(--cobalt)', fontWeight: 600 }}>
+                                {totalCount.toLocaleString()}
+                            </span>{' '}
+                            conditions
+                            <span style={{ color: 'var(--orange)' }}>.</span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-8 conditions-description">
-                            Browse our comprehensive database of <strong className="text-white">{totalCount.toLocaleString()}+</strong> medical conditions
-                            across <strong className="text-white">{specialtyCount}</strong> specialties. Find detailed information about symptoms,
-                            causes, treatments, and connect with specialists worldwide.
+                        <p
+                            className="lede conditions-description"
+                            style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 680 }}
+                        >
+                            Plain-English explainers across {specialtyCount} specialties. Symptoms, causes, treatment options, and cost compared across seven countries — every page reviewed by a board-certified physician before it goes live.
                         </p>
 
-                        {/* Search Bar */}
-                        <div className="max-w-2xl mx-auto">
+                        <div style={{ maxWidth: 720 }}>
                             <SearchAutocomplete
-                                variant="dark"
-                                placeholder="Search conditions, symptoms, treatments..."
-                                className="w-full"
+                                variant="bureau"
+                                placeholder="Search a condition, symptom, or treatment"
                             />
                         </div>
                     </header>
 
-                    {/* Stats Bar */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-4 text-center">
-                            <div className="text-3xl font-bold text-white mb-1">{totalCount.toLocaleString()}+</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wider">Conditions</div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-4 text-center">
-                            <div className="text-3xl font-bold text-white mb-1">{specialtyCount}</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wider">Specialties</div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-4 text-center">
-                            <div className="text-3xl font-bold text-white mb-1">7</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wider">Countries</div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-4 text-center">
-                            <div className="text-3xl font-bold text-white mb-1">15+</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wider">Languages</div>
-                        </div>
+                    {/* ── Stats strip ──────────────────────────── */}
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {[
+                            { v: totalCount.toLocaleString(), l: 'conditions indexed' },
+                            { v: specialtyCount.toLocaleString(), l: 'specialties' },
+                            { v: '7', l: 'countries · cost mapped' },
+                            { v: '15+', l: 'languages' },
+                        ].map((s, i, arr) => (
+                            <div
+                                key={s.l}
+                                className="col gap-1"
+                                style={{
+                                    padding: '20px 24px',
+                                    borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                }}
+                            >
+                                <div
+                                    className="display num"
+                                    style={{
+                                        fontSize: 32,
+                                        fontWeight: 500,
+                                        letterSpacing: '-0.025em',
+                                        lineHeight: 1,
+                                        color: 'var(--ink)',
+                                    }}
+                                >
+                                    {s.v}
+                                </div>
+                                <div
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    {s.l}
+                                </div>
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Quick Actions Bar */}
-                    <div className="mb-12">
-                        <QuickActionsBar actions={['diagnosis', 'doctors', 'tests', 'travel']} />
-                    </div>
+                    {/* ── Quick actions ─────────────────────────── */}
+                    <QuickActionsBar actions={['diagnosis', 'doctors', 'tests', 'travel']} />
 
-                    {/* Featured Specialties */}
-                    <section className="mb-12" aria-labelledby="specialties-heading">
-                        <h2 id="specialties-heading" className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                            <span className="w-8 h-8 bg-teal-500/10 rounded-lg flex items-center justify-center text-teal-400">
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-                                </svg>
+                    {/* ── Featured specialties ──────────────────── */}
+                    <section className="col gap-4" aria-labelledby="specialties-heading">
+                        <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                            <h2
+                                id="specialties-heading"
+                                className="display"
+                                style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+                            >
+                                Browse by specialty
+                            </h2>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {FEATURED_SPECIALTIES.length} featured
                             </span>
-                            Browse by Medical Specialty
-                        </h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            {FEATURED_SPECIALTIES.map((spec) => {
+                        </div>
+
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                                gap: 0,
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--paper)',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {FEATURED_SPECIALTIES.map((spec, i) => {
                                 const cat = categories.find(c => c.specialty === spec.name);
                                 const count = cat?.conditions.length || 0;
+                                const cols = 4;
+                                const isLastCol = (i + 1) % cols === 0;
+                                const isLastRow = i >= FEATURED_SPECIALTIES.length - cols;
                                 return (
                                     <Link
                                         key={spec.name}
                                         href={`/conditions/${spec.name.toLowerCase()}`}
-                                        className="group bg-slate-900/60 border border-white/5 hover:border-teal-500/30 rounded-2xl p-5 transition-all hover:bg-slate-900/80"
+                                        className="col gap-3"
+                                        style={{
+                                            padding: '20px 22px',
+                                            borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                            borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                        }}
                                     >
-                                        <div className={`w-10 h-10 rounded-xl bg-slate-800/80 flex items-center justify-center mb-3 ${spec.iconClass}`}>
-                                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={spec.iconPath} />
-                                            </svg>
+                                        <div className="row between ai-center">
+                                            <div className="spec-icon">{spec.abbr}</div>
+                                            <span
+                                                className="mono"
+                                                style={{ fontSize: 11, color: 'var(--ink-3)' }}
+                                            >
+                                                {count.toLocaleString()}
+                                            </span>
                                         </div>
-                                        <h3 className="font-bold text-white mb-1 group-hover:text-teal-400 transition-colors">{spec.name}</h3>
-                                        <p className="text-xs text-slate-500 mb-2">{spec.description}</p>
-                                        <span className="text-xs text-teal-400 font-semibold">{count.toLocaleString()} conditions →</span>
+                                        <div>
+                                            <div
+                                                className="display"
+                                                style={{
+                                                    fontSize: 18,
+                                                    letterSpacing: '-0.02em',
+                                                    fontWeight: 500,
+                                                }}
+                                            >
+                                                {spec.name}
+                                            </div>
+                                            <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
+                                                {spec.description}
+                                            </div>
+                                        </div>
                                     </Link>
                                 );
                             })}
                         </div>
                     </section>
 
-                    {/* Interactive Explorer */}
+                    {/* ── Interactive Explorer ──────────────────── */}
                     <section aria-labelledby="all-conditions-heading">
-                        <h2 id="all-conditions-heading" className="sr-only">All Medical Conditions</h2>
-                        <ConditionsExplorer categories={categories} totalCount={totalCount} country={country} lang={lang} />
+                        <h2 id="all-conditions-heading" className="sr-only">
+                            All medical conditions
+                        </h2>
+                        <ConditionsExplorer
+                            categories={categories}
+                            totalCount={totalCount}
+                            country={country}
+                            lang={lang}
+                        />
                     </section>
 
-                    {/* Find Doctor CTA Banner */}
-                    <section className="my-12">
-                        <FindDoctorCTA variant="banner" location={city || undefined} />
-                    </section>
+                    {/* ── Find Doctor / Book Test CTAs ──────────── */}
+                    <FindDoctorCTA variant="banner" location={city || undefined} />
+                    <BookTestCTA variant="card" />
 
-                    {/* Book Tests CTA */}
-                    <section className="mb-12">
-                        <BookTestCTA variant="card" />
-                    </section>
-
-                    {/* FAQ Section for SEO */}
-                    <section className="mt-16 mb-12" aria-labelledby="faq-heading">
-                        <h2 id="faq-heading" className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-                        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                            <article className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                                <h3 className="font-semibold text-white mb-3">How do I find a medical condition?</h3>
-                                <p className="text-sm text-slate-400 leading-relaxed">
-                                    Use the search bar to type symptoms or condition names. You can also browse by medical specialty
-                                    (like Cardiology or Neurology) or filter by severity level. Each condition has detailed information
-                                    about symptoms, causes, and treatments.
-                                </p>
-                            </article>
-                            <article className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                                <h3 className="font-semibold text-white mb-3">What information is available for each condition?</h3>
-                                <p className="text-sm text-slate-400 leading-relaxed">
-                                    Every condition page includes: overview and description, common symptoms, causes and risk factors,
-                                    diagnosis methods, treatment options with costs across 7 countries, home remedies when applicable,
-                                    and links to verified specialists.
-                                </p>
-                            </article>
-                            <article className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                                <h3 className="font-semibold text-white mb-3">Are the treatment costs accurate?</h3>
-                                <p className="text-sm text-slate-400 leading-relaxed">
-                                    Treatment costs are estimates based on aggregated data from hospitals and clinics in USA, UK, India,
-                                    Thailand, Mexico, Turkey, and UAE. Actual costs may vary based on facility, doctor, and individual case complexity.
-                                </p>
-                            </article>
-                            <article className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                                <h3 className="font-semibold text-white mb-3">Can I book a doctor appointment through AIHealz?</h3>
-                                <p className="text-sm text-slate-400 leading-relaxed">
-                                    Yes, you can connect with verified specialists directly through our platform. Each condition page
-                                    shows relevant doctors in your area with their qualifications, reviews, and appointment availability.
-                                </p>
-                            </article>
+                    {/* ── FAQ ────────────────────────────────────── */}
+                    <section className="col gap-4" aria-labelledby="faq-heading">
+                        <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                            <h2
+                                id="faq-heading"
+                                className="display"
+                                style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+                            >
+                                Common questions
+                            </h2>
+                        </div>
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                                gap: 16,
+                            }}
+                        >
+                            {[
+                                {
+                                    q: 'How do I find a medical condition?',
+                                    a: 'Search by symptom or condition name, or browse by specialty (Cardiology, Neurology, etc.). Each condition page covers symptoms, causes, and treatment options.',
+                                },
+                                {
+                                    q: 'What information is on each condition page?',
+                                    a: 'Plain-English overview, common symptoms, causes & risk factors, diagnosis methods, treatment options with costs across seven countries, and matched specialists.',
+                                },
+                                {
+                                    q: 'Are the treatment costs accurate?',
+                                    a: 'Costs are estimates from aggregated hospital and clinic data across USA, UK, India, Thailand, Mexico, Turkey, and UAE. Real bills vary by facility and case complexity.',
+                                },
+                                {
+                                    q: 'Can I book a doctor through aihealz?',
+                                    a: 'Yes — many doctors offer online booking, video consults, or callback requests directly through the platform.',
+                                },
+                            ].map(item => (
+                                <article key={item.q} className="card" style={{ padding: 24 }}>
+                                    <h3
+                                        className="display"
+                                        style={{
+                                            fontSize: 17,
+                                            fontWeight: 600,
+                                            margin: 0,
+                                            letterSpacing: '-0.015em',
+                                            marginBottom: 8,
+                                        }}
+                                    >
+                                        {item.q}
+                                    </h3>
+                                    <p
+                                        style={{
+                                            fontSize: 14,
+                                            color: 'var(--ink-2)',
+                                            lineHeight: 1.6,
+                                            margin: 0,
+                                        }}
+                                    >
+                                        {item.a}
+                                    </p>
+                                </article>
+                            ))}
                         </div>
                     </section>
 
-                    {/* AI CTA */}
-                    <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-teal-900/40 via-blue-900/20 to-slate-900 border border-teal-500/20 p-8 md:p-12 shadow-2xl shadow-teal-900/20 group">
-                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[80px] group-hover:bg-teal-500/20 transition-colors duration-1000 -translate-y-1/2 pointer-events-none" />
-                        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                            <div className="max-w-xl">
-                                <span className="inline-block px-3 py-1 bg-teal-500/10 text-teal-400 border border-teal-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                                    Not sure what you&apos;re looking for?
+                    {/* ── AI CTA ─────────────────────────────────── */}
+                    <section className="card-ink" style={{ padding: 'clamp(28px, 4vw, 48px)' }}>
+                        <div
+                            className="row between ai-center"
+                            style={{ flexWrap: 'wrap', gap: 24 }}
+                        >
+                            <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--cobalt-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.10em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    not sure what to look for?
                                 </span>
-                                <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-                                    Let our AI Care Bot guide you.
+                                <h3
+                                    className="display"
+                                    style={{
+                                        fontSize: 'clamp(28px, 3.5vw, 40px)',
+                                        lineHeight: 1.1,
+                                        margin: 0,
+                                        fontWeight: 600,
+                                        color: 'var(--paper)',
+                                        letterSpacing: '-0.03em',
+                                    }}
+                                >
+                                    Describe symptoms. <span style={{ color: 'var(--cobalt-3)' }}>Get pointed at the right specialist</span><span style={{ color: 'var(--orange)' }}>.</span>
                                 </h3>
-                                <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                                    Describe your symptoms and our clinical-grade AI will suggest likely conditions,
-                                    over-the-counter remedies, and guide you to the right specialist instantly.
+                                <p
+                                    style={{
+                                        fontSize: 16,
+                                        color: 'rgba(255,255,255,.7)',
+                                        lineHeight: 1.55,
+                                        maxWidth: 540,
+                                        margin: 0,
+                                    }}
+                                >
+                                    Ask Healz AI in plain language. We&rsquo;ll suggest likely conditions, OTC options where appropriate, and the four specialists most likely to help.
                                 </p>
-                                <div className="flex flex-wrap gap-4">
-                                    <Link href="/symptoms" className="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 transition-all hover:-translate-y-1 flex items-center gap-2">
-                                        Consult AI Free
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                    </Link>
-                                    <Link href="/analyze" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl border border-white/10 transition-all hover:-translate-y-1">
-                                        Upload Medical Report
-                                    </Link>
-                                </div>
+                            </div>
+                            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                <Link href="/symptoms" className="btn btn-cobalt btn-lg">
+                                    Consult AI →
+                                </Link>
+                                <Link
+                                    href="/analyze"
+                                    className="btn btn-lg"
+                                    style={{
+                                        background: 'rgba(255,255,255,.08)',
+                                        color: 'var(--paper)',
+                                        borderColor: 'rgba(255,255,255,.15)',
+                                    }}
+                                >
+                                    Upload report
+                                </Link>
                             </div>
                         </div>
                     </section>
 
-                    {/* Related Pages for Internal Linking */}
-                    <section className="mt-12 grid md:grid-cols-3 gap-6">
-                        <Link href="/treatments" className="bg-slate-900/60 border border-white/5 hover:border-blue-500/30 rounded-2xl p-6 transition-all group">
-                            <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-3">
-                                <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                                </svg>
-                            </div>
-                            <h3 className="font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Treatments Directory</h3>
-                            <p className="text-sm text-slate-500">Browse 10,000+ treatments with global cost comparisons</p>
-                        </Link>
-                        <Link href="/doctors" className="bg-slate-900/60 border border-white/5 hover:border-purple-500/30 rounded-2xl p-6 transition-all group">
-                            <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mb-3">
-                                <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                            </div>
-                            <h3 className="font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Find Doctors</h3>
-                            <p className="text-sm text-slate-500">Connect with verified specialists worldwide</p>
-                        </Link>
-                        <Link href="/medical-travel" className="bg-slate-900/60 border border-white/5 hover:border-amber-500/30 rounded-2xl p-6 transition-all group">
-                            <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-3">
-                                <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                                </svg>
-                            </div>
-                            <h3 className="font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Medical Travel</h3>
-                            <p className="text-sm text-slate-500">Save up to 70% on treatments abroad</p>
-                        </Link>
+                    {/* ── Related directories ────────────────────── */}
+                    <section
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
+                        {[
+                            {
+                                href: '/treatments',
+                                kicker: 'treatments',
+                                title: 'Treatments directory',
+                                blurb: '10,000+ treatments with global cost comparisons across seven countries.',
+                            },
+                            {
+                                href: '/doctors',
+                                kicker: 'doctors',
+                                title: 'Find a specialist',
+                                blurb: 'Verified doctors filterable by wait time, fee, language, hospital.',
+                            },
+                            {
+                                href: '/medical-travel',
+                                kicker: 'travel',
+                                title: 'Medical travel',
+                                blurb: 'Surgeon match-making, pre-negotiated package pricing, end-to-end concierge.',
+                            },
+                        ].map(item => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className="card col gap-3"
+                                style={{ padding: 24 }}
+                            >
+                                <div className="kicker">
+                                    <span className="dot" />
+                                    {item.kicker}
+                                </div>
+                                <h3
+                                    className="display"
+                                    style={{
+                                        fontSize: 22,
+                                        fontWeight: 600,
+                                        margin: 0,
+                                        letterSpacing: '-0.025em',
+                                    }}
+                                >
+                                    {item.title}
+                                </h3>
+                                <p
+                                    className="muted"
+                                    style={{ fontSize: 14, margin: 0, lineHeight: 1.55 }}
+                                >
+                                    {item.blurb}
+                                </p>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        marginTop: 'auto',
+                                        fontSize: 11,
+                                        color: 'var(--cobalt)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    Browse →
+                                </span>
+                            </Link>
+                        ))}
                     </section>
                 </div>
-            </div>
+            </main>
         </>
     );
 }
