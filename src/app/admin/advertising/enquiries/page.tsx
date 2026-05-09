@@ -28,11 +28,11 @@ interface Enquiry {
 }
 
 const STATUS_OPTIONS = [
-    { value: 'new', label: 'New', color: 'bg-blue-100 text-blue-700 border-blue-200' },
-    { value: 'contacted', label: 'Contacted', color: 'bg-yellow-100 text-yellow-700 border-yellow-200' },
-    { value: 'qualified', label: 'Qualified', color: 'bg-purple-100 text-purple-700 border-purple-200' },
-    { value: 'converted', label: 'Converted', color: 'bg-green-100 text-green-700 border-green-200' },
-    { value: 'closed', label: 'Closed', color: 'bg-slate-100 text-slate-700 border-slate-200' },
+    { value: 'new', label: 'New', pill: 'pill pill-cobalt' },
+    { value: 'contacted', label: 'Contacted', pill: 'pill pill-lemon' },
+    { value: 'qualified', label: 'Qualified', pill: 'pill pill-magenta' },
+    { value: 'converted', label: 'Converted', pill: 'pill pill-mint' },
+    { value: 'closed', label: 'Closed', pill: 'pill' },
 ];
 
 const COMPANY_TYPES: Record<string, string> = {
@@ -70,6 +70,7 @@ export default function EnquiriesPage() {
 
     useEffect(() => {
         fetchEnquiries();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [statusFilter]);
 
     const updateEnquiryStatus = async (id: number, newStatus: string) => {
@@ -95,37 +96,41 @@ export default function EnquiriesPage() {
         }
     };
 
-    const getStatusColor = (status: string) => {
-        return STATUS_OPTIONS.find((s) => s.value === status)?.color || 'bg-slate-100 text-slate-700';
-    };
+    const getStatusPill = (status: string) =>
+        STATUS_OPTIONS.find((s) => s.value === status)?.pill || 'pill';
 
     return (
-        <div className="space-y-6">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Ad Enquiries</h1>
-                    <p className="text-slate-500 mt-1">Manage incoming advertising enquiries</p>
-                </div>
-                <Link
-                    href="/admin/advertising"
-                    className="text-sm text-slate-600 hover:text-slate-900 flex items-center gap-1"
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+            <Link
+                href="/admin/advertising"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to advertising
+            </Link>
+
+            <div className="col gap-2">
+                <span className="section-mark">admin / advertising / enquiries</span>
+                <h1
+                    className="display"
+                    style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
                 >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                    Back to Dashboard
-                </Link>
+                    Ad Enquiries<span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                    Manage incoming advertising enquiries.
+                </p>
             </div>
 
             {/* Filters */}
-            <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                    <span className="text-sm text-slate-500">Status:</span>
+            <div className="row ai-center gap-4" style={{ flexWrap: 'wrap' }}>
+                <div className="row ai-center gap-2">
+                    <span className="kicker">Status</span>
                     <select
                         value={statusFilter}
                         onChange={(e) => setStatusFilter(e.target.value)}
-                        className="px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        className="select"
+                        style={{ width: 'auto', minWidth: 160 }}
                     >
                         <option value="">All</option>
                         {STATUS_OPTIONS.map((s) => (
@@ -133,143 +138,147 @@ export default function EnquiriesPage() {
                         ))}
                     </select>
                 </div>
-                <div className="text-sm text-slate-500">
+                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     {enquiries.length} enquir{enquiries.length === 1 ? 'y' : 'ies'}
-                </div>
+                </span>
             </div>
 
-            {/* Main Content */}
-            <div className="grid lg:grid-cols-3 gap-6">
-                {/* Enquiries List */}
-                <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+            {/* Main */}
+            <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 16 }}>
+                <div className="lg:col-span-2 card" style={{ overflow: 'hidden' }}>
                     {loading ? (
-                        <div className="p-8 text-center text-slate-500">Loading...</div>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                            Loading…
+                        </div>
                     ) : enquiries.length === 0 ? (
-                        <div className="p-8 text-center text-slate-500">
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                             No enquiries found
                         </div>
                     ) : (
-                        <div className="divide-y divide-slate-100">
-                            {enquiries.map((enquiry) => (
-                                <div
-                                    key={enquiry.id}
-                                    onClick={() => setSelectedEnquiry(enquiry)}
-                                    className={`px-6 py-4 cursor-pointer transition-colors ${
-                                        selectedEnquiry?.id === enquiry.id
-                                            ? 'bg-teal-50 border-l-4 border-teal-500'
-                                            : 'hover:bg-slate-50'
-                                    }`}
-                                >
-                                    <div className="flex items-center justify-between mb-2">
-                                        <div className="font-semibold text-slate-900">{enquiry.companyName}</div>
-                                        <span className={`px-2 py-0.5 rounded text-xs font-medium border ${getStatusColor(enquiry.status)}`}>
-                                            {enquiry.status}
+                        <div className="col">
+                            {enquiries.map((enquiry) => {
+                                const isSelected = selectedEnquiry?.id === enquiry.id;
+                                return (
+                                    <div
+                                        key={enquiry.id}
+                                        onClick={() => setSelectedEnquiry(enquiry)}
+                                        className="col gap-1"
+                                        style={{
+                                            padding: '14px 18px',
+                                            cursor: 'pointer',
+                                            borderBottom: '1px solid var(--rule-2)',
+                                            background: isSelected ? 'var(--cobalt-50)' : 'transparent',
+                                            borderLeft: isSelected ? '3px solid var(--cobalt)' : '3px solid transparent',
+                                        }}
+                                    >
+                                        <div className="row between ai-center">
+                                            <span style={{ fontWeight: 600, color: 'var(--ink)' }}>{enquiry.companyName}</span>
+                                            <span className={getStatusPill(enquiry.status)}>{enquiry.status}</span>
+                                        </div>
+                                        <div className="row ai-center gap-2 mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                                            <span>{COMPANY_TYPES[enquiry.companyType] || enquiry.companyType}</span>
+                                            <span>·</span>
+                                            <span>{enquiry.contactName}</span>
+                                        </div>
+                                        <div className="row ai-center gap-2" style={{ fontSize: 13 }}>
+                                            <span style={{ color: 'var(--ink-4)' }}>{enquiry.email}</span>
+                                            {enquiry.adBudget && (
+                                                <>
+                                                    <span style={{ color: 'var(--ink-5)' }}>·</span>
+                                                    <span style={{ color: 'var(--cobalt)', fontWeight: 500 }}>{enquiry.adBudget}</span>
+                                                </>
+                                            )}
+                                        </div>
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                                            {new Date(enquiry.createdAt).toLocaleString()}
                                         </span>
                                     </div>
-                                    <div className="flex items-center gap-3 text-sm text-slate-500 mb-1">
-                                        <span>{COMPANY_TYPES[enquiry.companyType] || enquiry.companyType}</span>
-                                        <span>•</span>
-                                        <span>{enquiry.contactName}</span>
-                                    </div>
-                                    <div className="flex items-center gap-3 text-sm">
-                                        <span className="text-slate-400">{enquiry.email}</span>
-                                        {enquiry.adBudget && (
-                                            <>
-                                                <span className="text-slate-300">•</span>
-                                                <span className="text-teal-600 font-medium">{enquiry.adBudget}</span>
-                                            </>
-                                        )}
-                                    </div>
-                                    <div className="text-xs text-slate-400 mt-2">
-                                        {new Date(enquiry.createdAt).toLocaleString()}
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     )}
                 </div>
 
-                {/* Detail Panel */}
-                <div className="bg-white rounded-xl border border-slate-200 shadow-sm">
+                {/* Detail */}
+                <div className="card">
                     {selectedEnquiry ? (
-                        <div className="p-6">
-                            <div className="flex items-center justify-between mb-6">
-                                <h2 className="text-lg font-bold text-slate-900">Enquiry Details</h2>
+                        <div className="col gap-4" style={{ padding: 24 }}>
+                            <div className="row between ai-center">
+                                <span className="section-mark">enquiry details</span>
                                 <button
                                     onClick={() => setSelectedEnquiry(null)}
-                                    className="text-slate-400 hover:text-slate-600"
+                                    className="btn btn-ghost btn-sm"
+                                    aria-label="Close"
                                 >
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
+                                    ✕
                                 </button>
                             </div>
 
-                            <div className="space-y-4">
-                                <div>
-                                    <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Company</div>
-                                    <div className="font-semibold text-slate-900">{selectedEnquiry.companyName}</div>
-                                    <div className="text-sm text-slate-500">{COMPANY_TYPES[selectedEnquiry.companyType] || selectedEnquiry.companyType}</div>
+                            <div className="col gap-4">
+                                <div className="col gap-1">
+                                    <span className="kicker">Company</span>
+                                    <span style={{ fontWeight: 600, color: 'var(--ink)' }}>{selectedEnquiry.companyName}</span>
+                                    <span style={{ fontSize: 13, color: 'var(--ink-3)' }}>
+                                        {COMPANY_TYPES[selectedEnquiry.companyType] || selectedEnquiry.companyType}
+                                    </span>
                                 </div>
 
-                                <div>
-                                    <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Contact</div>
-                                    <div className="text-slate-900">{selectedEnquiry.contactName}</div>
-                                    <a href={`mailto:${selectedEnquiry.email}`} className="text-sm text-teal-600 hover:underline">{selectedEnquiry.email}</a>
+                                <div className="col gap-1">
+                                    <span className="kicker">Contact</span>
+                                    <span style={{ color: 'var(--ink)' }}>{selectedEnquiry.contactName}</span>
+                                    <a href={`mailto:${selectedEnquiry.email}`} style={{ fontSize: 13, color: 'var(--cobalt)' }}>
+                                        {selectedEnquiry.email}
+                                    </a>
                                     {selectedEnquiry.phone && (
-                                        <div className="text-sm text-slate-500">{selectedEnquiry.phone}</div>
+                                        <span style={{ fontSize: 13, color: 'var(--ink-3)' }}>{selectedEnquiry.phone}</span>
                                     )}
                                 </div>
 
                                 {selectedEnquiry.website && (
-                                    <div>
-                                        <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Website</div>
-                                        <a href={selectedEnquiry.website} target="_blank" rel="noopener noreferrer" className="text-sm text-teal-600 hover:underline">
+                                    <div className="col gap-1">
+                                        <span className="kicker">Website</span>
+                                        <a href={selectedEnquiry.website} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'var(--cobalt)' }}>
                                             {selectedEnquiry.website}
                                         </a>
                                     </div>
                                 )}
 
                                 {selectedEnquiry.adBudget && (
-                                    <div>
-                                        <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Budget</div>
-                                        <div className="text-slate-900 font-medium">{selectedEnquiry.adBudget}</div>
+                                    <div className="col gap-1">
+                                        <span className="kicker">Budget</span>
+                                        <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{selectedEnquiry.adBudget}</span>
                                     </div>
                                 )}
 
                                 {selectedEnquiry.targetRegions.length > 0 && (
-                                    <div>
-                                        <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Target Regions</div>
-                                        <div className="flex flex-wrap gap-1">
+                                    <div className="col gap-2">
+                                        <span className="kicker">Target Regions</span>
+                                        <div className="row gap-1" style={{ flexWrap: 'wrap' }}>
                                             {selectedEnquiry.targetRegions.map((r) => (
-                                                <span key={r} className="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs rounded">
-                                                    {r}
-                                                </span>
+                                                <span key={r} className="pill">{r}</span>
                                             ))}
                                         </div>
                                     </div>
                                 )}
 
                                 {selectedEnquiry.message && (
-                                    <div>
-                                        <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Message</div>
-                                        <div className="text-sm text-slate-600 bg-slate-50 p-3 rounded-lg">{selectedEnquiry.message}</div>
+                                    <div className="col gap-2">
+                                        <span className="kicker">Message</span>
+                                        <div className="card-quiet" style={{ padding: 12, fontSize: 13, color: 'var(--ink-2)' }}>
+                                            {selectedEnquiry.message}
+                                        </div>
                                     </div>
                                 )}
 
-                                <div className="pt-4 border-t border-slate-100">
-                                    <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">Update Status</div>
-                                    <div className="flex flex-wrap gap-2">
+                                <div className="col gap-2 hairline-t" style={{ paddingTop: 16 }}>
+                                    <span className="kicker">Update Status</span>
+                                    <div className="row gap-1" style={{ flexWrap: 'wrap' }}>
                                         {STATUS_OPTIONS.map((s) => (
                                             <button
                                                 key={s.value}
                                                 onClick={() => updateEnquiryStatus(selectedEnquiry.id, s.value)}
                                                 disabled={updatingStatus || selectedEnquiry.status === s.value}
-                                                className={`px-3 py-1.5 rounded text-xs font-medium border transition-all ${
-                                                    selectedEnquiry.status === s.value
-                                                        ? s.color + ' ring-2 ring-offset-1 ring-current'
-                                                        : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
-                                                } disabled:opacity-50`}
+                                                className={selectedEnquiry.status === s.value ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
                                             >
                                                 {s.label}
                                             </button>
@@ -278,34 +287,29 @@ export default function EnquiriesPage() {
                                 </div>
 
                                 {selectedEnquiry.status === 'qualified' && !selectedEnquiry.advertiser && (
-                                    <div className="pt-4">
-                                        <Link
-                                            href={`/admin/advertising/advertisers/new?from_enquiry=${selectedEnquiry.id}`}
-                                            className="w-full block text-center px-4 py-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700 transition-colors"
-                                        >
-                                            Convert to Advertiser
-                                        </Link>
-                                    </div>
+                                    <Link
+                                        href={`/admin/advertising/advertisers/new?from_enquiry=${selectedEnquiry.id}`}
+                                        className="btn btn-cobalt"
+                                    >
+                                        Convert to Advertiser →
+                                    </Link>
                                 )}
 
                                 {selectedEnquiry.advertiser && (
-                                    <div className="pt-4 p-3 bg-green-50 rounded-lg border border-green-100">
-                                        <div className="text-xs font-medium text-green-700 mb-1">Converted</div>
+                                    <div className="card-flat col gap-1" style={{ padding: 12, background: 'var(--mint-50)', borderColor: 'rgba(40, 212, 168, .30)' }}>
+                                        <span className="kicker" style={{ color: 'var(--mint-3)' }}>Converted</span>
                                         <Link
                                             href={`/admin/advertising/advertisers/${selectedEnquiry.advertiser.id}`}
-                                            className="text-sm text-green-600 hover:underline font-medium"
+                                            style={{ fontSize: 13, color: 'var(--mint-3)', fontWeight: 500 }}
                                         >
-                                            View {selectedEnquiry.advertiser.companyName}
+                                            View {selectedEnquiry.advertiser.companyName} →
                                         </Link>
                                     </div>
                                 )}
                             </div>
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-slate-500">
-                            <svg className="w-12 h-12 mx-auto text-slate-300 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                             Select an enquiry to view details
                         </div>
                     )}

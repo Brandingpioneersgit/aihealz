@@ -19,122 +19,132 @@ export default async function PricingAdminPage() {
         global_footer_banner: 'Global Footer Banner',
     };
 
-    // Group by placement
     const groupedPricing = pricing.reduce((acc, p) => {
         if (!acc[p.placement]) acc[p.placement] = [];
         acc[p.placement].push(p);
         return acc;
     }, {} as Record<string, typeof pricing>);
 
+    const thStyle: React.CSSProperties = {
+        padding: '12px 16px', textAlign: 'left', fontFamily: 'var(--mono)',
+        fontSize: 10, fontWeight: 600, color: 'var(--ink-3)',
+        textTransform: 'uppercase', letterSpacing: '0.08em',
+    };
+    const tdStyle: React.CSSProperties = {
+        padding: '12px 16px', fontSize: 13, color: 'var(--ink-2)', verticalAlign: 'middle',
+    };
+
     return (
-        <div className="space-y-6">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Ad Placement Pricing</h1>
-                    <p className="text-slate-500 mt-1">Configure CPM, CPC, and flat rate pricing</p>
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+            <Link
+                href="/admin/advertising"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to advertising
+            </Link>
+
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / advertising / pricing</span>
+                    <h1
+                        className="display"
+                        style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Ad Placement Pricing<span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                        Configure CPM, CPC, and flat rate pricing.
+                    </p>
                 </div>
-                <div className="flex gap-3">
-                    <Link
-                        href="/admin/advertising"
-                        className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 flex items-center gap-1"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                        Back
-                    </Link>
-                    <Link
-                        href="/admin/advertising/pricing/new"
-                        className="px-4 py-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700 transition-colors flex items-center gap-2"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
-                        Add Pricing Rule
-                    </Link>
+                <Link href="/admin/advertising/pricing/new" className="btn btn-cobalt">
+                    + Add Pricing Rule
+                </Link>
+            </div>
+
+            <div className="card-flat row ai-start gap-3" style={{ padding: 16, background: 'var(--cobalt-50)', borderColor: 'rgba(28, 91, 255, .22)' }}>
+                <span className="kicker" style={{ color: 'var(--cobalt)', flexShrink: 0 }}>i</span>
+                <div className="col gap-1">
+                    <span style={{ fontWeight: 500, color: 'var(--cobalt-2)' }}>Pricing logic</span>
+                    <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>
+                        Country-specific pricing overrides global pricing. If no country-specific rule exists,
+                        the global rate (countryCode = null) is used.
+                    </span>
                 </div>
             </div>
 
-            {/* Info Box */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
-                <svg className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-                <div>
-                    <div className="font-medium text-blue-900">Pricing Logic</div>
-                    <div className="text-sm text-blue-700 mt-1">
-                        Country-specific pricing overrides global pricing. If no country-specific rule exists, the global rate (countryCode = null) is used.
-                    </div>
-                </div>
-            </div>
-
-            {/* Pricing Table */}
             {Object.keys(groupedPricing).length === 0 ? (
-                <div className="bg-white rounded-xl border border-slate-200 p-8 text-center">
-                    <svg className="w-12 h-12 mx-auto text-slate-300 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div className="text-slate-500 mb-4">No pricing rules configured</div>
-                    <Link
-                        href="/admin/advertising/pricing/new"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700"
-                    >
+                <div className="card col ai-center gap-4" style={{ padding: 48, textAlign: 'center' }}>
+                    <span className="mono" style={{ fontSize: 12, color: 'var(--ink-4)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                        No pricing rules configured
+                    </span>
+                    <Link href="/admin/advertising/pricing/new" className="btn btn-cobalt">
                         Add First Pricing Rule
                     </Link>
                 </div>
             ) : (
-                <div className="space-y-6">
-                    {Object.entries(groupedPricing).map(([placement, rules]: [string, typeof pricing]) => (
-                        <div key={placement} className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                            <div className="bg-slate-50 px-6 py-3 border-b border-slate-200 flex items-center justify-between">
-                                <h3 className="font-semibold text-slate-900">{placementLabels[placement] || placement}</h3>
-                                <span className="text-xs text-slate-500">{rules.length} rule{rules.length !== 1 ? 's' : ''}</span>
+                <div className="col gap-4">
+                    {Object.entries(groupedPricing).map(([placement, rules]) => (
+                        <div key={placement} className="card" style={{ overflow: 'hidden' }}>
+                            <div className="hairline-b row between ai-center" style={{ padding: 16, background: 'var(--bg-2)' }}>
+                                <span style={{ fontWeight: 600, color: 'var(--ink)' }}>{placementLabels[placement] || placement}</span>
+                                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                    {rules.length} rule{rules.length !== 1 ? 's' : ''}
+                                </span>
                             </div>
-                            <div className="overflow-x-auto">
-                                <table className="w-full">
+                            <div style={{ overflowX: 'auto' }}>
+                                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                                     <thead>
-                                        <tr className="border-b border-slate-100">
-                                            <th scope="col" className="text-left py-3 px-4 text-xs font-medium text-slate-500">Region</th>
-                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Min CPM</th>
-                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Suggested CPM</th>
-                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Min CPC</th>
-                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Suggested CPC</th>
-                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Flat Rate/mo</th>
-                                            <th scope="col" className="text-center py-3 px-4 text-xs font-medium text-slate-500">Status</th>
-                                            <th scope="col" className="text-right py-3 px-4 text-xs font-medium text-slate-500">Actions</th>
+                                        <tr className="hairline-b">
+                                            <th scope="col" style={thStyle}>Region</th>
+                                            <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Min CPM</th>
+                                            <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Suggested CPM</th>
+                                            <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Min CPC</th>
+                                            <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Suggested CPC</th>
+                                            <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Flat Rate/mo</th>
+                                            <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Status</th>
+                                            <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Actions</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-slate-50">
+                                    <tbody>
                                         {rules.map((rule) => (
-                                            <tr key={rule.id} className="hover:bg-slate-50 transition-colors">
-                                                <td className="py-3 px-4">
-                                                    <span className={`px-2 py-0.5 rounded text-xs font-medium ${rule.countryCode ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'}`}>
+                                            <tr key={rule.id} style={{ borderTop: '1px solid var(--rule-2)' }}>
+                                                <td style={tdStyle}>
+                                                    <span className={rule.countryCode ? 'pill pill-cobalt' : 'pill pill-magenta'}>
                                                         {rule.countryCode || 'Global'}
                                                     </span>
                                                 </td>
-                                                <td className="py-3 px-4 text-right text-sm font-mono text-slate-600">
+                                                <td className="mono" style={{ ...tdStyle, textAlign: 'right' }}>
                                                     ${Number(rule.minCpm).toFixed(2)}
                                                 </td>
-                                                <td className="py-3 px-4 text-right text-sm font-mono text-teal-600 font-medium">
+                                                <td className="mono" style={{ ...tdStyle, textAlign: 'right', color: 'var(--cobalt)', fontWeight: 600 }}>
                                                     ${Number(rule.suggestedCpm).toFixed(2)}
                                                 </td>
-                                                <td className="py-3 px-4 text-right text-sm font-mono text-slate-600">
+                                                <td className="mono" style={{ ...tdStyle, textAlign: 'right' }}>
                                                     ${Number(rule.minCpc).toFixed(2)}
                                                 </td>
-                                                <td className="py-3 px-4 text-right text-sm font-mono text-cyan-600 font-medium">
+                                                <td className="mono" style={{ ...tdStyle, textAlign: 'right', color: 'var(--cobalt)', fontWeight: 600 }}>
                                                     ${Number(rule.suggestedCpc).toFixed(2)}
                                                 </td>
-                                                <td className="py-3 px-4 text-right text-sm font-mono text-slate-600">
-                                                    {rule.flatRateMonthly ? `$${Number(rule.flatRateMonthly).toFixed(0)}` : '-'}
+                                                <td className="mono" style={{ ...tdStyle, textAlign: 'right' }}>
+                                                    {rule.flatRateMonthly ? `$${Number(rule.flatRateMonthly).toFixed(0)}` : '—'}
                                                 </td>
-                                                <td className="py-3 px-4 text-center">
-                                                    <span className={`w-2 h-2 rounded-full inline-block ${rule.isActive ? 'bg-green-500' : 'bg-slate-300'}`} />
+                                                <td style={{ ...tdStyle, textAlign: 'center' }}>
+                                                    <span
+                                                        style={{
+                                                            display: 'inline-block',
+                                                            width: 8,
+                                                            height: 8,
+                                                            borderRadius: 999,
+                                                            background: rule.isActive ? 'var(--mint)' : 'var(--ink-5)',
+                                                        }}
+                                                    />
                                                 </td>
-                                                <td className="py-3 px-4 text-right">
+                                                <td style={{ ...tdStyle, textAlign: 'right' }}>
                                                     <Link
                                                         href={`/admin/advertising/pricing/${rule.id}`}
-                                                        className="text-xs text-teal-600 hover:text-teal-700 font-medium"
+                                                        className="btn btn-ghost btn-sm"
+                                                        style={{ color: 'var(--cobalt)' }}
                                                     >
                                                         Edit
                                                     </Link>
@@ -149,26 +159,20 @@ export default async function PricingAdminPage() {
                 </div>
             )}
 
-            {/* Quick Add Section */}
-            <div className="bg-white rounded-xl border border-slate-200 p-6">
-                <h3 className="font-semibold text-slate-900 mb-4">Quick Reference: Default Pricing</h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                        <div className="text-slate-500 text-xs mb-1">Base CPM</div>
-                        <div className="font-semibold text-slate-900">$0.50 - $2.00</div>
-                    </div>
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                        <div className="text-slate-500 text-xs mb-1">Base CPC</div>
-                        <div className="font-semibold text-slate-900">$0.20 - $1.00</div>
-                    </div>
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                        <div className="text-slate-500 text-xs mb-1">Premium Multiplier (US/UK)</div>
-                        <div className="font-semibold text-slate-900">1.3x - 1.5x</div>
-                    </div>
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                        <div className="text-slate-500 text-xs mb-1">Emerging Markets</div>
-                        <div className="font-semibold text-slate-900">0.7x - 0.9x</div>
-                    </div>
+            <div className="card col gap-4" style={{ padding: 24 }}>
+                <span className="section-mark">quick reference / default pricing</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: 12 }}>
+                    {[
+                        { label: 'Base CPM', value: '$0.50 - $2.00' },
+                        { label: 'Base CPC', value: '$0.20 - $1.00' },
+                        { label: 'Premium Multiplier (US/UK)', value: '1.3x - 1.5x' },
+                        { label: 'Emerging Markets', value: '0.7x - 0.9x' },
+                    ].map((it) => (
+                        <div key={it.label} className="card-flat col gap-1" style={{ padding: 12, background: 'var(--bg-2)' }}>
+                            <span className="kicker">{it.label}</span>
+                            <span style={{ fontWeight: 600, color: 'var(--ink)' }}>{it.value}</span>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

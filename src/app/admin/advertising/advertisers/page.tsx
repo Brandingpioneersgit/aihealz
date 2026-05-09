@@ -6,17 +6,10 @@ export default async function AdvertisersPage() {
         orderBy: { createdAt: 'desc' },
         include: {
             geography: {
-                select: {
-                    name: true,
-                    slug: true,
-                },
+                select: { name: true, slug: true },
             },
-            campaigns: {
-                select: { id: true },
-            },
-            creatives: {
-                select: { id: true },
-            },
+            campaigns: { select: { id: true } },
+            creatives: { select: { id: true } },
         },
     });
 
@@ -32,142 +25,143 @@ export default async function AdvertisersPage() {
         other: 'Other',
     };
 
+    const statCards: Array<{ label: string; value: number; code: string }> = [
+        { label: 'Total Advertisers', value: advertisers.length, code: 'TT' },
+        { label: 'Verified', value: advertisers.filter((a) => a.isVerified).length, code: 'VR' },
+        { label: 'Active', value: advertisers.filter((a) => a.isActive).length, code: 'AC' },
+    ];
+
+    const thStyle: React.CSSProperties = {
+        padding: '12px 16px', textAlign: 'left', fontFamily: 'var(--mono)',
+        fontSize: 10, fontWeight: 600, color: 'var(--ink-3)',
+        textTransform: 'uppercase', letterSpacing: '0.08em',
+    };
+    const tdStyle: React.CSSProperties = {
+        padding: '14px 16px', fontSize: 13, color: 'var(--ink-2)', verticalAlign: 'middle',
+    };
+
     return (
-        <div className="space-y-6">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Advertisers</h1>
-                    <p className="text-slate-500 mt-1">Manage advertiser accounts</p>
-                </div>
-                <div className="flex gap-3">
-                    <Link
-                        href="/admin/advertising"
-                        className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 flex items-center gap-1"
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+            <Link
+                href="/admin/advertising"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to advertising
+            </Link>
+
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / advertising / advertisers</span>
+                    <h1
+                        className="display"
+                        style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
                     >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                        Back
-                    </Link>
-                    <Link
-                        href="/admin/advertising/advertisers/new"
-                        className="px-4 py-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700 transition-colors flex items-center gap-2"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
-                        Add Advertiser
-                    </Link>
+                        Advertisers<span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                        Manage advertiser accounts.
+                    </p>
                 </div>
+                <Link href="/admin/advertising/advertisers/new" className="btn btn-cobalt">
+                    + Add Advertiser
+                </Link>
             </div>
 
-            {/* Stats Row */}
-            <div className="grid sm:grid-cols-3 gap-4">
-                {[
-                    { label: 'Total Advertisers', count: advertisers.length, color: 'bg-blue-500' },
-                    { label: 'Verified', count: advertisers.filter((a) => a.isVerified).length, color: 'bg-green-500' },
-                    { label: 'Active', count: advertisers.filter((a) => a.isActive).length, color: 'bg-emerald-500' },
-                ].map((stat) => (
-                    <div key={stat.label} className="bg-white rounded-lg border border-slate-200 px-4 py-3 flex items-center gap-3">
-                        <div className={`w-2 h-8 ${stat.color} rounded-full`} />
-                        <div>
-                            <div className="text-2xl font-bold text-slate-900">{stat.count}</div>
-                            <div className="text-xs text-slate-500">{stat.label}</div>
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {statCards.map((s) => (
+                    <div
+                        key={s.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                            background: 'var(--paper)',
+                        }}
+                    >
+                        <div className="row ai-center gap-3">
+                            <span className="spec-icon" aria-hidden="true">{s.code}</span>
+                            <span className="kicker">{s.label}</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>
+                            {s.value.toLocaleString()}
                         </div>
                     </div>
                 ))}
             </div>
 
-            {/* Advertisers Table */}
-            <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="card" style={{ overflow: 'hidden' }}>
                 {advertisers.length === 0 ? (
-                    <div className="p-8 text-center">
-                        <svg className="w-12 h-12 mx-auto text-slate-300 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                        <div className="text-slate-500 mb-4">No advertisers yet</div>
-                        <Link
-                            href="/admin/advertising/advertisers/new"
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700"
-                        >
+                    <div className="col ai-center gap-4" style={{ padding: 48, textAlign: 'center' }}>
+                        <span className="mono" style={{ fontSize: 12, color: 'var(--ink-4)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                            No advertisers yet
+                        </span>
+                        <Link href="/admin/advertising/advertisers/new" className="btn btn-cobalt">
                             Add First Advertiser
                         </Link>
                     </div>
                 ) : (
-                    <div className="overflow-x-auto">
-                        <table className="w-full">
-                            <thead>
-                                <tr className="bg-slate-50 border-b border-slate-200">
-                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Company</th>
-                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Type</th>
-                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Location</th>
-                                    <th scope="col" className="text-left py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Status</th>
-                                    <th scope="col" className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Campaigns</th>
-                                    <th scope="col" className="text-center py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Creatives</th>
-                                    <th scope="col" className="text-right py-3 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Actions</th>
+                    <div style={{ overflowX: 'auto' }}>
+                        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                            <thead className="hairline-b" style={{ background: 'var(--bg-2)' }}>
+                                <tr>
+                                    <th scope="col" style={thStyle}>Company</th>
+                                    <th scope="col" style={thStyle}>Type</th>
+                                    <th scope="col" style={thStyle}>Location</th>
+                                    <th scope="col" style={thStyle}>Status</th>
+                                    <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Campaigns</th>
+                                    <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Creatives</th>
+                                    <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-slate-100">
+                            <tbody>
                                 {advertisers.map((advertiser) => (
-                                    <tr key={advertiser.id} className="hover:bg-slate-50 transition-colors">
-                                        <td className="py-4 px-4">
-                                            <Link href={`/admin/advertising/advertisers/${advertiser.id}`} className="hover:text-teal-600">
-                                                <div className="flex items-center gap-3">
+                                    <tr key={advertiser.id} style={{ borderTop: '1px solid var(--rule-2)' }}>
+                                        <td style={tdStyle}>
+                                            <Link href={`/admin/advertising/advertisers/${advertiser.id}`} style={{ display: 'block' }}>
+                                                <div className="row ai-center gap-3">
                                                     {advertiser.logo ? (
-                                                        <img
-                                                            src={advertiser.logo}
-                                                            alt={advertiser.companyName}
-                                                            className="w-10 h-10 rounded-lg object-cover border border-slate-200"
-                                                        />
+                                                        <img src={advertiser.logo} alt={advertiser.companyName} style={{ width: 36, height: 36, borderRadius: 'var(--r-2)', objectFit: 'cover', border: '1px solid var(--rule)' }} />
                                                     ) : (
-                                                        <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-400">
-                                                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                                            </svg>
-                                                        </div>
+                                                        <span className="spec-icon" aria-hidden="true">{advertiser.companyName.charAt(0)}</span>
                                                     )}
-                                                    <div>
-                                                        <div className="font-medium text-slate-900">{advertiser.companyName}</div>
-                                                        <div className="text-xs text-slate-500">{advertiser.email}</div>
+                                                    <div className="col" style={{ gap: 2 }}>
+                                                        <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{advertiser.companyName}</span>
+                                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>{advertiser.email}</span>
                                                     </div>
                                                 </div>
                                             </Link>
                                         </td>
-                                        <td className="py-4 px-4 text-sm text-slate-600">
-                                            {companyTypeLabels[advertiser.companyType] || advertiser.companyType}
-                                        </td>
-                                        <td className="py-4 px-4 text-sm text-slate-600">
-                                            {advertiser.geography?.name || '-'}
-                                        </td>
-                                        <td className="py-4 px-4">
-                                            <div className="flex items-center gap-2">
+                                        <td style={tdStyle}>{companyTypeLabels[advertiser.companyType] || advertiser.companyType}</td>
+                                        <td style={tdStyle}>{advertiser.geography?.name || '—'}</td>
+                                        <td style={tdStyle}>
+                                            <div className="row ai-center gap-1">
                                                 {advertiser.isVerified ? (
-                                                    <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium border border-green-200">
-                                                        Verified
-                                                    </span>
+                                                    <span className="pill pill-mint">Verified</span>
                                                 ) : (
-                                                    <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 rounded text-xs font-medium border border-yellow-200">
-                                                        Pending
-                                                    </span>
+                                                    <span className="pill pill-lemon">Pending</span>
                                                 )}
-                                                {!advertiser.isActive && (
-                                                    <span className="px-2 py-0.5 bg-red-100 text-red-700 rounded text-xs font-medium border border-red-200">
-                                                        Inactive
-                                                    </span>
-                                                )}
+                                                {!advertiser.isActive && <span className="pill pill-orange">Inactive</span>}
                                             </div>
                                         </td>
-                                        <td className="py-4 px-4 text-center text-sm text-slate-600">
-                                            {advertiser.campaigns.length}
-                                        </td>
-                                        <td className="py-4 px-4 text-center text-sm text-slate-600">
-                                            {advertiser.creatives.length}
-                                        </td>
-                                        <td className="py-4 px-4 text-right">
+                                        <td style={{ ...tdStyle, textAlign: 'center' }}>{advertiser.campaigns.length}</td>
+                                        <td style={{ ...tdStyle, textAlign: 'center' }}>{advertiser.creatives.length}</td>
+                                        <td style={{ ...tdStyle, textAlign: 'right' }}>
                                             <Link
                                                 href={`/admin/advertising/advertisers/${advertiser.id}`}
-                                                className="text-sm text-teal-600 hover:text-teal-700 font-medium"
+                                                className="btn btn-ghost btn-sm"
+                                                style={{ color: 'var(--cobalt)' }}
                                             >
                                                 Manage
                                             </Link>

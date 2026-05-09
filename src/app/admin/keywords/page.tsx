@@ -23,6 +23,7 @@ export default function KeywordGapsPage() {
 
     useEffect(() => {
         fetchKeywords();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedLanguage]);
 
     async function fetchKeywords() {
@@ -32,7 +33,6 @@ export default function KeywordGapsPage() {
             const params = new URLSearchParams();
             if (selectedLanguage !== 'all') params.set('language', selectedLanguage);
 
-            // Add timeout to prevent infinite loading
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 15000);
 
@@ -48,14 +48,12 @@ export default function KeywordGapsPage() {
                 throw new Error('API returned error');
             }
         } catch (error) {
-            // Show error message and use demo data as fallback
             if (error instanceof Error && error.name === 'AbortError') {
                 setMessage({ type: 'error', text: 'Request timed out. Showing demo data.' });
             } else {
                 console.error('Failed to fetch keywords:', error);
                 setMessage({ type: 'error', text: 'Failed to load keywords. Showing demo data.' });
             }
-            // Fallback to demo data
             setKeywords([
                 { id: 1, keyword: 'best neurologist in navi mumbai', searchVolume: 1200, keywordDifficulty: 12, opportunityScore: 98, targetPage: '/in/en/navi-mumbai/neurology', language: 'en', status: 'pending' },
                 { id: 2, keyword: 'ivf ka kharcha kitna hai', searchVolume: 3400, keywordDifficulty: 18, opportunityScore: 94, targetPage: '/in/hi/cost/ivf', language: 'hi', status: 'pending' },
@@ -131,134 +129,178 @@ export default function KeywordGapsPage() {
         input.click();
     }
 
+    const thStyle: React.CSSProperties = {
+        padding: '12px 16px', textAlign: 'left', fontFamily: 'var(--mono)',
+        fontSize: 10, fontWeight: 600, color: 'var(--ink-3)',
+        textTransform: 'uppercase', letterSpacing: '0.08em',
+    };
+    const tdStyle: React.CSSProperties = {
+        padding: '14px 16px', fontSize: 13, color: 'var(--ink-2)', verticalAlign: 'middle',
+    };
+
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {message && (
-                <div className={`p-3 rounded-lg text-sm ${
-                    message.type === 'success'
-                        ? 'bg-green-50 border border-green-200 text-green-700'
-                        : 'bg-red-50 border border-red-200 text-red-700'
-                }`}>
+                <div
+                    role="alert"
+                    className="card-flat"
+                    style={{
+                        padding: '12px 16px',
+                        borderColor: message.type === 'success' ? 'rgba(40, 212, 168, .30)' : 'rgba(255, 90, 46, .28)',
+                        background: message.type === 'success' ? 'var(--mint-50)' : 'var(--orange-50)',
+                        color: message.type === 'success' ? 'var(--mint-3)' : 'var(--orange-2)',
+                        fontSize: 13,
+                    }}
+                >
                     {message.text}
                 </div>
             )}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-                        </svg>
-                        Keyword Gaps
+
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / keyword gaps</span>
+                    <h1
+                        className="display"
+                        style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Keyword Gaps<span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-500 mt-1">Discover missing localized keywords and high-opportunity searches.</p>
+                    <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                        Discover missing localized keywords and high-opportunity searches.
+                    </p>
                 </div>
                 <button
                     onClick={handleImportCSV}
                     disabled={importing}
-                    className="px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-medium hover:bg-amber-700 transition-colors flex items-center gap-2 disabled:opacity-50"
+                    className="btn btn-cobalt"
                 >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    {importing ? 'Importing...' : 'Import Ahrefs CSV'}
+                    {importing ? 'Importing…' : '+ Import Ahrefs CSV'}
                 </button>
             </div>
 
-            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                <div className="px-6 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
-                    <h3 className="font-semibold text-slate-900">
-                        Highest Opportunity Gaps
-                        {!loading && <span className="ml-2 text-sm font-normal text-slate-500">({keywords.length} keywords)</span>}
-                    </h3>
-                    <div className="flex gap-2">
-                        <select
-                            value={selectedLanguage}
-                            onChange={(e) => setSelectedLanguage(e.target.value)}
-                            className="text-sm border-slate-200 rounded-lg text-slate-600 bg-white px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-amber-500"
-                        >
-                            <option value="all">All Languages</option>
-                            <option value="en">English</option>
-                            <option value="hi">Hindi (hi-IN)</option>
-                            <option value="mr">Marathi (mr-IN)</option>
-                            <option value="ta">Tamil (ta-IN)</option>
-                        </select>
+            <div className="card" style={{ overflow: 'hidden' }}>
+                <div className="hairline-b row between ai-center" style={{ padding: 16, flexWrap: 'wrap', gap: 12 }}>
+                    <div className="row ai-center gap-3">
+                        <span className="section-mark">highest opportunity gaps</span>
+                        {!loading && (
+                            <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                                ({keywords.length} keywords)
+                            </span>
+                        )}
                     </div>
+                    <select
+                        value={selectedLanguage}
+                        onChange={(e) => setSelectedLanguage(e.target.value)}
+                        className="select"
+                        style={{ width: 'auto', minWidth: 180 }}
+                    >
+                        <option value="all">All Languages</option>
+                        <option value="en">English</option>
+                        <option value="hi">Hindi (hi-IN)</option>
+                        <option value="mr">Marathi (mr-IN)</option>
+                        <option value="ta">Tamil (ta-IN)</option>
+                    </select>
                 </div>
 
                 {loading ? (
-                    <div className="flex items-center justify-center py-12">
-                        <div className="animate-spin w-8 h-8 border-2 border-amber-500/30 border-t-amber-500 rounded-full" />
+                    <div className="row ai-center center" style={{ padding: 48 }}>
+                        <span
+                            style={{
+                                width: 24,
+                                height: 24,
+                                borderRadius: 999,
+                                border: '3px solid var(--rule)',
+                                borderTopColor: 'var(--cobalt)',
+                                animation: 'spin 0.8s linear infinite',
+                                display: 'inline-block',
+                            }}
+                        />
+                        <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
                     </div>
                 ) : keywords.length === 0 ? (
-                    <div className="text-center py-12 text-slate-500">
-                        <svg className="w-12 h-12 mx-auto mb-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        <p className="font-medium">No keyword gaps found</p>
-                        <p className="text-sm mt-1">Import an Ahrefs CSV to discover opportunities</p>
+                    <div className="col ai-center gap-2" style={{ padding: 48 }}>
+                        <span className="mono" style={{ fontSize: 12, color: 'var(--ink-4)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                            No keyword gaps found
+                        </span>
+                        <span style={{ fontSize: 13, color: 'var(--ink-4)' }}>Import an Ahrefs CSV to discover opportunities</span>
                     </div>
                 ) : (
-                    <table className="w-full text-left text-sm">
-                        <thead className="bg-slate-50 text-slate-500 border-b border-slate-200 uppercase text-[10px] tracking-wider font-bold">
-                            <tr>
-                                <th scope="col" className="px-6 py-4">Keyword</th>
-                                <th scope="col" className="px-6 py-4">Volume</th>
-                                <th scope="col" className="px-6 py-4">KD</th>
-                                <th scope="col" className="px-6 py-4">Opp. Score</th>
-                                <th scope="col" className="px-6 py-4">Target Page</th>
-                                <th scope="col" className="px-6 py-4">Status</th>
-                                <th scope="col" className="px-6 py-4 text-right">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100">
-                            {keywords.map((kw) => (
-                                <tr key={kw.id} className="hover:bg-slate-50 transition-colors">
-                                    <td className="px-6 py-4 font-medium text-slate-900">
-                                        {kw.keyword}
-                                        {kw.language !== 'en' && (
-                                            <span className="ml-2 text-xs text-slate-400">({kw.language})</span>
-                                        )}
-                                    </td>
-                                    <td className="px-6 py-4 text-slate-600">{kw.searchVolume.toLocaleString()}</td>
-                                    <td className="px-6 py-4">
-                                        <span className={`px-2 py-0.5 text-xs font-bold rounded ${
-                                            kw.keywordDifficulty <= 20 ? 'bg-emerald-50 text-emerald-700' :
-                                            kw.keywordDifficulty <= 40 ? 'bg-amber-50 text-amber-700' :
-                                            'bg-red-50 text-red-700'
-                                        }`}>
-                                            {kw.keywordDifficulty}
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 text-amber-600 font-bold">{kw.opportunityScore}</td>
-                                    <td className="px-6 py-4 text-xs font-mono text-slate-500 truncate max-w-[200px]">{kw.targetPage}</td>
-                                    <td className="px-6 py-4">
-                                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                                            kw.status === 'published' ? 'bg-emerald-100 text-emerald-700' :
-                                            kw.status === 'content_generated' ? 'bg-blue-100 text-blue-700' :
-                                            'bg-slate-100 text-slate-600'
-                                        }`}>
-                                            {kw.status.replace('_', ' ')}
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 text-right">
-                                        {kw.status === 'pending' ? (
-                                            <button
-                                                onClick={() => handleGenerateContent(kw.id)}
-                                                disabled={generating === kw.id}
-                                                className="text-teal-600 hover:text-teal-700 text-xs font-bold uppercase tracking-wide disabled:opacity-50"
-                                            >
-                                                {generating === kw.id ? 'Generating...' : 'Generate Content'}
-                                            </button>
-                                        ) : (
-                                            <button className="text-blue-600 hover:text-blue-700 text-xs font-bold uppercase tracking-wide">
-                                                View
-                                            </button>
-                                        )}
-                                    </td>
+                    <div style={{ overflowX: 'auto' }}>
+                        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                            <thead className="hairline-b" style={{ background: 'var(--bg-2)' }}>
+                                <tr>
+                                    <th scope="col" style={thStyle}>Keyword</th>
+                                    <th scope="col" style={thStyle}>Volume</th>
+                                    <th scope="col" style={thStyle}>KD</th>
+                                    <th scope="col" style={thStyle}>Opp. Score</th>
+                                    <th scope="col" style={thStyle}>Target Page</th>
+                                    <th scope="col" style={thStyle}>Status</th>
+                                    <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Action</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {keywords.map((kw) => (
+                                    <tr key={kw.id} style={{ borderTop: '1px solid var(--rule-2)' }}>
+                                        <td style={{ ...tdStyle, fontWeight: 500, color: 'var(--ink)' }}>
+                                            {kw.keyword}
+                                            {kw.language !== 'en' && (
+                                                <span className="mono" style={{ marginLeft: 8, fontSize: 11, color: 'var(--ink-4)' }}>
+                                                    ({kw.language})
+                                                </span>
+                                            )}
+                                        </td>
+                                        <td style={tdStyle}>{kw.searchVolume.toLocaleString()}</td>
+                                        <td style={tdStyle}>
+                                            <span
+                                                className={
+                                                    kw.keywordDifficulty <= 20
+                                                        ? 'pill pill-mint'
+                                                        : kw.keywordDifficulty <= 40
+                                                            ? 'pill pill-lemon'
+                                                            : 'pill pill-orange'
+                                                }
+                                            >
+                                                {kw.keywordDifficulty}
+                                            </span>
+                                        </td>
+                                        <td style={{ ...tdStyle, color: 'var(--cobalt)', fontWeight: 600 }}>{kw.opportunityScore}</td>
+                                        <td className="mono" style={{ ...tdStyle, fontSize: 11, color: 'var(--ink-3)', maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                            {kw.targetPage}
+                                        </td>
+                                        <td style={tdStyle}>
+                                            <span
+                                                className={
+                                                    kw.status === 'published'
+                                                        ? 'pill pill-mint'
+                                                        : kw.status === 'content_generated'
+                                                            ? 'pill pill-cobalt'
+                                                            : 'pill'
+                                                }
+                                            >
+                                                {kw.status.replace('_', ' ')}
+                                            </span>
+                                        </td>
+                                        <td style={{ ...tdStyle, textAlign: 'right' }}>
+                                            {kw.status === 'pending' ? (
+                                                <button
+                                                    onClick={() => handleGenerateContent(kw.id)}
+                                                    disabled={generating === kw.id}
+                                                    className="btn btn-ghost btn-sm"
+                                                    style={{ color: 'var(--cobalt)' }}
+                                                >
+                                                    {generating === kw.id ? 'Generating…' : 'Generate Content'}
+                                                </button>
+                                            ) : (
+                                                <button className="btn btn-ghost btn-sm" style={{ color: 'var(--cobalt)' }}>
+                                                    View
+                                                </button>
+                                            )}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 )}
             </div>
         </div>

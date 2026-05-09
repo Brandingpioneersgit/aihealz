@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import ConditionForm from './ConditionForm';
 
 interface PageProps {
@@ -17,7 +18,6 @@ async function getCondition(id: string) {
 }
 
 async function getDynamicOptions() {
-    // Fetch unique specialist types from existing conditions
     const specialistTypes = await prisma.medicalCondition.findMany({
         where: { specialistType: { not: '' } },
         select: { specialistType: true },
@@ -25,7 +25,6 @@ async function getDynamicOptions() {
         orderBy: { specialistType: 'asc' },
     });
 
-    // Fetch unique body systems from existing conditions
     const bodySystems = await prisma.medicalCondition.findMany({
         where: { bodySystem: { not: null } },
         select: { bodySystem: true },
@@ -33,7 +32,6 @@ async function getDynamicOptions() {
         orderBy: { bodySystem: 'asc' },
     });
 
-    // Fetch unique severity levels from existing conditions
     const severityLevels = await prisma.medicalCondition.findMany({
         where: { severityLevel: { not: null } },
         select: { severityLevel: true },
@@ -60,18 +58,31 @@ export default async function ConditionEditPage({ params }: PageProps) {
     }
 
     return (
-        <div className="max-w-4xl space-y-6">
-            {/* Header */}
-            <div>
-                <h1 className="text-2xl font-bold text-slate-900">
-                    {condition ? 'Edit Condition' : 'Add New Condition'}
+        <div className="col gap-5" style={{ maxWidth: 960, color: 'var(--ink)' }}>
+            <Link
+                href="/admin/conditions"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to conditions
+            </Link>
+
+            <div className="col gap-2">
+                <span className="section-mark">
+                    admin / conditions / {condition ? condition.commonName : 'new'}
+                </span>
+                <h1
+                    className="display"
+                    style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                >
+                    {condition ? condition.commonName : 'New condition'}
+                    <span style={{ color: 'var(--orange)' }}>.</span>
                 </h1>
-                <p className="text-slate-500 mt-1">
-                    {condition ? `Editing: ${condition.commonName}` : 'Create a new medical condition'}
+                <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+                    {condition ? `Editing existing condition.` : 'Create a new medical condition.'}
                 </p>
             </div>
 
-            {/* Form */}
             <ConditionForm
                 condition={condition}
                 specialistOptions={dynamicOptions.specialistTypes}

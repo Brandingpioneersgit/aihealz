@@ -3,10 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import {
-  User, MapPin, Briefcase, GraduationCap, Award, Phone,
-  Mail, Globe, Save, ArrowLeft, Loader2, AlertCircle, Check
-} from 'lucide-react';
 
 interface DoctorFormData {
   name: string;
@@ -69,7 +65,6 @@ export default function AddDoctorPage() {
   const updateField = (field: keyof DoctorFormData, value: string | boolean | string[]) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
 
-    // Auto-generate slug from name
     if (field === 'name') {
       const slug = (value as string)
         .toLowerCase()
@@ -120,7 +115,7 @@ export default function AddDoctorPage() {
         const data = await res.json();
         setError(data.error || 'Failed to create doctor profile');
       }
-    } catch (err) {
+    } catch {
       setError('Network error. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -129,130 +124,135 @@ export default function AddDoctorPage() {
 
   if (success) {
     return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center">
-          <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
-            <Check size={32} className="text-emerald-600" />
-          </div>
-          <h2 className="text-xl font-bold text-slate-900">Doctor Added Successfully!</h2>
-          <p className="text-slate-500 mt-2">Redirecting to doctors list...</p>
+      <div className="row ai-center center" style={{ minHeight: 400 }}>
+        <div className="col ai-center gap-3">
+          <div className="spec-icon" style={{ width: 56, height: 56, background: 'var(--mint)', fontSize: 24 }}>✓</div>
+          <h2 className="display" style={{ fontSize: 20, margin: 0, fontWeight: 600 }}>Doctor added successfully</h2>
+          <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            Redirecting to doctors list…
+          </span>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center gap-4">
-        <Link
-          href="/admin/doctors"
-          className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+    <div className="col gap-5" style={{ maxWidth: 960, color: 'var(--ink)' }}>
+      <Link
+        href="/admin/doctors"
+        className="mono"
+        style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+      >
+        ← Back to doctors
+      </Link>
+
+      <div className="col gap-2">
+        <span className="section-mark">admin / doctors / new</span>
+        <h1
+          className="display"
+          style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
         >
-          <ArrowLeft size={20} className="text-slate-600" />
-        </Link>
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900">Add New Doctor</h1>
-          <p className="text-slate-500 mt-1">Create a new healthcare provider profile</p>
-        </div>
+          New doctor<span style={{ color: 'var(--orange)' }}>.</span>
+        </h1>
+        <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+          Create a new healthcare provider profile.
+        </p>
       </div>
 
-      {/* Error Message */}
       {error && (
-        <div className="p-4 rounded-xl bg-red-50 border border-red-200 flex items-center gap-3 text-red-700">
-          <AlertCircle size={20} />
+        <div
+          role="alert"
+          className="card-flat"
+          style={{
+            padding: '12px 16px',
+            borderColor: 'rgba(255, 90, 46, .35)',
+            background: 'var(--orange-50)',
+            color: 'var(--orange-2)',
+            fontSize: 13,
+          }}
+        >
           {error}
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Basic Information */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <User size={20} className="text-teal-600" />
-            Basic Information
-          </h2>
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Full Name *</label>
+      <form onSubmit={handleSubmit} className="col gap-5">
+        {/* Basic */}
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">basic information</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 16 }}>
+            <div className="form-group">
+              <label className="form-label">Full Name *</label>
               <input
                 type="text"
                 value={formData.name}
                 onChange={(e) => updateField('name', e.target.value)}
                 placeholder="Dr. John Doe"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">URL Slug</label>
+            <div className="form-group">
+              <label className="form-label">URL Slug</label>
               <input
                 type="text"
                 value={formData.slug}
                 onChange={(e) => updateField('slug', e.target.value)}
                 placeholder="dr-john-doe"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Email *</label>
+            <div className="form-group">
+              <label className="form-label">Email *</label>
               <input
                 type="email"
                 value={formData.email}
                 onChange={(e) => updateField('email', e.target.value)}
                 placeholder="doctor@email.com"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Phone</label>
+            <div className="form-group">
+              <label className="form-label">Phone</label>
               <input
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => updateField('phone', e.target.value)}
                 placeholder="+91-XXXXXXXXXX"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Registration Number</label>
+            <div className="form-group">
+              <label className="form-label">Registration Number</label>
               <input
                 type="text"
                 value={formData.registrationNumber}
                 onChange={(e) => updateField('registrationNumber', e.target.value)}
                 placeholder="Medical Council Reg. No."
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Experience (Years)</label>
+            <div className="form-group">
+              <label className="form-label">Experience (Years)</label>
               <input
                 type="number"
                 value={formData.experience}
                 onChange={(e) => updateField('experience', e.target.value)}
                 placeholder="10"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
           </div>
         </div>
 
         {/* Specialties */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <Briefcase size={20} className="text-teal-600" />
-            Specialties *
-          </h2>
-          <div className="flex flex-wrap gap-2">
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">specialties *</span>
+          <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
             {SPECIALTIES.map((spec) => (
               <button
                 key={spec}
                 type="button"
                 onClick={() => toggleArrayField('specialties', spec)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  formData.specialties.includes(spec)
-                    ? 'bg-teal-600 text-white'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                className={formData.specialties.includes(spec) ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
               >
                 {spec}
               </button>
@@ -261,198 +261,160 @@ export default function AddDoctorPage() {
         </div>
 
         {/* Qualifications & Languages */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <GraduationCap size={20} className="text-teal-600" />
-            Qualifications & Languages
-          </h2>
-          <div className="space-y-5">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Qualifications</label>
-              <input
-                type="text"
-                value={formData.qualifications}
-                onChange={(e) => updateField('qualifications', e.target.value)}
-                placeholder="MBBS, MD (Cardiology), FACC"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Languages</label>
-              <div className="flex flex-wrap gap-2">
-                {LANGUAGES.map((lang) => (
-                  <button
-                    key={lang}
-                    type="button"
-                    onClick={() => toggleArrayField('languages', lang)}
-                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                      formData.languages.includes(lang)
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                    }`}
-                  >
-                    {lang}
-                  </button>
-                ))}
-              </div>
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">qualifications &amp; languages</span>
+          <div className="form-group">
+            <label className="form-label">Qualifications</label>
+            <input
+              type="text"
+              value={formData.qualifications}
+              onChange={(e) => updateField('qualifications', e.target.value)}
+              placeholder="MBBS, MD (Cardiology), FACC"
+              className="input"
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Languages</label>
+            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+              {LANGUAGES.map((lang) => (
+                <button
+                  key={lang}
+                  type="button"
+                  onClick={() => toggleArrayField('languages', lang)}
+                  className={formData.languages.includes(lang) ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
+                >
+                  {lang}
+                </button>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Location & Clinic */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <MapPin size={20} className="text-teal-600" />
-            Location & Clinic
-          </h2>
-          <div className="grid md:grid-cols-3 gap-5">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">City</label>
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">location &amp; clinic</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: 16 }}>
+            <div className="form-group">
+              <label className="form-label">City</label>
               <input
                 type="text"
                 value={formData.city}
                 onChange={(e) => updateField('city', e.target.value)}
                 placeholder="Mumbai"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">State</label>
+            <div className="form-group">
+              <label className="form-label">State</label>
               <input
                 type="text"
                 value={formData.state}
                 onChange={(e) => updateField('state', e.target.value)}
                 placeholder="Maharashtra"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Country</label>
+            <div className="form-group">
+              <label className="form-label">Country</label>
               <input
                 type="text"
                 value={formData.country}
                 onChange={(e) => updateField('country', e.target.value)}
                 placeholder="India"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-5 mt-5">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Clinic/Hospital Name</label>
+          <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 16 }}>
+            <div className="form-group">
+              <label className="form-label">Clinic / Hospital Name</label>
               <input
                 type="text"
                 value={formData.clinicName}
                 onChange={(e) => updateField('clinicName', e.target.value)}
                 placeholder="Apollo Hospital"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Consultation Fee (INR)</label>
+            <div className="form-group">
+              <label className="form-label">Consultation Fee (INR)</label>
               <input
                 type="number"
                 value={formData.consultationFee}
                 onChange={(e) => updateField('consultationFee', e.target.value)}
                 placeholder="1500"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
           </div>
-          <div className="mt-5">
-            <label className="block text-sm font-medium text-slate-700 mb-2">Clinic Address</label>
+          <div className="form-group">
+            <label className="form-label">Clinic Address</label>
             <textarea
               value={formData.clinicAddress}
               onChange={(e) => updateField('clinicAddress', e.target.value)}
               placeholder="Full clinic address"
               rows={2}
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+              className="textarea"
             />
           </div>
         </div>
 
         {/* Bio */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4">Professional Bio</h2>
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">professional bio</span>
           <textarea
             value={formData.bio}
             onChange={(e) => updateField('bio', e.target.value)}
-            placeholder="Write a professional bio for the doctor..."
+            placeholder="Write a professional bio for the doctor…"
             rows={4}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+            className="textarea"
           />
         </div>
 
         {/* Admin Settings */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <Award size={20} className="text-teal-600" />
-            Admin Settings
-          </h2>
-          <div className="grid md:grid-cols-3 gap-5">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Subscription Tier</label>
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">admin settings</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: 16 }}>
+            <div className="form-group">
+              <label className="form-label">Subscription Tier</label>
               <select
                 value={formData.subscriptionTier}
                 onChange={(e) => updateField('subscriptionTier', e.target.value)}
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="select"
               >
                 <option value="free">Free</option>
                 <option value="premium">Premium</option>
                 <option value="enterprise">Enterprise</option>
               </select>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="row ai-center gap-2">
               <input
                 type="checkbox"
                 id="isVerified"
                 checked={formData.isVerified}
                 onChange={(e) => updateField('isVerified', e.target.checked)}
-                className="w-5 h-5 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+                style={{ width: 18, height: 18 }}
               />
-              <label htmlFor="isVerified" className="text-sm font-medium text-slate-700">
-                Mark as Verified
-              </label>
+              <label htmlFor="isVerified" className="form-label" style={{ margin: 0 }}>Mark as Verified</label>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="row ai-center gap-2">
               <input
                 type="checkbox"
                 id="isActive"
                 checked={formData.isActive}
                 onChange={(e) => updateField('isActive', e.target.checked)}
-                className="w-5 h-5 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+                style={{ width: 18, height: 18 }}
               />
-              <label htmlFor="isActive" className="text-sm font-medium text-slate-700">
-                Active Profile
-              </label>
+              <label htmlFor="isActive" className="form-label" style={{ margin: 0 }}>Active Profile</label>
             </div>
           </div>
         </div>
 
-        {/* Submit Button */}
-        <div className="flex items-center justify-end gap-4">
-          <Link
-            href="/admin/doctors"
-            className="px-6 py-2.5 text-slate-600 hover:text-slate-900 font-medium"
-          >
-            Cancel
-          </Link>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="flex items-center gap-2 px-6 py-2.5 bg-teal-600 text-white rounded-xl font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50"
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 size={18} className="animate-spin" />
-                Creating...
-              </>
-            ) : (
-              <>
-                <Save size={18} />
-                Create Doctor
-              </>
-            )}
+        {/* Submit */}
+        <div className="row gap-3" style={{ justifyContent: 'flex-end' }}>
+          <Link href="/admin/doctors" className="btn btn-paper">Cancel</Link>
+          <button type="submit" disabled={isSubmitting} className="btn btn-cobalt">
+            {isSubmitting ? 'Creating…' : 'Create doctor →'}
           </button>
         </div>
       </form>

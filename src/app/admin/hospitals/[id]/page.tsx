@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { useParams, useRouter } from 'next/navigation';
-import { StarIcon, DoctorIcon, ClipboardIcon, BedSolidIcon } from '@/components/ui/icons';
+import { useParams } from 'next/navigation';
 
 interface Hospital {
     id: number;
@@ -38,60 +37,31 @@ interface Hospital {
         pendingEnquiries: number;
         activeDoctors: number;
     };
-    specialties: Array<{
-        id: number;
-        specialty: string;
-        isCenter: boolean;
-    }>;
-    departments: Array<{
-        id: number;
-        name: string;
-    }>;
-    doctors: Array<{
-        id: number;
-        name: string;
-        designation?: string;
-        specialty?: string;
-        isTopDoctor: boolean;
-    }>;
-    reviews: Array<{
-        id: number;
-        reviewerName: string;
-        rating: number;
-        title?: string;
-        review?: string;
-        createdAt: string;
-    }>;
-    enquiries: Array<{
-        id: string;
-        patientName: string;
-        patientPhone: string;
-        status: string;
-        createdAt: string;
-    }>;
-    insuranceTies: Array<{
-        insurer: {
-            id: number;
-            name: string;
-            logo?: string;
-        };
-        isCashless: boolean;
-    }>;
+    specialties: Array<{ id: number; specialty: string; isCenter: boolean }>;
+    departments: Array<{ id: number; name: string }>;
+    doctors: Array<{ id: number; name: string; designation?: string; specialty?: string; isTopDoctor: boolean }>;
+    reviews: Array<{ id: number; reviewerName: string; rating: number; title?: string; review?: string; createdAt: string }>;
+    enquiries: Array<{ id: string; patientName: string; patientPhone: string; status: string; createdAt: string }>;
+    insuranceTies: Array<{ insurer: { id: number; name: string; logo?: string }; isCashless: boolean }>;
 }
+
+const hospitalTypeLabels: Record<string, string> = {
+    government: 'Government',
+    private: 'Private',
+    public_private_partnership: 'PPP',
+    charitable: 'Charitable',
+    trust: 'Trust',
+    corporate_chain: 'Corporate Chain',
+};
 
 export default function HospitalDetailPage() {
     const params = useParams();
-    const router = useRouter();
     const [hospital, setHospital] = useState<Hospital | null>(null);
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [activeTab, setActiveTab] = useState<'overview' | 'doctors' | 'reviews' | 'enquiries' | 'insurance'>('overview');
 
-    useEffect(() => {
-        fetchHospital();
-    }, [params.id]);
-
-    const fetchHospital = async () => {
+    const fetchHospital = useCallback(async () => {
         try {
             const res = await fetch(`/api/admin/hospitals/${params.id}`, {
                 credentials: 'include',
@@ -105,40 +75,24 @@ export default function HospitalDetailPage() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [params.id]);
 
-    const handleVerify = async () => {
+    useEffect(() => {
+        fetchHospital();
+    }, [fetchHospital]);
+
+    const togglePatch = async (field: 'isVerified' | 'isActive') => {
         if (!hospital) return;
         setSaving(true);
         try {
             const res = await fetch(`/api/admin/hospitals/${hospital.id}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ isVerified: !hospital.isVerified }),
+                body: JSON.stringify({ [field]: !hospital[field] }),
                 credentials: 'include',
             });
             if (res.ok) {
-                setHospital({ ...hospital, isVerified: !hospital.isVerified });
-            }
-        } catch (error) {
-            console.error('Failed to update hospital:', error);
-        } finally {
-            setSaving(false);
-        }
-    };
-
-    const handleToggleActive = async () => {
-        if (!hospital) return;
-        setSaving(true);
-        try {
-            const res = await fetch(`/api/admin/hospitals/${hospital.id}`, {
-                method: 'PATCH',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ isActive: !hospital.isActive }),
-                credentials: 'include',
-            });
-            if (res.ok) {
-                setHospital({ ...hospital, isActive: !hospital.isActive });
+                setHospital({ ...hospital, [field]: !hospital[field] });
             }
         } catch (error) {
             console.error('Failed to update hospital:', error);
@@ -149,77 +103,74 @@ export default function HospitalDetailPage() {
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center h-64">
-                <div className="animate-spin w-8 h-8 border-4 border-teal-600 border-t-transparent rounded-full" />
+            <div className="row ai-center center" style={{ height: 256 }}>
+                <span
+                    style={{
+                        width: 24, height: 24, borderRadius: 999,
+                        border: '3px solid var(--rule)', borderTopColor: 'var(--cobalt)',
+                        animation: 'spin 0.8s linear infinite', display: 'inline-block',
+                    }}
+                />
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
             </div>
         );
     }
 
     if (!hospital) {
         return (
-            <div className="text-center py-12">
-                <p className="text-slate-500">Hospital not found</p>
-                <Link href="/admin/hospitals" className="text-teal-600 hover:text-teal-700 mt-2 inline-block">
-                    Back to Hospitals
-                </Link>
+            <div className="col ai-center gap-3" style={{ padding: 48, textAlign: 'center' }}>
+                <span className="mono" style={{ fontSize: 12, color: 'var(--ink-4)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                    Hospital not found
+                </span>
+                <Link href="/admin/hospitals" className="btn btn-paper">← Back to Hospitals</Link>
             </div>
         );
     }
 
-    const hospitalTypeLabels: Record<string, string> = {
-        government: 'Government',
-        private: 'Private',
-        public_private_partnership: 'PPP',
-        charitable: 'Charitable',
-        trust: 'Trust',
-        corporate_chain: 'Corporate Chain',
-    };
+    const statCards: Array<{ label: string; value: string; sub?: string; code: string }> = [
+        { label: 'Rating', value: hospital.stats.avgRating, sub: `${hospital.stats.reviewCount} reviews`, code: '★' },
+        { label: 'Active Doctors', value: hospital.stats.activeDoctors.toLocaleString(), code: 'DR' },
+        { label: 'Pending Enquiries', value: hospital.stats.pendingEnquiries.toLocaleString(), code: 'EN' },
+        { label: 'Bed Count', value: hospital.bedCount?.toLocaleString() || 'N/A', code: 'BD' },
+    ];
 
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+            <Link
+                href="/admin/hospitals"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to hospitals
+            </Link>
+
             {/* Header */}
-            <div className="flex items-start justify-between">
-                <div className="flex items-start gap-4">
-                    <Link href="/admin/hospitals" className="mt-1 text-slate-400 hover:text-slate-600">
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </Link>
-                    <div className="flex items-center gap-4">
-                        {hospital.logo ? (
-                            <img src={hospital.logo} alt={hospital.name} className="w-16 h-16 rounded-xl object-cover border border-slate-200" />
-                        ) : (
-                            <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center text-2xl font-bold text-teal-600">
-                                {hospital.name.charAt(0)}
-                            </div>
-                        )}
-                        <div>
-                            <h1 className="text-2xl font-bold text-slate-900">{hospital.name}</h1>
-                            <div className="flex items-center gap-2 mt-1">
-                                <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-xs font-medium">
-                                    {hospitalTypeLabels[hospital.hospitalType] || hospital.hospitalType}
-                                </span>
-                                {hospital.isVerified && (
-                                    <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium flex items-center gap-1">
-                                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Verified
-                                    </span>
-                                )}
-                                {!hospital.isActive && (
-                                    <span className="px-2 py-0.5 bg-red-100 text-red-700 rounded text-xs font-medium">
-                                        Inactive
-                                    </span>
-                                )}
-                            </div>
-                            <p className="text-sm text-slate-500 mt-1">
-                                {hospital.city}{hospital.state && `, ${hospital.state}`}{hospital.country && `, ${hospital.country}`}
-                            </p>
+            <div className="row between ai-start" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="row ai-center gap-4">
+                    {hospital.logo ? (
+                        <img src={hospital.logo} alt={hospital.name} style={{ width: 64, height: 64, borderRadius: 'var(--r-3)', objectFit: 'cover', border: '1px solid var(--rule)' }} />
+                    ) : (
+                        <div className="spec-icon" style={{ width: 64, height: 64, fontSize: 28 }}>{hospital.name.charAt(0)}</div>
+                    )}
+                    <div className="col gap-2">
+                        <span className="section-mark">admin / hospitals / {hospital.name}</span>
+                        <h1
+                            className="display"
+                            style={{ fontSize: 'clamp(24px, 3.2vw, 32px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                        >
+                            {hospital.name}<span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                            <span className="pill">{hospitalTypeLabels[hospital.hospitalType] || hospital.hospitalType}</span>
+                            {hospital.isVerified && <span className="pill pill-mint">✓ Verified</span>}
+                            {!hospital.isActive && <span className="pill pill-orange">Inactive</span>}
                         </div>
+                        <span style={{ fontSize: 13, color: 'var(--ink-3)' }}>
+                            {hospital.city}{hospital.state && `, ${hospital.state}`}{hospital.country && `, ${hospital.country}`}
+                        </span>
                     </div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                     <button
                         onClick={() => {
                             localStorage.setItem('admin_impersonating', 'true');
@@ -228,284 +179,252 @@ export default function HospitalDetailPage() {
                             localStorage.setItem('provider_session', JSON.stringify({ hospitalId: hospital.id, impersonated: true }));
                             window.open('/provider/hospital/dashboard', '_blank');
                         }}
-                        className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium hover:bg-purple-200 transition-colors flex items-center gap-2"
+                        className="btn btn-paper"
+                        style={{ color: 'var(--magenta)' }}
                     >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
                         Impersonate
                     </button>
                     <button
-                        onClick={handleVerify}
+                        onClick={() => togglePatch('isVerified')}
                         disabled={saving}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                            hospital.isVerified
-                                ? 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                                : 'bg-green-600 text-white hover:bg-green-700'
-                        }`}
+                        className={hospital.isVerified ? 'btn btn-paper' : 'btn btn-cobalt'}
                     >
                         {hospital.isVerified ? 'Remove Verification' : 'Verify Hospital'}
                     </button>
                     <button
-                        onClick={handleToggleActive}
+                        onClick={() => togglePatch('isActive')}
                         disabled={saving}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                            hospital.isActive
-                                ? 'bg-red-100 text-red-700 hover:bg-red-200'
-                                : 'bg-emerald-600 text-white hover:bg-emerald-700'
-                        }`}
+                        className={hospital.isActive ? 'btn btn-orange' : 'btn btn-cobalt'}
                     >
                         {hospital.isActive ? 'Deactivate' : 'Activate'}
                     </button>
-                    <Link
-                        href={`/hospitals/${hospital.slug}`}
-                        target="_blank"
-                        className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-200 transition-colors flex items-center gap-2"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                        View on Site
+                    <Link href={`/hospitals/${hospital.slug}`} target="_blank" className="btn btn-paper">
+                        View ↗
                     </Link>
                 </div>
             </div>
 
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
-                        <StarIcon className="w-5 h-5 text-amber-600" />
+            {/* Stats */}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {statCards.map((s) => (
+                    <div
+                        key={s.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                            background: 'var(--paper)',
+                        }}
+                    >
+                        <div className="row ai-center gap-3">
+                            <span className="spec-icon" aria-hidden="true">{s.code}</span>
+                            <span className="kicker">{s.label}</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>
+                            {s.value}
+                        </div>
+                        {s.sub && (
+                            <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                {s.sub}
+                            </span>
+                        )}
                     </div>
-                    <div className="text-2xl font-bold text-slate-900">{hospital.stats.avgRating}</div>
-                    <div className="text-xs text-slate-500">
-                        Rating <span className="text-slate-400 ml-1">({hospital.stats.reviewCount} reviews)</span>
-                    </div>
-                </div>
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-2">
-                        <DoctorIcon className="w-5 h-5 text-teal-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-slate-900">{hospital.stats.activeDoctors}</div>
-                    <div className="text-xs text-slate-500">Active Doctors</div>
-                </div>
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                        <ClipboardIcon className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-slate-900">{hospital.stats.pendingEnquiries}</div>
-                    <div className="text-xs text-slate-500">Pending Enquiries</div>
-                </div>
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
-                        <BedSolidIcon className="w-5 h-5 text-purple-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-slate-900">{hospital.bedCount || 'N/A'}</div>
-                    <div className="text-xs text-slate-500">Bed Count</div>
-                </div>
+                ))}
             </div>
 
             {/* Tabs */}
-            <div className="border-b border-slate-200">
-                <nav className="flex gap-6">
-                    {[
-                        { key: 'overview', label: 'Overview' },
-                        { key: 'doctors', label: `Doctors (${hospital.doctors.length})` },
-                        { key: 'reviews', label: `Reviews (${hospital.reviews.length})` },
-                        { key: 'enquiries', label: `Enquiries (${hospital.enquiries.length})` },
-                        { key: 'insurance', label: `Insurance (${hospital.insuranceTies.length})` },
-                    ].map((tab) => (
-                        <button
-                            key={tab.key}
-                            onClick={() => setActiveTab(tab.key as typeof activeTab)}
-                            className={`py-3 border-b-2 text-sm font-medium transition-colors ${
-                                activeTab === tab.key
-                                    ? 'border-teal-600 text-teal-600'
-                                    : 'border-transparent text-slate-500 hover:text-slate-700'
-                            }`}
-                        >
-                            {tab.label}
-                        </button>
-                    ))}
-                </nav>
+            <div className="row gap-1 hairline-b">
+                {[
+                    { key: 'overview' as const, label: 'Overview' },
+                    { key: 'doctors' as const, label: `Doctors (${hospital.doctors.length})` },
+                    { key: 'reviews' as const, label: `Reviews (${hospital.reviews.length})` },
+                    { key: 'enquiries' as const, label: `Enquiries (${hospital.enquiries.length})` },
+                    { key: 'insurance' as const, label: `Insurance (${hospital.insuranceTies.length})` },
+                ].map((tab) => (
+                    <button
+                        key={tab.key}
+                        onClick={() => setActiveTab(tab.key)}
+                        className="mono"
+                        style={{
+                            padding: '12px 16px',
+                            background: 'transparent',
+                            border: 'none',
+                            borderBottom: activeTab === tab.key ? '2px solid var(--cobalt)' : '2px solid transparent',
+                            color: activeTab === tab.key ? 'var(--cobalt)' : 'var(--ink-3)',
+                            fontSize: 12,
+                            fontWeight: 500,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            cursor: 'pointer',
+                            marginBottom: -1,
+                        }}
+                    >
+                        {tab.label}
+                    </button>
+                ))}
             </div>
 
-            {/* Tab Content */}
+            {/* Overview tab */}
             {activeTab === 'overview' && (
-                <div className="grid lg:grid-cols-2 gap-6">
-                    {/* Details */}
-                    <div className="bg-white rounded-xl border border-slate-200 p-6">
-                        <h3 className="font-semibold text-slate-900 mb-4">Hospital Details</h3>
-                        <dl className="space-y-3 text-sm">
-                            {hospital.description && (
-                                <div>
-                                    <dt className="text-slate-500">Description</dt>
-                                    <dd className="text-slate-900 mt-1">{hospital.description}</dd>
-                                </div>
-                            )}
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <dt className="text-slate-500">Address</dt>
-                                    <dd className="text-slate-900">{hospital.address || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Pincode</dt>
-                                    <dd className="text-slate-900">{hospital.pincode || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Phone</dt>
-                                    <dd className="text-slate-900">{hospital.phone || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Emergency</dt>
-                                    <dd className="text-slate-900">{hospital.emergencyPhone || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Email</dt>
-                                    <dd className="text-slate-900">{hospital.email || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Website</dt>
-                                    <dd className="text-slate-900">
-                                        {hospital.website ? (
-                                            <a href={hospital.website} target="_blank" rel="noopener" className="text-teal-600 hover:underline">
-                                                {hospital.website}
-                                            </a>
-                                        ) : '-'}
-                                    </dd>
-                                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 16 }}>
+                    <div className="card col gap-3" style={{ padding: 24 }}>
+                        <span className="section-mark">hospital details</span>
+                        {hospital.description && (
+                            <div className="col gap-1">
+                                <span className="kicker">Description</span>
+                                <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{hospital.description}</span>
                             </div>
-                        </dl>
-                    </div>
-
-                    {/* Infrastructure */}
-                    <div className="bg-white rounded-xl border border-slate-200 p-6">
-                        <h3 className="font-semibold text-slate-900 mb-4">Infrastructure</h3>
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                            <div className="p-3 bg-slate-50 rounded-lg">
-                                <div className="text-slate-500">Total Beds</div>
-                                <div className="text-xl font-bold text-slate-900">{hospital.bedCount || '-'}</div>
-                            </div>
-                            <div className="p-3 bg-slate-50 rounded-lg">
-                                <div className="text-slate-500">ICU Beds</div>
-                                <div className="text-xl font-bold text-slate-900">{hospital.icuBeds || '-'}</div>
-                            </div>
-                            <div className="p-3 bg-slate-50 rounded-lg">
-                                <div className="text-slate-500">Operation Theaters</div>
-                                <div className="text-xl font-bold text-slate-900">{hospital.operationTheaters || '-'}</div>
-                            </div>
-                            <div className="p-3 bg-slate-50 rounded-lg">
-                                <div className="text-slate-500">Emergency Beds</div>
-                                <div className="text-xl font-bold text-slate-900">{hospital.emergencyBeds || '-'}</div>
+                        )}
+                        <div className="grid grid-cols-2" style={{ gap: 12 }}>
+                            {[
+                                { label: 'Address', value: hospital.address },
+                                { label: 'Pincode', value: hospital.pincode },
+                                { label: 'Phone', value: hospital.phone },
+                                { label: 'Emergency', value: hospital.emergencyPhone },
+                                { label: 'Email', value: hospital.email },
+                            ].map((row) => (
+                                <div key={row.label} className="col gap-1">
+                                    <span className="kicker">{row.label}</span>
+                                    <span style={{ fontSize: 13, color: 'var(--ink)' }}>{row.value || '—'}</span>
+                                </div>
+                            ))}
+                            <div className="col gap-1">
+                                <span className="kicker">Website</span>
+                                {hospital.website ? (
+                                    <a href={hospital.website} target="_blank" rel="noopener" style={{ fontSize: 13, color: 'var(--cobalt)' }}>
+                                        {hospital.website}
+                                    </a>
+                                ) : (
+                                    <span style={{ fontSize: 13, color: 'var(--ink)' }}>—</span>
+                                )}
                             </div>
                         </div>
+                    </div>
+
+                    <div className="card col gap-3" style={{ padding: 24 }}>
+                        <span className="section-mark">infrastructure</span>
+                        <div className="grid grid-cols-2" style={{ gap: 12 }}>
+                            {[
+                                { label: 'Total Beds', value: hospital.bedCount },
+                                { label: 'ICU Beds', value: hospital.icuBeds },
+                                { label: 'Operation Theaters', value: hospital.operationTheaters },
+                                { label: 'Emergency Beds', value: hospital.emergencyBeds },
+                            ].map((it) => (
+                                <div key={it.label} className="card-flat col gap-1" style={{ padding: 12, background: 'var(--bg-2)' }}>
+                                    <span className="kicker">{it.label}</span>
+                                    <span className="num bignum" style={{ fontSize: 22, color: 'var(--ink)' }}>{it.value || '—'}</span>
+                                </div>
+                            ))}
+                        </div>
                         {hospital.accreditations.length > 0 && (
-                            <div className="mt-4">
-                                <div className="text-sm text-slate-500 mb-2">Accreditations</div>
-                                <div className="flex flex-wrap gap-2">
+                            <div className="col gap-2 hairline-t" style={{ paddingTop: 16 }}>
+                                <span className="kicker">Accreditations</span>
+                                <div className="row gap-1" style={{ flexWrap: 'wrap' }}>
                                     {hospital.accreditations.map((acc) => (
-                                        <span key={acc} className="px-2 py-1 bg-teal-50 text-teal-700 rounded text-xs font-medium">
-                                            {acc}
-                                        </span>
+                                        <span key={acc} className="pill pill-cobalt">{acc}</span>
                                     ))}
                                 </div>
                             </div>
                         )}
                     </div>
 
-                    {/* Specialties */}
-                    <div className="bg-white rounded-xl border border-slate-200 p-6">
-                        <h3 className="font-semibold text-slate-900 mb-4">Specialties</h3>
+                    <div className="card col gap-3" style={{ padding: 24 }}>
+                        <span className="section-mark">specialties</span>
                         {hospital.specialties.length > 0 ? (
-                            <div className="space-y-2">
+                            <div className="col">
                                 {hospital.specialties.map((spec) => (
-                                    <div key={spec.id} className="flex items-center justify-between py-2 border-b border-slate-100 last:border-0">
-                                        <span className="text-sm text-slate-900">{spec.specialty}</span>
-                                        {spec.isCenter && (
-                                            <span className="px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-medium">
-                                                Center of Excellence
-                                            </span>
-                                        )}
+                                    <div key={spec.id} className="row between ai-center" style={{ padding: '10px 0', borderBottom: '1px solid var(--rule-2)' }}>
+                                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{spec.specialty}</span>
+                                        {spec.isCenter && <span className="pill pill-orange">Center of Excellence</span>}
                                     </div>
                                 ))}
                             </div>
                         ) : (
-                            <p className="text-sm text-slate-400">No specialties added</p>
+                            <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                No specialties added
+                            </span>
                         )}
                     </div>
 
-                    {/* Departments */}
-                    <div className="bg-white rounded-xl border border-slate-200 p-6">
-                        <h3 className="font-semibold text-slate-900 mb-4">Departments</h3>
+                    <div className="card col gap-3" style={{ padding: 24 }}>
+                        <span className="section-mark">departments</span>
                         {hospital.departments.length > 0 ? (
-                            <div className="flex flex-wrap gap-2">
+                            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                                 {hospital.departments.map((dept) => (
-                                    <span key={dept.id} className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">
-                                        {dept.name}
-                                    </span>
+                                    <span key={dept.id} className="pill">{dept.name}</span>
                                 ))}
                             </div>
                         ) : (
-                            <p className="text-sm text-slate-400">No departments added</p>
+                            <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                No departments added
+                            </span>
                         )}
                     </div>
                 </div>
             )}
 
             {activeTab === 'doctors' && (
-                <div className="bg-white rounded-xl border border-slate-200">
+                <div className="card" style={{ overflow: 'hidden' }}>
                     {hospital.doctors.length > 0 ? (
-                        <div className="divide-y divide-slate-100">
+                        <div className="col">
                             {hospital.doctors.map((doctor) => (
-                                <div key={doctor.id} className="p-4 flex items-center justify-between hover:bg-slate-50">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-medium">
-                                            {doctor.name.charAt(0)}
-                                        </div>
-                                        <div>
-                                            <div className="font-medium text-slate-900">{doctor.name}</div>
-                                            <div className="text-xs text-slate-500">
+                                <div key={doctor.id} className="row between ai-center" style={{ padding: '14px 18px', borderBottom: '1px solid var(--rule-2)' }}>
+                                    <div className="row ai-center gap-3">
+                                        <span className="spec-icon" aria-hidden="true">{doctor.name.charAt(0)}</span>
+                                        <div className="col" style={{ gap: 2 }}>
+                                            <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{doctor.name}</span>
+                                            <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
                                                 {doctor.designation || doctor.specialty || 'No designation'}
-                                            </div>
+                                            </span>
                                         </div>
                                     </div>
-                                    {doctor.isTopDoctor && (
-                                        <span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-medium">
-                                            Top Doctor
-                                        </span>
-                                    )}
+                                    {doctor.isTopDoctor && <span className="pill pill-orange">Top Doctor</span>}
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-slate-400">No doctors added to this hospital</div>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                            No doctors added to this hospital
+                        </div>
                     )}
                 </div>
             )}
 
             {activeTab === 'reviews' && (
-                <div className="space-y-4">
+                <div className="col gap-3">
                     {hospital.reviews.length > 0 ? (
                         hospital.reviews.map((review) => (
-                            <div key={review.id} className="bg-white rounded-xl border border-slate-200 p-4">
-                                <div className="flex items-start justify-between">
-                                    <div>
-                                        <div className="font-medium text-slate-900">{review.reviewerName}</div>
-                                        <div className="flex items-center gap-1 mt-1">
+                            <div key={review.id} className="card col gap-2" style={{ padding: 16 }}>
+                                <div className="row between ai-start">
+                                    <div className="col gap-1">
+                                        <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{review.reviewerName}</span>
+                                        <div className="row ai-center" style={{ gap: 2 }}>
                                             {Array.from({ length: 5 }).map((_, i) => (
-                                                <span key={i} className={i < review.rating ? 'text-amber-400' : 'text-slate-200'}>★</span>
+                                                <span key={i} style={{ color: i < review.rating ? 'var(--lemon-2)' : 'var(--ink-5)' }}>★</span>
                                             ))}
                                         </div>
                                     </div>
-                                    <span className="text-xs text-slate-400">
+                                    <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
                                         {new Date(review.createdAt).toLocaleDateString()}
                                     </span>
                                 </div>
-                                {review.title && <div className="font-medium text-slate-800 mt-2">{review.title}</div>}
-                                {review.review && <p className="text-sm text-slate-600 mt-1">{review.review}</p>}
+                                {review.title && <span style={{ fontWeight: 500, color: 'var(--ink-2)' }}>{review.title}</span>}
+                                {review.review && <span style={{ fontSize: 13, color: 'var(--ink-3)' }}>{review.review}</span>}
                             </div>
                         ))
                     ) : (
-                        <div className="bg-white rounded-xl border border-slate-200 p-8 text-center text-slate-400">
+                        <div className="card mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                             No reviews yet
                         </div>
                     )}
@@ -513,25 +432,27 @@ export default function HospitalDetailPage() {
             )}
 
             {activeTab === 'enquiries' && (
-                <div className="bg-white rounded-xl border border-slate-200">
+                <div className="card" style={{ overflow: 'hidden' }}>
                     {hospital.enquiries.length > 0 ? (
-                        <div className="divide-y divide-slate-100">
+                        <div className="col">
                             {hospital.enquiries.map((enquiry) => (
-                                <div key={enquiry.id} className="p-4 flex items-center justify-between hover:bg-slate-50">
-                                    <div>
-                                        <div className="font-medium text-slate-900">{enquiry.patientName}</div>
-                                        <div className="text-xs text-slate-500">{enquiry.patientPhone}</div>
+                                <div key={enquiry.id} className="row between ai-center" style={{ padding: '14px 18px', borderBottom: '1px solid var(--rule-2)' }}>
+                                    <div className="col" style={{ gap: 2 }}>
+                                        <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{enquiry.patientName}</span>
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>{enquiry.patientPhone}</span>
                                     </div>
-                                    <div className="flex items-center gap-3">
-                                        <span className={`px-2 py-1 rounded text-xs font-medium ${
-                                            enquiry.status === 'new' ? 'bg-blue-100 text-blue-700' :
-                                            enquiry.status === 'contacted' ? 'bg-amber-100 text-amber-700' :
-                                            enquiry.status === 'converted' ? 'bg-green-100 text-green-700' :
-                                            'bg-slate-100 text-slate-700'
-                                        }`}>
+                                    <div className="row ai-center gap-3">
+                                        <span
+                                            className={
+                                                enquiry.status === 'new' ? 'pill pill-cobalt'
+                                                : enquiry.status === 'contacted' ? 'pill pill-lemon'
+                                                : enquiry.status === 'converted' ? 'pill pill-mint'
+                                                : 'pill'
+                                            }
+                                        >
                                             {enquiry.status}
                                         </span>
-                                        <span className="text-xs text-slate-400">
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
                                             {new Date(enquiry.createdAt).toLocaleDateString()}
                                         </span>
                                     </div>
@@ -539,37 +460,35 @@ export default function HospitalDetailPage() {
                             ))}
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-slate-400">No enquiries received</div>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                            No enquiries received
+                        </div>
                     )}
                 </div>
             )}
 
             {activeTab === 'insurance' && (
-                <div className="bg-white rounded-xl border border-slate-200">
+                <div className="card" style={{ overflow: 'hidden' }}>
                     {hospital.insuranceTies.length > 0 ? (
-                        <div className="divide-y divide-slate-100">
+                        <div className="col">
                             {hospital.insuranceTies.map((tie, i) => (
-                                <div key={i} className="p-4 flex items-center justify-between hover:bg-slate-50">
-                                    <div className="flex items-center gap-3">
+                                <div key={i} className="row between ai-center" style={{ padding: '14px 18px', borderBottom: '1px solid var(--rule-2)' }}>
+                                    <div className="row ai-center gap-3">
                                         {tie.insurer.logo ? (
-                                            <img src={tie.insurer.logo} alt={tie.insurer.name} className="w-10 h-10 rounded object-contain" />
+                                            <img src={tie.insurer.logo} alt={tie.insurer.name} style={{ width: 36, height: 36, borderRadius: 'var(--r-2)', objectFit: 'contain', border: '1px solid var(--rule)' }} />
                                         ) : (
-                                            <div className="w-10 h-10 bg-slate-100 rounded flex items-center justify-center text-slate-500 font-medium">
-                                                {tie.insurer.name.charAt(0)}
-                                            </div>
+                                            <span className="spec-icon" aria-hidden="true">{tie.insurer.name.charAt(0)}</span>
                                         )}
-                                        <div className="font-medium text-slate-900">{tie.insurer.name}</div>
+                                        <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{tie.insurer.name}</span>
                                     </div>
-                                    {tie.isCashless && (
-                                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-medium">
-                                            Cashless
-                                        </span>
-                                    )}
+                                    {tie.isCashless && <span className="pill pill-mint">Cashless</span>}
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-slate-400">No insurance tie-ups</div>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                            No insurance tie-ups
+                        </div>
                     )}
                 </div>
             )}

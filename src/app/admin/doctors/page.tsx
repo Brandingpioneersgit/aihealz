@@ -23,18 +23,14 @@ async function getDoctors() {
 export default async function DoctorsPage() {
     const doctors = await getDoctors();
 
-    // Serialize doctors for client component - convert Decimal/BigInt to safe types
     const serializedDoctors = doctors.map(doctor => ({
         ...doctor,
-        // Convert Decimal fields to numbers (or null)
         rating: doctor.rating ? parseFloat(doctor.rating.toString()) : null,
         consultationFee: doctor.consultationFee ? parseFloat(doctor.consultationFee.toString()) : null,
         badgeScore: doctor.badgeScore ? parseFloat(doctor.badgeScore.toString()) : null,
-        // Normalize contactInfo from JsonValue
         contactInfo: (doctor.contactInfo && typeof doctor.contactInfo === 'object' && !Array.isArray(doctor.contactInfo))
             ? (doctor.contactInfo as { email?: string; phone?: string; address?: string })
             : null,
-        // Convert Date objects to ISO strings for safe serialization
         createdAt: doctor.createdAt.toISOString(),
         updatedAt: doctor.updatedAt.toISOString(),
         verificationDate: doctor.verificationDate?.toISOString() || null,
@@ -48,41 +44,66 @@ export default async function DoctorsPage() {
         totalLeads: doctors.reduce((acc, d) => acc + d._count.leadLogs, 0),
     };
 
+    const cards: Array<{ label: string; value: number; code: string }> = [
+        { label: 'Total Doctors', value: stats.total, code: 'DR' },
+        { label: 'Verified', value: stats.verified, code: 'VR' },
+        { label: 'Premium / Enterprise', value: stats.premium, code: 'PR' },
+        { label: 'Total Leads', value: stats.totalLeads, code: 'LE' },
+    ];
+
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Doctor Profiles</h1>
-                    <p className="text-slate-500 mt-1">Manage healthcare providers in the network</p>
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / doctors</span>
+                    <h1
+                        className="display"
+                        style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Doctor Profiles<span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                        Manage healthcare providers in the network.
+                    </p>
                 </div>
-                <Link
-                    href="/admin/doctors/new"
-                    className="px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
-                >
-                    <span>+</span>
-                    Add Doctor
+                <Link href="/admin/doctors/new" className="btn btn-cobalt">
+                    + Add Doctor
                 </Link>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
-                    <div className="text-sm text-slate-500">Total Doctors</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-green-600">{stats.verified}</div>
-                    <div className="text-sm text-slate-500">Verified</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-purple-600">{stats.premium}</div>
-                    <div className="text-sm text-slate-500">Premium/Enterprise</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-blue-600">{stats.totalLeads}</div>
-                    <div className="text-sm text-slate-500">Total Leads</div>
-                </div>
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {cards.map((s) => (
+                    <div
+                        key={s.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                            background: 'var(--paper)',
+                        }}
+                    >
+                        <div className="row ai-center gap-3">
+                            <span className="spec-icon" aria-hidden="true">{s.code}</span>
+                            <span className="kicker">{s.label}</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 32, color: 'var(--ink)' }}>
+                            {s.value.toLocaleString()}
+                        </div>
+                    </div>
+                ))}
             </div>
 
             {/* Table */}

@@ -3,10 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import {
-  FlaskConical, MapPin, Phone, Mail, Globe, Home,
-  Save, ArrowLeft, Loader2, AlertCircle, Check, Shield
-} from 'lucide-react';
 
 interface ProviderFormData {
   name: string;
@@ -36,7 +32,7 @@ const PROVIDER_TYPES = [
 
 const ACCREDITATIONS = [
   'NABL', 'CAP', 'ISO 15189', 'ISO 9001', 'JCI', 'NABH',
-  'College of American Pathologists', 'AERB (Radiology)'
+  'College of American Pathologists', 'AERB (Radiology)',
 ];
 
 export default function AddDiagnosticProviderPage() {
@@ -65,7 +61,6 @@ export default function AddDiagnosticProviderPage() {
   const updateField = (field: keyof ProviderFormData, value: string | boolean | string[]) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
 
-    // Auto-generate slug from name
     if (field === 'name') {
       const slug = (value as string)
         .toLowerCase()
@@ -124,201 +119,197 @@ export default function AddDiagnosticProviderPage() {
 
   if (success) {
     return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center">
-          <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
-            <Check size={32} className="text-emerald-600" />
-          </div>
-          <h2 className="text-xl font-bold text-slate-900">Provider Added Successfully!</h2>
-          <p className="text-slate-500 mt-2">Redirecting to providers list...</p>
+      <div className="row ai-center center" style={{ minHeight: 400 }}>
+        <div className="col ai-center gap-3">
+          <div className="spec-icon" style={{ width: 56, height: 56, background: 'var(--mint)', fontSize: 24 }}>✓</div>
+          <h2 className="display" style={{ fontSize: 20, margin: 0, fontWeight: 600 }}>Provider added successfully</h2>
+          <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            Redirecting to providers list…
+          </span>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center gap-4">
-        <Link
-          href="/admin/diagnostics/providers"
-          className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+    <div className="col gap-5" style={{ maxWidth: 960, color: 'var(--ink)' }}>
+      <Link
+        href="/admin/diagnostics/providers"
+        className="mono"
+        style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+      >
+        ← Back to providers
+      </Link>
+
+      <div className="col gap-2">
+        <span className="section-mark">admin / diagnostics / providers / new</span>
+        <h1
+          className="display"
+          style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
         >
-          <ArrowLeft size={20} className="text-slate-600" />
-        </Link>
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900">Add Diagnostic Provider</h1>
-          <p className="text-slate-500 mt-1">Create a new lab or diagnostic center profile</p>
-        </div>
+          New diagnostic provider<span style={{ color: 'var(--orange)' }}>.</span>
+        </h1>
+        <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+          Create a new lab or diagnostic center profile.
+        </p>
       </div>
 
-      {/* Error Message */}
       {error && (
-        <div className="p-4 rounded-xl bg-red-50 border border-red-200 flex items-center gap-3 text-red-700">
-          <AlertCircle size={20} />
+        <div
+          role="alert"
+          className="card-flat"
+          style={{
+            padding: '12px 16px',
+            borderColor: 'rgba(255, 90, 46, .35)',
+            background: 'var(--orange-50)',
+            color: 'var(--orange-2)',
+            fontSize: 13,
+          }}
+        >
           {error}
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Basic Information */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <FlaskConical size={20} className="text-teal-600" />
-            Basic Information
-          </h2>
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Provider Name *</label>
+      <form onSubmit={handleSubmit} className="col gap-5">
+        {/* Basic */}
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">basic information</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 16 }}>
+            <div className="form-group">
+              <label className="form-label">Provider Name *</label>
               <input
                 type="text"
                 value={formData.name}
                 onChange={(e) => updateField('name', e.target.value)}
                 placeholder="Dr. Lal PathLabs"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">URL Slug</label>
+            <div className="form-group">
+              <label className="form-label">URL Slug</label>
               <input
                 type="text"
                 value={formData.slug}
                 onChange={(e) => updateField('slug', e.target.value)}
                 placeholder="dr-lal-pathlabs"
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="input"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Provider Type *</label>
+            <div className="form-group">
+              <label className="form-label">Provider Type *</label>
               <select
                 value={formData.providerType}
                 onChange={(e) => updateField('providerType', e.target.value)}
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+                className="select"
               >
                 {PROVIDER_TYPES.map((type) => (
                   <option key={type.value} value={type.value}>{type.label}</option>
                 ))}
               </select>
             </div>
-          </div>
-          <div className="mt-5">
-            <label className="block text-sm font-medium text-slate-700 mb-2">Description</label>
-            <textarea
-              value={formData.description}
-              onChange={(e) => updateField('description', e.target.value)}
-              placeholder="Describe the lab, its services, and specialties..."
-              rows={3}
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-            />
+            <div className="form-group sm:col-span-2">
+              <label className="form-label">Description</label>
+              <textarea
+                value={formData.description}
+                onChange={(e) => updateField('description', e.target.value)}
+                placeholder="Describe the lab, its services, and specialties…"
+                rows={3}
+                className="textarea"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Contact & Location */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <MapPin size={20} className="text-teal-600" />
-            Contact & Location
-          </h2>
-          <div className="space-y-5">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Address</label>
-              <textarea
-                value={formData.address}
-                onChange={(e) => updateField('address', e.target.value)}
-                placeholder="Complete address with area, city"
-                rows={2}
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
+        {/* Contact */}
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">contact &amp; location</span>
+          <div className="form-group">
+            <label className="form-label">Address</label>
+            <textarea
+              value={formData.address}
+              onChange={(e) => updateField('address', e.target.value)}
+              placeholder="Complete address with area, city"
+              rows={2}
+              className="textarea"
+            />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 16 }}>
+            <div className="form-group">
+              <label className="form-label">Phone</label>
+              <input
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => updateField('phone', e.target.value)}
+                placeholder="+91-XXXXXXXXXX"
+                className="input"
               />
             </div>
-            <div className="grid md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Phone</label>
-                <input
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => updateField('phone', e.target.value)}
-                  placeholder="+91-XXXXXXXXXX"
-                  className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Email</label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => updateField('email', e.target.value)}
-                  placeholder="info@lab.com"
-                  className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-slate-700 mb-2">Website</label>
-                <input
-                  type="url"
-                  value={formData.website}
-                  onChange={(e) => updateField('website', e.target.value)}
-                  placeholder="https://lab.com"
-                  className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-                />
-              </div>
+            <div className="form-group">
+              <label className="form-label">Email</label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={(e) => updateField('email', e.target.value)}
+                placeholder="info@lab.com"
+                className="input"
+              />
+            </div>
+            <div className="form-group sm:col-span-2">
+              <label className="form-label">Website</label>
+              <input
+                type="url"
+                value={formData.website}
+                onChange={(e) => updateField('website', e.target.value)}
+                placeholder="https://lab.com"
+                className="input"
+              />
             </div>
           </div>
         </div>
 
         {/* Services */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <Home size={20} className="text-teal-600" />
-            Services
-          </h2>
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="homeCollection"
-                  checked={formData.homeCollectionAvailable}
-                  onChange={(e) => updateField('homeCollectionAvailable', e.target.checked)}
-                  className="w-5 h-5 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
-                />
-                <label htmlFor="homeCollection" className="text-sm font-medium text-slate-700">
-                  Home Collection Available
-                </label>
-              </div>
-              {formData.homeCollectionAvailable && (
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-slate-500">Fee:</span>
-                  <input
-                    type="number"
-                    value={formData.homeCollectionFee}
-                    onChange={(e) => updateField('homeCollectionFee', e.target.value)}
-                    placeholder="100"
-                    className="w-24 px-3 py-1.5 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-                  />
-                  <span className="text-sm text-slate-500">INR</span>
-                </div>
-              )}
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">services</span>
+          <div className="row ai-center gap-4" style={{ flexWrap: 'wrap' }}>
+            <div className="row ai-center gap-2">
+              <input
+                type="checkbox"
+                id="homeCollection"
+                checked={formData.homeCollectionAvailable}
+                onChange={(e) => updateField('homeCollectionAvailable', e.target.checked)}
+                style={{ width: 18, height: 18 }}
+              />
+              <label htmlFor="homeCollection" className="form-label" style={{ margin: 0 }}>
+                Home Collection Available
+              </label>
             </div>
+            {formData.homeCollectionAvailable && (
+              <div className="row ai-center gap-2">
+                <span className="kicker">Fee</span>
+                <input
+                  type="number"
+                  value={formData.homeCollectionFee}
+                  onChange={(e) => updateField('homeCollectionFee', e.target.value)}
+                  placeholder="100"
+                  className="input"
+                  style={{ width: 100 }}
+                />
+                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>INR</span>
+              </div>
+            )}
           </div>
         </div>
 
         {/* Accreditations */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <Shield size={20} className="text-teal-600" />
-            Accreditations
-          </h2>
-          <div className="flex flex-wrap gap-2">
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">accreditations</span>
+          <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
             {ACCREDITATIONS.map((acc) => (
               <button
                 key={acc}
                 type="button"
                 onClick={() => toggleAccreditation(acc)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  formData.accreditations.includes(acc)
-                    ? 'bg-teal-600 text-white'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                className={formData.accreditations.includes(acc) ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
               >
                 {acc}
               </button>
@@ -327,72 +318,47 @@ export default function AddDiagnosticProviderPage() {
         </div>
 
         {/* Admin Settings */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-lg font-semibold text-slate-900 mb-4">Admin Settings</h2>
-          <div className="flex items-center gap-8">
-            <div className="flex items-center gap-3">
+        <div className="card col gap-4" style={{ padding: 24 }}>
+          <span className="section-mark">admin settings</span>
+          <div className="row ai-center gap-6" style={{ flexWrap: 'wrap' }}>
+            <div className="row ai-center gap-2">
               <input
                 type="checkbox"
                 id="isPartner"
                 checked={formData.isPartner}
                 onChange={(e) => updateField('isPartner', e.target.checked)}
-                className="w-5 h-5 rounded border-slate-300 text-orange-600 focus:ring-orange-500"
+                style={{ width: 18, height: 18 }}
               />
-              <label htmlFor="isPartner" className="text-sm font-medium text-slate-700">
-                Official Partner
-              </label>
+              <label htmlFor="isPartner" className="form-label" style={{ margin: 0 }}>Official Partner</label>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="row ai-center gap-2">
               <input
                 type="checkbox"
                 id="isVerified"
                 checked={formData.isVerified}
                 onChange={(e) => updateField('isVerified', e.target.checked)}
-                className="w-5 h-5 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+                style={{ width: 18, height: 18 }}
               />
-              <label htmlFor="isVerified" className="text-sm font-medium text-slate-700">
-                Mark as Verified
-              </label>
+              <label htmlFor="isVerified" className="form-label" style={{ margin: 0 }}>Mark as Verified</label>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="row ai-center gap-2">
               <input
                 type="checkbox"
                 id="isActive"
                 checked={formData.isActive}
                 onChange={(e) => updateField('isActive', e.target.checked)}
-                className="w-5 h-5 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+                style={{ width: 18, height: 18 }}
               />
-              <label htmlFor="isActive" className="text-sm font-medium text-slate-700">
-                Active Profile
-              </label>
+              <label htmlFor="isActive" className="form-label" style={{ margin: 0 }}>Active Profile</label>
             </div>
           </div>
         </div>
 
-        {/* Submit Button */}
-        <div className="flex items-center justify-end gap-4">
-          <Link
-            href="/admin/diagnostics/providers"
-            className="px-6 py-2.5 text-slate-600 hover:text-slate-900 font-medium"
-          >
-            Cancel
-          </Link>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="flex items-center gap-2 px-6 py-2.5 bg-teal-600 text-white rounded-xl font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50"
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 size={18} className="animate-spin" />
-                Creating...
-              </>
-            ) : (
-              <>
-                <Save size={18} />
-                Create Provider
-              </>
-            )}
+        {/* Submit */}
+        <div className="row gap-3" style={{ justifyContent: 'flex-end' }}>
+          <Link href="/admin/diagnostics/providers" className="btn btn-paper">Cancel</Link>
+          <button type="submit" disabled={isSubmitting} className="btn btn-cobalt">
+            {isSubmitting ? 'Creating…' : 'Create provider →'}
           </button>
         </div>
       </form>

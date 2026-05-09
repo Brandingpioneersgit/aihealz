@@ -22,45 +22,67 @@ async function getStats() {
 export default async function ConditionsPage() {
     const { total, activeCount, contentCount, specialties, specialtyCount } = await getStats();
 
+    const stats: Array<{ label: string; value: number; code: string; pill?: string }> = [
+        { label: 'Total Conditions', value: total, code: 'TC' },
+        { label: 'Active', value: activeCount, code: 'AC', pill: 'pill-mint' },
+        { label: 'Inactive', value: total - activeCount, code: 'IN' },
+        { label: 'Content Pages', value: contentCount, code: 'CT', pill: 'pill-cobalt' },
+        { label: 'Specialties', value: specialtyCount, code: 'SP', pill: 'pill-magenta' },
+    ];
+
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Medical Conditions</h1>
-                    <p className="text-slate-500 mt-1">Manage all medical conditions in the system</p>
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / conditions</span>
+                    <h1
+                        className="display"
+                        style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Medical Conditions<span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                        Manage all medical conditions in the system.
+                    </p>
                 </div>
-                <Link
-                    href="/admin/conditions/new"
-                    className="px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
-                >
-                    <span>+</span>
-                    Add Condition
+                <Link href="/admin/conditions/new" className="btn btn-cobalt">
+                    + Add Condition
                 </Link>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-slate-900">{total.toLocaleString()}</div>
-                    <div className="text-sm text-slate-500">Total Conditions</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-green-600">{activeCount.toLocaleString()}</div>
-                    <div className="text-sm text-slate-500">Active</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-slate-400">{(total - activeCount).toLocaleString()}</div>
-                    <div className="text-sm text-slate-500">Inactive</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-blue-600">{contentCount.toLocaleString()}</div>
-                    <div className="text-sm text-slate-500">Content Pages</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-purple-600">{specialtyCount}</div>
-                    <div className="text-sm text-slate-500">Specialties</div>
-                </div>
+            {/* Stats grid */}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {stats.map((s) => (
+                    <div
+                        key={s.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                            background: 'var(--paper)',
+                        }}
+                    >
+                        <div className="row ai-center gap-3">
+                            <span className="spec-icon" aria-hidden="true">{s.code}</span>
+                            <span className="kicker">{s.label}</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 32, color: 'var(--ink)' }}>
+                            {s.value.toLocaleString()}
+                        </div>
+                    </div>
+                ))}
             </div>
 
             {/* Table (fetches its own data via API) */}

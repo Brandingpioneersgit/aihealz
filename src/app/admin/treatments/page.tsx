@@ -8,25 +8,52 @@ export default async function AdminTreatmentsPage() {
         orderBy: { _count: { id: 'desc' } },
     });
 
+    const thStyle: React.CSSProperties = {
+        padding: '12px 16px',
+        textAlign: 'left',
+        fontFamily: 'var(--mono)',
+        fontSize: 10,
+        fontWeight: 600,
+        color: 'var(--ink-3)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.08em',
+    };
+    const tdStyle: React.CSSProperties = {
+        padding: '14px 16px',
+        fontSize: 13,
+        color: 'var(--ink-2)',
+    };
+
     return (
-        <div className="space-y-6">
-            <div>
-                <h1 className="text-2xl font-bold text-slate-900">Treatments</h1>
-                <p className="text-slate-500 mt-1">Manage treatment categories and procedures.</p>
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+            <div className="col gap-2">
+                <span className="section-mark">admin / treatments</span>
+                <h1
+                    className="display"
+                    style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                >
+                    Treatments<span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                    Manage treatment categories and procedures.
+                </p>
             </div>
-            <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                <table className="w-full text-sm">
-                    <thead className="bg-slate-50 border-b border-slate-200">
+
+            <div className="card" style={{ overflow: 'hidden' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                    <thead className="hairline-b" style={{ background: 'var(--bg-2)' }}>
                         <tr>
-                            <th scope="col" className="text-left p-4 font-bold text-slate-700">Specialty</th>
-                            <th scope="col" className="text-left p-4 font-bold text-slate-700">Conditions</th>
+                            <th scope="col" style={thStyle}>Specialty</th>
+                            <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Conditions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {specialties.map((s, i) => (
-                            <tr key={i} className="border-b border-slate-100 hover:bg-slate-50">
-                                <td className="p-4 font-medium text-slate-900">{s.specialistType || 'Unknown'}</td>
-                                <td className="p-4 text-slate-600">{s._count.id.toLocaleString()}</td>
+                            <tr key={i} style={{ borderTop: '1px solid var(--rule-2)' }}>
+                                <td style={{ ...tdStyle, fontWeight: 500, color: 'var(--ink)' }}>{s.specialistType || 'Unknown'}</td>
+                                <td style={{ ...tdStyle, textAlign: 'right' }}>
+                                    <span className="pill pill-cobalt">{s._count.id.toLocaleString()}</span>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

@@ -36,9 +36,9 @@ export default function NewCampaignPage() {
                     totalBudget: parseFloat(formData.totalBudget) || 0,
                     dailyBudget: parseFloat(formData.dailyBudget) || 0,
                     advertiserId: parseInt(formData.advertiserId) || 0,
-                    targetConditions: formData.targetConditions.split(',').map(s => s.trim()).filter(Boolean),
-                    targetCities: formData.targetCities.split(',').map(s => s.trim()).filter(Boolean),
-                    targetSpecialties: formData.targetSpecialties.split(',').map(s => s.trim()).filter(Boolean),
+                    targetConditions: formData.targetConditions.split(',').map((s) => s.trim()).filter(Boolean),
+                    targetCities: formData.targetCities.split(',').map((s) => s.trim()).filter(Boolean),
+                    targetSpecialties: formData.targetSpecialties.split(',').map((s) => s.trim()).filter(Boolean),
                 }),
             });
 
@@ -55,59 +55,80 @@ export default function NewCampaignPage() {
         }
     };
 
+    const update = (field: keyof typeof formData, value: string) =>
+        setFormData((prev) => ({ ...prev, [field]: value }));
+
     return (
-        <div className="max-w-2xl mx-auto space-y-6">
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Create New Campaign</h1>
-                    <p className="text-slate-500 mt-1">Set up a new advertising campaign</p>
-                </div>
-                <Link
-                    href="/admin/advertising/campaigns"
-                    className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900"
+        <div className="col gap-5" style={{ maxWidth: 800, color: 'var(--ink)' }}>
+            <Link
+                href="/admin/advertising/campaigns"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to campaigns
+            </Link>
+
+            <div className="col gap-2">
+                <span className="section-mark">admin / advertising / campaigns / new</span>
+                <h1
+                    className="display"
+                    style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
                 >
-                    Cancel
-                </Link>
+                    New campaign<span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+                    Set up a new advertising campaign.
+                </p>
             </div>
 
             {error && (
-                <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg">
+                <div
+                    role="alert"
+                    className="card-flat"
+                    style={{
+                        padding: '12px 16px',
+                        borderColor: 'rgba(255, 90, 46, .35)',
+                        background: 'var(--orange-50)',
+                        color: 'var(--orange-2)',
+                        fontSize: 13,
+                    }}
+                >
                     {error}
                 </div>
             )}
 
-            <form onSubmit={handleSubmit} className="bg-white rounded-xl border border-slate-200 p-6 space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                    <div className="col-span-2">
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Campaign Name</label>
+            <form onSubmit={handleSubmit} className="card col gap-4" style={{ padding: 24 }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 16 }}>
+                    <div className="form-group sm:col-span-2">
+                        <label className="form-label">Campaign Name</label>
                         <input
                             type="text"
                             required
                             value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('name', e.target.value)}
+                            className="input"
                             placeholder="e.g., Q1 2026 Cardiology Campaign"
                         />
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Advertiser ID</label>
+                    <div className="form-group">
+                        <label className="form-label">Advertiser ID</label>
                         <input
                             type="number"
                             required
                             value={formData.advertiserId}
-                            onChange={(e) => setFormData({ ...formData, advertiserId: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('advertiserId', e.target.value)}
+                            className="input"
                             placeholder="Enter advertiser ID"
                         />
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Objective</label>
+                    <div className="form-group">
+                        <label className="form-label">Objective</label>
                         <select
                             value={formData.objective}
-                            onChange={(e) => setFormData({ ...formData, objective: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('objective', e.target.value)}
+                            className="select"
                         >
                             <option value="awareness">Brand Awareness</option>
                             <option value="traffic">Website Traffic</option>
@@ -116,12 +137,12 @@ export default function NewCampaignPage() {
                         </select>
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Billing Model</label>
+                    <div className="form-group">
+                        <label className="form-label">Billing Model</label>
                         <select
                             value={formData.billingModel}
-                            onChange={(e) => setFormData({ ...formData, billingModel: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('billingModel', e.target.value)}
+                            className="select"
                         >
                             <option value="cpm">CPM (Cost per 1000 impressions)</option>
                             <option value="cpc">CPC (Cost per click)</option>
@@ -130,100 +151,91 @@ export default function NewCampaignPage() {
                         </select>
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Total Budget ($)</label>
+                    <div className="form-group">
+                        <label className="form-label">Total Budget ($)</label>
                         <input
                             type="number"
                             step="0.01"
                             required
                             value={formData.totalBudget}
-                            onChange={(e) => setFormData({ ...formData, totalBudget: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('totalBudget', e.target.value)}
+                            className="input"
                             placeholder="1000.00"
                         />
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Daily Budget ($)</label>
+                    <div className="form-group">
+                        <label className="form-label">Daily Budget ($)</label>
                         <input
                             type="number"
                             step="0.01"
                             value={formData.dailyBudget}
-                            onChange={(e) => setFormData({ ...formData, dailyBudget: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('dailyBudget', e.target.value)}
+                            className="input"
                             placeholder="50.00"
                         />
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Start Date</label>
+                    <div className="form-group">
+                        <label className="form-label">Start Date</label>
                         <input
                             type="date"
                             required
                             value={formData.startDate}
-                            onChange={(e) => setFormData({ ...formData, startDate: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('startDate', e.target.value)}
+                            className="input"
                         />
                     </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">End Date</label>
+                    <div className="form-group">
+                        <label className="form-label">End Date</label>
                         <input
                             type="date"
                             value={formData.endDate}
-                            onChange={(e) => setFormData({ ...formData, endDate: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('endDate', e.target.value)}
+                            className="input"
                         />
                     </div>
 
-                    <div className="col-span-2">
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Target Conditions (comma separated)</label>
+                    <div className="form-group sm:col-span-2">
+                        <label className="form-label">Target Conditions (comma separated)</label>
                         <input
                             type="text"
                             value={formData.targetConditions}
-                            onChange={(e) => setFormData({ ...formData, targetConditions: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('targetConditions', e.target.value)}
+                            className="input"
                             placeholder="diabetes, hypertension, heart-disease"
                         />
                     </div>
 
-                    <div className="col-span-2">
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Target Locations (comma separated)</label>
+                    <div className="form-group sm:col-span-2">
+                        <label className="form-label">Target Locations (comma separated)</label>
                         <input
                             type="text"
                             value={formData.targetCities}
-                            onChange={(e) => setFormData({ ...formData, targetCities: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('targetCities', e.target.value)}
+                            className="input"
                             placeholder="mumbai, delhi, bangalore"
                         />
                     </div>
 
-                    <div className="col-span-2">
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Target Specialties (comma separated)</label>
+                    <div className="form-group sm:col-span-2">
+                        <label className="form-label">Target Specialties (comma separated)</label>
                         <input
                             type="text"
                             value={formData.targetSpecialties}
-                            onChange={(e) => setFormData({ ...formData, targetSpecialties: e.target.value })}
-                            className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                            onChange={(e) => update('targetSpecialties', e.target.value)}
+                            className="input"
                             placeholder="cardiology, endocrinology"
                         />
                     </div>
                 </div>
 
-                <div className="flex justify-end gap-3 pt-4 border-t">
-                    <Link
-                        href="/admin/advertising/campaigns"
-                        className="px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50"
-                    >
-                        Cancel
-                    </Link>
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        className="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 disabled:opacity-50"
-                    >
-                        {loading ? 'Creating...' : 'Create Campaign'}
+                <div className="row gap-3 hairline-t" style={{ paddingTop: 16 }}>
+                    <button type="submit" disabled={loading} className="btn btn-cobalt">
+                        {loading ? 'Creating…' : 'Create campaign →'}
                     </button>
+                    <Link href="/admin/advertising/campaigns" className="btn btn-paper">Cancel</Link>
                 </div>
             </form>
         </div>

@@ -1,23 +1,23 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
 
-const STATUS_COLORS: Record<string, string> = {
-  pending: 'bg-yellow-100 text-yellow-700',
-  confirmed: 'bg-blue-100 text-blue-700',
-  sample_collected: 'bg-indigo-100 text-indigo-700',
-  processing: 'bg-purple-100 text-purple-700',
-  report_ready: 'bg-green-100 text-green-700',
-  completed: 'bg-emerald-100 text-emerald-700',
-  cancelled: 'bg-red-100 text-red-700',
-  no_show: 'bg-slate-100 text-slate-700',
+const STATUS_PILL: Record<string, string> = {
+  pending: 'pill pill-lemon',
+  confirmed: 'pill pill-cobalt',
+  sample_collected: 'pill pill-cobalt',
+  processing: 'pill pill-magenta',
+  report_ready: 'pill pill-mint',
+  completed: 'pill pill-mint',
+  cancelled: 'pill pill-orange',
+  no_show: 'pill',
 };
 
-const PAYMENT_COLORS: Record<string, string> = {
-  pending: 'bg-yellow-100 text-yellow-700',
-  paid: 'bg-green-100 text-green-700',
-  partial: 'bg-orange-100 text-orange-700',
-  refunded: 'bg-blue-100 text-blue-700',
-  failed: 'bg-red-100 text-red-700',
+const PAYMENT_PILL: Record<string, string> = {
+  pending: 'pill pill-lemon',
+  paid: 'pill pill-mint',
+  partial: 'pill pill-orange',
+  refunded: 'pill pill-cobalt',
+  failed: 'pill pill-orange',
 };
 
 export default async function AdminDiagnosticBookingsPage() {
@@ -40,142 +40,162 @@ export default async function AdminDiagnosticBookingsPage() {
   const totalBookings = stats.reduce((sum, s) => sum + s._count, 0);
   const pendingCount = stats.find((s) => s.status === 'pending')?._count || 0;
   const completedCount = stats.find((s) => s.status === 'completed')?._count || 0;
+  const totalRevenue = bookings.reduce((sum, b) => sum + Number(b.finalPrice), 0);
 
-  const formatDate = (date: Date) => {
-    return new Intl.DateTimeFormat('en-IN', {
+  const formatDate = (date: Date) =>
+    new Intl.DateTimeFormat('en-IN', {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
       hour: '2-digit',
       minute: '2-digit',
     }).format(date);
+
+  const statCards: Array<{ label: string; value: string; code: string }> = [
+    { label: 'Total Bookings', value: totalBookings.toLocaleString(), code: 'TT' },
+    { label: 'Pending', value: pendingCount.toLocaleString(), code: 'PD' },
+    { label: 'Completed', value: completedCount.toLocaleString(), code: 'CO' },
+    { label: 'Total Revenue', value: bookings.length > 0 ? `₹${totalRevenue.toLocaleString('en-IN')}` : '₹0', code: 'RV' },
+  ];
+
+  const thStyle: React.CSSProperties = {
+    padding: '12px 16px', textAlign: 'left', fontFamily: 'var(--mono)',
+    fontSize: 10, fontWeight: 600, color: 'var(--ink-3)',
+    textTransform: 'uppercase', letterSpacing: '0.08em',
+  };
+  const tdStyle: React.CSSProperties = {
+    padding: '14px 16px', fontSize: 13, color: 'var(--ink-2)', verticalAlign: 'middle',
   };
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div>
-        <h1 className="text-2xl font-bold text-slate-900">Test Bookings</h1>
-        <p className="text-sm text-slate-500">Manage diagnostic test and package bookings</p>
+    <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+      <div className="col gap-2">
+        <span className="section-mark">admin / diagnostics / bookings</span>
+        <h1
+          className="display"
+          style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+        >
+          Test Bookings<span style={{ color: 'var(--orange)' }}>.</span>
+        </h1>
+        <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+          Manage diagnostic test and package bookings.
+        </p>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-slate-900">{totalBookings}</p>
-          <p className="text-sm text-slate-500">Total Bookings</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-yellow-600">{pendingCount}</p>
-          <p className="text-sm text-slate-500">Pending</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-green-600">{completedCount}</p>
-          <p className="text-sm text-slate-500">Completed</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-teal-600">
-            {bookings.length > 0
-              ? `₹${bookings.reduce((sum, b) => sum + Number(b.finalPrice), 0).toLocaleString('en-IN')}`
-              : '₹0'}
-          </p>
-          <p className="text-sm text-slate-500">Total Revenue</p>
-        </div>
-      </div>
-
-      {/* Status Filters */}
-      <div className="bg-white rounded-xl border border-slate-200 p-4">
-        <div className="flex flex-wrap gap-2">
-          <Link
-            href="/admin/diagnostics/bookings"
-            className="px-3 py-1.5 rounded-lg bg-teal-100 text-teal-700 text-sm font-medium"
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+          gap: 0,
+          border: '1px solid var(--rule)',
+          borderRadius: 'var(--r-3)',
+          background: 'var(--paper)',
+          overflow: 'hidden',
+        }}
+      >
+        {statCards.map((s) => (
+          <div
+            key={s.label}
+            className="col gap-2"
+            style={{
+              padding: 20,
+              borderRight: '1px solid var(--rule)',
+              borderBottom: '1px solid var(--rule)',
+              background: 'var(--paper)',
+            }}
           >
-            All ({totalBookings})
-          </Link>
-          {stats.map((s) => (
-            <Link
-              key={s.status}
-              href={`/admin/diagnostics/bookings?status=${s.status}`}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium capitalize ${STATUS_COLORS[s.status]}`}
-            >
-              {s.status.replace('_', ' ')} ({s._count})
-            </Link>
-          ))}
-        </div>
+            <div className="row ai-center gap-3">
+              <span className="spec-icon" aria-hidden="true">{s.code}</span>
+              <span className="kicker">{s.label}</span>
+            </div>
+            <div className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>
+              {s.value}
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Bookings Table */}
-      <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
+      {/* Status filters */}
+      <div className="card row gap-2" style={{ padding: 16, flexWrap: 'wrap' }}>
+        <Link href="/admin/diagnostics/bookings" className="btn btn-cobalt btn-sm">
+          All ({totalBookings})
+        </Link>
+        {stats.map((s) => (
+          <Link
+            key={s.status}
+            href={`/admin/diagnostics/bookings?status=${s.status}`}
+            className={`${STATUS_PILL[s.status] || 'pill'}`}
+            style={{ textTransform: 'uppercase', cursor: 'pointer' }}
+          >
+            {s.status.replace('_', ' ')} ({s._count})
+          </Link>
+        ))}
+      </div>
+
+      <div className="card" style={{ overflow: 'hidden' }}>
+        <div style={{ overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <thead className="hairline-b" style={{ background: 'var(--bg-2)' }}>
               <tr>
-                <th scope="col" className="px-6 py-3 text-left">Booking ID</th>
-                <th scope="col" className="px-6 py-3 text-left">Patient</th>
-                <th scope="col" className="px-6 py-3 text-left">Test/Package</th>
-                <th scope="col" className="px-6 py-3 text-left">Provider</th>
-                <th scope="col" className="px-6 py-3 text-center">Collection</th>
-                <th scope="col" className="px-6 py-3 text-center">Status</th>
-                <th scope="col" className="px-6 py-3 text-center">Payment</th>
-                <th scope="col" className="px-6 py-3 text-right">Amount</th>
-                <th scope="col" className="px-6 py-3 text-right">Date</th>
+                <th scope="col" style={thStyle}>Booking ID</th>
+                <th scope="col" style={thStyle}>Patient</th>
+                <th scope="col" style={thStyle}>Test/Package</th>
+                <th scope="col" style={thStyle}>Provider</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Collection</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Status</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Payment</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Amount</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Date</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody>
               {bookings.map((booking) => (
-                <tr key={booking.id} className="hover:bg-slate-50">
-                  <td className="px-6 py-4">
+                <tr key={booking.id} style={{ borderTop: '1px solid var(--rule-2)' }}>
+                  <td style={tdStyle}>
                     <Link
                       href={`/admin/diagnostics/bookings/${booking.id}`}
-                      className="text-sm font-mono text-teal-600 hover:underline"
+                      className="mono"
+                      style={{ color: 'var(--cobalt)', fontSize: 12 }}
                     >
-                      {booking.id.slice(0, 8)}...
+                      {booking.id.slice(0, 8)}…
                     </Link>
                   </td>
-                  <td className="px-6 py-4">
-                    <div>
-                      <p className="font-medium text-slate-900">{booking.patientName}</p>
-                      <p className="text-xs text-slate-500">{booking.patientPhone}</p>
+                  <td style={tdStyle}>
+                    <div className="col" style={{ gap: 2 }}>
+                      <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{booking.patientName}</span>
+                      <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>{booking.patientPhone}</span>
                     </div>
                   </td>
-                  <td className="px-6 py-4">
-                    <p className="text-sm text-slate-900">
-                      {booking.test?.shortName || booking.test?.name || booking.package?.name || 'N/A'}
-                    </p>
+                  <td style={tdStyle}>
+                    {booking.test?.shortName || booking.test?.name || booking.package?.name || 'N/A'}
                   </td>
-                  <td className="px-6 py-4">
+                  <td style={tdStyle}>
                     <Link
                       href={`/admin/diagnostics/providers/${booking.provider.slug}`}
-                      className="text-sm text-slate-600 hover:text-teal-600"
+                      style={{ color: 'var(--ink-2)' }}
                     >
                       {booking.provider.name}
                     </Link>
                   </td>
-                  <td className="px-6 py-4 text-center">
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium capitalize ${
-                        booking.collectionType === 'home_collection'
-                          ? 'bg-teal-100 text-teal-700'
-                          : 'bg-slate-100 text-slate-600'
-                      }`}
-                    >
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>
+                    <span className={booking.collectionType === 'home_collection' ? 'pill pill-cobalt' : 'pill'}>
                       {booking.collectionType.replace('_', ' ')}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-center">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium capitalize ${STATUS_COLORS[booking.status]}`}>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>
+                    <span className={STATUS_PILL[booking.status] || 'pill'}>
                       {booking.status.replace('_', ' ')}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-center">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium capitalize ${PAYMENT_COLORS[booking.paymentStatus]}`}>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>
+                    <span className={PAYMENT_PILL[booking.paymentStatus] || 'pill'}>
                       {booking.paymentStatus}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-right font-medium text-slate-900">
+                  <td style={{ ...tdStyle, textAlign: 'right', fontWeight: 600, color: 'var(--ink)' }}>
                     ₹{Number(booking.finalPrice).toLocaleString('en-IN')}
                   </td>
-                  <td className="px-6 py-4 text-right text-sm text-slate-500">
+                  <td style={{ ...tdStyle, textAlign: 'right', fontSize: 12, color: 'var(--ink-3)' }}>
                     {formatDate(booking.createdAt)}
                   </td>
                 </tr>
@@ -185,8 +205,18 @@ export default async function AdminDiagnosticBookingsPage() {
         </div>
 
         {bookings.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-slate-500">No bookings found</p>
+          <div
+            className="mono"
+            style={{
+              padding: 48,
+              textAlign: 'center',
+              color: 'var(--ink-4)',
+              fontSize: 12,
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+            }}
+          >
+            No bookings found
           </div>
         )}
       </div>

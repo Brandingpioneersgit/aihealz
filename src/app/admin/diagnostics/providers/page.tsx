@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Loader2, FlaskConical, Users, Home, Star, CheckCircle } from 'lucide-react';
 
 const TYPE_LABELS: Record<string, string> = {
   lab: 'Pathology Lab',
@@ -76,184 +75,190 @@ export default function AdminDiagnosticProvidersPage() {
     window.open('/provider/lab/dashboard', '_blank');
   };
 
-  const filteredProviders = providers.filter(p =>
+  const filteredProviders = providers.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase()) ||
     p.geography?.name?.toLowerCase().includes(search.toLowerCase())
   );
 
+  const thStyle: React.CSSProperties = {
+    padding: '12px 16px', textAlign: 'left', fontFamily: 'var(--mono)',
+    fontSize: 10, fontWeight: 600, color: 'var(--ink-3)',
+    textTransform: 'uppercase', letterSpacing: '0.08em',
+  };
+  const tdStyle: React.CSSProperties = {
+    padding: '14px 16px', fontSize: 13, color: 'var(--ink-2)', verticalAlign: 'middle',
+  };
+
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-teal-600" />
+      <div className="row ai-center center" style={{ height: 256 }}>
+        <span
+          style={{
+            width: 24,
+            height: 24,
+            borderRadius: 999,
+            border: '3px solid var(--rule)',
+            borderTopColor: 'var(--cobalt)',
+            animation: 'spin 0.8s linear infinite',
+            display: 'inline-block',
+          }}
+        />
+        <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
       </div>
     );
   }
 
+  const statCards: Array<{ label: string; value: string; code: string }> = [
+    { label: 'Total Providers', value: (stats?.total || 0).toLocaleString(), code: 'TT' },
+    { label: 'Partners', value: (stats?.partners || 0).toLocaleString(), code: 'PR' },
+    { label: 'Verified', value: (stats?.verified || 0).toLocaleString(), code: 'VR' },
+    { label: 'Home Collection', value: (stats?.homeCollection || 0).toLocaleString(), code: 'HC' },
+    { label: 'Avg Rating', value: stats?.avgRating || '—', code: 'AR' },
+  ];
+
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-            <FlaskConical className="w-6 h-6 text-teal-600" />
-            Diagnostic Labs & Centers
+    <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+      <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+        <div className="col gap-2">
+          <span className="section-mark">admin / diagnostics / providers</span>
+          <h1
+            className="display"
+            style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+          >
+            Diagnostic Providers<span style={{ color: 'var(--orange)' }}>.</span>
           </h1>
-          <p className="text-sm text-slate-500">Manage diagnostic service providers</p>
+          <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+            Manage labs, imaging centers and diagnostic service providers.
+          </p>
         </div>
-        <Link
-          href="/admin/diagnostics/providers/new"
-          className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium transition-colors flex items-center gap-2"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-          </svg>
-          Add Provider
+        <Link href="/admin/diagnostics/providers/new" className="btn btn-cobalt">
+          + Add Provider
         </Link>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-            <FlaskConical className="w-5 h-5 text-blue-600" />
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+          gap: 0,
+          border: '1px solid var(--rule)',
+          borderRadius: 'var(--r-3)',
+          background: 'var(--paper)',
+          overflow: 'hidden',
+        }}
+      >
+        {statCards.map((s) => (
+          <div
+            key={s.label}
+            className="col gap-2"
+            style={{
+              padding: 20,
+              borderRight: '1px solid var(--rule)',
+              borderBottom: '1px solid var(--rule)',
+              background: 'var(--paper)',
+            }}
+          >
+            <div className="row ai-center gap-3">
+              <span className="spec-icon" aria-hidden="true">{s.code}</span>
+              <span className="kicker">{s.label}</span>
+            </div>
+            <div className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>
+              {s.value}
+            </div>
           </div>
-          <p className="text-2xl font-bold text-slate-900">{stats?.total || 0}</p>
-          <p className="text-sm text-slate-500">Total Providers</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-2">
-            <Users className="w-5 h-5 text-orange-600" />
-          </div>
-          <p className="text-2xl font-bold text-orange-500">{stats?.partners || 0}</p>
-          <p className="text-sm text-slate-500">Partners</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-2">
-            <CheckCircle className="w-5 h-5 text-green-600" />
-          </div>
-          <p className="text-2xl font-bold text-green-600">{stats?.verified || 0}</p>
-          <p className="text-sm text-slate-500">Verified</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-2">
-            <Home className="w-5 h-5 text-teal-600" />
-          </div>
-          <p className="text-2xl font-bold text-teal-600">{stats?.homeCollection || 0}</p>
-          <p className="text-sm text-slate-500">Home Collection</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mb-2">
-            <Star className="w-5 h-5 text-yellow-600" />
-          </div>
-          <p className="text-2xl font-bold text-yellow-500">
-            {stats?.avgRating || '-'}
-          </p>
-          <p className="text-sm text-slate-500">Avg Rating</p>
-        </div>
+        ))}
       </div>
 
-      {/* Providers Table */}
-      <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-        <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
-          <h2 className="font-semibold text-slate-900">All Providers</h2>
+      <div className="card" style={{ overflow: 'hidden' }}>
+        <div className="hairline-b row between ai-center" style={{ padding: 16, flexWrap: 'wrap', gap: 12 }}>
+          <span className="section-mark">all providers</span>
           <input
             type="text"
-            placeholder="Search providers..."
+            placeholder="Search providers…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="px-3 py-1.5 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-teal-500"
+            className="input"
+            style={{ maxWidth: 280 }}
           />
         </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
+        <div style={{ overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <thead className="hairline-b" style={{ background: 'var(--bg-2)' }}>
               <tr>
-                <th scope="col" className="px-6 py-3 text-left">Provider</th>
-                <th scope="col" className="px-6 py-3 text-left">Type</th>
-                <th scope="col" className="px-6 py-3 text-left">Location</th>
-                <th scope="col" className="px-6 py-3 text-center">Tests</th>
-                <th scope="col" className="px-6 py-3 text-center">Packages</th>
-                <th scope="col" className="px-6 py-3 text-center">Bookings</th>
-                <th scope="col" className="px-6 py-3 text-center">Rating</th>
-                <th scope="col" className="px-6 py-3 text-center">Status</th>
-                <th scope="col" className="px-6 py-3 text-right">Actions</th>
+                <th scope="col" style={thStyle}>Provider</th>
+                <th scope="col" style={thStyle}>Type</th>
+                <th scope="col" style={thStyle}>Location</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Tests</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Packages</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Bookings</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Rating</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Status</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody>
               {filteredProviders.map((provider) => (
-                <tr key={provider.id} className="hover:bg-slate-50">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
+                <tr key={provider.id} style={{ borderTop: '1px solid var(--rule-2)' }}>
+                  <td style={tdStyle}>
+                    <div className="row ai-center gap-3">
                       {provider.logo ? (
-                        <img src={provider.logo} alt={provider.name} className="w-10 h-10 rounded-lg object-cover" />
+                        <img src={provider.logo} alt={provider.name} style={{ width: 36, height: 36, borderRadius: 'var(--r-2)', objectFit: 'cover' }} />
                       ) : (
-                        <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center">
-                          <span className="text-teal-600 font-bold">{provider.name.charAt(0)}</span>
-                        </div>
+                        <span className="spec-icon" aria-hidden="true">{provider.name.charAt(0)}</span>
                       )}
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <p className="font-medium text-slate-900">{provider.name}</p>
-                          {provider.isPartner && (
-                            <span className="px-1.5 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-600">
-                              Partner
-                            </span>
-                          )}
+                      <div className="col" style={{ gap: 2 }}>
+                        <div className="row ai-center gap-2">
+                          <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{provider.name}</span>
+                          {provider.isPartner && <span className="pill pill-orange">Partner</span>}
                         </div>
                         {provider.accreditations.length > 0 && (
-                          <p className="text-xs text-slate-500">{provider.accreditations.slice(0, 2).join(', ')}</p>
+                          <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                            {provider.accreditations.slice(0, 2).join(', ')}
+                          </span>
                         )}
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className="px-2 py-1 rounded-full bg-slate-100 text-xs font-medium text-slate-600">
-                      {TYPE_LABELS[provider.providerType] || provider.providerType}
-                    </span>
+                  <td style={tdStyle}>
+                    <span className="pill">{TYPE_LABELS[provider.providerType] || provider.providerType}</span>
                   </td>
-                  <td className="px-6 py-4 text-sm text-slate-600">{provider.geography?.name || '-'}</td>
-                  <td className="px-6 py-4 text-center text-sm text-slate-600">{provider._count.testPrices}</td>
-                  <td className="px-6 py-4 text-center text-sm text-slate-600">{provider._count.packages}</td>
-                  <td className="px-6 py-4 text-center text-sm text-slate-600">{provider._count.bookings}</td>
-                  <td className="px-6 py-4 text-center">
+                  <td style={tdStyle}>{provider.geography?.name || '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{provider._count.testPrices}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{provider._count.packages}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{provider._count.bookings}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>
                     {provider.rating ? (
-                      <div className="flex items-center justify-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                        <span className="text-sm font-medium">{Number(provider.rating).toFixed(1)}</span>
-                        <span className="text-xs text-slate-400">({provider.reviewCount})</span>
+                      <div className="row ai-center center gap-1">
+                        <span style={{ color: 'var(--lemon-2)' }}>★</span>
+                        <span style={{ fontWeight: 500 }}>{Number(provider.rating).toFixed(1)}</span>
+                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>({provider.reviewCount})</span>
                       </div>
                     ) : (
-                      <span className="text-sm text-slate-400">-</span>
+                      <span style={{ color: 'var(--ink-4)' }}>—</span>
                     )}
                   </td>
-                  <td className="px-6 py-4 text-center">
-                    <div className="flex items-center justify-center gap-1">
-                      {provider.isVerified && (
-                        <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">
-                          Verified
-                        </span>
-                      )}
-                      <span
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          provider.isActive ? 'bg-blue-100 text-blue-700' : 'bg-red-100 text-red-700'
-                        }`}
-                      >
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>
+                    <div className="row ai-center center gap-1">
+                      {provider.isVerified && <span className="pill pill-mint">Verified</span>}
+                      <span className={provider.isActive ? 'pill pill-cobalt' : 'pill pill-orange'}>
                         {provider.isActive ? 'Active' : 'Inactive'}
                       </span>
                     </div>
                   </td>
-                  <td className="px-6 py-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
+                  <td style={{ ...tdStyle, textAlign: 'right' }}>
+                    <div className="row ai-center gap-1" style={{ justifyContent: 'flex-end' }}>
                       <button
                         onClick={() => handleImpersonate(provider.id)}
-                        className="text-purple-600 hover:text-purple-800 text-sm font-medium"
+                        className="btn btn-ghost btn-sm"
+                        style={{ color: 'var(--magenta)' }}
                         title="Login as this provider"
                       >
                         Impersonate
                       </button>
                       <Link
                         href={`/admin/diagnostics/providers/${provider.id}`}
-                        className="text-teal-600 hover:text-teal-800 text-sm font-medium"
+                        className="btn btn-ghost btn-sm"
+                        style={{ color: 'var(--cobalt)' }}
                       >
                         Edit
                       </Link>
@@ -266,8 +271,18 @@ export default function AdminDiagnosticProvidersPage() {
         </div>
 
         {filteredProviders.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-slate-500">No providers found</p>
+          <div
+            className="mono"
+            style={{
+              padding: 48,
+              textAlign: 'center',
+              color: 'var(--ink-4)',
+              fontSize: 12,
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+            }}
+          >
+            No providers found
           </div>
         )}
       </div>

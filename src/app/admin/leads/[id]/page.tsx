@@ -39,20 +39,28 @@ export default async function LeadDetailPage({ params }: PageProps) {
     }
 
     return (
-        <div className="max-w-4xl space-y-6">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <div className="flex items-center gap-2 text-sm text-slate-500 mb-1">
-                        <Link href="/admin/leads" className="hover:text-teal-600">Leads</Link>
-                        <span>/</span>
-                        <span>Lead Details</span>
-                    </div>
-                    <h1 className="text-2xl font-bold text-slate-900">Lead Details</h1>
-                </div>
+        <div className="col gap-5" style={{ maxWidth: 1024, color: 'var(--ink)' }}>
+            <Link
+                href="/admin/leads"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to leads
+            </Link>
+
+            <div className="col gap-2">
+                <span className="section-mark">admin / leads / {lead.id.slice(0, 8)}</span>
+                <h1
+                    className="display"
+                    style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                >
+                    Lead details<span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+                    Track patient enquiry activity, credits and teleconsultations.
+                </p>
             </div>
 
-            {/* Content */}
             <LeadDetails lead={lead} />
         </div>
     );

@@ -34,142 +34,159 @@ export default async function AdminDiagnosticPackagesPage() {
   ]);
 
   const featuredCount = packages.filter((p) => p.isFeatured).length;
+  const totalBookings = packages.reduce((sum, p) => sum + p._count.bookings, 0);
+
+  const statCards: Array<{ label: string; value: string; code: string }> = [
+    { label: 'Total Packages', value: stats._count.toLocaleString(), code: 'TT' },
+    { label: 'Featured', value: featuredCount.toLocaleString(), code: 'FT' },
+    { label: 'Avg Price', value: stats._avg.price ? `₹${Math.round(Number(stats._avg.price)).toLocaleString('en-IN')}` : '—', code: 'AP' },
+    { label: 'Total Bookings', value: totalBookings.toLocaleString(), code: 'BK' },
+  ];
+
+  const thStyle: React.CSSProperties = {
+    padding: '12px 16px', textAlign: 'left', fontFamily: 'var(--mono)',
+    fontSize: 10, fontWeight: 600, color: 'var(--ink-3)',
+    textTransform: 'uppercase', letterSpacing: '0.08em',
+  };
+  const tdStyle: React.CSSProperties = {
+    padding: '14px 16px', fontSize: 13, color: 'var(--ink-2)', verticalAlign: 'middle',
+  };
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900">Health Packages</h1>
-          <p className="text-sm text-slate-500">Manage bundled test packages from providers</p>
+    <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+      <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+        <div className="col gap-2">
+          <span className="section-mark">admin / diagnostics / packages</span>
+          <h1
+            className="display"
+            style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+          >
+            Health Packages<span style={{ color: 'var(--orange)' }}>.</span>
+          </h1>
+          <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+            Manage bundled test packages from providers.
+          </p>
         </div>
-        <Link
-          href="/admin/diagnostics/packages/new"
-          className="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-medium transition-colors"
-        >
-          Add Package
+        <Link href="/admin/diagnostics/packages/new" className="btn btn-cobalt">
+          + Add Package
         </Link>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-slate-900">{stats._count}</p>
-          <p className="text-sm text-slate-500">Total Packages</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-orange-500">{featuredCount}</p>
-          <p className="text-sm text-slate-500">Featured</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-teal-600">
-            {stats._avg.price ? `₹${Math.round(Number(stats._avg.price)).toLocaleString('en-IN')}` : '-'}
-          </p>
-          <p className="text-sm text-slate-500">Avg Price</p>
-        </div>
-        <div className="bg-white rounded-xl p-4 border border-slate-200">
-          <p className="text-2xl font-bold text-green-600">
-            {packages.reduce((sum, p) => sum + p._count.bookings, 0)}
-          </p>
-          <p className="text-sm text-slate-500">Total Bookings</p>
-        </div>
-      </div>
-
-      {/* Package Type Filters */}
-      <div className="bg-white rounded-xl border border-slate-200 p-4">
-        <div className="flex flex-wrap gap-2">
-          <Link
-            href="/admin/diagnostics/packages"
-            className="px-3 py-1.5 rounded-lg bg-teal-100 text-teal-700 text-sm font-medium"
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+          gap: 0,
+          border: '1px solid var(--rule)',
+          borderRadius: 'var(--r-3)',
+          background: 'var(--paper)',
+          overflow: 'hidden',
+        }}
+      >
+        {statCards.map((s) => (
+          <div
+            key={s.label}
+            className="col gap-2"
+            style={{
+              padding: 20,
+              borderRight: '1px solid var(--rule)',
+              borderBottom: '1px solid var(--rule)',
+              background: 'var(--paper)',
+            }}
           >
-            All Packages
-          </Link>
-          {Object.entries(TYPE_LABELS).map(([key, label]) => (
-            <Link
-              key={key}
-              href={`/admin/diagnostics/packages?type=${key}`}
-              className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-sm font-medium text-slate-600 transition-colors"
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
+            <div className="row ai-center gap-3">
+              <span className="spec-icon" aria-hidden="true">{s.code}</span>
+              <span className="kicker">{s.label}</span>
+            </div>
+            <div className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>
+              {s.value}
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Packages Table */}
-      <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider">
+      {/* Type filters */}
+      <div className="card row gap-2" style={{ padding: 16, flexWrap: 'wrap' }}>
+        <Link href="/admin/diagnostics/packages" className="btn btn-cobalt btn-sm">
+          All Packages
+        </Link>
+        {Object.entries(TYPE_LABELS).map(([key, label]) => (
+          <Link
+            key={key}
+            href={`/admin/diagnostics/packages?type=${key}`}
+            className="btn btn-paper btn-sm"
+          >
+            {label}
+          </Link>
+        ))}
+      </div>
+
+      <div className="card" style={{ overflow: 'hidden' }}>
+        <div style={{ overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <thead className="hairline-b" style={{ background: 'var(--bg-2)' }}>
               <tr>
-                <th scope="col" className="px-6 py-3 text-left">Package Name</th>
-                <th scope="col" className="px-6 py-3 text-left">Provider</th>
-                <th scope="col" className="px-6 py-3 text-left">Type</th>
-                <th scope="col" className="px-6 py-3 text-center">Tests</th>
-                <th scope="col" className="px-6 py-3 text-center">Bookings</th>
-                <th scope="col" className="px-6 py-3 text-right">Price</th>
-                <th scope="col" className="px-6 py-3 text-center">Status</th>
-                <th scope="col" className="px-6 py-3 text-right">Actions</th>
+                <th scope="col" style={thStyle}>Package Name</th>
+                <th scope="col" style={thStyle}>Provider</th>
+                <th scope="col" style={thStyle}>Type</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Tests</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Bookings</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Price</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Status</th>
+                <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody>
               {packages.map((pkg) => (
-                <tr key={pkg.id} className="hover:bg-slate-50">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <div>
-                        <p className="font-medium text-slate-900">{pkg.name}</p>
+                <tr key={pkg.id} style={{ borderTop: '1px solid var(--rule-2)' }}>
+                  <td style={tdStyle}>
+                    <div className="row ai-center gap-2">
+                      <div className="col" style={{ gap: 2 }}>
+                        <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{pkg.name}</span>
                         {pkg.targetAudience && (
-                          <p className="text-xs text-slate-500">For: {pkg.targetAudience}</p>
+                          <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                            For: {pkg.targetAudience}
+                          </span>
                         )}
                       </div>
-                      {pkg.isFeatured && (
-                        <span className="px-1.5 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-600">
-                          Featured
-                        </span>
-                      )}
+                      {pkg.isFeatured && <span className="pill pill-orange">Featured</span>}
                     </div>
                   </td>
-                  <td className="px-6 py-4">
+                  <td style={tdStyle}>
                     <Link
                       href={`/admin/diagnostics/providers/${pkg.provider.slug}`}
-                      className="text-sm text-slate-600 hover:text-teal-600"
+                      style={{ color: 'var(--ink-2)' }}
                     >
                       {pkg.provider.name}
                     </Link>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className="px-2 py-1 rounded-full bg-slate-100 text-xs font-medium text-slate-600">
-                      {TYPE_LABELS[pkg.packageType] || pkg.packageType}
-                    </span>
+                  <td style={tdStyle}>
+                    <span className="pill">{TYPE_LABELS[pkg.packageType] || pkg.packageType}</span>
                   </td>
-                  <td className="px-6 py-4 text-center">
-                    <span className="text-sm text-slate-600">{pkg.tests.length}</span>
-                  </td>
-                  <td className="px-6 py-4 text-center text-sm text-slate-600">{pkg._count.bookings}</td>
-                  <td className="px-6 py-4 text-right">
-                    <div>
-                      <p className="font-medium text-teal-600">₹{Number(pkg.price).toLocaleString('en-IN')}</p>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{pkg.tests.length}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{pkg._count.bookings}</td>
+                  <td style={{ ...tdStyle, textAlign: 'right' }}>
+                    <div className="col ai-end" style={{ gap: 2 }}>
+                      <span style={{ fontWeight: 600, color: 'var(--cobalt)' }}>
+                        ₹{Number(pkg.price).toLocaleString('en-IN')}
+                      </span>
                       {pkg.mrpPrice && Number(pkg.mrpPrice) > Number(pkg.price) && (
-                        <p className="text-xs text-slate-400 line-through">
+                        <span style={{ fontSize: 11, color: 'var(--ink-4)', textDecoration: 'line-through' }}>
                           ₹{Number(pkg.mrpPrice).toLocaleString('en-IN')}
-                        </p>
+                        </span>
                       )}
                     </div>
                   </td>
-                  <td className="px-6 py-4 text-center">
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        pkg.isActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-                      }`}
-                    >
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>
+                    <span className={pkg.isActive ? 'pill pill-mint' : 'pill pill-orange'}>
                       {pkg.isActive ? 'Active' : 'Inactive'}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-right">
+                  <td style={{ ...tdStyle, textAlign: 'right' }}>
                     <Link
                       href={`/admin/diagnostics/packages/${pkg.id}`}
-                      className="text-teal-600 hover:text-teal-800 text-sm font-medium"
+                      className="btn btn-ghost btn-sm"
+                      style={{ color: 'var(--cobalt)' }}
                     >
                       Edit
                     </Link>
@@ -181,8 +198,18 @@ export default async function AdminDiagnosticPackagesPage() {
         </div>
 
         {packages.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-slate-500">No packages found</p>
+          <div
+            className="mono"
+            style={{
+              padding: 48,
+              textAlign: 'center',
+              color: 'var(--ink-4)',
+              fontSize: 12,
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+            }}
+          >
+            No packages found
           </div>
         )}
       </div>

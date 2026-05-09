@@ -27,41 +27,66 @@ export default async function LanguagesPage() {
         totalTranslations: languages.reduce((acc, l) => acc + l._count.uiTranslations, 0),
     };
 
+    const cards: Array<{ label: string; value: number; code: string }> = [
+        { label: 'Total Languages', value: stats.total, code: 'LG' },
+        { label: 'Active', value: stats.active, code: 'AC' },
+        { label: 'With Content', value: stats.withContent, code: 'CN' },
+        { label: 'UI Translations', value: stats.totalTranslations, code: 'UI' },
+    ];
+
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Languages</h1>
-                    <p className="text-slate-500 mt-1">Manage supported languages and translations</p>
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / languages</span>
+                    <h1
+                        className="display"
+                        style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Languages<span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 14, margin: 0, maxWidth: 640 }}>
+                        Manage supported languages and translations.
+                    </p>
                 </div>
-                <Link
-                    href="/admin/languages/new"
-                    className="px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
-                >
-                    <span>+</span>
-                    Add Language
+                <Link href="/admin/languages/new" className="btn btn-cobalt">
+                    + Add Language
                 </Link>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
-                    <div className="text-sm text-slate-500">Total Languages</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-green-600">{stats.active}</div>
-                    <div className="text-sm text-slate-500">Active</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-blue-600">{stats.withContent}</div>
-                    <div className="text-sm text-slate-500">With Content</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <div className="text-2xl font-bold text-purple-600">{stats.totalTranslations}</div>
-                    <div className="text-sm text-slate-500">UI Translations</div>
-                </div>
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {cards.map((s) => (
+                    <div
+                        key={s.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                            background: 'var(--paper)',
+                        }}
+                    >
+                        <div className="row ai-center gap-3">
+                            <span className="spec-icon" aria-hidden="true">{s.code}</span>
+                            <span className="kicker">{s.label}</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 32, color: 'var(--ink)' }}>
+                            {s.value.toLocaleString()}
+                        </div>
+                    </div>
+                ))}
             </div>
 
             {/* Table */}

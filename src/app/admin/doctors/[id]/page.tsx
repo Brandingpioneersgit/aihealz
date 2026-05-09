@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import DoctorForm from './DoctorForm';
 
 interface PageProps {
@@ -39,7 +40,7 @@ async function getFormData() {
                 parent: {
                     select: {
                         name: true,
-                        parent: { select: { name: true } } // country for cities
+                        parent: { select: { name: true } }
                     }
                 }
             }
@@ -49,7 +50,6 @@ async function getFormData() {
             orderBy: { commonName: 'asc' },
             select: { id: true, commonName: true, specialistType: true }
         }),
-        // Fetch unique subscription tiers from active plans
         prisma.subscriptionPlan.findMany({
             where: { isActive: true },
             select: { tier: true, planName: true },
@@ -58,13 +58,11 @@ async function getFormData() {
         })
     ]);
 
-    // Extract unique tiers with their plan names for display
     const tierOptions = subscriptionPlans.map(p => ({
         value: p.tier,
         label: p.planName,
     }));
 
-    // Transform geographies to include display name with full path
     const transformedGeographies = geographies.map(geo => {
         let displayName = geo.name;
         if (geo.parent) {
@@ -96,31 +94,42 @@ export default async function DoctorEditPage({ params }: PageProps) {
         notFound();
     }
 
-    // Serialize for client component - handle Decimal and Json types
     const serializedDoctor = doctor ? {
         ...doctor,
         consultationFee: doctor.consultationFee?.toString() || null,
         rating: doctor.rating?.toString() || null,
         badgeScore: doctor.badgeScore?.toString() || null,
-        // Normalize contactInfo from JsonValue to a plain object or null
         contactInfo: (doctor.contactInfo && typeof doctor.contactInfo === 'object' && !Array.isArray(doctor.contactInfo))
             ? (doctor.contactInfo as Record<string, unknown>)
             : null,
     } : null;
 
     return (
-        <div className="max-w-4xl space-y-6">
-            {/* Header */}
-            <div>
-                <h1 className="text-2xl font-bold text-slate-900">
-                    {doctor ? 'Edit Doctor Profile' : 'Add New Doctor'}
+        <div className="col gap-5" style={{ maxWidth: 960, color: 'var(--ink)' }}>
+            <Link
+                href="/admin/doctors"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to doctors
+            </Link>
+
+            <div className="col gap-2">
+                <span className="section-mark">
+                    admin / doctors / {doctor ? doctor.name : 'new'}
+                </span>
+                <h1
+                    className="display"
+                    style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                >
+                    {doctor ? doctor.name : 'New doctor'}
+                    <span style={{ color: 'var(--orange)' }}>.</span>
                 </h1>
-                <p className="text-slate-500 mt-1">
-                    {doctor ? `Editing: ${doctor.name}` : 'Create a new healthcare provider profile'}
+                <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+                    {doctor ? 'Editing healthcare provider profile.' : 'Create a new healthcare provider profile.'}
                 </p>
             </div>
 
-            {/* Form */}
             <DoctorForm
                 doctor={serializedDoctor}
                 geographies={formData.geographies}

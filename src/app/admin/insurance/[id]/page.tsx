@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { ChartIcon, StarIcon, ClipboardIcon, HospitalIcon, DocumentIcon } from '@/components/ui/icons';
 
 interface InsuranceProvider {
     id: number;
@@ -44,22 +43,21 @@ interface InsuranceProvider {
         isActive: boolean;
     }>;
     hospitalTies: Array<{
-        hospital: {
-            id: number;
-            name: string;
-            city?: string;
-            logo?: string;
-        };
+        hospital: { id: number; name: string; city?: string; logo?: string };
         isCashless: boolean;
     }>;
     tpaAssociations: Array<{
-        tpa: {
-            id: number;
-            name: string;
-            logo?: string;
-        };
+        tpa: { id: number; name: string; logo?: string };
     }>;
 }
+
+const providerTypeLabels: Record<string, string> = {
+    private: 'Private',
+    public: 'Public Sector',
+    general: 'General',
+    health: 'Health Only',
+    standalone_health: 'Standalone Health',
+};
 
 export default function InsuranceDetailPage() {
     const params = useParams();
@@ -67,11 +65,7 @@ export default function InsuranceDetailPage() {
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<'overview' | 'plans' | 'hospitals' | 'tpas'>('overview');
 
-    useEffect(() => {
-        fetchProvider();
-    }, [params.id]);
-
-    const fetchProvider = async () => {
+    const fetchProvider = useCallback(async () => {
         try {
             const res = await fetch(`/api/admin/insurance/${params.id}`, {
                 credentials: 'include',
@@ -85,251 +79,238 @@ export default function InsuranceDetailPage() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [params.id]);
+
+    useEffect(() => {
+        fetchProvider();
+    }, [fetchProvider]);
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center h-64">
-                <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full" />
+            <div className="row ai-center center" style={{ height: 256 }}>
+                <span
+                    style={{
+                        width: 24, height: 24, borderRadius: 999,
+                        border: '3px solid var(--rule)', borderTopColor: 'var(--cobalt)',
+                        animation: 'spin 0.8s linear infinite', display: 'inline-block',
+                    }}
+                />
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
             </div>
         );
     }
 
     if (!provider) {
         return (
-            <div className="text-center py-12">
-                <p className="text-slate-500">Insurance provider not found</p>
-                <Link href="/admin/insurance" className="text-blue-600 hover:text-blue-700 mt-2 inline-block">
-                    Back to Providers
-                </Link>
+            <div className="col ai-center gap-3" style={{ padding: 48, textAlign: 'center' }}>
+                <span className="mono" style={{ fontSize: 12, color: 'var(--ink-4)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                    Insurance provider not found
+                </span>
+                <Link href="/admin/insurance" className="btn btn-paper">← Back to Providers</Link>
             </div>
         );
     }
 
-    const providerTypeLabels: Record<string, string> = {
-        private: 'Private',
-        public: 'Public Sector',
-        general: 'General',
-        health: 'Health Only',
-        standalone_health: 'Standalone Health',
-    };
+    const csr = provider.claimSettlementRatio ? Number(provider.claimSettlementRatio) : null;
+
+    const statCards: Array<{ label: string; value: string; code: string }> = [
+        { label: 'CSR', value: csr !== null ? `${csr.toFixed(1)}%` : 'N/A', code: 'CSR' },
+        { label: 'Rating', value: provider.rating ? Number(provider.rating).toFixed(1) : 'N/A', code: '★' },
+        { label: 'Active Plans', value: provider.stats.activePlans.toLocaleString(), code: 'PL' },
+        { label: 'Network Hospitals', value: provider.stats.networkHospitals.toLocaleString(), code: 'HO' },
+        { label: 'Total Claims', value: provider.stats.totalClaims.toLocaleString(), code: 'CL' },
+    ];
 
     return (
-        <div className="space-y-6">
-            {/* Header */}
-            <div className="flex items-start justify-between">
-                <div className="flex items-start gap-4">
-                    <Link href="/admin/insurance" className="mt-1 text-slate-400 hover:text-slate-600">
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </Link>
-                    <div className="flex items-center gap-4">
-                        {provider.logo ? (
-                            <img src={provider.logo} alt={provider.name} className="w-16 h-16 rounded-xl object-contain border border-slate-200 bg-white p-1" />
-                        ) : (
-                            <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-2xl font-bold text-blue-600">
-                                {provider.name.charAt(0)}
-                            </div>
-                        )}
-                        <div>
-                            <h1 className="text-2xl font-bold text-slate-900">{provider.name}</h1>
-                            <div className="flex items-center gap-2 mt-1">
-                                <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-xs font-medium">
-                                    {providerTypeLabels[provider.providerType] || provider.providerType}
-                                </span>
-                                {provider.isActive ? (
-                                    <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs font-medium">
-                                        Active
-                                    </span>
-                                ) : (
-                                    <span className="px-2 py-0.5 bg-red-100 text-red-700 rounded text-xs font-medium">
-                                        Inactive
-                                    </span>
-                                )}
-                            </div>
-                            <p className="text-sm text-slate-500 mt-1">
-                                {provider.headquartersCity}{provider.headquartersCountry && `, ${provider.headquartersCountry}`}
-                                {provider.establishedYear && ` • Est. ${provider.establishedYear}`}
-                            </p>
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+            <Link
+                href="/admin/insurance"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to insurance
+            </Link>
+
+            <div className="row between ai-start" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="row ai-center gap-4">
+                    {provider.logo ? (
+                        <img src={provider.logo} alt={provider.name} style={{ width: 64, height: 64, borderRadius: 'var(--r-3)', objectFit: 'contain', border: '1px solid var(--rule)', background: 'var(--paper)', padding: 4 }} />
+                    ) : (
+                        <div className="spec-icon" style={{ width: 64, height: 64, fontSize: 28 }}>{provider.name.charAt(0)}</div>
+                    )}
+                    <div className="col gap-2">
+                        <span className="section-mark">admin / insurance / {provider.name}</span>
+                        <h1
+                            className="display"
+                            style={{ fontSize: 'clamp(24px, 3.2vw, 32px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                        >
+                            {provider.name}<span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                            <span className="pill">{providerTypeLabels[provider.providerType] || provider.providerType}</span>
+                            <span className={provider.isActive ? 'pill pill-mint' : 'pill pill-orange'}>
+                                {provider.isActive ? 'Active' : 'Inactive'}
+                            </span>
                         </div>
+                        <span style={{ fontSize: 13, color: 'var(--ink-3)' }}>
+                            {provider.headquartersCity}{provider.headquartersCountry && `, ${provider.headquartersCountry}`}
+                            {provider.establishedYear && ` · Est. ${provider.establishedYear}`}
+                        </span>
                     </div>
                 </div>
-                <Link
-                    href={`/insurance/${provider.slug}`}
-                    target="_blank"
-                    className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-200 transition-colors flex items-center gap-2"
-                >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    View on Site
+                <Link href={`/insurance/${provider.slug}`} target="_blank" className="btn btn-paper">
+                    View ↗
                 </Link>
             </div>
 
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div className={`bg-white rounded-xl border p-4 ${Number(provider.claimSettlementRatio || 0) >= 95 ? 'border-green-300 bg-green-50' : 'border-slate-200'}`}>
-                    <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-2">
-                        <ChartIcon className="w-5 h-5 text-emerald-600" />
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {statCards.map((s) => (
+                    <div
+                        key={s.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                            background: 'var(--paper)',
+                        }}
+                    >
+                        <div className="row ai-center gap-3">
+                            <span className="spec-icon" aria-hidden="true">{s.code}</span>
+                            <span className="kicker">{s.label}</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>
+                            {s.value}
+                        </div>
                     </div>
-                    <div className="text-2xl font-bold text-slate-900">{provider.claimSettlementRatio ? `${Number(provider.claimSettlementRatio).toFixed(1)}%` : 'N/A'}</div>
-                    <div className="text-xs text-slate-500">CSR</div>
-                </div>
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
-                        <StarIcon className="w-5 h-5 text-amber-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-slate-900">{provider.rating ? `${Number(provider.rating).toFixed(1)}` : 'N/A'}</div>
-                    <div className="text-xs text-slate-500">Rating</div>
-                </div>
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
-                        <ClipboardIcon className="w-5 h-5 text-purple-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-slate-900">{provider.stats.activePlans}</div>
-                    <div className="text-xs text-slate-500">Active Plans</div>
-                </div>
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-2">
-                        <HospitalIcon className="w-5 h-5 text-teal-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-slate-900">{provider.stats.networkHospitals}</div>
-                    <div className="text-xs text-slate-500">Network Hospitals</div>
-                </div>
-                <div className="bg-white rounded-xl border border-slate-200 p-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                        <DocumentIcon className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-slate-900">{provider.stats.totalClaims}</div>
-                    <div className="text-xs text-slate-500">Total Claims</div>
-                </div>
+                ))}
             </div>
 
-            {/* Tabs */}
-            <div className="border-b border-slate-200">
-                <nav className="flex gap-6">
-                    {[
-                        { key: 'overview', label: 'Overview' },
-                        { key: 'plans', label: `Plans (${provider.plans.length})` },
-                        { key: 'hospitals', label: `Hospitals (${provider.hospitalTies.length})` },
-                        { key: 'tpas', label: `TPAs (${provider.tpaAssociations.length})` },
-                    ].map((tab) => (
-                        <button
-                            key={tab.key}
-                            onClick={() => setActiveTab(tab.key as typeof activeTab)}
-                            className={`py-3 border-b-2 text-sm font-medium transition-colors ${
-                                activeTab === tab.key
-                                    ? 'border-blue-600 text-blue-600'
-                                    : 'border-transparent text-slate-500 hover:text-slate-700'
-                            }`}
-                        >
-                            {tab.label}
-                        </button>
-                    ))}
-                </nav>
+            <div className="row gap-1 hairline-b">
+                {[
+                    { key: 'overview' as const, label: 'Overview' },
+                    { key: 'plans' as const, label: `Plans (${provider.plans.length})` },
+                    { key: 'hospitals' as const, label: `Hospitals (${provider.hospitalTies.length})` },
+                    { key: 'tpas' as const, label: `TPAs (${provider.tpaAssociations.length})` },
+                ].map((tab) => (
+                    <button
+                        key={tab.key}
+                        onClick={() => setActiveTab(tab.key)}
+                        className="mono"
+                        style={{
+                            padding: '12px 16px',
+                            background: 'transparent',
+                            border: 'none',
+                            borderBottom: activeTab === tab.key ? '2px solid var(--cobalt)' : '2px solid transparent',
+                            color: activeTab === tab.key ? 'var(--cobalt)' : 'var(--ink-3)',
+                            fontSize: 12,
+                            fontWeight: 500,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            cursor: 'pointer',
+                            marginBottom: -1,
+                        }}
+                    >
+                        {tab.label}
+                    </button>
+                ))}
             </div>
 
-            {/* Tab Content */}
             {activeTab === 'overview' && (
-                <div className="grid lg:grid-cols-2 gap-6">
-                    <div className="bg-white rounded-xl border border-slate-200 p-6">
-                        <h3 className="font-semibold text-slate-900 mb-4">Provider Details</h3>
-                        <dl className="space-y-3 text-sm">
-                            {provider.description && (
-                                <div>
-                                    <dt className="text-slate-500">Description</dt>
-                                    <dd className="text-slate-900 mt-1">{provider.description}</dd>
-                                </div>
-                            )}
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <dt className="text-slate-500">License Number</dt>
-                                    <dd className="text-slate-900">{provider.licenseNumber || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Regulatory Body</dt>
-                                    <dd className="text-slate-900">{provider.regulatoryBody || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Customer Care</dt>
-                                    <dd className="text-slate-900">{provider.customerCarePhone || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Claim Helpline</dt>
-                                    <dd className="text-slate-900">{provider.claimPhone || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Email</dt>
-                                    <dd className="text-slate-900">{provider.email || '-'}</dd>
-                                </div>
-                                <div>
-                                    <dt className="text-slate-500">Website</dt>
-                                    <dd className="text-slate-900">
-                                        {provider.website ? (
-                                            <a href={provider.website} target="_blank" rel="noopener" className="text-blue-600 hover:underline">
-                                                Visit
-                                            </a>
-                                        ) : '-'}
-                                    </dd>
-                                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 16 }}>
+                    <div className="card col gap-3" style={{ padding: 24 }}>
+                        <span className="section-mark">provider details</span>
+                        {provider.description && (
+                            <div className="col gap-1">
+                                <span className="kicker">Description</span>
+                                <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{provider.description}</span>
                             </div>
-                        </dl>
-                    </div>
-
-                    <div className="bg-white rounded-xl border border-slate-200 p-6">
-                        <h3 className="font-semibold text-slate-900 mb-4">Coverage Areas</h3>
-                        <div className="space-y-4">
-                            {provider.operatingCountries.length > 0 && (
-                                <div>
-                                    <div className="text-sm text-slate-500 mb-2">Countries</div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {provider.operatingCountries.map((country) => (
-                                            <span key={country} className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs font-medium">
-                                                {country}
-                                            </span>
-                                        ))}
-                                    </div>
+                        )}
+                        <div className="grid grid-cols-2" style={{ gap: 12 }}>
+                            {[
+                                { label: 'License Number', value: provider.licenseNumber },
+                                { label: 'Regulatory Body', value: provider.regulatoryBody },
+                                { label: 'Customer Care', value: provider.customerCarePhone },
+                                { label: 'Claim Helpline', value: provider.claimPhone },
+                                { label: 'Email', value: provider.email },
+                            ].map((row) => (
+                                <div key={row.label} className="col gap-1">
+                                    <span className="kicker">{row.label}</span>
+                                    <span style={{ fontSize: 13, color: 'var(--ink)' }}>{row.value || '—'}</span>
                                 </div>
-                            )}
-                            {provider.operatingStates.length > 0 && (
-                                <div>
-                                    <div className="text-sm text-slate-500 mb-2">States</div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {provider.operatingStates.slice(0, 10).map((state) => (
-                                            <span key={state} className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">
-                                                {state}
-                                            </span>
-                                        ))}
-                                        {provider.operatingStates.length > 10 && (
-                                            <span className="px-2 py-1 text-slate-500 text-xs">
-                                                +{provider.operatingStates.length - 10} more
-                                            </span>
-                                        )}
-                                    </div>
-                                </div>
-                            )}
+                            ))}
+                            <div className="col gap-1">
+                                <span className="kicker">Website</span>
+                                {provider.website ? (
+                                    <a href={provider.website} target="_blank" rel="noopener" style={{ fontSize: 13, color: 'var(--cobalt)' }}>
+                                        Visit
+                                    </a>
+                                ) : (
+                                    <span style={{ fontSize: 13, color: 'var(--ink)' }}>—</span>
+                                )}
+                            </div>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-xl border border-slate-200 p-6 lg:col-span-2">
-                        <h3 className="font-semibold text-slate-900 mb-4">Claims Summary</h3>
-                        <div className="grid grid-cols-3 gap-4">
-                            <div className="p-4 bg-slate-50 rounded-lg">
-                                <div className="text-slate-500 text-sm">Total Claims</div>
-                                <div className="text-2xl font-bold text-slate-900">{provider.stats.totalClaims}</div>
+                    <div className="card col gap-3" style={{ padding: 24 }}>
+                        <span className="section-mark">coverage areas</span>
+                        {provider.operatingCountries.length > 0 && (
+                            <div className="col gap-2">
+                                <span className="kicker">Countries</span>
+                                <div className="row gap-1" style={{ flexWrap: 'wrap' }}>
+                                    {provider.operatingCountries.map((country) => (
+                                        <span key={country} className="pill pill-cobalt">{country}</span>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="p-4 bg-slate-50 rounded-lg">
-                                <div className="text-slate-500 text-sm">Total Claim Amount</div>
-                                <div className="text-2xl font-bold text-slate-900">
+                        )}
+                        {provider.operatingStates.length > 0 && (
+                            <div className="col gap-2">
+                                <span className="kicker">States</span>
+                                <div className="row gap-1" style={{ flexWrap: 'wrap' }}>
+                                    {provider.operatingStates.slice(0, 10).map((state) => (
+                                        <span key={state} className="pill">{state}</span>
+                                    ))}
+                                    {provider.operatingStates.length > 10 && (
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                                            +{provider.operatingStates.length - 10} more
+                                        </span>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="card col gap-3 lg:col-span-2" style={{ padding: 24 }}>
+                        <span className="section-mark">claims summary</span>
+                        <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: 12 }}>
+                            <div className="card-flat col gap-1" style={{ padding: 16, background: 'var(--bg-2)' }}>
+                                <span className="kicker">Total Claims</span>
+                                <span className="num bignum" style={{ fontSize: 24, color: 'var(--ink)' }}>
+                                    {provider.stats.totalClaims.toLocaleString()}
+                                </span>
+                            </div>
+                            <div className="card-flat col gap-1" style={{ padding: 16, background: 'var(--bg-2)' }}>
+                                <span className="kicker">Total Claim Amount</span>
+                                <span className="num bignum" style={{ fontSize: 24, color: 'var(--ink)' }}>
                                     ₹{(provider.stats.totalClaimAmount / 100000).toFixed(1)}L
-                                </div>
+                                </span>
                             </div>
-                            <div className="p-4 bg-slate-50 rounded-lg">
-                                <div className="text-slate-500 text-sm">Approved Amount</div>
-                                <div className="text-2xl font-bold text-green-600">
+                            <div className="card-flat col gap-1" style={{ padding: 16, background: 'var(--mint-50)', borderColor: 'rgba(40, 212, 168, .30)' }}>
+                                <span className="kicker">Approved Amount</span>
+                                <span className="num bignum" style={{ fontSize: 24, color: 'var(--mint-3)' }}>
                                     ₹{(provider.stats.totalApprovedAmount / 100000).toFixed(1)}L
-                                </div>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -337,90 +318,88 @@ export default function InsuranceDetailPage() {
             )}
 
             {activeTab === 'plans' && (
-                <div className="bg-white rounded-xl border border-slate-200">
+                <div className="card" style={{ overflow: 'hidden' }}>
                     {provider.plans.length > 0 ? (
-                        <div className="divide-y divide-slate-100">
+                        <div className="col">
                             {provider.plans.map((plan) => (
-                                <div key={plan.id} className="p-4 flex items-center justify-between hover:bg-slate-50">
-                                    <div>
-                                        <div className="font-medium text-slate-900">{plan.name}</div>
-                                        <div className="text-xs text-slate-500 mt-1">
-                                            {plan.planType} • Sum Insured: ₹{plan.sumInsured ? (plan.sumInsured / 100000).toFixed(0) + 'L' : '-'}
-                                        </div>
+                                <div key={plan.id} className="row between ai-center" style={{ padding: '14px 18px', borderBottom: '1px solid var(--rule-2)' }}>
+                                    <div className="col" style={{ gap: 2 }}>
+                                        <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{plan.name}</span>
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                                            {plan.planType} · Sum Insured: ₹{plan.sumInsured ? (plan.sumInsured / 100000).toFixed(0) + 'L' : '—'}
+                                        </span>
                                     </div>
-                                    <div className="flex items-center gap-3">
+                                    <div className="row ai-center gap-2">
                                         {plan.basePremium && (
-                                            <span className="text-sm font-medium text-slate-900">
+                                            <span style={{ fontWeight: 500, color: 'var(--ink)' }}>
                                                 ₹{plan.basePremium.toLocaleString()}/yr
                                             </span>
                                         )}
-                                        {plan.isActive ? (
-                                            <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs">Active</span>
-                                        ) : (
-                                            <span className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-xs">Inactive</span>
-                                        )}
+                                        <span className={plan.isActive ? 'pill pill-mint' : 'pill'}>
+                                            {plan.isActive ? 'Active' : 'Inactive'}
+                                        </span>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-slate-400">No plans added</div>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                            No plans added
+                        </div>
                     )}
                 </div>
             )}
 
             {activeTab === 'hospitals' && (
-                <div className="bg-white rounded-xl border border-slate-200">
+                <div className="card" style={{ overflow: 'hidden' }}>
                     {provider.hospitalTies.length > 0 ? (
-                        <div className="divide-y divide-slate-100">
+                        <div className="col">
                             {provider.hospitalTies.map((tie, i) => (
-                                <div key={i} className="p-4 flex items-center justify-between hover:bg-slate-50">
-                                    <div className="flex items-center gap-3">
+                                <div key={i} className="row between ai-center" style={{ padding: '14px 18px', borderBottom: '1px solid var(--rule-2)' }}>
+                                    <div className="row ai-center gap-3">
                                         {tie.hospital.logo ? (
-                                            <img src={tie.hospital.logo} alt={tie.hospital.name} className="w-10 h-10 rounded object-contain border border-slate-200" />
+                                            <img src={tie.hospital.logo} alt={tie.hospital.name} style={{ width: 36, height: 36, borderRadius: 'var(--r-2)', objectFit: 'contain', border: '1px solid var(--rule)' }} />
                                         ) : (
-                                            <div className="w-10 h-10 bg-teal-100 rounded flex items-center justify-center text-teal-600 font-medium">
-                                                {tie.hospital.name.charAt(0)}
-                                            </div>
+                                            <span className="spec-icon" aria-hidden="true">{tie.hospital.name.charAt(0)}</span>
                                         )}
-                                        <div>
-                                            <div className="font-medium text-slate-900">{tie.hospital.name}</div>
-                                            {tie.hospital.city && <div className="text-xs text-slate-500">{tie.hospital.city}</div>}
+                                        <div className="col" style={{ gap: 2 }}>
+                                            <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{tie.hospital.name}</span>
+                                            {tie.hospital.city && (
+                                                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>{tie.hospital.city}</span>
+                                            )}
                                         </div>
                                     </div>
-                                    {tie.isCashless && (
-                                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-medium">
-                                            Cashless
-                                        </span>
-                                    )}
+                                    {tie.isCashless && <span className="pill pill-mint">Cashless</span>}
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-slate-400">No hospital tie-ups</div>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                            No hospital tie-ups
+                        </div>
                     )}
                 </div>
             )}
 
             {activeTab === 'tpas' && (
-                <div className="bg-white rounded-xl border border-slate-200">
+                <div className="card" style={{ overflow: 'hidden' }}>
                     {provider.tpaAssociations.length > 0 ? (
-                        <div className="divide-y divide-slate-100">
+                        <div className="col">
                             {provider.tpaAssociations.map((assoc, i) => (
-                                <div key={i} className="p-4 flex items-center gap-3 hover:bg-slate-50">
+                                <div key={i} className="row ai-center gap-3" style={{ padding: '14px 18px', borderBottom: '1px solid var(--rule-2)' }}>
                                     {assoc.tpa.logo ? (
-                                        <img src={assoc.tpa.logo} alt={assoc.tpa.name} className="w-10 h-10 rounded object-contain border border-slate-200" />
+                                        <img src={assoc.tpa.logo} alt={assoc.tpa.name} style={{ width: 36, height: 36, borderRadius: 'var(--r-2)', objectFit: 'contain', border: '1px solid var(--rule)' }} />
                                     ) : (
-                                        <div className="w-10 h-10 bg-purple-100 rounded flex items-center justify-center text-purple-600 font-medium">
-                                            {assoc.tpa.name.charAt(0)}
-                                        </div>
+                                        <span className="spec-icon" aria-hidden="true">{assoc.tpa.name.charAt(0)}</span>
                                     )}
-                                    <div className="font-medium text-slate-900">{assoc.tpa.name}</div>
+                                    <span style={{ fontWeight: 500, color: 'var(--ink)' }}>{assoc.tpa.name}</span>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-slate-400">No TPA associations</div>
+                        <div className="mono" style={{ padding: 48, textAlign: 'center', color: 'var(--ink-4)', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                            No TPA associations
+                        </div>
                     )}
                 </div>
             )}

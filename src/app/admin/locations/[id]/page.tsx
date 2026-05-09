@@ -1,5 +1,6 @@
 import prisma from '@/lib/db';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import LocationForm from './LocationForm';
 
 interface PageProps {
@@ -42,7 +43,6 @@ async function getLanguages() {
 }
 
 async function getTimezones() {
-    // Fetch unique timezones from existing locations
     const locations = await prisma.geography.findMany({
         where: { timezone: { not: null } },
         select: { timezone: true },
@@ -66,7 +66,6 @@ export default async function LocationEditPage({ params }: PageProps) {
         notFound();
     }
 
-    // Serialize BigInt for client component
     const serializedLocation = location ? {
         ...location,
         population: location.population?.toString() || null,
@@ -75,18 +74,31 @@ export default async function LocationEditPage({ params }: PageProps) {
     } : null;
 
     return (
-        <div className="max-w-4xl space-y-6">
-            {/* Header */}
-            <div>
-                <h1 className="text-2xl font-bold text-slate-900">
-                    {location ? 'Edit Location' : 'Add New Location'}
+        <div className="col gap-5" style={{ maxWidth: 960, color: 'var(--ink)' }}>
+            <Link
+                href="/admin/locations"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to locations
+            </Link>
+
+            <div className="col gap-2">
+                <span className="section-mark">
+                    admin / locations / {location ? location.name : 'new'}
+                </span>
+                <h1
+                    className="display"
+                    style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}
+                >
+                    {location ? location.name : 'New location'}
+                    <span style={{ color: 'var(--orange)' }}>.</span>
                 </h1>
-                <p className="text-slate-500 mt-1">
-                    {location ? `Editing: ${location.name}` : 'Create a new geographic location'}
+                <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+                    {location ? 'Editing existing geographic record.' : 'Create a new geographic location.'}
                 </p>
             </div>
 
-            {/* Form */}
             <LocationForm
                 location={serializedLocation}
                 parentOptions={parentOptions}
