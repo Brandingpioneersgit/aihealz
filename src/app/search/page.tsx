@@ -18,48 +18,105 @@ export default async function SearchPage({ searchParams }: Props) {
     const trimmed = q.trim();
 
     return (
-        <main className="min-h-screen bg-slate-50 pt-24 pb-16">
-            <div className="max-w-3xl mx-auto px-6">
-                <nav aria-label="Breadcrumb" className="mb-6 text-sm text-slate-500">
-                    <Link href="/" className="hover:text-slate-700">Home</Link>
-                    <span className="mx-2" aria-hidden="true">›</span>
-                    <span className="text-slate-700">Search</span>
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
+            <div
+                style={{ maxWidth: 880, margin: '0 auto', padding: '48px 28px 96px' }}
+                className="col gap-6"
+            >
+                {/* Breadcrumb */}
+                <nav
+                    aria-label="Breadcrumb"
+                    className="row gap-2 ai-center mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                    }}
+                >
+                    <Link href="/" style={{ color: 'var(--ink-3)' }}>
+                        Home
+                    </Link>
+                    <span aria-hidden="true" style={{ color: 'var(--ink-4)' }}>
+                        /
+                    </span>
+                    <span style={{ color: 'var(--ink)' }}>Search</span>
                 </nav>
 
-                <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
-                    {trimmed ? <>Results for <span className="text-teal-600">&ldquo;{trimmed}&rdquo;</span></> : 'Search'}
-                </h1>
-                <p className="text-slate-500 mb-8">
-                    Conditions, treatments, doctors, hospitals, diagnostic tests, and clinical tools.
-                </p>
+                {/* Hero */}
+                <header className="col gap-3" style={{ maxWidth: 760 }}>
+                    <span className="section-mark">I / search</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5vw, 64px)',
+                            lineHeight: 0.98,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        {trimmed ? (
+                            <>
+                                Results for{' '}
+                                <span style={{ color: 'var(--cobalt)' }}>
+                                    &ldquo;{trimmed}&rdquo;
+                                </span>
+                                <span style={{ color: 'var(--orange)' }}>.</span>
+                            </>
+                        ) : (
+                            <>
+                                Search<span style={{ color: 'var(--orange)' }}>.</span>
+                            </>
+                        )}
+                    </h1>
+                    <p className="lede" style={{ fontSize: 'clamp(15px, 1.4vw, 18px)', maxWidth: 560 }}>
+                        Conditions, treatments, doctors, hospitals, diagnostic tests, and clinical tools.
+                    </p>
+                </header>
 
-                <form action="/search" method="GET" className="mb-10">
-                    <label htmlFor="q" className="sr-only">Search query</label>
-                    <div className="flex gap-2">
+                {/* Search form */}
+                <form action="/search" method="GET" className="col gap-3">
+                    <label htmlFor="q" className="sr-only">
+                        Search query
+                    </label>
+                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                         <input
                             id="q"
                             name="q"
                             type="search"
                             defaultValue={trimmed}
-                            placeholder="Try “diabetes”, “MRI”, “knee replacement”…"
-                            className="flex-1 px-5 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-teal-500 outline-none text-slate-900"
+                            placeholder='Try "diabetes", "MRI", "knee replacement"…'
+                            className="input"
+                            style={{ flex: '1 1 320px', minWidth: 0, fontSize: 15, padding: '14px 16px' }}
                             autoFocus
                             minLength={2}
                             maxLength={100}
                         />
-                        <button
-                            type="submit"
-                            className="px-6 py-3 rounded-xl bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-colors"
-                        >
-                            Search
+                        <button type="submit" className="btn btn-cobalt btn-lg">
+                            Search →
                         </button>
                     </div>
                 </form>
 
+                <div className="hairline" />
+
+                {/* Results */}
                 {trimmed.length >= 2 ? (
                     <SearchResults query={trimmed} type={type} />
                 ) : (
-                    <p className="text-slate-500">Type at least 2 characters to search.</p>
+                    <div
+                        className="card-quiet col gap-2"
+                        style={{ padding: 24 }}
+                    >
+                        <span className="kicker">
+                            <span className="dot" />
+                            tip
+                        </span>
+                        <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                            Type at least 2 characters to search.
+                        </p>
+                    </div>
                 )}
             </div>
         </main>

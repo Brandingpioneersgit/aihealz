@@ -20,13 +20,13 @@ const TYPE_LABEL: Record<SearchResult['type'], string> = {
     tool: 'Tool',
 };
 
-const TYPE_COLOR: Record<SearchResult['type'], string> = {
-    condition: 'bg-rose-100 text-rose-700',
-    treatment: 'bg-cyan-100 text-cyan-700',
-    specialty: 'bg-purple-100 text-purple-700',
-    test: 'bg-amber-100 text-amber-700',
-    symptom: 'bg-orange-100 text-orange-700',
-    tool: 'bg-slate-200 text-slate-700',
+const TYPE_PILL_CLASS: Record<SearchResult['type'], string> = {
+    condition: 'pill pill-orange',
+    treatment: 'pill pill-cobalt',
+    specialty: 'pill pill-magenta',
+    test: 'pill pill-lemon',
+    symptom: 'pill pill-orange',
+    tool: 'pill',
 };
 
 interface Props {
@@ -60,46 +60,152 @@ export default function SearchResults({ query, type }: Props) {
                 if (!cancelled) setError(err.message);
             });
 
-        return () => { cancelled = true; };
+        return () => {
+            cancelled = true;
+        };
     }, [query, type]);
 
     if (error) {
-        return <p className="text-rose-600">{error}</p>;
+        return (
+            <div
+                className="card col gap-2"
+                style={{ padding: 24, borderColor: 'rgba(255, 90, 46, .28)' }}
+            >
+                <span
+                    className="mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--orange-2)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                    }}
+                >
+                    ● error
+                </span>
+                <p style={{ fontSize: 14, color: 'var(--orange-2)', margin: 0 }}>{error}</p>
+            </div>
+        );
     }
 
     if (results === null) {
-        return <p className="text-slate-500">Searching…</p>;
+        return (
+            <div className="row gap-2 ai-center">
+                <span
+                    className="mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--cobalt)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                    }}
+                >
+                    ● searching…
+                </span>
+            </div>
+        );
     }
 
     if (results.length === 0) {
         return (
-            <div className="bg-white rounded-xl border border-slate-200 p-8 text-center">
-                <p className="text-slate-700 font-semibold mb-2">No matches.</p>
-                <p className="text-sm text-slate-500">
-                    Try a broader term, or ask <Link href="/healz-ai" className="text-teal-600 font-medium">Healz AI</Link>.
+            <div
+                className="card col gap-3 center"
+                style={{ padding: 32, alignItems: 'center', textAlign: 'center' }}
+            >
+                <span className="kicker">
+                    <span className="dot" />
+                    no matches
+                </span>
+                <div
+                    className="display"
+                    style={{ fontSize: 22, fontWeight: 500, letterSpacing: '-0.025em', margin: 0 }}
+                >
+                    Nothing turned up for that.
+                </div>
+                <p className="muted" style={{ fontSize: 14, margin: 0, maxWidth: 380 }}>
+                    Try a broader term, or hand it to{' '}
+                    <Link href="/healz-ai" style={{ color: 'var(--cobalt)', fontWeight: 500 }}>
+                        Healz AI
+                    </Link>
+                    .
                 </p>
             </div>
         );
     }
 
     return (
-        <ul className="space-y-3" aria-live="polite">
-            {results.map((r, i) => (
-                <li key={`${r.type}-${r.slug}-${i}`}>
-                    <Link
-                        href={r.url}
-                        className="flex items-start justify-between gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-sm transition-all"
-                    >
-                        <div className="min-w-0">
-                            <p className="font-semibold text-slate-900 truncate">{r.name}</p>
-                            <p className="text-sm text-slate-500 truncate">{r.subtitle}</p>
-                        </div>
-                        <span className={`px-2 py-1 rounded text-xs font-medium flex-shrink-0 ${TYPE_COLOR[r.type]}`}>
-                            {TYPE_LABEL[r.type]}
-                        </span>
-                    </Link>
-                </li>
-            ))}
-        </ul>
+        <div className="col gap-3">
+            <div
+                className="row between ai-center"
+                style={{ paddingBottom: 8 }}
+            >
+                <span
+                    className="mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                    }}
+                >
+                    {results.length} {results.length === 1 ? 'match' : 'matches'}
+                </span>
+            </div>
+
+            <ul className="clean col" aria-live="polite">
+                {results.map((r, i) => {
+                    const isLast = i === results.length - 1;
+                    return (
+                        <li
+                            key={`${r.type}-${r.slug}-${i}`}
+                            className={isLast ? '' : 'hairline-b'}
+                        >
+                            <Link
+                                href={r.url}
+                                className="row between gap-3 ai-center"
+                                style={{
+                                    padding: '18px 20px',
+                                    background: 'var(--paper)',
+                                    border: '1px solid var(--rule)',
+                                    borderRadius: 'var(--r-3)',
+                                    transition: 'border-color 120ms, background 120ms',
+                                    marginBottom: isLast ? 0 : 8,
+                                }}
+                            >
+                                <div className="col gap-1" style={{ minWidth: 0, flex: 1 }}>
+                                    <p
+                                        style={{
+                                            fontSize: 15,
+                                            fontWeight: 500,
+                                            color: 'var(--cobalt)',
+                                            margin: 0,
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap',
+                                        }}
+                                    >
+                                        {r.name}
+                                    </p>
+                                    <p
+                                        className="muted"
+                                        style={{
+                                            fontSize: 13,
+                                            margin: 0,
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap',
+                                        }}
+                                    >
+                                        {r.subtitle}
+                                    </p>
+                                </div>
+                                <span className={TYPE_PILL_CLASS[r.type]} style={{ flexShrink: 0 }}>
+                                    {TYPE_LABEL[r.type]}
+                                </span>
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
+        </div>
     );
 }

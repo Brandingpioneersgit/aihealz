@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 type FormData = {
     patientName: string;
@@ -13,6 +12,12 @@ type FormData = {
     assistance: string;
 };
 
+const STEPS = [
+    { n: 1, label: 'Patient' },
+    { n: 2, label: 'Travel' },
+    { n: 3, label: 'Stay & care' },
+];
+
 export default function MedicalTravelBot() {
     const [step, setStep] = useState(1);
     const [isGenerating, setIsGenerating] = useState(false);
@@ -22,11 +27,11 @@ export default function MedicalTravelBot() {
         travelDates: '',
         passengers: '1',
         accommodation: 'premium',
-        assistance: 'yes'
+        assistance: 'yes',
     });
 
-    const handleNext = () => setStep(s => Math.min(s + 1, 4));
-    const handlePrev = () => setStep(s => Math.max(s - 1, 1));
+    const handleNext = () => setStep((s) => Math.min(s + 1, 4));
+    const handlePrev = () => setStep((s) => Math.max(s - 1, 1));
 
     // Ref ID + date are computed once on mount (client only) so they never
     // generate a server/client hydration mismatch and stay stable across
@@ -39,7 +44,10 @@ export default function MedicalTravelBot() {
         setRefId(`${random}-${now.getFullYear()}`);
         setTodayLabel(now.toLocaleDateString());
     }, []);
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    ) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -55,265 +63,917 @@ export default function MedicalTravelBot() {
     };
 
     return (
-        <div className="min-h-screen bg-surface-50 pt-24 pb-16 font-sans">
-            <div className="max-w-3xl mx-auto px-6 print:px-0">
-
+        <main
+            style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}
+        >
+            <div
+                style={{ maxWidth: 980, margin: '0 auto', padding: '40px 28px 96px' }}
+                className="col gap-6 print:px-0"
+            >
                 {/* Back Link (Hidden on Print) */}
-                <div className="mb-8 print:hidden">
-                    <Link href="/medical-travel" className="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">
-                        <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                        Back to Medical Travel
+                <div className="print:hidden">
+                    <Link
+                        href="/medical-travel"
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--cobalt)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                            fontWeight: 500,
+                        }}
+                    >
+                        ← Back to Medical Travel
                     </Link>
                 </div>
 
                 <h1 className="sr-only">Medical Travel Concierge — Build Your Estimate</h1>
 
-                {/* Progress Bar (Hidden on Print) */}
-                {step < 4 && (
-                    <div className="mb-10 print:hidden">
-                        <div className="flex justify-between text-xs font-bold text-surface-400 uppercase tracking-widest mb-3">
-                            <span className={step >= 1 ? 'text-primary-600' : ''}>1. Patient</span>
-                            <span className={step >= 2 ? 'text-primary-600' : ''}>2. Travel</span>
-                            <span className={step >= 3 ? 'text-primary-600' : ''}>3. Stay & Care</span>
-                        </div>
-                        <div className="h-2 bg-surface-200 rounded-full overflow-hidden">
-                            <div className="h-full bg-gradient-to-r from-primary-600 to-accent-500 transition-all duration-500" style={{ width: `${(step / 3) * 100}%` }} />
-                        </div>
-                    </div>
-                )}
-
-                {/* Wizard Container (Hidden on Print if step < 4) */}
                 {step < 4 ? (
-                    <div className="bg-white rounded-[2rem] shadow-xl border border-surface-200 p-8 md:p-12 print:hidden relative overflow-hidden">
-
-                        {/* Interactive Steps */}
-                        {step === 1 && (
-                            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                                <h2 className="text-3xl font-extrabold text-surface-900 mb-2">Patient Details</h2>
-                                <p className="text-surface-500 mb-8">Let's start with who needs care and what procedures you are looking for.</p>
-
-                                <div className="space-y-6">
-                                    <div>
-                                        <label className="block text-sm font-bold text-surface-700 uppercase tracking-widest mb-2">Patient Full Name</label>
-                                        <input type="text" name="patientName" value={formData.patientName} onChange={handleChange} className="w-full px-5 py-4 rounded-xl bg-surface-50 border border-surface-200 focus:ring-2 focus:ring-primary-500 outline-none text-surface-900 font-medium" placeholder="E.g., John Doe" />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-bold text-surface-700 uppercase tracking-widest mb-2">Medical Condition or Procedure</label>
-                                        <input type="text" name="condition" value={formData.condition} onChange={handleChange} className="w-full px-5 py-4 rounded-xl bg-surface-50 border border-surface-200 focus:ring-2 focus:ring-primary-500 outline-none text-surface-900 font-medium" placeholder="E.g., Knee Replacement, Cardiac Bypass..." />
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {step === 2 && (
-                            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                                <h2 className="text-3xl font-extrabold text-surface-900 mb-2">Travel Itinerary</h2>
-                                <p className="text-surface-500 mb-8">When are you planning to travel and how many people will accompany you?</p>
-
-                                <div className="space-y-6">
-                                    <div>
-                                        <label className="block text-sm font-bold text-surface-700 uppercase tracking-widest mb-2">Expected Travel Dates</label>
-                                        <input type="text" name="travelDates" value={formData.travelDates} onChange={handleChange} className="w-full px-5 py-4 rounded-xl bg-surface-50 border border-surface-200 focus:ring-2 focus:ring-primary-500 outline-none text-surface-900 font-medium" placeholder="E.g., October 2026 or Next Month" />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-bold text-surface-700 uppercase tracking-widest mb-2">Total Passengers (including patient)</label>
-                                        <select name="passengers" value={formData.passengers} onChange={handleChange} className="w-full px-5 py-4 rounded-xl bg-surface-50 border border-surface-200 focus:ring-2 focus:ring-primary-500 outline-none text-surface-900 font-medium appearance-none">
-                                            <option value="1">1 (Patient Only)</option>
-                                            <option value="2">2 (Patient + 1 Companion)</option>
-                                            <option value="3">3 (Patient + 2 Companions)</option>
-                                            <option value="4+">4 or more</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {step === 3 && (
-                            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                                <h2 className="text-3xl font-extrabold text-surface-900 mb-2">Stay & Concierge</h2>
-                                <p className="text-surface-500 mb-8">Customize your recovery experience with our premium partners.</p>
-
-                                <div className="space-y-6">
-                                    <div>
-                                        <label className="block text-sm font-bold text-surface-700 uppercase tracking-widest mb-2">Accommodation Preference</label>
-                                        <select name="accommodation" value={formData.accommodation} onChange={handleChange} className="w-full px-5 py-4 rounded-xl bg-surface-50 border border-surface-200 focus:ring-2 focus:ring-primary-500 outline-none text-surface-900 font-medium appearance-none">
-                                            <option value="premium">5-Star Premium Hotel / Resort</option>
-                                            <option value="standard">4-Star Comfort Hotel</option>
-                                            <option value="budget">Service Apartment</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-bold text-surface-700 uppercase tracking-widest mb-2">Airport Post-Op Assistance?</label>
-                                        <select name="assistance" value={formData.assistance} onChange={handleChange} className="w-full px-5 py-4 rounded-xl bg-surface-50 border border-surface-200 focus:ring-2 focus:ring-primary-500 outline-none text-surface-900 font-medium appearance-none">
-                                            <option value="yes">Yes, include wheelchair/ambulance transfers</option>
-                                            <option value="no">No, standard airport pickup is fine</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Navigation Buttons */}
-                        <div className="mt-10 pt-6 border-t border-surface-100 flex items-center justify-between">
-                            <button
-                                onClick={handlePrev}
-                                disabled={step === 1}
-                                className={`px-6 py-3 rounded-xl font-bold transition-colors ${step === 1 ? 'opacity-0' : 'text-surface-600 bg-surface-100 hover:bg-surface-200'}`}
+                    <>
+                        {/* Hero (Hidden on Print) */}
+                        <header className="col gap-3 print:hidden" style={{ maxWidth: 720 }}>
+                            <span className="section-mark">the concierge</span>
+                            <h2
+                                className="display"
+                                style={{
+                                    fontSize: 'clamp(36px, 5vw, 64px)',
+                                    lineHeight: 0.98,
+                                    letterSpacing: '-0.04em',
+                                    margin: 0,
+                                    fontWeight: 600,
+                                }}
                             >
-                                Back
-                            </button>
-                            <button
-                                onClick={handleNext}
-                                disabled={step === 1 && !formData.patientName}
-                                className="px-8 py-3 rounded-xl font-extrabold text-white bg-gradient-to-r from-primary-600 to-accent-600 hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:shadow-none"
+                                Build your{' '}
+                                <span style={{ color: 'var(--cobalt)' }}>estimate</span>
+                                <span style={{ color: 'var(--orange)' }}>.</span>
+                            </h2>
+                            <p
+                                className="lede"
+                                style={{ fontSize: 'clamp(15px, 1.4vw, 18px)', maxWidth: 560 }}
                             >
-                                {step === 3 ? 'Review & print summary' : 'Continue →'}
-                            </button>
+                                Three short steps. Patient, trip, and stay. We&rsquo;ll generate a
+                                printable summary you can hand to our concierge desk.
+                            </p>
+                        </header>
+
+                        {/* Step indicator (Hidden on Print) */}
+                        <div className="col gap-3 print:hidden">
+                            <div
+                                className="row between mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    flexWrap: 'wrap',
+                                    gap: 8,
+                                }}
+                            >
+                                {STEPS.map((s) => {
+                                    const active = step >= s.n;
+                                    return (
+                                        <span
+                                            key={s.n}
+                                            style={{
+                                                color: active ? 'var(--cobalt)' : 'var(--ink-4)',
+                                                fontWeight: active ? 500 : 400,
+                                            }}
+                                        >
+                                            {String(s.n).padStart(2, '0')} / {s.label}
+                                        </span>
+                                    );
+                                })}
+                            </div>
+                            <div
+                                style={{
+                                    height: 2,
+                                    background: 'var(--rule)',
+                                    overflow: 'hidden',
+                                    borderRadius: 999,
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        height: '100%',
+                                        width: `${(step / 3) * 100}%`,
+                                        background: 'var(--cobalt)',
+                                        transition: 'width 320ms ease',
+                                    }}
+                                />
+                            </div>
                         </div>
-                    </div>
+
+                        {/* Wizard card */}
+                        <div
+                            className="card col gap-6 print:hidden"
+                            style={{ padding: 32 }}
+                        >
+                            {step === 1 && (
+                                <div className="col gap-5 animate-fade-in">
+                                    <div className="col gap-2">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            01 / patient
+                                        </span>
+                                        <h3
+                                            className="display"
+                                            style={{
+                                                fontSize: 26,
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.025em',
+                                                margin: 0,
+                                            }}
+                                        >
+                                            Who are we caring for?
+                                        </h3>
+                                        <p
+                                            className="muted"
+                                            style={{ fontSize: 14, margin: 0 }}
+                                        >
+                                            Start with who needs care and what procedure you&rsquo;re considering.
+                                        </p>
+                                    </div>
+
+                                    <div className="col gap-4">
+                                        <div className="form-group">
+                                            <label
+                                                htmlFor="patientName"
+                                                className="form-label"
+                                            >
+                                                Patient full name
+                                            </label>
+                                            <input
+                                                id="patientName"
+                                                type="text"
+                                                name="patientName"
+                                                value={formData.patientName}
+                                                onChange={handleChange}
+                                                className="input"
+                                                placeholder="E.g., John Doe"
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label
+                                                htmlFor="condition"
+                                                className="form-label"
+                                            >
+                                                Medical condition or procedure
+                                            </label>
+                                            <input
+                                                id="condition"
+                                                type="text"
+                                                name="condition"
+                                                value={formData.condition}
+                                                onChange={handleChange}
+                                                className="input"
+                                                placeholder="E.g., Knee replacement, cardiac bypass…"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {step === 2 && (
+                                <div className="col gap-5 animate-fade-in">
+                                    <div className="col gap-2">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            02 / travel
+                                        </span>
+                                        <h3
+                                            className="display"
+                                            style={{
+                                                fontSize: 26,
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.025em',
+                                                margin: 0,
+                                            }}
+                                        >
+                                            Travel itinerary.
+                                        </h3>
+                                        <p
+                                            className="muted"
+                                            style={{ fontSize: 14, margin: 0 }}
+                                        >
+                                            When are you planning to travel and how many people will accompany you?
+                                        </p>
+                                    </div>
+
+                                    <div className="col gap-4">
+                                        <div className="form-group">
+                                            <label
+                                                htmlFor="travelDates"
+                                                className="form-label"
+                                            >
+                                                Expected travel dates
+                                            </label>
+                                            <input
+                                                id="travelDates"
+                                                type="text"
+                                                name="travelDates"
+                                                value={formData.travelDates}
+                                                onChange={handleChange}
+                                                className="input"
+                                                placeholder="E.g., October 2026 or next month"
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label
+                                                htmlFor="passengers"
+                                                className="form-label"
+                                            >
+                                                Total passengers (including patient)
+                                            </label>
+                                            <select
+                                                id="passengers"
+                                                name="passengers"
+                                                value={formData.passengers}
+                                                onChange={handleChange}
+                                                className="select"
+                                            >
+                                                <option value="1">1 (Patient only)</option>
+                                                <option value="2">2 (Patient + 1 companion)</option>
+                                                <option value="3">3 (Patient + 2 companions)</option>
+                                                <option value="4+">4 or more</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {step === 3 && (
+                                <div className="col gap-5 animate-fade-in">
+                                    <div className="col gap-2">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            03 / stay & care
+                                        </span>
+                                        <h3
+                                            className="display"
+                                            style={{
+                                                fontSize: 26,
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.025em',
+                                                margin: 0,
+                                            }}
+                                        >
+                                            Stay &amp; concierge.
+                                        </h3>
+                                        <p
+                                            className="muted"
+                                            style={{ fontSize: 14, margin: 0 }}
+                                        >
+                                            Customize your recovery experience with our partners.
+                                        </p>
+                                    </div>
+
+                                    <div className="col gap-4">
+                                        <div className="form-group">
+                                            <label
+                                                htmlFor="accommodation"
+                                                className="form-label"
+                                            >
+                                                Accommodation preference
+                                            </label>
+                                            <select
+                                                id="accommodation"
+                                                name="accommodation"
+                                                value={formData.accommodation}
+                                                onChange={handleChange}
+                                                className="select"
+                                            >
+                                                <option value="premium">5-star premium hotel / resort</option>
+                                                <option value="standard">4-star comfort hotel</option>
+                                                <option value="budget">Service apartment</option>
+                                            </select>
+                                        </div>
+                                        <div className="form-group">
+                                            <label
+                                                htmlFor="assistance"
+                                                className="form-label"
+                                            >
+                                                Airport post-op assistance?
+                                            </label>
+                                            <select
+                                                id="assistance"
+                                                name="assistance"
+                                                value={formData.assistance}
+                                                onChange={handleChange}
+                                                className="select"
+                                            >
+                                                <option value="yes">Yes, include wheelchair / ambulance transfers</option>
+                                                <option value="no">No, standard airport pickup is fine</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Navigation */}
+                            <div
+                                className="row between hairline-t"
+                                style={{ paddingTop: 20 }}
+                            >
+                                <button
+                                    onClick={handlePrev}
+                                    disabled={step === 1}
+                                    className="btn btn-paper"
+                                    style={{ visibility: step === 1 ? 'hidden' : 'visible' }}
+                                >
+                                    ← Back
+                                </button>
+                                <button
+                                    onClick={handleNext}
+                                    disabled={step === 1 && !formData.patientName}
+                                    className="btn btn-cobalt btn-lg"
+                                >
+                                    {step === 3 ? 'Review & print summary →' : 'Continue →'}
+                                </button>
+                            </div>
+                        </div>
+                    </>
                 ) : (
-
                     /* =========================================
-                       PRINT VISIBLE & ACTIVE DOM PDF ESTIMATE
+                       PRINT VISIBLE & ACTIVE DOM ESTIMATE
                        ========================================= */
-                    <div className="animate-in fade-in zoom-in-95 duration-500 bg-white shadow-2xl rounded-2xl print:shadow-none print:rounded-none overflow-hidden border border-surface-200 print:border-none p-10 md:p-14 relative print:p-0">
-
-                        {/* Print Action Bar (Hidden on Print) */}
-                        <div className="absolute top-6 right-6 flex gap-3 print:hidden">
-                            <button onClick={() => setStep(3)} className="px-4 py-2 bg-surface-100 text-surface-600 rounded-lg text-sm font-bold hover:bg-surface-200 transition-colors">
+                    <div
+                        className="card relative print:border-none"
+                        style={{
+                            padding: '40px 36px',
+                            position: 'relative',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {/* Action Bar (Hidden on Print) */}
+                        <div
+                            className="row gap-2 print:hidden"
+                            style={{ position: 'absolute', top: 24, right: 24 }}
+                        >
+                            <button
+                                onClick={() => setStep(3)}
+                                className="btn btn-paper btn-sm"
+                            >
                                 Edit
                             </button>
-                            <button onClick={generatePDF} className="px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-bold hover:bg-primary-700 transition-colors flex items-center gap-2">
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
-                                {isGenerating ? 'Opening print…' : 'Download printable summary'}
+                            <button
+                                onClick={generatePDF}
+                                className="btn btn-cobalt btn-sm"
+                            >
+                                {isGenerating ? 'Opening print…' : '↓ Download summary'}
                             </button>
                         </div>
 
                         {/* Document Header */}
-                        <div className="flex justify-between items-start border-b-2 border-primary-600 pb-8 mb-8">
-                            <div>
-                                <p className="text-4xl font-black text-surface-900 tracking-tight" aria-label="aihealz">aihealz<span className="text-primary-600">.</span></p>
-                                <p className="text-sm text-surface-500 font-semibold mt-1 uppercase tracking-widest">Medical Travel Concierge</p>
+                        <div
+                            className="row between ai-start hairline-b"
+                            style={{ paddingBottom: 24, marginBottom: 24, flexWrap: 'wrap', gap: 16 }}
+                        >
+                            <div className="col gap-1">
+                                <span
+                                    className="display"
+                                    style={{
+                                        fontSize: 36,
+                                        fontWeight: 600,
+                                        letterSpacing: '-0.04em',
+                                        lineHeight: 1,
+                                    }}
+                                    aria-label="aihealz"
+                                >
+                                    aihealz<span style={{ color: 'var(--orange)' }}>.</span>
+                                </span>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    medical travel concierge
+                                </span>
                             </div>
-                            <div className="text-right">
-                                <h2 className="text-xl font-bold text-surface-900">Official Estimate Sheet</h2>
-                                <p className="text-surface-500 text-sm mt-1">Ref ID: {refId || '—'}</p>
-                                <p className="text-surface-500 text-sm mt-0.5">Date: {todayLabel || '—'}</p>
+                            <div className="col gap-1 ai-end" style={{ textAlign: 'right' }}>
+                                <span
+                                    className="display"
+                                    style={{
+                                        fontSize: 18,
+                                        fontWeight: 500,
+                                        letterSpacing: '-0.02em',
+                                    }}
+                                >
+                                    Official estimate sheet
+                                </span>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    ref · {refId || '—'}
+                                </span>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    date · {todayLabel || '—'}
+                                </span>
                             </div>
                         </div>
 
                         {/* Patient & Clinical Summary */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            {/* Patient Info Block */}
-                            <div className="bg-surface-50 rounded-xl p-6 border border-surface-200">
-                                <h3 className="text-xs font-black text-surface-400 uppercase tracking-widest mb-4">Patient Profile</h3>
-                                <div className="space-y-4">
-                                    <div>
-                                        <p className="text-xs text-surface-500 uppercase font-semibold">Primary Patient</p>
-                                        <p className="text-lg font-bold text-surface-900">{formData.patientName || 'N/A'}</p>
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                                gap: 16,
+                                marginBottom: 28,
+                            }}
+                        >
+                            {/* Patient profile */}
+                            <div
+                                className="card-quiet col gap-3"
+                                style={{ padding: 20 }}
+                            >
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    patient profile
+                                </span>
+                                <div className="col gap-3">
+                                    <div className="col gap-1">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--ink-4)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            primary patient
+                                        </span>
+                                        <span
+                                            className="display"
+                                            style={{
+                                                fontSize: 18,
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.02em',
+                                            }}
+                                        >
+                                            {formData.patientName || 'N/A'}
+                                        </span>
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-surface-500 uppercase font-semibold">Travel Dates</p>
-                                        <p className="text-base font-bold text-surface-900">{formData.travelDates || 'Flexible'}</p>
+                                    <div className="col gap-1">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--ink-4)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            travel dates
+                                        </span>
+                                        <span style={{ fontSize: 15, fontWeight: 500, color: 'var(--ink)' }}>
+                                            {formData.travelDates || 'Flexible'}
+                                        </span>
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-surface-500 uppercase font-semibold">Total Party Size</p>
-                                        <p className="text-base font-bold text-surface-900">{formData.passengers} Passenger(s)</p>
+                                    <div className="col gap-1">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--ink-4)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            party size
+                                        </span>
+                                        <span
+                                            className="num"
+                                            style={{ fontSize: 15, fontWeight: 500, color: 'var(--ink)' }}
+                                        >
+                                            {formData.passengers} passenger(s)
+                                        </span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Clinical Pathway Block */}
-                            <div className="bg-primary-50 rounded-xl p-6 border border-primary-100">
-                                <h3 className="text-xs font-black text-primary-400 uppercase tracking-widest mb-4">Clinical Pathway</h3>
-                                <div className="space-y-4">
-                                    <div>
-                                        <p className="text-xs text-primary-600 uppercase font-bold">Primary Procedure</p>
-                                        <p className="text-xl font-black text-primary-900">{formData.condition || 'Pending Diagnosis'}</p>
+                            {/* Clinical pathway */}
+                            <div
+                                className="card col gap-3"
+                                style={{
+                                    padding: 20,
+                                    background: 'var(--cobalt-50)',
+                                    borderColor: 'rgba(28, 91, 255, .22)',
+                                }}
+                            >
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--cobalt)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    clinical pathway
+                                </span>
+                                <div className="col gap-3">
+                                    <div className="col gap-1">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            primary procedure
+                                        </span>
+                                        <span
+                                            className="display"
+                                            style={{
+                                                fontSize: 20,
+                                                fontWeight: 600,
+                                                letterSpacing: '-0.025em',
+                                                color: 'var(--ink)',
+                                            }}
+                                        >
+                                            {formData.condition || 'Pending diagnosis'}
+                                        </span>
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-primary-600 uppercase font-bold">Success Plan / Prognosis</p>
-                                        <p className="text-sm font-semibold text-primary-800">Highly Favorable (Based on AI Similarity Match)</p>
+                                    <div className="col gap-1">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            success plan / prognosis
+                                        </span>
+                                        <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>
+                                            Highly favorable (based on AI similarity match)
+                                        </span>
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-primary-600 uppercase font-bold">Estimated Timeline</p>
-                                        <p className="text-sm font-semibold text-primary-800">3 Days Hospital + 7 Days Local Recovery</p>
+                                    <div className="col gap-1">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            estimated timeline
+                                        </span>
+                                        <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>
+                                            3 days hospital + 7 days local recovery
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Detailed Cost Breakdown Table */}
-                        <div className="mb-10">
-                            <h3 className="text-xs font-black text-surface-400 uppercase tracking-widest mb-4 flex justify-between items-center">
-                                Estimated Cost Breakdown (USD)
-                                <span className="text-[10px] bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full font-bold">AI Estimate</span>
-                            </h3>
-                            <div className="rounded-xl border border-surface-200 overflow-hidden">
-                                <table className="w-full text-left border-collapse">
-                                    <caption className="sr-only">Estimated medical travel cost breakdown</caption>
-                                    <thead className="bg-surface-50 border-b border-surface-200">
-                                        <tr>
-                                            <th scope="col" className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider">Item / Category</th>
-                                            <th scope="col" className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider">Details</th>
-                                            <th scope="col" className="px-6 py-3 text-xs font-bold text-surface-500 uppercase tracking-wider text-right">Est. Range</th>
+                        {/* Cost Breakdown */}
+                        <div className="col gap-3" style={{ marginBottom: 32 }}>
+                            <div
+                                className="row between ai-end"
+                                style={{ flexWrap: 'wrap', gap: 8 }}
+                            >
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    estimated cost breakdown (USD)
+                                </span>
+                                <span className="pill pill-cobalt">AI estimate</span>
+                            </div>
+                            <div
+                                style={{
+                                    border: '1px solid var(--rule)',
+                                    borderRadius: 'var(--r-3)',
+                                    overflow: 'hidden',
+                                }}
+                            >
+                                <table
+                                    style={{
+                                        width: '100%',
+                                        borderCollapse: 'collapse',
+                                        textAlign: 'left',
+                                    }}
+                                >
+                                    <caption className="sr-only">
+                                        Estimated medical travel cost breakdown
+                                    </caption>
+                                    <thead>
+                                        <tr style={{ background: 'var(--bg-2)' }}>
+                                            <th
+                                                scope="col"
+                                                className="mono"
+                                                style={{
+                                                    padding: '12px 18px',
+                                                    fontSize: 11,
+                                                    color: 'var(--ink-3)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                    fontWeight: 500,
+                                                    borderBottom: '1px solid var(--rule)',
+                                                }}
+                                            >
+                                                Item / category
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="mono"
+                                                style={{
+                                                    padding: '12px 18px',
+                                                    fontSize: 11,
+                                                    color: 'var(--ink-3)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                    fontWeight: 500,
+                                                    borderBottom: '1px solid var(--rule)',
+                                                }}
+                                            >
+                                                Details
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="mono"
+                                                style={{
+                                                    padding: '12px 18px',
+                                                    fontSize: 11,
+                                                    color: 'var(--ink-3)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                    fontWeight: 500,
+                                                    textAlign: 'right',
+                                                    borderBottom: '1px solid var(--rule)',
+                                                }}
+                                            >
+                                                Est. range
+                                            </th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-surface-200">
-                                        <tr className="bg-white">
-                                            <td className="px-6 py-4 text-sm font-bold text-surface-900">1. Medical Procedure</td>
-                                            <td className="px-6 py-4 text-sm text-surface-600">{formData.condition || 'Pending'} — Surgeon, OT, Anesthesia</td>
-                                            <td className="px-6 py-4 text-sm font-black text-primary-600 text-right">$4,500 - $6,000</td>
-                                        </tr>
-                                        <tr className="bg-surface-50 border-t border-surface-200">
-                                            <td className="px-6 py-4 text-sm font-bold text-surface-900">2. Travel & Flights</td>
-                                            <td className="px-6 py-4 text-sm text-surface-600">Roundtrip for {formData.passengers} pax + Airport Transfers</td>
-                                            <td className="px-6 py-4 text-sm font-black text-primary-600 text-right">$800 - $1,500</td>
-                                        </tr>
-                                        <tr className="bg-white border-t border-surface-200">
-                                            <td className="px-6 py-4 text-sm font-bold text-surface-900">3. Accommodation</td>
-                                            <td className="px-6 py-4 text-sm text-surface-600 capitalize">{formData.accommodation} Level — 10 Days Post-Op Stay</td>
-                                            <td className="px-6 py-4 text-sm font-black text-primary-600 text-right">$600 - $1,200</td>
-                                        </tr>
-                                        <tr className="bg-surface-50 border-t border-surface-200">
-                                            <td className="px-6 py-4 text-sm font-bold text-surface-900">4. Medical Visa & Legal</td>
-                                            <td className="px-6 py-4 text-sm text-surface-600">Fast-track Medical Visa Processing</td>
-                                            <td className="px-6 py-4 text-sm font-black text-primary-600 text-right">$150 - $250</td>
-                                        </tr>
-                                        <tr className="bg-white border-t-2 border-surface-800">
-                                            <td className="px-6 py-4 text-sm font-black text-surface-900 uppercase tracking-widest">Total Estimated Package</td>
-                                            <td className="px-6 py-4 text-sm text-surface-600">Complete End-to-End Care</td>
-                                            <td className="px-6 py-4 text-lg font-black text-emerald-600 text-right">$6,050 - $8,950</td>
+                                    <tbody>
+                                        {[
+                                            {
+                                                item: '1. Medical procedure',
+                                                detail: `${formData.condition || 'Pending'} — surgeon, OT, anesthesia`,
+                                                range: '$4,500 – $6,000',
+                                            },
+                                            {
+                                                item: '2. Travel & flights',
+                                                detail: `Roundtrip for ${formData.passengers} pax + airport transfers`,
+                                                range: '$800 – $1,500',
+                                            },
+                                            {
+                                                item: '3. Accommodation',
+                                                detail: `${formData.accommodation} level — 10 days post-op stay`,
+                                                range: '$600 – $1,200',
+                                            },
+                                            {
+                                                item: '4. Medical visa & legal',
+                                                detail: 'Fast-track medical visa processing',
+                                                range: '$150 – $250',
+                                            },
+                                        ].map((row, i, arr) => (
+                                            <tr
+                                                key={row.item}
+                                                style={{
+                                                    background: i % 2 === 0 ? 'var(--paper)' : 'var(--paper-2)',
+                                                    borderTop: '1px solid var(--rule)',
+                                                }}
+                                            >
+                                                <td
+                                                    style={{
+                                                        padding: '14px 18px',
+                                                        fontSize: 13,
+                                                        fontWeight: 500,
+                                                        color: 'var(--ink)',
+                                                    }}
+                                                >
+                                                    {row.item}
+                                                </td>
+                                                <td
+                                                    style={{
+                                                        padding: '14px 18px',
+                                                        fontSize: 13,
+                                                        color: 'var(--ink-3)',
+                                                    }}
+                                                >
+                                                    {row.detail}
+                                                </td>
+                                                <td
+                                                    className="num"
+                                                    style={{
+                                                        padding: '14px 18px',
+                                                        fontSize: 13,
+                                                        color: 'var(--cobalt)',
+                                                        fontWeight: 500,
+                                                        textAlign: 'right',
+                                                    }}
+                                                >
+                                                    {row.range}
+                                                </td>
+                                                {i === arr.length - 1 && null}
+                                            </tr>
+                                        ))}
+                                        <tr
+                                            style={{
+                                                background: 'var(--ink)',
+                                                color: 'var(--paper)',
+                                            }}
+                                        >
+                                            <td
+                                                className="mono"
+                                                style={{
+                                                    padding: '16px 18px',
+                                                    fontSize: 11,
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                    fontWeight: 500,
+                                                    color: 'var(--paper)',
+                                                }}
+                                            >
+                                                Total estimated package
+                                            </td>
+                                            <td
+                                                style={{
+                                                    padding: '16px 18px',
+                                                    fontSize: 13,
+                                                    color: 'rgba(255,255,255,.7)',
+                                                }}
+                                            >
+                                                Complete end-to-end care
+                                            </td>
+                                            <td
+                                                className="num"
+                                                style={{
+                                                    padding: '16px 18px',
+                                                    fontSize: 18,
+                                                    fontWeight: 600,
+                                                    color: 'var(--mint)',
+                                                    textAlign: 'right',
+                                                }}
+                                            >
+                                                $6,050 – $8,950
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
 
-                        {/* Estimate Notice */}
-                        <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-14">
-                            <p className="text-xs font-bold text-amber-800 uppercase tracking-wider mb-1">Disclaimer & Next Steps</p>
-                            <p className="text-xs text-amber-700 leading-relaxed">
-                                This document is an AI-generated preliminary requirement sheet and estimate. Exact medical pricing requires a formal review of recent clinical reports by our board-certified surgeons. Please submit this sheet along with your reports to the concierge desk to lock in your exact quote.
+                        {/* Disclaimer */}
+                        <div
+                            className="card-quiet col gap-1"
+                            style={{
+                                padding: 18,
+                                marginBottom: 36,
+                                borderColor: 'rgba(230, 185, 40, .40)',
+                                background: 'var(--lemon-50)',
+                            }}
+                        >
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: '#8C6A00',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                disclaimer & next steps
+                            </span>
+                            <p
+                                style={{
+                                    fontSize: 12,
+                                    color: 'var(--ink-2)',
+                                    lineHeight: 1.6,
+                                    margin: 0,
+                                }}
+                            >
+                                This document is an AI-generated preliminary estimate. Exact medical
+                                pricing requires a formal review of recent clinical reports by our
+                                board-certified surgeons. Please submit this sheet along with your
+                                reports to the concierge desk to lock in your exact quote.
                             </p>
                         </div>
 
                         {/* Footer / Signature Box */}
-                        <div className="flex justify-between items-end border-t border-surface-200 pt-8">
-                            <div className="max-w-xs">
-                                <p className="text-xs text-surface-400 font-bold mb-1">Generated by</p>
-                                <p className="text-sm font-bold text-surface-900">ATZ Medappz Pvt Ltd.</p>
-                                <p className="text-xs text-surface-500">84, Supreme Coworks, Sector 32
-                                    Gurgaon, Haryana, India</p>
+                        <div
+                            className="row between ai-end hairline-t"
+                            style={{ paddingTop: 24, flexWrap: 'wrap', gap: 24 }}
+                        >
+                            <div className="col gap-1" style={{ maxWidth: 320 }}>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-4)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    generated by
+                                </span>
+                                <span
+                                    style={{
+                                        fontSize: 14,
+                                        fontWeight: 500,
+                                        color: 'var(--ink)',
+                                    }}
+                                >
+                                    ATZ Medappz Pvt Ltd.
+                                </span>
+                                <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>
+                                    84, Supreme Coworks, Sector 32, Gurgaon, Haryana, India
+                                </span>
                             </div>
-                            <div className="text-center">
-                                <div className="w-48 border-b border-surface-400 border-dashed pb-8 mb-2"></div>
-                                <p className="text-xs text-surface-400 font-bold">Patient Signature / Authorization</p>
+                            <div
+                                className="col ai-center"
+                                style={{ textAlign: 'center' }}
+                            >
+                                <div
+                                    style={{
+                                        width: 200,
+                                        borderBottom: '1px dashed var(--ink-4)',
+                                        paddingBottom: 32,
+                                        marginBottom: 8,
+                                    }}
+                                />
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-4)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    patient signature / authorization
+                                </span>
                             </div>
                         </div>
                     </div>
                 )}
             </div>
-        </div>
+        </main>
     );
 }

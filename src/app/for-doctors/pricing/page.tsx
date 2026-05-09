@@ -76,18 +76,60 @@ const PLANS = [
 ];
 
 const PROMOTIONS = [
-    { title: 'Early Adopter', desc: 'First 500 doctors get 3 months free on any paid plan.', code: 'EARLY500', discount: '3 months free' },
-    { title: 'Annual Plan', desc: 'Pay yearly and save 20% on Premium or Enterprise.', code: 'ANNUAL20', discount: '20% off' },
-    { title: 'Referral Bonus', desc: 'Refer a colleague and both get 1 month free.', code: 'REFER1MO', discount: '1 month free each' },
+    {
+        title: 'Early adopter',
+        desc: 'First 500 doctors get 3 months free on any paid plan.',
+        code: 'EARLY500',
+        discount: '3 months free',
+    },
+    {
+        title: 'Annual plan',
+        desc: 'Pay yearly and save 20% on Premium or Enterprise.',
+        code: 'ANNUAL20',
+        discount: '20% off',
+    },
+    {
+        title: 'Referral bonus',
+        desc: 'Refer a colleague and both get 1 month free.',
+        code: 'REFER1MO',
+        discount: '1 month free each',
+    },
 ];
 
-export default function PricingPage() {
+const FAQS = [
+    {
+        q: 'Can I start for free?',
+        a: 'Yes. The Free plan gives you a verified profile, 2 specialty conditions, and 5 lead credits per month. No credit card required.',
+    },
+    {
+        q: 'What are lead credits?',
+        a: 'Lead credits let you view and respond to patient enquiries. Each credit reveals one patient contact. Credits reset monthly.',
+    },
+    {
+        q: 'Can I change plans later?',
+        a: 'Absolutely. Upgrade or downgrade at any time. Upgrades take effect immediately, downgrades at the end of your billing cycle.',
+    },
+    {
+        q: 'Is there a lock-in period?',
+        a: 'No lock-in. Monthly plans can be cancelled anytime. Annual plans can be cancelled but are non-refundable.',
+    },
+    {
+        q: 'How does verification work?',
+        a: 'We verify your medical registration number, qualifications, and clinic/hospital affiliation. This typically takes 24–48 hours.',
+    },
+    {
+        q: 'Do you support international doctors?',
+        a: 'Yes. We have pricing for India, US, UK, and other regions. Contact us for enterprise pricing in your region.',
+    },
+];
+
+export default function DoctorPricingPage() {
     const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
+    const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
 
     const handleCheckout = async (planSlug: string) => {
         if (planSlug === 'free') {
-            // Direct to registration for free
             window.location.href = '/for-doctors#join-form';
             return;
         }
@@ -114,139 +156,544 @@ export default function PricingPage() {
     };
 
     return (
-        <div className="min-h-screen bg-surface-50 text-surface-900 pt-24 pb-16">
-            <div className="max-w-7xl mx-auto px-6">
-                {/* Error Message */}
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
+            <div
+                style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 96px' }}
+                className="col gap-7"
+            >
+                {/* Error */}
                 {errorMessage && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-sm flex items-center gap-2">
-                        <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        {errorMessage}
+                    <div
+                        className="row gap-2 ai-center"
+                        style={{
+                            padding: '12px 16px',
+                            background: 'var(--orange-50)',
+                            border: '1px solid rgba(255, 90, 46, .28)',
+                            borderRadius: 'var(--r-2)',
+                            color: 'var(--orange-2)',
+                            fontSize: 13,
+                        }}
+                        role="alert"
+                    >
+                        <span
+                            className="mono"
+                            style={{ fontSize: 11, fontWeight: 500 }}
+                            aria-hidden="true"
+                        >
+                            ● error
+                        </span>
+                        <span>{errorMessage}</span>
                     </div>
                 )}
 
                 {/* Hero */}
-                <div className="mb-16 text-center max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-50 border border-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider mb-6">
-                        Doctor Plans & Pricing
-                    </div>
-                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-                        Choose the right plan for your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500">practice</span>
+                <header className="col gap-3" style={{ maxWidth: 760 }}>
+                    <span className="section-mark">doctor plans / pricing</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 6vw, 88px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        Built for{' '}
+                        <span style={{ color: 'var(--cobalt)' }}>your practice</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-surface-600">
-                        Start free, upgrade when you grow. All plans include a verified profile and patient matching.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 580 }}
+                    >
+                        Start free, upgrade when you grow. Every plan includes a verified profile and patient matching — no surprise fees.
                     </p>
-                </div>
+                </header>
 
-                {/* Promotions Banner */}
-                <div className="mb-12 grid md:grid-cols-3 gap-4">
-                    {PROMOTIONS.map(promo => (
-                        <div key={promo.code} className="bg-gradient-to-br from-primary-50 to-accent-50 border border-primary-100 rounded-2xl p-5">
-                            <div className="flex items-center justify-between mb-2">
-                                <h3 className="font-extrabold text-surface-900 text-sm">{promo.title}</h3>
-                                <span className="px-2 py-0.5 bg-primary-100 text-primary-700 text-xs font-bold rounded-md">{promo.discount}</span>
+                {/* Promotions Strip */}
+                <section
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                        gap: 0,
+                        border: '1px solid var(--rule)',
+                        borderRadius: 'var(--r-3)',
+                        overflow: 'hidden',
+                        background: 'var(--paper)',
+                    }}
+                >
+                    {PROMOTIONS.map((promo, i, arr) => (
+                        <div
+                            key={promo.code}
+                            className="col gap-3"
+                            style={{
+                                padding: '20px 22px',
+                                borderRight:
+                                    i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                            }}
+                        >
+                            <div
+                                className="row between ai-center gap-2"
+                                style={{ flexWrap: 'wrap' }}
+                            >
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--cobalt)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    § {String(i + 1).padStart(2, '0')}
+                                </span>
+                                <span className="pill pill-mint">{promo.discount}</span>
                             </div>
-                            <p className="text-xs text-surface-600 mb-2">{promo.desc}</p>
-                            <code className="text-xs bg-white/80 border border-primary-200 text-primary-700 font-bold px-2 py-1 rounded-md">{promo.code}</code>
+                            <div
+                                className="display"
+                                style={{
+                                    fontSize: 18,
+                                    fontWeight: 500,
+                                    letterSpacing: '-0.02em',
+                                }}
+                            >
+                                {promo.title}
+                            </div>
+                            <p className="muted" style={{ fontSize: 13, margin: 0, lineHeight: 1.55 }}>
+                                {promo.desc}
+                            </p>
+                            <code
+                                className="mono"
+                                style={{
+                                    fontSize: 12,
+                                    color: 'var(--cobalt)',
+                                    background: 'var(--cobalt-50)',
+                                    border: '1px solid rgba(28, 91, 255, .22)',
+                                    padding: '4px 10px',
+                                    borderRadius: 'var(--r-2)',
+                                    width: 'fit-content',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                {promo.code}
+                            </code>
                         </div>
                     ))}
+                </section>
+
+                {/* Billing Toggle */}
+                <div
+                    className="row ai-center gap-3"
+                    style={{ flexWrap: 'wrap' }}
+                >
+                    <span
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: billingCycle === 'monthly' ? 'var(--ink)' : 'var(--ink-4)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                            fontWeight: billingCycle === 'monthly' ? 500 : 400,
+                        }}
+                    >
+                        Monthly
+                    </span>
+                    <button
+                        onClick={() =>
+                            setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')
+                        }
+                        role="switch"
+                        aria-checked={billingCycle === 'annual'}
+                        aria-label="Toggle billing cycle"
+                        style={{
+                            position: 'relative',
+                            width: 44,
+                            height: 24,
+                            borderRadius: 999,
+                            background: billingCycle === 'annual' ? 'var(--cobalt)' : 'var(--rule)',
+                            border: 'none',
+                            transition: 'background 120ms',
+                            cursor: 'pointer',
+                        }}
+                    >
+                        <span
+                            aria-hidden="true"
+                            style={{
+                                position: 'absolute',
+                                top: 3,
+                                left: 3,
+                                width: 18,
+                                height: 18,
+                                borderRadius: '50%',
+                                background: 'var(--paper)',
+                                transform:
+                                    billingCycle === 'annual' ? 'translateX(20px)' : 'translateX(0)',
+                                transition: 'transform 160ms ease',
+                                boxShadow: '0 1px 3px rgba(10, 26, 47, .15)',
+                            }}
+                        />
+                    </button>
+                    <span
+                        className="mono row ai-center gap-2"
+                        style={{
+                            fontSize: 11,
+                            color: billingCycle === 'annual' ? 'var(--ink)' : 'var(--ink-4)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                            fontWeight: billingCycle === 'annual' ? 500 : 400,
+                        }}
+                    >
+                        Annual
+                        <span
+                            className="pill pill-mint"
+                            style={{ textTransform: 'none' }}
+                        >
+                            save 20%
+                        </span>
+                    </span>
                 </div>
 
                 {/* Plans Grid */}
-                <div className="grid md:grid-cols-3 gap-6 mb-20">
-                    {PLANS.map(plan => (
-                        <div
-                            key={plan.slug}
-                            className={`rounded-3xl border overflow-hidden flex flex-col ${plan.highlight
-                                ? 'bg-white border-primary-300 ring-2 ring-primary-200 shadow-xl shadow-primary-500/10 relative'
-                                : 'bg-white border-surface-200'
-                                }`}
-                        >
-                            {plan.badge && (
-                                <div className={`text-center py-2 text-xs font-extrabold uppercase tracking-wider ${plan.highlight
-                                    ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white'
-                                    : 'bg-surface-100 text-surface-600'
-                                    }`}>
-                                    {plan.badge}
-                                </div>
-                            )}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: 16,
+                    }}
+                >
+                    {PLANS.map((plan) => {
+                        const isFree = plan.slug === 'free';
+                        const numericPrice = parseInt(plan.price.replace('$', ''), 10) || 0;
+                        const isAnnual = billingCycle === 'annual' && !isFree;
+                        const displayPrice = isAnnual
+                            ? `$${Math.floor(numericPrice * 0.8)}`
+                            : plan.price;
+                        const displayPeriod = isFree
+                            ? plan.period
+                            : isAnnual
+                                ? '/month, billed annually'
+                                : plan.period;
 
-                            <div className="p-6 border-b border-surface-100">
-                                <h2 className="text-xl font-extrabold text-surface-900 mb-1">{plan.name}</h2>
-                                <p className="text-sm text-surface-500 mb-4">{plan.desc}</p>
-                                <div className="flex items-end gap-1">
-                                    <span className="text-3xl font-black text-surface-900">{plan.price}</span>
-                                    <span className="text-sm text-surface-500 mb-1">{plan.period}</span>
-                                </div>
-                            </div>
+                        return (
+                            <div
+                                key={plan.slug}
+                                className={plan.highlight ? 'card' : 'card-flat'}
+                                style={{
+                                    padding: 0,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    borderColor: plan.highlight ? 'var(--ink)' : 'var(--rule)',
+                                    borderWidth: plan.highlight ? 2 : 1,
+                                    position: 'relative',
+                                }}
+                            >
+                                {plan.badge && (
+                                    <div
+                                        className="mono"
+                                        style={{
+                                            padding: '8px 16px',
+                                            background: plan.highlight ? 'var(--ink)' : 'var(--bg-2)',
+                                            color: plan.highlight ? 'var(--paper)' : 'var(--ink-3)',
+                                            fontSize: 11,
+                                            letterSpacing: '0.10em',
+                                            textTransform: 'uppercase',
+                                            fontWeight: 500,
+                                            borderBottom: '1px solid var(--rule)',
+                                        }}
+                                    >
+                                        {plan.badge}
+                                    </div>
+                                )}
 
-                            {/* Limits */}
-                            <div className="px-6 py-4 bg-surface-50 border-b border-surface-100 grid grid-cols-2 gap-3">
-                                <div>
-                                    <p className="text-xs text-surface-500 font-semibold">Specialties</p>
-                                    <p className="text-lg font-black text-surface-900">{plan.conditions >= 1000 ? 'Unlimited' : plan.conditions}</p>
+                                {/* Header */}
+                                <div
+                                    className="col gap-2 hairline-b"
+                                    style={{ padding: '24px 24px 20px' }}
+                                >
+                                    <h2
+                                        className="display"
+                                        style={{
+                                            fontSize: 22,
+                                            margin: 0,
+                                            fontWeight: 600,
+                                            letterSpacing: '-0.02em',
+                                        }}
+                                    >
+                                        {plan.name}
+                                    </h2>
+                                    <p
+                                        className="muted"
+                                        style={{ fontSize: 13, margin: 0, lineHeight: 1.5 }}
+                                    >
+                                        {plan.desc}
+                                    </p>
+                                    <div
+                                        className="row ai-baseline gap-1"
+                                        style={{ marginTop: 6 }}
+                                    >
+                                        <span
+                                            className="display num"
+                                            style={{
+                                                fontSize: 40,
+                                                fontWeight: 600,
+                                                letterSpacing: '-0.04em',
+                                                color: 'var(--ink)',
+                                                lineHeight: 1,
+                                            }}
+                                        >
+                                            {displayPrice}
+                                        </span>
+                                        <span
+                                            className="mono"
+                                            style={{ fontSize: 12, color: 'var(--ink-3)' }}
+                                        >
+                                            {displayPeriod}
+                                        </span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="text-xs text-surface-500 font-semibold">Lead Credits/mo</p>
-                                    <p className="text-lg font-black text-surface-900">{plan.leads}</p>
-                                </div>
-                            </div>
 
-                            {/* Features */}
-                            <div className="p-6 flex-1">
-                                <ul className="space-y-3">
-                                    {plan.features.map((f, i) => (
-                                        <li key={i} className="flex items-start gap-2.5">
-                                            {f.included ? (
-                                                <svg className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                                            ) : (
-                                                <svg className="w-4 h-4 text-surface-300 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                                            )}
-                                            <span className={`text-sm ${f.included ? 'text-surface-700' : 'text-surface-400'}`}>{f.label}</span>
+                                {/* Limits */}
+                                <div
+                                    className="row hairline-b"
+                                    style={{ background: 'var(--bg-2)' }}
+                                >
+                                    <div
+                                        className="col gap-1"
+                                        style={{
+                                            flex: 1,
+                                            padding: '14px 18px',
+                                            borderRight: '1px solid var(--rule)',
+                                        }}
+                                    >
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            Specialties
+                                        </span>
+                                        <span
+                                            className="num"
+                                            style={{
+                                                fontSize: 16,
+                                                fontWeight: 500,
+                                                color: 'var(--ink)',
+                                            }}
+                                        >
+                                            {plan.conditions >= 1000 ? 'Unlimited' : plan.conditions}
+                                        </span>
+                                    </div>
+                                    <div
+                                        className="col gap-1"
+                                        style={{ flex: 1, padding: '14px 18px' }}
+                                    >
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            Leads / month
+                                        </span>
+                                        <span
+                                            className="num"
+                                            style={{
+                                                fontSize: 16,
+                                                fontWeight: 500,
+                                                color: 'var(--ink)',
+                                            }}
+                                        >
+                                            {plan.leads}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Features */}
+                                <ul
+                                    className="clean col gap-2"
+                                    style={{ padding: '20px 24px', flex: 1 }}
+                                >
+                                    {plan.features.map((feature, i) => (
+                                        <li
+                                            key={i}
+                                            className="row gap-2 ai-baseline"
+                                            style={{
+                                                fontSize: 13,
+                                                color: feature.included
+                                                    ? 'var(--ink-2)'
+                                                    : 'var(--ink-4)',
+                                            }}
+                                        >
+                                            <span
+                                                aria-hidden="true"
+                                                className="mono"
+                                                style={{
+                                                    color: feature.included
+                                                        ? 'var(--mint-3)'
+                                                        : 'var(--ink-4)',
+                                                    fontSize: 12,
+                                                    minWidth: 14,
+                                                    fontWeight: 500,
+                                                }}
+                                            >
+                                                {feature.included ? '✓' : '×'}
+                                            </span>
+                                            <span style={{ flex: 1 }}>{feature.label}</span>
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
 
-                            {/* CTA */}
-                            <div className="p-6 pt-0">
-                                <button
-                                    onClick={() => handleCheckout(plan.slug)}
-                                    disabled={loadingPlan === plan.slug}
-                                    className={`w-full block text-center py-3 rounded-2xl font-extrabold transition-all ${plan.highlight
-                                        ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white hover:shadow-lg hover:-translate-y-0.5'
-                                        : 'bg-surface-100 text-surface-700 hover:bg-primary-50 hover:text-primary-700'
-                                        }`}
-                                >
-                                    {loadingPlan === plan.slug ? 'Connecting Secure Checkout...' : plan.price === '$0' ? 'Get Started Free' : 'Start Free Trial'}
-                                </button>
+                                {/* CTA */}
+                                <div style={{ padding: '0 24px 24px' }}>
+                                    <button
+                                        onClick={() => handleCheckout(plan.slug)}
+                                        disabled={loadingPlan === plan.slug}
+                                        className={
+                                            plan.highlight ? 'btn btn-cobalt' : 'btn btn-paper'
+                                        }
+                                        style={{ width: '100%', justifyContent: 'center' }}
+                                    >
+                                        {loadingPlan === plan.slug
+                                            ? 'Connecting checkout…'
+                                            : isFree
+                                                ? 'Get started free →'
+                                                : 'Start free trial →'}
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 {/* FAQ */}
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-extrabold text-center mb-10">Frequently Asked Questions</h2>
-                    <div className="space-y-4">
-                        {[
-                            { q: 'Can I start for free?', a: 'Yes! The Free plan gives you a verified profile, 2 specialty conditions, and 5 lead credits per month. No credit card required.' },
-                            { q: 'What are lead credits?', a: 'Lead credits allow you to view and respond to patient enquiries. Each credit reveals one patient contact. Credits reset monthly.' },
-                            { q: 'Can I change plans later?', a: 'Absolutely. You can upgrade or downgrade at any time. Upgrades take effect immediately, downgrades at the end of your billing cycle.' },
-                            { q: 'Is there a lock-in period?', a: 'No lock-in. Monthly plans can be cancelled anytime. Annual plans can be cancelled but are non-refundable.' },
-                            { q: 'How does verification work?', a: 'We verify your medical registration number, qualifications, and clinic/hospital affiliation. This typically takes 24-48 hours.' },
-                            { q: 'Do you support international doctors?', a: 'Yes. We have pricing for India, US, UK, and other regions. Contact us for enterprise pricing in your region.' },
-                        ].map((faq, i) => (
-                            <div key={i} className="bg-white rounded-2xl border border-surface-200 p-6">
-                                <h3 className="font-extrabold text-surface-900 mb-2">{faq.q}</h3>
-                                <p className="text-sm text-surface-600 leading-relaxed">{faq.a}</p>
+                <section className="col gap-4" style={{ maxWidth: 880 }}>
+                    <div className="col gap-2">
+                        <span className="section-mark">faq</span>
+                        <h2
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(28px, 4vw, 44px)',
+                                margin: 0,
+                                letterSpacing: '-0.035em',
+                                fontWeight: 600,
+                            }}
+                        >
+                            Questions before you start.
+                        </h2>
+                    </div>
+                    <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                        {FAQS.map((faq, i, arr) => (
+                            <div
+                                key={i}
+                                className="col gap-2"
+                                style={{
+                                    padding: '20px 24px',
+                                    borderBottom:
+                                        i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                }}
+                            >
+                                <div className="row gap-3 ai-baseline">
+                                    <span
+                                        className="num"
+                                        style={{
+                                            fontSize: 14,
+                                            color: 'var(--cobalt)',
+                                            fontWeight: 500,
+                                            minWidth: 22,
+                                        }}
+                                    >
+                                        {String(i + 1).padStart(2, '0')}
+                                    </span>
+                                    <h3
+                                        className="display"
+                                        style={{
+                                            fontSize: 17,
+                                            fontWeight: 500,
+                                            letterSpacing: '-0.02em',
+                                            margin: 0,
+                                        }}
+                                    >
+                                        {faq.q}
+                                    </h3>
+                                </div>
+                                <p
+                                    className="muted"
+                                    style={{
+                                        fontSize: 14,
+                                        lineHeight: 1.6,
+                                        margin: 0,
+                                        paddingLeft: 32,
+                                    }}
+                                >
+                                    {faq.a}
+                                </p>
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
+                {/* Footer CTA */}
+                <section className="card-ink" style={{ padding: '36px 32px' }}>
+                    <div
+                        className="row between ai-center gap-4"
+                        style={{ flexWrap: 'wrap' }}
+                    >
+                        <div className="col gap-2" style={{ flex: '1 1 360px', minWidth: 0 }}>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.10em',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                still deciding?
+                            </span>
+                            <h2
+                                className="display"
+                                style={{
+                                    fontSize: 'clamp(24px, 3vw, 36px)',
+                                    margin: 0,
+                                    letterSpacing: '-0.03em',
+                                    fontWeight: 600,
+                                    color: 'var(--paper)',
+                                    lineHeight: 1.1,
+                                }}
+                            >
+                                Talk to our team
+                                <span style={{ color: 'var(--orange)' }}>.</span>
+                            </h2>
+                            <p
+                                style={{
+                                    color: 'rgba(255,255,255,.7)',
+                                    fontSize: 15,
+                                    margin: 0,
+                                    maxWidth: 480,
+                                }}
+                            >
+                                We&rsquo;ll help you pick the right tier for your specialty, region, and patient volume.
+                            </p>
+                        </div>
+                        <Link
+                            href="/contact?subject=Doctor%20Pricing%20Inquiry"
+                            className="btn btn-cobalt btn-lg"
+                        >
+                            Contact sales →
+                        </Link>
+                    </div>
+                </section>
             </div>
-        </div>
+        </main>
     );
 }

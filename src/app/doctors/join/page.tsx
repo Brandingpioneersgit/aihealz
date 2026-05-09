@@ -3,13 +3,54 @@
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState, Suspense } from 'react';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
+
+function LoadingState({ label }: { label: string }) {
+    return (
+        <main
+            style={{
+                background: 'var(--bg)',
+                color: 'var(--ink)',
+                minHeight: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}
+        >
+            <div className="col gap-2 ai-center" style={{ textAlign: 'center' }}>
+                <span
+                    className="mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--cobalt)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                    }}
+                >
+                    ● working
+                </span>
+                <p
+                    className="display"
+                    style={{
+                        fontSize: 24,
+                        fontWeight: 500,
+                        letterSpacing: '-0.025em',
+                        color: 'var(--ink-3)',
+                        margin: 0,
+                    }}
+                >
+                    {label}
+                    <span style={{ color: 'var(--cobalt)' }}>…</span>
+                </p>
+            </div>
+        </main>
+    );
+}
 
 function DoctorsJoinSuccessContent() {
     const searchParams = useSearchParams();
     const sessionId = searchParams.get('session_id');
     const plan = searchParams.get('plan');
-    const [verified, setVerified] = useState(false);
+    const [, setVerified] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -41,125 +82,187 @@ function DoctorsJoinSuccessContent() {
 
     // Don't show loading spinner if there's no session_id - we're redirecting
     if (!sessionId) {
-        return (
-            <div className="min-h-screen bg-surface-50 flex items-center justify-center">
-                <div className="text-center">
-                    <Loader2 className="w-12 h-12 animate-spin text-primary-600 mx-auto mb-4" />
-                    <p className="text-surface-600">Redirecting to registration...</p>
-                </div>
-            </div>
-        );
+        return <LoadingState label="Redirecting to registration" />;
     }
 
     if (loading) {
-        return (
-            <div className="min-h-screen bg-surface-50 flex items-center justify-center">
-                <div className="text-center">
-                    <Loader2 className="w-12 h-12 animate-spin text-primary-600 mx-auto mb-4" />
-                    <p className="text-surface-600">Verifying your payment...</p>
-                </div>
-            </div>
-        );
+        return <LoadingState label="Verifying your payment" />;
     }
 
     if (error) {
         return (
-            <div className="min-h-screen bg-surface-50 pt-24 pb-16">
-                <div className="max-w-md mx-auto px-6 text-center">
-                    <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg className="w-10 h-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h1 className="text-2xl font-bold text-surface-900 mb-4">Verification Issue</h1>
-                    <p className="text-surface-600 mb-8">{error}</p>
-                    <Link
-                        href="/contact?subject=Payment%20Verification%20Issue"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-colors"
+            <main
+                style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}
+            >
+                <div
+                    style={{ maxWidth: 540, margin: '0 auto', padding: '64px 28px 96px' }}
+                    className="col gap-5"
+                >
+                    <span className="section-mark">verification issue</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(32px, 5vw, 48px)',
+                            lineHeight: 1,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
                     >
-                        Contact Support
-                        <ArrowRight className="w-4 h-4" />
-                    </Link>
+                        Something didn&rsquo;t line up
+                        <span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p
+                        className="lede"
+                        style={{ fontSize: 17, maxWidth: 480 }}
+                    >
+                        {error}
+                    </p>
+                    <div className="row">
+                        <Link
+                            href="/contact?subject=Payment%20Verification%20Issue"
+                            className="btn btn-cobalt"
+                        >
+                            Contact support →
+                        </Link>
+                    </div>
                 </div>
-            </div>
+            </main>
         );
     }
 
     const planName = plan === 'enterprise' ? 'Enterprise' : 'Premium';
 
     return (
-        <div className="min-h-screen bg-surface-50 pt-24 pb-16">
-            <div className="max-w-lg mx-auto px-6">
-                <div className="bg-white rounded-2xl border border-surface-200 p-8 text-center shadow-xl">
-                    <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle className="w-10 h-10 text-emerald-600" />
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
+            <div
+                style={{ maxWidth: 720, margin: '0 auto', padding: '64px 28px 96px' }}
+                className="col gap-6"
+            >
+                {/* Hero */}
+                <header className="col gap-4">
+                    <div className="row gap-2 ai-center" style={{ flexWrap: 'wrap' }}>
+                        <span className="pill pill-mint">
+                            <span className="pill-dot" style={{ background: 'var(--mint)' }} />
+                            subscription active
+                        </span>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            plan · {planName.toLowerCase()}
+                        </span>
                     </div>
-
-                    <h1 className="text-3xl font-bold text-surface-900 mb-3">
-                        Welcome to {planName}!
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 6vw, 72px)',
+                            lineHeight: 0.98,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        Welcome to{' '}
+                        <span style={{ color: 'var(--cobalt)' }}>{planName}</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-
-                    <p className="text-surface-600 mb-8">
-                        Your subscription is now active. You have access to all {planName} features including enhanced visibility, priority ranking, and lead credits.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(15px, 1.5vw, 19px)', maxWidth: 560 }}
+                    >
+                        Your subscription is now live. You have access to enhanced visibility,
+                        priority ranking, and lead credits across the {planName} tier.
                     </p>
+                </header>
 
-                    <div className="bg-surface-50 rounded-xl p-6 mb-8">
-                        <h3 className="font-semibold text-surface-900 mb-4">Next Steps:</h3>
-                        <ul className="text-left space-y-3 text-sm text-surface-600">
-                            <li className="flex items-start gap-3">
-                                <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0">1</span>
-                                <span>Complete your doctor profile with qualifications and specialties</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0">2</span>
-                                <span>Add your clinic address and contact information</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0">3</span>
-                                <span>Upload your license documents for verification</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0">4</span>
-                                <span>Start receiving patient leads and inquiries</span>
-                            </li>
-                        </ul>
+                {/* Next steps */}
+                <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                    <div className="hairline-b" style={{ padding: '16px 24px' }}>
+                        <span className="kicker">
+                            <span className="dot" />
+                            next steps
+                        </span>
                     </div>
+                    <ol className="clean col">
+                        {[
+                            'Complete your doctor profile with qualifications and specialties',
+                            'Add your clinic address and contact information',
+                            'Upload your license documents for verification',
+                            'Start receiving patient leads and inquiries',
+                        ].map((step, i, arr) => (
+                            <li
+                                key={i}
+                                className="row gap-3 ai-baseline"
+                                style={{
+                                    padding: '16px 24px',
+                                    borderBottom:
+                                        i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                }}
+                            >
+                                <span
+                                    className="num"
+                                    style={{
+                                        fontSize: 16,
+                                        color: 'var(--cobalt)',
+                                        fontWeight: 500,
+                                        minWidth: 26,
+                                        letterSpacing: '-0.02em',
+                                    }}
+                                >
+                                    {String(i + 1).padStart(2, '0')}
+                                </span>
+                                <span
+                                    style={{
+                                        fontSize: 14,
+                                        color: 'var(--ink-2)',
+                                        lineHeight: 1.5,
+                                    }}
+                                >
+                                    {step}
+                                </span>
+                            </li>
+                        ))}
+                    </ol>
+                </section>
 
-                    <div className="flex flex-col sm:flex-row gap-3">
-                        <Link
-                            href="/provider/dashboard"
-                            className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-colors"
-                        >
-                            Go to Dashboard
-                            <ArrowRight className="w-4 h-4" />
-                        </Link>
-                        <Link
-                            href="/for-doctors"
-                            className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface-100 text-surface-700 rounded-xl font-semibold hover:bg-surface-200 transition-colors"
-                        >
-                            Learn More
-                        </Link>
-                    </div>
+                {/* Actions */}
+                <div className="row gap-3" style={{ flexWrap: 'wrap' }}>
+                    <Link
+                        href="/provider/dashboard"
+                        className="btn btn-cobalt btn-lg"
+                        style={{ flex: '1 1 220px', justifyContent: 'center' }}
+                    >
+                        Go to dashboard →
+                    </Link>
+                    <Link
+                        href="/for-doctors"
+                        className="btn btn-paper btn-lg"
+                        style={{ flex: '1 1 180px', justifyContent: 'center' }}
+                    >
+                        Learn more
+                    </Link>
                 </div>
 
-                <p className="text-center text-sm text-surface-500 mt-6">
-                    A confirmation email has been sent to your registered email address.
+                <p
+                    className="muted"
+                    style={{ fontSize: 13, textAlign: 'center', margin: 0 }}
+                >
+                    A confirmation email has been sent to your registered address.
                 </p>
             </div>
-        </div>
+        </main>
     );
 }
 
 export default function DoctorsJoinSuccessPage() {
     return (
-        <Suspense fallback={
-            <div className="min-h-screen bg-surface-50 flex items-center justify-center">
-                <div className="text-center">
-                    <Loader2 className="w-12 h-12 animate-spin text-primary-600 mx-auto mb-4" />
-                    <p className="text-surface-600">Loading...</p>
-                </div>
-            </div>
-        }>
+        <Suspense fallback={<LoadingState label="Loading" />}>
             <DoctorsJoinSuccessContent />
         </Suspense>
     );
