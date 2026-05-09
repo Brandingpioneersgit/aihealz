@@ -1,61 +1,182 @@
+import Link from 'next/link';
+import V4Page from '@/components/v4/Shell';
 import ContactForm from './ContactForm';
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16">
-            {/* Background */}
-            <div className="absolute top-0 inset-x-0 h-[400px] bg-gradient-to-b from-blue-900/10 to-transparent pointer-events-none" />
+        <V4Page>
+            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '48px 28px 80px' }}>
+                {/* Breadcrumb */}
+                <nav
+                    aria-label="Breadcrumb"
+                    className="row gap-2 mono"
+                    style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 32 }}
+                >
+                    <Link href="/">Home</Link>
+                    <span>/</span>
+                    <span style={{ color: 'var(--ink)' }}>Contact</span>
+                </nav>
 
-            <div className="max-w-7xl mx-auto px-6 mt-10 relative z-10">
-                <div className="text-center max-w-2xl mx-auto mb-12">
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">
-                        Contact Us
+                {/* Hero */}
+                <section className="col gap-4" style={{ marginBottom: 56, maxWidth: 880 }}>
+                    <span className="section-mark">Get in touch</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 6vw, 88px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            fontWeight: 600,
+                            margin: 0,
+                        }}
+                    >
+                        Talk to{' '}
+                        <span style={{ color: 'var(--cobalt)' }}>a human</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-400">
-                        Have questions? We&apos;re here to help with patient support, doctor verification, and partnership inquiries.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 20, color: 'var(--ink-2)', maxWidth: 640, marginTop: 4 }}
+                    >
+                        Patient support, doctor verification, partnership inquiries — we read every message
+                        and reply within one working day.
                     </p>
+                </section>
+
+                {/* Trust strip */}
+                <div
+                    className="hairline-t hairline-b"
+                    style={{
+                        padding: '14px 0',
+                        marginBottom: 40,
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: 28,
+                    }}
+                >
+                    {[
+                        '24h response',
+                        'Real human replies',
+                        'No marketing emails',
+                        'Privacy first',
+                    ].map((item) => (
+                        <span
+                            key={item}
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                letterSpacing: '.08em',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            <span style={{ color: 'var(--cobalt)', marginRight: 8 }}>◆</span>
+                            {item}
+                        </span>
+                    ))}
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    {/* Contact Info */}
-                    <div className="space-y-5">
-                        <div className="bg-slate-900/50 border border-white/5 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 bg-teal-500/10 text-teal-400 rounded-lg flex items-center justify-center shrink-0">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                </div>
-                                <div>
-                                    <h2 className="text-lg font-semibold text-white mb-1">Email</h2>
-                                    <p className="text-sm text-slate-500 mb-3">For support and inquiries</p>
-                                    <a href="mailto:support@aihealz.com" className="text-teal-400 font-medium hover:text-teal-300">support@aihealz.com</a>
-                                </div>
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: 24,
+                    }}
+                >
+                    {/* Contact info column */}
+                    <div className="col gap-4">
+                        <div className="card" style={{ padding: 28 }}>
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '.10em',
+                                    marginBottom: 12,
+                                    fontWeight: 500,
+                                }}
+                            >
+                                Email
                             </div>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 22, letterSpacing: '-0.02em', fontWeight: 600, margin: '0 0 6px' }}
+                            >
+                                Support &amp; inquiries
+                            </h2>
+                            <p style={{ fontSize: 14, color: 'var(--ink-3)', margin: '0 0 16px' }}>
+                                We aim to reply within 24 hours.
+                            </p>
+                            <a
+                                href="mailto:support@aihealz.com"
+                                className="mono"
+                                style={{ color: 'var(--cobalt)', fontSize: 14, fontWeight: 500 }}
+                            >
+                                support@aihealz.com →
+                            </a>
                         </div>
 
-                        <div className="bg-slate-900/50 border border-white/5 rounded-2xl p-6">
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 bg-blue-500/10 text-blue-400 rounded-lg flex items-center justify-center shrink-0">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                                </div>
-                                <div>
-                                    <h2 className="text-lg font-semibold text-white mb-1">Office</h2>
-                                    <address className="not-italic text-sm text-slate-400 leading-relaxed">
-                                        ATZ Medappz Pvt Ltd.<br />
-                                        84, Supreme Coworks, Sector 32<br />
-                                        Gurgaon, Haryana, India
-                                    </address>
-                                </div>
+                        <div className="card" style={{ padding: 28 }}>
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '.10em',
+                                    marginBottom: 12,
+                                    fontWeight: 500,
+                                }}
+                            >
+                                Office
                             </div>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 22, letterSpacing: '-0.02em', fontWeight: 600, margin: '0 0 6px' }}
+                            >
+                                Headquarters
+                            </h2>
+                            <address
+                                style={{
+                                    fontStyle: 'normal',
+                                    fontSize: 14,
+                                    color: 'var(--ink-2)',
+                                    lineHeight: 1.6,
+                                }}
+                            >
+                                ATZ Medappz Pvt Ltd.<br />
+                                84, Supreme Coworks, Sector 32<br />
+                                Gurgaon, Haryana, India
+                            </address>
                         </div>
                     </div>
 
-                    {/* Contact Form (client island) */}
-                    <div className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 md:p-8">
-                        <h2 className="text-lg font-semibold text-white mb-6">Send a Message</h2>
+                    {/* Form column */}
+                    <div className="card" style={{ padding: 32 }}>
+                        <div
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '.10em',
+                                marginBottom: 12,
+                                fontWeight: 500,
+                            }}
+                        >
+                            Send a message
+                        </div>
+                        <h2
+                            className="display"
+                            style={{ fontSize: 22, letterSpacing: '-0.02em', fontWeight: 600, margin: '0 0 24px' }}
+                        >
+                            What can we help with?
+                        </h2>
                         <ContactForm />
                     </div>
                 </div>
             </div>
-        </main>
+        </V4Page>
     );
 }

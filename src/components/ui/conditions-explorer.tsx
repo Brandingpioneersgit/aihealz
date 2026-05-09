@@ -2,59 +2,65 @@
 
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import {
-    Search, ChevronDown, ChevronUp, Heart, Brain, Eye, Bone,
-    Stethoscope, Wind, Droplets, Shield, Scissors,
-    Activity, Filter, X
-} from 'lucide-react';
 
 /* ─── Severity Classification ──────────────────────────────── */
 
 export type SeverityLevel = 'mild' | 'moderate' | 'severe' | 'critical' | 'variable';
 
-const SEVERITY_CONFIG: Record<SeverityLevel, {
+type SeverityCfg = {
     label: string;
-    bg: string;
-    border: string;
-    text: string;
+    /** Bureau pill class to apply */
+    pill: string;
+    /** Inline color override (mostly for breakdown counts + dots) */
+    color: string;
+    /** Solid dot colour */
     dot: string;
-}> = {
+};
+
+const SEVERITY_CONFIG: Record<SeverityLevel, SeverityCfg> = {
     mild: {
         label: 'Mild',
-        bg: 'bg-emerald-500/15',
-        border: 'border-emerald-500/30',
-        text: 'text-emerald-400',
-        dot: 'bg-emerald-400',
+        pill: 'pill pill-mint',
+        color: 'var(--mint-3)',
+        dot: 'var(--mint)',
     },
     moderate: {
         label: 'Moderate',
-        bg: 'bg-amber-500/15',
-        border: 'border-amber-500/30',
-        text: 'text-amber-400',
-        dot: 'bg-amber-400',
+        pill: 'pill pill-lemon',
+        color: '#8C6A00',
+        dot: 'var(--lemon-2)',
     },
     severe: {
         label: 'Severe',
-        bg: 'bg-orange-500/15',
-        border: 'border-orange-500/30',
-        text: 'text-orange-400',
-        dot: 'bg-orange-400',
+        pill: 'pill pill-orange',
+        color: 'var(--orange-2)',
+        dot: 'var(--orange)',
     },
     critical: {
         label: 'Critical',
-        bg: 'bg-rose-500/15',
-        border: 'border-rose-500/30',
-        text: 'text-rose-400',
-        dot: 'bg-rose-400',
+        // Custom critical pill — uses --sev-critical token
+        pill: 'pill',
+        color: 'var(--sev-critical)',
+        dot: 'var(--sev-critical)',
     },
     variable: {
         label: 'Variable',
-        bg: 'bg-slate-500/15',
-        border: 'border-slate-500/30',
-        text: 'text-slate-400',
-        dot: 'bg-slate-400',
+        pill: 'pill',
+        color: 'var(--ink-3)',
+        dot: 'var(--ink-4)',
     },
 };
+
+/** Inline style for the critical pill since there is no .pill-critical class. */
+const CRITICAL_STYLE: React.CSSProperties = {
+    background: 'rgba(182, 21, 21, .08)',
+    color: 'var(--sev-critical)',
+    borderColor: 'rgba(182, 21, 21, .25)',
+};
+
+function pillStyleFor(sev: SeverityLevel): React.CSSProperties | undefined {
+    return sev === 'critical' ? CRITICAL_STYLE : undefined;
+}
 
 /* ─── Types ────────────────────────────────────────────────── */
 
@@ -74,11 +80,30 @@ const INITIAL_VISIBLE = 12;
 const LOAD_MORE_COUNT = 24;
 const MAX_SPECIALTIES_SHOWN = 10;
 
+/** Compact severity badge used inside each condition row. */
 function SeverityBadge({ severity }: { severity: SeverityLevel }) {
     const cfg = SEVERITY_CONFIG[severity];
     return (
-        <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${cfg.bg} ${cfg.border} ${cfg.text} border whitespace-nowrap`}>
-            <span className={`w-1 h-1 rounded-full ${cfg.dot}`} />
+        <span
+            className={cfg.pill}
+            style={{
+                ...pillStyleFor(severity),
+                fontSize: 9,
+                padding: '2px 6px',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
+            }}
+        >
+            <span
+                aria-hidden="true"
+                style={{
+                    width: 4,
+                    height: 4,
+                    borderRadius: 999,
+                    background: cfg.dot,
+                    display: 'inline-block',
+                }}
+            />
             {cfg.label}
         </span>
     );
@@ -135,51 +160,159 @@ function SpecialtyCard({
 
     if (filteredConditions.length === 0) return null;
 
+    // Two-letter monogram for the specialty (matches .spec-icon convention)
+    const monogram = category.specialty
+        .split(/\s+/)
+        .map(w => w[0])
+        .filter(Boolean)
+        .slice(0, 2)
+        .join('')
+        .toUpperCase() || category.specialty.slice(0, 2).toUpperCase();
+
     return (
         <section
             id={`spec-${category.specialty.replace(/[^a-z0-9]/gi, '-').toLowerCase()}`}
-            className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 hover:border-teal-500/15 transition-all duration-300 overflow-hidden scroll-mt-32 shadow-xl"
+            className="card scroll-mt-32"
+            style={{ overflow: 'hidden' }}
         >
             {/* Header */}
             <button
                 onClick={handleToggle}
-                className="w-full p-6 flex items-center justify-between gap-4 text-left group hover:bg-white/[0.02] transition-colors"
+                className="row between ai-center gap-4"
+                style={{
+                    width: '100%',
+                    padding: '20px 22px',
+                    background: 'transparent',
+                    border: 'none',
+                    textAlign: 'left',
+                    cursor: 'pointer',
+                    color: 'var(--ink)',
+                }}
+                aria-expanded={isExpanded}
             >
-                <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-3 mb-2">
-                        <h2 className="text-xl font-bold text-white">{category.specialty}</h2>
-                        <span className="text-xs font-bold text-slate-500 bg-slate-800 px-2.5 py-1 rounded-lg">
-                            {filteredConditions.length.toLocaleString()}
+                <div className="col gap-2" style={{ flex: 1, minWidth: 0 }}>
+                    <div className="row ai-center gap-3" style={{ flexWrap: 'wrap' }}>
+                        <span className="spec-icon" aria-hidden="true">{monogram}</span>
+                        <h2
+                            className="display"
+                            style={{
+                                fontSize: 22,
+                                fontWeight: 600,
+                                letterSpacing: '-0.02em',
+                                margin: 0,
+                                color: 'var(--ink)',
+                            }}
+                        >
+                            {category.specialty}
+                        </h2>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.06em',
+                            }}
+                        >
+                            {filteredConditions.length.toLocaleString()} conditions
                         </span>
                     </div>
+
                     {/* Severity breakdown */}
-                    <div className="flex flex-wrap gap-3">
+                    <div className="row gap-3" style={{ flexWrap: 'wrap', paddingLeft: 48 }}>
                         {(Object.keys(SEVERITY_CONFIG) as SeverityLevel[]).map(sev => {
                             const count = sevCounts[sev];
                             if (!count) return null;
                             const cfg = SEVERITY_CONFIG[sev];
                             return (
-                                <span key={sev} className={`inline-flex items-center gap-1 text-[10px] font-semibold ${cfg.text}`}>
-                                    <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot}`} />
+                                <span
+                                    key={sev}
+                                    className="row ai-center gap-1 mono"
+                                    style={{
+                                        fontSize: 11,
+                                        fontWeight: 500,
+                                        color: cfg.color,
+                                        letterSpacing: '0.02em',
+                                    }}
+                                >
+                                    <span
+                                        aria-hidden="true"
+                                        style={{
+                                            width: 6,
+                                            height: 6,
+                                            borderRadius: 999,
+                                            background: cfg.dot,
+                                            display: 'inline-block',
+                                        }}
+                                    />
                                     {count.toLocaleString()} {cfg.label}
                                 </span>
                             );
                         })}
                     </div>
                 </div>
-                <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-300 shrink-0 ${isExpanded ? 'rotate-180' : ''}`} />
+
+                <span
+                    aria-hidden="true"
+                    className="mono"
+                    style={{
+                        fontSize: 18,
+                        color: 'var(--ink-3)',
+                        transition: 'transform var(--transition-normal)',
+                        transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                        flexShrink: 0,
+                    }}
+                >
+                    ▾
+                </span>
             </button>
 
+            <div className="hairline" />
+
             {/* Conditions Grid */}
-            <div className="px-6 pb-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            <div style={{ padding: '20px 22px' }}>
+                <div
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                    style={{ gap: 8 }}
+                >
                     {visibleConditions.map((c, i) => (
                         <Link
                             key={`${c.slug}-${i}`}
                             href={`${urlPrefix}/${c.slug}`}
-                            className="group flex items-center justify-between gap-2 px-3.5 py-2.5 bg-slate-800/30 rounded-xl border border-white/[0.03] hover:bg-slate-800/60 hover:border-teal-500/20 transition-all"
+                            className="row ai-center between gap-2"
+                            style={{
+                                padding: '10px 14px',
+                                background: 'var(--paper-2)',
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-2)',
+                                color: 'var(--ink-2)',
+                                fontSize: 14,
+                                fontWeight: 500,
+                                transition:
+                                    'background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast)',
+                                minWidth: 0,
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.background = 'var(--paper)';
+                                e.currentTarget.style.borderColor = 'var(--cobalt)';
+                                e.currentTarget.style.color = 'var(--ink)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.background = 'var(--paper-2)';
+                                e.currentTarget.style.borderColor = 'var(--rule)';
+                                e.currentTarget.style.color = 'var(--ink-2)';
+                            }}
                         >
-                            <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors line-clamp-1 flex-1 min-w-0">
+                            <span
+                                className="truncate"
+                                style={{
+                                    flex: 1,
+                                    minWidth: 0,
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                }}
+                            >
                                 {c.name}
                             </span>
                             <SeverityBadge severity={c.severity} />
@@ -189,32 +322,40 @@ function SpecialtyCard({
 
                 {/* Load More / Collapse buttons */}
                 {hasMore && (
-                    <div className="mt-4 flex gap-2">
+                    <div className="row gap-2" style={{ marginTop: 16, flexWrap: 'wrap' }}>
                         {!isExpanded ? (
                             <button
                                 onClick={handleToggle}
-                                className="flex-1 py-2.5 text-center text-sm font-semibold text-teal-400 hover:text-teal-300 bg-teal-500/5 hover:bg-teal-500/10 rounded-xl border border-teal-500/10 transition-all flex items-center justify-center gap-2"
+                                className="btn btn-paper"
+                                style={{ flex: 1, minWidth: 200 }}
                             >
-                                Show All {filteredConditions.length.toLocaleString()} Conditions
-                                <ChevronDown className="w-4 h-4" />
+                                Show all {filteredConditions.length.toLocaleString()} conditions
+                                <span aria-hidden="true" className="mono">▾</span>
                             </button>
                         ) : (
                             <>
                                 {canLoadMore && (
                                     <button
                                         onClick={handleLoadMore}
-                                        className="flex-1 py-2.5 text-center text-sm font-semibold text-teal-400 hover:text-teal-300 bg-teal-500/5 hover:bg-teal-500/10 rounded-xl border border-teal-500/10 transition-all flex items-center justify-center gap-2"
+                                        className="btn btn-paper"
+                                        style={{ flex: 1, minWidth: 200 }}
                                     >
-                                        Load More ({filteredConditions.length - visibleCount} remaining)
-                                        <ChevronDown className="w-4 h-4" />
+                                        Load more ({(filteredConditions.length - visibleCount).toLocaleString()} remaining)
+                                        <span aria-hidden="true" className="mono">▾</span>
                                     </button>
                                 )}
                                 <button
                                     onClick={handleToggle}
-                                    className="px-4 py-2.5 text-center text-sm font-semibold text-slate-400 hover:text-slate-300 bg-slate-800/30 hover:bg-slate-800/50 rounded-xl border border-white/5 transition-all flex items-center justify-center gap-2"
+                                    className="btn btn-ghost"
                                 >
                                     Collapse
-                                    <ChevronUp className="w-4 h-4" />
+                                    <span
+                                        aria-hidden="true"
+                                        className="mono"
+                                        style={{ transform: 'rotate(180deg)', display: 'inline-block' }}
+                                    >
+                                        ▾
+                                    </span>
                                 </button>
                             </>
                         )}
@@ -329,20 +470,40 @@ export default function ConditionsExplorer({
     // Empty state when no categories data
     if (!categories || categories.length === 0) {
         return (
-            <div className="text-center py-20">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-slate-800/50 flex items-center justify-center">
-                    <Stethoscope className="w-10 h-10 text-slate-500" />
+            <div className="card col ai-center gap-4" style={{ padding: '64px 24px', textAlign: 'center' }}>
+                <div
+                    className="row ai-center center"
+                    style={{
+                        width: 56,
+                        height: 56,
+                        borderRadius: 'var(--r-3)',
+                        background: 'var(--bg-2)',
+                        border: '1px solid var(--rule)',
+                        fontFamily: 'var(--mono)',
+                        fontSize: 22,
+                        color: 'var(--ink-3)',
+                    }}
+                    aria-hidden="true"
+                >
+                    ⌕
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">No Conditions Available</h3>
-                <p className="text-slate-400 mb-8 max-w-md mx-auto">
+                <h3
+                    className="display"
+                    style={{
+                        fontSize: 28,
+                        fontWeight: 600,
+                        letterSpacing: '-0.025em',
+                        margin: 0,
+                        color: 'var(--ink)',
+                    }}
+                >
+                    No conditions available
+                </h3>
+                <p style={{ color: 'var(--ink-3)', maxWidth: 420, margin: 0 }}>
                     Medical conditions data is currently being loaded or is not available for this region.
                 </p>
-                <Link
-                    href="/conditions"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500/10 text-teal-400 font-semibold rounded-xl border border-teal-500/20 hover:bg-teal-500/20 transition-colors"
-                >
-                    Browse All Conditions
-                    <ChevronDown className="w-4 h-4 rotate-[-90deg]" />
+                <Link href="/conditions" className="btn btn-cobalt" style={{ marginTop: 8 }}>
+                    Browse all conditions →
                 </Link>
             </div>
         );
@@ -351,22 +512,45 @@ export default function ConditionsExplorer({
     return (
         <>
             {/* Stats Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
-                    {filteredCategories.length} Specialties &bull; {totalFiltered.toLocaleString()} Conditions
+            <div
+                className="row between ai-center gap-4"
+                style={{ marginBottom: 20, flexWrap: 'wrap' }}
+            >
+                <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                    <span className="section-mark">the index</span>
+                    <span
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                        }}
+                    >
+                        · {filteredCategories.length} specialties · {totalFiltered.toLocaleString()} conditions
+                    </span>
                 </div>
 
                 <button
                     onClick={() => setShowFilters(!showFilters)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${showFilters
-                        ? 'bg-teal-500/20 text-teal-400 border border-teal-500/30'
-                        : 'bg-slate-800/50 text-slate-400 border border-white/5 hover:text-white'
-                        }`}
+                    className={showFilters ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
+                    aria-expanded={showFilters}
                 >
-                    <Filter className="w-4 h-4" />
+                    <span aria-hidden="true" className="mono">⌗</span>
                     Filters
                     {activeSeverities.size < 5 && (
-                        <span className="px-1.5 py-0.5 text-[10px] font-bold bg-teal-500 text-slate-900 rounded">
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 10,
+                                fontWeight: 600,
+                                padding: '1px 6px',
+                                borderRadius: 'var(--r-1)',
+                                background: showFilters ? 'rgba(255,255,255,.2)' : 'var(--cobalt)',
+                                color: showFilters ? '#fff' : '#fff',
+                                marginLeft: 2,
+                            }}
+                        >
                             {activeSeverities.size}
                         </span>
                     )}
@@ -374,55 +558,154 @@ export default function ConditionsExplorer({
             </div>
 
             {/* Search */}
-            <div className="max-w-xl mx-auto mb-6 relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
-                <input
-                    type="text"
-                    placeholder={`Search ${totalCount.toLocaleString()} conditions...`}
-                    value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-10 py-3.5 bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl text-white placeholder:text-slate-500 focus:border-teal-500/50 focus:outline-none focus:ring-2 focus:ring-teal-500/20 transition-all text-sm"
-                />
-                {searchQuery && (
-                    <button
-                        onClick={() => setSearchQuery('')}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors"
+            <div
+                className="card-flat"
+                style={{
+                    padding: '4px 14px 4px 4px',
+                    marginBottom: 20,
+                    maxWidth: 640,
+                    marginInline: 'auto',
+                    position: 'relative',
+                }}
+            >
+                <div className="row ai-center gap-2">
+                    <span
+                        aria-hidden="true"
+                        className="row ai-center center mono"
+                        style={{
+                            width: 40,
+                            height: 40,
+                            fontSize: 18,
+                            color: 'var(--ink-3)',
+                            flexShrink: 0,
+                        }}
                     >
-                        <X className="w-4 h-4" />
-                    </button>
-                )}
+                        ⌕
+                    </span>
+                    <input
+                        type="text"
+                        placeholder={`Search ${totalCount.toLocaleString()} conditions…`}
+                        value={searchQuery}
+                        onChange={e => setSearchQuery(e.target.value)}
+                        style={{
+                            flex: 1,
+                            border: 'none',
+                            outline: 'none',
+                            background: 'transparent',
+                            fontFamily: 'var(--sans)',
+                            fontSize: 15,
+                            color: 'var(--ink)',
+                            padding: '8px 0',
+                            minWidth: 0,
+                        }}
+                    />
+                    {searchQuery && (
+                        <button
+                            onClick={() => setSearchQuery('')}
+                            aria-label="Clear search"
+                            className="row ai-center center mono"
+                            style={{
+                                width: 28,
+                                height: 28,
+                                borderRadius: 'var(--r-1)',
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'var(--ink-3)',
+                                fontSize: 16,
+                                cursor: 'pointer',
+                                flexShrink: 0,
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.background = 'var(--bg-2)';
+                                e.currentTarget.style.color = 'var(--ink)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.background = 'transparent';
+                                e.currentTarget.style.color = 'var(--ink-3)';
+                            }}
+                        >
+                            ×
+                        </button>
+                    )}
+                </div>
             </div>
 
             {/* Severity Filters */}
             {showFilters && (
-                <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-white/5 p-6 mb-8">
-                    <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider">Filter by Severity</h3>
+                <div className="card" style={{ padding: 20, marginBottom: 24 }}>
+                    <div className="row between ai-center" style={{ marginBottom: 12 }}>
+                        <span className="kicker">
+                            <span className="dot" />Filter by severity
+                        </span>
                         <button
                             onClick={selectAllSeverities}
-                            className="text-xs font-semibold text-teal-400 hover:text-teal-300 transition-colors"
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                                fontWeight: 500,
+                                background: 'transparent',
+                                border: 'none',
+                                cursor: 'pointer',
+                                padding: 0,
+                            }}
                         >
-                            Select All
+                            Select all
                         </button>
                     </div>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                         {(Object.keys(SEVERITY_CONFIG) as SeverityLevel[]).map(sev => {
                             const cfg = SEVERITY_CONFIG[sev];
                             const isActive = activeSeverities.has(sev);
                             const count = globalSevCounts[sev];
 
+                            const baseStyle: React.CSSProperties = isActive
+                                ? { ...pillStyleFor(sev), cursor: 'pointer', textTransform: 'none', padding: '8px 12px', fontSize: 12 }
+                                : {
+                                    cursor: 'pointer',
+                                    textTransform: 'none',
+                                    padding: '8px 12px',
+                                    fontSize: 12,
+                                    background: 'var(--paper)',
+                                    color: 'var(--ink-4)',
+                                    borderColor: 'var(--rule)',
+                                };
+
                             return (
                                 <button
                                     key={sev}
                                     onClick={() => toggleSeverity(sev)}
-                                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-semibold transition-all duration-300 ${isActive
-                                        ? `${cfg.bg} ${cfg.border} ${cfg.text} shadow-lg`
-                                        : 'bg-slate-900/30 border-white/5 text-slate-500 hover:text-slate-300'
-                                        }`}
+                                    className={isActive ? cfg.pill : 'pill'}
+                                    style={baseStyle}
+                                    aria-pressed={isActive}
                                 >
-                                    <span className={`w-2 h-2 rounded-full ${isActive ? cfg.dot : 'bg-slate-600'}`} />
+                                    <span
+                                        aria-hidden="true"
+                                        style={{
+                                            width: 6,
+                                            height: 6,
+                                            borderRadius: 999,
+                                            background: isActive ? cfg.dot : 'var(--ink-5)',
+                                            display: 'inline-block',
+                                        }}
+                                    />
                                     {cfg.label}
-                                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${isActive ? 'bg-white/10' : 'bg-white/5'}`}>
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 10,
+                                            fontWeight: 600,
+                                            padding: '1px 6px',
+                                            borderRadius: 'var(--r-1)',
+                                            background: isActive
+                                                ? 'rgba(10, 26, 47, .08)'
+                                                : 'var(--bg-2)',
+                                            color: 'inherit',
+                                            opacity: 0.85,
+                                        }}
+                                    >
                                         {count.toLocaleString()}
                                     </span>
                                 </button>
@@ -434,28 +717,52 @@ export default function ConditionsExplorer({
 
             {/* No Results */}
             {filteredCategories.length === 0 && (
-                <div className="text-center py-16">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-800/50 flex items-center justify-center">
-                        <Search className="w-8 h-8 text-slate-500" />
+                <div className="card col ai-center gap-3" style={{ padding: '48px 24px', textAlign: 'center' }}>
+                    <div
+                        className="row ai-center center mono"
+                        style={{
+                            width: 48,
+                            height: 48,
+                            borderRadius: 'var(--r-2)',
+                            background: 'var(--bg-2)',
+                            border: '1px solid var(--rule)',
+                            fontSize: 20,
+                            color: 'var(--ink-3)',
+                        }}
+                        aria-hidden="true"
+                    >
+                        ⌕
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">No conditions found</h3>
-                    <p className="text-slate-400 mb-6">
-                        Try adjusting your search or filters
+                    <h3
+                        className="display"
+                        style={{
+                            fontSize: 22,
+                            fontWeight: 600,
+                            letterSpacing: '-0.02em',
+                            margin: 0,
+                            color: 'var(--ink)',
+                        }}
+                    >
+                        No conditions found
+                    </h3>
+                    <p style={{ color: 'var(--ink-3)', margin: 0 }}>
+                        Try adjusting your search or filters.
                     </p>
                     <button
                         onClick={() => {
                             setSearchQuery('');
                             selectAllSeverities();
                         }}
-                        className="px-6 py-2 bg-teal-500/10 text-teal-400 font-semibold rounded-xl border border-teal-500/20 hover:bg-teal-500/20 transition-colors"
+                        className="btn btn-paper btn-sm"
+                        style={{ marginTop: 4 }}
                     >
-                        Clear Filters
+                        Clear filters
                     </button>
                 </div>
             )}
 
             {/* Specialty Accordion */}
-            <div className="space-y-4">
+            <div className="col gap-4">
                 {visibleCategories.map(category => (
                     <SpecialtyCard
                         key={category.specialty}
@@ -468,19 +775,58 @@ export default function ConditionsExplorer({
 
             {/* Load More Trigger / Loading Indicator */}
             {hasMoreSpecialties && (
-                <div ref={loadMoreRef} className="py-8 text-center">
-                    <div className="inline-flex items-center gap-3 px-6 py-3 bg-slate-900/40 rounded-xl border border-white/5">
-                        <div className="animate-spin w-4 h-4 border-2 border-teal-500 border-t-transparent rounded-full"></div>
-                        <span className="text-sm text-slate-400">
-                            Loading more specialties... ({filteredCategories.length - visibleSpecialties} remaining)
+                <div ref={loadMoreRef} style={{ padding: '32px 0', textAlign: 'center' }}>
+                    <div
+                        className="row ai-center gap-3"
+                        style={{
+                            display: 'inline-flex',
+                            padding: '10px 18px',
+                            background: 'var(--paper)',
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                        }}
+                    >
+                        <span
+                            aria-hidden="true"
+                            style={{
+                                width: 14,
+                                height: 14,
+                                borderRadius: 999,
+                                border: '2px solid var(--rule)',
+                                borderTopColor: 'var(--cobalt)',
+                                animation: 'spin 0.8s linear infinite',
+                                display: 'inline-block',
+                            }}
+                        />
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 12,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.06em',
+                            }}
+                        >
+                            Loading more · {(filteredCategories.length - visibleSpecialties).toLocaleString()} remaining
                         </span>
                     </div>
+                    <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
                 </div>
             )}
 
             {/* All Loaded */}
             {!hasMoreSpecialties && filteredCategories.length > 0 && (
-                <div className="py-8 text-center text-sm text-slate-500">
+                <div
+                    className="mono"
+                    style={{
+                        padding: '32px 0',
+                        textAlign: 'center',
+                        fontSize: 11,
+                        color: 'var(--ink-4)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                    }}
+                >
                     Showing all {filteredCategories.length} specialties
                 </div>
             )}
