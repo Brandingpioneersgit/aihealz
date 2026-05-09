@@ -42,7 +42,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export async function generateStaticParams() {
   try {
-    // Get popular tests
     const tests = await prisma.diagnosticTest.findMany({
       where: { isActive: true },
       select: { slug: true },
@@ -50,7 +49,6 @@ export async function generateStaticParams() {
       take: 20,
     });
 
-    // Get major cities
     const cities = await prisma.geography.findMany({
       where: {
         level: 'city',
@@ -60,7 +58,6 @@ export async function generateStaticParams() {
       take: 50,
     });
 
-    // Generate combinations
     const params: { slug: string; city: string }[] = [];
     for (const test of tests) {
       for (const city of cities) {
@@ -68,7 +65,7 @@ export async function generateStaticParams() {
       }
     }
 
-    return params.slice(0, 200); // Limit for initial build
+    return params.slice(0, 200);
   } catch {
     return [];
   }
@@ -91,7 +88,6 @@ export default async function TestCityPage({ params }: PageProps) {
     notFound();
   }
 
-  // Try to find the city geography
   const cityGeo = await prisma.geography.findFirst({
     where: {
       slug: city,
@@ -100,12 +96,11 @@ export default async function TestCityPage({ params }: PageProps) {
     },
     include: {
       parent: {
-        include: { parent: true }, // state -> country
+        include: { parent: true },
       },
     },
   });
 
-  // Find providers in this city
   const providers = cityGeo
     ? await prisma.diagnosticProvider.findMany({
         where: {
@@ -131,7 +126,6 @@ export default async function TestCityPage({ params }: PageProps) {
       })
     : [];
 
-  // If no specific city providers, get general providers
   const generalProviders =
     providers.length === 0
       ? await prisma.diagnosticProvider.findMany({
@@ -160,7 +154,6 @@ export default async function TestCityPage({ params }: PageProps) {
 
   const allProviders = providers.length > 0 ? providers : generalProviders;
 
-  // Related tests
   const relatedTests = await prisma.diagnosticTest.findMany({
     where: {
       categoryId: test.categoryId,
@@ -171,7 +164,6 @@ export default async function TestCityPage({ params }: PageProps) {
     take: 6,
   });
 
-  // Other cities
   const otherCities = await prisma.geography.findMany({
     where: {
       level: 'city',
@@ -184,7 +176,6 @@ export default async function TestCityPage({ params }: PageProps) {
 
   const formatPrice = (price: number) => `₹${price.toLocaleString('en-IN')}`;
 
-  // Structured data for local SEO
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'MedicalTest',
@@ -209,104 +200,168 @@ export default async function TestCityPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-emerald-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 80px' }} className="col gap-7">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8 flex-wrap">
-            <Link href="/tests" className="hover:text-emerald-400 transition-colors">Tests</Link>
-            <span>/</span>
-            <Link href={`/tests/${test.slug}`} className="hover:text-emerald-400 transition-colors">
+          <nav
+            className="row gap-2 mono"
+            style={{
+              fontSize: 11,
+              color: 'var(--ink-3)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              flexWrap: 'wrap',
+            }}
+            aria-label="Breadcrumb"
+          >
+            <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/tests" style={{ color: 'var(--ink-3)' }}>Tests</Link>
+            <span aria-hidden="true">/</span>
+            <Link href={`/tests/${test.slug}`} style={{ color: 'var(--ink-3)' }}>
               {test.shortName || test.name}
             </Link>
-            <span>/</span>
-            <span className="text-slate-400">{cityName}</span>
+            <span aria-hidden="true">/</span>
+            <span style={{ color: 'var(--ink)' }}>{cityName}</span>
           </nav>
 
           {/* Hero */}
-          <div className="mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4">
-              <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span className="text-sm font-medium text-emerald-400">{cityName}</span>
+          <header className="col gap-4">
+            <div className="row gap-2 ai-center">
+              <span className="section-mark">test in city</span>
+              <span className="pill pill-cobalt">
+                <span className="pill-dot" style={{ background: 'var(--cobalt)' }} aria-hidden="true" />
+                {cityName}
+              </span>
             </div>
-
-            <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
-              {test.name} in {cityName}
+            <h1
+              className="display"
+              style={{
+                fontSize: 'clamp(36px, 5.5vw, 64px)',
+                lineHeight: 0.95,
+                letterSpacing: '-0.04em',
+                margin: 0,
+                fontWeight: 600,
+              }}
+            >
+              {test.name} in <span style={{ color: 'var(--cobalt)' }}>{cityName}</span>
+              <span style={{ color: 'var(--orange)' }}>.</span>
             </h1>
-
-            <p className="text-lg text-slate-400 max-w-3xl mb-6">
-              Compare prices and book {test.name} from certified diagnostic labs in {cityName}. Home sample collection available at select centers.
+            <p className="lede" style={{ fontSize: 'clamp(15px, 1.5vw, 19px)', maxWidth: 760, margin: 0 }}>
+              Compare prices and book {test.name} from certified diagnostic labs in {cityName}. Home sample collection at select centers.
             </p>
 
-            {/* Quick stats */}
-            <div className="flex flex-wrap gap-4">
+            {/* Quick stats strip */}
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                gap: 0,
+                border: '1px solid var(--rule)',
+                borderRadius: 'var(--r-3)',
+                background: 'var(--paper)',
+                overflow: 'hidden',
+                marginTop: 8,
+              }}
+            >
               {test.avgPriceInr && (
-                <div className="px-4 py-2 rounded-xl bg-slate-800/80 border border-white/5">
-                  <span className="text-sm text-slate-400">Starting at </span>
-                  <span className="font-bold text-emerald-400">{formatPrice(Number(test.avgPriceInr))}</span>
+                <div className="col gap-1" style={{ padding: '20px 22px', borderRight: '1px solid var(--rule)' }}>
+                  <div className="display num" style={{ fontSize: 24, fontWeight: 500, lineHeight: 1, letterSpacing: '-0.025em', color: 'var(--cobalt)' }}>
+                    {formatPrice(Number(test.avgPriceInr))}
+                  </div>
+                  <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                    starting price
+                  </div>
                 </div>
               )}
               {allProviders.length > 0 && (
-                <div className="px-4 py-2 rounded-xl bg-slate-800/80 border border-white/5">
-                  <span className="font-bold text-white">{allProviders.length}</span>
-                  <span className="text-sm text-slate-400"> labs available</span>
+                <div className="col gap-1" style={{ padding: '20px 22px', borderRight: test.homeCollectionPossible ? '1px solid var(--rule)' : 'none' }}>
+                  <div className="display num" style={{ fontSize: 24, fontWeight: 500, lineHeight: 1, letterSpacing: '-0.025em' }}>
+                    {allProviders.length}
+                  </div>
+                  <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                    labs available
+                  </div>
                 </div>
               )}
               {test.homeCollectionPossible && (
-                <div className="px-4 py-2 rounded-xl bg-teal-500/10 border border-teal-500/20">
-                  <span className="text-sm font-medium text-teal-400">Home Collection Available</span>
+                <div className="col gap-1" style={{ padding: '20px 22px' }}>
+                  <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--mint-3)' }}>Available</div>
+                  <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                    home collection
+                  </div>
                 </div>
               )}
             </div>
-          </div>
+          </header>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Providers List */}
-            <div className="lg:col-span-2">
-              <h2 className="text-xl font-bold text-white mb-6">
-                Labs Offering {test.shortName || test.name} in {cityName}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)',
+              gap: 32,
+            }}
+            className="lg-grid"
+          >
+            {/* Providers */}
+            <section className="col gap-4" aria-labelledby="providers-heading">
+              <h2
+                id="providers-heading"
+                className="display"
+                style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}
+              >
+                Labs offering {test.shortName || test.name} in {cityName}
               </h2>
 
               {allProviders.length > 0 ? (
-                <div className="space-y-4">
+                <div className="col gap-3">
                   {allProviders.map((provider) => {
                     const price = provider.testPrices[0];
                     return (
-                      <div
-                        key={provider.id}
-                        className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6 hover:border-emerald-500/20 transition-all"
-                      >
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="flex items-center gap-4">
+                      <article key={provider.id} className="card col gap-4" style={{ padding: 24 }}>
+                        <div className="row between ai-start gap-3" style={{ flexWrap: 'wrap' }}>
+                          <div className="row gap-3 ai-center">
                             {provider.logo ? (
-                              <img src={provider.logo} alt={provider.name} className="w-14 h-14 rounded-xl object-cover" />
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img
+                                src={provider.logo}
+                                alt={provider.name}
+                                style={{
+                                  width: 48,
+                                  height: 48,
+                                  borderRadius: 'var(--r-2)',
+                                  objectFit: 'cover',
+                                  border: '1px solid var(--rule)',
+                                }}
+                              />
                             ) : (
-                              <div className="w-14 h-14 rounded-xl bg-emerald-500/20 flex items-center justify-center">
-                                <span className="text-emerald-400 font-bold text-xl">{provider.name.charAt(0)}</span>
+                              <div className="spec-icon" style={{ width: 48, height: 48, fontSize: 18 }}>
+                                {provider.name.charAt(0)}
                               </div>
                             )}
-                            <div>
-                              <h3 className="font-bold text-white text-lg">{provider.name}</h3>
-                              <div className="flex items-center gap-3 mt-1">
+                            <div className="col gap-1">
+                              <h3
+                                className="display"
+                                style={{ fontSize: 16, fontWeight: 600, margin: 0, letterSpacing: '-0.02em' }}
+                              >
+                                {provider.name}
+                              </h3>
+                              <div className="row gap-3 ai-center" style={{ flexWrap: 'wrap' }}>
                                 {provider.rating && (
-                                  <div className="flex items-center gap-1 text-sm">
-                                    <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                  <span className="row gap-1 ai-center mono" style={{ fontSize: 12 }}>
+                                    <svg width="12" height="12" viewBox="0 0 20 20" fill="var(--lemon-2)" aria-hidden="true">
                                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                     </svg>
-                                    <span className="text-white font-medium">{Number(provider.rating).toFixed(1)}</span>
-                                    <span className="text-slate-500">({provider.reviewCount})</span>
-                                  </div>
+                                    <span style={{ color: 'var(--ink)', fontWeight: 500 }}>
+                                      {Number(provider.rating).toFixed(1)}
+                                    </span>
+                                    <span className="muted">({provider.reviewCount})</span>
+                                  </span>
                                 )}
                                 {(() => {
                                   const geo = 'geography' in provider ? provider.geography : null;
                                   if (geo && typeof geo === 'object' && 'name' in geo) {
-                                    return <span className="text-sm text-slate-500">{String(geo.name)}</span>;
+                                    return <span className="muted" style={{ fontSize: 12 }}>{String(geo.name)}</span>;
                                   }
                                   return null;
                                 })()}
@@ -315,32 +370,35 @@ export default async function TestCityPage({ params }: PageProps) {
                           </div>
 
                           {provider.isPartner && provider.partnerDiscount && (
-                            <span className="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-sm font-medium border border-orange-500/20">
-                              {Number(provider.partnerDiscount)}% OFF via aihealz
+                            <span className="pill pill-orange">
+                              {Number(provider.partnerDiscount)}% off via aihealz
                             </span>
                           )}
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-3 mb-4">
+                        <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                           {provider.homeCollectionAvailable && (
-                            <span className="text-xs px-3 py-1.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
-                              Home Collection
-                            </span>
+                            <span className="pill pill-mint">home collection</span>
                           )}
                           {provider.accreditations && provider.accreditations.length > 0 && (
-                            <span className="text-xs px-3 py-1.5 rounded-full bg-slate-800 text-slate-400">
-                              {provider.accreditations.join(', ')}
-                            </span>
+                            <span className="pill">{provider.accreditations.join(', ')}</span>
                           )}
                         </div>
 
-                        <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                          <div>
+                        <div className="hairline" />
+
+                        <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 12 }}>
+                          <div className="row ai-baseline gap-2">
                             {price && (
                               <>
-                                <span className="text-2xl font-bold text-emerald-400">{formatPrice(Number(price.price))}</span>
+                                <span
+                                  className="display num"
+                                  style={{ fontSize: 24, fontWeight: 500, color: 'var(--cobalt)', letterSpacing: '-0.02em' }}
+                                >
+                                  {formatPrice(Number(price.price))}
+                                </span>
                                 {price.mrpPrice && Number(price.mrpPrice) > Number(price.price) && (
-                                  <span className="ml-2 text-sm text-slate-500 line-through">
+                                  <span className="muted num" style={{ fontSize: 13, textDecoration: 'line-through' }}>
                                     {formatPrice(Number(price.mrpPrice))}
                                   </span>
                                 )}
@@ -349,80 +407,97 @@ export default async function TestCityPage({ params }: PageProps) {
                           </div>
                           <Link
                             href={`/book/test/${test.slug}?provider=${provider.slug}&city=${city}`}
-                            className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-colors"
+                            className="btn btn-cobalt"
                           >
-                            Book Now
+                            Book now →
                           </Link>
                         </div>
-                      </div>
+                      </article>
                     );
                   })}
                 </div>
               ) : (
-                <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-8 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-800 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">No labs listed in {cityName} yet</h3>
-                  <p className="text-slate-400 mb-6">We&apos;re adding diagnostic centers in your area. Check back soon!</p>
-                  <Link
-                    href={`/tests/${test.slug}`}
-                    className="inline-flex items-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold transition-colors"
+                <div className="card col gap-3 ai-center" style={{ padding: 40, textAlign: 'center' }}>
+                  <span className="pill">no labs yet</span>
+                  <h3
+                    className="display"
+                    style={{ fontSize: 18, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
                   >
-                    View All Providers
+                    No labs listed in {cityName} yet
+                    <span style={{ color: 'var(--orange)' }}>.</span>
+                  </h3>
+                  <p className="muted" style={{ fontSize: 14, margin: 0, maxWidth: 360 }}>
+                    We&apos;re adding diagnostic centers in your area. Check back soon.
+                  </p>
+                  <Link href={`/tests/${test.slug}`} className="btn btn-paper">
+                    View all providers →
                   </Link>
                 </div>
               )}
-            </div>
+            </section>
 
             {/* Sidebar */}
-            <div className="space-y-6">
-              {/* Test Info Card */}
-              <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6">
-                <h3 className="font-bold text-white mb-4">About This Test</h3>
-                <div className="space-y-3 text-sm">
+            <aside className="col gap-4">
+              {/* Test info */}
+              <div className="card col" style={{ padding: 0 }}>
+                <div className="hairline-b" style={{ padding: '16px 20px' }}>
+                  <h3
+                    className="display"
+                    style={{ fontSize: 14, fontWeight: 600, margin: 0, letterSpacing: '-0.015em' }}
+                  >
+                    About this test
+                  </h3>
+                </div>
+                <dl className="col" style={{ margin: 0 }}>
                   {test.sampleType && (
-                    <div className="flex justify-between">
-                      <span className="text-slate-400">Sample</span>
-                      <span className="text-white">{test.sampleType}</span>
+                    <div className="row between ai-center hairline-b" style={{ padding: '12px 20px' }}>
+                      <dt className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Sample</dt>
+                      <dd style={{ fontSize: 13, color: 'var(--ink)', margin: 0 }}>{test.sampleType}</dd>
                     </div>
                   )}
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Fasting</span>
-                    <span className="text-white">{test.fastingRequired ? `${test.fastingHours || 8}-12 hours` : 'Not required'}</span>
+                  <div className="row between ai-center hairline-b" style={{ padding: '12px 20px' }}>
+                    <dt className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Fasting</dt>
+                    <dd style={{ fontSize: 13, color: 'var(--ink)', margin: 0 }}>
+                      {test.fastingRequired ? `${test.fastingHours || 8}–12 hours` : 'Not required'}
+                    </dd>
                   </div>
                   {test.reportTimeHours && (
-                    <div className="flex justify-between">
-                      <span className="text-slate-400">Report Time</span>
-                      <span className="text-white">
+                    <div className="row between ai-center" style={{ padding: '12px 20px' }}>
+                      <dt className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Report</dt>
+                      <dd style={{ fontSize: 13, color: 'var(--ink)', margin: 0 }}>
                         {test.reportTimeHours < 24 ? `${test.reportTimeHours} hours` : `${Math.round(test.reportTimeHours / 24)} days`}
-                      </span>
+                      </dd>
                     </div>
                   )}
+                </dl>
+                <div className="hairline-t" style={{ padding: '12px 20px' }}>
+                  <Link
+                    href={`/tests/${test.slug}`}
+                    className="btn btn-paper btn-sm"
+                    style={{ width: '100%', justifyContent: 'center' }}
+                  >
+                    View full details →
+                  </Link>
                 </div>
-                <Link
-                  href={`/tests/${test.slug}`}
-                  className="w-full mt-4 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-medium text-white transition-colors"
-                >
-                  View Full Details
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
               </div>
 
-              {/* Other Cities */}
+              {/* Other cities */}
               {otherCities.length > 0 && (
-                <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6">
-                  <h3 className="font-bold text-white mb-4">{test.shortName || test.name} in Other Cities</h3>
-                  <div className="flex flex-wrap gap-2">
+                <div className="card col" style={{ padding: 0 }}>
+                  <div className="hairline-b" style={{ padding: '16px 20px' }}>
+                    <h3
+                      className="display"
+                      style={{ fontSize: 14, fontWeight: 600, margin: 0, letterSpacing: '-0.015em' }}
+                    >
+                      In other cities
+                    </h3>
+                  </div>
+                  <div className="row gap-2" style={{ padding: 16, flexWrap: 'wrap' }}>
                     {otherCities.map((c) => (
                       <Link
                         key={c.slug}
                         href={`/tests/${test.slug}/${c.slug}`}
-                        className="px-3 py-1.5 rounded-lg bg-slate-800 text-sm text-slate-300 hover:bg-emerald-500/20 hover:text-emerald-400 transition-colors"
+                        className="btn btn-sm btn-paper"
                       >
                         {c.name}
                       </Link>
@@ -431,24 +506,37 @@ export default async function TestCityPage({ params }: PageProps) {
                 </div>
               )}
 
-              {/* Related Tests */}
+              {/* Related tests */}
               {relatedTests.length > 0 && (
-                <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6">
-                  <h3 className="font-bold text-white mb-4">Related Tests in {cityName}</h3>
-                  <div className="space-y-2">
-                    {relatedTests.map((rt) => (
-                      <Link
-                        key={rt.slug}
-                        href={`/tests/${rt.slug}/${city}`}
-                        className="block px-3 py-2 rounded-lg bg-slate-800/50 hover:bg-slate-800 text-sm text-slate-300 hover:text-white transition-colors"
-                      >
-                        {rt.shortName || rt.name}
-                      </Link>
-                    ))}
+                <div className="card col" style={{ padding: 0 }}>
+                  <div className="hairline-b" style={{ padding: '16px 20px' }}>
+                    <h3
+                      className="display"
+                      style={{ fontSize: 14, fontWeight: 600, margin: 0, letterSpacing: '-0.015em' }}
+                    >
+                      Related tests in {cityName}
+                    </h3>
                   </div>
+                  <ul className="clean col" style={{ margin: 0 }}>
+                    {relatedTests.map((rt, i, arr) => (
+                      <li key={rt.slug}>
+                        <Link
+                          href={`/tests/${rt.slug}/${city}`}
+                          className="row between ai-center"
+                          style={{
+                            padding: '12px 20px',
+                            borderBottom: i < arr.length - 1 ? '1px solid var(--rule-2)' : 'none',
+                          }}
+                        >
+                          <span style={{ fontSize: 13, color: 'var(--ink)' }}>{rt.shortName || rt.name}</span>
+                          <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)' }}>→</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
-            </div>
+            </aside>
           </div>
         </div>
       </main>

@@ -2,92 +2,148 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Thank You | AIHealz Advertising',
+    title: 'Thank you | aihealz advertising',
     description: 'Your advertising enquiry has been submitted successfully.',
     robots: 'noindex, nofollow',
 };
 
+const STEPS = [
+    {
+        n: '01',
+        title: 'Review',
+        body: 'Our team reviews your requirements and matches you with the right advertising solutions.',
+    },
+    {
+        n: '02',
+        title: 'Discovery call',
+        body: "We'll schedule a brief call to understand your goals and recommend the best approach.",
+    },
+    {
+        n: '03',
+        title: 'Campaign setup',
+        body: "Once approved, we'll help you set up your first campaign and start reaching patients.",
+    },
+];
+
 export default function AdvertiseSuccessPage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 relative overflow-hidden flex items-center justify-center">
-            {/* Background Effects */}
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none" />
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
+            <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+                {/* Breadcrumb */}
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        flexWrap: 'wrap',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                    <span aria-hidden="true">/</span>
+                    <Link href="/advertise" style={{ color: 'var(--ink-3)' }}>Advertise</Link>
+                    <span aria-hidden="true">/</span>
+                    <span style={{ color: 'var(--ink)' }}>Submitted</span>
+                </nav>
 
-            <div className="relative px-6 py-20 text-center max-w-2xl mx-auto">
-                {/* Success Icon */}
-                <div className="w-24 h-24 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
-                    <svg className="w-12 h-12 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                </div>
-
-                <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                    Thank You!
-                </h1>
-                <p className="text-xl text-slate-400 mb-8 leading-relaxed">
-                    Your advertising enquiry has been received. Our team will review your submission and reach out within <span className="text-white font-semibold">24 hours</span>.
-                </p>
-
-                {/* What's Next Card */}
-                <div className="bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/10 p-8 mb-8 text-left">
-                    <h2 className="text-lg font-semibold text-white mb-4">What happens next?</h2>
-                    <div className="space-y-4">
-                        <div className="flex items-start gap-4">
-                            <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center shrink-0">
-                                <span className="text-teal-400 text-sm font-bold">1</span>
-                            </div>
-                            <div>
-                                <div className="font-medium text-white">Review</div>
-                                <div className="text-sm text-slate-400">Our team reviews your requirements and matches you with the right advertising solutions.</div>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                            <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center shrink-0">
-                                <span className="text-teal-400 text-sm font-bold">2</span>
-                            </div>
-                            <div>
-                                <div className="font-medium text-white">Discovery Call</div>
-                                <div className="text-sm text-slate-400">We&apos;ll schedule a brief call to understand your goals and recommend the best approach.</div>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                            <div className="w-8 h-8 bg-teal-500/20 rounded-lg flex items-center justify-center shrink-0">
-                                <span className="text-teal-400 text-sm font-bold">3</span>
-                            </div>
-                            <div>
-                                <div className="font-medium text-white">Campaign Setup</div>
-                                <div className="text-sm text-slate-400">Once approved, we&apos;ll help you set up your first campaign and start reaching patients.</div>
-                            </div>
-                        </div>
+                <div className="card col gap-5 ai-center" style={{ padding: 48, textAlign: 'center' }}>
+                    {/* Mint check mark */}
+                    <div
+                        className="row ai-center center"
+                        style={{
+                            width: 64,
+                            height: 64,
+                            borderRadius: 'var(--r-2)',
+                            background: 'var(--mint-50)',
+                            border: '1px solid rgba(40, 212, 168, .30)',
+                        }}
+                        aria-hidden="true"
+                    >
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--mint-3)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 13l4 4L19 7" />
+                        </svg>
                     </div>
+
+                    <span className="pill pill-mint">
+                        <span className="pill-dot" style={{ background: 'var(--mint)' }} aria-hidden="true" />
+                        Submitted
+                    </span>
+
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(32px, 5vw, 48px)',
+                            margin: 0,
+                            fontWeight: 600,
+                            letterSpacing: '-0.035em',
+                            lineHeight: 1.05,
+                        }}
+                    >
+                        Thank you<span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+
+                    <p className="lede" style={{ fontSize: 17, margin: 0, maxWidth: 520 }}>
+                        Your advertising enquiry has been received. Our team will review your submission and reach out within{' '}
+                        <span style={{ color: 'var(--cobalt)', fontWeight: 500 }}>24 hours</span>.
+                    </p>
                 </div>
 
-                {/* Contact Info */}
-                <div className="text-slate-400 text-sm mb-10">
-                    Questions in the meantime? Email us at{' '}
-                    <a href="mailto:ads@aihealz.com" className="text-teal-400 hover:underline">
+                {/* What's next */}
+                <section className="card col" style={{ padding: 0 }} aria-labelledby="next-heading">
+                    <div className="hairline-b" style={{ padding: '20px 24px' }}>
+                        <span className="section-mark">what happens next</span>
+                        <h2
+                            id="next-heading"
+                            className="display"
+                            style={{ fontSize: 20, fontWeight: 600, margin: '8px 0 0', letterSpacing: '-0.02em' }}
+                        >
+                            Three steps from here.
+                        </h2>
+                    </div>
+                    <ol className="clean col">
+                        {STEPS.map((s, i) => (
+                            <li
+                                key={s.n}
+                                className={`row gap-4 ai-start ${i < STEPS.length - 1 ? 'hairline-b' : ''}`}
+                                style={{ padding: '20px 24px' }}
+                            >
+                                <span
+                                    className="num"
+                                    style={{
+                                        fontSize: 13,
+                                        color: 'var(--cobalt)',
+                                        minWidth: 28,
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    {s.n}
+                                </span>
+                                <div className="col gap-1">
+                                    <span style={{ fontSize: 15, fontWeight: 500, color: 'var(--ink)' }}>{s.title}</span>
+                                    <span className="muted" style={{ fontSize: 13, lineHeight: 1.55 }}>{s.body}</span>
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                </section>
+
+                {/* Contact */}
+                <p className="muted" style={{ fontSize: 14, margin: 0, textAlign: 'center' }}>
+                    Questions in the meantime? Email{' '}
+                    <a href="mailto:ads@aihealz.com" style={{ color: 'var(--cobalt)' }}>
                         ads@aihealz.com
                     </a>
-                </div>
+                </p>
 
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Link
-                        href="/"
-                        className="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 transition-all hover:-translate-y-0.5 flex items-center gap-2"
-                    >
-                        Explore AIHealz
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
+                <div className="row gap-3 center" style={{ flexWrap: 'wrap' }}>
+                    <Link href="/" className="btn btn-cobalt btn-lg">
+                        Explore aihealz →
                     </Link>
-                    <Link
-                        href="/advertise"
-                        className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all"
-                    >
-                        Back to Advertising
+                    <Link href="/advertise" className="btn btn-paper btn-lg">
+                        Back to advertising
                     </Link>
                 </div>
             </div>

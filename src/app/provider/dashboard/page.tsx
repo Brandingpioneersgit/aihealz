@@ -1,20 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import {
-    LayoutDashboard, Users, TrendingUp, Award, Eye,
-    Search, Phone, Video, ChevronRight, Shield,
-    ArrowUpRight, Clock, Star, AlertCircle, Zap, LogOut,
-    User, Globe, MapPin, Building, Lock, CheckCircle,
-    Edit3, Save, X, Briefcase, GraduationCap, Languages
-} from 'lucide-react';
 import { ProviderAuthGate, providerLogout } from '@/components/provider/AuthGate';
 
 /**
  * Doctor Portal Dashboard
  *
- * Glassmorphism sidebar + data cards design.
- * Shows: leads, analytics, profile, subscription status.
+ * Bureau-styled dashboard. Shows: leads, analytics, profile, subscription status.
  * Protected by ProviderAuthGate.
  */
 
@@ -135,17 +127,14 @@ function getAuthToken(): string | null {
     return null;
 }
 
-function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardContentProps) {
-    // Doctor ID is passed from authenticated AuthGate - no default fallback
+function DashboardContent({ initialDoctorId }: DashboardContentProps) {
     const [doctorId] = useState<string>(initialDoctorId);
 
     useEffect(() => {
-        // Check for upgrade success
         const params = new URLSearchParams(window.location.search);
         if (params.get('upgraded') === 'true') {
             setSuccessMessage('Successfully upgraded! Your new features are now active.');
             setTimeout(() => setSuccessMessage(null), 5000);
-            // Remove query param from URL
             window.history.replaceState({}, '', '/provider/dashboard');
         }
     }, []);
@@ -181,13 +170,10 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
             const params = new URLSearchParams({ doctorId });
             if (intentFilter) params.set('intent', intentFilter);
             const res = await fetch(`/api/provider/leads?${params}`, {
-                headers: {
-                    'X-Provider-Token': token,
-                },
+                headers: { 'X-Provider-Token': token },
             });
 
             if (res.status === 401) {
-                // Session invalid, redirect to login
                 localStorage.removeItem('provider_session');
                 localStorage.removeItem('provider_doctor_id');
                 window.location.href = '/provider/login';
@@ -213,9 +199,7 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
             }
 
             const res = await fetch(`/api/provider/profile?doctorId=${doctorId}`, {
-                headers: {
-                    'X-Provider-Token': token,
-                },
+                headers: { 'X-Provider-Token': token },
             });
 
             if (res.status === 401) {
@@ -227,7 +211,6 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
 
             const json = await res.json();
             setProfileData(json);
-            // Initialize form with current values
             setProfileForm({
                 name: json.profile?.name || '',
                 phone: json.profile?.phone || '',
@@ -260,10 +243,7 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
 
             const res = await fetch('/api/provider/profile', {
                 method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Provider-Token': token,
-                },
+                headers: { 'Content-Type': 'application/json', 'X-Provider-Token': token },
                 body: JSON.stringify({
                     doctorId: parseInt(doctorId, 10),
                     ...profileForm,
@@ -278,7 +258,7 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                 setTimeout(() => setSuccessMessage(null), 3000);
                 setEditingProfile(false);
                 await fetchProfile();
-                await fetchDashboard(); // Refresh name in sidebar
+                await fetchDashboard();
             } else {
                 setErrorMessage(json.error || 'Failed to update profile');
                 setTimeout(() => setErrorMessage(null), 5000);
@@ -303,14 +283,10 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
 
             const res = await fetch('/api/provider/leads/reveal', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Provider-Token': token,
-                },
+                headers: { 'Content-Type': 'application/json', 'X-Provider-Token': token },
                 body: JSON.stringify({ leadId, doctorId }),
             });
             if (res.ok) {
-                // Refresh dashboard to show updated lead
                 await fetchDashboard();
             } else {
                 const error = await res.json();
@@ -327,7 +303,6 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
     }
 
     function handleTeleLink(leadId: string) {
-        // TODO: Implement tele-link booking flow
         window.open(`/provider/telelink?leadId=${leadId}`, '_blank');
     }
 
@@ -339,135 +314,170 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
         }
     }
 
-    const intentColors: Record<string, string> = {
-        high: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/20',
-        medium: 'bg-amber-500/20 text-amber-300 border-amber-500/20',
-        low: 'bg-slate-500/20 text-slate-300 border-slate-500/20',
-    };
+    const intentPill = (lvl: string) =>
+        lvl === 'high' ? 'pill pill-mint' : lvl === 'medium' ? 'pill pill-lemon' : 'pill';
+
+    const navItems: { id: TabType; label: string; code: string; badge?: number }[] = [
+        { id: 'leads', label: 'Active leads', code: 'LD', badge: data?.leads.unviewedCount },
+        { id: 'profile', label: 'My profile', code: 'PR' },
+        { id: 'analytics', label: 'Performance', code: 'AN' },
+        { id: 'subscription', label: 'Subscription', code: 'SB' },
+    ];
 
     return (
-        <div className="min-h-screen flex">
-            {/* Error Toast */}
+        <div style={{ background: 'var(--bg)', minHeight: '100vh', display: 'flex', color: 'var(--ink)' }}>
+            {/* Toasts */}
             {errorMessage && (
-                <div className="fixed top-4 right-4 z-50 p-4 bg-red-500/20 border border-red-500/30 rounded-xl text-red-300 text-sm flex items-center gap-2 max-w-md">
-                    <AlertCircle size={16} />
-                    {errorMessage}
+                <div
+                    role="alert"
+                    className="card-flat row ai-center gap-2"
+                    style={{
+                        position: 'fixed',
+                        top: 16, right: 16,
+                        zIndex: 50,
+                        padding: '12px 16px',
+                        borderColor: 'rgba(255, 90, 46, .35)',
+                        background: 'var(--orange-50)',
+                        color: 'var(--orange-2)',
+                        fontSize: 13,
+                        maxWidth: 420,
+                    }}
+                >
+                    ⚠ {errorMessage}
                 </div>
             )}
-            {/* Success Toast */}
             {successMessage && (
-                <div className="fixed top-4 right-4 z-50 p-4 bg-emerald-500/20 border border-emerald-500/30 rounded-xl text-emerald-300 text-sm flex items-center gap-2 max-w-md">
-                    <CheckCircle size={16} />
-                    {successMessage}
+                <div
+                    role="status"
+                    className="card-flat row ai-center gap-2"
+                    style={{
+                        position: 'fixed',
+                        top: 16, right: 16,
+                        zIndex: 50,
+                        padding: '12px 16px',
+                        borderColor: 'rgba(40, 212, 168, .35)',
+                        background: 'var(--mint-50)',
+                        color: 'var(--mint-3)',
+                        fontSize: 13,
+                        maxWidth: 420,
+                    }}
+                >
+                    ✓ {successMessage}
                 </div>
             )}
-            {/* ── Sidebar ──────────────────────────────── */}
-            <aside className="w-64 flex-shrink-0 glass-card rounded-none border-r border-white/5
-                        flex flex-col p-6 space-y-8">
-                <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-primary-600/20 flex items-center justify-center">
-                        <Shield size={20} className="text-primary-400" />
-                    </div>
-                    <div>
-                        <p className="font-semibold text-sm">{data?.doctor?.name || 'Doctor Portal'}</p>
-                        <p className="text-xs text-surface-100/40 capitalize">{data?.doctor?.tier || 'Free'} Plan</p>
+
+            {/* Sidebar */}
+            <aside style={{ width: 240, flexShrink: 0, background: 'var(--paper)', borderRight: '1px solid var(--rule)', padding: 24, display: 'flex', flexDirection: 'column', gap: 24 }}>
+                <div className="row ai-center gap-3">
+                    <span className="spec-icon" style={{ background: 'var(--cobalt)' }}>DR</span>
+                    <div className="col gap-1" style={{ minWidth: 0 }}>
+                        <span style={{ fontSize: 13, fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{data?.doctor?.name || 'Doctor portal'}</span>
+                        <span className="mono" style={{ fontSize: 10, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                            {data?.doctor?.tier || 'Free'} plan
+                        </span>
                     </div>
                 </div>
 
-                {/* Badge */}
                 {data?.badge?.label && (
-                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-emerald-600/10 border border-emerald-500/20">
-                        <Award size={16} className="text-emerald-400" />
-                        <span className="text-xs font-medium text-emerald-300">{data.badge.label} in your city</span>
+                    <div className="card-flat row ai-center gap-2" style={{ padding: '8px 12px', borderColor: 'rgba(40, 212, 168, .35)', background: 'var(--mint-50)' }}>
+                        <span style={{ color: 'var(--mint-3)', fontSize: 12 }}>★</span>
+                        <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--mint-3)' }}>{data.badge.label} in your city</span>
                     </div>
                 )}
 
-                {/* Nav */}
-                <nav className="space-y-1 flex-1">
-                    {[
-                        { id: 'leads' as TabType, icon: Users, label: 'Active Leads', badge: data?.leads.unviewedCount },
-                        { id: 'profile' as TabType, icon: User, label: 'My Profile' },
-                        { id: 'analytics' as TabType, icon: TrendingUp, label: 'Performance' },
-                        { id: 'subscription' as TabType, icon: Zap, label: 'Subscription' },
-                    ].map((item) => (
+                <nav className="col gap-1" style={{ flex: 1 }}>
+                    {navItems.map((item) => (
                         <button
                             key={item.id}
                             onClick={() => setTab(item.id)}
-                            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm transition-all ${tab === item.id
-                                ? 'bg-primary-600/15 text-primary-300 font-medium'
-                                : 'text-surface-100/50 hover:bg-white/5'
-                                }`}
+                            className="row ai-center gap-3"
+                            style={{
+                                width: '100%',
+                                padding: '10px 12px',
+                                fontSize: 13,
+                                fontWeight: 500,
+                                background: tab === item.id ? 'var(--cobalt-50)' : 'transparent',
+                                color: tab === item.id ? 'var(--cobalt)' : 'var(--ink-2)',
+                                border: 'none',
+                                borderRadius: 'var(--r-2)',
+                                cursor: 'pointer',
+                                textAlign: 'left',
+                            }}
                         >
-                            <item.icon size={16} />
-                            <span>{item.label}</span>
-                            {item.badge && item.badge > 0 && (
-                                <span className="ml-auto px-2 py-0.5 rounded-full bg-primary-600/30 text-primary-300 text-xs">
-                                    {item.badge}
-                                </span>
-                            )}
+                            <span className="mono" style={{ fontSize: 10, opacity: 0.7, width: 22 }}>{item.code}</span>
+                            <span style={{ flex: 1 }}>{item.label}</span>
+                            {item.badge && item.badge > 0 && <span className="pill pill-cobalt">{item.badge}</span>}
                         </button>
                     ))}
                 </nav>
 
-                <button className="flex items-center gap-2 px-3 py-2.5 rounded-xl text-sm
-                          text-surface-100/40 hover:bg-white/5 transition-all">
-                    <Video size={16} /> Tele-Link Settings
+                <button className="btn btn-ghost btn-sm" style={{ justifyContent: 'flex-start' }}>
+                    📹 Tele-Link settings
                 </button>
-
                 <button
                     onClick={providerLogout}
-                    className="flex items-center gap-2 px-3 py-2.5 rounded-xl text-sm
-                              text-rose-400/60 hover:bg-rose-500/10 hover:text-rose-400 transition-all"
+                    className="btn btn-ghost btn-sm"
+                    style={{ justifyContent: 'flex-start', color: 'var(--orange-2)' }}
                 >
-                    <LogOut size={16} /> Sign Out
+                    ↗ Sign out
                 </button>
             </aside>
 
-            {/* ── Main Content ─────────────────────────── */}
-            <main className="flex-1 p-8 space-y-8 overflow-auto">
+            {/* Main */}
+            <main style={{ flex: 1, padding: 32, overflow: 'auto' }} className="col gap-6">
                 {loading ? (
-                    <div className="flex items-center justify-center h-64">
-                        <div className="animate-spin w-8 h-8 border-2 border-primary-500/30 border-t-primary-400 rounded-full" />
+                    <div className="row center ai-center" style={{ height: 256 }}>
+                        <div
+                            aria-hidden="true"
+                            style={{ width: 32, height: 32, border: '2px solid var(--rule)', borderTopColor: 'var(--cobalt)', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }}
+                        />
+                        <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
                     </div>
                 ) : (
                     <>
-                        {/* Analytics Summary Cards */}
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        {/* Stats strip */}
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+                                gap: 0,
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--paper)',
+                                overflow: 'hidden',
+                            }}
+                        >
                             {[
-                                { label: 'Profile Views', value: data?.analytics.profileViews || 0, icon: Eye, color: 'text-blue-400' },
-                                { label: 'Search Hits', value: data?.analytics.searchAppearances || 0, icon: Search, color: 'text-purple-400' },
-                                { label: 'Total Leads', value: data?.analytics.totalLeads || 0, icon: Users, color: 'text-emerald-400' },
-                                { label: 'Contacts', value: data?.analytics.contactReveals || 0, icon: Phone, color: 'text-amber-400' },
-                                { label: 'Teleconsults', value: data?.analytics.teleconsults || 0, icon: Video, color: 'text-pink-400' },
-                            ].map((stat) => (
-                                <div key={stat.label} className="glass-card p-4 space-y-2">
-                                    <div className="flex items-center justify-between">
-                                        <stat.icon size={16} className={stat.color} />
-                                        <ArrowUpRight size={14} className="text-surface-100/20" />
+                                { label: 'Profile views', value: data?.analytics.profileViews || 0, code: 'PV' },
+                                { label: 'Search hits', value: data?.analytics.searchAppearances || 0, code: 'SH' },
+                                { label: 'Total leads', value: data?.analytics.totalLeads || 0, code: 'LD' },
+                                { label: 'Contacts', value: data?.analytics.contactReveals || 0, code: 'CT' },
+                                { label: 'Teleconsults', value: data?.analytics.teleconsults || 0, code: 'TC' },
+                            ].map((s) => (
+                                <div key={s.label} className="col gap-2" style={{ padding: 16, borderRight: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
+                                    <div className="row ai-center gap-2">
+                                        <span className="spec-icon" style={{ width: 28, height: 28, fontSize: 11 }}>{s.code}</span>
+                                        <span className="kicker">{s.label}</span>
                                     </div>
-                                    <p className="text-2xl font-bold">{stat.value.toLocaleString()}</p>
-                                    <p className="text-xs text-surface-100/40">{stat.label}</p>
+                                    <span className="num bignum" style={{ fontSize: 22, color: 'var(--ink)' }}>{s.value.toLocaleString()}</span>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Leads Tab */}
+                        {/* Leads */}
                         {tab === 'leads' && (
-                            <div className="space-y-4">
-                                <div className="flex items-center justify-between">
-                                    <h2 className="text-xl font-semibold flex items-center gap-2">
-                                        <LayoutDashboard size={20} className="text-primary-400" />
-                                        Active Leads
+                            <div className="col gap-4">
+                                <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 12 }}>
+                                    <h2 className="display row ai-center gap-2" style={{ fontSize: 20, margin: 0, fontWeight: 600 }}>
+                                        Active leads
                                     </h2>
-                                    <div className="flex gap-2">
+                                    <div className="row gap-2">
                                         {['', 'high', 'medium', 'low'].map((f) => (
                                             <button
                                                 key={f}
                                                 onClick={() => setIntentFilter(f)}
-                                                className={`px-3 py-1.5 rounded-full text-xs transition-all ${intentFilter === f
-                                                    ? 'bg-primary-600 text-white'
-                                                    : 'bg-white/5 text-surface-100/50 hover:bg-white/10'
-                                                    }`}
+                                                className={intentFilter === f ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
+                                                style={{ textTransform: 'capitalize' }}
                                             >
                                                 {f || 'All'}
                                             </button>
@@ -475,74 +485,60 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                                     </div>
                                 </div>
 
-                                <div className="space-y-3">
+                                <div className="col gap-3">
                                     {data?.leads.leads.map((lead) => (
                                         <div
                                             key={lead.id}
-                                            className={`glass-card p-5 transition-all hover:scale-[1.01] ${!lead.isViewed ? 'border-l-2 border-l-primary-500' : ''
-                                                }`}
+                                            className="card"
+                                            style={{
+                                                padding: 20,
+                                                borderLeft: !lead.isViewed ? '2px solid var(--cobalt)' : '1px solid var(--rule)',
+                                            }}
                                         >
-                                            <div className="flex items-start justify-between">
-                                                <div className="space-y-2 flex-1">
-                                                    <div className="flex items-center gap-2">
-                                                        <span className={`px-2 py-0.5 rounded-full text-xs border ${intentColors[lead.intentLevel] || intentColors.low
-                                                            }`}>
-                                                            {lead.intentLevel.toUpperCase()} INTENT
+                                            <div className="row between ai-start" style={{ gap: 16, flexWrap: 'wrap' }}>
+                                                <div className="col gap-2" style={{ flex: 1, minWidth: 0 }}>
+                                                    <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                                                        <span className={intentPill(lead.intentLevel)}>
+                                                            {lead.intentLevel} intent
                                                         </span>
                                                         {lead.urgency && lead.urgency !== 'routine' && (
-                                                            <span className="flex items-center gap-1 text-xs text-amber-400">
-                                                                <AlertCircle size={12} /> {lead.urgency}
-                                                            </span>
+                                                            <span className="pill pill-orange">⚠ {lead.urgency}</span>
                                                         )}
-                                                        {!lead.isViewed && (
-                                                            <span className="text-xs text-primary-400">● New</span>
-                                                        )}
+                                                        {!lead.isViewed && <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>● New</span>}
                                                     </div>
-                                                    <p className="text-sm text-surface-100/80 leading-relaxed">
+                                                    <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.5, margin: 0 }}>
                                                         {lead.summary || `Patient seeking ${lead.specialtyMatched} for ${lead.conditionSlug}`}
                                                     </p>
-                                                    <div className="flex items-center gap-4 text-xs text-surface-100/40">
-                                                        {lead.geography && (
-                                                            <span className="flex items-center gap-1">
-                                                                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                                                {lead.geography}
-                                                            </span>
-                                                        )}
-                                                        <span>
-                                                            <Clock size={10} className="inline mr-1" />
-                                                            {new Date(lead.createdAt).toLocaleDateString()}
-                                                        </span>
-                                                        {lead.intentScore && (
-                                                            <span>Score: {(lead.intentScore * 100).toFixed(0)}%</span>
-                                                        )}
+                                                    <div className="row ai-center gap-4 mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                                                        {lead.geography && <span>📍 {lead.geography}</span>}
+                                                        <span>⏱ {new Date(lead.createdAt).toLocaleDateString()}</span>
+                                                        {lead.intentScore && <span>Score: {(lead.intentScore * 100).toFixed(0)}%</span>}
                                                     </div>
                                                 </div>
 
-                                                <div className="flex flex-col items-end gap-2 ml-4">
+                                                <div className="col ai-end gap-2">
                                                     {lead.contactRevealed ? (
                                                         <button
                                                             onClick={() => window.open(`tel:+${lead.id}`, '_self')}
-                                                            className="flex items-center gap-1 px-3 py-1.5 rounded-lg
-                                             bg-emerald-600/20 text-emerald-300 text-xs hover:bg-emerald-600/30 transition-all"
+                                                            className="btn btn-sm"
+                                                            style={{ background: 'var(--mint-50)', color: 'var(--mint-3)', borderColor: 'rgba(40, 212, 168, .35)' }}
                                                         >
-                                                            <Phone size={12} /> Contact
+                                                            ☎ Contact
                                                         </button>
                                                     ) : (
                                                         <button
                                                             onClick={() => handleRevealContact(lead.id)}
                                                             disabled={revealingLead === lead.id}
-                                                            className="flex items-center gap-1 px-3 py-1.5 rounded-lg
-                                             bg-primary-600/20 text-primary-300 text-xs hover:bg-primary-600/30 transition-all disabled:opacity-50"
+                                                            className="btn btn-cobalt btn-sm"
                                                         >
-                                                            <Eye size={12} /> {revealingLead === lead.id ? 'Revealing...' : 'Reveal (1 credit)'}
+                                                            {revealingLead === lead.id ? 'Revealing…' : '◉ Reveal (1 credit)'}
                                                         </button>
                                                     )}
                                                     <button
                                                         onClick={() => handleTeleLink(lead.id)}
-                                                        className="flex items-center gap-1 px-3 py-1.5 rounded-lg
-                                           bg-white/5 text-surface-100/50 text-xs hover:bg-white/10 transition-all"
+                                                        className="btn btn-paper btn-sm"
                                                     >
-                                                        <Video size={12} /> Tele-Link
+                                                        📹 Tele-Link
                                                     </button>
                                                 </div>
                                             </div>
@@ -550,52 +546,48 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                                     ))}
 
                                     {(!data?.leads.leads || data.leads.leads.length === 0) && (
-                                        <div className="text-center py-16 text-surface-100/30">
-                                            <Users size={40} className="mx-auto mb-4 opacity-30" />
-                                            <p>No leads yet. As patients search for your specialty in your area, leads will appear here.</p>
+                                        <div className="card col ai-center gap-3" style={{ padding: 64, textAlign: 'center' }}>
+                                            <span className="spec-icon" style={{ width: 48, height: 48, fontSize: 18 }}>LD</span>
+                                            <p className="muted" style={{ fontSize: 13, margin: 0 }}>
+                                                No leads yet. As patients search for your specialty in your area, leads will appear here.
+                                            </p>
                                         </div>
                                     )}
                                 </div>
                             </div>
                         )}
 
-                        {/* Analytics Tab */}
+                        {/* Analytics */}
                         {tab === 'analytics' && (
-                            <div className="space-y-6">
-                                <h2 className="text-xl font-semibold flex items-center gap-2">
-                                    <TrendingUp size={20} className="text-primary-400" />
-                                    Search Performance
-                                </h2>
-                                <div className="glass-card p-8 text-center text-surface-100/40">
-                                    <p>Performance charts will be populated once you have 7+ days of data.</p>
-                                    <p className="text-xs mt-2">Profile views, search appearances, and lead conversion rate over time.</p>
+                            <div className="col gap-5">
+                                <h2 className="display" style={{ fontSize: 20, margin: 0, fontWeight: 600 }}>Search performance</h2>
+                                <div className="card col ai-center gap-2" style={{ padding: 32, textAlign: 'center' }}>
+                                    <p className="muted" style={{ fontSize: 14, margin: 0 }}>Performance charts will be populated once you have 7+ days of data.</p>
+                                    <p className="muted" style={{ fontSize: 12, margin: 0 }}>Profile views, search appearances, and lead conversion rate over time.</p>
                                 </div>
 
                                 {data?.badge && (
-                                    <div className="glass-card p-6 space-y-3">
-                                        <h3 className="font-semibold flex items-center gap-2">
-                                            <Award size={18} className="text-emerald-400" />
-                                            Specialist Ranking
-                                        </h3>
-                                        <div className="flex items-center gap-4">
-                                            <div className="relative w-20 h-20">
-                                                <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
-                                                    <circle cx="18" cy="18" r="16" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="2" />
-                                                    <circle cx="18" cy="18" r="16" fill="none" stroke="#10b981" strokeWidth="2"
+                                    <div className="card col gap-3" style={{ padding: 24 }}>
+                                        <span className="section-mark">specialist ranking</span>
+                                        <div className="row ai-center gap-4">
+                                            <div style={{ position: 'relative', width: 80, height: 80 }}>
+                                                <svg width="80" height="80" viewBox="0 0 36 36" style={{ transform: 'rotate(-90deg)' }}>
+                                                    <circle cx="18" cy="18" r="16" fill="none" stroke="var(--rule)" strokeWidth="2" />
+                                                    <circle cx="18" cy="18" r="16" fill="none" stroke="var(--mint)" strokeWidth="2"
                                                         strokeDasharray={`${data.badge.score} ${100 - data.badge.score}`} strokeLinecap="round" />
                                                 </svg>
-                                                <span className="absolute inset-0 flex items-center justify-center text-sm font-bold">
+                                                <span className="num" style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 600 }}>
                                                     {data.badge.score.toFixed(0)}
                                                 </span>
                                             </div>
-                                            <div>
-                                                <p className="font-medium">{data.badge.label || 'Unranked'}</p>
-                                                <p className="text-xs text-surface-100/40">
+                                            <div className="col gap-1">
+                                                <span style={{ fontWeight: 500 }}>{data.badge.label || 'Unranked'}</span>
+                                                <span className="muted" style={{ fontSize: 12 }}>
                                                     Based on profile completeness, ratings, reviews, and lead outcomes.
-                                                </p>
-                                                <p className="text-xs text-surface-100/30 mt-1">
-                                                    <Star size={10} className="inline text-amber-400" /> Complete your profile to improve your score.
-                                                </p>
+                                                </span>
+                                                <span className="muted" style={{ fontSize: 12 }}>
+                                                    ★ Complete your profile to improve your score.
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -603,343 +595,243 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                             </div>
                         )}
 
-                        {/* Profile Tab */}
+                        {/* Profile */}
                         {tab === 'profile' && (
-                            <div className="space-y-6">
-                                <div className="flex items-center justify-between">
-                                    <h2 className="text-xl font-semibold flex items-center gap-2">
-                                        <User size={20} className="text-primary-400" />
-                                        My Profile
-                                    </h2>
+                            <div className="col gap-5">
+                                <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 12 }}>
+                                    <h2 className="display" style={{ fontSize: 20, margin: 0, fontWeight: 600 }}>My profile</h2>
                                     {!editingProfile ? (
-                                        <button
-                                            onClick={() => setEditingProfile(true)}
-                                            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-600/20 text-primary-300 text-sm hover:bg-primary-600/30 transition-all"
-                                        >
-                                            <Edit3 size={14} /> Edit Profile
-                                        </button>
+                                        <button onClick={() => setEditingProfile(true)} className="btn btn-cobalt btn-sm">✎ Edit profile</button>
                                     ) : (
-                                        <div className="flex gap-2">
-                                            <button
-                                                onClick={() => setEditingProfile(false)}
-                                                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 text-surface-100/50 text-sm hover:bg-white/10 transition-all"
-                                            >
-                                                <X size={14} /> Cancel
-                                            </button>
+                                        <div className="row gap-2">
+                                            <button onClick={() => setEditingProfile(false)} className="btn btn-paper btn-sm">× Cancel</button>
                                             <button
                                                 onClick={saveProfile}
                                                 disabled={savingProfile}
-                                                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 text-white text-sm hover:bg-emerald-500 transition-all disabled:opacity-50"
+                                                className="btn btn-cobalt btn-sm"
                                             >
-                                                <Save size={14} /> {savingProfile ? 'Saving...' : 'Save Changes'}
+                                                {savingProfile ? 'Saving…' : '✓ Save changes'}
                                             </button>
                                         </div>
                                     )}
                                 </div>
 
                                 {profileLoading ? (
-                                    <div className="flex items-center justify-center h-64">
-                                        <div className="animate-spin w-8 h-8 border-2 border-primary-500/30 border-t-primary-400 rounded-full" />
+                                    <div className="row center ai-center" style={{ height: 256 }}>
+                                        <div
+                                            aria-hidden="true"
+                                            style={{ width: 32, height: 32, border: '2px solid var(--rule)', borderTopColor: 'var(--cobalt)', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }}
+                                        />
                                     </div>
                                 ) : profileData && (
                                     <>
-                                        {/* Profile Completion & Preview Link */}
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                            <div className="glass-card p-5">
-                                                <div className="flex items-center justify-between mb-3">
-                                                    <span className="text-sm text-surface-100/60">Profile Completion</span>
-                                                    <span className="text-lg font-bold text-primary-400">{profileData.meta.profileCompletion}%</span>
+                                        {/* Completion + preview */}
+                                        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                                            <div className="card col gap-3" style={{ padding: 20 }}>
+                                                <div className="row between ai-center">
+                                                    <span className="kicker">Profile completion</span>
+                                                    <span className="num bignum" style={{ fontSize: 24, color: 'var(--cobalt)' }}>{profileData.meta.profileCompletion}%</span>
                                                 </div>
-                                                <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                                    <div
-                                                        className="h-full bg-gradient-to-r from-primary-600 to-emerald-500 transition-all duration-500"
-                                                        style={{ width: `${profileData.meta.profileCompletion}%` }}
-                                                    />
+                                                <div style={{ width: '100%', height: 6, background: 'var(--bg-2)', borderRadius: 999, overflow: 'hidden' }}>
+                                                    <div style={{ height: '100%', width: `${profileData.meta.profileCompletion}%`, background: 'var(--cobalt)' }} />
                                                 </div>
-                                                <p className="text-xs text-surface-100/40 mt-2">
-                                                    Complete your profile to improve visibility in search results
+                                                <p className="muted" style={{ fontSize: 12, margin: 0 }}>
+                                                    Complete your profile to improve visibility in search results.
                                                 </p>
                                             </div>
-                                            <div className="glass-card p-5 flex items-center justify-between">
-                                                <div>
-                                                    <p className="text-sm text-surface-100/60">Your Public Profile</p>
-                                                    <p className="text-xs text-surface-100/40 mt-1">
+                                            <div className="card row between ai-center" style={{ padding: 20 }}>
+                                                <div className="col gap-1">
+                                                    <span className="kicker">Your public profile</span>
+                                                    <span className="mono" style={{ fontSize: 12, color: 'var(--ink-3)' }}>
                                                         healz.ai/doctor/{profileData.profile.slug}
-                                                    </p>
+                                                    </span>
                                                 </div>
-                                                <a
-                                                    href={`/doctor/${profileData.profile.slug}`}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 text-surface-100/70 text-sm hover:bg-white/10 transition-all"
-                                                >
-                                                    <Eye size={14} /> Preview
+                                                <a href={`/doctor/${profileData.profile.slug}`} target="_blank" rel="noopener noreferrer" className="btn btn-paper btn-sm">
+                                                    ◉ Preview
                                                 </a>
                                             </div>
                                         </div>
 
-                                        {/* Feature Status Cards */}
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                        {/* Feature status */}
+                                        <div
+                                            style={{
+                                                display: 'grid',
+                                                gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+                                                gap: 0,
+                                                border: '1px solid var(--rule)',
+                                                borderRadius: 'var(--r-3)',
+                                                background: 'var(--paper)',
+                                                overflow: 'hidden',
+                                            }}
+                                        >
                                             {[
-                                                { label: 'Conditions', used: profileData.subscription.conditionsUsed, max: profileData.features.maxConditions, icon: Briefcase },
-                                                { label: 'Lead Credits', used: profileData.subscription.leadCreditsUsed, max: profileData.subscription.leadCreditsTotal, icon: Users },
-                                                { label: 'Analytics', enabled: profileData.features.hasAnalytics, icon: TrendingUp },
-                                                { label: 'Tele-Link', enabled: profileData.features.hasTelelink, icon: Video },
+                                                { label: 'Conditions', used: profileData.subscription.conditionsUsed, max: profileData.features.maxConditions, code: 'CO' },
+                                                { label: 'Lead credits', used: profileData.subscription.leadCreditsUsed, max: profileData.subscription.leadCreditsTotal, code: 'LD' },
+                                                { label: 'Analytics', enabled: profileData.features.hasAnalytics, code: 'AN' },
+                                                { label: 'Tele-Link', enabled: profileData.features.hasTelelink, code: 'TL' },
                                             ].map((feat) => (
-                                                <div key={feat.label} className="glass-card p-4">
-                                                    <div className="flex items-center gap-2 mb-2">
-                                                        <feat.icon size={14} className={feat.enabled === false ? 'text-surface-100/30' : 'text-primary-400'} />
-                                                        <span className="text-xs text-surface-100/60">{feat.label}</span>
+                                                <div key={feat.label} className="col gap-2" style={{ padding: 16, borderRight: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
+                                                    <div className="row ai-center gap-2">
+                                                        <span className="spec-icon" style={{ width: 24, height: 24, fontSize: 10 }}>{feat.code}</span>
+                                                        <span className="kicker">{feat.label}</span>
                                                     </div>
                                                     {'max' in feat ? (
-                                                        <p className="text-sm font-medium">
-                                                            {feat.used} / {feat.max}
-                                                        </p>
+                                                        <span className="num" style={{ fontSize: 14, fontWeight: 600 }}>{feat.used} / {feat.max}</span>
                                                     ) : (
-                                                        <p className={`text-sm font-medium flex items-center gap-1 ${feat.enabled ? 'text-emerald-400' : 'text-surface-100/30'}`}>
-                                                            {feat.enabled ? <CheckCircle size={12} /> : <Lock size={12} />}
-                                                            {feat.enabled ? 'Enabled' : 'Premium'}
-                                                        </p>
+                                                        <span className={feat.enabled ? 'pill pill-mint' : 'pill'}>
+                                                            {feat.enabled ? '✓ Enabled' : '🔒 Premium'}
+                                                        </span>
                                                     )}
                                                 </div>
                                             ))}
                                         </div>
 
-                                        {/* Basic Information */}
-                                        <div className="glass-card p-6 space-y-5">
-                                            <h3 className="font-semibold flex items-center gap-2">
-                                                <User size={16} className="text-primary-400" />
-                                                Basic Information
-                                            </h3>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1">Full Name</label>
+                                        {/* Basic info */}
+                                        <div className="card col gap-4" style={{ padding: 24 }}>
+                                            <span className="section-mark">basic information</span>
+                                            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                                                <div className="form-group">
+                                                    <label className="form-label">Full name</label>
                                                     {editingProfile ? (
-                                                        <input
-                                                            type="text"
-                                                            value={String(profileForm.name || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, name: e.target.value })}
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="text" value={String(profileForm.name || '')} onChange={(e) => setProfileForm({ ...profileForm, name: e.target.value })} className="input" />
                                                     ) : (
-                                                        <p className="text-sm">{profileData.profile.name}</p>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>{profileData.profile.name}</p>
                                                     )}
                                                 </div>
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1">Email</label>
-                                                    <p className="text-sm text-surface-100/60">{profileData.profile.email}</p>
+                                                <div className="form-group">
+                                                    <label className="form-label">Email</label>
+                                                    <p className="muted" style={{ fontSize: 14, margin: 0 }}>{profileData.profile.email}</p>
                                                 </div>
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1 flex items-center gap-1">
-                                                        Phone
-                                                        {!profileData.features.canShowPhone && (
-                                                            <span className="text-amber-400/60"><Lock size={10} /></span>
-                                                        )}
+                                                <div className="form-group">
+                                                    <label className="form-label row ai-center gap-1">
+                                                        Phone {!profileData.features.canShowPhone && <span style={{ color: 'var(--lemon-2)' }}>🔒</span>}
                                                     </label>
                                                     {editingProfile ? (
-                                                        <input
-                                                            type="tel"
-                                                            value={String(profileForm.phone || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, phone: e.target.value })}
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="tel" value={String(profileForm.phone || '')} onChange={(e) => setProfileForm({ ...profileForm, phone: e.target.value })} className="input" />
                                                     ) : (
-                                                        <p className="text-sm">
-                                                            {profileData.profile.phone || <span className="text-surface-100/30">Not set</span>}
+                                                        <p style={{ fontSize: 14, margin: 0 }}>
+                                                            {profileData.profile.phone || <span className="muted">Not set</span>}
                                                             {!profileData.features.canShowPhone && profileData.profile.phone && (
-                                                                <span className="text-xs text-amber-400/60 ml-2">(Hidden on profile)</span>
+                                                                <span style={{ fontSize: 12, color: 'var(--lemon-2)', marginLeft: 8 }}>(Hidden on profile)</span>
                                                             )}
                                                         </p>
                                                     )}
                                                 </div>
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1">Years of Experience</label>
+                                                <div className="form-group">
+                                                    <label className="form-label">Years of experience</label>
                                                     {editingProfile ? (
-                                                        <input
-                                                            type="number"
-                                                            min="0"
-                                                            max="80"
-                                                            value={String(profileForm.experienceYears || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, experienceYears: e.target.value })}
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="number" min="0" max="80" value={String(profileForm.experienceYears || '')} onChange={(e) => setProfileForm({ ...profileForm, experienceYears: e.target.value })} className="input" />
                                                     ) : (
-                                                        <p className="text-sm">{profileData.profile.experienceYears || <span className="text-surface-100/30">Not set</span>} years</p>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>{profileData.profile.experienceYears || <span className="muted">Not set</span>} years</p>
                                                     )}
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* Practice Details */}
-                                        <div className="glass-card p-6 space-y-5">
-                                            <h3 className="font-semibold flex items-center gap-2">
-                                                <Building size={16} className="text-primary-400" />
-                                                Practice Details
-                                            </h3>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1">Specialty</label>
+                                        {/* Practice details */}
+                                        <div className="card col gap-4" style={{ padding: 24 }}>
+                                            <span className="section-mark">practice details</span>
+                                            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                                                <div className="form-group">
+                                                    <label className="form-label">Specialty</label>
                                                     {editingProfile ? (
-                                                        <input
-                                                            type="text"
-                                                            value={String(profileForm.specialty || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, specialty: e.target.value })}
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="text" value={String(profileForm.specialty || '')} onChange={(e) => setProfileForm({ ...profileForm, specialty: e.target.value })} className="input" />
                                                     ) : (
-                                                        <p className="text-sm">{profileData.profile.specialty || <span className="text-surface-100/30">Not set</span>}</p>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>{profileData.profile.specialty || <span className="muted">Not set</span>}</p>
                                                     )}
                                                 </div>
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1">City</label>
+                                                <div className="form-group">
+                                                    <label className="form-label">City</label>
                                                     {editingProfile ? (
-                                                        <input
-                                                            type="text"
-                                                            value={String(profileForm.city || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, city: e.target.value })}
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="text" value={String(profileForm.city || '')} onChange={(e) => setProfileForm({ ...profileForm, city: e.target.value })} className="input" />
                                                     ) : (
-                                                        <p className="text-sm">{profileData.profile.city || <span className="text-surface-100/30">Not set</span>}</p>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>{profileData.profile.city || <span className="muted">Not set</span>}</p>
                                                     )}
                                                 </div>
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1">Clinic / Hospital Name</label>
+                                                <div className="form-group">
+                                                    <label className="form-label">Clinic / hospital name</label>
                                                     {editingProfile ? (
-                                                        <input
-                                                            type="text"
-                                                            value={String(profileForm.clinicName || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, clinicName: e.target.value })}
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="text" value={String(profileForm.clinicName || '')} onChange={(e) => setProfileForm({ ...profileForm, clinicName: e.target.value })} className="input" />
                                                     ) : (
-                                                        <p className="text-sm">{profileData.profile.clinicName || <span className="text-surface-100/30">Not set</span>}</p>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>{profileData.profile.clinicName || <span className="muted">Not set</span>}</p>
                                                     )}
                                                 </div>
-                                                <div>
-                                                    <label className="block text-xs text-surface-100/50 mb-1">Consultation Fee (₹)</label>
+                                                <div className="form-group">
+                                                    <label className="form-label">Consultation fee (₹)</label>
                                                     {editingProfile ? (
-                                                        <input
-                                                            type="number"
-                                                            min="0"
-                                                            value={String(profileForm.consultationFee || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, consultationFee: e.target.value })}
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="number" min="0" value={String(profileForm.consultationFee || '')} onChange={(e) => setProfileForm({ ...profileForm, consultationFee: e.target.value })} className="input" />
                                                     ) : (
-                                                        <p className="text-sm">
-                                                            {profileData.profile.consultationFee
-                                                                ? `₹${profileData.profile.consultationFee.toLocaleString()}`
-                                                                : <span className="text-surface-100/30">Not set</span>}
+                                                        <p style={{ fontSize: 14, margin: 0 }}>
+                                                            {profileData.profile.consultationFee ? `₹${profileData.profile.consultationFee.toLocaleString()}` : <span className="muted">Not set</span>}
                                                         </p>
                                                     )}
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* Premium Features */}
-                                        <div className={`glass-card p-6 space-y-5 ${!profileData.subscription.isPremium ? 'border border-amber-500/20' : ''}`}>
-                                            <div className="flex items-center justify-between">
-                                                <h3 className="font-semibold flex items-center gap-2">
-                                                    <Zap size={16} className="text-amber-400" />
-                                                    Premium Features
-                                                </h3>
+                                        {/* Premium features */}
+                                        <div className="card col gap-4" style={{ padding: 24, borderColor: !profileData.subscription.isPremium ? 'rgba(230, 185, 40, .40)' : 'var(--rule)' }}>
+                                            <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 12 }}>
+                                                <span className="section-mark">premium features</span>
                                                 {!profileData.subscription.isPremium && (
-                                                    <button
-                                                        onClick={() => handleUpgrade('premium')}
-                                                        className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 text-xs hover:bg-amber-500/30 transition-all"
-                                                    >
-                                                        <Zap size={12} /> Upgrade to Unlock
+                                                    <button onClick={() => handleUpgrade('premium')} className="btn btn-sm" style={{ background: 'var(--lemon-50)', color: '#8C6A00', borderColor: 'rgba(230, 185, 40, .40)' }}>
+                                                        ★ Upgrade to unlock
                                                     </button>
                                                 )}
                                             </div>
 
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <div className="relative">
-                                                    <label className="block text-xs text-surface-100/50 mb-1 flex items-center gap-1">
-                                                        <Globe size={10} />
-                                                        Website URL
-                                                        {!profileData.features.canShowWebsite && <Lock size={10} className="text-amber-400/60" />}
+                                            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                                                <div className="form-group">
+                                                    <label className="form-label row ai-center gap-1">
+                                                        🌐 Website URL {!profileData.features.canShowWebsite && <span style={{ color: 'var(--lemon-2)' }}>🔒</span>}
                                                     </label>
                                                     {editingProfile && profileData.features.canShowWebsite ? (
-                                                        <input
-                                                            type="url"
-                                                            value={String(profileForm.websiteUrl || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, websiteUrl: e.target.value })}
-                                                            placeholder="https://your-website.com"
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="url" value={String(profileForm.websiteUrl || '')} onChange={(e) => setProfileForm({ ...profileForm, websiteUrl: e.target.value })} placeholder="https://your-website.com" className="input" />
                                                     ) : (
-                                                        <p className={`text-sm ${!profileData.features.canShowWebsite ? 'text-surface-100/30' : ''}`}>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>
                                                             {profileData.features.canShowWebsite
-                                                                ? (profileData.profile.websiteUrl || <span className="text-surface-100/30">Not set</span>)
-                                                                : 'Upgrade to Premium to add website'
-                                                            }
+                                                                ? (profileData.profile.websiteUrl || <span className="muted">Not set</span>)
+                                                                : <span className="muted">Upgrade to Premium to add website</span>}
                                                         </p>
                                                     )}
-                                                    {!profileData.features.canShowWebsite && (
-                                                        <div className="absolute inset-0 bg-surface-900/50 backdrop-blur-[1px] rounded-lg" />
-                                                    )}
                                                 </div>
-                                                <div className="relative">
-                                                    <label className="block text-xs text-surface-100/50 mb-1 flex items-center gap-1">
-                                                        <MapPin size={10} />
-                                                        Clinic Address
-                                                        {!profileData.features.canShowClinicAddress && <Lock size={10} className="text-amber-400/60" />}
+                                                <div className="form-group">
+                                                    <label className="form-label row ai-center gap-1">
+                                                        📍 Clinic address {!profileData.features.canShowClinicAddress && <span style={{ color: 'var(--lemon-2)' }}>🔒</span>}
                                                     </label>
                                                     {editingProfile && profileData.features.canShowClinicAddress ? (
-                                                        <input
-                                                            type="text"
-                                                            value={String(profileForm.clinicAddress || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, clinicAddress: e.target.value })}
-                                                            placeholder="Full clinic address"
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none"
-                                                        />
+                                                        <input type="text" value={String(profileForm.clinicAddress || '')} onChange={(e) => setProfileForm({ ...profileForm, clinicAddress: e.target.value })} placeholder="Full clinic address" className="input" />
                                                     ) : (
-                                                        <p className={`text-sm ${!profileData.features.canShowClinicAddress ? 'text-surface-100/30' : ''}`}>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>
                                                             {profileData.features.canShowClinicAddress
-                                                                ? (profileData.profile.clinicAddress || <span className="text-surface-100/30">Not set</span>)
-                                                                : 'Upgrade to show full address'
-                                                            }
+                                                                ? (profileData.profile.clinicAddress || <span className="muted">Not set</span>)
+                                                                : <span className="muted">Upgrade to show full address</span>}
                                                         </p>
-                                                    )}
-                                                    {!profileData.features.canShowClinicAddress && (
-                                                        <div className="absolute inset-0 bg-surface-900/50 backdrop-blur-[1px] rounded-lg" />
                                                     )}
                                                 </div>
-                                                <div className="relative md:col-span-2">
-                                                    <label className="block text-xs text-surface-100/50 mb-1 flex items-center gap-1">
-                                                        Bio / About
-                                                        {!profileData.features.canEditBio && <Lock size={10} className="text-amber-400/60" />}
+                                                <div className="form-group" style={{ gridColumn: '1 / -1' }}>
+                                                    <label className="form-label row ai-center gap-1">
+                                                        Bio / about {!profileData.features.canEditBio && <span style={{ color: 'var(--lemon-2)' }}>🔒</span>}
                                                     </label>
                                                     {editingProfile && profileData.features.canEditBio ? (
-                                                        <textarea
-                                                            value={String(profileForm.bio || '')}
-                                                            onChange={(e) => setProfileForm({ ...profileForm, bio: e.target.value })}
-                                                            rows={4}
-                                                            maxLength={2000}
-                                                            placeholder="Tell patients about your experience, approach to care, and specializations..."
-                                                            className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm focus:border-primary-500/50 focus:outline-none resize-none"
-                                                        />
+                                                        <textarea value={String(profileForm.bio || '')} onChange={(e) => setProfileForm({ ...profileForm, bio: e.target.value })} rows={4} maxLength={2000} placeholder="Tell patients about your experience, approach to care, and specializations…" className="textarea" />
                                                     ) : (
-                                                        <p className={`text-sm ${!profileData.features.canEditBio ? 'text-surface-100/30' : ''}`}>
+                                                        <p style={{ fontSize: 14, margin: 0 }}>
                                                             {profileData.features.canEditBio
-                                                                ? (profileData.profile.bio || <span className="text-surface-100/30">Not set</span>)
-                                                                : 'Upgrade to Premium to add a detailed bio'
-                                                            }
+                                                                ? (profileData.profile.bio || <span className="muted">Not set</span>)
+                                                                : <span className="muted">Upgrade to Premium to add a detailed bio</span>}
                                                         </p>
-                                                    )}
-                                                    {!profileData.features.canEditBio && (
-                                                        <div className="absolute inset-0 bg-surface-900/50 backdrop-blur-[1px] rounded-lg" />
                                                     )}
                                                 </div>
                                             </div>
 
-                                            {/* Premium Feature Checklist */}
                                             {!profileData.subscription.isPremium && (
-                                                <div className="mt-4 p-4 rounded-xl bg-amber-500/5 border border-amber-500/10">
-                                                    <p className="text-sm text-amber-300/80 mb-3">Upgrade to Premium to unlock:</p>
-                                                    <div className="grid grid-cols-2 gap-2 text-xs text-surface-100/60">
+                                                <div
+                                                    className="card-flat col gap-2"
+                                                    style={{ padding: 16, marginTop: 8, borderColor: 'rgba(230, 185, 40, .40)', background: 'var(--lemon-50)' }}
+                                                >
+                                                    <p style={{ fontSize: 13, color: '#8C6A00', margin: 0, fontWeight: 500 }}>Upgrade to Premium to unlock:</p>
+                                                    <div className="grid grid-cols-2" style={{ gap: 8, fontSize: 12, color: '#8C6A00' }}>
                                                         {[
                                                             'Display website URL on profile',
                                                             'Show full clinic address',
@@ -952,9 +844,8 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                                                             'Tele-Link video consults',
                                                             'AI-powered profile optimization',
                                                         ].map((feat) => (
-                                                            <div key={feat} className="flex items-center gap-2">
-                                                                <CheckCircle size={10} className="text-amber-400/60" />
-                                                                {feat}
+                                                            <div key={feat} className="row ai-center gap-2">
+                                                                <span>✓</span> {feat}
                                                             </div>
                                                         ))}
                                                     </div>
@@ -966,50 +857,38 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                             </div>
                         )}
 
-                        {/* Subscription Tab */}
+                        {/* Subscription */}
                         {tab === 'subscription' && (
-                            <div className="space-y-6">
-                                <h2 className="text-xl font-semibold flex items-center gap-2">
-                                    <Zap size={20} className="text-primary-400" />
-                                    Subscription & Billing
-                                </h2>
+                            <div className="col gap-5">
+                                <h2 className="display" style={{ fontSize: 20, margin: 0, fontWeight: 600 }}>Subscription &amp; billing</h2>
 
-                                {/* Current Status */}
                                 {profileData?.subscription && (
-                                    <div className="glass-card p-5 flex items-center justify-between">
-                                        <div className="flex items-center gap-4">
-                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                                                profileData.subscription.isPremium ? 'bg-amber-500/20' : 'bg-white/5'
-                                            }`}>
-                                                <Zap size={24} className={profileData.subscription.isPremium ? 'text-amber-400' : 'text-surface-100/40'} />
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold capitalize">{profileData.subscription.tier} Plan</p>
-                                                <p className="text-xs text-surface-100/50">
-                                                    {profileData.subscription.periodEnd
-                                                        ? `Renews ${new Date(profileData.subscription.periodEnd).toLocaleDateString()}`
-                                                        : 'No expiration'
-                                                    }
-                                                </p>
+                                    <div className="card row between ai-center" style={{ padding: 20, flexWrap: 'wrap', gap: 16 }}>
+                                        <div className="row ai-center gap-4">
+                                            <span className="spec-icon" style={{ background: profileData.subscription.isPremium ? 'var(--lemon-2)' : 'var(--ink-4)', width: 44, height: 44 }}>★</span>
+                                            <div className="col gap-1">
+                                                <span style={{ fontWeight: 600, textTransform: 'capitalize' }}>{profileData.subscription.tier} plan</span>
+                                                <span className="muted" style={{ fontSize: 12 }}>
+                                                    {profileData.subscription.periodEnd ? `Renews ${new Date(profileData.subscription.periodEnd).toLocaleDateString()}` : 'No expiration'}
+                                                </span>
                                             </div>
                                         </div>
-                                        <div className="text-right">
-                                            <p className="text-sm text-surface-100/60">Lead Credits</p>
-                                            <p className="font-bold">
+                                        <div className="col ai-end gap-1">
+                                            <span className="kicker">Lead credits</span>
+                                            <span className="num bignum" style={{ fontSize: 22 }}>
                                                 {profileData.subscription.leadCreditsUsed} / {profileData.subscription.leadCreditsTotal}
-                                            </p>
+                                            </span>
                                         </div>
                                     </div>
                                 )}
 
-                                {/* Plan Comparison */}
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                {/* Plan comparison */}
+                                <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 16 }}>
                                     {[
                                         {
                                             name: 'Free',
                                             price: '₹0',
                                             priceNote: 'forever',
-                                            conditions: 2,
                                             features: [
                                                 { text: 'Basic profile listing', included: true },
                                                 { text: '2 condition specialties', included: true },
@@ -1029,7 +908,6 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                                             name: 'Premium',
                                             price: '₹4,999',
                                             priceNote: '/month',
-                                            conditions: 15,
                                             features: [
                                                 { text: 'Priority profile listing', included: true },
                                                 { text: '15 condition specialties', included: true },
@@ -1050,7 +928,6 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                                             name: 'Enterprise',
                                             price: '₹19,999',
                                             priceNote: '/month',
-                                            conditions: 1000,
                                             features: [
                                                 { text: 'Featured "Top Doctor" badge', included: true },
                                                 { text: 'Unlimited condition specialties', included: true },
@@ -1069,64 +946,76 @@ function DashboardContent({ initialDoctorId, initialDoctorName }: DashboardConte
                                     ].map((plan) => (
                                         <div
                                             key={plan.name}
-                                            className={`glass-card p-6 space-y-4 transition-all ${plan.highlighted ? 'border-primary-500/30 md:scale-105 relative' : ''
-                                                } ${plan.isActive ? 'ring-2 ring-emerald-500/30' : ''}`}
+                                            className="card col gap-3"
+                                            style={{
+                                                padding: 24,
+                                                position: 'relative',
+                                                borderColor: plan.isActive ? 'var(--mint)' : plan.highlighted ? 'var(--cobalt)' : 'var(--rule)',
+                                                borderWidth: plan.isActive || plan.highlighted ? 2 : 1,
+                                            }}
                                         >
                                             {plan.highlighted && (
-                                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-primary-600 text-xs font-medium">
-                                                    Most Popular
-                                                </div>
+                                                <span
+                                                    className="pill pill-cobalt"
+                                                    style={{ position: 'absolute', top: -12, left: '50%', transform: 'translateX(-50%)' }}
+                                                >
+                                                    Most popular
+                                                </span>
                                             )}
-                                            <div>
-                                                <h3 className="text-lg font-bold">{plan.name}</h3>
-                                                <p className="text-2xl font-bold mt-1">
+                                            <div className="col gap-1">
+                                                <span className="display" style={{ fontSize: 18, fontWeight: 600 }}>{plan.name}</span>
+                                                <span className="num bignum" style={{ fontSize: 28 }}>
                                                     {plan.price}
-                                                    <span className="text-sm font-normal text-surface-100/40"> {plan.priceNote}</span>
-                                                </p>
+                                                    <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--ink-4)', letterSpacing: 'normal' }}> {plan.priceNote}</span>
+                                                </span>
                                             </div>
-                                            <ul className="space-y-2">
+                                            <ul className="clean col gap-2">
                                                 {plan.features.map((f) => (
-                                                    <li key={f.text} className={`flex items-center gap-2 text-sm ${f.included ? 'text-surface-100/70' : 'text-surface-100/30'}`}>
-                                                        {f.included ? (
-                                                            <CheckCircle size={12} className="text-emerald-400" />
-                                                        ) : (
-                                                            <X size={12} className="text-surface-100/20" />
-                                                        )}
+                                                    <li key={f.text} className="row ai-center gap-2" style={{ fontSize: 13, color: f.included ? 'var(--ink-2)' : 'var(--ink-4)' }}>
+                                                        <span style={{ color: f.included ? 'var(--mint-3)' : 'var(--ink-5)' }}>{f.included ? '✓' : '×'}</span>
                                                         {f.text}
                                                     </li>
                                                 ))}
                                             </ul>
                                             <button
                                                 onClick={() => !plan.isActive && handleUpgrade(plan.name)}
-                                                className={`w-full py-2.5 rounded-xl text-sm font-medium transition-all ${plan.isActive
-                                                    ? 'bg-emerald-600/20 text-emerald-300 cursor-default'
-                                                    : plan.highlighted
-                                                        ? 'bg-primary-600 text-white hover:bg-primary-500'
-                                                        : 'bg-white/5 text-surface-100/70 hover:bg-white/10'
-                                                    }`}
                                                 disabled={plan.isActive}
+                                                className={plan.isActive ? 'btn btn-sm' : plan.highlighted ? 'btn btn-cobalt' : 'btn btn-paper'}
+                                                style={{
+                                                    width: '100%',
+                                                    justifyContent: 'center',
+                                                    background: plan.isActive ? 'var(--mint-50)' : undefined,
+                                                    color: plan.isActive ? 'var(--mint-3)' : undefined,
+                                                    borderColor: plan.isActive ? 'rgba(40, 212, 168, .35)' : undefined,
+                                                }}
                                             >
-                                                {plan.isActive ? '✓ Current Plan' : plan.cta}
+                                                {plan.isActive ? '✓ Current plan' : plan.cta}
                                             </button>
                                         </div>
                                     ))}
                                 </div>
 
                                 {/* FAQ */}
-                                <div className="glass-card p-6 space-y-4">
-                                    <h3 className="font-semibold">Frequently Asked Questions</h3>
-                                    <div className="space-y-3 text-sm">
-                                        <div>
-                                            <p className="text-surface-100/80 font-medium">What are lead credits?</p>
-                                            <p className="text-surface-100/50 mt-1">Lead credits let you reveal contact information for patients who are searching for specialists in your area. Each reveal costs 1 credit.</p>
+                                <div className="card col gap-4" style={{ padding: 24 }}>
+                                    <span className="section-mark">frequently asked questions</span>
+                                    <div className="col gap-3">
+                                        <div className="col gap-1">
+                                            <p style={{ fontSize: 14, fontWeight: 500, margin: 0 }}>What are lead credits?</p>
+                                            <p className="muted" style={{ fontSize: 13, margin: 0 }}>
+                                                Lead credits let you reveal contact information for patients who are searching for specialists in your area. Each reveal costs 1 credit.
+                                            </p>
                                         </div>
-                                        <div>
-                                            <p className="text-surface-100/80 font-medium">Can I change plans anytime?</p>
-                                            <p className="text-surface-100/50 mt-1">Yes, you can upgrade or downgrade at any time. Upgrades take effect immediately, and downgrades apply at the end of your billing cycle.</p>
+                                        <div className="col gap-1">
+                                            <p style={{ fontSize: 14, fontWeight: 500, margin: 0 }}>Can I change plans anytime?</p>
+                                            <p className="muted" style={{ fontSize: 13, margin: 0 }}>
+                                                Yes, you can upgrade or downgrade at any time. Upgrades take effect immediately, and downgrades apply at the end of your billing cycle.
+                                            </p>
                                         </div>
-                                        <div>
-                                            <p className="text-surface-100/80 font-medium">What payment methods do you accept?</p>
-                                            <p className="text-surface-100/50 mt-1">We accept all major credit/debit cards, UPI, and net banking through our secure payment partner Razorpay.</p>
+                                        <div className="col gap-1">
+                                            <p style={{ fontSize: 14, fontWeight: 500, margin: 0 }}>What payment methods do you accept?</p>
+                                            <p className="muted" style={{ fontSize: 13, margin: 0 }}>
+                                                We accept all major credit/debit cards, UPI, and net banking through our secure payment partner Razorpay.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

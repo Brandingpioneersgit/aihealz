@@ -68,10 +68,8 @@ export default async function CategoryPage({ params, searchParams }: PageProps) 
     notFound();
   }
 
-  // Get category IDs to search (include children)
   const categoryIds = [category.id, ...category.children.map((c) => c.id)];
 
-  // Fetch tests
   const [tests, totalCount] = await Promise.all([
     prisma.diagnosticTest.findMany({
       where: {
@@ -103,7 +101,6 @@ export default async function CategoryPage({ params, searchParams }: PageProps) 
     return priceUsd ? `$${priceUsd.toLocaleString('en-US')}` : null;
   };
 
-  // Structured data for SEO
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -128,176 +125,241 @@ export default async function CategoryPage({ params, searchParams }: PageProps) 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-emerald-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 80px' }} className="col gap-7">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-            <Link href="/tests" className="hover:text-emerald-400 transition-colors">Tests</Link>
+          <nav
+            className="row gap-2 mono"
+            style={{
+              fontSize: 11,
+              color: 'var(--ink-3)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              flexWrap: 'wrap',
+            }}
+            aria-label="Breadcrumb"
+          >
+            <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/tests" style={{ color: 'var(--ink-3)' }}>Tests</Link>
             {category.parent && (
               <>
-                <span>/</span>
-                <Link href={`/tests/category/${category.parent.slug}`} className="hover:text-emerald-400 transition-colors">
+                <span aria-hidden="true">/</span>
+                <Link href={`/tests/category/${category.parent.slug}`} style={{ color: 'var(--ink-3)' }}>
                   {category.parent.name}
                 </Link>
               </>
             )}
-            <span>/</span>
-            <span className="text-slate-400">{category.name}</span>
+            <span aria-hidden="true">/</span>
+            <span style={{ color: 'var(--ink)' }}>{category.name}</span>
           </nav>
 
           {/* Hero */}
-          <div className="mb-12">
-            <div className="flex items-center gap-4 mb-4">
-              {category.icon && <span className="text-4xl">{category.icon}</span>}
-              <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-                {category.name}
+          <header className="col gap-4">
+            <span className="section-mark">tests / {category.name.toLowerCase()}</span>
+            <div className="row gap-4 ai-center" style={{ flexWrap: 'wrap' }}>
+              {category.icon && (
+                <span
+                  className="display"
+                  style={{ fontSize: 40, lineHeight: 1 }}
+                  aria-hidden="true"
+                >
+                  {category.icon}
+                </span>
+              )}
+              <h1
+                className="display"
+                style={{
+                  fontSize: 'clamp(36px, 6vw, 72px)',
+                  lineHeight: 0.95,
+                  letterSpacing: '-0.045em',
+                  margin: 0,
+                  fontWeight: 600,
+                }}
+              >
+                <span style={{ color: 'var(--cobalt)' }}>{category.name}</span>
+                <span style={{ color: 'var(--orange)' }}>.</span>
               </h1>
             </div>
             {category.description && (
-              <p className="text-lg text-slate-400 max-w-3xl">{category.description}</p>
+              <p className="lede" style={{ fontSize: 'clamp(15px, 1.5vw, 19px)', maxWidth: 760, margin: 0 }}>
+                {category.description}
+              </p>
             )}
-            <p className="text-sm text-slate-500 mt-4">
+            <span
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: 'var(--ink-3)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
               {totalCount.toLocaleString()} tests available
-            </p>
-          </div>
+            </span>
+          </header>
 
           {/* Subcategories */}
           {category.children.length > 0 && (
-            <div className="mb-10">
-              <h2 className="text-lg font-semibold text-white mb-4">Subcategories</h2>
-              <div className="flex flex-wrap gap-3">
+            <section className="col gap-3" aria-labelledby="subcat-heading">
+              <h2
+                id="subcat-heading"
+                className="display"
+                style={{ fontSize: 16, margin: 0, fontWeight: 600, letterSpacing: '-0.015em' }}
+              >
+                Subcategories
+              </h2>
+              <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                 {category.children.map((child) => (
                   <Link
                     key={child.id}
                     href={`/tests/category/${child.slug}`}
-                    className="px-4 py-2 rounded-xl bg-slate-800/80 border border-white/5 hover:border-emerald-500/30 hover:bg-slate-800 transition-all text-sm text-slate-300 hover:text-white"
+                    className="btn btn-sm btn-paper"
                   >
                     {child.name}
-                    <span className="ml-2 text-xs text-slate-500">({child._count.tests})</span>
+                    <span className="mono" style={{ fontSize: 10, color: 'var(--ink-3)' }}>
+                      ({child._count.tests})
+                    </span>
                   </Link>
                 ))}
               </div>
-            </div>
+            </section>
           )}
 
-          {/* Tests Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-10">
-            {tests.map((test) => (
-              <Link
-                key={test.id}
-                href={`/tests/${test.slug}`}
-                className="group bg-slate-900/50 backdrop-blur-sm border border-white/5 hover:border-emerald-500/30 rounded-2xl p-5 transition-all hover:bg-slate-800/50"
+          {/* Tests grid */}
+          {tests.length > 0 ? (
+            <section className="col gap-4" aria-labelledby="tests-heading">
+              <h2 id="tests-heading" className="sr-only">All tests</h2>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                  gap: 0,
+                  border: '1px solid var(--rule)',
+                  borderRadius: 'var(--r-3)',
+                  background: 'var(--paper)',
+                  overflow: 'hidden',
+                }}
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="p-2 rounded-lg bg-emerald-500/10">
-                    <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
-                  </div>
-                  {test.homeCollectionPossible && (
-                    <span className="text-xs px-2 py-1 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
-                      Home
-                    </span>
-                  )}
-                </div>
-
-                <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors mb-1 line-clamp-2">
-                  {test.shortName || test.name}
-                </h3>
-
-                {test.shortName && test.shortName !== test.name && (
-                  <p className="text-xs text-slate-500 mb-2 line-clamp-1">{test.name}</p>
-                )}
-
-                <div className="flex items-center justify-between pt-3 border-t border-white/5 mt-auto">
-                  {test.avgPriceInr && (
-                    <span className="text-sm font-semibold text-emerald-400">
-                      {formatPrice(Number(test.avgPriceInr), Number(test.avgPriceUsd))}
-                    </span>
-                  )}
-                  {test._count.prices > 0 ? (
-                    <span className="text-xs text-slate-500">
-                      {test._count.prices} provider{test._count.prices > 1 ? 's' : ''}
-                    </span>
-                  ) : (
-                    <span className="text-xs text-slate-600">Coming soon</span>
-                  )}
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2">
-              {page > 1 && (
-                <Link
-                  href={`/tests/category/${slug}?page=${page - 1}`}
-                  className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors"
-                >
-                  Previous
-                </Link>
-              )}
-
-              <div className="flex items-center gap-1">
-                {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-                  let pageNum: number;
-                  if (totalPages <= 5) {
-                    pageNum = i + 1;
-                  } else if (page <= 3) {
-                    pageNum = i + 1;
-                  } else if (page >= totalPages - 2) {
-                    pageNum = totalPages - 4 + i;
-                  } else {
-                    pageNum = page - 2 + i;
-                  }
-
+                {tests.map((test, i, arr) => {
+                  const cols = 4;
+                  const isLastCol = (i + 1) % cols === 0;
+                  const isLastRow = i >= arr.length - cols;
+                  const price = formatPrice(Number(test.avgPriceInr), Number(test.avgPriceUsd));
                   return (
                     <Link
-                      key={pageNum}
-                      href={`/tests/category/${slug}?page=${pageNum}`}
-                      className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${
-                        page === pageNum
-                          ? 'bg-emerald-500 text-white'
-                          : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                      }`}
+                      key={test.id}
+                      href={`/tests/${test.slug}`}
+                      className="col gap-3"
+                      style={{
+                        padding: '20px 22px',
+                        borderRight: isLastCol ? 'none' : '1px solid var(--rule-2)',
+                        borderBottom: isLastRow ? 'none' : '1px solid var(--rule-2)',
+                      }}
                     >
-                      {pageNum}
+                      <div className="row between ai-center">
+                        <div className="spec-icon" style={{ background: 'var(--cobalt)' }} aria-hidden="true">
+                          T
+                        </div>
+                        {test.homeCollectionPossible && (
+                          <span className="pill pill-mint">home</span>
+                        )}
+                      </div>
+                      <div className="col gap-1">
+                        <h3
+                          className="display truncate-2"
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 500,
+                            margin: 0,
+                            letterSpacing: '-0.015em',
+                            color: 'var(--ink)',
+                          }}
+                        >
+                          {test.shortName || test.name}
+                        </h3>
+                        {test.shortName && test.shortName !== test.name && (
+                          <p className="muted" style={{ fontSize: 12, margin: 0 }}>{test.name}</p>
+                        )}
+                      </div>
+                      <div className="row between ai-center hairline-t" style={{ paddingTop: 12, marginTop: 'auto' }}>
+                        {price ? (
+                          <span className="num" style={{ fontSize: 14, color: 'var(--cobalt)', fontWeight: 500 }}>
+                            {price}
+                          </span>
+                        ) : (
+                          <span className="muted" style={{ fontSize: 12 }}>Price on request</span>
+                        )}
+                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-3)' }}>
+                          {test._count.prices > 0
+                            ? `${test._count.prices} provider${test._count.prices > 1 ? 's' : ''}`
+                            : 'Coming soon'}
+                        </span>
+                      </div>
                     </Link>
                   );
                 })}
               </div>
 
-              {page < totalPages && (
-                <Link
-                  href={`/tests/category/${slug}?page=${page + 1}`}
-                  className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors"
-                >
-                  Next
-                </Link>
-              )}
-            </div>
-          )}
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="row gap-2 center ai-center" style={{ marginTop: 16, flexWrap: 'wrap' }}>
+                  {page > 1 && (
+                    <Link
+                      href={`/tests/category/${slug}?page=${page - 1}`}
+                      className="btn btn-paper btn-sm"
+                    >
+                      ← Previous
+                    </Link>
+                  )}
+                  <div className="row gap-1">
+                    {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                      let pageNum: number;
+                      if (totalPages <= 5) pageNum = i + 1;
+                      else if (page <= 3) pageNum = i + 1;
+                      else if (page >= totalPages - 2) pageNum = totalPages - 4 + i;
+                      else pageNum = page - 2 + i;
 
-          {/* Empty state */}
-          {tests.length === 0 && (
-            <div className="text-center py-16">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-slate-800 flex items-center justify-center">
-                <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No tests found</h3>
-              <p className="text-slate-400 mb-6">We&apos;re adding tests to this category soon.</p>
-              <Link
-                href="/tests"
-                className="inline-flex items-center px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-colors"
+                      const active = page === pageNum;
+                      return (
+                        <Link
+                          key={pageNum}
+                          href={`/tests/category/${slug}?page=${pageNum}`}
+                          className={active ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
+                          style={{ minWidth: 36, justifyContent: 'center' }}
+                          aria-current={active ? 'page' : undefined}
+                        >
+                          {pageNum}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  {page < totalPages && (
+                    <Link
+                      href={`/tests/category/${slug}?page=${page + 1}`}
+                      className="btn btn-paper btn-sm"
+                    >
+                      Next →
+                    </Link>
+                  )}
+                </div>
+              )}
+            </section>
+          ) : (
+            <div className="card col gap-4 ai-center" style={{ padding: 48, textAlign: 'center' }}>
+              <span className="pill">no results</span>
+              <h3
+                className="display"
+                style={{ fontSize: 20, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
               >
-                Browse All Tests
+                No tests yet in this category
+                <span style={{ color: 'var(--orange)' }}>.</span>
+              </h3>
+              <p className="muted" style={{ fontSize: 14, margin: 0, maxWidth: 360 }}>
+                We&apos;re adding tests to this category soon.
+              </p>
+              <Link href="/tests" className="btn btn-cobalt">
+                Browse all tests →
               </Link>
             </div>
           )}

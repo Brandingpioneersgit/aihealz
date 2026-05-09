@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Advertising Pricing | AIHealz',
+    title: 'Advertising pricing | aihealz',
     description: 'Flexible advertising pricing for healthcare businesses. CPM, CPC, and flat-rate options available.',
     openGraph: {
-        title: 'Advertising Pricing | AIHealz',
-        description: 'Flexible advertising pricing for healthcare businesses on the world\'s biggest multilingual healthcare platform.',
+        title: 'Advertising pricing | aihealz',
+        description: "Flexible advertising pricing for healthcare businesses on the world's biggest multilingual healthcare platform.",
         url: 'https://aihealz.com/advertise/pricing',
     },
 };
@@ -29,9 +29,8 @@ const PRICING_TIERS = [
             { text: 'Dedicated account manager', included: false },
             { text: 'Custom reporting', included: false },
         ],
-        cta: 'Start Free Trial',
+        cta: 'Start free trial',
         popular: false,
-        color: 'slate',
     },
     {
         name: 'Professional',
@@ -50,14 +49,13 @@ const PRICING_TIERS = [
             { text: 'Conversion tracking', included: true },
             { text: 'API access', included: false },
         ],
-        cta: 'Get Started',
+        cta: 'Get started',
         popular: true,
-        color: 'teal',
     },
     {
         name: 'Enterprise',
         price: 'Custom',
-        unit: 'Flat Rate',
+        unit: 'flat rate',
         minSpend: 'Custom',
         description: 'For hospitals and healthcare networks',
         features: [
@@ -71,21 +69,20 @@ const PRICING_TIERS = [
             { text: 'Multi-location support', included: true },
             { text: 'Custom integrations', included: true },
         ],
-        cta: 'Contact Sales',
+        cta: 'Contact sales',
         popular: false,
-        color: 'blue',
     },
 ];
 
 const PLACEMENT_PRICING = [
-    { placement: 'Condition Page Sidebar', size: '300x250', cpm: '$0.50', cpc: '$0.25', flatRate: '$200/mo' },
-    { placement: 'Condition Page Inline', size: 'Native', cpm: '$0.75', cpc: '$0.35', flatRate: '$300/mo' },
-    { placement: 'Homepage Hero', size: '970x250', cpm: '$1.50', cpc: '$0.75', flatRate: '$1,000/mo' },
-    { placement: 'Homepage Featured', size: 'Card', cpm: '$1.00', cpc: '$0.50', flatRate: '$750/mo' },
-    { placement: 'Search Results Top', size: '728x90', cpm: '$0.80', cpc: '$0.40', flatRate: '$400/mo' },
-    { placement: 'Doctor Profile Sidebar', size: '300x250', cpm: '$0.60', cpc: '$0.30', flatRate: '$250/mo' },
-    { placement: 'Global Header Banner', size: '970x90', cpm: '$2.00', cpc: '$1.00', flatRate: '$2,000/mo' },
-    { placement: 'Global Footer Banner', size: '970x90', cpm: '$0.40', cpc: '$0.20', flatRate: '$150/mo' },
+    { placement: 'Condition page sidebar', size: '300×250', cpm: '$0.50', cpc: '$0.25', flatRate: '$200/mo' },
+    { placement: 'Condition page inline', size: 'Native', cpm: '$0.75', cpc: '$0.35', flatRate: '$300/mo' },
+    { placement: 'Homepage hero', size: '970×250', cpm: '$1.50', cpc: '$0.75', flatRate: '$1,000/mo' },
+    { placement: 'Homepage featured', size: 'Card', cpm: '$1.00', cpc: '$0.50', flatRate: '$750/mo' },
+    { placement: 'Search results top', size: '728×90', cpm: '$0.80', cpc: '$0.40', flatRate: '$400/mo' },
+    { placement: 'Doctor profile sidebar', size: '300×250', cpm: '$0.60', cpc: '$0.30', flatRate: '$250/mo' },
+    { placement: 'Global header banner', size: '970×90', cpm: '$2.00', cpc: '$1.00', flatRate: '$2,000/mo' },
+    { placement: 'Global footer banner', size: '970×90', cpm: '$0.40', cpc: '$0.20', flatRate: '$150/mo' },
 ];
 
 const REGIONAL_MULTIPLIERS = [
@@ -95,248 +92,504 @@ const REGIONAL_MULTIPLIERS = [
     { region: 'Canada', multiplier: '1.2x' },
     { region: 'UAE', multiplier: '1.2x' },
     { region: 'Germany', multiplier: '1.1x' },
-    { region: 'India', multiplier: '1.0x (Base)' },
+    { region: 'India', multiplier: '1.0x · base' },
     { region: 'Nigeria', multiplier: '0.8x' },
     { region: 'Kenya', multiplier: '0.8x' },
 ];
 
+const FAQS = [
+    {
+        q: 'What is CPM vs CPC billing?',
+        a: 'CPM (Cost Per Mille) charges you for every 1,000 impressions your ad receives, regardless of clicks. CPC (Cost Per Click) only charges when someone clicks. CPM is better for brand awareness, CPC is better for direct response.',
+    },
+    {
+        q: 'Is there a minimum spend requirement?',
+        a: 'Yes — Starter requires $100/month, Professional requires $500/month. Enterprise minimums are negotiated based on your campaign scope.',
+    },
+    {
+        q: 'How do I pay for advertising?',
+        a: 'We accept all major credit cards via Stripe. Enterprise accounts can also pay via wire transfer or invoice. You can prepay or set up automatic billing.',
+    },
+    {
+        q: 'Can I change my billing model mid-campaign?',
+        a: 'Yes, you can switch between CPM and CPC billing at any time. Changes take effect from the next billing cycle. Flat-rate campaigns cannot be changed once started.',
+    },
+    {
+        q: 'Do you offer discounts for long-term commitments?',
+        a: '10% off for 3-month commitments, 15% off for 6-month commitments, and 20% off for annual contracts. Contact our sales team to discuss.',
+    },
+];
+
+function multiplierColor(m: string): string {
+    if (m.includes('base')) return 'var(--cobalt)';
+    if (m.startsWith('0')) return 'var(--mint-3)';
+    return 'var(--orange-2)';
+}
+
 export default function AdvertisePricingPage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 relative overflow-hidden">
-            {/* Background Effects */}
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 96px' }} className="col gap-8">
+                {/* Breadcrumb */}
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        flexWrap: 'wrap',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                    <span aria-hidden="true">/</span>
+                    <Link href="/advertise" style={{ color: 'var(--ink-3)' }}>Advertise</Link>
+                    <span aria-hidden="true">/</span>
+                    <span style={{ color: 'var(--ink)' }}>Pricing</span>
+                </nav>
 
-            {/* Header */}
-            <section className="relative pt-32 pb-16 px-6">
-                <div className="max-w-6xl mx-auto text-center">
-                    <Link
-                        href="/advertise"
-                        className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 text-sm font-medium mb-6 transition-colors"
+                {/* Hero */}
+                <header className="col gap-4">
+                    <span className="section-mark">pricing / for advertisers</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(40px, 6.5vw, 80px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
                     >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                        Back to Advertising
-                    </Link>
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
-                        Simple, Transparent Pricing
+                        Simple, <span style={{ color: 'var(--cobalt)' }}>transparent pricing</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                        Choose the billing model that works best for your business. No hidden fees.
+                    <p className="lede" style={{ fontSize: 'clamp(16px, 1.5vw, 20px)', maxWidth: 680, margin: 0 }}>
+                        Choose the billing model that works for your business. CPM, CPC, or flat-rate. No hidden fees.
                     </p>
-                </div>
-            </section>
+                </header>
 
-            {/* Pricing Tiers */}
-            <section className="relative py-12 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-3 gap-8">
+                {/* Pricing Tiers */}
+                <section aria-labelledby="tiers-heading">
+                    <h2 id="tiers-heading" className="sr-only">Pricing tiers</h2>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
                         {PRICING_TIERS.map((tier) => (
                             <div
                                 key={tier.name}
-                                className={`relative rounded-3xl border p-8 ${
-                                    tier.popular
-                                        ? 'bg-gradient-to-b from-teal-900/40 to-slate-900/80 border-teal-500/30 shadow-xl shadow-teal-500/10'
-                                        : 'bg-white/[0.03] border-white/10'
-                                }`}
+                                className={tier.popular ? 'card-ink col gap-4' : 'card col gap-4'}
+                                style={{ padding: 28, position: 'relative' }}
                             >
                                 {tier.popular && (
-                                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-teal-500 text-slate-900 text-xs font-bold rounded-full">
-                                        Most Popular
-                                    </div>
+                                    <span
+                                        className="pill"
+                                        style={{
+                                            position: 'absolute',
+                                            top: -10,
+                                            right: 20,
+                                            background: 'var(--cobalt)',
+                                            color: '#fff',
+                                            borderColor: 'var(--cobalt)',
+                                        }}
+                                    >
+                                        most popular
+                                    </span>
                                 )}
-                                <div className="mb-6">
-                                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                                    <p className="text-slate-400 text-sm">{tier.description}</p>
+                                <div className="col gap-1">
+                                    <h3
+                                        className="display"
+                                        style={{
+                                            fontSize: 22,
+                                            fontWeight: 600,
+                                            margin: 0,
+                                            letterSpacing: '-0.025em',
+                                            color: tier.popular ? 'var(--paper)' : 'var(--ink)',
+                                        }}
+                                    >
+                                        {tier.name}
+                                    </h3>
+                                    <p
+                                        style={{
+                                            fontSize: 13,
+                                            color: tier.popular ? 'rgba(255,255,255,.65)' : 'var(--ink-3)',
+                                            margin: 0,
+                                        }}
+                                    >
+                                        {tier.description}
+                                    </p>
                                 </div>
-                                <div className="mb-2">
-                                    <span className="text-4xl font-extrabold text-white">{tier.price}</span>
-                                    <span className="text-slate-400 ml-2">/ {tier.unit}</span>
+                                <div className="col gap-1">
+                                    <div className="row ai-baseline gap-2">
+                                        <span
+                                            className="display num"
+                                            style={{
+                                                fontSize: 40,
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.03em',
+                                                color: tier.popular ? 'var(--paper)' : 'var(--ink)',
+                                            }}
+                                        >
+                                            {tier.price}
+                                        </span>
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: tier.popular ? 'rgba(255,255,255,.5)' : 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            / {tier.unit}
+                                        </span>
+                                    </div>
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            color: tier.popular ? 'rgba(255,255,255,.5)' : 'var(--ink-4)',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.06em',
+                                        }}
+                                    >
+                                        min spend · {tier.minSpend}/mo
+                                    </span>
                                 </div>
-                                <div className="text-sm text-slate-500 mb-6">
-                                    Minimum spend: {tier.minSpend}/month
-                                </div>
-                                <ul className="space-y-3 mb-8">
-                                    {tier.features.map((feature, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-sm">
-                                            {feature.included ? (
-                                                <svg className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                                </svg>
-                                            ) : (
-                                                <svg className="w-5 h-5 text-slate-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            )}
-                                            <span className={feature.included ? 'text-slate-300' : 'text-slate-600'}>
-                                                {feature.text}
+                                <ul className="clean col gap-2">
+                                    {tier.features.map((f, i) => (
+                                        <li key={i} className="row gap-2 ai-baseline">
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 11,
+                                                    color: f.included
+                                                        ? (tier.popular ? 'var(--cobalt-3)' : 'var(--cobalt)')
+                                                        : (tier.popular ? 'rgba(255,255,255,.25)' : 'var(--ink-5)'),
+                                                    minWidth: 14,
+                                                }}
+                                                aria-hidden="true"
+                                            >
+                                                {f.included ? '✓' : '×'}
+                                            </span>
+                                            <span
+                                                style={{
+                                                    fontSize: 13,
+                                                    color: f.included
+                                                        ? (tier.popular ? 'rgba(255,255,255,.85)' : 'var(--ink-2)')
+                                                        : (tier.popular ? 'rgba(255,255,255,.4)' : 'var(--ink-4)'),
+                                                    textDecoration: f.included ? 'none' : 'line-through',
+                                                }}
+                                            >
+                                                {f.text}
                                             </span>
                                         </li>
                                     ))}
                                 </ul>
                                 <Link
                                     href="/advertise/enquiry"
-                                    className={`block text-center py-3 px-6 rounded-xl font-semibold transition-all ${
-                                        tier.popular
-                                            ? 'bg-teal-500 hover:bg-teal-400 text-slate-900 shadow-lg shadow-teal-500/20'
-                                            : 'bg-white/10 hover:bg-white/20 text-white border border-white/10'
-                                    }`}
+                                    className={tier.popular ? 'btn btn-cobalt' : 'btn btn-paper'}
+                                    style={{ width: '100%', marginTop: 'auto', justifyContent: 'center' }}
                                 >
-                                    {tier.cta}
+                                    {tier.cta} →
                                 </Link>
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* Placement Pricing Table */}
-            <section className="relative py-20 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <span className="inline-block px-4 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                            Placement Rates
-                        </span>
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                            Pricing by Placement
+                {/* Placement Pricing Table */}
+                <section aria-labelledby="placement-heading" className="col gap-5">
+                    <div className="col gap-2">
+                        <span className="section-mark">placement rates</span>
+                        <h2
+                            id="placement-heading"
+                            className="display"
+                            style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, letterSpacing: '-0.03em', fontWeight: 600 }}
+                        >
+                            Pricing by placement.
                         </h2>
-                        <p className="text-slate-400 max-w-2xl mx-auto">
-                            Base rates shown below. Final pricing may vary based on targeting options and region.
+                        <p className="muted" style={{ fontSize: 14, margin: 0, maxWidth: 600 }}>
+                            Base rates shown below. Final pricing may vary by targeting and region.
                         </p>
                     </div>
 
-                    <div className="bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
-                        <div className="overflow-x-auto">
-                            <table className="w-full">
+                    <div className="card" style={{ overflow: 'hidden' }}>
+                        <div style={{ overflowX: 'auto' }}>
+                            <table
+                                style={{
+                                    width: '100%',
+                                    borderCollapse: 'collapse',
+                                    fontSize: 14,
+                                }}
+                            >
                                 <thead>
-                                    <tr className="border-b border-white/10">
-                                        <th scope="col" className="text-left py-4 px-6 text-sm font-semibold text-slate-400">Placement</th>
-                                        <th scope="col" className="text-left py-4 px-6 text-sm font-semibold text-slate-400">Size</th>
-                                        <th scope="col" className="text-center py-4 px-6 text-sm font-semibold text-slate-400">CPM</th>
-                                        <th scope="col" className="text-center py-4 px-6 text-sm font-semibold text-slate-400">CPC</th>
-                                        <th scope="col" className="text-center py-4 px-6 text-sm font-semibold text-slate-400">Flat Rate</th>
+                                    <tr className="hairline-b">
+                                        <th
+                                            scope="col"
+                                            className="mono"
+                                            style={{
+                                                textAlign: 'left',
+                                                padding: '14px 20px',
+                                                fontSize: 11,
+                                                fontWeight: 500,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            Placement
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="mono"
+                                            style={{
+                                                textAlign: 'left',
+                                                padding: '14px 20px',
+                                                fontSize: 11,
+                                                fontWeight: 500,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            Size
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="mono"
+                                            style={{
+                                                textAlign: 'right',
+                                                padding: '14px 20px',
+                                                fontSize: 11,
+                                                fontWeight: 500,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            CPM
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="mono"
+                                            style={{
+                                                textAlign: 'right',
+                                                padding: '14px 20px',
+                                                fontSize: 11,
+                                                fontWeight: 500,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            CPC
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="mono"
+                                            style={{
+                                                textAlign: 'right',
+                                                padding: '14px 20px',
+                                                fontSize: 11,
+                                                fontWeight: 500,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            Flat rate
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {PLACEMENT_PRICING.map((p, i) => (
-                                        <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
-                                            <td className="py-4 px-6 text-white font-medium">{p.placement}</td>
-                                            <td className="py-4 px-6 text-slate-400 font-mono text-sm">{p.size}</td>
-                                            <td className="py-4 px-6 text-center text-teal-400 font-semibold">{p.cpm}</td>
-                                            <td className="py-4 px-6 text-center text-cyan-400 font-semibold">{p.cpc}</td>
-                                            <td className="py-4 px-6 text-center text-blue-400 font-semibold">{p.flatRate}</td>
+                                        <tr
+                                            key={p.placement}
+                                            style={{
+                                                borderBottom:
+                                                    i < PLACEMENT_PRICING.length - 1
+                                                        ? '1px solid var(--rule-2)'
+                                                        : 'none',
+                                            }}
+                                        >
+                                            <td style={{ padding: '14px 20px', color: 'var(--ink)', fontWeight: 500 }}>
+                                                {p.placement}
+                                            </td>
+                                            <td className="mono" style={{ padding: '14px 20px', color: 'var(--ink-3)', fontSize: 12 }}>
+                                                {p.size}
+                                            </td>
+                                            <td className="num" style={{ padding: '14px 20px', textAlign: 'right', color: 'var(--cobalt)', fontWeight: 500 }}>
+                                                {p.cpm}
+                                            </td>
+                                            <td className="num" style={{ padding: '14px 20px', textAlign: 'right', color: 'var(--mint-3)', fontWeight: 500 }}>
+                                                {p.cpc}
+                                            </td>
+                                            <td className="num" style={{ padding: '14px 20px', textAlign: 'right', color: 'var(--ink)', fontWeight: 500 }}>
+                                                {p.flatRate}
+                                            </td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* Regional Multipliers */}
-            <section className="relative py-20 px-6 bg-gradient-to-b from-transparent via-teal-900/10 to-transparent">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-12">
-                        <span className="inline-block px-4 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                            Regional Pricing
-                        </span>
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                            Geographic Rate Adjustments
+                {/* Regional Multipliers */}
+                <section aria-labelledby="regional-heading" className="col gap-5">
+                    <div className="col gap-2">
+                        <span className="section-mark">regional pricing</span>
+                        <h2
+                            id="regional-heading"
+                            className="display"
+                            style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, letterSpacing: '-0.03em', fontWeight: 600 }}
+                        >
+                            Geographic rate adjustments.
                         </h2>
-                        <p className="text-slate-400 max-w-2xl mx-auto">
+                        <p className="muted" style={{ fontSize: 14, margin: 0, maxWidth: 600 }}>
                             Prices vary by target region based on market demand and purchasing power.
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        {REGIONAL_MULTIPLIERS.map((r) => (
-                            <div
-                                key={r.region}
-                                className="flex items-center justify-between p-4 bg-white/[0.03] rounded-xl border border-white/10"
-                            >
-                                <span className="text-slate-300">{r.region}</span>
-                                <span className={`font-mono font-semibold ${
-                                    r.multiplier.includes('Base') ? 'text-teal-400' :
-                                    r.multiplier.startsWith('0') ? 'text-green-400' : 'text-amber-400'
-                                }`}>
-                                    {r.multiplier}
-                                </span>
-                            </div>
-                        ))}
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {REGIONAL_MULTIPLIERS.map((r, i) => {
+                            const cols = 3;
+                            const isLastCol = (i + 1) % cols === 0;
+                            const isLastRow = i >= REGIONAL_MULTIPLIERS.length - cols;
+                            return (
+                                <div
+                                    key={r.region}
+                                    className="row between ai-center"
+                                    style={{
+                                        padding: '18px 22px',
+                                        borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                        borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                    }}
+                                >
+                                    <span style={{ fontSize: 14, color: 'var(--ink)' }}>{r.region}</span>
+                                    <span
+                                        className="num"
+                                        style={{
+                                            fontSize: 13,
+                                            fontWeight: 500,
+                                            color: multiplierColor(r.multiplier),
+                                        }}
+                                    >
+                                        {r.multiplier}
+                                    </span>
+                                </div>
+                            );
+                        })}
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* FAQ */}
-            <section className="relative py-20 px-6">
-                <div className="max-w-3xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                            Pricing FAQ
+                {/* FAQ */}
+                <section aria-labelledby="faq-heading" className="col gap-5">
+                    <div className="col gap-2">
+                        <span className="section-mark">FAQ</span>
+                        <h2
+                            id="faq-heading"
+                            className="display"
+                            style={{ fontSize: 'clamp(28px, 3.6vw, 40px)', margin: 0, letterSpacing: '-0.03em', fontWeight: 600 }}
+                        >
+                            Pricing questions.
                         </h2>
                     </div>
 
-                    <div className="space-y-4">
-                        {[
-                            {
-                                q: 'What is CPM vs CPC billing?',
-                                a: 'CPM (Cost Per Mille) charges you for every 1,000 impressions your ad receives, regardless of clicks. CPC (Cost Per Click) only charges when someone clicks on your ad. CPM is better for brand awareness, while CPC is better for direct response campaigns.',
-                            },
-                            {
-                                q: 'Is there a minimum spend requirement?',
-                                a: 'Yes, minimum spend varies by plan: Starter requires $100/month, Professional requires $500/month. Enterprise minimums are negotiated based on your campaign scope.',
-                            },
-                            {
-                                q: 'How do I pay for advertising?',
-                                a: 'We accept all major credit cards via Stripe. Enterprise accounts can also pay via wire transfer or invoice. You can prepay for a campaign budget or set up automatic billing.',
-                            },
-                            {
-                                q: 'Can I change my billing model mid-campaign?',
-                                a: 'Yes, you can switch between CPM and CPC billing at any time. Changes take effect from the next billing cycle. Flat-rate campaigns cannot be changed once started.',
-                            },
-                            {
-                                q: 'Do you offer discounts for long-term commitments?',
-                                a: 'Yes! We offer 10% off for 3-month commitments, 15% off for 6-month commitments, and 20% off for annual contracts. Contact our sales team to discuss.',
-                            },
-                        ].map((faq, i) => (
-                            <div key={i} className="bg-white/[0.03] backdrop-blur-sm rounded-xl border border-white/10 p-6">
-                                <h3 className="font-semibold text-white mb-2">{faq.q}</h3>
-                                <p className="text-slate-400 text-sm leading-relaxed">{faq.a}</p>
-                            </div>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
+                        {FAQS.map((faq) => (
+                            <article key={faq.q} className="card col gap-2" style={{ padding: 24 }}>
+                                <h3
+                                    className="display"
+                                    style={{
+                                        fontSize: 16,
+                                        fontWeight: 600,
+                                        margin: 0,
+                                        letterSpacing: '-0.015em',
+                                    }}
+                                >
+                                    {faq.q}
+                                </h3>
+                                <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, margin: 0 }}>
+                                    {faq.a}
+                                </p>
+                            </article>
                         ))}
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* CTA */}
-            <section className="relative py-20 px-6">
-                <div className="max-w-4xl mx-auto text-center">
-                    <div className="bg-gradient-to-br from-teal-900/40 via-blue-900/20 to-slate-900 rounded-3xl border border-teal-500/20 p-12">
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                            Ready to Get Started?
-                        </h2>
-                        <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-                            Fill out our enquiry form and our team will help you choose the right plan for your goals.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Link
-                                href="/advertise/enquiry"
-                                className="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 transition-all hover:-translate-y-0.5"
+                {/* CTA */}
+                <section className="card-ink" style={{ padding: 'clamp(28px, 4vw, 56px)' }}>
+                    <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 24 }}>
+                        <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.10em',
+                                    fontWeight: 500,
+                                }}
                             >
-                                Start Advertising
+                                ready to start
+                            </span>
+                            <h2
+                                className="display"
+                                style={{
+                                    fontSize: 'clamp(28px, 3.6vw, 44px)',
+                                    lineHeight: 1.1,
+                                    margin: 0,
+                                    fontWeight: 600,
+                                    color: 'var(--paper)',
+                                    letterSpacing: '-0.03em',
+                                }}
+                            >
+                                Pick a plan. <span style={{ color: 'var(--cobalt-3)' }}>We&rsquo;ll set you up</span>
+                                <span style={{ color: 'var(--orange)' }}>.</span>
+                            </h2>
+                        </div>
+                        <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                            <Link href="/advertise/enquiry" className="btn btn-cobalt btn-lg">
+                                Start advertising →
                             </Link>
                             <Link
                                 href="/contact"
-                                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all"
+                                className="btn btn-lg"
+                                style={{
+                                    background: 'rgba(255,255,255,.08)',
+                                    color: 'var(--paper)',
+                                    borderColor: 'rgba(255,255,255,.15)',
+                                }}
                             >
-                                Contact Sales
+                                Contact sales
                             </Link>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
     );
 }

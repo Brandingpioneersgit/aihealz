@@ -17,11 +17,11 @@ const COMPANY_TYPES = [
 ];
 
 const BUDGET_RANGES = [
-    { value: 'under-500', label: 'Under $500/month' },
-    { value: '500-2000', label: '$500 - $2,000/month' },
-    { value: '2000-5000', label: '$2,000 - $5,000/month' },
-    { value: '5000-10000', label: '$5,000 - $10,000/month' },
-    { value: 'over-10000', label: '$10,000+/month' },
+    { value: 'under-500', label: 'Under $500/mo' },
+    { value: '500-2000', label: '$500 – $2,000/mo' },
+    { value: '2000-5000', label: '$2,000 – $5,000/mo' },
+    { value: '5000-10000', label: '$5,000 – $10,000/mo' },
+    { value: 'over-10000', label: '$10,000+/mo' },
     { value: 'undecided', label: 'Not sure yet' },
 ];
 
@@ -36,7 +36,7 @@ const REGIONS = [
     { value: 'nigeria', label: 'Nigeria' },
     { value: 'kenya', label: 'Kenya' },
     { value: 'south-africa', label: 'South Africa' },
-    { value: 'global', label: 'Global / Multiple Regions' },
+    { value: 'global', label: 'Global / Multiple' },
 ];
 
 export default function AdvertiseEnquiryPage() {
@@ -90,258 +90,310 @@ export default function AdvertiseEnquiryPage() {
     };
 
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 relative overflow-hidden">
-            {/* Background Effects */}
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
+            <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 28px' }} className="col gap-7">
+                {/* Breadcrumb */}
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        flexWrap: 'wrap',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                    <span aria-hidden="true">/</span>
+                    <Link href="/advertise" style={{ color: 'var(--ink-3)' }}>Advertise</Link>
+                    <span aria-hidden="true">/</span>
+                    <span style={{ color: 'var(--ink)' }}>Enquiry</span>
+                </nav>
 
-            <div className="relative pt-32 pb-20 px-6">
-                <div className="max-w-3xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center mb-12">
-                        <Link
-                            href="/advertise"
-                            className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 text-sm font-medium mb-6 transition-colors"
-                        >
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                            Back to Advertising
-                        </Link>
-                        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                            Start Advertising on AIHealz
-                        </h1>
-                        <p className="text-lg text-slate-400">
-                            Fill out the form below and our team will reach out within 24 hours.
-                        </p>
-                    </div>
+                {/* Hero */}
+                <header className="col gap-4">
+                    <span className="section-mark">enquiry / start advertising</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5.5vw, 56px)',
+                            lineHeight: 1.0,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        Start advertising on <span style={{ color: 'var(--cobalt)' }}>aihealz</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', margin: 0, maxWidth: 640 }}>
+                        Fill the form below. Our team replies within 24 hours.
+                    </p>
+                </header>
 
-                    {/* Form Card */}
-                    <div className="bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-10">
-                        <form onSubmit={handleSubmit} className="space-y-8">
-                            {/* Company Info */}
-                            <div>
-                                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                                    <span className="w-7 h-7 bg-teal-500/20 text-teal-400 rounded-lg flex items-center justify-center text-sm font-bold">1</span>
-                                    Company Information
-                                </h3>
-                                <div className="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Company Name <span className="text-red-400">*</span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            required
-                                            value={form.companyName}
-                                            onChange={(e) => setForm({ ...form, companyName: e.target.value })}
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors"
-                                            placeholder="Your company name"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Company Type <span className="text-red-400">*</span>
-                                        </label>
-                                        <select
-                                            required
-                                            value={form.companyType}
-                                            onChange={(e) => setForm({ ...form, companyType: e.target.value })}
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors appearance-none cursor-pointer"
-                                        >
-                                            <option value="" className="bg-slate-900">Select type...</option>
-                                            {COMPANY_TYPES.map((t) => (
-                                                <option key={t.value} value={t.value} className="bg-slate-900">
-                                                    {t.label}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                    <div className="md:col-span-2">
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Website
-                                        </label>
-                                        <input
-                                            type="url"
-                                            value={form.website}
-                                            onChange={(e) => setForm({ ...form, website: e.target.value })}
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors"
-                                            placeholder="https://your-website.com"
-                                        />
-                                    </div>
-                                </div>
+                {/* Form Card */}
+                <form onSubmit={handleSubmit} className="card col gap-7" style={{ padding: 'clamp(24px, 4vw, 36px)' }}>
+                    {/* Section 1: Company */}
+                    <section className="col gap-4">
+                        <div className="row gap-3 ai-center">
+                            <span className="spec-icon">01</span>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 18, fontWeight: 600, margin: 0, letterSpacing: '-0.02em' }}
+                            >
+                                Company information
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                            <div className="form-group">
+                                <label className="form-label" htmlFor="companyName">
+                                    Company name <span style={{ color: 'var(--orange-2)' }}>*</span>
+                                </label>
+                                <input
+                                    id="companyName"
+                                    type="text"
+                                    required
+                                    value={form.companyName}
+                                    onChange={(e) => setForm({ ...form, companyName: e.target.value })}
+                                    className="input"
+                                    placeholder="Your company name"
+                                />
                             </div>
-
-                            {/* Contact Info */}
-                            <div>
-                                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                                    <span className="w-7 h-7 bg-teal-500/20 text-teal-400 rounded-lg flex items-center justify-center text-sm font-bold">2</span>
-                                    Contact Information
-                                </h3>
-                                <div className="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Your Name <span className="text-red-400">*</span>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            required
-                                            value={form.contactName}
-                                            onChange={(e) => setForm({ ...form, contactName: e.target.value })}
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors"
-                                            placeholder="Full name"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Email Address <span className="text-red-400">*</span>
-                                        </label>
-                                        <input
-                                            type="email"
-                                            required
-                                            value={form.email}
-                                            onChange={(e) => setForm({ ...form, email: e.target.value })}
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors"
-                                            placeholder="you@company.com"
-                                        />
-                                    </div>
-                                    <div className="md:col-span-2">
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Phone Number
-                                        </label>
-                                        <input
-                                            type="tel"
-                                            value={form.phone}
-                                            onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors"
-                                            placeholder="+1 (555) 000-0000"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Campaign Details */}
-                            <div>
-                                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                                    <span className="w-7 h-7 bg-teal-500/20 text-teal-400 rounded-lg flex items-center justify-center text-sm font-bold">3</span>
-                                    Campaign Details
-                                </h3>
-                                <div className="space-y-4">
-                                    <div>
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Monthly Advertising Budget
-                                        </label>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                            {BUDGET_RANGES.map((b) => (
-                                                <button
-                                                    type="button"
-                                                    key={b.value}
-                                                    onClick={() => setForm({ ...form, adBudget: b.value })}
-                                                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${
-                                                        form.adBudget === b.value
-                                                            ? 'bg-teal-500/20 border-teal-500/50 text-teal-300'
-                                                            : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10'
-                                                    } border`}
-                                                >
-                                                    {b.label}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Target Regions (select all that apply)
-                                        </label>
-                                        <div className="flex flex-wrap gap-2">
-                                            {REGIONS.map((r) => (
-                                                <button
-                                                    type="button"
-                                                    key={r.value}
-                                                    onClick={() => handleRegionToggle(r.value)}
-                                                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                                                        form.targetRegions.includes(r.value)
-                                                            ? 'bg-teal-500/20 border-teal-500/50 text-teal-300'
-                                                            : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10'
-                                                    } border`}
-                                                >
-                                                    {form.targetRegions.includes(r.value) && (
-                                                        <svg className="w-4 h-4 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                                        </svg>
-                                                    )}
-                                                    {r.label}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-sm font-medium text-slate-400 mb-2">
-                                            Tell us about your advertising goals
-                                        </label>
-                                        <textarea
-                                            value={form.message}
-                                            onChange={(e) => setForm({ ...form, message: e.target.value })}
-                                            rows={4}
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/50 transition-colors resize-none"
-                                            placeholder="What conditions or specialties do you want to target? Any specific goals or requirements?"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Error Message */}
-                            {error && (
-                                <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
-                                    {error}
-                                </div>
-                            )}
-
-                            {/* Submit */}
-                            <div className="pt-4">
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="w-full py-4 bg-teal-500 hover:bg-teal-400 disabled:bg-teal-500/50 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 transition-all disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                            <div className="form-group">
+                                <label className="form-label" htmlFor="companyType">
+                                    Company type <span style={{ color: 'var(--orange-2)' }}>*</span>
+                                </label>
+                                <select
+                                    id="companyType"
+                                    required
+                                    value={form.companyType}
+                                    onChange={(e) => setForm({ ...form, companyType: e.target.value })}
+                                    className="select"
                                 >
-                                    {isSubmitting ? (
-                                        <>
-                                            <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
-                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                                            </svg>
-                                            Submitting...
-                                        </>
-                                    ) : (
-                                        <>
-                                            Submit Enquiry
-                                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                            </svg>
-                                        </>
-                                    )}
-                                </button>
-                                <p className="text-center text-sm text-slate-500 mt-4">
-                                    By submitting, you agree to our{' '}
-                                    <Link href="/terms" className="text-teal-400 hover:underline">Terms of Service</Link>
-                                    {' '}and{' '}
-                                    <Link href="/privacy" className="text-teal-400 hover:underline">Privacy Policy</Link>.
-                                </p>
+                                    <option value="">Select type…</option>
+                                    {COMPANY_TYPES.map((t) => (
+                                        <option key={t.value} value={t.value}>{t.label}</option>
+                                    ))}
+                                </select>
                             </div>
-                        </form>
-                    </div>
+                            <div className="form-group" style={{ gridColumn: '1 / -1' }}>
+                                <label className="form-label" htmlFor="website">Website</label>
+                                <input
+                                    id="website"
+                                    type="url"
+                                    value={form.website}
+                                    onChange={(e) => setForm({ ...form, website: e.target.value })}
+                                    className="input"
+                                    placeholder="https://your-website.com"
+                                />
+                            </div>
+                        </div>
+                    </section>
 
-                    {/* Contact Alternative */}
-                    <div className="mt-8 text-center">
-                        <p className="text-slate-400">
-                            Prefer to talk to someone directly?{' '}
-                            <Link href="/contact" className="text-teal-400 hover:text-teal-300 font-medium">
-                                Contact our sales team
-                            </Link>
+                    <div className="hairline" />
+
+                    {/* Section 2: Contact */}
+                    <section className="col gap-4">
+                        <div className="row gap-3 ai-center">
+                            <span className="spec-icon">02</span>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 18, fontWeight: 600, margin: 0, letterSpacing: '-0.02em' }}
+                            >
+                                Contact information
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                            <div className="form-group">
+                                <label className="form-label" htmlFor="contactName">
+                                    Your name <span style={{ color: 'var(--orange-2)' }}>*</span>
+                                </label>
+                                <input
+                                    id="contactName"
+                                    type="text"
+                                    required
+                                    value={form.contactName}
+                                    onChange={(e) => setForm({ ...form, contactName: e.target.value })}
+                                    className="input"
+                                    placeholder="Full name"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label className="form-label" htmlFor="email">
+                                    Email address <span style={{ color: 'var(--orange-2)' }}>*</span>
+                                </label>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    required
+                                    value={form.email}
+                                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                                    className="input"
+                                    placeholder="you@company.com"
+                                />
+                            </div>
+                            <div className="form-group" style={{ gridColumn: '1 / -1' }}>
+                                <label className="form-label" htmlFor="phone">Phone number</label>
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    value={form.phone}
+                                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                                    className="input"
+                                    placeholder="+1 (555) 000-0000"
+                                />
+                            </div>
+                        </div>
+                    </section>
+
+                    <div className="hairline" />
+
+                    {/* Section 3: Campaign */}
+                    <section className="col gap-4">
+                        <div className="row gap-3 ai-center">
+                            <span className="spec-icon">03</span>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 18, fontWeight: 600, margin: 0, letterSpacing: '-0.02em' }}
+                            >
+                                Campaign details
+                            </h2>
+                        </div>
+
+                        <div className="form-group">
+                            <span className="form-label">Monthly advertising budget</span>
+                            <div
+                                style={{
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                                    gap: 8,
+                                }}
+                            >
+                                {BUDGET_RANGES.map((b) => {
+                                    const active = form.adBudget === b.value;
+                                    return (
+                                        <button
+                                            type="button"
+                                            key={b.value}
+                                            onClick={() => setForm({ ...form, adBudget: b.value })}
+                                            className="btn"
+                                            style={{
+                                                padding: '12px 14px',
+                                                fontSize: 13,
+                                                background: active ? 'var(--cobalt-50)' : 'var(--paper)',
+                                                color: active ? 'var(--cobalt)' : 'var(--ink-2)',
+                                                borderColor: active ? 'rgba(28, 91, 255, .35)' : 'var(--rule)',
+                                                fontWeight: active ? 500 : 400,
+                                            }}
+                                            aria-pressed={active}
+                                        >
+                                            {b.label}
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="form-group">
+                            <span className="form-label">Target regions <span className="muted" style={{ fontWeight: 400 }}>· select all that apply</span></span>
+                            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                {REGIONS.map((r) => {
+                                    const active = form.targetRegions.includes(r.value);
+                                    return (
+                                        <button
+                                            type="button"
+                                            key={r.value}
+                                            onClick={() => handleRegionToggle(r.value)}
+                                            className="btn btn-sm"
+                                            style={{
+                                                background: active ? 'var(--cobalt-50)' : 'var(--paper)',
+                                                color: active ? 'var(--cobalt)' : 'var(--ink-2)',
+                                                borderColor: active ? 'rgba(28, 91, 255, .35)' : 'var(--rule)',
+                                                fontWeight: active ? 500 : 400,
+                                            }}
+                                            aria-pressed={active}
+                                        >
+                                            {active && (
+                                                <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                </svg>
+                                            )}
+                                            {r.label}
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="form-group">
+                            <label className="form-label" htmlFor="message">
+                                Tell us about your advertising goals
+                            </label>
+                            <textarea
+                                id="message"
+                                value={form.message}
+                                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                                rows={4}
+                                className="textarea"
+                                placeholder="What conditions or specialties do you want to target? Any specific goals or requirements?"
+                            />
+                        </div>
+                    </section>
+
+                    {/* Error */}
+                    {error && (
+                        <div
+                            className="card-quiet"
+                            style={{
+                                padding: 14,
+                                background: 'var(--orange-50)',
+                                borderColor: 'rgba(255, 90, 46, .28)',
+                            }}
+                            role="alert"
+                        >
+                            <span style={{ color: 'var(--orange-2)', fontSize: 13 }}>{error}</span>
+                        </div>
+                    )}
+
+                    {/* Submit */}
+                    <div className="col gap-3">
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="btn btn-cobalt btn-lg"
+                            style={{ width: '100%', justifyContent: 'center' }}
+                        >
+                            {isSubmitting ? (
+                                <>
+                                    <svg className="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" opacity="0.25" />
+                                        <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" opacity="0.75" />
+                                    </svg>
+                                    Submitting…
+                                </>
+                            ) : (
+                                <>Submit enquiry →</>
+                            )}
+                        </button>
+                        <p className="form-hint" style={{ textAlign: 'center', margin: 0 }}>
+                            By submitting, you agree to our{' '}
+                            <Link href="/terms" style={{ color: 'var(--cobalt)' }}>Terms of Service</Link>
+                            {' '}and{' '}
+                            <Link href="/privacy" style={{ color: 'var(--cobalt)' }}>Privacy Policy</Link>.
                         </p>
                     </div>
-                </div>
+                </form>
+
+                {/* Alternative */}
+                <p className="muted" style={{ textAlign: 'center', fontSize: 14, margin: 0 }}>
+                    Prefer to talk directly?{' '}
+                    <Link href="/contact" style={{ color: 'var(--cobalt)', fontWeight: 500 }}>
+                        Contact our sales team →
+                    </Link>
+                </p>
             </div>
         </main>
     );

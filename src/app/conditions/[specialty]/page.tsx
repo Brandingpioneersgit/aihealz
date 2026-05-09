@@ -1,6 +1,5 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
-import Script from 'next/script';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { headers } from 'next/headers';
@@ -18,20 +17,13 @@ function deduplicateConditions(conditions: ConditionRow[]): ConditionRow[] {
     const seen = new Map<string, ConditionRow>();
 
     for (const c of conditions) {
-        // Normalize the name: strip laterality, specificity markers, and ICD suffixes
         const baseKey = c.commonName
             .toLowerCase()
-            // Remove laterality
             .replace(/\b(left|right|bilateral|unspecified|unsp)\b/gi, '')
-            // Remove position markers
             .replace(/\b(proximal|distal|prox|dist)\b/gi, '')
-            // Remove limb side markers
             .replace(/\b(of r |of l |, bi|, l |, r )\b/gi, ' ')
-            // Remove "upper/lower extremity" variations
             .replace(/\b(upper|lower|up|low)\s*(extremity|extrm|extrem)\b/gi, 'extremity')
-            // Remove vein-specific markers when there are generic versions
             .replace(/\b(femoral|popliteal|tibial|iliac|axillary|subclavian|jugular)\s*(vein)?\b/gi, '')
-            // Clean up whitespace and punctuation
             .replace(/[,()]/g, ' ')
             .replace(/\s{2,}/g, ' ')
             .trim();
@@ -41,11 +33,9 @@ function deduplicateConditions(conditions: ConditionRow[]): ConditionRow[] {
         }
     }
 
-    // Sort by commonName and return
     return [...seen.values()].sort((a, b) => a.commonName.localeCompare(b.commonName));
 }
 
-// Specialty descriptions for SEO
 const SPECIALTY_INFO: Record<string, { description: string; specialist: string; bodySystem: string }> = {
     cardiology: { description: 'heart and cardiovascular system disorders including heart disease, arrhythmias, and vascular conditions', specialist: 'Cardiologist', bodySystem: 'Heart & Blood Vessels' },
     neurology: { description: 'brain, spinal cord, and nervous system conditions including stroke, epilepsy, and neurological disorders', specialist: 'Neurologist', bodySystem: 'Brain & Nervous System' },
@@ -68,7 +58,6 @@ const SPECIALTY_INFO: Record<string, { description: string; specialist: string; 
     geriatrics: { description: 'age-related conditions and elderly care including dementia and geriatric syndromes', specialist: 'Geriatrician', bodySystem: 'Elderly Health' },
 };
 
-// Related specialties mapping for internal linking
 const RELATED_SPECIALTIES: Record<string, string[]> = {
     cardiology: ['pulmonology', 'endocrinology', 'nephrology'],
     neurology: ['psychiatry', 'orthopedics', 'ophthalmology'],
@@ -120,13 +109,10 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
     const rawSpecialty = decodeURIComponent(specialty).replace(/-/g, ' ');
     const specKey = specialty.toLowerCase().replace(/-/g, '');
 
-    // Get geo context for proper linking
     const hdrs = await headers();
     const country = hdrs.get('x-aihealz-country') || 'india';
     const lang = hdrs.get('x-aihealz-lang') || 'en';
-    const city = hdrs.get('x-aihealz-city');
 
-    // We do a loose matching based on the specialty name to fetch corresponding conditions
     const rawConditions = await prisma.medicalCondition.findMany({
         where: {
             isActive: true,
@@ -143,14 +129,11 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
         notFound();
     }
 
-    // Deduplicate any remaining near-identical conditions at display time
     const conditions = deduplicateConditions(rawConditions);
 
-    // Get specialty info
     const info = SPECIALTY_INFO[specKey];
     const relatedSpecs = RELATED_SPECIALTIES[specKey] || [];
 
-    // Get top cities for this country for GEO linking
     const topCities = await prisma.geography.findMany({
         where: {
             level: 'city',
@@ -165,7 +148,6 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
         take: 12,
     });
 
-    // Schema markup for SEO
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
@@ -207,83 +189,127 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(specialtySchema) }} />
 
-            <div className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
-                {/* Background Effects */}
-                <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0"></div>
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
-
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 80px' }} className="col gap-7">
                     {/* Breadcrumb */}
-                    <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6">
-                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                        <span>/</span>
-                        <Link href="/conditions" className="hover:text-white transition-colors">Conditions</Link>
-                        <span>/</span>
-                        <span className="text-white font-medium capitalize">{rawSpecialty}</span>
+                    <nav
+                        className="row gap-2 mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                            flexWrap: 'wrap',
+                        }}
+                        aria-label="Breadcrumb"
+                    >
+                        <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                        <span aria-hidden="true">/</span>
+                        <Link href="/conditions" style={{ color: 'var(--ink-3)' }}>Conditions</Link>
+                        <span aria-hidden="true">/</span>
+                        <span style={{ color: 'var(--ink)', textTransform: 'capitalize' }}>{rawSpecialty}</span>
                     </nav>
 
                     {/* Hero */}
-                    <header className="mb-12">
-                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white capitalize">
-                            {rawSpecialty} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Conditions</span>
+                    <header className="col gap-4">
+                        <span className="section-mark">specialty / {rawSpecialty.toLowerCase()}</span>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(40px, 6.5vw, 80px)',
+                                lineHeight: 0.95,
+                                letterSpacing: '-0.045em',
+                                margin: 0,
+                                fontWeight: 600,
+                                textTransform: 'capitalize',
+                            }}
+                        >
+                            {rawSpecialty}{' '}
+                            <span className="num" style={{ color: 'var(--cobalt)', fontWeight: 600 }}>
+                                {conditions.length.toLocaleString()}
+                            </span>{' '}
+                            <span style={{ textTransform: 'lowercase' }}>conditions</span>
+                            <span style={{ color: 'var(--orange)' }}>.</span>
                         </h1>
-                        <p className="text-lg text-slate-400 leading-relaxed max-w-3xl mb-6">
+
+                        <p className="lede" style={{ fontSize: 'clamp(15px, 1.5vw, 19px)', maxWidth: 760, margin: 0 }}>
                             {info
-                                ? `Complete A-Z directory of ${conditions.length.toLocaleString()} ${rawSpecialty} conditions covering ${info.description}. Find detailed symptoms, treatment options, and ${info.specialist}s in your area.`
-                                : `A complete A-Z directory of ${conditions.length.toLocaleString()} indexed medical conditions and subsets specific to ${rawSpecialty}.`
-                            }
+                                ? `Complete A–Z directory of ${conditions.length.toLocaleString()} ${rawSpecialty} conditions covering ${info.description}. Symptoms, treatment options, and ${info.specialist}s in your area.`
+                                : `A complete A–Z directory of ${conditions.length.toLocaleString()} indexed medical conditions specific to ${rawSpecialty}.`}
                         </p>
 
-                        {/* Quick Stats */}
-                        <div className="flex flex-wrap gap-4 mb-8">
-                            <div className="bg-slate-900/60 border border-white/5 rounded-xl px-4 py-2">
-                                <span className="text-2xl font-bold text-white">{conditions.length.toLocaleString()}</span>
-                                <span className="text-sm text-slate-500 ml-2">Conditions</span>
+                        {/* Stats strip */}
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                                gap: 0,
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--paper)',
+                                overflow: 'hidden',
+                                marginTop: 8,
+                            }}
+                        >
+                            <div className="col gap-1" style={{ padding: '20px 22px', borderRight: '1px solid var(--rule)' }}>
+                                <div className="display num" style={{ fontSize: 28, fontWeight: 500, lineHeight: 1, letterSpacing: '-0.025em' }}>
+                                    {conditions.length.toLocaleString()}
+                                </div>
+                                <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                                    conditions
+                                </div>
                             </div>
                             {info && (
                                 <>
-                                    <div className="bg-slate-900/60 border border-white/5 rounded-xl px-4 py-2">
-                                        <span className="text-sm font-semibold text-teal-400">{info.specialist}</span>
-                                        <span className="text-sm text-slate-500 ml-2">Specialist</span>
+                                    <div className="col gap-1" style={{ padding: '20px 22px', borderRight: '1px solid var(--rule)' }}>
+                                        <div style={{ fontSize: 15, color: 'var(--cobalt)', fontWeight: 500 }}>
+                                            {info.specialist}
+                                        </div>
+                                        <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                                            specialist
+                                        </div>
                                     </div>
-                                    <div className="bg-slate-900/60 border border-white/5 rounded-xl px-4 py-2">
-                                        <span className="text-sm font-semibold text-cyan-400">{info.bodySystem}</span>
-                                        <span className="text-sm text-slate-500 ml-2">Body System</span>
+                                    <div className="col gap-1" style={{ padding: '20px 22px' }}>
+                                        <div style={{ fontSize: 15, color: 'var(--ink)', fontWeight: 500 }}>
+                                            {info.bodySystem}
+                                        </div>
+                                        <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                                            body system
+                                        </div>
                                     </div>
                                 </>
                             )}
                         </div>
 
-                        {/* CTA Buttons */}
-                        <div className="flex flex-wrap gap-4">
+                        <div className="row gap-2" style={{ flexWrap: 'wrap', marginTop: 8 }}>
                             <Link
                                 href={`/doctors?specialty=${encodeURIComponent(info?.specialist || rawSpecialty)}`}
-                                className="px-6 py-3 bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold rounded-xl transition-all hover:-translate-y-0.5"
+                                className="btn btn-cobalt"
                             >
-                                Find {info?.specialist || rawSpecialty} Doctors
+                                Find {info?.specialist || rawSpecialty} doctors →
                             </Link>
-                            <Link
-                                href="/symptoms"
-                                className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-white/10 transition-all"
-                            >
-                                Check Symptoms
+                            <Link href="/symptoms" className="btn btn-paper">
+                                Check symptoms
                             </Link>
                         </div>
                     </header>
 
-                    {/* Location-specific quick links */}
+                    {/* Cities */}
                     {topCities.length > 0 && (
-                        <section className="mb-12">
-                            <h2 className="text-lg font-bold text-white mb-4">
-                                {rawSpecialty} Treatment by City
+                        <section className="col gap-3" aria-labelledby="cities-heading">
+                            <h2
+                                id="cities-heading"
+                                className="display"
+                                style={{ fontSize: 16, margin: 0, fontWeight: 600, letterSpacing: '-0.015em' }}
+                            >
+                                <span className="muted" style={{ fontWeight: 400, textTransform: 'capitalize' }}>{rawSpecialty}</span> treatment by city
                             </h2>
-                            <div className="flex flex-wrap gap-2">
-                                {topCities.slice(0, 8).map(c => (
+                            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                {topCities.slice(0, 8).map((c) => (
                                     <Link
                                         key={c.slug}
                                         href={`/${country}/${lang}/${conditions[0]?.slug}/${c.parent?.slug}/${c.slug}`}
-                                        className="px-3 py-1.5 bg-slate-800/60 hover:bg-slate-700 text-slate-300 text-sm rounded-lg border border-white/5 transition-colors"
+                                        className="btn btn-sm btn-paper"
                                     >
                                         {c.name}
                                     </Link>
@@ -292,102 +318,238 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
                         </section>
                     )}
 
-                    {/* Conditions Grid */}
-                    <section aria-labelledby="conditions-heading">
-                        <h2 id="conditions-heading" className="text-xl font-bold text-white mb-6">
-                            All {rawSpecialty} Conditions ({conditions.length.toLocaleString()})
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                            {conditions.map(cond => (
-                                <Link
-                                    key={cond.id}
-                                    href={`/${country}/${lang}/${cond.slug}`}
-                                    className="bg-slate-900/50 backdrop-blur-sm border border-white/5 hover:border-teal-500/30 rounded-2xl p-5 hover:bg-slate-800 transition-all flex flex-col justify-between group"
-                                >
-                                    <div>
-                                        <h3 className="text-base font-bold text-slate-200 group-hover:text-white mb-2 line-clamp-1">{cond.commonName}</h3>
-                                        {cond.icdCode && (
-                                            <span className="text-[10px] text-slate-600 font-mono mb-1 block">{cond.icdCode}</span>
-                                        )}
+                    {/* All conditions */}
+                    <section aria-labelledby="conditions-heading" className="col gap-4">
+                        <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                            <h2
+                                id="conditions-heading"
+                                className="display"
+                                style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.025em', textTransform: 'capitalize' }}
+                            >
+                                All {rawSpecialty} conditions
+                            </h2>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {conditions.length.toLocaleString()} indexed
+                            </span>
+                        </div>
+
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                                gap: 0,
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--paper)',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {conditions.map((cond, i, arr) => {
+                                const cols = 4;
+                                const isLastCol = (i + 1) % cols === 0;
+                                const isLastRow = i >= arr.length - cols;
+                                return (
+                                    <Link
+                                        key={cond.id}
+                                        href={`/${country}/${lang}/${cond.slug}`}
+                                        className="col gap-2"
+                                        style={{
+                                            padding: '18px 20px',
+                                            borderRight: isLastCol ? 'none' : '1px solid var(--rule-2)',
+                                            borderBottom: isLastRow ? 'none' : '1px solid var(--rule-2)',
+                                        }}
+                                    >
+                                        <div className="row between ai-start gap-3">
+                                            <h3
+                                                className="display truncate-2"
+                                                style={{
+                                                    fontSize: 15,
+                                                    fontWeight: 500,
+                                                    margin: 0,
+                                                    letterSpacing: '-0.015em',
+                                                    color: 'var(--ink)',
+                                                }}
+                                            >
+                                                {cond.commonName}
+                                            </h3>
+                                            {cond.icdCode && (
+                                                <span
+                                                    className="mono"
+                                                    style={{
+                                                        fontSize: 10,
+                                                        color: 'var(--ink-4)',
+                                                        flexShrink: 0,
+                                                        letterSpacing: '0.04em',
+                                                    }}
+                                                >
+                                                    {cond.icdCode}
+                                                </span>
+                                            )}
+                                        </div>
                                         {cond.description ? (
-                                            <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{cond.description}</p>
+                                            <p className="muted truncate-2" style={{ fontSize: 12, margin: 0, lineHeight: 1.5 }}>
+                                                {cond.description}
+                                            </p>
                                         ) : (
-                                            <p className="text-xs text-slate-600 italic">Exploring symptoms and treatments for {cond.commonName}.</p>
+                                            <p className="muted-2" style={{ fontSize: 12, margin: 0, fontStyle: 'italic' }}>
+                                                Symptoms and treatments for {cond.commonName}.
+                                            </p>
                                         )}
-                                    </div>
-                                    <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-teal-600 group-hover:text-teal-400 transition-colors">
-                                        View full guide
-                                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                                    </div>
-                                </Link>
-                            ))}
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                                fontWeight: 500,
+                                                marginTop: 'auto',
+                                            }}
+                                        >
+                                            View guide →
+                                        </span>
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </section>
 
-                    {/* Related Specialties */}
+                    {/* Related specialties */}
                     {relatedSpecs.length > 0 && (
-                        <section className="mt-16">
-                            <h2 className="text-xl font-bold text-white mb-6">Related Specialties</h2>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                {relatedSpecs.map(spec => (
+                        <section className="col gap-4" aria-labelledby="related-heading">
+                            <h2
+                                id="related-heading"
+                                className="display"
+                                style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}
+                            >
+                                Related specialties
+                            </h2>
+                            <div
+                                style={{
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                                    gap: 12,
+                                }}
+                            >
+                                {relatedSpecs.map((spec) => (
                                     <Link
                                         key={spec}
                                         href={`/conditions/${spec}`}
-                                        className="bg-slate-900/60 border border-white/5 hover:border-cyan-500/30 rounded-xl p-4 transition-all group"
+                                        className="card-flat col gap-1"
+                                        style={{ padding: 18 }}
                                     >
-                                        <h3 className="font-semibold text-white capitalize group-hover:text-cyan-400 transition-colors">{spec.replace(/-/g, ' ')}</h3>
-                                        <p className="text-xs text-slate-500 mt-1">Browse conditions →</p>
+                                        <h3
+                                            className="display"
+                                            style={{
+                                                fontSize: 15,
+                                                fontWeight: 500,
+                                                margin: 0,
+                                                letterSpacing: '-0.015em',
+                                                textTransform: 'capitalize',
+                                            }}
+                                        >
+                                            {spec.replace(/-/g, ' ')}
+                                        </h3>
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            Browse →
+                                        </span>
                                     </Link>
                                 ))}
                             </div>
                         </section>
                     )}
 
-                    {/* Internal Links Section */}
-                    <section className="mt-16 grid md:grid-cols-3 gap-6">
-                        <Link href="/doctors" className="bg-slate-900/60 border border-white/5 hover:border-purple-500/30 rounded-2xl p-6 transition-all group">
-                            <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mb-3">
-                                <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                            </div>
-                            <h3 className="font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Find {info?.specialist || 'Specialist'}</h3>
-                            <p className="text-sm text-slate-500">Connect with verified {rawSpecialty} specialists</p>
-                        </Link>
-                        <Link href="/treatments" className="bg-slate-900/60 border border-white/5 hover:border-blue-500/30 rounded-2xl p-6 transition-all group">
-                            <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-3">
-                                <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                                </svg>
-                            </div>
-                            <h3 className="font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Treatment Options</h3>
-                            <p className="text-sm text-slate-500">Browse {rawSpecialty} treatment procedures and costs</p>
-                        </Link>
-                        <Link href="/hospitals" className="bg-slate-900/60 border border-white/5 hover:border-amber-500/30 rounded-2xl p-6 transition-all group">
-                            <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-3">
-                                <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                </svg>
-                            </div>
-                            <h3 className="font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Top Hospitals</h3>
-                            <p className="text-sm text-slate-500">Best hospitals for {rawSpecialty} treatment</p>
-                        </Link>
+                    {/* Internal links */}
+                    <section
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
+                        {[
+                            {
+                                href: '/doctors',
+                                kicker: 'doctors',
+                                title: `Find ${info?.specialist || 'specialist'}`,
+                                blurb: `Connect with verified ${rawSpecialty} specialists.`,
+                            },
+                            {
+                                href: '/treatments',
+                                kicker: 'treatments',
+                                title: 'Treatment options',
+                                blurb: `Browse ${rawSpecialty} treatment procedures and costs.`,
+                            },
+                            {
+                                href: '/hospitals',
+                                kicker: 'hospitals',
+                                title: 'Top hospitals',
+                                blurb: `Best hospitals for ${rawSpecialty} treatment.`,
+                            },
+                        ].map((item) => (
+                            <Link key={item.href} href={item.href} className="card col gap-3" style={{ padding: 24 }}>
+                                <div className="kicker">
+                                    <span className="dot" />
+                                    {item.kicker}
+                                </div>
+                                <h3
+                                    className="display"
+                                    style={{
+                                        fontSize: 18,
+                                        fontWeight: 600,
+                                        margin: 0,
+                                        letterSpacing: '-0.02em',
+                                    }}
+                                >
+                                    {item.title}
+                                </h3>
+                                <p className="muted" style={{ fontSize: 13, margin: 0, lineHeight: 1.55 }}>
+                                    {item.blurb}
+                                </p>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        marginTop: 'auto',
+                                        fontSize: 11,
+                                        color: 'var(--cobalt)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    Browse →
+                                </span>
+                            </Link>
+                        ))}
                     </section>
 
-                    {/* Back to all conditions */}
-                    <div className="mt-12 text-center">
+                    {/* Back to all */}
+                    <div className="row center">
                         <Link
                             href="/conditions"
-                            className="inline-flex items-center text-teal-500 hover:text-teal-400 font-semibold transition-colors"
+                            className="btn btn-ghost"
                         >
-                            <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            Browse All {conditions.length > 1000 ? '70,000+' : ''} Medical Conditions
+                            ← Browse all medical conditions
                         </Link>
                     </div>
                 </div>
-            </div>
+            </main>
         </>
     );
 }
