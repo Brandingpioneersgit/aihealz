@@ -7,29 +7,61 @@ interface FaqItem {
 
 export function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
     return (
-        <div className="space-y-3">
+        <div className="card-flat" style={{ overflow: 'hidden' }}>
             {faqs.map((faq, i) => (
                 <details
                     key={i}
                     open={i === 0}
-                    className="group rounded-2xl border bg-slate-900/40 border-white/5 hover:border-white/10 open:bg-slate-800/60 open:border-teal-500/30 open:shadow-lg open:shadow-teal-500/5 transition-all duration-300 overflow-hidden"
+                    className="group"
+                    style={{
+                        borderTop: i === 0 ? 'none' : '1px solid var(--rule)',
+                    }}
                 >
-                    <summary className="cursor-pointer list-none w-full text-left px-6 py-5 flex items-center justify-between gap-4">
-                        <span className="font-semibold text-base text-slate-300 group-open:text-white transition-colors">
+                    <summary
+                        className="row between ai-center gap-4"
+                        style={{
+                            cursor: 'pointer',
+                            listStyle: 'none',
+                            padding: '18px 22px',
+                            color: 'var(--ink)',
+                        }}
+                    >
+                        <span
+                            style={{
+                                fontFamily: 'var(--display)',
+                                fontWeight: 600,
+                                fontSize: 16,
+                                letterSpacing: '-0.015em',
+                                color: 'var(--ink)',
+                                flex: 1,
+                            }}
+                        >
                             {faq.question}
                         </span>
-                        <svg
-                            className="w-5 h-5 shrink-0 text-teal-400 transition-transform duration-300 group-open:rotate-180"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                        <span
                             aria-hidden="true"
+                            className="mono"
+                            style={{
+                                fontSize: 16,
+                                color: 'var(--cobalt)',
+                                fontWeight: 600,
+                                flexShrink: 0,
+                                transition: 'transform var(--transition-normal)',
+                            }}
                         >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
+                            <span className="group-open:hidden">▾</span>
+                            <span className="hidden group-open:inline">▴</span>
+                        </span>
                     </summary>
-                    <div className="px-6 pb-5">
-                        <p className="text-slate-400 leading-relaxed text-[15px]">
+                    <div style={{ padding: '0 22px 20px' }}>
+                        <p
+                            style={{
+                                color: 'var(--ink-3)',
+                                lineHeight: 1.6,
+                                fontSize: 15,
+                                margin: 0,
+                            }}
+                        >
                             {faq.answer}
                         </p>
                     </div>

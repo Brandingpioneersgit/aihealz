@@ -3,71 +3,43 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const QUICK_ACTIONS = [
+interface QuickAction {
+    href: string;
+    label: string;
+    description: string;
+    monogram: string;
+}
+
+const QUICK_ACTIONS: QuickAction[] = [
     {
         href: '/analyze',
         label: 'Analyze Report',
         description: 'Upload & understand your medical reports',
-        icon: (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-        ),
-        color: 'from-violet-500 to-purple-500',
-        bgColor: 'bg-violet-500/10',
-        borderColor: 'border-violet-500/20',
+        monogram: 'AR',
     },
     {
         href: '/symptoms',
         label: 'Check Symptoms',
         description: 'AI-powered symptom analysis',
-        icon: (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-        ),
-        color: 'from-emerald-500 to-teal-500',
-        bgColor: 'bg-emerald-500/10',
-        borderColor: 'border-emerald-500/20',
+        monogram: 'CS',
     },
     {
         href: '/chat/consult',
         label: 'AI Care Bot',
         description: 'Get OTC & home remedy advice',
-        icon: (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-            </svg>
-        ),
-        color: 'from-cyan-500 to-blue-500',
-        bgColor: 'bg-cyan-500/10',
-        borderColor: 'border-cyan-500/20',
+        monogram: 'CB',
     },
     {
         href: '/doctors',
         label: 'Find Doctor',
         description: 'Search specialists near you',
-        icon: (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-        ),
-        color: 'from-rose-500 to-pink-500',
-        bgColor: 'bg-rose-500/10',
-        borderColor: 'border-rose-500/20',
+        monogram: 'FD',
     },
     {
         href: '/tools',
         label: 'Health Tools',
         description: 'BMI, BMR, risk calculators',
-        icon: (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-            </svg>
-        ),
-        color: 'from-amber-500 to-orange-500',
-        bgColor: 'bg-amber-500/10',
-        borderColor: 'border-amber-500/20',
+        monogram: 'HT',
     },
 ];
 
@@ -83,100 +55,265 @@ export default function AIGuide() {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end">
-
-            {/* Chat Bubble */}
+        <div
+            className="col ai-end"
+            style={{
+                position: 'fixed',
+                bottom: 24,
+                right: 24,
+                zIndex: 9999,
+            }}
+        >
+            {/* Chat Panel */}
             {isOpen && (
-                <div className="mb-3 bg-[#0A1128]/95 backdrop-blur-xl border border-white/10 p-5 rounded-3xl shadow-2xl shadow-black/40 w-80 animate-in fade-in slide-in-from-bottom-4 duration-300">
+                <div
+                    className="card"
+                    style={{
+                        position: 'relative',
+                        marginBottom: 12,
+                        padding: 22,
+                        width: 320,
+                        animation: 'slide-up 280ms ease-out',
+                    }}
+                >
                     {/* Close button */}
                     <button
                         onClick={() => setIsOpen(false)}
-                        className="absolute top-4 right-4 w-7 h-7 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/50 hover:text-white transition-colors"
                         aria-label="Close AI Health Guide"
+                        className="row ai-center center"
+                        style={{
+                            position: 'absolute',
+                            top: 14,
+                            right: 14,
+                            width: 28,
+                            height: 28,
+                            borderRadius: 'var(--r-2)',
+                            background: 'transparent',
+                            border: '1px solid transparent',
+                            color: 'var(--ink-3)',
+                            cursor: 'pointer',
+                            transition: 'background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast)',
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.background = 'var(--bg-2)';
+                            e.currentTarget.style.color = 'var(--ink)';
+                            e.currentTarget.style.borderColor = 'var(--rule)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'transparent';
+                            e.currentTarget.style.color = 'var(--ink-3)';
+                            e.currentTarget.style.borderColor = 'transparent';
+                        }}
                     >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        ×
                     </button>
 
                     {/* Header */}
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/20">
-                            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p className="text-sm font-bold text-white leading-none mb-1">AI Health Guide</p>
-                            <div className="flex items-center gap-1.5">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-                                </span>
-                                <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-400">Online</span>
-                            </div>
+                    <div className="row ai-center gap-3" style={{ marginBottom: 16 }}>
+                        <span className="spec-icon" aria-hidden="true">AI</span>
+                        <div className="col" style={{ minWidth: 0 }}>
+                            <p
+                                className="display"
+                                style={{
+                                    fontSize: 14,
+                                    fontWeight: 600,
+                                    color: 'var(--ink)',
+                                    margin: 0,
+                                    letterSpacing: '-0.01em',
+                                }}
+                            >
+                                AI Health Guide
+                            </p>
+                            <span
+                                className="row ai-center gap-1 mono"
+                                style={{
+                                    fontSize: 10,
+                                    color: 'var(--mint-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    fontWeight: 500,
+                                    marginTop: 2,
+                                }}
+                            >
+                                <span
+                                    aria-hidden="true"
+                                    style={{
+                                        width: 6,
+                                        height: 6,
+                                        borderRadius: 999,
+                                        background: 'var(--mint)',
+                                        animation: 'pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                                    }}
+                                />
+                                Online
+                            </span>
                         </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-sm text-white/60 leading-relaxed mb-4">
-                        How can I help you today? Select an option below.
+                    <p
+                        style={{
+                            fontSize: 13,
+                            color: 'var(--ink-3)',
+                            margin: '0 0 14px',
+                            lineHeight: 1.5,
+                        }}
+                    >
+                        How can I help you today? Pick an option below.
                     </p>
 
                     {/* Quick Actions */}
-                    <div className="space-y-2">
+                    <div className="col gap-2">
                         {QUICK_ACTIONS.map((action) => (
                             <Link
                                 key={action.href}
                                 href={action.href}
                                 onClick={() => setIsOpen(false)}
-                                className={`flex items-center gap-3 p-3 rounded-xl ${action.bgColor} border ${action.borderColor} hover:bg-white/10 transition-all group`}
+                                className="row ai-center gap-3 group"
+                                style={{
+                                    padding: '10px 12px',
+                                    background: 'var(--paper-2)',
+                                    border: '1px solid var(--rule)',
+                                    borderRadius: 'var(--r-2)',
+                                    color: 'var(--ink-2)',
+                                    textDecoration: 'none',
+                                    transition: 'background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast)',
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.background = 'var(--paper)';
+                                    e.currentTarget.style.borderColor = 'var(--cobalt)';
+                                    e.currentTarget.style.color = 'var(--ink)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.background = 'var(--paper-2)';
+                                    e.currentTarget.style.borderColor = 'var(--rule)';
+                                    e.currentTarget.style.color = 'var(--ink-2)';
+                                }}
                             >
-                                <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center text-white shadow-lg`}>
-                                    {action.icon}
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                    <p className="text-sm font-semibold text-white group-hover:text-white transition-colors">
+                                <span
+                                    className="row ai-center center mono"
+                                    style={{
+                                        width: 32,
+                                        height: 32,
+                                        borderRadius: 'var(--r-2)',
+                                        background: 'var(--cobalt-50)',
+                                        color: 'var(--cobalt)',
+                                        fontSize: 11,
+                                        fontWeight: 600,
+                                        flexShrink: 0,
+                                        letterSpacing: '0.04em',
+                                    }}
+                                >
+                                    {action.monogram}
+                                </span>
+                                <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                                    <p
+                                        style={{
+                                            fontSize: 13,
+                                            fontWeight: 600,
+                                            color: 'inherit',
+                                            margin: 0,
+                                        }}
+                                    >
                                         {action.label}
                                     </p>
-                                    <p className="text-[10px] text-white/40 truncate">
+                                    <p
+                                        style={{
+                                            fontSize: 11,
+                                            color: 'var(--ink-4)',
+                                            margin: 0,
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap',
+                                        }}
+                                    >
                                         {action.description}
                                     </p>
                                 </div>
-                                <svg className="w-4 h-4 text-white/30 group-hover:text-white/60 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
+                                <span
+                                    aria-hidden="true"
+                                    className="mono"
+                                    style={{
+                                        color: 'var(--ink-4)',
+                                        fontSize: 14,
+                                        flexShrink: 0,
+                                    }}
+                                >
+                                    →
+                                </span>
                             </Link>
                         ))}
                     </div>
 
                     {/* Footer */}
-                    <div className="mt-4 pt-3 border-t border-white/5 text-center">
-                        <p className="text-[10px] text-white/30">Powered by AIHealz Intelligence</p>
+                    <div
+                        className="hairline-t"
+                        style={{ marginTop: 16, paddingTop: 12, textAlign: 'center' }}
+                    >
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 10,
+                                color: 'var(--ink-4)',
+                                letterSpacing: '0.08em',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            Powered by AIHealz Intelligence
+                        </span>
                     </div>
                 </div>
             )}
 
-            {/* FAB Button */}
+            {/* FAB */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`relative w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-600 shadow-xl shadow-primary-500/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 ${isOpen ? 'rotate-45' : ''}`}
                 aria-label="AI Health Guide"
+                className="row ai-center center"
+                style={{
+                    position: 'relative',
+                    width: 52,
+                    height: 52,
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--cobalt)',
+                    border: '1px solid var(--cobalt)',
+                    color: '#fff',
+                    fontFamily: 'var(--display)',
+                    fontWeight: 600,
+                    fontSize: 18,
+                    letterSpacing: '-0.02em',
+                    cursor: 'pointer',
+                    transition: 'background var(--transition-fast), transform var(--transition-fast)',
+                }}
+                onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'var(--cobalt-2)';
+                }}
+                onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'var(--cobalt)';
+                }}
             >
-                {isOpen ? (
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                ) : (
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                )}
+                {isOpen ? '×' : 'AI'}
 
                 {/* Notification dot */}
                 {!isOpen && (
-                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-[#050B14] animate-pulse flex items-center justify-center">
-                        <span className="text-[8px] text-white font-bold">!</span>
+                    <span
+                        aria-hidden="true"
+                        className="row ai-center center mono"
+                        style={{
+                            position: 'absolute',
+                            top: -4,
+                            right: -4,
+                            width: 18,
+                            height: 18,
+                            background: 'var(--orange)',
+                            color: '#fff',
+                            borderRadius: 999,
+                            border: '2px solid var(--bg)',
+                            fontSize: 9,
+                            fontWeight: 700,
+                        }}
+                    >
+                        !
                     </span>
                 )}
             </button>

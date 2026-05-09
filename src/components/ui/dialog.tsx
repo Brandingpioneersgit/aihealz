@@ -63,7 +63,13 @@ export function DialogOverlay({ className = '' }: DialogOverlayProps) {
 
     return (
         <div
-            className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-fade-in ${className}`}
+            className={`animate-fade-in ${className}`}
+            style={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 500,
+                background: 'rgba(10, 26, 47, .55)',
+            }}
             onClick={() => onOpenChange(false)}
             aria-hidden="true"
         />
@@ -109,20 +115,30 @@ export function DialogContent({ children, className = '', size = 'md' }: DialogC
     return (
         <>
             <DialogOverlay />
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div
+                className="row ai-center center"
+                style={{
+                    position: 'fixed',
+                    inset: 0,
+                    zIndex: 500,
+                    padding: 16,
+                    pointerEvents: 'none',
+                }}
+            >
                 <div
                     ref={contentRef}
                     role="dialog"
                     aria-modal="true"
                     tabIndex={-1}
-                    className={`
-                        relative w-full ${sizeClasses[size]}
-                        bg-white dark:bg-gray-900
-                        rounded-xl shadow-xl
-                        animate-scale-in
-                        focus:outline-none
-                        ${className}
-                    `}
+                    className={`card animate-scale-in ${sizeClasses[size]} ${className}`}
+                    style={{
+                        position: 'relative',
+                        width: '100%',
+                        maxHeight: '90vh',
+                        overflow: 'auto',
+                        outline: 'none',
+                        pointerEvents: 'auto',
+                    }}
                     onClick={(e) => e.stopPropagation()}
                 >
                     {children}
@@ -139,7 +155,10 @@ interface DialogHeaderProps {
 
 export function DialogHeader({ children, className = '' }: DialogHeaderProps) {
     return (
-        <div className={`px-6 py-4 border-b border-gray-200 dark:border-gray-700 ${className}`}>
+        <div
+            className={`hairline-b ${className}`}
+            style={{ padding: '20px 24px' }}
+        >
             {children}
         </div>
     );
@@ -152,7 +171,16 @@ interface DialogTitleProps {
 
 export function DialogTitle({ children, className = '' }: DialogTitleProps) {
     return (
-        <h2 className={`text-lg font-semibold text-gray-900 dark:text-white ${className}`}>
+        <h2
+            className={`display ${className}`}
+            style={{
+                fontSize: 18,
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
+                color: 'var(--ink)',
+                margin: 0,
+            }}
+        >
             {children}
         </h2>
     );
@@ -165,7 +193,16 @@ interface DialogDescriptionProps {
 
 export function DialogDescription({ children, className = '' }: DialogDescriptionProps) {
     return (
-        <p className={`mt-1 text-sm text-gray-600 dark:text-gray-400 ${className}`}>
+        <p
+            className={className}
+            style={{
+                marginTop: 6,
+                fontSize: 14,
+                color: 'var(--ink-3)',
+                marginBottom: 0,
+                lineHeight: 1.5,
+            }}
+        >
             {children}
         </p>
     );
@@ -178,7 +215,7 @@ interface DialogBodyProps {
 
 export function DialogBody({ children, className = '' }: DialogBodyProps) {
     return (
-        <div className={`px-6 py-4 ${className}`}>
+        <div className={className} style={{ padding: '20px 24px' }}>
             {children}
         </div>
     );
@@ -191,7 +228,10 @@ interface DialogFooterProps {
 
 export function DialogFooter({ children, className = '' }: DialogFooterProps) {
     return (
-        <div className={`px-6 py-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-end gap-3 ${className}`}>
+        <div
+            className={`hairline-t row ai-center gap-3 ${className}`}
+            style={{ padding: '16px 24px', justifyContent: 'flex-end' }}
+        >
             {children}
         </div>
     );
@@ -221,18 +261,34 @@ export function DialogClose({ children, className = '', asChild = false }: Dialo
         <button
             type="button"
             onClick={() => onOpenChange(false)}
-            className={`
-                absolute top-4 right-4
-                p-1.5 rounded-lg
-                text-gray-400 hover:text-gray-600 hover:bg-gray-100
-                dark:hover:text-gray-300 dark:hover:bg-gray-800
-                transition-colors
-                ${className}
-            `}
             aria-label="Close dialog"
+            className={`row ai-center center ${className}`}
+            style={{
+                position: 'absolute',
+                top: 14,
+                right: 14,
+                width: 30,
+                height: 30,
+                borderRadius: 'var(--r-2)',
+                background: 'transparent',
+                border: '1px solid transparent',
+                color: 'var(--ink-3)',
+                cursor: 'pointer',
+                transition: 'background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast)',
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--bg-2)';
+                e.currentTarget.style.color = 'var(--ink)';
+                e.currentTarget.style.borderColor = 'var(--rule)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = 'var(--ink-3)';
+                e.currentTarget.style.borderColor = 'transparent';
+            }}
         >
             {children || (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
             )}
@@ -284,7 +340,7 @@ export function AlertDialog({
                         type="button"
                         onClick={() => onOpenChange(false)}
                         disabled={loading}
-                        className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 disabled:opacity-50"
+                        className="btn btn-paper"
                     >
                         {cancelLabel}
                     </button>
@@ -292,21 +348,25 @@ export function AlertDialog({
                         type="button"
                         onClick={handleConfirm}
                         disabled={loading}
-                        className={`
-                            px-4 py-2 text-sm font-medium text-white rounded-lg disabled:opacity-50
-                            ${variant === 'danger'
-                                ? 'bg-red-600 hover:bg-red-700 focus:ring-red-500'
-                                : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500'
-                            }
-                        `}
+                        className={variant === 'danger' ? 'btn btn-orange' : 'btn btn-cobalt'}
                     >
                         {loading ? (
-                            <span className="flex items-center gap-2">
-                                <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                            <span className="row ai-center gap-2">
+                                <svg
+                                    width="14"
+                                    height="14"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    style={{ animation: 'spin 0.8s linear infinite' }}
+                                >
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeOpacity=".25" strokeWidth="4" />
+                                    <path
+                                        fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                                    />
                                 </svg>
-                                Processing...
+                                Processing…
+                                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
                             </span>
                         ) : (
                             confirmLabel

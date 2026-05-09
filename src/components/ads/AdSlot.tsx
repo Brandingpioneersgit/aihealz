@@ -47,7 +47,6 @@ export default function AdSlot({
     const [impressionId, setImpressionId] = useState<string | null>(null);
     const hasTrackedImpression = useRef(false);
 
-    // Fetch ad on mount
     useEffect(() => {
         const fetchAd = async () => {
             try {
@@ -79,7 +78,6 @@ export default function AdSlot({
         fetchAd();
     }, [placement, conditionSlug, specialtyType, countryCode, citySlug, languageCode]);
 
-    // Track impression when ad is visible
     useEffect(() => {
         if (!ad || !sessionHash || hasTrackedImpression.current) return;
 
@@ -109,7 +107,6 @@ export default function AdSlot({
             }
         };
 
-        // Use Intersection Observer to track when ad is visible
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -129,7 +126,6 @@ export default function AdSlot({
         return () => observer.disconnect();
     }, [ad, sessionHash, placement, countryCode, citySlug, conditionSlug, languageCode]);
 
-    // Handle click
     const handleClick = async () => {
         if (!ad || !sessionHash) return;
 
@@ -152,14 +148,17 @@ export default function AdSlot({
             console.error('Failed to track click:', error);
         }
 
-        // Navigate to destination
         window.open(ad.destinationUrl, '_blank', 'noopener,noreferrer');
     };
 
     if (loading) {
         return (
-            <div className={`animate-pulse bg-slate-200 rounded-lg ${className}`}>
-                <div className="h-full min-h-[100px]" />
+            <div
+                className={`placeholder ${className}`}
+                style={{ minHeight: 100 }}
+                aria-busy="true"
+            >
+                Sponsored
             </div>
         );
     }
@@ -171,51 +170,150 @@ export default function AdSlot({
     return (
         <div
             id={`ad-slot-${placement}-${ad.campaignId}`}
-            className={`relative group cursor-pointer ${className}`}
+            className={className}
+            style={{ position: 'relative', cursor: 'pointer' }}
             onClick={handleClick}
         >
-            {/* Ad Label */}
-            <div className="absolute top-1 left-1 z-10">
-                <span className="px-1.5 py-0.5 bg-slate-900/60 text-white text-[10px] font-medium rounded">
-                    Ad
-                </span>
-            </div>
+            {/* Ad label — mono kicker */}
+            <span
+                className="mono"
+                style={{
+                    position: 'absolute',
+                    top: 8,
+                    left: 8,
+                    zIndex: 2,
+                    padding: '2px 8px',
+                    background: 'var(--paper)',
+                    color: 'var(--ink-3)',
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-1)',
+                    fontSize: 9,
+                    fontWeight: 500,
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                }}
+            >
+                Sponsored
+            </span>
 
-            {/* Ad Content */}
+            {/* Ad content */}
             {ad.imageUrl ? (
-                <div className="relative overflow-hidden rounded-lg bg-slate-100">
+                <div
+                    style={{
+                        position: 'relative',
+                        overflow: 'hidden',
+                        borderRadius: 'var(--r-3)',
+                        background: 'var(--bg-2)',
+                        border: '1px solid var(--rule)',
+                        transition: 'border-color var(--transition-fast)',
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--cobalt)';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--rule)';
+                    }}
+                >
                     <img
                         src={ad.imageUrl}
                         alt={ad.imageAlt || ad.headline || 'Advertisement'}
-                        className="w-full h-auto object-cover transition-transform group-hover:scale-105"
                         style={{
+                            width: '100%',
+                            height: 'auto',
+                            display: 'block',
+                            objectFit: 'cover',
                             maxWidth: ad.width ? `${ad.width}px` : undefined,
                             maxHeight: ad.height ? `${ad.height}px` : undefined,
                         }}
                     />
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                 </div>
             ) : (
-                // Text-based ad (native format)
-                <div className="p-4 bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg border border-slate-200 hover:border-teal-300 hover:shadow-md transition-all">
+                <div
+                    className="card-flat"
+                    style={{
+                        padding: 16,
+                        background: 'var(--paper)',
+                        transition: 'border-color var(--transition-fast), background var(--transition-fast)',
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--cobalt)';
+                        e.currentTarget.style.background = 'var(--paper-2)';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'var(--rule)';
+                        e.currentTarget.style.background = 'var(--paper)';
+                    }}
+                >
                     {ad.logoUrl && (
                         <img
                             src={ad.logoUrl}
                             alt={ad.companyName}
-                            className="w-10 h-10 object-contain rounded mb-3"
+                            style={{
+                                width: 36,
+                                height: 36,
+                                objectFit: 'contain',
+                                borderRadius: 'var(--r-1)',
+                                marginBottom: 12,
+                            }}
                         />
                     )}
                     {ad.headline && (
-                        <h4 className="font-semibold text-slate-900 mb-1 line-clamp-2">{ad.headline}</h4>
+                        <h4
+                            className="display"
+                            style={{
+                                fontSize: 15,
+                                fontWeight: 600,
+                                color: 'var(--ink)',
+                                margin: '0 0 6px',
+                                letterSpacing: '-0.015em',
+                                display: '-webkit-box',
+                                WebkitLineClamp: 2,
+                                WebkitBoxOrient: 'vertical',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {ad.headline}
+                        </h4>
                     )}
                     {ad.description && (
-                        <p className="text-sm text-slate-600 mb-3 line-clamp-2">{ad.description}</p>
+                        <p
+                            style={{
+                                fontSize: 13,
+                                color: 'var(--ink-3)',
+                                margin: '0 0 14px',
+                                lineHeight: 1.5,
+                                display: '-webkit-box',
+                                WebkitLineClamp: 2,
+                                WebkitBoxOrient: 'vertical',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {ad.description}
+                        </p>
                     )}
-                    <div className="flex items-center justify-between">
-                        <span className="text-xs text-slate-400">{ad.companyName}</span>
+                    <div className="row between ai-center">
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-4)',
+                                letterSpacing: '0.05em',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            {ad.companyName}
+                        </span>
                         {ad.ctaText && (
-                            <span className="text-xs font-medium text-teal-600 group-hover:text-teal-700">
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    fontWeight: 600,
+                                    color: 'var(--cobalt)',
+                                    letterSpacing: '0.04em',
+                                    textTransform: 'uppercase',
+                                }}
+                            >
                                 {ad.ctaText} →
                             </span>
                         )}

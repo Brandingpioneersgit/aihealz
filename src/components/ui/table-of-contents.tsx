@@ -32,24 +32,61 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
     }, [items]);
 
     return (
-        <nav className="bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/5 p-4">
-            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3 px-3">On this page</h4>
-            <ul className="space-y-1">
-                {items.map((item) => (
-                    <li key={item.id}>
-                        <a
-                            href={`#${item.id}`}
-                            className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                                activeId === item.id
-                                    ? 'bg-teal-500/10 text-teal-400 border-l-2 border-teal-400'
-                                    : 'text-slate-500 hover:text-slate-300 hover:bg-white/5'
-                            }`}
-                        >
-                            {item.label}
-                        </a>
-                    </li>
-                ))}
-            </ul>
+        <nav className="card-flat" style={{ padding: 16 }}>
+            <div className="section-mark" style={{ marginBottom: 12, paddingLeft: 4 }}>
+                On this page
+            </div>
+            <ol className="clean col gap-1">
+                {items.map((item, idx) => {
+                    const isActive = activeId === item.id;
+                    return (
+                        <li key={item.id}>
+                            <a
+                                href={`#${item.id}`}
+                                className="row ai-center gap-2"
+                                style={{
+                                    padding: '8px 12px',
+                                    fontSize: 14,
+                                    fontWeight: 500,
+                                    color: isActive ? 'var(--cobalt)' : 'var(--ink-3)',
+                                    background: isActive ? 'var(--cobalt-50)' : 'transparent',
+                                    borderRadius: 'var(--r-2)',
+                                    borderLeft: isActive
+                                        ? '2px solid var(--cobalt)'
+                                        : '2px solid transparent',
+                                    transition:
+                                        'color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast)',
+                                }}
+                                onMouseEnter={(e) => {
+                                    if (!isActive) {
+                                        e.currentTarget.style.color = 'var(--ink)';
+                                        e.currentTarget.style.background = 'var(--bg-2)';
+                                    }
+                                }}
+                                onMouseLeave={(e) => {
+                                    if (!isActive) {
+                                        e.currentTarget.style.color = 'var(--ink-3)';
+                                        e.currentTarget.style.background = 'transparent';
+                                    }
+                                }}
+                            >
+                                <span
+                                    aria-hidden="true"
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: isActive ? 'var(--cobalt)' : 'var(--ink-4)',
+                                        minWidth: 18,
+                                    }}
+                                >
+                                    {String(idx + 1).padStart(2, '0')}
+                                </span>
+                                <span style={{ flex: 1, minWidth: 0 }}>{item.label}</span>
+                            </a>
+                        </li>
+                    );
+                })}
+            </ol>
         </nav>
     );
 }
