@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import V4Page from '@/components/v4/Shell';
 import NewsletterSignup from './NewsletterSignup';
 
 export const metadata: Metadata = {
@@ -34,50 +35,48 @@ async function loadPosts(): Promise<Post[]> {
 export default async function BlogPage() {
   const posts = await loadPosts();
   return (
-    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+    <V4Page>
+      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto' }}>
+          <nav className="row gap-2 mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}>
+            <Link href="/">Home</Link><span>/</span><span style={{ color: 'var(--ink)' }}>Blog</span>
+          </nav>
 
-      <div className="max-w-3xl mx-auto px-6 relative z-10">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-          <span className="text-white">Blog</span>
-        </nav>
+          <h1 className="display" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: '0 0 16px', fontWeight: 600 }}>
+            The aihealz blog.
+          </h1>
+          <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 640, marginBottom: 32 }}>
+            Articles by our editorial team — reviewed by clinicians, written for patients.
+          </p>
 
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.05] mb-4">
-          The <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">aihealz</span> blog.
-        </h1>
-        <p className="text-lg text-slate-400 max-w-xl mb-12 leading-relaxed">
-          Articles by our editorial team — reviewed by clinicians, written for patients.
-        </p>
-
-        {posts.length === 0 ? (
-          <div className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-8">
-            <h2 className="text-xl font-bold text-white mb-2">Coming soon</h2>
-            <p className="text-sm text-slate-400 mb-6 leading-relaxed">
-              Articles by our editorial team are on the way. Subscribe to get the first issue in your inbox.
-            </p>
-            <NewsletterSignup />
-          </div>
-        ) : (
-          <div className="flex flex-col gap-4">
-            {posts.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/blog/${p.slug}`}
-                className="block bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 hover:border-teal-500/30 hover:bg-slate-900/60 p-6 transition-all"
-              >
-                <p className="text-xs text-slate-500 mb-1">
-                  {new Date(p.publishedAt).toLocaleDateString()}{p.author ? ` · ${p.author}` : ''}
-                </p>
-                <h3 className="text-lg font-semibold text-white mb-2">{p.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{p.excerpt}</p>
-              </Link>
-            ))}
-          </div>
-        )}
+          {posts.length === 0 ? (
+            <div className="card-flat" style={{ padding: 32, borderRadius: 16, marginBottom: 32 }}>
+              <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>Coming soon</h2>
+              <p style={{ fontSize: 14, color: 'var(--ink-2)', marginBottom: 16 }}>
+                Articles by our editorial team are on the way. Subscribe to get the first issue in your inbox.
+              </p>
+              <NewsletterSignup />
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {posts.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  className="card-flat"
+                  style={{ padding: 20, borderRadius: 14, textDecoration: 'none', color: 'inherit', display: 'block' }}
+                >
+                  <p style={{ fontSize: 12, color: 'var(--ink-3)', marginBottom: 4 }}>
+                    {new Date(p.publishedAt).toLocaleDateString()}{p.author ? ` · ${p.author}` : ''}
+                  </p>
+                  <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 6 }}>{p.title}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55 }}>{p.excerpt}</p>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </main>
+    </V4Page>
   );
 }

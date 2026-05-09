@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { promises as fs } from 'fs';
 import path from 'path';
+import V4Page from '@/components/v4/Shell';
 
 export const metadata: Metadata = {
   title: 'Editorial Board — clinical reviewers at aihealz',
@@ -44,49 +45,47 @@ export default async function EditorialBoardPage() {
   const members = await loadBoard();
   const hasPlaceholder = members.some((m) => m.placeholder);
   return (
-    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-teal-900/20 to-transparent pointer-events-none" />
+    <V4Page>
+      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}>
+        <div style={{ maxWidth: 980, margin: '0 auto' }}>
+          <nav className="row gap-2 mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}>
+            <Link href="/">Home</Link><span>/</span><span style={{ color: 'var(--ink)' }}>Editorial Board</span>
+          </nav>
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-          <span className="text-white">Editorial Board</span>
-        </nav>
+          <h1 className="display" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: '0 0 16px', fontWeight: 600 }}>
+            Editorial board.
+          </h1>
+          <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 720, marginBottom: 16 }}>
+            Every patient-facing page on aihealz is written or reviewed by qualified clinicians.
+          </p>
 
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.05] mb-4">
-          Editorial <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">board.</span>
-        </h1>
-        <p className="text-lg text-slate-400 max-w-2xl mb-6 leading-relaxed">
-          Every patient-facing page on aihealz is written or reviewed by qualified clinicians.
-        </p>
-
-        {hasPlaceholder && (
-          <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl px-5 py-3 text-sm text-amber-200/90 mb-8">
-            Editorial board listing coming soon — current reviewers are anonymized.
-          </div>
-        )}
-
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {members.map((m) => (
-            <div key={m.name} className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-6 hover:border-teal-500/30 transition-colors">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-11 h-11 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-400 flex items-center justify-center font-bold">
-                  {m.initials || m.name.replace(/^Dr\.\s*/, '').charAt(0)}
-                </div>
-                <div>
-                  <p className="text-base font-semibold text-white">{m.name}</p>
-                  {m.qualifications && <p className="text-xs text-slate-500">{m.qualifications}</p>}
-                </div>
-              </div>
-              <p className="text-sm font-medium text-teal-400 mb-2">
-                {m.specialty}{m.city ? ` · ${m.city}` : ''}
-              </p>
-              {m.bio && <p className="text-sm text-slate-400 leading-relaxed">{m.bio}</p>}
+          {hasPlaceholder && (
+            <div className="card-flat" style={{ padding: 16, borderRadius: 12, fontSize: 13, color: 'var(--ink-2)', marginBottom: 32 }}>
+              Editorial board listing coming soon — current reviewers are anonymized.
             </div>
-          ))}
+          )}
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+            {members.map((m) => (
+              <div key={m.name} className="card-flat" style={{ padding: 20, borderRadius: 14 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--cobalt-50, #e0ecff)', color: 'var(--cobalt)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 600 }}>
+                    {m.initials || m.name.replace(/^Dr\.\s*/, '').charAt(0)}
+                  </div>
+                  <div>
+                    <p style={{ fontSize: 15, fontWeight: 600 }}>{m.name}</p>
+                    {m.qualifications && <p style={{ fontSize: 12, color: 'var(--ink-3)' }}>{m.qualifications}</p>}
+                  </div>
+                </div>
+                <p style={{ fontSize: 13, fontWeight: 500, color: 'var(--cobalt)', marginBottom: 8 }}>
+                  {m.specialty}{m.city ? ` · ${m.city}` : ''}
+                </p>
+                {m.bio && <p style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.55 }}>{m.bio}</p>}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </main>
+    </V4Page>
   );
 }
