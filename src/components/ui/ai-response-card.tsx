@@ -3,7 +3,7 @@
 import React, { useMemo, useState, lazy, Suspense } from 'react';
 import Link from 'next/link';
 import DOMPurify from 'dompurify';
-import { extractContentLinks, getContentColor, getClientGeoContext, type ContentLink } from '@/lib/content-linker';
+import { extractContentLinks, getClientGeoContext, type ContentLink } from '@/lib/content-linker';
 
 interface AIResponseCardProps {
     content: string;
@@ -14,102 +14,112 @@ interface AIResponseCardProps {
     className?: string;
 }
 
+// Map content type → Bureau pill class
+function getPillForType(type: ContentLink['type']): string {
+    switch (type) {
+        case 'test':
+            return 'pill pill-cobalt';
+        case 'condition':
+            return 'pill pill-orange';
+        case 'treatment':
+            return 'pill pill-mint';
+        case 'specialty':
+        case 'doctor':
+            return 'pill pill-magenta';
+        case 'hospital':
+            return 'pill';
+        case 'tool':
+            return 'pill pill-lemon';
+        default:
+            return 'pill';
+    }
+}
+
 // Lazy load the links section for performance
 const ContentLinksSection = lazy(() => Promise.resolve({
     default: ({ links }: { links: ContentLink[] }) => (
-        <div className="mt-4 pt-4 border-t border-white/10">
-            <div className="flex items-center gap-2 mb-3">
-                <div className="w-5 h-5 rounded-md bg-primary-500/20 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                    </svg>
-                </div>
-                <span className="text-xs font-bold text-white/60 uppercase tracking-wider">Related on AIHealz</span>
+        <div className="hairline-t" style={{ marginTop: 16, paddingTop: 16 }}>
+            <div className="row ai-center gap-2" style={{ marginBottom: 12 }}>
+                <span className="section-mark">Related on AIHealz</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {links.map((link, idx) => {
-                    const colors = getContentColor(link.type);
-                    return (
-                        <Link
-                            key={idx}
-                            href={link.url}
-                            className={`group flex items-center gap-3 p-3 rounded-xl ${colors.bg} border ${colors.border} hover:bg-white/10 transition-all duration-200`}
+            <div
+                className="grid"
+                style={{
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                    gap: 8,
+                }}
+            >
+                {links.map((link, idx) => (
+                    <Link
+                        key={idx}
+                        href={link.url}
+                        className="row ai-center gap-3"
+                        style={{
+                            padding: '10px 12px',
+                            background: 'var(--paper-2)',
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-2)',
+                            color: 'var(--ink-2)',
+                            transition: 'background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast)',
+                            minWidth: 0,
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.background = 'var(--paper)';
+                            e.currentTarget.style.borderColor = 'var(--cobalt)';
+                            e.currentTarget.style.color = 'var(--ink)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'var(--paper-2)';
+                            e.currentTarget.style.borderColor = 'var(--rule)';
+                            e.currentTarget.style.color = 'var(--ink-2)';
+                        }}
+                    >
+                        <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                            <p
+                                style={{
+                                    fontSize: 13,
+                                    fontWeight: 600,
+                                    color: 'inherit',
+                                    margin: 0,
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                }}
+                            >
+                                {link.text}
+                            </p>
+                            <span
+                                className={getPillForType(link.type)}
+                                style={{
+                                    fontSize: 9,
+                                    padding: '2px 6px',
+                                    marginTop: 4,
+                                    alignSelf: 'flex-start',
+                                }}
+                            >
+                                {link.type === 'test' ? 'Test'
+                                    : link.type === 'condition' ? 'Condition'
+                                    : link.type === 'treatment' ? 'Treatment'
+                                    : link.type === 'specialty' ? 'Specialty'
+                                    : link.type === 'doctor' ? 'Doctor'
+                                    : link.type === 'hospital' ? 'Hospital'
+                                    : link.type === 'tool' ? 'Tool'
+                                    : 'More'}
+                            </span>
+                        </div>
+                        <span
+                            aria-hidden="true"
+                            className="mono"
+                            style={{ fontSize: 14, color: 'var(--ink-4)', flexShrink: 0 }}
                         >
-                            <div className={`w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center ${colors.icon} shrink-0`}>
-                                <ContentIcon type={link.type} />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                                <p className={`text-sm font-semibold ${colors.text} truncate group-hover:text-white transition-colors`}>
-                                    {link.text}
-                                </p>
-                                <p className="text-[10px] text-white/40 uppercase tracking-wider truncate">
-                                    {link.type === 'test' ? 'View Test Details' :
-                                     link.type === 'condition' ? 'Read Condition Guide' :
-                                     link.type === 'treatment' ? 'Treatment Info' :
-                                     link.type === 'specialty' ? 'Find Doctors' :
-                                     link.type === 'tool' ? 'Open Calculator' :
-                                     'Learn More'}
-                                </p>
-                            </div>
-                            <svg className="w-4 h-4 text-white/30 group-hover:text-white/60 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                        </Link>
-                    );
-                })}
+                            →
+                        </span>
+                    </Link>
+                ))}
             </div>
         </div>
     )
 }));
-
-// Icon component for different content types
-function ContentIcon({ type }: { type: ContentLink['type'] }) {
-    switch (type) {
-        case 'test':
-            return (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-            );
-        case 'condition':
-            return (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-            );
-        case 'treatment':
-            return (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-7 4h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-            );
-        case 'specialty':
-        case 'doctor':
-            return (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            );
-        case 'hospital':
-            return (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-            );
-        case 'tool':
-            return (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-            );
-        default:
-            return (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            );
-    }
-}
 
 // Escape HTML entities
 function escapeHtml(text: string): string {
@@ -123,58 +133,61 @@ function escapeHtml(text: string): string {
     return text.replace(/[&<>"']/g, (char) => map[char] || char);
 }
 
-// Format markdown to HTML safely
+// Format markdown to HTML — Bureau styling, no gradients/glass
 function formatMarkdown(md: string): string {
-    let escaped = escapeHtml(md);
+    const escaped = escapeHtml(md);
 
     const html = escaped
         // Headings
-        .replace(/^### (.+)$/gm, '<h4 class="text-sm font-bold text-white mt-4 mb-2 flex items-center gap-2"><span class="w-1 h-4 bg-primary-500 rounded-full"></span>$1</h4>')
-        .replace(/^## (.+)$/gm, '<h3 class="text-base font-bold text-white mt-5 mb-2 flex items-center gap-2"><span class="w-1.5 h-5 bg-primary-500 rounded-full"></span>$1</h3>')
-        .replace(/^# (.+)$/gm, '<h2 class="text-lg font-bold text-white mt-6 mb-3">$1</h2>')
+        .replace(/^### (.+)$/gm, '<h4 style="font-size:14px;font-weight:600;color:var(--ink);margin-top:18px;margin-bottom:8px;display:flex;align-items:center;gap:8px;letter-spacing:-0.015em;"><span style="width:3px;height:14px;background:var(--cobalt);border-radius:1px;"></span>$1</h4>')
+        .replace(/^## (.+)$/gm, '<h3 style="font-size:16px;font-weight:600;color:var(--ink);margin-top:22px;margin-bottom:8px;display:flex;align-items:center;gap:8px;letter-spacing:-0.02em;"><span style="width:3px;height:18px;background:var(--cobalt);border-radius:1px;"></span>$1</h3>')
+        .replace(/^# (.+)$/gm, '<h2 style="font-size:18px;font-weight:600;color:var(--ink);margin-top:24px;margin-bottom:12px;letter-spacing:-0.02em;font-family:var(--display);">$1</h2>')
         // Bold & italic
-        .replace(/\*\*(.+?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
-        .replace(/\*(.+?)\*/g, '<em class="text-primary-300">$1</em>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong style="color:var(--ink);font-weight:600;">$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em style="color:var(--cobalt);">$1</em>')
         // Code blocks
-        .replace(/```([\s\S]*?)```/g, '<pre class="bg-black/30 backdrop-blur rounded-xl p-4 text-xs overflow-x-auto my-3 border border-white/5"><code class="text-emerald-300">$1</code></pre>')
+        .replace(/```([\s\S]*?)```/g, '<pre style="background:var(--bg-2);border:1px solid var(--rule);border-radius:var(--r-2);padding:14px;font-size:12px;overflow-x:auto;margin:12px 0;font-family:var(--mono);color:var(--ink-2);"><code>$1</code></pre>')
         // Inline code
-        .replace(/`(.+?)`/g, '<code class="bg-primary-500/20 text-primary-300 px-1.5 py-0.5 rounded text-xs font-mono">$1</code>')
-        // Bullet lists with custom bullets
-        .replace(/^[-•] (.+)$/gm, '<li class="flex items-start gap-2 my-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mt-2 shrink-0"></span><span>$1</span></li>')
+        .replace(/`(.+?)`/g, '<code style="background:var(--bg-2);color:var(--ink);border:1px solid var(--rule);padding:1px 6px;border-radius:var(--r-1);font-size:12px;font-family:var(--mono);">$1</code>')
+        // Bullet lists
+        .replace(/^[-•] (.+)$/gm, '<li style="display:flex;align-items:flex-start;gap:8px;margin:4px 0;list-style:none;"><span style="width:5px;height:5px;border-radius:999px;background:var(--cobalt);margin-top:8px;flex-shrink:0;"></span><span>$1</span></li>')
         // Numbered lists
-        .replace(/^(\d+)\. (.+)$/gm, '<li class="flex items-start gap-2 my-1"><span class="text-primary-400 font-bold text-xs min-w-[20px]">$1.</span><span>$2</span></li>')
+        .replace(/^(\d+)\. (.+)$/gm, '<li style="display:flex;align-items:flex-start;gap:8px;margin:4px 0;list-style:none;"><span style="font-family:var(--mono);color:var(--cobalt);font-weight:600;font-size:12px;min-width:20px;">$1.</span><span>$2</span></li>')
         // Paragraphs
-        .replace(/\n{2,}/g, '</p><p class="mb-3 text-white/80 leading-relaxed">')
+        .replace(/\n{2,}/g, '</p><p style="margin:0 0 12px;color:var(--ink-2);line-height:1.6;font-size:14px;">')
         .replace(/\n/g, '<br/>')
         // Wrap
-        .replace(/^/, '<p class="mb-3 text-white/80 leading-relaxed">')
+        .replace(/^/, '<p style="margin:0 0 12px;color:var(--ink-2);line-height:1.6;font-size:14px;">')
         .replace(/$/, '</p>');
 
     return DOMPurify.sanitize(html, {
         ALLOWED_TAGS: ['h2', 'h3', 'h4', 'p', 'br', 'strong', 'em', 'code', 'pre', 'li', 'ul', 'ol', 'span'],
-        ALLOWED_ATTR: ['class'],
+        ALLOWED_ATTR: ['class', 'style'],
     });
 }
 
 // Loading skeleton
 function LoadingSkeleton() {
     return (
-        <div className="animate-pulse space-y-3">
-            <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-white/10"></div>
-                <div className="flex-1 space-y-2">
-                    <div className="h-3 bg-white/10 rounded-full w-3/4"></div>
-                    <div className="h-3 bg-white/10 rounded-full w-1/2"></div>
+        <div style={{ animation: 'pulse-subtle 1.5s ease-in-out infinite' }}>
+            <div className="row ai-center gap-3">
+                <div
+                    style={{
+                        width: 32,
+                        height: 32,
+                        borderRadius: 'var(--r-2)',
+                        background: 'var(--bg-2)',
+                    }}
+                />
+                <div className="col gap-2" style={{ flex: 1 }}>
+                    <div style={{ height: 10, background: 'var(--bg-2)', borderRadius: 999, width: '75%' }} />
+                    <div style={{ height: 10, background: 'var(--bg-2)', borderRadius: 999, width: '50%' }} />
                 </div>
             </div>
-            <div className="space-y-2 mt-4">
-                <div className="h-3 bg-white/5 rounded-full w-full"></div>
-                <div className="h-3 bg-white/5 rounded-full w-5/6"></div>
-                <div className="h-3 bg-white/5 rounded-full w-4/6"></div>
-            </div>
-            <div className="flex gap-2 mt-4">
-                <div className="h-10 bg-white/5 rounded-xl flex-1"></div>
-                <div className="h-10 bg-white/5 rounded-xl flex-1"></div>
+            <div className="col gap-2" style={{ marginTop: 14 }}>
+                <div style={{ height: 10, background: 'var(--bg-2)', borderRadius: 999 }} />
+                <div style={{ height: 10, background: 'var(--bg-2)', borderRadius: 999, width: '85%' }} />
+                <div style={{ height: 10, background: 'var(--bg-2)', borderRadius: 999, width: '70%' }} />
             </div>
         </div>
     );
@@ -183,18 +196,38 @@ function LoadingSkeleton() {
 // Typing indicator
 function TypingIndicator() {
     return (
-        <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary-500/30 to-accent-500/30 flex items-center justify-center">
-                <svg className="w-4 h-4 text-primary-400 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+        <div className="row ai-center gap-3">
+            <span className="spec-icon" style={{ background: 'var(--cobalt)' }}>AI</span>
+            <div
+                className="row ai-center gap-2"
+                style={{
+                    background: 'var(--bg-2)',
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    padding: '10px 14px',
+                }}
+            >
+                <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '0ms' }} />
+                <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '150ms' }} />
+                <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '300ms' }} />
             </div>
-            <div className="flex items-center gap-1.5 bg-white/5 rounded-2xl px-4 py-3">
-                <span className="w-2 h-2 rounded-full bg-primary-400 animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                <span className="w-2 h-2 rounded-full bg-primary-400 animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                <span className="w-2 h-2 rounded-full bg-primary-400 animate-bounce" style={{ animationDelay: '300ms' }}></span>
-            </div>
-            <span className="text-xs text-white/40">AI is thinking...</span>
+            <span
+                className="mono"
+                style={{
+                    fontSize: 11,
+                    color: 'var(--ink-4)',
+                    letterSpacing: '0.04em',
+                    textTransform: 'uppercase',
+                }}
+            >
+                AI is thinking…
+            </span>
+            <style>{`
+                @keyframes bounce {
+                    0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
+                    40% { transform: scale(1); opacity: 1; }
+                }
+            `}</style>
         </div>
     );
 }
@@ -202,14 +235,24 @@ function TypingIndicator() {
 // Links loading placeholder
 function LinksPlaceholder() {
     return (
-        <div className="mt-4 pt-4 border-t border-white/10 animate-pulse">
-            <div className="flex items-center gap-2 mb-3">
-                <div className="w-5 h-5 rounded-md bg-white/10"></div>
-                <div className="h-2 bg-white/10 rounded w-24"></div>
+        <div
+            className="hairline-t"
+            style={{
+                marginTop: 16,
+                paddingTop: 16,
+                animation: 'pulse-subtle 1.5s ease-in-out infinite',
+            }}
+        >
+            <div className="row ai-center gap-2" style={{ marginBottom: 12 }}>
+                <div style={{ width: 18, height: 18, borderRadius: 'var(--r-1)', background: 'var(--bg-2)' }} />
+                <div style={{ height: 8, background: 'var(--bg-2)', borderRadius: 999, width: 100 }} />
             </div>
-            <div className="grid grid-cols-2 gap-2">
-                <div className="h-14 bg-white/5 rounded-xl"></div>
-                <div className="h-14 bg-white/5 rounded-xl"></div>
+            <div
+                className="grid"
+                style={{ gridTemplateColumns: '1fr 1fr', gap: 8 }}
+            >
+                <div style={{ height: 56, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
+                <div style={{ height: 56, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
             </div>
         </div>
     );
@@ -225,29 +268,27 @@ export default function AIResponseCard({
 }: AIResponseCardProps) {
     const [linksExpanded, setLinksExpanded] = useState(true);
 
-    // Extract content links
     const contentLinks = useMemo(() => {
         if (!showLinks || isLoading || !content) return [];
         const geoContext = getClientGeoContext();
         return extractContentLinks(content, userLocation, geoContext);
     }, [content, userLocation, showLinks, isLoading]);
 
-    // Format content
     const formattedContent = useMemo(() => {
         if (isLoading || !content) return '';
         return formatMarkdown(content);
     }, [content, isLoading]);
 
-    // Variant-specific styling
+    // Variant container
     const containerClass = {
-        chat: 'bg-white/5 border border-white/10 rounded-2xl rounded-bl-md',
-        inline: 'bg-transparent',
-        card: 'bg-[#0A1128]/90 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl shadow-black/20',
+        chat: 'card-flat',
+        inline: '',
+        card: 'card',
     }[variant];
 
     if (isLoading) {
         return (
-            <div className={`p-5 ${containerClass} ${className}`}>
+            <div className={`${containerClass} ${className}`} style={{ padding: 20 }}>
                 <TypingIndicator />
             </div>
         );
@@ -255,44 +296,91 @@ export default function AIResponseCard({
 
     return (
         <div className={`${containerClass} ${className}`}>
-            {/* Header - only for card variant */}
+            {/* Header - card variant only */}
             {variant === 'card' && (
-                <div className="px-6 py-4 border-b border-white/10 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/20">
-                        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
+                <div
+                    className="hairline-b row ai-center gap-3"
+                    style={{ padding: '18px 22px' }}
+                >
+                    <span className="spec-icon">AI</span>
+                    <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                        <h3
+                            className="display"
+                            style={{
+                                fontSize: 14,
+                                fontWeight: 600,
+                                color: 'var(--ink)',
+                                margin: 0,
+                                letterSpacing: '-0.01em',
+                            }}
+                        >
+                            AIHealz Intelligence
+                        </h3>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 10,
+                                color: 'var(--ink-4)',
+                                letterSpacing: '0.08em',
+                                textTransform: 'uppercase',
+                                fontWeight: 500,
+                            }}
+                        >
+                            AI-Powered Health Assistant
+                        </span>
                     </div>
-                    <div>
-                        <h3 className="text-sm font-bold text-white">AIHealz Intelligence</h3>
-                        <p className="text-[10px] text-white/50 uppercase tracking-wider">AI-Powered Health Assistant</p>
-                    </div>
-                    <div className="ml-auto flex items-center gap-1.5">
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        <span className="text-[10px] text-emerald-400 font-medium">Online</span>
+                    <div
+                        className="row ai-center gap-1 mono"
+                        style={{
+                            fontSize: 10,
+                            color: 'var(--mint-3)',
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                            fontWeight: 500,
+                        }}
+                    >
+                        <span
+                            aria-hidden="true"
+                            style={{
+                                width: 6,
+                                height: 6,
+                                borderRadius: 999,
+                                background: 'var(--mint)',
+                            }}
+                        />
+                        Online
                     </div>
                 </div>
             )}
 
             {/* Content */}
-            <div className={variant === 'card' ? 'p-6' : 'p-5'}>
-                {/* AI Avatar for chat variant */}
+            <div style={{ padding: variant === 'card' ? 22 : variant === 'inline' ? 0 : 20 }}>
+                {/* Avatar for chat variant */}
                 {variant === 'chat' && (
-                    <div className="flex items-start gap-3 mb-3">
-                        <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-primary-500/30 to-accent-500/30 flex items-center justify-center shrink-0">
-                            <svg className="w-3.5 h-3.5 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                            </svg>
-                        </div>
-                        <span className="text-[10px] text-white/40 uppercase tracking-wider font-bold mt-1">AI Response</span>
+                    <div className="row ai-center gap-2" style={{ marginBottom: 10 }}>
+                        <span
+                            className="spec-icon"
+                            style={{ width: 26, height: 26, fontSize: 11 }}
+                        >
+                            AI
+                        </span>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 10,
+                                color: 'var(--ink-4)',
+                                letterSpacing: '0.08em',
+                                textTransform: 'uppercase',
+                                fontWeight: 500,
+                            }}
+                        >
+                            AI Response
+                        </span>
                     </div>
                 )}
 
                 {/* Formatted content */}
-                <div
-                    className="prose prose-invert prose-sm max-w-none"
-                    dangerouslySetInnerHTML={{ __html: formattedContent }}
-                />
+                <div dangerouslySetInnerHTML={{ __html: formattedContent }} />
 
                 {/* Content Links */}
                 {showLinks && contentLinks.length > 0 && (
@@ -301,12 +389,26 @@ export default function AIResponseCard({
                         {contentLinks.length > 4 && (
                             <button
                                 onClick={() => setLinksExpanded(!linksExpanded)}
-                                className="w-full mt-4 py-2 text-xs text-white/50 hover:text-white/70 transition-colors flex items-center justify-center gap-2"
+                                className="btn btn-ghost btn-sm"
+                                style={{
+                                    width: '100%',
+                                    marginTop: 16,
+                                }}
                             >
-                                {linksExpanded ? 'Show fewer' : `Show ${contentLinks.length} related pages`}
-                                <svg className={`w-3 h-3 transition-transform ${linksExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
+                                <span className="mono" style={{ fontSize: 11 }}>
+                                    {linksExpanded ? 'Show fewer' : `Show ${contentLinks.length} related pages`}
+                                </span>
+                                <span
+                                    aria-hidden="true"
+                                    className="mono"
+                                    style={{
+                                        transition: 'transform var(--transition-normal)',
+                                        transform: linksExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                                        display: 'inline-block',
+                                    }}
+                                >
+                                    ▾
+                                </span>
                             </button>
                         )}
 
@@ -319,17 +421,25 @@ export default function AIResponseCard({
                 )}
             </div>
 
-            {/* Footer - only for card variant */}
+            {/* Footer - card variant */}
             {variant === 'card' && (
-                <div className="px-6 py-3 border-t border-white/5 bg-white/[0.02]">
-                    <p className="text-[10px] text-white/30 text-center uppercase tracking-widest">
-                        For informational purposes only. Consult a healthcare provider for medical advice.
-                    </p>
+                <div
+                    className="hairline-t mono"
+                    style={{
+                        padding: '12px 22px',
+                        background: 'var(--paper-2)',
+                        textAlign: 'center',
+                        fontSize: 10,
+                        color: 'var(--ink-4)',
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                    }}
+                >
+                    For informational purposes only. Consult a healthcare provider for medical advice.
                 </div>
             )}
         </div>
     );
 }
 
-// Export loading component for external use
 export { TypingIndicator, LoadingSkeleton };

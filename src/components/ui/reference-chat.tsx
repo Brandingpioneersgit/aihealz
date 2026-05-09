@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
 import Link from 'next/link';
 import DOMPurify from 'dompurify';
-import { extractContentLinks, getContentColor, getClientGeoContext, type ContentLink } from '@/lib/content-linker';
+import { extractContentLinks, getClientGeoContext, type ContentLink } from '@/lib/content-linker';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -17,63 +17,58 @@ interface ReferenceChatProps {
     title: string;
 }
 
-// Lazy load links section
+function getPillForType(type: ContentLink['type']): string {
+    switch (type) {
+        case 'test':
+            return 'pill pill-cobalt';
+        case 'condition':
+            return 'pill pill-orange';
+        case 'treatment':
+            return 'pill pill-mint';
+        case 'specialty':
+        case 'doctor':
+            return 'pill pill-magenta';
+        case 'hospital':
+            return 'pill';
+        case 'tool':
+            return 'pill pill-lemon';
+        default:
+            return 'pill';
+    }
+}
+
+// Lazy-loaded links section
 const ContentLinksSection = lazy(() => Promise.resolve({
     default: ({ links }: { links: ContentLink[] }) => (
-        <div className="mt-4 pt-4 border-t border-white/10">
-            <div className="flex items-center gap-2 mb-3">
-                <div className="w-5 h-5 rounded-md bg-primary-500/20 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                    </svg>
-                </div>
-                <span className="text-xs font-bold text-white/50 uppercase tracking-wider">Related Resources</span>
+        <div className="hairline-t" style={{ marginTop: 14, paddingTop: 14 }}>
+            <div className="section-mark" style={{ marginBottom: 10 }}>
+                Related resources
             </div>
-            <div className="flex flex-wrap gap-2">
-                {links.map((link, idx) => {
-                    const colors = getContentColor(link.type);
-                    return (
-                        <Link
-                            key={idx}
-                            href={link.url}
-                            className={`inline-flex items-center gap-2 px-3 py-2 rounded-xl ${colors.bg} border ${colors.border} hover:bg-white/10 transition-all text-xs font-medium ${colors.text}`}
-                        >
-                            <ContentIcon type={link.type} />
-                            {link.text}
-                            <svg className="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </Link>
-                    );
-                })}
+            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                {links.map((link, idx) => (
+                    <Link
+                        key={idx}
+                        href={link.url}
+                        className={`${getPillForType(link.type)} row ai-center gap-1`}
+                        style={{
+                            textTransform: 'none',
+                            padding: '6px 10px',
+                            fontSize: 11,
+                            cursor: 'pointer',
+                        }}
+                    >
+                        {link.text}
+                        <span aria-hidden="true" className="mono" style={{ fontSize: 12, opacity: 0.7 }}>
+                            ↗
+                        </span>
+                    </Link>
+                ))}
             </div>
         </div>
     )
 }));
 
-// Icon component
-function ContentIcon({ type }: { type: ContentLink['type'] }) {
-    const iconClass = "w-3.5 h-3.5";
-    switch (type) {
-        case 'test':
-            return <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>;
-        case 'condition':
-            return <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>;
-        case 'treatment':
-            return <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-7 4h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
-        case 'specialty':
-        case 'doctor':
-            return <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
-        case 'tool':
-            return <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>;
-        default:
-            return <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
-    }
-}
-
-/**
- * Escape HTML entities to prevent XSS
- */
+// Escape HTML entities
 function escapeHtml(text: string): string {
     const map: Record<string, string> = {
         '&': '&amp;',
@@ -85,38 +80,28 @@ function escapeHtml(text: string): string {
     return text.replace(/[&<>"']/g, (char) => map[char] || char);
 }
 
-/**
- * Secure markdown → HTML formatter for chat responses
- */
+// Markdown → HTML (Bureau-styled, sanitized)
 function formatMarkdown(md: string): string {
-    let escaped = escapeHtml(md);
+    const escaped = escapeHtml(md);
 
     const html = escaped
-        // Headings
-        .replace(/^### (.+)$/gm, '<h4 class="text-sm font-bold text-white mt-4 mb-2 flex items-center gap-2"><span class="w-1 h-4 bg-primary-500 rounded-full"></span>$1</h4>')
-        .replace(/^## (.+)$/gm, '<h3 class="text-base font-bold text-white mt-5 mb-2">$1</h3>')
-        .replace(/^# (.+)$/gm, '<h2 class="text-lg font-bold text-white mt-6 mb-3">$1</h2>')
-        // Bold & italic
-        .replace(/\*\*(.+?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
-        .replace(/\*(.+?)\*/g, '<em class="text-primary-300">$1</em>')
-        // Code blocks
-        .replace(/```([\s\S]*?)```/g, '<pre class="bg-black/30 backdrop-blur rounded-xl p-4 text-xs overflow-x-auto my-3 border border-white/5"><code class="text-emerald-300">$1</code></pre>')
-        // Inline code
-        .replace(/`(.+?)`/g, '<code class="bg-primary-500/20 text-primary-300 px-1.5 py-0.5 rounded text-xs font-mono">$1</code>')
-        // Bullet lists
-        .replace(/^[-•] (.+)$/gm, '<li class="flex items-start gap-2 my-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 mt-2 shrink-0"></span><span>$1</span></li>')
-        // Numbered lists
-        .replace(/^(\d+)\. (.+)$/gm, '<li class="flex items-start gap-2 my-1"><span class="text-primary-400 font-bold text-xs min-w-[20px]">$1.</span><span>$2</span></li>')
-        // Line breaks
-        .replace(/\n{2,}/g, '</p><p class="mb-3 text-white/80 leading-relaxed">')
+        .replace(/^### (.+)$/gm, '<h4 style="font-size:14px;font-weight:600;color:var(--ink);margin-top:18px;margin-bottom:8px;display:flex;align-items:center;gap:8px;letter-spacing:-0.015em;"><span style="width:3px;height:14px;background:var(--cobalt);border-radius:1px;"></span>$1</h4>')
+        .replace(/^## (.+)$/gm, '<h3 style="font-size:16px;font-weight:600;color:var(--ink);margin-top:22px;margin-bottom:8px;letter-spacing:-0.02em;font-family:var(--display);">$1</h3>')
+        .replace(/^# (.+)$/gm, '<h2 style="font-size:18px;font-weight:600;color:var(--ink);margin-top:24px;margin-bottom:12px;letter-spacing:-0.02em;font-family:var(--display);">$1</h2>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong style="color:var(--ink);font-weight:600;">$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em style="color:var(--cobalt);">$1</em>')
+        .replace(/```([\s\S]*?)```/g, '<pre style="background:var(--bg-2);border:1px solid var(--rule);border-radius:var(--r-2);padding:14px;font-size:12px;overflow-x:auto;margin:12px 0;font-family:var(--mono);color:var(--ink-2);"><code>$1</code></pre>')
+        .replace(/`(.+?)`/g, '<code style="background:var(--bg-2);color:var(--ink);border:1px solid var(--rule);padding:1px 6px;border-radius:var(--r-1);font-size:12px;font-family:var(--mono);">$1</code>')
+        .replace(/^[-•] (.+)$/gm, '<li style="display:flex;align-items:flex-start;gap:8px;margin:4px 0;list-style:none;"><span style="width:5px;height:5px;border-radius:999px;background:var(--cobalt);margin-top:8px;flex-shrink:0;"></span><span>$1</span></li>')
+        .replace(/^(\d+)\. (.+)$/gm, '<li style="display:flex;align-items:flex-start;gap:8px;margin:4px 0;list-style:none;"><span style="font-family:var(--mono);color:var(--cobalt);font-weight:600;font-size:12px;min-width:20px;">$1.</span><span>$2</span></li>')
+        .replace(/\n{2,}/g, '</p><p style="margin:0 0 10px;color:var(--ink-2);line-height:1.6;font-size:14px;">')
         .replace(/\n/g, '<br/>')
-        // Wrap
-        .replace(/^/, '<p class="mb-3 text-white/80 leading-relaxed">')
+        .replace(/^/, '<p style="margin:0 0 10px;color:var(--ink-2);line-height:1.6;font-size:14px;">')
         .replace(/$/, '</p>');
 
     return DOMPurify.sanitize(html, {
         ALLOWED_TAGS: ['h2', 'h3', 'h4', 'p', 'br', 'strong', 'em', 'code', 'pre', 'li', 'ul', 'ol', 'span'],
-        ALLOWED_ATTR: ['class'],
+        ALLOWED_ATTR: ['class', 'style'],
     });
 }
 
@@ -164,7 +149,6 @@ export default function ReferenceChat({ category, placeholder, example, title }:
         inputRef.current?.focus();
     }, [input, loading, category, messages]);
 
-    // Memoize formatted messages with content links
     const formattedMessages = useMemo(() => {
         const geoContext = getClientGeoContext();
         return messages.map((msg, i) => {
@@ -179,110 +163,277 @@ export default function ReferenceChat({ category, placeholder, example, title }:
     }, [messages]);
 
     return (
-        <div className="bg-[#0A1128]/90 backdrop-blur-xl rounded-[2rem] border border-white/10 shadow-[0_0_60px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col min-h-[500px] max-h-[700px]">
-
+        <div
+            className="card col"
+            style={{
+                overflow: 'hidden',
+                minHeight: 500,
+                maxHeight: 700,
+            }}
+        >
             {/* Header */}
-            <div className="px-6 py-4 border-b border-white/10 flex items-center gap-3 bg-white/[0.02]">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/20">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
+            <div
+                className="hairline-b row ai-center gap-3"
+                style={{
+                    padding: '16px 22px',
+                    background: 'var(--paper-2)',
+                }}
+            >
+                <span className="spec-icon">AI</span>
+                <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                    <h3
+                        className="display"
+                        style={{
+                            fontSize: 14,
+                            fontWeight: 600,
+                            color: 'var(--ink)',
+                            margin: 0,
+                            letterSpacing: '-0.01em',
+                        }}
+                    >
+                        {title}
+                    </h3>
+                    <span
+                        className="mono"
+                        style={{
+                            fontSize: 10,
+                            color: 'var(--ink-4)',
+                            letterSpacing: '0.08em',
+                            textTransform: 'uppercase',
+                            fontWeight: 500,
+                        }}
+                    >
+                        Clinical AI Assistant
+                    </span>
                 </div>
-                <div className="flex-1">
-                    <h3 className="text-sm font-bold text-white">{title}</h3>
-                    <p className="text-[10px] text-white/50 uppercase tracking-wider">Clinical AI Assistant</p>
-                </div>
-                <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span className="text-[10px] text-emerald-400 font-medium">Ready</span>
+                <div
+                    className="row ai-center gap-1 mono"
+                    style={{
+                        fontSize: 10,
+                        color: 'var(--mint-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        fontWeight: 500,
+                    }}
+                >
+                    <span
+                        aria-hidden="true"
+                        style={{
+                            width: 6,
+                            height: 6,
+                            borderRadius: 999,
+                            background: 'var(--mint)',
+                        }}
+                    />
+                    Ready
                 </div>
             </div>
 
-            {/* Messages Area */}
+            {/* Messages */}
             <div
                 ref={scrollRef}
-                className="flex-1 overflow-y-auto p-6 space-y-4"
+                className="col gap-4"
+                style={{ flex: 1, overflowY: 'auto', padding: 22 }}
                 role="log"
                 aria-live="polite"
                 aria-label="Chat messages"
             >
                 {messages.length === 0 ? (
-                    /* Empty State */
-                    <div className="flex flex-col items-center justify-center h-full text-center space-y-6 py-8">
-                        <div className="w-20 h-20 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-3xl flex items-center justify-center border border-primary-500/20">
-                            <svg className="w-10 h-10 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                            </svg>
+                    <div
+                        className="col ai-center center gap-5"
+                        style={{ flex: 1, textAlign: 'center', padding: '32px 16px' }}
+                    >
+                        <div
+                            className="row ai-center center"
+                            style={{
+                                width: 64,
+                                height: 64,
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--cobalt-50)',
+                                border: '1px solid rgba(28, 91, 255, .22)',
+                                color: 'var(--cobalt)',
+                                fontFamily: 'var(--display)',
+                                fontWeight: 600,
+                                fontSize: 22,
+                                letterSpacing: '-0.02em',
+                            }}
+                            aria-hidden="true"
+                        >
+                            AI
                         </div>
-                        <div>
-                            <h3 className="text-xl font-bold text-white mb-2">Ask About {title}</h3>
-                            <p className="text-sm text-white/50 max-w-sm">
+                        <div className="col gap-2">
+                            <h3
+                                className="display"
+                                style={{
+                                    fontSize: 20,
+                                    fontWeight: 600,
+                                    color: 'var(--ink)',
+                                    margin: 0,
+                                    letterSpacing: '-0.02em',
+                                }}
+                            >
+                                Ask about {title}
+                            </h3>
+                            <p
+                                style={{
+                                    fontSize: 13,
+                                    color: 'var(--ink-3)',
+                                    maxWidth: 360,
+                                    margin: 0,
+                                    lineHeight: 1.55,
+                                }}
+                            >
                                 Get instant, evidence-based clinical information powered by AI.
                             </p>
                         </div>
                         <button
                             onClick={() => sendMessage(example)}
-                            className="px-5 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-sm font-medium transition-all group flex items-center gap-3"
+                            className="row ai-center gap-3 group"
+                            style={{
+                                padding: '10px 16px',
+                                background: 'var(--paper-2)',
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-2)',
+                                color: 'var(--ink-2)',
+                                cursor: 'pointer',
+                                fontSize: 13,
+                                fontFamily: 'var(--sans)',
+                                transition: 'background var(--transition-fast), border-color var(--transition-fast)',
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.background = 'var(--paper)';
+                                e.currentTarget.style.borderColor = 'var(--cobalt)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.background = 'var(--paper-2)';
+                                e.currentTarget.style.borderColor = 'var(--rule)';
+                            }}
                         >
-                            <span className="text-white/40">Try:</span>
-                            <span className="text-primary-300 group-hover:text-primary-200">&quot;{example}&quot;</span>
-                            <svg className="w-4 h-4 text-white/30 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 10,
+                                    color: 'var(--ink-4)',
+                                    letterSpacing: '0.08em',
+                                    textTransform: 'uppercase',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                Try
+                            </span>
+                            <span style={{ color: 'var(--ink)', fontWeight: 500 }}>
+                                &quot;{example}&quot;
+                            </span>
+                            <span aria-hidden="true" className="mono" style={{ color: 'var(--cobalt)', fontSize: 14 }}>
+                                →
+                            </span>
                         </button>
                     </div>
                 ) : (
                     <>
                         {formattedMessages.map((msg) => (
-                            <div key={msg.key} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                            <div
+                                key={msg.key}
+                                className="row"
+                                style={{
+                                    justifyContent: msg.role === 'user' ? 'flex-end' : 'flex-start',
+                                }}
+                            >
                                 <div
-                                    className={`max-w-[90%] rounded-2xl px-5 py-4 ${msg.role === 'user'
-                                        ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-br-md shadow-lg shadow-primary-500/10'
-                                        : 'bg-white/5 border border-white/10 text-slate-200 rounded-bl-md'
-                                    }`}
+                                    style={{
+                                        maxWidth: '90%',
+                                        borderRadius: 'var(--r-3)',
+                                        padding: '14px 18px',
+                                        background:
+                                            msg.role === 'user' ? 'var(--cobalt)' : 'var(--paper-2)',
+                                        color: msg.role === 'user' ? '#fff' : 'var(--ink-2)',
+                                        border:
+                                            msg.role === 'user'
+                                                ? '1px solid var(--cobalt)'
+                                                : '1px solid var(--rule)',
+                                    }}
                                 >
                                     {msg.role === 'assistant' && msg.formattedContent ? (
                                         <div>
-                                            <div
-                                                className="prose prose-invert prose-sm max-w-none"
-                                                dangerouslySetInnerHTML={{ __html: msg.formattedContent }}
-                                            />
-                                            {/* Content Links */}
+                                            <div dangerouslySetInnerHTML={{ __html: msg.formattedContent }} />
                                             {msg.contentLinks.length > 0 && (
-                                                <Suspense fallback={<div className="h-10 bg-white/5 rounded-xl animate-pulse mt-4"></div>}>
+                                                <Suspense
+                                                    fallback={
+                                                        <div
+                                                            style={{
+                                                                height: 36,
+                                                                background: 'var(--bg-2)',
+                                                                borderRadius: 'var(--r-2)',
+                                                                marginTop: 14,
+                                                                animation: 'pulse-subtle 1.5s ease-in-out infinite',
+                                                            }}
+                                                        />
+                                                    }
+                                                >
                                                     <ContentLinksSection links={msg.contentLinks} />
                                                 </Suspense>
                                             )}
                                         </div>
                                     ) : (
-                                        <p className="text-sm leading-relaxed">{msg.content}</p>
+                                        <p style={{ fontSize: 14, lineHeight: 1.55, margin: 0 }}>
+                                            {msg.content}
+                                        </p>
                                     )}
                                 </div>
                             </div>
                         ))}
                         {loading && (
-                            <div className="flex justify-start">
-                                <div className="bg-white/5 border border-white/10 rounded-2xl rounded-bl-md px-5 py-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="flex items-center gap-1.5" aria-label="AI is typing">
-                                            <div className="w-2 h-2 bg-primary-400 rounded-full animate-bounce [animation-delay:0ms]" />
-                                            <div className="w-2 h-2 bg-primary-400 rounded-full animate-bounce [animation-delay:150ms]" />
-                                            <div className="w-2 h-2 bg-primary-400 rounded-full animate-bounce [animation-delay:300ms]" />
+                            <div className="row" style={{ justifyContent: 'flex-start' }}>
+                                <div
+                                    style={{
+                                        background: 'var(--paper-2)',
+                                        border: '1px solid var(--rule)',
+                                        borderRadius: 'var(--r-3)',
+                                        padding: '14px 18px',
+                                    }}
+                                >
+                                    <div className="row ai-center gap-2">
+                                        <div
+                                            className="row ai-center gap-1"
+                                            aria-label="AI is typing"
+                                        >
+                                            <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '0ms' }} />
+                                            <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '150ms' }} />
+                                            <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--cobalt)', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '300ms' }} />
                                         </div>
-                                        <span className="text-xs text-white/40">Analyzing...</span>
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--ink-4)',
+                                                letterSpacing: '0.04em',
+                                                textTransform: 'uppercase',
+                                            }}
+                                        >
+                                            Analyzing…
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         )}
                     </>
                 )}
+                <style>{`
+                    @keyframes bounce {
+                        0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
+                        40% { transform: scale(1); opacity: 1; }
+                    }
+                `}</style>
             </div>
 
-            {/* Input Area */}
-            <div className="p-4 bg-[#050B14]/80 border-t border-white/5">
+            {/* Input */}
+            <div
+                className="hairline-t"
+                style={{ padding: 16, background: 'var(--paper-2)' }}
+            >
                 <form
                     onSubmit={(e) => { e.preventDefault(); sendMessage(); }}
-                    className="relative"
+                    style={{ position: 'relative' }}
                 >
                     <input
                         ref={inputRef}
@@ -292,21 +443,51 @@ export default function ReferenceChat({ category, placeholder, example, title }:
                         placeholder={placeholder}
                         disabled={loading}
                         aria-label="Type your message"
-                        className="w-full bg-[#0A1128] border border-white/10 focus:border-primary-500/50 rounded-2xl py-4 pl-6 pr-16 text-white placeholder-white/30 outline-none transition-all shadow-inner disabled:opacity-50 text-sm"
+                        className="input"
+                        style={{
+                            paddingRight: 56,
+                            opacity: loading ? 0.6 : 1,
+                        }}
                     />
                     <button
                         type="submit"
                         disabled={loading || !input.trim()}
                         aria-label="Send message"
-                        className="absolute right-2 top-1/2 -translate-y-1/2 w-11 h-11 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg shadow-primary-500/20 disabled:opacity-50 disabled:hover:scale-100"
+                        className="row ai-center center"
+                        style={{
+                            position: 'absolute',
+                            right: 6,
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            width: 36,
+                            height: 36,
+                            borderRadius: 'var(--r-2)',
+                            background: 'var(--cobalt)',
+                            color: '#fff',
+                            border: '1px solid var(--cobalt)',
+                            cursor: 'pointer',
+                            opacity: loading || !input.trim() ? 0.5 : 1,
+                            transition: 'background var(--transition-fast)',
+                        }}
                     >
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.4} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </button>
                 </form>
-                <div className="text-center mt-3">
-                    <p className="text-[10px] text-white/30 uppercase tracking-widest font-medium">For educational purposes only. Not for clinical diagnosis.</p>
+                <div
+                    className="mono"
+                    style={{
+                        textAlign: 'center',
+                        marginTop: 10,
+                        fontSize: 10,
+                        color: 'var(--ink-4)',
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        fontWeight: 500,
+                    }}
+                >
+                    For educational purposes only. Not for clinical diagnosis.
                 </div>
             </div>
         </div>

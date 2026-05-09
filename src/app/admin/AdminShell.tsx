@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 // Admin session interface
 interface AdminSession {
@@ -14,7 +14,18 @@ interface AdminSession {
 /* ── SVG Icon helper ────────────────────────────────────────── */
 function Icon({ d, className = '' }: { d: string; className?: string }) {
     return (
-        <svg className={`w-4 h-4 shrink-0 ${className}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <svg
+            className={className}
+            width="16"
+            height="16"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.8}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ flexShrink: 0 }}
+        >
             <path d={d} />
         </svg>
     );
@@ -107,7 +118,7 @@ const navItems = [
     },
 ];
 
-// Admin Login Form Component
+// Admin Login Form
 function AdminLoginForm({ onSuccess }: { onSuccess: () => void }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -134,11 +145,10 @@ function AdminLoginForm({ onSuccess }: { onSuccess: () => void }) {
                 return;
             }
 
-            // Store session
             const session: AdminSession = {
                 email: data.email,
                 token: data.token,
-                expiresAt: Date.now() + (24 * 60 * 60 * 1000), // 24 hours
+                expiresAt: Date.now() + (24 * 60 * 60 * 1000),
             };
             localStorage.setItem('admin_session', JSON.stringify(session));
             onSuccess();
@@ -149,47 +159,74 @@ function AdminLoginForm({ onSuccess }: { onSuccess: () => void }) {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-            <div className="w-full max-w-md">
-                <div className="bg-white rounded-2xl shadow-2xl p-8">
-                    <div className="text-center mb-8">
-                        <h1 className="text-2xl font-bold text-slate-900">
-                            AIHealz <span className="text-teal-600">Admin</span>
+        <div
+            className="row ai-center center"
+            style={{
+                minHeight: '100vh',
+                background: 'var(--bg)',
+                padding: 16,
+            }}
+        >
+            <div style={{ width: '100%', maxWidth: 420 }}>
+                <div className="card" style={{ padding: 32 }}>
+                    <div style={{ textAlign: 'center', marginBottom: 28 }}>
+                        <span className="kicker" style={{ marginBottom: 8 }}>
+                            <span className="dot" />
+                            Admin
+                        </span>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 26,
+                                fontWeight: 600,
+                                letterSpacing: '-0.025em',
+                                color: 'var(--ink)',
+                                margin: '6px 0 4px',
+                            }}
+                        >
+                            AIHealz <span style={{ color: 'var(--cobalt)' }}>CMS</span>
                         </h1>
-                        <p className="text-slate-500 mt-2">Sign in to access the admin panel</p>
+                        <p style={{ color: 'var(--ink-3)', fontSize: 13, margin: 0 }}>
+                            Sign in to access the admin panel
+                        </p>
                     </div>
 
-                    <form onSubmit={handleLogin} className="space-y-4">
+                    <form onSubmit={handleLogin} className="col gap-4">
                         {error && (
-                            <div className="p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
+                            <div
+                                style={{
+                                    padding: 12,
+                                    background: 'var(--orange-50)',
+                                    border: '1px solid rgba(255, 90, 46, .28)',
+                                    color: 'var(--orange-2)',
+                                    borderRadius: 'var(--r-2)',
+                                    fontSize: 13,
+                                }}
+                            >
                                 {error}
                             </div>
                         )}
 
-                        <div>
-                            <label className="block text-sm font-medium text-slate-700 mb-1">
-                                Email
-                            </label>
+                        <div className="form-group">
+                            <label className="form-label">Email</label>
                             <input
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                                className="input"
                                 placeholder="admin@aihealz.com"
                                 required
                                 autoComplete="email"
                             />
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-medium text-slate-700 mb-1">
-                                Password
-                            </label>
+                        <div className="form-group">
+                            <label className="form-label">Password</label>
                             <input
                                 type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
+                                className="input"
                                 placeholder="Enter your password"
                                 required
                                 autoComplete="current-password"
@@ -199,14 +236,25 @@ function AdminLoginForm({ onSuccess }: { onSuccess: () => void }) {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full py-3 px-4 bg-teal-600 hover:bg-teal-700 disabled:bg-teal-400 text-white font-semibold rounded-lg transition-colors"
+                            className="btn btn-cobalt btn-lg"
+                            style={{ width: '100%' }}
                         >
-                            {loading ? 'Signing in...' : 'Sign In'}
+                            {loading ? 'Signing in…' : 'Sign in'}
                         </button>
                     </form>
 
-                    <div className="mt-6 text-center text-sm text-slate-500">
-                        Protected area. Unauthorized access is prohibited.
+                    <div
+                        className="mono"
+                        style={{
+                            marginTop: 22,
+                            textAlign: 'center',
+                            fontSize: 11,
+                            color: 'var(--ink-4)',
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                        }}
+                    >
+                        Protected area · unauthorized access prohibited
                     </div>
                 </div>
             </div>
@@ -220,12 +268,10 @@ export default function AdminShell({
     children: React.ReactNode;
 }) {
     const pathname = usePathname();
-    const router = useRouter();
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Check admin authentication on mount and route changes
     useEffect(() => {
         const checkAuth = () => {
             try {
@@ -238,7 +284,6 @@ export default function AdminShell({
 
                 const session: AdminSession = JSON.parse(sessionStr);
 
-                // Check if session is expired
                 if (session.expiresAt < Date.now()) {
                     localStorage.removeItem('admin_session');
                     setIsAuthenticated(false);
@@ -246,7 +291,6 @@ export default function AdminShell({
                     return;
                 }
 
-                // Validate token format (basic check)
                 if (!session.token || !session.email) {
                     localStorage.removeItem('admin_session');
                     setIsAuthenticated(false);
@@ -266,12 +310,10 @@ export default function AdminShell({
         checkAuth();
     }, [pathname]);
 
-    // Close sidebar when route changes
     useEffect(() => {
         setSidebarOpen(false);
     }, [pathname]);
 
-    // Prevent body scroll when sidebar is open on mobile
     useEffect(() => {
         if (sidebarOpen) {
             document.body.style.overflow = 'hidden';
@@ -288,133 +330,355 @@ export default function AdminShell({
         return pathname.startsWith(href);
     };
 
-    // Show loading state while checking authentication
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-slate-100 flex items-center justify-center">
-                <div className="text-center">
-                    <div className="w-12 h-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <p className="text-slate-600">Loading...</p>
+            <div
+                className="row ai-center center"
+                style={{ minHeight: '100vh', background: 'var(--bg)' }}
+            >
+                <div style={{ textAlign: 'center' }}>
+                    <div
+                        style={{
+                            width: 40,
+                            height: 40,
+                            borderRadius: 999,
+                            border: '3px solid var(--rule)',
+                            borderTopColor: 'var(--cobalt)',
+                            animation: 'spin 0.8s linear infinite',
+                            margin: '0 auto 14px',
+                        }}
+                    />
+                    <p
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            letterSpacing: '0.08em',
+                            textTransform: 'uppercase',
+                        }}
+                    >
+                        Loading…
+                    </p>
+                    <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
                 </div>
             </div>
         );
     }
 
-    // Show login form if not authenticated
     if (!isAuthenticated) {
         return <AdminLoginForm onSuccess={() => setIsAuthenticated(true)} />;
     }
 
     return (
-        <div className="min-h-screen bg-slate-100 flex">
-            {/* Mobile sidebar overlay */}
+        <div
+            className="row"
+            style={{ minHeight: '100vh', background: 'var(--bg)' }}
+        >
+            {/* Mobile overlay */}
             {sidebarOpen && (
                 <div
-                    className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+                    className="lg:hidden"
                     onClick={() => setSidebarOpen(false)}
+                    style={{
+                        position: 'fixed',
+                        inset: 0,
+                        background: 'rgba(10, 26, 47, .55)',
+                        zIndex: 40,
+                    }}
                 />
             )}
 
-            {/* Sidebar Navigation */}
-            <aside className={`
-                w-72 bg-slate-900 text-slate-300 flex flex-col fixed h-full z-50 transition-transform duration-300
-                ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-            `}>
-                <div className="h-16 flex items-center justify-between px-6 border-b border-slate-800 shrink-0 bg-slate-950">
-                    <Link href="/admin" className="flex items-center gap-2">
-                        <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-400">
-                            AIHealz<span className="text-slate-500 font-normal">CMS</span>
+            {/* Sidebar */}
+            <aside
+                className="col"
+                style={{
+                    width: 272,
+                    background: 'var(--ink)',
+                    color: 'var(--paper)',
+                    position: 'fixed',
+                    height: '100vh',
+                    top: 0,
+                    left: 0,
+                    zIndex: 50,
+                    transition: 'transform 300ms ease',
+                    transform: sidebarOpen ? 'translateX(0)' : undefined,
+                }}
+                data-open={sidebarOpen ? 'true' : 'false'}
+            >
+                <style>{`
+                    @media (max-width: 1023px) {
+                        aside[data-open="false"] { transform: translateX(-100%); }
+                    }
+                `}</style>
+
+                <div
+                    className="row between ai-center"
+                    style={{
+                        height: 64,
+                        padding: '0 22px',
+                        borderBottom: '1px solid #1A3052',
+                        flexShrink: 0,
+                        background: '#06121F',
+                    }}
+                >
+                    <Link href="/admin" className="row ai-center gap-2">
+                        <span
+                            className="display"
+                            style={{
+                                fontSize: 18,
+                                fontWeight: 600,
+                                color: 'var(--paper)',
+                                letterSpacing: '-0.025em',
+                            }}
+                        >
+                            AIHealz
+                            <span
+                                style={{
+                                    color: 'var(--cobalt-3)',
+                                    marginLeft: 4,
+                                    fontWeight: 500,
+                                    fontFamily: 'var(--mono)',
+                                    fontSize: 12,
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                CMS
+                            </span>
                         </span>
                     </Link>
                     <button
-                        className="lg:hidden text-slate-400 hover:text-white"
+                        className="lg:hidden"
                         onClick={() => setSidebarOpen(false)}
+                        style={{
+                            background: 'transparent',
+                            border: 'none',
+                            color: 'rgba(255,255,255,.6)',
+                            cursor: 'pointer',
+                            padding: 4,
+                        }}
                     >
                         <Icon d="M6 18L18 6M6 6l12 12" />
                     </button>
                 </div>
 
-                <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-6">
+                <nav
+                    className="col gap-5"
+                    style={{
+                        flex: 1,
+                        overflowY: 'auto',
+                        padding: '20px 12px',
+                    }}
+                >
                     {navItems.map((section) => (
                         <div key={section.section}>
-                            <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2 px-3">
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 10,
+                                    color: 'rgba(255,255,255,.4)',
+                                    letterSpacing: '0.1em',
+                                    textTransform: 'uppercase',
+                                    fontWeight: 600,
+                                    padding: '0 12px',
+                                    marginBottom: 6,
+                                }}
+                            >
                                 {section.section}
                             </div>
-                            <div className="space-y-0.5">
-                                {section.items.map((item) => (
-                                    <Link
-                                        key={item.href}
-                                        href={item.href}
-                                        className={`
-                                            flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all
-                                            ${isActive(item.href)
-                                                ? 'bg-teal-500/10 text-teal-400 border border-teal-500/20'
-                                                : 'hover:bg-slate-800 hover:text-white'
-                                            }
-                                        `}
-                                    >
-                                        <Icon d={item.icon} />
-                                        {item.name}
-                                    </Link>
-                                ))}
+                            <div className="col">
+                                {section.items.map((item) => {
+                                    const active = isActive(item.href);
+                                    return (
+                                        <Link
+                                            key={item.href}
+                                            href={item.href}
+                                            className="row ai-center gap-3"
+                                            style={{
+                                                padding: '8px 12px',
+                                                fontSize: 13,
+                                                fontWeight: 500,
+                                                borderRadius: 'var(--r-2)',
+                                                color: active ? 'var(--cobalt-3)' : 'rgba(255,255,255,.7)',
+                                                background: active
+                                                    ? 'rgba(77, 125, 255, .14)'
+                                                    : 'transparent',
+                                                borderLeft: active
+                                                    ? '2px solid var(--cobalt-3)'
+                                                    : '2px solid transparent',
+                                                paddingLeft: active ? 10 : 12,
+                                                transition: 'background var(--transition-fast), color var(--transition-fast)',
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                if (!active) {
+                                                    e.currentTarget.style.background = 'rgba(255,255,255,.05)';
+                                                    e.currentTarget.style.color = 'var(--paper)';
+                                                }
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                if (!active) {
+                                                    e.currentTarget.style.background = 'transparent';
+                                                    e.currentTarget.style.color = 'rgba(255,255,255,.7)';
+                                                }
+                                            }}
+                                        >
+                                            <Icon d={item.icon} />
+                                            {item.name}
+                                        </Link>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}
                 </nav>
 
-                <div className="p-4 border-t border-slate-800 bg-slate-950 shrink-0">
-                    <div className="flex items-center gap-3 px-2">
-                        <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-teal-500 to-emerald-500 flex items-center justify-center text-white font-bold text-sm">
+                <div
+                    style={{
+                        padding: 14,
+                        borderTop: '1px solid #1A3052',
+                        background: '#06121F',
+                        flexShrink: 0,
+                    }}
+                >
+                    <div className="row ai-center gap-3">
+                        <div
+                            className="row ai-center center"
+                            style={{
+                                width: 36,
+                                height: 36,
+                                borderRadius: 'var(--r-2)',
+                                background: 'var(--cobalt)',
+                                color: '#fff',
+                                fontFamily: 'var(--display)',
+                                fontWeight: 600,
+                                fontSize: 13,
+                                letterSpacing: '-0.02em',
+                                flexShrink: 0,
+                            }}
+                        >
                             SA
                         </div>
-                        <div className="flex-1 min-w-0">
-                            <p className="text-sm font-bold text-white leading-tight truncate">Super Admin</p>
-                            <p className="text-xs text-slate-500">admin@aihealz.com</p>
+                        <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                            <p
+                                style={{
+                                    fontSize: 13,
+                                    fontWeight: 600,
+                                    color: 'var(--paper)',
+                                    margin: 0,
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                }}
+                            >
+                                Super Admin
+                            </p>
+                            <p
+                                className="mono"
+                                style={{
+                                    fontSize: 10,
+                                    color: 'rgba(255,255,255,.5)',
+                                    letterSpacing: '0.04em',
+                                    margin: 0,
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                }}
+                            >
+                                admin@aihealz.com
+                            </p>
                         </div>
-                        <Link href="/admin/settings" className="text-slate-400 hover:text-white">
+                        <Link
+                            href="/admin/settings"
+                            style={{
+                                color: 'rgba(255,255,255,.6)',
+                                padding: 6,
+                            }}
+                        >
                             <Icon d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </Link>
                     </div>
                 </div>
             </aside>
 
-            {/* Main Content Area */}
-            <main className="flex-1 lg:pl-72 min-w-0">
-                {/* Top Header */}
-                <div className="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-4 lg:px-8 sticky top-0 z-30 shadow-sm">
-                    <div className="flex items-center gap-4">
+            {/* Main Content */}
+            <main className="lg:pl-[272px]" style={{ flex: 1, minWidth: 0 }}>
+                {/* Top header */}
+                <div
+                    className="row between ai-center hairline-b"
+                    style={{
+                        height: 64,
+                        padding: '0 16px',
+                        background: 'var(--paper)',
+                        position: 'sticky',
+                        top: 0,
+                        zIndex: 30,
+                    }}
+                >
+                    <div className="row ai-center gap-3">
                         <button
-                            className="lg:hidden p-2 text-slate-600 hover:text-slate-900"
+                            className="lg:hidden"
                             onClick={() => setSidebarOpen(true)}
+                            style={{
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'var(--ink-2)',
+                                padding: 8,
+                                cursor: 'pointer',
+                            }}
                         >
-                            <Icon d="M4 6h16M4 12h16M4 18h16" className="w-6 h-6" />
+                            <Icon d="M4 6h16M4 12h16M4 18h16" />
                         </button>
-                        <div className="text-sm font-medium text-slate-500 hidden sm:block">
+                        <span
+                            className="mono hidden sm:inline"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                letterSpacing: '0.08em',
+                                textTransform: 'uppercase',
+                                fontWeight: 500,
+                            }}
+                        >
                             Admin Panel
-                        </div>
+                        </span>
                     </div>
-                    <div className="flex gap-3 items-center">
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 rounded-full">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                            </span>
-                            <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">Live</span>
-                        </div>
+                    <div className="row ai-center gap-3">
+                        <span
+                            className="row ai-center gap-2 mono"
+                            style={{
+                                padding: '4px 10px',
+                                background: 'var(--mint-50)',
+                                border: '1px solid rgba(40, 212, 168, .30)',
+                                borderRadius: 'var(--r-2)',
+                                fontSize: 10,
+                                color: 'var(--mint-3)',
+                                fontWeight: 600,
+                                letterSpacing: '0.08em',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            <span
+                                aria-hidden="true"
+                                style={{
+                                    width: 6,
+                                    height: 6,
+                                    borderRadius: 999,
+                                    background: 'var(--mint)',
+                                    animation: 'pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                                }}
+                            />
+                            Live
+                        </span>
                         <Link
                             href="/"
                             target="_blank"
-                            className="text-sm font-medium text-blue-600 hover:text-blue-800 border border-blue-200 px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors"
+                            className="btn btn-paper btn-sm"
                         >
-                            View Site
+                            View site ↗
                         </Link>
                     </div>
                 </div>
 
-                {/* Page Content */}
-                <div className="p-4 lg:p-8">
-                    {children}
-                </div>
+                {/* Page content */}
+                <div style={{ padding: 24 }}>{children}</div>
             </main>
         </div>
     );

@@ -2,15 +2,18 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import {
-    Pill, Syringe, Scissors, Leaf, Activity, ChevronDown,
-    ChevronRight, Search, Stethoscope, DollarSign, Globe,
-    FlaskConical, FileText, X
-} from 'lucide-react';
 
 /* ─── Treatment Type Classification ────────────────────────── */
 
-export type TreatmentType = 'medical' | 'surgical' | 'otc' | 'home_remedy' | 'therapy' | 'drug' | 'injection' | 'prescription';
+export type TreatmentType =
+    | 'medical'
+    | 'surgical'
+    | 'otc'
+    | 'home_remedy'
+    | 'therapy'
+    | 'drug'
+    | 'injection'
+    | 'prescription';
 
 interface TreatmentCost {
     usd: number;
@@ -53,115 +56,125 @@ const COUNTRIES: { key: CountryKey; label: string; flag: string; currency: strin
     { key: 'uae', label: 'UAE', flag: '🇦🇪', currency: 'AED' },
 ];
 
-const TYPE_CONFIG: Record<TreatmentType, {
+interface TypeCfg {
     label: string;
     shortLabel: string;
-    color: string;
-    bg: string;
-    border: string;
-    text: string;
+    pill: string;
     dot: string;
-    icon: typeof Pill;
-}> = {
+    color: string;
+    glyph: string;
+}
+
+const TYPE_CONFIG: Record<TreatmentType, TypeCfg> = {
     medical: {
         label: 'Medical Management',
         shortLabel: 'Medical',
-        color: 'blue',
-        bg: 'bg-blue-500/15',
-        border: 'border-blue-500/30',
-        text: 'text-blue-400',
-        dot: 'bg-blue-400',
-        icon: Stethoscope,
+        pill: 'pill pill-cobalt',
+        dot: 'var(--cobalt)',
+        color: 'var(--cobalt)',
+        glyph: 'M',
     },
     surgical: {
         label: 'Surgical / Procedure',
         shortLabel: 'Surgical',
-        color: 'rose',
-        bg: 'bg-rose-500/15',
-        border: 'border-rose-500/30',
-        text: 'text-rose-400',
-        dot: 'bg-rose-400',
-        icon: Scissors,
+        pill: 'pill pill-orange',
+        dot: 'var(--orange)',
+        color: 'var(--orange-2)',
+        glyph: 'S',
     },
     drug: {
         label: 'Prescription Drugs',
         shortLabel: 'Drug',
-        color: 'cyan',
-        bg: 'bg-cyan-500/15',
-        border: 'border-cyan-500/30',
-        text: 'text-cyan-400',
-        dot: 'bg-cyan-400',
-        icon: FlaskConical,
+        pill: 'pill pill-cobalt',
+        dot: 'var(--cobalt-3)',
+        color: 'var(--cobalt)',
+        glyph: 'D',
     },
     injection: {
         label: 'Injections',
         shortLabel: 'Injection',
-        color: 'pink',
-        bg: 'bg-pink-500/15',
-        border: 'border-pink-500/30',
-        text: 'text-pink-400',
-        dot: 'bg-pink-400',
-        icon: Syringe,
+        pill: 'pill pill-magenta',
+        dot: 'var(--magenta)',
+        color: 'var(--magenta)',
+        glyph: 'I',
     },
     prescription: {
         label: 'Prescription Medicines',
         shortLabel: 'Rx',
-        color: 'indigo',
-        bg: 'bg-indigo-500/15',
-        border: 'border-indigo-500/30',
-        text: 'text-indigo-400',
-        dot: 'bg-indigo-400',
-        icon: FileText,
+        pill: 'pill pill-cobalt',
+        dot: 'var(--cobalt-2)',
+        color: 'var(--cobalt-2)',
+        glyph: 'R',
     },
     otc: {
         label: 'Over-the-Counter',
         shortLabel: 'OTC',
-        color: 'amber',
-        bg: 'bg-amber-500/15',
-        border: 'border-amber-500/30',
-        text: 'text-amber-400',
-        dot: 'bg-amber-400',
-        icon: Pill,
+        pill: 'pill pill-lemon',
+        dot: 'var(--lemon-2)',
+        color: '#8C6A00',
+        glyph: 'O',
     },
     home_remedy: {
         label: 'Home Remedy',
         shortLabel: 'Home',
-        color: 'emerald',
-        bg: 'bg-emerald-500/15',
-        border: 'border-emerald-500/30',
-        text: 'text-emerald-400',
-        dot: 'bg-emerald-400',
-        icon: Leaf,
+        pill: 'pill pill-mint',
+        dot: 'var(--mint)',
+        color: 'var(--mint-3)',
+        glyph: 'H',
     },
     therapy: {
         label: 'Therapy / Rehabilitation',
         shortLabel: 'Therapy',
-        color: 'violet',
-        bg: 'bg-violet-500/15',
-        border: 'border-violet-500/30',
-        text: 'text-violet-400',
-        dot: 'bg-violet-400',
-        icon: Activity,
+        pill: 'pill',
+        dot: 'var(--ink-3)',
+        color: 'var(--ink-3)',
+        glyph: 'T',
     },
 };
 
-const ALL_TYPES: TreatmentType[] = ['medical', 'surgical', 'drug', 'injection', 'prescription', 'otc', 'home_remedy', 'therapy'];
+const ALL_TYPES: TreatmentType[] = [
+    'medical',
+    'surgical',
+    'drug',
+    'injection',
+    'prescription',
+    'otc',
+    'home_remedy',
+    'therapy',
+];
 
 const INITIAL_VISIBLE = 12;
 
-/* ─── TypeBadge Component ──────────────────────────────────── */
+/* ─── TypeBadge ─────────────────────────────────────────── */
 
 function TypeBadge({ type }: { type: TreatmentType }) {
     const cfg = TYPE_CONFIG[type] || TYPE_CONFIG.medical;
     return (
-        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider ${cfg.bg} ${cfg.border} ${cfg.text} border whitespace-nowrap`}>
-            <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot}`} />
+        <span
+            className={cfg.pill}
+            style={{
+                fontSize: 9,
+                padding: '2px 6px',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
+            }}
+        >
+            <span
+                aria-hidden="true"
+                style={{
+                    width: 4,
+                    height: 4,
+                    borderRadius: 999,
+                    background: cfg.dot,
+                    display: 'inline-block',
+                }}
+            />
             {cfg.shortLabel}
         </span>
     );
 }
 
-/* ─── Cost Display Component ───────────────────────────────── */
+/* ─── Cost Display ──────────────────────────────────────── */
 
 function CostDisplay({ costs, country }: { costs?: TreatmentItem['costs']; country: CountryKey }) {
     if (!costs || !costs[country]) return null;
@@ -172,13 +185,26 @@ function CostDisplay({ costs, country }: { costs?: TreatmentItem['costs']; count
     if (!cost.range) return null;
 
     return (
-        <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded whitespace-nowrap">
-            {countryInfo?.currency} {cost.range[0].toLocaleString()}-{cost.range[1].toLocaleString()}
+        <span
+            className="mono"
+            style={{
+                fontSize: 10,
+                fontWeight: 600,
+                color: 'var(--mint-3)',
+                background: 'var(--mint-50)',
+                border: '1px solid rgba(40, 212, 168, .30)',
+                padding: '2px 6px',
+                borderRadius: 'var(--r-1)',
+                whiteSpace: 'nowrap',
+                letterSpacing: '0.02em',
+            }}
+        >
+            {countryInfo?.currency} {cost.range[0].toLocaleString()}–{cost.range[1].toLocaleString()}
         </span>
     );
 }
 
-/* ─── Treatment Card Component ─────────────────────────────── */
+/* ─── Treatment Card ────────────────────────────────────── */
 
 interface TreatmentCardProps {
     treatment: TreatmentItem;
@@ -188,21 +214,22 @@ interface TreatmentCardProps {
 }
 
 function TreatmentCard({ treatment, country, lang = 'en', baseUrl }: TreatmentCardProps) {
-    const slug = treatment.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    const slug = treatment.name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
 
-    // Map CountryKey to country slug for URL
     const countrySlugMap: Record<CountryKey, string> = {
-        'usa': 'us',
-        'uk': 'uk',
-        'india': 'in',
-        'thailand': 'th',
-        'mexico': 'mx',
-        'turkey': 'tr',
-        'uae': 'ae',
+        usa: 'us',
+        uk: 'uk',
+        india: 'in',
+        thailand: 'th',
+        mexico: 'mx',
+        turkey: 'tr',
+        uae: 'ae',
     };
     const countrySlug = countrySlugMap[country] || 'in';
 
-    // Use baseUrl if provided, otherwise construct from country/lang
     const href = baseUrl
         ? `${baseUrl}/${slug}`
         : `/${countrySlug}/${lang}/treatments/${slug}`;
@@ -210,10 +237,42 @@ function TreatmentCard({ treatment, country, lang = 'en', baseUrl }: TreatmentCa
     return (
         <Link
             href={href}
-            className="group flex flex-col gap-2 px-3.5 py-3 bg-slate-800/30 rounded-xl border border-white/[0.03] hover:bg-slate-800/60 hover:border-blue-500/20 transition-all"
+            className="col gap-2"
+            style={{
+                padding: '12px 14px',
+                background: 'var(--paper-2)',
+                border: '1px solid var(--rule)',
+                borderRadius: 'var(--r-2)',
+                color: 'var(--ink-2)',
+                transition:
+                    'background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast)',
+                minWidth: 0,
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--paper)';
+                e.currentTarget.style.borderColor = 'var(--cobalt)';
+                e.currentTarget.style.color = 'var(--ink)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'var(--paper-2)';
+                e.currentTarget.style.borderColor = 'var(--rule)';
+                e.currentTarget.style.color = 'var(--ink-2)';
+            }}
         >
-            <div className="flex items-start justify-between gap-2">
-                <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors line-clamp-2 flex-1 min-w-0">
+            <div className="row between ai-start gap-2">
+                <span
+                    style={{
+                        fontSize: 13,
+                        fontWeight: 600,
+                        color: 'inherit',
+                        flex: 1,
+                        minWidth: 0,
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                    }}
+                >
                     {treatment.name}
                 </span>
                 <TypeBadge type={treatment.type} />
@@ -221,28 +280,51 @@ function TreatmentCard({ treatment, country, lang = 'en', baseUrl }: TreatmentCa
 
             {/* Brand names */}
             {treatment.brandNames && treatment.brandNames.length > 0 && (
-                <div className="flex flex-wrap gap-1">
+                <div className="row gap-1" style={{ flexWrap: 'wrap' }}>
                     {treatment.brandNames.slice(0, 2).map((brand, i) => (
-                        <span key={i} className="text-[10px] text-slate-500 bg-slate-700/50 px-1.5 py-0.5 rounded">
+                        <span
+                            key={i}
+                            className="mono"
+                            style={{
+                                fontSize: 10,
+                                color: 'var(--ink-4)',
+                                background: 'var(--bg-2)',
+                                border: '1px solid var(--rule)',
+                                padding: '1px 6px',
+                                borderRadius: 'var(--r-1)',
+                                letterSpacing: '0.02em',
+                            }}
+                        >
                             {brand}
                         </span>
                     ))}
                     {treatment.brandNames.length > 2 && (
-                        <span className="text-[10px] text-slate-600">+{treatment.brandNames.length - 2}</span>
+                        <span
+                            className="mono"
+                            style={{ fontSize: 10, color: 'var(--ink-4)' }}
+                        >
+                            +{treatment.brandNames.length - 2}
+                        </span>
                     )}
                 </div>
             )}
 
-            {/* Cost and badges row */}
-            <div className="flex items-center justify-between gap-2 mt-auto">
-                <div className="flex items-center gap-1.5">
+            {/* Cost + flags */}
+            <div className="row between ai-center gap-2" style={{ marginTop: 'auto' }}>
+                <div className="row ai-center gap-1">
                     {treatment.genericAvailable && (
-                        <span className="text-[9px] font-bold text-teal-400 bg-teal-500/10 px-1.5 py-0.5 rounded uppercase">
+                        <span
+                            className="pill pill-mint"
+                            style={{ fontSize: 9, padding: '2px 6px' }}
+                        >
                             Generic
                         </span>
                     )}
                     {treatment.requiresPrescription && (
-                        <span className="text-[9px] font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded uppercase">
+                        <span
+                            className="pill pill-lemon"
+                            style={{ fontSize: 9, padding: '2px 6px' }}
+                        >
                             Rx
                         </span>
                     )}
@@ -253,35 +335,39 @@ function TreatmentCard({ treatment, country, lang = 'en', baseUrl }: TreatmentCa
     );
 }
 
-/* ─── Country Slug to Key Mapping ─────────────────────────── */
+/* ─── Country Slug Mapping ──────────────────────────────── */
 
 const COUNTRY_SLUG_TO_KEY: Record<string, CountryKey> = {
-    'usa': 'usa',
-    'uk': 'uk',
-    'india': 'india',
-    'thailand': 'thailand',
-    'mexico': 'mexico',
-    'turkey': 'turkey',
-    'uae': 'uae',
+    usa: 'usa',
+    uk: 'uk',
+    india: 'india',
+    thailand: 'thailand',
+    mexico: 'mexico',
+    turkey: 'turkey',
+    uae: 'uae',
 };
 
-// Get the best matching country key from a country slug
 function getCountryKey(slug: string | null | undefined): CountryKey {
     if (!slug) return 'usa';
     const lower = slug.toLowerCase();
     return COUNTRY_SLUG_TO_KEY[lower] || 'usa';
 }
 
-/* ─── Main Explorer Component ──────────────────────────────── */
+/* ─── Main Explorer ─────────────────────────────────────── */
 
 interface TreatmentsExplorerProps {
     categories: SpecialtyGroup[];
-    defaultCountry?: string | null;  // Country slug from geo detection
-    lang?: string;                   // Language code (e.g., 'en', 'hi', 'ar', 'ta')
-    baseUrl?: string;                // Base URL for treatment links (e.g., '/in/hi/treatments')
+    defaultCountry?: string | null;
+    lang?: string;
+    baseUrl?: string;
 }
 
-export default function TreatmentsExplorer({ categories, defaultCountry, lang = 'en', baseUrl }: TreatmentsExplorerProps) {
+export default function TreatmentsExplorer({
+    categories,
+    defaultCountry,
+    lang = 'en',
+    baseUrl,
+}: TreatmentsExplorerProps) {
     const initialCountry = getCountryKey(defaultCountry);
     const [activeTypes, setActiveTypes] = useState<Set<TreatmentType>>(new Set(ALL_TYPES));
     const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
@@ -318,9 +404,10 @@ export default function TreatmentsExplorer({ categories, defaultCountry, lang = 
             .map(cat => {
                 let treatments = cat.treatments.filter(t => activeTypes.has(t.type));
                 if (q) {
-                    treatments = treatments.filter(t =>
-                        t.name.toLowerCase().includes(q) ||
-                        (t.brandNames && t.brandNames.some(b => b.toLowerCase().includes(q)))
+                    treatments = treatments.filter(
+                        t =>
+                            t.name.toLowerCase().includes(q) ||
+                            (t.brandNames && t.brandNames.some(b => b.toLowerCase().includes(q)))
                     );
                 }
                 return { ...cat, treatments };
@@ -335,107 +422,281 @@ export default function TreatmentsExplorer({ categories, defaultCountry, lang = 
 
     return (
         <>
-            {/* ─── Stats Bar ─────────────────────────────────── */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
-                    {filteredCategories.length} Specialties &bull; {totalFiltered.toLocaleString()} / {totalAll.toLocaleString()} Treatments
-                </span>
+            {/* Stats Bar */}
+            <div
+                className="row between ai-center gap-4"
+                style={{ marginBottom: 20, flexWrap: 'wrap' }}
+            >
+                <div className="row ai-center gap-2" style={{ flexWrap: 'wrap' }}>
+                    <span className="section-mark">treatments</span>
+                    <span
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                        }}
+                    >
+                        · {filteredCategories.length} specialties · {totalFiltered.toLocaleString()} / {totalAll.toLocaleString()} treatments
+                    </span>
+                </div>
 
                 {/* Country Selector */}
-                <div className="relative">
+                <div style={{ position: 'relative' }}>
                     <button
                         onClick={() => setShowCountrySelector(!showCountrySelector)}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider backdrop-blur-sm hover:bg-emerald-500/20 transition-colors"
+                        className="btn btn-paper btn-sm"
+                        aria-expanded={showCountrySelector}
                     >
-                        <Globe className="w-3.5 h-3.5" />
-                        <span>{currentCountry.flag} {currentCountry.label}</span>
-                        <DollarSign className="w-3 h-3" />
+                        <span aria-hidden="true">{currentCountry.flag}</span>
+                        <span>{currentCountry.label}</span>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 10,
+                                color: 'var(--ink-4)',
+                                letterSpacing: '0.04em',
+                            }}
+                        >
+                            {currentCountry.currency}
+                        </span>
+                        <span aria-hidden="true" className="mono" style={{ fontSize: 10 }}>
+                            ▾
+                        </span>
                     </button>
 
                     {showCountrySelector && (
-                        <div className="absolute top-full left-0 mt-2 bg-slate-900 border border-white/10 rounded-xl shadow-2xl z-50 min-w-[200px] py-2 animate-in fade-in slide-in-from-top-2">
-                            <p className="px-3 py-1.5 text-[10px] font-bold text-slate-500 uppercase tracking-wider">
-                                Select Country for Costs
+                        <div
+                            className="card-flat animate-scale-in"
+                            style={{
+                                position: 'absolute',
+                                top: '100%',
+                                right: 0,
+                                marginTop: 6,
+                                minWidth: 240,
+                                padding: 6,
+                                zIndex: 100,
+                                boxShadow: 'var(--shadow-2)',
+                            }}
+                        >
+                            <p
+                                className="kicker"
+                                style={{ padding: '6px 10px 8px' }}
+                            >
+                                <span className="dot" />
+                                Select country for costs
                             </p>
-                            {COUNTRIES.map(country => (
-                                <button
-                                    key={country.key}
-                                    onClick={() => {
-                                        setSelectedCountry(country.key);
-                                        setShowCountrySelector(false);
-                                    }}
-                                    className={`w-full px-3 py-2 text-left text-sm flex items-center gap-2 hover:bg-white/5 transition-colors ${
-                                        selectedCountry === country.key ? 'text-emerald-400 bg-emerald-500/10' : 'text-slate-300'
-                                    }`}
-                                >
-                                    <span>{country.flag}</span>
-                                    <span>{country.label}</span>
-                                    <span className="ml-auto text-xs text-slate-500">{country.currency}</span>
-                                </button>
-                            ))}
+                            <div className="col gap-1">
+                                {COUNTRIES.map(country => {
+                                    const isSelected = selectedCountry === country.key;
+                                    return (
+                                        <button
+                                            key={country.key}
+                                            onClick={() => {
+                                                setSelectedCountry(country.key);
+                                                setShowCountrySelector(false);
+                                            }}
+                                            className="row ai-center gap-2"
+                                            style={{
+                                                padding: '8px 10px',
+                                                fontSize: 13,
+                                                background: isSelected ? 'var(--cobalt-50)' : 'transparent',
+                                                color: isSelected ? 'var(--cobalt)' : 'var(--ink-2)',
+                                                border: 'none',
+                                                borderRadius: 'var(--r-2)',
+                                                cursor: 'pointer',
+                                                textAlign: 'left',
+                                                width: '100%',
+                                                fontWeight: isSelected ? 600 : 500,
+                                                transition: 'background var(--transition-fast), color var(--transition-fast)',
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                if (!isSelected) {
+                                                    e.currentTarget.style.background = 'var(--bg-2)';
+                                                }
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                if (!isSelected) {
+                                                    e.currentTarget.style.background = 'transparent';
+                                                }
+                                            }}
+                                        >
+                                            <span aria-hidden="true">{country.flag}</span>
+                                            <span style={{ flex: 1 }}>{country.label}</span>
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 10,
+                                                    color: isSelected ? 'var(--cobalt)' : 'var(--ink-4)',
+                                                    letterSpacing: '0.04em',
+                                                }}
+                                            >
+                                                {country.currency}
+                                            </span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
                     )}
                 </div>
             </div>
 
-            {/* ─── Search Bar ────────────────────────────────── */}
-            <div className="max-w-xl mx-auto mb-6 relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
-                <input
-                    type="text"
-                    placeholder="Search 10,000+ treatments, drugs, procedures..."
-                    value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-12 py-3.5 bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl text-white placeholder:text-slate-500 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all text-sm"
-                />
-                {searchQuery && (
-                    <button
-                        onClick={() => setSearchQuery('')}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors"
+            {/* Search */}
+            <div
+                className="card-flat"
+                style={{
+                    padding: '4px 14px 4px 4px',
+                    marginBottom: 16,
+                    maxWidth: 640,
+                    marginInline: 'auto',
+                    position: 'relative',
+                }}
+            >
+                <div className="row ai-center gap-2">
+                    <span
+                        aria-hidden="true"
+                        className="row ai-center center mono"
+                        style={{
+                            width: 40,
+                            height: 40,
+                            fontSize: 18,
+                            color: 'var(--ink-3)',
+                            flexShrink: 0,
+                        }}
                     >
-                        <X className="w-5 h-5" />
-                    </button>
-                )}
+                        ⌕
+                    </span>
+                    <input
+                        type="text"
+                        placeholder="Search 10,000+ treatments, drugs, procedures…"
+                        value={searchQuery}
+                        onChange={e => setSearchQuery(e.target.value)}
+                        style={{
+                            flex: 1,
+                            border: 'none',
+                            outline: 'none',
+                            background: 'transparent',
+                            fontFamily: 'var(--sans)',
+                            fontSize: 14,
+                            color: 'var(--ink)',
+                            padding: '8px 0',
+                            minWidth: 0,
+                        }}
+                    />
+                    {searchQuery && (
+                        <button
+                            onClick={() => setSearchQuery('')}
+                            aria-label="Clear search"
+                            className="row ai-center center"
+                            style={{
+                                width: 28,
+                                height: 28,
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'var(--ink-3)',
+                                fontSize: 16,
+                                cursor: 'pointer',
+                                flexShrink: 0,
+                                borderRadius: 'var(--r-1)',
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.background = 'var(--bg-2)';
+                                e.currentTarget.style.color = 'var(--ink)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.background = 'transparent';
+                                e.currentTarget.style.color = 'var(--ink-3)';
+                            }}
+                        >
+                            ×
+                        </button>
+                    )}
+                </div>
             </div>
 
-            {/* ─── Filter Toggle ─────────────────────────────── */}
-            <div className="flex justify-center mb-4">
+            {/* Filter Toggle */}
+            <div className="row center" style={{ marginBottom: 12 }}>
                 <button
                     onClick={() => setShowFilters(!showFilters)}
-                    className="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+                    className="btn btn-ghost btn-sm"
                 >
-                    <ChevronDown className={`w-4 h-4 transition-transform ${showFilters ? 'rotate-180' : ''}`} />
-                    {showFilters ? 'Hide Filters' : 'Show Filters'}
+                    <span
+                        aria-hidden="true"
+                        className="mono"
+                        style={{
+                            transition: 'transform var(--transition-normal)',
+                            transform: showFilters ? 'rotate(180deg)' : 'rotate(0deg)',
+                            display: 'inline-block',
+                        }}
+                    >
+                        ▾
+                    </span>
+                    {showFilters ? 'Hide filters' : 'Show filters'}
                 </button>
             </div>
 
-            {/* ─── Type Filter Chips ─────────────────────────── */}
+            {/* Type Filter Chips */}
             {showFilters && (
-                <div className="flex flex-wrap justify-center gap-2 mb-10">
+                <div
+                    className="row gap-2"
+                    style={{
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        marginBottom: 28,
+                    }}
+                >
                     {ALL_TYPES.map(type => {
                         const cfg = TYPE_CONFIG[type];
-                        const Icon = cfg.icon;
                         const isActive = activeTypes.has(type);
                         const count = categories.reduce(
-                            (sum, c) => sum + c.treatments.filter(t => t.type === type).length, 0
+                            (sum, c) => sum + c.treatments.filter(t => t.type === type).length,
+                            0
                         );
 
                         return (
                             <button
                                 key={type}
                                 onClick={() => toggleType(type)}
-                                className={`
-                                    flex items-center gap-1.5 px-3 py-2 rounded-xl border text-xs font-semibold transition-all duration-300
-                                    ${isActive
-                                        ? `${cfg.bg} ${cfg.border} ${cfg.text} shadow-lg`
-                                        : 'bg-slate-900/30 border-white/5 text-slate-500 hover:text-slate-300'
-                                    }
-                                `}
+                                className={isActive ? cfg.pill : 'pill'}
+                                style={{
+                                    cursor: 'pointer',
+                                    textTransform: 'none',
+                                    padding: '8px 12px',
+                                    fontSize: 12,
+                                    background: isActive ? undefined : 'var(--paper)',
+                                    color: isActive ? undefined : 'var(--ink-4)',
+                                    borderColor: isActive ? undefined : 'var(--rule)',
+                                }}
+                                aria-pressed={isActive}
                             >
-                                <Icon className="w-3.5 h-3.5" />
+                                <span
+                                    aria-hidden="true"
+                                    style={{
+                                        width: 6,
+                                        height: 6,
+                                        borderRadius: 999,
+                                        background: isActive ? cfg.dot : 'var(--ink-5)',
+                                        display: 'inline-block',
+                                    }}
+                                />
                                 <span className="hidden sm:inline">{cfg.label}</span>
                                 <span className="sm:hidden">{cfg.shortLabel}</span>
-                                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${isActive ? 'bg-white/10' : 'bg-white/5'}`}>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 10,
+                                        fontWeight: 600,
+                                        padding: '1px 6px',
+                                        borderRadius: 'var(--r-1)',
+                                        background: isActive
+                                            ? 'rgba(10, 26, 47, .08)'
+                                            : 'var(--bg-2)',
+                                        color: 'inherit',
+                                        opacity: 0.85,
+                                    }}
+                                >
                                     {count.toLocaleString()}
                                 </span>
                             </button>
@@ -444,28 +705,57 @@ export default function TreatmentsExplorer({ categories, defaultCountry, lang = 
                 </div>
             )}
 
-            {/* ─── No Results State ──────────────────────────── */}
+            {/* No Results */}
             {filteredCategories.length === 0 && (
-                <div className="text-center py-16">
-                    <div className="w-20 h-20 rounded-full bg-slate-800 flex items-center justify-center mx-auto mb-4">
-                        <Search className="w-10 h-10 text-slate-600" />
+                <div
+                    className="card col ai-center gap-3"
+                    style={{ padding: '48px 24px', textAlign: 'center' }}
+                >
+                    <div
+                        className="row ai-center center mono"
+                        style={{
+                            width: 48,
+                            height: 48,
+                            borderRadius: 'var(--r-2)',
+                            background: 'var(--bg-2)',
+                            border: '1px solid var(--rule)',
+                            fontSize: 20,
+                            color: 'var(--ink-3)',
+                        }}
+                        aria-hidden="true"
+                    >
+                        ⌕
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">No treatments found</h3>
-                    <p className="text-slate-400 mb-6">Try adjusting your filters or search term.</p>
+                    <h3
+                        className="display"
+                        style={{
+                            fontSize: 22,
+                            fontWeight: 600,
+                            letterSpacing: '-0.02em',
+                            margin: 0,
+                            color: 'var(--ink)',
+                        }}
+                    >
+                        No treatments found
+                    </h3>
+                    <p style={{ color: 'var(--ink-3)', margin: 0 }}>
+                        Try adjusting your filters or search term.
+                    </p>
                     <button
                         onClick={() => {
                             setSearchQuery('');
                             setActiveTypes(new Set(ALL_TYPES));
                         }}
-                        className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-colors"
+                        className="btn btn-cobalt btn-sm"
+                        style={{ marginTop: 4 }}
                     >
-                        Clear All Filters
+                        Clear all filters
                     </button>
                 </div>
             )}
 
-            {/* ─── Specialty Accordion Sections ───────────────── */}
-            <div className="space-y-4">
+            {/* Specialty Accordion Sections */}
+            <div className="col gap-4">
                 {filteredCategories.map(category => {
                     const isExpanded = expandedSections.has(category.specialty);
                     const visibleTreatments = isExpanded
@@ -478,54 +768,141 @@ export default function TreatmentsExplorer({ categories, defaultCountry, lang = 
                         typeCounts[t.type] = (typeCounts[t.type] || 0) + 1;
                     });
 
+                    const monogram = category.specialty
+                        .split(/\s+/)
+                        .map(w => w[0])
+                        .filter(Boolean)
+                        .slice(0, 2)
+                        .join('')
+                        .toUpperCase() || category.specialty.slice(0, 2).toUpperCase();
+
                     return (
                         <section
                             key={category.specialty}
                             id={`treat-${category.specialty.replace(/[^a-z0-9]/gi, '-').toLowerCase()}`}
-                            className="bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/5 hover:border-blue-500/15 transition-all duration-300 overflow-hidden scroll-mt-32 shadow-xl"
+                            className="card scroll-mt-32"
+                            style={{ overflow: 'hidden' }}
                         >
-                            {/* Section Header */}
+                            {/* Header */}
                             <button
                                 onClick={() => toggleSection(category.specialty)}
-                                className="w-full p-6 flex items-center justify-between gap-4 text-left group hover:bg-white/[0.02] transition-colors"
+                                className="row between ai-center gap-4"
+                                style={{
+                                    width: '100%',
+                                    padding: '20px 22px',
+                                    background: 'transparent',
+                                    border: 'none',
+                                    textAlign: 'left',
+                                    cursor: 'pointer',
+                                    color: 'var(--ink)',
+                                }}
+                                aria-expanded={isExpanded}
                             >
-                                <div className="flex-1 min-w-0">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <h2 className="text-xl font-bold text-white">{category.specialty}</h2>
-                                        <span className="text-xs font-bold text-slate-500 bg-slate-800 px-2.5 py-1 rounded-lg">
-                                            {category.treatments.length}
+                                <div className="col gap-2" style={{ flex: 1, minWidth: 0 }}>
+                                    <div
+                                        className="row ai-center gap-3"
+                                        style={{ flexWrap: 'wrap' }}
+                                    >
+                                        <span className="spec-icon" aria-hidden="true">
+                                            {monogram}
+                                        </span>
+                                        <h2
+                                            className="display"
+                                            style={{
+                                                fontSize: 20,
+                                                fontWeight: 600,
+                                                letterSpacing: '-0.02em',
+                                                margin: 0,
+                                                color: 'var(--ink)',
+                                            }}
+                                        >
+                                            {category.specialty}
+                                        </h2>
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--ink-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.06em',
+                                            }}
+                                        >
+                                            {category.treatments.length.toLocaleString()} treatments
                                         </span>
                                     </div>
-                                    <div className="flex flex-wrap gap-2">
+
+                                    {/* Type breakdown */}
+                                    <div
+                                        className="row gap-3"
+                                        style={{ flexWrap: 'wrap', paddingLeft: 48 }}
+                                    >
                                         {ALL_TYPES.map(type => {
                                             const count = typeCounts[type];
                                             if (!count) return null;
                                             const cfg = TYPE_CONFIG[type];
                                             return (
-                                                <span key={type} className={`inline-flex items-center gap-1 text-[10px] font-semibold ${cfg.text}`}>
-                                                    <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot}`} />
+                                                <span
+                                                    key={type}
+                                                    className="row ai-center gap-1 mono"
+                                                    style={{
+                                                        fontSize: 11,
+                                                        fontWeight: 500,
+                                                        color: cfg.color,
+                                                        letterSpacing: '0.02em',
+                                                    }}
+                                                >
+                                                    <span
+                                                        aria-hidden="true"
+                                                        style={{
+                                                            width: 6,
+                                                            height: 6,
+                                                            borderRadius: 999,
+                                                            background: cfg.dot,
+                                                            display: 'inline-block',
+                                                        }}
+                                                    />
                                                     {count} {cfg.shortLabel}
                                                 </span>
                                             );
                                         })}
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-3">
+
+                                <div className="row ai-center gap-3">
                                     <Link
                                         href={`/conditions/${category.specialty.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                                         onClick={e => e.stopPropagation()}
-                                        className="hidden md:flex text-xs font-bold text-blue-400 hover:text-blue-300 px-3 py-1.5 bg-blue-500/10 rounded-lg border border-blue-500/20 transition-all items-center gap-1.5"
+                                        className="btn btn-paper btn-sm hidden md:inline-flex"
                                     >
                                         Conditions
-                                        <ChevronRight className="w-3 h-3" />
+                                        <span aria-hidden="true" className="mono" style={{ fontSize: 10 }}>
+                                            →
+                                        </span>
                                     </Link>
-                                    <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                                    <span
+                                        aria-hidden="true"
+                                        className="mono"
+                                        style={{
+                                            fontSize: 18,
+                                            color: 'var(--ink-3)',
+                                            transition: 'transform var(--transition-normal)',
+                                            transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                                            flexShrink: 0,
+                                        }}
+                                    >
+                                        ▾
+                                    </span>
                                 </div>
                             </button>
 
+                            <div className="hairline" />
+
                             {/* Treatment Grid */}
-                            <div className="px-6 pb-6">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                            <div style={{ padding: '20px 22px' }}>
+                                <div
+                                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                                    style={{ gap: 8 }}
+                                >
                                     {visibleTreatments.map((t, i) => (
                                         <TreatmentCard
                                             key={i}
@@ -540,12 +917,31 @@ export default function TreatmentsExplorer({ categories, defaultCountry, lang = 
                                 {hasMore && (
                                     <button
                                         onClick={() => toggleSection(category.specialty)}
-                                        className="mt-4 w-full py-2.5 text-center text-sm font-semibold text-blue-400 hover:text-blue-300 bg-blue-500/5 hover:bg-blue-500/10 rounded-xl border border-blue-500/10 transition-all flex items-center justify-center gap-2"
+                                        className="btn btn-paper"
+                                        style={{
+                                            marginTop: 14,
+                                            width: '100%',
+                                        }}
                                     >
                                         {isExpanded ? (
-                                            <>Show Less<ChevronDown className="w-4 h-4 rotate-180" /></>
+                                            <>
+                                                Show less
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="mono"
+                                                    style={{
+                                                        transform: 'rotate(180deg)',
+                                                        display: 'inline-block',
+                                                    }}
+                                                >
+                                                    ▾
+                                                </span>
+                                            </>
                                         ) : (
-                                            <>Show All {category.treatments.length} Treatments<ChevronDown className="w-4 h-4" /></>
+                                            <>
+                                                Show all {category.treatments.length} treatments
+                                                <span aria-hidden="true" className="mono">▾</span>
+                                            </>
                                         )}
                                     </button>
                                 )}
@@ -555,10 +951,24 @@ export default function TreatmentsExplorer({ categories, defaultCountry, lang = 
                 })}
             </div>
 
-            {/* ─── Cost Disclaimer ────────────────────────────── */}
-            <div className="mt-8 p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                <p className="text-xs text-amber-400/80 text-center">
-                    <strong>Cost Disclaimer:</strong> Prices shown are estimates and may vary based on hospital, insurance, and individual circumstances.
+            {/* Cost Disclaimer */}
+            <div
+                className="card-quiet"
+                style={{
+                    marginTop: 24,
+                    padding: 16,
+                    textAlign: 'center',
+                }}
+            >
+                <p
+                    style={{
+                        fontSize: 12,
+                        color: 'var(--ink-3)',
+                        margin: 0,
+                        lineHeight: 1.55,
+                    }}
+                >
+                    <strong style={{ color: 'var(--ink-2)' }}>Cost disclaimer:</strong> Prices shown are estimates and may vary by hospital, insurance, and individual circumstances.
                     Contact healthcare providers directly for accurate quotes. Costs for {currentCountry.label} shown in {currentCountry.currency}.
                 </p>
             </div>
