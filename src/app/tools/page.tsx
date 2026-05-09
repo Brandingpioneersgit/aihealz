@@ -2,150 +2,122 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Free Health Tools & Medical Calculators | AIHealz',
+    title: 'Free Health Tools & Medical Calculators | aihealz',
     description: 'Free health calculators and medical tools. BMI calculator, calorie calculator, heart risk assessment, pregnancy due date, diabetes risk, and more. AI-powered health insights.',
     keywords: 'health calculators, medical tools, BMI calculator, calorie calculator, health assessment, medical calculator, free health tools',
 };
 
-// ── Health Tools Navigation ──────────────────────────────────
+// ── Health reference tools (non-calculator) ─────────────────────────
 const HEALTH_TOOLS = [
     {
         id: 'drug-interactions',
-        name: 'Drug Interactions Checker',
-        desc: 'Check for dangerous interactions between medications',
-        iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
-        iconColor: 'text-pink-400',
-        color: 'from-pink-500 to-rose-500',
+        abbr: 'DX',
+        name: 'Drug interactions',
+        desc: 'Check for dangerous interactions between medications.',
         href: '/tools/drug-interactions',
     },
     {
         id: 'lab-tests',
-        name: 'Lab Test Directory',
-        desc: 'Understand lab tests with normal ranges and costs',
-        iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
-        iconColor: 'text-blue-400',
-        color: 'from-blue-500 to-cyan-500',
+        abbr: 'LB',
+        name: 'Lab test directory',
+        desc: 'Understand lab tests with normal ranges and country-specific costs.',
         href: '/tools/lab-tests',
     },
     {
         id: 'vaccinations',
-        name: 'Vaccination Schedule',
-        desc: 'Country-specific immunization schedules and travel vaccines',
-        iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
-        iconColor: 'text-green-400',
-        color: 'from-green-500 to-emerald-500',
+        abbr: 'VX',
+        name: 'Vaccination schedule',
+        desc: 'Country-specific immunization schedules and travel vaccines.',
         href: '/tools/vaccinations',
     },
     {
         id: 'emergency',
-        name: 'Emergency Services',
-        desc: 'Emergency numbers, first aid guides, and crisis support',
-        iconPath: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z',
-        iconColor: 'text-red-400',
-        color: 'from-red-500 to-orange-500',
+        abbr: 'ER',
+        name: 'Emergency services',
+        desc: 'Emergency numbers, first aid guides, and crisis support by country.',
         href: '/tools/emergency',
     },
     {
         id: 'glossary',
-        name: 'Medical Glossary',
-        desc: 'Searchable dictionary of medical terms',
-        iconPath: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
-        iconColor: 'text-violet-400',
-        color: 'from-violet-500 to-purple-500',
+        abbr: 'GL',
+        name: 'Medical glossary',
+        desc: 'Plain-English dictionary of medical terms with pronunciation.',
         href: '/tools/glossary',
     },
     {
         id: 'surgery-checklist',
-        name: 'Surgery Checklists',
-        desc: 'Pre-op and post-op checklists for various surgeries',
-        iconPath: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-        iconColor: 'text-teal-400',
-        color: 'from-teal-500 to-cyan-500',
+        abbr: 'SC',
+        name: 'Surgery checklists',
+        desc: 'Pre-op and post-op checklists for the most common procedures.',
         href: '/tools/surgery-checklist',
     },
 ];
 
-// ── Calculator definitions with links ──────────────────────────────────
+// ── Calculators ─────────────────────────────────────────────────────
 const CALCULATORS = [
     {
         id: 'bmi',
-        name: 'BMI Calculator',
-        desc: 'Calculate your Body Mass Index',
-        category: 'Body Metrics',
+        abbr: 'BM',
+        name: 'BMI calculator',
+        desc: 'Body Mass Index from height and weight.',
+        category: 'Body metrics',
         href: '/tools/bmi-calculator',
-        iconColor: 'text-emerald-400',
-        color: 'from-emerald-500 to-teal-500',
-        iconPath: 'M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3',
     },
     {
         id: 'bmr',
-        name: 'BMR & Calorie Calculator',
-        desc: 'Find your daily calorie needs',
+        abbr: 'BR',
+        name: 'BMR & calorie calculator',
+        desc: 'Basal metabolic rate and daily calorie needs.',
         category: 'Nutrition',
         href: '/tools/bmr-calculator',
-        iconColor: 'text-orange-400',
-        color: 'from-orange-500 to-amber-500',
-        iconPath: 'M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z',
     },
     {
         id: 'heart-risk',
-        name: 'Heart Disease Risk',
-        desc: 'Assess cardiovascular risk',
+        abbr: 'HR',
+        name: 'Heart disease risk',
+        desc: '10-year cardiovascular risk estimate.',
         category: 'Cardiovascular',
         href: '/tools/heart-risk-calculator',
-        iconColor: 'text-red-400',
-        color: 'from-red-500 to-pink-500',
-        iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
     },
     {
         id: 'kidney',
-        name: 'Kidney Function (eGFR)',
-        desc: 'Check your kidney health',
+        abbr: 'KD',
+        name: 'Kidney function (eGFR)',
+        desc: 'CKD-EPI estimated glomerular filtration rate.',
         category: 'Nephrology',
         href: '/tools/kidney-function-calculator',
-        iconColor: 'text-purple-400',
-        color: 'from-purple-500 to-violet-500',
-        iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
     },
     {
         id: 'pregnancy',
-        name: 'Pregnancy Due Date',
-        desc: 'Calculate your due date',
+        abbr: 'PG',
+        name: 'Pregnancy due date',
+        desc: 'Naegele’s rule from last menstrual period.',
         category: 'Obstetrics',
         href: '/tools/pregnancy-due-date-calculator',
-        iconColor: 'text-pink-400',
-        color: 'from-pink-500 to-rose-500',
-        iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
     },
     {
         id: 'diabetes-risk',
-        name: 'Diabetes Risk Assessment',
-        desc: 'Type 2 diabetes risk check',
+        abbr: 'DB',
+        name: 'Diabetes risk',
+        desc: 'Type 2 diabetes risk assessment.',
         category: 'Endocrinology',
         href: '/tools/diabetes-risk-calculator',
-        iconColor: 'text-blue-400',
-        color: 'from-blue-500 to-cyan-500',
-        iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
     },
     {
         id: 'water',
-        name: 'Water Intake Calculator',
-        desc: 'Daily hydration needs',
+        abbr: 'WT',
+        name: 'Water intake',
+        desc: 'Daily hydration target by weight, activity, climate.',
         category: 'Nutrition',
         href: '/tools/water-intake-calculator',
-        iconColor: 'text-cyan-400',
-        color: 'from-cyan-500 to-blue-500',
-        iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
     },
     {
         id: 'body-fat',
-        name: 'Body Fat Calculator',
-        desc: 'U.S. Navy method estimate',
-        category: 'Body Metrics',
+        abbr: 'BF',
+        name: 'Body fat percentage',
+        desc: 'U.S. Navy method estimate from circumferences.',
+        category: 'Body metrics',
         href: '/tools/body-fat-calculator',
-        iconColor: 'text-violet-400',
-        color: 'from-violet-500 to-purple-500',
-        iconPath: 'M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4',
     },
 ];
 
@@ -153,153 +125,358 @@ export default function ToolsPage() {
     const categories = [...new Set(CALCULATORS.map(c => c.category))];
 
     return (
-        <div className="min-h-screen bg-[#050B14] text-slate-200 pt-24 pb-16 relative overflow-hidden">
-            {/* Background Effects */}
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-cyan-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none" />
-            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none" />
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            <div
+                style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                className="col gap-7"
+            >
+                {/* ── Breadcrumb ───────────────────────────── */}
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
+                    <span>/</span>
+                    <span style={{ color: 'var(--ink)' }}>Tools</span>
+                </nav>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-                {/* Hero */}
-                <div className="mb-12 text-center max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-6">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                        </span>
-                        AI-Enhanced Health Tools
-                    </div>
-                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-                        Health <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">Calculators & Tools</span>
+                {/* ── Hero ─────────────────────────────────── */}
+                <header className="col gap-4">
+                    <span className="section-mark">tools / index</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5vw, 72px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        <span style={{ color: 'var(--cobalt)' }}>Health</span>{' '}
+                        calculators &amp; reference tools
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-slate-400">
-                        Free medical calculators to assess your health metrics. All tools are evidence-based and provide personalized insights.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 600 }}
+                    >
+                        Free, evidence-based calculators and reference tools. Compute, look up, plan — every result paired with plain-English context and a route to the right specialist.
                     </p>
-                </div>
+                </header>
 
-                {/* Health Tools Grid */}
-                <section className="mb-16">
-                    <div className="flex items-center justify-between mb-8">
-                        <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
-                            <span className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center">
-                                <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </span>
-                            Health Tools
-                        </h2>
-                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{HEALTH_TOOLS.length} Tools</span>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {HEALTH_TOOLS.map(tool => (
-                            <Link
-                                key={tool.id}
-                                href={tool.href}
-                                className="group relative bg-white/[0.03] rounded-2xl border border-white/[0.08] p-6 hover:border-cyan-500/30 hover:bg-white/[0.05] transition-all overflow-hidden"
+                {/* ── Stats strip ──────────────────────────── */}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                        gap: 0,
+                        border: '1px solid var(--rule)',
+                        borderRadius: 'var(--r-3)',
+                        background: 'var(--paper)',
+                        overflow: 'hidden',
+                    }}
+                >
+                    {[
+                        { v: CALCULATORS.length.toString(), l: 'calculators' },
+                        { v: HEALTH_TOOLS.length.toString(), l: 'reference tools' },
+                        { v: '7', l: 'countries · cost mapped' },
+                        { v: 'free', l: 'no signup required' },
+                    ].map((s, i, arr) => (
+                        <div
+                            key={s.l}
+                            className="col gap-1"
+                            style={{
+                                padding: '20px 24px',
+                                borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                            }}
+                        >
+                            <div
+                                className="display num"
+                                style={{
+                                    fontSize: 32,
+                                    fontWeight: 500,
+                                    letterSpacing: '-0.025em',
+                                    lineHeight: 1,
+                                    color: 'var(--ink)',
+                                }}
                             >
-                                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${tool.color} opacity-10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:opacity-20 transition-opacity`} />
-                                <div className="relative">
-                                    <div className={`w-12 h-12 rounded-xl bg-white/[0.05] flex items-center justify-center mb-3 ${tool.iconColor}`}>
-                                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={tool.iconPath} />
-                                        </svg>
-                                    </div>
-                                    <h3 className="font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">{tool.name}</h3>
-                                    <p className="text-sm text-slate-400">{tool.desc}</p>
-                                    <div className="mt-4 flex items-center text-xs font-semibold text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                                        Open Tool
-                                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </section>
-
-                {/* Health Calculators Section */}
-                <section className="mb-16">
-                    <div className="flex items-center justify-between mb-8">
-                        <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
-                            <span className="w-8 h-8 rounded-lg bg-teal-500/20 flex items-center justify-center">
-                                <svg className="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                </svg>
-                            </span>
-                            Health Calculators
-                        </h2>
-                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{CALCULATORS.length} Calculators</span>
-                    </div>
-
-                    {/* Category Groups */}
-                    {categories.map(cat => (
-                        <div key={cat} className="mb-8">
-                            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">{cat}</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                {CALCULATORS.filter(c => c.category === cat).map(calc => (
-                                    <Link
-                                        key={calc.id}
-                                        href={calc.href}
-                                        className="group bg-white/[0.03] rounded-2xl border border-white/[0.08] p-5 hover:border-teal-500/30 hover:bg-white/[0.05] transition-all"
-                                    >
-                                        <div className="flex items-start gap-4">
-                                            <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0 ${calc.iconColor}`}>
-                                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={calc.iconPath} />
-                                                </svg>
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                                <h4 className="font-bold text-white group-hover:text-teal-400 transition-colors truncate">{calc.name}</h4>
-                                                <p className="text-xs text-slate-400 mt-1">{calc.desc}</p>
-                                            </div>
-                                        </div>
-                                        <div className="mt-4 flex items-center text-xs font-semibold text-teal-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                                            Calculate
-                                            <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </div>
-                                    </Link>
-                                ))}
+                                {s.v}
+                            </div>
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {s.l}
                             </div>
                         </div>
                     ))}
-                </section>
+                </div>
 
-                {/* CTA Section */}
-                <section className="bg-gradient-to-r from-cyan-900/30 to-teal-900/30 rounded-3xl p-8 md:p-12 text-center border border-cyan-500/20">
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-4">Need Personalized Health Advice?</h2>
-                    <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
-                        Our AI health assistant can analyze your results and provide personalized recommendations based on your health data.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/healz-ai"
-                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-all"
+                {/* ── Reference tools ──────────────────────── */}
+                <section className="col gap-4" aria-labelledby="reference-heading">
+                    <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                        <h2
+                            id="reference-heading"
+                            className="display"
+                            style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
                         >
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                            </svg>
-                            Talk to AI Health Assistant
-                        </Link>
-                        <Link
-                            href="/doctors"
-                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/[0.05] hover:bg-white/[0.1] text-white font-bold rounded-xl border border-white/[0.1] transition-all"
+                            Reference tools
+                        </h2>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
                         >
-                            Find a Specialist
-                        </Link>
+                            {HEALTH_TOOLS.length} tools
+                        </span>
+                    </div>
+
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {HEALTH_TOOLS.map((tool, i) => {
+                            const cols = 3;
+                            const isLastCol = (i + 1) % cols === 0;
+                            const isLastRow = i >= HEALTH_TOOLS.length - cols;
+                            return (
+                                <Link
+                                    key={tool.id}
+                                    href={tool.href}
+                                    className="col gap-3"
+                                    style={{
+                                        padding: '20px 22px',
+                                        borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                        borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                    }}
+                                >
+                                    <div className="row between ai-center">
+                                        <div className="spec-icon">{tool.abbr}</div>
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
+                                            Open →
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div
+                                            className="display"
+                                            style={{
+                                                fontSize: 18,
+                                                letterSpacing: '-0.02em',
+                                                fontWeight: 500,
+                                            }}
+                                        >
+                                            {tool.name}
+                                        </div>
+                                        <div className="muted" style={{ fontSize: 13, marginTop: 4, lineHeight: 1.5 }}>
+                                            {tool.desc}
+                                        </div>
+                                    </div>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </section>
 
-                {/* Disclaimer */}
-                <div className="mt-12 p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                    <p className="text-xs text-amber-200/80 text-center">
-                        <strong>Disclaimer:</strong> These tools provide estimates for informational purposes only and should not replace professional medical advice. Always consult a healthcare provider for personalized health guidance.
+                {/* ── Calculators by category ──────────────── */}
+                <section className="col gap-5" aria-labelledby="calculators-heading">
+                    <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                        <h2
+                            id="calculators-heading"
+                            className="display"
+                            style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+                        >
+                            Calculators
+                        </h2>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            {CALCULATORS.length} calculators
+                        </span>
+                    </div>
+
+                    {categories.map(cat => {
+                        const list = CALCULATORS.filter(c => c.category === cat);
+                        return (
+                            <div key={cat} className="col gap-3">
+                                <div
+                                    className="kicker"
+                                    style={{ display: 'flex', alignItems: 'center', gap: 10 }}
+                                >
+                                    <span className="dot" />
+                                    {cat}
+                                </div>
+                                <div
+                                    style={{
+                                        display: 'grid',
+                                        gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                                        gap: 0,
+                                        border: '1px solid var(--rule)',
+                                        borderRadius: 'var(--r-3)',
+                                        background: 'var(--paper)',
+                                        overflow: 'hidden',
+                                    }}
+                                >
+                                    {list.map((calc, i) => {
+                                        const cols = Math.min(list.length, 4);
+                                        const isLastCol = (i + 1) % cols === 0;
+                                        const isLastRow = i >= list.length - (list.length % cols || cols);
+                                        return (
+                                            <Link
+                                                key={calc.id}
+                                                href={calc.href}
+                                                className="col gap-3"
+                                                style={{
+                                                    padding: '20px 22px',
+                                                    borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                                    borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                                }}
+                                            >
+                                                <div className="row between ai-center">
+                                                    <div className="spec-icon">{calc.abbr}</div>
+                                                    <span
+                                                        className="mono"
+                                                        style={{
+                                                            fontSize: 11,
+                                                            color: 'var(--cobalt)',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.08em',
+                                                        }}
+                                                    >
+                                                        Calc →
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        className="display"
+                                                        style={{
+                                                            fontSize: 17,
+                                                            letterSpacing: '-0.02em',
+                                                            fontWeight: 500,
+                                                        }}
+                                                    >
+                                                        {calc.name}
+                                                    </div>
+                                                    <div className="muted" style={{ fontSize: 13, marginTop: 4, lineHeight: 1.5 }}>
+                                                        {calc.desc}
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </section>
+
+                {/* ── AI CTA ──────────────────────────────── */}
+                <section className="card-ink" style={{ padding: 'clamp(28px, 4vw, 48px)' }}>
+                    <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 24 }}>
+                        <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.10em',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                need personalized advice?
+                            </span>
+                            <h3
+                                className="display"
+                                style={{
+                                    fontSize: 'clamp(28px, 3.5vw, 40px)',
+                                    lineHeight: 1.1,
+                                    margin: 0,
+                                    fontWeight: 600,
+                                    color: 'var(--paper)',
+                                    letterSpacing: '-0.03em',
+                                }}
+                            >
+                                Numbers are a start. <span style={{ color: 'var(--cobalt-3)' }}>Ask Healz AI what they mean</span>
+                                <span style={{ color: 'var(--orange)' }}>.</span>
+                            </h3>
+                            <p
+                                style={{
+                                    fontSize: 16,
+                                    color: 'rgba(255,255,255,.7)',
+                                    lineHeight: 1.55,
+                                    maxWidth: 540,
+                                    margin: 0,
+                                }}
+                            >
+                                Plain-language interpretation, OTC options where appropriate, and the four specialists most likely to help.
+                            </p>
+                        </div>
+                        <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                            <Link href="/healz-ai" className="btn btn-cobalt btn-lg">
+                                Talk to Healz AI →
+                            </Link>
+                            <Link
+                                href="/doctors"
+                                className="btn btn-lg"
+                                style={{
+                                    background: 'rgba(255,255,255,.08)',
+                                    color: 'var(--paper)',
+                                    borderColor: 'rgba(255,255,255,.15)',
+                                }}
+                            >
+                                Find a specialist
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* ── Disclaimer ──────────────────────────── */}
+                <div
+                    className="card-quiet"
+                    style={{ padding: 16 }}
+                >
+                    <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: 0, lineHeight: 1.55 }}>
+                        <strong style={{ color: 'var(--ink-2)' }}>Disclaimer.</strong> These tools provide estimates for informational purposes only and should not replace professional medical advice. Always consult a healthcare provider for personalized guidance.
                     </p>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

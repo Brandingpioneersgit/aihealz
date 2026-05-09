@@ -4,10 +4,38 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { categorizeBmi } from './lib';
 
+type Severity = 'routine' | 'borderline' | 'urgent' | 'critical';
+
+const SEVERITY_COLOR: Record<Severity, string> = {
+    routine: 'var(--mint-3)',
+    borderline: '#8C6A00',
+    urgent: 'var(--orange-2)',
+    critical: 'var(--sev-critical)',
+};
+
+function severityForCategory(category: string): Severity {
+    switch (category) {
+        case 'Normal weight':
+            return 'routine';
+        case 'Mild thinness':
+        case 'Overweight (pre-obese)':
+            return 'borderline';
+        case 'Moderate thinness':
+        case 'Obesity class I':
+            return 'urgent';
+        case 'Severe thinness':
+        case 'Obesity class II':
+        case 'Obesity class III':
+            return 'critical';
+        default:
+            return 'borderline';
+    }
+}
+
 export default function BMICalculatorPage() {
     const [weight, setWeight] = useState('');
     const [height, setHeight] = useState('');
-    const [result, setResult] = useState<{ bmi: number; category: string; color: string } | null>(null);
+    const [result, setResult] = useState<{ bmi: number; category: string; severity: Severity } | null>(null);
     const [error, setError] = useState<string | null>(null);
 
     function calculate() {
@@ -15,24 +43,23 @@ export default function BMICalculatorPage() {
         const w = parseFloat(weight);
         const h = parseFloat(height);
 
-        // Validation
         if (isNaN(w) || w <= 0) {
-            setError('Please enter a valid weight (must be greater than 0)');
+            setError('Please enter a valid weight (must be greater than 0).');
             setResult(null);
             return;
         }
         if (w > 500) {
-            setError('Weight must be less than 500 kg');
+            setError('Weight must be less than 500 kg.');
             setResult(null);
             return;
         }
         if (isNaN(h) || h <= 0) {
-            setError('Please enter a valid height (must be greater than 0)');
+            setError('Please enter a valid height (must be greater than 0).');
             setResult(null);
             return;
         }
         if (h < 50 || h > 300) {
-            setError('Height must be between 50 and 300 cm');
+            setError('Height must be between 50 and 300 cm.');
             setResult(null);
             return;
         }
@@ -40,183 +67,377 @@ export default function BMICalculatorPage() {
         const heightInMeters = h / 100;
         const bmi = w / (heightInMeters * heightInMeters);
         const category = categorizeBmi(bmi);
-        const colorByCategory: Record<string, string> = {
-            'Severe thinness': 'text-blue-500',
-            'Moderate thinness': 'text-blue-400',
-            'Mild thinness': 'text-blue-300',
-            'Normal weight': 'text-emerald-400',
-            'Overweight (pre-obese)': 'text-amber-400',
-            'Obesity class I': 'text-orange-400',
-            'Obesity class II': 'text-red-400',
-            'Obesity class III': 'text-red-500',
-        };
-        setResult({ bmi, category, color: colorByCategory[category] });
+        setResult({ bmi, category, severity: severityForCategory(category) });
     }
 
     return (
-        <div className="min-h-screen bg-[#050B14] text-slate-200 pt-24 pb-16">
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            <div
+                style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 28px 80px' }}
+                className="col gap-6"
+            >
+                {/* ── Breadcrumb ───────────────────────── */}
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
                     <span>/</span>
-                    <Link href="/tools" className="hover:text-white transition-colors">Tools</Link>
+                    <Link href="/tools">Tools</Link>
                     <span>/</span>
-                    <span className="text-white">BMI Calculator</span>
+                    <span style={{ color: 'var(--ink)' }}>BMI Calculator</span>
                 </nav>
 
-                {/* Hero */}
-                <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-6">
-                        Free Health Tool
-                    </div>
-                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-                        BMI <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Calculator</span>
+                {/* ── Hero ─────────────────────────────── */}
+                <header className="col gap-4">
+                    <span className="section-mark">tools / bmi calculator</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5vw, 72px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        <span style={{ color: 'var(--cobalt)' }}>BMI</span> calculator
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                        Calculate your Body Mass Index (BMI) instantly. Understand your weight category and get personalized health insights.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 600 }}
+                    >
+                        Body Mass Index from weight and height — WHO classification with obesity classes I, II, III. Useful as a screen, not a diagnosis.
                     </p>
-                </div>
+                </header>
 
-                {/* Calculator Card */}
-                <div className="bg-white/[0.03] rounded-3xl border border-white/[0.08] overflow-hidden mb-12">
-                    <div className="p-6 md:p-8 border-b border-white/[0.06]">
-                        <h2 className="text-xl font-bold text-white mb-2">Calculate Your BMI</h2>
-                        <p className="text-sm text-slate-400">Enter your weight and height to calculate your Body Mass Index</p>
-                    </div>
+                {/* ── Calculator + Result ──────────────── */}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
+                        gap: 16,
+                    }}
+                    className="bmi-grid"
+                >
+                    {/* Form */}
+                    <form
+                        className="card col gap-5"
+                        style={{ padding: 28 }}
+                        onSubmit={e => {
+                            e.preventDefault();
+                            calculate();
+                        }}
+                    >
+                        <div className="col gap-1">
+                            <div className="kicker"><span className="dot" />inputs</div>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                            >
+                                Calculate your BMI
+                            </h2>
+                        </div>
 
-                    <div className="p-6 md:p-8 space-y-6">
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Weight (kg)</label>
+                        <div className="col gap-3">
+                            <label className="col gap-2">
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        color: 'var(--ink-3)',
+                                    }}
+                                >
+                                    Weight (kg)
+                                </span>
                                 <input
                                     type="number"
+                                    inputMode="decimal"
                                     value={weight}
                                     onChange={e => setWeight(e.target.value)}
-                                    placeholder="e.g., 70"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500/50"
+                                    placeholder="e.g. 70"
+                                    className="input"
                                 />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Height (cm)</label>
+                            </label>
+                            <label className="col gap-2">
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        color: 'var(--ink-3)',
+                                    }}
+                                >
+                                    Height (cm)
+                                </span>
                                 <input
                                     type="number"
+                                    inputMode="decimal"
                                     value={height}
                                     onChange={e => setHeight(e.target.value)}
-                                    placeholder="e.g., 170"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500/50"
+                                    placeholder="e.g. 170"
+                                    className="input"
                                 />
-                            </div>
+                            </label>
                         </div>
 
                         {error && (
-                            <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
+                            <div
+                                role="alert"
+                                style={{
+                                    padding: '10px 14px',
+                                    borderRadius: 'var(--r-2)',
+                                    background: 'var(--orange-50)',
+                                    border: '1px solid rgba(255, 90, 46, .28)',
+                                    color: 'var(--orange-2)',
+                                    fontSize: 13,
+                                }}
+                            >
                                 {error}
                             </div>
                         )}
 
-                        <button
-                            onClick={calculate}
-                            className="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-900 font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/20 transition-all"
-                        >
-                            Calculate BMI
+                        <button type="submit" className="btn btn-cobalt btn-lg">
+                            Calculate BMI →
                         </button>
-                    </div>
+                    </form>
 
-                    {result && (
-                        <div className="p-6 md:p-8 bg-slate-800/30 border-t border-white/[0.06]">
-                            <div className="text-center">
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Your BMI</p>
-                                <p className={`text-5xl font-black ${result.color} mb-2`}>{result.bmi.toFixed(1)}</p>
-                                <p className={`text-lg font-bold ${result.color}`}>{result.category}</p>
-                                <p className="text-sm text-slate-400 mt-4 max-w-md mx-auto">
-                                    {result.category === 'Normal Weight'
-                                        ? 'Your BMI is within the healthy range. Maintain your current lifestyle!'
-                                        : 'Consider consulting a healthcare provider for personalized advice on achieving a healthy weight.'}
+                    {/* Result */}
+                    <div className="card-flat col gap-4" style={{ padding: 28 }}>
+                        <div className="kicker"><span className="dot" />result</div>
+                        {result ? (
+                            <>
+                                <div className="col gap-2">
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.08em',
+                                            color: 'var(--ink-3)',
+                                        }}
+                                    >
+                                        Your BMI
+                                    </span>
+                                    <div
+                                        className="bignum"
+                                        style={{
+                                            fontSize: 'clamp(56px, 8vw, 96px)',
+                                            color: SEVERITY_COLOR[result.severity],
+                                        }}
+                                    >
+                                        {result.bmi.toFixed(1)}
+                                    </div>
+                                    <div
+                                        className="display"
+                                        style={{
+                                            fontSize: 20,
+                                            fontWeight: 600,
+                                            color: SEVERITY_COLOR[result.severity],
+                                            letterSpacing: '-0.02em',
+                                        }}
+                                    >
+                                        {result.category}
+                                    </div>
+                                </div>
+                                <div className="hairline" />
+                                <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0, lineHeight: 1.6 }}>
+                                    {result.category === 'Normal weight'
+                                        ? 'Your BMI is within the WHO healthy range. Maintain your current habits — regular movement and a balanced diet.'
+                                        : result.severity === 'borderline'
+                                            ? 'Your BMI sits at the edge of the healthy range. Small lifestyle changes — diet quality, daily movement — can shift it back.'
+                                            : 'Your BMI is outside the healthy range. Consider talking to a clinician about a personalized plan; BMI alone can mislead for athletes and older adults.'}
                                 </p>
-                            </div>
-
-                            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                                <Link href="/doctors/specialty/general-physician" className="flex-1 py-3 text-center rounded-xl bg-white/[0.05] border border-white/[0.1] text-sm font-bold text-white hover:bg-white/[0.1] transition-all">
-                                    Consult a Doctor
-                                </Link>
-                                <Link href="/tools" className="flex-1 py-3 text-center rounded-xl bg-white/[0.05] border border-white/[0.1] text-sm font-bold text-white hover:bg-white/[0.1] transition-all">
-                                    Try Other Calculators
-                                </Link>
-                            </div>
-                        </div>
-                    )}
+                                <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                    <Link
+                                        href="/doctors/specialty/general-physician"
+                                        className="btn btn-paper"
+                                    >
+                                        Consult a doctor
+                                    </Link>
+                                    <Link href="/tools" className="btn btn-ghost">
+                                        Other calculators
+                                    </Link>
+                                </div>
+                            </>
+                        ) : (
+                            <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                                Enter your weight and height. Result appears here in tabular display numerals, colored by category.
+                            </p>
+                        )}
+                    </div>
                 </div>
 
-                {/* BMI Chart */}
-                <div className="bg-white/[0.03] rounded-3xl border border-white/[0.08] p-6 md:p-8 mb-12">
-                    <h2 className="text-xl font-bold text-white mb-6">BMI Categories</h2>
-                    <div className="space-y-3">
+                {/* ── BMI Categories Table ────────────── */}
+                <section className="col gap-4" aria-labelledby="bmi-cats-heading">
+                    <h2
+                        id="bmi-cats-heading"
+                        className="display"
+                        style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        BMI categories
+                    </h2>
+                    <div
+                        style={{
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
                         {[
-                            { range: 'Below 18.5', category: 'Underweight', color: 'bg-blue-500' },
-                            { range: '18.5 - 24.9', category: 'Normal Weight', color: 'bg-emerald-500' },
-                            { range: '25.0 - 29.9', category: 'Overweight', color: 'bg-amber-500' },
-                            { range: '30.0 and above', category: 'Obese', color: 'bg-red-500' },
-                        ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-4 p-4 bg-slate-800/30 rounded-xl">
-                                <div className={`w-4 h-4 rounded-full ${item.color}`} />
-                                <div className="flex-1">
-                                    <p className="font-bold text-white">{item.category}</p>
-                                    <p className="text-sm text-slate-400">BMI: {item.range}</p>
+                            { range: '< 18.5', category: 'Underweight', sev: 'borderline' as Severity },
+                            { range: '18.5 – 24.9', category: 'Normal weight', sev: 'routine' as Severity },
+                            { range: '25.0 – 29.9', category: 'Overweight', sev: 'borderline' as Severity },
+                            { range: '30.0 – 34.9', category: 'Obesity class I', sev: 'urgent' as Severity },
+                            { range: '35.0 – 39.9', category: 'Obesity class II', sev: 'critical' as Severity },
+                            { range: '≥ 40.0', category: 'Obesity class III', sev: 'critical' as Severity },
+                        ].map((item, i, arr) => (
+                            <div
+                                key={item.category}
+                                className="row ai-center between"
+                                style={{
+                                    padding: '14px 22px',
+                                    borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                }}
+                            >
+                                <div className="row gap-3 ai-center">
+                                    <span
+                                        className="pill-dot"
+                                        style={{
+                                            display: 'inline-block',
+                                            background: SEVERITY_COLOR[item.sev],
+                                        }}
+                                    />
+                                    <span style={{ fontSize: 14, fontWeight: 500 }}>{item.category}</span>
                                 </div>
+                                <span
+                                    className="num"
+                                    style={{ fontSize: 13, color: 'var(--ink-3)' }}
+                                >
+                                    BMI {item.range}
+                                </span>
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* SEO Content */}
-                <div className="bg-white/[0.02] rounded-2xl border border-white/[0.06] p-8 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">What is BMI?</h2>
-                    <div className="prose prose-invert prose-slate max-w-none text-slate-400 space-y-4">
-                        <p>
-                            Body Mass Index (BMI) is a simple calculation using a person&apos;s height and weight. The formula is BMI = kg/m², where kg is your weight in kilograms and m² is your height in meters squared.
-                        </p>
-                        <p>
-                            BMI is a useful screening tool to identify possible weight problems in adults. However, it is not a diagnostic tool. A high BMI doesn&apos;t necessarily mean you have health problems, and a normal BMI doesn&apos;t guarantee perfect health.
-                        </p>
-                        <h3 className="text-lg font-semibold text-white mt-6 mb-2">Limitations of BMI</h3>
-                        <ul className="list-disc pl-5 space-y-1">
-                            <li>Does not differentiate between muscle and fat mass</li>
-                            <li>May not be accurate for athletes or very muscular individuals</li>
-                            <li>Does not account for age, gender, or ethnicity differences</li>
-                            <li>Should be used alongside other health indicators</li>
-                        </ul>
-                    </div>
-                </div>
-
-                {/* Related Tools */}
-                <div className="mb-8">
-                    <h2 className="text-xl font-bold text-white mb-6">Related Health Tools</h2>
-                    <div className="grid md:grid-cols-3 gap-4">
+                {/* ── About ──────────────────────────── */}
+                <section className="card col gap-4" style={{ padding: 32 }} aria-labelledby="about-heading">
+                    <h2
+                        id="about-heading"
+                        className="display"
+                        style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        About this calculator
+                    </h2>
+                    <p style={{ fontSize: 15, color: 'var(--ink-2)', margin: 0, lineHeight: 1.7 }}>
+                        Body Mass Index is your weight in kilograms divided by the square of your height in meters (kg/m²). It is a screening tool, not a diagnosis: a high BMI doesn’t guarantee disease, and a normal BMI doesn’t guarantee health.
+                    </p>
+                    <h3 className="display" style={{ fontSize: 17, margin: 0, fontWeight: 600 }}>
+                        Where BMI falls short
+                    </h3>
+                    <ul
+                        style={{
+                            margin: 0,
+                            padding: 0,
+                            listStyle: 'none',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 8,
+                        }}
+                    >
                         {[
-                            { name: 'Body Fat Calculator', href: '/tools/body-fat-calculator', desc: 'Estimate your body fat percentage' },
-                            { name: 'BMR Calculator', href: '/tools/bmr-calculator', desc: 'Calculate your daily calorie needs' },
-                            { name: 'Water Intake Calculator', href: '/tools/water-intake-calculator', desc: 'Find your daily water requirement' },
-                        ].map((tool, i) => (
-                            <Link
-                                key={i}
-                                href={tool.href}
-                                className="p-4 bg-white/[0.03] rounded-xl border border-white/[0.08] hover:border-emerald-500/30 transition-all group"
+                            'Doesn’t distinguish muscle mass from fat mass.',
+                            'Can mislead for athletes and very lean trained individuals.',
+                            'Doesn’t account for age, sex, or ethnic differences in body composition.',
+                            'Best read alongside waist circumference, blood pressure, and lipid panel.',
+                        ].map(item => (
+                            <li
+                                key={item}
+                                className="row gap-3 ai-start"
+                                style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.6 }}
                             >
-                                <h3 className="font-bold text-white group-hover:text-emerald-400 transition-colors">{tool.name}</h3>
-                                <p className="text-sm text-slate-400 mt-1">{tool.desc}</p>
+                                <span
+                                    style={{
+                                        flexShrink: 0,
+                                        marginTop: 7,
+                                        width: 6,
+                                        height: 6,
+                                        background: 'var(--cobalt)',
+                                        borderRadius: 999,
+                                    }}
+                                />
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
+                {/* ── Related ───────────────────────── */}
+                <section className="col gap-4" aria-labelledby="related-heading">
+                    <h2
+                        id="related-heading"
+                        className="display"
+                        style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        Related tools
+                    </h2>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
+                        {[
+                            { name: 'Body fat calculator', href: '/tools/body-fat-calculator', desc: 'U.S. Navy method estimate.' },
+                            { name: 'BMR calculator', href: '/tools/bmr-calculator', desc: 'Daily calorie needs.' },
+                            { name: 'Water intake', href: '/tools/water-intake-calculator', desc: 'Daily hydration target.' },
+                        ].map(tool => (
+                            <Link
+                                key={tool.href}
+                                href={tool.href}
+                                className="card col gap-2"
+                                style={{ padding: 20 }}
+                            >
+                                <div
+                                    className="display"
+                                    style={{ fontSize: 16, fontWeight: 600, letterSpacing: '-0.015em' }}
+                                >
+                                    {tool.name}
+                                </div>
+                                <div className="muted" style={{ fontSize: 13 }}>{tool.desc}</div>
                             </Link>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* Disclaimer */}
-                <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                    <p className="text-xs text-amber-200/80">
-                        <strong>Disclaimer:</strong> This BMI calculator provides estimates for informational purposes only and should not replace professional medical advice. Consult a healthcare provider for personalized health guidance.
+                {/* ── Disclaimer ────────────────────── */}
+                <div className="card-quiet" style={{ padding: 16 }}>
+                    <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: 0, lineHeight: 1.55 }}>
+                        <strong style={{ color: 'var(--ink-2)' }}>Disclaimer.</strong> This BMI calculator provides estimates for informational purposes only and should not replace professional medical advice. Consult a healthcare provider for personalized guidance.
                     </p>
                 </div>
             </div>
-        </div>
+
+            <style>{`
+                @media (max-width: 880px) {
+                    .bmi-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            `}</style>
+        </main>
     );
 }

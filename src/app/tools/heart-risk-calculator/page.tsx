@@ -3,6 +3,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+type Severity = 'routine' | 'borderline' | 'urgent' | 'critical';
+
+const SEVERITY_COLOR: Record<Severity, string> = {
+    routine: 'var(--mint-3)',
+    borderline: '#8C6A00',
+    urgent: 'var(--orange-2)',
+    critical: 'var(--sev-critical)',
+};
+
 export default function HeartRiskCalculatorPage() {
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('Male');
@@ -10,7 +19,7 @@ export default function HeartRiskCalculatorPage() {
     const [cholesterol, setCholesterol] = useState('');
     const [smoker, setSmoker] = useState('No');
     const [diabetic, setDiabetic] = useState('No');
-    const [result, setResult] = useState<{ score: number; risk: string; color: string } | null>(null);
+    const [result, setResult] = useState<{ score: number; risk: string; severity: Severity } | null>(null);
 
     function calculate() {
         let score = 0;
@@ -24,200 +33,291 @@ export default function HeartRiskCalculatorPage() {
         if (smoker === 'Yes') score += 3;
         if (diabetic === 'Yes') score += 2;
 
-        const risk = score <= 3 ? 'Low' : score <= 6 ? 'Moderate' : score <= 9 ? 'High' : 'Very High';
-        const color = score <= 3 ? 'text-emerald-400' : score <= 6 ? 'text-amber-400' : 'text-red-400';
-        setResult({ score, risk, color });
+        const risk = score <= 3 ? 'Low' : score <= 6 ? 'Moderate' : score <= 9 ? 'High' : 'Very high';
+        const severity: Severity = score <= 3 ? 'routine' : score <= 6 ? 'borderline' : score <= 9 ? 'urgent' : 'critical';
+        setResult({ score, risk, severity });
     }
 
     return (
-        <div className="min-h-screen bg-[#050B14] text-slate-200 pt-24 pb-16">
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            <div
+                style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 28px 80px' }}
+                className="col gap-6"
+            >
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
                     <span>/</span>
-                    <Link href="/tools" className="hover:text-white transition-colors">Tools</Link>
+                    <Link href="/tools">Tools</Link>
                     <span>/</span>
-                    <span className="text-white">Heart Risk Calculator</span>
+                    <span style={{ color: 'var(--ink)' }}>Heart Risk</span>
                 </nav>
 
-                {/* Hero */}
-                <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider mb-6">
-                        Cardiovascular Health
-                    </div>
-                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-                        Heart Disease <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">Risk Calculator</span>
+                <header className="col gap-4">
+                    <span className="section-mark">tools / heart risk</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5vw, 72px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        <span style={{ color: 'var(--cobalt)' }}>10-year</span> heart risk
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                        Estimate your 10-year cardiovascular disease risk. Understand your heart health and take preventive action.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 600 }}
+                    >
+                        Quick estimate of cardiovascular disease risk over the next decade. Six modifiable and non-modifiable inputs.
                     </p>
-                </div>
+                </header>
 
-                {/* Calculator Card */}
-                <div className="bg-white/[0.03] rounded-3xl border border-white/[0.08] overflow-hidden mb-12">
-                    <div className="p-6 md:p-8 border-b border-white/[0.06]">
-                        <h2 className="text-xl font-bold text-white mb-2">Assess Your Heart Risk</h2>
-                        <p className="text-sm text-slate-400">Enter your health parameters to estimate cardiovascular risk</p>
-                    </div>
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
+                        gap: 16,
+                    }}
+                    className="hr-grid"
+                >
+                    <form
+                        className="card col gap-5"
+                        style={{ padding: 28 }}
+                        onSubmit={e => {
+                            e.preventDefault();
+                            calculate();
+                        }}
+                    >
+                        <div className="col gap-1">
+                            <div className="kicker"><span className="dot" />inputs</div>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                            >
+                                Assess heart risk
+                            </h2>
+                        </div>
 
-                    <div className="p-6 md:p-8 space-y-6">
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Age</label>
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: '1fr 1fr',
+                                gap: 12,
+                            }}
+                        >
+                            <Field label="Age">
                                 <input
                                     type="number"
+                                    inputMode="numeric"
                                     value={age}
                                     onChange={e => setAge(e.target.value)}
-                                    placeholder="e.g., 45"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-red-500/50"
+                                    placeholder="e.g. 45"
+                                    className="input"
                                 />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Gender</label>
+                            </Field>
+                            <Field label="Gender">
                                 <select
                                     value={gender}
                                     onChange={e => setGender(e.target.value)}
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white focus:outline-none focus:border-red-500/50"
+                                    className="select"
                                 >
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Systolic BP (mmHg)</label>
+                            </Field>
+                            <Field label="Systolic BP (mmHg)">
                                 <input
                                     type="number"
+                                    inputMode="numeric"
                                     value={systolic}
                                     onChange={e => setSystolic(e.target.value)}
-                                    placeholder="e.g., 120"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-red-500/50"
+                                    placeholder="e.g. 120"
+                                    className="input"
                                 />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Total Cholesterol (mg/dL)</label>
+                            </Field>
+                            <Field label="Total cholesterol (mg/dL)">
                                 <input
                                     type="number"
+                                    inputMode="numeric"
                                     value={cholesterol}
                                     onChange={e => setCholesterol(e.target.value)}
-                                    placeholder="e.g., 200"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-red-500/50"
+                                    placeholder="e.g. 200"
+                                    className="input"
                                 />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Smoker?</label>
+                            </Field>
+                            <Field label="Smoker?">
                                 <select
                                     value={smoker}
                                     onChange={e => setSmoker(e.target.value)}
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white focus:outline-none focus:border-red-500/50"
+                                    className="select"
                                 >
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
                                 </select>
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Diabetic?</label>
+                            </Field>
+                            <Field label="Diabetic?">
                                 <select
                                     value={diabetic}
                                     onChange={e => setDiabetic(e.target.value)}
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white focus:outline-none focus:border-red-500/50"
+                                    className="select"
                                 >
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
                                 </select>
-                            </div>
+                            </Field>
                         </div>
 
-                        <button
-                            onClick={calculate}
-                            className="w-full py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/20 transition-all"
-                        >
-                            Calculate Heart Risk
+                        <button type="submit" className="btn btn-cobalt btn-lg">
+                            Calculate heart risk →
                         </button>
-                    </div>
+                    </form>
 
-                    {result && (
-                        <div className="p-6 md:p-8 bg-slate-800/30 border-t border-white/[0.06]">
-                            <div className="text-center mb-6">
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">10-Year Heart Disease Risk</p>
-                                <p className={`text-5xl font-black ${result.color} mb-2`}>{result.risk}</p>
-                                <p className="text-sm text-slate-400">Risk Score: {result.score}/15</p>
-                            </div>
-
-                            <div className="p-4 bg-slate-800/50 rounded-xl mb-6">
-                                <p className="text-sm text-slate-300">
-                                    {result.risk === 'Low' && 'Great news! Your cardiovascular risk appears low. Continue maintaining a healthy lifestyle with regular exercise and a balanced diet.'}
-                                    {result.risk === 'Moderate' && 'Your cardiovascular risk is moderate. Consider lifestyle modifications and consult a doctor for preventive measures.'}
-                                    {result.risk === 'High' && 'Your cardiovascular risk is elevated. We strongly recommend scheduling a checkup with a cardiologist.'}
-                                    {result.risk === 'Very High' && 'Your cardiovascular risk is very high. Please consult a cardiologist immediately for proper evaluation and treatment.'}
+                    <div className="card-flat col gap-4" style={{ padding: 28 }}>
+                        <div className="kicker"><span className="dot" />result</div>
+                        {result ? (
+                            <>
+                                <div className="col gap-2">
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.08em',
+                                            color: 'var(--ink-3)',
+                                        }}
+                                    >
+                                        10-year cardiovascular risk
+                                    </span>
+                                    <div
+                                        className="bignum"
+                                        style={{
+                                            fontSize: 'clamp(48px, 7vw, 88px)',
+                                            color: SEVERITY_COLOR[result.severity],
+                                        }}
+                                    >
+                                        {result.risk}
+                                    </div>
+                                    <span className="num muted" style={{ fontSize: 13 }}>
+                                        score {result.score}/15
+                                    </span>
+                                </div>
+                                <div className="hairline" />
+                                <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0, lineHeight: 1.6 }}>
+                                    {result.risk === 'Low' && 'Risk appears low. Continue with regular movement, Mediterranean-pattern diet, and routine check-ups.'}
+                                    {result.risk === 'Moderate' && 'Moderate risk. Lifestyle changes plus a baseline lipid panel and BP monitoring would be worthwhile.'}
+                                    {result.risk === 'High' && 'Elevated risk. Recommend a cardiology consult — discuss statin/BP medication and structured lifestyle intervention.'}
+                                    {result.risk === 'Very high' && 'Very high risk. See a cardiologist promptly. Aggressive risk-factor modification typically warranted.'}
                                 </p>
-                            </div>
-
-                            <Link
-                                href="/doctors/specialty/cardiologist"
-                                className="block w-full py-3 text-center rounded-xl bg-red-500 text-white font-bold hover:bg-red-400 transition-all"
-                            >
-                                Find a Cardiologist Near You
-                            </Link>
-                        </div>
-                    )}
-                </div>
-
-                {/* Risk Factors */}
-                <div className="bg-white/[0.03] rounded-3xl border border-white/[0.08] p-6 md:p-8 mb-12">
-                    <h2 className="text-xl font-bold text-white mb-6">Heart Disease Risk Factors</h2>
-                    <div className="grid md:grid-cols-2 gap-4">
-                        {[
-                            { factor: 'High Blood Pressure', desc: 'BP consistently above 130/80 mmHg', iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z', color: 'text-rose-400' },
-                            { factor: 'High Cholesterol', desc: 'Total cholesterol above 200 mg/dL', iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', color: 'text-red-400' },
-                            { factor: 'Smoking', desc: 'Current or recent tobacco use', iconPath: 'M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636', color: 'text-orange-400' },
-                            { factor: 'Diabetes', desc: 'Type 1 or Type 2 diabetes', iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', color: 'text-blue-400' },
-                            { factor: 'Obesity', desc: 'BMI of 30 or higher', iconPath: 'M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3', color: 'text-amber-400' },
-                            { factor: 'Family History', desc: 'Heart disease in close relatives', iconPath: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', color: 'text-purple-400' },
-                        ].map((item, i) => (
-                            <div key={i} className="p-4 bg-slate-800/30 rounded-xl flex items-start gap-3">
-                                <div className={`w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center shrink-0 ${item.color}`}>
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.iconPath} />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="font-bold text-white">{item.factor}</p>
-                                    <p className="text-sm text-slate-400">{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
+                                <Link href="/doctors/specialty/cardiologist" className="btn btn-cobalt">
+                                    Find a cardiologist →
+                                </Link>
+                            </>
+                        ) : (
+                            <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                                Enter your inputs. Risk score appears here, colored by severity.
+                            </p>
+                        )}
                     </div>
                 </div>
 
-                {/* Related Tools */}
-                <div className="mb-8">
-                    <h2 className="text-xl font-bold text-white mb-6">Related Health Tools</h2>
-                    <div className="grid md:grid-cols-3 gap-4">
+                <section className="col gap-4" aria-labelledby="rf-heading">
+                    <h2
+                        id="rf-heading"
+                        className="display"
+                        style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        Heart disease risk factors
+                    </h2>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
                         {[
-                            { name: 'BMI Calculator', href: '/tools/bmi-calculator', desc: 'Check if your weight is healthy' },
-                            { name: 'Diabetes Risk Calculator', href: '/tools/diabetes-risk-calculator', desc: 'Assess your diabetes risk' },
-                            { name: 'Kidney Function Calculator', href: '/tools/kidney-function-calculator', desc: 'Calculate your eGFR' },
-                        ].map((tool, i) => (
-                            <Link
-                                key={i}
-                                href={tool.href}
-                                className="p-4 bg-white/[0.03] rounded-xl border border-white/[0.08] hover:border-red-500/30 transition-all group"
-                            >
-                                <h3 className="font-bold text-white group-hover:text-red-400 transition-colors">{tool.name}</h3>
-                                <p className="text-sm text-slate-400 mt-1">{tool.desc}</p>
-                            </Link>
-                        ))}
+                            { f: 'High blood pressure', d: 'Consistently above 130/80 mmHg' },
+                            { f: 'High cholesterol', d: 'Total cholesterol above 200 mg/dL' },
+                            { f: 'Smoking', d: 'Current or recent tobacco use' },
+                            { f: 'Diabetes', d: 'Type 1 or Type 2' },
+                            { f: 'Obesity', d: 'BMI ≥ 30' },
+                            { f: 'Family history', d: 'Heart disease in first-degree relatives' },
+                        ].map((item, i, arr) => {
+                            const cols = 3;
+                            const isLastCol = (i + 1) % cols === 0;
+                            const isLastRow = i >= arr.length - cols;
+                            return (
+                                <div
+                                    key={item.f}
+                                    className="col gap-2"
+                                    style={{
+                                        padding: 20,
+                                        borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                        borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                    }}
+                                >
+                                    <div
+                                        className="display"
+                                        style={{ fontSize: 16, fontWeight: 600, letterSpacing: '-0.015em' }}
+                                    >
+                                        {item.f}
+                                    </div>
+                                    <div className="muted" style={{ fontSize: 13 }}>{item.d}</div>
+                                </div>
+                            );
+                        })}
                     </div>
-                </div>
+                </section>
 
-                {/* Disclaimer */}
-                <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                    <p className="text-xs text-amber-200/80">
-                        <strong>Disclaimer:</strong> This calculator provides a simplified risk estimate and is not a substitute for professional medical evaluation. Actual cardiovascular risk depends on many factors. Please consult a cardiologist for comprehensive heart health assessment.
+                <div className="card-quiet" style={{ padding: 16 }}>
+                    <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: 0, lineHeight: 1.55 }}>
+                        <strong style={{ color: 'var(--ink-2)' }}>Disclaimer.</strong> Simplified risk estimate. Real cardiovascular risk depends on many factors — see a cardiologist for a comprehensive assessment using validated calculators (ASCVD, QRISK3).
                     </p>
                 </div>
             </div>
-        </div>
+
+            <style>{`
+                @media (max-width: 880px) {
+                    .hr-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            `}</style>
+        </main>
+    );
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+    return (
+        <label className="col gap-2">
+            <span
+                className="mono"
+                style={{
+                    fontSize: 11,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    color: 'var(--ink-3)',
+                }}
+            >
+                {label}
+            </span>
+            {children}
+        </label>
     );
 }

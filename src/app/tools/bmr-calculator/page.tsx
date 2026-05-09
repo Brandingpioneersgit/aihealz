@@ -39,88 +39,135 @@ export default function BMRCalculatorPage() {
     }
 
     return (
-        <div className="min-h-screen bg-[#050B14] text-slate-200 pt-24 pb-16">
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            <div
+                style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 28px 80px' }}
+                className="col gap-6"
+            >
+                {/* ── Breadcrumb ───────────────────── */}
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
                     <span>/</span>
-                    <Link href="/tools" className="hover:text-white transition-colors">Tools</Link>
+                    <Link href="/tools">Tools</Link>
                     <span>/</span>
-                    <span className="text-white">BMR Calculator</span>
+                    <span style={{ color: 'var(--ink)' }}>BMR Calculator</span>
                 </nav>
 
-                {/* Hero */}
-                <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-6">
-                        Free Health Tool
-                    </div>
-                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-                        BMR & Calorie <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Calculator</span>
+                {/* ── Hero ─────────────────────────── */}
+                <header className="col gap-4">
+                    <span className="section-mark">tools / bmr calculator</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5vw, 72px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        <span style={{ color: 'var(--cobalt)' }}>BMR</span> &amp; calorie calculator
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                        Calculate your Basal Metabolic Rate and daily calorie needs. Plan your diet for weight loss, maintenance, or muscle gain.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 600 }}
+                    >
+                        Mifflin-St Jeor equation. Calculates resting metabolic rate plus daily targets for maintenance, deficit, and surplus.
                     </p>
-                </div>
+                </header>
 
-                {/* Calculator Card */}
-                <div className="bg-white/[0.03] rounded-3xl border border-white/[0.08] overflow-hidden mb-12">
-                    <div className="p-6 md:p-8 border-b border-white/[0.06]">
-                        <h2 className="text-xl font-bold text-white mb-2">Calculate Your BMR</h2>
-                        <p className="text-sm text-slate-400">Enter your details to find your basal metabolic rate and daily calorie needs</p>
-                    </div>
+                {/* ── Calculator + Result ──────────── */}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
+                        gap: 16,
+                    }}
+                    className="bmr-grid"
+                >
+                    {/* Form */}
+                    <form
+                        className="card col gap-5"
+                        style={{ padding: 28 }}
+                        onSubmit={e => {
+                            e.preventDefault();
+                            calculate();
+                        }}
+                    >
+                        <div className="col gap-1">
+                            <div className="kicker"><span className="dot" />inputs</div>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                            >
+                                Calculate your BMR
+                            </h2>
+                        </div>
 
-                    <div className="p-6 md:p-8 space-y-6">
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Weight (kg)</label>
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: '1fr 1fr',
+                                gap: 12,
+                            }}
+                        >
+                            <Field label="Weight (kg)">
                                 <input
                                     type="number"
+                                    inputMode="decimal"
                                     value={weight}
                                     onChange={e => setWeight(e.target.value)}
-                                    placeholder="e.g., 70"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-500/50"
+                                    placeholder="e.g. 70"
+                                    className="input"
                                 />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Height (cm)</label>
+                            </Field>
+                            <Field label="Height (cm)">
                                 <input
                                     type="number"
+                                    inputMode="decimal"
                                     value={height}
                                     onChange={e => setHeight(e.target.value)}
-                                    placeholder="e.g., 170"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-500/50"
+                                    placeholder="e.g. 170"
+                                    className="input"
                                 />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Age (years)</label>
+                            </Field>
+                            <Field label="Age (years)">
                                 <input
                                     type="number"
+                                    inputMode="numeric"
                                     value={age}
                                     onChange={e => setAge(e.target.value)}
-                                    placeholder="e.g., 30"
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-500/50"
+                                    placeholder="e.g. 30"
+                                    className="input"
                                 />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Gender</label>
+                            </Field>
+                            <Field label="Gender">
                                 <select
                                     value={gender}
                                     onChange={e => setGender(e.target.value)}
-                                    className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white focus:outline-none focus:border-orange-500/50"
+                                    className="select"
                                 >
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
-                            </div>
+                            </Field>
                         </div>
 
-                        <div>
-                            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Activity Level</label>
+                        <Field label="Activity level">
                             <select
                                 value={activity}
                                 onChange={e => setActivity(e.target.value)}
-                                className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white focus:outline-none focus:border-orange-500/50"
+                                className="select"
                             >
                                 <option value="1.2">Sedentary — desk job, little or no exercise</option>
                                 <option value="1.375">Lightly active — light exercise 1–3 days/week</option>
@@ -128,98 +175,223 @@ export default function BMRCalculatorPage() {
                                 <option value="1.725">Very active — hard exercise 6–7 days/week</option>
                                 <option value="1.9">Extra active — physical job + daily training</option>
                             </select>
-                        </div>
+                        </Field>
 
                         {error && (
-                            <div className="px-4 py-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-sm text-rose-300">
+                            <div
+                                role="alert"
+                                style={{
+                                    padding: '10px 14px',
+                                    borderRadius: 'var(--r-2)',
+                                    background: 'var(--orange-50)',
+                                    border: '1px solid rgba(255, 90, 46, .28)',
+                                    color: 'var(--orange-2)',
+                                    fontSize: 13,
+                                }}
+                            >
                                 {error}
                             </div>
                         )}
 
-                        <button
-                            onClick={calculate}
-                            className="w-full py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-slate-900 font-bold rounded-xl hover:shadow-lg hover:shadow-orange-500/20 transition-all"
-                        >
-                            Calculate BMR & Calories
+                        <button type="submit" className="btn btn-cobalt btn-lg">
+                            Calculate BMR &amp; calories →
                         </button>
+                    </form>
+
+                    {/* Result */}
+                    <div className="card-flat col gap-5" style={{ padding: 28 }}>
+                        <div className="kicker"><span className="dot" />result</div>
+                        {result ? (
+                            <>
+                                <div className="col gap-2">
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.08em',
+                                            color: 'var(--ink-3)',
+                                        }}
+                                    >
+                                        Maintenance calories
+                                    </span>
+                                    <div
+                                        className="bignum"
+                                        style={{
+                                            fontSize: 'clamp(56px, 8vw, 96px)',
+                                            color: 'var(--cobalt)',
+                                        }}
+                                    >
+                                        {result.maintenance.toLocaleString()}
+                                    </div>
+                                    <span className="muted" style={{ fontSize: 13 }}>kcal/day at chosen activity level</span>
+                                </div>
+
+                                <div className="hairline" />
+
+                                <div
+                                    style={{
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr 1fr',
+                                        gap: 0,
+                                        border: '1px solid var(--rule)',
+                                        borderRadius: 'var(--r-2)',
+                                        overflow: 'hidden',
+                                    }}
+                                >
+                                    {[
+                                        { label: 'BMR (rest)', value: result.bmr, sub: 'kcal/day' },
+                                        { label: 'Weight loss', value: result.weightLoss, sub: '~0.5 kg/wk' },
+                                        { label: 'Weight gain', value: result.weightGain, sub: '~0.5 kg/wk' },
+                                    ].map((item, i) => (
+                                        <div
+                                            key={item.label}
+                                            className="col gap-1"
+                                            style={{
+                                                padding: '14px 16px',
+                                                borderRight: i < 2 ? '1px solid var(--rule)' : 'none',
+                                            }}
+                                        >
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 10,
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                    color: 'var(--ink-3)',
+                                                }}
+                                            >
+                                                {item.label}
+                                            </span>
+                                            <span
+                                                className="num display"
+                                                style={{ fontSize: 22, fontWeight: 500, letterSpacing: '-0.02em' }}
+                                            >
+                                                {item.value.toLocaleString()}
+                                            </span>
+                                            <span
+                                                className="mono"
+                                                style={{ fontSize: 10, color: 'var(--ink-4)' }}
+                                            >
+                                                {item.sub}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </>
+                        ) : (
+                            <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                                Enter your inputs. Maintenance calories appear here, with deficit/surplus targets in a hairline panel below.
+                            </p>
+                        )}
                     </div>
-
-                    {result && (
-                        <div className="p-6 md:p-8 bg-slate-800/30 border-t border-white/[0.06]">
-                            <div className="grid md:grid-cols-2 gap-6 mb-6">
-                                <div className="text-center p-6 bg-orange-500/10 rounded-2xl border border-orange-500/20">
-                                    <p className="text-xs font-bold text-orange-400 uppercase tracking-wider mb-2">Basal Metabolic Rate</p>
-                                    <p className="text-4xl font-black text-white">{result.bmr}</p>
-                                    <p className="text-sm text-slate-400">calories/day at rest</p>
-                                </div>
-                                <div className="text-center p-6 bg-emerald-500/10 rounded-2xl border border-emerald-500/20">
-                                    <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2">Maintenance Calories</p>
-                                    <p className="text-4xl font-black text-white">{result.maintenance}</p>
-                                    <p className="text-sm text-slate-400">calories/day at chosen activity level</p>
-                                </div>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-500/20 text-center">
-                                    <p className="text-sm font-bold text-blue-400">For Weight Loss</p>
-                                    <p className="text-2xl font-bold text-white">{result.weightLoss} cal/day</p>
-                                    <p className="text-xs text-slate-400">~0.5 kg/week deficit</p>
-                                </div>
-                                <div className="p-4 bg-purple-500/10 rounded-xl border border-purple-500/20 text-center">
-                                    <p className="text-sm font-bold text-purple-400">For Weight Gain</p>
-                                    <p className="text-2xl font-bold text-white">{result.weightGain} cal/day</p>
-                                    <p className="text-xs text-slate-400">~0.5 kg/week surplus</p>
-                                </div>
-                            </div>
-                        </div>
-                    )}
                 </div>
 
-                {/* SEO Content */}
-                <div className="bg-white/[0.02] rounded-2xl border border-white/[0.06] p-8 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">What is BMR?</h2>
-                    <div className="prose prose-invert prose-slate max-w-none text-slate-400 space-y-4">
-                        <p>
-                            Basal Metabolic Rate (BMR) is the number of calories your body burns while at complete rest. It represents the minimum amount of energy needed to keep your body functioning, including breathing, circulation, and cell production.
-                        </p>
-                        <h3 className="text-lg font-semibold text-white mt-6 mb-2">Mifflin-St Jeor Equation</h3>
-                        <p>This calculator uses the Mifflin-St Jeor equation (1990), now the clinically preferred formula because it tracks measured resting metabolic rate roughly 5% closer than the older Harris-Benedict revision:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                            <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5</li>
-                            <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161</li>
+                {/* ── About ─────────────────────────── */}
+                <section className="card col gap-4" style={{ padding: 32 }} aria-labelledby="about-heading">
+                    <h2
+                        id="about-heading"
+                        className="display"
+                        style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        About this calculator
+                    </h2>
+                    <p style={{ fontSize: 15, color: 'var(--ink-2)', margin: 0, lineHeight: 1.7 }}>
+                        Basal Metabolic Rate (BMR) is the energy your body burns at complete rest — breathing, circulation, cell production. The Mifflin-St Jeor equation (1990) is now the clinically preferred formula because it tracks measured resting metabolic rate roughly 5% closer than the older Harris-Benedict revision.
+                    </p>
+                    <div className="card-quiet" style={{ padding: 16 }}>
+                        <ul
+                            className="mono"
+                            style={{
+                                margin: 0,
+                                padding: 0,
+                                listStyle: 'none',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: 8,
+                                fontSize: 13,
+                                color: 'var(--ink-2)',
+                            }}
+                        >
+                            <li>Men: BMR = (10 × kg) + (6.25 × cm) − (5 × age) + 5</li>
+                            <li>Women: BMR = (10 × kg) + (6.25 × cm) − (5 × age) − 161</li>
+                            <li>Maintenance = BMR × activity factor (1.2 sedentary → 1.9 extra active).</li>
                         </ul>
-                        <p>Maintenance calories are then BMR multiplied by an activity factor (1.2 sedentary → 1.9 extra active).</p>
                     </div>
-                </div>
+                </section>
 
-                {/* Related Tools */}
-                <div className="mb-8">
-                    <h2 className="text-xl font-bold text-white mb-6">Related Health Tools</h2>
-                    <div className="grid md:grid-cols-3 gap-4">
+                {/* ── Related ───────────────────────── */}
+                <section className="col gap-4" aria-labelledby="related-heading">
+                    <h2
+                        id="related-heading"
+                        className="display"
+                        style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        Related tools
+                    </h2>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                            gap: 16,
+                        }}
+                    >
                         {[
-                            { name: 'BMI Calculator', href: '/tools/bmi-calculator', desc: 'Calculate your Body Mass Index' },
-                            { name: 'Body Fat Calculator', href: '/tools/body-fat-calculator', desc: 'Estimate your body fat percentage' },
-                            { name: 'Water Intake Calculator', href: '/tools/water-intake-calculator', desc: 'Find your daily water requirement' },
-                        ].map((tool, i) => (
+                            { name: 'BMI calculator', href: '/tools/bmi-calculator', desc: 'Body Mass Index from weight and height.' },
+                            { name: 'Body fat calculator', href: '/tools/body-fat-calculator', desc: 'U.S. Navy method estimate.' },
+                            { name: 'Water intake', href: '/tools/water-intake-calculator', desc: 'Daily hydration target.' },
+                        ].map(tool => (
                             <Link
-                                key={i}
+                                key={tool.href}
                                 href={tool.href}
-                                className="p-4 bg-white/[0.03] rounded-xl border border-white/[0.08] hover:border-orange-500/30 transition-all group"
+                                className="card col gap-2"
+                                style={{ padding: 20 }}
                             >
-                                <h3 className="font-bold text-white group-hover:text-orange-400 transition-colors">{tool.name}</h3>
-                                <p className="text-sm text-slate-400 mt-1">{tool.desc}</p>
+                                <div
+                                    className="display"
+                                    style={{ fontSize: 16, fontWeight: 600, letterSpacing: '-0.015em' }}
+                                >
+                                    {tool.name}
+                                </div>
+                                <div className="muted" style={{ fontSize: 13 }}>{tool.desc}</div>
                             </Link>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* Disclaimer */}
-                <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                    <p className="text-xs text-amber-200/80">
-                        <strong>Disclaimer:</strong> This BMR calculator provides estimates for informational purposes only. Individual calorie needs vary based on activity level, body composition, and health conditions. Consult a dietitian or healthcare provider for personalized nutrition advice.
+                <div className="card-quiet" style={{ padding: 16 }}>
+                    <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: 0, lineHeight: 1.55 }}>
+                        <strong style={{ color: 'var(--ink-2)' }}>Disclaimer.</strong> Estimates only. Individual calorie needs vary with body composition, medications, and health conditions. Consult a dietitian for personalized advice.
                     </p>
                 </div>
             </div>
-        </div>
+
+            <style>{`
+                @media (max-width: 880px) {
+                    .bmr-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            `}</style>
+        </main>
+    );
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+    return (
+        <label className="col gap-2">
+            <span
+                className="mono"
+                style={{
+                    fontSize: 11,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    color: 'var(--ink-3)',
+                }}
+            >
+                {label}
+            </span>
+            {children}
+        </label>
     );
 }

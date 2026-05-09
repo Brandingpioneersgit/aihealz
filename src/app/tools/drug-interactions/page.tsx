@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { AlertTriangle, AlertCircle, Info, Search, Plus, X, Pill, Wine, Apple, Shield } from 'lucide-react';
 
 interface Drug {
     id: string;
@@ -47,36 +46,32 @@ interface DrugData {
 const SEVERITY_CONFIG = {
     contraindicated: {
         label: 'Contraindicated',
-        bg: 'bg-black',
-        border: 'border-red-500',
-        text: 'text-red-400',
-        icon: AlertTriangle,
-        description: 'NEVER use together - life-threatening risk'
+        color: 'var(--sev-critical)',
+        bg: 'rgba(182, 21, 21, .08)',
+        border: 'rgba(182, 21, 21, .25)',
+        description: 'NEVER combine — life-threatening risk.',
     },
     severe: {
         label: 'Severe',
-        bg: 'bg-red-500/20',
-        border: 'border-red-500/50',
-        text: 'text-red-400',
-        icon: AlertTriangle,
-        description: 'Potentially dangerous - avoid if possible'
+        color: 'var(--orange-2)',
+        bg: 'var(--orange-50)',
+        border: 'rgba(255, 90, 46, .28)',
+        description: 'Potentially dangerous — avoid if possible.',
     },
     moderate: {
         label: 'Moderate',
-        bg: 'bg-amber-500/20',
-        border: 'border-amber-500/50',
-        text: 'text-amber-400',
-        icon: AlertCircle,
-        description: 'Use caution - monitor closely'
+        color: '#8C6A00',
+        bg: 'var(--lemon-50)',
+        border: 'rgba(230, 185, 40, .40)',
+        description: 'Use caution — monitor closely.',
     },
     mild: {
         label: 'Mild',
-        bg: 'bg-blue-500/20',
-        border: 'border-blue-500/50',
-        text: 'text-blue-400',
-        icon: Info,
-        description: 'Minor interaction - usually safe'
-    }
+        color: 'var(--cobalt)',
+        bg: 'var(--cobalt-50)',
+        border: 'rgba(28, 91, 255, .22)',
+        description: 'Minor interaction — usually safe.',
+    },
 };
 
 export default function DrugInteractionsChecker() {
@@ -85,9 +80,7 @@ export default function DrugInteractionsChecker() {
     const [searchQuery, setSearchQuery] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [includeAlcohol, setIncludeAlcohol] = useState(false);
-    const [loading, setLoading] = useState(false);
 
-    // Load drug data
     useEffect(() => {
         fetch('/data/drug-interactions.json')
             .then(res => res.json())
@@ -95,7 +88,6 @@ export default function DrugInteractionsChecker() {
             .catch(console.error);
     }, []);
 
-    // Filter drugs based on search
     const filteredDrugs = useMemo(() => {
         if (!drugData || !searchQuery.trim()) return [];
         const q = searchQuery.toLowerCase();
@@ -106,31 +98,24 @@ export default function DrugInteractionsChecker() {
         ).slice(0, 10);
     }, [drugData, searchQuery]);
 
-    // Find interactions between selected drugs
     const foundInteractions = useMemo(() => {
         if (!drugData || selectedDrugs.length < 2) return [];
-
         const interactions: Interaction[] = [];
         for (let i = 0; i < selectedDrugs.length; i++) {
             for (let j = i + 1; j < selectedDrugs.length; j++) {
                 const drug1 = selectedDrugs[i];
                 const drug2 = selectedDrugs[j];
-
                 const found = drugData.interactions.find(int =>
                     (int.drug1 === drug1 && int.drug2 === drug2) ||
                     (int.drug1 === drug2 && int.drug2 === drug1)
                 );
-
                 if (found) interactions.push(found);
             }
         }
-
-        // Sort by severity
         const severityOrder = { contraindicated: 0, severe: 1, moderate: 2, mild: 3 };
         return interactions.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
     }, [drugData, selectedDrugs]);
 
-    // Find food interactions for selected drugs
     const foodInteractions = useMemo(() => {
         if (!drugData) return [];
         return drugData.food_interactions.filter(fi =>
@@ -144,7 +129,6 @@ export default function DrugInteractionsChecker() {
         );
     }, [drugData, selectedDrugs]);
 
-    // Find alcohol interactions
     const alcoholWarnings = useMemo(() => {
         if (!drugData || !includeAlcohol) return [];
         return drugData.alcohol_interactions.filter(ai =>
@@ -179,172 +163,256 @@ export default function DrugInteractionsChecker() {
     };
 
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16">
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Header */}
-                <div className="text-center mb-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-rose-500/10 border border-rose-500/20 rounded-full text-rose-400 text-xs font-bold mb-4">
-                        <Shield className="w-4 h-4" />
-                        DRUG SAFETY TOOL
-                    </div>
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                        Drug Interactions Checker
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            <div
+                style={{ maxWidth: 1100, margin: '0 auto', padding: '48px 28px 80px' }}
+                className="col gap-6"
+            >
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
+                    <span>/</span>
+                    <Link href="/tools">Tools</Link>
+                    <span>/</span>
+                    <span style={{ color: 'var(--ink)' }}>Drug Interactions</span>
+                </nav>
+
+                <header className="col gap-4">
+                    <span className="section-mark">tools / drug interactions</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5vw, 72px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        <span style={{ color: 'var(--cobalt)' }}>Drug</span> interactions checker
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                        Check for potentially dangerous interactions between your medications.
-                        Add multiple drugs to see how they interact with each other.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 600 }}
+                    >
+                        Add the medications you’re taking. We’ll surface drug-drug, food, and alcohol interactions with severity tiers and clinical guidance.
                     </p>
-                </div>
+                </header>
 
-                {/* Drug Input Section */}
-                <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-6 mb-8">
-                    <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <Pill className="w-5 h-5 text-blue-400" />
-                        Your Medications
-                    </h2>
+                {/* ── Selected drugs + search ───────── */}
+                <div className="card col gap-4" style={{ padding: 28 }}>
+                    <div className="kicker"><span className="dot" />your medications</div>
 
-                    {/* Selected Drugs */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                         {selectedDrugs.map(drugId => (
                             <div
                                 key={drugId}
-                                className="flex items-center gap-2 px-3 py-2 bg-blue-500/20 border border-blue-500/30 rounded-xl"
+                                className="row gap-2 ai-center"
+                                style={{
+                                    padding: '6px 6px 6px 12px',
+                                    background: 'var(--cobalt-50)',
+                                    border: '1px solid rgba(28, 91, 255, .22)',
+                                    borderRadius: 'var(--r-2)',
+                                }}
                             >
-                                <Pill className="w-4 h-4 text-blue-400" />
-                                <div>
-                                    <span className="text-white font-medium">{getDrugName(drugId)}</span>
-                                    <span className="text-xs text-slate-400 ml-2">
-                                        ({getDrugBrands(drugId).slice(0, 2).join(', ')})
-                                    </span>
+                                <div className="col" style={{ minWidth: 0 }}>
+                                    <span style={{ fontSize: 13, fontWeight: 500 }}>{getDrugName(drugId)}</span>
+                                    {getDrugBrands(drugId).length > 0 && (
+                                        <span className="muted" style={{ fontSize: 11 }}>
+                                            {getDrugBrands(drugId).slice(0, 2).join(', ')}
+                                        </span>
+                                    )}
                                 </div>
                                 <button
                                     onClick={() => removeDrug(drugId)}
-                                    className="p-1 hover:bg-white/10 rounded-full transition-colors"
+                                    className="btn btn-ghost btn-sm"
+                                    aria-label={`Remove ${getDrugName(drugId)}`}
+                                    style={{ padding: 4 }}
                                 >
-                                    <X className="w-4 h-4 text-slate-400" />
+                                    ×
                                 </button>
                             </div>
                         ))}
-
                         {selectedDrugs.length === 0 && (
-                            <p className="text-slate-500 text-sm">No medications added yet</p>
+                            <span className="muted" style={{ fontSize: 13 }}>No medications added yet.</span>
                         )}
                     </div>
 
-                    {/* Search Input */}
-                    <div className="relative">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
+                    <div style={{ position: 'relative' }}>
                         <input
                             type="text"
-                            placeholder="Search by drug name or brand (e.g., Lipitor, Warfarin, Aspirin)..."
+                            placeholder="Search by drug name or brand (e.g. Lipitor, Warfarin, Aspirin)…"
                             value={searchQuery}
                             onChange={e => {
                                 setSearchQuery(e.target.value);
                                 setShowSearch(true);
                             }}
                             onFocus={() => setShowSearch(true)}
-                            className="w-full pl-12 pr-4 py-3 bg-slate-800 border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:border-blue-500/50 focus:outline-none"
+                            className="input"
                         />
-
-                        {/* Search Results Dropdown */}
                         {showSearch && filteredDrugs.length > 0 && (
-                            <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/10 rounded-xl shadow-2xl z-50 overflow-hidden">
-                                {filteredDrugs.map(drug => (
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    top: 'calc(100% + 4px)',
+                                    left: 0,
+                                    right: 0,
+                                    background: 'var(--paper)',
+                                    border: '1px solid var(--rule)',
+                                    borderRadius: 'var(--r-2)',
+                                    boxShadow: 'var(--shadow-2)',
+                                    zIndex: 50,
+                                    maxHeight: 320,
+                                    overflowY: 'auto',
+                                }}
+                            >
+                                {filteredDrugs.map((drug, i, arr) => (
                                     <button
                                         key={drug.id}
                                         onClick={() => addDrug(drug.id)}
-                                        className="w-full px-4 py-3 text-left hover:bg-white/5 transition-colors flex items-center justify-between"
+                                        className="row between ai-center"
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 14px',
+                                            background: 'transparent',
+                                            border: 'none',
+                                            borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                            textAlign: 'left',
+                                            cursor: 'pointer',
+                                        }}
                                     >
-                                        <div>
-                                            <span className="text-white font-medium">{drug.name}</span>
-                                            <span className="text-xs text-slate-500 ml-2">({drug.class})</span>
-                                            <div className="text-xs text-slate-400">
-                                                Brands: {drug.brands.join(', ')}
-                                            </div>
+                                        <div className="col" style={{ minWidth: 0 }}>
+                                            <span style={{ fontSize: 14, fontWeight: 500 }}>
+                                                {drug.name}{' '}
+                                                <span className="muted" style={{ fontWeight: 400, fontSize: 12 }}>
+                                                    ({drug.class})
+                                                </span>
+                                            </span>
+                                            <span className="muted" style={{ fontSize: 12 }}>
+                                                {drug.brands.join(', ')}
+                                            </span>
                                         </div>
-                                        <Plus className="w-5 h-5 text-blue-400" />
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                letterSpacing: '0.08em',
+                                                textTransform: 'uppercase',
+                                            }}
+                                        >
+                                            Add +
+                                        </span>
                                     </button>
                                 ))}
                             </div>
                         )}
                     </div>
 
-                    {/* Alcohol Toggle */}
-                    <label className="flex items-center gap-3 mt-4 cursor-pointer">
+                    <label className="row gap-2 ai-center" style={{ cursor: 'pointer' }}>
                         <input
                             type="checkbox"
                             checked={includeAlcohol}
                             onChange={e => setIncludeAlcohol(e.target.checked)}
-                            className="w-5 h-5 rounded border-slate-600 bg-slate-800 text-blue-500 focus:ring-blue-500"
+                            style={{ accentColor: 'var(--cobalt)', width: 16, height: 16 }}
                         />
-                        <span className="text-slate-300 flex items-center gap-2">
-                            <Wine className="w-4 h-4" />
+                        <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>
                             Include alcohol interaction warnings
                         </span>
                     </label>
                 </div>
 
-                {/* Results Section */}
+                {/* ── Results ───────────────────────── */}
                 {selectedDrugs.length >= 2 && (
-                    <div className="space-y-6">
-                        {/* Drug-Drug Interactions */}
-                        <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-6">
-                            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <AlertTriangle className="w-5 h-5 text-amber-400" />
-                                Drug-Drug Interactions
+                    <section className="col gap-5">
+                        <div className="card col gap-4" style={{ padding: 28 }}>
+                            <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 12 }}>
+                                <div className="kicker"><span className="dot" />drug-drug interactions</div>
                                 {foundInteractions.length > 0 && (
-                                    <span className="px-2 py-0.5 bg-red-500/20 text-red-400 text-xs rounded-full">
-                                        {foundInteractions.length} found
-                                    </span>
+                                    <span className="pill pill-orange">{foundInteractions.length} found</span>
                                 )}
-                            </h3>
+                            </div>
 
                             {foundInteractions.length === 0 ? (
-                                <div className="text-center py-8">
-                                    <div className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <Shield className="w-8 h-8 text-emerald-400" />
-                                    </div>
-                                    <p className="text-emerald-400 font-semibold">No known interactions found</p>
-                                    <p className="text-slate-400 text-sm mt-1">
-                                        These medications appear safe to take together, but always consult your doctor.
-                                    </p>
+                                <div
+                                    className="col gap-2 ai-center"
+                                    style={{
+                                        padding: 32,
+                                        background: 'var(--mint-50)',
+                                        border: '1px solid rgba(40, 212, 168, .30)',
+                                        borderRadius: 'var(--r-3)',
+                                    }}
+                                >
+                                    <span
+                                        className="display"
+                                        style={{
+                                            fontSize: 18,
+                                            fontWeight: 600,
+                                            color: 'var(--mint-3)',
+                                            letterSpacing: '-0.02em',
+                                        }}
+                                    >
+                                        No known interactions found
+                                    </span>
+                                    <span className="muted" style={{ fontSize: 13, textAlign: 'center' }}>
+                                        These medications appear safe to take together — but always confirm with your pharmacist.
+                                    </span>
                                 </div>
                             ) : (
-                                <div className="space-y-4">
+                                <div className="col gap-3">
                                     {foundInteractions.map((int, i) => {
-                                        const config = SEVERITY_CONFIG[int.severity];
-                                        const Icon = config.icon;
+                                        const cfg = SEVERITY_CONFIG[int.severity];
                                         return (
                                             <div
                                                 key={i}
-                                                className={`p-4 rounded-xl border ${config.bg} ${config.border}`}
+                                                style={{
+                                                    padding: 20,
+                                                    background: cfg.bg,
+                                                    border: `1px solid ${cfg.border}`,
+                                                    borderRadius: 'var(--r-3)',
+                                                }}
+                                                className="col gap-3"
                                             >
-                                                <div className="flex items-start gap-3">
-                                                    <Icon className={`w-6 h-6 ${config.text} flex-shrink-0 mt-0.5`} />
-                                                    <div className="flex-1">
-                                                        <div className="flex items-center gap-2 mb-2">
-                                                            <span className={`px-2 py-0.5 rounded text-xs font-bold uppercase ${config.text} bg-black/30`}>
-                                                                {config.label}
-                                                            </span>
-                                                            <span className="text-white font-semibold">
-                                                                {getDrugName(int.drug1)} + {getDrugName(int.drug2)}
-                                                            </span>
-                                                        </div>
-                                                        <p className="text-white mb-2">{int.effect}</p>
-                                                        <div className="space-y-1 text-sm">
-                                                            <p className="text-slate-400">
-                                                                <strong className="text-slate-300">Mechanism:</strong> {int.mechanism}
-                                                            </p>
-                                                            <p className="text-slate-400">
-                                                                <strong className="text-slate-300">Recommendation:</strong> {int.recommendation}
-                                                            </p>
-                                                            {int.monitoring && (
-                                                                <p className="text-slate-400">
-                                                                    <strong className="text-slate-300">Monitor:</strong> {int.monitoring}
-                                                                </p>
-                                                            )}
-                                                        </div>
-                                                    </div>
+                                                <div className="row gap-2 ai-center" style={{ flexWrap: 'wrap' }}>
+                                                    <span
+                                                        className="pill"
+                                                        style={{
+                                                            background: cfg.bg,
+                                                            color: cfg.color,
+                                                            borderColor: cfg.border,
+                                                        }}
+                                                    >
+                                                        {cfg.label}
+                                                    </span>
+                                                    <span style={{ fontSize: 14, fontWeight: 600 }}>
+                                                        {getDrugName(int.drug1)} + {getDrugName(int.drug2)}
+                                                    </span>
+                                                </div>
+                                                <p
+                                                    style={{
+                                                        fontSize: 14,
+                                                        color: 'var(--ink)',
+                                                        margin: 0,
+                                                        lineHeight: 1.55,
+                                                    }}
+                                                >
+                                                    {int.effect}
+                                                </p>
+                                                <div className="col gap-2">
+                                                    <Detail label="Mechanism" value={int.mechanism} />
+                                                    <Detail label="Recommendation" value={int.recommendation} />
+                                                    {int.monitoring && (
+                                                        <Detail label="Monitor" value={int.monitoring} />
+                                                    )}
                                                 </div>
                                             </div>
                                         );
@@ -353,95 +421,110 @@ export default function DrugInteractionsChecker() {
                             )}
                         </div>
 
-                        {/* Food Interactions */}
                         {foodInteractions.length > 0 && (
-                            <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-6">
-                                <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                    <Apple className="w-5 h-5 text-emerald-400" />
-                                    Food Interactions
-                                </h3>
-                                <div className="space-y-3">
+                            <div className="card col gap-4" style={{ padding: 28 }}>
+                                <div className="kicker"><span className="dot" />food interactions</div>
+                                <div className="col gap-3">
                                     {foodInteractions.map((fi, i) => (
-                                        <div key={i} className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                                            <p className="text-white font-medium mb-1">
-                                                Avoid: {fi.food}
-                                            </p>
-                                            <p className="text-sm text-slate-400 mb-2">
-                                                Examples: {fi.examples.join(', ')}
-                                            </p>
-                                            <p className="text-sm text-amber-400">{fi.effect}</p>
-                                            <p className="text-sm text-slate-300 mt-1">{fi.recommendation}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Alcohol Warnings */}
-                        {includeAlcohol && alcoholWarnings.length > 0 && (
-                            <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-6">
-                                <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                    <Wine className="w-5 h-5 text-purple-400" />
-                                    Alcohol Interactions
-                                </h3>
-                                <div className="space-y-3">
-                                    {alcoholWarnings.map((aw, i) => (
                                         <div
                                             key={i}
-                                            className={`p-4 rounded-xl border ${
-                                                aw.severity === 'severe'
-                                                    ? 'bg-red-500/10 border-red-500/20'
-                                                    : 'bg-amber-500/10 border-amber-500/20'
-                                            }`}
+                                            style={{
+                                                padding: 18,
+                                                background: 'var(--lemon-50)',
+                                                border: '1px solid rgba(230, 185, 40, .40)',
+                                                borderRadius: 'var(--r-3)',
+                                            }}
+                                            className="col gap-2"
                                         >
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <span className={`px-2 py-0.5 rounded text-xs font-bold uppercase ${
-                                                    aw.severity === 'severe' ? 'text-red-400 bg-red-500/20' : 'text-amber-400 bg-amber-500/20'
-                                                }`}>
-                                                    {aw.severity}
-                                                </span>
-                                                <span className="text-white font-medium">{aw.drugClass}</span>
-                                            </div>
-                                            <p className="text-white mb-1">{aw.effect}</p>
-                                            <p className="text-sm text-slate-300">{aw.recommendation}</p>
+                                            <span style={{ fontSize: 14, fontWeight: 600 }}>Avoid: {fi.food}</span>
+                                            <span className="muted" style={{ fontSize: 12 }}>
+                                                Examples: {fi.examples.join(', ')}
+                                            </span>
+                                            <span style={{ fontSize: 13, color: '#8C6A00' }}>{fi.effect}</span>
+                                            <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{fi.recommendation}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         )}
-                    </div>
+
+                        {includeAlcohol && alcoholWarnings.length > 0 && (
+                            <div className="card col gap-4" style={{ padding: 28 }}>
+                                <div className="kicker"><span className="dot" />alcohol interactions</div>
+                                <div className="col gap-3">
+                                    {alcoholWarnings.map((aw, i) => {
+                                        const isSevere = aw.severity === 'severe';
+                                        return (
+                                            <div
+                                                key={i}
+                                                style={{
+                                                    padding: 18,
+                                                    background: isSevere ? 'var(--orange-50)' : 'var(--lemon-50)',
+                                                    border: `1px solid ${isSevere ? 'rgba(255, 90, 46, .28)' : 'rgba(230, 185, 40, .40)'}`,
+                                                    borderRadius: 'var(--r-3)',
+                                                }}
+                                                className="col gap-2"
+                                            >
+                                                <div className="row gap-2 ai-center">
+                                                    <span className={isSevere ? 'pill pill-orange' : 'pill pill-lemon'}>
+                                                        {aw.severity}
+                                                    </span>
+                                                    <span style={{ fontSize: 14, fontWeight: 600 }}>{aw.drugClass}</span>
+                                                </div>
+                                                <span style={{ fontSize: 14, color: 'var(--ink)' }}>{aw.effect}</span>
+                                                <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{aw.recommendation}</span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        )}
+                    </section>
                 )}
 
-                {/* Single Drug Info */}
                 {selectedDrugs.length === 1 && (
-                    <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-6 text-center">
-                        <Info className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                        <p className="text-white font-semibold mb-2">Add more medications to check interactions</p>
-                        <p className="text-slate-400 text-sm">
-                            Drug interaction checking requires at least 2 medications.
-                        </p>
+                    <div
+                        className="card-flat col gap-2 ai-center"
+                        style={{ padding: 32, textAlign: 'center' }}
+                    >
+                        <span
+                            className="display"
+                            style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.015em' }}
+                        >
+                            Add a second medication to check interactions
+                        </span>
+                        <span className="muted" style={{ fontSize: 13 }}>
+                            Drug interaction checking requires at least two medications.
+                        </span>
                     </div>
                 )}
 
-                {/* Disclaimer */}
-                <div className="mt-8 p-4 bg-slate-800/50 border border-white/5 rounded-xl">
-                    <p className="text-xs text-slate-500 text-center">
-                        <strong className="text-slate-400">Medical Disclaimer:</strong> This tool provides general information
-                        and is not a substitute for professional medical advice. Always consult your doctor or pharmacist
-                        about your specific medications. This database may not include all possible interactions.
+                <div className="card-quiet" style={{ padding: 16 }}>
+                    <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: 0, lineHeight: 1.55 }}>
+                        <strong style={{ color: 'var(--ink-2)' }}>Medical disclaimer.</strong> This tool provides general information and is not a substitute for professional medical advice. Always consult your doctor or pharmacist about your specific medications. The database may not include all possible interactions.
                     </p>
-                </div>
-
-                {/* Back to Tools */}
-                <div className="text-center mt-8">
-                    <Link
-                        href="/tools"
-                        className="text-blue-400 hover:text-blue-300 text-sm font-medium"
-                    >
-                        ← Back to Health Tools
-                    </Link>
                 </div>
             </div>
         </main>
+    );
+}
+
+function Detail({ label, value }: { label: string; value: string }) {
+    return (
+        <div style={{ fontSize: 13, lineHeight: 1.55 }}>
+            <span
+                className="mono"
+                style={{
+                    fontSize: 10,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    color: 'var(--ink-3)',
+                    marginRight: 6,
+                }}
+            >
+                {label}:
+            </span>
+            <span style={{ color: 'var(--ink-2)' }}>{value}</span>
+        </div>
     );
 }

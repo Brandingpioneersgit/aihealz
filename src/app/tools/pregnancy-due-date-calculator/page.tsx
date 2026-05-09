@@ -20,167 +20,337 @@ export default function PregnancyDueDateCalculatorPage() {
     }
 
     return (
-        <div className="min-h-screen bg-[#050B14] text-slate-200 pt-24 pb-16">
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            <div
+                style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 28px 80px' }}
+                className="col gap-6"
+            >
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
                     <span>/</span>
-                    <Link href="/tools" className="hover:text-white transition-colors">Tools</Link>
+                    <Link href="/tools">Tools</Link>
                     <span>/</span>
-                    <span className="text-white">Pregnancy Due Date Calculator</span>
+                    <span style={{ color: 'var(--ink)' }}>Pregnancy Due Date</span>
                 </nav>
 
-                {/* Hero */}
-                <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-bold uppercase tracking-wider mb-6">
-                        Obstetrics Tool
-                    </div>
-                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-                        Pregnancy <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">Due Date Calculator</span>
+                <header className="col gap-4">
+                    <span className="section-mark">tools / pregnancy due date</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5vw, 72px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        <span style={{ color: 'var(--cobalt)' }}>Due date</span> calculator
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                        Calculate your estimated due date, current pregnancy week, and trimester. Track your pregnancy journey.
+                    <p
+                        className="lede"
+                        style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 600 }}
+                    >
+                        Naegele’s rule from the first day of your last menstrual period. Estimated date of delivery, current week, trimester.
                     </p>
-                </div>
+                </header>
 
-                {/* Calculator Card */}
-                <div className="bg-white/[0.03] rounded-3xl border border-white/[0.08] overflow-hidden mb-12">
-                    <div className="p-6 md:p-8 border-b border-white/[0.06]">
-                        <h2 className="text-xl font-bold text-white mb-2">Calculate Your Due Date</h2>
-                        <p className="text-sm text-slate-400">Enter the first day of your last menstrual period (LMP)</p>
-                    </div>
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
+                        gap: 16,
+                    }}
+                    className="pg-grid"
+                >
+                    <form
+                        className="card col gap-5"
+                        style={{ padding: 28 }}
+                        onSubmit={e => {
+                            e.preventDefault();
+                            calculate();
+                        }}
+                    >
+                        <div className="col gap-1">
+                            <div className="kicker"><span className="dot" />inputs</div>
+                            <h2
+                                className="display"
+                                style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                            >
+                                Calculate due date
+                            </h2>
+                        </div>
 
-                    <div className="p-6 md:p-8 space-y-6">
-                        <div>
-                            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Last Menstrual Period (LMP)</label>
+                        <Field label="Last menstrual period (LMP)">
                             <input
                                 type="date"
                                 value={lmp}
                                 onChange={e => setLmp(e.target.value)}
-                                className="w-full py-3 px-4 bg-slate-800/50 border border-white/[0.1] rounded-xl text-white focus:outline-none focus:border-pink-500/50"
+                                className="input"
                             />
-                        </div>
+                        </Field>
 
-                        <button
-                            onClick={calculate}
-                            className="w-full py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-pink-500/20 transition-all"
-                        >
-                            Calculate Due Date
+                        <button type="submit" className="btn btn-cobalt btn-lg">
+                            Calculate due date →
                         </button>
-                    </div>
+                    </form>
 
-                    {result && (
-                        <div className="p-6 md:p-8 bg-slate-800/30 border-t border-white/[0.06]">
-                            <div className="grid md:grid-cols-2 gap-6 mb-6">
-                                <div className="text-center p-6 bg-pink-500/10 rounded-2xl border border-pink-500/20">
-                                    <p className="text-xs font-bold text-pink-400 uppercase tracking-wider mb-2">Estimated Due Date</p>
-                                    <p className="text-3xl font-black text-white">
-                                        {result.dueDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-                                    </p>
-                                    <p className="text-sm text-slate-400 mt-2">{result.daysLeft} days remaining</p>
-                                </div>
-                                <div className="text-center p-6 bg-purple-500/10 rounded-2xl border border-purple-500/20">
-                                    <p className="text-xs font-bold text-purple-400 uppercase tracking-wider mb-2">Current Progress</p>
-                                    <p className="text-3xl font-black text-white">Week {result.weeks}</p>
-                                    <p className="text-sm text-slate-400 mt-2">{result.trimester} Trimester</p>
-                                </div>
-                            </div>
-
-                            {/* Progress Bar */}
-                            <div className="mb-6">
-                                <div className="flex justify-between text-xs text-slate-400 mb-2">
-                                    <span>Week 0</span>
-                                    <span>Week 40</span>
-                                </div>
-                                <div className="h-3 bg-slate-800 rounded-full overflow-hidden">
+                    <div className="card-flat col gap-4" style={{ padding: 28 }}>
+                        <div className="kicker"><span className="dot" />result</div>
+                        {result ? (
+                            <>
+                                <div className="col gap-2">
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.08em',
+                                            color: 'var(--ink-3)',
+                                        }}
+                                    >
+                                        Estimated due date
+                                    </span>
                                     <div
-                                        className="h-full bg-gradient-to-r from-pink-500 to-rose-500 rounded-full transition-all"
-                                        style={{ width: `${Math.min(100, (result.weeks / 40) * 100)}%` }}
-                                    />
+                                        className="bignum"
+                                        style={{
+                                            fontSize: 'clamp(36px, 5vw, 56px)',
+                                            color: 'var(--cobalt)',
+                                            lineHeight: 1.1,
+                                        }}
+                                    >
+                                        {result.dueDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                                    </div>
+                                    <span className="num muted" style={{ fontSize: 13 }}>
+                                        {result.daysLeft} days remaining
+                                    </span>
                                 </div>
-                                <div className="flex justify-between text-xs text-slate-500 mt-2">
-                                    <span>First Trimester</span>
-                                    <span>Second Trimester</span>
-                                    <span>Third Trimester</span>
-                                </div>
-                            </div>
 
-                            <Link
-                                href="/doctors/specialty/gynecologist"
-                                className="block w-full py-3 text-center rounded-xl bg-pink-500 text-white font-bold hover:bg-pink-400 transition-all"
-                            >
-                                Find an OB-GYN Near You
-                            </Link>
-                        </div>
-                    )}
+                                <div className="hairline" />
+
+                                <div
+                                    style={{
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr',
+                                        gap: 0,
+                                        border: '1px solid var(--rule)',
+                                        borderRadius: 'var(--r-2)',
+                                        overflow: 'hidden',
+                                    }}
+                                >
+                                    {[
+                                        { label: 'Current week', value: `Week ${result.weeks}` },
+                                        { label: 'Trimester', value: result.trimester },
+                                    ].map((item, i) => (
+                                        <div
+                                            key={item.label}
+                                            className="col gap-1"
+                                            style={{
+                                                padding: '14px 16px',
+                                                borderRight: i === 0 ? '1px solid var(--rule)' : 'none',
+                                            }}
+                                        >
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 10,
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                    color: 'var(--ink-3)',
+                                                }}
+                                            >
+                                                {item.label}
+                                            </span>
+                                            <span
+                                                className="display"
+                                                style={{ fontSize: 22, fontWeight: 500, letterSpacing: '-0.02em' }}
+                                            >
+                                                {item.value}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Progress bar */}
+                                <div className="col gap-2">
+                                    <div className="row between">
+                                        <span className="mono" style={{ fontSize: 10, color: 'var(--ink-3)' }}>
+                                            WEEK 0
+                                        </span>
+                                        <span className="mono" style={{ fontSize: 10, color: 'var(--ink-3)' }}>
+                                            WEEK 40
+                                        </span>
+                                    </div>
+                                    <div
+                                        style={{
+                                            height: 8,
+                                            background: 'var(--bg-2)',
+                                            border: '1px solid var(--rule)',
+                                            borderRadius: 999,
+                                            overflow: 'hidden',
+                                        }}
+                                    >
+                                        <div
+                                            style={{
+                                                width: `${Math.min(100, (result.weeks / 40) * 100)}%`,
+                                                height: '100%',
+                                                background: 'var(--cobalt)',
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+
+                                <Link href="/doctors/specialty/gynecologist" className="btn btn-cobalt">
+                                    Find an OB-GYN →
+                                </Link>
+                            </>
+                        ) : (
+                            <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                                Enter the first day of your last menstrual period. Due date and progress appear here.
+                            </p>
+                        )}
+                    </div>
                 </div>
 
-                {/* Pregnancy Timeline */}
-                <div className="bg-white/[0.03] rounded-3xl border border-white/[0.08] p-6 md:p-8 mb-12">
-                    <h2 className="text-xl font-bold text-white mb-6">Pregnancy Timeline</h2>
-                    <div className="space-y-4">
+                {/* Pregnancy timeline */}
+                <section className="col gap-4" aria-labelledby="timeline-heading">
+                    <h2
+                        id="timeline-heading"
+                        className="display"
+                        style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        Pregnancy timeline
+                    </h2>
+                    <div
+                        style={{
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
                         {[
-                            { trimester: 'First Trimester', weeks: 'Weeks 1-12', highlights: 'Morning sickness, fatigue, first ultrasound', color: 'border-l-pink-500' },
-                            { trimester: 'Second Trimester', weeks: 'Weeks 13-27', highlights: 'Baby movements, gender reveal, energy returns', color: 'border-l-purple-500' },
-                            { trimester: 'Third Trimester', weeks: 'Weeks 28-40', highlights: 'Baby growth, nesting, preparing for birth', color: 'border-l-rose-500' },
-                        ].map((item, i) => (
-                            <div key={i} className={`p-4 bg-slate-800/30 rounded-xl border-l-4 ${item.color}`}>
-                                <div className="flex justify-between items-start mb-2">
-                                    <p className="font-bold text-white">{item.trimester}</p>
-                                    <p className="text-sm text-slate-400">{item.weeks}</p>
+                            { trimester: 'First trimester', weeks: 'Weeks 1 – 12', highlights: 'Morning sickness, fatigue, first ultrasound. Major organs form.' },
+                            { trimester: 'Second trimester', weeks: 'Weeks 13 – 27', highlights: 'Quickening (fetal movement), gender reveal possible, energy returns.' },
+                            { trimester: 'Third trimester', weeks: 'Weeks 28 – 40', highlights: 'Rapid growth, nesting instinct, prenatal classes, delivery prep.' },
+                        ].map((item, i, arr) => (
+                            <div
+                                key={item.trimester}
+                                className="col gap-1"
+                                style={{
+                                    padding: '18px 22px',
+                                    borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                    borderLeft: '3px solid var(--cobalt)',
+                                }}
+                            >
+                                <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 8 }}>
+                                    <span
+                                        className="display"
+                                        style={{ fontSize: 17, fontWeight: 600, letterSpacing: '-0.015em' }}
+                                    >
+                                        {item.trimester}
+                                    </span>
+                                    <span className="num" style={{ fontSize: 13, color: 'var(--ink-3)' }}>
+                                        {item.weeks}
+                                    </span>
                                 </div>
-                                <p className="text-sm text-slate-400">{item.highlights}</p>
+                                <span className="muted" style={{ fontSize: 13, lineHeight: 1.55 }}>{item.highlights}</span>
                             </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* SEO Content */}
-                <div className="bg-white/[0.02] rounded-2xl border border-white/[0.06] p-8 mb-12">
-                    <h2 className="text-2xl font-bold text-white mb-4">How is the Due Date Calculated?</h2>
-                    <div className="prose prose-invert prose-slate max-w-none text-slate-400 space-y-4">
-                        <p>
-                            Your estimated due date (EDD) is calculated by adding 280 days (40 weeks) to the first day of your last menstrual period (LMP). This is known as Naegele&apos;s rule and is the standard method used by healthcare providers.
-                        </p>
-                        <h3 className="text-lg font-semibold text-white mt-6 mb-2">Important Notes</h3>
-                        <ul className="list-disc pl-5 space-y-1">
-                            <li>Only about 5% of babies are born on their exact due date</li>
-                            <li>Most babies arrive within 2 weeks before or after the due date</li>
-                            <li>Your doctor may adjust the date based on ultrasound measurements</li>
-                            <li>First-time mothers often deliver a little later than the due date</li>
-                        </ul>
-                    </div>
-                </div>
-
-                {/* Related Tools */}
-                <div className="mb-8">
-                    <h2 className="text-xl font-bold text-white mb-6">Related Health Tools</h2>
-                    <div className="grid md:grid-cols-3 gap-4">
+                <section className="card col gap-4" style={{ padding: 32 }} aria-labelledby="about-heading">
+                    <h2
+                        id="about-heading"
+                        className="display"
+                        style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.02em' }}
+                    >
+                        How due dates are calculated
+                    </h2>
+                    <p style={{ fontSize: 15, color: 'var(--ink-2)', margin: 0, lineHeight: 1.7 }}>
+                        Naegele’s rule: add 280 days (40 weeks) to the first day of your last menstrual period. This is the convention used worldwide as a baseline.
+                    </p>
+                    <ul
+                        style={{
+                            margin: 0,
+                            padding: 0,
+                            listStyle: 'none',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 8,
+                        }}
+                    >
                         {[
-                            { name: 'BMI Calculator', href: '/tools/bmi-calculator', desc: 'Track your pregnancy weight' },
-                            { name: 'Water Intake Calculator', href: '/tools/water-intake-calculator', desc: 'Stay hydrated during pregnancy' },
-                            { name: 'Vaccination Schedule', href: '/tools/vaccinations', desc: 'Prenatal vaccination guide' },
-                        ].map((tool, i) => (
-                            <Link
-                                key={i}
-                                href={tool.href}
-                                className="p-4 bg-white/[0.03] rounded-xl border border-white/[0.08] hover:border-pink-500/30 transition-all group"
+                            'Only ~5% of babies arrive on the exact due date.',
+                            'Most arrive within two weeks before or after.',
+                            'Ultrasound dating in the first trimester is more accurate; clinicians often adjust the estimate accordingly.',
+                            'First-time mothers tend to deliver slightly later than the LMP-based estimate.',
+                        ].map(item => (
+                            <li
+                                key={item}
+                                className="row gap-3 ai-start"
+                                style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.6 }}
                             >
-                                <h3 className="font-bold text-white group-hover:text-pink-400 transition-colors">{tool.name}</h3>
-                                <p className="text-sm text-slate-400 mt-1">{tool.desc}</p>
-                            </Link>
+                                <span
+                                    style={{
+                                        flexShrink: 0,
+                                        marginTop: 7,
+                                        width: 6,
+                                        height: 6,
+                                        background: 'var(--cobalt)',
+                                        borderRadius: 999,
+                                    }}
+                                />
+                                {item}
+                            </li>
                         ))}
-                    </div>
-                </div>
+                    </ul>
+                </section>
 
-                {/* Disclaimer */}
-                <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                    <p className="text-xs text-amber-200/80">
-                        <strong>Disclaimer:</strong> This calculator provides an estimate based on the LMP method. Your actual due date may differ based on ultrasound measurements and other factors. Always consult your healthcare provider for accurate pregnancy dating.
+                <div className="card-quiet" style={{ padding: 16 }}>
+                    <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: 0, lineHeight: 1.55 }}>
+                        <strong style={{ color: 'var(--ink-2)' }}>Disclaimer.</strong> Estimate using LMP. Your provider may revise based on early ultrasound. Always rely on professional dating for prenatal care decisions.
                     </p>
                 </div>
             </div>
-        </div>
+
+            <style>{`
+                @media (max-width: 880px) {
+                    .pg-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            `}</style>
+        </main>
+    );
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+    return (
+        <label className="col gap-2">
+            <span
+                className="mono"
+                style={{
+                    fontSize: 11,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    color: 'var(--ink-3)',
+                }}
+            >
+                {label}
+            </span>
+            {children}
+        </label>
     );
 }
