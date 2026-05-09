@@ -3,6 +3,17 @@
 import React, { useMemo, useState, lazy, Suspense } from 'react';
 import Link from 'next/link';
 import DOMPurify from 'dompurify';
+
+// SSR-safe sanitize — DOMPurify needs window; fall back to raw HTML on the
+// server (the page is 'use client' so the unsanitized branch only runs during
+// the prerender and is replaced once hydrated).
+function sanitize(html: string, opts: Parameters<typeof DOMPurify.sanitize>[1]): string {
+    if (typeof window === 'undefined') return html;
+    const dp = DOMPurify as unknown as { sanitize?: typeof DOMPurify.sanitize; default?: { sanitize: typeof DOMPurify.sanitize } };
+    if (typeof dp.sanitize === 'function') return dp.sanitize(html, opts);
+    if (dp.default && typeof dp.default.sanitize === 'function') return dp.default.sanitize(html, opts);
+    return html;
+}
 import { extractContentLinks, getClientGeoContext, type ContentLink } from '@/lib/content-linker';
 
 interface AIResponseCardProps {
@@ -160,7 +171,7 @@ function formatMarkdown(md: string): string {
         .replace(/^/, '<p style="margin:0 0 12px;color:var(--ink-2);line-height:1.6;font-size:14px;">')
         .replace(/$/, '</p>');
 
-    return DOMPurify.sanitize(html, {
+    return sanitize(html, {
         ALLOWED_TAGS: ['h2', 'h3', 'h4', 'p', 'br', 'strong', 'em', 'code', 'pre', 'li', 'ul', 'ol', 'span'],
         ALLOWED_ATTR: ['class', 'style'],
     });
