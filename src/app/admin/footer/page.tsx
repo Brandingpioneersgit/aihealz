@@ -170,13 +170,29 @@ export default function FooterPage() {
         { title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Editorial Guidelines'] },
     ];
 
+    const matchTypePill = (t: 'city' | 'country' | 'default') =>
+        t === 'city' ? 'pill pill-cobalt' : t === 'country' ? 'pill pill-magenta' : 'pill';
+
     if (loading) {
         return (
-            <div className="flex items-center justify-center min-h-[400px]">
-                <div className="text-center">
-                    <div className="animate-spin w-10 h-10 border-4 border-slate-600 border-t-transparent rounded-full mx-auto mb-4" />
-                    <p className="text-slate-500">Loading footer templates...</p>
+            <div className="row center ai-center" style={{ minHeight: 400 }}>
+                <div className="col ai-center gap-3">
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            width: 32,
+                            height: 32,
+                            border: '2px solid var(--rule)',
+                            borderTopColor: 'var(--cobalt)',
+                            borderRadius: '50%',
+                            animation: 'spin 0.8s linear infinite',
+                        }}
+                    />
+                    <p className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                        Loading footer templates…
+                    </p>
                 </div>
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
             </div>
         );
     }
@@ -193,297 +209,278 @@ export default function FooterPage() {
                 onConfirm={handleDelete}
                 onCancel={() => setDeleteModal({ isOpen: false, templateId: null, templateName: '' })}
             />
-            <div className="space-y-6 max-w-5xl">
-            <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
-                <div className="font-semibold mb-1">Footer templates are not yet wired to the v4 footer.</div>
-                <div className="text-amber-800">
-                    The public site footer is rendered from a hardcoded{' '}
-                    <code className="bg-amber-100 px-1 rounded">SECTIONS</code> constant in{' '}
-                    <code className="bg-amber-100 px-1 rounded">src/components/v4/Footer.tsx</code>.
-                    Templates created on this screen are stored as{' '}
-                    <code className="bg-amber-100 px-1 rounded">FooterTemplate</code> rows but not
-                    consumed by the v4 footer yet.
-                </div>
-            </div>
-            {errorMessage && (
-                <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
-                    {errorMessage}
-                </div>
-            )}
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                        </svg>
-                        Footer Manager
-                    </h1>
-                    <p className="text-slate-500 mt-1">Manage global footer columns and contextual dynamic links.</p>
-                </div>
-                <button
-                    onClick={() => setShowModal(true)}
-                    className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2"
+            <div className="col gap-6" style={{ maxWidth: 1100, color: 'var(--ink)' }}>
+                {/* Footnote */}
+                <div
+                    className="card-flat"
+                    style={{
+                        padding: 14,
+                        borderColor: 'rgba(230, 185, 40, .40)',
+                        background: 'var(--lemon-50)',
+                        fontSize: 13,
+                        color: '#8C6A00',
+                    }}
                 >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                    </svg>
-                    Add Template
-                </button>
-            </div>
-
-            {/* Static Footer Columns Preview */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6">
-                <h3 className="font-semibold text-slate-900 mb-4">Default Footer Columns</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {staticFooterColumns.map((col, i) => (
-                        <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                            <div className="flex items-center justify-between mb-3">
-                                <h4 className="font-bold text-slate-900">{col.title}</h4>
-                                <button className="text-slate-400 hover:text-slate-900">
-                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div className="space-y-1.5">
-                                {col.links.map((link) => (
-                                    <div key={link} className="flex items-center justify-between group">
-                                        <span className="text-sm text-slate-600">{link}</span>
-                                        <div className="hidden group-hover:flex items-center gap-1">
-                                            <button className="text-slate-400 hover:text-rose-600">
-                                                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <button className="mt-3 w-full py-1.5 border border-dashed border-slate-300 rounded-lg text-slate-500 text-xs font-medium hover:border-slate-400 hover:text-slate-700 flex items-center justify-center gap-1">
-                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                                </svg>
-                                Add Link
-                            </button>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Dynamic Footer Templates */}
-            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50 flex items-center justify-between">
+                    <div style={{ fontWeight: 600, marginBottom: 4 }}>Footer templates are not yet wired to the v4 footer.</div>
                     <div>
-                        <h3 className="font-semibold text-slate-900">Dynamic Footer Templates</h3>
-                        <p className="text-sm text-slate-500 mt-1">Location-specific footer variations</p>
+                        The public site footer is rendered from a hardcoded <code className="mono" style={{ background: 'rgba(255,210,63,.30)', padding: '1px 4px', borderRadius: 2 }}>SECTIONS</code> constant in
+                        {' '}<code className="mono" style={{ background: 'rgba(255,210,63,.30)', padding: '1px 4px', borderRadius: 2 }}>src/components/v4/Footer.tsx</code>. Templates created on this screen are stored as
+                        {' '}<code className="mono" style={{ background: 'rgba(255,210,63,.30)', padding: '1px 4px', borderRadius: 2 }}>FooterTemplate</code> rows but not consumed by the v4 footer yet.
                     </div>
-                    <span className="text-sm text-slate-500">
-                        {data?.templates?.length || 0} template{(data?.templates?.length || 0) !== 1 ? 's' : ''}
-                    </span>
                 </div>
 
-                {!data?.templates || data.templates.length === 0 ? (
-                    <div className="p-12 text-center">
-                        <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-8 h-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                            </svg>
-                        </div>
-                        <h3 className="text-lg font-semibold text-slate-900 mb-1">No custom templates</h3>
-                        <p className="text-slate-500 text-sm mb-4">
-                            Create location-specific footer templates to show relevant content.
-                        </p>
-                        <button
-                            onClick={() => setShowModal(true)}
-                            className="px-4 py-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700"
-                        >
-                            Create Template
-                        </button>
+                {errorMessage && (
+                    <div
+                        role="alert"
+                        className="card-flat"
+                        style={{
+                            padding: '12px 16px',
+                            borderColor: 'rgba(255, 90, 46, .35)',
+                            background: 'var(--orange-50)',
+                            color: 'var(--orange-2)',
+                            fontSize: 13,
+                        }}
+                    >
+                        {errorMessage}
                     </div>
-                ) : (
-                    <table className="w-full text-sm">
-                        <thead className="bg-slate-50 border-b border-slate-200">
-                            <tr>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Rule Name</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Match Type</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Match Value</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Priority</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
-                                <th scope="col" className="text-right p-4 font-bold text-slate-600 text-xs uppercase">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100">
-                            {data.templates.map((template) => (
-                                <tr key={template.id} className="hover:bg-slate-50">
-                                    <td className="p-4 font-medium text-slate-900">{template.ruleName}</td>
-                                    <td className="p-4">
-                                        <span className={`px-2 py-1 text-xs font-bold rounded-full ${
-                                            template.matchType === 'city'
-                                                ? 'bg-blue-100 text-blue-700'
-                                                : template.matchType === 'country'
-                                                ? 'bg-purple-100 text-purple-700'
-                                                : 'bg-slate-100 text-slate-700'
-                                        }`}>
-                                            {template.matchType}
-                                        </span>
-                                    </td>
-                                    <td className="p-4 text-slate-600 font-mono text-xs">
-                                        {template.matchValue}
-                                        {template.geography && (
-                                            <span className="ml-2 text-slate-400">({template.geography.name})</span>
-                                        )}
-                                    </td>
-                                    <td className="p-4 text-slate-600">{template.priority}</td>
-                                    <td className="p-4">
-                                        <span className={`px-2 py-1 text-xs font-bold rounded-full ${
-                                            template.isActive
-                                                ? 'bg-emerald-100 text-emerald-700'
-                                                : 'bg-slate-100 text-slate-500'
-                                        }`}>
-                                            {template.isActive ? 'Active' : 'Inactive'}
-                                        </span>
-                                    </td>
-                                    <td className="p-4 text-right">
-                                        <div className="flex items-center justify-end gap-2">
-                                            <button
-                                                onClick={() => handleEdit(template)}
-                                                className="px-3 py-1 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded"
-                                            >
-                                                Edit
-                                            </button>
-                                            <button
-                                                onClick={() => openDeleteModal(template.id, template.ruleName)}
-                                                disabled={deletingId === template.id}
-                                                className="px-3 py-1 text-sm font-medium text-rose-600 hover:bg-rose-50 rounded disabled:opacity-50"
-                                            >
-                                                {deletingId === template.id ? 'Deleting...' : 'Delete'}
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
                 )}
-            </div>
 
-            {/* Dynamic Contextual Footer Info */}
-            <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-6">
-                <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white rounded-xl shadow-sm text-indigo-600 shrink-0">
-                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <div className="flex-1">
-                        <h3 className="text-base font-bold text-indigo-900 mb-1">Dynamic Contextual Footer</h3>
-                        <p className="text-sm text-indigo-700 leading-relaxed mb-4">
-                            The footer component automatically injects up to 60 targeted dynamic links based on the user's current city and viewed specialty. Templates are matched in order of priority: city → country → default.
+                {/* Header */}
+                <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                    <div className="col gap-2">
+                        <span className="section-mark">admin / footer</span>
+                        <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                            Footer manager<span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                            Manage global footer columns and contextual dynamic links.
                         </p>
-                        <div className="flex gap-3">
-                            <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors">
-                                View Documentation
-                            </button>
-                            <button className="px-4 py-2 bg-white text-indigo-700 border border-indigo-200 rounded-lg text-sm font-medium hover:bg-indigo-50 transition-colors">
-                                Preview Footer
-                            </button>
-                        </div>
                     </div>
+                    <button onClick={() => setShowModal(true)} className="btn btn-cobalt">
+                        + Add template
+                    </button>
                 </div>
-            </div>
 
-            {/* Create/Edit Template Modal */}
-            {showModal && (
-                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-                    <div className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-xl">
-                        <h3 className="text-lg font-bold text-slate-900 mb-4">
-                            {editingTemplate ? 'Edit Footer Template' : 'Create Footer Template'}
-                        </h3>
-
-                        <form onSubmit={editingTemplate ? handleUpdate : handleSubmit} className="space-y-4">
-                            <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">
-                                    Rule Name *
-                                </label>
-                                <input
-                                    type="text"
-                                    value={formData.ruleName}
-                                    onChange={(e) => setFormData({ ...formData, ruleName: e.target.value })}
-                                    className="w-full border border-slate-300 rounded-lg p-2 text-sm"
-                                    placeholder="e.g., Mumbai Footer"
-                                    required
-                                />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">
-                                    Match Type *
-                                </label>
-                                <select
-                                    value={formData.matchType}
-                                    onChange={(e) => setFormData({ ...formData, matchType: e.target.value as 'city' | 'country' | 'default' })}
-                                    className="w-full border border-slate-300 rounded-lg p-2 text-sm"
-                                >
-                                    <option value="city">City</option>
-                                    <option value="country">Country</option>
-                                    <option value="default">Default</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">
-                                    Match Value
-                                </label>
-                                <input
-                                    type="text"
-                                    value={formData.matchValue}
-                                    onChange={(e) => setFormData({ ...formData, matchValue: e.target.value })}
-                                    className="w-full border border-slate-300 rounded-lg p-2 text-sm"
-                                    placeholder="e.g., mumbai or in"
-                                />
-                                <p className="text-xs text-slate-500 mt-1">
-                                    Use city slug or country code. Leave empty for default template.
-                                </p>
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-1">
-                                    Priority
-                                </label>
-                                <input
-                                    type="number"
-                                    value={formData.priority}
-                                    onChange={(e) => setFormData({ ...formData, priority: parseInt(e.target.value) || 0 })}
-                                    className="w-full border border-slate-300 rounded-lg p-2 text-sm"
-                                    placeholder="0"
-                                />
-                                <p className="text-xs text-slate-500 mt-1">
-                                    Higher priority templates are matched first.
-                                </p>
-                            </div>
-
-                            <div className="flex gap-3 justify-end pt-4 border-t border-slate-200">
+                {/* Static footer columns */}
+                <section className="card col gap-4" style={{ padding: 24 }}>
+                    <span className="section-mark">default footer columns</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 16 }}>
+                        {staticFooterColumns.map((col, i) => (
+                            <div key={i} className="card-quiet col gap-3" style={{ padding: 16 }}>
+                                <div className="row between ai-center">
+                                    <span style={{ fontSize: 14, fontWeight: 600 }}>{col.title}</span>
+                                    <button
+                                        type="button"
+                                        aria-label={`Edit ${col.title}`}
+                                        className="btn btn-ghost btn-sm"
+                                    >
+                                        Edit
+                                    </button>
+                                </div>
+                                <div className="col gap-1">
+                                    {col.links.map((link) => (
+                                        <span key={link} style={{ fontSize: 13, color: 'var(--ink-2)' }}>{link}</span>
+                                    ))}
+                                </div>
                                 <button
                                     type="button"
-                                    onClick={closeModal}
-                                    className="px-4 py-2 border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
+                                    style={{
+                                        marginTop: 8,
+                                        padding: '8px 12px',
+                                        border: '1px dashed var(--rule)',
+                                        borderRadius: 'var(--r-2)',
+                                        background: 'transparent',
+                                        color: 'var(--ink-3)',
+                                        fontSize: 12,
+                                        fontWeight: 500,
+                                    }}
                                 >
-                                    Cancel
-                                </button>
-                                <button
-                                    type="submit"
-                                    disabled={saving || !formData.ruleName}
-                                    className="px-4 py-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700 disabled:opacity-50"
-                                >
-                                    {saving ? (editingTemplate ? 'Updating...' : 'Creating...') : (editingTemplate ? 'Update Template' : 'Create Template')}
+                                    + Add link
                                 </button>
                             </div>
-                        </form>
+                        ))}
                     </div>
-                </div>
-            )}
-        </div>
+                </section>
+
+                {/* Dynamic footer templates */}
+                <section className="card" style={{ overflow: 'hidden' }}>
+                    <div className="row between ai-center hairline-b" style={{ padding: '16px 24px', flexWrap: 'wrap', gap: 12 }}>
+                        <div className="col gap-1">
+                            <span className="section-mark">dynamic footer templates</span>
+                            <span className="muted" style={{ fontSize: 13 }}>Location-specific footer variations</span>
+                        </div>
+                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                            {data?.templates?.length || 0} template{(data?.templates?.length || 0) !== 1 ? 's' : ''}
+                        </span>
+                    </div>
+
+                    {!data?.templates || data.templates.length === 0 ? (
+                        <div className="col ai-center gap-3" style={{ padding: 48, textAlign: 'center' }}>
+                            <span className="spec-icon" style={{ width: 48, height: 48, fontSize: 18 }}>FT</span>
+                            <h3 className="display" style={{ fontSize: 18, margin: 0, fontWeight: 600 }}>No custom templates</h3>
+                            <p className="muted" style={{ fontSize: 13, margin: 0, maxWidth: 360 }}>
+                                Create location-specific footer templates to show relevant content.
+                            </p>
+                            <button onClick={() => setShowModal(true)} className="btn btn-cobalt">
+                                Create template
+                            </button>
+                        </div>
+                    ) : (
+                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                            <thead style={{ background: 'var(--bg-2)' }}>
+                                <tr style={{ borderBottom: '1px solid var(--rule)' }}>
+                                    {['Rule name', 'Match type', 'Match value', 'Priority', 'Status'].map(h => (
+                                        <th key={h} scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>{h}</th>
+                                    ))}
+                                    <th scope="col" className="mono" style={{ textAlign: 'right', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {data.templates.map((template) => (
+                                    <tr key={template.id} style={{ borderBottom: '1px solid var(--rule-2)' }}>
+                                        <td style={{ padding: 14, fontWeight: 500 }}>{template.ruleName}</td>
+                                        <td style={{ padding: 14 }}>
+                                            <span className={matchTypePill(template.matchType)}>{template.matchType}</span>
+                                        </td>
+                                        <td className="mono" style={{ padding: 14, fontSize: 12, color: 'var(--ink-3)' }}>
+                                            {template.matchValue}
+                                            {template.geography && (
+                                                <span style={{ marginLeft: 8, color: 'var(--ink-4)' }}>({template.geography.name})</span>
+                                            )}
+                                        </td>
+                                        <td className="num" style={{ padding: 14, color: 'var(--ink-2)' }}>{template.priority}</td>
+                                        <td style={{ padding: 14 }}>
+                                            <span className={template.isActive ? 'pill pill-mint' : 'pill'}>
+                                                {template.isActive ? 'Active' : 'Inactive'}
+                                            </span>
+                                        </td>
+                                        <td style={{ padding: 14, textAlign: 'right' }}>
+                                            <div className="row gap-2" style={{ justifyContent: 'flex-end' }}>
+                                                <button onClick={() => handleEdit(template)} className="btn btn-ghost btn-sm">Edit</button>
+                                                <button
+                                                    onClick={() => openDeleteModal(template.id, template.ruleName)}
+                                                    disabled={deletingId === template.id}
+                                                    className="btn btn-orange btn-sm"
+                                                >
+                                                    {deletingId === template.id ? 'Deleting…' : 'Delete'}
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
+                </section>
+
+                {/* Contextual footer info */}
+                <section
+                    className="card-flat col gap-4"
+                    style={{
+                        padding: 24,
+                        borderColor: 'rgba(28, 91, 255, .25)',
+                        background: 'var(--cobalt-50)',
+                    }}
+                >
+                    <div className="row gap-4 ai-start">
+                        <span className="spec-icon" style={{ background: 'var(--cobalt)' }}>⚡</span>
+                        <div className="col gap-2" style={{ flex: 1 }}>
+                            <span className="section-mark" style={{ color: 'var(--cobalt)' }}>dynamic contextual footer</span>
+                            <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, margin: 0 }}>
+                                The footer component automatically injects up to 60 targeted dynamic links based on the user&apos;s current city and viewed specialty. Templates are matched in order of priority: city → country → default.
+                            </p>
+                            <div className="row gap-3" style={{ marginTop: 4, flexWrap: 'wrap' }}>
+                                <button className="btn btn-cobalt btn-sm">View documentation</button>
+                                <button className="btn btn-paper btn-sm">Preview footer</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Modal */}
+                {showModal && (
+                    <div
+                        style={{
+                            position: 'fixed',
+                            inset: 0,
+                            background: 'rgba(10, 26, 47, .55)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            zIndex: 500,
+                            padding: 16,
+                        }}
+                    >
+                        <div className="card col gap-4" style={{ padding: 24, maxWidth: 460, width: '100%' }}>
+                            <h3 className="display" style={{ fontSize: 20, margin: 0, fontWeight: 600 }}>
+                                {editingTemplate ? 'Edit footer template' : 'Create footer template'}
+                            </h3>
+
+                            <form onSubmit={editingTemplate ? handleUpdate : handleSubmit} className="col gap-3">
+                                <div className="form-group">
+                                    <label className="form-label">Rule name *</label>
+                                    <input
+                                        type="text"
+                                        value={formData.ruleName}
+                                        onChange={(e) => setFormData({ ...formData, ruleName: e.target.value })}
+                                        className="input"
+                                        placeholder="e.g., Mumbai Footer"
+                                        required
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="form-label">Match type *</label>
+                                    <select
+                                        value={formData.matchType}
+                                        onChange={(e) => setFormData({ ...formData, matchType: e.target.value as 'city' | 'country' | 'default' })}
+                                        className="select"
+                                    >
+                                        <option value="city">City</option>
+                                        <option value="country">Country</option>
+                                        <option value="default">Default</option>
+                                    </select>
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="form-label">Match value</label>
+                                    <input
+                                        type="text"
+                                        value={formData.matchValue}
+                                        onChange={(e) => setFormData({ ...formData, matchValue: e.target.value })}
+                                        className="input"
+                                        placeholder="e.g., mumbai or in"
+                                    />
+                                    <span className="form-hint">Use city slug or country code. Leave empty for default template.</span>
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="form-label">Priority</label>
+                                    <input
+                                        type="number"
+                                        value={formData.priority}
+                                        onChange={(e) => setFormData({ ...formData, priority: parseInt(e.target.value) || 0 })}
+                                        className="input"
+                                        placeholder="0"
+                                    />
+                                    <span className="form-hint">Higher priority templates are matched first.</span>
+                                </div>
+
+                                <div className="row gap-3 hairline-t" style={{ paddingTop: 16, justifyContent: 'flex-end' }}>
+                                    <button type="button" onClick={closeModal} className="btn btn-paper">Cancel</button>
+                                    <button
+                                        type="submit"
+                                        disabled={saving || !formData.ruleName}
+                                        className="btn btn-cobalt"
+                                    >
+                                        {saving ? (editingTemplate ? 'Updating…' : 'Creating…') : (editingTemplate ? 'Update template' : 'Create template')}
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
+            </div>
         </>
     );
 }

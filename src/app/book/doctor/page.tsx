@@ -55,9 +55,7 @@ function BookingForm() {
                 throw new Error(data.error || 'Failed to submit request');
             }
 
-            // Successfully submitted
             setSubmitted(true);
-            // Scroll to top to show success message
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
@@ -67,21 +65,20 @@ function BookingForm() {
 
     if (submitted) {
         return (
-            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-3xl p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                </div>
-                <h1 className="text-2xl font-bold text-white mb-3">Appointment Request Sent</h1>
-                <p className="text-slate-400 mb-6">
+            <div className="card col gap-4 ai-center" style={{ padding: 32, textAlign: 'center' }}>
+                <span className="pill pill-mint">
+                    <span className="pill-dot" style={{ background: 'var(--mint)' }} aria-hidden="true" />
+                    Submitted
+                </span>
+                <h1 className="display" style={{ fontSize: 28, margin: 0, fontWeight: 600, letterSpacing: '-0.03em' }}>
+                    Appointment request sent
+                    <span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                <p className="muted" style={{ fontSize: 15, margin: 0, maxWidth: 440 }}>
                     Your appointment request has been submitted. The doctor&apos;s office will contact you within 24 hours to confirm.
                 </p>
-                <Link
-                    href="/doctors"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold rounded-xl transition-all"
-                >
-                    Browse More Doctors
+                <Link href="/doctors" className="btn btn-cobalt">
+                    Browse more doctors →
                 </Link>
             </div>
         );
@@ -89,91 +86,96 @@ function BookingForm() {
 
     return (
         <>
-            <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2">
-                    Request Appointment
+            <div className="col gap-2" style={{ marginBottom: 32 }}>
+                <span className="section-mark">request appointment</span>
+                <h1
+                    className="display"
+                    style={{
+                        fontSize: 'clamp(28px, 4vw, 40px)',
+                        lineHeight: 1.05,
+                        letterSpacing: '-0.035em',
+                        margin: 0,
+                        fontWeight: 600,
+                    }}
+                >
+                    {doctorName ? <>Book with <span style={{ color: 'var(--cobalt)' }}>{doctorName}</span></> : 'Request appointment'}
+                    <span style={{ color: 'var(--orange)' }}>.</span>
                 </h1>
-                {doctorName && (
-                    <p className="text-teal-400">with {doctorName}</p>
-                )}
-                <p className="text-slate-400 mt-2">
-                    Fill in your details and we&apos;ll coordinate with the doctor&apos;s office
+                <p className="lede" style={{ fontSize: 16, margin: 0 }}>
+                    Fill in your details and we&apos;ll coordinate with the doctor&apos;s office.
                 </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-slate-900/60 border border-white/5 rounded-3xl p-6 md:p-8 space-y-6">
+            <form onSubmit={handleSubmit} className="card col gap-5" style={{ padding: 28 }}>
                 {error && (
-                    <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
-                        {error}
+                    <div className="card-quiet" style={{ padding: 12, borderColor: 'rgba(255, 90, 46, .28)', background: 'var(--orange-50)' }}>
+                        <span style={{ color: 'var(--orange-2)', fontSize: 13 }}>{error}</span>
                     </div>
                 )}
 
-                <div>
-                    <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                        Your Name *
-                    </label>
+                <div className="form-group">
+                    <label className="form-label" htmlFor="patientName">Your name *</label>
                     <input
+                        id="patientName"
                         type="text"
                         required
                         value={formData.patientName}
                         onChange={e => setFormData(prev => ({ ...prev, patientName: e.target.value }))}
-                        className="w-full py-3 px-4 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-teal-500/50"
+                        className="input"
                         placeholder="Enter your full name"
                     />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                            Phone Number *
-                        </label>
+                <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                    <div className="form-group">
+                        <label className="form-label" htmlFor="phone">Phone number *</label>
                         <input
+                            id="phone"
                             type="tel"
                             required
                             value={formData.phone}
                             onChange={e => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                            className="w-full py-3 px-4 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-teal-500/50"
+                            className="input"
                             placeholder="+91 9876543210"
                         />
                     </div>
-                    <div>
-                        <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                            Email <span className="text-amber-400">(Recommended)</span>
+                    <div className="form-group">
+                        <label className="form-label" htmlFor="email">
+                            Email <span style={{ color: 'var(--lemon-2)', fontWeight: 400 }}>(recommended)</span>
                         </label>
                         <input
+                            id="email"
                             type="email"
                             value={formData.email}
                             onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                            className="w-full py-3 px-4 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-teal-500/50"
+                            className="input"
                             placeholder="your@email.com"
                             autoComplete="email"
                         />
-                        <p className="text-xs text-slate-500 mt-1">For confirmation and reminders</p>
+                        <span className="form-hint">For confirmation and reminders</span>
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                            Preferred Date *
-                        </label>
+                <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                    <div className="form-group">
+                        <label className="form-label" htmlFor="preferredDate">Preferred date *</label>
                         <input
+                            id="preferredDate"
                             type="date"
                             required
                             value={formData.preferredDate}
                             onChange={e => setFormData(prev => ({ ...prev, preferredDate: e.target.value }))}
                             min={new Date().toISOString().split('T')[0]}
-                            className="w-full py-3 px-4 bg-slate-800/50 border border-white/10 rounded-xl text-white focus:outline-none focus:border-teal-500/50"
+                            className="input"
                         />
                     </div>
-                    <div>
-                        <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                            Preferred Time
-                        </label>
+                    <div className="form-group">
+                        <label className="form-label" htmlFor="preferredTime">Preferred time</label>
                         <select
+                            id="preferredTime"
                             value={formData.preferredTime}
                             onChange={e => setFormData(prev => ({ ...prev, preferredTime: e.target.value }))}
-                            className="w-full py-3 px-4 bg-slate-800/50 border border-white/10 rounded-xl text-white focus:outline-none focus:border-teal-500/50"
+                            className="select"
                         >
                             <option value="">Any time</option>
                             <option value="morning">Morning (9AM - 12PM)</option>
@@ -183,45 +185,42 @@ function BookingForm() {
                     </div>
                 </div>
 
-                <div>
-                    <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                        Are you a new patient?
-                    </label>
-                    <div className="flex gap-4">
-                        <label className="flex items-center gap-2 cursor-pointer">
+                <div className="form-group">
+                    <span className="form-label">Are you a new patient?</span>
+                    <div className="row gap-4" style={{ flexWrap: 'wrap' }}>
+                        <label className="row gap-2 ai-center" style={{ cursor: 'pointer' }}>
                             <input
                                 type="radio"
                                 name="isNewPatient"
                                 value="yes"
                                 checked={formData.isNewPatient === 'yes'}
                                 onChange={e => setFormData(prev => ({ ...prev, isNewPatient: e.target.value }))}
-                                className="w-4 h-4 text-teal-500"
+                                style={{ width: 16, height: 16, accentColor: 'var(--cobalt)' }}
                             />
-                            <span className="text-slate-300">Yes, first visit</span>
+                            <span style={{ fontSize: 14, color: 'var(--ink-2)' }}>Yes, first visit</span>
                         </label>
-                        <label className="flex items-center gap-2 cursor-pointer">
+                        <label className="row gap-2 ai-center" style={{ cursor: 'pointer' }}>
                             <input
                                 type="radio"
                                 name="isNewPatient"
                                 value="no"
                                 checked={formData.isNewPatient === 'no'}
                                 onChange={e => setFormData(prev => ({ ...prev, isNewPatient: e.target.value }))}
-                                className="w-4 h-4 text-teal-500"
+                                style={{ width: 16, height: 16, accentColor: 'var(--cobalt)' }}
                             />
-                            <span className="text-slate-300">No, follow-up</span>
+                            <span style={{ fontSize: 14, color: 'var(--ink-2)' }}>No, follow-up</span>
                         </label>
                     </div>
                 </div>
 
-                <div>
-                    <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                        Reason for Visit
-                    </label>
+                <div className="form-group">
+                    <label className="form-label" htmlFor="reason">Reason for visit</label>
                     <textarea
+                        id="reason"
                         value={formData.reason}
                         onChange={e => setFormData(prev => ({ ...prev, reason: e.target.value }))}
                         rows={3}
-                        className="w-full py-3 px-4 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-teal-500/50 resize-none"
+                        className="textarea"
                         placeholder="Briefly describe your symptoms or reason for consultation..."
                     />
                 </div>
@@ -229,25 +228,16 @@ function BookingForm() {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="btn btn-cobalt btn-lg"
+                    style={{ width: '100%', justifyContent: 'center' }}
                 >
-                    {loading ? (
-                        <>
-                            <div className="w-5 h-5 border-2 border-slate-900 border-t-transparent rounded-full animate-spin" />
-                            Submitting...
-                        </>
-                    ) : (
-                        <>
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            Request Appointment
-                        </>
-                    )}
+                    {loading ? 'Submitting...' : 'Request appointment →'}
                 </button>
 
-                <p className="text-xs text-slate-500 text-center">
-                    By submitting, you agree to our <Link href="/terms" className="text-teal-400 hover:underline">Terms of Service</Link> and <Link href="/privacy" className="text-teal-400 hover:underline">Privacy Policy</Link>
+                <p className="form-hint" style={{ textAlign: 'center', margin: 0 }}>
+                    By submitting, you agree to our{' '}
+                    <Link href="/terms" style={{ color: 'var(--cobalt)' }}>Terms of Service</Link> and{' '}
+                    <Link href="/privacy" style={{ color: 'var(--cobalt)' }}>Privacy Policy</Link>
                 </p>
             </form>
         </>
@@ -256,21 +246,19 @@ function BookingForm() {
 
 function LoadingFallback() {
     return (
-        <div className="animate-pulse space-y-6">
-            <div className="text-center mb-8">
-                <div className="h-8 bg-slate-700 rounded w-64 mx-auto mb-3" />
-                <div className="h-4 bg-slate-800 rounded w-48 mx-auto" />
+        <div className="col gap-5">
+            <div className="col gap-2" style={{ marginBottom: 16 }}>
+                <div style={{ height: 11, width: 200, background: 'var(--rule)', borderRadius: 'var(--r-1)' }} />
+                <div style={{ height: 36, width: 320, background: 'var(--rule)', borderRadius: 'var(--r-2)' }} />
             </div>
-            <div className="bg-slate-900/60 border border-white/5 rounded-3xl p-6 md:p-8">
-                <div className="space-y-4">
-                    <div className="h-12 bg-slate-800 rounded-xl" />
-                    <div className="grid md:grid-cols-2 gap-4">
-                        <div className="h-12 bg-slate-800 rounded-xl" />
-                        <div className="h-12 bg-slate-800 rounded-xl" />
-                    </div>
-                    <div className="h-12 bg-slate-800 rounded-xl" />
-                    <div className="h-14 bg-teal-500/20 rounded-xl" />
+            <div className="card col gap-4" style={{ padding: 28 }}>
+                <div style={{ height: 44, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
+                <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                    <div style={{ height: 44, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
+                    <div style={{ height: 44, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
                 </div>
+                <div style={{ height: 44, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
+                <div style={{ height: 48, background: 'var(--cobalt-50)', borderRadius: 'var(--r-2)' }} />
             </div>
         </div>
     );
@@ -278,15 +266,25 @@ function LoadingFallback() {
 
 export default function BookDoctorPage() {
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-200 pt-24 pb-16">
-            <div className="max-w-xl mx-auto px-6">
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+            <div style={{ maxWidth: 640, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
                 {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                    <span>/</span>
-                    <Link href="/doctors" className="hover:text-white transition-colors">Doctors</Link>
-                    <span>/</span>
-                    <span className="text-white">Book Appointment</span>
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        flexWrap: 'wrap',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                    <span aria-hidden="true">/</span>
+                    <Link href="/doctors" style={{ color: 'var(--ink-3)' }}>Doctors</Link>
+                    <span aria-hidden="true">/</span>
+                    <span style={{ color: 'var(--ink)' }}>Book appointment</span>
                 </nav>
 
                 <Suspense fallback={<LoadingFallback />}>

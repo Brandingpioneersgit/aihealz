@@ -49,7 +49,8 @@ interface AnalyticsData {
     dailyMetrics: DailyMetric[];
 }
 
-const COLORS = ['#0ea5e9', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#ec4899'];
+// Bureau palette for charts
+const COLORS = ['#1C5BFF', '#28D4A8', '#E63B7A', '#FFD23F', '#FF5A2E', '#4D7DFF'];
 
 export default function AnalyticsPage() {
     const [data, setData] = useState<AnalyticsData | null>(null);
@@ -82,45 +83,14 @@ export default function AnalyticsPage() {
     };
 
     const statCards = data ? [
-        {
-            label: 'Medical Conditions',
-            value: data.overview.totalConditions,
-            color: 'bg-blue-500',
-            trend: data.trends.conditionsGrowth,
-        },
-        {
-            label: 'Registered Doctors',
-            value: data.overview.totalDoctors,
-            color: 'bg-emerald-500',
-            trend: data.trends.doctorsGrowth,
-        },
-        {
-            label: 'Patient Leads',
-            value: data.overview.totalLeads,
-            color: 'bg-amber-500',
-            trend: data.trends.leadsGrowth,
-        },
-        {
-            label: 'Geographies',
-            value: data.overview.totalGeographies,
-            color: 'bg-purple-500',
-            trend: 0,
-        },
-        {
-            label: 'Treatments',
-            value: data.overview.totalTreatments,
-            color: 'bg-pink-500',
-            trend: 0,
-        },
-        {
-            label: 'Home Remedies',
-            value: data.overview.totalRemedies,
-            color: 'bg-teal-500',
-            trend: 0,
-        },
+        { label: 'Medical conditions', value: data.overview.totalConditions, code: 'CO', trend: data.trends.conditionsGrowth },
+        { label: 'Registered doctors', value: data.overview.totalDoctors, code: 'DR', trend: data.trends.doctorsGrowth },
+        { label: 'Patient leads', value: data.overview.totalLeads, code: 'LE', trend: data.trends.leadsGrowth },
+        { label: 'Geographies', value: data.overview.totalGeographies, code: 'GE', trend: 0 },
+        { label: 'Treatments', value: data.overview.totalTreatments, code: 'TR', trend: 0 },
+        { label: 'Home remedies', value: data.overview.totalRemedies, code: 'RM', trend: 0 },
     ] : [];
 
-    // Prepare chart data
     const trafficData = data?.dailyMetrics.slice(-14).map(d => ({
         date: new Date(d.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
         'Page Views': d.pageViews,
@@ -145,306 +115,263 @@ export default function AnalyticsPage() {
         value: c.count,
     })) || [];
 
+    const tooltipStyle = { borderRadius: 8, border: '1px solid #D6DDE9', background: '#FFFFFF', color: '#0A1A2F', fontSize: 12 };
+
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                        Platform Analytics
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / analytics</span>
+                    <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                        Platform analytics<span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-500 mt-1">Real-time platform metrics and performance data</p>
+                    <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                        Real-time platform metrics and performance data.
+                    </p>
                 </div>
-                <div className="flex items-center gap-3">
-                    <div className="flex bg-slate-100 rounded-lg p-1">
+                <div className="row ai-center gap-3">
+                    <div className="row" style={{ background: 'var(--bg-2)', border: '1px solid var(--rule)', borderRadius: 'var(--r-2)', padding: 4 }}>
                         {(['7d', '30d', '90d'] as const).map((range) => (
                             <button
                                 key={range}
                                 onClick={() => setTimeRange(range)}
-                                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                                    timeRange === range
-                                        ? 'bg-white text-slate-900 shadow-sm'
-                                        : 'text-slate-600 hover:text-slate-900'
-                                }`}
+                                style={{
+                                    padding: '6px 12px',
+                                    borderRadius: 'var(--r-2)',
+                                    fontSize: 13,
+                                    fontWeight: 500,
+                                    background: timeRange === range ? 'var(--paper)' : 'transparent',
+                                    color: timeRange === range ? 'var(--ink)' : 'var(--ink-3)',
+                                    border: 'none',
+                                    boxShadow: timeRange === range ? '0 1px 2px rgba(10,26,47,.06)' : 'none',
+                                }}
                             >
-                                {range === '7d' ? '7 Days' : range === '30d' ? '30 Days' : '90 Days'}
+                                {range === '7d' ? '7 days' : range === '30d' ? '30 days' : '90 days'}
                             </button>
                         ))}
                     </div>
-                    <button
-                        onClick={fetchAnalytics}
-                        disabled={loading}
-                        className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2 disabled:opacity-50"
-                    >
-                        <svg className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                        Refresh
+                    <button onClick={fetchAnalytics} disabled={loading} className="btn btn-paper">
+                        ↻ Refresh
                     </button>
                 </div>
             </div>
 
             {error ? (
-                <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
-                    <svg className="w-12 h-12 mx-auto text-red-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                    <p className="text-red-800 font-medium">{error}</p>
-                    <button
-                        onClick={fetchAnalytics}
-                        className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700"
-                    >
-                        Try Again
-                    </button>
+                <div className="card-flat col ai-center gap-3" style={{ padding: 32, borderColor: 'rgba(255, 90, 46, .35)', background: 'var(--orange-50)' }}>
+                    <p style={{ color: 'var(--orange-2)', fontSize: 14, fontWeight: 500, margin: 0 }}>{error}</p>
+                    <button onClick={fetchAnalytics} className="btn btn-orange btn-sm">Try again</button>
                 </div>
             ) : loading ? (
-                <div className="flex items-center justify-center h-64">
-                    <div className="text-center">
-                        <div className="animate-spin w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full mx-auto mb-4" />
-                        <p className="text-slate-500">Loading analytics...</p>
+                <div className="row center ai-center" style={{ minHeight: 256 }}>
+                    <div className="col ai-center gap-3">
+                        <div
+                            aria-hidden="true"
+                            style={{
+                                width: 32, height: 32,
+                                border: '2px solid var(--rule)',
+                                borderTopColor: 'var(--cobalt)',
+                                borderRadius: '50%',
+                                animation: 'spin 0.8s linear infinite',
+                            }}
+                        />
+                        <p className="muted" style={{ fontSize: 13 }}>Loading analytics…</p>
                     </div>
+                    <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
                 </div>
             ) : (
                 <>
-                    {/* Overview Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    {/* Overview stats */}
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
                         {statCards.map((stat) => (
-                            <div key={stat.label} className="bg-white p-5 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
-                                <div className="flex items-center justify-between mb-3">
-                                    <div className={`w-3 h-3 ${stat.color} rounded-full`} />
-                                    {stat.trend > 0 && (
-                                        <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
-                                            +{stat.trend}%
-                                        </span>
-                                    )}
+                            <div key={stat.label} className="col gap-2" style={{ padding: 20, borderRight: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
+                                <div className="row between ai-center">
+                                    <span className="spec-icon" aria-hidden="true">{stat.code}</span>
+                                    {stat.trend > 0 && <span className="pill pill-mint">+{stat.trend}%</span>}
                                 </div>
-                                <p className="text-2xl font-bold text-slate-900">{stat.value.toLocaleString()}</p>
-                                <p className="text-sm text-slate-500 mt-1">{stat.label}</p>
+                                <span className="num bignum" style={{ fontSize: 26, color: 'var(--ink)' }}>{stat.value.toLocaleString()}</span>
+                                <span className="kicker">{stat.label}</span>
                             </div>
                         ))}
                     </div>
 
-                    {/* Charts Row - Traffic and Engagement */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        {/* Traffic Trends - Line Chart */}
-                        <div className="bg-white rounded-xl border border-slate-200 p-6">
-                            <h3 className="font-semibold text-slate-900 mb-4">Traffic Trends</h3>
-                            <div className="h-72">
+                    {/* Traffic + engagement */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 16 }}>
+                        <div className="card col gap-4" style={{ padding: 24 }}>
+                            <span className="section-mark">traffic trends</span>
+                            <div style={{ height: 280 }}>
                                 <ResponsiveContainer width="100%" height="100%">
                                     <LineChart data={trafficData}>
-                                        <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                                        <XAxis dataKey="date" tick={{ fontSize: 11 }} stroke="#94a3b8" />
-                                        <YAxis tick={{ fontSize: 11 }} stroke="#94a3b8" />
-                                        <Tooltip
-                                            contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
-                                        />
-                                        <Legend />
-                                        <Line
-                                            type="monotone"
-                                            dataKey="Page Views"
-                                            stroke="#0ea5e9"
-                                            strokeWidth={2}
-                                            dot={{ r: 3 }}
-                                            activeDot={{ r: 5 }}
-                                        />
-                                        <Line
-                                            type="monotone"
-                                            dataKey="Visitors"
-                                            stroke="#10b981"
-                                            strokeWidth={2}
-                                            dot={{ r: 3 }}
-                                            activeDot={{ r: 5 }}
-                                        />
+                                        <CartesianGrid strokeDasharray="3 3" stroke="#E6EBF2" />
+                                        <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#4D6486' }} stroke="#7A8DA8" />
+                                        <YAxis tick={{ fontSize: 11, fill: '#4D6486' }} stroke="#7A8DA8" />
+                                        <Tooltip contentStyle={tooltipStyle} />
+                                        <Legend wrapperStyle={{ fontSize: 12 }} />
+                                        <Line type="monotone" dataKey="Page Views" stroke="#1C5BFF" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+                                        <Line type="monotone" dataKey="Visitors" stroke="#28D4A8" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} />
                                     </LineChart>
                                 </ResponsiveContainer>
                             </div>
                         </div>
 
-                        {/* User Engagement - Area Chart */}
-                        <div className="bg-white rounded-xl border border-slate-200 p-6">
-                            <h3 className="font-semibold text-slate-900 mb-4">User Engagement</h3>
-                            <div className="h-72">
+                        <div className="card col gap-4" style={{ padding: 24 }}>
+                            <span className="section-mark">user engagement</span>
+                            <div style={{ height: 280 }}>
                                 <ResponsiveContainer width="100%" height="100%">
                                     <AreaChart data={engagementData}>
-                                        <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                                        <XAxis dataKey="date" tick={{ fontSize: 11 }} stroke="#94a3b8" />
-                                        <YAxis tick={{ fontSize: 11 }} stroke="#94a3b8" />
-                                        <Tooltip
-                                            contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
-                                        />
-                                        <Legend />
-                                        <Area
-                                            type="monotone"
-                                            dataKey="Searches"
-                                            stackId="1"
-                                            stroke="#8b5cf6"
-                                            fill="#8b5cf6"
-                                            fillOpacity={0.6}
-                                        />
-                                        <Area
-                                            type="monotone"
-                                            dataKey="Bot Chats"
-                                            stackId="1"
-                                            stroke="#f59e0b"
-                                            fill="#f59e0b"
-                                            fillOpacity={0.6}
-                                        />
-                                        <Area
-                                            type="monotone"
-                                            dataKey="Leads"
-                                            stackId="1"
-                                            stroke="#10b981"
-                                            fill="#10b981"
-                                            fillOpacity={0.6}
-                                        />
+                                        <CartesianGrid strokeDasharray="3 3" stroke="#E6EBF2" />
+                                        <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#4D6486' }} stroke="#7A8DA8" />
+                                        <YAxis tick={{ fontSize: 11, fill: '#4D6486' }} stroke="#7A8DA8" />
+                                        <Tooltip contentStyle={tooltipStyle} />
+                                        <Legend wrapperStyle={{ fontSize: 12 }} />
+                                        <Area type="monotone" dataKey="Searches" stackId="1" stroke="#1C5BFF" fill="#1C5BFF" fillOpacity={0.5} />
+                                        <Area type="monotone" dataKey="Bot Chats" stackId="1" stroke="#FFD23F" fill="#FFD23F" fillOpacity={0.5} />
+                                        <Area type="monotone" dataKey="Leads" stackId="1" stroke="#28D4A8" fill="#28D4A8" fillOpacity={0.5} />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </div>
                         </div>
                     </div>
 
-                    {/* Bottom Row - Specialties and Cities */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        {/* Top Specialties - Pie Chart */}
-                        <div className="bg-white rounded-xl border border-slate-200 p-6">
-                            <h3 className="font-semibold text-slate-900 mb-4">Top Specialties</h3>
+                    {/* Specialties + cities + activity */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 16 }}>
+                        <div className="card col gap-4" style={{ padding: 24 }}>
+                            <span className="section-mark">top specialties</span>
                             {specialtyPieData.length > 0 ? (
-                                <div className="h-64">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <PieChart>
-                                            <Pie
-                                                data={specialtyPieData}
-                                                cx="50%"
-                                                cy="50%"
-                                                innerRadius={40}
-                                                outerRadius={80}
-                                                paddingAngle={2}
-                                                dataKey="value"
-                                            >
-                                                {specialtyPieData.map((entry, index) => (
-                                                    <Cell key={`cell-${index}`} fill={entry.color} />
-                                                ))}
-                                            </Pie>
-                                            <Tooltip
-                                                contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
-                                            />
-                                        </PieChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            ) : (
-                                <p className="text-sm text-slate-400 text-center py-8">No specialty data available</p>
-                            )}
-                            {specialtyPieData.length > 0 && (
-                                <div className="mt-4 space-y-2">
-                                    {specialtyPieData.map((item, i) => (
-                                        <div key={i} className="flex items-center justify-between text-sm">
-                                            <div className="flex items-center gap-2">
-                                                <span className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
-                                                <span className="text-slate-600 truncate max-w-[120px]">{item.name}</span>
+                                <>
+                                    <div style={{ height: 220 }}>
+                                        <ResponsiveContainer width="100%" height="100%">
+                                            <PieChart>
+                                                <Pie data={specialtyPieData} cx="50%" cy="50%" innerRadius={40} outerRadius={80} paddingAngle={2} dataKey="value">
+                                                    {specialtyPieData.map((entry, index) => (
+                                                        <Cell key={`cell-${index}`} fill={entry.color} />
+                                                    ))}
+                                                </Pie>
+                                                <Tooltip contentStyle={tooltipStyle} />
+                                            </PieChart>
+                                        </ResponsiveContainer>
+                                    </div>
+                                    <div className="col gap-2">
+                                        {specialtyPieData.map((item, i) => (
+                                            <div key={i} className="row between ai-center" style={{ fontSize: 13 }}>
+                                                <div className="row ai-center gap-2">
+                                                    <span style={{ width: 10, height: 10, borderRadius: 999, background: item.color }} />
+                                                    <span style={{ color: 'var(--ink-2)', maxWidth: 130, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{item.name}</span>
+                                                </div>
+                                                <span className="num" style={{ fontWeight: 500 }}>{item.value.toLocaleString()}</span>
                                             </div>
-                                            <span className="font-medium text-slate-900">{item.value.toLocaleString()}</span>
-                                        </div>
-                                    ))}
-                                </div>
+                                        ))}
+                                    </div>
+                                </>
+                            ) : (
+                                <p className="muted" style={{ fontSize: 13, textAlign: 'center', padding: 24 }}>No specialty data available</p>
                             )}
                         </div>
 
-                        {/* Top Cities - Bar Chart */}
-                        <div className="bg-white rounded-xl border border-slate-200 p-6">
-                            <h3 className="font-semibold text-slate-900 mb-4">Top Cities</h3>
+                        <div className="card col gap-4" style={{ padding: 24 }}>
+                            <span className="section-mark">top cities</span>
                             {cityBarData.length > 0 ? (
-                                <div className="h-64">
+                                <div style={{ height: 240 }}>
                                     <ResponsiveContainer width="100%" height="100%">
                                         <BarChart data={cityBarData} layout="vertical">
-                                            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                                            <XAxis type="number" tick={{ fontSize: 11 }} stroke="#94a3b8" />
-                                            <YAxis dataKey="name" type="category" tick={{ fontSize: 11 }} stroke="#94a3b8" width={80} />
-                                            <Tooltip
-                                                contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
-                                            />
-                                            <Bar dataKey="value" fill="#10b981" radius={[0, 4, 4, 0]} />
+                                            <CartesianGrid strokeDasharray="3 3" stroke="#E6EBF2" />
+                                            <XAxis type="number" tick={{ fontSize: 11, fill: '#4D6486' }} stroke="#7A8DA8" />
+                                            <YAxis dataKey="name" type="category" tick={{ fontSize: 11, fill: '#4D6486' }} stroke="#7A8DA8" width={80} />
+                                            <Tooltip contentStyle={tooltipStyle} />
+                                            <Bar dataKey="value" fill="#1C5BFF" radius={[0, 2, 2, 0]} />
                                         </BarChart>
                                     </ResponsiveContainer>
                                 </div>
                             ) : (
-                                <p className="text-sm text-slate-400 text-center py-8">No city data available</p>
+                                <p className="muted" style={{ fontSize: 13, textAlign: 'center', padding: 24 }}>No city data available</p>
                             )}
                         </div>
 
-                        {/* Recent Activity */}
-                        <div className="bg-white rounded-xl border border-slate-200 p-6">
-                            <h3 className="font-semibold text-slate-900 mb-4">Recent Activity</h3>
-                            <div className="space-y-4">
+                        <div className="card col gap-3" style={{ padding: 24 }}>
+                            <span className="section-mark">recent activity</span>
+                            <div className="col gap-3">
                                 {data?.recentActivity && data.recentActivity.length > 0 ? (
                                     data.recentActivity.map((activity, i) => (
-                                        <div key={i} className="flex items-start gap-3">
-                                            <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                                                activity.type === 'condition' ? 'bg-blue-100 text-blue-600' :
-                                                activity.type === 'doctor' ? 'bg-emerald-100 text-emerald-600' :
-                                                'bg-amber-100 text-amber-600'
-                                            }`}>
-                                                {activity.type === 'condition' ? (
-                                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                                    </svg>
-                                                ) : activity.type === 'doctor' ? (
-                                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                    </svg>
-                                                ) : (
-                                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                                    </svg>
-                                                )}
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                                <p className="text-sm text-slate-900 truncate">{activity.description}</p>
-                                                <p className="text-xs text-slate-400">{activity.time}</p>
+                                        <div key={i} className="row gap-3 ai-start">
+                                            <span
+                                                className="spec-icon"
+                                                style={{
+                                                    width: 28,
+                                                    height: 28,
+                                                    fontSize: 11,
+                                                    background: activity.type === 'condition' ? 'var(--cobalt)'
+                                                        : activity.type === 'doctor' ? 'var(--mint-3)'
+                                                        : 'var(--lemon-2)',
+                                                }}
+                                            >
+                                                {activity.type === 'condition' ? 'C' : activity.type === 'doctor' ? 'D' : 'L'}
+                                            </span>
+                                            <div className="col" style={{ minWidth: 0, flex: 1 }}>
+                                                <span style={{ fontSize: 13, color: 'var(--ink)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{activity.description}</span>
+                                                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>{activity.time}</span>
                                             </div>
                                         </div>
                                     ))
                                 ) : (
-                                    <p className="text-sm text-slate-400 text-center py-4">No recent activity</p>
+                                    <p className="muted" style={{ fontSize: 13, textAlign: 'center', padding: '16px 0' }}>No recent activity</p>
                                 )}
                             </div>
                         </div>
                     </div>
 
-                    {/* Data Quality Card */}
-                    <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl p-6 text-white">
-                        <div className="flex items-start justify-between">
-                            <div>
-                                <h3 className="text-lg font-bold mb-2">Data Quality Score</h3>
-                                <p className="text-indigo-100 text-sm mb-4">
+                    {/* Data quality */}
+                    <section className="card-ink col gap-4" style={{ padding: 28 }}>
+                        <div className="row between ai-start" style={{ flexWrap: 'wrap', gap: 16 }}>
+                            <div className="col gap-2">
+                                <span className="section-mark" style={{ color: 'var(--cobalt-3)' }}>data quality score</span>
+                                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', margin: 0, maxWidth: 480 }}>
                                     Based on condition coverage, doctor verification rate, and geographic distribution.
                                 </p>
-                                <div className="flex items-center gap-6">
-                                    <div>
-                                        <p className="text-3xl font-bold">
+                                <div className="row gap-6" style={{ marginTop: 8 }}>
+                                    <div className="col gap-1">
+                                        <span className="num bignum" style={{ fontSize: 32, color: '#fff' }}>
                                             {data ? Math.round((data.overview.totalDoctors > 0 ? 75 : 60) + (data.overview.totalGeographies > 100 ? 12 : 5)) : '--'}%
-                                        </p>
-                                        <p className="text-xs text-indigo-200">Overall Score</p>
+                                        </span>
+                                        <span className="mono" style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Overall score</span>
                                     </div>
-                                    <div className="h-12 w-px bg-white/20" />
-                                    <div>
-                                        <p className="text-3xl font-bold">{data?.overview.totalConditions.toLocaleString() || '--'}</p>
-                                        <p className="text-xs text-indigo-200">Conditions</p>
+                                    <div style={{ width: 1, background: 'rgba(255,255,255,0.15)' }} />
+                                    <div className="col gap-1">
+                                        <span className="num bignum" style={{ fontSize: 32, color: '#fff' }}>{data?.overview.totalConditions.toLocaleString() || '--'}</span>
+                                        <span className="mono" style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Conditions</span>
                                     </div>
-                                    <div className="h-12 w-px bg-white/20" />
-                                    <div>
-                                        <p className="text-3xl font-bold">{data?.overview.totalGeographies || '--'}</p>
-                                        <p className="text-xs text-indigo-200">Geographies</p>
+                                    <div style={{ width: 1, background: 'rgba(255,255,255,0.15)' }} />
+                                    <div className="col gap-1">
+                                        <span className="num bignum" style={{ fontSize: 32, color: '#fff' }}>{data?.overview.totalGeographies || '--'}</span>
+                                        <span className="mono" style={{ fontSize: 11, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Geographies</span>
                                     </div>
                                 </div>
                             </div>
-                            <button className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium transition-colors">
-                                View Report
+                            <button
+                                style={{
+                                    padding: '10px 16px',
+                                    background: 'rgba(255,255,255,0.12)',
+                                    color: '#fff',
+                                    border: '1px solid rgba(255,255,255,0.18)',
+                                    borderRadius: 'var(--r-2)',
+                                    fontSize: 13,
+                                    fontWeight: 500,
+                                    cursor: 'pointer',
+                                }}
+                            >
+                                View report →
                             </button>
                         </div>
-                    </div>
+                    </section>
                 </>
             )}
         </div>

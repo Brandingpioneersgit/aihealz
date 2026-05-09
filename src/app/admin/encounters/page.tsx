@@ -55,216 +55,188 @@ export default function EncountersPage() {
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center min-h-[400px]">
-                <div className="text-center">
-                    <div className="animate-spin w-10 h-10 border-4 border-teal-600 border-t-transparent rounded-full mx-auto mb-4" />
-                    <p className="text-slate-500">Loading encounter data...</p>
+            <div className="row center ai-center" style={{ minHeight: 400 }}>
+                <div className="col ai-center gap-3">
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            width: 32,
+                            height: 32,
+                            border: '2px solid var(--rule)',
+                            borderTopColor: 'var(--cobalt)',
+                            borderRadius: '50%',
+                            animation: 'spin 0.8s linear infinite',
+                        }}
+                    />
+                    <p className="muted" style={{ fontSize: 13 }}>Loading encounter data…</p>
                 </div>
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
             </div>
         );
     }
 
     if (!data) {
         return (
-            <div className="text-center py-12">
-                <p className="text-slate-500">Failed to load data. Please try again.</p>
-                <button onClick={fetchData} className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg">
-                    Retry
-                </button>
+            <div className="col ai-center gap-3" style={{ padding: '64px 0' }}>
+                <p className="muted" style={{ fontSize: 14 }}>Failed to load data. Please try again.</p>
+                <button onClick={fetchData} className="btn btn-cobalt">Retry</button>
             </div>
         );
     }
 
     const totalOutcomes = Object.values(data.outcomes).reduce((a, b) => a + b, 0);
-
-    // Check if there's no real data
-    const hasNoData = data.responseTime.totalEnquiries === 0 &&
-                      data.geoHeatmap.length === 0 &&
-                      data.topConditions.length === 0;
+    const hasNoData = data.responseTime.totalEnquiries === 0 && data.geoHeatmap.length === 0 && data.topConditions.length === 0;
 
     if (hasNoData) {
         return (
-            <div className="space-y-6">
-                {/* Header */}
-                <div className="flex items-center justify-between">
-                    <div>
-                        <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                            <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                            Encounters & Enquiries
-                        </h1>
-                        <p className="text-slate-500 mt-1">Monitor patient enquiries, response times, and geographic demand.</p>
-                    </div>
-                </div>
-
-                {/* Empty State */}
-                <div className="bg-white rounded-2xl border border-slate-200 p-16 text-center">
-                    <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg className="w-10 h-10 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                    </div>
-                    <h2 className="text-xl font-bold text-slate-900 mb-2">No Encounters Yet</h2>
-                    <p className="text-slate-500 max-w-md mx-auto mb-6">
-                        Patient enquiries and encounters will appear here once users start interacting with the AI symptom checker and doctor recommendations on your platform.
+            <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / encounters</span>
+                    <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                        Encounters &amp; enquiries<span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                        Monitor patient enquiries, response times, and geographic demand.
                     </p>
-                    <div className="flex items-center justify-center gap-4">
-                        <button
-                            onClick={fetchData}
-                            className="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-200 transition-colors"
-                        >
-                            Refresh Data
-                        </button>
-                    </div>
                 </div>
 
-                {/* Help Card */}
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 p-6">
-                    <h3 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                        <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        What gets tracked here?
-                    </h3>
-                    <div className="grid md:grid-cols-3 gap-4">
-                        <div className="bg-white/70 rounded-lg p-3">
-                            <div className="font-medium text-slate-700 mb-1">Patient Enquiries</div>
-                            <p className="text-sm text-slate-500">Questions submitted through the symptom checker</p>
-                        </div>
-                        <div className="bg-white/70 rounded-lg p-3">
-                            <div className="font-medium text-slate-700 mb-1">Response Times</div>
-                            <p className="text-sm text-slate-500">How quickly doctors respond to leads</p>
-                        </div>
-                        <div className="bg-white/70 rounded-lg p-3">
-                            <div className="font-medium text-slate-700 mb-1">Geographic Demand</div>
-                            <p className="text-sm text-slate-500">Which cities have the most enquiries</p>
-                        </div>
-                    </div>
+                <div className="card col ai-center gap-3" style={{ padding: 64, textAlign: 'center' }}>
+                    <span className="spec-icon" style={{ width: 56, height: 56, fontSize: 22 }}>EN</span>
+                    <h2 className="display" style={{ fontSize: 22, margin: 0, fontWeight: 600 }}>No encounters yet</h2>
+                    <p className="muted" style={{ fontSize: 14, margin: 0, maxWidth: 480 }}>
+                        Patient enquiries and encounters will appear here once users start interacting with the AI symptom checker and doctor recommendations.
+                    </p>
+                    <button onClick={fetchData} className="btn btn-paper" style={{ marginTop: 8 }}>↻ Refresh data</button>
                 </div>
+
+                <section className="card-flat col gap-4" style={{ padding: 24, borderColor: 'rgba(28, 91, 255, .25)', background: 'var(--cobalt-50)' }}>
+                    <span className="section-mark" style={{ color: 'var(--cobalt)' }}>what gets tracked here?</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 16 }}>
+                        {[
+                            { label: 'Patient enquiries', desc: 'Questions submitted through the symptom checker' },
+                            { label: 'Response times', desc: 'How quickly doctors respond to leads' },
+                            { label: 'Geographic demand', desc: 'Which cities have the most enquiries' },
+                        ].map((b) => (
+                            <div key={b.label} className="card-quiet col gap-1" style={{ padding: 14 }}>
+                                <span style={{ fontSize: 13, fontWeight: 500 }}>{b.label}</span>
+                                <span className="muted" style={{ fontSize: 12 }}>{b.desc}</span>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
         );
     }
 
-    const outcomeColors: Record<string, string> = {
-        completed: 'bg-emerald-100 text-emerald-700 border-emerald-200',
-        pending: 'bg-amber-100 text-amber-700 border-amber-200',
-        cancelled: 'bg-rose-100 text-rose-700 border-rose-200',
-        no_show: 'bg-slate-100 text-slate-700 border-slate-200',
-        rescheduled: 'bg-blue-100 text-blue-700 border-blue-200',
+    const outcomePill = (outcome: string) => {
+        switch (outcome) {
+            case 'completed': return 'pill pill-mint';
+            case 'pending': return 'pill pill-lemon';
+            case 'cancelled': return 'pill pill-orange';
+            case 'rescheduled': return 'pill pill-cobalt';
+            default: return 'pill';
+        }
     };
 
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                        Encounters & Enquiries
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / encounters</span>
+                    <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                        Encounters &amp; enquiries<span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-500 mt-1">Monitor patient enquiries, response times, and geographic demand.</p>
+                    <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                        Monitor patient enquiries, response times, and geographic demand.
+                    </p>
                 </div>
-                <div className="flex items-center gap-3">
-                    <span className="text-sm text-slate-500">Period: {data.period}</span>
-                    <button
-                        onClick={fetchData}
-                        className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                        Refresh
-                    </button>
+                <div className="row ai-center gap-3">
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                        Period: {data.period}
+                    </span>
+                    <button onClick={fetchData} className="btn btn-paper">↻ Refresh</button>
                 </div>
             </div>
 
-            {/* Response Time Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="bg-white p-5 rounded-2xl border border-slate-200">
-                    <div className="text-sm font-medium text-slate-500 mb-1">Total Enquiries</div>
-                    <div className="text-3xl font-bold text-slate-900">{data.responseTime.totalEnquiries}</div>
-                    <div className="text-sm text-slate-500 mt-1">Last 30 days</div>
-                </div>
-                <div className="bg-emerald-50 p-5 rounded-2xl border border-emerald-200">
-                    <div className="text-sm font-medium text-emerald-600 mb-1">Avg Response Time</div>
-                    <div className="text-3xl font-bold text-emerald-700">
-                        {data.responseTime.average ? `${data.responseTime.average} min` : 'N/A'}
+            {/* Stats strip */}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {[
+                    { label: 'Total enquiries', value: data.responseTime.totalEnquiries.toLocaleString(), sub: 'Last 30 days' },
+                    { label: 'Avg response time', value: data.responseTime.average ? `${data.responseTime.average} min` : 'N/A', sub: data.responseTime.fastest ? `Best: ${data.responseTime.fastest} min` : '', subTone: 'mint' },
+                    { label: 'AI confidence', value: data.aiConfidence.average ? `${Math.round(data.aiConfidence.average * 100)}%` : 'N/A', sub: 'Average score', subTone: 'cobalt' },
+                    { label: 'High-opportunity cities', value: data.supplyVsDemand.filter(s => s.isHighOpportunity).length.toLocaleString(), sub: 'Need more doctors', subTone: 'magenta' },
+                ].map((m) => (
+                    <div key={m.label} className="col gap-2" style={{ padding: 20, borderRight: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
+                        <span className="kicker">{m.label}</span>
+                        <span className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>{m.value}</span>
+                        {m.sub && (
+                            <span className="mono" style={{
+                                fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.08em',
+                                color: m.subTone === 'mint' ? 'var(--mint-3)' : m.subTone === 'cobalt' ? 'var(--cobalt)' : m.subTone === 'magenta' ? 'var(--magenta)' : 'var(--ink-3)',
+                            }}>{m.sub}</span>
+                        )}
                     </div>
-                    <div className="text-sm text-emerald-600 mt-1">
-                        Best: {data.responseTime.fastest ? `${data.responseTime.fastest} min` : 'N/A'}
-                    </div>
-                </div>
-                <div className="bg-blue-50 p-5 rounded-2xl border border-blue-200">
-                    <div className="text-sm font-medium text-blue-600 mb-1">AI Confidence</div>
-                    <div className="text-3xl font-bold text-blue-700">
-                        {data.aiConfidence.average ? `${Math.round(data.aiConfidence.average * 100)}%` : 'N/A'}
-                    </div>
-                    <div className="text-sm text-blue-600 mt-1">Average score</div>
-                </div>
-                <div className="bg-purple-50 p-5 rounded-2xl border border-purple-200">
-                    <div className="text-sm font-medium text-purple-600 mb-1">High Opportunity Cities</div>
-                    <div className="text-3xl font-bold text-purple-700">
-                        {data.supplyVsDemand.filter((s) => s.isHighOpportunity).length}
-                    </div>
-                    <div className="text-sm text-purple-600 mt-1">Need more doctors</div>
-                </div>
+                ))}
             </div>
 
-            {/* Outcome Breakdown */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6">
-                <h3 className="font-semibold text-slate-900 mb-4">Outcome Distribution</h3>
-                <div className="flex flex-wrap gap-3">
+            {/* Outcome distribution */}
+            <section className="card col gap-4" style={{ padding: 24 }}>
+                <span className="section-mark">outcome distribution</span>
+                <div className="row gap-3" style={{ flexWrap: 'wrap' }}>
                     {Object.entries(data.outcomes).map(([outcome, count]) => (
-                        <div
-                            key={outcome}
-                            className={`px-4 py-2 rounded-lg border ${outcomeColors[outcome] || 'bg-slate-50 border-slate-200'}`}
-                        >
-                            <span className="font-bold">{count}</span>
-                            <span className="ml-2 capitalize">{outcome.replace(/_/g, ' ')}</span>
-                            <span className="ml-2 text-xs opacity-70">
+                        <div key={outcome} className={outcomePill(outcome)} style={{ padding: '8px 14px', textTransform: 'none', fontSize: 12 }}>
+                            <span className="num" style={{ fontWeight: 600 }}>{count}</span>
+                            <span style={{ marginLeft: 6, textTransform: 'capitalize' }}>{outcome.replace(/_/g, ' ')}</span>
+                            <span style={{ marginLeft: 6, opacity: 0.7 }}>
                                 ({totalOutcomes > 0 ? Math.round((count / totalOutcomes) * 100) : 0}%)
                             </span>
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {/* Geographic Heatmap */}
-                <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                    <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50">
-                        <h3 className="font-semibold text-slate-900">Enquiries by City</h3>
-                        <p className="text-sm text-slate-500 mt-1">Top cities by enquiry volume</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 16 }}>
+                {/* Geo heatmap */}
+                <div className="card" style={{ overflow: 'hidden' }}>
+                    <div className="col gap-1 hairline-b" style={{ padding: '16px 24px' }}>
+                        <span className="section-mark">enquiries by city</span>
+                        <span className="muted" style={{ fontSize: 13 }}>Top cities by enquiry volume</span>
                     </div>
                     {data.geoHeatmap.length === 0 ? (
-                        <div className="p-12 text-center text-slate-500">
-                            No geographic data available
+                        <div className="col ai-center" style={{ padding: 48 }}>
+                            <p className="muted" style={{ fontSize: 13 }}>No geographic data available</p>
                         </div>
                     ) : (
-                        <div className="divide-y divide-slate-100">
-                            {data.geoHeatmap.slice(0, 10).map((geo, i) => (
-                                <div key={i} className="px-6 py-3 flex items-center justify-between hover:bg-slate-50">
-                                    <div className="flex items-center gap-3">
-                                        <span className="w-6 h-6 rounded-full bg-teal-100 text-teal-700 text-xs font-bold flex items-center justify-center">
-                                            {i + 1}
-                                        </span>
-                                        <span className="font-medium text-slate-900">{geo.city}</span>
+                        <div className="col">
+                            {data.geoHeatmap.slice(0, 10).map((geo, i, arr) => (
+                                <div
+                                    key={i}
+                                    className="row between ai-center"
+                                    style={{
+                                        padding: '12px 24px',
+                                        borderBottom: i < arr.length - 1 ? '1px solid var(--rule-2)' : 'none',
+                                    }}
+                                >
+                                    <div className="row ai-center gap-3">
+                                        <span className="spec-icon" style={{ width: 24, height: 24, fontSize: 11 }}>{i + 1}</span>
+                                        <span style={{ fontSize: 13, fontWeight: 500 }}>{geo.city}</span>
                                     </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
-                                            <div
-                                                className="h-full bg-teal-500"
-                                                style={{
-                                                    width: `${(geo.enquiries / (data.geoHeatmap[0]?.enquiries || 1)) * 100}%`,
-                                                }}
-                                            />
+                                    <div className="row ai-center gap-3">
+                                        <div style={{ width: 120, height: 6, background: 'var(--bg-2)', borderRadius: 999, overflow: 'hidden' }}>
+                                            <div style={{ height: '100%', width: `${(geo.enquiries / (data.geoHeatmap[0]?.enquiries || 1)) * 100}%`, background: 'var(--cobalt)' }} />
                                         </div>
-                                        <span className="font-bold text-slate-700 w-12 text-right">
-                                            {geo.enquiries}
-                                        </span>
+                                        <span className="num" style={{ fontWeight: 600, width: 40, textAlign: 'right', fontSize: 13 }}>{geo.enquiries}</span>
                                     </div>
                                 </div>
                             ))}
@@ -272,29 +244,34 @@ export default function EncountersPage() {
                     )}
                 </div>
 
-                {/* Top Conditions */}
-                <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                    <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50">
-                        <h3 className="font-semibold text-slate-900">Top Conditions</h3>
-                        <p className="text-sm text-slate-500 mt-1">Most enquired conditions</p>
+                {/* Top conditions */}
+                <div className="card" style={{ overflow: 'hidden' }}>
+                    <div className="col gap-1 hairline-b" style={{ padding: '16px 24px' }}>
+                        <span className="section-mark">top conditions</span>
+                        <span className="muted" style={{ fontSize: 13 }}>Most enquired conditions</span>
                     </div>
                     {data.topConditions.length === 0 ? (
-                        <div className="p-12 text-center text-slate-500">
-                            No condition data available
+                        <div className="col ai-center" style={{ padding: 48 }}>
+                            <p className="muted" style={{ fontSize: 13 }}>No condition data available</p>
                         </div>
                     ) : (
-                        <div className="divide-y divide-slate-100">
-                            {data.topConditions.slice(0, 10).map((cond, i) => (
-                                <div key={i} className="px-6 py-3 flex items-center justify-between hover:bg-slate-50">
-                                    <div className="flex items-center gap-3">
-                                        <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center">
-                                            {i + 1}
-                                        </span>
-                                        <span className="font-medium text-slate-900 capitalize">
+                        <div className="col">
+                            {data.topConditions.slice(0, 10).map((cond, i, arr) => (
+                                <div
+                                    key={i}
+                                    className="row between ai-center"
+                                    style={{
+                                        padding: '12px 24px',
+                                        borderBottom: i < arr.length - 1 ? '1px solid var(--rule-2)' : 'none',
+                                    }}
+                                >
+                                    <div className="row ai-center gap-3">
+                                        <span className="spec-icon" style={{ width: 24, height: 24, fontSize: 11 }}>{i + 1}</span>
+                                        <span style={{ fontSize: 13, fontWeight: 500, textTransform: 'capitalize' }}>
                                             {cond.condition?.replace(/-/g, ' ') || 'Unknown'}
                                         </span>
                                     </div>
-                                    <span className="font-bold text-slate-700">{cond.count}</span>
+                                    <span className="num" style={{ fontWeight: 600, fontSize: 13 }}>{cond.count}</span>
                                 </div>
                             ))}
                         </div>
@@ -302,81 +279,72 @@ export default function EncountersPage() {
                 </div>
             </div>
 
-            {/* Supply vs Demand Analysis */}
-            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50">
-                    <h3 className="font-semibold text-slate-900">Supply vs Demand Analysis</h3>
-                    <p className="text-sm text-slate-500 mt-1">
-                        Identify cities where demand exceeds doctor supply
-                    </p>
+            {/* Supply vs demand */}
+            <section className="card" style={{ overflow: 'hidden' }}>
+                <div className="col gap-1 hairline-b" style={{ padding: '16px 24px' }}>
+                    <span className="section-mark">supply vs demand analysis</span>
+                    <span className="muted" style={{ fontSize: 13 }}>Identify cities where demand exceeds doctor supply</span>
                 </div>
                 {data.supplyVsDemand.length === 0 ? (
-                    <div className="p-12 text-center text-slate-500">
-                        No supply/demand data available
+                    <div className="col ai-center" style={{ padding: 48 }}>
+                        <p className="muted" style={{ fontSize: 13 }}>No supply/demand data available</p>
                     </div>
                 ) : (
-                    <table className="w-full text-sm">
-                        <thead className="bg-slate-50 border-b border-slate-200">
-                            <tr>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">City</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Enquiries</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Verified Doctors</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Premium Doctors</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Ratio</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100">
-                            {data.supplyVsDemand.map((city, i) => {
-                                const ratio = city.doctors > 0 ? (city.enquiries / city.doctors).toFixed(1) : 'N/A';
-                                return (
-                                    <tr key={i} className={`hover:bg-slate-50 ${city.isHighOpportunity ? 'bg-amber-50/50' : ''}`}>
-                                        <td className="p-4 font-medium text-slate-900">{city.city}</td>
-                                        <td className="p-4 text-slate-600">{city.enquiries}</td>
-                                        <td className="p-4 text-slate-600">{city.doctors}</td>
-                                        <td className="p-4 text-slate-600">{city.premiumDoctors}</td>
-                                        <td className="p-4">
-                                            <span className={`font-bold ${
-                                                typeof ratio === 'string' || parseFloat(ratio) > 10
-                                                    ? 'text-rose-600'
-                                                    : parseFloat(ratio) > 5
-                                                    ? 'text-amber-600'
-                                                    : 'text-emerald-600'
-                                            }`}>
-                                                {ratio}x
-                                            </span>
-                                        </td>
-                                        <td className="p-4">
-                                            {city.isHighOpportunity ? (
-                                                <span className="px-2 py-1 text-xs font-bold bg-amber-100 text-amber-700 rounded-full">
-                                                    High Opportunity
+                    <div style={{ overflowX: 'auto' }}>
+                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                            <thead style={{ background: 'var(--bg-2)' }}>
+                                <tr style={{ borderBottom: '1px solid var(--rule)' }}>
+                                    {['City', 'Enquiries', 'Verified doctors', 'Premium doctors', 'Ratio', 'Status'].map(h => (
+                                        <th key={h} scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>{h}</th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {data.supplyVsDemand.map((city, i) => {
+                                    const ratio = city.doctors > 0 ? (city.enquiries / city.doctors).toFixed(1) : 'N/A';
+                                    const ratioNum = ratio === 'N/A' ? null : parseFloat(ratio);
+                                    return (
+                                        <tr key={i} style={{ borderBottom: '1px solid var(--rule-2)', background: city.isHighOpportunity ? 'var(--lemon-50)' : 'transparent' }}>
+                                            <td style={{ padding: 14, fontWeight: 500 }}>{city.city}</td>
+                                            <td className="num" style={{ padding: 14, color: 'var(--ink-2)' }}>{city.enquiries}</td>
+                                            <td className="num" style={{ padding: 14, color: 'var(--ink-2)' }}>{city.doctors}</td>
+                                            <td className="num" style={{ padding: 14, color: 'var(--ink-2)' }}>{city.premiumDoctors}</td>
+                                            <td style={{ padding: 14 }}>
+                                                <span
+                                                    className="num"
+                                                    style={{
+                                                        fontWeight: 600,
+                                                        color: ratioNum === null || ratioNum > 10 ? 'var(--orange-2)'
+                                                            : ratioNum > 5 ? 'var(--lemon-2)'
+                                                            : 'var(--mint-3)',
+                                                    }}
+                                                >
+                                                    {ratio}{ratio !== 'N/A' && 'x'}
                                                 </span>
-                                            ) : (
-                                                <span className="px-2 py-1 text-xs font-bold bg-emerald-100 text-emerald-700 rounded-full">
-                                                    Balanced
-                                                </span>
-                                            )}
-                                        </td>
-                                    </tr>
-                                );
-                            })}
-                        </tbody>
-                    </table>
+                                            </td>
+                                            <td style={{ padding: 14 }}>
+                                                {city.isHighOpportunity ? (
+                                                    <span className="pill pill-lemon">High opportunity</span>
+                                                ) : (
+                                                    <span className="pill pill-mint">Balanced</span>
+                                                )}
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
                 )}
-            </div>
+            </section>
 
-            {/* Insights Card */}
-            <div className="bg-gradient-to-r from-teal-50 to-emerald-50 rounded-2xl border border-teal-200 p-6">
-                <h3 className="font-semibold text-slate-900 mb-4 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                    Key Insights
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-white rounded-xl p-4 border border-slate-200">
-                        <div className="text-sm font-medium text-slate-600 mb-1">Response Performance</div>
-                        <p className="text-sm text-slate-700">
+            {/* Insights */}
+            <section className="card-flat col gap-4" style={{ padding: 24, borderColor: 'rgba(28, 91, 255, .25)', background: 'var(--cobalt-50)' }}>
+                <span className="section-mark" style={{ color: 'var(--cobalt)' }}>key insights</span>
+                <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 16 }}>
+                    <div className="card col gap-2" style={{ padding: 16 }}>
+                        <span className="kicker">Response performance</span>
+                        <p style={{ fontSize: 13, color: 'var(--ink-2)', margin: 0 }}>
                             {data.responseTime.average && data.responseTime.average < 30
                                 ? 'Excellent response times. Keep it up!'
                                 : data.responseTime.average && data.responseTime.average < 60
@@ -384,24 +352,24 @@ export default function EncountersPage() {
                                 : 'Response times need attention.'}
                         </p>
                     </div>
-                    <div className="bg-white rounded-xl p-4 border border-slate-200">
-                        <div className="text-sm font-medium text-slate-600 mb-1">Market Gaps</div>
-                        <p className="text-sm text-slate-700">
-                            {data.supplyVsDemand.filter((s) => s.isHighOpportunity).length > 0
-                                ? `${data.supplyVsDemand.filter((s) => s.isHighOpportunity).length} cities need more premium doctors.`
+                    <div className="card col gap-2" style={{ padding: 16 }}>
+                        <span className="kicker">Market gaps</span>
+                        <p style={{ fontSize: 13, color: 'var(--ink-2)', margin: 0 }}>
+                            {data.supplyVsDemand.filter(s => s.isHighOpportunity).length > 0
+                                ? `${data.supplyVsDemand.filter(s => s.isHighOpportunity).length} cities need more premium doctors.`
                                 : 'Doctor supply meets demand in all cities.'}
                         </p>
                     </div>
-                    <div className="bg-white rounded-xl p-4 border border-slate-200">
-                        <div className="text-sm font-medium text-slate-600 mb-1">Top Demand</div>
-                        <p className="text-sm text-slate-700">
+                    <div className="card col gap-2" style={{ padding: 16 }}>
+                        <span className="kicker">Top demand</span>
+                        <p style={{ fontSize: 13, color: 'var(--ink-2)', margin: 0 }}>
                             {data.topConditions[0]
                                 ? `"${data.topConditions[0].condition?.replace(/-/g, ' ')}" is the most searched condition.`
                                 : 'No condition data available yet.'}
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }

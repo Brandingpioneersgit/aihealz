@@ -78,13 +78,12 @@ export default function DrugDosingPage() {
 
     const currentDrug = data?.drugs.find(d => d.id === selectedDrug);
 
-    // Calculate CrCl using Cockcroft-Gault
+    // Cockcroft-Gault — DO NOT alter
     const crcl = useMemo(() => {
         const factor = sex === 'female' ? 0.85 : 1;
         return Math.round(((140 - age) * weight * factor) / (72 * scr));
     }, [age, weight, scr, sex]);
 
-    // Get renal adjustment for current CrCl
     const renalAdjustment = useMemo(() => {
         if (!currentDrug?.renal_adjustments) return null;
         return currentDrug.renal_adjustments.find(
@@ -117,10 +116,10 @@ export default function DrugDosingPage() {
 
     if (loading) {
         return (
-            <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex items-center justify-center h-64">
-                        <div className="w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
+                    <div className="row center" style={{ height: 256 }}>
+                        <span className="mono muted" style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Loading…</span>
                     </div>
                 </div>
             </main>
@@ -128,83 +127,98 @@ export default function DrugDosingPage() {
     }
 
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-cyan-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
                 {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6">
-                    <Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link>
-                    <span>/</span>
-                    <Link href="/for-doctors" className="hover:text-cyan-400 transition-colors">For Doctors</Link>
-                    <span>/</span>
-                    <span className="text-slate-300">Drug Dosing</span>
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        flexWrap: 'wrap',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                    <span aria-hidden="true">/</span>
+                    <Link href="/for-doctors" style={{ color: 'var(--ink-3)' }}>For Doctors</Link>
+                    <span aria-hidden="true">/</span>
+                    <span style={{ color: 'var(--ink)' }}>Drug Dosing</span>
                 </nav>
 
-                {/* Header */}
-                <div className="mb-8 text-center max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-4">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
-                        Clinical Calculator
-                    </div>
-                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
-                        Drug Dosing Calculator
+                {/* Hero */}
+                <div className="col gap-3" style={{ maxWidth: 760 }}>
+                    <span className="section-mark">clinical calculator</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(32px, 4.5vw, 48px)',
+                            lineHeight: 1.05,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        Drug dosing <span style={{ color: 'var(--cobalt)' }}>calculator</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-400">
+                    <p className="lede" style={{ fontSize: 17, margin: 0, maxWidth: 600 }}>
                         Weight-based dosing, renal adjustments, and infusion rate calculations.
                     </p>
                 </div>
 
-                {/* Patient Parameters */}
-                <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-6 mb-6">
-                    <div className="flex items-center justify-between mb-4">
-                        <h3 className="font-bold text-white">Patient Parameters</h3>
+                {/* Patient parameters */}
+                <div className="card col gap-4" style={{ padding: 24 }}>
+                    <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 8 }}>
+                        <span className="kicker"><span className="dot" />patient parameters</span>
                         <button
+                            type="button"
                             onClick={() => setShowCrCl(!showCrCl)}
-                            className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+                            className="mono"
+                            style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.06em', background: 'transparent', border: 'none' }}
                         >
-                            {showCrCl ? 'Hide' : 'Show'} CrCl Calculator
+                            {showCrCl ? '× Hide' : '+ Show'} CrCl calculator
                         </button>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div>
-                            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Weight (kg)</label>
+                    <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 16 }}>
+                        <div className="form-group">
+                            <label className="form-label">Weight (kg)</label>
                             <input
                                 type="number"
                                 value={weight}
                                 onChange={e => setWeight(Number(e.target.value))}
-                                className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                                className="input"
                             />
                         </div>
                         {showCrCl && (
                             <>
-                                <div>
-                                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Age (years)</label>
+                                <div className="form-group">
+                                    <label className="form-label">Age (years)</label>
                                     <input
                                         type="number"
                                         value={age}
                                         onChange={e => setAge(Number(e.target.value))}
-                                        className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                                        className="input"
                                     />
                                 </div>
-                                <div>
-                                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">SCr (mg/dL)</label>
+                                <div className="form-group">
+                                    <label className="form-label">SCr (mg/dL)</label>
                                     <input
                                         type="number"
                                         step="0.1"
                                         value={scr}
                                         onChange={e => setScr(Number(e.target.value))}
-                                        className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                                        className="input"
                                     />
                                 </div>
-                                <div>
-                                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Sex</label>
+                                <div className="form-group">
+                                    <label className="form-label">Sex</label>
                                     <select
                                         value={sex}
                                         onChange={e => setSex(e.target.value as 'male' | 'female')}
-                                        className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                                        className="select"
                                     >
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
@@ -214,147 +228,164 @@ export default function DrugDosingPage() {
                         )}
                     </div>
                     {showCrCl && (
-                        <div className="mt-4 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-xl">
-                            <div className="flex items-center justify-between">
-                                <div>
-                                    <div className="text-sm text-cyan-400">Creatinine Clearance (Cockcroft-Gault)</div>
-                                    <div className="text-xs text-slate-500">CrCl = [(140-age) × weight × (0.85 if female)] / (72 × SCr)</div>
-                                </div>
-                                <div className="text-3xl font-bold text-white">{crcl} <span className="text-lg text-slate-400">mL/min</span></div>
+                        <div className="card-flat row between ai-center" style={{ padding: 16, flexWrap: 'wrap', gap: 12, background: 'var(--cobalt-50)', borderColor: 'rgba(28, 91, 255, .22)' }}>
+                            <div className="col gap-1">
+                                <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--cobalt)' }}>
+                                    Creatinine clearance (Cockcroft-Gault)
+                                </span>
+                                <span className="mono muted-2" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                    CrCl = [(140-age) × weight × (0.85 if female)] / (72 × SCr)
+                                </span>
                             </div>
+                            <span className="bignum" style={{ fontSize: 32, color: 'var(--ink)' }}>
+                                {crcl} <span className="mono muted" style={{ fontSize: 14 }}>mL/min</span>
+                            </span>
                         </div>
                     )}
                 </div>
 
-                {/* Category Filter */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                {/* Category filter */}
+                <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                     <button
+                        type="button"
                         onClick={() => setSelectedCategory('all')}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                            selectedCategory === 'all'
-                                ? 'bg-cyan-500/20 border border-cyan-500/40 text-cyan-400'
-                                : 'bg-slate-800/50 border border-white/5 text-slate-400 hover:bg-slate-700/50'
-                        }`}
+                        className={selectedCategory === 'all' ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
                     >
-                        All Drugs
+                        All drugs
                     </button>
                     {data?.categories.map(cat => (
                         <button
                             key={cat.id}
+                            type="button"
                             onClick={() => setSelectedCategory(cat.id)}
-                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                                selectedCategory === cat.id
-                                    ? 'bg-cyan-500/20 border border-cyan-500/40 text-cyan-400'
-                                    : 'bg-slate-800/50 border border-white/5 text-slate-400 hover:bg-slate-700/50'
-                            }`}
+                            className={selectedCategory === cat.id ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
                         >
-                            <span className="mr-1.5">{cat.icon}</span>
+                            <span style={{ marginRight: 6 }}>{cat.icon}</span>
                             {cat.name}
                         </button>
                     ))}
                 </div>
 
-                <div className="grid lg:grid-cols-3 gap-6">
-                    {/* Drug List */}
-                    <div className="lg:col-span-1 space-y-2 max-h-[700px] overflow-y-auto pr-2">
+                <div className="row gap-6 ai-start" style={{ flexWrap: 'wrap' }}>
+                    {/* Drug list */}
+                    <div className="col gap-2" style={{ flex: '1 1 280px', minWidth: 260, maxHeight: 700, overflowY: 'auto' }}>
                         {filteredDrugs.map(drug => {
                             const cat = data?.categories.find(c => c.id === drug.category);
+                            const isActive = selectedDrug === drug.id;
                             return (
                                 <button
                                     key={drug.id}
+                                    type="button"
                                     onClick={() => setSelectedDrug(drug.id)}
-                                    className={`w-full text-left p-4 rounded-xl border transition-all ${
-                                        selectedDrug === drug.id
-                                            ? 'bg-cyan-500/20 border-cyan-500/40'
-                                            : 'bg-slate-900/60 border-white/5 hover:border-white/20'
-                                    }`}
+                                    className="card row gap-3 ai-center"
+                                    style={{
+                                        padding: 14,
+                                        textAlign: 'left',
+                                        cursor: 'pointer',
+                                        borderColor: isActive ? 'var(--cobalt)' : 'var(--rule)',
+                                        background: isActive ? 'var(--cobalt-50)' : 'var(--paper)',
+                                        width: '100%',
+                                    }}
                                 >
-                                    <div className="flex items-center gap-2">
-                                        <span>{cat?.icon}</span>
-                                        <div>
-                                            <div className="font-bold text-white text-sm">{drug.name}</div>
-                                            <div className="text-xs text-slate-500">{drug.class}</div>
-                                        </div>
+                                    <span style={{ fontSize: 18, lineHeight: 1 }}>{cat?.icon}</span>
+                                    <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                                        <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)', letterSpacing: '-0.015em' }}>
+                                            {drug.name}
+                                        </span>
+                                        <span className="muted-2" style={{ fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                            {drug.class}
+                                        </span>
                                     </div>
                                 </button>
                             );
                         })}
                     </div>
 
-                    {/* Drug Details */}
-                    <div className="lg:col-span-2">
+                    {/* Drug details */}
+                    <div className="col" style={{ flex: '2 1 600px', minWidth: 0 }}>
                         {!currentDrug ? (
-                            <div className="bg-slate-900/60 border border-dashed border-white/10 rounded-2xl p-16 text-center">
-                                <div className="w-16 h-16 mx-auto mb-4 bg-cyan-500/10 rounded-xl flex items-center justify-center">
-                                    <svg className="w-8 h-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-lg font-bold text-white mb-2">Select a Drug</h3>
-                                <p className="text-slate-500 text-sm">Choose a medication from the list to view dosing information.</p>
+                            <div className="card col gap-3 ai-center" style={{ padding: 64, textAlign: 'center' }}>
+                                <span className="section-mark">select a drug</span>
+                                <h3 className="display" style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.03em' }}>
+                                    Choose a drug
+                                </h3>
+                                <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                                    Pick a medication from the list to view dosing information.
+                                </p>
                             </div>
                         ) : (
-                            <div className="bg-slate-900/60 border border-white/5 rounded-2xl overflow-hidden">
-                                {/* Drug Header */}
-                                <div className="p-6 border-b border-white/5">
-                                    <h2 className="text-2xl font-bold text-white">{currentDrug.name}</h2>
-                                    <p className="text-cyan-400 text-sm">{currentDrug.class}</p>
-                                    <p className="text-slate-400 mt-2">{currentDrug.standard_dose}</p>
-                                    {currentDrug.loading_dose && (
-                                        <p className="text-amber-400 text-sm mt-1">Loading: {currentDrug.loading_dose}</p>
-                                    )}
-                                    {currentDrug.max_dose && (
-                                        <p className="text-red-400 text-sm mt-1">Max: {currentDrug.max_dose}</p>
-                                    )}
+                            <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                                {/* Drug header */}
+                                <div className="col gap-2" style={{ padding: 24, borderBottom: '1px solid var(--rule)' }}>
+                                    <h2 className="display" style={{ fontSize: 26, margin: 0, fontWeight: 600, letterSpacing: '-0.035em' }}>
+                                        {currentDrug.name}
+                                    </h2>
+                                    <span className="mono" style={{ fontSize: 12, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                        {currentDrug.class}
+                                    </span>
+                                    <p className="muted" style={{ fontSize: 14, margin: 0 }}>{currentDrug.standard_dose}</p>
+                                    <div className="row gap-3" style={{ flexWrap: 'wrap' }}>
+                                        {currentDrug.loading_dose && (
+                                            <span className="pill pill-lemon">Loading: {currentDrug.loading_dose}</span>
+                                        )}
+                                        {currentDrug.max_dose && (
+                                            <span className="pill pill-orange">Max: {currentDrug.max_dose}</span>
+                                        )}
+                                    </div>
                                 </div>
 
-                                {/* Calculated Doses */}
-                                <div className="p-6 border-b border-white/5">
-                                    <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">
-                                        Calculated Doses for {weight} kg
-                                    </h3>
-                                    <div className="space-y-3">
+                                {/* Calculated doses */}
+                                <div className="col gap-3" style={{ padding: 24, borderBottom: '1px solid var(--rule)' }}>
+                                    <span className="kicker"><span className="dot" />calculated for {weight} kg</span>
+                                    <div className="col gap-2">
                                         {currentDrug.calculations.map((calc, i) => (
-                                            <div key={i} className="p-4 bg-slate-800/50 rounded-xl">
+                                            <div key={i} className="card-flat col gap-1" style={{ padding: 14 }}>
                                                 {calc.label && (
-                                                    <div className="text-xs text-cyan-400 font-medium mb-1">{calc.label}</div>
+                                                    <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                                        {calc.label}
+                                                    </span>
                                                 )}
-                                                <div className="text-lg font-bold text-white">
+                                                <span className="display" style={{ fontSize: 17, fontWeight: 500, color: 'var(--ink)', letterSpacing: '-0.02em' }}>
                                                     {calculateDose(calc)}
-                                                </div>
+                                                </span>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
 
-                                {/* Renal Adjustments */}
+                                {/* Renal adjustments */}
                                 {currentDrug.renal_adjustments && (
-                                    <div className="p-6 border-b border-white/5">
-                                        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">
-                                            Renal Dose Adjustments
-                                        </h3>
-                                        <div className="space-y-2">
-                                            {currentDrug.renal_adjustments.map((adj, i) => (
-                                                <div
-                                                    key={i}
-                                                    className={`p-3 rounded-xl flex items-center justify-between ${
-                                                        showCrCl && crcl >= adj.crcl_min && crcl <= adj.crcl_max
-                                                            ? 'bg-cyan-500/20 border border-cyan-500/40'
-                                                            : 'bg-slate-800/30'
-                                                    }`}
-                                                >
-                                                    <span className="text-slate-400 text-sm">
-                                                        CrCl {adj.crcl_min}-{adj.crcl_max === 999 ? '∞' : adj.crcl_max} mL/min
-                                                    </span>
-                                                    <span className="text-white font-medium">{adj.adjustment}</span>
-                                                </div>
-                                            ))}
+                                    <div className="col gap-3" style={{ padding: 24, borderBottom: '1px solid var(--rule)' }}>
+                                        <span className="kicker"><span className="dot" />renal dose adjustments</span>
+                                        <div className="col">
+                                            {currentDrug.renal_adjustments.map((adj, i, arr) => {
+                                                const isCurrent = showCrCl && crcl >= adj.crcl_min && crcl <= adj.crcl_max;
+                                                return (
+                                                    <div
+                                                        key={i}
+                                                        className="row between ai-center"
+                                                        style={{
+                                                            padding: '10px 14px',
+                                                            borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                                            background: isCurrent ? 'var(--cobalt-50)' : 'transparent',
+                                                            borderLeft: isCurrent ? '2px solid var(--cobalt)' : '2px solid transparent',
+                                                        }}
+                                                    >
+                                                        <span className="muted" style={{ fontSize: 13 }}>
+                                                            CrCl {adj.crcl_min}-{adj.crcl_max === 999 ? '∞' : adj.crcl_max} mL/min
+                                                        </span>
+                                                        <span style={{ fontSize: 13, color: 'var(--ink)', fontWeight: isCurrent ? 500 : 400 }}>
+                                                            {adj.adjustment}
+                                                        </span>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                         {showCrCl && renalAdjustment && (
-                                            <div className="mt-4 p-4 bg-amber-500/10 border border-amber-500/30 rounded-xl">
-                                                <div className="text-amber-400 font-medium">
+                                            <div className="card-flat" style={{ padding: 14, background: 'var(--lemon-50)', borderColor: 'rgba(230, 185, 40, .40)' }}>
+                                                <span style={{ fontSize: 14, color: '#8C6A00', fontWeight: 500 }}>
                                                     For CrCl {crcl} mL/min: {renalAdjustment.adjustment}
-                                                </div>
+                                                </span>
                                             </div>
                                         )}
                                     </div>
@@ -362,17 +393,17 @@ export default function DrugDosingPage() {
 
                                 {/* Monitoring */}
                                 {currentDrug.monitoring && (
-                                    <div className="p-6 border-b border-white/5">
-                                        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Monitoring</h3>
-                                        <p className="text-white">{currentDrug.monitoring}</p>
+                                    <div className="col gap-2" style={{ padding: 24, borderBottom: '1px solid var(--rule)' }}>
+                                        <span className="kicker"><span className="dot" />monitoring</span>
+                                        <p style={{ fontSize: 14, color: 'var(--ink)', margin: 0, lineHeight: 1.55 }}>{currentDrug.monitoring}</p>
                                     </div>
                                 )}
 
                                 {/* Notes */}
                                 {currentDrug.notes && (
-                                    <div className="p-6">
-                                        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Clinical Notes</h3>
-                                        <p className="text-slate-300">{currentDrug.notes}</p>
+                                    <div className="col gap-2" style={{ padding: 24 }}>
+                                        <span className="kicker"><span className="dot" />clinical notes</span>
+                                        <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0, lineHeight: 1.6 }}>{currentDrug.notes}</p>
                                     </div>
                                 )}
                             </div>
@@ -381,22 +412,16 @@ export default function DrugDosingPage() {
                 </div>
 
                 {/* Disclaimer */}
-                <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 mt-8">
-                    <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg className="w-5 h-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 className="font-semibold text-red-400 mb-1">Clinical Decision Support - Verify All Doses</h3>
-                            <p className="text-sm text-slate-400">
-                                This calculator is intended for use by healthcare professionals as a reference tool only.
-                                Always verify doses with current prescribing information, institutional protocols, and clinical judgment.
-                                Consider patient-specific factors including hepatic function, drug interactions, and clinical status.
-                            </p>
-                        </div>
-                    </div>
+                <div className="card col gap-2" style={{ padding: 24, borderColor: 'rgba(255, 90, 46, .28)' }}>
+                    <span className="kicker" style={{ color: 'var(--orange-2)' }}>
+                        <span className="dot" style={{ background: 'var(--orange)' }} />verify all doses
+                    </span>
+                    <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0, lineHeight: 1.6 }}>
+                        This calculator is intended for use by healthcare professionals as a reference tool only.
+                        Always verify doses with current prescribing information, institutional protocols, and clinical
+                        judgment. Consider patient-specific factors including hepatic function, drug interactions, and
+                        clinical status.
+                    </p>
                 </div>
             </div>
         </main>

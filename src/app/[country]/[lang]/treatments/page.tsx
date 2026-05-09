@@ -3,17 +3,15 @@ import path from 'path';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import TreatmentsExplorer, { type TreatmentType } from '@/components/ui/treatments-explorer';
-import { normalizeSpecialty, SPECIALTY_ICON_DATA } from '@/lib/normalize-specialty';
+import { normalizeSpecialty } from '@/lib/normalize-specialty';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { isRTL, getLanguageConfig, getUITranslations } from '@/lib/i18n';
 import { COUNTRIES, buildAlternateLanguages } from '@/lib/countries';
 
 /**
  * Localized Treatments Directory Page
- *
  * Renders treatments in the user's regional language with RTL support.
  * Route: /[country]/[lang]/treatments
  */
@@ -38,7 +36,6 @@ interface TreatmentEntry {
 
 const VALID_TYPES = new Set(['medical', 'surgical', 'otc', 'home_remedy', 'therapy', 'drug', 'injection', 'prescription']);
 
-// Validate country and language
 function validateParams(country: string, lang: string): boolean {
     const validCountry = COUNTRIES.find(c => c.slug === country || c.code.toLowerCase() === country);
     if (!validCountry) return false;
@@ -54,7 +51,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { country, lang } = await params;
     const ui = getUITranslations(lang);
-    const langConfig = getLanguageConfig(lang);
     const dir = isRTL(lang) ? 'rtl' : 'ltr';
 
     const countryName = COUNTRIES.find(c => c.slug === country)?.name || country;
@@ -94,7 +90,6 @@ export default async function LocalizedTreatmentsDirectory({
 }) {
     const { country, lang } = await params;
 
-    // Validate params
     if (!validateParams(country, lang)) {
         notFound();
     }
@@ -102,7 +97,6 @@ export default async function LocalizedTreatmentsDirectory({
     const ui = getUITranslations(lang);
     const langConfig = getLanguageConfig(lang);
     const dir = isRTL(lang) ? 'rtl' : 'ltr';
-    const countryConfig = COUNTRIES.find(c => c.slug === country);
 
     // Load treatments.json
     const filePath = path.join(process.cwd(), 'public', 'data', 'treatments.json');
@@ -159,17 +153,15 @@ export default async function LocalizedTreatmentsDirectory({
 
     const totalTreatments = categories.reduce((sum, c) => sum + c.treatments.length, 0);
 
-    // Treatment type labels in current language
     const TREATMENT_TYPES = [
-        { type: 'prescription', label: ui.prescriptionDrug, color: 'cyan', iconColor: 'text-cyan-400' },
-        { type: 'injection', label: ui.injectableTreatment, color: 'pink', iconColor: 'text-pink-400' },
-        { type: 'surgical', label: ui.surgicalProcedure, color: 'rose', iconColor: 'text-rose-400' },
-        { type: 'therapy', label: ui.therapy, color: 'violet', iconColor: 'text-violet-400' },
-        { type: 'otc', label: ui.otcMedication, color: 'amber', iconColor: 'text-amber-400' },
-        { type: 'home_remedy', label: ui.homeRemedy, color: 'green', iconColor: 'text-green-400' },
+        { type: 'prescription', abbr: 'RX', label: ui.prescriptionDrug },
+        { type: 'injection', abbr: 'IN', label: ui.injectableTreatment },
+        { type: 'surgical', abbr: 'SU', label: ui.surgicalProcedure },
+        { type: 'therapy', abbr: 'TH', label: ui.therapy },
+        { type: 'otc', abbr: 'OT', label: ui.otcMedication },
+        { type: 'home_remedy', abbr: 'HR', label: ui.homeRemedy },
     ];
 
-    // Breadcrumb schema
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
@@ -178,6 +170,8 @@ export default async function LocalizedTreatmentsDirectory({
             { '@type': 'ListItem', position: 2, name: ui.treatments, item: `https://aihealz.com/${country}/${lang}/treatments` },
         ],
     };
+
+    const countryName = COUNTRIES.find(c => c.slug === country)?.name || country;
 
     return (
         <>
@@ -190,24 +184,27 @@ export default async function LocalizedTreatmentsDirectory({
             <main
                 dir={dir}
                 lang={lang}
-                className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden"
+                style={{ background: 'var(--bg)', color: 'var(--ink)' }}
             >
-                {/* Background Effects */}
-                <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-blue-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-                <div className={`absolute top-0 ${dir === 'rtl' ? 'right-0' : 'left-0'} w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none`} />
-                <div className={`absolute bottom-0 ${dir === 'rtl' ? 'left-0' : 'right-0'} w-[600px] h-[600px] bg-teal-600/10 rounded-full blur-[80px] translate-y-1/2 pointer-events-none`} />
-
-                <div className="max-w-7xl mx-auto px-6 relative z-10 mt-8">
-
-                    {/* Language indicator for regional pages */}
+                <div
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                    className="col gap-7"
+                >
+                    {/* Language indicator */}
                     {lang !== 'en' && (
-                        <div className={`mb-6 flex items-center gap-3 ${dir === 'rtl' ? 'flex-row-reverse' : ''}`}>
-                            <span className="px-3 py-1 bg-primary-500/10 text-primary-400 rounded-lg text-sm font-medium border border-primary-500/20">
+                        <div className="row gap-3 ai-center" style={{ flexWrap: 'wrap' }}>
+                            <span className="pill pill-cobalt" style={{ textTransform: 'none' }}>
                                 {langConfig.nativeName}
                             </span>
                             <Link
                                 href={`/${country}/en/treatments`}
-                                className="text-sm text-slate-400 hover:text-white transition-colors"
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
                             >
                                 Switch to English →
                             </Link>
@@ -215,59 +212,41 @@ export default async function LocalizedTreatmentsDirectory({
                     )}
 
                     {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" className={`mb-6 ${dir === 'rtl' ? 'text-right' : ''}`}>
-                        <ol className={`flex items-center gap-2 text-sm text-slate-400 ${dir === 'rtl' ? 'flex-row-reverse' : ''}`}>
-                            <li>
-                                <Link href="/" className="hover:text-white transition-colors">{ui.home}</Link>
-                            </li>
-                            <li aria-hidden="true" className={dir === 'rtl' ? 'rotate-180' : ''}>
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                            </li>
-                            <li>
-                                <span className="text-white font-medium">{ui.treatments}</span>
-                            </li>
-                        </ol>
+                    <nav
+                        className="row gap-2 mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                        }}
+                        aria-label="Breadcrumb"
+                    >
+                        <Link href="/">{ui.home}</Link>
+                        <span>/</span>
+                        <span style={{ color: 'var(--ink)' }}>{ui.treatments}</span>
                     </nav>
 
-                    {/* Hero Header */}
-                    <header className={`mb-10 text-center max-w-4xl mx-auto ${dir === 'rtl' ? 'font-rtl' : ''}`}>
-                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white leading-tight">
-                            {lang === 'en' ? (
-                                <>
-                                    Medical Treatments, Drugs & <br className="hidden md:block" />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-500">Procedures Directory</span>
-                                </>
-                            ) : lang === 'hi' ? (
-                                <>
-                                    चिकित्सा उपचार, दवाएं और <br className="hidden md:block" />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-500">प्रक्रियाएं निर्देशिका</span>
-                                </>
-                            ) : lang === 'ar' ? (
-                                <>
-                                    دليل العلاجات الطبية <br className="hidden md:block" />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-500">والأدوية والإجراءات</span>
-                                </>
-                            ) : lang === 'ta' ? (
-                                <>
-                                    மருத்துவ சிகிச்சைகள், மருந்துகள் <br className="hidden md:block" />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-500">மற்றும் நடைமுறைகள்</span>
-                                </>
-                            ) : lang === 'bn' ? (
-                                <>
-                                    চিকিৎসা, ওষুধ এবং <br className="hidden md:block" />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-500">পদ্ধতির ডিরেক্টরি</span>
-                                </>
-                            ) : (
-                                <>
-                                    {ui.treatments} <br className="hidden md:block" />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-500">Directory</span>
-                                </>
-                            )}
+                    {/* Hero */}
+                    <header className="col gap-4">
+                        <span className="section-mark">treatments · {countryName}</span>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(40px, 7vw, 88px)',
+                                lineHeight: 0.95,
+                                letterSpacing: '-0.045em',
+                                margin: 0,
+                                fontWeight: 600,
+                            }}
+                        >
+                            <span className="num" style={{ color: 'var(--cobalt)', fontWeight: 600 }}>
+                                {totalTreatments.toLocaleString()}
+                            </span>{' '}
+                            {ui.treatments.toLowerCase()}
+                            <span style={{ color: 'var(--orange)' }}>.</span>
                         </h1>
-
-                        <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-6">
+                        <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 680 }}>
                             {lang === 'en'
                                 ? `Browse ${totalTreatments.toLocaleString()}+ treatments with cost estimates across 7 countries.`
                                 : lang === 'hi'
@@ -276,71 +255,122 @@ export default async function LocalizedTreatmentsDirectory({
                                         ? `تصفح ${totalTreatments.toLocaleString()}+ علاج مع تقديرات التكلفة في 7 دول.`
                                         : lang === 'ta'
                                             ? `7 நாடுகளில் ${totalTreatments.toLocaleString()}+ சிகிச்சைகளை செலவு மதிப்பீடுகளுடன் உலாவுங்கள்.`
-                                            : `${totalTreatments.toLocaleString()}+ ${ui.treatments}`
-                            }
+                                            : `${totalTreatments.toLocaleString()}+ ${ui.treatments}`}
                         </p>
-
-                        {/* Search Bar */}
-                        <div className="max-w-2xl mx-auto mb-8">
+                        <div style={{ maxWidth: 720 }}>
                             <SearchAutocomplete
+                                variant="bureau"
                                 placeholder={ui.searchPlaceholder}
-                                className="w-full"
                             />
                         </div>
                     </header>
 
-                    {/* Stats Bar */}
-                    <section aria-label="Treatment Statistics" className={`grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 ${dir === 'rtl' ? 'direction-rtl' : ''}`}>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-white mb-1">{totalTreatments.toLocaleString()}+</div>
-                            <div className="text-sm text-slate-400">{ui.treatments}</div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-cyan-400 mb-1">{categories.length}</div>
-                            <div className="text-sm text-slate-400">
-                                {lang === 'en' ? 'Specialties' : lang === 'hi' ? 'विशेषताएं' : lang === 'ar' ? 'التخصصات' : 'Specialties'}
-                            </div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-emerald-400 mb-1">7</div>
-                            <div className="text-sm text-slate-400">
-                                {lang === 'en' ? 'Countries' : lang === 'hi' ? 'देश' : lang === 'ar' ? 'الدول' : 'Countries'}
-                            </div>
-                        </div>
-                        <div className="bg-slate-900/60 border border-white/5 rounded-xl p-4 text-center">
-                            <div className="text-3xl font-extrabold text-amber-400 mb-1">90%</div>
-                            <div className="text-sm text-slate-400">{ui.potentialSavings}</div>
-                        </div>
-                    </section>
-
-                    {/* Featured Treatment Types */}
-                    <section aria-labelledby="treatment-types-heading" className="mb-12">
-                        <h2 id="treatment-types-heading" className="text-2xl font-bold text-white mb-6 text-center">
-                            {lang === 'en' ? 'Browse by Treatment Type' : lang === 'hi' ? 'उपचार प्रकार के अनुसार ब्राउज़ करें' : lang === 'ar' ? 'تصفح حسب نوع العلاج' : 'Browse by Type'}
-                        </h2>
-                        <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 ${dir === 'rtl' ? 'direction-rtl' : ''}`}>
-                            {TREATMENT_TYPES.map(t => (
-                                <Link
-                                    key={t.type}
-                                    href={`/${country}/${lang}/treatments?type=${t.type}`}
-                                    className={`group bg-slate-900/60 border border-white/5 hover:border-${t.color}-500/30 rounded-xl p-4 text-center transition-all hover:bg-slate-800/60`}
+                    {/* Stats */}
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {[
+                            { v: totalTreatments.toLocaleString(), l: ui.treatments },
+                            { v: categories.length.toLocaleString(), l: lang === 'hi' ? 'विशेषताएं' : lang === 'ar' ? 'التخصصات' : 'Specialties' },
+                            { v: '7', l: lang === 'hi' ? 'देश' : lang === 'ar' ? 'الدول' : 'Countries' },
+                            { v: '90%', l: ui.potentialSavings },
+                        ].map((s, i, arr) => (
+                            <div
+                                key={s.l}
+                                className="col gap-1"
+                                style={{
+                                    padding: '20px 24px',
+                                    borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                }}
+                            >
+                                <div
+                                    className="display num"
+                                    style={{
+                                        fontSize: 28,
+                                        fontWeight: 500,
+                                        letterSpacing: '-0.025em',
+                                        lineHeight: 1,
+                                    }}
                                 >
-                                    <div className={`w-10 h-10 mx-auto rounded-xl bg-slate-800/80 flex items-center justify-center mb-2 ${t.iconColor}`}>
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                                        </svg>
-                                    </div>
-                                    <div className="text-sm font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors">
-                                        {t.label}
-                                    </div>
-                                </Link>
-                            ))}
+                                    {s.v}
+                                </div>
+                                <div
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    {s.l}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Treatment types */}
+                    <section className="col gap-4">
+                        <h2
+                            className="display"
+                            style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+                        >
+                            {lang === 'en' ? 'Browse by treatment type' : lang === 'hi' ? 'उपचार प्रकार के अनुसार ब्राउज़ करें' : lang === 'ar' ? 'تصفح حسب نوع العلاج' : 'Browse by type'}
+                        </h2>
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                                gap: 0,
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--paper)',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {TREATMENT_TYPES.map((t, i) => {
+                                const cols = 3;
+                                const isLastCol = (i + 1) % cols === 0;
+                                const isLastRow = i >= TREATMENT_TYPES.length - cols;
+                                return (
+                                    <Link
+                                        key={t.type}
+                                        href={`/${country}/${lang}/treatments?type=${t.type}`}
+                                        className="col gap-3"
+                                        style={{
+                                            padding: '20px 22px',
+                                            borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                            borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                        }}
+                                    >
+                                        <div className="spec-icon">{t.abbr}</div>
+                                        <div
+                                            className="display"
+                                            style={{
+                                                fontSize: 16,
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.02em',
+                                            }}
+                                        >
+                                            {t.label}
+                                        </div>
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </section>
 
                     {/* Interactive Explorer */}
-                    <article aria-labelledby="explorer-heading">
-                        <h2 id="explorer-heading" className="sr-only">{ui.browseAllTreatments}</h2>
+                    <article>
+                        <h2 className="sr-only">{ui.browseAllTreatments}</h2>
                         <TreatmentsExplorer
                             categories={categories}
                             defaultCountry={country}
@@ -349,16 +379,20 @@ export default async function LocalizedTreatmentsDirectory({
                         />
                     </article>
 
-                    {/* Back to main treatments */}
-                    <div className="mt-12 text-center">
+                    {/* Back to global treatments */}
+                    <div className="row center">
                         <Link
                             href="/treatments"
-                            className={`inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors ${dir === 'rtl' ? 'flex-row-reverse' : ''}`}
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                                fontWeight: 500,
+                            }}
                         >
-                            <svg className={`w-4 h-4 ${dir === 'rtl' ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                            {ui.browseAllTreatments}
+                            ← {ui.browseAllTreatments}
                         </Link>
                     </div>
                 </div>

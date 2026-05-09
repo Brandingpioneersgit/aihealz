@@ -70,9 +70,8 @@ async function getSubscriptionData(): Promise<{
         }),
     ]);
 
-    // Calculate estimated monthly revenue
-    const premiumPrice = 2999; // INR per month
-    const enterprisePrice = 9999; // INR per month
+    const premiumPrice = 2999;
+    const enterprisePrice = 9999;
     const monthlyRevenue = (premiumTier * premiumPrice) + (enterpriseTier * enterprisePrice);
 
     return {
@@ -90,251 +89,238 @@ async function getSubscriptionData(): Promise<{
 export default async function SubscriptionsPage() {
     const { stats, subscriptions } = await getSubscriptionData();
 
-    const tierColors: Record<string, string> = {
-        free: 'bg-slate-100 text-slate-700 border-slate-200',
-        premium: 'bg-blue-100 text-blue-700 border-blue-200',
-        enterprise: 'bg-purple-100 text-purple-700 border-purple-200',
+    const tierPill: Record<string, string> = {
+        free: 'pill',
+        premium: 'pill pill-cobalt',
+        enterprise: 'pill pill-magenta',
     };
 
-    const statusColors: Record<string, string> = {
-        active: 'bg-emerald-100 text-emerald-700',
-        trialing: 'bg-blue-100 text-blue-700',
-        past_due: 'bg-amber-100 text-amber-700',
-        canceled: 'bg-rose-100 text-rose-700',
-        unpaid: 'bg-rose-100 text-rose-700',
+    const statusPill: Record<string, string> = {
+        active: 'pill pill-mint',
+        trialing: 'pill pill-cobalt',
+        past_due: 'pill pill-lemon',
+        canceled: 'pill pill-orange',
+        unpaid: 'pill pill-orange',
     };
+
+    const freePct = stats.totalDoctors > 0 ? (stats.freeTier / stats.totalDoctors) * 100 : 0;
+    const premiumPct = stats.totalDoctors > 0 ? (stats.premiumTier / stats.totalDoctors) * 100 : 0;
+    const enterprisePct = stats.totalDoctors > 0 ? (stats.enterpriseTier / stats.totalDoctors) * 100 : 0;
 
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                        </svg>
-                        Subscriptions
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / subscriptions</span>
+                    <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                        Subscriptions<span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-500 mt-1">Manage doctor subscription plans and billing.</p>
+                    <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                        Manage doctor subscription plans and billing.
+                    </p>
                 </div>
-                <Link
-                    href="/admin/doctors"
-                    className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors"
-                >
-                    Manage Doctors
+                <Link href="/admin/doctors" className="btn btn-cobalt">
+                    Manage doctors →
                 </Link>
             </div>
 
-            {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-                <div className="bg-white p-5 rounded-2xl border border-slate-200">
-                    <div className="text-sm font-medium text-slate-500 mb-1">Total Doctors</div>
-                    <div className="text-3xl font-bold text-slate-900">{stats.totalDoctors}</div>
-                </div>
-                <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-                    <div className="text-sm font-medium text-slate-500 mb-1">Free Tier</div>
-                    <div className="text-3xl font-bold text-slate-700">{stats.freeTier}</div>
-                    <div className="text-xs text-slate-500 mt-1">
-                        {stats.totalDoctors > 0 ? Math.round((stats.freeTier / stats.totalDoctors) * 100) : 0}% of total
+            {/* Stats strip */}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {[
+                    { label: 'Total doctors', value: stats.totalDoctors.toLocaleString(), sub: '' },
+                    { label: 'Free tier', value: stats.freeTier.toLocaleString(), sub: `${stats.totalDoctors > 0 ? Math.round((stats.freeTier / stats.totalDoctors) * 100) : 0}% of total` },
+                    { label: 'Premium', value: stats.premiumTier.toLocaleString(), sub: 'Rs. 2,999/mo each', subTone: 'cobalt' },
+                    { label: 'Enterprise', value: stats.enterpriseTier.toLocaleString(), sub: 'Rs. 9,999/mo each', subTone: 'magenta' },
+                    { label: 'Est. monthly revenue', value: `Rs. ${stats.monthlyRevenue.toLocaleString()}`, sub: `Rs. ${(stats.monthlyRevenue * 12).toLocaleString()}/year`, subTone: 'mint' },
+                ].map((m) => (
+                    <div
+                        key={m.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                        }}
+                    >
+                        <span className="kicker">{m.label}</span>
+                        <span className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>{m.value}</span>
+                        {m.sub && (
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    color: m.subTone === 'cobalt' ? 'var(--cobalt)'
+                                        : m.subTone === 'magenta' ? 'var(--magenta)'
+                                        : m.subTone === 'mint' ? 'var(--mint-3)'
+                                        : 'var(--ink-3)',
+                                }}
+                            >
+                                {m.sub}
+                            </span>
+                        )}
                     </div>
-                </div>
-                <div className="bg-blue-50 p-5 rounded-2xl border border-blue-200">
-                    <div className="text-sm font-medium text-blue-600 mb-1">Premium</div>
-                    <div className="text-3xl font-bold text-blue-700">{stats.premiumTier}</div>
-                    <div className="text-xs text-blue-600 mt-1">
-                        Rs. 2,999/mo each
-                    </div>
-                </div>
-                <div className="bg-purple-50 p-5 rounded-2xl border border-purple-200">
-                    <div className="text-sm font-medium text-purple-600 mb-1">Enterprise</div>
-                    <div className="text-3xl font-bold text-purple-700">{stats.enterpriseTier}</div>
-                    <div className="text-xs text-purple-600 mt-1">
-                        Rs. 9,999/mo each
-                    </div>
-                </div>
-                <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-5 rounded-2xl border border-emerald-200">
-                    <div className="text-sm font-medium text-emerald-600 mb-1">Est. Monthly Revenue</div>
-                    <div className="text-3xl font-bold text-emerald-700">
-                        Rs. {stats.monthlyRevenue.toLocaleString()}
-                    </div>
-                    <div className="text-xs text-emerald-600 mt-1">
-                        Rs. {(stats.monthlyRevenue * 12).toLocaleString()}/year
-                    </div>
-                </div>
+                ))}
             </div>
 
-            {/* Conversion Funnel */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6">
-                <h3 className="font-semibold text-slate-900 mb-4">Subscription Distribution</h3>
-                <div className="flex items-center gap-2 h-8 rounded-lg overflow-hidden">
+            {/* Distribution */}
+            <section className="card col gap-3" style={{ padding: 24 }}>
+                <span className="section-mark">subscription distribution</span>
+                <div className="row" style={{ height: 32, borderRadius: 'var(--r-2)', overflow: 'hidden', border: '1px solid var(--rule)' }}>
                     <div
-                        className="h-full bg-slate-300 flex items-center justify-center text-xs font-bold text-slate-700"
-                        style={{ width: `${stats.totalDoctors > 0 ? (stats.freeTier / stats.totalDoctors) * 100 : 0}%` }}
+                        className="row center ai-center mono"
+                        style={{ background: 'var(--ink-5)', color: 'var(--ink)', fontSize: 11, fontWeight: 600, width: `${freePct}%` }}
                     >
-                        {stats.freeTier > 0 && 'Free'}
+                        {stats.freeTier > 0 && freePct > 8 && 'Free'}
                     </div>
                     <div
-                        className="h-full bg-blue-500 flex items-center justify-center text-xs font-bold text-white"
-                        style={{ width: `${stats.totalDoctors > 0 ? (stats.premiumTier / stats.totalDoctors) * 100 : 0}%` }}
+                        className="row center ai-center mono"
+                        style={{ background: 'var(--cobalt)', color: '#fff', fontSize: 11, fontWeight: 600, width: `${premiumPct}%` }}
                     >
-                        {stats.premiumTier > 0 && 'Premium'}
+                        {stats.premiumTier > 0 && premiumPct > 8 && 'Premium'}
                     </div>
                     <div
-                        className="h-full bg-purple-500 flex items-center justify-center text-xs font-bold text-white"
-                        style={{ width: `${stats.totalDoctors > 0 ? (stats.enterpriseTier / stats.totalDoctors) * 100 : 0}%` }}
+                        className="row center ai-center mono"
+                        style={{ background: 'var(--magenta)', color: '#fff', fontSize: 11, fontWeight: 600, width: `${enterprisePct}%` }}
                     >
-                        {stats.enterpriseTier > 0 && 'Enterprise'}
+                        {stats.enterpriseTier > 0 && enterprisePct > 8 && 'Enterprise'}
                     </div>
                 </div>
-                <div className="flex justify-between mt-3 text-xs text-slate-500">
-                    <span>Free: {stats.totalDoctors > 0 ? Math.round((stats.freeTier / stats.totalDoctors) * 100) : 0}%</span>
-                    <span>Premium: {stats.totalDoctors > 0 ? Math.round((stats.premiumTier / stats.totalDoctors) * 100) : 0}%</span>
-                    <span>Enterprise: {stats.totalDoctors > 0 ? Math.round((stats.enterpriseTier / stats.totalDoctors) * 100) : 0}%</span>
+                <div className="row between mono" style={{ fontSize: 11, color: 'var(--ink-3)' }}>
+                    <span>Free: {Math.round(freePct)}%</span>
+                    <span>Premium: {Math.round(premiumPct)}%</span>
+                    <span>Enterprise: {Math.round(enterprisePct)}%</span>
                 </div>
-            </div>
+            </section>
 
-            {/* Paying Subscribers Table */}
-            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50 flex items-center justify-between">
-                    <div>
-                        <h3 className="font-semibold text-slate-900">Paying Subscribers</h3>
-                        <p className="text-sm text-slate-500 mt-1">Doctors on premium and enterprise plans</p>
+            {/* Subscribers table */}
+            <section className="card" style={{ overflow: 'hidden' }}>
+                <div className="row between ai-center hairline-b" style={{ padding: '16px 24px', flexWrap: 'wrap', gap: 12 }}>
+                    <div className="col gap-1">
+                        <span className="section-mark">paying subscribers</span>
+                        <span className="muted" style={{ fontSize: 13 }}>Doctors on premium and enterprise plans</span>
                     </div>
-                    <div className="text-sm text-slate-500">
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                         {subscriptions.length} subscriber{subscriptions.length !== 1 ? 's' : ''}
-                    </div>
+                    </span>
                 </div>
 
                 {subscriptions.length === 0 ? (
-                    <div className="p-12 text-center">
-                        <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-8 h-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                        </div>
-                        <h3 className="text-lg font-semibold text-slate-900 mb-1">No paying subscribers yet</h3>
-                        <p className="text-slate-500 text-sm">Premium and enterprise subscribers will appear here.</p>
+                    <div className="col ai-center gap-3" style={{ padding: 48, textAlign: 'center' }}>
+                        <span className="spec-icon" style={{ width: 48, height: 48, fontSize: 18 }}>SU</span>
+                        <h3 className="display" style={{ fontSize: 18, margin: 0, fontWeight: 600 }}>No paying subscribers yet</h3>
+                        <p className="muted" style={{ fontSize: 13, margin: 0 }}>Premium and enterprise subscribers will appear here.</p>
                     </div>
                 ) : (
-                    <table className="w-full text-sm">
-                        <thead className="bg-slate-50 border-b border-slate-200">
-                            <tr>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Doctor</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Location</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Tier</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
-                                <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Period</th>
-                                <th scope="col" className="text-right p-4 font-bold text-slate-600 text-xs uppercase">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100">
-                            {subscriptions.map((doc) => (
-                                <tr key={doc.id} className="hover:bg-slate-50">
-                                    <td className="p-4">
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-                                                {doc.name.charAt(0)}
-                                            </div>
-                                            <div>
-                                                <Link
-                                                    href={`/admin/doctors/${doc.id}`}
-                                                    className="font-medium text-slate-900 hover:text-teal-600"
-                                                >
-                                                    {doc.name}
-                                                </Link>
-                                                <div className="flex items-center gap-2">
-                                                    <p className="text-xs text-slate-500">/{doc.slug}</p>
-                                                    {doc.isVerified && (
-                                                        <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                        </svg>
-                                                    )}
+                    <div style={{ overflowX: 'auto' }}>
+                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                            <thead style={{ background: 'var(--bg-2)' }}>
+                                <tr style={{ borderBottom: '1px solid var(--rule)' }}>
+                                    {['Doctor', 'Location', 'Tier', 'Status', 'Period'].map(h => (
+                                        <th key={h} scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>{h}</th>
+                                    ))}
+                                    <th scope="col" className="mono" style={{ textAlign: 'right', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {subscriptions.map((doc) => (
+                                    <tr key={doc.id} style={{ borderBottom: '1px solid var(--rule-2)' }}>
+                                        <td style={{ padding: 14 }}>
+                                            <div className="row ai-center gap-3">
+                                                <span className="spec-icon" aria-hidden="true">{doc.name.charAt(0).toUpperCase()}</span>
+                                                <div className="col gap-1">
+                                                    <Link href={`/admin/doctors/${doc.id}`} style={{ fontWeight: 500, color: 'var(--ink)' }}>
+                                                        {doc.name}
+                                                    </Link>
+                                                    <div className="row ai-center gap-2">
+                                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>/{doc.slug}</span>
+                                                        {doc.isVerified && <span className="pill pill-mint" aria-label="Verified">✓</span>}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td className="p-4 text-slate-600">
-                                        {doc.geography?.name || '-'}
-                                    </td>
-                                    <td className="p-4">
-                                        <span className={`px-2 py-1 text-xs font-bold rounded-full border ${tierColors[doc.subscriptionTier]}`}>
-                                            {doc.subscriptionTier}
-                                        </span>
-                                    </td>
-                                    <td className="p-4">
-                                        {doc.providerSubscription ? (
-                                            <span className={`px-2 py-1 text-xs font-bold rounded-full ${statusColors[doc.providerSubscription.status] || 'bg-slate-100 text-slate-700'}`}>
-                                                {doc.providerSubscription.status}
-                                            </span>
-                                        ) : (
-                                            <span className="text-slate-400">-</span>
-                                        )}
-                                    </td>
-                                    <td className="p-4 text-slate-600 text-xs">
-                                        {doc.providerSubscription?.currentPeriodEnd ? (
-                                            <span>
-                                                Renews {new Date(doc.providerSubscription.currentPeriodEnd).toLocaleDateString()}
-                                            </span>
-                                        ) : (
-                                            <span className="text-slate-400">Manual upgrade</span>
-                                        )}
-                                    </td>
-                                    <td className="p-4 text-right">
-                                        <div className="flex items-center justify-end gap-2">
-                                            <Link
-                                                href={`/admin/doctors/${doc.id}`}
-                                                className="px-3 py-1 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded"
-                                            >
-                                                View
-                                            </Link>
-                                            {doc.providerSubscription?.stripeCustomerId && (
-                                                <a
-                                                    href={`https://dashboard.stripe.com/customers/${doc.providerSubscription.stripeCustomerId}`}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="px-3 py-1 text-sm font-medium text-purple-600 hover:bg-purple-50 rounded"
-                                                >
-                                                    Stripe
-                                                </a>
+                                        </td>
+                                        <td style={{ padding: 14, color: 'var(--ink-2)' }}>{doc.geography?.name || '—'}</td>
+                                        <td style={{ padding: 14 }}>
+                                            <span className={tierPill[doc.subscriptionTier]}>{doc.subscriptionTier}</span>
+                                        </td>
+                                        <td style={{ padding: 14 }}>
+                                            {doc.providerSubscription ? (
+                                                <span className={statusPill[doc.providerSubscription.status] || 'pill'}>
+                                                    {doc.providerSubscription.status}
+                                                </span>
+                                            ) : (
+                                                <span className="muted">—</span>
                                             )}
-                                        </div>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                                        </td>
+                                        <td className="mono" style={{ padding: 14, fontSize: 12, color: 'var(--ink-3)' }}>
+                                            {doc.providerSubscription?.currentPeriodEnd ? (
+                                                <span>Renews {new Date(doc.providerSubscription.currentPeriodEnd).toLocaleDateString()}</span>
+                                            ) : (
+                                                <span style={{ color: 'var(--ink-4)' }}>Manual upgrade</span>
+                                            )}
+                                        </td>
+                                        <td style={{ padding: 14, textAlign: 'right' }}>
+                                            <div className="row gap-2" style={{ justifyContent: 'flex-end' }}>
+                                                <Link href={`/admin/doctors/${doc.id}`} className="btn btn-ghost btn-sm">View</Link>
+                                                {doc.providerSubscription?.stripeCustomerId && (
+                                                    <a
+                                                        href={`https://dashboard.stripe.com/customers/${doc.providerSubscription.stripeCustomerId}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="btn btn-paper btn-sm"
+                                                    >
+                                                        Stripe
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 )}
-            </div>
+            </section>
 
-            {/* Upgrade Opportunities */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-200 p-6">
-                <h3 className="font-semibold text-slate-900 mb-4">Upgrade Opportunities</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-white rounded-xl border border-slate-200 p-4">
-                        <div className="text-2xl font-bold text-slate-900">{stats.freeTier}</div>
-                        <div className="text-sm text-slate-600 mb-2">Free doctors</div>
-                        <p className="text-xs text-slate-500">
+            {/* Upgrade opportunities */}
+            <section className="card col gap-4" style={{ padding: 24 }}>
+                <span className="section-mark">upgrade opportunities</span>
+                <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 16 }}>
+                    <div className="card-quiet col gap-2" style={{ padding: 16 }}>
+                        <span className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>{stats.freeTier.toLocaleString()}</span>
+                        <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>Free doctors</span>
+                        <span className="muted" style={{ fontSize: 12 }}>
                             Potential monthly revenue: Rs. {(stats.freeTier * 2999).toLocaleString()}
-                        </p>
+                        </span>
                     </div>
-                    <div className="bg-white rounded-xl border border-slate-200 p-4">
-                        <div className="text-2xl font-bold text-slate-900">{stats.premiumTier}</div>
-                        <div className="text-sm text-slate-600 mb-2">Premium doctors</div>
-                        <p className="text-xs text-slate-500">
+                    <div className="card-quiet col gap-2" style={{ padding: 16 }}>
+                        <span className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>{stats.premiumTier.toLocaleString()}</span>
+                        <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>Premium doctors</span>
+                        <span className="muted" style={{ fontSize: 12 }}>
                             Upgrade potential: Rs. {(stats.premiumTier * 7000).toLocaleString()}/mo
-                        </p>
+                        </span>
                     </div>
-                    <div className="bg-white rounded-xl border border-slate-200 p-4">
-                        <div className="text-2xl font-bold text-blue-700">
+                    <div className="card-quiet col gap-2" style={{ padding: 16 }}>
+                        <span className="num bignum" style={{ fontSize: 28, color: 'var(--cobalt)' }}>
                             {stats.totalDoctors > 0 ? Math.round(((stats.premiumTier + stats.enterpriseTier) / stats.totalDoctors) * 100) : 0}%
-                        </div>
-                        <div className="text-sm text-slate-600 mb-2">Conversion Rate</div>
-                        <p className="text-xs text-slate-500">
-                            Free to paid conversion
-                        </p>
+                        </span>
+                        <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>Conversion rate</span>
+                        <span className="muted" style={{ fontSize: 12 }}>Free to paid conversion</span>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }

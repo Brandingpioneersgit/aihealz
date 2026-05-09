@@ -98,7 +98,6 @@ export default function ContentHealthPage() {
                     type: 'success',
                     message: `Audit complete: ${json.pagesChecked} pages analyzed, ${json.issuesFound} issues found.`,
                 });
-                // Refresh data after audit
                 await fetchData();
             } else {
                 setAuditResult({
@@ -118,70 +117,82 @@ export default function ContentHealthPage() {
         }
     };
 
-    const getPriorityColor = (score: number | null) => {
-        if (!score) return 'bg-slate-100 text-slate-600 border-slate-200';
-        if (score < 0.5) return 'bg-rose-50 text-rose-600 border-rose-200';
-        if (score < 0.8) return 'bg-amber-50 text-amber-600 border-amber-200';
-        return 'bg-emerald-50 text-emerald-600 border-emerald-200';
+    const getPriorityPill = (score: number | null) => {
+        if (!score) return 'pill';
+        if (score < 0.5) return 'pill pill-orange';
+        if (score < 0.8) return 'pill pill-lemon';
+        return 'pill pill-mint';
     };
 
-    const getStatusColor = (status: string) => {
+    const getStatusPill = (status: string) => {
         switch (status) {
             case 'submitted':
             case 'success':
-                return 'bg-emerald-50 text-emerald-700 border-emerald-200';
+                return 'pill pill-mint';
             case 'pending':
-                return 'bg-amber-50 text-amber-700 border-amber-200';
+                return 'pill pill-lemon';
             case 'failed':
             case 'error':
-                return 'bg-rose-50 text-rose-700 border-rose-200';
+                return 'pill pill-orange';
             default:
-                return 'bg-slate-50 text-slate-700 border-slate-200';
+                return 'pill';
         }
     };
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center min-h-[400px]">
-                <div className="text-center">
-                    <div className="animate-spin w-10 h-10 border-4 border-teal-600 border-t-transparent rounded-full mx-auto mb-4" />
-                    <p className="text-slate-500">Loading SEO health data...</p>
+            <div className="row center ai-center" style={{ minHeight: 400 }}>
+                <div className="col ai-center gap-3">
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            width: 32,
+                            height: 32,
+                            border: '2px solid var(--rule)',
+                            borderTopColor: 'var(--cobalt)',
+                            borderRadius: '50%',
+                            animation: 'spin 0.8s linear infinite',
+                        }}
+                    />
+                    <p className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                        Loading SEO health data…
+                    </p>
                 </div>
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
             </div>
         );
     }
 
     if (!data) {
         return (
-            <div className="text-center py-12">
-                <p className="text-slate-500">Failed to load data. Please try again.</p>
-                <button onClick={fetchData} className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg">
-                    Retry
-                </button>
+            <div className="col ai-center gap-3" style={{ padding: '64px 0' }}>
+                <p className="muted" style={{ fontSize: 14 }}>Failed to load data. Please try again.</p>
+                <button onClick={fetchData} className="btn btn-cobalt">Retry</button>
             </div>
         );
     }
 
     return (
-        <div className="space-y-6">
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        Content Health
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / content health</span>
+                    <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                        Content health<span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-500 mt-1">Monitor SEO performance, content freshness, and indexing status.</p>
+                    <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                        Monitor SEO performance, content freshness, and indexing status.
+                    </p>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="row ai-center gap-3" style={{ flexWrap: 'wrap' }}>
                     <select
                         value={countryFilter}
                         onChange={(e) => setCountryFilter(e.target.value)}
-                        className="px-3 py-2 border border-slate-300 rounded-lg text-sm"
+                        className="select"
+                        style={{ minWidth: 200 }}
                     >
-                        <option value="">All Countries</option>
+                        <option value="">All countries</option>
                         {data.countries.map((c) => (
                             <option key={c.countryCode} value={c.countryCode}>
                                 {c.countryCode} ({c.indexedPages.toLocaleString()} pages)
@@ -191,157 +202,153 @@ export default function ContentHealthPage() {
                     <button
                         onClick={runFullAudit}
                         disabled={auditing}
-                        className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="btn btn-cobalt"
                     >
-                        {auditing ? (
-                            <>
-                                <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                                </svg>
-                                Running Audit...
-                            </>
-                        ) : (
-                            <>
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                                </svg>
-                                Run Full Audit
-                            </>
-                        )}
+                        {auditing ? 'Running audit…' : 'Run full audit →'}
                     </button>
                 </div>
             </div>
 
-            {/* Audit Result Message */}
             {auditResult && (
-                <div className={`p-4 rounded-lg ${
-                    auditResult.type === 'success'
-                        ? 'bg-emerald-50 border border-emerald-200 text-emerald-700'
-                        : 'bg-red-50 border border-red-200 text-red-700'
-                }`}>
+                <div
+                    role="status"
+                    className="card-flat"
+                    style={{
+                        padding: '12px 16px',
+                        borderColor: auditResult.type === 'success' ? 'rgba(40, 212, 168, .35)' : 'rgba(255, 90, 46, .35)',
+                        background: auditResult.type === 'success' ? 'var(--mint-50)' : 'var(--orange-50)',
+                        color: auditResult.type === 'success' ? 'var(--mint-3)' : 'var(--orange-2)',
+                        fontSize: 13,
+                    }}
+                >
                     {auditResult.message}
                 </div>
             )}
 
-            {/* Overview Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="bg-white p-5 rounded-2xl border border-slate-200">
-                    <div className="text-sm font-medium text-slate-500 mb-1">Total Indexed</div>
-                    <div className="text-3xl font-bold text-slate-900">{data.indexing.totalSubmitted.toLocaleString()}</div>
-                    <div className="text-sm text-emerald-600 font-medium mt-2 flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                        Pages submitted
+            {/* Overview metrics */}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {[
+                    { label: 'Total indexed', value: data.indexing.totalSubmitted.toLocaleString(), sub: 'Pages submitted', subTone: 'cobalt' },
+                    {
+                        label: 'Avg. freshness',
+                        value: `${Math.round(data.freshness.averageScore * 100)}/100`,
+                        sub: data.freshness.averageScore >= 0.8 ? 'Excellent health' : data.freshness.averageScore >= 0.6 ? 'Needs attention' : 'Critical',
+                        subTone: data.freshness.averageScore >= 0.8 ? 'mint' : data.freshness.averageScore >= 0.6 ? 'lemon' : 'orange',
+                    },
+                    {
+                        label: 'Needs refresh',
+                        value: data.freshness.staleContent.length.toLocaleString(),
+                        sub: 'Stale pages',
+                        subTone: data.freshness.staleContent.length > 50 ? 'orange' : 'muted',
+                    },
+                    { label: 'Keyword opportunities', value: data.keywordGaps.length.toLocaleString(), sub: 'Gaps to address', subTone: 'cobalt' },
+                ].map((m, i) => (
+                    <div
+                        key={m.label}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                        }}
+                    >
+                        <span className="kicker">{m.label}</span>
+                        <span className="num bignum" style={{ fontSize: 32, color: 'var(--ink)' }}>{m.value}</span>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                                color: m.subTone === 'mint' ? 'var(--mint-3)'
+                                    : m.subTone === 'lemon' ? 'var(--lemon-2)'
+                                    : m.subTone === 'orange' ? 'var(--orange-2)'
+                                    : m.subTone === 'cobalt' ? 'var(--cobalt)'
+                                    : 'var(--ink-3)',
+                            }}
+                        >
+                            {m.sub}
+                        </span>
                     </div>
-                </div>
-                <div className="bg-white p-5 rounded-2xl border border-slate-200">
-                    <div className="text-sm font-medium text-slate-500 mb-1">Avg. Freshness Score</div>
-                    <div className="text-3xl font-bold text-slate-900">
-                        {Math.round(data.freshness.averageScore * 100)}/100
-                    </div>
-                    <div className={`text-sm font-medium mt-2 ${
-                        data.freshness.averageScore >= 0.8 ? 'text-emerald-600' :
-                        data.freshness.averageScore >= 0.6 ? 'text-amber-600' : 'text-rose-600'
-                    }`}>
-                        {data.freshness.averageScore >= 0.8 ? 'Excellent Health' :
-                         data.freshness.averageScore >= 0.6 ? 'Needs Attention' : 'Critical'}
-                    </div>
-                </div>
-                <div className={`p-5 rounded-2xl border ${
-                    data.freshness.staleContent.length > 50
-                        ? 'bg-rose-50 border-rose-200'
-                        : 'bg-white border-slate-200'
-                }`}>
-                    <div className={`text-sm font-medium mb-1 ${
-                        data.freshness.staleContent.length > 50 ? 'text-rose-600' : 'text-slate-500'
-                    }`}>
-                        Needs Refresh
-                    </div>
-                    <div className={`text-3xl font-bold ${
-                        data.freshness.staleContent.length > 50 ? 'text-rose-700' : 'text-slate-900'
-                    }`}>
-                        {data.freshness.staleContent.length}
-                    </div>
-                    <div className={`text-sm font-medium mt-2 ${
-                        data.freshness.staleContent.length > 50 ? 'text-rose-600' : 'text-slate-500'
-                    }`}>
-                        Pages with stale content
-                    </div>
-                </div>
-                <div className="bg-white p-5 rounded-2xl border border-slate-200">
-                    <div className="text-sm font-medium text-slate-500 mb-1">Keyword Opportunities</div>
-                    <div className="text-3xl font-bold text-slate-900">{data.keywordGaps.length}</div>
-                    <div className="text-sm text-blue-600 font-medium mt-2">
-                        Gaps to address
-                    </div>
-                </div>
+                ))}
             </div>
 
             {/* Tabs */}
-            <div className="flex gap-2 border-b border-slate-200">
+            <div className="row hairline-b" style={{ gap: 8 }}>
                 {[
-                    { id: 'freshness', label: 'Content Freshness', count: data.freshness.staleContent.length },
-                    { id: 'indexing', label: 'Index Submissions', count: data.indexing.recentSubmissions.length },
-                    { id: 'keywords', label: 'Keyword Gaps', count: data.keywordGaps.length },
+                    { id: 'freshness', label: 'Content freshness', count: data.freshness.staleContent.length },
+                    { id: 'indexing', label: 'Index submissions', count: data.indexing.recentSubmissions.length },
+                    { id: 'keywords', label: 'Keyword gaps', count: data.keywordGaps.length },
                 ].map((tab) => (
                     <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id as typeof activeTab)}
-                        className={`px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
-                            activeTab === tab.id
-                                ? 'border-teal-600 text-teal-700'
-                                : 'border-transparent text-slate-600 hover:text-slate-900'
-                        }`}
+                        style={{
+                            padding: '12px 16px',
+                            fontSize: 13,
+                            fontWeight: 500,
+                            background: 'transparent',
+                            border: 'none',
+                            borderBottom: activeTab === tab.id ? '2px solid var(--cobalt)' : '2px solid transparent',
+                            color: activeTab === tab.id ? 'var(--cobalt)' : 'var(--ink-3)',
+                            marginBottom: -1,
+                        }}
                     >
                         {tab.label}
-                        <span className="ml-2 px-2 py-0.5 text-xs bg-slate-100 rounded-full">
-                            {tab.count}
-                        </span>
+                        <span className="pill" style={{ marginLeft: 8 }}>{tab.count}</span>
                     </button>
                 ))}
             </div>
 
-            {/* Content Based on Tab */}
+            {/* Freshness tab */}
             {activeTab === 'freshness' && (
-                <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                    <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50">
-                        <h3 className="font-semibold text-slate-900">Pages Needing Attention</h3>
+                <div className="card" style={{ overflow: 'hidden' }}>
+                    <div className="row ai-center hairline-b" style={{ padding: '16px 24px' }}>
+                        <span className="section-mark">pages needing attention</span>
                     </div>
                     {data.freshness.staleContent.length === 0 ? (
-                        <div className="p-12 text-center">
-                            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <h3 className="text-lg font-semibold text-slate-900 mb-1">All content is fresh!</h3>
-                            <p className="text-slate-500">No pages need refreshing at this time.</p>
+                        <div className="col ai-center gap-3" style={{ padding: 48 }}>
+                            <span className="spec-icon" style={{ background: 'var(--mint)', width: 48, height: 48, fontSize: 22 }}>✓</span>
+                            <h3 className="display" style={{ fontSize: 18, margin: 0, fontWeight: 600 }}>All content is fresh</h3>
+                            <p className="muted" style={{ fontSize: 13, margin: 0 }}>No pages need refreshing at this time.</p>
                         </div>
                     ) : (
-                        <div className="divide-y divide-slate-100">
-                            {data.freshness.staleContent.map((item, i) => (
-                                <div key={i} className="p-4 px-6 flex items-center justify-between hover:bg-slate-50 transition-colors">
-                                    <div className="flex-1 min-w-0">
-                                        <h4 className="font-semibold text-slate-900 text-sm mb-1 truncate">
-                                            {item.pageType}
-                                        </h4>
-                                        <div className="text-xs text-slate-500 font-mono truncate">{item.url}</div>
-                                        <div className="text-xs text-slate-400 mt-1">
+                        <div className="col">
+                            {data.freshness.staleContent.map((item, i, arr) => (
+                                <div
+                                    key={i}
+                                    className="row between ai-center"
+                                    style={{
+                                        padding: '14px 24px',
+                                        borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                        gap: 16,
+                                    }}
+                                >
+                                    <div className="col gap-1" style={{ minWidth: 0, flex: 1 }}>
+                                        <span style={{ fontSize: 14, fontWeight: 500 }}>{item.pageType}</span>
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{item.url}</span>
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
                                             Last modified: {new Date(item.lastModified).toLocaleDateString()}
-                                        </div>
+                                        </span>
                                     </div>
-                                    <div className="flex items-center gap-4 ml-4">
-                                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${getPriorityColor(item.freshnessScore)}`}>
+                                    <div className="row ai-center gap-3" style={{ flexShrink: 0 }}>
+                                        <span className={getPriorityPill(item.freshnessScore)}>
                                             {item.refreshReason || 'Needs refresh'}
                                         </span>
-                                        <span className="text-sm font-bold text-slate-700">
+                                        <span className="num" style={{ fontSize: 14, fontWeight: 600 }}>
                                             {item.freshnessScore ? Math.round(item.freshnessScore * 100) : 0}%
                                         </span>
-                                        <button className="text-sm font-medium text-teal-600 hover:text-teal-700 hover:underline whitespace-nowrap">
-                                            Refresh Now
-                                        </button>
+                                        <button className="btn btn-paper btn-sm">Refresh</button>
                                     </div>
                                 </div>
                             ))}
@@ -350,52 +357,44 @@ export default function ContentHealthPage() {
                 </div>
             )}
 
+            {/* Indexing tab */}
             {activeTab === 'indexing' && (
-                <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                    <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50 flex items-center justify-between">
-                        <h3 className="font-semibold text-slate-900">Recent Index Submissions</h3>
-                        <div className="flex gap-2">
+                <div className="card" style={{ overflow: 'hidden' }}>
+                    <div className="row between ai-center hairline-b" style={{ padding: '16px 24px', flexWrap: 'wrap', gap: 12 }}>
+                        <span className="section-mark">recent index submissions</span>
+                        <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                             {Object.entries(data.indexing.statusBreakdown).map(([status, count]) => (
-                                <span
-                                    key={status}
-                                    className={`text-xs font-semibold px-2 py-1 rounded-full border ${getStatusColor(status)}`}
-                                >
+                                <span key={status} className={getStatusPill(status)}>
                                     {status}: {count}
                                 </span>
                             ))}
                         </div>
                     </div>
                     {data.indexing.recentSubmissions.length === 0 ? (
-                        <div className="p-12 text-center text-slate-500">
-                            No recent submissions
+                        <div className="col ai-center" style={{ padding: 48 }}>
+                            <p className="muted" style={{ fontSize: 13 }}>No recent submissions</p>
                         </div>
                     ) : (
-                        <table className="w-full text-sm">
-                            <thead className="bg-slate-50 border-b border-slate-200">
-                                <tr>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">URL</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">API</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Status</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Response</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Submitted</th>
+                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                            <thead style={{ background: 'var(--bg-2)' }}>
+                                <tr style={{ borderBottom: '1px solid var(--rule)' }}>
+                                    <th scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>URL</th>
+                                    <th scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>API</th>
+                                    <th scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Status</th>
+                                    <th scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Response</th>
+                                    <th scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>Submitted</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-slate-100">
+                            <tbody>
                                 {data.indexing.recentSubmissions.map((sub, i) => (
-                                    <tr key={i} className="hover:bg-slate-50">
-                                        <td className="p-4 font-mono text-xs text-slate-600 max-w-xs truncate">
-                                            {sub.url}
+                                    <tr key={i} style={{ borderBottom: '1px solid var(--rule-2)' }}>
+                                        <td className="mono" style={{ padding: 14, fontSize: 12, color: 'var(--ink-3)', maxWidth: 320, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{sub.url}</td>
+                                        <td style={{ padding: 14, color: 'var(--ink-2)' }}>{sub.indexApi}</td>
+                                        <td style={{ padding: 14 }}>
+                                            <span className={getStatusPill(sub.status)}>{sub.status}</span>
                                         </td>
-                                        <td className="p-4 text-slate-600">{sub.indexApi}</td>
-                                        <td className="p-4">
-                                            <span className={`text-xs font-semibold px-2 py-1 rounded-full border ${getStatusColor(sub.status)}`}>
-                                                {sub.status}
-                                            </span>
-                                        </td>
-                                        <td className="p-4 text-slate-600">{sub.responseCode || '-'}</td>
-                                        <td className="p-4 text-slate-500">
-                                            {new Date(sub.submittedAt).toLocaleString()}
-                                        </td>
+                                        <td className="num" style={{ padding: 14, color: 'var(--ink-2)' }}>{sub.responseCode || '—'}</td>
+                                        <td className="mono" style={{ padding: 14, fontSize: 12, color: 'var(--ink-4)' }}>{new Date(sub.submittedAt).toLocaleString()}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -404,60 +403,58 @@ export default function ContentHealthPage() {
                 </div>
             )}
 
+            {/* Keywords tab */}
             {activeTab === 'keywords' && (
-                <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                    <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50">
-                        <h3 className="font-semibold text-slate-900">Keyword Opportunities</h3>
-                        <p className="text-sm text-slate-500 mt-1">Keywords where competitors outrank you</p>
+                <div className="card" style={{ overflow: 'hidden' }}>
+                    <div className="col gap-1 hairline-b" style={{ padding: '16px 24px' }}>
+                        <span className="section-mark">keyword opportunities</span>
+                        <span className="muted" style={{ fontSize: 13 }}>Keywords where competitors outrank you</span>
                     </div>
                     {data.keywordGaps.length === 0 ? (
-                        <div className="p-12 text-center text-slate-500">
-                            No keyword gaps identified
+                        <div className="col ai-center" style={{ padding: 48 }}>
+                            <p className="muted" style={{ fontSize: 13 }}>No keyword gaps identified</p>
                         </div>
                     ) : (
-                        <table className="w-full text-sm">
-                            <thead className="bg-slate-50 border-b border-slate-200">
-                                <tr>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Keyword</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Volume</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Your Rank</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Competitor</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Opportunity</th>
-                                    <th scope="col" className="text-left p-4 font-bold text-slate-600 text-xs uppercase">Action</th>
+                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                            <thead style={{ background: 'var(--bg-2)' }}>
+                                <tr style={{ borderBottom: '1px solid var(--rule)' }}>
+                                    {['Keyword', 'Volume', 'Your rank', 'Competitor', 'Opportunity', 'Action'].map(h => (
+                                        <th key={h} scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>{h}</th>
+                                    ))}
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-slate-100">
+                            <tbody>
                                 {data.keywordGaps.map((gap, i) => (
-                                    <tr key={i} className="hover:bg-slate-50">
-                                        <td className="p-4 font-medium text-slate-900">{gap.keyword}</td>
-                                        <td className="p-4 text-slate-600">{gap.searchVolume?.toLocaleString() || '-'}</td>
-                                        <td className="p-4">
-                                            <span className={`font-bold ${
-                                                gap.currentRank && gap.currentRank <= 10 ? 'text-emerald-600' :
-                                                gap.currentRank && gap.currentRank <= 30 ? 'text-amber-600' : 'text-slate-500'
-                                            }`}>
+                                    <tr key={i} style={{ borderBottom: '1px solid var(--rule-2)' }}>
+                                        <td style={{ padding: 14, fontWeight: 500 }}>{gap.keyword}</td>
+                                        <td className="num" style={{ padding: 14, color: 'var(--ink-2)' }}>{gap.searchVolume?.toLocaleString() || '—'}</td>
+                                        <td style={{ padding: 14 }}>
+                                            <span
+                                                className="num"
+                                                style={{
+                                                    fontWeight: 600,
+                                                    color: gap.currentRank && gap.currentRank <= 10 ? 'var(--mint-3)'
+                                                        : gap.currentRank && gap.currentRank <= 30 ? 'var(--lemon-2)'
+                                                        : 'var(--ink-4)',
+                                                }}
+                                            >
                                                 #{gap.currentRank || 'N/A'}
                                             </span>
                                         </td>
-                                        <td className="p-4 text-slate-600">
+                                        <td style={{ padding: 14, color: 'var(--ink-2)' }}>
                                             {gap.competitor && (
                                                 <span>
-                                                    {gap.competitor} <span className="text-emerald-600 font-bold">#{gap.competitorRank}</span>
+                                                    {gap.competitor} <span className="num" style={{ color: 'var(--mint-3)', fontWeight: 600 }}>#{gap.competitorRank}</span>
                                                 </span>
                                             )}
                                         </td>
-                                        <td className="p-4">
-                                            <div className="w-20 h-2 bg-slate-200 rounded-full overflow-hidden">
-                                                <div
-                                                    className="h-full bg-gradient-to-r from-amber-500 to-emerald-500"
-                                                    style={{ width: `${(gap.opportunityScore || 0) * 100}%` }}
-                                                />
+                                        <td style={{ padding: 14 }}>
+                                            <div style={{ width: 80, height: 6, background: 'var(--bg-2)', borderRadius: 999, overflow: 'hidden' }}>
+                                                <div style={{ height: '100%', width: `${(gap.opportunityScore || 0) * 100}%`, background: 'var(--cobalt)' }} />
                                             </div>
                                         </td>
-                                        <td className="p-4">
-                                            <span className="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded-full">
-                                                {gap.suggestedAction || 'Create content'}
-                                            </span>
+                                        <td style={{ padding: 14 }}>
+                                            <span className="pill pill-cobalt">{gap.suggestedAction || 'Create content'}</span>
                                         </td>
                                     </tr>
                                 ))}
@@ -467,25 +464,36 @@ export default function ContentHealthPage() {
                 </div>
             )}
 
-            {/* Sitemap Overview */}
-            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-                <div className="px-6 py-4 border-b border-slate-200 bg-slate-50/50 flex items-center justify-between">
-                    <h3 className="font-semibold text-slate-900">Recent Sitemaps</h3>
-                    <Link href="/admin/sitemap" className="text-sm text-teal-600 hover:text-teal-700 font-medium">
-                        View All Sitemaps →
+            {/* Sitemap overview */}
+            <div className="card" style={{ overflow: 'hidden' }}>
+                <div className="row between ai-center hairline-b" style={{ padding: '16px 24px' }}>
+                    <span className="section-mark">recent sitemaps</span>
+                    <Link
+                        href="/admin/sitemap"
+                        className="mono"
+                        style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+                    >
+                        View all sitemaps →
                     </Link>
                 </div>
-                <div className="divide-y divide-slate-100">
-                    {data.sitemaps.slice(0, 5).map((sitemap, i) => (
-                        <div key={i} className="px-6 py-3 flex items-center justify-between hover:bg-slate-50">
-                            <div className="flex items-center gap-3">
-                                <span className="font-mono text-sm text-indigo-600">{sitemap.sitemapName}</span>
-                                {sitemap.isIndex && (
-                                    <span className="text-xs px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded">Index</span>
-                                )}
+                <div className="col">
+                    {data.sitemaps.slice(0, 5).map((sitemap, i, arr) => (
+                        <div
+                            key={i}
+                            className="row between ai-center"
+                            style={{
+                                padding: '12px 24px',
+                                borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                gap: 12,
+                                flexWrap: 'wrap',
+                            }}
+                        >
+                            <div className="row ai-center gap-3">
+                                <span className="mono" style={{ fontSize: 13, color: 'var(--cobalt)' }}>{sitemap.sitemapName}</span>
+                                {sitemap.isIndex && <span className="pill pill-cobalt">Index</span>}
                             </div>
-                            <div className="flex items-center gap-6 text-sm text-slate-500">
-                                <span>{sitemap.urlCount?.toLocaleString() || '-'} URLs</span>
+                            <div className="row ai-center gap-5 mono" style={{ fontSize: 12, color: 'var(--ink-3)' }}>
+                                <span>{sitemap.urlCount?.toLocaleString() || '—'} URLs</span>
                                 <span>{sitemap.generationMs}ms</span>
                                 <span>{new Date(sitemap.generatedAt).toLocaleString()}</span>
                             </div>

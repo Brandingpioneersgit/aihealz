@@ -29,15 +29,15 @@ interface ReferenceData {
 }
 
 const CATEGORIES = [
-    { id: 'all', name: 'All', iconPath: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01' },
-    { id: 'Sedation', name: 'Sedation', iconPath: 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' },
-    { id: 'Emergency', name: 'Emergency', iconPath: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' },
-    { id: 'Toxicology', name: 'Toxicology', iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z' },
-    { id: 'Infectious Disease', name: 'ID', iconPath: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' },
-    { id: 'Critical Care', name: 'ICU', iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
-    { id: 'Assessment', name: 'Assessment', iconPath: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
-    { id: 'Hematology', name: 'Hematology', iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z' },
-    { id: 'Endocrine', name: 'Endocrine', iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z' },
+    { id: 'all', name: 'All' },
+    { id: 'Sedation', name: 'Sedation' },
+    { id: 'Emergency', name: 'Emergency' },
+    { id: 'Toxicology', name: 'Toxicology' },
+    { id: 'Infectious Disease', name: 'ID' },
+    { id: 'Critical Care', name: 'ICU' },
+    { id: 'Assessment', name: 'Assessment' },
+    { id: 'Hematology', name: 'Hematology' },
+    { id: 'Endocrine', name: 'Endocrine' },
 ];
 
 export default function QuickReferencePage() {
@@ -76,10 +76,10 @@ export default function QuickReferencePage() {
 
     if (loading) {
         return (
-            <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex items-center justify-center h-64">
-                        <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
+                    <div className="row center" style={{ height: 256 }}>
+                        <span className="mono muted" style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Loading…</span>
                     </div>
                 </div>
             </main>
@@ -87,352 +87,417 @@ export default function QuickReferencePage() {
     }
 
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-purple-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
                 {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6">
-                    <Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link>
-                    <span>/</span>
-                    <Link href="/for-doctors" className="hover:text-cyan-400 transition-colors">For Doctors</Link>
-                    <span>/</span>
-                    <span className="text-slate-300">Quick Reference</span>
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        flexWrap: 'wrap',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                    <span aria-hidden="true">/</span>
+                    <Link href="/for-doctors" style={{ color: 'var(--ink-3)' }}>For Doctors</Link>
+                    <span aria-hidden="true">/</span>
+                    <span style={{ color: 'var(--ink)' }}>Quick Reference</span>
                 </nav>
 
-                {/* Header */}
-                <div className="mb-8 text-center max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider mb-4">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                        </svg>
-                        Clinical Reference
-                    </div>
-                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
-                        Quick Reference Cards
+                {/* Hero */}
+                <div className="col gap-3" style={{ maxWidth: 760 }}>
+                    <span className="section-mark">clinical reference</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(32px, 4.5vw, 48px)',
+                            lineHeight: 1.05,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        Quick reference <span style={{ color: 'var(--cobalt)' }}>cards</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-400">
+                    <p className="lede" style={{ fontSize: 17, margin: 0, maxWidth: 600 }}>
                         Essential clinical references: scales, protocols, drug guides, and more.
                     </p>
                 </div>
 
                 {/* Search */}
-                <div className="max-w-xl mx-auto mb-6">
-                    <div className="relative">
-                        <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+                <div style={{ maxWidth: 600 }}>
+                    <div className="form-group">
+                        <label htmlFor="ref-search" className="form-label">Search references</label>
                         <input
+                            id="ref-search"
                             type="text"
                             value={searchQuery}
                             onChange={e => setSearchQuery(e.target.value)}
                             placeholder="Search references..."
-                            className="w-full bg-slate-900/60 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                            className="input"
                         />
                     </div>
                 </div>
 
-                {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-2 mb-8">
+                {/* Category filter */}
+                <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                     {CATEGORIES.map(cat => (
                         <button
                             key={cat.id}
+                            type="button"
                             onClick={() => setSelectedCategory(cat.id)}
-                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center ${
-                                selectedCategory === cat.id
-                                    ? 'bg-purple-500/20 border border-purple-500/40 text-purple-400'
-                                    : 'bg-slate-800/50 border border-white/5 text-slate-400 hover:bg-slate-700/50'
-                            }`}
+                            className={selectedCategory === cat.id ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
                         >
-                            <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={cat.iconPath} />
-                            </svg>
                             {cat.name}
                         </button>
                     ))}
                 </div>
 
-                {/* Cards Grid */}
-                <div className="grid md:grid-cols-2 gap-4">
-                    {filteredCards.map(card => (
-                        <div
-                            key={card.id}
-                            className={`bg-slate-900/60 border rounded-2xl overflow-hidden transition-all ${
-                                expandedCard === card.id ? 'border-purple-500/40' : 'border-white/5'
-                            }`}
-                        >
-                            <button
-                                onClick={() => setExpandedCard(expandedCard === card.id ? null : card.id)}
-                                className="w-full p-4 text-left flex items-center justify-between hover:bg-slate-800/30 transition-colors"
+                {/* Cards grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 12 }}>
+                    {filteredCards.map(card => {
+                        const isExpanded = expandedCard === card.id;
+                        return (
+                            <div
+                                key={card.id}
+                                className="card"
+                                style={{
+                                    padding: 0,
+                                    overflow: 'hidden',
+                                    borderColor: isExpanded ? 'var(--cobalt)' : 'var(--rule)',
+                                }}
                             >
-                                <div className="flex items-center gap-3">
-                                    <span className="text-2xl">{card.icon}</span>
-                                    <div>
-                                        <div className="font-bold text-white">{card.name}</div>
-                                        <div className="text-xs text-slate-500">{card.category}</div>
-                                    </div>
-                                </div>
-                                <svg
-                                    className={`w-5 h-5 text-slate-500 transition-transform ${expandedCard === card.id ? 'rotate-180' : ''}`}
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                <button
+                                    type="button"
+                                    onClick={() => setExpandedCard(isExpanded ? null : card.id)}
+                                    className="row between ai-center"
+                                    style={{
+                                        width: '100%',
+                                        padding: 16,
+                                        textAlign: 'left',
+                                        background: 'transparent',
+                                        border: 'none',
+                                        cursor: 'pointer',
+                                    }}
                                 >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-
-                            {expandedCard === card.id && (
-                                <div className="p-4 pt-0 border-t border-white/5">
-                                    {/* RASS Scale */}
-                                    {card.items && (
-                                        <div className="space-y-2">
-                                            {card.items.map((item, i) => (
-                                                <div key={i} className="flex items-start gap-3 p-2 rounded-lg bg-slate-800/30">
-                                                    <span className={`font-mono font-bold w-10 text-center ${
-                                                        (item.score?.startsWith('+') || item.score === '0') ? 'text-amber-400' : 'text-cyan-400'
-                                                    }`}>
-                                                        {item.score}
-                                                    </span>
-                                                    <div>
-                                                        <div className="font-medium text-white">{item.term}</div>
-                                                        <div className="text-sm text-slate-400">{item.description}</div>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                            {card.target && (
-                                                <div className="mt-3 p-3 bg-purple-500/10 border border-purple-500/30 rounded-lg text-sm text-purple-300">
-                                                    {card.target}
-                                                </div>
-                                            )}
+                                    <div className="row gap-3 ai-center" style={{ minWidth: 0 }}>
+                                        <span style={{ fontSize: 22, lineHeight: 1 }}>{card.icon}</span>
+                                        <div className="col gap-1" style={{ minWidth: 0 }}>
+                                            <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)', letterSpacing: '-0.015em' }}>
+                                                {card.name}
+                                            </span>
+                                            <span className="mono muted-2" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                                                {card.category}
+                                            </span>
                                         </div>
-                                    )}
+                                    </div>
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            color: 'var(--ink-3)',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.06em',
+                                            transform: isExpanded ? 'rotate(180deg)' : 'rotate(0)',
+                                            transition: 'transform 200ms ease',
+                                        }}
+                                    >
+                                        ▾
+                                    </span>
+                                </button>
 
-                                    {/* CAM-ICU Steps */}
-                                    {card.steps && (
-                                        <div className="space-y-3">
-                                            {card.steps.map((step, i) => (
-                                                <div key={i} className="p-3 rounded-lg bg-slate-800/30">
-                                                    <div className="flex items-center gap-2 mb-2">
-                                                        <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm flex items-center justify-center font-bold">
-                                                            {step.step}
+                                {isExpanded && (
+                                    <div className="col gap-3" style={{ padding: 16, paddingTop: 12, borderTop: '1px solid var(--rule)' }}>
+                                        {/* RASS / item list */}
+                                        {card.items && (
+                                            <div className="col gap-2">
+                                                {card.items.map((item, i) => (
+                                                    <div key={i} className="card-flat row gap-3 ai-start" style={{ padding: 10 }}>
+                                                        <span
+                                                            className="num"
+                                                            style={{
+                                                                fontWeight: 500,
+                                                                width: 36,
+                                                                textAlign: 'center',
+                                                                color: (item.score?.startsWith('+') || item.score === '0') ? 'var(--lemon-2)' : 'var(--cobalt)',
+                                                            }}
+                                                        >
+                                                            {item.score}
                                                         </span>
-                                                        <span className="font-bold text-white">{step.name}</span>
-                                                    </div>
-                                                    {step.question && <p className="text-sm text-slate-300 mb-2">{step.question}</p>}
-                                                    {step.questions && (
-                                                        <ul className="text-sm text-slate-400 space-y-1 mb-2">
-                                                            {step.questions.map((q, j) => <li key={j}>• {q}</li>)}
-                                                        </ul>
-                                                    )}
-                                                    {step.threshold && <div className="text-xs text-amber-400 mb-2">Threshold: {step.threshold}</div>}
-                                                    <div className="flex gap-4 text-xs">
-                                                        {step.yes && <span className="text-emerald-400">Yes → {step.yes}</span>}
-                                                        {step.no && <span className="text-red-400">No → {step.no}</span>}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {/* ACLS Drugs */}
-                                    {card.drugs && (
-                                        <div className="space-y-2">
-                                            {card.drugs.map((drug, i) => (
-                                                <div key={i} className="p-3 rounded-lg bg-slate-800/30">
-                                                    <div className="flex items-start justify-between">
-                                                        <div className="font-bold text-white">{drug.name}</div>
-                                                        <span className="text-xs text-amber-400">{drug.indication}</span>
-                                                    </div>
-                                                    <div className="text-cyan-400 font-mono text-sm mt-1">{drug.dose}</div>
-                                                    {drug.notes && <div className="text-xs text-slate-500 mt-1">{drug.notes}</div>}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {/* Antidotes */}
-                                    {card.antidotes && (
-                                        <div className="space-y-2 max-h-96 overflow-y-auto">
-                                            {card.antidotes.map((ant, i) => (
-                                                <div key={i} className="p-3 rounded-lg bg-slate-800/30">
-                                                    <div className="flex items-center gap-2 mb-1">
-                                                        <span className="text-red-400 font-medium">{ant.toxin}</span>
-                                                        <span className="text-slate-500">→</span>
-                                                        <span className="text-emerald-400 font-medium">{ant.antidote}</span>
-                                                    </div>
-                                                    <div className="text-cyan-400 font-mono text-sm">{ant.dose}</div>
-                                                    {ant.notes && <div className="text-xs text-slate-500 mt-1">{ant.notes}</div>}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {/* Antibiotic Spectrum */}
-                                    {card.antibiotics && (
-                                        <div className="space-y-3">
-                                            {card.antibiotics.map((abx, i) => (
-                                                <div key={i} className="p-3 rounded-lg bg-slate-800/30">
-                                                    <div className="font-bold text-white mb-1">{abx.name}</div>
-                                                    <div className="text-xs text-purple-400 mb-2">{abx.spectrum}</div>
-                                                    <div className="flex flex-wrap gap-1 mb-2">
-                                                        {abx.covers.map((c, j) => (
-                                                            <span key={j} className="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 text-xs rounded">
-                                                                {c}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                    <div className="text-xs text-slate-500">
-                                                        Gaps: {abx.gaps.join(', ')}
-                                                    </div>
-                                                    {abx.note && <div className="text-xs text-amber-400 mt-1">{abx.note}</div>}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {/* Vent Settings */}
-                                    {card.modes && (
-                                        <div className="space-y-4">
-                                            {card.modes.map((mode, i) => (
-                                                <div key={i} className="p-3 rounded-lg bg-slate-800/30">
-                                                    <div className="font-bold text-white mb-2">{mode.name}</div>
-                                                    <div className="space-y-1">
-                                                        {Object.entries(mode.settings).map(([key, val]) => (
-                                                            <div key={key} className="flex justify-between text-sm">
-                                                                <span className="text-slate-400">{key}:</span>
-                                                                <span className="text-cyan-400 font-mono">{val}</span>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                    {mode.targets && (
-                                                        <div className="mt-2 pt-2 border-t border-white/5">
-                                                            <div className="text-xs text-slate-500 mb-1">Targets:</div>
-                                                            {Object.entries(mode.targets).map(([key, val]) => (
-                                                                <div key={key} className="text-xs text-emerald-400">
-                                                                    {key}: {val}
-                                                                </div>
-                                                            ))}
+                                                        <div className="col">
+                                                            <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--ink)' }}>{item.term}</span>
+                                                            <span className="muted" style={{ fontSize: 12 }}>{item.description}</span>
                                                         </div>
-                                                    )}
-                                                </div>
-                                            ))}
-                                            {card.ibw_formula && (
-                                                <div className="p-2 bg-amber-500/10 rounded text-xs text-amber-300">
-                                                    IBW: {card.ibw_formula}
-                                                </div>
-                                            )}
-                                        </div>
-                                    )}
-
-                                    {/* Pain Scales */}
-                                    {card.scales && (
-                                        <div className="space-y-4">
-                                            {card.scales.map((scale, i) => (
-                                                <div key={i} className="p-3 rounded-lg bg-slate-800/30">
-                                                    <div className="flex items-center justify-between mb-2">
-                                                        <span className="font-bold text-white">{scale.name}</span>
-                                                        <span className="text-xs text-purple-400">Range: {scale.range}</span>
                                                     </div>
-                                                    {scale.description && <p className="text-sm text-slate-400 mb-2">{scale.description}</p>}
-                                                    {scale.use && <p className="text-xs text-cyan-400 mb-2">Use: {scale.use}</p>}
-                                                    {scale.interpretation && Array.isArray(scale.interpretation) && (
-                                                        <div className="space-y-1">
-                                                            {scale.interpretation.map((int, j) => (
-                                                                <div key={j} className="flex justify-between text-sm">
-                                                                    <span className="text-slate-500">{int.range}</span>
-                                                                    <span className="text-white">{int.level}</span>
-                                                                </div>
-                                                            ))}
-                                                        </div>
-                                                    )}
-                                                    {typeof scale.interpretation === 'string' && (
-                                                        <div className="text-sm text-emerald-400">{scale.interpretation}</div>
-                                                    )}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {/* Transfusion Products */}
-                                    {card.products && (
-                                        <div className="space-y-4">
-                                            {card.products.map((prod, i) => (
-                                                <div key={i} className="p-3 rounded-lg bg-slate-800/30">
-                                                    <div className="font-bold text-white mb-2">{prod.product}</div>
-                                                    <div className="space-y-2">
-                                                        {prod.thresholds.map((t, j) => (
-                                                            <div key={j} className="text-sm">
-                                                                <span className="text-slate-400">{t.population || t.indication}: </span>
-                                                                <span className="text-cyan-400">{t.threshold || t.dose}</span>
-                                                                {t.target && <span className="text-emerald-400"> → {t.target}</span>}
-                                                            </div>
-                                                        ))}
+                                                ))}
+                                                {card.target && (
+                                                    <div className="card-flat" style={{ padding: 12, background: 'var(--cobalt-50)', borderColor: 'rgba(28, 91, 255, .22)' }}>
+                                                        <span style={{ fontSize: 13, color: 'var(--cobalt)', fontWeight: 500 }}>{card.target}</span>
                                                     </div>
-                                                    {prod.dose && <div className="text-xs text-amber-400 mt-2">{prod.dose}</div>}
-                                                    {prod.notes && <div className="text-xs text-slate-500 mt-1">{prod.notes}</div>}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {/* Insulin Protocol */}
-                                    {card.protocol && (
-                                        <div className="space-y-3">
-                                            <div className="p-2 bg-emerald-500/10 rounded text-sm text-emerald-400">
-                                                Target: {card.target}
+                                                )}
                                             </div>
-                                            <div className="text-sm font-medium text-white">Adjustments:</div>
-                                            <div className="space-y-1">
-                                                {card.protocol.adjustments.map((adj, i) => (
-                                                    <div key={i} className="flex justify-between text-sm p-2 rounded bg-slate-800/50">
-                                                        <span className="text-slate-400">BG {adj.bg_range}</span>
-                                                        <span className="text-cyan-400">{adj.action}</span>
+                                        )}
+
+                                        {/* Steps */}
+                                        {card.steps && (
+                                            <div className="col gap-3">
+                                                {card.steps.map((step, i) => (
+                                                    <div key={i} className="card-flat col gap-2" style={{ padding: 12 }}>
+                                                        <div className="row gap-2 ai-center">
+                                                            <span
+                                                                className="num"
+                                                                style={{
+                                                                    width: 24,
+                                                                    height: 24,
+                                                                    borderRadius: 999,
+                                                                    background: 'var(--cobalt-50)',
+                                                                    color: 'var(--cobalt)',
+                                                                    fontSize: 12,
+                                                                    display: 'inline-flex',
+                                                                    alignItems: 'center',
+                                                                    justifyContent: 'center',
+                                                                    fontWeight: 600,
+                                                                }}
+                                                            >
+                                                                {step.step}
+                                                            </span>
+                                                            <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{step.name}</span>
+                                                        </div>
+                                                        {step.question && <p style={{ fontSize: 13, color: 'var(--ink-2)', margin: 0 }}>{step.question}</p>}
+                                                        {step.questions && (
+                                                            <ul className="clean col gap-1">
+                                                                {step.questions.map((q, j) => (
+                                                                    <li key={j} className="muted" style={{ fontSize: 13 }}>• {q}</li>
+                                                                ))}
+                                                            </ul>
+                                                        )}
+                                                        {step.threshold && (
+                                                            <span className="mono" style={{ fontSize: 11, color: 'var(--lemon-2)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                                                Threshold: {step.threshold}
+                                                            </span>
+                                                        )}
+                                                        <div className="row gap-3 mono" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                                            {step.yes && <span style={{ color: 'var(--mint-3)' }}>Yes → {step.yes}</span>}
+                                                            {step.no && <span style={{ color: 'var(--orange-2)' }}>No → {step.no}</span>}
+                                                        </div>
                                                     </div>
                                                 ))}
                                             </div>
-                                            <div className="text-xs text-slate-500">{card.protocol.monitoring}</div>
-                                        </div>
-                                    )}
+                                        )}
 
-                                    {card.notes && (
-                                        <div className="mt-3 p-3 bg-slate-800/50 rounded-lg text-sm text-slate-400">
-                                            {card.notes}
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                                        {/* ACLS drugs */}
+                                        {card.drugs && (
+                                            <div className="col gap-2">
+                                                {card.drugs.map((drug, i) => (
+                                                    <div key={i} className="card-flat col gap-1" style={{ padding: 12 }}>
+                                                        <div className="row between ai-baseline gap-2">
+                                                            <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{drug.name}</span>
+                                                            <span className="pill pill-lemon">{drug.indication}</span>
+                                                        </div>
+                                                        <span className="mono num" style={{ fontSize: 13, color: 'var(--cobalt)' }}>{drug.dose}</span>
+                                                        {drug.notes && <span className="muted-2" style={{ fontSize: 12 }}>{drug.notes}</span>}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Antidotes */}
+                                        {card.antidotes && (
+                                            <div className="col gap-2" style={{ maxHeight: 384, overflowY: 'auto' }}>
+                                                {card.antidotes.map((ant, i) => (
+                                                    <div key={i} className="card-flat col gap-1" style={{ padding: 12 }}>
+                                                        <div className="row gap-2 ai-center">
+                                                            <span style={{ fontSize: 13, color: 'var(--orange-2)', fontWeight: 500 }}>{ant.toxin}</span>
+                                                            <span className="muted-2">→</span>
+                                                            <span style={{ fontSize: 13, color: 'var(--mint-3)', fontWeight: 500 }}>{ant.antidote}</span>
+                                                        </div>
+                                                        <span className="mono num" style={{ fontSize: 13, color: 'var(--cobalt)' }}>{ant.dose}</span>
+                                                        {ant.notes && <span className="muted-2" style={{ fontSize: 12 }}>{ant.notes}</span>}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Antibiotics */}
+                                        {card.antibiotics && (
+                                            <div className="col gap-3">
+                                                {card.antibiotics.map((abx, i) => (
+                                                    <div key={i} className="card-flat col gap-2" style={{ padding: 12 }}>
+                                                        <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{abx.name}</span>
+                                                        <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                                            {abx.spectrum}
+                                                        </span>
+                                                        <div className="row gap-1" style={{ flexWrap: 'wrap' }}>
+                                                            {abx.covers.map((c, j) => (
+                                                                <span key={j} className="pill pill-mint">{c}</span>
+                                                            ))}
+                                                        </div>
+                                                        <span className="muted-2" style={{ fontSize: 12 }}>Gaps: {abx.gaps.join(', ')}</span>
+                                                        {abx.note && (
+                                                            <span style={{ fontSize: 12, color: 'var(--lemon-2)' }}>{abx.note}</span>
+                                                        )}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Vent modes */}
+                                        {card.modes && (
+                                            <div className="col gap-3">
+                                                {card.modes.map((mode, i) => (
+                                                    <div key={i} className="card-flat col gap-2" style={{ padding: 12 }}>
+                                                        <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{mode.name}</span>
+                                                        <div className="col gap-1">
+                                                            {Object.entries(mode.settings).map(([key, val]) => (
+                                                                <div key={key} className="row between ai-center" style={{ fontSize: 13 }}>
+                                                                    <span className="muted">{key}:</span>
+                                                                    <span className="mono num" style={{ color: 'var(--cobalt)' }}>{val}</span>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                        {mode.targets && (
+                                                            <div className="col gap-1" style={{ paddingTop: 8, borderTop: '1px solid var(--rule)' }}>
+                                                                <span className="mono muted-2" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Targets</span>
+                                                                {Object.entries(mode.targets).map(([key, val]) => (
+                                                                    <span key={key} style={{ fontSize: 12, color: 'var(--mint-3)' }}>
+                                                                        {key}: {val}
+                                                                    </span>
+                                                                ))}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                ))}
+                                                {card.ibw_formula && (
+                                                    <div className="card-flat" style={{ padding: 10, background: 'var(--lemon-50)', borderColor: 'rgba(230, 185, 40, .40)' }}>
+                                                        <span style={{ fontSize: 12, color: '#8C6A00' }}>IBW: {card.ibw_formula}</span>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        )}
+
+                                        {/* Pain scales */}
+                                        {card.scales && (
+                                            <div className="col gap-3">
+                                                {card.scales.map((scale, i) => (
+                                                    <div key={i} className="card-flat col gap-2" style={{ padding: 12 }}>
+                                                        <div className="row between ai-baseline gap-2">
+                                                            <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{scale.name}</span>
+                                                            <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                                                Range: {scale.range}
+                                                            </span>
+                                                        </div>
+                                                        {scale.description && <p className="muted" style={{ fontSize: 13, margin: 0 }}>{scale.description}</p>}
+                                                        {scale.use && (
+                                                            <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                                                Use: {scale.use}
+                                                            </span>
+                                                        )}
+                                                        {scale.interpretation && Array.isArray(scale.interpretation) && (
+                                                            <div className="col gap-1">
+                                                                {scale.interpretation.map((int, j) => (
+                                                                    <div key={j} className="row between" style={{ fontSize: 13 }}>
+                                                                        <span className="muted">{int.range}</span>
+                                                                        <span style={{ color: 'var(--ink)' }}>{int.level}</span>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        )}
+                                                        {typeof scale.interpretation === 'string' && (
+                                                            <span style={{ fontSize: 13, color: 'var(--mint-3)' }}>{scale.interpretation}</span>
+                                                        )}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Transfusion products */}
+                                        {card.products && (
+                                            <div className="col gap-3">
+                                                {card.products.map((prod, i) => (
+                                                    <div key={i} className="card-flat col gap-2" style={{ padding: 12 }}>
+                                                        <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{prod.product}</span>
+                                                        <div className="col gap-1">
+                                                            {prod.thresholds.map((t, j) => (
+                                                                <div key={j} style={{ fontSize: 13 }}>
+                                                                    <span className="muted">{t.population || t.indication}: </span>
+                                                                    <span style={{ color: 'var(--cobalt)' }}>{t.threshold || t.dose}</span>
+                                                                    {t.target && <span style={{ color: 'var(--mint-3)' }}> → {t.target}</span>}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                        {prod.dose && <span style={{ fontSize: 12, color: 'var(--lemon-2)' }}>{prod.dose}</span>}
+                                                        {prod.notes && <span className="muted-2" style={{ fontSize: 12 }}>{prod.notes}</span>}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Insulin protocol */}
+                                        {card.protocol && (
+                                            <div className="col gap-3">
+                                                <div className="card-flat" style={{ padding: 10, background: 'var(--mint-50)', borderColor: 'rgba(40, 212, 168, .30)' }}>
+                                                    <span style={{ fontSize: 13, color: 'var(--mint-3)' }}>Target: {card.target}</span>
+                                                </div>
+                                                <span className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Adjustments</span>
+                                                <div className="col">
+                                                    {card.protocol.adjustments.map((adj, i, arr) => (
+                                                        <div
+                                                            key={i}
+                                                            className="row between ai-center"
+                                                            style={{
+                                                                padding: '8px 12px',
+                                                                borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                                                fontSize: 13,
+                                                            }}
+                                                        >
+                                                            <span className="muted">BG {adj.bg_range}</span>
+                                                            <span style={{ color: 'var(--cobalt)' }}>{adj.action}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <span className="muted-2" style={{ fontSize: 12 }}>{card.protocol.monitoring}</span>
+                                            </div>
+                                        )}
+
+                                        {card.notes && (
+                                            <div className="card-flat" style={{ padding: 12 }}>
+                                                <span className="muted" style={{ fontSize: 13 }}>{card.notes}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
 
                 {filteredCards.length === 0 && (
-                    <div className="text-center py-16">
-                        <div className="w-12 h-12 mx-auto mb-4 bg-purple-500/10 rounded-xl flex items-center justify-center">
-                            <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </div>
-                        <div className="text-xl font-bold text-white mb-2">No references found</div>
-                        <div className="text-slate-400">Try a different search or category</div>
+                    <div className="card col gap-3 ai-center" style={{ padding: 64, textAlign: 'center' }}>
+                        <span className="section-mark">no results</span>
+                        <h3 className="display" style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.03em' }}>
+                            No references found
+                        </h3>
+                        <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                            Try a different search or category.
+                        </p>
                     </div>
                 )}
 
                 {/* Disclaimer */}
-                <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-6 mt-8">
-                    <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 className="font-semibold text-amber-400 mb-1">Clinical Reference Only</h3>
-                            <p className="text-sm text-slate-400">
-                                These references are intended as quick guides for trained medical professionals.
-                                Always verify information with institutional protocols and current guidelines.
-                                Clinical judgment should guide all patient care decisions.
-                            </p>
-                        </div>
-                    </div>
+                <div className="card col gap-2" style={{ padding: 24, borderColor: 'rgba(230, 185, 40, .40)' }}>
+                    <span className="kicker" style={{ color: '#8C6A00' }}>
+                        <span className="dot" style={{ background: 'var(--lemon-2)' }} />clinical reference only
+                    </span>
+                    <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0, lineHeight: 1.6 }}>
+                        These references are intended as quick guides for trained medical professionals. Always verify
+                        information with institutional protocols and current guidelines. Clinical judgment should guide
+                        all patient care decisions.
+                    </p>
                 </div>
             </div>
         </main>

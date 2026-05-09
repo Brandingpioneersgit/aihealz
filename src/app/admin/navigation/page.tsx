@@ -26,7 +26,6 @@ export default function NavigationPage() {
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [hasChanges, setHasChanges] = useState(false);
-    const [editingItem, setEditingItem] = useState<NavItem | null>(null);
 
     useEffect(() => {
         fetchNavigation();
@@ -40,7 +39,6 @@ export default function NavigationPage() {
                 const data = await res.json();
                 setMenuItems(data.items || []);
             } else {
-                // Default menu items
                 setMenuItems([
                     { id: '1', label: 'Conditions', path: '/conditions', isMega: true, isActive: true, order: 1 },
                     { id: '2', label: 'Treatments', path: '/treatments', isMega: true, isActive: true, order: 2 },
@@ -52,7 +50,6 @@ export default function NavigationPage() {
             }
         } catch (error) {
             console.error('Failed to fetch navigation:', error);
-            // Fallback default items
             setMenuItems([
                 { id: '1', label: 'Conditions', path: '/conditions', isMega: true, isActive: true, order: 1 },
                 { id: '2', label: 'Treatments', path: '/treatments', isMega: true, isActive: true, order: 2 },
@@ -136,164 +133,174 @@ export default function NavigationPage() {
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center min-h-[400px]">
-                <div className="animate-spin w-8 h-8 border-2 border-slate-500/30 border-t-slate-500 rounded-full" />
+            <div className="row center ai-center" style={{ minHeight: 400 }}>
+                <div
+                    aria-hidden="true"
+                    style={{
+                        width: 32,
+                        height: 32,
+                        border: '2px solid var(--rule)',
+                        borderTopColor: 'var(--cobalt)',
+                        borderRadius: '50%',
+                        animation: 'spin 0.8s linear infinite',
+                    }}
+                />
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
             </div>
         );
     }
 
     return (
-        <div className="space-y-6 max-w-5xl">
-            <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
-                <div className="font-semibold mb-1">Edits here are not yet live.</div>
-                <div className="text-amber-800">
-                    The public site navigation is currently rendered from a hardcoded{' '}
-                    <code className="bg-amber-100 px-1 rounded">NAV_ITEMS</code> array in{' '}
-                    <code className="bg-amber-100 px-1 rounded">src/components/v4/Navbar.tsx</code>.
-                    Changes saved on this screen are stored but not consumed by the v4 Navbar.
-                    Update the file directly, or refactor the Navbar to read from this admin source
-                    (e.g. a <code className="bg-amber-100 px-1 rounded">nav_items</code> table).
+        <div className="col gap-6" style={{ maxWidth: 1100, color: 'var(--ink)' }}>
+            <div
+                className="card-flat"
+                style={{
+                    padding: 14,
+                    borderColor: 'rgba(230, 185, 40, .40)',
+                    background: 'var(--lemon-50)',
+                    fontSize: 13,
+                    color: '#8C6A00',
+                }}
+            >
+                <div style={{ fontWeight: 600, marginBottom: 4 }}>Edits here are not yet live.</div>
+                <div>
+                    The public site navigation is currently rendered from a hardcoded <code className="mono" style={{ background: 'rgba(255,210,63,.30)', padding: '1px 4px', borderRadius: 2 }}>NAV_ITEMS</code> array in
+                    {' '}<code className="mono" style={{ background: 'rgba(255,210,63,.30)', padding: '1px 4px', borderRadius: 2 }}>src/components/v4/Navbar.tsx</code>. Changes saved on this screen are stored but not consumed by the v4 Navbar.
                 </div>
             </div>
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        Navigation Builder
+
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / navigation</span>
+                    <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                        Navigation builder<span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-500 mt-1">Configure main menu links, dropdowns, and mega-menus.</p>
+                    <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                        Configure main menu links, dropdowns, and mega-menus.
+                    </p>
                 </div>
                 <button
                     onClick={handleSave}
                     disabled={saving || !hasChanges}
-                    className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn btn-cobalt"
                 >
-                    {saving ? (
-                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                        </svg>
-                    ) : (
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
-                        </svg>
-                    )}
-                    {saving ? 'Saving...' : 'Save Changes'}
+                    {saving ? 'Saving…' : 'Save changes →'}
                 </button>
             </div>
 
             {hasChanges && (
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-800 flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                    You have unsaved changes
+                <div
+                    className="card-flat row ai-center gap-2"
+                    style={{
+                        padding: '10px 14px',
+                        borderColor: 'rgba(230, 185, 40, .40)',
+                        background: 'var(--lemon-50)',
+                        fontSize: 13,
+                        color: '#8C6A00',
+                    }}
+                >
+                    <span>You have unsaved changes</span>
                 </div>
             )}
 
-            <div className="flex gap-6">
-                <div className="w-1/3 space-y-4">
-                    <div className="bg-white p-4 rounded-xl border border-slate-200">
-                        <h3 className="font-semibold text-slate-900 mb-3 border-b border-slate-100 pb-2">Available Links</h3>
-                        <div className="space-y-2">
-                            {availableToAdd.length === 0 ? (
-                                <p className="text-sm text-slate-400 text-center py-4">All links added</p>
-                            ) : (
-                                availableToAdd.map(link => (
-                                    <div key={link.path} className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-200 rounded-lg hover:border-teal-300">
-                                        <span className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                                            <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
-                                            </svg>
-                                            {link.label}
-                                        </span>
-                                        <button
-                                            onClick={() => handleAddItem(link)}
-                                            className="text-teal-600 hover:text-teal-800"
-                                        >
-                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                ))
-                            )}
-                        </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 24 }}>
+                {/* Available links */}
+                <div className="card col gap-3" style={{ padding: 20, height: 'fit-content' }}>
+                    <div className="hairline-b" style={{ paddingBottom: 12 }}>
+                        <span className="section-mark">available links</span>
+                    </div>
+                    <div className="col gap-2">
+                        {availableToAdd.length === 0 ? (
+                            <p className="muted" style={{ fontSize: 13, textAlign: 'center', padding: '24px 0' }}>All links added</p>
+                        ) : (
+                            availableToAdd.map(link => (
+                                <div key={link.path} className="row between ai-center card-quiet" style={{ padding: '10px 12px' }}>
+                                    <span style={{ fontSize: 13, fontWeight: 500 }}>{link.label}</span>
+                                    <button
+                                        onClick={() => handleAddItem(link)}
+                                        className="btn btn-cobalt btn-sm"
+                                    >
+                                        + Add
+                                    </button>
+                                </div>
+                            ))
+                        )}
                     </div>
                 </div>
 
-                <div className="w-2/3">
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 min-h-[500px]">
-                        <h3 className="font-semibold text-slate-900 mb-4 border-b border-slate-100 pb-3 flex items-center justify-between">
-                            <span>Main Menu Structure</span>
-                            <span className="text-xs text-slate-400 font-normal">{menuItems.length} items</span>
-                        </h3>
-
-                        {menuItems.length === 0 ? (
-                            <div className="text-center py-12 text-slate-400">
-                                <p>No menu items. Add links from the left panel.</p>
-                            </div>
-                        ) : (
-                            <div className="space-y-3">
-                                {menuItems.map((item, i) => (
-                                    <div key={item.id} className="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl shadow-sm">
-                                        <div className="flex flex-col gap-1">
-                                            <button
-                                                onClick={() => handleMoveUp(i)}
-                                                disabled={i === 0}
-                                                className="p-1 text-slate-400 hover:text-slate-600 disabled:opacity-30"
-                                            >
-                                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                                                </svg>
-                                            </button>
-                                            <button
-                                                onClick={() => handleMoveDown(i)}
-                                                disabled={i === menuItems.length - 1}
-                                                className="p-1 text-slate-400 hover:text-slate-600 disabled:opacity-30"
-                                            >
-                                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 text-sm font-bold text-slate-800">
-                                                {item.label}
-                                                {item.isMega && (
-                                                    <span className="px-1.5 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] rounded uppercase tracking-wider font-bold border border-indigo-100">
-                                                        Mega Menu
-                                                    </span>
-                                                )}
-                                            </div>
-                                            <div className="text-xs text-slate-500 font-mono mt-0.5">{item.path}</div>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <button
-                                                onClick={() => handleToggleMega(item.id)}
-                                                className={`p-1.5 rounded-md ${item.isMega ? 'text-indigo-600 bg-indigo-50' : 'text-slate-400 hover:text-slate-900 hover:bg-slate-100'}`}
-                                                title={item.isMega ? 'Remove mega menu' : 'Make mega menu'}
-                                            >
-                                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                                </svg>
-                                            </button>
-                                            <button
-                                                onClick={() => handleRemoveItem(item.id)}
-                                                className="p-1.5 text-rose-400 hover:text-rose-700 hover:bg-rose-50 rounded-md"
-                                            >
-                                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
+                {/* Menu structure */}
+                <div className="card col gap-3 lg:col-span-2" style={{ padding: 24, minHeight: 500 }}>
+                    <div className="row between ai-center hairline-b" style={{ paddingBottom: 12 }}>
+                        <span className="section-mark">main menu structure</span>
+                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                            {menuItems.length} items
+                        </span>
                     </div>
+
+                    {menuItems.length === 0 ? (
+                        <div className="col ai-center" style={{ padding: '48px 0' }}>
+                            <p className="muted" style={{ fontSize: 13 }}>No menu items. Add links from the left panel.</p>
+                        </div>
+                    ) : (
+                        <div className="col gap-2">
+                            {menuItems.map((item, i) => (
+                                <div
+                                    key={item.id}
+                                    className="row ai-center gap-3"
+                                    style={{
+                                        padding: 12,
+                                        border: '1px solid var(--rule)',
+                                        borderRadius: 'var(--r-3)',
+                                        background: 'var(--paper)',
+                                    }}
+                                >
+                                    <div className="col gap-1">
+                                        <button
+                                            onClick={() => handleMoveUp(i)}
+                                            disabled={i === 0}
+                                            className="btn btn-ghost btn-sm"
+                                            style={{ padding: 4 }}
+                                            aria-label="Move up"
+                                        >
+                                            ↑
+                                        </button>
+                                        <button
+                                            onClick={() => handleMoveDown(i)}
+                                            disabled={i === menuItems.length - 1}
+                                            className="btn btn-ghost btn-sm"
+                                            style={{ padding: 4 }}
+                                            aria-label="Move down"
+                                        >
+                                            ↓
+                                        </button>
+                                    </div>
+                                    <div className="col gap-1" style={{ flex: 1, minWidth: 0 }}>
+                                        <div className="row ai-center gap-2">
+                                            <span style={{ fontSize: 14, fontWeight: 600 }}>{item.label}</span>
+                                            {item.isMega && <span className="pill pill-cobalt">Mega menu</span>}
+                                        </div>
+                                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>{item.path}</span>
+                                    </div>
+                                    <div className="row gap-2">
+                                        <button
+                                            onClick={() => handleToggleMega(item.id)}
+                                            className={`btn btn-sm ${item.isMega ? 'btn-cobalt' : 'btn-paper'}`}
+                                            title={item.isMega ? 'Remove mega menu' : 'Make mega menu'}
+                                        >
+                                            Mega
+                                        </button>
+                                        <button
+                                            onClick={() => handleRemoveItem(item.id)}
+                                            className="btn btn-orange btn-sm"
+                                            aria-label={`Remove ${item.label}`}
+                                        >
+                                            ×
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

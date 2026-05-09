@@ -34,10 +34,11 @@ interface ChecklistData {
     additional_checks: Record<string, AdditionalCheck>;
 }
 
-const PHASE_COLORS = {
-    amber: { bg: 'bg-amber-500', bgLight: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-amber-400' },
-    red: { bg: 'bg-red-500', bgLight: 'bg-red-500/10', border: 'border-red-500/30', text: 'text-red-400' },
-    green: { bg: 'bg-emerald-500', bgLight: 'bg-emerald-500/10', border: 'border-emerald-500/30', text: 'text-emerald-400' },
+// Map raw phase color tokens → Bureau accent vars
+const PHASE_ACCENT: Record<string, { bar: string; pillClass: string; text: string }> = {
+    amber: { bar: 'var(--lemon-2)', pillClass: 'pill pill-lemon', text: '#8C6A00' },
+    red: { bar: 'var(--orange)', pillClass: 'pill pill-orange', text: 'var(--orange-2)' },
+    green: { bar: 'var(--mint)', pillClass: 'pill pill-mint', text: 'var(--mint-3)' },
 };
 
 export default function SurgicalChecklistPage() {
@@ -61,7 +62,7 @@ export default function SurgicalChecklistPage() {
     }, []);
 
     const phase = data?.phases[currentPhase];
-    const colors = phase ? PHASE_COLORS[phase.color as keyof typeof PHASE_COLORS] : PHASE_COLORS.amber;
+    const accent = phase ? PHASE_ACCENT[phase.color] || PHASE_ACCENT.amber : PHASE_ACCENT.amber;
 
     const getPhaseProgress = (phaseId: string) => {
         const p = data?.phases.find(ph => ph.id === phaseId);
@@ -104,10 +105,10 @@ export default function SurgicalChecklistPage() {
 
     if (loading) {
         return (
-            <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex items-center justify-center h-64">
-                        <div className="w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full animate-spin" />
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
+                    <div className="row center" style={{ height: 256 }}>
+                        <span className="mono muted" style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Loading…</span>
                     </div>
                 </div>
             </main>
@@ -116,362 +117,418 @@ export default function SurgicalChecklistPage() {
 
     return (
         <>
-            {/* Completion Modal */}
+            {/* Completion modal */}
             {completionModal.isOpen && (
-                <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={() => setCompletionModal({ isOpen: false, completionTime: '' })}>
-                    <div className="bg-slate-900 border border-emerald-500/30 rounded-2xl p-8 max-w-md w-full mx-4 text-center" onClick={e => e.stopPropagation()}>
-                        <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-8 h-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Checklist Complete!</h3>
-                        <p className="text-slate-400 mb-4">
+                <div
+                    role="dialog"
+                    aria-modal="true"
+                    onClick={() => setCompletionModal({ isOpen: false, completionTime: '' })}
+                    style={{
+                        position: 'fixed',
+                        inset: 0,
+                        background: 'rgba(10, 26, 47, 0.5)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 500,
+                        padding: 16,
+                    }}
+                >
+                    <div className="card col gap-4 ai-center" style={{ padding: 32, maxWidth: 440, width: '100%', textAlign: 'center' }} onClick={e => e.stopPropagation()}>
+                        <span className="pill pill-mint">
+                            <span className="pill-dot" style={{ background: 'var(--mint)' }} aria-hidden="true" />
+                            Complete
+                        </span>
+                        <h3 className="display" style={{ fontSize: 24, margin: 0, fontWeight: 600, letterSpacing: '-0.03em' }}>
+                            Checklist complete
+                            <span style={{ color: 'var(--orange)' }}>.</span>
+                        </h3>
+                        <p className="muted" style={{ fontSize: 14, margin: 0 }}>
                             All phases of the Surgical Safety Checklist have been verified.
                         </p>
-                        <div className="bg-slate-800/50 rounded-xl p-4 mb-6">
-                            <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Completion Time</div>
-                            <div className="text-lg font-mono text-emerald-400">{completionModal.completionTime}</div>
+                        <div className="card-quiet col gap-1 ai-center" style={{ padding: 16, width: '100%' }}>
+                            <span className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Completion time</span>
+                            <span className="num" style={{ fontSize: 18, color: 'var(--mint-3)', fontWeight: 500 }}>{completionModal.completionTime}</span>
                         </div>
                         <button
+                            type="button"
                             onClick={() => setCompletionModal({ isOpen: false, completionTime: '' })}
-                            className="w-full py-3 bg-emerald-500 text-white rounded-xl font-bold hover:bg-emerald-400 transition-colors"
+                            className="btn btn-cobalt"
+                            style={{ width: '100%', justifyContent: 'center' }}
                         >
                             Close
                         </button>
                     </div>
                 </div>
             )}
-            <main className="min-h-screen bg-[#050B14] text-slate-300 pt-24 pb-16 relative overflow-hidden">
-            {/* Background */}
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-red-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
 
-            <div className="max-w-5xl mx-auto px-6 relative z-10">
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6">
-                    <Link href="/" className="hover:text-cyan-400 transition-colors">Home</Link>
-                    <span>/</span>
-                    <Link href="/for-doctors" className="hover:text-cyan-400 transition-colors">For Doctors</Link>
-                    <span>/</span>
-                    <span className="text-slate-300">Surgical Safety Checklist</span>
-                </nav>
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+                <div style={{ maxWidth: 1024, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+                    {/* Breadcrumb */}
+                    <nav
+                        className="row gap-2 mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                            flexWrap: 'wrap',
+                        }}
+                        aria-label="Breadcrumb"
+                    >
+                        <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                        <span aria-hidden="true">/</span>
+                        <Link href="/for-doctors" style={{ color: 'var(--ink-3)' }}>For Doctors</Link>
+                        <span aria-hidden="true">/</span>
+                        <span style={{ color: 'var(--ink)' }}>Surgical Safety Checklist</span>
+                    </nav>
 
-                {/* Header */}
-                <div className="mb-8 text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider mb-4">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                        WHO Safe Surgery
+                    {/* Hero */}
+                    <div className="col gap-3" style={{ maxWidth: 760 }}>
+                        <span className="section-mark">who safe surgery</span>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(32px, 4.5vw, 48px)',
+                                lineHeight: 1.05,
+                                letterSpacing: '-0.04em',
+                                margin: 0,
+                                fontWeight: 600,
+                            }}
+                        >
+                            Surgical safety <span style={{ color: 'var(--cobalt)' }}>checklist</span>
+                            <span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <p className="muted mono" style={{ fontSize: 12, margin: 0, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                            {data?.version} · {data?.reference}
+                        </p>
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-white">
-                        Surgical Safety Checklist
-                    </h1>
-                    <p className="text-slate-400">
-                        {data?.version} • {data?.reference}
-                    </p>
-                </div>
 
-                {!startTime ? (
-                    /* Pre-Start Screen */
-                    <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-8">
-                        <h2 className="text-xl font-bold text-white mb-6">Patient Information</h2>
-                        <div className="grid md:grid-cols-2 gap-4 mb-8">
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Patient Name</label>
-                                <input
-                                    type="text"
-                                    value={patientInfo.name}
-                                    onChange={e => setPatientInfo(p => ({ ...p, name: e.target.value }))}
-                                    className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500/50"
-                                    placeholder="Enter patient name"
-                                />
+                    {!startTime ? (
+                        /* Pre-start screen */
+                        <div className="card col gap-5" style={{ padding: 28 }}>
+                            <h2 className="display" style={{ fontSize: 22, margin: 0, fontWeight: 600, letterSpacing: '-0.03em' }}>
+                                Patient information
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 16 }}>
+                                <div className="form-group">
+                                    <label className="form-label" htmlFor="ptName">Patient name</label>
+                                    <input
+                                        id="ptName"
+                                        type="text"
+                                        value={patientInfo.name}
+                                        onChange={e => setPatientInfo(p => ({ ...p, name: e.target.value }))}
+                                        className="input"
+                                        placeholder="Enter patient name"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label className="form-label" htmlFor="ptDob">Date of birth</label>
+                                    <input
+                                        id="ptDob"
+                                        type="date"
+                                        value={patientInfo.dob}
+                                        onChange={e => setPatientInfo(p => ({ ...p, dob: e.target.value }))}
+                                        className="input"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label className="form-label" htmlFor="ptProc">Procedure</label>
+                                    <input
+                                        id="ptProc"
+                                        type="text"
+                                        value={patientInfo.procedure}
+                                        onChange={e => setPatientInfo(p => ({ ...p, procedure: e.target.value }))}
+                                        className="input"
+                                        placeholder="Enter planned procedure"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label className="form-label" htmlFor="ptSurg">Surgeon</label>
+                                    <input
+                                        id="ptSurg"
+                                        type="text"
+                                        value={patientInfo.surgeon}
+                                        onChange={e => setPatientInfo(p => ({ ...p, surgeon: e.target.value }))}
+                                        className="input"
+                                        placeholder="Enter surgeon name"
+                                    />
+                                </div>
                             </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Date of Birth</label>
-                                <input
-                                    type="date"
-                                    value={patientInfo.dob}
-                                    onChange={e => setPatientInfo(p => ({ ...p, dob: e.target.value }))}
-                                    className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500/50"
-                                />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Procedure</label>
-                                <input
-                                    type="text"
-                                    value={patientInfo.procedure}
-                                    onChange={e => setPatientInfo(p => ({ ...p, procedure: e.target.value }))}
-                                    className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500/50"
-                                    placeholder="Enter planned procedure"
-                                />
-                            </div>
-                            <div>
-                                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block">Surgeon</label>
-                                <input
-                                    type="text"
-                                    value={patientInfo.surgeon}
-                                    onChange={e => setPatientInfo(p => ({ ...p, surgeon: e.target.value }))}
-                                    className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500/50"
-                                    placeholder="Enter surgeon name"
-                                />
+
+                            <button
+                                type="button"
+                                onClick={startChecklist}
+                                disabled={!patientInfo.name || !patientInfo.procedure}
+                                className="btn btn-cobalt btn-lg"
+                                style={{ width: '100%', justifyContent: 'center' }}
+                            >
+                                Begin safety checklist →
+                            </button>
+
+                            {/* Phases overview */}
+                            <div className="col gap-3" style={{ paddingTop: 24, borderTop: '1px solid var(--rule)' }}>
+                                <span className="kicker"><span className="dot" />checklist phases</span>
+                                <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 12 }}>
+                                    {data?.phases.map(p => {
+                                        const a = PHASE_ACCENT[p.color] || PHASE_ACCENT.amber;
+                                        return (
+                                            <div key={p.id} className="card-flat col gap-1" style={{ padding: 14 }}>
+                                                <div className="row gap-2 ai-center">
+                                                    <span style={{ width: 8, height: 8, background: a.bar, borderRadius: 999 }} aria-hidden="true" />
+                                                    <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{p.name}</span>
+                                                </div>
+                                                <span className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{p.timing}</span>
+                                                <span className="muted-2" style={{ fontSize: 12 }}>
+                                                    {p.items.length} items · {p.items.filter(i => i.critical).length} critical
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
+                    ) : (
+                        <>
+                            {/* Patient banner */}
+                            <div className="card-flat row between ai-center" style={{ padding: 16, flexWrap: 'wrap', gap: 16 }}>
+                                <div className="row gap-5" style={{ flexWrap: 'wrap' }}>
+                                    <div className="col">
+                                        <span className="mono muted" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Patient</span>
+                                        <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{patientInfo.name}</span>
+                                    </div>
+                                    <div className="col">
+                                        <span className="mono muted" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>DOB</span>
+                                        <span style={{ fontSize: 14, color: 'var(--ink)' }}>{patientInfo.dob || '—'}</span>
+                                    </div>
+                                    <div className="col">
+                                        <span className="mono muted" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Procedure</span>
+                                        <span style={{ fontSize: 14, color: 'var(--ink)' }}>{patientInfo.procedure}</span>
+                                    </div>
+                                </div>
+                                <span className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                    Started: {startTime.toLocaleTimeString()}
+                                </span>
+                            </div>
 
-                        <button
-                            onClick={startChecklist}
-                            disabled={!patientInfo.name || !patientInfo.procedure}
-                            className="w-full py-4 rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold text-lg hover:shadow-lg hover:shadow-red-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                            Begin Safety Checklist
-                        </button>
-
-                        {/* Phases Overview */}
-                        <div className="mt-8 pt-8 border-t border-white/5">
-                            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Checklist Phases</h3>
-                            <div className="grid md:grid-cols-3 gap-4">
-                                {data?.phases.map(p => {
-                                    const c = PHASE_COLORS[p.color as keyof typeof PHASE_COLORS];
+                            {/* Phase navigation */}
+                            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                {data?.phases.map((p, i) => {
+                                    const a = PHASE_ACCENT[p.color] || PHASE_ACCENT.amber;
+                                    const progress = getPhaseProgress(p.id);
+                                    const complete = isPhaseComplete(p.id);
+                                    const isActive = currentPhase === i;
                                     return (
-                                        <div key={p.id} className={`${c.bgLight} ${c.border} border rounded-xl p-4`}>
-                                            <div className={`${c.text} font-bold mb-1`}>{p.name}</div>
-                                            <div className="text-xs text-slate-400 mb-2">{p.timing}</div>
-                                            <div className="text-xs text-slate-500">
-                                                {p.items.length} items • {p.items.filter(i => i.critical).length} critical
+                                        <button
+                                            key={p.id}
+                                            type="button"
+                                            onClick={() => setCurrentPhase(i)}
+                                            className="card col gap-2"
+                                            style={{
+                                                flex: 1,
+                                                minWidth: 200,
+                                                padding: 14,
+                                                textAlign: 'left',
+                                                cursor: 'pointer',
+                                                borderColor: isActive ? 'var(--cobalt)' : 'var(--rule)',
+                                                background: isActive ? 'var(--cobalt-50)' : 'var(--paper)',
+                                            }}
+                                        >
+                                            <div className="row between ai-center gap-2">
+                                                <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{p.name}</span>
+                                                {complete && <span style={{ color: 'var(--mint-3)', fontWeight: 600 }}>✓</span>}
                                             </div>
-                                        </div>
+                                            <div style={{ height: 4, background: 'var(--rule)', borderRadius: 999, overflow: 'hidden' }}>
+                                                <div style={{ height: '100%', width: `${progress.percent}%`, background: a.bar, transition: 'width 200ms ease' }} />
+                                            </div>
+                                            <span className="mono muted" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                                                {progress.checked}/{progress.total}
+                                            </span>
+                                        </button>
                                     );
                                 })}
                             </div>
-                        </div>
-                    </div>
-                ) : (
-                    /* Active Checklist */
-                    <>
-                        {/* Patient Banner */}
-                        <div className="bg-slate-800/50 border border-white/5 rounded-xl p-4 mb-6 flex flex-wrap items-center justify-between gap-4">
-                            <div className="flex items-center gap-6">
-                                <div>
-                                    <div className="text-xs text-slate-500">Patient</div>
-                                    <div className="font-bold text-white">{patientInfo.name}</div>
-                                </div>
-                                <div>
-                                    <div className="text-xs text-slate-500">DOB</div>
-                                    <div className="text-white">{patientInfo.dob}</div>
-                                </div>
-                                <div>
-                                    <div className="text-xs text-slate-500">Procedure</div>
-                                    <div className="text-white">{patientInfo.procedure}</div>
-                                </div>
-                            </div>
-                            <div className="text-sm text-slate-400">
-                                Started: {startTime.toLocaleTimeString()}
-                            </div>
-                        </div>
 
-                        {/* Phase Navigation */}
-                        <div className="flex gap-2 mb-6">
-                            {data?.phases.map((p, i) => {
-                                const c = PHASE_COLORS[p.color as keyof typeof PHASE_COLORS];
-                                const progress = getPhaseProgress(p.id);
-                                const complete = isPhaseComplete(p.id);
-                                return (
-                                    <button
-                                        key={p.id}
-                                        onClick={() => setCurrentPhase(i)}
-                                        className={`flex-1 p-3 rounded-xl border transition-all ${
-                                            currentPhase === i
-                                                ? `${c.bgLight} ${c.border}`
-                                                : 'bg-slate-900/60 border-white/5 hover:border-white/20'
-                                        }`}
+                            {/* Current phase */}
+                            {phase && (
+                                <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                                    <div
+                                        className="row between ai-center"
+                                        style={{
+                                            padding: 20,
+                                            borderBottom: '1px solid var(--rule)',
+                                            borderLeft: `4px solid ${accent.bar}`,
+                                            flexWrap: 'wrap',
+                                            gap: 12,
+                                        }}
                                     >
-                                        <div className="flex items-center justify-between mb-2">
-                                            <span className={`font-bold text-sm ${currentPhase === i ? c.text : 'text-white'}`}>
-                                                {p.name}
-                                            </span>
-                                            {complete && (
-                                                <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                            )}
+                                        <div className="col gap-1">
+                                            <h2 className="display" style={{ fontSize: 20, margin: 0, fontWeight: 600, letterSpacing: '-0.03em' }}>{phase.name}</h2>
+                                            <span className="mono muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{phase.timing}</span>
                                         </div>
-                                        <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                                            <div className={`h-full ${c.bg} transition-all`} style={{ width: `${progress.percent}%` }} />
-                                        </div>
-                                        <div className="text-xs text-slate-500 mt-1">{progress.checked}/{progress.total}</div>
-                                    </button>
-                                );
-                            })}
-                        </div>
-
-                        {/* Current Phase */}
-                        {phase && (
-                            <div className={`${colors.bgLight} border ${colors.border} rounded-2xl overflow-hidden`}>
-                                <div className={`${colors.bg} p-4`}>
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <h2 className="text-xl font-bold text-white">{phase.name}</h2>
-                                            <p className="text-white/80 text-sm">{phase.timing}</p>
-                                        </div>
-                                        <div className="text-right text-white/80 text-sm">
-                                            <div>Personnel:</div>
-                                            <div className="font-medium">{phase.personnel.join(', ')}</div>
+                                        <div className="col ai-end">
+                                            <span className="mono muted" style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Personnel</span>
+                                            <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{phase.personnel.join(', ')}</span>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div className="p-6 space-y-4">
-                                    {phase.items.map(item => (
-                                        <div key={item.id} className={`p-4 rounded-xl border transition-all ${
-                                            checkedItems.has(item.id)
-                                                ? 'bg-emerald-500/10 border-emerald-500/30'
-                                                : 'bg-slate-800/50 border-white/5'
-                                        }`}>
-                                            <label className="flex items-start gap-3 cursor-pointer">
-                                                <input
-                                                    type="checkbox"
-                                                    checked={checkedItems.has(item.id)}
-                                                    onChange={() => toggleItem(item.id)}
-                                                    className="mt-1 w-6 h-6 rounded border-slate-600 bg-slate-700 text-emerald-500 focus:ring-emerald-500"
-                                                />
-                                                <div className="flex-1">
-                                                    <div className="flex items-start gap-2">
-                                                        <span className={`font-medium ${checkedItems.has(item.id) ? 'line-through text-slate-500' : 'text-white'}`}>
-                                                            {item.text}
-                                                        </span>
-                                                        {item.critical && (
-                                                            <span className="px-2 py-0.5 bg-red-500/20 text-red-400 text-xs rounded font-bold">
-                                                                CRITICAL
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                    {item.details && (
-                                                        <p className="text-sm text-slate-400 mt-1">{item.details}</p>
-                                                    )}
-                                                    {item.prompts && (
-                                                        <ul className="mt-2 space-y-1">
-                                                            {item.prompts.map((prompt, i) => (
-                                                                <li key={i} className="text-sm text-cyan-400 flex items-start gap-2">
-                                                                    <span className="text-slate-500">•</span>
-                                                                    {prompt}
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    )}
-                                                    {item.options && (
-                                                        <div className="mt-2 flex flex-wrap gap-2">
-                                                            {item.options.map((opt, i) => (
-                                                                <button
-                                                                    key={i}
-                                                                    onClick={() => setResponses(r => ({ ...r, [item.id]: opt }))}
-                                                                    className={`px-3 py-1 rounded-lg text-sm transition-colors ${
-                                                                        responses[item.id] === opt
-                                                                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/40'
-                                                                            : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                                                                    }`}
-                                                                >
-                                                                    {opt}
-                                                                </button>
-                                                            ))}
+                                    <div className="col gap-3" style={{ padding: 24 }}>
+                                        {phase.items.map(item => {
+                                            const isChecked = checkedItems.has(item.id);
+                                            return (
+                                                <div
+                                                    key={item.id}
+                                                    className="card"
+                                                    style={{
+                                                        padding: 14,
+                                                        borderColor: isChecked ? 'rgba(40, 212, 168, .30)' : 'var(--rule)',
+                                                        background: isChecked ? 'var(--mint-50)' : 'var(--paper)',
+                                                    }}
+                                                >
+                                                    <label className="row gap-3 ai-start" style={{ cursor: 'pointer' }}>
+                                                        <input
+                                                            type="checkbox"
+                                                            checked={isChecked}
+                                                            onChange={() => toggleItem(item.id)}
+                                                            style={{ width: 20, height: 20, marginTop: 2, accentColor: 'var(--mint-2)' }}
+                                                        />
+                                                        <div className="col gap-2" style={{ flex: 1, minWidth: 0 }}>
+                                                            <div className="row gap-2 ai-baseline" style={{ flexWrap: 'wrap' }}>
+                                                                <span style={{
+                                                                    fontSize: 14,
+                                                                    fontWeight: 500,
+                                                                    color: isChecked ? 'var(--ink-3)' : 'var(--ink)',
+                                                                    textDecoration: isChecked ? 'line-through' : 'none',
+                                                                }}>
+                                                                    {item.text}
+                                                                </span>
+                                                                {item.critical && <span className="pill pill-orange">CRITICAL</span>}
+                                                            </div>
+                                                            {item.details && (
+                                                                <p className="muted" style={{ fontSize: 13, margin: 0 }}>{item.details}</p>
+                                                            )}
+                                                            {item.prompts && (
+                                                                <ul className="clean col gap-1">
+                                                                    {item.prompts.map((prompt, i) => (
+                                                                        <li key={i} className="row gap-2 ai-start" style={{ fontSize: 13, color: 'var(--cobalt)' }}>
+                                                                            <span className="muted-2">•</span>
+                                                                            <span>{prompt}</span>
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            )}
+                                                            {item.options && (
+                                                                <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                                                    {item.options.map((opt, i) => {
+                                                                        const isSelected = responses[item.id] === opt;
+                                                                        return (
+                                                                            <button
+                                                                                key={i}
+                                                                                type="button"
+                                                                                onClick={() => setResponses(r => ({ ...r, [item.id]: opt }))}
+                                                                                className={isSelected ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
+                                                                            >
+                                                                                {opt}
+                                                                            </button>
+                                                                        );
+                                                                    })}
+                                                                </div>
+                                                            )}
                                                         </div>
-                                                    )}
+                                                    </label>
                                                 </div>
-                                            </label>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Phase Navigation Buttons */}
-                                <div className="p-6 pt-0 flex gap-3">
-                                    {currentPhase > 0 && (
-                                        <button
-                                            onClick={() => setCurrentPhase(currentPhase - 1)}
-                                            className="px-6 py-3 rounded-xl bg-slate-800 text-slate-300 font-medium hover:bg-slate-700 transition-colors"
-                                        >
-                                            Previous Phase
-                                        </button>
-                                    )}
-                                    {currentPhase < (data?.phases.length || 0) - 1 ? (
-                                        <button
-                                            onClick={() => setCurrentPhase(currentPhase + 1)}
-                                            disabled={!isPhaseComplete(phase.id)}
-                                            className={`flex-1 py-3 rounded-xl font-bold transition-all ${
-                                                isPhaseComplete(phase.id)
-                                                    ? `${colors.bg} text-white hover:opacity-90`
-                                                    : 'bg-slate-700 text-slate-500 cursor-not-allowed'
-                                            }`}
-                                        >
-                                            {isPhaseComplete(phase.id) ? 'Proceed to Next Phase' : 'Complete Critical Items to Continue'}
-                                        </button>
-                                    ) : (
-                                        <button
-                                            onClick={() => {
-                                                if (isPhaseComplete(phase.id)) {
-                                                    setCompletionModal({ isOpen: true, completionTime: new Date().toLocaleTimeString() });
-                                                }
-                                            }}
-                                            disabled={!isPhaseComplete(phase.id)}
-                                            className={`flex-1 py-3 rounded-xl font-bold transition-all ${
-                                                isPhaseComplete(phase.id)
-                                                    ? 'bg-emerald-500 text-white hover:bg-emerald-400'
-                                                    : 'bg-slate-700 text-slate-500 cursor-not-allowed'
-                                            }`}
-                                        >
-                                            Complete Checklist
-                                        </button>
-                                    )}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Additional Checks Accordion */}
-                        <div className="mt-6 space-y-2">
-                            {data && Object.entries(data.additional_checks).map(([key, check]) => (
-                                <details key={key} className="bg-slate-900/60 border border-white/5 rounded-xl overflow-hidden">
-                                    <summary className="p-4 cursor-pointer text-white font-medium hover:bg-slate-800/30 transition-colors">
-                                        {check.name}
-                                    </summary>
-                                    <div className="px-4 pb-4 space-y-2">
-                                        {check.items.map((item, i) => (
-                                            <label key={i} className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-800/30 cursor-pointer">
-                                                <input type="checkbox" className="w-5 h-5 rounded border-slate-600 bg-slate-700 text-cyan-500 focus:ring-cyan-500" />
-                                                <span className="text-slate-300 text-sm">{item}</span>
-                                            </label>
-                                        ))}
+                                            );
+                                        })}
                                     </div>
-                                </details>
-                            ))}
-                        </div>
 
-                        {/* Reset Button */}
-                        <div className="mt-6 text-center">
-                            <button
-                                onClick={resetChecklist}
-                                className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
-                            >
-                                Reset Checklist
-                            </button>
-                        </div>
-                    </>
-                )}
+                                    <div className="row gap-2" style={{ padding: 24, paddingTop: 0 }}>
+                                        {currentPhase > 0 && (
+                                            <button
+                                                type="button"
+                                                onClick={() => setCurrentPhase(currentPhase - 1)}
+                                                className="btn btn-paper"
+                                            >
+                                                ← Previous phase
+                                            </button>
+                                        )}
+                                        {currentPhase < (data?.phases.length || 0) - 1 ? (
+                                            <button
+                                                type="button"
+                                                onClick={() => setCurrentPhase(currentPhase + 1)}
+                                                disabled={!isPhaseComplete(phase.id)}
+                                                className="btn btn-cobalt"
+                                                style={{ flex: 1, justifyContent: 'center' }}
+                                            >
+                                                {isPhaseComplete(phase.id) ? 'Proceed to next phase →' : 'Complete critical items to continue'}
+                                            </button>
+                                        ) : (
+                                            <button
+                                                type="button"
+                                                onClick={() => {
+                                                    if (isPhaseComplete(phase.id)) {
+                                                        setCompletionModal({ isOpen: true, completionTime: new Date().toLocaleTimeString() });
+                                                    }
+                                                }}
+                                                disabled={!isPhaseComplete(phase.id)}
+                                                className="btn btn-cobalt"
+                                                style={{ flex: 1, justifyContent: 'center' }}
+                                            >
+                                                Complete checklist ✓
+                                            </button>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
 
-                {/* Disclaimer */}
-                <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-6 mt-8">
-                    <h3 className="font-bold text-white mb-2">About the WHO Surgical Safety Checklist</h3>
-                    <p className="text-sm text-slate-400 mb-4">
-                        The WHO Surgical Safety Checklist is a tool used by surgical teams to improve patient safety.
-                        Studies have shown it reduces surgical complications by up to 36% and mortality by up to 47%.
-                    </p>
-                    <div className="flex flex-wrap gap-4 text-xs text-slate-500">
-                        <a href="https://www.who.int/publications/i/item/9789241598590" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">
-                            WHO Implementation Manual →
-                        </a>
-                        <span>•</span>
-                        <span>Haynes AB, et al. NEJM 2009</span>
+                            {/* Additional checks */}
+                            <div className="col gap-2">
+                                {data && Object.entries(data.additional_checks).map(([key, check]) => (
+                                    <details key={key} className="card" style={{ padding: 0 }}>
+                                        <summary className="row between ai-center" style={{ padding: 16, cursor: 'pointer', listStyle: 'none' }}>
+                                            <span className="display" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{check.name}</span>
+                                            <span className="mono muted-2" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>expand</span>
+                                        </summary>
+                                        <div className="col gap-2" style={{ padding: '0 16px 16px', borderTop: '1px solid var(--rule)', marginTop: 0, paddingTop: 12 }}>
+                                            {check.items.map((item, i) => (
+                                                <label key={i} className="row gap-2 ai-center" style={{ padding: 6, cursor: 'pointer' }}>
+                                                    <input type="checkbox" style={{ width: 16, height: 16, accentColor: 'var(--cobalt)' }} />
+                                                    <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{item}</span>
+                                                </label>
+                                            ))}
+                                        </div>
+                                    </details>
+                                ))}
+                            </div>
+
+                            <div style={{ textAlign: 'center' }}>
+                                <button
+                                    type="button"
+                                    onClick={resetChecklist}
+                                    className="btn btn-ghost btn-sm"
+                                >
+                                    Reset checklist
+                                </button>
+                            </div>
+                        </>
+                    )}
+
+                    {/* About */}
+                    <div className="card col gap-2" style={{ padding: 24 }}>
+                        <span className="kicker"><span className="dot" />about the who surgical safety checklist</span>
+                        <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0, lineHeight: 1.6 }}>
+                            The WHO Surgical Safety Checklist is a tool used by surgical teams to improve patient safety.
+                            Studies have shown it reduces surgical complications by up to 36% and mortality by up to 47%.
+                        </p>
+                        <div className="row gap-3 mono" style={{ fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.06em', flexWrap: 'wrap' }}>
+                            <a href="https://www.who.int/publications/i/item/9789241598590" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--cobalt)' }}>
+                                ↗ WHO implementation manual
+                            </a>
+                            <span>·</span>
+                            <span>Haynes AB, et al. NEJM 2009</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
         </>
     );
 }

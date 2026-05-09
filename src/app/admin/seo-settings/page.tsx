@@ -27,6 +27,45 @@ interface SEOSettings {
     };
 }
 
+function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
+    return (
+        <label style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', cursor: 'pointer' }}>
+            <input
+                type="checkbox"
+                style={{ position: 'absolute', width: 1, height: 1, opacity: 0 }}
+                checked={checked}
+                onChange={(e) => onChange(e.target.checked)}
+            />
+            <span
+                aria-hidden="true"
+                style={{
+                    display: 'inline-block',
+                    width: 40,
+                    height: 22,
+                    borderRadius: 999,
+                    background: checked ? 'var(--cobalt)' : 'var(--rule)',
+                    position: 'relative',
+                    transition: 'background 120ms ease',
+                }}
+            >
+                <span
+                    style={{
+                        position: 'absolute',
+                        top: 2,
+                        left: checked ? 20 : 2,
+                        width: 18,
+                        height: 18,
+                        borderRadius: '50%',
+                        background: '#fff',
+                        transition: 'left 120ms ease',
+                        boxShadow: '0 1px 2px rgba(10,26,47,.15)',
+                    }}
+                />
+            </span>
+        </label>
+    );
+}
+
 export default function SeoSettingsPage() {
     const [settings, setSettings] = useState<SEOSettings>({
         schemas: {
@@ -135,187 +174,214 @@ export default function SeoSettingsPage() {
     }
 
     function updateSchema(key: keyof typeof settings.schemas, value: boolean) {
-        setSettings(prev => ({
-            ...prev,
-            schemas: { ...prev.schemas, [key]: value },
-        }));
+        setSettings(prev => ({ ...prev, schemas: { ...prev.schemas, [key]: value } }));
         setHasChanges(true);
     }
 
     function updateTemplate(key: keyof typeof settings.metaTemplates, value: string) {
-        setSettings(prev => ({
-            ...prev,
-            metaTemplates: { ...prev.metaTemplates, [key]: value },
-        }));
+        setSettings(prev => ({ ...prev, metaTemplates: { ...prev.metaTemplates, [key]: value } }));
         setHasChanges(true);
     }
 
     function updateCanonical(key: keyof typeof settings.canonicalRules, value: boolean) {
-        setSettings(prev => ({
-            ...prev,
-            canonicalRules: { ...prev.canonicalRules, [key]: value },
-        }));
+        setSettings(prev => ({ ...prev, canonicalRules: { ...prev.canonicalRules, [key]: value } }));
         setHasChanges(true);
     }
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center min-h-[400px]">
-                <div className="animate-spin w-8 h-8 border-2 border-emerald-500/30 border-t-emerald-500 rounded-full" />
+            <div className="row center ai-center" style={{ minHeight: 400 }}>
+                <div
+                    aria-hidden="true"
+                    style={{
+                        width: 32,
+                        height: 32,
+                        border: '2px solid var(--rule)',
+                        borderTopColor: 'var(--cobalt)',
+                        borderRadius: '50%',
+                        animation: 'spin 0.8s linear infinite',
+                    }}
+                />
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
             </div>
         );
     }
 
     return (
-        <div className="space-y-6 max-w-4xl">
-            <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 text-sm text-amber-900">
-                <div className="font-semibold mb-1">SEO toggles are partially live.</div>
-                <div className="text-amber-800">
-                    Schema markup and meta-title templates on individual pages (homepage,
-                    conditions, treatments, doctors) are currently hardcoded in their respective
-                    page components. Toggles on this screen are saved but do not yet flip the live
-                    schemas. Treat this as a configuration staging area until the page components
-                    are refactored to read from the persisted SEO settings.
+        <div className="col gap-6" style={{ maxWidth: 960, color: 'var(--ink)' }}>
+            {/* Notice */}
+            <div
+                className="card-flat"
+                style={{
+                    padding: 14,
+                    borderColor: 'rgba(230, 185, 40, .40)',
+                    background: 'var(--lemon-50)',
+                    fontSize: 13,
+                    color: '#8C6A00',
+                }}
+            >
+                <div style={{ fontWeight: 600, marginBottom: 4 }}>SEO toggles are partially live.</div>
+                <div>
+                    Schema markup and meta-title templates on individual pages (homepage, conditions, treatments, doctors) are currently hardcoded in their respective page components. Toggles on this screen are saved but do not yet flip the live schemas. Treat this as a configuration staging area until the page components are refactored to read from the persisted SEO settings.
                 </div>
             </div>
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                        </svg>
-                        SEO & Meta Settings
+
+            {/* Header */}
+            <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
+                <div className="col gap-2">
+                    <span className="section-mark">admin / seo settings</span>
+                    <h1 className="display" style={{ fontSize: 'clamp(28px, 4vw, 40px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                        SEO &amp; meta settings<span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-                    <p className="text-slate-500 mt-1">Configure global schema, canonical rules, and meta patterns.</p>
+                    <p className="lede" style={{ fontSize: 15, margin: 0, maxWidth: 560 }}>
+                        Configure global schema, canonical rules, and meta patterns.
+                    </p>
                 </div>
                 <button
                     onClick={handleSave}
                     disabled={saving || !hasChanges}
-                    className="px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn btn-cobalt"
                 >
-                    {saving ? (
-                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                        </svg>
-                    ) : (
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                    )}
-                    {saving ? 'Saving...' : 'Save Configuration'}
+                    {saving ? 'Saving…' : 'Save configuration →'}
                 </button>
             </div>
 
             {saveMessage && (
-                <div className={`p-3 rounded-lg text-sm flex items-center gap-2 ${
-                    saveMessage.type === 'success'
-                        ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                        : 'bg-rose-50 text-rose-800 border border-rose-200'
-                }`}>
-                    {saveMessage.type === 'success' ? (
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                    ) : (
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    )}
+                <div
+                    role="status"
+                    className="card-flat"
+                    style={{
+                        padding: '12px 16px',
+                        borderColor: saveMessage.type === 'success' ? 'rgba(40, 212, 168, .35)' : 'rgba(255, 90, 46, .35)',
+                        background: saveMessage.type === 'success' ? 'var(--mint-50)' : 'var(--orange-50)',
+                        color: saveMessage.type === 'success' ? 'var(--mint-3)' : 'var(--orange-2)',
+                        fontSize: 13,
+                    }}
+                >
                     {saveMessage.text}
                 </div>
             )}
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4 border-b border-slate-100 pb-3">Global Schema JSON-LD</h3>
-                <div className="space-y-4">
+            {/* Schema */}
+            <section className="card col gap-4" style={{ padding: 24 }}>
+                <div className="hairline-b" style={{ paddingBottom: 12 }}>
+                    <span className="section-mark">global schema json-ld</span>
+                </div>
+                <div className="col">
                     {[
                         { key: 'organization' as const, label: 'Organization Schema', desc: 'Injects base aihealz organization schema on all pages.' },
                         { key: 'medicalWebPage' as const, label: 'MedicalWebPage Schema', desc: 'Auto-injects on condition, treatment, and directory pages.' },
                         { key: 'breadcrumbs' as const, label: 'Breadcrumb Schema', desc: 'Adds breadcrumb structured data for better navigation in search results.' },
                         { key: 'faq' as const, label: 'FAQ Schema', desc: 'Auto-generates FAQ schema from condition FAQs.' },
-                    ].map(({ key, label, desc }) => (
-                        <div key={key} className="flex items-center justify-between">
-                            <div>
-                                <div className="font-semibold text-slate-800">{label}</div>
-                                <div className="text-sm text-slate-500">{desc}</div>
+                    ].map(({ key, label, desc }, i, arr) => (
+                        <div
+                            key={key}
+                            className="row between ai-center"
+                            style={{
+                                padding: '14px 0',
+                                borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                gap: 12,
+                            }}
+                        >
+                            <div className="col gap-1" style={{ flex: 1 }}>
+                                <span style={{ fontSize: 14, fontWeight: 500 }}>{label}</span>
+                                <span className="muted" style={{ fontSize: 12 }}>{desc}</span>
                             </div>
-                            <label className="relative inline-flex items-center cursor-pointer">
-                                <input
-                                    type="checkbox"
-                                    className="sr-only peer"
-                                    checked={settings.schemas[key]}
-                                    onChange={(e) => updateSchema(key, e.target.checked)}
-                                />
-                                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-emerald-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
-                            </label>
+                            <Toggle checked={settings.schemas[key]} onChange={(v) => updateSchema(key, v)} />
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4 border-b border-slate-100 pb-3">Meta Title Patterns</h3>
-                <div className="space-y-4">
+            {/* Meta templates */}
+            <section className="card col gap-4" style={{ padding: 24 }}>
+                <div className="hairline-b" style={{ paddingBottom: 12 }}>
+                    <span className="section-mark">meta title patterns</span>
+                </div>
+                <div className="col gap-4">
                     {[
-                        { key: 'condition' as const, label: 'Conditions Template (City)' },
-                        { key: 'treatment' as const, label: 'Treatments Template (City)' },
-                        { key: 'doctor' as const, label: 'Doctor Profile Template' },
-                        { key: 'city' as const, label: 'City Directory Template' },
+                        { key: 'condition' as const, label: 'Conditions template (city)' },
+                        { key: 'treatment' as const, label: 'Treatments template (city)' },
+                        { key: 'doctor' as const, label: 'Doctor profile template' },
+                        { key: 'city' as const, label: 'City directory template' },
                     ].map(({ key, label }) => (
-                        <div key={key}>
-                            <label className="block text-sm font-semibold text-slate-700 mb-1">{label}</label>
-                            <div className="flex">
+                        <div key={key} className="form-group">
+                            <label className="form-label">{label}</label>
+                            <div className="row" style={{ alignItems: 'stretch' }}>
                                 <input
                                     type="text"
-                                    className="flex-1 border border-slate-200 rounded-l-lg p-2 bg-slate-50 text-slate-700 font-mono text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none"
+                                    className="input mono"
+                                    style={{ flex: 1, fontSize: 13, borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
                                     value={settings.metaTemplates[key]}
                                     onChange={(e) => updateTemplate(key, e.target.value)}
                                 />
-                                <div className="bg-slate-100 border-y border-r border-slate-200 rounded-r-lg px-3 py-2 text-sm text-slate-500">| aihealz</div>
+                                <div
+                                    className="mono"
+                                    style={{
+                                        background: 'var(--bg-2)',
+                                        borderTop: '1px solid var(--rule)',
+                                        borderRight: '1px solid var(--rule)',
+                                        borderBottom: '1px solid var(--rule)',
+                                        borderTopRightRadius: 'var(--r-2)',
+                                        borderBottomRightRadius: 'var(--r-2)',
+                                        padding: '11px 14px',
+                                        fontSize: 13,
+                                        color: 'var(--ink-3)',
+                                        whiteSpace: 'nowrap',
+                                    }}
+                                >
+                                    | aihealz
+                                </div>
                             </div>
                         </div>
                     ))}
-                    <p className="text-xs text-slate-400 mt-2">
+                    <p className="form-hint" style={{ marginTop: 0 }}>
                         Available placeholders: [Condition], [Treatment], [City], [Name], [Specialty], [Country]
                     </p>
                 </div>
-            </div>
+            </section>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4 border-b border-slate-100 pb-3">Canonical Rules</h3>
-                <div className="space-y-4">
+            {/* Canonical */}
+            <section className="card col gap-4" style={{ padding: 24 }}>
+                <div className="hairline-b" style={{ paddingBottom: 12 }}>
+                    <span className="section-mark">canonical rules</span>
+                </div>
+                <div className="col">
                     {[
-                        { key: 'trailingSlash' as const, label: 'Trailing Slash', desc: 'Add trailing slash to all URLs (e.g., /conditions/ vs /conditions)' },
-                        { key: 'wwwRedirect' as const, label: 'WWW Redirect', desc: 'Redirect non-www to www version of the site' },
-                        { key: 'httpsOnly' as const, label: 'HTTPS Only', desc: 'Force HTTPS on all pages' },
-                    ].map(({ key, label, desc }) => (
-                        <div key={key} className="flex items-center justify-between">
-                            <div>
-                                <div className="font-semibold text-slate-800">{label}</div>
-                                <div className="text-sm text-slate-500">{desc}</div>
+                        { key: 'trailingSlash' as const, label: 'Trailing slash', desc: 'Add trailing slash to all URLs (e.g., /conditions/ vs /conditions)' },
+                        { key: 'wwwRedirect' as const, label: 'WWW redirect', desc: 'Redirect non-www to www version of the site' },
+                        { key: 'httpsOnly' as const, label: 'HTTPS only', desc: 'Force HTTPS on all pages' },
+                    ].map(({ key, label, desc }, i, arr) => (
+                        <div
+                            key={key}
+                            className="row between ai-center"
+                            style={{
+                                padding: '14px 0',
+                                borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                gap: 12,
+                            }}
+                        >
+                            <div className="col gap-1" style={{ flex: 1 }}>
+                                <span style={{ fontSize: 14, fontWeight: 500 }}>{label}</span>
+                                <span className="muted" style={{ fontSize: 12 }}>{desc}</span>
                             </div>
-                            <label className="relative inline-flex items-center cursor-pointer">
-                                <input
-                                    type="checkbox"
-                                    className="sr-only peer"
-                                    checked={settings.canonicalRules[key]}
-                                    onChange={(e) => updateCanonical(key, e.target.checked)}
-                                />
-                                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-emerald-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
-                            </label>
+                            <Toggle checked={settings.canonicalRules[key]} onChange={(v) => updateCanonical(key, v)} />
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4 border-b border-slate-100 pb-3">Indexing API</h3>
-                <div className="space-y-4">
-                    <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-1">Google Indexing API Key (JSON)</label>
+            {/* Indexing API */}
+            <section className="card col gap-4" style={{ padding: 24 }}>
+                <div className="hairline-b" style={{ paddingBottom: 12 }}>
+                    <span className="section-mark">indexing api</span>
+                </div>
+                <div className="col gap-4">
+                    <div className="form-group">
+                        <label className="form-label">Google Indexing API Key (JSON)</label>
                         <textarea
-                            className="w-full border border-slate-200 rounded-lg p-3 bg-slate-50 text-slate-600 font-mono text-xs h-24 focus:ring-2 focus:ring-emerald-500 outline-none"
+                            className="textarea mono"
+                            style={{ fontSize: 12, height: 96 }}
                             value={settings.indexingApi.googleKeyJson}
                             onChange={(e) => {
                                 setSettings(prev => ({
@@ -328,11 +394,11 @@ export default function SeoSettingsPage() {
                             spellCheck={false}
                         />
                     </div>
-                    <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-1">Bing Webmaster API Key</label>
+                    <div className="form-group">
+                        <label className="form-label">Bing Webmaster API Key</label>
                         <input
                             type="password"
-                            className="w-full border border-slate-200 rounded-lg p-2 bg-slate-50 text-slate-600 font-mono text-sm focus:ring-2 focus:ring-emerald-500 outline-none"
+                            className="input mono"
                             value={settings.indexingApi.bingApiKey}
                             onChange={(e) => {
                                 setSettings(prev => ({
@@ -341,34 +407,23 @@ export default function SeoSettingsPage() {
                                 }));
                                 setHasChanges(true);
                             }}
-                            placeholder="Enter Bing API key..."
+                            placeholder="Enter Bing API key…"
                         />
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="row gap-3 ai-center">
                         <button
                             onClick={handleVerifyCredentials}
                             disabled={verifying}
-                            className="px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-lg hover:bg-slate-900 disabled:opacity-50 flex items-center gap-2"
+                            className="btn btn-primary"
                         >
-                            {verifying ? (
-                                <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                                </svg>
-                            ) : null}
-                            {verifying ? 'Verifying...' : 'Verify Credentials'}
+                            {verifying ? 'Verifying…' : 'Verify credentials'}
                         </button>
                         {settings.indexingApi.verified && (
-                            <span className="text-sm font-bold text-emerald-600 flex items-center gap-1">
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                Verified
-                            </span>
+                            <span className="pill pill-mint">✓ Verified</span>
                         )}
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }
