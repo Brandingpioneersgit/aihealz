@@ -2,10 +2,6 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import {
-  User, Building2, Microscope, Check, X, Star, Zap,
-  Users, TrendingUp, Shield, Clock, Phone, BarChart3
-} from 'lucide-react';
 
 type ProviderType = 'doctors' | 'hospitals' | 'labs';
 
@@ -266,10 +262,10 @@ const LAB_PLANS: Plan[] = [
   },
 ];
 
-const PROVIDER_TABS: { id: ProviderType; label: string; icon: typeof User }[] = [
-  { id: 'doctors', label: 'Doctors', icon: User },
-  { id: 'hospitals', label: 'Hospitals', icon: Building2 },
-  { id: 'labs', label: 'Diagnostic Labs', icon: Microscope },
+const PROVIDER_TABS: { id: ProviderType; label: string; abbr: string }[] = [
+  { id: 'doctors', label: 'Doctors', abbr: 'DR' },
+  { id: 'hospitals', label: 'Hospitals', abbr: 'HS' },
+  { id: 'labs', label: 'Diagnostic Labs', abbr: 'LB' },
 ];
 
 export default function PricingPage() {
@@ -283,278 +279,554 @@ export default function PricingPage() {
   }[providerType];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Hero */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold uppercase tracking-wider mb-6">
-            <Zap size={14} />
-            Provider Plans & Pricing
-          </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900">
-            Grow your practice with{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-600">
-              AIHealz
-            </span>
+    <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+      <div
+        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 96px' }}
+        className="col gap-7"
+      >
+        {/* ── Hero ──────────────────────────────────────── */}
+        <header className="col gap-3" style={{ maxWidth: 760 }}>
+          <span className="section-mark">provider plans / pricing</span>
+          <h1
+            className="display"
+            style={{
+              fontSize: 'clamp(40px, 6vw, 88px)',
+              lineHeight: 0.95,
+              letterSpacing: '-0.045em',
+              margin: 0,
+              fontWeight: 600,
+            }}
+          >
+            Grow your practice <span style={{ color: 'var(--cobalt)' }}>without the noise</span>
+            <span style={{ color: 'var(--orange)' }}>.</span>
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Choose the right plan for your practice size. Start free, scale as you grow.
+          <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 560 }}>
+            Pick the plan that matches your practice size. Start free, scale as patient volume grows. No surprise fees.
           </p>
-        </div>
+        </header>
 
-        {/* Provider Type Tabs */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex p-1.5 rounded-2xl bg-slate-100">
-            {PROVIDER_TABS.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setProviderType(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  providerType === tab.id
-                    ? 'bg-white text-teal-600 shadow-md'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
+        {/* ── Provider Type Tabs + Billing Toggle ─────── */}
+        <div
+          className="row between ai-center"
+          style={{ flexWrap: 'wrap', gap: 16 }}
+        >
+          <div
+            className="row"
+            role="tablist"
+            aria-label="Provider type"
+            style={{
+              border: '1px solid var(--rule)',
+              borderRadius: 'var(--r-2)',
+              background: 'var(--paper)',
+              overflow: 'hidden',
+            }}
+          >
+            {PROVIDER_TABS.map((tab, i) => {
+              const isActive = providerType === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setProviderType(tab.id)}
+                  role="tab"
+                  aria-selected={isActive}
+                  className="row ai-center gap-2"
+                  style={{
+                    padding: '10px 18px',
+                    fontSize: 13,
+                    fontWeight: isActive ? 500 : 400,
+                    color: isActive ? 'var(--paper)' : 'var(--ink-2)',
+                    background: isActive ? 'var(--ink)' : 'transparent',
+                    borderRight: i < PROVIDER_TABS.length - 1 ? '1px solid var(--rule)' : 'none',
+                    cursor: 'pointer',
+                    transition: 'background 120ms, color 120ms',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: 'var(--mono)',
+                      fontSize: 11,
+                      letterSpacing: '0.06em',
+                      opacity: 0.7,
+                    }}
+                  >
+                    {tab.abbr}
+                  </span>
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="row ai-center gap-3">
+            <span
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: billingCycle === 'monthly' ? 'var(--ink)' : 'var(--ink-4)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                fontWeight: billingCycle === 'monthly' ? 500 : 400,
+              }}
+            >
+              Monthly
+            </span>
+            <button
+              onClick={() =>
+                setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')
+              }
+              role="switch"
+              aria-checked={billingCycle === 'annual'}
+              aria-label="Toggle billing cycle"
+              style={{
+                position: 'relative',
+                width: 44,
+                height: 24,
+                borderRadius: 999,
+                background: billingCycle === 'annual' ? 'var(--cobalt)' : 'var(--rule)',
+                border: 'none',
+                transition: 'background 120ms',
+                cursor: 'pointer',
+              }}
+            >
+              <span
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  top: 3,
+                  left: 3,
+                  width: 18,
+                  height: 18,
+                  borderRadius: '50%',
+                  background: 'var(--paper)',
+                  transform: billingCycle === 'annual' ? 'translateX(20px)' : 'translateX(0)',
+                  transition: 'transform 160ms ease',
+                  boxShadow: '0 1px 3px rgba(10, 26, 47, .15)',
+                }}
+              />
+            </button>
+            <span
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: billingCycle === 'annual' ? 'var(--ink)' : 'var(--ink-4)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                fontWeight: billingCycle === 'annual' ? 500 : 400,
+              }}
+            >
+              Annual
+              <span
+                className="pill pill-mint"
+                style={{ marginLeft: 8, textTransform: 'none' }}
               >
-                <tab.icon size={18} />
-                {tab.label}
-              </button>
-            ))}
+                save 20%
+              </span>
+            </span>
           </div>
         </div>
 
-        {/* Billing Toggle */}
-        <div className="flex justify-center items-center gap-4 mb-12">
-          <span
-            className={`text-sm font-medium ${
-              billingCycle === 'monthly' ? 'text-slate-900' : 'text-slate-400'
-            }`}
-          >
-            Monthly
-          </span>
-          <button
-            onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
-            className="relative w-14 h-7 rounded-full bg-slate-200 transition-colors"
-          >
-            <span
-              className={`absolute top-1 left-1 w-5 h-5 rounded-full bg-teal-600 transition-transform ${
-                billingCycle === 'annual' ? 'translate-x-7' : ''
-              }`}
-            />
-          </button>
-          <span
-            className={`text-sm font-medium ${
-              billingCycle === 'annual' ? 'text-slate-900' : 'text-slate-400'
-            }`}
-          >
-            Annual
-            <span className="ml-2 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs">
-              Save 20%
-            </span>
-          </span>
-        </div>
+        {/* ── Plans Grid ─────────────────────────────── */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: 16,
+          }}
+        >
+          {plans.map(plan => {
+            const isCustom = plan.price === 'Custom';
+            const isAnnual = billingCycle === 'annual' && !isCustom;
+            const displayPrice = isAnnual
+              ? `$${Math.floor(parseInt(plan.price.replace('$', '')) * 0.8)}`
+              : plan.price;
+            const displaySuffix = isCustom
+              ? plan.priceSuffix
+              : isAnnual
+              ? '/month, billed annually'
+              : plan.priceSuffix;
 
-        {/* Plans Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {plans.map((plan) => (
-            <div
-              key={plan.slug}
-              className={`rounded-3xl border overflow-hidden flex flex-col transition-all ${
-                plan.highlighted
-                  ? 'bg-white border-teal-300 ring-2 ring-teal-200 shadow-xl shadow-teal-500/10 scale-105 z-10'
-                  : 'bg-white border-slate-200 hover:border-teal-200 hover:shadow-lg'
-              }`}
-            >
-              {/* Badge */}
-              {plan.badge && (
-                <div
-                  className={`text-center py-2 text-xs font-bold uppercase tracking-wider ${
-                    plan.highlighted
-                      ? 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white'
-                      : 'bg-slate-100 text-slate-600'
-                  }`}
-                >
-                  {plan.badge}
-                </div>
-              )}
-
-              {/* Header */}
-              <div className="p-6 border-b border-slate-100">
-                <h2 className="text-xl font-bold text-slate-900 mb-1">{plan.name}</h2>
-                <p className="text-sm text-slate-500 mb-4">{plan.description}</p>
-                <div className="flex items-end gap-1">
-                  <span className="text-4xl font-black text-slate-900">
-                    {plan.price === 'Custom'
-                      ? 'Custom'
-                      : billingCycle === 'annual'
-                      ? `$${Math.floor(parseInt(plan.price.replace('$', '')) * 0.8)}`
-                      : plan.price}
-                  </span>
-                  <span className="text-sm text-slate-500 mb-1.5">
-                    {plan.price === 'Custom' ? plan.priceSuffix : billingCycle === 'annual' ? '/month (billed annually)' : plan.priceSuffix}
-                  </span>
-                </div>
-              </div>
-
-              {/* Metrics */}
-              <div className="px-6 py-4 bg-slate-50 border-b border-slate-100 grid grid-cols-2 gap-3">
-                {plan.metrics.map((metric) => (
-                  <div key={metric.label}>
-                    <p className="text-xs text-slate-500 font-medium">{metric.label}</p>
-                    <p className="text-lg font-bold text-slate-900">{metric.value}</p>
+            return (
+              <div
+                key={plan.slug}
+                className={plan.highlighted ? 'card' : 'card-flat'}
+                style={{
+                  padding: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  borderColor: plan.highlighted ? 'var(--ink)' : 'var(--rule)',
+                  borderWidth: plan.highlighted ? 2 : 1,
+                  position: 'relative',
+                }}
+              >
+                {plan.badge && (
+                  <div
+                    className="mono"
+                    style={{
+                      padding: '8px 16px',
+                      background: plan.highlighted ? 'var(--ink)' : 'var(--bg-2)',
+                      color: plan.highlighted ? 'var(--paper)' : 'var(--ink-3)',
+                      fontSize: 11,
+                      letterSpacing: '0.10em',
+                      textTransform: 'uppercase',
+                      fontWeight: 500,
+                      borderBottom: '1px solid var(--rule)',
+                    }}
+                  >
+                    {plan.badge}
                   </div>
-                ))}
-              </div>
+                )}
 
-              {/* Features */}
-              <div className="p-6 flex-1">
-                <ul className="space-y-3">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5">
-                      {feature.included ? (
-                        <Check
-                          size={16}
-                          className={`mt-0.5 flex-shrink-0 ${
-                            feature.highlight ? 'text-teal-600' : 'text-emerald-500'
-                          }`}
-                        />
-                      ) : (
-                        <X size={16} className="mt-0.5 flex-shrink-0 text-slate-300" />
-                      )}
+                {/* Header */}
+                <div className="col gap-2 hairline-b" style={{ padding: '24px 24px 20px' }}>
+                  <div className="row between ai-center">
+                    <h2
+                      className="display"
+                      style={{
+                        fontSize: 22,
+                        margin: 0,
+                        fontWeight: 600,
+                        letterSpacing: '-0.02em',
+                      }}
+                    >
+                      {plan.name}
+                    </h2>
+                  </div>
+                  <p className="muted" style={{ fontSize: 13, margin: 0, lineHeight: 1.5 }}>
+                    {plan.description}
+                  </p>
+                  <div className="row ai-baseline gap-1" style={{ marginTop: 6 }}>
+                    <span
+                      className="display num"
+                      style={{
+                        fontSize: 40,
+                        fontWeight: 600,
+                        letterSpacing: '-0.04em',
+                        color: 'var(--ink)',
+                        lineHeight: 1,
+                      }}
+                    >
+                      {displayPrice}
+                    </span>
+                    <span className="mono" style={{ fontSize: 12, color: 'var(--ink-3)' }}>
+                      {displaySuffix}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Metrics */}
+                <div
+                  className="row hairline-b"
+                  style={{ background: 'var(--bg-2)' }}
+                >
+                  {plan.metrics.map((metric, mIdx, arr) => (
+                    <div
+                      key={metric.label}
+                      className="col gap-1"
+                      style={{
+                        flex: 1,
+                        padding: '14px 18px',
+                        borderRight:
+                          mIdx < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                      }}
+                    >
                       <span
-                        className={`text-sm ${
-                          feature.included
-                            ? feature.highlight
-                              ? 'text-slate-900 font-medium'
-                              : 'text-slate-700'
-                            : 'text-slate-400'
-                        }`}
+                        className="mono"
+                        style={{
+                          fontSize: 11,
+                          color: 'var(--ink-3)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.08em',
+                        }}
                       >
-                        {feature.label}
+                        {metric.label}
                       </span>
+                      <span
+                        className="num"
+                        style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)' }}
+                      >
+                        {metric.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Features */}
+                <ul
+                  className="clean col gap-2"
+                  style={{ padding: '20px 24px', flex: 1 }}
+                >
+                  {plan.features.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className="row gap-2 ai-baseline"
+                      style={{
+                        fontSize: 13,
+                        color: feature.included
+                          ? feature.highlight
+                            ? 'var(--ink)'
+                            : 'var(--ink-2)'
+                          : 'var(--ink-4)',
+                        fontWeight: feature.highlight ? 500 : 400,
+                      }}
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mono"
+                        style={{
+                          color: feature.included
+                            ? feature.highlight
+                              ? 'var(--cobalt)'
+                              : 'var(--mint-3)'
+                            : 'var(--ink-4)',
+                          fontSize: 12,
+                          minWidth: 14,
+                          fontWeight: 500,
+                        }}
+                      >
+                        {feature.included ? '✓' : '×'}
+                      </span>
+                      <span style={{ flex: 1 }}>{feature.label}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
 
-              {/* CTA */}
-              <div className="p-6 pt-0">
-                <Link
-                  href={plan.ctaLink}
-                  className={`block w-full text-center py-3 rounded-2xl font-bold transition-all ${
-                    plan.highlighted
-                      ? 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white hover:shadow-lg hover:-translate-y-0.5'
-                      : 'bg-slate-100 text-slate-700 hover:bg-teal-50 hover:text-teal-700'
-                  }`}
-                >
-                  {plan.cta}
-                </Link>
+                {/* CTA */}
+                <div style={{ padding: '0 24px 24px' }}>
+                  <Link
+                    href={plan.ctaLink}
+                    className={plan.highlighted ? 'btn btn-cobalt' : 'btn btn-paper'}
+                    style={{ width: '100%', justifyContent: 'center' }}
+                  >
+                    {plan.cta} →
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Features Comparison */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-center text-slate-900 mb-8">
-            Why Healthcare Providers Choose AIHealz
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6">
+        {/* ── Why Providers Choose Us ────────────────── */}
+        <section className="col gap-4">
+          <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+            <h2
+              className="display"
+              style={{
+                fontSize: 28,
+                margin: 0,
+                letterSpacing: '-0.025em',
+                fontWeight: 600,
+              }}
+            >
+              Why providers choose aihealz
+            </h2>
+          </div>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+              gap: 0,
+              border: '1px solid var(--rule)',
+              borderRadius: 'var(--r-3)',
+              background: 'var(--paper)',
+              overflow: 'hidden',
+            }}
+          >
             {[
               {
-                icon: Users,
-                title: 'Patient Reach',
-                desc: 'Connect with millions of patients searching for healthcare.',
+                kicker: '01',
+                title: 'Patient reach',
+                desc: 'Millions of patients search aihealz monthly for verified care.',
               },
               {
-                icon: TrendingUp,
-                title: 'Lead Quality',
-                desc: 'AI-scored leads based on intent and condition match.',
+                kicker: '02',
+                title: 'Lead quality',
+                desc: 'AI-scored leads filtered by intent, condition match, and location.',
               },
               {
-                icon: Shield,
-                title: 'Verified Profiles',
-                desc: 'Build trust with verified credentials and reviews.',
+                kicker: '03',
+                title: 'Verified profiles',
+                desc: 'Credential checks and patient reviews build trust automatically.',
               },
               {
-                icon: BarChart3,
+                kicker: '04',
                 title: 'Analytics',
-                desc: 'Track performance, conversions, and ROI in real-time.',
+                desc: 'Track conversions, lead-source ROI, and patient outcomes in real time.',
               },
-            ].map((feature) => (
-              <div
-                key={feature.title}
-                className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-teal-200 hover:shadow-lg transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
-                  <feature.icon size={24} className="text-teal-600" />
+            ].map((feature, i, arr) => {
+              const cols = 4;
+              const isLastCol = (i + 1) % cols === 0;
+              const isLastRow = i >= arr.length - cols;
+              return (
+                <div
+                  key={feature.title}
+                  className="col gap-3"
+                  style={{
+                    padding: '24px 22px',
+                    borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                    borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                  }}
+                >
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--cobalt)',
+                      letterSpacing: '0.10em',
+                      fontWeight: 500,
+                    }}
+                  >
+                    § {feature.kicker}
+                  </span>
+                  <div
+                    className="display"
+                    style={{ fontSize: 18, fontWeight: 500, letterSpacing: '-0.02em' }}
+                  >
+                    {feature.title}
+                  </div>
+                  <div className="muted" style={{ fontSize: 13, lineHeight: 1.55 }}>
+                    {feature.desc}
+                  </div>
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-slate-600">{feature.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
-        </div>
+        </section>
 
-        {/* FAQ */}
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-slate-900 mb-8">
-            Frequently Asked Questions
+        {/* ── FAQ ────────────────────────────────────── */}
+        <section className="col gap-4" style={{ maxWidth: 880 }}>
+          <h2
+            className="display"
+            style={{
+              fontSize: 28,
+              margin: 0,
+              letterSpacing: '-0.025em',
+              fontWeight: 600,
+            }}
+          >
+            Common questions
           </h2>
-          <div className="space-y-4">
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+              gap: 16,
+            }}
+          >
             {[
               {
                 q: 'Can I try before committing?',
-                a: 'Yes! All paid plans come with a 14-day free trial. No credit card required to start.',
+                a: 'Yes — every paid plan ships with a 14-day free trial. No credit card required to start.',
               },
               {
                 q: 'How do lead credits work?',
-                a: 'Lead credits allow you to view and respond to patient enquiries. Each credit reveals one patient contact. Unused credits roll over for up to 3 months.',
+                a: 'Each credit reveals one patient contact. Unused credits roll over for up to three months.',
               },
               {
                 q: 'Can I upgrade or downgrade?',
-                a: 'Absolutely. Upgrade anytime with prorated billing. Downgrade takes effect at the end of your billing cycle.',
+                a: 'Upgrade anytime with prorated billing. Downgrade takes effect at the end of your billing cycle.',
               },
               {
                 q: 'Do you offer custom enterprise plans?',
-                a: 'Yes, for large hospital chains, diagnostic networks, or special requirements. Contact our sales team for custom pricing.',
+                a: 'Yes — for hospital chains, diagnostic networks, or special requirements. Contact sales for custom pricing.',
               },
               {
                 q: 'What payment methods do you accept?',
-                a: 'We accept all major credit/debit cards, UPI, net banking (India), and wire transfers for enterprise accounts.',
+                a: 'All major credit and debit cards, UPI and net banking (India), and wire transfers for enterprise accounts.',
               },
-            ].map((faq, i) => (
-              <div
-                key={i}
-                className="p-6 bg-white rounded-2xl border border-slate-200"
-              >
-                <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
-              </div>
+            ].map(faq => (
+              <article key={faq.q} className="card" style={{ padding: 22 }}>
+                <h3
+                  className="display"
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 600,
+                    margin: 0,
+                    letterSpacing: '-0.015em',
+                    marginBottom: 8,
+                  }}
+                >
+                  {faq.q}
+                </h3>
+                <p
+                  style={{
+                    fontSize: 14,
+                    color: 'var(--ink-2)',
+                    lineHeight: 1.6,
+                    margin: 0,
+                  }}
+                >
+                  {faq.a}
+                </p>
+              </article>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-slate-600 mb-4">Need help choosing the right plan?</p>
-          <div className="flex justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200 transition-colors"
-            >
-              <Phone size={18} />
-              Talk to Sales
-            </Link>
-            <Link
-              href="/for-doctors"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-colors"
-            >
-              Get Started
-              <Star size={18} />
-            </Link>
+        {/* ── Final CTA ──────────────────────────────── */}
+        <section
+          className="card-ink"
+          style={{ padding: 'clamp(28px, 4vw, 40px)' }}
+        >
+          <div
+            className="row between ai-center"
+            style={{ flexWrap: 'wrap', gap: 24 }}
+          >
+            <div className="col gap-2" style={{ flex: '1 1 360px', minWidth: 0 }}>
+              <span
+                className="mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--cobalt-3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.10em',
+                  fontWeight: 500,
+                }}
+              >
+                still deciding?
+              </span>
+              <h3
+                className="display"
+                style={{
+                  fontSize: 'clamp(24px, 3vw, 32px)',
+                  margin: 0,
+                  letterSpacing: '-0.025em',
+                  fontWeight: 600,
+                  color: 'var(--paper)',
+                  lineHeight: 1.15,
+                }}
+              >
+                Talk to our practice team<span style={{ color: 'var(--orange)' }}>.</span>
+              </h3>
+              <p
+                style={{
+                  fontSize: 14,
+                  color: 'rgba(255,255,255,.7)',
+                  margin: 0,
+                  lineHeight: 1.55,
+                }}
+              >
+                We&rsquo;ll match you to the right plan, set up onboarding, and get your first profile live within 48 hours.
+              </p>
+            </div>
+            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+              <Link
+                href="/contact"
+                className="btn btn-lg"
+                style={{
+                  background: 'rgba(255,255,255,.08)',
+                  color: 'var(--paper)',
+                  borderColor: 'rgba(255,255,255,.15)',
+                }}
+              >
+                Talk to sales
+              </Link>
+              <Link href="/for-doctors" className="btn btn-cobalt btn-lg">
+                Get started →
+              </Link>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }
