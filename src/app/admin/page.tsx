@@ -85,65 +85,41 @@ async function getDashboardStats() {
     };
 }
 
+type StatCard = {
+    label: string;
+    value: number;
+    href: string;
+    code: string;
+};
+
+type AlertEntry = {
+    type: 'urgent' | 'warning' | 'info';
+    message: string;
+    href: string;
+    action: string;
+};
+
 export default async function AdminDashboard() {
     const stats = await getDashboardStats();
 
-    const statCards = [
-        {
-            label: 'Conditions', value: stats.conditionsCount, href: '/admin/conditions', icon: (
-                <svg className="w-5 h-5 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-            ), color: 'blue'
-        },
-        {
-            label: 'Doctors', value: stats.doctorsCount, href: '/admin/doctors', icon: (
-                <svg className="w-5 h-5 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-            ), color: 'green'
-        },
-        {
-            label: 'Hospitals', value: stats.hospitalsCount, href: '/admin/hospitals', icon: (
-                <svg className="w-5 h-5 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-            ), color: 'teal'
-        },
-        {
-            label: 'Locations', value: stats.locationsCount, href: '/admin/locations', icon: (
-                <svg className="w-5 h-5 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            ), color: 'purple'
-        },
-        {
-            label: 'Leads', value: stats.leadsCount, href: '/admin/leads', icon: (
-                <svg className="w-5 h-5 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-            ), color: 'pink'
-        },
-        {
-            label: 'Content Pages', value: stats.contentCount, href: '/admin/content', icon: (
-                <svg className="w-5 h-5 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-            ), color: 'orange'
-        },
+    const statCards: StatCard[] = [
+        { label: 'Conditions', value: stats.conditionsCount, href: '/admin/conditions', code: 'CO' },
+        { label: 'Doctors', value: stats.doctorsCount, href: '/admin/doctors', code: 'DR' },
+        { label: 'Hospitals', value: stats.hospitalsCount, href: '/admin/hospitals', code: 'HO' },
+        { label: 'Locations', value: stats.locationsCount, href: '/admin/locations', code: 'LO' },
+        { label: 'Leads', value: stats.leadsCount, href: '/admin/leads', code: 'LE' },
+        { label: 'Content Pages', value: stats.contentCount, href: '/admin/content', code: 'CT' },
     ];
 
-    const colorClasses: Record<string, string> = {
-        blue: 'bg-blue-50 border-blue-200 text-blue-700',
-        green: 'bg-green-50 border-green-200 text-green-700',
-        purple: 'bg-purple-50 border-purple-200 text-purple-700',
-        orange: 'bg-orange-50 border-orange-200 text-orange-700',
-        pink: 'bg-pink-50 border-pink-200 text-pink-700',
-        teal: 'bg-teal-50 border-teal-200 text-teal-700',
-    };
+    const networkCards: { label: string; value: number; href: string; code: string; cta: string }[] = [
+        { label: 'Insurance Providers', value: stats.insuranceCount, href: '/admin/insurance', code: 'IN', cta: 'Manage providers' },
+        { label: 'TPAs', value: stats.tpaCount, href: '/admin/tpas', code: 'TP', cta: 'Manage TPAs' },
+        { label: 'Diagnostic Tests', value: stats.diagnosticTestsCount, href: '/admin/diagnostics/tests', code: 'DG', cta: 'Manage tests' },
+        { label: 'Languages', value: stats.languagesCount, href: '/admin/geography', code: 'LG', cta: 'View coverage' },
+    ];
 
     // Determine alerts
-    const alerts: { type: string; message: string; href: string; action: string }[] = [];
+    const alerts: AlertEntry[] = [];
     if (stats.pendingVerifications > 0) {
         alerts.push({
             type: 'warning',
@@ -169,331 +145,410 @@ export default async function AdminDashboard() {
         });
     }
 
+    const alertPalette = (type: AlertEntry['type']) => {
+        if (type === 'urgent') {
+            return { pillClass: 'pill pill-orange', dotColor: 'var(--orange)', label: 'Urgent', btnClass: 'btn btn-orange btn-sm' };
+        }
+        if (type === 'warning') {
+            return { pillClass: 'pill pill-lemon', dotColor: 'var(--lemon-2)', label: 'Warning', btnClass: 'btn btn-primary btn-sm' };
+        }
+        return { pillClass: 'pill pill-cobalt', dotColor: 'var(--cobalt)', label: 'Info', btnClass: 'btn btn-cobalt btn-sm' };
+    };
+
     return (
-        <div className="space-y-8">
-            {/* Header */}
-            <div>
-                <h1 className="text-3xl font-bold text-slate-900">Dashboard</h1>
-                <p className="text-slate-500 mt-1">Welcome to AIHealz CMS. Manage your content and data.</p>
+        <div className="col gap-6" style={{ color: 'var(--ink)' }}>
+            {/* ── Header ────────────────────────────────────────── */}
+            <div className="col gap-2">
+                <span className="section-mark">overview / admin console</span>
+                <h1
+                    className="display"
+                    style={{
+                        fontSize: 'clamp(36px, 5vw, 56px)',
+                        lineHeight: 1,
+                        letterSpacing: '-0.04em',
+                        margin: 0,
+                        fontWeight: 600,
+                    }}
+                >
+                    Dashboard<span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                <p className="lede" style={{ fontSize: 'clamp(15px, 1.4vw, 18px)', maxWidth: 640, margin: 0 }}>
+                    Welcome to AIHealz CMS. Manage <span style={{ color: 'var(--cobalt)' }}>content, doctors, leads</span> and the editorial pipeline from one place.
+                </p>
             </div>
 
-            {/* Alerts Section */}
+            {/* ── Alerts ────────────────────────────────────────── */}
             {alerts.length > 0 && (
-                <div className="space-y-3">
-                    {alerts.map((alert, i) => (
-                        <div
-                            key={i}
-                            className={`flex items-center justify-between p-4 rounded-xl border ${
-                                alert.type === 'urgent'
-                                    ? 'bg-rose-50 border-rose-200'
-                                    : alert.type === 'warning'
-                                    ? 'bg-amber-50 border-amber-200'
-                                    : 'bg-blue-50 border-blue-200'
-                            }`}
-                        >
-                            <div className="flex items-center gap-3">
-                                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                                    alert.type === 'urgent'
-                                        ? 'bg-rose-100 text-rose-600'
-                                        : alert.type === 'warning'
-                                        ? 'bg-amber-100 text-amber-600'
-                                        : 'bg-blue-100 text-blue-600'
-                                }`}>
-                                    {alert.type === 'urgent' ? (
-                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                        </svg>
-                                    ) : (
-                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    )}
-                                </div>
-                                <span className={`font-medium ${
-                                    alert.type === 'urgent'
-                                        ? 'text-rose-800'
-                                        : alert.type === 'warning'
-                                        ? 'text-amber-800'
-                                        : 'text-blue-800'
-                                }`}>
-                                    {alert.message}
-                                </span>
-                            </div>
-                            <Link
-                                href={alert.href}
-                                className={`px-4 py-1.5 rounded-lg text-sm font-bold ${
-                                    alert.type === 'urgent'
-                                        ? 'bg-rose-600 text-white hover:bg-rose-700'
-                                        : alert.type === 'warning'
-                                        ? 'bg-amber-600 text-white hover:bg-amber-700'
-                                        : 'bg-blue-600 text-white hover:bg-blue-700'
-                                }`}
+                <div className="col gap-2">
+                    {alerts.map((alert, i) => {
+                        const pal = alertPalette(alert.type);
+                        return (
+                            <div
+                                key={i}
+                                className="card row ai-center between"
+                                style={{ padding: '14px 18px', flexWrap: 'wrap', gap: 12 }}
                             >
-                                {alert.action}
-                            </Link>
-                        </div>
-                    ))}
+                                <div className="row ai-center gap-3" style={{ minWidth: 0 }}>
+                                    <span className={pal.pillClass}>
+                                        <span
+                                            className="pill-dot"
+                                            style={{ background: pal.dotColor }}
+                                            aria-hidden="true"
+                                        />
+                                        {pal.label}
+                                    </span>
+                                    <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>
+                                        {alert.message}
+                                    </span>
+                                </div>
+                                <Link href={alert.href} className={pal.btnClass}>
+                                    {alert.action} →
+                                </Link>
+                            </div>
+                        );
+                    })}
                 </div>
             )}
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {statCards.map((stat) => (
+            {/* ── Stats grid ───────────────────────────────────── */}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+                    gap: 0,
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-3)',
+                    background: 'var(--paper)',
+                    overflow: 'hidden',
+                }}
+            >
+                {statCards.map((stat, idx) => (
                     <Link
                         key={stat.label}
                         href={stat.href}
-                        className={`p-4 rounded-xl border-2 ${colorClasses[stat.color]} hover:shadow-lg transition-all group`}
+                        className="col gap-2"
+                        style={{
+                            padding: 20,
+                            borderRight: '1px solid var(--rule)',
+                            borderBottom: '1px solid var(--rule)',
+                            background: 'var(--paper)',
+                            transition: 'background 120ms ease',
+                            position: 'relative',
+                        }}
                     >
-                        <div className="text-2xl mb-2">{stat.icon}</div>
-                        <div className="text-3xl font-bold">{stat.value.toLocaleString()}</div>
-                        <div className="text-sm font-medium opacity-80">{stat.label}</div>
+                        <div className="row ai-center gap-3">
+                            <span className="spec-icon" aria-hidden="true">{stat.code}</span>
+                            <span className="kicker">{stat.label}</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 32, color: 'var(--ink)' }}>
+                            {stat.value.toLocaleString()}
+                        </div>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            Open →
+                        </span>
+                        {idx === statCards.length - 1 && (
+                            <span style={{ display: 'none' }} aria-hidden="true" />
+                        )}
                     </Link>
                 ))}
             </div>
 
-            {/* New Section: Insurance & Healthcare Network */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <Link href="/admin/insurance" className="bg-gradient-to-br from-blue-50 to-indigo-50 p-5 rounded-xl border border-blue-200 hover:shadow-lg transition-all">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="text-sm font-medium text-blue-600">Insurance Providers</div>
-                            <div className="text-3xl font-bold text-blue-800">{stats.insuranceCount}</div>
-                        </div>
-                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div className="text-sm text-blue-600 mt-2">Manage providers &rarr;</div>
-                </Link>
-
-                <Link href="/admin/tpas" className="bg-gradient-to-br from-purple-50 to-pink-50 p-5 rounded-xl border border-purple-200 hover:shadow-lg transition-all">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="text-sm font-medium text-purple-600">TPAs</div>
-                            <div className="text-3xl font-bold text-purple-800">{stats.tpaCount}</div>
-                        </div>
-                        <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div className="text-sm text-purple-600 mt-2">Manage TPAs &rarr;</div>
-                </Link>
-
-                <Link href="/admin/diagnostics/tests" className="bg-gradient-to-br from-cyan-50 to-teal-50 p-5 rounded-xl border border-cyan-200 hover:shadow-lg transition-all">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="text-sm font-medium text-cyan-600">Diagnostic Tests</div>
-                            <div className="text-3xl font-bold text-cyan-800">{stats.diagnosticTestsCount}</div>
-                        </div>
-                        <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div className="text-sm text-cyan-600 mt-2">Manage tests &rarr;</div>
-                </Link>
-
-                <Link href="/admin/geography" className="bg-gradient-to-br from-emerald-50 to-green-50 p-5 rounded-xl border border-emerald-200 hover:shadow-lg transition-all">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="text-sm font-medium text-emerald-600">Languages</div>
-                            <div className="text-3xl font-bold text-emerald-800">{stats.languagesCount}</div>
-                        </div>
-                        <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div className="text-sm text-emerald-600 mt-2">View coverage &rarr;</div>
-                </Link>
-            </div>
-
-            {/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-5 rounded-xl border border-emerald-200">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="text-sm font-medium text-emerald-600">Premium Doctors</div>
-                            <div className="text-3xl font-bold text-emerald-800">{stats.premiumDoctors}</div>
-                        </div>
-                        <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <Link href="/admin/subscriptions" className="text-sm text-emerald-600 hover:text-emerald-800 font-medium mt-2 inline-block">
-                        View Subscriptions &rarr;
-                    </Link>
-                </div>
-
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-5 rounded-xl border border-amber-200">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="text-sm font-medium text-amber-600">Pending Verification</div>
-                            <div className="text-3xl font-bold text-amber-800">{stats.pendingVerifications}</div>
-                        </div>
-                        <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <Link href="/admin/verification" className="text-sm text-amber-600 hover:text-amber-800 font-medium mt-2 inline-block">
-                        Review Queue &rarr;
-                    </Link>
-                </div>
-
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-5 rounded-xl border border-blue-200">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <div className="text-sm font-medium text-blue-600">Content Under Review</div>
-                            <div className="text-3xl font-bold text-blue-800">{stats.pendingContent}</div>
-                        </div>
-                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <Link href="/admin/content" className="text-sm text-blue-600 hover:text-blue-800 font-medium mt-2 inline-block">
-                        Review Content &rarr;
-                    </Link>
+            {/* ── Network grid ─────────────────────────────────── */}
+            <div className="col gap-3">
+                <span className="section-mark">network / coverage</span>
+                <div
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+                    style={{ gap: 12 }}
+                >
+                    {networkCards.map((c) => (
+                        <Link
+                            key={c.label}
+                            href={c.href}
+                            className="card col gap-3"
+                            style={{ padding: 20 }}
+                        >
+                            <div className="row between ai-start">
+                                <div className="col gap-1">
+                                    <span className="kicker">{c.label}</span>
+                                    <span className="num bignum" style={{ fontSize: 28, color: 'var(--ink)' }}>
+                                        {c.value.toLocaleString()}
+                                    </span>
+                                </div>
+                                <span className="spec-icon" aria-hidden="true">{c.code}</span>
+                            </div>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {c.cta} →
+                            </span>
+                        </Link>
+                    ))}
                 </div>
             </div>
 
-            {/* Quick Actions */}
-            <div className="bg-white rounded-xl border border-slate-200 p-6">
-                <h2 className="text-lg font-bold text-slate-900 mb-4">Quick Actions</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <Link
-                        href="/admin/conditions/new"
-                        className="flex items-center gap-3 p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-all"
-                    >
-                        <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
-                        <span className="font-medium text-slate-700">Add Condition</span>
-                    </Link>
-                    <Link
-                        href="/admin/doctors/new"
-                        className="flex items-center gap-3 p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-all"
-                    >
-                        <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                        <span className="font-medium text-slate-700">Add Doctor</span>
-                    </Link>
-                    <Link
-                        href="/admin/hospitals/new"
-                        className="flex items-center gap-3 p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-all"
-                    >
-                        <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                        <span className="font-medium text-slate-700">Add Hospital</span>
-                    </Link>
-                    <Link
-                        href="/admin/trigger-batch"
-                        className="flex items-center gap-3 p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-all"
-                    >
-                        <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        <span className="font-medium text-slate-700">Generate Content</span>
-                    </Link>
+            {/* ── Key metrics ──────────────────────────────────── */}
+            <div className="col gap-3">
+                <span className="section-mark">III / pipeline status</span>
+                <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 12 }}>
+                    <div className="card col gap-3" style={{ padding: 20 }}>
+                        <div className="row between ai-center">
+                            <span className="kicker">
+                                <span className="pill-dot" style={{ background: 'var(--mint)', display: 'inline-block', width: 6, height: 6, borderRadius: 999, marginRight: 6 }} />
+                                Premium Doctors
+                            </span>
+                            <span className="pill pill-mint">★ tier</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 36, color: 'var(--ink)' }}>
+                            {stats.premiumDoctors.toLocaleString()}
+                        </div>
+                        <Link
+                            href="/admin/subscriptions"
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            View Subscriptions →
+                        </Link>
+                    </div>
+
+                    <div className="card col gap-3" style={{ padding: 20 }}>
+                        <div className="row between ai-center">
+                            <span className="kicker">
+                                <span className="pill-dot" style={{ background: 'var(--lemon-2)', display: 'inline-block', width: 6, height: 6, borderRadius: 999, marginRight: 6 }} />
+                                Pending Verification
+                            </span>
+                            <span className="pill pill-lemon">queue</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 36, color: 'var(--ink)' }}>
+                            {stats.pendingVerifications.toLocaleString()}
+                        </div>
+                        <Link
+                            href="/admin/verification"
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            Review Queue →
+                        </Link>
+                    </div>
+
+                    <div className="card col gap-3" style={{ padding: 20 }}>
+                        <div className="row between ai-center">
+                            <span className="kicker">
+                                <span className="pill-dot" style={{ background: 'var(--cobalt)', display: 'inline-block', width: 6, height: 6, borderRadius: 999, marginRight: 6 }} />
+                                Content Under Review
+                            </span>
+                            <span className="pill pill-cobalt">editorial</span>
+                        </div>
+                        <div className="num bignum" style={{ fontSize: 36, color: 'var(--ink)' }}>
+                            {stats.pendingContent.toLocaleString()}
+                        </div>
+                        <Link
+                            href="/admin/content"
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            Review Content →
+                        </Link>
+                    </div>
                 </div>
             </div>
 
-            {/* Recent Activity */}
-            <div className="grid lg:grid-cols-2 gap-6">
+            {/* ── Quick Actions ────────────────────────────────── */}
+            <div className="card col gap-4" style={{ padding: 24 }}>
+                <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+                    <span className="section-mark">IV / quick actions</span>
+                    <span className="kicker">create new entity</span>
+                </div>
+                <div
+                    className="grid grid-cols-2 md:grid-cols-4"
+                    style={{ gap: 0, border: '1px solid var(--rule)', borderRadius: 'var(--r-3)', overflow: 'hidden', background: 'var(--paper)' }}
+                >
+                    {[
+                        { href: '/admin/conditions/new', label: 'Add Condition', code: '+CO' },
+                        { href: '/admin/doctors/new', label: 'Add Doctor', code: '+DR' },
+                        { href: '/admin/hospitals/new', label: 'Add Hospital', code: '+HO' },
+                        { href: '/admin/trigger-batch', label: 'Generate Content', code: '↻' },
+                    ].map((a) => (
+                        <Link
+                            key={a.href}
+                            href={a.href}
+                            className="row ai-center gap-3"
+                            style={{
+                                padding: 16,
+                                borderRight: '1px solid var(--rule)',
+                                borderBottom: '1px solid var(--rule)',
+                                color: 'var(--ink)',
+                                background: 'var(--paper)',
+                            }}
+                        >
+                            <span className="spec-icon" aria-hidden="true">{a.code}</span>
+                            <span style={{ fontSize: 14, fontWeight: 500 }}>{a.label}</span>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
+            {/* ── Recent Activity ──────────────────────────────── */}
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 16 }}>
                 {/* Recent Leads */}
-                <div className="bg-white rounded-xl border border-slate-200 p-6">
-                    <div className="flex items-center justify-between mb-4">
-                        <h2 className="text-lg font-bold text-slate-900">Recent Leads</h2>
-                        <Link href="/admin/leads" className="text-sm text-teal-600 hover:text-teal-800 font-medium">
-                            View All &rarr;
+                <div className="card col gap-3" style={{ padding: 24 }}>
+                    <div className="row between ai-center">
+                        <span className="section-mark">recent / leads</span>
+                        <Link
+                            href="/admin/leads"
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            View All →
                         </Link>
                     </div>
                     {stats.recentLeads.length > 0 ? (
-                        <div className="space-y-3">
-                            {stats.recentLeads.map((lead) => (
-                                <div key={lead.id} className="flex items-center justify-between py-3 border-b border-slate-100 last:border-0">
-                                    <div>
-                                        <p className="font-medium text-slate-800">
-                                            {lead.doctor?.name || 'Unknown Doctor'}
-                                        </p>
-                                        <p className="text-sm text-slate-500">
-                                            {lead.geography?.name || 'Unknown Location'} &bull; {lead.conditionSlug?.replace(/-/g, ' ') || 'General'}
-                                        </p>
+                        <div className="col">
+                            {stats.recentLeads.map((lead, i, arr) => {
+                                const intentPill =
+                                    lead.intentLevel === 'high'
+                                        ? 'pill pill-orange'
+                                        : lead.intentLevel === 'medium'
+                                            ? 'pill pill-lemon'
+                                            : 'pill';
+                                return (
+                                    <div
+                                        key={lead.id}
+                                        className="row between ai-center"
+                                        style={{
+                                            padding: '12px 0',
+                                            borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                            gap: 12,
+                                        }}
+                                    >
+                                        <div className="col" style={{ minWidth: 0, flex: 1 }}>
+                                            <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>
+                                                {lead.doctor?.name || 'Unknown Doctor'}
+                                            </span>
+                                            <span className="muted" style={{ fontSize: 12 }}>
+                                                {lead.geography?.name || 'Unknown Location'} · {lead.conditionSlug?.replace(/-/g, ' ') || 'General'}
+                                            </span>
+                                        </div>
+                                        <div className="col ai-end gap-1">
+                                            <span className={intentPill}>{lead.intentLevel}</span>
+                                            <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                                                {new Date(lead.createdAt).toLocaleDateString()}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div className="text-right">
-                                        <span className={`px-2 py-1 text-xs font-bold rounded-full ${lead.intentLevel === 'high' ? 'bg-red-100 text-red-700' :
-                                                lead.intentLevel === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-                                                    'bg-slate-100 text-slate-700'
-                                            }`}>
-                                            {lead.intentLevel}
-                                        </span>
-                                        <p className="text-xs text-slate-400 mt-1">
-                                            {new Date(lead.createdAt).toLocaleDateString()}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     ) : (
-                        <p className="text-slate-500 text-center py-8">No leads yet</p>
+                        <p className="muted" style={{ textAlign: 'center', padding: '24px 0', fontSize: 14 }}>
+                            No leads yet
+                        </p>
                     )}
                 </div>
 
                 {/* Recent Doctors */}
-                <div className="bg-white rounded-xl border border-slate-200 p-6">
-                    <div className="flex items-center justify-between mb-4">
-                        <h2 className="text-lg font-bold text-slate-900">Recent Doctors</h2>
-                        <Link href="/admin/doctors" className="text-sm text-teal-600 hover:text-teal-800 font-medium">
-                            View All &rarr;
+                <div className="card col gap-3" style={{ padding: 24 }}>
+                    <div className="row between ai-center">
+                        <span className="section-mark">recent / doctors</span>
+                        <Link
+                            href="/admin/doctors"
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            View All →
                         </Link>
                     </div>
                     {stats.recentDoctors.length > 0 ? (
-                        <div className="space-y-3">
-                            {stats.recentDoctors.map((doctor) => (
-                                <div key={doctor.id} className="flex items-center justify-between py-3 border-b border-slate-100 last:border-0">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold">
-                                            {doctor.name.charAt(0)}
+                        <div className="col">
+                            {stats.recentDoctors.map((doctor, i, arr) => {
+                                const tierPill =
+                                    doctor.subscriptionTier === 'enterprise'
+                                        ? 'pill pill-magenta'
+                                        : doctor.subscriptionTier === 'premium'
+                                            ? 'pill pill-cobalt'
+                                            : 'pill';
+                                return (
+                                    <div
+                                        key={doctor.id}
+                                        className="row between ai-center"
+                                        style={{
+                                            padding: '12px 0',
+                                            borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                            gap: 12,
+                                        }}
+                                    >
+                                        <div className="row ai-center gap-3" style={{ minWidth: 0, flex: 1 }}>
+                                            <span className="spec-icon" aria-hidden="true">
+                                                {doctor.name.charAt(0).toUpperCase()}
+                                            </span>
+                                            <div className="col" style={{ minWidth: 0 }}>
+                                                <span style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>
+                                                    {doctor.name}
+                                                </span>
+                                                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                                                    /{doctor.slug}
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p className="font-medium text-slate-800">{doctor.name}</p>
-                                            <p className="text-sm text-slate-500">/{doctor.slug}</p>
+                                        <div className="row ai-center gap-2">
+                                            {doctor.isVerified && (
+                                                <span className="pill pill-mint" aria-label="Verified">
+                                                    ✓
+                                                </span>
+                                            )}
+                                            <span className={tierPill}>{doctor.subscriptionTier}</span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-2">
-                                        {doctor.isVerified && (
-                                            <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                        )}
-                                        <span className={`px-2 py-1 text-xs font-bold rounded-full ${doctor.subscriptionTier === 'enterprise' ? 'bg-purple-100 text-purple-700' :
-                                                doctor.subscriptionTier === 'premium' ? 'bg-blue-100 text-blue-700' :
-                                                    'bg-slate-100 text-slate-700'
-                                            }`}>
-                                            {doctor.subscriptionTier}
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     ) : (
-                        <p className="text-slate-500 text-center py-8">No doctors yet</p>
+                        <p className="muted" style={{ textAlign: 'center', padding: '24px 0', fontSize: 14 }}>
+                            No doctors yet
+                        </p>
                     )}
                 </div>
             </div>
 
-            {/* System Status - Now with real health checks */}
+            {/* ── System Status — real health checks ───────────── */}
             <SystemHealthClient />
         </div>
     );

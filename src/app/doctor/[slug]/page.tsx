@@ -220,138 +220,191 @@ export default async function DoctorProfilePage({ params }: { params: PageParams
     };
 
     const specialty = primarySpecialty || 'Medical';
+    const doctorInitials = doctor.name.trim().split(/\s+/).slice(-2).map((p) => p.charAt(0).toUpperCase()).join('') || 'DR';
 
     return (
         <>
             <Script id="physician-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }} />
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-            <main className="min-h-screen bg-[#050B14] text-slate-300 pt-28 pb-16">
-                <div className="max-w-6xl mx-auto px-6">
+            <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
 
-                    {/* Breadcrumb */}
-                    <nav className="flex items-center gap-2 text-sm text-slate-500 mb-6 flex-wrap">
-                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                        <span>/</span>
-                        <Link href="/doctors" className="hover:text-white transition-colors">Doctors</Link>
+                    {/* ── Breadcrumb (mono kicker style) ─────────────── */}
+                    <nav
+                        className="row gap-2 mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                            flexWrap: 'wrap',
+                        }}
+                        aria-label="Breadcrumb"
+                    >
+                        <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
+                        <span aria-hidden="true">/</span>
+                        <Link href="/doctors" style={{ color: 'var(--ink-3)' }}>Doctors</Link>
                         {city && (
                             <>
-                                <span>/</span>
-                                <Link href={`/doctors/${city.slug}`} className="hover:text-white transition-colors">{city.name}</Link>
+                                <span aria-hidden="true">/</span>
+                                <Link href={`/doctors/${city.slug}`} style={{ color: 'var(--ink-3)' }}>{city.name}</Link>
                             </>
                         )}
-                        <span>/</span>
-                        <span className="text-white font-medium">{formatDoctorName(doctor.name)}</span>
+                        <span aria-hidden="true">/</span>
+                        <span style={{ color: 'var(--ink)' }}>{formatDoctorName(doctor.name)}</span>
                     </nav>
 
-                    {/* Doctor Profile Card */}
-                    <div className="bg-slate-900/60 border border-white/5 rounded-3xl p-6 md:p-8 mb-8">
-                        <div className="flex flex-col md:flex-row gap-6">
-                            {/* Profile Image */}
-                            <div className="flex-shrink-0">
-                                <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+                    {/* ── Hero / profile header ─────────────────────── */}
+                    <div className="card" style={{ padding: 28 }}>
+                        <div className="row gap-6 ai-start" style={{ flexWrap: 'wrap' }}>
+                            {/* Avatar */}
+                            <div className="col gap-2 ai-center" style={{ flexShrink: 0 }}>
+                                <div
+                                    style={{
+                                        width: 144,
+                                        height: 144,
+                                        borderRadius: 'var(--r-3)',
+                                        overflow: 'hidden',
+                                        border: '1px solid var(--rule)',
+                                        background: 'var(--bg-2)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                    }}
+                                >
                                     {doctor.profileImage ? (
                                         <Image
                                             src={doctor.profileImage}
                                             alt={formatDoctorName(doctor.name)}
                                             width={160}
                                             height={160}
-                                            className="w-full h-full object-cover"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                         />
                                     ) : (
-                                        /* Professional doctor icon fallback */
-                                        <svg className="w-20 h-20 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
+                                        <div
+                                            className="placeholder"
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                border: 'none',
+                                                fontSize: 18,
+                                                fontFamily: 'var(--display)',
+                                                fontWeight: 600,
+                                                color: 'var(--ink-3)',
+                                                letterSpacing: '0.02em',
+                                            }}
+                                            aria-hidden="true"
+                                        >
+                                            {doctorInitials}
+                                        </div>
                                     )}
                                 </div>
-                                <div className="mt-2 flex flex-col items-center gap-1">
+                                <div className="row gap-2" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
                                     {doctor.isVerified && (
-                                        <div className="flex items-center gap-1 text-xs text-emerald-400">
-                                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                            </svg>
+                                        <span className="pill pill-mint">
+                                            <span className="pill-dot" style={{ background: 'var(--mint)' }} aria-hidden="true" />
                                             Verified
-                                        </div>
+                                        </span>
                                     )}
                                     {isPremium && (
-                                        <div className={`flex items-center gap-1 text-xs font-bold ${isEnterprise ? 'text-amber-400' : 'text-teal-400'}`}>
-                                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                            {isEnterprise ? 'Top Doctor' : 'Premium'}
-                                        </div>
+                                        <span className={isEnterprise ? 'pill pill-orange' : 'pill pill-cobalt'}>
+                                            ★ {isEnterprise ? 'Top Doctor' : 'Premium'}
+                                        </span>
                                     )}
                                 </div>
                             </div>
 
-                            {/* Profile Info */}
-                            <div className="flex-1">
-                                <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                                    {formatDoctorName(doctor.name)}
-                                </h1>
+                            {/* Profile info */}
+                            <div className="col gap-3" style={{ flex: 1, minWidth: 280 }}>
+                                <div className="col gap-2">
+                                    <span className="section-mark">verified profile</span>
+                                    <h1
+                                        className="display"
+                                        style={{
+                                            fontSize: 'clamp(32px, 5vw, 56px)',
+                                            lineHeight: 1,
+                                            letterSpacing: '-0.04em',
+                                            margin: 0,
+                                            fontWeight: 600,
+                                        }}
+                                    >
+                                        {formatDoctorName(doctor.name)}
+                                        <span style={{ color: 'var(--orange)' }}>.</span>
+                                    </h1>
+                                </div>
 
                                 {/* Specialties */}
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {doctor.specialties.map((s, i) => (
-                                        <span key={i} className="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-sm font-medium">
-                                            {s.condition?.specialistType || s.condition?.commonName}
-                                        </span>
-                                    ))}
-                                </div>
+                                {doctor.specialties.length > 0 && (
+                                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                        {doctor.specialties.map((s, i) => (
+                                            <span key={i} className="pill pill-cobalt">
+                                                {s.condition?.specialistType || s.condition?.commonName}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
 
                                 {/* Qualifications */}
                                 {doctor.qualifications && doctor.qualifications.length > 0 && (
-                                    <p className="text-slate-400 text-sm mb-3">
-                                        {doctor.qualifications.join(' | ')}
+                                    <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                                        {doctor.qualifications.join(' · ')}
                                     </p>
                                 )}
 
-                                {/* Stats Row */}
-                                <div className="flex flex-wrap gap-4 mb-4">
+                                {/* Stats row */}
+                                <div
+                                    className="row gap-5 mono"
+                                    style={{
+                                        fontSize: 11,
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                        color: 'var(--ink-3)',
+                                        flexWrap: 'wrap',
+                                    }}
+                                >
                                     {doctor.experienceYears && (
-                                        <div className="flex items-center gap-2 text-sm">
-                                            <span className="text-slate-500">Experience:</span>
-                                            <span className="text-white font-semibold">{doctor.experienceYears}+ years</span>
-                                        </div>
+                                        <span>
+                                            Experience{' '}
+                                            <span className="num" style={{ color: 'var(--ink)', fontSize: 13, marginLeft: 4 }}>
+                                                {doctor.experienceYears}+ yrs
+                                            </span>
+                                        </span>
                                     )}
                                     {doctor.rating && (
-                                        <div className="flex items-center gap-2 text-sm">
-                                            <span className="text-yellow-400">★</span>
-                                            <span className="text-white font-semibold">{Number(doctor.rating).toFixed(1)}</span>
-                                            <span className="text-slate-500">({doctor.reviewCount} reviews)</span>
-                                        </div>
+                                        <span>
+                                            ★{' '}
+                                            <span className="num" style={{ color: 'var(--ink)', fontSize: 13, marginLeft: 4 }}>
+                                                {Number(doctor.rating).toFixed(1)}
+                                            </span>
+                                            <span style={{ marginLeft: 6 }}>({doctor.reviewCount} reviews)</span>
+                                        </span>
                                     )}
                                     {doctor.consultationFee && (
-                                        <div className="flex items-center gap-2 text-sm">
-                                            <span className="text-slate-500">Fee:</span>
-                                            <span className="text-white font-semibold">{doctor.feeCurrency} {Number(doctor.consultationFee).toLocaleString()}</span>
-                                        </div>
+                                        <span>
+                                            Fee{' '}
+                                            <span className="num" style={{ color: 'var(--cobalt)', fontSize: 13, marginLeft: 4, fontWeight: 500 }}>
+                                                {doctor.feeCurrency} {Number(doctor.consultationFee).toLocaleString()}
+                                            </span>
+                                        </span>
                                     )}
                                 </div>
 
                                 {/* Location */}
                                 {city && (
-                                    <p className="text-sm text-slate-400 mb-4">
-                                        <svg className="w-4 h-4 inline mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-                                        {city.name}{state ? `, ${state.name}` : ''}{countryGeo ? `, ${countryGeo.name}` : ''}
+                                    <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                                        ◆ {city.name}{state ? `, ${state.name}` : ''}{countryGeo ? `, ${countryGeo.name}` : ''}
                                     </p>
                                 )}
 
-                                {/* CTA Buttons */}
-                                <div className="flex flex-wrap gap-3">
-                                    <a
-                                        href="#contact"
-                                        className="px-6 py-3 bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold rounded-xl transition-all"
-                                    >
-                                        Book Appointment
+                                {/* CTAs */}
+                                <div className="row gap-2" style={{ flexWrap: 'wrap', marginTop: 4 }}>
+                                    <a href="#contact" className="btn btn-cobalt btn-lg">
+                                        Book appointment →
                                     </a>
                                     {doctor.availableOnline && (
-                                        <button className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-white/10 transition-all">
-                                            Video Consult
+                                        <button type="button" className="btn btn-paper btn-lg">
+                                            Video consult
                                         </button>
                                     )}
                                 </div>
@@ -359,26 +412,57 @@ export default async function DoctorProfilePage({ params }: { params: PageParams
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {/* Main Content */}
-                        <div className="md:col-span-2 space-y-8">
+                    {/* ── Body grid ─────────────────────────────────── */}
+                    <div className="row gap-6 ai-start" style={{ flexWrap: 'wrap' }}>
+                        {/* Main column */}
+                        <div className="col gap-6" style={{ flex: '2 1 560px', minWidth: 0 }}>
                             {/* About */}
                             {doctor.bio && (
-                                <section className="bg-slate-900/40 border border-white/5 rounded-2xl p-6">
-                                    <h2 className="text-xl font-bold text-white mb-4">About {formatDoctorName(doctor.name)}</h2>
-                                    <p className="text-slate-400 leading-relaxed">{doctor.bio}</p>
+                                <section className="col gap-3">
+                                    <div className="row gap-3 ai-baseline">
+                                        <span
+                                            className="num"
+                                            style={{
+                                                fontSize: 14,
+                                                color: 'var(--cobalt)',
+                                                fontWeight: 500,
+                                                letterSpacing: '0.06em',
+                                            }}
+                                        >
+                                            § 01
+                                        </span>
+                                        <h2
+                                            className="display"
+                                            style={{
+                                                fontSize: 'clamp(24px, 3vw, 32px)',
+                                                margin: 0,
+                                                letterSpacing: '-0.03em',
+                                                fontWeight: 600,
+                                            }}
+                                        >
+                                            About {formatDoctorName(doctor.name)}
+                                        </h2>
+                                    </div>
+                                    <p
+                                        style={{
+                                            fontSize: 16,
+                                            lineHeight: 1.65,
+                                            color: 'var(--ink-2)',
+                                            maxWidth: 680,
+                                            margin: 0,
+                                        }}
+                                    >
+                                        {doctor.bio}
+                                    </p>
                                 </section>
                             )}
 
-                            {/* Media Gallery */}
+                            {/* Media gallery — preserved as-is, wrapped in card */}
                             {(doctorMedia.coverImage || (doctorMedia.images && doctorMedia.images.length > 0) || doctorMedia.videoUrl) && (
-                                <section className="bg-slate-900/40 border border-white/5 rounded-2xl p-6">
-                                    <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        Photos & Videos
-                                    </h2>
+                                <section className="card col gap-3" style={{ padding: 24 }}>
+                                    <div className="row between ai-center">
+                                        <span className="section-mark">photos &amp; videos</span>
+                                    </div>
                                     <MediaGallery
                                         coverImage={doctorMedia.coverImage}
                                         images={doctorMedia.images}
@@ -391,43 +475,105 @@ export default async function DoctorProfilePage({ params }: { params: PageParams
 
                             {/* Hospitals */}
                             {doctor.hospitalDoctors.length > 0 && (
-                                <section className="bg-slate-900/40 border border-white/5 rounded-2xl p-6">
-                                    <h2 className="text-xl font-bold text-white mb-4">Hospital Affiliations</h2>
-                                    <div className="space-y-3">
-                                        {doctor.hospitalDoctors.map((hd, i) => (
+                                <section className="col gap-3">
+                                    <div className="row gap-3 ai-baseline">
+                                        <span
+                                            className="num"
+                                            style={{ fontSize: 14, color: 'var(--cobalt)', fontWeight: 500, letterSpacing: '0.06em' }}
+                                        >
+                                            § 02
+                                        </span>
+                                        <h2
+                                            className="display"
+                                            style={{ fontSize: 'clamp(22px, 2.4vw, 28px)', margin: 0, letterSpacing: '-0.03em', fontWeight: 600 }}
+                                        >
+                                            Hospital affiliations
+                                        </h2>
+                                    </div>
+                                    <div
+                                        className="card"
+                                        style={{ padding: 0, overflow: 'hidden' }}
+                                    >
+                                        {doctor.hospitalDoctors.map((hd, i, arr) => (
                                             <Link
                                                 key={i}
                                                 href={`/hospitals/${hd.hospital.slug}`}
-                                                className="block p-4 bg-slate-800/50 rounded-xl hover:bg-slate-800 transition-colors"
+                                                className="row ai-center between"
+                                                style={{
+                                                    padding: '16px 22px',
+                                                    borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                                    gap: 12,
+                                                }}
                                             >
-                                                <h3 className="font-semibold text-white">{hd.hospital.name}</h3>
-                                                {hd.hospital.address && (
-                                                    <p className="text-sm text-slate-500 mt-1">{hd.hospital.address}</p>
-                                                )}
+                                                <div className="col" style={{ minWidth: 0 }}>
+                                                    <span
+                                                        className="display"
+                                                        style={{
+                                                            fontSize: 16,
+                                                            fontWeight: 500,
+                                                            letterSpacing: '-0.015em',
+                                                            color: 'var(--ink)',
+                                                        }}
+                                                    >
+                                                        {hd.hospital.name}
+                                                    </span>
+                                                    {hd.hospital.address && (
+                                                        <span className="muted" style={{ fontSize: 13 }}>
+                                                            {hd.hospital.address}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <span
+                                                    className="mono"
+                                                    style={{
+                                                        fontSize: 11,
+                                                        color: 'var(--cobalt)',
+                                                        textTransform: 'uppercase',
+                                                        letterSpacing: '0.06em',
+                                                    }}
+                                                >
+                                                    view →
+                                                </span>
                                             </Link>
                                         ))}
                                     </div>
                                 </section>
                             )}
 
-                            {/* Conditions Treated */}
+                            {/* Conditions treated */}
                             {treatedConditions.length > 0 && (
-                                <section className="bg-slate-900/40 border border-white/5 rounded-2xl p-6">
-                                    <h2 className="text-xl font-bold text-white mb-4">Conditions Treated</h2>
-                                    <div className="flex flex-wrap gap-2">
+                                <section className="col gap-3">
+                                    <div className="row gap-3 ai-baseline">
+                                        <span
+                                            className="num"
+                                            style={{ fontSize: 14, color: 'var(--cobalt)', fontWeight: 500, letterSpacing: '0.06em' }}
+                                        >
+                                            § 03
+                                        </span>
+                                        <h2
+                                            className="display"
+                                            style={{ fontSize: 'clamp(22px, 2.4vw, 28px)', margin: 0, letterSpacing: '-0.03em', fontWeight: 600 }}
+                                        >
+                                            Conditions treated
+                                        </h2>
+                                    </div>
+                                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                                         {treatedConditions.map((c, i) => (
-                                            <Link
-                                                key={i}
-                                                href={`/${country}/${lang}/${c.slug}`}
-                                                className="px-3 py-1.5 bg-slate-800/60 hover:bg-slate-700 text-slate-300 text-sm rounded-lg border border-white/5 transition-colors"
-                                            >
+                                            <Link key={i} href={`/${country}/${lang}/${c.slug}`} className="pill">
                                                 {c.commonName}
                                             </Link>
                                         ))}
                                     </div>
                                     <Link
                                         href={`/conditions/${specialty.toLowerCase().replace(/\s+/g, '-')}`}
-                                        className="inline-block mt-4 text-teal-400 hover:text-teal-300 text-sm font-medium"
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            color: 'var(--cobalt)',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.08em',
+                                            marginTop: 4,
+                                        }}
                                     >
                                         View all {specialty} conditions →
                                     </Link>
@@ -436,134 +582,273 @@ export default async function DoctorProfilePage({ params }: { params: PageParams
                         </div>
 
                         {/* Sidebar */}
-                        <aside className="space-y-6">
-                            {/* Contact Card */}
-                            <div id="contact" className={`rounded-2xl p-6 ${isPremium ? 'bg-gradient-to-b from-teal-900/30 to-slate-900/60 border border-teal-500/20' : 'bg-slate-900/60 border border-white/5'}`}>
-                                <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                    Contact Information
+                        <aside className="col gap-3" style={{ flex: '1 1 300px', minWidth: 280, position: 'sticky', top: 96 }}>
+                            {/* Contact card */}
+                            <div id="contact" className="card-ink" style={{ padding: 24 }}>
+                                <div className="row between ai-center" style={{ marginBottom: 12 }}>
+                                    <span
+                                        className="kicker"
+                                        style={{ color: 'var(--cobalt-3)' }}
+                                    >
+                                        <span className="dot" style={{ background: 'var(--cobalt-3)' }} />
+                                        contact
+                                    </span>
                                     {isPremium && (
-                                        <span className="px-2 py-0.5 bg-teal-500/20 text-teal-400 text-xs rounded-full font-semibold">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 10,
+                                                padding: '2px 8px',
+                                                border: '1px solid rgba(255,255,255,.2)',
+                                                borderRadius: 'var(--r-1)',
+                                                color: 'var(--paper)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
+                                        >
                                             {isEnterprise ? 'Elite' : 'Pro'}
                                         </span>
                                     )}
-                                </h3>
-                                <div className="space-y-3 text-sm">
-                                    {/* Clinic Name - Premium feature */}
+                                </div>
+                                <div
+                                    className="display"
+                                    style={{
+                                        fontSize: 22,
+                                        lineHeight: 1.2,
+                                        fontWeight: 500,
+                                        letterSpacing: '-0.02em',
+                                        marginBottom: 16,
+                                    }}
+                                >
+                                    Book a consultation with {formatDoctorName(doctor.name).split(' ').slice(0, 2).join(' ')}
+                                    <span style={{ color: 'var(--orange)' }}>.</span>
+                                </div>
+
+                                <div className="col gap-2" style={{ fontSize: 13, color: 'rgba(255,255,255,.8)' }}>
+                                    {/* Clinic — premium */}
                                     {isPremium && contactInfo?.clinicName && (
-                                        <p className="text-slate-400">
-                                            <strong className="text-white">Clinic:</strong><br />
-                                            {contactInfo.clinicName}
-                                        </p>
+                                        <div className="col gap-1">
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 10,
+                                                    color: 'rgba(255,255,255,.45)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                }}
+                                            >
+                                                clinic
+                                            </span>
+                                            <span style={{ color: 'var(--paper)' }}>{contactInfo.clinicName}</span>
+                                        </div>
                                     )}
 
                                     {/* Location */}
                                     {city && (
-                                        <p className="text-slate-400">
-                                            <strong className="text-white">Location:</strong><br />
-                                            {city.name}{state ? `, ${state.name}` : ''}
-                                        </p>
+                                        <div className="col gap-1">
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 10,
+                                                    color: 'rgba(255,255,255,.45)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                }}
+                                            >
+                                                location
+                                            </span>
+                                            <span style={{ color: 'var(--paper)' }}>
+                                                {city.name}{state ? `, ${state.name}` : ''}
+                                            </span>
+                                        </div>
                                     )}
 
-                                    {/* Clinic Address - Premium feature */}
+                                    {/* Address — premium */}
                                     {isPremium && contactInfo?.clinicAddress && (
-                                        <p className="text-slate-400">
-                                            <strong className="text-white">Address:</strong><br />
-                                            {contactInfo.clinicAddress}
-                                        </p>
+                                        <div className="col gap-1">
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 10,
+                                                    color: 'rgba(255,255,255,.45)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                }}
+                                            >
+                                                address
+                                            </span>
+                                            <span style={{ color: 'var(--paper)' }}>{contactInfo.clinicAddress}</span>
+                                        </div>
                                     )}
 
-                                    {/* Consultation Fee */}
+                                    {/* Fee */}
                                     {doctor.consultationFee && (
-                                        <p className="text-slate-400">
-                                            <strong className="text-white">Consultation Fee:</strong><br />
-                                            {doctor.feeCurrency} {Number(doctor.consultationFee).toLocaleString()}
-                                        </p>
+                                        <div className="col gap-1">
+                                            <span
+                                                className="mono"
+                                                style={{
+                                                    fontSize: 10,
+                                                    color: 'rgba(255,255,255,.45)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.08em',
+                                                }}
+                                            >
+                                                consultation fee
+                                            </span>
+                                            <span className="num" style={{ color: 'var(--paper)' }}>
+                                                {doctor.feeCurrency} {Number(doctor.consultationFee).toLocaleString()}
+                                            </span>
+                                        </div>
                                     )}
 
-                                    {/* Website - Premium feature */}
+                                    {/* Website — premium */}
                                     {isPremium && contactInfo?.websiteUrl && (
                                         <a
                                             href={contactInfo.websiteUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors"
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                                marginTop: 4,
+                                            }}
                                         >
-                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                                            </svg>
-                                            Visit Website
+                                            ↗ visit website
                                         </a>
                                     )}
 
-                                    {/* Phone - Premium feature (hide obvious placeholder numbers) */}
+                                    {/* Phone — premium */}
                                     {isPremium && contactInfo?.phone && !isPlaceholderPhone(contactInfo.phone) && (
                                         <a
                                             href={`tel:${contactInfo.phone}`}
-                                            className="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors"
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt-3)',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.08em',
+                                            }}
                                         >
-                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                            </svg>
-                                            {contactInfo.phone}
+                                            ↗ {contactInfo.phone}
                                         </a>
                                     )}
                                 </div>
+
                                 <Link
                                     href={`/book/doctor?doctor=${doctor.slug}&name=${encodeURIComponent(formatDoctorName(doctor.name))}`}
-                                    className="block w-full mt-4 px-4 py-3 bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold rounded-xl text-center transition-all"
+                                    className="btn btn-cobalt"
+                                    style={{ width: '100%', marginTop: 20, justifyContent: 'center' }}
                                 >
-                                    Request Appointment
+                                    Request appointment →
                                 </Link>
                             </div>
 
-                            {/* Related Doctors */}
+                            {/* Related doctors */}
                             {relatedDoctors.length > 0 && (
-                                <div className="bg-slate-900/60 border border-white/5 rounded-2xl p-6">
-                                    <h3 className="text-lg font-bold text-white mb-4">Similar Doctors</h3>
-                                    <div className="space-y-3">
-                                        {relatedDoctors.map((rd, i) => (
+                                <div className="card col gap-3" style={{ padding: 18 }}>
+                                    <span className="kicker">
+                                        <span className="dot" />
+                                        similar doctors
+                                    </span>
+                                    <div className="col">
+                                        {relatedDoctors.map((rd, i, arr) => (
                                             <Link
                                                 key={i}
                                                 href={`/doctor/${rd.slug}`}
-                                                className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-800/50 transition-colors"
+                                                className="row ai-center gap-3"
+                                                style={{
+                                                    padding: '10px 0',
+                                                    borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                                }}
                                             >
-                                                <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-teal-400 font-semibold">
-                                                    {rd.name.charAt(0)}
-                                                </div>
-                                                <div className="flex-1 min-w-0">
-                                                    <p className="text-white font-medium truncate">{formatDoctorName(rd.name)}</p>
-                                                    <p className="text-xs text-slate-500">
+                                                <span className="spec-icon" aria-hidden="true">
+                                                    {rd.name.trim().charAt(0).toUpperCase()}
+                                                </span>
+                                                <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                                                    <span
+                                                        style={{
+                                                            fontSize: 13,
+                                                            fontWeight: 500,
+                                                            color: 'var(--ink)',
+                                                            overflow: 'hidden',
+                                                            textOverflow: 'ellipsis',
+                                                            whiteSpace: 'nowrap',
+                                                        }}
+                                                    >
+                                                        {formatDoctorName(rd.name)}
+                                                    </span>
+                                                    <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
                                                         {rd.experienceYears ? `${rd.experienceYears}+ yrs` : ''}
-                                                        {rd.rating ? ` • ★ ${Number(rd.rating).toFixed(1)}` : ''}
-                                                    </p>
+                                                        {rd.rating ? ` · ★ ${Number(rd.rating).toFixed(1)}` : ''}
+                                                    </span>
                                                 </div>
                                             </Link>
                                         ))}
                                     </div>
                                     <Link
                                         href={city ? `/doctors/${city.slug}` : '/doctors'}
-                                        className="block w-full mt-4 px-4 py-2 text-center text-teal-400 hover:text-teal-300 text-sm font-medium border border-teal-500/20 rounded-lg"
+                                        className="btn btn-paper btn-sm"
+                                        style={{ width: '100%', justifyContent: 'center' }}
                                     >
-                                        View More {specialty} Doctors
+                                        View more {specialty} doctors →
                                     </Link>
                                 </div>
                             )}
                         </aside>
                     </div>
 
-                    {/* Internal Links Section */}
-                    <section className="mt-12 grid md:grid-cols-3 gap-6">
-                        <Link href="/doctors" className="bg-slate-900/60 border border-white/5 hover:border-teal-500/30 rounded-2xl p-6 transition-all group">
-                            <h3 className="font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">Find More Doctors</h3>
-                            <p className="text-sm text-slate-500">Browse verified specialists across all locations</p>
+                    {/* ── Internal links ─────────────────────────────── */}
+                    <section
+                        className="grid grid-cols-1 md:grid-cols-3"
+                        style={{ gap: 12, marginTop: 32 }}
+                    >
+                        <Link href="/doctors" className="card col gap-2" style={{ padding: 20 }}>
+                            <span className="kicker">
+                                <span className="dot" />
+                                doctors
+                            </span>
+                            <h3
+                                className="display"
+                                style={{ fontSize: 18, fontWeight: 500, letterSpacing: '-0.02em', margin: 0 }}
+                            >
+                                Find more doctors
+                            </h3>
+                            <span className="muted" style={{ fontSize: 13 }}>
+                                Browse verified specialists across all locations
+                            </span>
                         </Link>
-                        <Link href="/hospitals" className="bg-slate-900/60 border border-white/5 hover:border-cyan-500/30 rounded-2xl p-6 transition-all group">
-                            <h3 className="font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Top Hospitals</h3>
-                            <p className="text-sm text-slate-500">Find the best hospitals for your treatment</p>
+                        <Link href="/hospitals" className="card col gap-2" style={{ padding: 20 }}>
+                            <span className="kicker">
+                                <span className="dot" />
+                                hospitals
+                            </span>
+                            <h3
+                                className="display"
+                                style={{ fontSize: 18, fontWeight: 500, letterSpacing: '-0.02em', margin: 0 }}
+                            >
+                                Top hospitals
+                            </h3>
+                            <span className="muted" style={{ fontSize: 13 }}>
+                                Find the best hospitals for your treatment
+                            </span>
                         </Link>
-                        <Link href="/symptoms" className="bg-slate-900/60 border border-white/5 hover:border-purple-500/30 rounded-2xl p-6 transition-all group">
-                            <h3 className="font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">AI Symptom Checker</h3>
-                            <p className="text-sm text-slate-500">Get instant guidance on your symptoms</p>
+                        <Link href="/symptoms" className="card col gap-2" style={{ padding: 20 }}>
+                            <span className="kicker" style={{ color: 'var(--cobalt-3)' }}>
+                                <span className="dot" />
+                                healz ai
+                            </span>
+                            <h3
+                                className="display"
+                                style={{ fontSize: 18, fontWeight: 500, letterSpacing: '-0.02em', margin: 0 }}
+                            >
+                                AI symptom checker
+                            </h3>
+                            <span className="muted" style={{ fontSize: 13 }}>
+                                Get instant guidance on your symptoms
+                            </span>
                         </Link>
                     </section>
                 </div>
