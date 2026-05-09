@@ -5,90 +5,112 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function NewConditionPage() {
-  const router = useRouter();
-  const [form, setForm] = useState({
-    commonName: '',
-    scientificName: '',
-    slug: '',
-    specialistType: '',
-    bodySystem: '',
-    severityLevel: '',
-    icdCode: '',
-    description: '',
-  });
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+    const router = useRouter();
+    const [form, setForm] = useState({
+        commonName: '',
+        scientificName: '',
+        slug: '',
+        specialistType: '',
+        bodySystem: '',
+        severityLevel: '',
+        icdCode: '',
+        description: '',
+    });
+    const [saving, setSaving] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSaving(true);
-    setError(null);
-    try {
-      const res = await fetch('/api/admin/conditions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...form,
-          slug: form.slug || form.commonName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
-        }),
-      });
-      if (!res.ok) {
-        const j = await res.json().catch(() => ({}));
-        throw new Error(j.error || 'Failed to create condition');
-      }
-      router.push('/admin/conditions');
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : 'Failed to create condition');
-    } finally {
-      setSaving(false);
-    }
-  };
+    const submit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setSaving(true);
+        setError(null);
+        try {
+            const res = await fetch('/api/admin/conditions', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...form,
+                    slug: form.slug || form.commonName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+                }),
+            });
+            if (!res.ok) {
+                const j = await res.json().catch(() => ({}));
+                throw new Error(j.error || 'Failed to create condition');
+            }
+            router.push('/admin/conditions');
+        } catch (e: unknown) {
+            setError(e instanceof Error ? e.message : 'Failed to create condition');
+        } finally {
+            setSaving(false);
+        }
+    };
 
-  return (
-    <div className="max-w-2xl">
-      <Link href="/admin/conditions" className="text-sm text-teal-600 hover:text-teal-700 mb-4 inline-block">← Back to conditions</Link>
-      <h1 className="text-2xl font-bold text-slate-900 mb-6">New Condition</h1>
-      {error && <div className="mb-4 p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-sm">{error}</div>}
-      <form onSubmit={submit} className="space-y-4 bg-white p-6 rounded-2xl border border-slate-200">
-        <Field label="Common Name *" value={form.commonName} onChange={(v) => setForm({ ...form, commonName: v })} required />
-        <Field label="Scientific Name *" value={form.scientificName} onChange={(v) => setForm({ ...form, scientificName: v })} required />
-        <Field label="Slug" value={form.slug} onChange={(v) => setForm({ ...form, slug: v })} placeholder="auto-generated from common name" />
-        <Field label="Specialist Type *" value={form.specialistType} onChange={(v) => setForm({ ...form, specialistType: v })} required placeholder="cardiologist" />
-        <Field label="Body System" value={form.bodySystem} onChange={(v) => setForm({ ...form, bodySystem: v })} placeholder="cardiovascular" />
-        <Field label="Severity Level" value={form.severityLevel} onChange={(v) => setForm({ ...form, severityLevel: v })} placeholder="mild | moderate | severe" />
-        <Field label="ICD Code" value={form.icdCode} onChange={(v) => setForm({ ...form, icdCode: v })} />
-        <div>
-          <label className="block text-sm font-medium text-slate-700 mb-1">Description</label>
-          <textarea
-            value={form.description}
-            onChange={(e) => setForm({ ...form, description: e.target.value })}
-            rows={4}
-            className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm"
-          />
+    return (
+        <div className="col gap-5" style={{ maxWidth: 720, color: 'var(--ink)' }}>
+            <Link
+                href="/admin/conditions"
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em' }}
+            >
+                ← Back to conditions
+            </Link>
+            <div className="col gap-2">
+                <span className="section-mark">admin / conditions / new</span>
+                <h1 className="display" style={{ fontSize: 'clamp(26px, 3.6vw, 36px)', margin: 0, lineHeight: 1.05, letterSpacing: '-0.035em', fontWeight: 600 }}>
+                    New condition<span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                <p className="lede" style={{ fontSize: 14, margin: 0 }}>
+                    Add a medical condition to the editorial taxonomy.
+                </p>
+            </div>
+
+            {error && (
+                <div role="alert" className="card-flat" style={{ padding: '12px 16px', borderColor: 'rgba(255, 90, 46, .35)', background: 'var(--orange-50)', color: 'var(--orange-2)', fontSize: 13 }}>
+                    {error}
+                </div>
+            )}
+
+            <form onSubmit={submit} className="card col gap-4" style={{ padding: 24 }}>
+                <Field label="Common name *" value={form.commonName} onChange={(v) => setForm({ ...form, commonName: v })} required />
+                <Field label="Scientific name *" value={form.scientificName} onChange={(v) => setForm({ ...form, scientificName: v })} required />
+                <Field label="Slug" value={form.slug} onChange={(v) => setForm({ ...form, slug: v })} placeholder="auto-generated from common name" />
+                <Field label="Specialist type *" value={form.specialistType} onChange={(v) => setForm({ ...form, specialistType: v })} required placeholder="cardiologist" />
+                <Field label="Body system" value={form.bodySystem} onChange={(v) => setForm({ ...form, bodySystem: v })} placeholder="cardiovascular" />
+                <Field label="Severity level" value={form.severityLevel} onChange={(v) => setForm({ ...form, severityLevel: v })} placeholder="mild | moderate | severe" />
+                <Field label="ICD code" value={form.icdCode} onChange={(v) => setForm({ ...form, icdCode: v })} />
+
+                <div className="form-group">
+                    <label className="form-label">Description</label>
+                    <textarea
+                        value={form.description}
+                        onChange={(e) => setForm({ ...form, description: e.target.value })}
+                        rows={4}
+                        className="textarea"
+                    />
+                </div>
+
+                <div className="row gap-3 hairline-t" style={{ paddingTop: 16 }}>
+                    <button type="submit" disabled={saving} className="btn btn-cobalt">
+                        {saving ? 'Creating…' : 'Create condition →'}
+                    </button>
+                    <Link href="/admin/conditions" className="btn btn-paper">Cancel</Link>
+                </div>
+            </form>
         </div>
-        <div className="flex gap-2">
-          <button type="submit" disabled={saving} className="px-4 py-2 rounded-lg bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 disabled:opacity-50">
-            {saving ? 'Creating…' : 'Create Condition'}
-          </button>
-          <Link href="/admin/conditions" className="px-4 py-2 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium hover:bg-slate-200">Cancel</Link>
-        </div>
-      </form>
-    </div>
-  );
+    );
 }
 
 function Field({ label, value, onChange, required, placeholder }: { label: string; value: string; onChange: (v: string) => void; required?: boolean; placeholder?: string }) {
-  return (
-    <div>
-      <label className="block text-sm font-medium text-slate-700 mb-1">{label}</label>
-      <input
-        type="text"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        required={required}
-        placeholder={placeholder}
-        className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-      />
-    </div>
-  );
+    return (
+        <div className="form-group">
+            <label className="form-label">{label}</label>
+            <input
+                type="text"
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                required={required}
+                placeholder={placeholder}
+                className="input"
+            />
+        </div>
+    );
 }

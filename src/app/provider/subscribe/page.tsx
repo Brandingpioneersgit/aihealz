@@ -2,10 +2,6 @@
 
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
-import {
-    Zap, CheckCircle, ArrowLeft, Shield, CreditCard,
-    Lock, Building, Globe, Phone, Users, TrendingUp, Video
-} from 'lucide-react';
 import { ProviderAuthGate } from '@/components/provider/AuthGate';
 
 /**
@@ -22,13 +18,13 @@ const PLANS = {
         currency: 'INR',
         period: 'month',
         features: [
-            { icon: Building, text: 'Priority profile listing' },
-            { icon: Users, text: '15 condition specialties' },
-            { icon: Users, text: '50 lead credits per month' },
-            { icon: Globe, text: 'Website URL on profile' },
-            { icon: Phone, text: 'Full contact display' },
-            { icon: TrendingUp, text: 'Complete analytics dashboard' },
-            { icon: Video, text: 'Tele-Link video consultations' },
+            'Priority profile listing',
+            '15 condition specialties',
+            '50 lead credits per month',
+            'Website URL on profile',
+            'Full contact display',
+            'Complete analytics dashboard',
+            'Tele-Link video consultations',
         ],
     },
     enterprise: {
@@ -37,12 +33,12 @@ const PLANS = {
         currency: 'INR',
         period: 'month',
         features: [
-            { icon: Shield, text: 'Featured "Top Doctor" badge' },
-            { icon: Users, text: 'Unlimited condition specialties' },
-            { icon: Users, text: '500 lead credits per month' },
-            { icon: Building, text: 'Guaranteed top 3 in search' },
-            { icon: Globe, text: 'Custom branding options' },
-            { icon: Phone, text: 'Dedicated account manager' },
+            'Featured "Top Doctor" badge',
+            'Unlimited condition specialties',
+            '500 lead credits per month',
+            'Guaranteed top 3 in search',
+            'Custom branding options',
+            'Dedicated account manager',
         ],
     },
 };
@@ -64,26 +60,17 @@ function SubscribeContent() {
     async function handlePayment() {
         setLoading(true);
 
-        // In production, this would:
-        // 1. Create a Razorpay order via API
-        // 2. Open Razorpay checkout
-        // 3. Handle payment success/failure
-        // 4. Update subscription in database
-
         try {
-            // Simulated API call
             const res = await fetch('/api/provider/subscription', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     doctorId: parseInt(doctorId, 10),
                     planId: planKey,
-                    // In production: paymentId, orderId from Razorpay
                 }),
             });
 
             if (res.ok) {
-                // Redirect to dashboard with success message
                 router.push('/provider/dashboard?upgraded=true');
             } else {
                 const error = await res.json();
@@ -97,108 +84,136 @@ function SubscribeContent() {
     }
 
     return (
-        <div className="min-h-screen bg-surface-900 flex items-center justify-center p-6">
-            <div className="w-full max-w-lg">
-                {/* Back button */}
+        <main
+            style={{
+                background: 'var(--bg)',
+                minHeight: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '64px 24px',
+            }}
+        >
+            <div style={{ width: '100%', maxWidth: 520 }} className="col gap-4">
                 <button
                     onClick={() => router.back()}
-                    className="flex items-center gap-2 text-surface-100/50 hover:text-surface-100/80 transition-colors mb-6 text-sm"
+                    className="btn btn-ghost btn-sm"
+                    style={{ alignSelf: 'flex-start' }}
                 >
-                    <ArrowLeft size={16} />
-                    Back to Dashboard
+                    ← Back to dashboard
                 </button>
 
-                {/* Plan Card */}
-                <div className="glass-card p-8 space-y-6">
-                    <div className="text-center">
-                        <div className="w-16 h-16 rounded-2xl bg-primary-600/20 flex items-center justify-center mx-auto mb-4">
-                            <Zap size={32} className="text-primary-400" />
-                        </div>
-                        <h1 className="text-2xl font-bold">Upgrade to {plan.name}</h1>
-                        <p className="text-surface-100/50 mt-2">Unlock premium features for your practice</p>
+                <div className="card col gap-5" style={{ padding: 32 }}>
+                    <div className="col ai-center gap-3 text-center">
+                        <span className="spec-icon" style={{ background: 'var(--cobalt)', width: 56, height: 56, fontSize: 22 }}>★</span>
+                        <span className="section-mark">provider / subscribe</span>
+                        <h1 className="display" style={{ fontSize: 26, margin: 0, fontWeight: 600, letterSpacing: '-0.025em' }}>
+                            Upgrade to {plan.name}<span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <p className="muted" style={{ fontSize: 14, margin: 0 }}>
+                            Unlock premium features for your practice.
+                        </p>
                     </div>
 
                     {/* Price */}
-                    <div className="text-center py-4 border-y border-white/5">
-                        <p className="text-4xl font-bold">
+                    <div className="col ai-center gap-1 hairline-t hairline-b" style={{ padding: '20px 0' }}>
+                        <span className="num bignum" style={{ fontSize: 40, color: 'var(--ink)' }}>
                             ₹{plan.price.toLocaleString()}
-                            <span className="text-base font-normal text-surface-100/40">/{plan.period}</span>
-                        </p>
-                        <p className="text-xs text-surface-100/40 mt-1">Billed monthly. Cancel anytime.</p>
+                            <span style={{ fontSize: 16, fontWeight: 400, color: 'var(--ink-3)', letterSpacing: 'normal' }}>/{plan.period}</span>
+                        </span>
+                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                            Billed monthly · cancel anytime
+                        </span>
                     </div>
 
                     {/* Features */}
-                    <ul className="space-y-3">
+                    <ul className="clean col gap-2">
                         {plan.features.map((feature) => (
-                            <li key={feature.text} className="flex items-center gap-3 text-sm text-surface-100/80">
-                                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                                    <feature.icon size={14} className="text-emerald-400" />
-                                </div>
-                                {feature.text}
+                            <li key={feature} className="row ai-center gap-3" style={{ fontSize: 14, color: 'var(--ink-2)' }}>
+                                <span
+                                    aria-hidden="true"
+                                    style={{
+                                        width: 24,
+                                        height: 24,
+                                        borderRadius: 'var(--r-2)',
+                                        background: 'var(--mint-50)',
+                                        color: 'var(--mint-3)',
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        fontSize: 12,
+                                        fontWeight: 600,
+                                        flexShrink: 0,
+                                    }}
+                                >
+                                    ✓
+                                </span>
+                                {feature}
                             </li>
                         ))}
                     </ul>
 
-                    {/* Payment Button */}
+                    {/* Payment button */}
                     <button
                         onClick={handlePayment}
                         disabled={loading}
-                        className="w-full py-4 rounded-xl bg-primary-600 text-white font-medium
-                                   hover:bg-primary-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed
-                                   flex items-center justify-center gap-2"
+                        className="btn btn-cobalt btn-lg"
+                        style={{ width: '100%', justifyContent: 'center' }}
                     >
-                        {loading ? (
-                            <>
-                                <div className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full" />
-                                Processing...
-                            </>
-                        ) : (
-                            <>
-                                <CreditCard size={18} />
-                                Pay ₹{plan.price.toLocaleString()}/month
-                            </>
-                        )}
+                        {loading ? 'Processing…' : `Pay ₹${plan.price.toLocaleString()}/month →`}
                     </button>
 
-                    {/* Trust badges */}
-                    <div className="flex items-center justify-center gap-4 text-xs text-surface-100/30">
-                        <span className="flex items-center gap-1">
-                            <Lock size={12} />
-                            Secure Payment
-                        </span>
-                        <span className="flex items-center gap-1">
-                            <Shield size={12} />
-                            Razorpay Protected
-                        </span>
+                    {/* Trust */}
+                    <div className="row center gap-4" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                        <span className="mono" style={{ textTransform: 'uppercase', letterSpacing: '0.08em' }}>🔒 Secure payment</span>
+                        <span className="mono" style={{ textTransform: 'uppercase', letterSpacing: '0.08em' }}>Razorpay protected</span>
                     </div>
 
-                    {/* Terms */}
-                    <p className="text-xs text-surface-100/30 text-center">
+                    <p className="muted" style={{ fontSize: 12, textAlign: 'center', margin: 0 }}>
                         By subscribing, you agree to our{' '}
-                        <a href="/terms" className="text-primary-400 hover:underline">Terms of Service</a>
-                        {' '}and{' '}
-                        <a href="/privacy" className="text-primary-400 hover:underline">Privacy Policy</a>.
+                        <a href="/terms" style={{ color: 'var(--cobalt)' }}>Terms of Service</a>{' '}and{' '}
+                        <a href="/privacy" style={{ color: 'var(--cobalt)' }}>Privacy Policy</a>.
                     </p>
                 </div>
 
-                {/* Contact option */}
-                <p className="text-center text-sm text-surface-100/40 mt-6">
+                <p className="muted" style={{ fontSize: 13, textAlign: 'center', margin: 0 }}>
                     Need help choosing a plan?{' '}
-                    <a href="/contact" className="text-primary-400 hover:underline">Contact our team</a>
+                    <a href="/contact" style={{ color: 'var(--cobalt)' }}>Contact our team</a>
                 </p>
             </div>
-        </div>
+        </main>
     );
 }
 
 export default function SubscribePage() {
     return (
         <ProviderAuthGate>
-            <Suspense fallback={
-                <div className="min-h-screen bg-surface-900 flex items-center justify-center">
-                    <div className="animate-spin w-8 h-8 border-2 border-primary-500/30 border-t-primary-400 rounded-full" />
-                </div>
-            }>
+            <Suspense
+                fallback={
+                    <div
+                        style={{
+                            background: 'var(--bg)',
+                            minHeight: '100vh',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div
+                            aria-hidden="true"
+                            style={{
+                                width: 32,
+                                height: 32,
+                                border: '2px solid var(--rule)',
+                                borderTopColor: 'var(--cobalt)',
+                                borderRadius: '50%',
+                                animation: 'spin 0.8s linear infinite',
+                            }}
+                        />
+                        <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+                    </div>
+                }
+            >
                 <SubscribeContent />
             </Suspense>
         </ProviderAuthGate>
