@@ -60,10 +60,10 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
     return (
         <header
             style={{
-                borderBottom: '1px solid rgba(255,255,255,0.08)',
-                background: 'rgba(5, 11, 20, 0.85)',
-                backdropFilter: 'blur(12px) saturate(140%)',
-                WebkitBackdropFilter: 'blur(12px) saturate(140%)',
+                borderBottom: '1px solid var(--rule)',
+                background: 'rgba(244,246,250,.85)',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
                 position: 'sticky',
                 top: 0,
                 zIndex: 50,
@@ -78,9 +78,9 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                     <Link
                         href="/"
                         aria-label="aihealz home"
-                        style={{ display: 'inline-flex', color: '#fff' }}
+                        style={{ display: 'inline-flex' }}
                     >
-                        <LogoLockup size={28} scale={0.85} dark />
+                        <LogoLockup size={28} scale={0.85} />
                     </Link>
                     <nav
                         aria-label="Primary"
@@ -99,11 +99,10 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                                         minHeight: 44,
                                         display: 'inline-flex',
                                         alignItems: 'center',
-                                        borderRadius: 8,
-                                        color: isActive ? '#fff' : 'rgba(226,232,240,0.78)',
-                                        background: isActive ? 'rgba(45,212,191,0.12)' : 'transparent',
-                                        fontWeight: isActive ? 600 : 500,
-                                        transition: 'color 120ms, background 120ms',
+                                        borderRadius: 'var(--r-2)',
+                                        color: isActive ? 'var(--ink)' : 'var(--ink-3)',
+                                        background: isActive ? 'var(--bg-2)' : 'transparent',
+                                        fontWeight: isActive ? 500 : 400,
                                     }}
                                 >
                                     {item.label}
@@ -119,7 +118,7 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                         aria-label={`Location: ${locationLabel}`}
                         style={{
                             fontSize: 11,
-                            color: 'rgba(226,232,240,0.6)',
+                            color: 'var(--ink-3)',
                             textTransform: 'uppercase',
                             letterSpacing: '.08em',
                         }}
@@ -129,10 +128,9 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                             style={{
                                 width: 6,
                                 height: 6,
-                                background: '#2dd4bf',
+                                background: 'var(--mint)',
                                 borderRadius: 99,
                                 display: 'inline-block',
-                                boxShadow: '0 0 8px rgba(45,212,191,0.6)',
                             }}
                         />
                         {locationLabel}
@@ -152,37 +150,18 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                     </Link>
                     <Link
                         href="/provider/login"
-                        className="v4-nav-desktop-only"
-                        style={{
-                            minHeight: 44,
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            padding: '0 14px',
-                            color: 'rgba(226,232,240,0.85)',
-                            fontSize: 13,
-                            fontWeight: 500,
-                            borderRadius: 8,
-                        }}
+                        className="v4-btn v4-btn-ghost v4-btn-sm v4-nav-desktop-only"
+                        style={{ minHeight: 44, display: 'inline-flex', alignItems: 'center' }}
                     >
                         Sign in
                     </Link>
                     <Link
                         href="/analyze"
-                        style={{
-                            minHeight: 44,
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            padding: '0 16px',
-                            background: '#2dd4bf',
-                            color: '#0f172a',
-                            borderRadius: 8,
-                            fontSize: 13,
-                            fontWeight: 700,
-                            boxShadow: '0 4px 16px rgba(45,212,191,0.25)',
-                        }}
+                        className="v4-btn v4-btn-cobalt v4-btn-sm"
+                        style={{ minHeight: 44, display: 'inline-flex', alignItems: 'center' }}
                     >
                         Analyze report{' '}
-                        <span aria-hidden="true" style={{ marginLeft: 6 }}>→</span>
+                        <span aria-hidden="true">→</span>
                     </Link>
                     <MobileMenu items={MOBILE_NAV_ITEMS} />
                 </div>
