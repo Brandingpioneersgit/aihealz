@@ -88,7 +88,7 @@ export default async function TestDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  // Related tests in same category
+  // Related tests
   const relatedTests = await prisma.diagnosticTest.findMany({
     where: {
       categoryId: test.categoryId,
@@ -109,7 +109,6 @@ export default async function TestDetailPage({ params }: PageProps) {
   const normalRanges = test.normalRanges as Record<string, unknown> | null;
   const typeStyle = getTestTypeStyle(test.testType);
 
-  // Structured data for SEO
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'MedicalTest',
@@ -130,273 +129,322 @@ export default async function TestDetailPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-emerald-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-            <Link href="/tests" className="hover:text-emerald-400 transition-colors">Tests</Link>
+      <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+        <div
+          style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+          className="col gap-7"
+        >
+          {/* ── Breadcrumb ─────────────────────────── */}
+          <nav
+            className="row gap-2 mono"
+            style={{
+              fontSize: 11,
+              color: 'var(--ink-3)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              flexWrap: 'wrap',
+            }}
+            aria-label="Breadcrumb"
+          >
+            <Link href="/tests">Tests</Link>
             <span>/</span>
             {test.category.parent && (
               <>
-                <Link href={`/tests/category/${test.category.parent.slug}`} className="hover:text-emerald-400 transition-colors">
-                  {test.category.parent.name}
-                </Link>
+                <Link href={`/tests/category/${test.category.parent.slug}`}>{test.category.parent.name}</Link>
                 <span>/</span>
               </>
             )}
-            <Link href={`/tests/category/${test.category.slug}`} className="hover:text-emerald-400 transition-colors">
-              {test.category.name}
-            </Link>
+            <Link href={`/tests/category/${test.category.slug}`}>{test.category.name}</Link>
             <span>/</span>
-            <span className="text-slate-400">{test.shortName || test.name}</span>
+            <span style={{ color: 'var(--ink)' }}>{test.shortName || test.name}</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* Test Header */}
-              <div className={`bg-slate-900/50 backdrop-blur-sm border ${typeStyle.border} rounded-3xl p-8`}>
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    {/* Test Type Badge */}
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`text-2xl`}>{typeStyle.icon}</span>
-                      <span className={`text-sm px-3 py-1 rounded-full ${typeStyle.bg} ${typeStyle.text} ${typeStyle.border} border font-medium`}>
-                        {typeStyle.label}
-                      </span>
-                    </div>
-                    <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{test.name}</h1>
-                    {test.shortName && (
-                      <p className={`text-lg ${typeStyle.text} font-medium`}>{test.shortName}</p>
-                    )}
-                    {test.aliases && test.aliases.length > 0 && (
-                      <p className="text-sm text-slate-500 mt-2">
-                        Also known as: {test.aliases.join(', ')}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex flex-col items-end gap-2">
-                    {test.homeCollectionPossible && (
-                      <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 text-sm font-medium">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                        Home Collection
-                      </span>
-                    )}
-                    {test.bodySystem && (
-                      <span className="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-400">
-                        {test.bodySystem}
-                      </span>
-                    )}
-                  </div>
+          {/* ── Main grid ──────────────────────────── */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'minmax(0, 1fr) minmax(280px, 360px)',
+              gap: 32,
+              alignItems: 'flex-start',
+            }}
+          >
+            {/* Left: Main Content */}
+            <div className="col gap-6" style={{ minWidth: 0 }}>
+              {/* Test header */}
+              <header className="col gap-4">
+                <div className="row gap-2 ai-center" style={{ flexWrap: 'wrap' }}>
+                  <span className="pill pill-cobalt">{typeStyle.label}</span>
+                  {test.bodySystem && <span className="pill">{test.bodySystem}</span>}
+                  {test.homeCollectionPossible && <span className="pill pill-mint">home collection</span>}
                 </div>
-
-                {test.description && (
-                  <p className="text-slate-300 leading-relaxed mb-6">{test.description}</p>
+                <h1
+                  className="display"
+                  style={{
+                    fontSize: 'clamp(32px, 5vw, 56px)',
+                    margin: 0,
+                    letterSpacing: '-0.04em',
+                    fontWeight: 600,
+                    lineHeight: 1.05,
+                  }}
+                >
+                  {test.name}
+                  <span style={{ color: 'var(--orange)' }}>.</span>
+                </h1>
+                {test.shortName && (
+                  <p
+                    className="mono"
+                    style={{
+                      fontSize: 13,
+                      color: 'var(--cobalt)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                      margin: 0,
+                    }}
+                  >
+                    aka {test.shortName}
+                    {test.aliases && test.aliases.length > 0 && ` · ${test.aliases.join(' · ')}`}
+                  </p>
                 )}
+                {test.description && (
+                  <p className="lede" style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', maxWidth: 720, margin: 0 }}>
+                    {test.description}
+                  </p>
+                )}
+              </header>
 
-                {/* Quick Info Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {test.sampleType && (
-                    <div className="bg-slate-800/50 rounded-xl p-4">
-                      <p className="text-xs text-slate-500 mb-1">Sample Type</p>
-                      <p className="font-semibold text-white">{test.sampleType}</p>
-                    </div>
-                  )}
-                  {test.reportTimeHours && (
-                    <div className="bg-slate-800/50 rounded-xl p-4">
-                      <p className="text-xs text-slate-500 mb-1">Report Time</p>
-                      <p className="font-semibold text-white">
-                        {test.reportTimeHours < 24 ? `${test.reportTimeHours} hours` : `${Math.round(test.reportTimeHours / 24)} days`}
-                      </p>
-                    </div>
-                  )}
-                  <div className="bg-slate-800/50 rounded-xl p-4">
-                    <p className="text-xs text-slate-500 mb-1">Fasting Required</p>
-                    <p className="font-semibold text-white">
-                      {test.fastingRequired ? `Yes (${test.fastingHours || 8}-12 hours)` : 'No'}
-                    </p>
+              {/* Quick info strip */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+                  gap: 0,
+                  border: '1px solid var(--rule)',
+                  borderRadius: 'var(--r-3)',
+                  background: 'var(--paper)',
+                  overflow: 'hidden',
+                }}
+              >
+                {[
+                  { l: 'Sample type', v: test.sampleType || '—' },
+                  { l: 'Report time', v: test.reportTimeHours ? (test.reportTimeHours < 24 ? `${test.reportTimeHours}h` : `${Math.round(test.reportTimeHours / 24)}d`) : '—' },
+                  { l: 'Fasting', v: test.fastingRequired ? `Yes · ${test.fastingHours || 8}h` : 'No' },
+                  ...(test.avgPriceInr ? [{ l: 'Starting at', v: formatPrice(Number(test.avgPriceInr)), highlight: true }] : []),
+                ].map((s, i, arr) => (
+                  <div
+                    key={s.l}
+                    className="col gap-1"
+                    style={{
+                      padding: '18px 22px',
+                      borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                      background: (s as { highlight?: boolean }).highlight ? 'var(--cobalt-50)' : 'var(--paper)',
+                    }}
+                  >
+                    <span
+                      className="mono"
+                      style={{
+                        fontSize: 11,
+                        color: (s as { highlight?: boolean }).highlight ? 'var(--cobalt)' : 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                      }}
+                    >
+                      {s.l}
+                    </span>
+                    <span
+                      className="display num"
+                      style={{
+                        fontSize: 18,
+                        fontWeight: 500,
+                        letterSpacing: '-0.02em',
+                        color: (s as { highlight?: boolean }).highlight ? 'var(--cobalt)' : 'var(--ink)',
+                      }}
+                    >
+                      {s.v}
+                    </span>
                   </div>
-                  {test.avgPriceInr && (
-                    <div className="bg-emerald-500/10 rounded-xl p-4 border border-emerald-500/20">
-                      <p className="text-xs text-emerald-400 mb-1">Starting Price</p>
-                      <p className="font-bold text-emerald-400 text-lg">{formatPrice(Number(test.avgPriceInr))}</p>
-                    </div>
-                  )}
-                </div>
+                ))}
               </div>
 
-              {/* Preparation Instructions */}
+              {/* Preparation */}
               {test.preparationInstructions && (
-                <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8">
-                  <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Test Preparation
-                  </h2>
-                  <div className="prose prose-invert prose-emerald max-w-none">
-                    <p className="text-slate-300 whitespace-pre-line">{test.preparationInstructions}</p>
+                <section className="card col gap-3" style={{ padding: 28 }}>
+                  <div className="row gap-3 ai-baseline">
+                    <span className="num" style={{ fontSize: 14, color: 'var(--cobalt)', fontWeight: 500, letterSpacing: '0.06em' }}>
+                      § 01
+                    </span>
+                    <h2 className="display" style={{ fontSize: 24, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}>
+                      Preparation
+                    </h2>
                   </div>
-                </div>
-              )}
-
-              {/* Normal Ranges */}
-              {normalRanges && Object.keys(normalRanges).length > 0 && (
-                <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8">
-                  <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                    Normal Reference Ranges
-                  </h2>
-                  <div className="overflow-x-auto">
-                    <table className="w-full">
-                      <thead>
-                        <tr className="border-b border-white/10">
-                          <th scope="col" className="text-left py-3 px-4 text-sm font-semibold text-slate-400">Parameter</th>
-                          <th scope="col" className="text-left py-3 px-4 text-sm font-semibold text-slate-400">Normal Range</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {Object.entries(normalRanges).map(([key, value]) => (
-                          <tr key={key} className="border-b border-white/5">
-                            <td className="py-3 px-4 text-white font-medium">{key}</td>
-                            <td className="py-3 px-4 text-slate-300">{String(value)}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                  <p className="text-xs text-slate-500 mt-4">
-                    Note: Normal ranges may vary between labs. Always consult your doctor for interpretation.
+                  <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.65, whiteSpace: 'pre-line', margin: 0 }}>
+                    {test.preparationInstructions}
                   </p>
-                </div>
+                </section>
               )}
 
-              {/* Related Conditions */}
+              {/* Normal ranges */}
+              {normalRanges && Object.keys(normalRanges).length > 0 && (
+                <section className="card col gap-4" style={{ padding: 28 }}>
+                  <div className="row gap-3 ai-baseline">
+                    <span className="num" style={{ fontSize: 14, color: 'var(--cobalt)', fontWeight: 500, letterSpacing: '0.06em' }}>
+                      § 02
+                    </span>
+                    <h2 className="display" style={{ fontSize: 24, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}>
+                      Normal reference ranges
+                    </h2>
+                  </div>
+                  <div className="card-flat" style={{ padding: 0, overflow: 'hidden' }}>
+                    {Object.entries(normalRanges).map(([key, value], i, arr) => (
+                      <div
+                        key={key}
+                        className="row between ai-center"
+                        style={{
+                          padding: '14px 18px',
+                          borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                        }}
+                      >
+                        <span style={{ fontSize: 14, fontWeight: 500 }}>{key}</span>
+                        <span className="num" style={{ fontSize: 13, color: 'var(--ink-2)' }}>{String(value)}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="muted" style={{ fontSize: 12, lineHeight: 1.6, margin: 0 }}>
+                    Normal ranges may vary between labs. Always consult your doctor for interpretation.
+                  </p>
+                </section>
+              )}
+
+              {/* Related conditions */}
               {test.relatedConditions && test.relatedConditions.length > 0 && (
-                <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8">
-                  <h2 className="text-xl font-bold text-white mb-4">Commonly Used For</h2>
-                  <div className="flex flex-wrap gap-2">
+                <section className="card col gap-3" style={{ padding: 28 }}>
+                  <div className="row gap-3 ai-baseline">
+                    <span className="num" style={{ fontSize: 14, color: 'var(--cobalt)', fontWeight: 500, letterSpacing: '0.06em' }}>
+                      § 03
+                    </span>
+                    <h2 className="display" style={{ fontSize: 24, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}>
+                      Commonly used for
+                    </h2>
+                  </div>
+                  <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                     {test.relatedConditions.map((condition, index) => (
                       <Link
                         key={index}
                         href={`/conditions?q=${encodeURIComponent(condition)}`}
-                        className="px-4 py-2 rounded-full bg-slate-800 text-slate-300 hover:bg-emerald-500/20 hover:text-emerald-400 transition-colors text-sm"
+                        className="pill"
+                        style={{ textTransform: 'none' }}
                       >
                         {condition}
                       </Link>
                     ))}
                   </div>
-                </div>
+                </section>
               )}
             </div>
 
-            {/* Sidebar - Providers */}
-            <div className="space-y-6">
-              {/* Book Now Card */}
-              <div className="bg-gradient-to-br from-emerald-900/40 to-teal-900/40 backdrop-blur-sm border border-emerald-500/20 rounded-3xl p-6 sticky top-24">
-                <h3 className="text-lg font-bold text-white mb-4">Book This Test</h3>
-
+            {/* Right: Booking sidebar */}
+            <aside className="col gap-3" style={{ position: 'sticky', top: 96 }}>
+              <div className="card col gap-4" style={{ padding: 22 }}>
+                <div className="kicker"><span className="dot" />book this test</div>
                 {test.prices.length > 0 ? (
-                  <div className="space-y-3 mb-6">
+                  <div className="col gap-2">
                     {test.prices.slice(0, 5).map((priceInfo) => (
                       <div
                         key={priceInfo.id}
-                        className="bg-slate-900/50 rounded-xl p-4 border border-white/5 hover:border-emerald-500/30 transition-colors"
+                        className="card-flat col gap-2"
+                        style={{ padding: 14 }}
                       >
-                        <div className="flex items-start justify-between mb-2">
-                          <div className="flex items-center gap-2">
+                        <div className="row between ai-center">
+                          <div className="row gap-2 ai-center">
                             {priceInfo.provider.logo ? (
-                              <img src={priceInfo.provider.logo} alt={priceInfo.provider.name} className="w-8 h-8 rounded-lg object-cover" />
+                              <img
+                                src={priceInfo.provider.logo}
+                                alt={priceInfo.provider.name}
+                                style={{ width: 32, height: 32, borderRadius: 'var(--r-1)', objectFit: 'cover', border: '1px solid var(--rule)' }}
+                              />
                             ) : (
-                              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                                <span className="text-emerald-400 font-bold text-sm">{priceInfo.provider.name.charAt(0)}</span>
+                              <div className="spec-icon" style={{ width: 32, height: 32, fontSize: 13 }}>
+                                {priceInfo.provider.name.charAt(0)}
                               </div>
                             )}
-                            <div>
-                              <p className="font-semibold text-white text-sm">{priceInfo.provider.name}</p>
+                            <div className="col">
+                              <span style={{ fontSize: 13, fontWeight: 500 }}>{priceInfo.provider.name}</span>
                               {priceInfo.provider.rating && (
-                                <div className="flex items-center gap-1 text-xs text-slate-400">
-                                  <svg className="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                  </svg>
-                                  {Number(priceInfo.provider.rating).toFixed(1)} ({priceInfo.provider.reviewCount})
-                                </div>
+                                <span
+                                  className="mono"
+                                  style={{ fontSize: 11, color: 'var(--ink-3)' }}
+                                >
+                                  {Number(priceInfo.provider.rating).toFixed(1)} ★ · {priceInfo.provider.reviewCount}
+                                </span>
                               )}
                             </div>
                           </div>
                           {priceInfo.provider.isPartner && priceInfo.provider.partnerDiscount && (
-                            <span className="text-xs px-2 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/20">
-                              {Number(priceInfo.provider.partnerDiscount)}% off
-                            </span>
+                            <span className="pill pill-orange">{Number(priceInfo.provider.partnerDiscount)}% off</span>
                           )}
                         </div>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <span className="font-bold text-emerald-400">{formatPrice(Number(priceInfo.price))}</span>
+                        <div className="row between ai-center hairline-t" style={{ paddingTop: 8 }}>
+                          <span className="num" style={{ fontSize: 14, color: 'var(--cobalt)', fontWeight: 500 }}>
+                            {formatPrice(Number(priceInfo.price))}
                             {priceInfo.provider.homeCollectionAvailable && (
-                              <span className="text-xs text-slate-500">+ Home</span>
+                              <span className="muted mono" style={{ fontSize: 11, marginLeft: 6 }}>+ home</span>
                             )}
-                          </div>
+                          </span>
                           <Link
                             href={`/book/test/${test.slug}?provider=${priceInfo.provider.slug}`}
-                            className="text-xs font-semibold text-emerald-400 hover:text-emerald-300"
+                            className="mono"
+                            style={{
+                              fontSize: 11,
+                              color: 'var(--cobalt)',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.08em',
+                              fontWeight: 500,
+                            }}
                           >
-                            Book Now
+                            Book →
                           </Link>
                         </div>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <div className="text-center py-6 mb-6">
-                    <p className="text-slate-400 mb-3">No providers listed yet</p>
-                    <p className="text-sm text-slate-500">We&apos;re adding diagnostic centers in your area.</p>
+                  <div className="col gap-2" style={{ textAlign: 'center', padding: '12px 0' }}>
+                    <p className="muted" style={{ fontSize: 13, margin: 0 }}>No providers listed yet.</p>
+                    <p className="muted-2" style={{ fontSize: 12, margin: 0 }}>We&rsquo;re adding diagnostic centers in your area.</p>
                   </div>
                 )}
 
                 <Link
                   href={`/chat/diagnostic?test=${test.slug}`}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-colors"
+                  className="btn btn-cobalt"
+                  style={{ width: '100%' }}
                 >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                  Ask About This Test
+                  Ask about this test →
                 </Link>
               </div>
 
-              {/* Related Tests */}
               {relatedTests.length > 0 && (
-                <div className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-3xl p-6">
-                  <h3 className="text-lg font-bold text-white mb-4">Related Tests</h3>
-                  <div className="space-y-3">
+                <div className="card col gap-3" style={{ padding: 22 }}>
+                  <div className="kicker"><span className="dot" />related tests</div>
+                  <div className="col gap-2">
                     {relatedTests.map((related) => (
                       <Link
                         key={related.id}
                         href={`/tests/${related.slug}`}
-                        className="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-colors group"
+                        className="row between ai-center"
+                        style={{ padding: '6px 0' }}
                       >
-                        <span className="text-sm text-slate-300 group-hover:text-white transition-colors">
-                          {related.shortName || related.name}
-                        </span>
+                        <span style={{ fontSize: 13, fontWeight: 500 }}>{related.shortName || related.name}</span>
                         {related.avgPriceInr && (
-                          <span className="text-xs text-emerald-400">{formatPrice(Number(related.avgPriceInr))}</span>
+                          <span className="num mono" style={{ fontSize: 11, color: 'var(--cobalt)' }}>
+                            {formatPrice(Number(related.avgPriceInr))}
+                          </span>
                         )}
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
-            </div>
+            </aside>
           </div>
         </div>
       </main>

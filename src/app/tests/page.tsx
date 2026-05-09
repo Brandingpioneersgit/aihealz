@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { getGeoContext } from '@/lib/geo-context';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
-import { getTestTypeStyle, getCategoryStyle, type DiagnosticTestType } from '@/lib/test-type-colors';
+import { getTestTypeStyle, getCategoryStyle } from '@/lib/test-type-colors';
 import {
   generateItemListSchema,
   generateOrganizationSchema,
@@ -23,17 +23,6 @@ export const metadata: Metadata = {
     url: 'https://aihealz.com/tests',
     type: 'website',
   },
-};
-
-const TEST_TYPE_ICONS: Record<string, string> = {
-  lab_test: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
-  imaging: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z',
-  cardiac: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
-  genetic: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
-  pulmonary: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
-  pathology: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
-  endoscopy: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
-  other: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',
 };
 
 export default async function TestsPage() {
@@ -85,14 +74,11 @@ export default async function TestsPage() {
     'canada': { symbol: 'C$', locale: 'en-CA', rate: 0.016 },
   };
 
-  // Format currency based on geo
   const formatPrice = (priceInr: number | null, priceUsd: number | null) => {
     if (!priceInr && !priceUsd) return null;
-
     const countryKey = geo.countrySlug?.toLowerCase() || 'india';
     const currency = CURRENCY_MAP[countryKey] || CURRENCY_MAP['india'];
 
-    // Use INR as base and convert
     if (priceInr) {
       if (countryKey === 'india' || countryKey === 'in') {
         return `${currency.symbol}${priceInr.toLocaleString(currency.locale)}`;
@@ -101,11 +87,9 @@ export default async function TestsPage() {
       return `${currency.symbol}${converted.toLocaleString(currency.locale)}`;
     }
 
-    // Fallback to USD display
     return priceUsd ? `$${priceUsd.toLocaleString('en-US')}` : null;
   };
 
-  // Generate structured data
   const testFaqs = [
     { question: 'How do I book a lab test online?', answer: 'Search for your required test, compare prices from multiple labs, and book online. You can opt for home sample collection or visit a nearby diagnostic center.' },
     { question: 'Is home sample collection available?', answer: 'Yes, many tests offer home sample collection at no extra cost. Look for the "Home Collection" badge on tests. A trained phlebotomist will visit your location.' },
@@ -136,102 +120,217 @@ export default async function TestsPage() {
     generateFAQSchema(testFaqs),
   ];
 
+  const totalTests = popularTests.length;
+
   return (
-    <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
-      {/* Structured Data */}
+    <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Background Effects */}
-      <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-emerald-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-500/5 rounded-full blur-[80px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
-            <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
-            <span className="text-sm font-medium text-emerald-400">Certified Diagnostic Partners</span>
+      <div
+        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+        className="col gap-7"
+      >
+        {/* ── Hero ─────────────────────────────────── */}
+        <header className="col gap-4">
+          <div
+            className="row gap-2 mono"
+            style={{
+              fontSize: 11,
+              color: 'var(--ink-3)',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+            }}
+            aria-label="Breadcrumb"
+          >
+            <Link href="/">Home</Link>
+            <span>/</span>
+            <span style={{ color: 'var(--ink)' }}>Tests &amp; Diagnostics</span>
           </div>
-
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-            <span className="text-white">Lab Tests &</span>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
-              Diagnostic Services
-            </span>
+          <span className="section-mark">the index / by test</span>
+          <h1
+            className="display"
+            style={{
+              fontSize: 'clamp(40px, 7vw, 88px)',
+              lineHeight: 0.95,
+              letterSpacing: '-0.045em',
+              margin: 0,
+              fontWeight: 600,
+            }}
+          >
+            Lab tests <span style={{ color: 'var(--cobalt)' }}>compared</span>
+            <span style={{ color: 'var(--orange)' }}>.</span>
           </h1>
-
-          <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
-            Compare prices from certified diagnostic centers. Book blood tests, imaging scans, and health checkups with home sample collection available.
+          <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 680 }}>
+            Compare prices from certified diagnostic centers. Book blood tests, imaging scans, and health checkups — home sample collection where available.
           </p>
-
-          {/* Search Bar - connected to test search API */}
-          <div className="max-w-2xl mx-auto">
+          <div style={{ maxWidth: 720 }}>
             <SearchAutocomplete
-              placeholder="Search for tests, scans, or health packages..."
-              variant="dark"
+              variant="bureau"
+              placeholder="Search for tests, scans, or health packages…"
               typeFilter="test"
             />
           </div>
+        </header>
+
+        {/* ── Stats strip ─────────────────────────── */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: 0,
+            border: '1px solid var(--rule)',
+            borderRadius: 'var(--r-3)',
+            background: 'var(--paper)',
+            overflow: 'hidden',
+          }}
+        >
+          {[
+            { v: totalTests.toLocaleString() + '+', l: 'tests indexed' },
+            { v: categories.length.toLocaleString(), l: 'categories' },
+            { v: 'Home', l: 'collection available' },
+            { v: '24h', l: 'typical turnaround' },
+          ].map((s, i, arr) => (
+            <div
+              key={s.l}
+              className="col gap-1"
+              style={{
+                padding: '20px 24px',
+                borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+              }}
+            >
+              <div
+                className="display num"
+                style={{
+                  fontSize: 28,
+                  fontWeight: 500,
+                  letterSpacing: '-0.025em',
+                  lineHeight: 1,
+                  color: 'var(--ink)',
+                }}
+              >
+                {s.v}
+              </div>
+              <div
+                className="mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--ink-3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                }}
+              >
+                {s.l}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Popular Tests */}
-        <section className="mb-16">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-white">Popular Tests</h2>
-            <Link href="/tests/all" className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
-              View all tests
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+        {/* ── Popular Tests ──────────────────────── */}
+        <section className="col gap-4">
+          <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
+            <h2
+              className="display"
+              style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+            >
+              Popular tests
+            </h2>
+            <Link
+              href="/tests/all"
+              className="mono"
+              style={{
+                fontSize: 11,
+                color: 'var(--cobalt)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                fontWeight: 500,
+              }}
+            >
+              View all tests →
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {popularTests.map((test) => {
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+              gap: 0,
+              border: '1px solid var(--rule)',
+              borderRadius: 'var(--r-3)',
+              background: 'var(--paper)',
+              overflow: 'hidden',
+            }}
+          >
+            {popularTests.map((test, i) => {
               const typeStyle = getTestTypeStyle(test.testType);
+              const cols = 4;
+              const isLastCol = (i + 1) % cols === 0;
+              const isLastRow = i >= popularTests.length - cols;
               return (
                 <Link
                   key={test.id}
                   href={`/tests/${test.slug}`}
-                  className={`group bg-slate-900/50 backdrop-blur-sm border rounded-2xl p-5 transition-all hover:bg-slate-800/50 ${typeStyle.border} hover:border-opacity-50`}
+                  className="col gap-3"
+                  style={{
+                    padding: '20px 22px',
+                    borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                    borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                    minHeight: 168,
+                  }}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <div className={`p-2 rounded-lg ${typeStyle.bg}`}>
-                      <span className="text-lg">{typeStyle.icon}</span>
-                    </div>
-                    <div className="flex flex-col items-end gap-1">
-                      <span className={`text-xs px-2 py-0.5 rounded-full ${typeStyle.bg} ${typeStyle.text} ${typeStyle.border} border`}>
-                        {typeStyle.label}
-                      </span>
-                      {test.homeCollectionPossible && (
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
-                          Home Collection
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <h3 className={`font-semibold text-white group-hover:${typeStyle.text} transition-colors mb-1 line-clamp-2`}>
-                    {test.name}
-                  </h3>
-
-                  <p className="text-xs text-slate-500 mb-3">{test.category.name}</p>
-
-                  <div className="flex items-center justify-between pt-3 border-t border-white/5">
-                    {test.avgPriceInr && (
-                      <span className={`text-sm font-semibold ${typeStyle.text}`}>
-                        {formatPrice(Number(test.avgPriceInr), Number(test.avgPriceUsd))}
+                  <div className="row between ai-center">
+                    <span className="pill" style={{ textTransform: 'none' }}>
+                      {typeStyle.label}
+                    </span>
+                    {test.homeCollectionPossible && (
+                      <span
+                        className="mono"
+                        style={{
+                          fontSize: 11,
+                          color: 'var(--mint-3)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.06em',
+                        }}
+                      >
+                        ● home
                       </span>
                     )}
+                  </div>
+                  <div className="col gap-1" style={{ flex: 1 }}>
+                    <div
+                      className="display"
+                      style={{
+                        fontSize: 16,
+                        letterSpacing: '-0.015em',
+                        fontWeight: 500,
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      {test.name}
+                    </div>
+                    <div className="muted" style={{ fontSize: 12 }}>{test.category.name}</div>
+                  </div>
+                  <div className="row between ai-center hairline-t" style={{ paddingTop: 12 }}>
+                    {test.avgPriceInr ? (
+                      <span className="num" style={{ fontSize: 13, color: 'var(--cobalt)', fontWeight: 500 }}>
+                        {formatPrice(Number(test.avgPriceInr), Number(test.avgPriceUsd))}
+                      </span>
+                    ) : (
+                      <span className="muted mono" style={{ fontSize: 11 }}>—</span>
+                    )}
                     {test.reportTimeHours && (
-                      <span className="text-xs text-slate-500">
-                        Report: {test.reportTimeHours < 24 ? `${test.reportTimeHours}h` : `${Math.round(test.reportTimeHours / 24)}d`}
+                      <span
+                        className="mono"
+                        style={{
+                          fontSize: 11,
+                          color: 'var(--ink-3)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.06em',
+                        }}
+                      >
+                        {test.reportTimeHours < 24 ? `${test.reportTimeHours}h` : `${Math.round(test.reportTimeHours / 24)}d`}
                       </span>
                     )}
                   </div>
@@ -241,53 +340,81 @@ export default async function TestsPage() {
           </div>
         </section>
 
-        {/* Categories Grid */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
+        {/* ── Categories Grid ────────────────────── */}
+        <section className="col gap-4">
+          <h2
+            className="display"
+            style={{ fontSize: 28, margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}
+          >
+            Browse by category
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 16,
+            }}
+          >
             {categories.map((category) => {
-              const totalTests = category._count.tests + category.children.reduce((sum, child) => sum + child._count.tests, 0);
+              const totalTestsInCat = category._count.tests + category.children.reduce((sum, child) => sum + child._count.tests, 0);
               const catStyle = getCategoryStyle(category.slug);
 
               return (
                 <div
                   key={category.id}
-                  className="bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6 hover:border-emerald-500/20 transition-all group"
+                  className="card col gap-4"
+                  style={{ padding: 24 }}
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`text-3xl ${catStyle.color} group-hover:scale-110 transition-transform`}>
-                      {category.icon || catStyle.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-white text-lg">{category.name}</h3>
-                      <p className="text-xs text-slate-500">{totalTests} tests available</p>
-                    </div>
+                  <div className="row between ai-start">
+                    <div className="spec-icon">{catStyle.icon || category.name.charAt(0)}</div>
+                    <span
+                      className="mono"
+                      style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                      }}
+                    >
+                      {totalTestsInCat} tests
+                    </span>
                   </div>
 
-                  {category.description && (
-                    <p className="text-sm text-slate-400 mb-4 line-clamp-2">{category.description}</p>
-                  )}
+                  <div className="col gap-1">
+                    <h3
+                      className="display"
+                      style={{
+                        fontSize: 18,
+                        fontWeight: 600,
+                        margin: 0,
+                        letterSpacing: '-0.02em',
+                      }}
+                    >
+                      {category.name}
+                    </h3>
+                    {category.description && (
+                      <p className="muted" style={{ fontSize: 13, margin: 0, lineHeight: 1.55 }}>
+                        {category.description}
+                      </p>
+                    )}
+                  </div>
 
-                  {/* Subcategories */}
                   {category.children.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {category.children.slice(0, 4).map((child) => {
-                        const childStyle = getCategoryStyle(child.slug);
-                        return (
-                          <Link
-                            key={child.id}
-                            href={`/tests/category/${child.slug}`}
-                            className="text-xs px-3 py-1.5 rounded-full bg-slate-800 text-slate-300 hover:bg-emerald-500/20 hover:text-emerald-400 transition-colors flex items-center gap-1"
-                          >
-                            <span>{childStyle.icon}</span>
-                            {child.name}
-                          </Link>
-                        );
-                      })}
+                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                      {category.children.slice(0, 4).map((child) => (
+                        <Link
+                          key={child.id}
+                          href={`/tests/category/${child.slug}`}
+                          className="pill"
+                          style={{ textTransform: 'none' }}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
                       {category.children.length > 4 && (
-                        <span className="text-xs px-3 py-1.5 rounded-full bg-slate-800/50 text-slate-500">
-                          +{category.children.length - 4} more
+                        <span className="muted mono" style={{ fontSize: 11, alignSelf: 'center' }}>
+                          +{category.children.length - 4}
                         </span>
                       )}
                     </div>
@@ -295,12 +422,17 @@ export default async function TestsPage() {
 
                   <Link
                     href={`/tests/category/${category.slug}`}
-                    className={`inline-flex items-center text-sm font-semibold ${catStyle.color} hover:opacity-80 transition-colors`}
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--cobalt)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                      fontWeight: 500,
+                      marginTop: 'auto',
+                    }}
                   >
-                    Explore {category.name}
-                    <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    Explore {category.name} →
                   </Link>
                 </div>
               );
@@ -308,57 +440,78 @@ export default async function TestsPage() {
           </div>
         </section>
 
-        {/* Health Packages CTA */}
-        <section className="mt-16">
-          <div className="bg-gradient-to-r from-emerald-900/30 to-teal-900/30 rounded-3xl p-8 md:p-12 border border-emerald-500/20">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Comprehensive Health Checkup Packages
-              </h2>
-              <p className="text-slate-300 mb-6">
-                Get complete health assessments with bundled tests at discounted prices. Choose from basic to executive packages tailored for your age and health goals.
+        {/* ── Health Packages CTA ────────────────── */}
+        <section className="card-ink" style={{ padding: 'clamp(28px, 4vw, 48px)' }}>
+          <div className="row between ai-center" style={{ flexWrap: 'wrap', gap: 24 }}>
+            <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+              <span
+                className="mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--cobalt-3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.10em',
+                  fontWeight: 500,
+                }}
+              >
+                bundled · discounted
+              </span>
+              <h3
+                className="display"
+                style={{
+                  fontSize: 'clamp(28px, 3.5vw, 40px)',
+                  lineHeight: 1.1,
+                  margin: 0,
+                  fontWeight: 600,
+                  color: 'var(--paper)',
+                  letterSpacing: '-0.03em',
+                }}
+              >
+                Comprehensive health checkup packages<span style={{ color: 'var(--orange)' }}>.</span>
+              </h3>
+              <p
+                style={{
+                  fontSize: 16,
+                  color: 'rgba(255,255,255,.7)',
+                  lineHeight: 1.55,
+                  maxWidth: 540,
+                  margin: 0,
+                }}
+              >
+                Bundled tests at discounted prices. Choose from basic to executive packages tailored for your age and health goals.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/tests/category/health-checkup-packages"
-                  className="inline-flex items-center px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-colors"
-                >
-                  View Health Packages
-                  <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/chat/diagnostic"
-                  className="inline-flex items-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold transition-colors border border-white/10"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                  Ask About Tests
-                </Link>
-              </div>
+            </div>
+            <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+              <Link href="/tests/category/health-checkup-packages" className="btn btn-cobalt btn-lg">
+                View packages →
+              </Link>
+              <Link
+                href="/chat/diagnostic"
+                className="btn btn-lg"
+                style={{
+                  background: 'rgba(255,255,255,.08)',
+                  color: 'var(--paper)',
+                  borderColor: 'rgba(255,255,255,.15)',
+                }}
+              >
+                Ask about tests
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* AI Diagnosis CTA */}
-        <section className="mt-12">
-          <AIDiagnosisCTA
-            title="Not sure which test you need?"
-            subtitle="Describe your symptoms and our AI will recommend the right diagnostic tests"
-          />
-        </section>
+        {/* ── AI Diagnosis CTA ────────────────────── */}
+        <AIDiagnosisCTA
+          variant="inline"
+          title="Not sure which test you need?"
+          subtitle="Describe your symptoms and our AI will recommend the right diagnostic tests."
+        />
 
-        {/* Find Doctor CTA */}
-        <section className="mt-8">
-          <FindDoctorCTA variant="banner" />
-        </section>
+        {/* ── Find Doctor CTA ─────────────────────── */}
+        <FindDoctorCTA variant="banner" />
 
-        {/* Medical Travel CTA */}
-        <section className="mt-8 mb-8">
-          <MedicalTravelCTA variant="mini" />
-        </section>
+        {/* ── Medical Travel CTA ──────────────────── */}
+        <MedicalTravelCTA variant="mini" />
       </div>
     </main>
   );

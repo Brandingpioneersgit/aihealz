@@ -4,78 +4,54 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const STATS = [
-    { value: '71,000+', label: 'Medical Conditions', iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
-    { value: '1M+', label: 'Monthly Visitors', iconPath: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
-    { value: '18+', label: 'Countries', iconPath: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
-    { value: '15+', label: 'Languages', iconPath: 'M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129' },
+    { value: '71,000+', label: 'medical conditions' },
+    { value: '1M+', label: 'monthly visitors' },
+    { value: '18+', label: 'countries' },
+    { value: '15+', label: 'languages' },
 ];
 
 const AD_PLACEMENTS = [
     {
-        name: 'Condition Page Sidebar',
+        abbr: 'CS',
+        name: 'Condition page sidebar',
         description: 'Premium sidebar placement on condition detail pages. Highly targeted to users researching specific medical conditions.',
-        size: '300x250 / 300x600',
+        size: '300×250 / 300×600',
         ctr: '2.1%',
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-            </svg>
-        ),
     },
     {
-        name: 'Homepage Featured',
+        abbr: 'HF',
+        name: 'Homepage featured',
         description: 'Showcase your clinic or hospital in the featured section of our homepage. Maximum visibility for brand awareness.',
-        size: '970x250',
+        size: '970×250',
         ctr: '3.2%',
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-        ),
     },
     {
-        name: 'Search Results',
+        abbr: 'SR',
+        name: 'Search results',
         description: 'Appear at the top of search results when users look for treatments, doctors, or conditions in your specialty.',
-        size: '728x90 / Native',
+        size: '728×90 · native',
         ctr: '2.8%',
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        ),
     },
     {
-        name: 'Doctor Profile Sidebar',
+        abbr: 'DP',
+        name: 'Doctor profile sidebar',
         description: 'Cross-promote your services alongside doctor profiles. Ideal for hospitals, diagnostic labs, and pharmacies.',
-        size: '300x250',
+        size: '300×250',
         ctr: '1.9%',
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-        ),
     },
     {
-        name: 'Sponsored Listings',
-        description: 'Get featured as a recommended provider in condition pages. Native ad format that blends seamlessly with content.',
-        size: 'Native Card',
+        abbr: 'SL',
+        name: 'Sponsored listings',
+        description: 'Get featured as a recommended provider in condition pages. Native ad format that blends with content.',
+        size: 'native card',
         ctr: '4.1%',
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-        ),
     },
     {
-        name: 'Global Banner',
+        abbr: 'GB',
+        name: 'Global banner',
         description: 'Site-wide header or footer banner for maximum reach. Perfect for brand campaigns and awareness drives.',
-        size: '970x90',
+        size: '970×90',
         ctr: '1.5%',
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-            </svg>
-        ),
     },
 ];
 
@@ -92,7 +68,7 @@ const PRICING_TIERS = [
             'Real-time analytics',
             'Email support',
         ],
-        cta: 'Start Free Trial',
+        cta: 'Start free trial',
         popular: false,
     },
     {
@@ -108,13 +84,13 @@ const PRICING_TIERS = [
             'Dedicated account manager',
             'Custom reporting',
         ],
-        cta: 'Get Started',
+        cta: 'Get started',
         popular: true,
     },
     {
         name: 'Enterprise',
         price: 'Custom',
-        unit: 'Flat Rate',
+        unit: 'flat rate',
         description: 'For hospitals and healthcare networks',
         features: [
             'Everything in Professional',
@@ -125,30 +101,30 @@ const PRICING_TIERS = [
             'SLA guarantee',
             'Multi-location support',
         ],
-        cta: 'Contact Sales',
+        cta: 'Contact sales',
         popular: false,
     },
 ];
 
 const TARGETING_OPTIONS = [
-    { iconPath: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z', name: 'Geographic', desc: '18+ countries, 500+ cities' },
-    { iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z', name: 'Condition', desc: '71,000+ medical conditions' },
-    { iconPath: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z', name: 'Specialty', desc: '25+ medical specialties' },
-    { iconPath: 'M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129', name: 'Language', desc: '15+ supported languages' },
+    { name: 'Geographic', desc: '18+ countries · 500+ cities' },
+    { name: 'Condition', desc: '71,000+ medical conditions' },
+    { name: 'Specialty', desc: '25+ medical specialties' },
+    { name: 'Language', desc: '15+ supported languages' },
 ];
 
 const TESTIMONIALS = [
     {
-        quote: "AIHealz helped us reach patients actively researching our specialty. Our appointment bookings increased by 40% in the first month.",
-        author: "Dr. Priya Sharma",
-        role: "Director, Apollo Multi-Specialty Clinic",
-        location: "Mumbai, India",
+        quote: 'AIHealz helped us reach patients actively researching our specialty. Our appointment bookings increased by 40% in the first month.',
+        author: 'Dr. Priya Sharma',
+        role: 'Director, Apollo Multi-Specialty Clinic',
+        location: 'Mumbai, India',
     },
     {
-        quote: "The targeting options are incredible. We can reach patients looking for specific treatments in specific cities. No wasted impressions.",
-        author: "James Mitchell",
-        role: "Marketing Head, HealthFirst Network",
-        location: "London, UK",
+        quote: 'The targeting options are incredible. We can reach patients looking for specific treatments in specific cities. No wasted impressions.',
+        author: 'James Mitchell',
+        role: 'Marketing Head, HealthFirst Network',
+        location: 'London, UK',
     },
 ];
 
@@ -174,380 +150,630 @@ export default function AdvertisePage() {
         },
         {
             q: 'Can I track campaign performance?',
-            a: 'Yes! Our dashboard provides real-time analytics including impressions, clicks, CTR, conversions, and ROI. You can segment data by placement, geography, and time period.',
+            a: 'Yes — our dashboard provides real-time analytics including impressions, clicks, CTR, conversions, and ROI. You can segment data by placement, geography, and time period.',
         },
     ];
 
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 relative overflow-hidden">
-            {/* Background Effects */}
-            <div className="absolute top-0 inset-x-0 h-[800px] bg-gradient-to-b from-teal-900/30 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-            <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-teal-500/10 rounded-full blur-[150px] -translate-y-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] translate-y-1/2 pointer-events-none" />
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            {/* ── Hero ──────────────────────────────────── */}
+            <section style={{ padding: '64px 28px 32px', maxWidth: 1280, margin: '0 auto' }}>
+                <div
+                    className="row between ai-center hairline-b"
+                    style={{ paddingBottom: 18, flexWrap: 'wrap', gap: 12 }}
+                >
+                    <span className="kicker">
+                        <span className="dot" />advertise · vol. 04 · live inventory
+                    </span>
+                    <span
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--mint-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                        }}
+                    >
+                        ● accepting advertisers
+                    </span>
+                </div>
 
-            {/* Hero Section */}
-            <section className="relative pt-32 pb-20 px-6">
-                <div className="max-w-6xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 border border-teal-500/20 rounded-full text-teal-400 text-sm font-semibold mb-8">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
-                        </span>
-                        Now accepting advertisers worldwide
-                    </div>
-
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white leading-[1.1]">
-                        Reach Millions of<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500">
-                            Healthcare Seekers
-                        </span>
+                <div className="col gap-5" style={{ paddingTop: 48, maxWidth: 920 }}>
+                    <span className="section-mark">I / for advertisers</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(48px, 7vw, 96px)',
+                            lineHeight: 0.95,
+                            letterSpacing: '-0.045em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        Reach millions of <span style={{ color: 'var(--cobalt)' }}>healthcare seekers</span>
+                        <span style={{ color: 'var(--orange)' }}>.</span>
                     </h1>
-
-                    <p className="text-xl md:text-2xl text-slate-400 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-                        Advertise on the world&apos;s first and biggest multilingual healthcare platform.
-                        <span className="text-white font-medium"> 71,000+ conditions. 18+ countries. 15+ languages.</span>
+                    <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 22px)', maxWidth: 720 }}>
+                        Advertise on the world&rsquo;s biggest multilingual healthcare platform. 71,000+ conditions. 18+ countries. 15+ languages.
                     </p>
-
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                        <Link
-                            href="/advertise/enquiry"
-                            className="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 transition-all hover:-translate-y-1 flex items-center gap-2 text-lg"
-                        >
-                            Start Advertising
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
+                    <div className="row gap-3" style={{ flexWrap: 'wrap' }}>
+                        <Link href="/advertise/enquiry" className="btn btn-cobalt btn-lg">
+                            Start advertising →
                         </Link>
-                        <Link
-                            href="/advertise/pricing"
-                            className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all flex items-center gap-2 text-lg"
-                        >
-                            View Pricing
+                        <Link href="#pricing" className="btn btn-paper btn-lg">
+                            View pricing
                         </Link>
                     </div>
+                </div>
 
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
-                        {STATS.map((stat) => (
-                            <div key={stat.label} className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 text-center">
-                                <div className="w-10 h-10 mx-auto mb-2 bg-teal-500/10 rounded-xl flex items-center justify-center">
-                                    <svg className="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={stat.iconPath} />
-                                    </svg>
-                                </div>
-                                <div className="text-3xl md:text-4xl font-extrabold text-white mb-1">{stat.value}</div>
-                                <div className="text-sm text-slate-400">{stat.label}</div>
+                {/* Stats strip */}
+                <div
+                    style={{
+                        marginTop: 48,
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                        gap: 0,
+                        border: '1px solid var(--rule)',
+                        borderRadius: 'var(--r-3)',
+                        background: 'var(--paper)',
+                        overflow: 'hidden',
+                    }}
+                >
+                    {STATS.map((s, i, arr) => (
+                        <div
+                            key={s.label}
+                            className="col gap-1"
+                            style={{
+                                padding: '24px 28px',
+                                borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                            }}
+                        >
+                            <div
+                                className="display num"
+                                style={{ fontSize: 40, fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1, color: 'var(--ink)' }}
+                            >
+                                {s.value}
                             </div>
-                        ))}
-                    </div>
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--ink-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {s.label}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
 
-            {/* Trust Banner */}
-            <section className="relative py-8 border-y border-white/5 bg-white/[0.02]">
-                <div className="max-w-6xl mx-auto px-6">
-                    <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-slate-500">
-                        <div className="flex items-center gap-2">
-                            <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                            </svg>
-                            Verified Medical Content
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                            </svg>
-                            HIPAA-Aware Platform
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                            E-E-A-T Compliant
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
-                            </svg>
-                            24/7 Global Reach
-                        </div>
-                    </div>
+            {/* ── Trust strip ────────────────────────────── */}
+            <section style={{ padding: '32px 28px', maxWidth: 1280, margin: '0 auto' }}>
+                <div
+                    className="row gap-5 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <span>verified medical content</span>
+                    <span>·</span>
+                    <span>HIPAA-aware</span>
+                    <span>·</span>
+                    <span>E-E-A-T compliant</span>
+                    <span>·</span>
+                    <span>24/7 global reach</span>
                 </div>
             </section>
 
-            {/* Ad Placements Section */}
-            <section className="relative py-24 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                            Ad Placements
-                        </span>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                            Premium Placements Across the Platform
+            {/* ── Ad Placements ─────────────────────────── */}
+            <section style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+                <div className="row between ai-end" style={{ marginBottom: 32, flexWrap: 'wrap', gap: 16 }}>
+                    <div className="col gap-2">
+                        <span className="section-mark">II / placements</span>
+                        <h2
+                            className="display"
+                            style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', margin: 0, letterSpacing: '-0.035em', fontWeight: 600 }}
+                        >
+                            Premium placements, by inventory.
                         </h2>
-                        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                            Choose from multiple high-visibility placements designed to reach users at every stage of their healthcare journey.
-                        </p>
                     </div>
+                    <span
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                        }}
+                    >
+                        {AD_PLACEMENTS.length} surfaces
+                    </span>
+                </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {AD_PLACEMENTS.map((placement) => (
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                        gap: 0,
+                        border: '1px solid var(--rule)',
+                        borderRadius: 'var(--r-3)',
+                        background: 'var(--paper)',
+                        overflow: 'hidden',
+                    }}
+                >
+                    {AD_PLACEMENTS.map((placement, i) => {
+                        const cols = 3;
+                        const isLastCol = (i + 1) % cols === 0;
+                        const isLastRow = i >= AD_PLACEMENTS.length - cols;
+                        return (
                             <div
                                 key={placement.name}
-                                className="group bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/10 hover:border-teal-500/30 p-6 transition-all hover:bg-white/[0.05]"
+                                className="col gap-3"
+                                style={{
+                                    padding: 24,
+                                    borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
+                                    borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                }}
                             >
-                                <div className="w-14 h-14 bg-teal-500/10 rounded-xl flex items-center justify-center text-teal-400 mb-4 group-hover:bg-teal-500/20 transition-colors">
-                                    {placement.icon}
-                                </div>
-                                <h3 className="text-xl font-bold text-white mb-2">{placement.name}</h3>
-                                <p className="text-slate-400 text-sm mb-4 leading-relaxed">{placement.description}</p>
-                                <div className="flex items-center gap-4 text-xs">
-                                    <span className="px-2 py-1 bg-slate-800 rounded text-slate-300">{placement.size}</span>
-                                    <span className="text-teal-400 font-semibold">Avg CTR: {placement.ctr}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Targeting Section */}
-            <section className="relative py-24 px-6 bg-gradient-to-b from-transparent via-teal-900/10 to-transparent">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <span className="inline-block px-4 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                                Advanced Targeting
-                            </span>
-                            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-                                Reach the Right Patients
-                            </h2>
-                            <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-                                Our granular targeting options ensure your ads reach users actively researching conditions relevant to your practice. No wasted impressions.
-                            </p>
-                            <div className="grid sm:grid-cols-2 gap-4">
-                                {TARGETING_OPTIONS.map((opt) => (
-                                    <div key={opt.name} className="flex items-start gap-3 p-4 bg-white/[0.03] rounded-xl border border-white/5">
-                                        <div className="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={opt.iconPath} />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div className="font-semibold text-white">{opt.name}</div>
-                                            <div className="text-sm text-slate-400">{opt.desc}</div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-3xl blur-3xl"></div>
-                            <div className="relative bg-slate-900/80 backdrop-blur-sm rounded-3xl border border-white/10 p-8">
-                                <div className="text-sm text-slate-400 mb-4">Example Campaign Targeting</div>
-                                <div className="space-y-4">
-                                    <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                                        <span className="text-slate-300">Countries</span>
-                                        <span className="text-teal-400 font-mono text-sm">India, USA, UK</span>
-                                    </div>
-                                    <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                                        <span className="text-slate-300">Cities</span>
-                                        <span className="text-teal-400 font-mono text-sm">Mumbai, Delhi, NYC</span>
-                                    </div>
-                                    <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                                        <span className="text-slate-300">Conditions</span>
-                                        <span className="text-teal-400 font-mono text-sm">Diabetes, Hypertension</span>
-                                    </div>
-                                    <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                                        <span className="text-slate-300">Specialty</span>
-                                        <span className="text-teal-400 font-mono text-sm">Cardiology</span>
-                                    </div>
-                                    <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                                        <span className="text-slate-300">Languages</span>
-                                        <span className="text-teal-400 font-mono text-sm">English, Hindi</span>
-                                    </div>
-                                </div>
-                                <div className="mt-6 p-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <span className="text-sm text-slate-400">Estimated Reach</span>
-                                        <span className="text-2xl font-bold text-white">125K</span>
-                                    </div>
-                                    <div className="w-full bg-slate-800 rounded-full h-2">
-                                        <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full w-3/4"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Pricing Section */}
-            <section className="relative py-24 px-6" id="pricing">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-1.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                            Pricing
-                        </span>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                            Flexible Pricing for Every Budget
-                        </h2>
-                        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                            Start with pay-per-impression or pay-per-click. Scale with flat-rate enterprise plans.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {PRICING_TIERS.map((tier) => (
-                            <div
-                                key={tier.name}
-                                className={`relative rounded-3xl border p-8 ${
-                                    tier.popular
-                                        ? 'bg-gradient-to-b from-teal-900/40 to-slate-900/80 border-teal-500/30 shadow-xl shadow-teal-500/10'
-                                        : 'bg-white/[0.03] border-white/10'
-                                }`}
-                            >
-                                {tier.popular && (
-                                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-teal-500 text-slate-900 text-xs font-bold rounded-full">
-                                        Most Popular
-                                    </div>
-                                )}
-                                <div className="mb-6">
-                                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                                    <p className="text-slate-400 text-sm">{tier.description}</p>
-                                </div>
-                                <div className="mb-6">
-                                    <span className="text-4xl font-extrabold text-white">{tier.price}</span>
-                                    <span className="text-slate-400 ml-2">/ {tier.unit}</span>
-                                </div>
-                                <ul className="space-y-3 mb-8">
-                                    {tier.features.map((feature) => (
-                                        <li key={feature} className="flex items-start gap-3 text-sm text-slate-300">
-                                            <svg className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                            </svg>
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Link
-                                    href="/advertise/enquiry"
-                                    className={`block text-center py-3 px-6 rounded-xl font-semibold transition-all ${
-                                        tier.popular
-                                            ? 'bg-teal-500 hover:bg-teal-400 text-slate-900 shadow-lg shadow-teal-500/20'
-                                            : 'bg-white/10 hover:bg-white/20 text-white border border-white/10'
-                                    }`}
-                                >
-                                    {tier.cta}
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Testimonials */}
-            <section className="relative py-24 px-6 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-1.5 bg-pink-500/10 text-pink-400 border border-pink-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                            Testimonials
-                        </span>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                            Trusted by Healthcare Leaders
-                        </h2>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {TESTIMONIALS.map((t, i) => (
-                            <div key={i} className="bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/10 p-8">
-                                <svg className="w-10 h-10 text-teal-500/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                                </svg>
-                                <p className="text-lg text-slate-300 mb-6 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
-                                <div>
-                                    <div className="font-semibold text-white">{t.author}</div>
-                                    <div className="text-sm text-slate-400">{t.role}</div>
-                                    <div className="text-sm text-teal-400">{t.location}</div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ Section */}
-            <section className="relative py-24 px-6">
-                <div className="max-w-3xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-bold uppercase tracking-wider mb-4">
-                            FAQ
-                        </span>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                            Frequently Asked Questions
-                        </h2>
-                    </div>
-
-                    <div className="space-y-4">
-                        {faqs.map((faq, i) => (
-                            <div
-                                key={i}
-                                className="bg-white/[0.03] backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden"
-                            >
-                                <button
-                                    onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                                    className="w-full flex items-center justify-between p-6 text-left"
-                                >
-                                    <span className="font-semibold text-white pr-4">{faq.q}</span>
-                                    <svg
-                                        className={`w-5 h-5 text-teal-500 shrink-0 transition-transform ${activeFaq === i ? 'rotate-180' : ''}`}
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
+                                <div className="row between ai-center">
+                                    <div className="spec-icon">{placement.abbr}</div>
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            color: 'var(--cobalt)',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.08em',
+                                        }}
                                     >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                {activeFaq === i && (
-                                    <div className="px-6 pb-6 text-slate-400 leading-relaxed">
-                                        {faq.a}
-                                    </div>
-                                )}
+                                        CTR · {placement.ctr}
+                                    </span>
+                                </div>
+                                <div className="col gap-1">
+                                    <h3
+                                        className="display"
+                                        style={{
+                                            fontSize: 18,
+                                            fontWeight: 600,
+                                            margin: 0,
+                                            letterSpacing: '-0.02em',
+                                        }}
+                                    >
+                                        {placement.name}
+                                    </h3>
+                                    <span
+                                        className="mono muted"
+                                        style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}
+                                    >
+                                        {placement.size}
+                                    </span>
+                                </div>
+                                <p className="muted" style={{ fontSize: 13, margin: 0, lineHeight: 1.55 }}>
+                                    {placement.description}
+                                </p>
                             </div>
-                        ))}
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* ── Targeting ─────────────────────────────── */}
+            <section style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+                <div className="row gap-7" style={{ flexWrap: 'wrap' }}>
+                    <div className="col gap-5" style={{ flex: '1 1 380px', minWidth: 0 }}>
+                        <span className="section-mark">III / targeting</span>
+                        <h2
+                            className="display"
+                            style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', margin: 0, letterSpacing: '-0.035em', fontWeight: 600 }}
+                        >
+                            Reach the <span style={{ color: 'var(--cobalt)' }}>right patients</span><span style={{ color: 'var(--orange)' }}>.</span>
+                        </h2>
+                        <p className="lede" style={{ fontSize: 17, maxWidth: 540 }}>
+                            Granular targeting ensures your ads reach users actively researching conditions relevant to your practice. No wasted impressions.
+                        </p>
+                        <div
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                                gap: 0,
+                                border: '1px solid var(--rule)',
+                                borderRadius: 'var(--r-3)',
+                                background: 'var(--paper)',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {TARGETING_OPTIONS.map((opt, i, arr) => (
+                                <div
+                                    key={opt.name}
+                                    className="col gap-1"
+                                    style={{
+                                        padding: '18px 20px',
+                                        borderRight: i % 2 === 0 ? '1px solid var(--rule)' : 'none',
+                                        borderBottom: i < arr.length - 2 ? '1px solid var(--rule)' : 'none',
+                                    }}
+                                >
+                                    <span style={{ fontSize: 14, fontWeight: 500 }}>{opt.name}</span>
+                                    <span className="muted mono" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                                        {opt.desc}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Example campaign card */}
+                    <div className="card-ink col gap-3" style={{ flex: '1 1 360px', minWidth: 0, padding: 28 }}>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.10em',
+                                fontWeight: 500,
+                            }}
+                        >
+                            example campaign
+                        </span>
+                        <div className="col gap-2">
+                            {[
+                                ['Countries', 'India · USA · UK'],
+                                ['Cities', 'Mumbai · Delhi · NYC'],
+                                ['Conditions', 'Diabetes · Hypertension'],
+                                ['Specialty', 'Cardiology'],
+                                ['Languages', 'English · Hindi'],
+                            ].map(([k, v]) => (
+                                <div
+                                    key={k}
+                                    className="row between ai-center"
+                                    style={{
+                                        padding: '10px 14px',
+                                        background: 'rgba(255,255,255,.04)',
+                                        border: '1px solid rgba(255,255,255,.08)',
+                                        borderRadius: 'var(--r-2)',
+                                    }}
+                                >
+                                    <span style={{ fontSize: 13, color: 'rgba(255,255,255,.7)' }}>{k}</span>
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 12,
+                                            color: 'var(--cobalt-3)',
+                                            letterSpacing: '0.02em',
+                                        }}
+                                    >
+                                        {v}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                        <div
+                            className="col gap-2"
+                            style={{
+                                marginTop: 8,
+                                padding: 14,
+                                background: 'rgba(28,91,255,.10)',
+                                border: '1px solid rgba(28,91,255,.20)',
+                                borderRadius: 'var(--r-2)',
+                            }}
+                        >
+                            <div className="row between ai-center">
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'rgba(255,255,255,.5)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    estimated reach
+                                </span>
+                                <span className="display num" style={{ fontSize: 24, fontWeight: 500, color: 'var(--paper)' }}>
+                                    125K
+                                </span>
+                            </div>
+                            <div style={{ height: 4, background: 'rgba(255,255,255,.08)', borderRadius: 2 }}>
+                                <div style={{ width: '75%', height: '100%', background: 'var(--cobalt)', borderRadius: 2 }} />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="relative py-24 px-6">
-                <div className="max-w-4xl mx-auto">
-                    <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-teal-900/60 via-blue-900/40 to-slate-900 border border-teal-500/20 p-12 md:p-16 shadow-2xl shadow-teal-900/30">
-                        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-                        <div className="relative z-10 text-center">
-                            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-                                Ready to Grow Your Practice?
-                            </h2>
-                            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-                                Join hundreds of healthcare businesses reaching millions of patients through AIHealz.
-                            </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <Link
-                                    href="/advertise/enquiry"
-                                    className="px-10 py-5 bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 transition-all hover:-translate-y-1 flex items-center gap-2 text-lg"
+            {/* ── Pricing ───────────────────────────────── */}
+            <section id="pricing" style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+                <div className="col gap-2" style={{ marginBottom: 32 }}>
+                    <span className="section-mark">IV / pricing</span>
+                    <h2
+                        className="display"
+                        style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', margin: 0, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Flexible for every budget.
+                    </h2>
+                </div>
+
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: 16,
+                    }}
+                >
+                    {PRICING_TIERS.map((tier) => (
+                        <div
+                            key={tier.name}
+                            className={tier.popular ? 'card-ink col gap-4' : 'card col gap-4'}
+                            style={{ padding: 28, position: 'relative' }}
+                        >
+                            {tier.popular && (
+                                <span
+                                    className="pill"
+                                    style={{
+                                        position: 'absolute',
+                                        top: -10,
+                                        right: 20,
+                                        background: 'var(--cobalt)',
+                                        color: '#fff',
+                                        borderColor: 'var(--cobalt)',
+                                    }}
                                 >
-                                    Get Started Today
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                    </svg>
-                                </Link>
-                                <Link
-                                    href="/contact"
-                                    className="px-10 py-5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 hover:border-white/30 transition-all flex items-center gap-2 text-lg"
+                                    most popular
+                                </span>
+                            )}
+                            <div className="col gap-1">
+                                <h3
+                                    className="display"
+                                    style={{
+                                        fontSize: 22,
+                                        fontWeight: 600,
+                                        margin: 0,
+                                        letterSpacing: '-0.025em',
+                                        color: tier.popular ? 'var(--paper)' : 'var(--ink)',
+                                    }}
                                 >
-                                    Contact Sales
-                                </Link>
+                                    {tier.name}
+                                </h3>
+                                <p
+                                    style={{
+                                        fontSize: 13,
+                                        color: tier.popular ? 'rgba(255,255,255,.65)' : 'var(--ink-3)',
+                                        margin: 0,
+                                    }}
+                                >
+                                    {tier.description}
+                                </p>
                             </div>
+                            <div className="row ai-baseline gap-2">
+                                <span
+                                    className="display num"
+                                    style={{
+                                        fontSize: 40,
+                                        fontWeight: 500,
+                                        letterSpacing: '-0.03em',
+                                        color: tier.popular ? 'var(--paper)' : 'var(--ink)',
+                                    }}
+                                >
+                                    {tier.price}
+                                </span>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: tier.popular ? 'rgba(255,255,255,.5)' : 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    / {tier.unit}
+                                </span>
+                            </div>
+                            <ul className="clean col gap-2">
+                                {tier.features.map((feature) => (
+                                    <li key={feature} className="row gap-2 ai-baseline">
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 11,
+                                                color: 'var(--cobalt)',
+                                                minWidth: 14,
+                                            }}
+                                        >
+                                            ✓
+                                        </span>
+                                        <span
+                                            style={{
+                                                fontSize: 13,
+                                                color: tier.popular ? 'rgba(255,255,255,.85)' : 'var(--ink-2)',
+                                            }}
+                                        >
+                                            {feature}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <Link
+                                href="/advertise/enquiry"
+                                className={tier.popular ? 'btn btn-cobalt' : 'btn btn-paper'}
+                                style={{ width: '100%', marginTop: 'auto' }}
+                            >
+                                {tier.cta} →
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* ── Testimonials ──────────────────────────── */}
+            <section style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+                <div className="col gap-2" style={{ marginBottom: 32 }}>
+                    <span className="section-mark">V / customers</span>
+                    <h2
+                        className="display"
+                        style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', margin: 0, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Trusted by healthcare leaders.
+                    </h2>
+                </div>
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gap: 16,
+                    }}
+                >
+                    {TESTIMONIALS.map((t) => (
+                        <article key={t.author} className="card col gap-4" style={{ padding: 28 }}>
+                            <span
+                                className="display"
+                                style={{
+                                    fontSize: 32,
+                                    color: 'var(--cobalt)',
+                                    lineHeight: 0.5,
+                                    fontWeight: 600,
+                                }}
+                            >
+                                &ldquo;
+                            </span>
+                            <p style={{ fontSize: 16, color: 'var(--ink)', lineHeight: 1.6, margin: 0 }}>
+                                {t.quote}
+                            </p>
+                            <div className="hairline" />
+                            <div className="col gap-1">
+                                <span style={{ fontSize: 14, fontWeight: 500 }}>{t.author}</span>
+                                <span className="muted" style={{ fontSize: 12 }}>{t.role}</span>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: 'var(--cobalt)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.06em',
+                                    }}
+                                >
+                                    {t.location}
+                                </span>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
+
+            {/* ── FAQ ───────────────────────────────────── */}
+            <section style={{ padding: '64px 28px', maxWidth: 880, margin: '0 auto' }}>
+                <div className="col gap-2" style={{ marginBottom: 32 }}>
+                    <span className="section-mark">VI / FAQ</span>
+                    <h2
+                        className="display"
+                        style={{ fontSize: 'clamp(32px, 4.5vw, 48px)', margin: 0, letterSpacing: '-0.035em', fontWeight: 600 }}
+                    >
+                        Common questions.
+                    </h2>
+                </div>
+                <div className="col gap-2">
+                    {faqs.map((faq, i) => (
+                        <div
+                            key={i}
+                            className="card-flat"
+                            style={{ overflow: 'hidden' }}
+                        >
+                            <button
+                                onClick={() => setActiveFaq(activeFaq === i ? null : i)}
+                                className="row between ai-center"
+                                style={{
+                                    width: '100%',
+                                    padding: '16px 20px',
+                                    background: 'transparent',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    textAlign: 'left',
+                                }}
+                            >
+                                <span style={{ fontSize: 15, fontWeight: 500, color: 'var(--ink)' }}>{faq.q}</span>
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 18,
+                                        color: 'var(--cobalt)',
+                                        transition: 'transform 200ms ease',
+                                        transform: activeFaq === i ? 'rotate(45deg)' : 'rotate(0deg)',
+                                    }}
+                                >
+                                    +
+                                </span>
+                            </button>
+                            {activeFaq === i && (
+                                <div className="hairline-t" style={{ padding: '16px 20px' }}>
+                                    <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>
+                                        {faq.a}
+                                    </p>
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* ── CTA ───────────────────────────────────── */}
+            <section style={{ padding: '0 28px 96px' }}>
+                <div
+                    className="card-ink"
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(36px, 5vw, 64px)' }}
+                >
+                    <div
+                        className="row between ai-center"
+                        style={{ flexWrap: 'wrap', gap: 24 }}
+                    >
+                        <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.10em',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                ready to grow
+                            </span>
+                            <h2
+                                className="display"
+                                style={{
+                                    fontSize: 'clamp(32px, 4.5vw, 52px)',
+                                    lineHeight: 1.05,
+                                    margin: 0,
+                                    fontWeight: 600,
+                                    color: 'var(--paper)',
+                                    letterSpacing: '-0.035em',
+                                }}
+                            >
+                                Join the healthcare brands <span style={{ color: 'var(--cobalt-3)' }}>reaching millions</span><span style={{ color: 'var(--orange)' }}>.</span>
+                            </h2>
+                        </div>
+                        <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                            <Link href="/advertise/enquiry" className="btn btn-cobalt btn-lg">
+                                Get started today →
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="btn btn-lg"
+                                style={{
+                                    background: 'rgba(255,255,255,.08)',
+                                    color: 'var(--paper)',
+                                    borderColor: 'rgba(255,255,255,.15)',
+                                }}
+                            >
+                                Contact sales
+                            </Link>
                         </div>
                     </div>
                 </div>

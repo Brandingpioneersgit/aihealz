@@ -62,7 +62,6 @@ function AiCareBotContent() {
         }
     };
 
-    // Quick prompts
     const quickPrompts = useMemo(() => {
         if (condition) {
             return [
@@ -81,68 +80,120 @@ function AiCareBotContent() {
     }, [condition]);
 
     return (
-        <main className="min-h-screen bg-[#050B14] pt-20 pb-8 flex flex-col items-center">
-            {/* Background effects */}
-            <div className="fixed inset-0 pointer-events-none overflow-hidden">
-                <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary-500/5 rounded-full blur-[120px]" />
-                <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-accent-500/5 rounded-full blur-[100px]" />
-            </div>
-
-            <div className="w-full max-w-4xl px-4 flex flex-col h-[calc(100vh-7rem)] relative z-10">
+        <main
+            style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}
+            className="col ai-center"
+        >
+            <div
+                className="col"
+                style={{
+                    width: '100%',
+                    maxWidth: 1024,
+                    padding: '32px 16px',
+                    height: 'calc(100vh - 24px)',
+                    minHeight: 720,
+                }}
+            >
                 {/* Header */}
-                <div className="bg-[#0A1128]/90 backdrop-blur-xl px-6 py-5 rounded-t-3xl border border-white/10 border-b-0 flex items-start sm:items-center justify-between gap-4 shrink-0">
-                    <div className="flex items-center gap-4">
-                        <div className="relative">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center shadow-lg shadow-primary-500/30">
-                                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                </svg>
-                            </div>
-                            <span className="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-emerald-400 border-2 border-[#0A1128] rounded-full flex items-center justify-center">
-                                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
+                <header
+                    className="row between ai-center hairline-b"
+                    style={{
+                        padding: '16px 20px',
+                        background: 'var(--paper)',
+                        border: '1px solid var(--rule)',
+                        borderBottom: 'none',
+                        borderTopLeftRadius: 'var(--r-3)',
+                        borderTopRightRadius: 'var(--r-3)',
+                        flexWrap: 'wrap',
+                        gap: 12,
+                    }}
+                >
+                    <div className="row gap-3 ai-center">
+                        <div className="spec-icon">AI</div>
+                        <div className="col">
+                            <h1
+                                className="display"
+                                style={{ fontSize: 18, fontWeight: 600, letterSpacing: '-0.02em', margin: 0 }}
+                            >
+                                AI Care Bot
+                            </h1>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--mint-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                ● evidence-based · OTC + home remedies
                             </span>
                         </div>
-                        <div>
-                            <h1 className="text-xl font-extrabold text-white tracking-tight">AI Care Bot</h1>
-                            <p className="text-sm text-white/50 font-medium tracking-wide flex items-center gap-1.5">
-                                <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                Evidence-based OTC & Home Remedies
-                            </p>
-                        </div>
                     </div>
-                    <Link
-                        href="/symptoms"
-                        className="text-xs font-semibold text-white/50 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-2 rounded-xl transition-all flex items-center gap-2"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                        </svg>
-                        Symptom Checker
+                    <Link href="/symptoms" className="btn btn-paper btn-sm">
+                        Symptom checker →
                     </Link>
-                </div>
+                </header>
 
-                {/* Disclaimer Strip */}
-                <div className="bg-rose-950/40 border-x border-white/10 px-6 py-3 flex items-start sm:items-center gap-3 shrink-0 text-sm backdrop-blur-sm">
-                    <svg className="w-5 h-5 text-rose-400 shrink-0 mt-0.5 sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                    <p className="text-rose-300/80 leading-snug text-xs">
-                        <strong className="text-rose-200">Medical Disclaimer:</strong> This bot provides educational information for minor issues. It is NOT a doctor. Consult a physician for severe or persistent symptoms.
+                {/* Disclaimer */}
+                <div
+                    style={{
+                        padding: '10px 20px',
+                        borderLeft: '1px solid var(--rule)',
+                        borderRight: '1px solid var(--rule)',
+                        background: 'var(--orange-50)',
+                        borderTop: '1px solid rgba(255, 90, 46, .15)',
+                        borderBottom: '1px solid rgba(255, 90, 46, .15)',
+                    }}
+                >
+                    <p
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--orange-2)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            margin: 0,
+                            lineHeight: 1.5,
+                        }}
+                    >
+                        Disclaimer · educational only · not a doctor · consult a physician for severe or persistent symptoms.
                     </p>
                 </div>
 
                 {/* Chat Area */}
-                <div className="flex-1 overflow-y-auto bg-[#050B14]/80 border-x border-white/10 p-6 space-y-6 scroll-smooth">
+                <div
+                    className="col gap-5"
+                    style={{
+                        flex: 1,
+                        overflowY: 'auto',
+                        padding: '24px 20px',
+                        background: 'var(--paper-2)',
+                        borderLeft: '1px solid var(--rule)',
+                        borderRight: '1px solid var(--rule)',
+                    }}
+                >
                     {messages.map((msg, i) => (
-                        <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                        <div
+                            key={i}
+                            className="row"
+                            style={{ justifyContent: msg.role === 'user' ? 'flex-end' : 'flex-start' }}
+                        >
                             {msg.role === 'user' ? (
-                                <div className="max-w-[85%] sm:max-w-[75%] bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-2xl rounded-br-md px-5 py-4 shadow-lg shadow-primary-500/10">
-                                    <p className="text-[15px] leading-relaxed">{msg.content}</p>
+                                <div
+                                    style={{
+                                        maxWidth: '85%',
+                                        background: 'var(--cobalt)',
+                                        color: '#fff',
+                                        padding: '14px 18px',
+                                        borderRadius: 'var(--r-3)',
+                                        borderTopRightRadius: 'var(--r-1)',
+                                    }}
+                                >
+                                    <p style={{ fontSize: 14, lineHeight: 1.55, margin: 0 }}>{msg.content}</p>
                                 </div>
                             ) : (
-                                <div className="max-w-[90%] sm:max-w-[85%]">
+                                <div style={{ maxWidth: '90%' }}>
                                     <AIResponseCard
                                         content={msg.content}
                                         variant="chat"
@@ -154,20 +205,46 @@ function AiCareBotContent() {
                     ))}
 
                     {isLoading && (
-                        <div className="flex justify-start">
-                            <div className="bg-white/5 border border-white/10 rounded-2xl rounded-bl-md px-5 py-4">
+                        <div className="row" style={{ justifyContent: 'flex-start' }}>
+                            <div
+                                style={{
+                                    background: 'var(--paper)',
+                                    border: '1px solid var(--rule)',
+                                    padding: '14px 18px',
+                                    borderRadius: 'var(--r-3)',
+                                    borderTopLeftRadius: 'var(--r-1)',
+                                }}
+                            >
                                 <TypingIndicator />
                             </div>
                         </div>
                     )}
-                    <div ref={bottomRef} className="h-1 flex-shrink-0" />
+                    <div ref={bottomRef} style={{ height: 1, flexShrink: 0 }} />
                 </div>
 
-                {/* Quick Prompts - Show only if few messages */}
+                {/* Quick prompts */}
                 {messages.length < 3 && !isLoading && (
-                    <div className="bg-[#050B14]/80 border-x border-white/10 px-4 pb-4">
-                        <p className="text-[10px] text-white/40 uppercase tracking-wider font-bold mb-2 px-2">Quick prompts</p>
-                        <div className="flex flex-wrap gap-2">
+                    <div
+                        className="col gap-2"
+                        style={{
+                            padding: '12px 20px 14px',
+                            borderLeft: '1px solid var(--rule)',
+                            borderRight: '1px solid var(--rule)',
+                            background: 'var(--paper-2)',
+                        }}
+                    >
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            Quick prompts
+                        </span>
+                        <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
                             {quickPrompts.map((prompt, i) => (
                                 <button
                                     key={i}
@@ -175,7 +252,8 @@ function AiCareBotContent() {
                                         setInput(prompt);
                                         inputRef.current?.focus();
                                     }}
-                                    className="text-xs bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white px-3 py-2 rounded-xl transition-all"
+                                    className="pill"
+                                    style={{ textTransform: 'none', cursor: 'pointer' }}
                                 >
                                     {prompt}
                                 </button>
@@ -185,33 +263,71 @@ function AiCareBotContent() {
                 )}
 
                 {/* Input Area */}
-                <div className="bg-[#0A1128]/90 backdrop-blur-xl p-5 rounded-b-3xl border border-white/10 border-t-0 shrink-0 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.3)] z-10 relative">
-                    <form onSubmit={sendMessage} className="relative flex items-center">
+                <div
+                    style={{
+                        padding: '16px 20px',
+                        background: 'var(--paper)',
+                        border: '1px solid var(--rule)',
+                        borderTop: 'none',
+                        borderBottomLeftRadius: 'var(--r-3)',
+                        borderBottomRightRadius: 'var(--r-3)',
+                    }}
+                >
+                    <form onSubmit={sendMessage} style={{ position: 'relative', display: 'flex' }}>
                         <input
                             ref={inputRef}
                             type="text"
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             disabled={isLoading}
-                            placeholder="Describe your symptoms (e.g., I have a sore throat and mild fever)..."
-                            className="w-full bg-[#050B14] border border-white/10 focus:border-primary-500/50 text-white text-[15px] rounded-2xl py-4 pl-6 pr-16 outline-none transition-all disabled:opacity-50 placeholder:text-white/30"
+                            placeholder="Describe your symptoms (e.g., I have a sore throat and mild fever)…"
+                            className="input"
+                            style={{ paddingRight: 60 }}
                             autoComplete="off"
                         />
                         <button
                             type="submit"
                             disabled={!input.trim() || isLoading}
-                            className="absolute right-2.5 w-11 h-11 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center text-white hover:scale-105 active:scale-95 transition-all disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed shadow-lg shadow-primary-500/20"
+                            className="btn btn-cobalt"
+                            style={{
+                                position: 'absolute',
+                                right: 6,
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                padding: '8px 12px',
+                                minHeight: 0,
+                            }}
                         >
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            →
                         </button>
                     </form>
-                    <div className="text-center mt-3 flex items-center justify-center gap-3">
-                        <p className="text-[10px] text-white/30 font-medium tracking-wide">Powered by AIHealz Intelligence</p>
-                        <span className="text-white/10">|</span>
-                        <Link href="/tools" className="text-[10px] text-primary-400/70 hover:text-primary-400 transition-colors">
-                            Health Calculators
+                    <div
+                        className="row center gap-3"
+                        style={{ marginTop: 10 }}
+                    >
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-4)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            powered by aihealz intelligence
+                        </span>
+                        <span style={{ color: 'var(--ink-4)' }}>·</span>
+                        <Link
+                            href="/tools"
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            Health calculators →
                         </Link>
                     </div>
                 </div>
@@ -222,12 +338,13 @@ function AiCareBotContent() {
 
 function LoadingFallback() {
     return (
-        <main className="min-h-screen bg-[#050B14] pt-24 pb-16 flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-2xl flex items-center justify-center">
-                    <div className="w-6 h-6 border-2 border-primary-400 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-                <p className="text-white/50 text-sm">Loading AI Care Bot...</p>
+        <main
+            style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}
+            className="col center ai-center"
+        >
+            <div className="col gap-3 ai-center">
+                <div className="spec-icon" style={{ width: 48, height: 48 }}>AI</div>
+                <p className="muted" style={{ fontSize: 14, margin: 0 }}>Loading AI Care Bot…</p>
             </div>
         </main>
     );

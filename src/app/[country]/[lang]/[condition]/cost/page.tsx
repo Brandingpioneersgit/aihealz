@@ -49,8 +49,6 @@ export default async function CostPage({ params }: { params: Promise<{ country: 
     if (!medicalCondition) notFound();
 
     // Convert country slug to ISO code for database lookup
-    // Database stores lowercase ISO codes: "in", "us", "gb"
-    // URL uses slugs: "india", "usa", "uk"
     const countryCode = SLUG_TO_CODE[country]?.toLowerCase() || country;
     const countryConfig = getCountryBySlug(country);
 
@@ -97,8 +95,10 @@ export default async function CostPage({ params }: { params: Promise<{ country: 
         ],
     };
 
+    const countryDisplay = countryConfig?.name || country;
+
     return (
-        <main className="min-h-screen bg-[#050B14] text-slate-300 pt-32 pb-16 relative overflow-hidden">
+        <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             {serviceSchema && (
                 <script
                     type="application/ld+json"
@@ -109,91 +109,226 @@ export default async function CostPage({ params }: { params: Promise<{ country: 
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
-            {/* Background Effects */}
-            <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-teal-900/20 via-[#050B14]/80 to-[#050B14] pointer-events-none z-0" />
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
 
-            <div className="max-w-4xl mx-auto px-6 relative z-10">
-                <nav className="text-sm text-slate-500 mb-8 flex gap-2 font-semibold">
-                    <Link href="/" className="hover:text-teal-400 transition-colors">Home</Link>
+            <div
+                style={{ maxWidth: 1024, margin: '0 auto', padding: '48px 28px 80px' }}
+                className="col gap-7"
+            >
+                {/* ── Breadcrumb ─────────────────────────── */}
+                <nav
+                    className="row gap-2 mono"
+                    style={{
+                        fontSize: 11,
+                        color: 'var(--ink-3)',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                    }}
+                    aria-label="Breadcrumb"
+                >
+                    <Link href="/">Home</Link>
                     <span>/</span>
-                    <Link href={`/${country}/${lang}/${condition}`} className="hover:text-teal-400 transition-colors">{medicalCondition.commonName}</Link>
+                    <Link href={`/${country}/${lang}/${condition}`}>{medicalCondition.commonName}</Link>
                     <span>/</span>
-                    <span className="text-white">Cost Analysis</span>
+                    <span style={{ color: 'var(--ink)' }}>Cost Analysis</span>
                 </nav>
 
-                <div className="bg-slate-900/40 backdrop-blur-md rounded-[2rem] border border-white/5 p-8 md:p-12 shadow-2xl mb-12 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+                {/* ── Hero ────────────────────────────────── */}
+                <header className="col gap-4">
+                    <span className="section-mark">cost · {countryDisplay}</span>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(36px, 5.5vw, 64px)',
+                            lineHeight: 1,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                        }}
+                    >
+                        Cost of <span style={{ color: 'var(--cobalt)' }}>{medicalCondition.commonName}</span> treatment
+                        <span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <p className="lede" style={{ fontSize: 'clamp(15px, 1.5vw, 19px)', maxWidth: 720 }}>
+                        Hospital estimates and average procedure costs for treating {medicalCondition.commonName.toLowerCase()} in {countryDisplay}. AI-aggregated from public health data and private hospital rate cards.
+                    </p>
+                </header>
 
-                    <div className="relative z-10">
-                        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white tracking-tight">
-                            Cost of {medicalCondition.commonName} Treatment
-                        </h1>
-                        <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-                            Understand the financial aspects, hospital estimates, and average procedure costs for treating {medicalCondition.commonName.toLowerCase()}.
+                {/* ── Cost cards ──────────────────────────── */}
+                {costData ? (
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                            gap: 0,
+                            border: '1px solid var(--rule)',
+                            borderRadius: 'var(--r-3)',
+                            background: 'var(--paper)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        {[
+                            { label: 'Minimum', value: formatCost(costData.minCost, costData.currency, country), tone: 'muted' as const },
+                            { label: 'AI database average', value: formatCost(costData.avgCost, costData.currency, country), tone: 'cobalt' as const },
+                            { label: 'Maximum', value: formatCost(costData.maxCost, costData.currency, country), tone: 'muted' as const },
+                        ].map((s, i, arr) => (
+                            <div
+                                key={s.label}
+                                className="col gap-2"
+                                style={{
+                                    padding: '24px 28px',
+                                    borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                    background: s.tone === 'cobalt' ? 'var(--cobalt-50)' : 'var(--paper)',
+                                }}
+                            >
+                                <span
+                                    className="mono"
+                                    style={{
+                                        fontSize: 11,
+                                        color: s.tone === 'cobalt' ? 'var(--cobalt)' : 'var(--ink-3)',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.08em',
+                                    }}
+                                >
+                                    {s.label}
+                                </span>
+                                <span
+                                    className="display num"
+                                    style={{
+                                        fontSize: s.tone === 'cobalt' ? 36 : 24,
+                                        fontWeight: 500,
+                                        letterSpacing: '-0.03em',
+                                        color: s.tone === 'cobalt' ? 'var(--cobalt)' : 'var(--ink)',
+                                        lineHeight: 1,
+                                    }}
+                                >
+                                    {s.value}
+                                </span>
+                                {s.tone === 'cobalt' && costData.treatmentName && (
+                                    <span className="muted" style={{ fontSize: 12 }}>{costData.treatmentName}</span>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div
+                        className="card-quiet col gap-2 ai-center"
+                        style={{ padding: 32, textAlign: 'center' }}
+                    >
+                        <span className="kicker"><span className="dot" />gathering data</span>
+                        <p style={{ fontSize: 14, color: 'var(--ink-2)', margin: 0 }}>
+                            Detailed cost data is currently being gathered for this region.
                         </p>
+                    </div>
+                )}
 
-                        {costData ? (
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 mt-12">
-                                <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5 text-center flex flex-col justify-center shadow-lg">
-                                    <div className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Minimum</div>
-                                    <div className="text-2xl font-bold text-white">{formatCost(costData.minCost, costData.currency, country)}</div>
-                                </div>
-                                <div className="p-8 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-3xl border border-teal-400/50 text-center text-slate-900 shadow-2xl transform md:scale-110 z-10 relative">
-                                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-slate-900 text-teal-400 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg border border-teal-500/30">
-                                        AI Database Average
-                                    </span>
-                                    <div className="text-sm font-bold text-slate-800/70 uppercase tracking-wider mb-2 mt-2">Average</div>
-                                    <div className="text-4xl font-black tracking-tight">{formatCost(costData.avgCost, costData.currency, country)}</div>
-                                    <div className="text-xs font-bold text-slate-900 mt-4 bg-white/20 inline-block px-4 py-1.5 rounded-full backdrop-blur-sm">{costData.treatmentName}</div>
-                                </div>
-                                <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5 text-center flex flex-col justify-center shadow-lg">
-                                    <div className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2">Maximum</div>
-                                    <div className="text-2xl font-bold text-white">{formatCost(costData.maxCost, costData.currency, country)}</div>
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="p-8 bg-slate-800/30 rounded-2xl border border-dashed border-white/10 text-center mb-10">
-                                <svg className="w-10 h-10 text-slate-600 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <p className="text-slate-400 font-medium">Detailed cost data is currently being gathered for this region.</p>
-                            </div>
-                        )}
+                {/* ── What's included ─────────────────────── */}
+                <section className="card col gap-4" style={{ padding: 'clamp(24px, 3vw, 32px)' }}>
+                    <div className="row gap-3 ai-baseline">
+                        <span
+                            className="num"
+                            style={{
+                                fontSize: 14,
+                                color: 'var(--cobalt)',
+                                fontWeight: 500,
+                                letterSpacing: '0.06em',
+                            }}
+                        >
+                            § 01
+                        </span>
+                        <h2
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(22px, 2.5vw, 28px)',
+                                margin: 0,
+                                letterSpacing: '-0.025em',
+                                fontWeight: 600,
+                            }}
+                        >
+                            What&rsquo;s included typically
+                        </h2>
+                    </div>
+                    <ul className="clean col gap-3">
+                        {[
+                            'Initial specialist consultation and physical examination.',
+                            'Standard diagnostic tests (varies heavily by severity).',
+                            `The core procedure or treatment protocol (${costData?.treatmentName || 'standard care'}).`,
+                            'Follow-up visits (usually 1–2 included post-procedure).',
+                            'Standard hospital room charges for basic tiers (if surgical).',
+                        ].map((item, i) => (
+                            <li key={i} className="row gap-3 ai-baseline">
+                                <span
+                                    className="num"
+                                    style={{
+                                        fontSize: 14,
+                                        color: 'var(--cobalt)',
+                                        minWidth: 28,
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    {String(i + 1).padStart(2, '0')}
+                                </span>
+                                <span style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.55 }}>{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="hairline" />
+                    <p className="muted" style={{ fontSize: 12, lineHeight: 1.6, margin: 0 }}>
+                        These are AI-estimated averages based on public health data and private hospital rate cards. Actual costs vary based on the patient&rsquo;s specific health profile, room category, doctor seniority, and exact hospital tier.
+                    </p>
+                </section>
 
-                        <div className="mt-8 bg-slate-800/30 p-8 rounded-2xl border border-white/5">
-                            <h3 className="text-xl font-bold mb-6 text-white flex items-center gap-3">
-                                <svg className="w-6 h-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                What's included typically?
-                            </h3>
-                            <ul className="space-y-3 marker:text-teal-500 text-slate-300">
-                                <li className="flex items-start gap-3"><span className="text-teal-500 mt-1">•</span> Initial specialist consultation and physical examination.</li>
-                                <li className="flex items-start gap-3"><span className="text-teal-500 mt-1">•</span> Standard diagnostic tests (varies heavily by severity).</li>
-                                <li className="flex items-start gap-3"><span className="text-teal-500 mt-1">•</span> The core procedure or treatment protocol ({costData?.treatmentName || 'Standard care'}).</li>
-                                <li className="flex items-start gap-3"><span className="text-teal-500 mt-1">•</span> Follow-up visits (usually 1-2 included post-procedure).</li>
-                                <li className="flex items-start gap-3"><span className="text-teal-500 mt-1">•</span> Standard hospital room charges for basic tiers (if surgical).</li>
-                            </ul>
-                            <div className="mt-8 p-4 bg-teal-500/10 border border-teal-500/20 rounded-xl">
-                                <p className="text-xs text-teal-200/80 leading-relaxed font-medium">
-                                    *Note: These are AI-estimated averages based on public health data and private hospital rate cards. Actual costs will vary heavily based on the patient's specific health profile, room category chosen, doctor seniority, and exact hospital tier.
-                                </p>
-                            </div>
+                {/* ── Concierge CTA ───────────────────────── */}
+                <section
+                    className="card-ink"
+                    style={{ padding: 'clamp(28px, 4vw, 48px)' }}
+                >
+                    <div
+                        className="row between ai-center"
+                        style={{ flexWrap: 'wrap', gap: 24 }}
+                    >
+                        <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt-3)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.10em',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                concierge · 24h turnaround
+                            </span>
+                            <h2
+                                className="display"
+                                style={{
+                                    fontSize: 'clamp(28px, 3.5vw, 40px)',
+                                    lineHeight: 1.1,
+                                    margin: 0,
+                                    fontWeight: 600,
+                                    color: 'var(--paper)',
+                                    letterSpacing: '-0.03em',
+                                }}
+                            >
+                                Need an exact quote? <span style={{ color: 'var(--cobalt-3)' }}>Match with top-rated hospitals</span><span style={{ color: 'var(--orange)' }}>.</span>
+                            </h2>
+                            <p
+                                style={{
+                                    fontSize: 15,
+                                    color: 'rgba(255,255,255,.7)',
+                                    lineHeight: 1.55,
+                                    maxWidth: 540,
+                                    margin: 0,
+                                }}
+                            >
+                                Connect with our medical travel concierge. We verify your exact procedure cost within 24 hours — free service, transparent pricing, no obligations.
+                            </p>
                         </div>
-                    </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-teal-900/40 to-slate-800 rounded-[2rem] p-10 md:p-14 text-center shadow-2xl relative overflow-hidden border border-teal-500/20 group">
-                    <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-teal-500/20 rounded-full blur-3xl group-hover:bg-teal-500/30 transition-colors duration-1000"></div>
-                    <div className="relative z-10">
-                        <h2 className="text-3xl font-extrabold text-white mb-4 tracking-tight">Need an Exact Quote?</h2>
-                        <p className="text-slate-400 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
-                            Connect with our Medical Travel Concierge. We'll match you with top-rated hospitals and verify your exact procedure costs within 24 hours.
-                        </p>
-                        <Link href="/medical-travel/bot" className="inline-flex items-center gap-2 px-10 py-5 bg-teal-500 text-slate-900 font-extrabold rounded-2xl hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 hover:-translate-y-1 transform duration-300">
-                            Get Official PDF Estimate
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                        <Link href="/medical-travel/bot" className="btn btn-cobalt btn-lg">
+                            Get PDF estimate →
                         </Link>
-                        <p className="mt-6 text-xs text-teal-500/70 font-bold tracking-widest uppercase">100% Free Service • Transparent Pricing • No Obligations</p>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
     );
