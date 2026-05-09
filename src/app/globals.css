@@ -642,6 +642,52 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
 
 .v4-emergency-cta { font-weight: 600; }
 
+/* v4-btn variants — used by Navbar/MobileMenu and pre-existing v4 pages */
+.v4-btn-cobalt {
+  background: var(--cobalt);
+  color: #fff;
+  border-color: var(--cobalt);
+}
+.v4-btn-cobalt:hover { background: var(--cobalt-2); border-color: var(--cobalt-2); }
+.v4-btn-paper {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--rule);
+}
+.v4-btn-paper:hover { background: var(--bg-2); }
+.v4-btn-ghost {
+  background: transparent;
+  color: var(--ink-2);
+  border-color: transparent;
+}
+.v4-btn-ghost:hover {
+  background: rgba(10, 26, 47, .05);
+  color: var(--ink);
+}
+.v4-btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.v4-btn-primary:hover { background: #001020; border-color: #001020; }
+
+/* v4-input — same surface as .input but used inline in some components */
+.v4-input {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-2);
+  padding: 11px 14px;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.v4-input:focus {
+  border-color: var(--cobalt);
+  box-shadow: 0 0 0 3px var(--cobalt-50);
+}
+.v4-input::placeholder { color: var(--ink-4); }
+
 /* Mobile-vs-desktop nav visibility */
 .v4-nav-desktop,
 .v4-nav-desktop-only { display: inline-flex; }
