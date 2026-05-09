@@ -1,64 +1,61 @@
 'use client';
 
 import { useState } from 'react';
-import {
-    FileText, Upload, Loader, Brain, MapPin, Users,
-    CheckCircle, AlertTriangle, AlertOctagon, Download,
-    ChevronRight, Activity, Stethoscope, Clock
-} from 'lucide-react';
 import { AvatarWithFallback } from '@/components/ui/image-with-fallback';
 
-// Convert specialty names to proper plural specialist titles
+/* ─── Helpers ──────────────────────────────────────────────────────────── */
+
 function formatSpecialistTitle(specialty: string): string {
     if (!specialty) return 'Specialists';
     const lower = specialty.toLowerCase().trim();
 
-    // Handle already plural forms
     if (lower.endsWith('ists') || lower.endsWith('ians')) {
         return specialty.charAt(0).toUpperCase() + specialty.slice(1);
     }
 
-    // Specialty -> Specialist mapping
     const mappings: Record<string, string> = {
-        'hematology': 'Hematologists',
-        'cardiology': 'Cardiologists',
-        'neurology': 'Neurologists',
-        'oncology': 'Oncologists',
-        'gastroenterology': 'Gastroenterologists',
-        'dermatology': 'Dermatologists',
-        'endocrinology': 'Endocrinologists',
-        'nephrology': 'Nephrologists',
-        'pulmonology': 'Pulmonologists',
-        'rheumatology': 'Rheumatologists',
-        'urology': 'Urologists',
-        'ophthalmology': 'Ophthalmologists',
-        'orthopedics': 'Orthopedic Surgeons',
-        'psychiatry': 'Psychiatrists',
-        'radiology': 'Radiologists',
-        'pathology': 'Pathologists',
+        hematology: 'Hematologists',
+        cardiology: 'Cardiologists',
+        neurology: 'Neurologists',
+        oncology: 'Oncologists',
+        gastroenterology: 'Gastroenterologists',
+        dermatology: 'Dermatologists',
+        endocrinology: 'Endocrinologists',
+        nephrology: 'Nephrologists',
+        pulmonology: 'Pulmonologists',
+        rheumatology: 'Rheumatologists',
+        urology: 'Urologists',
+        ophthalmology: 'Ophthalmologists',
+        orthopedics: 'Orthopedic Surgeons',
+        psychiatry: 'Psychiatrists',
+        radiology: 'Radiologists',
+        pathology: 'Pathologists',
         'general medicine': 'General Physicians',
         'internal medicine': 'Internists',
-        'pediatrics': 'Pediatricians',
+        pediatrics: 'Pediatricians',
     };
 
-    // Check direct mapping
-    if (mappings[lower]) {
-        return mappings[lower];
-    }
-
-    // If ends in -ology, convert to -ologists
-    if (lower.endsWith('ology')) {
-        return specialty.slice(0, -5) + 'ologists';
-    }
-
-    // If ends in -ist, just add s
-    if (lower.endsWith('ist')) {
-        return specialty + 's';
-    }
-
-    // Default: add Specialists
+    if (mappings[lower]) return mappings[lower];
+    if (lower.endsWith('ology')) return specialty.slice(0, -5) + 'ologists';
+    if (lower.endsWith('ist')) return specialty + 's';
     return specialty + ' Specialists';
 }
+
+function severityToken(sev: string): { color: string; pillClass: string; label: string } {
+    const s = sev?.toLowerCase() || 'routine';
+    if (s === 'critical' || s === 'emergency') {
+        return { color: 'var(--sev-critical)', pillClass: 'pill pill-orange', label: 'critical' };
+    }
+    if (s === 'high' || s === 'urgent') {
+        return { color: 'var(--orange)', pillClass: 'pill pill-orange', label: 'urgent' };
+    }
+    if (s === 'borderline' || s === 'medium') {
+        return { color: 'var(--lemon-2)', pillClass: 'pill pill-lemon', label: 'borderline' };
+    }
+    return { color: 'var(--mint-2)', pillClass: 'pill pill-mint', label: 'routine' };
+}
+
+/* ─── Types ────────────────────────────────────────────────────────────── */
 
 type Stage = 'upload' | 'processing' | 'dossier';
 
@@ -110,14 +107,24 @@ interface DossierData {
     };
 }
 
-const PROCESSING_STEPS = [
-    { icon: FileText, label: 'Parsing clinical data', duration: 800 },
-    { icon: Brain, label: 'Securing patient privacy', duration: 600 },
-    { icon: Activity, label: 'Extracting medical indicators', duration: 2000 },
-    { icon: MapPin, label: 'Mapping regional specialists', duration: 1000 },
-    { icon: Users, label: 'Ranking qualified doctors', duration: 800 },
-    { icon: CheckCircle, label: 'Finalizing your dossier', duration: 500 },
+const PROCESSING_STEPS: { label: string; duration: number }[] = [
+    { label: 'Parsing clinical data', duration: 800 },
+    { label: 'Securing patient privacy', duration: 600 },
+    { label: 'Extracting medical indicators', duration: 2000 },
+    { label: 'Mapping regional specialists', duration: 1000 },
+    { label: 'Ranking qualified doctors', duration: 800 },
+    { label: 'Finalizing your dossier', duration: 500 },
 ];
+
+const REPORT_TYPES: { value: string; label: string }[] = [
+    { value: 'blood_work', label: 'Blood work' },
+    { value: 'imaging', label: 'MRI / X-Ray' },
+    { value: 'pathology', label: 'Pathology' },
+    { value: 'prescription', label: 'Prescription' },
+    { value: 'other', label: 'Other' },
+];
+
+/* ─── Page ─────────────────────────────────────────────────────────────── */
 
 export default function AnalyzePage() {
     const [stage, setStage] = useState<Stage>('upload');
@@ -145,13 +152,14 @@ export default function AnalyzePage() {
 
         for (let i = 0; i < PROCESSING_STEPS.length; i++) {
             setProcessingStep(i);
-            await new Promise((r) => setTimeout(r, PROCESSING_STEPS[i].duration));
+            await new Promise(r => setTimeout(r, PROCESSING_STEPS[i].duration));
         }
 
         try {
-            const body = uploadMode === 'paste'
-                ? { text: reportText, reportType }
-                : { driveLink, reportType };
+            const body =
+                uploadMode === 'paste'
+                    ? { text: reportText, reportType }
+                    : { driveLink, reportType };
 
             const response = await fetch('/api/analyze', {
                 method: 'POST',
@@ -170,455 +178,824 @@ export default function AnalyzePage() {
     }
 
     return (
-        <div className="min-h-screen bg-surface-50 pt-24 pb-16 px-4">
-            <div className="max-w-6xl mx-auto">
-                {stage === 'upload' && (
-                    <UploadView
-                        reportText={reportText}
-                        setReportText={setReportText}
-                        reportType={reportType}
-                        setReportType={setReportType}
-                        driveLink={driveLink}
-                        setDriveLink={setDriveLink}
-                        uploadMode={uploadMode}
-                        setUploadMode={setUploadMode}
-                        onAnalyze={handleAnalyze}
-                        error={error}
-                    />
-                )}
-                {stage === 'processing' && <ProcessingView step={processingStep} />}
-                {stage === 'dossier' && dossierData && (
-                    <DossierView
-                        data={dossierData}
-                        onNewAnalysis={() => {
-                            setStage('upload');
-                            setReportText('');
-                            setDriveLink('');
-                            setDossierData(null);
-                        }}
-                    />
-                )}
-            </div>
+        <div style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
+            {stage === 'upload' && (
+                <UploadView
+                    reportText={reportText}
+                    setReportText={setReportText}
+                    reportType={reportType}
+                    setReportType={setReportType}
+                    driveLink={driveLink}
+                    setDriveLink={setDriveLink}
+                    uploadMode={uploadMode}
+                    setUploadMode={setUploadMode}
+                    onAnalyze={handleAnalyze}
+                    error={error}
+                />
+            )}
+            {stage === 'processing' && <ProcessingView step={processingStep} />}
+            {stage === 'dossier' && dossierData && (
+                <DossierView
+                    data={dossierData}
+                    onNewAnalysis={() => {
+                        setStage('upload');
+                        setReportText('');
+                        setDriveLink('');
+                        setDossierData(null);
+                    }}
+                />
+            )}
         </div>
     );
 }
 
-/* ─── Upload View ──────────────────────────────────────────── */
+/* ─── Upload View ──────────────────────────────────────────────────────── */
 
 function UploadView({
-    reportText, setReportText, reportType, setReportType,
-    driveLink, setDriveLink, uploadMode, setUploadMode,
-    onAnalyze, error,
+    reportText,
+    setReportText,
+    reportType,
+    setReportType,
+    driveLink,
+    setDriveLink,
+    uploadMode,
+    setUploadMode,
+    onAnalyze,
+    error,
 }: {
-    reportText: string; setReportText: (v: string) => void;
-    reportType: string; setReportType: (v: string) => void;
-    driveLink: string; setDriveLink: (v: string) => void;
-    uploadMode: 'paste' | 'drive'; setUploadMode: (v: 'paste' | 'drive') => void;
-    onAnalyze: () => void; error: string | null;
+    reportText: string;
+    setReportText: (v: string) => void;
+    reportType: string;
+    setReportType: (v: string) => void;
+    driveLink: string;
+    setDriveLink: (v: string) => void;
+    uploadMode: 'paste' | 'drive';
+    setUploadMode: (v: 'paste' | 'drive') => void;
+    onAnalyze: () => void;
+    error: string | null;
 }) {
+    const charCount = reportText.length;
+    const charLimit = 5000;
+
     return (
-        <div className="space-y-8">
+        <div
+            style={{ padding: '48px 28px 80px', maxWidth: 1080, margin: '0 auto' }}
+            className="col gap-7"
+        >
             {/* Hero */}
-            <div className="text-center max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-50 border border-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider mb-6">
-                    <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span></span>
-                    AI-Powered Engine
-                </div>
-                <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-surface-900 mb-4">
-                    AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500">Report Analysis</span>
+            <div className="col gap-3">
+                <span className="section-mark">the engine / analyze</span>
+                <h1
+                    className="display"
+                    style={{
+                        fontSize: 'clamp(40px, 6vw, 96px)',
+                        lineHeight: 0.95,
+                        letterSpacing: '-0.045em',
+                        margin: 0,
+                        fontWeight: 600,
+                    }}
+                >
+                    Hand us a report.
+                    <br />
+                    <span style={{ color: 'var(--cobalt)' }}>We&rsquo;ll read it back</span>
+                    <span style={{ color: 'var(--orange)' }}>.</span>
                 </h1>
-                <p className="text-lg text-surface-600 max-w-2xl mx-auto">
-                    Upload your medical report and our AI will translate complex clinical data into plain language, identify abnormal indicators, and connect you with the right specialist.
+                <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 640 }}>
+                    Bloodwork, MRI findings, biopsy notes — paste the text or share a Drive link. We strip every identifier, find what matters, and translate it.
                 </p>
             </div>
 
-            {/* ── How It Works ─────────────────────────────── */}
-            <div className="max-w-3xl mx-auto">
-                <h2 className="text-lg font-extrabold text-surface-900 mb-4 text-center">How It Works</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-                    {[
-                        { step: '1', icon: <Upload className="w-5 h-5" />, title: 'Upload Report', desc: 'Paste text or share via Google Drive' },
-                        { step: '2', icon: <Brain className="w-5 h-5" />, title: 'AI Analyzes', desc: 'PII is stripped, data is encrypted' },
-                        { step: '3', icon: <Activity className="w-5 h-5" />, title: 'Get Insights', desc: 'Key findings explained in plain English' },
-                        { step: '4', icon: <Stethoscope className="w-5 h-5" />, title: 'Find Doctors', desc: 'Matched specialists in your area' },
-                    ].map((s) => (
-                        <div key={s.step} className="bg-white rounded-2xl border border-surface-200 p-4 text-center relative">
-                            <div className="w-8 h-8 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center mx-auto mb-3 text-xs font-black">
-                                {s.step}
-                            </div>
-                            <div className="text-primary-600 mx-auto mb-2 flex justify-center">{s.icon}</div>
-                            <h3 className="text-sm font-extrabold text-surface-900 mb-1">{s.title}</h3>
-                            <p className="text-xs text-surface-500">{s.desc}</p>
+            {/* Steps ribbon */}
+            <div
+                className="row"
+                style={{
+                    borderTop: '1px solid var(--rule)',
+                    borderBottom: '1px solid var(--rule)',
+                    flexWrap: 'wrap',
+                }}
+            >
+                {[
+                    ['01', 'Paste or share', 'PDF · image · text'],
+                    ['02', 'PII redacted', 'before any AI sees it'],
+                    ['03', 'Indicators extracted', 'severity-ranked'],
+                    ['04', 'Specialists matched', 'in your geography'],
+                ].map(([n, t, s], i, arr) => (
+                    <div
+                        key={n}
+                        className="col gap-2"
+                        style={{
+                            flex: '1 1 240px',
+                            padding: '18px 20px',
+                            borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                            minWidth: 0,
+                        }}
+                    >
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--cobalt)',
+                                letterSpacing: '0.10em',
+                                fontWeight: 500,
+                            }}
+                        >
+                            {n}
+                        </span>
+                        <div
+                            className="display"
+                            style={{ fontSize: 18, fontWeight: 500, letterSpacing: '-0.02em' }}
+                        >
+                            {t}
                         </div>
-                    ))}
-                </div>
+                        <div className="muted" style={{ fontSize: 12 }}>{s}</div>
+                    </div>
+                ))}
             </div>
 
-            {/* ── Upload Card ──────────────────────────────── */}
-            <div className="bg-white rounded-3xl border border-surface-200 p-8 max-w-3xl mx-auto space-y-6 shadow-sm">
-                {/* Report Type */}
-                <div className="space-y-2">
-                    <label className="text-xs font-bold text-surface-500 uppercase tracking-wider">Report Type</label>
-                    <div className="flex flex-wrap gap-2">
-                        {[
-                            { value: 'blood_work', label: 'Blood Work' },
-                            { value: 'imaging', label: 'MRI / X-Ray' },
-                            { value: 'pathology', label: 'Pathology' },
-                            { value: 'prescription', label: 'Prescription' },
-                            { value: 'other', label: 'Other' },
-                        ].map((opt) => (
-                            <button
-                                key={opt.value}
-                                onClick={() => setReportType(opt.value)}
-                                className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all border ${reportType === opt.value
-                                    ? 'bg-primary-50 border-primary-200 text-primary-700'
-                                    : 'bg-surface-50 border-surface-200 text-surface-600 hover:bg-surface-100'
-                                    }`}
-                            >
-                                {opt.label}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Upload Mode Toggle */}
-                <div className="space-y-2">
-                    <label className="text-xs font-bold text-surface-500 uppercase tracking-wider">Upload Method</label>
-                    <div className="flex gap-2">
+            {/* Upload card */}
+            <div className="card" style={{ padding: 'clamp(20px, 4vw, 32px)' }}>
+                <div
+                    className="row between ai-center"
+                    style={{ marginBottom: 18, flexWrap: 'wrap', gap: 12 }}
+                >
+                    <span className="kicker"><span className="dot" />upload report</span>
+                    <div className="row gap-1" role="tablist" aria-label="Upload method">
                         <button
+                            className={uploadMode === 'paste' ? 'btn btn-paper btn-sm' : 'btn btn-ghost btn-sm'}
+                            style={uploadMode === 'paste' ? { borderColor: 'var(--ink)' } : undefined}
+                            role="tab"
+                            aria-selected={uploadMode === 'paste'}
                             onClick={() => setUploadMode('paste')}
-                            className={`flex-1 py-3 px-4 rounded-xl text-sm font-bold border transition-all flex items-center justify-center gap-2 ${uploadMode === 'paste' ? 'bg-primary-50 border-primary-200 text-primary-700' : 'bg-surface-50 border-surface-200 text-surface-600'
-                                }`}
                         >
-                            <FileText className="w-4 h-4" /> Paste Report Text
+                            Paste text
                         </button>
                         <button
+                            className={uploadMode === 'drive' ? 'btn btn-paper btn-sm' : 'btn btn-ghost btn-sm'}
+                            style={uploadMode === 'drive' ? { borderColor: 'var(--ink)' } : undefined}
+                            role="tab"
+                            aria-selected={uploadMode === 'drive'}
                             onClick={() => setUploadMode('drive')}
-                            className={`flex-1 py-3 px-4 rounded-xl text-sm font-bold border transition-all flex items-center justify-center gap-2 ${uploadMode === 'drive' ? 'bg-primary-50 border-primary-200 text-primary-700' : 'bg-surface-50 border-surface-200 text-surface-600'
-                                }`}
                         >
-                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M12 2L2 19.5h20L12 2z" /><path d="M12 2l5 8.5H2" /><path d="M7 10.5l5 9L22 10.5" /></svg>
-                            Google Drive Link
+                            Drive link
                         </button>
                     </div>
                 </div>
 
-                {/* Paste Mode */}
+                {/* Report type chips */}
+                <div className="col gap-2" style={{ marginBottom: 18 }}>
+                    <div
+                        className="mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                        }}
+                    >
+                        Report type
+                    </div>
+                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                        {REPORT_TYPES.map(opt => {
+                            const isActive = reportType === opt.value;
+                            return (
+                                <button
+                                    key={opt.value}
+                                    onClick={() => setReportType(opt.value)}
+                                    className={isActive ? 'btn btn-cobalt btn-sm' : 'btn btn-paper btn-sm'}
+                                    aria-pressed={isActive}
+                                >
+                                    {opt.label}
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                {/* Paste mode */}
                 {uploadMode === 'paste' && (
-                    <div className="space-y-2">
-                        <label className="text-xs font-bold text-surface-500 uppercase tracking-wider">
-                            Report Text <span className="text-surface-400">(for files under 5 MB)</span>
+                    <div className="col gap-2">
+                        <label
+                            className="mono"
+                            htmlFor="report-text"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            Report text
                         </label>
                         <textarea
+                            id="report-text"
+                            className="textarea mono"
+                            rows={10}
                             value={reportText}
-                            onChange={(e) => setReportText(e.target.value)}
-                            placeholder="Paste your medical report text here... (blood values, imaging findings, pathology notes, etc.)"
-                            className="w-full h-48 bg-surface-50 border border-surface-200 rounded-2xl p-4
-                           text-surface-900 placeholder:text-surface-400 resize-none
-                           focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all text-sm font-mono"
+                            onChange={e => setReportText(e.target.value.slice(0, charLimit))}
+                            placeholder="Paste blood values, imaging findings, pathology notes…"
+                            style={{ minHeight: 200, fontSize: 13 }}
                         />
-                        <p className="text-xs text-surface-400">
-                            All personal identifiers (names, addresses, phone numbers) are automatically stripped before AI processing.
-                        </p>
+                        <div
+                            className="row between mono"
+                            style={{ fontSize: 11, color: 'var(--ink-3)', flexWrap: 'wrap', gap: 8 }}
+                        >
+                            <span>↳ all personal identifiers stripped before analysis</span>
+                            <span>{charCount.toLocaleString()} / {charLimit.toLocaleString()} chars</span>
+                        </div>
                     </div>
                 )}
 
-                {/* Google Drive Mode */}
+                {/* Drive mode */}
                 {uploadMode === 'drive' && (
-                    <div className="space-y-3">
-                        <label className="text-xs font-bold text-surface-500 uppercase tracking-wider">
-                            Google Drive Link <span className="text-surface-400">(for files over 5 MB)</span>
+                    <div className="col gap-2">
+                        <label
+                            className="mono"
+                            htmlFor="drive-link"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            Google Drive link <span className="muted-2">(for files over 5 MB)</span>
                         </label>
                         <input
+                            id="drive-link"
                             type="url"
+                            className="input"
                             value={driveLink}
-                            onChange={(e) => setDriveLink(e.target.value)}
+                            onChange={e => setDriveLink(e.target.value)}
                             placeholder="https://drive.google.com/file/d/..."
-                            className="w-full py-3 px-4 bg-surface-50 border border-surface-200 rounded-xl
-                           text-surface-900 placeholder:text-surface-400 text-sm
-                           focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all"
                         />
-                        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 space-y-2">
-                            <p className="text-sm font-bold text-blue-800">How to share from Google Drive:</p>
-                            <ol className="text-xs text-blue-700 space-y-1 list-decimal list-inside">
-                                <li>Upload your report (PDF/image) to Google Drive</li>
-                                <li>Right-click the file → &quot;Share&quot; → &quot;Anyone with the link&quot;</li>
-                                <li>Copy the sharing link and paste it above</li>
+                        <div className="card-quiet" style={{ padding: 14 }}>
+                            <div
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                How to share from Google Drive
+                            </div>
+                            <ol style={{ margin: '8px 0 4px', paddingLeft: 22, fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.6 }}>
+                                <li>Upload your report (PDF or image) to Google Drive.</li>
+                                <li>Right-click → <strong>Share</strong> → <strong>Anyone with the link</strong>.</li>
+                                <li>Copy the link and paste it above.</li>
                             </ol>
-                            <p className="text-xs text-blue-600">Supports: PDF, JPEG, PNG, DICOM • Max: 100 MB</p>
+                            <div className="muted" style={{ fontSize: 12 }}>
+                                Supports PDF, JPEG, PNG, DICOM. Max 100 MB.
+                            </div>
                         </div>
                     </div>
                 )}
 
                 {error && (
-                    <div className="flex items-center gap-2 text-sm text-red-600 bg-red-50 p-3 rounded-xl border border-red-200">
-                        <AlertTriangle size={16} /> {error}
+                    <div
+                        className="card-flat"
+                        role="alert"
+                        style={{
+                            marginTop: 14,
+                            padding: 14,
+                            borderColor: 'rgba(255, 90, 46, .35)',
+                            background: 'var(--orange-50)',
+                            color: 'var(--orange-2)',
+                            fontSize: 13,
+                        }}
+                    >
+                        ⚠ {error}
                     </div>
                 )}
 
-                {/* Analyze Button */}
-                <button
-                    onClick={onAnalyze}
-                    disabled={uploadMode === 'paste' ? !reportText.trim() : !driveLink.trim()}
-                    className="w-full py-4 rounded-2xl bg-gradient-to-r from-primary-600 to-accent-600 text-white font-extrabold
-                     hover:shadow-xl hover:shadow-primary-500/20 hover:-translate-y-0.5 transition-all disabled:opacity-40
-                     disabled:cursor-not-allowed flex items-center justify-center gap-3 text-base"
+                <div className="hairline" style={{ margin: '24px -32px' }} />
+
+                <div
+                    className="row between ai-center"
+                    style={{ flexWrap: 'wrap', gap: 16 }}
                 >
-                    <Brain size={20} /> Analyze Report
-                </button>
-            </div>
-
-            {/* ── Supported Reports ────────────────────────── */}
-            <div className="max-w-3xl mx-auto">
-                <h2 className="text-sm font-extrabold text-surface-900 mb-3 text-center uppercase tracking-wider">What You Can Analyze</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    {[
-                        { icon: <svg className="w-5 h-5 text-surface-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>, label: 'CBC / Blood Panel', desc: 'Hemogram, lipid, thyroid, liver' },
-                        { icon: <svg className="w-5 h-5 text-surface-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>, label: 'MRI & CT Scans', desc: 'Brain, spine, abdomen imaging' },
-                        { icon: <svg className="w-5 h-5 text-surface-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>, label: 'Biopsy Reports', desc: 'Histopathology, cytology' },
-                        { icon: <svg className="w-5 h-5 text-surface-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>, label: 'Prescriptions', desc: 'Drug interactions, dosage check' },
-                    ].map((item, i) => (
-                        <div key={i} className="bg-white rounded-2xl border border-surface-100 p-4 text-center">
-                            <span className="text-2xl block mb-2">{item.icon}</span>
-                            <p className="text-xs font-bold text-surface-900 mb-0.5">{item.label}</p>
-                            <p className="text-[10px] text-surface-500">{item.desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Privacy */}
-            <div className="max-w-3xl mx-auto grid grid-cols-3 gap-3 text-center">
-                {[
-                    { icon: <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>, label: 'End-to-end Encrypted' },
-                    { icon: <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>, label: 'Deleted After 24h' },
-                    { icon: <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, label: 'HIPAA / GDPR Compliant' },].map((badge, i) => (
-                        <div key={i} className="py-3 px-2 bg-white rounded-2xl border border-surface-100">
-                            <span className="text-lg mb-1 block">{badge.icon}</span>
-                            <span className="text-[10px] font-bold text-surface-500 uppercase tracking-wider">{badge.label}</span>
-                        </div>
-                    ))}
-            </div>
-        </div>
-    );
-}
-
-/* ─── Processing View ──────────────────────────────────────── */
-
-function ProcessingView({ step }: { step: number }) {
-    return (
-        <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-12">
-            <div className="relative">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center">
-                    <Loader size={36} className="text-primary-600 animate-spin" />
-                </div>
-            </div>
-
-            <div className="space-y-3 w-full max-w-md">
-                {PROCESSING_STEPS.map((s, i) => {
-                    const Icon = s.icon;
-                    const isActive = i === step;
-                    const isDone = i < step;
-
-                    return (
-                        <div
-                            key={i}
-                            className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-500 ${isActive ? 'bg-primary-50 border border-primary-200 scale-105' :
-                                isDone ? 'bg-surface-100 opacity-50' : 'opacity-20'
-                                }`}
-                        >
-                            <Icon size={18} className={`flex-shrink-0 ${isActive ? 'text-primary-600' : isDone ? 'text-accent-600' : 'text-surface-400'}`} />
-                            <span className={`text-sm ${isActive ? 'text-surface-900 font-bold' : 'text-surface-500'}`}>{s.label}</span>
-                            {isDone && <CheckCircle size={14} className="ml-auto text-accent-600" />}
-                            {isActive && <Loader size={14} className="ml-auto text-primary-600 animate-spin" />}
-                        </div>
-                    );
-                })}
-            </div>
-        </div>
-    );
-}
-
-/* ─── Dossier View ─────────────────────────────────────────── */
-
-function DossierView({ data, onNewAnalysis }: { data: DossierData; onNewAnalysis: () => void }) {
-    const { dossier, doctors, meta } = data;
-    const urgencyStyles: Record<string, string> = {
-        routine: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-        urgent: 'bg-amber-50 text-amber-700 border-amber-200',
-        emergency: 'bg-red-50 text-red-700 border-red-200',
-    };
-    const UrgencyIcon = meta.urgencyLevel === 'emergency' ? AlertOctagon : meta.urgencyLevel === 'urgent' ? AlertTriangle : CheckCircle;
-
-    return (
-        <div className="space-y-8 pb-16">
-            {/* Header */}
-            <div className="flex items-center justify-between flex-wrap gap-4">
-                <div>
-                    <h1 className="text-3xl font-extrabold text-surface-900">{dossier.title}</h1>
-                    <p className="text-surface-500 text-sm mt-1">
-                        Processed in {(meta.processingTimeMs / 1000).toFixed(1)}s
-                        {meta.piiRedacted > 0 && ` • ${meta.piiRedacted} personal items removed`}
-                    </p>
-                </div>
-                <div className="flex items-center gap-3">
-                    <a
-                        href={`/api/analysis/${data.analysisId}/pdf`}
-                        target="_blank"
-                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-100 hover:bg-surface-200 text-sm font-bold text-surface-700 transition-all no-underline border border-surface-200"
+                    <div
+                        className="row gap-4 mono"
+                        style={{
+                            fontSize: 11,
+                            color: 'var(--ink-3)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.08em',
+                            flexWrap: 'wrap',
+                        }}
                     >
-                        <Download size={16} /> Export PDF
-                    </a>
+                        <span>◆ end-to-end encrypted</span>
+                        <span>◆ deleted after 24h</span>
+                        <span>◆ HIPAA · GDPR</span>
+                    </div>
                     <button
-                        onClick={onNewAnalysis}
-                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-bold transition-all border border-primary-200"
+                        onClick={onAnalyze}
+                        disabled={uploadMode === 'paste' ? !reportText.trim() : !driveLink.trim()}
+                        className="btn btn-cobalt btn-lg"
                     >
-                        <Upload size={16} /> New Analysis
+                        Analyze report →
                     </button>
                 </div>
             </div>
 
-            {/* Layout: Main + Sidebar */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Main Content */}
-                <div className="lg:col-span-2 space-y-6">
-                    {/* Urgency */}
-                    <div className={`flex items-center gap-3 p-4 rounded-2xl border ${urgencyStyles[meta.urgencyLevel] || urgencyStyles.routine}`}>
-                        <UrgencyIcon size={20} />
-                        <div>
-                            <p className="font-bold text-sm uppercase tracking-wider">{meta.urgencyLevel}</p>
-                            <p className="text-xs opacity-80">{dossier.urgency.message}</p>
-                        </div>
-                    </div>
-
-                    {/* Plain English Summary */}
-                    <div className="bg-white rounded-3xl border border-surface-200 p-6 space-y-3">
-                        <h2 className="text-lg font-extrabold text-surface-900 flex items-center gap-2">
-                            <FileText size={18} className="text-primary-600" />
-                            What Your Report Shows
-                        </h2>
-                        <p className="text-surface-600 leading-relaxed">{dossier.plainEnglish}</p>
-                    </div>
-
-                    {/* Key Indicators */}
-                    {dossier.indicators.length > 0 && (
-                        <div className="bg-white rounded-3xl border border-surface-200 p-6 space-y-4">
-                            <h2 className="text-lg font-extrabold text-surface-900 flex items-center gap-2">
-                                <Activity size={18} className="text-primary-600" />
-                                Key Findings
-                            </h2>
-                            <div className="space-y-3">
-                                {dossier.indicators.map((ind, i) => (
-                                    <div key={i} className="flex items-start gap-4 p-3 rounded-2xl bg-surface-50 border border-surface-100">
-                                        <div className={`w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0 ${ind.severity === 'critical' ? 'bg-red-500' :
-                                            ind.severity === 'high' ? 'bg-orange-500' :
-                                                ind.severity === 'borderline' ? 'bg-yellow-500' : 'bg-emerald-500'
-                                            }`} />
-                                        <div className="flex-1">
-                                            <div className="flex items-center justify-between">
-                                                <p className="font-bold text-sm text-surface-900">{ind.name}</p>
-                                                <span className="text-xs text-surface-400">{ind.normalRange && `Normal: ${ind.normalRange}`}</span>
-                                            </div>
-                                            <p className="text-surface-500 text-xs mt-1">{ind.explanation}</p>
-                                        </div>
-                                        <span className="text-sm font-mono font-bold text-surface-800">{ind.value}</span>
-                                    </div>
-                                ))}
+            {/* What we read well */}
+            <div>
+                <div className="section-mark" style={{ marginBottom: 14 }}>
+                    what we read well
+                </div>
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                        gap: 12,
+                    }}
+                >
+                    {[
+                        { t: 'CBC, lipid, thyroid', k: 'BL' },
+                        { t: 'MRI · CT · X-Ray', k: 'IM' },
+                        { t: 'Histopathology', k: 'HP' },
+                        { t: 'Prescription review', k: 'RX' },
+                        { t: 'Genomic panels', k: 'GN' },
+                        { t: 'Allergy & immunology', k: 'AL' },
+                    ].map(item => (
+                        <div
+                            key={item.t}
+                            className="card-flat row ai-center gap-3"
+                            style={{ padding: '14px 16px' }}
+                        >
+                            <div className="spec-icon">{item.k}</div>
+                            <div className="col">
+                                <div style={{ fontSize: 14, fontWeight: 500 }}>{item.t}</div>
+                                <div className="mono" style={{ fontSize: 11, color: 'var(--ink-3)' }}>auto-detect</div>
                             </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/* ─── Processing View ──────────────────────────────────────────────────── */
+
+function ProcessingView({ step }: { step: number }) {
+    return (
+        <div
+            className="col ai-center center gap-7"
+            style={{ minHeight: '60vh', padding: '48px 28px' }}
+        >
+            <div
+                aria-hidden="true"
+                style={{
+                    width: 56,
+                    height: 56,
+                    border: '2px solid var(--rule)',
+                    borderTopColor: 'var(--cobalt)',
+                    borderRadius: '50%',
+                    animation: 'spin 0.8s linear infinite',
+                }}
+            />
+            <div className="col gap-2" style={{ width: '100%', maxWidth: 480 }} aria-live="polite">
+                {PROCESSING_STEPS.map((s, i) => {
+                    const isActive = i === step;
+                    const isDone = i < step;
+                    return (
+                        <div
+                            key={i}
+                            className="row ai-center gap-3"
+                            style={{
+                                padding: '12px 16px',
+                                border: '1px solid',
+                                borderColor: isActive ? 'var(--cobalt)' : isDone ? 'var(--rule)' : 'transparent',
+                                background: isActive ? 'var(--cobalt-50)' : isDone ? 'var(--bg-2)' : 'transparent',
+                                borderRadius: 'var(--r-2)',
+                                transition: 'all 200ms',
+                                opacity: isActive ? 1 : isDone ? 0.7 : 0.35,
+                            }}
+                        >
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    fontWeight: 500,
+                                    minWidth: 24,
+                                    letterSpacing: '0.08em',
+                                }}
+                            >
+                                {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <span
+                                style={{
+                                    fontSize: 14,
+                                    color: isActive ? 'var(--ink)' : 'var(--ink-2)',
+                                    fontWeight: isActive ? 500 : 400,
+                                    flex: 1,
+                                }}
+                            >
+                                {s.label}
+                            </span>
+                            {isDone && (
+                                <span className="mono" aria-hidden="true" style={{ color: 'var(--mint-3)', fontSize: 13 }}>✓</span>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+            <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+        </div>
+    );
+}
+
+/* ─── Dossier View ─────────────────────────────────────────────────────── */
+
+function DossierView({ data, onNewAnalysis }: { data: DossierData; onNewAnalysis: () => void }) {
+    const { dossier, doctors, meta } = data;
+    const urgency = severityToken(meta.urgencyLevel);
+
+    return (
+        <div
+            style={{ padding: '40px 28px 80px', maxWidth: 1280, margin: '0 auto' }}
+            className="col gap-6"
+        >
+            {/* Header */}
+            <div
+                className="row between ai-end"
+                style={{ flexWrap: 'wrap', gap: 16 }}
+            >
+                <div className="col gap-3" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                    <div className="row gap-2 ai-center" style={{ flexWrap: 'wrap' }}>
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.10em',
+                            }}
+                        >
+                            dossier · {data.analysisId.slice(0, 8)} / processed in {(meta.processingTimeMs / 1000).toFixed(1)}s
+                        </span>
+                        <span className={urgency.pillClass}>
+                            <span className="pill-dot" style={{ background: urgency.color }} />
+                            {urgency.label} · {dossier.urgency.message}
+                        </span>
+                    </div>
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(32px, 5vw, 64px)',
+                            lineHeight: 1,
+                            letterSpacing: '-0.04em',
+                            margin: 0,
+                            fontWeight: 600,
+                            maxWidth: 920,
+                        }}
+                    >
+                        {dossier.title}
+                        <span style={{ color: 'var(--orange)' }}>.</span>
+                    </h1>
+                    <div className="muted" style={{ fontSize: 13 }}>
+                        {meta.piiRedacted > 0 ? `${meta.piiRedacted} personal items removed` : 'No personal items detected'}
+                        {meta.confidenceScore != null && ` · confidence ${Math.round(meta.confidenceScore * 100)}%`}
+                    </div>
+                </div>
+                <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                    <a
+                        href={`/api/analysis/${data.analysisId}/pdf`}
+                        target="_blank"
+                        rel="noopener"
+                        className="btn btn-paper btn-sm"
+                    >
+                        ↓ PDF
+                    </a>
+                    <button onClick={onNewAnalysis} className="btn btn-cobalt btn-sm">
+                        + New analysis
+                    </button>
+                </div>
+            </div>
+
+            <div
+                className="row gap-5 ai-start"
+                style={{ flexWrap: 'wrap' }}
+            >
+                {/* Main column */}
+                <div className="col gap-4" style={{ flex: '2 1 580px', minWidth: 0 }}>
+                    {/* A · plain english */}
+                    <div className="card" style={{ padding: 'clamp(20px, 3vw, 32px)' }}>
+                        <div className="kicker" style={{ marginBottom: 14 }}>
+                            <span className="dot" />section A · plain english
+                        </div>
+                        <div
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(18px, 2vw, 24px)',
+                                lineHeight: 1.4,
+                                color: 'var(--ink)',
+                                fontWeight: 400,
+                                letterSpacing: '-0.015em',
+                            }}
+                        >
+                            {dossier.plainEnglish}
+                        </div>
+                        {dossier.disclaimer && (
+                            <div className="muted" style={{ fontSize: 13, marginTop: 14, fontStyle: 'italic' }}>
+                                {dossier.disclaimer}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* B · indicators ranked */}
+                    {dossier.indicators.length > 0 && (
+                        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                            <div
+                                className="row between ai-center hairline-b"
+                                style={{ padding: '18px 24px' }}
+                            >
+                                <span className="kicker">
+                                    <span className="dot" />section B · indicators ranked
+                                </span>
+                                <span className="mono" style={{ fontSize: 11, color: 'var(--ink-4)' }}>
+                                    {dossier.indicators.length} {dossier.indicators.length === 1 ? 'finding' : 'findings'}
+                                </span>
+                            </div>
+                            {dossier.indicators.map((ind, i, arr) => {
+                                const sev = severityToken(ind.severity);
+                                return (
+                                    <div
+                                        key={i}
+                                        className="row ai-stretch"
+                                        style={{
+                                            borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                        }}
+                                    >
+                                        <div style={{ width: 4, background: sev.color, flexShrink: 0 }} />
+                                        <div
+                                            className="row ai-start gap-4"
+                                            style={{ padding: '20px 24px', flex: 1, flexWrap: 'wrap' }}
+                                        >
+                                            <div className="col" style={{ flex: '2 1 240px', minWidth: 0 }}>
+                                                <div className="row ai-baseline gap-2" style={{ flexWrap: 'wrap' }}>
+                                                    <span style={{ fontWeight: 500, fontSize: 15 }}>{ind.name}</span>
+                                                    <span className={sev.pillClass}>{sev.label}</span>
+                                                </div>
+                                                {ind.explanation && (
+                                                    <div
+                                                        className="muted"
+                                                        style={{ fontSize: 13, marginTop: 4, maxWidth: 480 }}
+                                                    >
+                                                        {ind.explanation}
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className="col" style={{ flex: '1 1 140px', minWidth: 0 }}>
+                                                <div className="row ai-baseline gap-2">
+                                                    <span
+                                                        className="num"
+                                                        style={{
+                                                            fontSize: 28,
+                                                            color: sev.color,
+                                                            fontWeight: 500,
+                                                            letterSpacing: '-0.02em',
+                                                        }}
+                                                    >
+                                                        {ind.value}
+                                                    </span>
+                                                </div>
+                                                {ind.normalRange && (
+                                                    <div
+                                                        className="mono"
+                                                        style={{
+                                                            fontSize: 11,
+                                                            color: 'var(--ink-4)',
+                                                            marginTop: 2,
+                                                        }}
+                                                    >
+                                                        ref · {ind.normalRange}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     )}
 
-                    {/* Questions to Ask */}
-                    <div className="bg-white rounded-3xl border border-surface-200 p-6 space-y-4">
-                        <h2 className="text-lg font-extrabold text-surface-900 flex items-center gap-2">
-                            <Stethoscope size={18} className="text-accent-600" />
-                            Questions for Your Doctor
-                        </h2>
-                        <ol className="space-y-3">
-                            {dossier.questionsToAsk.map((q, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <span className="w-6 h-6 rounded-full bg-accent-100 text-accent-700 flex items-center justify-center text-xs font-black flex-shrink-0">
-                                        {i + 1}
-                                    </span>
-                                    <p className="text-surface-600 text-sm">{q}</p>
-                                </li>
-                            ))}
-                        </ol>
-                    </div>
+                    {/* C · questions */}
+                    {dossier.questionsToAsk.length > 0 && (
+                        <div className="card" style={{ padding: 'clamp(20px, 3vw, 32px)' }}>
+                            <div className="kicker" style={{ marginBottom: 18 }}>
+                                <span className="dot" />section C · bring these to your doctor
+                            </div>
+                            <ol className="clean col gap-4">
+                                {dossier.questionsToAsk.map((q, i) => (
+                                    <li key={i} className="row gap-4 ai-baseline">
+                                        <span
+                                            className="num"
+                                            style={{
+                                                fontSize: 28,
+                                                color: 'var(--cobalt)',
+                                                minWidth: 40,
+                                                lineHeight: 1,
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.04em',
+                                            }}
+                                        >
+                                            {String(i + 1).padStart(2, '0')}
+                                        </span>
+                                        <span style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.5 }}>
+                                            {q}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ol>
+                        </div>
+                    )}
 
                     {/* Lifestyle */}
                     {dossier.lifestyleFactors.length > 0 && (
-                        <div className="bg-white rounded-3xl border border-surface-200 p-6 space-y-4">
-                            <h2 className="text-lg font-extrabold text-surface-900">Lifestyle Considerations</h2>
-                            <ul className="space-y-2">
+                        <div className="card" style={{ padding: 'clamp(20px, 3vw, 32px)' }}>
+                            <div className="kicker" style={{ marginBottom: 14 }}>
+                                <span className="dot" />lifestyle
+                            </div>
+                            <ul className="clean col gap-2">
                                 {dossier.lifestyleFactors.map((f, i) => (
-                                    <li key={i} className="flex items-start gap-2 text-sm text-surface-600">
-                                        <ChevronRight size={14} className="mt-0.5 text-accent-500 flex-shrink-0" />
-                                        {f}
+                                    <li
+                                        key={i}
+                                        className="row gap-3 ai-baseline"
+                                        style={{ fontSize: 14, color: 'var(--ink-2)' }}
+                                    >
+                                        <span className="mono" style={{ color: 'var(--cobalt)', fontSize: 11 }}>↳</span>
+                                        <span style={{ flex: 1 }}>{f}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     )}
 
-                    {/* Disclaimer */}
-                    <div className="text-xs text-surface-400 p-4 border border-surface-200 rounded-2xl bg-surface-50">
-                        {dossier.disclaimer}
+                    <div className="muted" style={{ fontSize: 12, padding: '12px 0' }}>
+                        This dossier is informational, not diagnostic. Always pair it with a licensed clinician&rsquo;s judgment.
                     </div>
                 </div>
 
-                {/* Doctor Sidebar */}
-                <div className="space-y-4">
-                    <h2 className="text-lg font-extrabold text-surface-900 flex items-center gap-2">
-                        <Users size={18} className="text-primary-600" />
-                        <span>Recommended {formatSpecialistTitle(doctors.specialtySearched)}</span>
-                    </h2>
-                    <p className="text-xs text-surface-400">{doctors.totalMatches} specialists found</p>
+                {/* Sidebar — matched specialists */}
+                <div
+                    className="col gap-3"
+                    style={{ flex: '1 1 320px', minWidth: 0 }}
+                >
+                    <div className="col gap-1" style={{ marginBottom: 4 }}>
+                        <span className="section-mark">section D / matched specialists</span>
+                        <div
+                            className="display"
+                            style={{
+                                fontSize: 26,
+                                letterSpacing: '-0.025em',
+                                fontWeight: 600,
+                                marginTop: 8,
+                            }}
+                        >
+                            {doctors.totalMatches} {doctors.totalMatches === 1 ? 'match' : 'matches'}
+                        </div>
+                        <div className="muted" style={{ fontSize: 13 }}>
+                            {formatSpecialistTitle(doctors.specialtySearched)} matched to your findings
+                        </div>
+                    </div>
 
-                    <div className="space-y-3">
-                        {doctors.doctors.map((doc) => (
+                    {doctors.doctors.map(doc => {
+                        const isTop = doc.matchRank === 1;
+                        return (
                             <a
                                 key={doc.id}
                                 href={`/doctor/${doc.slug}`}
-                                className={`bg-white rounded-2xl border border-surface-200 p-4 block no-underline transition-all hover:shadow-lg hover:-translate-y-0.5 ${doc.matchRank === 1 ? 'border-primary-200 ring-1 ring-primary-100' : ''
-                                    }`}
+                                className="card-flat"
+                                style={{
+                                    padding: 16,
+                                    display: 'block',
+                                    borderColor: isTop ? 'var(--cobalt)' : 'var(--rule)',
+                                    background: isTop ? 'var(--cobalt-50)' : 'var(--paper)',
+                                    position: 'relative',
+                                    color: 'var(--ink)',
+                                }}
                             >
-                                <div className="flex items-start gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold text-sm flex-shrink-0 overflow-hidden">
+                                {isTop && (
+                                    <span
+                                        className="pill pill-cobalt"
+                                        style={{ position: 'absolute', top: -10, right: 14 }}
+                                    >
+                                        top match
+                                    </span>
+                                )}
+                                <div className="row gap-3 ai-start">
+                                    <div
+                                        style={{
+                                            width: 44,
+                                            height: 44,
+                                            borderRadius: 'var(--r-2)',
+                                            overflow: 'hidden',
+                                            flexShrink: 0,
+                                            background: 'var(--bg-2)',
+                                            border: '1px solid var(--rule)',
+                                        }}
+                                    >
                                         {doc.profileImage ? (
-                                            <AvatarWithFallback src={doc.profileImage} alt={doc.name} className="w-10 h-10 rounded-full object-cover" />
+                                            <AvatarWithFallback
+                                                src={doc.profileImage}
+                                                alt={doc.name}
+                                                className="w-full h-full object-cover"
+                                            />
                                         ) : (
-                                            doc.name.charAt(0)
+                                            <div
+                                                className="row ai-center center"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    fontFamily: 'var(--display)',
+                                                    fontSize: 14,
+                                                    fontWeight: 600,
+                                                    color: 'var(--ink-2)',
+                                                }}
+                                            >
+                                                {doc.name
+                                                    .split(' ')
+                                                    .filter(Boolean)
+                                                    .slice(-1)[0]
+                                                    ?.slice(0, 2)
+                                                    .toUpperCase()}
+                                            </div>
                                         )}
                                     </div>
-                                    <div className="flex-1 min-w-0">
-                                        <p className="font-bold text-sm text-surface-900 truncate">{doc.name}</p>
-                                        {doc.qualifications.length > 0 && (
-                                            <p className="text-xs text-surface-400 truncate">{doc.qualifications.slice(0, 2).join(' / ')}</p>
-                                        )}
-                                        <div className="flex items-center gap-3 mt-1 text-xs text-surface-500">
-                                            {doc.rating && <span className="text-amber-600 flex items-center gap-0.5"><svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg> {doc.rating}</span>}
-                                            {doc.avgWaitMinutes && (
-                                                <span className="flex items-center gap-1"><Clock size={10} /> {doc.avgWaitMinutes}m wait</span>
+                                    <div className="col" style={{ flex: 1, minWidth: 0 }}>
+                                        <div
+                                            className="row between"
+                                            style={{ gap: 8 }}
+                                        >
+                                            <span
+                                                style={{
+                                                    fontWeight: 500,
+                                                    fontSize: 14,
+                                                    overflow: 'hidden',
+                                                    textOverflow: 'ellipsis',
+                                                    whiteSpace: 'nowrap',
+                                                }}
+                                            >
+                                                {doc.name}
+                                            </span>
+                                            {doc.rating != null && (
+                                                <span className="num" style={{ fontSize: 13 }}>★ {doc.rating}</span>
                                             )}
                                         </div>
+                                        {doc.qualifications.length > 0 && (
+                                            <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
+                                                {doc.qualifications.slice(0, 2).join(' / ')}
+                                            </div>
+                                        )}
+                                        {doc.avgWaitMinutes != null && (
+                                            <div className="muted" style={{ fontSize: 11, marginTop: 1 }}>
+                                                ↻ {doc.avgWaitMinutes} min wait
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
-                                <div className="mt-2 flex items-center justify-between">
-                                    <span className="text-xs text-surface-400">{doc.matchReason}</span>
-                                    {doc.consultationFee && (
-                                        <span className="text-xs font-bold text-surface-700">{doc.feeCurrency} {doc.consultationFee}</span>
+                                <div className="hairline" style={{ margin: '12px -16px' }} />
+                                <div
+                                    className="row between ai-center"
+                                    style={{ gap: 8 }}
+                                >
+                                    <span
+                                        className="mono"
+                                        style={{
+                                            fontSize: 11,
+                                            color: isTop ? 'var(--cobalt)' : 'var(--ink-3)',
+                                        }}
+                                    >
+                                        ↳ {doc.matchReason}
+                                    </span>
+                                    {doc.consultationFee != null && (
+                                        <span className="num" style={{ fontSize: 13 }}>
+                                            {doc.feeCurrency} {doc.consultationFee}
+                                        </span>
                                     )}
                                 </div>
                             </a>
-                        ))}
+                        );
+                    })}
 
-                        {doctors.totalMatches === 0 && (
-                            <div className="text-center text-sm text-surface-400 py-8 bg-surface-50 rounded-2xl border border-dashed border-surface-200">
-                                No specialists found in your area yet.
-                            </div>
-                        )}
-                    </div>
+                    {doctors.totalMatches === 0 && (
+                        <div
+                            className="card-quiet"
+                            style={{
+                                padding: 24,
+                                textAlign: 'center',
+                                fontSize: 13,
+                                color: 'var(--ink-3)',
+                            }}
+                        >
+                            No specialists found in your area yet.
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
