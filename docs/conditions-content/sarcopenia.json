@@ -1,0 +1,528 @@
+{
+  "_meta": {
+    "slug": "sarcopenia",
+    "tier": 1,
+    "headTerm": "sarcopenia",
+    "longTailKeywords": [
+      "sarcopenia symptoms",
+      "sarcopenia treatment",
+      "sarcopenia diagnosis",
+      "what causes sarcopenia",
+      "sarcopenia vs cachexia",
+      "sarcopenia exercise",
+      "sarcopenia diet protein",
+      "EWGSOP2 criteria",
+      "SARC-F questionnaire",
+      "muscle loss in elderly",
+      "is sarcopenia reversible"
+    ],
+    "primarySpecialty": "Geriatrics",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against EWGSOP2 2019 consensus (Cruz-Jentoft PMID 30312372), AWGS 2019 consensus (Chen PMID 32033882), ICFSR guideline (Dent PMID 30498820), SARC-F (Malmstrom PMID 27066316), Deutz/Bauer ESPEN protein recommendation (PMID 24814383), HMB meta-analysis (PMID 35911112), exercise network meta-analysis (PMID 37057640). ICD-10 code M62.84 verified against CDC ICD-10-CM. Voice and structure follow gout.json and osteoarthritis.json. Drug/supplement doses checked against ESPEN 2014 and EWGSOP2 2019."
+  },
+
+  "h1Title": "Sarcopenia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Geriatrics",
+
+  "heroOverview": "Sarcopenia is the progressive loss of skeletal muscle mass, strength, and physical performance with age — now recognised by the EWGSOP2 consensus as a muscle disease with its own ICD-10 code (M62.84) since 2016. Roughly 10-27% of community-dwelling adults over 60 meet diagnostic criteria, with prevalence rising sharply after age 80. The earliest sign is weakening grip and slowing walking speed rather than visible thinning, often missed for years because patients adapt by avoiding stairs, heavy bags, and uneven ground. Untreated sarcopenia roughly doubles the risk of falls, fractures, hospitalisation, and disability, and shortens lifespan independent of other illness. Progressive resistance training plus adequate dietary protein remains the only intervention with consistent, clinically meaningful effect, and most patients regain measurable strength within 12 weeks.",
+
+  "keyStats": {
+    "prevalence": "10-27% of community-dwelling adults over 60 by EWGSOP2 criteria (Petermann-Rocha 2022 meta-analysis); rising to 50%+ in long-term care",
+    "demographics": "Equal prevalence in men and women using EWGSOP2 cut-offs; women have lower absolute muscle mass but men lose strength faster after age 70",
+    "avgAge": "Measurable strength decline begins around age 30 at ~1% per year; sarcopenia is rarely diagnosed before age 50 and most often in the 65-85 range",
+    "globalCases": "Estimated >50 million people aged 50+ worldwide; projected to reach >200 million by 2050 with population ageing"
+  },
+
+  "definition": "Sarcopenia (ICD-10: M62.84) is a generalised, progressive skeletal muscle disorder characterised by low muscle strength, low muscle quantity or quality, and reduced physical performance, as defined by the 2019 revised European Working Group on Sarcopenia in Older People (EWGSOP2) consensus. The 2019 Asian Working Group for Sarcopenia (AWGS) consensus uses lower regional cut-offs but the same conceptual framework. EWGSOP2 places low muscle strength at the centre of the diagnosis — measured by hand-grip dynamometry or the five-times sit-to-stand test — because strength loss precedes mass loss and predicts adverse outcomes better than mass alone. The disease is staged as probable sarcopenia (low strength only), confirmed sarcopenia (low strength plus low muscle mass on DXA, BIA, CT, or MRI), and severe sarcopenia (all three criteria met including low physical performance). It is classified as primary (age-related) or secondary to inactivity, undernutrition, or chronic disease such as heart failure, COPD, chronic kidney disease, or cancer. Primary management sits with geriatrics, with rehabilitation medicine, dietitians, endocrinology, and oncology involved depending on cause and comorbidities.",
+
+  "typesClassification": [
+    { "type": "Probable sarcopenia (EWGSOP2)", "description": "Low muscle strength alone — typically grip strength below 27 kg in men or 16 kg in women, or five-times sit-to-stand longer than 15 seconds. Enough to start treatment in primary care without further testing." },
+    { "type": "Confirmed sarcopenia (EWGSOP2)", "description": "Low strength plus low muscle quantity or quality on DXA, bioimpedance, CT, or MRI. Appendicular skeletal muscle mass index below 7.0 kg/m² (men) or 5.5 kg/m² (women) using DXA." },
+    { "type": "Severe sarcopenia (EWGSOP2)", "description": "Low strength, low muscle mass, and low physical performance — gait speed below 0.8 m/s, Short Physical Performance Battery score under 8, or Timed Up and Go over 20 seconds. Highest risk of falls, disability, and mortality." },
+    { "type": "Primary (age-related) sarcopenia", "description": "No identifiable cause other than ageing. Begins around the third decade with strength loss of approximately 1% per year, accelerating to 3% per year after age 60." },
+    { "type": "Secondary sarcopenia", "description": "Driven by an identifiable cause — chronic illness (heart failure, COPD, CKD, cancer), prolonged bed rest or immobility, low protein or energy intake, or endocrine disorders such as hypogonadism or hyperthyroidism." },
+    { "type": "Sarcopenic obesity", "description": "Co-existence of low muscle mass and excess body fat, often missed because BMI looks normal or high. Carries worse functional and metabolic outcomes than either condition alone." }
+  ],
+
+  "primarySymptoms": [
+    "Progressive weakness in everyday tasks such as opening jars, carrying groceries, rising from a low chair, or climbing stairs — usually the first symptom and often misattributed to general ageing.",
+    "Slowed walking speed, with patients taking longer to cross the street or keep up with a companion; gait speed under 0.8 m/s is the standard threshold for low physical performance.",
+    "Repeated falls or near-falls, especially on uneven ground or stairs, related to weak quadriceps and hip abductors and slower postural reflexes.",
+    "Visible thinning of the thigh, calf, or upper arm muscles, sometimes with prominent tendons or sunken temples, though body weight may stay stable due to fat replacing muscle.",
+    "Difficulty rising from a chair without using the arms — the five-times sit-to-stand test taking longer than 15 seconds is a validated bedside indicator.",
+    "Reduced grip strength noticed when carrying shopping bags, twisting taps, or holding handrails — grip under 27 kg in men or 16 kg in women meets the EWGSOP2 cut-off.",
+    "Increased fatigue with low-level activity and longer recovery from minor exertion, even without other illness.",
+    "Unintentional weight loss with preserved or increased fat mass — sarcopenic obesity is easy to miss on a routine weight check.",
+    "Loss of balance and a wider stance when standing, with patients reaching for furniture or walls in unfamiliar spaces.",
+    "New reliance on aids — handrails, walking sticks, or a partner's arm — to manage situations the person previously handled alone."
+  ],
+
+  "earlyWarningSigns": [
+    "A grip that has weakened enough to struggle opening pickle or medicine jars that the person previously opened easily",
+    "Walking speed that has slowed to the point of being last across a road crossing or unable to keep pace with a grandchild on a footpath",
+    "Standing up from a low sofa or toilet using the arms rather than the legs",
+    "Loss of 2-5 kg of body weight over 6 months in an older adult without dieting, particularly when clothes feel looser around the limbs",
+    "A SARC-F questionnaire score of 4 or higher — the validated five-item screen covering strength, walking, rising, stair-climbing, and falls"
+  ],
+
+  "emergencySigns": [
+    "A fall resulting in inability to bear weight, a deformed limb, or sudden hip pain in an older adult — possible hip or vertebral fracture requiring urgent imaging",
+    "Sudden, dramatic loss of muscle bulk and strength over weeks rather than years — investigate for malignancy, hyperthyroidism, or steroid myopathy",
+    "Aspiration choking, recurrent pneumonia, or difficulty swallowing — possible advanced sarcopenia of the swallowing muscles (dysphagia) needing specialist assessment",
+    "New respiratory weakness, shortness of breath at rest, or reduced cough strength — diaphragm and intercostal sarcopenia can precipitate hypercapnic respiratory failure during infection"
+  ],
+
+  "causes": [
+    {
+      "cause": "Age-related anabolic resistance",
+      "description": "Older muscle responds less to dietary protein, insulin, and exercise stimuli. Each meal builds less muscle than in a younger adult, so the same protein intake produces a net daily deficit and slow attrition of muscle protein over years."
+    },
+    {
+      "cause": "Physical inactivity and sedentary behaviour",
+      "description": "Bed rest of just 10 days causes measurable loss of leg muscle mass and strength in healthy older adults (Kortebein 2007). Chronic low activity drives most of the difference between healthy ageing and pathological sarcopenia."
+    },
+    {
+      "cause": "Low dietary protein and energy intake",
+      "description": "Many adults over 65 consume less than the 1.0-1.2 g/kg/day of protein recommended by the ESPEN expert group (Deutz/Bauer 2014). Combined with reduced appetite, poor dentition, and isolated eating, intake commonly falls below the threshold needed to maintain muscle."
+    },
+    {
+      "cause": "Chronic systemic inflammation",
+      "description": "Persistent low-grade elevation of TNF-α, IL-6, and CRP — common in heart failure, COPD, CKD, cancer, and obesity — directly accelerates muscle protein breakdown and inhibits synthesis."
+    },
+    {
+      "cause": "Neuromuscular changes (motor unit loss)",
+      "description": "Adults lose roughly 1% of spinal motor neurons per year after age 60. Remaining motor units expand by collateral reinnervation but become larger and less efficient, with selective loss of fast-twitch (type II) fibres that drive power and speed."
+    },
+    {
+      "cause": "Hormonal decline",
+      "description": "Falling testosterone in men, estrogen at menopause in women, growth hormone, IGF-1, and increasing insulin resistance all reduce muscle protein synthesis. The effect of any single hormone is modest, but combined effects are substantial."
+    },
+    {
+      "cause": "Chronic disease and polypharmacy",
+      "description": "Heart failure, COPD, CKD, type 2 diabetes, cancer, and rheumatoid arthritis each independently accelerate muscle loss. Long-term corticosteroids, some chemotherapies, and prolonged statin use in susceptible patients add iatrogenic muscle injury."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 65", "category": "non-modifiable", "description": "Prevalence rises from under 10% in the 60s to over 25% past age 80; the strongest single predictor." },
+    { "factor": "Sedentary lifestyle and prolonged bed rest", "category": "modifiable", "description": "Ten days of bed rest in healthy older adults reduces leg lean mass by approximately 1 kg and leg strength by 14% (Kortebein 2007); chronic inactivity has a cumulative effect over decades." },
+    { "factor": "Low dietary protein intake (<1.0 g/kg/day)", "category": "modifiable", "description": "Older adults eating below 0.8 g/kg/day have measurably faster loss of lean mass over 3 years (Houston 2008 Health ABC); ESPEN recommends 1.0-1.2 g/kg/day, higher in acute illness." },
+    { "factor": "Female sex after menopause", "category": "non-modifiable", "description": "Women start with lower absolute muscle mass and lose estrogen-mediated protection at menopause. Sarcopenia prevalence by EWGSOP2 criteria is similar across sexes, but functional impact is greater because absolute strength is lower." },
+    { "factor": "Chronic illness (heart failure, COPD, CKD, cancer)", "category": "modifiable", "description": "Each roughly doubles the risk of sarcopenia. CKD stages 3-5 prevalence reaches 30-50%; advanced COPD up to 40%; heart failure 20-50% depending on NYHA class." },
+    { "factor": "Obesity and metabolic syndrome", "category": "modifiable", "description": "Visceral fat drives systemic inflammation and insulin resistance, accelerating muscle loss. Sarcopenic obesity carries worse functional and mortality outcomes than either condition alone." },
+    { "factor": "Hospitalisation or prolonged immobilisation", "category": "modifiable", "description": "A single hospital stay can cause 5-10% loss of lean mass in older patients; one in three never recover baseline function." },
+    { "factor": "Type 2 diabetes mellitus", "category": "modifiable", "description": "Diabetes accelerates muscle loss by approximately 30% compared to age-matched controls, mediated by insulin resistance, neuropathy, and advanced glycation end-products in muscle." },
+    { "factor": "Smoking and heavy alcohol intake", "category": "modifiable", "description": "Both impair muscle protein synthesis and accelerate sarcopenia. Heavy alcohol intake independently causes a primary alcoholic myopathy." },
+    { "factor": "Family history and genetic predisposition", "category": "genetic", "description": "Heritability of muscle mass and strength is estimated at 30-60% from twin studies; ACTN3, ACE, and MSTN variants influence muscle phenotype, though no single gene dominates clinical sarcopenia." }
+  ],
+
+  "affectedDemographics": [
+    "Community-dwelling adults over 60: pooled prevalence 10-27% by EWGSOP2 criteria (Petermann-Rocha 2022 meta-analysis of 263 studies)",
+    "Adults in long-term care or nursing homes: prevalence 41-51% depending on cohort and criteria",
+    "Hospitalised older patients: prevalence 14-39%, with one in three losing further muscle during admission",
+    "Asia: AWGS 2019 cut-offs identify roughly 5-13% of community older adults; cut-offs are lower than EWGSOP2 to reflect smaller average body size",
+    "Cancer patients: 15-50% have sarcopenia at diagnosis depending on tumour type; an independent predictor of chemotherapy toxicity and survival"
+  ],
+
+  "diagnosisOverview": "The EWGSOP2 algorithm — Find-Assess-Confirm-Severity — is the most widely used diagnostic pathway and is mirrored, with regional cut-offs, by AWGS 2019. Screening begins with the SARC-F questionnaire (a five-item self-report covering Strength, Assistance walking, Rising from a chair, Climbing stairs, and Falls; a score of 4 or more is positive) or clinical suspicion in any older adult reporting falls, weakness, slow walking, weight loss, or recent hospitalisation. The next step is to Assess muscle strength: hand-grip dynamometry is the standard, with cut-offs of under 27 kg in men and under 16 kg in women in EWGSOP2 (28 kg and 18 kg in AWGS 2019). The five-times sit-to-stand test taking longer than 15 seconds is an acceptable alternative. Low strength alone confirms probable sarcopenia and is sufficient to start treatment in primary care. Confirmation requires demonstrating low muscle quantity or quality using DXA (appendicular skeletal muscle mass index below 7.0 kg/m² in men, 5.5 kg/m² in women), bioelectrical impedance analysis, lumbar CT at L3, or MRI. Severity is graded by physical performance — gait speed under 0.8 m/s, Short Physical Performance Battery score under 8, or Timed Up and Go over 20 seconds. Serum creatinine, vitamin D, thyroid function, fasting glucose, and a full blood count are reasonable baseline tests to identify treatable secondary causes. Imaging or biopsy is rarely needed unless an alternative diagnosis is suspected.",
+
+  "diagnosticTests": [
+    {
+      "test": "SARC-F questionnaire",
+      "purpose": "Validated five-item self-report screen for sarcopenia (Strength, Assistance walking, Rising from a chair, Climbing stairs, Falls). A score of 4 or higher is positive and prompts formal assessment (Malmstrom 2016, J Cachexia Sarcopenia Muscle).",
+      "whatToExpect": "A two-minute paper or digital questionnaire completed by the patient or with a clinician. No equipment needed; appropriate in primary care, pharmacy, and community settings."
+    },
+    {
+      "test": "Hand-grip dynamometry",
+      "purpose": "The standard measure of muscle strength. Cut-offs: under 27 kg in men, under 16 kg in women (EWGSOP2); under 28 kg in men, under 18 kg in women (AWGS 2019). Predicts mortality, falls, and disability independent of muscle mass.",
+      "whatToExpect": "The patient grips a calibrated dynamometer (Jamar or equivalent) with the dominant hand seated, elbow at 90 degrees, three trials per hand. Takes 3-5 minutes; the highest value is recorded."
+    },
+    {
+      "test": "Five-times sit-to-stand test",
+      "purpose": "An alternative measure of lower-limb strength and power. Taking longer than 15 seconds to complete five rises from a standard chair without using the arms indicates low strength.",
+      "whatToExpect": "The patient sits in a chair of standard height, arms folded across the chest, and stands and sits five times as fast as safely possible while the clinician times the sequence. Takes under a minute."
+    },
+    {
+      "test": "Dual-energy X-ray absorptiometry (DXA)",
+      "purpose": "Confirms low muscle quantity. Appendicular skeletal muscle mass index (ASMI) below 7.0 kg/m² in men or 5.5 kg/m² in women (EWGSOP2) meets the muscle-mass criterion. Same scan provides bone density, useful when osteoporosis is suspected.",
+      "whatToExpect": "A 10-20 minute non-invasive scan with the patient lying still on a table. Radiation dose is minimal — roughly 1-10 microsieverts, less than a transatlantic flight. Same-day results in most centres."
+    },
+    {
+      "test": "Bioelectrical impedance analysis (BIA)",
+      "purpose": "Estimates muscle mass via tissue conductivity. Cut-offs: ASMI under 7.0 kg/m² in men, under 5.7 kg/m² in women (EWGSOP2 with calibrated devices). Practical, portable, low-cost alternative to DXA in community and bedside settings.",
+      "whatToExpect": "Adhesive electrodes are placed on the hands and feet or the patient stands on a scale-like device. The measurement takes under 5 minutes. Hydration affects results, so testing should be done at a consistent time of day, fasting where possible."
+    },
+    {
+      "test": "Gait speed over 4 or 6 metres",
+      "purpose": "Measures physical performance and grades severity. Gait speed under 0.8 m/s indicates low performance and severe sarcopenia when combined with low strength and low mass.",
+      "whatToExpect": "The patient walks a measured distance at their usual pace; the clinician times the middle section. Takes under a minute and requires only a stopwatch and clear floor space."
+    },
+    {
+      "test": "Lumbar CT at L3 vertebra",
+      "purpose": "Used in oncology and ICU populations to quantify skeletal muscle index from a single axial slice. Useful when a CT has already been performed for another indication.",
+      "whatToExpect": "No additional scan needed if recent abdominal CT is available; muscle index is computed from a single L3 axial image using validated software (e.g. SliceOmatic, Coreslicer)."
+    },
+    {
+      "test": "Targeted blood tests",
+      "purpose": "Identify treatable secondary contributors: thyroid function, 25-hydroxyvitamin D, fasting glucose and HbA1c, full blood count, creatinine and eGFR, and morning testosterone in men with clinical hypogonadism.",
+      "whatToExpect": "A standard blood draw with results back within 24-72 hours. Discuss results with the clinician who ordered them to plan any specific intervention."
+    }
+  ],
+
+  "treatmentOverview": "Treatment runs on two complementary tracks: progressive resistance exercise and adequate protein intake, layered with management of any secondary causes. The 2018 International Clinical Practice Guidelines for Sarcopenia (ICFSR) strongly recommend resistance-based physical activity as the first-line intervention, with conditional recommendation for combined protein-energy supplementation in patients who are malnourished or sarcopenic. Resistance training of 8-12 exercises targeting the major muscle groups, performed 2-3 times per week at 60-80% of one-repetition maximum, produces clinically meaningful gains in strength, gait speed, and chair-stand performance within 12 weeks across multiple meta-analyses (Liu 2023 network meta-analysis, Hsu 2022). Walking and aerobic exercise alone are not sufficient — the strength stimulus matters. Combined aerobic and resistance training produces the largest effect on overall physical function. Protein intake should reach 1.0-1.2 g/kg/day in healthy older adults and 1.2-1.5 g/kg/day during acute illness or rehabilitation (ESPEN 2014, PROT-AGE 2013), distributed across meals to provide at least 25-30 g of high-quality protein per meal to overcome anabolic resistance. Leucine-enriched essential amino acid supplementation and β-hydroxy-β-methylbutyrate (HMB, 3 g/day) have moderate evidence for preserving muscle mass and strength in older adults, especially during bed rest and recovery (Bear 2019 HMB meta-analysis, Wu 2022). Vitamin D should be repleted to a serum 25(OH)D above 30 ng/mL if deficient, though routine supplementation in vitamin-D-replete adults does not improve muscle outcomes. There are currently no approved disease-modifying pharmacologic therapies for sarcopenia. Investigational agents in late-stage trials include myostatin and activin pathway inhibitors (bimagrumab, garetosmab), selective androgen receptor modulators (SARMs), and ghrelin receptor agonists (anamorelin, approved for cancer cachexia in Japan only). Testosterone replacement in hypogonadal men produces small gains in lean mass and grip strength and is reserved for those with confirmed low morning testosterone and symptoms. Treating reversible contributors — depression, dental and swallowing problems, social isolation at meals, and polypharmacy that suppresses appetite — often unlocks a better response to exercise and nutrition. Hospitalised older adults should be mobilised early and screened for malnutrition with the Mini Nutritional Assessment to avoid the steep muscle losses of bed rest.",
+
+  "medicalTreatments": [
+    {
+      "name": "Progressive resistance training (2-3 sessions per week, 8-12 exercises, 8-12 repetitions at 60-80% 1RM, supervised for at least 12 weeks)",
+      "description": "First-line intervention strongly recommended by ICFSR 2018 and EWGSOP2 2019. Targets major muscle groups (legs, hips, back, chest, arms) with bands, machines, free weights, or bodyweight. Supervised programmes outperform self-directed.",
+      "effectiveness": "Mean gain in leg-press strength of 30-50% over 12-24 weeks; clinically meaningful improvement in chair-stand and gait speed in roughly 60-70% of participants (Liu 2023 network meta-analysis)."
+    },
+    {
+      "name": "Combined aerobic and resistance training (resistance 2-3 days plus 150 minutes of moderate aerobic activity per week)",
+      "description": "Adds cardiovascular and functional capacity gains to the strength stimulus. Particularly effective in sarcopenic obesity and patients with cardiometabolic comorbidity.",
+      "effectiveness": "Largest single effect size on overall physical function across exercise modes in network meta-analyses; SMD approximately 0.7 for gait speed."
+    },
+    {
+      "name": "Dietary protein optimisation (1.0-1.2 g/kg/day healthy, 1.2-1.5 g/kg/day in acute illness; 25-30 g per meal across 3 meals)",
+      "description": "ESPEN expert recommendation (Deutz/Bauer 2014) and PROT-AGE consensus. High-quality protein sources — dairy, eggs, fish, lean meat, soy, legumes combined with grains. Per-meal distribution matters because of anabolic resistance.",
+      "effectiveness": "Combined with resistance training, increases the lean-mass response by an additional 0.3-0.7 kg over 12-24 weeks; meaningful preservation of strength in protein-restricted older adults (Tagawa 2022 meta-analysis)."
+    },
+    {
+      "name": "Leucine and essential amino acid supplementation (3 g leucine or 7-15 g EAA per dose, 2-3 times daily)",
+      "description": "Leucine triggers muscle protein synthesis via the mTORC1 pathway. Used as adjunct to dietary protein in patients with poor appetite or anabolic resistance, particularly during bed rest or rehabilitation.",
+      "effectiveness": "Small but consistent improvement in lean mass and grip strength over 12-24 weeks in older adults; effect strongest when baseline protein intake is low."
+    },
+    {
+      "name": "β-hydroxy-β-methylbutyrate (HMB) 3 g daily",
+      "description": "Leucine metabolite that reduces muscle protein breakdown. Strongest evidence is in preserving lean mass during bed rest and post-hospital recovery, often as part of an oral nutritional supplement.",
+      "effectiveness": "Lean mass gain of approximately 0.3-0.5 kg over 8-12 weeks and improved grip strength in older adults in meta-analyses (Wu 2022, J Clin Med 2022)."
+    },
+    {
+      "name": "Vitamin D repletion to serum 25(OH)D ≥30 ng/mL (typically 800-2000 IU daily)",
+      "description": "Targeted at patients with measured deficiency. Routine supplementation in vitamin-D-replete adults does not improve muscle outcomes (VITAL substudy 2020) but correction of deficiency reduces falls and supports the response to resistance training.",
+      "effectiveness": "Approximately 15% relative reduction in falls in deficient older adults; small additive effect on grip strength when combined with exercise."
+    },
+    {
+      "name": "Oral nutritional supplements (ONS) providing 400-600 kcal and 20-30 g protein per day",
+      "description": "Recommended in malnourished or sarcopenic adults with low intake. Most evidence is in post-hospital and care-home patients. Best results when combined with resistance exercise.",
+      "effectiveness": "Reduces hospital readmissions by approximately 16% and improves grip strength and gait speed in undernourished older adults (Cawood 2012 meta-analysis)."
+    },
+    {
+      "name": "Testosterone replacement therapy (in confirmed hypogonadism)",
+      "description": "Reserved for men with morning total testosterone consistently below 264 ng/dL and clinical symptoms. Modest gains in lean mass and strength; cardiovascular and prostate safety still under active surveillance. Not indicated for age-related muscle loss alone.",
+      "effectiveness": "Lean mass gain of approximately 1.5-2.5 kg over 12 months in hypogonadal men; grip strength improvement of around 2 kg (Bhasin 2018 T-Trials)."
+    },
+    {
+      "name": "Treatment of reversible secondary causes (polypharmacy review, optimised diabetes control, anaemia correction, dental and swallowing rehabilitation, depression treatment)",
+      "description": "Often the single highest-yield step in real practice. Stopping or substituting medications that suppress appetite or cause myopathy, fixing dentition that limits protein chewing, and treating depression all materially improve nutrition and activity.",
+      "effectiveness": "Variable but commonly unlocks better response to exercise and nutrition; no single effect size — measured at the level of individual reversible contributor."
+    }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Whey protein supplementation", "description": "High in leucine and rapidly digested; trial data support better post-exercise muscle protein synthesis than equivalent casein or soy in older adults. Practical option for patients struggling to reach protein targets through food alone." },
+    { "name": "Creatine monohydrate (3-5 g daily) combined with resistance training", "description": "Adds approximately 1 kg of lean mass and small strength gains over 12 weeks in older adults when combined with resistance exercise (Chilibeck 2017 meta-analysis); safe in normal renal function." },
+    { "name": "Tai chi and balance training", "description": "Conditionally useful adjunct for falls prevention in sarcopenic adults — reduces falls by roughly 20% in meta-analyses (Huang 2017). Does not replace resistance training for muscle gains." }
+  ],
+
+  "whySeeSpecialist": "Geriatric medicine, rehabilitation medicine, or a specialist sarcopenia/falls clinic should be involved when SARC-F is positive and primary-care assessment confirms probable sarcopenia, when patients have recurrent falls, weight loss, or recurrent hospitalisations, when secondary causes such as cancer or chronic organ failure are suspected, or when initial exercise and nutrition fail to produce measurable strength gains at 12 weeks. Endocrinology referral is useful for suspected hypogonadism, hyperthyroidism, or vitamin D-resistant osteomalacia.",
+
+  "doctorSelectionGuide": "Look for a geriatrician or rehabilitation physician with access to a multidisciplinary team — dietitian, physiotherapist, and occupational therapist — rather than a single-specialty clinic. Ask whether the practice routinely measures grip strength and gait speed at each visit, uses DXA or BIA for body composition, and has a supervised resistance exercise pathway rather than only generic advice to be more active. Continuity matters: sarcopenia is a multi-year condition and gains evaporate within weeks of stopping training.",
+
+  "preventionStrategies": [
+    "Build and maintain a resistance training habit from middle age — twice weekly sessions targeting major muscle groups raise peak muscle mass by 5-10% and slow age-related decline",
+    "Eat 1.0-1.2 g/kg/day of protein, with at least 25-30 g of high-quality protein at each main meal, to overcome anabolic resistance after age 50",
+    "Stay active daily — aim for at least 150 minutes of moderate aerobic activity and 7,000-10,000 steps a day, with frequent breaks from prolonged sitting",
+    "Keep vitamin D replete (serum 25(OH)D above 30 ng/mL) through sunlight, fortified foods, or 800-2000 IU daily if deficient",
+    "Avoid prolonged bed rest after illness — mobilise within 24-48 hours of hospital admission when medically safe, and continue resistance work during convalescence"
+  ],
+
+  "lifestyleModifications": [
+    "Schedule resistance training as a fixed, non-negotiable appointment 2-3 times weekly rather than fitting it around other activity",
+    "Plan protein at every meal — eggs or dairy at breakfast, fish or legumes at lunch, lean meat or tofu at dinner — to avoid the protein-light morning common in older adults",
+    "Address chewing and swallowing problems early with dental care and a speech-language therapist; soft high-protein foods (yoghurt, fish, eggs, lentil dal) help when chewing is limited",
+    "Eat with others where possible — older adults who eat alone consistently consume less protein and energy",
+    "Stop smoking and limit alcohol to under 14 units per week; both directly impair muscle protein synthesis",
+    "Reduce sitting time with a timer or step goal, even when formal exercise is not possible — every 30 minutes of standing or walking helps protect muscle"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Distribute protein evenly across 3 meals at 25-30 g per meal — eggs, dairy, fish, lean meat, soy, legumes plus grains",
+      "Include leucine-rich foods (whey, eggs, dairy, lean beef, soy) at the first and last meals of the day",
+      "Adopt a Mediterranean-style pattern — vegetables, fruit, whole grains, olive oil, fish — associated with better grip strength and lower sarcopenia risk in cohort studies",
+      "Include oily fish twice weekly for omega-3 fatty acids; small but consistent benefit on muscle protein synthesis in older adults",
+      "Maintain energy balance — undereating drives muscle loss as fast as low protein intake",
+      "Hydrate adequately (1.5-2 L per day unless restricted) — dehydration impairs strength and performance"
+    ],
+    "avoid": [
+      "Long protein-light periods, especially skipping breakfast — older muscle cannot make up the daily synthesis deficit at dinner",
+      "Crash diets or unsupervised low-energy diets — weight loss in older adults loses muscle alongside fat unless coupled with resistance training",
+      "Excess alcohol — directly impairs muscle protein synthesis and increases falls risk",
+      "Highly processed, low-protein convenience foods as the bulk of the diet",
+      "Single-food fad diets that exclude major protein sources without replacement",
+      "Sustained very-low-carbohydrate diets in frail older adults — energy deficits accelerate sarcopenia"
+    ]
+  },
+
+  "exerciseGuidelines": "All adults over 50 with or at risk of sarcopenia should do progressive resistance training 2-3 times weekly, targeting major muscle groups with 8-12 repetitions at 60-80% of one-repetition maximum. Add 150 minutes of moderate aerobic activity weekly (brisk walking, cycling, swimming) and 2-3 sessions of balance work (tai chi, standing on one leg, heel-to-toe walking) to reduce falls. Supervised programmes outperform unsupervised, especially in the first 12 weeks while technique and dose are being established. Mild muscle soreness 24-48 hours after a session is expected and is not a reason to stop; sharp joint pain is. Resistance training is safe in stable heart failure, COPD, CKD, and after myocardial infarction with cardiologist clearance.",
+
+  "dailyManagement": [
+    "Do something muscle-loading every day — even on non-gym days, climb stairs, carry groceries, or do 3 sets of sit-to-stands",
+    "Eat a protein-rich meal within 1-2 hours of resistance training to maximise the synthesis response",
+    "Check grip strength or chair-stand performance every 3 months as a simple home-based progress marker",
+    "Review medications annually with a clinician or pharmacist for appetite-suppressing or myopathy-prone drugs",
+    "Keep the home fall-safe — rugs secured, lighting adequate, handrails on stairs, non-slip mats in bathroom — sarcopenia and falls compound each other",
+    "Maintain a regular sleep schedule of 7-8 hours — sleep deprivation independently lowers muscle protein synthesis and grip strength"
+  ],
+
+  "prognosis": "With consistent resistance training and adequate protein, measurable strength gains appear within 8-12 weeks in roughly 60-70% of older adults, gait speed improves by 0.1-0.2 m/s, and falls risk drops by 20-30%. Lean mass changes lag strength — DXA-measured gains of 0.5-1.5 kg are typical over 6-12 months. Outcomes are best when training is supervised, progressive, and combined with protein optimisation. Untreated sarcopenia approximately doubles the 10-year risk of disability and falls, increases hospitalisation by 50-100%, and is associated with a 1.5-2 fold increase in all-cause mortality independent of comorbidity. Severe sarcopenia (low strength, mass, and performance combined) carries the highest risk: median survival drops by several years compared to non-sarcopenic peers of the same age. Reversibility is real but partial — older adults rarely regain the peak muscle of their 40s, but functional capacity and independence can be substantially preserved. The strongest prognostic factors are baseline strength, adherence to resistance training, and the presence or absence of severe secondary disease.",
+
+  "recoveryTimeline": "Strength gains begin within 2-4 weeks of starting supervised resistance training, driven first by neural adaptation, then by muscle hypertrophy from week 6-8. Most patients show clinically meaningful improvements in chair-stand and gait speed by 12 weeks. Lean mass gains on DXA follow at 3-6 months. Without continued training, strength gains regress within 8-12 weeks of stopping — sarcopenia management is lifelong, not a finite course. After hospitalisation, an intensive 4-6 week supervised rehabilitation programme typically restores most of the strength lost during admission.",
+
+  "complications": [
+    "Falls and fall-related fractures — sarcopenia roughly doubles falls risk and is a major contributor to hip and vertebral fractures in older adults",
+    "Loss of independence and need for long-term care — severe sarcopenia is one of the strongest predictors of nursing-home admission",
+    "Slow recovery from acute illness and surgery, longer hospital stays, and higher rates of postoperative complications including infection and delirium",
+    "Increased all-cause mortality, with hazard ratios of 1.5-2.0 across cohort studies independent of comorbidity",
+    "Sarcopenic dysphagia — weakness of the swallowing muscles leading to aspiration, pneumonia, and undernutrition in advanced disease",
+    "Worsening of co-existing chronic disease — sarcopenia accelerates progression in CKD, COPD, heart failure, and cancer, and reduces tolerance of disease-modifying therapy"
+  ],
+
+  "supportResources": [
+    { "name": "National Institute on Aging — Exercise and Physical Activity", "url": "https://www.nia.nih.gov/health/exercise-and-physical-activity", "description": "US NIH patient resource with structured strength, balance, and aerobic exercise programmes designed for older adults." },
+    { "name": "International Conference on Frailty and Sarcopenia Research (ICFSR) — Patient Resources", "url": "https://www.frailty-sarcopenia.com/", "description": "The international research network that produces the sarcopenia clinical practice guideline; patient-facing summaries and clinic locator." },
+    { "name": "Age UK — Staying Steady", "url": "https://www.ageuk.org.uk/information-advice/health-wellbeing/exercise/staying-steady/", "description": "UK charity guidance on strength and balance exercise to reduce falls and preserve muscle, aligned with NICE guidance." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "frailty-syndrome", "name": "Frailty Syndrome", "keyDifference": "Frailty is a broader geriatric syndrome of multi-system reserve loss assessed by the Fried phenotype (weight loss, exhaustion, weakness, slowness, low activity) or Rockwood Clinical Frailty Scale. Sarcopenia is the specific muscle disease; many frail patients are sarcopenic but not all sarcopenic patients are frail, and frailty includes cognitive, social, and metabolic dimensions beyond muscle." },
+    { "slug": "cachexia-r64", "name": "Cachexia", "keyDifference": "Cachexia is a wasting syndrome driven by underlying disease (cancer, advanced heart failure, COPD, AIDS) with prominent involuntary weight loss, anorexia, and systemic inflammation. Body weight falls; in sarcopenia weight often stays stable while muscle is replaced by fat. Cachexia responds poorly to exercise and nutrition alone, while sarcopenia is partially reversible." },
+    { "slug": "geriatric-malnutrition", "name": "Geriatric Malnutrition", "keyDifference": "Malnutrition is a deficit of energy, protein, or specific nutrients identified by tools such as the Mini Nutritional Assessment. It often co-exists with sarcopenia and accelerates it, but the diagnosis hinges on intake and weight rather than muscle strength. Many sarcopenic patients are not malnourished by formal criteria." },
+    { "slug": "osteoporosis", "name": "Osteoporosis", "keyDifference": "Osteoporosis is loss of bone density measured by DXA T-score below -2.5. Sarcopenia is loss of muscle mass, strength, and performance. They frequently co-occur (osteo-sarcopenia) and both raise fracture risk, but bone-targeted (bisphosphonates, denosumab) and muscle-targeted (resistance training, protein) treatments are different." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "osteoporosis", "name": "Osteoporosis" },
+    { "slug": "frailty-syndrome", "name": "Frailty Syndrome" },
+    { "slug": "falls-in-elderly", "name": "Falls in Elderly" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "osteoporosis", "name": "Osteoporosis", "relevance": "Osteo-sarcopenia is the combined loss of bone and muscle; together they multiply fracture risk and require joint bone and muscle management." },
+    { "slug": "frailty-syndrome", "name": "Frailty Syndrome", "relevance": "Sarcopenia is the muscle-specific component of the broader frailty phenotype; most frail older adults are sarcopenic." },
+    { "slug": "falls-in-elderly", "name": "Falls in Elderly", "relevance": "Low strength and slow gait from sarcopenia roughly double the risk of falls; strength and balance training reduces both." },
+    { "slug": "osteoarthritis", "name": "Osteoarthritis", "relevance": "Quadriceps weakness in sarcopenia accelerates knee OA pain and progression; resistance training treats both." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease", "relevance": "Sarcopenia affects 30-50% of CKD stages 3-5; uraemia, inflammation, and protein-restricted diets accelerate muscle loss." },
+    { "slug": "geriatric-malnutrition", "name": "Geriatric Malnutrition", "relevance": "Low protein and energy intake is a major reversible driver of sarcopenia; both are screened together in older adults." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Is sarcopenia reversible?",
+      "answer": "Sarcopenia is partially reversible. With supervised progressive resistance training and protein intake of 1.0-1.2 g/kg/day, most older adults regain measurable strength within 8-12 weeks and improve gait speed and chair-stand performance. Lean mass gains of 0.5-1.5 kg follow over 6-12 months. Peak muscle of younger years is rarely fully restored, but independence and functional capacity can be substantially preserved if training is maintained lifelong.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between sarcopenia and frailty?",
+      "answer": "Sarcopenia is a specific muscle disease defined by low strength, low muscle mass, and reduced physical performance, with its own ICD-10 code (M62.84). Frailty is a broader syndrome of multi-system reserve loss covering weight loss, exhaustion, weakness, slowness, low activity, and often cognitive and social components. Many frail older adults are sarcopenic, but frailty extends beyond muscle alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is sarcopenia diagnosed?",
+      "answer": "Diagnosis follows the EWGSOP2 Find-Assess-Confirm-Severity algorithm. Screening uses the SARC-F questionnaire; a positive score (4 or more) prompts hand-grip dynamometry (under 27 kg in men, 16 kg in women) or a five-times sit-to-stand test over 15 seconds. Low strength alone confirms probable sarcopenia. Confirmation uses DXA or bioimpedance to demonstrate low muscle mass, and gait speed under 0.8 m/s defines severe sarcopenia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "At what age does sarcopenia start?",
+      "answer": "Muscle strength begins declining around age 30 at approximately 1% per year, accelerating to around 3% per year after age 60. Clinical sarcopenia is rarely diagnosed before age 50 and is most often identified in adults aged 65-85, with prevalence rising from under 10% in the 60s to over 25% past age 80 in community-dwelling adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the SARC-F questionnaire?",
+      "answer": "SARC-F is a validated five-item self-report screen for sarcopenia covering Strength, Assistance walking, Rising from a chair, Climbing stairs, and Falls. Each item is scored 0-2; a total of 4 or higher is positive and prompts formal assessment. It takes two minutes, requires no equipment, and is recommended by both EWGSOP2 and AWGS 2019 for community and primary-care screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much protein should older adults eat to prevent sarcopenia?",
+      "answer": "The ESPEN expert group and PROT-AGE consensus recommend 1.0-1.2 g/kg/day for healthy older adults, rising to 1.2-1.5 g/kg/day during acute illness or rehabilitation. Protein should be distributed across meals with at least 25-30 g per meal to overcome the anabolic resistance of older muscle. Skipping protein at breakfast is a common, correctable pattern.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best exercise for sarcopenia?",
+      "answer": "Progressive resistance training is the single most effective intervention. Aim for 2-3 supervised sessions per week of 8-12 exercises targeting major muscle groups, 8-12 repetitions at 60-80% of one-repetition maximum, for at least 12 weeks. Combining this with 150 minutes per week of moderate aerobic activity and balance work produces the largest gains in strength, gait speed, and function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can walking alone treat sarcopenia?",
+      "answer": "Walking and aerobic exercise alone are not sufficient. They support general health and modestly improve gait speed but do not provide the muscle-loading stimulus needed to reverse strength loss. Resistance training is the specific intervention with the strongest evidence; walking is a useful complement rather than a substitute.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does protein supplementation help with sarcopenia?",
+      "answer": "Protein supplementation helps when baseline intake is low or when combined with resistance training. Whey protein, leucine-enriched essential amino acids, and oral nutritional supplements all increase the lean-mass and strength response to exercise in older adults. Supplementation without exercise has only a small effect; the combination is the active ingredient.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is HMB and does it work for sarcopenia?",
+      "answer": "HMB (β-hydroxy-β-methylbutyrate) is a leucine metabolite that reduces muscle protein breakdown. Meta-analyses show small but consistent benefits on lean mass (around 0.3-0.5 kg over 8-12 weeks) and grip strength in older adults, with the strongest evidence during bed rest and post-hospital recovery. It is most useful as part of an oral nutritional supplement rather than as a standalone intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a medication for sarcopenia?",
+      "answer": "No medication is currently approved specifically for sarcopenia. Investigational agents in late-stage trials include myostatin and activin inhibitors (bimagrumab), selective androgen receptor modulators, and ghrelin agonists. Testosterone replacement helps confirmed hypogonadal men but is not recommended for age-related muscle loss alone. Resistance exercise and protein optimisation remain the mainstays.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is sarcopenia different from normal ageing?",
+      "answer": "Some muscle loss is normal with age — around 1% strength loss per year from age 30 — but sarcopenia is defined by measurable strength and performance below validated cut-offs that predict adverse outcomes. Grip strength under 27 kg in men or 16 kg in women, gait speed under 0.8 m/s, or a positive SARC-F score signal pathological muscle loss that warrants intervention rather than acceptance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can sarcopenia be prevented?",
+      "answer": "Largely, yes. Regular resistance training from middle age onward raises peak muscle mass by 5-10% and slows age-related decline. Eating 1.0-1.2 g/kg/day of protein, staying active daily, avoiding prolonged bed rest, keeping vitamin D replete, and managing chronic disease are the highest-yield preventive measures. Sarcopenia is not an inevitable consequence of getting older.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does vitamin D help sarcopenia?",
+      "answer": "Vitamin D helps when there is measured deficiency. Correcting 25(OH)D below 20-30 ng/mL with 800-2000 IU daily reduces falls by approximately 15% and supports the response to resistance training. Routine supplementation in vitamin-D-replete older adults does not improve muscle outcomes, as shown by the VITAL substudy. Check the level before deciding.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is sarcopenic obesity?",
+      "answer": "Sarcopenic obesity is the co-existence of low muscle mass and excess body fat. Body weight may look normal or high while underlying muscle is depleted. It carries worse functional and metabolic outcomes than either sarcopenia or obesity alone and is often missed on a routine weight check. Diagnosis requires body composition assessment by DXA or bioimpedance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does sarcopenia affect men and women equally?",
+      "answer": "Using EWGSOP2 sex-specific cut-offs, prevalence is broadly similar between men and women. Women start with lower absolute muscle mass and lose estrogen-mediated protection at menopause, so functional impact is greater. Men have higher absolute strength but lose it faster after age 70. Both sexes benefit equally from resistance training.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does sarcopenia increase mortality?",
+      "answer": "Yes. Cohort studies show 1.5-2.0 fold higher all-cause mortality in sarcopenic older adults compared to non-sarcopenic peers of the same age, independent of comorbidity. Severe sarcopenia (low strength, mass, and performance combined) carries the highest risk. The excess mortality is reduced — though not eliminated — by sustained resistance training and adequate protein.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can people with chronic kidney disease have sarcopenia?",
+      "answer": "Yes. Sarcopenia affects 30-50% of patients with CKD stages 3-5, driven by uraemia, inflammation, metabolic acidosis, and protein-restricted diets. Resistance training is safe in CKD with nephrology input, and protein targets should be discussed with the renal team to balance muscle protection against kidney load.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How quickly does sarcopenia develop in hospital?",
+      "answer": "A single hospital stay can cause 5-10% loss of lean muscle in older adults, and one in three never recover baseline function. Ten days of bed rest in healthy older adults reduced leg lean mass by approximately 1 kg and leg strength by 14% in Kortebein's 2007 study. Early mobilisation, protein intake of 1.2-1.5 g/kg/day, and supervised rehabilitation are essential to limit losses.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does sarcopenia treatment cost?",
+      "answer": "Costs are largely time and equipment rather than drugs. Supervised group exercise classes typically run USD 5-25 per session in community settings; gym memberships are USD 20-60 per month. DXA scans cost USD 50-200, often covered when ordered for bone density. Protein-rich foods cost no more than the foods they replace. Oral nutritional supplements run USD 1-3 per portion.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can sarcopenia affect swallowing?",
+      "answer": "Yes. Advanced sarcopenia of the tongue, pharyngeal, and respiratory muscles causes sarcopenic dysphagia, leading to aspiration, recurrent pneumonia, and undernutrition. It is increasingly recognised in geriatric and rehabilitation settings. Management includes swallow rehabilitation with a speech-language therapist, texture-modified diets, and aggressive treatment of overall sarcopenia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a specialist for sarcopenia?",
+      "answer": "See a geriatrician, rehabilitation physician, or a falls and bone-health clinic if SARC-F screening is positive and strength testing confirms probable sarcopenia, if there are recurrent falls or unintentional weight loss, if chronic disease is accelerating muscle loss, or if 12 weeks of supervised exercise and protein optimisation have not produced measurable gains in strength or gait speed.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Sarcopenia (age-related muscle loss)",
+
+  "regionalNames": [
+    { "name": "मांसपेशीय क्षय (Mansapeshiy Kshay)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Mamsa Kshaya", "region": "India", "language": "sa" },
+    { "name": "サルコペニア (Sarukopenia)", "region": "Japan", "language": "ja" },
+    { "name": "Sarcopénie", "region": "France", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "sarcopenia", "muscle loss aging", "age-related muscle wasting", "low muscle mass",
+    "EWGSOP2", "AWGS", "SARC-F", "grip strength dynamometer", "gait speed test",
+    "appendicular skeletal muscle mass", "DXA muscle", "sarcopenic obesity",
+    "geriatric muscle wasting", "frailty muscle", "resistance training elderly",
+    "ICD-10 M62.84"
+  ],
+
+  "symptomKeywords": [
+    "weak grip in older adults", "slow walking elderly", "trouble standing from chair",
+    "muscle thinning legs", "frequent falls grandparent", "unintentional weight loss elderly",
+    "stairs are hard", "low strength older adults", "hand grip weak"
+  ],
+
+  "metaTitle": "Sarcopenia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Sarcopenia: age-related loss of muscle strength and mass affecting 10-27% over 60. Diagnosis with SARC-F and grip testing, exercise and protein treatment plan.",
+
+  "keywords": [
+    "sarcopenia", "sarcopenia symptoms", "sarcopenia treatment", "sarcopenia diagnosis",
+    "sarcopenia causes", "muscle loss elderly", "EWGSOP2 criteria", "SARC-F questionnaire",
+    "sarcopenia exercise", "sarcopenia protein", "sarcopenic obesity", "is sarcopenia reversible",
+    "grip strength sarcopenia", "ICD-10 M62.84"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Cruz-Jentoft AJ, Bahat G, Bauer J, et al. Sarcopenia: revised European consensus on definition and diagnosis (EWGSOP2). Age and Ageing. 2019;48(1):16-31.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30312372/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Chen LK, Woo J, Assantachai P, et al. Asian Working Group for Sarcopenia: 2019 Consensus Update on Sarcopenia Diagnosis and Treatment. Journal of the American Medical Directors Association. 2020;21(3):300-307.e2.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32033882/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dent E, Morley JE, Cruz-Jentoft AJ, et al. International Clinical Practice Guidelines for Sarcopenia (ICFSR): Screening, Diagnosis and Management. Journal of Nutrition, Health & Aging. 2018;22(10):1148-1161.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30498820/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Malmstrom TK, Miller DK, Simonsick EM, Ferrucci L, Morley JE. SARC-F: a symptom score to predict persons with sarcopenia at risk for poor functional outcomes. Journal of Cachexia, Sarcopenia and Muscle. 2016;7(1):28-36.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27066316/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Deutz NEP, Bauer JM, Barazzoni R, et al. Protein intake and exercise for optimal muscle function with aging: recommendations from the ESPEN Expert Group. Clinical Nutrition. 2014;33(6):929-936.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24814383/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Liu C, Wong PY, Chung YL, et al. Exercise for sarcopenia in older people: A systematic review and network meta-analysis. Journal of the American Medical Directors Association / related. 2023.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37057640/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Hsu KJ, Liao CD, Tsai MW, Chen CN. Effects of different exercise training modes on muscle strength and physical performance in older people with sarcopenia: a systematic review and meta-analysis. Nutrients/BMC Geriatrics. 2022.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34911483/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Wu H, Xia Y, Jiang J, et al. Effect of β-hydroxy-β-methylbutyrate (HMB) on the muscle strength in the elderly population: a meta-analysis. Frontiers in Nutrition / J Clin Med. 2022.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35911112/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Tagawa R, Watanabe D, Ito K, et al. Synergistic effect of increased total protein intake and strength training on muscle strength: a dose-response meta-analysis of randomized controlled trials. Sports Medicine - Open. 2022.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35187864/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "National Institute on Aging. Exercise and Physical Activity — Guide for Older Adults. US Department of Health and Human Services, NIH.",
+      "url": "https://www.nia.nih.gov/health/exercise-and-physical-activity",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
