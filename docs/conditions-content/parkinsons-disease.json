@@ -1,0 +1,539 @@
+{
+  "_meta": {
+    "slug": "parkinsons-disease",
+    "tier": 1,
+    "headTerm": "parkinson's disease",
+    "longTailKeywords": [
+      "parkinson's disease symptoms",
+      "parkinson's disease treatment",
+      "parkinson's disease causes",
+      "parkinson's disease stages",
+      "parkinson's vs essential tremor",
+      "early signs of parkinson's",
+      "levodopa for parkinson's",
+      "deep brain stimulation parkinson's",
+      "is parkinson's hereditary",
+      "parkinson's disease prognosis"
+    ],
+    "primarySpecialty": "Neurology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Numbers cross-checked against MDS 2015 Clinical Diagnostic Criteria (Postuma 2015), AAN 2019 PD evaluation guideline, Global Burden of Disease 2019 Parkinson estimates, ELLDOPA (Fahn 2004 NEJM), PD MED (Gray 2014 Lancet), STN-DBS at earlier stage (Schuepbach 2013 NEJM) and the landmark Deuschl 2006 NEJM STN-DBS RCT, prasinezumab PASADENA Phase II (Pagano 2022 NEJM), and GBA/LRRK2 genetics literature (Sidransky 2009 NEJM, Healy 2008 Lancet Neurol)."
+  },
+
+  "h1Title": "Parkinson's Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neurology",
+
+  "heroOverview": "Parkinson's disease is a progressive neurodegenerative disorder in which dopamine-producing neurons in the substantia nigra of the midbrain die off and abnormal alpha-synuclein protein accumulates as Lewy bodies. Roughly 1% of adults over 60 and up to 4% of adults over 80 develop the disease, and global cases exceeded 8.5 million in 2019 — more than double the figure from 1990 (GBD 2019). The classic motor presentation is a slow-onset, asymmetric resting tremor with stiffness and slowness of movement, often preceded by years of constipation, reduced sense of smell, REM-sleep behaviour disorder, and depression. Untreated, motor symptoms progress over 5-15 years to disabling rigidity, falls, dementia, and loss of independence. Treatment cannot yet halt neurodegeneration, but levodopa, dopamine agonists, MAO-B inhibitors, focused-ultrasound thalamotomy, and deep brain stimulation can control symptoms effectively for 10-20 years in most patients.",
+
+  "keyStats": {
+    "prevalence": "1% of adults over 60; 4% of adults over 80 (Pringsheim 2014 meta-analysis); ~1 million people in the US (Parkinson's Foundation 2022)",
+    "demographics": "Men affected 1.4-2.0x more often than women across most populations",
+    "avgAge": "Mean motor onset age 60-65; ~10% of cases present before age 50 (young-onset Parkinson's)",
+    "globalCases": "8.5 million worldwide in 2019, projected to exceed 13 million by 2040 (GBD 2019)"
+  },
+
+  "definition": "Parkinson's disease (ICD-10: G20) is a progressive neurodegenerative disorder defined pathologically by the loss of dopaminergic neurons in the pars compacta of the substantia nigra and the accumulation of misfolded alpha-synuclein protein as intracellular Lewy bodies and Lewy neurites. The disease is the second most common neurodegenerative condition after Alzheimer's disease and the most common movement disorder in adults. Motor symptoms become clinically apparent only after roughly 50-70% of nigral dopaminergic neurons have already been lost and striatal dopamine is depleted by more than 60%, which is why the disease is often well advanced at diagnosis. Pathology is not limited to the substantia nigra: alpha-synuclein deposition begins in the olfactory bulb and lower brainstem (Braak stages 1-2), spreads to the midbrain and limbic system (stages 3-4), and reaches the neocortex in advanced disease (stages 5-6), which corresponds to the gradual emergence of cognitive and autonomic features. The current diagnostic standard is the Movement Disorder Society (MDS) 2015 Clinical Diagnostic Criteria, which require the motor parkinsonism core (bradykinesia plus either rest tremor or rigidity) plus supportive features and absence of red flags. Parkinson's disease is managed primarily by neurologists with movement-disorder training, supported by physiotherapy, speech and language therapy, occupational therapy, neurosurgery for advanced cases, and palliative care in late disease.",
+
+  "typesClassification": [
+    { "type": "Tremor-predominant Parkinson's disease", "description": "Resting tremor dominates the clinical picture with relatively preserved postural reflexes and slower cognitive decline. Roughly 30-40% of patients; long-term prognosis is generally better than the akinetic-rigid subtype." },
+    { "type": "Postural-instability gait-disorder (PIGD) / akinetic-rigid Parkinson's", "description": "Bradykinesia, rigidity, gait freezing, and postural instability dominate; tremor is mild or absent. Cognitive decline and falls accumulate faster, and response to levodopa is less complete." },
+    { "type": "Young-onset Parkinson's disease (YOPD)", "description": "Onset before age 50; accounts for about 10% of cases. More commonly linked to monogenic causes (LRRK2, PARK2/Parkin, PINK1, GBA). Disease progression is slower but levodopa-induced dyskinesias appear sooner." },
+    { "type": "Genetic Parkinson's disease (monogenic forms)", "description": "Mutations in LRRK2, GBA, SNCA, Parkin, PINK1, and DJ-1 account for ~5-10% of all cases overall but a higher share of YOPD. GBA carriers in particular have faster cognitive decline." },
+    { "type": "Atypical and secondary parkinsonism (differential)", "description": "Multiple system atrophy, progressive supranuclear palsy, corticobasal degeneration, vascular parkinsonism, and drug-induced parkinsonism mimic Parkinson's but progress differently and respond poorly to levodopa. Distinguishing these is the core diagnostic task." }
+  ],
+
+  "primarySymptoms": [
+    "Resting tremor at 4-6 Hz, classically a unilateral 'pill-rolling' tremor of the thumb and fingers that disappears with voluntary movement and worsens with stress — present in roughly 70% of patients at diagnosis.",
+    "Bradykinesia, the cardinal slowing of voluntary movement, observed as small handwriting (micrographia), reduced arm swing on the affected side, shuffling steps, and a masked facial expression with reduced blinking.",
+    "Rigidity with a 'cogwheel' or 'lead-pipe' quality felt on passive movement of the wrist or elbow, often accompanied by aching shoulder pain that can be misdiagnosed as frozen shoulder for months before tremor appears.",
+    "Postural instability emerging after several years of disease, producing a stooped posture, festinating gait, and recurrent falls — a major driver of fracture and hospitalization in advanced disease.",
+    "Gait freezing, in which the feet feel momentarily glued to the floor especially when starting to walk, turning, or passing through a doorway; freezing is a leading cause of falls and loses responsiveness to levodopa over time.",
+    "Hypophonia and dysarthria, with a soft, monotone, slurred voice that the patient often perceives as normal while listeners struggle to hear — present in over 80% of patients within 5 years of diagnosis.",
+    "Reduced sense of smell (hyposmia or anosmia), which precedes motor symptoms by 5-10 years in many patients and is now one of the most reliable prodromal markers.",
+    "REM sleep behaviour disorder (RBD), in which the patient acts out vivid dreams with kicking, punching, or shouting; isolated RBD progresses to Parkinson's disease, dementia with Lewy bodies, or multiple system atrophy in over 80% of cases within 14 years (Postuma 2019).",
+    "Chronic constipation, often preceding motor symptoms by a decade — reflecting early alpha-synuclein pathology in the enteric nervous system.",
+    "Mood and cognitive changes including depression in 40-50%, anxiety in 30-40%, apathy, executive dysfunction, and — in advanced disease — Parkinson's disease dementia affecting up to 80% of patients after 20 years."
+  ],
+
+  "earlyWarningSigns": [
+    "Loss or reduction in sense of smell several years before any movement symptom",
+    "Acting out dreams during sleep with vocalizations or limb movements (REM sleep behaviour disorder)",
+    "New-onset chronic constipation without a gastrointestinal explanation in middle age",
+    "Subtle change in handwriting — letters becoming smaller and more cramped (micrographia) over months",
+    "Reduced arm swing on one side, often noticed by family members in photos before the patient notices"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe rigidity, high fever, altered consciousness, and elevated creatine kinase — neuroleptic malignant-like syndrome from abrupt withdrawal of dopaminergic medication; medical emergency",
+    "Acute confusion, visual hallucinations, and agitation in a patient on dopaminergic therapy, especially with infection or recent medication change — needs urgent evaluation for delirium, drug toxicity, or infection",
+    "Recurrent falls with head injury or fracture — postural instability with anticoagulation raises bleed risk and warrants prompt assessment",
+    "Sudden inability to swallow, drooling with choking on liquids, or aspiration pneumonia signs — dysphagia in advanced disease needs same-week speech and language review",
+    "Suicidal thoughts in a patient with new-onset Parkinson's depression or after starting dopamine agonist therapy — urgent psychiatric assessment"
+  ],
+
+  "causes": [
+    {
+      "cause": "Loss of dopaminergic neurons in the substantia nigra",
+      "description": "The defining cellular event. Pigmented neurons in the pars compacta progressively die, depleting dopamine in the striatum and disrupting the basal-ganglia circuits that fine-tune voluntary movement. Symptoms appear after roughly 50-70% of these neurons have already been lost."
+    },
+    {
+      "cause": "Misfolded alpha-synuclein aggregation (Lewy pathology)",
+      "description": "Soluble alpha-synuclein protein adopts an abnormal beta-sheet structure, forms fibrils, and accumulates as Lewy bodies and Lewy neurites. The pathology spreads in a stereotyped pattern (Braak staging) from the lower brainstem and olfactory bulb upward to the cortex, paralleling the clinical course."
+    },
+    {
+      "cause": "Genetic mutations (monogenic and risk variants)",
+      "description": "Autosomal dominant mutations in LRRK2 and SNCA, recessive mutations in Parkin (PARK2), PINK1, and DJ-1, and the strong risk variant GBA (glucocerebrosidase) account together for an estimated 5-10% of cases. GBA carriers have roughly 5-fold increased risk and faster cognitive decline (Sidransky 2009)."
+    },
+    {
+      "cause": "Mitochondrial dysfunction and oxidative stress",
+      "description": "Complex I deficiency in substantia nigra neurons, impaired mitophagy via PINK1/Parkin, and accumulation of reactive oxygen species damage dopaminergic neurons. The MPTP toxin (which causes parkinsonism via Complex I inhibition) confirmed this mechanism experimentally in the 1980s."
+    },
+    {
+      "cause": "Environmental exposures",
+      "description": "Chronic exposure to pesticides (rotenone, paraquat), industrial solvents (trichloroethylene), and well-water from agricultural areas raises risk. Rural living and farming occupations are associated with 1.5-2x higher incidence in multiple cohort studies."
+    },
+    {
+      "cause": "Gut-brain axis and enteric alpha-synuclein",
+      "description": "Alpha-synuclein pathology is detected in the enteric nervous system years before brain involvement in many patients. Vagotomy reduces later Parkinson's risk in cohort studies (Svensson 2015), and gut microbiome alterations are now active research targets."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "The single strongest risk factor. Incidence rises sharply after 60 and continues to climb until very late life; prevalence reaches roughly 4% by age 80." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men are affected 1.4-2.0 times more often than women across most populations. Estrogen is thought to be partially neuroprotective; the gap narrows after menopause." },
+    { "factor": "Family history and monogenic mutations", "category": "genetic", "description": "First-degree relative with Parkinson's roughly doubles risk. GBA variants raise risk 5-fold and accelerate cognitive decline; LRRK2 G2019S is the most common dominant mutation worldwide and especially prevalent in Ashkenazi Jewish and North African Arab populations." },
+    { "factor": "Pesticide and herbicide exposure", "category": "environmental", "description": "Long-term exposure to rotenone, paraquat, and organochlorines raises risk roughly 1.5-2x in agricultural worker cohorts. Trichloroethylene contamination has been linked to clustered case excess in industrial communities." },
+    { "factor": "Traumatic brain injury with loss of consciousness", "category": "environmental", "description": "A history of moderate-severe TBI is associated with roughly 1.5-fold increased risk decades later; repeated mild TBI also raises risk, supported by veteran and athlete cohorts." },
+    { "factor": "Rural living and well-water consumption", "category": "environmental", "description": "Cohort studies consistently show 1.4-1.7x higher Parkinson's incidence among adults with prolonged rural residence and well-water use, likely a marker of agricultural chemical exposure." },
+    { "factor": "REM sleep behaviour disorder", "category": "non-modifiable", "description": "Isolated RBD converts to Parkinson's disease, dementia with Lewy bodies, or multiple system atrophy in more than 80% of patients within 14 years (Postuma 2019) — the strongest known clinical prodrome." },
+    { "factor": "Hyposmia (reduced sense of smell)", "category": "non-modifiable", "description": "Identifies a roughly 2-3x higher risk over the following decade in population screening and is part of the MDS prodromal criteria." },
+    { "factor": "Constipation", "category": "non-modifiable", "description": "Chronic constipation predates motor symptoms by 10-20 years in many patients and roughly doubles future Parkinson's incidence in the Honolulu-Asia Aging Study and other cohorts." },
+    { "factor": "Tobacco non-use and low caffeine intake", "category": "modifiable", "description": "Cigarette smoking and regular coffee consumption are paradoxically associated with lower Parkinson's risk in dozens of cohorts. The protective signal is robust but the mechanism is unclear, and the cardiovascular and cancer harms of smoking far outweigh any protective effect. This is described for completeness, not as advice." }
+  ],
+
+  "affectedDemographics": [
+    "Approximately 1 million people live with Parkinson's disease in the United States; ~90,000 new diagnoses each year (Parkinson's Foundation 2022)",
+    "India is estimated to have 0.6-0.8 million prevalent cases with substantial under-diagnosis in rural areas (Surathi 2016)",
+    "Higher prevalence has been documented in non-Hispanic white and Hispanic populations than in Asian or Black populations in US studies, partly reflecting access-to-care biases",
+    "Ashkenazi Jewish and North African Arab populations carry markedly higher LRRK2 G2019S mutation frequency (up to 30% of familial cases in some series)",
+    "Veterans of the Vietnam War with documented Agent Orange exposure have presumptive service-connected Parkinson's eligibility through the US Department of Veterans Affairs"
+  ],
+
+  "diagnosisOverview": "Diagnosis of Parkinson's disease is clinical. The current standard is the Movement Disorder Society 2015 Clinical Diagnostic Criteria (Postuma 2015), which require the core motor syndrome of bradykinesia plus either rest tremor or rigidity, in combination with at least two supportive features (clear and dramatic response to levodopa, levodopa-induced dyskinesia, classical rest tremor, or olfactory loss / cardiac sympathetic denervation on MIBG scan), and the absence of any absolute exclusion criteria or red flags. The diagnostic workup begins with a detailed history that probes prodromal features — anosmia, RBD, constipation, depression — and a thorough neurological exam, particularly the MDS-UPDRS motor section. Brain MRI is recommended in essentially all new diagnoses, primarily to rule out vascular parkinsonism, normal-pressure hydrocephalus, and atypical parkinsonian syndromes; it is normal in classical Parkinson's. DaT-SPECT imaging (123I-FP-CIT, marketed as DaTscan) shows reduced striatal dopamine transporter binding and helps distinguish Parkinson's from essential tremor, drug-induced parkinsonism, and psychogenic tremor when the clinical picture is ambiguous; it does not separate Parkinson's from atypical parkinsonism. Response to a levodopa trial — at least 30% improvement on the MDS-UPDRS motor score with an adequate dose — is itself a supportive criterion. Genetic testing is offered selectively for young-onset disease, strong family history, or relevant ancestry (LRRK2, GBA panels). Skin biopsy for phosphorylated alpha-synuclein and seed amplification assays (RT-QuIC) on cerebrospinal fluid are increasingly available and approach 90% sensitivity in research settings. The AAN 2019 evaluation guideline emphasises serial reassessment over time, since the diagnosis is most reliably confirmed at follow-up two years later when atypical features have either appeared or stayed absent.",
+
+  "diagnosticTests": [
+    {
+      "test": "Clinical examination with MDS-UPDRS motor scoring",
+      "purpose": "The reference standard. Confirms the cardinal features (bradykinesia, rest tremor, rigidity, postural instability), grades severity, and tracks response to treatment over time.",
+      "whatToExpect": "An appointment with a neurologist or movement-disorder specialist lasting 45-60 minutes. The patient performs finger tapping, hand opening/closing, pronation-supination, walking, and rises from a chair while the clinician scores each item from 0 (normal) to 4 (severe)."
+    },
+    {
+      "test": "Brain MRI",
+      "purpose": "Excludes structural mimics — vascular parkinsonism, normal-pressure hydrocephalus, brain tumour, Wilson's disease, and to a degree atypical parkinsonian syndromes that show characteristic atrophy patterns (hot-cross-bun sign in MSA, hummingbird sign in PSP).",
+      "whatToExpect": "A 30-45 minute scan in a tube-like magnet. No radiation; some sequences require contrast injection. Earplugs are provided for the loud knocking noise."
+    },
+    {
+      "test": "DaT-SPECT (123I-FP-CIT / DaTscan)",
+      "purpose": "Functional dopamine-transporter imaging. Reduced striatal uptake supports a presynaptic dopaminergic deficit and helps differentiate Parkinson's from essential tremor, drug-induced parkinsonism, and psychogenic tremor when the clinical picture is uncertain. Does not differentiate Parkinson's from MSA or PSP.",
+      "whatToExpect": "An iodine-blocking pill is taken an hour before. A radiotracer is injected through a vein; the scan itself begins 3-6 hours later and takes 30-45 minutes. Radiation dose is comparable to a CT scan."
+    },
+    {
+      "test": "Levodopa response trial",
+      "purpose": "A clear, sustained improvement of at least 30% on the MDS-UPDRS motor score with adequate dosing (often 600-1000 mg/day for 4-8 weeks) is one of the strongest supportive features in MDS 2015 criteria. Poor response argues for an atypical parkinsonian syndrome.",
+      "whatToExpect": "Carbidopa-levodopa is started at low dose and titrated up over weeks. Symptoms are reassessed at each visit. Side effects to watch for include nausea, low blood pressure on standing, and hallucinations in older patients."
+    },
+    {
+      "test": "MIBG cardiac scintigraphy",
+      "purpose": "Detects post-ganglionic sympathetic denervation of the heart, which is reduced in Parkinson's disease but preserved in multiple system atrophy and essential tremor. Useful where DaT-SPECT cannot distinguish atypical parkinsonism.",
+      "whatToExpect": "A radiotracer is injected and chest images are acquired at 15 minutes and again at 3-4 hours. Total time in the department is about 4 hours."
+    },
+    {
+      "test": "Cerebrospinal fluid alpha-synuclein seed amplification assay (RT-QuIC)",
+      "purpose": "Detects misfolded alpha-synuclein in CSF with ~90% sensitivity and ~95% specificity in research and increasingly clinical settings. Distinguishes synucleinopathies (Parkinson's, MSA, dementia with Lewy bodies) from tauopathies (PSP, CBD).",
+      "whatToExpect": "A lumbar puncture is performed under local anaesthetic with the patient curled on their side; the procedure takes 15-30 minutes. Mild post-procedure headache for 24-48 hours is common."
+    },
+    {
+      "test": "Genetic testing (LRRK2, GBA, SNCA, Parkin, PINK1 panel)",
+      "purpose": "Recommended in young-onset disease (<50), strong family history, or relevant ancestry (Ashkenazi Jewish, North African Arab). Carrier status affects prognosis, family counselling, and eligibility for emerging genotype-specific trials.",
+      "whatToExpect": "A standard blood or saliva sample sent to a specialist laboratory. Results take 4-8 weeks. Genetic counselling is recommended before and after testing."
+    }
+  ],
+
+  "treatmentOverview": "Parkinson's disease treatment has three pillars: symptomatic medical therapy, advanced device-based and surgical therapy for fluctuating disease, and multidisciplinary non-pharmacological support. There is currently no licensed disease-modifying therapy; the prasinezumab PASADENA Phase II trial (Pagano 2022) showed slowing of motor progression in a pre-specified subgroup of rapid progressors and is now in Phase III, but no anti-alpha-synuclein antibody has yet reached approval. First-line symptomatic therapy is decided according to age, severity of disability, and risk of motor complications. The PD MED pragmatic trial (Gray 2014) confirmed that levodopa preparations give the best long-term quality of life across all subgroups, including younger patients — overturning the previous practice of delaying levodopa in patients under 65. MAO-B inhibitors (selegiline, rasagiline, safinamide) and dopamine agonists (pramipexole, ropinirole, rotigotine patch) remain options for mild early disease where dyskinesia risk is the main concern, but dopamine agonists carry a 14-17% incidence of impulse control disorders (pathological gambling, hypersexuality, compulsive shopping) that require pre-treatment counselling. The ELLDOPA trial (Fahn 2004) established that levodopa is not neurotoxic and supports earlier initiation when symptoms affect function. As the disease progresses, motor fluctuations and dyskinesias emerge in 40-60% of patients within 5-10 years of starting levodopa; management adds COMT inhibitors (entacapone, opicapone) to smooth on-times, amantadine for dyskinesia, and apomorphine pen or pump for off-period rescue. Patients with disabling motor fluctuations despite optimised oral therapy are candidates for advanced therapy: subthalamic nucleus deep brain stimulation (STN-DBS), focused-ultrasound thalamotomy for tremor-predominant disease, levodopa-carbidopa intestinal gel via jejunal pump, or continuous subcutaneous apomorphine infusion. The landmark Deuschl 2006 NEJM trial established STN-DBS as superior to best medical therapy in advanced disease, and Schuepbach 2013 NEJM showed benefit when offered at an earlier fluctuation stage. Non-motor symptoms — depression, REM sleep behaviour disorder, orthostatic hypotension, constipation, dementia, psychosis — require dedicated management, since they often determine quality of life more than tremor or bradykinesia in advanced years. Physiotherapy with cueing strategies, speech therapy (LSVT-LOUD), and occupational therapy are evidence-based across all disease stages.",
+
+  "medicalTreatments": [
+    {
+      "name": "Carbidopa-levodopa (immediate-release, controlled-release, or extended-release; typical 300-1000 mg levodopa/day in divided doses)",
+      "description": "First-line and most effective symptomatic treatment. Levodopa is converted to dopamine in surviving nigrostriatal neurons; carbidopa blocks peripheral conversion to reduce nausea. Started at 25/100 mg three times daily and titrated to symptom control. PD MED (Gray 2014) confirmed superior long-term quality of life across all age groups.",
+      "effectiveness": "Improves MDS-UPDRS motor scores by 30-70% in early disease; benefit persists for 10-15 years in most patients, though motor fluctuations and dyskinesias appear in 40-60% within 5-10 years."
+    },
+    {
+      "name": "Dopamine agonists (pramipexole 0.125-1.5 mg three times daily; ropinirole 0.25-8 mg three times daily; rotigotine transdermal patch 2-16 mg/24h)",
+      "description": "Bind directly to striatal dopamine D2/D3 receptors. Useful as monotherapy in early disease in younger patients to delay levodopa exposure, and as adjunct to levodopa later. Counsel all patients about impulse control disorders before starting.",
+      "effectiveness": "Motor improvement of roughly 30-50% as monotherapy in early disease; less than levodopa but with lower dyskinesia risk in the first 5 years. Impulse control disorder incidence 14-17%."
+    },
+    {
+      "name": "MAO-B inhibitors (rasagiline 1 mg daily; selegiline 5 mg twice daily; safinamide 50-100 mg daily)",
+      "description": "Block central breakdown of dopamine. Modest monotherapy effect in early disease; adjunct in motor fluctuations to extend on-time. Safinamide also has glutamate-modulating action that may help dyskinesia.",
+      "effectiveness": "Roughly 10-20% improvement in motor scores as monotherapy; reduces off-time by approximately 1 hour/day as adjunct (LARGO and ADAGIO trials)."
+    },
+    {
+      "name": "COMT inhibitors (entacapone 200 mg with each levodopa dose; opicapone 50 mg once daily)",
+      "description": "Block peripheral catechol-O-methyltransferase, prolonging the half-life of each levodopa dose. Used as add-on for end-of-dose wearing-off. Opicapone is once-daily and avoids the urine discoloration seen with entacapone.",
+      "effectiveness": "Reduces off-time by 1.0-1.7 hours/day on average (BIPARK-1 trial for opicapone)."
+    },
+    {
+      "name": "Amantadine (immediate-release 100 mg twice or three times daily; extended-release 274 mg at bedtime)",
+      "description": "NMDA receptor antagonist with mild anti-parkinsonian effect. Most useful for managing levodopa-induced dyskinesia in advanced disease.",
+      "effectiveness": "Reduces dyskinesia severity by 40-60% in randomised trials (EASE LID program for ADS-5102 extended-release amantadine)."
+    },
+    {
+      "name": "Apomorphine (subcutaneous pen 2-6 mg for rescue; continuous infusion 1-8 mg/h)",
+      "description": "Potent short-acting dopamine agonist for rapid rescue of unpredictable off periods and as continuous infusion in advanced motor fluctuations refractory to oral therapy. Requires anti-emetic cover initially.",
+      "effectiveness": "Aborts off periods within 7-15 minutes in 90%+ of administrations; continuous infusion reduces off-time by roughly 2-3 hours/day (TOLEDO trial 2018)."
+    },
+    {
+      "name": "Anticholinergics (trihexyphenidyl 1-5 mg three times daily; benztropine 0.5-2 mg twice daily)",
+      "description": "Historic first-line agents now largely reserved for tremor-predominant young-onset patients without cognitive impairment. Limited by memory, confusion, urinary retention, and dry mouth, particularly over age 65.",
+      "effectiveness": "Tremor reduction in 30-50% of selected patients; minimal effect on bradykinesia or rigidity."
+    },
+    {
+      "name": "Pimavanserin (34 mg daily) for Parkinson's disease psychosis",
+      "description": "Selective serotonin 5-HT2A inverse agonist; does not block dopamine and therefore does not worsen motor symptoms. First-line for hallucinations and delusions once reversible triggers (infection, drug toxicity, electrolyte disturbance) are excluded.",
+      "effectiveness": "Roughly 37% reduction in psychosis symptom score vs 14% on placebo in the pivotal trial (Cummings 2014)."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Subthalamic nucleus deep brain stimulation (STN-DBS)",
+      "description": "Bilateral electrode implantation in the subthalamic nucleus connected to a pulse generator in the chest. Reduces motor fluctuations and dyskinesia, often allowing a 30-50% reduction in oral medication. Best candidates: levodopa-responsive disease with motor fluctuations or refractory tremor, age usually under 70, intact cognition, no significant psychiatric illness. Established by the Deuschl 2006 NEJM RCT and extended to earlier-fluctuation patients by Schuepbach 2013 NEJM (EARLYSTIM).",
+      "successRate": "Roughly 50% improvement in off-medication motor scores and a 4-5 hour/day reduction in off-time in randomized trials; quality-of-life benefit sustained for at least 10 years in long-term follow-up."
+    },
+    {
+      "name": "Globus pallidus internus deep brain stimulation (GPi-DBS)",
+      "description": "Alternative target to the STN with comparable motor benefit and a more favourable cognitive and mood side-effect profile in some patients; preferred when significant dyskinesia or mild cognitive concerns are present. Allows less medication reduction than STN.",
+      "successRate": "Roughly 35-45% improvement in off-medication motor scores; similar long-term motor benefit to STN-DBS in head-to-head trials (CSP 468)."
+    },
+    {
+      "name": "MR-guided focused ultrasound thalamotomy (Vim-FUS)",
+      "description": "Incisionless ablation of the ventral intermediate nucleus of the thalamus, performed in an MRI scanner. Approved for tremor-dominant Parkinson's disease that is refractory to medication. Treats only one side initially; bilateral treatment is being studied.",
+      "successRate": "Roughly 60-70% reduction in tremor severity at 12 months in the unilaterally treated hand (Bond 2017)."
+    },
+    {
+      "name": "Levodopa-carbidopa intestinal gel (LCIG / Duopa) via PEG-J pump",
+      "description": "Continuous infusion of levodopa-carbidopa gel directly into the jejunum through a percutaneous endoscopic gastrostomy with a jejunal extension. Stable plasma levodopa levels reduce motor fluctuations in patients ineligible for or declining DBS.",
+      "successRate": "Reduces off-time by roughly 4 hours/day with improved quality of life in advanced motor fluctuations (Olanow 2014)."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Tai chi for balance and falls prevention", "description": "Randomised trial of 195 patients (Li 2012, NEJM) showed tai chi significantly reduced falls and improved postural stability versus resistance training and stretching over 6 months. Now incorporated into many Parkinson's exercise programs." },
+    { "name": "High-intensity treadmill or cycling exercise", "description": "SPARX (Schenkman 2018, JAMA Neurology) showed high-intensity treadmill training at 80-85% maximum heart rate slowed MDS-UPDRS motor progression at 6 months. Supports an exercise prescription, not as a replacement for medical therapy." },
+    { "name": "Coffee and caffeine intake", "description": "Cohort studies (Honolulu-Asia Aging Study; NHS/HPFS) consistently link regular coffee consumption with 30-40% lower Parkinson's incidence. Causation is unproven and the effect on established disease is modest at best, but moderate coffee is reasonable for most patients." }
+  ],
+
+  "whySeeSpecialist": "A movement-disorder neurologist should evaluate any suspected new diagnosis to confirm Parkinson's, exclude atypical parkinsonian syndromes, and structure long-term care. Specialist input is also needed at every transition: when motor fluctuations or dyskinesias emerge, when cognitive or psychiatric symptoms appear, when assessing eligibility for DBS or focused ultrasound, and when planning end-of-life care. Population studies show that Parkinson's patients followed by a neurologist have lower mortality and lower nursing-home placement rates than those followed only in primary care (Willis 2011).",
+
+  "doctorSelectionGuide": "Look for board certification in neurology with a fellowship or substantial practice focus in movement disorders, regular use of the MDS-UPDRS, comfort interpreting DaT-SPECT, access to multidisciplinary rehabilitation (physiotherapy, occupational therapy, speech and language therapy), and a clear referral pathway to a DBS or focused-ultrasound centre when needed. Continuity over 10-20 years matters more than prestige — your neurologist should know your medication history and red-flag triggers in detail.",
+
+  "preventionStrategies": [
+    "Maintain regular moderate-to-vigorous physical activity throughout adult life — cohort data show a roughly 30% lower Parkinson's risk in the most active quartile",
+    "Avoid occupational and residential exposure to known pesticides where feasible; use protective equipment in agricultural and industrial settings",
+    "Seek prompt evaluation for REM sleep behaviour disorder — randomised prevention trials are beginning to recruit prodromal patients",
+    "Address chronic constipation, depression, and anosmia early; while they do not prevent disease, they bring patients into the diagnostic pathway sooner",
+    "Avoid recurrent head trauma — wear seatbelts and appropriate sport helmets; manage falls risk in older adults"
+  ],
+
+  "lifestyleModifications": [
+    "Exercise vigorously 3-5 times per week, combining aerobic (treadmill, cycling), resistance, balance, and flexibility work — slows symptom progression and reduces falls",
+    "Schedule levodopa doses around meals — high-protein meals can blunt absorption, so take medication 30-45 minutes before or 1-2 hours after protein-rich meals",
+    "Use cueing strategies — visual lines on the floor, metronome apps, or counting aloud — to overcome gait freezing",
+    "Practice loud-voice training (LSVT-LOUD) to slow hypophonia and dysarthria progression",
+    "Home-proof against falls: remove loose rugs, add grab bars, improve lighting, and consider a walking aid before falls happen",
+    "Manage orthostatic hypotension with adequate salt and fluid intake, compression stockings, and slow positional changes; avoid antihypertensives that drop standing blood pressure",
+    "Treat depression and anxiety actively — they often respond well to SSRIs and to structured exercise, and untreated depression accelerates functional decline"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style diet rich in vegetables, fruits, whole grains, fish, and olive oil — observational data support lower Parkinson's incidence and slower progression",
+      "Adequate fibre (25-35 g/day) and 1.5-2 litres of fluid daily to manage constipation, a common and bothersome non-motor symptom",
+      "Coffee or caffeinated tea in moderate amounts, unless contraindicated — consistent association with lower disease incidence",
+      "Berries, leafy greens, and nuts — flavonoid intake is linked to slower motor progression in cohort data (Gao 2012)",
+      "Distributed protein intake throughout the day, with most protein in the evening meal, in patients experiencing levodopa-protein interactions"
+    ],
+    "avoid": [
+      "Excessive saturated fat and ultra-processed foods, associated with higher Parkinson's risk in cohort studies",
+      "Heavy dairy intake in men (>3 servings/day) — modestly associated with higher Parkinson's risk in the HPFS cohort",
+      "Alcohol excess — disrupts sleep, worsens balance, and interacts with several Parkinson's medications",
+      "Grapefruit juice with certain Parkinson's medications — check interactions with rotigotine and others",
+      "Large high-protein meals immediately before a levodopa dose if motor response is unpredictable"
+    ]
+  },
+
+  "exerciseGuidelines": "Aim for 150 minutes per week of moderate-to-vigorous aerobic activity (treadmill, cycling, swimming), two sessions of resistance training, and daily balance and flexibility work (tai chi, yoga, dance). The SPARX trial showed high-intensity treadmill training at 80-85% maximum heart rate slowed motor progression at 6 months. Tai chi reduces falls in Parkinson's by roughly 50% versus stretching. Boxing-style training programs (Rock Steady Boxing and similar) improve balance and quality of life. Exercise prescription should be tailored by a physiotherapist with Parkinson's experience and adjusted as disease progresses.",
+
+  "dailyManagement": [
+    "Take Parkinson's medications at the same times each day, set phone alarms, and never abruptly stop dopaminergic medication — withdrawal can precipitate a neuroleptic-malignant-like crisis",
+    "Keep a simple on/off diary for at least 1-2 weeks before each neurology visit; this guides dose timing changes far better than verbal recall",
+    "Carry a medication and emergency contact card, and update next of kin on which drugs must never be missed (including overnight in hospital)",
+    "Plan the day around predictable on-times for tasks that require dexterity, balance, or driving",
+    "Maintain a hydration and bowel routine — fibre, fluids, and movement keep constipation manageable and reduce levodopa absorption variability",
+    "Attend an annual review with the multidisciplinary team — neurologist, Parkinson's nurse specialist, physiotherapist, occupational therapist, speech and language therapist"
+  ],
+
+  "prognosis": "Parkinson's disease progresses slowly over years to decades. With modern medical, surgical, and rehabilitation care, life expectancy is close to that of age-matched peers for the first 10-15 years after diagnosis, and the gap widens mostly in late disease driven by dementia, falls, aspiration pneumonia, and frailty. Average disease duration from diagnosis to death is approximately 15-20 years, longer in young-onset and tremor-predominant subtypes and shorter in postural-instability gait-disorder and GBA-mutation carriers. Functional milestones used in counselling include time to motor fluctuations (median 5-7 years on levodopa), time to recurrent falls (median 9-10 years), and time to dementia (cumulative incidence ~25% at 10 years and up to 80% at 20 years). Predictors of faster decline include older age at onset, postural-instability gait-disorder subtype, GBA mutations, early autonomic dysfunction, and REM sleep behaviour disorder. Predictors of better outcome are tremor-dominant subtype, younger onset, strong levodopa response, sustained physical activity, and integrated specialist care.",
+
+  "recoveryTimeline": "Parkinson's is a chronic progressive disease rather than one with recovery. After starting levodopa, most patients experience a clear motor improvement within days to a few weeks, with peak benefit reached at 4-8 weeks once doses are titrated. The first 3-5 years are often referred to as the 'honeymoon period' of stable response. Motor fluctuations and dyskinesias typically appear 5-10 years after starting levodopa. Following STN-DBS, motor improvement is apparent in the days after activation and continues to be optimised over the first 6-12 months as stimulation settings are refined and medication is reduced.",
+
+  "complications": [
+    "Falls and fractures from postural instability and gait freezing — hip fracture rates are 2-3x higher than in age-matched controls and a major driver of hospitalization and mortality",
+    "Parkinson's disease dementia, with cumulative incidence approaching 80% over 20 years of disease; managed with rivastigmine and supportive care",
+    "Aspiration pneumonia from progressive dysphagia and reduced cough reflex — the leading cause of death in advanced Parkinson's",
+    "Parkinson's disease psychosis, including visual hallucinations and delusions, affecting up to 50% over 10-20 years; can be triggered or worsened by dopaminergic medication, infection, or delirium",
+    "Severe orthostatic hypotension and autonomic failure, producing syncope, falls, and reduced quality of life; pronounced autonomic failure early in the disease should prompt re-evaluation for multiple system atrophy",
+    "Impulse control disorders (pathological gambling, hypersexuality, compulsive shopping or eating) in 14-17% of patients on dopamine agonists — preventable with informed consent and dose review",
+    "Depression and suicide risk — depression affects 40-50% of patients and is undertreated; suicide risk is roughly twice the general population in some studies"
+  ],
+
+  "supportResources": [
+    { "name": "Parkinson's Foundation (US) — Patient and Family Resources", "url": "https://www.parkinson.org", "description": "US-based foundation offering helpline (1-800-4PD-INFO), local chapters, exercise programmes, and Centers of Excellence directory." },
+    { "name": "Michael J. Fox Foundation for Parkinson's Research", "url": "https://www.michaeljfox.org", "description": "Research-focused foundation with PPMI biomarker study enrolment, clinical trial finder, and patient education library." },
+    { "name": "Parkinson's UK", "url": "https://www.parkinsons.org.uk", "description": "UK charity providing helpline, local groups, advocacy, and research funding; patient guides aligned with NICE NG71." },
+    { "name": "Parkinson's Disease Society of India (PDSI)", "url": "https://parkinsonssocietyindia.com", "description": "Patient organisation supporting Indian families with information, support groups, and physiotherapy resources." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "essential-tremor-g250", "name": "Essential Tremor", "keyDifference": "Essential tremor produces a bilateral action tremor that worsens with sustained posture or movement (writing, holding a cup), often improves with alcohol, and has a strong family history. Parkinson's tremor is unilateral at onset, present at rest, disappears with voluntary movement, and is accompanied by bradykinesia and rigidity. DaT-SPECT is normal in essential tremor and reduced in Parkinson's." },
+    { "slug": "progressive-supranuclear-ophthalmoplegia-g231", "name": "Progressive Supranuclear Palsy", "keyDifference": "Progressive supranuclear palsy presents with symmetric early postural instability, frequent backward falls within the first year, vertical gaze palsy especially of downgaze, and a poor response to levodopa. Parkinson's disease is asymmetric, presents with rest tremor, responds clearly to levodopa, and rarely causes falls in the first 3 years." },
+    { "slug": "dementia-with-lewy-bodies-g3183", "name": "Dementia with Lewy Bodies", "keyDifference": "Dementia with Lewy bodies and Parkinson's disease dementia share alpha-synuclein pathology, but in DLB cognitive impairment, fluctuating attention, and visual hallucinations begin within the first year of motor symptoms or before them. In Parkinson's, dementia typically emerges many years after motor onset. The 'one-year rule' separates them by convention." },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease", "keyDifference": "Alzheimer's disease begins with episodic memory loss and language difficulty without motor parkinsonism. Parkinson's begins with motor symptoms; cognitive decline appears later. Both can coexist in mixed pathology, but the order and pattern of symptoms differs and imaging (DaT-SPECT, FDG-PET) supports the distinction." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "depression", "name": "Depression" },
+    { "slug": "rem-sleep-behavior-disorder-g4752", "name": "REM Sleep Behavior Disorder" },
+    { "slug": "constipation-unspecified-k5900", "name": "Constipation" },
+    { "slug": "orthostatic-hypotension-i951", "name": "Orthostatic Hypotension" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "essential-tremor-g250", "name": "Essential Tremor", "relevance": "The most common tremor disorder and the leading differential at first presentation; the two conditions can also coexist." },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease", "relevance": "The most common neurodegenerative disease overall and a frequent comorbidity in late-stage Parkinson's disease dementia." },
+    { "slug": "dementia-with-lewy-bodies-g3183", "name": "Dementia with Lewy Bodies", "relevance": "Shares alpha-synuclein pathology with Parkinson's disease and lies on the same disease spectrum; distinguished mainly by the order of cognitive vs motor symptoms." },
+    { "slug": "rem-sleep-behavior-disorder-g4752", "name": "REM Sleep Behavior Disorder", "relevance": "The strongest known prodrome of Parkinson's disease; isolated RBD converts to a synucleinopathy in over 80% of patients within 14 years." },
+    { "slug": "restless-legs-syndrome-g2581", "name": "Restless Legs Syndrome", "relevance": "Shares dopaminergic pathway involvement; more common in Parkinson's patients and managed with overlapping medication classes." },
+    { "slug": "huntington-s-disease-g10", "name": "Huntington's Disease", "relevance": "Another progressive movement disorder of the basal ganglia, but characterised by chorea rather than parkinsonism and caused by a CAG repeat expansion in HTT." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is the first sign of Parkinson's disease?",
+      "answer": "The first noticeable sign is usually a slight tremor of one hand or finger at rest, often the thumb rolling against the index finger, accompanied by reduced arm swing on the same side. Non-motor symptoms such as loss of smell, chronic constipation, depression, and acting out dreams during sleep often precede the tremor by 5-10 years and are increasingly recognised as the earliest signs.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Parkinson's disease diagnosed?",
+      "answer": "Parkinson's is diagnosed clinically by a neurologist based on the MDS 2015 Clinical Diagnostic Criteria — bradykinesia plus rest tremor or rigidity, with a clear response to levodopa and no atypical red flags. Brain MRI rules out mimics, and DaT-SPECT imaging helps when the picture is uncertain. There is no single blood test, though CSF alpha-synuclein assays are emerging.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Parkinson's disease hereditary?",
+      "answer": "Most Parkinson's disease is sporadic, but roughly 5-10% of cases have an identifiable monogenic cause. Mutations in LRRK2, GBA, SNCA, Parkin, PINK1, and DJ-1 raise risk. A first-degree relative with Parkinson's roughly doubles personal risk. Genetic testing is offered in young-onset disease, strong family history, or relevant ancestry.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes Parkinson's disease?",
+      "answer": "Parkinson's disease is caused by progressive loss of dopamine-producing neurons in the substantia nigra of the brain, together with abnormal accumulation of alpha-synuclein protein as Lewy bodies. Genetics, mitochondrial dysfunction, oxidative stress, pesticide exposure, head injury, and gut-brain pathology all contribute. The exact trigger remains unknown in most patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How fast does Parkinson's disease progress?",
+      "answer": "Progression is slow and variable. Most patients live with the disease for 15-20 years after diagnosis. Motor fluctuations and dyskinesias usually appear 5-10 years after starting levodopa. Recurrent falls develop on average around year 9-10, and dementia affects up to 80% of patients after 20 years. Tremor-dominant disease tends to progress more slowly than postural-instability subtype.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a cure for Parkinson's disease?",
+      "answer": "There is currently no cure and no licensed disease-modifying treatment, but symptoms can be controlled effectively for many years. Levodopa, dopamine agonists, MAO-B inhibitors, deep brain stimulation, and focused-ultrasound thalamotomy all improve quality of life. Anti-alpha-synuclein antibodies such as prasinezumab are in Phase III trials and may slow progression in the future.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best medication for Parkinson's disease?",
+      "answer": "Carbidopa-levodopa is the most effective medication for motor symptoms and is recommended as first-line therapy in most patients of any age once symptoms affect daily function. The PD MED trial showed it gives the best long-term quality of life. MAO-B inhibitors and dopamine agonists are alternatives in mild early disease where dyskinesia risk is the primary concern.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the life expectancy with Parkinson's disease?",
+      "answer": "With modern care, life expectancy is close to age-matched peers for the first 10-15 years after diagnosis, and the gap widens later mostly due to dementia, falls, and aspiration pneumonia. Average disease duration is 15-20 years. Younger age at onset and tremor-predominant subtype predict longer survival.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can exercise slow Parkinson's disease?",
+      "answer": "Regular vigorous exercise improves motor function and quality of life and may modestly slow motor progression. The SPARX trial showed high-intensity treadmill training slowed MDS-UPDRS motor decline at 6 months. Tai chi reduces falls by about 50% versus stretching. A physiotherapist with Parkinson's experience should design a balanced aerobic, resistance, and balance program.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is deep brain stimulation for Parkinson's disease?",
+      "answer": "Deep brain stimulation (DBS) is a surgical treatment in which electrodes are placed in the subthalamic nucleus or globus pallidus and connected to a pulse generator in the chest. It reduces motor fluctuations and dyskinesias in patients with advanced disease who still respond to levodopa. The landmark Deuschl 2006 trial showed clear superiority over best medical therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who is a good candidate for deep brain stimulation?",
+      "answer": "Good candidates have idiopathic Parkinson's disease with a clear levodopa response, disabling motor fluctuations or dyskinesias, intact cognition, no significant untreated depression or psychosis, and typically age under 70. Atypical parkinsonism, dementia, and uncontrolled psychiatric illness are exclusions. A movement-disorder neurologist and neurosurgeon assess suitability together.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Parkinson's disease cause dementia?",
+      "answer": "Yes. Parkinson's disease dementia develops in up to 80% of patients after 20 years of disease. Symptoms include slowed thinking, attention and executive problems, visual hallucinations, and memory difficulty. Rivastigmine has the strongest evidence for symptomatic treatment. When cognitive impairment begins within a year of motor onset, dementia with Lewy bodies is the more likely diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between Parkinson's disease and essential tremor?",
+      "answer": "Essential tremor produces a bilateral action tremor that appears when holding a posture or moving, often improves with alcohol, and runs in families. Parkinson's tremor is unilateral at onset, present at rest, disappears with voluntary movement, and is accompanied by slowness and rigidity. DaT-SPECT is normal in essential tremor and reduced in Parkinson's disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can young people get Parkinson's disease?",
+      "answer": "Yes. About 10% of patients are diagnosed before age 50, which is called young-onset Parkinson's disease. Monogenic causes such as LRRK2, Parkin, PINK1, and GBA mutations are more common in this group. Disease progression is generally slower than in older-onset disease, but levodopa-induced dyskinesias often emerge sooner.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does Parkinson's disease affect women differently than men?",
+      "answer": "Men develop Parkinson's disease 1.4-2.0 times more often than women, possibly due to a partially protective effect of estrogen. Women tend to be diagnosed slightly later, have more tremor-predominant disease, and report more non-motor symptoms such as depression and pain. Levodopa dosing may need to be adjusted because women weigh less on average.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods should I avoid with Parkinson's disease?",
+      "answer": "Large high-protein meals can blunt absorption of levodopa, so taking medication 30-45 minutes before or 1-2 hours after a protein-heavy meal is recommended. Excess alcohol, ultra-processed foods, and very high dairy intake in men are linked to higher Parkinson's risk in cohort studies. A Mediterranean-style diet is consistently associated with better outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress make Parkinson's symptoms worse?",
+      "answer": "Yes. Stress, anxiety, fatigue, and poor sleep all transiently worsen tremor, rigidity, and gait freezing. Treating anxiety and depression, ensuring adequate sleep, and regular exercise reduce these fluctuations. Stress does not cause Parkinson's disease but can make existing symptoms more visible day to day.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are dopamine agonists safe?",
+      "answer": "Dopamine agonists effectively control motor symptoms but cause impulse control disorders such as pathological gambling, hypersexuality, and compulsive shopping in 14-17% of users. Older patients are also more prone to hallucinations, sleep attacks, and leg swelling. Patients and partners should be counselled about these risks before starting and reviewed at each visit.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I drive with Parkinson's disease?",
+      "answer": "Many patients drive safely for years after diagnosis, but driving ability should be reviewed at diagnosis and at least annually. Motor fluctuations, dyskinesia, daytime sleepiness, hallucinations, and cognitive decline all impair driving safety. National medical-driving authorities require notification in most countries, and a formal on-road assessment is recommended at the first sign of concern.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is REM sleep behavior disorder and how is it linked to Parkinson's?",
+      "answer": "REM sleep behavior disorder (RBD) is acting out vivid dreams during sleep with kicking, punching, or shouting, instead of the normal paralysis of REM sleep. Isolated RBD is the strongest known prodrome of Parkinson's disease, dementia with Lewy bodies, and multiple system atrophy — over 80% of patients with RBD develop one of these conditions within 14 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a neurologist for suspected Parkinson's?",
+      "answer": "See a neurologist promptly if you notice a persistent one-sided tremor at rest, unexplained slowness, stiffness, smaller handwriting, reduced arm swing, recurrent falls, or new acting out of dreams. Early specialist diagnosis confirms or excludes Parkinson's, rules out treatable mimics, and starts appropriate therapy before significant disability accumulates.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Parkinson's Disease (PD, paralysis agitans)",
+
+  "regionalNames": [
+    { "name": "Kampavata", "region": "India", "language": "sa" },
+    { "name": "पार्किंसन रोग (Parkinson Rog)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Maladie de Parkinson", "region": "France / Francophone Africa", "language": "fr" },
+    { "name": "Enfermedad de Parkinson", "region": "Spain / Latin America", "language": "es" }
+  ],
+
+  "searchTags": [
+    "parkinson's disease", "parkinsons", "parkinson disease", "PD", "paralysis agitans",
+    "shaking palsy", "tremor disease", "dopamine deficiency", "levodopa", "carbidopa",
+    "deep brain stimulation", "DBS", "movement disorder", "neurodegeneration", "alpha-synuclein",
+    "Lewy body", "young onset parkinson", "substantia nigra"
+  ],
+
+  "symptomKeywords": [
+    "resting tremor", "hand shaking at rest", "slow movement", "stiff muscles",
+    "shuffling walk", "small handwriting", "masked face", "loss of smell",
+    "acting out dreams", "frequent falls"
+  ],
+
+  "metaTitle": "Parkinson's Disease: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Parkinson's disease: tremor, slowness, and stiffness from dopamine neuron loss. Symptoms, treatment, and prognosis reviewed by our medical board.",
+
+  "keywords": [
+    "parkinson's disease", "parkinson's symptoms", "parkinson's treatment", "parkinson's causes",
+    "parkinson's diagnosis", "parkinson's vs essential tremor", "deep brain stimulation",
+    "levodopa", "carbidopa-levodopa", "early signs of parkinson's", "young onset parkinson's",
+    "parkinson's prognosis", "is parkinson's hereditary", "parkinson's stages"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "sources": [
+    {
+      "title": "Postuma RB, Berg D, Stern M, et al. MDS clinical diagnostic criteria for Parkinson's disease. Movement Disorders. 2015;30(12):1591-1601.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26474316/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Pringsheim T, Jette N, Frolkis A, Steeves TD. The prevalence of Parkinson's disease: a systematic review and meta-analysis. Movement Disorders. 2014;29(13):1583-1590.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24976103/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Fahn S, Oakes D, Shoulson I, et al; Parkinson Study Group. Levodopa and the progression of Parkinson's disease (ELLDOPA). New England Journal of Medicine. 2004;351(24):2498-2508.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15590952/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "PD MED Collaborative Group; Gray R, Ives N, Rick C, et al. Long-term effectiveness of dopamine agonists and monoamine oxidase B inhibitors compared with levodopa as initial treatment for Parkinson's disease (PD MED): a large, open-label, pragmatic randomised trial. Lancet. 2014;384(9949):1196-1205.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24928805/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Deuschl G, Schade-Brittinger C, Krack P, et al. A randomized trial of deep-brain stimulation for Parkinson's disease. New England Journal of Medicine. 2006;355(9):896-908.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16943402/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Schuepbach WMM, Rau J, Knudsen K, et al. Neurostimulation for Parkinson's disease with early motor complications (EARLYSTIM). New England Journal of Medicine. 2013;368(7):610-622.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23406026/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Pagano G, Taylor KI, Anzures-Cabrera J, et al. Trial of Prasinezumab in Early-Stage Parkinson's Disease (PASADENA). New England Journal of Medicine. 2022;387(5):421-432.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35921451/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Sidransky E, Nalls MA, Aasly JO, et al. Multicenter analysis of glucocerebrosidase mutations in Parkinson's disease. New England Journal of Medicine. 2009;361(17):1651-1661.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19846850/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Healy DG, Falchi M, O'Sullivan SS, et al. Phenotype, genotype, and worldwide genetic penetrance of LRRK2-associated Parkinson's disease: a case-control study. Lancet Neurology. 2008;7(7):583-590.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18539534/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Postuma RB, Iranzo A, Hu M, et al. Risk and predictors of dementia and parkinsonism in idiopathic REM sleep behaviour disorder: a multicentre study. Brain. 2019;142(3):744-759.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30789229/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Li F, Harmer P, Fitzgerald K, et al. Tai chi and postural stability in patients with Parkinson's disease. New England Journal of Medicine. 2012;366(6):511-519.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22316445/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "AAN Practice Guideline: Evaluation of Initial Pharmacological Treatment for Motor Symptoms of Parkinson Disease (2021 update of 2002 / 2019 evaluation guideline series).",
+      "url": "https://www.aan.com/Guidelines/home/GuidelineDetail/963",
+      "accessedDate": "2026-05-12"
+    }
+  ],
+
+  "images": []
+}
