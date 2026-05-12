@@ -1,0 +1,582 @@
+{
+  "_meta": {
+    "slug": "schizophrenia",
+    "tier": 1,
+    "headTerm": "schizophrenia",
+    "longTailKeywords": [
+      "schizophrenia symptoms",
+      "schizophrenia treatment",
+      "schizophrenia causes",
+      "first episode psychosis",
+      "antipsychotics for schizophrenia",
+      "clozapine for schizophrenia",
+      "schizophrenia vs bipolar",
+      "positive and negative symptoms",
+      "is schizophrenia curable",
+      "schizophrenia diagnosis"
+    ],
+    "primarySpecialty": "Psychiatry",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Cross-verified against DSM-5-TR criteria, ICD-10 F20, 2020 APA Schizophrenia practice guideline, CATIE, CUtLASS-1, OPTiMiSE, Meltzer clozapine remission data, RAISE-ETP and EASA early intervention trials, Cochrane antipsychotic network meta-analyses (Huhn 2019), and NIMH/WHO global prevalence. Safety/crisis language reviewed for 988 alignment."
+  },
+
+  "h1Title": "Schizophrenia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Psychiatry",
+
+  "heroOverview": "Schizophrenia is a chronic psychiatric illness in which disturbances of perception, thought, motivation, and cognition emerge — most often in late adolescence or early adulthood — and persist long enough to disrupt work, school, and relationships. About 0.7-1% of people develop schizophrenia in their lifetime, and roughly 24 million people are affected worldwide. The illness typically presents with hallucinations (most often hearing voices), fixed false beliefs called delusions, disorganized speech, reduced motivation and emotional expression, and difficulties with attention and working memory. Untreated, schizophrenia carries roughly a 5% lifetime suicide risk and a 10-20-year shortening of life expectancy, mostly from cardiovascular and metabolic causes. With antipsychotic medication, coordinated specialty care, family support, and supported employment, two-thirds of patients achieve symptomatic remission and many recover functionally. If you are thinking of suicide, call or text 988 in the US, or your local crisis line.",
+
+  "keyStats": {
+    "prevalence": "Lifetime ~0.7-1% globally (McGrath 2008 systematic review); ~12-month US prevalence ~0.25-0.64% (NIMH)",
+    "demographics": "Men affected ~1.4× more than women, with earlier onset; urban birth raises risk ~2×",
+    "avgAge": "Median age of onset 18-25 in men, 25-35 in women; childhood-onset (<13) is rare (~1 in 40,000)",
+    "globalCases": "~24 million people worldwide (WHO 2022); leading cause of disability among adults aged 15-44"
+  },
+
+  "definition": "Schizophrenia (ICD-10: F20; DSM-5-TR 295.90) is a chronic neurodevelopmental disorder of psychosis defined by at least two of five core symptoms — delusions, hallucinations, disorganized speech, grossly disorganized or catatonic behavior, and negative symptoms (diminished emotional expression or avolition) — persisting for at least one month, with continuous signs of disturbance for at least six months and clear functional decline in work, social, or self-care domains. Schizoaffective disorder, substance/medication-induced psychotic disorder, and psychotic features of a primary mood disorder must be excluded. The illness is conceptualized in three symptom dimensions: positive symptoms (hallucinations and delusions), negative symptoms (anhedonia, alogia, avolition, asociality, blunted affect), and cognitive symptoms (impaired attention, working memory, and processing speed). Pathophysiology involves dopamine hyperactivity in mesolimbic pathways, dopamine hypoactivity in prefrontal cortex, glutamatergic NMDA-receptor hypofunction, GABAergic interneuron dysfunction, subtle gray-matter loss visible on MRI, and disrupted neural connectivity. Heritability is approximately 80% from twin studies, with hundreds of common variants of small effect plus rare highly penetrant copy-number variants such as 22q11.2 deletion. Onset typically follows a prodromal phase of social withdrawal, attenuated psychotic symptoms, and cognitive decline beginning months to years before the first frank psychotic episode. Schizophrenia is managed by psychiatrists, ideally within coordinated specialty care teams that integrate medication, psychosocial interventions, supported employment, and family education.",
+
+  "typesClassification": [
+    { "type": "First-episode schizophrenia", "description": "The initial psychotic episode meeting DSM-5-TR criteria, typically in late adolescence or early adulthood. Long duration of untreated psychosis (DUP) predicts worse outcome; early intervention services can shorten DUP and improve 2-year remission rates." },
+    { "type": "Multi-episode (chronic) schizophrenia", "description": "Most patients (60-70%) experience a relapsing-remitting course with recurrent episodes. Each relapse may bring residual symptoms and functional decline; medication adherence is the single strongest predictor of relapse-free time." },
+    { "type": "Treatment-resistant schizophrenia (TRS)", "description": "Persistent positive symptoms despite two adequate antipsychotic trials at therapeutic doses. Affects 20-30% of patients. Clozapine is the only evidence-based first-line treatment, producing response in roughly 30-60% of TRS cases (Meltzer 1989, CUtLASS-2)." },
+    { "type": "Schizophrenia with predominant negative symptoms", "description": "Persistent avolition, anhedonia, alogia, and blunted affect dominate the clinical picture. Negative symptoms drive long-term disability more than positive symptoms and respond less to standard antipsychotics; cariprazine has the strongest evidence among newer agents." },
+    { "type": "Catatonic features", "description": "Marked psychomotor disturbance — immobility, mutism, posturing, waxy flexibility, echolalia, or extreme agitation. Requires urgent recognition and benzodiazepine challenge; ECT is highly effective when benzodiazepines fail." },
+    { "type": "Childhood-onset schizophrenia", "description": "Onset before age 13, affecting roughly 1 in 40,000 children. More severe genetic loading, prominent negative and cognitive symptoms, and worse functional outcome than adult-onset forms." }
+  ],
+
+  "primarySymptoms": [
+    "Auditory hallucinations, most commonly voices commenting on the person's actions, conversing with each other, or issuing commands — present in roughly 70% of patients during an acute episode.",
+    "Delusions, which are fixed false beliefs held despite contradictory evidence; persecutory, referential, grandiose, religious, and somatic themes are typical, and a feeling of thought insertion or external control is highly characteristic of schizophrenia.",
+    "Disorganized speech such as derailment (loose associations), tangentiality, incoherence (\"word salad\"), and neologisms, which reflect underlying disorganized thinking and interfere with conversation.",
+    "Grossly disorganized or catatonic behavior — unpredictable agitation, inappropriate dress or hygiene, childlike silliness, or the immobility, mutism, and posturing of catatonia.",
+    "Negative symptoms including diminished emotional expression (blunted affect), avolition (loss of goal-directed activity), alogia (poverty of speech), anhedonia, and asociality — often the most disabling features over years and the slowest to improve with treatment.",
+    "Cognitive impairment in attention, working memory, processing speed, and executive function that predates the first episode by years and accounts for much of the long-term functional disability.",
+    "Lack of insight (anosognosia), present in roughly 50-80% of patients during acute episodes, in which the person does not recognize they are ill — a key driver of treatment refusal and relapse.",
+    "Social withdrawal, declining grades or work performance, neglect of self-care, and unusual or magical thinking during the prodromal phase, typically beginning months to years before the first psychotic break.",
+    "Sleep-wake disturbance, with reversed day-night cycles common during acute psychosis and persistent insomnia between episodes.",
+    "Suicidal thoughts and behavior, occurring in roughly 40% of patients at some point and accounting for the 5% lifetime suicide mortality, with highest risk in the first 5-10 years after diagnosis."
+  ],
+
+  "earlyWarningSigns": [
+    "Drop in school or work performance over several months without a clear stressor, often the first noticeable change in a previously well young person",
+    "Social withdrawal from friends and family, loss of interest in previously enjoyed activities, and increased solitary time",
+    "Unusual or magical beliefs — feeling watched, sensing hidden meanings in everyday events, or new preoccupation with the supernatural — short of frank delusions",
+    "Subthreshold perceptual disturbances such as hearing one's name called, fleeting shadows in peripheral vision, or sensing presences without full hallucinations",
+    "Sleep-wake reversal, neglect of hygiene, and emotional flattening noticed by close family or roommates"
+  ],
+
+  "emergencySigns": [
+    "Active suicidal ideation with plan or intent, or any suicide attempt — call 988 in the US, go to an emergency department, or call local emergency services",
+    "Homicidal or violent ideation directed at a specific person — emergency psychiatric evaluation; mandated reporting may apply",
+    "Catatonia with rigidity, mutism, refusal to eat or drink, or autonomic instability — psychiatric emergency requiring benzodiazepine challenge or urgent ECT referral",
+    "New high fever, muscle rigidity, autonomic instability, and altered mental status while on antipsychotics — possible neuroleptic malignant syndrome (NMS), a medical emergency",
+    "Acute dystonic reaction (involuntary muscle spasm of neck, eyes, or tongue) within hours to days of starting a high-potency antipsychotic — emergency department for IV anticholinergic",
+    "First-episode psychosis with command hallucinations or severe agitation — urgent psychiatric assessment, ideally through a coordinated specialty care or early intervention program"
+  ],
+
+  "causes": [
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Heritability is approximately 80% from twin studies. A first-degree relative with schizophrenia raises lifetime risk to 9-10% (versus ~1% baseline); monozygotic twins of an affected co-twin carry roughly 45% risk. Hundreds of common variants of small effect aggregate as polygenic risk; rare copy-number variants such as 22q11.2 deletion raise risk 20-30×."
+    },
+    {
+      "cause": "Neurodevelopmental disruption",
+      "description": "Maternal infection (influenza, toxoplasmosis), severe maternal malnutrition, gestational diabetes, obstetric complications (hypoxia, low birth weight), and advanced paternal age (>40) modestly raise risk. The leading hypothesis frames schizophrenia as a disorder of synaptic pruning and neuronal connectivity that begins prenatally and manifests after adolescent maturation of the prefrontal cortex."
+    },
+    {
+      "cause": "Cannabis and other substance use",
+      "description": "Heavy cannabis use, particularly high-potency products and onset before age 18, raises schizophrenia risk roughly 2-4× in dose-dependent fashion. Methamphetamine, cocaine, hallucinogens, and synthetic cannabinoids can precipitate or worsen psychosis in vulnerable individuals. Causal contribution remains debated, but the association is one of the strongest modifiable risk factors."
+    },
+    {
+      "cause": "Urban birth and migration",
+      "description": "Growing up in a dense urban environment raises schizophrenia risk roughly 2× compared with rural birth. First- and second-generation migrants — particularly those facing discrimination and visible minority status — have 2-3× higher incidence. Social adversity, defeat, and isolation are hypothesized mediators."
+    },
+    {
+      "cause": "Dopaminergic and glutamatergic dysregulation",
+      "description": "Excess presynaptic dopamine release in mesolimbic pathways drives positive symptoms — a hypothesis supported by the antipsychotic effect of D2-receptor blockade and the psychotogenic effect of amphetamines. Reduced prefrontal dopamine signaling and NMDA-receptor hypofunction contribute to negative and cognitive symptoms; ketamine reproduces the full symptom triad in healthy volunteers."
+    },
+    {
+      "cause": "Childhood trauma and adversity",
+      "description": "Childhood physical, sexual, and emotional abuse, bullying, and parental loss roughly double psychosis risk in dose-dependent fashion (Varese 2012 meta-analysis). Trauma may interact with genetic risk through HPA-axis dysregulation, inflammatory pathways, and altered threat appraisal."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of schizophrenia or related psychosis", "category": "genetic", "description": "First-degree relative with schizophrenia raises personal risk from ~1% to ~9-10%; monozygotic twin concordance is roughly 45%. Schizoaffective disorder, bipolar disorder with psychotic features, and severe depression with psychosis cluster in the same families." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men have ~1.4× the incidence of women and onset typically 3-5 years earlier (peak 18-25 vs 25-35 in women). Men tend to have more negative symptoms and worse premorbid functioning; women have a second smaller incidence peak after menopause." },
+    { "factor": "Advanced paternal age (>40 years)", "category": "non-modifiable", "description": "Each decade of paternal age above 30 raises offspring schizophrenia risk by roughly 20-30%, likely through de novo mutations in spermatogonial stem cells (Malaspina 2001, Kong 2012)." },
+    { "factor": "Heavy cannabis use, especially adolescent and high-potency", "category": "modifiable", "description": "Dose-dependent association: any cannabis use raises risk ~2×, daily use of high-potency cannabis raises risk ~4-5×. Earlier age of onset is more strongly associated than total exposure (Marconi 2016, EU-GEI 2019)." },
+    { "factor": "Childhood adversity (abuse, neglect, bullying)", "category": "non-modifiable", "description": "Severe childhood adversity roughly doubles lifetime psychosis risk in dose-dependent fashion; the effect is consistent across population, prospective, and twin studies (Varese 2012)." },
+    { "factor": "Urban birth and growing up in a city", "category": "environmental", "description": "Urban upbringing roughly doubles schizophrenia incidence versus rural; effect persists after adjusting for cannabis, socioeconomic status, and migration. Population density, social isolation, and ambient stressors are leading candidate mediators." },
+    { "factor": "Migration and minority status", "category": "environmental", "description": "First- and second-generation migrants from low- to high-income countries — particularly visible minorities facing discrimination — have 2-3× the incidence of native-born populations (Cantor-Graae & Selten 2005)." },
+    { "factor": "Obstetric complications and prenatal infection", "category": "non-modifiable", "description": "Hypoxic perinatal events, low birth weight, gestational diabetes, and prenatal viral or parasitic infection each raise risk roughly 1.5-2×; effects are larger when multiple exposures coincide." },
+    { "factor": "Severe early-life trauma or migration-related stress", "category": "environmental", "description": "Refugees, asylum seekers, and those displaced by conflict have markedly higher psychosis incidence than non-migrant peers, even after adjusting for genetic and socioeconomic factors." },
+    { "factor": "Rare highly penetrant genetic variants (e.g. 22q11.2 deletion)", "category": "genetic", "description": "22q11.2 deletion syndrome (DiGeorge / velocardiofacial syndrome) carries a ~25% lifetime schizophrenia risk; other rare CNVs at 1q21.1, 15q13.3, 16p11.2 and 17q12 raise risk 5-30×." }
+  ],
+
+  "affectedDemographics": [
+    "US 12-month prevalence: 0.25-0.64% of adults (NIMH); roughly 1.5 million Americans live with the diagnosis",
+    "Lifetime prevalence approximately 0.7-1% globally; incidence ~15 per 100,000 person-years (McGrath 2008)",
+    "Men outnumber women roughly 1.4:1 in incidence and present 3-5 years earlier on average",
+    "Migrants, refugees, and ethnic-minority urban populations show 2-3× incidence; effect particularly pronounced for second-generation Black Caribbean populations in the UK and Northern Europe",
+    "Childhood-onset (<13 years) is rare, affecting roughly 1 in 40,000 children, and carries stronger genetic loading"
+  ],
+
+  "diagnosisOverview": "Schizophrenia is a clinical diagnosis made through detailed history, mental status examination, collateral information from family, and a structured medical and substance workup to exclude mimics. The DSM-5-TR requires at least two of five core symptoms (delusions, hallucinations, disorganized speech, grossly disorganized or catatonic behavior, negative symptoms), with at least one being delusions, hallucinations, or disorganized speech. Symptoms must persist for one month of active phase, with continuous disturbance for six months, and produce functional decline. Schizoaffective disorder, mood disorders with psychotic features, substance-induced psychosis, and psychosis due to another medical condition must be specifically excluded. Medical workup at first presentation excludes secondary causes: comprehensive metabolic panel, CBC, TSH, vitamin B12 and folate, HIV and syphilis serology in higher-risk patients, urine drug screen for amphetamines, cannabis, cocaine, and hallucinogens, ceruloplasmin in young adults to exclude Wilson disease, anti-NMDA receptor antibodies if there is rapid neurologic decline, autoimmune workup if there are systemic features, and MRI brain when neurologic signs, late onset (>40), or atypical presentation suggest organic disease. EEG is appropriate when seizure-related psychosis is suspected. Suicide-risk assessment is mandatory at every visit using the Columbia C-SSRS or equivalent. The Positive and Negative Syndrome Scale (PANSS) and the briefer PANSS-6 quantify symptom severity and treatment response in research and increasingly in routine clinical care. Coordinated specialty care programs (the US RAISE-ETP model and European EASA model) front-load assessment and intervention at first episode, demonstrably improving 2-year remission, functional, and quality-of-life outcomes versus standard care.",
+
+  "diagnosticTests": [
+    {
+      "test": "Structured psychiatric interview with mental status examination",
+      "purpose": "Confirms DSM-5-TR criteria, characterizes symptom dimensions (positive, negative, cognitive, mood), and identifies suicidal or homicidal risk. Collateral history from family or close contacts is essential because insight is typically impaired.",
+      "whatToExpect": "A 60-90 minute interview with a psychiatrist or psychologist, often combined with family interview and review of school, work, and prior medical records. May span several sessions."
+    },
+    {
+      "test": "Urine drug screen and serum toxicology",
+      "purpose": "Excludes substance-induced psychosis from amphetamines, cocaine, cannabis (especially high-potency products and synthetic cannabinoids), hallucinogens, and PCP. Many first-presentation psychoses are precipitated or sustained by substance use.",
+      "whatToExpect": "Single urine sample with same-day immunoassay results; confirmatory mass spectrometry as needed."
+    },
+    {
+      "test": "Comprehensive metabolic panel, CBC, TSH, B12, folate",
+      "purpose": "Screens for thyroid disease, electrolyte abnormalities, anemia, B12 deficiency, and renal or hepatic dysfunction that can mimic or worsen psychosis. Provides a baseline before starting antipsychotics that may raise glucose, lipids, and weight.",
+      "whatToExpect": "Standard fasting blood draw; results return within 24-48 hours."
+    },
+    {
+      "test": "MRI brain (selected patients)",
+      "purpose": "Indicated for atypical presentations: late onset (>40), focal neurologic signs, rapid cognitive decline, history of head injury or seizures, or treatment-resistant course. Excludes tumor, demyelination, autoimmune encephalitis, or vascular lesions.",
+      "whatToExpect": "A 30-45 minute MRI scan, no ionizing radiation, often with and without contrast. Patients with claustrophobia may receive oral anxiolytic premedication."
+    },
+    {
+      "test": "Anti-NMDA receptor and autoimmune antibody panel (selected patients)",
+      "purpose": "Excludes autoimmune encephalitis, which can present with first-episode psychosis indistinguishable from schizophrenia, particularly in young women with ovarian teratoma. Treatable with immunotherapy if recognized.",
+      "whatToExpect": "Serum and ideally CSF testing; results take days to weeks. Reserved for cases with neurologic signs, seizures, autonomic instability, or rapid progression."
+    },
+    {
+      "test": "Positive and Negative Syndrome Scale (PANSS)",
+      "purpose": "Standardized 30-item clinician-rated scale that quantifies positive, negative, and general symptoms. Used to characterize severity, track treatment response, and define remission (≤3 on each core symptom for ≥6 months, Andreasen 2005 criteria).",
+      "whatToExpect": "A structured 30-45 minute interview administered by trained clinicians; the briefer PANSS-6 takes about 10 minutes and is increasingly used in routine care."
+    },
+    {
+      "test": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "purpose": "Mandatory suicide-risk screen at every visit. Stratifies passive ideation, active ideation, plan, intent, behaviors, and prior attempts to guide disposition and means-restriction counseling.",
+      "whatToExpect": "Six initial yes/no questions taking 1-2 minutes; expands with follow-up questions if positive."
+    },
+    {
+      "test": "Cognitive testing (MATRICS or BACS battery)",
+      "purpose": "Quantifies attention, working memory, processing speed, and executive function. Cognitive deficits drive long-term functional disability more strongly than positive symptoms and guide cognitive remediation therapy.",
+      "whatToExpect": "A 60-90 minute structured battery administered by a psychologist or trained technician; results inform supported employment and education plans."
+    }
+  ],
+
+  "treatmentOverview": "Schizophrenia treatment is built around three pillars: antipsychotic medication, evidence-based psychosocial intervention, and coordinated care that integrates the two. The 2020 American Psychiatric Association practice guideline strongly recommends an antipsychotic for every patient with schizophrenia, continued indefinitely for those with recurrent episodes. First-line options are second-generation antipsychotics — risperidone, olanzapine, aripiprazole, paliperidone, quetiapine, ziprasidone, lurasidone, and cariprazine — selected on the basis of side-effect profile, prior response, route, and comorbidity. CATIE and CUtLASS-1 demonstrated broadly comparable efficacy across most agents (olanzapine somewhat more effective on persistence-on-drug measures but with the worst metabolic profile), and Cochrane network meta-analyses (Huhn 2019) confirm that response differences between most second-generation antipsychotics are small, while side-effect differences are large. Clozapine is the only agent with proven superiority for treatment-resistant schizophrenia and is the recommended treatment after two failed antipsychotic trials, with response in roughly 30-60% of TRS patients (Meltzer 1989) and uniquely strong anti-suicide effects (InterSePT). Clozapine requires weekly to monthly white-blood-cell monitoring because of agranulocytosis risk (~0.8% lifetime, fatal in <0.01% with monitoring) and screening for myocarditis, seizures, and metabolic disease. Long-acting injectable antipsychotics (paliperidone palmitate, aripiprazole monohydrate, risperidone microspheres) reduce relapse by 20-30% versus oral equivalents and are preferred when adherence is uncertain or after a first relapse. Psychosocial interventions are not optional: cognitive behavioral therapy for psychosis (CBT-p) reduces persistent positive symptoms (NICE NG178), family psychoeducation cuts 1-year relapse roughly in half, supported employment (Individual Placement and Support, IPS) achieves 60-70% competitive employment rates versus 20-30% with traditional vocational rehabilitation, cognitive remediation improves cognition and functional outcomes, and assertive community treatment (ACT) reduces hospitalization in patients with severe illness. First-episode coordinated specialty care programs (RAISE-ETP, EASA, OPTiMiSE) deliver low-dose antipsychotic plus therapy plus family work plus supported employment in the first 2 years after diagnosis, improving remission, functional outcome, and engagement. Untreated psychosis predicts worse long-term outcome; shortening the duration of untreated psychosis (DUP) is a measurable goal at the health-system level.",
+
+  "medicalTreatments": [
+    {
+      "name": "Risperidone (2-6 mg daily) or paliperidone (3-12 mg daily) (second-generation antipsychotic)",
+      "description": "Strong D2 and 5-HT2A blockade. First-line for first-episode and recurrent schizophrenia. Effective for positive symptoms; prolactin elevation, extrapyramidal symptoms above 6 mg, and weight gain are the main concerns. Available as long-acting injectables (paliperidone palmitate monthly, 3-monthly, and 6-monthly).",
+      "effectiveness": "Response (>50% PANSS reduction) in 50-60% by week 6; remission rates of 25-40% at 1 year in first-episode care."
+    },
+    {
+      "name": "Olanzapine (10-30 mg daily)",
+      "description": "Broad receptor profile; among the most effective second-generation antipsychotics on persistence-on-drug measures in CATIE, but carries the heaviest metabolic burden (mean 4-6 kg weight gain, dyslipidemia, glucose dysregulation). Useful in severe positive symptoms; monitor metabolic parameters every 3 months.",
+      "effectiveness": "Response in 60-70% by week 6; longer time-to-discontinuation than other CATIE-arm agents (Lieberman 2005)."
+    },
+    {
+      "name": "Aripiprazole (10-30 mg daily) or cariprazine (1.5-6 mg daily) (partial D2/D3 agonists)",
+      "description": "Dopamine partial agonism produces lower extrapyramidal effects, minimal prolactin elevation, and less metabolic toxicity than olanzapine or risperidone. Aripiprazole monohydrate is a long-acting injectable. Cariprazine has the strongest evidence among newer agents for predominant negative symptoms (Németh 2017).",
+      "effectiveness": "Response rates 50-60% by week 6; cariprazine demonstrated superiority over risperidone on PANSS Negative Factor Score in head-to-head trial."
+    },
+    {
+      "name": "Clozapine (titrated 12.5 mg to 300-600 mg daily)",
+      "description": "The only agent with proven superiority in treatment-resistant schizophrenia. Indicated after failure of two adequate antipsychotic trials. Requires weekly CBC for 6 months, then biweekly to 12 months, then monthly indefinitely because of agranulocytosis risk. Monitor for myocarditis (especially in the first 8 weeks), seizures, hypersalivation, constipation (potentially fatal ileus), and metabolic side effects.",
+      "effectiveness": "Response in 30-60% of treatment-resistant patients within 12 weeks (Meltzer 1989, Kane 1988, CUtLASS-2 2006); unique anti-suicide effect with 24% reduction in suicide attempts versus olanzapine (InterSePT, Meltzer 2003)."
+    },
+    {
+      "name": "Long-acting injectable antipsychotics (paliperidone palmitate, aripiprazole monohydrate, risperidone microspheres, olanzapine pamoate)",
+      "description": "Depot formulations administered every 2 weeks to 6 months, depending on agent. Reduce relapse compared with oral equivalents by ensuring adherence. Recommended after a first relapse, in patients with adherence concerns, or by patient preference; first-episode evidence (PRELAPSE, Kane 2020) supports earlier use.",
+      "effectiveness": "Reduce 1-year relapse by 20-30% versus oral antipsychotics in mirror-image and randomized studies; paliperidone 6-monthly non-inferior to monthly in pivotal trial."
+    },
+    {
+      "name": "Lurasidone (40-160 mg daily with food) or ziprasidone (40-80 mg twice daily with food)",
+      "description": "Lower metabolic and weight-gain burden than olanzapine or risperidone; both require meal co-administration for absorption. Useful for patients with metabolic syndrome, diabetes, or cardiovascular comorbidity.",
+      "effectiveness": "Response rates similar to other second-generation agents (~50-60%); favored on tolerability rather than efficacy."
+    },
+    {
+      "name": "Adjunctive cognitive behavioral therapy for psychosis (CBT-p, 16-24 sessions)",
+      "description": "Structured psychotherapy that targets persistent delusions, hallucinations, and negative symptoms through cognitive restructuring, behavioral experiments, and coping-skill development. NICE NG178 recommends CBT-p for all patients with schizophrenia.",
+      "effectiveness": "Modest effect on persistent positive symptoms (effect size ~0.4); larger effects on distress, functioning, and recovery-oriented outcomes (Wykes 2008, Jauhar 2014)."
+    },
+    {
+      "name": "Family psychoeducation and Open Dialogue (10+ sessions over months)",
+      "description": "Structured education and skills training for family members, focused on reducing expressed emotion (criticism, hostility, overinvolvement), crisis planning, and shared decision-making. Open Dialogue is a Finnish family-network model with promising naturalistic outcomes.",
+      "effectiveness": "Cuts 1-year relapse roughly in half compared with usual care; Cochrane meta-analysis confirms effects on relapse and hospitalization (Pharoah 2010)."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Electroconvulsive therapy (ECT)",
+      "description": "Indicated for catatonic schizophrenia, severe treatment-resistant cases with prominent affective or suicidal features, life-threatening malnutrition, or NMS. Six to twelve sessions, three times weekly, under brief general anesthesia. Side effects: transient anterograde and retrograde memory impairment.",
+      "successRate": "Remission rates of 60-80% in catatonia and 40-60% in non-catatonic treatment-resistant schizophrenia, particularly when combined with clozapine (Petrides 2015)."
+    },
+    {
+      "name": "Repetitive transcranial magnetic stimulation (rTMS)",
+      "description": "Investigational adjunct, most studied for persistent auditory hallucinations (low-frequency rTMS to left temporoparietal cortex) and negative symptoms (high-frequency rTMS to left dorsolateral prefrontal cortex). Non-invasive, 20-30 sessions over 4-6 weeks.",
+      "successRate": "Modest reductions in persistent auditory hallucinations and negative symptoms in randomized trials (Slotema 2014, Aleman 2018); not yet FDA-approved for schizophrenia indications."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Omega-3 fatty acids (1-2 g EPA+DHA daily)", "description": "Early-intervention trial in ultra-high-risk youth (Amminger 2010) reduced transition to psychosis at 12 weeks, though a larger follow-up (NEURAPRO 2017) did not replicate the effect. Consider as adjunct in prodromal and first-episode care; not a substitute for antipsychotic in established schizophrenia." },
+    { "name": "Cognitive remediation therapy", "description": "Computerized and clinician-supported training in attention, working memory, processing speed, and executive function. Cochrane meta-analysis shows small-to-moderate effects on cognition and functional outcomes, particularly when combined with vocational support (Wykes 2011)." },
+    { "name": "Supported employment (Individual Placement and Support, IPS)", "description": "Rapid placement in competitive employment with ongoing on-the-job support, integrated with mental-health care. Achieves 60-70% competitive employment rates versus 20-30% with traditional vocational rehabilitation in randomized trials (Drake 1999, Bond 2008)." }
+  ],
+
+  "whySeeSpecialist": "Every first-episode psychosis should be evaluated by a psychiatrist, ideally within a coordinated specialty care or early intervention program (RAISE-ETP, EASA, or equivalent). Refer urgently for catatonia, command hallucinations, suicidal or homicidal ideation, neuroleptic malignant syndrome, acute dystonic reactions, suspected autoimmune encephalitis, or rapid neurologic decline. Treatment-resistant cases (failure of two adequate antipsychotic trials) require psychiatry assessment for clozapine initiation. Pregnancy, postpartum, geriatric onset, and significant medical comorbidity also warrant specialist involvement.",
+
+  "doctorSelectionGuide": "Look for a psychiatrist board-certified by the ABPN with experience in psychotic disorders, ideally connected to a coordinated specialty care or early intervention program for first-episode patients. For treatment-resistant cases, choose a clinic with clozapine experience and the laboratory infrastructure for monitoring. Continuity matters more than prestige — schizophrenia care is a multi-year relationship, and consistent rapport with the same prescriber, therapist, and case manager predicts adherence and outcome. For families, prioritize teams that offer family psychoeducation and shared decision-making rather than information-only visits.",
+
+  "hospitalCriteria": [
+    "Inpatient psychiatric unit with capacity for involuntary holds, safety protocols for acute psychosis, and rapid antipsychotic initiation",
+    "Coordinated specialty care or early intervention program for first-episode psychosis, integrating psychiatry, therapy, case management, family work, and supported employment",
+    "Clozapine clinic with weekly CBC laboratory infrastructure and provider expertise in metabolic, cardiac, and hematologic monitoring",
+    "ECT service with anesthesiology coverage for catatonia, severe treatment-resistant cases, and patients intolerant of clozapine",
+    "Assertive community treatment (ACT) team for patients with frequent relapses, homelessness, justice-system contact, or severe functional impairment"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid heavy cannabis use, particularly high-potency products and adolescent onset — dose-dependent association with psychosis is one of the strongest modifiable risk factors",
+    "Screen and intervene in ultra-high-risk individuals (attenuated psychotic symptoms, brief intermittent psychotic symptoms, or genetic risk plus functional decline) through specialized early-intervention clinics",
+    "Treat childhood trauma and adversity through evidence-based psychotherapy; reducing post-traumatic stress measurably lowers later psychosis incidence",
+    "Address obstetric care quality — reducing prenatal infection, gestational diabetes, and birth complications has modest but population-level effects",
+    "Maintain antipsychotic medication after a first episode for at least 1-2 years; discontinuation within 12 months produces relapse in 60-80% of patients",
+    "Use long-acting injectable antipsychotics after a first relapse to ensure adherence and prevent further episodes that drive functional decline"
+  ],
+
+  "lifestyleModifications": [
+    "Maintain a regular sleep schedule with consistent bedtime and wake time; sleep disruption is a relapse trigger and an early-warning sign",
+    "Eliminate or substantially reduce cannabis, alcohol, methamphetamine, cocaine, and hallucinogens — all worsen psychosis and antipsychotic response",
+    "Engage in 30-45 minutes of moderate aerobic exercise 3-5 days weekly; exercise improves mood, sleep, weight, and cognitive function in schizophrenia",
+    "Quit smoking with combined nicotine replacement, bupropion or varenicline, and behavioral support; smoking rates are 60-80% in schizophrenia and contribute to cardiovascular mortality",
+    "Schedule daily meaningful activity — supported employment, education, volunteering, or structured social engagement — to counter avolition and isolation",
+    "Build a written relapse-prevention plan that lists personal early warning signs, coping strategies, support contacts, and 988 for crisis",
+    "Attend family psychoeducation sessions together; reducing expressed emotion in the household measurably lowers relapse risk"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style eating pattern with vegetables, fruits, whole grains, legumes, fish, and olive oil; reduces cardiovascular risk that is independently elevated in schizophrenia",
+      "Omega-3 fatty acids from fatty fish (salmon, sardines) 2-3 times weekly, or EPA-predominant supplements as adjunct in prodromal and first-episode care",
+      "Regular protein intake (1.0-1.2 g/kg daily) to maintain lean body mass during antipsychotic-related weight gain",
+      "High-fiber foods to counter clozapine- and olanzapine-related constipation, which can progress to fatal ileus if neglected",
+      "Adequate hydration, particularly on clozapine, which has a narrow therapeutic window affected by hydration status"
+    ],
+    "avoid": [
+      "High-sugar and ultra-processed foods that compound antipsychotic-related glucose dysregulation and weight gain",
+      "Heavy alcohol use, which worsens psychosis, lowers seizure threshold on clozapine, and raises liver-injury risk",
+      "Cannabis in any form, especially high-potency products, which raise relapse and worsen response to treatment",
+      "Caffeine binges (energy drinks, multiple coffees) that disrupt sleep and can precipitate anxiety or paranoia",
+      "Grapefruit and grapefruit juice in patients on lurasidone, clozapine, or quetiapine due to CYP3A4 interactions",
+      "Crash diets and prolonged fasting that destabilize medication levels and worsen energy and cognition"
+    ]
+  },
+
+  "exerciseGuidelines": "Aim for 30-45 minutes of moderate-intensity aerobic exercise 3-5 days per week, supplemented by resistance training twice weekly. Exercise improves mood, sleep, cardiometabolic risk, and cognitive function in schizophrenia, and partially counteracts antipsychotic-related weight gain (Firth 2017 meta-analysis). Group-based exercise adds social benefit. Start gradually after a long sedentary period, especially in patients with clozapine-related myocarditis or cardiovascular comorbidity.",
+
+  "dailyManagement": [
+    "Take antipsychotic medication at the same time daily; use a pill organizer, blister pack, or phone reminder — adherence is the single strongest predictor of relapse-free time",
+    "Consider a long-acting injectable after a first relapse to remove daily adherence as a failure point",
+    "Keep regular follow-up with the prescribing psychiatrist (monthly during stabilization, every 3-6 months once stable)",
+    "Monitor weight, blood pressure, fasting glucose, HbA1c, and lipid panel every 3-6 months while on second-generation antipsychotics; intervene early on metabolic drift",
+    "Track personal early warning signs (sleep change, paranoia, social withdrawal) in a written or app-based log and share with family and clinician",
+    "Maintain a relapse-prevention plan with crisis contacts, 988 in the US, and clear steps for early intervention",
+    "Attend therapy, family psychoeducation, and peer-support sessions even when symptoms are stable; consistent engagement protects against relapse"
+  ],
+
+  "prognosis": "Course is heterogeneous. Roughly one-third of patients achieve sustained symptomatic and functional recovery, one-third have persistent but manageable symptoms with partial functional recovery, and one-third have severe persistent illness with significant disability (Hegarty 1994 meta-analysis, refined by Jääskeläinen 2013 — pooled recovery rate ~13.5% by stricter modern criteria). With coordinated specialty care and early intervention, 2-year remission rates reach 50-60% and competitive employment 40-50%. The single strongest predictor of outcome is medication adherence: relapse rates fall from 60-80% per year off medication to 15-25% on consistent treatment, and from there to ~10% with long-acting injectables. Negative symptoms and cognitive impairment drive long-term disability more than positive symptoms, and respond less to antipsychotics. Suicide accounts for roughly 5% of lifetime mortality, with highest risk in the first 5-10 years after diagnosis and in young men with preserved insight; clozapine uniquely reduces suicide risk. Life expectancy is shortened by 10-20 years compared with the general population, largely from cardiovascular disease, diabetes, smoking-related illness, and accidents — addressing these comorbidities is as important as managing psychosis.",
+
+  "recoveryTimeline": "After starting antipsychotic medication, agitation and sleep typically improve within 1-3 days, positive symptoms (hallucinations, delusions) reduce over 2-6 weeks, and full response to a first adequate trial is seen by week 6-8. Negative symptoms and cognitive deficits improve more slowly over months, often plateauing partially. After a first episode, antipsychotic continuation for at least 1-2 years is recommended; discontinuation within 12 months produces relapse in 60-80% of patients. Coordinated specialty care over 2 years after first episode achieves 50-60% remission and substantial functional gains. For treatment-resistant schizophrenia, clozapine response typically emerges over 12-24 weeks and can continue improving for up to a year.",
+
+  "complications": [
+    "Suicide and self-harm — lifetime suicide risk ~5%, highest in the first 5-10 years after diagnosis; clozapine uniquely reduces this risk (InterSePT)",
+    "Treatment-resistant schizophrenia — persistent positive symptoms despite two adequate antipsychotic trials; affects 20-30% of patients and is the indication for clozapine",
+    "Tardive dyskinesia — persistent involuntary movements of face, tongue, trunk, or limbs after months to years of antipsychotic exposure; risk is lower with second-generation agents and treatable with VMAT2 inhibitors (valbenazine, deutetrabenazine)",
+    "Metabolic syndrome and cardiovascular disease — antipsychotic-related weight gain, dyslipidemia, and glucose dysregulation contribute to a 10-20-year life-expectancy gap; aggressive cardiometabolic care is essential",
+    "Neuroleptic malignant syndrome — rare (<1%) but life-threatening reaction with fever, rigidity, autonomic instability, and altered mental status; requires antipsychotic withdrawal and supportive care",
+    "Clozapine-related agranulocytosis, myocarditis, seizures, and bowel obstruction — all rare but serious; structured monitoring detects them early",
+    "Substance use disorder — alcohol, cannabis, methamphetamine, cocaine, and tobacco use coexist with schizophrenia in 40-60% and substantially worsen course",
+    "Homelessness, incarceration, and victimization — schizophrenia patients are more often victims than perpetrators of violence; assertive community treatment and supported housing reduce these outcomes"
+  ],
+
+  "supportResources": [
+    { "name": "988 Suicide & Crisis Lifeline (US)", "url": "https://988lifeline.org/", "description": "Free 24/7 confidential support for people in suicidal crisis or emotional distress. Call or text 988." },
+    { "name": "National Alliance on Mental Illness (NAMI)", "url": "https://www.nami.org/about-mental-illness/mental-health-conditions/schizophrenia/", "description": "US patient and family advocacy, education, support groups, and a free helpline (1-800-950-NAMI) covering schizophrenia and related psychotic disorders." },
+    { "name": "Schizophrenia & Psychosis Action Alliance (S&PAA)", "url": "https://sczaction.org/", "description": "US patient-, family-, and provider-led advocacy organization focused on schizophrenia care, research, and policy." },
+    { "name": "Rethink Mental Illness (UK)", "url": "https://www.rethink.org/advice-and-information/about-mental-illness/learn-more-about-conditions/schizophrenia/", "description": "UK charity offering plain-language schizophrenia information, peer support, and help accessing NHS services." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "bipolar-disorder", "name": "Bipolar Disorder", "keyDifference": "Bipolar disorder is defined by discrete mood episodes — mania, hypomania, or major depression — that may include mood-congruent psychotic features. Schizophrenia features psychosis that persists outside of mood episodes for at least two weeks. Family history, mood-cycling pattern, and response to lithium or mood stabilizers help distinguish the two." },
+    { "slug": "schizoaffective-disorder-bipolar-type-f250", "name": "Schizoaffective Disorder, Bipolar Type", "keyDifference": "Schizoaffective disorder requires both a major mood episode (manic, mixed, or depressive) and psychotic symptoms meeting schizophrenia criteria, with at least two weeks of psychosis without mood symptoms in the same illness episode. Schizophrenia lacks the prominent and recurrent mood episodes that define schizoaffective disorder." },
+    { "slug": "depression", "name": "Major Depressive Disorder with Psychotic Features", "keyDifference": "Psychotic depression confines hallucinations and delusions (typically mood-congruent — guilt, worthlessness, nihilism) to depressive episodes. Schizophrenia features psychosis that persists outside of mood episodes and is dominated by non-mood-congruent delusions, formal thought disorder, and negative symptoms." },
+    { "slug": "brief-psychotic-disorder-f23", "name": "Brief Psychotic Disorder", "keyDifference": "Brief psychotic disorder lasts more than one day but less than one month with full return to premorbid functioning; often follows a major stressor. Schizophrenia requires continuous signs of disturbance for at least six months and produces functional decline." },
+    { "slug": "delusional-disorders-f22", "name": "Delusional Disorder", "keyDifference": "Delusional disorder features one or more non-bizarre delusions for at least one month, with functioning otherwise preserved and no prominent hallucinations, disorganized speech, or negative symptoms. Schizophrenia requires at least two active-phase symptoms with broader functional impact." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "depression", "name": "Major Depressive Disorder" },
+    { "slug": "anxiety", "name": "Anxiety" },
+    { "slug": "ptsd", "name": "PTSD" },
+    { "slug": "cannabis-abuse-uncomplicated-f1210", "name": "Cannabis Use Disorder" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "bipolar-disorder", "name": "Bipolar Disorder", "relevance": "Shares psychotic features, genetic risk, and treatment overlap; bipolar with psychosis is the most common diagnostic alternative to schizophrenia in young adults." },
+    { "slug": "schizoaffective-disorder-bipolar-type-f250", "name": "Schizoaffective Disorder, Bipolar Type", "relevance": "Closely related disorder combining schizophrenia-spectrum psychosis with major mood episodes; managed with antipsychotic plus mood stabilizer." },
+    { "slug": "depression", "name": "Depression", "relevance": "Major depressive episodes occur in 40-60% of schizophrenia patients and increase suicide risk; integrated antidepressant plus antipsychotic treatment is often required." },
+    { "slug": "brief-psychotic-disorder-f23", "name": "Brief Psychotic Disorder", "relevance": "Self-limited stress-related psychosis that resembles a first schizophrenia episode but resolves within a month; longitudinal follow-up distinguishes the two." },
+    { "slug": "delusional-disorders-f22", "name": "Delusional Disorder", "relevance": "Isolated delusional syndrome without prominent hallucinations or negative symptoms; manages with antipsychotic but generally better functional outcome than schizophrenia." },
+    { "slug": "ptsd", "name": "PTSD", "relevance": "Trauma is a substantial risk factor for psychosis, and PTSD with dissociative features can present with quasi-psychotic phenomena; trauma-focused therapy improves overall outcome." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What are the symptoms of schizophrenia?",
+      "answer": "Schizophrenia is defined by hallucinations (often hearing voices), delusions (fixed false beliefs), disorganized speech, grossly disorganized or catatonic behavior, and negative symptoms such as reduced motivation, emotional expression, and speech. At least two of these must be present for one month, with continuous disturbance for six months and clear functional decline at work, school, or in self-care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "At what age does schizophrenia usually start?",
+      "answer": "Schizophrenia most often emerges in late adolescence and early adulthood. The peak age of onset is 18-25 in men and 25-35 in women. Childhood-onset schizophrenia (before age 13) is rare, affecting roughly 1 in 40,000 children. Late-onset cases after age 45 occur and warrant medical workup to exclude organic causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is schizophrenia curable?",
+      "answer": "Schizophrenia is not curable in the sense of a permanent disappearance of vulnerability, but it is highly treatable. About one-third of patients achieve sustained symptomatic recovery with treatment, another third have manageable symptoms with partial recovery, and the remainder have more severe persistent illness. Coordinated specialty care for first-episode patients substantially improves long-term outcome.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes schizophrenia?",
+      "answer": "Schizophrenia arises from a combination of genetic susceptibility (heritability around 80%), neurodevelopmental disruption, and environmental triggers. Major contributors include family history, heavy cannabis use, urban birth, migration and minority stress, advanced paternal age, obstetric complications, and childhood trauma. No single cause explains every case; risk factors interact across the life course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is schizophrenia genetic?",
+      "answer": "Genetics is the strongest single risk factor. Twin studies estimate heritability at roughly 80%. A first-degree relative with schizophrenia raises personal risk from about 1% to 9-10%, and an identical twin co-twin is affected in roughly 45% of pairs. Hundreds of common variants of small effect aggregate as polygenic risk; rare copy-number variants such as 22q11.2 deletion raise risk substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cannabis cause schizophrenia?",
+      "answer": "Heavy cannabis use, especially of high-potency products and starting in adolescence, raises schizophrenia risk roughly 2-4 times in dose-dependent fashion. The association is one of the strongest modifiable risk factors but does not prove cannabis is the sole cause. People with family history of psychosis are advised to avoid cannabis, and people with established schizophrenia should stop cannabis to improve treatment response.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between schizophrenia and bipolar disorder?",
+      "answer": "Bipolar disorder is a mood disorder defined by manic, hypomanic, or depressive episodes; psychotic features, when present, are confined to mood episodes and are typically mood-congruent. Schizophrenia is a psychotic disorder in which hallucinations, delusions, and negative symptoms persist outside of mood episodes for at least two weeks. Family history, course, and treatment response help distinguish the two.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between schizophrenia and schizoaffective disorder?",
+      "answer": "Schizoaffective disorder requires both a major mood episode (manic or depressive) and psychotic symptoms meeting schizophrenia criteria during the same illness period, with at least two weeks of psychosis in the absence of prominent mood symptoms. Schizophrenia lacks the prominent and recurrent mood episodes that define schizoaffective disorder. Treatment usually combines antipsychotic and mood stabilizer.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are positive and negative symptoms?",
+      "answer": "Positive symptoms are experiences added to normal functioning: hallucinations, delusions, disorganized thinking, and grossly disorganized or catatonic behavior. Negative symptoms are reductions in normal functioning: blunted emotional expression, reduced speech, reduced motivation, anhedonia, and social withdrawal. Negative symptoms drive long-term disability more than positive symptoms and respond less to standard antipsychotics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is schizophrenia diagnosed?",
+      "answer": "Schizophrenia is a clinical diagnosis. A psychiatrist gathers detailed history, performs a mental status examination, and obtains collateral information from family. Medical workup includes a drug screen, blood tests, and selective MRI to exclude substance-induced psychosis, autoimmune encephalitis, and other organic causes. DSM-5-TR or ICD-10 F20 criteria are then applied to confirm the diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is schizophrenia treated?",
+      "answer": "Treatment combines antipsychotic medication, evidence-based psychosocial therapy, and coordinated care. Second-generation antipsychotics such as risperidone, olanzapine, aripiprazole, paliperidone, and cariprazine are first-line. Clozapine is reserved for treatment-resistant cases. Cognitive behavioral therapy for psychosis, family psychoeducation, supported employment, and assertive community treatment substantially improve outcomes when added to medication.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take antipsychotics to work?",
+      "answer": "Agitation and sleep typically improve within 1-3 days of starting an antipsychotic. Hallucinations and delusions reduce over 2-6 weeks, and full response to a first adequate trial is seen by week 6-8. Negative symptoms and cognitive deficits improve more slowly over months. If there is no meaningful improvement at adequate dose by week 6, switching agents or escalating to clozapine is considered.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is clozapine and why is it special?",
+      "answer": "Clozapine is the only antipsychotic with proven superiority for treatment-resistant schizophrenia and is the recommended option after failure of two adequate trials. It produces response in 30-60% of treatment-resistant patients and is the only drug shown to reduce suicide risk in schizophrenia. Use requires regular blood-count monitoring because of agranulocytosis risk, plus surveillance for myocarditis, seizures, and bowel obstruction.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a long-acting injectable antipsychotic?",
+      "answer": "Long-acting injectables are depot formulations of antipsychotics administered every 2 weeks to 6 months. Paliperidone palmitate, aripiprazole monohydrate, risperidone microspheres, and olanzapine pamoate are examples. They reduce 1-year relapse by 20-30% versus oral antipsychotics by removing daily adherence as a failure point and are recommended after a first relapse or when adherence is uncertain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need medication for the rest of my life?",
+      "answer": "After a first episode of schizophrenia, antipsychotic continuation for at least 1-2 years is recommended; discontinuation within 12 months produces relapse in 60-80% of patients. After a second episode, indefinite treatment is the norm. Many patients can remain on lower maintenance doses with long-acting injectables or carefully selected oral agents while preserving function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is schizophrenia the same as multiple personality disorder?",
+      "answer": "No. Schizophrenia is a chronic psychotic disorder defined by hallucinations, delusions, disorganization, and negative symptoms. Dissociative identity disorder (formerly multiple personality disorder) is a trauma-related dissociative condition in which two or more distinct identity states alternate in control of behavior. The two are unrelated; popular usage of \"split personality\" for schizophrenia is a long-standing inaccuracy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are people with schizophrenia violent?",
+      "answer": "Most people with schizophrenia are not violent and are more often victims than perpetrators of violence. Risk of violence rises modestly when schizophrenia is combined with active substance use, untreated paranoia with specific persecutory delusions, or a personal history of violence. Treatment, supported housing, and substance-use intervention reduce risk substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress or trauma cause schizophrenia?",
+      "answer": "Stress and trauma do not cause schizophrenia alone, but they raise risk in people with genetic vulnerability. Childhood abuse, neglect, and bullying roughly double lifetime psychosis risk in dose-dependent fashion. Acute stressors can precipitate a first episode or relapse in vulnerable individuals. Reducing trauma exposure and treating PTSD measurably improves outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is first-episode psychosis treatment?",
+      "answer": "First-episode psychosis is treated with low-dose antipsychotic medication plus coordinated specialty care that integrates therapy, family psychoeducation, supported employment, and case management. Programs such as RAISE-ETP in the US and EASA in the UK improve 2-year remission, functional outcomes, and engagement. Shortening the duration of untreated psychosis is a key goal of these services.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do antipsychotics cause weight gain and diabetes?",
+      "answer": "Many second-generation antipsychotics, especially olanzapine and clozapine, cause weight gain, dyslipidemia, and glucose dysregulation. Monitoring weight, blood pressure, fasting glucose, HbA1c, and lipids every 3-6 months is recommended. Agents with lower metabolic burden include aripiprazole, lurasidone, ziprasidone, and cariprazine. Diet, exercise, and metformin reduce antipsychotic-related weight gain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the 988 lifeline?",
+      "answer": "988 is the US Suicide & Crisis Lifeline. Calling or texting 988 connects you to free confidential 24/7 support from trained crisis counselors. The lifeline is appropriate for anyone in suicidal crisis, severe emotional distress, or concern for a loved one. International equivalents exist; search for your country's crisis line.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get schizophrenia?",
+      "answer": "Childhood-onset schizophrenia (before age 13) is rare, affecting roughly 1 in 40,000 children. It typically carries stronger genetic loading, more severe symptoms, and worse functional outcome than adult-onset cases. Specialized child and adolescent psychiatry care is essential. Many childhood psychotic-like experiences do not progress to schizophrenia and should be evaluated carefully before diagnosis.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Schizophrenia (chronic psychotic disorder)",
+
+  "regionalNames": [
+    { "name": "Unmaad", "region": "India", "language": "Hindi" },
+    { "name": "Manasika Bhangam", "region": "India", "language": "Tamil" },
+    { "name": "Schizophrenie", "region": "France", "language": "French" }
+  ],
+
+  "searchTags": [
+    "schizophrenia",
+    "psychosis",
+    "first episode psychosis",
+    "paranoid schizophrenia",
+    "hallucinations",
+    "hearing voices",
+    "delusions",
+    "antipsychotics",
+    "clozapine",
+    "risperidone",
+    "olanzapine",
+    "aripiprazole",
+    "treatment-resistant schizophrenia",
+    "negative symptoms",
+    "schizophrenia vs bipolar"
+  ],
+
+  "symptomKeywords": [
+    "hearing voices",
+    "seeing things that aren't there",
+    "paranoid thoughts",
+    "feeling watched",
+    "disorganized thinking",
+    "thought insertion",
+    "social withdrawal",
+    "loss of motivation",
+    "blunted emotions",
+    "fixed false beliefs"
+  ],
+
+  "metaTitle": "Schizophrenia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Schizophrenia: chronic psychotic illness with hallucinations, delusions, and negative symptoms. Treatment, antipsychotics, and recovery from our medical board.",
+
+  "keywords": [
+    "schizophrenia symptoms",
+    "schizophrenia treatment",
+    "schizophrenia causes",
+    "first episode psychosis",
+    "antipsychotics",
+    "clozapine",
+    "treatment-resistant schizophrenia",
+    "schizophrenia vs bipolar",
+    "negative symptoms",
+    "positive symptoms",
+    "paranoid schizophrenia",
+    "hearing voices",
+    "is schizophrenia curable",
+    "schizophrenia diagnosis"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "sources": [
+    {
+      "title": "American Psychiatric Association. 2020. The American Psychiatric Association Practice Guideline for the Treatment of Patients with Schizophrenia, 3rd Edition.",
+      "url": "https://psychiatryonline.org/doi/book/10.1176/appi.books.9780890424841",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Lieberman JA, Stroup TS, McEvoy JP, et al. 2005. Effectiveness of antipsychotic drugs in patients with chronic schizophrenia (CATIE). N Engl J Med 353(12):1209-1223.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16172203/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Jones PB, Barnes TR, Davies L, et al. 2006. Randomized controlled trial of the effect on quality of life of second- vs first-generation antipsychotic drugs in schizophrenia (CUtLASS 1). Arch Gen Psychiatry 63(10):1079-1087.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17015810/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kahn RS, Winter van Rossum I, Leucht S, et al. 2018. Amisulpride and olanzapine followed by open-label treatment with clozapine in first-episode schizophrenia and schizophreniform disorder (OPTiMiSE): a three-phase switching study. Lancet Psychiatry 5(10):797-807.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30115598/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Meltzer HY, Alphs L, Green AI, et al. 2003. Clozapine treatment for suicidality in schizophrenia: International Suicide Prevention Trial (InterSePT). Arch Gen Psychiatry 60(1):82-91.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12511175/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kane J, Honigfeld G, Singer J, Meltzer H. 1988. Clozapine for the treatment-resistant schizophrenic: a double-blind comparison with chlorpromazine. Arch Gen Psychiatry 45(9):789-796.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3046553/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Huhn M, Nikolakopoulou A, Schneider-Thoma J, et al. 2019. Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis. Lancet 394(10202):939-951.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31303314/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kane JM, Robinson DG, Schooler NR, et al. 2016. Comprehensive versus usual community care for first-episode psychosis: 2-year outcomes from the NIMH RAISE Early Treatment Program. Am J Psychiatry 173(4):362-372.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26481174/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Melle I, Larsen TK, Haahr U, et al. 2008. Prevention of negative symptom psychopathologies in first-episode schizophrenia: two-year effects of reducing the duration of untreated psychosis. Arch Gen Psychiatry 65(6):634-640.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18519821/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "McGrath J, Saha S, Chant D, Welham J. 2008. Schizophrenia: a concise overview of incidence, prevalence, and mortality. Epidemiol Rev 30:67-76.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18480098/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Varese F, Smeets F, Drukker M, et al. 2012. Childhood adversities increase the risk of psychosis: a meta-analysis of patient-control, prospective- and cross-sectional cohort studies. Schizophr Bull 38(4):661-671.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22461484/",
+      "accessedDate": "2026-05-12"
+    }
+  ],
+
+  "images": []
+}
