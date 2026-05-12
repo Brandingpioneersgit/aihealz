@@ -1,0 +1,524 @@
+{
+  "_meta": {
+    "slug": "nasal-polyps",
+    "tier": 1,
+    "headTerm": "nasal polyps",
+    "longTailKeywords": [
+      "nasal polyps symptoms",
+      "nasal polyps treatment",
+      "nasal polyps surgery",
+      "nasal polyps causes",
+      "nasal polyps vs deviated septum",
+      "dupilumab nasal polyps",
+      "FESS recovery",
+      "CRSwNP",
+      "aspirin exacerbated respiratory disease",
+      "do nasal polyps come back"
+    ],
+    "primarySpecialty": "ENT",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Cross-verified against EPOS 2020 (Fokkens), AAO-HNS 2015 + 2023 CRS CPGs, ICAR-RS 2021, NEJM 2019 SINUS-24/52 (Bachert dupilumab), Lancet 2021 SYNAPSE (Han mepolizumab), Gevaert 2020 POLYP 1/2 (omalizumab), Smith 2013 FESS outcomes, Stevenson 2006 aspirin desensitization. Numbers checked against UpToDate and the 2023 AAO-HNS CRS update."
+  },
+
+  "h1Title": "Nasal Polyps: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "ENT",
+
+  "heroOverview": "Nasal polyps are soft, pale, fluid-filled outgrowths of the sinus and nasal lining driven by years of type-2 (eosinophilic) inflammation. They affect roughly 1-4% of adults globally and almost always arise on both sides of the nose at once — a unilateral polyp is treated as a red flag for tumor until proven otherwise. The typical patient reports months of nasal blockage, a near-total loss of smell, postnasal drip, and a dull facial pressure that antibiotics never fix. Polyps recur in about 40% of patients within 18 months of surgery alone, which is why management has shifted from cutting them out toward suppressing the underlying eosinophilic disease with topical steroids, biologics, and (in aspirin-sensitive patients) aspirin desensitization. Done well, modern therapy keeps most patients smelling, breathing, and out of the operating room.",
+
+  "keyStats": {
+    "prevalence": "1-4% of adults globally (EPOS 2020); ~13% of patients with chronic rhinosinusitis carry visible polyps",
+    "demographics": "Men affected roughly 2x more than women; rare under age 20",
+    "avgAge": "Peak onset age 40-60; aspirin-exacerbated subtype clusters at 30-40",
+    "globalCases": "Estimated 80-200 million people worldwide based on prevalence and adult population"
+  },
+
+  "definition": "Nasal polyps (ICD-10: J33) are non-cancerous, edematous swellings of the sinonasal mucosa that herniate into the nasal cavity, most often originating from the ethmoid sinuses and the middle meatus. Histologically the lesions are loose stromal tissue heavily infiltrated with eosinophils, mast cells, and CD4 T cells skewed toward type-2 cytokines IL-4, IL-5, and IL-13. They are the visible endpoint of chronic rhinosinusitis with nasal polyposis (CRSwNP), which sits within the broader umbrella of chronic rhinosinusitis (CRS). Polyps are graded endoscopically using the Lildholdt or Lund-Mackay scoring systems, and severity is increasingly classified by inflammatory endotype rather than appearance alone — over 80% of cases in Western populations are eosinophilic, while non-eosinophilic polyps predominate in parts of East Asia. The condition is managed primarily by otolaryngologists (ENT specialists), often in shared care with allergists, pulmonologists when concurrent asthma is present, and rheumatologists when granulomatosis with polyangiitis is suspected. CRSwNP overlaps tightly with asthma (40-65% of polyp patients have asthma) and with aspirin-exacerbated respiratory disease (AERD), defining a distinct severe subtype.",
+
+  "typesClassification": [
+    { "type": "Eosinophilic CRSwNP (type-2 high)", "description": "The dominant Western phenotype. Tissue eosinophil counts above 10 per high-power field, frequent asthma comorbidity, high recurrence after surgery, and excellent response to biologics targeting IL-4Rα, IL-5, or IgE." },
+    { "type": "Non-eosinophilic CRSwNP (type-2 low)", "description": "Predominantly neutrophilic, more common in East Asian populations and in cystic fibrosis-related polyposis. Lower recurrence after surgery but historically poorer steroid response; less likely to benefit from current biologics." },
+    { "type": "Aspirin-exacerbated respiratory disease (AERD / Samter triad)", "description": "Severe asthma plus nasal polyposis plus respiratory reactions to aspirin and other COX-1 NSAIDs. Affects 7-15% of CRSwNP patients; polyps regrow aggressively after surgery without ongoing aspirin desensitization or biologic therapy." },
+    { "type": "Antrochoanal polyp (Killian polyp)", "description": "A solitary polyp arising from the maxillary sinus and extending through the natural ostium into the nasopharynx. Typically unilateral, more common in adolescents and young adults, not driven by type-2 inflammation, and cured by complete surgical removal." },
+    { "type": "Cystic fibrosis-related nasal polyposis", "description": "Affects 30-50% of children and adults with cystic fibrosis. Polyps tend to be neutrophilic, often present before age 10, and may regress on CFTR modulator therapy such as elexacaftor-tezacaftor-ivacaftor." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent bilateral nasal obstruction that does not clear with decongestant sprays and worsens over months — the most common presenting complaint in over 90% of CRSwNP patients.",
+    "Reduction or complete loss of the sense of smell (hyposmia or anosmia), often the symptom that bothers patients most and the slowest to recover after treatment.",
+    "Loss or distortion of taste, which follows the loss of smell because flavor recognition depends largely on retronasal olfaction.",
+    "Postnasal drip with thick, often discoloured mucus that triggers throat-clearing, chronic cough, and morning sore throat.",
+    "Dull facial pressure or fullness across the cheeks, forehead, and bridge of the nose, sometimes mistaken for migraine or tension headache.",
+    "Mouth-breathing, snoring, and disturbed sleep, with daytime fatigue out of proportion to the nasal symptoms.",
+    "Recurrent acute sinus infections layered on top of the chronic congestion — three or more antibiotic courses in a year is a typical history.",
+    "A nasal voice and reduced ability to taste hot drinks or detect smoke and gas leaks, which raises real safety concerns for some patients.",
+    "Bleeding from one nostril, unilateral obstruction, or facial pain on a single side — when these are present rather than the bilateral pattern above, urgent ENT review is needed to rule out tumor.",
+    "Asthma symptoms (wheezing, chest tightness, increased inhaler use) that worsen in parallel with the nasal symptoms in patients with concurrent lower airway disease."
+  ],
+
+  "earlyWarningSigns": [
+    "Gradual fading of the ability to smell coffee, perfume, or cooked food over weeks to months, before nasal obstruction is obvious",
+    "Persistent low-grade postnasal drip and throat-clearing for more than 12 weeks without an obvious infection",
+    "Worsening asthma control or new aspirin or NSAID sensitivity in an adult — both can precede visible polyps by years",
+    "A child with cystic fibrosis developing nasal congestion or audible mouth-breathing — pediatric polyps almost always justify a cystic fibrosis sweat test"
+  ],
+
+  "emergencySigns": [
+    "Sudden visual disturbance, double vision, eye swelling, or proptosis — possible orbital extension or complication of acute sinusitis on a polyp background",
+    "Severe one-sided facial pain with fever, neck stiffness, or altered mental state — suspected intracranial complication of sinus infection",
+    "Unilateral nasal bleeding, a friable mass, or a polyp that looks vascular or fleshy on endoscopy — must be biopsied to exclude inverted papilloma or sinonasal malignancy",
+    "Sudden severe asthma attack after taking aspirin or an NSAID — features of AERD; immediate emergency care and lifelong NSAID avoidance until formal evaluation"
+  ],
+
+  "causes": [
+    {
+      "cause": "Type-2 (eosinophilic) inflammation of the sinonasal mucosa",
+      "description": "The central driver in Western CRSwNP. Cytokines IL-4, IL-5, and IL-13 from Th2 cells and innate lymphoid cells recruit eosinophils, expand mast cells, and remodel the epithelium into edematous polypoid tissue. Successful biologics all target this pathway."
+    },
+    {
+      "cause": "Aspirin-exacerbated respiratory disease (AERD)",
+      "description": "Dysregulated arachidonic acid metabolism shifts production from prostaglandin E2 toward cysteinyl leukotrienes. Patients have severe polyposis, asthma, and respiratory reactions to COX-1 inhibitors. Polyps regrow rapidly after surgery without ongoing aspirin desensitization or biologic therapy."
+    },
+    {
+      "cause": "Allergic and non-allergic chronic rhinitis",
+      "description": "Chronic mucosal inflammation from allergens (dust mite, mold, pollen, animal dander) or irritants primes the lining for polypoid change. Allergic rhinitis is present in 50-80% of polyp patients, though it is a cofactor rather than a sufficient cause."
+    },
+    {
+      "cause": "Cystic fibrosis and CFTR dysfunction",
+      "description": "Defective chloride transport produces viscous mucus, impaired mucociliary clearance, and chronic neutrophilic inflammation. Up to 50% of patients with cystic fibrosis develop nasal polyps, often in childhood."
+    },
+    {
+      "cause": "Bacterial dysbiosis and Staphylococcus aureus superantigens",
+      "description": "Colonization of the sinus mucosa with Staphylococcus aureus that secretes enterotoxin superantigens amplifies local IgE production and eosinophilic inflammation, particularly in severe and recurrent disease."
+    },
+    {
+      "cause": "Fungal colonization and allergic fungal rhinosinusitis (AFRS)",
+      "description": "A specific subtype in which non-invasive fungal hyphae provoke a strong IgE-mediated reaction, eosinophilic mucin, and bony erosion. Often unilateral or asymmetric, with high recurrence rates after surgery alone."
+    },
+    {
+      "cause": "Primary ciliary dyskinesia and other mucociliary disorders",
+      "description": "Defective ciliary function impairs sinus clearance, traps secretions, and creates a chronic inflammatory environment that predisposes to polyposis, especially in young patients with concurrent bronchiectasis."
+    },
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Heritability is meaningful: first-degree relatives of CRSwNP patients carry roughly a 4-fold increased risk. Genome-wide association studies have linked polymorphisms in IL-1RL1, TSLP, and HLA loci to the eosinophilic phenotype."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Coexisting asthma", "category": "modifiable", "description": "Asthma is present in 40-65% of CRSwNP patients and predicts more severe disease, higher recurrence after surgery, and stronger benefit from biologics targeting IL-4Rα or IL-5." },
+    { "factor": "Aspirin or NSAID sensitivity (AERD)", "category": "non-modifiable", "description": "Patients with AERD have polyp recurrence rates after surgery alone exceeding 80% at 5 years, compared with around 40% in non-AERD CRSwNP — the single strongest clinical predictor of recurrence." },
+    { "factor": "Allergic rhinitis or chronic non-allergic rhinitis", "category": "environmental", "description": "Chronic mucosal inflammation from inhalant allergens primes polypoid remodelling. Allergic rhinitis is present in 50-80% of polyp patients across cohorts." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men develop CRSwNP roughly 2x more often than women, with a more pronounced gap in eosinophilic subtypes." },
+    { "factor": "Age 40-60", "category": "non-modifiable", "description": "Most adult-onset cases present in middle age; the disease is rare under age 20 and pediatric polyps almost always reflect cystic fibrosis or primary ciliary dyskinesia." },
+    { "factor": "Cystic fibrosis or known CFTR variant carrier", "category": "genetic", "description": "30-50% of patients with cystic fibrosis develop polyposis; sweat chloride testing is warranted for any pediatric polyp." },
+    { "factor": "Smoking and chronic irritant exposure", "category": "modifiable", "description": "Current smoking is associated with more severe symptoms, higher endoscopic scores, and reduced response to topical steroids; cessation measurably improves outcomes after surgery." },
+    { "factor": "Occupational exposure to wood dust, textile dust, and metal fumes", "category": "environmental", "description": "Chronic occupational irritant exposure raises both polyp prevalence and recurrence risk; relevant in carpentry, textile work, welding, and farming." },
+    { "factor": "Family history of CRSwNP", "category": "genetic", "description": "First-degree relatives carry roughly a 4-fold higher risk; familial clusters are over-represented among aspirin-sensitive patients." },
+    { "factor": "Vitamin D deficiency", "category": "modifiable", "description": "Low serum 25-hydroxyvitamin D correlates with polyp size and recurrence in several observational cohorts; correction has modest benefit in trials but is reasonable in deficient patients." }
+  ],
+
+  "affectedDemographics": [
+    "Adult prevalence 1-4% across European, US, and Asian population studies (EPOS 2020 review)",
+    "Roughly 13% of patients with chronic rhinosinusitis have visible polyps on endoscopy",
+    "Men outnumber women by about 2:1 in adult cohorts; the gap narrows in non-eosinophilic phenotypes",
+    "Rare under age 20 — pediatric nasal polyps warrant a cystic fibrosis sweat test in over 90% of cases",
+    "Eosinophilic phenotype dominates in Western populations; non-eosinophilic neutrophilic phenotype is more common in East Asia, though the gap is narrowing as diets and environments shift"
+  ],
+
+  "diagnosisOverview": "Diagnosis of nasal polyps rests on a focused history, endoscopic examination, and selective imaging rather than a single test. The 2020 European Position Paper on Rhinosinusitis (EPOS 2020) and the 2023 AAO-HNS Clinical Practice Guideline update both require two or more cardiac sinonasal symptoms — nasal obstruction, anterior or posterior nasal discharge, facial pressure, and reduced sense of smell — lasting 12 weeks or longer, plus objective evidence of inflammation. The objective evidence is nasal endoscopy demonstrating polyps in the middle meatus or CT findings of opacified sinuses with characteristic ethmoid mucosal thickening. Anterior rhinoscopy alone misses smaller polyps and is no longer considered sufficient; flexible or rigid endoscopy is the standard of care. The Lund-Mackay CT score quantifies the extent of sinus opacification and guides surgical planning. Smell testing (UPSIT or Sniffin' Sticks) is routinely added because olfactory loss is both a strong diagnostic clue and a sensitive outcome measure. Allergy testing (skin-prick or specific IgE) and a check for asthma should be done in every adult with polyps. Biopsy is reserved for unilateral polyps, asymmetric disease, vascular or fleshy lesions, or any feature suggesting inverted papilloma, sinonasal malignancy, or granulomatosis with polyangiitis — these red-flag presentations need an ENT review rather than empirical medical therapy. In children, every polyp should trigger a sweat chloride test for cystic fibrosis. Once a CRSwNP diagnosis is established, blood eosinophils, total IgE, and questionnaires such as SNOT-22 and an asthma control test stratify disease severity and guide the choice between topical therapy alone, surgery, and biologic treatment.",
+
+  "diagnosticTests": [
+    {
+      "test": "Nasal endoscopy (rigid or flexible)",
+      "purpose": "Direct visualization of the middle meatus and sinus drainage pathways. Confirms the presence, size, and bilateral distribution of polyps, grades severity with the Lildholdt or Meltzer scale, and detects red-flag features such as unilateral disease, friable tissue, or bleeding.",
+      "whatToExpect": "An ENT clinician sprays a topical decongestant and anesthetic, then passes a thin scope (2.7-4 mm) through each nostril. The procedure lasts 2-5 minutes and is mildly uncomfortable but not usually painful. Most patients receive a printed photograph or video."
+    },
+    {
+      "test": "CT scan of the paranasal sinuses (non-contrast)",
+      "purpose": "Maps the extent of mucosal disease, calculates the Lund-Mackay score, identifies bony anatomic variants relevant to surgery (Onodi cells, dehiscent skull base, optic nerve course), and screens for fungal hyperdensities, bone erosion, and tumour features.",
+      "whatToExpect": "A standard sinus CT takes under 5 minutes; the patient lies on the scanner bed, no contrast is needed for routine CRSwNP. Radiation dose is roughly 0.6 mSv. Results are usually available within 24 hours."
+    },
+    {
+      "test": "Quantitative smell testing (UPSIT, Sniffin' Sticks, or B-SIT)",
+      "purpose": "Objectively documents olfactory loss, distinguishes hyposmia from anosmia, and tracks treatment response. Olfactory recovery is the symptom patients value most and trial endpoints emphasize.",
+      "whatToExpect": "A scratch-and-sniff booklet or set of pen-style smell pens; patients identify each odor from multiple-choice options. Takes 10-15 minutes; results are reported as a percentile against age-matched normals."
+    },
+    {
+      "test": "Allergy evaluation (skin-prick testing or specific IgE)",
+      "purpose": "Identifies inhalant allergen sensitization that may benefit from environmental control or allergen immunotherapy and informs the choice of biologic when total IgE and allergy status matter (omalizumab).",
+      "whatToExpect": "Skin-prick testing places small drops of common allergens on the forearm with a sterile lancet; results in 15-20 minutes. Specific IgE blood testing requires a standard blood draw with results in 3-5 days."
+    },
+    {
+      "test": "Blood eosinophil count and total serum IgE",
+      "purpose": "Stratifies type-2 inflammation. Eosinophils above 300 cells/µL and elevated IgE both predict response to type-2 biologics; tissue eosinophilia on histology is the strongest predictor when available.",
+      "whatToExpect": "A routine blood draw, processed in any clinical lab. Results return same day in most settings."
+    },
+    {
+      "test": "Sweat chloride test (for any pediatric polyp or suspected CF)",
+      "purpose": "Screens for cystic fibrosis, which underlies polyposis in over 90% of children and a meaningful fraction of young adults with severe recurrence.",
+      "whatToExpect": "A small electrode delivers pilocarpine through the skin of the forearm; sweat is collected over 30 minutes and tested for chloride. Painless and non-invasive."
+    },
+    {
+      "test": "Tissue biopsy and histology",
+      "purpose": "Reserved for unilateral, vascular, or atypical polyps. Distinguishes inflammatory polyp from inverted papilloma, juvenile angiofibroma, sinonasal lymphoma, granulomatosis with polyangiitis, and rare malignancies. Also quantifies tissue eosinophils per high-power field.",
+      "whatToExpect": "Performed at endoscopy under local or general anesthetic depending on accessibility. A small fragment is sent in formalin; results return in 3-7 days."
+    },
+    {
+      "test": "Aspirin challenge or desensitization protocol",
+      "purpose": "Confirms AERD when history is suggestive and offers a route to therapeutic aspirin desensitization. Performed in specialist centers under close supervision.",
+      "whatToExpect": "An inpatient or day-care protocol; escalating oral doses of aspirin are given under continuous observation with spirometry and rescue medications available. Takes 1-3 days."
+    }
+  ],
+
+  "treatmentOverview": "Treatment of nasal polyps is built on a stepped strategy that starts with topical anti-inflammatory therapy, escalates through systemic steroids and surgery, and now incorporates type-2 biologics for severe or recurrent disease. Both EPOS 2020 and the 2023 AAO-HNS CRS guideline place intranasal corticosteroids — fluticasone, mometasone, or budesonide — as the foundation for every patient, used long-term and ideally delivered as a large-volume nasal rinse rather than a metered spray once the polyps are large. High-volume budesonide irrigations (0.5-1 mg in 240 mL saline once or twice daily) reach further into the sinus cavities than standard sprays and reduce polyp burden in roughly 60-70% of patients over 12 weeks. Short courses of oral corticosteroids (prednisone 25-50 mg daily tapered over 1-3 weeks) shrink polyps rapidly and are useful at diagnosis, before surgery, or for severe symptom flares, but cumulative steroid exposure should be tracked and minimized. Functional endoscopic sinus surgery (FESS) is offered to patients who fail medical therapy after 12 weeks; it opens the sinus ostia, removes obstructing polyps, and allows topical therapy to reach diseased mucosa afterwards. Smith and colleagues (2013) showed FESS produces meaningful quality-of-life improvement in around 80% of patients at 12 months, though polyps recur in about 40% within 18 months without ongoing topical therapy. Biologics — dupilumab (IL-4Rα), omalizumab (anti-IgE), and mepolizumab (anti-IL-5) — are now first-line additions for severe CRSwNP with high type-2 inflammation, comorbid asthma, or post-surgical recurrence. The pivotal trials SINUS-24 and SINUS-52 (Bachert NEJM 2019) showed dupilumab cuts polyp score by half and reduces oral steroid need by 75% at 24 weeks. Aspirin desensitization remains a targeted treatment for AERD and reduces polyp regrowth and asthma exacerbation when continued daily. Antibiotics are reserved for genuine acute bacterial flares — they do not treat the underlying polyposis. Treatment is individualized by endotype, severity, comorbidities, and patient preference, and every patient should be reassessed every 6-12 months because the disease is chronic and the therapeutic landscape is changing fast.",
+
+  "medicalTreatments": [
+    {
+      "name": "Intranasal corticosteroid sprays (fluticasone propionate 100-200 µg twice daily, mometasone furoate 100 µg twice daily, or budesonide)",
+      "description": "First-line maintenance therapy for every patient. Reduces polyp size, improves nasal patency, and slows recurrence after surgery. Used indefinitely; safety profile excellent with long-term use. Technique matters — patients should aim the spray laterally toward the ear, not at the septum.",
+      "effectiveness": "Symptomatic improvement in approximately 60% of patients; reduces polyp size in 30-50% over 12 weeks (EPOS 2020 meta-analysis)."
+    },
+    {
+      "name": "High-volume budesonide saline irrigation (0.5-1 mg in 240 mL saline, once or twice daily)",
+      "description": "Off-label but increasingly standard delivery method. The squeeze bottle or sinus rinse device delivers steroid further into the ethmoid and maxillary cavities than a metered spray, especially after FESS has opened the ostia. Effective when standard sprays plateau.",
+      "effectiveness": "Reduces polyp burden in approximately 60-70% of patients over 12 weeks; consistently better than equivalent steroid spray in post-FESS patients (Harvey 2018 RCT)."
+    },
+    {
+      "name": "Short-course oral corticosteroids (prednisone 25-50 mg daily, tapered over 1-3 weeks)",
+      "description": "Rapidly shrinks polyps and restores smell within days. Used at diagnosis to clear the airway, before surgery to reduce intraoperative bleeding, and for major symptom flares. Cumulative dose should be tracked because repeated courses carry adrenal, bone, and metabolic risk.",
+      "effectiveness": "Polyp score reduction of roughly 50% within 2 weeks in 75-85% of patients; benefit typically lasts 3-6 months without further therapy."
+    },
+    {
+      "name": "Dupilumab (300 mg subcutaneous every 2 weeks)",
+      "description": "Monoclonal antibody blocking the IL-4Rα subunit shared by IL-4 and IL-13 receptors. Licensed for severe CRSwNP and frequently combined with biologic indication for asthma. The first agent shown to durably improve smell across the eosinophilic phenotype.",
+      "effectiveness": "SINUS-24 and SINUS-52 (Bachert NEJM 2019): nasal polyp score halved at 24 weeks, smell measurably improved in 60% of patients, oral steroid requirement reduced by 75%, and 83% fewer patients needed surgery during follow-up."
+    },
+    {
+      "name": "Omalizumab (75-600 mg subcutaneous every 2-4 weeks, dosed by weight and IgE)",
+      "description": "Anti-IgE monoclonal antibody. Pivotal POLYP 1 and POLYP 2 trials (Gevaert JACI 2020) established efficacy in CRSwNP regardless of allergic status. Particularly useful when severe asthma coexists with polyposis.",
+      "effectiveness": "Nasal polyp score reduction of 1.1 points and nasal congestion score reduction of 0.7 points versus placebo at 24 weeks; significant smell improvement; reduction in oral steroid and antibiotic courses."
+    },
+    {
+      "name": "Mepolizumab (100 mg subcutaneous every 4 weeks)",
+      "description": "Anti-IL-5 monoclonal antibody targeting eosinophil maturation and survival. SYNAPSE trial (Han Lancet 2021) confirmed efficacy in severe CRSwNP requiring repeated surgery. Particularly suitable for patients with very high blood eosinophil counts and previous polypectomy.",
+      "effectiveness": "SYNAPSE: nasal polyp score reduced by 0.73 points and nasal obstruction by 0.62 points versus placebo at 52 weeks; surgery and oral steroid use roughly halved."
+    },
+    {
+      "name": "Leukotriene receptor antagonists (montelukast 10 mg daily)",
+      "description": "Add-on therapy, particularly useful in AERD where cysteinyl leukotrienes are upregulated. Modest effect on polyp size in unselected CRSwNP but worth a trial when asthma or allergic rhinitis is poorly controlled and biologics are not available.",
+      "effectiveness": "Symptomatic improvement in 30-40% of CRSwNP patients; stronger benefit when used as adjunct in AERD."
+    },
+    {
+      "name": "Aspirin desensitization and daily maintenance aspirin (325-1300 mg daily)",
+      "description": "Disease-modifying therapy for AERD. Performed in specialist centers under spirometric monitoring. Once maintenance dose is reached, daily aspirin is continued indefinitely to suppress polyp regrowth and reduce sinonasal surgery rates.",
+      "effectiveness": "Stevenson 2006 cohort and subsequent trials: roughly 70% sustained symptom improvement at 1-3 years and approximately 50% reduction in repeat sinus surgery."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Functional endoscopic sinus surgery (FESS) with polypectomy",
+      "description": "The standard surgical procedure. Performed under general anesthetic with rigid endoscopes; the surgeon removes polyps and widens the natural ostia of the involved sinuses to restore drainage and allow topical therapy to reach the diseased mucosa afterward. Mean operating time 60-120 minutes; same-day discharge in most cases.",
+      "successRate": "Smith 2013 prospective cohort: clinically meaningful quality-of-life improvement at 12 months in approximately 80% of patients. Polyp recurrence around 40% by 18 months in unselected CRSwNP and over 80% by 5 years in untreated AERD; both reduced sharply by ongoing topical steroids and biologics."
+    },
+    {
+      "name": "Reboot (full-house) FESS",
+      "description": "An extended approach that strips the diseased mucosa of all sinuses to reset the inflammatory environment. Reserved for severe recurrent CRSwNP, especially in AERD or after prior limited surgery has failed. Carries longer operating time, more bleeding, and a steeper learning curve.",
+      "successRate": "Single-center series report polyp-free rates of 60-70% at 2 years compared with 30-40% after standard FESS in matched severe disease."
+    },
+    {
+      "name": "Endoscopic medial maxillectomy (for antrochoanal polyp or recurrent maxillary disease)",
+      "description": "Wider access to the maxillary sinus and surrounding cells; allows complete removal of the polyp stalk in antrochoanal polyp, which is essential to prevent recurrence. Also used for refractory maxillary disease.",
+      "successRate": "Antrochoanal polyp: recurrence under 10% with complete stalk removal versus 25-30% with limited approaches (Frosini 2009)."
+    },
+    {
+      "name": "Office-based polypectomy with microdebrider under local anesthetic",
+      "description": "Selected for cooperative adults with limited disease or palliative debulking when general anesthetic is contraindicated. Performed with topical and infiltrative local anesthesia; rapid recovery but less complete than formal FESS.",
+      "successRate": "Symptomatic improvement in 60-70% of selected patients at 6 months; typically followed by intensive topical therapy."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Allergen-specific immunotherapy", "description": "Subcutaneous or sublingual immunotherapy for documented allergic rhinitis can reduce upper airway inflammation and improve patient-reported nasal symptoms. Direct effect on polyp size is modest; best regarded as adjunct in selected allergic patients." },
+    { "name": "Xylitol nasal irrigation", "description": "Small randomized trials (Weissman 2011) suggest improved SNOT-20 scores when xylitol is added to saline rinses. Cheap, safe, and reasonable as an adjunct, though not a substitute for steroid or biologic therapy." },
+    { "name": "Vitamin D repletion", "description": "Correcting deficiency is associated with modest reductions in polyp size and recurrence in observational and small interventional studies (Mulligan 2018). Cheap and safe; check 25-hydroxyvitamin D once and treat to sufficiency." }
+  ],
+
+  "whySeeSpecialist": "An ENT specialist should be involved when nasal symptoms persist beyond 12 weeks despite intranasal steroids, when polyps are visible on examination, when there is unilateral disease or bleeding, when oral steroids are needed more than once or twice a year, or when smell loss is severe. Allergists and pulmonologists co-manage patients with concurrent severe asthma, AERD, or where biologic therapy is being considered. Pediatric polyps almost always justify ENT plus cystic fibrosis screening.",
+
+  "doctorSelectionGuide": "Look for an otolaryngologist with rhinology fellowship training or substantial CRSwNP volume, comfort with both office-based endoscopy and full FESS, and access to image-guided navigation for revision cases. Ask whether the practice routinely uses high-volume budesonide irrigations, whether biologics are prescribed in-house or referred to allergy, and how aspirin desensitization is handled. Continuity matters — CRSwNP is a lifelong disease and outcomes correlate strongly with consistent follow-up.",
+
+  "preventionStrategies": [
+    "Use daily intranasal corticosteroid spray or budesonide irrigation indefinitely after the first polyp diagnosis — long-term topical therapy is the single most effective measure to prevent regrowth",
+    "Stop smoking and avoid second-hand smoke — current smoking measurably increases polyp recurrence and reduces response to medical therapy",
+    "Treat concurrent allergic rhinitis with antihistamines and, where appropriate, allergen immunotherapy to reduce the chronic inflammatory baseline",
+    "Avoid aspirin and other COX-1 NSAIDs (ibuprofen, naproxen, diclofenac) unless aspirin tolerance has been formally confirmed — patients with undiagnosed AERD can deteriorate suddenly",
+    "Vaccinate against influenza and pneumococcus to reduce acute exacerbations and antibiotic courses",
+    "Optimize asthma control with inhaled steroids and bronchodilators — upper and lower airway disease move together and good asthma control protects the sinuses"
+  ],
+
+  "lifestyleModifications": [
+    "Use isotonic or hypertonic saline rinses 1-2 times daily to clear mucus and crusts and improve topical steroid delivery",
+    "Sleep with the head of the bed elevated by 15-20 cm to reduce overnight congestion and improve sleep quality",
+    "Identify and reduce indoor allergen exposure (dust mite covers, HEPA filters, animal dander control) if allergy testing is positive",
+    "Avoid prolonged exposure to wood dust, chlorine fumes, and other respiratory irritants; wear a fitted mask when occupational exposure is unavoidable",
+    "Maintain hydration to keep mucus thin — 2 liters of water daily unless restricted for other reasons",
+    "Limit alcohol intake, particularly red wine in AERD where sulfite-rich beverages can trigger upper and lower airway symptoms",
+    "Track symptoms with a short weekly diary (smell, congestion, sleep, asthma) — patterns help guide treatment escalation"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Anti-inflammatory Mediterranean-style eating pattern rich in olive oil, vegetables, and oily fish — observational data link this pattern to lower CRS symptom scores",
+      "Omega-3-rich oily fish (salmon, mackerel, sardines) 2-3 times weekly — modest reductions in eosinophilic airway inflammation in airway disease cohorts",
+      "Adequate vitamin D from sunlight, fortified foods, or supplements if serum 25-OH vitamin D is below 30 ng/mL",
+      "Foods rich in quercetin and natural anti-inflammatory polyphenols (apples, onions, berries, leafy greens)",
+      "Plenty of water to maintain mucociliary clearance — at least 2 liters daily unless contraindicated"
+    ],
+    "avoid": [
+      "Aspirin, ibuprofen, naproxen, and diclofenac in any patient with suspected or confirmed AERD until formal evaluation",
+      "Excessive alcohol, particularly red wine and beer with sulfites and biogenic amines, which trigger nasal and asthma symptoms in AERD",
+      "Highly processed foods rich in trans fats and refined sugars — associated with worse symptom scores in observational airway studies",
+      "Known food allergens for the individual patient, identified by history rather than blanket elimination diets"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular aerobic exercise (brisk walking, swimming, cycling) for 150 minutes per week supports immune regulation and weight management and is safe in stable CRSwNP. Patients with concurrent asthma should have a personalized asthma action plan and pre-exercise short-acting bronchodilator if prescribed. Avoid heavy exertion in air-quality-warning conditions, and rinse nasal passages with saline after swimming in chlorinated pools or freshwater lakes.",
+
+  "dailyManagement": [
+    "Perform a saline rinse first, then dose intranasal steroid spray or budesonide irrigation, at the same times daily — adherence is the single strongest predictor of disease control",
+    "Track smell informally each week (coffee, citrus, soap) and note the trend — falling smell is often the earliest sign of recurrence",
+    "Refill steroid sprays, biologic prefilled syringes, and asthma inhalers before they run out — gaps in therapy reliably precede flares",
+    "Carry a written list of NSAID-containing medications to avoid if AERD is diagnosed, and ensure pharmacy, dental, and surgical records flag the diagnosis",
+    "Schedule a 6-12 monthly review with the ENT clinician and an annual smell test to monitor disease control objectively"
+  ],
+
+  "prognosis": "CRSwNP is a chronic disease — like asthma or eczema, it is controlled rather than cured. With continuous intranasal or irrigation steroid therapy, around 60% of patients maintain acceptable symptom control without surgery. After FESS, roughly 80% of patients report meaningful quality-of-life improvement at 12 months, but polyps recur in about 40% within 18 months without ongoing topical therapy and in over 80% of AERD patients by 5 years. Biologics have shifted the trajectory: dupilumab, omalizumab, and mepolizumab reduce repeat surgery, restore smell in a meaningful proportion of patients, and cut oral steroid exposure substantially. Smell recovery is the most patient-relevant outcome and the slowest — full return is reported in 30-50% of treated patients at 6-12 months. Untreated severe polyposis is rarely life-threatening but causes durable loss of smell, sleep disturbance, repeated antibiotic exposure, and a measurable reduction in work productivity. The strongest predictors of poor long-term outcome are AERD, severe asthma, current smoking, very high eosinophilia, and missed follow-up.",
+
+  "recoveryTimeline": "After a short oral steroid course, smell and nasal patency typically improve within 3-7 days and benefit lasts 3-6 months. After FESS, the nose feels worse for 7-14 days due to swelling and crusting; saline rinses begin on day 1 or 2 and continue for life. Most patients are back to office work within 7-10 days, with strenuous exercise and air travel deferred 2 weeks. Endoscopic appearance settles by week 6-8, and the benefit of surgery peaks at month 3-6. Biologics begin to reduce polyp size and improve smell by week 4-8 and reach maximum effect by month 6; therapy is continued indefinitely with periodic reassessment.",
+
+  "complications": [
+    "Persistent loss of smell, with measurable impact on appetite, mood, and safety (inability to detect smoke, gas leaks, or spoiled food)",
+    "Obstructive sleep-disordered breathing and snoring from chronic nasal obstruction, with daytime fatigue and reduced cognitive performance",
+    "Recurrent acute bacterial sinusitis, sometimes complicated by orbital cellulitis, subperiosteal abscess, or rarely intracranial extension",
+    "Asthma deterioration in patients with the unified airway phenotype; uncontrolled polyposis is a recognized driver of severe asthma exacerbation",
+    "Cumulative oral corticosteroid exposure leading to osteoporosis, hypertension, weight gain, cataracts, and adrenal suppression in patients given repeated courses",
+    "Surgical complications of FESS including bleeding, CSF leak (around 0.2%), orbital injury (under 0.5%), and synechiae or scarring needing revision; risk is reduced in high-volume rhinology centers",
+    "Missed sinonasal malignancy or inverted papilloma in patients with unilateral disease who are managed as routine polyposis without endoscopy or imaging"
+  ],
+
+  "supportResources": [
+    { "name": "American Academy of Otolaryngology – Head and Neck Surgery (AAO-HNS) Patient Information", "url": "https://www.entnet.org/resource/nasal-polyps/", "description": "Patient-facing summary from the body that authors the US ENT clinical practice guidelines on chronic rhinosinusitis." },
+    { "name": "EUFOREA — European Forum for Research and Education in Allergy and Airway Diseases", "url": "https://www.euforea.eu/nasal-polyps", "description": "Patient and clinician resources from the European consortium behind the EPOS guidelines, including biologic decision tools." },
+    { "name": "Asthma + Lung UK — Nasal polyps", "url": "https://www.asthmaandlung.org.uk/conditions/nasal-polyps", "description": "Plain-English UK patient resource with practical guidance on living with polyps and accessing specialist care." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "chronic-sinusitis", "name": "Chronic Sinusitis (CRSsNP)", "keyDifference": "Chronic rhinosinusitis without nasal polyps shares the 12-week symptom criteria but has no visible polyps on endoscopy and is usually neutrophilic rather than eosinophilic. CRSsNP responds better to antibiotics and surgery alone and rarely needs biologic therapy. Endoscopy is the key separator." },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)", "keyDifference": "Allergic rhinitis causes sneezing, itch, and watery rhinorrhea triggered by allergen exposure and tends to fluctuate seasonally. Smell loss is mild, polyps are absent on endoscopy, and antihistamines and intranasal steroids control symptoms within days rather than months. Allergic rhinitis can coexist with and worsen CRSwNP." },
+    { "slug": "deviated-nasal-septum", "name": "Deviated Nasal Septum", "keyDifference": "A deviated septum is a structural narrowing of the nasal airway and produces persistent unilateral or asymmetric obstruction with no associated mucosal disease, no smell loss, and a normal CT apart from the septal angulation. The two can coexist and may both be addressed at surgery." },
+    { "slug": "malignant-neoplasm-of-nasal-cavity-c300", "name": "Sinonasal Tumor (including inverted papilloma)", "keyDifference": "Tumors of the nasal cavity — inverted papilloma, squamous cell carcinoma, esthesioneuroblastoma — typically present with unilateral obstruction, recurrent unilateral bleeding, a friable or fleshy lesion on endoscopy, and asymmetric bone changes on CT. Any unilateral nasal polyp is treated as a tumor until biopsy proves otherwise — this is the single most important red flag in nasal polyp practice." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)" },
+    { "slug": "chronic-sinusitis", "name": "Chronic Sinusitis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "chronic-sinusitis", "name": "Chronic Sinusitis", "relevance": "CRSwNP sits within the broader chronic rhinosinusitis spectrum; diagnostic and treatment frameworks overlap and many patients move between phenotypes over time." },
+    { "slug": "asthma", "name": "Asthma", "relevance": "Present in 40-65% of CRSwNP patients; shared type-2 inflammation drives both diseases and biologic therapy targets both simultaneously." },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)", "relevance": "Coexists in 50-80% of polyp patients and amplifies upper-airway inflammation; treating allergic rhinitis reduces overall symptom burden." },
+    { "slug": "deviated-nasal-septum", "name": "Deviated Nasal Septum", "relevance": "Structural anatomic variant that can coexist with polyposis and is often addressed at the same surgery to improve drainage and topical drug delivery." },
+    { "slug": "anosmia-r430", "name": "Anosmia", "relevance": "Loss of smell is the dominant patient-reported symptom and the slowest to recover; CRSwNP is one of the top three causes of persistent anosmia in adults." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What are nasal polyps?",
+      "answer": "Nasal polyps are soft, pale, painless growths of inflamed lining tissue that hang into the nasal cavity, almost always on both sides at once. They are not tumors and are not cancerous, but they reflect chronic eosinophilic inflammation in the sinuses that needs ongoing treatment. Polyps cause persistent nasal blockage, loss of smell, postnasal drip, and facial pressure, and they tend to grow back if the underlying inflammation is not controlled.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the main symptoms of nasal polyps?",
+      "answer": "The main symptoms are persistent nasal blockage that does not respond to decongestants, reduced or absent sense of smell, postnasal drip, facial pressure, snoring, and frequent sinus infections. Symptoms typically build over months on both sides of the nose. Symptoms confined to one side, nosebleeds, or sudden facial pain are red flags and need urgent ENT review.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes nasal polyps?",
+      "answer": "Nasal polyps are caused by chronic type-2 (eosinophilic) inflammation of the sinus lining. Contributors include asthma, aspirin-exacerbated respiratory disease, allergic rhinitis, cystic fibrosis, fungal sensitization, Staphylococcus aureus superantigens, and genetic susceptibility. They are not contagious and are not caused by hygiene or diet.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How are nasal polyps diagnosed?",
+      "answer": "Diagnosis combines history of sinonasal symptoms for at least 12 weeks with nasal endoscopy showing polyps in the middle meatus and a CT scan of the sinuses to map the disease. Smell testing, allergy evaluation, and asthma assessment are added in every adult. Pediatric polyps need a cystic fibrosis sweat test, and unilateral polyps need biopsy to exclude tumor.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are nasal polyps cancerous?",
+      "answer": "Bilateral inflammatory nasal polyps are benign and do not become cancer. However, a unilateral nasal polyp can sometimes be an inverted papilloma, a sinonasal cancer, or another tumor that mimics a polyp. Any polyp limited to one side, any unusual bleeding, or any friable lesion must be biopsied promptly. This is the single most important rule in nasal polyp practice.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will nasal polyps go away on their own?",
+      "answer": "Nasal polyps rarely disappear without treatment because the underlying inflammation persists. Small polyps can fluctuate in size with seasons, infections, and steroid use, but established polyps generally enlarge if untreated. Daily intranasal corticosteroid spray, saline irrigation, and biologic therapy when indicated all shrink polyps and reduce recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will my sense of smell come back?",
+      "answer": "Smell recovery is the slowest part of treatment and the symptom patients value most. After steroid courses, around 60-70% of patients regain some smell within weeks. After surgery plus continuing topical therapy, full or near-full recovery is reported in 30-50% of patients at 6-12 months. Dupilumab measurably improves olfaction in about 60% of severe CRSwNP patients in trials.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do nasal polyps require surgery?",
+      "answer": "Surgery is offered when symptoms persist after 12 weeks of optimized medical therapy or when polyps are large and obstructing. Functional endoscopic sinus surgery (FESS) removes the polyps and opens the sinus ostia so steroid rinses can reach the diseased mucosa afterward. Many patients now avoid surgery entirely by adding a biologic to topical therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to recover from FESS?",
+      "answer": "Most patients return to office work within 7-10 days after FESS. Saline rinses start on day 1-2 and continue for life. Strenuous exercise, swimming, and air travel are deferred for about 2 weeks. The nose feels congested and crusted for the first 2-4 weeks; benefit peaks at 3-6 months as the mucosa heals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do nasal polyps grow back after surgery?",
+      "answer": "Polyps return in about 40% of patients within 18 months of FESS alone. Recurrence is higher in aspirin-exacerbated respiratory disease (over 80% at 5 years), in heavy smokers, and in patients who stop topical steroids. Continued intranasal corticosteroid sprays or budesonide rinses, and biologic therapy in severe cases, substantially reduce recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is dupilumab and is it effective for nasal polyps?",
+      "answer": "Dupilumab is a monoclonal antibody that blocks the IL-4 and IL-13 signaling driving eosinophilic polyp inflammation. In the SINUS-24 and SINUS-52 trials (NEJM 2019) it halved nasal polyp scores at 24 weeks, restored smell in roughly 60% of patients, and cut the need for surgery and oral steroids dramatically. It is given as a subcutaneous injection every 2 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is aspirin-exacerbated respiratory disease (AERD)?",
+      "answer": "AERD, sometimes called Samter triad, is a combination of severe asthma, nasal polyposis, and respiratory reactions to aspirin and other COX-1 NSAIDs such as ibuprofen and naproxen. It accounts for 7-15% of CRSwNP patients and behaves more aggressively than usual polyp disease. Aspirin desensitization or biologic therapy is needed to control polyp regrowth.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I take ibuprofen or aspirin if I have nasal polyps?",
+      "answer": "Most polyp patients tolerate NSAIDs, but anyone with asthma, severe polyposis, or a previous bad reaction to aspirin should avoid aspirin, ibuprofen, naproxen, and diclofenac until AERD has been formally excluded. AERD reactions can be severe and include acute asthma. Paracetamol (acetaminophen) is usually safe; check with your clinician before any new NSAID.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are nasal polyps linked to asthma?",
+      "answer": "Yes — 40-65% of patients with nasal polyps also have asthma, and 7-15% have AERD. Both conditions share type-2 inflammation in the airway. Polyp control often improves asthma control and vice versa, which is why biologic therapy targets both simultaneously and pulmonologists and ENT specialists often co-manage these patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are nasal polyps caused by allergies?",
+      "answer": "Allergic rhinitis is present in 50-80% of polyp patients and adds to inflammation but is not the sole cause. People with severe inhalant allergies can have years of nasal symptoms without polyps, and many patients with polyps have no allergies at all. Allergy treatment is part of overall control but does not by itself dissolve established polyps.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get nasal polyps?",
+      "answer": "Nasal polyps are uncommon in children. When they occur, cystic fibrosis is the underlying cause in over 90% of cases, with primary ciliary dyskinesia accounting for most of the rest. Every pediatric nasal polyp warrants a sweat chloride test and a referral to ENT and pediatric pulmonology, even if the child appears otherwise well.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are nasal polyps hereditary?",
+      "answer": "There is a genetic component. First-degree relatives of patients with CRSwNP have roughly a 4-fold higher risk than the general population, and several gene variants in immune pathways have been linked to the eosinophilic phenotype. Inheritance is multifactorial — there is no single gene, and lifestyle and environment shape whether the disease develops.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does nasal polyp treatment cost?",
+      "answer": "Generic intranasal steroid sprays and saline irrigations cost a few dollars to tens of dollars per month worldwide. A short oral steroid course costs little. FESS performed in a US hospital ranges roughly USD 8,000-20,000 self-pay, far less under most insurance plans and far less again in India and other emerging markets. Biologics such as dupilumab, omalizumab, and mepolizumab cost USD 25,000-40,000 per year at US list prices, often covered by insurance for severe disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can diet or supplements shrink nasal polyps?",
+      "answer": "Diet alone does not shrink established polyps. A Mediterranean-style anti-inflammatory eating pattern, adequate vitamin D, and omega-3 oily fish appear to reduce overall airway inflammation in observational studies and are reasonable to adopt. Aspirin and NSAID-containing herbal preparations should be avoided in AERD. Diet is supportive — not a substitute for steroids, biologics, or surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a doctor for nasal symptoms?",
+      "answer": "See a clinician if nasal blockage, smell loss, or postnasal drip last more than 12 weeks, if you have one-sided symptoms or nosebleeds, if oral steroid courses have been needed more than once a year, or if asthma is worsening alongside the nasal symptoms. Sudden severe facial pain with fever, vision change, or eye swelling needs same-day care.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Nasal Polyps (chronic sinus inflammation with polyp growth)",
+
+  "regionalNames": [
+    { "name": "नाक की पॉलिप (Naak ki Polyp)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Pólipos nasales", "region": "Spain and Latin America", "language": "es" },
+    { "name": "Polypes nasaux", "region": "France", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "nasal polyps", "nasal polyposis", "CRSwNP", "chronic rhinosinusitis with nasal polyps",
+    "polyp in nose", "sinus polyps", "Samter triad", "AERD", "aspirin sensitive asthma",
+    "dupilumab nasal polyps", "FESS surgery", "nasal polyp removal", "eosinophilic sinusitis",
+    "antrochoanal polyp", "loss of smell nose blockage"
+  ],
+
+  "symptomKeywords": [
+    "blocked nose", "loss of smell", "anosmia", "postnasal drip", "facial pressure",
+    "snoring", "recurrent sinus infection", "nasal voice", "thick mucus"
+  ],
+
+  "metaTitle": "Nasal Polyps: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Nasal polyps: bilateral sinus growths causing blocked nose and lost smell. Symptoms, surgery, biologics, and prognosis reviewed by our medical board.",
+
+  "keywords": [
+    "nasal polyps", "nasal polyps symptoms", "nasal polyps treatment", "nasal polyps surgery",
+    "nasal polyps causes", "dupilumab nasal polyps", "CRSwNP", "FESS recovery",
+    "aspirin exacerbated respiratory disease", "Samter triad", "do nasal polyps come back",
+    "nasal polyps vs sinusitis", "loss of smell nasal polyps"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Fokkens WJ, Lund VJ, Hopkins C, et al. European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (EPOS 2020). Rhinology. 2020;58(Suppl S29):1-464.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Rosenfeld RM, Piccirillo JF, Chandrasekhar SS, et al. Clinical Practice Guideline (Update): Adult Sinusitis. Otolaryngology–Head and Neck Surgery. 2015;152(2 Suppl):S1-S39.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25832968/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Orlandi RR, Kingdom TT, Smith TL, et al. International Consensus Statement on Allergy and Rhinology: Rhinosinusitis 2021 (ICAR-RS 2021). International Forum of Allergy & Rhinology. 2021;11(3):213-739.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33236525/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Bachert C, Han JK, Desrosiers M, et al. Efficacy and safety of dupilumab in patients with severe chronic rhinosinusitis with nasal polyps (SINUS-24 and SINUS-52): two multicentre, randomised, double-blind, placebo-controlled, parallel-group phase 3 trials. Lancet. 2019;394(10209):1638-1650.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31543428/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Gevaert P, Omachi TA, Corren J, et al. Efficacy and safety of omalizumab in nasal polyposis: 2 randomized phase 3 trials (POLYP 1 and POLYP 2). Journal of Allergy and Clinical Immunology. 2020;146(3):595-605.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32524991/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Han JK, Bachert C, Fokkens W, et al. Mepolizumab for chronic rhinosinusitis with nasal polyps (SYNAPSE): a randomised, double-blind, placebo-controlled, parallel-group, multicentre phase 3 trial. Lancet Respiratory Medicine. 2021;9(10):1141-1153.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33872587/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Smith TL, Kern R, Palmer JN, et al. Medical therapy vs surgery for chronic rhinosinusitis: a prospective, multi-institutional study with 1-year follow-up. International Forum of Allergy & Rhinology. 2013;3(1):4-9.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22736403/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Stevenson DD, Simon RA. Selection of patients for aspirin desensitization treatment. Journal of Allergy and Clinical Immunology. 2006;118(4):801-804.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17030230/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Sedaghat AR, Kuan EC, Scadding GK. Epidemiology of Chronic Rhinosinusitis: Prevalence and Risk Factors. Journal of Allergy and Clinical Immunology: In Practice. 2022;10(6):1395-1403.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35092822/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
