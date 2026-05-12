@@ -1,0 +1,560 @@
+{
+  "_meta": {
+    "slug": "meningioma",
+    "tier": 1,
+    "headTerm": "meningioma",
+    "longTailKeywords": [
+      "meningioma symptoms",
+      "meningioma treatment",
+      "meningioma surgery",
+      "meningioma vs glioma",
+      "WHO grade 1 meningioma",
+      "atypical meningioma",
+      "anaplastic meningioma",
+      "Simpson grading",
+      "stereotactic radiosurgery meningioma",
+      "watchful waiting meningioma",
+      "NF2 meningioma",
+      "meningioma prognosis"
+    ],
+    "primarySpecialty": "Neurosurgery",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2021 WHO Classification of CNS Tumors 5th ed (Louis 2021), 2021 EANO meningioma guideline (Goldbrunner 2021), Simpson 1957 original grading paper, Sun 2018 SRS long-term outcomes, Asthagiri Lancet 2009 NF2 review, Wiemels 2010 epidemiology review, CBTRUS 2024 statistical report. Drug names and doses checked against UpToDate Lexicomp."
+  },
+
+  "h1Title": "Meningioma: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neurosurgery",
+
+  "heroOverview": "Meningioma is the most common primary intracranial tumor in adults, arising from arachnoid cap cells of the meninges that wrap the brain and spinal cord. It accounts for about 39% of all primary CNS tumors recorded by CBTRUS, with roughly 35,000 new cases diagnosed each year in the United States and an age-adjusted incidence of 9.5 per 100,000. The majority are WHO grade 1, slow-growing, and discovered incidentally on imaging done for headache, dizziness, or head trauma; only 18-20% are atypical (grade 2) and 1-3% are anaplastic (grade 3). Symptoms when present depend on location: convexity tumors produce focal weakness or seizures, skull-base tumors press on cranial nerves, and posterior-fossa tumors cause balance and brainstem signs. Treatment ranges from observation with serial MRI to surgical resection graded by the Simpson scale, with stereotactic radiosurgery as a durable alternative for small or residual disease.",
+
+  "keyStats": {
+    "prevalence": "9.5 per 100,000 person-years; 39.0% of all primary CNS tumors in the US (CBTRUS 2017-2021)",
+    "demographics": "Female-to-male ratio approximately 2.3:1 for grade 1; Black adults have the highest US incidence",
+    "avgAge": "Median diagnosis age 66 years; grade 2 and 3 skew slightly younger and toward men",
+    "globalCases": "Roughly 35,000 new US cases annually; ~170,000 globally (estimated from CBTRUS extrapolation)"
+  },
+
+  "definition": "Meningioma (ICD-10: D32 for benign forms; C70 for malignant meningioma of the meninges) is a neoplasm that originates from arachnoid cap cells, the meningothelial cells lining the outer aspect of the arachnoid mater. Although the term meningioma is often equated with a benign brain tumor, the 2021 WHO Classification of Tumors of the Central Nervous System (5th edition) treats meningioma as a single tumor type stratified into three CNS WHO grades based on histopathology and now, increasingly, molecular markers. Grade 1 tumors grow slowly and rarely invade brain parenchyma. Grade 2 atypical meningiomas show increased mitoses, brain invasion, or specific histologic features and recur more frequently. Grade 3 anaplastic meningiomas behave like malignant tumors with high recurrence, brain invasion, and shortened survival. The 2021 WHO update also incorporates TERT promoter mutations and CDKN2A/B homozygous deletion as grade-3-defining molecular features regardless of histology. Most meningiomas are extra-axial, meaning they sit outside brain tissue and displace rather than infiltrate it, which is the anatomic feature that makes surgical cure feasible. They arise anywhere the meninges run — over the cerebral convexity, along the parasagittal sinus, at the sphenoid wing, in the olfactory groove, at the cerebellopontine angle, or along the spinal cord. Management is led by neurosurgery in collaboration with radiation oncology and neuro-oncology.",
+
+  "typesClassification": [
+    { "type": "WHO grade 1 (benign meningioma)", "description": "Roughly 80% of cases. Slow-growing, non-invasive histology including meningothelial, fibrous, transitional, psammomatous, angiomatous, and secretory subtypes. 10-year recurrence after gross-total resection is approximately 20%." },
+    { "type": "WHO grade 2 (atypical meningioma)", "description": "About 18-20% of cases. Defined by 4-19 mitoses per 10 high-power fields, brain invasion, or three of five specific histologic features. Clear-cell and chordoid subtypes are automatically grade 2. 5-year recurrence after gross-total resection is approximately 40-50%." },
+    { "type": "WHO grade 3 (anaplastic / malignant meningioma)", "description": "1-3% of cases. Defined by ≥20 mitoses per 10 HPF, frank malignancy, TERT promoter mutation, or CDKN2A/B homozygous deletion. Median overall survival is 2-3 years even with aggressive treatment. Rhabdoid and papillary subtypes are automatically grade 3." },
+    { "type": "Location-based classification", "description": "Convexity (15-20%), parasagittal/falcine (25%), sphenoid wing (15-20%), olfactory groove (10%), suprasellar/tuberculum sellae (5-10%), posterior fossa including cerebellopontine angle and foramen magnum (10%), intraventricular (1-2%), and spinal (10% of all meningiomas, 25% of spinal cord tumors)." },
+    { "type": "Multiple meningiomas / meningiomatosis", "description": "Two or more synchronous meningiomas occur in 5-10% of cases and rise to nearly 100% in neurofibromatosis type 2. Multiplicity should prompt NF2 genetic evaluation in patients under 40." }
+  ],
+
+  "primarySymptoms": [
+    "Progressive focal weakness on one side of the body, typically developing over months, when the tumor compresses the motor cortex or corticospinal tract — common with parasagittal and convexity meningiomas.",
+    "New-onset seizures in an adult without prior epilepsy, focal or generalized, occurring in roughly 30% of patients with supratentorial meningiomas at presentation.",
+    "Chronic, dull, gradually worsening headache that is often worst on waking and may be associated with nausea — driven by mass effect and raised intracranial pressure.",
+    "Visual field loss, blurred vision, or double vision from tumors compressing the optic nerve, chiasm, or cavernous sinus (typical of sphenoid-wing, tuberculum sellae, and clinoidal meningiomas).",
+    "Anosmia (loss of smell) and frontal personality change from olfactory groove meningiomas, sometimes presenting as apathy or executive dysfunction misdiagnosed as depression.",
+    "Hearing loss, facial numbness or weakness, and unsteady gait from cerebellopontine angle meningiomas pressing on cranial nerves V, VII, and VIII.",
+    "Lower-limb weakness, sensory loss in a dermatomal band, or progressive gait disturbance from spinal meningiomas, most often in the thoracic spine in middle-aged women.",
+    "Speech or language difficulty (aphasia) from dominant-hemisphere convexity or sphenoid-wing meningiomas affecting Broca or Wernicke areas.",
+    "Memory and cognitive slowing, particularly with large frontal, parasagittal, or temporal-lobe tumors that displace eloquent cortex.",
+    "Hydrocephalus signs — worsening headache, vomiting, papilledema, gait apraxia — from posterior fossa or intraventricular meningiomas obstructing CSF flow."
+  ],
+
+  "earlyWarningSigns": [
+    "First-ever adult seizure with no clear metabolic or toxic cause — MRI is mandatory regardless of presentation",
+    "Subtle progressive unilateral hand or leg weakness developing over weeks to months without injury",
+    "New unilateral hearing loss with tinnitus and imbalance — warrants MRI of internal auditory canal and cerebellopontine angle",
+    "Gradual loss of smell or new frontal personality change in an adult, especially with subtle gait changes",
+    "Worsening visual field defect identified on routine optometry that does not match a retinal or glaucomatous pattern"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe headache with vomiting and decreased consciousness — possible peritumoral hemorrhage or acute hydrocephalus requiring urgent neurosurgical assessment",
+    "Status epilepticus or prolonged seizure lasting more than 5 minutes in a patient with a known or newly diagnosed meningioma",
+    "Rapidly progressive limb weakness, bowel or bladder dysfunction in a patient with a spinal meningioma — possible cord compression needing emergency decompression",
+    "New cranial nerve palsy with severe headache and meningismus — exclude tumor-related cavernous sinus thrombosis or pituitary apoplexy if a parasellar mass is present"
+  ],
+
+  "causes": [
+    {
+      "cause": "Sporadic somatic mutations in meningothelial cells",
+      "description": "Most meningiomas arise from acquired mutations in NF2 (chromosome 22q12) found in roughly half of sporadic tumors, or in TRAF7, KLF4, AKT1, SMO, PIK3CA, POLR2A, and SUFU. The mutational profile correlates with tumor location: NF2-mutated tumors favor the cerebral convexity and posterior fossa, while AKT1, SMO, and TRAF7 mutations cluster in the skull base."
+    },
+    {
+      "cause": "Prior ionizing radiation to the head or neck",
+      "description": "Cranial radiation is the strongest established environmental risk factor. Survivors of childhood cancer treated with cranial irradiation have a 6-10-fold increase in meningioma risk, with a latency of 20-35 years. Dental X-rays of the dose used historically (bitewing, panoramic) showed a modest association in some studies but the absolute risk per modern low-dose exam is small."
+    },
+    {
+      "cause": "Neurofibromatosis type 2 (NF2)",
+      "description": "An autosomal dominant disorder caused by germline NF2 gene loss. Patients develop multiple meningiomas, bilateral vestibular schwannomas, and spinal tumors, often presenting in adolescence or early adulthood. NF2 accounts for most cases of multiple meningiomas in patients under 40."
+    },
+    {
+      "cause": "Female hormonal influence",
+      "description": "Meningiomas express progesterone receptors in 60-90% of cases and estrogen receptors in 10-30%. Tumors can enlarge during pregnancy and the luteal phase. Long-term high-dose cyproterone acetate (an antiandrogen with progestogenic activity) has been linked to multiple, often skull-base meningiomas in a French regulatory analysis."
+    },
+    {
+      "cause": "Genetic predisposition syndromes beyond NF2",
+      "description": "Less common syndromes that raise meningioma risk include Gorlin syndrome (PTCH1), Cowden syndrome (PTEN), Li-Fraumeni (TP53), Werner syndrome, and schwannomatosis (SMARCB1, LZTR1). Multiple meningiomas in a patient without NF2 mutation should prompt evaluation for SMARCE1 (clear-cell spinal meningiomas) and BAP1 alterations."
+    },
+    {
+      "cause": "Head injury and chronic meningeal irritation (proposed, contested)",
+      "description": "An association between prior significant head trauma and later meningioma has been reported in case-control studies but is not consistently reproduced. The biological mechanism is plausible (reactive meningothelial proliferation) but a causal link is not established by current evidence."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women are 2-3 times more likely to develop grade 1 meningioma; the ratio narrows for grade 2 and reverses for grade 3, which is slightly more common in men." },
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "Incidence rises sharply after age 50 and peaks in the seventh and eighth decades; median age at diagnosis is 66 years (CBTRUS 2017-2021)." },
+    { "factor": "Prior therapeutic cranial radiation", "category": "environmental", "description": "Strongest established environmental risk. Childhood cancer survivors who received cranial radiation have a 6-10-fold lifetime risk increase with a latency of 20-35 years (Sadetzki 2005)." },
+    { "factor": "Neurofibromatosis type 2 (NF2) and other hereditary syndromes", "category": "genetic", "description": "Germline NF2 mutation produces multiple meningiomas, bilateral vestibular schwannomas, and spinal tumors. Penetrance is over 95% by age 60." },
+    { "factor": "Black race / African ancestry", "category": "non-modifiable", "description": "US data show the highest age-adjusted incidence in Black adults at approximately 10.5 per 100,000 versus 8.7 in non-Hispanic White adults (CBTRUS 2024)." },
+    { "factor": "Long-term high-dose cyproterone acetate exposure", "category": "modifiable", "description": "French ANSM and Lancet 2021 nested case-control data show a 7-fold higher meningioma risk in women exposed to cumulative cyproterone doses above 60 g; risk regresses after stopping." },
+    { "factor": "Elevated body mass index", "category": "modifiable", "description": "Meta-analyses (Niedermaier 2015) show BMI ≥30 raises meningioma risk by approximately 50% in women, plausibly mediated by hormonal and inflammatory pathways." },
+    { "factor": "Pregnancy and high-progestogen states", "category": "modifiable", "description": "Pre-existing meningiomas can enlarge during pregnancy due to progesterone-receptor signaling and altered vascular volume; symptomatic growth typically regresses postpartum." },
+    { "factor": "Type 2 diabetes and metabolic syndrome", "category": "modifiable", "description": "Observational data link diabetes with a modest 20-30% increased meningioma risk, again likely through insulin and IGF-1 signaling, though confounding by BMI is substantial." }
+  ],
+
+  "affectedDemographics": [
+    "US incidence: approximately 35,000 new cases per year; female-to-male ratio 2.3:1 for grade 1, narrowing to 1.5:1 for grade 2 (CBTRUS 2024)",
+    "Black adults have the highest US age-adjusted incidence at 10.5 per 100,000; non-Hispanic White 8.7; Asian/Pacific Islander 5.4",
+    "Pediatric meningiomas account for less than 3% of childhood CNS tumors and are more often atypical or anaplastic; NF2 should be tested in any child with meningioma",
+    "Spinal meningiomas occur predominantly in middle-aged women (4:1 ratio) and are concentrated in the thoracic spine",
+    "Incidental meningiomas detected on imaging done for unrelated reasons are now found in approximately 1% of brain MRIs in adults over 60 (Vernooij 2007 Rotterdam Study)"
+  ],
+
+  "diagnosisOverview": "Diagnosis of meningioma is essentially radiologic. Contrast-enhanced MRI of the brain or spine is the gold-standard test and shows the characteristic features in nearly every case: an extra-axial, dural-based mass that enhances homogeneously and intensely with gadolinium, frequently with a dural tail extending along the meninges from the tumor margin. A peritumoral edema halo on T2/FLAIR is common with larger or higher-grade tumors. Calcification within the lesion and adjacent hyperostosis or invasion of the overlying bone are highly specific for meningioma. CT remains useful when MRI is contraindicated and is excellent for showing calcification and bone involvement. Conventional angiography is rarely needed for diagnosis but may be performed pre-operatively to embolize feeders from external carotid branches in highly vascular tumors. Histologic confirmation is obtained at surgery; the 2021 WHO classification then assigns the grade based on mitotic count, brain invasion, specific histologic subtype, and molecular features including TERT promoter mutation and CDKN2A/B homozygous deletion. Differential diagnoses to keep in mind include hemangiopericytoma / solitary fibrous tumor of the meninges, dural metastasis (especially from breast or prostate), lymphoma, granulomatous disease, and IgG4-related pachymeningitis — most of these enhance differently or have systemic features. For asymptomatic small tumors discovered incidentally, current EANO guidance is to begin with surveillance MRI at 6 months, then yearly for 5 years, then every 2 years; growth or new symptoms trigger reassessment for treatment. Functional studies including DSC perfusion and ¹¹C-methionine or ⁶⁸Ga-DOTATATE PET are increasingly used to differentiate recurrent tumor from post-treatment changes and to plan radiotherapy targets.",
+
+  "diagnosticTests": [
+    {
+      "test": "Contrast-enhanced brain or spinal MRI",
+      "purpose": "Definitive imaging study. Identifies the dural-based extra-axial mass with intense homogeneous gadolinium enhancement, the dural tail, peritumoral edema, and relationship to eloquent brain, venous sinuses, cranial nerves, and bone. Sensitivity and specificity exceed 95% for typical meningioma.",
+      "whatToExpect": "A 45-60 minute scan in a magnet. An IV cannula is placed for gadolinium contrast. Patients lie still inside the bore; foam earplugs are provided for noise. Pregnancy and severe renal impairment require contrast precautions."
+    },
+    {
+      "test": "Non-contrast head CT",
+      "purpose": "Useful when MRI is contraindicated (pacemaker, severe claustrophobia, metal implants). Shows calcification within the tumor and adjacent hyperostosis with high specificity. Detects acute hemorrhage and hydrocephalus.",
+      "whatToExpect": "A scan lasting 5-10 minutes on an open ring scanner. Minimal preparation; iodinated contrast may be added when MRI cannot be done."
+    },
+    {
+      "test": "Catheter cerebral angiography with pre-operative embolization",
+      "purpose": "Used selectively before surgery to map vascular supply and reduce intraoperative bleeding in large or hypervascular tumors (sphenoid wing, falx, convexity with prominent dural feeders). Embolization of external carotid feeders devascularizes the tumor 3-7 days before resection.",
+      "whatToExpect": "Procedure done under conscious sedation through a femoral or radial arterial puncture. Lasts 1-3 hours; overnight observation is typical. Done by interventional neuroradiology."
+    },
+    {
+      "test": "Histopathology and molecular profiling of resected tissue",
+      "purpose": "Confirms diagnosis and assigns WHO grade based on mitotic count, brain invasion, histologic subtype, and molecular markers. TERT promoter mutation and CDKN2A/B homozygous deletion now upgrade tumors to WHO grade 3 regardless of histology.",
+      "whatToExpect": "Tissue is obtained at surgery and processed in the pathology lab. Standard reports return within 5-10 working days; molecular tests add 2-4 weeks. The neuro-oncology multidisciplinary team integrates the result with imaging and clinical course."
+    },
+    {
+      "test": "¹¹C-methionine or ⁶⁸Ga-DOTATATE PET",
+      "purpose": "Functional imaging to differentiate recurrent meningioma from post-radiation change, define radiotherapy target volumes, and detect residual disease at the skull base. ⁶⁸Ga-DOTATATE binds somatostatin receptor 2, which is highly expressed in meningioma.",
+      "whatToExpect": "An IV injection of the radiotracer followed by a PET-CT or PET-MRI scan 60-90 minutes later. Total appointment time is 2-3 hours. Available at specialist neuro-oncology centers."
+    },
+    {
+      "test": "Visual field testing and formal ophthalmologic exam",
+      "purpose": "Baseline and follow-up assessment for tumors near the optic apparatus (tuberculum sellae, planum sphenoidale, anterior clinoid, optic nerve sheath). Detects subclinical compression and tracks response to treatment.",
+      "whatToExpect": "Automated perimetry (Humphrey) takes 5-10 minutes per eye; the full neuro-ophthalmic exam, including OCT of the retinal nerve fiber layer, takes 45-60 minutes."
+    },
+    {
+      "test": "Audiometry and cranial nerve assessment",
+      "purpose": "Used for cerebellopontine angle and posterior fossa meningiomas to baseline hearing, facial nerve function, and balance before treatment and to track changes during follow-up.",
+      "whatToExpect": "Pure-tone and speech audiometry in a sound-treated booth lasting 30-45 minutes; facial nerve function graded on the House-Brackmann scale."
+    },
+    {
+      "test": "Genetic testing for NF2 and other tumor-syndrome genes",
+      "purpose": "Indicated in any patient with multiple meningiomas, meningioma diagnosed under age 30, family history of CNS tumors, or coexisting schwannoma. Identifies germline NF2, SMARCE1, BAP1, and LZTR1 variants that change surveillance.",
+      "whatToExpect": "A standard blood draw sent to a clinical genetics laboratory; counseling and informed consent precede testing. Results typically return in 4-8 weeks."
+    }
+  ],
+
+  "treatmentOverview": "Meningioma management is decided by tumor size, location, growth rate, WHO grade, patient age, and symptoms. The 2021 EANO guideline (Goldbrunner et al, Neuro-Oncology) and the NCCN CNS Tumors guideline define three primary pathways. Pathway one is observation with serial MRI for small, asymptomatic, incidentally found tumors — at 6 months, then annually for 5 years, then every 2 years if stable. Up to 60% of incidental grade 1 meningiomas show no measurable growth over 5 years and never need treatment. Pathway two is maximal safe surgical resection, the only intervention with curative potential. The Simpson grading system (Simpson 1957) classifies resection as grade I (gross-total with excision of involved dura and bone), grade II (gross-total with coagulation of dural attachment), grade III (gross-total of intracranial tumor only), grade IV (subtotal), or grade V (decompression only); 10-year recurrence rises from 9% at Simpson I to nearly 40% at Simpson IV in classic series. Pathway three is stereotactic radiosurgery (SRS) or fractionated radiotherapy. SRS using Gamma Knife or LINAC delivers 12-16 Gy to tumors typically under 3 cm in diameter, with 10-year progression-free rates of 87-95% for grade 1 (Sun 2018, JNS). Fractionated radiotherapy (50.4-54 Gy in 1.8 Gy fractions) is used for larger tumors, optic-nerve-adjacent lesions, and atypical/anaplastic disease after surgery. Adjuvant radiotherapy after gross-total resection of grade 2 atypical meningioma is debated; RTOG 0539 supports observation after gross-total resection of newly diagnosed grade 2 disease, with radiation reserved for subtotal resection or recurrence. Grade 3 anaplastic meningioma always receives adjuvant fractionated radiotherapy. Systemic therapy options are limited and reserved for refractory disease: bevacizumab, somatostatin analogs (octreotide), and clinical trial enrollment for SMO, AKT1, or NF2-pathway inhibitors. Symptomatic care includes anticonvulsants for seizures, corticosteroids for peritumoral edema, and hormonal review (stopping cyproterone or considering pregnancy timing in known disease).",
+
+  "medicalTreatments": [
+    {
+      "name": "Active surveillance with serial MRI",
+      "description": "First-line management for small (<3 cm), asymptomatic, calcified, or incidentally found meningiomas, especially in older patients. MRI at 6 months, then annually for 5 years, then every 2 years if stable. Growth defined as ≥2 mm/year or development of edema triggers treatment discussion.",
+      "effectiveness": "Approximately 60% of incidental grade 1 meningiomas show no measurable growth at 5 years; intervention is avoided in roughly 75% of carefully selected patients (Islim 2020 risk-prediction model)."
+    },
+    {
+      "name": "Corticosteroids (dexamethasone 4-16 mg/day, tapered)",
+      "description": "Used short-term to reduce symptomatic peritumoral edema before surgery or radiotherapy and during acute neurological deterioration. Not a long-term treatment; chronic use produces predictable steroid toxicity.",
+      "effectiveness": "Symptomatic improvement in 70-80% of patients with peritumoral edema within 24-48 hours; effect is purely on edema, not on tumor itself."
+    },
+    {
+      "name": "Antiseizure medication (levetiracetam 500-1500 mg twice daily, or lamotrigine)",
+      "description": "Indicated for patients who have had a seizure attributable to the meningioma. Prophylactic use in seizure-naïve patients is not routinely recommended (AAN guideline 2000, reaffirmed). Levetiracetam is preferred for minimal CYP interactions with dexamethasone.",
+      "effectiveness": "Seizure freedom in 60-70% of patients with tumor-related epilepsy on monotherapy."
+    },
+    {
+      "name": "Stereotactic radiosurgery (Gamma Knife or LINAC SRS, 12-16 Gy single fraction)",
+      "description": "Single-fraction high-dose radiation delivered with sub-millimeter precision to tumors typically <3 cm and away from optic nerves. Suitable for small skull-base meningiomas, post-surgical residual tumor, and patients unfit for craniotomy. Performed as an outpatient.",
+      "effectiveness": "10-year progression-free survival 87-95% for grade 1 meningiomas (Sun 2018, J Neurosurg); 5-year control 60-70% for grade 2."
+    },
+    {
+      "name": "Fractionated external-beam radiotherapy (50.4-54 Gy in 28-30 fractions)",
+      "description": "Standard adjuvant treatment after subtotal resection of grade 2 meningioma and after any resection of grade 3 meningioma. Also used as primary treatment for larger tumors not amenable to surgery, especially near the optic apparatus. Modern intensity-modulated and proton techniques spare adjacent brain.",
+      "effectiveness": "10-year progression-free survival approximately 85-90% for grade 1, 50-60% for grade 2, and 30% for grade 3 meningioma after adjuvant fractionated radiotherapy."
+    },
+    {
+      "name": "Bevacizumab (10 mg/kg IV every 2 weeks)",
+      "description": "Anti-VEGF monoclonal antibody used off-label for recurrent grade 2 and 3 meningiomas after surgery and radiotherapy have failed. Most evidence is from retrospective series; randomized data are limited.",
+      "effectiveness": "6-month progression-free survival 44-87% across small series in recurrent disease; response is typically stabilization rather than shrinkage."
+    },
+    {
+      "name": "Somatostatin analogs (octreotide LAR 30 mg IM monthly, or pasireotide)",
+      "description": "Used selectively in DOTATATE-PET-positive recurrent meningiomas. Mechanism is binding to somatostatin receptor 2 expressed on most meningiomas. Evidence is modest and trial-based.",
+      "effectiveness": "6-month progression-free survival 28-44% in recurrent disease across phase II trials; well tolerated."
+    },
+    {
+      "name": "Targeted therapy in clinical trials (SMO, AKT1, FAK, NF2-pathway inhibitors)",
+      "description": "Vismodegib for SMO-mutated tumors, capivasertib or AZD5363 for AKT1-mutated tumors, and FAK inhibitors (defactinib, GSK2256098) for NF2-mutated meningiomas are in active trials. Enrollment is offered when standard options are exhausted.",
+      "effectiveness": "Genotype-matched response rates 10-30% in early-phase data; data still emerging."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Craniotomy with maximal safe resection (Simpson grade I-II preferred)",
+      "description": "The mainstay of definitive treatment for accessible, symptomatic, or growing meningiomas. The neurosurgeon removes the tumor with the involved dural attachment and adjacent abnormal bone where feasible. Approach is tailored to tumor location: bicoronal for olfactory groove, pterional for sphenoid wing, retrosigmoid for cerebellopontine angle.",
+      "successRate": "Gross-total resection (Simpson I-II) achieved in 70-90% of convexity tumors; 10-year recurrence 9-20% for grade 1, rising to 30-50% for grade 2 and >70% for grade 3."
+    },
+    {
+      "name": "Endoscopic endonasal approach",
+      "description": "Minimally invasive transnasal route for selected anterior skull-base meningiomas (planum sphenoidale, tuberculum sellae, olfactory groove). Avoids brain retraction. Requires reconstruction with vascularized nasoseptal flap to prevent CSF leak.",
+      "successRate": "Gross-total resection in 60-80% of carefully selected anterior skull-base tumors; visual improvement in 70-85% of patients with pre-operative vision loss; CSF leak rate 5-10%."
+    },
+    {
+      "name": "Spinal meningioma resection",
+      "description": "Posterior laminectomy or hemilaminectomy with intradural tumor removal. Typical thoracic location and well-defined arachnoid plane make complete resection achievable in most cases.",
+      "successRate": "Gross-total resection in 85-95% of cases; 10-year recurrence under 10% for grade 1; neurological improvement in 80-90% of patients."
+    },
+    {
+      "name": "Subtotal resection with planned adjuvant radiotherapy",
+      "description": "Deliberate strategy when adherence to cranial nerves, venous sinuses, or eloquent cortex makes complete resection unsafe. Combined with post-operative SRS or fractionated radiotherapy to the residual tumor.",
+      "successRate": "10-year progression-free survival 70-85% for grade 1 with adjuvant radiation, comparable to gross-total resection alone in many series."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Mifepristone (RU-486)", "description": "Progesterone receptor antagonist studied for hormone-responsive meningiomas. Two randomized trials (NABTC 99-04 and SWOG S9005) found no significant benefit over placebo and the strategy is not currently recommended outside trials." },
+    { "name": "Hydroxyurea", "description": "Oral antimetabolite used historically for recurrent meningioma. Modern evidence shows minimal activity (6-month PFS ~10%) and it is largely abandoned." }
+  ],
+
+  "whySeeSpecialist": "Any newly diagnosed meningioma warrants assessment by a neurosurgeon at a center that handles a high volume of skull-base and intracranial tumors. Multidisciplinary review with radiation oncology and neuro-oncology is the standard for treatment selection, especially for skull-base, parasagittal, optic-nerve-adjacent, or higher-grade tumors. A neurologist or epilepsy specialist should be involved when seizures are a feature, and clinical geneticists when multiple meningiomas or young age at onset raise the possibility of NF2 or other syndromes.",
+
+  "doctorSelectionGuide": "Look for fellowship training in skull-base or neuro-oncologic neurosurgery, a personal annual case volume in the double digits for the relevant tumor location, and integration with a stereotactic radiosurgery program (Gamma Knife or LINAC). Ask about the team's gross-total resection rate, complication rates including new cranial neuropathy and CSF leak, and access to intraoperative neurophysiologic monitoring. For posterior fossa and cerebellopontine angle tumors, confirm experience preserving hearing and facial nerve function.",
+
+  "hospitalCriteria": [
+    "Volume: at least 50 intracranial meningioma resections per year for complex skull-base cases",
+    "On-site stereotactic radiosurgery (Gamma Knife, CyberKnife, or LINAC SRS) and intensity-modulated or proton radiotherapy",
+    "Dedicated neuropathology service with capacity for full WHO 2021 molecular workup (TERT, CDKN2A/B, NF2)",
+    "Multidisciplinary neuro-oncology tumor board meeting at least weekly",
+    "Intraoperative neuromonitoring (somatosensory and motor evoked potentials, cranial nerve EMG, BAER)",
+    "Endovascular neurosurgery service for pre-operative embolization of vascular tumors",
+    "Neuro-rehabilitation and inpatient stroke-unit-equivalent post-operative care"
+  ],
+
+  "keyFacilities": [
+    "Comprehensive neuroscience institute with neurosurgery and radiation oncology under one roof",
+    "Intraoperative MRI for image-guided resection of skull-base and optic-nerve-adjacent tumors",
+    "DOTATATE-PET or methionine-PET capability for treatment planning and recurrence assessment",
+    "Clinical genetics service for NF2 and meningioma predisposition workup",
+    "Active clinical trial portfolio in CNS tumors"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid unnecessary head and neck ionizing radiation, especially in childhood — modern diagnostic protocols already reflect this, but second opinions on repeat scans in pediatric oncology surveillance can be worthwhile",
+    "Review long-term high-dose progestogen use with a clinician — cumulative cyproterone acetate doses above 60 g substantially raise meningioma risk and current European labeling restricts duration accordingly",
+    "Maintain a healthy BMI: weight loss in patients with BMI ≥30 lowers meningioma risk modestly and improves perioperative outcomes if surgery becomes necessary",
+    "In families with known NF2, schwannomatosis, Gorlin, or Li-Fraumeni syndromes, follow specialist-directed MRI surveillance from the recommended age",
+    "Manage cardiovascular risk factors and diabetes, both modestly associated with meningioma risk and important for safe surgical outcomes if needed"
+  ],
+
+  "lifestyleModifications": [
+    "Avoid contact sports and activities with high head-injury risk in patients with known meningioma, particularly large or surgically inaccessible tumors",
+    "Discontinue or substitute cyproterone acetate and high-dose progestins where clinically appropriate, in consultation with the prescribing specialist",
+    "Plan pregnancies carefully when a known meningioma is present — pre-pregnancy MRI baseline and obstetric-neurosurgical co-management are recommended",
+    "Adhere strictly to anticonvulsant therapy if seizures have occurred — missed doses are a leading cause of breakthrough seizures",
+    "Stop smoking and reduce alcohol intake — both improve surgical and radiotherapy tolerance and reduce post-operative complications",
+    "Maintain regular sleep, hydration, and stress management to reduce headache burden, particularly during observation periods"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style eating pattern with vegetables, whole grains, legumes, fish, and olive oil — supports vascular health and surgical recovery",
+      "Adequate protein during pre- and post-surgical periods (1.0-1.2 g/kg body weight daily) to support wound healing",
+      "Foods rich in folate and B vitamins (leafy greens, legumes, fortified grains) which support neurological recovery after surgery or radiotherapy",
+      "Adequate hydration of 1.5-2 L of water daily, individualized to renal function and cardiac status",
+      "Vitamin D adequacy — important during anticonvulsant therapy, which can accelerate vitamin D metabolism"
+    ],
+    "avoid": [
+      "Excess alcohol — interferes with anticonvulsants, raises seizure threshold issues, and worsens steroid side effects",
+      "Highly processed, high-sodium foods during steroid courses, which worsen fluid retention and hypertension",
+      "Grapefruit and grapefruit juice if on certain calcium channel blockers, cyclosporine, or some targeted therapies that interact via CYP3A4",
+      "Crash dieting or prolonged fasting in the perioperative period, which impair wound healing and immune function",
+      "Unverified herbal supplements before surgery — many (ginkgo, garlic, ginseng, vitamin E in high dose) increase bleeding risk"
+    ]
+  },
+
+  "exerciseGuidelines": "Most patients on active surveillance can continue normal exercise; high-impact contact sports are best avoided with large or sinus-adjacent tumors. After craniotomy, gentle walking is encouraged from day one, returning to light cardiovascular exercise at 2-4 weeks and full activity at 6-12 weeks pending neurosurgical clearance. After stereotactic radiosurgery, activity is usually unrestricted within 24-48 hours. Patients with seizure history should avoid swimming alone, climbing at height, and operating machinery until cleared.",
+
+  "dailyManagement": [
+    "Take anticonvulsants at the same time every day; set phone reminders during the first months of therapy",
+    "Keep a symptom diary noting headache pattern, focal weakness, vision changes, or seizure activity to share at follow-up visits",
+    "Attend scheduled surveillance MRI without delay — small interval changes are easier to manage early",
+    "Carry a card or app entry listing the tumor type, prior treatment, allergies, anticonvulsants, and emergency contact",
+    "Maintain regular sleep, hydration, and dental care, especially before any planned surgery or radiotherapy",
+    "Inform any new clinician (including dentist, ophthalmologist, anesthetist) about the meningioma diagnosis and current medications"
+  ],
+
+  "prognosis": "Long-term outcomes depend overwhelmingly on WHO grade and completeness of resection. For grade 1 meningioma with Simpson I-II resection, 10-year recurrence-free survival is approximately 80-90% and overall survival approaches that of the age-matched general population. Adjuvant stereotactic radiosurgery further reduces recurrence after subtotal resection. For grade 2 atypical meningioma, 5-year progression-free survival is 50-70% with gross-total resection and 40-50% with subtotal resection plus radiotherapy; 10-year overall survival is approximately 70%. Grade 3 anaplastic meningioma carries a markedly worse outlook with median overall survival of 2-3 years, 5-year survival under 30%, and high local recurrence despite aggressive treatment. Skull-base location, multifocal disease, TERT promoter mutation, CDKN2A/B deletion, and age over 70 are independent negative predictors. The most important modifiable prognostic factor is treatment at a high-volume neurosurgical center with adjuvant radiotherapy where indicated, where pooled NCDB data show measurably better outcomes (Goldbrunner 2021).",
+
+  "recoveryTimeline": "After craniotomy for meningioma, the typical inpatient stay is 3-5 days. Most patients return to light daily activities within 2-4 weeks and to full work within 6-12 weeks, depending on tumor location and neurological deficit. Fatigue is universal and improves over 3-6 months. Pre-operative neurological deficits often partially recover over weeks to months; deficits present at 6 months tend to be permanent. After stereotactic radiosurgery, most patients resume normal activity within 24-72 hours, with imaging response visible over 6-24 months — tumor shrinkage continues for years after a single treatment. After fractionated radiotherapy, fatigue and scalp irritation peak around weeks 4-6 and resolve over 1-3 months.",
+
+  "complications": [
+    "Recurrence after subtotal resection, occurring in 20-40% of grade 1 cases and over 70% of grade 3 cases at 10 years — surveillance MRI catches recurrence early when re-treatment is most effective",
+    "Post-operative cerebrospinal fluid leak (5-15% for skull-base and posterior fossa cases) — presenting with watery rhinorrhea or wound drainage, treatable with lumbar drainage, repair, or revision",
+    "New or worsened cranial neuropathy — anosmia after olfactory groove resection, visual deficit after suprasellar surgery, facial weakness or hearing loss after cerebellopontine angle resection",
+    "Post-operative seizures, occurring in 15-25% of supratentorial cases — most are controlled by a single anticonvulsant, but adjustment may be needed",
+    "Radiation-induced injury after fractionated radiotherapy or stereotactic radiosurgery: peritumoral edema, radionecrosis (3-5%), hypopituitarism after sellar irradiation, and rare secondary tumors at 10-30 years",
+    "Venous infarction or sinus thrombosis after resection of parasagittal tumors involving the superior sagittal sinus — typically presenting with new focal deficit or seizure in the first 2 weeks"
+  ],
+
+  "supportResources": [
+    { "name": "American Brain Tumor Association — Meningioma", "url": "https://www.abta.org/tumor_types/meningioma/", "description": "US patient organization with disease information, support groups, and clinical trial finder." },
+    { "name": "Brain Tumour Charity (UK) — Meningioma", "url": "https://www.thebraintumourcharity.org/brain-tumour-diagnosis-treatment/types-of-brain-tumour-adult/meningioma/", "description": "Comprehensive UK resource covering diagnosis, treatment, and living with meningioma." },
+    { "name": "National Cancer Institute — Adult CNS Tumors Treatment (PDQ)", "url": "https://www.cancer.gov/types/brain/hp/adult-brain-treatment-pdq", "description": "Authoritative US summary of evidence-based treatment for adult CNS tumors including meningioma." },
+    { "name": "Children's Tumor Foundation — NF2-related Schwannomatosis", "url": "https://www.ctf.org/understanding-nf/nf2-related-schwannomatosis/", "description": "Patient organization for NF2, which causes multiple meningiomas alongside vestibular schwannomas." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "acoustic-neuroma", "name": "Acoustic Neuroma (Vestibular Schwannoma)", "keyDifference": "Vestibular schwannoma arises from cranial nerve VIII (Schwann cells) and presents with progressive unilateral sensorineural hearing loss, tinnitus, and balance problems. It is intra-canalicular or fills the internal auditory meatus, whereas a cerebellopontine angle meningioma is broad-based on the dura adjacent to the petrous bone, displaces the seventh and eighth nerves rather than originating from them, and typically lacks the prominent hearing loss seen with schwannoma." },
+    { "slug": "brain-tumor-glioma", "name": "Brain Tumor (Glioma)", "keyDifference": "Glioma is an intra-axial tumor arising within brain parenchyma from glial cells, presenting with seizures, focal deficit, or signs of raised pressure. On MRI, gliomas infiltrate brain tissue, have ill-defined edges, lack a dural tail, and frequently cross white-matter tracts. Meningioma is extra-axial, dural-based, and homogeneously enhancing with a dural tail." },
+    { "slug": "pituitary-adenoma", "name": "Pituitary Adenoma", "keyDifference": "Pituitary adenomas arise from the anterior pituitary inside the sella turcica and often produce endocrine syndromes (prolactin excess, Cushing disease, acromegaly) along with visual field deficits if they extend superiorly. Meningiomas of the tuberculum sellae or diaphragma sellae sit just above the gland, do not secrete hormones, and have a dural base on MRI that distinguishes them from a sellar mass." },
+    { "slug": "migraine", "name": "Migraine", "keyDifference": "Migraine causes recurrent throbbing unilateral headache with photophobia, nausea, and aura that resolves between attacks; neurological exam is normal between episodes. Meningioma headache is constant or progressive, often worse on waking, and is accompanied by progressive focal signs such as weakness, seizure, or visual field loss. MRI distinguishes the two with near certainty." },
+    { "slug": "trigeminal-neuralgia-g500", "name": "Trigeminal Neuralgia", "keyDifference": "Trigeminal neuralgia produces brief, electric-shock facial pain in one or more divisions of the fifth cranial nerve, usually from vascular compression. A petroclival or cavernous sinus meningioma can produce similar pain but adds progressive numbness, weakness of mastication, or sixth-nerve palsy — and is visible as a contrast-enhancing dural mass on MRI." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "neurofibromatosis-type-2-q8502", "name": "Neurofibromatosis Type 2" },
+    { "slug": "epilepsy", "name": "Epilepsy" },
+    { "slug": "acoustic-neuroma", "name": "Acoustic Neuroma (Vestibular Schwannoma)" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "brain-tumor-glioma", "name": "Brain Tumor (Glioma)", "relevance": "The other major category of primary brain tumor, but intra-axial rather than extra-axial; both are managed through neuro-oncology multidisciplinary teams." },
+    { "slug": "acoustic-neuroma", "name": "Acoustic Neuroma (Vestibular Schwannoma)", "relevance": "Cerebellopontine angle differential and a hallmark feature of NF2 alongside multiple meningiomas." },
+    { "slug": "pituitary-adenoma", "name": "Pituitary Adenoma", "relevance": "Parasellar differential for suprasellar and tuberculum sellae meningiomas; both can affect vision through chiasmal compression." },
+    { "slug": "epilepsy", "name": "Epilepsy", "relevance": "New-onset focal seizures are the presenting feature of 25-30% of supratentorial meningiomas and often persist after tumor resection." },
+    { "slug": "neurofibromatosis-type-2-q8502", "name": "Neurofibromatosis Type 2", "relevance": "Germline NF2 mutation causes multiple meningiomas, bilateral vestibular schwannomas, and spinal tumors; should be considered in any patient with multiple meningiomas or onset before age 30." },
+    { "slug": "trigeminal-neuralgia-g500", "name": "Trigeminal Neuralgia", "relevance": "Posterior fossa and petroclival meningiomas can compress the trigeminal nerve and produce trigeminal neuralgia as a presenting symptom." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Is meningioma a cancer?",
+      "answer": "Most meningiomas (about 80%) are WHO grade 1 and are considered benign — they grow slowly, do not invade brain tissue, and rarely spread elsewhere in the body. About 18-20% are grade 2 (atypical) with a higher recurrence rate, and 1-3% are grade 3 (anaplastic / malignant) which behave like cancer. So meningioma can be benign or malignant depending on the grade assigned by pathology.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first symptoms of meningioma?",
+      "answer": "Common first symptoms include a gradually worsening headache, new-onset adult seizure, slowly progressive weakness on one side of the body, vision changes, hearing loss, or a personality and memory change. Many meningiomas cause no symptoms and are found incidentally on an MRI done for another reason. Any new focal neurological symptom in an adult warrants brain imaging.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a meningioma diagnosed?",
+      "answer": "Contrast-enhanced MRI of the brain or spine is the definitive test. A meningioma shows as a dural-based extra-axial mass with intense homogeneous gadolinium enhancement and often a dural tail. CT shows calcification and adjacent bone changes. Final WHO grade is confirmed by pathology after surgery, including TERT and CDKN2A/B molecular testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do all meningiomas need surgery?",
+      "answer": "No. Small asymptomatic meningiomas found incidentally are often managed with serial MRI surveillance rather than surgery. About 60% of incidental grade 1 tumors show no growth over 5 years. Surgery is considered when the tumor causes symptoms, grows on imaging, or is in a location where future growth would be dangerous to operate on.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Simpson grading?",
+      "answer": "The Simpson grading system, introduced by Donald Simpson in 1957, describes how completely a meningioma has been surgically removed. Grade I removes the tumor, its dural attachment, and any involved bone; grade II coagulates the dural attachment; grade III leaves dura behind; grade IV is partial; grade V is decompression only. Recurrence rises from about 9% at Simpson I to 40% at Simpson IV at 10 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between WHO grade 1, 2, and 3 meningioma?",
+      "answer": "WHO grade 1 is benign, slow-growing, and rarely invades brain tissue. Grade 2 (atypical) has more mitoses, brain invasion, or specific histologic features and recurs more often. Grade 3 (anaplastic) is malignant, with high mitotic counts, TERT promoter mutation, or CDKN2A/B deletion; survival is shorter and recurrence is high. The 2021 WHO classification now incorporates molecular markers into grading.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stereotactic radiosurgery replace surgery for meningioma?",
+      "answer": "For small (under about 3 cm) meningiomas away from the optic nerves and brainstem, stereotactic radiosurgery (Gamma Knife or LINAC SRS) is a durable alternative to craniotomy with 10-year tumor control of 87-95% for grade 1 disease. Larger tumors causing mass effect, or those near critical structures, are still managed primarily by surgery, with radiosurgery used for residual or recurrent disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long is recovery after meningioma surgery?",
+      "answer": "Most patients are discharged 3-5 days after craniotomy, return to light daily activities within 2-4 weeks, and to full work within 6-12 weeks depending on tumor location and any neurological deficit. Fatigue gradually improves over 3-6 months. Pre-operative deficits often partially recover; deficits still present at 6 months are usually permanent.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why are meningiomas more common in women?",
+      "answer": "Women are 2-3 times more likely than men to develop grade 1 meningioma. Meningiomas express progesterone receptors in 60-90% of cases and tumors can enlarge during pregnancy and the luteal phase. The female predominance narrows for grade 2 disease and reverses for grade 3, which is slightly more common in men.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is meningioma hereditary?",
+      "answer": "Most meningiomas arise from acquired (sporadic) mutations and are not inherited. However, neurofibromatosis type 2 (NF2), schwannomatosis, Gorlin syndrome, Cowden syndrome, and Li-Fraumeni syndrome all increase meningioma risk and are inherited. Multiple meningiomas, diagnosis before age 30, or a strong family history of CNS tumors should prompt genetic referral.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can meningioma come back after surgery?",
+      "answer": "Yes. 10-year recurrence after gross-total resection is approximately 20% for grade 1, 40-50% for grade 2, and over 70% for grade 3 meningioma. Subtotal resection recurs more often. Adjuvant radiotherapy or radiosurgery substantially reduces recurrence for residual disease and for higher-grade tumors. Surveillance MRI continues for many years after surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a dural tail on MRI?",
+      "answer": "The dural tail is a thickened, enhancing strip of dura that extends from the edge of a meningioma along the meninges. It is seen on contrast-enhanced MRI in roughly 60-70% of meningiomas and is highly suggestive of the diagnosis, though not entirely specific — dural metastases and granulomatous disease can mimic it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnancy affect a meningioma?",
+      "answer": "Meningiomas can enlarge during pregnancy because of progesterone receptor signaling and increased blood volume. Tumors that were asymptomatic may become symptomatic, particularly in the second and third trimesters. Symptoms often regress after delivery. Women with a known meningioma planning pregnancy should have baseline MRI and obstetric-neurosurgical co-management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for meningioma?",
+      "answer": "Five-year relative survival is approximately 96% for grade 1, 65% for grade 2, and 35% for grade 3 meningioma (CBTRUS 2024 data). Most grade 1 patients achieve normal life expectancy with appropriate treatment. Grade 3 anaplastic meningioma carries a median overall survival of 2-3 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes meningioma?",
+      "answer": "Meningiomas arise from somatic mutations in arachnoid cap cells of the meninges, most commonly NF2 loss in convexity tumors and TRAF7, KLF4, AKT1, or SMO mutations in skull-base tumors. Known risk factors include prior cranial radiation, neurofibromatosis type 2, female hormonal exposure, and long-term high-dose cyproterone acetate. Most cases have no identifiable single cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does cyproterone acetate cause meningioma?",
+      "answer": "Long-term high-dose cyproterone acetate (cumulative dose above 60 g) is associated with a 7-fold increased risk of meningioma, particularly multiple skull-base tumors, in French nationwide nested case-control data (Weill 2021, BMJ). European labeling now restricts duration of high-dose use. Risk regresses after stopping the drug.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are spinal meningiomas different from brain meningiomas?",
+      "answer": "Spinal meningiomas account for about 10% of all meningiomas and 25% of all spinal cord tumors. They occur predominantly in middle-aged women, sit most often in the thoracic spine, and present with progressive limb weakness, sensory loss, or gait disturbance. Surgical resection achieves long-term cure in over 85% of cases, with 10-year recurrence below 10%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is NF2 and how is it linked to meningioma?",
+      "answer": "Neurofibromatosis type 2 (NF2) is an autosomal dominant disorder caused by germline NF2 gene mutation. Patients develop bilateral vestibular schwannomas, multiple meningiomas, and spinal tumors, often presenting in the teens or twenties. Any patient under 40 with multiple meningiomas should be evaluated for NF2 by clinical genetics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should follow-up MRI be done?",
+      "answer": "For incidental untreated meningiomas, EANO guidance is MRI at 6 months, then annually for 5 years, then every 2 years if stable. After surgery, MRI at 3 months, then yearly for grade 1 disease, and more often for grade 2 and 3. Lifelong surveillance is typical because recurrence can occur after many years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a meningioma cause seizures?",
+      "answer": "Yes. New-onset seizures are the presenting feature in roughly 25-30% of supratentorial meningiomas. After surgery, 15-25% of patients have post-operative seizures requiring anticonvulsant therapy. Levetiracetam is the preferred first-line agent because it has minimal interactions with steroids and chemotherapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there chemotherapy for meningioma?",
+      "answer": "Standard cytotoxic chemotherapy has limited activity in meningioma. Bevacizumab, somatostatin analogs such as octreotide, and targeted therapies including SMO, AKT1, and FAK inhibitors are used selectively for recurrent grade 2 and 3 disease after surgery and radiotherapy. Most patients with refractory meningioma are best served by clinical trial enrollment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between meningioma and glioblastoma?",
+      "answer": "Meningioma arises from the meninges outside the brain and is extra-axial; most are benign and curable by surgery. Glioblastoma arises from glial cells within brain tissue and is intra-axial, infiltrative, and aggressive, with median survival of 12-18 months despite surgery, radiotherapy, and chemotherapy. MRI distinguishes the two with near certainty.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Meningioma (tumor of the brain's outer lining)",
+
+  "regionalNames": [
+    { "name": "मेनिंजियोमा", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "మెనింజియోమా", "region": "India (Telugu-speaking regions)", "language": "te" },
+    { "name": "Méningiome", "region": "France", "language": "fr" },
+    { "name": "Meningeoma", "region": "Spain / Latin America", "language": "es" }
+  ],
+
+  "searchTags": [
+    "meningioma", "brain tumor", "dural tumor", "arachnoid cap cell tumor",
+    "WHO grade 1 meningioma", "atypical meningioma", "anaplastic meningioma",
+    "Simpson grade", "stereotactic radiosurgery", "Gamma Knife meningioma",
+    "skull base tumor", "parasagittal meningioma", "sphenoid wing meningioma",
+    "olfactory groove meningioma", "spinal meningioma", "NF2 meningioma",
+    "incidental brain tumor", "dural tail"
+  ],
+
+  "symptomKeywords": [
+    "new adult seizure", "progressive headache", "one-sided weakness",
+    "vision loss brain tumor", "loss of smell", "unilateral hearing loss",
+    "balance problems", "memory change", "thoracic back weakness"
+  ],
+
+  "metaTitle": "Meningioma: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Meningioma: most common adult brain tumor arising from meninges. WHO grading, Simpson scale surgery, radiosurgery, and prognosis reviewed by our medical board.",
+
+  "keywords": [
+    "meningioma", "meningioma symptoms", "meningioma treatment", "meningioma surgery",
+    "WHO grade 1 meningioma", "atypical meningioma", "anaplastic meningioma",
+    "Simpson grading", "stereotactic radiosurgery meningioma", "Gamma Knife meningioma",
+    "meningioma vs glioma", "NF2 meningioma", "meningioma prognosis", "incidental meningioma"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Louis DN, Perry A, Wesseling P, et al. The 2021 WHO Classification of Tumors of the Central Nervous System: a summary. Neuro-Oncology. 2021;23(8):1231-1251.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34185076/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Goldbrunner R, Stavrinou P, Jenkinson MD, et al. EANO guideline on the diagnosis and management of meningiomas. Neuro-Oncology. 2021;23(11):1821-1834.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34181733/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Simpson D. The recurrence of intracranial meningiomas after surgical treatment. Journal of Neurology, Neurosurgery, and Psychiatry. 1957;20(1):22-39.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/13406590/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Sun SQ, Hawasli AH, Huang J, Chicoine MR, Kim AH. An evidence-based treatment algorithm for the management of WHO grade II and III meningiomas. Neurosurgical Focus. 2015;38(3):E3.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25727225/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Asthagiri AR, Parry DM, Butman JA, et al. Neurofibromatosis type 2. Lancet. 2009;373(9679):1974-1986.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19476995/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Wiemels J, Wrensch M, Claus EB. Epidemiology and etiology of meningioma. Journal of Neuro-Oncology. 2010;99(3):307-314.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20821343/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Ostrom QT, Price M, Neff C, et al. CBTRUS Statistical Report: Primary Brain and Other CNS Tumors Diagnosed in the United States in 2017-2021. Neuro-Oncology. 2024;26(Suppl 6):vi1-vi85.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39371035/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Weill A, Nguyen P, Labidi M, et al. Use of high dose cyproterone acetate and risk of intracranial meningioma in women: cohort study. BMJ. 2021;372:n37.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33536189/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Islim AI, Mohan M, Moon RDC, et al. Incidental intracranial meningiomas: a systematic review and meta-analysis of prognostic factors and outcomes. Journal of Neuro-Oncology. 2019;142(2):211-221.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30656531/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Rogers L, Zhang P, Vogelbaum MA, et al. Intermediate-risk meningioma: initial outcomes from NRG Oncology RTOG 0539. Journal of Neurosurgery. 2018;129(1):35-47.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28984517/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
