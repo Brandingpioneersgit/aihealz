@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
-
-const AI_API_BASE = process.env.AI_API_BASE || 'https://openrouter.ai/api/v1';
-const AI_API_KEY = process.env.AI_API_KEY || process.env.OPENROUTER_API_KEY;
-const AI_MODEL = process.env.AI_MODEL || 'anthropic/claude-sonnet-4';
+import { aiChat, aiKey, AI_BUSY_REPLY } from '@/lib/ai/openrouter';
+import { requireChatLead, recordChatMessage } from '@/lib/chat-gate';
 
 interface ChatMessage {
   role: 'user' | 'assistant' | 'system';
@@ -12,6 +10,14 @@ interface ChatMessage {
 
 export async function POST(request: NextRequest) {
   try {
+    const gate = await requireChatLead(request);
+    if (!gate.ok) {
+      return NextResponse.json(
+        { error: gate.reason, resetAt: gate.resetAt },
+        { status: gate.status }
+      );
+    }
+
     const { message, history = [], testSlug, providerSlug } = await request.json();
 
     if (!message || typeof message !== 'string') {
@@ -179,44 +185,32 @@ ${searchContext}
       { role: 'user', content: message },
     ];
 
-    // Call AI API
-    const response = await fetch(`${AI_API_BASE}/chat/completions`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${AI_API_KEY}`,
-        'HTTP-Referer': 'https://aihealz.com',
-        'X-Title': 'AIHealz Diagnostic Chat',
-      },
-      body: JSON.stringify({
-        model: AI_MODEL,
-        messages,
-        max_tokens: 1000,
-        temperature: 0.7,
-      }),
-    });
-
-    if (!response.ok) {
-      const error = await response.text();
-      console.error('AI API error:', error);
-      return NextResponse.json(
-        { error: 'Failed to get AI response' },
-        { status: 500 }
-      );
+    if (!aiKey()) {
+      return NextResponse.json({ success: true, message: AI_BUSY_REPLY, model: 'fallback' });
     }
 
-    const data = await response.json();
-    const assistantMessage = data.choices?.[0]?.message?.content || 'I apologize, I could not generate a response.';
+    const result = await aiChat(messages, {
+      mode: 'reasoning',
+      temperature: 0.7,
+      maxTokens: 1000,
+    });
+
+    if (!result.ok) {
+      console.warn('[diagnostics-chat] aiChat failed:', result.status, result.error);
+      return NextResponse.json({ success: true, message: AI_BUSY_REPLY, model: 'fallback' });
+    }
+
+    if (!gate.bypass) {
+      await recordChatMessage(request, gate.leadId, gate.ipHash);
+    }
 
     return NextResponse.json({
       success: true,
-      message: assistantMessage,
+      message: result.text || AI_BUSY_REPLY,
+      model: result.model,
     });
   } catch (error) {
     console.error('Chat error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process chat request' },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: true, message: AI_BUSY_REPLY, model: 'fallback' });
   }
 }

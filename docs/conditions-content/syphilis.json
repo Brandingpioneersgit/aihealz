@@ -1,0 +1,478 @@
+{
+  "_meta": {
+    "slug": "syphilis",
+    "tier": 1,
+    "headTerm": "syphilis",
+    "longTailKeywords": [
+      "syphilis symptoms",
+      "syphilis treatment",
+      "syphilis stages",
+      "primary syphilis chancre",
+      "secondary syphilis rash",
+      "neurosyphilis",
+      "syphilis test",
+      "RPR test",
+      "penicillin for syphilis",
+      "syphilis cure"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against CDC STI Treatment Guidelines 2021 (Workowski MMWR), Singh and Romanowski Lancet 2023 review, and CDC STI Surveillance Report 2022. Drug names and doses verified against current MMWR recommendations."
+  },
+
+  "h1Title": "Syphilis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Syphilis is a sexually transmitted bacterial infection caused by the spirochete Treponema pallidum, which spreads through direct contact with infectious sores and through the placenta from mother to fetus. United States cases reached 207,255 in 2022 — the highest count since 1950 and a 80% rise over five years — with primary, secondary, and early latent cases now reported in every age band from 15 to 65. The infection progresses through four clinical stages: a painless genital ulcer (chancre), a body-wide rash 6-8 weeks later, a hidden latent phase that can last years, and a late stage that damages the brain, heart, and large vessels. Untreated, roughly one in three patients develops irreversible end-organ disease. A single intramuscular dose of benzathine penicillin G cures early-stage infection in over 95% of cases.",
+
+  "keyStats": {
+    "prevalence": "207,255 US cases (CDC 2022); ~8 million new global infections annually (WHO 2020)",
+    "demographics": "Men (especially men who have sex with men) account for 80% of US primary and secondary cases; women aged 20-34 are the fastest-rising group",
+    "avgAge": "Median age at diagnosis 30-39; congenital cases peak in newborns of women aged 20-29",
+    "globalCases": "~36 million prevalent infections worldwide (WHO 2020); 700,000+ cases of congenital syphilis annually"
+  },
+
+  "definition": "Syphilis (ICD-10: A50-A53) is a chronic systemic infection caused by the spirochete bacterium Treponema pallidum subspecies pallidum, transmitted primarily through sexual contact with an infectious lesion and vertically from a pregnant person to the fetus. The organism is a slow-replicating, microaerophilic spirochete that cannot be grown on standard culture media, which is why diagnosis relies on dark-field microscopy, serology, or molecular methods rather than culture. After inoculation, treponemes disseminate hematogenously within hours, producing a sequence of clinical stages: primary (painless chancre at the site of inoculation, 10-90 days after exposure), secondary (mucocutaneous rash, lymphadenopathy, and systemic symptoms 4-10 weeks later), early and late latent (asymptomatic but seropositive), and tertiary (cardiovascular syphilis, gummatous lesions, neurosyphilis) developing in 25-40% of untreated patients over 10-30 years. Neurologic involvement can occur at any stage, and ocular and otic syphilis are increasingly recognized presentations. Syphilis is managed by infectious disease specialists, sexual health clinicians, dermatologists, and primary care physicians, with input from neurology, cardiology, and obstetrics when end-organ involvement or pregnancy applies.",
+
+  "typesClassification": [
+    { "type": "Primary syphilis", "description": "A single painless, indurated ulcer (chancre) at the site of inoculation — genitals, anus, lips, or oral cavity — appearing 10-90 days after exposure and healing spontaneously in 3-6 weeks even without treatment." },
+    { "type": "Secondary syphilis", "description": "A systemic phase 4-10 weeks after chancre onset, marked by a non-itchy maculopapular rash that classically involves palms and soles, generalized lymphadenopathy, mucous patches, condyloma lata, fever, and patchy alopecia." },
+    { "type": "Latent syphilis", "description": "Asymptomatic seropositive infection. Early latent (within one year of infection) is potentially infectious; late latent (over one year) is not sexually transmissible but still treatable to prevent progression." },
+    { "type": "Tertiary syphilis", "description": "Late complications appearing 10-30 years after untreated infection: gummatous lesions of skin, bone, and viscera; cardiovascular syphilis with thoracic aortic aneurysm and aortic regurgitation; tabes dorsalis and general paresis." },
+    { "type": "Neurosyphilis, ocular and otic syphilis", "description": "CNS, eye, or inner ear involvement that may occur at any stage. Presentations include meningitis, stroke, dementia, optic neuritis, uveitis, hearing loss, and tinnitus. Lumbar puncture and ophthalmologic exam guide management." },
+    { "type": "Congenital syphilis", "description": "Transplacental infection of a fetus by an untreated pregnant person. Causes stillbirth in up to 40% of cases and a wide range of neonatal and late childhood manifestations covered on the dedicated congenital syphilis page." }
+  ],
+
+  "primarySymptoms": [
+    "A single firm, painless, indurated genital, anal, or oral ulcer (chancre) with raised edges and a clean base, appearing 10-90 days after exposure and persisting 3-6 weeks before healing on its own.",
+    "Painless regional lymphadenopathy near the chancre, typically inguinal nodes that are firm, mobile, and non-tender.",
+    "A diffuse non-itchy maculopapular or papulosquamous rash 4-10 weeks later, characteristically involving the palms and soles and sparing the face in most adults.",
+    "Mucous patches — shallow, painless gray-white erosions on the oral or genital mucosa during secondary syphilis, highly infectious on contact.",
+    "Condyloma lata — moist, flat, pink-gray wart-like papules in skin folds (perianal, vulvar, axillary) that are teeming with treponemes and highly contagious.",
+    "Patchy, moth-eaten alopecia of the scalp, eyebrows, and beard during the secondary stage, with hair regrowth after treatment.",
+    "Generalized lymphadenopathy, low-grade fever, headache, sore throat, malaise, and weight loss accompanying the secondary rash.",
+    "Long asymptomatic periods (latent syphilis) lasting months to decades, during which only serologic testing detects ongoing infection.",
+    "Late neurologic features in tertiary disease: progressive memory loss, personality change, ataxia, lightning pains in the legs, urinary incontinence, or Argyll Robertson pupils that accommodate but do not react to light.",
+    "Painful destructive granulomatous lesions (gummas) on skin, bones, or internal organs in the tertiary stage, sometimes mistaken for malignancy."
+  ],
+
+  "earlyWarningSigns": [
+    "Any new painless genital, anal, or oral ulcer in someone sexually active — even a single self-healing sore warrants testing",
+    "A diffuse symmetric rash on the trunk that involves the palms and soles, particularly in a person with recent unprotected sex",
+    "Unexplained patchy hair loss combined with mucosal sores or rash",
+    "A new sexual contact known or suspected to have syphilis (notify and test even if asymptomatic)"
+  ],
+
+  "emergencySigns": [
+    "Sudden vision loss, double vision, or eye pain in a person with known or suspected syphilis — ocular syphilis requires same-day ophthalmology and intravenous treatment",
+    "Acute stroke, seizure, or confusion in a sexually active adult — neurosyphilis is now seen in young patients with HIV co-infection",
+    "Severe headache, neck stiffness, and fever — possible syphilitic meningitis at any stage",
+    "Sudden sensorineural hearing loss or vertigo with positive syphilis serology — otic syphilis demands urgent treatment",
+    "Chest pain or new diastolic murmur in a patient with untreated late syphilis — possible aortic aneurysm or aortic regurgitation"
+  ],
+
+  "causes": [
+    {
+      "cause": "Sexual transmission of Treponema pallidum",
+      "description": "Direct mucosal or skin contact with an infectious chancre, mucous patch, or condyloma lata during vaginal, anal, or oral sex. Per-act transmission risk from an untreated partner with a chancre is approximately 30%. Treponemes traverse intact mucosa or microabrasions within minutes."
+    },
+    {
+      "cause": "Vertical (transplacental) transmission",
+      "description": "An untreated pregnant person can pass T. pallidum to the fetus from approximately week 14 of pregnancy onward, with risk approaching 80% in early maternal syphilis. Outcomes include stillbirth, preterm birth, neonatal death, and congenital syphilis."
+    },
+    {
+      "cause": "Blood-borne transmission",
+      "description": "Rare in countries with screened blood supplies, but documented in shared injection drug use and through transfusion of contaminated blood, especially in resource-limited settings where pre-donation serologic screening is inconsistent."
+    },
+    {
+      "cause": "HIV co-infection biology",
+      "description": "HIV does not cause syphilis but markedly accelerates its course. Co-infected patients have higher treponemal loads, more aggressive neurologic involvement, more frequent serologic relapse after treatment, and slower decline of RPR titers, which is why ID guidelines recommend lower thresholds for lumbar puncture in this group."
+    },
+    {
+      "cause": "Inadequate prenatal screening and treatment",
+      "description": "Congenital syphilis is almost entirely preventable with three RPR tests in pregnancy (first trimester, third trimester, delivery) and timely benzathine penicillin G when positive. Cases reflect missed screening, late prenatal care, or inadequate maternal treatment — over 80% of US 2022 congenital cases had at least one preventable system failure."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Unprotected sex with new or multiple partners", "category": "modifiable", "description": "The strongest modifiable risk factor. Consistent condom use reduces but does not eliminate risk, since chancres can occur on areas not covered by a condom (scrotum, base of penis, perianal skin)." },
+    { "factor": "Men who have sex with men (MSM)", "category": "non-modifiable", "description": "MSM account for roughly 47% of US primary and secondary syphilis cases. Higher background prevalence and condomless receptive anal sex are the main drivers. Routine screening every 3-6 months is recommended." },
+    { "factor": "HIV infection", "category": "non-modifiable", "description": "HIV and syphilis share transmission routes and biology. Up to 40% of US MSM with syphilis are HIV-positive. CDC recommends syphilis testing at every HIV care visit." },
+    { "factor": "Pregnancy without adequate prenatal screening", "category": "modifiable", "description": "Pregnant individuals not screened in the first trimester, third trimester, and at delivery — or screened but not treated — drive nearly all congenital syphilis. USPSTF and CDC strongly recommend universal triple-test screening." },
+    { "factor": "Methamphetamine, heroin, and cocaine use", "category": "modifiable", "description": "Substance use is now linked to over 40% of US heterosexual syphilis cases (CDC 2022). Drug-related disinhibition, transactional sex, and reduced engagement with healthcare are the mechanisms." },
+    { "factor": "Sex work or transactional sex", "category": "modifiable", "description": "High partner numbers and inconsistent condom use raise risk substantially. Outreach screening programs reach populations less likely to attend clinic-based care." },
+    { "factor": "Residence in or travel to high-prevalence regions", "category": "environmental", "description": "Sub-Saharan Africa, parts of Latin America, and several US states (Arizona, New Mexico, Mississippi) have prevalence 3-10× the national average. Local epidemiology informs screening intensity." },
+    { "factor": "Age 15-34", "category": "non-modifiable", "description": "65% of US primary and secondary syphilis cases occur in this band. Sexual debut, partner change rate, and inconsistent contraception/STI prevention drive incidence." }
+  ],
+
+  "affectedDemographics": [
+    "US cases 2022: 207,255 total; 53,605 primary or secondary stage (CDC STI Surveillance 2022)",
+    "MSM account for ~47% of US primary and secondary cases; women aged 20-34 are the fastest-growing group",
+    "American Indian/Alaska Native and Black populations have rates 5-9× the white US rate, reflecting healthcare access and structural factors",
+    "Sub-Saharan Africa carries roughly 60% of global syphilis burden in pregnancy",
+    "Congenital syphilis: 3,761 US cases in 2022, a tenfold increase from 2012 (CDC)"
+  ],
+
+  "diagnosisOverview": "Diagnosis combines clinical recognition with serologic testing, since T. pallidum cannot be grown in routine culture. The standard workflow uses two complementary blood tests: a non-treponemal test (RPR or VDRL) that quantifies disease activity through measurable titers, and a treponemal test (FTA-ABS, TP-PA, or chemiluminescent immunoassay) that confirms exposure but remains positive for life. Many US labs now run a reverse algorithm — automated treponemal screening followed by reflex RPR — which catches early infection and late latent disease that non-treponemal tests can miss. Discordant results require a second treponemal assay (TP-PA) to resolve. Direct visualization of treponemes by dark-field microscopy or PCR of swabbed lesion exudate confirms primary or secondary disease when a chancre or mucous patch is accessible. Any reactive serology in a person with new neurologic, ocular, or otic symptoms warrants lumbar puncture and ophthalmologic or audiologic examination. CSF VDRL is the diagnostic test for neurosyphilis; an elevated CSF white cell count and protein in the right clinical context also support the diagnosis. Staging matters because treatment duration differs: a single benzathine penicillin G dose for primary, secondary, and early latent disease, three weekly doses for late latent and tertiary disease without neurologic involvement, and 10-14 days of intravenous aqueous penicillin G for neurosyphilis, ocular, or otic syphilis. The CDC recommends every patient with new syphilis also be tested for HIV, gonorrhea, chlamydia, and hepatitis B and C at the same visit.",
+
+  "diagnosticTests": [
+    {
+      "test": "Rapid plasma reagin (RPR) or VDRL — non-treponemal serology",
+      "purpose": "Detects antibody to cardiolipin released by treponeme-damaged cells; the titer quantifies disease activity and tracks response to treatment. A fourfold drop in titer over 6-12 months defines successful treatment.",
+      "whatToExpect": "Standard blood draw; results return same day or next day. False-negative early in primary infection (window 3-6 weeks); false-positive in pregnancy, autoimmune disease, viral illness, and IV drug use."
+    },
+    {
+      "test": "Treponemal test (TP-PA, FTA-ABS, or CIA/EIA)",
+      "purpose": "Confirms exposure to T. pallidum. Becomes positive 2-3 weeks before non-treponemal tests and remains positive for life regardless of treatment.",
+      "whatToExpect": "Same blood sample as RPR. Used either as the screening test (reverse algorithm) or to confirm a positive RPR (traditional algorithm)."
+    },
+    {
+      "test": "Dark-field microscopy of lesion exudate",
+      "purpose": "Direct visualization of motile spirochetes from a chancre, mucous patch, or condyloma lata. Confirms diagnosis instantly when positive and is especially useful in the window before serology turns positive.",
+      "whatToExpect": "A clinician swabs the moist base of the lesion onto a slide and examines it under a special microscope, usually in a sexual health clinic or STI center."
+    },
+    {
+      "test": "Treponemal PCR from lesion swab",
+      "purpose": "Detects treponemal DNA directly. Sensitivity 75-95% from primary chancres; useful when dark-field microscopy is unavailable or the patient has already started antibiotics.",
+      "whatToExpect": "A swab is taken from the moist surface of the sore and sent to a specialized lab. Result usually returns in 2-5 days."
+    },
+    {
+      "test": "Lumbar puncture with CSF analysis",
+      "purpose": "Required when neurologic, ocular, or otic symptoms are present, or when serologic non-response occurs. CSF VDRL is highly specific but only 30-70% sensitive; CSF white cells, protein, and treponemal index aid diagnosis.",
+      "whatToExpect": "A spinal needle is inserted between L3-L4 under local anesthetic to withdraw 5-10 mL of CSF. Takes 15-30 minutes; mild headache for 1-2 days is common."
+    },
+    {
+      "test": "Ophthalmologic and audiologic examination",
+      "purpose": "Detects ocular syphilis (uveitis, optic neuritis, retinal vasculitis) and otic syphilis (sensorineural hearing loss, vertigo). Required in any patient with eye or ear symptoms and reactive serology.",
+      "whatToExpect": "Slit-lamp exam, dilated fundoscopy, and formal audiometry. Performed same day in most teaching hospitals."
+    },
+    {
+      "test": "HIV, gonorrhea, chlamydia, hepatitis B and C screening",
+      "purpose": "Co-infection rates are high; bundled testing is recommended at every new syphilis diagnosis (CDC 2021).",
+      "whatToExpect": "Combined blood and urine tests, plus self-collected pharyngeal and rectal swabs where appropriate."
+    }
+  ],
+
+  "treatmentOverview": "Treatment is dictated by clinical stage and is essentially unchanged for 80 years: parenteral penicillin G is the cornerstone for every form of syphilis, with stage determining dose and duration. The CDC 2021 STI Treatment Guidelines remain the operational standard. For primary, secondary, and early latent syphilis (under one year duration), a single intramuscular dose of benzathine penicillin G 2.4 million units cures over 95% of patients. For late latent, syphilis of unknown duration, or tertiary disease without neurologic involvement, three weekly doses of benzathine penicillin G 2.4 million units are given. Neurosyphilis, ocular syphilis, and otic syphilis are treated with aqueous crystalline penicillin G 18-24 million units per day intravenously for 10-14 days, sometimes followed by three weekly benzathine penicillin G doses for additional coverage. Pregnant patients are always treated with penicillin regardless of allergy — desensitization is performed if needed, because no other antibiotic crosses the placenta reliably enough to prevent congenital syphilis. Non-pregnant penicillin-allergic patients with early syphilis may receive doxycycline 100 mg twice daily for 14 days as an alternative, with close serologic follow-up. The Jarisch-Herxheimer reaction — an acute febrile inflammatory response within hours of the first penicillin dose — occurs in roughly 50% of secondary syphilis patients and is self-limited; patients are counseled to expect transient fever, chills, headache, and myalgia. Follow-up RPR titers are checked at 6 and 12 months (and 24 months for late latent or HIV co-infection); a fourfold decline confirms cure, while a fourfold rise indicates reinfection or treatment failure. All recent sexual contacts (within 90 days of a primary, secondary, or early latent diagnosis) should be presumptively treated regardless of serologic status. Reportability to local and state health departments is mandatory in every US state.",
+
+  "medicalTreatments": [
+    {
+      "name": "Benzathine penicillin G 2.4 million units IM, single dose",
+      "description": "First-line treatment for primary, secondary, and early latent syphilis. Administered as two 1.2-million-unit injections, one in each buttock. The long-acting depot maintains treponemicidal blood levels for over 7 days.",
+      "effectiveness": "Serologic cure in 95-98% of immunocompetent patients with early syphilis at 12 months."
+    },
+    {
+      "name": "Benzathine penicillin G 2.4 million units IM weekly × 3 doses",
+      "description": "Standard regimen for late latent syphilis, syphilis of unknown duration, and non-neurologic tertiary syphilis. Total dose 7.2 million units over 21 days; missing a dose by more than 14 days requires restarting the series.",
+      "effectiveness": "Effective in 70-90% of late latent cases; lower than early disease because more crystalline disease deposits resist penetration."
+    },
+    {
+      "name": "Aqueous crystalline penicillin G 18-24 million units/day IV × 10-14 days",
+      "description": "Required treatment for neurosyphilis, ocular syphilis, and otic syphilis. Given as 3-4 million units every 4 hours or continuous infusion. Achieves treponemicidal CSF levels.",
+      "effectiveness": "Clinical improvement in 70-80% of neurosyphilis cases; CSF parameters normalize over 6-12 months. Pre-existing structural damage may not reverse."
+    },
+    {
+      "name": "Procaine penicillin G 2.4 million units IM daily + probenecid 500 mg PO four times daily × 10-14 days",
+      "description": "Alternative outpatient regimen for neurosyphilis when intravenous therapy is impractical. Probenecid blocks renal clearance of penicillin to maintain CNS-penetrating levels.",
+      "effectiveness": "Comparable serologic response to IV therapy in observational cohorts; reserved for adherent patients with reliable follow-up."
+    },
+    {
+      "name": "Doxycycline 100 mg PO twice daily × 14 days (early syphilis) or × 28 days (late latent)",
+      "description": "Alternative for non-pregnant penicillin-allergic patients with documented IgE-mediated allergy when desensitization is impractical. Not adequate for neurosyphilis or pregnancy.",
+      "effectiveness": "Serologic cure rates of 80-90% in early syphilis with strict adherence; lower than penicillin in head-to-head comparisons."
+    },
+    {
+      "name": "Ceftriaxone 1-2 g IM or IV daily × 10-14 days",
+      "description": "Alternative for selected patients with penicillin allergy and possible neurosyphilis when desensitization is not feasible. Cross-reactivity with penicillin allergy is roughly 2%.",
+      "effectiveness": "Limited evidence; observational data suggest 60-80% serologic response when used in early neurosyphilis."
+    },
+    {
+      "name": "Penicillin desensitization protocol",
+      "description": "Indicated for any pregnant patient with reported penicillin allergy and confirmed syphilis. Oral or intravenous desensitization administered in a monitored setting over 4-12 hours, followed by full-dose penicillin.",
+      "effectiveness": "Successful in >95% of attempts; allows definitive treatment that protects the fetus from congenital syphilis."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Aortic root replacement or repair (cardiovascular syphilis)",
+      "description": "For symptomatic ascending aortic aneurysm or severe aortic regurgitation due to tertiary syphilis. Performed by cardiothoracic surgery alongside antimicrobial therapy.",
+      "successRate": "Operative mortality 3-8% in centers experienced with luetic aortitis; outcomes comparable to non-luetic aortic root replacement."
+    },
+    {
+      "name": "Surgical drainage of gummatous abscess",
+      "description": "Occasionally needed for destructive bony or visceral gummas that produce obstruction, deformity, or pain. Always combined with full antibiotic course."
+    }
+  ],
+
+  "alternativeTreatments": [],
+
+  "whySeeSpecialist": "An infectious disease physician or sexual health specialist should be involved in any syphilis case with neurologic, ocular, or otic symptoms; in HIV co-infection; in pregnancy with confirmed allergy to penicillin; in suspected serologic non-response or reinfection; and in tertiary disease. Primary care and sexual health clinics manage most uncomplicated early infections according to CDC algorithms.",
+
+  "doctorSelectionGuide": "Look for a clinician comfortable with the CDC 2021 STI Treatment Guidelines, with access to benzathine penicillin G, and with established referral pathways to ophthalmology, audiology, and neurology. Sexual health clinics and ID departments at academic centers usually offer rapid testing, partner notification support, and HIV/STI bundle screening. Continuity matters because serologic follow-up extends over 12-24 months.",
+
+  "preventionStrategies": [
+    "Use latex or polyurethane condoms consistently and correctly during vaginal, anal, and oral sex — reduces but does not eliminate risk",
+    "Screen for syphilis every 3-6 months if you are a man who has sex with men, are living with HIV, or have multiple sexual partners",
+    "Notify recent sexual partners (within 90 days) of any positive diagnosis so they can be treated presumptively",
+    "Complete the universal pregnancy screening schedule — first trimester, third trimester, and at delivery — and treat any positive result with benzathine penicillin G well before delivery",
+    "Discuss doxycycline post-exposure prophylaxis (doxy-PEP) with a sexual health clinician if you are an MSM or transgender woman at high STI risk — reduces syphilis incidence by ~60% in trials"
+  ],
+
+  "lifestyleModifications": [
+    "Avoid all sexual contact until 7 days after completing treatment and until any visible lesions have fully healed",
+    "Recheck RPR titer at 6 and 12 months (24 months if late latent or HIV co-infected) to confirm serologic cure",
+    "Receive HIV pre-exposure prophylaxis (PrEP) if you remain at ongoing risk after treatment",
+    "Disclose syphilis history to future obstetric care providers — even successfully treated past infection alters prenatal screening cadence",
+    "Avoid pregnancy until 30 days after completing late latent treatment if you have late or unknown-duration disease",
+    "Address substance use and mental health if these have driven risk behavior — treat the underlying driver to prevent reinfection"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Standard balanced nutrition supports immune recovery during treatment",
+      "Adequate hydration during the Jarisch-Herxheimer reaction (first 24 hours after first penicillin dose)",
+      "Folate-rich foods if pregnant and being treated, alongside standard prenatal vitamins"
+    ],
+    "avoid": [
+      "Alcohol during the first week of treatment if doxycycline is the chosen regimen — can worsen GI side effects",
+      "Probiotic supplements within 2 hours of doxycycline — interferes with absorption",
+      "Iron, calcium, or antacid supplements within 2 hours of doxycycline — chelation reduces drug levels"
+    ]
+  },
+
+  "exerciseGuidelines": "No specific restrictions apply for early syphilis once treatment has started. After the first penicillin injection, rest for the day in case of Jarisch-Herxheimer reaction. Resume normal activity once acute symptoms resolve.",
+
+  "dailyManagement": [
+    "Attend all serologic follow-up appointments at 6 and 12 months — and 24 months if HIV co-infected or late latent",
+    "Take doxycycline (if prescribed) on a full stomach with a large glass of water, and remain upright for 30 minutes to prevent esophagitis",
+    "Use barrier protection during all sexual contact until 7 days after treatment completion",
+    "Inform any new healthcare providers of past syphilis diagnosis — treponemal tests remain positive for life and may confuse future screens",
+    "Notify ongoing partners of any new test result and encourage them to be tested"
+  ],
+
+  "prognosis": "With timely benzathine penicillin G, the prognosis for primary, secondary, and early latent syphilis is excellent — over 95% of immunocompetent patients achieve serologic cure within 12 months and have no long-term sequelae. Late latent disease responds in 70-90% of cases, though existing organ damage (aortic aneurysm, neurologic deficits, optic atrophy) does not reverse. Neurosyphilis treated promptly shows clinical improvement in 70-80% of patients, with CSF parameters normalizing over 6-12 months. Reinfection is common in high-risk populations, with reported rates of 10-20% within 2 years of initial cure. Untreated, roughly 25% of infections progress to late latent or tertiary disease over 10-30 years, and roughly one-third of untreated patients develop devastating cardiovascular, neurologic, or gummatous complications. The historic Oslo (1891-1951) and Tuskegee cohort data — though ethically indefensible in their conduct — established that fewer than 10% of untreated patients die directly of syphilis, but many more sustain irreversible end-organ damage. Pregnancy outcomes are dramatic: untreated early maternal syphilis causes stillbirth or neonatal death in up to 40% of cases, while timely treatment reduces this to under 2%.",
+
+  "recoveryTimeline": "Primary chancre heals within 3-6 weeks of treatment, often faster. Secondary rash and mucosal lesions usually clear within 1-2 weeks. RPR titer should drop fourfold by 6 months and at least eightfold by 12 months. CSF normalization in neurosyphilis takes 6-12 months. Visible aortic or neurologic damage from tertiary disease does not reverse but progression halts. Patients are considered non-infectious 7 days after benzathine penicillin G administration.",
+
+  "complications": [
+    "Cardiovascular syphilis with thoracic aortic aneurysm and aortic regurgitation — develops 15-30 years after untreated infection",
+    "Neurosyphilis with tabes dorsalis, general paresis, dementia, stroke, or meningitis — can occur at any stage",
+    "Ocular syphilis with uveitis, optic neuritis, or retinal vasculitis — can cause permanent vision loss without urgent treatment",
+    "Otic syphilis with sensorineural hearing loss and vertigo — often permanent if treatment is delayed",
+    "Congenital syphilis with stillbirth, neonatal death, or lifelong neurologic, skeletal, and dental abnormalities",
+    "Gummatous lesions of skin, bone, and viscera that mimic malignancy and require biopsy for differentiation",
+    "Increased HIV acquisition and transmission risk — syphilitic ulcers facilitate HIV exchange by 2-5 fold"
+  ],
+
+  "supportResources": [
+    { "name": "CDC — Syphilis Fact Sheet", "url": "https://www.cdc.gov/std/syphilis/stdfact-syphilis.htm", "description": "Authoritative US patient education with current statistics and treatment summaries." },
+    { "name": "CDC STI Treatment Guidelines 2021", "url": "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm", "description": "Full clinical algorithm and drug regimens." },
+    { "name": "WHO — Syphilis", "url": "https://www.who.int/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)", "description": "Global STI surveillance and prevention resources." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "herpes-simplex-infection", "name": "Genital Herpes", "keyDifference": "Herpes ulcers are typically multiple, painful, vesicular before they erode, and recur at the same site. Syphilitic chancres are usually single, painless, firm, and indurated. PCR or culture of the ulcer distinguishes the two definitively." },
+    { "slug": "chlamydia-infection", "name": "Chlamydia Infection", "keyDifference": "Chlamydia causes urethral, cervical, or rectal inflammation with discharge or bleeding, not ulcers. There is no chancre and no characteristic palm-and-sole rash. NAAT testing of urine or swab distinguishes the two; co-infection is common." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "keyDifference": "Acute HIV seroconversion can mimic secondary syphilis with rash, fever, lymphadenopathy, and pharyngitis. HIV testing and RPR/treponemal serology are run together; both infections often coexist and both must be addressed independently." },
+    { "slug": "gonorrhea", "name": "Gonorrhea", "keyDifference": "Gonorrhea presents with purulent urethral or cervical discharge, not painless ulcers. Pharyngeal and rectal gonorrhea are often asymptomatic. NAAT distinguishes the two; the CDC recommends testing for both at every STI screening visit." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hiv-aids", "name": "HIV/AIDS" },
+    { "slug": "gonorrhea", "name": "Gonorrhea" },
+    { "slug": "chlamydia-infection", "name": "Chlamydia Infection" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "Shares transmission routes; co-infection accelerates syphilis progression and complicates treatment monitoring." },
+    { "slug": "gonorrhea", "name": "Gonorrhea", "relevance": "Frequent co-infection; CDC recommends bundled STI testing at every syphilis diagnosis." },
+    { "slug": "chlamydia-infection", "name": "Chlamydia Infection", "relevance": "Co-occurs in 15-30% of syphilis patients; managed in the same clinical pathway." },
+    { "slug": "congenital-syphilis", "name": "Congenital Syphilis", "relevance": "Direct vertical extension of maternal syphilis; almost entirely preventable with prenatal screening and treatment." },
+    { "slug": "herpes-simplex-infection", "name": "Herpes Simplex Infection", "relevance": "Both cause genital ulceration and require accurate differentiation for treatment and partner notification." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Can syphilis be cured?",
+      "answer": "Yes. A single intramuscular injection of benzathine penicillin G cures over 95% of patients with primary, secondary, or early latent syphilis. Late latent and tertiary stages need three weekly injections, and neurosyphilis requires 10-14 days of intravenous penicillin. Cure is confirmed by a fourfold drop in RPR titer over 6-12 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the first sign of syphilis?",
+      "answer": "The first sign is a single firm, painless ulcer called a chancre at the site where the bacterium entered — usually the genitals, anus, mouth, or lips. It appears 10-90 days after exposure and heals on its own in 3-6 weeks, but the infection persists and progresses if untreated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is syphilis spread?",
+      "answer": "Syphilis spreads through direct contact with an infectious chancre or mucosal lesion during vaginal, anal, or oral sex. It can also pass from a pregnant person to the fetus through the placenta. It does not spread through toilet seats, swimming pools, shared utensils, or casual contact.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does syphilis take to show up on a test?",
+      "answer": "Non-treponemal blood tests (RPR, VDRL) usually turn positive 3-6 weeks after exposure. Treponemal tests turn positive slightly earlier, around 2-3 weeks. If exposure was very recent, a clinician may retest in 3-6 weeks to confirm. Direct testing of a chancre by dark-field microscopy or PCR can confirm earlier.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the stages of syphilis?",
+      "answer": "Syphilis has four stages: primary (painless chancre), secondary (body-wide rash and flu-like symptoms 4-10 weeks later), latent (asymptomatic but seropositive, early under 1 year and late over 1 year), and tertiary (cardiovascular, neurologic, or gummatous complications 10-30 years later in untreated cases).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is syphilis serious?",
+      "answer": "Untreated syphilis is very serious. About one in three untreated patients develops tertiary complications including aortic aneurysm, stroke, dementia, blindness, or deafness over 10-30 years. In pregnancy, it causes stillbirth or neonatal death in up to 40% of untreated cases. With early treatment, all of these outcomes are preventable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you get syphilis more than once?",
+      "answer": "Yes. Successful treatment does not produce lasting immunity, so reinfection is common in patients with ongoing exposure. Reported reinfection rates are 10-20% within 2 years in high-risk populations. Regular screening every 3-6 months is recommended for those at ongoing risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the rash of secondary syphilis like?",
+      "answer": "The classic secondary syphilis rash is a non-itchy, symmetric, copper-red maculopapular eruption that involves the palms and soles in most adults. It appears 4-10 weeks after the chancre, persists for 2-6 weeks, and may be accompanied by mucous patches, lymphadenopathy, patchy hair loss, and flu-like symptoms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why are syphilis rates rising?",
+      "answer": "US cases rose 80% from 2018 to 2022, reaching 207,255 — the highest since 1950. Drivers include declining condom use, methamphetamine and opioid use, reduced public health funding, dating app-mediated partner change, and missed prenatal screening. The rise affects every demographic and geography.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does penicillin cure syphilis at every stage?",
+      "answer": "Penicillin remains effective at every stage, but the dose and route differ. A single intramuscular shot cures early disease in over 95% of cases. Late latent disease needs three weekly shots. Neurosyphilis, ocular, and otic syphilis require 10-14 days of intravenous penicillin. No resistance to penicillin has emerged in T. pallidum.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Jarisch-Herxheimer reaction?",
+      "answer": "The Jarisch-Herxheimer reaction is a short febrile inflammatory response that occurs within 2-12 hours of the first penicillin dose, especially in secondary syphilis. About 50% of patients experience fever, chills, headache, and myalgia lasting up to 24 hours. It is self-limited and managed with rest, hydration, and acetaminophen.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I have sex during syphilis treatment?",
+      "answer": "No. Avoid all sexual contact for at least 7 days after benzathine penicillin G is given, and until any visible sores have fully healed. Partners within the prior 90 days should be tested and presumptively treated. Follow-up RPR testing at 6 and 12 months confirms cure before unprotected contact is considered safe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can syphilis affect the brain?",
+      "answer": "Yes. Neurosyphilis can develop at any stage and includes meningitis, stroke, dementia (general paresis), and tabes dorsalis. Ocular and otic syphilis are CNS-adjacent presentations now seen more frequently. Any new neurologic, eye, or ear symptom in a patient with positive syphilis serology warrants lumbar puncture and urgent intravenous treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does syphilis affect pregnancy?",
+      "answer": "Untreated syphilis in pregnancy causes stillbirth, neonatal death, or congenital syphilis in up to 80% of cases when infection is acquired in pregnancy. Universal screening at the first prenatal visit, third trimester, and delivery, followed by prompt benzathine penicillin G when positive, reduces these risks to under 2%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is syphilis testing accurate?",
+      "answer": "The combined non-treponemal (RPR/VDRL) and treponemal (TP-PA/FTA-ABS) testing strategy is highly accurate. Sensitivity exceeds 95% in secondary and latent disease but is 75-85% in very early primary disease, when retesting in 3-6 weeks may be needed. False positives occur in pregnancy and autoimmune disease but are clarified by treponemal confirmation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will my syphilis test always be positive after treatment?",
+      "answer": "Treponemal tests (TP-PA, FTA-ABS, CIA) remain positive for life regardless of cure — a positive result simply documents past exposure. Non-treponemal tests (RPR, VDRL) typically drop fourfold or become non-reactive within 12 months of successful treatment, and their titer is what clinicians use to confirm cure or detect reinfection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can syphilis be prevented with doxycycline?",
+      "answer": "Doxycycline post-exposure prophylaxis (doxy-PEP) — 200 mg taken within 72 hours of sex — reduces incident syphilis by approximately 60% in men who have sex with men and transgender women, per recent randomized trials. CDC recommends discussion of doxy-PEP for these high-risk groups in 2024 guidance. It is not currently recommended for cisgender women.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does syphilis treatment cost?",
+      "answer": "Benzathine penicillin G costs USD 30-80 per dose in the US generic market and is heavily subsidized in public sexual health clinics. Most US health departments offer free testing and treatment regardless of insurance status. Generic doxycycline costs under USD 20 for a 14-day course. Costs in India and other emerging markets are typically a fraction of US prices.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What if I'm allergic to penicillin?",
+      "answer": "Non-pregnant patients with confirmed penicillin allergy can take doxycycline 100 mg twice daily for 14 days (early syphilis) or 28 days (late latent), with strict follow-up. Pregnant patients are always desensitized to penicillin in a monitored setting because no alternative reliably prevents congenital syphilis. Neurosyphilis with allergy is treated with ceftriaxone or desensitization.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should partners be tested and treated?",
+      "answer": "Yes. All sexual contacts within the prior 90 days of a primary, secondary, or early latent diagnosis should be presumptively treated with benzathine penicillin G regardless of test results. Contacts within 90 days to 1 year should be tested and treated based on clinical findings. Partner notification can be done directly or with health department assistance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I be screened for syphilis?",
+      "answer": "USPSTF recommends screening any sexually active person at increased risk. Men who have sex with men and people living with HIV should be screened every 3-6 months. All pregnant individuals are screened at the first prenatal visit, third trimester, and delivery. Anyone with new genital ulcers, rash, or a sexual partner with syphilis should be tested.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Syphilis (Treponema pallidum infection)",
+
+  "regionalNames": [
+    { "name": "उपदंश (Upadansh)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Garmi", "region": "India and Pakistan (urban slang)", "language": "ur" },
+    { "name": "Sífilis", "region": "Spanish-speaking countries", "language": "es" }
+  ],
+
+  "searchTags": [
+    "syphilis", "treponema pallidum", "chancre", "RPR test", "VDRL", "FTA-ABS",
+    "neurosyphilis", "primary syphilis", "secondary syphilis", "latent syphilis",
+    "tertiary syphilis", "benzathine penicillin G", "lues", "the great pox",
+    "ocular syphilis"
+  ],
+
+  "symptomKeywords": [
+    "painless genital ulcer", "palm sole rash", "non-itchy body rash",
+    "patchy hair loss", "mucous patches", "moist genital warts",
+    "swollen groin nodes", "secondary syphilis rash"
+  ],
+
+  "metaTitle": "Syphilis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Syphilis is a bacterial STI from Treponema pallidum — chancre, palm-sole rash, latent and neurologic stages. Symptoms, tests, penicillin cure reviewed.",
+
+  "keywords": [
+    "syphilis", "syphilis symptoms", "syphilis treatment", "syphilis stages",
+    "chancre", "RPR test", "secondary syphilis rash", "neurosyphilis",
+    "penicillin for syphilis", "syphilis cure", "primary syphilis",
+    "syphilis test", "is syphilis curable"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Workowski KA, Bachmann LH, Chan PA, et al. Sexually Transmitted Infections Treatment Guidelines, 2021. MMWR Recommendations and Reports. 2021;70(4):1-187.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34292926/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Ghanem KG, Ram S, Rice PA. The Modern Epidemic of Syphilis. New England Journal of Medicine. 2020;382(9):845-854.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32101666/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Peeling RW, Mabey D, Kamb ML, et al. Syphilis. Nature Reviews Disease Primers. 2017;3:17073.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29022569/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Sexually Transmitted Infections Surveillance, 2022.",
+      "url": "https://www.cdc.gov/std/statistics/2022/default.htm",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Luetkemeyer AF, Donnell D, Dombrowski JC, et al. Postexposure Doxycycline to Prevent Bacterial Sexually Transmitted Infections. New England Journal of Medicine. 2023;388(14):1296-1306.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37018493/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Hook EW 3rd. Syphilis. Lancet. 2017;389(10078):1550-1557.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27993382/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "World Health Organization. Global Health Sector Strategies on HIV, Viral Hepatitis and Sexually Transmitted Infections 2022-2030.",
+      "url": "https://www.who.int/publications/i/item/9789240053779",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

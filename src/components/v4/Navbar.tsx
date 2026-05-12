@@ -72,7 +72,7 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
         >
             <div
                 className="row ai-center between v4-nav-inner"
-                style={{ padding: '14px 28px', maxWidth: 1280, margin: '0 auto', gap: 16 }}
+                style={{ padding: '14px clamp(16px, 4vw, 28px)', maxWidth: 1280, margin: '0 auto', gap: 16 }}
             >
                 <div className="row ai-center gap-6">
                     <Link

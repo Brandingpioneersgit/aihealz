@@ -31,7 +31,10 @@ async function getDescendantIds(parentId: number): Promise<number[]> {
 // ── Dynamic metadata ────────────────────────────────────────
 export async function generateMetadata({ params }: { params: Promise<{ location: string; lang: string }> }): Promise<Metadata> {
     const { location, lang } = await params;
-    const geo = await prisma.geography.findFirst({ where: { slug: location, isActive: true } });
+    const geo = await prisma.geography.findFirst({
+        where: { slug: location, isActive: true },
+        select: { id: true, name: true, level: true },
+    });
     if (!geo) return { title: 'Doctors | aihealz' };
     const langName = LANG_NAMES[lang] || lang;
 
@@ -48,6 +51,7 @@ export default async function LanguageLocationDoctors({ params }: { params: Prom
 
     const geo = await prisma.geography.findFirst({
         where: { slug: location, isActive: true },
+        select: { id: true, name: true, level: true, slug: true, supportedLanguages: true },
     });
     if (!geo) notFound();
 
@@ -63,7 +67,7 @@ export default async function LanguageLocationDoctors({ params }: { params: Prom
         take: 50,
         include: {
             specialties: { include: { condition: true } },
-            geography: true,
+            geography: { select: { name: true } },
         },
     });
 
@@ -78,7 +82,7 @@ export default async function LanguageLocationDoctors({ params }: { params: Prom
 
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
-            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
 
                 {/* Breadcrumb */}
                 <nav

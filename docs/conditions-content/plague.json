@@ -1,0 +1,490 @@
+{
+  "_meta": {
+    "slug": "plague",
+    "tier": 1,
+    "headTerm": "plague",
+    "longTailKeywords": [
+      "plague symptoms",
+      "bubonic plague treatment",
+      "pneumonic plague",
+      "yersinia pestis",
+      "septicemic plague",
+      "plague antibiotics",
+      "plague bioterrorism",
+      "black death",
+      "plague diagnosis",
+      "plague vaccine"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against CDC Plague 2023, WHO Plague Manual, Inglesby 2000 JAMA bioterrorism review, Dennis & Mead 2005, Prentice & Rahalison 2007 (PMID 17448935). ICD-10 A20."
+  },
+
+  "h1Title": "Plague: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Plague is an acute bacterial infection caused by Yersinia pestis, the pathogen responsible for three historical pandemics including the 14th-century Black Death that killed an estimated 50 million people. It persists today as an endemic disease in rodent populations across the western United States, Madagascar, Democratic Republic of Congo, and Peru, with the WHO reporting roughly 3,000 cases and 600 deaths globally each year (2010-2020). The United States averages 7 cases annually concentrated in New Mexico, Arizona, Colorado, and California. Plague presents as three syndromes — bubonic with a tender swollen lymph node (bubo), septicemic with bacteremic sepsis, and pneumonic with primary or secondary pneumonia. Untreated pneumonic plague is universally fatal within 24-72 hours; with early streptomycin, gentamicin, or doxycycline therapy, modern mortality is 8-12%. Y. pestis is a CDC Category A bioterrorism agent because of its lethality, transmissibility by aerosol, and historic use in biological warfare.",
+
+  "keyStats": {
+    "prevalence": "~3,000 cases and 600 deaths reported globally each year (WHO 2010-2020); average 7 US cases per year (CDC)",
+    "demographics": "All ages; US median age 36; pediatric and adolescent cases over-represented in rural endemic areas with rodent exposure",
+    "avgAge": "Bimodal: children aged 5-14 from outdoor exposure, adults 50-60 from occupational hunting and trapping",
+    "globalCases": "Madagascar accounts for over half of global cases; Democratic Republic of Congo, Peru, and the western US contribute the remainder"
+  },
+
+  "definition": "Plague (ICD-10: A20) is a vector-borne zoonotic infection caused by Yersinia pestis, a gram-negative non-motile coccobacillus in the Enterobacterales order. The organism is maintained in nature by flea-rodent cycles, with sylvatic reservoirs in prairie dogs, ground squirrels, chipmunks, wood rats, and gerbils. Transmission to humans typically occurs through the bite of an infected rodent flea, particularly Xenopsylla cheopis and Oropsylla montana. Three clinical forms exist: bubonic plague, with infection localized to the lymph node draining the bite site; septicemic plague, with primary bacteremia and rapid sepsis; and pneumonic plague, with either primary pulmonary inoculation or hematogenous spread from another form. Bubonic plague accounts for 80-95% of natural cases, septicemic 10-15%, and pneumonic under 5%. Pneumonic plague is the form that transmits person-to-person through respiratory droplets and is the form of greatest bioterrorism concern. Y. pestis is a CDC Tier 1 select agent, and the disease is internationally notifiable under WHO International Health Regulations.",
+
+  "typesClassification": [
+    { "type": "Bubonic plague", "description": "The most common form (~80% of cases). Y. pestis enters via flea bite, replicates in regional lymph nodes, and produces an exquisitely tender enlarged node (bubo) in the groin, axilla, or neck. ICD-10 A20.0." },
+    { "type": "Cellulocutaneous plague", "description": "Skin lesions adjacent to a bubo or at the inoculation site; pustules and necrotic ulcers may form. ICD-10 A20.1." },
+    { "type": "Pneumonic plague", "description": "Primary inhalational pneumonia or secondary hematogenous spread to lung. Untreated mortality approaches 100% within 24-72 hours. The only form transmissible person-to-person. ICD-10 A20.2." },
+    { "type": "Plague meningitis", "description": "Rare complication occurring 9-14 days into treated bubonic plague when antibiotic penetration is inadequate. Presents with meningismus, fever, and cerebrospinal fluid pleocytosis. ICD-10 A20.3." },
+    { "type": "Septicemic plague", "description": "Primary bacteremia without preceding bubo, presenting as overwhelming sepsis with disseminated intravascular coagulation, acral gangrene, and shock. Mortality 30-50% even with treatment. ICD-10 A20.7." }
+  ],
+
+  "primarySymptoms": [
+    "Abrupt fever, often above 39°C, with chills, headache, severe myalgia, and prostration beginning 2-6 days after a flea bite or rodent exposure.",
+    "A painful, tender, firm lymph node (bubo) developing within 24 hours of fever onset, typically 1-10 cm in size and located in the groin (most common), axilla, or cervical region nearest the bite.",
+    "Erythema, warmth, and edema over the skin surrounding the bubo, often with the skin so tense and painful that any movement of the affected limb is unbearable.",
+    "Rapidly progressive shock with hypotension and tachycardia in septicemic plague, often without a localized bubo, developing over 2-4 days from initial fever.",
+    "Sudden onset of cough productive of bloody or watery sputum, pleuritic chest pain, and dyspnea in pneumonic plague — the most dangerous form, with respiratory failure within 24-48 hours if untreated.",
+    "Disseminated intravascular coagulation with petechiae, purpura, and acral gangrene of fingers, toes, and nose ('black death' appearance) in late septicemic disease.",
+    "Nausea, vomiting, abdominal pain, and diarrhea in approximately 25% of patients, more prominent in septicemic disease.",
+    "Altered mental status, lethargy, and meningismus in plague meningitis, typically appearing 9-14 days into treated bubonic disease.",
+    "Conjunctivitis with regional lymphadenopathy in the rare oropharyngeal or oculoglandular forms of plague.",
+    "Marked tachycardia disproportionate to fever, a feature shared with other severe gram-negative sepsis presentations."
+  ],
+
+  "earlyWarningSigns": [
+    "Sudden high fever and severe headache within a week of camping, hunting, or hiking in the western United States, particularly New Mexico, Arizona, or Colorado",
+    "A new painful lump in the groin, armpit, or neck appearing within 24 hours of a flea bite or rodent contact",
+    "Rapid clinical deterioration with hemodynamic instability in a patient with epidemiologic risk factors — plague progresses faster than most other zoonoses",
+    "Cluster of similar febrile pneumonias in a community without obvious risk factors — potential pneumonic plague outbreak or bioterrorism event"
+  ],
+
+  "emergencySigns": [
+    "High fever with hypotension, tachycardia, and altered mental status — septicemic plague is a medical emergency demanding immediate intravenous antibiotics within the first hour",
+    "Cough productive of bloody sputum, hypoxia, and rapidly progressive pneumonia — pneumonic plague requires immediate airborne isolation and empirical treatment",
+    "Purpuric or necrotic skin lesions on extremities with cold, dusky fingers or toes — disseminated intravascular coagulation in plague is a late-stage finding",
+    "Sudden cluster of pneumonia cases without seasonal or community context — public-health emergency, possible bioterrorism release"
+  ],
+
+  "causes": [
+    {
+      "cause": "Bite of an infected rodent flea",
+      "description": "The dominant transmission route. Xenopsylla cheopis (oriental rat flea), Oropsylla montana (ground-squirrel flea), and several other species transmit Y. pestis. Infected fleas regurgitate bacteria-laden gut contents into the bite wound during feeding, depositing thousands of organisms."
+    },
+    {
+      "cause": "Direct contact with infected animal tissue",
+      "description": "Hunters and trappers handling prairie dogs, rabbits, wood rats, or ground squirrels develop disease through skin abrasions and mucous-membrane exposure. Cat-to-human transmission is well documented in the western US, particularly among veterinarians."
+    },
+    {
+      "cause": "Inhalation of respiratory droplets from a pneumonic case",
+      "description": "Y. pestis spreads person-to-person only through aerosolized droplets from a pneumonic plague case or from coughing cats. Close-contact exposure within 2 meters of an untreated pneumonic patient produces high attack rates without prophylaxis."
+    },
+    {
+      "cause": "Aerosol release as a biological weapon",
+      "description": "Y. pestis is a CDC Category A select agent. A WHO 1970 model estimated that 50 kg released over a city of 5 million would cause 150,000 pneumonic cases and 36,000 deaths, with secondary transmission amplifying impact further."
+    },
+    {
+      "cause": "Ingestion of contaminated material",
+      "description": "Rare but documented. Eating raw or undercooked infected meat (camels in Asia, llamas in South America) can produce oropharyngeal plague with fever, pharyngitis, and cervical lymphadenopathy."
+    },
+    {
+      "cause": "Laboratory exposure",
+      "description": "Y. pestis is among the most common causes of laboratory-acquired infection in plague-endemic countries. Sniff testing of culture plates, aerosol-generating procedures without BSL-3 containment, and accidental percutaneous inoculation all transmit disease."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Residence or travel in plague-endemic regions", "category": "environmental", "description": "Western US states (New Mexico, Arizona, Colorado, California), Madagascar, Democratic Republic of Congo, Peru, and parts of central Asia carry the highest natural risk. Madagascar reports the largest single national case burden." },
+    { "factor": "Outdoor occupational or recreational exposure", "category": "environmental", "description": "Camping, hunting, trapping, and wildlife biology in rodent-rich habitats place individuals close to flea populations. US cases concentrate in May-October." },
+    { "factor": "Handling rodents or carcasses", "category": "modifiable", "description": "Skinning prairie dogs, ground squirrels, rabbits, or rats without protective gloves remains a recognized route. Approximately 20% of US cases follow direct animal contact." },
+    { "factor": "Cat ownership and veterinary work in endemic areas", "category": "environmental", "description": "Cats hunting rodents acquire and transmit Y. pestis through scratches, bites, and respiratory droplets. Veterinarians in the western US are at elevated occupational risk." },
+    { "factor": "Living near rodent colonies", "category": "environmental", "description": "Homes adjacent to prairie dog towns, woodpiles, or rodent-attracting food sources see increased flea exposure. Pest control around the home substantially reduces risk." },
+    { "factor": "Close contact with a pneumonic plague patient", "category": "modifiable", "description": "Within 2 meters of an untreated pneumonic case, primary attack rates approach 50% without post-exposure prophylaxis. Airborne isolation prevents transmission." },
+    { "factor": "Laboratory work with Y. pestis", "category": "modifiable", "description": "Without BSL-3 containment, laboratory-acquired plague has been documented in clinical, research, and military settings. All work with cultured isolates requires select-agent registration." }
+  ],
+
+  "affectedDemographics": [
+    "United States: 7 cases per year on average, ~80% in New Mexico, Arizona, and Colorado (CDC 2010-2020)",
+    "Madagascar: 200-700 cases annually; one of three countries with sustained transmission",
+    "Democratic Republic of Congo and Peru contribute the remainder of the global case burden",
+    "Pediatric cases (under 15) account for 30-40% of US plague, reflecting outdoor exposure patterns"
+  ],
+
+  "diagnosisOverview": "Diagnosis of plague requires both clinical recognition and laboratory confirmation. The most decisive single feature is a tender bubo in a patient with fever and recent exposure to fleas or wild rodents in an endemic area. Microscopy of aspirate from the bubo, blood, or sputum showing gram-negative bipolar-staining (safety-pin) coccobacilli on Wright, Giemsa, or Wayson stain provides rapid presumptive evidence. Culture remains the gold standard; Y. pestis grows on standard blood and chocolate agar in 24-48 hours, but slow growth and atypical colony morphology can delay identification, and laboratories must be alerted because the organism is a Tier 1 select agent requiring BSL-3 handling. Real-time PCR for plasminogen activator (pla) and capsule fraction 1 (F1) genes confirms diagnosis within hours and is available through the Laboratory Response Network. F1 antigen capture by ELISA or dipstick rapid diagnostic test (used in Madagascar field outbreaks) supports presumptive diagnosis at bedside. Paired acute and convalescent serology by passive hemagglutination shows a fourfold rise diagnostic of recent infection. Differential diagnosis depends on form: bubonic plague mimics tularemia, cat-scratch disease, streptococcal lymphadenitis, and lymphogranuloma venereum; septicemic plague mimics meningococcemia and gram-negative sepsis; pneumonic plague mimics community-acquired pneumonia, tularemia, anthrax, and severe acute respiratory syndromes. Because plague kills so rapidly, empirical antibiotic therapy must be started on clinical suspicion without waiting for culture results.",
+
+  "diagnosticTests": [
+    {
+      "test": "Bubo aspirate microscopy and culture",
+      "purpose": "Direct sampling of the involved lymph node provides the highest yield. Wayson, Giemsa, or Wright stain shows characteristic bipolar safety-pin gram-negative coccobacilli; culture confirms.",
+      "whatToExpect": "Performed under local anesthetic with a fine needle. Sterile saline injection followed by aspiration of 0.5-1 mL fluid from the most fluctuant bubo. Procedure takes 5-10 minutes; results in 24-48 hours."
+    },
+    {
+      "test": "Blood culture",
+      "purpose": "Detects bacteremia, present in nearly all septicemic and most bubonic plague cases. Y. pestis grows slowly on standard media; automated systems flag positive at 24-48 hours.",
+      "whatToExpect": "Standard blood draw of two sets from separate venipunctures. Alert the laboratory in advance: Y. pestis requires BSL-3 handling and unannounced positives put bench staff at risk."
+    },
+    {
+      "test": "Sputum gram stain and culture",
+      "purpose": "Essential for pneumonic plague. Bipolar gram-negative coccobacilli in sputum strongly suggest the diagnosis; culture confirms.",
+      "whatToExpect": "Patient produces a deep cough specimen into a sterile cup. Bronchoscopy may be needed for non-productive cases. Sputum is highly infectious — strict respiratory precautions required."
+    },
+    {
+      "test": "Real-time PCR for Y. pestis (pla and F1 genes)",
+      "purpose": "Rapid confirmation within hours. Sensitivity exceeds 90% on bubo aspirate, blood, or sputum; specificity over 99%. Available through the Laboratory Response Network.",
+      "whatToExpect": "Sample collection takes minutes; transport to state public health laboratory under select-agent protocols. Results return within 24 hours."
+    },
+    {
+      "test": "F1 antigen rapid diagnostic test",
+      "purpose": "Field-deployable point-of-care test using monoclonal antibodies to detect Y. pestis F1 capsule antigen. Widely used in Madagascar and other resource-limited endemic settings.",
+      "whatToExpect": "Lateral-flow dipstick on bubo aspirate, blood, or sputum. Results in 15-30 minutes. Useful for triage but should be confirmed by PCR or culture."
+    },
+    {
+      "test": "Serology — passive hemagglutination for F1 antibody",
+      "purpose": "Confirms recent infection by demonstrating fourfold rise between acute and convalescent samples drawn 3-4 weeks apart. Useful for retrospective diagnosis when culture and PCR are unavailable.",
+      "whatToExpect": "Standard blood draws at presentation and 3-4 weeks later. Results take 5-7 days from reference laboratories."
+    },
+    {
+      "test": "Chest radiograph and CT in pneumonic disease",
+      "purpose": "Demonstrates patchy or lobar pneumonia, often bilateral and rapidly progressive. May show cavitation or pleural effusion.",
+      "whatToExpect": "Chest X-ray takes minutes; CT 10-15 minutes. Performed with airborne precautions in suspected pneumonic plague."
+    }
+  ],
+
+  "treatmentOverview": "Plague treatment is a time-critical emergency. Empirical antibiotic therapy must start within hours of clinical suspicion — every additional 24 hours of delay roughly doubles mortality in pneumonic plague. Streptomycin (1 g intramuscularly every 12 hours for 10 days) remains the historical gold-standard treatment, with US clinical experience and FDA approval. Gentamicin (5 mg/kg intravenously daily, or 2 mg/kg loading then 1.7 mg/kg every 8 hours) is at least as effective in observational studies (Boulanger 2004) and is the most commonly used aminoglycoside today because of broader availability. Fluoroquinolones (ciprofloxacin 400 mg IV every 8-12 hours or 500-750 mg orally twice daily; levofloxacin 500 mg daily) are FDA-approved for plague treatment and post-exposure prophylaxis based on animal-rule efficacy data and human case series from Madagascar. Doxycycline (100 mg twice daily) is an effective alternative for both treatment and prophylaxis. Total treatment duration is 10-14 days for treatment, 7 days for post-exposure prophylaxis. Pneumonic plague patients require strict respiratory droplet isolation until they have completed 48 hours of effective antibiotic therapy and are clinically improving. Contacts within 2 meters of a pneumonic case require fever monitoring and post-exposure prophylaxis with doxycycline or ciprofloxacin for 7 days. Plague meningitis requires chloramphenicol or a fluoroquinolone, since aminoglycosides penetrate the central nervous system poorly. Supportive care for septicemic plague includes aggressive intravenous fluid resuscitation, vasopressor support, and management of disseminated intravascular coagulation. All suspected and confirmed cases must be reported to public health within 24 hours under both US and WHO regulations.",
+
+  "medicalTreatments": [
+    {
+      "name": "Streptomycin (1 g IM every 12 hours for 10 days)",
+      "description": "Historical gold-standard treatment with FDA approval and the largest body of clinical experience in human plague. Bactericidal aminoglycoside with reliable activity at the bubo and blood. Use in pregnancy is restricted by fetal ototoxicity.",
+      "effectiveness": "Mortality reduction from over 50% to roughly 10% in bubonic plague; case fatality with prompt therapy is 8-15%."
+    },
+    {
+      "name": "Gentamicin (5 mg/kg IV daily, or 2 mg/kg loading then 1.7 mg/kg every 8 hours, for 10 days)",
+      "description": "Equally effective alternative to streptomycin with broader availability and a more familiar dosing pattern. The most commonly used aminoglycoside for plague today. Requires renal function monitoring and aminoglycoside levels.",
+      "effectiveness": "Equivalent to streptomycin in retrospective comparison (Boulanger 2004); case fatality 7.5% in modern series."
+    },
+    {
+      "name": "Ciprofloxacin (400 mg IV every 8-12 hours or 500-750 mg orally twice daily for 10-14 days)",
+      "description": "FDA-approved for plague treatment and post-exposure prophylaxis based on animal-rule data and Madagascar case series. Oral bioavailability supports outpatient continuation after IV initiation. Now widely used as alternative or co-therapy.",
+      "effectiveness": "Cure rate over 90%; case-fatality rates in bubonic plague comparable to aminoglycosides in observational data."
+    },
+    {
+      "name": "Levofloxacin (500-750 mg orally or IV daily for 10-14 days)",
+      "description": "Alternative fluoroquinolone with FDA approval for plague treatment and prophylaxis. Once-daily dosing favors outpatient adherence. Activity equivalent to ciprofloxacin in vitro and in animal models.",
+      "effectiveness": "Cure rate over 90% in observational data; equivalence to ciprofloxacin in animal models."
+    },
+    {
+      "name": "Doxycycline (100 mg orally or IV twice daily for 10-14 days)",
+      "description": "Effective both for treatment of uncomplicated bubonic plague and for post-exposure prophylaxis after close contact with a pneumonic case. Bacteriostatic activity is adequate when started early. Avoid in pregnancy and in children under 8 except for severe disease.",
+      "effectiveness": "Cure rate 88-95% in observational studies; preferred for outpatient and mass-casualty prophylaxis scenarios."
+    },
+    {
+      "name": "Chloramphenicol (25 mg/kg IV every 6 hours for 10 days)",
+      "description": "Preferred for plague meningitis because it penetrates the central nervous system well. Reserved for that indication and for patients intolerant of first-line agents because of marrow toxicity.",
+      "effectiveness": "Reduces meningitis mortality from near 100% to 10-30% with prompt initiation."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Incision and drainage of fluctuant buboes",
+      "description": "Reserved for buboes that fluctuate and threaten to rupture spontaneously after antibiotic therapy has been established for at least 48-72 hours. Premature drainage risks dissemination and bacteremia.",
+      "successRate": "Symptomatic resolution in 90% of drained nodes; residual scarring is common."
+    },
+    {
+      "name": "Surgical debridement of necrotic tissue",
+      "description": "Required for acral gangrene complicating septicemic plague — fingers, toes, or nose may require amputation when ischemic tissue cannot be salvaged.",
+      "successRate": "Limb salvage depends on extent of disseminated intravascular coagulation; outcomes are best when sepsis is controlled before extensive necrosis."
+    }
+  ],
+
+  "alternativeTreatments": [],
+
+  "whySeeSpecialist": "Plague is a life-threatening, rapidly progressive disease requiring immediate infectious disease consultation and admission for parenteral antibiotic therapy. Public-health coordination is mandatory because of select-agent reporting, contact tracing, and post-exposure prophylaxis obligations. Self-treatment or outpatient management of suspected plague is not appropriate.",
+
+  "doctorSelectionGuide": "Suspected plague should bypass primary care for emergency department or infectious disease referral. Hospitals in endemic areas (New Mexico, Arizona, Colorado, California) maintain plague preparedness protocols. In bioterrorism scenarios, treatment is coordinated by local public health authorities under CDC consultation; individual patients should follow the regimen prescribed by that response.",
+
+  "hospitalCriteria": [
+    "Negative-pressure airborne isolation rooms for pneumonic plague patients",
+    "Infectious disease consultation available within hours of admission",
+    "Laboratory Response Network referral relationship for select-agent testing",
+    "Critical care capacity for hemodynamic support in septicemic disease"
+  ],
+
+  "keyFacilities": [
+    "State public health laboratories",
+    "Centers for Disease Control and Prevention Bacterial Special Pathogens Branch",
+    "Laboratory Response Network reference centers"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Use DEET-based repellent on skin and permethrin on clothing when entering rodent-rich environments in endemic areas",
+    "Keep pets on flea control year-round in endemic areas — cats and dogs that hunt rodents are a recognized vector to humans",
+    "Avoid contact with sick or dead wild rodents; use heavy gloves and report unusual rodent die-offs to public health",
+    "Eliminate rodent harborage around the home: clear brush, secure food storage, and seal entry points",
+    "Treat the home and yard with appropriate insecticides during local plague activity advisories",
+    "Provide doxycycline or ciprofloxacin post-exposure prophylaxis within 7 days of close contact with a pneumonic case"
+  ],
+
+  "lifestyleModifications": [
+    "Stay aware of local public-health alerts during summer months in endemic states",
+    "Wear long sleeves, long pants, and high boots when hiking in rodent habitats",
+    "Avoid camping near burrowing rodent colonies, particularly prairie dog towns with recent die-offs",
+    "Complete the full antibiotic course; partial therapy risks meningitis as a late complication",
+    "Maintain follow-up clinical and serologic assessment after treatment to confirm cure"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate hydration during acute illness; intravenous fluids in septicemic disease",
+      "Well-cooked meat from any source; Y. pestis is destroyed at standard cooking temperatures",
+      "Easily digestible foods during the acute phase, advancing as tolerated"
+    ],
+    "avoid": [
+      "Raw or undercooked camel, llama, marmot, or other wild game in endemic regions",
+      "Sharing food or utensils with febrile contacts during outbreaks until source is identified",
+      "Untreated water from sources adjacent to rodent die-off areas"
+    ]
+  },
+
+  "exerciseGuidelines": "Strict bed rest during the acute febrile phase. Gradual reintroduction of activity after at least 48 hours afebrile and clinically improving. Cardiorespiratory recovery from pneumonic plague can take 2-3 months; defer strenuous exercise until imaging and pulmonary function have returned to baseline.",
+
+  "dailyManagement": [
+    "Take all antibiotics on schedule; completion is critical for cure and to prevent late meningitis",
+    "Monitor for new fever or worsening symptoms during the first 14 days — late complications can emerge",
+    "Maintain airborne isolation until 48 hours of effective antibiotic therapy and clinical improvement in pneumonic disease",
+    "Report household and workplace contacts to public health for fever monitoring and post-exposure prophylaxis",
+    "Attend follow-up appointments at 1, 4, and 12 weeks to confirm resolution and rule out late sequelae"
+  ],
+
+  "prognosis": "With prompt antibiotic therapy started within 24 hours of symptom onset, overall plague mortality is 8-15%. Bubonic plague treated within the first day of fever has a case-fatality rate under 10%. Septicemic plague carries higher mortality (30-50%) because shock and disseminated intravascular coagulation can develop before therapy reaches steady state. Pneumonic plague is almost universally fatal if treatment is delayed beyond 24 hours of cough onset, but with early aminoglycoside or fluoroquinolone therapy mortality drops to 30-50%. The 2017 Madagascar pneumonic plague outbreak documented 9% case fatality with rapid intervention by national and WHO response teams. Patients who survive acute plague generally recover without long-term sequelae, though those with severe septicemic disease may have lasting consequences from acral gangrene, amputation, or post-sepsis syndrome. Plague meningitis as a late complication is treatable but devastating if missed; routine follow-up reduces this risk. Once recovered, patients have durable immunity to homologous strains, although reinfection has been reported.",
+
+  "recoveryTimeline": "Fever and constitutional symptoms typically resolve within 3-5 days of starting effective antibiotics. Buboes shrink over 1-3 weeks; some require surgical drainage. Pneumonic disease shows clinical improvement within 48-72 hours and radiographic clearance over 4-12 weeks. Septicemic patients with shock may require intensive care for 1-2 weeks and rehabilitation for several months. Full energy and exercise tolerance generally return within 2-3 months after uncomplicated disease.",
+
+  "complications": [
+    "Septicemic dissemination from bubonic disease, raising mortality to 30-50%",
+    "Disseminated intravascular coagulation with acral gangrene of fingers, toes, and nose — the historical 'black death' appearance",
+    "Plague meningitis 9-14 days into treatment when antibiotic CNS penetration is inadequate",
+    "Adult respiratory distress syndrome and respiratory failure in pneumonic plague",
+    "Secondary bacterial pneumonia or sepsis during prolonged ICU stay",
+    "Long-term post-sepsis disability including cognitive impairment and reduced exercise capacity",
+    "Limb amputation for irreversible acral gangrene"
+  ],
+
+  "supportResources": [
+    { "name": "CDC Plague", "url": "https://www.cdc.gov/plague/index.html", "description": "Authoritative US public-health resource with clinical, laboratory, and preparedness information." },
+    { "name": "WHO Plague Fact Sheet and Operational Guidelines", "url": "https://www.who.int/news-room/fact-sheets/detail/plague", "description": "International guidance on epidemiology, diagnosis, treatment, and outbreak management." },
+    { "name": "CDC Emergency Preparedness — Plague", "url": "https://emergency.cdc.gov/agent/plague/index.asp", "description": "US bioterrorism preparedness portal with healthcare provider information and protocols." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "tularemia", "name": "Tularemia", "keyDifference": "Tularemia presents with a small painful skin ulcer plus moderately tender lymph node, slower progression over days, and a punched-out ulcer at the inoculation site. Plague produces a markedly larger, more tender bubo with surrounding gel-like edema, faster progression, and often no skin ulcer. Geographic and exposure history differ — plague follows flea bites in western US, tularemia follows tick or rabbit exposure across central and Pacific states." },
+    { "slug": "anthrax", "name": "Anthrax", "keyDifference": "Cutaneous anthrax produces a painless black eschar with massive non-tender edema, in contrast to the exquisitely tender, erythematous bubo of plague. Both are CDC Category A agents but anthrax follows livestock or wool exposure rather than flea bites and responds to ciprofloxacin combined with another agent." },
+    { "slug": "pneumonia", "name": "Pneumonia", "keyDifference": "Community-acquired pneumonia has a slower onset, productive purulent cough, and responds to standard beta-lactams or macrolides. Pneumonic plague progresses to respiratory failure within 24-48 hours, produces bloody or watery sputum with bipolar coccobacilli on Gram stain, and is unresponsive to penicillins." },
+    { "slug": "lyme-disease", "name": "Lyme Disease", "keyDifference": "Lyme disease has a chronic, indolent course with characteristic erythema migrans rash, slow joint involvement, and absence of a tender bubo or sepsis. Plague is acute, rapidly progressive, and transmitted by fleas rather than the Ixodes ticks responsible for Lyme." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "pneumonia", "name": "Pneumonia" },
+    { "slug": "tularemia", "name": "Tularemia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "tularemia", "name": "Tularemia", "relevance": "Fellow CDC Category A bioterrorism agent and zoonotic gram-negative infection; differential diagnosis when fever and lymphadenopathy follow outdoor exposure." },
+    { "slug": "anthrax", "name": "Anthrax", "relevance": "Co-classified Category A bioterrorism agent with overlapping post-exposure prophylaxis protocols using doxycycline and ciprofloxacin." },
+    { "slug": "pneumonia", "name": "Pneumonia", "relevance": "Pneumonic plague mimics severe community-acquired pneumonia but progresses far faster and is unresponsive to standard antibiotics." },
+    { "slug": "lyme-disease", "name": "Lyme Disease", "relevance": "Another vector-borne zoonosis; differential when febrile illness follows outdoor exposure though clinical pictures diverge sharply." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is plague?",
+      "answer": "Plague is an acute bacterial infection caused by Yersinia pestis, the same pathogen that produced the Black Death pandemic of the 14th century. It still occurs in rodent populations across the western United States, Madagascar, Democratic Republic of Congo, and Peru, with roughly 3,000 cases reported globally each year. Three forms exist — bubonic, septicemic, and pneumonic — all treatable with prompt antibiotic therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do people catch plague today?",
+      "answer": "Most cases follow the bite of an infected rodent flea, especially after camping, hunting, or hiking in endemic areas. Direct handling of infected prairie dogs, ground squirrels, rabbits, or cats can also transmit the bacteria. Pneumonic plague spreads person-to-person only through respiratory droplets from an infected coughing patient or cat.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a plague bubo look like?",
+      "answer": "A plague bubo is an exquisitely tender, firm, often visible swelling of a lymph node — most commonly in the groin (60%), armpit, or neck. The overlying skin is red, hot, and tense, and any pressure or movement causes severe pain. Buboes develop within 24 hours of fever onset and grow rapidly to 1-10 cm.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is plague still treatable?",
+      "answer": "Yes. Modern antibiotics — streptomycin, gentamicin, doxycycline, ciprofloxacin, and levofloxacin — cure plague when started early. Bubonic plague mortality falls from over 50% to under 10% with prompt treatment. Pneumonic plague treated within 24 hours of cough onset has roughly 50% survival; delay beyond 24 hours is usually fatal.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is plague contagious between people?",
+      "answer": "Only the pneumonic form spreads person-to-person, and only through close-contact respiratory droplets within 2 meters. Bubonic and septicemic forms are not transmitted between humans without direct fluid contact. Healthcare workers caring for pneumonic patients require N95 respirators and airborne isolation until 48 hours of antibiotic therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Where in the United States does plague occur?",
+      "answer": "Plague in the United States is concentrated in the four southwestern states — New Mexico, Arizona, Colorado, and California — which together report over 80% of cases. Cases also occur in Utah, Nevada, and Oregon. The eastern half of the country is not endemic. Approximately 7 cases occur nationally each year (CDC 2010-2020).",
+      "schemaEligible": true
+    },
+    {
+      "question": "How quickly does plague progress?",
+      "answer": "Plague is among the fastest-progressing bacterial infections known. Bubonic plague develops fever 2-6 days after a flea bite, with bubo appearing within 24 hours of fever. Pneumonic plague progresses to respiratory failure within 24-72 hours. Septicemic plague produces shock within 2-4 days. Early antibiotic therapy is the decisive factor in survival.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What antibiotics treat plague?",
+      "answer": "Streptomycin and gentamicin (injectable aminoglycosides) are first-line treatments for severe plague. Oral ciprofloxacin, levofloxacin, and doxycycline are FDA-approved alternatives suitable for both treatment and post-exposure prophylaxis. Treatment lasts 10-14 days. Chloramphenicol is reserved for plague meningitis because it penetrates the central nervous system.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a vaccine for plague?",
+      "answer": "No commercially available plague vaccine exists in most countries today. The previous killed whole-cell vaccine was discontinued because it did not protect against pneumonic plague. Several subunit and live attenuated vaccine candidates are in development, but none are FDA-approved for routine use. Doxycycline or ciprofloxacin prophylaxis covers known high-risk exposures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Black Death?",
+      "answer": "The Black Death refers to the 14th-century pandemic of plague that killed an estimated 50 million people across Europe and Asia between 1346 and 1353. Modern genetic analysis confirmed Y. pestis as the causative organism. The pandemic produced both bubonic and pneumonic forms; the high mortality reflected the absence of antibiotics and public-health infrastructure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is plague a bioterrorism concern?",
+      "answer": "Y. pestis is classified as CDC Category A because it is highly lethal, can be aerosolized to cause pneumonic plague, and transmits person-to-person. A WHO 1970 model estimated that 50 kg released over a city of 5 million would cause 150,000 pneumonic cases and 36,000 deaths, with secondary transmission amplifying impact further.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cats transmit plague?",
+      "answer": "Yes. Cats are an important transmission vector in the western United States, particularly to veterinarians and pet owners. Cats hunting rodents acquire Y. pestis and can transmit through scratches, bites, and respiratory droplets — especially in pneumonic plague cat cases. Affected cats often present with fever, lethargy, and submandibular lymphadenopathy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-exposure prophylaxis for plague?",
+      "answer": "After close contact (within 2 meters) with a pneumonic plague patient, doxycycline 100 mg orally twice daily or ciprofloxacin 500 mg twice daily is recommended for 7 days. Begin within 24 hours of exposure. Public health authorities coordinate mass prophylaxis in outbreak or bioterrorism settings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does plague recovery take?",
+      "answer": "Fever and major constitutional symptoms resolve within 3-5 days of starting effective antibiotics. Buboes shrink over 1-3 weeks. Pneumonic disease takes longer, with radiographic clearance over 4-12 weeks. Septicemic patients may need intensive care for 1-2 weeks. Full energy and exercise tolerance generally return within 2-3 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get plague?",
+      "answer": "Yes. Pediatric and adolescent cases account for 30-40% of US plague, driven by outdoor exposure in rural endemic areas. Treatment includes gentamicin for severe cases or short-course doxycycline or ciprofloxacin per CDC guidance. Pediatric infectious disease consultation is recommended for all suspected pediatric plague.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if plague is not treated?",
+      "answer": "Untreated bubonic plague carries a case fatality of 50-60%. Untreated septicemic plague is fatal in 80-100% of cases. Untreated pneumonic plague approaches 100% mortality within 24-72 hours. Prompt antibiotic therapy reduces these figures substantially — under 10% for bubonic disease and 30-50% for pneumonic plague.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is plague reported to public health?",
+      "answer": "Plague is a nationally notifiable disease in the United States and an internationally notifiable disease under WHO International Health Regulations. Clinicians and laboratories must report suspected or confirmed cases to state or local public health departments immediately. The CDC and WHO coordinate response, contact tracing, and prophylaxis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can plague come back in someone who had it before?",
+      "answer": "Recovered patients develop durable immunity to the strain that caused their infection, and clinical reinfection is rare. However, immunity may not be absolute across all Y. pestis strains, and patients re-exposed in endemic areas should still seek prompt evaluation of any unexplained fever. Post-exposure prophylaxis remains appropriate after high-risk exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is plague meningitis?",
+      "answer": "Plague meningitis is a rare late complication occurring 9-14 days into treatment with aminoglycosides, which penetrate the central nervous system poorly. It presents with fever, headache, neck stiffness, and altered mental status. Treatment requires chloramphenicol or a fluoroquinolone, both of which cross the blood-brain barrier well.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does plague leave permanent damage?",
+      "answer": "Most patients who recover from bubonic plague have no lasting sequelae. Septicemic plague survivors may face long-term consequences including amputation for acral gangrene, post-sepsis cognitive impairment, and reduced exercise capacity. Pneumonic plague survivors generally recover full lung function within 3-6 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pets be vaccinated against plague?",
+      "answer": "No widely available plague vaccine exists for pets. Prevention in cats and dogs relies on flea control with monthly topical or oral acaricides and limiting predation of rodents in endemic areas. Owners in endemic states should keep pets indoors during local plague activity advisories.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Plague (bubonic, septicemic, or pneumonic plague)",
+
+  "regionalNames": [
+    { "name": "Black Death", "region": "Historical Europe", "language": "en" },
+    { "name": "Bubonic plague", "region": "Global", "language": "en" },
+    { "name": "Peste", "region": "France / Spain / Latin America", "language": "fr" },
+    { "name": "Pesutu", "region": "Madagascar", "language": "mg" }
+  ],
+
+  "searchTags": [
+    "plague", "bubonic plague", "pneumonic plague", "septicemic plague",
+    "yersinia pestis", "black death", "plague bioterrorism",
+    "plague antibiotics", "plague vaccine", "plague symptoms",
+    "rodent plague", "flea plague", "category A agent"
+  ],
+
+  "symptomKeywords": [
+    "sudden high fever with painful lump", "swollen groin lymph node",
+    "swollen armpit lymph node", "bloody cough with fever",
+    "rapid sepsis after flea bite", "acral gangrene", "black death symptoms"
+  ],
+
+  "metaTitle": "Plague: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Plague (Yersinia pestis): bubonic, septicemic, and pneumonic forms. Symptoms, diagnosis, and antibiotic treatment that cuts mortality from 50% to under 10%.",
+
+  "keywords": [
+    "plague", "bubonic plague", "plague symptoms", "plague treatment",
+    "yersinia pestis", "pneumonic plague", "septicemic plague",
+    "black death", "plague antibiotics", "plague vaccine",
+    "plague bioterrorism", "is plague still around"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Centers for Disease Control and Prevention. Plague — Information for Clinicians. CDC; 2023.",
+      "url": "https://www.cdc.gov/plague/healthcare/clinicians.html",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "World Health Organization. Plague Fact Sheet and Operational Guidelines on Plague Surveillance, Diagnosis, Prevention and Control. WHO; 2022.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/plague",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Prentice MB, Rahalison L. Plague. The Lancet. 2007;369(9568):1196-1207.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17416264/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Inglesby TV, Dennis DT, Henderson DA, et al. Plague as a Biological Weapon: Medical and Public Health Management. JAMA. 2000;283(17):2281-2290.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10807389/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Dennis DT, Mead PS. Yersinia Species, Including Plague. In: Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases. 9th ed. Elsevier; 2020.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15825036/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Mead PS. Plague in 2018: Recent Outbreaks and Re-emergence. Current Opinion in Infectious Diseases. 2018;31(5):428-433.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30113322/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Nguyen VK, Parra-Rojas C, Hernandez-Vargas EA. The 2017 Plague Outbreak in Madagascar: Data Descriptions and Epidemic Modelling. Epidemics. 2018;25:20-25.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29759385/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

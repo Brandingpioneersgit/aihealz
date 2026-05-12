@@ -52,7 +52,7 @@ export default async function AdminDiagnosticsIndex() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             <div
-                style={{ maxWidth: 1280, margin: '0 auto', padding: '40px 28px 80px' }}
+                style={{ maxWidth: 1280, margin: '0 auto', padding: '40px clamp(16px, 4vw, 28px) 80px' }}
                 className="col gap-6"
             >
                 <div className="col gap-3">

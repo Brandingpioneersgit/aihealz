@@ -1,7 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { UTIL_IMAGES } from '@/lib/stock-images';
 
 const STATS = [
     { value: '71,000+', label: 'medical conditions' },
@@ -157,7 +159,7 @@ export default function AdvertisePage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             {/* ── Hero ──────────────────────────────────── */}
-            <section style={{ padding: '64px 28px 32px', maxWidth: 1280, margin: '0 auto' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px) 32px', maxWidth: 1280, margin: '0 auto' }}>
                 <div
                     className="row between ai-center hairline-b"
                     style={{ paddingBottom: 18, flexWrap: 'wrap', gap: 12 }}
@@ -175,6 +177,52 @@ export default function AdvertisePage() {
                         }}
                     >
                         ● accepting advertisers
+                    </span>
+                </div>
+
+                <div
+                    style={{
+                        position: 'relative',
+                        width: '100%',
+                        aspectRatio: '32 / 9',
+                        maxHeight: 280,
+                        overflow: 'hidden',
+                        borderRadius: 'var(--r-3, 8px)',
+                        border: '1px solid var(--rule)',
+                        marginTop: 32,
+                    }}
+                >
+                    <Image
+                        src={UTIL_IMAGES.analytics.src}
+                        alt={UTIL_IMAGES.analytics.alt}
+                        fill
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        priority
+                        style={{ objectFit: 'cover' }}
+                    />
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            background:
+                                'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
+                        }}
+                    />
+                    <span
+                        className="mono"
+                        style={{
+                            position: 'absolute',
+                            left: 'clamp(16px, 3vw, 28px)',
+                            bottom: 18,
+                            color: 'rgba(255,255,255,0.9)',
+                            fontSize: 11,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.12em',
+                            fontWeight: 500,
+                        }}
+                    >
+                        ● the inventory / advertise on aihealz
                     </span>
                 </div>
 
@@ -224,7 +272,7 @@ export default function AdvertisePage() {
                             key={s.label}
                             className="col gap-1"
                             style={{
-                                padding: '24px 28px',
+                                padding: '24px clamp(16px, 4vw, 28px)',
                                 borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
                             }}
                         >
@@ -251,7 +299,7 @@ export default function AdvertisePage() {
             </section>
 
             {/* ── Trust strip ────────────────────────────── */}
-            <section style={{ padding: '32px 28px', maxWidth: 1280, margin: '0 auto' }}>
+            <section style={{ padding: '32px clamp(16px, 4vw, 28px)', maxWidth: 1280, margin: '0 auto' }}>
                 <div
                     className="row gap-5 mono"
                     style={{
@@ -274,7 +322,7 @@ export default function AdvertisePage() {
             </section>
 
             {/* ── Ad Placements ─────────────────────────── */}
-            <section style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px)', maxWidth: 1280, margin: '0 auto' }}>
                 <div className="row between ai-end" style={{ marginBottom: 32, flexWrap: 'wrap', gap: 16 }}>
                     <div className="col gap-2">
                         <span className="section-mark">II / placements</span>
@@ -366,7 +414,7 @@ export default function AdvertisePage() {
             </section>
 
             {/* ── Targeting ─────────────────────────────── */}
-            <section style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px)', maxWidth: 1280, margin: '0 auto' }}>
                 <div className="row gap-7" style={{ flexWrap: 'wrap' }}>
                     <div className="col gap-5" style={{ flex: '1 1 380px', minWidth: 0 }}>
                         <span className="section-mark">III / targeting</span>
@@ -490,7 +538,7 @@ export default function AdvertisePage() {
             </section>
 
             {/* ── Pricing ───────────────────────────────── */}
-            <section id="pricing" style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+            <section id="pricing" style={{ padding: '64px clamp(16px, 4vw, 28px)', maxWidth: 1280, margin: '0 auto' }}>
                 <div className="col gap-2" style={{ marginBottom: 32 }}>
                     <span className="section-mark">IV / pricing</span>
                     <h2
@@ -613,7 +661,7 @@ export default function AdvertisePage() {
             </section>
 
             {/* ── Testimonials ──────────────────────────── */}
-            <section style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px)', maxWidth: 1280, margin: '0 auto' }}>
                 <div className="col gap-2" style={{ marginBottom: 32 }}>
                     <span className="section-mark">V / customers</span>
                     <h2
@@ -626,7 +674,7 @@ export default function AdvertisePage() {
                 <div
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                         gap: 16,
                     }}
                 >
@@ -668,7 +716,7 @@ export default function AdvertisePage() {
             </section>
 
             {/* ── FAQ ───────────────────────────────────── */}
-            <section style={{ padding: '64px 28px', maxWidth: 880, margin: '0 auto' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px)', maxWidth: 880, margin: '0 auto' }}>
                 <div className="col gap-2" style={{ marginBottom: 32 }}>
                     <span className="section-mark">VI / FAQ</span>
                     <h2
@@ -723,7 +771,7 @@ export default function AdvertisePage() {
             </section>
 
             {/* ── CTA ───────────────────────────────────── */}
-            <section style={{ padding: '0 28px 96px' }}>
+            <section style={{ padding: '0 clamp(16px, 4vw, 28px) 96px' }}>
                 <div
                     className="card-ink"
                     style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(36px, 5vw, 64px)' }}

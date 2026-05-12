@@ -46,6 +46,9 @@ const nextConfig: NextConfig = {
       // Medical image APIs
       { protocol: 'https', hostname: 'pollinations.ai' },
       { protocol: 'https', hostname: 'image.pollinations.ai' },
+      // Google Places (New) photo media URLs — populated by admin/populate-real-data
+      { protocol: 'https', hostname: 'places.googleapis.com' },
+      { protocol: 'https', hostname: 'maps.googleapis.com' },
     ],
     // Image formats to generate
     formats: ['image/avif', 'image/webp'],
@@ -64,28 +67,60 @@ const nextConfig: NextConfig = {
 
   // Experimental features
   experimental: {
-    // Optimize package imports
-    optimizePackageImports: ['lucide-react', '@heroicons/react'],
+    // Per-symbol tree-shaking for libs with large barrel exports.
+    // Cuts client JS where only a handful of icons/charts/components are used.
+    optimizePackageImports: [
+      'lucide-react',
+      '@heroicons/react',
+      'recharts',
+      'react-markdown',
+      'remark-gfm',
+      'date-fns',
+    ],
   },
 
-  // Headers for security and caching
+  // Headers for security and caching.
+  //
+  // Mirrored from deploy/nginx.conf so we're protected even when running
+  // outside that nginx (local prod test, future host swap, vercel preview).
+  // CSP is intentionally permissive for inline scripts because Next emits
+  // inline JSON islands and we ship gtag.js + GTM. Tighten with nonces if
+  // we ever drop GTM.
   async headers() {
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://maps.googleapis.com https://js.stripe.com https://challenges.cloudflare.com https://app.wacrs.com https://*.wacrs.com",
+      // next/font self-hosts Geist + Geist Mono — no Google Fonts CDN at runtime.
+      "style-src 'self' 'unsafe-inline' https://*.wacrs.com",
+      "img-src 'self' data: blob: https:",
+      "font-src 'self' data: https://*.wacrs.com",
+      "connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://places.googleapis.com https://maps.googleapis.com https://api.stripe.com https://api.openrouter.ai https://api.anthropic.com https://*.wacrs.com wss://*.wacrs.com",
+      "frame-src 'self' https://www.google.com https://www.youtube.com https://player.vimeo.com https://js.stripe.com https://hooks.stripe.com https://*.wacrs.com",
+      "media-src 'self' blob: https://*.wacrs.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "frame-ancestors 'self'",
+      "upgrade-insecure-requests",
+    ].join('; ');
+
     return [
       {
         source: '/:path*',
         headers: [
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(self), payment=(self)',
           },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          }
+          { key: 'Content-Security-Policy', value: csp },
         ],
       },
       {
@@ -96,6 +131,28 @@ const nextConfig: NextConfig = {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
           }
+        ],
+      },
+      {
+        // Edge cache for public, ISR-friendly content pages.
+        // - max-age=0           → browser revalidates on each navigation
+        // - s-maxage=3600       → Nginx/Cloudflare caches for 1h
+        // - stale-while-revalidate=86400 → serve stale for up to 24h while regenerating
+        // Negative match keeps admin/api/auth/personalized paths off this rule.
+        source:
+          '/:path((?!admin|api|provider|vault|auth|login|register|chat|analyze|book|search|_next).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
+        // Never edge-cache personalized or per-user surfaces
+        source: '/:path(admin|api|provider|vault|auth|login|register|chat|analyze|book|search)(/.*)?',
+        headers: [
+          { key: 'Cache-Control', value: 'private, no-store, max-age=0' },
         ],
       },
     ];

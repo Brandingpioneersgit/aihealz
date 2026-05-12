@@ -239,7 +239,7 @@ function UploadView({
 
     return (
         <div
-            style={{ padding: '48px 28px 80px', maxWidth: 1080, margin: '0 auto' }}
+            style={{ padding: '48px clamp(16px, 4vw, 28px) 80px', maxWidth: 1080, margin: '0 auto' }}
             className="col gap-7"
         >
             {/* Hero */}
@@ -544,7 +544,7 @@ function ProcessingView({ step }: { step: number }) {
     return (
         <div
             className="col ai-center center gap-7"
-            style={{ minHeight: '60vh', padding: '48px 28px' }}
+            style={{ minHeight: '60vh', padding: '48px clamp(16px, 4vw, 28px)' }}
         >
             <div
                 aria-hidden="true"
@@ -617,7 +617,7 @@ function DossierView({ data, onNewAnalysis }: { data: DossierData; onNewAnalysis
 
     return (
         <div
-            style={{ padding: '40px 28px 80px', maxWidth: 1280, margin: '0 auto' }}
+            style={{ padding: '40px clamp(16px, 4vw, 28px) 80px', maxWidth: 1280, margin: '0 auto' }}
             className="col gap-6"
         >
             {/* Header */}

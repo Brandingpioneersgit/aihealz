@@ -166,7 +166,7 @@ export default async function InsurancePage() {
       />
 
       <div
-        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
         className="col gap-7"
       >
         {/* ── Hero ──────────────────────────────────── */}
@@ -324,7 +324,7 @@ export default async function InsurancePage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))',
               gap: 16,
             }}
           >
@@ -882,7 +882,7 @@ export default async function InsurancePage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
               gap: 16,
             }}
           >

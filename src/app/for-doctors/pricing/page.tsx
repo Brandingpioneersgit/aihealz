@@ -158,7 +158,7 @@ export default function DoctorPricingPage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
             <div
-                style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 96px' }}
+                style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 96px' }}
                 className="col gap-7"
             >
                 {/* Error */}

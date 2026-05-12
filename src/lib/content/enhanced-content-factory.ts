@@ -2,6 +2,7 @@ import prisma from '@/lib/db';
 import { generateConditionRender } from '@/lib/cms/media-engine';
 import { getIntentKeyword } from './intent-analyzer';
 import { getTreatmentCost } from './cost-estimator';
+import { aiChat } from '@/lib/ai/openrouter';
 
 /**
  * Enhanced Content Factory - Comprehensive SEO-Optimized Medical Content Generator
@@ -17,9 +18,6 @@ import { getTreatmentCost } from './cost-estimator';
  * - Hospital recommendations
  * - Related conditions
  */
-
-const DEEPSEEK_KEY = process.env.DEEPSEEK_API_KEY || '';
-const DEEPSEEK_BASE = 'https://api.deepseek.com/chat/completions';
 
 interface GeneratedContent {
   h1Title: string;
@@ -207,60 +205,35 @@ export async function generateEnhancedContent(
     treatments
   );
 
-  // 5. Call DeepSeek API
+  // 5. Call free OSS reasoning model via the centralized helper
   let contentData: GeneratedContent | null = null;
-  let retries = 3;
+  let lastError: string | undefined;
 
-  while (retries > 0) {
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 min timeout for comprehensive content
-
-      const res = await fetch(DEEPSEEK_BASE, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${DEEPSEEK_KEY}`,
-        },
-        signal: controller.signal,
-        body: JSON.stringify({
-          model: 'deepseek-chat',
-          messages: [{ role: 'user', content: prompt }],
-          temperature: 0.15,
-          max_tokens: 8000,
-          response_format: { type: 'json_object' },
-        }),
-      });
-      clearTimeout(timeoutId);
-
-      if (!res.ok) {
-        const errorText = await res.text();
-        console.error(`DeepSeek Error (${res.status}): ${errorText}`);
-        retries--;
-        await new Promise(r => setTimeout(r, 5000));
-        continue;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const result = await aiChat(
+      [{ role: 'user', content: prompt }],
+      {
+        mode: 'reasoning',
+        temperature: 0.15,
+        maxTokens: 8000,
+        responseFormat: { type: 'json_object' },
+      },
+    );
+    if (result.ok && result.text) {
+      try {
+        contentData = JSON.parse(result.text);
+        break;
+      } catch (e) {
+        lastError = e instanceof Error ? e.message : 'JSON parse failed';
       }
-
-      const json = await res.json();
-      const rawContent = json.choices[0]?.message?.content;
-
-      if (!rawContent) {
-        console.error('Empty response from DeepSeek');
-        retries--;
-        continue;
-      }
-
-      contentData = JSON.parse(rawContent);
-      break;
-    } catch (e: any) {
-      console.error(`Attempt failed (${retries} left): ${e.message}`);
-      retries--;
-      if (retries > 0) await new Promise(r => setTimeout(r, 5000));
+    } else {
+      lastError = result.error;
     }
+    await new Promise(r => setTimeout(r, 3000));
   }
 
   if (!contentData) {
-    console.error(`Failed to generate content for ${conditionSlug}`);
+    console.error(`Failed to generate content for ${conditionSlug}: ${lastError}`);
     return null;
   }
 

@@ -128,7 +128,7 @@ export default function V4Footer() {
             style={{
                 background: 'var(--ink)',
                 color: 'var(--paper)',
-                padding: '56px 28px 28px',
+                padding: '56px clamp(16px, 4vw, 28px) 28px',
                 marginTop: 0,
             }}
         >

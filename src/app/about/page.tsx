@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
+import EditorialFigure from '@/components/v4/EditorialFigure';
+import { ABOUT_IMAGES, HOSPITAL_IMAGES } from '@/lib/stock-images';
 import {
     generateAboutPageSchema,
     generateOrganizationSchema,
@@ -8,17 +11,26 @@ import {
     generateFAQSchema,
 } from '@/lib/structured-data';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'About Us | aihealz | The Medical AI Concierge',
     description: 'Learn about aihealz, the AI-powered medical directory and concierge transforming patient-doctor discovery globally. Discover our mission to democratize elite healthcare.',
     keywords: 'about aihealz, medical AI, AI diagnosis, find doctors, medical travel concierge, health technology, AI healthcare startup',
+    alternates: { canonical: '/about' },
     openGraph: {
         title: 'About Us | aihealz',
-        description: 'Organizing the world\'s medical expertise with AI.',
+        description: "Organizing the world's medical expertise with AI.",
         url: 'https://aihealz.com/about',
         siteName: 'aihealz',
         images: [{ url: '/og-about.jpg', width: 1200, height: 630 }],
-    }
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'About Us | aihealz',
+        description: "Organizing the world's medical expertise with AI.",
+        images: ['/og-about.jpg'],
+    },
 };
 
 const aboutFaqs = [
@@ -65,7 +77,7 @@ export default function AboutPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
 
-            <div style={{ maxWidth: 1180, margin: '0 auto', padding: '48px 28px 80px' }}>
+            <div style={{ maxWidth: 1180, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}>
                 {/* Breadcrumb */}
                 <nav
                     aria-label="Breadcrumb"
@@ -78,29 +90,63 @@ export default function AboutPage() {
                 </nav>
 
                 {/* Hero */}
-                <section className="col gap-5" style={{ marginBottom: 80, maxWidth: 1080 }}>
-                    <span className="section-mark">About / our mission</span>
-                    <h1
-                        className="display"
+                <section
+                    className="row gap-7 ai-end"
+                    style={{ marginBottom: 80, flexWrap: 'wrap' }}
+                >
+                    <div className="col gap-5" style={{ flex: '1 1 480px', minWidth: 0 }}>
+                        <span className="section-mark">About / our mission</span>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(40px, 6vw, 96px)',
+                                lineHeight: 0.95,
+                                letterSpacing: '-0.045em',
+                                fontWeight: 600,
+                                margin: 0,
+                            }}
+                        >
+                            Connecting patients with{' '}
+                            <span style={{ color: 'var(--cobalt)' }}>expert care</span>
+                            <span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <p
+                            className="lede"
+                            style={{ fontSize: 22, color: 'var(--ink-2)', maxWidth: 640, marginTop: 8 }}
+                        >
+                            aihealz helps you find the right specialist, understand treatment options, and
+                            compare costs across countries — from initial research to booking care abroad.
+                        </p>
+                    </div>
+                    <div
                         style={{
-                            fontSize: 'clamp(40px, 6vw, 96px)',
-                            lineHeight: 0.95,
-                            letterSpacing: '-0.045em',
-                            fontWeight: 600,
-                            margin: 0,
+                            position: 'relative',
+                            flex: '1 1 420px',
+                            minWidth: 0,
+                            aspectRatio: '4 / 3',
+                            overflow: 'hidden',
+                            borderRadius: 'var(--r-3, 8px)',
+                            border: '1px solid var(--rule)',
                         }}
                     >
-                        Connecting patients with{' '}
-                        <span style={{ color: 'var(--cobalt)' }}>expert care</span>
-                        <span style={{ color: 'var(--orange)' }}>.</span>
-                    </h1>
-                    <p
-                        className="lede"
-                        style={{ fontSize: 22, color: 'var(--ink-2)', maxWidth: 640, marginTop: 8 }}
-                    >
-                        aihealz helps you find the right specialist, understand treatment options, and
-                        compare costs across countries — from initial research to booking care abroad.
-                    </p>
+                        <Image
+                            src={ABOUT_IMAGES.team.src}
+                            alt={ABOUT_IMAGES.team.alt}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 540px"
+                            priority
+                            style={{ objectFit: 'cover' }}
+                        />
+                        <div
+                            aria-hidden="true"
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background:
+                                    'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.18) 100%)',
+                            }}
+                        />
+                    </div>
                 </section>
 
                 {/* Stats */}
@@ -160,6 +206,11 @@ export default function AboutPage() {
                             written for a crawler — not the person whose hand was shaking when they opened
                             the report.
                         </p>
+                        <EditorialFigure
+                            image={HOSPITAL_IMAGES.consultation}
+                            eyebrow="At the bureau"
+                            caption="A nurse at the bedside — the kind of clinical moment we&rsquo;re trying to make easier to find."
+                        />
                         <p>
                             aihealz was built to fix that. We index detailed information about conditions,
                             treatments, and specialists, then use AI to match patients with the right care
@@ -169,6 +220,11 @@ export default function AboutPage() {
                             For patients considering treatment abroad, we provide transparent cost
                             comparisons and connect them with accredited hospitals worldwide.
                         </p>
+                        <EditorialFigure
+                            image={HOSPITAL_IMAGES.ward}
+                            eyebrow="What good looks like"
+                            caption="Bright, well-staffed, accountable — the standard the directory holds providers to."
+                        />
                     </div>
                     <div style={{ marginTop: 8 }}>
                         <Link href="/for-doctors" className="btn btn-paper">

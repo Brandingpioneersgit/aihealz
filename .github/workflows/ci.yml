@@ -32,6 +32,9 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Test
+        run: npm run test:ci
+
       - name: Build
         env:
           # Build-time placeholders so Next can resolve env-aware imports.

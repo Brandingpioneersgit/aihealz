@@ -67,7 +67,7 @@ export default function MedicalTravelBot() {
             style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}
         >
             <div
-                style={{ maxWidth: 980, margin: '0 auto', padding: '40px 28px 96px' }}
+                style={{ maxWidth: 980, margin: '0 auto', padding: '40px clamp(16px, 4vw, 28px) 96px' }}
                 className="col gap-6 print:px-0"
             >
                 {/* Back Link (Hidden on Print) */}

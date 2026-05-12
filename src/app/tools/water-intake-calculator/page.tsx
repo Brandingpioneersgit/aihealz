@@ -38,7 +38,7 @@ export default function WaterIntakeCalculatorPage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             <div
-                style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 28px 80px' }}
+                style={{ maxWidth: 1200, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                 className="col gap-6"
             >
                 <nav

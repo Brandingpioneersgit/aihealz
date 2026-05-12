@@ -1,14 +1,26 @@
 import fs from 'fs';
 import path from 'path';
+import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { headers } from 'next/headers';
 import TreatmentsExplorer, { type TreatmentType } from '@/components/ui/treatments-explorer';
 import { normalizeSpecialty } from '@/lib/normalize-specialty';
 import LanguageSwitcher from '@/components/ui/language-switcher';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { AIDiagnosisCTA, FindDoctorCTA, BookTestCTA } from '@/components/ui/cta-sections';
+import { HERO_IMAGES, TREATMENT_IMAGES } from '@/lib/stock-images';
+
+const TREATMENT_TYPE_IMAGES: Record<string, { src: string; alt: string }> = {
+    prescription: TREATMENT_IMAGES.pills,
+    injection: TREATMENT_IMAGES.lab,
+    surgical: TREATMENT_IMAGES.surgery,
+    therapy: TREATMENT_IMAGES.rehab,
+    otc: TREATMENT_IMAGES.pharmacy,
+    home_remedy: TREATMENT_IMAGES.wellness,
+};
+
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: 'Medical Treatments, Drugs & Procedures Directory | Compare Costs Globally',
@@ -152,25 +164,37 @@ export default async function TreatmentsDirectory() {
         }
     });
 
+    // Cap per-specialty rows shipped to the client. The Explorer only renders
+    // ~12 per specialty initially; sending 10k items into the RSC payload was
+    // pushing the HTML to 10MB. 50 keeps in-page search useful without ballooning.
+    const TREATMENTS_PER_SPECIALTY = 50;
+
     const categories = Object.keys(specialtyMap)
         .sort()
-        .map(specialty => ({
-            specialty,
-            treatments: Array.from(specialtyMap[specialty].values())
-                .map(t => ({
-                    name: t.name,
-                    type: t.type as TreatmentType,
-                    brandNames: t.brandNames,
-                    genericAvailable: t.genericAvailable,
-                    requiresPrescription: t.requiresPrescription,
-                    description: t.description,
-                    costs: t.costs,
-                }))
-                .sort((a, b) => a.name.localeCompare(b.name)),
-        }))
+        .map(specialty => {
+            const all = Array.from(specialtyMap[specialty].values()).sort((a, b) =>
+                a.name.localeCompare(b.name),
+            );
+            return {
+                specialty,
+                totalCount: all.length,
+                treatments: all
+                    .slice(0, TREATMENTS_PER_SPECIALTY)
+                    .map(t => ({
+                        name: t.name,
+                        type: t.type as TreatmentType,
+                        brandNames: t.brandNames,
+                        genericAvailable: t.genericAvailable,
+                        requiresPrescription: t.requiresPrescription,
+                        // `description` intentionally omitted — TreatmentCard
+                        // doesn't render it; shipping cuts the payload ~3-5x.
+                        costs: t.costs,
+                    })),
+            };
+        })
         .filter(c => c.treatments.length > 0);
 
-    const totalTreatments = categories.reduce((sum, c) => sum + c.treatments.length, 0);
+    const totalTreatments = categories.reduce((sum, c) => sum + c.totalCount, 0);
 
     // Count by type
     const typeCounts = raw.reduce((acc, t) => {
@@ -179,13 +203,10 @@ export default async function TreatmentsDirectory() {
         return acc;
     }, {} as Record<string, number>);
 
-    // Read geo context from middleware headers
-    const hdrs = await headers();
-    const country = hdrs.get('x-aihealz-country');
-    const city = hdrs.get('x-aihealz-city');
-    const lang = hdrs.get('x-aihealz-lang') || 'en';
-    const regionalLang = hdrs.get('x-aihealz-regional-lang');
-    const regionalDisplay = hdrs.get('x-aihealz-regional-display');
+    // Geo personalization happens client-side: LanguageSwitcher and
+    // TreatmentsExplorer read the `aihealz-geo` / `aihealz-lang` cookies on
+    // mount. Keeping geo off the server render lets this page be ISR-cached.
+    const lang = 'en';
 
     // ─── STRUCTURED DATA SCHEMAS ────────────────────────────────
 
@@ -338,19 +359,59 @@ export default async function TreatmentsDirectory() {
             />
 
             <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
-                {/* Language Switcher Banner */}
-                <LanguageSwitcher
-                    country={country}
-                    city={city}
-                    lang={lang}
-                    regionalLang={regionalLang}
-                    regionalDisplay={regionalDisplay}
-                />
+                {/* Language Switcher Banner — self-detects geo client-side */}
+                <LanguageSwitcher />
 
                 <div
-                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                     className="col gap-7"
                 >
+                    {/* ── Hero banner image ─────────────────── */}
+                    <div
+                        style={{
+                            position: 'relative',
+                            width: '100%',
+                            aspectRatio: '32 / 9',
+                            maxHeight: 340,
+                            overflow: 'hidden',
+                            borderRadius: 'var(--r-3, 8px)',
+                            border: '1px solid var(--rule)',
+                        }}
+                    >
+                        <Image
+                            src={HERO_IMAGES.tools.src}
+                            alt={HERO_IMAGES.tools.alt}
+                            fill
+                            sizes="(max-width: 1280px) 100vw, 1280px"
+                            priority
+                            style={{ objectFit: 'cover' }}
+                        />
+                        <div
+                            aria-hidden="true"
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background:
+                                    'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
+                            }}
+                        />
+                        <span
+                            className="mono"
+                            style={{
+                                position: 'absolute',
+                                left: 'clamp(16px, 3vw, 28px)',
+                                bottom: 18,
+                                color: 'rgba(255,255,255,0.9)',
+                                fontSize: 11,
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.12em',
+                                fontWeight: 500,
+                            }}
+                        >
+                            ● the index / by treatment
+                        </span>
+                    </div>
+
                     {/* ── Hero ──────────────────────────────── */}
                     <header className="col gap-4">
                         <div
@@ -501,45 +562,76 @@ export default async function TreatmentsDirectory() {
                                 const cols = 3;
                                 const isLastCol = (i + 1) % cols === 0;
                                 const isLastRow = i >= TREATMENT_TYPES.length - cols;
+                                const img = TREATMENT_TYPE_IMAGES[t.type] || TREATMENT_IMAGES.radiology;
                                 return (
                                     <Link
                                         key={t.type}
                                         href={`/treatments?type=${t.type}`}
-                                        className="col gap-3"
+                                        className="col"
                                         style={{
-                                            padding: '20px 22px',
+                                            padding: 0,
                                             borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
                                             borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
                                             cursor: 'pointer',
+                                            overflow: 'hidden',
                                         }}
                                     >
-                                        <div className="row between ai-center">
-                                            <div className="spec-icon">{t.abbr}</div>
-                                            <span
-                                                className="mono"
-                                                style={{
-                                                    fontSize: 11,
-                                                    color: 'var(--ink-3)',
-                                                    textTransform: 'uppercase',
-                                                    letterSpacing: '0.08em',
-                                                }}
-                                            >
-                                                {(typeCounts[t.type] || 0).toLocaleString()} options
-                                            </span>
-                                        </div>
-                                        <div>
+                                        <div
+                                            style={{
+                                                position: 'relative',
+                                                width: '100%',
+                                                aspectRatio: '16 / 9',
+                                                overflow: 'hidden',
+                                                background: 'var(--bg-2)',
+                                                borderBottom: '1px solid var(--rule)',
+                                            }}
+                                        >
+                                            <Image
+                                                src={img.src}
+                                                alt={img.alt}
+                                                fill
+                                                sizes="(max-width: 768px) 50vw, 320px"
+                                                style={{ objectFit: 'cover' }}
+                                            />
                                             <div
-                                                className="display"
+                                                aria-hidden="true"
                                                 style={{
-                                                    fontSize: 18,
-                                                    letterSpacing: '-0.02em',
-                                                    fontWeight: 500,
+                                                    position: 'absolute',
+                                                    inset: 0,
+                                                    background:
+                                                        'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
                                                 }}
-                                            >
-                                                {t.label}
+                                            />
+                                        </div>
+                                        <div className="col gap-3" style={{ padding: '16px 22px 20px' }}>
+                                            <div className="row between ai-center">
+                                                <div className="spec-icon">{t.abbr}</div>
+                                                <span
+                                                    className="mono"
+                                                    style={{
+                                                        fontSize: 11,
+                                                        color: 'var(--ink-3)',
+                                                        textTransform: 'uppercase',
+                                                        letterSpacing: '0.08em',
+                                                    }}
+                                                >
+                                                    {(typeCounts[t.type] || 0).toLocaleString()} options
+                                                </span>
                                             </div>
-                                            <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
-                                                {t.description}
+                                            <div>
+                                                <div
+                                                    className="display"
+                                                    style={{
+                                                        fontSize: 18,
+                                                        letterSpacing: '-0.02em',
+                                                        fontWeight: 500,
+                                                    }}
+                                                >
+                                                    {t.label}
+                                                </div>
+                                                <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
+                                                    {t.description}
+                                                </div>
                                             </div>
                                         </div>
                                     </Link>
@@ -594,7 +686,7 @@ export default async function TreatmentsDirectory() {
                     {/* ── Interactive Explorer ─────────────────── */}
                     <article aria-labelledby="explorer-heading">
                         <h2 id="explorer-heading" className="sr-only">Browse all treatments</h2>
-                        <TreatmentsExplorer categories={categories} defaultCountry={country} />
+                        <TreatmentsExplorer categories={categories} />
                     </article>
 
                     {/* ── Medical Travel CTA — dark ink card ──── */}
@@ -750,7 +842,7 @@ export default async function TreatmentsDirectory() {
                         <div
                             style={{
                                 display: 'grid',
-                                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                                 gap: 16,
                             }}
                         >

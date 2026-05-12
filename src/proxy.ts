@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { CODE_TO_SLUG, COUNTRIES } from './lib/countries';
 
 /**
- * Edge Middleware — Geospatial Intelligence
+ * Edge Proxy — Geospatial Intelligence
+ * (Renamed from `middleware.ts` for Next.js 16 — the `middleware` file
+ *  convention is deprecated in favour of `proxy`.)
  *
  * Runs on EVERY request at the edge. Detects user location and language,
  * sets cookies for session persistence, and injects geo-context headers
@@ -119,7 +121,7 @@ const VALID_COUNTRY_SLUGS = new Set([
     'qatar', 'kuwait', 'oman', 'bahrain',
 ]);
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     // ── Skip static/API routes ────────────────────────

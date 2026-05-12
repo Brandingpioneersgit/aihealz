@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
 import { checkAdminAuth, unauthorizedResponse } from '@/lib/admin-auth';
+import { aiChat, aiKey } from '@/lib/ai/openrouter';
 
 /**
  * Super-Admin CMS: SEO Command Center
@@ -119,9 +120,7 @@ export async function PUT(request: NextRequest) {
     if (!auth.authenticated) return unauthorizedResponse();
 
     // Auto-fix: use LLM to generate missing meta descriptions
-    const apiKey = process.env.AI_API_KEY;
-    const apiBase = process.env.AI_API_BASE || 'https://openrouter.ai/api/v1';
-    if (!apiKey) return NextResponse.json({ error: 'AI API key not configured' }, { status: 500 });
+    if (!aiKey()) return NextResponse.json({ error: 'AI API key not configured' }, { status: 500 });
 
     const missing = await prisma.seoOverride.findMany({
         where: { metaDescription: null },
@@ -132,23 +131,18 @@ export async function PUT(request: NextRequest) {
 
     for (const override of missing) {
         try {
-            const res = await fetch(`${apiBase}/chat/completions`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
-                body: JSON.stringify({
-                    model: process.env.AI_MODEL || 'deepseek/deepseek-chat',
-                    messages: [{
+            const result = await aiChat(
+                [
+                    {
                         role: 'user',
                         content: `Write a 150-character SEO meta description for this medical page URL: ${override.urlPattern}. Be concise, include the condition and location if present. Output ONLY the meta description.`,
-                    }],
-                    temperature: 0.3,
-                    max_tokens: 100,
-                }),
-            });
+                    },
+                ],
+                { mode: 'fast', temperature: 0.3, maxTokens: 100 },
+            );
 
-            if (res.ok) {
-                const data = await res.json();
-                const desc = data.choices?.[0]?.message?.content?.trim();
+            if (result.ok && result.text) {
+                const desc = result.text.trim();
                 if (desc) {
                     await prisma.seoOverride.update({
                         where: { id: override.id },

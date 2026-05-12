@@ -95,7 +95,7 @@ function DoctorsJoinSuccessContent() {
                 style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}
             >
                 <div
-                    style={{ maxWidth: 540, margin: '0 auto', padding: '64px 28px 96px' }}
+                    style={{ maxWidth: 540, margin: '0 auto', padding: '64px clamp(16px, 4vw, 28px) 96px' }}
                     className="col gap-5"
                 >
                     <span className="section-mark">verification issue</span>
@@ -136,7 +136,7 @@ function DoctorsJoinSuccessContent() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
             <div
-                style={{ maxWidth: 720, margin: '0 auto', padding: '64px 28px 96px' }}
+                style={{ maxWidth: 720, margin: '0 auto', padding: '64px clamp(16px, 4vw, 28px) 96px' }}
                 className="col gap-6"
             >
                 {/* Hero */}

@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 // Lazy-loaded to keep them out of the initial client JS bundle.
 const AIGuide = dynamic(() => import('@/components/ui/ai-guide'), { ssr: false });
 const WhatsAppCTA = dynamic(() => import('@/components/ui/whatsapp-cta'), { ssr: false });
+const WacrsWidget = dynamic(() => import('@/components/ui/wacrs-widget'), { ssr: false });
 const CookieConsent = dynamic(() => import('@/components/ui/cookie-consent'), { ssr: false });
 const GeoAutoDetect = dynamic(() => import('@/components/geo-auto-detect'), { ssr: false });
 
@@ -15,6 +16,7 @@ export default function ClientWidgets() {
             <GeoAutoDetect />
             <AIGuide />
             <WhatsAppCTA />
+            <WacrsWidget />
             <CookieConsent />
         </>
     );

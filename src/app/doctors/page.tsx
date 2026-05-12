@@ -1,10 +1,12 @@
 import prisma from '@/lib/db';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { AvatarWithFallback } from '@/components/ui/image-with-fallback';
 import { getGeoContext } from '@/lib/geo-context';
 import { AIDiagnosisCTA, BookTestCTA, MedicalTravelCTA } from '@/components/ui/cta-sections';
+import { HERO_IMAGES } from '@/lib/stock-images';
 import {
     generateItemListSchema,
     generateOrganizationSchema,
@@ -12,6 +14,8 @@ import {
     generateWebPageSchema,
     generateFAQSchema,
 } from '@/lib/structured-data';
+
+export const revalidate = 86400;
 
 function formatDoctorName(name: string): string {
     const trimmed = name.trim();
@@ -130,7 +134,7 @@ export default async function DoctorsDirectory() {
             take: 24,
             include: {
                 specialties: { include: { condition: true } },
-                geography: true,
+                geography: { select: { name: true } },
             },
         }),
         prisma.geography.findMany({
@@ -224,7 +228,53 @@ export default async function DoctorsDirectory() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
 
-            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }} className="col gap-7">
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '40px clamp(16px, 4vw, 28px) 64px' }} className="col gap-7">
+                {/* ── Hero banner image ─────────────────── */}
+                <div
+                    style={{
+                        position: 'relative',
+                        width: '100%',
+                        aspectRatio: '32 / 9',
+                        maxHeight: 340,
+                        overflow: 'hidden',
+                        borderRadius: 'var(--r-3, 8px)',
+                        border: '1px solid var(--rule)',
+                    }}
+                >
+                    <Image
+                        src={HERO_IMAGES.team.src}
+                        alt={HERO_IMAGES.team.alt}
+                        fill
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        priority
+                        style={{ objectFit: 'cover' }}
+                    />
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            background:
+                                'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
+                        }}
+                    />
+                    <span
+                        className="mono"
+                        style={{
+                            position: 'absolute',
+                            left: 'clamp(16px, 3vw, 28px)',
+                            bottom: 18,
+                            color: 'rgba(255,255,255,0.9)',
+                            fontSize: 11,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.12em',
+                            fontWeight: 500,
+                        }}
+                    >
+                        ● the index / verified doctors
+                    </span>
+                </div>
+
                 {/* ── Hero ────────────────────────────────── */}
                 <div className="col gap-4">
                     <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
@@ -633,10 +683,7 @@ export default async function DoctorsDirectory() {
                                                     {doc.isVerified && (
                                                         <span className="pill pill-mint">verified</span>
                                                     )}
-                                                    {doc.consultationFee != null && doc.acceptsInsurance && (
-                                                        <span className="pill pill-cobalt">accepts insurance</span>
-                                                    )}
-                                                    <span className="pill">{doc.consultationModes?.[0] || 'in-person · tele'}</span>
+                                                    <span className="pill">{doc.availableOnline ? 'in-person · tele' : 'in-person'}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -669,7 +716,7 @@ export default async function DoctorsDirectory() {
                 <section
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                         gap: 16,
                     }}
                 >

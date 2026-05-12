@@ -1,6 +1,6 @@
 import prisma from '@/lib/db';
 import { resolveGeoChain, getDeepestGeo, getAncestorIds } from '@/lib/geo-resolver';
-import { buildCacheKey, getCachedPage, setCachedPage } from '@/lib/redis';
+import { redis } from '@/lib/redis';
 import type { GeoChain } from '@/lib/geo-resolver';
 
 /**
@@ -164,6 +164,23 @@ export interface PageData {
     // ─── Visuals (Phase 9) ───────────────────────────
     featureImage: string | null;
 
+    // ─── Curated images for each section ──────────────
+    // Populated from MediaAsset rows where entityType='condition'. Section
+    // hints (anatomy/symptoms/diagnosis/etc.) come from MediaAsset.promptUsed
+    // (legacy storage slot until a proper section column is added).
+    images: Array<{
+        assetType: string;
+        section: string | null;
+        url: string;
+        thumbnailUrl: string | null;
+        altText: string;
+        caption: string | null;
+        license: string | null;
+        credit: string | null;
+        width: number | null;
+        height: number | null;
+    }>;
+
     // ─── Meta ────────────────────────────────────────
     geoChain: GeoChain;
     language: string;
@@ -171,6 +188,16 @@ export interface PageData {
     isFallbackContent: boolean;
     needsTranslation?: boolean;
     conditionId?: number;
+
+    // ─── Variant Fallback (canonical consolidation for ICD-10 variants) ───
+    // When the requested slug has no ConditionPageContent but a sibling base
+    // condition does, we serve the sibling's content here. The page must then:
+    //   - Render a banner noting the variant relationship
+    //   - Emit <link rel="canonical"> to the canonical URL
+    //   - Use the canonical's metaTitle/metaDescription for SEO consolidation
+    isVariantFallback?: boolean;
+    canonicalSlug?: string;
+    canonicalCommonName?: string;
 }
 
 interface DoctorCard {
@@ -190,9 +217,17 @@ interface DoctorCard {
     isPrimarySpecialist: boolean;
 }
 
-// ─── In-Memory Page Cache (avoids DB entirely on repeat visits) ───
-const PAGE_CACHE = new Map<string, { data: PageData; expires: number }>();
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+// ─── Page Cache ────────────────────────────────────────────
+// Source of truth: Redis (shared across PM2 cluster workers).
+// Microcache: tiny in-process map with 200ms TTL to absorb burst traffic
+// for the same URL without re-serializing the JSON from Redis.
+//
+// Why not the old per-worker Map(500)? With pm2 instances='max' each worker
+// kept its own 500-entry Map and there was no shared invalidation — a write
+// in worker A wouldn't show up in worker B for up to 5 minutes.
+const CACHE_TTL_SECONDS = 5 * 60;
+const MICRO_TTL_MS = 200;
+const MICRO_CACHE = new Map<string, { data: PageData; expires: number }>();
 
 /**
  * Main stitching function — resolves all data for a condition page.
@@ -203,11 +238,24 @@ export async function stitchPageData(
     condSlug: string,
     geoSlugs: string[]
 ): Promise<PageData | null> {
-    // ─── Check in-memory cache first ─────────────────
+    // ─── Cache lookup: microcache → Redis ────────────
     const cacheKey = `${lang}:${condSlug}:${geoSlugs.join(':')}`;
-    const cached = PAGE_CACHE.get(cacheKey);
-    if (cached && cached.expires > Date.now()) {
-        return cached.data;
+    const redisKey = `pagedata:${cacheKey}`;
+
+    const micro = MICRO_CACHE.get(cacheKey);
+    if (micro && micro.expires > Date.now()) {
+        return micro.data;
+    }
+
+    try {
+        const cachedRaw = await redis.get(redisKey);
+        if (cachedRaw) {
+            const data = JSON.parse(cachedRaw) as PageData;
+            MICRO_CACHE.set(cacheKey, { data, expires: Date.now() + MICRO_TTL_MS });
+            return data;
+        }
+    } catch {
+        // Redis miss/error — fall through to DB
     }
 
     // ─── Phase 1: Condition + GeoChain (must resolve first) ──
@@ -230,29 +278,52 @@ export async function stitchPageData(
     const countryCode = (SLUG_TO_CODE[geoChain.country?.slug || ''] || geoChain.country?.slug || 'IN').toLowerCase();
 
     // ─── Phase 2: All independent queries in parallel ────────
-    const [
+    let [
         { localContent, isFallbackContent },
         pageContent,
         costRaw,
-        mediaAsset,
+        mediaAssets,
         doctors,
         reviewer,
     ] = await Promise.all([
         resolveLocalContent(condition.id, lang, deepestGeo?.id ?? null, geoChain),
         resolvePageContent(condition.id, lang),
         resolveTreatmentCost(condSlug, countryCode, geoChain.city?.slug ?? null),
-        prisma.mediaAsset.findFirst({
+        prisma.mediaAsset.findMany({
             where: {
                 conditionSlug: condSlug,
                 entityType: 'condition',
-                assetType: 'render',
-                isActive: true
+                isActive: true,
             },
-            orderBy: { createdAt: 'desc' }
+            orderBy: { createdAt: 'desc' },
+            take: 12,
         }),
         fetchDoctorsForPage(condition.id, deepestGeo?.id ?? null, geoChain),
         fetchReviewer(condition.id, deepestGeo?.id ?? null, geoChain),
     ]);
+
+    // ─── Variant fallback: when this slug has no content, serve the canonical
+    //     sibling's content with a banner + <link rel="canonical">.
+    let isVariantFallback = false;
+    let canonicalSlug: string | undefined;
+    let canonicalCommonName: string | undefined;
+    if (!pageContent) {
+        const { findCanonicalConditionForVariant } = await import('./canonical-condition');
+        const canonical = await findCanonicalConditionForVariant(condition.id, condition.commonName, lang);
+        if (canonical) {
+            const canonicalContent = await resolvePageContent(canonical.canonicalConditionId, lang);
+            if (canonicalContent) {
+                pageContent = canonicalContent;
+                isVariantFallback = true;
+                canonicalSlug = canonical.canonicalSlug;
+                canonicalCommonName = canonical.canonicalCommonName;
+                // Use the canonical's reviewer too if we don't already have one
+                if (!reviewer) {
+                    reviewer = await fetchReviewer(canonical.canonicalConditionId, deepestGeo?.id ?? null, geoChain);
+                }
+            }
+        }
+    }
 
     // ─── Build automatedContent from pageContent ─────────────
     let automatedContent: PageData['automatedContent'] = null;
@@ -326,7 +397,44 @@ export async function stitchPageData(
     }
 
     const availableLanguages = deepestGeo?.supportedLanguages || ['en'];
-    const featureImage = mediaAsset ? (mediaAsset.cdnUrl || mediaAsset.sourceUrl || null) : null;
+
+    // ─── Fall through to canonical's images if variant has none ────
+    let effectiveMediaAssets = mediaAssets || [];
+    if (isVariantFallback && canonicalSlug && effectiveMediaAssets.length === 0) {
+        effectiveMediaAssets = await prisma.mediaAsset.findMany({
+            where: { conditionSlug: canonicalSlug, entityType: 'condition', isActive: true },
+            orderBy: { createdAt: 'desc' },
+            take: 12,
+        });
+    }
+
+    // Build images[] with parsed metadata. Prefer cdnUrl, fall back to sourceUrl.
+    const images: PageData['images'] = effectiveMediaAssets
+        .map(asset => {
+            const url = asset.cdnUrl || asset.sourceUrl;
+            if (!url) return null;
+            let meta: { section?: string | null; caption?: string | null; license?: string | null; credit?: string | null } = {};
+            try {
+                if (asset.promptUsed) meta = JSON.parse(asset.promptUsed);
+            } catch { /* ignore malformed legacy rows */ }
+            return {
+                assetType: asset.assetType,
+                section: meta.section ?? null,
+                url,
+                thumbnailUrl: asset.thumbnailUrl,
+                altText: asset.altText || '',
+                caption: meta.caption ?? null,
+                license: meta.license ?? null,
+                credit: meta.credit ?? null,
+                width: asset.width,
+                height: asset.height,
+            };
+        })
+        .filter((img): img is NonNullable<typeof img> => img !== null);
+
+    // Legacy single featureImage — prefer 'feature' assetType or 'hero' section
+    const heroImg = images.find(i => i.assetType === 'feature' || i.section === 'hero') || images[0];
+    const featureImage = heroImg ? heroImg.url : null;
 
     const result: PageData = {
         condition: {
@@ -339,6 +447,7 @@ export async function stitchPageData(
         automatedContent,
         treatmentCost,
         featureImage,
+        images,
         geoChain,
         language: lang,
         availableLanguages,
@@ -346,17 +455,24 @@ export async function stitchPageData(
         needsTranslation: lang !== 'en' && (!pageContent || pageContent.languageCode === 'en'),
         conditionId: condition.id,
         doctors,
-        reviewer
+        reviewer,
+        isVariantFallback,
+        canonicalSlug,
+        canonicalCommonName,
     };
 
     // ─── Store in cache ──────────────────────────────────────
-    PAGE_CACHE.set(cacheKey, { data: result, expires: Date.now() + CACHE_TTL });
+    // Fire-and-forget Redis write — don't block response on cache fill.
+    redis.setex(redisKey, CACHE_TTL_SECONDS, JSON.stringify(result)).catch(() => {
+        // Cache write failures are non-fatal
+    });
+    MICRO_CACHE.set(cacheKey, { data: result, expires: Date.now() + MICRO_TTL_MS });
 
-    // Evict stale entries periodically (keep cache under 500 entries)
-    if (PAGE_CACHE.size > 500) {
+    // Evict expired microcache entries to keep the per-worker map small.
+    if (MICRO_CACHE.size > 200) {
         const now = Date.now();
-        for (const [key, val] of PAGE_CACHE) {
-            if (val.expires < now) PAGE_CACHE.delete(key);
+        for (const [key, val] of MICRO_CACHE) {
+            if (val.expires < now) MICRO_CACHE.delete(key);
         }
     }
 

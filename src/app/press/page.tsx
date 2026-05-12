@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
   title: 'Press & Media — aihealz',
   description: 'Press kit, founder bios, brand assets, and recent coverage of aihealz.',
@@ -30,7 +32,7 @@ const COVERAGE: { outlet: string; title: string; href: string; date: string }[] 
 export default function PressPage() {
   return (
     <V4Page>
-      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}>
+      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px clamp(16px, 4vw, 28px) 80px' }}>
         <div style={{ maxWidth: 880, margin: '0 auto' }}>
           <nav className="row gap-2 mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}>
             <Link href="/">Home</Link><span>/</span><span style={{ color: 'var(--ink)' }}>Press</span>

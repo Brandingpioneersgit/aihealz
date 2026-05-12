@@ -50,7 +50,12 @@ export function useAsync<T, Args extends unknown[] = []>(
 
     const mountedRef = useRef(true);
     const asyncFnRef = useRef(asyncFn);
-    asyncFnRef.current = asyncFn;
+    // Update the ref in a layout effect rather than during render — keeps
+    // React Strict Mode happy and avoids stale closures when asyncFn changes
+    // identity between commits.
+    useEffect(() => {
+        asyncFnRef.current = asyncFn;
+    }, [asyncFn]);
 
     const execute = useCallback(async (...args: Args): Promise<T | null> => {
         setState((prev) => ({

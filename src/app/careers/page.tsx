@@ -1,6 +1,11 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
+import EditorialFigure from '@/components/v4/EditorialFigure';
+import { ABOUT_IMAGES } from '@/lib/stock-images';
+
+export const revalidate = 604800;
 
 export const metadata: Metadata = {
   title: 'Careers — build the future of care with aihealz',
@@ -51,19 +56,60 @@ export default function CareersPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingSchema) }}
         />
       )}
-      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}>
-        <div style={{ maxWidth: 880, margin: '0 auto' }}>
+      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px clamp(16px, 4vw, 28px) 80px' }}>
+        <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <nav className="row gap-2 mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}>
             <Link href="/">Home</Link><span>/</span><span style={{ color: 'var(--ink)' }}>Careers</span>
           </nav>
 
-          <h1 className="display" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: '0 0 16px', fontWeight: 600 }}>
-            Build the future of care.
-          </h1>
-          <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 640, marginBottom: 48 }}>
-            We are a small team organizing the world's medical expertise. Engineers, clinicians,
-            designers, and operators all welcome.
-          </p>
+          <div className="row gap-7 ai-end" style={{ flexWrap: 'wrap', marginBottom: 48 }}>
+            <div className="col gap-3" style={{ flex: '1 1 420px', minWidth: 0 }}>
+              <span className="section-mark">careers / build the bureau</span>
+              <h1 className="display" style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: 0, fontWeight: 600 }}>
+                Build the future of care<span style={{ color: 'var(--orange)' }}>.</span>
+              </h1>
+              <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 640, margin: 0 }}>
+                We are a small team organizing the world&rsquo;s medical expertise. Engineers, clinicians,
+                designers, and operators all welcome.
+              </p>
+            </div>
+            <div
+              style={{
+                position: 'relative',
+                flex: '1 1 360px',
+                minWidth: 0,
+                aspectRatio: '4 / 3',
+                overflow: 'hidden',
+                borderRadius: 'var(--r-3, 8px)',
+                border: '1px solid var(--rule)',
+              }}
+            >
+              <Image
+                src={ABOUT_IMAGES.training.src}
+                alt={ABOUT_IMAGES.training.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 480px"
+                priority
+                style={{ objectFit: 'cover' }}
+              />
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background:
+                    'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
+                }}
+              />
+            </div>
+          </div>
+
+          <EditorialFigure
+            image={ABOUT_IMAGES.pairing}
+            eyebrow="The culture"
+            caption="Cross-functional pairing every day — engineers next to clinicians, design next to operations. The work is fast and the standards are clinical-grade."
+          />
+
 
           {ROLES.length === 0 ? (
             <div

@@ -2,7 +2,6 @@ import prisma from '@/lib/db';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { headers } from 'next/headers';
 
 type PageParams = Promise<{ specialty: string }>;
 
@@ -104,14 +103,17 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     };
 }
 
+export const revalidate = 3600;
+
 export default async function SpecialtyConditionsPage({ params }: { params: PageParams }) {
     const { specialty } = await params;
     const rawSpecialty = decodeURIComponent(specialty).replace(/-/g, ' ');
     const specKey = specialty.toLowerCase().replace(/-/g, '');
 
-    const hdrs = await headers();
-    const country = hdrs.get('x-aihealz-country') || 'india';
-    const lang = hdrs.get('x-aihealz-lang') || 'en';
+    // Static defaults — page is ISR-cached. Per-user geo would defeat caching;
+    // links go to /india/en/... which the country prefix resolver normalizes.
+    const country = 'india';
+    const lang = 'en';
 
     const rawConditions = await prisma.medicalCondition.findMany({
         where: {
@@ -190,7 +192,7 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(specialtySchema) }} />
 
             <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
-                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 80px' }} className="col gap-7">
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px clamp(16px, 4vw, 28px) 80px' }} className="col gap-7">
                     {/* Breadcrumb */}
                     <nav
                         className="row gap-2 mono"

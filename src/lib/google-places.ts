@@ -5,7 +5,18 @@
  * Uses the new Places API endpoint: https://places.googleapis.com/v1/places:searchText
  */
 
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || 'AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8';
+// Server-side key for the Places API (New). Required — no inline fallback so a
+// missing/rotated key fails loudly in logs instead of leaking a stale literal.
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || '';
+
+if (!GOOGLE_MAPS_API_KEY && process.env.NODE_ENV !== 'test') {
+    // Don't throw at import time — populate-real-data is admin-only; the rest of
+    // the app shouldn't 500 if the key is unset. We log once and the caller
+    // returns an empty result.
+    console.warn(
+        '[google-places] GOOGLE_MAPS_API_KEY is not set — Places API calls will return empty results.'
+    );
+}
 
 interface PlaceResult {
     placeId: string;
@@ -68,6 +79,9 @@ async function searchPlacesNew(
     includedType: string,
     pageToken?: string
 ): Promise<PlacesSearchResult> {
+    if (!GOOGLE_MAPS_API_KEY) {
+        return { places: [], nextPageToken: null };
+    }
     try {
         const fieldMask = [
             'places.id',

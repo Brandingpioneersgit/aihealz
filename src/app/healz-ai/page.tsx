@@ -3,6 +3,9 @@
 import { useState, useRef, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import MarkdownReply from '@/components/v4/MarkdownReply';
+import ThinkingDock from '@/components/v4/ThinkingDock';
+import ChatGate, { detectChatGate } from '@/components/chat/ChatGate';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -38,6 +41,7 @@ function HealzAIContent() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [streamPreview, setStreamPreview] = useState('');
     const [selectedSegment, setSelectedSegment] = useState<string | null>(segmentParam);
     const [recent, setRecent] = useState<string[]>([]);
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -70,35 +74,90 @@ function HealzAIContent() {
         setMessages((prev) => [...prev, userMessage]);
         setInput('');
         setIsLoading(true);
+        setStreamPreview('');
         setRecent((prev) => [
             messageText.length > 60 ? messageText.slice(0, 60) + '…' : messageText,
             ...prev.filter((r) => r !== messageText),
         ].slice(0, 5));
 
+        const payload = {
+            messages: [...messages, userMessage].map((m) => ({
+                role: m.role,
+                content: m.content,
+            })),
+            segment: selectedSegment,
+            stream: true,
+        };
+
         try {
             const response = await fetch('/api/bot', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    messages: [...messages, userMessage].map((m) => ({
-                        role: m.role,
-                        content: m.content,
-                    })),
-                    segment: selectedSegment,
-                }),
+                body: JSON.stringify(payload),
             });
-            const data = await response.json();
-            if (data.reply) {
-                setMessages((prev) => [...prev, { role: 'assistant', content: data.reply }]);
-            } else {
-                setMessages((prev) => [
-                    ...prev,
-                    {
-                        role: 'assistant',
-                        content: 'I apologize, but I encountered an error. Please try again.',
-                    },
-                ]);
+
+            if (await detectChatGate(response)) return;
+
+            if (!response.ok || !response.body) {
+                // Fallback to JSON if the server didn't accept streaming.
+                const data = await response.json().catch(() => ({}));
+                const reply =
+                    data.reply ||
+                    'I apologize, but I encountered an error. Please try again.';
+                setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
+                return;
             }
+
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let buf = '';
+            let assembled = '';
+            let currentEvent = '';
+
+            for (;;) {
+                const { value, done } = await reader.read();
+                if (done) break;
+                buf += decoder.decode(value, { stream: true });
+
+                // SSE frames are separated by blank lines (\n\n)
+                let split: number;
+                while ((split = buf.indexOf('\n\n')) !== -1) {
+                    const frame = buf.slice(0, split);
+                    buf = buf.slice(split + 2);
+                    currentEvent = '';
+                    let dataLine = '';
+                    for (const line of frame.split('\n')) {
+                        if (line.startsWith('event:')) currentEvent = line.slice(6).trim();
+                        else if (line.startsWith('data:')) dataLine += line.slice(5).trim();
+                    }
+                    if (!dataLine) continue;
+
+                    if (currentEvent === 'delta') {
+                        try {
+                            const { text } = JSON.parse(dataLine);
+                            if (typeof text === 'string') {
+                                assembled += text;
+                                setStreamPreview(assembled);
+                            }
+                        } catch {
+                            /* ignore malformed delta */
+                        }
+                    } else if (currentEvent === 'error') {
+                        // Server now emits a graceful delta+done on exhaustion
+                        // instead of an error frame, but if we still receive one
+                        // (legacy / unknown), fall back to a neutral message —
+                        // NEVER expose the upstream error string to the user.
+                        assembled =
+                            assembled ||
+                            "I'm taking a moment to think on that one — could you try sending again?";
+                    }
+                }
+            }
+
+            const final =
+                assembled.trim() ||
+                'I apologize, but I encountered an error. Please try again.';
+            setMessages((prev) => [...prev, { role: 'assistant', content: final }]);
         } catch {
             setMessages((prev) => [
                 ...prev,
@@ -106,19 +165,21 @@ function HealzAIContent() {
             ]);
         } finally {
             setIsLoading(false);
+            setStreamPreview('');
         }
+    }
+
+    /**
+     * Append a "while you wait" detail chip to the input field so the user
+     * can supplement their question without interrupting the in-flight one.
+     */
+    function appendDetail(detail: string) {
+        setInput(prev => (prev ? `${prev}\n\n${detail} ` : `${detail} `));
     }
 
     function handleSegmentClick(segment: typeof HEALTH_SEGMENTS[number]) {
         setSelectedSegment(segment.id);
         setInput(segment.prompt);
-    }
-
-    function formatAssistant(content: string) {
-        const html = content
-            .replace(/\*\*(.*?)\*\*/g, '<strong style="color:var(--ink); font-weight:600">$1</strong>')
-            .replace(/\*(.*?)\*/g, '<em style="color:var(--cobalt); font-style:normal; font-weight:500">$1</em>');
-        return <span dangerouslySetInnerHTML={{ __html: html }} />;
     }
 
     function handleSubmit(e: React.FormEvent) {
@@ -137,15 +198,15 @@ function HealzAIContent() {
             <div
                 className="row gap-5 ai-start"
                 style={{
-                    padding: '40px 28px 80px',
+                    padding: '32px clamp(16px, 4vw, 28px) 64px',
                     maxWidth: 1180,
                     margin: '0 auto',
                     flexWrap: 'wrap',
                 }}
             >
                 <aside
-                    className="col gap-2"
-                    style={{ flex: '0 0 240px', minWidth: 220, position: 'sticky', top: 80 }}
+                    className="col gap-2 healz-ai-aside"
+                    style={{ flex: '1 1 240px', minWidth: 0 }}
                 >
                     <span className="section-mark" style={{ marginBottom: 6 }}>
                         healz ai
@@ -429,49 +490,27 @@ function HealzAIContent() {
                                                     m.role === 'user'
                                                         ? 'var(--ink)'
                                                         : 'var(--ink-2)',
-                                                whiteSpace: 'pre-wrap',
+                                                whiteSpace: m.role === 'user' ? 'pre-wrap' : 'normal',
                                             }}
                                         >
-                                            {m.role === 'assistant'
-                                                ? formatAssistant(m.content)
-                                                : m.content}
+                                            {m.role === 'assistant' ? (
+                                                <MarkdownReply>{m.content}</MarkdownReply>
+                                            ) : (
+                                                m.content
+                                            )}
                                         </div>
                                     </div>
                                 </div>
                             ))}
                             {isLoading && (
-                                <div className="row ai-start gap-3">
-                                    <div
-                                        className="spec-icon"
-                                        style={{
-                                            background: 'var(--cobalt)',
-                                            flexShrink: 0,
-                                        }}
-                                    >
-                                        AI
-                                    </div>
-                                    <div className="col gap-1">
-                                        <div
-                                            className="mono"
-                                            style={{
-                                                fontSize: 11,
-                                                color: 'var(--cobalt)',
-                                                textTransform: 'uppercase',
-                                                letterSpacing: '.08em',
-                                            }}
-                                        >
-                                            Healz AI · thinking…
-                                        </div>
-                                        <div
-                                            style={{
-                                                fontSize: 14,
-                                                color: 'var(--ink-3)',
-                                            }}
-                                        >
-                                            ● ● ●
-                                        </div>
-                                    </div>
-                                </div>
+                                <ThinkingDock
+                                    lastUserMessage={
+                                        [...messages].reverse().find((m) => m.role === 'user')
+                                            ?.content || ''
+                                    }
+                                    onAddDetail={appendDetail}
+                                    streamPreview={streamPreview}
+                                />
                             )}
                             <div ref={messagesEndRef} />
                         </div>
@@ -565,7 +604,12 @@ export default function HealzAIPage() {
                 </div>
             }
         >
-            <HealzAIContent />
+            <ChatGate
+                title="Sign in to chat with Healz AI"
+                subtitle="Get 5 free AI messages today — register once, no spam."
+            >
+                <HealzAIContent />
+            </ChatGate>
         </Suspense>
     );
 }

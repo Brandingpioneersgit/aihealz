@@ -4,7 +4,6 @@ import Script from 'next/script';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { headers } from 'next/headers';
 import MediaGallery from '@/components/ui/media-gallery';
 
 type PageParams = Promise<{ slug: string }>;
@@ -85,13 +84,15 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     };
 }
 
+export const revalidate = 3600;
+
 export default async function DoctorProfilePage({ params }: { params: PageParams }) {
     const { slug } = await params;
 
-    // Get geo context
-    const hdrs = await headers();
-    const country = hdrs.get('x-aihealz-country') || 'india';
-    const lang = hdrs.get('x-aihealz-lang') || 'en';
+    // Static defaults — page is ISR-cached. The single doctor's own location
+    // (doctor.geography) is the authoritative geo on this page.
+    const country = 'india';
+    const lang = 'en';
 
     const doctor = await prisma.doctorProvider.findUnique({
         where: { slug },
@@ -228,7 +229,7 @@ export default async function DoctorProfilePage({ params }: { params: PageParams
             <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
-                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
 
                     {/* ── Breadcrumb (mono kicker style) ─────────────── */}
                     <nav
@@ -565,7 +566,7 @@ export default async function DoctorProfilePage({ params }: { params: PageParams
                                         ))}
                                     </div>
                                     <Link
-                                        href={`/conditions/${specialty.toLowerCase().replace(/\s+/g, '-')}`}
+                                        href={`/conditions?specialty=${encodeURIComponent(specialty)}`}
                                         className="mono"
                                         style={{
                                             fontSize: 11,

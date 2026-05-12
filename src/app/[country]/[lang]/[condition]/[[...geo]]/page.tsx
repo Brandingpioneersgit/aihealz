@@ -197,7 +197,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const hreflangTags = generateHreflangTags(condition, data.geoChain, lang, data.availableLanguages);
     const urlPath = `/${country}/${lang}/${condition}${geo ? '/' + geo.join('/') : ''}`;
 
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${urlPath}`;
+    // When this slug is a variant being served via canonical fallback, the
+    // canonical URL points at the canonical slug — Google consolidates SEO
+    // signal there. The user-facing URL stays intact.
+    const canonicalPath = data.isVariantFallback && data.canonicalSlug
+        ? `/${country}/${lang}/${data.canonicalSlug}${geo ? '/' + geo.join('/') : ''}`
+        : urlPath;
+    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${canonicalPath}`;
 
     const symptomsSnippet = (data.automatedContent?.primarySymptoms || data.condition.symptoms || []).slice(0, 5).join(', ');
     const treatmentsSnippet = (data.condition.treatments || []).slice(0, 4).join(', ');
@@ -390,7 +396,7 @@ export default async function ConditionPage({ params }: PageProps) {
                 style={{ background: 'var(--bg)', color: 'var(--ink)' }}
             >
                 <div
-                    style={{ maxWidth: 1280, margin: '0 auto', padding: '40px 28px 80px' }}
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '40px clamp(16px, 4vw, 28px) 80px' }}
                     className="col gap-7"
                 >
                     {/* ─── Breadcrumb ─────────────────────── */}
@@ -417,6 +423,37 @@ export default async function ConditionPage({ params }: PageProps) {
                         )}
                         <span style={{ color: 'var(--ink)' }}>{data.condition.commonName}</span>
                     </nav>
+
+                    {/* ─── Variant-fallback banner ────────── */}
+                    {data.isVariantFallback && data.canonicalSlug && data.canonicalCommonName && (
+                        <div
+                            className="card-quiet row gap-3 ai-baseline"
+                            style={{ padding: '14px 18px', borderLeft: '3px solid var(--cobalt)' }}
+                        >
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    color: 'var(--cobalt)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.08em',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                ICD variant
+                            </span>
+                            <span style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.55 }}>
+                                {data.condition.commonName} is a specific ICD-10 coded subtype of{' '}
+                                <Link
+                                    href={`/${country}/${lang}/${data.canonicalSlug}`}
+                                    style={{ color: 'var(--cobalt)', fontWeight: 500 }}
+                                >
+                                    {data.canonicalCommonName}
+                                </Link>
+                                . The clinical content below covers {data.canonicalCommonName} in general.
+                            </span>
+                        </div>
+                    )}
 
                     {/* ─── Two-column body ────────────────── */}
                     <div
@@ -473,6 +510,39 @@ export default async function ConditionPage({ params }: PageProps) {
                                         {heroOverviewText.split('. ').slice(0, 2).join('. ')}.
                                     </p>
                                 )}
+                                {(() => {
+                                    const heroImg = data.images?.find(i => i.assetType === 'feature' || i.section === 'hero') || data.images?.[0];
+                                    if (!heroImg) return null;
+                                    return (
+                                        <figure className="col gap-2" style={{ margin: 0 }}>
+                                            <img
+                                                src={heroImg.url}
+                                                alt={heroImg.altText}
+                                                width={heroImg.width || undefined}
+                                                height={heroImg.height || undefined}
+                                                loading="eager"
+                                                style={{
+                                                    width: '100%',
+                                                    maxWidth: 720,
+                                                    height: 'auto',
+                                                    borderRadius: 'var(--r-3)',
+                                                    border: '1px solid var(--rule)',
+                                                }}
+                                            />
+                                            {(heroImg.caption || heroImg.credit) && (
+                                                <figcaption
+                                                    className="mono"
+                                                    style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.04em', maxWidth: 720 }}
+                                                >
+                                                    {heroImg.caption}
+                                                    {heroImg.caption && heroImg.credit ? ' · ' : ''}
+                                                    {heroImg.credit && <span>Credit: {heroImg.credit}</span>}
+                                                    {heroImg.license && <span> · {heroImg.license}</span>}
+                                                </figcaption>
+                                            )}
+                                        </figure>
+                                    );
+                                })()}
                                 {data.automatedContent?.simpleName && data.automatedContent.simpleName !== data.condition.commonName && (
                                     <div
                                         className="row gap-3 mono"
@@ -725,6 +795,30 @@ export default async function ConditionPage({ params }: PageProps) {
                                             How you might notice it
                                         </h2>
                                     </div>
+                                    {(() => {
+                                        const img = data.images?.find(i => i.section === 'symptoms' || i.assetType === 'clinical-photo');
+                                        if (!img || img.section === 'hero' || img.assetType === 'feature') return null;
+                                        return (
+                                            <figure className="col gap-2" style={{ margin: 0 }}>
+                                                <img
+                                                    src={img.url}
+                                                    alt={img.altText}
+                                                    width={img.width || undefined}
+                                                    height={img.height || undefined}
+                                                    loading="lazy"
+                                                    style={{ width: '100%', maxWidth: 640, height: 'auto', borderRadius: 'var(--r-3)', border: '1px solid var(--rule)' }}
+                                                />
+                                                {(img.caption || img.credit) && (
+                                                    <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.04em', maxWidth: 640 }}>
+                                                        {img.caption}
+                                                        {img.caption && img.credit ? ' · ' : ''}
+                                                        {img.credit && <span>Credit: {img.credit}</span>}
+                                                        {img.license && <span> · {img.license}</span>}
+                                                    </figcaption>
+                                                )}
+                                            </figure>
+                                        );
+                                    })()}
                                     <p data-speakable="symptoms" className="sr-only">
                                         The key symptoms of {cleanConditionName} are: {(data.automatedContent?.primarySymptoms || data.condition.symptoms || []).slice(0, 7).join(', ')}.
                                     </p>
@@ -836,6 +930,30 @@ export default async function ConditionPage({ params }: PageProps) {
                                             How it&rsquo;s diagnosed
                                         </h2>
                                     </div>
+                                    {(() => {
+                                        const img = data.images?.find(i => i.section === 'diagnosis' || i.assetType === 'diagnostic');
+                                        if (!img || img.section === 'hero' || img.assetType === 'feature') return null;
+                                        return (
+                                            <figure className="col gap-2" style={{ margin: 0 }}>
+                                                <img
+                                                    src={img.url}
+                                                    alt={img.altText}
+                                                    width={img.width || undefined}
+                                                    height={img.height || undefined}
+                                                    loading="lazy"
+                                                    style={{ width: '100%', maxWidth: 640, height: 'auto', borderRadius: 'var(--r-3)', border: '1px solid var(--rule)' }}
+                                                />
+                                                {(img.caption || img.credit) && (
+                                                    <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.04em', maxWidth: 640 }}>
+                                                        {img.caption}
+                                                        {img.caption && img.credit ? ' · ' : ''}
+                                                        {img.credit && <span>Credit: {img.credit}</span>}
+                                                        {img.license && <span> · {img.license}</span>}
+                                                    </figcaption>
+                                                )}
+                                            </figure>
+                                        );
+                                    })()}
                                     <div
                                         style={{
                                             display: 'grid',
@@ -864,7 +982,7 @@ export default async function ConditionPage({ params }: PageProps) {
                                                             >
                                                                 {t['cond.keyTests'] || 'Key tests'}
                                                             </span>
-                                                            {data.automatedContent.diagnosticTests.slice(0, 3).map((test, i) => (
+                                                            {data.automatedContent.diagnosticTests.map((test, i) => (
                                                                 <div key={i} className="row gap-2 ai-baseline">
                                                                     <span className="num mono" style={{ fontSize: 11, color: 'var(--cobalt)', minWidth: 22 }}>
                                                                         {String(i + 1).padStart(2, '0')}
@@ -883,8 +1001,8 @@ export default async function ConditionPage({ params }: PageProps) {
                                         {data.automatedContent?.prognosis && (
                                             <div className="card-quiet col gap-3" style={{ padding: 24 }}>
                                                 <div className="kicker"><span className="dot" style={{ background: 'var(--mint)' }} />{t['cond.prognosisOutlook'] || 'Outlook'}</div>
-                                                <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.65, margin: 0 }}>
-                                                    {data.automatedContent.prognosis.split('. ').slice(0, 3).join('. ')}.
+                                                <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.65, margin: 0, whiteSpace: 'pre-wrap' }}>
+                                                    {data.automatedContent.prognosis}
                                                 </p>
                                             </div>
                                         )}
@@ -1017,7 +1135,7 @@ export default async function ConditionPage({ params }: PageProps) {
                                             <div className="card col gap-3" style={{ padding: 24 }}>
                                                 <div className="kicker"><span className="dot" />known causes</div>
                                                 <dl className="col gap-3" style={{ margin: 0 }}>
-                                                    {data.automatedContent.causes.slice(0, 5).map((c, i) => (
+                                                    {data.automatedContent.causes.map((c, i) => (
                                                         <div key={i} className="col gap-1">
                                                             <dt style={{ fontSize: 14, fontWeight: 500 }}>{c.cause}</dt>
                                                             <dd className="muted" style={{ fontSize: 12, margin: 0, lineHeight: 1.6 }}>{c.description}</dd>
@@ -1030,7 +1148,7 @@ export default async function ConditionPage({ params }: PageProps) {
                                             <div className="card col gap-3" style={{ padding: 24 }}>
                                                 <div className="kicker"><span className="dot" style={{ background: 'var(--lemon-2)' }} />risk factors</div>
                                                 <dl className="col gap-3" style={{ margin: 0 }}>
-                                                    {data.automatedContent.riskFactors.slice(0, 5).map((rf, i) => (
+                                                    {data.automatedContent.riskFactors.map((rf, i) => (
                                                         <div key={i} className="col gap-1">
                                                             <dt className="row gap-2 ai-baseline" style={{ fontSize: 14, fontWeight: 500 }}>
                                                                 {rf.factor}
@@ -1099,7 +1217,7 @@ export default async function ConditionPage({ params }: PageProps) {
                                                 <div className="card col gap-2" style={{ padding: 18 }}>
                                                     <div className="kicker"><span className="dot" style={{ background: 'var(--mint)' }} />recommended foods</div>
                                                     <ul className="clean col gap-1">
-                                                        {data.automatedContent.dietRecommendations.recommended.slice(0, 4).map((food, i) => (
+                                                        {data.automatedContent.dietRecommendations.recommended.map((food, i) => (
                                                             <li key={i} className="row gap-2 ai-baseline">
                                                                 <span style={{ color: 'var(--mint-3)', fontSize: 12 }}>•</span>
                                                                 <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{food}</span>
@@ -1112,7 +1230,7 @@ export default async function ConditionPage({ params }: PageProps) {
                                                 <div className="card col gap-2" style={{ padding: 18 }}>
                                                     <div className="kicker"><span className="dot" style={{ background: 'var(--orange)' }} />foods to avoid</div>
                                                     <ul className="clean col gap-1">
-                                                        {data.automatedContent.dietRecommendations.avoid.slice(0, 4).map((food, i) => (
+                                                        {data.automatedContent.dietRecommendations.avoid.map((food, i) => (
                                                             <li key={i} className="row gap-2 ai-baseline">
                                                                 <span style={{ color: 'var(--orange-2)', fontSize: 12 }}>•</span>
                                                                 <span style={{ fontSize: 13, color: 'var(--ink-3)', textDecoration: 'line-through' }}>{food}</span>
@@ -1151,7 +1269,7 @@ export default async function ConditionPage({ params }: PageProps) {
                                                 why see {getArticle(data.condition.specialistType)} {data.condition.specialistType?.toLowerCase()}
                                             </span>
                                             <p style={{ fontSize: 14, color: 'rgba(255,255,255,.75)', lineHeight: 1.6, margin: 0 }}>
-                                                {data.automatedContent.whySeeSpecialist.split('. ').slice(0, 2).join('. ')}.
+                                                {data.automatedContent.whySeeSpecialist}
                                             </p>
                                             <a href="#local-doctors" className="btn btn-cobalt btn-sm" style={{ alignSelf: 'flex-start' }}>
                                                 {t['cond.findSpecialists'] || 'Find specialists'} →
@@ -1271,6 +1389,199 @@ export default async function ConditionPage({ params }: PageProps) {
                                 </section>
                             )}
 
+                            {/* Confused-with (X vs Y intent) */}
+                            {data.automatedContent?.confusedWithConditions && data.automatedContent.confusedWithConditions.length > 0 && (
+                                <section id="confused-with" className="col gap-4" style={{ scrollMarginTop: 96 }}>
+                                    <h2 className="display" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}>
+                                        Easily confused with
+                                    </h2>
+                                    <div
+                                        style={{
+                                            display: 'grid',
+                                            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                                            gap: 12,
+                                        }}
+                                    >
+                                        {data.automatedContent.confusedWithConditions.map((cw, i) => (
+                                            <Link
+                                                key={i}
+                                                href={`/${country}/${lang}/${cw.slug}`}
+                                                className="card col gap-2"
+                                                style={{ padding: 20 }}
+                                            >
+                                                <div className="kicker">
+                                                    <span className="dot" style={{ background: 'var(--lemon)' }} />
+                                                    vs. {data.condition.commonName}
+                                                </div>
+                                                <span className="display" style={{ fontSize: 18, fontWeight: 600, letterSpacing: '-0.015em' }}>{cw.name}</span>
+                                                {cw.keyDifference && (
+                                                    <span className="muted" style={{ fontSize: 13, lineHeight: 1.5 }}>{cw.keyDifference}</span>
+                                                )}
+                                                <span
+                                                    className="mono"
+                                                    style={{ fontSize: 11, color: 'var(--cobalt)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, marginTop: 4 }}
+                                                >
+                                                    Compare →
+                                                </span>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* Co-occurring conditions */}
+                            {data.automatedContent?.coOccurringConditions && data.automatedContent.coOccurringConditions.length > 0 && (
+                                <section className="col gap-3">
+                                    <h2 className="display" style={{ fontSize: 'clamp(18px, 2vw, 22px)', margin: 0, letterSpacing: '-0.02em', fontWeight: 600 }}>
+                                        Often appears alongside
+                                    </h2>
+                                    <div className="row gap-2" style={{ flexWrap: 'wrap' }}>
+                                        {data.automatedContent.coOccurringConditions.map((co, i) => (
+                                            <Link
+                                                key={i}
+                                                href={`/${country}/${lang}/${co.slug}`}
+                                                className="pill pill-cobalt"
+                                                style={{ fontSize: 13 }}
+                                            >
+                                                {co.name} →
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* Types / sub-classification */}
+                            {data.automatedContent?.typesClassification && data.automatedContent.typesClassification.length > 0 && (
+                                <section className="col gap-4">
+                                    <h2 className="display" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}>
+                                        Types and stages
+                                    </h2>
+                                    <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                                        {data.automatedContent.typesClassification.map((tc, i, arr) => (
+                                            <div
+                                                key={i}
+                                                className="col gap-1"
+                                                style={{
+                                                    padding: '16px 22px',
+                                                    borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                                }}
+                                            >
+                                                <span style={{ fontSize: 14, fontWeight: 600 }}>{tc.type}</span>
+                                                <span className="muted" style={{ fontSize: 13, lineHeight: 1.55 }}>{tc.description}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* Living with: lifestyle, recovery, daily management */}
+                            {(data.automatedContent?.lifestyleModifications?.length ||
+                              data.automatedContent?.recoveryTimeline ||
+                              data.automatedContent?.dailyManagement?.length ||
+                              data.automatedContent?.exerciseGuidelines) && (
+                                <section id="living-with" className="col gap-4" style={{ scrollMarginTop: 96 }}>
+                                    <h2 className="display" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', margin: 0, letterSpacing: '-0.025em', fontWeight: 600 }}>
+                                        Living with {data.condition.commonName}
+                                    </h2>
+                                    {data.automatedContent?.recoveryTimeline && (
+                                        <div className="card-quiet col gap-2" style={{ padding: 20 }}>
+                                            <div className="kicker"><span className="dot" style={{ background: 'var(--mint)' }} />Timeline</div>
+                                            <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>
+                                                {data.automatedContent.recoveryTimeline}
+                                            </p>
+                                        </div>
+                                    )}
+                                    {data.automatedContent?.lifestyleModifications && data.automatedContent.lifestyleModifications.length > 0 && (
+                                        <div className="card col gap-2" style={{ padding: 22 }}>
+                                            <div className="kicker"><span className="dot" />Lifestyle</div>
+                                            <ul className="clean col gap-2" style={{ margin: 0, paddingLeft: 0 }}>
+                                                {data.automatedContent.lifestyleModifications.map((tip, i) => (
+                                                    <li key={i} className="row gap-2 ai-baseline">
+                                                        <span className="num mono" style={{ fontSize: 11, color: 'var(--cobalt)', minWidth: 22 }}>
+                                                            {String(i + 1).padStart(2, '0')}
+                                                        </span>
+                                                        <span style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55 }}>{tip}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                    {data.automatedContent?.dailyManagement && data.automatedContent.dailyManagement.length > 0 && (
+                                        <div className="card col gap-2" style={{ padding: 22 }}>
+                                            <div className="kicker"><span className="dot" style={{ background: 'var(--cobalt)' }} />Daily management</div>
+                                            <ul className="clean col gap-2" style={{ margin: 0, paddingLeft: 0 }}>
+                                                {data.automatedContent.dailyManagement.map((d, i) => (
+                                                    <li key={i} className="row gap-2 ai-baseline">
+                                                        <span className="num mono" style={{ fontSize: 11, color: 'var(--cobalt)', minWidth: 22 }}>
+                                                            {String(i + 1).padStart(2, '0')}
+                                                        </span>
+                                                        <span style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55 }}>{d}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                    {data.automatedContent?.exerciseGuidelines && (
+                                        <div className="card-quiet col gap-2" style={{ padding: 20 }}>
+                                            <div className="kicker"><span className="dot" style={{ background: 'var(--mint)' }} />Exercise</div>
+                                            <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>
+                                                {data.automatedContent.exerciseGuidelines}
+                                            </p>
+                                        </div>
+                                    )}
+                                </section>
+                            )}
+
+                            {/* Alternative treatments */}
+                            {data.automatedContent?.alternativeTreatments && data.automatedContent.alternativeTreatments.length > 0 && (
+                                <section className="col gap-3">
+                                    <h2 className="display" style={{ fontSize: 'clamp(18px, 2vw, 22px)', margin: 0, letterSpacing: '-0.02em', fontWeight: 600 }}>
+                                        Complementary approaches
+                                    </h2>
+                                    <div className="card col gap-3" style={{ padding: 22 }}>
+                                        {data.automatedContent.alternativeTreatments.map((alt, i) => (
+                                            <div key={i} className="col gap-1">
+                                                <span style={{ fontSize: 14, fontWeight: 600 }}>{alt.name}</span>
+                                                <span className="muted" style={{ fontSize: 13, lineHeight: 1.55 }}>{alt.description}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* Doctor selection guide */}
+                            {data.automatedContent?.doctorSelectionGuide && (
+                                <section className="card-quiet col gap-2" style={{ padding: 20 }}>
+                                    <div className="kicker"><span className="dot" />Choosing a doctor</div>
+                                    <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>
+                                        {data.automatedContent.doctorSelectionGuide}
+                                    </p>
+                                </section>
+                            )}
+
+                            {/* Support resources */}
+                            {data.automatedContent?.supportResources && data.automatedContent.supportResources.length > 0 && (
+                                <section className="col gap-3">
+                                    <h2 className="display" style={{ fontSize: 'clamp(18px, 2vw, 22px)', margin: 0, letterSpacing: '-0.02em', fontWeight: 600 }}>
+                                        Patient support resources
+                                    </h2>
+                                    <div className="card col gap-3" style={{ padding: 22 }}>
+                                        {data.automatedContent.supportResources.map((res, i) => (
+                                            <div key={i} className="col gap-1">
+                                                {res.url ? (
+                                                    <a href={res.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 14, fontWeight: 600, color: 'var(--cobalt)' }}>
+                                                        {res.name} →
+                                                    </a>
+                                                ) : (
+                                                    <span style={{ fontSize: 14, fontWeight: 600 }}>{res.name}</span>
+                                                )}
+                                                {res.description && <span className="muted" style={{ fontSize: 13, lineHeight: 1.5 }}>{res.description}</span>}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
                             {/* FAQs */}
                             {allFaqs.length > 0 && (
                                 <section id="faqs" className="col gap-4" style={{ scrollMarginTop: 96 }}>
@@ -1281,7 +1592,7 @@ export default async function ConditionPage({ params }: PageProps) {
                                         </h2>
                                     </div>
                                     <div data-speakable="answer">
-                                        <FaqAccordion faqs={allFaqs.slice(0, 5)} />
+                                        <FaqAccordion faqs={allFaqs} />
                                     </div>
                                 </section>
                             )}

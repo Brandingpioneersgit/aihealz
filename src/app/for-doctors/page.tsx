@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { HERO_IMAGES } from '@/lib/stock-images';
 
 const SPECIALTIES = [
     'Cardiology', 'Neurology', 'Psychiatry', 'Oncology', 'Orthopedics',
@@ -132,7 +134,52 @@ export default function ForDoctorsPage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             {/* ── Hero ─────────────────────────────────────── */}
-            <section style={{ padding: '64px 28px 48px', maxWidth: 1280, margin: '0 auto' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px) 48px', maxWidth: 1280, margin: '0 auto' }}>
+                <div
+                    style={{
+                        position: 'relative',
+                        width: '100%',
+                        aspectRatio: '32 / 9',
+                        maxHeight: 320,
+                        overflow: 'hidden',
+                        borderRadius: 'var(--r-3, 8px)',
+                        marginBottom: 36,
+                        border: '1px solid var(--rule)',
+                    }}
+                >
+                    <Image
+                        src={HERO_IMAGES.tools.src}
+                        alt={HERO_IMAGES.tools.alt}
+                        fill
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        priority
+                        style={{ objectFit: 'cover' }}
+                    />
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            background:
+                                'linear-gradient(180deg, rgba(10,26,47,0.05) 0%, rgba(10,26,47,0.35) 100%), linear-gradient(90deg, rgba(28,91,255,0.10) 0%, rgba(28,91,255,0) 50%)',
+                        }}
+                    />
+                    <div
+                        className="mono"
+                        style={{
+                            position: 'absolute',
+                            left: 24,
+                            bottom: 20,
+                            color: 'rgba(255,255,255,0.95)',
+                            fontSize: 11,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.12em',
+                            fontWeight: 500,
+                        }}
+                    >
+                        ● for the clinician — built around the practice
+                    </div>
+                </div>
                 <div className="row gap-8 ai-start" style={{ flexWrap: 'wrap' }}>
                     <div className="col gap-5" style={{ flex: '1.4 1 540px', minWidth: 0 }}>
                         <span className="section-mark">for doctors / built for practice</span>
@@ -238,7 +285,7 @@ export default function ForDoctorsPage() {
             {/* ── II / Clinical tools ──────────────────────── */}
             <section
                 style={{
-                    padding: '64px 28px',
+                    padding: '64px clamp(16px, 4vw, 28px)',
                     background: 'var(--bg-2)',
                     borderTop: '1px solid var(--rule)',
                     borderBottom: '1px solid var(--rule)',
@@ -315,7 +362,7 @@ export default function ForDoctorsPage() {
             </section>
 
             {/* ── III / Onboarding ─────────────────────────── */}
-            <section style={{ padding: '64px 28px', maxWidth: 1280, margin: '0 auto' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px)', maxWidth: 1280, margin: '0 auto' }}>
                 <div className="col gap-6">
                     <div className="col gap-2" style={{ maxWidth: 720 }}>
                         <span className="section-mark">III / onboarding</span>
@@ -387,7 +434,7 @@ export default function ForDoctorsPage() {
             <section
                 id="join-form"
                 style={{
-                    padding: '64px 28px',
+                    padding: '64px clamp(16px, 4vw, 28px)',
                     background: 'var(--bg-2)',
                     borderTop: '1px solid var(--rule)',
                 }}

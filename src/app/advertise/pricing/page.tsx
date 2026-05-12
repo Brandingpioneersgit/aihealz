@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'Advertising pricing | aihealz',
     description: 'Flexible advertising pricing for healthcare businesses. CPM, CPC, and flat-rate options available.',
@@ -129,7 +131,7 @@ function multiplierColor(m: string): string {
 export default function AdvertisePricingPage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
-            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 96px' }} className="col gap-8">
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px clamp(16px, 4vw, 28px) 96px' }} className="col gap-8">
                 {/* Breadcrumb */}
                 <nav
                     className="row gap-2 mono"
@@ -515,7 +517,7 @@ export default function AdvertisePricingPage() {
                     <div
                         style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                             gap: 16,
                         }}
                     >

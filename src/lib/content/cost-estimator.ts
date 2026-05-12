@@ -1,15 +1,13 @@
 import prisma from '@/lib/db';
 import { translate } from '@/lib/cms/translation-bridge';
+import { aiChat } from '@/lib/ai/openrouter';
 
 /**
  * Cost Estimator
- * 
+ *
  * Uses AI (or stored data) to estimate treatment costs for a condition in a city.
  * Returns: { min, max, avg, currency, treatmentName }
  */
-
-const OPENROUTER_KEY = process.env.AI_API_KEY || '';
-const OPENROUTER_BASE = process.env.AI_API_BASE || 'https://openrouter.ai/api/v1';
 
 export async function getTreatmentCost(
     conditionSlug: string,
@@ -42,27 +40,23 @@ Return valid JSON ONLY:
 Use local market rates. Be conservative.`;
 
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 60000); // 60s timeout for LLM
+        const timeoutId = setTimeout(() => controller.abort(), 60000);
 
-        const res = await fetch(`${OPENROUTER_BASE}/chat/completions`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${OPENROUTER_KEY}`,
-            },
-            signal: controller.signal,
-            body: JSON.stringify({
-                model: 'deepseek/deepseek-chat',
-                messages: [{ role: 'user', content: prompt }],
+        const result = await aiChat(
+            [{ role: 'user', content: prompt }],
+            {
+                mode: 'reasoning',
                 temperature: 0.1,
-            }),
-        });
+                maxTokens: 400,
+                responseFormat: { type: 'json_object' },
+                signal: controller.signal,
+            },
+        );
         clearTimeout(timeoutId);
 
-        if (!res.ok) throw new Error('AI estimation failed');
+        if (!result.ok || !result.text) throw new Error(result.error || 'AI estimation failed');
 
-        const data = await res.json();
-        const content = data.choices[0].message.content.replace(/```json/g, '').replace(/```/g, '').trim();
+        const content = result.text.replace(/```json/g, '').replace(/```/g, '').trim();
         const parsed = JSON.parse(content);
 
         // Store estimate

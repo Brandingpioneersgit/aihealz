@@ -114,7 +114,7 @@ export async function runAnalysisPipeline(input: PipelineInput): Promise<Pipelin
             confidenceScore: extraction.confidenceScore,
             needsReview,
             matchedDoctorIds: matchedDoctors.doctors.map((d) => d.id),
-            modelUsed: process.env.AI_MODEL || 'gpt-4o-mini',
+            modelUsed: process.env.AI_MODEL_REASONING || process.env.AI_MODEL || 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free',
             tokenCount,
             processingTimeMs: Date.now() - startTime,
         },
@@ -171,7 +171,7 @@ export async function runAnalysisPipeline(input: PipelineInput): Promise<Pipelin
             confidenceScore: extraction.confidenceScore,
             needsReview,
             processingTimeMs: Date.now() - startTime,
-            modelUsed: process.env.AI_MODEL || 'gpt-4o-mini',
+            modelUsed: process.env.AI_MODEL_REASONING || process.env.AI_MODEL || 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free',
             tokenCount,
         },
     };

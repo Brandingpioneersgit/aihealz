@@ -2716,3 +2716,34 @@ model EmailQueue {
   @@index([templateName, status])
   @@map("email_queue")
 }
+
+// ══════════════════════════════════════════════════════════════════════════════
+// CHAT LEADS - Lead capture + per-IP usage cap for AI chatbots
+// ══════════════════════════════════════════════════════════════════════════════
+
+enum ChatLeadRole {
+  doctor
+  patient
+  other
+}
+
+model ChatLead {
+  id            String       @id @default(uuid()) @db.Uuid
+  name          String       @db.VarChar(120)
+  email         String       @db.VarChar(160)
+  phone         String       @db.VarChar(40)
+  country       String?      @db.VarChar(80)
+  city          String?      @db.VarChar(120)
+  role          ChatLeadRole @default(patient)
+  ipHash        String       @map("ip_hash") @db.VarChar(64)
+  userAgent     String?      @map("user_agent") @db.VarChar(500)
+  messageCount  Int          @default(0) @map("message_count")
+  lastMessageAt DateTime?    @map("last_message_at") @db.Timestamptz(6)
+  createdAt     DateTime     @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime     @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@index([email])
+  @@index([ipHash])
+  @@index([createdAt(sort: Desc)])
+  @@map("chat_leads")
+}

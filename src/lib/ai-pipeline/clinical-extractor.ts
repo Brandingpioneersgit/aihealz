@@ -104,7 +104,14 @@ export async function extractClinicalEntities(
 ): Promise<{ extraction: ClinicalExtraction; tokenCount: number; latencyMs: number }> {
     const startTime = Date.now();
     const systemPrompt = await getActivePrompt('clinical_extraction');
-    const model = modelOverride || process.env.AI_MODEL || 'gpt-4o-mini';
+    // Default to a free open-source reasoning model on OpenRouter. The
+    // pipeline runs structured JSON extraction, which DeepSeek R1 distill
+    // handles well at zero cost.
+    const model =
+        modelOverride ||
+        process.env.AI_MODEL_REASONING ||
+        process.env.AI_MODEL ||
+        'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free';
 
     // Call the LLM API
     const response = await callLLM(systemPrompt, sanitizedText, model);
@@ -130,18 +137,25 @@ async function callLLM(
     userMessage: string,
     model: string
 ): Promise<{ content: string; tokenCount: number }> {
-    const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
-    const apiBase = process.env.AI_API_BASE || 'https://api.openai.com/v1';
+    const apiKey =
+        process.env.AI_API_KEY ||
+        process.env.OPENROUTER_API_KEY ||
+        process.env.OPENAI_API_KEY;
+    const apiBase = process.env.AI_API_BASE || 'https://openrouter.ai/api/v1';
 
     if (!apiKey) {
-        throw new Error('AI_API_KEY or OPENAI_API_KEY environment variable is required');
+        throw new Error(
+            'AI_API_KEY (or OPENROUTER_API_KEY) environment variable is required',
+        );
     }
 
     const response = await fetch(`${apiBase}/chat/completions`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`,
+            Authorization: `Bearer ${apiKey}`,
+            'HTTP-Referer': process.env.AI_PUBLIC_SITE_URL || 'https://aihealz.com',
+            'X-Title': process.env.AI_PUBLIC_APP_NAME || 'aihealz',
         },
         body: JSON.stringify({
             model,

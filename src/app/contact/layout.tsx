@@ -9,10 +9,18 @@ export const metadata: Metadata = {
     title: 'Contact Us - Get in Touch with aihealz',
     description: 'Contact aihealz for patient support, doctor verification, partnership opportunities, or general inquiries. Our global team is available 24/7.',
     keywords: ['contact aihealz', 'healthcare support', 'medical directory contact', 'doctor verification'],
+    alternates: { canonical: '/contact' },
     openGraph: {
         title: 'Contact Us | aihealz',
         description: 'Get in touch with our global healthcare team. Available 24/7 for patients, doctors, and partners.',
+        url: 'https://aihealz.com/contact',
+        siteName: 'aihealz',
         type: 'website',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Contact Us | aihealz',
+        description: 'Get in touch with our global healthcare team.',
     },
 };
 

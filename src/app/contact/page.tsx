@@ -1,11 +1,15 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 import ContactForm from './ContactForm';
+import { HOSPITAL_IMAGES } from '@/lib/stock-images';
+
+export const revalidate = 604800;
 
 export default function ContactPage() {
     return (
         <V4Page>
-            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '48px 28px 80px' }}>
+            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}>
                 {/* Breadcrumb */}
                 <nav
                     aria-label="Breadcrumb"
@@ -18,29 +22,63 @@ export default function ContactPage() {
                 </nav>
 
                 {/* Hero */}
-                <section className="col gap-4" style={{ marginBottom: 56, maxWidth: 880 }}>
-                    <span className="section-mark">Get in touch</span>
-                    <h1
-                        className="display"
+                <section
+                    className="row gap-7 ai-end"
+                    style={{ marginBottom: 56, flexWrap: 'wrap' }}
+                >
+                    <div className="col gap-4" style={{ flex: '1 1 420px', minWidth: 0 }}>
+                        <span className="section-mark">Get in touch</span>
+                        <h1
+                            className="display"
+                            style={{
+                                fontSize: 'clamp(40px, 6vw, 88px)',
+                                lineHeight: 0.95,
+                                letterSpacing: '-0.045em',
+                                fontWeight: 600,
+                                margin: 0,
+                            }}
+                        >
+                            Talk to{' '}
+                            <span style={{ color: 'var(--cobalt)' }}>a human</span>
+                            <span style={{ color: 'var(--orange)' }}>.</span>
+                        </h1>
+                        <p
+                            className="lede"
+                            style={{ fontSize: 20, color: 'var(--ink-2)', maxWidth: 640, marginTop: 4 }}
+                        >
+                            Patient support, doctor verification, partnership inquiries — we read every message
+                            and reply within one working day.
+                        </p>
+                    </div>
+                    <div
                         style={{
-                            fontSize: 'clamp(40px, 6vw, 88px)',
-                            lineHeight: 0.95,
-                            letterSpacing: '-0.045em',
-                            fontWeight: 600,
-                            margin: 0,
+                            position: 'relative',
+                            flex: '1 1 360px',
+                            minWidth: 0,
+                            aspectRatio: '4 / 3',
+                            overflow: 'hidden',
+                            borderRadius: 'var(--r-3, 8px)',
+                            border: '1px solid var(--rule)',
                         }}
                     >
-                        Talk to{' '}
-                        <span style={{ color: 'var(--cobalt)' }}>a human</span>
-                        <span style={{ color: 'var(--orange)' }}>.</span>
-                    </h1>
-                    <p
-                        className="lede"
-                        style={{ fontSize: 20, color: 'var(--ink-2)', maxWidth: 640, marginTop: 4 }}
-                    >
-                        Patient support, doctor verification, partnership inquiries — we read every message
-                        and reply within one working day.
-                    </p>
+                        <Image
+                            src={HOSPITAL_IMAGES.exterior.src}
+                            alt={HOSPITAL_IMAGES.exterior.alt}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 480px"
+                            priority
+                            style={{ objectFit: 'cover' }}
+                        />
+                        <div
+                            aria-hidden="true"
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background:
+                                    'linear-gradient(180deg, rgba(10,26,47,0) 55%, rgba(10,26,47,0.20) 100%)',
+                            }}
+                        />
+                    </div>
                 </section>
 
                 {/* Trust strip */}

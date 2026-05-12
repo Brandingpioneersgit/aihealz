@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { SLUG_TO_CODE, getCountryBySlug, buildAlternateLanguages } from '@/lib/countries';
 
+export const revalidate = 3600;
+
 // ── Locale map for currency formatting ──────────────────────
 const LOCALE_MAP: Record<string, string> = {
     in: 'en-IN', us: 'en-US', gb: 'en-GB', ae: 'en-AE', sg: 'en-SG',
@@ -111,7 +113,7 @@ export default async function CostPage({ params }: { params: Promise<{ country: 
             />
 
             <div
-                style={{ maxWidth: 1024, margin: '0 auto', padding: '48px 28px 80px' }}
+                style={{ maxWidth: 1024, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                 className="col gap-7"
             >
                 {/* ── Breadcrumb ─────────────────────────── */}
@@ -175,7 +177,7 @@ export default async function CostPage({ params }: { params: Promise<{ country: 
                                 key={s.label}
                                 className="col gap-2"
                                 style={{
-                                    padding: '24px 28px',
+                                    padding: '24px clamp(16px, 4vw, 28px)',
                                     borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
                                     background: s.tone === 'cobalt' ? 'var(--cobalt-50)' : 'var(--paper)',
                                 }}

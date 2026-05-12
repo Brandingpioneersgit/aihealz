@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
+import { aiChat, aiKey } from '@/lib/ai/openrouter';
+import { requireChatLead, recordChatMessage } from '@/lib/chat-gate';
 
 // Active conditions list rarely changes between requests; loading 70k+ rows
 // per symptom analysis was the dominant DB cost on this endpoint. Cache the
@@ -37,6 +39,14 @@ const SUPPORTED_LANGS = new Set([
 
 export async function POST(req: NextRequest) {
     try {
+        const gate = await requireChatLead(req);
+        if (!gate.ok) {
+            return NextResponse.json(
+                { error: gate.reason, resetAt: gate.resetAt },
+                { status: gate.status }
+            );
+        }
+
         const body = await req.json();
         const { symptoms: rawSymptoms, age, gender } = body as {
             symptoms: unknown;
@@ -92,58 +102,42 @@ ${patientContext ? `Patient info: ${patientContext}` : ''}
 
 Analyze these symptoms and provide the most likely medical conditions as a JSON array.`;
 
-        // Check for API key
-        if (!process.env.OPENROUTER_API_KEY) {
+        if (!aiKey()) {
             console.error('OPENROUTER_API_KEY is not configured');
             return NextResponse.json({
                 error: 'AI service is not configured. Please contact support.'
             }, { status: 503 });
         }
 
-        // ── Call OpenRouter (DeepSeek) with timeout ──────
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+        const timeoutId = setTimeout(() => controller.abort(), 30000);
 
-        let aiResponse: Response;
-        try {
-            aiResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
-                    'HTTP-Referer': process.env.NEXT_PUBLIC_SITE_URL || 'https://aihealz.com',
-                    'X-Title': 'aihealz Symptom Checker',
-                },
-                body: JSON.stringify({
-                    model: 'deepseek/deepseek-chat',
-                    messages: [
-                        { role: 'system', content: systemPrompt },
-                        { role: 'user', content: userPrompt },
-                    ],
-                    temperature: 0.3,
-                    max_tokens: 2000,
-                }),
+        const aiResult = await aiChat(
+            [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: userPrompt },
+            ],
+            {
+                mode: 'reasoning',
+                temperature: 0.3,
+                maxTokens: 2000,
                 signal: controller.signal,
-            });
-        } catch (fetchError: unknown) {
-            clearTimeout(timeoutId);
-            if (fetchError instanceof Error && fetchError.name === 'AbortError') {
-                return NextResponse.json({
-                    error: 'Analysis timed out. Please try again with fewer symptoms.'
-                }, { status: 504 });
-            }
-            throw fetchError;
-        }
+            },
+        );
         clearTimeout(timeoutId);
 
-        if (!aiResponse.ok) {
-            const errText = await aiResponse.text();
-            console.error('OpenRouter error:', errText);
-            return NextResponse.json({ error: 'AI service temporarily unavailable. Please try again.' }, { status: 502 });
+        if (!aiResult.ok) {
+            // Log technical details server-side but never leak rate-limit /
+            // upstream model errors to the user.
+            console.warn('[symptoms/analyze] aiChat failed:', aiResult.status, aiResult.error);
+            const status = aiResult.status === 0 ? 504 : 502;
+            return NextResponse.json(
+                { error: 'The analyzer is taking a moment. Please try again in a few seconds.' },
+                { status },
+            );
         }
 
-        const aiData = await aiResponse.json();
-        const rawContent = aiData.choices?.[0]?.message?.content || '[]';
+        const rawContent = aiResult.text || '[]';
 
         // ── Parse AI response ──────────────────────────
         let conditions: Array<{
@@ -201,11 +195,15 @@ Analyze these symptoms and provide the most likely medical conditions as a JSON 
             }
         }
 
+        if (!gate.bypass) {
+            await recordChatMessage(req, gate.leadId, gate.ipHash);
+        }
+
         return NextResponse.json({
             symptoms,
             analysis: conditions,
             disclaimer: 'This is an AI-assisted preliminary analysis and is NOT a medical diagnosis. Always consult a qualified healthcare professional.',
-            model: aiData.model || 'deepseek/deepseek-chat',
+            model: aiResult.model,
         });
 
     } catch (error: unknown) {

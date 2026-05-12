@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;
+import { aiChat, aiKey, AI_BUSY_REPLY } from '@/lib/ai/openrouter';
+import { requireChatLead, recordChatMessage } from '@/lib/chat-gate';
 
 const SYSTEM_PROMPTS: Record<string, string> = {
     drugs:
@@ -25,48 +25,65 @@ const SYSTEM_PROMPTS: Record<string, string> = {
 
 export async function POST(request: NextRequest) {
     try {
+        const gate = await requireChatLead(request);
+        if (!gate.ok) {
+            return NextResponse.json(
+                { error: gate.reason, resetAt: gate.resetAt },
+                { status: gate.status }
+            );
+        }
+
         const { message, category, history } = await request.json();
 
         if (!message || !category) {
             return NextResponse.json({ error: 'Missing message or category' }, { status: 400 });
         }
 
+        if (!aiKey()) {
+            return NextResponse.json({ reply: AI_BUSY_REPLY, model: 'fallback' });
+        }
+
         const systemPrompt = SYSTEM_PROMPTS[category] || SYSTEM_PROMPTS.drugs;
 
         const messages = [
-            { role: 'system', content: systemPrompt + '\n\nIMPORTANT: Format responses in clear markdown with headings, bullet points, and bold text for key terms. Keep responses comprehensive but scannable. Always end with a brief disclaimer that this is for educational purposes only.' },
-            ...(history || []).slice(-6), // keep last 6 messages for context
-            { role: 'user', content: message },
+            {
+                role: 'system' as const,
+                content:
+                    systemPrompt +
+                    '\n\nIMPORTANT: Format responses in clear markdown with headings, bullet points, and bold text for key terms. Keep responses comprehensive but scannable. Always end with a brief disclaimer that this is for educational purposes only.',
+            },
+            ...((history || []).slice(-6) as Array<{ role: 'user' | 'assistant'; content: string }>),
+            { role: 'user' as const, content: message },
         ];
 
-        const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${OPENROUTER_KEY}`,
-                'Content-Type': 'application/json',
-                'HTTP-Referer': 'https://aihealz.com',
-                'X-Title': 'AIHealz Clinical Reference',
-            },
-            body: JSON.stringify({
-                model: 'google/gemini-2.0-flash-001',
-                messages,
-                max_tokens: 2048,
-                temperature: 0.3,
-            }),
+        // Drug-interaction + lab-medicine + pill-identifier benefit from a
+        // reasoning model; everything else uses the chat model.
+        const reasoningCategories = new Set([
+            'drug-interaction',
+            'lab-medicine',
+            'pill-identifier',
+            'simulations',
+        ]);
+        const mode = reasoningCategories.has(category) ? 'reasoning' : 'chat';
+
+        const result = await aiChat(messages, {
+            mode,
+            temperature: 0.3,
+            maxTokens: 2048,
         });
 
-        if (!res.ok) {
-            const err = await res.text();
-            console.error('OpenRouter error:', err);
-            return NextResponse.json({ error: 'AI service error' }, { status: 502 });
+        if (!result.ok) {
+            console.warn('[reference-chat] aiChat failed:', result.status, result.error);
+            return NextResponse.json({ reply: AI_BUSY_REPLY, model: 'fallback' });
         }
 
-        const data = await res.json();
-        const reply = data.choices?.[0]?.message?.content || 'No response generated.';
+        if (!gate.bypass) {
+            await recordChatMessage(request, gate.leadId, gate.ipHash);
+        }
 
-        return NextResponse.json({ reply });
+        return NextResponse.json({ reply: result.text || AI_BUSY_REPLY, model: result.model });
     } catch (err) {
         console.error('Reference chat error:', err);
-        return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+        return NextResponse.json({ reply: AI_BUSY_REPLY, model: 'fallback' });
     }
 }

@@ -10,6 +10,8 @@ import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { isRTL, getLanguageConfig, getUITranslations } from '@/lib/i18n';
 import { COUNTRIES, buildAlternateLanguages } from '@/lib/countries';
 
+export const revalidate = 3600;
+
 /**
  * Localized Treatments Directory Page
  * Renders treatments in the user's regional language with RTL support.
@@ -187,7 +189,7 @@ export default async function LocalizedTreatmentsDirectory({
                 style={{ background: 'var(--bg)', color: 'var(--ink)' }}
             >
                 <div
-                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                     className="col gap-7"
                 >
                     {/* Language indicator */}

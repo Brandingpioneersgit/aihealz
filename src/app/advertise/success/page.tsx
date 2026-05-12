@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'Thank you | aihealz advertising',
     description: 'Your advertising enquiry has been submitted successfully.',
@@ -28,7 +30,7 @@ const STEPS = [
 export default function AdvertiseSuccessPage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
-            <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+            <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
                 {/* Breadcrumb */}
                 <nav
                     className="row gap-2 mono"

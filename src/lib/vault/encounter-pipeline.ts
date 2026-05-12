@@ -255,17 +255,15 @@ export async function sendChatMessage(
 }
 
 /**
- * Translate a message using LLM.
+ * Translate a message using LLM (free OSS models via OpenRouter).
  */
 async function translateMessage(
     text: string,
     from: string,
-    to: string
+    to: string,
 ): Promise<string | null> {
-    const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
-    const apiBase = process.env.AI_API_BASE || 'https://api.openai.com/v1';
-
-    if (!apiKey) return null;
+    const { aiChat, aiKey } = await import('@/lib/ai/openrouter');
+    if (!aiKey()) return null;
 
     const langMap: Record<string, string> = {
         en: 'English', es: 'Spanish', hi: 'Hindi', ar: 'Arabic',
@@ -273,33 +271,19 @@ async function translateMessage(
         ta: 'Tamil', te: 'Telugu', bn: 'Bengali', ur: 'Urdu',
     };
 
-    try {
-        const res = await fetch(`${apiBase}/chat/completions`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`,
+    const result = await aiChat(
+        [
+            {
+                role: 'system',
+                content: `You are a medical translator. Translate the following message from ${
+                    langMap[from] || from
+                } to ${langMap[to] || to}. Preserve medical terminology accuracy. Output ONLY the translation, nothing else.`,
             },
-            body: JSON.stringify({
-                model: process.env.AI_MODEL || 'gpt-4o-mini',
-                messages: [
-                    {
-                        role: 'system',
-                        content: `You are a medical translator. Translate the following message from ${langMap[from] || from} to ${langMap[to] || to}. Preserve medical terminology accuracy. Output ONLY the translation, nothing else.`,
-                    },
-                    { role: 'user', content: text },
-                ],
-                temperature: 0.3,
-                max_tokens: 500,
-            }),
-        });
-
-        if (!res.ok) return null;
-        const data = await res.json();
-        return data.choices?.[0]?.message?.content || null;
-    } catch {
-        return null;
-    }
+            { role: 'user', content: text },
+        ],
+        { mode: 'fast', temperature: 0.3, maxTokens: 500 },
+    );
+    return result.ok && result.text ? result.text : null;
 }
 
 /**

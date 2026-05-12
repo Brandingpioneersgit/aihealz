@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -157,7 +159,7 @@ export default async function InsuranceDetailPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"

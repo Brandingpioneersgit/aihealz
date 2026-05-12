@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef, Suspense, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import AIResponseCard, { TypingIndicator } from '@/components/ui/ai-response-card';
+import ChatGate, { detectChatGate } from '@/components/chat/ChatGate';
 
 interface Message {
     role: 'user' | 'assistant';
@@ -48,6 +49,7 @@ function AiCareBotContent() {
                     condition
                 })
             });
+            if (await detectChatGate(res)) return;
             const data = await res.json();
             if (data.reply) {
                 setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
@@ -353,7 +355,12 @@ function LoadingFallback() {
 export default function AiCareBotPage() {
     return (
         <Suspense fallback={<LoadingFallback />}>
-            <AiCareBotContent />
+            <ChatGate
+                title="Sign in to talk to the AI Care Bot"
+                subtitle="Get 5 free AI messages today — register once to continue."
+            >
+                <AiCareBotContent />
+            </ChatGate>
         </Suspense>
     );
 }

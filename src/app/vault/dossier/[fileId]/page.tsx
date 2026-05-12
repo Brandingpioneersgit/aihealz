@@ -99,7 +99,7 @@ export default async function DossierPage({ params }: { params: Promise<{ fileId
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
             <div
-                style={{ maxWidth: 1080, margin: '0 auto', padding: '48px 28px 96px' }}
+                style={{ maxWidth: 1080, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 96px' }}
                 className="col gap-6"
             >
                 {/* Breadcrumb */}
@@ -183,7 +183,7 @@ export default async function DossierPage({ params }: { params: Promise<{ fileId
                 <div
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                         gap: 16,
                     }}
                 >

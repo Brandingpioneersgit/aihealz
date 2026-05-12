@@ -72,11 +72,13 @@ export default async function HospitalsPage() {
   if (geo?.citySlug) {
     const city = await prisma.geography.findFirst({
       where: { slug: geo.citySlug, level: 'city' },
+      select: { id: true },
     });
     if (city) geoFilter = { geographyId: city.id };
   } else if (geo?.countrySlug) {
     const country = await prisma.geography.findFirst({
       where: { slug: geo.countrySlug, level: 'country' },
+      select: { id: true },
     });
     if (country) {
       const states = await prisma.geography.findMany({
@@ -183,7 +185,7 @@ export default async function HospitalsPage() {
       />
 
       <div
-        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
         className="col gap-7"
       >
         {/* ── Hero ──────────────────────────────────── */}

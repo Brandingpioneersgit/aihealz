@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 
 type Condition = {
@@ -13,6 +13,7 @@ type Condition = {
 interface HomepageSpecialtiesProps {
     specialties: string[];
     grouped: Record<string, Condition[]>;
+    rawTypesBySpecialty: Record<string, string[]>;
     counts?: Record<string, number>;
     icons?: Record<string, string>;
     country?: string;
@@ -25,20 +26,55 @@ interface HomepageSpecialtiesProps {
  *   right  — paper card showing the active specialty's top conditions
  *
  * On mobile the left column collapses to a horizontal scroll of mono pills.
+ *
+ * Only the initial specialty arrives pre-loaded from the server; others
+ * fetch lazily on click so the homepage doesn't block on 37 parallel
+ * Prisma queries to populate tabs nobody clicks.
  */
 export default function HomepageSpecialties({
     specialties,
-    grouped,
+    grouped: initialGrouped,
+    rawTypesBySpecialty,
     counts,
     icons,
     country = 'india',
     lang = 'en',
 }: HomepageSpecialtiesProps) {
     const [activeSpecialty, setActiveSpecialty] = useState<string>(specialties[0] || '');
+    const [grouped, setGrouped] = useState<Record<string, Condition[]>>(initialGrouped);
+    const [loadingSpec, setLoadingSpec] = useState<string | null>(null);
 
-    if (!specialties.length || !grouped) return null;
+    const ensureLoaded = useCallback(
+        async (spec: string) => {
+            if (!spec || grouped[spec] !== undefined) return;
+            const rawTypes = rawTypesBySpecialty[spec] || [];
+            if (rawTypes.length === 0) {
+                setGrouped((g) => ({ ...g, [spec]: [] }));
+                return;
+            }
+            setLoadingSpec(spec);
+            try {
+                const params = new URLSearchParams({ types: rawTypes.join(',') });
+                const res = await fetch(`/api/specialty-conditions?${params}`);
+                const data = await res.json();
+                setGrouped((g) => ({ ...g, [spec]: data.conditions || [] }));
+            } catch {
+                setGrouped((g) => ({ ...g, [spec]: [] }));
+            } finally {
+                setLoadingSpec((s) => (s === spec ? null : s));
+            }
+        },
+        [grouped, rawTypesBySpecialty],
+    );
 
-    const currentConditions = grouped[activeSpecialty] || [];
+    useEffect(() => {
+        ensureLoaded(activeSpecialty);
+    }, [activeSpecialty, ensureLoaded]);
+
+    if (!specialties.length) return null;
+
+    const currentConditions = grouped[activeSpecialty];
+    const isLoadingCurrent = loadingSpec === activeSpecialty && !currentConditions;
     const currentCount = counts?.[activeSpecialty];
 
     return (
@@ -46,7 +82,7 @@ export default function HomepageSpecialties({
             {/* Specialty list */}
             <div
                 className="col gap-2"
-                style={{ flex: '0 1 320px', minWidth: 0, position: 'relative' }}
+                style={{ flex: '1 1 520px', minWidth: 0, position: 'relative' }}
             >
                 {/* Mobile horizontal scroll */}
                 <div
@@ -72,72 +108,79 @@ export default function HomepageSpecialties({
                     })}
                 </div>
 
-                {/* Desktop vertical list */}
-                <div className="col gap-1 v4-spec-desktop">
+                {/* Desktop compact 2-col grid */}
+                <div className="v4-spec-desktop" style={{ display: 'flex', flexDirection: 'column' }}>
                     <div
                         className="kicker"
-                        style={{ marginBottom: 6, padding: '0 4px' }}
+                        style={{ marginBottom: 8, padding: '0 4px' }}
                     >
-                        <span className="dot" />20 specialties
+                        <span className="dot" />{specialties.length} specialties
                     </div>
-                    {specialties.map((s) => {
-                        const isActive = activeSpecialty === s;
-                        return (
-                            <button
-                                key={s}
-                                onClick={() => setActiveSpecialty(s)}
-                                className="row ai-center between"
-                                style={{
-                                    padding: '12px 14px',
-                                    border: '1px solid',
-                                    borderColor: isActive ? 'var(--ink)' : 'transparent',
-                                    background: isActive ? 'var(--paper)' : 'transparent',
-                                    borderRadius: 'var(--r-2)',
-                                    color: isActive ? 'var(--ink)' : 'var(--ink-2)',
-                                    fontWeight: isActive ? 500 : 400,
-                                    fontSize: 14,
-                                    transition: 'background 120ms, border-color 120ms',
-                                    cursor: 'pointer',
-                                    textAlign: 'left',
-                                }}
-                            >
-                                <span className="row ai-center gap-3">
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+                            gap: 2,
+                        }}
+                    >
+                        {specialties.map((s) => {
+                            const isActive = activeSpecialty === s;
+                            return (
+                                <button
+                                    key={s}
+                                    onClick={() => setActiveSpecialty(s)}
+                                    className="row ai-center between"
+                                    style={{
+                                        padding: '8px 10px',
+                                        border: '1px solid',
+                                        borderColor: isActive ? 'var(--ink)' : 'transparent',
+                                        background: isActive ? 'var(--paper)' : 'transparent',
+                                        borderRadius: 'var(--r-2)',
+                                        color: isActive ? 'var(--ink)' : 'var(--ink-2)',
+                                        fontWeight: isActive ? 500 : 400,
+                                        fontSize: 13,
+                                        lineHeight: 1.2,
+                                        transition: 'background 120ms, border-color 120ms',
+                                        cursor: 'pointer',
+                                        textAlign: 'left',
+                                        minWidth: 0,
+                                        gap: 8,
+                                    }}
+                                >
                                     <span
-                                        className="spec-icon"
+                                        className="truncate"
                                         style={{
-                                            background: isActive ? 'var(--ink)' : 'var(--bg-2)',
-                                            color: isActive ? 'var(--paper)' : 'var(--ink-2)',
-                                            border: isActive ? 'none' : '1px solid var(--rule)',
-                                            width: 28,
-                                            height: 28,
-                                            fontSize: 12,
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap',
+                                            minWidth: 0,
                                         }}
                                     >
-                                        {icons?.[s] || s.slice(0, 2).toUpperCase()}
+                                        {s}
                                     </span>
-                                    <span>{s}</span>
-                                </span>
-                                {counts?.[s] != null && (
-                                    <span
-                                        className="mono"
-                                        style={{
-                                            fontSize: 11,
-                                            color: isActive ? 'var(--ink-3)' : 'var(--ink-4)',
-                                        }}
-                                    >
-                                        {counts[s].toLocaleString()}
-                                    </span>
-                                )}
-                            </button>
-                        );
-                    })}
+                                    {counts?.[s] != null && (
+                                        <span
+                                            className="mono"
+                                            style={{
+                                                fontSize: 10,
+                                                color: isActive ? 'var(--ink-3)' : 'var(--ink-4)',
+                                                flexShrink: 0,
+                                            }}
+                                        >
+                                            {counts[s].toLocaleString()}
+                                        </span>
+                                    )}
+                                </button>
+                            );
+                        })}
+                    </div>
 
                     <Link
                         href="/conditions"
                         className="row ai-center between"
                         style={{
-                            marginTop: 8,
-                            padding: '12px 14px',
+                            marginTop: 10,
+                            padding: '10px 14px',
                             background: 'var(--ink)',
                             color: 'var(--paper)',
                             borderRadius: 'var(--r-2)',
@@ -188,12 +231,46 @@ export default function HomepageSpecialties({
                         display: 'grid',
                         gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
                         gap: 0,
+                        minHeight: 220,
                     }}
                 >
-                    {currentConditions.slice(0, 12).map((cond, i) => {
-                        const colCount = currentConditions.length >= 6 ? 2 : 1;
-                        const isLastRow =
-                            i >= currentConditions.slice(0, 12).length - colCount;
+                    {isLoadingCurrent
+                        ? Array.from({ length: 6 }).map((_, i) => (
+                              <div
+                                  key={`skeleton-${i}`}
+                                  className="col gap-2"
+                                  style={{
+                                      padding: '16px 22px',
+                                      borderRight: '1px solid var(--rule)',
+                                      borderBottom:
+                                          i < 4 ? '1px solid var(--rule)' : 'none',
+                                  }}
+                                  aria-hidden="true"
+                              >
+                                  <div
+                                      style={{
+                                          height: 14,
+                                          width: '70%',
+                                          background: 'var(--rule)',
+                                          borderRadius: 4,
+                                      }}
+                                  />
+                                  <div
+                                      style={{
+                                          height: 10,
+                                          width: '90%',
+                                          background: 'var(--rule)',
+                                          borderRadius: 4,
+                                          opacity: 0.6,
+                                      }}
+                                  />
+                              </div>
+                          ))
+                        : (currentConditions || []).slice(0, 12).map((cond, i) => {
+                              const list = currentConditions || [];
+                              const colCount = list.length >= 6 ? 2 : 1;
+                              const isLastRow =
+                                  i >= list.slice(0, 12).length - colCount;
                         return (
                             <Link
                                 key={cond.slug}

@@ -74,6 +74,9 @@ export interface ConditionItem {
 export interface SpecialtyGroup {
     specialty: string;
     conditions: ConditionItem[];
+    /** Total conditions in this specialty (may exceed `conditions.length` when
+     * the server trimmed the payload). Falls back to `conditions.length` if undefined. */
+    totalCount?: number;
 }
 
 const INITIAL_VISIBLE = 12;
@@ -214,7 +217,7 @@ function SpecialtyCard({
                                 letterSpacing: '0.06em',
                             }}
                         >
-                            {filteredConditions.length.toLocaleString()} conditions
+                            {(category.totalCount ?? filteredConditions.length).toLocaleString()} conditions
                         </span>
                     </div>
 
@@ -361,6 +364,25 @@ function SpecialtyCard({
                         )}
                     </div>
                 )}
+                {/* When the server trimmed the per-specialty list, link out to the
+                    full specialty page rather than ballooning the RSC payload. */}
+                {category.totalCount !== undefined &&
+                    category.totalCount > category.conditions.length && (
+                        <Link
+                            href={`/conditions/${category.specialty
+                                .toLowerCase()
+                                .replace(/[^a-z0-9]+/g, '-')}`}
+                            className="btn btn-paper btn-sm"
+                            style={{
+                                marginTop: 10,
+                                width: '100%',
+                                color: 'var(--ink-3)',
+                                fontSize: 12,
+                            }}
+                        >
+                            Browse all {category.totalCount.toLocaleString()} in {category.specialty} →
+                        </Link>
+                    )}
             </div>
         </section>
     );

@@ -248,33 +248,15 @@ Name: ${doctor?.name || 'Doctor'}
 Qualifications: ${doctor?.qualifications?.join(', ') || 'N/A'}
 Experience: ${doctor?.experienceYears || 'N/A'} years`;
 
-    const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
-    const apiBase = process.env.AI_API_BASE || 'https://api.openai.com/v1';
+    const { aiChat, aiKey } = await import('@/lib/ai/openrouter');
+    if (!aiKey()) return rawBio;
 
-    if (!apiKey) return rawBio; // Return original if no API key
-
-    try {
-        const response = await fetch(`${apiBase}/chat/completions`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`,
-            },
-            body: JSON.stringify({
-                model: process.env.AI_MODEL || 'gpt-4o-mini',
-                messages: [
-                    { role: 'system', content: systemPrompt },
-                    { role: 'user', content: rawBio },
-                ],
-                temperature: 0.7,
-                max_tokens: 500,
-            }),
-        });
-
-        if (!response.ok) return rawBio;
-        const data = await response.json();
-        return data.choices?.[0]?.message?.content || rawBio;
-    } catch {
-        return rawBio;
-    }
+    const result = await aiChat(
+        [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: rawBio },
+        ],
+        { mode: 'fast', temperature: 0.7, maxTokens: 500 },
+    );
+    return result.ok && result.text ? result.text : rawBio;
 }

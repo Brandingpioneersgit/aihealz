@@ -117,7 +117,7 @@ export default function DrugDosingPage() {
     if (loading) {
         return (
             <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
-                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }}>
                     <div className="row center" style={{ height: 256 }}>
                         <span className="mono muted" style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Loading…</span>
                     </div>
@@ -128,7 +128,7 @@ export default function DrugDosingPage() {
 
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
-            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
                 {/* Breadcrumb */}
                 <nav
                     className="row gap-2 mono"

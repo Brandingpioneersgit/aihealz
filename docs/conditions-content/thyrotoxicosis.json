@@ -1,0 +1,532 @@
+{
+  "_meta": {
+    "slug": "thyrotoxicosis",
+    "tier": 1,
+    "headTerm": "thyrotoxicosis",
+    "longTailKeywords": [
+      "thyrotoxicosis symptoms",
+      "thyrotoxicosis treatment",
+      "thyrotoxicosis vs hyperthyroidism",
+      "thyrotoxicosis causes",
+      "Graves disease",
+      "thyroid storm",
+      "methimazole",
+      "radioactive iodine therapy",
+      "thyrotoxicosis pregnancy",
+      "TSH suppressed"
+    ],
+    "primarySpecialty": "Endocrinology",
+    "lastReviewed": "2026-05-13",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2016 ATA Hyperthyroidism Guidelines (Ross DS), Burch HB & Cooper DS NEJM 2015, and Bahn RS Graves' disease review. Rescues 4 ICD-10 E05.x subtypes."
+  },
+
+  "h1Title": "Thyrotoxicosis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology",
+
+  "heroOverview": "Thyrotoxicosis is the clinical syndrome of excess circulating thyroid hormone, most often driven by Graves disease (60-80% of cases in iodine-replete countries), toxic nodular goiter, or thyroiditis. It affects roughly 1.3% of US adults, with women diagnosed 5-10 times more often than men. The classic presentation pairs unexplained weight loss with a fast resting pulse, heat intolerance, tremor, and anxiety, although older adults often present only with atrial fibrillation or apathy. Untreated thyrotoxicosis raises the risk of osteoporosis, heart failure, and life-threatening thyroid storm. Modern treatment with antithyroid drugs, radioactive iodine, or surgery restores euthyroid status in over 90% of patients.",
+
+  "keyStats": {
+    "prevalence": "0.5-1.3% of US adults; subclinical disease in 0.7-1.8% (NHANES III)",
+    "demographics": "Female:male ratio 5-10:1; Graves disease peaks ages 30-50",
+    "avgAge": "Mean age at diagnosis 40-60 years; toxic nodular goiter skews older (60+)",
+    "globalCases": "~200 million people worldwide with some form of thyroid dysfunction; thyrotoxicosis affects an estimated 0.8% globally"
+  },
+
+  "definition": "Thyrotoxicosis (ICD-10: E05) refers to any clinical state caused by excessive amounts of circulating thyroid hormone — triiodothyronine (T3), thyroxine (T4), or both — irrespective of source. It differs from hyperthyroidism, which is the narrower term for thyrotoxicosis caused by increased synthesis and secretion from the thyroid gland itself. Causes include autoimmune stimulation (Graves disease), autonomous nodular tissue (toxic multinodular goiter and solitary toxic adenoma), destructive release of stored hormone (subacute, postpartum, and silent thyroiditis), and exogenous sources such as levothyroxine overdose, iodine load, or amiodarone. The shared pathway is suppression of pituitary TSH below 0.1 mIU/L with rising free T4 or T3. The syndrome produces a hypermetabolic state with accelerated cardiac, neurologic, gastrointestinal, and musculoskeletal turnover. Endocrinologists lead diagnosis and treatment, with nuclear medicine, ophthalmology (for Graves orbitopathy), cardiology, and obstetrics often involved. Disease severity ranges from biochemical subclinical thyrotoxicosis to fulminant thyroid storm, a true endocrine emergency with a mortality of 10-30% if untreated.",
+
+  "typesClassification": [
+    { "type": "Graves disease (E05.0)", "description": "Autoimmune thyrotoxicosis caused by stimulating TSH-receptor antibodies. Accounts for 60-80% of cases. Features diffuse goiter, orbitopathy in 25-50%, and pretibial myxedema in under 5%." },
+    { "type": "Toxic multinodular goiter (E05.2)", "description": "Multiple autonomously functioning nodules within a long-standing goiter. Predominantly affects adults over 60 in iodine-deficient regions. Onset is gradual." },
+    { "type": "Toxic single adenoma (E05.1)", "description": "A single autonomously hyperfunctioning thyroid nodule, usually larger than 3 cm, that suppresses surrounding tissue. Accounts for roughly 5% of cases." },
+    { "type": "Thyroiditis-related (E05.8)", "description": "Subacute (de Quervain), postpartum, silent, or drug-induced thyroiditis cause transient release of stored hormone. Lasts 4-12 weeks, often followed by transient hypothyroidism and recovery." },
+    { "type": "Thyroid storm", "description": "Life-threatening decompensation with fever above 38.5°C, tachycardia over 130, altered mental status, and multiorgan dysfunction. Burch-Wartofsky score ≥45 supports the diagnosis. Mortality 10-30%." },
+    { "type": "Subclinical thyrotoxicosis", "description": "Suppressed TSH with normal free T4 and free T3. Confers increased risk of atrial fibrillation, osteoporosis, and progression to overt disease." }
+  ],
+
+  "primarySymptoms": [
+    "Unexplained weight loss despite normal or increased appetite, typically 5-15% of body weight over weeks to months.",
+    "Resting heart rate above 90 beats per minute, often with palpitations and a feeling of pounding in the chest.",
+    "Heat intolerance with sweating, warm moist skin, and a preference for cooler environments even when others feel comfortable.",
+    "Fine resting tremor of the outstretched hands, evident when fingers are spread or when holding a sheet of paper.",
+    "Anxiety, irritability, emotional lability, and difficulty concentrating, sometimes mistaken for primary psychiatric illness.",
+    "Frequent loose stools or increased bowel frequency, occurring in 25-30% of patients without true diarrhea.",
+    "Muscle weakness, particularly proximal (difficulty rising from a chair or climbing stairs), with measurable thigh atrophy in chronic disease.",
+    "Menstrual irregularities including oligomenorrhea or amenorrhea in women, and reduced libido or gynecomastia in men.",
+    "Sleep disturbance with insomnia and reduced total sleep time, frequently the chief complaint at presentation.",
+    "In Graves disease: gritty, irritated, or bulging eyes (proptosis), eyelid retraction with visible sclera above the iris, and diplopia in severe orbitopathy."
+  ],
+
+  "earlyWarningSigns": [
+    "Unexplained tachycardia found on a routine visit or wearable device, especially at rest below 80 bpm a year prior",
+    "New-onset atrial fibrillation in an adult under 65 without other cardiac risk factors",
+    "Mild but persistent tremor, weight loss of 3-5 kg with no diet change, or unusual heat intolerance over a few months",
+    "Falling cholesterol on routine bloods without dietary or lifestyle change",
+    "Suppressed TSH on incidental thyroid screening, even with normal free T4 (subclinical thyrotoxicosis)"
+  ],
+
+  "emergencySigns": [
+    "Fever above 38.5°C, heart rate over 130, agitation or confusion, vomiting and diarrhea — possible thyroid storm requiring emergency hospitalization",
+    "New chest pain, shortness of breath, or fainting in a patient with known thyrotoxicosis — possible heart failure or arrhythmia",
+    "Sudden loss of vision, severe eye pain, or worsening proptosis in Graves orbitopathy — possible optic nerve compression requiring urgent ophthalmology",
+    "Sore throat, fever, or mouth ulcers within 90 days of starting methimazole or propylthiouracil — possible agranulocytosis, stop the drug and seek urgent blood count",
+    "Jaundice, dark urine, or right upper quadrant pain on propylthiouracil — possible hepatotoxicity requiring immediate discontinuation"
+  ],
+
+  "causes": [
+    {
+      "cause": "Graves disease (autoimmune thyrotoxicosis)",
+      "description": "TSH-receptor stimulating antibodies bind the thyroid follicular cell receptor and drive sustained, unregulated hormone synthesis. The same antibodies cross-react with retro-orbital fibroblasts, producing the orbitopathy and pretibial myxedema seen in a subset of patients."
+    },
+    {
+      "cause": "Toxic nodular thyroid disease",
+      "description": "Somatic activating mutations in the TSH receptor or Gsα gene produce autonomously functioning nodules that bypass pituitary regulation. Accumulation of such mutations over decades in long-standing goiters explains the older age and iodine-deficient geography of toxic multinodular goiter."
+    },
+    {
+      "cause": "Thyroiditis with destructive hormone release",
+      "description": "Viral subacute thyroiditis, postpartum thyroiditis, silent (painless) thyroiditis, and amiodarone-induced type 2 thyroiditis cause disruption of follicular architecture and dumping of preformed hormone. Radioiodine uptake is suppressed because synthesis is shut down, not increased."
+    },
+    {
+      "cause": "Exogenous thyroid hormone excess",
+      "description": "Excessive levothyroxine replacement, surreptitious use for weight loss, or contamination of supplements with thyroid extract raises circulating T4 with suppressed thyroglobulin — the key biochemical clue distinguishing factitious from endogenous causes."
+    },
+    {
+      "cause": "Iodine-induced thyrotoxicosis (Jod-Basedow)",
+      "description": "Iodine load from contrast media, amiodarone (37% iodine by weight), or dietary kelp can precipitate thyrotoxicosis in patients with pre-existing autonomous nodules or latent Graves disease, particularly in iodine-deficient regions."
+    },
+    {
+      "cause": "Trophoblastic disease and germ-cell tumors",
+      "description": "Hydatidiform mole, choriocarcinoma, and rare germ-cell tumors secrete high levels of human chorionic gonadotropin (hCG), which weakly stimulates the TSH receptor and can produce gestational or paraneoplastic thyrotoxicosis."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women are 5-10 times more likely to develop Graves disease and autoimmune thyroid disease overall, reflecting the broader female predominance of autoimmunity." },
+    { "factor": "Family history of autoimmune thyroid disease", "category": "genetic", "description": "First-degree relatives of Graves patients have a 5-10 fold increased risk. HLA-DR3, CTLA4, PTPN22, and TSH-receptor variants are well-established loci." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Smoking doubles the risk of Graves orbitopathy and triples the risk of moderate-to-severe eye disease. It also reduces the response to orbital treatment." },
+    { "factor": "Iodine excess from contrast, amiodarone, or supplements", "category": "modifiable", "description": "An acute iodine load can precipitate thyrotoxicosis in susceptible glands; risk is highest in those with pre-existing nodular disease or autoimmunity." },
+    { "factor": "Postpartum period", "category": "non-modifiable", "description": "Postpartum thyroiditis affects 5-9% of pregnancies and presents 1-6 months after delivery, sometimes as transient thyrotoxicosis followed by hypothyroidism." },
+    { "factor": "Other autoimmune disease (type 1 diabetes, celiac, vitiligo, Addison disease)", "category": "non-modifiable", "description": "Coexisting autoimmune conditions raise the lifetime risk of autoimmune thyroid disease by 5-15 fold through shared susceptibility genes." },
+    { "factor": "Stress and major life events", "category": "environmental", "description": "Bereavement, divorce, and severe physical stress have been associated with Graves onset in case-control studies, likely through immune dysregulation." },
+    { "factor": "Lithium and interferon-alpha therapy", "category": "modifiable", "description": "Lithium can trigger silent thyroiditis or unmask Graves disease in 1-2% of long-term users; interferon-alpha used for hepatitis C induces thyroid dysfunction in up to 15% of patients." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence of overt hyperthyroidism is 0.5%, with subclinical disease in another 0.7-1.8% (NHANES III)",
+    "Graves disease incidence peaks at ages 30-50; toxic nodular disease predominates above age 60",
+    "European data show female predominance of 7-8:1 for Graves and 4:1 for toxic nodular goiter",
+    "Higher Graves disease incidence in iodine-replete countries; toxic nodular disease more common where iodine intake is low",
+    "Postpartum thyroiditis affects 5-9% of pregnancies globally, higher in women with positive TPO antibodies before pregnancy"
+  ],
+
+  "diagnosisOverview": "Diagnosis of thyrotoxicosis follows a two-step pathway recommended by the 2016 American Thyroid Association guidelines: confirm the biochemical state, then identify the cause. A suppressed TSH below 0.1 mIU/L with elevated free T4 and free T3 confirms overt thyrotoxicosis. T3 toxicosis (elevated T3, normal T4) is more common in early Graves disease or toxic adenoma. Once thyrotoxicosis is confirmed, the cause is established by combining clinical features (goiter, orbitopathy, neck pain), antibody testing, and either radioiodine uptake scintigraphy or color-flow Doppler ultrasound. TSH-receptor antibody (TRAb) testing has a sensitivity of 96% and specificity of 99% for Graves disease and is recommended as the first-line etiology test in most cases. Radioiodine uptake distinguishes the high-uptake patterns of Graves (diffuse, uniform) and toxic nodular disease (focal or patchy hot spots) from the suppressed uptake of destructive thyroiditis and exogenous hormone use. Thyroid ultrasound with Doppler is preferred during pregnancy and breastfeeding where radioiodine is contraindicated, and increased vascularity (the so-called thyroid inferno) supports Graves disease. Additional workup may include ESR or CRP for subacute thyroiditis, beta-hCG in suspected gestational thyrotoxicosis, and thyroglobulin to identify factitious hormone use. Coexisting orbitopathy is assessed by activity score and, when severe, by orbital MRI to evaluate extraocular muscle and optic nerve involvement.",
+
+  "diagnosticTests": [
+    {
+      "test": "TSH, free T4, free T3",
+      "purpose": "Confirms thyrotoxicosis. TSH below 0.1 mIU/L with elevated free T4 or free T3 indicates overt disease; suppressed TSH with normal free hormones indicates subclinical thyrotoxicosis.",
+      "whatToExpect": "A single blood draw, with results returned within 24-48 hours at most labs. No fasting required, though biotin supplements should be stopped 48 hours beforehand to avoid assay interference."
+    },
+    {
+      "test": "TSH-receptor antibody (TRAb) or thyroid-stimulating immunoglobulin (TSI)",
+      "purpose": "Confirms Graves disease as the cause of thyrotoxicosis with 96% sensitivity and 99% specificity. Reduces the need for imaging in typical presentations.",
+      "whatToExpect": "Drawn with the same blood sample as TSH. Results may take 2-7 days. Levels also help predict relapse risk after antithyroid drug withdrawal."
+    },
+    {
+      "test": "Radioiodine (I-123) uptake and scan",
+      "purpose": "Distinguishes Graves disease (diffuse high uptake), toxic nodular disease (focal hot nodules), and destructive thyroiditis (very low uptake). Guides choice between antithyroid drugs, surgery, and radioiodine therapy.",
+      "whatToExpect": "Swallow a small capsule of radioactive iodine; uptake is measured at 4-6 hours and 24 hours, with imaging performed at the same time. Avoid iodine-containing contrast and seaweed for 4-6 weeks beforehand. Not used during pregnancy or breastfeeding."
+    },
+    {
+      "test": "Thyroid ultrasound with color-flow Doppler",
+      "purpose": "Assesses gland size, nodularity, and vascularity. Increased diffuse vascularity (thyroid inferno) supports Graves disease; cold or warm nodules guide further workup. Used preferentially in pregnancy.",
+      "whatToExpect": "Gel applied to the neck and a probe scanned across the thyroid for 15-20 minutes. Painless and radiation-free."
+    },
+    {
+      "test": "Anti-thyroid peroxidase (anti-TPO) and anti-thyroglobulin antibodies",
+      "purpose": "Indicators of autoimmune thyroid disease. Positive in 70-80% of Graves patients and 90% of Hashimoto patients; helpful when TRAb is negative or ambiguous.",
+      "whatToExpect": "Drawn with the same blood sample as TSH; results within a few days."
+    },
+    {
+      "test": "ESR or CRP",
+      "purpose": "Identifies the inflammation of subacute (de Quervain) thyroiditis when neck pain and tenderness are present; ESR is typically above 50 mm/hr.",
+      "whatToExpect": "Standard blood test, same-day results."
+    },
+    {
+      "test": "Beta-hCG",
+      "purpose": "Excludes gestational trophoblastic disease and confirms pregnancy in women of reproductive age with suspected thyrotoxicosis.",
+      "whatToExpect": "Standard blood or urine test; same-day result."
+    }
+  ],
+
+  "treatmentOverview": "Treatment selection in thyrotoxicosis depends on the underlying cause, severity, comorbidities, patient preference, and reproductive plans. The three definitive options for Graves disease and toxic nodular disease are antithyroid drugs, radioiodine therapy, and total thyroidectomy. The 2016 American Thyroid Association guidelines recommend shared decision-making, since all three deliver high cure rates with different trade-offs. Antithyroid drugs (methimazole first-line, propylthiouracil reserved for the first trimester of pregnancy, thyroid storm, or methimazole intolerance) restore euthyroidism in over 90% of patients within 6-12 weeks and induce sustained remission in roughly 50% of Graves patients after 12-18 months. Methimazole is dosed at 10-30 mg daily based on severity, then tapered to 5-10 mg maintenance. Radioiodine (I-131) ablates overactive thyroid tissue and cures over 90% of Graves and toxic nodular disease, with permanent hypothyroidism developing in 80-90% of patients within a year. Total thyroidectomy delivers immediate definitive cure with the lowest relapse rate but requires lifelong levothyroxine and carries small risks of recurrent laryngeal nerve injury and permanent hypoparathyroidism in experienced hands. Beta-blockers (propranolol 20-40 mg every 6-8 hours, or atenolol 25-100 mg daily) provide rapid symptomatic relief of tachycardia, tremor, and anxiety while awaiting definitive treatment. Destructive thyroiditis is treated symptomatically with beta-blockers and NSAIDs or short-course prednisolone — antithyroid drugs do not work because the gland is not overproducing hormone. Graves orbitopathy is managed by smoking cessation, IV methylprednisolone for moderate-to-severe active disease, and the IGF-1R inhibitor teprotumumab for selected patients with proptosis, which reduces orbital inflammation in roughly 70% of treated patients. Thyroid storm requires intensive-care management with high-dose propylthiouracil, iodine (started one hour after propylthiouracil), beta-blockers, glucocorticoids, and treatment of the underlying precipitant.",
+
+  "medicalTreatments": [
+    {
+      "name": "Methimazole (10-30 mg daily; taper to 5-10 mg maintenance)",
+      "description": "First-line antithyroid drug for Graves disease and toxic nodular thyrotoxicosis outside the first trimester of pregnancy. Inhibits thyroid peroxidase, blocking hormone synthesis. Onset of biochemical improvement at 2-4 weeks; full euthyroidism by 6-12 weeks.",
+      "effectiveness": "Restores euthyroid status in 90% of Graves patients; sustained remission in 40-50% after 12-18 months of therapy."
+    },
+    {
+      "name": "Propylthiouracil (100-200 mg every 8 hours initially)",
+      "description": "Reserved for the first trimester of pregnancy, thyroid storm, and methimazole intolerance. Also blocks peripheral T4 to T3 conversion, an advantage in storm. Carries higher risk of severe hepatotoxicity than methimazole.",
+      "effectiveness": "Equally effective as methimazole at controlling thyroid hormone production; preferred in storm for added T4-to-T3 blockade."
+    },
+    {
+      "name": "Radioactive iodine (I-131) ablation",
+      "description": "A single oral dose of radioiodine selectively destroys overactive thyroid tissue over 6-18 weeks. Preferred for definitive treatment of Graves and toxic nodular disease in non-pregnant adults. Contraindicated in pregnancy, breastfeeding, and active moderate-to-severe orbitopathy.",
+      "effectiveness": "Cures thyrotoxicosis in over 90% of patients with a single dose; 10-20% require a second dose. Permanent hypothyroidism develops in 80-90% within a year."
+    },
+    {
+      "name": "Total or near-total thyroidectomy",
+      "description": "Definitive surgical removal of the thyroid gland under general anesthesia. Indicated for large compressive goiter, suspected malignancy, moderate-to-severe active orbitopathy, pregnancy with antithyroid drug intolerance, and patient preference.",
+      "effectiveness": "Cure rates above 95% in experienced hands; recurrent laryngeal nerve injury under 1% and permanent hypoparathyroidism under 2% in high-volume centers."
+    },
+    {
+      "name": "Beta-blockers (propranolol 20-40 mg every 6-8 hours; atenolol 25-100 mg daily)",
+      "description": "Provide rapid symptomatic relief of tachycardia, palpitations, tremor, anxiety, and heat intolerance while definitive therapy takes effect. Propranolol also weakly inhibits peripheral T4-to-T3 conversion at high doses.",
+      "effectiveness": "Reduces resting heart rate and symptom score by 40-60% within hours; bridges to definitive therapy."
+    },
+    {
+      "name": "Glucocorticoids (prednisolone 30-60 mg daily, or IV methylprednisolone)",
+      "description": "Used in thyroid storm (high-dose), subacute thyroiditis with severe pain, moderate-to-severe active Graves orbitopathy (pulsed IV methylprednisolone 500 mg weekly for 6 weeks), and amiodarone-induced thyroiditis type 2.",
+      "effectiveness": "Inflammation and pain improvement in 80-90% of subacute thyroiditis cases; reduces orbital inflammation in 70-80% of moderate-to-severe orbitopathy."
+    },
+    {
+      "name": "Teprotumumab (10 mg/kg loading, then 20 mg/kg every 3 weeks for 8 infusions)",
+      "description": "An IGF-1 receptor monoclonal antibody approved for active moderate-to-severe Graves orbitopathy. Reduces proptosis and diplopia and improves quality of life. Side effects include hyperglycemia and hearing impairment.",
+      "effectiveness": "Reduces proptosis by ≥2 mm in roughly 70% of treated patients in phase 3 trials (Douglas 2020)."
+    },
+    {
+      "name": "Iodine (saturated solution of potassium iodide, SSKI, or Lugol's)",
+      "description": "Used in thyroid storm and pre-thyroidectomy preparation. Acutely blocks thyroid hormone release via the Wolff-Chaikoff effect. Must be given at least 1 hour after a thionamide to prevent paradoxical hormone synthesis.",
+      "effectiveness": "Lowers serum free T4 within 24-48 hours; reduces thyroid vascularity before surgery."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Total thyroidectomy",
+      "description": "Complete removal of both thyroid lobes via a low neck incision. Indicated for large compressive goiter, suspected malignancy, moderate-to-severe active Graves orbitopathy, intolerance to medical and radioiodine therapy, and patient preference.",
+      "successRate": "Cure rate above 95%; experienced centers report recurrent laryngeal nerve injury under 1% and permanent hypoparathyroidism under 2%."
+    },
+    {
+      "name": "Hemithyroidectomy (lobectomy)",
+      "description": "Used for unilateral toxic adenoma. Preserves the contralateral lobe and often restores euthyroidism without lifelong levothyroxine.",
+      "successRate": "Cures toxic adenoma in over 95%; postoperative hypothyroidism in 10-20% requiring replacement therapy."
+    },
+    {
+      "name": "Orbital decompression surgery",
+      "description": "Removes part of the orbital walls and fat to reduce proptosis and relieve optic nerve compression in severe inactive Graves orbitopathy.",
+      "successRate": "Reduces proptosis by 3-5 mm; major complications under 5% in specialist centers."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Selenium supplementation (200 µg daily for 6 months)", "description": "In mild active Graves orbitopathy, supplementation improved quality of life and slowed progression in a randomized controlled trial (Marcocci 2011). Effect is modest and limited to mild disease." }
+  ],
+
+  "whySeeSpecialist": "An endocrinologist should be involved when thyrotoxicosis is confirmed, when antithyroid drug therapy is being initiated, when radioiodine or surgery is being considered, when pregnancy or breastfeeding complicates management, when orbitopathy is present, and when thyroid storm is suspected. Primary care can monitor stable patients on long-term methimazole or levothyroxine after definitive treatment, but initial diagnosis and definitive therapy belong with the specialist.",
+
+  "doctorSelectionGuide": "Look for a board-certified endocrinologist with thyroid disease as a major focus, access to nuclear medicine and ultrasound, and a working relationship with a high-volume thyroid surgeon. For Graves orbitopathy, choose a center with an experienced thyroid-eye multidisciplinary clinic. In pregnancy, prioritize endocrinologists experienced in obstetric thyroid care. Continuity over multiple visits matters because dose titration is iterative.",
+
+  "preventionStrategies": [
+    "Quit smoking — the single most impactful modifiable factor in Graves disease severity and orbitopathy risk",
+    "Avoid unnecessary iodine loads from contrast media, kelp supplements, and amiodarone where alternatives exist, especially with pre-existing nodular thyroid disease",
+    "Screen women with personal or family history of autoimmune disease for TPO antibodies before pregnancy and in early pregnancy",
+    "Monitor TSH in patients on long-term lithium or interferon-alpha and at 6 weeks postpartum after any pregnancy",
+    "Treat subclinical thyrotoxicosis when TSH is persistently below 0.1 mIU/L in adults over 65 or with cardiovascular or skeletal risk factors (ATA 2016)"
+  ],
+
+  "lifestyleModifications": [
+    "Stop smoking — improves orbitopathy outcomes and reduces relapse risk after antithyroid drug withdrawal",
+    "Limit dietary iodine while in active disease — avoid iodized salt, kelp, and high-iodine multivitamins until euthyroid",
+    "Maintain adequate calcium and vitamin D to offset accelerated bone turnover, especially in postmenopausal women",
+    "Get regular weight-bearing and resistance exercise once cardiac status is stable to preserve bone density and muscle mass",
+    "Use lubricating eye drops, sleep with the head elevated, and wear sunglasses outdoors if orbitopathy is present",
+    "Avoid stimulants (caffeine, decongestants) until heart rate is controlled"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate calcium-rich foods (dairy, leafy greens, fortified plant milks) for bone protection",
+      "Vitamin D-rich foods (fatty fish, fortified milk, egg yolks) or supplementation to maintain 25-OH-D above 30 ng/mL",
+      "Protein at 1.0-1.2 g/kg body weight daily to counter the muscle wasting of hypermetabolism",
+      "Complex carbohydrates and frequent small meals to support increased caloric needs",
+      "Selenium-rich foods (Brazil nuts, sardines, sunflower seeds) in moderation"
+    ],
+    "avoid": [
+      "Iodized salt and seafood with high iodine content (kelp, seaweed, dulse) during active disease",
+      "Kelp-containing supplements and so-called thyroid support formulas, which often contain undeclared iodine or thyroid extract",
+      "Excessive caffeine, which compounds palpitations and insomnia",
+      "Alcohol in excess, which accelerates bone loss and may interact with antithyroid drugs",
+      "Very-low-calorie or fasting diets while hypermetabolic, which worsen muscle and bone loss"
+    ]
+  },
+
+  "exerciseGuidelines": "Once heart rate is controlled with beta-blockers or definitive treatment, regular moderate aerobic activity (150 minutes weekly) and twice-weekly resistance training help preserve bone and muscle mass. Avoid high-intensity training while resting heart rate exceeds 100 bpm. After radioiodine or surgery, gradually return to full activity as energy levels normalize, usually over 4-12 weeks.",
+
+  "dailyManagement": [
+    "Take methimazole at the same time daily; missed doses lead to rapid biochemical rebound",
+    "Check TSH and free T4 every 4-6 weeks during dose titration, then every 3 months once stable",
+    "Watch for sore throat, fever, mouth ulcers, or jaundice on antithyroid drugs and stop the drug immediately if any occur",
+    "Use preservative-free lubricating drops 4-6 times daily and a sleep mask if orbitopathy is present",
+    "Track resting heart rate (a wearable is useful) and weight weekly during titration",
+    "Carry a medical card listing your diagnosis, current dose, and any allergies"
+  ],
+
+  "prognosis": "With prompt diagnosis and treatment, prognosis is excellent. Antithyroid drugs restore euthyroidism in over 90% of patients within 6-12 weeks; long-term sustained remission of Graves disease occurs in 40-50% after 12-18 months of therapy, with TRAb levels at the time of withdrawal being the strongest predictor of remission. Radioiodine cures over 90% with a single dose, and total thyroidectomy achieves cure in over 95% of cases. Permanent hypothyroidism is expected after radioiodine or surgery and is straightforward to manage with daily levothyroxine. Cardiovascular complications such as atrial fibrillation reverse in 60-80% of patients within 4 months of becoming euthyroid. Untreated thyrotoxicosis carries a 20% mortality at 10 years, mainly from cardiovascular events. Thyroid storm has a mortality of 10-30% even with treatment but is now uncommon when patients are diagnosed early. Graves orbitopathy stabilizes in most patients with smoking cessation and timely immunomodulation; severe sight-threatening orbitopathy is rare.",
+
+  "recoveryTimeline": "On methimazole, biochemical improvement starts in 2-4 weeks, with euthyroidism reached by 6-12 weeks. After radioiodine, thyrotoxicosis usually resolves over 6-18 weeks, with hypothyroidism appearing within 6 months in most patients. Following thyroidectomy, patients are euthyroid on levothyroxine within 4-8 weeks of dose stabilization. Subacute thyroiditis runs a characteristic course: thyrotoxic phase of 4-8 weeks, hypothyroid phase of 4-12 weeks, then recovery to normal in over 90% within a year.",
+
+  "complications": [
+    "Thyroid storm — a fulminant decompensation with fever, tachycardia over 130, heart failure, and altered mental status; mortality 10-30%",
+    "Atrial fibrillation and other supraventricular tachyarrhythmias, affecting 10-15% of overt thyrotoxic patients and increasing stroke risk",
+    "Heart failure with preserved or reduced ejection fraction, especially in older adults and those with prolonged untreated disease",
+    "Osteoporosis and fragility fractures from accelerated bone turnover; postmenopausal women lose 1-2% of bone density per year of untreated disease",
+    "Graves orbitopathy with corneal exposure, diplopia, or optic neuropathy in up to 5% of Graves patients",
+    "Agranulocytosis and severe hepatotoxicity with antithyroid drugs; occurs in 0.1-0.5% of treated patients within the first 90 days"
+  ],
+
+  "supportResources": [
+    { "name": "American Thyroid Association — Patient Resources", "url": "https://www.thyroid.org/patient-thyroid-information/", "description": "Authoritative patient education from the body that publishes the US guidelines on thyrotoxicosis." },
+    { "name": "British Thyroid Foundation", "url": "https://www.btf-thyroid.org/", "description": "UK patient organization with peer support, helpline, and evidence-based information." },
+    { "name": "Graves' Disease and Thyroid Foundation", "url": "https://www.gdatf.org/", "description": "Dedicated patient organization for Graves disease and thyroid eye disease, with online support groups." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "thyroiditis", "name": "Thyroiditis", "keyDifference": "Thyroiditis causes thyrotoxicosis through destructive release of stored hormone, not overproduction. Radioiodine uptake is suppressed (the key distinguishing test), neck pain may be present in subacute forms, and the thyrotoxic phase is self-limited over 4-12 weeks rather than persistent." },
+    { "slug": "goiter", "name": "Goiter", "keyDifference": "A goiter is simply enlargement of the thyroid gland and can occur with normal, low, or high hormone levels. Most goiters are euthyroid; only toxic multinodular goiter produces thyrotoxicosis. A goiter without biochemical thyrotoxicosis does not require antithyroid drugs." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "keyDifference": "Hyperthyroidism is the subset of thyrotoxicosis caused by overproduction of hormone by the thyroid gland itself (Graves disease, toxic nodular disease). All hyperthyroidism is thyrotoxicosis, but not all thyrotoxicosis is hyperthyroidism — thyroiditis and exogenous hormone use are thyrotoxicosis without hyperthyroidism." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "keyDifference": "Atrial fibrillation can be a complication or presenting feature of thyrotoxicosis. New-onset atrial fibrillation in any adult under 65 should prompt TSH testing. Treating the underlying thyrotoxicosis restores sinus rhythm in 60-80% of cases without separate antiarrhythmic therapy." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation" },
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "heart-failure", "name": "Heart Failure" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "thyroiditis", "name": "Thyroiditis", "relevance": "Sibling condition causing thyrotoxicosis through hormone release rather than overproduction." },
+    { "slug": "goiter", "name": "Goiter", "relevance": "Underlying anatomical substrate for toxic multinodular goiter, one of the major causes of thyrotoxicosis." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "relevance": "The subset of thyrotoxicosis caused by gland overproduction; most often used interchangeably with thyrotoxicosis in patient-facing literature." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "relevance": "Common cardiovascular complication; affects 10-15% of patients with overt thyrotoxicosis." },
+    { "slug": "graves-disease-nuclear", "name": "Graves Disease (Nuclear Imaging)", "relevance": "Specific imaging-based subtype for the most common cause of thyrotoxicosis." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is the difference between thyrotoxicosis and hyperthyroidism?",
+      "answer": "Thyrotoxicosis is any state of excess circulating thyroid hormone, regardless of source. Hyperthyroidism is the subset caused by overproduction of hormone by the thyroid gland itself, such as Graves disease or toxic nodular disease. Thyroiditis and exogenous hormone overdose produce thyrotoxicosis without hyperthyroidism, because the gland is not overproducing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of thyrotoxicosis?",
+      "answer": "Early signs include unexplained weight loss, a fast resting heart rate, heat intolerance, fine hand tremor, anxiety, irritability, and difficulty sleeping. Older adults often present only with new-onset atrial fibrillation or apathy. A suppressed TSH on routine blood work confirms the suspicion and prompts further testing for cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is thyrotoxicosis diagnosed?",
+      "answer": "Diagnosis follows two steps. First, blood tests showing a suppressed TSH below 0.1 mIU/L with elevated free T4 or free T3 confirm thyrotoxicosis. Second, the cause is identified using TSH-receptor antibody testing, radioiodine uptake scanning, or thyroid ultrasound with Doppler. Most patients have a clear diagnosis within 1-2 weeks of presentation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for Graves disease?",
+      "answer": "There is no single best treatment. The three options — antithyroid drugs, radioactive iodine, and total thyroidectomy — all have cure rates above 90%. Choice depends on age, pregnancy plans, severity, presence of orbitopathy, and patient preference. Most patients begin with methimazole; about half of Graves patients remit after 12-18 months of treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is radioactive iodine safe?",
+      "answer": "Radioactive iodine (I-131) has been used since 1941 and is one of the most studied treatments in medicine. It does not increase the long-term risk of cancer or infertility at standard treatment doses. It is contraindicated in pregnancy and breastfeeding, and may worsen active Graves orbitopathy unless steroid cover is given. Most patients become hypothyroid within a year and take daily levothyroxine.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can thyrotoxicosis be cured?",
+      "answer": "Yes. Radioiodine cures over 90% of Graves and toxic nodular thyrotoxicosis with a single dose, and total thyroidectomy cures over 95%. Both leave patients hypothyroid, requiring daily levothyroxine. Antithyroid drugs induce sustained remission in 40-50% of Graves patients after 12-18 months of treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is thyroid storm?",
+      "answer": "Thyroid storm is a life-threatening decompensation of thyrotoxicosis with fever above 38.5°C, heart rate over 130, agitation or altered mental status, vomiting, and multiorgan dysfunction. It is usually precipitated by infection, surgery, or radioiodine in untreated patients. Mortality is 10-30%. Treatment is intensive-care with propylthiouracil, beta-blockers, iodine, and glucocorticoids.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do my eyes bulge in Graves disease?",
+      "answer": "TSH-receptor antibodies cross-react with fibroblasts behind the eye, causing inflammation and accumulation of glycosaminoglycans and fat in the orbital tissues. The expanded tissue pushes the eye forward (proptosis), retracts the eyelids, and can compress the optic nerve. Smoking triples the risk of severe orbitopathy, and quitting is the single most effective intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnancy cause thyrotoxicosis?",
+      "answer": "Yes. Human chorionic gonadotropin (hCG) weakly stimulates the thyroid, and high hCG levels in the first trimester can transiently suppress TSH (gestational transient thyrotoxicosis). Hyperemesis gravidarum and trophoblastic disease produce the highest hCG levels. Persistent thyrotoxicosis through pregnancy is most often Graves disease, which requires careful management with propylthiouracil in the first trimester.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take for methimazole to work?",
+      "answer": "Symptoms such as palpitations and tremor improve within days when a beta-blocker is added. Biochemical markers (free T4 and free T3) begin to fall after 2-4 weeks of methimazole. Full euthyroidism is reached in 6-12 weeks, after which the dose is tapered to a maintenance level of 5-10 mg daily.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can men get thyrotoxicosis?",
+      "answer": "Yes, although women are diagnosed 5-10 times more often. Men with thyrotoxicosis are more likely to develop severe complications including atrial fibrillation, congestive heart failure, and moderate-to-severe Graves orbitopathy. Diagnosis is sometimes delayed in men because the syndrome is less expected. Treatment options and outcomes are the same.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods should I avoid with thyrotoxicosis?",
+      "answer": "Limit high-iodine foods including kelp, seaweed, dulse, and supplements containing iodine or so-called thyroid support formulas. Excess caffeine worsens palpitations and insomnia. Once on antithyroid drugs and approaching euthyroidism, no specific foods are forbidden, although ongoing moderation with alcohol is sensible due to bone effects.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need medication for life after thyrotoxicosis?",
+      "answer": "If treated with radioiodine or thyroidectomy, you will take daily levothyroxine for life because the thyroid no longer produces enough hormone. If treated with antithyroid drugs and you achieve sustained remission, you may need no ongoing medication, although TSH should be monitored annually because relapse is common.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause thyrotoxicosis?",
+      "answer": "Major life stress has been linked to onset of Graves disease in case-control studies, likely by disturbing immune regulation. Stress alone does not cause thyrotoxicosis but may help trigger it in genetically predisposed people. Stress management remains useful for symptom control and quality of life but is not a substitute for medical treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is thyrotoxicosis hereditary?",
+      "answer": "Graves disease has a clear genetic component, with heritability estimated at 60-80% from twin studies. First-degree relatives of Graves patients have a 5-10 fold increased risk. Variants in HLA-DR3, CTLA4, PTPN22, and TSH-receptor genes are the main susceptibility loci. Toxic nodular disease has a weaker hereditary signal.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if thyrotoxicosis is left untreated?",
+      "answer": "Untreated thyrotoxicosis leads to progressive weight loss, muscle wasting, osteoporosis, atrial fibrillation, heart failure, and a 20% mortality at 10 years from cardiovascular causes. Risk of thyroid storm rises with infections, surgery, or trauma. Early diagnosis and treatment prevent virtually all of these outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get thyrotoxicosis?",
+      "answer": "Yes. Pediatric Graves disease affects approximately 1 in 10,000 children, peaking in adolescence and predominating in girls. Presentation includes weight loss, poor concentration, declining school performance, and behavioral change. Methimazole is first-line; radioiodine and surgery are reserved for treatment failure or relapse.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does thyrotoxicosis cause hair loss?",
+      "answer": "Yes. Diffuse non-scarring hair thinning over the scalp affects up to 50% of patients with significant thyrotoxicosis. Hair becomes fine and breaks easily. Loss is reversible: hair density recovers within 6-12 months of restoring euthyroid status. Persistent hair loss after treatment should prompt evaluation for other causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise with thyrotoxicosis?",
+      "answer": "Avoid vigorous exercise while resting heart rate is above 100 bpm. Once heart rate is controlled with beta-blockers or definitive treatment, moderate aerobic and resistance exercise is encouraged for bone and muscle preservation. Patients with cardiac complications should clear with their clinician before resuming exercise.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should I have blood tests during treatment?",
+      "answer": "During antithyroid drug titration, TSH and free T4 are checked every 4-6 weeks. Once stable on a maintenance dose, testing every 3 months is sufficient. After radioiodine, monitor every 4-6 weeks until euthyroid or until levothyroxine replacement begins. Liver function and complete blood count are checked at baseline and if symptoms suggest adverse effects.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Thyrotoxicosis (overactive thyroid syndrome)",
+
+  "regionalNames": [
+    { "name": "अतिगलग्रंथिता (Atigalagranthita)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Thyrotoxicose", "region": "France", "language": "fr" },
+    { "name": "Tirotoxicosis", "region": "Spain and Latin America", "language": "es" }
+  ],
+
+  "searchTags": [
+    "thyrotoxicosis", "hyperthyroidism", "Graves disease", "overactive thyroid",
+    "thyroid storm", "methimazole", "carbimazole", "propylthiouracil",
+    "radioactive iodine", "thyroidectomy", "TSH suppressed", "Graves orbitopathy",
+    "thyroid eye disease", "toxic nodular goiter"
+  ],
+
+  "symptomKeywords": [
+    "rapid heartbeat", "unexplained weight loss", "heat intolerance",
+    "hand tremor", "bulging eyes", "anxiety palpitations", "insomnia thyroid",
+    "neck swelling thyroid"
+  ],
+
+  "metaTitle": "Thyrotoxicosis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Thyrotoxicosis: excess thyroid hormone causing weight loss, fast heart, tremor. Symptoms, causes, diagnosis, treatment and prognosis from our medical board.",
+
+  "keywords": [
+    "thyrotoxicosis", "hyperthyroidism", "Graves disease", "thyroid storm",
+    "methimazole", "radioactive iodine", "thyroid surgery", "TSH suppressed",
+    "Graves orbitopathy", "toxic nodular goiter", "subacute thyroiditis",
+    "thyroid in pregnancy"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Proptosis_and_lid_retraction_from_Graves_Disease.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Proptosis_and_lid_retraction_from_Graves_Disease.jpg",
+      "altText": "Clinical photograph showing bilateral proptosis and upper eyelid retraction characteristic of Graves orbitopathy in thyrotoxicosis",
+      "caption": "Bilateral proptosis and lid retraction in Graves orbitopathy — the classic ocular manifestation of autoimmune thyrotoxicosis.",
+      "license": "CC BY 3.0",
+      "credit": "Jonathan Trobe, MD / University of Michigan Kellogg Eye Center via Wikimedia Commons",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Illu_thyroid_parathyroid.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Illu_thyroid_parathyroid.jpg",
+      "altText": "Anatomical diagram of the thyroid and parathyroid glands showing the bilobed butterfly shape over the trachea",
+      "caption": "Normal anatomy of the thyroid and parathyroid glands.",
+      "license": "Public Domain",
+      "credit": "US National Cancer Institute via Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Graves_Disease_Scintigraphy.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Graves_Disease_Scintigraphy.jpg",
+      "altText": "Technetium-99m thyroid scintigraphy showing diffusely increased uptake throughout an enlarged thyroid gland, characteristic of Graves disease",
+      "caption": "Thyroid scintigraphy showing diffuse high uptake — characteristic of Graves disease.",
+      "license": "CC BY-SA 3.0",
+      "credit": "Wikimedia Commons",
+      "width": 800,
+      "height": 600
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27521067/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Burch HB, Cooper DS. Management of Graves Disease: A Review. JAMA. 2015;314(23):2544-2554.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26670972/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Smith TJ, Hegedüs L. Graves' Disease. New England Journal of Medicine. 2016;375(16):1552-1565.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27797318/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Bahn RS, Burch HB, Cooper DS, et al. Hyperthyroidism and Other Causes of Thyrotoxicosis: Management Guidelines of the American Thyroid Association and American Association of Clinical Endocrinologists. Thyroid. 2011;21(6):593-646.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21510801/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Douglas RS, Kahaly GJ, Patel A, et al. Teprotumumab for the Treatment of Active Thyroid Eye Disease. New England Journal of Medicine. 2020;382(4):341-352.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31971679/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Marcocci C, Kahaly GJ, Krassas GE, et al. Selenium and the Course of Mild Graves' Orbitopathy. New England Journal of Medicine. 2011;364(20):1920-1931.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21591944/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Alexander EK, Pearce EN, Brent GA, et al. 2017 Guidelines of the American Thyroid Association for the Diagnosis and Management of Thyroid Disease During Pregnancy and the Postpartum. Thyroid. 2017;27(3):315-389.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28056690/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

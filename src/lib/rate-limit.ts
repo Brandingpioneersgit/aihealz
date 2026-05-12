@@ -1,6 +1,15 @@
 /**
- * Simple in-memory rate limiter for API routes
- * In production, use Redis or a similar distributed cache
+ * Rate limiter for API routes.
+ *
+ * Backed by Redis (`REDIS_URL`) when available so counters survive across
+ * pm2 cluster workers and process restarts. Falls back to a per-process
+ * in-memory Map when Redis is unreachable — this keeps local dev working
+ * but means production WITHOUT a Redis host gets per-worker counters
+ * (i.e. `instances * maxRequests` actual throughput in cluster mode).
+ *
+ * Configure `REDIS_URL` in production. The shared client lives in
+ * `src/lib/redis.ts`; we lazy-import it so tests / scripts that don't
+ * touch rate limiting don't pay the connection cost.
  */
 
 interface RateLimitEntry {
@@ -8,21 +17,21 @@ interface RateLimitEntry {
     resetAt: number;
 }
 
-const store = new Map<string, RateLimitEntry>();
+// Per-process fallback store. Cleaned every minute to avoid unbounded growth.
+const memStore = new Map<string, RateLimitEntry>();
 
-// Clean up expired entries periodically
-setInterval(() => {
-    const now = Date.now();
-    for (const [key, entry] of store.entries()) {
-        if (entry.resetAt < now) {
-            store.delete(key);
+if (typeof setInterval !== 'undefined') {
+    setInterval(() => {
+        const now = Date.now();
+        for (const [key, entry] of memStore.entries()) {
+            if (entry.resetAt < now) memStore.delete(key);
         }
-    }
-}, 60000); // Every minute
+    }, 60_000).unref?.();
+}
 
 export interface RateLimitConfig {
-    maxRequests: number;  // Max requests allowed
-    windowMs: number;     // Time window in milliseconds
+    maxRequests: number;
+    windowMs: number;
 }
 
 export interface RateLimitResult {
@@ -32,27 +41,98 @@ export interface RateLimitResult {
     retryAfter?: number;
 }
 
-/**
- * Check if a request should be rate limited
- * @param identifier - Unique identifier (usually IP or user ID)
- * @param config - Rate limit configuration
- */
-export function checkRateLimit(
+// Module-level so we only attempt to load ioredis once per process. Failures
+// are sticky — if Redis is unreachable we stay on in-memory for the lifetime
+// of the worker rather than retry on every request.
+let redisClient: import('ioredis').Redis | null | undefined;
+let redisDisabled = false;
+
+async function getRedis(): Promise<import('ioredis').Redis | null> {
+    if (redisDisabled) return null;
+    if (redisClient !== undefined) return redisClient;
+
+    if (!process.env.REDIS_URL) {
+        redisDisabled = true;
+        redisClient = null;
+        return null;
+    }
+
+    try {
+        const { redis } = await import('./redis');
+        // ioredis lazy-connects; trigger the connection so we surface failure here.
+        if (redis.status === 'wait' || redis.status === 'end') {
+            await redis.connect().catch(() => undefined);
+        }
+        redisClient = redis;
+        return redis;
+    } catch (err) {
+        console.warn(
+            '[rate-limit] Redis unavailable, falling back to in-memory store:',
+            (err as Error).message
+        );
+        redisDisabled = true;
+        redisClient = null;
+        return null;
+    }
+}
+
+export async function checkRateLimit(
     identifier: string,
-    config: RateLimitConfig = { maxRequests: 100, windowMs: 60000 }
-): RateLimitResult {
+    config: RateLimitConfig = { maxRequests: 100, windowMs: 60_000 }
+): Promise<RateLimitResult> {
     const now = Date.now();
-    const key = identifier;
+    const redis = await getRedis();
 
-    let entry = store.get(key);
+    if (redis) {
+        try {
+            const key = `rl:${identifier}`;
+            const pipeline = redis.multi();
+            pipeline.incr(key);
+            pipeline.pttl(key);
+            const result = await pipeline.exec();
 
-    // If no entry or expired, create new one
+            if (!result) throw new Error('redis pipeline returned null');
+
+            const count = result[0]?.[1] as number;
+            let pttl = result[1]?.[1] as number;
+
+            // First hit in window — set TTL atomically (pttl will be -1 here).
+            if (pttl < 0) {
+                await redis.pexpire(key, config.windowMs);
+                pttl = config.windowMs;
+            }
+
+            const resetAt = now + pttl;
+
+            if (count > config.maxRequests) {
+                return {
+                    success: false,
+                    remaining: 0,
+                    resetAt,
+                    retryAfter: Math.ceil(pttl / 1000),
+                };
+            }
+
+            return {
+                success: true,
+                remaining: Math.max(0, config.maxRequests - count),
+                resetAt,
+            };
+        } catch (err) {
+            // Redis hiccup — degrade to in-memory rather than reject.
+            console.warn(
+                '[rate-limit] Redis check failed, falling back to in-memory:',
+                (err as Error).message
+            );
+        }
+    }
+
+    // ── In-memory fallback ────────────────────────────────────
+    let entry = memStore.get(identifier);
+
     if (!entry || entry.resetAt < now) {
-        entry = {
-            count: 1,
-            resetAt: now + config.windowMs,
-        };
-        store.set(key, entry);
+        entry = { count: 1, resetAt: now + config.windowMs };
+        memStore.set(identifier, entry);
         return {
             success: true,
             remaining: config.maxRequests - 1,
@@ -60,10 +140,8 @@ export function checkRateLimit(
         };
     }
 
-    // Increment count
     entry.count++;
 
-    // Check if over limit
     if (entry.count > config.maxRequests) {
         return {
             success: false,
@@ -84,50 +162,29 @@ export function checkRateLimit(
  * Rate limit configurations for different endpoints
  */
 export const RATE_LIMITS = {
-    // Public API endpoints
-    public: { maxRequests: 100, windowMs: 60000 },      // 100 req/min
-
-    // Search endpoints (more restrictive)
-    search: { maxRequests: 30, windowMs: 60000 },       // 30 req/min
-
-    // AI/Bot endpoints (most restrictive)
-    ai: { maxRequests: 10, windowMs: 60000 },           // 10 req/min
-    analyze: { maxRequests: 5, windowMs: 60000 },       // 5 req/min for medical analysis
-
-    // Contact/Form submissions
-    form: { maxRequests: 5, windowMs: 60000 },          // 5 req/min
-    contact: { maxRequests: 3, windowMs: 300000 },      // 3 req/5min for contact form
-
-    // Authentication endpoints (strict to prevent brute force)
-    auth: { maxRequests: 5, windowMs: 900000 },         // 5 req/15min
-
-    // Ad tracking (prevent click fraud)
-    adClick: { maxRequests: 30, windowMs: 60000 },      // 30 clicks/min per session
-    adImpression: { maxRequests: 100, windowMs: 60000 },// 100 impressions/min
-
-    // Checkout/Payment
-    checkout: { maxRequests: 10, windowMs: 60000 },     // 10 req/min
-
-    // Admin endpoints
-    admin: { maxRequests: 200, windowMs: 60000 },       // 200 req/min
+    public: { maxRequests: 100, windowMs: 60_000 },
+    search: { maxRequests: 30, windowMs: 60_000 },
+    ai: { maxRequests: 10, windowMs: 60_000 },
+    analyze: { maxRequests: 5, windowMs: 60_000 },
+    form: { maxRequests: 5, windowMs: 60_000 },
+    contact: { maxRequests: 3, windowMs: 300_000 },
+    auth: { maxRequests: 5, windowMs: 900_000 },
+    adClick: { maxRequests: 30, windowMs: 60_000 },
+    adImpression: { maxRequests: 100, windowMs: 60_000 },
+    checkout: { maxRequests: 10, windowMs: 60_000 },
+    admin: { maxRequests: 200, windowMs: 60_000 },
 };
 
 /**
  * Get client identifier from request
  */
 export function getClientIdentifier(request: Request): string {
-    // Try to get real IP from various headers
     const forwarded = request.headers.get('x-forwarded-for');
-    if (forwarded) {
-        return forwarded.split(',')[0].trim();
-    }
+    if (forwarded) return forwarded.split(',')[0].trim();
 
     const realIp = request.headers.get('x-real-ip');
-    if (realIp) {
-        return realIp;
-    }
+    if (realIp) return realIp;
 
-    // Fallback to a hash of user agent + accept headers
     const ua = request.headers.get('user-agent') || 'unknown';
     const accept = request.headers.get('accept') || '';
     return `anon-${hashCode(ua + accept)}`;

@@ -6,6 +6,8 @@ import {
     generateBreadcrumbSchema,
 } from '@/lib/structured-data';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'Privacy Policy | aihealz',
     description: 'Privacy Policy for aihealz. Learn how we collect, use, and protect your healthcare data securely.',
@@ -164,7 +166,7 @@ export default function PrivacyPolicyPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
 
-            <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 28px' }}>
+            <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }}>
                 {/* Breadcrumb */}
                 <div
                     className="row gap-2 mono"

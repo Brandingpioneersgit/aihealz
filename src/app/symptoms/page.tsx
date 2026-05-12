@@ -5,6 +5,8 @@ import V4Page from '@/components/v4/Shell';
 import SymptomChecker from '@/components/ui/symptom-checker';
 import { FindDoctorCTA, BookTestCTA } from '@/components/ui/cta-sections';
 
+export const revalidate = 604800;
+
 const symptomsSchema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -44,12 +46,19 @@ export const metadata: Metadata = {
     title: 'AI Diagnosis & Care — Analyze Your Symptoms',
     description: 'Describe your symptoms and let our AI engine analyze possible conditions, recommend diagnostic tests, and provide safe OTC and home care remedies.',
     keywords: ['symptom checker', 'AI diagnosis', 'medical symptoms', 'health check', 'aihealz', 'home remedies', 'OTC'],
+    alternates: { canonical: '/symptoms' },
     openGraph: {
         title: 'AI Diagnosis & Care | aihealz',
         description: 'Analyze your symptoms with our AI Care Bot.',
         url: 'https://aihealz.com/symptoms',
         siteName: 'aihealz',
-    }
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AI Diagnosis & Care | aihealz',
+        description: 'Analyze your symptoms with our AI Care Bot.',
+    },
 };
 
 const TRUST_BADGES: Array<{ label: string; sub: string }> = [
@@ -74,7 +83,7 @@ export default function SymptomsPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(symptomsSchema) }}
             />
 
-            <div style={{ maxWidth: 980, margin: '0 auto', padding: '48px 28px 80px' }}>
+            <div style={{ maxWidth: 980, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}>
                 {/* Breadcrumb */}
                 <nav
                     aria-label="Breadcrumb"

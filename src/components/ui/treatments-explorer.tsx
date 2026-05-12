@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 
 /* ─── Treatment Type Classification ────────────────────────── */
@@ -42,6 +42,9 @@ interface TreatmentItem {
 interface SpecialtyGroup {
     specialty: string;
     treatments: TreatmentItem[];
+    /** Total treatments in this specialty (may exceed `treatments.length` when
+     * the server trimmed the payload). When undefined, falls back to `treatments.length`. */
+    totalCount?: number;
 }
 
 type CountryKey = 'usa' | 'uk' | 'india' | 'thailand' | 'mexico' | 'turkey' | 'uae';
@@ -375,6 +378,21 @@ export default function TreatmentsExplorer({
     const [selectedCountry, setSelectedCountry] = useState<CountryKey>(initialCountry);
     const [showCountrySelector, setShowCountrySelector] = useState(false);
     const [showFilters, setShowFilters] = useState(true);
+
+    // When parent doesn't pass defaultCountry (the static-ISR path), pull it
+    // from the aihealz-geo cookie that proxy.ts sets on every request.
+    useEffect(() => {
+        if (defaultCountry) return;
+        if (typeof document === 'undefined') return;
+        const geo = document.cookie
+            .split('; ')
+            .find(c => c.startsWith('aihealz-geo='))
+            ?.split('=')[1];
+        if (!geo) return;
+        const slug = decodeURIComponent(geo).split(':')[0];
+        const key = getCountryKey(slug);
+        if (key) setSelectedCountry(key);
+    }, [defaultCountry]);
 
     const toggleType = (type: TreatmentType) => {
         setActiveTypes(prev => {
@@ -827,7 +845,7 @@ export default function TreatmentsExplorer({
                                                 letterSpacing: '0.06em',
                                             }}
                                         >
-                                            {category.treatments.length.toLocaleString()} treatments
+                                            {(category.totalCount ?? category.treatments.length).toLocaleString()} treatments
                                         </span>
                                     </div>
 
@@ -939,12 +957,31 @@ export default function TreatmentsExplorer({
                                             </>
                                         ) : (
                                             <>
-                                                Show all {category.treatments.length} treatments
+                                                Show {category.treatments.length} treatments
                                                 <span aria-hidden="true" className="mono">▾</span>
                                             </>
                                         )}
                                     </button>
                                 )}
+                                {/* When the server trimmed the per-specialty list, surface a link
+                                    to the full catalog (conditions specialty page covers it). */}
+                                {category.totalCount !== undefined &&
+                                    category.totalCount > category.treatments.length && (
+                                        <Link
+                                            href={`/conditions/${category.specialty
+                                                .toLowerCase()
+                                                .replace(/[^a-z0-9]+/g, '-')}`}
+                                            className="btn btn-paper btn-sm"
+                                            style={{
+                                                marginTop: 8,
+                                                width: '100%',
+                                                color: 'var(--ink-3)',
+                                                fontSize: 12,
+                                            }}
+                                        >
+                                            Browse all {category.totalCount.toLocaleString()} in {category.specialty} →
+                                        </Link>
+                                    )}
                             </div>
                         </section>
                     );

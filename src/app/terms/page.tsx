@@ -6,6 +6,8 @@ import {
     generateBreadcrumbSchema,
 } from '@/lib/structured-data';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'Terms of Service | aihealz',
     description: 'Terms of Service for using aihealz directories, AI tools, and medical concierge platform.',
@@ -157,7 +159,7 @@ export default function TermsOfServicePage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
 
-            <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 28px' }}>
+            <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }}>
                 {/* Breadcrumb */}
                 <div
                     className="row gap-2 mono"

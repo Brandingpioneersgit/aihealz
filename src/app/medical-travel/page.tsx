@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'Medical travel concierge — end-to-end | aihealz',
     description:
@@ -20,7 +22,7 @@ export default function MedicalTravelPage() {
         <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             {/* ── Hero ────────────────────────────────────────── */}
             <section
-                style={{ padding: '56px 28px 48px', maxWidth: 1280, margin: '0 auto' }}
+                style={{ padding: '56px clamp(16px, 4vw, 28px) 48px', maxWidth: 1280, margin: '0 auto' }}
                 className="row gap-8 ai-start"
             >
                 <div className="col gap-5" style={{ flex: '1 1 580px', minWidth: 0 }}>
@@ -95,7 +97,7 @@ export default function MedicalTravelPage() {
             </section>
 
             {/* ── II / what we handle ──────────────────────────── */}
-            <section style={{ padding: '64px 28px', background: 'var(--bg-2)', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
+            <section style={{ padding: '64px clamp(16px, 4vw, 28px)', background: 'var(--bg-2)', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
                 <div style={{ maxWidth: 1280, margin: '0 auto' }} className="col gap-6">
                     <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 12 }}>
                         <div className="col gap-2">
@@ -181,7 +183,7 @@ export default function MedicalTravelPage() {
             </section>
 
             {/* ── III / a worked example ───────────────────────── */}
-            <section style={{ padding: '72px 28px' }}>
+            <section style={{ padding: '72px clamp(16px, 4vw, 28px)' }}>
                 <div
                     className="row gap-7 ai-start"
                     style={{ maxWidth: 1180, margin: '0 auto', flexWrap: 'wrap' }}
@@ -274,7 +276,7 @@ export default function MedicalTravelPage() {
             {/* ── IV / your medical journey (how it works) ─────── */}
             <section
                 id="how-it-works"
-                style={{ padding: '72px 28px', borderTop: '1px solid var(--rule)' }}
+                style={{ padding: '72px clamp(16px, 4vw, 28px)', borderTop: '1px solid var(--rule)' }}
             >
                 <div style={{ maxWidth: 1280, margin: '0 auto' }} className="col gap-6">
                     <div className="col gap-2">
@@ -343,7 +345,7 @@ export default function MedicalTravelPage() {
             </section>
 
             {/* ── V / from our patients (ink) ──────────────────── */}
-            <section style={{ padding: '80px 28px', background: 'var(--ink)', color: 'var(--paper)' }}>
+            <section style={{ padding: '80px clamp(16px, 4vw, 28px)', background: 'var(--ink)', color: 'var(--paper)' }}>
                 <div style={{ maxWidth: 980, margin: '0 auto' }} className="col gap-6">
                     <span
                         className="mono"
@@ -398,7 +400,7 @@ export default function MedicalTravelPage() {
             </section>
 
             {/* ── VI / final CTA ───────────────────────────────── */}
-            <section style={{ padding: '72px 28px' }}>
+            <section style={{ padding: '72px clamp(16px, 4vw, 28px)' }}>
                 <div
                     className="card"
                     style={{

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
+import { aiChat } from '@/lib/ai/openrouter';
 
 /**
  * POST /api/admin/generate-content
@@ -111,30 +112,22 @@ Important:
 - Do NOT include markdown, only output valid JSON`;
 
     try {
-        const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-                'HTTP-Referer': 'https://aihealz.com',
-                'X-Title': 'AIHealz Content Generator',
-            },
-            body: JSON.stringify({
-                model: 'deepseek/deepseek-chat',
-                messages: [{ role: 'user', content: prompt }],
+        const result = await aiChat(
+            [{ role: 'user', content: prompt }],
+            {
+                mode: 'reasoning',
                 temperature: 0.1,
-                response_format: { type: 'json_object' },
-            }),
-        });
+                maxTokens: 3500,
+                responseFormat: { type: 'json_object' },
+            },
+        );
 
-        if (!response.ok) {
-            const errorText = await response.text().catch(() => '');
-            console.error(`OpenRouter API error: ${response.status}`, errorText);
+        if (!result.ok || !result.text) {
+            console.error(`OpenRouter content-gen error: ${result.error}`);
             return null;
         }
 
-        const data = await response.json();
-        const content = JSON.parse(data.choices[0].message.content);
+        const content = JSON.parse(result.text);
         return content as GeneratedContent;
     } catch (error) {
         console.error(`Failed to generate content for ${conditionSlug}:`, error);

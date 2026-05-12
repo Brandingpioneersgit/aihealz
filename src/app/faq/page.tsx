@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 import FAQAccordion from './FAQAccordion';
+import { UTIL_IMAGES } from '@/lib/stock-images';
+
+export const revalidate = 604800;
 
 export const metadata: Metadata = {
   title: 'FAQ — answers from aihealz',
@@ -97,9 +101,9 @@ export default function FAQPage() {
       />
       <div
         className="v4-root"
-        style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}
+        style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
       >
-        <div style={{ maxWidth: 880, margin: '0 auto' }}>
+        <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <nav
             className="row gap-2 mono"
             style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}
@@ -109,15 +113,51 @@ export default function FAQPage() {
             <span style={{ color: 'var(--ink)' }}>FAQ</span>
           </nav>
 
-          <h1
-            className="display"
-            style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: '0 0 16px', fontWeight: 600 }}
-          >
-            Questions, answered.
-          </h1>
-          <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 640, marginBottom: 48 }}>
-            The things people ask us most often, grouped by what you came here for.
-          </p>
+          <div className="row gap-7 ai-end" style={{ flexWrap: 'wrap', marginBottom: 48 }}>
+            <div className="col gap-3" style={{ flex: '1 1 420px', minWidth: 0 }}>
+              <span className="section-mark">help / answers</span>
+              <h1
+                className="display"
+                style={{ fontSize: 'clamp(40px, 6vw, 72px)', lineHeight: 1, letterSpacing: '-0.04em', margin: 0, fontWeight: 600 }}
+              >
+                Questions, answered<span style={{ color: 'var(--orange)' }}>.</span>
+              </h1>
+              <p className="lede" style={{ fontSize: 18, color: 'var(--ink-2)', maxWidth: 640, margin: 0 }}>
+                The things people ask us most often, grouped by what you came here for.
+              </p>
+            </div>
+            <div
+              style={{
+                position: 'relative',
+                flex: '1 1 320px',
+                minWidth: 0,
+                aspectRatio: '4 / 3',
+                overflow: 'hidden',
+                borderRadius: 'var(--r-3, 8px)',
+                border: '1px solid var(--rule)',
+              }}
+            >
+              <Image
+                src={UTIL_IMAGES.library.src}
+                alt={UTIL_IMAGES.library.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 420px"
+                priority
+                style={{ objectFit: 'cover' }}
+              />
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background:
+                    'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
+                }}
+              />
+            </div>
+          </div>
+
+          <div style={{ maxWidth: 880 }}>
 
           {SECTIONS.map((section) => (
             <section key={section.title} style={{ marginBottom: 40 }}>
@@ -136,6 +176,7 @@ export default function FAQPage() {
                 Talk to our team →
               </Link>
             </p>
+          </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+export const revalidate = 604800;
+
 export const metadata = {
     title: 'Partner Agreement',
     description: 'Terms governing the relationship between AIHealz and verified partner providers, hospitals, and diagnostic labs.',

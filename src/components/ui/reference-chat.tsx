@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
 import Link from 'next/link';
 import DOMPurify from 'dompurify';
+import ChatGate, { detectChatGate } from '@/components/chat/ChatGate';
 
 // SSR-safe sanitize — DOMPurify is browser-only.
 function sanitize(html: string, opts: Parameters<typeof DOMPurify.sanitize>[1]): string {
@@ -145,14 +146,24 @@ export default function ReferenceChat({ category, placeholder, example, title }:
                 }),
             });
 
+            if (await detectChatGate(res)) { setLoading(false); return; }
+
             const data = await res.json();
+            // Never render server-side error strings as assistant content —
+            // they leak technical details like "rate limit exceeded" into
+            // the chat. Always fall back to a neutral in-character reply.
             const assistantMsg: Message = {
                 role: 'assistant',
-                content: data.reply || data.error || 'Something went wrong.',
+                content:
+                    data.reply ||
+                    "I'm taking a moment to think on that one — could you try sending again?",
             };
             setMessages(prev => [...prev, assistantMsg]);
         } catch {
-            setMessages(prev => [...prev, { role: 'assistant', content: 'Network error. Please try again.' }]);
+            setMessages(prev => [...prev, {
+                role: 'assistant',
+                content: "I couldn't reach the network just now — please try sending that again.",
+            }]);
         }
         setLoading(false);
         inputRef.current?.focus();
@@ -172,6 +183,10 @@ export default function ReferenceChat({ category, placeholder, example, title }:
     }, [messages]);
 
     return (
+        <ChatGate
+            title="Sign in to use the clinical reference"
+            subtitle="Get 5 free AI lookups today — one-time registration."
+        >
         <div
             className="card col"
             style={{
@@ -500,5 +515,6 @@ export default function ReferenceChat({ category, placeholder, example, title }:
                 </div>
             </div>
         </div>
+        </ChatGate>
     );
 }

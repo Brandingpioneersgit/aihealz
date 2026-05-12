@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { headers } from 'next/headers';
 import Script from 'next/script';
 import { Geist, Geist_Mono } from 'next/font/google';
 import V4Navbar from '@/components/v4/Navbar';
@@ -57,45 +56,48 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const SUPPORTED_LANGS = new Set([
-  'en', 'hi', 'ar', 'bn', 'de', 'es', 'fr', 'gu', 'kn',
-  'ml', 'mr', 'or', 'pa', 'pt', 'ta', 'te', 'ur',
-]);
-const RTL_LANGS = new Set(['ar', 'ur', 'he']);
-
-export default async function RootLayout({
+// Per-locale lang/dir is set by the [country]/[lang] segment layout, which
+// reads URL params (static-friendly). Root stays static so ISR works
+// site-wide; calling headers()/cookies() here would opt every route into
+// dynamic rendering.
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Middleware sets x-aihealz-lang per request; assistive tech needs the real
-  // <html lang>/<html dir>, not just meta tags.
-  const h = await headers();
-  const rawLang = (h.get('x-aihealz-lang') || 'en').toLowerCase();
-  const lang = SUPPORTED_LANGS.has(rawLang) ? rawLang : 'en';
-  const dir = RTL_LANGS.has(lang) ? 'rtl' : 'ltr';
-
   return (
     <html
-      lang={lang}
-      dir={dir}
+      lang="en"
+      dir="ltr"
       className={`${geist.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager (also injects GA4 via container) */}
+        {/* Google Tag Manager — fires GA4 via the GTM container */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-N698KG2Z');`}
+          })(window,document,'script','dataLayer','GTM-MDDCZV9X');`}
+        </Script>
+        {/* GA4 (gtag.js) — direct install in addition to GTM */}
+        <Script
+          id="ga4-loader"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-0QLXXSNGDS"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0QLXXSNGDS');`}
         </Script>
       </head>
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N698KG2Z"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MDDCZV9X"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}

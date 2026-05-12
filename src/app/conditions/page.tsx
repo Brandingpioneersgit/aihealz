@@ -1,7 +1,7 @@
 import prisma from '@/lib/db';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { headers } from 'next/headers';
 import ConditionsExplorer, { type SeverityLevel, type SpecialtyGroup } from '@/components/ui/conditions-explorer';
 import { normalizeSpecialty } from '@/lib/normalize-specialty';
 import LanguageSwitcher from '@/components/ui/language-switcher';
@@ -11,8 +11,10 @@ import {
     cleanConditionName,
     getSeverityOverride,
     isPoorlyFormatted,
+    getBaseConditionName,
 } from '@/lib/condition-cleaner';
 import { QuickActionsBar, FindDoctorCTA, BookTestCTA } from '@/components/ui/cta-sections';
+import { HERO_IMAGES, getSpecialtyImage } from '@/lib/stock-images';
 
 function formatConditionCount(count: number): string {
     if (count >= 1000) {
@@ -21,6 +23,8 @@ function formatConditionCount(count: number): string {
     }
     return `${count}+`;
 }
+
+export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
     const count = await prisma.medicalCondition.count({ where: { isActive: true } });
@@ -69,16 +73,6 @@ const normalizeSeverity = (sev: string | null, conditionName: string): SeverityL
     if (s === 'critical' || s === 'life_threatening' || s === 'life-threatening') return 'critical';
     return 'variable';
 };
-
-function getBaseConditionName(name: string): string {
-    let s = name.toLowerCase().trim();
-    s = s.replace(/,?\s*(initial encounter|subsequent encounter|sequela)$/i, '');
-    s = s.replace(/\b(left|right|bilateral|unspecified|other specified|unsp)\b/gi, '');
-    s = s.replace(/\bdue to\b.*$/i, '');
-    s = s.replace(/[,\-]+\s*$/, '').replace(/\s{2,}/g, ' ').trim();
-    s = s.replace(/of\s+of/g, 'of').replace(/\s{2,}/g, ' ').trim();
-    return s;
-}
 
 export default async function ConditionsDirectory() {
     const rawConditions = await prisma.medicalCondition.findMany({
@@ -131,28 +125,38 @@ export default async function ConditionsDirectory() {
         }
     });
 
+    // Same payload cap as /treatments — see TREATMENTS_PER_SPECIALTY note.
+    const CONDITIONS_PER_SPECIALTY = 50;
+
     const categories: SpecialtyGroup[] = Object.keys(specialtyMap)
         .sort()
-        .map(specialty => ({
-            specialty,
-            conditions: Array.from(specialtyMap[specialty].values())
-                .sort((a, b) => {
-                    if (a.isClean && !b.isClean) return -1;
-                    if (!a.isClean && b.isClean) return 1;
-                    return a.name.localeCompare(b.name);
-                })
-                .map(({ slug, name, severity, bodySystem }) => ({ slug, name, severity, bodySystem })),
-        }))
+        .map(specialty => {
+            const all = Array.from(specialtyMap[specialty].values()).sort((a, b) => {
+                if (a.isClean && !b.isClean) return -1;
+                if (!a.isClean && b.isClean) return 1;
+                return a.name.localeCompare(b.name);
+            });
+            return {
+                specialty,
+                totalCount: all.length,
+                conditions: all
+                    .slice(0, CONDITIONS_PER_SPECIALTY)
+                    .map(({ slug, name, severity, bodySystem }) => ({
+                        slug,
+                        name,
+                        severity,
+                        bodySystem,
+                    })),
+            };
+        })
         .filter(c => c.conditions.length > 0);
 
     const specialtyCount = categories.length;
 
-    const hdrs = await headers();
-    const country = hdrs.get('x-aihealz-country');
-    const city = hdrs.get('x-aihealz-city');
-    const lang = hdrs.get('x-aihealz-lang') || 'en';
-    const regionalLang = hdrs.get('x-aihealz-regional-lang');
-    const regionalDisplay = hdrs.get('x-aihealz-regional-display');
+    // Geo personalization handled client-side by LanguageSwitcher / ConditionsExplorer
+    // (they read the aihealz-geo cookie on mount). Keeping the server render
+    // geo-free unlocks ISR caching for this page.
+    const lang = 'en';
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
@@ -276,18 +280,58 @@ export default async function ConditionsDirectory() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
 
             <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
-                <LanguageSwitcher
-                    country={country}
-                    city={city}
-                    lang={lang}
-                    regionalLang={regionalLang}
-                    regionalDisplay={regionalDisplay}
-                />
+                <LanguageSwitcher />
 
                 <div
-                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                     className="col gap-7"
                 >
+                    {/* ── Hero banner image ────────────────────── */}
+                    <div
+                        style={{
+                            position: 'relative',
+                            width: '100%',
+                            aspectRatio: '32 / 9',
+                            maxHeight: 340,
+                            overflow: 'hidden',
+                            borderRadius: 'var(--r-3, 8px)',
+                            border: '1px solid var(--rule)',
+                        }}
+                    >
+                        <Image
+                            src={HERO_IMAGES.lab.src}
+                            alt={HERO_IMAGES.lab.alt}
+                            fill
+                            sizes="(max-width: 1280px) 100vw, 1280px"
+                            priority
+                            style={{ objectFit: 'cover' }}
+                        />
+                        <div
+                            aria-hidden="true"
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background:
+                                    'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
+                            }}
+                        />
+                        <span
+                            className="mono"
+                            style={{
+                                position: 'absolute',
+                                left: 'clamp(16px, 3vw, 28px)',
+                                bottom: 18,
+                                color: 'rgba(255,255,255,0.9)',
+                                fontSize: 11,
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.12em',
+                                fontWeight: 500,
+                            }}
+                        >
+                            ● the index / by condition
+                        </span>
+                    </div>
+
                     {/* ── Hero ─────────────────────────────────── */}
                     <header className="col gap-4">
                         <div
@@ -435,39 +479,70 @@ export default async function ConditionsDirectory() {
                                 const cols = 4;
                                 const isLastCol = (i + 1) % cols === 0;
                                 const isLastRow = i >= FEATURED_SPECIALTIES.length - cols;
+                                const img = getSpecialtyImage(spec.name);
                                 return (
                                     <Link
                                         key={spec.name}
                                         href={`/conditions/${spec.name.toLowerCase()}`}
-                                        className="col gap-3"
+                                        className="col"
                                         style={{
-                                            padding: '20px 22px',
+                                            padding: 0,
                                             borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
                                             borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                            overflow: 'hidden',
                                         }}
                                     >
-                                        <div className="row between ai-center">
-                                            <div className="spec-icon">{spec.abbr}</div>
-                                            <span
-                                                className="mono"
-                                                style={{ fontSize: 11, color: 'var(--ink-3)' }}
-                                            >
-                                                {count.toLocaleString()}
-                                            </span>
-                                        </div>
-                                        <div>
+                                        <div
+                                            style={{
+                                                position: 'relative',
+                                                width: '100%',
+                                                aspectRatio: '16 / 9',
+                                                overflow: 'hidden',
+                                                background: 'var(--bg-2)',
+                                                borderBottom: '1px solid var(--rule)',
+                                            }}
+                                        >
+                                            <Image
+                                                src={img.src}
+                                                alt={img.alt}
+                                                fill
+                                                sizes="(max-width: 768px) 50vw, 280px"
+                                                style={{ objectFit: 'cover' }}
+                                            />
                                             <div
-                                                className="display"
+                                                aria-hidden="true"
                                                 style={{
-                                                    fontSize: 18,
-                                                    letterSpacing: '-0.02em',
-                                                    fontWeight: 500,
+                                                    position: 'absolute',
+                                                    inset: 0,
+                                                    background:
+                                                        'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
                                                 }}
-                                            >
-                                                {spec.name}
+                                            />
+                                        </div>
+                                        <div className="col gap-3" style={{ padding: '16px 22px 20px' }}>
+                                            <div className="row between ai-center">
+                                                <div className="spec-icon">{spec.abbr}</div>
+                                                <span
+                                                    className="mono"
+                                                    style={{ fontSize: 11, color: 'var(--ink-3)' }}
+                                                >
+                                                    {count.toLocaleString()}
+                                                </span>
                                             </div>
-                                            <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
-                                                {spec.description}
+                                            <div>
+                                                <div
+                                                    className="display"
+                                                    style={{
+                                                        fontSize: 18,
+                                                        letterSpacing: '-0.02em',
+                                                        fontWeight: 500,
+                                                    }}
+                                                >
+                                                    {spec.name}
+                                                </div>
+                                                <div className="muted" style={{ fontSize: 12, marginTop: 2 }}>
+                                                    {spec.description}
+                                                </div>
                                             </div>
                                         </div>
                                     </Link>
@@ -484,13 +559,12 @@ export default async function ConditionsDirectory() {
                         <ConditionsExplorer
                             categories={categories}
                             totalCount={totalCount}
-                            country={country}
                             lang={lang}
                         />
                     </section>
 
                     {/* ── Find Doctor / Book Test CTAs ──────────── */}
-                    <FindDoctorCTA variant="banner" location={city || undefined} />
+                    <FindDoctorCTA variant="banner" />
                     <BookTestCTA variant="card" />
 
                     {/* ── FAQ ────────────────────────────────────── */}
@@ -507,7 +581,7 @@ export default async function ConditionsDirectory() {
                         <div
                             style={{
                                 display: 'grid',
-                                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                                 gap: 16,
                             }}
                         >

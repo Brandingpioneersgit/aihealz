@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, Suspense, useMemo, lazy } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import DOMPurify from 'dompurify';
+import ChatGate, { detectChatGate } from '@/components/chat/ChatGate';
 
 // DOMPurify is browser-only; on the server it's a stub. Resolve the actual
 // sanitizer lazily so SSR/prerender doesn't blow up calling .sanitize() on a
@@ -138,6 +139,8 @@ function DiagnosticChatContent() {
                     providerSlug,
                 }),
             });
+
+            if (await detectChatGate(response)) { setLoading(false); return; }
 
             const data = await response.json();
 
@@ -494,7 +497,12 @@ export default function DiagnosticChatPage() {
                 </div>
             </main>
         }>
-            <DiagnosticChatContent />
+            <ChatGate
+                title="Sign in to chat about lab tests"
+                subtitle="Get 5 free AI messages today — quick one-time registration."
+            >
+                <DiagnosticChatContent />
+            </ChatGate>
         </Suspense>
     );
 }

@@ -13,6 +13,8 @@ import {
 } from '@/lib/structured-data';
 import { AIDiagnosisCTA, FindDoctorCTA, MedicalTravelCTA } from '@/components/ui/cta-sections';
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: 'Lab Tests & Diagnostic Services | Compare Prices & Book Online | AIHealz',
   description: 'Find lab tests, blood tests, imaging scans, and health checkups near you. Compare prices from certified diagnostic centers, read reviews, and book appointments online.',
@@ -130,7 +132,7 @@ export default async function TestsPage() {
       />
 
       <div
-        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+        style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
         className="col gap-7"
       >
         {/* ── Hero ─────────────────────────────────── */}

@@ -5,6 +5,8 @@ import { notFound } from 'next/navigation';
 import { getGeoContext } from '@/lib/geo-context';
 import { getTestTypeStyle } from '@/lib/test-type-colors';
 
+export const revalidate = 3600;
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -131,7 +133,7 @@ export default async function TestDetailPage({ params }: PageProps) {
 
       <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
         <div
-          style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+          style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
           className="col gap-7"
         >
           {/* ── Breadcrumb ─────────────────────────── */}

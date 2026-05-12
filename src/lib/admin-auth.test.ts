@@ -30,8 +30,14 @@ describe('admin-auth session signing', () => {
             exp: Date.now() + 60_000,
         };
         const token = signSession(payload);
-        // Flip a character in the base64 payload to break the signature.
-        const tampered = token.slice(0, -2) + (token.endsWith('A') ? 'B' : 'A') + token.slice(-1);
+        // Decode, flip the last hex digit of the signature, re-encode. This
+        // guarantees we touch a meaningful byte (mutating base64 padding can
+        // round-trip to the same buffer).
+        const decoded = Buffer.from(token, 'base64').toString('utf8');
+        const lastChar = decoded.slice(-1);
+        const flipped = lastChar === '0' ? '1' : '0';
+        const tamperedDecoded = decoded.slice(0, -1) + flipped;
+        const tampered = Buffer.from(tamperedDecoded, 'utf8').toString('base64');
         const verified = verifySession(tampered);
         expect(verified).toBeNull();
     });

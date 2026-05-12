@@ -3,9 +3,10 @@ import path from 'path';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { headers } from 'next/headers';
 import { isRTL, getLanguageConfig, getUITranslations } from '@/lib/i18n';
 import { buildAlternateLanguages } from '@/lib/countries';
+
+export const revalidate = 3600;
 
 // ─── Types ───────────────────────────────────────────────────
 
@@ -162,8 +163,6 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 
 export default async function TreatmentPage({ params }: { params: Promise<{ country: string; lang: string; treatment: string }> }) {
     const { country, lang, treatment } = await params;
-    const hdrs = await headers();
-    const detectedCountry = hdrs.get('x-aihealz-country');
 
     const ui = getUITranslations(lang);
     const langConfig = getLanguageConfig(lang);
@@ -187,11 +186,8 @@ export default async function TreatmentPage({ params }: { params: Promise<{ coun
     const treatmentName = treatmentData?.translatedName || treatmentData?.name || treatment.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const typeLabel = TYPE_LABEL[treatmentData?.type || 'medical'] || TYPE_LABEL.medical;
 
-    const userCountryKey: CountryKey = (
-        findCountryBySlug(country)?.key ||
-        COUNTRIES.find(c => c.key === detectedCountry?.toLowerCase())?.key ||
-        'usa'
-    );
+    // URL country is authoritative for this route; default to 'usa' if unknown.
+    const userCountryKey: CountryKey = findCountryBySlug(country)?.key || 'usa';
 
     const relatedTreatments = treatments
         .filter(t => t.specialty === treatmentData?.specialty && t.name !== treatmentData?.name)
@@ -317,7 +313,7 @@ export default async function TreatmentPage({ params }: { params: Promise<{ coun
                 style={{ background: 'var(--bg)', color: 'var(--ink)' }}
             >
                 <div
-                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                    style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                     className="col gap-7"
                 >
                     {/* Language indicator */}
@@ -837,7 +833,7 @@ export default async function TreatmentPage({ params }: { params: Promise<{ coun
                         <div
                             style={{
                                 display: 'grid',
-                                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                                 gap: 16,
                             }}
                         >

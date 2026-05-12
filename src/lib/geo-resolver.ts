@@ -1,12 +1,46 @@
 import prisma from './db';
-import type { Geography } from '@prisma/client';
+
+/**
+ * Geography row narrowed to the fields actually consumed by the content
+ * engine and breadcrumb/SEO schemas. We deliberately exclude:
+ *   - population  (BigInt — breaks RSC JSON serialization)
+ *   - latitude/longitude  (Prisma Decimal — also unfriendly to JSON)
+ *   - localeConfig, isoCode, timezone, createdAt  (unused at the page level)
+ * If a downstream needs any of these, fetch them through a dedicated
+ * query rather than widening this base type.
+ */
+export type GeoNode = {
+    id: number;
+    name: string;
+    slug: string;
+    level: string;
+    parentId: number | null;
+    supportedLanguages: string[];
+    isActive: boolean;
+};
 
 export interface GeoChain {
-    country?: Geography;
-    state?: Geography;
-    city?: Geography;
-    locality?: Geography;
+    country?: GeoNode;
+    state?: GeoNode;
+    city?: GeoNode;
+    locality?: GeoNode;
 }
+
+/**
+ * Re-usable Prisma `select` for any `prisma.geography.find*` call whose
+ * result might end up in an RSC payload. Excludes the BigInt `population`
+ * and Decimal `latitude`/`longitude` columns that break JSON serialization.
+ * Import this whenever you need a Geography row in a page route.
+ */
+export const GEO_NODE_SELECT = {
+    id: true,
+    name: true,
+    slug: true,
+    level: true,
+    parentId: true,
+    supportedLanguages: true,
+    isActive: true,
+} as const;
 
 /**
  * Resolve a geography chain from URL slugs.
@@ -22,17 +56,21 @@ export async function resolveGeoChain(slugs: string[]): Promise<GeoChain> {
     const chain: GeoChain = {};
     const levels = ['country', 'state', 'city', 'locality'] as const;
 
-    // Fetch all geographies matching any of the slugs in a single query
+    // Fetch all geographies matching any of the slugs in a single query.
+    // Use an explicit `select` so BigInt (population) and Decimal
+    // (latitude/longitude) fields never enter the geoChain — those break
+    // Next.js RSC JSON serialization downstream.
     const allMatches = await prisma.geography.findMany({
         where: {
             slug: { in: slugs.map(s => s.toLowerCase()) },
             isActive: true,
         },
+        select: GEO_NODE_SELECT,
         orderBy: { level: 'asc' }, // country first
     });
 
     // Group by slug for quick lookup
-    const bySlug = new Map<string, Geography[]>();
+    const bySlug = new Map<string, GeoNode[]>();
     for (const geo of allMatches) {
         const existing = bySlug.get(geo.slug) || [];
         existing.push(geo);
@@ -70,7 +108,7 @@ export async function resolveGeoChain(slugs: string[]): Promise<GeoChain> {
 /**
  * Get the most specific (deepest) geography from a chain.
  */
-export function getDeepestGeo(chain: GeoChain): Geography | null {
+export function getDeepestGeo(chain: GeoChain): GeoNode | null {
     return chain.locality || chain.city || chain.state || chain.country || null;
 }
 

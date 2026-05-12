@@ -222,6 +222,21 @@ export function isPoorlyFormatted(name: string): boolean {
 }
 
 /**
+ * Collapse an ICD-coded condition name to its underlying base condition name.
+ * Used for grouping variants together and for canonical-fallback lookups.
+ * Mirrors the logic that the conditions directory page uses.
+ */
+export function getBaseConditionName(name: string): string {
+    let s = name.toLowerCase().trim();
+    s = s.replace(/,?\s*(initial encounter|subsequent encounter|sequela)$/i, '');
+    s = s.replace(/\b(left|right|bilateral|unspecified|other specified|unsp)\b/gi, '');
+    s = s.replace(/\bdue to\b.*$/i, '');
+    s = s.replace(/[,\-]+\s*$/, '').replace(/\s{2,}/g, ' ').trim();
+    s = s.replace(/of\s+of/g, 'of').replace(/\s{2,}/g, ' ').trim();
+    return s;
+}
+
+/**
  * Get severity override if applicable
  */
 export function getSeverityOverride(name: string): 'mild' | 'moderate' | 'severe' | 'critical' | null {

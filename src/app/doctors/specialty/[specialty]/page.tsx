@@ -178,7 +178,7 @@ export default async function SpecialtyDoctorsPage({ params }: { params: PagePar
     if (doctors.length === 0) {
         return (
             <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
-                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 80px' }} className="col gap-7">
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px clamp(16px, 4vw, 28px) 80px' }} className="col gap-7">
                     <nav
                         className="row gap-2 mono"
                         style={{
@@ -239,7 +239,7 @@ export default async function SpecialtyDoctorsPage({ params }: { params: PagePar
 
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
-            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 28px 80px' }} className="col gap-7">
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '96px clamp(16px, 4vw, 28px) 80px' }} className="col gap-7">
                 {/* Breadcrumb */}
                 <nav
                     className="row gap-2 mono"

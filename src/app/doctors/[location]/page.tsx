@@ -5,10 +5,15 @@ import { notFound } from 'next/navigation';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { AvatarWithFallback } from '@/components/ui/image-with-fallback';
 
+export const revalidate = 3600;
+
 // ── Dynamic SEO Metadata ────────────────────────────────────
 export async function generateMetadata({ params }: { params: Promise<{ location: string }> }): Promise<Metadata> {
     const { location } = await params;
-    const geo = await prisma.geography.findFirst({ where: { slug: location, isActive: true } });
+    const geo = await prisma.geography.findFirst({
+        where: { slug: location, isActive: true },
+        select: { id: true, name: true, level: true },
+    });
     if (!geo) return { title: 'Doctors | aihealz' };
 
     const levelLabel = geo.level === 'country' ? 'Country' : geo.level === 'state' ? 'State' : 'City';
@@ -44,6 +49,7 @@ export default async function LocationDoctors({ params }: { params: Promise<{ lo
 
     const geo = await prisma.geography.findFirst({
         where: { slug: location, isActive: true },
+        select: { id: true, name: true, level: true, slug: true },
     });
 
     if (!geo) notFound();
@@ -57,7 +63,7 @@ export default async function LocationDoctors({ params }: { params: Promise<{ lo
         take: 50,
         include: {
             specialties: { include: { condition: true } },
-            geography: true,
+            geography: { select: { name: true } },
         },
     });
 
@@ -104,7 +110,7 @@ export default async function LocationDoctors({ params }: { params: Promise<{ lo
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
             <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
-                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+                <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
 
                     {/* Breadcrumb */}
                     <nav

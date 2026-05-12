@@ -116,7 +116,7 @@ export default function LabTestsDirectory() {
                     style={{
                         maxWidth: 1280,
                         margin: '0 auto',
-                        padding: '64px 28px',
+                        padding: '64px clamp(16px, 4vw, 28px)',
                         display: 'flex',
                         justifyContent: 'center',
                     }}
@@ -140,7 +140,7 @@ export default function LabTestsDirectory() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             <div
-                style={{ maxWidth: 1100, margin: '0 auto', padding: '48px 28px 80px' }}
+                style={{ maxWidth: 1100, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                 className="col gap-6"
             >
                 <nav

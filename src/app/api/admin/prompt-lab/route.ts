@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
+import { aiChat, aiKey, pickModel } from '@/lib/ai/openrouter';
 
 /**
  * CMS: Prompt Lab
@@ -50,39 +51,24 @@ export async function POST(request: NextRequest) {
         let actualOutput: string | null = null;
         let tokenCount: number | null = null;
         let latencyMs: number | null = null;
-        let modelUsed = process.env.AI_MODEL || 'gpt-4o-mini';
+        let modelUsed = process.env.AI_MODEL || pickModel('chat');
 
-        if (sampleInput) {
-            const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
-            const apiBase = process.env.AI_API_BASE || 'https://api.openai.com/v1';
-
-            if (apiKey) {
-                const start = Date.now();
-                const response = await fetch(`${apiBase}/chat/completions`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`,
-                    },
-                    body: JSON.stringify({
-                        model: modelUsed,
-                        messages: [
-                            { role: 'system', content: systemPrompt },
-                            { role: 'user', content: sampleInput },
-                        ],
-                        temperature: 0.2,
-                        max_tokens: 2000,
-                    }),
-                });
-
-                latencyMs = Date.now() - start;
-
-                if (response.ok) {
-                    const data = await response.json();
-                    actualOutput = data.choices?.[0]?.message?.content || null;
-                    tokenCount = data.usage?.total_tokens || null;
-                    modelUsed = data.model || modelUsed;
-                }
+        if (sampleInput && aiKey()) {
+            const start = Date.now();
+            const result = await aiChat(
+                [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: sampleInput },
+                ],
+                { mode: 'chat', temperature: 0.2, maxTokens: 2000 },
+            );
+            latencyMs = Date.now() - start;
+            if (result.ok) {
+                actualOutput = result.text || null;
+                tokenCount =
+                    (result.raw as { usage?: { total_tokens?: number } })?.usage?.total_tokens ||
+                    null;
+                modelUsed = result.model || modelUsed;
             }
         }
 

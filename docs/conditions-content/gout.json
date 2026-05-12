@@ -1,0 +1,554 @@
+{
+  "_meta": {
+    "slug": "gout",
+    "tier": 1,
+    "headTerm": "gout",
+    "longTailKeywords": [
+      "gout symptoms",
+      "gout treatment",
+      "gout causes",
+      "gout diet",
+      "gout vs pseudogout",
+      "gout in big toe",
+      "gout flare treatment",
+      "uric acid gout",
+      "allopurinol for gout",
+      "is gout curable"
+    ],
+    "primarySpecialty": "Rheumatology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2020 ACR guideline, 2022 NICE NG219, NHANES 2007-2016 prevalence data, and Nat Rev Dis Primers 2019 review. Numbers and drug names checked against UpToDate Lexicomp."
+  },
+
+  "h1Title": "Gout: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Rheumatology",
+
+  "heroOverview": "Gout is the most common form of inflammatory arthritis in adults, caused by monosodium urate crystals depositing inside joints when blood uric acid stays elevated for years. It affects roughly 4% of adults in the United States and a rising share of adults globally, with men over 40 and post-menopausal women at highest risk. The classic first attack hits the base of the big toe overnight — sudden, severe, often described as the worst pain a person has felt. Untreated, attacks recur and the disease progresses to chronic tophaceous gout, joint damage, and kidney stones. Effective treatment exists at every stage: flares respond to anti-inflammatory drugs within 24-48 hours, and long-term urate-lowering therapy can prevent recurrence entirely.",
+
+  "keyStats": {
+    "prevalence": "3.9% of US adults (NHANES 2007-2016); rising globally",
+    "demographics": "Men 4-5x more affected than premenopausal women; equal rates after menopause",
+    "avgAge": "First attack typically age 30-50 in men, 60+ in women",
+    "globalCases": "~50 million people worldwide; prevalence has doubled in 30 years"
+  },
+
+  "definition": "Gout (ICD-10: M10) is a crystal-deposition arthropathy driven by hyperuricemia — sustained elevation of serum urate above the physiologic saturation point of approximately 6.8 mg/dL (404 µmol/L). At concentrations beyond this threshold, uric acid precipitates as needle-shaped monosodium urate (MSU) crystals in synovial fluid, cartilage, tendons, and soft tissue. The crystals are recognized as danger signals by resident macrophages, which trigger the NLRP3 inflammasome and release interleukin-1β, producing the abrupt, intense joint inflammation that defines a gout flare. The condition is staged from asymptomatic hyperuricemia, through acute intermittent flares, to chronic tophaceous gout with visible urate deposits called tophi, joint erosion, and renal involvement. Gout shares overlapping risk pathways with metabolic syndrome — hypertension, chronic kidney disease, type 2 diabetes, and cardiovascular disease — and is now classified as a systemic metabolic disorder, not just a joint condition. It is managed by rheumatologists in most countries, with primary care, orthopedics, and nephrology often involved depending on stage and complications.",
+
+  "typesClassification": [
+    { "type": "Asymptomatic hyperuricemia", "description": "Elevated serum urate (>6.8 mg/dL) without joint symptoms. Most people in this stage never develop gout, though risk rises with urate level." },
+    { "type": "Acute gout flare", "description": "Sudden monoarticular inflammation, peaks within 12-24 hours, resolves over 7-14 days even without treatment. The first metatarsophalangeal joint (big toe) is involved in 50% of first attacks." },
+    { "type": "Intercritical gout", "description": "The asymptomatic interval between flares. Patients feel normal, but urate crystals continue to accumulate in joints and soft tissue." },
+    { "type": "Chronic tophaceous gout", "description": "Develops after years of untreated disease. Visible firm nodules (tophi) appear over joints, ears, and tendons. Joint damage and deformity become permanent. Attack frequency often increases." }
+  ],
+
+  "primarySymptoms": [
+    "Sudden severe pain in a single joint, peaking within 12-24 hours and most often striking the base of the big toe (podagra) — present in roughly 50% of first attacks.",
+    "Intense redness over the affected joint, often described as bright red or purplish, which can mimic skin infection.",
+    "Marked swelling and warmth, with the joint visibly enlarged and tender to even light pressure such as a bedsheet.",
+    "Limited range of motion in the affected joint during the flare — bearing weight on a gouty toe is typically impossible.",
+    "Onset overnight or in the early morning, often waking the patient from sleep without preceding injury.",
+    "Self-limited course: untreated flares resolve over 7-14 days, with peeling skin over the joint as inflammation settles.",
+    "Recurrent attacks affecting the same or new joints, with the interval between flares shortening over time if untreated.",
+    "Tophi appearing as firm, painless, chalky-white nodules over joints, ear helix, Achilles tendon, or olecranon bursa — a late sign indicating chronic disease.",
+    "Low-grade fever and malaise can accompany severe polyarticular flares, especially in older adults.",
+    "Chronic joint stiffness and deformity in advanced disease, as repeated inflammation erodes cartilage and bone."
+  ],
+
+  "earlyWarningSigns": [
+    "A sensation of mild tingling or pressure in the big toe 6-12 hours before a flare begins (the prodrome)",
+    "First-time joint pain following a heavy meal, alcohol binge, dehydration, or starting a thiazide diuretic",
+    "Persistent serum uric acid above 6.8 mg/dL on routine blood work, even without symptoms",
+    "Family history of gout in first-degree relatives, especially with onset before age 40"
+  ],
+
+  "emergencySigns": [
+    "Fever above 38.5°C with a single hot, swollen joint — septic arthritis must be excluded urgently by joint aspiration",
+    "Severe flank pain with blood in the urine — possible obstructing uric acid kidney stone requiring imaging",
+    "Acute rash, mouth sores, or peeling skin within 8 weeks of starting allopurinol — possible Stevens-Johnson syndrome / DRESS, a medical emergency",
+    "Sudden polyarticular flare involving more than four joints with systemic illness — may require hospitalization"
+  ],
+
+  "causes": [
+    {
+      "cause": "Sustained hyperuricemia",
+      "description": "The single necessary cause of gout. Serum urate above 6.8 mg/dL allows monosodium urate crystals to form in joints and tissues. The longer and higher the elevation, the greater the crystal burden and flare risk."
+    },
+    {
+      "cause": "Renal underexcretion of uric acid",
+      "description": "Accounts for roughly 90% of cases. The kidneys filter urate but reabsorb most of it through URAT1 and GLUT9 transporters. Genetic variants in these transporters, plus age-related decline in kidney function, are the dominant drivers."
+    },
+    {
+      "cause": "Dietary purine overload",
+      "description": "Red meat, organ meat, shellfish, and high-fructose foods deliver large purine loads that metabolize to uric acid. Diet contributes about 0.5-1 mg/dL to serum urate — meaningful but smaller than genetics."
+    },
+    {
+      "cause": "Alcohol consumption, especially beer",
+      "description": "Alcohol both increases urate production (via ATP turnover) and reduces renal excretion. Beer adds purines on top. Two beers daily roughly doubles flare risk; spirits raise risk more moderately; wine has a smaller effect."
+    },
+    {
+      "cause": "Medication-induced hyperuricemia",
+      "description": "Thiazide and loop diuretics, low-dose aspirin, cyclosporine, tacrolimus, and pyrazinamide raise serum urate. Diuretic-induced gout is especially common in older adults treated for hypertension or heart failure."
+    },
+    {
+      "cause": "Cell turnover from disease or treatment",
+      "description": "Conditions and treatments that release large amounts of nucleic acid — hematologic malignancies, tumor lysis syndrome, psoriasis, chemotherapy — generate excess purines and acute hyperuricemia."
+    },
+    {
+      "cause": "Obesity and metabolic syndrome",
+      "description": "Visceral adiposity drives insulin resistance, which directly reduces renal urate excretion. Each unit increase in BMI raises gout risk by about 5%, independent of diet."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men have higher baseline urate from puberty onward; women catch up after menopause as estrogen-mediated uricosuria falls." },
+    { "factor": "Age over 40 (men) or post-menopause (women)", "category": "non-modifiable", "description": "Renal function and uric acid handling decline with age, and most first attacks occur in these windows." },
+    { "factor": "Family history of gout", "category": "genetic", "description": "Heritability estimates from twin studies are 45-73%. Variants in SLC2A9, ABCG2, SLC22A11, and SLC22A12 are well-established susceptibility loci." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Visceral fat drives insulin resistance and reduced renal urate clearance; weight loss of 5-10% measurably lowers serum urate." },
+    { "factor": "Hypertension and diuretic use", "category": "modifiable", "description": "Both raise serum urate. Switching from a thiazide to losartan (which is uricosuric) is often sufficient in mild cases." },
+    { "factor": "Chronic kidney disease", "category": "modifiable", "description": "Reduced glomerular filtration directly impairs urate excretion. By CKD stage 3, gout prevalence exceeds 25%." },
+    { "factor": "Heavy beer or spirits intake", "category": "modifiable", "description": "Two or more beers daily roughly doubles risk. Wine in moderation has a much smaller effect; total elimination is not required for most patients." },
+    { "factor": "Diet high in red meat, organ meat, and seafood", "category": "modifiable", "description": "Each additional weekly serving of red meat raises gout incidence by about 21%; seafood roughly 7% per serving (Choi 2004 HPFS data)." },
+    { "factor": "Sweetened beverages and high-fructose corn syrup", "category": "modifiable", "description": "Fructose uniquely raises urate through ATP-dependent purine turnover. Two sugar-sweetened sodas daily increases gout risk by roughly 85% in men." },
+    { "factor": "Organ transplant recipients on calcineurin inhibitors", "category": "modifiable", "description": "Cyclosporine and tacrolimus markedly raise urate; up to 25% of transplant recipients develop gout within 5 years." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence: 9.2 million adults; men 5.2%, women 2.7%",
+    "Pacific Islander and Maori populations carry the highest global rates (>10% in some Maori communities) due to ABCG2 variant frequency",
+    "Black adults have ~30% higher risk than white adults at equivalent serum urate, partly due to higher CKD prevalence",
+    "Rare in children — pediatric gout signals an underlying inborn error of purine metabolism (Lesch-Nyhan, HGPRT deficiency) and warrants genetics referral"
+  ],
+
+  "diagnosisOverview": "Diagnosis of gout is made on the combined picture of history, examination, and supportive testing. The decisive test is joint aspiration with polarized-light microscopy showing negatively birefringent needle-shaped monosodium urate crystals in synovial fluid — this confirms the diagnosis with near-100% specificity and remains the gold standard recommended by both the American College of Rheumatology and EULAR. In primary care settings where aspiration is impractical, the 2015 ACR/EULAR classification criteria and the simpler clinical algorithm (rapid onset, big-toe involvement, prior similar episodes, hyperuricemia) reach over 85% diagnostic accuracy for a typical first podagra. Serum urate is supportive but not diagnostic: about 50% of patients have a normal serum urate during an acute flare because crystals are being deposited rather than circulating. Repeat the test 2-4 weeks after the flare resolves to capture the true baseline. Imaging plays a growing role: dual-energy CT and high-resolution ultrasound can both visualize urate deposits non-invasively. The ultrasound double-contour sign over articular cartilage is roughly 80% sensitive and 75% specific for gout. Plain X-rays are normal in early disease but show 'punched-out' erosions in chronic tophaceous disease. Septic arthritis is the critical differential — when the joint is hot, swollen, and the patient is febrile, aspiration with Gram stain and culture is mandatory regardless of whether crystals are seen, because the two can coexist.",
+
+  "diagnosticTests": [
+    {
+      "test": "Synovial fluid analysis with polarized microscopy",
+      "purpose": "Gold-standard confirmation — visualizes negatively birefringent MSU crystals inside neutrophils. Also rules out septic arthritis (Gram stain, culture, cell count) and pseudogout (positively birefringent rhomboid CPPD crystals).",
+      "whatToExpect": "A rheumatologist or trained clinician inserts a thin needle into the affected joint after local anesthetic, withdraws 0.5-2 mL of fluid, and sends it to the lab. The procedure takes 5-10 minutes; mild soreness for a day is normal."
+    },
+    {
+      "test": "Serum uric acid",
+      "purpose": "Establishes baseline hyperuricemia and guides urate-lowering therapy targets. Levels are unreliable during a flare — defer until 2-4 weeks after symptoms resolve.",
+      "whatToExpect": "A standard blood draw. Results return same day in most labs. Target levels for treated gout are below 6.0 mg/dL (or below 5.0 mg/dL if tophi are present)."
+    },
+    {
+      "test": "24-hour urinary uric acid",
+      "purpose": "Distinguishes overproducers (>800 mg/24h on a regular diet) from underexcretors; useful in young patients or atypical presentations to plan therapy.",
+      "whatToExpect": "Collect all urine produced over a 24-hour window in a single container from the lab. The first morning void is discarded; the next 24 hours are collected including the morning void on day two."
+    },
+    {
+      "test": "Musculoskeletal ultrasound",
+      "purpose": "Non-invasive detection of urate deposits via the 'double-contour sign' on cartilage and tophi in soft tissue. Useful when aspiration fails or in joints difficult to tap.",
+      "whatToExpect": "A clinician applies gel and a probe over the affected joint; the scan takes 15-20 minutes and is painless. No radiation."
+    },
+    {
+      "test": "Dual-energy CT (DECT)",
+      "purpose": "Highly specific imaging that color-codes urate deposits separately from calcium. Particularly useful in atypical, polyarticular, or treatment-refractory cases.",
+      "whatToExpect": "A CT scan of the affected joints lasting 5-10 minutes, with a radiation dose comparable to a standard CT. Often arranged through a rheumatologist or musculoskeletal radiology service."
+    },
+    {
+      "test": "Plain X-ray of affected joint",
+      "purpose": "Detects late-stage erosions, periarticular tophi, and rules out fracture or other arthropathies. Normal in early disease.",
+      "whatToExpect": "Two-view radiograph of the joint. Takes a few minutes; results read same day in most centers."
+    },
+    {
+      "test": "Renal function panel (creatinine, eGFR)",
+      "purpose": "Chronic kidney disease both predisposes to gout and influences drug choice — many gout drugs require dose adjustment in CKD.",
+      "whatToExpect": "Standard blood test; usually drawn at the same time as serum urate."
+    }
+  ],
+
+  "treatmentOverview": "Gout treatment runs on two tracks that should not be confused. The first is treating an acute flare, where the goal is to shut down inflammation within hours. The second is long-term urate-lowering therapy, which dissolves crystal deposits and prevents recurrence. Both ACR 2020 and NICE NG219 strongly recommend starting urate-lowering therapy in any patient who has had two or more flares per year, a single flare with tophi, or a single flare with stage-3+ chronic kidney disease, urolithiasis, or serum urate above 9 mg/dL. The treat-to-target principle is central: rather than waiting for symptoms, urate is lowered to below 6.0 mg/dL (below 5.0 mg/dL if tophi are visible) and maintained there for life. At that level, MSU crystals slowly dissolve from joints and tophi shrink over months to years. Acute flares are managed with NSAIDs (naproxen, indomethacin, ibuprofen at full anti-inflammatory doses), oral colchicine (1.2 mg followed by 0.6 mg one hour later; do not exceed in 24 hours), or oral or intra-articular corticosteroids, depending on patient comorbidities. None of these lower urate — they only quiet the inflammation. Combining strategies is appropriate for severe flares. First-line urate-lowering therapy is allopurinol, started low (100 mg daily, or 50 mg in CKD) and titrated up every 2-4 weeks based on serum urate until target is reached, usually requiring 300-600 mg daily. Patients of Han Chinese, Thai, or Korean ancestry should be screened for HLA-B*5801 before allopurinol due to a 100-fold increased risk of severe cutaneous drug reactions. Febuxostat is second-line; pegloticase is reserved for refractory tophaceous disease. Flare prophylaxis with low-dose colchicine or an NSAID is started concurrently and continued for 3-6 months while urate is being lowered, because mobilizing crystals briefly worsens flare risk.",
+
+  "medicalTreatments": [
+    {
+      "name": "NSAIDs (naproxen 500 mg twice daily, indomethacin 50 mg three times daily, ibuprofen 800 mg three times daily)",
+      "description": "First-line for acute flares in patients without contraindications. Started at maximum anti-inflammatory dose at flare onset and tapered over 5-7 days. Avoid in CKD stage 3+, active peptic ulcer disease, anticoagulation, or heart failure.",
+      "effectiveness": "Pain relief in 75-90% of patients within 24-48 hours."
+    },
+    {
+      "name": "Colchicine (1.2 mg followed by 0.6 mg one hour later for acute flare; 0.6 mg daily for prophylaxis)",
+      "description": "Inhibits microtubule polymerization in neutrophils, blunting the inflammatory response to MSU crystals. Most effective when started within the first 12-24 hours of a flare. Dose-reduce in CKD and avoid in dialysis.",
+      "effectiveness": "Acute relief in 70-80% of patients when started early; in prophylaxis it reduces flare incidence by roughly 75% during urate-lowering initiation."
+    },
+    {
+      "name": "Oral or intra-articular corticosteroids (prednisolone 30-40 mg daily for 5 days, or methylprednisolone joint injection)",
+      "description": "Equivalent efficacy to NSAIDs in head-to-head trials. Preferred in CKD, anticoagulation, or polyarticular flare. Intra-articular injection is ideal for a single accessible joint when septic arthritis has been excluded.",
+      "effectiveness": "Pain relief in 80-90% of patients; comparable to NSAIDs in randomized trials (Janssens 2008)."
+    },
+    {
+      "name": "Allopurinol (start 100 mg daily; titrate to 300-600 mg)",
+      "description": "First-line urate-lowering therapy. A xanthine oxidase inhibitor that blocks uric acid production. Screen HLA-B*5801 in high-risk ethnicities before starting. Begin during the intercritical period or at least 2 weeks after a flare resolves.",
+      "effectiveness": "Achieves target urate (<6.0 mg/dL) in 75-80% of patients when titrated adequately. Dissolves tophi over 1-3 years."
+    },
+    {
+      "name": "Febuxostat (40-80 mg daily)",
+      "description": "Alternative xanthine oxidase inhibitor for patients intolerant of allopurinol or who fail to reach target. FDA boxed warning for cardiovascular mortality in patients with established cardiovascular disease; avoid as first-line in that group.",
+      "effectiveness": "Achieves target urate in roughly 70% of patients at 80 mg, somewhat higher than allopurinol 300 mg in head-to-head trials."
+    },
+    {
+      "name": "Probenecid (250-1000 mg twice daily)",
+      "description": "Uricosuric agent — increases renal urate excretion. Useful when xanthine oxidase inhibitors are not tolerated and renal function is preserved (eGFR > 50 mL/min). Avoid in nephrolithiasis.",
+      "effectiveness": "Effective in 60-70% when used appropriately. Often combined with allopurinol in refractory cases."
+    },
+    {
+      "name": "Pegloticase (8 mg IV every 2 weeks)",
+      "description": "Recombinant uricase enzyme that converts uric acid to soluble allantoin. Reserved for chronic refractory tophaceous gout when other agents have failed. Co-administered with methotrexate to reduce immunogenicity (MIRROR RCT, Botson 2022).",
+      "effectiveness": "Rapidly normalizes urate and dissolves tophi in 60-70% of responders with methotrexate co-therapy."
+    },
+    {
+      "name": "Anakinra or canakinumab (IL-1 inhibitors)",
+      "description": "Block the IL-1β-driven inflammation of acute flares. Used when NSAIDs, colchicine, and steroids are all contraindicated or have failed — for example, post-transplant patients or severe CKD.",
+      "effectiveness": "Pain relief in 70-85% of patients in salvage scenarios; expensive and typically reserved for specialist care."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Surgical excision of tophi",
+      "description": "Considered for large, painful, ulcerated, or infected tophi, or when tophi cause mechanical impairment (loss of pinch grip, nerve compression). Most patients respond to medical therapy alone; surgery is adjunctive.",
+      "successRate": "Symptomatic improvement in 80-90% of selected patients; recurrence is common without strict urate control."
+    },
+    {
+      "name": "Joint replacement arthroplasty",
+      "description": "Reserved for advanced erosive gouty arthritis with intractable pain and functional loss, most often at the first metatarsophalangeal joint or knee.",
+      "successRate": "Similar to arthroplasty for osteoarthritis when urate is well-controlled; infection rates are higher if urate remains elevated."
+    },
+    {
+      "name": "Carpal or tarsal tunnel release",
+      "description": "Performed when tophus deposits cause nerve compression (carpal tunnel, tarsal tunnel). Decompression plus tophus debulking restores function in most cases.",
+      "successRate": "Symptom relief in roughly 85% of cases."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Cherry consumption (fresh or extract)", "description": "Observational data (Zhang 2012) suggest a 35% reduction in flare risk with daily cherry intake over the prior 2 days. Mechanism likely involves modest urate lowering and anti-inflammatory effects. Adjunctive only — not a substitute for urate-lowering therapy." },
+    { "name": "Vitamin C supplementation (500 mg daily)", "description": "Modestly uricosuric in observational studies (about 0.5 mg/dL reduction). Effect size is too small to replace pharmacotherapy but reasonable as adjunct." }
+  ],
+
+  "whySeeSpecialist": "A rheumatologist should be involved when flares recur despite first-line treatment, when urate-lowering therapy fails to reach target after dose escalation, when tophi or erosive disease are present, when there is diagnostic uncertainty versus pseudogout or rheumatoid arthritis, or when allopurinol cannot be used due to intolerance or HLA-B*5801 positivity. Primary care manages most uncomplicated gout effectively if treat-to-target is followed.",
+
+  "doctorSelectionGuide": "Look for board certification in rheumatology, experience with treat-to-target urate-lowering protocols, comfort with joint aspiration under polarized microscopy, and access to musculoskeletal ultrasound. Ask whether the practice screens for HLA-B*5801 in patients of relevant ancestry before allopurinol. Continuity matters more than prestige — gout management is a multi-year relationship.",
+
+  "preventionStrategies": [
+    "Maintain serum urate below 6.0 mg/dL through urate-lowering therapy if you have had two or more flares, tophi, or stage-3+ CKD — this is the single most effective prevention strategy",
+    "Lose excess weight gradually — 5-10% weight loss reduces serum urate by approximately 0.5-1.0 mg/dL and lowers flare risk independent of diet",
+    "Replace thiazide diuretics with losartan or amlodipine where clinically appropriate; both are urate-neutral or modestly uricosuric",
+    "Stay well-hydrated, especially in hot climates and during illness — dehydration concentrates urate and triggers crystallization",
+    "Limit beer to under one drink daily and avoid sugar-sweetened beverages; wine in moderation has minimal effect on flare risk"
+  ],
+
+  "lifestyleModifications": [
+    "Adopt a Mediterranean or DASH-style eating pattern — both have been shown to lower serum urate and reduce cardiovascular risk, which is independently elevated in gout patients",
+    "Exercise regularly with low-impact activities (cycling, swimming, walking) for at least 150 minutes per week — improves insulin sensitivity and weight control",
+    "Track flares in a simple diary with food, alcohol, and stress entries — patterns often emerge that identify personal triggers",
+    "Maintain dental and skin hygiene and treat infections promptly, especially if on pegloticase or other immunomodulators",
+    "Wear well-cushioned footwear and avoid prolonged standing in early disease to reduce mechanical stress on the first metatarsophalangeal joint",
+    "Address sleep apnea if present — it is independently associated with hyperuricemia and gout"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Low-fat dairy (skim milk, yogurt) — uricosuric and protective in cohort studies",
+      "Cherries and cherry juice in moderation — observational reduction in flare frequency",
+      "Coffee (3-4 cups daily) — modest urate-lowering effect in both men and women",
+      "Vegetables including those traditionally restricted (spinach, asparagus, lentils) — purines from vegetable sources do not raise gout risk per HPFS data",
+      "Whole grains, nuts, and legumes as protein sources",
+      "Water — aim for 2 liters daily unless restricted for other reasons"
+    ],
+    "avoid": [
+      "Organ meats (liver, kidney, sweetbreads) — highest purine density of any food",
+      "Beer and spirits — both increase urate and flare risk; beer worst due to added purines",
+      "Sugar-sweetened beverages and high-fructose corn syrup — fructose uniquely raises urate",
+      "Anchovies, sardines, herring, mackerel — high-purine oily fish (other fish in moderation is fine)",
+      "Heavy red meat and processed meat consumption — limit to 1-2 servings per week",
+      "Crash diets and prolonged fasting — ketone bodies compete with urate for renal excretion and can trigger flares"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular low-impact aerobic exercise is safe and beneficial in stable gout. During an acute flare, rest and ice the affected joint; resume gradual movement once swelling subsides. High-intensity training is fine between flares but ensure adequate hydration, as dehydration during exercise can precipitate attacks.",
+
+  "dailyManagement": [
+    "Take urate-lowering medication at the same time daily — adherence is the strongest predictor of flare-free years",
+    "Recheck serum urate every 2-4 weeks during titration and every 6 months once at target",
+    "Keep a short course of NSAID, colchicine, or steroid prescribed for early flare treatment at home, with clear instructions on when to start",
+    "Stay hydrated, especially in hot weather, after exercise, and during illness",
+    "Carry a medical card or app note listing allopurinol allergy status (if relevant) and current urate target"
+  ],
+
+  "prognosis": "With consistent urate-lowering therapy held below 6.0 mg/dL, the long-term prognosis is excellent. Flares typically reduce by 50% within 6 months and by 80% within 2 years. Tophi shrink and often disappear over 1-3 years. Joint damage that has already occurred does not reverse, but progression halts. Untreated gout, by contrast, follows a predictable trajectory: flares become more frequent and polyarticular over 10-20 years, tophi emerge, joints erode, and cardiovascular and renal mortality rise significantly. Gout patients have a 30-40% increased all-cause mortality compared to age-matched controls, driven largely by cardiovascular events; this excess risk is reduced but not abolished by urate control. The decisive prognostic factor is not the severity of the first flare — it is whether the patient and clinician commit to treat-to-target therapy and maintain it for life.",
+
+  "recoveryTimeline": "An acute flare resolves within 7-14 days even without treatment; with NSAIDs, colchicine, or steroids started early, pain typically falls by 50% within 24 hours and full resolution within 5-7 days. Once urate-lowering therapy is started, the first 3-6 months may paradoxically see more flares as crystals mobilize — this is why prophylactic colchicine or low-dose NSAIDs are co-prescribed during this window. By month 6, most patients are flare-free. Tophi visibly shrink over 12-36 months at sustained urate below 5.0 mg/dL.",
+
+  "complications": [
+    "Chronic tophaceous gout with permanent joint deformity and erosive arthropathy — preventable with urate-lowering therapy",
+    "Uric acid kidney stones, occurring in 20-25% of long-standing gout patients; presents with flank pain and hematuria",
+    "Urate nephropathy and accelerated chronic kidney disease — bidirectional relationship with hyperuricemia and CKD",
+    "Increased cardiovascular events, including myocardial infarction and stroke, independent of conventional risk factors",
+    "Septic arthritis superimposed on a gouty joint — a hot, swollen joint in gout still warrants aspiration to exclude infection",
+    "Severe cutaneous drug reactions (Stevens-Johnson syndrome, DRESS) with allopurinol — risk highest in HLA-B*5801 carriers and in CKD"
+  ],
+
+  "supportResources": [
+    { "name": "American College of Rheumatology — Patient Information", "url": "https://rheumatology.org/patients/gout", "description": "Authoritative US patient education from the body that writes the gout guidelines." },
+    { "name": "Arthritis Foundation — Gout", "url": "https://www.arthritis.org/diseases/gout", "description": "Patient community, lifestyle resources, and clinical updates." },
+    { "name": "NICE NG219 — Gout: Diagnosis and Management", "url": "https://www.nice.org.uk/guidance/ng219", "description": "UK clinical guideline; freely accessible and useful for patients who want to read the same evidence their clinician uses." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "cppd-disease", "name": "Pseudogout (Calcium Pyrophosphate Deposition Disease)", "keyDifference": "Pseudogout most often affects the knee or wrist (not the big toe), occurs in older adults, and is caused by calcium pyrophosphate crystals — positively birefringent rhomboid crystals on polarized microscopy, distinct from the negatively birefringent needles of gout. Serum urate is usually normal." },
+    { "slug": "rheumatoid-arthritis", "name": "Rheumatoid Arthritis", "keyDifference": "Rheumatoid arthritis is symmetric, polyarticular from the start, gradual in onset, and accompanied by morning stiffness lasting over an hour. Rheumatoid factor and anti-CCP antibodies are positive; serum urate is normal. Confusion arises in chronic polyarticular gout, where joint aspiration resolves the question." },
+    { "slug": "osteoarthritis", "name": "Osteoarthritis", "keyDifference": "Osteoarthritis develops gradually over years, peaks with use rather than at rest, lacks the explosive overnight onset of gout, and is not accompanied by visible redness or warmth. Both can coexist in the same patient." },
+    { "slug": "hallux-valgus-acquired-unspecified-foot-m2010", "name": "Hallux Valgus (Bunion)", "keyDifference": "Bunion is a structural deformity of the big toe joint that develops slowly and produces dull mechanical pain when shoes press on the prominence — there is no acute inflammation, no overnight onset, and serum urate is normal. Gout can develop on top of a pre-existing bunion." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "kidney-stones", "name": "Kidney Stones" },
+    { "slug": "metabolic-syndrome-e8881", "name": "Metabolic Syndrome" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hypertension", "name": "High Blood Pressure", "relevance": "Shares metabolic risk pathway; thiazide treatment of hypertension is a common gout trigger." },
+    { "slug": "kidney-stones", "name": "Kidney Stones", "relevance": "Uric acid stones occur in 20-25% of long-standing gout patients." },
+    { "slug": "chronic-kidney-disease-stage-3-moderate-n183", "name": "Chronic Kidney Disease, Stage 3", "relevance": "CKD impairs urate excretion; gout prevalence in stage-3 CKD exceeds 25%." },
+    { "slug": "osteoarthritis", "name": "Osteoarthritis", "relevance": "Frequently coexists in older patients and can complicate diagnosis when both involve the same joint." },
+    { "slug": "metabolic-syndrome-e8881", "name": "Metabolic Syndrome", "relevance": "Insulin resistance directly reduces renal urate excretion; managing metabolic syndrome lowers gout risk and urate." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Is gout curable?",
+      "answer": "Gout is not curable in the sense that the underlying hyperuricemia tendency persists, but it is fully controllable. With urate-lowering therapy held below 6.0 mg/dL, monosodium urate crystals dissolve, flares stop recurring (typically within 6-12 months), and tophi shrink over 1-3 years. Most well-treated patients remain flare-free for years and live a normal life. The treatment is lifelong, similar to how high blood pressure is managed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I know if I have gout or something else?",
+      "answer": "The classic gout presentation is sudden severe pain in a single joint — most often the base of the big toe — that peaks within 12-24 hours, is bright red and warm, and resolves over 1-2 weeks. Definitive diagnosis requires joint aspiration to look for uric acid crystals under polarized microscopy. A blood test for uric acid supports the diagnosis but can be misleadingly normal during an attack. See a clinician promptly for any acutely hot, red, swollen joint to rule out infection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a gout attack feel like?",
+      "answer": "Most patients describe a gout flare as the worst pain they have experienced — sudden, intense, throbbing, with the joint so tender that even a bedsheet is unbearable. Onset is typically overnight, the joint becomes visibly red and swollen within hours, and weight-bearing on an affected big toe is impossible. The pain peaks at 12-24 hours and gradually settles over 1-2 weeks if untreated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What triggers a gout flare?",
+      "answer": "Common triggers include a heavy meal of red meat, organ meat, or seafood; binge alcohol consumption (especially beer); dehydration; sudden weight loss or fasting; starting or stopping urate-lowering therapy; thiazide diuretics; trauma to a joint; and intercurrent illness or surgery. The shared mechanism is a rapid shift in serum urate concentration, which destabilizes crystal deposits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does gout usually start in the big toe?",
+      "answer": "The first metatarsophalangeal joint runs slightly cooler than core body temperature and bears mechanical stress with every step. Both factors lower the solubility of uric acid in that joint, making it the first site where crystals reach the saturation point and trigger inflammation. About 50% of first attacks involve this joint, a presentation called podagra.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does a gout attack last?",
+      "answer": "Untreated, a gout flare typically resolves over 7-14 days. With anti-inflammatory treatment (NSAIDs, colchicine, or steroids) started within the first 24 hours, pain drops by half within 1-2 days and resolves over 5-7 days. The faster treatment starts, the shorter and milder the flare.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I prevent gout attacks with diet alone?",
+      "answer": "Diet changes can lower serum uric acid by approximately 0.5-1.0 mg/dL — meaningful but usually not enough on its own once gout is established. Patients with infrequent mild flares can sometimes manage with dietary changes plus weight loss. Once flares recur or tophi appear, urate-lowering medication is the only reliable way to keep urate below the crystallization threshold long-term.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is allopurinol safe long-term?",
+      "answer": "Yes, allopurinol is well-tolerated by most patients and is safe for lifelong use when serum urate, renal function, and liver function are monitored. The main risk is a severe skin reaction (Stevens-Johnson syndrome or DRESS) which occurs in roughly 1 in 1,000 starters and is strongly linked to the HLA-B*5801 gene variant — common in Han Chinese, Thai, and Korean populations. Screening before starting is recommended in those groups. Once a patient tolerates allopurinol for the first 8 weeks, the long-term safety profile is excellent.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need to take medication for the rest of my life?",
+      "answer": "If urate-lowering therapy is indicated (recurrent flares, tophi, CKD, or kidney stones), the recommendation is lifelong. The underlying tendency to high urate does not go away, and stopping medication after a few years almost always leads to flares within 12 months. Treatment is similar in pattern to managing high blood pressure or high cholesterol.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I drink alcohol with gout?",
+      "answer": "Beer and spirits should be limited or avoided — both raise serum urate and trigger flares. Wine in moderation has a much smaller effect; up to one glass daily appears acceptable for most stable patients on urate-lowering therapy. Total abstinence is rarely necessary, but binge drinking is a reliable flare trigger and should be avoided.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can women get gout?",
+      "answer": "Yes. Premenopausal women have lower urate due to the uricosuric effect of estrogen, so gout is uncommon before menopause. After menopause, women's gout risk approaches that of men, and within 10 years of menopause prevalence is similar. Postmenopausal gout often presents in the hands rather than the feet and can be mistaken for osteoarthritis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What's the difference between gout and pseudogout?",
+      "answer": "Gout is caused by monosodium urate crystals, most often affects the big toe, and presents with very high serum urate. Pseudogout (calcium pyrophosphate deposition disease) is caused by a different crystal — calcium pyrophosphate — usually involves the knee or wrist, and occurs in older adults with normal urate. Both are confirmed by joint aspiration, but the crystal shape and birefringence under polarized light differ.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are kidney stones related to gout?",
+      "answer": "Yes — uric acid kidney stones occur in 20-25% of patients with long-standing gout. Both conditions share hyperuricemia as the root cause. Adequate hydration, urinary alkalinization, and the same urate-lowering medications used for gout substantially reduce stone recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does gout cause permanent joint damage?",
+      "answer": "Untreated chronic gout does cause permanent joint erosion and deformity, visible on X-rays after 10-20 years of disease. With urate-lowering therapy maintained below 6.0 mg/dL, this progression stops and tophi shrink, though existing erosions and deformity do not reverse. Early treatment preserves joint structure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a tophus?",
+      "answer": "A tophus is a firm, painless, chalky-white deposit of monosodium urate crystals embedded in soft tissue — usually over a joint, the ear helix, the Achilles tendon, or the back of the elbow. Tophi develop after years of uncontrolled hyperuricemia and indicate a high body burden of crystals. They shrink slowly with urate-lowering therapy held below 5.0 mg/dL.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does gout treatment cost?",
+      "answer": "Acute flare treatments (NSAIDs, colchicine, prednisolone) are inexpensive generic drugs available worldwide. Allopurinol, the mainstay of long-term therapy, costs roughly USD 5-15 per month in most countries as a generic. Specialist visits, joint aspirations, and uncommon medications (febuxostat, pegloticase) add cost — pegloticase in particular runs into thousands of dollars per dose. In India and other emerging markets, allopurinol generics are widely affordable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise during a gout attack?",
+      "answer": "Avoid weight-bearing exercise on the affected joint during an acute flare — rest, elevation, and ice are the immediate measures. Once swelling and pain settle (usually 5-7 days with treatment), gradually return to normal activity. Between flares, regular low-impact exercise such as swimming, cycling, or walking is encouraged and helps with weight management and overall metabolic health.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is gout hereditary?",
+      "answer": "There is a strong genetic component — heritability is estimated at 45-73% from twin studies. Variants in genes that control uric acid transport in the kidney (SLC2A9, ABCG2, SLC22A11, SLC22A12) explain most of the familial risk. A first-degree relative with gout increases personal risk roughly 2-3 fold. Lifestyle modifies the expression of this genetic predisposition.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a rheumatologist instead of my GP?",
+      "answer": "See a rheumatologist if flares recur despite first-line treatment, if you cannot reach the urate target on standard allopurinol doses, if tophi or visible joint erosions develop, if you have known kidney disease or transplant medications complicating drug choice, or if there is diagnostic uncertainty between gout and other arthropathies. Most uncomplicated gout is managed effectively in primary care if treat-to-target is followed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why did my doctor wait to start allopurinol after my first flare?",
+      "answer": "Starting allopurinol during or immediately after an acute flare can briefly worsen flare risk as crystals mobilize. Current guidelines (ACR 2020) allow starting during a flare if anti-inflammatory cover is in place, but many clinicians prefer to wait 2-4 weeks for symptoms to settle, then start at a low dose with prophylactic colchicine alongside. Both approaches are evidence-supported.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause a gout attack?",
+      "answer": "Psychological stress alone is not an established direct trigger, but stress-related changes — disrupted sleep, dehydration, alcohol use, missed medications, surgical stress — are well-documented precipitants. Maintaining hydration, medication adherence, and steady habits during stressful periods reduces flare risk.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Gout (uric acid crystal arthritis)",
+
+  "regionalNames": [
+    { "name": "Vata Rakta", "region": "India", "language": "sa" },
+    { "name": "गठिया (Gathiya)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Goutte", "region": "France", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "gout", "uric acid", "podagra", "big toe pain", "monosodium urate", "MSU crystals",
+    "allopurinol", "colchicine", "tophi", "hyperuricemia", "crystal arthritis",
+    "inflammatory arthritis", "rheumatology", "gouty arthritis"
+  ],
+
+  "symptomKeywords": [
+    "sudden joint pain", "red swollen toe", "worst pain ever", "overnight joint attack",
+    "podagra", "swollen ankle gout", "uric acid pain", "tophi nodules"
+  ],
+
+  "metaTitle": "Gout: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Gout: sudden severe joint pain from uric acid crystals, often in the big toe. Symptoms, treatment, diet, and prognosis reviewed by our medical board.",
+
+  "keywords": [
+    "gout", "gout symptoms", "gout treatment", "gout causes", "gout diet",
+    "gout in big toe", "uric acid", "allopurinol", "gout vs pseudogout",
+    "gout flare", "tophi", "is gout curable", "gout home remedy"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gout_Signs_and_Symptoms.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Gout_Signs_and_Symptoms.jpg",
+      "altText": "Medical infographic showing the signs and symptoms of gout, including swollen red big toe, tophi on ear, and joint inflammation",
+      "caption": "Signs and symptoms of gout — including the classic inflamed first metatarsophalangeal joint (podagra) and ear tophi.",
+      "license": "CC BY-SA 4.0",
+      "credit": "scientificanimations.com / Wikimedia Commons",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "symptoms",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tophaceous_gout.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Tophaceous_gout.jpg",
+      "altText": "Clinical photograph of tophaceous gout showing chalky-white urate deposits on the fingers",
+      "caption": "Tophaceous gout — visible urate deposits (tophi) on the fingers of a long-standing untreated patient.",
+      "license": "CC BY 2.0",
+      "credit": "Arthritis Research UK Primary Care Centre, Keele University / Wikimedia Commons",
+      "width": 512,
+      "height": 353
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "complications",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gout_-_Tophus.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Gout_-_Tophus.jpg",
+      "altText": "Close-up of a gout tophus showing the firm chalky-white urate crystal deposit characteristic of chronic gout",
+      "caption": "Close-up of a gout tophus — a firm, painless deposit of monosodium urate crystals.",
+      "license": "CC BY-SA 2.0",
+      "credit": "Y. Rosen, MD / Wikimedia Commons",
+      "width": 728,
+      "height": 524
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Light_microscopy_of_a_touch_preparation_of_a_gout_tophus,_showing_urate_crystals.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Light_microscopy_of_a_touch_preparation_of_a_gout_tophus%2C_showing_urate_crystals.jpg",
+      "altText": "Light microscopy of a gout tophus touch preparation showing needle-shaped monosodium urate crystals, the diagnostic gold standard",
+      "caption": "Light microscopy showing the needle-shaped monosodium urate crystals diagnostic of gout.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Mikael Häggström, MD / Wikimedia Commons",
+      "width": 2080,
+      "height": 1536
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "FitzGerald JD, Dalbeth N, Mikuls T, et al. 2020 American College of Rheumatology Guideline for the Management of Gout. Arthritis Care & Research. 2020;72(6):744-760.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32391934/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dalbeth N, Choi HK, Joosten LAB, et al. Gout. Nature Reviews Disease Primers. 2019;5(1):69.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31273209/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Chen-Xu M, Yokose C, Rai SK, et al. Contemporary Prevalence of Gout and Hyperuricemia in the United States and Decadal Trends: NHANES 2007-2016. Arthritis & Rheumatology. 2019;71(6):991-999.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30618180/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Richette P, Doherty M, Pascual E, et al. 2016 updated EULAR evidence-based recommendations for the management of gout. Annals of the Rheumatic Diseases. 2017;76(1):29-42.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27457514/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "NICE Guideline NG219: Gout — Diagnosis and Management. National Institute for Health and Care Excellence; 2022.",
+      "url": "https://www.nice.org.uk/guidance/ng219",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Choi HK, Atkinson K, Karlson EW, Willett W, Curhan G. Purine-rich foods, dairy and protein intake, and the risk of gout in men. New England Journal of Medicine. 2004;350(11):1093-1103.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15014182/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Stamp LK, Day RO, Yun J. Allopurinol Hypersensitivity: Investigating the Cause and Minimizing the Risk. Nature Reviews Rheumatology. 2016;12(4):235-242.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26416594/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Janssens HJ, Janssen M, van de Lisdonk EH, van Riel PL, van Weel C. Use of oral prednisolone or naproxen for the treatment of gout arthritis: a double-blind, randomised equivalence trial. Lancet. 2008;371(9627):1854-1860.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18514729/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}

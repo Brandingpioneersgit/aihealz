@@ -20,7 +20,7 @@ export default async function SearchPage({ searchParams }: Props) {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
             <div
-                style={{ maxWidth: 880, margin: '0 auto', padding: '48px 28px 96px' }}
+                style={{ maxWidth: 880, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 96px' }}
                 className="col gap-6"
             >
                 {/* Breadcrumb */}

@@ -127,7 +127,7 @@ export default function BookTestPage({ params }: { params: Promise<{ slug: strin
   if (loading) {
     return (
       <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
-        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 28px' }} className="col gap-5">
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-5">
           <div style={{ height: 11, width: 200, background: 'var(--rule)', borderRadius: 'var(--r-1)' }} />
           <div style={{ height: 36, width: 360, background: 'var(--rule)', borderRadius: 'var(--r-2)' }} />
           <div className="card col gap-4" style={{ padding: 28 }}>
@@ -144,7 +144,7 @@ export default function BookTestPage({ params }: { params: Promise<{ slug: strin
   if (success) {
     return (
       <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
-        <div style={{ maxWidth: 640, margin: '0 auto', padding: '0 28px' }} className="col gap-5">
+        <div style={{ maxWidth: 640, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-5">
           <nav
             className="row gap-2 mono"
             style={{
@@ -213,7 +213,7 @@ export default function BookTestPage({ params }: { params: Promise<{ slug: strin
 
   return (
     <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
-      <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+      <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
         {/* Breadcrumb */}
         <nav
           className="row gap-2 mono"

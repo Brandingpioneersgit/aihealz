@@ -7,6 +7,8 @@ import { ReactElement } from 'react';
 import Script from 'next/script';
 import MediaGallery from '@/components/ui/media-gallery';
 
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -200,8 +202,8 @@ export default async function HospitalDetailPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-6">
+      <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 'clamp(56px, 10vw, 96px)', paddingBottom: 64 }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-6">
 
           {/* Breadcrumb */}
           <nav
@@ -223,10 +225,10 @@ export default async function HospitalDetailPage({ params }: Props) {
           </nav>
 
           {/* Hero */}
-          <section className="card" style={{ padding: 28 }}>
+          <section className="card" style={{ padding: 'clamp(20px, 4vw, 28px)' }}>
             <div className="row gap-6 ai-start" style={{ flexWrap: 'wrap' }}>
               {/* Logo */}
-              <div style={{ flexShrink: 0, width: 192 }}>
+              <div style={{ flexShrink: 0, width: 'min(192px, 100%)' }}>
                 <div
                   style={{
                     width: '100%',
@@ -253,7 +255,7 @@ export default async function HospitalDetailPage({ params }: Props) {
               </div>
 
               {/* Details */}
-              <div className="col gap-3" style={{ flex: 1, minWidth: 280 }}>
+              <div className="col gap-3" style={{ flex: '1 1 280px', minWidth: 0 }}>
                 <div className="col gap-2">
                   <span className="section-mark">hospital profile</span>
                   <div className="row gap-3 ai-baseline" style={{ flexWrap: 'wrap' }}>
@@ -705,18 +707,20 @@ export default async function HospitalDetailPage({ params }: Props) {
               {hospital.latitude && hospital.longitude && (
                 <section className="card col gap-3" style={{ padding: 24 }}>
                   <span className="section-mark">location &amp; directions</span>
-                  <div style={{ aspectRatio: '16 / 9', borderRadius: 'var(--r-3)', overflow: 'hidden', border: '1px solid var(--rule)', background: 'var(--bg-2)' }}>
-                    <iframe
-                      src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${hospital.latitude},${hospital.longitude}&zoom=15`}
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0, display: 'block' }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title={`${hospital.name} Location`}
-                    />
-                  </div>
+                  {process.env.GOOGLE_MAPS_API_KEY && (
+                    <div style={{ aspectRatio: '16 / 9', borderRadius: 'var(--r-3)', overflow: 'hidden', border: '1px solid var(--rule)', background: 'var(--bg-2)' }}>
+                      <iframe
+                        src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_API_KEY}&q=${hospital.latitude},${hospital.longitude}&zoom=15`}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, display: 'block' }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={`${hospital.name} Location`}
+                      />
+                    </div>
+                  )}
                   <div className="row gap-3 ai-center" style={{ flexWrap: 'wrap' }}>
                     <a
                       href={`https://www.google.com/maps/dir/?api=1&destination=${hospital.latitude},${hospital.longitude}`}
@@ -777,7 +781,7 @@ export default async function HospitalDetailPage({ params }: Props) {
             </div>
 
             {/* Sidebar */}
-            <aside className="col gap-4" style={{ flex: '1 1 300px', minWidth: 280 }}>
+            <aside className="col gap-4" style={{ flex: '1 1 300px', minWidth: 0 }}>
 
               {/* Awards */}
               {Array.isArray(hospital.awards) && hospital.awards.length > 0 && (

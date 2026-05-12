@@ -336,7 +336,7 @@ export default function ConditionsTable({ specialties }: { specialties: string[]
                                 value={pageSize}
                                 onChange={(e) => { setPageSize(Number(e.target.value)); setPage(1); }}
                                 className="select"
-                                style={{ width: 80, padding: '6px 28px 6px 10px', fontSize: 13 }}
+                                style={{ width: 80, padding: '6px clamp(16px, 4vw, 28px) 6px 10px', fontSize: 13 }}
                             >
                                 {[25, 50, 100].map(n => (
                                     <option key={n} value={n}>{n}</option>

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 
+export const revalidate = 604800;
+
 export const metadata = {
     title: 'Help Center',
     description: 'Find answers, reach support, and get the most out of AIHealz — symptom checking, vault, bookings, and provider tools.',
@@ -53,7 +55,7 @@ const TOPICS = [
 export default function HelpPage() {
     return (
         <V4Page>
-            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '48px 28px 80px' }}>
+            <div style={{ maxWidth: 1080, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}>
                 {/* Breadcrumb */}
                 <nav
                     aria-label="Breadcrumb"

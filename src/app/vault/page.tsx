@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import ChatGate, { detectChatGate } from '@/components/chat/ChatGate';
 
 /**
  * Health Vault — Bureau file manager
@@ -158,6 +159,8 @@ export default function HealthVaultPage() {
                 body: JSON.stringify({ fileId }),
             });
 
+            if (await detectChatGate(res)) { setAnalyzing(null); return; }
+
             if (res.ok) {
                 await fetchVault();
             } else {
@@ -183,9 +186,13 @@ export default function HealthVaultPage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh' }}>
             <div
-                style={{ maxWidth: 1180, margin: '0 auto', padding: '48px 28px 96px' }}
+                style={{ maxWidth: 1180, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 96px' }}
                 className="col gap-6"
             >
+                <ChatGate
+                    title="Sign in to use the Health Vault"
+                    subtitle="Quick signup unlocks 5 free AI report summaries today."
+                >
                 {/* Error Message */}
                 {errorMessage && (
                     <div
@@ -317,7 +324,7 @@ export default function HealthVaultPage() {
                 <div
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                         gap: 16,
                     }}
                 >
@@ -666,6 +673,7 @@ export default function HealthVaultPage() {
                         )}
                     </section>
                 </div>
+                </ChatGate>
             </div>
         </main>
     );

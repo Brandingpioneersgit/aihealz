@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
   title: 'Sitemap — all pages on aihealz',
   description: 'A categorized, human-readable map of major pages on aihealz.',
@@ -79,7 +81,7 @@ const SECTIONS = [
 export default function SitemapPage() {
   return (
     <V4Page>
-      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px 28px 80px' }}>
+      <div className="v4-root" style={{ background: 'var(--bg)', color: 'var(--ink-1)', padding: '48px clamp(16px, 4vw, 28px) 80px' }}>
         <div style={{ maxWidth: 980, margin: '0 auto' }}>
           <nav className="row gap-2 mono" style={{ fontSize: 11, color: 'var(--ink-3)', letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: 24 }}>
             <Link href="/">Home</Link><span>/</span><span style={{ color: 'var(--ink)' }}>Sitemap</span>

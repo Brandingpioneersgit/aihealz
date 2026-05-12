@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import ChatGate, { detectChatGate } from '@/components/chat/ChatGate';
 
 interface ConditionResult {
     name: string;
@@ -140,6 +141,7 @@ export default function SymptomCheckerV4() {
                     gender: gender || undefined,
                 }),
             });
+            if (await detectChatGate(res)) { setAnalyzing(false); return; }
             if (!res.ok) throw new Error('Analyze failed');
             const data = await res.json();
             setResults(data);
@@ -151,6 +153,10 @@ export default function SymptomCheckerV4() {
     }
 
     return (
+        <ChatGate
+            title="Sign in to use the symptom checker"
+            subtitle="5 free AI analyses today — register once to continue."
+        >
         <div className="col gap-5">
             <div className="card" style={{ padding: 24 }}>
                 <div className="kicker" style={{ marginBottom: 14 }}>
@@ -446,5 +452,6 @@ export default function SymptomCheckerV4() {
                 </div>
             )}
         </div>
+        </ChatGate>
     );
 }

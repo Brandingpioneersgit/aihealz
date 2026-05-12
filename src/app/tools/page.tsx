@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'Free Health Tools & Medical Calculators | aihealz',
     description: 'Free health calculators and medical tools. BMI calculator, calorie calculator, heart risk assessment, pregnancy due date, diabetes risk, and more. AI-powered health insights.',
@@ -127,7 +129,7 @@ export default function ToolsPage() {
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
             <div
-                style={{ maxWidth: 1280, margin: '0 auto', padding: '48px 28px 80px' }}
+                style={{ maxWidth: 1280, margin: '0 auto', padding: '48px clamp(16px, 4vw, 28px) 80px' }}
                 className="col gap-7"
             >
                 {/* ── Breadcrumb ───────────────────────────── */}

@@ -353,6 +353,56 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   .section-padding { padding-top: 96px; padding-bottom: 96px; }
 }
 
+/* v4-section — page section with responsive horizontal padding.
+   Use as a drop-in replacement for inline `padding: '56px clamp(16px, 4vw, 28px)'` style.
+   Override vertical padding via a wrapper or local style. */
+.v4-section {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 640px) {
+  .v4-section { padding-left: 24px; padding-right: 24px; }
+}
+@media (min-width: 1024px) {
+  .v4-section { padding-left: 28px; padding-right: 28px; }
+}
+
+/* h-scroll — wrap a fixed-width inner block to prevent page-wide
+   horizontal scroll on small screens. Used by data tables that have
+   N narrow columns and would crush below ~640px. */
+.h-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.h-scroll > * {
+  min-width: 640px;
+}
+
+/* Mobile-first: collapse common inline `flex: '1 1 NNNpx'` rows that
+   pair sibling columns wider than the viewport. Authors opt in by adding
+   .v4-stack-md to the parent row. */
+.v4-stack-md > * { min-width: 0; }
+@media (max-width: 900px) {
+  .v4-stack-md > * { flex-basis: 100% !important; }
+}
+@media (max-width: 640px) {
+  .v4-stack-sm > * { flex-basis: 100% !important; }
+}
+
+/* Healz AI page: sidebar is sticky on desktop only. On mobile it stacks
+   above the chat and being sticky would cover most of the viewport. */
+@media (min-width: 901px) {
+  .healz-ai-aside {
+    flex: 0 0 240px !important;
+    position: sticky;
+    top: 80px;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    CARDS / SURFACES
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -698,6 +748,12 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   .v4-geo-pill { display: none; }
   .v4-nav-mobile-only { display: inline-flex; }
 }
+@media (max-width: 640px) {
+  .v4-fullpage-toggle-label { display: none; }
+}
+.v4-fullpage-toggle:hover {
+  background: var(--bg-2, rgba(15,23,42,.04));
+}
 
 /* ═══════════════════════════════════════════════════════════════════════════
    ANIMATIONS — minimal, purposeful
@@ -728,6 +784,18 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
     box-shadow: 0 0 0 8px rgba(28, 91, 255, 0);
   }
 }
+@keyframes reveal-in-up {
+  from { opacity: 0; transform: translate3d(0, var(--reveal-distance, 14px), 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes reveal-in-right {
+  from { opacity: 0; transform: translate3d(var(--reveal-distance, 14px), 0, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes reveal-in-up   { from, to { opacity: 1; transform: none; } }
+  @keyframes reveal-in-right{ from, to { opacity: 1; transform: none; } }
+}
 
 .animate-fade-in       { animation: fade-in 0.5s ease-out; }
 .animate-slide-up      { animation: slide-up 0.5s ease-out; }
@@ -735,6 +803,47 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
 .animate-scale-in      { animation: scale-in 0.2s ease-out; }
 .animate-pulse-subtle  { animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 .btn-upload            { animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Interactive lift on Bureau cards (homepage feature surfaces) */
+.card,
+.card-ink {
+  transition:
+    transform 320ms cubic-bezier(.22,.61,.36,1),
+    box-shadow 320ms cubic-bezier(.22,.61,.36,1),
+    border-color 200ms ease;
+  will-change: transform;
+}
+a.card:hover,
+a.card-ink:hover,
+.card:has(> a:hover) {
+  transform: translateY(-2px);
+}
+a.card:hover {
+  border-color: var(--ink, #0A1A2F);
+  box-shadow: 0 12px 32px -16px rgba(10, 26, 47, 0.18);
+}
+a.card-ink:hover {
+  box-shadow: 0 14px 38px -18px rgba(10, 26, 47, 0.55);
+}
+
+/* Hero H1 — gradient sheen on the cobalt phrase */
+@keyframes hero-sheen {
+  0%   { background-position: -120% 0; }
+  100% { background-position: 220% 0; }
+}
+.hero-description {
+  position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card-ink,
+  a.card:hover,
+  a.card-ink:hover {
+    transition: none;
+    transform: none;
+  }
+}
 
 /* ═══════════════════════════════════════════════════════════════════════════
    UTILITIES

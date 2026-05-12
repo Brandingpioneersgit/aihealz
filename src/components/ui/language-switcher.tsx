@@ -3,17 +3,47 @@
 import { useState, useEffect } from 'react';
 
 interface LanguageSwitcherProps {
-    /** Country slug from server-side headers, e.g. "india" */
+    /** Country slug — usually omitted; component reads from cookie on mount */
     country?: string | null;
-    /** Detected city slug, e.g. "delhi" */
+    /** City slug — usually omitted; component reads from cookie on mount */
     city?: string | null;
-    /** Primary language code, e.g. "en" */
+    /** Initial language code (defaults to 'en'; cookie overrides on mount) */
     lang?: string;
-    /** Regional language code, e.g. "hi" */
+    /** Regional language code (e.g. "hi"); usually derived from cookie */
     regionalLang?: string | null;
-    /** Display info like "Hindi|हिन्दी" */
+    /** Display info like "Hindi|हिन्दी" (usually derived from cookie) */
     regionalDisplay?: string | null;
 }
+
+// Indian city → regional language. Trimmed mirror of the table in proxy.ts so
+// the switcher works without a server round-trip when only the geo cookie is
+// present. Keep in sync with src/proxy.ts INDIAN_CITY_LANG.
+const CITY_REGIONAL_LANG: Record<string, { code: string; display: string }> = {
+    // Tamil
+    chennai: { code: 'ta', display: 'Tamil|தமிழ்' },
+    coimbatore: { code: 'ta', display: 'Tamil|தமிழ்' },
+    madurai: { code: 'ta', display: 'Tamil|தமிழ்' },
+    // Telugu
+    hyderabad: { code: 'te', display: 'Telugu|తెలుగు' },
+    visakhapatnam: { code: 'te', display: 'Telugu|తెలుగు' },
+    // Marathi
+    mumbai: { code: 'mr', display: 'Marathi|मराठी' },
+    pune: { code: 'mr', display: 'Marathi|मराठी' },
+    nagpur: { code: 'mr', display: 'Marathi|मराठी' },
+    // Bengali
+    kolkata: { code: 'bn', display: 'Bengali|বাংলা' },
+    // Kannada
+    bangalore: { code: 'kn', display: 'Kannada|ಕನ್ನಡ' },
+    bengaluru: { code: 'kn', display: 'Kannada|ಕನ್ನಡ' },
+    mysore: { code: 'kn', display: 'Kannada|ಕನ್ನಡ' },
+    // Gujarati
+    ahmedabad: { code: 'gu', display: 'Gujarati|ગુજરાતી' },
+    surat: { code: 'gu', display: 'Gujarati|ગુજરાતી' },
+    // Malayalam
+    kochi: { code: 'ml', display: 'Malayalam|മലയാളം' },
+    thiruvananthapuram: { code: 'ml', display: 'Malayalam|മലയാളം' },
+    // Hindi (default for many cities) — handled as fallback in cityToRegional
+};
 
 const LANG_INFO: Record<string, { name: string; native: string }> = {
     en: { name: 'English', native: 'English' },
@@ -32,23 +62,59 @@ function capitalize(s: string): string {
     return s.split('-').map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
 }
 
+function getCookie(name: string): string | null {
+    if (typeof document === 'undefined') return null;
+    return (
+        document.cookie
+            .split('; ')
+            .find(c => c.startsWith(`${name}=`))
+            ?.split('=')[1] ?? null
+    );
+}
+
 export default function LanguageSwitcher({
-    country,
-    city,
+    country: countryProp,
+    city: cityProp,
     lang = 'en',
-    regionalLang,
-    regionalDisplay,
+    regionalLang: regionalLangProp,
+    regionalDisplay: regionalDisplayProp,
 }: LanguageSwitcherProps) {
     const [activeLang, setActiveLang] = useState(lang);
     const [dismissed, setDismissed] = useState(false);
+    // Geo state filled on mount when not provided by parent (the static-ISR path).
+    const [detectedCountry, setDetectedCountry] = useState<string | null>(countryProp ?? null);
+    const [detectedCity, setDetectedCity] = useState<string | null>(cityProp ?? null);
+    const [detectedRegional, setDetectedRegional] = useState<{ code: string; display: string } | null>(
+        regionalLangProp ? { code: regionalLangProp, display: regionalDisplayProp || '' } : null,
+    );
 
     useEffect(() => {
-        const cookieVal = document.cookie
-            .split('; ')
-            .find(c => c.startsWith('aihealz-lang='))
-            ?.split('=')[1];
-        if (cookieVal) setActiveLang(cookieVal);
-    }, []);
+        const cookieLang = getCookie('aihealz-lang');
+        if (cookieLang) setActiveLang(cookieLang);
+
+        // If parent didn't pass geo, derive it from the aihealz-geo cookie set by proxy.ts.
+        if (!countryProp && !cityProp) {
+            const geo = getCookie('aihealz-geo');
+            if (geo) {
+                const [countrySlug, _state, citySlug] = decodeURIComponent(geo).split(':');
+                if (countrySlug) setDetectedCountry(countrySlug);
+                if (citySlug) {
+                    setDetectedCity(citySlug);
+                    const reg = CITY_REGIONAL_LANG[citySlug.toLowerCase()];
+                    if (reg) setDetectedRegional(reg);
+                    else if (countrySlug.toLowerCase() === 'india') {
+                        // Hindi default for cities not in the regional map
+                        setDetectedRegional({ code: 'hi', display: 'Hindi|हिन्दी' });
+                    }
+                }
+            }
+        }
+    }, [countryProp, cityProp]);
+
+    const country = countryProp ?? detectedCountry;
+    const city = cityProp ?? detectedCity;
+    const regionalLang = regionalLangProp ?? detectedRegional?.code ?? null;
+    const regionalDisplay = regionalDisplayProp ?? detectedRegional?.display ?? null;
 
     if (!regionalLang || dismissed) return null;
     if (activeLang === regionalLang) return null;

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
 
+export const revalidate = 604800;
+
 export const metadata: Metadata = {
     title: 'AI Remedies & OTC Guides | aihealz',
     description: 'Evidence-based home remedies, OTC guidelines, and natural treatments for common health conditions, powered by AI analysis.',
@@ -156,7 +158,7 @@ export default function RemediesPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(remediesSchema) }}
             />
 
-            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }} className="col gap-7">
+            <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-7">
 
                 {/* Breadcrumb */}
                 <div
@@ -255,7 +257,7 @@ export default function RemediesPage() {
                     <div
                         style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
                             gap: 16,
                         }}
                     >
@@ -338,7 +340,7 @@ export default function RemediesPage() {
                     <div
                         style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
                             gap: 0,
                             border: '1px solid var(--rule)',
                             borderRadius: 'var(--r-3)',

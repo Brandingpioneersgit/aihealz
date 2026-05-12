@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import ChatGate, { detectChatGate } from '@/components/chat/ChatGate';
 
 // Common test name to slug mapping
 const TEST_SLUGS: Record<string, string> = {
@@ -227,6 +228,8 @@ export default function SymptomChecker() {
             });
             clearTimeout(timeoutId);
 
+            if (await detectChatGate(res)) { setIsAnalyzing(false); return; }
+
             // Check response status BEFORE parsing to handle HTML error pages
             if (!res.ok) {
                 const errorData = await res.json().catch(() => ({ error: 'Analysis failed' }));
@@ -274,6 +277,10 @@ export default function SymptomChecker() {
     );
 
     return (
+        <ChatGate
+            title="Sign in to use the symptom checker"
+            subtitle="5 free AI analyses today — quick registration to get started."
+        >
         <div className="col gap-6">
             {/* ── Symptom Input Area ─────────────────────── */}
             <fieldset className="card" style={{ padding: 32, border: '1px solid var(--rule)' }}>
@@ -815,5 +822,6 @@ export default function SymptomChecker() {
                 </div>
             )}
         </div>
+        </ChatGate>
     );
 }

@@ -1,11 +1,16 @@
 import { Metadata } from 'next';
 import prisma from '@/lib/db';
+import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import HomepageSpecialties from '@/components/ui/homepage-specialties';
+import Reveal from '@/components/v4/Reveal';
 import { normalizeSpecialty, SPECIALTY_ICON_MAP } from '@/lib/normalize-specialty';
 import { getGeoContext } from '@/lib/geo-context';
+import { HERO_IMAGES } from '@/lib/stock-images';
+
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'aihealz — the medical directory that reads back',
@@ -101,6 +106,7 @@ export default async function Home() {
   const specCountMap: Record<string, number> = {};
   let specialties: string[] = [];
   const grouped: Record<string, { slug: string; commonName: string; specialistType: string | null; description: string | null }[]> = {};
+  const rawTypesBySpecialty: Record<string, string[]> = {};
   let totalConditions = 0;
 
   try {
@@ -114,56 +120,48 @@ export default async function Home() {
       const canon = normalizeSpecialty(r.specialistType);
       specCountMap[canon] = (specCountMap[canon] || 0) + r._count._all;
       totalConditions += r._count._all;
+      if (!rawTypesBySpecialty[canon]) rawTypesBySpecialty[canon] = [];
+      rawTypesBySpecialty[canon].push(r.specialistType);
     });
 
     specialties = Object.keys(specCountMap).sort();
 
-    const rawSpecMap: Record<string, string[]> = {};
-    rawSpecialties.forEach(r => {
-      const canon = normalizeSpecialty(r.specialistType);
-      if (!rawSpecMap[canon]) rawSpecMap[canon] = [];
-      rawSpecMap[canon].push(r.specialistType);
-    });
-
-    const seenNames = new Set<string>();
-
-    await Promise.all(
-      specialties.map(async (specName) => {
-        const rawTypes = rawSpecMap[specName] || [];
-        const conditions = await prisma.medicalCondition.findMany({
-          where: {
-            isActive: true,
-            specialistType: { in: rawTypes },
-          },
-          select: { slug: true, commonName: true, specialistType: true, description: true },
-          orderBy: [{ description: 'asc' }, { commonName: 'asc' }],
-          take: 30,
-        });
-
-        const deduped = conditions.filter(c => {
-          const key = c.commonName.toLowerCase().trim();
-          if (seenNames.has(key)) return false;
-          seenNames.add(key);
-          return true;
-        });
-
-        const curated = deduped.filter(c => c.description && c.description.length > 0);
-        const others = deduped.filter(c => !c.description || c.description.length === 0);
-        grouped[specName] = [...curated, ...others].slice(0, 12);
-      })
-    );
+    // Only preload the first specialty's conditions so the homepage doesn't
+    // block on a 37-way fan-out for tabs nobody clicks. Other specialties
+    // lazy-fetch via /api/specialty-conditions on click.
+    const firstSpec = specialties[0];
+    const firstRawTypes = firstSpec ? rawTypesBySpecialty[firstSpec] || [] : [];
+    if (firstSpec && firstRawTypes.length) {
+      const conditions = await prisma.medicalCondition.findMany({
+        where: { isActive: true, specialistType: { in: firstRawTypes } },
+        select: { slug: true, commonName: true, specialistType: true, description: true },
+        orderBy: [{ description: 'asc' }, { commonName: 'asc' }],
+        take: 30,
+      });
+      const seen = new Set<string>();
+      const deduped = conditions.filter(c => {
+        const key = c.commonName.toLowerCase().trim();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+      const curated = deduped.filter(c => c.description && c.description.length > 0);
+      const others = deduped.filter(c => !c.description || c.description.length === 0);
+      grouped[firstSpec] = [...curated, ...others].slice(0, 12);
+    }
   } catch (err) {
     console.warn('[page.tsx] Database unavailable, rendering without specialties:', (err as Error).message);
   }
 
   // Pull a few headline counts for the hero meta strip — best-effort.
+  // Treatments live in public/data/treatments.json (not Prisma); use a static
+  // floor so we never block the homepage on a 37 MB JSON read.
   let doctorCount = 0;
-  let treatmentCount = 0;
+  const treatmentCount = 10000;
   try {
-    [doctorCount, treatmentCount] = await Promise.all([
-      prisma.doctor.count({ where: { isActive: true } }).catch(() => 0),
-      prisma.treatment.count({ where: { isActive: true } }).catch(() => 0),
-    ]);
+    doctorCount = await prisma.doctorProvider
+      .count({ where: { isVerified: true } })
+      .catch(() => 0);
   } catch {
     // best-effort, leave at 0
   }
@@ -260,7 +258,7 @@ export default async function Home() {
 
       <div style={{ background: 'var(--bg)', color: 'var(--ink)' }}>
         {/* ── HERO ────────────────────────────────────────── */}
-        <section style={{ padding: '56px 28px 32px', maxWidth: 1280, margin: '0 auto' }}>
+        <section style={{ padding: '40px clamp(16px, 4vw, 28px) 24px', maxWidth: 1280, margin: '0 auto' }}>
           {/* hero meta strip */}
           <div
             className="row between ai-center"
@@ -289,7 +287,7 @@ export default async function Home() {
             className="row gap-7 ai-start"
             style={{ paddingTop: 48, flexWrap: 'wrap' }}
           >
-            <div className="col gap-6" style={{ flex: '1 1 580px', minWidth: 0 }}>
+            <Reveal className="col gap-6" style={{ flex: '1 1 580px', minWidth: 0 }} delay={40}>
               <h1
                 className="display hero-description"
                 style={{
@@ -311,7 +309,7 @@ export default async function Home() {
               </h1>
 
               <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 22px)', maxWidth: 560 }}>
-                Drop a lab report. Get a plain-English brief, severity-ranked findings, and the four specialists most likely to help — in under sixty seconds.
+                Talk to it. Drop a report. Triage a symptom. Match a specialist. Compare a cost. One AI front door for medicine — built for the patient making sense of a result and the clinician making the call.
               </p>
 
               <div style={{ maxWidth: 580 }}>
@@ -340,10 +338,10 @@ export default async function Home() {
                   </Link>
                 ))}
               </div>
-            </div>
+            </Reveal>
 
             {/* HERO RIGHT — case dossier */}
-            <div className="col gap-3" style={{ flex: '0 1 380px', minWidth: 280 }}>
+            <Reveal className="col gap-3" style={{ flex: '0 1 380px', minWidth: 0 }} delay={180}>
               <div className="card-ink" style={{ padding: 24 }}>
                 <div className="row between ai-center" style={{ marginBottom: 16 }}>
                   <span
@@ -465,84 +463,361 @@ export default async function Home() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
-        {/* ── FEATURE CARDS ─────────────────────────────── */}
-        <section style={{ padding: '32px 28px 16px', maxWidth: 1280, margin: '0 auto' }}>
+        {/* ── AI TOOLS HUB ──────────────────────────────── */}
+        <section style={{ padding: '40px clamp(16px, 4vw, 28px) 20px', maxWidth: 1280, margin: '0 auto' }}>
+          <div
+            className="row between ai-end"
+            style={{ marginBottom: 32, flexWrap: 'wrap', gap: 16 }}
+          >
+            <div className="col gap-2">
+              <span className="section-mark">I / the AI</span>
+              <h2
+                className="display"
+                style={{
+                  fontSize: 'clamp(32px, 4.5vw, 56px)',
+                  margin: 0,
+                  letterSpacing: '-0.035em',
+                  fontWeight: 600,
+                }}
+              >
+                Every AI tool, <span style={{ color: 'var(--cobalt)' }}>one front door</span>
+                <span style={{ color: 'var(--orange)' }}>.</span>
+              </h2>
+            </div>
+            <p className="muted" style={{ fontSize: 14, maxWidth: 340, margin: 0, lineHeight: 1.55 }}>
+              Built for two readers — the patient making sense of a result, and the clinician making the call.
+            </p>
+          </div>
+
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: 16,
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+              gap: 20,
             }}
           >
-            {[
-              {
-                href: '/analyze',
-                kicker: 'analyze',
-                title: 'AI report analysis',
-                blurb: 'Upload scans or blood work for an instant plain-English breakdown.',
-                cta: 'Upload report',
-              },
-              {
-                href: '/doctors',
-                kicker: 'directory',
-                title: 'Find a specialist',
-                blurb: 'Credential-checked doctors filterable by wait time, fee, language, hospital.',
-                cta: 'Browse doctors',
-              },
-              {
-                href: '/treatments',
-                kicker: 'compare',
-                title: 'Treatment costs',
-                blurb: 'Same surgery, seven countries — see real numbers before you decide.',
-                cta: 'Compare costs',
-              },
-            ].map(c => (
-              <Link
-                key={c.href}
-                href={c.href}
-                className="card col gap-3 feature-cards"
-                style={{
-                  padding: 24,
-                  transition: 'border-color 120ms, background 120ms',
-                }}
+            {/* Patient column — paper */}
+            <Reveal className="card col" style={{ padding: 0, overflow: 'hidden' }} delay={40}>
+              <div
+                className="row between ai-center hairline-b"
+                style={{ padding: '18px 22px' }}
               >
-                <div className="kicker">
-                  <span className="dot" />
-                  {c.kicker}
+                <div className="col gap-1">
+                  <span className="kicker">
+                    <span className="dot" />for patients
+                  </span>
+                  <span
+                    className="display"
+                    style={{ fontSize: 18, fontWeight: 600, letterSpacing: '-0.02em' }}
+                  >
+                    Make sense of it.
+                  </span>
                 </div>
-                <div
-                  className="display"
-                  style={{ fontSize: 24, fontWeight: 600, letterSpacing: '-0.025em' }}
-                >
-                  {c.title}
-                </div>
-                <div className="muted" style={{ fontSize: 14, lineHeight: 1.55 }}>{c.blurb}</div>
-                <div
+                <span
                   className="mono"
                   style={{
-                    marginTop: 'auto',
                     fontSize: 11,
-                    color: 'var(--cobalt)',
+                    color: 'var(--ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                  }}
+                >
+                  06 tools
+                </span>
+              </div>
+              {[
+                {
+                  href: '/healz-ai',
+                  title: 'Healz AI — chat',
+                  blurb: 'Ask in plain English. Grounded in 70k conditions, your country, your meds.',
+                  badge: 'live',
+                },
+                {
+                  href: '/analyze',
+                  title: 'Report & scan analysis',
+                  blurb: 'Drop labs, prescriptions, or imaging. Severity-ranked findings in 60 seconds.',
+                },
+                {
+                  href: '/symptoms',
+                  title: 'Symptom checker',
+                  blurb: 'Triage with red-flag detection. Specialty match included.',
+                },
+                {
+                  href: '/chat/consult',
+                  title: 'AI second opinion',
+                  blurb: 'Async consult before you book. Bring the questions; we bring the structure.',
+                },
+                {
+                  href: '/vault',
+                  title: 'Health vault',
+                  blurb: 'All your reports in one dossier. Trends across visits, shareable on demand.',
+                },
+                {
+                  href: 'https://medcasts.com',
+                  external: true,
+                  title: 'Travel concierge — Medcasts',
+                  blurb: 'Surgeon match plus all-in cost estimate for surgery abroad. Powered by medcasts.com.',
+                },
+              ].map((t, i, arr) => {
+                const sharedClass = 'row gap-3 ai-start';
+                const sharedStyle = {
+                  padding: '16px 22px',
+                  borderBottom: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                  transition: 'background 120ms' as const,
+                };
+                const body = (
+                  <>
+                    <span
+                      className="num"
+                      style={{
+                        fontSize: 11,
+                        color: 'var(--cobalt)',
+                        minWidth: 22,
+                        marginTop: 3,
+                        fontWeight: 500,
+                        letterSpacing: '0.04em',
+                      }}
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="col gap-1" style={{ flex: 1, minWidth: 0 }}>
+                      <span className="row ai-center gap-2">
+                        <span
+                          className="display"
+                          style={{ fontSize: 15, fontWeight: 500, letterSpacing: '-0.015em' }}
+                        >
+                          {t.title}
+                        </span>
+                        {t.badge && (
+                          <span
+                            className="mono"
+                            style={{
+                              fontSize: 9,
+                              color: 'var(--mint-3)',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.10em',
+                              padding: '2px 6px',
+                              border: '1px solid var(--mint-3)',
+                              borderRadius: 99,
+                            }}
+                          >
+                            ● {t.badge}
+                          </span>
+                        )}
+                      </span>
+                      <span className="muted" style={{ fontSize: 12.5, lineHeight: 1.5 }}>
+                        {t.blurb}
+                      </span>
+                    </span>
+                    <span aria-hidden="true" style={{ color: 'var(--ink-3)', marginTop: 3 }}>
+                      {t.external ? '↗' : '→'}
+                    </span>
+                  </>
+                );
+                return t.external ? (
+                  <a
+                    key={t.href}
+                    href={t.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={sharedClass}
+                    style={sharedStyle}
+                  >
+                    {body}
+                  </a>
+                ) : (
+                  <Link
+                    key={t.href}
+                    href={t.href}
+                    className={sharedClass}
+                    style={sharedStyle}
+                  >
+                    {body}
+                  </Link>
+                );
+              })}
+            </Reveal>
+
+            {/* Clinician column — ink */}
+            <Reveal
+              className="card-ink col"
+              style={{ padding: 0, overflow: 'hidden' }}
+              delay={140}
+            >
+              <div
+                className="row between ai-center"
+                style={{
+                  padding: '18px 22px',
+                  borderBottom: '1px solid rgba(255,255,255,.10)',
+                }}
+              >
+                <div className="col gap-1">
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--cobalt-3)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.10em',
+                      fontWeight: 500,
+                    }}
+                  >
+                    ● for clinicians
+                  </span>
+                  <span
+                    className="display"
+                    style={{
+                      fontSize: 18,
+                      fontWeight: 600,
+                      letterSpacing: '-0.02em',
+                      color: 'var(--paper)',
+                    }}
+                  >
+                    Make the call.
+                  </span>
+                </div>
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    color: 'rgba(255,255,255,.5)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                  }}
+                >
+                  06 tools
+                </span>
+              </div>
+              {[
+                {
+                  href: '/for-doctors/clinical-scores',
+                  title: 'Clinical scores',
+                  blurb: 'CHA₂DS₂-VASc, Wells, TIMI, CURB-65 — 200+ validated calculators.',
+                },
+                {
+                  href: '/for-doctors/drug-dosing',
+                  title: 'Drug dosing',
+                  blurb: 'Renal & hepatic adjustment, pediatric weight-based dosing.',
+                },
+                {
+                  href: '/tools/drug-interactions',
+                  title: 'Drug interactions',
+                  blurb: 'Multi-drug check with severity flags and managed alternatives.',
+                },
+                {
+                  href: '/for-doctors/surgical-checklist',
+                  title: 'Surgical checklist',
+                  blurb: 'WHO + procedure-tailored bedside protocol, ready to print.',
+                },
+                {
+                  href: '/for-doctors/quick-reference',
+                  title: 'Bedside quick-ref',
+                  blurb: 'Point-of-care protocols, citation-ready, specialty filtered.',
+                },
+                {
+                  href: '/clinical-reference',
+                  title: 'Clinical reference',
+                  blurb: 'Latest guidelines indexed by specialty. We update yearly.',
+                },
+              ].map((t, i, arr) => (
+                <Link
+                  key={t.href}
+                  href={t.href}
+                  className="row gap-3 ai-start"
+                  style={{
+                    padding: '16px 22px',
+                    borderBottom:
+                      i < arr.length - 1 ? '1px solid rgba(255,255,255,.08)' : 'none',
+                    transition: 'background 120ms',
+                  }}
+                >
+                  <span
+                    className="num"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--cobalt-3)',
+                      minWidth: 22,
+                      marginTop: 3,
+                      fontWeight: 500,
+                      letterSpacing: '0.04em',
+                    }}
+                  >
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="col gap-1" style={{ flex: 1, minWidth: 0 }}>
+                    <span
+                      className="display"
+                      style={{
+                        fontSize: 15,
+                        fontWeight: 500,
+                        letterSpacing: '-0.015em',
+                        color: 'var(--paper)',
+                      }}
+                    >
+                      {t.title}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: 12.5,
+                        lineHeight: 1.5,
+                        color: 'rgba(255,255,255,.65)',
+                      }}
+                    >
+                      {t.blurb}
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    style={{ color: 'rgba(255,255,255,.5)', marginTop: 3 }}
+                  >
+                    →
+                  </span>
+                </Link>
+              ))}
+              <div
+                className="row between ai-center"
+                style={{
+                  padding: '14px 22px',
+                  borderTop: '1px solid rgba(255,255,255,.10)',
+                }}
+              >
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    color: 'rgba(255,255,255,.5)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                  }}
+                >
+                  full clinician suite
+                </span>
+                <Link
+                  href="/for-doctors"
+                  className="mono"
+                  style={{
+                    fontSize: 12,
+                    color: 'var(--cobalt-3)',
                     textTransform: 'uppercase',
                     letterSpacing: '0.08em',
                     fontWeight: 500,
                   }}
                 >
-                  {c.cta} →
-                </div>
-              </Link>
-            ))}
+                  /for-doctors →
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* ── SPECIALTY INDEX ───────────────────────────── */}
         {specialties.length > 0 && (
-          <section style={{ padding: '64px 28px 48px', maxWidth: 1280, margin: '0 auto' }}>
-            <div
+          <section style={{ padding: '48px clamp(16px, 4vw, 28px) 36px', maxWidth: 1280, margin: '0 auto' }}>
+            <Reveal
               className="row between ai-end"
               style={{ marginBottom: 32, flexWrap: 'wrap', gap: 16 }}
             >
@@ -558,11 +833,12 @@ export default async function Home() {
               <Link href="/conditions" className="btn btn-paper btn-sm">
                 View all {specialties.length} →
               </Link>
-            </div>
+            </Reveal>
 
             <HomepageSpecialties
               specialties={specialties}
               grouped={grouped}
+              rawTypesBySpecialty={rawTypesBySpecialty}
               counts={specCountMap}
               icons={SPECIALTY_ICON_MAP}
               country={geo.countrySlug || 'india'}
@@ -572,8 +848,8 @@ export default async function Home() {
         )}
 
         {/* ── COST COMPARE (ink) ────────────────────────── */}
-        <section style={{ padding: '72px 28px', background: 'var(--ink)', color: 'var(--paper)' }}>
-          <div style={{ maxWidth: 1280, margin: '0 auto' }} className="col gap-6">
+        <section style={{ padding: 'clamp(48px, 8vw, 72px) clamp(16px, 4vw, 28px)', background: 'var(--ink)', color: 'var(--paper)' }}>
+          <Reveal style={{ maxWidth: 1280, margin: '0 auto' }} className="col gap-6">
             <div className="row between ai-end" style={{ flexWrap: 'wrap', gap: 16 }}>
               <div className="col gap-2">
                 <span
@@ -603,8 +879,10 @@ export default async function Home() {
                   <span style={{ color: 'var(--cobalt-3)' }}>Seven countries.</span>
                 </h2>
               </div>
-              <Link
-                href="/medical-travel"
+              <a
+                href="https://medcasts.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn"
                 style={{
                   background: 'rgba(255,255,255,.08)',
@@ -612,16 +890,16 @@ export default async function Home() {
                   borderColor: 'rgba(255,255,255,.15)',
                 }}
               >
-                Compare any procedure →
-              </Link>
+                Compare any procedure on Medcasts ↗
+              </a>
             </div>
 
             <div
+              className="h-scroll"
               style={{
                 background: 'rgba(255,255,255,.04)',
                 border: '1px solid rgba(255,255,255,.10)',
                 borderRadius: 'var(--r-3)',
-                overflow: 'hidden',
               }}
             >
               <div
@@ -695,13 +973,97 @@ export default async function Home() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
+        </section>
+
+        {/* ── EDITORIAL IMAGERY STRIP ────────────────────── */}
+        <section style={{ padding: 'clamp(48px, 7vw, 72px) clamp(16px, 4vw, 28px) 0' }}>
+          <Reveal style={{ maxWidth: 1280, margin: '0 auto' }}>
+            <figure
+              style={{
+                position: 'relative',
+                width: '100%',
+                aspectRatio: '24 / 9',
+                maxHeight: 420,
+                overflow: 'hidden',
+                borderRadius: 'var(--r-3, 8px)',
+                border: '1px solid var(--rule)',
+                margin: 0,
+              }}
+            >
+              <Image
+                src={HERO_IMAGES.consult.src}
+                alt={HERO_IMAGES.consult.alt}
+                fill
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                style={{ objectFit: 'cover' }}
+              />
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background:
+                    'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.30) 35%, rgba(10,26,47,0) 70%)',
+                }}
+              />
+              <figcaption
+                className="col gap-2"
+                style={{
+                  position: 'absolute',
+                  left: 'clamp(20px, 4vw, 36px)',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  maxWidth: 480,
+                  color: 'var(--paper)',
+                }}
+              >
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    color: 'var(--cobalt-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.12em',
+                    fontWeight: 500,
+                  }}
+                >
+                  ● dispatch / from the floor
+                </span>
+                <h3
+                  className="display"
+                  style={{
+                    fontSize: 'clamp(22px, 3vw, 36px)',
+                    margin: 0,
+                    letterSpacing: '-0.025em',
+                    fontWeight: 600,
+                    lineHeight: 1.1,
+                  }}
+                >
+                  Verified physicians.
+                  <br />
+                  <span style={{ color: 'var(--cobalt-3)' }}>Real consultations.</span>
+                </h3>
+                <p
+                  style={{
+                    fontSize: 14,
+                    color: 'rgba(255,255,255,0.78)',
+                    margin: 0,
+                    lineHeight: 1.55,
+                    maxWidth: 380,
+                  }}
+                >
+                  Every doctor on aihealz is checked against a national medical registry before they appear in your results.
+                </p>
+              </figcaption>
+            </figure>
+          </Reveal>
         </section>
 
         {/* ── EDITORIAL BOARD STRIP ──────────────────────── */}
-        <section style={{ padding: '80px 28px' }}>
+        <section style={{ padding: 'clamp(56px, 8vw, 80px) clamp(16px, 4vw, 28px)' }}>
           <div className="row gap-7" style={{ maxWidth: 1280, margin: '0 auto', flexWrap: 'wrap' }}>
-            <div className="col gap-5" style={{ flex: '1 1 380px', minWidth: 0 }}>
+            <Reveal className="col gap-5" style={{ flex: '1 1 380px', minWidth: 0 }} delay={40}>
               <span className="section-mark">IV / our editorial board</span>
               <div
                 className="display"
@@ -762,9 +1124,9 @@ export default async function Home() {
                   Meet the board →
                 </Link>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="col gap-5" style={{ flex: '1 1 280px', minWidth: 0 }}>
+            <Reveal className="col gap-5" style={{ flex: '1 1 280px', minWidth: 0 }} delay={140}>
               <div className="card" style={{ padding: 24 }}>
                 <div className="kicker" style={{ marginBottom: 10 }}>
                   <span className="dot" />the rules we keep
@@ -794,15 +1156,255 @@ export default async function Home() {
                   ))}
                 </ol>
               </div>
+
+              {/* Doctor ethical-badge CTA */}
+              <a
+                href="https://mdrpedia.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-ink col gap-3"
+                style={{ padding: 22 }}
+              >
+                <div className="row between ai-center">
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--cobalt-3)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.10em',
+                      fontWeight: 500,
+                    }}
+                  >
+                    ● for doctors
+                  </span>
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 10,
+                      color: 'rgba(255,255,255,.5)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.10em',
+                    }}
+                  >
+                    via mdrpedia
+                  </span>
+                </div>
+                <div
+                  className="display"
+                  style={{
+                    fontSize: 22,
+                    fontWeight: 600,
+                    letterSpacing: '-0.025em',
+                    color: 'var(--paper)',
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Top doctors — get your <span style={{ color: 'var(--cobalt-3)' }}>ethical badge</span><span style={{ color: 'var(--orange)' }}>.</span>
+                </div>
+                <div
+                  style={{
+                    fontSize: 13,
+                    color: 'rgba(255,255,255,.7)',
+                    lineHeight: 1.55,
+                  }}
+                >
+                  aihealz only features clinicians who&rsquo;ve passed an ethics review. Apply, get verified, and earn the badge — issued by our partner mdrpedia.com.
+                </div>
+                <div
+                  className="row between ai-center"
+                  style={{
+                    paddingTop: 12,
+                    borderTop: '1px solid rgba(255,255,255,.10)',
+                    marginTop: 4,
+                  }}
+                >
+                  <span className="mono" style={{ fontSize: 11, color: 'rgba(255,255,255,.5)' }}>
+                    free for verified clinicians
+                  </span>
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 12,
+                      color: 'var(--cobalt-3)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                      fontWeight: 500,
+                    }}
+                  >
+                    mdrpedia.com ↗
+                  </span>
+                </div>
+              </a>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── COVERAGE MAP ──────────────────────────────── */}
+        <section style={{ padding: '20px clamp(16px, 4vw, 28px) 56px' }}>
+          <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+            <Reveal
+              className="row between ai-end"
+              style={{ marginBottom: 32, flexWrap: 'wrap', gap: 16 }}
+            >
+              <div className="col gap-2">
+                <span className="section-mark">V / coverage map</span>
+                <h2
+                  className="display"
+                  style={{
+                    fontSize: 'clamp(28px, 3.5vw, 40px)',
+                    margin: 0,
+                    letterSpacing: '-0.03em',
+                    fontWeight: 600,
+                  }}
+                >
+                  Everything we cover, indexed.
+                </h2>
+              </div>
+              <p className="muted" style={{ fontSize: 14, maxWidth: 320, margin: 0, lineHeight: 1.55 }}>
+                One click to any directory, calculator, or section of the Bureau.
+              </p>
+            </Reveal>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                gap: 32,
+                paddingTop: 24,
+                borderTop: '1px solid var(--rule)',
+              }}
+            >
+              {[
+                {
+                  title: 'browse the index',
+                  links: [
+                    { label: 'Conditions', href: '/conditions', meta: `${conditionsLabel}+` },
+                    { label: 'Doctors', href: '/doctors', meta: `${doctorsLabel}+` },
+                    { label: 'Hospitals', href: '/hospitals' },
+                    { label: 'Treatments', href: '/treatments', meta: `${treatmentsLabel}+` },
+                    { label: 'Diagnostic labs', href: '/diagnostic-labs' },
+                  ],
+                },
+                {
+                  title: 'compare & decide',
+                  links: [
+                    { label: 'Cost compare', href: '/treatments' },
+                    { label: 'Medical travel — Medcasts ↗', href: 'https://medcasts.com', external: true },
+                    { label: 'Insurance', href: '/insurance' },
+                    { label: 'Pricing', href: '/pricing' },
+                    { label: 'Book a consult', href: '/book' },
+                  ],
+                },
+                {
+                  title: 'calculators & tools',
+                  links: [
+                    { label: 'BMI', href: '/tools/bmi-calculator' },
+                    { label: 'Heart risk', href: '/tools/heart-risk-calculator' },
+                    { label: 'Diabetes risk', href: '/tools/diabetes-risk-calculator' },
+                    { label: 'Pregnancy due date', href: '/tools/pregnancy-due-date-calculator' },
+                    { label: 'All calculators', href: '/tools', meta: '14' },
+                  ],
+                },
+                {
+                  title: 'for providers',
+                  links: [
+                    { label: 'For doctors', href: '/for-doctors' },
+                    { label: 'Get the ethical badge ↗', href: 'https://mdrpedia.com', external: true, meta: 'mdrpedia' },
+                    { label: 'Provider login', href: '/provider/login' },
+                    { label: 'Hospital portal', href: '/provider/hospital' },
+                    { label: 'Lab portal', href: '/provider/lab' },
+                  ],
+                },
+                {
+                  title: 'the bureau',
+                  links: [
+                    { label: 'Editorial board', href: '/editorial-board' },
+                    { label: 'Blog', href: '/blog' },
+                    { label: 'About', href: '/about' },
+                    { label: 'Press', href: '/press' },
+                    { label: 'Help & FAQ', href: '/help' },
+                  ],
+                },
+              ].map((group, gi) => (
+                <Reveal key={group.title} className="col gap-3" delay={gi * 60}>
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--ink-3)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.10em',
+                      fontWeight: 500,
+                    }}
+                  >
+                    {group.title}
+                  </span>
+                  <div className="col">
+                    {group.links.map((l, i) => {
+                      const linkClass = 'row between ai-baseline';
+                      const linkStyle = {
+                        padding: '10px 0',
+                        borderBottom:
+                          i < group.links.length - 1
+                            ? '1px solid var(--rule)'
+                            : 'none',
+                        fontSize: 14,
+                        color: ('external' in l && l.external) ? 'var(--cobalt)' : 'var(--ink-2)',
+                        letterSpacing: '-0.005em',
+                        transition: 'color 120ms' as const,
+                      };
+                      const inner = (
+                        <>
+                          <span>{l.label}</span>
+                          {l.meta && (
+                            <span
+                              className="mono"
+                              style={{
+                                fontSize: 10,
+                                color: 'var(--ink-4)',
+                                letterSpacing: '0.04em',
+                              }}
+                            >
+                              {l.meta}
+                            </span>
+                          )}
+                        </>
+                      );
+                      return ('external' in l && l.external) ? (
+                        <a
+                          key={l.href}
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={linkClass}
+                          style={linkStyle}
+                        >
+                          {inner}
+                        </a>
+                      ) : (
+                        <Link
+                          key={l.href}
+                          href={l.href}
+                          className={linkClass}
+                          style={linkStyle}
+                        >
+                          {inner}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>
 
         {/* ── MEDICAL TRAVEL CTA ─────────────────────────── */}
-        <section style={{ padding: '0 28px 96px' }}>
-          <div
+        <section style={{ padding: '0 clamp(16px, 4vw, 28px) clamp(56px, 10vw, 96px)' }}>
+          <Reveal
             className="card-ink"
-            style={{ maxWidth: 1280, margin: '0 auto', padding: '40px 36px' }}
+            style={{ maxWidth: 1280, margin: '0 auto', padding: 'clamp(28px, 5vw, 40px) clamp(20px, 4vw, 36px)' }}
           >
             <div
               className="row ai-center between"
@@ -819,7 +1421,7 @@ export default async function Home() {
                     fontWeight: 500,
                   }}
                 >
-                  V / the concierge
+                  VI / the concierge — Medcasts
                 </span>
                 <h2
                   className="display"
@@ -832,7 +1434,7 @@ export default async function Home() {
                     color: 'var(--paper)',
                   }}
                 >
-                  Planning surgery abroad? <span style={{ color: 'var(--cobalt-3)' }}>End-to-end, handled</span><span style={{ color: 'var(--orange)' }}>.</span>
+                  Planning surgery abroad? <span style={{ color: 'var(--cobalt-3)' }}>Medcasts handles it end-to-end</span><span style={{ color: 'var(--orange)' }}>.</span>
                 </h2>
                 <p
                   style={{
@@ -843,14 +1445,19 @@ export default async function Home() {
                     margin: 0,
                   }}
                 >
-                  Surgeon match-making. Pre-negotiated package pricing. Visa, flight, recovery suite, native-speaking translator. Twelve cities, one number.
+                  Our medical-travel partner. Surgeon match-making, pre-negotiated package pricing, visa, flight, recovery suite, native-speaking translator — all booked at <span style={{ color: 'var(--cobalt-3)' }}>medcasts.com</span>.
                 </p>
               </div>
-              <Link href="/medical-travel/bot" className="btn btn-cobalt btn-lg">
-                Build my estimate →
-              </Link>
+              <a
+                href="https://medcasts.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-cobalt btn-lg"
+              >
+                Build my estimate on Medcasts ↗
+              </a>
             </div>
-          </div>
+          </Reveal>
         </section>
       </div>
     </>

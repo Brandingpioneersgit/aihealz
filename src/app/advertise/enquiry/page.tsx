@@ -91,7 +91,7 @@ export default function AdvertiseEnquiryPage() {
 
     return (
         <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 96 }}>
-            <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 28px' }} className="col gap-7">
+            <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-7">
                 {/* Breadcrumb */}
                 <nav
                     className="row gap-2 mono"

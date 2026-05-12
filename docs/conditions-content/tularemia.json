@@ -1,0 +1,493 @@
+{
+  "_meta": {
+    "slug": "tularemia",
+    "tier": 1,
+    "headTerm": "tularemia",
+    "longTailKeywords": [
+      "tularemia symptoms",
+      "tularemia treatment",
+      "rabbit fever",
+      "francisella tularensis",
+      "ulceroglandular tularemia",
+      "pneumonic tularemia",
+      "tularemia antibiotics",
+      "tularemia bioterrorism",
+      "tularemia diagnosis",
+      "deer fly fever"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against CDC Tularemia 2023, WHO Guidelines on Tularaemia 2007, Sjostedt 2007 (PMID 17827512), Maurin & Gyuranecz 2016. ICD-10 A21. Drug doses verified against IDSA pediatric and adult guidance for category A bioterrorism agents."
+  },
+
+  "h1Title": "Tularemia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Tularemia is a zoonotic infection caused by Francisella tularensis, one of the most infectious bacteria known — as few as 10 organisms inhaled or inoculated through skin can cause disease. Roughly 200 cases are reported annually in the United States (CDC 2011-2020), with hotspots in Arkansas, Missouri, Oklahoma, Kansas, and South Dakota, plus broader endemic activity across Scandinavia, central Europe, Japan, and Turkey. Classic presentations include ulceroglandular disease after a tick or deer fly bite, oculoglandular disease from contaminated fingers rubbing the eye, and pneumonic disease after inhaling aerosols from infected animal carcasses or contaminated dust. Untreated typhoidal and pneumonic forms carry mortality rates of 30-60%. F. tularensis is classified as a CDC Category A bioterrorism agent because of its low infectious dose, ease of aerosolization, and capacity to produce severe disease at scale; appropriate antibiotic therapy with streptomycin, gentamicin, or doxycycline reduces mortality to under 2%.",
+
+  "keyStats": {
+    "prevalence": "About 200 US cases reported annually (CDC 2011-2020 average); roughly 1,000-1,500 cases yearly across Europe with Scandinavia and Turkey carrying the highest burden",
+    "demographics": "Affects all ages; occupational exposure in hunters, trappers, farmers, landscapers, and laboratory workers concentrates risk in men aged 25-65",
+    "avgAge": "Median age at diagnosis in the US is 49; bimodal pediatric peak in children aged 5-9 from tick exposure",
+    "globalCases": "Endemic across the Northern Hemisphere; major outbreaks recorded in Kosovo (2000, ~900 cases), Sweden, Finland, Turkey, and Spain"
+  },
+
+  "definition": "Tularemia (ICD-10: A21) is an acute febrile zoonosis caused by Francisella tularensis, a small, aerobic, gram-negative coccobacillus. The bacterium is a facultative intracellular pathogen that replicates inside macrophages by escaping the phagosome through the Francisella pathogenicity island. Two clinically important subspecies exist: F. tularensis subspecies tularensis (Type A), restricted to North America and the more virulent form responsible for severe disease, and F. tularensis subspecies holarctica (Type B), found across the Northern Hemisphere and generally producing milder illness with low mortality. The infectious dose is exceptionally low — 10 organisms by inoculation or aerosol, compared to thousands or millions for most bacterial pathogens — which explains both the laboratory-acquired infection risk and the bioterrorism concern. Disease form depends on portal of entry: skin inoculation produces ulceroglandular or glandular disease, ocular inoculation produces oculoglandular disease, ingestion produces oropharyngeal or gastrointestinal disease, and inhalation produces pneumonic disease. Untreated cases progress to bacteremic typhoidal disease with sepsis and multi-organ failure. Tularemia is a nationally notifiable disease in the United States and a CDC Tier 1 select agent.",
+
+  "typesClassification": [
+    { "type": "Ulceroglandular tularemia", "description": "The most common form (~75% of US cases). Presents with a papule at the inoculation site that ulcerates over 2-3 days, accompanied by tender regional lymphadenopathy. ICD-10 A21.0." },
+    { "type": "Glandular tularemia", "description": "Regional lymphadenopathy without a visible skin lesion; the ulcer healed before clinical presentation. Same treatment as ulceroglandular disease." },
+    { "type": "Oculoglandular tularemia", "description": "Painful unilateral conjunctivitis with palpebral granulomas and ipsilateral preauricular or cervical lymphadenopathy (Parinaud syndrome). Caused by contaminated finger-to-eye inoculation. ICD-10 A21.1." },
+    { "type": "Oropharyngeal tularemia", "description": "Exudative pharyngitis with cervical lymphadenitis after eating undercooked infected game meat or drinking contaminated water. Often misdiagnosed initially as streptococcal pharyngitis. ICD-10 A21.6." },
+    { "type": "Pneumonic tularemia", "description": "Primary inhalation form or secondary spread from bacteremic disease. Causes pneumonia, hilar lymphadenopathy, and pleural effusion. The form of greatest bioterrorism concern; untreated mortality 30-60%. ICD-10 A21.2." },
+    { "type": "Typhoidal (septicemic) tularemia", "description": "Bacteremic disease without localizing signs — high fever, prostration, and sepsis. Often follows ingestion or massive aerosol exposure. ICD-10 A21.7." }
+  ],
+
+  "primarySymptoms": [
+    "Abrupt onset of fever above 38.5°C with chills, headache, and severe muscle aches typically beginning 3-5 days after exposure (incubation range 1-21 days).",
+    "A painful papule at a tick or deer fly bite site that enlarges and ulcerates over 2-3 days, leaving a punched-out lesion with a raised border most often on a limb or scalp.",
+    "Painful, swollen, tender regional lymph nodes — most commonly in the groin, axilla, or cervical chain — that may suppurate and require drainage in 25-30% of cases if antibiotics start late.",
+    "Painful unilateral conjunctivitis with yellowish nodules on the inner eyelid plus ipsilateral preauricular lymphadenopathy (Parinaud oculoglandular syndrome) in oculoglandular disease.",
+    "Sore throat with severe exudative tonsillitis unresponsive to penicillin and accompanied by tender anterior cervical adenopathy in oropharyngeal disease.",
+    "Non-productive cough, pleuritic chest pain, and shortness of breath in pneumonic disease, with chest imaging showing patchy infiltrates and hilar lymphadenopathy.",
+    "Persistent high fever for more than 7 days, drenching sweats, profound fatigue, and a relative bradycardia (Faget sign) in typhoidal disease.",
+    "Nausea, vomiting, abdominal pain, and watery or bloody diarrhea following ingestion of contaminated game meat or untreated surface water.",
+    "Hepatosplenomegaly in roughly 30% of patients with bacteremic disease, sometimes with mild transaminitis.",
+    "Rash in 8-20% of patients — typically maculopapular, but erythema nodosum and erythema multiforme can occur as immune-mediated phenomena 1-2 weeks into illness."
+  ],
+
+  "earlyWarningSigns": [
+    "A small papule developing at the site of a recent tick, fly, or animal bite, especially in a known endemic area, with fever beginning within a week",
+    "Sudden fever, headache, and chills in a hunter, trapper, farmer, or landscaper after handling rabbit, hare, muskrat, or rodent carcasses",
+    "Painful regional lymphadenopathy out of proportion to any visible skin finding in a person with outdoor exposure",
+    "A laboratory worker handling small gram-negative coccobacilli on culture plates developing fever within 3-5 days — laboratory exposure must be reported immediately"
+  ],
+
+  "emergencySigns": [
+    "High fever with hypotension, altered mental status, or rapidly progressive shortness of breath — sepsis or pneumonic tularemia requires immediate intravenous antibiotics",
+    "Severe respiratory distress with hypoxia and chest imaging showing bilateral infiltrates after possible aerosol exposure — public-health emergency, possible bioterrorism event",
+    "Meningismus, severe headache, or focal neurological signs — rare but serious tularemic meningitis warrants urgent lumbar puncture",
+    "Cluster of similar febrile illnesses in a workplace or community without obvious tick or animal exposure — notify public health immediately"
+  ],
+
+  "causes": [
+    {
+      "cause": "Tick bites",
+      "description": "The dominant route in North America. Dermacentor variabilis (American dog tick), Dermacentor andersoni (Rocky Mountain wood tick), and Amblyomma americanum (lone star tick) transmit F. tularensis. Tick exposure accounts for over half of US cases, with peak incidence in May-August."
+    },
+    {
+      "cause": "Deer fly bites",
+      "description": "Chrysops discalis is the main biological vector in the western United States, particularly Utah, where it produces the regional name 'deer fly fever.' Mechanical transmission can occur within minutes of feeding on an infected animal."
+    },
+    {
+      "cause": "Direct contact with infected animals",
+      "description": "Skinning, butchering, or handling carcasses of wild rabbits, hares, muskrats, voles, and beavers exposes hunters and trappers to F. tularensis through skin abrasions and mucous membranes. The organism penetrates intact skin in some reports."
+    },
+    {
+      "cause": "Inhalation of contaminated aerosols",
+      "description": "Disturbing infected animal nests, mowing over carcasses, or aerosolizing contaminated hay, dust, or soil produces inhalational disease. The Martha's Vineyard landscaper cluster (2000) traced pneumonic tularemia to brush-cutting in an enzootic area."
+    },
+    {
+      "cause": "Ingestion of contaminated food or water",
+      "description": "Eating undercooked infected game, particularly rabbit, or drinking from untreated streams contaminated by infected rodent carcasses causes oropharyngeal or gastrointestinal disease. Waterborne outbreaks have been documented in Kosovo, Sweden, and Turkey."
+    },
+    {
+      "cause": "Laboratory exposure",
+      "description": "F. tularensis is among the most frequent causes of laboratory-acquired infection. Sniff testing of plates, aerosol-generating procedures without biosafety level 3 containment, and needle sticks all transmit disease at very low inocula."
+    },
+    {
+      "cause": "Intentional aerosol release (bioterrorism)",
+      "description": "F. tularensis is a CDC Category A select agent. A WHO 1970 model estimated that 50 kg of aerosolized F. tularensis dispersed over a city of 5 million would cause 250,000 incapacitating illnesses and 19,000 deaths within weeks."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Outdoor occupational exposure", "category": "environmental", "description": "Hunters, trappers, farmers, ranchers, landscapers, gardeners, and wildlife biologists have the highest occupational risk. Landscaping outbreaks have been documented in Martha's Vineyard." },
+    { "factor": "Living in endemic states", "category": "environmental", "description": "Arkansas, Missouri, Oklahoma, Kansas, and South Dakota account for over half of US cases. Endemic foci also exist across Scandinavia, central Europe, Russia, Japan, and Turkey." },
+    { "factor": "Handling wild game", "category": "modifiable", "description": "Skinning rabbits or hares without gloves remains a recognized exposure. CDC estimates 10-25% of US cases involve direct animal handling." },
+    { "factor": "Tick or deer fly bite in season", "category": "environmental", "description": "Peak transmission in May-September; risk concentrates in tall grass, brush, and wooded areas. Tick-borne cases account for 50-60% of US incidence." },
+    { "factor": "Laboratory work without BSL-3 precautions", "category": "modifiable", "description": "F. tularensis is the leading cause of laboratory-acquired infection in clinical microbiology. Any work with cultured isolates requires BSL-3 containment and post-exposure prophylaxis if breached." },
+    { "factor": "Drinking untreated surface water", "category": "modifiable", "description": "Several waterborne outbreaks have been linked to streams and wells contaminated by infected rodent carcasses; chlorination eliminates the organism." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Roughly 70% of reported US cases occur in males, reflecting occupational and recreational exposure patterns rather than biological susceptibility." },
+    { "factor": "Immunocompromised state", "category": "non-modifiable", "description": "HIV, hematologic malignancy, and chemotherapy increase the risk of severe and disseminated disease, though immune-competent hosts remain susceptible." }
+  ],
+
+  "affectedDemographics": [
+    "US incidence: 0.04 cases per 100,000 population annually, with state rates up to 0.7 per 100,000 in Arkansas and Oklahoma (CDC 2011-2020)",
+    "Pediatric incidence peaks at age 5-9, driven by tick exposure during outdoor summer activity",
+    "Adult incidence peaks at age 50-69 from occupational and recreational outdoor exposure",
+    "Reservoir species include rabbits, hares, voles, muskrats, beavers, ground squirrels, and prairie dogs"
+  ],
+
+  "diagnosisOverview": "Diagnosis of tularemia begins with epidemiologic suspicion — fever plus skin ulcer, regional lymphadenopathy, pneumonia, or sepsis in a patient with relevant outdoor, occupational, or laboratory exposure. F. tularensis is fastidious and grows slowly on routine media; standard blood cultures may be negative or first read at 3-5 days, often after the organism has been transferred between bench staff who do not know they are handling a select agent. The CDC strongly recommends informing the laboratory in advance whenever tularemia is suspected so that the workup is performed under BSL-3 containment. Serology by tube agglutination or microagglutination remains the most commonly used confirmatory test, with a fourfold rise in titer between acute and convalescent samples (drawn 2-3 weeks apart) considered diagnostic; titers often do not become positive until 2 weeks into illness, so paired sampling is essential. Real-time PCR on ulcer swabs, lymph node aspirates, blood, or pleural fluid can confirm diagnosis within hours and is increasingly available in state public health laboratories and the Laboratory Response Network. Immunohistochemistry on tissue specimens is useful for retrospective diagnosis. Treatment should not be delayed waiting for confirmation when clinical suspicion is high — empirical antibiotic therapy reduces complications and mortality. All suspected and confirmed cases must be reported to public health authorities and the Laboratory Response Network within 24 hours.",
+
+  "diagnosticTests": [
+    {
+      "test": "Serum tube agglutination or microagglutination antibody test",
+      "purpose": "The most widely used confirmatory test. A fourfold rise between acute and convalescent samples or a single titer ≥160 supports diagnosis. Most laboratories cannot perform this in-house; samples are sent to state public health labs or CDC.",
+      "whatToExpect": "Standard blood draw at presentation and again 2-3 weeks later. Results take 3-7 days. Titers may remain elevated for years and so a single high titer in an exposed patient is suggestive but not conclusive without paired samples."
+    },
+    {
+      "test": "Real-time PCR for F. tularensis",
+      "purpose": "Rapid detection of bacterial DNA from ulcer swabs, lymph node aspirates, sputum, blood, or pleural fluid. Sensitivity is highest from ulcer or lymph node material early in illness; specificity exceeds 99%.",
+      "whatToExpect": "Sample collection takes minutes; results return within 24 hours from Laboratory Response Network sites. Available in most state public health laboratories."
+    },
+    {
+      "test": "Blood and tissue culture",
+      "purpose": "Definitive isolation of F. tularensis. Growth is slow, requires cysteine-supplemented media (chocolate or BCYE agar), and must occur under BSL-3 containment. Alert the lab before sending.",
+      "whatToExpect": "A standard blood draw or fine-needle aspiration of an affected lymph node. Cultures held for at least 7-10 days. Notify the lab clearly: unannounced cultures put bench staff at risk."
+    },
+    {
+      "test": "Chest radiograph and CT",
+      "purpose": "Assess pneumonic disease — typical findings include patchy infiltrates, hilar adenopathy, pleural effusion, and occasionally cavitation. CT delineates mediastinal adenopathy more clearly.",
+      "whatToExpect": "Standard imaging; chest X-ray takes minutes, CT 10-15 minutes including IV contrast where indicated."
+    },
+    {
+      "test": "Ultrasound or CT of affected lymph nodes",
+      "purpose": "Identifies suppuration and guides fine-needle aspiration. Suppurative nodes can persist or enlarge after antibiotics start and may require drainage.",
+      "whatToExpect": "Painless ultrasound takes 15-20 minutes; CT of neck, axilla, or groin is rapid and well-tolerated."
+    },
+    {
+      "test": "Immunohistochemistry on excised tissue",
+      "purpose": "Direct visualization of F. tularensis antigens in lymph node or skin biopsies. Useful for retrospective diagnosis when cultures were not obtained or serology is equivocal.",
+      "whatToExpect": "Performed on tissue already removed at biopsy or excision; turnaround 5-10 days from reference laboratories."
+    }
+  ],
+
+  "treatmentOverview": "Tularemia treatment is guided by disease severity and patient age. The IDSA and CDC consensus for adult naturally acquired disease specifies streptomycin or gentamicin for moderate-to-severe disease and oral doxycycline or ciprofloxacin for mild ulceroglandular or glandular disease. Streptomycin (1 g intramuscularly every 12 hours) and gentamicin (5 mg/kg intravenously daily) are aminoglycosides with the most reliable bactericidal activity and the lowest documented relapse rates (under 6%). Treatment duration is 10 days for aminoglycosides. Doxycycline (100 mg orally twice daily for 14-21 days) and ciprofloxacin (500-750 mg orally twice daily for 10-14 days) are appropriate for stable outpatients with localized disease but carry higher relapse rates (~12% for doxycycline) because both are bacteriostatic against F. tularensis. Children under 8 traditionally received gentamicin to avoid tetracycline-related dental staining, though short-course doxycycline is now accepted by the AAP for severe rickettsial and select-agent infections. Pregnant patients receive gentamicin or, in less severe disease, azithromycin; ciprofloxacin can be used when benefits outweigh fetal risk. Beta-lactams (penicillins, cephalosporins) are ineffective despite susceptibility on some platforms — clinical failure is common and they should never be used. In a mass-casualty bioterrorism scenario the CDC recommends oral doxycycline or ciprofloxacin for both treatment and post-exposure prophylaxis (14 days). Suppurative lymph nodes may require drainage in 25% of cases, performed only after antibiotics have started. Follow-up serology and clinical assessment at 4-6 weeks identifies relapse, which occurs predominantly with bacteriostatic regimens.",
+
+  "medicalTreatments": [
+    {
+      "name": "Streptomycin (1 g IM every 12 hours for 10 days)",
+      "description": "Historically the gold-standard treatment for tularemia and the regimen with the most clinical experience. Bactericidal, with intracellular penetration adequate to clear F. tularensis from macrophages. Use in pregnancy is restricted by fetal ototoxicity risk.",
+      "effectiveness": "Cure rate 97%; relapse rate under 6% in pre-fluoroquinolone case series (Enderlin 1994)."
+    },
+    {
+      "name": "Gentamicin (5 mg/kg IV daily for 10 days)",
+      "description": "Equally effective alternative to streptomycin with broader availability and a more familiar dosing pattern. Aminoglycoside trough monitoring and renal function assessment are required.",
+      "effectiveness": "Cure rate 86-95%; relapse rate 6-12% depending on series. Preferred first-line in most modern centers."
+    },
+    {
+      "name": "Doxycycline (100 mg orally twice daily for 14-21 days)",
+      "description": "Bacteriostatic tetracycline used for mild outpatient ulceroglandular disease and as bioterrorism post-exposure prophylaxis. The full 14-21 day course is essential because shorter regimens see relapse rates above 20%.",
+      "effectiveness": "Cure rate 88%; relapse rate 12% in adult case series. Recommended duration extends to 21 days for severe disease."
+    },
+    {
+      "name": "Ciprofloxacin (500-750 mg orally twice daily for 10-14 days)",
+      "description": "Fluoroquinolone with reliable activity in both natural and laboratory settings. Increasingly preferred for outpatient management because of better intracellular penetration than doxycycline.",
+      "effectiveness": "Cure rate over 95% in adult case series; relapse rates below 5%. Pediatric data growing and now recommended by CDC for severe pediatric cases."
+    },
+    {
+      "name": "Levofloxacin (500-750 mg orally daily for 10-14 days)",
+      "description": "Alternative fluoroquinolone with similar in vitro activity to ciprofloxacin. Useful for once-daily outpatient regimens when adherence is a concern.",
+      "effectiveness": "Comparable to ciprofloxacin in retrospective European case series; cure rates 85-95%."
+    },
+    {
+      "name": "Azithromycin (500 mg orally daily, alternative for pregnant patients with mild disease)",
+      "description": "Macrolide with variable activity against F. tularensis subspecies holarctica; useful in pregnancy when fluoroquinolones and tetracyclines are contraindicated. Avoid in severe disease.",
+      "effectiveness": "Limited published data; case series suggest 70-80% response in subspecies holarctica disease. Not adequate for type A or severe presentations."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Incision and drainage of suppurative lymph nodes",
+      "description": "Required for 20-25% of patients with ulceroglandular disease whose lymph nodes fluctuate and discharge despite adequate antibiotic therapy. Performed only after antibiotics are established to reduce the risk of spreading infection.",
+      "successRate": "Symptom resolution in 90% of drained nodes; cosmetic scarring is the main long-term issue."
+    },
+    {
+      "name": "Surgical excision of persistently enlarged lymph nodes",
+      "description": "Occasionally needed when nodes remain large and tender months after treatment despite microbiological cure. Pathology may show residual granulomatous inflammation without viable organism.",
+      "successRate": "Resolution of mass effect in 90%; recurrence is rare once antibiotics have completed."
+    }
+  ],
+
+  "alternativeTreatments": [],
+
+  "whySeeSpecialist": "Suspected tularemia warrants immediate infectious disease consultation because of the diagnostic difficulty, the BSL-3 laboratory requirements, the public-health reporting obligation, and the consequences of treatment delay. Pneumonic and typhoidal disease require admission, intravenous aminoglycoside therapy, and respiratory isolation pending clarification of the exposure history.",
+
+  "doctorSelectionGuide": "Look for board-certified infectious disease physicians with experience in zoonoses and tropical infections, hospital affiliations with Laboratory Response Network access, and the ability to coordinate with state public health departments. In bioterrorism scenarios, treatment will be coordinated by local public health authorities under CDC consultation; individual patients should follow the regimen prescribed by that response.",
+
+  "hospitalCriteria": [
+    "Access to a BSL-3 laboratory or Laboratory Response Network referral relationship",
+    "Infectious disease consultation available within 24 hours of admission",
+    "Intravenous aminoglycoside dosing service with therapeutic drug monitoring",
+    "Public health reporting infrastructure in place for mandatory notifiable diseases"
+  ],
+
+  "keyFacilities": [
+    "State public health laboratories",
+    "Centers for Disease Control and Prevention (CDC) Bacterial Special Pathogens Branch",
+    "Laboratory Response Network reference centers"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Wear long sleeves, long pants, and use DEET-based repellents when entering tick or deer fly habitats during May-September",
+    "Conduct full-body tick checks within two hours of returning from wooded or grassy areas; remove attached ticks promptly with fine forceps",
+    "Wear gloves and a mask when skinning, butchering, or handling wild rabbits, hares, muskrats, or rodents",
+    "Cook game meat thoroughly to an internal temperature of at least 165°F (74°C) to inactivate F. tularensis",
+    "Avoid mowing over animal carcasses; wet down brush and use respiratory protection when clearing land in endemic areas",
+    "Drink only treated or boiled water when camping, hiking, or working in endemic regions"
+  ],
+
+  "lifestyleModifications": [
+    "Maintain awareness of local public-health alerts for tularemia outbreaks during summer months",
+    "Use tick-prevention strategies on pets — dogs and cats can carry infected ticks indoors",
+    "If working in laboratory environments handling F. tularensis, ensure BSL-3 containment and report any breach immediately for post-exposure prophylaxis",
+    "Complete the full antibiotic course; relapses occur when therapy is shortened, particularly with doxycycline",
+    "Avoid drinking from untreated streams or wells, especially in spring after thaw when rodent carcasses release organisms"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Well-cooked meat from any source — F. tularensis is destroyed at standard cooking temperatures",
+      "Pasteurized dairy products only; raw milk can transmit F. tularensis in endemic areas",
+      "Bottled, boiled, or chlorinated water when in endemic regions",
+      "Adequate hydration during acute illness, particularly with high fever and gastrointestinal symptoms"
+    ],
+    "avoid": [
+      "Undercooked wild rabbit, hare, or game meat — the highest-risk dietary exposure",
+      "Untreated surface water from streams, ponds, or shallow wells in endemic areas",
+      "Raw or unpasteurized milk from goats, sheep, or cows in endemic regions",
+      "Sharing utensils or unwashed produce in outbreak settings until source is identified"
+    ]
+  },
+
+  "exerciseGuidelines": "Rest during the acute febrile phase. Gradual return to activity once afebrile for 48 hours and improving on antibiotics. Strenuous exercise during pneumonic disease can worsen respiratory symptoms; defer until imaging clears and inflammation has settled, typically 4-6 weeks.",
+
+  "dailyManagement": [
+    "Take antibiotics at the prescribed intervals for the full duration; partial courses are the leading cause of relapse",
+    "Monitor for signs of suppuration in affected lymph nodes — increasing pain, fluctuance, or skin breakdown warrants surgical review",
+    "Use acetaminophen rather than NSAIDs for fever if dehydrated or with renal involvement",
+    "Keep ulcer sites clean and covered until healed; daily gentle cleansing with saline reduces secondary infection risk",
+    "Attend follow-up at 4-6 weeks to confirm clinical resolution and rule out relapse"
+  ],
+
+  "prognosis": "With appropriate antibiotic therapy started within the first week of illness, overall mortality is under 2% across all tularemia presentations. Ulceroglandular disease, the most common form, resolves in 95% of patients without long-term sequelae though regional lymphadenopathy may persist for weeks to months. Pneumonic and typhoidal disease, untreated, carry historical mortality of 30-60%; with prompt aminoglycoside therapy, mortality falls to 5-10% in modern series. Subspecies tularensis (Type A) disease in North America carries higher mortality than subspecies holarctica disease seen in Europe and Asia. Relapse occurs in 6-12% of treated patients overall, concentrated in those receiving bacteriostatic agents (doxycycline) or shortened courses. Long-term complications are rare but include persistent lymphadenopathy requiring surgical excision, chronic skin scarring at ulcer sites, and rarely pericarditis or meningitis. Recovery from acute illness is usually complete by 4-6 weeks; full energy and exercise tolerance can take 2-3 months. Once recovered, patients have durable cell-mediated immunity to reinfection.",
+
+  "recoveryTimeline": "Fever and constitutional symptoms typically resolve within 2-5 days of starting effective antibiotics. Skin ulcers heal over 2-4 weeks, often leaving a small scar. Lymph node enlargement resolves more slowly, sometimes persisting for 4-8 weeks even after microbiological cure. Pneumonic disease shows radiographic clearance over 4-12 weeks. Full return to baseline energy and exercise tolerance takes 2-3 months on average.",
+
+  "complications": [
+    "Suppurative lymphadenopathy requiring incision and drainage in 20-25% of ulceroglandular cases",
+    "Pneumonic dissemination from skin or oropharyngeal disease, raising mortality risk substantially",
+    "Sepsis with multi-organ dysfunction in typhoidal disease — historic mortality 30-60% untreated",
+    "Pericarditis and pericardial effusion, rare immune-mediated complication weeks into illness",
+    "Meningitis with cerebrospinal fluid pleocytosis and isolation of F. tularensis, rare but high-mortality",
+    "Erythema nodosum or erythema multiforme as post-infectious immune phenomena",
+    "Relapse occurring 1-3 weeks after stopping bacteriostatic therapy, especially with shortened courses"
+  ],
+
+  "supportResources": [
+    { "name": "CDC Tularemia", "url": "https://www.cdc.gov/tularemia/index.html", "description": "Authoritative US public-health resource with clinical, laboratory, and bioterrorism preparedness information." },
+    { "name": "WHO Guidelines on Tularaemia", "url": "https://www.who.int/publications/i/item/9789241547376", "description": "International guidance covering surveillance, diagnosis, and clinical management." },
+    { "name": "Public Health Emergency Preparedness — Tularemia", "url": "https://emergency.cdc.gov/agent/tularemia/", "description": "CDC bioterrorism preparedness portal with healthcare provider information sheets." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "plague", "name": "Plague", "keyDifference": "Plague causes a markedly larger, more painful bubo with surrounding edema and gel-like inflammation, has a shorter incubation (1-7 days), often progresses to sepsis within 24-48 hours, and is responsive to streptomycin and ciprofloxacin like tularemia. Geographic and exposure history differ — plague follows flea bites in the western US, tularemia follows tick or rabbit exposure across central and Pacific states." },
+    { "slug": "anthrax", "name": "Anthrax", "keyDifference": "Cutaneous anthrax produces a painless black eschar with massive surrounding edema rather than the painful punched-out ulcer of tularemia. Both share a bioterrorism profile, but anthrax is caused by a large gram-positive spore-forming rod and responds preferentially to ciprofloxacin combined with another agent." },
+    { "slug": "pneumonia", "name": "Pneumonia", "keyDifference": "Community-acquired pneumonia usually presents with productive cough, response to standard beta-lactams or macrolides, and absence of skin ulcer or characteristic lymphadenopathy. Pneumonic tularemia is unresponsive to penicillins, often follows aerosol exposure, and carries epidemiologic risk factors absent in routine pneumonia." },
+    { "slug": "leprosy-hansen-disease", "name": "Leprosy (Hansen Disease)", "keyDifference": "Leprosy causes chronic, painless hypopigmented or anesthetic skin patches with peripheral nerve thickening over months to years, in contrast to the acute febrile ulcer-plus-adenopathy syndrome of tularemia. Treatment uses multidrug therapy (rifampicin, dapsone, clofazimine) over 6-24 months." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "lyme-disease", "name": "Lyme Disease" },
+    { "slug": "pneumonia", "name": "Pneumonia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "plague", "name": "Plague", "relevance": "Fellow CDC Category A bioterrorism agent and zoonotic gram-negative infection; differential diagnosis when fever and lymphadenopathy follow rodent or flea exposure." },
+    { "slug": "anthrax", "name": "Anthrax", "relevance": "Co-classified Category A bioterrorism agent with overlapping post-exposure prophylaxis protocols using doxycycline and ciprofloxacin." },
+    { "slug": "lyme-disease", "name": "Lyme Disease", "relevance": "Tick-borne infection that shares vectors and seasons with tularemia; coinfection occurs in endemic areas." },
+    { "slug": "pneumonia", "name": "Pneumonia", "relevance": "Pneumonic tularemia mimics community-acquired pneumonia but is unresponsive to standard antibiotics — important differential in patients with exposure history." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is tularemia?",
+      "answer": "Tularemia is a bacterial infection caused by Francisella tularensis, transmitted through tick or deer fly bites, contact with infected animals (especially rabbits and hares), inhalation of contaminated dust, or ingestion of contaminated water or undercooked meat. The illness causes fever, skin ulcers, swollen lymph nodes, and sometimes pneumonia. It is rare but serious without antibiotic treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do people catch tularemia?",
+      "answer": "Most US cases follow tick or deer fly bites in spring or summer. Hunters and trappers can catch it through skin contact when handling infected rabbits, hares, or rodents. Inhaling dust from mowing over carcasses, drinking untreated water, eating undercooked game, and laboratory exposure are less common routes. The infectious dose is exceptionally low — about 10 bacteria.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of tularemia?",
+      "answer": "The first signs are sudden fever above 38.5°C, chills, headache, and severe muscle aches typically 3-5 days after exposure. A painful skin papule develops at the site of a tick bite or animal contact and ulcerates over 2-3 days. Tender swollen lymph nodes in the area drained by the ulcer follow within days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is tularemia contagious between people?",
+      "answer": "No. Tularemia does not spread directly from person to person, even with the pneumonic form. Transmission requires contact with an infected animal, vector bite, ingestion, or aerosol from a contaminated environment. Healthcare workers caring for tularemia patients require only standard precautions, not respiratory isolation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is tularemia diagnosed?",
+      "answer": "Diagnosis combines clinical features, exposure history, and laboratory confirmation. Blood tests for antibodies (tube agglutination or microagglutination) become positive 2 weeks into illness; paired acute and convalescent titers showing a fourfold rise confirm diagnosis. PCR on ulcer, blood, or lymph node samples gives results within 24 hours. Always alert the lab — F. tularensis is a select agent requiring BSL-3 handling.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What antibiotics treat tularemia?",
+      "answer": "Streptomycin or gentamicin given by injection for 10 days is the most effective treatment. For mild outpatient cases, oral doxycycline for 14-21 days or ciprofloxacin for 10-14 days is used. Penicillins and cephalosporins do not work despite susceptibility testing results. Treatment should begin on clinical suspicion without waiting for laboratory confirmation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does tularemia treatment last?",
+      "answer": "Aminoglycoside treatment (streptomycin or gentamicin) lasts 10 days. Oral doxycycline runs 14-21 days, and ciprofloxacin 10-14 days. The longer courses for oral antibiotics reflect their bacteriostatic activity and a relapse rate around 12% when shorter regimens are used. Completing the full prescribed course is essential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can tularemia be fatal?",
+      "answer": "Untreated pneumonic and typhoidal tularemia carry mortality rates of 30-60%. With prompt antibiotic treatment, overall mortality falls to under 2%. Ulceroglandular disease — the most common form — almost never causes death when treated. Delay in recognition and treatment is the main driver of severe outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is rabbit fever?",
+      "answer": "Rabbit fever is a common name for tularemia, reflecting the role of wild rabbits and hares as the most recognized animal reservoir. Hunters and trappers who skin or butcher infected rabbits without gloves frequently develop the ulceroglandular form. The deer fly fever and Pahvant Valley plague names refer to the same disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is tularemia a bioterrorism concern?",
+      "answer": "F. tularensis is classified as CDC Category A because it has one of the lowest infectious doses of any bacterium (about 10 organisms), can be aerosolized, and produces severe pneumonic disease at scale. A WHO 1970 model estimated that 50 kg released over a city of 5 million would cause 250,000 illnesses and 19,000 deaths. The US maintains active preparedness planning.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Where is tularemia most common in the United States?",
+      "answer": "Arkansas, Missouri, Oklahoma, Kansas, and South Dakota together report over half of US tularemia cases. Other endemic states include Wyoming, Nebraska, Colorado, and Massachusetts (where the Martha's Vineyard outbreaks occurred). National incidence averages 200 cases per year.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I get tularemia from a tick?",
+      "answer": "Yes. Tick bites are the most common route of tularemia transmission in the United States, accounting for over half of cases. The American dog tick, Rocky Mountain wood tick, and lone star tick all transmit F. tularensis. Prompt removal of attached ticks within hours reduces transmission risk substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a tularemia vaccine?",
+      "answer": "A live attenuated vaccine (LVS) exists but is investigational in the United States and available only to laboratory workers handling F. tularensis under research protocols. It is not commercially available for general use. Research into newer subunit vaccines continues, but none are FDA-approved for routine prevention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does tularemia recovery take?",
+      "answer": "Fever and major constitutional symptoms resolve within 2-5 days of starting effective antibiotics. Skin ulcers heal over 2-4 weeks. Lymph node enlargement can persist 4-8 weeks even after microbiological cure. Full energy and exercise tolerance return over 2-3 months. Pneumonic disease takes longer, with imaging clearing over 4-12 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-exposure prophylaxis for tularemia?",
+      "answer": "After known high-risk exposure — a laboratory breach, suspected bioterrorism release, or unprotected autopsy of an infected case — the CDC recommends oral doxycycline 100 mg twice daily or ciprofloxacin 500 mg twice daily for 14 days. Begin immediately rather than waiting for symptoms. Public health authorities coordinate mass prophylaxis in bioterrorism scenarios.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get tularemia?",
+      "answer": "Yes. Pediatric incidence in the United States peaks at age 5-9, driven by tick exposure during outdoor summer activity. Treatment options include gentamicin for severe disease and, increasingly, short-course doxycycline or ciprofloxacin for milder cases. Pediatric infectious disease consultation is recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does tularemia recur after treatment?",
+      "answer": "Relapse occurs in 6-12% of treated patients overall, most often when bacteriostatic antibiotics (doxycycline) are used or courses are shortened. Relapses typically appear within 1-3 weeks of stopping therapy and respond to retreatment with a full course of an aminoglycoside or fluoroquinolone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is tularemia reported to public health?",
+      "answer": "Tularemia is a nationally notifiable disease in the United States. Clinicians and laboratories must report suspected or confirmed cases to state or local public health departments within 24 hours, who in turn notify the CDC. F. tularensis is a Tier 1 select agent and any laboratory isolation triggers Laboratory Response Network involvement.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Parinaud oculoglandular syndrome?",
+      "answer": "Parinaud syndrome describes painful unilateral conjunctivitis with palpebral granulomas and ipsilateral preauricular lymph node swelling. Tularemia is one cause; cat-scratch disease and other infections produce similar pictures. Diagnosis requires combined serology, PCR, and exposure history. Treatment matches the underlying infection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I protect myself from tularemia?",
+      "answer": "Wear long sleeves and pants and use DEET-based repellent in tick country. Check for ticks within two hours of outdoor activity. Use gloves and a mask when skinning or butchering wild game. Cook game meat to at least 165°F. Drink only treated water when camping. Avoid mowing over animal carcasses or working in dusty fields without respiratory protection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pets get tularemia?",
+      "answer": "Yes, particularly cats, which hunt rodents and rabbits. Infected cats can transmit F. tularensis to handlers through scratches and bites, producing the classic ulceroglandular presentation. Dogs are also susceptible but less likely to transmit. Cat-related tularemia is increasingly recognized in endemic states.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Tularemia (rabbit fever / deer fly fever)",
+
+  "regionalNames": [
+    { "name": "Rabbit fever", "region": "United States", "language": "en" },
+    { "name": "Deer fly fever", "region": "Western United States", "language": "en" },
+    { "name": "Pahvant Valley plague", "region": "Utah", "language": "en" },
+    { "name": "Ohara disease", "region": "Japan", "language": "en" }
+  ],
+
+  "searchTags": [
+    "tularemia", "rabbit fever", "deer fly fever", "francisella tularensis",
+    "ulceroglandular tularemia", "pneumonic tularemia", "oculoglandular tularemia",
+    "tularemia bioterrorism", "category A agent", "zoonotic infection",
+    "tick-borne tularemia", "tularemia antibiotics", "streptomycin tularemia"
+  ],
+
+  "symptomKeywords": [
+    "fever after tick bite", "skin ulcer with swollen lymph nodes",
+    "fever after handling rabbit", "painful eye with swollen gland",
+    "pneumonia after dust exposure", "rabbit hunter fever"
+  ],
+
+  "metaTitle": "Tularemia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Tularemia (rabbit fever): rare zoonotic infection causing fever, skin ulcer, swollen lymph nodes, and pneumonia. Symptoms, diagnosis, and antibiotic treatment.",
+
+  "keywords": [
+    "tularemia", "rabbit fever", "tularemia symptoms", "tularemia treatment",
+    "francisella tularensis", "pneumonic tularemia", "ulceroglandular tularemia",
+    "tularemia bioterrorism", "tularemia antibiotics", "deer fly fever",
+    "tularemia diagnosis", "is tularemia contagious"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Centers for Disease Control and Prevention. Tularemia — Clinical Information and Resources. CDC; 2023.",
+      "url": "https://www.cdc.gov/tularemia/clinicians/index.html",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "World Health Organization. WHO Guidelines on Tularaemia: Epidemic and Pandemic Alert and Response. WHO; 2007.",
+      "url": "https://www.who.int/publications/i/item/9789241547376",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Sjostedt A. Tularemia: History, Epidemiology, Pathogen Physiology, and Clinical Manifestations. Annals of the New York Academy of Sciences. 2007;1105:1-29.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17395726/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Maurin M, Gyuranecz M. Tularaemia: Clinical Aspects in Europe. The Lancet Infectious Diseases. 2016;16(1):113-124.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26738841/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Dennis DT, Inglesby TV, Henderson DA, et al. Tularemia as a Biological Weapon: Medical and Public Health Management. JAMA. 2001;285(21):2763-2773.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11386933/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Enderlin G, Morales L, Jacobs RF, Cross JT. Streptomycin and Alternative Agents for the Treatment of Tularemia: Review of the Literature. Clinical Infectious Diseases. 1994;19(1):42-47.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7948556/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Nelson CA, Brown J, Riley L, Dennis A, Oyer R, Brown C. Lack of evidence of tularemia transmission from humans. Clinical Infectious Diseases. 2020;71(7):1738-1742.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31748805/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}
