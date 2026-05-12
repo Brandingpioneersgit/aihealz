@@ -1,0 +1,525 @@
+{
+  "_meta": {
+    "slug": "endometriosis",
+    "tier": 1,
+    "headTerm": "endometriosis",
+    "longTailKeywords": [
+      "endometriosis symptoms",
+      "endometriosis treatment",
+      "endometriosis pain",
+      "endometriosis surgery",
+      "endometriosis vs adenomyosis",
+      "stage 4 endometriosis",
+      "endometriosis and fertility",
+      "deep infiltrating endometriosis",
+      "endometrioma chocolate cyst",
+      "is endometriosis curable"
+    ],
+    "primarySpecialty": "Gynecology",
+    "lastReviewed": "2026-05-12",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against ESHRE 2022 Endometriosis Guideline (Becker et al), NICE NG73 (2017, updated 2024), ACOG Practice Bulletin 114, WHO 2023 fact sheet, Zondervan NEJM 2020 review, and Chapron Nat Rev Endocrinol 2019. ICD-10 code N80. Drug doses checked against FDA labels for elagolix (Orilissa, 2018) and relugolix-estradiol-norethindrone (Myfembree, 2022)."
+  },
+
+  "h1Title": "Endometriosis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Gynecology",
+
+  "heroOverview": "Endometriosis is an estrogen-dependent inflammatory disease in which tissue resembling the uterine lining grows outside the uterus — on the ovaries, pelvic peritoneum, bowel, bladder, and occasionally beyond the pelvis. The World Health Organization estimates that endometriosis affects roughly 10% of reproductive-age women and girls globally, around 190 million people. The hallmark presentation is progressively worsening period pain that no longer responds to over-the-counter medication, often joined by deep pelvic pain with intercourse, pain with bowel movements during menses, fatigue, and difficulty conceiving. Average diagnostic delay runs 7-10 years from first symptom because pelvic pain is normalized and the disease has no reliable biomarker. Treatment combines hormonal suppression, pain control, and excisional surgery in a stepped strategy that should be matched to each patient's pain and fertility goals.",
+
+  "keyStats": {
+    "prevalence": "~10% of women and girls of reproductive age (WHO 2023); 30-50% of women with infertility",
+    "demographics": "Predominantly affects women aged 15-49; can begin with menarche and persist after menopause when estrogen exposure continues",
+    "avgAge": "Symptom onset typically in teens to early 30s; mean age at surgical diagnosis 28 years",
+    "globalCases": "Approximately 190 million women and girls worldwide (WHO 2023)"
+  },
+
+  "definition": "Endometriosis (ICD-10: N80) is a chronic, estrogen-dependent inflammatory disorder defined by the presence of endometrial-like glands and stroma at sites outside the uterine cavity. The ectopic tissue responds to ovarian hormones in a cyclical fashion, producing local inflammation, neoangiogenesis, fibrosis, neural infiltration, and adhesion formation. Three principal phenotypes are now recognized: superficial peritoneal endometriosis (the most common form, presenting as red, blue-black, or white peritoneal implants), ovarian endometrioma (the so-called chocolate cyst, an ovarian cyst filled with degraded menstrual blood), and deep infiltrating endometriosis (DIE) — nodular lesions that penetrate more than 5 mm beneath the peritoneal surface, typically involving the uterosacral ligaments, rectovaginal septum, bowel, bladder, or ureters. A rare thoracic form can cause catamenial pneumothorax. Disease severity is conventionally classified using the revised American Society for Reproductive Medicine (ASRM) staging system from I (minimal) to IV (severe), based on lesion location, depth, and adhesions found at laparoscopy; this stage correlates poorly with pain severity and only modestly with fertility. Endometriosis is managed primarily by gynecologists, with referral to specialist endometriosis or minimally invasive gynecologic surgery centers for advanced disease, and multidisciplinary input from pain specialists, colorectal or urologic surgeons, and reproductive endocrinology when indicated.",
+
+  "typesClassification": [
+    { "type": "Superficial peritoneal endometriosis", "description": "Flat or vesicular lesions on the peritoneal surface lining the pelvis. The most common phenotype, often missed on imaging and identified at laparoscopy." },
+    { "type": "Ovarian endometrioma (chocolate cyst)", "description": "A cyst within the ovary filled with old, degraded menstrual blood that gives it a chocolate-brown appearance. Reliably detected by transvaginal ultrasound; associated with reduced ovarian reserve." },
+    { "type": "Deep infiltrating endometriosis (DIE)", "description": "Nodules penetrating more than 5 mm into the peritoneum, usually in the uterosacral ligaments, posterior cul-de-sac, rectovaginal septum, bowel, bladder, or ureters. Drives the most severe pain and may require multidisciplinary surgery." },
+    { "type": "Thoracic endometriosis", "description": "Rare extragenital form with diaphragmatic or pleural implants. Presents with catamenial chest pain, shoulder-tip pain, hemoptysis, or pneumothorax that recurs with each period." },
+    { "type": "Iatrogenic and scar endometriosis", "description": "Deposits implanted at surgical scars after cesarean section or laparotomy. Presents as a cyclical, tender nodule in or near the scar." }
+  ],
+
+  "primarySymptoms": [
+    "Progressively worsening dysmenorrhea — period pain that grows more severe year on year, often starts 1-2 days before menses, and no longer responds to over-the-counter NSAIDs.",
+    "Chronic pelvic pain outside menstruation, often described as deep, dragging, or cramping, present for at least 6 months in many patients.",
+    "Deep dyspareunia — pain felt deep in the pelvis with vaginal intercourse, especially in positions that allow deeper penetration; characteristic of uterosacral or rectovaginal disease.",
+    "Dyschezia and cyclical bowel symptoms — painful bowel movements, bloating, diarrhea, constipation, or rectal bleeding that worsen around menses and suggest bowel involvement.",
+    "Dysuria, urinary urgency, or cyclical hematuria pointing to bladder or ureteric endometriosis.",
+    "Infertility or difficulty conceiving, present in 30-50% of women diagnosed with endometriosis and often the first reason for evaluation.",
+    "Heavy menstrual bleeding (menorrhagia) or intermenstrual spotting, especially when adenomyosis coexists.",
+    "Fatigue that is disproportionate to activity and often follows pain flares, reported by more than half of patients in survey data.",
+    "Cyclical shoulder-tip or chest pain, hemoptysis, or recurrent pneumothorax around menses — red flags for thoracic endometriosis.",
+    "A tender, palpable nodule in a previous cesarean or laparoscopy scar that swells and hurts during each period — typical of scar endometriosis."
+  ],
+
+  "earlyWarningSigns": [
+    "Period pain severe enough to miss school, work, or social activity in the first few years after menarche",
+    "NSAIDs and combined oral contraceptive pills no longer controlling pain that was previously manageable",
+    "New deep pelvic pain with intercourse in a previously asymptomatic woman",
+    "Difficulty conceiving after 12 months of regular unprotected intercourse (or 6 months if over 35) with otherwise unremarkable basic fertility tests",
+    "Cyclical bowel or bladder symptoms that consistently track with the menstrual cycle"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe one-sided pelvic pain with nausea or vomiting — possible ruptured endometrioma, ovarian torsion, or ectopic pregnancy",
+    "Catamenial chest pain, shortness of breath, or coughing up blood — thoracic endometriosis or pneumothorax requires urgent chest imaging",
+    "Inability to pass urine, flank pain, or fever with known pelvic endometriosis — possible ureteric obstruction or pyelonephritis",
+    "Severe rectal bleeding or signs of bowel obstruction (vomiting, abdominal distension, no flatus) — bowel endometriosis requiring surgical assessment"
+  ],
+
+  "causes": [
+    {
+      "cause": "Retrograde menstruation with implantation",
+      "description": "Sampson's classical theory: viable endometrial fragments flow backward through the fallopian tubes during menses and implant on peritoneal surfaces. Retrograde menstruation is near-universal, so it is necessary but not sufficient — additional immune, hormonal, and genetic factors determine who develops disease."
+    },
+    {
+      "cause": "Coelomic metaplasia",
+      "description": "Pluripotent peritoneal cells transform into endometrial-like tissue under hormonal or inflammatory cues. This theory explains endometriosis in pre-menarchal girls, post-hysterectomy women, and rare cases in men receiving estrogen therapy."
+    },
+    {
+      "cause": "Lymphatic and vascular dissemination",
+      "description": "Endometrial cells spread through lymphatics and blood vessels to distant sites such as the lung, pleura, diaphragm, brain, and surgical scars — explaining extragenital and thoracic endometriosis."
+    },
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Family-based and genome-wide studies show heritability of approximately 50%. Loci near WNT4, GREB1, FN1, KDR, and CDKN2B-AS1 are reproducibly associated with endometriosis; first-degree relatives of affected women carry roughly a 7-fold increased risk."
+    },
+    {
+      "cause": "Estrogen excess and progesterone resistance",
+      "description": "Endometriotic lesions upregulate aromatase (the enzyme that synthesizes estrogen locally) and downregulate progesterone receptors, sustaining their own proliferation and inflammation despite the surrounding hormonal environment."
+    },
+    {
+      "cause": "Altered immune surveillance",
+      "description": "Reduced natural killer cell activity, macrophage polarization toward an M2 phenotype, and increased pro-inflammatory cytokines in peritoneal fluid allow ectopic endometrial fragments to survive, implant, and recruit blood supply."
+    },
+    {
+      "cause": "Environmental and developmental exposures",
+      "description": "Prenatal exposure to diethylstilbestrol, dioxin, and persistent organic pollutants is linked to higher endometriosis incidence in observational data. Early menarche and shorter cycles increase lifetime menstrual exposure and risk."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of endometriosis", "category": "genetic", "description": "A first-degree relative with endometriosis increases personal risk roughly 7-fold and predicts more severe disease." },
+    { "factor": "Early menarche (before age 11)", "category": "non-modifiable", "description": "More menstrual cycles over a lifetime increase cumulative retrograde menstruation; early menarche raises endometriosis risk by approximately 30%." },
+    { "factor": "Short menstrual cycles (under 27 days)", "category": "non-modifiable", "description": "Shorter intervals mean more menstrual events per year and a steeper exposure curve to ectopic endometrial seeding." },
+    { "factor": "Nulliparity", "category": "non-modifiable", "description": "Pregnancy and lactation produce months of progesterone-dominant anovulation that quiets lesions; women who have never been pregnant carry roughly twice the risk." },
+    { "factor": "Heavy or prolonged menstrual flow", "category": "non-modifiable", "description": "Greater menstrual volume increases retrograde flow into the pelvis." },
+    { "factor": "Low body mass index", "category": "modifiable", "description": "Lean body habitus is consistently associated with higher endometriosis prevalence, possibly via higher bioavailable estrogen and shorter cycles." },
+    { "factor": "Mullerian anomalies with outflow obstruction", "category": "non-modifiable", "description": "Imperforate hymen, transverse vaginal septum, or non-communicating uterine horn cause retained menstrual blood and a markedly elevated endometriosis risk." },
+    { "factor": "Diethylstilbestrol (DES) in-utero exposure", "category": "environmental", "description": "Daughters of women given DES during pregnancy in the 1940s-70s show approximately 80% increased endometriosis risk." },
+    { "factor": "Caucasian and Asian ancestry", "category": "non-modifiable", "description": "Population studies show higher reported prevalence in Asian women (notably Japanese) and lower in Black women, though detection bias likely contributes." }
+  ],
+
+  "affectedDemographics": [
+    "Affects roughly 10% of women and girls of reproductive age globally — about 190 million worldwide (WHO 2023)",
+    "Present in 30-50% of women evaluated for infertility and in up to 75% of women with chronic pelvic pain",
+    "Mean diagnostic delay 7-10 years from first symptom, longer in adolescents and in low- and middle-income settings",
+    "Symptom onset can begin within the first year after menarche; pediatric and adolescent endometriosis is increasingly recognized",
+    "Disease can persist into the post-menopausal period in women on hormone replacement therapy or with peripheral estrogen production from adipose tissue"
+  ],
+
+  "diagnosisOverview": "Diagnosis of endometriosis begins with a focused symptom history that asks specifically about cyclical pain, dyspareunia, bowel and bladder symptoms timed to menses, and fertility difficulty — questions still missing from many primary care visits and a major driver of diagnostic delay. Bimanual and speculum examination may reveal tenderness, uterosacral nodularity, a fixed retroverted uterus, or a posterior fornix nodule, and the exam is best timed to menstruation when lesions are most palpable. The 2022 ESHRE guideline (Becker et al) is explicit that laparoscopy is no longer required to make a clinical diagnosis: a careful history plus imaging is now sufficient to initiate empirical treatment. Transvaginal ultrasound by a trained operator is first-line imaging, reliably detecting ovarian endometriomas and many forms of deep infiltrating disease using the IDEA consensus sonographic signs (kissing ovaries, sliding sign, hypoechoic nodules of the uterosacral ligaments, bowel-wall infiltration). MRI complements ultrasound for mapping bowel, ureteric, and rectovaginal disease before surgery and for distinguishing endometriosis from adenomyosis. CA-125 is not recommended for diagnosis: it lacks sensitivity and specificity, rises in many benign conditions, and can be normal even in stage IV disease. Laparoscopy with histologic confirmation retains a role when imaging is inconclusive, when surgical treatment is planned, or when fertility decisions hinge on disease stage. The principal differentials — adenomyosis, pelvic inflammatory disease, irritable bowel syndrome, interstitial cystitis, primary dysmenorrhea, and uterine fibroids — are best sorted with a combination of imaging, focused history, and response to empirical therapy.",
+
+  "diagnosticTests": [
+    {
+      "test": "Transvaginal ultrasound (TVUS) with IDEA protocol",
+      "purpose": "First-line imaging for endometriomas and many deep infiltrating lesions. The IDEA consensus describes structured assessment for the sliding sign, uterosacral nodules, bladder and bowel involvement, and kissing ovaries.",
+      "whatToExpect": "A small lubricated probe is placed inside the vagina for 15-30 minutes. Best performed by a clinician trained in advanced gynecologic ultrasound. Mild pressure but generally well-tolerated."
+    },
+    {
+      "test": "Pelvic MRI",
+      "purpose": "Maps deep infiltrating endometriosis, bowel and ureteric involvement, and adenomyosis. Particularly useful before complex surgery and when ultrasound is equivocal.",
+      "whatToExpect": "A 30-45 minute scan in a noisy tunnel-shaped magnet. No radiation. Anti-spasmodic injection may be given to quiet bowel movement; vaginal and rectal contrast gel is used in some specialist centers."
+    },
+    {
+      "test": "Diagnostic laparoscopy with biopsy",
+      "purpose": "Direct visualization and histologic confirmation. Performed when imaging is inconclusive, when fertility planning requires accurate staging, or as the entry step for excisional surgery.",
+      "whatToExpect": "A day-case operation under general anesthetic with three or four small abdominal incisions. Recovery typically 1-2 weeks. Pathology confirms endometrial glands and stroma in resected tissue."
+    },
+    {
+      "test": "Bimanual pelvic examination",
+      "purpose": "Detects uterosacral nodularity, posterior fornix tenderness, fixed retroversion, and adnexal masses. Higher yield when performed during menses.",
+      "whatToExpect": "A clinician inserts two gloved fingers into the vagina while pressing on the lower abdomen with the other hand. Takes 1-2 minutes. Speculum examination is performed at the same visit."
+    },
+    {
+      "test": "Symptom diary and validated questionnaires",
+      "purpose": "Tracks pain location, intensity, and timing across cycles. Tools such as the Endometriosis Health Profile-30 (EHP-30) and visual analog scales support diagnosis and treatment response.",
+      "whatToExpect": "A daily log kept for 2-3 months using paper, an app, or a clinic-supplied template. Brings objective data to follow-up visits."
+    },
+    {
+      "test": "CA-125 (selective use only)",
+      "purpose": "Not recommended for diagnosis. May be useful for monitoring known severe disease or distinguishing endometrioma from ovarian malignancy in older women with complex cysts.",
+      "whatToExpect": "Standard blood draw. Results return in 1-3 days. Levels are often normal in early disease and elevated in many benign conditions including menstruation itself."
+    },
+    {
+      "test": "Endometriosis Fertility Index (EFI) at laparoscopy",
+      "purpose": "Combines surgical findings with patient factors to predict spontaneous conception rates after surgery and guide ART decisions.",
+      "whatToExpect": "Calculated by the surgeon from operative findings; result is shared during postoperative counseling and informs whether to attempt natural conception or move directly to IVF."
+    }
+  ],
+
+  "treatmentOverview": "Endometriosis treatment is goal-directed: pain control, fertility preservation, or both, chosen with the patient and revisited as life circumstances change. The 2022 ESHRE guideline and NICE NG73 (2017, updated 2024) recommend a stepped strategy that starts with analgesia and hormonal suppression and reserves surgery for failed medical therapy, deep infiltrating disease, large endometriomas, or fertility indications. First-line pain treatment combines a scheduled NSAID with continuous combined hormonal contraception (pill, patch, or vaginal ring) taken without a pill-free interval, which converts the patient to amenorrhea and shrinks lesions in many. Progestin-only options include oral dienogest 2 mg daily, the 52 mg levonorgestrel-releasing intrauterine system, oral norethindrone 5-15 mg, and depot medroxyprogesterone acetate; choice is driven by side-effect tolerance, bleeding profile, and bone density considerations. When first-line hormones fail, GnRH antagonists (oral elagolix 150-200 mg daily, FDA-approved 2018; relugolix combined with estradiol 1 mg and norethindrone 0.5 mg, FDA-approved for endometriosis pain 2022) suppress pituitary stimulation and ovarian estrogen, with built-in low-dose hormonal add-back to limit bone loss and vasomotor symptoms. Depot GnRH agonists such as leuprolide remain an option, generally with add-back therapy to prevent osteoporosis with use beyond six months. Laparoscopic excision is the surgical gold standard; randomized data favor excision over ablation for pain reduction and for histological confirmation, especially in deep infiltrating disease. Endometrioma cystectomy must balance pain relief against the documented reduction in ovarian reserve from excising functional ovarian tissue. Hysterectomy with or without bilateral salpingo-oophorectomy is considered only when family is complete, pain has failed every other option, and the patient understands surgical menopause and its consequences. Pain that persists despite anatomical clearance is increasingly recognized and warrants multidisciplinary input including pelvic floor physiotherapy, neuropathic pain medication, cognitive behavioral therapy, and a chronic pain service.",
+
+  "medicalTreatments": [
+    {
+      "name": "Combined hormonal contraceptive — continuous regimen (e.g., ethinyl estradiol 20-30 mcg + progestin, taken without pill-free interval)",
+      "description": "Suppresses ovulation and induces decidualization of ectopic tissue. Continuous (rather than cyclic) dosing produces amenorrhea and outperforms cyclic use for pain. Patch and vaginal ring are equivalent alternatives.",
+      "effectiveness": "Pain improvement in approximately 60-75% of patients with mild to moderate disease; benefit sustained as long as the regimen is continued."
+    },
+    {
+      "name": "Oral dienogest (2 mg daily)",
+      "description": "Selective progestin that reduces endogenous estrogen, induces decidualization, and has direct anti-inflammatory effects on lesions. Widely used as first-line progestin therapy outside the United States; available in many countries as Visanne.",
+      "effectiveness": "Reduces pain scores by approximately 50% from baseline within 12 weeks in randomized trials; similar efficacy to GnRH agonists with a better tolerability profile."
+    },
+    {
+      "name": "Levonorgestrel-releasing intrauterine system (52 mg LNG-IUS)",
+      "description": "Releases progestin locally for up to 8 years. Particularly useful for dysmenorrhea, adenomyosis, and patients seeking long-acting reversible contraception. Avoids systemic estrogen exposure.",
+      "effectiveness": "Reduces dysmenorrhea by 50-70% within 6 months; comparable to GnRH agonists for pain at 3 years in randomized trials."
+    },
+    {
+      "name": "Norethindrone acetate (5-15 mg daily)",
+      "description": "Oral progestin available worldwide and inexpensive. Titrated upward until amenorrhea is achieved. Particularly useful where dienogest is not available.",
+      "effectiveness": "Pain relief in approximately 60-80% of patients within 6 months in observational cohorts."
+    },
+    {
+      "name": "Elagolix (150 mg daily for up to 24 months, or 200 mg twice daily for up to 6 months)",
+      "description": "Oral non-peptide GnRH antagonist approved by FDA in 2018 for moderate to severe endometriosis pain. Lower dose limits hypoestrogenic side effects; higher dose is more effective but restricted in duration due to bone loss.",
+      "effectiveness": "In the Elaris EM-I and EM-II trials, the 200 mg twice-daily dose produced a clinically meaningful response in dysmenorrhea in approximately 75% of patients and in non-menstrual pelvic pain in approximately 55%."
+    },
+    {
+      "name": "Relugolix-estradiol-norethindrone combination (40 mg / 1 mg / 0.5 mg daily)",
+      "description": "Once-daily oral GnRH antagonist combined with low-dose hormonal add-back, approved by FDA in 2022 (Myfembree) for endometriosis-associated pain. The add-back limits bone density loss and vasomotor symptoms while preserving lesion suppression.",
+      "effectiveness": "In the SPIRIT 1 and 2 trials, approximately 75% of patients achieved a clinically meaningful reduction in dysmenorrhea at 24 weeks and 60-66% in non-menstrual pelvic pain, with bone mineral density loss limited to less than 1% at 12 months."
+    },
+    {
+      "name": "Depot leuprolide acetate (3.75 mg monthly or 11.25 mg every 3 months) with add-back therapy",
+      "description": "GnRH agonist that produces medical menopause through pituitary downregulation. Add-back hormonal therapy (low-dose estrogen plus progestin, or norethindrone alone) is co-prescribed to limit bone loss and hot flashes with use beyond 6 months.",
+      "effectiveness": "Pain reduction in 70-90% of patients during therapy; symptoms typically recur within 12 months of discontinuation without subsequent maintenance therapy."
+    },
+    {
+      "name": "NSAIDs (e.g., naproxen 500 mg twice daily, ibuprofen 400-600 mg every 6-8 hours)",
+      "description": "Provide adjunctive pain control through prostaglandin inhibition. Best started 1-2 days before expected menses and continued through the heaviest days. Use lowest effective dose to limit gastric and renal side effects.",
+      "effectiveness": "Reduce menstrual pain by 40-50% in primary dysmenorrhea trials; effect smaller as endometriosis advances, but useful in combination with hormonal therapy."
+    },
+    {
+      "name": "Aromatase inhibitors (letrozole 2.5 mg daily) added to progestin or GnRH analog",
+      "description": "Block local estrogen synthesis in lesions. Reserved for refractory disease and given only with concomitant ovarian suppression to prevent follicular cysts. Off-label use guided by specialist centers.",
+      "effectiveness": "Improves pain in roughly 60% of patients with persistent symptoms despite first- and second-line therapy in small randomized trials."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Laparoscopic excision of endometriosis",
+      "description": "The surgical gold standard, performed at minimally invasive or specialist endometriosis centers. Lesions are sharply excised with margins to confirm clearance and obtain histology. Superior to ablation/diathermy for deep disease and for long-term pain reduction.",
+      "successRate": "Improvement in pain at 12 months in approximately 70-80% of patients; recurrence requiring further intervention 20-50% over 5 years."
+    },
+    {
+      "name": "Laparoscopic cystectomy of ovarian endometrioma",
+      "description": "Stripping of the cyst wall preserves more ovarian tissue than drainage and ablation but inevitably removes some normal ovarian cortex. Decision balances pain relief, access for IVF, and ovarian reserve.",
+      "successRate": "Pain relief in 80-90% short-term; cyst recurrence approximately 20% at 5 years. Anti-Müllerian hormone (AMH) falls by an average of 30% after bilateral cystectomy."
+    },
+    {
+      "name": "Bowel resection or shaving for rectosigmoid endometriosis",
+      "description": "Performed at multidisciplinary centers when DIE infiltrates bowel wall and causes significant symptoms or stenosis. Options range from superficial shaving to disc resection to segmental resection depending on depth and length.",
+      "successRate": "Pain and bowel-symptom relief in approximately 85% of selected patients; complication rates 5-15% including anastomotic leak (1-3%) and rectovaginal fistula."
+    },
+    {
+      "name": "Ureteric reimplantation or ureterolysis",
+      "description": "Performed for ureteric endometriosis causing obstruction or hydronephrosis. Often combined with bowel surgery in deep posterior compartment disease.",
+      "successRate": "Renal function preserved in over 90% of cases when performed before significant parenchymal loss."
+    },
+    {
+      "name": "Hysterectomy with or without bilateral salpingo-oophorectomy",
+      "description": "Considered only when family is complete and other treatments have failed. Removing the ovaries induces surgical menopause; conserving them preserves function but leaves a small recurrence risk if lesions are not fully excised.",
+      "successRate": "Long-term pain relief in approximately 85-90% of well-selected patients when combined with complete lesion excision; pain persists in 10-15%, often reflecting central sensitization."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Pelvic floor physiotherapy", "description": "Addresses myofascial hypertonia, trigger points, and pelvic floor dyssynergia that contribute to dyspareunia and chronic pelvic pain. Recommended by ESHRE 2022 as adjunctive care when pelvic floor dysfunction is identified on exam." },
+    { "name": "Cognitive behavioral therapy and pain neuroscience education", "description": "Reduces pain catastrophizing and improves function in chronic pelvic pain. Evidence-supported as adjunctive treatment, not a replacement for medical or surgical management." },
+    { "name": "Acupuncture", "description": "Cochrane and randomized data show small short-term reductions in menstrual pain. Reasonable adjunct for patients seeking non-pharmacologic options; effect size modest." }
+  ],
+
+  "whySeeSpecialist": "Refer to a gynecologist when cyclical pelvic pain is severe enough to disrupt daily activity, when first-line analgesia and combined hormonal contraception have failed, when infertility is part of the picture, when ultrasound shows an endometrioma or deep infiltrating disease, or when bowel, bladder, or ureteric symptoms suggest extragenital involvement. Complex deep infiltrating endometriosis should be managed at specialist or multidisciplinary endometriosis centers where colorectal, urology, and reproductive surgery teams can coordinate.",
+
+  "doctorSelectionGuide": "Look for board certification in obstetrics and gynecology with subspecialty training or accreditation in minimally invasive gynecologic surgery or reproductive medicine. Ask about case volumes for endometriosis excision (specialist centers typically perform several hundred per year), use of advanced transvaginal ultrasound or MRI for preoperative mapping, and access to a multidisciplinary team. Continuity matters — endometriosis care often spans years, includes fertility decisions, and benefits from a single accountable clinician coordinating across specialties.",
+
+  "preventionStrategies": [
+    "Use combined hormonal contraception or LNG-IUS in adolescents and young women with severe primary dysmenorrhea — observational data suggest this may slow progression of subclinical disease",
+    "Maintain regular physical activity, which is associated with roughly 20% lower endometriosis incidence in prospective cohorts",
+    "Limit trans-fat intake and prioritize omega-3-rich foods — diet patterns associated with lower endometriosis incidence in the Nurses' Health Study II",
+    "Promptly evaluate Mullerian outflow obstruction in adolescents with severe pain and absent menses, as relief of obstruction reduces retrograde menstrual burden",
+    "Avoid prolonged unopposed estrogen exposure in post-hysterectomy patients with known endometriosis — combined estrogen-progestin regimens are safer for residual disease"
+  ],
+
+  "lifestyleModifications": [
+    "Track symptoms daily during at least three menstrual cycles using a paper diary or app — patterns guide both diagnosis and treatment adjustments",
+    "Apply heat to the lower abdomen during flares; topical heat compares favorably to ibuprofen for short-term menstrual pain relief in randomized trials",
+    "Engage in low-impact aerobic activity (walking, swimming, cycling) most days — exercise improves pain, fatigue, and quality of life in endometriosis-specific studies",
+    "Prioritize 7-9 hours of sleep — poor sleep amplifies pain perception and is independently linked to worse endometriosis symptom scores",
+    "Identify and treat coexisting pelvic floor dysfunction with a trained physiotherapist when dyspareunia or post-void aching is present",
+    "Build a working relationship with employers or schools regarding flexible time during severe flares; recognized policies meaningfully reduce work loss"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Oily fish (salmon, mackerel, sardines) twice weekly — higher omega-3 intake is associated with 22% lower endometriosis incidence in cohort data",
+      "Fruit and green leafy vegetables — antioxidant-rich patterns reduce oxidative stress in peritoneal fluid",
+      "Whole grains, legumes, and nuts as fiber sources, which support healthy estrogen metabolism",
+      "Adequate calcium and vitamin D, especially for patients on GnRH analog therapy who face bone density loss",
+      "Plenty of water and herbal teas during flares to support bowel regularity"
+    ],
+    "avoid": [
+      "High trans-fat intake (fried fast food, partially hydrogenated margarines) — associated with 48% higher endometriosis risk in NHS II data",
+      "Excessive red and processed meat (more than 2 servings per day) — observational links to higher incidence",
+      "Heavy alcohol use, which raises endogenous estrogen and worsens disease activity",
+      "Highly restrictive elimination diets without dietitian supervision — these can worsen nutrition without proven benefit"
+    ]
+  },
+
+  "exerciseGuidelines": "Low-impact aerobic activity such as walking, swimming, or cycling is safe and beneficial. Aim for 150 minutes per week. Add core and pelvic floor strengthening only under guidance if pelvic floor dysfunction is suspected. During severe flares, rest is appropriate; resume movement as pain settles. High-impact activity is acceptable between flares for most patients and should not be avoided out of fear of harm.",
+
+  "dailyManagement": [
+    "Take hormonal therapy at the same time each day — adherence is the strongest predictor of sustained pain control",
+    "Keep an as-needed NSAID prescription available for breakthrough pain, started early in each cycle before pain peaks",
+    "Use a symptom-tracking app to record pain, bleeding, bowel and bladder symptoms, and impact on activity",
+    "Schedule rest days around predicted heavy days where possible and inform close family or workplace contacts of the pattern",
+    "Maintain regular follow-up with the gynecology team — every 6-12 months for stable disease, sooner if symptoms change or fertility plans shift"
+  ],
+
+  "prognosis": "Endometriosis is chronic but well-controlled in most patients with combined medical and, where indicated, surgical therapy. Continuous hormonal suppression keeps symptoms in remission as long as it is maintained; pain typically returns within 6-12 months of stopping. After laparoscopic excision, 70-80% of patients report clinically meaningful pain improvement at 12 months, with recurrence rates of 20-50% over 5 years depending on completeness of surgery and postoperative hormonal maintenance. Spontaneous conception is possible in many women with minimal to moderate disease, and assisted reproductive technology achieves live-birth rates comparable to other infertility etiologies — typically 30-40% per IVF cycle in women under 35. Endometriosis carries a small absolute increase in lifetime risk of ovarian endometrioid and clear-cell carcinoma; this risk does not warrant routine screening but is one reason large persistent endometriomas in older women are watched closely. Quality of life scores improve significantly with effective treatment, though chronic pain components can persist if central sensitization has developed before lesion clearance.",
+
+  "recoveryTimeline": "Hormonal therapy typically reduces pain within 4-12 weeks; full benefit by 6 months. After laparoscopic excision, most patients return to light activity within 1 week, normal activity by 2-4 weeks, and report sustained pain improvement by 3-6 months. Following bowel resection or other major DIE surgery, recovery is 6-12 weeks. Fertility outcomes are typically assessed over 6-12 months of attempted conception after surgery, with IVF cycles taking 4-8 weeks each.",
+
+  "complications": [
+    "Infertility — affects 30-50% of women with endometriosis through anatomical distortion, ovarian damage, altered peritoneal environment, and reduced oocyte quality",
+    "Chronic pelvic pain with central sensitization — pain that persists despite anatomical clearance and requires multidisciplinary pain management",
+    "Bowel obstruction or stenosis from deep infiltrating disease — uncommon but requires surgical intervention",
+    "Ureteric obstruction with hydronephrosis and potential renal damage — often silent until significant function loss; routine renal imaging in known DIE is warranted",
+    "Reduced ovarian reserve and earlier menopause, especially after bilateral endometrioma cystectomy",
+    "Small absolute increase in ovarian endometrioid and clear-cell carcinoma risk, particularly with long-standing endometriomas"
+  ],
+
+  "supportResources": [
+    { "name": "Endometriosis UK", "url": "https://www.endometriosis-uk.org/", "description": "UK patient charity with helpline, support groups, and educational resources aligned with NICE NG73." },
+    { "name": "Endometriosis Foundation of America", "url": "https://www.endofound.org/", "description": "US patient organization offering education, advocacy, and a clinician directory for specialist endometriosis care." },
+    { "name": "WHO — Endometriosis Fact Sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/endometriosis", "description": "Authoritative global overview from the World Health Organization, useful for patients seeking population-level context." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "fibroids", "name": "Uterine Fibroids", "keyDifference": "Fibroids are benign smooth-muscle tumors of the uterine wall that cause heavy menstrual bleeding, bulk symptoms, and pressure on the bladder or bowel, but are usually less painful with intercourse than endometriosis. Imaging readily distinguishes them — fibroids are solid intramural or submucosal masses; endometriosis appears as peritoneal lesions, endometriomas, or DIE nodules. The two coexist in roughly 20% of patients." },
+    { "slug": "primary-dysmenorrhea-n944", "name": "Primary Dysmenorrhea", "keyDifference": "Primary dysmenorrhea is menstrual pain without identifiable pelvic pathology, typically starting within 6-12 months of menarche, lasting 1-2 days, and responding well to NSAIDs and combined hormonal contraception. Endometriosis pain worsens over years, extends beyond menses, and stops responding to over-the-counter measures." },
+    { "slug": "ibs", "name": "Irritable Bowel Syndrome", "keyDifference": "IBS produces cramping, bloating, and altered bowel habit but lacks the cyclical relationship with menses that characterizes bowel endometriosis. Symptoms unrelated to the menstrual cycle and absence of dyspareunia point away from endometriosis; cyclical pattern and abnormal pelvic exam point toward it." },
+    { "slug": "pelvic-inflammatory-disease", "name": "Pelvic Inflammatory Disease", "keyDifference": "PID is an acute or subacute infection presenting with fever, abnormal discharge, cervical motion tenderness, and positive STI testing. Endometriosis is non-infectious, lacks systemic features, and shows cyclical pain rather than the constant pain of active infection." },
+    { "slug": "interstitial-cystitis-chronic-without-hematuria-n3010", "name": "Interstitial Cystitis", "keyDifference": "Interstitial cystitis (bladder pain syndrome) presents with urinary urgency, frequency, and bladder pain that improves with voiding. Bladder endometriosis can mimic it but is cyclical and visible on TVUS or MRI. The two coexist in some patients and should both be considered in chronic pelvic pain." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "fibroids", "name": "Uterine Fibroids" },
+    { "slug": "female-infertility-unspecified-n979", "name": "Female Infertility" },
+    { "slug": "ibs", "name": "Irritable Bowel Syndrome" },
+    { "slug": "polycystic-ovarian-syndrome-e282", "name": "Polycystic Ovarian Syndrome" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "primary-dysmenorrhea-n944", "name": "Primary Dysmenorrhea", "relevance": "Severe primary dysmenorrhea in adolescence is a strong predictor of later endometriosis diagnosis and a target for early hormonal therapy." },
+    { "slug": "fibroids", "name": "Uterine Fibroids", "relevance": "Common comorbid pelvic pathology that overlaps with endometriosis in heavy menstrual bleeding and pelvic pain presentations." },
+    { "slug": "female-infertility-unspecified-n979", "name": "Female Infertility", "relevance": "30-50% of women with infertility are found to have endometriosis; the two are managed in close coordination." },
+    { "slug": "polycystic-ovarian-syndrome-e282", "name": "Polycystic Ovarian Syndrome", "relevance": "Another major reproductive-age gynecologic disorder; sometimes coexists and complicates fertility planning." },
+    { "slug": "endometriosis-of-ovary-n801", "name": "Endometriosis of Ovary", "relevance": "The ICD-10 specific code for ovarian endometrioma, a major phenotype of endometriosis." },
+    { "slug": "endometriosis-of-pelvic-peritoneum-n803", "name": "Endometriosis of Pelvic Peritoneum", "relevance": "ICD-10 specific code for peritoneal endometriosis, the most common phenotype." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is endometriosis in simple terms?",
+      "answer": "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside the uterus — most often on the ovaries, the lining of the pelvis, and ligaments near the uterus. This tissue still responds to monthly hormones, so it bleeds and inflames with each period. Over time it causes pain, scarring, and difficulty getting pregnant. It affects around 10% of reproductive-age women globally.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is endometriosis diagnosed?",
+      "answer": "Diagnosis starts with a detailed history of cyclical pelvic pain, painful periods, painful intercourse, and bowel or bladder symptoms timed to menses. A pelvic examination plus transvaginal ultrasound by a trained sonographer is first-line and can detect ovarian endometriomas and many deep lesions. MRI is used for complex disease. The 2022 ESHRE guideline no longer requires laparoscopy to make the diagnosis, though surgery is still used when imaging is inconclusive or treatment is planned.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does endometriosis take so long to diagnose?",
+      "answer": "Average delay from first symptom to diagnosis is 7-10 years. Period pain is often normalized in family and clinical settings, symptoms overlap with bowel and bladder conditions, and there is no reliable blood test. Until recently, definitive diagnosis required surgery, which slowed evaluation. Specialist ultrasound and updated clinical criteria are starting to shorten this delay.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is endometriosis curable?",
+      "answer": "There is no permanent cure, but the disease can be effectively controlled. Hormonal suppression keeps symptoms quiet as long as it is taken; surgical excision can produce sustained relief but recurrence happens in 20-50% of patients over 5 years. Symptoms generally improve at menopause when ovarian estrogen falls, although they can persist if hormone therapy continues or if scarring drives pain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early signs of endometriosis?",
+      "answer": "Early signs include period pain severe enough to miss school or work, pain that no longer responds to over-the-counter painkillers, pain with deep vaginal intercourse, bowel or bladder symptoms tied to the menstrual cycle, and difficulty getting pregnant. Severe primary dysmenorrhea in a teenager is a particularly common but underrecognized early sign.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I get pregnant if I have endometriosis?",
+      "answer": "Many women with endometriosis conceive naturally, especially with mild disease. Around 30-50% of women evaluated for infertility have endometriosis. Treatment options range from expectant management with cycle tracking to surgical excision and assisted reproductive technology. IVF live-birth rates in endometriosis are broadly similar to other infertility causes, especially in women under 35.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is deep infiltrating endometriosis?",
+      "answer": "Deep infiltrating endometriosis (DIE) describes nodules that penetrate more than 5 mm beneath the peritoneum, usually on the uterosacral ligaments, the rectovaginal septum, the bowel wall, the bladder, or the ureters. It causes the most severe pain, painful bowel movements, dyspareunia, and sometimes bowel or urinary obstruction. DIE typically needs specialist multidisciplinary surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is an endometrioma (chocolate cyst)?",
+      "answer": "An endometrioma is an ovarian cyst formed by endometriosis. It fills with thick, brown, degraded menstrual blood — the so-called chocolate appearance. Endometriomas are visible on transvaginal ultrasound, can damage surrounding ovarian tissue, and are associated with reduced ovarian reserve. Treatment depends on size, symptoms, and fertility plans.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What treatments are available for endometriosis pain?",
+      "answer": "First-line treatment combines NSAIDs with continuous combined hormonal contraception or a progestin such as dienogest, norethindrone, or the LNG-IUS. Second-line options include GnRH antagonists (elagolix, relugolix combinations) or GnRH agonists with add-back therapy. Laparoscopic excision is used when medical therapy fails, when deep disease is present, or for fertility indications. Multidisciplinary pain care helps when symptoms persist after lesion clearance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does endometriosis go away after menopause?",
+      "answer": "Most patients improve substantially at menopause as ovarian estrogen falls and lesions become inactive. Symptoms can persist or recur when hormone replacement therapy is used, when peripheral estrogen from adipose tissue remains high, or when scarring continues to cause mechanical pain. Combined estrogen-progestin HRT (not estrogen alone) is generally recommended for women with a history of endometriosis on HRT.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does a hysterectomy cure endometriosis?",
+      "answer": "Hysterectomy treats adenomyosis and uterine-origin pain but does not cure endometriosis on its own. The benefit depends on whether all visible endometriotic lesions are excised at the same time and whether the ovaries are removed. Around 85-90% of well-selected patients have long-term pain relief from hysterectomy combined with complete lesion excision; the remainder have persisting pain often related to central sensitization.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is endometriosis hereditary?",
+      "answer": "There is a strong genetic component. Heritability estimates from twin and family studies are around 50%. A first-degree relative with endometriosis raises personal risk roughly 7-fold, and family history is also associated with more severe disease. Multiple genetic variants have been identified through genome-wide association studies, but no single test predicts endometriosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can teenagers have endometriosis?",
+      "answer": "Yes. Endometriosis can begin within months of menarche. Adolescents typically present with disabling period pain, school absence, and pelvic pain between periods. Recognition has historically been poor, and diagnostic delay in this group is among the longest. Combined hormonal contraception is the usual first-line treatment, often started before any imaging or surgery is considered.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does endometriosis affect intercourse?",
+      "answer": "Deep dyspareunia — pain felt deep in the pelvis with vaginal penetration — is a hallmark symptom, especially when uterosacral ligaments or the rectovaginal septum are involved. Pain is often worse in positions that allow deeper penetration and can persist for hours afterwards. Effective treatment combines hormonal therapy, pelvic floor physiotherapy, and in some cases excisional surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between endometriosis and adenomyosis?",
+      "answer": "Endometriosis describes endometrial-like tissue outside the uterus. Adenomyosis describes the same tissue growing within the uterine muscle wall, causing a heavy, painful, bulky uterus. The two often coexist. Adenomyosis is best seen on MRI or specialist transvaginal ultrasound; endometriosis is identified by peritoneal, ovarian, or DIE findings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does endometriosis treatment cost?",
+      "answer": "Costs vary widely by country and treatment level. Generic combined hormonal contraceptives, NSAIDs, norethindrone, and depot medroxyprogesterone are inexpensive globally. GnRH antagonists and proprietary progestins are more costly and often need prior authorization. Laparoscopic excision at a specialist center, IVF cycles, and bowel or ureteric resection are the largest cost drivers. Many health systems cover medical therapy and surgery; IVF coverage is more variable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is laparoscopy still needed to diagnose endometriosis?",
+      "answer": "No, not always. The 2022 ESHRE guideline accepts clinical diagnosis based on symptoms, examination, and imaging — particularly specialist transvaginal ultrasound and MRI. Laparoscopy remains essential when imaging is inconclusive, when fertility decisions require accurate staging, or when excisional treatment is planned. The trend is toward earlier empirical hormonal therapy and surgery only when needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does an endometriosis flare feel like?",
+      "answer": "Patients describe stabbing or cramping pelvic pain that builds over hours, often radiates to the lower back or legs, and is accompanied by nausea, bloating, fatigue, and sometimes diarrhea. Flares typically cluster around menses but can occur at ovulation or any point in the cycle. Heat, NSAIDs taken early, and rest help most patients ride out a flare; persistent severe flares should prompt medical review.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does diet really affect endometriosis?",
+      "answer": "Diet has a modest but real role. Higher omega-3 intake (oily fish twice weekly) is associated with about 22% lower endometriosis incidence in cohort data, while high trans-fat intake is associated with 48% higher risk. There is no proven endometriosis diet, and very restrictive elimination diets should be approached with a dietitian to avoid nutritional deficiencies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will endometriosis come back after surgery?",
+      "answer": "Recurrence is possible. Pain or imaging recurrence is reported in 20-50% of patients over 5 years after laparoscopic excision, depending on completeness of surgery, lesion type, and postoperative hormonal maintenance. Continuous combined hormonal contraception, dienogest, or the LNG-IUS after surgery substantially reduces recurrence and is recommended unless the patient is actively trying to conceive.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does endometriosis raise cancer risk?",
+      "answer": "Endometriosis carries a small absolute increase in lifetime risk of ovarian endometrioid and clear-cell carcinoma, particularly with long-standing endometriomas. The relative risk is roughly 2-3 fold, but the baseline risk is low, so most patients never develop these cancers. Routine screening is not recommended; persistent large endometriomas in older women are watched more closely.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Endometriosis (uterine-like tissue growing outside the uterus)",
+
+  "regionalNames": [
+    { "name": "गर्भाशय की परत बाहर बढ़ना (Endometriosis)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Endometriose", "region": "France, Germany, Brazil", "language": "fr" },
+    { "name": "Endometriosis", "region": "Spain, Latin America", "language": "es" }
+  ],
+
+  "searchTags": [
+    "endometriosis", "endo", "chocolate cyst", "endometrioma", "deep infiltrating endometriosis", "DIE",
+    "period pain", "painful periods", "pelvic pain", "dyspareunia", "uterosacral nodule",
+    "laparoscopy endometriosis", "ESHRE", "NICE NG73", "elagolix", "relugolix", "dienogest",
+    "LNG-IUS endometriosis", "gynecology"
+  ],
+
+  "symptomKeywords": [
+    "severe period pain", "painful sex", "painful periods getting worse", "pelvic pain not menses",
+    "painful bowel movements during period", "infertility and painful periods", "bloating endo belly",
+    "fatigue with periods", "ovarian cyst pain", "back pain during period"
+  ],
+
+  "metaTitle": "Endometriosis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Endometriosis: chronic pelvic pain, painful periods, and fertility impact from tissue outside the uterus. Diagnosis, treatment, and outlook reviewed by experts.",
+
+  "keywords": [
+    "endometriosis", "endometriosis symptoms", "endometriosis treatment", "endometriosis pain",
+    "endometriosis surgery", "endometriosis and fertility", "endometrioma", "deep infiltrating endometriosis",
+    "stages of endometriosis", "endometriosis vs adenomyosis", "elagolix", "dienogest", "is endometriosis curable"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Becker CM, Bokor A, Heikinheimo O, et al. ESHRE guideline: endometriosis. Human Reproduction Open. 2022;2022(2):hoac009.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35353947/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Zondervan KT, Becker CM, Missmer SA. Endometriosis. New England Journal of Medicine. 2020;382(13):1244-1256.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32212520/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Chapron C, Marcellin L, Borghese B, Santulli P. Rethinking mechanisms, diagnosis and management of endometriosis. Nature Reviews Endocrinology. 2019;15(11):666-682.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31488888/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "World Health Organization. Endometriosis — Fact Sheet. WHO; 2023.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/endometriosis",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "NICE Guideline NG73: Endometriosis — Diagnosis and Management. National Institute for Health and Care Excellence; 2017 (updated 2024).",
+      "url": "https://www.nice.org.uk/guidance/ng73",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "American College of Obstetricians and Gynecologists. ACOG Practice Bulletin No. 114: Management of Endometriosis. Obstetrics & Gynecology. 2010;116(1):223-236.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20567196/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Taylor HS, Giudice LC, Lessey BA, et al. Treatment of Endometriosis-Associated Pain with Elagolix, an Oral GnRH Antagonist. New England Journal of Medicine. 2017;377(1):28-40.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28525302/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Giudice LC, As-Sanie S, Arjona Ferreira JC, et al. Once-daily oral relugolix combination therapy versus placebo in patients with endometriosis-associated pain: two replicate phase 3, randomised, double-blind, studies (SPIRIT 1 and 2). Lancet. 2022;399(10343):2267-2279.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35717987/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
