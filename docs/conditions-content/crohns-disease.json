@@ -1,0 +1,569 @@
+{
+  "_meta": {
+    "slug": "crohns-disease",
+    "tier": 1,
+    "headTerm": "crohn's disease",
+    "longTailKeywords": [
+      "crohn's disease symptoms",
+      "crohn's disease treatment",
+      "crohn's vs ulcerative colitis",
+      "crohn's disease diet",
+      "crohn's flare up",
+      "biologics for crohn's",
+      "perianal crohn's disease",
+      "infliximab crohn's",
+      "fecal calprotectin",
+      "is crohn's curable",
+      "ileocolonoscopy crohn's"
+    ],
+    "primarySpecialty": "Gastroenterology",
+    "lastReviewed": "2026-05-12",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against ACG Adult Crohn's 2018 (Lichtenstein PMID 29610508), ECCO 2022 medical management (Adamina), AGA Crohn's 2021 pathway, STRIDE-II 2021 (Turner PMID 33359090), SONIC trial (Colombel NEJM 2010 PMID 20393175), Torres et al Lancet 2017 review (PMID 27914657), and Ng et al Lancet 2017 global incidence (PMID 28526505). Drug doses and biologic landscape checked against current FDA labels (upadacitinib, risankizumab, vedolizumab, ustekinumab)."
+  },
+
+  "h1Title": "Crohn's Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Gastroenterology",
+
+  "heroOverview": "Crohn's disease is a chronic transmural inflammatory bowel disease that can affect any segment of the digestive tract from mouth to anus, with the terminal ileum and right colon involved in roughly 70% of cases. About 3 million US adults live with inflammatory bowel disease (IBD), of whom an estimated half have Crohn's; incidence is rising fastest in newly industrializing regions of Asia, South America, and the Middle East (Ng 2017). Most people develop symptoms — chronic diarrhea, abdominal pain, weight loss, and fatigue — between ages 15 and 35, though a second smaller peak occurs after 60. Untreated disease leads to strictures, fistulas, abscesses, and growth failure in children. Treatment now centers on early biologic therapy with treat-to-target endoscopic healing, which has cut lifetime surgery rates from roughly 50% to under 30%.",
+
+  "keyStats": {
+    "prevalence": "~1.3 million US adults with Crohn's disease (CDC 2015-2016 NHIS); ~3 million Americans with any IBD",
+    "demographics": "Slight female predominance in adults; ~20% of cases diagnosed before age 18",
+    "avgAge": "Peak diagnosis age 15-35; second smaller peak age 60-70",
+    "globalCases": "Rising globally; highest prevalence in North America and Europe (>300 per 100,000); fastest-rising incidence in newly industrializing Asia and South America (Ng et al Lancet 2017)"
+  },
+
+  "definition": "Crohn's disease (ICD-10: K50) is a chronic, immune-mediated inflammatory disorder characterized by transmural granulomatous inflammation that can affect any part of the gastrointestinal tract from the mouth to the anus, with discontinuous involvement known as skip lesions. The terminal ileum and proximal colon are the most common sites (ileocolonic disease, ~50% of patients), followed by isolated ileal disease (~30%) and isolated colonic disease (~20%). Inflammation extends through the full thickness of the bowel wall, which produces the disease's signature complications — fibrostenotic strictures, sinus tracts, fistulas (entero-enteric, entero-cutaneous, perianal), and abscesses — distinguishing Crohn's from ulcerative colitis, where inflammation is limited to the colonic mucosa and is continuous. Disease behavior is classified by the Montreal classification across three axes: age at diagnosis (A1 below 16, A2 17-40, A3 above 40), location (L1 ileal, L2 colonic, L3 ileocolonic, L4 upper GI), and behavior (B1 inflammatory non-stricturing, B2 stricturing, B3 penetrating, with a 'p' modifier for perianal disease). Pathogenesis involves a dysregulated mucosal immune response to gut microbiota in genetically susceptible hosts — over 240 risk loci have been identified, with NOD2 variants conferring the strongest individual risk for ileal disease. The condition is managed by gastroenterologists with input from colorectal surgery, nutrition, and IBD nurse specialists, ideally within a structured IBD service.",
+
+  "typesClassification": [
+    { "type": "Ileal Crohn's (Montreal L1)", "description": "Disease limited to the terminal ileum, sometimes extending into the cecum. Roughly 30% of patients. Presents with right lower quadrant pain, weight loss, and diarrhea; bleeding is less common than in colonic disease." },
+    { "type": "Colonic Crohn's (Montreal L2)", "description": "Disease confined to the colon, sparing the small bowel. About 20% of patients. Bloody diarrhea is more frequent and can mimic ulcerative colitis; rectal sparing and skip lesions usually distinguish it on colonoscopy." },
+    { "type": "Ileocolonic Crohn's (Montreal L3)", "description": "The most common pattern, ~50% of cases. Affects the terminal ileum plus segments of the colon, classically with a normal rectum and discontinuous ulcers." },
+    { "type": "Upper GI Crohn's (Montreal L4)", "description": "Involvement of esophagus, stomach, duodenum, or proximal jejunum. Often present alongside more distal disease. Can cause dysphagia, epigastric pain, and gastric outlet narrowing." },
+    { "type": "Inflammatory behavior (B1)", "description": "Non-stricturing, non-penetrating disease at diagnosis. Most patients start here; about half progress to B2 or B3 within 10 years without effective therapy." },
+    { "type": "Stricturing behavior (B2)", "description": "Fibrotic narrowing of the bowel lumen, classically at the terminal ileum, producing partial obstruction, postprandial pain, and bloating. Often requires balloon dilation or resection." },
+    { "type": "Penetrating behavior (B3)", "description": "Fistulas and abscesses from transmural ulceration. Includes perianal Crohn's (B3p), enterocutaneous, enteroenteric, enterovesical, and rectovaginal fistulas." }
+  ],
+
+  "primarySymptoms": [
+    "Chronic diarrhea persisting more than 4 weeks, typically 3-10 loose stools per day, often without overt blood when disease is ileal — present in 70-90% of patients at diagnosis.",
+    "Crampy abdominal pain, classically in the right lower quadrant in ileal disease, often worse after meals and partially relieved by passing stool or gas.",
+    "Unintentional weight loss of 5-15% of body weight over the months preceding diagnosis, driven by malabsorption, reduced intake from food-related pain, and systemic inflammation.",
+    "Fatigue that is disproportionate to activity, related to anemia, chronic inflammation, iron deficiency, and disrupted sleep — reported by 70-80% of patients.",
+    "Low-grade fever during active flares (typically 37.5-38.5 degrees Celsius), often without an identifiable infection.",
+    "Perianal disease in 20-30% of patients overall and up to 80% of those with colonic Crohn's — skin tags, fissures, fistula openings draining pus, and recurrent perianal abscesses.",
+    "Bloody diarrhea in roughly 40% of those with colonic involvement; less common in pure ileal disease.",
+    "Mouth ulcers (aphthous stomatitis) recurring in 20-40% of patients, sometimes preceding intestinal symptoms by years.",
+    "Growth failure or delayed puberty in children and adolescents, often the presenting feature before gastrointestinal symptoms are recognized.",
+    "Extraintestinal symptoms in 25-40% of patients, including erythema nodosum (tender red nodules on shins), episcleritis or uveitis, peripheral arthritis, and lower back stiffness from sacroiliitis or ankylosing spondylitis."
+  ],
+
+  "earlyWarningSigns": [
+    "Persistent diarrhea lasting longer than 4 weeks, especially when nocturnal stools wake the patient — nocturnal diarrhea is rarely functional",
+    "Fecal calprotectin above 250 micrograms per gram on a stool test ordered for unexplained GI symptoms",
+    "Unexplained iron-deficiency anemia in a younger adult, particularly with elevated CRP or ferritin used as an acute-phase reactant",
+    "Recurrent perianal abscesses or fistulas in a young adult — perianal Crohn's can predate intestinal symptoms by 1-2 years",
+    "Growth slowing or delayed puberty in an adolescent without another explanation"
+  ],
+
+  "emergencySigns": [
+    "Severe abdominal pain with distension, vomiting, and absent bowel movements — possible small bowel obstruction requiring urgent imaging and surgical review",
+    "High fever above 38.5 degrees Celsius with localized abdominal tenderness or a palpable mass — possible intra-abdominal abscess, send for CT or MRI promptly",
+    "Brisk lower GI bleeding with hemodynamic instability — uncommon but possible in deep ulceration; needs emergency endoscopy",
+    "Severe perianal pain with fever and induration — possible undrained perianal abscess requiring same-day surgical drainage",
+    "Symptoms of toxic megacolon in colonic Crohn's (severe distension, tachycardia, fever, profound malaise) — surgical emergency"
+  ],
+
+  "causes": [
+    {
+      "cause": "Dysregulated mucosal immune response",
+      "description": "An inappropriate sustained immune response to commensal gut bacteria in a genetically susceptible host drives transmural inflammation. CD4+ T-helper cells, particularly Th1 and Th17 subsets, secrete TNF-alpha, IL-12, IL-23, and IFN-gamma, which recruit neutrophils and damage the epithelium."
+    },
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Over 240 IBD risk loci have been mapped through genome-wide association studies. NOD2 variants on chromosome 16 confer the strongest single-gene risk for ileal Crohn's (homozygous carriers have 20-40 fold increased risk). Other loci include ATG16L1, IRGM, IL23R, and CARD9 — most involve innate immunity, autophagy, or epithelial barrier function."
+    },
+    {
+      "cause": "Disturbed gut microbiome (dysbiosis)",
+      "description": "Patients show reduced microbial diversity, decreased Faecalibacterium prausnitzii and other anti-inflammatory commensals, and expanded adherent-invasive Escherichia coli. Whether dysbiosis is cause or consequence remains debated, but it sustains chronic inflammation."
+    },
+    {
+      "cause": "Epithelial barrier dysfunction",
+      "description": "Defective Paneth cells, abnormal mucin production, and impaired autophagy allow luminal antigens to cross into the lamina propria, triggering immune activation. Several IBD risk genes encode proteins involved in barrier maintenance and bacterial sensing."
+    },
+    {
+      "cause": "Cigarette smoking",
+      "description": "Active smoking roughly doubles the risk of developing Crohn's disease and worsens its course — increased need for steroids, surgery, and post-operative recurrence. This is the opposite of the effect seen in ulcerative colitis and one of the most reproducible environmental associations."
+    },
+    {
+      "cause": "Early-life environmental exposures",
+      "description": "Urban upbringing, antibiotic use in infancy, lack of breastfeeding, and high hygiene exposure during early childhood are associated with later Crohn's. The 'hygiene hypothesis' frames this as inadequate early immune education by microbial exposure."
+    },
+    {
+      "cause": "Diet patterns",
+      "description": "Diets high in ultra-processed foods, animal fat, and emulsifiers and low in fiber have been linked epidemiologically to Crohn's risk. Mechanisms include altered microbiota, mucus layer thinning, and epithelial irritation; causality remains incompletely proven but consistent across cohorts."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of IBD", "category": "genetic", "description": "A first-degree relative with Crohn's increases personal risk roughly 5-fold; concordance in monozygotic twins is 30-35%, in dizygotic twins under 5%." },
+    { "factor": "NOD2/CARD15 gene variants", "category": "genetic", "description": "Heterozygous variant carriers have 2-4 fold increased risk; compound heterozygotes or homozygotes have 20-40 fold risk for ileal Crohn's. Variants also predict earlier surgery and stricturing behavior." },
+    { "factor": "Ashkenazi Jewish ancestry", "category": "non-modifiable", "description": "Prevalence is 2-4 times higher than in non-Jewish populations of European descent. Other populations with rising incidence include South Asians migrating to Western countries." },
+    { "factor": "Age 15 to 35 years", "category": "non-modifiable", "description": "The primary diagnostic peak; a smaller secondary peak occurs at 60-70 years. Pediatric onset is associated with more extensive disease and higher complication rates." },
+    { "factor": "Current cigarette smoking", "category": "modifiable", "description": "Doubles risk of developing Crohn's, doubles risk of post-operative recurrence, and roughly doubles risk of surgery during the disease course. Smoking cessation improves outcomes within 1 year." },
+    { "factor": "NSAID use", "category": "modifiable", "description": "Regular NSAID exposure (more than 15 days per month) is associated with a roughly 60% increased risk of incident Crohn's and can trigger flares in established disease." },
+    { "factor": "Antibiotic exposure in early childhood", "category": "environmental", "description": "Multiple antibiotic courses before age 5 are associated with a 1.8-2.5 fold increased risk of developing pediatric Crohn's, likely via microbiome disruption." },
+    { "factor": "Urban residence", "category": "environmental", "description": "Urban populations have higher incidence than rural; the gradient is reproducible across continents and persists after adjustment for socioeconomic status." },
+    { "factor": "Appendectomy in adulthood", "category": "non-modifiable", "description": "Appendectomy after age 20 is associated with a modest increased Crohn's risk (HR ~1.5 in the first 5 years), opposite to its protective effect against ulcerative colitis." },
+    { "factor": "Oral contraceptive use", "category": "modifiable", "description": "Long-term use is associated with a modest 30-50% increased risk of Crohn's in observational cohorts. Effect size is small and not a reason to avoid contraception in most patients." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence ~1.3 million adults with Crohn's; incidence ~6-15 per 100,000 person-years (CDC NHIS, Olmsted County cohort)",
+    "Highest prevalence in North America and Northern Europe (>300 per 100,000); incidence rising fastest in newly industrializing regions of Asia, South America, and the Middle East (Ng et al Lancet 2017)",
+    "Approximately 20% of new diagnoses are in patients under 18; pediatric Crohn's tends to involve more extensive disease",
+    "Ashkenazi Jewish populations have 2-4 fold higher prevalence than other European-descended groups",
+    "Female adults slightly outnumber male adults (~1.1:1) in modern cohorts; pediatric series show a slight male predominance"
+  ],
+
+  "diagnosisOverview": "Diagnosis of Crohn's disease combines clinical history, biomarkers, endoscopy with biopsy, and cross-sectional imaging — no single test is sufficient. A young adult with chronic diarrhea, abdominal pain, weight loss, and elevated fecal calprotectin should be referred for ileocolonoscopy, which is the cornerstone investigation. Calprotectin above 250 micrograms per gram has roughly 90% sensitivity for active intestinal inflammation and helps separate Crohn's from irritable bowel syndrome, where calprotectin is typically normal. C-reactive protein is elevated in roughly 70% of active Crohn's but is non-specific; anti-Saccharomyces cerevisiae antibodies (ASCA) are positive in 60-70% of Crohn's and rarely in ulcerative colitis, while perinuclear anti-neutrophil cytoplasmic antibodies (p-ANCA) show the opposite pattern. At ileocolonoscopy, the classic findings are deep aphthous ulcers, longitudinal serpiginous ulcers, cobblestoning, skip lesions, and terminal ileal involvement with a normal-appearing rectum. Biopsies from involved and uninvolved segments are obtained; non-caseating granulomas are pathognomonic when seen but appear in only 15-30% of cases. Magnetic resonance enterography (MRE) is preferred over CT enterography (CTE) for assessing small-bowel extent and complications because it avoids radiation; both have over 90% sensitivity for clinically significant ileal disease. MRI of the pelvis is mandatory whenever perianal disease is suspected, to map fistula tracts and abscesses. Capsule endoscopy is reserved for cases with normal ileocolonoscopy but a high clinical suspicion of small-bowel Crohn's — capsule retention rates of 1-2% require ruling out strictures first. Differentiating Crohn's from intestinal tuberculosis, Behcet's disease, lymphoma, and chronic infections remains critical, particularly in regions where TB is endemic.",
+
+  "diagnosticTests": [
+    {
+      "test": "Ileocolonoscopy with segmental biopsies",
+      "purpose": "The reference investigation for diagnosis. Allows direct visualization of mucosal lesions (aphthous, linear, cobblestone ulcers, skip lesions), confirms terminal ileal involvement, and provides tissue for histology including search for granulomas. Also stages disease extent for Montreal classification.",
+      "whatToExpect": "Performed under conscious sedation. Bowel preparation the day before. The procedure takes 30-45 minutes; biopsies are taken from at least five segments. Most patients go home the same day; results return within 1-2 weeks."
+    },
+    {
+      "test": "Magnetic resonance enterography (MRE)",
+      "purpose": "Visualizes the entire small bowel, characterizes wall thickening and enhancement, identifies strictures, fistulas, abscesses, and creeping fat without ionizing radiation. Preferred for repeat imaging in young patients.",
+      "whatToExpect": "Patient drinks 1-1.5 litres of an oral contrast solution over an hour before the scan. The MRI itself takes 30-45 minutes; an intravenous contrast agent is usually given. No radiation."
+    },
+    {
+      "test": "Fecal calprotectin",
+      "purpose": "Quantifies neutrophil-derived protein shed in stool during active intestinal inflammation. Distinguishes IBD from irritable bowel syndrome (calprotectin typically normal in IBS) and monitors response to therapy. Levels above 250 micrograms per gram correlate with active inflammation; below 100 suggests remission.",
+      "whatToExpect": "A small stool sample collected at home and dropped at the lab. Results within 2-5 days. No preparation needed; recent NSAID use can give false-positive results."
+    },
+    {
+      "test": "C-reactive protein and complete blood count",
+      "purpose": "Baseline assessment of inflammation and anemia. CRP is elevated in 70% of active Crohn's; iron-deficiency or anemia of chronic disease is present at diagnosis in 30-40% of patients. Albumin reflects nutritional status and severity.",
+      "whatToExpect": "Standard blood draw; results same day."
+    },
+    {
+      "test": "Pelvic MRI for perianal disease",
+      "purpose": "Maps fistula tracts (Park's classification), identifies abscesses, and guides surgical drainage and seton placement. Required before initiating biologic therapy for perianal disease.",
+      "whatToExpect": "MRI of the pelvis without bowel preparation. Takes 30-40 minutes; usually performed without intravenous contrast initially. No radiation."
+    },
+    {
+      "test": "Upper GI endoscopy (in selected patients)",
+      "purpose": "Indicated for unexplained upper GI symptoms, pediatric IBD work-up, and equivocal cases. Detects Montreal L4 disease (esophagitis, gastritis, duodenitis with granulomas).",
+      "whatToExpect": "Same-day procedure under conscious sedation, lasts about 15 minutes. Biopsies are taken from stomach and duodenum even when mucosa appears normal."
+    },
+    {
+      "test": "Video capsule endoscopy",
+      "purpose": "Reserved for high clinical suspicion of small-bowel Crohn's after normal ileocolonoscopy and MRE. Visualizes mucosa of the entire small intestine.",
+      "whatToExpect": "Patient swallows a vitamin-sized camera that transmits images to a recorder worn on a belt for 8-12 hours. A patency capsule is given first if there is any concern about strictures."
+    },
+    {
+      "test": "Stool studies for infection",
+      "purpose": "Rule out C. difficile, enteric pathogens, ova and parasites, especially before initiating immunosuppression. In endemic regions, also test for intestinal tuberculosis (IGRA, biopsy AFB) to avoid misdiagnosis.",
+      "whatToExpect": "One to three stool samples collected at home. Results within 2-5 days for routine pathogens."
+    }
+  ],
+
+  "treatmentOverview": "Modern Crohn's care is built on three principles: induce remission quickly, maintain mucosal and transmural healing with effective therapy, and adjust treatment to objective targets rather than symptoms alone. The STRIDE-II consensus (Turner 2021) defines short-term targets of clinical response, normalized CRP, and falling calprotectin within 12 weeks, and a long-term target of endoscopic remission with absence of ulcers. The 2018 ACG (Lichtenstein) and 2022 ECCO guidelines stratify patients by risk: young age at onset, deep ulcers, extensive disease, perianal involvement, stricturing or penetrating behavior, and need for steroids at diagnosis all mark high-risk patients who benefit from early biologic therapy rather than the traditional step-up sequence. Corticosteroids remain effective for induction (oral prednisolone 40-60 mg daily tapered over 8-12 weeks, or budesonide MMX 9 mg daily for ileal disease) but should never be used for maintenance because of toxicity and lack of mucosal healing. The biologic options now include anti-TNF agents (infliximab IV 5 mg/kg at weeks 0, 2, 6 then every 8 weeks; adalimumab SC 160 mg loading then 40 mg every 2 weeks), the gut-selective anti-integrin vedolizumab (300 mg IV at weeks 0, 2, 6 then every 8 weeks), anti-IL-12/23 ustekinumab (weight-based IV induction then 90 mg SC every 8 weeks), the IL-23-selective risankizumab (600 mg IV at weeks 0, 4, 8 then 360 mg SC every 8 weeks), and the oral JAK1-selective inhibitor upadacitinib (45 mg daily for 12 weeks induction, 15-30 mg daily maintenance). The SONIC trial (Colombel NEJM 2010) established that infliximab combined with azathioprine produces higher steroid-free remission than either alone in early Crohn's, formalizing combination therapy as a first-line strategy for moderate-to-severe disease. Surgery is no longer a failure of medical therapy but a planned tool — limited ileocecal resection in early ileal disease (LIR!C trial, Ponsioen 2017) is at least equivalent to infliximab on quality of life at 1 year. Perianal Crohn's requires combined surgical drainage with seton placement and anti-TNF therapy; surgery alone is rarely sufficient.",
+
+  "medicalTreatments": [
+    {
+      "name": "Oral prednisolone (40-60 mg daily, tapered over 8-12 weeks)",
+      "description": "Systemic corticosteroid for induction of remission in moderate-to-severe flares. Effective at controlling inflammation but does not heal mucosa and should never be continued long-term because of toxicity. A maintenance plan with steroid-sparing therapy must be in place before tapering begins.",
+      "effectiveness": "Clinical remission in 60-80% of patients at 4 weeks; only ~30% remain steroid-free at 1 year without additional maintenance therapy."
+    },
+    {
+      "name": "Budesonide MMX (9 mg daily for 8 weeks)",
+      "description": "An oral corticosteroid with extensive first-pass hepatic metabolism, releasing drug in the terminal ileum and right colon. Preferred to prednisolone for mild-to-moderate ileal and ileocolonic disease because of fewer systemic side effects.",
+      "effectiveness": "Induces remission in roughly 50-60% of patients with mild-to-moderate ileal Crohn's at 8 weeks."
+    },
+    {
+      "name": "Azathioprine (2-2.5 mg/kg daily) or mercaptopurine (6-MP; 1-1.5 mg/kg daily)",
+      "description": "Thiopurine immunomodulators used as maintenance therapy and as part of combination therapy with anti-TNF agents. TPMT or NUDT15 genotyping is recommended before starting to avoid severe myelosuppression. Onset of action is slow (3-4 months).",
+      "effectiveness": "Steroid-free remission maintenance in 40-50% as monotherapy; SONIC trial showed 56% steroid-free remission at 26 weeks when combined with infliximab vs 30% with monotherapy."
+    },
+    {
+      "name": "Infliximab (5 mg/kg IV at weeks 0, 2, 6, then every 8 weeks)",
+      "description": "Anti-TNF-alpha monoclonal antibody; first biologic approved for Crohn's. Effective for luminal disease, perianal fistulizing disease, and extraintestinal manifestations. Therapeutic drug monitoring with target trough above 5-10 micrograms/mL is now standard.",
+      "effectiveness": "Clinical response in 60-70% and clinical remission in 30-45% at week 30 (ACCENT-I, Hanauer 2002); higher rates in combination with azathioprine (SONIC, Colombel 2010)."
+    },
+    {
+      "name": "Adalimumab (160 mg SC at week 0, 80 mg at week 2, then 40 mg every 2 weeks)",
+      "description": "Subcutaneous anti-TNF-alpha; equivalent efficacy to infliximab for luminal disease and an option after infliximab loss of response. Self-administered at home after training.",
+      "effectiveness": "Induction remission in 36% at week 4 (CLASSIC-I, Hanauer 2006); maintenance remission in roughly 40% at 56 weeks (CHARM, Colombel 2007)."
+    },
+    {
+      "name": "Vedolizumab (300 mg IV at weeks 0, 2, 6, then every 8 weeks)",
+      "description": "Gut-selective anti-alpha4beta7 integrin antibody that blocks lymphocyte trafficking into the intestine without systemic immunosuppression. Favored in older patients, those with prior malignancy, and patients seeking lower infection risk.",
+      "effectiveness": "Clinical remission in 14.5% at week 6 and 39% maintenance at week 52 in GEMINI-2 (Sandborn 2013); slower onset than anti-TNF but durable response."
+    },
+    {
+      "name": "Ustekinumab (weight-based IV induction ~6 mg/kg, then 90 mg SC every 8 weeks)",
+      "description": "Anti-IL-12/IL-23 p40 antibody, effective in both anti-TNF-naive and anti-TNF-experienced patients. Strong long-term safety profile.",
+      "effectiveness": "Clinical response 34% and remission 21% at week 6 in UNITI-1 (anti-TNF failures); roughly 53% maintenance remission at week 44 (Feagan NEJM 2016)."
+    },
+    {
+      "name": "Risankizumab (600 mg IV at weeks 0, 4, 8, then 360 mg SC every 8 weeks)",
+      "description": "Selective IL-23 p19 inhibitor approved 2022 for moderate-to-severe Crohn's. Effective in anti-TNF-experienced patients with strong endoscopic outcomes.",
+      "effectiveness": "Clinical remission 43-45% and endoscopic response 40-44% at week 12 in ADVANCE and MOTIVATE (D'Haens 2022); 52% endoscopic response at week 52 in FORTIFY."
+    },
+    {
+      "name": "Upadacitinib (45 mg daily oral for 12 weeks induction, then 15-30 mg maintenance)",
+      "description": "Selective JAK1 inhibitor, oral, approved 2023 for moderate-to-severe Crohn's. Fast onset of symptom relief, useful where injections are unacceptable. Boxed warning for thromboembolism and cardiovascular events in older or high-risk patients.",
+      "effectiveness": "Clinical remission ~49% at week 12 induction and 38-48% at week 52 maintenance in U-EXCEED and U-EXCEL (Loftus NEJM 2023)."
+    },
+    {
+      "name": "Exclusive enteral nutrition (EEN, 6-8 weeks of polymeric formula)",
+      "description": "First-line induction therapy in pediatric Crohn's, replacing all oral intake with a defined liquid formula. Avoids steroid exposure during growth. Adult uptake is lower because of palatability and adherence.",
+      "effectiveness": "Clinical remission in 70-85% of pediatric patients at 8 weeks; mucosal healing rates exceed those of corticosteroids in children (Borrelli 2006)."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Ileocecal resection",
+      "description": "Removes the diseased terminal ileum and cecum. Now considered a planned management option for limited ileal disease, especially with stricture or failure of biologic therapy, rather than a last resort. The LIR!C trial showed similar quality of life at 1 year compared with infliximab in patients with limited ileal disease.",
+      "successRate": "Symptomatic remission in 70-80% of patients at 1 year; endoscopic recurrence at the anastomosis approaches 50% by 5 years without prophylactic medical therapy."
+    },
+    {
+      "name": "Stricturoplasty",
+      "description": "Widening of fibrotic small-bowel strictures without bowel resection, preserving intestinal length. Used for multiple short strictures or in patients with prior extensive resection at risk of short bowel syndrome.",
+      "successRate": "Symptomatic relief in over 90% short-term; restricture rate at the same site is roughly 25% at 5 years."
+    },
+    {
+      "name": "Drainage of intra-abdominal abscess (percutaneous or surgical)",
+      "description": "Image-guided percutaneous drainage is first-line for accessible abscesses larger than 3 cm; surgical drainage with bowel resection is needed if drainage fails or fistula persists.",
+      "successRate": "Percutaneous drainage avoids immediate surgery in 60-80% of cases; many proceed to elective resection later."
+    },
+    {
+      "name": "Seton placement for perianal fistulas",
+      "description": "A soft surgical thread is passed through the fistula tract to drain pus, prevent abscess recurrence, and allow safe initiation of anti-TNF therapy. Combined surgical and medical therapy is the standard of care for complex perianal Crohn's.",
+      "successRate": "Symptomatic improvement in 80-90% when combined with anti-TNF therapy; complete fistula closure in roughly 30-40% at 1 year."
+    },
+    {
+      "name": "Proctocolectomy with end ileostomy",
+      "description": "Reserved for severe refractory colonic Crohn's, fulminant colitis, or complex perianal disease unresponsive to medical and local surgical therapy. Pouch reconstruction (IPAA) is generally avoided in Crohn's because of high pouch failure rates.",
+      "successRate": "Effective symptom control in over 90% of selected patients; permanent stoma is required."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Crohn's Disease Exclusion Diet (CDED) with partial enteral nutrition", "description": "A whole-food diet that limits ingredients hypothesized to disrupt the mucus layer (emulsifiers, processed meats, gluten-rich grains), combined with partial enteral nutrition. The CDED+PEN trial (Levine 2019) showed comparable remission to exclusive enteral nutrition in pediatric Crohn's with better adherence. Should be supervised by a dietitian." },
+    { "name": "Curcumin (turmeric extract) as add-on therapy", "description": "Small randomized trials suggest curcumin 3 g daily may improve clinical and endoscopic outcomes when added to mesalamine in mild ulcerative colitis; Crohn's-specific evidence is limited and lower quality. Reasonable as adjunctive support, not as primary therapy." },
+    { "name": "Smoking cessation programs", "description": "Stopping smoking halves the risk of flares and surgery within 1 year and is the single most effective non-pharmacological intervention in active smokers with Crohn's. Combined behavioral therapy and pharmacotherapy (varenicline, bupropion, NRT) doubles long-term quit rates." }
+  ],
+
+  "whySeeSpecialist": "A gastroenterologist with IBD experience should be involved at diagnosis to confirm the disease, stage it accurately with the Montreal classification, identify high-risk features that warrant early biologic therapy, and set up the treat-to-target monitoring schedule. Specialist referral is essential when biologic therapy is being considered, when perianal disease is present, when there is loss of response to current treatment, when surgery is being planned, and during pregnancy or pre-conception counseling.",
+
+  "doctorSelectionGuide": "Look for board certification in gastroenterology, ideally with advanced IBD training or a dedicated IBD practice, and access to a multidisciplinary IBD service that includes a colorectal surgeon, an IBD nurse specialist, a dietitian, and on-site MRI and endoscopy. Ask whether the clinic uses therapeutic drug monitoring for biologics, how often they monitor calprotectin, and how they manage perianal disease. Continuity matters — Crohn's is a multi-decade relationship.",
+
+  "hospitalCriteria": [
+    "Tertiary IBD center with structured multidisciplinary clinics",
+    "On-site advanced endoscopy including balloon dilation and chromoendoscopy",
+    "24/7 access to MRI for small bowel and pelvic imaging",
+    "Colorectal surgical service experienced in IBD operations and seton placement",
+    "Infusion suite for biologic therapies with pharmacy support for therapeutic drug monitoring"
+  ],
+
+  "keyFacilities": [
+    "Dedicated IBD outpatient clinic",
+    "IBD nurse helpline for flares and biologic dosing",
+    "On-site dietitian with IBD expertise",
+    "Stoma nurse and pre-operative IBD counseling service",
+    "Clinical trials access for novel biologics and small molecules"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Stop smoking and avoid second-hand smoke — the single most modifiable risk factor for both developing Crohn's and worsening established disease",
+    "Limit regular NSAID use; substitute paracetamol or topical anti-inflammatories where possible, especially in patients with first-degree relatives who have IBD",
+    "Breastfeed infants where feasible — observational data link breastfeeding for 6+ months with a roughly 30% reduction in childhood IBD risk",
+    "Maintain a diet rich in fiber, fresh vegetables, fish, and unsaturated fats while limiting ultra-processed foods, emulsifiers, and high red-meat intake",
+    "Avoid unnecessary antibiotic exposure, particularly in the first 5 years of life",
+    "Address vitamin D deficiency; low 25-OH vitamin D levels correlate with higher Crohn's incidence and disease activity"
+  ],
+
+  "lifestyleModifications": [
+    "Stop smoking completely and avoid passive exposure — outcomes improve measurably within 12 months",
+    "Take medications on schedule; missed biologic doses are a leading cause of secondary loss of response",
+    "Keep a symptom and food diary during flares — patterns help dietitians personalize advice without unnecessary food restriction",
+    "Update vaccinations before starting immunosuppression: inactivated influenza annually, pneumococcal, hepatitis B, HPV, COVID-19, and shingles where age-appropriate; live vaccines are contraindicated on biologics",
+    "Discuss family planning early — most biologics including infliximab, adalimumab, vedolizumab, and ustekinumab are compatible with pregnancy and breastfeeding (PIANO registry data); methotrexate must be stopped at least 3 months before conception in both partners",
+    "Schedule colonoscopic surveillance starting 8 years after diagnosis for patients with colonic involvement — Crohn's colitis carries a roughly 2-fold increased colorectal cancer risk",
+    "Maintain bone health with vitamin D and calcium during steroid courses; consider DEXA scan after prolonged steroid use",
+    "Build mental health support; depression and anxiety affect 25-40% of IBD patients and worsen disease activity"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style diet with vegetables, fruit, legumes, fish, olive oil, and whole grains — associated with lower flare risk in observational IBD cohorts",
+      "Adequate protein (1.2-1.5 g/kg/day during active disease) from poultry, fish, eggs, dairy, and well-tolerated legumes",
+      "Lactose-free dairy if symptomatic lactose intolerance is documented; otherwise dairy does not need to be avoided",
+      "Oral nutritional supplements (polymeric formulas) when intake is inadequate; exclusive enteral nutrition for 6-8 weeks remains first-line induction in pediatric Crohn's",
+      "Iron, vitamin B12, folate, vitamin D, and calcium supplementation guided by labs — deficiencies are common especially with ileal disease or resection",
+      "Adequate hydration, particularly after ileostomy or ileocecal resection where bile salt malabsorption increases stool losses"
+    ],
+    "avoid": [
+      "Ultra-processed foods high in emulsifiers (carrageenan, polysorbate-80) and additives, where dietary trials suggest barrier disruption",
+      "High-residue raw vegetables, nuts, and seeds during stricturing disease — they can precipitate obstruction in narrow segments",
+      "Excessive red and processed meat consumption (more than 3-4 servings per week) — linked to higher flare risk in cohort studies",
+      "Active smoking is non-negotiable; alcohol in excess can worsen symptoms and interact with thiopurines and methotrexate",
+      "Avoid restrictive elimination diets (low-FODMAP, gluten-free, paleo, autoimmune protocol) without dietitian supervision — they risk weight loss and micronutrient deficiency without proven benefit in active Crohn's",
+      "NSAIDs as analgesics — they can trigger flares and worsen mucosal damage"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular moderate aerobic and resistance exercise (150 minutes per week) is safe in stable Crohn's, supports bone density during steroid courses, and improves fatigue and mood. During severe flares, scale back to gentle walking and stretching until energy and symptoms allow more. Patients with active perianal disease should avoid prolonged sitting on hard surfaces and high-friction activities until fistulas are controlled.",
+
+  "dailyManagement": [
+    "Take prescribed maintenance therapy at the same time daily and never skip doses without contacting the IBD team",
+    "Check stool frequency, consistency, blood, and abdominal pain each morning during flares; report worsening trends within 48 hours",
+    "Stay well hydrated, especially in hot weather or after ileostomy or ileocecal resection",
+    "Update vaccinations before any change in immunosuppression and avoid live vaccines while on biologics",
+    "Carry an IBD passport or medication card listing current drugs, last infusion date, biologic trough level, and infusion center contact"
+  ],
+
+  "prognosis": "Crohn's is a lifelong disease but, with modern treat-to-target therapy, most patients live full lives with periods of sustained remission. About 30-50% of patients achieve and maintain steroid-free clinical remission long-term on effective biologic therapy. The historical lifetime surgery rate of about 50% has fallen to under 30% in cohorts treated with early biologics. Higher-risk features at diagnosis — young age, deep ulcers, ileal disease with stricturing or penetrating behavior, perianal involvement, smoking, and need for steroids — predict worse outcomes; lower-risk patients with isolated colonic inflammatory disease often do well on conventional therapy. All-cause mortality is only modestly elevated (standardized mortality ratio approximately 1.4) and is mostly driven by complications of penetrating disease and post-operative events, not the underlying inflammation. The decisive prognostic factor is access to specialist IBD care and adherence to monitoring and therapy.",
+
+  "recoveryTimeline": "Symptom improvement after starting steroids or anti-TNF induction typically begins within 1-2 weeks, with clinical remission achievable in 8-12 weeks for most responders. Endoscopic healing follows clinical response by months — repeat ileocolonoscopy at 6-12 months after initiating biologic therapy guides continuation or escalation. After ileocecal resection, most patients are eating normally within 1-2 weeks and back to baseline activity by 6 weeks; endoscopic recurrence at the anastomosis can begin within 6-12 months without prophylactic therapy.",
+
+  "complications": [
+    "Bowel strictures with partial or complete small-bowel obstruction — present at diagnosis in 10-15% of ileal Crohn's, eventually in 30-50% of long-standing disease",
+    "Fistulas (entero-enteric, entero-cutaneous, entero-vesical, recto-vaginal) and perianal fistulizing disease — develop in 20-30% lifetime overall and over 80% in patients with colonic Crohn's",
+    "Intra-abdominal and perianal abscesses requiring drainage; recurrent abscesses signal undertreated underlying disease",
+    "Malnutrition, weight loss, and deficiencies of iron, vitamin B12, folate, vitamin D, magnesium, and zinc — especially with terminal ileal disease or resection",
+    "Osteoporosis, accelerated by steroid use, chronic inflammation, vitamin D deficiency, and malabsorption — prevalence of low bone density exceeds 40% in long-standing Crohn's",
+    "Colorectal cancer in patients with colonic involvement of 8+ years duration — roughly 2-fold increased risk vs the general population, mitigated by surveillance colonoscopy",
+    "Growth failure and delayed puberty in pediatric Crohn's, often the strongest indication for early aggressive therapy",
+    "Extraintestinal disease including primary sclerosing cholangitis, uveitis, ankylosing spondylitis, peripheral arthritis, erythema nodosum, and pyoderma gangrenosum"
+  ],
+
+  "supportResources": [
+    { "name": "Crohn's & Colitis Foundation (US)", "url": "https://www.crohnscolitisfoundation.org/", "description": "US patient-facing nonprofit with patient education, helpline, clinical trial finder, and local support groups." },
+    { "name": "Crohn's & Colitis UK", "url": "https://crohnsandcolitis.org.uk/", "description": "UK charity with the widely used IBD Passport, helpline, and pregnancy/work resources." },
+    { "name": "European Crohn's and Colitis Organisation (ECCO) Patient Pages", "url": "https://www.ecco-ibd.eu/", "description": "Society that writes the European clinical guidelines; patient-facing resources mirror clinician guidance." },
+    { "name": "Crohn's & Colitis Australia", "url": "https://crohnsandcolitis.org.au/", "description": "Australian peer support, education, and advocacy organization." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "ulcerative-colitis", "name": "Ulcerative Colitis", "keyDifference": "Ulcerative colitis is limited to the colon, starts in the rectum, is continuous, and inflammation is confined to the mucosa. Crohn's can affect anywhere from mouth to anus, is patchy with skip lesions, is transmural, and frequently involves the terminal ileum. Bloody diarrhea is more common in UC; perianal fistulas, strictures, and small-bowel involvement point strongly to Crohn's. Smoking worsens Crohn's but is mildly protective in UC." },
+    { "slug": "ibs", "name": "Irritable Bowel Syndrome", "keyDifference": "IBS produces abdominal pain and altered bowel habits without measurable inflammation. Fecal calprotectin is typically normal in IBS and elevated in active Crohn's. IBS does not cause weight loss, anemia, fever, nocturnal diarrhea, or perianal disease — any of these red flags should prompt evaluation for Crohn's." },
+    { "slug": "celiac-disease", "name": "Celiac Disease", "keyDifference": "Celiac is an immune reaction to gluten that damages the small-bowel villi, presenting with diarrhea, bloating, weight loss, and iron deficiency similar to ileal Crohn's. Anti-tTG IgA serology and duodenal biopsy showing villous atrophy distinguish celiac. Crohn's biopsies show transmural inflammation, granulomas, and patchy ulcers rather than uniform villous atrophy." },
+    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "keyDifference": "Colorectal cancer can mimic colonic Crohn's with bleeding, weight loss, anemia, and altered bowel habits, especially in older adults. Colonoscopy with biopsy distinguishes the two; a discrete mass favors cancer, while patchy ulceration with granulomas favors Crohn's. Long-standing Crohn's colitis itself raises colorectal cancer risk, so surveillance is essential." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "anemia", "name": "Anemia" },
+    { "slug": "osteoporosis", "name": "Osteoporosis" },
+    { "slug": "gerd", "name": "Acid Reflux" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "ulcerative-colitis", "name": "Ulcerative Colitis", "relevance": "The other major form of inflammatory bowel disease; shares mechanisms and many therapies but differs in distribution and depth of inflammation." },
+    { "slug": "ibs", "name": "Irritable Bowel Syndrome", "relevance": "Frequent diagnostic differential; many Crohn's patients also have overlapping IBS-type symptoms even in remission." },
+    { "slug": "celiac-disease", "name": "Celiac Disease", "relevance": "Another small-bowel immune disorder with overlapping symptoms; co-occurs in 1-2% of Crohn's patients and should be excluded during work-up." },
+    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "relevance": "Long-standing Crohn's colitis carries an elevated colorectal cancer risk; surveillance colonoscopy is part of long-term care." },
+    { "slug": "anemia", "name": "Anemia", "relevance": "Iron-deficiency anemia and anemia of chronic disease affect 30-40% of patients at diagnosis and require ongoing monitoring and replacement." },
+    { "slug": "osteoporosis", "name": "Osteoporosis", "relevance": "Common consequence of chronic inflammation, steroid courses, and malabsorption; routine DEXA screening is recommended in higher-risk patients." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Is Crohn's disease curable?",
+      "answer": "Crohn's is not curable, but modern treatment can produce long stretches of remission with normal quality of life. Biologic and small-molecule therapies aim for endoscopic healing, not just symptom control. About 30-50% of patients achieve sustained steroid-free remission on effective therapy. Treatment is lifelong, similar to managing other chronic immune-mediated diseases such as rheumatoid arthritis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early signs of Crohn's disease?",
+      "answer": "Early signs include diarrhea lasting more than 4 weeks, crampy lower abdominal pain (often right-sided), unintentional weight loss, fatigue, and low-grade fever. Mouth ulcers, perianal skin tags, and unexplained iron-deficiency anemia in a young adult are common but often overlooked. Nocturnal diarrhea is a particular red flag that should not be attributed to irritable bowel syndrome.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Crohn's diagnosed?",
+      "answer": "Diagnosis combines history, blood tests (CRP, full blood count, ferritin, albumin), stool tests (fecal calprotectin, C. difficile, enteric pathogens), and ileocolonoscopy with biopsies as the cornerstone. MR enterography assesses the small bowel and complications. No single test confirms Crohn's; the diagnosis rests on the overall picture and exclusion of mimics like intestinal tuberculosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between Crohn's disease and ulcerative colitis?",
+      "answer": "Crohn's can affect any part of the digestive tract from mouth to anus, with patchy, transmural inflammation. Ulcerative colitis is limited to the colon, is continuous from the rectum upward, and is confined to the mucosa. Perianal fistulas, strictures, and terminal ileal disease point to Crohn's; bloody diarrhea is more frequent in ulcerative colitis. Smoking worsens Crohn's but is mildly protective in ulcerative colitis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What triggers a Crohn's flare?",
+      "answer": "Common triggers include missed medication doses, NSAID use, smoking, gastrointestinal infections (especially C. difficile), antibiotics, and major psychological stress. Diet changes can also play a role, though specific food triggers vary between patients. Identifying and removing avoidable triggers is part of every flare plan.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a Crohn's flare feel like?",
+      "answer": "A flare typically brings worsening diarrhea, crampy abdominal pain that can wake the patient at night, fatigue, low-grade fever, and reduced appetite with weight loss. Blood in stool, increased perianal drainage, and new mouth ulcers can also occur. The first sign of a flare for many patients is rising fatigue or subtle stool changes that precede severe pain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best diet for Crohn's disease?",
+      "answer": "There is no single Crohn's diet, but a Mediterranean-style pattern is best supported by current evidence. Exclusive enteral nutrition is first-line induction in pediatric disease. During strictures, low-residue foods reduce obstruction risk. Restrictive elimination diets without dietitian supervision risk malnutrition and are not recommended. Adequate protein and micronutrient intake are essential during flares.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are biologic drugs safe long-term?",
+      "answer": "Yes — biologics including anti-TNF agents, vedolizumab, ustekinumab, and risankizumab have strong long-term safety data, with serious infection rates lower than long-term steroid use. Vedolizumab and ustekinumab carry the lowest infection signal. Tuberculosis screening before starting anti-TNF, hepatitis B screening, and up-to-date inactivated vaccinations are required. Live vaccines are contraindicated during biologic therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need surgery for Crohn's disease?",
+      "answer": "Historically about half of Crohn's patients needed surgery during their lifetime, mostly for strictures or fistulas. With early biologic therapy that figure is now under 30%. When surgery is needed, limited ileocecal resection in early ileal disease has similar quality-of-life outcomes to medical therapy at 1 year (LIR!C trial). Surgery is no longer considered a failure but a planned management option.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Crohn's disease affect parts of the body other than the gut?",
+      "answer": "Yes. About 25-40% of patients have extraintestinal involvement at some point. Common patterns include peripheral arthritis, ankylosing spondylitis, episcleritis, uveitis, erythema nodosum, pyoderma gangrenosum, primary sclerosing cholangitis, and increased risk of venous thromboembolism. Some extraintestinal manifestations track with gut inflammation; others run an independent course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I have children if I have Crohn's disease?",
+      "answer": "Yes. Most patients with Crohn's have normal fertility, and disease in remission at conception has the best pregnancy outcomes. Most biologics including infliximab, adalimumab, vedolizumab, ustekinumab, and risankizumab are compatible with pregnancy and breastfeeding per PIANO registry data. Methotrexate must be stopped at least 3 months before conception in both partners. Pre-conception counseling with the IBD team is recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Crohn's disease genetic?",
+      "answer": "There is a strong genetic component. Over 240 IBD risk loci have been identified. A first-degree relative with Crohn's increases personal risk roughly 5-fold; monozygotic twin concordance is 30-35%. NOD2 variants on chromosome 16 confer the strongest single-gene risk for ileal disease, with homozygous carriers having a 20-40 fold increased risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does smoking affect Crohn's disease?",
+      "answer": "Yes — smoking roughly doubles the risk of developing Crohn's, doubles the risk of surgery during the disease course, and doubles the risk of recurrence after surgery. This is the opposite of its effect in ulcerative colitis. Quitting smoking is the single most effective non-pharmacological intervention for active smokers with Crohn's; benefits begin within 12 months of cessation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is perianal Crohn's disease?",
+      "answer": "Perianal Crohn's refers to disease around the anus including skin tags, fissures, fistulas, and abscesses. It affects 20-30% of Crohn's patients overall and up to 80% of those with colonic disease. Management combines surgical drainage and seton placement with anti-TNF biologic therapy; surgery alone is rarely sufficient. Pelvic MRI maps fistula tracts before treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is fecal calprotectin and why is it important?",
+      "answer": "Fecal calprotectin is a protein released from neutrophils into the stool during active intestinal inflammation. It is used to distinguish IBD from irritable bowel syndrome and to monitor response to therapy. Levels above 250 micrograms per gram suggest active inflammation; below 100 suggests remission. It is non-invasive, inexpensive, and has roughly 90% sensitivity for active Crohn's.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often will I need a colonoscopy?",
+      "answer": "Colonoscopy is performed at diagnosis, after 6-12 months of starting biologic therapy to confirm endoscopic healing, and during workup of new symptoms. Surveillance colonoscopy for colorectal cancer screening starts 8 years after diagnosis in patients with colonic involvement and is repeated every 1-3 years depending on risk factors such as primary sclerosing cholangitis or family history.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are steroids safe for Crohn's disease?",
+      "answer": "Steroids are effective for inducing remission during flares but should never be used for long-term maintenance. Side effects include bone loss, weight gain, glucose elevation, mood changes, cataracts, and infection risk. A steroid-sparing maintenance plan with biologics or thiopurines should be in place before the steroid taper begins. Budesonide MMX is preferred for mild-to-moderate ileal disease because of fewer systemic side effects.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get Crohn's disease?",
+      "answer": "Yes — about 20% of Crohn's diagnoses occur before age 18. Pediatric Crohn's often presents with growth failure, delayed puberty, and more extensive disease than adult-onset Crohn's. First-line induction in children is exclusive enteral nutrition for 6-8 weeks, which avoids steroid exposure during growth. Early aggressive therapy is favored because of higher complication risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does Crohn's treatment cost?",
+      "answer": "Costs vary widely. Generic steroids, azathioprine, and mercaptopurine are inexpensive. Biologics including infliximab, adalimumab, vedolizumab, ustekinumab, and risankizumab cost thousands of dollars per dose in the US but are widely covered by insurance and have biosimilars available at lower cost. In India and other emerging markets, infliximab biosimilars have substantially reduced out-of-pocket costs.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does Crohn's disease cause cancer?",
+      "answer": "Long-standing Crohn's colitis carries about a 2-fold increased risk of colorectal cancer compared with the general population. Small bowel cancer is rare but more common than in the general population. Surveillance colonoscopy starting 8 years after diagnosis in patients with colonic involvement reduces this risk substantially. Modern biologic therapy that controls inflammation also lowers cancer risk over time.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the treat-to-target approach in Crohn's disease?",
+      "answer": "Treat-to-target means adjusting therapy until objective inflammation markers normalize, not just symptoms. STRIDE-II 2021 targets are clinical response, normalized CRP, and falling calprotectin within 12 weeks, and endoscopic remission long-term. Patients who reach these targets have lower rates of flares, hospitalization, and surgery, regardless of how well they feel symptomatically.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Crohn's disease (chronic inflammatory bowel disease)",
+
+  "regionalNames": [
+    { "name": "क्रोहन रोग (Crohn rog)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Maladie de Crohn", "region": "France", "language": "fr" },
+    { "name": "Morbus Crohn", "region": "Germany", "language": "de" },
+    { "name": "Enfermedad de Crohn", "region": "Spain and Latin America", "language": "es" }
+  ],
+
+  "searchTags": [
+    "crohn's disease", "crohns disease", "crohn disease", "regional enteritis", "terminal ileitis",
+    "ileocolitis", "perianal crohn's", "ibd", "inflammatory bowel disease", "transmural inflammation",
+    "skip lesions", "granulomatous enteritis", "gastroenterology", "biologic therapy",
+    "fecal calprotectin", "ileocolonoscopy", "stricturing crohn's", "fistulizing crohn's"
+  ],
+
+  "symptomKeywords": [
+    "chronic diarrhea", "right lower quadrant pain", "weight loss with diarrhea", "perianal fistula",
+    "blood in stool", "abdominal cramping", "mouth ulcers diarrhea", "iron deficiency anemia young adult",
+    "nocturnal diarrhea", "growth failure child"
+  ],
+
+  "metaTitle": "Crohn's Disease: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Crohn's disease: chronic IBD causing diarrhea, abdominal pain, weight loss. Symptoms, diagnosis, biologics, surgery, and outlook reviewed by our doctors.",
+
+  "keywords": [
+    "crohn's disease", "crohn's symptoms", "crohn's treatment", "crohn's diet",
+    "crohn's vs ulcerative colitis", "biologics for crohn's", "infliximab", "adalimumab",
+    "perianal crohn's", "fecal calprotectin", "ileocolonoscopy", "is crohn's curable",
+    "crohn's flare"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Lichtenstein GR, Loftus EV, Isaacs KL, Regueiro MD, Gerson LB, Sands BE. ACG Clinical Guideline: Management of Crohn's Disease in Adults. American Journal of Gastroenterology. 2018;113(4):481-517.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29610508/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Torres J, Mehandru S, Colombel JF, Peyrin-Biroulet L. Crohn's disease. Lancet. 2017;389(10080):1741-1755.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27914657/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Ng SC, Shi HY, Hamidi N, et al. Worldwide incidence and prevalence of inflammatory bowel disease in the 21st century: a systematic review of population-based studies. Lancet. 2017;390(10114):2769-2778.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29050646/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Turner D, Ricciuto A, Lewis A, et al. STRIDE-II: An Update on the Selecting Therapeutic Targets in Inflammatory Bowel Disease (STRIDE) Initiative of the International Organization for the Study of IBD (IOIBD). Gastroenterology. 2021;160(5):1570-1583.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33359090/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Colombel JF, Sandborn WJ, Reinisch W, et al. Infliximab, azathioprine, or combination therapy for Crohn's disease (SONIC). New England Journal of Medicine. 2010;362(15):1383-1395.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20393175/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Torres J, Bonovas S, Doherty G, et al. ECCO Guidelines on Therapeutics in Crohn's Disease: Medical Treatment. Journal of Crohn's and Colitis. 2020;14(1):4-22.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31711158/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Feagan BG, Sandborn WJ, Gasink C, et al. Ustekinumab as Induction and Maintenance Therapy for Crohn's Disease (UNITI). New England Journal of Medicine. 2016;375(20):1946-1960.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27959607/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Loftus EV, Panes J, Lacerda AP, et al. Upadacitinib Induction and Maintenance Therapy for Crohn's Disease (U-EXCEED and U-EXCEL). New England Journal of Medicine. 2023;388(21):1966-1980.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37224198/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
