@@ -1,0 +1,532 @@
+{
+  "_meta": {
+    "slug": "osteoarthritis",
+    "tier": 1,
+    "headTerm": "osteoarthritis",
+    "longTailKeywords": [
+      "osteoarthritis symptoms",
+      "osteoarthritis treatment",
+      "knee osteoarthritis",
+      "hip osteoarthritis",
+      "hand osteoarthritis",
+      "osteoarthritis vs rheumatoid arthritis",
+      "osteoarthritis diet",
+      "osteoarthritis exercises",
+      "kellgren lawrence grading",
+      "is osteoarthritis curable"
+    ],
+    "primarySpecialty": "Orthopedics/Rheumatology",
+    "lastReviewed": "2026-05-12",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against ACR/AF 2019 hand/hip/knee OA guideline (Kolasinski PMID 31908163), OARSI 2019 (Bannuru PMID 31657822), NICE NG226 2022, GBD 2020 Steinmetz et al Lancet Rheumatol (595M global, PMID 37675071), and Hunter & Bierma-Zeinstra Lancet 2019 PMID 30970995. Drug doses checked against UpToDate Lexicomp. TKA outcomes from Australian Orthopaedic Association NJR 2023."
+  },
+
+  "h1Title": "Osteoarthritis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Orthopedics/Rheumatology",
+
+  "heroOverview": "Osteoarthritis is the most common joint disease worldwide and the leading cause of disability in older adults, affecting an estimated 595 million people globally in 2020. Unlike pure cartilage wear-and-tear, it is now understood as a whole-joint failure that involves cartilage loss, subchondral bone remodelling, osteophyte formation, synovial inflammation, and meniscal damage. The knees, hips, hands, and lower spine carry the highest burden; the first symptom is usually use-related pain that builds through the day, with brief morning stiffness under 30 minutes. Symptoms can be controlled at every stage. First-line treatment is structured exercise and weight loss, with topical or oral NSAIDs, duloxetine, intra-articular steroid injection, and joint replacement reserved for progressive disease.",
+
+  "keyStats": {
+    "prevalence": "595 million people globally in 2020 (GBD 2020); ~14% of US adults have doctor-diagnosed arthritis (CDC)",
+    "demographics": "Symptomatic knee OA affects roughly 10% of men and 18% of women aged 60+",
+    "avgAge": "Symptom onset typically after age 45; prevalence rises sharply after age 65",
+    "globalCases": "Knee OA largest single contributor (~365M); then hand, hip, and spinal facet OA"
+  },
+
+  "definition": "Osteoarthritis (ICD-10: M15-M19) is a chronic, progressive disorder of the synovial joint in which the entire joint organ fails — articular cartilage thins and fissures, subchondral bone remodels with sclerosis and cyst formation, marginal osteophytes grow, the synovium develops low-grade inflammation, and supporting structures including the meniscus, ligaments, and periarticular muscle deteriorate. The disease is classified as primary (idiopathic, age-related) or secondary to identifiable causes such as prior joint trauma, congenital dysplasia, inflammatory arthritis, metabolic disease, or alignment abnormalities. Common sites are the knee (tibiofemoral and patellofemoral compartments), hip, hand (first carpometacarpal joint, distal and proximal interphalangeal joints producing Heberden's and Bouchard's nodes), spinal facet joints, first metatarsophalangeal joint, and shoulder. Radiographic severity is graded 0-4 on the Kellgren-Lawrence scale based on joint space narrowing, osteophyte size, subchondral sclerosis, and bone deformity. Most patients are managed jointly by primary care, orthopedics, rheumatology, physiotherapy, and pain medicine, with surgical referral reserved for end-stage hip and knee disease unresponsive to non-operative care.",
+
+  "typesClassification": [
+    { "type": "Primary (idiopathic) osteoarthritis", "description": "No identifiable underlying cause beyond age, genetics, mechanical load, and metabolic factors. Accounts for the majority of cases in adults over 50." },
+    { "type": "Secondary osteoarthritis", "description": "Develops as a consequence of joint injury (anterior cruciate ligament tear, meniscal injury, intra-articular fracture), congenital dysplasia (hip dysplasia, Perthes disease), inflammatory arthritis, metabolic disease (haemochromatosis, ochronosis), or chronic crystal arthropathy." },
+    { "type": "Knee osteoarthritis", "description": "Most common large-joint OA. Often medial compartment first, with progressive varus deformity. Patellofemoral involvement causes anterior knee pain on stairs and when rising from a chair." },
+    { "type": "Hip osteoarthritis", "description": "Groin pain referring to thigh or knee, worse on weight-bearing and at end-range internal rotation. Femoroacetabular impingement and developmental dysplasia are common antecedents." },
+    { "type": "Hand osteoarthritis", "description": "Affects the distal interphalangeal joints (Heberden's nodes), proximal interphalangeal joints (Bouchard's nodes), and first carpometacarpal joint at the thumb base. Strong female and familial predisposition." },
+    { "type": "Spinal (facet joint) osteoarthritis", "description": "Degeneration of the cervical and lumbar facet joints produces axial neck or low back pain with stiffness, often accompanied by disc degeneration and may cause nerve root or spinal canal compromise." },
+    { "type": "Erosive (inflammatory) osteoarthritis", "description": "A subset of hand OA with prominent inflammation, central erosions on X-ray, more pain, and faster progression. Sometimes mistaken for psoriatic or rheumatoid arthritis." }
+  ],
+
+  "primarySymptoms": [
+    "Joint pain that worsens with use and weight-bearing through the day, partially relieved by rest — the hallmark feature distinguishing osteoarthritis from inflammatory arthritis.",
+    "Brief morning stiffness lasting under 30 minutes, in contrast to the prolonged morning stiffness of rheumatoid arthritis or ankylosing spondylitis.",
+    "Gel phenomenon — joint stiffness after sitting still for a period such as during a long car ride or movie, which eases within minutes of moving again.",
+    "Crepitus, a coarse grating sensation or audible crunching when the joint moves, most commonly heard in the knee on flexion and extension.",
+    "Reduced range of motion that develops gradually over years; in hip OA, loss of internal rotation is one of the earliest reproducible findings on examination.",
+    "Bony enlargement of the joint margins — Heberden's nodes at the distal interphalangeal joints and Bouchard's nodes at the proximal interphalangeal joints in hand OA.",
+    "Periarticular tenderness and a mild joint effusion in flares, with the joint feeling warm but rarely the red, hot, exquisitely tender presentation of crystal or septic arthritis.",
+    "Functional limitation that builds up gradually — difficulty squatting, kneeling, climbing stairs, rising from a low chair, walking long distances, or gripping jar lids and door handles.",
+    "Buckling or giving way of the knee on uneven ground, related to quadriceps weakness and proprioceptive loss rather than mechanical instability.",
+    "Night pain in advanced disease, particularly in the hip — patients describe being unable to lie on the affected side and waking through the night, a marker of end-stage disease."
+  ],
+
+  "earlyWarningSigns": [
+    "Recurrent joint aches after activity that took longer to settle than they used to",
+    "A new audible crunching or grating in a knee when squatting or going down stairs",
+    "Loss of full grip strength on jar lids or door handles, often preceded by aching at the base of the thumb",
+    "Difficulty putting on socks or shoes due to reduced hip internal rotation"
+  ],
+
+  "emergencySigns": [
+    "A single hot, red, severely tender joint with fever — septic arthritis must be excluded by joint aspiration even in a patient known to have OA",
+    "Sudden inability to bear weight on a hip or knee after minor trauma in an older adult — possible insufficiency fracture or rapidly progressive OA",
+    "New leg weakness, numbness, saddle anaesthesia, or loss of bladder or bowel control with low back pain — cauda equina syndrome requires same-day imaging",
+    "Acute red, hot, swollen joint with chalky discharge or skin ulceration — superimposed gout flare or septic process needs urgent assessment"
+  ],
+
+  "causes": [
+    {
+      "cause": "Age-related cartilage and joint tissue changes",
+      "description": "Chondrocyte senescence, reduced proteoglycan synthesis, and accumulated micro-damage make cartilage less resilient with each decade. Prevalence of radiographic OA rises from under 5% before age 40 to over 50% after age 70."
+    },
+    {
+      "cause": "Mechanical overload and obesity",
+      "description": "Each additional kilogram of body weight produces approximately four kilograms of additional compressive load across the knee. Sustained obesity also drives systemic low-grade inflammation that accelerates cartilage breakdown independent of mechanical load."
+    },
+    {
+      "cause": "Prior joint injury (post-traumatic OA)",
+      "description": "Anterior cruciate ligament rupture, meniscal tear, intra-articular fracture, and significant joint dislocation roughly double the lifetime risk of OA in that joint, often producing symptoms within 10-15 years even after surgical repair."
+    },
+    {
+      "cause": "Repetitive occupational and athletic loading",
+      "description": "Heavy occupational kneeling, squatting, lifting, and high-impact sports (elite-level distance running, soccer, weightlifting) increase the risk of knee and hip OA. Recreational activity at moderate volumes does not raise risk and is protective."
+    },
+    {
+      "cause": "Genetic predisposition",
+      "description": "Twin studies estimate heritability of 40-65% for hand and hip OA and 30-40% for knee OA. Variants in GDF5, COL11A1, and DOT1L are among the established susceptibility loci, and a strong familial pattern is typical in hand and generalised OA."
+    },
+    {
+      "cause": "Joint malalignment and dysplasia",
+      "description": "Varus or valgus knee alignment concentrates load on the medial or lateral compartment respectively, accelerating wear. Developmental hip dysplasia and femoroacetabular impingement are major causes of hip OA in younger adults."
+    },
+    {
+      "cause": "Female sex and post-menopausal hormonal change",
+      "description": "Women carry a higher prevalence of knee and hand OA from age 50 onward. Loss of estrogen at menopause is associated with accelerated cartilage volume loss on MRI, though hormone replacement has not been shown to alter clinical OA outcomes."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 50", "category": "non-modifiable", "description": "The strongest single risk factor. Radiographic knee OA is present in over 30% of adults over 60 and over 40% over 70 in population imaging studies." },
+    { "factor": "Female sex (after menopause)", "category": "non-modifiable", "description": "Women have higher prevalence and severity of hand and knee OA after age 50, and account for roughly 60-65% of total knee replacements performed for OA." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Doubles the risk of knee OA and is the single most modifiable contributor. A 5 kg loss reduces incident knee OA risk by approximately 50% in women (Framingham data)." },
+    { "factor": "Prior joint injury", "category": "modifiable", "description": "ACL or meniscal injury roughly doubles long-term OA risk in that joint; the risk is only partially mitigated by surgical reconstruction." },
+    { "factor": "Occupational kneeling, squatting, and heavy lifting", "category": "modifiable", "description": "Workers with sustained knee-loading exposure (flooring, mining, agriculture, military) carry a 1.5-2 fold increase in knee OA prevalence." },
+    { "factor": "Family history of osteoarthritis", "category": "genetic", "description": "First-degree relatives of individuals with hand or hip OA have approximately twice the population risk, especially for nodal hand OA in women." },
+    { "factor": "Joint malalignment (varus/valgus knee, hip dysplasia)", "category": "non-modifiable", "description": "Varus alignment increases the odds of medial compartment knee OA progression nearly 4-fold; mild hip dysplasia accounts for up to 40% of hip OA in younger adults." },
+    { "factor": "Quadriceps and hip abductor weakness", "category": "modifiable", "description": "Weak quadriceps independently predict incident symptomatic knee OA. Strengthening programmes both reduce pain in established OA and may delay progression." },
+    { "factor": "Diabetes and metabolic syndrome", "category": "modifiable", "description": "Type 2 diabetes is associated with a roughly 30% higher risk of severe OA after adjusting for BMI, likely via advanced glycation end-products in cartilage and systemic inflammation." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Smoking is not a major OA risk factor but worsens outcomes after joint replacement, increasing infection and wound complications by approximately 50%." }
+  ],
+
+  "affectedDemographics": [
+    "Global burden in 2020 estimated at 595 million people with any-joint OA (Lancet Rheumatology, GBD 2020)",
+    "Approximately 32.5 million US adults have clinical OA; total arthritis prevalence is around 14% (CDC, BRFSS)",
+    "Knee OA is the largest single contributor — roughly 365 million prevalent cases globally",
+    "Black and Hispanic adults in the US carry higher rates of severe knee OA and are referred for joint replacement at lower rates than white adults at equivalent disease severity",
+    "Rates rise sharply with age: symptomatic knee OA reaches roughly 10% in men and 18% in women over 60"
+  ],
+
+  "diagnosisOverview": "Diagnosis of osteoarthritis is primarily clinical. In a patient over 45 with activity-related joint pain and morning stiffness under 30 minutes, NICE guidance (NG226, 2022) states that osteoarthritis can be diagnosed without imaging or laboratory tests. The American College of Rheumatology clinical criteria for knee OA combine joint pain with crepitus, bony enlargement, less than 30 minutes of morning stiffness, and age, reaching over 90% sensitivity. Examination identifies the affected compartments, range of motion loss, malalignment, joint line tenderness, periarticular crepitus, effusion size, and quadriceps or hip abductor weakness. A weight-bearing plain radiograph (standing for knee and hip) is the standard imaging investigation when confirmation is needed for surgical planning or to exclude another diagnosis; it shows joint space narrowing, marginal osteophytes, subchondral sclerosis, and subchondral cysts, graded 0-4 on the Kellgren-Lawrence scale. MRI is not routinely indicated; it is reserved for atypical presentations, suspected internal derangement, avascular necrosis, or persistent mechanical symptoms after failed conservative care. Blood tests are normal in primary OA, and ordering a rheumatoid factor or anti-CCP panel in classic presentations causes more confusion than it resolves due to low-titre positives in healthy older adults. Joint aspiration is reserved for a hot, swollen joint to exclude crystal arthritis or infection — synovial fluid in OA shows a non-inflammatory white cell count under 2,000/mm³.",
+
+  "diagnosticTests": [
+    {
+      "test": "Clinical assessment (history and examination)",
+      "purpose": "The primary diagnostic step. NICE NG226 and ACR criteria allow OA diagnosis on clinical grounds in adults over 45 with use-related pain and morning stiffness under 30 minutes.",
+      "whatToExpect": "A focused history of pain pattern, stiffness duration, function, and prior injuries, followed by examination of joint range of motion, alignment, crepitus, effusion, and adjacent muscle strength. Takes 15-25 minutes."
+    },
+    {
+      "test": "Weight-bearing plain radiograph",
+      "purpose": "Confirms joint space narrowing, osteophytes, subchondral sclerosis, and grades severity on the Kellgren-Lawrence scale (0-4). Standing views are essential for knees and hips because supine films underestimate joint space narrowing.",
+      "whatToExpect": "Two to four standing X-ray views of the affected joint, taking 10-15 minutes. Results are typically read same day. Radiation dose is low — comparable to a few days of background radiation."
+    },
+    {
+      "test": "MRI of the joint",
+      "purpose": "Not used for routine OA diagnosis. Indicated when there is suspicion of meniscal tear, ligament injury, avascular necrosis, subchondral insufficiency fracture, or unexplained mechanical symptoms.",
+      "whatToExpect": "A 25-45 minute scan with the affected joint inside a coil. No radiation, no needles in most protocols. Patients with claustrophobia, pacemakers, or certain implants may need open MRI or alternative imaging."
+    },
+    {
+      "test": "Joint aspiration with synovial fluid analysis",
+      "purpose": "Used only when a joint is hot, very swollen, or there is diagnostic uncertainty between OA flare, crystal arthritis, and septic arthritis. Synovial fluid in OA is non-inflammatory (white cell count under 2,000/mm³).",
+      "whatToExpect": "A small needle is inserted into the joint under sterile technique after local anaesthetic; 1-5 mL of fluid is withdrawn and sent for cell count, crystal microscopy, Gram stain, and culture. The procedure takes 5-10 minutes."
+    },
+    {
+      "test": "Blood tests (CRP, ESR, rheumatoid factor, anti-CCP)",
+      "purpose": "Used selectively when inflammatory arthritis is on the differential. In classic OA these tests are normal or only mildly elevated; routine testing in older adults yields false-positive rheumatoid factor results in roughly 5-10%.",
+      "whatToExpect": "A standard blood draw with results back within 24-48 hours. Discuss results with the clinician who ordered them rather than self-interpreting borderline values."
+    },
+    {
+      "test": "Ultrasound of the joint",
+      "purpose": "Useful when needed to confirm effusion, guide injection, identify synovitis, or assess hand and foot small joints. Not required for diagnosis in most patients.",
+      "whatToExpect": "A clinician applies gel and a probe over the joint for 10-20 minutes. The scan is painless, has no radiation, and is often performed in the same visit as joint injection."
+    }
+  ],
+
+  "treatmentOverview": "The 2019 ACR/Arthritis Foundation hand, hip, and knee OA guideline and the 2019 OARSI knee, hip, and polyarticular OA guideline both place the same first step at the top: structured exercise, weight management, and patient education. These are strongly recommended for all patients with knee, hip, and many hand OA presentations, with effect sizes for pain and function that match or exceed any single medication. Land-based and aquatic exercise are both effective; supervised programmes outperform unsupervised. Weight loss of 5-10% in overweight patients produces clinically meaningful pain reduction, with each kilogram lost translating to approximately four kilograms of reduced knee compressive force. Pharmacologic therapy is layered on top. For knee OA, topical NSAIDs (diclofenac 1% or 2% gel applied four times daily) are recommended ahead of oral NSAIDs because of an equivalent local effect with far fewer systemic side effects. For hand and hip OA, oral NSAIDs (naproxen 220-500 mg twice daily, ibuprofen 400-800 mg three times daily) are first-line, taken with a proton pump inhibitor in patients with gastrointestinal risk. Duloxetine 30-60 mg daily is a conditional recommendation for chronic pain and is useful when comorbid sleep disturbance or low mood is present. Intra-articular corticosteroid injection (triamcinolone 40 mg or methylprednisolone equivalent, no more than once every three months and a maximum of three to four times per year per joint) gives short-term pain relief, typically 4-8 weeks. Intra-articular hyaluronic acid is conditionally recommended against for knee and hip OA in the 2019 ACR/AF guideline due to weak overall evidence, though some patients report benefit. Acetaminophen has only modest effect and is no longer a strong first-line option. Glucosamine and chondroitin are conditionally recommended against on the basis of repeated null trials. Tramadol is a conditional recommendation for refractory pain in patients in whom NSAIDs and surgery are not options; chronic non-tramadol opioids are strongly recommended against because of poor efficacy in OA and serious harm. Arthroscopic lavage and debridement for OA are not recommended outside the rare situation of mechanically locking loose bodies. For end-stage hip and knee OA with persistent pain and disability, total hip or total knee arthroplasty produces large and durable improvements; satisfaction rates are 80-90% and 10-year prosthesis survivorship exceeds 95% in modern registries.",
+
+  "medicalTreatments": [
+    {
+      "name": "Structured exercise programme (land-based or aquatic, 2-3 sessions per week for at least 12 weeks)",
+      "description": "Combination of strengthening (quadriceps, hip abductors for lower-limb OA), aerobic activity (walking, cycling, swimming), and range-of-motion work. Strongly recommended in ACR/AF 2019, OARSI 2019, and NICE NG226. Supervised programmes are more effective than self-directed.",
+      "effectiveness": "Pain reduction of 0.3-0.5 standard mean difference and clinically meaningful function gains in roughly 60-70% of participants — equivalent to NSAIDs."
+    },
+    {
+      "name": "Weight management (target 5-10% loss in overweight adults)",
+      "description": "Each kilogram of weight loss reduces knee joint compressive load by approximately four kilograms per step. Combined with exercise it produces additive benefit. Pharmacologic and surgical weight-loss interventions improve outcomes in obese patients with knee OA.",
+      "effectiveness": "5% loss yields measurable pain improvement; 10% loss roughly halves incident knee OA risk and significantly improves WOMAC scores in established disease."
+    },
+    {
+      "name": "Topical NSAIDs (diclofenac 1% gel, 2-4 g applied 4 times daily; diclofenac 2% gel twice daily)",
+      "description": "First-line pharmacologic option for knee and hand OA per ACR/AF 2019. Local delivery achieves cartilage and synovial concentrations comparable to oral dosing with about 5-10% of the systemic absorption.",
+      "effectiveness": "Pain reduction comparable to oral NSAIDs (approximately 1-2 points on a 0-10 scale) with a roughly 60% lower rate of systemic gastrointestinal and renal side effects."
+    },
+    {
+      "name": "Oral NSAIDs (naproxen 220-500 mg twice daily; ibuprofen 400-800 mg three times daily; celecoxib 100-200 mg daily)",
+      "description": "First-line for hand and hip OA and second-line for knee OA when topical NSAIDs are insufficient. Use the lowest effective dose for the shortest duration. Co-prescribe a proton pump inhibitor in patients aged over 65, on aspirin, or with prior peptic ulcer disease.",
+      "effectiveness": "Clinically meaningful pain relief in 50-60% of patients; effect size approximately 0.3 standard mean difference over placebo."
+    },
+    {
+      "name": "Duloxetine (30 mg daily for 1 week, then 60 mg daily)",
+      "description": "Serotonin-noradrenaline reuptake inhibitor with central pain-modulating effects. Conditionally recommended for chronic OA pain in ACR/AF 2019, especially with co-existing depression or sleep disturbance. Watch for nausea, dry mouth, and hypertension.",
+      "effectiveness": "Approximately 40-45% of patients report at least 30% pain reduction at 13 weeks (Chappell 2009 trials)."
+    },
+    {
+      "name": "Intra-articular corticosteroid injection (triamcinolone acetonide 40 mg or methylprednisolone 40-80 mg, maximum every 3 months)",
+      "description": "Provides short-term pain relief and reduces synovitis. ACR/AF 2019 strongly recommends for knee and conditionally for hip and hand. Ultrasound guidance improves hip injection accuracy. Avoid repeated injections in the same joint beyond 3-4 per year due to possible cartilage volume loss.",
+      "effectiveness": "Pain reduction of 1-2 points on a 0-10 scale for 4-8 weeks in most patients; less consistent benefit beyond 3 months."
+    },
+    {
+      "name": "Intra-articular hyaluronic acid (3-5 weekly injections of high or low molecular weight HA)",
+      "description": "Conditionally recommended against for knee and hip OA in ACR/AF 2019 due to small overall effect sizes and inconsistent trial results. Some patients report symptomatic benefit; coverage and access vary by country.",
+      "effectiveness": "Pain reduction of approximately 0.3-0.5 points on a 0-10 scale over placebo at 3 months — small and inconsistent across trials."
+    },
+    {
+      "name": "Tramadol (50-100 mg every 4-6 hours, maximum 400 mg/day)",
+      "description": "Conditionally recommended for refractory pain when NSAIDs are contraindicated and joint replacement is not an option. Risk of dizziness, nausea, dependence, and serotonin syndrome with SNRIs.",
+      "effectiveness": "Pain relief of 1-2 points on a 0-10 scale in selected patients; numbers needed to treat approximately 6-8."
+    },
+    {
+      "name": "Acetaminophen (500-1000 mg up to 4 times daily, maximum 3 g/day for older adults)",
+      "description": "Once a first-line option, now downgraded to conditional in ACR/AF 2019 after meta-analyses showed only modest benefit. Useful as adjunct or in patients who cannot take NSAIDs.",
+      "effectiveness": "Mean pain reduction of approximately 0.13 standard mean difference — small and not clinically meaningful for most patients (Machado 2015 BMJ meta-analysis)."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Total knee arthroplasty (TKA)",
+      "description": "Definitive treatment for end-stage knee OA with persistent pain and functional limitation despite a fair trial of non-operative care. Cemented or cementless components; partial (unicompartmental) replacement is an option for isolated medial or lateral disease.",
+      "successRate": "Patient-reported satisfaction 80-90%; pain relief in approximately 90%; 10-year prosthesis survivorship over 95% in modern registries; 15-year survivorship around 90%."
+    },
+    {
+      "name": "Total hip arthroplasty (THA)",
+      "description": "Often considered one of the most successful surgical interventions in modern medicine. Indicated for end-stage hip OA with night pain, functional loss, and exhausted conservative measures.",
+      "successRate": "Patient satisfaction 90-95%; 10-year prosthesis survivorship 95%; 20-year survivorship approximately 85% in registry data."
+    },
+    {
+      "name": "Unicompartmental knee arthroplasty",
+      "description": "Replaces only the worn compartment in selected patients with isolated medial or lateral knee OA, intact ligaments, and good range of motion. Shorter recovery and more natural knee feel than TKA, with somewhat higher revision rates.",
+      "successRate": "Patient satisfaction 85-90%; 10-year survivorship 90-93%."
+    },
+    {
+      "name": "Osteotomy (high tibial or distal femoral)",
+      "description": "Realignment surgery for younger, active patients with isolated compartment knee OA and significant varus or valgus deformity. Delays joint replacement by 7-15 years on average in carefully selected candidates.",
+      "successRate": "Survivorship to knee replacement of 70-80% at 10 years; outcomes worse with BMI over 30 or age over 65."
+    },
+    {
+      "name": "Trapeziectomy (CMC1 OA of the thumb)",
+      "description": "Removal of the trapezium bone for advanced osteoarthritis of the first carpometacarpal joint refractory to splinting, NSAIDs, and injection. With or without ligament reconstruction and tendon interposition.",
+      "successRate": "Pain relief and function improvement in 85-90% of patients at 1-5 years."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Tai chi (60 minutes twice weekly for at least 12 weeks)", "description": "Strongly recommended in ACR/AF 2019 for knee and hip OA on the basis of randomised trials showing pain and function gains equivalent to physiotherapy programmes (Wang 2016 NEJM)." },
+    { "name": "Cognitive behavioural therapy", "description": "Conditionally recommended for chronic OA pain, especially when sleep disturbance or low mood is contributing. Improves coping and reduces pain interference rather than altering structural disease." },
+    { "name": "Acupuncture (8-12 sessions)", "description": "Conditionally recommended for knee OA in ACR/AF 2019. Modest pain reduction over sham acupuncture at 12 weeks; longer-term benefits less consistent." },
+    { "name": "Heat and cold therapy", "description": "Topical heat before exercise, cold packs after activity. Low-cost, no significant side effects, and conditionally recommended as adjunct therapy." }
+  ],
+
+  "whySeeSpecialist": "Most osteoarthritis is managed by primary care, physiotherapy, and pharmacists working together. Refer to an orthopaedic surgeon when symptoms persist despite at least 12 weeks of structured exercise, weight management, and appropriate pharmacotherapy, or earlier for night pain, severe functional limitation, or Kellgren-Lawrence grade 4 disease on weight-bearing radiograph. Refer to rheumatology when there is uncertainty between OA and inflammatory arthritis, in erosive hand OA, or when systemic features are present.",
+
+  "doctorSelectionGuide": "For surgical care, look for a fellowship-trained adult reconstruction or arthroplasty surgeon whose practice is dominated by hip and knee replacement, with documented case volumes — high-volume surgeons and high-volume centres show lower complication and revision rates. For non-operative care, look for a clinician who routinely refers to physiotherapy as the first prescription rather than the last, knows the limits of imaging, and treats weight management as a clinical priority rather than a moralised aside.",
+
+  "preventionStrategies": [
+    "Maintain a body mass index under 25 from middle age onward — the single most modifiable lever, with each 5 kg of weight gain raising knee OA risk by approximately 35% in women",
+    "Strengthen the quadriceps, hip abductors, and core through twice-weekly resistance training — strong evidence for reducing incident symptomatic knee OA",
+    "Treat joint injuries fully — complete physiotherapy rehabilitation after ACL or meniscal injury rather than stopping when pain resolves, and consider activity modification afterwards",
+    "Avoid sustained occupational kneeling and squatting where possible; use knee pads, lifting aids, and rotate tasks",
+    "Stay active with low-impact movement — walking, cycling, swimming, and tai chi — moderate volumes of activity are protective, not harmful, to joints"
+  ],
+
+  "lifestyleModifications": [
+    "Build daily movement into routine — short walks every 1-2 hours rather than long static periods reduce stiffness from the gel phenomenon",
+    "Use assistive devices early when they help: a cane held in the contralateral hand offloads the affected hip or knee by up to 25% and is not a sign of weakness",
+    "Adjust the workplace — sit-stand desks, supportive footwear, ergonomic tools, and avoiding repetitive heavy lifting",
+    "Prioritise sleep — chronic OA pain is amplified by short and disrupted sleep, and sleep deprivation lowers pain thresholds",
+    "Address mood — co-existing depression worsens OA pain and function. Treating it improves both",
+    "Stop smoking before any planned joint replacement — smoking increases postoperative wound and infection complications by approximately 50%"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style eating with vegetables, fruits, whole grains, legumes, olive oil, and fish — associated with lower inflammatory markers and modestly lower OA pain in cohort studies",
+      "Oily fish or omega-3 supplementation (1-3 g EPA/DHA daily) — small but consistent reduction in joint pain in meta-analyses",
+      "Adequate dietary calcium (1000-1200 mg/day) and vitamin D (800-2000 IU/day) — for bone health, fall prevention, and musculoskeletal function",
+      "Coffee in moderation — large cohort studies show no harm and possibly reduced incident OA",
+      "Protein intake of 1.0-1.2 g/kg/day to preserve muscle mass, especially around joint replacement surgery"
+    ],
+    "avoid": [
+      "Sustained ultra-processed and high-sugar diets — associated with weight gain, systemic inflammation, and worse OA outcomes",
+      "Excess alcohol — increases NSAID gastric bleeding risk and impairs sleep",
+      "Crash dieting that loses muscle along with fat — exercise-coupled gradual weight loss is preferred",
+      "Trendy elimination diets (nightshade-free, gluten-free in non-coeliac patients) — no consistent evidence of benefit in OA",
+      "High-purine binges if you have co-existing gout — superimposed flares are easily mistaken for an OA flare"
+    ]
+  },
+
+  "exerciseGuidelines": "All patients with knee or hip OA should be doing some structured exercise. Aim for 150 minutes per week of moderate aerobic activity such as walking, cycling, or swimming, plus two sessions of resistance training focused on quadriceps, hip abductors, and core. Pain that settles within 24 hours of exercise is acceptable and does not indicate joint damage. Aquatic exercise is particularly useful for severe knee or hip pain because buoyancy reduces joint loading. Tai chi has trial-level evidence for knee and hip OA and is suitable for older adults concerned about balance.",
+
+  "dailyManagement": [
+    "Take medications at the same times each day; topical NSAIDs require 4 applications daily for full effect",
+    "Apply topical heat for 10-15 minutes before exercise and cold for 10-15 minutes after to manage post-activity flares",
+    "Move every hour during long periods of sitting to ease the gel phenomenon",
+    "Use a cane in the opposite hand to the painful hip or knee on outdoor walks and on stairs",
+    "Track pain, stiffness, and function in a simple weekly log — useful for medication reviews and surgical referral decisions",
+    "Plan periods of rest within an active day rather than alternating long active days with full rest days"
+  ],
+
+  "prognosis": "Osteoarthritis is a chronic condition, but pain and function in most joints are controllable for many years with non-operative care, and joint replacement provides durable resolution of end-stage hip and knee disease. With structured exercise and weight management, clinically meaningful pain and function gains are achieved in roughly 60-70% of patients at 12 weeks, and benefits persist while the programme is maintained. Disease progression on imaging is slow — only about one in seven patients with knee OA progresses by one Kellgren-Lawrence grade over five years. Hip and knee replacement deliver 80-95% patient satisfaction with 10-year prosthesis survivorship over 95% in modern registries; hand and thumb base surgery have similar high success rates in selected patients. Predictors of poorer outcomes are higher BMI, lower quadriceps strength, depression, prior joint injury, and untreated metabolic disease. Multimorbidity matters: co-existing depression doubles the risk of poor functional outcomes after knee replacement, and treating mood and sleep is part of treating the joint.",
+
+  "recoveryTimeline": "Pain and function improve over 8-12 weeks with a structured exercise and weight-management programme and remain steady while it continues. A single intra-articular corticosteroid injection typically reduces pain for 4-8 weeks. After total knee replacement, most patients walk with aids within 1-2 days, return to most daily activities by 6-12 weeks, and reach maximum functional improvement by 12 months. Total hip replacement recovery is faster — most patients return to walking unaided within 4-6 weeks and to normal daily activities by 3 months.",
+
+  "complications": [
+    "Progressive loss of joint function leading to mobility limitation, falls, social isolation, and loss of independence — the dominant burden of advanced OA",
+    "Secondary muscle weakness and sarcopenia from pain-driven inactivity, which then worsens joint loading and falls risk",
+    "Falls and fragility fractures — pain-driven gait change and quadriceps weakness raise fall risk; co-existing osteoporosis raises fracture risk",
+    "NSAID-related complications including gastrointestinal bleeding, peptic ulcer, renal impairment, hypertension worsening, and cardiovascular events",
+    "Depression and anxiety — present in approximately 20% of adults with symptomatic OA and a strong independent predictor of poor function and surgical outcomes",
+    "Surgical complications after joint replacement including periprosthetic joint infection (approximately 1%), venous thromboembolism, prosthesis loosening or wear, and revision surgery"
+  ],
+
+  "supportResources": [
+    { "name": "Arthritis Foundation — Osteoarthritis", "url": "https://www.arthritis.org/diseases/osteoarthritis", "description": "US patient organisation with education, exercise programmes, and community resources for OA." },
+    { "name": "Versus Arthritis (UK)", "url": "https://versusarthritis.org/about-arthritis/conditions/osteoarthritis/", "description": "UK patient charity with high-quality booklets, helpline, and condition-specific guides aligned with NICE NG226." },
+    { "name": "OARSI Patient Resources", "url": "https://oarsi.org/patients", "description": "Osteoarthritis Research Society International — patient-facing summaries written by the same group that issues the international clinical guideline." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "rheumatoid-arthritis", "name": "Rheumatoid Arthritis", "keyDifference": "Rheumatoid arthritis is a symmetric inflammatory polyarthritis with prolonged morning stiffness over an hour, swollen warm small joints of the hands and feet, and positive rheumatoid factor or anti-CCP antibodies. Osteoarthritis is use-related, asymmetric, with stiffness under 30 minutes and normal inflammatory markers." },
+    { "slug": "gout", "name": "Gout", "keyDifference": "Gout produces sudden severe overnight attacks lasting 7-14 days, classically in the big toe, with bright redness and extreme tenderness. Osteoarthritis pain is chronic, use-related, and lacks the explosive onset. Both can affect the first metatarsophalangeal joint and may coexist; joint aspiration for crystals resolves the question." },
+    { "slug": "cppd-disease", "name": "Pseudogout (Calcium Pyrophosphate Deposition Disease)", "keyDifference": "Pseudogout causes acute crystal-driven flares in older adults, most often in the knee or wrist, sometimes superimposed on chronic OA. Joint aspiration shows positively birefringent rhomboid crystals. Chondrocalcinosis on X-ray is a clue." },
+    { "slug": "psoriatic-arthritis", "name": "Psoriatic Arthritis", "keyDifference": "Psoriatic arthritis can mimic erosive hand OA but typically involves the distal interphalangeal joints alongside dactylitis (sausage digit), nail pitting or onycholysis, enthesitis, and skin or scalp psoriasis. Inflammatory markers are often raised." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "keyDifference": "Fibromyalgia produces widespread musculoskeletal pain with tender points, profound fatigue, unrefreshing sleep, and cognitive symptoms. Joints look normal on examination and imaging. OA is localised to specific joints with structural findings on X-ray." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "obesity-unspecified-e669", "name": "Obesity" },
+    { "slug": "osteoporosis", "name": "Osteoporosis" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" },
+    { "slug": "depression", "name": "Depression" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "rheumatoid-arthritis", "name": "Rheumatoid Arthritis", "relevance": "Most important differential — both produce joint pain and stiffness but inflammatory features, distribution, and serology differ." },
+    { "slug": "gout", "name": "Gout", "relevance": "Frequently coexists in older patients; an acute hot joint in a patient with chronic OA should prompt aspiration to exclude crystal arthritis." },
+    { "slug": "back-pain", "name": "Back Pain", "relevance": "Lumbar facet osteoarthritis is one of the major mechanical causes of chronic axial low back pain." },
+    { "slug": "osteoporosis", "name": "Osteoporosis", "relevance": "Both increase with age and frequently coexist; OA pain-driven inactivity and quadriceps weakness raise fall and fracture risk." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "relevance": "Roughly 10-20% of patients with OA also meet fibromyalgia criteria; central sensitisation amplifies OA pain and reduces response to local treatments." },
+    { "slug": "sarcopenia", "name": "Sarcopenia", "relevance": "Age-related muscle loss accelerates OA progression and worsens function; combined treatment with resistance exercise improves both." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Is osteoarthritis curable?",
+      "answer": "Osteoarthritis cannot be reversed, but it is highly manageable. Structured exercise, weight loss, topical and oral NSAIDs, and selective injections control symptoms for most patients for years. When the hip or knee reaches end-stage disease, joint replacement effectively cures the joint-specific pain, with 80-90% patient satisfaction and over 95% prosthesis survivorship at 10 years. The underlying cartilage damage does not regrow, but the disease can be brought to a stop in clinical terms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between osteoarthritis and rheumatoid arthritis?",
+      "answer": "Osteoarthritis is a wear-and-repair condition of individual joints that causes use-related pain and stiffness under 30 minutes in the morning. Rheumatoid arthritis is an autoimmune inflammatory disease that attacks the small joints symmetrically, produces over an hour of morning stiffness, warm swollen joints, and raised inflammatory markers. Blood tests for rheumatoid factor and anti-CCP help confirm rheumatoid arthritis, and the two are managed by different treatment pathways.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is osteoarthritis diagnosed?",
+      "answer": "Osteoarthritis is diagnosed clinically in most patients. A clinician confirms use-related joint pain, morning stiffness under 30 minutes, age over 45, and typical examination findings such as crepitus and reduced range of motion. A weight-bearing X-ray is used when surgical decisions are being made or another diagnosis needs to be excluded. MRI and blood tests are not routine in classic presentations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does Kellgren-Lawrence grading mean?",
+      "answer": "Kellgren-Lawrence is the standard radiographic grading scale for osteoarthritis severity, scored 0 to 4. Grade 0 is normal; grade 1 shows possible joint space narrowing and tiny osteophytes; grade 2 shows definite osteophytes with possible narrowing; grade 3 shows moderate joint space loss, sclerosis, and bony deformity; grade 4 shows severe joint space loss and large osteophytes. Grade does not always match symptom severity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which joints does osteoarthritis affect most?",
+      "answer": "The knee carries the largest single burden globally, followed by the hand (especially the base of the thumb and the distal and proximal finger joints), the hip, the spinal facet joints in the neck and lower back, the first metatarsophalangeal joint of the big toe, and the shoulder. Knee, hip, and hand OA together account for the vast majority of clinical disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will exercise make osteoarthritis worse?",
+      "answer": "Moderate, structured exercise is one of the most effective treatments for osteoarthritis and does not accelerate joint damage. Strengthening, aerobic, and range-of-motion programmes reduce pain and improve function with effect sizes equivalent to NSAIDs. Pain that settles within 24 hours of exercise is acceptable. High-impact activity on a damaged joint should be modified, but inactivity is more harmful than carefully chosen exercise.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best exercise for knee osteoarthritis?",
+      "answer": "The strongest evidence supports a combination of quadriceps and hip strengthening, low-impact aerobic activity such as cycling or swimming, and range-of-motion work, performed at least twice a week for 12 weeks or more. Tai chi has trial-level evidence equivalent to physiotherapy. Aquatic exercise is useful when pain limits land-based training. A supervised programme outperforms self-directed exercise.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much weight loss is needed to help osteoarthritis?",
+      "answer": "Even a 5% loss of body weight produces measurable knee pain improvement, and 10% roughly halves incident knee OA risk in overweight women. Each kilogram lost reduces knee compressive force by approximately four kilograms per step. Combining weight loss with exercise produces greater pain and function benefit than either alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do glucosamine and chondroitin work for osteoarthritis?",
+      "answer": "Large randomised trials and meta-analyses have not shown a clinically meaningful benefit of glucosamine or chondroitin over placebo for osteoarthritis pain or progression. The 2019 ACR/AF guideline conditionally recommends against using them. They are well tolerated and not harmful, but the money and effort are better spent on exercise and weight management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are cortisone injections safe for arthritis?",
+      "answer": "Intra-articular corticosteroid injections are a useful short-term option for moderate-to-severe knee, hip, and hand OA. They typically reduce pain for 4-8 weeks. Most guidelines limit injections to no more than three or four per joint per year and avoid them within three months of planned joint replacement. Repeated injections may cause modest cartilage volume loss over years on MRI.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does hyaluronic acid injection help osteoarthritis?",
+      "answer": "Evidence for intra-articular hyaluronic acid in knee and hip OA is weak and inconsistent. The 2019 ACR/Arthritis Foundation guideline conditionally recommends against its use. Some patients report benefit, and it remains a second or third-line option in some practices. Coverage and out-of-pocket cost vary widely.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I consider a knee or hip replacement?",
+      "answer": "Joint replacement is considered when osteoarthritis pain and functional limitation persist despite at least 12 weeks of structured exercise, weight management, and appropriate medications, especially with night pain, severe loss of mobility, or grade 4 disease on weight-bearing X-ray. Timing balances symptom severity against the patient's age, fitness for surgery, and personal goals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does a knee or hip replacement last?",
+      "answer": "Modern total hip and total knee replacements have over 95% prosthesis survivorship at 10 years and approximately 85-90% at 20 years in national registry data. Outcomes are best at high-volume centres and in patients with controlled weight, no smoking, and well-managed diabetes. About 1-2% of patients per year require revision surgery for wear, loosening, or infection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can young adults get osteoarthritis?",
+      "answer": "Yes. Post-traumatic osteoarthritis develops in adults under 45 after significant joint injury such as ACL rupture, meniscal tear, intra-articular fracture, or dislocation. Hip dysplasia and femoroacetabular impingement also produce early hip OA. Younger patients are usually managed with conservative care, osteotomy, or hip preservation surgery, with joint replacement deferred when possible.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is cracking my knuckles linked to osteoarthritis?",
+      "answer": "No. Long-term observational studies have not found that habitual knuckle cracking causes osteoarthritis. The cracking sound is from gas bubbles forming and collapsing in synovial fluid, not joint damage. Crepitus due to OA is a different, coarser grating sensation and is usually accompanied by joint pain or stiffness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I take acetaminophen or NSAIDs for OA pain?",
+      "answer": "NSAIDs — particularly topical NSAIDs for knee OA and oral NSAIDs for hand and hip OA — produce greater pain relief than acetaminophen and are the preferred pharmacologic first step in current ACR and OARSI guidelines. Acetaminophen has only modest benefit but remains useful for patients who cannot tolerate NSAIDs. Always consider cardiovascular, gastrointestinal, and renal risks before chronic NSAID use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can osteoarthritis cause swelling and warmth?",
+      "answer": "Mild effusions and a sense of warmth are common in OA flares, especially in the knee. A joint that is bright red, intensely hot, and exquisitely tender, particularly with fever, is not typical OA — it suggests crystal arthritis, septic arthritis, or another inflammatory cause and needs urgent assessment and joint aspiration.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is osteoarthritis hereditary?",
+      "answer": "Yes, in part. Twin studies estimate heritability of 40-65% for hand and hip OA and 30-40% for knee OA. Several susceptibility genes have been identified, including GDF5, COL11A1, and DOT1L. Nodal hand OA in women shows particularly strong familial clustering. Lifestyle factors interact with genetic predisposition.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is erosive osteoarthritis?",
+      "answer": "Erosive osteoarthritis is a subtype affecting the hand, usually the distal and proximal interphalangeal joints, with more inflammation, central erosions on X-ray, more pain, and faster progression than typical nodal OA. It primarily affects post-menopausal women and is sometimes mistaken for psoriatic or rheumatoid arthritis. Management includes NSAIDs, topical therapy, splinting, and selective injection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does treatment for osteoarthritis cost?",
+      "answer": "Conservative management is inexpensive — most exercise programmes can be delivered through public health systems or community physiotherapy, and topical and oral NSAIDs are generic. Intra-articular steroid injections are low-cost. Total hip and knee replacement are the major cost items: in the US, list prices range from USD 30,000 to USD 50,000 with insurance covering most of it; in India and many emerging markets the total package is USD 4,000-8,000.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does climate or cold weather make osteoarthritis worse?",
+      "answer": "Some patients report pain flares with cold, damp, or pressure-changing weather, but large studies have not found a consistent objective link. Subjective reports remain real and worth acknowledging; staying warm, layered, and active during cold snaps is reasonable. Climate change is not a major driver of disease, but indoor inactivity during cold months is.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a cure on the horizon for osteoarthritis?",
+      "answer": "Several investigational disease-modifying OA drugs are in late-stage trials, including the Wnt-pathway inhibitor lorecivivint and the cartilage growth factor sprifermin, with mixed results so far. Cell-based therapies, including PRP and stem cell injections, have weak and inconsistent evidence and are not endorsed by current guidelines. Joint replacement remains the definitive structural answer for end-stage hip and knee disease.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Osteoarthritis (degenerative joint disease)",
+
+  "regionalNames": [
+    { "name": "Sandhivata", "region": "India", "language": "sa" },
+    { "name": "जोड़ों का दर्द (Joron ka Dard)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Arthrose", "region": "Germany / France", "language": "de" }
+  ],
+
+  "searchTags": [
+    "osteoarthritis", "OA", "degenerative joint disease", "wear and tear arthritis",
+    "knee arthritis", "hip arthritis", "hand arthritis", "thumb arthritis",
+    "Heberden's nodes", "Bouchard's nodes", "Kellgren-Lawrence", "joint replacement",
+    "total knee replacement", "total hip replacement", "cartilage damage"
+  ],
+
+  "symptomKeywords": [
+    "joint pain on use", "knee crunching", "stiff knees in morning",
+    "thumb base pain", "hip pain on walking", "back stiffness on rising",
+    "knee giving way", "finger joint bumps"
+  ],
+
+  "metaTitle": "Osteoarthritis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Osteoarthritis: chronic joint disease with use-related pain in knees, hips, and hands. Symptoms, diagnosis, exercise, drugs, and surgery reviewed by our board.",
+
+  "keywords": [
+    "osteoarthritis", "osteoarthritis symptoms", "osteoarthritis treatment",
+    "knee osteoarthritis", "hip osteoarthritis", "hand osteoarthritis",
+    "osteoarthritis vs rheumatoid arthritis", "osteoarthritis exercises",
+    "osteoarthritis diet", "Kellgren-Lawrence grading", "knee replacement",
+    "hip replacement", "is osteoarthritis curable", "osteoarthritis causes"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Kolasinski SL, Neogi T, Hochberg MC, et al. 2019 American College of Rheumatology/Arthritis Foundation Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee. Arthritis Care & Research. 2020;72(2):149-162.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31908163/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Bannuru RR, Osani MC, Vaysbrot EE, et al. OARSI guidelines for the non-surgical management of knee, hip, and polyarticular osteoarthritis. Osteoarthritis and Cartilage. 2019;27(11):1578-1589.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31657822/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "NICE Guideline NG226: Osteoarthritis in over 16s — Diagnosis and Management. National Institute for Health and Care Excellence; 2022.",
+      "url": "https://www.nice.org.uk/guidance/ng226",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "GBD 2021 Osteoarthritis Collaborators (Steinmetz JD et al). Global, regional, and national burden of osteoarthritis, 1990-2020 and projections to 2050: a systematic analysis for the Global Burden of Disease Study 2021. Lancet Rheumatology. 2023;5(9):e508-e522.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37675071/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Hunter DJ, Bierma-Zeinstra S. Osteoarthritis. Lancet. 2019;393(10182):1745-1759.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30970995/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Machado GC, Maher CG, Ferreira PH, et al. Efficacy and safety of paracetamol for spinal pain and osteoarthritis: systematic review and meta-analysis of randomised placebo controlled trials. BMJ. 2015;350:h1225.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25828856/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Wang C, Schmid CH, Iversen MD, et al. Comparative Effectiveness of Tai Chi Versus Physical Therapy for Knee Osteoarthritis: A Randomized Trial. Annals of Internal Medicine. 2016;165(2):77-86.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27183035/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Arthritis-Related Statistics: Prevalence of doctor-diagnosed arthritis among US adults (BRFSS).",
+      "url": "https://www.cdc.gov/arthritis/php/data-statistics/index.html",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
