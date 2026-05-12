@@ -1,0 +1,517 @@
+{
+  "_meta": {
+    "slug": "asthma",
+    "tier": 1,
+    "headTerm": "asthma",
+    "longTailKeywords": [
+      "asthma symptoms",
+      "asthma treatment",
+      "asthma causes",
+      "asthma inhaler",
+      "asthma attack",
+      "exercise induced asthma",
+      "allergic asthma",
+      "severe asthma biologics",
+      "asthma vs copd",
+      "is asthma curable"
+    ],
+    "primarySpecialty": "Pulmonology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against GINA 2024 Global Strategy, NAEPP 2020 Focused Updates (Cloutier JAMA), NICE NG244 (2024), GBD 2019 Soriano Lancet Respir Med, SYGMA-1 O'Byrne NEJM 2018, NAVIGATOR Menzies-Gow NEJM 2021. Drug doses, step therapy and biomarker thresholds checked against the GINA 2024 pocket guide and BTS/SIGN/NICE 2024 joint guidance."
+  },
+
+  "h1Title": "Asthma: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Pulmonology",
+
+  "heroOverview": "Asthma is a chronic inflammatory airway disease in which the bronchial tubes narrow, swell, and produce extra mucus in response to triggers, producing reversible airflow limitation. It affects approximately 262 million people worldwide and roughly 25 million Americans (about 1 in 13), with onset most commonly in childhood. Episodes present as wheeze, breathlessness, chest tightness, and a dry cough that classically worsens at night or with exercise. Untreated, asthma causes around 455,000 deaths globally each year — most preventable with inhaled corticosteroids that are still inaccessible in low-income countries. Treatment now centres on inhaled corticosteroid-formoterol used as both reliever and maintenance, replacing short-acting beta-agonist monotherapy, and on six monoclonal biologics for severe disease.",
+
+  "keyStats": {
+    "prevalence": "~8% of US adults and ~6% of US children (CDC 2022); roughly 1 in 13 Americans",
+    "demographics": "Childhood-onset asthma 1.5x more common in boys; adult-onset asthma 2x more common in women; Black Americans have a 2-3x higher asthma mortality rate than White Americans",
+    "avgAge": "Onset in 50% of cases before age 5; adult-onset asthma typically diagnosed between 20 and 40",
+    "globalCases": "262 million people worldwide; ~455,000 asthma deaths per year (GBD 2019)"
+  },
+
+  "definition": "Asthma (ICD-10: J45) is a chronic inflammatory disorder of the lower airways characterised by three linked features: bronchial hyperresponsiveness to non-specific stimuli, reversible airflow limitation, and over time, airway remodeling with thickening of the smooth muscle and basement membrane. Type-2 (T2-high) inflammation driven by eosinophils, mast cells, IL-4, IL-5, IL-13, and IgE is present in roughly 50-70% of cases; the remainder are classified as T2-low and tend to be neutrophilic, obesity-related, or paucigranulocytic. Triggers ignite a cascade of bronchoconstriction, mucosal edema, and mucus hypersecretion that narrows the airway lumen and produces wheeze, dyspnea, chest tightness, and cough. The condition spans a wide severity spectrum — intermittent, mild persistent, moderate persistent, and severe persistent — graded on symptom frequency, lung function, and treatment intensity required for control. Phenotypes include allergic asthma, eosinophilic asthma, exercise-induced bronchoconstriction, aspirin-exacerbated respiratory disease (AERD or Samter's triad), and occupational asthma. Asthma is managed primarily by pulmonologists and allergists, with primary care handling most stable disease; severe asthma is now treated in dedicated tertiary clinics that have access to biologic therapy.",
+
+  "typesClassification": [
+    { "type": "Allergic (atopic) asthma", "description": "The most common phenotype, usually beginning in childhood with a personal or family history of allergic rhinitis, eczema, or food allergy. IgE-driven response to inhaled allergens such as dust mite, cat dander, pollen, or mould. Eosinophil-high, T2-high; typically responds well to inhaled corticosteroids." },
+    { "type": "Non-allergic (T2-low) asthma", "description": "More often adult-onset and female-predominant. Triggered by viral infections, cold air, irritants, and stress rather than allergens. Often less responsive to inhaled steroids; may require add-on biologics targeting alarmins (tezepelumab) or LAMA therapy." },
+    { "type": "Eosinophilic asthma", "description": "Defined by persistent blood eosinophils ≥300 cells/µL or sputum eosinophils ≥3% on therapy. Associated with frequent exacerbations and oral steroid dependence; responsive to anti-IL-5 biologics (mepolizumab, reslizumab, benralizumab) and dupilumab." },
+    { "type": "Exercise-induced bronchoconstriction (EIB)", "description": "Transient airway narrowing during or shortly after exercise, peaking 5-15 minutes post-effort and resolving within 30-60 minutes. Common in athletes; managed with pre-exercise SABA or daily ICS." },
+    { "type": "Aspirin-exacerbated respiratory disease (AERD)", "description": "Triad of asthma, chronic rhinosinusitis with nasal polyps, and NSAID-induced respiratory reactions. Driven by abnormal arachidonic acid metabolism with cysteinyl leukotriene overproduction. Often severe; responds to dupilumab and aspirin desensitisation." },
+    { "type": "Occupational asthma", "description": "Caused by sensitisers (flour, isocyanates, latex, animal proteins) or irritants encountered at work. Symptoms improve away from the workplace. Accounts for roughly 15% of adult-onset asthma; early diagnosis and removal from exposure is curative in many cases." },
+    { "type": "Severe asthma", "description": "Asthma that remains uncontrolled despite high-dose inhaled corticosteroid plus a second controller, or requires this treatment to remain controlled. Affects roughly 3-5% of asthma patients but accounts for over 50% of asthma-related healthcare costs." }
+  ],
+
+  "primarySymptoms": [
+    "Episodic wheeze — a high-pitched whistling sound on expiration that can also be audible on inspiration during severe attacks; classically intermittent and variable rather than constant.",
+    "Shortness of breath that fluctuates with triggers, time of day, or exercise — not the steady progressive dyspnea typical of COPD or interstitial lung disease.",
+    "Chest tightness described as pressure, banding, or an inability to take a full deep breath, often worse with cold air or exertion.",
+    "Dry, non-productive cough that worsens at night or in the early hours of the morning, frequently waking the patient from sleep — sometimes the sole symptom (cough-variant asthma).",
+    "Symptoms triggered or worsened by viral upper respiratory infections, exercise, cold air, allergen exposure (dust mite, pollen, cats), tobacco smoke, strong odours, or NSAIDs in AERD.",
+    "Diurnal variability — symptoms typically worse between 2 and 6 a.m. and on waking, mirroring the natural dip in cortisol and rise in vagal tone overnight.",
+    "Rapid response to a short-acting bronchodilator within 5-15 minutes — partial reversibility distinguishes asthma from fixed airflow obstruction.",
+    "Use of a reliever inhaler more than twice per week (outside of pre-exercise dosing) indicates uncontrolled disease and warrants step-up therapy.",
+    "Reduced exercise tolerance, particularly in cold air or with sustained aerobic effort; children may avoid play they previously enjoyed.",
+    "Difficulty completing full sentences during an exacerbation — a useful bedside marker of severity alongside pulse, respiratory rate, and peak flow."
+  ],
+
+  "earlyWarningSigns": [
+    "A rising frequency of reliever (SABA or ICS-formoterol) use during the prior 7-14 days",
+    "Night-time cough or wheeze waking the patient even once in the previous week",
+    "Peak expiratory flow falling more than 20% below the personal best on home monitoring",
+    "Recent viral upper respiratory infection in a known asthmatic (the single most common exacerbation trigger)",
+    "Reduced tolerance for exercise that was previously well tolerated"
+  ],
+
+  "emergencySigns": [
+    "Inability to speak in full sentences, drowsiness, confusion, or silent chest on auscultation — life-threatening attack; call emergency services",
+    "Peak expiratory flow below 50% of personal best despite repeated reliever doses",
+    "Oxygen saturation below 92% on room air, cyanosis around the lips, or a respiratory rate above 30 breaths per minute in adults",
+    "Pulse rate above 120 bpm during the attack, or paradoxically bradycardic with exhaustion",
+    "No improvement 60 minutes after starting a SABA or ICS-formoterol reliever burst plus oral steroids"
+  ],
+
+  "causes": [
+    {
+      "cause": "Type-2 airway inflammation",
+      "description": "The dominant mechanism in 50-70% of asthma. IL-4, IL-5, and IL-13 drive eosinophil recruitment, IgE class-switching, goblet cell metaplasia, and smooth muscle hypercontractility. Alarmin cytokines TSLP, IL-33, and IL-25 sit upstream and explain why broad biologics such as tezepelumab work across phenotypes."
+    },
+    {
+      "cause": "Inhaled aeroallergen exposure",
+      "description": "House dust mite, cat and dog dander, cockroach, mould (Aspergillus, Alternaria), and seasonal pollens. Sensitisation in early childhood predicts persistent asthma into adulthood, and continued exposure drives both symptoms and remodeling."
+    },
+    {
+      "cause": "Viral respiratory infections",
+      "description": "Rhinovirus and RSV trigger 80% of childhood asthma exacerbations and a similar share in adults. They damage airway epithelium, expose nerve endings, and recruit type-2 cytokines via TSLP and IL-33."
+    },
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Heritability is estimated at 60-80% in twin studies. Common variants at 17q21 (ORMDL3/GSDMB), IL33, TSLP, and the filaggrin gene (which links eczema and asthma) confer the largest single-variant effects."
+    },
+    {
+      "cause": "Occupational and environmental exposures",
+      "description": "Isocyanates, flour, wood dust, latex, cleaning agents, and animal proteins cause sensitiser-induced asthma. Irritants such as chlorine spills induce reactive airways dysfunction syndrome (RADS). Traffic-related air pollution (PM2.5, NO2) raises both incidence and exacerbation risk."
+    },
+    {
+      "cause": "Tobacco smoke and vaping",
+      "description": "Active smoking and second-hand smoke exposure both increase asthma risk and worsen control; smoking blunts the response to inhaled corticosteroids by inducing histone deacetylase 2 dysfunction. E-cigarette use is increasingly linked to worsened asthma in adolescents."
+    },
+    {
+      "cause": "Obesity-related inflammation",
+      "description": "BMI ≥30 is associated with later-onset, often non-eosinophilic asthma that responds less well to inhaled steroids. Mechanical effects on lung volumes plus systemic adipokine-driven inflammation contribute; weight loss measurably improves control and lung function."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Personal or family history of atopy", "category": "genetic", "description": "A first-degree relative with asthma, allergic rhinitis, eczema, or food allergy roughly triples personal asthma risk. Atopic dermatitis in infancy is the strongest pediatric predictor of later asthma (atopic march)." },
+    { "factor": "Childhood sensitisation to inhalant allergens", "category": "environmental", "description": "Early sensitisation to house dust mite, cat, dog, or cockroach allergen predicts persistent asthma into adulthood, particularly when combined with viral wheeze in the first three years of life." },
+    { "factor": "Tobacco smoke exposure", "category": "modifiable", "description": "Maternal smoking in pregnancy increases offspring asthma risk by roughly 65%. Active adult smoking worsens control, accelerates lung function decline, and reduces inhaled corticosteroid response." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Each 5 kg/m² increase in BMI is associated with about a 50% rise in asthma incidence in adults. Obesity-related asthma is often steroid-resistant; weight loss of 10% measurably improves lung function and symptom scores." },
+    { "factor": "Air pollution and traffic exposure", "category": "environmental", "description": "Living within 100 m of a major roadway raises childhood asthma incidence by approximately 50%. PM2.5 and NO2 also drive exacerbations in established disease." },
+    { "factor": "Occupational sensitisers and irritants", "category": "modifiable", "description": "Bakers, healthcare workers, farmers, painters, cleaners, and welders carry elevated risk. Approximately 15% of adult-onset asthma is occupational; identifying and removing the exposure can be curative early on." },
+    { "factor": "Premature birth and low birth weight", "category": "non-modifiable", "description": "Birth before 33 weeks gestation roughly doubles asthma incidence in childhood, mediated by smaller airways and impaired alveolar development." },
+    { "factor": "Frequent early-life respiratory infections", "category": "environmental", "description": "RSV bronchiolitis before age 2 is associated with a 3-4x increased risk of asthma by age 6, particularly in atopic children." },
+    { "factor": "Female sex in adulthood", "category": "non-modifiable", "description": "After puberty, asthma incidence and severity are higher in women, possibly due to hormonal effects on airway responsiveness; perimenstrual exacerbations are recognised in roughly 20% of women with asthma." },
+    { "factor": "Black or Puerto Rican ancestry (in the US)", "category": "non-modifiable", "description": "Black Americans and Puerto Ricans carry the highest US asthma prevalence and mortality, driven by a combination of genetic ancestry (DPP10, ADAM33 variants), socioeconomic exposures, and access disparities." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence: ~25 million people, ~8% of adults and ~6% of children (CDC 2022)",
+    "Mortality is 2-3x higher in Black Americans than White Americans, and Puerto Rican adults carry the highest US prevalence at roughly 14%",
+    "Globally 262 million people are affected, with the heaviest disability burden in adolescents and young adults (GBD 2019)",
+    "Childhood-onset asthma is more common in boys; the sex ratio inverts after puberty, with adult-onset asthma roughly twice as common in women",
+    "Asthma deaths are concentrated in low- and middle-income countries where inhaled corticosteroids remain inaccessible despite being on the WHO essential medicines list"
+  ],
+
+  "diagnosisOverview": "Diagnosis of asthma rests on a compatible clinical history of variable respiratory symptoms (wheeze, dyspnea, chest tightness, cough) together with objective evidence of variable expiratory airflow limitation. The cornerstone test is spirometry with bronchodilator reversibility: a post-bronchodilator increase in FEV1 of at least 12% and 200 mL after 400 micrograms of salbutamol confirms reversible airflow obstruction. A pre-bronchodilator FEV1/FVC ratio below the lower limit of normal (often quoted as <0.70 in adults or <0.75 below age 12) defines obstruction. When baseline spirometry is normal but symptoms persist, GINA 2024 and NICE NG244 (2024) recommend a bronchial provocation test — methacholine or mannitol — with a PC20 below 4 mg/mL or PD15 below 635 mg supporting the diagnosis. Fractional exhaled nitric oxide (FeNO) at or above 40 parts per billion in adults suggests T2-high airway inflammation and supports the diagnosis when added to spirometry; values between 25 and 40 are intermediate. Home or clinic peak expiratory flow variability greater than 10% in adults (over 13% in children) on twice-daily monitoring for 1-2 weeks also confirms variable airflow. Allergy testing (skin prick or specific IgE) is recommended in suspected allergic asthma to guide trigger avoidance and biologic selection. Differential diagnoses to exclude include COPD (irreversible obstruction in older smokers), vocal cord dysfunction (inspiratory stridor, normal spirometry), bronchiectasis, heart failure, and chronic rhinosinusitis with post-nasal drip. Children under 5 cannot perform reliable spirometry; diagnosis in this group is clinical with a trial of therapy and structured follow-up.",
+
+  "diagnosticTests": [
+    {
+      "test": "Spirometry with bronchodilator reversibility",
+      "purpose": "The cornerstone test. Documents the degree of airflow obstruction (FEV1/FVC ratio) and reversibility after salbutamol, which is the objective hallmark of asthma. Also tracks treatment response over time.",
+      "whatToExpect": "Sit upright, take a maximal breath in, and blow out as hard and fast as possible into a mouthpiece. The test is repeated three times before and 10-15 minutes after a salbutamol inhaler. Whole appointment runs 20-30 minutes; painless but tiring."
+    },
+    {
+      "test": "Fractional exhaled nitric oxide (FeNO)",
+      "purpose": "Non-invasive biomarker of T2-high eosinophilic airway inflammation. Values ≥40 ppb in adults support an asthma diagnosis and predict good inhaled corticosteroid response; values <25 ppb argue against eosinophilic inflammation.",
+      "whatToExpect": "Breathe out slowly and steadily into a handheld device for about 10 seconds at a fixed flow rate. The result is available immediately. Painless; no fasting or preparation."
+    },
+    {
+      "test": "Peak expiratory flow monitoring",
+      "purpose": "Inexpensive home test that quantifies day-to-day variability in airflow. Diurnal variability >10% in adults or >13% in children supports diagnosis and is the basis of asthma action plans.",
+      "whatToExpect": "Use a handheld peak-flow meter twice daily for 1-2 weeks, recording the best of three blows each time. Results are plotted against the personal best to set green, yellow, and red action zones."
+    },
+    {
+      "test": "Bronchial provocation challenge (methacholine or mannitol)",
+      "purpose": "Used when symptoms are typical but spirometry is normal. Confirms airway hyperresponsiveness. A drop in FEV1 of at least 20% at a methacholine dose below 4 mg/mL (PC20) is diagnostic.",
+      "whatToExpect": "Inhale progressively higher doses of methacholine (or mannitol) under medical supervision, with spirometry after each dose. Test takes 30-90 minutes; mild wheeze or cough during testing resolves with a reliever inhaler at the end."
+    },
+    {
+      "test": "Allergy testing (skin prick or specific IgE)",
+      "purpose": "Identifies inhalant allergen sensitisations that drive symptoms and determines suitability for allergen avoidance, immunotherapy, and IgE-targeted biologics such as omalizumab.",
+      "whatToExpect": "Skin prick test takes 20-30 minutes — small drops of allergen are placed on the forearm and gently pricked; positive sites itch within 15 minutes. Specific IgE testing is a standard blood draw with results in 1-2 days."
+    },
+    {
+      "test": "Blood eosinophil count",
+      "purpose": "Identifies the eosinophilic phenotype. Persistent counts ≥300 cells/µL despite high-dose inhaled corticosteroids define eligibility for anti-IL-5 biologics; counts ≥150 plus FeNO ≥25 ppb support dupilumab use.",
+      "whatToExpect": "Part of a routine complete blood count. Standard blood draw, results same day in most labs."
+    },
+    {
+      "test": "Chest radiograph",
+      "purpose": "Not diagnostic for asthma but used in atypical presentations to exclude pneumonia, foreign body aspiration (in children), bronchiectasis, heart failure, or interstitial lung disease.",
+      "whatToExpect": "Two-view chest X-ray performed in 5-10 minutes; results read the same day. Low-dose radiation."
+    },
+    {
+      "test": "Sputum eosinophil count (specialised centres)",
+      "purpose": "Direct measurement of airway eosinophils. A sputum eosinophil count ≥3% identifies steroid-responsive inflammation and guides biologic selection in severe asthma clinics.",
+      "whatToExpect": "Inhale nebulised hypertonic saline for 15-30 minutes to induce a sputum sample, then cough it into a container for lab analysis. Mild bronchoconstriction during induction is treated with a reliever."
+    }
+  ],
+
+  "treatmentOverview": "Modern asthma management follows the GINA 2024 stepwise approach with a major shift away from short-acting beta-agonist (SABA) monotherapy after evidence linked SABA-only treatment to higher exacerbation and mortality rates (SABINA programme; Suissa NEJM 2000). Track 1 — preferred in GINA 2024 — uses inhaled corticosteroid-formoterol (most commonly low-dose budesonide-formoterol 200/6) as both the reliever and, at higher steps, the maintenance treatment (MART regimen). At Step 1-2 the inhaler is taken as needed for symptoms; at Step 3-4 it is taken regularly twice daily plus as needed; at Step 5 high-dose ICS-LABA is combined with add-on long-acting muscarinic antagonist (tiotropium), a biologic, or low-dose oral corticosteroid as a last resort. The SYGMA-1 trial (O'Byrne NEJM 2018) demonstrated that as-needed budesonide-formoterol reduced severe exacerbations by 64% versus as-needed SABA in mild asthma. Severe (Step 5) eosinophilic asthma is now managed by six approved biologics: omalizumab (anti-IgE, age ≥6) for allergic asthma; mepolizumab, reslizumab, and benralizumab (anti-IL-5 / anti-IL-5R) for eosinophilic asthma; dupilumab (anti-IL-4Rα) for T2-high or oral steroid-dependent disease; and tezepelumab (anti-TSLP) — the first biologic effective across the full T2 spectrum including T2-low disease (NAVIGATOR; Menzies-Gow NEJM 2021). Acute exacerbations are treated with high-dose inhaled or nebulised SABA, oral prednisone 40-50 mg daily for 5-7 days in adults (1-2 mg/kg in children, max 40 mg, for 3-5 days), controlled-flow oxygen targeting SpO2 93-95%, and intravenous magnesium sulphate 2 g for severe attacks. Inhaler technique and adherence are the single largest modifiable determinants of control — up to 70% of patients use their device incorrectly — and every consultation should re-check technique and review the personalised written asthma action plan.",
+
+  "medicalTreatments": [
+    {
+      "name": "Inhaled corticosteroid-formoterol reliever (budesonide-formoterol 200/6, 1-2 puffs as needed)",
+      "description": "GINA 2024 Track 1 preferred reliever from Step 1 upward. Combines a fast-onset LABA (formoterol acts within 1-3 minutes) with an anti-inflammatory ICS delivered exactly when symptoms occur. Replaces SABA-only treatment, which is no longer recommended.",
+      "effectiveness": "Reduces severe exacerbations by 64% versus as-needed SABA in mild asthma (SYGMA-1, O'Byrne 2018). Reduces hospitalisations by approximately 30% across step levels."
+    },
+    {
+      "name": "Maintenance and reliever therapy (MART) — budesonide-formoterol 200/6 twice daily plus as needed",
+      "description": "Preferred regimen at GINA Step 3-4. Same combination inhaler used for both daily maintenance and on-demand relief, simplifying the regimen and avoiding SABA overuse. NICE NG244 (2024) endorses MART as first-line in adults requiring regular controller therapy.",
+      "effectiveness": "Reduces severe exacerbations by 30-40% versus separate ICS plus SABA at equivalent steroid dose. Improves symptom-free days by 20-30%."
+    },
+    {
+      "name": "High-dose ICS-LABA with add-on LAMA (tiotropium 5 µg daily via Respimat)",
+      "description": "Step 5 triple therapy when high-dose ICS-LABA alone is insufficient. Tiotropium adds long-acting muscarinic blockade, reducing bronchoconstriction by an independent pathway. Useful when biologic therapy is unavailable or not yet justified.",
+      "effectiveness": "Reduces exacerbations by approximately 21% versus ICS-LABA alone; improves trough FEV1 by 90-110 mL (PrimoTinA-Asthma trials, Kerstjens 2012)."
+    },
+    {
+      "name": "Omalizumab (anti-IgE, dose by IgE and weight, subcutaneous every 2-4 weeks)",
+      "description": "First biologic licensed for severe allergic asthma in patients age ≥6 with elevated total IgE and demonstrated perennial aeroallergen sensitisation. Binds free IgE and downregulates high-affinity IgE receptors.",
+      "effectiveness": "Reduces exacerbations by approximately 25-50% in eligible patients; reduces oral corticosteroid burden in roughly 40%."
+    },
+    {
+      "name": "Mepolizumab 100 mg, reslizumab 3 mg/kg, or benralizumab 30 mg (anti-IL-5 / anti-IL-5Rα biologics)",
+      "description": "For severe eosinophilic asthma with blood eosinophils ≥300 cells/µL (or ≥150 on oral steroids). Mepolizumab and reslizumab neutralise IL-5; benralizumab targets the IL-5 receptor and depletes eosinophils via antibody-dependent cell-mediated cytotoxicity.",
+      "effectiveness": "Reduces exacerbations by approximately 50% across pivotal trials (MENSA, SIRIUS, CALIMA, SIROCCO). Permits oral steroid weaning in 40-50% of steroid-dependent patients."
+    },
+    {
+      "name": "Dupilumab 300 mg subcutaneous every 2 weeks (anti-IL-4Rα)",
+      "description": "Blocks signalling of both IL-4 and IL-13. Indicated for moderate-to-severe T2-high asthma (eosinophils ≥150 cells/µL or FeNO ≥25 ppb) and for oral steroid-dependent asthma irrespective of eosinophil count. Also licensed for atopic dermatitis, CRSwNP, and EoE.",
+      "effectiveness": "Reduces severe exacerbations by approximately 47% and improves FEV1 by 130-200 mL (QUEST trial, Castro NEJM 2018); permits steroid weaning in around 50% of steroid-dependent patients (VENTURE)."
+    },
+    {
+      "name": "Tezepelumab 210 mg subcutaneous every 4 weeks (anti-TSLP)",
+      "description": "Targets the upstream alarmin thymic stromal lymphopoietin. The first biologic effective in severe asthma irrespective of T2 biomarker status — works in eosinophil-low and T2-low patients who previously had no biologic option.",
+      "effectiveness": "Reduces annualised exacerbations by approximately 56% versus placebo (NAVIGATOR, Menzies-Gow NEJM 2021); improvement preserved across eosinophil and FeNO subgroups."
+    },
+    {
+      "name": "Oral corticosteroids (prednisone 40-50 mg daily for 5-7 days in adults; 1-2 mg/kg/day for 3-5 days in children)",
+      "description": "Standard of care for acute moderate-to-severe exacerbations. Started in the emergency department, urgent care, or at home as part of an action plan when peak flow drops below 60% of personal best. Long-term maintenance use is reserved for severe disease unresponsive to biologics due to cumulative toxicity.",
+      "effectiveness": "Reduces relapse within 7 days by approximately 65% (Rowe Cochrane 2007); shortens hospital length of stay in admitted patients."
+    },
+    {
+      "name": "Intravenous magnesium sulphate 2 g over 20 minutes",
+      "description": "Adjunct in severe acute asthma not responding to inhaled bronchodilators and systemic steroids. Smooth muscle relaxant that bypasses adrenergic signalling. Recommended by GINA, NICE, and BTS/SIGN for severe attacks in adults and selected children.",
+      "effectiveness": "Reduces hospital admission by approximately 25% in severe attacks (Rowe Cochrane 2014); improves FEV1 by an additional 5-7%."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Bronchial thermoplasty",
+      "description": "Catheter-delivered radiofrequency energy applied to the airway wall during three bronchoscopies to reduce airway smooth muscle mass. Reserved for severe persistent asthma poorly controlled on high-dose ICS-LABA where biologic therapy has failed or is unsuitable.",
+      "successRate": "Reduces severe exacerbations by approximately 32% at 5 years (AIR2 long-term follow-up). Quality of life improvement in 70-80% of carefully selected patients."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Subcutaneous or sublingual allergen immunotherapy (AIT)", "description": "Disease-modifying treatment for confirmed allergic asthma driven by a single dominant allergen (house dust mite, grass pollen). Sublingual house dust mite tablets reduce moderate-to-severe exacerbations by roughly 30% over 18 months (MITRA trial, Virchow JAMA 2016). Best for mild-to-moderate allergic asthma without severe airflow obstruction." },
+    { "name": "Breathing retraining (Buteyko, Papworth methods)", "description": "Structured breathing exercises reduce reliever use and improve quality of life in adults with poorly controlled asthma. They do not replace pharmacotherapy and have no measurable effect on lung function or inflammation but are a safe adjunct (Bruton BMJ 2018)." }
+  ],
+
+  "whySeeSpecialist": "Refer to a pulmonologist or asthma-trained allergist when the diagnosis is uncertain, when control remains poor despite Step 4 therapy with confirmed adherence and correct inhaler technique, when oral corticosteroids have been required two or more times in a year, when there is a history of a near-fatal attack, when occupational or aspirin-exacerbated phenotypes are suspected, or when a biologic is being considered. Children under 5 with persistent wheeze and severe asthma at any age also warrant specialist input. Most stable asthma is managed effectively in primary care if the action plan is in place and reviewed annually.",
+
+  "doctorSelectionGuide": "Look for board certification in pulmonary medicine or allergy/immunology, regular use of spirometry and FeNO at the bedside, and access to a severe asthma multidisciplinary team with biologic prescribing authority. Ask whether the practice provides written personalised asthma action plans, whether they routinely check inhaler technique on every visit, and how they monitor oral corticosteroid exposure. Continuity matters — asthma is a long arc and inhaler regimens require iterative adjustment.",
+
+  "preventionStrategies": [
+    "Avoid all tobacco smoke, including second-hand and prenatal exposure — the single most powerful environmental intervention to prevent asthma onset and progression",
+    "Reduce indoor allergen exposure in sensitised patients — encase mattresses and pillows in dust mite-proof covers, wash bedding weekly at 60°C, vacuum with HEPA filtration, address damp and mould",
+    "Vaccinate annually against influenza and stay current on pneumococcal and COVID-19 vaccines — infections trigger up to 80% of exacerbations",
+    "Use inhaled corticosteroid-formoterol as the reliever rather than SABA alone, even in mild asthma, to suppress the inflammation that drives future exacerbations",
+    "Identify and remove occupational sensitisers early; redeployment within the first year of symptoms often reverses the disease",
+    "Maintain healthy body weight — weight loss of 5-10% measurably improves asthma control and lung function in patients with obesity"
+  ],
+
+  "lifestyleModifications": [
+    "Take controller medication every day, even when symptoms are absent — inhaled corticosteroids work only with continuous use",
+    "Carry the reliever inhaler at all times and pre-treat 15 minutes before exercise if exercise-induced bronchoconstriction is present",
+    "Use a spacer (valved holding chamber) with all pressurised metered-dose inhalers — increases drug delivery to the lungs by approximately 20% and reduces oropharyngeal deposition",
+    "Track symptoms, reliever use, and peak flow against a personal best to detect deterioration 24-72 hours before a full exacerbation",
+    "Address comorbid allergic rhinitis, GERD, obstructive sleep apnea, and anxiety — each independently worsens asthma control",
+    "Avoid NSAIDs entirely if aspirin-exacerbated respiratory disease has been confirmed; carry an alert card listing the diagnosis",
+    "Pregnant women should continue inhaled corticosteroids — uncontrolled asthma poses a greater risk to mother and fetus than controller treatment"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Diet rich in fruit and vegetables — higher intake associates with better lung function and fewer exacerbations in cohort studies",
+      "Oily fish providing long-chain omega-3 fatty acids 2-3 times per week — modest reductions in airway inflammation in trial data",
+      "Adequate vitamin D intake (15-20 µg/day) — deficiency associates with exacerbations; supplementation reduces them in deficient patients (Jolliffe Lancet Respir Med 2017)",
+      "Mediterranean-style eating pattern — associated with lower asthma incidence in children and better control in adults",
+      "Whole grains, legumes, and nuts as fibre sources — emerging evidence links gut microbiota diversity to airway immune tone"
+    ],
+    "avoid": [
+      "Foods to which a confirmed IgE-mediated allergy exists — but no role for routine elimination diets in asthma without allergy",
+      "Sulphite-containing foods and drinks (some wines, dried fruit, processed potatoes) in confirmed sulphite-sensitive patients",
+      "Excess alcohol — directly triggers symptoms in roughly 30-40% of asthmatics, especially red wine and beer",
+      "Highly processed foods high in advanced glycation end products — associated with poorer asthma control in observational data",
+      "Aspirin and other NSAIDs (ibuprofen, naproxen, diclofenac) in patients with AERD — can trigger a severe asthma attack within 30-60 minutes"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular aerobic exercise is safe and beneficial in well-controlled asthma; people with asthma should aim for 150 minutes of moderate-intensity activity per week. Warm up for 10-15 minutes to reduce bronchoconstriction risk, pre-treat with a SABA or ICS-formoterol 15 minutes before exercise if exercise-induced bronchoconstriction has been documented, and choose warm humid environments (swimming) over cold dry ones (running outdoors in winter, ice hockey) where possible. Children with asthma should not be restricted from sport — the evidence shows improved lung function and quality of life with regular activity.",
+
+  "dailyManagement": [
+    "Take the controller (or MART regimen) inhaler at the same time each day, rinsing the mouth after ICS-containing devices to reduce oral candidiasis",
+    "Check inhaler technique against a video or with a clinician at least once a year — up to 70% of patients use devices incorrectly",
+    "Keep the reliever inhaler and written asthma action plan with you and accessible to family, school, or workplace",
+    "Monitor peak flow daily during exacerbations and when adjusting therapy; clinic visits review the trend, not single values",
+    "Recognise the personal early-warning pattern (more cough at night, dropping peak flow, more reliever use) and step up therapy per the action plan before a full attack",
+    "Refill prescriptions before they run out — a 25% gap in controller refills doubles exacerbation risk"
+  ],
+
+  "prognosis": "Asthma is a chronic but highly controllable disease. With correct inhaler use and adherence to a controller regimen, the great majority of patients live without symptom-limited activity, near-normal lung function, and rare exacerbations. Childhood asthma remits during adolescence in roughly 30-40% of children, persists into adulthood in another 30-40%, and recurs in about 20%; predictors of persistence include allergic sensitisation, severe early disease, and parental asthma. Adult-onset asthma is more often persistent and less likely to remit. Severe asthma affects 3-5% of asthmatics and historically carried a heavy oral steroid burden, but biologic therapy now allows around half of biologic-treated patients to stop or substantially reduce oral corticosteroids. Mortality has fallen by roughly 50% in high-income countries since the 1990s with inhaled corticosteroid adoption, although low- and middle-income countries still account for over 90% of the ~455,000 annual asthma deaths worldwide. The strongest individual prognostic factors are adherence to inhaled corticosteroids, correct inhaler technique, smoking status, and a written action plan.",
+
+  "recoveryTimeline": "A mild-to-moderate exacerbation treated promptly with reliever therapy and a 5-7 day oral prednisone course typically resolves over 7-14 days, with peak flow returning to personal best by week 2-3. Severe exacerbations requiring hospital admission often need 4-6 weeks for full recovery, with airway hyperresponsiveness lingering for 6-8 weeks. New controller therapy reaches its full anti-inflammatory effect over 8-12 weeks; inhaled corticosteroid dose decisions should be made on at least 3 months of consistent use, not earlier. Biologic responses are reviewed at 4 months and again at 12 months — non-responders are switched to an alternative agent rather than continued indefinitely.",
+
+  "complications": [
+    "Life-threatening or fatal asthma attack — preventable in most cases with controller therapy and an action plan; near-fatal episodes mark the highest-risk group for future death",
+    "Airway remodeling with fixed, partially irreversible airflow obstruction after years of poor control — overlaps with asthma-COPD overlap in older adults",
+    "Oral corticosteroid-related morbidity in severe asthma — diabetes, osteoporosis, hypertension, cataracts, adrenal suppression; cumulative dose drives risk and biologics now substantially reduce exposure",
+    "Pneumonia and bronchitis after exacerbations, particularly in older adults and those on long-term oral steroids",
+    "Allergic bronchopulmonary aspergillosis (ABPA) in 1-2% of asthma patients — presents with worsening control, brown mucus plugs, peripheral eosinophilia, and central bronchiectasis on CT",
+    "Pneumothorax and pneumomediastinum during severe attacks, especially with high airway pressures during mechanical ventilation",
+    "Mental health comorbidity — anxiety and depression are 1.5-2x more common in asthma and worsen control through reduced adherence"
+  ],
+
+  "supportResources": [
+    { "name": "Global Initiative for Asthma (GINA) — Patient Resources", "url": "https://ginasthma.org/gina-patient-guide/", "description": "Patient-facing summary of the GINA strategy report, including action plans and inhaler videos." },
+    { "name": "Asthma and Allergy Foundation of America (AAFA)", "url": "https://aafa.org/asthma/", "description": "US patient organisation with educational resources, support groups, and policy advocacy." },
+    { "name": "Asthma + Lung UK", "url": "https://www.asthmaandlung.org.uk/conditions/asthma", "description": "UK charity providing helpline support, lung function tools, and free asthma action plan templates." },
+    { "name": "American Lung Association — Asthma", "url": "https://www.lung.org/lung-health-diseases/lung-disease-lookup/asthma", "description": "Patient education, smoking cessation programmes, and air quality monitoring." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "copd", "name": "Chronic Obstructive Pulmonary Disease (COPD)", "keyDifference": "COPD presents in adults over 40 with a smoking history, gradually progressive dyspnea, and fixed airflow obstruction (FEV1/FVC <0.70 with limited bronchodilator reversibility). Asthma typically has episodic symptoms, variable airflow with substantial reversibility, and often onset in childhood. Asthma-COPD overlap exists in older smokers with prior asthma." },
+    { "slug": "bronchitis", "name": "Acute Bronchitis", "keyDifference": "Acute bronchitis is a self-limited post-viral cough lasting 1-3 weeks, often productive, without recurrent wheeze, diurnal variability, or bronchodilator reversibility on spirometry. A cough that persists or recurs after multiple bronchitis episodes should prompt asthma testing." },
+    { "slug": "bronchiectasis-uncomplicated-j479", "name": "Bronchiectasis", "keyDifference": "Bronchiectasis presents with chronic daily productive cough of large volumes of purulent sputum and recurrent bacterial infections, not episodic wheeze. High-resolution CT shows dilated bronchi. Some asthmatics develop superimposed bronchiectasis (especially in ABPA)." },
+    { "slug": "gerd", "name": "Acid Reflux (GERD)", "keyDifference": "GERD can cause chronic cough and chest discomfort and is a frequent asthma comorbidity, but it does not cause wheeze, reversible airflow obstruction, or elevated FeNO. Heartburn and regurgitation point to GERD; spirometry and FeNO point to asthma. The two often coexist and both should be treated." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)" },
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis (Eczema)" },
+    { "slug": "gerd", "name": "Acid Reflux (GERD)" },
+    { "slug": "sleep-apnea", "name": "Sleep Apnea" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "copd", "name": "Chronic Obstructive Pulmonary Disease", "relevance": "Shares obstructive physiology and overlaps in older smokers (asthma-COPD overlap); biologic and inhaled steroid choices differ substantially." },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)", "relevance": "Affects roughly 80% of allergic asthmatics; treating nasal inflammation improves asthma control (united airway concept)." },
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "relevance": "Severe allergic asthma overlaps with food and venom anaphylaxis; uncontrolled asthma is the largest single risk factor for fatal anaphylaxis." },
+    { "slug": "eczema", "name": "Eczema (Atopic Dermatitis)", "relevance": "First step of the atopic march — childhood eczema predicts asthma and allergic rhinitis later in life through shared filaggrin and Th2 pathways." },
+    { "slug": "sleep-apnea", "name": "Sleep Apnea", "relevance": "Co-occurs in roughly 50% of severe asthma cases; treating OSA improves nocturnal asthma symptoms and reduces exacerbations." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Is asthma curable?",
+      "answer": "Asthma is not curable but is highly controllable in the great majority of patients. With daily inhaled corticosteroid-containing therapy and a written action plan, most people live without symptom-limited activity and have rare exacerbations. About 30-40% of children with asthma experience remission during adolescence, but adult-onset asthma usually persists. The condition is best thought of as similar to high blood pressure — a long-term diagnosis that is managed, not eliminated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does an asthma attack feel like?",
+      "answer": "Patients describe an asthma attack as tightness or banding across the chest, an inability to take a full breath, audible wheeze on breathing out, and a dry, hacking cough. Severe attacks make speaking in full sentences difficult and produce visible use of neck and chest muscles to breathe. Symptoms usually build over hours to days but can escalate within minutes in severe asthma.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between asthma and COPD?",
+      "answer": "Asthma typically starts in childhood, is episodic, and shows substantial reversibility of airflow obstruction with a bronchodilator. COPD usually begins after age 40 in smokers, produces progressive dyspnea, and has fixed airflow obstruction with limited reversibility. Some older patients have features of both — known as asthma-COPD overlap — and require individualised treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the most common asthma triggers?",
+      "answer": "The most frequent triggers are viral respiratory infections, allergens (house dust mite, cat and dog dander, pollen, mould), exercise, cold air, tobacco smoke, air pollution, NSAIDs in aspirin-exacerbated respiratory disease, strong odours, and emotional stress. Identifying personal triggers and avoiding them where possible is part of every asthma action plan.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is asthma diagnosed?",
+      "answer": "Diagnosis combines a typical history of variable wheeze, breathlessness, chest tightness, or cough with objective evidence of reversible airflow obstruction. Spirometry showing a post-bronchodilator FEV1 rise of 12% and 200 mL confirms reversibility. FeNO at or above 40 ppb supports T2-high inflammation; if baseline spirometry is normal, methacholine or mannitol challenge can confirm airway hyperresponsiveness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is SABA-only treatment no longer recommended?",
+      "answer": "Reliance on short-acting beta-agonists such as salbutamol without inhaled corticosteroids was linked to higher exacerbation and asthma death rates (SABINA programme; Suissa NEJM 2000). GINA 2024 now recommends inhaled corticosteroid-formoterol as the reliever from Step 1 onward, because adding the steroid at the moment of symptoms suppresses the underlying inflammation that drives future attacks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What inhaler should I be using?",
+      "answer": "Most adults and adolescents with asthma should now use an inhaled corticosteroid-formoterol inhaler (most commonly budesonide-formoterol 200/6) as both reliever and maintenance — a regimen known as MART. The exact step level and additional add-ons depend on symptom frequency, lung function, and response. Inhaler technique should be checked at every appointment because up to 70% of patients use devices incorrectly.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are inhaled steroids safe long-term?",
+      "answer": "Inhaled corticosteroids at standard doses are the safest effective long-term therapy for asthma. Local side effects are oral thrush and hoarseness, both reduced by using a spacer and rinsing the mouth. In children, ICS therapy produces a modest 1-1.5 cm reduction in adult height, but this is more than offset by the substantial reduction in exacerbations and uncontrolled asthma. Systemic effects are rare at standard doses.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do biologic medicines for asthma work?",
+      "answer": "Biologics are monoclonal antibodies that block specific drivers of asthma inflammation. Omalizumab targets IgE (allergic asthma), mepolizumab, reslizumab, and benralizumab target the IL-5 pathway (eosinophilic asthma), dupilumab blocks IL-4 and IL-13 signalling (T2-high or steroid-dependent asthma), and tezepelumab blocks the upstream alarmin TSLP and works across phenotypes. They are reserved for severe asthma uncontrolled on high-dose inhalers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who qualifies for a biologic for asthma?",
+      "answer": "Biologics are considered when asthma remains uncontrolled despite high-dose inhaled corticosteroid plus a second controller, when the patient has had two or more severe exacerbations per year, or when oral corticosteroids are required regularly. Biomarker thresholds differ by drug — eosinophils 300 cells/µL or more for anti-IL-5 agents, eosinophils 150 or FeNO 25 ppb for dupilumab, and any phenotype for tezepelumab.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can asthma be triggered by exercise?",
+      "answer": "Yes — exercise-induced bronchoconstriction affects up to 90% of people with asthma and around 10% of the general population. Symptoms peak 5-15 minutes after stopping exercise and resolve within 30-60 minutes. Pre-treatment with an inhaled corticosteroid-formoterol reliever 15 minutes before exercise, daily controller therapy, and a 10-15 minute warm-up substantially reduce symptoms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can asthma be triggered by aspirin or ibuprofen?",
+      "answer": "About 10% of adult asthmatics have aspirin-exacerbated respiratory disease (AERD), where NSAIDs trigger severe bronchospasm within 30-60 minutes of ingestion. AERD typically presents with the triad of asthma, chronic rhinosinusitis with nasal polyps, and NSAID-induced respiratory reactions. Patients with AERD should avoid all NSAIDs and use paracetamol or COX-2-selective drugs only after specialist advice.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is it safe to use asthma inhalers during pregnancy?",
+      "answer": "Yes — and continuing inhalers is safer than stopping them. Uncontrolled asthma during pregnancy increases the risk of pre-eclampsia, preterm birth, low birth weight, and perinatal mortality more than any inhaled controller does. Inhaled corticosteroids (budesonide has the longest safety record), short and long-acting bronchodilators, and oral prednisone when needed for exacerbations are all considered acceptable in pregnancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children outgrow asthma?",
+      "answer": "Roughly 30-40% of children with asthma experience remission during adolescence, particularly those with mild disease, no allergic sensitisation, and no family history of asthma. Another 30-40% have persistent asthma into adulthood, and around 20% remit and later relapse. Severe childhood asthma and multiple early allergic sensitisations predict persistence and warrant ongoing follow-up into adulthood.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is an asthma action plan?",
+      "answer": "An asthma action plan is a personalised written document with three zones: green (well controlled — continue daily treatment), yellow (symptoms or peak flow 50-80% of personal best — step up reliever and start oral steroid if instructed), and red (severe symptoms or peak flow below 50% — emergency treatment). Action plans reduce hospital admissions and asthma deaths and are now recommended by GINA, NICE, and BTS/SIGN for every patient with asthma.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How serious is asthma — can people die from it?",
+      "answer": "Asthma kills around 455,000 people worldwide each year (GBD 2019). Most deaths are preventable with controller therapy and a written action plan, and over 90% of deaths occur in low- and middle-income countries where inhaled corticosteroids remain inaccessible. In high-income countries, deaths are concentrated in patients with severe asthma, recent exacerbations, frequent SABA use, and poor follow-up.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I go to the emergency department for asthma?",
+      "answer": "Call emergency services or go to the emergency department if breathing is so difficult you cannot speak in full sentences, if your lips or fingers turn blue, if you become drowsy or confused, if peak flow stays below 50% of personal best after a reliever burst, or if your symptoms do not improve within 60 minutes of starting your action plan. Do not drive yourself — call an ambulance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does asthma cause permanent lung damage?",
+      "answer": "Well-controlled asthma rarely causes permanent damage. Years of poorly controlled disease, however, drive airway remodeling — thickening of the airway wall and partial loss of bronchodilator reversibility. The most important step to prevent this is daily controller therapy started early and continued long-term, especially through adolescence when adherence often slips.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is severe asthma?",
+      "answer": "Severe asthma is defined as asthma that remains uncontrolled despite optimised high-dose inhaled corticosteroid plus a second controller, or that requires this treatment to remain controlled. It affects roughly 3-5% of asthmatics but accounts for over 50% of asthma healthcare costs. Severe asthma should be managed in dedicated clinics with access to biologic therapy and multidisciplinary support.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are nebulisers better than inhalers?",
+      "answer": "No — for almost all patients, a metered-dose inhaler with a spacer delivers as much drug to the lungs as a nebuliser, faster and at lower cost. Nebulisers are useful only when severe breathlessness prevents inhaler coordination, in young children unable to use a spacer with mask, or in emergency settings. Most home nebuliser use can be safely replaced by an inhaler-spacer combination.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does asthma treatment cost?",
+      "answer": "Generic inhaled corticosteroids and budesonide-formoterol cost roughly USD 30-80 per month at retail in the United States and are far cheaper in most other countries. In India and other emerging markets, generic ICS-formoterol inhalers are available for under USD 10 per month. Biologic therapy for severe asthma costs roughly USD 25,000-40,000 per year and is typically covered by insurance once specialist criteria are met.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Asthma (chronic inflammatory airway disease)",
+
+  "regionalNames": [
+    { "name": "दमा (Dama)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Tamaka Shvasa", "region": "India (Ayurvedic tradition)", "language": "sa" },
+    { "name": "Asma", "region": "Latin America / Spain", "language": "es" },
+    { "name": "Asthme", "region": "France", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "asthma", "athsma", "astma", "bronchial asthma", "wheeze", "wheezing", "reactive airway",
+    "inhaler", "puffer", "albuterol", "salbutamol", "ventolin", "budesonide", "ICS",
+    "ICS-formoterol", "symbicort", "GINA", "allergic asthma", "eosinophilic asthma",
+    "severe asthma", "biologics for asthma", "exercise induced asthma"
+  ],
+
+  "symptomKeywords": [
+    "wheezing", "shortness of breath", "chest tightness", "night cough", "trouble breathing",
+    "can't catch breath", "tight chest", "whistling breath", "breathless on exercise", "asthma attack"
+  ],
+
+  "metaTitle": "Asthma: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Asthma: chronic airway inflammation causing wheeze, dyspnea, and cough. GINA-aligned symptoms, diagnosis, inhalers, and biologics reviewed by our medical board.",
+
+  "keywords": [
+    "asthma", "asthma symptoms", "asthma treatment", "asthma causes", "asthma inhaler",
+    "asthma attack", "allergic asthma", "eosinophilic asthma", "severe asthma", "asthma biologics",
+    "exercise induced asthma", "is asthma curable", "asthma vs copd"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Global Initiative for Asthma. Global Strategy for Asthma Management and Prevention, 2024 update.",
+      "url": "https://ginasthma.org/2024-report/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Cloutier MM, Baptist AP, Blake KV, et al. 2020 Focused Updates to the Asthma Management Guidelines: A Report from the National Asthma Education and Prevention Program Coordinating Committee Expert Panel Working Group. JAMA. 2020;324(22):2301-2317.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33269739/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "NICE Guideline NG244: Asthma — Diagnosis, Monitoring and Chronic Asthma Management. National Institute for Health and Care Excellence; 2024.",
+      "url": "https://www.nice.org.uk/guidance/ng244",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Soriano JB, Kendrick PJ, Paulson KR, et al. Prevalence and attributable health burden of chronic respiratory diseases, 1990-2017: a systematic analysis for the Global Burden of Disease Study 2017. Lancet Respiratory Medicine. 2020;8(6):585-596.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32526187/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "O'Byrne PM, FitzGerald JM, Bateman ED, et al. Inhaled Combined Budesonide-Formoterol as Needed in Mild Asthma. New England Journal of Medicine. 2018;378(20):1865-1876.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29768149/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Menzies-Gow A, Corren J, Bourdin A, et al. Tezepelumab in Adults and Adolescents with Severe, Uncontrolled Asthma. New England Journal of Medicine. 2021;384(19):1800-1809.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33979488/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Castro M, Corren J, Pavord ID, et al. Dupilumab Efficacy and Safety in Moderate-to-Severe Uncontrolled Asthma. New England Journal of Medicine. 2018;378(26):2486-2496.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29782217/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Most Recent National Asthma Data. 2022.",
+      "url": "https://www.cdc.gov/asthma/most_recent_national_asthma_data.htm",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
