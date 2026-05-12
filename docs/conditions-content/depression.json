@@ -1,0 +1,493 @@
+{
+  "_meta": {
+    "slug": "depression",
+    "tier": 1,
+    "headTerm": "depression",
+    "longTailKeywords": [
+      "depression symptoms",
+      "major depressive disorder",
+      "depression treatment",
+      "antidepressants",
+      "SSRI",
+      "depression vs sadness",
+      "postpartum depression",
+      "treatment-resistant depression",
+      "depression therapy",
+      "depression and anxiety"
+    ],
+    "primarySpecialty": "Psychiatry",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against DSM-5-TR criteria, 2022 APA depression treatment guideline, 2023 NICE NG222, STAR*D, GENDEP, NIMH/CDC epidemiology, and PHQ-9 primary literature; suicide-prevention language reviewed for safety per WHO and 988 guidance."
+  },
+
+  "h1Title": "Depression: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Psychiatry",
+
+  "heroOverview": "Depression is a treatable medical illness in which persistently low mood or loss of interest, plus a cluster of cognitive, somatic, and energy changes, lasts at least two weeks and interferes with daily life. About 8% of US adults (21 million people) meet criteria for major depressive disorder in a given year, and roughly 280 million people are affected worldwide, making depression the leading global cause of disability. It typically presents as low mood, sleep disturbance, loss of interest in usual activities, fatigue, slowed thinking, and sometimes thoughts of death or self-harm — symptoms that respond to evidence-based treatment in 60-80% of patients within 6-12 weeks. First-line treatment combines psychotherapy (CBT, IPT, or behavioral activation) with selective serotonin reuptake inhibitors or related antidepressants; treatment-resistant depression responds to esketamine, ECT, or transcranial magnetic stimulation. If you are thinking of suicide, call or text 988 in the US, or your local crisis line.",
+
+  "keyStats": {
+    "prevalence": "~8.3% of US adults annually (21 million; NIMH 2022); 18% lifetime",
+    "demographics": "Women affected ~1.7× as often as men; peak prevalence ages 18-44",
+    "avgAge": "Median age of first onset 32; ~50% of lifetime cases begin by age 25",
+    "globalCases": "~280 million people; leading global cause of disability (WHO 2023)"
+  },
+
+  "definition": "Depression (ICD-10: F32 for major depressive disorder single episode, F33 for recurrent; DSM-5 305.xx codes) is a heterogeneous clinical syndrome characterized by a sustained negative emotional state combined with neurovegetative, cognitive, and behavioral changes. Major depressive disorder requires at least five of nine DSM-5-TR criteria for a minimum of two weeks, with at least one being depressed mood or anhedonia (loss of interest or pleasure). The remaining criteria are significant weight or appetite change, sleep disturbance (insomnia or hypersomnia), psychomotor agitation or retardation, fatigue, feelings of worthlessness or excessive guilt, impaired concentration or indecisiveness, and recurrent thoughts of death or suicide. The illness is staged by severity (mild, moderate, severe), by presence of psychotic, anxious, melancholic, atypical, or peripartum features, and by single versus recurrent episodes. Pathophysiology involves monoaminergic dysregulation, glutamatergic and GABAergic imbalance, neuroplasticity changes, HPA-axis hyperactivity, neuroinflammation, and disrupted circadian rhythms — no single mechanism explains every case. Depression is managed by primary care for most cases, with psychiatry, psychology, and integrated behavioral-health teams for moderate-to-severe, treatment-resistant, perinatal, geriatric, and youth presentations. The illness is highly treatable; the disability burden largely reflects the gap between effective treatments and people who actually receive them.",
+
+  "typesClassification": [
+    { "type": "Major depressive disorder (MDD)", "description": "The prototypical form, defined by DSM-5-TR criteria over 2 or more weeks. Single episode (F32) or recurrent (F33) — recurrence is the rule, not the exception, with 50-60% relapse risk after a first episode." },
+    { "type": "Persistent depressive disorder (dysthymia)", "description": "Chronic, low-grade depression lasting ≥2 years (≥1 year in children/adolescents). Symptoms are milder than MDD but more persistent; often complicated by superimposed MDD episodes (double depression)." },
+    { "type": "Premenstrual dysphoric disorder (PMDD)", "description": "Severe mood, irritability, and physical symptoms confined to the late luteal phase of the menstrual cycle in 3-8% of menstruating people. Distinct from premenstrual syndrome in severity and functional impact." },
+    { "type": "Peripartum (postpartum) depression", "description": "MDD with onset during pregnancy or in the year after birth. Affects 10-15% of mothers and ~10% of fathers. Distinct neuroendocrine drivers; brexanolone and zuranolone target the GABA-A pathway." },
+    { "type": "Seasonal affective disorder (winter pattern)", "description": "MDD with regular fall-winter onset and spring remission, more common at higher latitudes. Responds to bright-light therapy (10,000 lux for 30 minutes each morning) in addition to standard treatments." },
+    { "type": "Treatment-resistant depression (TRD)", "description": "Failure to respond to two adequate trials of different first-line antidepressants. Affects ~30% of MDD patients; responds to esketamine, ECT, repetitive TMS, and combination strategies." },
+    { "type": "Atypical depression", "description": "Reactive mood (mood lifts with positive events), increased appetite/weight gain, hypersomnia, leaden paralysis, and interpersonal rejection sensitivity. Responds preferentially to MAOIs in head-to-head historical data." }
+  ],
+
+  "primarySymptoms": [
+    "Persistently low or sad mood most of the day, nearly every day, present for at least two weeks; described as flat, empty, numb, or tearful.",
+    "Marked loss of interest or pleasure (anhedonia) in activities that were previously enjoyable — hobbies, food, sex, social contact.",
+    "Significant change in appetite or weight (more than 5% change in a month) without intentional dieting; can go either direction.",
+    "Sleep disturbance — early morning awakening with inability to return to sleep is classic for melancholic depression; hypersomnia is typical of atypical depression.",
+    "Psychomotor agitation (restlessness, hand-wringing, pacing) or retardation (slowed speech, movement, and thought) observable by others.",
+    "Fatigue or loss of energy disproportionate to activity; small tasks like dressing or making a meal feel exhausting.",
+    "Feelings of worthlessness or excessive, inappropriate guilt — not just self-criticism, but ruminative guilt about past events that is out of proportion.",
+    "Reduced ability to think, concentrate, or make decisions; patients often describe a 'mental fog' or repeated rereading of the same paragraph.",
+    "Recurrent thoughts of death, suicidal ideation, suicide plan, or suicide attempt — present in roughly 60% of MDD patients during a severe episode.",
+    "Physical symptoms — chronic pain, digestive complaints, headaches — often the presenting features in primary care, especially in older adults and in non-Western cultural contexts."
+  ],
+
+  "earlyWarningSigns": [
+    "Persistent low energy and loss of motivation for 1-2 weeks following a stressor (job loss, bereavement, relationship breakdown)",
+    "New onset of waking 2-3 hours before the alarm with rumination",
+    "Withdrawal from usual social activities, declining invitations, reduced phone or text response",
+    "Drop in work or school performance noticed by colleagues or teachers",
+    "Recurrent unexplained physical symptoms (headache, GI distress, chronic pain) without medical explanation"
+  ],
+
+  "emergencySigns": [
+    "Active suicidal ideation with a plan, intent, or access to means — call 988 (US Suicide & Crisis Lifeline), go to an emergency department, or call local emergency services",
+    "Suicide attempt or self-injury requiring medical attention — emergency department immediately",
+    "Psychotic features — hallucinations, delusions (typically nihilistic or guilty content), or severe disorganization — require urgent psychiatric evaluation",
+    "Catatonia — immobility, mutism, posturing, or extreme negativism — psychiatric emergency requiring benzodiazepine challenge or ECT",
+    "Severe agitation with risk of harm to self or others — emergency psychiatric evaluation",
+    "Postpartum depression with suicidal or infanticidal thoughts, or signs of postpartum psychosis (paranoia, hallucinations, rapid mood swings) — immediate psychiatric care"
+  ],
+
+  "causes": [
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Heritability is roughly 30-40% for MDD overall and higher for early-onset and recurrent forms. Risk in first-degree relatives is 2-3× the population baseline. Genome-wide studies have identified over 100 loci with small individual effects."
+    },
+    {
+      "cause": "Childhood adversity and chronic stress",
+      "description": "Adverse childhood experiences (abuse, neglect, household dysfunction) raise lifetime MDD risk by 2-4× through HPA-axis programming, epigenetic changes, and altered neural circuitry. Chronic adult stressors (caregiving, financial hardship, discrimination) compound risk."
+    },
+    {
+      "cause": "Acute stressful life events",
+      "description": "Bereavement, job loss, relationship breakdown, serious illness, or trauma can precipitate a first or recurrent episode, particularly in vulnerable individuals. About 50% of first episodes are preceded by an identifiable stressor."
+    },
+    {
+      "cause": "Hormonal and reproductive transitions",
+      "description": "Pregnancy, postpartum period (particularly the first 3 months), perimenopause, and the luteal phase of the menstrual cycle carry markedly higher depression risk. Estrogen and progesterone fluctuations interact with serotonin and GABA-A signaling."
+    },
+    {
+      "cause": "Medical comorbidity",
+      "description": "Depression is 2-3× more common in chronic medical illness — heart disease, stroke, diabetes, cancer, chronic pain, HIV, Parkinson's disease, and inflammatory conditions. Inflammation, vascular changes, and disability share pathophysiologic links with depression."
+    },
+    {
+      "cause": "Substance use and medications",
+      "description": "Alcohol, opioids, stimulant withdrawal, sedative-hypnotics, beta-blockers, interferons, corticosteroids, and isotretinoin can produce or worsen depression. Substance use disorders co-occur with MDD in 20-30% of patients."
+    },
+    {
+      "cause": "Sleep and circadian disruption",
+      "description": "Insomnia is both a symptom and a causal risk factor; chronic short sleep doubles the incidence of new depression. Circadian misalignment in shift workers and seasonal light exposure both contribute."
+    },
+    {
+      "cause": "Neurobiologic dysregulation",
+      "description": "Reduced monoaminergic signaling (serotonin, norepinephrine, dopamine), glutamatergic excitotoxicity, BDNF reduction with impaired neuroplasticity, HPA-axis hyperactivity, and chronic low-grade inflammation are well-replicated mechanisms — though no single biomarker yet defines the diagnosis."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women have ~1.7× the lifetime risk of MDD versus men, with the gap appearing at puberty. Likely reflects gonadal hormone fluctuations, social and gender-role stressors, and possibly under-detection in men." },
+    { "factor": "Family history of mood disorders", "category": "genetic", "description": "First-degree relatives have ~2-3× baseline risk. Early-onset (<25) and recurrent forms show stronger familial aggregation." },
+    { "factor": "Childhood adversity", "category": "non-modifiable", "description": "Four or more ACEs (Adverse Childhood Experiences) raise adult depression risk by 4-5× via HPA-axis programming and epigenetic effects." },
+    { "factor": "Chronic medical illness", "category": "modifiable", "description": "Coronary artery disease, stroke, diabetes, cancer, chronic pain, HIV, and Parkinson's disease all carry 2-3× depression risk; integrated medical and mental-health care improves both outcomes." },
+    { "factor": "Substance use disorders", "category": "modifiable", "description": "Alcohol, opioid, stimulant, and cannabis use disorders coexist with MDD in 20-30% of patients and predict poorer treatment response if untreated." },
+    { "factor": "Recent major life stressor", "category": "modifiable", "description": "Bereavement, job loss, divorce, or serious illness precede ~50% of first episodes. Adequate social support and brief preventive interventions reduce conversion to MDD." },
+    { "factor": "Social isolation and loneliness", "category": "modifiable", "description": "Chronic loneliness raises depression incidence by ~1.5-2× and complicates recovery. Group therapy, peer support, and behavioral activation address this directly." },
+    { "factor": "Postpartum status", "category": "modifiable", "description": "10-15% of mothers and ~10% of fathers experience peripartum depression. Screening (EPDS) at 4-8 weeks postpartum and again at 4-6 months is recommended." },
+    { "factor": "Chronic insomnia", "category": "modifiable", "description": "Persistent insomnia doubles the risk of new-onset depression. Treating insomnia with CBT-I reduces depression incidence and improves treatment response in established MDD." },
+    { "factor": "Childhood-onset chronic illness, ADHD, autism, or learning disability", "category": "non-modifiable", "description": "Neurodevelopmental conditions and chronic pediatric illness raise lifetime depression risk by 2-4×; school-based screening can identify cases early." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence: ~8.3% of adults annually (21 million); lifetime prevalence ~18%",
+    "Women have ~1.7× the prevalence of men across most populations",
+    "Adults aged 18-25 have the highest annual prevalence in US data (~18%); rates have risen sharply in adolescents and young adults since 2010",
+    "LGBTQ+ adults experience MDD at roughly twice the rate of cisgender heterosexual adults, largely driven by minority stress",
+    "Globally, depression is the leading cause of years lived with disability (YLDs), affecting ~280 million people across all regions (WHO 2023)"
+  ],
+
+  "diagnosisOverview": "Depression is diagnosed clinically through a structured interview, validated screening tools, and a focused medical workup to exclude conditions that mimic the syndrome. The DSM-5-TR requires at least 5 of 9 criteria for a minimum of 2 weeks, with at least one of those being depressed mood or loss of interest. Screening in primary care is recommended for all adults and adolescents and uses the PHQ-2 (two questions) followed by the PHQ-9 when positive — a score of 10 or higher on the PHQ-9 has 88% sensitivity and 88% specificity for MDD and grades severity from mild (5-9) to severe (20-27). For adolescents, the PHQ-A is the youth-adapted version. Suicide-risk assessment is mandatory at every visit (Columbia C-SSRS or the simpler PHQ-9 item 9). Medical workup excludes mimics: TSH for hypothyroidism, CBC for anemia, vitamin B12 and folate, vitamin D, comprehensive metabolic panel, and HIV/syphilis screening in higher-risk patients. Sleep apnea screening (STOP-Bang) is appropriate in patients with hypersomnia, snoring, or obesity. Substance use is screened with AUDIT-C, DAST, and direct questions about cannabis and stimulants. Bipolar disorder must be specifically excluded — every patient screened for depression should be screened with the Mood Disorder Questionnaire or directly asked about past hypomania/mania, because antidepressants prescribed for unrecognized bipolar depression can trigger mania or rapid cycling. Anxiety disorders, PTSD, eating disorders, ADHD, and personality features should be assessed because they alter treatment selection. Cultural and language-appropriate interviewing reduces under-diagnosis in minoritized populations.",
+
+  "diagnosticTests": [
+    { "test": "PHQ-9 (Patient Health Questionnaire-9)", "purpose": "Validated nine-item self-report screen with severity grading. Score ≥10 has 88% sensitivity/88% specificity for MDD. Tracks symptom change over time and quantifies treatment response (response = ≥50% drop; remission = score <5).", "whatToExpect": "A nine-question self-report form completed in 2-3 minutes in the waiting room or via patient portal." },
+    { "test": "Columbia Suicide Severity Rating Scale (C-SSRS)", "purpose": "Standardized suicide-risk screen used at every depression visit. Stratifies passive ideation, active ideation, plan, intent, behaviors, and prior attempts to guide disposition and intervention.", "whatToExpect": "Six initial yes/no questions taking 1-2 minutes; expands with follow-up questions if positive." },
+    { "test": "Mood Disorder Questionnaire (MDQ)", "purpose": "13-item screen for past or current hypomania or mania, essential before starting an antidepressant. Detects bipolar spectrum disorders that are otherwise commonly missed and can be worsened by SSRI monotherapy.", "whatToExpect": "Brief self-report; 2-3 minutes." },
+    { "test": "TSH and reflex free T4", "purpose": "Excludes hypothyroidism, which presents indistinguishably from depression in 5-10% of cases.", "whatToExpect": "Standard blood draw; results in 24 hours." },
+    { "test": "CBC, comprehensive metabolic panel, vitamin B12, folate, vitamin D", "purpose": "Screens for anemia, electrolyte abnormalities, renal/hepatic dysfunction, and vitamin deficiencies that worsen mood.", "whatToExpect": "Single fasting blood draw covering all panels; results in 1-2 days." },
+    { "test": "Substance use screening (AUDIT-C, DAST-10)", "purpose": "Identifies alcohol and drug use disorders that are commonly comorbid and require integrated treatment.", "whatToExpect": "Brief self-report; 2-3 minutes each." },
+    { "test": "Sleep-disorder screening (STOP-Bang or sleep history)", "purpose": "Identifies obstructive sleep apnea, which is present in 15-20% of patients with hypersomnia or treatment-resistant depression.", "whatToExpect": "Eight-item self-report; positive screen prompts referral for home or laboratory polysomnography." }
+  ],
+
+  "treatmentOverview": "Treatment matches severity. For mild depression, first-line options are evidence-based psychotherapy (cognitive behavioral therapy, interpersonal therapy, or behavioral activation) for 8-16 weeks, with antidepressants reserved for non-response, patient preference, or recurrent disease. For moderate-to-severe MDD, combined psychotherapy plus antidepressant pharmacotherapy outperforms either alone. First-line antidepressants are SSRIs (sertraline, escitalopram, fluoxetine, paroxetine, citalopram) or SNRIs (venlafaxine, duloxetine), with bupropion as an option when sexual side effects or weight gain are concerns. Mirtazapine is useful when insomnia, weight loss, or anxiety predominate. Start at standard doses, expect 2-4 weeks before initial effect and 6-8 weeks for full response, and titrate to therapeutic dose. STAR*D demonstrated remission in 37% after the first adequate trial and cumulative remission of 67% across four sequential trials. If first-line antidepressants fail at adequate dose and duration, second-step options include switching antidepressant class, augmentation with bupropion or buspirone, atypical antipsychotic augmentation (aripiprazole, brexpiprazole, cariprazine, olanzapine), lithium, or T3. Treatment-resistant depression — failure of two adequate trials — responds to esketamine nasal spray (FDA-approved 2019), IV ketamine, electroconvulsive therapy (ECT, the most effective intervention with 60-80% remission), or repetitive transcranial magnetic stimulation (rTMS). For postpartum depression specifically, brexanolone IV (2019) and zuranolone PO (2023) provide rapid neurosteroid-based response. Adjunctive interventions — bright-light therapy for seasonal pattern, exercise (30 minutes 3-5×/week is equivalent to a low-dose antidepressant for mild-to-moderate cases), structured sleep, and treatment of comorbid anxiety, substance use, and sleep disorders — measurably improve outcomes. Continuation-phase treatment for at least 6-9 months after remission reduces relapse by 50-70%; lifetime maintenance is recommended after three or more lifetime episodes.",
+
+  "medicalTreatments": [
+    { "name": "Sertraline (50-200 mg daily) or escitalopram (10-20 mg daily) (SSRI)", "description": "First-line antidepressants. Block serotonin reuptake at the presynaptic neuron. Start at half the target dose for 5-7 days, then titrate. Side effects: nausea, sexual dysfunction, insomnia or somnolence, occasional weight gain.", "effectiveness": "Response (≥50% symptom reduction) in 50-60% by week 8; remission in 30-40%. STAR*D showed 37% remission with the first adequate trial." },
+    { "name": "Venlafaxine XR (75-225 mg daily) or duloxetine (60-120 mg daily) (SNRI)", "description": "Serotonin-norepinephrine reuptake inhibitors. First-line, particularly useful with comorbid chronic pain or fibromyalgia. Higher discontinuation symptoms than SSRIs if stopped abruptly.", "effectiveness": "Comparable to SSRIs at the group level; head-to-head response rates roughly 55-65% by week 8 in major meta-analyses." },
+    { "name": "Bupropion XL (150-450 mg daily) (NDRI)", "description": "Norepinephrine-dopamine reuptake inhibitor. No serotonergic side effects (no weight gain or sexual dysfunction). Avoid in seizure disorder, eating disorders, and active alcohol withdrawal.", "effectiveness": "Response rates 50-60%, similar to SSRIs; particularly useful when sexual side effects or weight gain are concerns or as augmentation." },
+    { "name": "Mirtazapine (15-45 mg at bedtime)", "description": "Alpha-2 antagonist plus 5-HT2/3 antagonist. Sedating, appetite-stimulating; useful for patients with insomnia, weight loss, or treatment-resistant nausea. Weight gain is the main long-term limitation.", "effectiveness": "Response rates 55-65%; faster onset than SSRIs in some meta-analyses." },
+    { "name": "Cognitive behavioral therapy (CBT), 12-20 sessions", "description": "Structured manualized psychotherapy. Identifies and modifies negative thought patterns and behavioral avoidance. First-line for mild-to-moderate MDD and equal to medication for moderate disease.", "effectiveness": "Response and remission rates similar to antidepressants (40-55%); lower relapse than medication after discontinuation." },
+    { "name": "Interpersonal psychotherapy (IPT), 12-16 sessions", "description": "Time-limited therapy focused on grief, role transitions, interpersonal conflict, and interpersonal deficits. Particularly effective in postpartum depression and adolescents.", "effectiveness": "Response rates 50-60% with strong evidence in adolescent, postpartum, and geriatric depression." },
+    { "name": "Atypical antipsychotic augmentation (aripiprazole 2-15 mg, brexpiprazole 1-3 mg, cariprazine 1.5-3 mg, or olanzapine 5-15 mg with fluoxetine)", "description": "Second-step augmentation for inadequate response to antidepressant monotherapy. Monitor for metabolic side effects, akathisia, and weight gain.", "effectiveness": "Response in ~25-30% of antidepressant non-responders within 4-6 weeks (Nelson 2009 meta-analysis)." },
+    { "name": "Esketamine nasal spray (Spravato, 56-84 mg twice weekly initially)", "description": "FDA-approved for treatment-resistant depression and acute suicidal ideation. NMDA-receptor antagonism produces rapid (hours to days) antidepressant effect. Administered under REMS supervision.", "effectiveness": "Response rates 50-70% in TRD by week 4 (TRANSFORM trials); rapid reduction in suicidal ideation within 24 hours in selected patients." },
+    { "name": "Electroconvulsive therapy (ECT), bitemporal or right-unilateral", "description": "The most effective acute treatment for severe, psychotic, catatonic, or treatment-resistant depression. 6-12 sessions, three times weekly, under brief general anesthesia. Side effects: transient anterograde and retrograde memory impairment.", "effectiveness": "Remission rates 60-80% in TRD and severe MDD — the highest of any depression treatment (CORE trial, multiple meta-analyses)." },
+    { "name": "Repetitive transcranial magnetic stimulation (rTMS) of left DLPFC", "description": "Non-invasive focal magnetic stimulation, 20-30 sessions over 4-6 weeks. FDA-approved since 2008 for MDD and TRD. Theta-burst protocols (3-minute sessions) and SAINT protocol (accelerated, 5 days) expand access.", "effectiveness": "Response rates ~50-55% in TRD; SAINT showed 78% remission at 1 week in TRD." },
+    { "name": "Lithium augmentation (300-900 mg, target level 0.4-0.8 mmol/L)", "description": "Augmentation of antidepressant non-response. Effective for unipolar MDD and bipolar depression. Lithium uniquely reduces suicide risk by ~80% in long-term users.", "effectiveness": "Response rates 30-50% in unipolar augmentation; the largest mortality benefit of any psychiatric medication." },
+    { "name": "Zuranolone (50 mg PO once daily for 14 days, postpartum depression)", "description": "Neurosteroid GABA-A modulator approved in 2023 for postpartum depression. Rapid antidepressant effect within days. An IV alternative (brexanolone) was approved in 2019.", "effectiveness": "Significant separation from placebo by day 3, sustained through day 45 in SKYLARK trial; ~50% response by day 15." }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Deep brain stimulation (DBS) — investigational", "description": "Targeted neuromodulation of subcallosal cingulate or ventral capsule/ventral striatum. Used in highly treatment-resistant depression at academic centers as part of clinical trials.", "successRate": "Response rates ~30-50% in open-label experience, though randomized trials have been mixed. Not yet FDA-approved for depression." },
+    { "name": "Vagus nerve stimulation (VNS)", "description": "FDA-approved adjunctive treatment for chronic, treatment-resistant depression in adults who have failed ≥4 antidepressant trials. Implanted device delivers intermittent electrical stimulation.", "successRate": "Response rates ~30-40% by 1-2 years; benefits are delayed (months) compared to most depression treatments." }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Aerobic exercise (30-45 minutes, 3-5 days/week, moderate intensity)", "description": "Equivalent to low-dose antidepressant in mild-to-moderate MDD per meta-analyses. Cochrane review and JAMA Psychiatry 2024 confirm clinically meaningful effect sizes; consistent low-cost intervention." },
+    { "name": "Bright-light therapy (10,000 lux, 30 minutes within an hour of waking)", "description": "First-line for seasonal-pattern MDD and effective adjunct in non-seasonal MDD. Largest effect in patients with hypersomnia and morning lethargy." },
+    { "name": "St. John's wort (hypericum perforatum, 300 mg three times daily)", "description": "Effective for mild MDD in European trials; not first-line in the US due to numerous CYP interactions (oral contraceptives, warfarin, anticoagulants, immunosuppressants, antiretrovirals). Discuss with clinician before use." }
+  ],
+  "linkedTreatmentSlugs": [],
+
+  "whySeeSpecialist": "Refer to psychiatry for severe depression (PHQ-9 ≥20), suicidal ideation with plan or intent, psychotic features, catatonia, bipolar features (past hypomania/mania), treatment-resistant depression (failure of 2 antidepressant trials), perinatal depression, geriatric depression with cognitive symptoms, and complex comorbidity (substance use, eating disorder, severe personality disorder). Psychology referral is appropriate for evidence-based psychotherapy (CBT, IPT, behavioral activation, ACT) and for cases where therapy is the patient's preferred or primary modality.",
+  "doctorSelectionGuide": "Most depression is well managed in primary care, especially with PHQ-9 monitoring and warm hand-off to therapy. For complex or treatment-resistant cases, look for a psychiatrist board-certified by ABPN and ideally trained in psychopharmacology, ECT, TMS, or perinatal psychiatry depending on need. Integrated behavioral-health clinics with psychiatry plus therapy plus care management deliver the best access and adherence outcomes. For severe and refractory illness, academic-medical-center programs with TMS, ECT, ketamine clinics, and DBS trials offer the full spectrum.",
+
+  "hospitalCriteria": [
+    "Inpatient psychiatric unit with safety protocols for active suicidality, severe depression, or comorbid substance withdrawal",
+    "ECT service with anesthesiology coverage for severe, psychotic, or catatonic depression",
+    "Outpatient TMS and ketamine/esketamine clinics with REMS-compliant monitoring",
+    "Integrated behavioral health with psychiatry, therapy, and care-management roles",
+    "Crisis stabilization unit or partial hospitalization program for step-down care"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Treat insomnia early — CBT-I reduces incidence of new depression by roughly 30-50% in randomized trials.",
+    "Maintain regular aerobic exercise; meta-analyses show a roughly 20-30% reduction in depression incidence with regular moderate activity.",
+    "Screen and treat substance use disorders — alcohol and cannabis use independently raise incidence and worsen course.",
+    "Build social connection — group membership, regular contact with friends and family, and avoidance of chronic loneliness measurably lower risk.",
+    "Address perinatal mood proactively — screen with EPDS at 4-8 weeks postpartum and again at 4-6 months and link to therapy where positive.",
+    "Treat chronic medical illness aggressively and screen its sufferers for depression; integrated medical and behavioral care reduces incidence in cardiac and oncology populations."
+  ],
+
+  "lifestyleModifications": [
+    "Maintain a regular sleep schedule with consistent wake time, even on weekends, and aim for 7-9 hours of sleep nightly.",
+    "Limit alcohol to ≤1 drink/day (women) or ≤2 drinks/day (men); ideally none during an acute episode.",
+    "Engage in 30-45 minutes of aerobic activity 3-5 days per week — equivalent to a low-dose antidepressant in mild-to-moderate disease.",
+    "Spend at least 30 minutes outside in daylight each morning; bright-light exposure stabilizes circadian rhythm and mood.",
+    "Schedule pleasant activities daily, even when motivation is absent (behavioral activation principle).",
+    "Reduce passive screen time at night and place phones outside the bedroom during the acute phase.",
+    "Develop a written safety plan with crisis contacts (988 in the US) and store firearms outside the home during acute suicidality.",
+    "Build a structured weekly schedule that includes social contact, meaningful activity, exercise, and self-care; isolation is a relapse trigger."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style eating pattern — vegetables, fruits, legumes, whole grains, fish, olive oil; associated with 30-35% lower MDD incidence in observational studies and modest improvement in symptoms in the SMILES trial",
+      "Omega-3 fatty acids from fatty fish (salmon, sardines) 2-3 times weekly, or EPA-predominant supplements (≥1 g EPA daily) as adjunct in moderate MDD",
+      "Adequate vitamin D — supplement if serum 25-OH-D <30 ng/mL; deficiency is overrepresented in depression",
+      "Folate-rich foods (leafy greens, legumes, fortified grains); L-methylfolate 7.5-15 mg is an evidence-based augmentation in MTHFR-related forms",
+      "Regular protein intake (1.0-1.2 g/kg/day) to support neurotransmitter synthesis"
+    ],
+    "avoid": [
+      "Excess alcohol (>14 drinks/week men, >7 drinks/week women) — worsens mood, sleep, and treatment response",
+      "Stimulant abuse or excess caffeine late in the day; both worsen sleep and anxiety",
+      "Ultra-processed food and added sugars — observational link to worse mood and inflammation",
+      "Crash diets and severe caloric restriction during acute depression — energy intake supports neurotransmitter synthesis",
+      "Grapefruit juice and St. John's wort if taking antidepressants — significant CYP interactions"
+    ]
+  },
+  "exerciseGuidelines": "Aim for 30-45 minutes of moderate-intensity aerobic exercise 3-5 days per week. Even 10-15 minutes of brisk walking can lift mood acutely. Resistance training twice weekly adds anxiolytic and cognitive benefits. Group-based exercise carries additional benefit from social connection. Effect sizes are largest in mild-to-moderate disease; severe depression still benefits but typically needs medication plus therapy alongside.",
+
+  "dailyManagement": [
+    "Take medication at the same time daily; use a pill organizer or phone reminder during the early weeks when adherence is lowest",
+    "Track mood and sleep with a brief daily log or app for the first 8 weeks of treatment",
+    "Attend every therapy session and complete between-session homework; therapy response correlates with engagement",
+    "Maintain a written safety plan with warning signs, coping strategies, and crisis contacts (988 in the US)",
+    "Schedule one pleasant activity and one social contact every day, regardless of motivation",
+    "Practice basic sleep hygiene: consistent wake time, no naps after 3 PM, bedroom for sleep only",
+    "Schedule a follow-up visit at 4-6 weeks to reassess PHQ-9 and adjust treatment"
+  ],
+
+  "prognosis": "About 60-80% of patients respond to first or second-line treatment within 12 weeks, and 30-40% achieve remission with the first adequate antidepressant trial (STAR*D). Median time to recovery from a single episode is 5-6 months. The illness recurs in 50-60% of patients after a first episode, 70% after a second, and 90% after a third — which is why continuation therapy for 6-9 months after remission and maintenance therapy after multiple episodes are standard. Untreated depression carries a 4-5% lifetime suicide mortality, more than 20-fold higher than the general population. Adequate treatment, including therapy plus medication and ongoing follow-up, reduces both relapse and suicide mortality substantially. Predictors of better outcome include earlier treatment initiation, treatment engagement, social support, absence of comorbid substance use, and prior treatment response. Treatment-resistant depression — failure of 2+ adequate trials — remains effectively treatable with esketamine, ECT, TMS, lithium augmentation, and combination strategies.",
+
+  "recoveryTimeline": "Initial antidepressant effects (sleep, appetite, energy) emerge within 1-2 weeks; mood and motivation improvement typically by 2-4 weeks; full response by 6-8 weeks. Failure to achieve a 25% reduction in PHQ-9 by week 4 predicts non-response to that agent at week 8 and should prompt dose increase, switch, or augmentation. Psychotherapy (CBT, IPT) typically shows benefit by session 6-8 of a 12-16-session course. ECT response can occur within 1-2 weeks of starting a 3×/week course. Continuation-phase treatment for 6-9 months after remission reduces 1-year relapse from ~50% to ~25%.",
+
+  "complications": [
+    "Suicide and self-harm — lifetime suicide risk in untreated MDD is roughly 4-5%; assess at every visit and develop a safety plan with means restriction.",
+    "Treatment-resistant depression — affects ~30% of MDD patients after first-line treatment; requires escalation to esketamine, ECT, TMS, lithium, or combination strategies.",
+    "Substance use disorder — alcohol, cannabis, opioid, and stimulant use disorders coexist with MDD in 20-30% and require integrated treatment.",
+    "Cardiovascular morbidity — depression doubles risk of incident MI and stroke; aggressive cardiometabolic risk-factor management is recommended.",
+    "Cognitive impairment and pseudo-dementia in older adults — depression can mimic or accelerate cognitive decline; neuropsychological evaluation distinguishes the two.",
+    "Reduced occupational and educational functioning — depression accounts for the largest share of disability-adjusted life years among mental illnesses globally; supported employment and academic accommodations help."
+  ],
+
+  "supportResources": [
+    { "name": "988 Suicide & Crisis Lifeline (US)", "url": "https://988lifeline.org/", "description": "Free 24/7 confidential support for people in suicidal crisis or emotional distress. Call or text 988." },
+    { "name": "National Alliance on Mental Illness (NAMI)", "url": "https://www.nami.org/", "description": "Education, support groups, advocacy, and a free helpline (1-800-950-NAMI) for people affected by mental illness in the US." },
+    { "name": "Depression and Bipolar Support Alliance (DBSA)", "url": "https://www.dbsalliance.org/", "description": "Peer-led support groups, educational resources, and online wellness tools for adults with mood disorders." },
+    { "name": "Mind (UK mental health charity)", "url": "https://www.mind.org.uk/information-support/types-of-mental-health-problems/depression/", "description": "UK patient-facing resource covering symptoms, treatment, and how to access NHS mental-health services." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "anxiety", "name": "Anxiety", "keyDifference": "Anxiety produces excessive worry, autonomic arousal, and avoidance, often with worry as the dominant symptom. Depression produces persistent low mood and anhedonia. The two coexist in roughly half of MDD cases; the distinction matters because treatment selection (e.g. SSRIs vs bupropion) differs." },
+    { "slug": "bipolar-disorder", "name": "Bipolar Disorder", "keyDifference": "Bipolar disorder includes at least one lifetime hypomanic or manic episode in addition to depression. Antidepressant monotherapy in bipolar depression can trigger mania or rapid cycling, so every depressed patient should be screened with the MDQ before starting medication." },
+    { "slug": "ptsd", "name": "Post-Traumatic Stress Disorder", "keyDifference": "PTSD follows a discrete traumatic event and is dominated by re-experiencing, avoidance, hyperarousal, and negative cognitions. Depression lacks the trauma-specific symptoms but co-occurs in ~50% of PTSD." },
+    { "slug": "adhd", "name": "Attention-Deficit/Hyperactivity Disorder", "keyDifference": "ADHD causes inattention and executive-function deficits since childhood with relatively stable mood. Depression causes new-onset concentration loss with persistent low mood. Untreated ADHD raises depression risk; screening matters when concentration symptoms predominate." },
+    { "slug": "ocd", "name": "Obsessive-Compulsive Disorder", "keyDifference": "OCD features intrusive obsessions and compulsions that the patient recognizes as senseless and tries to resist. Depression features ruminative guilt without compulsions. The two can coexist; OCD typically requires higher-dose SSRIs plus exposure and response prevention." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "anxiety", "name": "Anxiety" },
+    { "slug": "ptsd", "name": "PTSD" },
+    { "slug": "adhd", "name": "ADHD" },
+    { "slug": "bipolar-disorder", "name": "Bipolar Disorder" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "anxiety", "name": "Anxiety", "relevance": "Coexists with MDD in ~50% of patients and informs medication selection." },
+    { "slug": "bipolar-disorder", "name": "Bipolar Disorder", "relevance": "Must be excluded before antidepressant monotherapy; bipolar depression has distinct treatment." },
+    { "slug": "ptsd", "name": "PTSD", "relevance": "Trauma-related comorbidity present in many depression cases; addressing trauma improves overall recovery." },
+    { "slug": "ocd", "name": "OCD", "relevance": "Common co-occurring anxiety-spectrum condition with overlapping ruminative cognitions." },
+    { "slug": "adhd", "name": "ADHD", "relevance": "Untreated ADHD raises depression risk; cognitive symptoms in depression may unmask previously unrecognized ADHD." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What are the symptoms of depression?",
+      "answer": "Major depressive disorder requires at least five DSM-5 symptoms for at least two weeks, including persistently low mood or loss of interest, plus combinations of sleep disturbance, appetite or weight change, fatigue, slowed thinking, feelings of worthlessness or guilt, poor concentration, and thoughts of death or suicide. Symptoms cause distress or interfere with work, school, or relationships.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is depression different from sadness?",
+      "answer": "Sadness is a normal emotion in response to loss or disappointment, usually time-limited and proportional. Depression is a sustained illness lasting at least two weeks that interferes with sleep, energy, appetite, concentration, and self-worth, and may include thoughts of death. Sadness is part of being human; depression is a treatable medical condition.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is depression diagnosed?",
+      "answer": "Depression is a clinical diagnosis based on DSM-5-TR criteria gathered through interview and supported by the PHQ-9 self-report. A PHQ-9 score of 10 or higher has 88% sensitivity for major depressive disorder. Basic labs (thyroid, CBC, B12, vitamin D) exclude medical mimics, and patients are screened for bipolar disorder, anxiety, and substance use that change treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long do antidepressants take to work?",
+      "answer": "Sleep, appetite, and energy can improve within 1-2 weeks of starting an SSRI or SNRI. Mood typically responds at 2-4 weeks and full response by 6-8 weeks. If there is no meaningful improvement by week 4 at adequate dose, your clinician may increase the dose, switch agents, or add augmentation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are antidepressants addictive?",
+      "answer": "Antidepressants are not addictive in the way that opioids, stimulants, or alcohol are — they do not cause craving or compulsive use, and they have no street value. Discontinuation symptoms can occur if certain antidepressants are stopped abruptly, which is why they should be tapered over weeks rather than stopped suddenly.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for depression?",
+      "answer": "For mild depression, evidence-based psychotherapy (CBT, IPT, behavioral activation) is first-line. For moderate-to-severe MDD, combined therapy plus an SSRI or SNRI outperforms either alone. Severe, psychotic, or treatment-resistant depression responds best to ECT, ketamine/esketamine, or rTMS. Treatment is individualized based on severity, history, and patient preference.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can depression be cured?",
+      "answer": "A single depression episode can fully resolve with treatment, and many people recover completely. Recurrence is common — 50% after one episode, 70% after two, 90% after three. Continuation therapy for 6-9 months after remission, and maintenance therapy after multiple episodes, substantially reduces recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is depression genetic?",
+      "answer": "Heritability for major depressive disorder is roughly 30-40%, higher for early-onset and recurrent forms. First-degree relatives have 2-3× the population risk. Genes interact with environmental factors — childhood adversity, stress, and medical illness — so genetics alone do not predict who will become depressed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is treatment-resistant depression?",
+      "answer": "Treatment-resistant depression is the failure to respond to two adequate trials of different first-line antidepressants. It affects about 30% of patients with major depressive disorder. Effective options include esketamine nasal spray, IV ketamine, electroconvulsive therapy (ECT), repetitive transcranial magnetic stimulation (rTMS), and lithium or atypical antipsychotic augmentation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the PHQ-9?",
+      "answer": "The PHQ-9 is a nine-item self-report questionnaire that measures depression severity. Each item is scored 0-3 based on frequency over the prior two weeks; total scores range from 0-27. Scores 5-9 indicate mild, 10-14 moderate, 15-19 moderately severe, and 20+ severe depression. It is the standard tool for screening and tracking treatment response.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can depression cause physical symptoms?",
+      "answer": "Yes. Common physical features include fatigue, appetite or weight change, sleep disturbance, slowed movement, headaches, GI complaints, and chronic pain. In many primary-care visits, especially in older adults and across many cultures, physical symptoms are the presenting complaint and depression is the underlying diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does exercise help depression?",
+      "answer": "Yes. Aerobic exercise of 30-45 minutes 3-5 times per week is roughly equivalent to a low-dose antidepressant in mild-to-moderate depression. Meta-analyses in JAMA Psychiatry and Cochrane confirm clinically meaningful effects. Exercise also helps treatment-resistant cases when added to medication and therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is postpartum depression?",
+      "answer": "Postpartum depression is major depressive disorder with onset during pregnancy or in the year after birth. It affects 10-15% of mothers and about 10% of fathers. Distinct neuroendocrine drivers make it responsive to brexanolone (IV) and zuranolone (oral), in addition to standard antidepressants and therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can depression be prevented?",
+      "answer": "Risk can be reduced. Treating chronic insomnia, regular aerobic exercise, addressing substance use, maintaining social connection, treating chronic medical illness, and brief preventive psychotherapy after major life stressors all lower incidence. People with prior episodes can prevent recurrence with maintenance antidepressant therapy and mindfulness-based cognitive therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is it safe to drink alcohol while on antidepressants?",
+      "answer": "Light occasional drinking is generally acceptable, but heavy alcohol use blunts antidepressant response, worsens mood, increases sedation, and raises suicide risk. During acute treatment most clinicians recommend minimizing or avoiding alcohol entirely, particularly in the first 8-12 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get depression?",
+      "answer": "Yes. Major depressive disorder occurs in 1-2% of children and 4-8% of adolescents. Symptoms can include irritability rather than sadness, school decline, and physical complaints. First-line treatment is psychotherapy (CBT or IPT); fluoxetine and escitalopram are the SSRIs with the strongest pediatric evidence, used with careful suicidality monitoring.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is ECT and is it still used?",
+      "answer": "Electroconvulsive therapy is a treatment in which a brief electric current induces a generalized seizure under general anesthesia. It is used for severe, psychotic, catatonic, or treatment-resistant depression. Remission rates are 60-80% — the highest of any treatment. Modern ECT is safe with transient memory side effects.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the 988 lifeline?",
+      "answer": "988 is the US Suicide & Crisis Lifeline. Calling or texting 988 connects you to free, confidential 24/7 support from trained crisis counselors. The lifeline is for anyone in suicidal crisis, emotional distress, or concern about a loved one. International equivalents exist; search for your country's crisis line.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can depression cause memory problems?",
+      "answer": "Yes. Concentration impairment, slowed thinking, and difficulty making decisions are core symptoms of depression. In older adults, depression can mimic dementia (pseudo-dementia); cognitive symptoms improve substantially with successful treatment of the depression. Persistent memory loss after recovery warrants neurologic evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I stop my antidepressant if I feel better?",
+      "answer": "No, not without talking to your clinician. Stopping too early triples the relapse risk in the first six months. Continuation therapy for at least 6-9 months after remission is standard; people with three or more lifetime episodes are often advised to continue indefinitely. Any discontinuation should be tapered, not abrupt.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are there natural treatments for depression?",
+      "answer": "Aerobic exercise, bright-light therapy (especially for seasonal pattern), CBT, mindfulness-based cognitive therapy, and Mediterranean-style eating have evidence for mild-to-moderate depression. St. John's wort has European evidence for mild MDD but interacts with many medications. For moderate or severe depression, these are adjuncts to, not substitutes for, professional treatment.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Depression (major depressive disorder, clinical depression)",
+  "regionalNames": [
+    { "name": "Avsaad", "region": "India", "language": "Hindi" },
+    { "name": "Manasika Azhuttham", "region": "India", "language": "Tamil" }
+  ],
+
+  "searchTags": [
+    "depression",
+    "major depressive disorder",
+    "MDD",
+    "clinical depression",
+    "unipolar depression",
+    "persistent depressive disorder",
+    "dysthymia",
+    "postpartum depression",
+    "seasonal affective disorder",
+    "treatment-resistant depression",
+    "PHQ-9",
+    "antidepressants",
+    "SSRI",
+    "ketamine for depression",
+    "ECT"
+  ],
+
+  "symptomKeywords": [
+    "feeling sad all the time",
+    "loss of interest",
+    "low mood",
+    "trouble sleeping",
+    "no energy",
+    "feeling worthless",
+    "trouble concentrating",
+    "thoughts of death",
+    "appetite loss",
+    "crying spells"
+  ],
+
+  "metaTitle": "Depression: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Depression is a treatable illness with persistent low mood and loss of interest. Symptoms, therapy, medication, and recovery reviewed by our medical board.",
+
+  "keywords": [
+    "depression symptoms",
+    "depression treatment",
+    "major depressive disorder",
+    "antidepressants",
+    "SSRI",
+    "CBT for depression",
+    "postpartum depression",
+    "treatment-resistant depression",
+    "PHQ-9",
+    "ketamine depression",
+    "ECT",
+    "rTMS",
+    "depression vs sadness",
+    "988 suicide hotline"
+  ],
+
+  "lastReviewed": "2026-05-12",
+  "sources": [
+    {
+      "title": "American Psychiatric Association. 2022. Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd Edition.",
+      "url": "https://psychiatryonline.org/doi/book/10.1176/appi.books.9780890423387",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Rush AJ, Trivedi MH, Wisniewski SR, et al. 2006. Acute and longer-term outcomes in depressed outpatients requiring one or several treatment steps (STAR*D). Am J Psychiatry 163(11):1905-1917.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17074942/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Cipriani A, Furukawa TA, Salanti G, et al. 2018. Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis. Lancet 391(10128):1357-1366.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29477251/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Cuijpers P, Karyotaki E, de Wit L, Ebert DD. 2020. The effects of fifteen evidence-supported therapies for adult depression: a meta-analytic review. Psychother Res 30(3):279-293.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30900949/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kroenke K, Spitzer RL, Williams JB. 2001. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med 16(9):606-613.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11556941/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Daly EJ, Trivedi MH, Janik A, et al. 2019. Efficacy of Esketamine Nasal Spray Plus Oral Antidepressant Treatment for Relapse Prevention in Patients With Treatment-Resistant Depression: A Randomized Clinical Trial. JAMA Psychiatry 76(9):893-903.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31166571/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Cole EJ, Stimpson KH, Bentzley BS, et al. 2020. Stanford Accelerated Intelligent Neuromodulation Therapy for Treatment-Resistant Depression (SAINT). Am J Psychiatry 177(8):716-726.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32252538/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Deligiannidis KM, Meltzer-Brody S, Maximos B, et al. 2023. Zuranolone for the Treatment of Postpartum Depression (SKYLARK). Am J Psychiatry 180(9):668-675.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37491937/",
+      "accessedDate": "2026-05-12"
+    }
+  ],
+
+  "images": []
+}
