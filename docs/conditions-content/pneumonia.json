@@ -1,0 +1,477 @@
+{
+  "_meta": {
+    "slug": "pneumonia",
+    "tier": 1,
+    "headTerm": "pneumonia",
+    "longTailKeywords": [
+      "pneumonia symptoms",
+      "pneumonia treatment",
+      "pneumonia causes",
+      "walking pneumonia",
+      "bacterial pneumonia",
+      "viral pneumonia",
+      "pneumonia vs bronchitis",
+      "community-acquired pneumonia",
+      "aspiration pneumonia",
+      "pneumonia recovery time"
+    ],
+    "primarySpecialty": "Pulmonology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2019 ATS/IDSA CAP guideline, 2023 ERS/ESCMID HAP guideline, GBD 2019 lower respiratory infection estimates, CDC Active Bacterial Core surveillance, and CURB-65/PSI primary literature."
+  },
+
+  "h1Title": "Pneumonia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Pulmonology",
+
+  "heroOverview": "Pneumonia is an infection of the alveolar airspaces of the lung, most often bacterial or viral, that fills those airspaces with inflammatory fluid and pus and impairs oxygen exchange. It causes roughly 1.4 million emergency-department visits and 41,000 deaths each year in the United States, and it remains the single largest infectious killer of children under five worldwide (around 700,000 deaths in 2019, per GBD). The classic presentation is cough productive of purulent sputum, fever, pleuritic chest pain, and shortness of breath that develops over hours to days. Severity ranges from outpatient walking pneumonia to ICU-level respiratory failure, and triage tools such as CURB-65 and the Pneumonia Severity Index guide the decision to admit. Treatment is antibiotics for bacterial pneumonia, supportive care for viral pneumonia, and supplemental oxygen for anyone whose saturation falls below 92%.",
+
+  "keyStats": {
+    "prevalence": "~1.4 million US ED visits and 1.5 million hospitalizations per year (CDC 2018-2019)",
+    "demographics": "Adults ≥65 and children <5 carry the highest incidence; men have ~30% higher hospitalization rates",
+    "avgAge": "Median hospitalization age 65; childhood peak before age 2",
+    "globalCases": "~450 million cases per year; ~2.5 million deaths globally (GBD 2019, all ages)"
+  },
+
+  "definition": "Pneumonia (ICD-10: J18 for unspecified organism, J12-J17 by pathogen, J15 for bacterial pneumonia, J84 for atypical patterns) is an acute inflammation of the lung parenchyma in which alveoli — the gas-exchange sacs at the end of the airways — fill with neutrophils, edema fluid, fibrin, and microbial debris. The consolidation that results blocks oxygen from crossing into pulmonary capillaries, which is why hypoxia is the cardinal physiologic finding. Pneumonia is classified by where it was acquired (community-acquired, hospital-acquired, ventilator-associated, or healthcare-associated), by the offending organism (typical bacterial such as Streptococcus pneumoniae; atypical bacterial such as Mycoplasma pneumoniae and Legionella; viral such as influenza, RSV, and SARS-CoV-2; fungal in immunocompromised hosts), and by anatomic pattern on imaging (lobar, bronchopneumonia, interstitial, cavitary). The 2019 ATS/IDSA guideline is the operational reference for community-acquired pneumonia in adults; pediatric guidelines come from the IDSA/PIDS. Pulmonologists, infectious-disease specialists, and intensivists co-manage severe cases, but most pneumonia is treated by primary care or hospital medicine.",
+
+  "typesClassification": [
+    { "type": "Community-acquired pneumonia (CAP)", "description": "Infection acquired outside a healthcare setting. Streptococcus pneumoniae remains the most common typical bacterial cause; Mycoplasma and viral pneumonia dominate in younger adults. Accounts for the bulk of cases worldwide." },
+    { "type": "Hospital-acquired pneumonia (HAP)", "description": "Develops 48+ hours after hospital admission. More likely to involve Gram-negative bacilli (Pseudomonas, Klebsiella) and methicillin-resistant Staphylococcus aureus. Carries a mortality of 20-30%." },
+    { "type": "Ventilator-associated pneumonia (VAP)", "description": "Develops 48+ hours after endotracheal intubation. Incidence is 5-15 cases per 1,000 ventilator-days. Multidrug-resistant pathogens are common; mortality 25-50%." },
+    { "type": "Aspiration pneumonia", "description": "Follows inhalation of oropharyngeal or gastric contents into the lower airway. Common in patients with stroke, dementia, alcohol misuse, or post-operative impaired consciousness. Often polymicrobial with anaerobic involvement." },
+    { "type": "Atypical (walking) pneumonia", "description": "Caused by Mycoplasma pneumoniae, Chlamydophila pneumoniae, or Legionella. Patients are often ambulatory with low-grade fever, dry cough, and headache; chest imaging may look worse than the patient feels." },
+    { "type": "Pneumonia in immunocompromised hosts", "description": "Includes Pneumocystis jirovecii in untreated HIV, invasive aspergillosis in neutropenic patients, and cytomegalovirus in transplant recipients. Requires targeted antimicrobial therapy and often bronchoscopy." }
+  ],
+
+  "primarySymptoms": [
+    "Cough productive of yellow, green, rust-colored, or blood-tinged sputum, persisting for several days and worsening rather than improving.",
+    "Fever with shaking chills, often spiking to 38.5-40°C and accompanied by drenching sweats; older adults may instead present hypothermic.",
+    "Pleuritic chest pain — a sharp, localized chest discomfort that worsens with deep breaths or coughing, indicating pleural-surface inflammation.",
+    "Shortness of breath at rest or with minimal exertion; in severe cases, room-air oxygen saturation falls below 92%.",
+    "Tachypnea (respiratory rate >24/min) and tachycardia (heart rate >100/min) reflecting the body's compensatory response to hypoxia.",
+    "Fatigue and malaise that can be profound, with many patients describing the inability to climb a single flight of stairs.",
+    "Confusion or new-onset disorientation, especially in adults over 65 — sometimes the only obvious symptom in this group.",
+    "Loss of appetite, nausea, and vomiting, particularly in children and the elderly.",
+    "Cyanosis (bluish tint of lips or fingertips) in severe pneumonia with significant hypoxemia — a late and concerning sign.",
+    "Grunting respirations, nasal flaring, or chest retractions in infants and young children, reflecting work of breathing."
+  ],
+
+  "earlyWarningSigns": [
+    "A viral upper-respiratory illness that suddenly worsens around day 5-7 with a second fever spike and productive cough (post-influenza bacterial pneumonia)",
+    "Persistent fever beyond 3 days in a child with an existing cold or ear infection",
+    "Mild breathlessness on exertion that progresses to breathlessness at rest within 48 hours",
+    "Increased respiratory rate noted on a smartwatch or pulse oximeter (>22/min sustained) in a recovering bronchitis patient"
+  ],
+
+  "emergencySigns": [
+    "Respiratory rate ≥30/min, room-air SpO2 <90%, or visible cyanosis — admit immediately for oxygen and IV antibiotics",
+    "Systolic blood pressure <90 mmHg, mental status change, or severe dehydration — sepsis must be assumed; treat per surviving sepsis bundle",
+    "Hemoptysis with chest pain and a single hot, swollen leg — pulmonary embolism with infarction can mimic pneumonia and warrants urgent CT pulmonary angiography",
+    "Stridor, drooling, or inability to swallow secretions — suggests epiglottitis or retropharyngeal abscess rather than typical pneumonia",
+    "In a child: nasal flaring, grunting, head bobbing, intercostal retractions, or SpO2 <92% — pediatric severe pneumonia"
+  ],
+
+  "causes": [
+    {
+      "cause": "Streptococcus pneumoniae",
+      "description": "The pneumococcus is the leading typical bacterial cause of community-acquired pneumonia worldwide and remains the most common organism identified in hospitalized adults. Polysaccharide capsule virulence and serotype distribution drive vaccine design (PCV15, PCV20, PPSV23)."
+    },
+    {
+      "cause": "Respiratory viruses",
+      "description": "Influenza A and B, respiratory syncytial virus, SARS-CoV-2, human metapneumovirus, parainfluenza, rhinovirus, and adenovirus together account for 20-40% of identified CAP. Viral pneumonia can be primary or set the stage for secondary bacterial superinfection."
+    },
+    {
+      "cause": "Atypical bacteria",
+      "description": "Mycoplasma pneumoniae, Chlamydophila pneumoniae, and Legionella pneumophila lack a true cell wall or live intracellularly, which makes beta-lactams ineffective. They cause roughly 15-20% of outpatient CAP and present with prominent extrapulmonary symptoms."
+    },
+    {
+      "cause": "Aspiration of oropharyngeal contents",
+      "description": "Microaspiration is common in healthy adults but cleared by ciliary defenses. When swallowing is impaired (stroke, dementia, alcohol, anesthesia) or large-volume aspiration occurs, anaerobes, viridans streptococci, and Gram-negative rods seed dependent lung segments."
+    },
+    {
+      "cause": "Hospital and ventilator exposure",
+      "description": "Endotracheal tubes, mechanical ventilation, broad-spectrum antibiotic pressure, and contact with healthcare environments shift the microbiome toward multidrug-resistant Gram-negatives (Pseudomonas aeruginosa, Klebsiella, Acinetobacter) and MRSA."
+    },
+    {
+      "cause": "Fungal infection in immunocompromised hosts",
+      "description": "Pneumocystis jirovecii, Aspergillus species, Cryptococcus, and endemic mycoses (Histoplasma, Coccidioides) cause pneumonia in patients with HIV/AIDS, transplant recipients, or those on prolonged corticosteroids or biologics."
+    },
+    {
+      "cause": "Tuberculosis and other mycobacteria",
+      "description": "Mycobacterium tuberculosis still causes ~10 million new cases per year globally (WHO 2023). It produces a chronic, often cavitary pneumonia and must be considered in any subacute cough lasting more than 2-3 weeks, especially with night sweats or weight loss."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age ≥65 or <5", "category": "non-modifiable", "description": "Immune senescence in older adults and immature immunity in young children raise both incidence and case-fatality. US hospitalization rates for pneumonia in adults ≥65 are roughly 8× the working-age rate." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Smokers have 2-4× the risk of invasive pneumococcal disease versus never-smokers; smoking impairs mucociliary clearance and alveolar macrophage function." },
+    { "factor": "Chronic lung disease (COPD, asthma, bronchiectasis)", "category": "modifiable", "description": "Structural lung disease and chronic colonization with Haemophilus influenzae and Pseudomonas increase both incidence and the chance of harder-to-treat organisms." },
+    { "factor": "Immunosuppression", "category": "modifiable", "description": "HIV, hematologic malignancy, solid-organ transplant, biologics, and chronic corticosteroids ≥20 mg prednisone daily expand the pathogen list and raise mortality 3-5×." },
+    { "factor": "Heart failure and chronic kidney disease", "category": "modifiable", "description": "Both increase pneumonia incidence by impairing pulmonary clearance and cellular immunity, and they substantially worsen outcomes once pneumonia occurs." },
+    { "factor": "Recent influenza or COVID-19", "category": "modifiable", "description": "Influenza increases the risk of secondary bacterial pneumonia (especially Staphylococcus aureus and pneumococcus) roughly 100-fold during peak weeks; SARS-CoV-2 likewise increases bacterial coinfection risk." },
+    { "factor": "Aspiration risk (stroke, dementia, alcohol misuse, dysphagia)", "category": "modifiable", "description": "Impaired swallow or depressed consciousness allows oropharyngeal flora into the lower airway; aspiration pneumonia has 30-day mortality of 20-30% in older adults." },
+    { "factor": "Diabetes mellitus", "category": "modifiable", "description": "Poorly controlled hyperglycemia impairs neutrophil function and increases risk of invasive pneumococcal disease and Klebsiella pneumonia by roughly 25-50%." },
+    { "factor": "Alcohol use disorder", "category": "modifiable", "description": "Heavy alcohol use suppresses alveolar macrophages and impairs gag reflex; classically associated with Klebsiella pneumoniae and severe pneumococcal disease with bacteremia." },
+    { "factor": "Crowded living and air pollution", "category": "environmental", "description": "Long-term care, prisons, military barracks, and homes burning solid fuel raise both transmission and incidence; ambient PM2.5 exposure is now the leading global environmental risk factor for lower respiratory infections (GBD 2019)." }
+  ],
+
+  "affectedDemographics": [
+    "US incidence: 24.8 cases per 10,000 adults annually; rate rises to >100 per 10,000 in adults ≥65 (CDC EPIC study)",
+    "Children under 5 in low-income countries carry the largest disease burden; ~80% of pediatric pneumonia deaths occur in sub-Saharan Africa and South Asia",
+    "Indigenous populations (Native American, Aboriginal Australian, Maori) have invasive pneumococcal disease rates 3-10× the national average due to crowding and lower vaccination coverage",
+    "Men have ~30% higher pneumonia hospitalization rates than women across most age groups",
+    "Healthcare and long-term-care exposure shifts the pathogen mix toward resistant Gram-negatives and MRSA"
+  ],
+
+  "diagnosisOverview": "Pneumonia is a clinical diagnosis confirmed by imaging. The workup begins with a focused history (onset, sputum character, travel, sick contacts, vaccinations, immunosuppression) and a physical exam that may reveal focal crackles, bronchial breathing, dullness to percussion, or increased tactile fremitus over the consolidated lung. Vital signs and pulse oximetry establish severity. The single most important test is a chest radiograph: a new opacity confirms the diagnosis, and the pattern (lobar, multifocal, interstitial, cavitary) narrows the pathogen list. When chest X-ray is equivocal or the patient is severely ill, CT chest is more sensitive and is now the preferred modality in many emergency departments. Bloodwork includes CBC, basic metabolic panel, lactate, and procalcitonin; an elevated procalcitonin supports bacterial etiology and helps with antibiotic stewardship. Severity is scored with CURB-65 or the Pneumonia Severity Index to decide outpatient vs ward vs ICU disposition. Pathogen-specific testing (sputum Gram stain and culture, blood cultures, urinary pneumococcal and Legionella antigens, respiratory viral PCR panel, COVID-19 testing) is reserved for hospitalized or severe cases per the 2019 ATS/IDSA guideline. Empirical antibiotic therapy is started while results are pending.",
+
+  "diagnosticTests": [
+    { "test": "Chest X-ray (PA and lateral)", "purpose": "Confirms diagnosis by demonstrating new pulmonary infiltrate. Distinguishes lobar consolidation, bronchopneumonia, interstitial pattern, cavitation, and pleural effusion.", "whatToExpect": "Two quick images while standing if possible. Takes about 5 minutes. Results read within 30-60 minutes in most emergency departments." },
+    { "test": "Pulse oximetry and arterial blood gas", "purpose": "Quantifies hypoxemia and detects hypercapnia or acidemia in severe pneumonia. Drives the decision to admit and to escalate oxygen therapy.", "whatToExpect": "A clip on the fingertip for pulse oximetry. ABG is a brief radial-artery sample with a small needle; mildly uncomfortable for under a minute." },
+    { "test": "CBC, BMP, procalcitonin, and lactate", "purpose": "White cell count and procalcitonin support bacterial etiology; elevated lactate or renal dysfunction flags severe sepsis; BMP guides fluid management.", "whatToExpect": "A standard blood draw. Results in 30-90 minutes in most hospital labs." },
+    { "test": "Sputum Gram stain and culture", "purpose": "Identifies causative bacteria and antibiotic susceptibilities. Highest yield in patients producing purulent sputum prior to antibiotics.", "whatToExpect": "Cough a deep sample into a sterile cup before the first antibiotic dose. Gram stain available within an hour; culture takes 24-72 hours." },
+    { "test": "Blood cultures (×2 sets)", "purpose": "Detects bacteremia, which complicates 10-15% of pneumococcal pneumonia and changes treatment duration. Recommended for hospitalized severe CAP.", "whatToExpect": "Two blood draws from different sites before the first antibiotic dose. Preliminary results in 24-48 hours." },
+    { "test": "Urinary pneumococcal and Legionella antigen tests", "purpose": "Rapid, sensitive detection of these two organisms in hospitalized patients. Results available within hours and can narrow empirical therapy.", "whatToExpect": "A single urine sample. No fasting needed; results back the same day." },
+    { "test": "Respiratory viral PCR panel (including SARS-CoV-2 and influenza)", "purpose": "Identifies viral pathogens that change isolation status and may trigger antiviral therapy (oseltamivir for influenza; nirmatrelvir-ritonavir for early COVID-19 in at-risk adults).", "whatToExpect": "A nasopharyngeal or oropharyngeal swab, briefly uncomfortable. Results within 1-4 hours in most hospitals." },
+    { "test": "CT chest (high-resolution or with contrast)", "purpose": "Used when chest X-ray is normal but suspicion remains, when complications (abscess, empyema) are suspected, or when an underlying mass needs exclusion in older smokers.", "whatToExpect": "A 5-10 minute scan with breath-hold. IV contrast may be used if pulmonary embolism is on the differential." }
+  ],
+
+  "treatmentOverview": "Treatment combines targeted antimicrobial therapy, oxygen support, and management of complications. For outpatient community-acquired pneumonia in previously healthy adults without comorbidities, the 2019 ATS/IDSA guideline recommends amoxicillin, doxycycline, or a macrolide where local pneumococcal macrolide resistance is below 25%. For outpatients with comorbidities, combination therapy with a beta-lactam plus a macrolide or doxycycline, or monotherapy with a respiratory fluoroquinolone (levofloxacin or moxifloxacin), is preferred. Inpatient non-severe CAP is treated with a beta-lactam (ceftriaxone or ampicillin-sulbactam) plus a macrolide, or a fluoroquinolone alone. Severe CAP requires the same coverage plus additional Pseudomonas or MRSA coverage when risk factors are present (recent IV antibiotics within 90 days, hospitalization within 90 days, prior colonization). Empiric MRSA coverage is vancomycin or linezolid; Pseudomonas coverage is piperacillin-tazobactam, cefepime, or meropenem. Antiviral therapy (oseltamivir for influenza, nirmatrelvir-ritonavir or remdesivir for COVID-19) is added when those organisms are identified or strongly suspected. Duration is 5 days for uncomplicated CAP that has stabilized clinically by day 3 — no longer 7-10 days as historically taught. Supplemental oxygen is titrated to SpO2 ≥92% (≥88% in COPD). Adjunctive corticosteroids reduce 28-day mortality in severe CAP (CAPE COD trial 2023, NEJM). Vaccination — annual influenza, pneumococcal PCV20 or PCV15+PPSV23, and SARS-CoV-2 — remains the primary prevention strategy. Hand hygiene, smoking cessation, and dental hygiene reduce aspiration-related disease.",
+
+  "medicalTreatments": [
+    { "name": "Amoxicillin (500 mg-1 g three times daily)", "description": "First-line outpatient therapy for previously healthy adults with non-severe CAP. Covers Streptococcus pneumoniae well in regions where penicillin susceptibility is preserved.", "effectiveness": "Clinical success ~90% in mild outpatient CAP; covers ~80% of typical CAP pathogens when atypical coverage is not required." },
+    { "name": "Doxycycline (100 mg twice daily)", "description": "Outpatient option for adults with non-severe CAP, especially when atypical coverage is needed or in penicillin allergy. Active against pneumococcus and most atypicals.", "effectiveness": "Non-inferior to macrolides in outpatient CAP per multiple RCTs; cure rates 85-90%." },
+    { "name": "Ceftriaxone (1-2 g IV daily) plus azithromycin (500 mg IV/PO daily)", "description": "Standard inpatient combination for non-severe CAP. Covers typical pneumococcus, Haemophilus, Moraxella, and atypical pathogens including Legionella.", "effectiveness": "Reduces 30-day mortality by 30-50% versus beta-lactam alone in observational and trial data for severe CAP." },
+    { "name": "Levofloxacin (750 mg IV/PO daily) or moxifloxacin (400 mg IV/PO daily)", "description": "Respiratory fluoroquinolone monotherapy alternative for inpatient CAP. Covers typical and atypical pathogens. Reserve where beta-lactam/macrolide combination is unsuitable.", "effectiveness": "Comparable cure rates (~90%) to combination therapy in landmark inpatient CAP trials; tendinopathy and Clostridioides difficile risk warrant judicious use." },
+    { "name": "Piperacillin-tazobactam (4.5 g IV every 6-8 hours)", "description": "Anti-pseudomonal beta-lactam used in severe CAP, HAP, or VAP with risk factors for Pseudomonas. Often combined with an aminoglycoside or fluoroquinolone for double coverage in critically ill patients.", "effectiveness": "Cure rate 70-85% in HAP/VAP when used with appropriate de-escalation by day 3 culture results." },
+    { "name": "Vancomycin (15-20 mg/kg IV every 8-12 hours, trough 15-20)", "description": "Empirical MRSA coverage in severe CAP with risk factors, HAP/VAP, or post-influenza necrotizing pneumonia. Linezolid 600 mg IV every 12 hours is an alternative with comparable efficacy.", "effectiveness": "Clinical cure 60-80% in MRSA pneumonia; linezolid may achieve modestly higher cure in proven MRSA per the ZEPHyR trial." },
+    { "name": "Oseltamivir (75 mg twice daily for 5 days)", "description": "Neuraminidase inhibitor for confirmed or suspected influenza pneumonia. Most effective within 48 hours of symptom onset but still recommended in severe or hospitalized cases regardless of duration.", "effectiveness": "Reduces hospitalization, ICU admission, and mortality in severe influenza per CDC and meta-analyses; modest effect on illness duration in outpatients." },
+    { "name": "Adjunctive hydrocortisone (200 mg/day continuous infusion for 4-7 days, then tapered)", "description": "Reduces 28-day mortality in severe CAP requiring ICU support, per the 2023 CAPE COD trial. Not recommended for mild or moderate CAP.", "effectiveness": "Absolute risk reduction in 28-day mortality of ~5.6 percentage points (6.2% vs 11.9%) in CAPE COD." }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Tube thoracostomy (chest tube) for complicated parapneumonic effusion or empyema", "description": "Pleural drainage is indicated when ultrasound shows loculations, frank pus, pH <7.2, or glucose <40. Intrapleural fibrinolytics (tPA + DNase) may be added if drainage is inadequate.", "successRate": "Resolution in 70-80% with chest tube alone; tPA-DNase improves drainage and reduces need for surgery (MIST-2 trial)." },
+    { "name": "Video-assisted thoracoscopic surgery (VATS) decortication", "description": "Surgical removal of pleural fibrinous rind for chronic empyema or failed pleural drainage. Restores lung expansion and prevents trapped lung.", "successRate": "85-95% durable resolution in series of patients failing medical/chest-tube management." },
+    { "name": "Surgical resection for lung abscess refractory to antibiotics", "description": "Rarely needed; most lung abscesses respond to 4-8 weeks of antibiotics. Surgery is reserved for large (>6 cm), persistent abscesses or suspected underlying malignancy.", "successRate": "Curative in nearly all surgically resected cases; <5% of lung abscesses ever require resection." }
+  ],
+
+  "alternativeTreatments": [],
+  "linkedTreatmentSlugs": [],
+
+  "whySeeSpecialist": "Refer to a pulmonologist for pneumonia that fails to improve after 72 hours of appropriate antibiotics, for recurrent pneumonia in the same lobe (which may signal an obstructing tumor or bronchiectasis), for cavitary or necrotizing disease, and for any patient with risk factors for tuberculosis. Infectious-disease consultation is appropriate for severe CAP with suspected resistant pathogens, immunocompromised hosts, and patients with unexplained eosinophilic pneumonia or fungal disease.",
+  "doctorSelectionGuide": "Most uncomplicated pneumonia is managed by primary care or hospitalists. When choosing a pulmonologist for complex or recurrent pneumonia, look for board certification in pulmonary and critical care medicine, hospital affiliation with bronchoscopy and interventional pulmonology services, and experience with the specific complication you face (post-obstructive pneumonia, immunocompromised host pneumonia, suspected nontuberculous mycobacterial disease).",
+
+  "hospitalCriteria": [
+    "Inpatient pulmonary service with 24/7 bronchoscopy availability",
+    "ICU capability with mechanical ventilation and HFNC/NIV protocols",
+    "On-site interventional radiology for image-guided drainage",
+    "Microbiology lab with rapid pathogen identification (MALDI-TOF, syndromic PCR panels)",
+    "Antimicrobial stewardship program with infectious-disease coverage"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Get the recommended pneumococcal vaccine — PCV20 alone, or PCV15 followed by PPSV23, for all adults ≥65 and for younger adults with chronic heart, lung, liver, or kidney disease, diabetes, immunocompromise, or smoking history.",
+    "Take the annual influenza vaccine — it lowers pneumonia hospitalization by 30-50% in older adults and pregnant women per multiple meta-analyses.",
+    "Stay current with SARS-CoV-2 vaccination, particularly the updated formulations recommended each fall for adults ≥65 or immunocompromised.",
+    "Stop smoking — pneumococcal disease risk falls within 5 years of cessation and approaches never-smoker risk by 10 years.",
+    "Treat oral and dental disease — chronic periodontal disease seeds oropharyngeal flora that aspirate into the lung and is an independent risk factor for pneumonia in older adults.",
+    "Manage chronic conditions: tight diabetes control, COPD inhalers as prescribed, heart-failure compensation, and timely treatment of dysphagia all measurably reduce pneumonia risk."
+  ],
+
+  "lifestyleModifications": [
+    "Practice hand hygiene during respiratory virus season; alcohol-based sanitizer or 20-second handwashing after coughing or contact with sick contacts.",
+    "Avoid prolonged exposure to indoor air pollution — particularly second-hand smoke and biomass-fuel cooking smoke without ventilation.",
+    "Sleep with the head of the bed elevated 30° if you have severe gastroesophageal reflux or known dysphagia, to reduce aspiration risk.",
+    "Maintain adequate hydration — dehydration thickens respiratory secretions and impairs mucociliary clearance.",
+    "If you live with someone immunocompromised, mask in shared indoor spaces when you have respiratory symptoms, and test for influenza, RSV, and COVID-19 early.",
+    "Use a peak-flow meter or pulse oximeter at home if you have chronic lung disease — early detection of falling SpO2 or peak flow shortens time to treatment.",
+    "Build cardiopulmonary reserve with regular moderate aerobic exercise; fit older adults have measurably better pneumonia outcomes."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate dietary protein (1.0-1.2 g/kg/day) to support immune function, particularly in adults over 65",
+      "Vitamin D supplementation if deficient (serum 25-OH-D <20 ng/mL) — observational data link deficiency to higher pneumonia risk",
+      "Zinc-containing foods (legumes, seeds, lean meats) to support mucosal immunity",
+      "Fluids sufficient to keep urine pale yellow — most adults need ~30 mL/kg/day during respiratory illness",
+      "Mediterranean-style eating pattern, which is associated with ~30% lower pneumonia hospitalization risk in older adults"
+    ],
+    "avoid": [
+      "Excessive alcohol — more than two drinks daily impairs alveolar macrophage function and increases aspiration risk",
+      "Sugary drinks and ultra-processed food that displace nutrient-dense calories during recovery",
+      "Restrictive elimination diets during acute illness, which can compound malnutrition risk",
+      "Eating in a fully reclined position if you have known dysphagia or reflux"
+    ]
+  },
+  "exerciseGuidelines": "During acute pneumonia, rest is appropriate until fever resolves and oxygen saturation is stable. Begin low-intensity walking by week 2 in mild cases. Pulmonary rehabilitation — 6-8 weeks of supervised exercise plus education — measurably accelerates functional recovery after severe pneumonia, especially in older adults and those with underlying COPD.",
+
+  "dailyManagement": [
+    "Take each antibiotic dose on schedule and complete the full course even if you feel better by day 3",
+    "Track temperature, respiratory rate, and pulse oximetry twice daily during the first week",
+    "Drink fluids steadily through the day; aim for pale yellow urine",
+    "Use acetaminophen 650 mg every 6 hours for fever and pleuritic discomfort; avoid suppressing productive cough with strong cough syrups",
+    "Sleep with two pillows or in a recliner if breathing is more comfortable upright",
+    "Return promptly to medical care if breathing worsens, fever returns after initial improvement, or new confusion develops"
+  ],
+
+  "prognosis": "Mortality from community-acquired pneumonia ranges from under 1% in healthy outpatients to 25-50% in patients requiring ICU admission and mechanical ventilation. The 2019 ATS/IDSA guideline and CURB-65 stratify risk: CURB-65 of 0-1 carries 30-day mortality below 3%; a score of 4-5 carries mortality of 30% or higher. Clinical stability — defined as resolution of fever, normalization of vital signs, ability to take oral medication, and SpO2 ≥90% on room air — is typically reached by day 3 in responders; failure to stabilize by day 3 should prompt reassessment for resistant organisms, structural disease, parapneumonic effusion, or alternative diagnosis. Radiographic resolution lags clinical recovery by 4-8 weeks. Long-term, severe pneumonia in older adults is independently associated with a 30-50% increased risk of cardiovascular events in the year after recovery and accelerated functional decline; pulmonary rehabilitation and post-discharge follow-up at 4-6 weeks improve outcomes.",
+
+  "recoveryTimeline": "Most patients with uncomplicated outpatient CAP feel substantially better within 5-7 days and return to baseline activity by 2-3 weeks. Fatigue and reduced exercise tolerance often persist 4-6 weeks. Radiographic abnormalities resolve fully in 6-8 weeks in adults under 50 and may take 12 weeks or longer in older adults or those with comorbidities. Patients hospitalized for severe pneumonia typically require 8-12 weeks for full functional recovery and may benefit from pulmonary rehabilitation.",
+
+  "complications": [
+    "Parapneumonic pleural effusion or empyema — develops in 20-40% of hospitalized pneumonia; loculated or purulent effusions need drainage. Detect with chest ultrasound and persistent fever beyond day 3.",
+    "Lung abscess or necrotizing pneumonia — cavitating disease, classically with Staphylococcus aureus, Klebsiella, or anaerobes. CT chest is diagnostic; prolonged antibiotics 4-8 weeks and occasionally surgery are required.",
+    "Acute respiratory distress syndrome (ARDS) — severe hypoxemic respiratory failure with bilateral infiltrates. Roughly 10-15% of severe CAP progresses to ARDS, with mortality of 30-45%.",
+    "Sepsis and septic shock — the most common driver of pneumonia mortality. Early recognition (qSOFA ≥2 or SIRS criteria) and bundle care within 1-3 hours of presentation improve survival.",
+    "Cardiovascular events — myocardial infarction, atrial fibrillation, and stroke occur in 10-30% of hospitalized pneumonia in older adults during admission or the following 90 days.",
+    "Long-term functional decline and recurrent pneumonia in older adults — particularly if not enrolled in post-discharge pulmonary or geriatric rehabilitation."
+  ],
+
+  "supportResources": [
+    { "name": "American Lung Association — Pneumonia", "url": "https://www.lung.org/lung-health-diseases/lung-disease-lookup/pneumonia", "description": "Patient-facing overview, vaccination information, and self-care guidance from the ALA." },
+    { "name": "CDC Pneumonia portal", "url": "https://www.cdc.gov/pneumonia/index.html", "description": "Pathogen-specific pages, vaccine schedules, and US surveillance data." },
+    { "name": "WHO Pneumonia fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/pneumonia", "description": "Global epidemiology, child-mortality data, and prevention guidance." },
+    { "name": "British Lung Foundation / Asthma + Lung UK", "url": "https://www.asthmaandlung.org.uk/conditions/pneumonia", "description": "Plain-English explanations of diagnosis and recovery for UK patients." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "bronchitis", "name": "Acute Bronchitis", "keyDifference": "Bronchitis inflames the larger airways but spares the alveoli, so chest X-ray is normal and pulse oximetry is preserved. Cough is dominant; high fever, focal crackles, and consolidation point to pneumonia rather than bronchitis." },
+    { "slug": "asthma", "name": "Asthma", "keyDifference": "Asthma causes wheeze and reversible airflow obstruction without infiltrate. Pneumonia produces focal infiltrate and crackles; both can coexist, and an asthma exacerbation triggered by viral infection can transition to pneumonia." },
+    { "slug": "copd", "name": "COPD Exacerbation", "keyDifference": "A COPD exacerbation worsens chronic dyspnea and sputum production without a new infiltrate; pneumonia adds a new opacity on chest X-ray and typically a higher fever and CRP." },
+    { "slug": "tuberculosis", "name": "Tuberculosis", "keyDifference": "TB classically causes a subacute cough over weeks, night sweats, weight loss, and upper-lobe cavitary disease, whereas bacterial pneumonia is days-acute with lower-lobe consolidation. Any cough longer than 2-3 weeks plus risk factors needs TB testing." },
+    { "slug": "lung-cancer", "name": "Lung Cancer", "keyDifference": "A post-obstructive pneumonia distal to a bronchial tumor may present identically to ordinary pneumonia but fails to clear radiographically by 6-8 weeks. Persistent or recurrent same-lobe pneumonia in a smoker mandates CT and bronchoscopy." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "copd", "name": "COPD" },
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "heart-failure", "name": "Heart Failure" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "bronchitis", "name": "Acute Bronchitis", "relevance": "Bronchitis is the most common viral lower respiratory infection and the closest mimic of mild pneumonia." },
+    { "slug": "copd", "name": "COPD", "relevance": "COPD is the strongest chronic lung-disease risk factor for pneumonia and the leading reason for HAP after exacerbation admission." },
+    { "slug": "asthma", "name": "Asthma", "relevance": "Severe or steroid-dependent asthma raises pneumonia risk and complicates antibiotic selection." },
+    { "slug": "tuberculosis", "name": "Tuberculosis", "relevance": "TB is on the differential of any subacute cough, especially in patients from endemic regions." },
+    { "slug": "lung-cancer", "name": "Lung Cancer", "relevance": "Post-obstructive pneumonia is sometimes the presenting feature of a previously undiagnosed lung cancer." }
+  ],
+
+  "faqs": [
+    {
+      "question": "How can I tell if I have pneumonia or just bronchitis?",
+      "answer": "Pneumonia is more likely when you have a fever above 38°C, breathlessness, focal chest pain, or oxygen saturation below 95%. Bronchitis causes cough and chest tightness but usually keeps oxygen saturation normal and lung exam clear. A chest X-ray is the single best way to tell them apart — pneumonia shows a new infiltrate, bronchitis does not.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to recover from pneumonia?",
+      "answer": "Most healthy adults with mild outpatient pneumonia feel meaningfully better in 5-7 days and return to normal activity in 2-3 weeks. Fatigue and reduced exercise tolerance often last 4-6 weeks. Older adults and those hospitalized for severe pneumonia commonly need 8-12 weeks for full recovery, and the chest X-ray can take 6-12 weeks to clear.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is pneumonia contagious?",
+      "answer": "The infection itself is not the same as a cold, but the pathogens that cause pneumonia spread by respiratory droplets and close contact. Influenza, RSV, SARS-CoV-2, Mycoplasma, and pneumococcus can pass between people. Risk drops sharply after 48 hours of effective antibiotic therapy for bacterial pneumonia and after the febrile period ends for viral pneumonia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need antibiotics for pneumonia?",
+      "answer": "Bacterial pneumonia requires antibiotics. Viral pneumonia does not respond to antibiotics, but it is difficult to be certain about cause clinically, so most patients receive empirical antibiotics until viral PCR and procalcitonin results return. Influenza-specific antivirals are added when influenza is confirmed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is walking pneumonia?",
+      "answer": "Walking pneumonia is a colloquial term for mild atypical pneumonia, usually caused by Mycoplasma pneumoniae or Chlamydophila pneumoniae. Patients feel ill enough to notice but well enough to stay on their feet. Symptoms include low-grade fever, headache, dry cough, and fatigue lasting weeks. Treatment is a macrolide or doxycycline.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I go to the emergency department for pneumonia?",
+      "answer": "Go to the emergency department if you have a respiratory rate above 30, oxygen saturation below 92%, confusion, low blood pressure, chest pain at rest, or persistent vomiting that prevents oral antibiotics. Children with grunting, retractions, or bluish lips need urgent care. Otherwise, primary care or urgent care is usually appropriate for evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which pneumonia vaccine should I get?",
+      "answer": "Adults 65 and older should receive PCV20 alone, or PCV15 followed by PPSV23 a year later. Adults 19-64 with chronic heart, lung, liver, or kidney disease, diabetes, smoking, immunocompromise, or cochlear implants should also receive a pneumococcal vaccine on the same schedule. The CDC ACIP recommendations are the operational reference.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pneumonia cause permanent lung damage?",
+      "answer": "Most uncomplicated pneumonia leaves no permanent damage. Severe pneumonia, ARDS, or necrotizing pneumonia can leave scarring, bronchiectasis, or reduced lung function. Older adults and those with underlying COPD are most at risk. Pulmonary function testing at 8-12 weeks helps quantify any residual loss.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between bacterial and viral pneumonia?",
+      "answer": "Bacterial pneumonia tends to cause higher fevers, productive purulent sputum, focal lobar consolidation on imaging, and elevated procalcitonin. Viral pneumonia more often causes diffuse interstitial infiltrates, lower procalcitonin, and prominent extrapulmonary symptoms such as muscle aches and sore throat. The distinction matters because only bacterial pneumonia responds to antibiotics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is pneumonia diagnosed?",
+      "answer": "Diagnosis combines symptoms (fever, cough, breathlessness), focal findings on lung exam, and a new infiltrate on chest X-ray or CT. Pulse oximetry, CBC, procalcitonin, and lactate quantify severity. Sputum culture, blood cultures, urinary antigens, and respiratory viral PCR identify the causative organism in hospitalized or severe cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get pneumonia?",
+      "answer": "Yes. Pneumonia is one of the leading infectious causes of death in children under five worldwide. Warning signs in children include fast breathing, chest indrawing, grunting, nasal flaring, and bluish lips. RSV, influenza, pneumococcus, and Mycoplasma are common causes. Vaccination, breastfeeding, and avoidance of indoor smoke are key prevention measures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pneumonia come back after treatment?",
+      "answer": "Yes. Recurrent pneumonia in the same lobe within a year suggests obstruction such as a tumor, foreign body, or bronchiectasis and warrants CT and bronchoscopy. Recurrent pneumonia in different lobes suggests immunodeficiency, aspiration, or chronic structural lung disease. Both patterns should trigger pulmonology referral.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is COVID-19 a type of pneumonia?",
+      "answer": "COVID-19 can cause viral pneumonia when SARS-CoV-2 infects the alveoli and produces bilateral ground-glass infiltrates and hypoxemia. Most COVID-19 infections do not progress to pneumonia, but those that do can become severe and may require oxygen, corticosteroids, and remdesivir or nirmatrelvir-ritonavir.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is aspiration pneumonia?",
+      "answer": "Aspiration pneumonia follows inhalation of oropharyngeal or stomach contents into the lung. It typically affects dependent lung segments and involves anaerobic and Gram-negative bacteria. Risk factors include stroke, dementia, seizures, alcohol use, dysphagia, and post-anesthesia states. Treatment includes antibiotics covering anaerobes and management of the underlying aspiration risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do older adults get pneumonia more often?",
+      "answer": "Aging weakens cough strength, alveolar macrophage function, and antibody response. Chronic diseases such as heart failure, COPD, and diabetes compound the risk. US adults 65 and older carry roughly 8 times the working-age hospitalization rate, and pneumonia is among the top five causes of death in this group.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I take steroids for pneumonia?",
+      "answer": "Adjunctive corticosteroids reduce 28-day mortality in severe community-acquired pneumonia requiring ICU support, based on the 2023 CAPE COD trial. They are not recommended for mild or moderate pneumonia. Patients with influenza pneumonia should generally avoid steroids unless ARDS or another indication is present.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long should antibiotics be taken for pneumonia?",
+      "answer": "For uncomplicated community-acquired pneumonia that has stabilized clinically by day 3, the 2019 ATS/IDSA guideline recommends 5 days of antibiotics. Severe pneumonia, complicated pneumonia with empyema or abscess, hospital-acquired pneumonia, and infections with Pseudomonas or MRSA require longer courses of 7-14 days or more.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pneumonia be prevented?",
+      "answer": "Yes, substantially. The pneumococcal vaccine, annual influenza vaccine, updated COVID-19 vaccine, smoking cessation, dental hygiene, and treatment of chronic lung and heart disease together lower pneumonia hospitalization risk by roughly 40-60% in older adults. Vaccination is the single most effective measure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the CURB-65 score?",
+      "answer": "CURB-65 is a five-point clinical score used to predict 30-day mortality in pneumonia. One point each for confusion, urea above 7 mmol/L, respiratory rate at least 30 per minute, low blood pressure, and age 65 or older. Scores of 0-1 are typically outpatient, 2 admit, and 3 or higher signal severe disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should a chest X-ray be repeated after pneumonia?",
+      "answer": "Routine follow-up X-rays in healthy adults under 50 are usually unnecessary if symptoms resolve. A repeat X-ray at 6-8 weeks is recommended in smokers over 50, patients with persistent symptoms, recurrent pneumonia in the same lobe, or any concern for an underlying mass. Persistent abnormality at 12 weeks warrants CT chest.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pneumonia cause heart problems?",
+      "answer": "Yes. Pneumonia triggers myocardial infarction, atrial fibrillation, heart failure exacerbation, or stroke in 10-30% of hospitalized older adults during the admission or the following 90 days. This is one reason pneumonia hospitalization is independently associated with increased one-year cardiovascular mortality.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Pneumonia (lung infection)",
+  "regionalNames": [
+    { "name": "Nimonia", "region": "India", "language": "Hindi" },
+    { "name": "Niumonia", "region": "India", "language": "Tamil" },
+    { "name": "Phupphoosa ka Sankraman", "region": "India", "language": "Hindi" }
+  ],
+
+  "searchTags": [
+    "pneumonia",
+    "lung infection",
+    "chest infection",
+    "bacterial pneumonia",
+    "viral pneumonia",
+    "walking pneumonia",
+    "double pneumonia",
+    "aspiration pneumonia",
+    "community-acquired pneumonia",
+    "CAP",
+    "hospital-acquired pneumonia",
+    "HAP",
+    "VAP",
+    "pneumococcus",
+    "atypical pneumonia"
+  ],
+
+  "symptomKeywords": [
+    "cough with phlegm",
+    "rust-colored sputum",
+    "high fever and chills",
+    "shortness of breath",
+    "chest pain with breathing",
+    "tiredness with cough",
+    "fast breathing",
+    "low oxygen saturation",
+    "confusion in older adult"
+  ],
+
+  "metaTitle": "Pneumonia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Pneumonia: cough with phlegm, fever, and breathlessness from lung infection. Symptoms, antibiotics, recovery, and vaccines reviewed by our medical board.",
+
+  "keywords": [
+    "pneumonia symptoms",
+    "pneumonia treatment",
+    "pneumonia antibiotics",
+    "walking pneumonia",
+    "bacterial pneumonia",
+    "viral pneumonia",
+    "pneumonia vs bronchitis",
+    "community-acquired pneumonia",
+    "aspiration pneumonia",
+    "pneumonia recovery time",
+    "pneumonia vaccine",
+    "CURB-65 score",
+    "pneumonia diagnosis",
+    "pneumonia X-ray"
+  ],
+
+  "lastReviewed": "2026-05-12",
+  "sources": [
+    {
+      "title": "Metlay JP, Waterer GW, Long AC, et al. 2019. Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America. Am J Respir Crit Care Med 200(7):e45-e67.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31573350/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Jain S, Self WH, Wunderink RG, et al. 2015. Community-Acquired Pneumonia Requiring Hospitalization among U.S. Adults (CDC EPIC Study). N Engl J Med 373(5):415-427.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26172429/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dequin PF, Meziani F, Quenot JP, et al. 2023. Hydrocortisone in Severe Community-Acquired Pneumonia (CAPE COD). N Engl J Med 388(21):1931-1941.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36942789/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Lim WS, van der Eerden MM, Laing R, et al. 2003. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study (CURB-65). Thorax 58(5):377-382.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12728155/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "GBD 2019 Lower Respiratory Infections Collaborators. 2022. Age-sex differences in the global burden of lower respiratory infections and risk factors, 1990-2019. Lancet Infect Dis 22(11):1626-1647.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35964613/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kalil AC, Metersky ML, Klompas M, et al. 2016. Management of Adults With Hospital-acquired and Ventilator-associated Pneumonia: 2016 Clinical Practice Guidelines by the IDSA and ATS. Clin Infect Dis 63(5):e61-e111.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27418577/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kobayashi M, Pilishvili T, Farrar JL, et al. 2023. Pneumococcal Vaccine for Adults Aged ≥19 Years: Recommendations of the ACIP. MMWR Recomm Rep 72(3):1-39.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37733738/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Pneumonia — Causes and Risk Factors. Last updated 2024.",
+      "url": "https://www.cdc.gov/pneumonia/about/causes.html",
+      "accessedDate": "2026-05-12"
+    }
+  ],
+
+  "images": []
+}
