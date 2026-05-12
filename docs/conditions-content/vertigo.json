@@ -1,0 +1,566 @@
+{
+  "_meta": {
+    "slug": "vertigo",
+    "tier": 1,
+    "headTerm": "vertigo",
+    "longTailKeywords": [
+      "vertigo symptoms",
+      "vertigo causes",
+      "vertigo treatment",
+      "bppv vertigo",
+      "epley maneuver",
+      "vestibular migraine",
+      "meniere vs vertigo",
+      "central vs peripheral vertigo",
+      "HINTS exam",
+      "vestibular rehabilitation"
+    ],
+    "primarySpecialty": "ENT / Neurology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against the 2017 AAO-HNS BPPV CPG (Bhattacharyya), 2020 AAO-HNS Meniere CPG, 2012 Barany vestibular migraine criteria (Lempert), 2015 Lopez-Escamez Meniere criteria, Kattah 2009 HINTS Stroke, Hilton 2014 Cochrane Epley review, Hillier 2015 Cochrane vestibular rehab review, Strupp 2013 vestibular neuritis NEJM, and Staab 2017 PPPD Barany criteria."
+  },
+
+  "h1Title": "Vertigo: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "ENT Specialist",
+
+  "heroOverview": "Vertigo is a false sense of motion — most often spinning — that arises when the brain receives mismatched balance signals from the inner ear, eyes, and joints. It accounts for roughly 4-5% of all primary care visits and affects about 20-30% of adults at least once in their lifetime, with prevalence rising sharply after age 60. Most cases are peripheral and benign: benign paroxysmal positional vertigo (BPPV) alone causes nearly half of all vertigo presentations and resolves with a 5-minute bedside maneuver. A minority — under 5% — are central and signal stroke, multiple sclerosis, or tumor, so the diagnostic priority is sorting peripheral from central causes quickly. Treatment ranges from particle-repositioning maneuvers and vestibular rehabilitation to migraine prophylaxis, diuretics, and, rarely, surgery.",
+
+  "keyStats": {
+    "prevalence": "Lifetime prevalence ~20-30% of adults; 12-month prevalence ~5%",
+    "demographics": "Women affected 2-3x more than men; incidence rises sharply after age 60",
+    "avgAge": "Peak onset 50-70 for BPPV; 30-50 for vestibular migraine and Meniere",
+    "globalCases": "BPPV alone affects ~10 million people in the US; vestibular disorders ~35% of adults over 40 globally"
+  },
+
+  "definition": "Vertigo (ICD-10: H81 for peripheral vestibular disorders; R42 for dizziness and giddiness not otherwise specified) is the illusion of movement — typically rotational — generated when the peripheral vestibular apparatus, the central vestibular pathways, or their integration with vision and proprioception is disrupted. It is a symptom, not a disease: the clinical task is identifying which of more than thirty named disorders is producing it. The peripheral vestibular system comprises the three semicircular canals and the otolith organs (utricle, saccule) of the inner ear and the vestibular nerve (CN VIII). Peripheral causes — BPPV, vestibular neuritis, labyrinthitis, Meniere disease — account for roughly 80% of presentations. Central causes — vestibular migraine, brainstem or cerebellar stroke, multiple sclerosis plaque, cerebellar tumor, basilar migraine — account for the remainder but carry disproportionate morbidity if missed. Vertigo is distinguished from non-spinning dizziness (presyncope, disequilibrium, light-headedness), which has different differentials. The 2015 Barany Society International Classification of Vestibular Disorders (ICVD) provides the standard diagnostic taxonomy used by otolaryngologists and neurologists worldwide.",
+
+  "typesClassification": [
+    { "type": "Benign Paroxysmal Positional Vertigo (BPPV)", "description": "Brief (under 60 seconds) spinning triggered by head-position change — rolling over in bed, looking up, bending forward. Caused by displaced otoconia in a semicircular canal; the posterior canal is involved in 85-90% of cases. Confirmed by Dix-Hallpike maneuver." },
+    { "type": "Vestibular Neuritis", "description": "Sudden, severe continuous vertigo lasting days, with nausea and gait imbalance but normal hearing. Caused by inflammation of the vestibular nerve, often viral. Hearing is spared (vs labyrinthitis, which adds hearing loss)." },
+    { "type": "Meniere Disease", "description": "Episodes of spinning vertigo lasting 20 minutes to 12 hours, with fluctuating low-frequency hearing loss, tinnitus, and aural fullness in the affected ear. Caused by endolymphatic hydrops; criteria standardised by Lopez-Escamez 2015 / AAO-HNS 2020." },
+    { "type": "Vestibular Migraine", "description": "Recurrent vertigo episodes lasting 5 minutes to 72 hours in a patient with current or prior migraine headache, often without headache during the vertigo itself. Now the most common cause of recurrent spontaneous vertigo per Barany 2012 criteria (Lempert et al.)." },
+    { "type": "Central Vertigo (stroke, MS, tumor)", "description": "Vertigo from posterior circulation stroke, cerebellar lesion, brainstem demyelination, or vestibular schwannoma. Often accompanied by other neurological signs (dysarthria, diplopia, ataxia, focal weakness) and is identified rapidly by the HINTS exam." },
+    { "type": "Persistent Postural-Perceptual Dizziness (PPPD)", "description": "Chronic non-spinning dizziness and unsteadiness lasting three months or more, worsened by upright posture, motion, and complex visual environments. Often follows an acute vestibular event (Staab 2017 Barany criteria)." }
+  ],
+
+  "primarySymptoms": [
+    "A spinning sensation — either the room spinning around the person or the person feeling they are spinning — that is the defining feature of true vertigo and distinguishes it from light-headedness or unsteadiness.",
+    "Brief positional spinning lasting 10-60 seconds and triggered by rolling over in bed, looking up, or bending down — the classic BPPV pattern.",
+    "Sudden, severe continuous spinning lasting hours to days with intense nausea and the inability to stand, typical of vestibular neuritis or acute labyrinthitis.",
+    "Episodes of spinning lasting 20 minutes to 12 hours accompanied by fluctuating hearing loss, tinnitus, and a feeling of pressure or fullness in one ear — the Meniere triad.",
+    "Nausea and vomiting that accompany most acute vertigo episodes, sometimes severe enough to cause dehydration during prolonged spells.",
+    "Horizontal or rotary nystagmus visible on examination — involuntary eye movements that beat in a characteristic direction depending on the affected canal or nerve.",
+    "Gait imbalance and a tendency to veer toward the affected side, with patients describing the floor as tilting or moving beneath them.",
+    "Visual blurring or oscillopsia (the sensation that the visual world is bouncing) when walking or moving the head, common in bilateral vestibular loss.",
+    "Recurrent shorter vertigo episodes lasting minutes to hours, frequently with prior or current migraine headaches, photophobia, or visual aura — pointing to vestibular migraine.",
+    "Persistent unsteadiness and visual motion sensitivity lasting three months or longer after an acute episode, which suggests persistent postural-perceptual dizziness (PPPD).",
+    "A sense of dropping or being pulled to one side without true spinning, occasionally seen in otolith dysfunction or central causes."
+  ],
+
+  "earlyWarningSigns": [
+    "A first-ever brief spinning sensation when rolling over in bed at night — the prodrome of BPPV before a full positional attack",
+    "Recurrent unilateral aural fullness or muffled hearing preceding a vertigo episode by hours or days — typical Meniere prodrome",
+    "Visual motion sensitivity in supermarkets or busy traffic, with mild head-motion-triggered queasiness — early vestibular migraine or PPPD",
+    "A short, sudden moment of imbalance with double vision, slurred speech, or facial droop — possible posterior-circulation TIA warranting urgent assessment",
+    "Persistent low-frequency hearing loss confirmed on audiogram before any vertigo, in a patient with migraine history"
+  ],
+
+  "emergencySigns": [
+    "Vertigo with new-onset severe headache, neck pain, or thunderclap headache — concern for vertebral artery dissection or posterior fossa hemorrhage",
+    "Vertigo accompanied by dysarthria, diplopia, dysphagia, focal limb weakness, facial droop, or loss of consciousness — possible brainstem or cerebellar stroke; activate stroke pathway",
+    "Vertigo with vertical or direction-changing nystagmus, normal head-impulse test, or skew deviation on HINTS examination — central pattern with up to 100% sensitivity for stroke (Kattah 2009)",
+    "Sudden sensorineural hearing loss accompanying vertigo — labyrinthine artery occlusion or labyrinthitis; needs same-day audiology and steroids",
+    "Vertigo after recent head or neck trauma, even mild — possible perilymph fistula, temporal bone fracture, or vertebral artery injury"
+  ],
+
+  "causes": [
+    {
+      "cause": "Displaced otoconia in the semicircular canals (BPPV)",
+      "description": "Calcium carbonate crystals from the utricular macula become dislodged and float into a semicircular canal — most often the posterior canal. Head-position changes move the crystals, generating false motion signals. BPPV causes approximately 20-30% of all vertigo and up to 50% in older adults."
+    },
+    {
+      "cause": "Viral or post-viral inflammation of the vestibular nerve",
+      "description": "Vestibular neuritis is thought to result from reactivation of herpes simplex virus type 1 in the vestibular ganglion, producing acute unilateral vestibular hypofunction. Onset is often days after a viral upper-respiratory illness."
+    },
+    {
+      "cause": "Endolymphatic hydrops (Meniere disease)",
+      "description": "Excess endolymph distends the membranous labyrinth, intermittently rupturing membranes and producing the cluster of vertigo, fluctuating low-frequency hearing loss, tinnitus, and aural fullness. Diagnostic criteria from Lopez-Escamez 2015 require two or more vertigo episodes of at least 20 minutes plus documented sensorineural hearing loss."
+    },
+    {
+      "cause": "Migraine-related central vestibular dysfunction",
+      "description": "Vestibular migraine reflects transient cortical and brainstem hyperexcitability affecting central vestibular processing, often without simultaneous headache. The Barany 2012 criteria require at least five vertigo episodes lasting 5 minutes to 72 hours, with migrainous features in at least half, in a patient with a current or past migraine diagnosis."
+    },
+    {
+      "cause": "Posterior circulation stroke or transient ischemic attack",
+      "description": "Occlusion or stenosis of the vertebrobasilar system (PICA, AICA, or basilar artery) infarcts the cerebellum, brainstem, or labyrinth. Posterior strokes account for under 5% of acute vertigo but cause most preventable morbidity. The HINTS exam outperforms early MRI for excluding stroke within the first 48 hours."
+    },
+    {
+      "cause": "Vestibular schwannoma and other cerebellopontine angle tumors",
+      "description": "Slow-growing schwannomas of the vestibular nerve (acoustic neuromas) more often cause progressive unilateral hearing loss and tinnitus than overt vertigo, but unsteadiness and chronic imbalance are common. Diagnosed by MRI with gadolinium."
+    },
+    {
+      "cause": "Ototoxic medications",
+      "description": "Aminoglycoside antibiotics (gentamicin, tobramycin), platinum chemotherapy (cisplatin), and high-dose loop diuretics damage cochlear and vestibular hair cells. Bilateral vestibulopathy from gentamicin produces oscillopsia and a persistent imbalance distinct from spinning vertigo."
+    },
+    {
+      "cause": "Trauma and post-concussive vestibular dysfunction",
+      "description": "Head injury can dislodge otoconia (post-traumatic BPPV), tear the labyrinthine membrane (perilymph fistula), or cause direct labyrinthine concussion. Vestibular symptoms persist in 30-65% of post-concussion patients beyond 3 months."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "BPPV incidence rises roughly 9% per decade after age 60; vestibular hair-cell loss and otoconial degeneration both accelerate with age. Older adults also have higher fall risk from any vertigo." },
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women experience BPPV, vestibular migraine, and Meniere disease 2-3 times more often than men. Hormonal and migraine-prevalence differences contribute." },
+    { "factor": "History of migraine", "category": "non-modifiable", "description": "Personal or family migraine history is the strongest predictor of vestibular migraine, which is now the leading cause of recurrent spontaneous vertigo. Roughly 30-50% of patients with migraine experience vestibular symptoms at some point." },
+    { "factor": "Head or neck trauma", "category": "environmental", "description": "Even mild concussion can trigger BPPV, post-traumatic labyrinthitis, or persistent post-concussive vestibular symptoms. Post-traumatic BPPV is often bilateral and harder to clear." },
+    { "factor": "Vitamin D deficiency", "category": "modifiable", "description": "Serum 25-OH vitamin D below 20 ng/mL doubles BPPV recurrence; supplementation to normal range reduces recurrence by roughly 24% over a year (Jeong NEJM 2020 trial of vitamin D plus calcium)." },
+    { "factor": "Cardiovascular risk factors (hypertension, diabetes, smoking)", "category": "modifiable", "description": "These accelerate vertebrobasilar atherosclerosis and raise the risk of posterior-circulation stroke presenting as acute vertigo. They also worsen microvascular labyrinthine ischemia." },
+    { "factor": "Prior vestibular event", "category": "non-modifiable", "description": "Once a person has had vestibular neuritis or a Meniere episode, the lifetime risk of further vestibular symptoms — including PPPD — rises substantially. BPPV recurs in 30-50% within 5 years." },
+    { "factor": "Anxiety, depression, or somatic-symptom disorders", "category": "modifiable", "description": "These conditions strongly predict transition from acute vertigo to chronic PPPD; cognitive behavioral therapy targeted at vestibular symptoms reduces conversion rates." },
+    { "factor": "Ototoxic drug exposure", "category": "modifiable", "description": "Aminoglycosides, cisplatin, and large doses of loop diuretics can cause bilateral vestibular hypofunction. Monitoring and using lowest effective dose are central to prevention." },
+    { "factor": "Osteoporosis and low bone mineral density", "category": "modifiable", "description": "Reduced bone density correlates with otoconial fragility and BPPV recurrence, particularly in postmenopausal women." }
+  ],
+
+  "affectedDemographics": [
+    "US lifetime prevalence of vestibular vertigo around 7.4% of adults (Neuhauser 2008 epidemiologic study)",
+    "BPPV cumulative lifetime incidence approximately 10% in adults; rises to 30% by age 80",
+    "Vestibular migraine affects roughly 1% of the general population and 5-10% of patients in dizziness clinics",
+    "Meniere disease prevalence 15-50 per 100,000; peak onset 40-60 years",
+    "Posterior circulation strokes account for under 5% of acute vertigo but 25% of all ischemic strokes overall"
+  ],
+
+  "diagnosisOverview": "Diagnosis follows a sequence: timing and triggers from the history, bedside examination focused on nystagmus and balance, then targeted testing. The TiTrATE framework (Timing, Triggers, And Targeted Examination) classifies presentations into acute prolonged (single episode lasting days), episodic triggered (brief spells with positional or other triggers), and episodic spontaneous (recurrent without trigger). Each pattern points to a different short list of causes. For brief positional vertigo, the Dix-Hallpike maneuver remains the gold-standard test for posterior-canal BPPV and is the only step needed before treatment per the 2017 AAO-HNS BPPV clinical practice guideline (Bhattacharyya). For acute continuous vertigo lasting days, the HINTS exam — Head-Impulse, Nystagmus, and Test of Skew — distinguishes peripheral vestibular neuritis from posterior circulation stroke with sensitivity exceeding 96% (Kattah Stroke 2009), outperforming early MRI in the first 48 hours when up to 20% of small posterior strokes can be falsely negative on diffusion-weighted imaging. For recurrent spontaneous episodes, history is decisive: episodes lasting 20 minutes to 12 hours with hearing loss point to Meniere disease (Lopez-Escamez 2015 / AAO-HNS 2020); episodes lasting 5 minutes to 72 hours with migrainous features point to vestibular migraine (Lempert 2012 Barany). Audiometry, video-nystagmography (VNG), and vestibular evoked myogenic potentials (VEMP) refine the diagnosis. MRI with gadolinium is reserved for suspected central causes, unilateral sensorineural hearing loss, focal neurologic signs, or treatment-refractory cases — not as a routine first test.",
+
+  "diagnosticTests": [
+    {
+      "test": "Dix-Hallpike maneuver",
+      "purpose": "Gold standard to diagnose posterior-canal BPPV. A positive test shows characteristic up-beating and torsional nystagmus with latency of a few seconds and duration under 60 seconds when the affected ear is dependent. Per the 2017 AAO-HNS CPG, no imaging is required before treatment if the test is positive.",
+      "whatToExpect": "The clinician moves the patient from a seated position to lying back with the head turned 45 degrees toward the tested side and slightly extended over the edge of the exam table. Each side is tested separately. The maneuver takes 2-3 minutes per side; expect brief spinning if BPPV is present."
+    },
+    {
+      "test": "HINTS examination (Head-Impulse, Nystagmus, Test of Skew)",
+      "purpose": "Bedside three-part test that separates peripheral vestibular neuritis from posterior fossa stroke in patients with acute continuous vertigo. A normal head-impulse, direction-changing nystagmus, or skew deviation indicates a central lesion (Kattah 2009 Stroke).",
+      "whatToExpect": "The examiner rapidly turns the patient's head while watching the eyes (head impulse), observes nystagmus in different gaze positions, and covers and uncovers each eye to check for vertical misalignment. Painless; takes 2-5 minutes when performed by a trained clinician."
+    },
+    {
+      "test": "Audiometry (pure-tone and speech)",
+      "purpose": "Documents the low-frequency sensorineural hearing loss that defines Meniere disease and screens for asymmetric loss suggesting vestibular schwannoma. Required for Meniere diagnosis per AAO-HNS 2020 criteria.",
+      "whatToExpect": "Performed in a soundproof booth; the patient signals when each tone is heard through headphones and repeats spoken words. Takes 30-45 minutes and is painless."
+    },
+    {
+      "test": "Videonystagmography (VNG) with caloric testing",
+      "purpose": "Records eye movements during positional, gaze, and caloric (warm and cool water or air in each ear) stimulation to quantify vestibular function and identify the side and severity of any deficit.",
+      "whatToExpect": "The patient wears infrared goggles while undergoing a series of position changes and ear irrigations. Caloric testing typically induces brief vertigo lasting under a minute per ear. Total study runs 45-90 minutes."
+    },
+    {
+      "test": "Vestibular Evoked Myogenic Potentials (cVEMP and oVEMP)",
+      "purpose": "Tests saccular function (cVEMP) and utricular function (oVEMP) via responses recorded over the sternocleidomastoid and infraocular muscles. Useful in superior canal dehiscence, Meniere staging, and otolith dysfunction.",
+      "whatToExpect": "Surface electrodes are placed on the neck and below the eyes while loud clicks are delivered through headphones. Painless; takes 20-30 minutes."
+    },
+    {
+      "test": "MRI brain with internal auditory canal and gadolinium",
+      "purpose": "Indicated for asymmetric sensorineural hearing loss, focal neurologic findings, suspected central vertigo, or treatment-refractory disease. Detects vestibular schwannoma, demyelination, and posterior fossa lesions; gadolinium-enhanced delayed sequences can visualize endolymphatic hydrops in research settings.",
+      "whatToExpect": "A non-contrast scan plus a contrast-enhanced sequence after intravenous gadolinium. Total time 30-45 minutes; the patient must lie still in the scanner. Earplugs are provided."
+    },
+    {
+      "test": "Video Head Impulse Test (vHIT)",
+      "purpose": "Quantitative version of the bedside head-impulse test, measuring gain of the vestibulo-ocular reflex in each of the six semicircular canals. Useful in chronic dizziness, bilateral vestibulopathy, and follow-up of vestibular neuritis.",
+      "whatToExpect": "The patient wears lightweight goggles while the clinician delivers brief head turns in different planes. Painless and takes 10-15 minutes."
+    }
+  ],
+
+  "treatmentOverview": "Treatment is matched to the underlying diagnosis, not the symptom. For posterior-canal BPPV, the Epley canalith-repositioning maneuver resolves vertigo in 80-90% of patients with one to three sessions; the 2017 AAO-HNS guideline recommends it as first-line and explicitly advises against routine vestibular suppressant medications such as meclizine or benzodiazepines, which slow central compensation. For vestibular neuritis, the priority is supportive care and rapid mobilization; oral corticosteroids (methylprednisolone tapered from 100 mg) accelerate vestibular recovery in randomized trials (Strupp NEJM 2004), and vestibular rehabilitation reduces residual symptoms (Hillier 2015 Cochrane review). For Meniere disease, the AAO-HNS 2020 stepwise approach progresses from low-salt diet and diuretics through intratympanic steroids, intratympanic gentamicin, and finally surgical options including endolymphatic sac decompression and labyrinthectomy for intractable cases. For vestibular migraine, lifestyle measures (regular sleep, hydration, trigger avoidance) and migraine prophylactic medications — propranolol, topiramate, amitriptyline, venlafaxine, or flunarizine — are first-line, supported by small randomized trials and consensus. For acute posterior circulation stroke, vertigo is a stroke symptom and treatment follows standard stroke pathways (thrombolysis if within window, thrombectomy for large-vessel occlusion). Vestibular rehabilitation therapy (VRT) is the cross-cutting intervention with the strongest evidence base — Cochrane review (Hillier 2015) shows moderate-to-strong improvement in patients with unilateral peripheral vestibular dysfunction, chronic PPPD, bilateral vestibulopathy, and post-concussive dizziness. Surgery is reserved for refractory Meniere disease, superior canal dehiscence syndrome, and vestibular schwannoma exceeding intracanalicular size.",
+
+  "medicalTreatments": [
+    {
+      "name": "Epley canalith-repositioning maneuver (for posterior-canal BPPV)",
+      "description": "A four-position sequence that uses gravity to move displaced otoconia out of the posterior semicircular canal and back into the utricle. Performed in clinic in 3-5 minutes; can be self-taught for home repetition. First-line per AAO-HNS 2017 CPG (Bhattacharyya).",
+      "effectiveness": "Resolves vertigo in 80-90% of patients within 1-3 sessions; Cochrane review (Hilton 2014) confirms efficacy with a number-needed-to-treat of approximately 3."
+    },
+    {
+      "name": "Vestibular rehabilitation therapy (VRT)",
+      "description": "Structured exercise program prescribed by a vestibular physical therapist that combines gaze stabilization, habituation, and balance retraining. Customized to the patient's deficit and progressively advanced over 4-12 weeks.",
+      "effectiveness": "Moderate-to-strong evidence for unilateral peripheral vestibular hypofunction, PPPD, bilateral vestibulopathy, and post-concussive dizziness (Hillier 2015 Cochrane review, 39 trials)."
+    },
+    {
+      "name": "Methylprednisolone for acute vestibular neuritis (100 mg daily, taper over 3 weeks)",
+      "description": "Short course of oral corticosteroid started within 3 days of symptom onset to accelerate recovery of peripheral vestibular function. Antivirals provide no added benefit (Strupp NEJM 2004).",
+      "effectiveness": "Approximately 62% recovery of caloric function at 12 months in steroid-treated patients versus 40% with placebo; symptom recovery comparable, central compensation accelerated."
+    },
+    {
+      "name": "Migraine prophylaxis for vestibular migraine (propranolol 40-80 mg twice daily, topiramate 25-100 mg daily, amitriptyline 10-50 mg nightly, or flunarizine 5-10 mg nightly)",
+      "description": "Same agents used for migraine headache prophylaxis; choice based on patient comorbidities and tolerance. A trial of 8-12 weeks is needed to gauge response. Supplementation with magnesium and riboflavin is reasonable adjunct.",
+      "effectiveness": "Reduction in vertigo frequency by 50% or more in 50-75% of patients on adequate-trial prophylaxis (Lempert 2013 review and subsequent small RCTs)."
+    },
+    {
+      "name": "Vestibular suppressants (meclizine 25 mg, dimenhydrinate 50 mg, lorazepam 0.5-1 mg, prochlorperazine 5-10 mg)",
+      "description": "Symptomatic relief of acute severe vertigo and nausea. Use limited to the first 24-72 hours; longer courses slow central compensation and prolong recovery. Avoid in elderly due to fall risk and anticholinergic effects.",
+      "effectiveness": "Symptom control in 60-80% of acute presentations; no disease-modifying effect; not used long-term."
+    },
+    {
+      "name": "Betahistine (16-24 mg three times daily) for Meniere disease",
+      "description": "Histamine analog widely prescribed for Meniere disease in Europe and Asia. Mechanism is thought to improve cochlear microcirculation. Evidence is mixed: a large 2016 trial (BEMED) found no benefit over placebo, but smaller older trials and observational data continue to support use.",
+      "effectiveness": "Variable. Some patients report fewer episodes; the BEMED RCT showed no significant difference from placebo at 9 months."
+    },
+    {
+      "name": "Intratympanic gentamicin or steroid injection for refractory Meniere disease",
+      "description": "Office-based injection of medication through the tympanic membrane. Steroids preserve hearing; gentamicin is chemically ablative and is used when hearing in the affected ear is already poor. Performed every 1-4 weeks based on response.",
+      "effectiveness": "Vertigo control in approximately 80-90% of patients with intratympanic gentamicin; hearing loss in 10-20% is the trade-off."
+    },
+    {
+      "name": "Diuretics (hydrochlorothiazide-triamterene) plus low-sodium diet (under 2 g/day) for Meniere disease",
+      "description": "AAO-HNS 2020 first-line conservative management. Aim is to reduce endolymphatic hydrops by limiting sodium and increasing renal sodium excretion. Caffeine and alcohol reduction often added.",
+      "effectiveness": "Symptom improvement in 60-70% of patients with adherent dietary management at 6-12 months; evidence base is largely observational."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Endolymphatic sac decompression (for refractory Meniere disease)",
+      "description": "Surgical decompression or shunting of the endolymphatic sac to reduce hydrops. Hearing-sparing; debated efficacy but still offered when intratympanic injections fail.",
+      "successRate": "Vertigo control in approximately 60-75% of selected patients at 2 years; results variable across centers."
+    },
+    {
+      "name": "Labyrinthectomy",
+      "description": "Surgical destruction of the membranous labyrinth in the affected ear. Reserved for intractable unilateral Meniere disease with no usable hearing. Eliminates vertigo by removing peripheral vestibular input on that side; central compensation follows over weeks.",
+      "successRate": "Vertigo control in 95-98% of patients; permanent ipsilateral deafness is the cost."
+    },
+    {
+      "name": "Vestibular nerve section",
+      "description": "Microsurgical division of the vestibular branch of the eighth cranial nerve via middle or retrosigmoid approach. Preserves hearing while eliminating vestibular input from the affected ear. Used in young patients with intractable Meniere who retain useful hearing.",
+      "successRate": "Vertigo control in approximately 90% of patients; carries small risks of facial nerve injury and CSF leak."
+    },
+    {
+      "name": "Plugging or resurfacing of superior semicircular canal (for superior canal dehiscence syndrome)",
+      "description": "Microsurgical repair of an osseous defect in the superior canal that allows sound and pressure to trigger vertigo (Tullio phenomenon). Performed via middle fossa or transmastoid approach.",
+      "successRate": "Resolution of pressure-induced vertigo in 85-95% of patients in published case series."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Vitamin D plus calcium supplementation for recurrent BPPV", "description": "In a randomized trial of 957 patients with recurrent BPPV (Jeong NEJM 2020), vitamin D 400 IU twice daily plus calcium 500 mg twice daily reduced recurrence rate by 24% over a year compared with no supplementation. Reasonable in patients with documented vitamin D below 20 ng/mL." },
+    { "name": "Tai chi and balance-focused exercise for chronic imbalance", "description": "Trials in older adults with chronic dizziness show improved balance scores and reduced fall rates. Adjunct to formal vestibular rehabilitation rather than replacement." }
+  ],
+
+  "whySeeSpecialist": "Refer to ENT or neurology when vertigo is recurrent or severe enough to limit daily function, when diagnosis is unclear after primary-care evaluation, when hearing loss accompanies vertigo, when neurologic signs are present, when BPPV fails to clear after two Epley maneuvers, when vestibular migraine fails one full prophylactic trial, or when Meniere disease progresses despite first-line measures. Same-day emergency department evaluation is required for vertigo with any of the HINTS-central pattern, focal neurologic signs, severe headache, or sudden hearing loss.",
+
+  "doctorSelectionGuide": "Look for an otolaryngologist or neurologist with subspecialty interest in vestibular disorders or a multidisciplinary balance clinic. Useful credentials include fellowship in neurotology or otology, comfort with Dix-Hallpike and Epley procedures, access to videonystagmography and audiology, and a working relationship with vestibular physical therapy. For suspected stroke, the relevant specialist is a stroke neurologist via emergency care, not an ENT.",
+
+  "hospitalCriteria": [
+    "Onsite audiology and videonystagmography (VNG) services",
+    "Access to MRI with dedicated internal auditory canal protocols",
+    "Vestibular physical therapy program with trained therapists",
+    "Stroke pathway with rapid CT/MRI for posterior circulation evaluation",
+    "Neurotology or skull-base surgery capability for refractory or tumor cases"
+  ],
+
+  "keyFacilities": [
+    "Tertiary academic medical centers with dedicated balance and vestibular disorders clinics",
+    "ENT departments with neurotology fellowships",
+    "Comprehensive stroke centers (for acute posterior circulation evaluation)"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Treat vitamin D deficiency (target serum 25-OH vitamin D above 30 ng/mL) in patients with recurrent BPPV — supplementation reduces recurrence by approximately 24% over a year",
+    "Manage cardiovascular risk factors aggressively — control blood pressure, treat diabetes, stop smoking, and treat hyperlipidemia to reduce posterior-circulation stroke risk",
+    "Use the lowest effective dose and shortest course of ototoxic drugs (aminoglycosides, cisplatin, high-dose loop diuretics) and monitor vestibular function during prolonged courses",
+    "Implement fall-prevention measures in older adults with any vestibular history — home lighting, grab bars, and balance exercise programs cut fall rates by roughly 30%",
+    "Wear appropriate head protection during contact sports, cycling, and high-fall-risk activities to reduce post-traumatic BPPV and labyrinthine concussion",
+    "Identify and modify migraine triggers (sleep deprivation, dehydration, dietary triggers, hormonal fluctuations) in patients with established migraine to prevent vestibular migraine episodes"
+  ],
+
+  "lifestyleModifications": [
+    "Sleep with the head of the bed slightly elevated and avoid the affected-side-down position for 24-48 hours after Epley if BPPV has recurred frequently",
+    "Maintain a regular sleep schedule of 7-9 hours nightly — sleep deprivation is one of the strongest vestibular migraine triggers",
+    "Stay hydrated, with daily fluid intake of at least 2 liters unless contraindicated, especially in hot climates and during illness",
+    "Limit sodium to under 2 g daily and reduce caffeine and alcohol if you have Meniere disease — dietary measures are first-line per AAO-HNS 2020",
+    "Identify and avoid personal migraine triggers if you have vestibular migraine; common triggers include aged cheeses, processed meats, red wine, monosodium glutamate, and strong fluorescent lighting",
+    "Use the visual horizon (look at a fixed distant point) when in motion environments — boats, cars, escalators — to dampen motion sensitivity",
+    "Perform daily home Brandt-Daroff or gaze-stabilization exercises if prescribed by a vestibular physical therapist to maintain gains",
+    "Avoid rapid head-position changes (looking up to a high shelf, hairdresser sink) during active BPPV phases until cleared"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Low-sodium diet under 2 g/day if you have Meniere disease — AAO-HNS 2020 first-line recommendation",
+      "Adequate calcium (1000-1200 mg/day) and vitamin D (800-1000 IU/day) to support otoconial integrity",
+      "Regular meals at consistent times to stabilize migraine triggers in vestibular migraine",
+      "Magnesium-rich foods (leafy greens, nuts, seeds, legumes) — supplementation up to 600 mg/day has modest migraine-prophylaxis evidence",
+      "Adequate hydration of at least 2 liters daily, more in hot weather or during exercise",
+      "Omega-3-rich fish (salmon, mackerel, sardines) two to three times weekly for general vascular health"
+    ],
+    "avoid": [
+      "Excess sodium (processed foods, restaurant meals, soy sauce, pickles) — strict limit in Meniere disease",
+      "Excess caffeine (more than 200-300 mg daily) — vasoconstrictive effects can trigger migraine and worsen Meniere",
+      "Alcohol, especially red wine and beer — strong vestibular migraine trigger and reduces Meniere control",
+      "Aged cheeses, cured meats, and tyramine-rich foods — common migraine triggers",
+      "Monosodium glutamate and aspartame — established migraine triggers in susceptible individuals",
+      "Sudden large changes in food or fluid intake — fasting and binge eating both destabilize migraine"
+    ]
+  },
+
+  "exerciseGuidelines": "Stay physically active between vertigo episodes — sustained inactivity slows central vestibular compensation and worsens chronic dizziness. Walking, swimming, and stationary cycling are all safe choices. Vestibular rehabilitation exercises prescribed by a trained therapist (gaze stabilization, habituation drills, balance training) are the cornerstone of recovery and should be performed daily as advised. Avoid head-down positions and rapid rotational sports during active BPPV until cleared by your clinician.",
+
+  "dailyManagement": [
+    "Take prophylactic medications on schedule and at consistent times — migraine prophylaxis and Meniere diuretics work only with steady adherence",
+    "Track episodes in a simple diary with timing, duration, triggers, and associated symptoms — patterns often emerge that change treatment",
+    "Perform prescribed vestibular rehabilitation exercises daily, ideally split into 2-3 short sessions",
+    "Keep an emergency anti-nausea medication (ondansetron 4-8 mg) at home for severe acute episodes if you have Meniere disease or vestibular migraine",
+    "Move out of bed slowly each morning, sit on the edge for 30 seconds, and avoid rapid head turns during active disease",
+    "Carry identification noting your vestibular diagnosis and current medications, especially if you have had episodes that mimic stroke"
+  ],
+
+  "prognosis": "Prognosis depends heavily on the underlying cause. BPPV is the most favorable: 80-90% of patients clear with one to three Epley maneuvers, though recurrence affects 30-50% within 5 years. Vestibular neuritis resolves over 4-6 weeks in most patients, with about 50% achieving full caloric recovery at one year and the remainder compensating centrally so that residual deficits are usually subtle. Meniere disease tends to burn out over 5-15 years, with vertigo episodes diminishing while permanent hearing loss progresses; only 5-10% of patients require surgical intervention. Vestibular migraine has a fluctuating course tied to migraine activity overall, with 50-75% experiencing meaningful reduction on adequate prophylaxis. Central vertigo from stroke has the worst prognosis of the common causes — outcome is determined by infarct size and location, with cerebellar strokes often leaving residual imbalance even with full neurological recovery. Persistent postural-perceptual dizziness, once chronic, responds well to combined vestibular rehabilitation, cognitive behavioral therapy, and SSRI or SNRI medication in roughly 70% of patients but rarely resolves spontaneously.",
+
+  "recoveryTimeline": "BPPV: vertigo eliminated within minutes to days of a successful Epley maneuver; mild positional unsteadiness can persist for 1-2 weeks during central recalibration. Vestibular neuritis: severe acute phase lasts 24-72 hours, daily improvement over 2-4 weeks, and stable residual function reached by 3-6 months. Meniere episodes: each individual attack lasts 20 minutes to 12 hours; between attacks, function returns to baseline early in the disease and incompletely later. Vestibular migraine: episodes resolve over 5 minutes to 72 hours; full prophylactic benefit takes 8-12 weeks. PPPD: gradual improvement over 3-12 months with combined vestibular rehabilitation, CBT, and pharmacotherapy.",
+
+  "complications": [
+    "Falls and fall-related injuries — vertigo more than doubles fall risk in older adults; hip fractures, head injuries, and loss of independence are the downstream harms",
+    "Permanent hearing loss with progressive Meniere disease — typically low-frequency and unilateral, eventually becoming flat and severe",
+    "Persistent postural-perceptual dizziness (PPPD) — chronic non-spinning dizziness lasting more than three months that develops in 25-50% of patients after an acute vestibular event",
+    "Anxiety, depression, and avoidance behaviors — vestibular disorders have high rates of comorbid anxiety, which both worsens symptoms and predicts chronicity",
+    "Missed stroke when central vertigo is mislabelled as peripheral — posterior circulation strokes presenting purely with vertigo are missed in up to 35% of emergency department encounters when HINTS is not performed",
+    "Drug-induced bilateral vestibulopathy from aminoglycosides or cisplatin — produces oscillopsia and disabling imbalance that is largely permanent"
+  ],
+
+  "supportResources": [
+    { "name": "Vestibular Disorders Association (VeDA)", "url": "https://vestibular.org", "description": "Patient-facing US nonprofit with condition guides, provider directory, and support communities for all vestibular disorders." },
+    { "name": "American Academy of Otolaryngology — Head and Neck Surgery patient information", "url": "https://www.enthealth.org/conditions/dizziness-and-motion-sickness/", "description": "Authoritative patient education from the body that publishes the BPPV and Meniere clinical practice guidelines." },
+    { "name": "Meniere's Society UK", "url": "https://www.menieres.org.uk", "description": "UK charity dedicated to Meniere disease and related vestibular conditions; offers helpline, resources, and research updates." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "meniere-disease", "name": "Meniere Disease", "keyDifference": "Meniere disease is one specific cause of vertigo, defined by episodes lasting 20 minutes to 12 hours combined with documented low-frequency sensorineural hearing loss, tinnitus, and aural fullness in one ear (Lopez-Escamez 2015 criteria). Vertigo as a symptom occurs in many other conditions, most of which lack the hearing component. Audiometry distinguishes the two." },
+    { "slug": "migraine", "name": "Migraine", "keyDifference": "Migraine headache and vestibular migraine are linked but distinct. Vestibular migraine produces vertigo lasting 5 minutes to 72 hours, with migrainous features (headache, photophobia, aura) in at least half of episodes per Barany 2012 criteria. Many vestibular migraine patients have vertigo without headache during the attack, which leads to underdiagnosis." },
+    { "slug": "orthostatic-hypotension-i951", "name": "Orthostatic Hypotension", "keyDifference": "Orthostatic hypotension causes light-headedness or near-syncope on standing — not true spinning. Symptoms come on within seconds to minutes of standing, are relieved by lying down, and are reproducible with a 20+ mmHg drop in systolic blood pressure on standing. Vertigo from inner-ear causes is not position-of-the-body-dependent in this way." },
+    { "slug": "tinnitus", "name": "Tinnitus", "keyDifference": "Tinnitus is the perception of sound without an external source. It frequently coexists with vertigo (especially in Meniere disease and vestibular schwannoma) but is a separate symptom. Pure tinnitus without spinning is not vertigo." },
+    { "slug": "sensorineural-hearing-loss", "name": "Sensorineural Hearing Loss", "keyDifference": "Sensorineural hearing loss can occur in isolation or with vertigo. Sudden unilateral sensorineural hearing loss with vertigo raises concern for labyrinthitis or labyrinthine artery occlusion and requires same-day audiology and high-dose steroids. Asymmetric SNHL with chronic imbalance should prompt MRI to rule out vestibular schwannoma." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "migraine", "name": "Migraine" },
+    { "slug": "tinnitus", "name": "Tinnitus" },
+    { "slug": "sensorineural-hearing-loss", "name": "Sensorineural Hearing Loss" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "meniere-disease", "name": "Meniere Disease", "relevance": "Specific cause of recurrent vertigo with hearing loss and tinnitus; standardised diagnostic criteria from Lopez-Escamez 2015 / AAO-HNS 2020." },
+    { "slug": "migraine", "name": "Migraine", "relevance": "Underlying disorder of vestibular migraine, the leading cause of recurrent spontaneous vertigo in adults." },
+    { "slug": "tinnitus", "name": "Tinnitus", "relevance": "Frequently accompanies vestibular disorders, especially Meniere disease and vestibular schwannoma." },
+    { "slug": "sensorineural-hearing-loss", "name": "Sensorineural Hearing Loss", "relevance": "Hearing loss with vertigo points specifically to Meniere disease, labyrinthitis, or vestibular schwannoma; audiometry is a key diagnostic step." },
+    { "slug": "orthostatic-hypotension-i951", "name": "Orthostatic Hypotension", "relevance": "Common cause of non-spinning dizziness on standing; important differential in older adults and in patients on antihypertensives." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is vertigo and how is it different from dizziness?",
+      "answer": "Vertigo is the false sensation of motion — most often spinning. Dizziness is a broader term that also covers light-headedness, near-fainting, and unsteadiness. The distinction matters because true vertigo points to the inner ear or central vestibular system, while non-vertigo dizziness more often reflects blood pressure, cardiac, or metabolic causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the most common cause of vertigo?",
+      "answer": "Benign paroxysmal positional vertigo (BPPV) is the single most common cause, responsible for roughly 20-30% of all vertigo presentations and up to 50% in older adults. It produces brief spinning lasting under a minute triggered by head-position changes, and it responds to the Epley maneuver in 80-90% of patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is BPPV diagnosed?",
+      "answer": "BPPV is diagnosed with the Dix-Hallpike maneuver — a brief positional test in which the clinician lowers the patient backward with the head turned to one side. A positive test shows up-beating and torsional nystagmus lasting under a minute. The 2017 AAO-HNS guideline (Bhattacharyya) recommends treating immediately on a positive test without imaging.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does the Epley maneuver work?",
+      "answer": "Yes. The Epley canalith-repositioning maneuver resolves vertigo in 80-90% of patients with posterior-canal BPPV within one to three sessions. The 2014 Cochrane review (Hilton) found a number-needed-to-treat of approximately 3. It can be performed in the clinic in 3-5 minutes and is the first-line treatment per AAO-HNS 2017.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does a vertigo episode last?",
+      "answer": "Duration depends on the cause. BPPV episodes last seconds to a minute and are triggered by head movement. Vestibular neuritis produces continuous severe vertigo for days. Meniere episodes last 20 minutes to 12 hours. Vestibular migraine episodes last 5 minutes to 72 hours. Posterior circulation strokes cause continuous vertigo until the stroke is treated or stabilises.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is vertigo a sign of stroke?",
+      "answer": "Vertigo signals possible stroke when it appears with severe headache, facial droop, slurred speech, double vision, weakness, numbness, or trouble walking. A trained clinician can apply the HINTS exam (head-impulse, nystagmus, test of skew) to distinguish stroke from peripheral causes with over 96% sensitivity (Kattah 2009 Stroke).",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is vestibular migraine?",
+      "answer": "Vestibular migraine is recurrent vertigo lasting 5 minutes to 72 hours in a person with a current or past migraine diagnosis, often without headache during the vertigo itself. Per the Barany 2012 criteria (Lempert), at least half of episodes must include migrainous features such as headache, photophobia, phonophobia, or visual aura. It is the leading cause of recurrent spontaneous vertigo.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Meniere disease?",
+      "answer": "Meniere disease is a chronic inner-ear disorder defined by episodes of vertigo lasting 20 minutes to 12 hours, fluctuating low-frequency hearing loss, tinnitus, and aural fullness in one ear. Lopez-Escamez 2015 and AAO-HNS 2020 criteria require at least two qualifying vertigo episodes plus documented hearing loss on audiometry.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the HINTS exam?",
+      "answer": "HINTS is a three-part bedside test (head-impulse, nystagmus, test of skew) that distinguishes peripheral vestibular neuritis from posterior circulation stroke in acute continuous vertigo. A normal head-impulse, direction-changing nystagmus, or vertical skew indicates a central cause. It outperforms early MRI in the first 48 hours (Kattah 2009 Stroke).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will my vertigo come back?",
+      "answer": "Recurrence depends on cause. BPPV recurs in 30-50% of patients within 5 years. Meniere disease produces clusters of recurrent attacks over years. Vestibular migraine recurs whenever underlying migraine is poorly controlled. Vestibular neuritis is usually a single lifetime event, though residual unsteadiness can persist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can vertigo cause hearing loss?",
+      "answer": "Vertigo with hearing loss points to a specific group of causes — Meniere disease, labyrinthitis, labyrinthine artery occlusion, or vestibular schwannoma. Hearing tests (audiometry) are a key diagnostic step whenever vertigo is accompanied by ear-related symptoms. Vertigo without hearing involvement most often reflects BPPV, vestibular neuritis, or central causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do doctors treat vestibular migraine?",
+      "answer": "Treatment combines trigger avoidance (regular sleep, hydration, dietary triggers) with migraine prophylactic medications. First-line options include propranolol, topiramate, amitriptyline, venlafaxine, or flunarizine, each trialled for 8-12 weeks. Magnesium and riboflavin supplementation are reasonable adjuncts. Acute episodes are treated like migraine headaches.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does vestibular rehabilitation actually help?",
+      "answer": "Yes. The 2015 Cochrane review (Hillier, 39 trials) found moderate-to-strong evidence that vestibular rehabilitation therapy improves symptoms and function in unilateral peripheral vestibular dysfunction, PPPD, bilateral vestibulopathy, and post-concussive dizziness. Programs typically last 4-12 weeks and require daily home practice.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are vertigo medications like meclizine effective?",
+      "answer": "Meclizine, dimenhydrinate, and benzodiazepines suppress vertigo symptoms acutely but slow the brain's central compensation if used beyond 24-72 hours. The 2017 AAO-HNS BPPV guideline explicitly recommends against routine use of vestibular suppressants. They are reasonable short-term for severe acute episodes but not a long-term solution.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does vertigo make me feel sick?",
+      "answer": "The mismatch between vestibular, visual, and proprioceptive signals during vertigo activates the same brainstem pathways that produce motion sickness, triggering intense nausea and vomiting. Anti-nausea medications such as ondansetron or prochlorperazine can manage the symptom while the underlying cause is treated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get vertigo?",
+      "answer": "Yes, although less commonly than adults. Pediatric causes include benign paroxysmal vertigo of childhood (a migraine variant), vestibular migraine, otitis media with secondary labyrinthitis, and rarely vestibular neuritis. A child with vertigo plus any neurologic sign should be evaluated promptly to exclude central causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is vertigo related to anxiety?",
+      "answer": "Anxiety and vertigo influence each other strongly. Acute vertigo provokes anxiety, and pre-existing anxiety predicts the transition from a single vestibular event to chronic persistent postural-perceptual dizziness (PPPD). Treatment of PPPD combines vestibular rehabilitation, cognitive behavioral therapy, and SSRI or SNRI medication.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is persistent postural-perceptual dizziness (PPPD)?",
+      "answer": "PPPD is chronic non-spinning dizziness and unsteadiness lasting three months or more, worsened by upright posture, head and body motion, and complex visual environments. It often follows an acute vestibular event such as BPPV or vestibular neuritis. Diagnostic criteria were set by the Barany Society in 2017 (Staab).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can vitamin D supplementation help vertigo?",
+      "answer": "In a randomized trial of 957 patients with recurrent BPPV (Jeong NEJM 2020), vitamin D 400 IU twice daily plus calcium 500 mg twice daily reduced recurrence rate by approximately 24% over a year. Supplementation is reasonable in patients with documented vitamin D deficiency and recurrent BPPV.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need an MRI for vertigo?",
+      "answer": "Routine MRI is not needed for typical BPPV or simple vestibular neuritis. MRI is indicated when there are focal neurologic signs, central HINTS findings, asymmetric sensorineural hearing loss suggesting vestibular schwannoma, severe headache, or vertigo that fails to respond to standard treatment. Use is targeted, not universal.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does vertigo treatment cost?",
+      "answer": "An office Epley maneuver and a typical primary care or ENT visit are inexpensive and widely covered by insurance. Vestibular rehabilitation is similar in cost to other physical therapy. MRI, audiometry, VNG, and intratympanic injections are more expensive but generally covered when clinically indicated. Generic migraine prophylactics and diuretics cost a few dollars per month.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I go to the emergency room for vertigo?",
+      "answer": "Go to the emergency department for vertigo with severe headache, facial droop, slurred speech, double vision, limb weakness, sudden hearing loss, inability to walk, or vertigo following head or neck trauma. These features raise concern for stroke, dissection, or other serious causes that require urgent imaging and treatment.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Vertigo (spinning dizziness)",
+
+  "regionalNames": [
+    { "name": "चक्कर आना (Chakkar aana)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "தலைச்சுற்றல் (Talaisutral)", "region": "India (Tamil Nadu)", "language": "ta" },
+    { "name": "Vertige", "region": "France", "language": "fr" },
+    { "name": "Schwindel", "region": "Germany", "language": "de" }
+  ],
+
+  "searchTags": [
+    "vertigo", "dizziness", "spinning", "BPPV", "benign paroxysmal positional vertigo",
+    "Epley maneuver", "Dix-Hallpike", "vestibular neuritis", "labyrinthitis",
+    "Meniere disease", "vestibular migraine", "HINTS exam", "vestibular rehabilitation",
+    "inner ear vertigo", "central vertigo"
+  ],
+
+  "symptomKeywords": [
+    "room spinning", "feel like spinning", "dizzy when lying down", "dizzy turning head",
+    "spinning dizziness", "off balance", "world tilting", "spinning attack", "nausea with dizziness"
+  ],
+
+  "metaTitle": "Vertigo: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Vertigo: spinning dizziness from inner-ear or brain causes. Symptoms, BPPV, Meniere, vestibular migraine, Epley maneuver, and treatment reviewed by our board.",
+
+  "keywords": [
+    "vertigo", "vertigo symptoms", "vertigo causes", "vertigo treatment",
+    "BPPV", "Epley maneuver", "vestibular migraine", "Meniere disease",
+    "vestibular neuritis", "HINTS exam", "vestibular rehabilitation",
+    "dizziness", "spinning sensation", "inner ear vertigo"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Bhattacharyya N, Gubbels SP, Schwartz SR, et al. Clinical Practice Guideline: Benign Paroxysmal Positional Vertigo (Update). Otolaryngology-Head and Neck Surgery. 2017;156(3_suppl):S1-S47.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28248609/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Basura GJ, Adams ME, Monfared A, et al. Clinical Practice Guideline: Meniere's Disease. Otolaryngology-Head and Neck Surgery. 2020;162(2_suppl):S1-S55.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32267799/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Lempert T, Olesen J, Furman J, et al. Vestibular migraine: diagnostic criteria. Consensus document of the Barany Society and the International Headache Society. Journal of Vestibular Research. 2012;22(4):167-172.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23142830/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Lopez-Escamez JA, Carey J, Chung WH, et al. Diagnostic criteria for Meniere's disease. Journal of Vestibular Research. 2015;25(1):1-7.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25882471/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome: three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging. Stroke. 2009;40(11):3504-3510.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19762709/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Hilton MP, Pinder DK. The Epley (canalith repositioning) manoeuvre for benign paroxysmal positional vertigo. Cochrane Database of Systematic Reviews. 2014;12:CD003162.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25485940/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "McDonnell MN, Hillier SL. Vestibular rehabilitation for unilateral peripheral vestibular dysfunction. Cochrane Database of Systematic Reviews. 2015;1:CD005397.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25581507/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Strupp M, Zingler VC, Arbusow V, et al. Methylprednisolone, valacyclovir, or the combination for vestibular neuritis. New England Journal of Medicine. 2004;351(4):354-361.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15269314/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Staab JP, Eckhardt-Henn A, Horii A, et al. Diagnostic criteria for persistent postural-perceptual dizziness (PPPD): Consensus document of the committee for the Classification of Vestibular Disorders of the Barany Society. Journal of Vestibular Research. 2017;27(4):191-208.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29036855/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Jeong SH, Kim JS, Kim HJ, et al. Prevention of benign paroxysmal positional vertigo with vitamin D supplementation: A randomized trial. Neurology. 2020;95(9):e1117-e1125.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32759193/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Neuhauser HK, Radtke A, von Brevern M, et al. Burden of dizziness and vertigo in the community. Archives of Internal Medicine. 2008;168(19):2118-2124.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18955641/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
