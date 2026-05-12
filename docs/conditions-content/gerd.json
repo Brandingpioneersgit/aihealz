@@ -1,0 +1,488 @@
+{
+  "_meta": {
+    "slug": "gerd",
+    "tier": 1,
+    "headTerm": "acid reflux / GERD",
+    "longTailKeywords": [
+      "acid reflux",
+      "heartburn",
+      "GERD symptoms",
+      "GERD treatment",
+      "PPI",
+      "GERD vs heartburn",
+      "silent reflux",
+      "LPR",
+      "Barrett's esophagus",
+      "Nissen fundoplication"
+    ],
+    "primarySpecialty": "Gastroenterology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2022 ACG GERD guideline, 2020 Lyon Consensus, 2017 AGA Best Practice Advice on PPIs, Montreal definition, and ProGERD/SOPRAN long-term cohort data."
+  },
+
+  "h1Title": "Acid Reflux (GERD): Symptoms, Causes, and Treatment",
+  "specialistType": "Gastroenterology",
+
+  "heroOverview": "Gastroesophageal reflux disease (GERD) is a chronic condition in which stomach contents repeatedly move backward into the esophagus, producing heartburn, regurgitation, and — in some patients — atypical symptoms like chronic cough or chest pain. About 20% of US adults have weekly heartburn or regurgitation severe enough to meet GERD criteria, and another 30% experience occasional reflux. Most cases are caused by transient relaxations of the lower esophageal sphincter, with risk amplified by obesity, hiatal hernia, pregnancy, and certain foods and medications. Untreated, persistent reflux can cause erosive esophagitis, stricture, Barrett's esophagus, and rarely esophageal adenocarcinoma. First-line treatment is lifestyle modification plus an 8-week course of a proton pump inhibitor, which controls symptoms in 70-80% of patients. Refractory disease responds to dose escalation, switching agents, anti-reflux surgery (Nissen fundoplication, LINX magnetic ring, transoral incisionless fundoplication), or, in selected obese patients, bariatric surgery.",
+
+  "keyStats": {
+    "prevalence": "~20% of US adults (weekly heartburn or regurgitation) — ACG 2022 estimate",
+    "demographics": "Men and women affected roughly equally; Barrett's esophagus and esophageal adenocarcinoma skew male",
+    "avgAge": "Peak prevalence in adults 40-60; rising in young adults with obesity",
+    "globalCases": "~1.03 billion adults worldwide (GBD 2021); highest rates in North America and Europe"
+  },
+
+  "definition": "Gastroesophageal reflux disease (ICD-10: K21; K21.0 with esophagitis, K21.9 without esophagitis) is defined by the Montreal Consensus as the condition that develops when reflux of stomach contents causes troublesome symptoms or complications. Reflux occurs in everyone briefly; GERD is its pathologic form. The dominant mechanism is transient lower esophageal sphincter relaxation (TLESR) — brief, non-swallow-related openings of the sphincter that allow gastric content into the esophagus. A weak resting sphincter tone, hiatal hernia, delayed gastric emptying, and impaired esophageal clearance amplify exposure. GERD is classified by endoscopic appearance into erosive esophagitis (Los Angeles grades A-D), non-erosive reflux disease (NERD, normal endoscopy with proven acid exposure), and Barrett's esophagus (specialized intestinal metaplasia replacing squamous epithelium). The 2020 Lyon Consensus formalized objective diagnosis by combining endoscopy, 24-hour pH or pH-impedance monitoring, and high-resolution manometry — conclusive evidence requires LA grade C/D esophagitis, biopsy-proven long-segment Barrett's, peptic stricture, or pH-metry acid exposure time >6%. GERD is managed by primary care and gastroenterology; surgery is reserved for refractory or volume-related disease.",
+
+  "typesClassification": [
+    { "type": "Non-erosive reflux disease (NERD)", "description": "Typical symptoms with normal endoscopy but objective evidence of reflux on pH-metry. Accounts for roughly 60-70% of GERD presentations. Responds less reliably to PPIs than erosive disease." },
+    { "type": "Erosive esophagitis (LA grades A-D)", "description": "Visible mucosal breaks at endoscopy. LA-A and LA-B are mild and often resolve with 8 weeks of PPI; LA-C and LA-D require longer healing courses and surveillance for Barrett's." },
+    { "type": "Reflux hypersensitivity", "description": "Typical symptoms with normal endoscopy and normal acid exposure but positive symptom-reflux association on pH-impedance. Often responds to neuromodulators (low-dose TCA) plus PPI." },
+    { "type": "Functional heartburn", "description": "Heartburn symptoms with normal endoscopy, normal pH-metry, and no symptom-reflux correlation. Treated as a functional GI disorder; PPI response is typically poor." },
+    { "type": "Laryngopharyngeal reflux (LPR, 'silent reflux')", "description": "Predominantly extra-esophageal symptoms (chronic cough, hoarseness, throat clearing, globus, postnasal drip) without typical heartburn. Diagnosis is harder; PPI response is variable and antireflux surgery less consistently effective." },
+    { "type": "Barrett's esophagus", "description": "Specialized intestinal metaplasia (presence of goblet cells) replacing distal squamous epithelium. Prevalence ~5-10% in long-standing GERD. Carries 0.1-0.3% per-year risk of esophageal adenocarcinoma; requires endoscopic surveillance." }
+  ],
+
+  "primarySymptoms": [
+    "Burning sensation behind the breastbone (heartburn) that rises from the upper abdomen, classically 30-60 minutes after meals and worse when lying flat or bending over.",
+    "Regurgitation of acidic or bitter fluid (and sometimes food particles) into the throat or mouth, often during sleep or when bending forward.",
+    "Chest pain that can mimic cardiac angina — burning, retrosternal, sometimes pressure-like; cardiac causes must be excluded first in adults with risk factors.",
+    "Acid-induced dysphagia (difficulty swallowing) developing gradually; sudden or progressive solid-food dysphagia raises concern for peptic stricture or malignancy.",
+    "Odynophagia (painful swallowing), especially with severe erosive esophagitis, eosinophilic esophagitis, or pill esophagitis.",
+    "Chronic dry cough that worsens at night or after meals; reflux is one of the top three causes of chronic cough alongside post-nasal drip and asthma.",
+    "Hoarseness or voice changes, especially in the morning, from laryngeal acid exposure (laryngopharyngeal reflux).",
+    "Sensation of a lump in the throat (globus) and excessive throat clearing.",
+    "Worsening dental erosion on the lingual surfaces of upper molars — often the first visible long-term sign noted by dentists.",
+    "Disturbed sleep with nocturnal awakening from heartburn or coughing."
+  ],
+
+  "earlyWarningSigns": [
+    "Heartburn occurring more than twice a week for more than 4 weeks",
+    "New regurgitation while lying flat that requires an extra pillow at night",
+    "Heartburn that wakes you from sleep",
+    "Throat clearing or hoarseness on most mornings",
+    "Heartburn appearing for the first time during pregnancy or after a 5-10 kg weight gain"
+  ],
+
+  "emergencySigns": [
+    "Sudden chest pain with radiation to the arm, jaw, or back, sweating, or shortness of breath — rule out myocardial infarction before assuming reflux",
+    "Hematemesis (vomiting blood or coffee-ground material) or melena (black tarry stools) — possible upper GI bleed; emergency department immediately",
+    "Sudden progressive dysphagia, especially with weight loss — concern for peptic stricture or esophageal cancer; urgent endoscopy",
+    "Inability to swallow saliva (food bolus impaction) — emergency endoscopy",
+    "Unintentional weight loss of more than 5% over 6 months in a patient with heartburn — alarm feature warranting urgent workup"
+  ],
+
+  "causes": [
+    {
+      "cause": "Transient lower esophageal sphincter relaxations (TLESRs)",
+      "description": "The dominant mechanism. The LES briefly relaxes outside of swallowing, allowing reflux. TLESRs occur in everyone but are more frequent and prolonged in GERD. Vagally mediated and triggered by gastric distension."
+    },
+    {
+      "cause": "Hypotensive lower esophageal sphincter",
+      "description": "A persistently low resting LES pressure (<10 mmHg) allows free reflux even without TLESRs. More common in long-standing or severe GERD and after smoking, alcohol, fatty meals, or pregnancy."
+    },
+    {
+      "cause": "Hiatal hernia",
+      "description": "Displacement of the gastroesophageal junction above the diaphragm separates the crural diaphragm from the LES, removing an important anti-reflux barrier. Present in 50-80% of erosive GERD and a major factor in volume reflux during sleep."
+    },
+    {
+      "cause": "Obesity and increased intra-abdominal pressure",
+      "description": "Central adiposity raises intragastric pressure and widens the gastroesophageal junction. Each 5-unit increase in BMI raises GERD symptom risk by ~30%. Pregnancy produces similar physiologic changes in the third trimester."
+    },
+    {
+      "cause": "Delayed gastric emptying",
+      "description": "Slow gastric emptying — diabetic gastroparesis, narcotic use, post-vagotomy states, scleroderma — prolongs the period when reflux can occur and increases volume of refluxate."
+    },
+    {
+      "cause": "Dietary and lifestyle triggers",
+      "description": "Fatty meals slow gastric emptying; alcohol, coffee, chocolate, peppermint, and tomato- or citrus-based foods either reduce LES tone or directly irritate the mucosa. Late or large meals before lying down are a common trigger."
+    },
+    {
+      "cause": "Medications that lower LES pressure",
+      "description": "Calcium channel blockers, nitrates, anticholinergics, benzodiazepines, beta-2 agonists, and progesterone all reduce LES tone and worsen reflux. NSAIDs and bisphosphonates damage mucosa directly."
+    },
+    {
+      "cause": "Impaired esophageal acid clearance",
+      "description": "Reduced peristalsis (ineffective esophageal motility, scleroderma) and decreased salivary bicarbonate (smoking, anticholinergics, Sjögren's) prolong contact time between refluxate and mucosa."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Strongest modifiable risk factor. Each 5-unit BMI increase raises GERD risk by ~30% and erosive disease risk by ~50%. Weight loss of 10% measurably reduces symptoms and PPI dose." },
+    { "factor": "Hiatal hernia", "category": "non-modifiable", "description": "Present in 50-80% of erosive GERD. Larger hernias (>3 cm) correlate with higher acid exposure and worse response to PPIs alone." },
+    { "factor": "Pregnancy", "category": "non-modifiable", "description": "Progesterone-mediated LES relaxation plus mechanical pressure from the gravid uterus causes heartburn in ~50% of pregnancies, peaking in the third trimester. Usually resolves postpartum." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Smoking lowers LES tone, reduces salivary bicarbonate clearance, and slows esophageal motility; doubles GERD severity in heavy smokers." },
+    { "factor": "Alcohol consumption", "category": "modifiable", "description": "Reduces LES pressure and directly irritates mucosa. Dose-related effect; binge drinking is the most reflux-provoking pattern." },
+    { "factor": "Large or late evening meals", "category": "modifiable", "description": "Eating within 3 hours of bedtime triples nocturnal reflux events; large meal volumes provoke more TLESRs." },
+    { "factor": "Diabetes mellitus with gastroparesis", "category": "modifiable", "description": "Delayed gastric emptying in 20-40% of long-standing diabetics doubles GERD prevalence and complicates treatment." },
+    { "factor": "Connective tissue disease (scleroderma, mixed CTD)", "category": "non-modifiable", "description": "Esophageal hypomotility and incompetent LES produce severe GERD that often requires high-dose PPI and sometimes surgery." },
+    { "factor": "Family history of GERD or Barrett's esophagus", "category": "genetic", "description": "Modest heritability of ~30%; familial Barrett's syndrome carries higher adenocarcinoma risk." },
+    { "factor": "Certain medications (CCBs, nitrates, anticholinergics, benzodiazepines, beta-2 agonists)", "category": "modifiable", "description": "Each lowers LES tone or impairs esophageal motility; review at every visit when GERD is refractory." }
+  ],
+
+  "affectedDemographics": [
+    "US adult prevalence ~20% with weekly symptoms; ~7% with daily heartburn",
+    "Prevalence rising worldwide alongside obesity; ~1.03 billion adults globally (GBD 2021)",
+    "Erosive esophagitis is roughly 2× more common in men; Barrett's esophagus and esophageal adenocarcinoma are markedly male-predominant",
+    "Common in pregnancy (50-80% of pregnancies report heartburn, mostly third trimester)",
+    "Older adults often have more severe esophagitis with less heartburn intensity, partly due to reduced visceral sensitivity"
+  ],
+
+  "diagnosisOverview": "GERD is most often diagnosed clinically — typical heartburn and regurgitation, no alarm features, response to a 4-8 week PPI trial — and empiric PPI therapy is itself a reasonable first diagnostic step in low-risk adults. The 2022 ACG guideline endorses this practical approach but specifies endoscopy for patients with alarm features (dysphagia, odynophagia, anemia, weight loss, GI bleeding, vomiting) or who fail empiric PPI. The 2020 Lyon Consensus formalized objective diagnosis using a combination of endoscopy, 24-hour pH or pH-impedance monitoring, and high-resolution esophageal manometry. Conclusive evidence of GERD includes LA grade C/D erosive esophagitis, biopsy-proven long-segment Barrett's esophagus, peptic stricture, or pH-metry acid exposure time greater than 6% on the distal probe. Endoscopy is also indicated for screening Barrett's in patients with chronic GERD plus three or more risk factors (male, age >50, white race, obesity, smoking, family history). High-resolution manometry rules out achalasia and major motility disorders before anti-reflux surgery. Empirical PPI failure (typically ≥8 weeks of double-dose PPI without adequate symptom control) is itself a diagnostic milestone — these patients need pH-impedance monitoring on or off therapy to confirm reflux is still the driver versus reflux hypersensitivity or functional heartburn. Atypical presentations (chronic cough, hoarseness, asthma) require multidisciplinary evaluation, often including ENT, pulmonary, and pH-impedance monitoring.",
+
+  "diagnosticTests": [
+    { "test": "Empirical PPI trial (8 weeks of standard or double-dose PPI)", "purpose": "Standard first-line diagnostic and therapeutic approach in patients with typical symptoms and no alarm features. Resolution of symptoms supports GERD; failure prompts further workup.", "whatToExpect": "Take medication 30-60 minutes before breakfast (and dinner if twice daily) for 8 weeks; track symptom diary." },
+    { "test": "Upper endoscopy (esophagogastroduodenoscopy, EGD)", "purpose": "Identifies erosive esophagitis (graded by LA system), Barrett's esophagus, stricture, hiatal hernia, eosinophilic esophagitis, peptic ulcer, and esophageal cancer. Required in patients with alarm features.", "whatToExpect": "Outpatient procedure under conscious sedation. Takes 15-20 minutes plus recovery; sore throat for a few hours afterward." },
+    { "test": "Ambulatory 24-hour pH monitoring (or pH-impedance) — off or on PPI", "purpose": "Quantifies acid exposure time and correlates symptoms with reflux events. Acid exposure time >6% is conclusive. pH-impedance also detects non-acid reflux.", "whatToExpect": "A thin catheter or wireless capsule placed in the esophagus during a brief endoscopy. Records for 24-96 hours during normal activities; patient logs meals, symptoms, and sleep." },
+    { "test": "High-resolution esophageal manometry", "purpose": "Required before anti-reflux surgery to rule out achalasia, ineffective esophageal motility, or aperistalsis (scleroderma). Measures LES pressure, peristaltic integrity, and esophagogastric junction morphology.", "whatToExpect": "A small catheter passed through the nose into the esophagus; takes 10-15 minutes while swallowing 10 sips of water. Mild nasal discomfort." },
+    { "test": "Barium swallow / esophagram", "purpose": "Anatomic study used when stricture, large hiatal hernia, or paraesophageal hernia is suspected. Useful for surgical planning but less sensitive than endoscopy for mucosal disease.", "whatToExpect": "Drink a thick contrast liquid while X-ray images are taken; takes 15-20 minutes." },
+    { "test": "Gastric emptying study (4-hour solid-meal)", "purpose": "Detects gastroparesis in patients with persistent symptoms despite acid suppression, especially in diabetics or those on opioids.", "whatToExpect": "Eat a labeled meal and undergo periodic imaging over 4 hours; no IV access required." }
+  ],
+
+  "treatmentOverview": "Treatment is stepped. For mild intermittent symptoms, lifestyle modification (weight loss if overweight, head-of-bed elevation, avoiding meals within 3 hours of bedtime, smoking cessation, trigger food identification) plus on-demand antacids or H2-receptor antagonists (famotidine 20-40 mg) is often enough. For moderate-to-severe or daily symptoms, an 8-week course of a once-daily proton pump inhibitor (omeprazole 20 mg, esomeprazole 20-40 mg, pantoprazole 40 mg, rabeprazole 20 mg, lansoprazole 30 mg, or dexlansoprazole 30-60 mg) controls symptoms in 70-80% of patients. PPIs should be taken 30-60 minutes before the first meal of the day; twice-daily dosing is reserved for partial responders or after objective workup confirms persistent reflux. Once symptoms resolve, attempt step-down to the lowest effective dose; many patients maintain on intermittent or on-demand PPI. Long-term PPI use is appropriate when indicated (Barrett's, severe erosive disease, refractory NERD), with attention to magnesium, B12, and bone density monitoring on extended therapy. The newer potassium-competitive acid blocker vonoprazan (FDA-approved 2022 for erosive esophagitis and 2023 for non-erosive GERD; 20 mg daily) provides faster, more sustained acid suppression than PPIs and is now an alternative for severe erosive disease or PPI failure. Refractory disease — persistent symptoms despite optimized PPI plus lifestyle modification, confirmed by pH-impedance — is treated with anti-reflux surgery (laparoscopic Nissen or Toupet fundoplication, the LINX magnetic sphincter augmentation device, or transoral incisionless fundoplication), with bariatric surgery (Roux-en-Y gastric bypass) preferred for patients with BMI ≥35. Reflux hypersensitivity and functional heartburn respond to neuromodulators (low-dose tricyclic antidepressants or SSRIs) and cognitive-behavioral therapy. Eosinophilic esophagitis — which can mimic GERD — requires dietary elimination, topical steroids, or dupilumab.",
+
+  "medicalTreatments": [
+    { "name": "Omeprazole 20 mg, esomeprazole 20-40 mg, pantoprazole 40 mg, or rabeprazole 20 mg once daily (PPI)", "description": "Irreversibly inhibits H+/K+ ATPase, the gastric acid pump. Best taken 30-60 minutes before the first meal. Standard 8-week course for diagnosis and healing; step down to lowest effective dose for maintenance.", "effectiveness": "Symptom relief in 70-80% of GERD and 85-95% healing of LA grade A/B esophagitis at 8 weeks; LA grade C/D heals in ~75% by 8 weeks." },
+    { "name": "Vonoprazan 20 mg once daily (potassium-competitive acid blocker, PCAB)", "description": "FDA-approved 2022 for erosive esophagitis healing and 2023 for non-erosive GERD. Faster onset and more sustained acid suppression than PPIs. Single daily dosing not tied to meals.", "effectiveness": "Superior healing of severe (LA C/D) erosive esophagitis at 8 weeks versus lansoprazole in PHALCON-EE trial (~93% vs 85%); maintenance prevented relapse in 80% over 6 months." },
+    { "name": "Famotidine 20-40 mg twice daily (H2 receptor antagonist)", "description": "Reversibly blocks histamine H2 receptors. Good for mild intermittent symptoms and as an add-on at bedtime for nocturnal acid breakthrough on PPI.", "effectiveness": "Symptom relief in ~50-60% of mild GERD; tachyphylaxis develops over weeks with continuous use." },
+    { "name": "Antacids (calcium carbonate, aluminum-magnesium hydroxide, alginate-antacid combinations)", "description": "Rapid neutralization of gastric acid; alginate combinations (e.g. Gaviscon) form a foam raft over gastric contents and physically reduce reflux. Best for occasional or breakthrough symptoms.", "effectiveness": "Symptom relief within minutes; effect lasts 1-3 hours. Alginate combinations show 30-40% reduction in postprandial reflux in pH studies." },
+    { "name": "Lifestyle modification (weight loss, head-of-bed elevation, meal timing, smoking cessation)", "description": "First-line and adjunct at every stage. A 10% reduction in body weight measurably reduces symptom frequency in observational and randomized data; head-of-bed elevation by 6-8 inches and avoiding meals within 3 hours of bedtime reduce nocturnal reflux.", "effectiveness": "Weight loss alone reduces GERD symptoms by ~40% in overweight cohorts (Nurses' Health Study); head-of-bed elevation reduces nocturnal acid exposure by 30%." },
+    { "name": "Baclofen 5-20 mg three times daily (GABA-B agonist) — off-label", "description": "Reduces TLESRs by ~40%. Used as add-on in refractory GERD, especially regurgitation-predominant or bile reflux. Side effects (drowsiness, dizziness) limit use to ~30-40% of patients.", "effectiveness": "Symptom reduction in ~50-60% of PPI partial responders in small trials." },
+    { "name": "Sucralfate 1 g four times daily", "description": "Mucosal protectant useful in pregnancy and for nocturnal symptom adjunct. Forms a viscous coating over ulcerated mucosa.", "effectiveness": "Modest symptom relief; primary value is pregnancy safety and adjunct in selected patients with bile reflux or NSAID-related esophagitis." },
+    { "name": "Tricyclic antidepressant (e.g. amitriptyline 10-50 mg at bedtime) for reflux hypersensitivity / functional heartburn", "description": "Neuromodulator that reduces visceral hypersensitivity. Used when symptoms persist despite normal pH-impedance.", "effectiveness": "Symptom improvement in ~40-50% of functional heartburn patients in randomized trials." }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Laparoscopic Nissen fundoplication (360° wrap)", "description": "The gold-standard anti-reflux operation. The gastric fundus is wrapped around the distal esophagus, recreating an anti-reflux barrier. Reserved for confirmed GERD refractory to PPI, severe regurgitation, or patient preference.", "successRate": "Long-term symptom control in 80-90% at 5 years; ~10-15% require resumption of PPI within 10 years. Gas-bloat syndrome and dysphagia are common early side effects." },
+    { "name": "Laparoscopic Toupet fundoplication (270° partial wrap)", "description": "Partial posterior wrap. Lower rate of dysphagia and gas-bloat than Nissen; appropriate when esophageal motility is borderline.", "successRate": "Comparable symptom control to Nissen in 5-year data (LOTUS trial); fewer side effects." },
+    { "name": "LINX magnetic sphincter augmentation", "description": "A ring of titanium beads with magnetic cores placed around the lower esophagus. Augments LES pressure during rest, opens with swallowing. Approved for mild-to-moderate GERD without large hiatal hernia.", "successRate": "Symptom control in ~85% at 5 years; dysphagia in ~5% requires balloon dilation or device removal." },
+    { "name": "Transoral incisionless fundoplication (TIF / EsophyX)", "description": "Endoscopic creation of a partial fundoplication through the mouth. Less invasive than laparoscopic surgery but with lower durability.", "successRate": "Symptom improvement in ~60-70% at 5 years; 25-30% return to PPI." },
+    { "name": "Roux-en-Y gastric bypass", "description": "The most effective anti-reflux procedure in patients with BMI ≥35. Removes the acid-producing gastric body from the swallow pathway. Sleeve gastrectomy can worsen GERD and is generally not chosen for reflux-dominant patients.", "successRate": "Symptom resolution in 85-95% of obese GERD patients at 5 years; substantial added benefit on diabetes, hypertension, and weight." },
+    { "name": "Endoscopic dilation of peptic stricture", "description": "Used for symptomatic GERD-related stricture causing dysphagia. Balloon or Savary dilation with ongoing PPI prevents recurrence.", "successRate": "Symptom relief in >90% after 1-3 sessions; recurrence in ~30% requires repeat dilation." }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Alginate-antacid combination (Gaviscon Advance)", "description": "Forms a physical raft over gastric contents that reduces postprandial reflux. Well-established adjunct to PPI in randomized trials." },
+    { "name": "Melatonin 3-6 mg at bedtime", "description": "Small randomized trials suggest improvement in GERD symptoms versus placebo and equivalence with low-dose PPI for mild disease; mechanism includes LES tone modulation and antioxidant effect." }
+  ],
+  "linkedTreatmentSlugs": [],
+
+  "whySeeSpecialist": "Refer to gastroenterology for patients with alarm features (dysphagia, odynophagia, anemia, weight loss, GI bleeding, vomiting), failure of 8 weeks of optimized PPI, suspected Barrett's esophagus, chronic cough or asthma where reflux is suspected, refractory symptoms requiring pH-impedance or manometry, and any consideration of anti-reflux surgery. Patients with new heartburn at age 50 or older, or with chronic symptoms plus three or more Barrett's risk factors, should also be evaluated.",
+  "doctorSelectionGuide": "Most GERD is treatable in primary care. For complex or refractory cases, look for a gastroenterologist with experience in pH-impedance monitoring, high-resolution manometry, advanced endoscopy (Barrett's surveillance with ablation), and a working relationship with foregut surgery. Bariatric and minimally invasive foregut surgery centers offer the broadest set of options for patients with concomitant obesity or anatomic abnormalities.",
+
+  "hospitalCriteria": [
+    "Gastroenterology service with on-site upper endoscopy, pH-impedance, and high-resolution manometry",
+    "Advanced endoscopy program with Barrett's surveillance, radiofrequency ablation, and endoscopic submucosal dissection",
+    "Foregut surgical team with laparoscopic, robotic, and bariatric capability",
+    "Multidisciplinary refractory-GERD clinic (GI, surgery, ENT, pulmonology where indicated)",
+    "Diagnostic imaging including fluoroscopy and gastric-emptying scintigraphy"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain a body mass index in the normal range; weight loss of 10% measurably reduces symptoms in overweight adults.",
+    "Avoid eating within 3 hours of lying down; finish dinner at least 3 hours before bed.",
+    "Sleep with the head of the bed elevated 6-8 inches if you have nocturnal symptoms (use blocks under the bed frame, not extra pillows under the head).",
+    "Identify and avoid personal trigger foods — common offenders include fatty meals, chocolate, peppermint, coffee, alcohol, citrus, tomato-based foods, and carbonated drinks.",
+    "Stop smoking — tobacco lowers LES tone and reduces salivary clearance of acid.",
+    "Limit alcohol to no more than one drink per day for women and two for men; less if it triggers symptoms.",
+    "Review medications with your clinician — calcium channel blockers, nitrates, anticholinergics, and bisphosphonates can worsen reflux or cause esophagitis."
+  ],
+
+  "lifestyleModifications": [
+    "Eat slowly, in smaller portions, and stop before feeling overfull",
+    "Wear loose-fitting clothing around the waist; avoid tight belts and shapewear",
+    "Chew gum (sugar-free, non-mint) after meals to stimulate salivary clearance",
+    "Sleep on the left side rather than the right; right-side sleeping increases reflux events",
+    "Track symptoms in a 2-week food and behavior log when starting treatment to identify personal triggers",
+    "Discuss reflux during pregnancy with your obstetrician — antacids, sucralfate, and many PPIs are safe in pregnancy",
+    "If you take PPIs long term, ensure adequate calcium, vitamin D, magnesium, and B12 from diet or supplementation as appropriate"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Lean protein, vegetables (especially leafy greens), whole grains, and legumes",
+      "Low-fat dairy and high-fiber foods, which empty more quickly and produce fewer reflux events",
+      "Ginger root or non-caffeinated herbal teas for symptom relief",
+      "Water with meals rather than carbonated or alcoholic beverages",
+      "Smaller frequent meals rather than 1-2 large meals if you have delayed gastric emptying"
+    ],
+    "avoid": [
+      "High-fat fried foods, heavy cream sauces, and fatty cuts of meat — slow gastric emptying and trigger TLESRs",
+      "Chocolate, peppermint, and spearmint — all lower LES tone",
+      "Coffee (regular and decaf), tea, and other caffeinated drinks if they trigger symptoms",
+      "Alcohol, especially red wine and spirits, which lower LES tone and irritate the mucosa",
+      "Citrus juices, tomato-based sauces, and very spicy foods if they reliably trigger symptoms"
+    ]
+  },
+  "exerciseGuidelines": "Regular moderate exercise reduces GERD risk and supports weight loss. Avoid high-impact exercise immediately after eating and choose activities with less intra-abdominal pressure (walking, swimming, cycling) over heavy weightlifting or inverted positions in yoga. Wait 2-3 hours after meals before vigorous exercise.",
+
+  "dailyManagement": [
+    "Take PPI 30-60 minutes before the first meal of the day; the same time each day improves adherence",
+    "Use on-demand antacid or alginate for breakthrough symptoms — they work within minutes",
+    "Keep dinner small and finish at least 3 hours before bed",
+    "Elevate head of bed by 6-8 inches at the frame for nocturnal symptoms",
+    "Reassess at 8 weeks — if symptoms are controlled, attempt step-down to lowest effective dose",
+    "If symptoms persist on PPI, return to gastroenterology rather than self-escalating",
+    "Track food, weight, and symptoms during the first 8 weeks to identify personal triggers"
+  ],
+
+  "prognosis": "GERD is a chronic relapsing condition for most patients; symptoms recur in 60-80% within 6 months of stopping a PPI. Long-term outlook is excellent when symptoms are controlled — most patients live normal lives on intermittent or daily acid suppression, with no shortening of life expectancy. Erosive esophagitis heals in >90% with 8 weeks of PPI; severe (LA C/D) disease heals in ~75% by 8 weeks and 90% by 12 weeks. The principal long-term complication is Barrett's esophagus, which develops in 5-10% of chronic GERD and progresses to esophageal adenocarcinoma at 0.1-0.3% per year. Surveillance endoscopy at 3-5 year intervals (more often with low-grade dysplasia, more aggressive endoscopic ablation for high-grade dysplasia) detects neoplastic progression early. Anti-reflux surgery offers durable control in carefully selected patients but carries a 10-15% rate of long-term PPI resumption and a 5-10% rate of side effects like dysphagia or gas-bloat. Refractory GERD in obese patients has the most favorable outcome with bariatric surgery, with 85-95% symptom resolution and substantial added cardiometabolic benefit.",
+
+  "recoveryTimeline": "Heartburn typically begins to improve within 2-3 days of starting a PPI and reaches steady-state effect by 4-7 days. LA grade A-B esophagitis heals in 4-8 weeks; LA grade C-D requires 8-12 weeks. After successful 8-week treatment, attempt step-down — many patients maintain on intermittent or on-demand PPI. After laparoscopic anti-reflux surgery, expect 4-6 weeks of soft-diet recovery; dysphagia from a tight wrap usually resolves within 8-12 weeks.",
+
+  "complications": [
+    "Erosive esophagitis (LA grades A-D) — visible mucosal breaks; severe forms can bleed or progress to stricture. Detect by endoscopy in patients with persistent symptoms.",
+    "Peptic stricture — fibrotic narrowing of the distal esophagus causing solid-food dysphagia. Treated with endoscopic balloon dilation plus ongoing PPI.",
+    "Barrett's esophagus — specialized intestinal metaplasia in 5-10% of chronic GERD. Carries 0.1-0.3%/year risk of esophageal adenocarcinoma; requires surveillance.",
+    "Esophageal adenocarcinoma — rare but rising. Risk factors include long-standing GERD, Barrett's, male sex, obesity, smoking. Early detection through surveillance dramatically improves survival.",
+    "Aspiration pneumonia and asthma exacerbation — particularly with nocturnal regurgitation. Treat acid suppression aggressively in patients with refractory asthma or recurrent pneumonia.",
+    "Laryngitis, chronic cough, dental erosion — extra-esophageal complications of long-standing reflux. Multidisciplinary management with ENT, dentistry, and pulmonology improves outcomes."
+  ],
+
+  "supportResources": [
+    { "name": "American College of Gastroenterology — Acid Reflux", "url": "https://gi.org/topics/acid-reflux/", "description": "Patient-facing overview from the specialty society with treatment and lifestyle guidance." },
+    { "name": "International Foundation for Gastrointestinal Disorders (IFFGD)", "url": "https://aboutgerd.org/", "description": "Nonprofit education and support resource for GERD patients with newsletters and patient stories." },
+    { "name": "NIH/NIDDK GERD Information", "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults", "description": "US National Institutes of Health patient-facing reference covering diagnosis and treatment." },
+    { "name": "British Society of Gastroenterology — Patient Information", "url": "https://www.bsg.org.uk/", "description": "UK-based gastroenterology resources for patients and clinicians." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "peptic-ulcer", "name": "Peptic Ulcer Disease", "keyDifference": "Peptic ulcers cause epigastric burning that classically improves with food (duodenal) or worsens with food (gastric) and is most often caused by H. pylori or NSAIDs. GERD causes retrosternal burning that worsens lying down. Endoscopy distinguishes them; both can coexist." },
+    { "slug": "acute-gastritis-without-bleeding-k2900", "name": "Gastritis", "keyDifference": "Gastritis causes epigastric pain, nausea, and sometimes bleeding from inflamed gastric mucosa. GERD causes substernal heartburn and regurgitation. The two share PPI as first-line treatment but differ in mucosal site." },
+    { "slug": "eosinophilic-esophagitis-k200", "name": "Eosinophilic Esophagitis", "keyDifference": "Eosinophilic esophagitis (EoE) is an allergic/immune disease causing dysphagia and food impaction more than heartburn. It is now a common GERD mimic in young adults, especially with atopic history; biopsies showing ≥15 eosinophils/HPF confirm." },
+    { "slug": "barrett-s-esophagus-without-dysplasia-k2270", "name": "Barrett's Esophagus", "keyDifference": "Barrett's esophagus is a complication of long-standing GERD, not a separate disease. It is asymptomatic in itself and detected on endoscopy as salmon-colored mucosa in the distal esophagus with biopsy confirmation of intestinal metaplasia." },
+    { "slug": "asthma", "name": "Asthma", "keyDifference": "Asthma and GERD both cause cough and can trigger each other; asthma adds wheeze and reversible airflow obstruction on spirometry. About 30-40% of asthma patients have GERD, and treating reflux improves asthma in selected cases." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "barrett-s-esophagus-without-dysplasia-k2270", "name": "Barrett's Esophagus" },
+    { "slug": "peptic-ulcer", "name": "Peptic Ulcer Disease" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "barrett-s-esophagus-without-dysplasia-k2270", "name": "Barrett's Esophagus", "relevance": "The principal long-term complication of chronic GERD; requires surveillance endoscopy." },
+    { "slug": "peptic-ulcer", "name": "Peptic Ulcer Disease", "relevance": "Shares acid-related pathophysiology and PPI as first-line treatment; commonly co-evaluated." },
+    { "slug": "eosinophilic-esophagitis-k200", "name": "Eosinophilic Esophagitis", "relevance": "The most common GERD mimic in young adults; biopsies during endoscopy distinguish." },
+    { "slug": "asthma", "name": "Asthma", "relevance": "Frequent comorbidity that GERD can worsen, and where treating reflux can improve symptom control." },
+    { "slug": "acute-gastritis-without-bleeding-k2900", "name": "Gastritis", "relevance": "Shares acid-related pathophysiology and overlapping epigastric symptoms; distinct by location and endoscopic appearance." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is the difference between heartburn and GERD?",
+      "answer": "Heartburn is the symptom — a burning sensation behind the breastbone, often after meals or when lying down. GERD is the chronic disease state where reflux happens often enough or strongly enough to cause troublesome symptoms or complications. Occasional heartburn does not equal GERD; weekly symptoms for more than a few weeks usually does.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does GERD feel like?",
+      "answer": "Typical GERD feels like a burning, hot, or sour sensation rising from the upper abdomen behind the breastbone, often 30-60 minutes after meals or when lying down. Many patients also taste acidic or bitter fluid in the back of the throat. Atypical presentations include chronic dry cough, hoarseness, and a lump-in-throat sensation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is GERD diagnosed?",
+      "answer": "Most cases are diagnosed clinically by typical symptoms and a 4-8 week trial of a proton pump inhibitor. Patients with alarm features (trouble swallowing, weight loss, bleeding, anemia) or PPI failure should have an upper endoscopy. Ambulatory pH or pH-impedance monitoring and high-resolution manometry are used in refractory cases or before surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are PPIs safe long-term?",
+      "answer": "PPIs are generally safe with a well-characterized side effect profile. Long-term concerns include small absolute increases in C. difficile infection, community-acquired pneumonia, fractures with prolonged high-dose use, and modest reductions in serum magnesium and vitamin B12. For most patients with valid indications the benefits outweigh these risks; use the lowest effective dose.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can GERD cause chest pain?",
+      "answer": "Yes. Reflux can cause retrosternal pain that mimics cardiac angina. New chest pain in any adult should be evaluated for cardiac causes first. Once cardiac disease is excluded, reflux is one of the most common causes of non-cardiac chest pain and responds to PPI in 60-70% of cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods cause acid reflux?",
+      "answer": "Common triggers include fatty fried foods, chocolate, peppermint, coffee, alcohol, citrus juices, tomato-based foods, carbonated drinks, and very spicy foods. Triggers vary by person — a brief food and symptom diary often identifies your specific triggers more reliably than a generic list.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can losing weight help acid reflux?",
+      "answer": "Yes, substantially. Each unit of BMI increase raises GERD risk by roughly 5-10%. Observational data from large cohorts show that a 10% reduction in body weight reduces heartburn frequency by 30-40% and often allows step-down of PPI dose. Bariatric surgery in BMI ≥35 resolves GERD in 85-95% of patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is silent reflux?",
+      "answer": "Silent reflux, or laryngopharyngeal reflux (LPR), is reflux that reaches the larynx and throat without classic heartburn. Symptoms include chronic cough, hoarseness, throat clearing, lump-in-throat sensation, and post-nasal drip. Diagnosis is harder than typical GERD, and response to acid suppression is more variable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can GERD cause cancer?",
+      "answer": "Long-standing GERD is the principal risk factor for esophageal adenocarcinoma, but most people with GERD never develop cancer. The intermediate step is Barrett's esophagus, present in 5-10% of chronic GERD and progressing to cancer at roughly 0.1-0.3% per year. Surveillance endoscopy detects neoplastic changes early.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can babies and children get GERD?",
+      "answer": "Yes. Infants frequently regurgitate (physiologic GER) without GERD. Symptoms warranting evaluation in babies include poor weight gain, feeding refusal, recurrent pneumonia, and back-arching during feeds. In older children, classic symptoms resemble adults and respond to lifestyle modification plus PPI or H2 blocker if needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is heartburn during pregnancy normal?",
+      "answer": "Yes. About half of all pregnancies are complicated by heartburn, most often in the third trimester, due to progesterone-mediated lower esophageal sphincter relaxation and mechanical pressure from the uterus. It usually resolves after delivery. Antacids, sucralfate, H2 blockers, and most PPIs (except omeprazole as first choice) are considered safe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I have an endoscopy for GERD?",
+      "answer": "Endoscopy is recommended for any patient with alarm features (dysphagia, odynophagia, anemia, weight loss, GI bleeding, persistent vomiting), failure of 8 weeks of PPI, or for screening Barrett's in patients with chronic GERD plus three or more risk factors (age over 50, male sex, white race, obesity, smoking, family history).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does sleeping position affect reflux?",
+      "answer": "Yes. Sleeping flat increases nocturnal reflux. Elevating the head of the bed by 6-8 inches (using blocks under the bed frame, not extra pillows) reduces nocturnal acid exposure by roughly 30%. Sleeping on the left side reduces reflux compared with right-side sleeping in pH-metry studies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is GERD curable with surgery?",
+      "answer": "Anti-reflux surgery (Nissen fundoplication, Toupet partial wrap, LINX magnetic ring, TIF) provides durable symptom control in 80-90% of carefully selected patients at 5 years, but 10-15% return to PPI by 10 years. Bariatric surgery (gastric bypass) is the most effective option in obese patients, with 85-95% symptom resolution.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is vonoprazan?",
+      "answer": "Vonoprazan is a potassium-competitive acid blocker (PCAB) approved by the FDA in 2022 for erosive esophagitis and in 2023 for non-erosive GERD. It produces faster and more sustained acid suppression than PPIs, is taken once daily independent of meals, and shows superior healing rates in severe erosive disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause acid reflux?",
+      "answer": "Stress does not cause GERD directly, but it amplifies perception of reflux symptoms and can trigger behavior changes (large late meals, alcohol, poor sleep) that worsen reflux. Cognitive-behavioral therapy and mindfulness reduce symptom severity in reflux hypersensitivity and functional heartburn.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does my reflux get worse at night?",
+      "answer": "Reclining loses the protective effect of gravity, the upper esophageal sphincter relaxes, and salivary clearance falls during sleep. Late or large meals before bedtime are the dominant modifiable factor. Sleeping with the head of the bed elevated and finishing dinner 3 hours before bed reduces nocturnal symptoms by 30-50%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can probiotics help GERD?",
+      "answer": "Evidence for probiotics in GERD is limited and inconsistent. Some small trials suggest a modest benefit on bloating and regurgitation with specific strains. Probiotics are not recommended as a primary or sole treatment, but they are generally safe to try alongside standard therapy if symptoms include bloating or distension.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Barrett's esophagus?",
+      "answer": "Barrett's esophagus is a precancerous change in the lining of the lower esophagus, in which normal squamous epithelium is replaced by intestinal-type columnar cells with goblet cells. It develops in 5-10% of chronic GERD patients and raises esophageal adenocarcinoma risk to 0.1-0.3% per year. Surveillance endoscopy is recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I take PPIs forever?",
+      "answer": "PPIs can be taken long-term when there is a valid indication — Barrett's esophagus, severe erosive disease, persistent symptoms despite step-down. Use the lowest effective dose, monitor magnesium and B12 periodically, and consider bone density on prolonged high-dose therapy. For mild intermittent GERD, on-demand or step-down dosing is preferred.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does drinking water help reflux?",
+      "answer": "Drinking a small glass of water during or after a reflux episode can wash acid back into the stomach and provide quick relief. It does not prevent reflux. Avoid large volumes of water with meals, which expand the stomach and may provoke more transient relaxations of the lower esophageal sphincter.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Acid Reflux / GERD (gastroesophageal reflux disease)",
+  "regionalNames": [
+    { "name": "Amlapitta", "region": "India", "language": "Hindi" },
+    { "name": "Pulipugum", "region": "India", "language": "Tamil" }
+  ],
+
+  "searchTags": [
+    "GERD",
+    "acid reflux",
+    "heartburn",
+    "gastroesophageal reflux disease",
+    "erosive esophagitis",
+    "non-erosive reflux disease",
+    "NERD",
+    "silent reflux",
+    "laryngopharyngeal reflux",
+    "LPR",
+    "Barrett's esophagus",
+    "hiatal hernia",
+    "PPI",
+    "vonoprazan",
+    "Nissen fundoplication"
+  ],
+
+  "symptomKeywords": [
+    "heartburn",
+    "acid in throat",
+    "sour taste in mouth",
+    "burning in chest",
+    "regurgitation",
+    "burping with sour taste",
+    "trouble swallowing",
+    "chronic cough at night",
+    "hoarse morning voice",
+    "lump in throat"
+  ],
+
+  "metaTitle": "Acid Reflux & GERD: Symptoms & Treatment | aihealz",
+  "metaDescription": "GERD: chronic acid reflux with heartburn and regurgitation. Lifestyle, PPI therapy, surgery, and Barrett's risk reviewed by our medical board.",
+
+  "keywords": [
+    "GERD",
+    "acid reflux",
+    "heartburn",
+    "GERD symptoms",
+    "GERD treatment",
+    "PPI",
+    "vonoprazan",
+    "silent reflux",
+    "LPR",
+    "Nissen fundoplication",
+    "Barrett's esophagus",
+    "hiatal hernia",
+    "GERD diet",
+    "PPI side effects"
+  ],
+
+  "lastReviewed": "2026-05-12",
+  "sources": [
+    {
+      "title": "Katz PO, Dunbar KB, Schnoll-Sussman FH, et al. 2022. ACG Clinical Guideline for the Diagnosis and Management of Gastroesophageal Reflux Disease. Am J Gastroenterol 117(1):27-56.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34807007/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Gyawali CP, Kahrilas PJ, Savarino E, et al. 2018. Modern diagnosis of GERD: the Lyon Consensus. Gut 67(7):1351-1362.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29437910/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Vakil N, van Zanten SV, Kahrilas P, et al. 2006. The Montreal definition and classification of gastroesophageal reflux disease: a global evidence-based consensus. Am J Gastroenterol 101(8):1900-1920.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16928254/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Laine L, DeVault K, Katz P, et al. 2023. Vonoprazan Versus Lansoprazole for Healing and Maintenance of Healing of Erosive Esophagitis: A Randomized Trial (PHALCON-EE). Gastroenterology 164(1):61-71.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36228734/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Jacobson BC, Somers SC, Fuchs CS, Kelly CP, Camargo CA Jr. 2006. Body-mass index and symptoms of gastroesophageal reflux in women. N Engl J Med 354(22):2340-2348.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16738270/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Spechler SJ, Hunter JG, Jones KM, et al. 2019. Randomized Trial of Medical versus Surgical Treatment for Refractory Heartburn. N Engl J Med 381(16):1513-1523.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31618539/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Shaheen NJ, Falk GW, Iyer PG, Souza RF, Yadlapati RH, Sauer BG, Wani S. 2022. Diagnosis and Management of Barrett's Esophagus: An Updated ACG Guideline. Am J Gastroenterol 117(4):559-587.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35354777/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Freedberg DE, Kim LS, Yang YX. 2017. The Risks and Benefits of Long-term Use of Proton Pump Inhibitors: Expert Review and Best Practice Advice from the AGA. Gastroenterology 152(4):706-715.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28257716/",
+      "accessedDate": "2026-05-12"
+    }
+  ],
+
+  "images": []
+}
