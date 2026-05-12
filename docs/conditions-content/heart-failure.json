@@ -1,0 +1,489 @@
+{
+  "_meta": {
+    "slug": "heart-failure",
+    "tier": 1,
+    "headTerm": "heart failure",
+    "longTailKeywords": [
+      "heart failure symptoms",
+      "heart failure treatment",
+      "heart failure stages",
+      "congestive heart failure",
+      "ejection fraction",
+      "HFrEF vs HFpEF",
+      "heart failure medications",
+      "heart failure life expectancy",
+      "diastolic heart failure",
+      "heart failure diet"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2022 AHA/ACC/HFSA Heart Failure Guideline, 2023 ESC Focused Update, PARADIGM-HF, DAPA-HF, EMPEROR-Reduced, EMPEROR-Preserved, DELIVER, and STRONG-HF trial primary literature."
+  },
+
+  "h1Title": "Heart Failure: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "Heart failure is a clinical syndrome in which the heart cannot pump enough blood at the pressures the body needs, producing breathlessness, fatigue, and fluid retention. About 6.7 million US adults are affected and the lifetime risk after age 40 is roughly 1 in 4, driven mostly by hypertension and coronary artery disease. The two physiologic types are heart failure with reduced ejection fraction (HFrEF, EF ≤40%) and heart failure with preserved ejection fraction (HFpEF, EF ≥50%), with HFmrEF (41-49%) in between; classification matters because treatment differs. The classic presentation is shortness of breath on exertion or when lying flat, ankle swelling, and weight gain over days. Quadruple therapy with a renin-angiotensin inhibitor, beta-blocker, mineralocorticoid antagonist, and SGLT2 inhibitor now improves survival in HFrEF by roughly 70% versus placebo, while SGLT2 inhibitors are the first class proven to help HFpEF outcomes.",
+
+  "keyStats": {
+    "prevalence": "~6.7 million US adults; ~64 million people worldwide (AHA 2024 stats)",
+    "demographics": "Higher rates in Black adults and men; risk doubles each decade after age 50",
+    "avgAge": "Median age at first diagnosis 73; HFpEF skews older and more female",
+    "globalCases": "~64 million people; >1 million US hospitalizations per year for decompensation"
+  },
+
+  "definition": "Heart failure (ICD-10: I50; I50.2 systolic, I50.3 diastolic, I50.4 combined, I50.9 unspecified) is a clinical syndrome defined by symptoms (dyspnea, fatigue, fluid retention) and signs (elevated jugular venous pressure, pulmonary crackles, peripheral edema) that result from a structural or functional cardiac abnormality which raises intracardiac pressures or reduces cardiac output at rest or during stress. The universal definition adopted by ACC/AHA/HFSA and ESC in 2021 also requires objective evidence of cardiac dysfunction — abnormal echocardiogram, elevated natriuretic peptides, or hemodynamic measurements. Heart failure is staged A through D: stage A is high-risk without structural disease; stage B is structural disease without symptoms; stage C is symptomatic disease; stage D is advanced disease requiring specialized interventions. The NYHA functional class (I-IV) describes symptom severity at the time of assessment. Heart failure is managed by cardiologists, increasingly by specialist heart-failure clinics, with primary care doing the day-to-day titration and surveillance after the first decompensation.",
+
+  "typesClassification": [
+    { "type": "HFrEF — reduced ejection fraction (LVEF ≤40%)", "description": "The classic systolic failure phenotype. Most often follows myocardial infarction, dilated cardiomyopathy, or long-standing hypertension. Strongest evidence base — quadruple therapy provides ~70% relative mortality benefit." },
+    { "type": "HFmrEF — mildly reduced ejection fraction (LVEF 41-49%)", "description": "Intermediate phenotype. Recovers or progresses depending on cause and treatment response. Evidence supports the same disease-modifying therapy as HFrEF in many patients." },
+    { "type": "HFpEF — preserved ejection fraction (LVEF ≥50%)", "description": "Diastolic dysfunction with normal pump function. Strongly tied to hypertension, obesity, diabetes, atrial fibrillation, and aging. SGLT2 inhibitors are the first class to reduce HFpEF hospitalization." },
+    { "type": "HFimpEF — improved ejection fraction", "description": "Patients whose LVEF improves above 40% after treatment. Recurrence risk remains substantial if therapy is withdrawn; guidelines recommend continuing therapy indefinitely." },
+    { "type": "Right-sided heart failure", "description": "Predominant right-ventricular failure, most often from pulmonary hypertension, left heart failure, or chronic lung disease. Presents with elevated JVP, hepatomegaly, ascites, and peripheral edema more than pulmonary congestion." },
+    { "type": "Acute decompensated heart failure", "description": "Sudden worsening of chronic HF or new-onset acute pulmonary edema. The most common reason for HF hospital admission and the highest-risk window — 30-day readmission rates exceed 20%." }
+  ],
+
+  "primarySymptoms": [
+    "Shortness of breath with activity that worsens steadily over days to weeks; later, breathlessness occurs at rest and limits speech in long sentences.",
+    "Orthopnea — breathlessness when lying flat, relieved by sitting up or sleeping on 2-3 pillows. A specific symptom that signals elevated left-sided filling pressures.",
+    "Paroxysmal nocturnal dyspnea — waking 1-3 hours after falling asleep gasping for air, relieved by sitting upright and walking to a window.",
+    "Bilateral lower-extremity swelling that develops over days, pits with finger pressure, and worsens by evening. Severe cases extend to the thighs, sacrum, or abdomen.",
+    "Weight gain of 1-2 kg over 3-5 days from fluid retention; a single most useful self-monitoring metric in chronic heart failure.",
+    "Fatigue and exercise intolerance disproportionate to age — the patient can no longer carry groceries or climb a single flight of stairs without resting.",
+    "Persistent dry or wet cough, often worse at night, sometimes producing pink frothy sputum during acute pulmonary edema.",
+    "Reduced appetite, nausea, and early satiety from gut congestion; over time this produces unintentional weight loss and cardiac cachexia.",
+    "Palpitations and irregular pulse, often from atrial fibrillation, which complicates roughly 30-40% of heart failure.",
+    "Mental status changes — fatigue, slowed thinking, sometimes frank confusion — in patients with low cardiac output or hyponatremia."
+  ],
+
+  "earlyWarningSigns": [
+    "Daily morning weight increase of more than 1.4 kg (3 lb) over 2 days or 2.3 kg (5 lb) over a week",
+    "New-onset orthopnea — sleeping on an extra pillow for the first time",
+    "Mild ankle swelling and tighter shoes by end of day in someone with hypertension or coronary disease",
+    "A reduction in walking distance — fewer blocks before stopping to breathe — over the previous 1-2 weeks",
+    "Elevated NT-proBNP on a routine blood draw in a high-risk adult, especially after hypertension or recent MI"
+  ],
+
+  "emergencySigns": [
+    "Severe breathlessness at rest, inability to lie flat, pink frothy sputum — acute pulmonary edema, call emergency services",
+    "Chest pain with breathlessness — possible acute coronary syndrome causing decompensation; treat as a STEMI/NSTEMI workup",
+    "Heart rate >130/min with hypotension or cool clammy extremities — cardiogenic shock; needs ICU vasopressors and mechanical support",
+    "Sudden palpitations with syncope or near-syncope — ventricular arrhythmia in a structurally diseased heart; emergency call",
+    "Confusion, lethargy, or oliguria in a known heart-failure patient — low-output state; rapid escalation needed"
+  ],
+
+  "causes": [
+    {
+      "cause": "Coronary artery disease and prior myocardial infarction",
+      "description": "Ischemic cardiomyopathy is the leading cause of HFrEF in high-income countries. Myocardial infarction destroys functioning muscle and triggers maladaptive remodeling. About two-thirds of HFrEF cases worldwide have an ischemic etiology."
+    },
+    {
+      "cause": "Long-standing hypertension",
+      "description": "Chronically elevated afterload produces left ventricular hypertrophy, diastolic stiffness, and ultimately systolic decline. Hypertension is the leading single risk factor for HFpEF and the second-leading for HFrEF after coronary disease."
+    },
+    {
+      "cause": "Valvular heart disease",
+      "description": "Severe aortic stenosis, aortic regurgitation, mitral regurgitation, and mitral stenosis all impose pressure or volume overload that culminates in heart failure. Valve surgery or transcatheter intervention can reverse the syndrome early in the course."
+    },
+    {
+      "cause": "Cardiomyopathies (dilated, hypertrophic, restrictive)",
+      "description": "Genetic and acquired myocardial diseases produce systolic or diastolic dysfunction independent of coronary disease. Dilated cardiomyopathy is the most common HF cause in patients under 60; titin and lamin gene variants are increasingly identified."
+    },
+    {
+      "cause": "Atrial fibrillation with rapid ventricular response",
+      "description": "Sustained tachycardia (>110 bpm for weeks) causes tachycardia-induced cardiomyopathy in some patients. Rate or rhythm control can fully reverse HF in this subgroup."
+    },
+    {
+      "cause": "Diabetes, obesity, and metabolic syndrome",
+      "description": "Obesity and type 2 diabetes drive both HFrEF and especially HFpEF through microvascular disease, myocardial lipid accumulation, systemic inflammation, and AGE-mediated stiffening. They roughly double HF lifetime risk."
+    },
+    {
+      "cause": "Cardiotoxic drugs and substances",
+      "description": "Anthracycline chemotherapy (doxorubicin), trastuzumab, certain tyrosine kinase inhibitors, immune checkpoint inhibitors, methamphetamine, cocaine, and heavy chronic alcohol use cause cardiomyopathy. Risk is dose-related and often partially reversible if recognized early."
+    },
+    {
+      "cause": "Myocarditis and infiltrative disease",
+      "description": "Viral myocarditis (Coxsackie B, parvovirus, SARS-CoV-2), sarcoidosis, amyloidosis (especially ATTR in older men), and hemochromatosis can produce restrictive or dilated phenotypes. Cardiac MRI and targeted testing identify these."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Hypertension", "category": "modifiable", "description": "Each 20 mmHg rise in systolic pressure roughly doubles HF risk over time. Treating hypertension lowers HF incidence by 40-50%, the largest effect of any intervention." },
+    { "factor": "Coronary artery disease and prior MI", "category": "modifiable", "description": "A first MI carries a roughly 20-30% lifetime risk of clinical HF. Reperfusion within 90 minutes of presentation and post-MI guideline therapy substantially reduce that risk." },
+    { "factor": "Type 2 diabetes", "category": "modifiable", "description": "Doubles HF risk independent of coronary disease. SGLT2 inhibitors reduce HF hospitalization by 25-35% in diabetes regardless of baseline HF status." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Each 5-unit BMI increase raises HF risk by about 20%. Obesity is the dominant driver of the rising HFpEF prevalence." },
+    { "factor": "Older age", "category": "non-modifiable", "description": "Incidence doubles per decade after age 50; lifetime risk after age 40 is ~24%." },
+    { "factor": "Male sex (for HFrEF) / female sex (for HFpEF)", "category": "non-modifiable", "description": "Men predominate in HFrEF presentations; women predominate in HFpEF, especially in their 70s and 80s." },
+    { "factor": "Chronic kidney disease", "category": "modifiable", "description": "Cardiorenal interactions are bidirectional. CKD raises HF risk and worsens outcomes; SGLT2 inhibitors benefit both organ systems simultaneously." },
+    { "factor": "Atrial fibrillation", "category": "modifiable", "description": "AF and HF share risk factors and worsen each other. Catheter ablation may reduce HF hospitalization and mortality in selected patients (CASTLE-AF)." },
+    { "factor": "Family history / inherited cardiomyopathy", "category": "genetic", "description": "First-degree relatives of dilated cardiomyopathy patients have ~20% lifetime risk; screening with echocardiogram and increasingly genetic testing is recommended." },
+    { "factor": "Heavy alcohol intake", "category": "modifiable", "description": "More than 4 drinks daily over years produces alcoholic cardiomyopathy. Abstinence reverses or stabilizes the disease in many patients if started early." }
+  ],
+
+  "affectedDemographics": [
+    "US adults: 6.7 million prevalent cases; ~1 million new diagnoses per year",
+    "Black adults have roughly double the HF incidence and present a decade younger on average than non-Hispanic white adults",
+    "South Asian populations carry elevated HF risk linked to early-onset coronary disease and diabetes",
+    "HFpEF prevalence rises sharply after age 70 and accounts for over half of new HF cases in adults ≥75",
+    "Lifetime risk of heart failure after age 40 is approximately 24% for men and women (Framingham, Lifetime Risk Pooling Project)"
+  ],
+
+  "diagnosisOverview": "Heart failure diagnosis is clinical, anchored by symptoms (Framingham major and minor criteria are still useful) and confirmed by objective testing. The workup begins with a focused history (effort tolerance, orthopnea, paroxysmal nocturnal dyspnea, recent weight change) and an examination for elevated jugular venous pressure, S3 gallop, displaced apical impulse, bibasilar crackles, hepatomegaly, and pitting edema. The single most useful blood test is BNP or NT-proBNP — a level below the rule-out threshold (NT-proBNP <125 pg/mL in chronic ambulatory, <300 pg/mL in acute presentation) makes heart failure unlikely; levels above the rule-in threshold support the diagnosis but are not specific. Twelve-lead ECG looks for prior MI, left ventricular hypertrophy, conduction disease, and arrhythmia; a completely normal ECG makes systolic HF less likely. The diagnostic linchpin is transthoracic echocardiogram, which yields left ventricular ejection fraction, chamber sizes, wall thickness, valvular function, and diastolic indices — and so determines whether the patient has HFrEF, HFmrEF, or HFpEF. Additional testing — coronary angiography or CT coronary angiography for suspected ischemic cause, cardiac MRI for suspected infiltrative disease, viability imaging before revascularization, right heart catheterization in selected cases — is targeted to the phenotype. Once heart failure is established, a search for the underlying cause is mandatory; reversible causes (tachycardia-mediated cardiomyopathy, alcoholic cardiomyopathy, peripartum cardiomyopathy, severe valve disease) change treatment trajectory.",
+
+  "diagnosticTests": [
+    { "test": "BNP or NT-proBNP", "purpose": "Excludes heart failure when below age-adjusted thresholds and quantifies hemodynamic congestion when elevated. Tracks treatment response over time.", "whatToExpect": "Standard blood draw. Results back the same day in most hospitals; outpatient labs typically return in 24-48 hours." },
+    { "test": "12-lead ECG", "purpose": "Identifies prior infarction, left ventricular hypertrophy, conduction delay (left bundle branch block raises CRT eligibility), and atrial fibrillation.", "whatToExpect": "Ten adhesive electrodes placed on chest, arms, and legs; the recording takes under a minute and is painless." },
+    { "test": "Transthoracic echocardiogram", "purpose": "Measures left ventricular ejection fraction, chamber dimensions, wall motion, diastolic function, valve disease, and pulmonary pressures. Single most important test for phenotyping.", "whatToExpect": "A non-invasive ultrasound that takes 30-45 minutes lying on the left side. Gel is applied to the chest; some pressure but no pain or radiation." },
+    { "test": "Chest X-ray", "purpose": "Detects pulmonary edema (cephalization, Kerley B lines, alveolar opacities), cardiomegaly, and pleural effusions; helps rule out non-cardiac dyspnea.", "whatToExpect": "Two quick images while standing; takes about 5 minutes." },
+    { "test": "Cardiac MRI", "purpose": "Best test for suspected myocarditis, infiltrative disease (cardiac amyloid, sarcoid), and assessment of viability before revascularization. Quantifies fibrosis with late gadolinium enhancement.", "whatToExpect": "45-60 minutes in a closed-bore magnet with intermittent breath-holds; contrast is given through an IV. Loud noise — earplugs are provided." },
+    { "test": "Coronary angiography or CT coronary angiography", "purpose": "Confirms or excludes ischemic etiology — required if revascularization could change management. CT is appropriate for low/intermediate pretest probability; invasive angiography for high probability.", "whatToExpect": "CT: 10-15 minutes with breath-hold and IV contrast. Invasive: 30-60 minutes through a radial or femoral artery under local anesthesia and light sedation." },
+    { "test": "Right heart catheterization (selected)", "purpose": "Direct measurement of pulmonary artery pressures, wedge pressure, and cardiac output. Used to confirm pulmonary hypertension, guide advanced HF therapy decisions, and assess transplant candidacy.", "whatToExpect": "Catheter passed through internal jugular or femoral vein under local anesthesia, 30-45 minutes, conscious sedation. Mild neck soreness afterwards." },
+    { "test": "Cardiopulmonary exercise testing (CPET, peak VO2)", "purpose": "Quantifies functional capacity and prognosis; peak VO2 <14 mL/kg/min is a key threshold for transplant evaluation.", "whatToExpect": "Exercise on a treadmill or bike to maximal effort while breathing into a mouthpiece; 10-15 minutes of testing with continuous ECG, BP, and gas exchange." }
+  ],
+
+  "treatmentOverview": "Treatment is phenotype-specific. For HFrEF the modern standard is quadruple disease-modifying therapy started early and titrated rapidly: an angiotensin-receptor neprilysin inhibitor (ARNI, sacubitril-valsartan) replacing an ACE inhibitor or ARB; an evidence-based beta-blocker (carvedilol, metoprolol succinate, or bisoprolol); a mineralocorticoid receptor antagonist (spironolactone or eplerenone); and an SGLT2 inhibitor (dapagliflozin or empagliflozin). Together this regimen yields roughly a 70% relative reduction in cardiovascular mortality versus historical placebo, and the STRONG-HF trial (2022) showed that rapid in-hospital initiation and titration to target doses within 6 weeks reduces 180-day death or HF readmission by 34%. Loop diuretics (furosemide, torsemide) are used for congestion and are not disease-modifying. For HFmrEF, the same quadruple therapy is generally recommended with most benefit seen at the lower end of the range. For HFpEF, SGLT2 inhibitors (EMPEROR-Preserved, DELIVER) are the first class with proven outcome benefit; aggressive treatment of underlying hypertension, atrial fibrillation, obesity, and sleep apnea is critical. Device therapy in HFrEF includes implantable cardioverter-defibrillators for sustained EF ≤35% on optimized medical therapy with appropriate life expectancy, and cardiac resynchronization therapy for symptomatic patients with EF ≤35% and QRS ≥150 ms (or 130-149 ms with LBBB). Advanced therapies — left ventricular assist devices and heart transplantation — are reserved for stage D patients meeting strict eligibility. Throughout, treat reversible drivers (revascularization for hibernating myocardium, valve repair/replacement, AF rhythm control, abstinence from alcohol or stimulants, anthracycline-related cardiotoxicity prevention).",
+
+  "medicalTreatments": [
+    { "name": "Sacubitril-valsartan (24/26 mg twice daily; titrate to 97/103 mg twice daily)", "description": "Angiotensin receptor-neprilysin inhibitor (ARNI). Combines valsartan with the neprilysin inhibitor sacubitril, raising natriuretic peptide activity. Replaces ACE inhibitor or ARB in HFrEF.", "effectiveness": "Reduced cardiovascular death or HF hospitalization by 20% vs enalapril in PARADIGM-HF (8,442 patients, NEJM 2014). Number needed to treat ~21 to prevent one death over 27 months." },
+    { "name": "Carvedilol, metoprolol succinate, or bisoprolol", "description": "Evidence-based beta-blockers for HFrEF. Reduce sympathetic drive, reverse adverse remodeling, and lower mortality. Start low, double the dose every 2 weeks to target.", "effectiveness": "~35% relative reduction in all-cause mortality versus placebo across CIBIS-II, COPERNICUS, and MERIT-HF." },
+    { "name": "Spironolactone (12.5-25 mg daily; up to 50 mg) or eplerenone (25-50 mg daily)", "description": "Mineralocorticoid receptor antagonists. Block aldosterone-mediated fibrosis. Monitor potassium and renal function.", "effectiveness": "30% relative reduction in mortality (RALES) and 37% reduction in cardiovascular death or hospitalization (EMPHASIS-HF) in selected HFrEF." },
+    { "name": "Dapagliflozin or empagliflozin (10 mg daily)", "description": "SGLT2 inhibitors. Reduce hospitalization and mortality in HFrEF and HFpEF regardless of diabetes status. Glucose-lowering effect is incidental.", "effectiveness": "26% reduction in CV death or HF hospitalization in HFrEF (DAPA-HF, EMPEROR-Reduced); 21% reduction in HF hospitalization or CV death in HFpEF (EMPEROR-Preserved, DELIVER)." },
+    { "name": "Furosemide (20-160 mg daily), torsemide, or bumetanide", "description": "Loop diuretics for congestion. Not disease-modifying but essential for symptom relief. Doses are titrated to daily weight and urine output; subcutaneous furosemide is now an outpatient option.", "effectiveness": "Resolve congestion in 80% of decompensated heart failure within 5 days; do not reduce mortality independently." },
+    { "name": "Ivabradine (5-7.5 mg twice daily)", "description": "Sinoatrial node If-current inhibitor. Used in HFrEF patients with sinus rhythm and heart rate ≥70 bpm despite maximally tolerated beta-blocker.", "effectiveness": "18% relative reduction in CV death or HF hospitalization in SHIFT (sinus rhythm, HR ≥70, EF ≤35%)." },
+    { "name": "Hydralazine plus isosorbide dinitrate", "description": "Vasodilator combination. Particularly beneficial in self-identified Black patients with HFrEF as add-on therapy (A-HeFT). Also used when ACE/ARB/ARNI cannot be tolerated.", "effectiveness": "43% reduction in mortality in A-HeFT, NEJM 2004 in Black patients with NYHA III-IV HFrEF on background therapy." },
+    { "name": "Vericiguat (2.5-10 mg daily)", "description": "Soluble guanylate cyclase stimulator. Add-on therapy in HFrEF patients with recent worsening despite quadruple therapy.", "effectiveness": "10% reduction in cardiovascular death or HF hospitalization in VICTORIA in high-risk HFrEF after recent decompensation." }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Coronary revascularization (CABG or PCI)", "description": "For ischemic cardiomyopathy with viable myocardium and significant coronary disease. CABG is preferred for multi-vessel disease and EF ≤35% based on STICH 10-year follow-up.", "successRate": "CABG reduces all-cause mortality by ~16% over 10 years versus medical therapy alone in STICH-eligible patients with ischemic HFrEF." },
+    { "name": "Valve repair or replacement (surgical or transcatheter)", "description": "Severe aortic stenosis (SAVR or TAVR), severe primary mitral regurgitation (repair), and severe secondary mitral regurgitation (transcatheter edge-to-edge repair, COAPT) can substantially improve HF symptoms and survival.", "successRate": "TAVR for severe AS in HF reduces mortality by 30-40% at 1 year vs medical therapy; COAPT showed 47% reduction in HF hospitalization with MitraClip in selected secondary MR." },
+    { "name": "Cardiac resynchronization therapy (CRT)", "description": "Biventricular pacing for symptomatic HFrEF with EF ≤35% and QRS ≥150 ms (or 130-149 ms with LBBB). Improves contractile synchrony and reverses remodeling.", "successRate": "~30% relative reduction in HF hospitalization and mortality in CARE-HF; ~70% are clinical responders." },
+    { "name": "Implantable cardioverter-defibrillator (ICD)", "description": "Indicated for primary prevention in HFrEF with EF ≤35% on optimized medical therapy ≥3 months and expected survival >1 year, or for secondary prevention after sustained VT/VF.", "successRate": "23% relative reduction in mortality (SCD-HeFT) over 5 years in HFrEF on background medical therapy." },
+    { "name": "Left ventricular assist device (LVAD)", "description": "Continuous-flow mechanical pump for stage D heart failure as a bridge to transplant or as destination therapy in patients ineligible for transplant.", "successRate": "Modern HeartMate 3 LVAD: 2-year survival ~80%; substantially improves quality of life and exercise tolerance in advanced HF (MOMENTUM 3)." },
+    { "name": "Heart transplantation", "description": "Definitive therapy for selected stage D patients without prohibitive comorbidities. Donor scarcity limits use.", "successRate": "1-year survival ~90%, 5-year survival ~75%, median graft survival ~13 years in modern ISHLT registry data." }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Cardiac rehabilitation", "description": "Supervised exercise training plus risk-factor education for 8-12 weeks. Improves peak VO2, quality of life, and reduces HF readmission by ~25% (HF-ACTION subgroup analyses)." }
+  ],
+  "linkedTreatmentSlugs": [],
+
+  "whySeeSpecialist": "Refer to a cardiologist or heart-failure specialist at first diagnosis, after any hospitalization for decompensation, when starting or up-titrating quadruple therapy, when LVEF is below 35%, when ICD or CRT eligibility is being considered, when the cause is unclear, or for advanced therapies (LVAD, transplant). Stage D heart failure specifically warrants referral to a dedicated advanced HF program.",
+  "doctorSelectionGuide": "For complex heart failure, choose a cardiologist who is board certified in cardiovascular disease and ideally fellowship trained in advanced heart failure and transplant cardiology. Look for affiliation with a heart-failure clinic offering rapid in-hospital titration (STRONG-HF protocol), device programs (ICD/CRT), and where applicable, LVAD and transplant capability. For HFpEF, expertise in evaluating diastolic function, exclusion of cardiac amyloidosis, and management of co-morbid hypertension, AF, and obesity is essential.",
+
+  "hospitalCriteria": [
+    "Dedicated heart-failure inpatient service with daily multidisciplinary rounds",
+    "On-site echocardiography, cardiac MRI, and coronary catheterization 24/7",
+    "Advanced HF program including device clinic, LVAD program, or affiliated transplant center",
+    "Cardiac rehabilitation program with documented adherence to AACVPR core components",
+    "Integrated palliative-care consultation for stage D and refractory HF"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Treat hypertension to a systolic target of <130 mmHg in most adults; intensive control lowers HF incidence by ~40% per SPRINT.",
+    "Identify and treat coronary artery disease early — statins, antiplatelet therapy, and timely revascularization reduce post-MI HF risk substantially.",
+    "Achieve and maintain a healthy weight; each 1 kg/m² lower BMI translates to ~5% lower HF risk.",
+    "Use SGLT2 inhibitors in adults with type 2 diabetes who have atherosclerotic vascular disease or multiple cardiovascular risk factors.",
+    "Limit alcohol to no more than 1 drink/day for women and 2 drinks/day for men; abstain entirely with any cardiomyopathy.",
+    "Treat sleep apnea — moderate-to-severe untreated OSA roughly doubles HF risk and worsens existing HF."
+  ],
+
+  "lifestyleModifications": [
+    "Weigh daily on the same scale at the same time and report a 1.4 kg gain over 2 days or 2.3 kg gain over a week.",
+    "Restrict sodium to under 2 g per day during decompensation; under 3 g per day in stable chronic HF.",
+    "Limit fluid intake to 1.5-2.0 L per day if hyponatremia or severe congestion is present; loose restriction in mild HF.",
+    "Perform structured aerobic exercise 30-45 minutes most days, ideally through a cardiac rehabilitation program.",
+    "Take an annual influenza vaccine and the recommended pneumococcal and COVID-19 vaccines.",
+    "Avoid NSAIDs — they retain sodium and water, raise blood pressure, and trigger decompensation.",
+    "Sleep with the head of the bed elevated 20-30° if orthopnea is present, and seek evaluation for sleep apnea.",
+    "Stop tobacco use completely; nicotine raises afterload and accelerates coronary disease."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "DASH-style eating: vegetables, fruit, whole grains, lean protein, low-fat dairy, nuts and seeds",
+      "Mediterranean dietary pattern — associated with ~30% lower HF incidence in PREDIMED",
+      "Adequate protein 1.0-1.2 g/kg/day to prevent cardiac cachexia, especially in elderly stable HF",
+      "Potassium-rich whole foods unless on potassium-sparing medications and potassium is high",
+      "Magnesium-rich foods (leafy greens, nuts, whole grains) to support antiarrhythmic balance"
+    ],
+    "avoid": [
+      "Processed and restaurant food high in hidden sodium (canned soups, deli meats, frozen meals)",
+      "Excess alcohol — any alcohol with active cardiomyopathy; otherwise no more than 1-2 drinks/day",
+      "High-dose fluid intake from sports drinks, large coffee or tea servings, and broths during decompensation",
+      "NSAID-containing OTC remedies (ibuprofen, naproxen) — they cause sodium retention",
+      "Licorice (real glycyrrhizin), which causes pseudohyperaldosteronism and refractory hypertension"
+    ]
+  },
+  "exerciseGuidelines": "Aerobic exercise is recommended for nearly all stable HF patients. Begin with 5-10 minutes of low-intensity walking and build to 30-45 minutes of moderate-intensity aerobic exercise 3-5 times per week, supplemented by resistance training twice weekly. A formal cardiac rehabilitation program is the safest entry point and reduces HF readmission by roughly 25% per HF-ACTION subgroup data. Avoid maximal isometric exercise and prolonged Valsalva maneuvers in advanced HF.",
+
+  "dailyManagement": [
+    "Weigh yourself first thing in the morning after voiding, in the same clothing, and log the number",
+    "Take medications on schedule and use a pill organizer; record any new dose changes",
+    "Restrict sodium and track approximate daily intake during weekly meal planning",
+    "Note new orthopnea, increased breathlessness, or palpitations and report to your clinician promptly",
+    "Schedule a heart-failure clinic visit within 7-14 days of any hospital discharge — early follow-up reduces readmission by 25-30%",
+    "Maintain vaccinations and avoid contact with sick household members during respiratory virus season"
+  ],
+
+  "prognosis": "Heart failure remains a high-mortality syndrome despite advances. Five-year all-cause mortality in clinically apparent HF is roughly 50% across most population studies, though stage and treatment intensity vary that figure substantially. Stage A and B carry the best outlook; stage D, defined by refractory symptoms despite optimized therapy, has 1-year mortality of 25-50% without advanced interventions. Quadruple guideline-directed medical therapy lowers 2-year all-cause mortality in HFrEF by 60-70% versus historical placebo, and STRONG-HF demonstrated that rapid up-titration within 6 weeks of an admission reduces 180-day death or readmission by 34%. HFpEF mortality is somewhat lower than HFrEF at any given age but rises sharply with comorbid burden (atrial fibrillation, CKD, diabetes). LVAD and transplantation extend median survival from 6-12 months untreated stage D to 5-10 years. Self-management — daily weights, low-sodium diet, vaccine uptake, structured exercise, early symptom reporting — and early specialty follow-up after discharge are independently associated with better outcomes.",
+
+  "recoveryTimeline": "After an acute decompensation, congestion typically resolves over 3-7 days of inpatient diuresis and oral therapy is initiated or up-titrated during the same admission. Most patients reach a new functional baseline within 4-6 weeks. With rapid quadruple-therapy titration over 6 weeks per STRONG-HF, EF improvement (in HFrEF) is often visible at 3-6 months; full myocardial reverse remodeling can continue for 12 months or more. Cardiac rehabilitation across 8-12 weeks measurably improves exercise tolerance and quality of life.",
+
+  "complications": [
+    "Acute decompensation — repeat hospitalizations carry a stepwise mortality penalty; 30-day readmission is a quality metric. Detect early via daily weights and symptom monitoring.",
+    "Ventricular arrhythmia and sudden cardiac death — particularly in HFrEF with EF ≤35%. ICD is the principal preventive intervention.",
+    "Atrial fibrillation — develops in 30-40% of HF, raises stroke risk, and worsens symptoms. Manage with anticoagulation and rate or rhythm control.",
+    "Cardiorenal syndrome — progressive decline in renal function during diuresis or low-output states. Requires careful balance of decongestion, RAAS blockade, and SGLT2 inhibitors.",
+    "Cardiac cachexia and sarcopenia — unintentional weight loss and muscle wasting in chronic advanced HF; associated with markedly worse prognosis. Detect with periodic weight and grip strength.",
+    "Depression and cognitive impairment — present in 20-40% of HF patients; screen with PHQ-9 and intervene because they worsen self-care and outcomes."
+  ],
+
+  "supportResources": [
+    { "name": "American Heart Association — Heart Failure", "url": "https://www.heart.org/en/health-topics/heart-failure", "description": "Patient-facing overview, self-management tools, and links to support groups." },
+    { "name": "Heart Failure Society of America (HFSA)", "url": "https://hfsa.org/patient-and-family", "description": "Patient education from the specialty society; resources by stage and topic." },
+    { "name": "Mended Hearts", "url": "https://mendedhearts.org/", "description": "Peer-to-peer support network for adults with heart disease and their families." },
+    { "name": "British Heart Foundation — Heart Failure", "url": "https://www.bhf.org.uk/informationsupport/conditions/heart-failure", "description": "Plain-English explanations of diagnosis, treatments, and recovery for UK readers." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease", "keyDifference": "Coronary artery disease is the most common cause of HFrEF, but the two are distinct. CAD presents with angina or MI and is diagnosed by coronary imaging; HF is diagnosed by symptoms plus structural cardiac dysfunction on echo. A patient can have one without the other." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "keyDifference": "AF causes palpitations and irregular pulse without necessarily impairing pump function. HF causes symptoms even in sinus rhythm. The two frequently coexist; rapid AF can trigger HF, and HF predisposes to AF." },
+    { "slug": "hypertension", "name": "High Blood Pressure", "keyDifference": "Hypertension is a single risk factor; HF is a multi-organ clinical syndrome that hypertension causes over years. A patient can have severe hypertension with normal heart function or established HF after years of poorly controlled BP." },
+    { "slug": "copd", "name": "COPD", "keyDifference": "Both cause exertional breathlessness, but COPD primarily produces wheeze, prolonged expiration, and barrel chest; HF produces orthopnea, pedal edema, and an S3 gallop. The two coexist commonly; spirometry plus BNP and echo separate them." },
+    { "slug": "ischemic-cardiomyopathy-i255", "name": "Ischemic Cardiomyopathy", "keyDifference": "Ischemic cardiomyopathy is the ischemic subtype of HFrEF, not a separate disease. The term specifies that coronary disease is the primary cause; treatment includes the same quadruple therapy plus revascularization where viable myocardium exists." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease" },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease", "relevance": "The leading cause of HFrEF in high-income countries." },
+    { "slug": "hypertension", "name": "High Blood Pressure", "relevance": "The leading single risk factor for HFpEF and a major contributor to HFrEF." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "relevance": "Coexists with HF in 30-40% of patients; each worsens the other and requires integrated management." },
+    { "slug": "ischemic-cardiomyopathy-i255", "name": "Ischemic Cardiomyopathy", "relevance": "The ischemic subtype of HFrEF, defined by underlying coronary artery disease." },
+    { "slug": "dilated-cardiomyopathy-i420", "name": "Dilated Cardiomyopathy", "relevance": "The most common non-ischemic cause of HFrEF in adults under 60; often genetic." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is the life expectancy with heart failure?",
+      "answer": "Five-year all-cause mortality with clinically apparent heart failure is roughly 50%, but this varies dramatically by stage, ejection fraction, and treatment. Patients on guideline-directed quadruple therapy for HFrEF have substantially better survival than historical figures suggest, and selected stage D patients can receive transplant or LVAD that extends median survival to 5-10 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between HFrEF and HFpEF?",
+      "answer": "HFrEF means heart failure with reduced ejection fraction (LVEF ≤40%) — a problem of systolic pump function. HFpEF means heart failure with preserved ejection fraction (LVEF ≥50%) — a problem of diastolic relaxation despite a normal-looking pump. Treatment differs: HFrEF responds to quadruple therapy with mortality benefit, while HFpEF mainly responds to SGLT2 inhibitors and aggressive comorbidity control.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is congestive heart failure?",
+      "answer": "Congestive heart failure is an older term used when fluid backs up into the lungs, abdomen, or legs from a failing heart. Modern cardiology simply uses heart failure, with congestion described as a symptom. The signs are the same — breathlessness, swelling, weight gain, and reduced exercise tolerance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is ejection fraction?",
+      "answer": "Ejection fraction is the percentage of blood the left ventricle pumps out with each beat. A normal LVEF is 55-70%. LVEF 41-49% is mildly reduced (HFmrEF); LVEF 40% or below is reduced (HFrEF); LVEF 50% or above with HF symptoms is preserved (HFpEF). Echocardiogram is the standard way to measure it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes heart failure?",
+      "answer": "The leading causes are coronary artery disease and prior heart attack, long-standing hypertension, valve disease, atrial fibrillation, cardiomyopathies, diabetes, obesity, and cardiotoxic drugs such as anthracycline chemotherapy. In many patients more than one cause is present.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early signs of heart failure?",
+      "answer": "Early signs include new breathlessness when walking up stairs, new orthopnea (using extra pillows), ankle swelling that returns each evening, weight gain of more than 1.4 kg over two days, and reduced exercise tolerance. Persistent dry cough that is worse at night can also be an early manifestation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can heart failure be cured?",
+      "answer": "Heart failure is usually a chronic syndrome rather than a curable disease, but selected causes are fully reversible — tachycardia-mediated cardiomyopathy with rate control, alcoholic cardiomyopathy with abstinence, peripartum cardiomyopathy in many cases, and severe valve disease after surgical correction. For most patients with chronic HFrEF, optimized therapy improves ejection fraction and quality of life without permanent cure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the four-drug therapy for heart failure?",
+      "answer": "Modern quadruple therapy for HFrEF combines an ARNI (sacubitril-valsartan) or ACE inhibitor or ARB, an evidence-based beta-blocker (carvedilol, metoprolol succinate, or bisoprolol), a mineralocorticoid receptor antagonist (spironolactone or eplerenone), and an SGLT2 inhibitor (dapagliflozin or empagliflozin). Started together and titrated rapidly, this regimen cuts mortality by roughly 70% compared with placebo.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is heart failure the same as a heart attack?",
+      "answer": "No. A heart attack (myocardial infarction) is an acute event where a coronary artery blockage damages heart muscle. Heart failure is a chronic syndrome where the heart cannot pump effectively. A heart attack can cause heart failure by destroying muscle, but they are distinct diagnoses with different treatments.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can young people get heart failure?",
+      "answer": "Yes. Young adults can develop heart failure from genetic cardiomyopathies (dilated, hypertrophic), myocarditis after viral infection, peripartum cardiomyopathy in pregnancy, congenital heart disease, anthracycline chemotherapy in childhood cancer survivors, and stimulant or alcohol use. Genetic testing and cardiac MRI are increasingly important in this age group.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much salt can I have with heart failure?",
+      "answer": "Most guidelines recommend keeping sodium under 2-3 grams per day for chronic heart failure, dropping to under 2 grams during decompensation. Processed and restaurant foods are usually the biggest sources. Read labels for sodium content rather than just avoiding the salt shaker.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise with heart failure?",
+      "answer": "Yes, and most patients should. Structured aerobic exercise — 30-45 minutes most days at moderate intensity — improves quality of life, exercise tolerance, and reduces readmissions by roughly 25% in cardiac rehabilitation programs. Start in a supervised program if you have had a recent hospitalization or advanced disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is BNP and what does it mean?",
+      "answer": "BNP (B-type natriuretic peptide) and NT-proBNP are hormones released by stretched cardiac muscle. Levels rise in heart failure and fall with successful treatment. NT-proBNP below 125 pg/mL in chronic ambulatory patients makes heart failure unlikely; markedly elevated levels support the diagnosis and indicate higher risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is daily weight important in heart failure?",
+      "answer": "Sudden weight gain reflects fluid retention before breathlessness or swelling become severe. A gain of 1.4 kg over two days or 2.3 kg over a week should prompt a call to the heart-failure clinic for diuretic adjustment, often preventing hospitalization. Weigh yourself the same time each morning after voiding.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I have an ICD for heart failure?",
+      "answer": "An implantable cardioverter-defibrillator is recommended for primary prevention in HFrEF with ejection fraction at or below 35% on optimized medical therapy for at least 3 months and an expected survival of more than one year. It is recommended for secondary prevention after sustained ventricular tachycardia or fibrillation. Your cardiologist will weigh benefit against age and comorbidities.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I drink alcohol with heart failure?",
+      "answer": "Avoid alcohol entirely if you have alcohol-related or any cause cardiomyopathy. Other patients may have one drink daily for women or two for men, but no more — alcohol triggers arrhythmias and raises blood pressure. Discuss specific recommendations with your cardiologist based on your cause and severity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is cardiac resynchronization therapy (CRT)?",
+      "answer": "CRT is a pacemaker with leads in both ventricles that resynchronizes contraction in patients with a wide QRS, especially left bundle branch block. It is recommended for symptomatic HFrEF with ejection fraction at or below 35% and QRS at or above 150 ms (or 130-149 ms with LBBB). It reduces hospitalization and mortality by about 30%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a heart transplant evaluation?",
+      "answer": "Heart transplant evaluation is a multi-day workup of stage D heart failure patients who have failed optimal medical and device therapy. It includes cardiopulmonary exercise testing (peak VO2 below 14 mL/kg/min is a key threshold), right heart catheterization, cancer screening, and psychosocial assessment. Selected candidates are listed for donor matching.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can heart failure affect the kidneys?",
+      "answer": "Yes. Cardiorenal syndrome describes the bidirectional relationship in which heart failure worsens kidney function and chronic kidney disease worsens heart failure. SGLT2 inhibitors benefit both organs simultaneously and are now recommended at any eGFR above 20 in HFrEF.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are SGLT2 inhibitors safe if I do not have diabetes?",
+      "answer": "Yes. Dapagliflozin and empagliflozin reduce hospitalization and mortality in heart failure regardless of diabetes status. Side effects include occasional genital yeast infections and rare diabetic ketoacidosis in diabetics. The cardiovascular benefit is independent of glucose-lowering.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between left and right heart failure?",
+      "answer": "Left-sided failure backs blood up into the lungs, causing breathlessness, orthopnea, and pulmonary edema. Right-sided failure backs blood up into the body, causing leg swelling, hepatic congestion, and ascites. The two often coexist because left heart failure is the leading cause of right heart failure.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Heart Failure (congestive heart failure, CHF)",
+  "regionalNames": [
+    { "name": "Dil Ki Kamzori", "region": "India", "language": "Hindi" },
+    { "name": "Hridayavakaranam Kuraiv", "region": "India", "language": "Tamil" }
+  ],
+
+  "searchTags": [
+    "heart failure",
+    "congestive heart failure",
+    "CHF",
+    "HFrEF",
+    "HFpEF",
+    "systolic heart failure",
+    "diastolic heart failure",
+    "left heart failure",
+    "right heart failure",
+    "cardiomyopathy",
+    "ejection fraction",
+    "fluid in lungs",
+    "pulmonary edema",
+    "decompensated heart failure",
+    "cardiac failure"
+  ],
+
+  "symptomKeywords": [
+    "shortness of breath walking",
+    "ankle swelling",
+    "trouble lying flat",
+    "waking up gasping for air",
+    "sudden weight gain",
+    "exercise intolerance",
+    "persistent night cough",
+    "fatigue and breathlessness",
+    "leg edema",
+    "abdominal swelling"
+  ],
+
+  "metaTitle": "Heart Failure: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Heart failure: breathlessness, ankle swelling, fatigue from weakened pumping. HFrEF vs HFpEF, treatments, and prognosis reviewed by our medical board.",
+
+  "keywords": [
+    "heart failure symptoms",
+    "heart failure treatment",
+    "congestive heart failure",
+    "HFrEF",
+    "HFpEF",
+    "ejection fraction",
+    "heart failure life expectancy",
+    "heart failure stages",
+    "heart failure medications",
+    "heart failure diet",
+    "ICD heart failure",
+    "CRT heart failure",
+    "SGLT2 inhibitor heart failure",
+    "diastolic heart failure"
+  ],
+
+  "lastReviewed": "2026-05-12",
+  "sources": [
+    {
+      "title": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. J Am Coll Cardiol 79(17):e263-e421.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35379503/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "McMurray JJV, Packer M, Desai AS, et al. 2014. Angiotensin-neprilysin inhibition versus enalapril in heart failure (PARADIGM-HF). N Engl J Med 371(11):993-1004.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25176015/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "McMurray JJV, Solomon SD, Inzucchi SE, et al. 2019. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction (DAPA-HF). N Engl J Med 381(21):1995-2008.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31535829/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Packer M, Anker SD, Butler J, et al. 2020. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure (EMPEROR-Reduced). N Engl J Med 383(15):1413-1424.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32865377/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Solomon SD, McMurray JJV, Claggett B, et al. 2022. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction (DELIVER). N Engl J Med 387(12):1089-1098.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36027570/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Mebazaa A, Davison B, Chioncel O, et al. 2022. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF). Lancet 400(10367):1938-1952.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36356631/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Pitt B, Zannad F, Remme WJ, et al. 1999. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med 341(10):709-717.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10471456/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "American Heart Association. 2024 Heart Disease and Stroke Statistics: A Report from the American Heart Association. Circulation 149(8):e347-e913.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38264914/",
+      "accessedDate": "2026-05-12"
+    }
+  ],
+
+  "images": []
+}
