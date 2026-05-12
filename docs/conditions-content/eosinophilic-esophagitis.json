@@ -1,0 +1,551 @@
+{
+  "_meta": {
+    "slug": "eosinophilic-esophagitis",
+    "tier": 1,
+    "headTerm": "eosinophilic esophagitis",
+    "longTailKeywords": [
+      "eosinophilic esophagitis symptoms",
+      "EoE diet",
+      "EoE treatment",
+      "eosinophilic esophagitis vs GERD",
+      "six food elimination diet",
+      "dupilumab EoE",
+      "budesonide oral suspension",
+      "swallowed steroid EoE",
+      "food impaction adult",
+      "EoE biopsy"
+    ],
+    "primarySpecialty": "Gastroenterology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against the AGREE 2018 international consensus (Dellon), the 2020 AGA/JTF joint clinical guideline, the LIBERTY EoE TREET phase 3 dupilumab trials (Dellon NEJM 2022), the STEP-UP trial (Kliewer 2023), the EREFS endoscopic score (Hirano 2013), Lucendo six-food elimination data, and PPI-responsive EoE reclassification work by Molina-Infante."
+  },
+
+  "h1Title": "Eosinophilic Esophagitis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Gastroenterology",
+
+  "heroOverview": "Eosinophilic esophagitis (EoE) is a chronic, immune-mediated inflammation of the esophagus driven by type-2 allergic responses to food and aeroallergens, with eosinophils invading a tissue that normally has none. It affects roughly 1 in 2,000 adults and children in North America and Europe — prevalence has risen more than tenfold over 25 years, faster than any other chronic GI disease. Adults typically present with progressive solid-food dysphagia and recurrent food impaction; children present with feeding refusal, vomiting, abdominal pain, and failure to thrive. Untreated, persistent eosinophilic inflammation remodels the esophagus into a narrow, rigid, fibrotic tube prone to strictures and food bolus obstruction. Modern treatment — proton pump inhibitors, swallowed topical steroids, targeted diet, dupilumab, and dilation — controls inflammation and reverses fibrosis in most patients when sustained.",
+
+  "keyStats": {
+    "prevalence": "~1 in 2,000 adults in the US and Europe; ~57 per 100,000 population (Dellon 2018 meta-analysis)",
+    "demographics": "Male predominance ~3:1; 70-80% have a personal history of atopy (asthma, allergic rhinitis, atopic dermatitis, food allergy)",
+    "avgAge": "Two peaks — children age 5-10 with feeding problems; adults age 20-40 with dysphagia and food impaction",
+    "globalCases": "Rising globally; most common cause of food impaction in adults under 50"
+  },
+
+  "definition": "Eosinophilic esophagitis (ICD-10: K20.0) is a chronic, type-2 immune-mediated disease defined by symptoms of esophageal dysfunction plus dense eosinophilic inflammation isolated to the esophagus, with at least 15 eosinophils per high-power field on biopsy after secondary causes are excluded. The 2018 AGREE international consensus dropped the previous requirement of a PPI trial before diagnosis — PPI-responsive eosinophilia is now considered part of the EoE spectrum, not a separate entity. Pathogenesis is driven by food and aeroallergen exposure in genetically predisposed individuals, which triggers a Th2 cytokine cascade involving interleukin-5, interleukin-13, and thymic stromal lymphopoietin. Eosinophils, mast cells, and T cells infiltrate the esophageal mucosa and submucosa, releasing granule proteins and TGF-beta. Over years, persistent inflammation causes basal-zone hyperplasia, lamina propria fibrosis, and progressive luminal narrowing — the inflammatory-to-fibrostenotic transition that explains why diagnostic delay matters. EoE is managed by gastroenterology in adults and pediatric gastroenterology in children, often in shared care with allergists when atopic comorbidities are prominent.",
+
+  "typesClassification": [
+    { "type": "Inflammatory-phenotype EoE", "description": "Predominantly edema, furrows, white exudates, and rings on endoscopy without significant narrowing. More common in younger patients and in those diagnosed within a few years of symptom onset." },
+    { "type": "Fibrostenotic-phenotype EoE", "description": "Fixed esophageal rings, strictures, and small-caliber esophagus from submucosal fibrosis. More common with longer disease duration; each year of diagnostic delay raises stricture risk by roughly 9%." },
+    { "type": "Mixed-phenotype EoE", "description": "Coexisting inflammatory and fibrostenotic features — the most common adult presentation. Treatment targets both inflammation and existing narrowing." },
+    { "type": "PPI-responsive EoE", "description": "Histologic and symptomatic remission with proton pump inhibitor monotherapy. Reclassified as a treatment-responsive subgroup of EoE rather than a separate disease (Molina-Infante 2018); roughly 30-50% of newly diagnosed adults respond." },
+    { "type": "Steroid-responsive EoE", "description": "Histologic remission with swallowed topical corticosteroids (budesonide oral suspension, budesonide orodispersible tablet, or fluticasone). Achieves remission in 60-90% of treated patients." }
+  ],
+
+  "primarySymptoms": [
+    "Slowly progressive solid-food dysphagia — patients describe food sticking, taking longer to eat, drinking more water with meals, and learning to chew thoroughly or avoid dry meats and breads (the so-called 'IMPACT' adaptive behaviors).",
+    "Recurrent food impaction in which a piece of meat, bread, or rice obstructs the esophagus and requires emergency endoscopy to remove — EoE is the cause of roughly 50% of adult food impactions presenting to emergency departments.",
+    "Heartburn or chest discomfort that often does not fully respond to a standard course of acid-suppressing medication, prompting endoscopy that uncovers EoE.",
+    "Odynophagia (painful swallowing), especially after dry, coarse, or temperature-extreme foods.",
+    "In children, feeding refusal, prolonged meal times, food selectivity (eating only soft or smooth textures), vomiting after meals, abdominal pain, and failure to thrive.",
+    "Regurgitation of undigested food shortly after eating, sometimes confused with classic acid reflux.",
+    "Nocturnal cough or aspiration episodes when retained food refluxes during sleep.",
+    "Adaptive eating behaviors such as cutting food into small pieces, avoiding meats and bread, drinking water with every bite, or being the last person to finish a meal — often present for years before formal diagnosis."
+  ],
+
+  "earlyWarningSigns": [
+    "Needing to drink extra water with most meals to wash food down",
+    "Avoiding specific textures (dry chicken, steak, rice, soft bread) for years without medical explanation",
+    "Heartburn that responds only partially to an 8-week PPI trial",
+    "A first episode of food sticking that resolves spontaneously after several minutes of effort",
+    "Personal or family history of asthma, allergic rhinitis, atopic dermatitis, or food allergy in a patient with vague upper GI symptoms"
+  ],
+
+  "emergencySigns": [
+    "Food bolus impaction — inability to swallow saliva, drooling, retrosternal pressure that does not pass within 1-2 hours; needs emergency endoscopy within 24 hours to remove the bolus and prevent perforation",
+    "Sudden severe chest pain after vomiting or forceful retching against an impacted bolus — possible esophageal perforation (Boerhaave syndrome); imaging and surgical evaluation are urgent",
+    "Hematemesis or melena in a patient with known EoE — bleeding from a Mallory-Weiss tear or post-impaction injury",
+    "Sudden complete dysphagia with weight loss in an adult with longstanding EoE — concern for a tight stricture or, rarely, a coexisting esophageal cancer that warrants urgent endoscopy"
+  ],
+
+  "causes": [
+    {
+      "cause": "Type-2 immune response to dietary antigens",
+      "description": "The dominant driver. Milk, wheat, egg, soy, peanut/tree nut, and fish/shellfish are the most common triggers. Food antigens activate a Th2 cascade in the esophageal mucosa, releasing IL-5 and IL-13, which recruit eosinophils and mast cells. Removing trigger foods reliably reverses the inflammation."
+    },
+    {
+      "cause": "Aeroallergen exposure",
+      "description": "Inhaled pollens, mold, and dust mite are likely cofactors. Seasonal worsening of esophageal eosinophilia mirrors local pollen counts in cohort studies, and many patients flare in spring or autumn."
+    },
+    {
+      "cause": "Impaired esophageal epithelial barrier",
+      "description": "Loss of filaggrin, desmoglein-1, and other barrier proteins lets antigens penetrate the mucosa. CAPN14, the EoE-associated gene with the strongest effect, encodes a protease expressed specifically in esophageal epithelium and disrupts barrier integrity when overexpressed."
+    },
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Twin studies estimate heritability around 14-15% for monozygotic concordance, with shared family environment accounting for another large share. Implicated loci include TSLP at 5q22, CAPN14 at 2p23, LRRC32, and STAT6 — all genes in type-2 immune pathways."
+    },
+    {
+      "cause": "Early-life environmental exposures",
+      "description": "Antibiotic use in infancy, cesarean delivery, formula feeding, and PPI exposure in early childhood are each associated with higher EoE risk, plausibly through altered esophageal microbiome and barrier development."
+    },
+    {
+      "cause": "Coexisting atopic disease (allergic march)",
+      "description": "Asthma, allergic rhinitis, atopic dermatitis, and IgE-mediated food allergy share the underlying Th2 pathway. Patients with multiple atopic conditions develop EoE more often, and the same biologic targets (IL-4, IL-13) treat both."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men account for roughly 70-75% of adult EoE cases — male:female ratio approximately 3:1 in most series. Reasons are unclear but parallel other Th2-driven diseases like asthma in adults." },
+    { "factor": "Personal history of atopy", "category": "non-modifiable", "description": "70-80% of EoE patients have asthma, allergic rhinitis, atopic dermatitis, or IgE-mediated food allergy. Atopic dermatitis in infancy especially raises later EoE risk." },
+    { "factor": "Family history of EoE or atopy", "category": "genetic", "description": "First-degree relatives have a roughly 10-fold higher EoE risk; sibling concordance is around 2.3%. Familial clustering reflects both shared genes and shared early-life environment." },
+    { "factor": "White ethnicity", "category": "non-modifiable", "description": "EoE is more common in non-Hispanic white populations in North America and Europe, though the disease occurs in every ethnic group and may be underdiagnosed elsewhere." },
+    { "factor": "Northern latitude and dry climate", "category": "environmental", "description": "Higher EoE incidence has been documented in colder, drier US states and northern European countries — possibly mediated by aeroallergen patterns or vitamin D status." },
+    { "factor": "Early antibiotic and PPI exposure", "category": "modifiable", "description": "Antibiotic use during infancy is associated with 2-4x higher childhood EoE risk; PPI exposure in early childhood also rises with risk. Both may alter esophageal microbiome and barrier maturation." },
+    { "factor": "Cesarean delivery and lack of breastfeeding", "category": "modifiable", "description": "Both modestly raise EoE risk in case-control studies, likely through effects on the early microbiome." },
+    { "factor": "Connective-tissue disease (hypermobile Ehlers-Danlos, Loeys-Dietz)", "category": "genetic", "description": "EoE prevalence is markedly elevated in connective-tissue disorders, suggesting shared pathways involving TGF-beta signaling." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence: approximately 0.5-1 case per 1,000 in adults; over 150,000 adults and children diagnosed",
+    "Two age peaks — 5-10 years in children, 20-40 years in adults — though new diagnoses occur at every age",
+    "Male predominance is consistent across all age groups; approximately 3:1 male to female",
+    "Personal or family history of atopy in 70-80% of patients",
+    "Incidence has risen more than 10-fold since 2000 in North America and Europe; rising in Asia and South America as awareness improves"
+  ],
+
+  "diagnosisOverview": "Diagnosis requires two criteria together: symptoms of esophageal dysfunction (dysphagia, food impaction, heartburn, feeding problems in children) and at least 15 eosinophils per high-power field on esophageal biopsy. Endoscopy with biopsy is the only way to make the diagnosis — no blood test, scan, or symptom score replaces it. The 2018 AGREE consensus removed the prior requirement of a 6-8 week PPI trial before diagnosis: patients now receive the EoE label on biopsy alone, and PPI is reframed as a first-line treatment rather than a diagnostic test. At endoscopy the clinician inspects for the EREFS findings — edema, fixed rings, exudates, furrows, and strictures (Hirano 2013 score) — and takes at least six biopsies from the proximal and distal esophagus, since eosinophil distribution can be patchy. Other causes of esophageal eosinophilia must be excluded, including reflux disease, eosinophilic gastroenteritis with esophageal involvement, achalasia, Crohn's disease, hypereosinophilic syndrome, drug hypersensitivity, infection, and connective-tissue disease. Allergy testing (skin prick, specific IgE, atopy patch testing) does not reliably identify EoE food triggers and is not recommended to guide elimination diets. The 2020 AGA/JTF joint clinical guideline recommends repeat endoscopy after 8-12 weeks of any new therapy to confirm histologic remission, because symptom improvement does not always correlate with disappearance of eosinophilic inflammation. Esophageal narrowing should be evaluated by careful inspection during endoscopy or by a barium esophagram with a 13 mm tablet challenge if a subtle stricture is suspected.",
+
+  "diagnosticTests": [
+    {
+      "test": "Upper endoscopy with esophageal biopsies (EGD with EREFS scoring)",
+      "purpose": "The diagnostic gold standard. Identifies typical features (rings, furrows, exudates, edema, strictures) and provides tissue for histology. Six or more biopsies are taken from proximal and distal esophagus because eosinophil distribution is patchy.",
+      "whatToExpect": "Outpatient procedure under conscious sedation, lasting 15-20 minutes plus recovery. Mild sore throat for a few hours. Biopsy results typically return within 5-7 days."
+    },
+    {
+      "test": "Esophageal biopsy histology with eosinophil count per high-power field",
+      "purpose": "Confirms the diagnosis when eosinophil count is at least 15 per high-power field. Pathology also reports basal-zone hyperplasia, lamina propria fibrosis, eosinophilic microabscesses, and surface eosinophilic layering — all supportive features.",
+      "whatToExpect": "Pathology is performed on the small tissue samples obtained during endoscopy. No additional patient visits or procedures are needed."
+    },
+    {
+      "test": "EREFS endoscopic score (edema, rings, exudates, furrows, strictures)",
+      "purpose": "Standardized visual grading of EoE severity at endoscopy (Hirano 2013). Used to track response to therapy alongside histology and symptoms; correlates with disease activity.",
+      "whatToExpect": "Reported automatically with the endoscopy by the operating gastroenterologist; no separate test for the patient."
+    },
+    {
+      "test": "Barium esophagram with 13 mm tablet challenge",
+      "purpose": "Detects subtle strictures and small-caliber esophagus not always obvious at endoscopy. Useful when dysphagia persists despite normal-appearing endoscopy.",
+      "whatToExpect": "Drink a barium liquid, then swallow a 13 mm barium pill while X-ray images are taken. Painless; takes 20-30 minutes."
+    },
+    {
+      "test": "Esophageal pH or pH-impedance monitoring",
+      "purpose": "Used selectively to rule out coexisting GERD when histology is borderline, or to confirm acid reflux as a contributor in refractory cases. Not required for routine EoE diagnosis after the 2018 AGREE update.",
+      "whatToExpect": "Small catheter or wireless capsule placed during a brief endoscopy. Records for 24-96 hours during normal activities."
+    },
+    {
+      "test": "Esophageal functional lumen imaging (EndoFLIP)",
+      "purpose": "Measures distensibility of the esophageal wall — reduced distensibility correlates with fibrostenotic remodeling and predicts food impaction risk. Available at specialist centers.",
+      "whatToExpect": "Performed during endoscopy with a balloon catheter. Adds 5-10 minutes; no additional discomfort."
+    },
+    {
+      "test": "Allergy testing (skin prick, specific IgE, atopy patch testing)",
+      "purpose": "Not used to diagnose EoE or to direct elimination diets — allergy tests do not reliably predict food triggers in EoE. Reserved for evaluating coexisting IgE-mediated allergy and asthma comorbidities.",
+      "whatToExpect": "Performed by an allergist when atopic comorbidities are present; involves either skin testing or a blood draw."
+    }
+  ],
+
+  "treatmentOverview": "Treatment runs on three pillars — drugs, diet, and dilation — and the 2020 AGA/JTF guideline calls them the '3 Ds.' Proton pump inhibitors are reasonable first-line in adults with mild-to-moderate disease and achieve histologic remission in roughly 30-50% on twice-daily dosing for 8 weeks. Swallowed topical corticosteroids — budesonide oral suspension (the FDA-approved Eohilia 2 mg twice daily formulation, approved 2024), budesonide orodispersible tablet (Jorveza 1 mg twice daily, approved in Europe 2018), or off-label swallowed fluticasone — induce histologic remission in 60-90% of patients at 8-12 weeks and are first-line for moderate-to-severe disease. Dietary elimination is the only non-pharmacologic approach with curative potential when triggers are identified. The empiric 6-food elimination diet (milk, wheat, egg, soy, nuts, fish/shellfish) achieves remission in approximately 60-75% of adults but is restrictive and difficult to maintain; the STEP-UP trial (Kliewer 2023) showed that starting with a 1-food (milk only) elimination achieves remission in roughly 40% of patients with far less burden, and stepping up to 2-food or 4-food sequentially identifies most responders. Targeted elimination guided by allergy testing is not recommended because testing is unreliable. Dupilumab (a monoclonal antibody against IL-4 receptor alpha, FDA-approved 2022 for EoE in patients 12 years and older weighing at least 40 kg; expanded 2024 to ages 1-11 weighing at least 15 kg) blocks IL-4 and IL-13 signaling and achieved histologic remission in approximately 60% of patients at 24 weeks in the LIBERTY EoE TREET phase 3 trials (Dellon NEJM 2022), with sustained benefit through 52 weeks and significant improvement in dysphagia symptom scores. Esophageal dilation addresses fixed strictures and small-caliber esophagus that contribute to dysphagia despite mucosal healing — current consensus favors gradual, stepwise dilation (rule of 3 mm increments) with patient counseling about post-procedural chest pain, which occurs in roughly 75%. Treatment is lifelong for most patients because withdrawal of effective therapy leads to recurrence within 6-12 months in over 80% of adults. The treat-to-target principle now applied is histologic remission (under 15 eosinophils per high-power field) combined with symptom and endoscopic response, confirmed by surveillance endoscopy.",
+
+  "medicalTreatments": [
+    {
+      "name": "Proton pump inhibitor (omeprazole 20-40 mg, esomeprazole 20-40 mg, or equivalent — twice daily for 8 weeks)",
+      "description": "First-line drug therapy in adults with mild-to-moderate disease. Beyond acid suppression, PPIs have direct anti-inflammatory effects on esophageal epithelium by reducing eotaxin-3 expression. Re-biopsy at 8-12 weeks confirms histologic response.",
+      "effectiveness": "Histologic remission in approximately 30-50% of adults; symptom relief in 60-70%. Maintenance often requires continued dosing because relapse on withdrawal is common."
+    },
+    {
+      "name": "Budesonide oral suspension (Eohilia 2 mg twice daily) — FDA-approved 2024",
+      "description": "First FDA-approved drug specifically for EoE. A pre-mixed viscous suspension swallowed twice daily after meals and at bedtime, designed to coat the esophagus. Patients avoid eating or drinking for 30 minutes after dosing.",
+      "effectiveness": "Histologic remission (eosinophils under 6 per HPF) in approximately 53% at 12 weeks in pivotal trials versus 1% with placebo; significant improvement in dysphagia symptom scores."
+    },
+    {
+      "name": "Budesonide orodispersible tablet (Jorveza 1 mg twice daily) — approved in Europe 2018",
+      "description": "Effervescent tablet dissolved on the tongue twice daily. Avoid eating or drinking for 30 minutes after each dose. Maintenance dosing at 0.5 mg twice daily can sustain remission.",
+      "effectiveness": "Histologic remission in approximately 85-90% at 6 weeks in randomized trials (EOS-1 and EOS-2); maintenance remission in roughly 75% at 48 weeks (EOS-2)."
+    },
+    {
+      "name": "Swallowed fluticasone propionate (220-440 mcg sprayed and swallowed twice daily) — off-label",
+      "description": "An asthma metered-dose inhaler sprayed into the mouth without a spacer and swallowed rather than inhaled. Avoid eating or drinking for 30 minutes after each dose. Used widely before approved oral formulations existed.",
+      "effectiveness": "Histologic remission in 50-70% at 6-12 weeks across multiple randomized trials; cheaper than approved formulations but adherence is variable."
+    },
+    {
+      "name": "Dupilumab (300 mg subcutaneous weekly for adults; weight-based dosing for children) — FDA-approved 2022 for ages 12+, expanded 2024 to ages 1-11",
+      "description": "A monoclonal antibody blocking the IL-4 receptor alpha subunit, which inhibits both IL-4 and IL-13 signaling — the central Th2 cytokines in EoE. Self-administered subcutaneous injection. Reserved for moderate-to-severe disease, steroid-refractory disease, or patients with multiple atopic comorbidities.",
+      "effectiveness": "Histologic remission in approximately 60% at 24 weeks versus 5% with placebo in LIBERTY EoE TREET phase 3 (Dellon NEJM 2022); significant improvement in dysphagia symptom score; sustained benefit through 52 weeks."
+    },
+    {
+      "name": "Six-food elimination diet (milk, wheat, egg, soy, nuts, fish/shellfish for 6-8 weeks)",
+      "description": "Empiric dietary therapy without need for allergy testing. After remission is achieved on biopsy, foods are reintroduced one at a time over months with repeat endoscopy to identify specific triggers. Requires dietitian support.",
+      "effectiveness": "Histologic remission in approximately 60-75% of adults and children when followed strictly (Lucendo 2013); higher in compliant patients."
+    },
+    {
+      "name": "Step-up elimination diet (1-food milk → 2-food milk+wheat → 4-food)",
+      "description": "Stepwise elimination starting with milk alone for 6 weeks; if no remission, add wheat; if still active, expand to a 4-food elimination (milk, wheat, egg, soy). Less restrictive and easier to follow than the empiric 6-food approach.",
+      "effectiveness": "Approximately 40% remission with 1-food (milk only) elimination; 60% with stepped-up 4-food elimination — comparable to the 6-food diet with less burden (Kliewer STEP-UP trial 2023)."
+    },
+    {
+      "name": "Elemental (amino-acid) formula diet",
+      "description": "All antigens are removed; the patient consumes only an amino-acid-based formula for 6-8 weeks. Highly effective but impractical for adults and reserved for severe pediatric cases.",
+      "effectiveness": "Histologic remission in over 90% of children — the most effective dietary therapy but rarely used in adults due to palatability and lifestyle impact."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Esophageal dilation (Savary bougie or through-the-scope balloon)",
+      "description": "Mechanical stretching of fixed strictures and small-caliber esophagus performed at endoscopy. Current guidance favors gradual, stepwise dilation in 3 mm increments (the rule of 3) with patient counseling about post-procedural chest pain, which occurs in roughly 75%. Used alongside drug or diet therapy that controls the underlying inflammation, not as a substitute.",
+      "successRate": "Symptom relief in 75-95% of patients with fibrostenotic disease; serious complications (perforation, hospitalization) occur in under 0.5% with modern technique."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Allergist-coordinated environmental allergen control", "description": "For patients with seasonal symptom worsening tied to documented aeroallergen sensitization, standard aeroallergen avoidance and allergic rhinitis treatment may improve esophageal disease in selected cases. Adjunctive only — does not replace drug or diet therapy." },
+    { "name": "Registered-dietitian-led elimination diet support", "description": "Working with a dietitian during elimination and reintroduction protocols improves adherence, prevents nutritional deficiencies (especially calcium and vitamin D when milk is eliminated), and roughly doubles long-term diet success in observational practice data." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "whySeeSpecialist": "Refer to gastroenterology for any adult with recurrent food impaction, progressive solid-food dysphagia, heartburn that fails 8 weeks of PPI, or suspected esophageal stricture. Children with feeding refusal, vomiting, or failure to thrive should be referred to pediatric gastroenterology. Allergy referral is appropriate when atopic comorbidities (asthma, rhinitis, eczema, IgE-mediated food allergy) need separate management. Specialist input is mandatory before starting dupilumab, before complex elimination diets, and before esophageal dilation.",
+
+  "doctorSelectionGuide": "Look for a gastroenterologist with specific EoE experience — high biopsy yield (at least 6 biopsies per endoscopy), familiarity with EREFS scoring, comfort with stepwise dilation, and a working relationship with a dietitian and allergist. Centers offering EndoFLIP, formal EoE clinics, or research participation tend to deliver more consistent outcomes. In children, board-certified pediatric gastroenterology is essential because growth and feeding-development considerations differ substantially from adult care.",
+
+  "hospitalCriteria": [
+    "Gastroenterology service with same-day upper endoscopy capacity, including 24-hour access for food impaction",
+    "Pathology laboratory experienced in eosinophil counting and EREFS-aligned reporting",
+    "Access to esophageal dilation expertise (Savary bougie and balloon techniques)",
+    "Dietitian familiar with empiric elimination and reintroduction protocols",
+    "Allergy and immunology service for atopic comorbidity management",
+    "EndoFLIP or high-resolution manometry availability for refractory cases"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "There is no proven primary prevention strategy that stops EoE before it starts — once symptoms appear, the focus is early diagnosis and sustained remission to prevent fibrosis",
+    "Seek endoscopic evaluation promptly for any solid-food dysphagia or food impaction; each year of diagnostic delay raises stricture risk by approximately 9%",
+    "If you have a personal or family history of atopy and develop new upper-GI symptoms, mention EoE to your clinician — atopic background lowers the threshold for biopsy",
+    "After histologic remission, maintain therapy long-term — withdrawal causes relapse in over 80% of adults within 12 months and risks structural progression",
+    "Avoid eating dry, dense foods in a rushed setting if you have any history of food sticking; the most preventable acute event is food impaction"
+  ],
+
+  "lifestyleModifications": [
+    "Chew food thoroughly, eat slowly, and drink water with each bite — these behaviors reduce impaction risk independent of medical therapy",
+    "Avoid dry, fibrous, or coarse foods (steak, dry chicken, rice, dense bread) until disease activity is controlled",
+    "Keep an updated medical alert card listing EoE, current medications, and the contact for your gastroenterologist for use at emergency departments",
+    "Work with a registered dietitian during any elimination phase to prevent calcium, vitamin D, iron, and B12 deficiencies — especially when eliminating milk or wheat",
+    "Track foods, symptoms, and meals in a simple diary during reintroduction phases — patterns often emerge in the first few weeks",
+    "Coordinate with allergy and pulmonary clinicians for asthma and rhinitis control — atopic comorbidities affect quality of life and adherence",
+    "Avoid alcohol and large late-evening meals if reflux is a coexisting problem; reflux can amplify esophageal inflammation"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Soft, moist textures (slow-cooked stews, soups, eggs prepared softly, well-cooked pasta) during active disease and immediately after dilation",
+      "Hydration with meals — small sips of water with each bite reduce sticking risk",
+      "Calcium- and vitamin-D-fortified alternatives when on a milk-elimination diet (fortified oat, almond, or soy beverages, plus supplementation when needed)",
+      "Whole-grain alternatives such as rice, quinoa, oats, and corn during wheat elimination",
+      "Lean protein from sources outside the trigger list — chicken, turkey, beef, legumes (depending on which foods are being eliminated)",
+      "Plenty of cooked vegetables, fruits, and well-tolerated fats from olive oil, avocado, and seeds"
+    ],
+    "avoid": [
+      "Specific trigger foods identified by elimination and reintroduction endoscopies — most commonly milk and wheat in adults; milk in children",
+      "Dry, dense, coarse, or hard foods (tough meats, dense bread, rice cakes, raw carrots) until inflammation and any strictures are controlled",
+      "Very hot or very cold liquids during a flare — temperature extremes can trigger spasm in an inflamed esophagus",
+      "Alcohol if it provokes heartburn or reflux symptoms; reflux superimposed on EoE worsens mucosal injury",
+      "Large meals immediately before lying down — combined reflux and dysphagia increases nocturnal aspiration risk",
+      "Unprescribed antihistamines, leukotriene receptor antagonists, or oral cromolyn as solo EoE therapy — none have proven benefit"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular physical activity is encouraged and is not restricted by EoE itself. Avoid heavy exertion immediately after a meal if reflux is a factor; otherwise normal exercise is safe even during active disease.",
+
+  "dailyManagement": [
+    "Take swallowed topical steroid at the same time daily, and do not eat or drink for 30 minutes after each dose to maximize esophageal contact time",
+    "Use an asthma spacer correctly if you also have asthma — and remember that swallowed fluticasone for EoE is sprayed without a spacer and swallowed, not inhaled",
+    "Plan meals with adequate time for slow eating, especially in social or work settings where rushing causes impaction",
+    "Keep at least one short course of liquid antihistamine or topical anesthetic spray prescribed for transient throat discomfort, if your clinician recommends",
+    "Schedule the surveillance endoscopy that confirms remission — symptom relief alone does not prove inflammation has cleared",
+    "Carry hospital paperwork showing the diagnosis and last endoscopy date when traveling — useful if a food impaction needs emergency care abroad"
+  ],
+
+  "prognosis": "With sustained treatment, the long-term outlook for EoE is excellent. Histologic remission can be achieved in 60-90% of patients on appropriate therapy and prevents progression of fibrosis. Existing strictures can be improved by esophageal dilation, and submucosal fibrosis partially reverses on long-term steroid or dupilumab therapy. Untreated, EoE is chronic and progressive — each year of unrecognized disease raises the risk of a fixed stricture by roughly 9% (Schoepfer 2013), and food impaction risk continues lifelong. EoE does not increase esophageal cancer risk, and life expectancy is normal. The major prognostic factors are time from symptom onset to diagnosis, adherence to long-term therapy, and presence of atopic comorbidities (which often need parallel treatment). After successful induction, withdrawal of therapy leads to histologic relapse in over 80% of adults within 12 months, so treatment is essentially lifelong, similar to asthma or eczema management.",
+
+  "recoveryTimeline": "Symptom improvement on PPI, swallowed steroid, or dupilumab typically begins within 2-4 weeks. Histologic remission, the more meaningful endpoint, is assessed at 8-12 weeks of therapy by repeat endoscopy. Dietary elimination requires 6-8 weeks for full effect, with reintroduction phases adding several months and serial endoscopies. After esophageal dilation, immediate symptom improvement is common, but repeat dilations at 4-6 week intervals are often needed to reach the target esophageal diameter (typically 16-18 mm). Maintenance therapy is then continued indefinitely with surveillance endoscopy every 6-12 months until stable, then every 1-2 years.",
+
+  "complications": [
+    "Esophageal stricture — fibrotic narrowing of the esophageal lumen causing solid-food dysphagia; develops in approximately 50% of patients diagnosed more than 10 years after symptom onset and is treated with dilation plus disease-modifying therapy",
+    "Recurrent food impaction — the most common acute complication; carries risk of perforation when forceful retching occurs against an impacted bolus",
+    "Esophageal perforation — rare but serious; risk is increased during forceful vomiting against a food impaction (Boerhaave syndrome) or during esophageal dilation in untreated disease (under 0.5% with modern technique)",
+    "Small-caliber esophagus — diffuse narrowing of the whole esophagus from chronic fibrosis; identified at endoscopy or barium swallow and treated with sustained drug therapy plus dilation",
+    "Nutritional deficiencies during restrictive elimination diets — calcium, vitamin D, iron, B12 — preventable with dietitian-led planning and selective supplementation",
+    "Quality-of-life and psychosocial impact — eating-related anxiety, social withdrawal, and meal avoidance are common and often underrecognized; respond to dietitian and behavioral support"
+  ],
+
+  "supportResources": [
+    { "name": "American Partnership for Eosinophilic Disorders (APFED)", "url": "https://apfed.org/", "description": "Leading US patient organization with education, support groups, research funding, and clinician directories." },
+    { "name": "Campaign Urging Research for Eosinophilic Disease (CURED)", "url": "https://curedfoundation.org/", "description": "Patient-founded nonprofit funding eosinophilic disease research and supporting affected families." },
+    { "name": "American College of Gastroenterology — Eosinophilic Esophagitis", "url": "https://gi.org/topics/eosinophilic-esophagitis/", "description": "Patient-facing overview from the US specialty society with diagnosis and treatment information." },
+    { "name": "EOS Network (UK and Europe)", "url": "https://www.eosnetwork.org/", "description": "UK-based charity supporting patients with eosinophilic gastrointestinal diseases across Europe." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "gerd", "name": "Gastroesophageal Reflux Disease (GERD)", "keyDifference": "GERD causes heartburn and regurgitation, typically responds fully to standard PPI, and shows acid-related mucosal injury at endoscopy. EoE causes dysphagia and food impaction more than heartburn, shows rings, furrows, and exudates, and requires biopsy to confirm at least 15 eosinophils per high-power field. The two can coexist, and PPI-responsive eosinophilia is now classified within the EoE spectrum." },
+    { "slug": "food-allergy", "name": "IgE-Mediated Food Allergy", "keyDifference": "IgE-mediated food allergy causes acute urticaria, swelling, wheezing, or anaphylaxis within minutes of ingestion and is diagnosed by clinical history plus positive skin-prick or specific IgE testing. EoE is a delayed, non-IgE-mediated reaction confined to the esophagus, presents over weeks to months, and requires endoscopic biopsy for diagnosis. Allergy tests do not reliably identify EoE food triggers." },
+    { "slug": "achalasia-of-cardia-k220", "name": "Achalasia", "keyDifference": "Achalasia causes dysphagia for both solids and liquids, with progressive regurgitation of undigested food and weight loss. High-resolution manometry shows absent peristalsis and failure of the lower esophageal sphincter to relax. EoE causes solid-food predominant dysphagia, has normal manometry in most cases, and is defined by mucosal eosinophilia on biopsy." },
+    { "slug": "barrett-s-esophagus-without-dysplasia-k2270", "name": "Barrett's Esophagus", "keyDifference": "Barrett's esophagus is a metaplastic change of the distal esophagus caused by chronic acid reflux, identified at endoscopy as salmon-colored mucosa and confirmed by biopsy showing intestinal metaplasia with goblet cells. It is asymptomatic in itself and carries a 0.1-0.3 percent per year risk of esophageal adenocarcinoma. EoE is an inflammatory disease driven by Th2 immune responses and does not raise cancer risk." },
+    { "slug": "asthma", "name": "Asthma", "keyDifference": "Asthma is airway inflammation producing wheezing, cough, and reversible airflow obstruction on spirometry. EoE is esophageal inflammation producing dysphagia and food impaction. The two often coexist because both are Th2-driven atopic diseases — 30-50 percent of EoE patients have asthma — and the IL-4 and IL-13 biologic dupilumab is approved for both indications." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis (Eczema)" },
+    { "slug": "food-allergy", "name": "Food Allergy" },
+    { "slug": "gerd", "name": "Acid Reflux (GERD)" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "gerd", "name": "Acid Reflux (GERD)", "relevance": "Frequent coexistence and the most common condition confused with EoE; PPI therapy treats both and is part of the EoE algorithm." },
+    { "slug": "food-allergy", "name": "Food Allergy", "relevance": "Shares dietary triggers and Th2 pathway; many EoE patients have IgE-mediated allergy to additional foods." },
+    { "slug": "asthma", "name": "Asthma", "relevance": "Coexists in 30-50 percent of EoE patients; both respond to IL-4/IL-13 blockade with dupilumab." },
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis (Eczema)", "relevance": "Common atopic comorbidity sharing Th2 immunology and dupilumab as a shared therapy." },
+    { "slug": "achalasia-of-cardia-k220", "name": "Achalasia", "relevance": "Important differential diagnosis for dysphagia; ruled out by manometry before committing to EoE-specific therapy." },
+    { "slug": "barrett-s-esophagus-without-dysplasia-k2270", "name": "Barrett's Esophagus", "relevance": "Another chronic esophageal disease detected at endoscopy; coexists in patients with longstanding reflux." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is eosinophilic esophagitis?",
+      "answer": "Eosinophilic esophagitis (EoE) is a chronic immune-mediated disease in which eosinophils, a type of white blood cell, infiltrate the lining of the esophagus in response to food and aeroallergens. It causes dysphagia, food impaction, and heartburn that does not fully respond to acid-suppressing drugs. Diagnosis requires endoscopy with biopsy showing at least 15 eosinophils per high-power field.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is eosinophilic esophagitis different from acid reflux?",
+      "answer": "Acid reflux (GERD) causes heartburn and regurgitation that typically respond fully to standard PPI therapy. EoE causes solid-food dysphagia and food impaction more than heartburn, shows characteristic rings, furrows, and exudates at endoscopy, and requires a biopsy to confirm eosinophilic inflammation. The two can coexist, and PPI-responsive eosinophilia is now considered part of the EoE spectrum rather than a separate condition.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the main symptoms of EoE in adults?",
+      "answer": "Adults usually present with slowly progressive solid-food dysphagia, recurrent food impaction, heartburn that does not fully resolve on PPI, and adaptive eating behaviors like drinking water with every bite or avoiding dry meats and bread. Many patients have years of subtle symptoms before diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of EoE in children?",
+      "answer": "Children present with feeding refusal, vomiting, abdominal pain, prolonged meal times, food selectivity (eating only soft textures), and failure to thrive. Older children and teenagers begin to develop the adult pattern of solid-food dysphagia and food impaction.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is eosinophilic esophagitis diagnosed?",
+      "answer": "Diagnosis requires upper endoscopy with biopsies showing at least 15 eosinophils per high-power field in a patient with symptoms of esophageal dysfunction, after excluding other causes. The 2018 AGREE international consensus removed the prior requirement for a PPI trial before diagnosis — PPI is now considered a treatment rather than a diagnostic test.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is eosinophilic esophagitis a food allergy?",
+      "answer": "EoE is an immune-mediated reaction to food and aeroallergens, but it is not a classical IgE-mediated food allergy. Reactions are delayed (days to weeks rather than minutes), confined to the esophagus, and standard allergy tests do not reliably predict triggers. Empiric elimination diets identify triggers more reliably than allergy testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods trigger EoE most often?",
+      "answer": "Milk is the most common trigger in both adults and children, followed by wheat, egg, and soy. Nuts and fish or shellfish are less common but possible triggers. The empiric 6-food elimination diet removes all six classes; the step-up approach starts with milk alone and adds foods sequentially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can EoE be cured?",
+      "answer": "EoE is not curable in the sense of permanent disease eradication, but it is highly controllable. With appropriate drug, dietary, or biologic therapy maintained long-term, histologic remission and freedom from food impaction are achievable in most patients. Withdrawal of therapy almost always leads to relapse within 6-12 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the six-food elimination diet?",
+      "answer": "The six-food elimination diet removes milk, wheat, egg, soy, nuts, and fish/shellfish for 6-8 weeks. Endoscopy confirms remission, then foods are reintroduced one at a time over months with repeat biopsies to identify the specific triggers. About 60-75% of strictly adherent patients achieve remission with this approach.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the step-up elimination diet?",
+      "answer": "The step-up diet starts with milk elimination alone for 6 weeks. If remission is not achieved, wheat is added (2-food); if still active, the diet expands to 4-food (milk, wheat, egg, soy). The STEP-UP trial (Kliewer 2023) showed comparable remission rates to the empiric 6-food approach with far less burden.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does dupilumab treat EoE?",
+      "answer": "Dupilumab is a monoclonal antibody that blocks the IL-4 receptor alpha subunit, inhibiting both IL-4 and IL-13 — the key cytokines driving the type-2 inflammation in EoE. It is given as a weekly subcutaneous injection and achieved histologic remission in approximately 60% of patients at 24 weeks in the LIBERTY EoE TREET phase 3 trials (Dellon NEJM 2022).",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Eohilia and how does it work?",
+      "answer": "Eohilia is a pre-mixed budesonide oral suspension, the first FDA-approved drug specifically for EoE (approved 2024). Patients swallow 2 mg twice daily and avoid eating or drinking for 30 minutes after each dose, allowing the steroid to coat and treat the esophageal mucosa. Histologic remission was achieved in roughly 53% at 12 weeks in pivotal trials.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is PPI-responsive EoE?",
+      "answer": "PPI-responsive EoE is the subgroup of patients whose esophageal eosinophilia and symptoms remit on twice-daily proton pump inhibitor therapy. It was previously called a separate diagnosis (PPI-REE) but is now considered part of the EoE spectrum (Molina-Infante 2018). Roughly 30-50% of newly diagnosed adults respond to PPI alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can EoE cause food impaction?",
+      "answer": "Yes. EoE is the cause of roughly 50% of adult food impactions presenting to emergency departments and is the most common cause of food impaction in adults under 50. Any adult presenting with food impaction should have biopsies taken at the endoscopy used to remove the bolus.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does EoE increase cancer risk?",
+      "answer": "EoE does not increase the risk of esophageal cancer based on current evidence. The main complications are stricture formation and food impaction, not malignancy. Surveillance endoscopy is performed to monitor inflammation and stricture, not for cancer screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often is endoscopy needed for EoE?",
+      "answer": "After diagnosis, endoscopy is repeated at 8-12 weeks of any new therapy to confirm histologic remission. Once stable, intervals stretch to every 6-12 months and then every 1-2 years for surveillance. Symptom improvement alone does not prove that eosinophilic inflammation has cleared, so periodic biopsy is essential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is EoE hereditary?",
+      "answer": "EoE has a strong genetic component. First-degree relatives have a roughly 10-fold higher risk, and twin studies estimate monozygotic concordance around 14-15%. Risk genes include CAPN14, TSLP, LRRC32, and STAT6, all in type-2 immune pathways. Atopic background in the family also raises individual EoE risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children grow out of EoE?",
+      "answer": "Most children do not outgrow EoE; without sustained therapy, inflammation persists into adulthood and can progress to stricture. Some pediatric patients can transition off restrictive diets onto medications during adolescence with continued surveillance, but spontaneous remission is uncommon.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does my heartburn medicine not fully work?",
+      "answer": "Persistent heartburn or dysphagia despite 8 weeks of standard PPI therapy is one of the most common reasons EoE is diagnosed. EoE responds partially or fully to PPI in 30-50% of adults, but the rest need swallowed topical steroids, dietary elimination, or dupilumab. Endoscopy with biopsy clarifies whether eosinophilic inflammation is the underlying driver.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if EoE is left untreated?",
+      "answer": "Untreated EoE is chronic and progressive. Each year of diagnostic delay raises the risk of a fixed esophageal stricture by approximately 9%. Food impactions become more frequent, the esophagus narrows diffusely, and dilation is eventually required. EoE does not shorten life expectancy or cause cancer, but it can severely impair quality of life.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is esophageal dilation safe in EoE?",
+      "answer": "Modern stepwise dilation (rule of 3 mm increments) is safe; serious complications such as perforation occur in under 0.5% of procedures. Post-procedural chest pain is common (roughly 75%) and usually settles within a few days. Dilation does not treat the underlying inflammation, so it is combined with drug or diet therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I have to take EoE medication forever?",
+      "answer": "Most patients need lifelong maintenance therapy because withdrawal causes histologic and symptomatic relapse in over 80% of adults within 12 months. Long-term dosing of swallowed steroids, dupilumab, PPI, or sustained dietary elimination is similar in principle to managing asthma or atopic dermatitis.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Eosinophilic Esophagitis (EoE — allergic inflammation of the swallowing tube)",
+
+  "regionalNames": [
+    { "name": "इओसिनोफिलिक इसोफैजाइटिस", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Œsophagite à éosinophiles", "region": "France", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "eosinophilic esophagitis",
+    "EoE",
+    "EE",
+    "allergic esophagitis",
+    "food impaction adult",
+    "dysphagia young adult",
+    "swallowed steroid",
+    "budesonide oral suspension",
+    "Eohilia",
+    "Jorveza",
+    "dupilumab EoE",
+    "six food elimination",
+    "step up elimination",
+    "EREFS",
+    "PPI responsive esophageal eosinophilia"
+  ],
+
+  "symptomKeywords": [
+    "food sticks in throat",
+    "trouble swallowing solids",
+    "meat stuck in throat",
+    "bread stuck in throat",
+    "child refuses food",
+    "vomiting after eating child",
+    "chest pain after swallowing",
+    "heartburn that won't go away",
+    "drinking water with every bite",
+    "recurrent food impaction"
+  ],
+
+  "metaTitle": "Eosinophilic Esophagitis: Symptoms & Treatment | aihealz",
+  "metaDescription": "Eosinophilic esophagitis: chronic allergic inflammation causing dysphagia and food impaction. Symptoms, biopsy diagnosis, diet, and dupilumab reviewed by MDs.",
+
+  "keywords": [
+    "eosinophilic esophagitis",
+    "EoE",
+    "eosinophilic esophagitis symptoms",
+    "eosinophilic esophagitis treatment",
+    "EoE diet",
+    "six food elimination diet",
+    "dupilumab EoE",
+    "budesonide oral suspension",
+    "Eohilia",
+    "food impaction",
+    "esophageal dilation",
+    "PPI responsive EoE",
+    "EoE vs GERD",
+    "EoE biopsy"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Dellon ES, Liacouras CA, Molina-Infante J, et al. 2018. Updated International Consensus Diagnostic Criteria for Eosinophilic Esophagitis: Proceedings of the AGREE Conference. Gastroenterology 155(4):1022-1033.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30009819/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Hirano I, Chan ES, Rank MA, et al. 2020. AGA Institute and the Joint Task Force on Allergy-Immunology Practice Parameters Clinical Guidelines for the Management of Eosinophilic Esophagitis. Gastroenterology 158(6):1776-1786.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32391331/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dellon ES, Rothenberg ME, Collins MH, et al. 2022. Dupilumab in Adults and Adolescents with Eosinophilic Esophagitis. New England Journal of Medicine 387(25):2317-2330.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36546624/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kliewer KL, Gonsalves N, Dellon ES, et al. 2023. One-food versus six-food elimination diet therapy for the treatment of eosinophilic oesophagitis: a multicentre, randomised, open-label trial (STEP-UP). The Lancet Gastroenterology & Hepatology 8(5):408-421.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36863390/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Hirano I, Moy N, Heckman MG, Thomas CS, Gonsalves N, Achem SR. 2013. Endoscopic assessment of the oesophageal features of eosinophilic oesophagitis: validation of a novel classification and grading system (EREFS). Gut 62(4):489-495.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22619364/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Lucendo AJ, Arias A, González-Cervera J, et al. 2013. Empiric 6-food elimination diet induced and maintained prolonged remission in patients with adult eosinophilic esophagitis: a prospective study on the food cause of the disease. J Allergy Clin Immunol 131(3):797-804.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23375693/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Molina-Infante J, Bredenoord AJ, Cheng E, et al. 2016. Proton pump inhibitor-responsive oesophageal eosinophilia: an entity challenging current diagnostic criteria for eosinophilic oesophagitis. Gut 65(3):524-531.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26685124/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Schoepfer AM, Safroneeva E, Bussmann C, et al. 2013. Delay in diagnosis of eosinophilic esophagitis increases risk for stricture formation in a time-dependent manner. Gastroenterology 145(6):1230-1236.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23954315/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dellon ES, Khoury P, Muir AB, et al. 2024. A Clinical Severity Index for Eosinophilic Esophagitis: Development, Consensus, and Future Directions. Gastroenterology 163(1):59-76.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35606078/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
