@@ -1,0 +1,604 @@
+{
+  "_meta": {
+    "slug": "atrial-fibrillation",
+    "tier": 1,
+    "headTerm": "atrial fibrillation",
+    "longTailKeywords": [
+      "atrial fibrillation symptoms",
+      "atrial fibrillation treatment",
+      "afib causes",
+      "afib stroke risk",
+      "CHA2DS2-VASc score",
+      "DOAC for afib",
+      "catheter ablation afib",
+      "rate vs rhythm control",
+      "afib vs atrial flutter",
+      "paroxysmal afib"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline (Joglar 2024), 2024 ESC AF Guideline, EAST-AFNET 4 (early rhythm control), CASTLE-AF (ablation in HFrEF), CABANA, ARISTOTLE, RE-LY, ROCKET-AF, ENGAGE-AF-TIMI 48, Alcohol-AF, and Lip GYH CHA2DS2-VASc validation."
+  },
+
+  "h1Title": "Atrial Fibrillation: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "Atrial fibrillation is the most common sustained cardiac arrhythmia in adults, marked by chaotic electrical activity in the atria that produces an irregularly irregular pulse and an inefficient, fluttering atrial contraction. It affects an estimated 6.1 million US adults in 2024, with projections to 10.5 million by 2030, and roughly 60 million people worldwide. Prevalence doubles every decade after age 50. Patients commonly experience palpitations, fatigue, breathlessness on exertion, lightheadedness, or chest discomfort, though up to a third feel nothing at all. The principal danger is stroke: untreated AF roughly quintuples ischemic stroke risk, accounting for about 1 in 6 strokes in older adults. Treatment now follows the ABC pathway — anticoagulation, better symptom control through rate or rhythm strategy, and management of comorbidities such as hypertension, sleep apnea, obesity, and heart failure. Direct oral anticoagulants and early rhythm control with catheter ablation have substantially improved outcomes over the past decade.",
+
+  "keyStats": {
+    "prevalence": "Estimated 6.1 million US adults in 2024, projected to 10.5 million by 2030 (AHA 2024 Heart Disease & Stroke Statistics)",
+    "demographics": "Lifetime risk after age 55 is approximately 1 in 3 in adults of European ancestry; men slightly more affected than women at the same age",
+    "avgAge": "Median age at first diagnosis ~73; uncommon before age 50 unless underlying heart disease or hyperthyroidism is present",
+    "globalCases": "~59 million people worldwide (Global Burden of Disease 2019), with prevalence rising fastest in low- and middle-income countries"
+  },
+
+  "definition": "Atrial fibrillation (ICD-10: I48) is a supraventricular tachyarrhythmia characterized by disorganized atrial electrical activity at rates of 350-600 impulses per minute, with consequent loss of effective atrial mechanical contraction and an irregularly irregular ventricular response that the atrioventricular node filters down to typical rates of 100-160 beats per minute when untreated. The arrhythmia originates predominantly from rapid-firing ectopic foci in the pulmonary vein sleeves, with atrial structural and electrical remodeling sustaining the rhythm once triggered. Current ACC/AHA/ACCP/HRS guidelines classify AF in four stages: stage 1 (at risk), stage 2 (pre-AF with atrial structural changes), stage 3 (clinical AF — further subdivided into paroxysmal, persistent, long-standing persistent, and successfully ablated), and stage 4 (permanent AF). The condition sits at the crossroads of cardiology, neurology, and primary care because of its dual burden: symptomatic arrhythmia and elevated stroke, heart failure, and cognitive-decline risk. It is the leading single cause of preventable cardioembolic stroke and one of the most common reasons for emergency cardiology consultation worldwide. Management is shared between general cardiologists, electrophysiologists, and primary care, with stroke neurology and heart-failure teams integrated when complications develop.",
+
+  "typesClassification": [
+    { "type": "Paroxysmal AF", "description": "AF that terminates spontaneously or with intervention within 7 days of onset. Episodes are often self-limited within 24-48 hours. Triggers (alcohol, sleep deprivation, illness) are frequently identifiable, and rhythm-control strategies are most successful at this stage." },
+    { "type": "Persistent AF", "description": "Continuous AF lasting more than 7 days, requiring electrical or pharmacological cardioversion to restore sinus rhythm. Reflects greater atrial electrical and structural remodeling than paroxysmal disease." },
+    { "type": "Long-standing persistent AF", "description": "Continuous AF lasting more than 12 months. Atrial fibrosis is advanced; ablation success rates fall, and a rhythm-control attempt is still reasonable when symptoms warrant." },
+    { "type": "Permanent AF", "description": "A shared clinician-patient decision to accept AF as the maintained rhythm; no further attempts at rhythm restoration. The focus shifts entirely to rate control, anticoagulation, and comorbidity management." },
+    { "type": "Subclinical AF (atrial high-rate episodes)", "description": "AF detected only on implanted devices or extended monitors, without correlated symptoms. Episodes of 24 hours or longer carry stroke risk approaching that of clinical AF; shorter episodes require individualized risk-benefit assessment for anticoagulation (NOAH-AFNET 6, ARTESIA)." },
+    { "type": "Valvular AF (mitral stenosis or mechanical valve)", "description": "AF occurring with moderate-severe mitral stenosis or a mechanical heart valve. Mandates warfarin rather than a DOAC because of higher embolic risk and DOAC inferiority shown in RE-ALIGN." }
+  ],
+
+  "primarySymptoms": [
+    "Palpitations described as a fluttering, racing, or pounding sensation in the chest, often irregular — the most common presenting symptom and reason for emergency department visits.",
+    "Breathlessness on exertion that develops over days to weeks, often the first symptom in older adults who attribute slower walking to aging.",
+    "Fatigue and reduced exercise tolerance disproportionate to age, caused by loss of atrial contribution to cardiac output (the 'atrial kick' contributes 20-30% of stroke volume).",
+    "Lightheadedness, presyncope, or frank syncope when AF runs at very rapid rates or causes a sudden drop in cardiac output.",
+    "Chest discomfort or pressure that can mimic angina; coronary disease should be considered, particularly in patients with risk factors.",
+    "An irregularly irregular pulse on self-palpation or smartwatch alert — a single specific physical finding that distinguishes AF from sinus rhythm.",
+    "Polyuria during episodes, driven by atrial natriuretic peptide release from atrial stretch.",
+    "Sudden-onset symptomatic episodes lasting minutes to hours in paroxysmal AF, often triggered by alcohol, large meals, or sleep deprivation.",
+    "Worsening of pre-existing heart failure with new orthopnea, weight gain, or peripheral edema when AF onsets in a patient with structural heart disease.",
+    "No symptoms at all in approximately 30% of cases — silent AF discovered on routine examination, ECG, smartwatch, or after a stroke."
+  ],
+
+  "earlyWarningSigns": [
+    "A new irregular pulse felt at the wrist or neck when checking heart rate at rest",
+    "Smartwatch or single-lead ECG notification of an irregular rhythm — confirmed AF detection from Apple Watch Heart Study had ~84% positive predictive value on follow-up monitoring",
+    "Unexplained reduction in walking distance, slower stair climbing, or new fatigue in someone with hypertension, coronary disease, or sleep apnea",
+    "Frequent ectopic beats or runs of supraventricular tachycardia on ambulatory monitoring — atrial ectopy above 500 per day raises 10-year AF risk three- to four-fold",
+    "Atrial enlargement on a routine echocardiogram (left atrial volume index above 34 mL/m²), particularly with diastolic dysfunction"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe weakness on one side of the body, facial droop, slurred speech, or vision loss — call emergency services for possible acute ischemic stroke (the tPA window is 4.5 hours)",
+    "Chest pain at rest with breathlessness or diaphoresis — possible myocardial ischemia precipitated by rapid AF; treat as suspected ACS",
+    "Heart rate above 150 beats per minute with hypotension, cool clammy skin, altered consciousness, or syncope — hemodynamically unstable AF requiring urgent cardioversion",
+    "Acute severe breathlessness with frothy sputum and inability to lie flat — acute pulmonary edema, often the presenting feature of new AF in a patient with structural heart disease",
+    "Pre-excited AF (very fast irregular wide-complex tachycardia) in a patient with Wolff-Parkinson-White syndrome — avoid AV-nodal blockers; treat with procainamide or DC cardioversion"
+  ],
+
+  "causes": [
+    {
+      "cause": "Hypertension",
+      "description": "The single most common modifiable contributor in high-income populations. Sustained elevated afterload produces left ventricular hypertrophy, diastolic dysfunction, left atrial pressure overload, and electrical remodeling that promotes AF initiation and maintenance. Hypertension is present in about 60-80% of AF patients."
+    },
+    {
+      "cause": "Coronary artery disease and prior myocardial infarction",
+      "description": "Ischemic atrial damage and post-infarction left ventricular dysfunction raise filling pressures and remodel the left atrium. About 20-30% of new AF in older adults occurs in patients with established coronary disease."
+    },
+    {
+      "cause": "Heart failure",
+      "description": "AF and heart failure share substrate and worsen each other. Up to 30-40% of HFrEF and HFpEF patients develop AF; the loss of atrial kick and rapid ventricular rate further reduce cardiac output and can trigger decompensation."
+    },
+    {
+      "cause": "Valvular heart disease",
+      "description": "Mitral stenosis, mitral regurgitation, aortic regurgitation, and severe aortic stenosis raise left atrial pressure and stretch the atria. Mitral valve disease has the strongest association — rheumatic mitral stenosis was the historical leading cause of AF worldwide and remains common in low- and middle-income countries."
+    },
+    {
+      "cause": "Hyperthyroidism",
+      "description": "Excess thyroid hormone shortens atrial refractoriness and increases ectopic firing. AF develops in 10-15% of overt hyperthyroidism. Restoring euthyroid state restores sinus rhythm in most patients within 8-12 weeks; AF that persists after thyroid correction is treated like ordinary AF."
+    },
+    {
+      "cause": "Obstructive sleep apnea",
+      "description": "Repetitive nocturnal hypoxia, intrathoracic pressure swings, and sympathetic surges produce atrial stretch and electrical remodeling. Moderate-severe untreated OSA roughly doubles incident AF and quadruples post-ablation recurrence; CPAP therapy reduces recurrence."
+    },
+    {
+      "cause": "Obesity and metabolic disease",
+      "description": "Each 5-unit increase in BMI raises AF risk by approximately 13%. Visceral and epicardial adiposity drive atrial fibrosis through systemic inflammation and adipokine signaling. Weight loss of at least 10% reduces AF burden and ablation recurrence (LEGACY, ARREST-AF cohorts)."
+    },
+    {
+      "cause": "Alcohol consumption",
+      "description": "Each additional standard drink per day raises AF risk by about 8%; binge drinking is the classic 'holiday heart syndrome' trigger of paroxysmal AF. The Alcohol-AF randomized trial (2020) showed abstinence reduces AF recurrence by 53% in moderate drinkers."
+    },
+    {
+      "cause": "Cardiac surgery and acute illness",
+      "description": "Postoperative AF complicates 20-40% of cardiac surgeries and 10-15% of major non-cardiac surgery, driven by inflammation, fluid shifts, and sympathetic activation. New AF in sepsis, pneumonia, or COVID-19 frequently terminates with treatment of the underlying illness but predicts long-term AF in many patients."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Older age", "category": "non-modifiable", "description": "AF prevalence rises from under 1% under age 60 to over 10% over age 80. Aging atrial myocardium accumulates fibrosis and conduction heterogeneity that sustain the arrhythmia." },
+    { "factor": "European ancestry", "category": "genetic", "description": "Lifetime risk after age 55 is approximately 33% in white populations versus 21% in Black populations, despite Black adults having higher stroke risk. The disparity is partly explained by titin and PITX2 variants common in European cohorts." },
+    { "factor": "Family history / inherited predisposition", "category": "genetic", "description": "A first-degree relative with AF roughly doubles personal risk; GWAS has identified over 100 AF susceptibility loci including PITX2, ZFHX3, KCNN3, and TTN truncating variants in younger-onset cases." },
+    { "factor": "Hypertension", "category": "modifiable", "description": "Present in 60-80% of AF patients; intensive BP control (systolic under 130 mmHg) reduces incident AF by approximately 25% per SPRINT and post-hoc analyses." },
+    { "factor": "Obesity (BMI 30 or above)", "category": "modifiable", "description": "Each 5-unit BMI rise increases AF risk by about 13%. Sustained 10% or greater weight loss reduces AF burden and improves ablation outcomes (LEGACY)." },
+    { "factor": "Obstructive sleep apnea", "category": "modifiable", "description": "Moderate-severe untreated OSA doubles incident AF; CPAP reduces AF recurrence after ablation by 40-60% in observational cohorts." },
+    { "factor": "Diabetes mellitus", "category": "modifiable", "description": "Type 2 diabetes raises AF risk by approximately 40% independent of other factors. Glycemic control alone has modest effect; managing concomitant hypertension and weight has greater impact." },
+    { "factor": "Heavy alcohol intake", "category": "modifiable", "description": "Each daily drink raises risk by about 8%; binge drinking triggers paroxysmal episodes (holiday heart). Abstinence reduces recurrence by 53% in moderate drinkers (Alcohol-AF RCT, NEJM 2020)." },
+    { "factor": "Endurance athletic exposure (decades of high-volume training)", "category": "environmental", "description": "Cumulative lifetime training hours of 1,500 or more (long-distance running, cycling) roughly double AF risk in older athletes through atrial enlargement and vagal tone. Moderate exercise reduces risk." },
+    { "factor": "Hyperthyroidism", "category": "modifiable", "description": "AF complicates 10-15% of overt hyperthyroidism; subclinical hyperthyroidism (low TSH, normal T4) raises AF risk roughly 1.7-fold." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence ~6.1 million in 2024, projected to 10.5-12 million by 2030 (AHA Heart Disease & Stroke Statistics)",
+    "Lifetime risk after age 55 is ~33% in adults of European ancestry, ~21% in Black adults, ~22% in Hispanic adults (Framingham, ARIC, MESA pooled)",
+    "Men have ~1.5x higher age-adjusted incidence than women, but more women have prevalent AF in absolute numbers because they live longer",
+    "South Asian populations have lower age-adjusted incidence but present a decade earlier on average, linked to early-onset coronary disease",
+    "Rheumatic AF remains common in low- and middle-income countries; mitral stenosis is the dominant substrate in those populations"
+  ],
+
+  "diagnosisOverview": "Diagnosis of atrial fibrillation requires electrocardiographic confirmation of the arrhythmia for at least 30 seconds on a rhythm strip or 10 seconds on a 12-lead ECG, showing absent P waves, irregularly irregular R-R intervals, and a fibrillatory baseline. A standard 12-lead ECG is the definitive test for symptomatic patients presenting in AF, but only 30-40% of paroxysmal cases are caught on a single ECG and ambulatory monitoring is needed when AF is suspected but not captured. Options range from 24-48-hour Holter to 7-14-day patch monitors (Zio, BodyGuardian) to consumer-grade single-lead ECG via Apple Watch, KardiaMobile, or Fitbit, which now have FDA clearance for AF detection. Implantable loop recorders provide 3+ years of continuous monitoring for high-risk patients after cryptogenic stroke. Once AF is documented, the workup focuses on three questions: what is the substrate, what is the stroke risk, and what is the rhythm goal. A transthoracic echocardiogram defines chamber sizes, ventricular function, and valvular disease; thyroid function tests exclude hyperthyroidism; CBC and basic metabolic panel screen for anemia, electrolyte abnormalities, and renal function for DOAC dosing. Sleep apnea screening (STOP-BANG questionnaire and polysomnography when indicated) is now considered standard. Stroke risk is quantified by CHA2DS2-VASc; bleeding risk by HAS-BLED. Transesophageal echocardiogram is reserved for ruling out left atrial appendage thrombus before cardioversion when the patient has been in AF longer than 48 hours and has not had three weeks of therapeutic anticoagulation. Recent guidelines have moved toward earlier rhythm-control consideration, particularly in newly diagnosed AF within the past year (EAST-AFNET 4), so prompt diagnosis directly influences the management trajectory.",
+
+  "diagnosticTests": [
+    {
+      "test": "12-lead ECG",
+      "purpose": "Definitive diagnosis when AF is captured. Identifies pre-excitation (delta wave suggesting WPW), prior MI, left ventricular hypertrophy, and atrial flutter mimicking AF.",
+      "whatToExpect": "Ten adhesive electrodes placed on the chest, arms, and legs; the recording takes under a minute and is painless. Results are read same day in most settings."
+    },
+    {
+      "test": "Ambulatory ECG monitoring (Holter, patch, or extended recorder)",
+      "purpose": "Detects paroxysmal AF and quantifies daily burden. 14-day patch monitors substantially outperform 24-48-hour Holter for paroxysmal disease (mSToPS trial, 2018).",
+      "whatToExpect": "A small adhesive patch worn on the chest for 7-14 days. Showering is permitted with most modern devices. The patient returns the patch by mail; a report is available within 1-2 weeks."
+    },
+    {
+      "test": "Consumer wearable single-lead ECG (Apple Watch, KardiaMobile, Fitbit)",
+      "purpose": "Convenient detection of paroxysmal AF; FDA-cleared algorithms have ~84% positive predictive value when an irregular rhythm notification is followed by a recorded tracing. Useful for symptom-rhythm correlation.",
+      "whatToExpect": "Patient places a finger on the device or wears it on the wrist; the 30-second tracing is exportable as a PDF and reviewable by a clinician."
+    },
+    {
+      "test": "Transthoracic echocardiogram",
+      "purpose": "Defines left atrial size, left ventricular ejection fraction, valvular disease, and pulmonary pressures. Essential baseline that influences anticoagulation choice (mitral stenosis mandates warfarin) and rhythm-control feasibility.",
+      "whatToExpect": "A non-invasive ultrasound that takes 30-45 minutes lying on the left side. Gel is applied to the chest; some pressure but no pain or radiation."
+    },
+    {
+      "test": "Transesophageal echocardiogram (TEE)",
+      "purpose": "Visualizes the left atrial appendage to rule out thrombus before cardioversion or ablation when therapeutic anticoagulation has not been continuous for 3 weeks. Superior sensitivity for LAA thrombus versus TTE.",
+      "whatToExpect": "Performed under conscious sedation; a thin ultrasound probe is passed through the mouth into the esophagus for 15-20 minutes. Mild throat soreness for a day is common."
+    },
+    {
+      "test": "Thyroid function tests (TSH, free T4)",
+      "purpose": "Excludes hyperthyroidism as a reversible AF cause. Subclinical hyperthyroidism also raises AF risk and should be identified.",
+      "whatToExpect": "Standard blood draw, results in 1-2 days. Repeat if abnormal to confirm before treatment."
+    },
+    {
+      "test": "Renal and hepatic panel",
+      "purpose": "Guides DOAC choice and dose. Apixaban tolerates the lowest creatinine clearance; dabigatran requires CrCl 30 mL/min or higher. Hepatic dysfunction affects dosing of all DOACs.",
+      "whatToExpect": "Standard blood draw, usually combined with the initial AF workup labs."
+    },
+    {
+      "test": "Implantable loop recorder",
+      "purpose": "Long-term continuous monitoring (3-4 years) in cryptogenic stroke, recurrent unexplained palpitations, or to confirm AF absence after ablation. CRYSTAL-AF showed 12.4% AF detection at 12 months in cryptogenic stroke patients versus 2% with conventional monitoring.",
+      "whatToExpect": "A device the size of a small paperclip inserted under the skin of the left chest in a 10-minute outpatient procedure under local anesthetic. Data transmitted automatically to a remote monitoring service."
+    }
+  ],
+
+  "treatmentOverview": "Treatment follows the ACC/AHA/ACCP/HRS 2023 ABC pathway: Anticoagulation to prevent stroke, Better symptom control through rate or rhythm strategy, and Comorbidity and risk-factor management. Stroke prevention starts with CHA2DS2-VASc scoring; anticoagulation is recommended for men with a score of 2 or higher and women with a score of 3 or higher, and considered for men with score 1 and women with score 2. Direct oral anticoagulants — apixaban, rivaroxaban, edoxaban, and dabigatran — are first-line for non-valvular AF based on the ARISTOTLE, ROCKET-AF, ENGAGE-AF-TIMI 48, and RE-LY trials, which collectively demonstrated similar or superior stroke reduction with substantially lower intracranial hemorrhage compared with warfarin. Warfarin remains the agent of choice for moderate-to-severe mitral stenosis and mechanical heart valves. Aspirin alone is not adequate stroke prevention and is no longer recommended. Left atrial appendage occlusion (Watchman, Amulet) is an option for patients with contraindications to long-term oral anticoagulation. For symptom management, the 2023 guideline and the EAST-AFNET 4 trial (2020) shifted the field toward early rhythm control in patients diagnosed within the past year, showing a 21% reduction in cardiovascular death, stroke, or hospitalization versus usual care. Rate control alone remains appropriate in older patients with minimal symptoms — target resting heart rate under 110 bpm (lenient) or under 80 bpm (strict) per the RACE II trial. First-line rate agents are beta-blockers (metoprolol, carvedilol, bisoprolol) and non-dihydropyridine calcium-channel blockers (diltiazem, verapamil) in patients without HFrEF. Rhythm control uses class IC antiarrhythmics (flecainide, propafenone) in structurally normal hearts or class III agents (amiodarone, dronedarone, sotalol, dofetilide) when structural disease is present. Catheter ablation, predominantly pulmonary vein isolation, is now recommended as first-line therapy for paroxysmal AF in many patients per the 2023 guideline, based on CABANA, EARLY-AF, STOP-AF First, and ATTEST. The CASTLE-AF trial established catheter ablation as superior to medical therapy in HFrEF with AF, reducing death or HF hospitalization by 38%. Underlying risk factors — hypertension, sleep apnea, obesity, alcohol, diabetes — must be aggressively managed; intensive risk-factor modification programs (LEGACY, ARREST-AF) measurably reduce AF burden and improve ablation outcomes.",
+
+  "medicalTreatments": [
+    {
+      "name": "Apixaban (5 mg twice daily; 2.5 mg twice daily if 2 or more of: age 80 or older, weight 60 kg or less, serum creatinine 1.5 mg/dL or higher)",
+      "description": "Direct factor Xa inhibitor and the most widely prescribed DOAC for non-valvular AF. Most favorable bleeding profile among DOACs in head-to-head and network meta-analyses. Requires no INR monitoring; reversal with andexanet alfa for life-threatening bleeding.",
+      "effectiveness": "Reduced stroke or systemic embolism by 21% and all-cause mortality by 11% versus warfarin in ARISTOTLE (18,201 patients, NEJM 2011). Major bleeding reduced by 31%."
+    },
+    {
+      "name": "Rivaroxaban (20 mg daily with food; 15 mg daily if CrCl 15-50 mL/min)",
+      "description": "Once-daily direct factor Xa inhibitor. Must be taken with food for optimal absorption. Andexanet alfa reverses life-threatening bleeding.",
+      "effectiveness": "Non-inferior to warfarin for stroke or systemic embolism in ROCKET-AF (14,264 patients, NEJM 2011); similar major bleeding but lower intracranial hemorrhage."
+    },
+    {
+      "name": "Dabigatran (150 mg twice daily; 110 mg twice daily if age 80 or older or high bleeding risk)",
+      "description": "Direct thrombin inhibitor. Specific reversal agent idarucizumab available. Avoid if CrCl below 30 mL/min. Dyspepsia is the most common side effect.",
+      "effectiveness": "Reduced stroke or systemic embolism by 35% versus warfarin at 150 mg dose in RE-LY (18,113 patients, NEJM 2009), with similar major bleeding and lower intracranial hemorrhage."
+    },
+    {
+      "name": "Edoxaban (60 mg daily; 30 mg daily if CrCl 30-50 mL/min, weight 60 kg or less, or with strong P-gp inhibitors)",
+      "description": "Once-daily factor Xa inhibitor. Not recommended in patients with CrCl above 95 mL/min for AF per FDA label due to reduced efficacy. Andexanet alfa reverses Xa inhibitor bleeding.",
+      "effectiveness": "Non-inferior to warfarin for stroke or systemic embolism in ENGAGE-AF-TIMI 48 (21,105 patients, NEJM 2013); 20% reduction in major bleeding and 47% reduction in intracranial hemorrhage."
+    },
+    {
+      "name": "Warfarin (dose titrated to INR 2-3; INR 2.5-3.5 in mechanical mitral valves)",
+      "description": "Vitamin K antagonist; first-line for valvular AF (moderate-severe mitral stenosis, mechanical valves) where DOACs are contraindicated. Requires regular INR monitoring; reversed by vitamin K, fresh frozen plasma, or four-factor prothrombin complex concentrate.",
+      "effectiveness": "Reduces stroke by approximately 64% versus no anticoagulation in pooled trials of non-valvular AF; remains the benchmark for valvular AF."
+    },
+    {
+      "name": "Metoprolol (succinate 25-200 mg daily) or other beta-blockers (carvedilol, bisoprolol, atenolol)",
+      "description": "First-line rate control. Decrease AV nodal conduction. Carvedilol and metoprolol succinate are preferred when HFrEF coexists because of mortality benefit in HF.",
+      "effectiveness": "Achieves resting heart rate under 110 bpm in 70-80% of patients as monotherapy; over 85% when combined with digoxin or calcium-channel blocker in patients without HFrEF."
+    },
+    {
+      "name": "Diltiazem (extended-release 120-360 mg daily) or verapamil",
+      "description": "Non-dihydropyridine calcium-channel blockers for rate control when beta-blockers are not tolerated. Avoid in HFrEF due to negative inotropy.",
+      "effectiveness": "Comparable rate-control efficacy to beta-blockers in patients with preserved LV function."
+    },
+    {
+      "name": "Flecainide (50-150 mg twice daily) or propafenone (150-300 mg three times daily)",
+      "description": "Class IC antiarrhythmics for rhythm control in patients without structural heart disease, coronary artery disease, or significant LV dysfunction. Used as 'pill-in-the-pocket' for selected paroxysmal AF.",
+      "effectiveness": "Cardioversion success 70-80% within 6 hours when used as pill-in-the-pocket; 1-year sinus rhythm maintenance 50-60% with daily use."
+    },
+    {
+      "name": "Amiodarone (loading 600-800 mg daily then 200 mg daily maintenance)",
+      "description": "Class III antiarrhythmic with broad efficacy; preferred rhythm-control agent in patients with structural heart disease, HFrEF, or coronary disease. Long-term use limited by thyroid, pulmonary, hepatic, and ocular toxicity.",
+      "effectiveness": "1-year sinus rhythm maintenance 60-70% — highest among antiarrhythmic drugs (AFFIRM, SAFE-T). Annual rate of clinically significant toxicity 5-10%."
+    },
+    {
+      "name": "Dronedarone (400 mg twice daily)",
+      "description": "Class III antiarrhythmic with structural similarity to amiodarone but without iodine; better long-term safety profile. Contraindicated in NYHA class IV or recently decompensated HF (ANDROMEDA), and in permanent AF (PALLAS).",
+      "effectiveness": "Reduced cardiovascular hospitalization or death by 24% versus placebo in non-permanent AF in ATHENA (4,628 patients, NEJM 2009)."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Catheter ablation (pulmonary vein isolation, with adjunctive substrate modification when needed)",
+      "description": "Radiofrequency or cryoballoon ablation electrically isolates the pulmonary veins. First-line therapy for paroxysmal AF in symptomatic patients per the 2023 guideline; second-line after failed antiarrhythmic drug in persistent AF. Pulsed-field ablation is rapidly becoming preferred for safety and procedure-time advantages.",
+      "successRate": "Single-procedure 1-year freedom from AF: 60-80% in paroxysmal AF; 40-60% in persistent AF. Multiple procedures raise success to 80-90% in paroxysmal disease. CASTLE-AF: 38% reduction in death or HF hospitalization versus medical therapy in HFrEF with AF (NEJM 2018)."
+    },
+    {
+      "name": "Surgical maze procedure (Cox-Maze IV)",
+      "description": "Combined incision-based and ablation-based atrial compartmentalization performed during open cardiac surgery (CABG, valve repair/replacement). The procedure of choice for AF requiring concomitant cardiac surgery.",
+      "successRate": "70-90% freedom from AF at 1 year in selected centers when performed by experienced surgeons. Substantially lower in patients with severely enlarged atria (above 5.5 cm)."
+    },
+    {
+      "name": "Left atrial appendage occlusion (Watchman FLX, Amulet)",
+      "description": "Percutaneous implantation of an occluder device in the left atrial appendage. Indicated for patients with non-valvular AF who have appropriate stroke risk but contraindications to long-term oral anticoagulation (recurrent major bleeding, intracranial hemorrhage, falls).",
+      "successRate": "PROTECT-AF and PREVAIL: non-inferior to warfarin for stroke prevention with reduced long-term bleeding; ~95% device implant success and ~99% effective seal at 45 days in PINNACLE FLX."
+    },
+    {
+      "name": "Atrioventricular junction ablation with pacemaker",
+      "description": "Ablation of the AV node combined with permanent pacemaker implantation. Reserved for patients with rapid uncontrolled AF refractory to medications and not candidates for rhythm-control strategies. Renders the patient pacemaker-dependent.",
+      "successRate": "Symptom relief in over 90% of selected patients; the APAF-CRT trial showed mortality benefit with AV junction ablation plus CRT versus medical therapy in symptomatic permanent AF with narrow QRS and HF."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Intensive risk-factor and lifestyle modification programs", "description": "Structured weight loss of 10% or more, BP control, glycemic control, alcohol moderation, OSA treatment, and aerobic fitness improvement reduced AF burden by approximately 80% in symptomatic patients in the LEGACY and ARREST-AF cohorts. Now formally integrated into ACC/AHA guidelines as the 'C' pillar of the ABC pathway." },
+    { "name": "Yoga and structured breathing exercises", "description": "Randomized data (Lakkireddy 2013) show twice-weekly yoga for 12 weeks reduced symptomatic AF episodes by roughly 50% in paroxysmal AF patients on stable medical therapy. Adjunctive only; not a substitute for anticoagulation or definitive rhythm control." }
+  ],
+
+  "whySeeSpecialist": "Refer to a cardiologist at first diagnosis to confirm the rhythm, define the substrate with echocardiography, calculate stroke risk, and discuss anticoagulation and rate-versus-rhythm strategy. Refer to an electrophysiologist when symptoms persist despite antiarrhythmic drugs, when catheter ablation is being considered (now first-line for many paroxysmal AF patients), when there is suspicion of pre-excitation (WPW), or when AV junction ablation with pacing is on the table. A heart-failure specialist should be involved when AF coexists with HFrEF, given the survival benefit of catheter ablation in CASTLE-AF.",
+
+  "doctorSelectionGuide": "For uncomplicated AF, a board-certified general cardiologist managing the ABC pathway is appropriate. For rhythm control or refractory symptoms, choose an electrophysiologist who performs at least 100 ablations per year — institutional and operator volume strongly predict outcomes. Confirm familiarity with pulsed-field ablation if available; ask about complication rates (cardiac tamponade, atrioesophageal fistula, phrenic nerve injury) and how the practice tracks single-procedure success at 12 months. Continuity matters: AF management is a multi-year relationship with periodic reassessment of rhythm goals and stroke-prevention strategy.",
+
+  "hospitalCriteria": [
+    "Dedicated electrophysiology lab with cryoballoon, radiofrequency, and ideally pulsed-field ablation capability",
+    "Annual operator volume of at least 100 AF ablations per electrophysiologist",
+    "24/7 access to transesophageal echocardiography for urgent cardioversion",
+    "Multidisciplinary integration with heart failure, stroke neurology, and structural heart programs",
+    "Cardiac rehabilitation and risk-factor modification program with documented adherence to LEGACY-style protocols"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Treat hypertension to systolic under 130 mmHg in most adults — intensive blood-pressure control reduces incident AF by approximately 25% per SPRINT post-hoc analysis",
+    "Maintain BMI in a healthy range; sustained 10% or greater weight loss reduces AF burden by approximately 80% in patients with established symptomatic AF (LEGACY)",
+    "Screen and treat moderate-to-severe obstructive sleep apnea — CPAP adherence reduces post-ablation recurrence by 40-60% in observational cohorts",
+    "Limit alcohol to under one standard drink per day; the Alcohol-AF trial showed 53% reduction in AF recurrence with abstinence",
+    "Manage type 2 diabetes with first-line agents proven to reduce cardiovascular events (SGLT2 inhibitors, GLP-1 agonists where appropriate)",
+    "Engage in 150-300 minutes of moderate-intensity exercise weekly; moderate aerobic activity lowers AF risk while extreme endurance training raises it in later life"
+  ],
+
+  "lifestyleModifications": [
+    "Identify and avoid personal triggers — alcohol, caffeine excess, sleep deprivation, large meals, and dehydration are the most commonly reported",
+    "Adopt a Mediterranean or DASH dietary pattern, both linked to lower AF incidence in observational cohorts",
+    "Establish a regular sleep schedule of 7-8 hours nightly and seek evaluation for snoring or witnessed apnea",
+    "Maintain a daily symptom diary noting palpitation onset, duration, and probable trigger — useful for both patient and clinician",
+    "Take medications at the same time daily, particularly anticoagulants — even a single missed apixaban dose meaningfully raises 24-hour stroke risk",
+    "Avoid over-the-counter decongestants containing pseudoephedrine, which can trigger paroxysmal AF",
+    "Stop tobacco use entirely; smoking roughly doubles AF incidence and worsens stroke outcomes",
+    "Carry a wallet card or smartphone health record listing AF, anticoagulant name, dose, and prescriber contact"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean diet (vegetables, fruit, whole grains, olive oil, fish, nuts) — associated with ~38% lower AF in PREDIMED secondary analyses",
+      "Oily fish twice weekly (salmon, sardines, mackerel) for omega-3 intake from food",
+      "Adequate potassium and magnesium from leafy greens, beans, and nuts to maintain electrolyte balance",
+      "Coffee in moderation — habitual intake of 1-3 cups daily is not pro-arrhythmic and may be modestly protective (UK Biobank)",
+      "Water; adequate hydration reduces episodes triggered by volume depletion",
+      "Low-sodium DASH pattern when hypertension coexists"
+    ],
+    "avoid": [
+      "Binge alcohol consumption — the classic 'holiday heart' trigger; sustained intake above 1 drink/day raises long-term risk",
+      "High-dose energy drinks and pre-workout supplements containing high caffeine plus stimulants",
+      "Pseudoephedrine-containing OTC decongestants and weight-loss stimulants",
+      "Excessive sodium intake when hypertension is concomitant",
+      "Large late-evening meals if reflux-triggered nocturnal AF is identified",
+      "Grapefruit juice if taking amiodarone or dronedarone — strong CYP3A4 interaction"
+    ]
+  },
+  "exerciseGuidelines": "Aim for 150-300 minutes per week of moderate-intensity aerobic exercise (brisk walking, cycling, swimming) plus two resistance sessions, ideally guided by a cardiac rehabilitation program after diagnosis. Moderate exercise reduces AF burden and improves cardiorespiratory fitness, which is one of the strongest predictors of low AF recurrence after ablation. Avoid prolonged extreme endurance efforts in older adults with established AF, as they can paradoxically trigger episodes. Resume activity within days after catheter ablation; full return to high-intensity exercise typically at 2-4 weeks per operator advice.",
+
+  "dailyManagement": [
+    "Take the anticoagulant at the same time daily and use a pill organizer or smartphone reminder; missed doses are the leading preventable cause of breakthrough stroke",
+    "Check pulse or use a smartwatch first thing in the morning and note any irregular rhythm or sustained tachycardia",
+    "Log palpitation episodes with date, duration, and probable trigger to share at clinic visits",
+    "Maintain hydration, especially in hot weather, after exercise, and during gastrointestinal illness",
+    "Carry a current medication list and a brief AF history (paroxysmal versus persistent, CHA2DS2-VASc, last cardioversion or ablation) when traveling"
+  ],
+
+  "prognosis": "Modern AF management substantially blunts the historical excess mortality of the arrhythmia. With appropriate anticoagulation, ischemic stroke risk falls by approximately 64% versus no treatment, and DOACs additionally lower intracranial hemorrhage compared with warfarin. AF still roughly doubles all-cause mortality compared with sinus rhythm at the same age and comorbidity profile, driven largely by heart failure, stroke, and dementia. Catheter ablation in selected patients reduces hospitalization and improves quality of life; in HFrEF with AF, CASTLE-AF demonstrated a 38% reduction in death or HF hospitalization. Early rhythm control within the first year of diagnosis reduces composite cardiovascular events by 21% per EAST-AFNET 4 (NEJM 2020). Cognitive decline and dementia incidence are elevated 1.4- to 1.5-fold in AF independent of stroke, partly mitigated by anticoagulation and rhythm control. Long-term outcomes hinge on three variables: anticoagulation adherence, control of underlying drivers (hypertension, OSA, obesity, alcohol), and how early in the disease course rhythm-control strategies are deployed.",
+
+  "recoveryTimeline": "After a cardioversion, sinus rhythm typically holds days to months depending on substrate; antiarrhythmic prophylaxis extends maintenance. Following catheter ablation, the first 90 days is a blanking period during which transient atrial arrhythmias do not count as failure — most episodes in this window settle. Definitive efficacy is assessed at 6-12 months. With intensive risk-factor management (LEGACY-style), measurable reductions in AF burden often appear within 6 months of sustained 10% or greater weight loss and OSA treatment. After AV junction ablation with pacing, symptom benefit is immediate but commitment to the pacemaker is lifelong.",
+
+  "complications": [
+    "Ischemic stroke or systemic embolism — AF roughly quintuples ischemic stroke risk untreated; about 1 in 6 strokes in adults over 60 is attributable to AF. Anticoagulation reduces this risk by approximately 64%.",
+    "Heart failure — AF precipitates HF through tachycardia-mediated cardiomyopathy and loss of atrial kick. 30-40% of HF patients develop AF; bidirectional management is required.",
+    "Cognitive decline and vascular dementia — AF is associated with a 1.4- to 1.5-fold increase in dementia risk independent of clinical stroke. Anticoagulation and rhythm control may partially attenuate this.",
+    "Major bleeding from anticoagulation — annual risk approximately 1-3% on DOACs, 2-5% on warfarin. Use HAS-BLED to identify modifiable bleeding risks (uncontrolled BP, NSAIDs, excess alcohol) rather than to withhold anticoagulation.",
+    "Tachycardia-induced cardiomyopathy — sustained ventricular rates above 110 bpm for weeks to months can reduce ejection fraction; rate or rhythm control usually reverses this within 3-6 months.",
+    "Procedural complications of catheter ablation — cardiac tamponade ~1%, vascular access complications ~2%, atrioesophageal fistula under 0.1% (rare but often fatal), phrenic nerve injury under 1% with cryoballoon."
+  ],
+
+  "supportResources": [
+    { "name": "American Heart Association — Atrial Fibrillation", "url": "https://www.heart.org/en/health-topics/atrial-fibrillation", "description": "Patient-facing overview, self-management tools, and treatment explanations from the body that co-writes the US guideline." },
+    { "name": "StopAfib.org (Heart Rhythm Alliance)", "url": "https://www.stopafib.org/", "description": "Patient advocacy organization founded by AF survivors; symptom diaries, treatment-decision support, and global resource lists." },
+    { "name": "Heart Rhythm Society — Patient Resources", "url": "https://www.hrsonline.org/patient-resources", "description": "Education from the specialty society representing electrophysiologists who manage complex AF." },
+    { "name": "British Heart Foundation — Atrial Fibrillation", "url": "https://www.bhf.org.uk/informationsupport/conditions/atrial-fibrillation", "description": "Plain-English explanations of diagnosis, treatment, and recovery for UK readers." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "typical-atrial-flutter-i483", "name": "Atrial Flutter (Typical)", "keyDifference": "Atrial flutter is a regular re-entrant atrial tachycardia at 240-340 bpm with characteristic 'sawtooth' flutter waves on ECG, in contrast with the irregularly irregular fibrillatory baseline of AF. Both share embolic risk and anticoagulation indications, but flutter is more readily ablated by a single cavotricuspid isthmus line." },
+    { "slug": "supraventricular-tachycardia-i471", "name": "Supraventricular Tachycardia (SVT)", "keyDifference": "SVT typically presents as sudden-onset regular tachycardia at 150-250 bpm with normal P-wave morphology or no visible P waves, often terminated by vagal maneuvers or adenosine. AF is irregularly irregular and rarely responds to adenosine. SVT does not carry the embolic stroke risk of AF." },
+    { "slug": "heart-failure", "name": "Heart Failure", "keyDifference": "Both produce breathlessness and fatigue, but heart failure is defined by structural cardiac dysfunction and elevated filling pressures on echocardiogram, while AF is an electrical diagnosis on ECG. The two coexist in 30-40% of cases — AF can precipitate HF (tachycardia-mediated cardiomyopathy) and HF predisposes to AF." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "keyDifference": "Hyperthyroidism can cause palpitations, sinus tachycardia, and AF, but the underlying disorder is thyroid hormone excess detectable on TSH and free T4 testing. Treating the thyroid disease alone restores sinus rhythm in most cases of thyroid-induced AF within 8-12 weeks." },
+    { "slug": "anxiety", "name": "Anxiety", "keyDifference": "Panic and anxiety produce palpitations and chest discomfort that closely mimic paroxysmal AF, but the rhythm is regular sinus tachycardia in anxiety. A single 30-second ECG strip during symptoms definitively distinguishes them. The two can coexist — AF episodes themselves often trigger anxiety, which then perpetuates symptom reporting." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "heart-failure", "name": "Heart Failure" },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease" },
+    { "slug": "sleep-apnea", "name": "Sleep Apnea" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "stroke", "name": "Stroke", "relevance": "The principal complication of untreated AF; about 1 in 6 ischemic strokes in older adults is attributable to AF. Anticoagulation reduces this risk by approximately 64%." },
+    { "slug": "heart-failure", "name": "Heart Failure", "relevance": "AF coexists with heart failure in 30-40% of cases and worsens it through loss of atrial kick and tachycardia-induced cardiomyopathy. Catheter ablation in HFrEF with AF improved survival in CASTLE-AF." },
+    { "slug": "hypertension", "name": "High Blood Pressure", "relevance": "Present in 60-80% of AF patients and the leading single modifiable contributor; intensive BP control lowers incident AF by approximately 25%." },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease", "relevance": "A common substrate for AF in older adults; influences antiarrhythmic drug choice and stroke-prevention strategy." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "relevance": "A reversible cause of AF in 10-15% of overt cases; should be screened with TSH at diagnosis." },
+    { "slug": "sleep-apnea", "name": "Sleep Apnea", "relevance": "Moderate-to-severe untreated OSA doubles AF risk and quadruples post-ablation recurrence; CPAP measurably improves long-term rhythm outcomes." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is atrial fibrillation?",
+      "answer": "Atrial fibrillation is an irregular and often rapid heart rhythm caused by chaotic electrical signals in the upper chambers of the heart. Instead of contracting effectively, the atria quiver, producing an irregularly irregular pulse and reducing the heart's pumping efficiency by 20-30%. It is the most common sustained arrhythmia and a leading cause of stroke in adults over 60.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does atrial fibrillation feel like?",
+      "answer": "Most patients describe palpitations as a fluttering, racing, or irregular pounding in the chest. Others notice breathlessness on exertion, fatigue, lightheadedness, chest discomfort, or simply a sense that something is off. About one-third of patients feel nothing at all and are diagnosed incidentally on a routine ECG or smartwatch alert.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is atrial fibrillation dangerous?",
+      "answer": "Yes. Untreated AF roughly quintuples the risk of ischemic stroke and accounts for about one in six strokes in older adults. It also raises the risk of heart failure, cognitive decline, and all-cause mortality. With modern anticoagulation, rate or rhythm control, and risk-factor management, most of this excess risk can be substantially reduced.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes atrial fibrillation?",
+      "answer": "The dominant contributors are hypertension, coronary artery disease, heart failure, valvular disease, hyperthyroidism, obstructive sleep apnea, obesity, diabetes, and heavy alcohol use. Genetics also plays a role — a first-degree relative with AF roughly doubles personal risk. Many patients have several overlapping causes that together produce atrial electrical and structural remodeling.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is atrial fibrillation diagnosed?",
+      "answer": "Diagnosis requires electrocardiographic confirmation of AF lasting at least 30 seconds on a rhythm strip or 10 seconds on a standard 12-lead ECG, showing absent P waves and irregularly irregular R-R intervals. For paroxysmal cases that escape a single ECG, ambulatory monitoring with a 14-day patch, smartwatch single-lead ECG, or implantable loop recorder is used.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a smartwatch detect AF accurately?",
+      "answer": "Yes, FDA-cleared single-lead ECG functions on Apple Watch, KardiaMobile, and Fitbit can record a 30-second tracing that has roughly 84% positive predictive value for AF when triggered by an irregular-rhythm notification. A clinician should still review and confirm any wearable detection with a 12-lead ECG before starting treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the CHA2DS2-VASc score?",
+      "answer": "CHA2DS2-VASc is a validated stroke-risk score that adds points for congestive heart failure, hypertension, age 65-74 (1) and 75 or older (2), diabetes, prior stroke or TIA (2), vascular disease, and female sex. Anticoagulation is recommended for men with a score of 2 or higher and women with a score of 3 or higher.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which blood thinner is best for atrial fibrillation?",
+      "answer": "Apixaban, rivaroxaban, edoxaban, and dabigatran are first-line for most non-valvular AF, with apixaban having the most favorable bleeding profile in head-to-head data. Warfarin remains the agent of choice for moderate-to-severe mitral stenosis and mechanical heart valves. Aspirin alone is not adequate stroke prevention and is no longer recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can atrial fibrillation be cured?",
+      "answer": "AF is not curable in the strict sense because the underlying atrial substrate persists, but it can be controlled or rendered effectively absent with catheter ablation in many paroxysmal AF patients. Single-procedure 1-year freedom from AF after pulmonary vein isolation is 60-80% in paroxysmal disease, rising to 80-90% after multiple procedures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between paroxysmal and persistent AF?",
+      "answer": "Paroxysmal AF terminates spontaneously or with intervention within 7 days of onset, often within 24-48 hours. Persistent AF continues beyond 7 days and requires cardioversion to restore sinus rhythm. Long-standing persistent AF is continuous for over 12 months. The stages reflect progressive atrial remodeling.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is catheter ablation safe for atrial fibrillation?",
+      "answer": "Modern catheter ablation has a major complication rate of about 2-4% in experienced centers, including cardiac tamponade (about 1%), vascular access complications (about 2%), phrenic nerve injury (under 1%), and atrioesophageal fistula (under 0.1%). Pulsed-field ablation has further improved the safety profile. Procedural mortality is below 0.1%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I drink alcohol with atrial fibrillation?",
+      "answer": "Most guidelines advise limiting alcohol to under one standard drink per day. The randomized Alcohol-AF trial in 2020 showed that abstinence reduced AF recurrence by 53% in patients who previously drank moderately. Binge drinking is a reliable trigger of paroxysmal episodes — the classic holiday heart syndrome.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need to take a blood thinner for life?",
+      "answer": "For most patients with non-valvular AF and a qualifying stroke-risk score, lifelong oral anticoagulation is recommended even after successful catheter ablation or apparent return to sinus rhythm, because subclinical AF often persists and stroke risk does not reset to baseline. Decisions on cessation are individualized.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can young people get atrial fibrillation?",
+      "answer": "Yes, although it is uncommon before age 50 without an underlying driver. Causes in younger adults include hyperthyroidism, congenital heart disease, hypertrophic cardiomyopathy, heavy alcohol use, endurance athletic exposure, and inherited variants in genes such as TTN and KCNQ1. A focused workup including echocardiogram, thyroid function, and family history is essential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does atrial fibrillation cause heart failure?",
+      "answer": "It can. Sustained rapid AF with ventricular rates above 110 beats per minute over weeks to months can produce tachycardia-mediated cardiomyopathy, which reduces ejection fraction and causes heart failure symptoms. Rate or rhythm control usually reverses this within 3-6 months. AF also worsens pre-existing heart failure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is rate control versus rhythm control?",
+      "answer": "Rate control accepts the AF rhythm but uses beta-blockers, calcium-channel blockers, or digoxin to keep the resting heart rate below 110 beats per minute. Rhythm control aims to restore and maintain sinus rhythm with antiarrhythmic drugs, cardioversion, or catheter ablation. Early rhythm control is now favored in newly diagnosed AF per EAST-AFNET 4.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is electrical cardioversion?",
+      "answer": "Electrical cardioversion delivers a synchronized DC shock through pads on the chest under brief sedation to restore sinus rhythm. Success rate exceeds 90% on the first attempt for persistent AF. Anticoagulation is required for at least 3 weeks before and 4 weeks after, or transesophageal echocardiogram is performed to exclude left atrial appendage thrombus.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress trigger atrial fibrillation?",
+      "answer": "Acute emotional or physical stress is a recognized trigger of paroxysmal episodes through sympathetic activation and altered atrial refractoriness. Chronic psychological stress also contributes indirectly via sleep deprivation, alcohol use, and hypertension. Stress-reduction strategies such as structured exercise, yoga, and adequate sleep reduce reported episodes in observational studies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is left atrial appendage closure?",
+      "answer": "Left atrial appendage closure is a percutaneous procedure that implants a device (Watchman, Amulet) in the appendage where most AF-related clots form. It is an option for patients with appropriate stroke risk who cannot tolerate long-term oral anticoagulation. PROTECT-AF and PREVAIL showed non-inferiority to warfarin with reduced long-term bleeding.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does AF treatment cost?",
+      "answer": "Generic DOACs cost roughly USD 350-550 per month at US retail before insurance and substantially less in India and other emerging markets. Catheter ablation costs USD 20,000-40,000 in the US uninsured, with most insurers covering it as standard of care. Implantable loop recorders and left atrial appendage closure are higher-cost procedures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can atrial fibrillation come back after ablation?",
+      "answer": "Yes. Single-procedure 1-year freedom from AF after catheter ablation is 60-80% in paroxysmal disease and 40-60% in persistent AF. Pulmonary vein reconnection accounts for most recurrences. A repeat ablation raises overall success to 80-90% in paroxysmal disease. Aggressive risk-factor management reduces recurrence substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should everyone with AF have an ablation?",
+      "answer": "No. Ablation is recommended primarily for symptomatic paroxysmal AF, for persistent AF after failed antiarrhythmic drugs, and for AF coexisting with HFrEF where CASTLE-AF showed survival benefit. Older patients with minimal symptoms and successful rate control often do well without rhythm intervention. The decision is shared.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Atrial Fibrillation (AF, AFib — irregular heartbeat)",
+  "regionalNames": [
+    { "name": "Dil Ki Dhadkan Anyamit", "region": "India", "language": "Hindi" },
+    { "name": "Idaya Thudippu Sirayinmai", "region": "India", "language": "Tamil" },
+    { "name": "Fibrillation Auriculaire", "region": "France / Francophone", "language": "French" }
+  ],
+
+  "searchTags": [
+    "atrial fibrillation",
+    "afib",
+    "a-fib",
+    "AF",
+    "irregular heartbeat",
+    "irregularly irregular pulse",
+    "paroxysmal atrial fibrillation",
+    "persistent atrial fibrillation",
+    "permanent atrial fibrillation",
+    "holiday heart syndrome",
+    "CHA2DS2-VASc",
+    "HAS-BLED",
+    "pulmonary vein isolation",
+    "catheter ablation",
+    "Watchman device"
+  ],
+
+  "symptomKeywords": [
+    "fluttering heartbeat",
+    "racing irregular pulse",
+    "palpitations at rest",
+    "breathlessness on exertion",
+    "sudden fatigue",
+    "lightheadedness with palpitations",
+    "smartwatch irregular rhythm",
+    "pounding chest",
+    "skipped beats",
+    "chest discomfort with rapid pulse"
+  ],
+
+  "metaTitle": "Atrial Fibrillation: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Atrial fibrillation: irregular heartbeat that raises stroke risk. Symptoms, CHA2DS2-VASc, DOACs, ablation, and prognosis reviewed by our medical board.",
+
+  "keywords": [
+    "atrial fibrillation",
+    "afib symptoms",
+    "afib treatment",
+    "afib causes",
+    "afib stroke",
+    "CHA2DS2-VASc score",
+    "DOAC for afib",
+    "catheter ablation atrial fibrillation",
+    "paroxysmal afib",
+    "persistent afib",
+    "rate vs rhythm control",
+    "afib vs atrial flutter",
+    "afib life expectancy",
+    "Watchman device afib"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Journal of the American College of Cardiology. 2024;83(1):109-279.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38033089/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kirchhof P, Camm AJ, Goette A, et al. Early Rhythm-Control Therapy in Patients with Atrial Fibrillation (EAST-AFNET 4). New England Journal of Medicine. 2020;383(14):1305-1316.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32865375/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Marrouche NF, Brachmann J, Andresen D, et al. Catheter Ablation for Atrial Fibrillation with Heart Failure (CASTLE-AF). New England Journal of Medicine. 2018;378(5):417-427.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29385358/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Granger CB, Alexander JH, McMurray JJV, et al. Apixaban versus Warfarin in Patients with Atrial Fibrillation (ARISTOTLE). New England Journal of Medicine. 2011;365(11):981-992.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21870978/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus Warfarin in Patients with Atrial Fibrillation (RE-LY). New England Journal of Medicine. 2009;361(12):1139-1151.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19717844/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus Warfarin in Nonvalvular Atrial Fibrillation (ROCKET-AF). New England Journal of Medicine. 2011;365(10):883-891.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21830957/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus Warfarin in Patients with Atrial Fibrillation (ENGAGE AF-TIMI 48). New England Journal of Medicine. 2013;369(22):2093-2104.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24251359/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Packer DL, Mark DB, Robb RA, et al. Effect of Catheter Ablation vs Antiarrhythmic Drug Therapy on Mortality, Stroke, Bleeding, and Cardiac Arrest Among Patients With Atrial Fibrillation (CABANA). JAMA. 2019;321(13):1261-1274.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30874766/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Lip GYH, Nieuwlaat R, Pisters R, Lane DA, Crijns HJGM. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using the CHA2DS2-VASc approach. Chest. 2010;137(2):263-272.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19762550/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Voskoboinik A, Kalman JM, De Silva A, et al. Alcohol Abstinence in Drinkers with Atrial Fibrillation (Alcohol-AF). New England Journal of Medicine. 2020;382(1):20-28.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31893513/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
