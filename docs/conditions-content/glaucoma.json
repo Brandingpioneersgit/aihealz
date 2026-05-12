@@ -1,0 +1,558 @@
+{
+  "_meta": {
+    "slug": "glaucoma",
+    "tier": 1,
+    "headTerm": "glaucoma",
+    "longTailKeywords": [
+      "glaucoma symptoms",
+      "glaucoma treatment",
+      "glaucoma eye drops",
+      "open angle glaucoma",
+      "angle closure glaucoma",
+      "normal tension glaucoma",
+      "glaucoma surgery",
+      "glaucoma vs cataract",
+      "selective laser trabeculoplasty",
+      "is glaucoma reversible"
+    ],
+    "primarySpecialty": "Ophthalmology",
+    "lastReviewed": "2026-05-12",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against AAO Primary Open-Angle Glaucoma PPP 2020, European Glaucoma Society Guidelines 5th Edition (2021), Tham YC et al. Ophthalmology 2014 (global prevalence), LiGHT trial (Gazzard NEJM 2019), EMGT (Heijl Arch Ophthalmol 2002), and NEI epidemiology. Drug doses and MIGS indications cross-checked with current AAO PPP and BMJ Glaucoma review."
+  },
+
+  "h1Title": "Glaucoma: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Ophthalmology",
+
+  "heroOverview": "Glaucoma is a group of optic-nerve diseases that quietly destroy retinal ganglion cell axons, usually driven by intraocular pressure that the eye cannot tolerate, and is the leading cause of irreversible blindness worldwide. An estimated 76 million adults aged 40-80 were living with glaucoma in 2020, projected to reach 111.8 million by 2040 (Tham 2014). Most cases are asymptomatic for years — peripheral vision is lost first, central vision last, which is why glaucoma is called the silent thief of sight. Roughly half of all people with glaucoma globally do not know they have it. Treatment cannot restore lost vision but can almost always halt progression: laser therapy, daily pressure-lowering eye drops, and minimally invasive or filtering surgery are highly effective when started before significant field loss.",
+
+  "keyStats": {
+    "prevalence": "3.5% of adults aged 40-80 globally (Tham 2014); ~3 million Americans (NEI), ~12 million Indians (Vision 2020 estimates)",
+    "demographics": "Black adults develop POAG 4-5x more often and 10 years earlier than white adults; Asian populations carry the highest angle-closure burden",
+    "avgAge": "Open-angle onset typically after age 55; primary angle-closure peaks age 55-70; congenital glaucoma presents at birth to age 3",
+    "globalCases": "76 million in 2020 → projected 111.8 million by 2040 (Tham et al. Ophthalmology 2014, PMID 24974815)"
+  },
+
+  "definition": "Glaucoma (ICD-10: H40) is a chronic, progressive optic neuropathy defined by characteristic loss of retinal ganglion cells and their axons, producing a typical pattern of optic disc cupping and matching visual field defects. Elevated intraocular pressure (IOP) is the single largest modifiable risk factor, but glaucoma is no longer defined by IOP alone — up to 30-40% of patients have pressures inside the statistically normal range (normal-tension glaucoma) yet still develop nerve damage, while many people with elevated IOP never develop disease (ocular hypertension). The current pathophysiologic model centers on mechanical compression at the lamina cribrosa combined with impaired axoplasmic flow, vascular dysregulation of the optic nerve head, and downstream apoptosis of ganglion cells. Disease is classified by anterior-chamber angle anatomy (open-angle vs angle-closure) and by cause (primary vs secondary). Open-angle glaucoma accounts for roughly 75% of cases globally and is the dominant form in most populations of European and African ancestry; angle-closure glaucoma is more prevalent in East and South Asian populations and carries higher absolute blindness risk per case. Glaucoma is managed by ophthalmologists, with glaucoma-fellowship-trained specialists handling complex, refractory, or surgical disease.",
+
+  "typesClassification": [
+    { "type": "Primary open-angle glaucoma (POAG)", "description": "The most common form (~75% of cases). The drainage angle of the eye remains anatomically open but trabecular meshwork outflow declines, raising IOP and damaging the optic nerve over years. Almost always bilateral and asymmetric, asymptomatic until advanced." },
+    { "type": "Primary angle-closure glaucoma (PACG)", "description": "The iris blocks the trabecular meshwork — chronically (gradual rise in IOP) or acutely (sudden, painful crisis with IOP >40 mmHg). More common in East and South Asian populations and in hyperopic eyes with shallow anterior chambers." },
+    { "type": "Normal-tension glaucoma (NTG)", "description": "Classic glaucomatous optic nerve damage with peak IOP measurements never above 21 mmHg. Vascular dysregulation, low cerebrospinal fluid pressure behind the disc, and migraine are over-represented. More common in Japanese populations." },
+    { "type": "Secondary glaucoma", "description": "Caused by an identifiable mechanism: pigmentary, pseudoexfoliative, uveitic, neovascular (from diabetic retinopathy or vein occlusion), steroid-induced, traumatic, or lens-related. Pseudoexfoliation is the single most common identifiable secondary cause worldwide." },
+    { "type": "Congenital and juvenile glaucoma", "description": "Rare developmental form caused by abnormal angle differentiation; presents with photophobia, tearing, and corneal cloudiness in infancy. Surgical management (goniotomy or trabeculotomy) is first-line." }
+  ],
+
+  "primarySymptoms": [
+    "Gradual loss of peripheral (side) vision over years — patients describe bumping into door frames, missing kerbs, or losing items in their visual field, often after central acuity is still 20/20.",
+    "Increasing difficulty seeing in low light or at night, with cars and faces blending into dim backgrounds earlier than expected for age.",
+    "Reduced contrast sensitivity, so that low-contrast objects (a grey car on a grey road) become harder to detect even when high-contrast reading is preserved.",
+    "Late-stage tunnel vision in advanced open-angle disease, where only a small central island of clear sight remains.",
+    "Severe ocular pain, blurred vision, halos around lights, headache, nausea and vomiting in an acute angle-closure attack — a true ophthalmic emergency.",
+    "Mild aching around the eye and intermittent blurred vision in subacute or intermittent angle-closure, often after watching a film in a darkened room (pupil dilation worsens crowding of the angle).",
+    "Eye redness with hazy or steamy cornea during an acute pressure spike — pressures above 40 mmHg cause corneal oedema.",
+    "Glare and starbursts around headlights at night, particularly bothersome in pigmentary and pseudoexfoliative glaucoma.",
+    "Asymmetric pupil size and a fixed mid-dilated pupil during acute angle closure.",
+    "Often no symptoms at all in early-to-moderate open-angle disease — the reason routine screening over age 40 matters."
+  ],
+
+  "earlyWarningSigns": [
+    "Asymmetric or enlarging optic-disc cupping noted by an optometrist or primary care clinician during a routine fundus examination",
+    "Intraocular pressure above 21 mmHg detected on a screening visit, especially with central corneal thickness below 555 µm (which under-corrects measured IOP)",
+    "Subtle nasal step or paracentral scotoma on automated perimetry that the patient has not yet noticed",
+    "First-degree relative diagnosed with glaucoma, particularly before age 60",
+    "Pigment dispersion (Krukenberg spindle on the cornea) or pseudoexfoliation material on the lens capsule seen at slit-lamp"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe eye pain with a red eye, blurred vision, halos around lights, and nausea or vomiting — possible acute angle-closure crisis requiring IOP-lowering treatment within hours to preserve vision",
+    "Rapid loss of vision in an eye known to have glaucoma — may indicate uncontrolled pressure spike, central retinal vein occlusion, or anterior ischaemic optic neuropathy",
+    "Eye trauma with hyphaema or persistent post-traumatic pressure elevation — risk of optic nerve damage within days",
+    "Severe headache localised around one eye with a fixed mid-dilated pupil — angle-closure until proven otherwise",
+    "Postoperative pain, vision drop, or hypotony after recent glaucoma surgery — needs same-day assessment to exclude bleb infection or wound leak"
+  ],
+
+  "causes": [
+    {
+      "cause": "Elevated intraocular pressure",
+      "description": "Aqueous humour is produced by the ciliary body and drained through the trabecular meshwork. When outflow falls below production, IOP rises. The Early Manifest Glaucoma Trial showed that each 1 mmHg of IOP reduction lowers progression risk by roughly 10% (Heijl 2002), establishing IOP as the central modifiable driver."
+    },
+    {
+      "cause": "Trabecular meshwork dysfunction",
+      "description": "In open-angle glaucoma, the trabecular meshwork stiffens with age, accumulates extracellular matrix material, and loses endothelial cells. Outflow resistance rises gradually over decades, producing the slow-onset, asymptomatic pressure rise typical of POAG."
+    },
+    {
+      "cause": "Anatomic angle crowding",
+      "description": "In angle-closure glaucoma, a shallow anterior chamber combined with a relatively anterior iris-lens diaphragm allows the peripheral iris to contact and obstruct the trabecular meshwork, sometimes acutely. Hyperopic, female, and Asian eyes are over-represented."
+    },
+    {
+      "cause": "Vascular dysregulation of the optic nerve head",
+      "description": "Impaired autoregulation of optic-nerve blood flow, nocturnal hypotension, and Flammer syndrome (cold extremities, migraine, low BMI) are over-represented in normal-tension glaucoma. Damage occurs at statistically normal IOP because perfusion to the nerve is insufficient."
+    },
+    {
+      "cause": "Secondary mechanisms",
+      "description": "Pseudoexfoliation material clogs the meshwork; pigment from posterior iris chafing does the same; new blood vessels grow over the angle in diabetic and ischaemic eyes; uveitis produces inflammatory debris and synechiae; corticosteroids (drops, inhalers, systemic) raise IOP in ~30% of users — so-called steroid responders."
+    },
+    {
+      "cause": "Genetic predisposition",
+      "description": "Mendelian glaucoma genes (MYOC, OPTN, TBK1, CYP1B1) account for a small minority of cases. Polygenic risk explains most heritability; genome-wide association studies have identified over 100 loci. A first-degree relative with glaucoma roughly doubles personal risk."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "Prevalence rises from ~1% at age 40 to 7-10% by age 80 (Tham 2014). Trabecular meshwork function and optic nerve head perfusion both decline with age." },
+    { "factor": "African or Caribbean ancestry", "category": "non-modifiable", "description": "POAG is 4-5 times more common in Black adults than white adults and presents about a decade earlier. Disease progresses faster and to more advanced stages, partly due to thinner central corneas and structural differences in the lamina cribrosa." },
+    { "factor": "East or South Asian ancestry", "category": "non-modifiable", "description": "Anatomically shallower anterior chambers raise angle-closure risk; PACG accounts for half of glaucoma blindness in East Asia despite being a minority of overall cases." },
+    { "factor": "Family history of glaucoma", "category": "genetic", "description": "A first-degree relative with POAG raises personal risk approximately 2-4 fold; siblings of an affected patient have up to 10x the population risk in some studies." },
+    { "factor": "Elevated intraocular pressure", "category": "modifiable", "description": "IOP above 21 mmHg roughly doubles 5-year risk of developing glaucoma compared to pressures in the mid-teens; the higher the IOP, the steeper the risk gradient. This is the only modifiable risk factor reliably altered by treatment." },
+    { "factor": "Thin central cornea (<555 µm)", "category": "non-modifiable", "description": "Goldmann tonometry under-estimates IOP in thin corneas. The OHTS study found central corneal thickness below 555 µm tripled progression risk from ocular hypertension to glaucoma." },
+    { "factor": "High myopia (refractive error worse than -6 D)", "category": "non-modifiable", "description": "Myopic eyes have longer axial length, thinner sclera at the optic nerve head, and altered lamina cribrosa architecture, raising POAG risk roughly 2-3 fold." },
+    { "factor": "Diabetes mellitus", "category": "modifiable", "description": "Long-standing diabetes raises POAG risk by approximately 35%, partly through vascular dysregulation and partly through neovascular glaucoma from proliferative diabetic retinopathy." },
+    { "factor": "Long-term corticosteroid use", "category": "modifiable", "description": "Topical, periocular, inhaled, and oral steroids can raise IOP in roughly 30% of users (steroid responders). Effect is dose- and potency-dependent and reversible if recognised early." },
+    { "factor": "Ocular trauma", "category": "environmental", "description": "Blunt trauma can cause angle recession and delayed open-angle glaucoma months to decades later. Penetrating injury can produce secondary glaucoma through inflammation or synechiae." },
+    { "factor": "Migraine and vascular dysregulation", "category": "modifiable", "description": "Migraine, Raynaud-like cold extremities, and nocturnal hypotension are over-represented in normal-tension glaucoma, where vascular dysfunction at the optic nerve head appears to drive damage at normal IOP." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence: ~3 million adults have glaucoma; only about half are diagnosed (NEI/AAO)",
+    "Global prevalence: 76 million adults aged 40-80 in 2020, projected to 111.8 million by 2040 (Tham 2014)",
+    "Black adults bear 4-5x the POAG burden of white adults and develop disease ~10 years earlier",
+    "East and South Asian populations carry the largest absolute angle-closure burden — ~85% of PACG cases globally",
+    "Around 50% of people with glaucoma worldwide do not know they have it; the proportion is higher in low- and middle-income countries"
+  ],
+
+  "diagnosisOverview": "Diagnosis of glaucoma rests on structural evidence of optic nerve damage combined with functional evidence of corresponding visual field loss, supported by intraocular pressure and anterior segment findings. The clinical workflow begins with a focused history covering family history, ocular trauma, steroid exposure, refractive error, and prior eye surgery, followed by best-corrected visual acuity, slit-lamp examination of the anterior segment, gonioscopy to grade the drainage angle (open versus narrow versus closed), and IOP measurement with Goldmann applanation tonometry. Central corneal thickness (pachymetry) is measured because Goldmann readings under-estimate IOP in thin corneas and over-estimate in thick ones — the OHTS study showed pachymetry independently predicts conversion to glaucoma. A dilated fundus examination assesses the optic nerve head for diagnostic features: enlarged cup-to-disc ratio, thinning of the neuroretinal rim (ISN'T rule violations), disc haemorrhages, retinal nerve fibre layer defects, and inter-eye asymmetry. Optical coherence tomography of the retinal nerve fibre layer and ganglion cell complex provides reproducible quantitative measurements and detects damage earlier than perimetry in many patients. Standard automated perimetry, usually 24-2 Humphrey or equivalent Octopus protocol, maps the functional defect; SITA-Standard or SITA-Faster is the typical algorithm. Diagnosis requires reliable, repeatable defects (two consecutive abnormal fields meeting glaucoma hemifield criteria) plus structural correlation. Differential diagnoses ruled out at this stage include compressive optic neuropathy, ischaemic optic neuropathy, retinal disease that mimics field loss, and physiologic large cups in long-axial-length myopic eyes. Repeat testing every 6-12 months is needed to confirm progression and set IOP targets.",
+
+  "diagnosticTests": [
+    {
+      "test": "Goldmann applanation tonometry",
+      "purpose": "Measures intraocular pressure — the principal modifiable risk factor and the target of all medical and surgical therapy. Establishes baseline IOP and tracks response to treatment.",
+      "whatToExpect": "After a drop of anaesthetic and fluorescein, the clinician gently touches a small prism to the cornea for two seconds. No pain, takes under a minute per eye. The same reading is repeated at every clinic visit."
+    },
+    {
+      "test": "Optical coherence tomography (OCT) of the optic nerve and macula",
+      "purpose": "Quantifies retinal nerve fibre layer and ganglion cell complex thickness, detecting structural damage earlier than perimetry. Provides reproducible measurements for tracking progression.",
+      "whatToExpect": "Patient sits at a tabletop instrument and looks at a target light for a few seconds per scan. No drops needed, no contact with the eye, takes 5-10 minutes total. Often repeated every 6-12 months."
+    },
+    {
+      "test": "Standard automated perimetry (24-2 Humphrey visual field)",
+      "purpose": "Maps functional visual field loss in central 24 degrees. Glaucoma produces characteristic nasal steps, arcuate scotomas, and paracentral defects respecting the horizontal midline.",
+      "whatToExpect": "Patient sits with one eye covered and presses a button each time a flashing light is seen against a bowl-shaped background. Each eye takes 5-7 minutes. Repeat testing every 6-12 months tracks progression."
+    },
+    {
+      "test": "Gonioscopy",
+      "purpose": "Direct visualisation of the trabecular meshwork and anterior chamber angle structures. Distinguishes open-angle from narrow-angle and angle-closure glaucoma and detects peripheral anterior synechiae and angle recession.",
+      "whatToExpect": "After anaesthetic drops, a small lens with mirrors is placed on the cornea for 30-60 seconds per eye while the examiner looks through the slit-lamp. Mild pressure sensation; no pain. Performed at baseline and periodically."
+    },
+    {
+      "test": "Central corneal thickness (pachymetry)",
+      "purpose": "Corrects measured IOP for corneal thickness. Thin corneas (<555 µm) independently predict glaucoma progression risk, while thick corneas can falsely elevate IOP readings.",
+      "whatToExpect": "Painless ultrasound or optical measurement taking under a minute per eye. Usually performed once at baseline; only repeated after corneal surgery."
+    },
+    {
+      "test": "Fundus photography and disc imaging",
+      "purpose": "Documents optic disc appearance for comparison over time. Detects disc haemorrhages, cup enlargement, and rim thinning. Provides medico-legal documentation of baseline.",
+      "whatToExpect": "A flash photograph through a dilated pupil, taking under a minute. Often repeated annually as part of routine follow-up."
+    },
+    {
+      "test": "Anterior segment OCT or ultrasound biomicroscopy",
+      "purpose": "Detailed imaging of the anterior chamber angle, used when gonioscopy is difficult or when angle-closure mechanisms (plateau iris, pupillary block) need further characterisation.",
+      "whatToExpect": "Non-contact scan in most cases; ultrasound biomicroscopy uses a small water bath placed over the eye after anaesthetic. Both take 5-10 minutes."
+    }
+  ],
+
+  "treatmentOverview": "Glaucoma treatment lowers intraocular pressure to a target level that halts further optic nerve damage — typically a 20-30% reduction from untreated baseline, with lower targets for more advanced disease, faster progression, or younger patients. There is no treatment that restores already-lost vision, so the goal is preservation. The American Academy of Ophthalmology PPP 2020 and the European Glaucoma Society 5th Edition both endorse a treat-to-target framework. First-line therapy has shifted over the past five years: the LiGHT trial (Gazzard NEJM 2019 with 6-year follow-up reported in 2022) showed that selective laser trabeculoplasty (SLT) as primary therapy keeps 70% of POAG and ocular hypertension patients drop-free at three years with fewer disease-progression events and lower cost than eye-drop monotherapy, and the SLT-first paradigm is now the AAO and NICE-recommended starting point in most newly diagnosed open-angle disease. When drops are used, a prostaglandin analogue (latanoprost 0.005% one drop each evening) is first-line — it lowers IOP by 25-33% with once-daily dosing and minimal systemic side effects. Beta-blockers (timolol 0.5% twice daily), alpha-2 agonists (brimonidine 0.2% three times daily), carbonic anhydrase inhibitors (dorzolamide, brinzolamide), and rho-kinase inhibitors (netarsudil) are added or substituted to reach target. Fixed-combination drops improve adherence. Laser peripheral iridotomy is the definitive treatment for any narrow angle at risk of closure. Minimally invasive glaucoma surgery (iStent, Hydrus, Xen, Kahook Dual Blade, Preserflo) is increasingly combined with cataract surgery in mild-to-moderate disease — IOP reductions of 20-30% with faster recovery than traditional surgery. Trabeculectomy remains the gold-standard filtering surgery for advanced or uncontrolled disease, with tube-shunt surgery (Ahmed, Baerveldt) preferred in failed trabeculectomy, neovascular, or scarred-conjunctiva eyes. Acute angle-closure crisis is a true emergency: systemic and topical IOP-lowering medication is started immediately, followed by laser peripheral iridotomy once corneal oedema clears.",
+
+  "medicalTreatments": [
+    {
+      "name": "Selective laser trabeculoplasty (SLT) — first-line per LiGHT trial",
+      "description": "532-nm Q-switched laser applied to the trabecular meshwork in a 360-degree pattern, taking about 5 minutes per eye in clinic. Repeatable. Lowers IOP by selectively photothermolysing pigmented meshwork cells without coagulative damage. Suitable for open-angle glaucoma and ocular hypertension.",
+      "effectiveness": "20-25% IOP reduction sustained at 6 years in 70% of treated eyes (LiGHT trial extension, Gazzard 2022). 74.2% of SLT-first eyes remained drop-free at 6 years versus drops alone in the comparator arm."
+    },
+    {
+      "name": "Latanoprost 0.005% (one drop in affected eye(s) each evening)",
+      "description": "Prostaglandin F2-alpha analogue. Increases uveoscleral outflow of aqueous humour. First-line eye drop globally due to once-daily dosing and IOP reduction superior to other monotherapies. Adverse effects: eyelash growth, iris darkening, periorbital fat atrophy, conjunctival hyperaemia.",
+      "effectiveness": "25-33% IOP reduction from baseline. Bimatoprost and travoprost are comparable; tafluprost is the preservative-free option."
+    },
+    {
+      "name": "Timolol 0.5% (one drop twice daily)",
+      "description": "Non-selective beta-blocker. Reduces aqueous production. Effective but contraindicated in asthma, COPD, bradycardia, heart block, and decompensated heart failure due to systemic absorption. Often used as the second drug or in fixed combination with a prostaglandin.",
+      "effectiveness": "20-25% IOP reduction. Tachyphylaxis is common after 1-2 years; switching to an alternative class is then advised."
+    },
+    {
+      "name": "Brimonidine 0.2% or 0.15% (one drop three times daily)",
+      "description": "Alpha-2 adrenergic agonist. Reduces aqueous production and increases uveoscleral outflow. Useful as add-on or in beta-blocker contraindicated patients. Avoid in infants and young children — risk of CNS depression. Allergic conjunctivitis develops in roughly 15% of users.",
+      "effectiveness": "18-25% IOP reduction; somewhat less than prostaglandins."
+    },
+    {
+      "name": "Dorzolamide 2% or brinzolamide 1% (one drop two to three times daily)",
+      "description": "Topical carbonic anhydrase inhibitors. Reduce aqueous production. Useful as third- or fourth-line drops or in fixed combination with timolol. Local stinging is common with dorzolamide; brinzolamide is better tolerated but less potent.",
+      "effectiveness": "15-20% IOP reduction as monotherapy."
+    },
+    {
+      "name": "Netarsudil 0.02% (one drop each evening)",
+      "description": "Rho-kinase inhibitor (Rhopressa, FDA-approved 2017). Lowers IOP by increasing trabecular outflow and decreasing episcleral venous pressure. Useful in normal-tension glaucoma and as add-on. Conjunctival hyperaemia is common (~50%); cornea verticillata in some users.",
+      "effectiveness": "18-22% IOP reduction; non-inferior to timolol in head-to-head trials when starting IOP is below 27 mmHg. Fixed combination with latanoprost (Rocklatan) achieves 30-35% reduction."
+    },
+    {
+      "name": "Acetazolamide oral 250-500 mg up to four times daily",
+      "description": "Systemic carbonic anhydrase inhibitor. Used short-term for acute pressure spikes, angle-closure crisis, and before urgent surgery. Long-term oral use is limited by paresthesias, fatigue, kidney stones, and metabolic acidosis.",
+      "effectiveness": "30-40% acute IOP reduction within 1-2 hours of oral or IV administration."
+    },
+    {
+      "name": "Pilocarpine 1-2% (one drop four times daily)",
+      "description": "Cholinergic miotic. Pulls the iris away from the trabecular meshwork — used acutely in angle-closure crisis after pressure has begun to fall. Rarely used long-term due to brow ache, induced myopia, and small fixed pupils.",
+      "effectiveness": "Effective in breaking acute angle closure; only modest chronic IOP reduction in open-angle disease (15-20%)."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Laser peripheral iridotomy (LPI)",
+      "description": "An Nd:YAG laser creates a small opening in the peripheral iris, equalising pressure between the posterior and anterior chambers and opening the angle. First-line treatment for any anatomically narrow or closed angle, including the unaffected fellow eye after an acute attack. Takes 5-10 minutes per eye in clinic.",
+      "successRate": "Opens the angle and prevents progression to chronic angle closure in 70-90% of treated eyes. Eyes with extensive peripheral anterior synechiae may need additional pressure-lowering treatment."
+    },
+    {
+      "name": "Minimally invasive glaucoma surgery (MIGS) — iStent, Hydrus, Xen, Kahook Dual Blade, Preserflo",
+      "description": "Implantation of a microscopic device into the trabecular meshwork (iStent inject W, Hydrus), excision of meshwork tissue (Kahook), or creation of a subconjunctival drainage channel (Xen gel stent, Preserflo Microshunt). Usually combined with cataract surgery in mild-to-moderate glaucoma; some procedures are standalone.",
+      "successRate": "20-30% IOP reduction sustained at 2-5 years; allows discontinuation of one or more drops in 60-75% of patients. Lower complication rate than trabeculectomy."
+    },
+    {
+      "name": "Trabeculectomy with antimetabolite (mitomycin-C)",
+      "description": "Gold-standard filtering surgery for advanced or refractory glaucoma. Creates a guarded fistula under a partial-thickness scleral flap that drains aqueous to a subconjunctival bleb. Mitomycin-C modulates wound healing to prevent scarring.",
+      "successRate": "60-80% achieve IOP below 21 mmHg without medications at 5 years; success falls in younger patients, neovascular glaucoma, and previously operated eyes. Bleb-related complications (infection, leak, hypotony) remain a long-term concern."
+    },
+    {
+      "name": "Glaucoma drainage device (Ahmed, Baerveldt, Molteno tube shunt)",
+      "description": "Silicone tube extends from the anterior chamber to a posterior plate sutured to the sclera. Aqueous drains to the plate where a fibrous capsule absorbs fluid. Preferred over trabeculectomy in neovascular, uveitic, paediatric, or scarred-conjunctiva eyes.",
+      "successRate": "70-85% achieve target IOP at 5 years; tube-versus-trabeculectomy (TVT) trial showed comparable IOP outcomes with fewer reoperations after tube surgery."
+    },
+    {
+      "name": "Cyclophotocoagulation (transscleral or endoscopic diode laser)",
+      "description": "Laser ablation of the ciliary body to reduce aqueous production. Traditionally a last-resort treatment for refractory or end-stage glaucoma; micropulse transscleral cyclophotocoagulation extends use to less advanced cases.",
+      "successRate": "Achieves target IOP in 60-75% of refractory eyes; risk of hypotony and vision loss is non-trivial in conventional continuous-wave delivery."
+    },
+    {
+      "name": "Lens extraction (clear lens or cataract surgery) for primary angle closure",
+      "description": "The EAGLE trial (Azuara-Blanco Lancet 2016) showed that primary clear lens extraction is more effective and cost-effective than laser iridotomy plus drops in primary angle-closure glaucoma. Cataract surgery alone often lowers IOP by 2-4 mmHg in any open-angle eye.",
+      "successRate": "Better IOP control and quality of life at 3 years than the laser-and-drops arm; now a guideline-supported first-line option for PACG with IOP >30 mmHg or established glaucomatous damage."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Aerobic exercise", "description": "Regular moderate aerobic exercise lowers IOP by 2-3 mmHg acutely after a session and may produce modest sustained reductions in habitual exercisers (Risner 2009). Adjunctive only — not a substitute for medical or surgical therapy. Yoga inversions and Valsalva manoeuvres should be avoided as they transiently raise IOP." },
+    { "name": "Avoidance of sustained IOP-raising activities", "description": "Wind instrument playing, heavy weightlifting with breath-holding, head-down yoga postures, and tight neckwear all transiently raise IOP. Limiting these activities is reasonable, particularly in progressing disease, although evidence for hard outcome benefit is limited." }
+  ],
+
+  "whySeeSpecialist": "An ophthalmologist — ideally one with glaucoma fellowship training — should evaluate any newly suspected glaucoma, any patient progressing on current therapy, anyone needing more than two pressure-lowering drops, any angle-closure spectrum disease, any pre-perimetric or normal-tension presentation, and any patient considering laser or surgical intervention. Glaucoma management is a multi-decade relationship — continuity with one specialist who can compare today's OCT and visual field with the patient's own baseline is far more valuable than any single new test.",
+
+  "doctorSelectionGuide": "Look for board certification in ophthalmology and ideally a glaucoma fellowship. Confirm the practice has up-to-date OCT, standard automated perimetry, gonioscopy capability, and access to SLT, MIGS, and traditional filtering surgery on site or by referral. Ask how often visual fields and OCT are repeated for stable patients (every 6-12 months is standard). For Black, Hispanic, or Asian patients, choose a clinician familiar with the higher progression rates and angle-anatomy issues in those populations.",
+
+  "hospitalCriteria": [
+    "Ophthalmology department with dedicated glaucoma sub-specialty service",
+    "On-site OCT (Cirrus, Spectralis, or equivalent), Humphrey or Octopus perimetry, anterior segment OCT or UBM",
+    "Laser room equipped for SLT and Nd:YAG iridotomy",
+    "Operating theatre experience with trabeculectomy, tube shunts, and MIGS procedures",
+    "Established protocols for acute angle-closure crisis with 24/7 emergency cover"
+  ],
+
+  "keyFacilities": [
+    "Tertiary glaucoma clinics with fellowship-trained surgeons",
+    "Day-care surgical units offering MIGS combined with cataract surgery",
+    "Pediatric ophthalmology services for congenital and juvenile glaucoma",
+    "Low-vision rehabilitation services for patients with established field loss"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Get a comprehensive dilated eye exam at least every 2 years from age 40, and annually from age 60 — earlier and more often for Black, Hispanic, Asian, or strongly family-positive patients",
+    "Tell your eye doctor about any family history of glaucoma so screening intervals can be tightened",
+    "Use only the lowest effective dose and shortest duration of corticosteroids (drops, inhalers, oral, periocular), and have IOP monitored if long courses are unavoidable",
+    "Protect the eyes from blunt trauma with polycarbonate eyewear during sport, DIY, and high-risk work — post-traumatic angle recession glaucoma can appear decades after the injury",
+    "Manage cardiovascular health, diabetes, and migraine actively; vascular dysregulation contributes meaningfully to normal-tension disease"
+  ],
+
+  "lifestyleModifications": [
+    "Take prescribed pressure-lowering drops at the same time every day — adherence is the single largest determinant of long-term vision preservation in medically managed glaucoma",
+    "Learn correct drop instillation technique and use punctal occlusion (close the eyes and press the inner corner for one minute after each drop) to maximise ocular absorption and minimise systemic side effects",
+    "Space different drops at least 5 minutes apart so the first is not washed out by the second",
+    "Avoid wind instruments played with high resistance, weight-lifting with breath-holding, and head-down yoga inversions in advanced disease — these transiently raise IOP",
+    "Aerobic exercise (brisk walking, cycling, swimming) at least 150 minutes per week supports modest IOP lowering and overall cardiovascular health",
+    "Stop smoking — nicotine contributes to vascular dysregulation and is independently associated with faster glaucoma progression",
+    "Sleep with the head slightly elevated if there is a known nocturnal IOP spike component"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Leafy green vegetables — higher intake is associated with 20-30% lower risk of primary open-angle glaucoma in observational cohorts (Kang 2016)",
+      "Fish or marine omega-3 sources twice weekly — modest evidence for optic nerve perfusion benefit",
+      "Caffeine in moderation (up to 200 mg daily) — large single doses can transiently raise IOP, but habitual moderate intake appears safe in most patients",
+      "Adequate hydration spread through the day — drinking more than 1 litre of water in under 20 minutes can transiently raise IOP, so sip rather than gulp",
+      "Mediterranean-pattern diet — supports vascular health, which matters for optic nerve perfusion"
+    ],
+    "avoid": [
+      "Drinking large volumes of fluid (>1 L) over a short time, particularly before bed",
+      "Trans fats and very high saturated-fat intake — linked to faster optic nerve damage in some cohorts",
+      "Smoking and second-hand smoke exposure",
+      "Excessive alcohol — short-term alcohol lowers IOP but heavy drinking is associated with worse glaucoma outcomes overall"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular moderate aerobic exercise (walking, cycling, swimming) for at least 150 minutes per week is safe and beneficial. Avoid sustained breath-holding (Valsalva) during heavy resistance training, head-down yoga inversions (sirsasana, downward dog held long), and other manoeuvres that transiently raise IOP, especially in advanced disease. Wear polycarbonate protective eyewear during any sport with projectile risk.",
+
+  "dailyManagement": [
+    "Take pressure-lowering drops at the same time each day, with a phone alarm if needed — missed doses are the leading cause of avoidable progression",
+    "Use punctal occlusion after each drop to improve drug absorption and reduce systemic side effects",
+    "Keep a written list of current eye drops and dosing schedules to share with every clinician (especially before any general anaesthetic)",
+    "Attend every scheduled visual field and OCT appointment — stability cannot be assumed without testing",
+    "Carry medical alert information if on a beta-blocker drop and have asthma, heart disease, or are pregnant",
+    "Plan ahead for prescription refills so drops are never abruptly stopped"
+  ],
+
+  "prognosis": "With early detection and consistent IOP-lowering therapy, the long-term prognosis for vision is excellent: most patients diagnosed before significant field loss retain functional sight throughout life. The Early Manifest Glaucoma Trial showed that treating to a meaningful IOP reduction roughly halves progression risk (Heijl 2002), and modern treatment regimens hold most newly diagnosed patients stable for decades. Outcomes are less favourable in patients diagnosed late, in those with poor adherence, in advanced disease at presentation, in normal-tension glaucoma with vascular dysregulation, and in pseudoexfoliation or neovascular glaucoma where pressures are higher and more volatile. About 10-15% of treated open-angle patients still progress to severe visual impairment in one eye over a lifetime, and an estimated 5% become bilaterally blind. The decisive prognostic factors are the IOP achieved and maintained, the stage at diagnosis, and treatment adherence — not the IOP at presentation alone.",
+
+  "recoveryTimeline": "There is no recovery of vision once retinal ganglion cells die — glaucoma damage is irreversible. The treatment timeline runs in years: IOP-lowering therapy takes effect within hours to days, structural OCT changes stabilise over months, and visual fields require 6-12 months of repeat testing to confirm stability. After SLT, peak IOP lowering occurs at 4-6 weeks and lasts 2-5 years before retreatment may be needed. After trabeculectomy, IOP control stabilises by 3 months; bleb health is monitored lifelong. After MIGS combined with cataract surgery, full recovery is similar to standard cataract surgery — usually 2-6 weeks.",
+
+  "complications": [
+    "Irreversible blindness — glaucoma is the leading cause of irreversible blindness worldwide; bilateral blindness occurs in roughly 5% of treated patients and a higher proportion of those untreated",
+    "Loss of independence — driving cessation, falls, and reduced quality of life as peripheral field constricts, even before central vision is involved",
+    "Acute angle-closure crisis with corneal decompensation if treatment is delayed in narrow-angle eyes; even one crisis can produce permanent optic nerve damage within hours",
+    "Allergic conjunctivitis and ocular surface disease from chronic preserved eye drops — affects 30-50% of long-term users and worsens adherence",
+    "Systemic side effects of topical therapy — bradycardia and bronchospasm with beta-blockers, fatigue and dry mouth with brimonidine, paresthesias and kidney stones with oral acetazolamide",
+    "Filtering bleb complications after trabeculectomy — bleb leak, hypotony maculopathy, and blebitis or endophthalmitis (sight-threatening infection occurring in 1-2% of trabeculectomy eyes over 5 years)",
+    "Neovascular glaucoma from untreated diabetic retinopathy or retinal vein occlusion — aggressive and difficult-to-control secondary glaucoma"
+  ],
+
+  "supportResources": [
+    { "name": "American Academy of Ophthalmology — Glaucoma Patient Information", "url": "https://www.aao.org/eye-health/diseases/what-is-glaucoma", "description": "Authoritative US patient education from the body that publishes the Glaucoma Preferred Practice Pattern." },
+    { "name": "Glaucoma Research Foundation", "url": "https://glaucoma.org/", "description": "US patient-facing non-profit with practical guidance on drops, surgery, and living with glaucoma." },
+    { "name": "International Glaucoma Association (UK) — Glaucoma UK", "url": "https://glaucoma.uk/", "description": "UK patient support charity with helpline, factsheets, and local support groups." },
+    { "name": "European Glaucoma Society Guidelines (5th Edition, 2021)", "url": "https://www.eugs.org/eng/guidelines.asp", "description": "Freely downloadable clinical guideline used by ophthalmologists across Europe; useful for patients who want to read the evidence base." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "cataracts", "name": "Cataracts", "keyDifference": "Cataracts cloud the lens and cause gradual blurring and glare with intact peripheral vision and normal optic discs. Glaucoma usually preserves central acuity until late and damages the optic nerve with characteristic cupping. The two often coexist after age 65 and can be addressed together with combined cataract-MIGS surgery." },
+    { "slug": "macular-degeneration", "name": "Age-Related Macular Degeneration", "keyDifference": "Macular degeneration destroys central vision first — patients lose the ability to read or recognise faces while peripheral vision stays intact. Glaucoma does the opposite: peripheral vision goes first, central acuity last. Fundus and OCT findings are completely different (macular drusen or neovascular changes versus optic disc cupping)." },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy", "keyDifference": "Diabetic retinopathy damages retinal capillaries, producing microaneurysms, haemorrhages, and macular oedema with progressive blurring of central vision. It can cause neovascular glaucoma as a complication, but the primary damage is retinal, not optic-nerve. Fluorescein angiography and OCT-macula are the diagnostic tests, not perimetry." },
+    { "slug": "ocular-hypertension-bilateral-h40053", "name": "Ocular Hypertension", "keyDifference": "Ocular hypertension is raised IOP without any optic-nerve damage or visual field defect — a risk factor, not glaucoma itself. The OHTS study showed about 10% of untreated ocular hypertensives convert to glaucoma over 5 years. Treatment is reserved for those with high conversion risk (high IOP, thin cornea, large cup-to-disc ratio)." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "cataracts", "name": "Cataracts" },
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "migraine", "name": "Migraine" },
+    { "slug": "sleep-apnea", "name": "Sleep Apnea" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "cataracts", "name": "Cataracts", "relevance": "Frequently coexist after age 65; modern practice often addresses both at once with combined cataract surgery plus MIGS." },
+    { "slug": "macular-degeneration", "name": "Macular Degeneration", "relevance": "Different mechanism but shares age-related risk; many patients are screened for both at the same dilated examination." },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy", "relevance": "Can cause neovascular glaucoma when proliferative disease produces new vessels over the trabecular meshwork." },
+    { "slug": "ocular-hypertension-bilateral-h40053", "name": "Ocular Hypertension", "relevance": "Raised IOP without nerve damage; identifies patients who may benefit from preventive treatment based on individual risk." },
+    { "slug": "low-tension-glaucoma-bilateral-stage-unspecified-h401230", "name": "Normal-Tension Glaucoma", "relevance": "Glaucoma occurring with peak IOP measurements within statistically normal limits; managed with the same drugs but lower IOP targets." },
+    { "slug": "unsp-primary-angle-closure-glaucoma-stage-unspecified-h4020x0", "name": "Primary Angle-Closure Glaucoma", "relevance": "Anatomically distinct subtype with higher absolute blindness risk; managed with laser iridotomy or lens extraction in addition to pressure-lowering drops." },
+    { "slug": "primary-open-angle-glaucoma-bilateral-stage-unspecified-h401130", "name": "Primary Open-Angle Glaucoma", "relevance": "The most common subtype accounting for ~75% of glaucoma cases; managed first with SLT or prostaglandin drops." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Can glaucoma be cured?",
+      "answer": "Glaucoma cannot be cured, but it can almost always be controlled. Treatment lowers intraocular pressure to halt further optic nerve damage. Vision already lost does not return, but started early, treatment preserves functional sight for life in most patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early warning signs of glaucoma?",
+      "answer": "Most open-angle glaucoma is silent — no pain, no redness, central vision stays sharp until late. The earliest signs are picked up on a routine dilated exam: enlarged optic disc cupping, thinning on OCT, or subtle nasal step on visual field testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does glaucoma always cause high eye pressure?",
+      "answer": "No. Up to 30-40% of glaucoma patients have peak intraocular pressure within the statistically normal range — called normal-tension glaucoma. The optic nerve is damaged at pressures most eyes tolerate, usually because of vascular dysregulation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the first-line treatment for glaucoma?",
+      "answer": "Selective laser trabeculoplasty (SLT) is now first-line for most newly diagnosed open-angle glaucoma and ocular hypertension, based on the LiGHT trial. About 70% of SLT-treated eyes stay drop-free at 6 years. When drops are used, latanoprost is first choice.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is glaucoma diagnosed?",
+      "answer": "Diagnosis combines OCT of the retinal nerve fibre layer, visual field testing (24-2 perimetry), intraocular pressure, gonioscopy of the drainage angle, and corneal thickness. Two reliable field tests with a matching optic nerve finding confirm it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does an acute angle-closure attack feel like?",
+      "answer": "Severe one-sided eye pain, blurred vision with halos around lights, redness, a fixed mid-dilated pupil, headache, and nausea or vomiting — often mistaken for migraine or stomach upset. Intraocular pressure exceeds 40 mmHg. Seek emergency care immediately.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I go blind from glaucoma?",
+      "answer": "Yes, but it is largely preventable. Glaucoma is the leading cause of irreversible blindness worldwide, yet with timely diagnosis and consistent treatment, severe vision loss is uncommon. About 5% of treated patients become bilaterally blind over a lifetime.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should I get my eyes checked for glaucoma?",
+      "answer": "Adults with no risk factors need a dilated eye exam every 2-4 years from age 40 and every 1-2 years from age 60. Black, Hispanic, or Asian adults and those with a family history of glaucoma should start at age 35-40 and be examined every 1-2 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are glaucoma eye drops safe for life?",
+      "answer": "Most glaucoma drops are safe for decades when monitored. Prostaglandin analogues are best tolerated. Beta-blockers can affect heart rate and breathing — avoid in asthma. Preserved drops cause ocular surface disease in about a third of long-term users.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is SLT and how does it differ from regular laser surgery?",
+      "answer": "Selective laser trabeculoplasty uses a short-pulse, low-energy 532 nm laser to stimulate the trabecular meshwork without burning tissue. It takes about 5 minutes per eye, is repeatable, and lowers IOP by 20-25%. About 70% stay drop-free at 6 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is glaucoma hereditary?",
+      "answer": "Yes — a first-degree relative with glaucoma raises personal risk 2-4 fold for open-angle disease and even more for angle-closure. Mendelian mutations (MYOC, OPTN, CYP1B1) explain a minority of cases. People with affected relatives should screen from age 35-40.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get glaucoma?",
+      "answer": "Yes, though rare. Congenital glaucoma presents in the first few years of life with tearing, light sensitivity, and corneal cloudiness, and is treated surgically with goniotomy or trabeculotomy. Juvenile open-angle glaucoma appears between ages 4 and 35.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between open-angle and angle-closure glaucoma?",
+      "answer": "Open-angle glaucoma has a normal-looking drainage angle that gradually fails over years — painless and asymptomatic. Angle-closure occurs when the iris blocks the drainage angle, sometimes in a sudden painful crisis. Treatments differ between the two.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does glaucoma surgery work?",
+      "answer": "Glaucoma surgery lowers IOP by improving drainage (trabeculectomy, tube shunts, MIGS implants) or reducing aqueous production (cyclophotocoagulation). MIGS is often combined with cataract surgery and gives 20-30% pressure reduction with fast recovery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need surgery for glaucoma?",
+      "answer": "Most glaucoma patients never need traditional filtering surgery. SLT plus eye drops controls roughly 80% of cases. Surgery is considered when target IOP cannot be reached, when adherence is poor, or when disease is already advanced at diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can lifestyle changes lower eye pressure?",
+      "answer": "Lifestyle changes produce modest IOP reduction — usually 1-3 mmHg. Regular aerobic exercise, weight loss, and avoiding head-down yoga inversions and heavy Valsalva manoeuvres all help. They support, but never replace, medical or laser treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I drink coffee if I have glaucoma?",
+      "answer": "Moderate coffee (up to 200 mg caffeine, roughly two cups daily) is safe for most glaucoma patients. Larger single doses can transiently raise IOP by 1-4 mmHg over a few hours. Decaffeinated coffee has no measurable effect on IOP.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long do glaucoma eye drops last?",
+      "answer": "Prostaglandin analogues (latanoprost, travoprost, bimatoprost) work over 24 hours from a single evening dose. Beta-blockers, alpha-agonists and carbonic anhydrase inhibitors need twice or three-times-daily dosing. Preserved bottles last 28 days after opening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can glaucoma affect just one eye?",
+      "answer": "Primary open-angle glaucoma is almost always bilateral but commonly asymmetric — one eye worse than the other. True unilateral glaucoma usually has a secondary cause such as trauma, prior uveitis, pseudoexfoliation, or pigment dispersion needing workup.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is glaucoma related to high blood pressure?",
+      "answer": "The relationship is complex. Higher systemic blood pressure raises IOP slightly, but very low nocturnal blood pressure from overtreatment reduces optic nerve perfusion and is linked to faster glaucoma progression. Tell your hypertension prescriber.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cataract surgery help my glaucoma?",
+      "answer": "Often yes. Cataract surgery alone lowers IOP by 2-4 mmHg in most open-angle eyes by deepening the anterior chamber. In primary angle-closure glaucoma, the EAGLE trial showed lens extraction outperforms laser iridotomy plus drops.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does glaucoma treatment cost?",
+      "answer": "Generic latanoprost drops cost roughly USD 10-25 per month in the US, far less in India. SLT typically costs USD 400-800 per eye and is usually covered by insurance. Trabeculectomy and tube-shunt surgery run several thousand dollars and are covered by Medicare.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Glaucoma (optic nerve damage, often from high eye pressure)",
+
+  "regionalNames": [
+    { "name": "काला मोतिया (Kala Motia)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "கண் அழுத்தம் (Kann Aluttham)", "region": "India (Tamil Nadu)", "language": "ta" },
+    { "name": "Glaucome", "region": "France", "language": "fr" },
+    { "name": "Grüner Star", "region": "Germany", "language": "de" }
+  ],
+
+  "searchTags": [
+    "glaucoma", "high eye pressure", "intraocular pressure", "IOP", "optic nerve damage",
+    "open angle glaucoma", "POAG", "angle closure glaucoma", "PACG", "normal tension glaucoma",
+    "selective laser trabeculoplasty", "SLT", "trabeculectomy", "iStent", "MIGS",
+    "latanoprost", "timolol", "glaucoma eye drops", "kala motia", "silent thief of sight"
+  ],
+
+  "symptomKeywords": [
+    "loss of side vision", "tunnel vision", "halos around lights at night",
+    "eye pain with nausea", "sudden vision loss one eye", "red painful eye",
+    "blurry peripheral vision", "headache with eye pain", "hazy cornea acute"
+  ],
+
+  "metaTitle": "Glaucoma: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Glaucoma: silent optic nerve damage from raised eye pressure that can cause blindness. Symptoms, diagnosis, drops, laser, and surgery options explained.",
+
+  "keywords": [
+    "glaucoma", "glaucoma symptoms", "glaucoma treatment", "glaucoma eye drops",
+    "open angle glaucoma", "angle closure glaucoma", "normal tension glaucoma",
+    "selective laser trabeculoplasty", "glaucoma surgery", "trabeculectomy",
+    "iStent MIGS", "latanoprost", "is glaucoma reversible", "glaucoma vs cataract"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "sources": [
+    {
+      "title": "Tham YC, Li X, Wong TY, Quigley HA, Aung T, Cheng CY. Global prevalence of glaucoma and projections of glaucoma burden through 2040: a systematic review and meta-analysis. Ophthalmology. 2014;121(11):2081-2090.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24974815/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Gazzard G, Konstantakopoulou E, Garway-Heath D, et al. Selective laser trabeculoplasty versus eye drops for first-line treatment of ocular hypertension and glaucoma (LiGHT): a multicentre randomised controlled trial. Lancet. 2019;393(10180):1505-1516.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30876741/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Heijl A, Leske MC, Bengtsson B, et al. Reduction of intraocular pressure and glaucoma progression: results from the Early Manifest Glaucoma Trial. Archives of Ophthalmology. 2002;120(10):1268-1279.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12365904/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Gedde SJ, Vinod K, Wright MM, et al. Primary Open-Angle Glaucoma Preferred Practice Pattern. American Academy of Ophthalmology. Ophthalmology. 2021;128(1):P71-P150.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34933742/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "European Glaucoma Society Terminology and Guidelines for Glaucoma, 5th Edition. British Journal of Ophthalmology. 2021;105(Suppl 1):1-169.",
+      "url": "https://www.eugs.org/eng/guidelines.asp",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Azuara-Blanco A, Burr J, Ramsay C, et al. Effectiveness of early lens extraction for the treatment of primary angle-closure glaucoma (EAGLE): a randomised controlled trial. Lancet. 2016;388(10052):1389-1397.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27707497/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kass MA, Heuer DK, Higginbotham EJ, et al. The Ocular Hypertension Treatment Study (OHTS): a randomized trial determines that topical ocular hypotensive medication delays or prevents the onset of primary open-angle glaucoma. Archives of Ophthalmology. 2002;120(6):701-713.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12049574/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Quigley HA, Broman AT. The number of people with glaucoma worldwide in 2010 and 2020. British Journal of Ophthalmology. 2006;90(3):262-267.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16488940/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "National Eye Institute. Glaucoma: At a Glance. NIH National Eye Institute Patient Resources.",
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/glaucoma",
+      "accessedDate": "2026-05-12"
+    }
+  ],
+
+  "images": []
+}
