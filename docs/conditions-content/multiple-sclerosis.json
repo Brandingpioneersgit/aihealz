@@ -6,473 +6,480 @@
     "longTailKeywords": [
       "multiple sclerosis symptoms",
       "multiple sclerosis treatment",
-      "ms causes",
-      "ms diagnosis",
-      "ms vs nmo",
+      "ms diagnosis criteria",
       "relapsing remitting ms",
       "primary progressive ms",
       "ocrelizumab for ms",
-      "ms life expectancy",
-      "is ms hereditary"
+      "ms vs nmo",
+      "mcdonald criteria 2017",
+      "ms mri lesions",
+      "is multiple sclerosis curable"
     ],
     "primarySpecialty": "Neurology",
     "lastReviewed": "2026-05-12",
-    "version": "v2-hand-written-eeat",
-    "authoringNotes": "Citations cross-verified against 2017 McDonald criteria (Thompson et al.), AAN 2018 DMT guideline (Rae-Grant), OPERA I/II ocrelizumab trials (Hauser 2017 NEJM), AFFIRM natalizumab (Polman 2006 NEJM), ASCLEPIOS ofatumumab (Hauser 2020 NEJM), and ECTRIMS/EAN 2018 treatment guideline. Drug doses and monitoring checked against current FDA prescribing information and UpToDate."
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against McDonald 2017 criteria (Thompson Lancet Neurol 2018), AAN 2018 DMT practice guideline, ECTRIMS/EAN 2018 consensus, Walton MS Atlas (Mult Scler J 2020), ORATORIO and OPERA trials, ASCLEPIOS I/II ofatumumab trials, and DELIVER-MS/TREAT-MS early high-efficacy strategy."
   },
 
   "h1Title": "Multiple Sclerosis: Symptoms, Causes, Diagnosis, and Treatment",
   "specialistType": "Neurology",
 
-  "heroOverview": "Multiple sclerosis is an immune-mediated disease in which the body's own T and B cells attack the myelin sheaths surrounding nerve fibers in the brain, optic nerves, and spinal cord, leaving scarred plaques that disrupt signal transmission. It affects roughly 1 million adults in the United States and an estimated 2.8 million people worldwide, with women diagnosed two to three times more often than men, typically between ages 20 and 40. Most patients first notice blurred vision in one eye, numbness or weakness in a limb, or imbalance that develops over days. Without effective treatment, accumulated damage progresses to permanent disability; with early high-efficacy disease-modifying therapy, most patients now maintain near-normal function for decades.",
+  "heroOverview": "Multiple sclerosis is an immune-mediated disease of the central nervous system in which inflammatory attacks strip myelin from nerve fibres in the brain, spinal cord, and optic nerves, and slowly destroy the underlying axons. About 2.9 million people live with MS worldwide and roughly 1 million in the United States, with women diagnosed three times more often than men and peak onset between ages 20 and 40. The first presentation is usually subacute monocular vision loss, sensory disturbance, or limb weakness that builds over days and then partially recovers. Untreated, accumulating lesions produce disability that limits walking within 15 years on average. Modern high-efficacy disease-modifying therapies started early can reduce relapse rates by 50 to 90 percent and substantially delay progression.",
 
   "keyStats": {
-    "prevalence": "Approximately 1 million US adults (Wallin 2019, Neurology); ~2.8 million globally (Atlas of MS 2020)",
-    "demographics": "Female-to-male ratio 2.5-3:1; higher prevalence in northern latitudes and people of Northern European ancestry",
-    "avgAge": "Typical onset between ages 20 and 40; pediatric-onset MS accounts for about 3-5% of cases",
-    "globalCases": "~2.8 million worldwide; prevalence has risen ~30% since 2013 with better case finding"
+    "prevalence": "2.9 million globally (Walton MS Atlas 2020); ~1 million US adults (Wallin 2019 NARCOMS)",
+    "demographics": "Female-to-male ratio approximately 3:1; rising in women over the past 50 years",
+    "avgAge": "Peak onset age 20-40; first symptoms before age 50 in 90% of patients",
+    "globalCases": "~2.9 million worldwide; prevalence rising in nearly every region surveyed"
   },
 
-  "definition": "Multiple sclerosis (ICD-10: G35) is a chronic inflammatory, demyelinating, and neurodegenerative disease of the central nervous system. The hallmark lesion is a focal plaque of demyelination with relative axonal preservation in acute lesions and progressive axonal loss in chronic ones. Pathogenesis involves autoreactive CD4 and CD8 T lymphocytes crossing the blood-brain barrier, recruiting B cells and macrophages, and attacking the oligodendrocytes and myelin sheaths that insulate central nervous system axons. The resulting scars (sclerotic plaques) interrupt nerve conduction and produce variable neurological deficits depending on lesion location. MS is classified into four clinical phenotypes: clinically isolated syndrome, relapsing-remitting MS (about 85% at onset), secondary progressive MS, and primary progressive MS (about 10-15%). Diagnosis is anchored by the 2017 revised McDonald criteria, which require objective evidence of central nervous system damage disseminated in space and time, demonstrated clinically or on magnetic resonance imaging. The disease is managed by neurologists, often subspecialized in MS care, with input from ophthalmology, urology, physiatry, and rehabilitation medicine as needed.",
+  "definition": "Multiple sclerosis (ICD-10: G35) is a chronic autoimmune demyelinating disease of the central nervous system characterised by focal inflammatory lesions of the brain, spinal cord, and optic nerves, paired with diffuse neurodegeneration and axonal loss. Pathologically, autoreactive CD4 Th17 cells, CD8 cytotoxic T cells, and antibody-producing B cells cross the blood-brain barrier, attack oligodendrocytes and myelin, and leave behind sclerotic plaques visible on MRI as T2/FLAIR hyperintense lesions. Active lesions enhance with gadolinium for roughly four to six weeks while the blood-brain barrier is open. MS is classified into four clinical phenotypes: clinically isolated syndrome (CIS), relapsing-remitting MS (RRMS) which accounts for about 85% of incident cases, secondary progressive MS (SPMS) that develops from RRMS in most untreated patients within 20-25 years, and primary progressive MS (PPMS) which makes up roughly 10-15% of cases and accumulates disability from onset without discrete attacks. The condition is managed by neurologists, ideally those specialised in neuroinflammation, working with rehabilitation physicians, urologists, ophthalmologists, and psychiatrists across a patient's lifetime.",
 
   "typesClassification": [
-    { "type": "Clinically isolated syndrome (CIS)", "description": "A first acute or subacute neurological episode lasting at least 24 hours, attributable to a single demyelinating lesion. About 60-70% of patients with CIS plus MRI evidence of dissemination progress to definite MS within 5 years." },
-    { "type": "Relapsing-remitting MS (RRMS)", "description": "Accounts for about 85% of new diagnoses. Discrete relapses develop over days, plateau, and partially or fully resolve over weeks, separated by clinically stable periods. Subclinical lesion accumulation continues on MRI between relapses." },
-    { "type": "Secondary progressive MS (SPMS)", "description": "An evolution of untreated or partially treated RRMS, in which disability begins to accumulate steadily independent of relapses. Roughly half of RRMS patients converted to SPMS within 15-20 years before high-efficacy therapy; current rates appear lower." },
-    { "type": "Primary progressive MS (PPMS)", "description": "Affects 10-15% of patients, with steady accumulation of disability from onset and without distinct relapses. Onset is typically a decade later than RRMS, more common in men, and often presents as progressive spinal cord syndrome." },
-    { "type": "Radiologically isolated syndrome (RIS)", "description": "Incidental MRI findings consistent with MS in a person without neurological symptoms. About a third progress to clinical MS within 5 years, especially with spinal cord lesions or oligoclonal bands." }
+    { "type": "Radiologically Isolated Syndrome (RIS)", "description": "Incidental MRI findings consistent with demyelination in someone without neurological symptoms. About one third progress to clinical MS within 5 years; presence of spinal cord lesions and oligoclonal bands raises that risk substantially." },
+    { "type": "Clinically Isolated Syndrome (CIS)", "description": "A single clinical attack of CNS demyelination, such as optic neuritis or a partial myelitis, in someone not previously diagnosed. Roughly 60-80% of CIS patients with abnormal baseline MRI progress to definite MS within a decade." },
+    { "type": "Relapsing-Remitting MS (RRMS)", "description": "Defined by discrete relapses with partial or complete recovery and clinically stable intervals. Accounts for about 85% of new diagnoses. Most modern disease-modifying therapies are studied and licensed in this phenotype." },
+    { "type": "Secondary Progressive MS (SPMS)", "description": "Develops out of long-standing RRMS as relapses become less frequent and steady disability accumulation takes over. Conversion historically occurred in most untreated patients within 20-25 years; high-efficacy therapy delays or may prevent this transition." },
+    { "type": "Primary Progressive MS (PPMS)", "description": "Disability accumulates from onset without distinct relapses, often presenting as a progressive spastic paraparesis. Comprises 10-15% of cases, with later onset (typical age 40-50) and a more even sex ratio. Ocrelizumab is the first DMT shown in a phase 3 trial (ORATORIO) to slow PPMS." }
   ],
 
   "primarySymptoms": [
-    "Sudden painful loss of vision in one eye over hours to days, often with reduced color saturation and pain on eye movement — the typical presentation of optic neuritis, the first symptom in about 20% of patients.",
-    "Numbness, tingling, or a tight-band sensation around the trunk or in a limb that develops over days and persists for weeks before partial recovery.",
-    "Weakness in one or both legs that causes a feeling of heaviness, dragging, or buckling — often worse at the end of the day or after a hot shower (Uhthoff phenomenon).",
-    "Imbalance, vertigo, or unsteady gait with falls, sometimes accompanied by oscillopsia (the visual world appearing to move) from internuclear ophthalmoplegia.",
-    "Lhermitte sign: an electric-shock sensation running down the spine or into the limbs when the neck is flexed, indicating a cervical cord lesion.",
-    "Bladder urgency, frequency, hesitancy, or incomplete emptying, often the symptom most disruptive to quality of life and present in 80% of patients within 10 years.",
-    "Profound fatigue that is disproportionate to activity, worsens through the day, and is reported by roughly 80% of patients — distinct from depression-related tiredness.",
-    "Cognitive changes including slowed processing speed, working-memory problems, and difficulty multitasking, present in 40-65% of patients on detailed neuropsychological testing.",
-    "Trigeminal neuralgia or facial sensory disturbance with sharp lancinating face pain, more common in MS than in age-matched controls.",
-    "Spasticity and painful muscle spasms, particularly in the legs at night, that interfere with sleep and mobility.",
-    "Sexual dysfunction including reduced libido, erectile dysfunction, and reduced genital sensation, reported by 40-80% of patients depending on cohort."
+    "Subacute monocular vision loss with pain on eye movement that builds over hours to days, often the first attack and almost always a sign of optic neuritis with afferent pupillary defect on exam.",
+    "Sensory disturbance such as numbness, tingling, or a banding sensation around the trunk, frequently with a discrete spinal sensory level pointing to partial transverse myelitis.",
+    "Limb weakness developing over days, often asymmetric, with hyperreflexia, spasticity, and an extensor plantar response on examination.",
+    "Double vision from internuclear ophthalmoplegia or sixth-nerve involvement, classically with impaired adduction of one eye and nystagmus in the abducting eye on lateral gaze.",
+    "Lhermitte's sign, a brief electric-shock sensation running down the spine and into the limbs triggered by neck flexion, indicating a cervical cord lesion.",
+    "Disabling fatigue out of proportion to activity, present in 75-90% of patients and worsened by heat (Uhthoff's phenomenon), which can transiently unmask old lesions.",
+    "Cerebellar signs including intention tremor, ataxic gait, dysarthria, and impaired tandem walking from brainstem and cerebellar plaque involvement.",
+    "Neurogenic bladder symptoms — urgency, frequency, urge incontinence, and incomplete emptying — present in 50-80% of patients and a major driver of urinary tract infections.",
+    "Cognitive changes including slowed processing speed, working memory deficits, and word-finding difficulty, detectable on the Symbol Digit Modalities Test in roughly half of patients.",
+    "Mood disturbance, with major depression affecting around 50% of patients across the disease course and suicide risk roughly twice that of the general population."
   ],
 
   "earlyWarningSigns": [
-    "An episode of blurred or painful vision in one eye that lasts more than 24 hours, especially in a young adult",
-    "Transient numbness or weakness of a hand, foot, or one side of the body lasting hours to days",
-    "Unexplained, persistent fatigue out of proportion to sleep or workload in a person under 40",
-    "Heat sensitivity: neurologic symptoms (vision blur, leg weakness) that reliably worsen with a hot bath, fever, or exercise",
-    "First-degree relative diagnosed with MS combined with any new persistent neurological symptom"
+    "A first episode of optic neuritis or partial myelitis lasting more than 24 hours and partially recovering over weeks",
+    "Lhermitte's sign on neck flexion, even when transient",
+    "Subtle worsening of pre-existing symptoms during a hot shower or fever (Uhthoff's phenomenon)",
+    "Asymmetric loss of vibration sense or pinprick discrimination noted by the patient when crossing a tiled floor barefoot",
+    "Incidental T2/FLAIR brain lesions on MRI ordered for headache or trauma, especially periventricular, juxtacortical, or infratentorial in distribution"
   ],
 
   "emergencySigns": [
-    "Sudden severe headache with new focal weakness — stroke and intracerebral hemorrhage must be ruled out before assuming an MS relapse",
-    "Acute urinary retention or new fecal incontinence with leg weakness — possible acute spinal cord lesion requiring urgent MRI and corticosteroids",
-    "Rapidly progressive vision loss in both eyes within hours — raises concern for neuromyelitis optica spectrum disorder, which requires different treatment than MS",
-    "High fever with new focal neurological deficit in a patient on natalizumab or other immunosuppressive therapy — exclude progressive multifocal leukoencephalopathy or central nervous system infection",
-    "Status migrainosus or seizure in a known MS patient — both can mimic or coexist with relapse and warrant prompt evaluation"
+    "New severe weakness or sensory loss developing over hours to days warrants urgent neurology review for possible acute relapse, with MRI and high-dose IV methylprednisolone if confirmed",
+    "Sudden bilateral vision loss or a profound transverse myelitis with sensory level and bladder retention raises concern for neuromyelitis optica spectrum disorder rather than MS — distinct treatment urgency",
+    "New focal neurological deficit on natalizumab with positive JC virus serology — suspect progressive multifocal leukoencephalopathy (PML) and stop the drug pending urgent MRI and CSF JC virus PCR",
+    "Acute confusion, seizures, fever, or rapid cognitive decline in a patient on an anti-CD20 therapy — exclude opportunistic CNS infection",
+    "Refractory severe relapse not responding to 3-5 days of IV methylprednisolone — consider plasma exchange (PLEX) within 1-2 weeks"
   ],
 
   "causes": [
     {
-      "cause": "Aberrant autoimmunity against central nervous system myelin",
-      "description": "Autoreactive T helper cells (Th1 and Th17 subsets) and B cells cross the blood-brain barrier and target myelin basic protein, myelin oligodendrocyte glycoprotein, and other myelin antigens. The resulting inflammation strips myelin from axons and damages oligodendrocytes, the cells that maintain myelin."
+      "cause": "Autoimmune demyelination driven by autoreactive lymphocytes",
+      "description": "Activated CD4 Th17 cells, CD8 cytotoxic T cells, and pathogenic B cells cross the blood-brain barrier and attack myelin and oligodendrocytes. The resulting plaques disrupt saltatory conduction and over time lead to axonal transection and atrophy."
     },
     {
-      "cause": "Epstein-Barr virus exposure",
-      "description": "EBV infection is now established as a necessary but not sufficient cause. A 2022 longitudinal study of 10 million US military personnel (Bjornevik, Science) showed that prior EBV infection increased MS risk 32-fold and that nearly all MS cases were EBV-seropositive years before clinical onset."
+      "cause": "Epstein-Barr virus infection",
+      "description": "A 2022 Harvard study of 10 million US military personnel (Bjornevik, Science) showed EBV infection raises MS risk roughly 32-fold and almost always precedes disease onset, supporting EBV as a necessary but not sufficient trigger in genetically susceptible individuals."
     },
     {
-      "cause": "Genetic susceptibility",
-      "description": "More than 230 genetic variants influence MS risk. The HLA-DRB1*15:01 allele carries the strongest single signal, tripling risk in carriers. Genome-wide studies suggest heritability around 25-50%, but no single gene is deterministic."
+      "cause": "Genetic susceptibility, especially HLA-DRB1*15:01",
+      "description": "Heritability is approximately 35% from twin studies. Over 230 risk variants have been identified; HLA-DRB1*15:01 confers the strongest effect, roughly tripling risk in carriers, with smaller contributions from interleukin receptor and immune-regulatory loci."
     },
     {
-      "cause": "Low vitamin D and reduced ultraviolet exposure",
-      "description": "MS prevalence rises with latitude, and serum 25-hydroxyvitamin D below 20 ng/mL is associated with higher risk and more active disease. Vitamin D modulates regulatory T-cell function; whether supplementation prevents MS in at-risk people is still being tested."
+      "cause": "Low vitamin D and reduced sunlight exposure",
+      "description": "Latitude gradient studies show MS prevalence rises with distance from the equator. Serum 25-hydroxyvitamin D below 20 ng/mL in adolescence is associated with roughly double the risk of adult MS, and supplementation in pregnancy has been linked to lower offspring risk."
     },
     {
-      "cause": "Cigarette smoking",
-      "description": "Active and passive smoking roughly double MS risk, accelerate progression to secondary progressive disease, and worsen treatment response. The pulmonary inflammatory milieu appears to prime autoreactive immunity."
+      "cause": "Cigarette smoking and passive smoke exposure",
+      "description": "Active smoking raises MS risk by approximately 50% and accelerates progression from RRMS to SPMS. Passive smoke in childhood roughly doubles the odds ratio. Stopping smoking after diagnosis slows disability accumulation in observational studies."
     },
     {
       "cause": "Adolescent obesity",
-      "description": "BMI above the 85th percentile during adolescence approximately doubles future MS risk in girls and increases risk in boys, likely through adipokine-driven low-grade inflammation and reduced bioavailable vitamin D."
+      "description": "Body mass index above 30 in adolescence approximately doubles future MS risk in women, likely through inflammatory adipokine signalling and altered immune function during a critical exposure window."
     }
   ],
 
   "riskFactors": [
-    { "factor": "Female sex", "category": "non-modifiable", "description": "Women are 2.5-3 times more likely to develop MS than men. The female-to-male ratio has been rising over decades, suggesting environmental as well as hormonal contributors." },
-    { "factor": "Age 20-40 at presentation", "category": "non-modifiable", "description": "Typical onset window for RRMS. PPMS tends to present a decade later (40-50). Pediatric and late-onset MS occur but are uncommon." },
-    { "factor": "HLA-DRB1*15:01 carrier status", "category": "genetic", "description": "Triples risk in homozygous carriers. More than 230 additional minor risk loci have been mapped, but HLA-DRB1*15:01 dominates familial signal in European populations." },
-    { "factor": "First-degree relative with MS", "category": "genetic", "description": "Sibling risk is about 3% (versus 0.1-0.2% baseline); identical-twin concordance is 25-30%. Genetic counseling is reasonable in densely affected families but predictive testing is not currently offered." },
-    { "factor": "Northern European ancestry and high-latitude residence", "category": "environmental", "description": "Prevalence reaches 250-300 per 100,000 in Scandinavia, Scotland, and Canada, compared with under 10 per 100,000 in equatorial regions. Migration before age 15 confers the risk of the destination region." },
-    { "factor": "Prior Epstein-Barr virus infection", "category": "environmental", "description": "Essentially universal among MS patients. Symptomatic EBV (infectious mononucleosis) further raises risk roughly two-fold over asymptomatic seroconversion." },
-    { "factor": "Cigarette smoking (active or passive)", "category": "modifiable", "description": "Doubles MS risk and accelerates disability accumulation. Quitting reduces risk over 5-10 years toward that of never-smokers." },
-    { "factor": "Low serum vitamin D", "category": "modifiable", "description": "Serum 25-hydroxyvitamin D below 20 ng/mL is associated with higher incidence and more inflammatory MRI activity in established disease." },
-    { "factor": "Adolescent obesity", "category": "modifiable", "description": "BMI above the 85th percentile in adolescence roughly doubles future MS risk, with the strongest effect in females." },
-    { "factor": "Shift work during young adulthood", "category": "modifiable", "description": "Long-term night-shift work before age 20 is associated with about a 60% increased risk in cohort studies, possibly through circadian-immune disruption." }
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women are diagnosed three times more often than men; the ratio has risen from roughly 2:1 in the 1950s to 3:1 today, suggesting strong environmental contribution on top of hormonal influence." },
+    { "factor": "Age 20-40 at first presentation", "category": "non-modifiable", "description": "Peak incidence falls in this window; 90% of patients are diagnosed before age 50. Childhood-onset MS exists but accounts for under 5% of cases." },
+    { "factor": "HLA-DRB1*15:01 and other susceptibility alleles", "category": "genetic", "description": "Carriers of HLA-DRB1*15:01 have roughly 3-fold higher risk. Sibling recurrence risk is approximately 3-5%, and monozygotic twin concordance about 25-30%." },
+    { "factor": "Prior Epstein-Barr virus infection", "category": "environmental", "description": "EBV seropositivity is nearly universal among MS patients and confers a 32-fold increase in subsequent MS risk in longitudinal military cohort data (Bjornevik 2022, PMID 35025605)." },
+    { "factor": "Living at higher latitude during childhood", "category": "environmental", "description": "MS prevalence approximately doubles for every 10 degrees of latitude moving away from the equator. Migration before age 15 transfers the risk of the new latitude, implicating an early-life environmental exposure." },
+    { "factor": "Vitamin D insufficiency", "category": "modifiable", "description": "Serum 25-hydroxyvitamin D below 20 ng/mL approximately doubles MS risk and is associated with higher relapse rates after diagnosis. Supplementation to maintain levels of 30-50 ng/mL is widely recommended in care guidelines." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Active smoking raises MS risk by about 50% and accelerates SPMS conversion. Smoking cessation after diagnosis is associated with measurably slower disability accumulation." },
+    { "factor": "Adolescent obesity (BMI >30)", "category": "modifiable", "description": "Adolescent obesity roughly doubles future MS risk in girls; the effect is smaller but present in boys. The window of biological susceptibility appears strongest in the teenage years." },
+    { "factor": "Family history of MS or other autoimmune disease", "category": "genetic", "description": "First-degree relatives of MS patients carry a 3-5% lifetime risk versus 0.3% in the general population. Co-existing thyroid disease, type 1 diabetes, or psoriasis in the family also raises risk modestly." }
   ],
 
   "affectedDemographics": [
-    "US prevalence: approximately 309 per 100,000 (Wallin 2019); roughly 1 million adults",
-    "Female-to-male ratio has risen from about 2:1 in the 1950s to 3:1 today, suggesting growing environmental contribution",
-    "Black Americans develop MS at similar or slightly lower rates than white Americans but accumulate disability faster and more often have spinal-cord predominant disease",
-    "Hispanic and Asian populations have lower prevalence but a higher proportion of opticospinal phenotypes and NMO-spectrum mimics, making careful antibody testing essential",
-    "Pediatric-onset MS (under age 18) represents 3-5% of cases and typically presents with more relapses but slower long-term disability accumulation than adult-onset disease"
+    "United States: approximately 1 million adults living with MS (Wallin 2019); prevalence highest in northern states",
+    "Northern Europe, Canada, and parts of Australia show prevalence rates of 100-200 per 100,000",
+    "Indian subcontinent prevalence historically around 5-10 per 100,000 but rising with improved imaging access and longer life expectancy",
+    "Black and Hispanic patients in the US tend to present at younger age, with more aggressive disease and faster disability accumulation than non-Hispanic white patients (CLIMB cohort, Cree 2004)",
+    "Pediatric-onset MS (<18 years) accounts for 3-5% of cases; relapse rates are higher but accumulation of disability is slower than adult onset"
   ],
 
-  "diagnosisOverview": "MS diagnosis rests on demonstrating central nervous system damage that is disseminated in both space and time, with no better explanation for the findings. The 2017 revised McDonald criteria are the international standard and allow earlier diagnosis than previous iterations. After a history and neurological examination consistent with an inflammatory central nervous system event, the first-line investigation is MRI of the brain and full spine with and without gadolinium contrast. Dissemination in space requires at least one T2 hyperintense lesion in two or more of four characteristic regions: periventricular, juxtacortical or cortical, infratentorial, and spinal cord. Dissemination in time is established by the simultaneous presence of enhancing and non-enhancing lesions on a single scan, new lesions on follow-up imaging, or the presence of cerebrospinal fluid oligoclonal bands unique to CSF. Lumbar puncture is recommended for atypical presentations, primary progressive disease, or when MRI dissemination criteria are not yet met; CSF oligoclonal bands are positive in 85-95% of definite MS. Routine serum testing should exclude key mimics: aquaporin-4 IgG and MOG-IgG antibodies (for NMO-spectrum and MOG-antibody disease), HIV, syphilis, B12, copper, and antinuclear antibody profile. Evoked potentials are used selectively to demonstrate subclinical demyelination, most commonly visual evoked potentials when optic nerve involvement is suspected but not yet apparent on MRI. Diagnostic delay still averages 18-24 months internationally; clear clinical pathways and direct neurology referral for any optic neuritis or transverse myelitis improve early diagnosis substantially.",
+  "diagnosisOverview": "MS diagnosis follows the 2017 revision of the McDonald criteria (Thompson, Lancet Neurology 2018, PMID 29275977), which combines clinical history, neurological examination, and MRI evidence of dissemination in space (DIS) and dissemination in time (DIT). A typical workup starts with a structured history of episodic neurological symptoms lasting more than 24 hours and a neurological exam looking for hyperreflexia, afferent pupillary defect, internuclear ophthalmoplegia, sensory level, and cerebellar signs. Contrast-enhanced MRI of the brain and the entire spinal cord is the cornerstone investigation. DIS requires T2 lesions in at least two of four characteristic locations: periventricular, juxtacortical or cortical, infratentorial, and spinal cord. DIT can be shown by a simultaneous gadolinium-enhancing and non-enhancing lesion on a single scan, by a new T2 or enhancing lesion on follow-up imaging, or by the presence of CSF-specific oligoclonal bands. Lumbar puncture is recommended in atypical presentations or to substitute for DIT, with paired serum and CSF run for oligoclonal bands and kappa free light chains. AQP4-IgG and MOG-IgG antibody testing is essential in optic neuritis or transverse myelitis to exclude neuromyelitis optica spectrum disorder and MOG antibody disease, which require different treatment. Visual evoked potentials, OCT showing retinal nerve fibre layer thinning, and routine bloods (ANA, B12, HIV, TSH, syphilis serology) are used to support the diagnosis and rule out mimics. The 2017 criteria permit diagnosis at a single clinical attack when MRI and CSF features are supportive, accelerating treatment initiation.",
 
   "diagnosticTests": [
     {
-      "test": "MRI of brain and spinal cord with gadolinium contrast",
-      "purpose": "First-line test. Demonstrates dissemination in space (lesion location across multiple CNS regions) and time (simultaneous enhancing and non-enhancing lesions, or new lesions on follow-up). Identifies the characteristic ovoid periventricular plaques perpendicular to the ventricles (Dawson fingers).",
-      "whatToExpect": "Lying still in an MRI scanner for 45-60 minutes. Intravenous gadolinium contrast is given to identify active lesions. Some patients find the noise and enclosed space uncomfortable; an open MRI or sedation can be arranged if needed."
+      "test": "MRI brain and full spine with gadolinium",
+      "purpose": "The single most informative test. Visualises T2/FLAIR hyperintense demyelinating plaques, defines lesion distribution for dissemination in space, and identifies active inflammation via gadolinium enhancement for dissemination in time.",
+      "whatToExpect": "A 45-60 minute scan in a tube-shaped magnet. Earplugs are provided for noise. A contrast injection is given partway through. The full study covers brain and the entire spinal cord and is typically read by a neuroradiologist within 24-48 hours."
     },
     {
-      "test": "Lumbar puncture with CSF analysis",
-      "purpose": "Detects oligoclonal bands and elevated IgG index — markers of intrathecal antibody production. Positive in 85-95% of definite MS, helps fulfil 2017 McDonald criteria when MRI alone is equivocal, and excludes infectious or inflammatory mimics.",
-      "whatToExpect": "Local anesthetic is injected into the lower back, then a thin needle samples cerebrospinal fluid from the lumbar subarachnoid space. The procedure takes 20-30 minutes; mild post-procedure headache occurs in about 10%, usually resolving within 48 hours."
+      "test": "Lumbar puncture with paired CSF and serum analysis",
+      "purpose": "Detects CSF-restricted oligoclonal bands (positive in 85-95% of MS patients) and elevated IgG index, both supporting an intrathecal immune response. Kappa free light chains are an emerging quantitative alternative.",
+      "whatToExpect": "Performed in the lateral decubitus position under sterile technique with local anaesthetic. Takes 15-30 minutes. Post-procedure headache occurs in 10-30% and usually resolves within 48 hours with hydration and rest."
     },
     {
-      "test": "Aquaporin-4 IgG and MOG-IgG serology",
-      "purpose": "Distinguishes MS from neuromyelitis optica spectrum disorder (AQP4-IgG positive) and MOG-antibody-associated disease (MOG-IgG positive). These mimics respond to different therapies and several MS drugs may worsen them.",
-      "whatToExpect": "Standard blood draw; results return in 1-2 weeks from specialized reference laboratories. Both should be ordered before starting disease-modifying therapy in patients with optic neuritis or transverse myelitis."
-    },
-    {
-      "test": "Visual evoked potentials (VEPs)",
-      "purpose": "Documents prior or subclinical optic nerve demyelination by measuring prolonged P100 latency. Useful when MRI is borderline and clinical suspicion is high, particularly to support dissemination in space.",
-      "whatToExpect": "Electrodes placed on the scalp record brain responses while the patient looks at a reversing checkerboard pattern on a screen. Painless, takes about 30 minutes."
+      "test": "AQP4-IgG and MOG-IgG antibody serology",
+      "purpose": "Excludes neuromyelitis optica spectrum disorder and MOG antibody-associated disease, which mimic MS but require different therapy. AQP4 antibodies are positive in 70-80% of NMOSD; MOG antibodies define a distinct demyelinating syndrome.",
+      "whatToExpect": "A single blood draw sent to a specialised laboratory using cell-based assay. Results take 1-3 weeks. Mandatory at first presentation with optic neuritis, longitudinally extensive transverse myelitis, or area postrema syndrome."
     },
     {
       "test": "Optical coherence tomography (OCT)",
-      "purpose": "Quantifies retinal nerve fiber layer thinning, an objective marker of past optic neuritis and ongoing neurodegeneration. Increasingly used in MS clinics to monitor disease activity and treatment response.",
-      "whatToExpect": "A non-contact retinal scan in an ophthalmology or neuro-ophthalmology suite. Painless, no eye drops typically required, takes 5-10 minutes."
+      "purpose": "Quantifies retinal nerve fibre layer and ganglion cell layer thickness, which thin after optic neuritis and serve as a sensitive marker of neuroaxonal damage and treatment response.",
+      "whatToExpect": "A painless 5-10 minute eye scan in an ophthalmology or neurology clinic. No dilation required for most modern OCT machines. Repeated annually as a disability biomarker."
     },
     {
-      "test": "Serum B12, copper, HIV, syphilis, and antinuclear antibody panel",
-      "purpose": "Excludes treatable mimics such as B12 deficiency myelopathy, copper deficiency, HIV-associated CNS disease, neurosyphilis, lupus, and Sjogren's syndrome.",
-      "whatToExpect": "Standard blood draw, results within a few days. Recommended in every workup for suspected MS before disease-modifying therapy is started."
+      "test": "Visual evoked potentials (VEP)",
+      "purpose": "Measures the speed of optic nerve conduction; delayed P100 latency confirms previous subclinical demyelination of the optic pathway and supports dissemination in space.",
+      "whatToExpect": "Electrodes are placed on the scalp while the patient watches a reversing checkerboard pattern on a screen. Takes 30-45 minutes per eye, painless."
     },
     {
-      "test": "JC virus antibody index",
-      "purpose": "Required before initiating natalizumab and useful for monitoring during therapy. JCV antibody-positive patients face higher risk of progressive multifocal leukoencephalopathy.",
-      "whatToExpect": "Standard blood test; results return within a week. Repeated every six months on natalizumab to track index changes."
+      "test": "Routine blood panel to exclude MS mimics",
+      "purpose": "Vitamin B12, TSH, ANA, ENA, HIV, syphilis serology, ACE level, and Lyme serology rule out the most common demyelinating mimics — vitamin B12 deficiency myelopathy, neurosarcoidosis, neurolupus, neurosyphilis, and Lyme neuroborreliosis.",
+      "whatToExpect": "Standard venous blood draw. Most results return within 24-72 hours; ENA and Lyme can take 1-2 weeks."
+    },
+    {
+      "test": "JC virus antibody serology",
+      "purpose": "Stratifies the risk of progressive multifocal leukoencephalopathy in patients considering natalizumab and informs surveillance frequency on other immunosuppressive therapies.",
+      "whatToExpect": "A single blood test repeated every 6 months on natalizumab. A positive result with a high antibody index above 1.5 markedly raises PML risk and influences treatment choice."
     }
   ],
 
-  "treatmentOverview": "MS treatment has three pillars: acute relapse management, long-term disease-modifying therapy, and symptomatic and rehabilitative care. Acute relapses producing meaningful disability are treated with high-dose intravenous methylprednisolone, typically 1 gram daily for 3-5 days, which shortens the relapse duration but does not change long-term disability. Plasma exchange is reserved for severe steroid-refractory relapses. Disease-modifying therapy is the centerpiece of long-term management and should be started as soon as MS is diagnosed in most patients; the 2018 AAN guideline and ECTRIMS/EAN guidelines both endorse early initiation. Therapy choice now generally follows a stratified or early high-efficacy approach. Moderate-efficacy options include interferon beta preparations, glatiramer acetate, teriflunomide, and dimethyl fumarate; these reduce annualized relapse rate by roughly 30-50%. High-efficacy options include natalizumab, the anti-CD20 B-cell-depleting antibodies ocrelizumab and ofatumumab, S1P receptor modulators (fingolimod, ozanimod, ponesimod), cladribine, and alemtuzumab; these reduce annualized relapse rate by 50-80% and are increasingly used as initial therapy. Ocrelizumab is the only therapy with regulatory approval for primary progressive MS, based on the ORATORIO trial (Montalban 2017, NEJM). Treatment response is monitored by tracking relapses, neurological examination, and serial MRI; no evidence of disease activity (NEDA) is the operational target. Symptomatic care addresses spasticity (baclofen, tizanidine, cannabinoids), bladder dysfunction (anticholinergics, intermittent catheterization, mirabegron), neuropathic pain (gabapentin, pregabalin, duloxetine), fatigue (modafinil, amantadine, exercise), and mood disorders. Rehabilitation with physical, occupational, and speech therapy preserves function and is recommended throughout the disease course.",
+  "treatmentOverview": "MS treatment runs along three parallel tracks: managing acute relapses, slowing disease activity with long-term disease-modifying therapy (DMT), and treating symptoms. Acute relapses with disabling deficits are treated with high-dose intravenous methylprednisolone 1 g daily for 3-5 days, which shortens the relapse but does not change long-term disability. Plasma exchange (PLEX) over 5-7 sessions is used when steroid response is poor, especially in severe optic neuritis or myelitis. The central therapeutic decision is choice of DMT. Drugs are stratified by efficacy. High-efficacy options include anti-CD20 monoclonal antibodies ocrelizumab (600 mg IV every 6 months), ofatumumab (20 mg subcutaneously monthly), and ublituximab, alongside natalizumab (300 mg IV every 4 weeks; risk-stratify with JCV antibody index), cladribine (oral pulsed dosing over 2 years), and alemtuzumab (reserved due to secondary autoimmunity and listeria risk). Moderate-efficacy options include the S1P receptor modulators fingolimod, siponimod, ozanimod, and ponesimod, and fumarates such as dimethyl fumarate and diroximel fumarate. Lower-efficacy injectables — interferon-beta, glatiramer acetate, and oral teriflunomide — remain in use for milder disease or pregnancy planning. Recent randomised data (DELIVER-MS, TREAT-MS) support starting with a high-efficacy agent at diagnosis rather than escalating from a platform drug, particularly in patients with active MRI or rapid disability accumulation. Treatment is guided by ECTRIMS-EAN 2018 and AAN 2018 practice guidelines and reviewed at least annually with clinical assessment and MRI. Symptomatic treatment is layered on top: baclofen and tizanidine for spasticity, intermittent self-catheterisation and antimuscarinics for neurogenic bladder, gabapentin or pregabalin for neuropathic pain, amantadine or modafinil for fatigue, and SSRIs for depression. Vaccination, vitamin D supplementation, smoking cessation, and pregnancy planning are routine components of care.",
 
   "medicalTreatments": [
     {
-      "name": "Methylprednisolone (1 g IV daily for 3-5 days, or oral equivalent)",
-      "description": "Standard acute relapse treatment. Shortens the duration of a disabling relapse but does not change long-term disability. Not used for mild sensory-only relapses where spontaneous recovery is expected.",
-      "effectiveness": "Speeds recovery from acute relapse by roughly 40-50% in pooled trials; no proven effect on long-term disability."
+      "name": "Methylprednisolone (1 g IV daily for 3-5 days for acute relapse)",
+      "description": "First-line treatment for disabling acute relapses. Suppresses inflammation, restores the blood-brain barrier, and accelerates recovery. Oral high-dose methylprednisolone 500-1250 mg has shown equivalent efficacy in the COPOUSEP trial and is increasingly used.",
+      "effectiveness": "Speeds recovery of relapse symptoms by approximately 50% at 1 week; no effect on long-term EDSS at 1 year (Filippini 2013 Cochrane review)."
     },
     {
-      "name": "Ocrelizumab (600 mg IV every 6 months after a divided first dose)",
-      "description": "Humanized anti-CD20 monoclonal antibody depleting B cells. FDA-approved for relapsing MS and the first therapy approved for primary progressive MS. Pre-treatment screening for hepatitis B, tuberculosis, and immunoglobulin levels is required.",
-      "effectiveness": "Reduced annualized relapse rate by 46% versus interferon beta-1a in OPERA I/II (Hauser 2017 NEJM); reduced 12-week confirmed disability progression by 24% in PPMS in ORATORIO (Montalban 2017 NEJM)."
+      "name": "Plasma exchange (PLEX), 5-7 sessions every other day",
+      "description": "Used for severe steroid-refractory relapses, particularly severe optic neuritis, transverse myelitis, or tumefactive demyelination. Removes circulating antibodies and inflammatory mediators across multiple sessions.",
+      "effectiveness": "Moderate to marked improvement in 40-60% of steroid-refractory relapses when started within 2 weeks (Weinshenker 1999)."
     },
     {
-      "name": "Ofatumumab (20 mg subcutaneous monthly after initial weekly loading)",
-      "description": "Fully human anti-CD20 antibody self-administered at home. Convenient route and rapid onset of B-cell depletion. Comparable efficacy to ocrelizumab in head-to-head clinical activity, with better convenience for many patients.",
-      "effectiveness": "Reduced annualized relapse rate by 50-58% versus teriflunomide in ASCLEPIOS I/II (Hauser 2020 NEJM); reduced 6-month confirmed disability progression by 32%."
+      "name": "Ocrelizumab (600 mg IV every 6 months)",
+      "description": "Anti-CD20 monoclonal antibody depleting circulating B cells. Approved in both RRMS and PPMS based on the OPERA I/II and ORATORIO trials. Requires hepatitis B screening, vaccinations, and surveillance for hypogammaglobulinaemia and respiratory infections.",
+      "effectiveness": "46% relative reduction in annualised relapse rate versus interferon beta-1a in OPERA I (Hauser 2017, PMID 28002679); 24% relative reduction in 12-week confirmed disability progression in PPMS (Montalban 2017, PMID 28002688)."
+    },
+    {
+      "name": "Ofatumumab (20 mg subcutaneous monthly self-injection)",
+      "description": "Fully human anti-CD20 monoclonal that allows home administration. Approved for RRMS based on the ASCLEPIOS I and II trials versus teriflunomide. Onset of B-cell depletion within days.",
+      "effectiveness": "Approximately 50% reduction in annualised relapse rate versus teriflunomide (Hauser 2020 NEJM, PMID 32757523)."
     },
     {
       "name": "Natalizumab (300 mg IV every 4 weeks)",
-      "description": "Anti-VLA-4 monoclonal antibody that blocks lymphocyte entry into the CNS. Highly effective but carries risk of progressive multifocal leukoencephalopathy in JCV antibody-positive patients on long-term therapy.",
-      "effectiveness": "Reduced annualized relapse rate by 68% and sustained disability progression by 42% versus placebo in AFFIRM (Polman 2006 NEJM)."
+      "description": "Anti-VLA-4 antibody preventing lymphocyte trafficking across the blood-brain barrier. Highly effective but carries a dose-dependent risk of progressive multifocal leukoencephalopathy. Requires JCV antibody index monitoring every 6 months.",
+      "effectiveness": "68% reduction in annualised relapse rate and 42% reduction in disability progression versus placebo in AFFIRM (Polman 2006, PMID 16510744)."
     },
     {
-      "name": "Fingolimod and other S1P receptor modulators (fingolimod 0.5 mg daily, ozanimod 0.92 mg daily, ponesimod 20 mg daily)",
-      "description": "Oral sphingosine-1-phosphate receptor modulators that sequester lymphocytes in lymph nodes. First-dose cardiac monitoring is required for fingolimod; the newer agents have less first-dose effect.",
-      "effectiveness": "Reduced annualized relapse rate by approximately 50% versus placebo and by 30-40% versus interferon beta in pivotal trials (FREEDOMS, TRANSFORMS)."
+      "name": "Cladribine (oral pulsed; 3.5 mg/kg over 2 years)",
+      "description": "Purine analogue producing selective lymphocyte depletion in two short oral courses 12 months apart. Provides immune reconstitution-style efficacy with low ongoing monitoring burden after year 2.",
+      "effectiveness": "58% reduction in annualised relapse rate versus placebo in CLARITY (Giovannoni 2010 NEJM, PMID 20089960); durable benefit over 4-6 years."
     },
     {
-      "name": "Cladribine (1.75 mg/kg in two weekly cycles, repeated at year 2)",
-      "description": "Oral purine analog producing selective lymphocyte depletion. Two short treatment courses can induce sustained disease control for 4 years or longer, with minimal continuous immunosuppression.",
-      "effectiveness": "Reduced annualized relapse rate by 58% versus placebo in CLARITY (Giovannoni 2010 NEJM); durable benefit through year 4."
+      "name": "Fingolimod (0.5 mg oral daily) and other S1P modulators (siponimod, ozanimod, ponesimod)",
+      "description": "Sphingosine-1-phosphate receptor modulators sequester lymphocytes in lymph nodes. Require baseline ECG and ophthalmology assessment for macular oedema risk. Siponimod is the only S1P drug with phase 3 evidence in active SPMS (EXPAND trial).",
+      "effectiveness": "Roughly 50% reduction in annualised relapse rate versus placebo or interferon (Kappos 2010 FREEDOMS, PMID 20089952); siponimod 21% reduction in 3-month disability progression in active SPMS (Kappos 2018 EXPAND)."
     },
     {
-      "name": "Dimethyl fumarate (240 mg twice daily)",
-      "description": "Oral activator of the Nrf2 pathway with immunomodulatory and cytoprotective effects. Common side effects include flushing and gastrointestinal symptoms in the first months, usually self-limited.",
-      "effectiveness": "Reduced annualized relapse rate by 44-53% versus placebo in DEFINE/CONFIRM (Gold 2012, Fox 2012 NEJM)."
+      "name": "Dimethyl fumarate (240 mg twice daily) and diroximel fumarate",
+      "description": "Oral fumarates with immunomodulatory and Nrf2-mediated antioxidant effects. Diroximel is a prodrug of monomethyl fumarate with better gastrointestinal tolerability. Monitor lymphocyte counts every 6 months for prolonged lymphopenia and PML risk.",
+      "effectiveness": "53% reduction in annualised relapse rate versus placebo in DEFINE (Gold 2012 NEJM, PMID 22992073)."
     },
     {
       "name": "Interferon beta and glatiramer acetate (subcutaneous or intramuscular injection)",
-      "description": "First-generation injectable disease-modifying therapies still used in patients with mild disease, family planning considerations, or contraindications to high-efficacy agents. Long safety record and well-defined risks.",
-      "effectiveness": "Reduced annualized relapse rate by 29-34% versus placebo across pivotal trials; modest effect on MRI activity."
+      "description": "Original platform therapies. Modest efficacy but a long established safety record, no opportunistic infection risk, and acceptable use in pregnancy planning. Still appropriate for very mild disease or where high-efficacy therapy is contraindicated.",
+      "effectiveness": "Approximately 30% reduction in annualised relapse rate versus placebo in foundational trials; lower than current high-efficacy agents."
     },
     {
-      "name": "Alemtuzumab (12 mg IV daily for 5 days, repeated at year 2)",
-      "description": "Anti-CD52 monoclonal antibody producing deep, durable lymphocyte depletion. Now reserved for highly active disease unresponsive to other therapies because of secondary autoimmunity risk (thyroid disease, ITP, anti-GBM nephropathy) requiring 4 years of post-treatment monitoring.",
-      "effectiveness": "Reduced annualized relapse rate by 49-55% versus interferon beta in CARE-MS I/II (Cohen 2012, Coles 2012 Lancet)."
+      "name": "Symptomatic agents: baclofen, tizanidine, gabapentin, oxybutynin, amantadine, SSRIs",
+      "description": "Layered as needed on top of DMT. Baclofen (10-80 mg/day) and tizanidine reduce spasticity; gabapentin or pregabalin manage neuropathic pain and Lhermitte's-related discomfort; oxybutynin or mirabegron address neurogenic bladder; amantadine or modafinil treat fatigue; SSRIs treat depression.",
+      "effectiveness": "Symptom-specific response rates of 50-70% for spasticity and bladder symptoms; smaller, variable effect for fatigue."
     }
   ],
 
   "surgicalOptions": [
     {
-      "name": "Autologous hematopoietic stem cell transplantation (AHSCT)",
-      "description": "An immune reset achieved by harvesting the patient's own stem cells, ablating the immune system with chemotherapy, then reinfusing the cells. Considered for highly active relapsing MS that has failed multiple disease-modifying therapies. Performed in specialized centers under strict protocols.",
-      "successRate": "Sustained no evidence of disease activity in approximately 70-80% of selected patients at 5 years (MIST trial, Burt 2019 JAMA); treatment-related mortality is now under 1% in modern protocols."
+      "name": "Autologous haematopoietic stem cell transplantation (aHSCT)",
+      "description": "Selected for highly active relapsing MS that has failed two or more DMTs. Patients receive immunoablative chemotherapy followed by reinfusion of their own stem cells in a specialised neuroimmunology centre.",
+      "successRate": "MIST trial (Burt 2019, PMID 30644983) showed 3% relapse rate at 1 year on aHSCT versus 60% on continued DMT, with sustained no-evidence-of-disease-activity in 60-70% at 5 years in carefully selected patients."
     },
     {
       "name": "Intrathecal baclofen pump",
-      "description": "Surgically implanted programmable pump delivering baclofen directly into the cerebrospinal fluid for severe spasticity unresponsive to oral medication. Improves comfort, mobility, and caregiver burden.",
-      "successRate": "Meaningful spasticity reduction in 80-90% of carefully selected patients; complications include catheter problems and rare baclofen withdrawal."
-    },
-    {
-      "name": "Suprapubic catheter or sacral neuromodulation",
-      "description": "Surgical options for refractory neurogenic bladder dysfunction when intermittent catheterization is impractical. Sacral nerve stimulation can improve continence and quality of life.",
-      "successRate": "Sacral neuromodulation produces clinically meaningful improvement in 60-70% of selected patients; suprapubic catheter reduces urinary tract infection rates in patients unable to perform intermittent self-catheterization."
+      "description": "Surgical implantation of a programmable pump delivering baclofen directly into CSF for severe lower-limb spasticity not controlled by oral agents.",
+      "successRate": "Roughly 75% achieve clinically meaningful spasticity reduction; complications (infection, catheter problems) occur in 10-15% over the life of the device."
     }
   ],
 
   "alternativeTreatments": [
-    { "name": "Vitamin D supplementation (typically 2000-5000 IU daily, individualized)", "description": "Maintaining serum 25-hydroxyvitamin D above 30-40 ng/mL is associated with reduced relapse rate and MRI activity in observational studies. Whether high-dose supplementation modifies outcomes is being tested; current evidence supports correction of deficiency, not megadosing." },
-    { "name": "Structured aerobic and resistance exercise", "description": "Supervised exercise improves walking, balance, fatigue, and quality-of-life scores, and is associated with reduced relapse frequency in observational cohorts. The ECTRIMS exercise guidance recommends at least 150 minutes of moderate aerobic activity plus twice-weekly resistance training." },
-    { "name": "Smoking cessation", "description": "Stopping smoking after MS diagnosis slows progression to secondary progressive disease and improves response to disease-modifying therapy. Evidence is consistent across multiple cohorts and is a low-cost, high-value intervention." }
+    { "name": "Vitamin D3 supplementation (2000-4000 IU daily to target 25-OH vitamin D 30-50 ng/mL)", "description": "Observational and small randomised data link adequate vitamin D status with lower relapse rate and MRI lesion activity. Widely recommended alongside DMT, though phase 3 confirmation is pending." },
+    { "name": "Structured aerobic and resistance exercise", "description": "Meta-analyses (Motl, Lancet Neurol 2017) show structured exercise improves fatigue, mobility, and quality of life and may have neuroprotective effects via BDNF signalling. Recommended at 150 minutes per week as tolerated." },
+    { "name": "Cognitive behavioural therapy for MS fatigue and depression", "description": "Trial evidence (Moss-Morris 2012) supports CBT reducing fatigue impact and depressive symptoms; routinely incorporated in coordinated MS care." }
   ],
 
-  "whySeeSpecialist": "MS is a lifelong disease where treatment choice, timing of escalation, and management of complications materially change long-term disability. An MS-specialized neurologist offers access to the full range of disease-modifying therapies, advanced MRI interpretation, multidisciplinary rehabilitation, and clinical trials. Referral is appropriate at diagnosis, when disease activity persists despite first-line therapy, when progressive disability is suspected, and at major transition points such as pregnancy planning.",
+  "whySeeSpecialist": "A neurologist, ideally one fluent in MS care, should lead diagnosis and DMT selection. Specialist input is needed when first symptoms suggest demyelination, when DMT escalation is considered, when relapses recur despite therapy, when atypical features raise the possibility of NMOSD or MOG antibody disease, when pregnancy is being planned, and when severe spasticity, bladder dysfunction, or cognitive decline appear. Specialised MS centres add value through coordinated rehabilitation, urology, ophthalmology, and mental health services.",
 
-  "doctorSelectionGuide": "Look for board certification in neurology, sub-specialty training or significant practice volume in MS (ideally a center seeing more than 100 MS patients per year), familiarity with the full disease-modifying therapy menu including high-efficacy options, on-site infusion capabilities, and integration with neuro-ophthalmology, urology, and rehabilitation services. Ask about MRI protocol standardization and whether the center participates in MS registries or trials.",
+  "doctorSelectionGuide": "Look for a neurologist who is board-certified, sees a substantial volume of MS patients (ideally 100 or more), routinely uses the McDonald 2017 criteria, has access to a broad DMT formulary including high-efficacy agents, and works in an MS-focused multidisciplinary team. Ask about annual MRI monitoring protocol, JCV antibody surveillance for natalizumab patients, and the centre's experience with aHSCT for refractory disease. Continuity across decades matters — MS care is a lifelong relationship.",
 
   "preventionStrategies": [
-    "Maintain serum 25-hydroxyvitamin D above 30-40 ng/mL through supplementation if deficient, especially in those with a family history of MS",
-    "Avoid cigarette smoking and second-hand smoke exposure from adolescence onward — smoking doubles MS risk and worsens established disease",
-    "Maintain a healthy weight from adolescence onward; adolescent obesity raises adult MS risk",
-    "Pursue regular outdoor activity and sun exposure during childhood and adolescence, balanced against skin cancer risk",
-    "There is no proven way to prevent MS in EBV-seropositive individuals at present; EBV vaccination trials are underway and may change this in the next decade"
+    "Maintain serum 25-hydroxyvitamin D between 30 and 50 ng/mL through diet, modest sun exposure, and 2000-4000 IU daily supplementation, especially during adolescence and pregnancy",
+    "Avoid cigarette smoking and minimise exposure to passive smoke, particularly during childhood and adolescence",
+    "Achieve and maintain a healthy weight from adolescence onward; BMI under 25 in the teens halves later MS risk in women",
+    "Encourage prompt diagnosis and management of mononucleosis given the strong EBV association; vaccines targeting EBV are in active trial development",
+    "For people with a parent or sibling with MS, schedule baseline vitamin D testing and counsel on modifiable risk factors during the teenage years"
   ],
 
   "lifestyleModifications": [
-    "Stop smoking immediately if diagnosed with MS — smoking accelerates disability accumulation and reduces treatment response",
-    "Engage in regular aerobic and resistance exercise; at least 150 minutes of moderate aerobic activity per week plus twice-weekly resistance training improves fatigue, mood, and walking ability",
-    "Manage core body temperature in hot weather using cooling vests, swimming, or air conditioning — most MS patients have heat-related symptom worsening (Uhthoff phenomenon)",
-    "Prioritize 7-9 hours of sleep and screen for obstructive sleep apnea, which is more common in MS and worsens fatigue and cognition",
-    "Address mood and cognition early through psychological support and cognitive rehabilitation; depression affects roughly half of MS patients and is treatable",
-    "Develop a relapse action plan with your neurology team so that new symptoms lasting over 24 hours are evaluated within 48-72 hours",
-    "Maintain dental, urinary, and vaccination preventive care — infection is the most common trigger of pseudo-relapse and a risk factor on immunosuppressive therapy"
+    "Quit smoking — cessation is associated with measurably slower disability accumulation and lower relapse rates after diagnosis",
+    "Exercise aerobically and with resistance training for 150 minutes weekly, adapted to current mobility; supervised neurorehabilitation helps after major relapses",
+    "Avoid overheating during exercise; cooling vests and air-conditioned environments help patients with marked Uhthoff's phenomenon",
+    "Adopt a Mediterranean-style or DASH-style diet; current evidence does not support more restrictive diets such as Swank or Wahls for MS-specific outcomes",
+    "Maintain vitamin D status year-round with supplementation; combine with calcium adequacy for bone protection on long-term steroid exposure",
+    "Pursue mental health care actively — depression occurs in roughly half of patients and is independently associated with greater disability accrual",
+    "Plan pregnancy in consultation with a neurologist; some DMTs require washout before conception while others can be continued or restarted in the postpartum period"
   ],
 
   "dietRecommendations": {
     "recommended": [
-      "A Mediterranean-pattern diet rich in vegetables, fruits, whole grains, fish, and olive oil — associated with lower disability scores in MS cohort studies",
-      "Oily fish twice weekly (salmon, mackerel, sardines) for omega-3 fatty acids and natural vitamin D",
-      "Foods rich in polyphenols and antioxidants: berries, leafy greens, dark chocolate in moderation",
-      "Adequate dietary fiber from vegetables and legumes to support gut microbiome diversity, which interacts with autoimmunity",
-      "Vitamin D-fortified foods or supplementation if serum 25-hydroxyvitamin D is below 30 ng/mL",
-      "Adequate hydration — important for bladder management and reduces constipation common in MS"
+      "Mediterranean-style eating pattern rich in olive oil, vegetables, legumes, whole grains, fish, and nuts",
+      "Oily fish (salmon, mackerel, sardines) 2-3 times weekly for omega-3 fatty acids and vitamin D",
+      "Leafy greens and cruciferous vegetables for folate, vitamin K, and antioxidants",
+      "Fortified low-fat dairy or plant-based alternatives for calcium and vitamin D",
+      "Adequate dietary fibre (25-35 g daily) to support gut-microbiome health, increasingly linked to MS disease activity",
+      "Hydration aimed at 1.5-2 L daily, adjusted for bladder management"
     ],
     "avoid": [
-      "Ultra-processed foods high in saturated fat, sugar, and refined carbohydrates — associated with greater disability in observational MS data",
-      "Excessive sodium; high salt intake promoted Th17 responses in animal models and is linked to higher MS activity in some human cohorts",
-      "Crash or extreme elimination diets without supervision — they often worsen fatigue and risk nutritional deficiencies",
-      "Heavy alcohol consumption, which interacts with several MS medications and worsens balance and fatigue",
-      "Unpasteurized dairy and undercooked meat or fish on immunosuppressive therapy due to infection risk",
-      "Grapefruit juice during fingolimod use due to CYP3A4 interaction"
+      "Heavy ultra-processed food and refined sugar intake associated with higher inflammatory markers",
+      "Excessive saturated fat from red and processed meats (limit to 1-2 servings weekly)",
+      "Trans-fats and partially hydrogenated oils",
+      "High sodium intake (over 5 g daily) which preclinical and observational data link to increased Th17 activity",
+      "Unproven elimination diets that restrict whole food groups without medical supervision and risk nutritional deficiencies",
+      "Alcohol bingeing, particularly when on hepatotoxic DMTs such as teriflunomide"
     ]
   },
 
-  "exerciseGuidelines": "Aim for at least 150 minutes per week of moderate aerobic activity such as walking, swimming, or cycling, plus resistance training twice weekly. Aquatic exercise is particularly valuable for those with heat sensitivity or balance impairment. Physical therapy guidance is recommended after any significant relapse to restore function safely. Avoid pushing through new neurological symptoms — fatigue from overtraining can be hard to distinguish from a relapse.",
+  "exerciseGuidelines": "Aim for 150 minutes per week of moderate aerobic activity (walking, cycling, swimming, recumbent ergometer) plus twice-weekly resistance training tailored to current strength and balance. Avoid overheating; exercise in cool environments or use cooling strategies if Uhthoff's phenomenon is prominent. Supervised neurorehabilitation is appropriate after major relapses or for advanced disability. Yoga and pilates improve balance and core stability without aggravating symptoms in most patients.",
 
   "dailyManagement": [
-    "Take disease-modifying therapy and symptomatic medications at the same time each day; adherence is closely linked to relapse rates",
-    "Monitor for new or worsening neurological symptoms lasting over 24 hours and report them to the MS team within 48-72 hours",
-    "Track fatigue patterns and pace daily activities, with rest breaks built in around peak energy windows",
-    "Empty the bladder on a schedule rather than waiting for urgency, and consider pelvic floor physiotherapy for incontinence",
-    "Keep an updated medication list, MRI history, and emergency contact for the neurology team to share with urgent-care providers",
-    "Maintain a cool home and use cooling garments during hot weather or exercise"
+    "Take DMT on schedule and report missed doses; adherence is the strongest modifiable predictor of relapse-free time",
+    "Track symptoms in a simple diary or app, noting new or worsening deficits lasting more than 24 hours so possible relapses can be evaluated promptly",
+    "Maintain hydration and a bladder-emptying routine; intermittent self-catheterisation if post-void residual exceeds 100 mL",
+    "Use cooling strategies — cold drinks, cool showers, cooling vests — when fatigue or weakness worsens with heat",
+    "Attend annual MRI surveillance and 6-monthly JCV antibody testing if on natalizumab",
+    "Maintain vaccinations including annual influenza and updated COVID-19 boosters; complete live vaccines before starting anti-CD20 therapy"
   ],
 
-  "prognosis": "Long-term outlook has improved markedly over the past two decades. In the pre-disease-modifying-therapy era, roughly half of relapsing patients reached secondary progressive disease within 15-20 years and needed walking aid within 25 years. With early initiation of high-efficacy therapy, contemporary cohorts show that most patients remain ambulatory at 20 years and a substantial proportion reach no evidence of disease activity for years at a time. Median life expectancy is now within about 7 years of the general population and continues to close. Predictors of more aggressive disease include male sex, older age at onset, primary progressive course, high MRI lesion load at diagnosis, spinal cord and brainstem lesions, frequent early relapses with poor recovery, and ongoing smoking. Predictors of milder disease include female sex, younger onset, optic neuritis as the first event, and full recovery from early relapses. The most important modifiable prognostic factor is early access to effective disease-modifying therapy.",
+  "prognosis": "Long-term outlook in MS has changed substantially with high-efficacy therapy. Historical natural-history cohorts (London Ontario) showed median time to needing a walking aid (EDSS 6.0) of roughly 15 years without treatment. Contemporary cohorts on early high-efficacy DMT show median times beyond 25-30 years, with a meaningful subset achieving no evidence of disease activity over a decade. Roughly 10-15% of patients run a benign course with minimal disability at 20 years, while a similar fraction progress aggressively despite therapy. Negative prognostic factors include male sex, older age at onset, motor or cerebellar first attack, high baseline lesion load, infratentorial and spinal lesions, oligoclonal bands, and incomplete recovery from the first relapse. Progression independent of relapse activity (PIRA) is increasingly recognised as the dominant driver of long-term disability in modern cohorts and is the focus of next-generation therapies including BTK inhibitors. Life expectancy is reduced by approximately 5-10 years compared with the general population, mostly from disability-related comorbidities; with current treatment standards, the gap is narrowing year on year.",
 
-  "recoveryTimeline": "An acute relapse typically reaches maximum severity over 3-7 days, stabilizes, then improves over 6-12 weeks. With high-dose steroids started early, the improvement curve is steeper but the final level of recovery is similar. Most patients regain 60-100% of lost function from a first relapse, with subsequent relapses producing progressively less complete recovery if disease is uncontrolled. On effective high-efficacy therapy, the goal is no clinical relapse, no new MRI activity, and no measurable disability progression year on year — a state called no evidence of disease activity, achieved by 40-60% of patients in modern trials.",
+  "recoveryTimeline": "An acute relapse typically peaks over days to two weeks, plateaus, then partially or fully resolves over 4-12 weeks. With IV methylprednisolone the recovery curve is steeper but the final endpoint at 12 months is similar. Optic neuritis recovers to 20/40 or better in roughly 90% of cases by 12 months, with persistent contrast sensitivity and colour vision deficits. After starting a high-efficacy DMT, MRI activity quiets within 3-6 months on most agents, and relapse rates fall in the first 12 months. PIRA continues at a slower pace and is monitored over years rather than months.",
 
   "complications": [
-    "Permanent disability including walking impairment, hand dysfunction, and visual loss when relapses incompletely recover or progression continues",
-    "Neurogenic bladder with recurrent urinary tract infections, hydronephrosis, or renal damage if not actively managed",
-    "Depression and suicide risk: roughly half of patients experience clinical depression, and suicide rate is approximately twice the general population",
-    "Cognitive decline affecting processing speed, memory, and executive function in 40-65% of patients on detailed testing",
-    "Osteoporosis and fractures, accelerated by reduced mobility, vitamin D deficiency, and repeated steroid courses",
-    "Aspiration pneumonia from advanced bulbar involvement in late disease",
-    "Treatment-related complications: progressive multifocal leukoencephalopathy with natalizumab in JCV antibody-positive patients, secondary autoimmunity with alemtuzumab, infections with anti-CD20 therapies"
+    "Permanent disability accumulating through repeated relapses and progression independent of relapse activity — the dominant long-term concern, mitigated by early high-efficacy therapy",
+    "Neurogenic bladder leading to recurrent urinary tract infections, vesicoureteric reflux, and rarely renal impairment if not properly managed",
+    "Severe spasticity producing contractures, pressure injuries, and pain when oral antispastic medications are inadequate",
+    "Major depression and elevated suicide risk — roughly twice the general population — warranting routine screening at every visit",
+    "Cognitive impairment, particularly slowed processing speed and memory deficits, affecting around 50% of patients and impacting employment and driving",
+    "Treatment-related complications: progressive multifocal leukoencephalopathy on natalizumab in JCV-positive patients, hepatitis B reactivation and hypogammaglobulinaemia on anti-CD20 therapy, secondary autoimmunity on alemtuzumab, macular oedema and bradyarrhythmia on S1P modulators",
+    "Osteoporosis and falls from cumulative steroid exposure and reduced mobility"
   ],
 
   "supportResources": [
-    { "name": "National Multiple Sclerosis Society (US)", "url": "https://www.nationalmssociety.org/", "description": "Patient education, financial assistance navigator, local chapter support groups, and clinical trial finder." },
-    { "name": "Multiple Sclerosis International Federation", "url": "https://www.msif.org/", "description": "Global advocacy network with country-specific resources, Atlas of MS data, and Patient Helpline directory." },
-    { "name": "Multiple Sclerosis Association of America", "url": "https://mymsaa.org/", "description": "Free cooling equipment program, MRI access assistance for uninsured patients, and educational materials." },
-    { "name": "MS Trust (UK)", "url": "https://mstrust.org.uk/", "description": "Plain-language information on every disease-modifying therapy, symptom-management library, and helpline staffed by MS nurses." }
+    { "name": "National Multiple Sclerosis Society (USA)", "url": "https://www.nationalmssociety.org/", "description": "Largest US patient organisation; education, peer support, financial assistance navigation, and clinical trial registry." },
+    { "name": "MS International Federation", "url": "https://www.msif.org/", "description": "Global federation publishing the MS Atlas and connecting national societies in over 70 countries." },
+    { "name": "MS Trust (UK)", "url": "https://mstrust.org.uk/", "description": "UK-based charity with accessible plain-language information on every aspect of MS, written with neurologists and nurses." },
+    { "name": "Multiple Sclerosis Society of India", "url": "https://mssocietyindia.org/", "description": "National patient organisation for India with chapters in major cities, information in regional languages, and rehabilitation resources." }
   ],
 
   "confusedWithConditions": [
-    { "slug": "neuromyelitis-optica-devic-g360", "name": "Neuromyelitis Optica Spectrum Disorder (NMOSD)", "keyDifference": "NMOSD also causes optic neuritis and transverse myelitis but tends to produce more severe attacks, longitudinally extensive spinal cord lesions spanning three or more vertebral segments, and rarely involves the brain. Aquaporin-4 IgG is positive in 70-80%. Several MS therapies (interferon, fingolimod, natalizumab) can worsen NMOSD, so antibody testing before treatment is essential." },
-    { "slug": "lupus", "name": "Systemic Lupus Erythematosus", "keyDifference": "Lupus can produce neurologic symptoms (cognitive change, transverse myelitis, optic neuropathy) mimicking MS, but is accompanied by systemic features (rash, arthritis, serositis, cytopenias) and positive antinuclear and anti-dsDNA antibodies. MRI in lupus shows scattered white-matter lesions without the characteristic ovoid periventricular Dawson fingers of MS." },
-    { "slug": "migraine", "name": "Migraine with White-Matter Lesions", "keyDifference": "Migraine commonly causes small subcortical and deep white-matter T2 hyperintensities on brain MRI that are easily mistaken for MS. Migraine lesions lack the periventricular distribution, juxtacortical involvement, and dissemination in time required by McDonald criteria, and are not associated with clinical demyelinating events." },
-    { "slug": "fibromyalgia", "name": "Fibromyalgia", "keyDifference": "Fibromyalgia produces widespread pain, fatigue, and brain fog that can be mistaken for MS, particularly in young women. Neurological examination is normal, MRI is normal, and there are no oligoclonal bands. The two can coexist, which makes distinguishing new MS-related symptoms in a fibromyalgia patient challenging." }
+    { "slug": "neuromyelitis-optica-devic-g360", "name": "Neuromyelitis Optica Spectrum Disorder (NMOSD)", "keyDifference": "NMOSD presents with severe optic neuritis (often bilateral or simultaneous) and longitudinally extensive transverse myelitis spanning three or more vertebral segments. AQP4-IgG is positive in 70-80% of cases. Standard MS DMTs such as interferons and natalizumab can worsen NMOSD, so distinguishing the two before treatment is critical." },
+    { "slug": "acute-transverse-myelitis-in-demyelinating-disease-of-cnsl-g373", "name": "Acute Transverse Myelitis", "keyDifference": "Isolated transverse myelitis is a single episode of spinal cord inflammation without the disseminated brain lesions required for MS. A short-segment partial myelitis with typical brain MRI lesions points to MS; a longitudinally extensive lesion suggests NMOSD or MOG antibody disease and warrants antibody testing before classifying as MS." },
+    { "slug": "unspecified-optic-neuritis-h469", "name": "Optic Neuritis", "keyDifference": "Optic neuritis is a clinical event, not a final diagnosis. Roughly half of isolated optic neuritis patients with abnormal brain MRI go on to develop MS within 15 years (ONTT cohort). MOG and AQP4 testing distinguishes MS-related optic neuritis from antibody-mediated disease." },
+    { "slug": "systemic-lupus-erythematosus", "name": "Systemic Lupus Erythematosus (SLE)", "keyDifference": "Neurolupus can produce focal deficits, seizures, cognitive change, and white matter lesions that mimic MS. ANA, anti-dsDNA, and ENA panels are positive in SLE; systemic features (rash, serositis, nephritis, cytopenias) and abnormal renal function support SLE. CSF oligoclonal bands are usually absent in lupus." },
+    { "slug": "lyme-disease", "name": "Lyme Neuroborreliosis", "keyDifference": "Lyme neuroborreliosis can produce facial palsy, radiculitis, and white matter lesions in endemic regions. Tick exposure, erythema migrans history, and positive serology with intrathecal Borrelia antibody synthesis distinguish it. CSF oligoclonal bands can occur in both, so clinical context and serology drive the distinction." },
+    { "slug": "vitamin-b12-deficiency-anemia-unspecified-d519", "name": "Vitamin B12 Deficiency", "keyDifference": "Severe B12 deficiency causes subacute combined degeneration of the spinal cord with dorsal column dysfunction and brisk reflexes that can resemble MS-related myelopathy. Serum B12, methylmalonic acid, and homocysteine clarify the diagnosis; symptoms often reverse with replacement." }
   ],
 
   "coOccurringConditions": [
     { "slug": "depression", "name": "Depression" },
-    { "slug": "vitamin-d-deficiency-unspecified-e559", "name": "Vitamin D Deficiency" },
-    { "slug": "trigeminal-neuralgia-g500", "name": "Trigeminal Neuralgia" },
-    { "slug": "migraine", "name": "Migraine" }
+    { "slug": "vitamin-b12-deficiency-anemia-unspecified-d519", "name": "Vitamin B12 Deficiency" }
   ],
 
   "relatedConditions": [
-    { "slug": "neuromyelitis-optica-devic-g360", "name": "Neuromyelitis Optica (Devic Disease)", "relevance": "Closely related demyelinating disease with overlapping presentation but different antibody profile and treatment; must be excluded before initiating MS therapy." },
-    { "slug": "other-optic-neuritis-h468", "name": "Optic Neuritis", "relevance": "Optic neuritis is the presenting feature in about 20% of MS cases and a frequent later manifestation." },
-    { "slug": "trigeminal-neuralgia-g500", "name": "Trigeminal Neuralgia", "relevance": "Occurs in 2-5% of MS patients due to brainstem lesions affecting the trigeminal nerve root entry zone." },
-    { "slug": "depression", "name": "Depression", "relevance": "Affects up to 50% of MS patients and influences treatment adherence, quality of life, and disability outcomes." },
-    { "slug": "vitamin-d-deficiency-unspecified-e559", "name": "Vitamin D Deficiency", "relevance": "Low vitamin D is a risk factor for MS development and is associated with greater disease activity in established disease." }
+    { "slug": "neuromyelitis-optica-devic-g360", "name": "Neuromyelitis Optica Spectrum Disorder", "relevance": "The most important MS mimic to exclude at diagnosis; treatment paths diverge sharply once AQP4-IgG is confirmed." },
+    { "slug": "unspecified-optic-neuritis-h469", "name": "Optic Neuritis", "relevance": "Often the first clinical presentation of MS; risk of conversion to definite MS is driven by baseline brain MRI." },
+    { "slug": "acute-transverse-myelitis-in-demyelinating-disease-of-cnsl-g373", "name": "Acute Transverse Myelitis", "relevance": "A common CNS demyelinating syndrome that can be either an isolated event or the first presentation of MS, depending on imaging and antibody profile." },
+    { "slug": "depression", "name": "Depression", "relevance": "Affects roughly half of MS patients across the disease course and is independently associated with worse disability outcomes; routine screening is recommended." },
+    { "slug": "parkinsons-disease", "name": "Parkinson's Disease", "relevance": "Another chronic neurological disease but with very different pathology — degenerative dopaminergic loss rather than demyelinating inflammation; sometimes confused early when MS presents with gait or tremor problems." }
   ],
 
   "linkedTreatmentSlugs": [],
 
   "faqs": [
     {
-      "question": "Is multiple sclerosis fatal?",
-      "answer": "MS itself is rarely directly fatal. Median life expectancy is now within about 7 years of the general population and continues to close with modern therapy. The main causes of excess mortality are complications of advanced disability such as aspiration pneumonia, urinary sepsis, and cardiovascular disease, alongside higher suicide rates. Early treatment with effective disease-modifying therapy substantially reduces these risks.",
+      "question": "Is multiple sclerosis curable?",
+      "answer": "MS is not curable today, but it is increasingly treatable. High-efficacy disease-modifying therapies can stop new relapses and MRI activity in many patients, and autologous stem cell transplant produces lasting remission in a selected subset. The goal of modern care is no evidence of disease activity — no relapses, no new MRI lesions, and no disability progression — for as long as possible.",
       "schemaEligible": true
     },
     {
-      "question": "What are the first signs of MS?",
-      "answer": "The most common first symptoms are blurred or painful vision in one eye lasting more than 24 hours, numbness or tingling spreading over a limb or one side of the body over days, weakness or heaviness in a leg, and unsteady balance. About 20% of patients first present with optic neuritis. Any sustained new neurological symptom in a young adult warrants prompt neurological assessment.",
+      "question": "What is usually the first symptom of MS?",
+      "answer": "The most common first attack is optic neuritis, with subacute monocular vision loss and pain on eye movement building over hours to days. Other common first presentations include numbness or weakness in a limb, double vision, vertigo, or a banding sensation around the trunk from partial transverse myelitis. Symptoms typically last more than 24 hours and partially recover.",
       "schemaEligible": true
     },
     {
       "question": "How is MS diagnosed?",
-      "answer": "MS is diagnosed using the 2017 revised McDonald criteria, which require evidence of central nervous system damage disseminated in space and time. The workup includes detailed neurological examination, MRI of the brain and spine with gadolinium, lumbar puncture for oligoclonal bands when needed, and blood tests to exclude mimics such as neuromyelitis optica and lupus.",
+      "answer": "MS is diagnosed using the 2017 McDonald criteria, which combine clinical history, neurological exam, and MRI evidence of demyelinating lesions spread across the brain and spinal cord and across time. A lumbar puncture showing CSF-restricted oligoclonal bands supports the diagnosis. AQP4 and MOG antibody testing rules out the main mimics.",
       "schemaEligible": true
     },
     {
-      "question": "Is multiple sclerosis hereditary?",
-      "answer": "MS has a strong genetic component but is not directly inherited. Lifetime risk in the general population is roughly 0.2%, rising to about 3% in siblings of patients and 25-30% in identical twins. More than 230 genetic variants influence risk, the strongest being HLA-DRB1*15:01. Most people with MS have no known affected relative.",
+      "question": "What causes multiple sclerosis?",
+      "answer": "MS is caused by an autoimmune attack on myelin in the brain and spinal cord, in genetically susceptible people exposed to particular environmental triggers. The strongest established trigger is Epstein-Barr virus, which precedes nearly every case and raises risk approximately 32-fold. Low vitamin D in adolescence, cigarette smoking, adolescent obesity, and HLA-DRB1*15:01 contribute additional risk.",
       "schemaEligible": true
     },
     {
-      "question": "What causes MS to flare up?",
-      "answer": "True relapses are caused by new inflammatory demyelinating lesions and develop over days. Common triggers for symptom worsening that mimics a relapse (pseudo-relapse) include infection, fever, heat exposure, stress, and inadequate sleep. Smoking and skipped doses of disease-modifying therapy increase the likelihood of true relapses. A reliable way to distinguish a relapse from pseudo-relapse is whether symptoms persist after the trigger resolves.",
+      "question": "Is MS hereditary?",
+      "answer": "MS has a genetic component but is not inherited in a simple pattern. First-degree relatives of MS patients have roughly a 3-5% lifetime risk, compared with about 0.3% in the general population. Identical twin concordance is 25-30%. Over 230 risk variants have been identified; carrying them raises probability but does not guarantee disease.",
       "schemaEligible": true
     },
     {
-      "question": "Can MS be cured?",
-      "answer": "MS is not currently curable, but it is highly treatable. Modern disease-modifying therapies can achieve no evidence of disease activity for years, and autologous hematopoietic stem cell transplantation can produce long-lasting remission in highly active disease. Research into remyelination therapies and EBV-targeted treatments is progressing, but a true cure is not yet available.",
+      "question": "What are the four types of MS?",
+      "answer": "The four recognised phenotypes are clinically isolated syndrome (a first demyelinating attack), relapsing-remitting MS (the most common, with relapses and recovery), secondary progressive MS (which can develop from relapsing-remitting disease), and primary progressive MS (with steady disability accumulation from the start without distinct relapses).",
       "schemaEligible": true
     },
     {
-      "question": "What is the best treatment for MS?",
-      "answer": "The best treatment depends on disease activity, patient preferences, comorbidities, and family planning. Current evidence supports early use of high-efficacy disease-modifying therapy in patients with active inflammatory disease. Ocrelizumab, ofatumumab, natalizumab, and cladribine all reduce relapse rates by 50-80%. Treatment choice should be individualized with an MS-specialized neurologist.",
+      "question": "How quickly does MS progress?",
+      "answer": "Progression rates vary widely. Historical untreated cohorts showed a median time of about 15 years to needing a walking aid. Modern patients on high-efficacy disease-modifying therapy started early often remain ambulatory beyond 25-30 years, and a meaningful minority maintain no evidence of disease activity over a decade.",
       "schemaEligible": true
     },
     {
-      "question": "Can I get pregnant if I have MS?",
-      "answer": "Yes. MS does not reduce fertility and pregnancy is generally safe. Relapse rates fall during pregnancy, especially in the third trimester, and may briefly rise in the first 3-6 months postpartum. Several disease-modifying therapies are safe in pregnancy with planning, while others require washout. Discuss family planning with your MS team early.",
+      "question": "What is the best treatment for relapsing MS?",
+      "answer": "Current evidence increasingly supports starting a high-efficacy disease-modifying therapy at diagnosis rather than escalating from a platform drug, especially with active MRI or disabling first attacks. Anti-CD20 agents (ocrelizumab, ofatumumab, ublituximab), natalizumab, and cladribine are the most effective options, with relative relapse reductions of 50 to 90 percent.",
       "schemaEligible": true
     },
     {
-      "question": "Does MS cause pain?",
-      "answer": "Yes. Pain affects 50-75% of MS patients. Common types are neuropathic pain (burning, electric-shock sensations), trigeminal neuralgia, painful tonic spasms, Lhermitte sign on neck flexion, and musculoskeletal pain from altered posture and spasticity. Treatments include gabapentin, pregabalin, duloxetine, carbamazepine, baclofen, and physical therapy.",
+      "question": "What does an MS relapse feel like?",
+      "answer": "A relapse is the appearance of a new neurological symptom or clear worsening of an old one lasting more than 24 hours, without fever or infection. Common patterns include new numbness or weakness in a limb, eye pain with vision blurring, double vision, bladder urgency, or unsteady walking. Symptoms typically build over hours to days, plateau, and then partially recover over weeks.",
       "schemaEligible": true
     },
     {
-      "question": "How fast does MS progress?",
-      "answer": "Progression rates vary widely. In the pre-treatment era, half of relapsing patients reached secondary progressive disease within 15-20 years. With modern high-efficacy therapy started early, contemporary cohorts show most patients remain ambulatory and functioning at 20 years. Predictors of faster progression include male sex, older onset age, primary progressive disease, high lesion load, and smoking.",
+      "question": "How is an MS relapse treated?",
+      "answer": "Disabling relapses are treated with high-dose intravenous methylprednisolone, typically 1 g daily for 3-5 days, which shortens the relapse but does not change long-term disability. Oral high-dose steroids are an equivalent alternative. Plasma exchange over 5-7 sessions is used when steroids fail, especially in severe optic neuritis or transverse myelitis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can people with MS get pregnant?",
+      "answer": "Yes. Fertility is unaffected by MS, and pregnancy is associated with lower relapse rates, especially in the third trimester. Disease-modifying therapy needs review before conception — fumarates, S1P modulators, and cladribine should be stopped pre-conception; ocrelizumab and glatiramer are commonly continued or restarted near delivery.",
       "schemaEligible": true
     },
     {
       "question": "What is the difference between MS and NMO?",
-      "answer": "Neuromyelitis optica spectrum disorder produces optic neuritis and spinal cord inflammation that look superficially like MS but tends to be more severe, more often involves long spinal cord segments, and is associated with positive aquaporin-4 IgG in 70-80% of cases. Several MS therapies worsen NMOSD, so antibody testing is essential before starting any disease-modifying treatment.",
+      "answer": "Neuromyelitis optica spectrum disorder (NMOSD) targets the same regions as MS but is driven by AQP4 antibodies in 70-80% of cases. NMOSD attacks are typically more severe, involve longitudinally extensive spinal lesions over three or more vertebral segments, and may affect both optic nerves simultaneously. Standard MS therapies can worsen NMOSD.",
       "schemaEligible": true
     },
     {
-      "question": "Can MS be detected on a regular brain MRI?",
-      "answer": "A standard brain MRI can identify many MS lesions but the diagnosis requires a dedicated MS protocol with gadolinium contrast, T2 FLAIR sequences, and ideally cervical spine imaging. Incidental white-matter changes on routine MRI are common in migraine and aging and do not establish MS without clinical correlation. A neurologist's review is essential.",
+      "question": "How common is MS in women versus men?",
+      "answer": "Women are diagnosed with MS approximately three times more often than men. The ratio has risen from roughly 2:1 in the 1950s to 3:1 today, suggesting environmental factors interacting with sex are at work. Men with MS tend to be diagnosed slightly later and have somewhat worse motor and cognitive outcomes on average.",
       "schemaEligible": true
     },
     {
-      "question": "Are MS symptoms worse in heat?",
-      "answer": "Yes, in most patients. Heat lowers the conduction velocity of partially demyelinated nerves, temporarily worsening symptoms — vision blur, leg weakness, fatigue — during hot weather, fever, or exercise. This is called Uhthoff phenomenon. Symptoms recover after cooling and do not represent a true relapse. Cooling vests, swimming, and air conditioning help.",
+      "question": "Can MS cause cognitive problems?",
+      "answer": "Yes. Around half of MS patients have measurable cognitive impairment over the disease course, most often slowed processing speed and reduced working memory. The Symbol Digit Modalities Test is a sensitive screening tool. Cognitive rehabilitation, treatment of underlying mood disorders, and effective disease-modifying therapy all help preserve cognitive function.",
       "schemaEligible": true
     },
     {
-      "question": "Can children get MS?",
-      "answer": "Yes, but it is uncommon. Pediatric-onset MS, defined as onset before age 18, accounts for 3-5% of cases. It tends to present with more frequent early relapses but slower long-term disability accumulation than adult-onset disease. Several disease-modifying therapies, including fingolimod and ocrelizumab, are now used in pediatric MS.",
+      "question": "How is MS fatigue treated?",
+      "answer": "MS fatigue affects 75-90% of patients and responds to a combination of structured exercise, sleep optimisation, cooling strategies, and medications such as amantadine or modafinil. Underlying depression, sleep apnoea, anaemia, and thyroid dysfunction should be screened for and treated, since they amplify MS-related fatigue. Cognitive behavioural therapy reduces fatigue impact in randomised trials.",
       "schemaEligible": true
     },
     {
       "question": "Does diet affect MS?",
-      "answer": "Diet has a modest but measurable effect on MS outcomes. A Mediterranean-pattern diet is associated with lower disability and better quality of life in observational studies. Ultra-processed foods, high sodium intake, and obesity are associated with worse outcomes. No single diet has been proven to prevent relapses, and extreme elimination diets are discouraged.",
+      "answer": "A Mediterranean-style diet rich in vegetables, legumes, whole grains, fish, and olive oil is associated with lower disability scores in observational studies. Adequate vitamin D status is associated with fewer relapses. There is no strong evidence supporting more restrictive diets such as Wahls or Swank over Mediterranean eating.",
       "schemaEligible": true
     },
     {
-      "question": "Should I take vitamin D for MS?",
-      "answer": "Maintaining serum 25-hydroxyvitamin D above 30-40 ng/mL is reasonable for all MS patients given low risk and probable benefit. Typical supplementation is 2000-5000 IU daily, individualized to baseline levels and adjusted to reach the target range. Megadosing is not recommended outside trials.",
+      "question": "Is vitamin D supplementation recommended in MS?",
+      "answer": "Most MS clinicians recommend maintaining serum 25-hydroxyvitamin D between 30 and 50 ng/mL, typically with 2000-4000 IU of vitamin D3 daily. Observational data link adequate vitamin D status with lower relapse rates and reduced MRI activity. Definitive phase 3 evidence is pending, but the supplement is safe, inexpensive, and supports bone health.",
       "schemaEligible": true
     },
     {
-      "question": "What is a clinically isolated syndrome?",
-      "answer": "A clinically isolated syndrome (CIS) is a first acute or subacute neurological event lasting at least 24 hours that is consistent with demyelination — typically optic neuritis, transverse myelitis, or a brainstem syndrome. About 60-70% of patients with CIS plus MRI evidence of additional lesions progress to definite MS within 5 years.",
+      "question": "How much does MS treatment cost?",
+      "answer": "Disease-modifying therapy in the United States ranges from roughly USD 70,000 to 100,000 per year list price for high-efficacy infusions, though net pricing after insurance and patient assistance is typically much lower. In Europe prices are 30-60% lower under national health systems. In India and other emerging markets, generic glatiramer and interferons are available.",
       "schemaEligible": true
     },
     {
-      "question": "How long do MS attacks last?",
-      "answer": "A typical MS relapse develops over 3-7 days, stabilizes, and improves over 6-12 weeks. Most patients regain 60-100% of lost function from a first relapse. Treatment with high-dose intravenous methylprednisolone over 3-5 days speeds recovery but does not change long-term disability.",
+      "question": "Can MS be triggered by stress?",
+      "answer": "Stressful life events have been associated with a modest increase in relapse risk in some studies, though the effect is small compared with established triggers such as infection or postpartum hormonal changes. Stress reduction, sleep, and routine mental health care are part of well-rounded MS management, but stress is not a primary cause of MS itself.",
       "schemaEligible": true
     },
     {
-      "question": "Can I drink alcohol with MS?",
-      "answer": "Moderate alcohol use is generally acceptable in MS, though heavy use is discouraged. Alcohol can worsen balance, fatigue, and cognition, and interacts with several disease-modifying drugs. Patients on baclofen, benzodiazepines, or opioids for symptoms should be especially cautious about combining them with alcohol.",
+      "question": "What is PIRA in multiple sclerosis?",
+      "answer": "Progression independent of relapse activity (PIRA) refers to gradual disability accumulation in MS patients without new relapses or new MRI lesions. PIRA is increasingly recognised as the dominant driver of long-term disability in modern, well-treated cohorts and is the target of next-generation drugs such as Bruton tyrosine kinase inhibitors currently in phase 3 trials.",
       "schemaEligible": true
     },
     {
-      "question": "What lifestyle changes help MS?",
-      "answer": "Stop smoking immediately, exercise regularly with both aerobic and resistance training, maintain a Mediterranean-pattern diet, keep serum vitamin D in the 30-40 ng/mL range, prioritize sleep, and treat depression and anxiety. Each of these interventions has measurable effects on disability progression in observational studies.",
+      "question": "Should an MS patient get vaccinated?",
+      "answer": "Yes. Routine inactivated vaccines including annual influenza, COVID-19 boosters, and pneumococcal vaccination are recommended for nearly all MS patients. Live vaccines (yellow fever, varicella, MMR) should be completed before starting strongly immunosuppressive disease-modifying therapy such as anti-CD20 antibodies.",
       "schemaEligible": true
     },
     {
-      "question": "When should I see a neurologist for MS?",
-      "answer": "See a neurologist for any new neurological symptom lasting more than 24 hours, especially vision change in one eye, persistent numbness or weakness, or unexplained imbalance. If MS is diagnosed, follow-up with an MS-specialized neurologist is recommended at least every 6-12 months, with MRI surveillance individualized to disease activity.",
+      "question": "When should I see a neurologist for possible MS?",
+      "answer": "See a neurologist promptly for any subacute neurological symptom lasting more than 24 hours — vision loss in one eye, persistent numbness or weakness in a limb, double vision, vertigo, or a clear sensory level on the trunk — particularly between ages 15 and 50. Early diagnosis allows early disease-modifying therapy, which has the largest impact on long-term outcome.",
       "schemaEligible": true
     }
   ],
 
-  "simpleName": "Multiple Sclerosis (MS, demyelinating disease of the CNS)",
+  "simpleName": "Multiple Sclerosis (MS)",
 
   "regionalNames": [
-    { "name": "एकाधिक काठिन्य (Ekadhik Kathinya)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "बहु काठिन्य (Bahu Kaathinya)", "region": "India (Hindi-speaking regions)", "language": "hi" },
     { "name": "Esclerosis Múltiple", "region": "Latin America and Spain", "language": "es" },
-    { "name": "Sclérose en Plaques", "region": "France and Francophone regions", "language": "fr" }
+    { "name": "Sclérose en plaques", "region": "France", "language": "fr" },
+    { "name": "Multiple Sklerose", "region": "Germany", "language": "de" }
   ],
 
   "searchTags": [
-    "multiple sclerosis", "ms", "demyelinating disease", "relapsing remitting ms", "rrms",
-    "primary progressive ms", "ppms", "secondary progressive ms", "spms",
-    "optic neuritis", "transverse myelitis", "ocrelizumab", "natalizumab", "ofatumumab",
-    "interferon beta", "disease modifying therapy", "dmt", "neurology", "mcdonald criteria"
+    "multiple sclerosis", "MS", "demyelinating disease", "RRMS", "PPMS", "SPMS",
+    "ocrelizumab", "natalizumab", "fingolimod", "ofatumumab", "optic neuritis",
+    "transverse myelitis", "McDonald criteria", "DMT", "MS relapse", "neuroimmunology"
   ],
 
   "symptomKeywords": [
-    "blurred vision one eye", "tingling numbness limbs", "leg weakness", "balance problems",
-    "fatigue young adult", "electric shock down spine", "bladder urgency", "double vision",
-    "Lhermitte sign", "Uhthoff phenomenon"
+    "vision loss one eye", "numbness in limbs", "tingling and weakness",
+    "double vision", "lhermitte sign", "ms fatigue", "spasticity legs",
+    "bladder urgency", "ataxia", "electric shock down spine"
   ],
 
   "metaTitle": "Multiple Sclerosis: Symptoms & Treatment | aihealz",
-  "metaDescription": "Multiple sclerosis: an immune-mediated disease that scars myelin in the brain and spinal cord. Symptoms, diagnosis, treatment, and prognosis reviewed.",
+  "metaDescription": "Multiple sclerosis: autoimmune attack on brain and spinal cord myelin causing vision loss, numbness, weakness. Symptoms, MRI diagnosis, DMTs, and prognosis.",
 
   "keywords": [
-    "multiple sclerosis", "ms symptoms", "ms treatment", "ms causes", "ms diagnosis",
-    "ms vs nmo", "relapsing remitting ms", "primary progressive ms", "ocrelizumab",
-    "natalizumab", "is ms hereditary", "ms life expectancy", "ms diet", "ms fatigue"
+    "multiple sclerosis", "MS symptoms", "MS treatment", "MS causes", "MS diagnosis",
+    "relapsing remitting MS", "primary progressive MS", "ocrelizumab", "natalizumab",
+    "McDonald criteria", "MS MRI", "MS vs NMO", "is MS curable", "MS prognosis", "MS pregnancy"
   ],
 
   "lastReviewed": "2026-05-12",
 
   "images": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
 
   "sources": [
     {
@@ -481,8 +488,13 @@
       "accessedDate": "2026-05-12"
     },
     {
-      "title": "Rae-Grant A, Day GS, Marrie RA, et al. Practice guideline recommendations summary: Disease-modifying therapies for adults with multiple sclerosis. Report of the Guideline Development, Dissemination, and Implementation Subcommittee of the American Academy of Neurology. Neurology. 2018;90(17):777-788.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29686116/",
+      "title": "Walton C, King R, Rechtman L, et al. Rising prevalence of multiple sclerosis worldwide: Insights from the Atlas of MS, third edition. Multiple Sclerosis Journal. 2020;26(14):1816-1821.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33174475/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Bjornevik K, Cortese M, Healy BC, et al. Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis. Science. 2022;375(6578):296-301.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35025605/",
       "accessedDate": "2026-05-12"
     },
     {
@@ -496,28 +508,23 @@
       "accessedDate": "2026-05-12"
     },
     {
-      "title": "Polman CH, O'Connor PW, Havrdova E, et al. A randomized, placebo-controlled trial of natalizumab for relapsing multiple sclerosis (AFFIRM). New England Journal of Medicine. 2006;354(9):899-910.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/16510744/",
-      "accessedDate": "2026-05-12"
-    },
-    {
       "title": "Hauser SL, Bar-Or A, Cohen JA, et al. Ofatumumab versus Teriflunomide in Multiple Sclerosis (ASCLEPIOS I and II). New England Journal of Medicine. 2020;383(6):546-557.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/32757523/",
       "accessedDate": "2026-05-12"
     },
     {
-      "title": "Bjornevik K, Cortese M, Healy BC, et al. Longitudinal analysis reveals high prevalence of Epstein-Barr virus associated with multiple sclerosis. Science. 2022;375(6578):296-301.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/35025605/",
+      "title": "Polman CH, O'Connor PW, Havrdova E, et al. A Randomized, Placebo-Controlled Trial of Natalizumab for Relapsing Multiple Sclerosis (AFFIRM). New England Journal of Medicine. 2006;354(9):899-910.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16510744/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Rae-Grant A, Day GS, Marrie RA, et al. Practice guideline recommendations summary: Disease-modifying therapies for adults with multiple sclerosis. Neurology. 2018;90(17):777-788.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29686116/",
       "accessedDate": "2026-05-12"
     },
     {
       "title": "Wallin MT, Culpepper WJ, Campbell JD, et al. The prevalence of MS in the United States: A population-based estimate using health claims data. Neurology. 2019;92(10):e1029-e1040.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/30787164/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Montalban X, Gold R, Thompson AJ, et al. ECTRIMS/EAN guideline on the pharmacological treatment of people with multiple sclerosis. Multiple Sclerosis Journal. 2018;24(2):96-120.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29353550/",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30770430/",
       "accessedDate": "2026-05-12"
     },
     {
