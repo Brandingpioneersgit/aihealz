@@ -49,7 +49,7 @@ export default async function LocationDoctors({ params }: { params: Promise<{ lo
 
     const geo = await prisma.geography.findFirst({
         where: { slug: location, isActive: true },
-        select: { id: true, name: true, level: true, slug: true },
+        select: { id: true, name: true, level: true, slug: true, supportedLanguages: true },
     });
 
     if (!geo) notFound();
@@ -102,7 +102,7 @@ export default async function LocationDoctors({ params }: { params: Promise<{ lo
         gu: 'ગુજરાતી', bn: 'বাংলা', pa: 'ਪੰਜਾਬੀ', or: 'ଓଡ଼ିଆ', as: 'অসমীয়া', ur: 'اردو', ne: 'नेपाली',
         kok: 'कोंकणी', kha: 'Khasi', lus: 'Mizo', mni: 'মৈতৈলোন্', fr: 'Français',
     };
-    const langs = (geo.supportedLanguages as string[]) || [];
+    const langs = geo.supportedLanguages || [];
     const otherLangs = langs.filter(l => l !== 'en');
 
     return (

@@ -1,0 +1,482 @@
+{
+  "_meta": {
+    "slug": "chlamydia-infection",
+    "tier": 1,
+    "headTerm": "chlamydia infection",
+    "longTailKeywords": [
+      "chlamydia symptoms",
+      "chlamydia treatment",
+      "chlamydia in women",
+      "chlamydia in men",
+      "doxycycline chlamydia",
+      "chlamydia test",
+      "asymptomatic chlamydia",
+      "chlamydia pelvic inflammatory disease",
+      "chlamydia infertility",
+      "is chlamydia curable"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against CDC STI Treatment Guidelines 2021 (Workowski MMWR), CDC STI Surveillance 2022, Lanjouw 2015 European STI Guidelines, and Páez-Canro Cochrane review 2019 on chlamydia screening."
+  },
+
+  "h1Title": "Chlamydia Infection: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Chlamydia is the most frequently reported notifiable disease in the United States, with the CDC recording 1.65 million cases in 2022. Caused by the obligate intracellular bacterium Chlamydia trachomatis, the infection is largely silent — roughly 70% of cervical infections in women and 50% of male urethral infections produce no symptoms — which is why women under 25 are screened annually regardless of symptoms. Untreated, ascending infection causes pelvic inflammatory disease in 10-15% of women, with downstream tubal scarring, ectopic pregnancy, and infertility. CDC treatment guidelines updated in 2021 made doxycycline 100 mg twice daily for 7 days the first-line regimen, replacing single-dose azithromycin due to lower efficacy at rectal sites. Doxycycline post-exposure prophylaxis reduces incident chlamydia by over 70% in MSM and transgender women.",
+
+  "keyStats": {
+    "prevalence": "1.65 million US cases in 2022 (CDC); rate ~495 per 100,000 — most reported notifiable disease",
+    "demographics": "Women account for 64% of US cases; rate in women 15-24 is over 4,000 per 100,000",
+    "avgAge": "Highest incidence in adults 15-24 years; rare in adults over 35",
+    "globalCases": "~129 million new global infections per year (WHO 2020); 4.0% global prevalence in women 15-49"
+  },
+
+  "definition": "Chlamydia infection (ICD-10: A56) is a sexually transmitted bacterial infection caused by Chlamydia trachomatis serovars D through K, which selectively infect columnar epithelium of the urogenital tract, rectum, pharynx, and conjunctiva. The organism is an obligate intracellular pathogen with a unique biphasic lifecycle: the elementary body (infectious form) enters epithelial cells, transforms into the metabolically active reticulate body that divides within an inclusion, and re-differentiates into elementary bodies that are released to infect adjacent cells. This intracellular biology explains the slow tempo of symptoms (1-3 weeks after exposure), the prolonged carriage, and the need for antibiotics that achieve intracellular concentrations. Clinical presentations include urethritis, cervicitis, proctitis, pharyngitis, conjunctivitis, lymphogranuloma venereum (LGV — caused by serovars L1-L3), neonatal conjunctivitis and pneumonia, and the post-infectious reactive arthritis syndrome. The dominant complications in women are pelvic inflammatory disease, tubo-ovarian abscess, perihepatitis (Fitz-Hugh-Curtis syndrome), ectopic pregnancy, and tubal-factor infertility. In men, complications include epididymitis and rarely reactive arthritis. Chlamydia trachomatis is genetically distinct from Chlamydia pneumoniae (respiratory pathogen) and Chlamydia psittaci (zoonotic). The condition is managed by primary care, sexual health, gynecology, and infectious disease specialists.",
+
+  "typesClassification": [
+    { "type": "Uncomplicated urogenital chlamydia", "description": "Cervicitis or urethritis with or without symptoms. The most common presentation, treated with 7 days of doxycycline." },
+    { "type": "Rectal chlamydia", "description": "Anal canal infection from receptive anal sex. Often asymptomatic; symptomatic disease presents with pruritus, mucopurulent discharge, tenesmus, or bleeding. Cure rates with single-dose azithromycin are lower than at other sites, which contributed to the 2021 switch to doxycycline as first-line." },
+    { "type": "Pharyngeal chlamydia", "description": "Throat infection from oral sex; almost always asymptomatic. CDC recommends testing in MSM but not routinely at other sites." },
+    { "type": "Lymphogranuloma venereum (LGV)", "description": "Caused by serovars L1-L3. Three-stage illness: small painless primary lesion, painful regional lymphadenitis with fluctuant buboes, and chronic strictures or fistulas. Endemic in resource-limited settings; resurgence in MSM in Europe and North America since 2003." },
+    { "type": "Neonatal chlamydial conjunctivitis and pneumonia", "description": "Vertical transmission during vaginal delivery from an infected mother. Conjunctivitis appears 5-14 days after birth; pneumonia 4-12 weeks." },
+    { "type": "Reactive arthritis (Reiter syndrome)", "description": "Post-infectious arthritis 1-3 weeks after acute infection, especially in HLA-B27 carriers. The classic triad — urethritis, conjunctivitis, and arthritis — was traditionally attributed to chlamydia." }
+  ],
+
+  "primarySymptoms": [
+    "Most infections cause no symptoms — 70% of cervical infections in women and 50% of male urethral infections are silent, persisting for months without notice.",
+    "Mild, often clear or whitish urethral discharge in symptomatic men, appearing 1-3 weeks after exposure and easily mistaken for a minor irritation.",
+    "Dysuria (burning on urination) in men and women, typically less intense than the dysuria of gonorrhea or urinary tract infection.",
+    "Increased vaginal discharge in women, sometimes mucopurulent, often noticed alongside intermenstrual bleeding or post-coital bleeding.",
+    "Lower abdominal or pelvic pain in women — a warning sign of ascension to pelvic inflammatory disease and reason for urgent evaluation.",
+    "Dyspareunia (painful intercourse) and cervical motion tenderness on bimanual exam, both features of cervicitis or early PID.",
+    "Rectal pain, mucus discharge, tenesmus, or bleeding in symptomatic rectal chlamydia, though most rectal infections are asymptomatic.",
+    "Right upper quadrant pain with normal liver enzymes (Fitz-Hugh-Curtis syndrome) — perihepatitis as a complication of PID.",
+    "Painful, swollen testicle (epididymitis) in men with ascending infection, usually unilateral and developing 1-2 weeks after initial symptoms.",
+    "Persistent inflamed conjunctiva with stringy mucoid discharge in adult inclusion conjunctivitis — autoinoculation from genital secretions or partner contact."
+  ],
+
+  "earlyWarningSigns": [
+    "Any new urethral or vaginal discharge in a sexually active person under 25",
+    "Spotting or bleeding between periods or after sex in a young woman",
+    "A new sexual partner with diagnosed chlamydia, gonorrhea, or other STI",
+    "Persistent low-grade pelvic discomfort or pelvic pain after a recent unprotected sexual encounter",
+    "Mild conjunctivitis with stringy mucoid discharge in a sexually active adult"
+  ],
+
+  "emergencySigns": [
+    "Severe lower abdominal pain with fever and discharge — possible pelvic inflammatory disease or tubo-ovarian abscess requiring urgent evaluation",
+    "Painful unilateral testicular swelling with fever — possible chlamydial epididymitis; rule out testicular torsion by ultrasound",
+    "Acute right upper quadrant pain in a woman with pelvic infection — Fitz-Hugh-Curtis syndrome (perihepatitis)",
+    "Severe groin pain with fluctuant lymph nodes in MSM — possible LGV with bubo formation requiring drainage and prolonged doxycycline",
+    "Newborn 5-14 days old with red, sticky, discharging eyes — neonatal chlamydial conjunctivitis warrants oral erythromycin or azithromycin",
+    "Infant 4-12 weeks old with afebrile staccato cough, tachypnea, and bilateral interstitial pneumonia on X-ray — chlamydial neonatal pneumonia"
+  ],
+
+  "causes": [
+    {
+      "cause": "Sexual transmission of Chlamydia trachomatis",
+      "description": "The dominant cause. Transmission occurs during vaginal, anal, or oral sex with an infected partner. Per-act transmission probability is approximately 10% per exposure for men and women, varying with site and partner viral load."
+    },
+    {
+      "cause": "Vertical transmission at delivery",
+      "description": "Infants born to infected mothers acquire the organism through the birth canal in 30-50% of cases, producing conjunctivitis 5-14 days later or pneumonia at 4-12 weeks. Maternal screening at the first prenatal visit and again in the third trimester (in those at risk) prevents most cases."
+    },
+    {
+      "cause": "Autoinoculation to the eye",
+      "description": "Genital secretions transferred to the eye by hand contact or sexual practices cause adult inclusion conjunctivitis. The same organism causes trachoma in resource-limited settings via fly transmission and repeated reinfection."
+    },
+    {
+      "cause": "Asymptomatic transmission",
+      "description": "Because 50-70% of infected people have no symptoms, transmission occurs from people who do not know they are infected. This is the central epidemiologic feature driving CDC's recommendation for universal annual screening of sexually active women under 25."
+    },
+    {
+      "cause": "Persistent reservoirs from inadequate treatment",
+      "description": "Single-dose azithromycin (the previous first-line) cures only 80-85% of rectal chlamydia, leaving a reservoir for re-emergence. Doxycycline 100 mg twice daily for 7 days cures rectal infection in 95% of cases, which drove the 2021 CDC switch to doxycycline as first-line."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age under 25", "category": "non-modifiable", "description": "Over 60% of US chlamydia cases occur in adults under 25. Cervical ectropion (more susceptible columnar epithelium) in young women, higher partner change rates, and inconsistent condom use drive the pattern." },
+    { "factor": "New or multiple sexual partners", "category": "modifiable", "description": "Each additional new partner in the past year approximately doubles infection probability. Concurrent partnerships drive transmission in network analyses." },
+    { "factor": "Inconsistent condom use", "category": "modifiable", "description": "Consistent correct condom use reduces per-act transmission by 50-90%. Real-world adherence is variable; partial use provides partial protection." },
+    { "factor": "Men who have sex with men (MSM)", "category": "non-modifiable", "description": "MSM carry a disproportionate share of rectal and pharyngeal chlamydia, often asymptomatic. CDC recommends triple-site screening (urine, throat, rectal) every 3-6 months." },
+    { "factor": "Prior chlamydia or other STI", "category": "modifiable", "description": "Previous STI signals ongoing exposure pattern. Reinfection rates within 12 months are 15-25% in high-risk groups, particularly when partners are not treated." },
+    { "factor": "Cervical ectropion", "category": "non-modifiable", "description": "Outward extension of cervical columnar epithelium, common in young women and oral contraceptive users. Provides more susceptible target tissue for chlamydial attachment." },
+    { "factor": "HIV infection", "category": "non-modifiable", "description": "Higher rates of pharyngeal and rectal chlamydia in HIV-positive patients; co-infection facilitates HIV transmission and acquisition." },
+    { "factor": "Drug or alcohol use during sex", "category": "modifiable", "description": "Reduces consistent condom use and partner selectivity. Methamphetamine use in MSM is linked to higher chlamydia incidence in chemsex circuits." }
+  ],
+
+  "affectedDemographics": [
+    "US 2022: 1.65 million cases (CDC); rate 495 per 100,000 — most reported notifiable disease",
+    "Women aged 15-24 have rates over 4,000 per 100,000 — the highest of any group",
+    "Black adults have rates roughly 6× white US rate; American Indian/Alaska Native rates roughly 4× white rate (CDC 2022)",
+    "MSM: rectal chlamydia prevalence 7-12% in STI clinic attendees; pharyngeal prevalence 4-7%",
+    "Globally, sub-Saharan Africa carries the highest prevalence (4.6% in women 15-49 per WHO 2020)"
+  ],
+
+  "diagnosisOverview": "Diagnosis relies on nucleic acid amplification testing (NAAT), which has displaced culture and antigen detection due to sensitivity exceeding 95% and specificity exceeding 99% across all anatomic sites. Specimen choice depends on patient and site: first-catch urine in men, vaginal or endocervical swab in women, and self- or clinician-collected pharyngeal and rectal swabs in MSM and in any patient with relevant exposure. CDC recommends extragenital (pharyngeal and rectal) testing in MSM and in any patient who reports oral or anal sex. Self-collected swabs are accurate and acceptable to most patients. Culture is now reserved for medicolegal cases (sexual assault evaluation), suspected antimicrobial treatment failure, and research; routine clinical management uses NAAT. Lymphogranuloma venereum requires identification of L1-L3 serovars through PCR genotyping or specific LGV-typing assays, available through state public health labs. Every chlamydia diagnosis should trigger bundled testing for gonorrhea, syphilis, HIV, and hepatitis B and C at the same visit, since 10-30% of patients have a second concurrent STI. CDC recommends annual screening of all sexually active women under 25, women over 25 with risk factors, MSM at all anatomic sites every 3-6 months, and pregnant individuals at the first prenatal visit. Repeat NAAT 3 months after treatment is recommended for all patients to detect reinfection, the dominant cause of \"recurrent\" chlamydia. Test of cure is not routinely needed for urogenital chlamydia treated with doxycycline but is recommended in pregnancy, persistent symptoms, suspected non-adherence, and after alternative regimens. Public health reporting is mandatory in all US states.",
+
+  "diagnosticTests": [
+    {
+      "test": "Nucleic acid amplification test (NAAT)",
+      "purpose": "Detects C. trachomatis DNA or RNA in urine, vaginal, endocervical, pharyngeal, or rectal specimens. Sensitivity 96-99%, specificity >99%. The standard first-line test recommended by CDC.",
+      "whatToExpect": "Self- or clinician-collected swab, or first-catch urine. Results return in 1-3 days. No fasting or special preparation."
+    },
+    {
+      "test": "Extragenital NAAT (pharyngeal and rectal)",
+      "purpose": "Detects rectal and pharyngeal infections that are missed on genital-only testing. CDC recommends in MSM and anyone with relevant exposure, since missed extragenital infections drive ongoing transmission.",
+      "whatToExpect": "Self-collected throat and rectal swabs are accurate and well tolerated. Painless; results return alongside genital site testing."
+    },
+    {
+      "test": "Pelvic examination with cervical motion tenderness assessment",
+      "purpose": "Identifies pelvic inflammatory disease and cervicitis in women. PID minimum criteria require cervical, uterine, or adnexal tenderness with cervical discharge.",
+      "whatToExpect": "Standard bimanual pelvic examination by a clinician. Takes 5 minutes; some discomfort but should not be sharply painful."
+    },
+    {
+      "test": "LGV-typing PCR",
+      "purpose": "Identifies the L1-L3 serovars responsible for lymphogranuloma venereum, distinguishing them from non-LGV chlamydia at rectal sites. Affects treatment duration (3 weeks vs 1 week).",
+      "whatToExpect": "Performed on the rectal NAAT specimen at reference laboratories; takes 1-2 weeks for results."
+    },
+    {
+      "test": "Bundled STI screening",
+      "purpose": "Tests for gonorrhea, syphilis, HIV, and hepatitis B and C at the same visit due to high co-infection rates.",
+      "whatToExpect": "Combined blood and urine specimens. Performed routinely in sexual health clinics."
+    },
+    {
+      "test": "Urine pregnancy test in women of reproductive age",
+      "purpose": "Pregnancy alters treatment choice (avoid doxycycline; use azithromycin). Mandatory before treatment in any sexually active woman of reproductive age.",
+      "whatToExpect": "Standard point-of-care urine test; results in 1-2 minutes."
+    }
+  ],
+
+  "treatmentOverview": "The CDC 2021 STI Treatment Guidelines established doxycycline 100 mg twice daily for 7 days as first-line therapy for all uncomplicated urogenital and rectal chlamydia. This replaced single-dose azithromycin 1 g, which had been first-line for two decades but was downgraded after randomized trials and meta-analyses showed inferior cure rates at rectal sites (80-85% with azithromycin vs 95-100% with doxycycline). Azithromycin 1 g single dose remains an alternative for patients who cannot tolerate doxycycline, who are unlikely to complete a 7-day course, or who are pregnant. In pregnancy, azithromycin is first-line (doxycycline is contraindicated), with amoxicillin 500 mg three times daily for 7 days as an alternative; test of cure 3-4 weeks after treatment is recommended. Lymphogranuloma venereum requires doxycycline 100 mg twice daily for 21 days, three times longer than uncomplicated chlamydia, because of deeper tissue involvement. Pelvic inflammatory disease is treated with a multi-drug regimen including ceftriaxone, doxycycline, and metronidazole for 14 days. Neonatal chlamydial conjunctivitis or pneumonia receives oral erythromycin 50 mg/kg/day for 14 days, with awareness of pyloric stenosis risk in infants under 6 weeks. Doxycycline post-exposure prophylaxis (200 mg within 72 hours of unprotected sex) reduces incident chlamydia by over 70% in MSM and transgender women per the 2023 DoxyPEP trial and is now recommended by CDC for these populations. Patients should abstain from sex for 7 days after completing treatment (or 7 days after single-dose azithromycin) and until partners have been treated. Sexual contacts within the prior 60 days should be tested and presumptively treated. Expedited partner therapy is legal in most US states and provides a prescription for partners without a separate clinic visit. Reportability to public health is mandatory in every US state. Retesting at 3 months is recommended for all patients to detect reinfection, the dominant cause of \"recurrence.\"",
+
+  "medicalTreatments": [
+    {
+      "name": "Doxycycline 100 mg PO twice daily × 7 days",
+      "description": "First-line CDC 2021 regimen for uncomplicated urogenital, rectal, and pharyngeal chlamydia. Take on a full stomach with a large glass of water and remain upright for 30 minutes to prevent esophagitis. Avoid sun exposure; doxycycline causes photosensitivity.",
+      "effectiveness": "Microbiologic cure 95-100% across all anatomic sites; rectal cure ~95% versus 80-85% with single-dose azithromycin."
+    },
+    {
+      "name": "Azithromycin 1 g PO single dose",
+      "description": "Alternative for patients who cannot tolerate doxycycline, for pregnancy (first-line in pregnancy), and when 7-day adherence is uncertain. Lower efficacy at rectal sites limits use in MSM.",
+      "effectiveness": "Urogenital cure 95-97%; rectal cure 80-85%, which is why it was replaced as first-line."
+    },
+    {
+      "name": "Doxycycline 100 mg PO twice daily × 21 days (LGV)",
+      "description": "Required for lymphogranuloma venereum due to deeper tissue involvement. Triple the standard duration. Surgical drainage of buboes is occasionally added.",
+      "effectiveness": "Clinical resolution in 90-95% of LGV cases; some patients require longer therapy for severe rectal stricture."
+    },
+    {
+      "name": "Amoxicillin 500 mg PO three times daily × 7 days (pregnancy alternative)",
+      "description": "Used in pregnancy when azithromycin is not tolerated. Lower cure rates than azithromycin or doxycycline; test of cure 3-4 weeks after treatment is essential.",
+      "effectiveness": "Cure rates 80-90% in pregnancy in observational data."
+    },
+    {
+      "name": "Ceftriaxone 500 mg IM + doxycycline 100 mg BID × 14 days + metronidazole 500 mg BID × 14 days (PID)",
+      "description": "Standard outpatient regimen for chlamydia-associated pelvic inflammatory disease. Inpatient management is reserved for severe disease, pregnancy, tubo-ovarian abscess, or failure of outpatient therapy.",
+      "effectiveness": "Clinical resolution in 90-95% of mild-to-moderate PID; preservation of fertility correlates with promptness of treatment."
+    },
+    {
+      "name": "Erythromycin base or ethylsuccinate 50 mg/kg/day PO divided QID × 14 days (neonatal disease)",
+      "description": "First-line for neonatal chlamydial conjunctivitis and pneumonia. Counsel parents about pyloric stenosis risk in infants under 6 weeks of age (relative risk 7-10 fold).",
+      "effectiveness": "Clinical cure 80-90%; sometimes a second course is needed."
+    },
+    {
+      "name": "Doxycycline 200 mg PO within 72 hours of unprotected sex (DoxyPEP)",
+      "description": "Post-exposure prophylaxis recommended by CDC 2024 for MSM and transgender women with high STI risk. Single 200 mg dose taken after each potential exposure.",
+      "effectiveness": "Reduces incident chlamydia by ~70%, gonorrhea by ~55%, and syphilis by ~80% in Luetkemeyer 2023 NEJM RCT."
+    },
+    {
+      "name": "Expedited Partner Therapy (EPT)",
+      "description": "Prescription provided to the index patient for their sexual contacts within the prior 60 days, without requiring a separate clinical visit. Legal in most US states. Standard regimen is doxycycline 100 mg BID × 7 days or azithromycin 1 g single dose.",
+      "effectiveness": "Reduces reinfection rates by 30-40% in observational and randomized studies (Golden 2005 NEJM)."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Drainage of fluctuant LGV bubo",
+      "description": "Aspiration through healthy skin (not incision and drainage, which can produce chronic fistula) for fluctuant inguinal lymph nodes in LGV. Combined with full doxycycline course.",
+      "successRate": "Symptom relief in 85-90%; recurrence uncommon with adequate antibiotic course."
+    },
+    {
+      "name": "Drainage of tubo-ovarian abscess",
+      "description": "Reserved for TOAs that fail to resolve with antibiotics within 48-72 hours or that are larger than 8 cm. Image-guided percutaneous drainage is preferred over laparotomy.",
+      "successRate": "Resolution in 80-90% of cases with combined antibiotic and drainage approach."
+    }
+  ],
+
+  "alternativeTreatments": [],
+
+  "whySeeSpecialist": "Infectious disease consultation is warranted in suspected LGV, severe or treatment-refractory pelvic inflammatory disease, complicated neonatal disease, pregnancy with macrolide or amoxicillin intolerance, and recurrent infection despite adequate treatment. Most uncomplicated cases are managed by primary care and sexual health clinics according to CDC algorithms.",
+
+  "doctorSelectionGuide": "Choose a clinician familiar with the CDC 2021 STI Treatment Guidelines, with access to NAAT testing at all relevant anatomic sites (urine, vaginal, pharyngeal, rectal), who prescribes doxycycline-first (with appropriate exceptions), and who integrates bundled STI screening at every visit. Sexual health clinics typically offer rapid testing, partner notification support, and expedited partner therapy where legal.",
+
+  "preventionStrategies": [
+    "Use latex or polyurethane condoms consistently and correctly during vaginal, anal, and oral sex — reduces per-act transmission by 50-90%",
+    "Annual chlamydia screening for all sexually active women under 25, plus older women and pregnant patients with risk factors",
+    "Sexually active MSM should receive triple-site (urine, throat, rectal) NAAT every 3-6 months",
+    "Notify and refer for treatment all sexual contacts within the prior 60 days of a positive diagnosis — expedited partner therapy where legal",
+    "Discuss doxycycline post-exposure prophylaxis (doxy-PEP) with a clinician if you are MSM or a transgender woman at high STI risk — reduces incident chlamydia by ~70%",
+    "Prenatal screening at the first prenatal visit and again in the third trimester for at-risk pregnant individuals"
+  ],
+
+  "lifestyleModifications": [
+    "Abstain from sex for 7 days after completing treatment (or 7 days after single-dose azithromycin) and until partners have been treated",
+    "Take doxycycline on a full stomach with a large glass of water and remain upright for 30 minutes to prevent esophagitis",
+    "Avoid prolonged sun exposure during doxycycline therapy; the drug causes photosensitivity",
+    "Return for retesting at 3 months — the most common cause of recurrent chlamydia is reinfection, not treatment failure",
+    "Notify any new sexual contacts of your diagnosis so they can be tested",
+    "Use condoms consistently with new or untested partners going forward"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Standard balanced nutrition supports immune recovery during treatment",
+      "Adequate hydration during oral antibiotic courses"
+    ],
+    "avoid": [
+      "Calcium-rich foods, antacids, and iron supplements within 2 hours of doxycycline — chelation reduces absorption",
+      "Probiotic supplements within 2 hours of doxycycline — interferes with drug levels",
+      "Alcohol during PID treatment if metronidazole is included — disulfiram-like reaction"
+    ]
+  },
+
+  "exerciseGuidelines": "No specific restrictions for uncomplicated chlamydia. With pelvic inflammatory disease, rest until pain and fever resolve, then gradually return to normal activity. With reactive arthritis, avoid weight-bearing exercise on affected joints until inflammation settles.",
+
+  "dailyManagement": [
+    "Take each dose of doxycycline at approximately 12-hour intervals on a full stomach",
+    "Drink at least 200 mL of water with each dose and remain upright for 30 minutes",
+    "Avoid antacids, calcium, iron supplements, and dairy within 2 hours of each dose",
+    "Use sunscreen and protective clothing while on doxycycline",
+    "Notify your clinician if you develop severe abdominal pain, dysphagia, or new vaginal bleeding",
+    "Mark your calendar for follow-up retesting at 3 months"
+  ],
+
+  "prognosis": "With doxycycline 7-day therapy, the prognosis for uncomplicated urogenital, rectal, and pharyngeal chlamydia is excellent — microbiologic cure in 95-100% of cases. Single-dose azithromycin cures 95% of urogenital infections but only 80-85% of rectal infections, which is why doxycycline is now first-line. Pelvic inflammatory disease responds clinically in over 90% of cases with appropriate antibiotic therapy, but tubal scarring still develops in roughly 12% of women after a single PID episode, 25% after two episodes, and 50% after three. The corresponding rises in ectopic pregnancy (6-7 fold) and tubal-factor infertility are the dominant long-term consequences. Reactive arthritis, when it develops, peaks 1-3 weeks after the acute infection, is more common in HLA-B27 carriers, and resolves over 3-6 months in most cases; a minority become chronic. LGV strictures and fistulas are largely preventable with prompt 21-day doxycycline. Reinfection is the dominant cause of recurrence — 15-25% within 12 months in high-risk populations — and reflects ongoing exposure rather than antibiotic failure. The decisive prognostic factor at the population level is screening uptake: the more sexually active young women receive annual screening, the lower the PID and infertility burden.",
+
+  "recoveryTimeline": "Urethral and vaginal symptoms typically resolve within 5-10 days of starting doxycycline. Sexual activity should be avoided for 7 days after completing the regimen and until partners are treated. PID pain and fever resolve over 3-7 days with appropriate antibiotics. LGV inguinal lymphadenopathy responds over 2-4 weeks of doxycycline; bubo resolution may take 2-3 months. Retest at 3 months for reinfection; test of cure is not routinely needed for doxycycline-treated urogenital cases but is recommended in pregnancy and after alternative regimens.",
+
+  "complications": [
+    "Pelvic inflammatory disease, with subsequent tubal scarring, ectopic pregnancy (6-7 fold increased risk), and tubal-factor infertility",
+    "Epididymitis and orchitis in men, with risk of chronic scrotal pain and rare infertility",
+    "Fitz-Hugh-Curtis syndrome (perihepatitis) — right upper quadrant pain with normal liver enzymes",
+    "Lymphogranuloma venereum strictures, fistulas, and chronic genital lymphedema (elephantiasis) in untreated cases",
+    "Reactive arthritis (Reiter syndrome) — 1-3 weeks after acute infection, especially HLA-B27 carriers",
+    "Increased HIV acquisition and transmission risk (2-3 fold) from mucosal inflammation",
+    "Neonatal chlamydial conjunctivitis (5-14 days postpartum) and pneumonia (4-12 weeks)",
+    "Tubo-ovarian abscess requiring drainage in severe PID"
+  ],
+
+  "supportResources": [
+    { "name": "CDC — Chlamydia Fact Sheet", "url": "https://www.cdc.gov/std/chlamydia/stdfact-chlamydia.htm", "description": "Authoritative US patient education with current statistics and treatment summaries." },
+    { "name": "CDC STI Treatment Guidelines 2021 — Chlamydia", "url": "https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm", "description": "Full clinical algorithm and regimens." },
+    { "name": "WHO — Chlamydia (sexually transmitted infections)", "url": "https://www.who.int/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)", "description": "Global STI surveillance and resistance resources." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "gonorrhea", "name": "Gonorrhea", "keyDifference": "Gonorrhea typically produces thicker, more purulent yellow-green discharge with faster onset (2-7 days) than chlamydia's milder, slower-onset clear or whitish discharge (1-3 weeks). NAAT distinguishes the two; co-infection is common, and CDC recommends bundled testing." },
+    { "slug": "trichomoniasis", "name": "Trichomoniasis", "keyDifference": "Trichomoniasis causes frothy yellow-green vaginal discharge with itching and a fishy odor, and is caused by a protozoan (Trichomonas vaginalis), not a bacterium. NAAT testing distinguishes; treatment is metronidazole, not doxycycline." },
+    { "slug": "syphilis", "name": "Syphilis", "keyDifference": "Syphilis presents with a painless ulcer (chancre) or a body-wide rash, not with discharge or dysuria. RPR/treponemal serology distinguishes; both infections often coexist and warrant bundled testing." },
+    { "slug": "herpes-simplex-infection", "name": "Genital Herpes", "keyDifference": "Herpes causes painful vesicular lesions and ulcers, not discharge. Burning urination from herpes is from external lesion contact with urine. PCR or viral culture confirms; treatment is antivirals, not antibiotics." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "gonorrhea", "name": "Gonorrhea" },
+    { "slug": "hiv-aids", "name": "HIV/AIDS" },
+    { "slug": "pelvic-inflammatory-disease", "name": "Pelvic Inflammatory Disease" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "gonorrhea", "name": "Gonorrhea", "relevance": "Frequent co-infection (10-30% of chlamydia patients); bundled testing and co-treatment when indicated." },
+    { "slug": "pelvic-inflammatory-disease", "name": "Pelvic Inflammatory Disease", "relevance": "Most common ascending complication of chlamydia in women; develops in 10-15% of untreated cases." },
+    { "slug": "syphilis", "name": "Syphilis", "relevance": "Shared transmission pathway; CDC recommends syphilis screening at every chlamydia diagnosis." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "Chlamydia increases HIV acquisition risk 2-3 fold; bundled testing and PrEP recommended at every chlamydia visit." },
+    { "slug": "epididymitis-n451", "name": "Epididymitis", "relevance": "Most common male complication of ascending chlamydia; presents as unilateral painful testicular swelling." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "Is chlamydia curable?",
+      "answer": "Yes. A 7-day course of doxycycline 100 mg twice daily cures 95-100% of uncomplicated urogenital, rectal, and pharyngeal chlamydia. Pregnant patients receive single-dose azithromycin 1 g instead. Reinfection from a new exposure is common (15-25% within 12 months) but is distinct from treatment failure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of chlamydia?",
+      "answer": "Most chlamydia infections cause no symptoms — 70% of cervical infections in women and 50% of urethral infections in men are silent. When symptoms occur, they include mild discharge, burning urination, post-coital bleeding, pelvic pain in women, and testicular pain in men, typically 1-3 weeks after exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is chlamydia transmitted?",
+      "answer": "Chlamydia spreads through vaginal, anal, or oral sex with an infected partner. It can also pass from mother to baby during vaginal delivery. It does not spread through casual contact, toilet seats, swimming pools, or shared utensils.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is chlamydia tested?",
+      "answer": "Nucleic acid amplification testing (NAAT) on urine, vaginal, endocervical, pharyngeal, or rectal specimens is the standard test. Sensitivity exceeds 95%. Self-collected swabs are accurate. Testing at all relevant anatomic sites is recommended for MSM and anyone with relevant exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why did CDC change from azithromycin to doxycycline?",
+      "answer": "Single-dose azithromycin cures urogenital chlamydia in 95% of cases but only 80-85% of rectal infections. Randomized trials showed doxycycline 100 mg twice daily for 7 days cures rectal chlamydia in 95% of cases. CDC updated the 2021 STI Treatment Guidelines to make doxycycline first-line for all sites.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chlamydia go away on its own?",
+      "answer": "No. Untreated chlamydia may persist for months without symptoms, but the bacterium remains and continues to transmit. Asymptomatic infection can ascend in women to cause pelvic inflammatory disease and infertility. Without antibiotics, infection can persist for over a year.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can men get chlamydia without symptoms?",
+      "answer": "Yes. About 50% of male urogenital chlamydia infections cause no symptoms, and almost all rectal and pharyngeal infections in MSM are asymptomatic. CDC recommends triple-site (urine, throat, rectal) screening every 3-6 months in sexually active MSM and routine screening of partners of diagnosed patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does chlamydia affect fertility?",
+      "answer": "Untreated chlamydia in women can ascend to cause pelvic inflammatory disease and tubal scarring. Tubal-factor infertility risk is approximately 12% after one PID episode, 25% after two, and 50% after three. Prompt antibiotic treatment substantially reduces this risk. Annual screening of sexually active women under 25 prevents most cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long should I wait before having sex after chlamydia treatment?",
+      "answer": "Abstain from sex for 7 days after starting doxycycline (or 7 days after single-dose azithromycin) and until all sexual partners have completed treatment. Resuming earlier risks reinfection of yourself or transmission to partners. Retest at 3 months for reinfection, and use condoms with new or untested partners going forward.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should my partner be treated?",
+      "answer": "Yes. All sexual contacts within the prior 60 days should be tested and treated for chlamydia. Many US states allow expedited partner therapy — a prescription for the partner without a clinic visit. Health departments can assist with anonymous partner notification when needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chlamydia come back?",
+      "answer": "Yes. Successful treatment does not produce lasting immunity. Reinfection rates are 15-25% within 12 months in high-risk populations, driven mainly by an untreated partner or a new exposure. Retesting at 3 months is CDC standard for all patients diagnosed with chlamydia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if chlamydia is left untreated?",
+      "answer": "Untreated chlamydia can cause pelvic inflammatory disease, tubal scarring, ectopic pregnancy, infertility in women, and epididymitis in men. Both sexes face increased HIV acquisition risk. Reactive arthritis can develop 1-3 weeks after acute infection. Lymphogranuloma venereum can produce chronic strictures and fistulas if untreated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is chlamydia an STI or STD?",
+      "answer": "Both terms apply. Chlamydia is a sexually transmitted infection (STI), which becomes a sexually transmitted disease (STD) when symptoms or complications develop. The CDC and most current guidelines prefer \"STI\" to reduce stigma and acknowledge that most infections are asymptomatic. Chlamydia is the most reported notifiable infection in the US.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chlamydia cause urinary tract infection symptoms?",
+      "answer": "Chlamydia can cause urethritis with burning urination, especially in men. The dysuria is typically milder than a urinary tract infection and often accompanies discharge. Urine NAAT distinguishes chlamydia from bacterial UTI. In sexually active patients with sterile pyuria, chlamydia should be tested.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chlamydia affect newborns?",
+      "answer": "Yes. Infants born to infected mothers acquire the organism in 30-50% of vaginal deliveries, producing conjunctivitis 5-14 days after birth and afebrile pneumonia at 4-12 weeks. Maternal prenatal screening and treatment prevent most cases. Treatment for neonatal disease is oral erythromycin or azithromycin for 14 days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is lymphogranuloma venereum?",
+      "answer": "Lymphogranuloma venereum (LGV) is a more invasive form of chlamydia caused by serovars L1-L3. It produces a small painless primary lesion, painful inguinal lymphadenopathy with fluctuant buboes, and chronic strictures or fistulas if untreated. Treatment requires 21 days of doxycycline — three times the duration of standard chlamydia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does chlamydia treatment cost?",
+      "answer": "Doxycycline costs USD 5-20 for a 7-day course as a generic. Most US sexual health clinics offer testing and treatment free regardless of insurance status. Single-dose azithromycin costs USD 5-15 as a generic. Total out-of-pocket cost is typically under USD 50; costs in India and other emerging markets are even lower.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a vaccine for chlamydia?",
+      "answer": "No licensed vaccine exists for chlamydia as of 2026, though several candidates are in clinical trials. Prevention currently relies on barrier protection, screening, prompt treatment, and partner notification. The first Phase 2 chlamydia vaccine trial completed in 2023 showed immunogenicity, with Phase 3 trials anticipated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I be screened for chlamydia?",
+      "answer": "CDC recommends annual screening for all sexually active women under 25, older women with risk factors, MSM at all three sites every 3-6 months, and pregnant individuals at the first prenatal visit. Anyone with new symptoms, a new partner, or a partner diagnosed with chlamydia should be tested.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I drink alcohol while taking doxycycline for chlamydia?",
+      "answer": "Moderate alcohol use is acceptable but excessive drinking can reduce doxycycline blood levels through enzyme induction and worsen gastric side effects. Avoid alcohol entirely if pelvic inflammatory disease is being treated and metronidazole is included — that combination causes a disulfiram-like reaction with nausea and flushing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does chlamydia cause back pain?",
+      "answer": "Lower back pain in women with chlamydia can signal pelvic inflammatory disease and warrants prompt evaluation. Reactive arthritis after chlamydia can cause sacroiliac joint pain, especially in HLA-B27 carriers. In men, ascending infection with epididymitis can cause flank or groin pain. Isolated upper back pain is not typical of chlamydia.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Chlamydia (Chlamydia trachomatis infection)",
+
+  "regionalNames": [
+    { "name": "क्लैमिडिया (Klamidia)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Clamidia", "region": "Spanish-speaking countries", "language": "es" }
+  ],
+
+  "searchTags": [
+    "chlamydia", "chlamydia trachomatis", "chlamydial infection",
+    "doxycycline chlamydia", "azithromycin chlamydia", "cervicitis",
+    "urethritis", "LGV", "lymphogranuloma venereum", "NAAT chlamydia",
+    "chlamydia screening"
+  ],
+
+  "symptomKeywords": [
+    "mild urethral discharge", "burning urination woman", "pelvic pain young woman",
+    "bleeding after sex", "testicular pain young man", "anal discharge MSM",
+    "asymptomatic STI"
+  ],
+
+  "metaTitle": "Chlamydia Infection: Symptoms & Treatment | aihealz",
+  "metaDescription": "Chlamydia is a common silent STI from Chlamydia trachomatis. Symptoms, NAAT testing, doxycycline treatment, PID prevention, and screening reviewed.",
+
+  "keywords": [
+    "chlamydia", "chlamydia symptoms", "chlamydia treatment", "chlamydia test",
+    "chlamydia infection", "doxycycline chlamydia", "azithromycin chlamydia",
+    "is chlamydia curable", "chlamydia in women", "chlamydia in men",
+    "asymptomatic chlamydia", "chlamydia infertility"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Workowski KA, Bachmann LH, Chan PA, et al. Sexually Transmitted Infections Treatment Guidelines, 2021. MMWR Recommendations and Reports. 2021;70(4):1-187.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34292926/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Lanjouw E, Ouburg S, de Vries HJ, Stary A, Radcliffe K, Unemo M. 2015 European guideline on the management of Chlamydia trachomatis infections. International Journal of STD & AIDS. 2016;27(5):333-348.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26538553/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Páez-Canro C, Alzate JP, González LM, et al. Antibiotics for treating urogenital Chlamydia trachomatis infection in men and non-pregnant women. Cochrane Database of Systematic Reviews. 2019;1:CD010871.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30682211/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Sexually Transmitted Infections Surveillance, 2022.",
+      "url": "https://www.cdc.gov/std/statistics/2022/default.htm",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Luetkemeyer AF, Donnell D, Dombrowski JC, et al. Postexposure Doxycycline to Prevent Bacterial Sexually Transmitted Infections. New England Journal of Medicine. 2023;388(14):1296-1306.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37018493/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Geisler WM, Uniyal A, Lee JY, et al. Azithromycin versus Doxycycline for Urogenital Chlamydia trachomatis Infection. New England Journal of Medicine. 2015;373(26):2512-2521.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26699167/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Haggerty CL, Gottlieb SL, Taylor BD, Low N, Xu F, Ness RB. Risk of sequelae after Chlamydia trachomatis genital infection in women. Journal of Infectious Diseases. 2010;201 Suppl 2:S134-155.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20470050/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

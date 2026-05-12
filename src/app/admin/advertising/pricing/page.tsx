@@ -19,11 +19,11 @@ export default async function PricingAdminPage() {
         global_footer_banner: 'Global Footer Banner',
     };
 
-    const groupedPricing = pricing.reduce((acc, p) => {
+    const groupedPricing = pricing.reduce<Record<string, typeof pricing>>((acc, p) => {
         if (!acc[p.placement]) acc[p.placement] = [];
         acc[p.placement].push(p);
         return acc;
-    }, {} as Record<string, typeof pricing>);
+    }, {});
 
     const thStyle: React.CSSProperties = {
         padding: '12px 16px', textAlign: 'left', fontFamily: 'var(--mono)',

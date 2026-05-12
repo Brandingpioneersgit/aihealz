@@ -1,0 +1,490 @@
+{
+  "_meta": {
+    "slug": "typhoid-fever",
+    "tier": 1,
+    "headTerm": "typhoid fever",
+    "longTailKeywords": [
+      "typhoid fever symptoms",
+      "typhoid fever treatment",
+      "typhoid vaccine",
+      "typhoid test",
+      "typhi widal test",
+      "typhoid in children",
+      "typhoid carrier",
+      "typhoid incubation period",
+      "azithromycin typhoid",
+      "rose spots typhoid"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against WHO 2018 Typhoid Vaccine Position Paper, Antillón 2017 PLoS NTD global burden estimates, Crump NEJM 2015 review, and current CDC Yellow Book travel recommendations."
+  },
+
+  "h1Title": "Typhoid Fever: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Typhoid fever is a systemic bacterial infection caused by Salmonella enterica serovar Typhi, transmitted through food or water contaminated with the feces of an infected person or chronic carrier. WHO estimates 9-13 million cases and 110,000-160,000 deaths globally each year, with South Asia carrying over 70% of the burden. The illness progresses through four classic weeks: a rising stepwise fever, plateau fever with relative bradycardia and rose spots, complications such as intestinal perforation in week 3, and convalescence. India alone records roughly 4.5 million cases annually; in the US the disease is rare and mostly travel-associated. Increasing extensively drug-resistant (XDR) strains in Pakistan have shifted treatment toward azithromycin and carbapenems. Conjugate typhoid vaccines now offer durable protection from age 6 months.",
+
+  "keyStats": {
+    "prevalence": "9-13 million cases globally per year (Antillón 2017, PLoS NTD); ~250-350 US travel-associated cases annually",
+    "demographics": "Highest in children 5-15 years in endemic regions; equal in male and female",
+    "avgAge": "Peak incidence in school-age children in endemic countries; travelers of any age",
+    "globalCases": "Roughly 11 million annual cases; 110,000-160,000 deaths; over 70% in South Asia"
+  },
+
+  "definition": "Typhoid fever (ICD-10: A01.0) is an acute systemic illness caused by the human-restricted gram-negative bacillus Salmonella enterica serovar Typhi, transmitted via the fecal-oral route through contaminated food and water. The bacterium is ingested, survives gastric acidity, invades small intestinal Peyer patches via M cells, and is taken up by macrophages within which it replicates and disseminates through the reticuloendothelial system to the liver, spleen, bone marrow, and gallbladder. After an incubation of 7-21 days (typically 8-14), illness begins with a stepwise daily rise in fever (Wunderlich pattern), followed by sustained fever with relative bradycardia, hepatosplenomegaly, rose spots, and absolute eosinopenia. Without treatment, complications emerge in week 3 — intestinal perforation, intestinal hemorrhage, encephalopathy (\"typhoid state\"), myocarditis, and shock — and mortality reaches 10-30%. Antibiotic therapy reduces mortality to under 1%. Around 1-5% of treated patients become chronic biliary carriers and shed S. Typhi in stool for over one year, sustaining community transmission. Paratyphoid fever, caused by S. Paratyphi A, B, or C, produces a similar but generally milder illness and is sometimes grouped under enteric fever. Typhoid fever is managed by infectious disease specialists and primary care in endemic regions; in non-endemic countries the diagnosis is travel-related and warrants ID input.",
+
+  "typesClassification": [
+    { "type": "Uncomplicated typhoid fever", "description": "Classic clinical course over 4 weeks with stepwise fever, relative bradycardia, abdominal pain, and rose spots; responds to antibiotic therapy without organ-threatening complications." },
+    { "type": "Complicated typhoid fever", "description": "Develops in 10-15% of untreated cases, classically in week 3. Includes intestinal perforation, intestinal hemorrhage, typhoid encephalopathy, myocarditis, hepatitis, and septic shock." },
+    { "type": "Paratyphoid fever (A, B, C)", "description": "Caused by S. Paratyphi serovars. Clinically similar but generally milder; serovar A increasingly common in South Asia and accounts for 20-25% of enteric fever in some regions." },
+    { "type": "Multidrug-resistant (MDR) typhoid", "description": "Resistant to ampicillin, chloramphenicol, and trimethoprim-sulfamethoxazole — the historic first-line drugs. Dominant in South Asia since the 1990s." },
+    { "type": "Extensively drug-resistant (XDR) typhoid", "description": "Emerged in Pakistan in 2016; resistant to MDR drugs plus fluoroquinolones and third-generation cephalosporins. Susceptible to azithromycin and carbapenems. Now exported globally through travel." },
+    { "type": "Chronic typhoid carrier state", "description": "Asymptomatic shedding of S. Typhi in stool or urine for more than 12 months after acute infection. Affects 1-5% of treated cases; associated with cholelithiasis and chronic biliary infection." }
+  ],
+
+  "primarySymptoms": [
+    "Stepwise rising fever each day during the first week, eventually reaching 39-40°C, with daily afternoon spikes and minimal morning relief.",
+    "Relative bradycardia (pulse-temperature dissociation) — the heart rate is lower than expected for the fever (a 1°C rise typically raises pulse 10 bpm; in typhoid, the rise is half that).",
+    "Severe headache, particularly frontal, and generalized malaise from the first day of fever.",
+    "Abdominal pain and tenderness, sometimes diffuse, sometimes localized to the right lower quadrant, in week 2-3.",
+    "Constipation early (more common in adults) or diarrhea later (more common in children) — both can occur, classically described as \"pea-soup\" stool.",
+    "Hepatosplenomegaly developing in week 2 — palpable in 30-60% of cases.",
+    "Rose spots — sparse 2-4 mm pink, blanching macules on the trunk in week 2, present in 30% of light-skinned patients and harder to see on darker skin.",
+    "Coated tongue with red edges (\"typhoid tongue\") — a classic but inconsistent finding.",
+    "Confusion, apathy, or delirium (\"typhoid state\") in week 3 of untreated illness, especially in severe cases.",
+    "Cough and bronchitis-like respiratory symptoms in 30-50% of patients during the first 1-2 weeks."
+  ],
+
+  "earlyWarningSigns": [
+    "Persistent daily fever for more than 5 days after travel to South Asia, sub-Saharan Africa, or Latin America",
+    "Fever with severe headache, abdominal pain, and constipation following recent return from an endemic country",
+    "Pulse rate lower than expected for the fever (relative bradycardia) in a traveler",
+    "Household member with confirmed typhoid or chronic carrier",
+    "Acute febrile illness in a food handler with biliary disease history"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe abdominal pain with rigidity in week 3 of illness — possible intestinal perforation requiring emergency laparotomy",
+    "Major lower gastrointestinal bleeding — intestinal hemorrhage in week 3 of untreated typhoid",
+    "Encephalopathy, severe lethargy, or coma (\"typhoid state\") — life-threatening; requires ICU-level care",
+    "New chest pain, dyspnea, or signs of heart failure — possible typhoid myocarditis",
+    "Septic shock with hypotension and altered mental status — ICU admission and IV antibiotics within 1 hour",
+    "Pregnancy with confirmed typhoid — risk of preterm labor, fetal loss; admit for IV therapy"
+  ],
+
+  "causes": [
+    {
+      "cause": "Ingestion of food or water contaminated with S. Typhi",
+      "description": "The dominant transmission route. Drinking water contaminated by sewage, untreated municipal supplies, or street food and beverages prepared by carriers account for the majority of cases. Infectious dose is approximately 10⁵-10⁹ organisms."
+    },
+    {
+      "cause": "Direct contact with a chronic typhoid carrier",
+      "description": "Carriers shed S. Typhi in stool or urine for over a year without symptoms. Famous example: Mary Mallon (Typhoid Mary) infected at least 51 people in early 1900s New York. Carriers in food-handling roles are a public health priority and can transmit despite hand hygiene."
+    },
+    {
+      "cause": "Sewage contamination of produce and shellfish",
+      "description": "Vegetables irrigated with untreated wastewater and shellfish harvested from contaminated waters can carry S. Typhi. Raw or undercooked shellfish are well-documented vehicles in endemic outbreaks."
+    },
+    {
+      "cause": "Travel to endemic regions without vaccination",
+      "description": "Travel to South Asia (India, Pakistan, Bangladesh, Nepal), sub-Saharan Africa, Southeast Asia, and parts of Latin America without typhoid vaccination accounts for over 80% of US cases. Risk is particularly high among travelers visiting friends and relatives who eat at home rather than tourist venues."
+    },
+    {
+      "cause": "Inadequate sewage and water infrastructure",
+      "description": "Endemic transmission persists where untreated sewage contaminates drinking water sources. WHO estimates that universal access to safe water and sanitation would eliminate ~70% of global typhoid burden."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Residence in or travel to South Asia", "category": "environmental", "description": "India, Pakistan, Bangladesh, and Nepal carry over 70% of global typhoid cases. Travel to these regions without vaccination is the dominant US risk factor, especially among travelers visiting friends and relatives." },
+    { "factor": "Age 5-15 years in endemic countries", "category": "non-modifiable", "description": "Peak incidence in school-age children in endemic regions; over 50% of cases occur in this age band per Antillón 2017 estimates." },
+    { "factor": "Unsafe water source", "category": "environmental", "description": "Reliance on untreated, unboiled, or unfiltered water from public or private sources increases risk multi-fold. WASH (water, sanitation, hygiene) interventions reduce incidence dramatically." },
+    { "factor": "Cholelithiasis and chronic biliary disease", "category": "non-modifiable", "description": "Predisposes to chronic carrier state after acute infection because S. Typhi colonizes gallstones and bile. Approximately 5% of treated patients become carriers; carriage approaches 25% in those with biliary stones." },
+    { "factor": "Household contact with a confirmed case or carrier", "category": "environmental", "description": "Close-contact transmission is well documented. Public health investigation should screen household contacts and food handlers." },
+    { "factor": "HIV infection or other immunosuppression", "category": "non-modifiable", "description": "Higher risk of severe disease, prolonged carriage, and treatment failure. Routine prophylactic vaccination is recommended in some endemic-area HIV cohorts." },
+    { "factor": "Visiting friends and relatives (VFR) travel pattern", "category": "modifiable", "description": "VFR travelers have 3-6 times the typhoid risk of tourist travelers, due to longer stays, more home-cooked meals, and less attention to pre-travel vaccination." },
+    { "factor": "Pregnancy", "category": "non-modifiable", "description": "Pregnant patients have higher rates of complications including preterm labor and fetal loss. Choice of antibiotics is restricted (avoid fluoroquinolones)." }
+  ],
+
+  "affectedDemographics": [
+    "Global estimate: 9-13 million cases annually with 110,000-160,000 deaths (Antillón 2017)",
+    "South Asia: ~70% of global burden; India accounts for ~4.5 million annual cases",
+    "Sub-Saharan Africa: 0.5-1 million annual cases; emerging XDR/MDR strains in Malawi, Kenya, DRC",
+    "Pakistan: epicenter of XDR typhoid since 2016 outbreak in Sindh, with cases exported globally",
+    "US: 250-350 cases annually, 85% travel-associated; rare endemic cases mostly from chronic carriers"
+  ],
+
+  "diagnosisOverview": "Diagnosis combines clinical suspicion based on travel and exposure history with microbiologic confirmation. Blood culture is the gold standard during the first week of illness, with sensitivity 70-90% in the first week, falling to 30-40% by week 3. Bone marrow culture (sensitivity 90-95%) outperforms blood culture, especially in patients who have received antibiotics, but is invasive and reserved for diagnostic difficulty. Stool and urine cultures are positive in 30-50% of cases, more often in week 2-4. Multiple cultures (3+ samples) increase yield. Serologic tests (Widal test) have limited sensitivity and specificity, particularly in endemic regions where baseline titers are elevated; the WHO no longer recommends Widal as the primary diagnostic test, although it remains in use in many countries due to cost. Rapid diagnostic tests (Typhidot, Tubex) detect IgM antibodies and provide faster results but have variable sensitivity. Newer LAMP and PCR-based assays are emerging in research settings. Complete blood count typically shows leukopenia or normal WBC with absolute eosinopenia (a useful clue when present), normocytic anemia, and thrombocytopenia. C-reactive protein and ferritin are elevated. Transaminases are mildly raised. Differential diagnoses include malaria (always test in returned travelers), dengue, rickettsial infections, leptospirosis, viral hepatitis, miliary tuberculosis, brucellosis, amoebic liver abscess, and infectious mononucleosis. Any returned traveler with fever for more than 5 days warrants blood cultures and travel-targeted differential workup. Public health reporting is mandatory in all US states because of carrier state and outbreak implications. Susceptibility testing is essential — empiric therapy must reflect local resistance patterns, with MDR and XDR strains requiring azithromycin or carbapenem coverage.",
+
+  "diagnosticTests": [
+    {
+      "test": "Blood culture",
+      "purpose": "Gold standard for typhoid diagnosis. Sensitivity 70-90% in week 1, declining to 30-40% by week 3. Multiple cultures (2-3 sets from different time points) increase yield substantially.",
+      "whatToExpect": "Two to three blood culture sets drawn from separate venipunctures, ideally before antibiotics. Results positive in 1-3 days; final identification and susceptibility in 4-5 days."
+    },
+    {
+      "test": "Bone marrow culture",
+      "purpose": "Most sensitive single test (90-95%), especially valuable when blood cultures are negative or after empiric antibiotics. Reserved for diagnostic uncertainty.",
+      "whatToExpect": "Bone marrow aspiration from the posterior iliac crest under local anesthetic; performed by hematology or internal medicine. Takes 15-20 minutes."
+    },
+    {
+      "test": "Stool and urine cultures",
+      "purpose": "Positive in 30-50% of cases, peaking in week 2-4. Useful for chronic carrier identification and public health follow-up.",
+      "whatToExpect": "Stool sample collection at home and urine sample at clinic. Results return in 2-5 days."
+    },
+    {
+      "test": "Widal serologic test",
+      "purpose": "Detects agglutinating antibodies to S. Typhi O and H antigens. Sensitivity and specificity are limited (60-70% and 70-80% respectively), particularly in endemic regions. Paired acute/convalescent sera improve yield but delay diagnosis.",
+      "whatToExpect": "Standard blood draw. Same-day results in most clinical labs. Interpret with caution; WHO no longer recommends as the primary test."
+    },
+    {
+      "test": "Rapid diagnostic tests (Typhidot, Tubex)",
+      "purpose": "Detect IgM antibodies to S. Typhi-specific antigens. Sensitivity 70-80%, specificity 85-90%. Useful in resource-limited settings where culture is unavailable.",
+      "whatToExpect": "Finger-prick blood; results in 10-30 minutes."
+    },
+    {
+      "test": "Complete blood count with differential",
+      "purpose": "Typically shows leukopenia or normal WBC with absolute eosinopenia, mild anemia, and thrombocytopenia — a useful supportive pattern.",
+      "whatToExpect": "Standard blood draw with results in hours."
+    },
+    {
+      "test": "Liver function tests and CRP",
+      "purpose": "Transaminases mildly elevated (2-5x normal); CRP and ferritin markedly elevated; bilirubin can rise in severe cases.",
+      "whatToExpect": "Routine venous blood sample; same-day results."
+    },
+    {
+      "test": "Antibiotic susceptibility testing",
+      "purpose": "Essential given rising MDR and XDR strains. Determines whether ciprofloxacin, ceftriaxone, azithromycin, or carbapenem is appropriate.",
+      "whatToExpect": "Performed automatically by the lab on any positive isolate; results in 1-2 days after culture identification."
+    }
+  ],
+
+  "treatmentOverview": "Treatment is empiric antimicrobial therapy started promptly when typhoid is suspected and travel-history-appropriate, with adjustment once culture and susceptibility results return. Choice of empiric regimen depends on geographic exposure and local resistance patterns. Azithromycin 1 g loading dose then 500 mg daily for 7-14 days (or 20 mg/kg/day in children) is the WHO-recommended first-line for uncomplicated typhoid in regions with MDR or XDR strains. Ceftriaxone 2 g IV daily for 10-14 days remains first-line for severe disease or where XDR has not emerged. Carbapenems (meropenem 1 g IV every 8 hours) are reserved for XDR strains and severe complicated cases. Fluoroquinolones (ciprofloxacin 500 mg twice daily for 7-10 days) were the gold standard but are now reserved for fully susceptible strains, which are uncommon in endemic regions. Combination of azithromycin plus a carbapenem is sometimes used in severe XDR disease. Defervescence typically occurs within 3-5 days of effective therapy; persistent fever beyond 7 days suggests resistance or complication. Dexamethasone (high-dose, 3 mg/kg load then 1 mg/kg every 6 hours for 8 doses) reduces mortality from 56% to 10% in severe typhoid with shock or altered mental status (Hoffman 1984 trial). Supportive care includes fluid resuscitation, antipyretics, and meticulous monitoring for week-3 complications. Intestinal perforation requires urgent surgical exploration and repair plus antibiotic continuation. Intestinal hemorrhage is managed conservatively in most cases with blood products and monitoring. Chronic carriers (positive stool or urine culture beyond 12 months) are treated with 4-6 weeks of high-dose ciprofloxacin or amoxicillin; failure may require cholecystectomy if gallstones harbor S. Typhi. All cases are reportable to public health. Sexual partners and household contacts are screened. Food handlers are excluded from work pending two negative stool cultures 48 hours apart. The 2017 WHO recommendation supporting typhoid conjugate vaccines (TCV) at 6-9 months of age in endemic countries marks a major prevention advance.",
+
+  "medicalTreatments": [
+    {
+      "name": "Azithromycin 1 g loading then 500 mg PO daily × 7-14 days (children: 20 mg/kg/day)",
+      "description": "WHO first-line for uncomplicated typhoid in regions with MDR or XDR strains. Active against virtually all isolates including XDR. Well-tolerated; safe in pregnancy and children.",
+      "effectiveness": "Clinical cure in 90-95% of cases; faster defervescence than fluoroquinolones in head-to-head trials. Relapse rate under 5%."
+    },
+    {
+      "name": "Ceftriaxone 2 g IV daily × 10-14 days",
+      "description": "First-line for severe or complicated typhoid where XDR has not emerged. Excellent tissue and CSF penetration. Often used as empiric therapy in hospitalized patients pending susceptibility.",
+      "effectiveness": "Clinical cure in 90-95% of susceptible cases; defervescence within 5-7 days."
+    },
+    {
+      "name": "Ciprofloxacin 500 mg PO twice daily × 7-10 days (susceptible strains)",
+      "description": "Historic gold standard but now limited to strains documented susceptible. Avoid empirically in patients from South Asia where fluoroquinolone resistance exceeds 80%.",
+      "effectiveness": "Clinical cure in 95% of susceptible cases; treatment failure 60-80% in MDR/XDR strains."
+    },
+    {
+      "name": "Meropenem 1 g IV every 8 hours × 10-14 days (XDR typhoid)",
+      "description": "Reserved for XDR strains and severe complicated cases. Often combined with azithromycin in critically ill patients. Currently the most reliable agent for XDR strains.",
+      "effectiveness": "Clinical cure in 90-95% of XDR cases; the only consistently active class for these strains."
+    },
+    {
+      "name": "Dexamethasone 3 mg/kg IV loading then 1 mg/kg every 6 hours × 8 doses (severe typhoid)",
+      "description": "Indicated for severe typhoid with shock, encephalopathy, or coma. Hoffman 1984 trial showed mortality reduction from 56% to 10%. Used alongside antibiotic therapy.",
+      "effectiveness": "Reduces mortality from 56% to 10% in severe typhoid with shock or altered mental status."
+    },
+    {
+      "name": "Cefixime 20 mg/kg/day PO divided BID × 14 days (children, outpatient)",
+      "description": "Oral cephalosporin alternative for outpatient management of children with uncomplicated typhoid where susceptibility is documented. Lower efficacy than ceftriaxone.",
+      "effectiveness": "Clinical cure in 80-90%; slower defervescence than IV cephalosporins."
+    },
+    {
+      "name": "Surgical repair of intestinal perforation",
+      "description": "Required for week-3 ileal perforation. Primary closure for small defects; resection with anastomosis or ileostomy for large or multiple perforations.",
+      "effectiveness": "Survival 60-80% in centers experienced with typhoid perforation; better with early operation."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Laparotomy for intestinal perforation",
+      "description": "Required surgical emergency in week 3 of untreated typhoid. Primary closure or resection of perforated ileal segment, plus continued antibiotic therapy.",
+      "successRate": "Survival 60-80% with early operation; mortality rises sharply with delay beyond 24 hours."
+    },
+    {
+      "name": "Cholecystectomy for chronic carrier state",
+      "description": "Considered for chronic carriers with gallstones when prolonged antibiotic therapy fails. Removes the biliary reservoir of S. Typhi.",
+      "successRate": "Eradication of carriage in 75-90% of cases."
+    }
+  ],
+
+  "alternativeTreatments": [],
+
+  "whySeeSpecialist": "Infectious disease consultation is recommended for any confirmed typhoid case in a non-endemic country, suspected MDR or XDR infection, severe or complicated disease, treatment failure, chronic carrier management, and pregnancy. In endemic countries, primary care and pediatrics manage most uncomplicated cases; surgical and ID input is added for complications.",
+
+  "doctorSelectionGuide": "Choose a clinician with current knowledge of regional resistance patterns and access to blood culture and susceptibility testing. In travel medicine, a specialist familiar with the CDC Yellow Book and WHO travel advisories provides optimal pre-travel vaccination and post-travel evaluation. Endemic-area patients benefit from continuity care that can address chronic carrier evaluation if recurrence occurs.",
+
+  "preventionStrategies": [
+    "Receive typhoid vaccination before travel to endemic regions — Vi polysaccharide (Typhim Vi, single dose, 2-3 year protection) or oral Ty21a (4 capsules over 7 days, 5-year protection), or typhoid conjugate vaccine (TCV) in endemic country children",
+    "Drink only bottled, boiled, or chemically treated water in endemic regions, and avoid ice from untrusted sources",
+    "Eat only thoroughly cooked food served hot; avoid raw vegetables, salads, and street food in high-incidence areas",
+    "Choose fruit you peel yourself and avoid unpasteurized dairy products",
+    "Wash hands with soap and water before eating and after using the toilet; alcohol gel does not reliably kill S. Typhi",
+    "Identify and screen chronic carriers in food-handling and healthcare roles in endemic regions",
+    "Improve water and sanitation infrastructure — the single most cost-effective long-term prevention measure",
+    "Universal infant TCV at 6-9 months in endemic countries — recommended by WHO since 2017"
+  ],
+
+  "lifestyleModifications": [
+    "Complete the full antibiotic course exactly as prescribed even after fever resolves — incomplete therapy promotes relapse and chronic carriage",
+    "Avoid handling food for others until two negative stool cultures 48 hours apart are documented after treatment",
+    "Maintain rigorous hand hygiene during and for several weeks after recovery",
+    "Drink plenty of fluids; the febrile illness causes significant fluid loss",
+    "Eat small frequent meals as appetite returns; avoid high-fiber foods during the first 2 weeks of recovery to reduce mechanical stress on inflamed bowel",
+    "Disclose typhoid history to future healthcare providers — informs evaluation of future febrile illness"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate hydration with safe water, oral rehydration solution, and clear broths during acute illness",
+      "Small frequent low-fiber meals during recovery — rice, plain bread, banana, well-cooked vegetables",
+      "Soft, easily digested protein (eggs, fish, chicken) once tolerating solid food",
+      "Yogurt with live cultures may help restore gut microbiota after antibiotic therapy",
+      "Iron-rich foods during convalescence to recover from anemia"
+    ],
+    "avoid": [
+      "Raw vegetables, salads, and unpeeled fruits in endemic regions and during recovery",
+      "Spicy or oily foods during the acute illness — may worsen abdominal symptoms",
+      "Alcohol during antibiotic therapy and for 2 weeks after recovery",
+      "High-fiber foods (whole grains, raw vegetables, popcorn) during the first 2-3 weeks of recovery — mechanical stress on inflamed bowel raises perforation risk"
+    ]
+  },
+
+  "exerciseGuidelines": "Strict bed rest during the febrile phase. Gradually return to normal activity over 2-4 weeks after defervescence. Avoid heavy lifting and strenuous exercise for 4 weeks because of perforation risk in the inflamed terminal ileum.",
+
+  "dailyManagement": [
+    "Take temperature twice daily during illness and for 2 weeks after — relapse occurs in 5-15% of cases despite initial cure",
+    "Complete the full antibiotic course exactly as prescribed",
+    "Wash hands before every meal and after every bowel movement, indefinitely if you are a carrier",
+    "Drink at least 2-3 liters of safe water daily during recovery, more in hot climates",
+    "Return promptly for evaluation if fever recurs, abdominal pain worsens, or rectal bleeding develops",
+    "Provide stool samples 4-6 weeks after recovery to document clearance, especially for food handlers and healthcare workers"
+  ],
+
+  "prognosis": "With appropriate antibiotic therapy, mortality is under 1% in healthy adults and 1-3% in children. Untreated typhoid carries 10-30% mortality, almost all from week-3 complications: intestinal perforation, hemorrhage, encephalopathy, and shock. Defervescence typically occurs within 3-5 days of effective antibiotics; persistent fever beyond 7 days suggests resistance, complication, or alternative diagnosis. Relapse occurs in 5-15% of cases within 1-3 weeks of initial cure, more common after short antibiotic courses and with chloramphenicol historically. Chronic carrier state develops in 1-5% of treated patients, more common in women, older adults, and patients with cholelithiasis (~25% carrier rate in this subset). Carriers shed S. Typhi for over a year and remain a source of community transmission. Intestinal perforation carries 10-40% mortality in resource-limited settings, falling to 5-15% in centers experienced with prompt surgical management. Long-term sequelae are rare after uncomplicated disease. The dominant prognostic factors are time from symptom onset to effective antibiotics, presence of complications at presentation, age, comorbidities, and whether the strain is susceptible to first-line empiric therapy. The introduction of typhoid conjugate vaccines (Typbar TCV) in endemic countries has shown 80-90% efficacy in trials and is expected to reduce population-level mortality substantially.",
+
+  "recoveryTimeline": "Fever defervesces within 3-5 days of effective antibiotic therapy. Appetite returns over 7-14 days. Hepatosplenomegaly resolves over 2-4 weeks. Full energy returns over 4-6 weeks. Stool shedding continues for an average of 6-8 weeks in treated cases; chronic carriers shed for over a year. Follow-up stool cultures at 4-6 weeks document clearance for food handlers and healthcare workers. Relapse, if it occurs, peaks 1-3 weeks after antibiotic completion and warrants repeat blood cultures.",
+
+  "complications": [
+    "Intestinal perforation — classically in week 3, mortality 10-40% even with surgery",
+    "Intestinal hemorrhage — visible rectal bleeding in week 3, usually managed conservatively",
+    "Typhoid encephalopathy (\"typhoid state\") with delirium, lethargy, or coma — mortality risk requires ICU care and dexamethasone",
+    "Myocarditis and arrhythmias",
+    "Hepatitis with markedly elevated transaminases and jaundice",
+    "Chronic biliary carriage with cholelithiasis — community transmission risk",
+    "Relapse in 5-15% of treated cases, requiring repeat antibiotic course",
+    "Osteomyelitis, septic arthritis, and meningitis — rare metastatic complications"
+  ],
+
+  "supportResources": [
+    { "name": "CDC — Typhoid Fever Resources", "url": "https://www.cdc.gov/typhoid-fever/index.html", "description": "Authoritative US travel and clinical resources." },
+    { "name": "WHO — Typhoid Fact Sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid", "description": "Global epidemiology, vaccine recommendations, and prevention." },
+    { "name": "CDC Yellow Book — Typhoid and Paratyphoid", "url": "https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/typhoid-and-paratyphoid-fever", "description": "US travel medicine reference and vaccination guidance." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "malaria", "name": "Malaria", "keyDifference": "Malaria in a returned traveler presents with fever, chills, and rigors that classically come in distinct paroxysms every 24-72 hours rather than the stepwise fever of typhoid. Blood smear or rapid test confirms malaria; both should be tested in any traveler with fever from an endemic region." },
+    { "slug": "dengue-fever", "name": "Dengue Fever", "keyDifference": "Dengue causes high fever, severe headache, retro-orbital pain, myalgia, and a different rash, with thrombocytopenia and leukopenia. Incubation is 4-10 days, shorter than typhoid. Dengue NS1 antigen and serology distinguish; both can occur in the same traveler." },
+    { "slug": "salmonella-infection", "name": "Non-typhoidal Salmonella", "keyDifference": "Non-typhoidal salmonella causes acute gastroenteritis with diarrhea, vomiting, and fever resolving in 4-7 days. Typhoid is a systemic febrile illness with relative bradycardia, rose spots, and a 3-4 week clinical course. Blood culture and serotyping distinguish." },
+    { "slug": "hepatitis-b", "name": "Acute Viral Hepatitis", "keyDifference": "Hepatitis A or E in a returned traveler causes fever, jaundice, and markedly elevated transaminases; typhoid causes only mild transaminase elevation. Hepatitis serology and clinical pattern distinguish; both warrant testing in a febrile traveler with hepatic features." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "malaria", "name": "Malaria" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "salmonella-infection", "name": "Salmonella Infection (non-typhoidal)", "relevance": "Same Salmonella genus but distinct serovars and clinical syndrome." },
+    { "slug": "malaria", "name": "Malaria", "relevance": "Shares geographic distribution and presents as undifferentiated fever in returned travelers; bundled testing recommended." },
+    { "slug": "dengue-fever", "name": "Dengue Fever", "relevance": "Endemic in many of the same regions; common differential diagnosis in febrile returned traveler." },
+    { "slug": "infectious-gastroenteritis-and-colitis-unspecified-a09", "name": "Infectious Gastroenteritis", "relevance": "Both arise from fecal-oral transmission and contaminated food/water sources." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "Co-infection raises typhoid risk and severity; HIV testing recommended at typhoid diagnosis in endemic regions." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is typhoid fever?",
+      "answer": "Typhoid fever is a systemic bacterial illness caused by Salmonella enterica serovar Typhi, transmitted through food or water contaminated by an infected person or chronic carrier. It causes prolonged fever, headache, abdominal pain, and characteristic rose spots, and without antibiotic treatment carries 10-30% mortality from week-3 intestinal complications.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is typhoid fever spread?",
+      "answer": "Typhoid spreads through the fecal-oral route. Drinking water or eating food contaminated with the feces or urine of an infected person or chronic carrier is the dominant transmission route. Direct person-to-person spread occurs through inadequate hand hygiene. The bacterium is restricted to humans — there is no animal reservoir.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does typhoid fever last?",
+      "answer": "Untreated typhoid follows a classic four-week course: week 1 of rising fever, week 2 of plateau fever with rose spots and hepatosplenomegaly, week 3 of complications, and week 4 of convalescence. With appropriate antibiotics, fever resolves in 3-5 days and full recovery takes 4-6 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are rose spots in typhoid?",
+      "answer": "Rose spots are sparse, 2-4 mm pink, blanching macules on the trunk that appear during week 2 of typhoid. They occur in roughly 30% of light-skinned patients and are harder to detect on darker skin. They reflect bacterial embolization to skin capillaries and resolve over several days regardless of treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a vaccine for typhoid?",
+      "answer": "Yes. Three main vaccines exist: Vi polysaccharide (Typhim Vi, single injection, 2-3 year protection), oral Ty21a (4 capsules over 7 days, 5-year protection), and typhoid conjugate vaccine (TCV, single injection, longer durability and now recommended by WHO from age 6-9 months in endemic countries). Efficacy 60-90% depending on vaccine and population.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is typhoid fever diagnosed?",
+      "answer": "Blood culture is the gold standard, with sensitivity 70-90% in week 1 falling to 30-40% by week 3. Bone marrow culture is more sensitive (90-95%) but invasive. Stool and urine cultures are useful in week 2-4. Widal serology is widely used but limited by sensitivity and specificity, especially in endemic regions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best antibiotic for typhoid?",
+      "answer": "Choice depends on local resistance patterns. Azithromycin and ceftriaxone are WHO-recommended first-line for most regions. Fluoroquinolones (ciprofloxacin) are reserved for susceptible strains. Carbapenems (meropenem) treat XDR typhoid emerging from Pakistan. Empiric therapy must reflect travel history and local resistance data.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is XDR typhoid?",
+      "answer": "Extensively drug-resistant (XDR) typhoid is a strain resistant to first-line antibiotics (ampicillin, chloramphenicol, trimethoprim-sulfamethoxazole), fluoroquinolones, and third-generation cephalosporins. It emerged in Pakistan in 2016 and has been exported globally through travel. Treatment requires azithromycin or carbapenems.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can typhoid kill you?",
+      "answer": "Untreated typhoid has a mortality of 10-30%, mostly from week-3 intestinal perforation, hemorrhage, encephalopathy, and shock. With appropriate antibiotic therapy, mortality falls to under 1%. WHO estimates 110,000-160,000 typhoid deaths globally each year, almost entirely in regions with limited access to care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a typhoid carrier?",
+      "answer": "A chronic typhoid carrier is a person who continues to shed S. Typhi in stool or urine for more than 12 months after acute infection. About 1-5% of treated patients become carriers, with higher rates in women, older adults, and those with gallstones. Carriers can transmit the bacterium for years and are a major public health concern.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Where is typhoid fever common?",
+      "answer": "Over 70% of global typhoid cases occur in South Asia (India, Pakistan, Bangladesh, Nepal). Significant burden also exists in Southeast Asia, sub-Saharan Africa, and parts of Latin America. In the US, almost all cases are travel-associated, with 250-350 annual cases reported to CDC.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does typhoid take to show up after exposure?",
+      "answer": "The incubation period is typically 7-21 days, most commonly 8-14 days, after ingesting contaminated food or water. The exact incubation depends on the inoculum and host factors. Returned travelers with fever beginning more than a week after return from an endemic region should be tested for typhoid.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can typhoid be cured?",
+      "answer": "Yes. Appropriate antibiotics cure over 95% of typhoid cases when started early. Treatment duration is 7-14 days depending on agent and severity. Chronic carrier state develops in 1-5% of treated patients and may require prolonged antibiotics or cholecystectomy for biliary clearance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get typhoid?",
+      "answer": "Yes. Peak incidence in endemic countries occurs in children 5-15 years old. Symptoms can be more severe in young children, and diagnosis can be delayed by atypical presentation. Conjugate vaccines (Typbar TCV) now provide effective protection from 6-9 months of age and are recommended by WHO in endemic settings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does typhoid cause diarrhea or constipation?",
+      "answer": "Both can occur. Constipation is more typical in adults during week 1-2; diarrhea (classically described as \"pea-soup\" stool) is more common in children and in week 3. Either pattern in a febrile traveler returned from an endemic region warrants typhoid testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I avoid food in India to prevent typhoid?",
+      "answer": "Travel to South Asia is the dominant US typhoid risk factor. Recommendations: drink only bottled, boiled, or treated water; avoid ice and street drinks; eat only thoroughly cooked food served hot; peel fruit yourself; avoid raw salads and unpasteurized dairy. Vaccination before travel is strongly recommended for trips of any duration.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How effective is the typhoid vaccine?",
+      "answer": "Vi polysaccharide vaccine provides 50-70% protection for 2-3 years. Oral Ty21a provides 50-80% for 5-7 years. Newer typhoid conjugate vaccine (TCV) provides 80-90% efficacy in trials and is licensed for infants from 6 months of age. Vaccination is recommended before travel to endemic regions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you get typhoid twice?",
+      "answer": "Yes. Natural infection provides incomplete immunity, and second episodes are documented. Relapse within 1-3 weeks of treatment occurs in 5-15% of cases due to inadequate antibiotic eradication. Reinfection from a new exposure is less common but possible. Vaccination remains the most reliable preventive.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is typhoid fever the same as food poisoning?",
+      "answer": "No. Typhoid fever is a systemic illness caused by S. Typhi or S. Paratyphi with a 7-21 day incubation and a 3-4 week course. Most food poisoning is acute gastroenteritis from non-typhoidal Salmonella, Staphylococcus, Bacillus, or norovirus, with onset hours after exposure and resolution in days. Tests and treatment differ.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Widal test?",
+      "answer": "The Widal test detects agglutinating antibodies in patient serum against S. Typhi O and H antigens. It is widely used in endemic regions because it is cheap and rapid. Limitations include low sensitivity early in illness, false positives from previous infection or vaccination, and false negatives in low-titer cases. WHO no longer recommends it as the primary diagnostic test.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnant women take antibiotics for typhoid?",
+      "answer": "Yes. Ceftriaxone and azithromycin are safe in pregnancy and are the first-line choices. Fluoroquinolones are avoided. Pregnancy carries a higher risk of preterm labor and fetal loss with typhoid, so prompt treatment is essential. Hospital admission for intravenous ceftriaxone is often recommended.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Typhoid fever (enteric fever from Salmonella Typhi)",
+
+  "regionalNames": [
+    { "name": "मियादी बुखार (Miyadi Bukhar)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Motijhara", "region": "India (Bengali)", "language": "bn" },
+    { "name": "Fiebre tifoidea", "region": "Spanish-speaking countries", "language": "es" }
+  ],
+
+  "searchTags": [
+    "typhoid fever", "enteric fever", "salmonella typhi", "typhoid", "typhi",
+    "Widal test", "rose spots", "typhoid carrier", "typhoid vaccine",
+    "XDR typhoid", "MDR typhoid", "Typhim Vi", "Ty21a", "TCV"
+  ],
+
+  "symptomKeywords": [
+    "prolonged fever traveler", "stepwise fever", "fever and constipation",
+    "headache abdominal pain fever", "rose spots trunk", "returned traveler fever",
+    "fever after India travel"
+  ],
+
+  "metaTitle": "Typhoid Fever: Symptoms & Treatment | aihealz",
+  "metaDescription": "Typhoid fever from Salmonella Typhi — stepwise fever, rose spots, complications. Symptoms, blood culture, vaccines, and antibiotic treatment reviewed.",
+
+  "keywords": [
+    "typhoid fever", "typhoid symptoms", "typhoid treatment", "typhoid vaccine",
+    "salmonella typhi", "typhoid test", "Widal test", "rose spots", "enteric fever",
+    "typhoid carrier", "XDR typhoid", "typhoid in children"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Crump JA, Sjölund-Karlsson M, Gordon MA, Parry CM. Epidemiology, Clinical Presentation, Laboratory Diagnosis, Antimicrobial Resistance, and Antimicrobial Management of Invasive Salmonella Infections. Clinical Microbiology Reviews. 2015;28(4):901-937.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26180063/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Antillón M, Warren JL, Crawford FW, et al. The Burden of Typhoid Fever in Low- and Middle-Income Countries: A Meta-Regression Approach. PLoS Neglected Tropical Diseases. 2017;11(2):e0005376.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28241011/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "World Health Organization. Typhoid Vaccines: WHO Position Paper, March 2018. Weekly Epidemiological Record. 2018;93(13):153-172.",
+      "url": "https://www.who.int/publications/i/item/who-wer9313",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Parry CM, Hien TT, Dougan G, White NJ, Farrar JJ. Typhoid fever. New England Journal of Medicine. 2002;347(22):1770-1782.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12456854/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Klemm EJ, Shakoor S, Page AJ, et al. Emergence of an Extensively Drug-Resistant Salmonella enterica Serovar Typhi Clone Harboring a Promiscuous Plasmid Encoding Resistance to Fluoroquinolones and Third-Generation Cephalosporins. mBio. 2018;9(1):e00105-18.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29463654/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Shakya M, Voysey M, Theiss-Nyland K, et al. Efficacy of typhoid conjugate vaccine in Nepal: final results of a phase 3, randomised, controlled trial. Lancet Global Health. 2021;9(11):e1561-e1568.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34678198/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Hoffman SL, Punjabi NH, Kumala S, et al. Reduction of mortality in chloramphenicol-treated severe typhoid fever by high-dose dexamethasone. New England Journal of Medicine. 1984;310(2):82-88.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6361558/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

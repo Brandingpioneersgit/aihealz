@@ -12,14 +12,16 @@ import {
 import Link from 'next/link';
 
 /**
- * ChatGate
+ * ChatGate (v4 Bureau)
  *
  * Blocks any AI chat UI until the visitor has submitted the lead form
  * (name, email, phone, location, doctor/patient/other). After registration,
  * passes through to children. Tracks remaining daily quota.
  *
  * When a child fetch returns HTTP 429 with `reason === 'limit_reached'`,
- * call `useChatLead().onLimitHit()` to swap the chat surface for a booking CTA.
+ * dispatch `window.dispatchEvent(new CustomEvent('chat-gate:limit-reached'))`
+ * (or use the `detectChatGate()` helper) to swap the chat surface for a
+ * booking CTA.
  */
 
 type ChatGateRole = 'doctor' | 'patient' | 'other';
@@ -88,16 +90,16 @@ export default function ChatGate({
         setLimitHitAt(resetAt ?? Date.now() + 24 * 60 * 60 * 1000);
     }, []);
 
-    // Global escape hatch: any chat fetch can dispatch
-    // `window.dispatchEvent(new CustomEvent('chat-gate:limit-reached', { detail: { resetAt } }))`
-    // and the gate will swap in the booking CTA.
+    const decrement = useCallback(() => {
+        setStatus((s) => (s ? { ...s, remaining: Math.max(0, s.remaining - 1) } : s));
+    }, []);
+
     useEffect(() => {
         function handler(ev: Event) {
             const detail = (ev as CustomEvent).detail as { resetAt?: number } | undefined;
             onLimitHit(detail?.resetAt);
         }
         function signupHandler() {
-            // chat fetch saw 401 signup_required (cookie expired / wiped) — reset gate
             setLimitHitAt(null);
             setStatus((s) => (s ? { ...s, registered: false } : s));
         }
@@ -109,10 +111,6 @@ export default function ChatGate({
         };
     }, [onLimitHit]);
 
-    const decrement = useCallback(() => {
-        setStatus((s) => (s ? { ...s, remaining: Math.max(0, s.remaining - 1) } : s));
-    }, []);
-
     const ctxValue = useMemo<ChatGateContextValue>(
         () => ({ status, refresh, onLimitHit, decrement }),
         [status, refresh, onLimitHit, decrement]
@@ -120,7 +118,10 @@ export default function ChatGate({
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center min-h-[400px] text-surface-100/40 text-sm">
+            <div
+                className="col ai-center jc-center"
+                style={{ minHeight: 360, color: 'var(--ink-3)', fontSize: 13 }}
+            >
                 Loading…
             </div>
         );
@@ -154,9 +155,17 @@ export default function ChatGate({
 
 function QuotaPill({ remaining, limit }: { remaining: number; limit: number }) {
     return (
-        <div className="flex justify-end mb-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/5 text-[11px] text-surface-100/60">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/70" />
+        <div className="row jc-end" style={{ marginBottom: 8 }}>
+            <span
+                className="pill"
+                style={{
+                    background: 'var(--cobalt-50)',
+                    borderColor: 'rgba(28,91,255,.22)',
+                    color: 'var(--cobalt)',
+                    fontSize: 11,
+                }}
+            >
+                <span className="dot" />
                 {remaining} of {limit} free messages left today
             </span>
         </div>
@@ -168,32 +177,55 @@ function QuotaPill({ remaining, limit }: { remaining: number; limit: number }) {
 function LimitReachedCard({ resetAt }: { resetAt: number }) {
     const resetDate = new Date(resetAt);
     return (
-        <div className="glass-card p-8 max-w-xl mx-auto text-center space-y-5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs">
+        <div
+            className="card col ai-center gap-4"
+            style={{ padding: 32, maxWidth: 560, margin: '0 auto', textAlign: 'center' }}
+        >
+            <span
+                className="pill"
+                style={{
+                    background: 'rgba(255,182,72,.12)',
+                    borderColor: 'rgba(255,182,72,.32)',
+                    color: 'var(--amber, #b76e00)',
+                }}
+            >
                 Daily limit reached
-            </div>
-            <h3 className="text-2xl font-semibold text-surface-100">
+            </span>
+            <h3 className="display" style={{ fontSize: 22, color: 'var(--ink)', margin: 0 }}>
                 You’ve used your 5 free AI messages today.
             </h3>
-            <p className="text-sm text-surface-100/60 leading-relaxed">
+            <p className="muted" style={{ fontSize: 13, lineHeight: 1.6, maxWidth: 420 }}>
                 For anything urgent or in-depth, please consult a real doctor — we have specialists
                 ready in your area.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+            <div className="row gap-3 wrap jc-center" style={{ paddingTop: 4 }}>
                 <Link
                     href="/book"
-                    className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-sm font-medium transition-all"
+                    className="pill pill-cobalt"
+                    style={{
+                        background: 'var(--cobalt)',
+                        color: 'white',
+                        borderColor: 'var(--cobalt)',
+                        padding: '10px 18px',
+                        fontSize: 13,
+                        textDecoration: 'none',
+                    }}
                 >
                     Book a consultation
                 </Link>
                 <Link
                     href="/doctors"
-                    className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-surface-100 text-sm font-medium transition-all"
+                    className="pill"
+                    style={{
+                        padding: '10px 18px',
+                        fontSize: 13,
+                        textDecoration: 'none',
+                    }}
                 >
                     Find a doctor near you
                 </Link>
             </div>
-            <p className="text-xs text-surface-100/30 pt-2">
+            <p className="muted" style={{ fontSize: 11, marginTop: 6 }}>
                 Free messages reset {resetDate.toLocaleString()}.
             </p>
         </div>
@@ -249,58 +281,80 @@ function SignupForm({ title, subtitle, onSuccess }: SignupFormProps) {
     }
 
     return (
-        <div className="glass-card p-6 sm:p-8 max-w-xl mx-auto space-y-5">
-            <div className="space-y-1.5">
-                <h3 className="text-xl sm:text-2xl font-semibold text-surface-100">{title}</h3>
-                <p className="text-sm text-surface-100/60">{subtitle}</p>
+        <div
+            className="card col gap-4"
+            style={{ padding: 28, maxWidth: 560, margin: '0 auto' }}
+        >
+            <div className="col gap-1">
+                <p className="kicker">
+                    <span className="dot" /> One-time signup
+                </p>
+                <h3 className="display" style={{ fontSize: 22, color: 'var(--ink)', margin: '4px 0 0' }}>
+                    {title}
+                </h3>
+                <p className="muted" style={{ fontSize: 13, marginTop: 2 }}>
+                    {subtitle}
+                </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <form onSubmit={handleSubmit} className="col gap-3">
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                        gap: 12,
+                    }}
+                >
                     <Field label="Full name" required>
                         <input
                             type="text"
+                            className="v4-input"
                             value={form.name}
                             onChange={(e) => update('name', e.target.value)}
                             required
                             maxLength={120}
                             autoComplete="name"
-                            className={inputCls}
                         />
                     </Field>
                     <Field label="Email" required>
                         <input
                             type="email"
+                            className="v4-input"
                             value={form.email}
                             onChange={(e) => update('email', e.target.value)}
                             required
                             maxLength={160}
                             autoComplete="email"
-                            className={inputCls}
                         />
                     </Field>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                        gap: 12,
+                    }}
+                >
                     <Field label="Phone" required>
                         <input
                             type="tel"
+                            className="v4-input"
                             value={form.phone}
                             onChange={(e) => update('phone', e.target.value)}
                             required
                             maxLength={40}
                             autoComplete="tel"
-                            className={inputCls}
                         />
                     </Field>
                     <Field label="Country">
                         <input
                             type="text"
+                            className="v4-input"
                             value={form.country}
                             onChange={(e) => update('country', e.target.value)}
                             maxLength={80}
                             autoComplete="country-name"
-                            className={inputCls}
                         />
                     </Field>
                 </div>
@@ -308,38 +362,72 @@ function SignupForm({ title, subtitle, onSuccess }: SignupFormProps) {
                 <Field label="City">
                     <input
                         type="text"
+                        className="v4-input"
                         value={form.city}
                         onChange={(e) => update('city', e.target.value)}
                         maxLength={120}
                         autoComplete="address-level2"
-                        className={inputCls}
                     />
                 </Field>
 
-                <div>
-                    <label className="block text-xs font-medium text-surface-100/60 mb-2">
+                <div className="col gap-2">
+                    <span
+                        style={{
+                            fontSize: 11,
+                            textTransform: 'uppercase',
+                            letterSpacing: 0.4,
+                            color: 'var(--ink-3)',
+                        }}
+                    >
                         I am a
-                    </label>
-                    <div className="grid grid-cols-3 gap-2">
-                        {(['patient', 'doctor', 'other'] as const).map((r) => (
-                            <button
-                                key={r}
-                                type="button"
-                                onClick={() => update('role', r)}
-                                className={`px-3 py-2.5 rounded-xl border text-sm capitalize transition-all ${
-                                    form.role === r
-                                        ? 'bg-primary-600/20 border-primary-500/40 text-surface-100'
-                                        : 'bg-white/[0.03] border-white/10 text-surface-100/60 hover:bg-white/[0.06]'
-                                }`}
-                            >
-                                {r}
-                            </button>
-                        ))}
+                    </span>
+                    <div
+                        style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(3, 1fr)',
+                            gap: 8,
+                        }}
+                    >
+                        {(['patient', 'doctor', 'other'] as const).map((r) => {
+                            const active = form.role === r;
+                            return (
+                                <button
+                                    key={r}
+                                    type="button"
+                                    onClick={() => update('role', r)}
+                                    className="pill"
+                                    style={{
+                                        padding: '10px 14px',
+                                        justifyContent: 'center',
+                                        background: active ? 'var(--cobalt-50)' : 'transparent',
+                                        borderColor: active
+                                            ? 'rgba(28,91,255,.32)'
+                                            : 'var(--rule)',
+                                        color: active ? 'var(--cobalt)' : 'var(--ink)',
+                                        textTransform: 'capitalize',
+                                        cursor: 'pointer',
+                                        fontSize: 13,
+                                        fontWeight: active ? 500 : 400,
+                                    }}
+                                >
+                                    {r}
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
 
                 {error && (
-                    <div className="px-3 py-2 rounded-lg bg-red-500/10 border border-red-500/20 text-red-300 text-xs">
+                    <div
+                        style={{
+                            padding: '10px 14px',
+                            borderRadius: 8,
+                            background: 'rgba(220, 38, 38, .08)',
+                            border: '1px solid rgba(220, 38, 38, .22)',
+                            color: '#b91c1c',
+                            fontSize: 12,
+                        }}
+                    >
                         {error}
                     </div>
                 )}
@@ -347,12 +435,25 @@ function SignupForm({ title, subtitle, onSuccess }: SignupFormProps) {
                 <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full px-4 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm font-medium transition-all"
+                    className="pill"
+                    style={{
+                        padding: '12px 18px',
+                        justifyContent: 'center',
+                        background: submitting ? 'rgba(28,91,255,.55)' : 'var(--cobalt)',
+                        color: 'white',
+                        borderColor: 'var(--cobalt)',
+                        fontSize: 14,
+                        fontWeight: 500,
+                        cursor: submitting ? 'not-allowed' : 'pointer',
+                    }}
                 >
                     {submitting ? 'Signing in…' : 'Continue to chat'}
                 </button>
 
-                <p className="text-[11px] text-surface-100/30 text-center leading-relaxed">
+                <p
+                    className="muted"
+                    style={{ fontSize: 11, textAlign: 'center', lineHeight: 1.6, marginTop: 2 }}
+                >
                     We use your details only to personalize your experience and contact you about
                     your queries. 5 free messages per day.
                 </p>
@@ -360,9 +461,6 @@ function SignupForm({ title, subtitle, onSuccess }: SignupFormProps) {
         </div>
     );
 }
-
-const inputCls =
-    'w-full bg-white/[0.04] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-surface-100 placeholder:text-surface-100/30 focus:outline-none focus:border-primary-500/40 transition-all';
 
 function Field({
     label,
@@ -374,10 +472,17 @@ function Field({
     children: ReactNode;
 }) {
     return (
-        <label className="block">
-            <span className="block text-xs font-medium text-surface-100/60 mb-1.5">
+        <label className="col gap-1">
+            <span
+                style={{
+                    fontSize: 11,
+                    textTransform: 'uppercase',
+                    letterSpacing: 0.4,
+                    color: 'var(--ink-3)',
+                }}
+            >
                 {label}
-                {required && <span className="text-red-400 ml-0.5">*</span>}
+                {required && <span style={{ color: '#dc2626', marginLeft: 2 }}>*</span>}
             </span>
             {children}
         </label>
@@ -385,10 +490,7 @@ function Field({
 }
 
 /**
- * Convenience helper for client chat code: wrap your fetch call to detect a
- * 429 limit-reached response and trigger the booking CTA automatically.
- *
- * Usage:
+ * Convenience helper for client chat code that has access to the context.
  *   const { onLimitHit, decrement } = useChatLead();
  *   const res = await fetch('/api/bot', { ... });
  *   if (await handleChatResponse(res, { onLimitHit, decrement })) return;

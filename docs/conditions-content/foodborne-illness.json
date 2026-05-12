@@ -1,0 +1,489 @@
+{
+  "_meta": {
+    "slug": "foodborne-illness",
+    "tier": 1,
+    "headTerm": "foodborne illness",
+    "longTailKeywords": [
+      "food poisoning symptoms",
+      "foodborne illness vs stomach flu",
+      "norovirus treatment",
+      "salmonella food poisoning",
+      "campylobacter symptoms",
+      "e coli food poisoning",
+      "listeria pregnancy",
+      "food poisoning incubation",
+      "when to see doctor food poisoning",
+      "food poisoning prevention"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against CDC FoodNet annual reports, Scallan E et al. Emerg Infect Dis 2011 (US burden estimates), WHO Global Foodborne Disease Burden 2015. Top pathogens by frequency and severity referenced specifically rather than treated as a single entity."
+  },
+
+  "h1Title": "Foodborne Illness: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Foodborne illness — commonly called food poisoning — is acute gastrointestinal disease caused by bacterial, viral, parasitic, or toxin-mediated contamination of food. CDC estimates 48 million Americans (1 in 6) develop a foodborne illness every year, with 128,000 hospitalizations and 3,000 deaths. Globally, WHO estimates 600 million illnesses and 420,000 deaths annually. Norovirus, Salmonella, Campylobacter, Clostridium perfringens, and Staphylococcus aureus toxin together account for over 90% of US cases. Most are self-limited diarrheal illnesses lasting 1-5 days. The high-risk groups — pregnant women, infants, older adults, and immunocompromised patients — face severe complications including hemolytic uremic syndrome, invasive listeriosis, and reactive arthritis.",
+
+  "keyStats": {
+    "prevalence": "1 in 6 Americans annually (48 million cases); WHO estimates 1 in 10 people globally fall ill from food each year",
+    "demographics": "All ages affected; children under 5 and adults over 65 have higher hospitalization and death rates",
+    "avgAge": "Children under 5 account for nearly one-third of foodborne deaths globally despite making up only 9% of the population",
+    "globalCases": "WHO estimate 600 million illnesses and 420,000 deaths per year worldwide"
+  },
+
+  "definition": "Foodborne illness (ICD-10: A02-A05 for bacterial; A08 for viral; A09 for unspecified infective gastroenteritis) is any disease resulting from contaminated food or beverage. The category spans three mechanisms. Infection — proliferation of a pathogen in the gastrointestinal tract after ingestion (Salmonella, Campylobacter, pathogenic E. coli, Listeria, norovirus, hepatitis A). Intoxication — ingestion of pre-formed toxin produced in the food before consumption (Staphylococcus aureus enterotoxin, Bacillus cereus emetic toxin, Clostridium botulinum toxin). Toxico-infection — colonization with subsequent in-vivo toxin production (Clostridium perfringens, enterotoxigenic E. coli, Vibrio cholerae). The clinical presentation typically includes nausea, vomiting, abdominal cramps, and diarrhea, with the specific timing pattern and feature mix often pointing to a particular pathogen. Vomiting predominant within 1-6 hours suggests staphylococcal or Bacillus cereus toxin; bloody diarrhea after 1-4 days suggests Shiga-toxin-producing E. coli or Campylobacter; high fever with systemic illness suggests Salmonella or Listeria. Most cases are managed in primary care with oral rehydration. Severe disease, dehydration, dysentery, prolonged symptoms, immunocompromise, pregnancy, or extremes of age warrant infectious disease, gastroenterology, or emergency department involvement.",
+
+  "typesClassification": [
+    { "type": "Bacterial gastroenteritis (Salmonella, Campylobacter, Shigella, E. coli, Yersinia)", "description": "Onset typically 1-4 days after exposure; symptoms range from watery diarrhea to dysentery with blood and fever. Antibiotics indicated for severe disease, immunocompromise, extremes of age, or specific organisms (Shigella, severe Salmonella, Cholera)." },
+    { "type": "Viral gastroenteritis (Norovirus, Rotavirus, Astrovirus, Adenovirus)", "description": "Norovirus accounts for over half of US foodborne illnesses. Abrupt onset 12-48 hours after exposure with vomiting and watery diarrhea. Self-limited over 24-72 hours. Outbreaks in cruise ships, schools, nursing homes are characteristic." },
+    { "type": "Toxin-mediated (Staphylococcus aureus, Bacillus cereus emetic, Clostridium botulinum)", "description": "Pre-formed toxin produces symptoms within 1-6 hours. Vomiting predominates; diarrhea may follow. Symptoms resolve within 24 hours. Botulism is the lethal exception — paralysis from neurotoxin requires antitoxin urgently." },
+    { "type": "Parasitic (Giardia, Cryptosporidium, Cyclospora, Toxoplasma)", "description": "Insidious onset days to weeks after exposure with prolonged watery diarrhea, bloating, weight loss, and malabsorption. Stool antigen tests identify; specific antiparasitic therapy required." },
+    { "type": "Listeriosis", "description": "Listeria monocytogenes invades from the GI tract to cause bacteremia and meningoencephalitis, with particular tropism for pregnancy and immunosuppressed patients. Mortality 20-30% even with antibiotics; pregnancy listeriosis causes stillbirth in 20% of cases." },
+    { "type": "Shiga-toxin-producing E. coli (STEC, including O157:H7)", "description": "Bloody diarrhea 3-4 days after exposure to undercooked ground beef, unpasteurized milk/cider, contaminated produce. Hemolytic uremic syndrome (HUS) develops in 5-10% of children — leading cause of acute kidney injury in this group. Antibiotics may worsen HUS risk." }
+  ],
+
+  "primarySymptoms": [
+    "Nausea and vomiting starting within 1-6 hours of eating — classically points to preformed toxin (Staphylococcus aureus enterotoxin or Bacillus cereus emetic toxin) and resolves within 24 hours.",
+    "Watery diarrhea starting 12 hours to 3 days after exposure — suggests viral (norovirus, rotavirus) or toxico-infectious bacterial (Clostridium perfringens, ETEC) causes; stool typically returns to normal within 1-5 days.",
+    "Bloody or mucoid diarrhea (dysentery) starting 1-4 days after exposure — suggests invasive bacterial cause (Shigella, Campylobacter, Salmonella, STEC including O157:H7) and requires evaluation.",
+    "Crampy abdominal pain often localized to the periumbilical or lower abdomen — typical of most infectious gastroenteritis and usually proportionate to diarrhea volume.",
+    "Fever (38-39°C) suggesting invasive bacterial infection — Salmonella, Shigella, Campylobacter, or systemic infection such as Listeria or typhoidal salmonella.",
+    "Dehydration signs in severe disease: thirst, dry mouth, decreased urine output, dizziness on standing, sunken eyes, tachycardia — children and elderly decompensate rapidly.",
+    "Headache, body aches, and fatigue accompanying many viral and bacterial enteritis episodes, often persisting beyond the gastrointestinal symptoms.",
+    "Tenesmus, urgency, and small-volume bloody stools in dysenteric Shigella or invasive Campylobacter colitis.",
+    "Neurological symptoms — descending flaccid paralysis, diplopia, dysphagia — in botulism, which begins 12-36 hours after eating improperly canned food.",
+    "Failure to thrive, prolonged diarrhea, weight loss, and dehydration in foodborne illness in infants and young children — pediatric emergency assessment indicated."
+  ],
+
+  "earlyWarningSigns": [
+    "Onset of vomiting within hours of eating leftover or unrefrigerated food (suggests preformed toxin)",
+    "Cluster of similar illness among people who shared a meal — outbreak pattern warranting public health notification",
+    "Travel to a developing country in the prior 2 weeks with new-onset diarrhea (traveler's diarrhea, often E. coli)",
+    "Pregnancy with new diarrhea, fever, or flu-like illness after eating soft cheese, deli meat, or refrigerated pâté — listeria evaluation",
+    "Bloody diarrhea after eating undercooked ground beef or unpasteurized dairy — possible STEC infection"
+  ],
+
+  "emergencySigns": [
+    "Bloody diarrhea with decreased urine output, pallor, easy bruising, or confusion — possible hemolytic uremic syndrome from STEC; emergency hospital assessment",
+    "Severe dehydration with confusion, fainting, cold extremities, rapid weak pulse, or no urine output for 8 hours — emergency rehydration required",
+    "Diplopia, dysphagia, dysarthria, descending muscle weakness after eating canned or fermented food — botulism is a neurological emergency requiring antitoxin",
+    "High fever with rigors and signs of sepsis in foodborne illness — invasive bacterial infection (Salmonella, Listeria) requires hospital admission and blood cultures",
+    "Persistent vomiting with inability to retain oral fluids for more than 24 hours, particularly in infants or elderly",
+    "Diarrhea in pregnancy with fever and flu-like illness — listeriosis screening with blood cultures",
+    "Bloody diarrhea, fever, and abdominal pain in an immunocompromised patient — evaluation for invasive bacterial pathogens including non-typhoidal Salmonella bacteremia"
+  ],
+
+  "causes": [
+    {
+      "cause": "Bacterial contamination of food at any stage from farm to fork",
+      "description": "Most US foodborne disease burden traces to cross-contamination from raw meat to ready-to-eat foods, inadequate cooking temperatures, and improper refrigeration in food preparation chains. Salmonella, Campylobacter, and pathogenic E. coli are the leading bacterial culprits."
+    },
+    {
+      "cause": "Norovirus transmission through infected food handlers",
+      "description": "Norovirus is the single most common cause of foodborne illness in the US (over 5 million cases per year, per CDC). A food handler with active or recent illness can shed virus on bare-handed contact with ready-to-eat foods. Heat-stable and resistant to common disinfectants."
+    },
+    {
+      "cause": "Preformed bacterial toxins in food stored at room temperature",
+      "description": "Staphylococcus aureus and Bacillus cereus produce heat-stable enterotoxins when foods are left at room temperature long enough to support bacterial growth. Reheating destroys the bacteria but not the toxin — so reheated leftovers can still cause illness."
+    },
+    {
+      "cause": "Undercooked or raw animal products",
+      "description": "Raw or undercooked ground beef carries Shiga-toxin-producing E. coli; raw poultry carries Salmonella and Campylobacter; raw eggs carry Salmonella Enteritidis; raw shellfish carry Vibrio and norovirus. Internal cooking temperatures (165°F poultry, 160°F ground beef, 145°F whole cuts) eliminate most pathogens."
+    },
+    {
+      "cause": "Unpasteurized dairy and juices",
+      "description": "Raw milk, raw cheese, and unpasteurized cider/juice can harbor Salmonella, Listeria, Campylobacter, E. coli O157:H7, and Brucella. CDC tracks outbreaks every year from raw-dairy products despite legal restrictions in most states."
+    },
+    {
+      "cause": "Cross-contamination in the kitchen",
+      "description": "Cutting boards, knives, and bare hands that contact raw meat then contact ready-to-eat foods (salads, fruit) transfer pathogens directly. Separate boards for raw and cooked foods plus hand washing between tasks prevents this."
+    },
+    {
+      "cause": "Improper hot-holding or cold-holding of food",
+      "description": "Bacteria multiply rapidly between 40°F and 140°F (4-60°C) — the 'danger zone'. Foods held for more than 2 hours within this range can develop pathogenic counts. Catered events and buffets are particularly prone."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age under 5 or over 65", "category": "non-modifiable", "description": "Both age extremes have reduced gastric acid secretion, immature or waning immunity, and lower physiological reserve. Hospitalization rates for foodborne salmonellosis exceed 30% in adults over 65 compared to under 5% in young adults." },
+    { "factor": "Pregnancy", "category": "non-modifiable", "description": "Pregnant women are 10 times more likely to develop listeriosis than non-pregnant adults, and listeriosis causes stillbirth in 20% of cases. Cell-mediated immunity is reduced and fetal-placental tropism enables invasive infection." },
+    { "factor": "Immunocompromise (HIV, transplant, chemotherapy, biologics)", "category": "modifiable", "description": "Listeriosis incidence is 100-1000 times higher in solid organ transplant recipients. Non-typhoidal Salmonella bacteremia, severe Cryptosporidium, and prolonged norovirus are all more common in immunosuppressed hosts." },
+    { "factor": "Use of proton pump inhibitors or H2 blockers", "category": "modifiable", "description": "Reduced gastric acid lowers the infectious dose required for many foodborne pathogens. PPI users have a 2-3 fold higher risk of invasive Salmonella and Campylobacter." },
+    { "factor": "Travel to areas with poor food and water safety", "category": "modifiable", "description": "Traveler's diarrhea affects 30-70% of visitors to high-risk destinations. Enterotoxigenic E. coli, Campylobacter, Salmonella, Shigella, and norovirus are the most common pathogens; risk persists for the duration of travel." },
+    { "factor": "Consumption of high-risk foods (raw oysters, raw milk, undercooked meat, raw sprouts)", "category": "modifiable", "description": "Documented outbreaks repeatedly involve the same vehicles. Pregnant women, immunocompromised patients, and the elderly should avoid these foods entirely; healthy adults face lower but real risk." },
+    { "factor": "Institutional living (long-term care, dormitories, prisons)", "category": "environmental", "description": "Norovirus outbreaks in long-term care facilities affect 50-80% of residents and staff during an outbreak. Mortality from foodborne illness in long-term care can exceed 1%." },
+    { "factor": "Occupational exposure (food service workers, healthcare workers, daycare workers)", "category": "modifiable", "description": "Repeated exposure to ill people, food, or shared bathrooms increases personal risk and onward transmission. Food handler exclusion policies after gastrointestinal illness are evidence-supported." }
+  ],
+
+  "affectedDemographics": [
+    "US: 48 million cases (1 in 6 Americans) annually; 128,000 hospitalizations; 3,000 deaths (CDC FoodNet)",
+    "Global: WHO estimates 600 million illnesses and 420,000 deaths per year, with the highest burden in Africa and South-East Asia",
+    "Children under 5 represent ~9% of population but ~33% of global foodborne deaths",
+    "Adults over 65 have 8x the hospitalization rate of young adults for foodborne salmonellosis",
+    "Norovirus causes the majority of US foodborne cases (5.5 million per year); Salmonella causes the most foodborne deaths (380-500 per year)"
+  ],
+
+  "diagnosisOverview": "Most foodborne illness is mild, self-limited, and managed clinically without laboratory testing. Stool testing is recommended for severe disease (dehydration, severe abdominal pain), dysentery (bloody diarrhea), prolonged illness over 7 days, fever over 38.5°C, immunocompromise, recent travel, occupational risk (food handler, healthcare worker, daycare worker), suspected outbreak, or extremes of age. Modern stool diagnosis increasingly uses multiplex PCR panels (BioFire FilmArray GI panel, Verigene GI) that simultaneously detect 20+ bacterial, viral, and parasitic pathogens with results in hours. Stool culture remains essential for antibiotic susceptibility, public health subtyping, and outbreak investigation in suspected bacterial cases. Stool antigen tests are available for norovirus, rotavirus, Cryptosporidium, and Giardia. Routine ova-and-parasite microscopy has been largely replaced by antigen and PCR testing in high-income settings. Specific clinical scenarios trigger pathogen-directed testing: bloody diarrhea warrants screening for STEC (including non-O157), Shigella, and Campylobacter; fever with hepatosplenomegaly in a returned traveler warrants blood cultures for typhoidal Salmonella; pregnancy with febrile gastroenteritis warrants Listeria blood cultures; flaccid paralysis warrants botulism serum and stool toxin assay. Imaging is reserved for complications: abdominal CT for suspected perforation or ileus, ultrasound or CT for suspected hemolytic uremic syndrome (renal findings). Lactate, CBC, electrolytes, and renal function guide severity assessment. Outbreak investigation involves case-finding, exposure history (specific meals, ingredients, restaurants), environmental sampling, and public health reporting.",
+
+  "diagnosticTests": [
+    {
+      "test": "Multiplex PCR stool panel (e.g. BioFire FilmArray GI)",
+      "purpose": "Simultaneously detects 20+ bacterial, viral, and parasitic pathogens in a single stool sample. Sensitivity 90-100% for most targets and turnaround time 1-4 hours. First-line stool diagnostic in many high-income centers.",
+      "whatToExpect": "Single stool sample in standard collection container submitted to the lab. No fasting or preparation required. Results typically same day or next day."
+    },
+    {
+      "test": "Stool culture with susceptibility testing",
+      "purpose": "Identifies live bacteria (Salmonella, Shigella, Campylobacter, Yersinia, E. coli pathotypes), allows antibiotic sensitivity testing, and provides isolates for outbreak strain matching. Slower than PCR (48-72 hours) but essential for public health.",
+      "whatToExpect": "Stool sample in transport medium; specific request needed for some pathogens (Yersinia, Vibrio). Results in 2-5 days. Important to test before starting empirical antibiotics where possible."
+    },
+    {
+      "test": "Stool toxin assays (Shiga toxin, Clostridioides difficile toxin)",
+      "purpose": "Detect toxin directly without requiring viable bacteria. Shiga toxin assay screens for STEC pathotypes including non-O157 strains. C. difficile toxin distinguishes colonization from disease.",
+      "whatToExpect": "Standard stool sample collection. Results in 4-24 hours depending on platform."
+    },
+    {
+      "test": "Blood cultures (in febrile, severe, or pregnant patients)",
+      "purpose": "Identifies invasive bacteremia from Salmonella, Listeria, and other organisms that can translocate from the gut. Mandatory in pregnant women with febrile gastroenteritis to exclude listeriosis.",
+      "whatToExpect": "Two sets of blood cultures from separate venipunctures ideally before antibiotics. Results in 1-5 days with preliminary growth often by day 2."
+    },
+    {
+      "test": "Electrolytes, urea, creatinine, full blood count",
+      "purpose": "Assess severity, dehydration, acid-base status, acute kidney injury (especially in STEC), and signs of HUS (anemia, thrombocytopenia, schistocytes on blood film).",
+      "whatToExpect": "Standard blood draw; results within 1 hour at most acute care settings."
+    },
+    {
+      "test": "Stool antigen tests for norovirus, rotavirus, Cryptosporidium, Giardia",
+      "purpose": "Rapid identification of specific pathogens with results in hours. Particularly useful in outbreak settings, daycare exclusions, and immunocompromised patients.",
+      "whatToExpect": "Stool sample in container; results often same day. No special preparation."
+    },
+    {
+      "test": "Botulism toxin assay in serum, stool, and food sample",
+      "purpose": "Confirms suspected botulism by detecting toxin in any of these matrices. Performed at state public health laboratories or CDC. Empirical antitoxin should not wait for results.",
+      "whatToExpect": "Serum and stool samples submitted urgently; food samples ideally co-submitted. CDC notification triggers state public health investigation."
+    }
+  ],
+
+  "treatmentOverview": "The cornerstone of foodborne illness treatment is rehydration. The WHO oral rehydration solution (ORS) — sodium 75 mmol/L, glucose 75 mmol/L, plus potassium and citrate — exploits sodium-glucose co-transport in the gut to restore fluid and electrolytes even during ongoing diarrhea. Most adults with mild-moderate illness can use commercial sports drinks supplemented with salt and water, but ORS is preferred for children and severe cases. Severe dehydration, intractable vomiting, electrolyte derangement, or shock requires intravenous isotonic fluids. Antibiotic use is selective and pathogen-specific. Empirical antibiotics in undifferentiated traveler's diarrhea shorten symptoms by approximately 1 day but contribute to antibiotic resistance and may increase Salmonella carriage; current guidance favors symptomatic management for mild cases and antibiotics only for moderate-to-severe disease, dysentery, or high-risk hosts. Specific indications include Shigella (any case), severe or invasive Salmonella, Campylobacter with severe or prolonged illness, Cholera (azithromycin or doxycycline), Giardia and other parasites (metronidazole, tinidazole, nitazoxanide), and Listeria (high-dose ampicillin plus gentamicin). Antibiotics are contraindicated in Shiga-toxin-producing E. coli (STEC) — they may worsen risk of hemolytic uremic syndrome. Antimotility agents (loperamide) are useful for adult traveler's diarrhea with watery non-bloody stools but contraindicated in dysentery, fever, or suspected STEC. Antiemetics (ondansetron) reduce vomiting and ED visits in children with gastroenteritis. Probiotics have modest evidence for shortening diarrhea duration by 12-24 hours in some settings. Botulism requires emergency antitoxin (heptavalent equine antitoxin for adults; BabyBIG for infants), respiratory support, and supportive care for months. Listeriosis in pregnancy requires high-dose IV ampicillin to reduce fetal transmission. Hemolytic uremic syndrome management is supportive — careful fluid management, transfusion, and dialysis as needed; eculizumab is sometimes used in severe atypical HUS. Reporting to local public health is mandatory for many pathogens (Salmonella, Shigella, STEC O157:H7, Listeria, Cholera, Botulism, Hepatitis A) and supports outbreak investigation that prevents further cases.",
+
+  "medicalTreatments": [
+    {
+      "name": "Oral rehydration solution (WHO ORS or commercial equivalent, sipped frequently)",
+      "description": "First-line treatment for any foodborne illness with diarrhea. Sodium-glucose co-transport drives water absorption even during active diarrhea. Standard WHO formula or low-osmolarity ORS preferred over plain water, which lacks electrolytes.",
+      "effectiveness": "Reduces mortality from severe pediatric diarrheal dehydration by over 90% (WHO/UNICEF data). Standard of care worldwide."
+    },
+    {
+      "name": "Azithromycin (1 g single dose, or 500 mg daily for 3 days) for traveler's diarrhea and Campylobacter",
+      "description": "First-line empirical antibiotic for traveler's diarrhea in regions with fluoroquinolone resistance (most of South and Southeast Asia). Also first-line for Campylobacter, which is widely resistant to ciprofloxacin.",
+      "effectiveness": "Reduces traveler's diarrhea duration by approximately 30 hours (1.5 days); cure rate over 90% for susceptible Campylobacter."
+    },
+    {
+      "name": "Ciprofloxacin (500 mg twice daily for 3-5 days) or levofloxacin for severe bacterial gastroenteritis",
+      "description": "Active against Salmonella, Shigella, and most enterotoxigenic E. coli. First-line for severe traveler's diarrhea in Latin America and Africa where resistance is lower. Avoid in Asia due to widespread Campylobacter resistance.",
+      "effectiveness": "Reduces severe Shigellosis symptom duration by 1-2 days; cure rate exceeds 90% for sensitive isolates."
+    },
+    {
+      "name": "Loperamide (4 mg initial dose, then 2 mg after each loose stool, max 16 mg/day) for adult watery diarrhea",
+      "description": "Mu-opioid receptor agonist that slows intestinal motility. Combined with ORS, effective for adult traveler's diarrhea with watery non-bloody stools. Contraindicated in fever above 38.5°C, dysentery, or suspected STEC.",
+      "effectiveness": "Reduces stool frequency by 50-80% within 24 hours when used appropriately."
+    },
+    {
+      "name": "Ondansetron (4-8 mg orally or IV) for vomiting",
+      "description": "5-HT3 antagonist with strong evidence in pediatric and adult acute gastroenteritis for reducing vomiting and need for IV rehydration. Single-dose use is well-tolerated.",
+      "effectiveness": "Single dose reduces ED admissions for pediatric gastroenteritis by approximately 50% and IV fluid requirement by 40%."
+    },
+    {
+      "name": "Metronidazole or tinidazole for Giardia (250 mg three times daily for 5-7 days; or 2 g single dose)",
+      "description": "First-line therapy for giardiasis confirmed on stool antigen or PCR. Tinidazole has the convenience of single-dose therapy with equivalent or better efficacy.",
+      "effectiveness": "Cure rate 85-95% for giardiasis with adequate dosing."
+    },
+    {
+      "name": "Ampicillin plus gentamicin (high-dose IV) for confirmed Listeria",
+      "description": "First-line for invasive listeriosis including bacteremia, meningitis, and pregnancy-associated infection. Synergistic combination provides bactericidal activity against Listeria, which is intrinsically resistant to cephalosporins.",
+      "effectiveness": "Reduces neonatal listeriosis mortality from over 50% to approximately 25%; reduces fetal loss in pregnancy listeriosis when started before delivery."
+    },
+    {
+      "name": "Botulism antitoxin (heptavalent equine for adults, BabyBIG for infant botulism)",
+      "description": "Neutralizes circulating toxin. Administered as soon as botulism is suspected — do not wait for laboratory confirmation. Combined with intensive respiratory and supportive care; ventilation may be required for weeks.",
+      "effectiveness": "Reduces mortality of adult food-borne botulism from 25% to under 10% when administered within 24 hours of symptom onset."
+    }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Probiotics (Lactobacillus rhamnosus GG, Saccharomyces boulardii)", "description": "Cochrane reviews show probiotics reduce diarrhea duration by approximately 24 hours in some acute gastroenteritis settings. Evidence is mixed across pathogens; effect is modest but probiotics are inexpensive and safe in immunocompetent hosts." },
+    { "name": "Zinc supplementation in children (10-20 mg daily for 10-14 days)", "description": "WHO and UNICEF recommend zinc for all childhood diarrhea in low-resource settings. Reduces diarrhea duration by 25% and risk of subsequent diarrheal episodes by approximately 20% in zinc-deficient populations." }
+  ],
+
+  "whySeeSpecialist": "Seek infectious disease or gastroenterology consultation for prolonged diarrhea over 14 days, persistent dysentery, suspected hemolytic uremic syndrome, complicated listeriosis, suspected botulism, immunocompromised patients with severe gastroenteritis, complex outbreak investigation, or any case requiring antimicrobial stewardship guidance. Emergency department evaluation is warranted for severe dehydration, suspected sepsis, neurological symptoms, or pregnancy with febrile diarrhea.",
+
+  "doctorSelectionGuide": "For mild illness, primary care is appropriate and most physicians handle uncomplicated foodborne disease effectively. For severe or complicated cases, look for an infectious disease specialist with access to modern molecular stool diagnostics and contacts at the local public health department. Outbreak suspicion should always trigger public health notification. Travel medicine clinics specialize in returned-traveler diarrhea and prevention counseling for upcoming trips.",
+
+  "preventionStrategies": [
+    "Wash hands with soap and warm water for 20 seconds before food preparation, after using the toilet, after handling raw meat, and before eating",
+    "Cook foods to safe internal temperatures: 165°F poultry, 160°F ground meats, 145°F whole cuts of meat and fish — use a food thermometer rather than guessing",
+    "Refrigerate perishable food within 2 hours (1 hour if ambient temperature exceeds 90°F); set refrigerator below 40°F and freezer below 0°F",
+    "Separate raw and ready-to-eat foods with different cutting boards and utensils to prevent cross-contamination",
+    "Avoid high-risk foods in vulnerable groups: pregnant women and immunocompromised patients should avoid raw oysters, raw milk, soft cheese from unpasteurized milk, deli meats unless reheated, and raw sprouts",
+    "Drink only safe water when traveling — boiled, bottled, or filtered (≤1 micron) — and avoid ice from unknown sources"
+  ],
+
+  "lifestyleModifications": [
+    "Drink small amounts of fluid frequently rather than large amounts occasionally — reduces vomiting",
+    "Use ORS for adequate electrolyte replacement; supplement with broth, diluted juice, or rice water if ORS unavailable",
+    "Resume normal diet within 24 hours of being able to tolerate fluids — early refeeding shortens illness in children (WHO/AAP guidance)",
+    "Avoid lactose-containing foods temporarily if transient post-infectious lactose intolerance develops (common after rotavirus)",
+    "Practice strict hand hygiene during and for 48-72 hours after illness to prevent household transmission",
+    "Stay home from work, school, or daycare until 48 hours after symptoms resolve; food handlers and healthcare workers often require longer exclusion"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Oral rehydration solution as the primary fluid during acute diarrhea",
+      "Bland, complex carbohydrates: rice, plain noodles, oatmeal, toast — easy to digest, support recovery",
+      "Bananas — replace potassium lost in diarrhea",
+      "Plain yogurt with live cultures — modest probiotic benefit",
+      "Lean cooked proteins (chicken, fish, tofu) as appetite returns",
+      "Resume normal balanced diet within 24-48 hours; early refeeding shortens illness in children"
+    ],
+    "avoid": [
+      "Caffeine, alcohol, and very sugary drinks — worsen dehydration through osmotic diarrhea",
+      "High-fat or fried foods until symptoms have settled — delays gastric emptying",
+      "Raw or undercooked meat, poultry, seafood, eggs",
+      "Unpasteurized milk, cheese, and juices",
+      "Raw sprouts and unwashed produce",
+      "Antimotility drugs (loperamide) in dysentery, fever above 38.5°C, or suspected STEC"
+    ]
+  },
+
+  "exerciseGuidelines": "Rest during acute symptoms and for 24 hours after they resolve. Gradual return to light activity over 3-5 days. Vigorous exercise during dehydration is hazardous. Athletes should avoid contact sports until at least 48 hours after symptom resolution for both their own recovery and to prevent transmission.",
+
+  "dailyManagement": [
+    "Sip ORS or balanced electrolyte solution continuously through the day during diarrhea",
+    "Track stool frequency, presence of blood, urine output, and any new symptoms to recognize worsening early",
+    "Wash hands rigorously after every bathroom visit and before any food contact",
+    "Disinfect bathroom surfaces with a bleach-based cleaner — norovirus is resistant to alcohol-based sanitizers",
+    "Stay home from work, school, or daycare until at least 48 hours symptom-free; longer for food handlers, healthcare workers, and daycare workers per local policy"
+  ],
+
+  "prognosis": "Most foodborne illness resolves within 1-5 days with supportive care alone. Complications are uncommon but can be serious. Salmonella, Shigella, and Campylobacter case-fatality rates are under 0.5% in healthy adults but rise sharply in extremes of age, immunocompromise, and pregnancy. Hemolytic uremic syndrome complicates 5-10% of pediatric STEC O157 infections and has acute mortality of 3-5% plus risk of chronic kidney disease in 20-30% of survivors. Listeriosis carries 20-30% mortality even with antibiotics, and pregnancy listeriosis causes fetal loss in 20% of cases. Botulism has historic mortality of 25% but modern care with timely antitoxin and intensive supportive care reduces this to under 10%. Post-infectious complications include reactive arthritis (Reiter syndrome) following Salmonella, Shigella, Campylobacter, or Yersinia; Guillain-Barré syndrome following Campylobacter (about 1 in 1000 Campylobacter cases); irritable bowel syndrome in 10-30% of patients following acute bacterial gastroenteritis; and chronic carriage of Salmonella Typhi or Paratyphi in approximately 5% of typhoidal infections. Most patients return to baseline health within 1-2 weeks.",
+
+  "recoveryTimeline": "Norovirus: 24-72 hours of acute illness, full recovery within 1-3 days. Salmonella, Campylobacter, Shigella: 4-7 days of acute illness; full recovery within 1-2 weeks. Staphylococcal toxin: 12-24 hours. Botulism: months to over a year for full neuromuscular recovery. STEC: 5-10 days of diarrhea; if HUS develops, weeks to months for renal recovery. Post-infectious IBS may persist for months to years in 10-30% of patients.",
+
+  "complications": [
+    "Hemolytic uremic syndrome following STEC infection — affects 5-10% of pediatric cases, presents with bloody diarrhea, pallor, decreased urine output, and may require dialysis",
+    "Severe dehydration and electrolyte imbalance, particularly hypovolemic shock in young children and frail elderly",
+    "Reactive arthritis (Reiter syndrome) — affects 1-3% of patients following Salmonella, Shigella, Campylobacter, or Yersinia; arthritis, conjunctivitis, urethritis triad",
+    "Guillain-Barré syndrome following Campylobacter — ascending paralysis weeks after gastroenteritis; ventilation needed in 20-30%",
+    "Bacteremia and metastatic infection from Salmonella, especially in sickle cell disease (osteomyelitis), HIV, and elderly",
+    "Listeriosis with meningitis, bacteremia, or pregnancy loss — overall mortality 20-30%",
+    "Post-infectious irritable bowel syndrome — develops in 10-30% of patients after acute bacterial gastroenteritis",
+    "Chronic carriage of Salmonella Typhi or Paratyphi in approximately 5% of typhoid/paratyphoid cases"
+  ],
+
+  "supportResources": [
+    { "name": "CDC — Food Safety", "url": "https://www.cdc.gov/foodsafety/index.html", "description": "Authoritative US guidance on prevention, current outbreaks, and pathogen-specific information." },
+    { "name": "FoodSafety.gov", "url": "https://www.foodsafety.gov/", "description": "Federal one-stop resource for safe food handling, recalls, and reporting." },
+    { "name": "WHO — Food Safety", "url": "https://www.who.int/health-topics/food-safety", "description": "Global guidance, surveillance reports, and resources relevant to travelers and low-resource settings." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "salmonella-infection", "name": "Salmonella Infection", "keyDifference": "Salmonella enteritis is the most common bacterial cause of foodborne illness; it is a specific etiology rather than the umbrella category. Stool culture or PCR identifies Salmonella specifically. The clinical picture overlaps with other bacterial gastroenteritis." },
+    { "slug": "e-coli-infection", "name": "Escherichia coli Infection", "keyDifference": "Pathogenic E. coli (ETEC, STEC, EPEC) is one of multiple foodborne etiologies. STEC O157:H7 is distinct because it produces Shiga toxin and can cause hemolytic uremic syndrome — antibiotics are contraindicated. PCR or stool culture distinguishes E. coli pathotypes." },
+    { "slug": "typhoid-fever", "name": "Typhoid Fever", "keyDifference": "Typhoid is a specific systemic illness caused by Salmonella Typhi, with sustained fever, hepatosplenomegaly, and relative bradycardia, often with constipation rather than diarrhea. Blood cultures distinguish; treatment requires extended antibiotics, not just supportive care." },
+    { "slug": "amebiasis", "name": "Amebiasis", "keyDifference": "Amebiasis is a specific parasitic cause of foodborne dysentery, with insidious onset over weeks rather than days and risk of liver abscess. Stool antigen or PCR distinguishes; specific antiparasitic treatment (metronidazole plus paromomycin) is required." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hemolytic-uremic-syndrome", "name": "Hemolytic Uremic Syndrome" },
+    { "slug": "salmonella-infection", "name": "Salmonella Infection" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "salmonella-infection", "name": "Salmonella Infection", "relevance": "Most common bacterial cause of US foodborne disease deaths; routinely evaluated in moderate-to-severe foodborne illness." },
+    { "slug": "e-coli-infection", "name": "Escherichia coli Infection", "relevance": "Pathogenic E. coli is a major foodborne pathogen including the dangerous STEC subgroup; routinely included on stool PCR panels." },
+    { "slug": "typhoid-fever", "name": "Typhoid Fever", "relevance": "Foodborne systemic illness caused by Salmonella Typhi; differentiated by sustained fever and systemic features rather than acute diarrhea." },
+    { "slug": "amebiasis", "name": "Amebiasis", "relevance": "Parasitic foodborne illness producing dysentery and liver abscess; differential in travelers and immigrants with prolonged diarrhea." },
+    { "slug": "hemolytic-uremic-syndrome", "name": "Hemolytic Uremic Syndrome", "relevance": "Most serious complication of Shiga-toxin-producing E. coli — 5-10% of pediatric STEC cases progress to HUS." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is foodborne illness?",
+      "answer": "Foodborne illness — commonly called food poisoning — is any disease caused by contaminated food or beverage. Bacteria, viruses, parasites, and toxins are the main causes. The CDC estimates 1 in 6 Americans gets a foodborne illness each year, totaling 48 million cases. Most are mild and self-limited.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does food poisoning last?",
+      "answer": "Most food poisoning resolves within 1-5 days. Norovirus typically lasts 24-72 hours. Bacterial causes (Salmonella, Campylobacter, Shigella) last 4-7 days. Staphylococcal toxin clears within 24 hours. Parasitic causes (Giardia, Cryptosporidium) can last weeks without antiparasitic treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a doctor for food poisoning?",
+      "answer": "Seek medical care for bloody diarrhea, high fever above 38.5°C, signs of dehydration (decreased urination, dizziness, dry mouth), inability to keep fluids down for more than 24 hours, severe abdominal pain, symptoms lasting more than 7 days, pregnancy with febrile illness, or in infants and elderly with persistent symptoms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the most common cause of food poisoning?",
+      "answer": "Norovirus is the most common cause of foodborne illness in the US (about 5.5 million cases per year). Salmonella, Clostridium perfringens, Campylobacter, and Staphylococcus aureus round out the top five. Together they cause over 90% of cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is food poisoning treated?",
+      "answer": "Most cases are treated with rest and oral rehydration solution. Antibiotics are reserved for specific pathogens (Shigella, severe Salmonella, Cholera, Campylobacter, parasites). Antibiotics are contraindicated in suspected Shiga-toxin-producing E. coli. Ondansetron helps with vomiting in adults and children.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I take Imodium for food poisoning?",
+      "answer": "Loperamide (Imodium) is safe and effective for adult watery diarrhea without fever or blood, including traveler's diarrhea. It should not be used in bloody diarrhea, high fever, or suspected STEC infection because it can prolong toxin contact with the intestine. Avoid in young children.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How fast does food poisoning start?",
+      "answer": "The incubation period varies by pathogen. Staphylococcus aureus toxin: 1-6 hours. Bacillus cereus emetic: 1-6 hours. Norovirus: 12-48 hours. Salmonella, Campylobacter: 12 hours to 4 days. STEC: 3-4 days. Listeria: 1-30 days. Hepatitis A: 15-50 days. The timing pattern helps identify the cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods cause food poisoning most often?",
+      "answer": "High-risk foods include raw or undercooked meat and poultry, raw eggs, raw shellfish (especially oysters), unpasteurized dairy products, raw sprouts, leafy greens contaminated in irrigation water, and ready-to-eat foods handled by ill workers. Norovirus often spreads through leafy greens and shellfish.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I prevent food poisoning?",
+      "answer": "Clean (wash hands and surfaces), separate (raw from ready-to-eat foods), cook (to safe internal temperatures), and chill (refrigerate within 2 hours). Avoid high-risk foods in vulnerable groups: pregnant women and immunocompromised patients should avoid raw oysters, raw milk, soft cheese, undercooked sprouts, and unheated deli meats.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is food poisoning contagious?",
+      "answer": "Many foodborne pathogens spread person-to-person after the initial foodborne exposure, especially norovirus, Shigella, hepatitis A, and Cryptosporidium. Strict hand hygiene and avoiding food preparation for others until at least 48 hours after symptoms resolve prevents household and outbreak spread.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between food poisoning and stomach flu?",
+      "answer": "Stomach flu is a colloquial name for viral gastroenteritis (usually norovirus or rotavirus), which is a specific subset of foodborne illness. Food poisoning is the broader term covering bacterial, viral, parasitic, and toxin-mediated illness from contaminated food. The terms overlap substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnant women get serious food poisoning?",
+      "answer": "Yes. Pregnant women are 10 times more likely to develop listeriosis than non-pregnant adults. Pregnancy listeriosis causes stillbirth in 20% of cases. Pregnant women should avoid soft cheeses from unpasteurized milk, deli meats unless heated, refrigerated pâté, raw fish, and undercooked meat to reduce listeria risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hemolytic uremic syndrome?",
+      "answer": "Hemolytic uremic syndrome (HUS) is a severe complication of Shiga-toxin-producing E. coli infection (typically O157:H7). It presents with anemia, low platelets, and acute kidney injury, often requiring dialysis. HUS affects 5-10% of pediatric STEC cases. Antibiotics may worsen HUS risk in STEC infection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I get food poisoning from leftovers?",
+      "answer": "Yes. Bacterial toxins from Staphylococcus aureus and Bacillus cereus survive reheating because they are heat-stable, even after the bacteria are killed. Refrigerate leftovers within 2 hours of cooking, store below 40°F, and reheat to 165°F before eating. Discard food left at room temperature for more than 2 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is food poisoning diagnosed?",
+      "answer": "Most cases are diagnosed clinically without testing. Stool testing — typically multiplex PCR panel or culture — is recommended for severe symptoms, bloody diarrhea, fever, prolonged illness, immunocompromise, recent travel, or suspected outbreak. Blood cultures are added in febrile pregnant women or septic-appearing patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I take probiotics for food poisoning?",
+      "answer": "Some probiotic strains (Lactobacillus rhamnosus GG, Saccharomyces boulardii) shorten diarrhea duration by approximately 24 hours in acute infectious gastroenteritis. Evidence is strongest in children and viral causes. Probiotics are safe and inexpensive but should not replace rehydration or pathogen-directed antibiotics where indicated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is traveler's diarrhea?",
+      "answer": "Traveler's diarrhea affects 30-70% of visitors to high-risk destinations such as parts of South Asia, Africa, and Latin America. Most cases are caused by enterotoxigenic E. coli, Campylobacter, Salmonella, Shigella, or norovirus. Self-treatment with azithromycin or ciprofloxacin (region-dependent) plus loperamide reduces symptom duration substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get severe food poisoning?",
+      "answer": "Yes. Children under 5 account for about a third of global foodborne deaths despite making up 9% of the population. Dehydration is the dominant risk in young children. STEC infection in children carries higher risk of hemolytic uremic syndrome (10-15% in children under 5). Prompt rehydration and medical evaluation are key.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need antibiotics for food poisoning?",
+      "answer": "Most cases do not need antibiotics — viral and toxin-mediated causes don't respond, and bacterial cases often self-resolve. Antibiotics are indicated for severe Shigella, severe Salmonella, Cholera, suspected Campylobacter with severe disease, parasitic causes, and Listeria. Antibiotics are contraindicated in suspected Shiga-toxin E. coli.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long should I stay home from work with food poisoning?",
+      "answer": "Most people should stay home until at least 48 hours after diarrhea and vomiting stop. Food handlers, healthcare workers, and daycare workers often require longer exclusion — typically 48-72 hours symptom-free and sometimes a negative stool test, depending on the pathogen and local public health rules.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Food Poisoning (Foodborne Illness)",
+
+  "regionalNames": [
+    { "name": "खाद्य विषाक्तता (Khadya Vishaktata)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Intoxicación alimentaria", "region": "Latin America", "language": "es" },
+    { "name": "Intoxication alimentaire", "region": "France", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "foodborne illness", "food poisoning", "gastroenteritis", "stomach flu", "diarrhea",
+    "salmonella", "norovirus", "e coli", "campylobacter", "listeria", "traveler's diarrhea",
+    "vomiting diarrhea", "food contamination", "stomach bug"
+  ],
+
+  "symptomKeywords": [
+    "vomiting", "diarrhea", "stomach cramps", "nausea", "watery stool",
+    "bloody diarrhea", "food poisoning", "stomach pain after eating", "fever and diarrhea"
+  ],
+
+  "metaTitle": "Foodborne Illness: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Foodborne illness: bacterial, viral, parasitic, and toxin causes of food poisoning. Symptoms, prevention, and treatment reviewed by our medical board.",
+
+  "keywords": [
+    "foodborne illness", "food poisoning", "gastroenteritis", "stomach flu", "salmonella",
+    "norovirus", "campylobacter", "e coli", "listeria", "traveler's diarrhea",
+    "vomiting and diarrhea", "stomach bug", "food poisoning treatment", "food poisoning prevention"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "sources": [
+    {
+      "title": "Scallan E, Hoekstra RM, Angulo FJ, et al. Foodborne illness acquired in the United States — major pathogens. Emerging Infectious Diseases. 2011;17(1):7-15.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21192848/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Havelaar AH, Kirk MD, Torgerson PR, et al. World Health Organization Global Estimates and Regional Comparisons of the Burden of Foodborne Disease in 2010. PLOS Medicine. 2015;12(12):e1001923.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26633896/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Riddle MS, DuPont HL, Connor BA. ACG Clinical Guideline: Diagnosis, Treatment, and Prevention of Acute Diarrheal Infections in Adults. American Journal of Gastroenterology. 2016;111(5):602-622.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27068718/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Shane AL, Mody RK, Crump JA, et al. 2017 Infectious Diseases Society of America Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea. Clinical Infectious Diseases. 2017;65(12):e45-e80.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Hall AJ, Lopman BA, Payne DC, et al. Norovirus disease in the United States. Emerging Infectious Diseases. 2013;19(8):1198-1205.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23876403/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Tack DM, Ray L, Griffin PM, et al. Preliminary Incidence and Trends of Infections with Pathogens Transmitted Commonly Through Food — Foodborne Diseases Active Surveillance Network, 10 U.S. Sites, 2016-2019. MMWR. 2020;69(17):509-514.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32352953/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Schlech WF 3rd. Epidemiology and Clinical Manifestations of Listeria monocytogenes Infection. Microbiology Spectrum. 2019;7(3).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31124430/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "CDC FoodNet Annual Reports. Centers for Disease Control and Prevention.",
+      "url": "https://www.cdc.gov/foodnet/reports/index.html",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

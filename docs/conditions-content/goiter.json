@@ -1,0 +1,525 @@
+{
+  "_meta": {
+    "slug": "goiter",
+    "tier": 1,
+    "headTerm": "goiter",
+    "longTailKeywords": [
+      "goiter",
+      "goitre",
+      "thyroid swelling neck",
+      "endemic goiter",
+      "multinodular goiter",
+      "iodine deficiency goiter",
+      "goiter symptoms",
+      "goiter treatment",
+      "thyroid nodule biopsy",
+      "thyroidectomy"
+    ],
+    "primarySpecialty": "Endocrinology",
+    "lastReviewed": "2026-05-13",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against ATA 2016 Hyperthyroidism Guidelines, ATA 2015 Nodule/Cancer Guidelines, NICE NG145 Thyroid 2019, and Vanderpump Endocrinol Metab Clin 2011 epidemiology review."
+  },
+
+  "h1Title": "Goiter: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology",
+
+  "heroOverview": "Goiter is an abnormal enlargement of the thyroid gland, visible or palpable in the front of the neck, that can be diffuse or nodular and can occur with low, normal, or high thyroid hormone levels. Globally, iodine deficiency remains the leading cause and affects roughly 800 million people in surveys; in iodine-sufficient countries like the United States, autoimmune thyroiditis (Hashimoto's) and benign multinodular disease dominate. Most goiters are slow-growing and asymptomatic, but large ones can compress the trachea or esophagus, cause cosmetic concern, or contain a thyroid cancer. Diagnosis turns on three questions: How big? What thyroid function? Any suspicious nodules? Treatment ranges from observation through iodine supplementation, levothyroxine, radioiodine, and thyroidectomy depending on cause and size.",
+
+  "keyStats": {
+    "prevalence": "Diffuse and nodular goiter affects ~5% of US adults; up to 30% in iodine-deficient regions (Vanderpump 2011)",
+    "demographics": "Women 4-5x more affected than men in iodine-sufficient regions; nearly equal sex ratio in endemic iodine deficiency",
+    "avgAge": "Most common in adults age 40-60; nodular disease prevalence rises with age",
+    "globalCases": "~800 million people exposed to iodine deficiency; ~245 million with measurable urinary iodine below 100 µg/L (WHO 2024)"
+  },
+
+  "definition": "Goiter (ICD-10: E00-E07) is the clinical or radiologic finding of an enlarged thyroid gland, regardless of underlying thyroid function. The normal adult thyroid weighs 15-25 g and is usually impalpable; a goiter is operationally defined as a thyroid lobe larger than the distal phalanx of the patient's thumb on examination, or volume greater than 18 mL in women or 25 mL in men by ultrasound. Goiter is classified by morphology (diffuse vs uninodular vs multinodular), function (euthyroid, hyperthyroid, or hypothyroid), substernal extent, and presence or absence of suspicious nodules. Mechanisms include chronic TSH stimulation from iodine deficiency, autoimmune thyroiditis (Hashimoto's), Graves' disease, inherited dyshormonogenesis, environmental goitrogens, focal autonomous nodule formation, and rare neoplasms. WHO grades goiter clinically: Grade 0 (not visible or palpable), Grade 1 (palpable but not visible with the neck in neutral position), Grade 2 (visible with the neck in neutral position). It is managed primarily by endocrinologists, with otolaryngology, endocrine surgery, and nuclear medicine involved depending on cause and complications.",
+
+  "typesClassification": [
+    { "type": "Diffuse non-toxic goiter", "description": "Uniform enlargement of the thyroid without nodules and with normal thyroid function. Most often caused by mild iodine deficiency, early Hashimoto's, or physiologic enlargement during puberty or pregnancy. Often resolves with iodine repletion if deficiency is the cause." },
+    { "type": "Multinodular goiter (non-toxic)", "description": "Multiple discrete nodules of varying sizes within an enlarged gland, normal thyroid function. Most common form in adults over 50 in iodine-sufficient areas. Each nodule requires risk stratification with ultrasound and selective fine-needle aspiration." },
+    { "type": "Toxic multinodular goiter (Plummer disease)", "description": "Multinodular goiter with one or more autonomously functioning nodules producing excess thyroid hormone. Causes a more gradual hyperthyroidism than Graves' disease, often in older adults. Treated with radioiodine or surgery." },
+    { "type": "Diffuse toxic goiter (Graves' disease)", "description": "Autoimmune diffuse enlargement driven by TSH-receptor stimulating antibodies, with hyperthyroidism plus often orbitopathy and pretibial myxedema. Treated with antithyroid drugs, radioiodine, or thyroidectomy." },
+    { "type": "Endemic iodine-deficiency goiter", "description": "Defined by WHO as goiter prevalence above 5% in school-age children in a defined region. Driven by sustained dietary iodine intake below 100 µg/day. Salt iodization is the public-health solution." },
+    { "type": "Substernal goiter", "description": "Goiter extending below the thoracic inlet, often causing tracheal compression, dysphagia, or facial plethora on arm raising (Pemberton sign). Generally requires surgical removal." }
+  ],
+
+  "primarySymptoms": [
+    "A visible or palpable swelling at the front of the neck, often noticed by the patient while shaving or applying makeup, or by a family member.",
+    "A sense of pressure, tightness, or fullness in the lower neck, particularly when wearing collared shirts or jewelry.",
+    "Difficulty swallowing solid foods (dysphagia) as the gland enlarges and compresses the upper esophagus.",
+    "Difficulty breathing or stridor when lying flat or with the neck extended, due to tracheal compression by a substernal component.",
+    "Hoarseness or change in voice from compression or stretching of the recurrent laryngeal nerve.",
+    "Symptoms of hypothyroidism when the goiter is caused by Hashimoto's or iodine deficiency: fatigue, cold intolerance, weight gain, constipation, dry skin, hair loss, and brain fog.",
+    "Symptoms of hyperthyroidism when the goiter is toxic: heat intolerance, weight loss despite normal appetite, palpitations, tremor, anxiety, and frequent bowel movements.",
+    "A new, rapidly growing neck lump should prompt urgent evaluation for thyroid cancer or anaplastic transformation.",
+    "Facial flushing or fullness when raising the arms above the head (Pemberton sign) — indicates obstruction of venous return by a substernal goiter."
+  ],
+
+  "earlyWarningSigns": [
+    "Mild enlargement of the lower neck noticed only on close inspection or palpation by a clinician",
+    "Elevated TSH on routine bloodwork without symptoms — subclinical hypothyroidism from early Hashimoto's",
+    "Mild dysphagia limited to specific foods (rice, bread) in middle-aged women",
+    "Family history of goiter, autoimmune thyroid disease, or thyroid cancer in first-degree relatives"
+  ],
+
+  "emergencySigns": [
+    "Acute breathlessness or stridor with a known large goiter — possible acute tracheal compression needing airway support",
+    "Sudden severe neck pain with rapid swelling — possible hemorrhage into a nodule requiring urgent imaging",
+    "Hoarseness, vocal cord paralysis, or rapid growth — must exclude thyroid cancer with urgent ultrasound and biopsy",
+    "Thyrotoxic crisis (thyroid storm) — high fever, tachycardia, agitation, vomiting in a patient with untreated toxic goiter — requires ICU care",
+    "Cervical lymphadenopathy with a thyroid mass — possible metastatic thyroid carcinoma requiring biopsy of both"
+  ],
+
+  "causes": [
+    {
+      "cause": "Chronic iodine deficiency",
+      "description": "The most common cause worldwide. Sustained dietary iodine below 100 µg/day reduces thyroid hormone production; the pituitary responds by increasing TSH, which drives thyroid hyperplasia. Endemic iodine deficiency persists in mountain and inland regions of Africa, South Asia, and Eastern Europe."
+    },
+    {
+      "cause": "Hashimoto's thyroiditis (chronic autoimmune thyroiditis)",
+      "description": "The leading cause of goiter in iodine-sufficient countries. Anti-thyroid peroxidase and anti-thyroglobulin antibodies drive lymphocytic infiltration, fibrosis, and slowly progressive thyroid failure. The gland is initially enlarged and firm, becoming smaller and atrophic in late disease."
+    },
+    {
+      "cause": "Graves' disease",
+      "description": "Autoimmune diffuse toxic goiter driven by TSH-receptor stimulating antibodies (TRAb), which mimic TSH and cause both diffuse enlargement and overproduction of thyroid hormone. Often accompanied by orbitopathy and pretibial myxedema."
+    },
+    {
+      "cause": "Multinodular goiter (sporadic, non-toxic)",
+      "description": "Develops over years from focal hyperplasia and clonal expansion within the thyroid. Each nodule reflects a small genetic or acquired change in a single thyrocyte lineage. Prevalence rises with age, reaching 30-50% by age 60 on ultrasound."
+    },
+    {
+      "cause": "Inherited dyshormonogenesis",
+      "description": "Rare autosomal recessive defects in thyroid hormone synthesis (TPO, TG, DUOX2, SLC5A5, SLC26A4 mutations) cause congenital goiter, usually with hypothyroidism. Pendred syndrome combines goiter with sensorineural deafness."
+    },
+    {
+      "cause": "Goitrogenic foods and medications",
+      "description": "Cassava, soy, millet, and cabbage-family vegetables can contribute to goiter in iodine-deficient settings. Lithium, amiodarone, perchlorate, and excess iodine itself (Wolff-Chaikoff effect or Jod-Basedow) all alter thyroid function and can drive goiter."
+    },
+    {
+      "cause": "Thyroid neoplasms",
+      "description": "Both benign (follicular adenoma) and malignant (papillary, follicular, medullary, anaplastic) thyroid neoplasms present as nodules within a goiter. Rapid growth, hard fixed nodules, vocal cord paralysis, and lymphadenopathy raise concern for malignancy."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women have 4-5x higher prevalence of goiter and nodular disease in iodine-sufficient regions, driven partly by estrogen effects on thyroid growth and a higher prevalence of autoimmune thyroid disease." },
+    { "factor": "Iodine intake below WHO recommended levels", "category": "modifiable", "description": "Dietary iodine below 100 µg/day in adults (150 µg in pregnancy) drives endemic goiter. Universal salt iodization has reduced goiter prevalence in supplemented countries by 50-80% over decades." },
+    { "factor": "Family history of thyroid disease", "category": "genetic", "description": "First-degree relatives with goiter, Hashimoto's, Graves', or thyroid cancer raise individual risk 2-4 fold. Specific susceptibility loci include HLA-DR3, CTLA4, PTPN22, and TSHR." },
+    { "factor": "Pregnancy and postpartum", "category": "non-modifiable", "description": "Iodine demand rises 50% in pregnancy. Pre-existing borderline iodine deficiency can manifest as gestational goiter. Postpartum thyroiditis occurs in 5-10% of women within 12 months of delivery." },
+    { "factor": "External radiation exposure to the neck", "category": "environmental", "description": "Childhood radiation for tinea capitis, acne, lymphoma, or accidental nuclear exposure raises goiter and thyroid cancer risk for decades. Risk peaks for exposures under age 15." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Smoking aggravates iodine deficiency by increasing thiocyanate (a goitrogen), and is associated with larger goiters in iodine-sufficient populations. Smokers with Graves' disease have higher rates of orbitopathy." },
+    { "factor": "Older age", "category": "non-modifiable", "description": "Nodular thyroid disease prevalence rises steeply with age — 30-50% of adults over 60 have at least one thyroid nodule on ultrasound, although most are clinically insignificant." }
+  ],
+
+  "affectedDemographics": [
+    "Endemic goiter remains common in parts of sub-Saharan Africa, the Himalayas, the Andes, and Central Asia where iodization programs are incomplete",
+    "US prevalence of palpable goiter is approximately 5% in adults; ultrasound-detected nodules are present in roughly 50% of adults over 50",
+    "Women aged 40-60 carry the highest prevalence in iodine-sufficient countries",
+    "Children born to iodine-deficient mothers can develop congenital goiter and cretinism — the most preventable cause of intellectual disability worldwide",
+    "Universal salt iodization, achieved in over 120 countries, has halved global endemic goiter prevalence since 1990 (WHO 2024)"
+  ],
+
+  "diagnosisOverview": "Diagnosis begins with a structured neck examination and is anchored by three questions: how large is the goiter, what is the thyroid function, and are there any suspicious nodules? Inspection identifies asymmetry, scars, and visible bulging; palpation from behind the patient with swallowing assesses size, consistency, mobility, and any discrete nodules. Auscultation may detect the bruit of Graves' disease. Initial laboratory testing is TSH (with reflex free T4 and free T3 if abnormal), thyroid peroxidase antibody (TPO Ab), and thyroglobulin antibody (Tg Ab) to identify autoimmune disease. TSH-receptor antibody (TRAb) is added when Graves' disease is suspected. Ultrasound is the single most useful imaging study: it confirms gland enlargement, characterizes any nodules using the ACR TI-RADS or ATA stratification system (composition, echogenicity, shape, margins, echogenic foci), and identifies suspicious cervical lymphadenopathy. Fine-needle aspiration (FNA) under ultrasound guidance is recommended for nodules ≥1 cm with intermediate or high-suspicion features, or ≥1.5-2 cm for lower-risk nodules, per ATA 2015 guidelines. Bethesda system cytology categories guide management. Radioiodine (I-123) or technetium-99m thyroid scan is used selectively when TSH is suppressed to identify a 'hot' autonomous nodule vs the diffuse uptake of Graves'. CT or MRI without contrast is reserved for very large or substernal goiters to plan surgery; iodinated contrast should be avoided when possible due to thyroid uptake. Spirometry or flow-volume loops can quantify tracheal compression. The combination of TSH plus ultrasound resolves the majority of cases on first visit.",
+
+  "diagnosticTests": [
+    {
+      "test": "Thyroid-stimulating hormone (TSH)",
+      "purpose": "The first-line test for thyroid function. Suppressed TSH indicates hyperthyroidism; elevated TSH indicates hypothyroidism. Normal TSH with a goiter typically reflects euthyroid Hashimoto's, multinodular disease, or early iodine deficiency.",
+      "whatToExpect": "Standard blood draw, often combined with free T4. Results in 1-2 days. Fasting not required."
+    },
+    {
+      "test": "Thyroid ultrasound with nodule characterization",
+      "purpose": "Confirms goiter, measures thyroid volume, characterizes any nodules using TI-RADS or ATA criteria, and detects suspicious lymph nodes. The single most useful imaging study for goiter.",
+      "whatToExpect": "A radiologist or endocrinologist applies gel and a probe to the neck. The scan takes 15-30 minutes, is painless, and uses no radiation. Reports note size, nodule features, and risk stratification."
+    },
+    {
+      "test": "TPO and Tg antibodies",
+      "purpose": "Confirm autoimmune thyroiditis (Hashimoto's). Strongly positive TPO antibodies are present in over 90% of Hashimoto's patients and 70% of Graves' patients. Negative antibodies suggest non-autoimmune cause.",
+      "whatToExpect": "Standard blood test, often added at the time of TSH testing. Results in 1-3 days."
+    },
+    {
+      "test": "Fine-needle aspiration (FNA) of suspicious nodules",
+      "purpose": "Distinguishes benign from malignant nodules. Reported with the Bethesda system, where categories III-VI guide further evaluation or surgery. FNA is the reference standard for nodule risk stratification.",
+      "whatToExpect": "Performed under ultrasound guidance in clinic. A thin needle is passed 2-4 times through the nodule after local anesthetic. Mild discomfort lasting a few hours; results in 3-7 days."
+    },
+    {
+      "test": "Radioiodine (I-123) or technetium-99m thyroid scan",
+      "purpose": "Used when TSH is suppressed to distinguish Graves' disease (diffuse uptake) from toxic nodular goiter (focal hot nodule with cold surroundings) or thyroiditis (very low uptake).",
+      "whatToExpect": "A small dose of radioactive tracer is given orally or by injection. Imaging takes 20-40 minutes 1-24 hours later. Radiation dose is comparable to a CT scan."
+    },
+    {
+      "test": "Free T4 and free T3",
+      "purpose": "Confirm and quantify hyperthyroidism or hypothyroidism in patients with abnormal TSH. Free T3 in particular helps identify T3-toxicosis from autonomously functioning nodules.",
+      "whatToExpect": "Standard blood test, typically reflexed automatically after an abnormal TSH. Same-day or next-day results."
+    },
+    {
+      "test": "Cervical CT or MRI (without iodinated contrast)",
+      "purpose": "Reserved for large or substernal goiters to define airway compression, retrosternal extent, and surgical planning. Iodinated contrast can precipitate thyrotoxicosis in autonomous nodules and is avoided when possible.",
+      "whatToExpect": "Standard CT or MRI of the neck and upper chest, taking 10-20 minutes. Ordered selectively by the endocrinologist or surgeon."
+    }
+  ],
+
+  "treatmentOverview": "Treatment depends on three factors: thyroid function, gland size and symptoms, and the presence of suspicious nodules. For asymptomatic small euthyroid goiter, observation alone is appropriate, with annual TSH and ultrasound every 1-2 years if nodules are present. For iodine-deficiency goiter, restoring dietary iodine through iodized salt or potassium iodide supplementation reduces gland size by 30-50% within 6-12 months in early disease; long-standing nodular goiter responds less reliably. For Hashimoto's hypothyroidism, levothyroxine replacement (1.6 µg/kg/day in younger adults; lower in older adults and those with cardiac disease) normalizes TSH and modestly reduces gland size. Routine suppressive levothyroxine for euthyroid nodular goiter is no longer recommended by ATA 2015 due to limited efficacy and bone/cardiac risks. For Graves' disease, three definitive options exist: antithyroid drugs (methimazole 10-40 mg daily, or propylthiouracil 100-300 mg daily in first-trimester pregnancy and thyroid storm), radioiodine (I-131 ablation, the most common US treatment), and total thyroidectomy. ATA 2016 guidelines recommend choosing among these based on patient preference, severity, comorbidities, and presence of orbitopathy. For toxic multinodular goiter, radioiodine or surgery is preferred; antithyroid drugs alone rarely produce durable remission in nodular disease. For large compressive or substernal goiter, thyroidectomy is the standard treatment; outcomes are excellent in high-volume centers (recurrent laryngeal nerve injury <1%, permanent hypoparathyroidism 1-3%). Cytologically indeterminate nodules can be further evaluated with molecular testing (Afirma GSC, ThyroSeq) to reduce diagnostic surgery in benign disease. Differentiated thyroid cancer is treated with surgery, selective radioiodine ablation, and TSH-suppressive levothyroxine; outcomes for papillary carcinoma are excellent, with 10-year survival above 95% in localized disease. Pregnancy planning matters: methimazole can cause embryopathy in the first trimester, so propylthiouracil is preferred during weeks 6-12 of gestation; radioiodine is absolutely contraindicated in pregnancy and breastfeeding.",
+
+  "medicalTreatments": [
+    {
+      "name": "Levothyroxine (1.6 µg/kg/day in healthy adults; titrate to TSH 0.5-2.5 mIU/L)",
+      "description": "First-line replacement for hypothyroidism from Hashimoto's or iodine deficiency. Modestly shrinks the goiter in early disease. Taken on an empty stomach 30-60 minutes before food. Dose-adjustments every 6-8 weeks until TSH stabilizes; lifelong therapy.",
+      "effectiveness": "Normalizes TSH in over 95% of treated patients within 3-6 months; reduces gland size by 10-30% in early Hashimoto's."
+    },
+    {
+      "name": "Methimazole (10-40 mg daily, divided initially)",
+      "description": "First-line antithyroid drug for Graves' disease and toxic multinodular goiter. Inhibits thyroid peroxidase, reducing hormone synthesis. Major side effects include agranulocytosis (0.3%), hepatotoxicity, and rash. Pregnancy: switch to propylthiouracil in the first trimester.",
+      "effectiveness": "Achieves euthyroidism in 80-90% of Graves' patients within 4-8 weeks; 40-50% sustained remission off drug at 12-18 months."
+    },
+    {
+      "name": "Propylthiouracil (100-300 mg daily)",
+      "description": "Second-line antithyroid drug used in first-trimester pregnancy (lower teratogenicity than methimazole), thyroid storm, and methimazole-intolerant patients. Black-box warning for fulminant hepatic failure; monitoring of liver enzymes essential.",
+      "effectiveness": "Comparable efficacy to methimazole at appropriate dosing; preferred only when methimazole cannot be used."
+    },
+    {
+      "name": "Radioactive iodine (I-131 ablation)",
+      "description": "Definitive treatment for Graves' disease and toxic multinodular goiter. A single oral dose (typically 10-15 mCi) selectively destroys overactive thyroid tissue over weeks to months. Most patients become hypothyroid and require levothyroxine. Pregnancy and breastfeeding are contraindications.",
+      "effectiveness": "Cure rate 80-90% with a single dose; permanent hypothyroidism develops in 70-80% within one year, requiring lifelong levothyroxine."
+    },
+    {
+      "name": "Beta-blockers (propranolol 20-40 mg q6-8h or atenolol 25-100 mg daily)",
+      "description": "Symptomatic relief for hyperthyroidism — controls tachycardia, tremor, and anxiety while definitive therapy takes effect. Bridges the 4-8 weeks until methimazole works or the 2-4 months until radioiodine takes effect.",
+      "effectiveness": "Rapid (24-48 hour) relief of adrenergic symptoms; does not lower thyroid hormone levels."
+    },
+    {
+      "name": "Iodine supplementation (potassium iodide 100-200 µg/day, or iodized salt)",
+      "description": "First-line for endemic iodine-deficiency goiter. Most effective in young patients with diffuse goiter; less reliable for long-standing nodular disease. Universal salt iodization at population level is the public-health intervention of choice.",
+      "effectiveness": "Gland size reduction of 30-50% within 6-12 months in early iodine-deficiency goiter."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Total thyroidectomy",
+      "description": "Complete removal of both thyroid lobes plus isthmus. Standard for thyroid cancer, large compressive goiters, Graves' disease with orbitopathy or planning pregnancy, and any goiter with concerning nodules. Requires lifelong levothyroxine.",
+      "successRate": "Cure of compression and cancer in over 95% in experienced centers; recurrent laryngeal nerve injury <1%, permanent hypoparathyroidism 1-3%."
+    },
+    {
+      "name": "Hemithyroidectomy (thyroid lobectomy)",
+      "description": "Removal of one thyroid lobe and isthmus. Used for unilateral nodular disease, indeterminate cytology, and small low-risk papillary cancers ≤4 cm without lymphadenopathy. May preserve thyroid function without levothyroxine.",
+      "successRate": "Avoidance of lifelong levothyroxine in 60-80% of patients; recurrent laryngeal nerve injury <0.5%."
+    },
+    {
+      "name": "Radiofrequency ablation (RFA) of benign nodules",
+      "description": "Image-guided heat ablation of benign symptomatic nodules using an ultrasound-guided probe. Office-based; reduces nodule volume substantially without surgery. Useful for cosmetically prominent or moderately compressive benign nodules.",
+      "successRate": "Nodule volume reduction 60-80% at 12 months in selected cases; lower nodule recurrence at 24 months than ethanol ablation."
+    },
+    {
+      "name": "Substernal goiter resection via cervical approach",
+      "description": "Most substernal goiters can be removed through a standard cervical incision, even when they extend into the mediastinum. Sternotomy is rarely required in modern endocrine surgical practice.",
+      "successRate": "Complete resection in 95%+ of cases via cervical approach; 30-day mortality under 0.5% in high-volume centers."
+    }
+  ],
+
+  "alternativeTreatments": [],
+
+  "whySeeSpecialist": "An endocrinologist should be involved for goiter with abnormal thyroid function, any nodule with intermediate-or-high-suspicion ultrasound features, indeterminate FNA cytology, suspected Graves' disease, substernal extent, or rapid growth. An endocrine surgeon — operating in a high-volume center (more than 50 thyroidectomies per year per surgeon) — is essential when surgery is required, as outcomes correlate strongly with surgical volume.",
+
+  "doctorSelectionGuide": "Look for an endocrinologist with experience in thyroid nodule risk stratification, in-office ultrasound, and FNA. For surgical care, choose a high-volume endocrine surgeon (more than 50 thyroidectomies per year, per ATA recommendations); complication rates fall significantly with volume. Confirm the center has nuclear medicine for radioiodine therapy if needed. Continuity matters — goiter and Hashimoto's are lifelong conditions.",
+
+  "hospitalCriteria": [
+    "In-house thyroid ultrasound with experienced operators",
+    "FNA biopsy with cytology reporting in the Bethesda system",
+    "Nuclear medicine for radioiodine therapy and thyroid scintigraphy",
+    "Endocrine surgical service with at least 50 thyroidectomies annually per surgeon",
+    "Multidisciplinary thyroid cancer tumor board for cytologically suspicious cases"
+  ],
+
+  "keyFacilities": [
+    "Academic endocrine surgery centers (Mayo Clinic, Cleveland Clinic, MD Anderson, Memorial Sloan Kettering, Johns Hopkins)",
+    "ATA Thyroid Cancer Survivors' Association affiliated centers (US)",
+    "BTA (British Thyroid Association) accredited centers (UK)",
+    "Endocrine surgery and nuclear medicine departments in tertiary academic hospitals"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Use iodized salt — 1 teaspoon (5 g) provides approximately 150 µg of iodine, meeting the adult daily requirement",
+    "Pregnant and breastfeeding women should consume 250 µg iodine daily, typically via prenatal vitamins containing 150 µg potassium iodide",
+    "Limit goitrogenic foods (raw cassava, soy, millet) in iodine-deficient regions; cooking inactivates most goitrogens",
+    "Avoid smoking, which adds thiocyanate to dietary intake and aggravates iodine deficiency",
+    "Annual TSH screening in women over 40, those with family history, and after radiation exposure to the neck"
+  ],
+
+  "lifestyleModifications": [
+    "Take levothyroxine on an empty stomach with water at least 30-60 minutes before breakfast or other medications",
+    "Separate levothyroxine from calcium, iron, antacids, and soy products by at least 4 hours to avoid impaired absorption",
+    "Inform anesthesiologists and radiologists about your goiter before any neck surgery or iodinated contrast study",
+    "Carry a medical-alert card noting your thyroid status, particularly if on antithyroid drugs that require interruption before surgery",
+    "Maintain regular TSH monitoring every 6-12 months once on stable medication; sooner during pregnancy or major weight changes"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Iodine-rich foods — seafood, dairy products, eggs, and iodized salt",
+      "Selenium-rich foods (Brazil nuts, sardines, eggs) — selenium supports thyroid hormone metabolism and antioxidant defense",
+      "Adequate iron and zinc, both required for thyroid hormone synthesis",
+      "Mediterranean-style diet rich in vegetables, whole grains, and oily fish"
+    ],
+    "avoid": [
+      "Excessive iodine intake (kelp supplements, povidone-iodine gargles) — can paradoxically cause hypothyroidism or trigger thyrotoxicosis in autonomous nodules",
+      "Raw cassava, raw cabbage-family vegetables, and uncooked soy in large quantities, especially during iodine-deficient periods",
+      "Concurrent ingestion of levothyroxine with coffee, calcium, or iron supplements — separate by at least 30-60 minutes",
+      "Crash dieting during early thyroid hormone replacement — can interfere with dose stabilization"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular aerobic exercise is safe and beneficial with treated goiter. During untreated hyperthyroidism, avoid high-intensity exercise due to cardiac strain — beta-blockers can mitigate symptoms while definitive therapy takes effect. Once euthyroid, no specific exercise restrictions apply. Strength training is particularly helpful in post-surgical recovery and counteracts the muscle weakness that can persist after hypothyroidism.",
+
+  "dailyManagement": [
+    "Take thyroid medication consistently at the same time each day",
+    "Monitor for symptoms of over- or under-treatment between TSH checks (palpitations, weight change, fatigue, mood changes)",
+    "Report any new neck lump, rapid growth, hoarseness, or breathing difficulty promptly",
+    "Maintain regular TSH monitoring as advised — usually every 6-12 months on stable medication",
+    "Keep a record of past thyroid ultrasound reports and FNA results to support continuity of care"
+  ],
+
+  "prognosis": "Most goiters have an excellent long-term prognosis. Iodine-deficiency goiter responds well to iodization, with significant size reduction in early disease. Hashimoto's leads to progressive hypothyroidism in most patients but is fully controlled with levothyroxine; life expectancy is normal. Graves' disease achieves long-term remission off antithyroid drugs in 40-50% of patients; radioiodine or surgery is curative in over 90%. Toxic multinodular goiter, once treated definitively, rarely recurs. Multinodular goiter without function abnormalities typically grows slowly or stabilizes; only 5-10% of nodules over a decade prove malignant. Thyroid cancers found within goiters have generally favorable outcomes: papillary carcinoma has 10-year survival above 95% in localized disease. Mortality from goiter itself is uncommon and is restricted to large untreated compressive disease, anaplastic carcinoma, or untreated thyroid storm. Pregnancy outcomes are very good when thyroid function is normalized before conception and TSH is maintained in the trimester-specific reference range throughout gestation.",
+
+  "recoveryTimeline": "Levothyroxine replacement normalizes TSH over 6-12 weeks. Antithyroid drugs render Graves' patients euthyroid in 4-8 weeks. Radioiodine takes 2-4 months for full effect, with hypothyroidism typically developing within 6-12 months. Thyroidectomy recovery is rapid — most patients return to work within 1-2 weeks; the small surgical scar fades over 6-12 months. Goiter size after iodine repletion or levothyroxine begins to shrink within 3-6 months and reaches maximum reduction by 12 months.",
+
+  "complications": [
+    "Tracheal compression with airway obstruction in large or substernal goiters — usually preventable with timely surgery",
+    "Dysphagia and esophageal compression in large multinodular goiters",
+    "Recurrent laryngeal nerve injury after thyroidectomy — under 1% in experienced centers but a major source of permanent hoarseness when it occurs",
+    "Permanent hypoparathyroidism after total thyroidectomy in 1-3% of cases, requiring lifelong calcium and calcitriol",
+    "Thyroid storm (thyrotoxic crisis) in untreated toxic goiter — mortality 10-25% even with ICU care",
+    "Thyroid cancer arising within a goiter — most commonly papillary, occasionally medullary or anaplastic",
+    "Postpartum thyroiditis with transient hyperthyroidism followed by hypothyroidism in 5-10% of women after delivery"
+  ],
+
+  "supportResources": [
+    { "name": "American Thyroid Association — Patient Information", "url": "https://www.thyroid.org/patient-thyroid-information/", "description": "Authoritative US patient education from the body that publishes the thyroid practice guidelines." },
+    { "name": "British Thyroid Foundation", "url": "https://www.btf-thyroid.org/", "description": "UK-based patient charity offering information sheets, helpline support, and local support groups." },
+    { "name": "ThyroidChange", "url": "https://www.thyroidchange.org/", "description": "Patient advocacy organization for people with thyroid disease, including community forums and updates on guidelines." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "thyroiditis", "name": "Thyroiditis (acute, subacute, chronic)", "keyDifference": "Thyroiditis is inflammation of the thyroid causing tenderness and often transient thyroid dysfunction — viral subacute thyroiditis is typically painful, while Hashimoto's is painless. Goiter can result from thyroiditis but the inflammation itself is the primary process. Tender, rapidly enlarging goiter with malaise points to thyroiditis; chronic painless enlargement points to non-inflammatory goiter." },
+    { "slug": "thyrotoxicosis", "name": "Thyrotoxicosis", "keyDifference": "Thyrotoxicosis is a state of excess circulating thyroid hormone, regardless of source. Toxic goiter is one cause; thyroiditis with hormone leak is another; exogenous levothyroxine overdose is a third. The presence or absence of goiter, plus radioiodine uptake, distinguishes these." },
+    { "slug": "hashimotos-disease", "name": "Hashimoto's Disease", "keyDifference": "Hashimoto's is the autoimmune cause of most non-toxic goiter in iodine-sufficient regions. The gland is firm, often slightly enlarged, with positive TPO antibodies and gradual hypothyroidism. Goiter is the morphologic finding; Hashimoto's is one of its causes." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hashimotos-disease", "name": "Hashimoto's Disease" },
+    { "slug": "thyroiditis", "name": "Thyroiditis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hashimotos-disease", "name": "Hashimoto's Disease", "relevance": "Most common cause of goiter in iodine-sufficient countries; lymphocytic infiltration drives gland enlargement and progressive hypothyroidism." },
+    { "slug": "thyroiditis", "name": "Thyroiditis", "relevance": "Inflammatory enlargement of the thyroid causing transient hyperthyroidism followed by hypothyroidism; can present as a tender goiter." },
+    { "slug": "thyrotoxicosis", "name": "Thyrotoxicosis", "relevance": "Excess thyroid hormone state that can arise from toxic nodular goiter, Graves' disease, or thyroiditis." },
+    { "slug": "anemia", "name": "Anemia", "relevance": "Hypothyroidism from Hashimoto's commonly causes mild normocytic or macrocytic anemia; iron deficiency anemia worsens thyroid hormone metabolism." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is a goiter?",
+      "answer": "A goiter is an abnormal enlargement of the thyroid gland, the butterfly-shaped gland at the front of the neck. It can be diffuse (uniform) or nodular, and can occur with low, normal, or high thyroid hormone levels. Goiters are usually painless and slow-growing, but very large ones can cause neck pressure, swallowing difficulty, or breathing problems.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes goiter?",
+      "answer": "Worldwide, iodine deficiency is the most common cause. In iodine-sufficient countries like the US, autoimmune thyroid disease (Hashimoto's thyroiditis or Graves' disease), benign multinodular changes, and inherited conditions are the leading causes. Goitrogenic foods, medications like lithium and amiodarone, and rare neoplasms also contribute.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is goiter dangerous?",
+      "answer": "Most goiters are not immediately dangerous. They become a problem when they grow large enough to compress the trachea, esophagus, or recurrent laryngeal nerve; when they cause hyperthyroidism or hypothyroidism; or when they contain a thyroid cancer. Roughly 5-10% of thyroid nodules within goiters prove malignant on biopsy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is goiter diagnosed?",
+      "answer": "Diagnosis starts with neck examination and a TSH blood test. Thyroid ultrasound is the single most useful imaging test, confirming enlargement and characterizing any nodules. Antibody tests identify autoimmune causes. Fine-needle aspiration biopsy of suspicious nodules under ultrasound guidance distinguishes benign from malignant disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do all goiters need treatment?",
+      "answer": "No. Many small, asymptomatic goiters with normal thyroid function are simply monitored with periodic TSH and ultrasound. Treatment is needed for abnormal thyroid function, compressive symptoms, cosmetically significant size, suspicious nodules, or rapid growth. Observation is appropriate for the majority of euthyroid multinodular goiters.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will iodine cure my goiter?",
+      "answer": "Iodine supplementation works well in early iodine-deficiency goiter, particularly in young people with diffuse enlargement. Once long-standing nodular disease has developed, iodine alone is less effective. Excess iodine can actually trigger hyperthyroidism in patients with autonomous nodules, so iodine supplementation should be guided by an endocrinologist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can goiter cause weight gain?",
+      "answer": "Goiter can cause weight gain when associated with hypothyroidism — typically 3-5 kg of fluid retention and slowed metabolism. Once levothyroxine restores normal thyroid hormone levels, this weight is usually lost over 3-6 months. Goiter with normal thyroid function does not cause weight change.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is goiter the same as thyroid cancer?",
+      "answer": "No. Goiter simply means an enlarged thyroid, and the vast majority of goiters are benign. However, thyroid cancers commonly present as nodules within a goiter, which is why suspicious nodules need ultrasound risk stratification and biopsy. About 5-10% of biopsied thyroid nodules are malignant.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can goiter come back after surgery?",
+      "answer": "After total thyroidectomy, goiter does not recur because no thyroid tissue remains. After hemithyroidectomy or partial resection, the remaining thyroid lobe can enlarge over years in 5-15% of cases. Patients with multinodular goiter are at higher risk of recurrence than those with solitary nodules.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does pregnancy affect goiter?",
+      "answer": "Pregnancy raises thyroid hormone demand approximately 50%. Pre-existing borderline iodine deficiency can manifest as gestational goiter. All pregnant women in the US should take a prenatal vitamin containing 150 µg of potassium iodide, and women with known thyroid disease need TSH monitoring every 4-6 weeks during pregnancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is goiter genetic?",
+      "answer": "Heritability is moderate. First-degree relatives of patients with goiter, Hashimoto's, Graves', or thyroid cancer have a 2-4 fold higher risk. Specific genes including HLA-DR3, CTLA4, PTPN22, and TSHR contribute to autoimmune goiter risk. Rare inherited dyshormonogenesis (TPO, DUOX2, SLC26A4 mutations) causes congenital goiter.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a substernal goiter?",
+      "answer": "A substernal goiter is one that extends below the thoracic inlet into the chest, often causing tracheal compression, dysphagia, or facial flushing on arm raising (Pemberton sign). Most can be removed through a standard neck incision in experienced endocrine surgical centers; full sternotomy is rarely needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between Hashimoto's and Graves'?",
+      "answer": "Both are autoimmune thyroid diseases. Hashimoto's involves anti-TPO antibodies attacking the thyroid, causing gradual hypothyroidism. Graves' involves TSH-receptor stimulating antibodies, causing hyperthyroidism plus often eye disease and pretibial myxedema. Both can produce a goiter, but the thyroid hormone status, antibody profile, and treatment differ substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a goiter shrink on its own?",
+      "answer": "Goiters from acute thyroiditis can shrink as inflammation resolves, often over weeks to months. Iodine-deficiency goiter can shrink with iodine repletion. Hashimoto's-related goiter typically does not regress without levothyroxine. Multinodular goiter rarely shrinks spontaneously; it tends to grow slowly over years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens after thyroid surgery?",
+      "answer": "After total thyroidectomy, patients require lifelong daily levothyroxine to replace thyroid hormone. After hemithyroidectomy, 60-80% can maintain normal thyroid function without medication. Calcium levels are checked daily for the first 48 hours to detect transient hypocalcemia. Most patients return to work within 1-2 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should I get thyroid ultrasound for nodules?",
+      "answer": "Per ATA 2015 guidelines, low-risk nodules (TI-RADS 3) are followed every 12-24 months; intermediate-risk (TI-RADS 4) every 6-12 months until stability is documented; high-risk nodules undergo FNA. Once a nodule is biopsy-proven benign, follow-up ultrasound every 12-24 months is reasonable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is radioactive iodine treatment safe?",
+      "answer": "Radioactive iodine has been used safely for over 75 years to treat Graves' disease and toxic nodular goiter. The main long-term effect is permanent hypothyroidism, treated with levothyroxine. Pregnancy and breastfeeding are absolute contraindications. Small theoretical cancer risk in surrounding tissues is far outweighed by treatment benefits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get goiter?",
+      "answer": "Yes. In iodine-deficient regions, school-age goiter prevalence above 5% defines an endemic area. In iodine-sufficient regions, juvenile Hashimoto's is the most common cause, often presenting in adolescent girls with subtle hypothyroidism. Pediatric goiter warrants endocrine evaluation including TSH, TPO antibodies, and ultrasound.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a thyroid biopsy feel like?",
+      "answer": "Fine-needle aspiration is performed in clinic under ultrasound guidance after local anesthetic. A thin needle is passed 2-4 times through the nodule, each pass lasting only seconds. Most patients report mild pressure and brief sharp sensation. Mild soreness and bruising for 1-3 days is normal. Results return in 3-7 days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does goiter treatment cost?",
+      "answer": "Levothyroxine and antithyroid drugs are inexpensive generics, typically under USD 15 per month. Ultrasound and TSH testing are covered by most insurance and Medicare. Radioiodine therapy costs USD 1,000-3,000 per treatment in the US. Thyroidectomy costs USD 10,000-30,000 in the US, generally covered by insurance. In India, total thyroidectomy is typically INR 50,000-200,000 in private centers.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Goiter (enlarged thyroid)",
+
+  "regionalNames": [
+    { "name": "घेंघा (Ghengha)", "region": "India (Hindi)", "language": "hi" },
+    { "name": "Bocio", "region": "Spanish-speaking countries", "language": "es" },
+    { "name": "Goitre", "region": "UK English, France", "language": "en" }
+  ],
+
+  "searchTags": [
+    "goiter", "goitre", "enlarged thyroid", "thyroid swelling", "neck swelling thyroid",
+    "multinodular goiter", "iodine deficiency goiter", "endemic goiter",
+    "Hashimoto goiter", "Graves goiter", "thyroid nodule", "thyroidectomy",
+    "Plummer disease", "substernal goiter"
+  ],
+
+  "symptomKeywords": [
+    "neck swelling", "lump in throat", "trouble swallowing", "tight collar feeling",
+    "hoarse voice", "visible neck mass", "thyroid lump", "compressive thyroid"
+  ],
+
+  "metaTitle": "Goiter: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Goiter is an enlarged thyroid from iodine deficiency, Hashimoto's, Graves', or nodules. Symptoms, diagnosis, levothyroxine, and surgery reviewed.",
+
+  "keywords": [
+    "goiter", "goitre", "enlarged thyroid", "iodine deficiency", "multinodular goiter",
+    "Hashimoto thyroid", "Graves disease", "thyroidectomy", "thyroid nodule",
+    "thyroid ultrasound", "endemic goiter", "substernal goiter"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Struma_001.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Struma_001.jpg/1280px-Struma_001.jpg",
+      "altText": "Clinical photograph of a large multinodular goiter visible as a prominent swelling at the front of the neck",
+      "caption": "Large multinodular goiter — visible enlargement of the thyroid gland in the lower neck.",
+      "license": "CC BY-SA 3.0",
+      "credit": "Wikimedia Commons",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Illu_thyroid_parathyroid.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Illu_thyroid_parathyroid.jpg/1024px-Illu_thyroid_parathyroid.jpg",
+      "altText": "Anatomical diagram of the thyroid gland and parathyroid glands in the neck",
+      "caption": "Anatomy of the thyroid gland and the four parathyroid glands at its posterior surface.",
+      "license": "Public Domain",
+      "credit": "US National Cancer Institute / Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27521067/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Haugen BR, Alexander EK, Bible KC, et al. 2015 American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer. Thyroid. 2016;26(1):1-133.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26462967/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Vanderpump MPJ. The epidemiology of thyroid disease. British Medical Bulletin. 2011;99:39-51.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21893493/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Zimmermann MB, Boelaert K. Iodine deficiency and thyroid disorders. Lancet Diabetes & Endocrinology. 2015;3(4):286-295.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25591468/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "NICE Guideline NG145: Thyroid disease — assessment and management. National Institute for Health and Care Excellence; 2019.",
+      "url": "https://www.nice.org.uk/guidance/ng145",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "World Health Organization. Assessment of iodine deficiency disorders and monitoring their elimination: a guide for programme managers. 3rd ed. Geneva: WHO; 2024.",
+      "url": "https://www.who.int/publications/i/item/9789241595827",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Tessler FN, Middleton WD, Grant EG, et al. ACR Thyroid Imaging, Reporting and Data System (TI-RADS): White Paper of the ACR TI-RADS Committee. Journal of the American College of Radiology. 2017;14(5):587-595.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28372962/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}
