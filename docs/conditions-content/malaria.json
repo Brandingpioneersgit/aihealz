@@ -1,0 +1,570 @@
+{
+  "_meta": {
+    "slug": "malaria",
+    "tier": 1,
+    "headTerm": "malaria",
+    "longTailKeywords": [
+      "malaria symptoms",
+      "malaria treatment",
+      "malaria causes",
+      "plasmodium falciparum",
+      "plasmodium vivax",
+      "severe malaria",
+      "artemisinin combination therapy",
+      "malaria prophylaxis",
+      "malaria vaccine",
+      "rapid diagnostic test malaria"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against the WHO Guidelines for Malaria 2023 (March update), WHO World Malaria Report 2023, CDC Yellow Book malaria chapter 2024, AQUAMAT trial (Dondorp 2010 Lancet) for parenteral artesunate in severe malaria, SEAQUAMAT (Dondorp 2005), RTS,S/AS01 phase 3 trial (RTS,S Clinical Trials Partnership 2015 Lancet) and WHO endorsement 2021, R21/Matrix-M phase 3 (Datoo 2024 Lancet) and WHO prequalification, tafenoquine GATHER and DETECTIVE trials for P. vivax radical cure (Llanos-Cuentas 2019 NEJM, Lacerda 2019 NEJM), primaquine dosing per WHO. Drug names, dosing, and recommendations match the WHO 2023 update."
+  },
+
+  "h1Title": "Malaria: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Malaria is a febrile parasitic illness caused by Plasmodium protozoa transmitted by the bite of infected female Anopheles mosquitoes. The World Health Organization counted 249 million cases and 608,000 deaths in 2022, with sub-Saharan Africa carrying 94% of cases and 95% of deaths, and children under five accounting for roughly three out of every four malaria deaths. The classic presentation is fever, chills, headache, and muscle aches starting 7 to 30 days after a mosquito bite, often with cyclical paroxysms every 48 or 72 hours depending on the species. Untreated Plasmodium falciparum infection can progress within a single day to cerebral malaria, severe anaemia, acute kidney injury, or death, with case-fatality reaching 10 to 20%. Effective artemisinin-based combination therapy clears uncomplicated infection in over 95% of patients within three days.",
+
+  "keyStats": {
+    "prevalence": "249 million cases and 608,000 deaths globally in 2022 (WHO World Malaria Report 2023)",
+    "demographics": "Sub-Saharan Africa carries 94% of cases and 95% of deaths; children under 5 account for ~76% of malaria deaths in Africa",
+    "avgAge": "Severe malaria peaks in children under 5 in endemic areas and in non-immune travellers of any age",
+    "globalCases": "85 countries are malaria-endemic; Nigeria, DR Congo, Uganda, Mozambique, and Niger together account for ~50% of global cases"
+  },
+
+  "definition": "Malaria (ICD-10: B50-B54) is a vector-borne parasitic disease caused by single-celled Plasmodium parasites that complete part of their life cycle inside female Anopheles mosquitoes and part inside humans. Five species infect humans: Plasmodium falciparum, the cause of nearly all severe and fatal cases and dominant in sub-Saharan Africa; Plasmodium vivax, geographically the most widespread and the leading cause of malaria outside Africa, with dormant liver-stage hypnozoites that drive relapse; Plasmodium ovale, biologically similar to P. vivax with the same relapse pattern but largely confined to West Africa; Plasmodium malariae, a chronic low-grade infection that can persist for decades and cause quartan nephropathy; and Plasmodium knowlesi, a simian parasite transmitted in the forested regions of Southeast Asia that can progress rapidly to severe disease. After a mosquito bite, sporozoites migrate to the liver within hours, mature into schizonts over 6 to 16 days, then rupture into the bloodstream as merozoites that invade red blood cells. Cyclical red-cell rupture every 48 hours (P. vivax, P. ovale, P. falciparum) or 72 hours (P. malariae) produces the febrile paroxysms that define the disease. Severe falciparum malaria reflects sequestration of infected red cells in the cerebral, renal, and pulmonary microcirculation. The disease is managed by infectious-disease physicians, paediatricians, tropical-medicine specialists, and national malaria control programmes.",
+
+  "typesClassification": [
+    { "type": "Plasmodium falciparum malaria", "description": "The deadliest species and the cause of nearly all severe malaria. Dominant in sub-Saharan Africa, accounting for ~99% of African cases. Infected red blood cells sequester in the cerebral, renal, and placental microvasculature, producing cerebral malaria, severe anaemia, and acute kidney injury. No dormant liver stage, but parasitaemia can rise tenfold every 48 hours if untreated." },
+    { "type": "Plasmodium vivax malaria", "description": "The most geographically widespread species and the leading cause of malaria outside Africa, dominant in South and Southeast Asia, Latin America, and the Horn of Africa. Forms dormant liver-stage hypnozoites that reactivate weeks to years later as relapses. Severe disease is less common than with P. falciparum but well documented. Duffy-negative individuals in West Africa are mostly resistant." },
+    { "type": "Plasmodium ovale malaria", "description": "Biologically similar to P. vivax with relapsing hypnozoites; largely confined to West and Central Africa and parts of Southeast Asia. Two subspecies (P. ovale curtisi and P. ovale wallikeri) are recognised. Often milder than P. vivax, but radical cure with an 8-aminoquinoline is still required to prevent relapse." },
+    { "type": "Plasmodium malariae malaria", "description": "Causes a chronic, low-grade quartan fever every 72 hours and can persist asymptomatically in the bloodstream for decades. Distributed worldwide but at low intensity. Long-standing infection occasionally produces immune-complex glomerulonephritis (quartan nephropathy)." },
+    { "type": "Plasmodium knowlesi malaria", "description": "A simian malaria of long-tailed and pig-tailed macaques that is transmitted to humans in the forested regions of Borneo, Malaysia, Indonesia, and parts of mainland Southeast Asia. The 24-hour erythrocytic cycle means parasitaemia rises faster than any other species, and severe disease develops quickly without recognition." },
+    { "type": "Uncomplicated malaria", "description": "Symptomatic infection with detectable parasitaemia in a patient who is alert, able to tolerate oral medication, and free of any WHO severity criterion. Treated with a 3-day artemisinin-based combination therapy (ACT) regimen." },
+    { "type": "Severe malaria", "description": "WHO-defined as infection with one or more of impaired consciousness (Glasgow Coma Scale <11), prostration, multiple convulsions, respiratory distress with acidotic breathing, circulatory collapse, abnormal bleeding, jaundice with parasitaemia, severe anaemia (haemoglobin <5 g/dL in children or <7 g/dL in adults), hypoglycaemia, acute kidney injury, pulmonary oedema, or hyperparasitaemia (>10%). Requires parenteral artesunate and intensive care." }
+  ],
+
+  "primarySymptoms": [
+    "Fever rising to 39-41 °C, classically cyclical every 48 hours in P. vivax, P. ovale, and P. falciparum (tertian) and every 72 hours in P. malariae (quartan), although in clinical practice fever is often irregular in the first week.",
+    "Shaking chills and rigors that precede the fever spike by 1-2 hours, followed by a sweating phase as the temperature falls — the classic paroxysm pattern.",
+    "Severe headache, often frontal or generalised, that worsens during the febrile phase and partially responds to paracetamol.",
+    "Muscle and joint aches with profound back pain, often described by travellers as flu-like at onset and easily mistaken for influenza or dengue.",
+    "Nausea, vomiting, abdominal pain, and diarrhoea, which can dominate the picture in children and lead to misdiagnosis as gastroenteritis.",
+    "Marked fatigue, malaise, and reduced exercise tolerance that persists between paroxysms and worsens with each cycle.",
+    "Pallor and breathlessness from progressive haemolytic anaemia, especially in children with falciparum infection and in pregnant women.",
+    "Jaundice with yellowing of the sclerae and dark cola-coloured urine from haemolysis and bilirubin release.",
+    "Splenomegaly that develops over days to weeks of untreated infection; a tender, palpable spleen is a useful physical sign in endemic settings.",
+    "Confusion, drowsiness, or seizures in cerebral malaria — a medical emergency requiring parenteral artesunate within the hour.",
+    "Cough and shortness of breath from pulmonary involvement, particularly in falciparum and knowlesi malaria with adult respiratory distress syndrome."
+  ],
+
+  "earlyWarningSigns": [
+    "Any fever beginning 7 days to 3 months after travel to a malaria-endemic country — treat as malaria until proven otherwise with a rapid diagnostic test and blood film",
+    "Recurring fever spikes every 48 or 72 hours in a returning traveller or resident of an endemic area",
+    "Unexplained falling haemoglobin or low platelet count in a febrile patient from an endemic region",
+    "A child under five from an endemic area becoming lethargic, refusing food, or sleeping more than usual during a febrile illness",
+    "Persistent low-grade fever after stopping malaria prophylaxis — sub-therapeutic chemoprophylaxis can delay but not prevent infection"
+  ],
+
+  "emergencySigns": [
+    "Reduced consciousness, confusion, or coma — cerebral malaria with Glasgow Coma Scale below 11 carries 15-20% mortality even with treatment",
+    "Repeated or prolonged seizures in a febrile patient from an endemic area — needs immediate parenteral artesunate, glucose check, and supportive care",
+    "Respiratory distress with deep acidotic breathing (Kussmaul respiration), oxygen saturation below 92%, or bilateral lung crackles suggesting acute pulmonary oedema or ARDS",
+    "Severe anaemia with haemoglobin below 5 g/dL in a child or below 7 g/dL in an adult, especially with pallor, breathlessness, or circulatory collapse",
+    "Acute kidney injury with oligo-anuria, dark urine, and rising creatinine — blackwater fever and severe falciparum malaria require dialysis-capable care",
+    "Hypoglycaemia (glucose below 2.2 mmol/L or 40 mg/dL), particularly in children, pregnant women, and patients on quinine — give intravenous dextrose immediately",
+    "Bleeding from the gums, nose, injection sites, or gastrointestinal tract suggesting disseminated intravascular coagulation in severe falciparum malaria"
+  ],
+
+  "causes": [
+    {
+      "cause": "Bite of an infected female Anopheles mosquito",
+      "description": "Malaria is transmitted almost exclusively through the bite of a female Anopheles mosquito that has previously fed on an infected human. Sporozoites injected into the skin reach the liver within hours. Anopheles gambiae, A. funestus, and A. arabiensis dominate transmission in sub-Saharan Africa; A. stephensi has recently spread into the Horn of Africa and is adapted to urban breeding sites."
+    },
+    {
+      "cause": "Plasmodium falciparum infection",
+      "description": "The most virulent of the five human-infecting species and the cause of nearly all malaria deaths. P. falciparum invades red cells of any age, can produce parasitaemia exceeding 10%, and triggers sequestration in cerebral, renal, and placental microvasculature, generating the cerebral, renal, and obstetric complications that define severe disease."
+    },
+    {
+      "cause": "Plasmodium vivax and Plasmodium ovale infection with relapsing hypnozoites",
+      "description": "P. vivax and P. ovale form dormant liver-stage parasites called hypnozoites that reactivate weeks to years after the original infection, producing relapses. Curing the blood stage with an ACT does not eliminate hypnozoites — radical cure with primaquine or single-dose tafenoquine is required after testing for glucose-6-phosphate dehydrogenase (G6PD) deficiency."
+    },
+    {
+      "cause": "Plasmodium malariae and Plasmodium knowlesi infection",
+      "description": "P. malariae causes a chronic, low-grade quartan infection that can persist asymptomatically for decades, occasionally producing immune-complex glomerulonephritis. P. knowlesi is a zoonotic simian parasite of long-tailed and pig-tailed macaques in Southeast Asia; its 24-hour erythrocytic cycle drives rapid rises in parasitaemia and severe disease can develop within days."
+    },
+    {
+      "cause": "Mother-to-child (congenital) transmission",
+      "description": "Plasmodium parasites can cross the placenta, especially in non-immune mothers infected late in pregnancy, producing congenital malaria within the first 30 days of life. Placental sequestration of P. falciparum also contributes to maternal anaemia, low birth weight, and stillbirth."
+    },
+    {
+      "cause": "Transfusion, transplant, and needle-stick transmission",
+      "description": "Plasmodium remains viable in stored blood for weeks and has been transmitted by transfusion, organ transplantation, and contaminated needles. Most national blood services screen donors from endemic areas with travel history questions and, where available, antibody tests."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Travel to or residence in a malaria-endemic country", "category": "environmental", "description": "85 countries report ongoing malaria transmission. Sub-Saharan Africa, the Indian subcontinent, Southeast Asia, the Amazon basin, and parts of the Horn of Africa carry the highest risk. WHO and CDC publish country-by-country maps and prophylaxis recommendations updated annually." },
+    { "factor": "Age under 5 years in endemic areas", "category": "non-modifiable", "description": "Children under 5 carry roughly 76% of malaria deaths in Africa. They lack the partial immunity that develops after repeated exposures and are particularly vulnerable to severe anaemia and cerebral malaria. Seasonal malaria chemoprevention now protects ~50 million children annually." },
+    { "factor": "Pregnancy, especially first and second pregnancies", "category": "non-modifiable", "description": "Pregnant women are at ~3-fold higher risk of severe falciparum malaria; placental sequestration causes maternal anaemia, preterm birth, low birth weight, and stillbirth. Intermittent preventive treatment in pregnancy (IPTp) with sulfadoxine-pyrimethamine is recommended from the second trimester in endemic Africa." },
+    { "factor": "HIV infection and other immunosuppression", "category": "modifiable", "description": "HIV-positive adults have higher parasite densities, more frequent clinical episodes, and worse treatment outcomes. Co-trimoxazole prophylaxis taken for HIV provides some incidental protection but is not a substitute for antimalarial measures." },
+    { "factor": "Absence of malaria chemoprophylaxis when travelling", "category": "modifiable", "description": "Non-immune travellers who do not take appropriate chemoprophylaxis have a 1-3% per month risk of malaria in West Africa. Atovaquone-proguanil, doxycycline, mefloquine, and tafenoquine are first-line options depending on destination and resistance patterns." },
+    { "factor": "Outdoor work or sleeping without insecticide-treated nets", "category": "environmental", "description": "Most Anopheles species bite from dusk to dawn. Pyrethroid-treated long-lasting insecticidal nets reduce all-cause child mortality by ~17% and uncomplicated malaria episodes by ~50% according to Cochrane meta-analyses." },
+    { "factor": "Living in or near forested, marshy, or irrigated land", "category": "environmental", "description": "Anopheles larvae require still or slow-moving fresh water. Rice paddies, irrigation canals, dam reservoirs, and forest edges expand vector breeding sites and explain malaria's seasonality and geographic clustering." },
+    { "factor": "Absent or partial immunity in returning expatriates and migrants", "category": "non-modifiable", "description": "Partial anti-disease immunity acquired by repeated childhood exposure wanes within 1-2 years of leaving an endemic area. Returning visitors of family and relatives (VFR travellers) are disproportionately represented among severe imported malaria cases in Europe and North America." },
+    { "factor": "Glucose-6-phosphate dehydrogenase (G6PD) deficiency", "category": "genetic", "description": "G6PD deficiency, common in populations from malaria-endemic regions, provides partial protection against falciparum malaria but contraindicates standard-dose primaquine and tafenoquine due to the risk of acute haemolysis. Testing is required before radical cure of P. vivax or P. ovale." },
+    { "factor": "Sickle-cell trait, thalassaemia, and other haemoglobinopathies", "category": "genetic", "description": "Heterozygous sickle-cell trait (HbAS) reduces the risk of severe falciparum malaria by ~90%. Alpha- and beta-thalassaemia traits and HbC offer partial protection. These genetic adaptations explain the high carrier frequencies in historically endemic populations." }
+  ],
+
+  "affectedDemographics": [
+    "Sub-Saharan Africa accounts for 94% of malaria cases and 95% of deaths globally (WHO 2023)",
+    "Nigeria (27%), DR Congo (12%), Uganda (5%), Mozambique (4%), and Niger (3%) together carry roughly half of global cases",
+    "Children under 5 represent ~76% of malaria deaths in Africa; ~430,000 child deaths annually",
+    "Pregnant women in moderate-to-high transmission settings: ~12.7 million pregnancies were exposed in 2022, contributing to ~819,000 low-birth-weight babies",
+    "US imported malaria: ~2,000 cases per year, ~95% from sub-Saharan Africa; most in VFR travellers (CDC MMWR)",
+    "P. vivax is the dominant species outside Africa, accounting for the majority of cases in South Asia, Southeast Asia, and Latin America"
+  ],
+
+  "diagnosisOverview": "Diagnosis of malaria starts with a low threshold for testing: any fever in a returning traveller from an endemic area, or any febrile illness in a resident of an endemic region, warrants malaria testing the same day. The 2023 WHO guidelines and the CDC Yellow Book recommend parasitological confirmation in every suspected case before starting antimalarials, except when severe malaria is suspected and treatment cannot be delayed. Microscopy of Giemsa-stained thick and thin blood films remains the diagnostic gold standard — the thick film concentrates parasites for detection at low parasitaemia, while the thin film allows species identification and quantification of percent parasitised red cells, which is required to define hyperparasitaemia (>10%). Rapid diagnostic tests (RDTs) detect Plasmodium-specific antigens (histidine-rich protein 2 for P. falciparum and lactate dehydrogenase for non-falciparum species) from a finger-prick blood sample, with results in 15-20 minutes; sensitivity exceeds 95% for P. falciparum at parasitaemia above 200 parasites/µL and they have largely replaced microscopy in primary care settings. Increasing reports of HRP2/3 gene deletions in the Horn of Africa cause false-negative falciparum RDTs and have prompted WHO to recommend dual-antigen tests in affected regions. Polymerase chain reaction (PCR) detects very low parasitaemia, identifies species in mixed infections, and is used for confirmation in atypical cases and in research; loop-mediated isothermal amplification (LAMP) is increasingly used in surveillance. A single negative test does not exclude malaria — guidelines recommend repeating microscopy or RDT every 12-24 hours for up to 72 hours if clinical suspicion persists. Severity is assessed clinically and with laboratory markers including haemoglobin, platelet count, blood glucose, renal function, lactate, and arterial blood gas. Differential testing for dengue, typhoid, leptospirosis, viral haemorrhagic fevers, and bacterial bloodstream infection runs in parallel because co-infection is common.",
+
+  "diagnosticTests": [
+    {
+      "test": "Thick and thin blood film microscopy (Giemsa stain)",
+      "purpose": "Diagnostic gold standard. The thick film concentrates parasites for detection at low parasitaemia; the thin film allows species identification (ring forms, gametocytes, schizonts) and quantification of percent parasitised red blood cells. Both inform severity classification.",
+      "whatToExpect": "A finger-prick or venous blood sample is spread on a slide, stained, and examined under oil immersion microscopy. An experienced microscopist returns a result within 1-2 hours; species and parasitaemia are reported together."
+    },
+    {
+      "test": "Rapid diagnostic test (RDT) — HRP2 and pLDH antigen detection",
+      "purpose": "First-line bedside test detecting P. falciparum HRP2 and/or pan-Plasmodium or species-specific pLDH antigens. Sensitivity exceeds 95% for P. falciparum at parasitaemia above 200 parasites/µL. Used at the point of care worldwide.",
+      "whatToExpect": "A drop of blood from a finger-prick is applied to the cassette with a buffer; results read in 15-20 minutes. The result is qualitative — positive or negative — and must be paired with microscopy in moderate to severe disease."
+    },
+    {
+      "test": "Polymerase chain reaction (PCR) or LAMP for Plasmodium species",
+      "purpose": "Detects parasitaemia below 1 parasite/µL, identifies mixed-species infections, and confirms species when microscopy is equivocal. Used in returning travellers with suspected low-grade infection, in pregnancy, and in surveillance.",
+      "whatToExpect": "A venous blood sample is sent to a specialist or reference laboratory. Results typically return within 1-3 days."
+    },
+    {
+      "test": "Complete blood count, blood glucose, and renal function panel",
+      "purpose": "Identifies severity markers: anaemia (haemoglobin <5 g/dL in children, <7 g/dL in adults), thrombocytopenia (often <100 x 10^9/L), hypoglycaemia, and acute kidney injury. A baseline before treatment is the standard of care.",
+      "whatToExpect": "Standard venous blood draw; results return within hours in most hospitals and within 24 hours from peripheral labs."
+    },
+    {
+      "test": "Arterial blood gas with lactate",
+      "purpose": "Severe falciparum malaria produces lactic acidosis (lactate >5 mmol/L) and respiratory failure; metabolic acidosis is the strongest predictor of mortality. Used to triage severity and guide fluid management.",
+      "whatToExpect": "An arterial blood sample is drawn from the radial artery; mild discomfort is normal. Results return within minutes on a point-of-care analyser."
+    },
+    {
+      "test": "G6PD activity assay before primaquine or tafenoquine",
+      "purpose": "Mandatory before radical-cure 8-aminoquinoline therapy for P. vivax or P. ovale. G6PD-deficient patients given standard-dose primaquine or tafenoquine can develop severe acute intravascular haemolysis.",
+      "whatToExpect": "A venous or finger-prick blood sample on a quantitative or qualitative assay; results return same day in most centres. Point-of-care G6PD devices are increasingly available."
+    },
+    {
+      "test": "Blood cultures and dengue/leptospirosis testing",
+      "purpose": "Co-infection with bacterial bloodstream infection (especially non-typhoidal Salmonella in African children), dengue, leptospirosis, or typhoid is common in tropical fevers and changes management.",
+      "whatToExpect": "Two sets of blood cultures from separate venepuncture sites, plus dengue NS1/IgM and leptospira IgM serology where appropriate. Results take 1-5 days."
+    }
+  ],
+
+  "treatmentOverview": "Malaria treatment depends on the species, severity, geographic origin, and patient factors such as pregnancy and G6PD status. The 2023 WHO Guidelines for Malaria recommend artemisinin-based combination therapy (ACT) as first-line treatment for all uncomplicated falciparum malaria worldwide and for chloroquine-resistant P. vivax. ACTs combine a fast-acting artemisinin derivative (artesunate, artemether, or dihydroartemisinin) that rapidly clears parasitaemia with a longer-acting partner drug (lumefantrine, amodiaquine, mefloquine, piperaquine, pyronaridine, or sulfadoxine-pyrimethamine) that prevents recrudescence. A standard 3-day course cures over 95% of uncomplicated falciparum cases. Where Plasmodium vivax remains chloroquine-sensitive, chloroquine plus radical cure with primaquine or single-dose tafenoquine eliminates blood-stage parasites and the dormant liver-stage hypnozoites that cause relapse. G6PD testing is mandatory before 8-aminoquinoline therapy because deficient patients can develop life-threatening acute haemolysis. Severe malaria is a medical emergency. The AQUAMAT trial in African children and the SEAQUAMAT trial in Asian adults established that parenteral artesunate (2.4 mg/kg intravenous or intramuscular at 0, 12, and 24 hours, then daily) reduces mortality by 22.5% in adults and 39% in children compared with quinine. WHO has endorsed artesunate as the first-line treatment for severe malaria in all settings since 2011. Treatment is followed by a full 3-day ACT course once the patient tolerates oral medication. Supportive care includes intravenous fluids targeted to euvolaemia (over-resuscitation worsens pulmonary oedema), blood transfusion for severe anaemia, dextrose for hypoglycaemia, anticonvulsants for seizures, and renal replacement therapy for acute kidney injury. Pregnant women in the first trimester are now treated with ACT (artemether-lumefantrine preferred) per the 2022 WHO update, replacing the older quinine-clindamycin recommendation. Drug resistance is monitored continuously: artemisinin partial resistance, identified through kelch13 mutations, is now reported in the Greater Mekong subregion, East Africa, and the Horn of Africa, and ongoing surveillance guides regional regimen selection. Two vaccines, RTS,S/AS01 (Mosquirix) and R21/Matrix-M, are now WHO-recommended for children in moderate-to-high transmission settings and complement vector control and chemoprevention.",
+
+  "medicalTreatments": [
+    {
+      "name": "Artemether-lumefantrine (Coartem, 20/120 mg tablets, 6-dose regimen over 3 days)",
+      "description": "The most widely used artemisinin-based combination therapy for uncomplicated P. falciparum malaria. Weight-banded dosing covers ages 6 months and above. Taken with fatty food or milk to improve lumefantrine absorption. Now preferred in first-trimester pregnancy per the 2022 WHO update.",
+      "effectiveness": "Day-28 PCR-corrected cure rate above 95% across multiple sub-Saharan African and Southeast Asian trials."
+    },
+    {
+      "name": "Dihydroartemisinin-piperaquine (40/320 mg tablets, daily for 3 days)",
+      "description": "ACT preferred where lumefantrine resistance is emerging. Long elimination half-life of piperaquine provides ~5 weeks of post-treatment prophylaxis. Caution with QT-prolonging drugs and in pregnancy.",
+      "effectiveness": "Day-28 PCR-corrected cure rate of 95-98% in African trials; non-inferior to artemether-lumefantrine."
+    },
+    {
+      "name": "Artesunate-amodiaquine and artesunate-mefloquine (3-day fixed-dose combinations)",
+      "description": "Alternative WHO-recommended ACTs deployed by national programmes based on local efficacy and drug-resistance profiles. Artesunate-mefloquine is preferred in some Latin American and Southeast Asian settings.",
+      "effectiveness": "Cure rates of 94-98% in pivotal trials and ongoing therapeutic-efficacy studies."
+    },
+    {
+      "name": "Intravenous or intramuscular artesunate (2.4 mg/kg at 0, 12, and 24 hours, then daily) for severe malaria",
+      "description": "WHO-recommended first-line treatment for severe malaria in adults and children since 2011, following the AQUAMAT and SEAQUAMAT trials. After parasitaemia clears and the patient tolerates oral medication, complete a full 3-day ACT course.",
+      "effectiveness": "Reduces mortality by 22.5% in adults (SEAQUAMAT) and 39% in children (AQUAMAT) compared with parenteral quinine."
+    },
+    {
+      "name": "Chloroquine plus primaquine (or single-dose tafenoquine) for chloroquine-sensitive P. vivax and P. ovale",
+      "description": "Chloroquine (25 mg/kg total over 3 days) clears blood-stage parasites; primaquine 0.5 mg/kg/day for 14 days or single-dose tafenoquine 300 mg eradicates dormant liver-stage hypnozoites and prevents relapse. Both require G6PD testing first.",
+      "effectiveness": "Chloroquine clears parasitaemia within 48-72 hours; primaquine reduces P. vivax relapse from ~70% to under 10% at 6 months; tafenoquine non-inferior in the DETECTIVE and GATHER trials (Llanos-Cuentas 2019)."
+    },
+    {
+      "name": "Atovaquone-proguanil (250/100 mg, 4 tablets daily for 3 days)",
+      "description": "Alternative oral regimen for uncomplicated falciparum malaria in non-immune travellers and for chloroquine-resistant P. vivax. Generally well tolerated; main drawback is cost. Also used as daily chemoprophylaxis.",
+      "effectiveness": "Cure rate of ~96% in returned-traveller cohorts; well tolerated, with low rates of treatment-emergent adverse events."
+    },
+    {
+      "name": "Quinine plus doxycycline (or clindamycin) for severe malaria where artesunate is unavailable",
+      "description": "Quinine 20 mg/kg loading dose, then 10 mg/kg every 8 hours, combined with doxycycline 100 mg twice daily for 7 days. Now a second-line option used only when parenteral artesunate is unavailable.",
+      "effectiveness": "Effective in resistant disease historically, but inferior to artesunate in mortality (see AQUAMAT, SEAQUAMAT). Causes hypoglycaemia, cinchonism, and QT prolongation."
+    },
+    {
+      "name": "RTS,S/AS01 (Mosquirix) and R21/Matrix-M malaria vaccines",
+      "description": "WHO-recommended pre-erythrocytic vaccines for children in moderate-to-high transmission areas. RTS,S/AS01 given as a 4-dose schedule from 5 months; R21/Matrix-M as a 3-dose primary series with annual boosters. Both target the P. falciparum circumsporozoite protein.",
+      "effectiveness": "RTS,S/AS01 reduced clinical malaria episodes by ~36% over 4 years (RTS,S Clinical Trials Partnership 2015 Lancet); R21/Matrix-M reduced clinical malaria by 75% in seasonal settings and 68% in perennial settings over 12 months (Datoo 2024 Lancet)."
+    },
+    {
+      "name": "Seasonal malaria chemoprevention with sulfadoxine-pyrimethamine plus amodiaquine (SP+AQ) for children 3-59 months in the Sahel",
+      "description": "Monthly courses given during the 3-5 month high-transmission season in the African Sahel. Reaches ~50 million children annually through national programmes.",
+      "effectiveness": "Reduces clinical malaria episodes by ~75% and severe malaria by ~80% in the targeted age group (WHO and ACCESS-SMC programme data)."
+    }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Adjunctive blood-stage exchange transfusion in extreme hyperparasitaemia", "description": "Historically used in non-immune patients with parasitaemia above 30%, exchange transfusion is no longer routinely recommended by the WHO or CDC because artesunate clears parasites rapidly and there is no randomised evidence of mortality benefit. Considered case-by-case under specialist care." },
+    { "name": "Insecticide-treated bed nets and indoor residual spraying", "description": "Not a treatment but a key adjunct that interrupts transmission and reduces clinical episodes by approximately 50% (Cochrane meta-analysis). Pyrethroid-PBO nets address pyrethroid resistance in many African settings." }
+  ],
+
+  "whySeeSpecialist": "Refer to an infectious-disease or tropical-medicine specialist for any patient with severe malaria, P. falciparum infection in pregnancy, suspected drug resistance, treatment failure, complicated P. vivax or P. knowlesi infection, returning travellers with persistent symptoms after treatment, or G6PD deficiency requiring an alternative radical-cure strategy. National malaria reference centres and travel clinics also provide pre-travel chemoprophylaxis advice tailored to destination-specific resistance patterns.",
+  "doctorSelectionGuide": "Look for a clinician with formal training in infectious diseases, tropical medicine, or paediatric tropical medicine and access to parenteral artesunate, point-of-care G6PD testing, and either a malaria reference laboratory or PCR-capable diagnostics. In endemic regions, district hospital teams trained in WHO severe-malaria protocols are usually the right first contact. In non-endemic countries, dedicated travel clinics and academic tropical-medicine units are preferred for any complicated case.",
+
+  "hospitalCriteria": [
+    "Access to parenteral artesunate 24/7 and ability to give the first dose within 1 hour of severity recognition",
+    "Laboratory capable of urgent thick and thin film microscopy and RDT, with quantification of parasitaemia",
+    "Point-of-care G6PD testing before radical-cure 8-aminoquinoline therapy",
+    "Paediatric and adult intensive care capacity with mechanical ventilation, renal replacement, and blood-product availability for severe disease",
+    "Trained team familiar with WHO severe-malaria protocols and pregnancy-specific management"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Sleep under a long-lasting insecticidal net every night in endemic areas — reduces all-cause child mortality by ~17% and clinical malaria episodes by ~50%",
+    "Take destination-appropriate chemoprophylaxis when travelling to an endemic country (atovaquone-proguanil, doxycycline, mefloquine, or tafenoquine) starting before travel and continuing after return as directed",
+    "Apply N,N-diethyl-meta-toluamide (DEET 20-50%) or picaridin insect repellent to exposed skin from dusk to dawn and wear long sleeves and trousers in transmission zones",
+    "Use indoor residual spraying or window screens, especially in rooms used during the evening and night",
+    "Vaccinate children with RTS,S/AS01 or R21/Matrix-M in moderate-to-high transmission settings as part of national immunisation programmes",
+    "Offer intermittent preventive treatment in pregnancy (IPTp) with sulfadoxine-pyrimethamine from the second trimester in endemic Africa, plus seasonal malaria chemoprevention for children 3-59 months in the Sahel"
+  ],
+
+  "lifestyleModifications": [
+    "Maintain consistent prophylaxis adherence throughout travel and for the full post-travel period; missed doses are the leading reason for breakthrough infection in non-immune travellers",
+    "Recognise the malaria red flags (fever, chills, headache, fatigue) for at least 3 months after returning from an endemic area and seek same-day testing",
+    "Eliminate standing water around homes and workplaces — discarded tyres, water containers, blocked gutters, and tree holes are major Anopheles breeding sites",
+    "Hydrate generously and rest during fever; oral rehydration salts in children prevent the dehydration that often dominates the early illness",
+    "Avoid alcohol during antimalarial treatment, especially with mefloquine, atovaquone-proguanil, or quinine, because of hepatotoxicity and central nervous system side effects",
+    "Take iron and folate supplementation as recommended in pregnancy and after severe haemolytic episodes to support red-cell recovery",
+    "Inform any new clinician about recent malaria history — relapse from P. vivax or P. ovale can present months to years later"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Frequent small meals during the acute febrile phase to maintain calorie intake despite anorexia",
+      "Fatty foods or milk taken with artemether-lumefantrine doses to maximise lumefantrine absorption",
+      "Iron-rich foods (lean red meat, lentils, leafy greens) and folate during recovery from haemolytic anaemia",
+      "Oral rehydration salts or balanced electrolyte solutions during diarrhoea or vomiting",
+      "Vitamin A, zinc, and protein-adequate diet for paediatric recovery, particularly after severe disease",
+      "Plenty of water — at least 2 litres in adults unless restricted for severe anaemia or pulmonary oedema"
+    ],
+    "avoid": [
+      "Alcohol during antimalarial treatment due to additive hepatotoxicity and neurotoxicity",
+      "Unwashed raw produce in endemic areas where co-infection with enteric pathogens is common",
+      "Untreated tap water and ice in regions with poor water sanitation",
+      "Grapefruit and grapefruit juice with quinine, mefloquine, or lumefantrine — CYP3A4 interactions raise drug levels",
+      "Fasting or prolonged poor intake during acute illness, which precipitates hypoglycaemia, particularly with quinine"
+    ]
+  },
+  "exerciseGuidelines": "Rest and supportive care dominate the first week of treatment, especially during fever and post-paroxysm exhaustion. Most patients with uncomplicated malaria feel substantially better after 48-72 hours of ACT and can resume light walking within a week. Avoid strenuous exercise for 2-4 weeks after severe malaria, particularly if anaemia, renal injury, or ARDS occurred. Children who had cerebral malaria benefit from structured neurodevelopmental rehabilitation in the months that follow.",
+
+  "dailyManagement": [
+    "Take every dose of the ACT or chemoprophylaxis on time and complete the full course — partial treatment is the main driver of recrudescence and resistance",
+    "Track temperature 3-4 times daily during the first week and seek same-day review if fever persists beyond 72 hours of ACT therapy",
+    "Watch for the danger signs taught at discharge (drowsiness, breathlessness, dark urine, no urine, repeated vomiting, bleeding) and return immediately if any appear",
+    "Continue insecticide-treated net use during recovery and for the rest of the season — recovered patients can be reinfected within weeks",
+    "Take primaquine or tafenoquine exactly as prescribed after G6PD testing if you had P. vivax or P. ovale — radical cure prevents relapse months later",
+    "Attend the day-28 follow-up appointment for repeat film or RDT to confirm cure"
+  ],
+
+  "prognosis": "Uncomplicated malaria, when diagnosed early and treated with a quality-assured artemisinin-based combination, has a cure rate above 95% at 28 days and a near-zero mortality. Most patients are afebrile within 48 hours and back to baseline function within 1-2 weeks. Severe falciparum malaria carries a case-fatality of 8-15% in adults and 5-10% in African children even with parenteral artesunate and intensive care, rising to 20-30% in cerebral malaria and over 50% in adults with multi-organ failure. Pregnancy doubles maternal mortality risk and increases stillbirth, preterm delivery, and low-birth-weight rates. P. vivax has historically been considered benign but causes substantial morbidity through repeated relapses and chronic anaemia; severe vivax malaria with respiratory or renal involvement is increasingly recognised. P. knowlesi can progress from uncomplicated to severe disease within 24-48 hours because of its short erythrocytic cycle. Long-term outcomes after severe paediatric malaria include neurocognitive sequelae in roughly 25% of cerebral malaria survivors. Strict adherence to a full ACT course, vector control, chemoprevention in high-risk groups, and now vaccination in children are the strongest determinants of outcome at the population level.",
+
+  "recoveryTimeline": "Fever and chills typically settle within 48-72 hours of starting artemether-lumefantrine or another ACT; parasitaemia clears from peripheral blood by day 3 in over 90% of patients. Fatigue and post-malaria asthenia can persist for 2-4 weeks. Anaemia recovers over 4-8 weeks with iron repletion. Severe malaria with multi-organ involvement requires 1-3 weeks of inpatient care followed by a 6-12 week structured recovery, including renal follow-up if acute kidney injury occurred and neurocognitive review for cerebral malaria survivors. P. vivax and P. ovale relapses, when they occur, are seen weeks to months after the initial episode and require radical cure to prevent further cycles.",
+
+  "complications": [
+    "Cerebral malaria with coma, seizures, and Glasgow Coma Scale <11 — mortality 15-25% even with treatment, neurocognitive sequelae in ~25% of paediatric survivors",
+    "Severe haemolytic anaemia with haemoglobin <5 g/dL in children or <7 g/dL in adults, often requiring transfusion and iron repletion",
+    "Acute kidney injury and blackwater fever from massive intravascular haemolysis, dark urine, and renal failure requiring dialysis",
+    "Acute respiratory distress syndrome and pulmonary oedema, particularly in pregnancy and in older adults with falciparum or knowlesi infection",
+    "Hypoglycaemia from impaired gluconeogenesis and parasite glucose consumption — most common in children, pregnant women, and patients on quinine",
+    "Placental malaria with maternal anaemia, preterm delivery, low birth weight, and stillbirth in non-immune or first-pregnancy women",
+    "Splenic rupture, especially in P. vivax infection with marked splenomegaly — a rare but life-threatening surgical emergency",
+    "Quartan nephropathy with immune-complex glomerulonephritis after chronic P. malariae infection",
+    "Post-malaria neurological syndrome (PMNS) presenting days to weeks after recovery from severe falciparum disease, especially after mefloquine exposure"
+  ],
+
+  "supportResources": [
+    { "name": "WHO Global Malaria Programme", "url": "https://www.who.int/teams/global-malaria-programme", "description": "Authoritative guidelines, the annual World Malaria Report, treatment protocols, and country profiles." },
+    { "name": "CDC Malaria — Information for Travelers and Clinicians", "url": "https://www.cdc.gov/malaria/", "description": "US country-by-country recommendations, prophylaxis guidance, and the CDC Malaria Hotline for clinician advice on severe imported cases." },
+    { "name": "RBM Partnership to End Malaria", "url": "https://endmalaria.org/", "description": "Global coalition coordinating advocacy, financing, and country support for malaria control and elimination." },
+    { "name": "Malaria Consortium", "url": "https://www.malariaconsortium.org/", "description": "Implementation NGO running large seasonal malaria chemoprevention programmes in the Sahel and case-management training across Africa and Asia." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "dengue-fever", "name": "Dengue Fever", "keyDifference": "Dengue and malaria both present with fever, headache, and muscle pain in travellers, but dengue is often associated with retro-orbital pain, a maculopapular rash, leukopenia, and marked thrombocytopenia. Dengue parasites are not seen on a blood film, and dengue NS1 antigen or IgM is positive. Co-infection is well described and both tests are run in parallel." },
+    { "slug": "typhoid-fever-unspecified-a0100", "name": "Typhoid Fever", "keyDifference": "Typhoid fever produces a stepwise rise in temperature, relative bradycardia, abdominal pain, and rose-spot rash, with positive blood cultures for Salmonella Typhi. Malaria has cyclical paroxysms, parasites on blood film, and responds to ACT. The two can co-exist, especially in South Asian and African febrile travellers." },
+    { "slug": "leptospirosis", "name": "Leptospirosis", "keyDifference": "Leptospirosis often follows freshwater exposure and presents with fever, conjunctival suffusion, calf myalgia, and jaundice with renal failure (Weil disease). Blood films are negative for Plasmodium; leptospira IgM or PCR is positive. Doxycycline is first-line for leptospirosis, distinct from ACT in malaria." },
+    { "slug": "chikungunya", "name": "Chikungunya", "keyDifference": "Chikungunya causes high fever and disabling symmetrical polyarthralgia for weeks, often with a maculopapular rash. Blood films are negative for Plasmodium and chikungunya IgM or RT-PCR is positive. Malaria has cyclical fevers and parasites on smear, and severe disease is multi-system." },
+    { "slug": "hepatitis-b", "name": "Hepatitis B (Acute Viral Hepatitis)", "keyDifference": "Acute viral hepatitis presents with prodromal fever, fatigue, anorexia, and jaundice, with markedly elevated transaminases and positive hepatitis serology. Malaria can produce jaundice from haemolysis but transaminases are only mildly elevated and a blood film shows Plasmodium. Both are common in tropical fever evaluations and are tested in parallel." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "anemia", "name": "Anaemia" },
+    { "slug": "dengue-fever", "name": "Dengue Fever" },
+    { "slug": "hiv-aids", "name": "HIV/AIDS" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "dengue-fever", "name": "Dengue Fever", "relevance": "Shares the febrile-traveller differential and is increasingly co-endemic with malaria across Asia, Africa, and Latin America; both are tested simultaneously." },
+    { "slug": "typhoid-fever-unspecified-a0100", "name": "Typhoid Fever", "relevance": "Another major cause of acute undifferentiated tropical fever; co-infection with malaria is well documented in South Asia and sub-Saharan Africa." },
+    { "slug": "leptospirosis", "name": "Leptospirosis", "relevance": "Overlaps in fever, jaundice, and renal involvement; co-endemic with malaria in tropical wet seasons." },
+    { "slug": "chikungunya", "name": "Chikungunya", "relevance": "Shares mosquito-borne febrile illness ecology in many regions; chikungunya is in the differential for any febrile returning traveller." },
+    { "slug": "anemia", "name": "Anaemia", "relevance": "Severe haemolytic anaemia is a leading cause of malaria mortality in children and pregnant women and a major driver of long-term morbidity." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "HIV-positive adults have higher parasite densities, more clinical episodes, and worse outcomes; co-management is guideline-directed." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "How long after a mosquito bite do malaria symptoms appear?",
+      "answer": "Symptoms typically appear 7 to 30 days after an infected Anopheles mosquito bite, though Plasmodium vivax and P. ovale can present months or even years later because of dormant liver-stage hypnozoites. P. falciparum is usually the fastest, with most cases presenting within 2-4 weeks. Anyone with a fever within 3 months of travel to an endemic area should be tested immediately.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the classic symptoms of malaria?",
+      "answer": "The classic symptoms are fever, chills with shaking rigors, severe headache, muscle and joint aches, fatigue, nausea, and sometimes vomiting and diarrhoea. Many patients describe cyclical fever spikes every 48 or 72 hours. Severe malaria adds confusion, seizures, breathlessness, jaundice, and very dark urine and is a medical emergency.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which countries have the highest malaria risk?",
+      "answer": "Sub-Saharan Africa carries 94% of global malaria cases and 95% of deaths. Nigeria, the Democratic Republic of Congo, Uganda, Mozambique, and Niger together account for roughly half of all cases. Parts of South Asia, Southeast Asia, the Amazon basin, and the Horn of Africa also have significant transmission. The WHO and CDC publish updated country-specific maps.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is malaria diagnosed?",
+      "answer": "Diagnosis requires parasitological confirmation, usually with a rapid diagnostic test detecting Plasmodium antigens from a finger-prick sample, microscopy of Giemsa-stained thick and thin blood films, or PCR. WHO recommends testing every suspected case before treatment, except where severe malaria requires immediate parenteral artesunate. A single negative test does not exclude malaria, and repeat testing over 72 hours is standard if suspicion persists.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is malaria curable?",
+      "answer": "Yes. Uncomplicated malaria is cured in over 95% of patients with a 3-day artemisinin-based combination therapy course. Plasmodium vivax and P. ovale also require radical cure with primaquine or single-dose tafenoquine to clear dormant liver-stage hypnozoites and prevent relapse. Severe malaria is treated with parenteral artesunate followed by a full oral ACT course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can malaria come back after treatment?",
+      "answer": "Yes. Plasmodium vivax and Plasmodium ovale form dormant liver-stage hypnozoites that can reactivate weeks to years later, producing relapses. Plasmodium falciparum and P. malariae do not relapse but can recrudesce if the original blood-stage infection was incompletely cleared. Radical cure with primaquine or tafenoquine prevents vivax and ovale relapse.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is severe malaria?",
+      "answer": "The WHO defines severe malaria as Plasmodium infection with any of impaired consciousness, repeated seizures, prostration, respiratory distress with acidotic breathing, circulatory collapse, abnormal bleeding, jaundice with parasitaemia, severe anaemia, hypoglycaemia, acute kidney injury, pulmonary oedema, or parasitaemia over 10%. It is a medical emergency requiring parenteral artesunate and intensive care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for malaria?",
+      "answer": "Artemisinin-based combination therapy (ACT) is the WHO-recommended first-line treatment for uncomplicated falciparum malaria worldwide. Artemether-lumefantrine and dihydroartemisinin-piperaquine are the most widely used. Severe malaria is treated with intravenous or intramuscular artesunate, followed by a full 3-day oral ACT course once the patient can take oral medication.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a malaria vaccine?",
+      "answer": "Yes. Two vaccines, RTS,S/AS01 (Mosquirix) and R21/Matrix-M, are WHO-recommended for children in moderate-to-high transmission areas. RTS,S/AS01 reduced clinical malaria episodes by ~36% over 4 years in phase 3 trials. R21/Matrix-M reduced clinical malaria by 75% in seasonal settings over 12 months. Both target the Plasmodium falciparum circumsporozoite protein.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can malaria be prevented?",
+      "answer": "Yes. Key prevention measures include sleeping under insecticide-treated nets, indoor residual spraying, mosquito repellents containing DEET or picaridin, chemoprophylaxis for travellers, intermittent preventive treatment in pregnancy, seasonal malaria chemoprevention for children in the Sahel, and now WHO-recommended vaccination with RTS,S/AS01 or R21/Matrix-M in moderate-to-high transmission areas.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which malaria pills should I take when travelling?",
+      "answer": "Common chemoprophylaxis options include atovaquone-proguanil, doxycycline, mefloquine, and tafenoquine. Choice depends on the destination, length of stay, drug-resistance patterns, pregnancy, and individual tolerance. Start before travel, continue throughout the trip, and complete the post-travel course as directed. A travel-medicine clinician should tailor the regimen to your itinerary.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get malaria?",
+      "answer": "Yes. Children under five carry roughly three-quarters of malaria deaths in Africa because they lack the partial immunity that develops with repeated exposure. They are especially vulnerable to severe anaemia, cerebral malaria, and hypoglycaemia. Seasonal malaria chemoprevention, insecticide-treated nets, and the new RTS,S/AS01 and R21/Matrix-M vaccines are central to protecting this age group.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is malaria dangerous in pregnancy?",
+      "answer": "Yes. Pregnancy roughly triples the risk of severe malaria and increases maternal anaemia, miscarriage, preterm delivery, low birth weight, and stillbirth. Placental sequestration of Plasmodium falciparum is the underlying mechanism. WHO recommends intermittent preventive treatment in pregnancy with sulfadoxine-pyrimethamine from the second trimester and use of insecticide-treated nets in endemic areas.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How many species of malaria parasite infect humans?",
+      "answer": "Five Plasmodium species infect humans. Plasmodium falciparum causes nearly all severe disease and most deaths. Plasmodium vivax is the most widespread, especially outside Africa, and forms relapsing liver-stage hypnozoites. Plasmodium ovale is similar to vivax and largely confined to West Africa. Plasmodium malariae causes chronic low-grade infection. Plasmodium knowlesi is a zoonotic simian malaria found in Southeast Asia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is artemisinin resistance?",
+      "answer": "Artemisinin partial resistance is defined as delayed clearance of Plasmodium falciparum from the blood after artesunate or another artemisinin derivative. It is associated with kelch13 gene mutations and was first detected in the Greater Mekong subregion; cases have now been reported in East Africa and the Horn of Africa. WHO surveillance guides regional ACT choice to preserve efficacy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between malaria and dengue?",
+      "answer": "Malaria is a parasitic infection transmitted by Anopheles mosquitoes; dengue is a viral infection transmitted by Aedes mosquitoes. Malaria produces cyclical fever, parasites on a blood smear, and responds to artemisinin-based combination therapy. Dengue causes a single febrile illness with retro-orbital pain, a rash, low platelets, and is diagnosed by NS1 antigen or IgM. Co-infection occurs in shared endemic regions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is G6PD testing required before primaquine?",
+      "answer": "Primaquine and tafenoquine cause severe acute haemolysis in people with glucose-6-phosphate dehydrogenase (G6PD) deficiency. Because G6PD deficiency is common in populations historically exposed to malaria, the WHO recommends quantitative or qualitative G6PD testing before standard-dose radical cure of P. vivax or P. ovale. Reduced-dose primaquine regimens exist for partial deficiency but should be supervised.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does malaria treatment cost?",
+      "answer": "In endemic countries, artemether-lumefantrine and other quality-assured ACTs are typically provided free or at heavily subsidised cost through national malaria programmes and the Global Fund. A private 3-day ACT course costs roughly USD 1-5 in Africa and USD 30-60 in the United States. Parenteral artesunate for severe malaria is more expensive but procured through WHO-prequalified suppliers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you get malaria more than once?",
+      "answer": "Yes. People living in endemic areas often have multiple episodes a year, especially children. Adults gradually develop partial immunity with repeated exposure that reduces disease severity but does not prevent infection. This partial immunity wanes within 1-2 years of leaving an endemic area, which is why returning expatriates and second-generation migrants are at higher risk of severe imported disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does recovery from malaria take?",
+      "answer": "Most patients with uncomplicated malaria are afebrile within 48-72 hours of starting an ACT and back to baseline within 1-2 weeks. Anaemia and fatigue can persist for 4-8 weeks. Severe malaria with multi-organ involvement requires 1-3 weeks of inpatient care followed by a 6-12 week structured recovery. Cerebral malaria survivors may need neurocognitive rehabilitation lasting months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can malaria spread from person to person?",
+      "answer": "No. Malaria does not spread directly from person to person through casual contact, coughing, or sharing food. It is transmitted by the bite of an infected female Anopheles mosquito. Rare exceptions include transmission through blood transfusion, organ transplantation, contaminated needles, and from mother to baby during pregnancy or delivery (congenital malaria).",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a doctor after returning from a malaria-endemic country?",
+      "answer": "See a doctor the same day for any fever, chills, headache, or flu-like illness within three months of returning from a malaria-endemic country, even if you took chemoprophylaxis. Mention the travel history at the first encounter. Plasmodium falciparum infection can progress to severe disease within 24 hours, so emergency assessment is appropriate if you feel unwell.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Malaria (mosquito-borne parasitic fever)",
+  "regionalNames": [
+    { "name": "Malaria (मलेरिया)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Paludisme", "region": "France and Francophone Africa", "language": "fr" },
+    { "name": "Homa ya mbu", "region": "East Africa", "language": "sw" },
+    { "name": "Paludismo", "region": "Latin America and Spain", "language": "es" }
+  ],
+
+  "searchTags": [
+    "malaria",
+    "malaria symptoms",
+    "malaria treatment",
+    "Plasmodium",
+    "Plasmodium falciparum",
+    "Plasmodium vivax",
+    "Plasmodium ovale",
+    "Plasmodium malariae",
+    "Plasmodium knowlesi",
+    "cerebral malaria",
+    "severe malaria",
+    "artemisinin combination therapy",
+    "artemether lumefantrine",
+    "artesunate",
+    "RTS,S vaccine",
+    "R21 Matrix-M vaccine",
+    "malaria prophylaxis",
+    "mosquito-borne disease"
+  ],
+
+  "symptomKeywords": [
+    "cyclical fever",
+    "fever after travel",
+    "chills and rigors",
+    "fever with headache",
+    "dark urine fever",
+    "jaundice and fever",
+    "fever in returning traveller",
+    "fever with low platelets",
+    "fever and confusion",
+    "severe anaemia child fever"
+  ],
+
+  "metaTitle": "Malaria: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Malaria: Plasmodium parasites from Anopheles mosquito bites cause cyclical fever and chills. Symptoms, diagnosis, and treatment reviewed by our medical board.",
+
+  "keywords": [
+    "malaria",
+    "malaria symptoms",
+    "malaria treatment",
+    "Plasmodium falciparum",
+    "Plasmodium vivax",
+    "severe malaria",
+    "cerebral malaria",
+    "artemisinin combination therapy",
+    "artesunate",
+    "malaria prophylaxis",
+    "RTS,S vaccine",
+    "R21 vaccine",
+    "malaria in pregnancy",
+    "malaria diagnosis",
+    "malaria vs dengue"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "World Health Organization. World Malaria Report 2023. Geneva: WHO; 2023.",
+      "url": "https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2023",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "World Health Organization. WHO Guidelines for Malaria, 14 March 2023. Geneva: WHO; 2023.",
+      "url": "https://www.who.int/publications/i/item/guidelines-for-malaria",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. CDC Yellow Book 2024: Health Information for International Travel — Malaria. Atlanta: CDC; 2023.",
+      "url": "https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/malaria",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dondorp AM, Fanello CI, Hendriksen IC, et al. 2010. Artesunate versus quinine in the treatment of severe falciparum malaria in African children (AQUAMAT): an open-label, randomised trial. Lancet 376(9753):1647-1657.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21062666/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dondorp A, Nosten F, Stepniewska K, Day N, White N; South East Asian Quinine Artesunate Malaria Trial (SEAQUAMAT) group. 2005. Artesunate versus quinine for treatment of severe falciparum malaria: a randomised trial. Lancet 366(9487):717-725.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16125588/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "RTS,S Clinical Trials Partnership. 2015. Efficacy and safety of RTS,S/AS01 malaria vaccine with or without a booster dose in infants and children in Africa: final results of a phase 3, individually randomised, controlled trial. Lancet 386(9988):31-45.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25913272/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Datoo MS, Dicko A, Tinto H, et al. 2024. Safety and efficacy of malaria vaccine candidate R21/Matrix-M in African children: a multicentre, double-blind, randomised, phase 3 trial. Lancet 403(10426):533-544.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38310910/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Llanos-Cuentas A, Lacerda MVG, Hien TT, et al. 2019. Tafenoquine versus primaquine to prevent relapse of Plasmodium vivax malaria (DETECTIVE). N Engl J Med 380(3):229-241.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30650326/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Lacerda MVG, Llanos-Cuentas A, Krudsood S, et al. 2019. Single-dose tafenoquine to prevent relapse of Plasmodium vivax malaria (GATHER). N Engl J Med 380(3):215-228.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30650322/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Ashley EA, Dhorda M, Fairhurst RM, et al. 2014. Spread of artemisinin resistance in Plasmodium falciparum malaria. N Engl J Med 371(5):411-423.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25075834/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
