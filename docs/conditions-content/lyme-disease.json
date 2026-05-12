@@ -1,0 +1,490 @@
+{
+  "_meta": {
+    "slug": "lyme-disease",
+    "tier": 1,
+    "headTerm": "lyme disease",
+    "longTailKeywords": [
+      "lyme disease symptoms",
+      "lyme disease treatment",
+      "lyme disease rash",
+      "early lyme disease",
+      "chronic lyme disease",
+      "lyme disease test",
+      "doxycycline for lyme disease",
+      "post-treatment lyme disease syndrome",
+      "lyme disease stages",
+      "tick bite lyme disease"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against IDSA/AAN/ACR 2020 Lyme guideline (Lantos et al., Clin Infect Dis), CDC Lyme surveillance updates (Kugeler 2021 insurance-claims estimate of ~476,000 US cases/year), Steere et al. NEJM 2016 primer, Pritt et al. NEJM 2017/2020 (B. mayonii), Klempner NEJM 2001 and Berende NEJM 2016 PTLDS RCTs. Drug doses verified against IDSA 2020 guideline and current Sanford guide."
+  },
+
+  "h1Title": "Lyme Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Lyme disease is a tick-borne bacterial infection caused by spirochetes in the Borrelia burgdorferi sensu lato group, transmitted to humans by Ixodes ticks during a blood meal lasting more than 36 hours. The Centers for Disease Control estimates roughly 476,000 US cases each year based on insurance claims, with 95% concentrated in the Northeast, upper Midwest, and mid-Atlantic. The classic early sign is erythema migrans, an expanding red skin rash at the bite site that appears in 70-80% of infected people within 3-30 days. Untreated, the infection spreads to joints, the nervous system, and the heart over weeks to months. Antibiotic therapy, started early, cures over 90% of patients in 10-21 days.",
+
+  "keyStats": {
+    "prevalence": "~476,000 diagnosed and treated US cases per year (CDC insurance-claims estimate, Kugeler 2021); ~63,000 reported through public-health surveillance in 2022",
+    "demographics": "Bimodal age distribution: children aged 5-15 and adults aged 45-65; slight male predominance in surveillance reports",
+    "avgAge": "Median age at diagnosis approximately 49 years in US surveillance",
+    "globalCases": "Northern hemisphere — North America, Europe, parts of Asia; >100,000 cases reported annually across Europe with highest rates in Germany, Slovenia, Austria, Sweden"
+  },
+
+  "definition": "Lyme disease (ICD-10: A69.2) is a multisystem inflammatory illness caused by infection with spirochetal bacteria in the Borrelia burgdorferi sensu lato complex. In North America, almost all cases are caused by Borrelia burgdorferi sensu stricto, with rare cases due to Borrelia mayonii (identified in the upper Midwest by Pritt and colleagues in 2016). In Europe and Asia, Borrelia afzelii and Borrelia garinii are the dominant pathogens and produce somewhat different clinical pictures — afzelii is more often linked to chronic skin involvement (acrodermatitis chronica atrophicans) and garinii to neurological disease. The bacteria are transmitted by hard-bodied ticks of the Ixodes genus: Ixodes scapularis (blacklegged tick) in the northeastern and upper midwestern United States, Ixodes pacificus on the West Coast, and Ixodes ricinus across most of Europe. The disease evolves through three stages — early localized (days to a month after the bite, dominated by the erythema migrans rash), early disseminated (weeks to months, with multiple skin lesions, cranial nerve palsies, meningitis, radiculopathy, or carditis), and late (months to years, mainly large-joint arthritis in North America and chronic neurological or skin manifestations in Europe). Management is led by infectious disease specialists in complex cases, though most early disease is treated by primary care.",
+
+  "typesClassification": [
+    { "type": "Early localized Lyme disease", "description": "The first 3-30 days after the tick bite. Defined by erythema migrans — an expanding red, sometimes target-shaped rash at the bite site, at least 5 cm across. Fever, headache, fatigue, muscle aches, and lymphadenopathy may accompany the rash. Treatment cures more than 90% of patients at this stage." },
+    { "type": "Early disseminated Lyme disease", "description": "Weeks to months after the bite, as spirochetes spread through blood and lymph. Manifestations include multiple erythema migrans lesions, cranial neuropathies (especially facial palsy, often bilateral), lymphocytic meningitis, painful radiculoneuritis (Bannwarth syndrome in Europe), and Lyme carditis — most often atrioventricular block that can fluctuate within hours." },
+    { "type": "Late Lyme disease", "description": "Months to years after untreated infection. Lyme arthritis is the dominant late manifestation in North America, producing intermittent or persistent mono- or oligoarticular swelling, classically in the knee. In Europe, acrodermatitis chronica atrophicans (mostly B. afzelii) and late neuroborreliosis (encephalopathy, peripheral neuropathy) are more characteristic." },
+    { "type": "Post-treatment Lyme disease syndrome (PTLDS)", "description": "A defined set of symptoms — persistent fatigue, musculoskeletal pain, and cognitive complaints — lasting more than 6 months after recommended antibiotic therapy for documented Lyme disease. Affects roughly 10-20% of treated patients. Randomized trials (Klempner 2001, Berende 2016) show no benefit from prolonged antibiotic courses." }
+  ],
+
+  "primarySymptoms": [
+    "Erythema migrans rash — an expanding red or pink area at the tick-bite site appearing 3-30 days after exposure, often with central clearing producing a target appearance, growing larger than 5 cm and present in 70-80% of early cases.",
+    "Flu-like illness with low-grade fever, chills, headache, muscle aches, joint aches, fatigue, and tender lymph nodes — commonly accompanies the rash and can occur without it.",
+    "Multiple erythema migrans lesions appearing days to weeks later as the spirochetes disseminate through the bloodstream, often smaller and rounder than the primary lesion.",
+    "Facial nerve palsy producing drooping of one side of the face, sometimes both sides — bilateral facial palsy in an endemic area is Lyme disease until proven otherwise.",
+    "Lymphocytic meningitis with severe headache, neck stiffness, and photophobia — typically less acute than bacterial meningitis but persistent over days to weeks.",
+    "Radiculoneuritis with sharp, shooting, often nocturnal pain in a nerve-root distribution; called Bannwarth syndrome when combined with meningitis and cranial neuropathy in European cases.",
+    "Lyme carditis with palpitations, lightheadedness, syncope, or chest discomfort — caused by fluctuating atrioventricular conduction block (first-, second-, or third-degree AV block).",
+    "Migratory musculoskeletal pain that moves between joints and tendons over hours to days during the early disseminated phase, without persistent swelling.",
+    "Recurrent or persistent swelling of a single large joint — most often the knee — appearing months after the bite, with hot, tense effusions that can recur over years if untreated.",
+    "Cognitive complaints such as word-finding difficulty, slowed processing, and memory problems in late or post-treatment disease, often described by patients as 'brain fog'."
+  ],
+
+  "earlyWarningSigns": [
+    "An expanding red patch on the skin within 30 days of time spent in wooded or grassy areas in an endemic region — measure and photograph it on day 1 and again 48 hours later",
+    "A summer 'flu' with fever, fatigue, and body aches between May and September in endemic areas, especially if there is a recent recalled tick bite or outdoor exposure",
+    "Sudden one-sided facial drooping in a child or younger adult during peak tick season in the Northeast, upper Midwest, or mid-Atlantic United States",
+    "Unexplained palpitations, dizziness, or fainting in someone with recent outdoor exposure in an endemic area — Lyme carditis must be considered",
+    "A new swollen knee in a child after summer camp or outdoor activity with no clear injury — Lyme arthritis is among the most common causes in endemic regions"
+  ],
+
+  "emergencySigns": [
+    "High-degree atrioventricular block on ECG with syncope, marked bradycardia (<40 bpm), or hemodynamic instability — Lyme carditis is reversible with IV ceftriaxone but may need temporary pacing",
+    "Severe headache with neck stiffness, fever, and photophobia — meningitis requires lumbar puncture and urgent treatment regardless of suspected cause",
+    "New-onset bilateral facial palsy — although usually Lyme, it warrants same-day evaluation to exclude other causes such as Guillain-Barré syndrome",
+    "Acute confusion, focal neurological deficit, or seizure in a patient with possible Lyme exposure — encephalitis is rare but is a neurological emergency",
+    "Anaphylaxis or severe drug reaction within hours of starting doxycycline, amoxicillin, or cefuroxime — stop the drug, call emergency services"
+  ],
+
+  "causes": [
+    {
+      "cause": "Infection with Borrelia burgdorferi sensu stricto",
+      "description": "The cause of essentially all North American cases. A corkscrew-shaped spirochete delivered into the skin by a feeding Ixodes scapularis or Ixodes pacificus tick; it then spreads outward through the dermis (producing erythema migrans) and into blood, joints, nerves, and the heart over weeks."
+    },
+    {
+      "cause": "Infection with Borrelia afzelii or Borrelia garinii (Europe and Asia)",
+      "description": "Borrelia afzelii is the dominant European cause and is particularly linked to chronic skin involvement (acrodermatitis chronica atrophicans). Borrelia garinii is the strongest cause of neuroborreliosis — meningitis, radiculitis, and Bannwarth syndrome — and tends to produce more pronounced central nervous system disease than the North American strain."
+    },
+    {
+      "cause": "Tick attachment for ≥36 hours",
+      "description": "Transmission from tick to human requires the spirochete to migrate from the tick midgut to the salivary glands, a process that begins about 36 hours into the blood meal. Ticks removed within 24 hours rarely transmit Borrelia; risk rises sharply after 36-48 hours of attachment."
+    },
+    {
+      "cause": "Exposure in high-incidence geography",
+      "description": "Risk is concentrated where infected Ixodes ticks are abundant: the Northeast (Maine to Virginia), the upper Midwest (Wisconsin, Minnesota), the mid-Atlantic, and the Pacific Coast in the US; most of Europe with hot spots in central Europe and Scandinavia; and parts of northern Asia."
+    },
+    {
+      "cause": "Outdoor activities during peak transmission season",
+      "description": "Hiking, gardening, camping, hunting, landscaping, and military training in wooded or brushy environments between April and October account for the majority of infections. Nymphal Ixodes ticks — the size of a poppy seed — are the dominant transmitters and easily missed on skin checks."
+    },
+    {
+      "cause": "Borrelia mayonii (rare)",
+      "description": "Identified in 2013 in patients from Wisconsin and Minnesota and described by Pritt et al. (2016, NEJM). Causes higher spirochete loads in blood, sometimes with diffuse rashes and gastrointestinal symptoms in addition to typical Lyme features. Geographic range is limited to the upper Midwest."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Residing or vacationing in a high-incidence US region", "category": "environmental", "description": "Fifteen states account for over 95% of reported US cases. Connecticut, Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, New York, New Jersey, Pennsylvania, Delaware, Maryland, Wisconsin, and Minnesota have the highest rates." },
+    { "factor": "Outdoor occupation or recreation in tick habitat", "category": "modifiable", "description": "Foresters, park rangers, farmers, landscapers, utility workers, hunters, and hikers have repeatedly higher exposure. Time in tall grass, leaf litter, or wood edges drives risk far more than wilderness depth." },
+    { "factor": "Age 5-15 or 45-65", "category": "non-modifiable", "description": "Surveillance shows a bimodal age distribution — children spending summers outdoors and older adults gardening or doing yard work account for most cases." },
+    { "factor": "Failure to perform same-day tick checks", "category": "modifiable", "description": "Ticks attached for less than 24 hours rarely transmit. A thorough whole-body skin check within 24 hours of outdoor exposure — including scalp, behind the ears, axillae, groin, and waistband — is the single highest-yield prevention behavior." },
+    { "factor": "Not using EPA-registered repellents", "category": "modifiable", "description": "DEET 20-30% on skin and permethrin on clothing reduce tick bites by 70-90% in field studies. Underuse is a leading modifiable risk factor in known endemic areas." },
+    { "factor": "Owning pets that share outdoor habitat", "category": "environmental", "description": "Dogs and cats can carry ticks indoors. Even ticks that bite the pet first can detach and find a human host. Veterinary tick prevention reduces, but does not eliminate, this exposure route." },
+    { "factor": "Residential property bordering woods or brush", "category": "environmental", "description": "Properties with deer-frequented edges, leaf litter, and brushy borders harbor higher Ixodes nymph densities. Yard management — leaf removal, mowing, woodchip barriers — measurably reduces tick presence." },
+    { "factor": "Travel to high-incidence European countries during summer", "category": "environmental", "description": "Germany, Slovenia, Austria, Sweden, Estonia, and southern Scandinavia have the highest European rates. Hikers and campers in central European forests should treat exposure as comparable to US Northeast risk." }
+  ],
+
+  "affectedDemographics": [
+    "Approximately 476,000 Americans are diagnosed and treated for Lyme disease each year based on insurance-claims data (Kugeler et al., 2021); public-health surveillance captures only a fraction (~63,000 cases reported in 2022)",
+    "Fifteen high-incidence states account for over 95% of reported US cases; incidence in Vermont and Maine exceeds 100 per 100,000 residents",
+    "Children aged 5-14 and adults aged 45-65 have the highest age-specific incidence in US surveillance",
+    "European reporting estimates >100,000 cases annually across the EU, with the highest rates in central and northern Europe (Germany, Slovenia, Austria, Sweden, Baltic states)",
+    "Cases occur year-round but cluster between May and August, when nymphal Ixodes ticks are most active"
+  ],
+
+  "diagnosisOverview": "Diagnosis of Lyme disease combines clinical pattern, exposure history, and selective laboratory testing — never serology in isolation. The 2020 IDSA/AAN/ACR guideline (Lantos et al.) is the current US standard. In a patient with erythema migrans who lives in or has visited an endemic area, the diagnosis is clinical and antibiotics should be started without waiting for serology, because the antibody response is often still negative in the first 1-2 weeks of infection. Outside this scenario, serology is the cornerstone: either a standard two-tier protocol (a sensitive enzyme immunoassay followed by IgM and IgG Western blots) or, since the CDC's 2019 update, a modified two-tier protocol using two different EIAs back-to-back. IgM blots are interpretable only within the first 30 days of illness; IgG-positive disease later than that points to true infection, while persistent IgM positivity is a frequent source of overdiagnosis. PCR has a defined role in synovial fluid (sensitivity 70-80% in untreated Lyme arthritis) and in cerebrospinal fluid for some neuroborreliosis cases, but it is not validated on whole blood for routine diagnosis. CSF antibody index (intrathecal antibody production) supports the diagnosis of neuroborreliosis when meningitis or radiculoneuritis is suspected. Routine testing of asymptomatic people, post-treatment 'cure' testing, and screening of non-specific fatigue without exposure or objective findings are explicitly discouraged because false positives outnumber true positives in low-pretest-probability populations.",
+
+  "diagnosticTests": [
+    {
+      "test": "Clinical diagnosis of erythema migrans",
+      "purpose": "In a patient with a typical expanding skin lesion ≥5 cm in or returning from an endemic area, the diagnosis is made clinically. Serology in this setting is often negative and is not required to start treatment.",
+      "whatToExpect": "A clinician examines the rash, measures and photographs it, and asks about outdoor exposure. No blood test is needed before starting antibiotics."
+    },
+    {
+      "test": "Standard two-tier serology (EIA plus Western blot)",
+      "purpose": "First-line for suspected Lyme disease without erythema migrans. A sensitive whole-cell or C6 peptide enzyme immunoassay screens; positive or equivocal results reflex to IgM and IgG Western blots for specificity.",
+      "whatToExpect": "A standard venous blood draw; results typically return within 3-7 days. IgM blots are interpretable only within 30 days of symptom onset."
+    },
+    {
+      "test": "Modified two-tier serology (two EIAs)",
+      "purpose": "An alternative endorsed by the CDC since 2019 that replaces the Western blot with a second, different EIA. Improves sensitivity in early disease and is faster and cheaper.",
+      "whatToExpect": "A single blood draw; both EIAs are run by the laboratory and the result is reported as positive only if both tests agree. Turnaround typically 1-3 days."
+    },
+    {
+      "test": "Synovial fluid PCR",
+      "purpose": "Used in suspected Lyme arthritis, particularly when serology is positive and a large joint is swollen. Sensitivity 70-80% in untreated arthritis; valuable for confirmation and to track treatment failure.",
+      "whatToExpect": "A joint aspiration with local anesthetic, typically of the knee. Fluid is sent for cell count, Gram stain, culture, and Lyme PCR."
+    },
+    {
+      "test": "CSF analysis with antibody index",
+      "purpose": "For suspected neuroborreliosis (meningitis, radiculoneuritis, cranial neuropathy). Lymphocytic pleocytosis with elevated protein supports the diagnosis; an intrathecal antibody index >1 confirms central production.",
+      "whatToExpect": "A lumbar puncture performed bedside or in radiology under local anesthetic. Mild post-procedure headache for 24-48 hours is the most common side effect."
+    },
+    {
+      "test": "ECG (electrocardiogram)",
+      "purpose": "Mandatory in any patient with cardiac symptoms (palpitations, syncope, dyspnea) and suspected Lyme disease. Detects first-, second-, or third-degree atrioventricular block characteristic of Lyme carditis.",
+      "whatToExpect": "A standard 12-lead ECG taking 5 minutes. Patients with high-degree block are admitted for monitoring and IV antibiotics; pacing is occasionally needed."
+    },
+    {
+      "test": "MRI of the brain or spine",
+      "purpose": "Used in late or unusual neurological presentations to exclude alternative diagnoses (multiple sclerosis, vasculitis, tumor). Findings in Lyme are typically subtle or absent; MRI is more about ruling out other disease.",
+      "whatToExpect": "A 30-45 minute MRI scan with or without contrast. Patients with claustrophobia can request open MRI or mild sedation."
+    }
+  ],
+
+  "treatmentOverview": "Antibiotic therapy is the only treatment for Lyme disease, and the duration and route are driven by the stage and the affected organ system. The 2020 IDSA/AAN/ACR guideline (Lantos et al.) is the current authority and replaces the much-debated 2006 version. For early localized disease — erythema migrans without disseminated features — oral doxycycline 100 mg twice daily for 10 days is preferred in adults and children of all ages (the long-standing concern about doxycycline-induced tooth staining in young children has been retired by AAP based on more recent evidence). Alternatives are amoxicillin 500 mg three times daily for 14 days or cefuroxime axetil 500 mg twice daily for 14 days, used in pregnancy or doxycycline intolerance. Cure rates exceed 90% at this stage. Early disseminated disease with multiple erythema migrans lesions or isolated facial nerve palsy is also treated orally for 14-21 days. Lyme arthritis is treated with 28 days of oral doxycycline; persistent or recurrent arthritis after a full oral course is re-treated with either a second oral course or 2-4 weeks of intravenous ceftriaxone. Meningitis, encephalitis, or high-grade Lyme carditis (second- or third-degree atrioventricular block) requires intravenous ceftriaxone 2 g daily for 14-28 days, with admission and cardiac monitoring as appropriate. A single dose of doxycycline 200 mg can be used as post-exposure prophylaxis after a tick bite if the tick is an identified Ixodes scapularis attached for at least 36 hours, the bite occurred in an endemic area, and the dose can be started within 72 hours of removal. Prolonged antibiotic courses — months of oral or repeated intravenous antibiotics — have been studied in three randomized controlled trials (Klempner 2001, Fallon 2008, Berende 2016) and offer no benefit for post-treatment symptoms while exposing patients to serious harms including line infections, gallbladder disease, and Clostridioides difficile. They are not recommended.",
+
+  "medicalTreatments": [
+    {
+      "name": "Doxycycline (100 mg orally twice daily for 10-21 days)",
+      "description": "First-line oral antibiotic for early localized and most early disseminated Lyme disease. Active against Borrelia, well absorbed orally, and the only first-line agent that also covers Anaplasma phagocytophilum — a co-infection in 2-12% of Ixodes scapularis bites. Safe in children of all ages for short courses per current AAP guidance. Avoid in pregnancy.",
+      "effectiveness": "Cures over 90% of patients with erythema migrans; randomized trials show 10-day courses non-inferior to longer regimens."
+    },
+    {
+      "name": "Amoxicillin (500 mg orally three times daily for 14 days)",
+      "description": "Alternative for pregnant women, breastfeeding mothers, and patients intolerant of doxycycline. Equivalent efficacy in early disease, but does not cover Anaplasma co-infection.",
+      "effectiveness": "Cures approximately 90% of early Lyme; randomized comparisons show equivalence with doxycycline."
+    },
+    {
+      "name": "Cefuroxime axetil (500 mg orally twice daily for 14 days)",
+      "description": "Second alternative for patients who cannot take doxycycline or amoxicillin. Active against Borrelia with good oral bioavailability. More expensive than the first-line options.",
+      "effectiveness": "Cures approximately 90% of early Lyme; non-inferior to doxycycline in head-to-head trials."
+    },
+    {
+      "name": "Ceftriaxone (2 g intravenously once daily for 14-28 days)",
+      "description": "Required for Lyme meningitis, encephalitis, radiculoneuritis with severe pain, high-grade Lyme carditis (second- or third-degree AV block), and refractory Lyme arthritis. Administered through a peripheral IV or PICC line. Monitor for biliary sludging and Clostridioides difficile colitis.",
+      "effectiveness": "Resolves neurological and cardiac manifestations in over 85% of treated patients; AV block typically reverses within 1-6 weeks."
+    },
+    {
+      "name": "Doxycycline 200 mg single oral dose (post-exposure prophylaxis)",
+      "description": "Indicated when all four criteria are met: the tick is identified as Ixodes scapularis (or pacificus); it has been attached for ≥36 hours or is engorged; the bite occurred in a high-incidence area; the dose can be started within 72 hours of tick removal. Reduces Lyme incidence after a qualifying bite by about 87% (Nadelman 2001).",
+      "effectiveness": "Approximately 87% relative risk reduction for developing erythema migrans following a qualifying tick bite."
+    },
+    {
+      "name": "Doxycycline (100 mg orally twice daily for 28 days, for Lyme arthritis)",
+      "description": "Extended oral course used for Lyme arthritis without neurological involvement. Most patients respond; persistent or recurrent swelling after this course is treated with either a second oral course or IV ceftriaxone.",
+      "effectiveness": "Resolves arthritis in 60-70% after the first 28-day course; combined oral plus IV strategy achieves over 90% long-term control."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Temporary transvenous pacing (for high-grade Lyme carditis)",
+      "description": "Indicated when Lyme carditis produces complete heart block with hemodynamic compromise. The pacing wire is removed once conduction recovers, usually within 1-6 weeks of starting antibiotics. Permanent pacemakers are rarely required.",
+      "successRate": "Conduction recovery in over 95% of patients with Lyme-related AV block when treated promptly with IV antibiotics; permanent pacing is needed in fewer than 5%."
+    },
+    {
+      "name": "Arthroscopic synovectomy (for antibiotic-refractory Lyme arthritis)",
+      "description": "Considered when chronic synovitis persists in a single joint despite full antibiotic therapy and a course of disease-modifying anti-rheumatic drugs. Most patients do not need this; it is a last-line option discussed by rheumatology and orthopedics together.",
+      "successRate": "Sustained symptom relief in 70-80% of carefully selected patients."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Symptomatic treatment of post-treatment Lyme disease syndrome", "description": "Graded exercise, cognitive behavioral therapy, sleep hygiene, and management of comorbid fibromyalgia or depression are supported by the IDSA/AAN/ACR guideline for persistent symptoms after appropriate antibiotic therapy. Long antibiotic courses are not recommended because three randomized trials (Klempner 2001, Fallon 2008, Berende 2016) show no symptom benefit and meaningful harms." },
+    { "name": "Pain management for Lyme arthritis flares", "description": "Short courses of NSAIDs and intra-articular corticosteroid injections (in joints proven negative for active infection by PCR) reduce inflammation during the post-infectious phase of Lyme arthritis. Used in addition to antibiotics, not instead." }
+  ],
+
+  "whySeeSpecialist": "Refer to an infectious disease specialist for Lyme carditis, neurological manifestations (meningitis, encephalitis, severe radiculoneuritis, atypical facial palsy), Lyme arthritis that does not resolve after a 28-day oral course, suspected co-infections with Anaplasma or Babesia, treatment failures, pregnancy with active Lyme disease, and persistent symptoms after recommended antibiotic therapy. Most cases of straightforward erythema migrans are managed safely in primary care or urgent care, especially in endemic areas where clinicians see the rash regularly.",
+
+  "doctorSelectionGuide": "Choose an infectious disease physician affiliated with an academic medical center in an endemic region — they see Lyme weekly during summer months and follow the current IDSA/AAN/ACR guideline. Beware clinicians advertising 'chronic Lyme' protocols with prolonged or repeated IV antibiotics outside guideline indications: three randomized trials show those regimens do not work and can cause serious harm. For neurological or cardiac involvement, look for joint management with neurology or cardiology at a center with cardiac monitoring capacity.",
+
+  "preventionStrategies": [
+    "Avoid tick habitat where possible — stay in the center of trails, off tall grass and leaf litter, and out of brush in endemic areas during May through October",
+    "Apply EPA-registered repellent containing 20-30% DEET, picaridin, or IR3535 to exposed skin before going outdoors in tick country",
+    "Treat clothing, shoes, and camping gear with 0.5% permethrin spray — kills ticks on contact and remains effective through several wash cycles",
+    "Wear long sleeves, long pants tucked into socks, and light-colored clothing so attached ticks are easier to spot during checks",
+    "Perform a full-body tick check within 2 hours of coming indoors, paying particular attention to scalp, behind the ears, neck, armpits, groin, waistband, and back of the knees",
+    "Tumble-dry outdoor clothing on high heat for 10 minutes to kill any unseen ticks before washing",
+    "Remove attached ticks promptly with fine-tipped tweezers, pulling steadily upward with even pressure and disinfecting the bite site afterward"
+  ],
+
+  "lifestyleModifications": [
+    "Maintain regular low-impact exercise during recovery — graded aerobic activity is the best-studied intervention for post-treatment fatigue and improves cardiovascular health, which is independently relevant for adults with prior Lyme carditis",
+    "Sleep 7-9 hours per night and address insomnia early — sleep disruption worsens cognitive symptoms after treatment",
+    "Limit alcohol while on doxycycline, amoxicillin, or ceftriaxone to reduce gastrointestinal side effects and avoid liver stress",
+    "Use sun protection on doxycycline — the drug increases photosensitivity, and severe sunburns can occur within 30 minutes in direct summer sun",
+    "Take doxycycline with a full glass of water and remain upright for 30 minutes afterward to prevent esophageal irritation; avoid taking it at bedtime",
+    "If managing post-treatment symptoms, plan tasks in short blocks with rest periods rather than long pushes followed by crashes — pacing reduces symptom flares"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Plenty of fluids to support drug elimination and hydration during antibiotic therapy",
+      "Whole grains, vegetables, fruits, lean protein, and fish — a Mediterranean-pattern diet supports general recovery",
+      "Yogurt, kefir, and other fermented foods or probiotics during and just after antibiotic courses to reduce gastrointestinal upset",
+      "Iron- and B12-rich foods if anemia is present, especially with concurrent Babesia or chronic illness"
+    ],
+    "avoid": [
+      "Dairy, calcium, iron, magnesium, and antacid products within 2 hours of doxycycline — they bind the drug and reduce absorption",
+      "Excess alcohol while on antibiotics, especially during ceftriaxone or metronidazole if added for co-infections",
+      "Highly restrictive elimination diets advertised as 'anti-Lyme' — no diet has been shown to alter spirochete infection or post-treatment symptoms",
+      "Unpasteurized milk and raw meat in endemic areas (unrelated foodborne risks compound illness during recovery)"
+    ]
+  },
+
+  "exerciseGuidelines": "During acute illness and the first 2 weeks of antibiotic therapy, rest and light activity are appropriate; avoid strenuous exercise until fevers, joint swelling, and cardiac symptoms have settled. For Lyme carditis specifically, hold competitive or high-intensity training until conduction has normalized and the cardiologist clears resumption. Once antibiotics are complete and acute symptoms resolve, return to regular exercise gradually over 4-6 weeks. Patients with post-treatment Lyme disease syndrome benefit from graded aerobic activity tailored to symptom tolerance.",
+
+  "dailyManagement": [
+    "Take antibiotics at the prescribed times — doxycycline twice daily on an empty stomach or with a light non-dairy snack, with a full glass of water",
+    "Mark the edge of the erythema migrans rash with a skin-safe pen on day 1 of treatment so its course can be tracked; expect gradual fading over 1-2 weeks",
+    "Monitor symptoms for new fevers, joint swelling, palpitations, facial weakness, or severe headache — these can signal disseminated disease and warrant prompt re-evaluation",
+    "Use sunscreen and limit direct sun exposure while on doxycycline; even brief midday exposure can produce a severe burn",
+    "Keep the tick (if recovered) in a sealed container for identification and, if requested, testing — though tick testing is not used to decide treatment"
+  ],
+
+  "prognosis": "Outcomes after early antibiotic treatment are excellent. Over 90% of patients with erythema migrans treated with the recommended course are symptom-free at 6 months. Facial palsy resolves in 85-95% over 1-3 months; AV block in Lyme carditis reverses in over 95% within 1-6 weeks of antibiotics. Lyme arthritis responds to first-line oral therapy in 60-70% and to combined oral plus intravenous regimens in over 90% long-term, though a small subgroup develops persistent post-infectious antibiotic-refractory arthritis driven by immune dysregulation rather than ongoing infection. Roughly 10-20% of treated patients report persistent fatigue, pain, or cognitive symptoms lasting more than 6 months — this is post-treatment Lyme disease syndrome (PTLDS). Most PTLDS symptoms improve over 1-2 years; longer antibiotic courses do not accelerate that recovery and carry meaningful harm. Untreated Lyme disease progresses unpredictably: some patients clear the infection spontaneously, but others develop late arthritis, neurological disease, or in Europe acrodermatitis chronica atrophicans years after the bite. Death from Lyme disease is rare and almost always due to fulminant Lyme carditis.",
+
+  "recoveryTimeline": "The erythema migrans rash typically begins to fade within 48-72 hours of starting antibiotics and resolves over 1-2 weeks. Fever, headache, and fatigue improve within 3-5 days. Facial palsy begins recovering within weeks but full resolution may take 3 months. Lyme carditis with AV block usually reverses within 1-6 weeks of IV antibiotics. Lyme arthritis improves over weeks to months; the knee may take 3-6 months to return to baseline. Persistent post-treatment symptoms, if they occur, gradually settle over 6-24 months in most patients.",
+
+  "complications": [
+    "Lyme carditis with high-degree atrioventricular block — can cause syncope and rarely sudden death; reversible with prompt IV antibiotics, sometimes needing temporary pacing",
+    "Neuroborreliosis — meningitis, painful radiculoneuritis, cranial neuropathies (especially facial palsy), and rarely encephalitis or myelitis",
+    "Lyme arthritis with chronic or recurrent large-joint swelling (typically the knee), occasionally progressing to antibiotic-refractory post-infectious arthritis",
+    "Post-treatment Lyme disease syndrome (PTLDS) — persistent fatigue, musculoskeletal pain, and cognitive symptoms in 10-20% of treated patients, lasting >6 months",
+    "Acrodermatitis chronica atrophicans (European cases, Borrelia afzelii) — chronic atrophic skin changes on the limbs years after untreated infection",
+    "Co-infections from the same tick — Anaplasma phagocytophilum (2-12% of Ixodes scapularis bites), Babesia microti, Powassan virus, and Borrelia miyamotoi can complicate or mimic Lyme"
+  ],
+
+  "supportResources": [
+    { "name": "CDC Lyme Disease (Patient Resources)", "url": "https://www.cdc.gov/lyme/", "description": "US Centers for Disease Control authoritative patient and clinician resources, prevention tools, and surveillance data." },
+    { "name": "Infectious Diseases Society of America — Lyme Disease Guideline", "url": "https://www.idsociety.org/practice-guideline/lyme-disease/", "description": "Full IDSA/AAN/ACR 2020 guideline plus a patient summary; the current US standard of care." },
+    { "name": "European Society of Clinical Microbiology and Infectious Diseases (ESCMID) Lyme Resources", "url": "https://www.escmid.org/", "description": "European Lyme borreliosis guidelines, epidemiology, and clinician education." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "keyDifference": "Fibromyalgia produces widespread chronic pain, fatigue, sleep disturbance, and cognitive complaints without the objective inflammation, rash, cranial palsy, or AV block of Lyme disease. Fibromyalgia serology is negative for Borrelia, and tender-point examination and the 2016 ACR criteria distinguish the two. Patients with PTLDS often meet fibromyalgia criteria — both diagnoses can coexist." },
+    { "slug": "rheumatoid-arthritis", "name": "Rheumatoid Arthritis", "keyDifference": "Rheumatoid arthritis is symmetric, polyarticular, and chronic from onset, with prolonged morning stiffness and positive rheumatoid factor and anti-CCP antibodies. Lyme arthritis is typically mono- or oligoarticular, asymmetric, large-joint dominant (especially the knee), and accompanied by a Lyme exposure history with positive serology." },
+    { "slug": "multiple-sclerosis", "name": "Multiple Sclerosis", "keyDifference": "MS is a chronic demyelinating disease of the central nervous system with characteristic MRI lesions disseminated in time and space and oligoclonal bands in CSF. Lyme neuroborreliosis typically presents with cranial neuropathy, meningitis, or radiculoneuritis with positive Lyme serology and CSF antibody index — features that are absent in MS." },
+    { "slug": "chronic-fatigue-syndrome", "name": "Chronic Fatigue Syndrome (ME/CFS)", "keyDifference": "ME/CFS shares persistent fatigue, post-exertional malaise, and cognitive symptoms with PTLDS but is defined independently of any specific infection. Diagnostic criteria (IOM 2015) require >6 months of substantial functional impairment with post-exertional malaise. Lyme serology is negative or reflects past infection only; the two can co-occur." },
+    { "slug": "babesiosis-b600", "name": "Babesiosis", "keyDifference": "Babesiosis is a protozoal infection transmitted by the same Ixodes scapularis tick. It causes fever, hemolytic anemia, and often jaundice — features uncommon in Lyme. Diagnosis is by blood smear or PCR for Babesia microti. Co-infection occurs in a minority of Lyme cases and should be tested for when illness is more severe than expected." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "ehrlichiosis-unspecified-a7740", "name": "Ehrlichiosis" },
+    { "slug": "babesiosis-b600", "name": "Babesiosis" },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "babesiosis-b600", "name": "Babesiosis", "relevance": "Transmitted by the same Ixodes scapularis tick; co-infection occurs in a subset of Lyme cases and produces fever with hemolytic anemia." },
+    { "slug": "ehrlichiosis-unspecified-a7740", "name": "Ehrlichiosis", "relevance": "Another tick-borne bacterial infection in the same geography; presents with fever, headache, and cytopenias and may co-occur with Lyme." },
+    { "slug": "spotted-fever-unspecified-a779", "name": "Spotted Fever (Rickettsial)", "relevance": "Tick-borne rickettsial illness that mimics early Lyme with fever, headache, and rash; distinguished by petechial rash on palms/soles and different geography and vector." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "relevance": "Frequently overlaps with post-treatment Lyme disease syndrome; many PTLDS patients meet fibromyalgia criteria and benefit from the same symptom-directed management." },
+    { "slug": "chronic-fatigue-syndrome", "name": "Chronic Fatigue Syndrome (ME/CFS)", "relevance": "Shares persistent fatigue and cognitive symptoms with PTLDS; clinical management strategies are similar even when underlying pathology differs." },
+    { "slug": "multiple-sclerosis", "name": "Multiple Sclerosis", "relevance": "Important differential for late neurological manifestations of Lyme disease; MRI patterns and CSF studies distinguish the two." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What does a Lyme disease rash look like?",
+      "answer": "The classic erythema migrans rash is a round or oval red patch at the tick-bite site that expands over days to weeks, reaching at least 5 cm across. About one-third of rashes show central clearing, producing a target or bull's-eye appearance; the remaining two-thirds are uniformly red or have multiple rings. The rash is usually flat, warm rather than hot, and only mildly itchy or tender. It appears 3-30 days after the bite (median around 7-10 days).",
+      "schemaEligible": true
+    },
+    {
+      "question": "How soon after a tick bite does Lyme disease appear?",
+      "answer": "Symptoms develop 3-30 days after an infected tick bite, with most rashes appearing in the first 7-14 days. Disseminated symptoms — facial palsy, meningitis, carditis — typically emerge weeks to months later. Lyme arthritis can appear months after the initial bite, sometimes when the original tick bite was never noticed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you get Lyme disease without a rash?",
+      "answer": "Yes. About 20-30% of people infected with Borrelia burgdorferi never develop the classic erythema migrans rash, or the rash appears in a location they cannot see. These patients are diagnosed by symptoms plus laboratory testing once the body has had time to produce antibodies (typically 2-6 weeks after the bite).",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Lyme disease treated?",
+      "answer": "Most cases are treated with oral antibiotics for 10-21 days. Doxycycline 100 mg twice daily is first-line for ages and most stages. Amoxicillin 500 mg three times daily and cefuroxime axetil 500 mg twice daily are alternatives. Severe neurological or cardiac involvement requires intravenous ceftriaxone 2 g daily for 14-28 days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How accurate is the Lyme disease blood test?",
+      "answer": "Two-tier serology is highly accurate in established disease — sensitivity exceeds 90% after 4-6 weeks of symptoms and specificity is over 99%. In the first 1-2 weeks of infection, sensitivity drops to 30-40% because antibodies are still developing, which is why erythema migrans in an endemic area is treated based on clinical findings alone, without waiting for serology.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is chronic Lyme disease?",
+      "answer": "'Chronic Lyme disease' is an unofficial term used in different ways. The defined entity recognized by the IDSA/AAN/ACR is post-treatment Lyme disease syndrome (PTLDS) — persistent fatigue, musculoskeletal pain, and cognitive symptoms lasting more than 6 months after appropriate antibiotic therapy for documented Lyme. Some practitioners use 'chronic Lyme' for unexplained chronic symptoms in patients without objective evidence of Lyme infection; this usage is not supported by the major medical societies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do long courses of antibiotics help chronic symptoms after Lyme?",
+      "answer": "No. Three large randomized trials (Klempner 2001, Fallon 2008, Berende 2016) tested months of oral or intravenous antibiotics for persistent post-treatment symptoms and found no benefit over placebo. Patients receiving prolonged antibiotics experienced more serious harms including line infections, gallstones, and Clostridioides difficile colitis. The IDSA/AAN/ACR guideline explicitly recommends against repeated or prolonged antibiotic courses for PTLDS.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I take antibiotics after every tick bite?",
+      "answer": "No. The IDSA/AAN/ACR guideline supports a single 200 mg dose of doxycycline only when four conditions are met: the tick is identified as Ixodes scapularis (or pacificus), it has been attached for at least 36 hours or is engorged, the bite occurred in a high-incidence region, and the dose can be started within 72 hours of removal. For other bites, watchful waiting with prompt evaluation if a rash or symptoms develop is preferred.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I remove a tick safely?",
+      "answer": "Use fine-tipped tweezers, grasp the tick as close to the skin surface as possible, and pull upward with steady, even pressure. Avoid twisting or crushing the tick. Clean the bite site and your hands with soap and water or alcohol. Do not use heat, petroleum jelly, or nail polish to make the tick detach — those methods can increase pathogen transmission. Note the date and save the tick for identification if possible.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get Lyme disease?",
+      "answer": "Yes. Children aged 5-15 have one of the highest age-specific incidence rates in the United States. Symptoms are similar to those in adults — erythema migrans, fever, and aches in early disease, and Lyme arthritis (often of the knee) in late untreated disease. Doxycycline is now considered safe for short courses in children of all ages per current American Academy of Pediatrics guidance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Lyme disease contagious between people?",
+      "answer": "No. Lyme disease is not transmitted person-to-person through casual contact, kissing, sexual contact, or breastfeeding based on current evidence. It is not airborne. The only established human route is the bite of an infected Ixodes tick. Transmission through blood transfusion is theoretical but has not been documented in practice for Borrelia burgdorferi.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between Lyme disease in the US and Europe?",
+      "answer": "North American Lyme is almost entirely caused by Borrelia burgdorferi sensu stricto and most often progresses to Lyme arthritis if untreated. European Lyme is mostly Borrelia afzelii and Borrelia garinii: afzelii is more skin-associated (acrodermatitis chronica atrophicans) and garinii more neurological (Bannwarth syndrome, meningoradiculitis). Diagnostic and treatment principles are similar, but typical late presentations differ.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnant women get Lyme disease?",
+      "answer": "Yes, but with prompt antibiotic treatment outcomes are excellent and adverse pregnancy outcomes are rare. Doxycycline is generally avoided in pregnancy; amoxicillin and cefuroxime axetil are the preferred oral options. Intravenous ceftriaxone is used for severe disease. Untreated Lyme in pregnancy carries higher risk and should not be ignored.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Lyme carditis and how serious is it?",
+      "answer": "Lyme carditis is inflammation of the heart's conduction system, producing fluctuating atrioventricular block in 1-2% of untreated Lyme cases. It presents with palpitations, lightheadedness, or syncope. With prompt intravenous ceftriaxone, AV block reverses in over 95% of patients within 1-6 weeks. Rare deaths have occurred when the diagnosis was missed; this is why any new heart-block symptoms after possible tick exposure should be evaluated urgently.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Bannwarth syndrome?",
+      "answer": "Bannwarth syndrome is a European presentation of early disseminated Lyme borreliosis caused mostly by Borrelia garinii. It combines painful nerve-root inflammation (radiculoneuritis), cranial neuropathy (typically facial palsy), and lymphocytic meningitis. The pain is often severe, nocturnal, and migratory. Treatment with intravenous ceftriaxone or oral doxycycline resolves most cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does Lyme disease treatment cost?",
+      "answer": "Oral doxycycline, amoxicillin, and cefuroxime axetil are inexpensive generics — a full course typically costs USD 10-50 in the United States and far less in many other countries. Intravenous ceftriaxone for severe disease is more expensive and may require home infusion or hospital admission, totaling several thousand dollars before insurance. Initial primary-care visits and basic serology are usually covered by health insurance in most countries.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Where is Lyme disease most common in the United States?",
+      "answer": "Fifteen states account for over 95% of reported US cases: Connecticut, Maine, Massachusetts, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, Vermont, Delaware, Maryland, Virginia, Wisconsin, Minnesota, and New Jersey. Incidence rates in Vermont and Maine exceed 100 per 100,000 residents. The Pacific Coast has lower but real risk via Ixodes pacificus.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a Lyme disease vaccine for humans?",
+      "answer": "No vaccine is currently licensed for humans. A vaccine called LYMErix was marketed in the late 1990s and withdrawn in 2002. A new candidate (VLA15, Pfizer/Valneva) completed Phase 3 trials in 2025; licensure decisions are pending. Until a vaccine is available, prevention relies on tick checks, repellents, and prompt tick removal.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Lyme disease come back after treatment?",
+      "answer": "True re-infection occurs when a person is bitten by another infected tick after a previous Lyme infection has been treated — prior infection does not confer durable immunity, particularly to different Borrelia strains. Recurrence of symptoms after antibiotics more often reflects PTLDS or a co-infection rather than persistent live spirochetes. Repeat testing and clinical evaluation are needed to distinguish these scenarios.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need a follow-up blood test after Lyme treatment?",
+      "answer": "Routine post-treatment serology is not recommended. Antibodies remain detectable for months to years after successful treatment, so a positive test does not signal ongoing infection or treatment failure. Follow-up is based on symptoms: if new or worsening features develop, clinical evaluation guides whether further testing or treatment is needed.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Lyme Disease (Borrelia tick-borne infection)",
+
+  "regionalNames": [
+    { "name": "Lyme-Borreliose", "region": "Germany / Austria / Switzerland", "language": "de" },
+    { "name": "Maladie de Lyme", "region": "France", "language": "fr" },
+    { "name": "Borrelioza z Lyme", "region": "Poland", "language": "pl" }
+  ],
+
+  "searchTags": [
+    "lyme disease", "lyme", "borreliosis", "lyme borreliosis", "erythema migrans",
+    "bullseye rash", "tick bite illness", "ixodes scapularis", "deer tick disease",
+    "blacklegged tick", "borrelia burgdorferi", "neuroborreliosis", "lyme arthritis",
+    "lyme carditis", "ptlds", "post-treatment lyme"
+  ],
+
+  "symptomKeywords": [
+    "bullseye rash", "expanding red rash after tick bite", "summer flu with rash",
+    "facial droop and tick bite", "swollen knee after tick bite",
+    "fatigue after lyme", "palpitations after tick bite", "tick bite fever"
+  ],
+
+  "metaTitle": "Lyme Disease: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Lyme disease: tick-borne Borrelia infection with expanding rash, joint, nerve, and heart effects. Symptoms, tests, antibiotic treatment, and prognosis.",
+
+  "keywords": [
+    "lyme disease", "lyme disease symptoms", "lyme disease treatment", "lyme disease rash",
+    "erythema migrans", "tick bite", "borrelia burgdorferi", "doxycycline lyme",
+    "lyme arthritis", "neuroborreliosis", "post-treatment lyme disease syndrome",
+    "chronic lyme", "lyme carditis", "ixodes scapularis"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Lantos PM, Rumbaugh J, Bockenstedt LK, et al. Clinical Practice Guidelines by the Infectious Diseases Society of America (IDSA), American Academy of Neurology (AAN), and American College of Rheumatology (ACR): 2020 Guidelines for the Prevention, Diagnosis, and Treatment of Lyme Disease. Clinical Infectious Diseases. 2021;72(1):e1-e48.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33417672/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Steere AC, Strle F, Wormser GP, et al. Lyme borreliosis. Nature Reviews Disease Primers. 2016;2:16090.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27976670/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Kugeler KJ, Schwartz AM, Delorey MJ, Mead PS, Hinckley AF. Estimating the Frequency of Lyme Disease Diagnoses, United States, 2010-2018. Emerging Infectious Diseases. 2021;27(2):616-619.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33496229/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Pritt BS, Mead PS, Johnson DKH, et al. Identification of a novel pathogenic Borrelia species causing Lyme borreliosis with unusually high spirochaetaemia: a descriptive study. Lancet Infectious Diseases. 2016;16(5):556-564.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26856777/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Klempner MS, Hu LT, Evans J, et al. Two controlled trials of antibiotic treatment in patients with persistent symptoms and a history of Lyme disease. New England Journal of Medicine. 2001;345(2):85-92.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11450676/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Berende A, ter Hofstede HJM, Vos FJ, et al. Randomized Trial of Longer-Term Therapy for Symptoms Attributed to Lyme Disease. New England Journal of Medicine. 2016;374(13):1209-1220.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27028911/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Nadelman RB, Nowakowski J, Fish D, et al. Prophylaxis with single-dose doxycycline for the prevention of Lyme disease after an Ixodes scapularis tick bite. New England Journal of Medicine. 2001;345(2):79-84.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11450675/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Mead PS. Epidemiology of Lyme Disease. Infectious Disease Clinics of North America. 2015;29(2):187-210.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25999219/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Lyme Disease — Data and Surveillance. CDC; updated 2024.",
+      "url": "https://www.cdc.gov/lyme/data-research/facts-stats/index.html",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
