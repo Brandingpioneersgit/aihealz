@@ -1,0 +1,569 @@
+{
+  "_meta": {
+    "slug": "chronic-sinusitis",
+    "tier": 1,
+    "headTerm": "chronic sinusitis",
+    "longTailKeywords": [
+      "chronic sinusitis symptoms",
+      "chronic sinusitis treatment",
+      "chronic rhinosinusitis with nasal polyps",
+      "CRSwNP",
+      "CRSsNP",
+      "dupilumab for nasal polyps",
+      "FESS surgery",
+      "endoscopic sinus surgery recovery",
+      "chronic sinusitis vs allergic rhinitis",
+      "fungal sinusitis"
+    ],
+    "primarySpecialty": "Otolaryngology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against EPOS 2020 (Fokkens et al), AAO-HNS adult chronic rhinosinusitis CPG 2015/2023, ICAR-RS 2021, SINUS-24/52 (Bachert 2019), POLYP 1/2 omalizumab trials (Gevaert 2020), SYNAPSE mepolizumab (Han 2021), and FESS outcomes literature (Smith 2013, Soler 2013, DeConde 2017). Drug doses checked against current FDA labels. CRSwNP, CRSsNP, and AFRS distinguished throughout."
+  },
+
+  "h1Title": "Chronic Sinusitis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Pulmonology",
+
+  "heroOverview": "Chronic sinusitis, now classified as chronic rhinosinusitis (CRS), is persistent inflammation of the nasal lining and paranasal sinuses lasting longer than 12 weeks despite usual treatment. It affects roughly 11.6% of adults in the United States and 10.9% in Europe per EPOS 2020, making it one of the most common chronic inflammatory diseases of any organ system. The classic picture is at least two of nasal blockage, thick nasal or postnasal discharge, facial pressure, and reduced sense of smell, often present every day for months. Untreated CRS reduces work productivity, quality of life, and sleep, and in patients with nasal polyps it strongly co-segregates with asthma. Treatment runs on three rails: daily saline plus intranasal steroids for everyone, targeted biologics or short oral steroid courses for severe polyp disease, and endoscopic sinus surgery when medical therapy fails.",
+
+  "keyStats": {
+    "prevalence": "11.6% of US adults (CDC NHIS 2018); 10.9% in Europe (EPOS 2020)",
+    "demographics": "Slight female predominance in CRSsNP; male predominance in CRSwNP (2:1)",
+    "avgAge": "Peak diagnosis age 40-60; CRSwNP often emerges in the 30s-40s",
+    "globalCases": "Estimated 300-400 million affected worldwide"
+  },
+
+  "definition": "Chronic sinusitis (ICD-10: J32; J32.9 chronic sinusitis unspecified, J32.0-J32.4 by sinus site) is defined by EPOS 2020 and the AAO-HNS guideline as symptomatic inflammation of the paranasal sinuses and nasal cavity persisting for 12 weeks or longer, with objective evidence of inflammation on nasal endoscopy or CT imaging. The clinical syndrome requires at least two of four cardinal symptoms — nasal obstruction or congestion, anterior or posterior mucopurulent discharge, facial pain or pressure, and reduction or loss of smell — plus endoscopic or radiologic confirmation of mucosal disease. CRS is split into two main phenotypes that drive treatment selection: chronic rhinosinusitis with nasal polyps (CRSwNP), which is typically a type-2 eosinophilic inflammation overlapping with asthma and aspirin-exacerbated respiratory disease (AERD), and chronic rhinosinusitis without nasal polyps (CRSsNP), which is more heterogeneous and often non-type-2. Allergic fungal rhinosinusitis (AFRS) is a distinct severe phenotype driven by a hypersensitivity reaction to fungal antigens in the sinus mucus, presenting with thick eosinophilic mucin and bone remodeling on CT. CRS is managed by otolaryngologists with allergists, pulmonologists, and primary care involved depending on phenotype, comorbidities, and severity.",
+
+  "typesClassification": [
+    { "type": "Chronic rhinosinusitis without nasal polyps (CRSsNP)", "description": "Most common phenotype (~60-65% of CRS). Heterogeneous inflammation, often non-type-2, more frequently associated with neutrophilic patterns, biofilms, and prior acute infections. Symptoms dominated by facial pressure and discharge." },
+    { "type": "Chronic rhinosinusitis with nasal polyps (CRSwNP)", "description": "Accounts for ~25-30% of CRS. Bilateral grape-like mucosal outpouchings driven by type-2 inflammation (IL-4, IL-5, IL-13, eosinophilia). Strongly linked to asthma (40-60%) and AERD. Smell loss is a hallmark symptom." },
+    { "type": "Allergic fungal rhinosinusitis (AFRS)", "description": "Severe variant defined by Bent and Kuhn criteria: type-1 hypersensitivity to fungus, nasal polyposis, characteristic CT findings with heterogeneous opacification, eosinophilic mucin, and non-invasive fungal hyphae. Typically unilateral or asymmetric in younger atopic patients." },
+    { "type": "Aspirin-exacerbated respiratory disease (AERD / Samter triad)", "description": "Triad of asthma, CRSwNP, and respiratory reactions to NSAIDs. Polyps are aggressive and recurrent; biologics and aspirin desensitization have major roles." },
+    { "type": "Odontogenic chronic sinusitis", "description": "Unilateral maxillary sinus disease driven by an apical dental infection, periodontal disease, or oroantral fistula. Accounts for up to 40% of unilateral maxillary CRS in some series; requires dental source control." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent nasal blockage or congestion present most days for at least 12 weeks, often worse on lying down or in the morning, and not relieved fully by decongestants.",
+    "Thick nasal discharge that may be clear, yellow, or green, plus postnasal drip producing throat clearing, chronic cough, or a bad taste in the mouth.",
+    "Facial pressure, fullness, or dull pain over the cheeks, forehead, between the eyes, or around the upper teeth, typically worse on bending forward or with air-pressure changes.",
+    "Reduced or completely lost sense of smell (hyposmia or anosmia), which is the most predictive symptom of nasal polyposis and present in 60-80% of CRSwNP patients.",
+    "Diminished sense of taste, since most flavor perception depends on intact olfaction; food can feel bland or one-dimensional.",
+    "Chronic cough, particularly at night, driven by postnasal drip and upper-airway inflammation, often misdiagnosed as bronchitis or asthma.",
+    "Ear fullness, popping, or muffled hearing due to eustachian tube dysfunction from contiguous mucosal swelling.",
+    "Headache that is dull and pressure-like, frontal or periorbital, distinct from the unilateral throbbing of migraine.",
+    "Halitosis (bad breath) caused by stagnant infected mucus draining into the oropharynx.",
+    "Fatigue and reduced productivity disproportionate to the symptoms, mediated by poor sleep, low-grade inflammation, and chronic mouth breathing."
+  ],
+
+  "earlyWarningSigns": [
+    "Recurrent episodes of 'sinus infections' that respond to antibiotics but return within weeks",
+    "Gradual onset of smell reduction noticed when food tastes flat or perfumes seem weaker",
+    "Postnasal drip and throat clearing that persists for more than 8 weeks after a cold",
+    "New-onset adult asthma alongside year-round nasal congestion — a common CRSwNP entry pattern",
+    "Reactions to alcohol or NSAIDs producing nasal blockage and wheeze (early AERD signal)"
+  ],
+
+  "emergencySigns": [
+    "Periorbital swelling, eye protrusion, or pain with eye movement — possible orbital cellulitis or subperiosteal abscess requiring urgent ENT and ophthalmology evaluation",
+    "Severe one-sided headache with fever, neck stiffness, vomiting, or altered consciousness — possible intracranial extension (meningitis, cavernous sinus thrombosis, epidural or brain abscess)",
+    "Sudden visual change, double vision, or new cranial nerve palsy in a CRS patient — emergency imaging required",
+    "Facial numbness, palatal ulceration, or black necrotic eschar in a diabetic or immunocompromised patient — possible invasive fungal sinusitis (mucormycosis), a surgical emergency",
+    "Unilateral bloody nasal discharge in an adult, particularly with cheek numbness or loose teeth — exclude sinonasal malignancy before treating as CRS"
+  ],
+
+  "causes": [
+    {
+      "cause": "Type-2 (eosinophilic) inflammation",
+      "description": "The dominant biology of CRSwNP, AFRS, and AERD. IL-4, IL-5, and IL-13 from Th2 cells and innate lymphoid cells drive eosinophil recruitment, IgE production, mucus hypersecretion, and epithelial remodeling. Type-2 markers (tissue eosinophilia >10/HPF, total IgE) predict biologic response."
+    },
+    {
+      "cause": "Impaired mucociliary clearance",
+      "description": "The sinuses depend on coordinated ciliary beat to move mucus through narrow ostia. Cilial dysfunction from prior viral infection, smoking, primary ciliary dyskinesia, or cystic fibrosis allows mucus stasis, bacterial colonization, and chronic inflammation."
+    },
+    {
+      "cause": "Ostiomeatal complex obstruction",
+      "description": "Anatomic narrowing at the drainage pathway of the maxillary, anterior ethmoid, and frontal sinuses — from septal deviation, concha bullosa, polyps, or post-surgical scarring — perpetuates mucus retention and inflammation."
+    },
+    {
+      "cause": "Microbial dysbiosis and biofilms",
+      "description": "Staphylococcus aureus, Pseudomonas aeruginosa, and anaerobes form resistant biofilms on the sinus mucosa in 40-80% of refractory CRS cases. Staphylococcal superantigens amplify type-2 inflammation in CRSwNP."
+    },
+    {
+      "cause": "Fungal hypersensitivity",
+      "description": "In AFRS, normal airborne fungi (Bipolaris, Aspergillus, Curvularia) provoke an IgE-mediated and eosinophilic response that traps fungal hyphae in viscous mucin, eroding bone over time without true tissue invasion."
+    },
+    {
+      "cause": "Aspirin and NSAID sensitivity (AERD)",
+      "description": "About 7% of asthma patients and up to 14% of CRSwNP patients have AERD. Inhibition of COX-1 shunts arachidonic acid toward cysteinyl leukotrienes, triggering nasal and bronchial reactions and driving aggressive polyp regrowth."
+    },
+    {
+      "cause": "Odontogenic infection",
+      "description": "An apical periodontitis or oroantral communication seeds the maxillary sinus with oral anaerobes. Suspect when CRS is unilateral, maxillary-sided, and accompanied by foul taste; resolution requires dental treatment alongside sinus therapy."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Cigarette smoking and passive smoke exposure", "category": "modifiable", "description": "Smoking impairs ciliary clearance and roughly doubles CRS risk; second-hand smoke increases CRS in non-smokers (Hastan 2011 GA²LEN cohort)." },
+    { "factor": "Asthma", "category": "modifiable", "description": "40-60% of CRSwNP patients have asthma; the two share type-2 inflammation. Treating asthma poorly worsens sinus outcomes and vice versa (United Airway concept)." },
+    { "factor": "Aspirin or NSAID sensitivity", "category": "non-modifiable", "description": "Defines AERD. Carries the highest polyp recurrence rate after surgery (about 90% at 5 years without medical control)." },
+    { "factor": "Allergic rhinitis and atopy", "category": "environmental", "description": "Year-round allergen exposure perpetuates nasal inflammation; treating allergic rhinitis modestly improves CRS in atopic patients." },
+    { "factor": "Anatomic variants", "category": "non-modifiable", "description": "Deviated nasal septum, concha bullosa, and Haller cells narrow the ostiomeatal complex and predispose to mucus retention." },
+    { "factor": "Primary ciliary dyskinesia or cystic fibrosis", "category": "genetic", "description": "Ciliary or CFTR defects cause early-onset, severe, often pansinusitis with bronchiectasis. Pediatric CRSwNP should prompt CF testing." },
+    { "factor": "Immunodeficiency (IgA deficiency, CVID, HIV)", "category": "non-modifiable", "description": "Recurrent or refractory CRS — particularly with otitis and pneumonia — should trigger quantitative immunoglobulin and specific-antibody response testing." },
+    { "factor": "GERD and laryngopharyngeal reflux", "category": "modifiable", "description": "Pepsin reaching the nasopharynx aggravates upper-airway inflammation; reflux is over-represented in refractory CRS, though causality remains debated." },
+    { "factor": "Occupational exposures (cleaning agents, dust, wood, chemical fumes)", "category": "environmental", "description": "Chronic irritant exposure increases CRS prevalence in agricultural and industrial workers." },
+    { "factor": "Dental disease and prior dental procedures", "category": "modifiable", "description": "Apical infections and displaced root or implant material seed odontogenic maxillary sinusitis; up to 40% of unilateral maxillary CRS is dental in origin." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence: ~28 million adults; women 13.5%, men 9.6% (CDC NHIS 2018)",
+    "CRSwNP shows a 2:1 male predominance; CRSsNP slight female predominance",
+    "European GA²LEN study (Hastan 2011): 10.9% across 12 countries; highest rates in central Europe",
+    "Highest comorbidity burden in patients with asthma — 25-50% of CRS patients have concurrent asthma, rising to 60% in CRSwNP",
+    "Pediatric CRS is less common (~2%) and often associated with adenoid hypertrophy, allergic disease, or cystic fibrosis"
+  ],
+
+  "diagnosisOverview": "Diagnosis is clinical, confirmed by objective evidence of inflammation. Both the EPOS 2020 and AAO-HNS 2015/2023 adult chronic rhinosinusitis guidelines require symptoms lasting at least 12 weeks (at least two of nasal obstruction, anterior or posterior discharge, facial pressure, or smell loss) plus either endoscopic findings — purulent mucus, polyps, edema in the middle meatus — or CT findings of mucosal disease. Symptom history alone is insufficient because the symptom set overlaps with allergic rhinitis, migraine, and dental disease. The first office step is anterior rhinoscopy followed by nasal endoscopy with a 4 mm rigid scope, which directly visualizes polyps, purulence, and anatomic narrowing. A non-contrast CT of the paranasal sinuses (low-dose protocol) is the imaging study of choice and is scored using the Lund-Mackay system (0-24); a score of 4 or above is considered abnormal. CT is best performed after 4-6 weeks of intranasal steroid plus saline to avoid imaging transient post-viral changes. Allergy testing (skin prick or specific IgE) is recommended when atopy is suspected. Total serum IgE, blood eosinophil count, and where indicated specific IgE to Aspergillus help phenotype CRSwNP and identify AFRS. Sweat chloride or CFTR testing is reserved for early-onset or pediatric pansinusitis. Microbiology is rarely useful from a routine nasal swab, but endoscopically guided cultures help in refractory disease and immunocompromised patients. Sinonasal malignancy, granulomatosis with polyangiitis, and invasive fungal disease must be excluded in unilateral, atypical, or rapidly progressive presentations — biopsy any suspicious lesion. Patient-reported outcome measures (SNOT-22, with a clinically important difference of 8.9 points) anchor follow-up.",
+
+  "diagnosticTests": [
+    {
+      "test": "Nasal endoscopy (rigid 4 mm scope)",
+      "purpose": "Visualizes polyps, edema, purulent discharge in the middle meatus, and post-surgical anatomy. Allows targeted culture when needed. Required for diagnosis under both EPOS 2020 and AAO-HNS guidelines when CT is not done first.",
+      "whatToExpect": "Performed in-office after a topical decongestant and lidocaine spray. The clinician passes a thin rigid telescope along the floor of each nostril and along the middle meatus. The procedure takes 5-10 minutes and feels pressured but not painful."
+    },
+    {
+      "test": "Low-dose CT scan of paranasal sinuses",
+      "purpose": "Gold-standard imaging — confirms mucosal disease, defines anatomic variants, scores severity (Lund-Mackay), and is essential before any surgical planning. Detects AFRS hallmarks (heterogeneous opacification, bone remodeling) and odontogenic sources.",
+      "whatToExpect": "Performed after at least 4 weeks of medical therapy. Radiation dose is roughly 0.2-0.6 mSv with modern low-dose protocols (similar to several chest X-rays). Scan takes a few minutes; results read within 1-2 days."
+    },
+    {
+      "test": "Allergy testing (skin prick test or specific IgE blood test)",
+      "purpose": "Identifies inhalant and fungal allergen sensitization that drives nasal inflammation and informs allergen avoidance and immunotherapy decisions, particularly in CRSwNP and AFRS.",
+      "whatToExpect": "Skin prick takes about 30 minutes in an allergist's office, with small itchy bumps if positive. Blood specific IgE returns in 3-7 days. Both are safe and well-tolerated."
+    },
+    {
+      "test": "Blood eosinophil count and total serum IgE",
+      "purpose": "Phenotypes type-2 inflammation. Blood eosinophils above 250 cells/µL and elevated total IgE predict response to biologics in CRSwNP. Eosinophilia above 1500 cells/µL with sinonasal disease raises concern for EGPA.",
+      "whatToExpect": "Standard blood draw; results return same day."
+    },
+    {
+      "test": "SNOT-22 patient-reported outcome",
+      "purpose": "Validated 22-item questionnaire covering nasal, sleep, emotional, and ear-facial symptoms; tracks treatment response over time. A score above 20 is considered clinically meaningful disease.",
+      "whatToExpect": "Self-completed on paper or app in about 5 minutes at each visit."
+    },
+    {
+      "test": "Cultures from endoscopically guided middle meatal swab",
+      "purpose": "Targets antibiotic therapy in refractory or post-surgical patients. Routine cultures from acute uncomplicated CRS are not recommended.",
+      "whatToExpect": "Performed during nasal endoscopy with a small swab; takes a few extra seconds and is well-tolerated."
+    },
+    {
+      "test": "Tissue biopsy (in suspicious unilateral disease)",
+      "purpose": "Excludes inverted papilloma, sinonasal squamous cell carcinoma, lymphoma, granulomatosis with polyangiitis, and invasive fungal disease. Mandatory for unilateral polyps or bone destruction on CT.",
+      "whatToExpect": "Performed under local anesthesia in clinic or under general anesthesia in theatre, depending on site. Histology returns in 5-10 days."
+    },
+    {
+      "test": "Sweat chloride or CFTR genotyping",
+      "purpose": "Screens for cystic fibrosis in pediatric, early-onset, or severe pansinusitis with bronchiectasis. Recommended by AAO-HNS in children with bilateral nasal polyps.",
+      "whatToExpect": "Sweat chloride is a painless 30-minute test; CFTR genotyping is a blood or saliva sample."
+    }
+  ],
+
+  "treatmentOverview": "Treatment is anchored by EPOS 2020 and the AAO-HNS adult CRS guideline (2015, 2023 update). Every patient starts on the same foundation: daily high-volume saline irrigation and a topical intranasal corticosteroid spray or rinse, used continuously for at least 8-12 weeks. This alone resolves symptoms in many CRSsNP patients and is the long-term maintenance strategy in CRSwNP. The next step depends on phenotype. In CRSsNP with persistent symptoms, a 3-week course of low-dose macrolide (clarithromycin 250 mg daily) is reasonable when type-2 markers are low, and odontogenic or anatomic sources are addressed. In CRSwNP, short oral corticosteroid bursts (prednisolone 25-40 mg daily for 5-14 days) shrink polyps rapidly and restore smell, but should be limited to two to four courses per year due to systemic side effects. Patients with severe, recurrent, or steroid-dependent CRSwNP are now candidates for biologic therapy: dupilumab (anti-IL-4Rα) showed in SINUS-24 and SINUS-52 a 27-point SNOT-22 reduction, polyp score reduction of 2.0 points at 24 weeks, and a 75% reduction in need for surgery (Bachert 2019). Omalizumab (anti-IgE) achieved similar SNOT-22 and nasal polyp score improvements in POLYP 1/2 (Gevaert 2020). Mepolizumab (anti-IL-5) reduced surgery need by 57% in SYNAPSE (Han 2021). Endoscopic sinus surgery (FESS) is offered when symptoms persist after appropriate maximal medical therapy or when there are complications. Surgery enlarges sinus drainage pathways, removes polyps, and creates access for topical steroid delivery; randomized data and large registries (Smith 2013, Soler 2013) show SNOT-22 improvements averaging 20-25 points sustained beyond 5 years, with patient satisfaction above 85%. Aspirin desensitization is offered in AERD to reduce polyp regrowth and asthma exacerbations. Allergen immunotherapy benefits selected atopic patients. AFRS requires surgical debridement plus prolonged topical steroids and, in selected cases, immunotherapy to the offending fungus.",
+
+  "medicalTreatments": [
+    {
+      "name": "High-volume nasal saline irrigation (240 mL isotonic or hypertonic, daily or twice daily)",
+      "description": "Mechanically clears mucus, crusts, and inflammatory mediators. Hypertonic saline (3%) may give modestly greater symptom relief than isotonic. First-line in every CRS patient, before and after any other therapy, and as a vehicle for topical steroids.",
+      "effectiveness": "Average SNOT-22 improvement of 10-12 points with consistent daily use; Cochrane review confirms benefit over no treatment."
+    },
+    {
+      "name": "Intranasal corticosteroids (mometasone furoate 200 µg, fluticasone furoate 110 µg, or budesonide 0.5 mg in saline rinse, once or twice daily)",
+      "description": "Reduce mucosal eosinophilia and shrink polyps. Required first-line for at least 8-12 weeks. Off-label high-volume budesonide rinses deliver higher topical dose with minimal systemic absorption and are commonly used after FESS.",
+      "effectiveness": "30-50% relative symptom reduction; polyp size reduction of 0.5-1.5 points (0-8 scale) at 24 weeks in CRSwNP."
+    },
+    {
+      "name": "Short oral corticosteroid course (prednisolone 25-40 mg daily for 5-14 days)",
+      "description": "Rapid polyp shrinkage and symptom relief in CRSwNP. Limit to 2-4 courses per year because of cumulative side effects (bone loss, glucose intolerance, cataracts). Not effective in CRSsNP without polyps.",
+      "effectiveness": "Polyp score reduction of 1.5-2.5 points and SNOT-22 reduction of 15-20 points at 2-3 weeks; benefit typically wanes by 3-6 months."
+    },
+    {
+      "name": "Dupilumab (300 mg subcutaneous every 2 weeks)",
+      "description": "Monoclonal antibody blocking IL-4Rα, the shared receptor of IL-4 and IL-13. Approved for severe CRSwNP. Reduces polyp size, congestion, and need for surgery; also improves asthma in patients with both diseases.",
+      "effectiveness": "SINUS-24/52 (Bachert 2019): SNOT-22 −21.1 points, nasal polyp score −2.0 points at week 24, 75% reduction in need for surgery, and improvement in smell on UPSIT testing."
+    },
+    {
+      "name": "Omalizumab (75-600 mg subcutaneous every 2-4 weeks, dose by IgE and weight)",
+      "description": "Anti-IgE biologic approved for severe CRSwNP. Useful when asthma or allergic comorbidities coexist. Effects measurable within 4-8 weeks.",
+      "effectiveness": "POLYP 1/2 (Gevaert 2020): nasal polyp score −1.1, SNOT-22 −16 points, and significant improvement in nasal congestion and smell."
+    },
+    {
+      "name": "Mepolizumab (100 mg subcutaneous every 4 weeks)",
+      "description": "Anti-IL-5 monoclonal antibody approved for severe CRSwNP. Best suited when blood eosinophils are above 150 cells/µL and asthma is present.",
+      "effectiveness": "SYNAPSE (Han 2021): 57% reduction in need for surgery, nasal polyp score −0.73, SNOT-22 −16.7 points at 52 weeks."
+    },
+    {
+      "name": "Long-term low-dose macrolide (clarithromycin 250 mg daily for 8-12 weeks)",
+      "description": "Anti-inflammatory rather than antibacterial dose. Reserved for CRSsNP with low type-2 markers who have failed topical steroids. Modest evidence base; check QT and avoid in cardiac disease.",
+      "effectiveness": "About 50-60% achieve clinically meaningful SNOT-22 improvement in selected patients (Wallwork 2006)."
+    },
+    {
+      "name": "Targeted antibiotic course (culture-directed, 2-3 weeks)",
+      "description": "Used for acute infectious exacerbations of CRS or post-surgical purulence, guided by endoscopic culture. Routine antibiotics for stable CRS without acute infection are no longer recommended (AAO-HNS 2023).",
+      "effectiveness": "Resolves acute exacerbations in 70-80% when targeted; minimal benefit in stable type-2 CRS."
+    },
+    {
+      "name": "Aspirin desensitization (graded oral aspirin challenge then daily 325-1300 mg)",
+      "description": "Definitive long-term therapy for AERD after surgery. Performed in specialty centers under monitoring. Reduces polyp regrowth, sinus infections, and asthma exacerbations.",
+      "effectiveness": "Stevenson 2012: roughly 70% report improved sinus symptoms; significant reduction in repeat surgery rates over 5 years."
+    },
+    {
+      "name": "Allergen immunotherapy (subcutaneous or sublingual)",
+      "description": "Disease-modifying option for atopic CRS patients with confirmed clinically relevant sensitization. Particularly useful in AFRS to the offending fungal antigen as adjunct after surgery.",
+      "effectiveness": "Modest symptom and medication-use reduction over 3-5 years in selected patients."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Functional endoscopic sinus surgery (FESS)",
+      "description": "Endoscopic enlargement of the natural sinus drainage pathways — uncinectomy, middle meatal antrostomy, ethmoidectomy, sphenoidotomy, and frontal recess opening as needed. Preserves mucosa and enables future topical drug delivery. Performed under general anesthesia, usually as day surgery.",
+      "successRate": "85-90% patient satisfaction at 1 year; SNOT-22 improvements of 20-25 points sustained beyond 5 years in registry data (Smith 2013, DeConde 2017). Revision rate 10-20% over 5 years overall; up to 40% in AERD."
+    },
+    {
+      "name": "Extended approaches (modified endoscopic Lothrop / Draf III, maxillary mega-antrostomy)",
+      "description": "Reserved for recurrent frontal or maxillary disease after standard FESS, AFRS, or extensive polyposis. Creates a single common drainage corridor for sustained topical access.",
+      "successRate": "Patency above 90% with experienced surgeons; symptom improvement in 70-85% of revision cases."
+    },
+    {
+      "name": "Steroid-eluting sinus implants (e.g., bioabsorbable mometasone implants)",
+      "description": "Placed at the end of FESS or in-office post-surgery. Deliver controlled-release corticosteroid to the ethmoid cavity, reducing post-operative polyp regrowth and need for oral steroids.",
+      "successRate": "ADVANCE II and PROGRESS trials show 30-40% reduction in postoperative polypoid edema and revision surgery rates at 6 months."
+    },
+    {
+      "name": "Septoplasty with or without inferior turbinate reduction",
+      "description": "Performed alongside FESS when septal deviation impairs sinus access or independently contributes to obstruction. Inferior turbinate reduction (radiofrequency, microdebrider, or submucous resection) improves airflow.",
+      "successRate": "70-85% subjective improvement in nasal obstruction; lower revision risk when combined with FESS."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Manuka or buckwheat honey nasal rinse (adjunct)", "description": "Small randomized data (Welch 2016) show modest in vitro and clinical reductions in biofilm-related symptoms when added to saline. Not a replacement for steroids or surgery." },
+    { "name": "Probiotics (oral or topical, e.g., Lactobacillus sakei)", "description": "Early-phase data (Mukerji 2009) suggest some symptomatic improvement; mechanism remains exploratory and standardized formulations are limited." },
+    { "name": "Yoga-based breathing exercises (pranayama) and steam inhalation", "description": "Symptomatic relief of congestion and facial pressure; do not modify underlying inflammation. Steam should be used cautiously to avoid burns." }
+  ],
+
+  "whySeeSpecialist": "An otolaryngologist should be involved when symptoms persist beyond 12 weeks despite saline plus intranasal steroids, when nasal polyps are visible or smell loss is severe, when the disease is unilateral or atypical, when imaging shows complications, when oral steroid bursts are needed more than twice yearly, or when biologic therapy or surgery is being considered. An allergist or immunologist should be involved when atopy, AERD, biologic candidacy, or immunodeficiency is suspected.",
+
+  "doctorSelectionGuide": "Look for an ENT with subspecialty interest in rhinology — fellowship training in rhinology and skull-base surgery is ideal for complex disease. Confirm access to in-office nasal endoscopy, low-dose CT, and biologic infusion. For CRSwNP and asthma, choose a center with combined ENT and pulmonology or allergy clinics. Ask the surgeon's annual FESS volume and revision rate — high-volume rhinologists (over 50 cases annually) consistently report better outcomes.",
+
+  "hospitalCriteria": [
+    "In-office nasal endoscopy with image capture",
+    "Same-day or next-day low-dose sinus CT capability",
+    "Access to biologics (dupilumab, omalizumab, mepolizumab) with allergy or immunology co-management",
+    "High-volume FESS surgeon (more than 50 cases per year) with extended approach (Draf III) experience",
+    "Multidisciplinary clinic with ENT, pulmonology, and allergy on the same record system",
+    "Aspirin desensitization program for AERD patients"
+  ],
+
+  "keyFacilities": [
+    "Sinus and skull-base centers within academic medical centers",
+    "Combined ENT-allergy-pulmonology clinics for severe asthma and CRSwNP",
+    "Biologic infusion centers with prior-authorization support"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Stop smoking and avoid second-hand smoke — smoking roughly doubles CRS risk and reduces the benefit of every other treatment",
+    "Treat allergic rhinitis and asthma to target — controlled upper and lower airway inflammation lowers CRS exacerbations under the United Airway model",
+    "Use daily saline irrigation in patients with prior CRS or recurrent sinusitis to clear allergens, irritants, and mucus",
+    "Maintain dental health and treat apical infections promptly to avoid odontogenic maxillary sinusitis",
+    "Manage workplace exposure to dust, chemical fumes, and cleaning agents with proper ventilation and respiratory protection",
+    "Recognize AERD early — patients with asthma plus polyps plus NSAID reactions should avoid aspirin and NSAIDs unless desensitized"
+  ],
+
+  "lifestyleModifications": [
+    "Perform high-volume saline irrigation once or twice daily, ideally before intranasal steroid dosing for better penetration",
+    "Use intranasal steroid sprays correctly — aim laterally toward the ear, not at the septum, to avoid septal irritation and bleeding",
+    "Humidify bedrooms during dry winters and avoid heavy fragrances, smoke, and aerosol sprays that aggravate mucosal inflammation",
+    "Sleep with the head of the bed elevated 15-30 degrees to reduce overnight congestion and postnasal drip",
+    "Stay hydrated to keep secretions thin — aim for clear or pale urine as a simple gauge",
+    "Address reflux behaviors (late meals, alcohol, large dinners) if laryngopharyngeal reflux is contributing",
+    "Use an N95 mask during high-pollen days or when cleaning dusty environments if atopy is significant",
+    "Schedule annual ENT review for severe CRSwNP, AERD, or post-FESS patients even when feeling well"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Anti-inflammatory dietary pattern (Mediterranean style) with fish, olive oil, vegetables, and whole grains — observationally associated with lower CRS severity",
+      "Omega-3 rich foods (salmon, sardines, walnuts, flaxseed) that may modulate eosinophilic inflammation",
+      "Adequate hydration with water and unsweetened drinks to maintain mucus fluidity",
+      "Foods rich in vitamin D (fortified dairy, oily fish, eggs) — vitamin D deficiency is over-represented in CRSwNP",
+      "Probiotic-containing foods (yogurt, kefir) as part of overall gut health, with limited but promising data in CRS",
+      "Quercetin-rich produce (apples, onions, berries) — modest in vitro and clinical evidence for mast cell stabilization in atopic patients"
+    ],
+    "avoid": [
+      "Alcohol in AERD patients and many CRSwNP patients, as it commonly triggers nasal congestion within hours",
+      "Aspirin and NSAIDs in confirmed AERD unless desensitized under specialist supervision",
+      "Dairy in individuals who report consistent congestion after consumption (no strong epidemiologic link, but personal triggers matter)",
+      "Excessive ultra-processed food and added sugar — pro-inflammatory dietary pattern correlates with worse symptom scores",
+      "Spicy or vinegar-heavy foods if they reproducibly cause vasomotor rhinitis episodes",
+      "Smoked or sulfite-rich foods if they trigger asthma exacerbations in AERD or aspirin-sensitive patients"
+    ]
+  },
+
+  "exerciseGuidelines": "Moderate aerobic exercise improves nasal congestion via sympathetic-mediated vasoconstriction and supports asthma and weight control. Build to 150 minutes per week of activity such as walking, swimming, or cycling. Avoid heavy outdoor exertion on high-pollen or high-pollution days for atopic patients. Wear a mask in cold dry air if exercise triggers congestion. Resume light activity within a week after FESS; avoid heavy lifting, nose blowing, and contact sports for 2-3 weeks post-operation.",
+
+  "dailyManagement": [
+    "Saline rinse first thing in the morning and at night; allow 30 seconds between rinse and intranasal steroid for better penetration",
+    "Take asthma controller medication on schedule — uncontrolled lower airway disease worsens upper airway disease",
+    "Track symptom scores monthly (SNOT-22 or a simple 0-10 scale for congestion, smell, and pressure) and bring them to follow-up visits",
+    "Keep a rescue plan from the ENT or allergist for flare days — typically an oral steroid burst or short antibiotic course",
+    "Avoid NSAIDs if AERD has been diagnosed; carry a medical alert noting aspirin sensitivity",
+    "Refill biologic prescriptions on time — gaps longer than 4-6 weeks for dupilumab or omalizumab usually allow symptoms to return"
+  ],
+
+  "prognosis": "With consistent medical therapy, most CRSsNP patients achieve durable symptom control on saline plus intranasal steroids alone, with surgery needed in roughly 5-15% over a decade. CRSwNP is a chronic relapsing disease — polyps recur in 40-60% of patients within 18 months of FESS without ongoing medical control, rising above 80% in AERD. Modern biologics shift these numbers substantially: in SINUS-52, two years of dupilumab kept 75% of patients out of repeat surgery, and patients on continuous topical steroid plus biologic therapy can often avoid revision indefinitely. Smell typically improves over 3-12 months with effective treatment; severe long-standing anosmia may not fully recover even after polyp removal. Quality of life on validated measures returns close to general-population norms in well-controlled patients, but lapses in maintenance therapy reliably trigger relapse. Mortality is not directly increased by CRS itself, but uncontrolled severe disease worsens asthma control, sleep, and productivity, with measurable economic impact (direct US costs estimated at USD 13 billion per year, EPOS 2020).",
+
+  "recoveryTimeline": "Saline plus intranasal steroid yields measurable benefit by 4-8 weeks. Oral steroid bursts shrink polyps within 3-7 days but benefit fades over 3-6 months. Biologics typically show smell and congestion improvement at 4-12 weeks, with maximum benefit by 24 weeks. After FESS, nasal crusting and mild bleeding last 1-2 weeks, normal activity resumes at 1-2 weeks, and full mucosal healing takes 2-3 months — symptom improvement is usually obvious by 4-6 weeks. Long-term maintenance with saline plus intranasal steroid is required indefinitely; stopping after recovery from any treatment phase consistently leads to relapse within months.",
+
+  "complications": [
+    "Orbital cellulitis or subperiosteal abscess from extension of ethmoid sinusitis — most common complication in pediatric and severe disease; presents with periorbital swelling, eye pain, and reduced eye movement",
+    "Intracranial extension including meningitis, epidural empyema, subdural empyema, and cavernous sinus thrombosis — rare but life-threatening, especially with frontal or sphenoid disease",
+    "Permanent loss of smell from long-standing eosinophilic damage to the olfactory neuroepithelium",
+    "Worsening of co-existing asthma — uncontrolled CRSwNP is one of the most consistent drivers of refractory asthma in adults",
+    "Invasive fungal sinusitis (mucormycosis, Aspergillus) in diabetic, transplant, or chemotherapy patients — surgical emergency with high mortality if delayed",
+    "Bone erosion and mucocele formation, particularly in the frontal sinus, with later sinocutaneous fistula or orbital displacement",
+    "Sinonasal malignancy missed in unilateral disease treated empirically as CRS — biopsy is essential for unilateral polyps or bony destruction on CT"
+  ],
+
+  "supportResources": [
+    { "name": "American Academy of Otolaryngology — ENT Health Patient Resources", "url": "https://www.enthealth.org/conditions/chronic-sinusitis/", "description": "Authoritative US ENT patient information from the body that writes the chronic sinusitis guideline." },
+    { "name": "EPOS 2020 — European Position Paper on Rhinosinusitis", "url": "https://www.rhinologyjournal.com/Supplement_29.php", "description": "Open-access guideline used internationally for CRS diagnosis and management." },
+    { "name": "Asthma + Lung UK — Chronic Sinusitis", "url": "https://www.asthmaandlung.org.uk/conditions/sinusitis", "description": "UK patient charity with plain-English explanations, lifestyle guidance, and helpline." },
+    { "name": "NIH MedlinePlus — Chronic Sinusitis", "url": "https://medlineplus.gov/sinusitis.html", "description": "US government patient education portal with curated links to current evidence." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)", "keyDifference": "Allergic rhinitis is an IgE-mediated nasal mucosal reaction without sinus mucosal disease on imaging. Symptoms are dominated by itch, sneezing, and clear watery discharge, often seasonal. Endoscopy shows pale boggy turbinates rather than purulence or polyps, and CT is typically normal. The two coexist commonly, and treating allergic rhinitis often improves but does not resolve underlying CRS." },
+    { "slug": "migraine", "name": "Migraine", "keyDifference": "Migraine produces unilateral throbbing headache with photophobia, phonophobia, and nausea, often accompanied by autonomic features (tearing, nasal congestion) that mimic sinus disease. Pain is episodic rather than constant pressure, and endoscopy and CT are normal. Many patients labeled with 'sinus headache' actually have migraine — IHS criteria and a triptan trial often clarify." },
+    { "slug": "deviated-nasal-septum", "name": "Deviated Nasal Septum", "keyDifference": "A deviated septum produces nasal obstruction (often unilateral and positional) without mucosal inflammation, purulence, or smell loss. CT shows the structural deviation but no significant sinus opacification. The two can coexist — a deviated septum can predispose to CRS by narrowing drainage pathways, and septoplasty is sometimes done alongside FESS." },
+    { "slug": "acute-sinusitis-unspecified-j0190", "name": "Acute Sinusitis", "keyDifference": "Acute sinusitis lasts less than 4 weeks and is most often viral (90%), with bacterial superinfection in roughly 0.5-2%. Antibiotic indications, imaging needs, and prognosis differ entirely. CRS requires symptoms beyond 12 weeks with objective inflammation; less than 4 weeks of identical symptoms is not chronic." },
+    { "slug": "chronic-rhinitis-j310", "name": "Chronic Rhinitis (non-sinus)", "keyDifference": "Chronic rhinitis is persistent nasal inflammation without sinus mucosal disease on imaging or endoscopy. Symptoms overlap (congestion, discharge), but smell loss and facial pressure are unusual, and CT is normal. Treatment focuses on the trigger (allergic, vasomotor, drug-induced) rather than sinus drainage." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)" },
+    { "slug": "nasal-polyps", "name": "Nasal Polyps" },
+    { "slug": "gerd", "name": "Acid Reflux (GERD)" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "nasal-polyps", "name": "Nasal Polyps", "relevance": "Nasal polyposis defines the CRSwNP phenotype; treatment overlaps almost entirely." },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)", "relevance": "Atopic rhinitis frequently coexists with CRS and contributes to mucosal inflammation; treating it modestly improves CRS." },
+    { "slug": "asthma", "name": "Asthma", "relevance": "United Airway model — 25-50% of CRS patients have asthma, rising to 60% in CRSwNP; asthma control directly influences sinus outcomes." },
+    { "slug": "deviated-nasal-septum", "name": "Deviated Nasal Septum", "relevance": "Anatomic narrowing predisposes to mucus retention and is often addressed during FESS." },
+    { "slug": "migraine", "name": "Migraine", "relevance": "Frequently mislabeled as 'sinus headache'; both can coexist and are managed differently." },
+    { "slug": "gerd", "name": "Acid Reflux (GERD)", "relevance": "Laryngopharyngeal reflux is over-represented in refractory CRS and worsens upper airway inflammation." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "How long do symptoms have to last to be called chronic sinusitis?",
+      "answer": "Both EPOS 2020 and the AAO-HNS guideline require nasal symptoms to persist for at least 12 weeks continuously, plus objective evidence of inflammation on endoscopy or CT. Identical symptoms lasting less than 4 weeks are classed as acute sinusitis, and 4 to 12 weeks as subacute. Symptom duration alone is not enough — your clinician should confirm inflammation before settling on the diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between CRSwNP and CRSsNP?",
+      "answer": "CRSwNP (with nasal polyps) is usually driven by type-2 eosinophilic inflammation, presents with smell loss and bilateral grape-like polyps, and frequently coexists with asthma. CRSsNP (without polyps) is more heterogeneous, more often non-type-2, and dominated by facial pressure and discharge. Treatment differs — biologics and oral steroid bursts are central in CRSwNP but rarely useful in CRSsNP.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chronic sinusitis cause loss of smell?",
+      "answer": "Yes, particularly in CRSwNP, where 60-80% of patients have reduced or absent smell. Polyps block airflow to the olfactory cleft and inflammation damages the olfactory neuroepithelium. Smell often improves over 3-12 months with intranasal steroids, oral steroid bursts, biologics, or FESS, but long-standing severe anosmia may not fully recover.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is chronic sinusitis the same as a sinus infection?",
+      "answer": "No. An acute sinus infection is usually viral, lasts less than 4 weeks, and resolves on its own in most cases. Chronic sinusitis is persistent mucosal inflammation lasting more than 12 weeks, often driven by type-2 inflammation, anatomic narrowing, or fungi rather than active bacterial infection. Antibiotics rarely cure chronic sinusitis and are not recommended for stable disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need a CT scan to diagnose chronic sinusitis?",
+      "answer": "A CT scan is recommended either to confirm the diagnosis when endoscopy is inconclusive or before any sinus surgery. It maps the anatomy, scores severity using the Lund-Mackay system, and identifies AFRS or sinonasal tumours. CT is usually done after 4-6 weeks of intranasal steroid plus saline so that transient post-viral findings are excluded.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How effective is dupilumab for nasal polyps?",
+      "answer": "In the SINUS-24 and SINUS-52 trials, dupilumab reduced nasal polyp score by an average of 2.0 points, improved SNOT-22 by 21 points, restored smell on UPSIT testing, and cut the need for sinus surgery by 75% at 52 weeks. Effects start within 4 weeks and grow over 6 months. It is given as a 300 mg injection every 2 weeks and is currently the most-prescribed biologic for severe CRSwNP.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will sinus surgery cure chronic sinusitis?",
+      "answer": "Functional endoscopic sinus surgery (FESS) controls disease and improves quality of life in 85-90% of patients but does not cure the underlying inflammation. Saline irrigation and intranasal steroids must continue afterwards, and CRSwNP patients have a 40-60% polyp recurrence rate within 18 months without medical maintenance. Surgery is a platform for better medical therapy, not a one-time fix.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does recovery from sinus surgery take?",
+      "answer": "Most patients return to desk work in 5-7 days. Mild bleeding, crusting, and nasal blockage last 1-2 weeks. Saline irrigation begins the day after surgery, and clinic debridement is usually done at 1 and 2-3 weeks. Heavy lifting and contact sports are avoided for 2-3 weeks. Full mucosal healing takes 2-3 months, by which point symptom improvement is usually clear.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is allergic fungal sinusitis?",
+      "answer": "Allergic fungal rhinosinusitis (AFRS) is a severe variant of CRSwNP driven by an IgE-mediated hypersensitivity to airborne fungi. It typically affects younger atopic patients, often asymmetric, with thick eosinophilic mucin and bone-remodeling CT findings. Treatment combines surgical removal of fungal mucin, prolonged topical steroids, and sometimes immunotherapy to the offending fungus. Antifungal drugs are rarely needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are antibiotics useful for chronic sinusitis?",
+      "answer": "Routine antibiotics for stable chronic sinusitis are no longer recommended by the AAO-HNS 2023 update or EPOS 2020. They have a small role in culture-directed treatment of acute exacerbations and in some low-eosinophil CRSsNP patients via long-term low-dose macrolide therapy. Most type-2 chronic sinusitis is not driven by infection and does not respond to antibiotics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is chronic sinusitis connected to asthma?",
+      "answer": "Yes — the upper and lower airways behave as one mucosal system (United Airway model). Roughly 25-50% of chronic sinusitis patients have asthma, rising to 60% in CRSwNP. Treating sinus disease often improves asthma control, and biologics such as dupilumab and mepolizumab are approved for both conditions. Patients with both should be managed jointly by ENT and pulmonology or allergy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is aspirin-exacerbated respiratory disease?",
+      "answer": "AERD, also called Samter triad, is the combination of asthma, chronic rhinosinusitis with nasal polyps, and respiratory reactions to NSAIDs or aspirin. Polyps return aggressively after surgery (up to 90% within 5 years) and asthma is typically severe. Treatment combines maximal medical therapy, FESS, biologics, and where appropriate aspirin desensitization, which reduces polyp regrowth and asthma exacerbations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chronic sinusitis cause headaches?",
+      "answer": "Chronic sinusitis can cause dull pressure-like headaches over the cheeks, forehead, or between the eyes, worse on bending forward. Unilateral throbbing headache with nausea, light sensitivity, or aura is more likely migraine, which is often misdiagnosed as 'sinus headache'. If a patient with intermittent severe headache has a normal endoscopy and CT, migraine should be considered first.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does chronic sinusitis go away on its own?",
+      "answer": "It does not. Without treatment, type-2 chronic sinusitis tends to progress, polyps grow, smell deteriorates, and exacerbations become more frequent. Symptom-free periods can occur, but objective mucosal inflammation persists on endoscopy and CT. Daily saline plus intranasal steroid is the minimum long-term therapy expected for everyone with confirmed disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does chronic sinusitis treatment cost?",
+      "answer": "Daily saline rinses and generic intranasal steroids are inexpensive worldwide. FESS in the US runs USD 8,000 to 15,000 depending on extent and facility; insurance usually covers it after failed medical therapy. Biologics such as dupilumab carry list prices around USD 38,000 per year, though patient-assistance programmes and insurance commonly bring out-of-pocket costs much lower. In India and other emerging markets, generic intranasal steroids and FESS at private hospitals are far more affordable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see an ENT specialist?",
+      "answer": "Refer to an ENT when symptoms last more than 12 weeks despite saline plus intranasal steroid, when nasal polyps or severe smell loss are present, when symptoms are unilateral or atypical, when oral steroid bursts are needed more than twice yearly, when complications develop, or when sinus surgery or biologic therapy is being considered. Earlier referral is appropriate in children, the immunocompromised, and patients with eye or neurologic symptoms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get chronic sinusitis?",
+      "answer": "Yes, but it is less common — about 2% of children compared with 11.6% of adults. Pediatric CRS often relates to adenoid hypertrophy, allergic disease, or, in severe pansinusitis, cystic fibrosis. Adenoidectomy alone resolves about 50-70% of pediatric CRS; FESS is reserved for refractory cases. Bilateral polyps in a child should always prompt cystic fibrosis testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is chronic sinusitis hereditary?",
+      "answer": "There is a familial component, particularly in CRSwNP and AERD, although a single causative gene has not been identified. Cystic fibrosis and primary ciliary dyskinesia are rare monogenic causes of early-onset severe disease. Most familial clustering reflects shared atopy, type-2 inflammation, and environmental exposures rather than direct inheritance of CRS itself.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can saline rinses replace intranasal steroids?",
+      "answer": "No. Saline irrigation mechanically clears mucus and improves penetration of intranasal steroids, but it does not reduce mucosal inflammation on its own to the same degree. EPOS 2020 and AAO-HNS recommend daily saline plus an intranasal steroid as the foundational therapy for every CRS patient. Used together they outperform either alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do my polyps keep coming back after surgery?",
+      "answer": "Surgery removes polyps but does not change the underlying type-2 inflammation. Without continuous post-operative saline plus intranasal steroid, polyps recur in 40-60% of CRSwNP patients within 18 months and over 80% in AERD. Adding a biologic such as dupilumab, omalizumab, or mepolizumab and considering aspirin desensitization in AERD dramatically reduces recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is chronic sinusitis contagious?",
+      "answer": "No. Chronic sinusitis is an inflammatory disease, not an infection that spreads between people. Acute viral sinusitis from a cold is contagious in the same way the cold itself is, but the chronic mucosal inflammation that defines CRS is not transmissible. Close contacts do not need any specific precautions.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Chronic Sinusitis (Chronic Rhinosinusitis, CRS)",
+
+  "regionalNames": [
+    { "name": "साइनोसाइटिस (Sinusitis)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Sinusite chronique", "region": "France", "language": "fr" },
+    { "name": "Chronische Sinusitis", "region": "Germany", "language": "de" }
+  ],
+
+  "searchTags": [
+    "chronic sinusitis", "chronic rhinosinusitis", "CRS", "CRSwNP", "CRSsNP", "nasal polyps",
+    "sinus infection", "sinus pressure", "smell loss", "facial pain", "FESS surgery",
+    "dupilumab", "endoscopic sinus surgery", "rhinosinusitis", "AFRS", "AERD"
+  ],
+
+  "symptomKeywords": [
+    "blocked nose months", "thick yellow mucus", "facial pressure", "can't smell anything",
+    "postnasal drip", "sinus headache", "snoring congestion", "nasal polyps symptoms",
+    "chronic stuffy nose", "loss of taste and smell"
+  ],
+
+  "metaTitle": "Chronic Sinusitis: Symptoms & Treatment | aihealz",
+  "metaDescription": "Chronic sinusitis: 12+ weeks of nasal blockage, discharge, facial pressure, and smell loss. Symptoms, FESS, biologics, and prognosis reviewed by our board.",
+
+  "keywords": [
+    "chronic sinusitis", "chronic rhinosinusitis", "CRSwNP", "CRSsNP", "nasal polyps treatment",
+    "sinus surgery", "FESS", "dupilumab nasal polyps", "loss of smell sinusitis",
+    "chronic sinus infection", "allergic fungal sinusitis", "AERD", "sinusitis vs migraine"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Fokkens WJ, Lund VJ, Hopkins C, et al. European Position Paper on Rhinosinusitis and Nasal Polyps 2020 (EPOS 2020). Rhinology. 2020;58(Suppl 29):1-464.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32077450/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Rosenfeld RM, Piccirillo JF, Chandrasekhar SS, et al. Clinical Practice Guideline (Update): Adult Sinusitis. Otolaryngology–Head and Neck Surgery. 2015;152(2 Suppl):S1-S39.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25832968/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Orlandi RR, Kingdom TT, Smith TL, et al. International Consensus Statement on Allergy and Rhinology: Rhinosinusitis 2021 (ICAR-RS 2021). International Forum of Allergy & Rhinology. 2021;11(3):213-739.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33236525/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Bachert C, Han JK, Desrosiers M, et al. Efficacy and safety of dupilumab in patients with severe chronic rhinosinusitis with nasal polyps (SINUS-24 and SINUS-52): results from two multicentre, randomised, double-blind, placebo-controlled, parallel-group phase 3 trials. Lancet. 2019;394(10209):1638-1650.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31543428/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Gevaert P, Omachi TA, Corren J, et al. Efficacy and safety of omalizumab in nasal polyposis: 2 randomized phase 3 trials (POLYP 1 and POLYP 2). Journal of Allergy and Clinical Immunology. 2020;146(3):595-605.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32524991/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Han JK, Bachert C, Fokkens W, et al. Mepolizumab for chronic rhinosinusitis with nasal polyps (SYNAPSE): a randomised, double-blind, placebo-controlled, parallel-group, phase 3 trial. Lancet Respiratory Medicine. 2021;9(10):1141-1153.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33872587/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Smith TL, Kern R, Palmer JN, et al. Medical therapy vs surgery for chronic rhinosinusitis: a prospective, multi-institutional study with 1-year follow-up. International Forum of Allergy & Rhinology. 2013;3(1):4-9.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22736403/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "DeConde AS, Mace JC, Levy JM, Rudmik L, Alt JA, Smith TL. Prevalence of polyp recurrence after endoscopic sinus surgery for chronic rhinosinusitis with nasal polyposis. Laryngoscope. 2017;127(3):550-555.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27481433/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Hastan D, Fokkens WJ, Bachert C, et al. Chronic rhinosinusitis in Europe — an underestimated disease. A GA²LEN study. Allergy. 2011;66(9):1216-1223.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21605125/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Stevenson DD, Simon RA. Selection of patients for aspirin desensitization treatment. Journal of Allergy and Clinical Immunology. 2006;118(4):801-804.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17030230/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
