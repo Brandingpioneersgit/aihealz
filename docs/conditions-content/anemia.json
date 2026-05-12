@@ -1,0 +1,562 @@
+{
+  "_meta": {
+    "slug": "anemia",
+    "tier": 1,
+    "headTerm": "anemia",
+    "longTailKeywords": [
+      "anemia symptoms",
+      "anemia treatment",
+      "iron deficiency anemia",
+      "low hemoglobin causes",
+      "anemia in pregnancy",
+      "anemia vs iron deficiency",
+      "anemia of chronic disease",
+      "vitamin b12 deficiency anemia",
+      "anemia blood test",
+      "is anemia curable"
+    ],
+    "primarySpecialty": "Hematology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against WHO 2008 hemoglobin threshold report, WHO Global Anaemia Estimates 2021/2024, ASH 2018 guideline on iron deficiency anemia (Auerbach et al.), 2020 BSH guideline on management of iron deficiency, KDIGO 2012 anemia guideline (renal), AABB 2023 transfusion thresholds, and Camaschella NEJM 2015 review. Hb thresholds, MCV ranges, ferritin cut-offs, and IV iron dosing checked against UpToDate and product labels (ferric carboxymaltose, ferric derisomaltose, iron sucrose). NHANES adult US prevalence checked against Le 2016 PLOS ONE analysis and CDC anemia data. Drug dosing matches current FDA labels as of 2026."
+  },
+
+  "h1Title": "Anemia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hematology",
+
+  "heroOverview": "Anemia is a deficit of healthy red blood cells or hemoglobin that limits how much oxygen the blood can carry to tissues. It affects roughly 1.9 billion people worldwide — about a quarter of the global population — with the highest burden in women of reproductive age, young children, and people with chronic disease (WHO 2021). Symptoms range from mild fatigue and breathlessness to chest pain, dizziness, and pale skin, and they develop slowly enough that many patients adapt for months before seeking help. Iron deficiency is by far the leading cause, but anemia is a sign, not a diagnosis: every workup must identify the underlying mechanism. With targeted treatment most anemias resolve, and the cardiovascular, cognitive, and pregnancy risks of chronic anemia are largely preventable.",
+
+  "keyStats": {
+    "prevalence": "~1.92 billion people globally (24.3% of the world population); ~5.6% of US adults (NHANES) with rates two to three times higher in women aged 20-49",
+    "demographics": "Women aged 15-49 carry roughly 30% prevalence globally; children under 5 about 40%; men under 50 less than 5%",
+    "avgAge": "Bimodal: peak in young children (6 months to 5 years) and women of reproductive age; rises again after age 65",
+    "globalCases": "About 1.92 billion cases worldwide (WHO 2021 Global Anaemia Estimates)"
+  },
+
+  "definition": "Anemia (ICD-10: D50-D64) is a reduction in red blood cell mass or hemoglobin concentration below the threshold needed to deliver adequate oxygen to peripheral tissues. The World Health Organization defines anemia in adults as hemoglobin below 13.0 g/dL in men, below 12.0 g/dL in non-pregnant women, and below 11.0 g/dL in pregnant women, with lower cut-offs for children that vary by age. Mechanistically, anemia arises from one of three pathways: decreased red cell production (iron, B12, folate, or erythropoietin deficiency; bone marrow failure; chronic inflammation), increased destruction (hemolysis from autoimmune, hereditary, or mechanical causes), or acute or chronic blood loss (gastrointestinal, menstrual, surgical). The condition is classified morphologically by mean corpuscular volume (MCV) into microcytic (MCV under 80 fL — typically iron deficiency, thalassemia, or anemia of chronic disease), normocytic (MCV 80-100 fL — acute blood loss, chronic disease, renal failure, early hemolysis), and macrocytic (MCV over 100 fL — B12 or folate deficiency, alcohol, liver disease, myelodysplastic syndrome). Most cases are managed in primary care; hematologists handle severe, unexplained, hemolytic, hereditary, or transfusion-dependent disease.",
+
+  "typesClassification": [
+    { "type": "Iron-deficiency anemia (IDA)", "description": "The most common form globally. Microcytic and hypochromic on smear with low ferritin and low transferrin saturation. Caused by inadequate intake, malabsorption, chronic blood loss, or pregnancy demand." },
+    { "type": "Anemia of chronic disease (anemia of inflammation)", "description": "Normocytic or mildly microcytic anemia driven by hepcidin-mediated iron sequestration during chronic inflammation, infection, or malignancy. Ferritin is normal or high, but iron is functionally unavailable." },
+    { "type": "Vitamin B12 (cobalamin) deficiency anemia", "description": "Macrocytic anemia with megaloblastic bone marrow changes. Causes include pernicious anemia (autoimmune intrinsic-factor loss), strict vegan diets, ileal disease, and long-term proton pump inhibitor or metformin use." },
+    { "type": "Folate deficiency anemia", "description": "Macrocytic anemia from inadequate dietary folate, alcohol use, malabsorption, or drugs such as methotrexate. Resolves rapidly with oral folate but B12 must be excluded first to avoid masking neurological deficits." },
+    { "type": "Hemolytic anemia", "description": "Premature red cell destruction. May be hereditary (G6PD deficiency, hereditary spherocytosis, sickle cell disease, thalassemia) or acquired (autoimmune, drug-induced, mechanical, infection). Elevated LDH, indirect bilirubin, and reticulocytes with low haptoglobin support the diagnosis." },
+    { "type": "Aplastic anemia", "description": "Pancytopenia from immune-mediated or toxic bone marrow failure. Rare (about 2-3 cases per million per year). Requires hematology referral; treatment includes immunosuppression or stem cell transplant." },
+    { "type": "Anemia of chronic kidney disease", "description": "Normocytic anemia from reduced erythropoietin production by failing kidneys and functional iron deficiency. Begins around eGFR 60 and worsens with declining renal function." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent fatigue and reduced exercise tolerance that develops gradually over weeks to months — the most common presenting symptom, often the only one in mild anemia.",
+    "Shortness of breath on exertion, then at rest as the deficit worsens, because cardiac output must rise to compensate for reduced oxygen delivery.",
+    "Pale skin, conjunctivae, nail beds, and palmar creases — usually visible once hemoglobin falls below 9-10 g/dL, more reliable in the conjunctiva than the face.",
+    "Lightheadedness or dizziness on standing, sometimes with brief syncope, from reduced oxygen reserve and orthostatic intolerance.",
+    "Resting tachycardia (heart rate above 100) and palpitations as the heart compensates by beating faster.",
+    "Headache, poor concentration, irritability, and brain fog — particularly common in iron deficiency even before anemia develops.",
+    "Cold hands and feet from peripheral vasoconstriction and reduced tissue oxygenation.",
+    "Pica — craving and chewing ice, clay, starch, or paper — is a highly specific symptom of iron deficiency that resolves rapidly with treatment.",
+    "Restless legs syndrome and disrupted sleep, frequently linked to low brain iron stores.",
+    "Brittle, spoon-shaped (koilonychia) or ridged nails, hair shedding, and angular cheilitis in long-standing iron deficiency.",
+    "Glossitis with a smooth, sore, beefy-red tongue — classic for B12 or folate deficiency.",
+    "Jaundice, dark urine, and right upper quadrant discomfort in hemolytic anemia from increased bilirubin turnover."
+  ],
+
+  "earlyWarningSigns": [
+    "Falling exercise capacity or new breathlessness climbing stairs that previously caused no symptoms",
+    "Heavy menstrual periods soaking through pads or tampons hourly, or periods lasting more than 7 days",
+    "Borderline-low hemoglobin or low MCV on a routine blood count, even without symptoms",
+    "Ferritin below 30 ng/mL on routine labs — iron stores are depleted before hemoglobin drops",
+    "Unexplained pallor noted by a partner, parent, or photo comparison over months"
+  ],
+
+  "emergencySigns": [
+    "Chest pain, severe shortness of breath at rest, or syncope — possible acute coronary ischemia from severe anemia, especially with known coronary disease",
+    "Black tarry stools (melena) or vomiting blood (hematemesis) — acute gastrointestinal bleed requiring same-day evaluation",
+    "Sudden severe back or flank pain with dark cola-colored urine — acute intravascular hemolysis or transfusion reaction",
+    "Confusion, focal weakness, or new neurological deficits in the setting of low hemoglobin — possible severe B12 deficiency or cerebral hypoperfusion",
+    "Fever above 38.5 C with severe anemia and easy bruising — possible aplastic anemia, leukemia, or transfusion reaction"
+  ],
+
+  "causes": [
+    {
+      "cause": "Iron deficiency from chronic blood loss",
+      "description": "The single most common driver of anemia in adults. Heavy menstrual bleeding accounts for most cases in premenopausal women; in men and postmenopausal women, gastrointestinal blood loss from ulcer, gastritis, colon polyp, or colorectal cancer is the dominant cause and must be excluded before iron replacement alone is accepted as definitive."
+    },
+    {
+      "cause": "Inadequate dietary iron or impaired iron absorption",
+      "description": "Vegetarian and vegan diets, celiac disease, atrophic gastritis, H. pylori gastritis, gastric bypass, and long-term proton pump inhibitor use all reduce iron absorption. Pregnancy roughly doubles iron requirement to about 27 mg per day, which is hard to meet from diet alone."
+    },
+    {
+      "cause": "Vitamin B12 or folate deficiency",
+      "description": "B12 deficiency arises from pernicious anemia (autoimmune destruction of gastric parietal cells), strict vegan diet, ileal Crohn disease, ileal resection, and long-term metformin or PPI use. Folate deficiency follows alcohol use, poor diet, pregnancy, hemolysis, and antifolate drugs (methotrexate, trimethoprim, phenytoin)."
+    },
+    {
+      "cause": "Anemia of chronic inflammation",
+      "description": "Chronic infections, autoimmune disease (rheumatoid arthritis, lupus, inflammatory bowel disease), and malignancy raise hepcidin, which traps iron in macrophages and enterocytes. The result is functional iron deficiency despite normal or elevated body stores."
+    },
+    {
+      "cause": "Reduced erythropoietin production in chronic kidney disease",
+      "description": "Damaged kidneys produce less erythropoietin, the hormone that drives red cell production. Anemia typically emerges at eGFR below 60 mL/min/1.73 m squared and is universal in dialysis patients. Functional iron deficiency frequently coexists."
+    },
+    {
+      "cause": "Inherited red cell disorders",
+      "description": "Sickle cell disease, thalassemia (alpha and beta), hereditary spherocytosis, and G6PD deficiency cause lifelong anemia of varying severity. Carrier states are common in populations of African, Mediterranean, Middle Eastern, South Asian, and Southeast Asian ancestry."
+    },
+    {
+      "cause": "Acquired hemolysis",
+      "description": "Autoimmune hemolytic anemia (warm or cold antibody), drug-induced hemolysis, mechanical hemolysis from prosthetic heart valves, microangiopathic processes (TTP, HUS, DIC), and infections such as malaria destroy red cells faster than the marrow can replace them."
+    },
+    {
+      "cause": "Bone marrow failure or infiltration",
+      "description": "Aplastic anemia, myelodysplastic syndromes, leukemia, lymphoma infiltration, and chemotherapy or radiation suppress red cell production directly. These typically affect more than one blood lineage and warrant urgent hematology referral."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex of reproductive age", "category": "non-modifiable", "description": "Monthly menstrual blood loss averages 30-40 mL and exceeds 80 mL in about 10% of women. Iron-deficiency anemia affects roughly 30% of women of reproductive age globally per WHO 2021 estimates." },
+    { "factor": "Pregnancy", "category": "non-modifiable", "description": "Plasma volume expands 40-50% by the third trimester while iron demand roughly doubles. About 40% of pregnant women worldwide and 17% in the United States meet anemia criteria, with the highest burden in the third trimester." },
+    { "factor": "Age over 65", "category": "non-modifiable", "description": "Prevalence in community-dwelling adults over 65 reaches 10-12%, and exceeds 25% in nursing homes. Causes are roughly evenly split between nutritional deficiency, chronic disease, and unexplained anemia of older adults." },
+    { "factor": "Chronic kidney disease", "category": "non-modifiable", "description": "Erythropoietin production falls progressively with declining renal function. By CKD stage 3 about 17% are anemic, rising to over 50% in stage 4 and nearly all dialysis patients." },
+    { "factor": "Chronic inflammatory or autoimmune disease", "category": "non-modifiable", "description": "Rheumatoid arthritis, inflammatory bowel disease, lupus, and chronic infection raise hepcidin and produce anemia of chronic disease in roughly 30-60% of patients depending on disease activity." },
+    { "factor": "Vegan or strict vegetarian diet", "category": "modifiable", "description": "Plant-based iron is non-heme and absorbed at roughly one-third the rate of heme iron. Vegan diets also lack vitamin B12 unless supplemented or fortified, putting both iron and B12 stores at risk over years." },
+    { "factor": "Heavy menstrual bleeding (menorrhagia)", "category": "modifiable", "description": "Periods lasting more than 7 days, flooding, or clots larger than a coin should prompt iron studies and gynecological evaluation. Treating the bleeding (hormonal contraception, tranexamic acid, ablation) corrects the anemia long-term." },
+    { "factor": "Frequent NSAID, aspirin, or anticoagulant use", "category": "modifiable", "description": "These cause occult or overt gastrointestinal blood loss. Even daily low-dose aspirin doubles the risk of iron-deficiency anemia in adults over 60." },
+    { "factor": "Family history of inherited hemoglobinopathy", "category": "genetic", "description": "Sickle cell trait, thalassemia trait, G6PD deficiency, and hereditary spherocytosis are autosomal traits with frequencies up to 25% in some regional populations. Family history triples the likelihood of an inherited cause." },
+    { "factor": "Bariatric surgery", "category": "modifiable", "description": "Roux-en-Y gastric bypass and sleeve gastrectomy reduce iron, B12, and folate absorption. Anemia develops in 20-40% of patients within 5 years without lifelong supplementation." },
+    { "factor": "Ancestry from regions with hemoglobinopathy or thalassemia endemicity", "category": "genetic", "description": "African, Mediterranean, Middle Eastern, South Asian, and Southeast Asian ancestry carry elevated carrier frequencies for thalassemia and sickle cell variants. Targeted screening is recommended before iron repletion to avoid mis-diagnosis." }
+  ],
+
+  "affectedDemographics": [
+    "Global prevalence: 1.92 billion people, or 24.3% of the world population (WHO Global Anaemia Estimates 2021)",
+    "Women aged 15-49: approximately 30% globally; up to 47% in South Asia and 39% in Africa",
+    "Children under 5: approximately 40% globally; over 60% in several sub-Saharan African and South Asian countries",
+    "United States adults: 5-7% overall (NHANES); 12-17% of women 20-49 and 10% of adults over 65",
+    "Highest US burden is in non-Hispanic Black adults (roughly twice the white adult rate at every age), driven by iron deficiency and inherited hemoglobinopathies"
+  ],
+
+  "diagnosisOverview": "Workup begins with a complete blood count and reticulocyte count. The complete blood count yields hemoglobin (defines anemia), MCV (classifies morphology), red cell distribution width (RDW; high in iron deficiency, narrow in thalassemia trait), and white cell and platelet counts (other lineages flag marrow failure or hemolysis). The reticulocyte count separates production problems (low or inappropriately normal reticulocytes) from destruction or blood loss (high reticulocytes). MCV directs the next step: in microcytic anemia, order ferritin, transferrin saturation, and iron studies — ferritin under 30 ng/mL confirms iron deficiency in most settings, while ferritin 30-100 with transferrin saturation under 20% suggests iron deficiency overlapping with inflammation, and high ferritin with low saturation is typical of anemia of chronic disease. Hemoglobin electrophoresis is added when MCV is disproportionately low for the degree of anemia or when ancestry suggests thalassemia. In macrocytic anemia, serum B12 and folate are first-line; methylmalonic acid and homocysteine resolve borderline B12 values. In normocytic anemia, evaluate renal function, thyroid function, inflammatory markers, and consider a peripheral smear and reticulocyte index. Hemolysis is supported by elevated LDH, indirect bilirubin, and reticulocytes with low haptoglobin, then characterized by direct Coombs test and smear morphology. Bone marrow biopsy is reserved for unexplained pancytopenia, suspected myelodysplastic syndrome, or refractory anemia. In adult men and post-menopausal women with newly identified iron-deficiency anemia, upper and lower gastrointestinal endoscopy is recommended to exclude a bleeding source per BSH 2021 and ACG guidance.",
+
+  "diagnosticTests": [
+    {
+      "test": "Complete blood count (CBC) with red cell indices",
+      "purpose": "Establishes anemia (hemoglobin below the age- and sex-specific threshold), classifies by MCV (microcytic, normocytic, macrocytic), and screens for white-cell and platelet abnormalities that suggest marrow disease.",
+      "whatToExpect": "A single tube of venous blood. Results return within hours in most labs. No fasting required. Often repeated to confirm a borderline result and to track response to treatment."
+    },
+    {
+      "test": "Reticulocyte count and reticulocyte production index",
+      "purpose": "Measures the marrow's response to anemia. Low or inappropriately normal counts indicate underproduction (iron, B12, EPO deficiency, marrow disease); high counts indicate blood loss or hemolysis.",
+      "whatToExpect": "Performed on the same blood sample as the CBC. The corrected reticulocyte index above 2-3% suggests adequate marrow response."
+    },
+    {
+      "test": "Iron studies (ferritin, serum iron, transferrin saturation, TIBC)",
+      "purpose": "Differentiates iron-deficiency anemia (low ferritin, low transferrin saturation, high TIBC) from anemia of chronic disease (high or normal ferritin, low transferrin saturation, low or normal TIBC).",
+      "whatToExpect": "A single blood draw, typically fasting in the morning to minimize day-to-day variation. Ferritin can be falsely elevated by acute inflammation; check CRP alongside if any inflammatory condition is present."
+    },
+    {
+      "test": "Serum vitamin B12 and folate (RBC folate where available)",
+      "purpose": "Identifies macrocytic anemia driven by cobalamin or folate deficiency. Add methylmalonic acid and homocysteine when serum B12 is borderline (200-400 pg/mL) — both rise in true B12 deficiency.",
+      "whatToExpect": "Blood draw, no fasting needed. Results typically available within 24-48 hours."
+    },
+    {
+      "test": "Peripheral blood smear",
+      "purpose": "Visualizes red cell morphology — schistocytes in microangiopathic hemolysis, spherocytes in hereditary spherocytosis or autoimmune hemolysis, hypersegmented neutrophils in B12 or folate deficiency, target cells in thalassemia or liver disease, sickled cells in sickle cell disease.",
+      "whatToExpect": "Performed on a stained slide by a hematology technician; turnaround usually same day. No additional blood draw needed."
+    },
+    {
+      "test": "Hemoglobin electrophoresis or HPLC",
+      "purpose": "Identifies abnormal hemoglobins (HbS, HbC, HbE) and quantifies HbA2 and HbF to diagnose beta-thalassemia. First-line screen when MCV is low out of proportion to the anemia or when ancestry suggests hemoglobinopathy.",
+      "whatToExpect": "Standard blood draw; results usually return within 1-2 weeks. Should be performed before iron repletion when possible, as iron deficiency can transiently suppress HbA2."
+    },
+    {
+      "test": "Direct antiglobulin test (Coombs test)",
+      "purpose": "Detects autoantibodies coating red cells in autoimmune or drug-induced hemolytic anemia.",
+      "whatToExpect": "Single blood draw. Positive results are followed by warm/cold antibody differentiation."
+    },
+    {
+      "test": "Upper and lower gastrointestinal endoscopy",
+      "purpose": "Indicated in any adult man or post-menopausal woman with iron-deficiency anemia to identify a bleeding source (ulcer, polyp, colon cancer, celiac disease, vascular malformation).",
+      "whatToExpect": "Outpatient procedures under sedation. Same-day or sequential scheduling; preparation includes bowel cleansing for colonoscopy. Combined evaluation has roughly 60% diagnostic yield in iron-deficiency anemia."
+    }
+  ],
+
+  "treatmentOverview": "Treatment is directed at the underlying mechanism, not the hemoglobin number. Once a cause is identified, most anemias resolve within weeks to months. For iron-deficiency anemia, oral iron is first-line: ferrous sulfate 325 mg (65 mg elemental iron) once daily or every other day is preferred over thrice-daily regimens because alternate-day dosing improves absorption and tolerability (Stoffel 2017 Lancet Haematology). Treatment continues for at least 3 months after hemoglobin normalizes to replenish stores; ferritin above 100 ng/mL is a reasonable end-point. Intravenous iron — ferric carboxymaltose, ferric derisomaltose, iron sucrose, or low-molecular-weight iron dextran — is preferred when oral iron is poorly tolerated, when malabsorption is present (celiac, post-bariatric, inflammatory bowel disease), in chronic kidney disease, in heart failure with iron deficiency (ferritin under 100 ng/mL or 100-300 with TSAT under 20%), and when rapid repletion is needed before surgery or in pregnancy beyond 14 weeks. For vitamin B12 deficiency, intramuscular cyanocobalamin or hydroxocobalamin 1000 mcg is given daily for one week, then weekly for 4 weeks, then monthly for life when intrinsic factor is absent; high-dose oral B12 (1000-2000 mcg daily) is comparably effective in many patients with adequate intrinsic-factor function. Folate deficiency is corrected with oral folic acid 1-5 mg daily, after B12 deficiency is excluded to avoid masking irreversible neurological injury. Anemia of chronic kidney disease is treated with iron repletion first, then erythropoiesis-stimulating agents (epoetin alfa, darbepoetin, or biosimilars) targeted to a hemoglobin of 10-11.5 g/dL per KDIGO 2012 (higher targets increase cardiovascular risk). Hypoxia-inducible factor stabilizers such as roxadustat and daprodustat are alternatives in selected CKD patients where approved. Red cell transfusion is reserved for symptomatic anemia or hemoglobin under 7 g/dL in stable hospitalized adults, with a more liberal threshold of 8 g/dL in patients with active cardiovascular disease (AABB 2023 restrictive transfusion guidance). Inherited and immune-mediated anemias — sickle cell disease, thalassemia, autoimmune hemolysis, aplastic anemia — require hematologist-led care with disease-specific therapies including hydroxyurea, voxelotor, immunosuppression, and stem cell transplantation.",
+
+  "medicalTreatments": [
+    {
+      "name": "Ferrous sulfate (325 mg / 65 mg elemental iron) PO once daily or every other day",
+      "description": "First-line oral iron for uncomplicated iron-deficiency anemia. Alternate-day dosing improves fractional absorption and reduces gastrointestinal side effects compared with thrice-daily regimens. Take on an empty stomach with vitamin C; avoid coffee, tea, calcium, and PPIs within 2 hours.",
+      "effectiveness": "Raises hemoglobin by roughly 1 g/dL per 2-3 weeks; corrects anemia in 70-85% of patients with adherence. Adequate response is defined as a 1 g/dL rise at 2-4 weeks."
+    },
+    {
+      "name": "Ferric carboxymaltose (FCM) 750-1000 mg IV (single or split dose)",
+      "description": "IV iron preparation that delivers up to 1000-1500 mg in 1-2 visits over 15 minutes per infusion. Indicated when oral iron fails or is not tolerated, in CKD, heart failure with iron deficiency, second/third trimester pregnancy, and pre-operative anemia. Hypophosphatemia is a recognized but usually transient side effect.",
+      "effectiveness": "Normalizes hemoglobin in 70-85% within 4-6 weeks; rapid response in pre-surgical and postpartum settings."
+    },
+    {
+      "name": "Iron sucrose 200 mg IV per session (typically 5 sessions to total 1000 mg)",
+      "description": "Established IV iron with extensive safety data in dialysis and non-dialysis CKD. Requires multiple shorter infusions. Lower single-dose ceiling than FCM but lower acute hypersensitivity risk in some cohorts.",
+      "effectiveness": "Comparable hemoglobin response to FCM over 6-8 weeks in CKD trials; well-tolerated profile."
+    },
+    {
+      "name": "Cyanocobalamin or hydroxocobalamin 1000 mcg IM (daily x 7, weekly x 4, then monthly for life in pernicious anemia)",
+      "description": "Parenteral B12 replacement. Required when intrinsic factor is absent or with severe neurological deficits. Neurological symptoms can be slow to reverse and may be incomplete if treatment is delayed beyond 6-12 months.",
+      "effectiveness": "Hematologic response within 1-2 weeks (reticulocytosis); hemoglobin normalizes in 6-8 weeks. Neurological response 50-90% depending on duration of deficiency."
+    },
+    {
+      "name": "Oral cyanocobalamin 1000-2000 mcg PO daily",
+      "description": "Effective alternative to injections in most B12 deficiency, including pernicious anemia, because passive intestinal absorption accounts for about 1% of an oral dose. Preferred by patients who dislike injections; requires daily adherence.",
+      "effectiveness": "Comparable to IM in randomized trials at 1000 mcg daily; hemoglobin normalization rate similar at 8-12 weeks."
+    },
+    {
+      "name": "Folic acid 1-5 mg PO daily for 1-4 months",
+      "description": "Restores folate stores in dietary, alcohol-related, or drug-induced folate deficiency. Always check B12 first; isolated folate treatment in undiagnosed B12 deficiency can precipitate or worsen subacute combined degeneration of the spinal cord.",
+      "effectiveness": "Hemoglobin normalizes within 4-8 weeks; reticulocytosis within 5-7 days."
+    },
+    {
+      "name": "Erythropoiesis-stimulating agents (epoetin alfa 50-100 IU/kg SC three times weekly; darbepoetin 0.45 mcg/kg weekly or every 2 weeks)",
+      "description": "Recombinant erythropoietin used in anemia of chronic kidney disease, chemotherapy-induced anemia, and selected MDS. Target Hb 10-11.5 g/dL per KDIGO; higher targets raise cardiovascular and thrombotic risk. Iron stores must be adequate (TSAT above 20%, ferritin above 100 ng/mL) before and during therapy.",
+      "effectiveness": "Hemoglobin response in 70-90% of CKD patients within 8-12 weeks. Reduces transfusion need by roughly 70% in dialysis populations."
+    },
+    {
+      "name": "Hypoxia-inducible factor prolyl hydroxylase inhibitors (roxadustat, daprodustat, vadadustat)",
+      "description": "Oral alternatives to ESAs for CKD anemia. Stabilize HIF, increase endogenous erythropoietin, and improve iron utilization. Availability varies by country; cardiovascular safety remains under post-marketing surveillance.",
+      "effectiveness": "Non-inferior to ESAs in pivotal trials; comparable Hb response (about 80%) at 12-24 weeks."
+    },
+    {
+      "name": "Red blood cell transfusion (1 unit packed RBCs per episode in stable patients)",
+      "description": "Indicated for symptomatic anemia or Hb below 7 g/dL in stable hospitalized adults, below 8 g/dL with cardiovascular disease, or active hemorrhage. AABB 2023 endorses restrictive thresholds; each unit raises Hb by roughly 1 g/dL in a 70 kg adult.",
+      "effectiveness": "Immediate oxygen-carrying capacity restoration. Restrictive strategies reduce transfusion use by about 40% with equivalent or better outcomes versus liberal targets."
+    },
+    {
+      "name": "Immunosuppression for autoimmune hemolytic anemia (prednisone 1 mg/kg/day, with rituximab 375 mg/m2 weekly x 4 as add-on or second-line)",
+      "description": "First-line treatment for warm autoimmune hemolytic anemia. Steroids taper over 3-6 months once Hb stabilizes. Rituximab is added for steroid-dependent or refractory disease and is increasingly used early in symptomatic patients.",
+      "effectiveness": "Initial response in 70-85% with corticosteroids; addition of rituximab raises durable response to roughly 70-80% at 1 year."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Endoscopic hemostasis for upper or lower GI bleeding",
+      "description": "Therapeutic endoscopy (clipping, banding, thermal coagulation, injection) controls active or recurrent bleeding that has caused anemia. Performed by gastroenterology during diagnostic endoscopy.",
+      "successRate": "Initial hemostasis achieved in 85-95% of bleeding peptic ulcers and most diverticular or vascular sources; rebleeding in 10-20% within 30 days."
+    },
+    {
+      "name": "Splenectomy for hereditary spherocytosis or refractory autoimmune hemolysis",
+      "description": "Removes the primary site of red cell destruction. Reserved for moderate-to-severe disease after vaccination against encapsulated organisms (pneumococcus, meningococcus, Haemophilus). Increasingly performed laparoscopically.",
+      "successRate": "Hemoglobin normalization in 80-95% of hereditary spherocytosis; durable response in 60-70% of warm autoimmune hemolytic anemia."
+    },
+    {
+      "name": "Hematopoietic stem cell transplantation",
+      "description": "Curative option for severe aplastic anemia, transfusion-dependent thalassemia, and selected sickle cell disease. Matched sibling donor preferred; haploidentical and matched unrelated donor protocols expanding access.",
+      "successRate": "Long-term survival 80-90% in matched sibling transplant for severe aplastic anemia and thalassemia in children; outcomes lower with unrelated donors and increasing age."
+    },
+    {
+      "name": "Hysterectomy or endometrial ablation for menorrhagia-driven anemia",
+      "description": "Definitive treatment of heavy menstrual bleeding refractory to hormonal therapy. Endometrial ablation is the less invasive option for women who do not desire future fertility.",
+      "successRate": "Resolution of anemia in over 90% of women within 6-12 months after hysterectomy; ablation produces amenorrhea or hypomenorrhea in 70-85%."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Dietary heme iron and vitamin C pairing", "description": "Heme iron from lean red meat, poultry, and fish is absorbed at 15-35%, versus 2-20% for non-heme plant iron. Pairing non-heme sources with vitamin C-rich foods (citrus, peppers, strawberries) doubles absorption. Useful adjunct but not a substitute for medication in established deficiency." },
+    { "name": "Avoidance of iron-blocking foods at iron-rich meals", "description": "Tea, coffee, and calcium-rich foods can reduce iron absorption by 50-90% when consumed within an hour of iron intake. Separating these from iron-rich meals or supplements is a simple, evidence-based step backed by absorption studies." }
+  ],
+
+  "whySeeSpecialist": "A hematologist should be involved when anemia is severe (Hb under 8 g/dL without obvious cause), unresponsive to first-line therapy, pancytopenic, hemolytic, transfusion-dependent, suspected to be inherited, or accompanied by abnormal smear findings such as blasts or schistocytes. Most uncomplicated iron, B12, or folate deficiency is well managed in primary care once the underlying source is identified.",
+
+  "doctorSelectionGuide": "Look for board certification in hematology, experience with IV iron protocols, comfort interpreting peripheral smears and hemoglobin electrophoresis, and access to a transfusion service. For inherited hemoglobinopathies, choose a center with a dedicated sickle cell or thalassemia program. Continuity of care matters — anemia workups often unfold over multiple visits and labs.",
+
+  "preventionStrategies": [
+    "Eat iron-rich foods regularly — lean red meat, poultry, fish, fortified cereals, lentils, and dark leafy greens; pair plant sources with vitamin C to improve absorption",
+    "Take a daily iron supplement during pregnancy from the second trimester onward, as recommended by WHO and most national obstetric guidelines",
+    "Use a levonorgestrel intrauterine device or hormonal contraception for heavy menstrual bleeding — reduces blood loss by 70-90% and prevents recurrent iron-deficiency anemia",
+    "Maintain B12 intake from animal foods, fortified plant milks, or a daily 50-100 mcg supplement if following a vegan diet",
+    "Screen at-risk individuals (women of reproductive age, pregnant women, children 6-24 months, adults over 65) with a complete blood count every 1-3 years per primary care guidelines",
+    "Treat H. pylori infection and celiac disease promptly — both impair iron absorption and are reversible drivers of recurrent anemia"
+  ],
+
+  "lifestyleModifications": [
+    "Take oral iron on an empty stomach with water or fruit juice; avoid coffee, tea, milk, and antacids within 2 hours of the dose",
+    "Spread iron intake to alternate days rather than three times daily — improves absorption and tolerability without compromising hemoglobin recovery (Stoffel 2017)",
+    "Cook in cast-iron cookware for acidic foods such as tomato sauce — adds measurable iron to the diet over time",
+    "Track menstrual blood loss with a period app or pad count; if soaking through pads hourly or passing large clots, see a clinician early rather than after months of fatigue",
+    "Avoid long-term unnecessary proton pump inhibitor use; PPIs reduce iron, B12, and calcium absorption and account for a meaningful share of preventable nutritional anemia",
+    "Manage chronic inflammatory disease tightly — anemia of chronic disease improves when the underlying inflammation is controlled",
+    "Recheck CBC and ferritin at 4-8 weeks after starting iron, then quarterly for a year to confirm response and rule out ongoing blood loss"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Lean red meat, poultry, and fish — high-bioavailability heme iron and B12",
+      "Lentils, beans, chickpeas, tofu, and quinoa — solid non-heme iron sources",
+      "Dark leafy greens (spinach, kale, swiss chard) — folate and non-heme iron",
+      "Iron-fortified breakfast cereals and breads — convenient daily iron baseline",
+      "Vitamin C-rich foods at iron-rich meals (oranges, strawberries, bell peppers, broccoli)",
+      "Eggs, fortified plant milks, and nutritional yeast for B12 in vegetarian and vegan diets"
+    ],
+    "avoid": [
+      "Coffee, black tea, and green tea within an hour before or after iron-rich meals or supplements — tannins reduce absorption by up to 60%",
+      "Large doses of calcium supplements taken with iron — separate by at least 2 hours",
+      "Excessive bran and unfermented whole grains at every meal — phytates bind iron",
+      "Daily heavy alcohol intake — impairs folate absorption and damages bone marrow",
+      "Unproven herbal iron tonics and unregulated supplements — verify product elemental iron content before substituting for prescribed therapy"
+    ]
+  },
+
+  "exerciseGuidelines": "Moderate aerobic exercise is safe and beneficial once hemoglobin is above 10 g/dL. Severe anemia (Hb under 8 g/dL) warrants rest and prompt treatment before resuming exertion because cardiac output reserve is reduced. After iron repletion, exercise tolerance typically returns to baseline within 4-8 weeks. Athletes with persistent fatigue and normal hemoglobin should still have ferritin checked — performance can be impaired by iron deficiency before frank anemia develops.",
+
+  "dailyManagement": [
+    "Take iron, B12, or folate replacement at the same time each day (or each alternate day for oral iron) to build a stable habit",
+    "Keep a one-line log of fatigue, breathlessness, and menstrual flow — useful at follow-up visits to demonstrate response",
+    "Drink at least 1.5-2 liters of water daily, especially when starting iron, to reduce constipation",
+    "Add a daily 250-500 mg vitamin C source with the iron dose if absorption is suboptimal on alternate-day regimens",
+    "Set lab-recheck reminders at 4 weeks, 12 weeks, and 6 months after starting treatment to confirm hemoglobin and ferritin response",
+    "Note any black or tarry stools when on oral iron — this is a normal harmless side effect, but new dark stools off iron warrant immediate evaluation for GI bleeding"
+  ],
+
+  "prognosis": "Outlook depends entirely on the underlying cause. Iron, B12, and folate deficiency anemias correct fully within 2-3 months of adequate replacement, and recurrence is prevented by treating the source. Anemia of chronic kidney disease is well controlled in 80-90% of patients with iron and erythropoiesis-stimulating agents, although it requires lifelong management. Hereditary anemias such as thalassemia major and sickle cell disease have improving but still limited life expectancy without curative transplant or gene therapy; mild trait carriers have a normal lifespan. Aplastic anemia 5-year survival now exceeds 80% with matched sibling transplant or modern immunosuppression. Across the board, untreated severe anemia carries a 30-50% increased risk of cardiovascular events, falls, hospitalization, and mortality in older adults, and contributes to roughly 20% of maternal deaths globally. The decisive prognostic factors are speed of diagnosis, identification of the underlying cause, and adherence to repletion and surveillance.",
+
+  "recoveryTimeline": "Reticulocyte response to iron, B12, or folate appears within 5-10 days and peaks at 7-14 days. Hemoglobin rises by roughly 1 g/dL every 2-3 weeks on oral iron and 1-2 weeks on IV iron or parenteral B12. Full hemoglobin normalization typically takes 6-12 weeks. Iron stores (ferritin) take longer — continue oral iron for at least 3 months after hemoglobin normalizes, or until ferritin exceeds 100 ng/mL, to prevent rapid relapse. Severe symptomatic anemia treated with transfusion improves within hours; durable correction still depends on treating the underlying cause.",
+
+  "complications": [
+    "Heart failure and high-output cardiac strain from chronic severe anemia — preventable with timely correction; presents with worsening dyspnea, peripheral edema, and fatigue",
+    "Pregnancy complications including low birth weight, preterm delivery, and postpartum hemorrhage — risk roughly doubled when maternal Hb falls below 10 g/dL",
+    "Cognitive impairment and developmental delay in iron-deficient infants and toddlers — partially reversible with early repletion; severe early deficiency can leave persistent deficits",
+    "Falls, fractures, and accelerated frailty in older adults with chronic anemia — Hb under 12 g/dL doubles fall risk in community-dwelling adults over 65",
+    "Irreversible neurological injury (subacute combined degeneration of the spinal cord) from untreated B12 deficiency — peripheral neuropathy, gait instability, and cognitive change that can be permanent if treatment is delayed more than 6-12 months",
+    "Increased perioperative mortality and infection — pre-operative anemia roughly triples 30-day mortality after major surgery; correction before elective procedures is now standard practice"
+  ],
+
+  "supportResources": [
+    { "name": "American Society of Hematology — Patient Resources", "url": "https://www.hematology.org/education/patients", "description": "Authoritative US patient education from the society that writes the iron-deficiency anemia guidelines." },
+    { "name": "Iron Disorders Institute", "url": "https://irondisorders.org/", "description": "Patient-focused nonprofit covering iron deficiency, hemochromatosis, and related disorders, with practical guides on testing and treatment." },
+    { "name": "WHO — Anaemia", "url": "https://www.who.int/health-topics/anaemia", "description": "Global epidemiology, definitions, and public health policy on anemia from the World Health Organization." },
+    { "name": "Sickle Cell Disease Association of America", "url": "https://www.sicklecelldisease.org/", "description": "Patient community, advocacy, and clinical updates for inherited hemoglobinopathies." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "iron-deficiency-anemia-unspecified-d509", "name": "Iron-Deficiency Anemia", "keyDifference": "Iron-deficiency anemia is one specific cause of anemia, defined by depleted iron stores (ferritin below 30 ng/mL) and a microcytic, hypochromic blood picture. Anemia is the broader finding of low hemoglobin from any cause, including B12 or folate deficiency, chronic kidney disease, hemolysis, or marrow failure. Iron supplementation only helps the iron-deficient subset and is potentially harmful in other anemias." },
+    { "slug": "vitamin-b12-deficiency-anemia-unspecified-d519", "name": "Vitamin B12 Deficiency Anemia", "keyDifference": "B12 deficiency produces macrocytic anemia (MCV above 100 fL) with hypersegmented neutrophils and can cause neurological symptoms (numbness, gait instability, cognitive change) that iron deficiency does not. Treatment is B12 replacement, not iron. The two are distinguished by MCV, serum B12, and methylmalonic acid testing." },
+    { "slug": "thalassemia-unspecified-d569", "name": "Thalassemia", "keyDifference": "Thalassemia is an inherited disorder of hemoglobin synthesis causing lifelong microcytic anemia from birth, with a low MCV out of proportion to the mild anemia and a normal-to-high red cell count. Iron studies are normal or show iron overload — giving iron is contraindicated. Diagnosis is confirmed by hemoglobin electrophoresis." },
+    { "slug": "anemia-in-chronic-kidney-disease-d631", "name": "Anemia of Chronic Kidney Disease", "keyDifference": "CKD anemia is normocytic, driven by erythropoietin deficiency from failing kidneys, and managed with iron plus erythropoiesis-stimulating agents rather than diet or oral iron alone. Standard iron deficiency workup will show normal or high ferritin with low transferrin saturation — functional rather than absolute iron deficiency." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease" },
+    { "slug": "heart-failure", "name": "Heart Failure" },
+    { "slug": "leukemia", "name": "Leukemia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "iron-deficiency-anemia-unspecified-d509", "name": "Iron-Deficiency Anemia", "relevance": "The most common subtype of anemia worldwide; most workups of anemia begin by confirming or excluding iron deficiency." },
+    { "slug": "vitamin-b12-deficiency-anemia-unspecified-d519", "name": "Vitamin B12 Deficiency Anemia", "relevance": "Major cause of macrocytic anemia, especially in older adults, vegans, and patients on long-term metformin or PPIs." },
+    { "slug": "folate-deficiency-anemia-unspecified-d529", "name": "Folate Deficiency Anemia", "relevance": "Second major macrocytic anemia; commonly co-occurs with poor diet, alcohol use, and pregnancy. Must be distinguished from B12 deficiency before treatment." },
+    { "slug": "anemia-in-chronic-kidney-disease-d631", "name": "Anemia of Chronic Kidney Disease", "relevance": "A frequent and increasingly recognized contributor to fatigue and cardiovascular risk in CKD; management uses iron plus ESAs." },
+    { "slug": "thalassemia-unspecified-d569", "name": "Thalassemia", "relevance": "Inherited microcytic anemia that mimics iron deficiency on the CBC; differentiation matters because iron loading is contraindicated." },
+    { "slug": "sickle-cell-disease-without-crisis-d571", "name": "Sickle Cell Disease", "relevance": "Lifelong hemolytic anemia from abnormal hemoglobin S; managed with hydroxyurea, transfusions, and emerging gene therapies." },
+    { "slug": "aplastic-anemia-unspecified-d619", "name": "Aplastic Anemia", "relevance": "Rare bone marrow failure causing pancytopenia; one of the differential diagnoses when anemia is accompanied by low white cells and platelets." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is anemia in simple terms?",
+      "answer": "Anemia means the blood carries less oxygen than the body needs because red cells or hemoglobin are low. WHO defines anemia as hemoglobin below 13 g/dL in men, 12 g/dL in non-pregnant women, and 11 g/dL in pregnancy. Symptoms include fatigue, breathlessness, and pale skin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the most common causes of anemia?",
+      "answer": "Iron deficiency is the leading cause worldwide, usually from heavy menstrual bleeding, pregnancy, low dietary iron, or gastrointestinal blood loss. B12 deficiency, folate deficiency, chronic inflammation, chronic kidney disease, thalassemia, and sickle cell disease cause most other cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is anemia diagnosed?",
+      "answer": "A complete blood count confirms anemia and classifies it by red cell size (MCV). Reticulocyte count, ferritin, transferrin saturation, B12, folate, and a peripheral smear identify the cause. Men and post-menopausal women with iron-deficiency anemia need endoscopy to find a bleeding source.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of anemia?",
+      "answer": "Common symptoms include persistent fatigue, shortness of breath on exertion, pale skin, lightheadedness, fast heart rate, and headache. Iron deficiency may add brittle nails, hair shedding, restless legs, and ice craving (pica). B12 deficiency can cause a sore tongue and numbness or tingling.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to recover from anemia?",
+      "answer": "Reticulocytes rise within 5-10 days of effective treatment. Hemoglobin increases by about 1 g/dL every 2-3 weeks on oral iron, faster with IV iron. Full normalization takes 6-12 weeks. Oral iron should continue for at least 3 months after hemoglobin returns to normal to refill stores.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for iron-deficiency anemia?",
+      "answer": "Oral ferrous sulfate at 65 mg elemental iron, taken once daily or every other day on an empty stomach with vitamin C, is the first-line treatment for most adults with iron-deficiency anemia. Alternate-day dosing improves absorption and reduces side effects. Intravenous iron such as ferric carboxymaltose is preferred when oral iron is not tolerated, in malabsorption, in CKD, in heart failure, in pregnancy, or when rapid repletion is needed before surgery.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can anemia be cured?",
+      "answer": "Most anemias from iron, B12, or folate deficiency, acute blood loss, or treatable inflammation resolve fully once the cause is addressed. Anemia of CKD and inherited disorders such as thalassemia or sickle cell disease need lifelong management, though stem cell transplant can be curative.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is anemia dangerous?",
+      "answer": "Mild anemia is uncomfortable but rarely dangerous in healthy adults. Moderate-to-severe anemia increases the risk of heart strain, falls, infections, poor surgical outcomes, pregnancy complications, and cognitive impairment in children. Severe acute anemia from bleeding is a medical emergency and may need transfusion. Chronic untreated anemia in older adults is associated with a 30-50% rise in hospitalization and mortality.",
+      "schemaEligible": false
+    },
+    {
+      "question": "What foods help with anemia?",
+      "answer": "For iron-deficiency anemia, lean red meat, poultry, fish, lentils, beans, tofu, fortified cereals, and dark leafy greens are the most useful foods. Pairing plant iron sources with vitamin C (citrus, strawberries, peppers, broccoli) doubles absorption. For B12 deficiency, animal products and fortified plant milks help. For folate deficiency, leafy greens, citrus, and legumes are key. Diet alone usually cannot reverse established anemia and is best combined with prescribed supplements.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can anemia cause heart problems?",
+      "answer": "Yes. The heart compensates for low oxygen-carrying capacity by beating faster and pumping harder, which over time can cause left ventricular enlargement and worsen existing heart failure or coronary disease. Chronic moderate-to-severe anemia roughly doubles the risk of cardiovascular events in patients with established heart disease. Correcting anemia in heart failure with iron deficiency improves symptoms and exercise capacity.",
+      "schemaEligible": false
+    },
+    {
+      "question": "What is the difference between anemia and iron deficiency?",
+      "answer": "Iron deficiency means low body iron stores, marked by ferritin below 30 ng/mL. Anemia is low hemoglobin from any cause. Iron deficiency progresses through depleted stores, then iron-deficient erythropoiesis, and finally to iron-deficiency anemia. Iron deficiency can occur with normal hemoglobin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why am I anemic during pregnancy?",
+      "answer": "Pregnancy nearly doubles iron requirements to about 27 mg per day and expands plasma volume faster than red cell mass, both of which lower hemoglobin physiologically and unmask any pre-existing iron deficiency. About 40% of pregnant women globally meet anemia criteria. Routine prenatal iron supplementation and screening at first booking and in the third trimester are recommended by WHO and most national guidelines.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can anemia be hereditary?",
+      "answer": "Yes. Thalassemia (alpha and beta), sickle cell disease, hereditary spherocytosis, and G6PD deficiency are inherited causes of anemia. Carrier states are common in people of African, Mediterranean, Middle Eastern, South Asian, and Southeast Asian ancestry. A family history of anemia, jaundice, gallstones at a young age, or splenectomy should prompt hemoglobin electrophoresis and genetic counseling.",
+      "schemaEligible": false
+    },
+    {
+      "question": "What hemoglobin level is considered severe anemia?",
+      "answer": "WHO classifies anemia as mild (hemoglobin 10-11.9 g/dL in non-pregnant women, 10-12.9 g/dL in men), moderate (7-9.9 g/dL), or severe (below 7 g/dL). Severe anemia causes marked symptoms, may need transfusion, and requires urgent evaluation for cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is a blood transfusion needed for anemia?",
+      "answer": "Transfusion is indicated for active bleeding, symptomatic anemia, or hemoglobin below 7 g/dL in stable hospitalized adults. The threshold rises to 8 g/dL in patients with active cardiovascular disease (AABB 2023). Each unit raises hemoglobin by about 1 g/dL.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do iron supplements have side effects?",
+      "answer": "Oral iron commonly causes constipation, nausea, dark stools, and metallic taste. Side effects are reduced by taking iron every other day instead of three times daily, by lower elemental doses, and by separating from coffee, tea, and antacids. Intravenous iron occasionally causes infusion-site reactions and transient hypophosphatemia; serious allergic reactions are rare with modern preparations.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can vegans get enough iron and B12?",
+      "answer": "Yes, with planning. Plant iron is absorbed less efficiently than heme iron, so vegan diets need more total iron (about 1.8 times the standard requirement) from legumes, tofu, fortified cereals, and seeds, paired with vitamin C. Vitamin B12 is only reliably obtained from animal foods, fortified plant milks, nutritional yeast, or supplements; daily 50-100 mcg or weekly 1000-2000 mcg is standard for vegans.",
+      "schemaEligible": false
+    },
+    {
+      "question": "How much does anemia treatment cost?",
+      "answer": "Oral iron is inexpensive at roughly USD 5-10 per month worldwide. Oral B12 and folic acid are similarly low cost. Intravenous iron ranges from about USD 300 to USD 1500 per infusion depending on formulation and country. Erythropoiesis-stimulating agents cost USD 100-500 per week for non-dialysis patients; biosimilars and dialysis center contracts reduce per-patient cost significantly.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can anemia come back after treatment?",
+      "answer": "Yes, if the underlying cause is not corrected. Iron-deficiency anemia recurs when menstrual bleeding, dietary inadequacy, or gastrointestinal blood loss continues. Periodic CBC and ferritin checks, plus treatment of the root source, prevent relapse in most cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does anemia cause fatigue?",
+      "answer": "Reduced hemoglobin lowers oxygen delivery to muscles, brain, and tissues. The body compensates by raising heart rate and breathing, which itself feels effortful. Low iron also impairs energy-producing enzymes, so fatigue and brain fog can appear before hemoglobin drops below the anemia threshold.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I see a hematologist for anemia?",
+      "answer": "See a hematologist if anemia is severe, persistent, accompanied by low white cells or platelets, unresponsive to standard iron or vitamin replacement, hemolytic, or suspected to be inherited. Primary care manages most uncomplicated iron, B12, and folate deficiency; specialty referral is reserved for diagnostic uncertainty, refractory disease, transfusion dependence, or hematologic malignancy concerns.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Does anemia affect children differently?",
+      "answer": "Yes. Iron deficiency in infants and toddlers can impair brain development and cognitive performance, and the effects may be only partially reversible. Children aged 6-24 months are at highest risk. Routine hemoglobin screening at 9-12 months is recommended by the AAP.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Anemia (low red blood cells or hemoglobin)",
+
+  "regionalNames": [
+    { "name": "रक्ताल्पता (Raktalpata)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Pandu Roga", "region": "India (Ayurveda)", "language": "sa" },
+    { "name": "Anemia / Anémie", "region": "France", "language": "fr" },
+    { "name": "Anämie", "region": "Germany", "language": "de" }
+  ],
+
+  "searchTags": [
+    "anemia", "anaemia", "low hemoglobin", "low haemoglobin", "iron deficiency",
+    "ferritin low", "microcytic anemia", "macrocytic anemia", "B12 deficiency",
+    "folate deficiency", "pernicious anemia", "anemia of chronic disease",
+    "hematology", "blood disorder", "RBC count low"
+  ],
+
+  "symptomKeywords": [
+    "always tired", "pale skin", "shortness of breath stairs", "dizzy when standing",
+    "ice craving", "brittle nails hair loss", "fast heartbeat fatigue", "restless legs",
+    "tongue sore smooth", "cold hands feet"
+  ],
+
+  "metaTitle": "Anemia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Anemia: low red blood cells or hemoglobin causing fatigue, breathlessness, and pale skin. Symptoms, causes, tests, and treatments by clinicians.",
+
+  "keywords": [
+    "anemia", "anaemia", "anemia symptoms", "anemia treatment", "anemia causes",
+    "iron deficiency anemia", "low hemoglobin", "B12 deficiency anemia",
+    "anemia in pregnancy", "anemia diet", "is anemia curable",
+    "anemia blood test", "ferritin level", "anemia vs iron deficiency"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Camaschella C. Iron-Deficiency Anemia. New England Journal of Medicine. 2015;372(19):1832-1843.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25946282/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "World Health Organization. Haemoglobin concentrations for the diagnosis of anaemia and assessment of severity. Vitamin and Mineral Nutrition Information System. Geneva: WHO; 2011 (WHO/NMH/NHD/MNM/11.1).",
+      "url": "https://www.who.int/publications/i/item/WHO-NMH-NHD-MNM-11.1",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "World Health Organization. Anaemia in women and children — Global Health Observatory data. WHO; 2024 update of 2021 estimates.",
+      "url": "https://www.who.int/data/gho/data/themes/topics/anaemia_in_women_and_children",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Auerbach M, DeLoughery TG, Tirnauer JS. Iron deficiency anemia: 2018 ASH practical guidance. American Society of Hematology Education Program. 2017;2017(1):40-47.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29222236/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Le CHH. The Prevalence of Anemia and Moderate-Severe Anemia in the US Population (NHANES 2003-2012). PLOS ONE. 2016;11(11):e0166635.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27846276/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Stoffel NU, Cercamondi CI, Brittenham G, et al. Iron absorption from oral iron supplements given on consecutive versus alternate days and as single morning doses versus twice-daily split dosing in iron-depleted women: two open-label, randomised controlled trials. Lancet Haematology. 2017;4(11):e524-e533.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29032957/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "KDIGO Anemia Work Group. KDIGO Clinical Practice Guideline for Anemia in Chronic Kidney Disease. Kidney International Supplements. 2012;2(4):279-335.",
+      "url": "https://kdigo.org/guidelines/anemia-in-ckd/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Carson JL, Stanworth SJ, Guyatt G, et al. Red Blood Cell Transfusion: 2023 AABB International Guidelines. JAMA. 2023;330(19):1892-1902.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37824153/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Snook J, Bhala N, Beales ILP, et al. British Society of Gastroenterology guidelines for the management of iron deficiency anaemia in adults. Gut. 2021;70(11):2030-2051.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34497145/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Pasricha SR, Tye-Din J, Muckenthaler MU, Swinkels DW. Iron deficiency. Lancet. 2021;397(10270):233-248.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33285139/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
