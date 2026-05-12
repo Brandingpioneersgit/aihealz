@@ -1,0 +1,591 @@
+{
+  "_meta": {
+    "slug": "tuberculosis",
+    "tier": 1,
+    "headTerm": "tuberculosis",
+    "longTailKeywords": [
+      "tuberculosis symptoms",
+      "tuberculosis treatment",
+      "tuberculosis causes",
+      "latent tb",
+      "active tb",
+      "tb skin test",
+      "drug resistant tuberculosis",
+      "mdr tb",
+      "xdr tb",
+      "tb vs pneumonia"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against the 2022 WHO consolidated TB guidelines (drug-susceptible and drug-resistant modules), the 2016 ATS/CDC/IDSA Treatment of Drug-Susceptible TB guideline, Study 31/A5349 (Dorman 2021 NEJM), the ZeNix and Nix-TB trials of bedaquiline-pretomanid-linezolid (BPaL), TB-PRACTECAL (Nyang'wa 2022 NEJM), the WHO Global TB Report 2023, and Xpert MTB/RIF Cochrane meta-analyses (Horne 2019, Zifodya 2021). Drug names and dosing match the 2022 WHO operational handbook."
+  },
+
+  "h1Title": "Tuberculosis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Tuberculosis is a chronic infectious disease caused by Mycobacterium tuberculosis, a slow-growing acid-fast bacillus that most often colonises the upper lobes of the lungs but can spread to almost any organ. The World Health Organization estimates 10.6 million new cases and 1.3 million deaths in 2022, making it the second deadliest infectious killer worldwide after COVID-19. Pulmonary TB classically presents with a cough lasting more than two to three weeks, evening fevers, drenching night sweats, and unexplained weight loss; about a quarter of the world's population carries the bacterium in a latent, non-contagious state. Untreated active pulmonary TB has a case-fatality of roughly 50%, but with correctly chosen four-drug therapy more than 85% of drug-susceptible cases are cured within four to six months.",
+
+  "keyStats": {
+    "prevalence": "10.6 million new cases and 1.3 million deaths globally in 2022 (WHO Global TB Report 2023); ~1.7 billion people carry latent TB",
+    "demographics": "Men account for ~55% of cases; HIV co-infection in 6.3% of new cases globally and >50% in southern Africa",
+    "avgAge": "Adults 15-64 carry ~90% of incident cases worldwide; pediatric TB ~11% of cases but >15% of deaths",
+    "globalCases": "India, Indonesia, China, the Philippines, Pakistan, Nigeria, Bangladesh, and DR Congo account for roughly two-thirds of new cases (WHO 2023)"
+  },
+
+  "definition": "Tuberculosis (ICD-10: A15-A19) is the clinical disease caused by Mycobacterium tuberculosis complex, a group of slow-growing acid-fast bacilli that includes M. tuberculosis, M. bovis, M. africanum, and M. microti. After inhaled droplet nuclei reach the alveoli, bacilli are engulfed by alveolar macrophages but resist intracellular killing through cord-factor and lipid-rich cell-wall components; a localised granulomatous response (the Ghon focus) walls the organism off and produces the latent state. In roughly 5-10% of immunocompetent contacts the bacterium escapes containment within 2 years and produces primary active TB; another 5-10% reactivate decades later, often when HIV, anti-TNF biologics, malnutrition, diabetes, or aging weaken cell-mediated immunity. Pulmonary TB accounts for ~80% of cases and is the only contagious form; extrapulmonary TB involves lymph nodes, pleura, bones and joints (Pott disease), genitourinary tract, gastrointestinal tract, central nervous system (tuberculous meningitis), or disseminated miliary disease. The disease is staged as latent TB infection (LTBI), TB disease, drug-susceptible TB, multidrug-resistant TB (MDR-TB, resistant to isoniazid and rifampicin), pre-extensively drug-resistant TB, and extensively drug-resistant TB (XDR-TB). It is co-managed by pulmonologists, infectious-disease specialists, and national TB programs.",
+
+  "typesClassification": [
+    { "type": "Latent TB infection (LTBI)", "description": "Viable but contained M. tuberculosis with no symptoms and no infectiousness. Identified by a positive tuberculin skin test (TST ≥5-15 mm) or interferon-gamma release assay (IGRA) with a normal chest X-ray. Lifetime reactivation risk is 5-10% in immunocompetent adults and ~10% per year with untreated HIV." },
+    { "type": "Active pulmonary TB", "description": "Symptomatic disease confined to or originating in the lungs. Smear- or culture-positive sputum is contagious by airborne droplet nuclei. Accounts for ~80% of TB cases and is the form responsible for community transmission." },
+    { "type": "Extrapulmonary TB", "description": "TB outside the lungs, including lymphadenitis (most common, especially cervical 'scrofula'), pleural TB, bone and joint TB (Pott disease in the spine), genitourinary TB, abdominal TB, and tuberculous meningitis. More common in HIV co-infection and in children." },
+    { "type": "Miliary (disseminated) TB", "description": "Haematogenous spread producing innumerable 1-3 mm millet-seed-sized lesions throughout the lungs and other organs. Carries high mortality without prompt treatment and is more common in infants, the elderly, and immunosuppressed patients." },
+    { "type": "Multidrug-resistant TB (MDR-TB)", "description": "M. tuberculosis resistant to at least isoniazid and rifampicin, the two most powerful first-line drugs. Estimated 410,000 new cases globally in 2022 (WHO). Requires longer regimens with newer agents such as bedaquiline and linezolid." },
+    { "type": "Pre-XDR-TB and extensively drug-resistant TB (XDR-TB)", "description": "MDR-TB with additional resistance to fluoroquinolones (pre-XDR) or to fluoroquinolones plus bedaquiline or linezolid (XDR per 2021 WHO definition). Treated with all-oral regimens such as BPaL or BPaLM (bedaquiline + pretomanid + linezolid ± moxifloxacin)." }
+  ],
+
+  "primarySymptoms": [
+    "A persistent cough lasting more than two to three weeks, initially dry and later productive of yellow, green, or blood-streaked sputum — the single most important screening symptom.",
+    "Haemoptysis ranging from a few streaks of blood in sputum to frank bleeding — usually a sign of cavitary disease and requires urgent evaluation.",
+    "Drenching night sweats that soak the bedding, classically waking the patient in the early morning hours.",
+    "Low-grade evening fevers (37.5-38.5°C) that rise as the day progresses and respond poorly to antipyretics.",
+    "Unintentional weight loss of 5% or more of body weight over weeks to months, often paired with loss of appetite.",
+    "Profound fatigue and malaise that interferes with normal work, school, or self-care.",
+    "Pleuritic chest pain when the parietal pleura is involved, with discomfort that worsens on deep inspiration.",
+    "Breathlessness on exertion, becoming dyspnoea at rest in advanced cavitary or miliary disease.",
+    "Painless cervical or supraclavicular lymph node swelling that enlarges over weeks and may eventually drain (scrofula) — the most common extrapulmonary presentation.",
+    "Back pain with stiffness, gibbus deformity, or new neurological signs from Pott disease of the spine.",
+    "Headache, vomiting, drowsiness, or cranial nerve palsies in tuberculous meningitis, often subacute over 2-4 weeks."
+  ],
+
+  "earlyWarningSigns": [
+    "Persistent cough beyond 14-21 days in any adult, especially with weight loss or night sweats — international guidelines treat this as a TB screening trigger",
+    "Unexplained weight loss with low-grade afternoon fever in a household contact of a known TB patient",
+    "Positive tuberculin skin test or IGRA on routine pre-employment, pre-biologic, or pre-transplant screening with no prior history",
+    "A 'pneumonia' that fails to clear after a standard antibiotic course and is located in an upper lobe on chest X-ray",
+    "Painless lymph node enlargement persisting more than 4-6 weeks in a young adult from a TB-endemic region"
+  ],
+
+  "emergencySigns": [
+    "Massive haemoptysis (>200 mL in 24 hours) — risk of asphyxiation; requires urgent interventional radiology or surgical consultation",
+    "New headache, neck stiffness, vomiting, confusion, or focal neurological deficit — tuberculous meningitis must be ruled out by lumbar puncture and CSF analysis",
+    "Acute spinal cord compression with leg weakness or bladder dysfunction in a patient with back pain — Pott disease with cord involvement is a surgical emergency",
+    "Sudden severe breathlessness with chest pain — tuberculous pneumothorax or tension empyema requires urgent imaging and chest drain",
+    "Septic appearance with miliary chest X-ray pattern in an immunosuppressed patient — initiate empirical multi-drug therapy after collecting cultures"
+  ],
+
+  "causes": [
+    {
+      "cause": "Inhalation of Mycobacterium tuberculosis droplet nuclei",
+      "description": "Airborne droplet nuclei generated by coughing, sneezing, singing, or talking from a person with smear-positive pulmonary TB are inhaled and reach the alveoli. A single bacillus can establish infection; cumulative exposure time and bacillary load determine transmission probability. Untreated smear-positive patients infect 10-15 close contacts per year on average."
+    },
+    {
+      "cause": "Reactivation of latent TB infection",
+      "description": "Around 90% of immunocompetent adults with latent infection never progress to disease. Reactivation occurs when cell-mediated immunity weakens — through HIV co-infection, anti-TNF biologics, chronic corticosteroids, malnutrition, end-stage renal disease, gastrectomy, silicosis, or simply aging. Most adult pulmonary TB in low-incidence countries is reactivation rather than primary infection."
+    },
+    {
+      "cause": "Primary progression after recent exposure",
+      "description": "In 5-10% of immunocompetent contacts, the initial infection is not contained and progresses directly to active disease within 2 years. Children under 5, especially infants under 2, are at far higher risk of primary progression and severe forms (miliary TB, tuberculous meningitis), which is why contact tracing prioritises this group."
+    },
+    {
+      "cause": "Mycobacterium bovis exposure",
+      "description": "Drinking unpasteurised milk or close contact with infected cattle transmits M. bovis, the cause of zoonotic TB. It accounts for an estimated 1-2% of human TB globally but a higher share in rural pastoral communities. M. bovis is intrinsically resistant to pyrazinamide, which changes treatment selection."
+    },
+    {
+      "cause": "Acquired or transmitted drug resistance",
+      "description": "Drug-resistant TB arises from chromosomal mutations selected by inadequate, incomplete, or poor-quality therapy (acquired resistance), or by direct person-to-person transmission of an already-resistant strain (primary resistance). The WHO estimates ~410,000 new MDR/RR-TB cases in 2022, concentrated in Eastern Europe, Central Asia, India, and southern Africa."
+    },
+    {
+      "cause": "HIV-driven immunosuppression",
+      "description": "HIV is the single strongest independent risk factor for TB. People with HIV who are not on antiretroviral therapy have an annual TB reactivation risk of 5-10%, compared with 5-10% lifetime risk in HIV-negative adults. Globally 6.3% of new TB cases co-occur with HIV; in Eswatini and Lesotho the figure exceeds 50%."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Close contact with an infectious TB patient", "category": "environmental", "description": "Household contacts of a smear-positive case have a roughly 15-30% lifetime infection risk; close workplace, school, or congregate-setting contacts come next. Contact investigation is the most efficient way to find new cases." },
+    { "factor": "HIV infection", "category": "modifiable", "description": "HIV increases reactivation risk roughly 20-fold; people with HIV are responsible for ~10% of TB deaths globally despite being a smaller share of the world's population. Antiretroviral therapy reduces TB incidence by ~65%." },
+    { "factor": "Immunosuppressive therapy (anti-TNF biologics, corticosteroids, transplant medications)", "category": "modifiable", "description": "Anti-TNF agents (infliximab, adalimumab, etanercept) reactivate latent TB at a rate of 1-4 per 1,000 patient-years and warrant screening with IGRA before initiation." },
+    { "factor": "Birth or residence in a high-incidence country", "category": "non-modifiable", "description": "Two-thirds of global TB cases occur in eight countries (India, Indonesia, China, the Philippines, Pakistan, Nigeria, Bangladesh, DR Congo). Foreign-born individuals account for ~70% of US TB cases (CDC 2022)." },
+    { "factor": "Diabetes mellitus", "category": "modifiable", "description": "Type 2 diabetes triples TB risk through impaired macrophage and T-cell function. Diabetes-attributable TB is now a major driver of incident disease in India, Mexico, and the Pacific." },
+    { "factor": "Silicosis and other pneumoconioses", "category": "environmental", "description": "Silica dust paralyses alveolar macrophages; silicosis increases TB risk roughly 30-fold among South African gold miners and produces a synergistic effect with HIV." },
+    { "factor": "Malnutrition and low body mass index", "category": "modifiable", "description": "BMI <18.5 is independently associated with 2-3× higher incidence; nutritional support during treatment improves cure rates and reduces relapse." },
+    { "factor": "Tobacco smoking", "category": "modifiable", "description": "Current smokers have ~2× the TB incidence and a higher case-fatality due to impaired mucociliary clearance and alveolar immunity." },
+    { "factor": "Alcohol use disorder", "category": "modifiable", "description": "Heavy alcohol use (>40 g/day) approximately triples TB risk and worsens treatment adherence, treatment outcomes, and hepatotoxicity from isoniazid and rifampicin." },
+    { "factor": "Congregate living and incarceration", "category": "environmental", "description": "Prisons, refugee camps, homeless shelters, and long-term care facilities have TB incidence rates 5-50× the surrounding population; airborne transmission is amplified by overcrowding and poor ventilation." },
+    { "factor": "Age extremes (<5 years and >65 years)", "category": "non-modifiable", "description": "Young children progress rapidly from infection to disseminated disease; older adults are more likely to reactivate latent infection acquired decades earlier." }
+  ],
+
+  "affectedDemographics": [
+    "South-East Asia (45%) and Africa (23%) carry the largest regional share of new cases (WHO 2023)",
+    "US incidence: 2.5 cases per 100,000 (CDC 2022); ~73% of cases occur in foreign-born individuals",
+    "Indigenous populations (Alaska Native, Inuit, Aboriginal Australian) have incidence 5-30× the national average",
+    "Pediatric cases (<15 years) account for ~11% of incident TB but ~15% of TB deaths due to faster progression",
+    "Men are diagnosed ~1.7× more often than women, partly due to differential health-seeking behaviour and exposure"
+  ],
+
+  "diagnosisOverview": "Diagnosis of TB begins with the symptom triad of a cough lasting more than two weeks, weight loss, and night sweats, supported by chest imaging that classically shows upper-lobe infiltrates, cavitation, or hilar lymphadenopathy. The 2022 WHO consolidated guideline now recommends Xpert MTB/RIF Ultra (or another WHO-endorsed rapid molecular test) as the initial test for everyone with presumptive pulmonary TB rather than smear microscopy alone. Xpert detects M. tuberculosis DNA and rifampicin resistance in under 2 hours with a sensitivity of 88% for smear-positive disease and roughly 67% for smear-negative culture-confirmed disease, far better than direct smear. Sputum acid-fast bacilli smear remains useful for monitoring infectivity and treatment response. Mycobacterial culture on solid (Löwenstein-Jensen) and liquid (MGIT) media is still the gold standard for confirmation and for drug-susceptibility testing on all isolates. In children and other patients who cannot produce sputum, induced sputum, gastric aspirate, or stool Xpert is used. Tuberculin skin test (TST) and interferon-gamma release assays (IGRAs: QuantiFERON-TB Gold Plus, T-SPOT.TB) detect immune sensitisation and are used to diagnose latent TB infection — they cannot distinguish latent from active disease and are not useful for diagnosing active TB. Extrapulmonary TB requires site-directed sampling: lymph node fine-needle aspirate or excisional biopsy, pleural fluid analysis with adenosine deaminase, CSF Xpert and biochemistry for meningitis, MRI-guided spine biopsy for Pott disease. HIV testing is mandatory for every newly diagnosed TB patient; CD4 count and viral load guide cotreatment timing.",
+
+  "diagnosticTests": [
+    {
+      "test": "Xpert MTB/RIF or Xpert MTB/RIF Ultra",
+      "purpose": "WHO-recommended initial diagnostic test. Detects M. tuberculosis DNA and rifampicin resistance simultaneously in under 2 hours. Sensitivity ~88% for smear-positive and ~67% for smear-negative pulmonary TB; rifampicin-resistance detection sensitivity ~95%.",
+      "whatToExpect": "Provide a single sputum sample, ideally with at least 1 mL of mucopurulent material. The sample is loaded into a cartridge and results are reported the same day in most centres."
+    },
+    {
+      "test": "Sputum acid-fast bacilli (AFB) smear microscopy",
+      "purpose": "Ziehl-Neelsen or fluorescence microscopy identifies acid-fast bacilli quickly and quantifies bacillary load. Smear-positive patients are highly infectious; smear conversion to negative is a key early treatment milestone.",
+      "whatToExpect": "Two to three sputum samples collected on consecutive mornings (spot, early-morning, and follow-up) or as 'front-loaded' spot-spot samples. Each sample is processed in under an hour."
+    },
+    {
+      "test": "Mycobacterial culture (solid LJ and liquid MGIT) with drug-susceptibility testing",
+      "purpose": "Gold standard for confirmation, speciation, and full drug-susceptibility testing. Liquid MGIT typically grows positive in 1-3 weeks; solid culture in 3-8 weeks. Phenotypic DST for first- and second-line drugs guides regimen tailoring in resistant disease.",
+      "whatToExpect": "Same sputum sample used for Xpert can be cultured. Results take 2-8 weeks depending on bacillary load and method."
+    },
+    {
+      "test": "Chest radiograph (PA and lateral)",
+      "purpose": "First-line imaging — upper-lobe infiltrates, cavitation, fibronodular scarring, hilar lymphadenopathy, miliary 'snowstorm' pattern, or pleural effusion all raise suspicion. CAD4TB and other AI tools are now WHO-recommended for chest X-ray screening.",
+      "whatToExpect": "Two standard X-ray images while standing. Takes 5 minutes; results read same day in most centres."
+    },
+    {
+      "test": "Tuberculin skin test (Mantoux, PPD)",
+      "purpose": "Detects T-cell sensitisation to mycobacterial antigens, used to diagnose latent TB infection. Cut-offs vary by risk group: ≥5 mm for HIV or contacts, ≥10 mm for high-risk groups, ≥15 mm for low-risk adults. Cannot distinguish latent from active disease.",
+      "whatToExpect": "0.1 mL of PPD injected intradermally into the volar forearm; induration measured at 48-72 hours. Two-step testing may be performed for baseline screening in healthcare workers."
+    },
+    {
+      "test": "Interferon-gamma release assay (QuantiFERON-TB Gold Plus or T-SPOT.TB)",
+      "purpose": "Blood test for latent TB infection, preferred in BCG-vaccinated patients (does not cross-react with BCG) and when follow-up is uncertain. Specificity 95-99%; cannot distinguish latent from active.",
+      "whatToExpect": "Single blood draw; specialised tubes are used. Results return within 2-3 days in most labs."
+    },
+    {
+      "test": "CT chest (high-resolution or contrast)",
+      "purpose": "More sensitive than chest X-ray for tree-in-bud nodules, small cavities, mediastinal nodes, and miliary patterns. Useful when CXR is normal but clinical suspicion remains, and for evaluating complications.",
+      "whatToExpect": "A 5-10 minute scan with breath-hold. Contrast is added when assessing lymph nodes or extrapulmonary disease."
+    },
+    {
+      "test": "Lumbar puncture with CSF Xpert MTB/RIF Ultra, biochemistry, and culture",
+      "purpose": "Diagnostic for tuberculous meningitis. Classic CSF profile: lymphocytic pleocytosis, low glucose, high protein. Xpert Ultra has sensitivity 71% on CSF and is recommended as the initial test (WHO 2022).",
+      "whatToExpect": "Lumbar puncture performed under local anaesthetic, typically in the lateral decubitus position. 10-15 mL of CSF collected; mild headache afterwards is common."
+    },
+    {
+      "test": "HIV testing and CD4 count",
+      "purpose": "Universal HIV testing is mandatory for every newly diagnosed TB patient. CD4 count and viral load guide antiretroviral timing and isoniazid preventive therapy decisions.",
+      "whatToExpect": "Rapid point-of-care HIV test on a finger-prick or oral fluid sample; results within 20 minutes. Confirmatory testing follows a reactive result."
+    }
+  ],
+
+  "treatmentOverview": "Treatment of tuberculosis is curative in over 85% of drug-susceptible cases when the right regimen is given for the right duration with the right adherence support. The 2016 ATS/CDC/IDSA guideline and the 2022 WHO consolidated guideline both endorse the standard 6-month regimen for drug-susceptible pulmonary TB: 2 months of intensive-phase isoniazid, rifampicin, pyrazinamide, and ethambutol (HRZE), followed by 4 months of isoniazid and rifampicin (HR). All four first-line drugs are given daily; intermittent regimens are no longer recommended for HIV-co-infected patients. Doses are weight-banded and provided as fixed-dose combination tablets to simplify adherence. The 2021 Study 31/A5349 trial established a non-inferior 4-month regimen substituting rifapentine for rifampicin and moxifloxacin for ethambutol (2 months HPZM, then 2 months HPM); WHO endorses this option for drug-susceptible pulmonary TB in adolescents and adults. Drug-resistant TB has been transformed by all-oral regimens. The 2022 WHO guideline recommends the 6-month BPaL regimen (bedaquiline + pretomanid + linezolid) or BPaLM (BPaL plus moxifloxacin) for MDR/pre-XDR/XDR-TB, replacing 18-24 month injectable-containing regimens. The TB-PRACTECAL trial showed BPaLM achieved 89% favourable outcomes versus 52% with the long regimen. For latent TB infection, a 3-month weekly isoniazid-rifapentine (3HP) regimen or 4 months of daily rifampicin (4R) is preferred to 9 months of daily isoniazid; both are recommended in adults and adolescents including those with HIV. Direct observation of therapy (DOT) — either in-person or video DOT — remains standard for adherence support, complemented by digital pill monitors and electronic medication adherence platforms. Adjunctive corticosteroids reduce mortality and morbidity in tuberculous meningitis and large pericardial effusions. HIV-co-infected patients start antiretroviral therapy within 2-8 weeks of TB treatment initiation depending on CD4 count. Baseline and on-treatment liver function tests are routine because isoniazid, rifampicin, and pyrazinamide are all hepatotoxic.",
+
+  "medicalTreatments": [
+    {
+      "name": "Standard 6-month regimen for drug-susceptible TB (2HRZE / 4HR): isoniazid 5 mg/kg, rifampicin 10 mg/kg, pyrazinamide 25 mg/kg, ethambutol 15 mg/kg daily for 2 months, then isoniazid + rifampicin for 4 months",
+      "description": "First-line therapy for drug-susceptible pulmonary and most extrapulmonary TB. Fixed-dose combination tablets simplify pill burden. Pyridoxine 25-50 mg daily is co-administered to prevent isoniazid-induced peripheral neuropathy.",
+      "effectiveness": "Cure rate 85-90% with full adherence; sputum culture conversion in 80% by month 2."
+    },
+    {
+      "name": "4-month rifapentine-moxifloxacin regimen (2HPZM / 2HPM): isoniazid + rifapentine + pyrazinamide + moxifloxacin for 2 months, then isoniazid + rifapentine + moxifloxacin for 2 months",
+      "description": "WHO-endorsed shortened regimen for drug-susceptible pulmonary TB in adolescents and adults, based on Study 31/A5349 (Dorman 2021 NEJM). Rifapentine is dosed at 1,200 mg daily.",
+      "effectiveness": "Non-inferior to the standard 6-month regimen: 84.6% favourable outcomes vs 85.4% in the standard arm in Study 31."
+    },
+    {
+      "name": "BPaL regimen for highly drug-resistant TB: bedaquiline 200 mg daily for 8 weeks then 100 mg daily, pretomanid 200 mg daily, linezolid 600 mg daily for 6 months",
+      "description": "All-oral 6-month regimen for MDR-TB with additional fluoroquinolone resistance or for treatment-intolerant patients (Nix-TB and ZeNix trials). Linezolid is the dose-limiting agent; ZeNix established 600 mg daily as the optimal dose to balance efficacy and toxicity.",
+      "effectiveness": "Favourable outcomes in 89-90% of XDR-TB patients in Nix-TB; comparable efficacy with markedly reduced neuropathy at 600 mg in ZeNix."
+    },
+    {
+      "name": "BPaLM regimen for MDR/RR-TB: bedaquiline + pretomanid + linezolid + moxifloxacin for 6 months",
+      "description": "WHO-recommended first-line regimen for rifampicin-resistant or MDR-TB without fluoroquinolone resistance (TB-PRACTECAL trial, Nyang'wa 2022 NEJM). Provides an oral, shorter alternative to 18-24-month injectable-containing regimens.",
+      "effectiveness": "89% favourable outcomes vs 52% with the standard long MDR-TB regimen in TB-PRACTECAL."
+    },
+    {
+      "name": "Isoniazid preventive therapy for latent TB: 3HP (isoniazid + rifapentine weekly for 12 doses) or 4R (rifampicin daily for 4 months)",
+      "description": "Short-course preventive regimens preferred to the older 9-month isoniazid regimen for both completion and tolerability. 3HP requires DOT for the 12 weekly doses but is shorter overall and well tolerated.",
+      "effectiveness": "Risk reduction of 60-90% for progression to active TB across multiple trials and meta-analyses; completion rates exceed 80% versus ~60% for 9H."
+    },
+    {
+      "name": "Adjunctive corticosteroids (dexamethasone 0.3-0.4 mg/kg/day tapered over 6-8 weeks) for tuberculous meningitis",
+      "description": "Standard in tuberculous meningitis to reduce intracerebral inflammation, raised intracranial pressure, and hydrocephalus. Started concurrently with anti-TB therapy and tapered over 6-8 weeks.",
+      "effectiveness": "Absolute mortality reduction of ~30% in HIV-negative tuberculous meningitis (Thwaites 2004 NEJM)."
+    },
+    {
+      "name": "Antiretroviral therapy for HIV-co-infected patients (started within 2-8 weeks of TB treatment depending on CD4 count)",
+      "description": "Earlier ART initiation reduces mortality in patients with CD4 <50 cells/µL; in patients with CD4 ≥50 cells/µL, starting at 8 weeks reduces immune reconstitution inflammatory syndrome risk. Dolutegravir-based regimens are preferred; rifampicin requires dolutegravir 50 mg twice daily.",
+      "effectiveness": "Reduces TB-attributable mortality by 50-70% in HIV-co-infected patients with advanced immunosuppression."
+    },
+    {
+      "name": "Pyridoxine (vitamin B6) 25-50 mg daily for isoniazid users",
+      "description": "Prevents isoniazid-induced peripheral neuropathy by replacing the pyridoxine that isoniazid antagonises. Routine for adults with HIV, diabetes, alcohol use, pregnancy, malnutrition, or chronic kidney disease.",
+      "effectiveness": "Neuropathy incidence falls from 10-20% in high-risk groups to under 2% with prophylactic pyridoxine."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Pulmonary resection (lobectomy, segmentectomy, or pneumonectomy)",
+      "description": "Reserved for localised drug-resistant disease unresponsive to medical therapy, persistent cavitation with positive cultures, massive haemoptysis, broncho-pleural fistula, or destroyed lobe. Performed at experienced thoracic centres with adjunctive medical therapy continued post-operatively.",
+      "successRate": "Long-term sputum conversion in 80-92% of carefully selected MDR-TB patients with adjuvant chemotherapy."
+    },
+    {
+      "name": "Spinal decompression and stabilisation for Pott disease",
+      "description": "Indicated for spinal cord compression with neurological deficit, progressive kyphotic deformity, or instability. Combined with the standard or extended anti-TB regimen.",
+      "successRate": "Neurological recovery in 70-90% of cases when surgery is performed within weeks of deficit onset."
+    },
+    {
+      "name": "Pleural drainage and decortication for tuberculous empyema",
+      "description": "Image-guided chest drain for free pleural fluid; surgical decortication for trapped lung or persistent empyema. Adjuvant to standard anti-TB therapy.",
+      "successRate": "Lung re-expansion in 80-95% of operated cases."
+    },
+    {
+      "name": "Pericardiectomy for constrictive tuberculous pericarditis",
+      "description": "Performed for constrictive physiology refractory to medical therapy with adjunctive corticosteroids. High-risk surgery best done at centres experienced in TB pericardial disease.",
+      "successRate": "Symptomatic improvement in 70-85%; operative mortality 6-15% depending on functional class."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Nutritional support during treatment", "description": "Macronutrient and micronutrient supplementation during TB therapy improves weight gain and reduces relapse in undernourished patients (RATIONS trial, India 2023). Provided as a structured food basket plus multivitamin." },
+    { "name": "Smoking cessation and alcohol reduction counselling", "description": "Reduces relapse and improves outcomes when integrated into TB clinics. Both are independent risk factors for poor outcomes and drug-induced hepatotoxicity." }
+  ],
+
+  "whySeeSpecialist": "Refer to an infectious-disease specialist or experienced pulmonologist for any culture-confirmed drug-resistant TB, suspected MDR or pre-XDR/XDR-TB, treatment failure or relapse, severe drug toxicity requiring regimen change, TB in pregnancy or in young children, extrapulmonary TB at central nervous system or pericardial sites, and any TB-HIV co-infection. National TB programs and tertiary centres co-manage these cases under DOT and provide access to bedaquiline, pretomanid, linezolid, and other reserve agents.",
+  "doctorSelectionGuide": "Choose a clinician trained in TB management with experience in your specific scenario — drug-resistant TB, paediatric TB, pregnancy TB, or HIV-co-infection. Look for affiliation with a national TB program or a WHO Collaborating Centre, access to molecular drug-susceptibility testing, and a DOT or adherence-support team. Continuity matters: TB treatment lasts 4-24 months and outcomes depend on the same clinician monitoring response, side effects, and contact investigation throughout.",
+
+  "hospitalCriteria": [
+    "Designated TB or respiratory isolation rooms with negative pressure ventilation",
+    "Access to molecular diagnostics (Xpert MTB/RIF Ultra, line probe assays) and BSL-3 mycobacterial culture",
+    "On-site or referral access to bedaquiline, pretomanid, linezolid, and other reserve drugs",
+    "Multidisciplinary TB team with infectious disease, pulmonology, pharmacy, social work, and DOT support",
+    "Pharmacovigilance program for monitoring liver, renal, otovestibular, and haematological toxicity"
+  ],
+
+  "keyFacilities": [],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Diagnose and treat infectious TB cases quickly — every smear-positive patient correctly treated prevents an average of 10-15 new infections over the next year",
+    "Screen close contacts of every infectious case with symptoms, chest X-ray, and TST/IGRA, and offer preventive therapy to eligible household and workplace contacts",
+    "Offer preventive therapy (3HP or 4R) to all people with HIV, household contacts of pulmonary TB, and patients about to start anti-TNF biologics or solid-organ transplantation",
+    "Vaccinate newborns in TB-endemic countries with BCG to prevent severe paediatric forms (miliary TB, tuberculous meningitis) — efficacy 70-80% against these but lower against adult pulmonary disease",
+    "Implement airborne infection control in hospitals, clinics, and congregate settings: triage and separation of coughing patients, mechanical ventilation, upper-room UV germicidal irradiation, and respirator use for staff",
+    "Treat HIV early with antiretroviral therapy — incident TB falls by ~65% within the first year of effective ART"
+  ],
+
+  "lifestyleModifications": [
+    "Take every dose on time for the full duration of treatment — missed doses are the leading cause of treatment failure and acquired resistance",
+    "Cover coughs and sneezes during the first 2-3 weeks of effective therapy when patients are most infectious, and stay home from work or school until cleared",
+    "Improve home ventilation: open windows, use cross-ventilation, and minimise crowded sleeping arrangements while infectious",
+    "Stop smoking and limit alcohol throughout treatment to reduce hepatotoxicity and improve cure rates",
+    "Eat a calorie- and protein-rich diet to recover lost weight; structured nutritional support during therapy reduces relapse in undernourished patients",
+    "Attend every monthly clinic visit for sputum monitoring, weight check, drug pickup, and side-effect screening",
+    "Inform any new clinician about your TB diagnosis so other prescriptions do not interact (rifampicin lowers levels of warfarin, oral contraceptives, dolutegravir, and many antiepileptics)"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Energy-dense meals providing 35-40 kcal/kg/day during treatment to restore weight",
+      "Adequate protein (1.2-1.5 g/kg/day) — eggs, dairy, pulses, lean meat, and fish",
+      "Iron- and vitamin B12-rich foods to address the anaemia of chronic infection",
+      "Vitamin D supplementation if deficient (25-OH-D <20 ng/mL) — observational data link deficiency to severity and recurrence",
+      "Pyridoxine (vitamin B6) 25-50 mg daily as prescribed alongside isoniazid",
+      "Hydration of at least 2 litres of fluid daily unless restricted, especially in cavitary disease"
+    ],
+    "avoid": [
+      "Alcohol throughout treatment — synergistic hepatotoxicity with isoniazid, rifampicin, and pyrazinamide",
+      "Unpasteurised dairy, which can transmit Mycobacterium bovis",
+      "Tyramine-rich foods (aged cheese, cured meats, fermented soya) in large amounts when on linezolid — risk of serotonin syndrome and hypertensive episodes",
+      "Crash dieting or fasting — undernourishment slows recovery and increases relapse",
+      "Tobacco — independently lowers cure rate and increases drug-induced liver injury"
+    ]
+  },
+  "exerciseGuidelines": "During the first 2-4 weeks of treatment, when fevers and fatigue dominate, focus on rest and gradual indoor activity. As symptoms improve, build up to 30 minutes of light walking most days. Vigorous training is best deferred until sputum cultures convert, weight is recovering, and stamina returns — typically months 2-4. Pulmonary rehabilitation is recommended after destructive cavitary disease or post-resection.",
+
+  "dailyManagement": [
+    "Take all anti-TB medications on an empty stomach with water at the same time each day to maximise absorption",
+    "Use a daily pill organiser or smartphone reminder; consider video DOT through your TB program",
+    "Track weight weekly — sustained weight gain is a strong sign of treatment response",
+    "Watch for warning side effects: yellowing skin or eyes, dark urine, persistent nausea, numbness or tingling, vision changes, joint pain, or unusual bruising — contact the clinic the same day",
+    "Have monthly blood tests for liver enzymes and complete blood count as your clinic schedules",
+    "Wear a mask in shared indoor spaces during the first 2-3 weeks of effective therapy"
+  ],
+
+  "prognosis": "With full adherence to a correctly chosen regimen, drug-susceptible TB has a cure rate of 85-90% and treatment success rate near 95% in well-resourced settings (WHO Global TB Report 2023). Sputum culture converts to negative in roughly 80% of patients by the end of the 2-month intensive phase; failure to convert at month 2 predicts relapse and triggers regimen review. Untreated active pulmonary TB carries a case-fatality of approximately 50% over 5 years. Multidrug-resistant TB historically had treatment success rates of 50-60% with long injectable-containing regimens, but BPaL/BPaLM regimens achieve 80-89% favourable outcomes in 6 months (Nix-TB, ZeNix, TB-PRACTECAL). Tuberculous meningitis still carries mortality of 20-50% even with treatment, with neurological sequelae in roughly a third of survivors; adjunctive corticosteroids and earlier diagnosis are the strongest modifiable prognostic levers. Long-term, structural lung damage — bronchiectasis, pulmonary fibrosis, and aspergillomas — develops in 20-50% of patients with cavitary disease and contributes to chronic respiratory disability even after microbiological cure.",
+
+  "recoveryTimeline": "Most patients feel substantially better within 2-4 weeks of starting effective therapy, with fevers settling first, appetite and weight following, and cough resolving over 4-8 weeks. Smear conversion typically occurs by week 4-6 in drug-susceptible disease; culture conversion by week 8. Functional recovery and weight regain continue through the 6-month course, and chest X-ray scarring stabilises over 6-12 months. Patients with extensive cavitary disease or severe extrapulmonary forms (CNS, spinal, pericardial) need 12-24 months for functional recovery and structured rehabilitation. After cure, lifelong follow-up is not routine but symptoms recurring within 2 years should prompt rapid re-testing for relapse.",
+
+  "complications": [
+    "Permanent lung damage including bronchiectasis, pulmonary fibrosis, and chronic obstructive deficits — affects 20-50% of cavitary TB survivors and reduces lung function long-term",
+    "Massive haemoptysis from cavitary disease or post-TB aspergilloma — can be life-threatening and requires bronchial artery embolisation or surgery",
+    "Drug-induced liver injury from isoniazid, rifampicin, or pyrazinamide — clinical hepatitis in 1-3% of adults; older age, alcohol, hepatitis B/C, and HIV raise the risk",
+    "Multidrug-resistant or extensively drug-resistant TB emerging from incomplete or poor-quality treatment — far harder to cure and far more expensive",
+    "Tuberculous meningitis with stroke, hydrocephalus, or cranial nerve palsies — 20-50% mortality and ~30% sequelae among survivors",
+    "Pott disease with paraplegia from spinal cord compression or progressive gibbus deformity",
+    "Immune reconstitution inflammatory syndrome (IRIS) in HIV co-infected patients starting antiretroviral therapy — paradoxical worsening typically within the first 3 months",
+    "Aspergilloma forming within a residual TB cavity, presenting years later with haemoptysis"
+  ],
+
+  "supportResources": [
+    { "name": "WHO Tuberculosis programme", "url": "https://www.who.int/health-topics/tuberculosis", "description": "Global TB strategy, fact sheets, and the annual Global TB Report — the authoritative reference for epidemiology and policy." },
+    { "name": "CDC Tuberculosis (TB)", "url": "https://www.cdc.gov/tb/", "description": "US patient education, clinician resources, and surveillance data; useful entry point for foreign-born patients diagnosed in the US." },
+    { "name": "TB Alert", "url": "https://www.tbalert.org/", "description": "UK-based patient charity providing information, support, and advocacy for people affected by TB." },
+    { "name": "Stop TB Partnership", "url": "https://www.stoptb.org/", "description": "Global advocacy partnership coordinating policy, financing, and the global drug facility for affordable TB medicines." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "pneumonia", "name": "Pneumonia", "keyDifference": "Bacterial pneumonia presents acutely over days with high fever, focal consolidation, and rapid improvement on standard antibiotics. Tuberculosis is subacute over weeks, classically with upper-lobe cavitation, night sweats, and weight loss; any cough lasting more than 2-3 weeks warrants TB testing rather than another antibiotic course." },
+    { "slug": "lung-cancer", "name": "Lung Cancer", "keyDifference": "Lung cancer typically produces a fixed mass or persistent infiltrate in older smokers, often with new haemoptysis and weight loss but without prominent fever or night sweats. TB more often shows cavitation with surrounding nodular spread, but the two can coexist and a non-resolving lesion needs both Xpert MTB/RIF Ultra and biopsy." },
+    { "slug": "sarcoidosis-unspecified-d869", "name": "Sarcoidosis", "keyDifference": "Sarcoidosis produces bilateral hilar lymphadenopathy with non-caseating granulomas and a negative TB workup. Patients are typically asymptomatic or have a dry cough; cavitation, fever, and night sweats favour TB. Exclude TB before starting corticosteroids for sarcoidosis." },
+    { "slug": "silicosis", "name": "Silicosis", "keyDifference": "Silicosis is an occupational dust disease with bilateral upper-lobe nodules and progressive massive fibrosis on imaging. Silicosis dramatically increases TB risk, so the two often coexist; any new cavitation in a silicotic patient should be cultured for M. tuberculosis." },
+    { "slug": "copd", "name": "COPD", "keyDifference": "COPD produces chronic dyspnoea and sputum production in smokers with fixed airflow obstruction on spirometry; TB more often causes weight loss, night sweats, and focal cavitation. A new infiltrate or haemoptysis in a COPD patient from an endemic country requires TB exclusion." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hiv-aids", "name": "HIV/AIDS" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" },
+    { "slug": "silicosis", "name": "Silicosis" },
+    { "slug": "copd", "name": "COPD" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "HIV is the strongest known reactivation risk factor and drives more than 10% of TB deaths globally; co-treatment timing is guideline-directed." },
+    { "slug": "pneumonia", "name": "Pneumonia", "relevance": "TB sits on the differential of any subacute pneumonia not responding to standard antibiotics, particularly with upper-lobe disease or weight loss." },
+    { "slug": "lung-cancer", "name": "Lung Cancer", "relevance": "Cavitary lung lesions and post-obstructive infections can mimic TB; coexistence is well documented and warrants dual workup." },
+    { "slug": "sarcoidosis-unspecified-d869", "name": "Sarcoidosis", "relevance": "Granulomatous disease must be distinguished from TB before immunosuppressive treatment, as steroids worsen untreated TB." },
+    { "slug": "silicosis", "name": "Silicosis", "relevance": "Silicosis increases TB risk ~30-fold and frequently coexists in mining and dust-exposed workers." },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes", "relevance": "Diabetes triples TB risk and worsens treatment outcomes; bidirectional screening is recommended in high-burden settings." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "How is tuberculosis spread from person to person?",
+      "answer": "Tuberculosis spreads through airborne droplet nuclei generated when a person with active pulmonary TB coughs, sneezes, sings, or talks. These tiny particles stay suspended in the air for hours and are inhaled into the alveoli of nearby people. TB does not spread through food, sharing utensils, casual touch, or doorknobs. Risk is highest among household and close indoor contacts during the first 2-3 weeks before treatment is effective.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between latent TB infection and active TB disease?",
+      "answer": "Latent TB infection means the bacteria are present in the body but contained by the immune system. There are no symptoms, chest X-ray is normal, and the person is not contagious. Active TB disease is symptomatic, shows abnormalities on imaging or microbiology, and is contagious if it involves the lungs. Roughly 5-10% of people with latent infection progress to active disease over their lifetime.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of tuberculosis?",
+      "answer": "Early signs include a cough lasting more than 2-3 weeks, unintentional weight loss, low-grade evening fevers, drenching night sweats, and progressive fatigue. Chest pain, breathlessness, and blood in the sputum appear later as cavitary disease develops. Painless lymph node swelling can be the first sign of extrapulmonary TB.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does TB treatment take?",
+      "answer": "Drug-susceptible pulmonary TB is cured with 6 months of standard therapy (2 months of four drugs followed by 4 months of two drugs). A WHO-endorsed 4-month rifapentine-moxifloxacin regimen is now an alternative for adolescents and adults. Drug-resistant TB previously needed 18-24 months but is now treated with all-oral 6-month BPaL or BPaLM regimens.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is tuberculosis curable?",
+      "answer": "Yes. Drug-susceptible TB is cured in 85-90% of patients who complete the standard 6-month regimen. Multidrug-resistant and extensively drug-resistant TB are curable with newer regimens such as BPaL or BPaLM, which achieve favourable outcomes in roughly 80-89% of patients in 6 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is TB diagnosed?",
+      "answer": "The 2022 WHO guideline recommends Xpert MTB/RIF or Xpert MTB/RIF Ultra as the initial test for everyone with presumptive pulmonary TB, with sensitivity around 88% in smear-positive disease. Sputum smear microscopy and mycobacterial culture confirm and monitor treatment. Chest X-ray supports the diagnosis. Latent TB is diagnosed by tuberculin skin test or interferon-gamma release assay.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is multidrug-resistant TB?",
+      "answer": "Multidrug-resistant TB (MDR-TB) is caused by strains resistant to at least the two most powerful first-line drugs, isoniazid and rifampicin. The WHO estimates around 410,000 new cases globally in 2022. It is harder to cure than drug-susceptible TB and requires longer regimens with newer drugs such as bedaquiline, pretomanid, and linezolid.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get tuberculosis?",
+      "answer": "Yes. Children under five are at the highest risk of progressing rapidly from infection to severe disease such as miliary TB and tuberculous meningitis. Pediatric cases account for around 11% of incident TB but a disproportionate 15% of TB deaths. Contact investigation around every adult case includes screening all child contacts.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does the BCG vaccine prevent tuberculosis?",
+      "answer": "The BCG vaccine is highly effective against severe paediatric forms of TB such as miliary disease and tuberculous meningitis, with 70-80% efficacy in newborns. Its protection against adult pulmonary TB is variable and generally lower. BCG is given routinely at birth in most TB-endemic countries but is not used in low-incidence countries such as the US.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I get TB more than once?",
+      "answer": "Yes. Successful treatment cures the current episode but does not provide complete immunity. Relapse from the original strain typically occurs within 2 years of cure, while reinfection with a new strain can occur at any time, especially in high-transmission settings. Symptoms similar to the first episode should prompt rapid re-testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between TB and pneumonia?",
+      "answer": "Pneumonia is acute over days, with high fever, focal lobar consolidation, and rapid improvement on standard antibiotics. Tuberculosis is subacute over weeks, classically with upper-lobe cavitation, weight loss, and night sweats. A pneumonia that fails to clear after appropriate antibiotics in an at-risk patient should be tested for TB.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is TB still common today?",
+      "answer": "Yes. The WHO estimates 10.6 million new cases and 1.3 million deaths in 2022, making TB the second-largest infectious killer worldwide after COVID-19. Eight countries (India, Indonesia, China, the Philippines, Pakistan, Nigeria, Bangladesh, and DR Congo) account for roughly two-thirds of new cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can TB affect parts of the body other than the lungs?",
+      "answer": "Yes. Around 20% of cases are extrapulmonary, including lymph node TB (most common), pleural TB, TB of the spine and bones (Pott disease), genitourinary TB, abdominal TB, and tuberculous meningitis. Extrapulmonary TB is more frequent in young children and people with HIV.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I be tested for TB if I lived in a high-incidence country?",
+      "answer": "Adults born in or with extended residence in high-incidence countries are typically offered latent TB screening with an interferon-gamma release assay. The CDC and WHO recommend offering preventive therapy to anyone with a positive test, especially before starting biologic therapy, dialysis, or transplant medications.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When does someone with TB stop being contagious?",
+      "answer": "Most patients with drug-susceptible pulmonary TB become non-contagious after 2-3 weeks of effective therapy, marked by clinical improvement and smear conversion. Drug-resistant TB takes longer. Until then, patients should stay home, cover coughs, ventilate living spaces, and wear a mask in shared indoor settings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are TB drugs safe during pregnancy?",
+      "answer": "Yes. Isoniazid, rifampicin, ethambutol, and pyrazinamide are considered safe in pregnancy and are used in standard therapy for drug-susceptible TB. Pyridoxine supplementation is mandatory. Streptomycin is avoided because of fetal ototoxicity, and second-line agents in MDR-TB pregnancy are selected with specialist input.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does TB treatment cost?",
+      "answer": "Standard first-line drug-susceptible TB regimens are provided free of charge in most national TB programs and through the WHO Stop TB Partnership Global Drug Facility. Out-of-pocket costs (visits, imaging, lost wages) still cause catastrophic expenditure in many households. MDR-TB regimens are more expensive but increasingly subsidised globally.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is directly observed therapy?",
+      "answer": "Directly observed therapy (DOT) means a healthcare worker watches the patient swallow each dose, in person or by video. It is the most reliable way to support adherence and the WHO standard of care for active TB. Video DOT and digital pill monitors are increasingly used alongside in-person observation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can TB cause permanent lung damage?",
+      "answer": "Yes. Cavitary or severe TB can leave behind scarring, bronchiectasis, pulmonary fibrosis, and aspergillomas in 20-50% of survivors. These can cause chronic cough, breathlessness, and recurrent infections. Pulmonary rehabilitation and inhaler therapy may help; haemoptysis from residual cavities sometimes needs bronchial artery embolisation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the side effects of TB medications?",
+      "answer": "Common side effects include nausea, rash, joint pains, and orange discolouration of urine and tears from rifampicin. Serious adverse events include hepatotoxicity from isoniazid, rifampicin, and pyrazinamide (1-3% of adults), optic neuritis from ethambutol, peripheral neuropathy from isoniazid (prevented by pyridoxine), and myelosuppression or neuropathy from linezolid.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is tuberculous meningitis?",
+      "answer": "Tuberculous meningitis is TB involving the meninges and brain, presenting subacutely over 2-4 weeks with headache, fever, vomiting, confusion, and cranial nerve palsies. It is diagnosed by lumbar puncture with Xpert MTB/RIF Ultra, CSF biochemistry, and culture. Treatment uses standard anti-TB drugs for 9-12 months plus adjunctive corticosteroids, which reduce mortality.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I get tested if a family member has TB?",
+      "answer": "Yes. Household and close contacts of an infectious TB case should be evaluated promptly for symptoms, undergo chest X-ray, and have an IGRA or tuberculin skin test for latent infection. Eligible contacts are offered preventive therapy. Children under five and people with HIV are prioritised because of their higher risk of rapid progression.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Tuberculosis (TB, lung infection)",
+  "regionalNames": [
+    { "name": "Tapedik", "region": "India", "language": "Hindi" },
+    { "name": "Kshay Rog", "region": "India", "language": "Hindi" },
+    { "name": "Kshayam", "region": "India (Tamil Nadu)", "language": "Tamil" },
+    { "name": "Phthisis", "region": "Historical / clinical", "language": "Greek" }
+  ],
+
+  "searchTags": [
+    "tuberculosis",
+    "TB",
+    "TB symptoms",
+    "TB treatment",
+    "pulmonary TB",
+    "latent TB",
+    "active TB",
+    "MDR-TB",
+    "XDR-TB",
+    "drug-resistant TB",
+    "extrapulmonary TB",
+    "miliary TB",
+    "tuberculous meningitis",
+    "Pott disease",
+    "Mycobacterium tuberculosis",
+    "Xpert MTB RIF",
+    "BCG vaccine"
+  ],
+
+  "symptomKeywords": [
+    "persistent cough",
+    "coughing blood",
+    "night sweats",
+    "weight loss with cough",
+    "low-grade fever",
+    "long-lasting cough",
+    "neck lymph node swelling",
+    "back pain with weight loss",
+    "chronic chest pain"
+  ],
+
+  "metaTitle": "Tuberculosis (TB): Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Tuberculosis (TB): persistent cough, night sweats, and weight loss from Mycobacterium tuberculosis. Symptoms, diagnosis, and treatment reviewed by our board.",
+
+  "keywords": [
+    "tuberculosis",
+    "TB symptoms",
+    "TB treatment",
+    "latent TB",
+    "active TB",
+    "drug-resistant TB",
+    "MDR-TB",
+    "XDR-TB",
+    "tuberculous meningitis",
+    "Pott disease",
+    "Xpert MTB RIF",
+    "BCG vaccine",
+    "isoniazid",
+    "rifampicin",
+    "bedaquiline"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "World Health Organization. Global Tuberculosis Report 2023. Geneva: WHO; 2023.",
+      "url": "https://www.who.int/teams/global-tuberculosis-programme/tb-reports/global-tuberculosis-report-2023",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "World Health Organization. WHO consolidated guidelines on tuberculosis. Module 4: Treatment - Drug-susceptible tuberculosis treatment, 2022 update. Geneva: WHO; 2022.",
+      "url": "https://www.who.int/publications/i/item/9789240048126",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Nahid P, Dorman SE, Alipanah N, et al. 2016. Official ATS/CDC/IDSA Clinical Practice Guidelines: Treatment of Drug-Susceptible Tuberculosis. Clin Infect Dis 63(7):e147-e195.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27516382/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Dorman SE, Nahid P, Kurbatova EV, et al. 2021. Four-Month Rifapentine Regimens with or without Moxifloxacin for Tuberculosis (Study 31/A5349). N Engl J Med 384(18):1705-1718.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33951360/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Conradie F, Diacon AH, Ngubane N, et al. 2020. Treatment of Highly Drug-Resistant Pulmonary Tuberculosis (Nix-TB: Bedaquiline, Pretomanid, Linezolid). N Engl J Med 382(10):893-902.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32130813/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Conradie F, Bagdasaryan TR, Borisov S, et al. 2022. Bedaquiline-Pretomanid-Linezolid Regimens for Drug-Resistant Tuberculosis (ZeNix). N Engl J Med 387(9):810-823.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36053506/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Nyang'wa BT, Berry C, Kazounis E, et al. 2022. A 24-Week, All-Oral Regimen for Rifampin-Resistant Tuberculosis (TB-PRACTECAL). N Engl J Med 387(25):2331-2343.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36546625/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Horne DJ, Kohli M, Zifodya JS, et al. 2019. Xpert MTB/RIF and Xpert MTB/RIF Ultra for pulmonary tuberculosis and rifampicin resistance in adults. Cochrane Database Syst Rev 6(6):CD009593.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31173647/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Tuberculosis (TB) — Data and Statistics. CDC; 2023.",
+      "url": "https://www.cdc.gov/tb/statistics/default.htm",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Thwaites GE, Nguyen DB, Nguyen HD, et al. 2004. Dexamethasone for the treatment of tuberculous meningitis in adolescents and adults. N Engl J Med 351(17):1741-1751.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15496623/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
