@@ -1,0 +1,542 @@
+{
+  "_meta": {
+    "slug": "acne",
+    "tier": 1,
+    "headTerm": "acne",
+    "longTailKeywords": [
+      "acne treatment",
+      "acne causes",
+      "cystic acne",
+      "hormonal acne",
+      "acne vs rosacea",
+      "best acne medication",
+      "isotretinoin for acne",
+      "adult acne",
+      "acne scarring",
+      "how to get rid of acne"
+    ],
+    "primarySpecialty": "Dermatology",
+    "lastReviewed": "2026-05-12",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2024 AAD Acne Guidelines (Reynolds 2024), Cochrane reviews on topical retinoids and benzoyl peroxide, Layton 2019 isotretinoin systematic review, and the Global Burden of Disease 2019 acne data. Drug doses and durations checked against UK BNF and US PI labelling."
+  },
+
+  "h1Title": "Acne: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Dermatology",
+
+  "heroOverview": "Acne vulgaris is a chronic inflammatory disease of the pilosebaceous unit, driven by excess sebum production, follicular hyperkeratinization, Cutibacterium acnes colonization, and an immune response that produces comedones, papules, pustules, nodules, and cysts. It affects roughly 85% of people aged 12 to 24 at some point and persists into adulthood in 12 to 22 percent of women and 3 percent of men. Lesions concentrate on the face, chest, and back where sebaceous glands are densest, and severity ranges from a few comedones to disfiguring nodulocystic disease. Untreated moderate-to-severe acne leaves permanent atrophic or hypertrophic scarring in up to half of patients and is consistently linked to depression, anxiety, and reduced quality of life. Effective therapies exist at every severity tier — topical retinoids, benzoyl peroxide, oral antibiotics, hormonal agents, and isotretinoin clear or markedly improve disease in the large majority of patients.",
+
+  "keyStats": {
+    "prevalence": "~85% lifetime prevalence in adolescents; 9.4% of the global population (GBD 2019)",
+    "demographics": "Affects all skin types; persists into adulthood more often in women (12-22%) than men (~3%)",
+    "avgAge": "Onset typically 10-13 with puberty; peak severity at age 14-19; adult-onset acne possible into the 40s",
+    "globalCases": "~650 million people worldwide (Global Burden of Disease 2019)"
+  },
+
+  "definition": "Acne vulgaris (ICD-10: L70.0) is a chronic inflammatory disorder of the pilosebaceous unit — the structure formed by a hair follicle and its attached sebaceous gland. Four core mechanisms drive the disease: androgen-stimulated sebum overproduction, abnormal keratinocyte shedding that plugs the follicular opening, proliferation of the lipophilic anaerobe Cutibacterium acnes (formerly Propionibacterium acnes) within the plugged follicle, and a brisk innate immune response involving Toll-like receptor 2 activation, IL-1 release, and neutrophil recruitment. The result is the visible spectrum of comedones (non-inflammatory blocked follicles), inflammatory papules and pustules, and in more severe disease, deep nodules and cysts that can rupture and scar. The condition is graded as mild, moderate, or severe based on lesion type and count using systems such as the Investigator's Global Assessment (IGA) or the Leeds revised acne grading scale. Acne is a disease of the pilosebaceous-rich skin — face (99% of cases), chest, upper back, and shoulders — and is managed primarily by dermatologists, with general practitioners treating the majority of mild and moderate cases. It is distinct from acneiform eruptions caused by drugs, occupational exposures, and endocrine disorders.",
+
+  "typesClassification": [
+    { "type": "Comedonal acne", "description": "Predominantly open (blackheads) and closed (whiteheads) comedones with little inflammation. Often the earliest phase and responds well to topical retinoids alone." },
+    { "type": "Mild inflammatory acne", "description": "Comedones plus a small number of inflammatory papules and pustules, typically under 30 lesions total. Topical retinoid plus benzoyl peroxide is first-line." },
+    { "type": "Moderate inflammatory acne", "description": "More numerous inflammatory lesions, scattered nodules, and a higher chance of scarring. Often requires combination topical therapy with an oral antibiotic or a hormonal agent." },
+    { "type": "Severe nodulocystic acne", "description": "Multiple deep nodules and cysts, sinus tracts, and scarring across the face, chest, and back. Indication for oral isotretinoin in most patients." },
+    { "type": "Acne fulminans", "description": "A rare ulcerative variant with sudden onset, systemic symptoms (fever, arthralgia, leucocytosis), and rapid scarring. Requires oral corticosteroids before and during isotretinoin." },
+    { "type": "Acne conglobata", "description": "Severe nodular acne without systemic features, with interconnecting abscesses and sinus tracts predominantly on the trunk. Belongs to the follicular occlusion tetrad alongside hidradenitis suppurativa." }
+  ],
+
+  "primarySymptoms": [
+    "Open comedones (blackheads) — dilated follicular openings filled with darkened oxidized keratin, most often on the nose, forehead, and chin.",
+    "Closed comedones (whiteheads) — small skin-coloured or whitish bumps representing follicles plugged below the surface, often on the forehead and cheeks.",
+    "Inflammatory papules — small red or pink raised lesions 1 to 5 millimetres across that are tender to touch and develop over hours to days.",
+    "Pustules — papules with a visible white or yellow centre of pus, typically resolving within a week with or without leaving a temporary red or brown mark.",
+    "Nodules — firm, painful inflammatory lesions deeper than 5 millimetres that last weeks and have a high risk of scarring even when they resolve.",
+    "Cysts — fluctuant fluid-filled deep lesions that can rupture into surrounding tissue, drain pus, and almost always leave permanent scars.",
+    "Post-inflammatory hyperpigmentation — flat brown or grey marks that persist for months after a lesion heals, especially in skin of colour (Fitzpatrick IV-VI).",
+    "Post-inflammatory erythema — flat red or pink marks that follow inflammatory lesions in lighter skin types and can take 3 to 12 months to fade.",
+    "Atrophic scarring — ice-pick, boxcar, and rolling scars that form after deep inflammation destroys dermal collagen and are largely permanent without procedural treatment.",
+    "Hypertrophic and keloid scarring — raised, firm scars most common on the jawline, chest, and back, sometimes extending beyond the original lesion border.",
+    "Seborrhoea — visibly oily skin, especially across the central face (T-zone), reflecting the underlying sebaceous gland overactivity.",
+    "Tenderness and burning sensation over actively inflamed nodules and cysts, often disproportionate to the visible lesion size."
+  ],
+
+  "earlyWarningSigns": [
+    "Onset of comedones across the forehead, nose, and chin at age 10 to 13 — often the first sign of pubertal androgen surge",
+    "Increasing skin oiliness on the central face, hair becoming greasy faster than before",
+    "A predictable monthly flare in women in the days before menstruation, especially along the jawline and chin",
+    "New-onset comedones or papules after starting anabolic steroids, high-dose B12, lithium, or systemic corticosteroids",
+    "Persistent inflammatory papules confined to a single body region in an adult, suggesting an emerging adult-onset or occupational pattern"
+  ],
+
+  "emergencySigns": [
+    "Sudden eruption of ulcerated, crusted nodules on the trunk with fever, joint pain, and feeling systemically unwell — possible acne fulminans, which needs urgent specialist assessment and systemic corticosteroids",
+    "A rapidly growing, intensely painful nodule with surrounding cellulitis, fever, and spreading redness — bacterial superinfection or abscess requiring incision, drainage, and systemic antibiotics",
+    "New severe acne with rapid masculinization in a woman (deepening voice, clitoromegaly, balding) — work up for androgen-secreting tumour",
+    "Suicidal ideation or significant new depression in an adolescent with acne, especially on or off isotretinoin — requires same-day mental health review"
+  ],
+
+  "causes": [
+    {
+      "cause": "Androgen-driven sebum overproduction",
+      "description": "Dihydrotestosterone binds sebaceous gland androgen receptors and dramatically increases sebum output starting at puberty. Sebum provides the lipid substrate for C. acnes growth and is the upstream driver of nearly every acne case."
+    },
+    {
+      "cause": "Follicular hyperkeratinization",
+      "description": "Keratinocytes lining the upper follicle proliferate abnormally and fail to shed, forming a microcomedo — the precursor of every visible acne lesion. Defects in keratin K6 and K16 expression and reduced linoleic acid in sebum both contribute."
+    },
+    {
+      "cause": "Cutibacterium acnes proliferation and biofilm",
+      "description": "The anaerobic lipophilic bacterium C. acnes thrives in the sebum-rich, oxygen-poor environment of the plugged follicle. Specific phylotypes (IA1) form biofilms, hydrolyse sebum triglycerides into pro-inflammatory free fatty acids, and activate TLR2 on follicular keratinocytes."
+    },
+    {
+      "cause": "Innate and adaptive immune activation",
+      "description": "C. acnes-driven TLR2 signalling triggers NLRP3 inflammasome assembly, IL-1β release, neutrophil recruitment, and Th17 polarization. This inflammatory cascade — not the bacterium itself — produces the visible papules, pustules, nodules, and resulting scars."
+    },
+    {
+      "cause": "Hormonal triggers and endocrine disorders",
+      "description": "Polycystic ovary syndrome, congenital adrenal hyperplasia, exogenous androgens, anabolic steroids, and androgenic progestogens in some contraceptives all raise circulating androgens or sensitise sebaceous glands and worsen acne, particularly in adult women."
+    },
+    {
+      "cause": "High glycaemic-load diet and dairy intake",
+      "description": "Diets with a high glycaemic load raise insulin and IGF-1, which in turn drive androgen synthesis and sebum production. Multiple cohort studies show skim milk is more strongly associated with acne than whole milk, likely via IGF-1 and free whey hormones."
+    },
+    {
+      "cause": "Comedogenic skincare and occupational exposures",
+      "description": "Heavy oil-based cosmetics, pomades, and certain workplace exposures (cutting oils, halogenated hydrocarbons, chlorinated compounds) physically occlude follicles or are chemically irritant, producing acne cosmetica, pomade acne, and chloracne respectively."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Adolescence (ages 12-24)", "category": "non-modifiable", "description": "Pubertal androgen surge drives sebum production. Roughly 85% of adolescents develop some acne; peak severity is age 14-19." },
+    { "factor": "Family history of acne", "category": "genetic", "description": "Twin studies estimate heritability at 78-81%. Having a first-degree relative with severe acne increases personal risk roughly 3-fold and predicts higher severity." },
+    { "factor": "Female sex in adulthood", "category": "non-modifiable", "description": "Adult acne persists in 12-22% of women versus about 3% of men, driven by cyclical hormonal changes, PCOS prevalence, and increased adult androgen receptor sensitivity." },
+    { "factor": "Polycystic ovary syndrome", "category": "non-modifiable", "description": "Up to 70% of women with PCOS have acne. Hyperandrogenism, insulin resistance, and elevated IGF-1 jointly drive sebum production and follicular plugging." },
+    { "factor": "High glycaemic-load diet", "category": "modifiable", "description": "Diets high in refined carbohydrates and sugar raise insulin and IGF-1. A 12-week low-GL diet reduced acne lesion counts by roughly 22% in an Australian RCT (Smith 2007)." },
+    { "factor": "Skim milk and dairy intake", "category": "modifiable", "description": "Meta-analyses show daily skim-milk intake raises acne odds by roughly 1.5-fold versus non-dairy consumers; whole milk shows a weaker association." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Smoking is associated with a comedonal post-adolescent acne phenotype in women, with dose-response effects in observational cohorts." },
+    { "factor": "Anabolic steroid and supplement use", "category": "modifiable", "description": "Exogenous androgens, whey protein supplements, and high-dose vitamin B12 reliably trigger or worsen acne; effect resolves within months of stopping." },
+    { "factor": "Comedogenic cosmetics, pomades, occlusive masks", "category": "environmental", "description": "Heavy oil-based products and prolonged occlusion (helmets, sports gear, surgical masks — 'maskne') mechanically and chemically obstruct follicles." },
+    { "factor": "Occupational exposure to industrial oils, halogens", "category": "environmental", "description": "Cutting oils, tar, dioxins, and chlorinated aromatic hydrocarbons produce acne cosmetica and chloracne; chloracne is a hallmark of dioxin poisoning." }
+  ],
+
+  "affectedDemographics": [
+    "US prevalence: ~50 million Americans annually; lifetime prevalence ~85% (AAD 2024)",
+    "Global Burden of Disease 2019: acne ranks 8th among most prevalent diseases worldwide, affecting 9.4% of the population",
+    "Persistent adult acne is markedly more common in women (12-22%) than men (~3%) (Collier 2008)",
+    "Severity is higher and post-inflammatory hyperpigmentation more common in Fitzpatrick skin types IV-VI; scarring rates are also higher in skin of colour",
+    "Acne is uncommon under age 8 — true paediatric acne in this group warrants endocrine evaluation for early puberty, congenital adrenal hyperplasia, or androgen-secreting tumour"
+  ],
+
+  "diagnosisOverview": "Acne is a clinical diagnosis made on history and skin examination — no laboratory test is required for the typical case. The clinician evaluates lesion type (comedonal versus inflammatory versus nodulocystic), lesion count, anatomical distribution, scarring, post-inflammatory pigmentation, and impact on quality of life using validated tools such as the Cardiff Acne Disability Index. Severity is graded with the Investigator's Global Assessment (IGA) or the Leeds revised system to guide therapy and document treatment response. A focused history captures duration, age of onset, prior treatments and durations, family history of acne and scarring, current medications, contraceptive use, menstrual regularity, and any signs of hyperandrogenism such as hirsutism, alopecia, or menstrual irregularity. Hormonal testing is reserved for women with clinical features suggestive of an underlying endocrine disorder: irregular cycles, hirsutism, signs of PCOS, sudden-onset severe acne, or virilization. In those cases free testosterone, DHEAS, 17-hydroxyprogesterone, LH, FSH, and prolactin are appropriate, ideally drawn in the early follicular phase and off hormonal contraception. Bacterial culture is unnecessary in routine acne but is considered when gram-negative folliculitis is suspected after prolonged oral antibiotic use, or when acne is unusually resistant or pustular. Skin biopsy is rarely indicated except in atypical presentations where acneiform drug eruption, rosacea, periorificial dermatitis, or eosinophilic folliculitis enter the differential. Photo-documentation at baseline and at 8 to 12 week intervals improves shared decision-making and adherence, because patients underestimate their own improvement.",
+
+  "diagnosticTests": [
+    {
+      "test": "Clinical lesion assessment with severity grading",
+      "purpose": "The diagnostic standard for acne. Counts inflammatory and non-inflammatory lesions, identifies nodules and scarring, and assigns an IGA or Leeds grade that guides first-line versus systemic therapy.",
+      "whatToExpect": "A dermatologist examines the face, chest, back, and shoulders under good lighting, often documenting with standardised photographs. The visit takes 10 to 15 minutes and is painless."
+    },
+    {
+      "test": "Hormonal panel (free testosterone, DHEAS, 17-OHP, LH, FSH, prolactin)",
+      "purpose": "Reserved for women with irregular cycles, hirsutism, sudden-onset severe acne, or virilization. Identifies PCOS, late-onset congenital adrenal hyperplasia, and rare androgen-secreting tumours.",
+      "whatToExpect": "A standard blood draw, ideally between cycle days 2 and 5, and at least 6 weeks off combined oral contraception when possible. Results typically return within a week."
+    },
+    {
+      "test": "Cardiff Acne Disability Index or Acne-QoL questionnaire",
+      "purpose": "Quantifies psychosocial impact of acne. Useful to support escalation to systemic therapy in patients whose lesion count is moderate but whose distress is severe, and to track response.",
+      "whatToExpect": "A short paper or digital questionnaire taking 3 to 5 minutes. Items cover mood, social activity, work or school impact, and confidence."
+    },
+    {
+      "test": "Bacterial swab and culture",
+      "purpose": "Considered when gram-negative folliculitis is suspected (sudden eruption of monomorphic pustules in a patient on long-term tetracyclines) or when secondary bacterial infection is likely.",
+      "whatToExpect": "A sterile swab is rolled across an intact pustule. Results take 48 to 72 hours and sometimes redirect therapy from tetracyclines to ampicillin or trimethoprim-sulfamethoxazole."
+    },
+    {
+      "test": "Pelvic ultrasound (in suspected PCOS)",
+      "purpose": "When clinical features suggest PCOS, ultrasound documents polycystic ovarian morphology as one of three Rotterdam diagnostic criteria. Acne alone is not an indication.",
+      "whatToExpect": "Transabdominal or transvaginal ultrasound lasting 15 to 30 minutes. Transabdominal scans require a full bladder; transvaginal scans do not."
+    },
+    {
+      "test": "Photo-documentation at baseline and follow-up",
+      "purpose": "Standardised photographs at baseline and every 8 to 12 weeks objectively track lesion change and counter the common patient perception of stalled progress.",
+      "whatToExpect": "Front, left, and right oblique photographs taken in clinic with consistent lighting. Many practices use facial-analysis apps that quantify lesion count automatically."
+    },
+    {
+      "test": "Pregnancy test (before and during isotretinoin)",
+      "purpose": "Isotretinoin is a category X teratogen. Negative pregnancy tests are required before prescription, monthly during therapy, and one month after stopping under iPLEDGE in the US.",
+      "whatToExpect": "Serum or urine beta-hCG. Two negative tests one month apart are required before the first prescription, with monthly tests through treatment and one month afterwards."
+    }
+  ],
+
+  "treatmentOverview": "Acne treatment is matched to lesion type and severity, with all stages guided by the 2024 American Academy of Dermatology guideline and the 2021 European S3 guideline. Mild comedonal disease is treated with a topical retinoid (tretinoin, adapalene, or trifarotene) applied nightly, with benzoyl peroxide added if inflammatory lesions appear. Mild-to-moderate inflammatory acne is treated with a fixed-dose topical retinoid plus benzoyl peroxide, often combined with topical clindamycin for 8 to 12 weeks; clindamycin should never be used as monotherapy because of antibiotic resistance. Moderate acne unresponsive to topicals after 8 to 12 weeks calls for an oral antibiotic — doxycycline 50 to 100 mg daily or sarecycline 1.5 mg per kg — used for no longer than 12 to 16 weeks alongside benzoyl peroxide and a topical retinoid, then withdrawn while topicals are maintained. In women, combined oral contraceptives containing a non-androgenic progestogen and spironolactone 50 to 200 mg daily are guideline-recommended hormonal options; spironolactone has roughly equivalent efficacy to oral tetracyclines without antibiotic stewardship concerns. Severe nodulocystic acne, scarring acne, or acne unresponsive to a full course of conventional therapy is treated with oral isotretinoin at 0.5 to 1.0 mg per kg daily, targeting a cumulative dose of 120 to 150 mg per kg over 5 to 8 months; this regimen clears acne in approximately 85% of patients with sustained remission in 60 to 70% after a single course. Newer agents include clascoterone — the first topical anti-androgen approved in the US — and trifarotene, a fourth-generation retinoid effective on both face and trunk. Treat-to-clear is the modern target: residual lesions justify continued therapy, because subclinical inflammation drives scarring. Procedural treatments (chemical peels, laser and light therapy, microneedling, intralesional steroid injection for nodules) supplement rather than replace medical therapy.",
+
+  "medicalTreatments": [
+    {
+      "name": "Topical retinoids — adapalene 0.1-0.3%, tretinoin 0.025-0.1%, trifarotene 0.005%, tazarotene 0.045-0.1% (nightly)",
+      "description": "First-line for all acne severities. Normalize follicular keratinization, dissolve existing microcomedones, prevent new lesion formation, and have a modest anti-inflammatory effect. Trifarotene and tazarotene are licensed for truncal acne in addition to facial.",
+      "effectiveness": "Reduce inflammatory and non-inflammatory lesions by 40-70% over 12 weeks (Cochrane review, Yang 2014)."
+    },
+    {
+      "name": "Benzoyl peroxide 2.5-5% (once or twice daily, alone or in fixed-dose combinations)",
+      "description": "Bactericidal against C. acnes through oxidative damage with no documented resistance after decades of use. Mandatory companion whenever a topical or oral antibiotic is used to prevent and reverse antibiotic resistance.",
+      "effectiveness": "Reduces inflammatory lesion counts by approximately 50% over 12 weeks; 2.5% is roughly as effective as 5% or 10% with less irritation."
+    },
+    {
+      "name": "Topical clindamycin 1% + benzoyl peroxide 5% (fixed combination, once daily)",
+      "description": "First-line combination for mild-to-moderate inflammatory acne. Co-formulation prevents the antibiotic resistance that develops with clindamycin monotherapy. Never use topical antibiotics without benzoyl peroxide.",
+      "effectiveness": "Reduces inflammatory lesions by ~60% versus ~45% for either agent alone in a 12-week pivotal trial."
+    },
+    {
+      "name": "Oral doxycycline (50-100 mg once or twice daily for up to 12-16 weeks)",
+      "description": "Tetracycline-class antibiotic with anti-inflammatory and mild antibacterial effects. Used for moderate-to-severe inflammatory and nodular acne, always combined with topical benzoyl peroxide and a retinoid, and discontinued after 12-16 weeks to limit resistance.",
+      "effectiveness": "Reduces inflammatory lesion counts by 50-60% over 12 weeks; sub-antimicrobial dose 40 mg modified-release is similarly effective with fewer GI side effects."
+    },
+    {
+      "name": "Oral sarecycline (1.5 mg/kg once daily)",
+      "description": "Narrow-spectrum tetracycline approved in 2018 with lower impact on gut and skin microbiome than doxycycline or minocycline. Useful where antibiotic stewardship and tolerability matter.",
+      "effectiveness": "Reduces inflammatory facial lesions by ~50% at 12 weeks in phase 3 trials (Moore 2018); efficacy similar on truncal disease."
+    },
+    {
+      "name": "Spironolactone (50-200 mg daily) in women",
+      "description": "Androgen receptor antagonist with mild aldosterone effect. First-line for adult women with hormonal-pattern acne (jawline, premenstrual flares) and a guideline-recommended alternative to long-term oral antibiotics. Effective even when androgen levels are normal.",
+      "effectiveness": "55-85% of women report marked or complete clearance over 3-6 months in cohort studies and a recent RCT (SAFA trial, Santer 2023)."
+    },
+    {
+      "name": "Combined oral contraceptive (ethinylestradiol + non-androgenic progestogen)",
+      "description": "Suppresses ovarian androgen production and raises sex-hormone binding globulin. Effective in women without contraindications; four formulations have FDA approval for acne. Lag to maximum effect is 3-6 months.",
+      "effectiveness": "Reduces inflammatory lesions by ~50% versus placebo at 6 months (Cochrane review, Arowojolu 2012)."
+    },
+    {
+      "name": "Oral isotretinoin (0.5-1.0 mg/kg daily; cumulative target 120-150 mg/kg over 5-8 months)",
+      "description": "Reduces sebum production by up to 90%, normalizes follicular keratinization, and modulates inflammation. Indicated for severe nodulocystic acne, scarring acne, or acne unresponsive to a full course of standard therapy. Strict pregnancy prevention (iPLEDGE in the US) is mandatory.",
+      "effectiveness": "Clears acne in ~85% of patients during therapy; sustained remission after a single course in 60-70% (Layton 2019 systematic review)."
+    },
+    {
+      "name": "Topical clascoterone 1% cream (twice daily)",
+      "description": "First topical androgen receptor antagonist approved (FDA 2020) for moderate-to-severe facial acne in patients age 12 and older of either sex. Acts locally with negligible systemic absorption — usable when spironolactone is contraindicated.",
+      "effectiveness": "IGA success (clear/almost clear) in ~19% versus 7% placebo at 12 weeks across two phase 3 trials (Hebert 2020)."
+    },
+    {
+      "name": "Intralesional triamcinolone 2.5-5 mg/mL for individual nodules and cysts",
+      "description": "Injected directly into painful inflammatory nodules or cysts to flatten and shrink the lesion within 48-72 hours, reducing pain and scarring risk. A bridge to systemic therapy rather than a primary treatment.",
+      "effectiveness": "Visible flattening within 48-72 hours in roughly 90% of injected lesions; small risk of dermal atrophy at the injection site."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Comedone extraction",
+      "description": "Mechanical removal of open and closed comedones using a sterile loop or needle after gentle puncture. Reduces visible lesion count quickly and supports topical retinoid therapy. Done in clinic, not at home.",
+      "successRate": "Immediate cosmetic improvement in 90% of treated comedones; relapse without ongoing retinoid therapy."
+    },
+    {
+      "name": "Incision and drainage of large fluctuant cysts",
+      "description": "Reserved for large, painful, fluctuant cysts that are likely to rupture and scar. Performed under local anaesthetic with a small stab incision. Often combined with intralesional steroid injection of the cyst wall.",
+      "successRate": "Rapid pain relief in ~95% of cases; recurrence common without systemic therapy of the underlying acne."
+    },
+    {
+      "name": "Fractional laser, microneedling, and chemical peels for scarring",
+      "description": "Used after active acne is fully controlled to remodel atrophic scars (ice-pick, boxcar, rolling) through controlled dermal injury and collagen induction. Multiple sessions are usually required.",
+      "successRate": "Patient-reported scar improvement of 25-50% over 3-6 sessions in randomized comparison trials; combination with subcision is more effective for rolling scars."
+    },
+    {
+      "name": "Subcision and punch elevation for ice-pick and boxcar scars",
+      "description": "Subcision uses a needle to release fibrotic tethers under rolling scars; punch elevation lifts a deep boxcar scar level with surrounding skin. Both are office procedures and pair with resurfacing.",
+      "successRate": "Symptomatic improvement in 70-80% of treated scars when combined with fractional resurfacing."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Low-glycaemic-load diet", "description": "A 12-week low-GL diet reduced total acne lesion counts by approximately 22% versus a high-GL diet in an Australian RCT (Smith 2007). Reasonable adjunct, not a substitute for guideline therapy." },
+    { "name": "Tea tree oil 5% gel", "description": "A small RCT (Bassett 1990) showed 5% tea tree oil reduced inflammatory lesions similarly to 5% benzoyl peroxide but with slower onset and a meaningful rate of contact dermatitis. Reasonable for patients who decline BPO." },
+    { "name": "Blue and red light phototherapy", "description": "Daily home-use blue light (415 nm) targets C. acnes porphyrins; combined blue/red devices have shown 30-50% inflammatory lesion reduction in small trials. Adjunct only — does not replace topical or systemic therapy." }
+  ],
+
+  "whySeeSpecialist": "See a dermatologist when acne is moderate or worse, when scarring is starting or already present, when over-the-counter and primary-care treatment has not controlled the disease after 8 to 12 weeks, when truncal acne is involved, when pigmentary or psychological impact is significant, or when isotretinoin or hormonal therapy is being considered. A dermatologist coordinates the treatment plan, manages adverse effects, and decides when procedural treatment for scarring should begin.",
+
+  "doctorSelectionGuide": "Look for board certification in dermatology, experience with isotretinoin and spironolactone (volume matters — under-prescribing both is common), comfort grading acne with the IGA or Leeds system, access to procedural services for scarring (lasers, microneedling, subcision), and willingness to photo-document at baseline. In women, ask whether the practice screens for PCOS when clinically appropriate. Continuity over 6 to 12 months is more important than prestige.",
+
+  "preventionStrategies": [
+    "Start daily topical retinoid maintenance once acne is controlled — stopping treatment is the single biggest driver of relapse and new scarring",
+    "Use non-comedogenic, oil-free cosmetics and sunscreens, and replace heavy hair pomades and oil-based products if they sit on acne-prone skin",
+    "Wash the face twice daily with a gentle, non-foaming cleanser — over-washing and scrubbing worsen inflammation and impair barrier function",
+    "Reduce dietary glycaemic load and limit skim-milk intake in patients whose acne flares with sugar or dairy",
+    "Avoid picking, squeezing, or extracting lesions at home — mechanical trauma extends inflammation and is the principal cause of ice-pick scarring",
+    "Treat early — referring within 8 to 12 weeks of inadequate response prevents irreversible scarring far more effectively than late escalation"
+  ],
+
+  "lifestyleModifications": [
+    "Apply a daily broad-spectrum SPF 30+ sunscreen — retinoids and benzoyl peroxide raise photosensitivity, and ultraviolet exposure worsens post-inflammatory hyperpigmentation",
+    "Change pillowcases and clean phone screens regularly — friction and occlusion drive acne mechanica on the cheeks and jaw",
+    "Replace sports gear straps, helmets, and headbands frequently and shower promptly after sweating to reduce truncal acne",
+    "Use fragrance-free moisturizer to maintain barrier function during retinoid use — well-moisturized skin tolerates higher retinoid concentrations",
+    "Take medications on time — adherence to a 12-week topical regimen is the strongest predictor of clearance",
+    "Track menstrual-cycle flares in women so a dermatologist can decide on hormonal therapy with the relevant data in hand",
+    "Discuss any anabolic steroid, high-dose B12, or whey-protein supplementation with the prescribing clinician — many of these can trigger or worsen acne"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Low-glycaemic-load eating pattern — whole grains, vegetables, legumes, intact fruit",
+      "Mediterranean-style diet rich in omega-3 fatty acids from oily fish, flaxseed, and walnuts",
+      "Adequate hydration with water — aim for around 2 litres daily",
+      "Probiotic-containing foods (yogurt, kefir, fermented vegetables) — small trials suggest mild anti-inflammatory benefit",
+      "Zinc-containing foods (pumpkin seeds, lentils, shellfish in non-vegetarians) — observational link to lower acne severity"
+    ],
+    "avoid": [
+      "High-glycaemic-load foods — white bread, sugary cereals, soft drinks, confectionery",
+      "Skim and low-fat milk in patients whose acne flares with dairy (whole milk has a weaker association)",
+      "Whey protein supplements in patients prone to truncal or jawline acne",
+      "Anabolic androgenic steroids and prohormones — reliably trigger or worsen acne",
+      "High-dose vitamin B12 supplementation (above 1000 mcg/day) outside of documented deficiency"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular exercise is encouraged and does not worsen acne when basic hygiene is observed. Shower promptly after workouts to wash off sweat, sebum, and friction-occluded particles. Avoid prolonged contact between acne-prone skin and tight straps, helmets, or shared equipment. Patients on isotretinoin should hold contact sports while bones and skin are more fragile, and avoid heavy weight-training in the first two months because of a rare but real risk of musculoskeletal pain and tendon strain.",
+
+  "dailyManagement": [
+    "Apply topical retinoid each night to clean dry skin, starting every other night to build tolerance, then nightly",
+    "Apply benzoyl peroxide or any topical antibiotic in the morning to avoid retinoid degradation",
+    "Use a fragrance-free moisturizer twice daily and a daily broad-spectrum sunscreen",
+    "Take oral therapy with food and at a consistent time — doxycycline with a full glass of water sitting up to reduce pill esophagitis",
+    "Photograph face under consistent lighting at week 0, 6, and 12 to track real progress",
+    "Document monthly menstrual cycles, dietary triggers, and stressors to spot personal patterns over a few months"
+  ],
+
+  "prognosis": "Acne typically resolves by the mid-20s in most adolescents, but persists into adulthood in 12 to 22 percent of women and around 3 percent of men. With guideline-directed therapy, almost all patients achieve clear or near-clear skin: topical regimens deliver clearance in roughly half of mild-to-moderate cases within 12 weeks, hormonal therapy or oral antibiotics push response rates above 70 percent, and a full course of isotretinoin clears acne in approximately 85 percent of severe cases, with durable remission in 60 to 70 percent after a single course. The decisive prognostic factors are early treatment (before scarring develops), adherence to a full 12-week course of topicals, maintenance therapy with a retinoid after clearance, and prompt escalation when first-line therapy under-performs. Untreated moderate or severe acne leaves permanent scarring in roughly 30 to 50 percent of patients, post-inflammatory pigmentation that may last years in skin of colour, and is independently associated with depression, anxiety, and suicidal ideation. Aggressive treatment of the disease — not of the scars — gives the best long-term outcome.",
+
+  "recoveryTimeline": "Topical regimens improve acne visibly from week 4, with maximum benefit at week 12 to 16 — patients often abandon therapy too early during a transient purge in weeks 2 to 6 when retinoids surface deeper microcomedones. Oral antibiotics and spironolactone show benefit at 6 to 8 weeks with peak at 3 to 6 months. Combined oral contraceptives need 3 to 6 months to reach maximum effect. Isotretinoin courses run 5 to 8 months and roughly 85 percent of patients are clear by the end; a worsening flare in the first month is common and managed with low-dose oral steroids or staggered dose escalation. Scar remodelling treatments begin only after active acne has been controlled for at least 6 months; visible improvement accumulates over 3 to 6 sessions spaced 4 to 6 weeks apart.",
+
+  "complications": [
+    "Permanent atrophic scarring — ice-pick, boxcar, and rolling scars that affect roughly 30-50% of patients with untreated moderate-severe acne",
+    "Hypertrophic and keloid scarring — raised firm scars on the jawline, chest, and back, more common in skin of colour",
+    "Post-inflammatory hyperpigmentation lasting 6-24 months, more common and prolonged in Fitzpatrick skin types IV-VI",
+    "Post-inflammatory erythema lasting 3-12 months, more common in lighter skin types",
+    "Depression, anxiety, social withdrawal, and suicidal ideation — acne carries a higher risk of suicide attempt than many other chronic skin diseases (Sundström 2010)",
+    "Gram-negative folliculitis — sudden monomorphic pustular eruption after prolonged oral tetracycline use; treated with ampicillin or trimethoprim-sulfamethoxazole",
+    "Acne fulminans — rare ulcerative flare with systemic symptoms, often after starting isotretinoin without steroid cover, requiring oral corticosteroids and dose adjustment"
+  ],
+
+  "supportResources": [
+    { "name": "American Academy of Dermatology — Acne Resource Center", "url": "https://www.aad.org/public/diseases/acne", "description": "Patient-facing information from the body that writes the US acne guideline." },
+    { "name": "British Association of Dermatologists — Acne Patient Information Leaflet", "url": "https://www.bad.org.uk/pils/acne-vulgaris/", "description": "UK patient leaflet covering causes, treatment options, and scarring." },
+    { "name": "NHS — Acne Self-Help and Treatment Guide", "url": "https://www.nhs.uk/conditions/acne/", "description": "Free UK National Health Service patient information with current treatment recommendations." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "rosacea", "name": "Rosacea", "keyDifference": "Rosacea typically starts after age 30, centres on flushing and persistent central-facial erythema with telangiectasia, and produces papules and pustules without comedones. The presence of blackheads or whiteheads essentially rules out rosacea. Triggers are heat, alcohol, and spicy food rather than puberty or hormones." },
+    { "slug": "seborrheic-dermatitis-unspecified-l219", "name": "Seborrhoeic Dermatitis", "keyDifference": "Seborrhoeic dermatitis produces greasy yellow scaling rather than discrete comedones, papules, or pustules, and concentrates in the scalp, nasolabial folds, eyebrows, and chest. It can coexist with acne but is treated with antifungal agents (ketoconazole, ciclopirox) rather than retinoids and antibiotics." },
+    { "slug": "hidradenitis-suppurativa-l732", "name": "Hidradenitis Suppurativa", "keyDifference": "Hidradenitis affects apocrine-gland-rich areas (axilla, groin, inframammary, buttocks) with deep painful nodules, sinus tracts, and double-headed comedones — not the face. It runs a chronic relapsing course and often requires biologic therapy (adalimumab) rather than the conventional acne ladder." },
+    { "slug": "pseudofolliculitis-barbae-l731", "name": "Pseudofolliculitis Barbae", "keyDifference": "Pseudofolliculitis barbae produces inflammatory papules and pustules limited to the beard and shaved areas, caused by curly hair re-entering the skin after shaving. Lesions resolve with beard growth or laser hair removal, and standard acne therapy is largely ineffective." },
+    { "slug": "acne-keloid-l730", "name": "Acne Keloidalis Nuchae", "keyDifference": "Acne keloidalis nuchae is a chronic scarring folliculitis confined to the occipital scalp and posterior neck that produces keloid-like papules and plaques, predominantly in men of African descent. Conventional acne therapy is ineffective; treatment combines high-potency topical steroids, intralesional steroids, and surgical excision." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "pcos", "name": "Polycystic Ovary Syndrome" },
+    { "slug": "rosacea", "name": "Rosacea" },
+    { "slug": "eczema", "name": "Eczema (Atopic Dermatitis)" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "rosacea", "name": "Rosacea", "relevance": "Often confused with adult-onset acne; the two can also coexist in patients over 30 with both comedones and central-facial flushing." },
+    { "slug": "pcos", "name": "Polycystic Ovary Syndrome", "relevance": "Up to 70% of women with PCOS have acne; hyperandrogenism drives sebum production and predicts response to spironolactone." },
+    { "slug": "hidradenitis-suppurativa-l732", "name": "Hidradenitis Suppurativa", "relevance": "Shares follicular occlusion as the underlying mechanism; severe nodular acne (acne conglobata) sits in the same follicular-occlusion tetrad." },
+    { "slug": "seborrheic-dermatitis-unspecified-l219", "name": "Seborrhoeic Dermatitis", "relevance": "Both are sebaceous-gland-rich-area diseases and frequently co-occur on the central face; treatment strategies differ." },
+    { "slug": "psoriasis", "name": "Psoriasis", "relevance": "Distinct disease but shares overlap in differential diagnosis of scaly truncal lesions and in considerations for systemic immunomodulating therapy in severe cases." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What causes acne?",
+      "answer": "Four mechanisms drive acne: androgen-stimulated sebum overproduction, abnormal shedding of cells lining the hair follicle that blocks the pore, growth of Cutibacterium acnes inside the blocked follicle, and an inflammatory response from the immune system. Genetics, puberty, hormonal disorders such as PCOS, high-glycaemic diets, skim milk, and certain medications can all worsen these mechanisms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for acne?",
+      "answer": "The best treatment depends on severity. Mild acne responds to a topical retinoid such as adapalene with benzoyl peroxide. Moderate acne adds a fixed-dose topical retinoid plus benzoyl peroxide and clindamycin, and often an oral antibiotic or spironolactone in women. Severe nodulocystic acne or scarring acne is treated with oral isotretinoin, which clears acne in around 85 percent of patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does diet cause acne?",
+      "answer": "Diet does not cause acne on its own but can worsen it. High-glycaemic-load foods such as sugary drinks, white bread, and sweets raise insulin and IGF-1, which drive sebum production. Skim milk has a stronger association with acne than whole milk in cohort studies. A low-glycaemic-load diet reduced acne lesion counts by about 22 percent in a controlled trial.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is acne hormonal?",
+      "answer": "Yes. Acne is driven by androgens that stimulate sebaceous glands to produce more sebum. Most adolescent acne reflects the normal pubertal androgen surge. Adult-onset acne in women is often hormonal, with flares before menstruation and concentration along the jawline. Polycystic ovary syndrome causes hormonal acne in up to 70 percent of affected women.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does acne treatment take to work?",
+      "answer": "Topical treatments need 8 to 12 weeks to show full effect, with visible improvement from week 4. Oral antibiotics and spironolactone work over 6 to 12 weeks. Combined oral contraceptives reach peak effect at 3 to 6 months. Isotretinoin courses run 5 to 8 months. Stopping early is the main reason therapy appears to fail.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can acne cause scarring?",
+      "answer": "Yes. Moderate-to-severe acne leaves permanent scarring in 30 to 50 percent of patients if untreated. Atrophic ice-pick, boxcar, and rolling scars come from collagen loss after deep inflammation. Hypertrophic and keloid scars are raised and more common on the jaw, chest, and back. Early treatment is the single best way to prevent scarring.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is cystic acne?",
+      "answer": "Cystic acne is the most severe form of acne, with deep painful fluid-filled lesions that develop below the skin surface. Cysts can rupture, drain pus, and almost always leave permanent scars. Standard topical and antibiotic treatments are usually insufficient; cystic acne is the main indication for oral isotretinoin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does isotretinoin cure acne?",
+      "answer": "Isotretinoin produces durable remission in 60 to 70 percent of patients after a single full course at a cumulative dose of 120 to 150 mg per kg. Around 25 percent need a second course, and a small minority require additional therapy. It is the only acne treatment associated with long-lasting remission in severe disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is isotretinoin safe?",
+      "answer": "Isotretinoin is well-tolerated by most patients when prescribed by experienced dermatologists with monthly monitoring. Common side effects include dry lips, dry skin, and raised triglycerides. The main risks are severe birth defects if taken during pregnancy and a small but real signal for mood changes; both require strict monitoring under iPLEDGE in the US and similar programs elsewhere.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can adults get acne?",
+      "answer": "Yes. Acne persists into adulthood in 12 to 22 percent of women and around 3 percent of men. Adult acne often follows a hormonal pattern with jawline and chin involvement and premenstrual flares. It is treated with the same agents as adolescent acne, with spironolactone and combined oral contraceptives playing a larger role in women.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between acne and rosacea?",
+      "answer": "Acne produces blackheads and whiteheads alongside inflammatory papules and pustules, starts in adolescence, and is driven by sebum and follicular plugging. Rosacea starts after age 30, centres on facial flushing and persistent central-facial redness with visible blood vessels, and produces papules and pustules without comedones. Blackheads essentially rule out rosacea.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does stress make acne worse?",
+      "answer": "Yes, modestly. Stress raises cortisol and androgen-related hormones from the adrenal cortex, which can increase sebum production and inflammation. Stress also drives picking and disrupts sleep, both of which worsen acne. Stress is rarely a primary cause but is a meaningful aggravator in established disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I pop my pimples?",
+      "answer": "No. Squeezing, picking, or extracting lesions at home pushes inflammation deeper into the dermis, extends healing time, and is the principal cause of ice-pick scarring. Painful nodules and cysts are better treated with intralesional steroid injection in clinic, which flattens the lesion within 48 to 72 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does spironolactone work for hormonal acne?",
+      "answer": "Yes. Spironolactone at 50 to 200 mg daily blocks androgen receptors on sebaceous glands and produces marked or complete clearance in 55 to 85 percent of women in cohort studies and a recent randomized trial. It is a guideline-recommended alternative to long-term oral antibiotics and is effective even when blood androgens are normal.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnant women take acne medication?",
+      "answer": "Most oral acne medications are contraindicated in pregnancy. Isotretinoin is a category X teratogen, tetracyclines are avoided after 15 weeks, and spironolactone and hormonal therapies are not used. Topical azelaic acid, erythromycin, and clindamycin are acceptable in pregnancy. A dermatologist should plan acne therapy with any patient planning pregnancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does acne treatment cost?",
+      "answer": "Topical generics such as adapalene gel cost roughly 10 to 30 US dollars per tube. Oral doxycycline is inexpensive at 5 to 20 US dollars per month. Spironolactone runs 10 to 30 US dollars per month. Brand isotretinoin can exceed 1000 US dollars per month in the US, but generic isotretinoin and dermatologist visits are widely available in India for a small fraction of that.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are there permanent scar treatments?",
+      "answer": "Yes. Acne scars are remodelled with fractional laser resurfacing, microneedling with radiofrequency, chemical peels, subcision, punch elevation, and dermal fillers. Treatment is staged over 3 to 6 sessions and delivers 25 to 50 percent patient-reported improvement on average. Scar treatment begins only after active acne has been controlled for at least 6 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do I get acne on my back and chest?",
+      "answer": "Truncal acne reflects sebaceous-gland density on the upper back, chest, and shoulders. It is common, often more severe than facial acne, and frequently undertreated. Fourth-generation retinoids such as trifarotene and oral therapy with isotretinoin or sarecycline are particularly useful for truncal disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can sunlight clear acne?",
+      "answer": "Sunlight does not clear acne. Brief tanning may temporarily mask redness, but ultraviolet exposure worsens post-inflammatory pigmentation, accelerates photoaging, and increases skin-cancer risk. Many acne treatments raise photosensitivity. Daily broad-spectrum SPF 30 or higher is recommended for everyone with acne.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will my acne come back after isotretinoin?",
+      "answer": "About 30 to 40 percent of patients relapse after a single course of isotretinoin, usually within 2 to 3 years. Risk is higher in younger patients and those with underlying hormonal disease. Relapse is often milder than the original disease and responds to topical retinoid maintenance or a second isotretinoin course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a dermatologist for acne?",
+      "answer": "See a dermatologist when acne is moderate or worse, when scarring or significant pigmentation is starting, when over-the-counter products have failed after 8 to 12 weeks, when truncal acne is involved, when acne is causing significant emotional distress, or when isotretinoin or hormonal therapy might be appropriate. Early referral prevents irreversible scarring.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Acne (Acne Vulgaris)",
+
+  "regionalNames": [
+    { "name": "मुहांसे (Muhase) / पिंपल्स (Pimples)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Yuvana Pidaka", "region": "India", "language": "sa" },
+    { "name": "Boutons / Acné juvénile", "region": "France", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "acne", "pimples", "zits", "acne vulgaris", "cystic acne", "hormonal acne",
+    "adult acne", "back acne", "bacne", "comedones", "blackheads", "whiteheads",
+    "spots", "acne scars", "tretinoin", "adapalene", "isotretinoin", "accutane",
+    "spironolactone for acne", "benzoyl peroxide"
+  ],
+
+  "symptomKeywords": [
+    "pimples on face", "blackheads", "whiteheads", "painful spot under skin",
+    "cystic acne jawline", "acne scars", "oily skin", "back acne", "chest acne",
+    "premenstrual breakouts"
+  ],
+
+  "metaTitle": "Acne: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Acne: blackheads, whiteheads, and inflamed pimples from clogged follicles. Symptoms, causes, treatment, and scarring prevention reviewed by our medical board.",
+
+  "keywords": [
+    "acne", "acne treatment", "acne causes", "cystic acne", "hormonal acne",
+    "adult acne", "acne scars", "tretinoin acne", "isotretinoin", "spironolactone acne",
+    "benzoyl peroxide", "back acne", "best acne medication", "acne vs rosacea"
+  ],
+
+  "lastReviewed": "2026-05-12",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Reynolds RV, Yeung H, Cheng CE, et al. Guidelines of care for the management of acne vulgaris. Journal of the American Academy of Dermatology. 2024;90(5):1006.e1-1006.e30.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38300170/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Nast A, Dréno B, Bettoli V, et al. European evidence-based (S3) guideline for the treatment of acne — update 2016. Journal of the European Academy of Dermatology and Venereology. 2016;30(8):1261-1268.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27514932/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Layton AM, Eady EA, Whitehouse H, Del Rosso JQ, Fedorowicz Z, van Zuuren EJ. Oral spironolactone for acne vulgaris in adult females: a hybrid systematic review. American Journal of Clinical Dermatology. 2017;18(2):169-191.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28155090/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Santer M, Lawrence M, Renz S, et al. Effectiveness of spironolactone for women with acne vulgaris (SAFA) in England and Wales: pragmatic, multicentre, phase 3, double blind, randomised controlled trial. BMJ. 2023;381:e074349.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37192767/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Vallerand IA, Lewinson RT, Farris MS, et al. Efficacy and adverse events of oral isotretinoin for acne: a systematic review. British Journal of Dermatology. 2018;178(1):76-85.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28403878/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Arowojolu AO, Gallo MF, Lopez LM, Grimes DA. Combined oral contraceptive pills for treatment of acne. Cochrane Database of Systematic Reviews. 2012;(7):CD004425.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22786490/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Smith RN, Mann NJ, Braue A, Mäkeläinen H, Varigos GA. A low-glycemic-load diet improves symptoms in acne vulgaris patients: a randomized controlled trial. American Journal of Clinical Nutrition. 2007;86(1):107-115.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17616769/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Tan JKL, Bhate K. A global perspective on the epidemiology of acne. British Journal of Dermatology. 2015;172 Suppl 1:3-12.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25597339/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Hebert A, Thiboutot D, Stein Gold L, et al. Efficacy and safety of topical clascoterone cream, 1%, for treatment in patients with facial acne: two phase 3 randomized clinical trials. JAMA Dermatology. 2020;156(6):621-630.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32320027/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Moore A, Green LJ, Bruce S, et al. Once-daily oral sarecycline 1.5 mg/kg/day for moderate to severe acne vulgaris: two identically designed, phase 3, randomized, double-blind clinical trials. Journal of Drugs in Dermatology. 2018;17(9):987-996.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30235387/",
+      "accessedDate": "2026-05-12"
+    }
+  ]
+}
