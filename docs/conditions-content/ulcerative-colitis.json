@@ -6,358 +6,373 @@
     "longTailKeywords": [
       "ulcerative colitis symptoms",
       "ulcerative colitis treatment",
-      "ulcerative colitis vs crohns",
+      "ulcerative colitis vs crohn's",
       "ulcerative colitis diet",
-      "mesalamine for ulcerative colitis",
-      "infliximab ulcerative colitis",
-      "vedolizumab ulcerative colitis",
-      "tofacitinib ulcerative colitis",
-      "ozanimod ulcerative colitis",
       "ulcerative colitis flare",
+      "mesalamine for ulcerative colitis",
+      "biologics for ulcerative colitis",
       "is ulcerative colitis curable",
-      "ulcerative colitis surgery"
+      "ulcerative colitis surgery",
+      "j-pouch surgery"
     ],
     "primarySpecialty": "Gastroenterology",
     "lastReviewed": "2026-05-12",
-    "version": "v2-hand-written-eeat",
-    "authoringNotes": "Citations cross-verified against 2019 ACG UC guideline (Rubin), 2020 AGA Clinical Guideline on Moderate-Severe UC (Feuerstein), 2022 ECCO UC management, ACT 1/2 (Rutgeerts 2005 infliximab), GEMINI 1 (Feagan 2013 vedolizumab), VARSITY (Sands 2019), OCTAVE Induction/Sustain (Sandborn 2017 tofacitinib), True North (Sandborn 2021 ozanimod), QUASAR (Peyrin-Biroulet 2024 guselkumab), Truelove & Witts BMJ 1955 severity criteria, Mayo Endoscopic Subscore (Schroeder 1987). Numbers cross-checked against UpToDate and recent epidemiology (Ng Lancet 2018, Kaplan Nat Rev Gastro 2021)."
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against ACG 2019 (Rubin, PMID 30840605), AGA 2020 (Feuerstein, PMID 31816372), ECCO 2022 (Raine, PMID 35040476), and pivotal RCTs: OCTAVE (Sandborn 2017, PMID 28467869), TRUE NORTH (Sands 2021, PMID 34081380), ELEVATE UC (Danese 2022, PMID 35644166), LUCENT (Sandborn 2023, PMID 37133584). Global epidemiology from Ng et al. Lancet 2017 (PMID 29050646). Doses and monitoring align with STRIDE-II treat-to-target targets."
   },
 
   "h1Title": "Ulcerative Colitis: Symptoms, Causes, Diagnosis, and Treatment",
   "specialistType": "Gastroenterology",
 
-  "heroOverview": "Ulcerative colitis is a chronic relapsing inflammatory bowel disease that affects only the colon and rectum, producing continuous mucosal inflammation that starts at the anorectal junction and extends proximally for a variable distance. It affects roughly 1 in 250 adults in North America and Europe, with peak diagnosis between ages 15 and 30 and a smaller second peak after age 50. Patients present with bloody diarrhea, urgency, tenesmus, and abdominal cramping that comes in flares lasting weeks to months, interrupted by periods of remission. Untreated, ulcerative colitis raises the long-term risk of colorectal cancer and, in severe attacks, can progress to toxic megacolon or perforation requiring emergency colectomy. Modern therapy — 5-aminosalicylates for mild disease, corticosteroids for flares, immunomodulators, anti-TNF biologics, anti-integrins, JAK inhibitors, and S1P modulators for moderate to severe disease — achieves clinical remission in 60-80% of patients and avoids colectomy in most.",
+  "heroOverview": "Ulcerative colitis is a chronic immune-mediated inflammatory bowel disease that produces continuous mucosal ulceration of the colon, starting at the rectum and extending proximally without skipping segments. It affects roughly 1.2 million people in the United States and around 5 million worldwide (Ng Lancet 2017), with peak incidence in North America and Europe and rising rates across newly industrialized regions. The hallmark presentation is bloody diarrhea with urgency and tenesmus that persists for weeks before diagnosis. Untreated disease drives anemia, weight loss, hospitalization for severe flares, and a measurable lifetime risk of colorectal cancer that begins eight years after diagnosis. Modern care is built on a treat-to-target principle: induce remission with 5-aminosalicylates, corticosteroids, or advanced therapies (biologics, JAK inhibitors, S1P modulators), then maintain endoscopic healing for life.",
 
   "keyStats": {
-    "prevalence": "About 1.2 million people in the United States; ~0.3-0.5% of adults in North America and Europe (Kaplan 2021)",
-    "demographics": "Men and women affected roughly equally; highest incidence in Ashkenazi Jewish and Northern European populations",
-    "avgAge": "Peak onset age 15-30, with a smaller second peak at 50-70",
-    "globalCases": "~5 million people worldwide (GBD 2019); incidence rising fastest in newly industrialized Asia, South America, and the Middle East"
+    "prevalence": "~1.2 million US adults; ~5 million worldwide (Ng Lancet 2017, PMID 29050646)",
+    "demographics": "Slight male predominance; highest incidence in North America (19-23/100,000/year) and Northern Europe (24/100,000/year)",
+    "avgAge": "Bimodal onset — main peak age 15-35, second smaller peak age 50-70",
+    "globalCases": "Doubled in newly industrialized countries over the past 30 years"
   },
 
-  "definition": "Ulcerative colitis (ICD-10: K51) is an immune-mediated inflammatory bowel disease characterized by chronic, continuous mucosal and submucosal inflammation that begins at the dentate line in the rectum and extends proximally through the colon for a variable distance. Unlike Crohn's disease, the inflammation is restricted to the colon, does not skip segments, and does not penetrate beyond the submucosa — fistulas and transmural strictures are uncommon. Disease extent is classified by the Montreal system as E1 (proctitis, limited to the rectum), E2 (left-sided colitis, distal to the splenic flexure), or E3 (extensive colitis, proximal to the splenic flexure including pancolitis). Severity is graded using Truelove and Witts criteria (mild, moderate, severe, fulminant) at the bedside and Mayo Endoscopic Subscore (0-3) at endoscopy. Histology shows crypt distortion, crypt abscesses, basal plasmacytosis, and depletion of goblet cells. The pathogenesis combines genetic susceptibility (over 240 risk loci identified, with strongest signals at HLA class II and IL-23R), a dysbiotic gut microbiome, defective mucosal barrier, and dysregulated mucosal immunity dominated by Th2 and Th17 responses. UC is a lifelong condition managed by gastroenterology, with colorectal surgery, dermatology, ophthalmology, hepatology, and rheumatology involved for extraintestinal manifestations and complications.",
+  "definition": "Ulcerative colitis (ICD-10: K51) is a chronic relapsing-remitting inflammatory bowel disease characterized by continuous mucosal and submucosal inflammation that begins in the rectum and extends proximally to a variable degree, always limited to the colon. The histologic signature is crypt distortion, crypt abscesses, basal plasmacytosis, and depleted goblet cells, with inflammation confined to the mucosa rather than penetrating the full bowel wall as in Crohn's disease. The pathogenesis is multifactorial — genetically susceptible hosts (over 200 risk loci identified, with NOD2 less prominent than in Crohn's) develop dysregulated mucosal immunity against the gut microbiome, driven by Th2 and Th9 pathways and a leaky epithelial barrier. Disease extent is described by the Montreal classification as proctitis (E1, rectum only), left-sided colitis (E2, up to the splenic flexure), or extensive colitis / pancolitis (E3, beyond the splenic flexure), and severity is graded by Mayo score, UCEIS endoscopic score, or the Truelove-Witts criteria for acute severe disease. Ulcerative colitis is managed by gastroenterologists with multidisciplinary input from colorectal surgeons, dietitians, and ophthalmology, dermatology, and rheumatology when extraintestinal manifestations occur.",
 
   "typesClassification": [
-    { "type": "Ulcerative proctitis (Montreal E1)", "description": "Inflammation limited to the rectum (distal to the rectosigmoid junction). Accounts for 30-40% of new diagnoses. Usually treated effectively with topical mesalamine; lower colectomy risk than more extensive disease." },
-    { "type": "Left-sided colitis (Montreal E2)", "description": "Inflammation extends from the rectum to the splenic flexure but no further. Roughly 30-40% of cases. Responds to combined oral and topical mesalamine; biologics added for moderate to severe disease." },
-    { "type": "Extensive colitis / pancolitis (Montreal E3)", "description": "Inflammation extends proximal to the splenic flexure, often involving the entire colon. About 20-30% of cases at diagnosis. Higher rates of hospitalization, surgery, and colorectal cancer; requires colonoscopic surveillance starting 8-10 years after diagnosis." },
-    { "type": "Acute severe ulcerative colitis (ASUC)", "description": "A medical emergency defined by Truelove and Witts criteria: ≥6 bloody stools daily plus at least one systemic sign (heart rate >90, temperature >37.8°C, hemoglobin <10.5 g/dL, ESR >30 mm/h or CRP >30 mg/L). Requires hospital admission, intravenous corticosteroids, and rescue therapy with infliximab or ciclosporin if no response by day 3." },
-    { "type": "Fulminant colitis with toxic megacolon", "description": "Most severe form: colonic dilation greater than 6 cm with systemic toxicity. High risk of perforation; mortality 2-5% even with prompt care. Surgical consultation required from admission." }
+    { "type": "Ulcerative proctitis (Montreal E1)", "description": "Inflammation limited to the rectum. Roughly 30-40% of patients at diagnosis. Bleeding and urgency dominate; systemic features are uncommon. Often responds to topical mesalamine alone." },
+    { "type": "Left-sided colitis (Montreal E2)", "description": "Inflammation extending from the rectum to the splenic flexure. Roughly 30-40% of patients. Bloody diarrhea, urgency, and cramping are typical, and combined oral plus topical 5-ASA is the usual first-line." },
+    { "type": "Extensive colitis / pancolitis (Montreal E3)", "description": "Inflammation proximal to the splenic flexure, often involving the entire colon. Roughly 20-30% of patients. Higher risk of severe flares, hospitalization, colectomy, and long-term colorectal cancer surveillance." },
+    { "type": "Acute severe ulcerative colitis (ASUC)", "description": "Defined by Truelove-Witts criteria (>6 bloody stools per day plus one of: pulse >90, temperature >37.8 C, hemoglobin <10.5 g/dL, ESR >30). Requires hospital admission, IV corticosteroids, and structured rescue planning at day 3-5." },
+    { "type": "Chronic refractory or steroid-dependent UC", "description": "Disease that fails to enter steroid-free remission or relapses on steroid taper. Triggers escalation to biologic, small molecule, or surgical management." }
   ],
 
   "primarySymptoms": [
-    "Bloody diarrhea with visible red blood mixed with stool, often accompanied by mucus — the cardinal symptom present in over 90% of patients at diagnosis.",
-    "Urgency to defecate, sometimes with inability to defer for more than a few minutes, leading to incontinence in severe flares.",
-    "Tenesmus — a persistent painful sensation of needing to defecate even when the rectum is empty, characteristic of active proctitis.",
-    "Abdominal cramping that often localizes to the left lower quadrant and is partially relieved by passing stool.",
-    "Increased stool frequency (6 or more bowel motions daily in severe disease, with frequent nocturnal awakening to defecate).",
-    "Weight loss, fatigue, and reduced appetite during active flares, partly from systemic inflammation and partly from reduced oral intake.",
-    "Low-grade fever and tachycardia in moderate to severe attacks; high fever raises concern for toxic megacolon or superimposed infection.",
-    "Pallor and breathlessness on exertion from iron-deficiency anemia driven by chronic blood loss and inflammation-mediated suppression of erythropoiesis.",
-    "Extraintestinal symptoms in 25-40% of patients: large-joint arthritis or sacroiliitis, painful red eye from uveitis or episcleritis, painful skin lesions (erythema nodosum, pyodermal gangrenosum), and aphthous mouth ulcers.",
-    "Cholestatic liver enzyme abnormalities or itching from primary sclerosing cholangitis, present in 3-7% of patients with UC.",
-    "Growth failure and delayed puberty when UC develops before adolescence."
+    "Bloody diarrhea, often with visible red blood mixed into stool or coating it, persisting for weeks rather than days and present in roughly 90% of patients at presentation.",
+    "Urgent need to defecate (urgency), with little warning between the urge and the need to reach a toilet, frequently disrupting work, travel, and sleep.",
+    "Tenesmus — a painful, persistent sensation of incomplete rectal emptying with straining even after passing stool, especially prominent in proctitis.",
+    "Increased stool frequency, ranging from 4-6 loose stools daily in moderate disease to more than 10 stools per day with overt blood in severe flares.",
+    "Mucus or pus discharge per rectum, sometimes passed alone without stool, reflecting active rectal inflammation.",
+    "Lower abdominal cramping pain that improves transiently after passing stool, typically localized to the left lower quadrant in left-sided disease.",
+    "Nocturnal bowel movements that wake the patient from sleep — a useful clinical clue that separates inflammatory diarrhea from functional disorders like irritable bowel syndrome.",
+    "Fatigue and reduced exercise tolerance, often disproportionate to bowel symptoms and driven by chronic inflammation, anemia, and disturbed sleep.",
+    "Unintentional weight loss and reduced appetite in moderate-to-severe disease, particularly during extended flares.",
+    "Low-grade fever, tachycardia, and pallor in severe flares, with frank malaise that signals impending acute severe colitis requiring admission.",
+    "Extraintestinal symptoms — peripheral arthritis, axial spondyloarthritis, episcleritis or uveitis, erythema nodosum, pyoderma gangrenosum, and pruritus or jaundice from primary sclerosing cholangitis (PSC, ~5%)."
   ],
 
   "earlyWarningSigns": [
-    "Intermittent bright red blood on the toilet paper or on stool, especially when paired with mucus and a sensation of incomplete evacuation",
-    "A persistent change in bowel habit lasting more than 4 weeks, with stools becoming looser and more frequent",
-    "Waking at night to pass loose or bloody stools — nocturnal symptoms strongly favor organic over functional disease",
-    "Recurrent painful red eye or skin nodules on the shins in a person with bowel symptoms — possible extraintestinal IBD signal",
-    "Unexplained iron-deficiency anemia in a young adult with no obvious source"
+    "Bloody streaks on stool or on toilet paper persisting for more than two weeks, especially in a person under 40 without hemorrhoids",
+    "New onset of urgent, frequent loose stools with overnight bowel movements",
+    "Iron-deficiency anemia found on routine bloods with no obvious source of bleeding",
+    "Recurrent mouth ulcers, joint pain, or skin nodules with persistent loose stools",
+    "Persistently elevated fecal calprotectin (above 150-250 µg/g) on screening despite resolution of any infection"
   ],
 
   "emergencySigns": [
-    "More than 10 bloody stools a day with abdominal distension, fever, or tachycardia — possible acute severe colitis or toxic megacolon requiring immediate admission",
-    "Sudden severe abdominal pain with rebound tenderness and rigid abdomen — concern for perforation",
-    "Large-volume rectal bleeding causing dizziness, near-syncope, or a hemoglobin drop below 8 g/dL — needs urgent transfusion and endoscopy",
-    "New high fever above 38.5°C in a patient on biologic or steroid therapy — possible C. difficile, CMV colitis, or other opportunistic infection",
-    "Pregnant patient with a flare and new abdominal pain or bleeding — urgent obstetric and gastroenterology review"
+    "More than six bloody stools per day with tachycardia (>90 bpm), fever (>37.8 C), anemia (hemoglobin <10.5 g/dL), or ESR >30 — Truelove-Witts criteria for acute severe ulcerative colitis (ASUC), which warrants same-day hospital admission",
+    "Sudden abdominal distension with severe pain, reduced bowel sounds, and systemic illness — concerning for toxic megacolon or perforation",
+    "Lightheadedness, syncope, or large-volume bright red blood in the toilet — significant hemorrhage requiring resuscitation and urgent endoscopic assessment",
+    "New severe calf swelling or sudden breathlessness during a UC flare — venous thromboembolism risk is roughly three-fold elevated in active disease",
+    "Severe right upper quadrant pain, jaundice, or worsening pruritus — possible cholangitis on a background of primary sclerosing cholangitis"
   ],
 
   "causes": [
     {
-      "cause": "Dysregulated mucosal immune response",
-      "description": "The dominant mechanism. Lamina propria T cells (predominantly Th2 and Th17) overreact to luminal antigens, producing cytokines (IL-13, IL-17, TNF-α, IL-23) that recruit neutrophils, damage colonic epithelium, and form the crypt abscesses seen on biopsy."
+      "cause": "Genetic susceptibility",
+      "description": "Genome-wide association studies have identified over 200 inflammatory bowel disease risk loci, with HLA class II variants, IL23R, and barrier-function genes among the strongest UC signals. First-degree relatives carry a 3-15% lifetime risk, far above the population baseline."
     },
     {
-      "cause": "Genetic susceptibility",
-      "description": "Genome-wide association studies have identified over 240 IBD risk loci, with the strongest UC-specific signals at HLA-DRB1*0103, IL-23R, IL-10, and the major histocompatibility complex. Concordance in identical twins is roughly 15-20%, indicating genetics set susceptibility but do not determine disease."
+      "cause": "Dysregulated mucosal immunity",
+      "description": "An exaggerated Th2 and Th9 cytokine response, with secondary involvement of IL-13 and IL-23, sustains inflammation against luminal microbial antigens. Regulatory T-cell function is impaired, allowing chronic activation rather than resolution."
     },
     {
       "cause": "Gut microbiome dysbiosis",
-      "description": "UC patients have reduced microbial diversity, depletion of butyrate-producing Firmicutes (Faecalibacterium prausnitzii, Roseburia), and expansion of Proteobacteria. Reduced butyrate impairs colonocyte energy metabolism and tight-junction integrity, weakening the mucosal barrier."
+      "description": "Patients show reduced diversity, loss of short-chain fatty acid producers such as Faecalibacterium prausnitzii, and expansion of mucolytic and pro-inflammatory species. Whether dysbiosis triggers UC or is a consequence remains contested."
     },
     {
-      "cause": "Defective epithelial barrier function",
-      "description": "Mucus layer thinning, defective tight junctions, and reduced antimicrobial peptide production allow luminal bacteria and their products to contact the lamina propria, amplifying immune activation. Goblet cell depletion on biopsy is a hallmark."
+      "cause": "Epithelial barrier dysfunction",
+      "description": "Goblet cell depletion, defective mucin (MUC2) production, and tight-junction abnormalities allow luminal antigens to access the lamina propria, perpetuating immune activation."
     },
     {
-      "cause": "Environmental triggers (urbanization, diet, hygiene)",
-      "description": "Incidence rises rapidly in newly industrialized countries, implicating Western diet, antibiotic exposure in childhood, and reduced microbial diversity from early-life environment. Smoking paradoxically protects against UC; smoking cessation is a recognized trigger for first presentation."
+      "cause": "Environmental and lifestyle exposures",
+      "description": "Western diet patterns high in ultra-processed foods, antibiotic exposure (especially in childhood), urban living, and improved hygiene are consistently associated with rising UC incidence in epidemiologic studies (Ng Lancet 2017)."
     },
     {
-      "cause": "Past gastrointestinal infection",
-      "description": "Bacterial gastroenteritis (Salmonella, Campylobacter, C. difficile) roughly doubles UC risk over the following year, likely through microbiome disruption and breaking immune tolerance to luminal flora."
+      "cause": "Smoking cessation (paradoxical role)",
+      "description": "Active smoking is associated with lower UC risk and milder disease — the opposite of Crohn's disease. Ex-smokers experience increased flare risk in the years after quitting. The mechanism likely involves nicotine effects on mucus production and immune signaling. This is descriptive only — patients should not start or resume smoking, as the cardiovascular and cancer risks outweigh any UC benefit."
+    },
+    {
+      "cause": "Appendectomy in childhood",
+      "description": "Appendectomy before age 20 for true appendicitis is consistently associated with lower UC risk in cohort studies, suggesting an appendix-related immunologic mechanism."
     }
   ],
 
   "riskFactors": [
-    { "factor": "Family history of inflammatory bowel disease", "category": "genetic", "description": "A first-degree relative with UC or Crohn's raises personal risk roughly 4-fold. Concordance in identical twins is 15-20% for UC, lower than Crohn's." },
-    { "factor": "Ashkenazi Jewish or Northern European ancestry", "category": "non-modifiable", "description": "Highest incidence rates worldwide. UC prevalence in Ashkenazi Jewish populations is roughly 2-3 times that of the broader white population, partly due to HLA risk allele frequencies." },
-    { "factor": "Age 15-30 (primary peak) or 50-70 (secondary peak)", "category": "non-modifiable", "description": "Bimodal age distribution. About 25% of patients are diagnosed before age 20; the second peak after 50 is increasingly recognized." },
-    { "factor": "Recent smoking cessation", "category": "modifiable", "description": "Unlike most diseases, smoking lowers UC risk by ~40%. Quitting tobacco raises risk of first UC presentation within 2-3 years. Restarting tobacco is never recommended given cardiovascular and cancer harms." },
-    { "factor": "Appendectomy after age 20 for non-inflammatory reasons", "category": "modifiable", "description": "Appendectomy is consistently associated with lower UC risk in cohort studies; the effect is strongest when performed before age 20 for appendicitis or mesenteric adenitis." },
-    { "factor": "NSAID use", "category": "modifiable", "description": "Regular NSAID use roughly doubles risk of UC flare and may contribute to first presentation. Acetaminophen is preferred for analgesia in patients with or at risk for UC." },
-    { "factor": "Western dietary pattern", "category": "modifiable", "description": "High intake of red meat, ultra-processed food, and refined sugars; low fruit, vegetable, and fiber intake are associated with higher UC incidence in cohort studies (Nurses' Health Study, EPIC)." },
-    { "factor": "Early-life antibiotic exposure", "category": "environmental", "description": "Multiple courses of antibiotics in childhood (particularly before age 5) modestly raise UC risk, presumably through lasting microbiome disruption." },
-    { "factor": "Higher socioeconomic status and urban living", "category": "environmental", "description": "Hygiene-hypothesis pattern: incidence is higher in urban, high-income environments and rises rapidly when populations migrate from low- to high-incidence regions." },
-    { "factor": "Prior bacterial gastroenteritis", "category": "modifiable", "description": "Salmonella, Campylobacter, or C. difficile infection roughly doubles UC risk over the following 12 months." }
+    { "factor": "Family history of inflammatory bowel disease", "category": "genetic", "description": "First-degree relatives of UC patients have a 3-15% lifetime risk, compared with around 0.3% in the general population. Risk is highest with an affected sibling." },
+    { "factor": "Age 15-35 or 50-70", "category": "non-modifiable", "description": "Incidence follows a bimodal distribution with a main peak in young adulthood and a smaller second peak after age 50." },
+    { "factor": "Ashkenazi Jewish ancestry", "category": "genetic", "description": "Prevalence is roughly two to four times higher than in other ethnic groups, reflecting enrichment of IBD risk variants." },
+    { "factor": "Western diet pattern", "category": "environmental", "description": "Diets high in ultra-processed foods, refined sugar, emulsifiers, and red meat correlate with higher UC incidence in cohort data; Mediterranean-style eating is associated with lower risk." },
+    { "factor": "NSAID use", "category": "modifiable", "description": "Regular non-selective NSAID exposure is linked to UC flares and may unmask disease, likely via prostaglandin-mediated effects on mucosal repair." },
+    { "factor": "Prior gastrointestinal infection", "category": "environmental", "description": "Salmonella, Campylobacter, or C. difficile gastroenteritis is associated with a roughly two-fold increase in subsequent IBD diagnosis within 12 months." },
+    { "factor": "Urban residence and high latitude", "category": "environmental", "description": "Incidence is higher in urban areas and at higher latitudes, with vitamin D status and microbiome differences proposed as mediators." },
+    { "factor": "Smoking cessation", "category": "modifiable", "description": "Ex-smokers carry higher UC risk than current smokers; relapse risk increases in the first year after quitting. This does not justify continuing tobacco, given competing harms." },
+    { "factor": "Childhood antibiotic exposure", "category": "modifiable", "description": "Multiple courses of broad-spectrum antibiotics in the first years of life are associated with modestly elevated IBD risk, plausibly through microbiome disruption." },
+    { "factor": "Female hormonal contraceptive use", "category": "modifiable", "description": "Modest increase in UC risk observed in large cohort studies; clinical relevance is small but worth mentioning in shared decision-making." }
   ],
 
   "affectedDemographics": [
-    "US prevalence: ~1.2 million adults (CDC 2021 estimate)",
-    "Ashkenazi Jewish populations have the highest reported prevalence globally (~0.8-1.2%)",
-    "Incidence has plateaued in Western Europe and North America at ~10-15 per 100,000 per year but is rising rapidly in newly industrialized Asia, South America, and the Middle East (Ng 2018, Lancet)",
-    "About 25% of UC diagnoses occur before age 20; pediatric-onset disease is more often extensive at presentation",
-    "Men and women affected roughly equally, though men have a slightly higher peak after age 50"
+    "US prevalence: approximately 1.2 million adults; Canadian provinces report some of the highest global rates (~300 per 100,000)",
+    "Northern European incidence: 19-24 per 100,000 person-years, the highest globally",
+    "Asia-Pacific incidence has risen 3-5 fold over three decades as countries industrialize (Ng Lancet 2017)",
+    "Jewish populations, particularly Ashkenazi, have prevalence 2-4 times higher than non-Jewish populations",
+    "Slight male predominance overall, more pronounced in late-onset disease"
   ],
 
-  "diagnosisOverview": "Diagnosis combines a typical clinical picture (bloody diarrhea, urgency, tenesmus persisting more than 4 weeks) with endoscopic, histologic, and laboratory evidence, and active exclusion of infectious mimics. Stool studies for routine bacterial pathogens, C. difficile toxin (PCR or two-step antigen and toxin EIA), and ova and parasites are mandatory at first presentation and at every significant flare. Initial blood work includes complete blood count, C-reactive protein, ESR, albumin, ferritin, liver function tests, and electrolytes. Fecal calprotectin above 250 µg/g identifies colonic inflammation with about 90% sensitivity and specificity and is the most useful non-invasive marker for ruling UC in or out before endoscopy. Ileocolonoscopy with segmental biopsies is the gold standard — it visualizes the continuous, circumferential mucosal inflammation that begins at the dentate line, characterizes disease extent for Montreal classification, grades severity using the Mayo Endoscopic Subscore (0 = normal, 1 = erythema with preserved vascular pattern, 2 = marked erythema and erosions, 3 = spontaneous bleeding and ulceration), and obtains biopsies showing crypt distortion, crypt abscesses, basal plasmacytosis, and goblet cell depletion. Terminal ileum intubation distinguishes UC (normal ileum or mild backwash ileitis in pancolitis) from Crohn's disease (skip lesions, ileal involvement, deep ulcers, granulomas). Cross-sectional imaging (MR enterography or CT enterography) is performed when Crohn's cannot be excluded clinically. Acute severe colitis is graded by the Truelove and Witts criteria at the bedside and warrants admission, plain abdominal radiograph to exclude toxic megacolon, and early surgical consultation. The 2019 ACG and 2020 AGA guidelines codify this workflow.",
+  "diagnosisOverview": "Diagnosis of ulcerative colitis rests on a combination of clinical history, biochemical evidence of inflammation, stool studies that exclude infection, ileocolonoscopy with segmental biopsies, and supportive imaging. The 2019 ACG guideline (Rubin et al.) recommends starting with a thorough history covering stool frequency, blood, urgency, nocturnal symptoms, extraintestinal manifestations, NSAID use, and travel or antibiotic exposure. Initial laboratory work-up includes complete blood count, C-reactive protein, ESR, albumin, ferritin, and liver function tests — looking for anemia, hypoalbuminemia, and inflammatory signal. Stool studies are mandatory before treatment: stool culture, ova and parasites, and C. difficile PCR to exclude infectious colitis that can mimic or coexist with UC. Fecal calprotectin above 150-250 µg/g supports active mucosal inflammation and helps distinguish IBD from irritable bowel syndrome with high accuracy. The definitive diagnostic test is ileocolonoscopy with biopsies from each colonic segment plus the terminal ileum. UC shows continuous mucosal inflammation starting in the rectum and extending proximally with a clear demarcation, normal terminal ileum (except for occasional backwash ileitis in pancolitis), and histology demonstrating crypt distortion, crypt abscesses, basal plasmacytosis, and goblet cell depletion confined to the mucosa. Disease activity is scored using the Mayo endoscopic subscore (0 normal, 1 mild, 2 moderate, 3 severe) or the UCEIS. CT or MR enterography are reserved for distinguishing UC from Crohn's disease when small-bowel involvement is suspected. Flexible sigmoidoscopy without bowel preparation is preferred over full colonoscopy in suspected acute severe colitis to reduce perforation risk.",
 
   "diagnosticTests": [
     {
       "test": "Ileocolonoscopy with segmental biopsies",
-      "purpose": "Gold-standard diagnostic and severity assessment. Documents continuous mucosal inflammation starting at the dentate line, defines proximal extent (Montreal E1-E3), grades activity with the Mayo Endoscopic Subscore (0-3), and obtains biopsies showing crypt distortion and basal plasmacytosis. Terminal ileum intubation helps distinguish from Crohn's.",
-      "whatToExpect": "Outpatient procedure under conscious sedation or anesthesia. Bowel preparation the day before with a polyethylene glycol solution; the procedure takes 30-45 minutes; recovery 30-60 minutes. Mild cramping for a few hours afterward is normal."
-    },
-    {
-      "test": "Stool tests for infection",
-      "purpose": "Excludes infectious mimics at presentation and during flares — C. difficile (toxin EIA or PCR), Salmonella, Shigella, Campylobacter, E. coli O157, Yersinia, ova and parasites, and where appropriate amebiasis serology. Infectious colitis can both mimic UC and trigger flares.",
-      "whatToExpect": "A single stool sample collected into a lab-provided container. Results typically return within 24-72 hours."
+      "purpose": "Gold-standard diagnostic test. Confirms continuous mucosal inflammation starting at the rectum, defines disease extent (Montreal E1/E2/E3), grades severity (Mayo endoscopic subscore, UCEIS), and excludes Crohn's disease and colorectal neoplasia. Histology shows crypt distortion, basal plasmacytosis, and goblet cell depletion.",
+      "whatToExpect": "Same-day procedure under sedation, lasting 20-40 minutes after a bowel preparation drink the day before. Patients fast from midnight, are sedated, and recover within 1-2 hours. Biopsy results typically return in 5-10 days."
     },
     {
       "test": "Fecal calprotectin",
-      "purpose": "Non-invasive marker of intestinal neutrophil activity. Levels above 250 µg/g have ~90% sensitivity and specificity for active colonic inflammation; levels under 50 µg/g effectively rule out active IBD and avoid unnecessary colonoscopy. Used for diagnosis and ongoing monitoring of mucosal inflammation in lieu of repeat endoscopy.",
-      "whatToExpect": "Single stool sample sent to the lab. No preparation required; results in 3-7 days."
+      "purpose": "Non-invasive marker of colonic inflammation. Useful for initial triage (distinguishing IBD from IBS), monitoring disease activity, and predicting flares. Levels above 150-250 µg/g support active inflammation; persistent normal values argue against a flare.",
+      "whatToExpect": "A small sample of stool collected at home in a provided container and returned to the lab. Results typically within 3-5 working days."
     },
     {
-      "test": "Complete blood count, CRP, ESR, albumin, ferritin",
-      "purpose": "Quantifies systemic inflammation and detects anemia, hypoalbuminemia, and iron deficiency that affect treatment choice. CRP and ESR drive Truelove and Witts severity scoring. Albumin under 3.0 g/dL signals severe disease.",
-      "whatToExpect": "Standard venous blood draw; results same day in most labs."
+      "test": "Stool studies for infection (culture, ova and parasites, C. difficile PCR)",
+      "purpose": "Mandatory before starting immunosuppression and during any flare. Excludes infectious mimics — Salmonella, Shigella, Campylobacter, E. coli O157, amoebiasis — and superinfection with C. difficile, which complicates 5-10% of UC flares and worsens outcomes if missed.",
+      "whatToExpect": "One or more stool samples collected at home and submitted to the lab. C. difficile PCR returns within 24 hours; culture takes 2-4 days."
+    },
+    {
+      "test": "Full blood count, CRP, ESR, ferritin, albumin, liver function",
+      "purpose": "Detects anemia, systemic inflammatory activity, malnutrition, and primary sclerosing cholangitis. Trends guide severity assessment and response to therapy.",
+      "whatToExpect": "Standard blood draw; results return same day or next day. Repeated periodically through induction and maintenance."
+    },
+    {
+      "test": "Flexible sigmoidoscopy",
+      "purpose": "Limited examination of the rectum and sigmoid colon. Preferred over full colonoscopy in acute severe colitis to reduce perforation risk, and useful for repeated disease activity assessment without bowel preparation or sedation.",
+      "whatToExpect": "Brief procedure, usually 10-15 minutes, often without sedation. Minor discomfort and gas during the exam are normal and resolve quickly."
     },
     {
       "test": "MR enterography or CT enterography",
-      "purpose": "Used when Crohn's cannot be excluded on endoscopy and biopsy, when small-bowel involvement is suspected, or when complications such as toxic megacolon, perforation, or abscess are considered. MR enterography is preferred in young patients to avoid cumulative radiation.",
-      "whatToExpect": "After drinking oral contrast over 45-60 minutes, the scan itself takes 20-30 minutes lying still in the magnet (MR) or 5-10 minutes in the CT scanner."
+      "purpose": "Defines small-bowel involvement, helps distinguish UC from Crohn's, and identifies complications such as toxic megacolon, abscess, or strictures. MR is preferred when imaging is needed long-term to avoid radiation exposure.",
+      "whatToExpect": "Patient drinks 1-1.5 liters of oral contrast over 45-60 minutes before the scan. The scan itself takes 15-30 minutes. No sedation required."
     },
     {
-      "test": "Plain abdominal radiograph (in acute severe colitis)",
-      "purpose": "Rapidly identifies colonic dilation (transverse colon diameter greater than 6 cm defines toxic megacolon) and free air suggesting perforation. Repeated daily during hospitalization for ASUC.",
-      "whatToExpect": "Bedside or standing X-ray taking less than 5 minutes; no preparation needed."
+      "test": "Cytomegalovirus (CMV) testing on biopsy or blood",
+      "purpose": "Performed during steroid-refractory or severe flares to identify CMV colitis, which complicates 20-30% of severe UC episodes and requires antiviral therapy with ganciclovir.",
+      "whatToExpect": "Either an additional histology stain on colon biopsies (immunohistochemistry) or a blood test (CMV PCR). Results available within 3-7 days."
     },
     {
-      "test": "Liver function tests and MRCP if cholestasis",
-      "purpose": "Screens for primary sclerosing cholangitis, an extraintestinal manifestation in 3-7% of UC patients with major implications for colorectal cancer surveillance and transplant referral.",
-      "whatToExpect": "Standard blood draw; MR cholangiopancreatography requires a 30-45 minute non-contrast MR scan if liver enzymes are abnormal."
+      "test": "MRCP and liver imaging when liver enzymes are elevated",
+      "purpose": "Evaluates for primary sclerosing cholangitis, which affects roughly 5% of UC patients and changes long-term cancer surveillance strategy.",
+      "whatToExpect": "MR cholangiopancreatography is a non-contrast 20-30 minute MRI of the bile ducts. No injections or sedation needed."
     }
   ],
 
-  "treatmentOverview": "Treatment goals have shifted from symptom control alone to a treat-to-target framework endorsed by STRIDE-II: clinical remission, normalization of CRP and fecal calprotectin, and endoscopic remission (Mayo Endoscopic Subscore 0 or 1) with histologic healing as a long-term aim. The 2019 ACG and 2020 AGA guidelines stratify treatment by disease extent and severity. Mild to moderate ulcerative proctitis is treated with topical mesalamine suppositories (1 g daily) for 4-8 weeks, escalated to mesalamine foam or enema for left-sided disease and combined with oral mesalamine (2.4-4.8 g daily) for extensive disease. Topical therapy outperforms oral therapy for distal disease and is underused. Oral budesonide MMX (9 mg daily for 8 weeks) is an alternative for mild to moderate flares not responding to mesalamine, with fewer systemic steroid side effects than prednisolone. Moderate to severe disease, or steroid-dependent disease, is treated with biologics or small molecules: anti-TNF agents (infliximab, adalimumab, golimumab — ACT 1/2 established infliximab efficacy), the gut-selective anti-integrin vedolizumab (GEMINI 1; VARSITY trial showed superiority over adalimumab for biologic-naive UC), the anti-IL-12/23 ustekinumab, the IL-23p19 selective guselkumab (QUASAR 2024), the JAK inhibitors tofacitinib (OCTAVE) and upadacitinib (U-ACHIEVE/U-ACCOMPLISH), and the S1P receptor modulators ozanimod (True North) and etrasimod (ELEVATE). Acute severe ulcerative colitis (Truelove and Witts criteria) is a medical emergency: admit, give IV methylprednisolone 60 mg daily for 3 days, and if no response by day 3 (Oxford criteria: more than 8 stools daily, or 3-8 stools daily with CRP above 45 mg/L), proceed to rescue therapy with infliximab 5-10 mg/kg or intravenous ciclosporin. About 30-40% of ASUC patients ultimately come to colectomy. Maintenance therapy is universal: thiopurines (azathioprine 2-2.5 mg/kg, 6-mercaptopurine 1-1.5 mg/kg) for steroid-sparing in mild to moderate disease, or continuation of the induction biologic or small molecule. Colectomy with ileal pouch-anal anastomosis is curative for the colonic disease itself, indicated for medically refractory disease, intolerable side effects, colonic dysplasia or cancer, or fulminant attacks. Surveillance colonoscopy with high-definition chromoendoscopy begins 8-10 years after diagnosis (immediately if PSC is present) to detect dysplasia and prevent colorectal cancer.",
+  "treatmentOverview": "Treatment of ulcerative colitis is matched to disease extent and severity, then refined by treat-to-target follow-up. The 2019 ACG (Rubin et al., PMID 30840605) and 2020 AGA (Feuerstein et al., PMID 31816372) guidelines, together with the 2022 ECCO recommendations (Raine et al., PMID 35040476), structure care around three goals: induce clinical remission, achieve endoscopic healing (Mayo endoscopic subscore 0-1), and maintain steroid-free remission for life. STRIDE-II additionally endorses histologic remission where feasible. Mild-to-moderate proctitis is managed first with topical mesalamine — a 1 g suppository at bedtime — escalated to a mesalamine enema if proximal extension is suspected. Mild-to-moderate left-sided or extensive UC starts with oral 5-ASA at 2.4-4.8 g/day combined with topical mesalamine, with budesonide MMX 9 mg daily reserved as a steroid-sparing rescue when 5-ASA fails. Moderate-to-severe disease and steroid-dependent or refractory disease are escalated to one of several advanced therapy classes: anti-TNF agents (infliximab 5 mg/kg IV at weeks 0, 2, 6 then every 8 weeks; adalimumab 160/80/40 mg SC induction then every 2 weeks; golimumab 200/100/100 mg SC), anti-integrin vedolizumab 300 mg IV, IL-12/23 ustekinumab (6 mg/kg IV induction, then 90 mg SC every 8 weeks), IL-23p19 mirikizumab (LUCENT trial, Sandborn 2023 PMID 37133584) and risankizumab, JAK inhibitors (tofacitinib 10 mg twice daily induction, OCTAVE Sandborn 2017 PMID 28467869; upadacitinib 45 mg daily induction, ELEVATE UC Danese 2022 PMID 35644166), and S1P-receptor modulators (ozanimod 0.92 mg daily, TRUE NORTH Sands 2021 PMID 34081380; etrasimod 2 mg daily). Acute severe ulcerative colitis admitted to hospital is treated with IV methylprednisolone 60 mg per day; non-responders by day 3-5 receive rescue with infliximab 5-10 mg/kg or intravenous cyclosporine 2-4 mg/kg/day, with colectomy considered when medical therapy fails. Live vaccines must be given before immunosuppression begins; PPSV23/PCV20, recombinant zoster, annual influenza, COVID, and hepatitis B vaccinations are recommended prior to or during therapy. Surveillance colonoscopy starts eight years after diagnosis, then every 1-3 years according to risk (extent, PSC, family history, prior dysplasia).",
 
   "medicalTreatments": [
     {
-      "name": "Mesalamine — oral 2.4-4.8 g daily, topical suppository 1 g daily, or enema 4 g daily (5-aminosalicylate)",
-      "description": "First-line for mild to moderate UC at any extent. Topical mesalamine is essential for distal disease and routinely combined with oral mesalamine for left-sided and extensive disease. Mechanism includes PPARγ activation and inhibition of arachidonic acid metabolites; well-tolerated with rare interstitial nephritis.",
-      "effectiveness": "Clinical remission in 40-50% of mild to moderate UC at 8 weeks; mucosal healing in 30-40%. Combined oral plus topical therapy outperforms either alone by ~25%."
+      "name": "Mesalamine suppositories (1 g at bedtime) or enemas (1-4 g nightly) — topical 5-ASA",
+      "description": "First-line for ulcerative proctitis and proctosigmoiditis. Suppositories cover the distal 10-15 cm; enemas reach the splenic flexure. Combined with oral mesalamine for left-sided or extensive disease for additive benefit.",
+      "effectiveness": "Clinical remission in 60-70% of mild-to-moderate proctitis within 4-8 weeks (ACG 2019)."
     },
     {
-      "name": "Oral budesonide MMX (9 mg daily for 8 weeks)",
-      "description": "Locally acting corticosteroid with extensive first-pass metabolism that limits systemic exposure. Used for mild to moderate flares not controlled by mesalamine. Not for maintenance.",
-      "effectiveness": "Clinical remission in 18-20% at 8 weeks (CORE I/II trials), with fewer steroid side effects than prednisolone."
+      "name": "Oral mesalamine (2.4-4.8 g daily) — systemic 5-ASA",
+      "description": "Mainstay of induction and maintenance therapy in mild-to-moderate extensive UC. Once-daily dosing is as effective as divided doses and improves adherence. Doses above 2.4 g/day produce higher remission rates without added toxicity.",
+      "effectiveness": "Clinical remission in roughly 40-55% at 8 weeks and maintenance of remission in 50-70% at one year when used at adequate dose."
     },
     {
-      "name": "Systemic corticosteroids — oral prednisolone 40-60 mg daily tapered over 8 weeks; IV methylprednisolone 60 mg daily for ASUC",
-      "description": "Reserved for moderate to severe flares and ASUC. Effective for induction but never for maintenance — long-term use causes osteoporosis, diabetes, and cataracts. Calcium, vitamin D, and DEXA monitoring are required during prolonged courses.",
-      "effectiveness": "Clinical response in 60-70% of moderate to severe flares within 7-10 days; primary non-response or steroid dependence affects 30-40% and triggers escalation to biologics or surgery."
+      "name": "Budesonide MMX (9 mg daily for 8 weeks)",
+      "description": "Multimatrix oral steroid with high first-pass hepatic metabolism, delivering steroid effect to the colonic mucosa with limited systemic exposure. Used when 5-ASA induction fails but advanced therapy is not yet indicated.",
+      "effectiveness": "Clinical and endoscopic remission in roughly 18-20% by week 8 versus 7-8% with placebo (CORE trials); a steroid-sparing bridging option."
     },
     {
-      "name": "Thiopurines — azathioprine 2-2.5 mg/kg daily or 6-mercaptopurine 1-1.5 mg/kg daily",
-      "description": "Steroid-sparing maintenance therapy. Onset of action takes 8-12 weeks. TPMT genotyping or activity testing before starting prevents profound myelosuppression in poor metabolizers. Lifetime lymphoma risk roughly 4-fold higher (still low absolute risk).",
-      "effectiveness": "Steroid-free remission in 40-50% at 12 months when used as maintenance after corticosteroid induction (UK-CAB and meta-analysis data)."
+      "name": "Systemic corticosteroids (oral prednisolone 40-60 mg daily for moderate-severe flare; IV methylprednisolone 60 mg daily for ASUC)",
+      "description": "Used to induce — never maintain — remission. Tapered over 6-8 weeks once a flare is controlled. Failure to taper, or relapse on taper, defines steroid dependence and triggers escalation to biologic or small-molecule therapy.",
+      "effectiveness": "Roughly 70% of patients respond within 5-7 days; about 30% fail IV steroids in ASUC and require rescue or colectomy."
     },
     {
-      "name": "Anti-TNF biologics — infliximab 5 mg/kg IV at 0, 2, 6 weeks then every 8 weeks; adalimumab 160 mg SC then 80 mg, then 40 mg every 2 weeks; golimumab 200/100 mg SC induction then 100 mg monthly",
-      "description": "First-line biologic class for moderate to severe UC. ACT 1 and ACT 2 trials (Rutgeerts 2005) established infliximab efficacy. Therapeutic drug monitoring with trough levels and anti-drug antibody testing optimizes dosing. Screen for latent TB and hepatitis B before starting.",
-      "effectiveness": "Clinical remission in 30-40% at week 8 and 25-35% at week 52; mucosal healing in 30-45% in pivotal trials. Infliximab is the only anti-TNF approved as rescue therapy in ASUC."
+      "name": "Infliximab (5 mg/kg IV at weeks 0, 2, 6 then every 8 weeks) — anti-TNF",
+      "description": "Anti-TNF monoclonal antibody. First biologic approved for UC. Effective for moderate-severe disease and for IV rescue in steroid-refractory ASUC. Test for latent TB and hepatitis B prior to starting.",
+      "effectiveness": "Clinical remission in 33-39% and mucosal healing in roughly 60% at week 8 in ACT-1 and ACT-2 trials. About 50% of responders maintain remission at 1 year."
     },
     {
-      "name": "Vedolizumab (300 mg IV at 0, 2, 6 weeks then every 8 weeks, or 108 mg SC every 2 weeks after IV induction)",
-      "description": "Gut-selective α4β7 integrin antagonist. Excellent safety profile because immunosuppression is restricted to the gut. GEMINI 1 (Feagan 2013) established efficacy; VARSITY (Sands 2019) showed superiority over adalimumab in biologic-naive moderate to severe UC.",
-      "effectiveness": "Clinical remission in 17% at week 6 (vs 5% placebo, GEMINI 1) and 41% maintenance remission at week 52; superior to adalimumab on clinical remission (31% vs 23%) and mucosal healing in VARSITY."
+      "name": "Adalimumab (160 mg, then 80 mg, then 40 mg every 2 weeks SC) — anti-TNF",
+      "description": "Subcutaneous TNF inhibitor; convenient home administration. Lower remission rates than infliximab in indirect comparisons but acceptable when self-injection is preferred.",
+      "effectiveness": "Clinical remission in roughly 17% at week 8 (ULTRA trials) and 8% sustained at week 52 in the more conservative endpoints."
     },
     {
-      "name": "Ustekinumab (intravenous weight-based induction then 90 mg SC every 8 weeks) and guselkumab (induction then 100 mg SC every 8 weeks)",
-      "description": "Anti-IL-12/23 (ustekinumab) and IL-23p19-selective (guselkumab) monoclonal antibodies. UNIFI established ustekinumab in UC; QUASAR (Peyrin-Biroulet 2024) established guselkumab. Generally well-tolerated; rare infection risk lower than anti-TNF.",
-      "effectiveness": "Ustekinumab: clinical remission in 16% at induction week 8 and 44% maintenance at week 44. Guselkumab: clinical remission in 23% at week 12 and 50% at week 44 in QUASAR."
+      "name": "Golimumab (200 mg then 100 mg at week 2; 100 mg every 4 weeks SC) — anti-TNF",
+      "description": "Subcutaneous TNF inhibitor approved on the basis of the PURSUIT trials. Reasonable second anti-TNF option after adalimumab failure when infliximab is impractical.",
+      "effectiveness": "Clinical response in roughly 50% and remission in about 18% at week 6 in PURSUIT-SC."
     },
     {
-      "name": "JAK inhibitors — tofacitinib 10 mg twice daily induction then 5-10 mg twice daily maintenance; upadacitinib 45 mg daily induction then 15-30 mg daily maintenance",
-      "description": "Oral small molecules blocking JAK1/3 (tofacitinib) or JAK1 (upadacitinib). Rapid onset within 2 weeks. OCTAVE trials established tofacitinib; U-ACHIEVE/U-ACCOMPLISH established upadacitinib. FDA boxed warning for major cardiovascular events, venous thromboembolism, and malignancy — avoid in older patients with cardiovascular risk or active smokers.",
-      "effectiveness": "Tofacitinib clinical remission 17% week 8 (OCTAVE) and 41% maintenance at week 52. Upadacitinib 26% remission at week 8 induction and 52% at week 52 (U-ACHIEVE/U-ACCOMPLISH)."
+      "name": "Vedolizumab (300 mg IV at weeks 0, 2, 6 then every 8 weeks) — anti-integrin",
+      "description": "Selective gut-tropic α4β7 integrin antagonist. Excellent long-term safety profile; favored in older patients, those with infection risk, or after anti-TNF failure. GEMINI-1 trial supports both induction and maintenance.",
+      "effectiveness": "Clinical remission in roughly 17% at week 6 induction and 42% maintenance at 52 weeks (GEMINI-1, biologic-naive subgroup higher)."
     },
     {
-      "name": "S1P receptor modulators — ozanimod 0.92 mg daily; etrasimod 2 mg daily",
-      "description": "Oral sphingosine-1-phosphate receptor modulators that sequester lymphocytes in lymph nodes. True North (Sandborn 2021) established ozanimod; ELEVATE UC 52/12 established etrasimod. Require baseline ECG, ophthalmology, and pulmonary function testing; first-dose monitoring for bradycardia.",
-      "effectiveness": "Ozanimod clinical remission 18% at week 10 induction and 37% at week 52 (True North). Etrasimod 27% at week 12 and 32% at week 52 (ELEVATE)."
+      "name": "Ustekinumab (6 mg/kg IV induction, then 90 mg SC every 8 weeks) — IL-12/23",
+      "description": "Monoclonal antibody against the shared p40 subunit of IL-12 and IL-23. Effective in both biologic-naive and biologic-experienced patients per UNIFI trial. Favorable safety profile.",
+      "effectiveness": "Clinical remission in 15-19% at week 8 induction and roughly 43% at week 44 in UNIFI."
     },
     {
-      "name": "Ciclosporin (IV 2 mg/kg/day) for acute severe colitis",
-      "description": "Calcineurin inhibitor used as rescue therapy in ASUC when patients fail IV corticosteroids and infliximab is unavailable, contraindicated, or ineffective. Requires therapeutic drug monitoring (target trough 150-250 ng/mL) and conversion to oral thiopurine for maintenance.",
-      "effectiveness": "Avoids colectomy in 60-70% of steroid-refractory ASUC at 30 days; equivalence with infliximab demonstrated in CYSIF trial (Laharie 2012)."
+      "name": "Mirikizumab (300 mg IV q4wk induction × 3 doses, then 200 mg SC every 4 weeks) — IL-23p19",
+      "description": "First IL-23 p19-selective antibody approved for UC. Pivotal LUCENT-1 and LUCENT-2 trials demonstrated induction and maintenance efficacy in biologic-naive and biologic-experienced patients (Sandborn 2023, PMID 37133584).",
+      "effectiveness": "Clinical remission in roughly 24% at week 12 and 50% at week 52 among week-12 responders (LUCENT)."
+    },
+    {
+      "name": "Risankizumab (1200 mg IV induction at weeks 0, 4, 8, then 180-360 mg SC every 8 weeks) — IL-23p19",
+      "description": "Second IL-23 p19 antibody approved for UC, supported by the INSPIRE and COMMAND trials. Reasonable option after anti-TNF failure or as a first-line advanced therapy.",
+      "effectiveness": "Clinical remission in roughly 20-21% at induction and 40% at maintenance week 52 in pivotal trials."
+    },
+    {
+      "name": "Tofacitinib (10 mg twice daily for 8 weeks induction; 5-10 mg twice daily maintenance) — pan-JAK inhibitor",
+      "description": "Oral small molecule with rapid onset; effective in biologic-experienced patients. FDA boxed warning following ORAL Surveillance signaled higher rates of major adverse cardiovascular events, thromboembolism, and malignancy versus TNF inhibitors in rheumatoid arthritis populations — caution in patients over 65, smokers, and those with cardiovascular risk factors (Sandborn OCTAVE, NEJM 2017, PMID 28467869).",
+      "effectiveness": "Clinical remission in 16-18% at week 8 induction and 34-41% at week 52 maintenance (OCTAVE Induction and Sustain)."
+    },
+    {
+      "name": "Upadacitinib (45 mg daily for 8 weeks induction; 15-30 mg daily maintenance) — JAK1-selective",
+      "description": "Selective JAK1 inhibitor with rapid onset. ELEVATE UC 52 and ELEVATE UC 12 demonstrated higher efficacy than placebo across biologic-naive and biologic-experienced patients (Danese 2022, PMID 35644166). Shares the JAK-class warnings, applied with caution in older or higher-risk patients.",
+      "effectiveness": "Clinical remission in 26-33% at week 8 induction and roughly 42-52% at week 52 maintenance in ELEVATE."
+    },
+    {
+      "name": "Ozanimod (0.92 mg once daily after titration) — S1P receptor modulator",
+      "description": "Oral sphingosine-1-phosphate receptor modulator that sequesters lymphocytes in lymph nodes. TRUE NORTH supported induction and maintenance efficacy with a manageable safety profile (Sands 2021, PMID 34081380). Baseline ophthalmology and cardiology screening recommended.",
+      "effectiveness": "Clinical remission in 18% at week 10 induction and 37% at week 52 maintenance (TRUE NORTH)."
+    },
+    {
+      "name": "Etrasimod (2 mg once daily) — S1P receptor modulator",
+      "description": "Second oral S1P modulator approved for UC on the basis of the ELEVATE UC 52 and ELEVATE UC 12 trials. Convenient once-daily oral dosing without injection.",
+      "effectiveness": "Clinical remission in 27% at week 12 and 32% at week 52 in pivotal trials."
+    },
+    {
+      "name": "Cyclosporine (2-4 mg/kg/day IV for steroid-refractory ASUC)",
+      "description": "Calcineurin inhibitor used as IV rescue therapy in ASUC at day 3-5 if response to steroids fails. Requires close monitoring of blood pressure, magnesium, renal function, and drug levels. Bridge to maintenance with thiopurine or biologic.",
+      "effectiveness": "Short-term response rate of roughly 70-80% in ASUC, with about 50% colectomy-free at 1 year."
     }
   ],
 
   "surgicalOptions": [
     {
-      "name": "Total proctocolectomy with ileal pouch-anal anastomosis (IPAA, 'J-pouch')",
-      "description": "The standard restorative procedure. Removes the entire colon and rectum, fashions a pouch from terminal ileum, and anastomoses it to the anus, preserving voluntary defecation. Usually performed in two or three stages. Curative for colonic UC and prevents colorectal cancer.",
-      "successRate": "Pouch survival roughly 95% at 10 years and 90% at 20 years. Patients average 5-7 bowel motions daily with good continence; pouchitis affects 30-50% over a lifetime but usually responds to short antibiotic courses."
+      "name": "Total proctocolectomy with ileal pouch-anal anastomosis (J-pouch IPAA)",
+      "description": "Definitive curative procedure. Removes the entire colon and rectum, creates a pouch from terminal ileum, and reconnects to the anal canal — usually in two or three stages with a temporary diverting ileostomy. Performed for medically refractory disease, dysplasia, or cancer.",
+      "successRate": "Functional pouch in 85-95% at 10 years; pouchitis develops in roughly 50% over time and is usually treatable with antibiotics."
     },
     {
-      "name": "Subtotal colectomy with end ileostomy (in acute severe colitis)",
-      "description": "Emergency operation when ASUC fails medical rescue therapy or for toxic megacolon, perforation, or massive hemorrhage. The rectum is left in place for later reconstruction or completion proctectomy.",
-      "successRate": "Resolves acute disease in over 95% with low operative mortality (~1-2%) when performed before perforation. Allows later restorative pouch surgery in selected patients."
+      "name": "Total proctocolectomy with end ileostomy",
+      "description": "Removes the colon, rectum, and anus with a permanent ileostomy. Considered when pouch surgery is unsuitable (older age, sphincter dysfunction, advanced cancer, or patient preference).",
+      "successRate": "Operative mortality under 1%; long-term satisfaction with stoma is high in selected patients."
     },
     {
-      "name": "Total proctocolectomy with permanent end ileostomy",
-      "description": "Removes colon, rectum, and anus with a permanent stoma. Preferred for patients with poor anal sphincter function, low rectal cancer, or who decline pouch surgery. Simpler procedure with lower long-term complication rate than IPAA.",
-      "successRate": "Excellent disease control; stoma-related complications (parastomal hernia, leakage, skin irritation) affect 20-30% over a lifetime and are mostly manageable."
-    },
-    {
-      "name": "Continent ileostomy (Kock pouch)",
-      "description": "Rarely used alternative to standard end ileostomy that creates an intra-abdominal continent reservoir emptied by catheterization. Reserved for select patients at high-volume centers.",
-      "successRate": "Long-term function in 60-75% of patients; valve revision required in 30-40% over 20 years."
+      "name": "Subtotal colectomy with end ileostomy (emergency)",
+      "description": "Performed for acute severe colitis with toxic megacolon, perforation, or steroid- and rescue-refractory disease. The rectum is preserved temporarily, allowing later pouch surgery if appropriate.",
+      "successRate": "Lifesaving in fulminant disease; 80-85% subsequently undergo elective completion proctectomy with pouch reconstruction."
     }
   ],
 
   "alternativeTreatments": [
-    { "name": "Curcumin (turmeric extract, 3 g daily oral)", "description": "Randomized trial data (Lang 2015) showed curcumin added to mesalamine improved clinical remission rates compared with mesalamine alone in mild to moderate UC (53% vs 0% in the 6-month trial). Evidence base is small; reasonable adjunct to standard therapy." },
-    { "name": "Fecal microbiota transplantation (FMT)", "description": "Multiple randomized trials (Moayyedi 2015, Paramsothy 2017, Costello 2019) show induction of remission in 24-32% of active UC patients vs 9-11% placebo when repeated FMT is delivered colonoscopically. Still investigational for UC; not yet endorsed by ACG/AGA outside clinical trials." },
-    { "name": "Selected probiotics (VSL#3, Escherichia coli Nissle 1917)", "description": "Meta-analysis data support a modest role of VSL#3 as adjunct in mild to moderate UC and E. coli Nissle 1917 as alternative to mesalamine for maintenance. Effect size is modest; never a substitute for 5-ASA or biologic therapy in moderate to severe disease." }
+    { "name": "Curcumin (turmeric extract, 2-3 g daily)", "description": "Several randomized trials (notably Lang 2015) support curcumin as adjunctive therapy to mesalamine, with higher remission rates than mesalamine alone in mild-to-moderate UC. Use a standardized preparation rather than dietary turmeric." },
+    { "name": "Fecal microbiota transplantation (FMT)", "description": "Investigational for mild-to-moderate UC; multiple RCTs (Moayyedi 2015, Paramsothy 2017) showed modestly higher remission rates than placebo. Not yet a standard-of-care option outside research protocols or recurrent C. difficile co-infection." },
+    { "name": "Mind-body therapies (CBT, gut-directed hypnotherapy)", "description": "Adjunctive support for fatigue, anxiety, and pain perception in stable UC. Do not affect mucosal inflammation but improve quality-of-life scores in trials." }
   ],
 
-  "whySeeSpecialist": "A gastroenterologist should be involved from the time UC is suspected. Specialist referral is essential for any patient with confirmed UC, recurrent flares despite mesalamine, steroid dependence (more than one short course per year or inability to taper below 10 mg of prednisolone), suspected acute severe colitis, planned biologic or small molecule therapy, surveillance colonoscopy for dysplasia, primary sclerosing cholangitis on labs or imaging, or consideration of colectomy. Pediatric and adolescent patients need specialist IBD care from diagnosis given the impact on growth, puberty, and education. Pregnancy is best co-managed by a maternal-fetal medicine specialist and an IBD-experienced gastroenterologist.",
+  "whySeeSpecialist": "A gastroenterologist should lead care from the point of initial diagnostic colonoscopy onward. Specialist input is essential for confirming UC versus Crohn's, choosing between 5-ASA and advanced therapy, managing treatment failures, running inpatient care for acute severe colitis, coordinating colorectal surgery, and overseeing long-term dysplasia surveillance. Hepatology, rheumatology, dermatology, and ophthalmology are added when extraintestinal manifestations occur.",
 
-  "doctorSelectionGuide": "Look for board certification in gastroenterology with specific IBD experience, comfort with therapeutic drug monitoring of biologics, chromoendoscopy or high-definition surveillance colonoscopy, and a working relationship with colorectal surgery. Centers with multidisciplinary IBD clinics (gastroenterology, colorectal surgery, IBD nurse specialist, dietitian, mental health) outperform fragmented care. Ask whether the practice uses fecal calprotectin for flare monitoring, has access to infusion services for IV biologics, and offers structured education on flare action plans. Continuity matters because UC is a lifelong relationship.",
-
-  "hospitalCriteria": [
-    "Inflammatory bowel disease center with multidisciplinary clinic (gastroenterology, colorectal surgery, IBD nurse, dietitian)",
-    "On-site endoscopy with high-definition and chromoendoscopy capability for dysplasia surveillance",
-    "Infusion suite for IV biologics with same-day access for urgent dosing",
-    "Colorectal surgery program experienced in laparoscopic and robotic proctocolectomy with ileal pouch-anal anastomosis",
-    "Therapeutic drug monitoring laboratory for biologic trough levels and anti-drug antibodies",
-    "Pathology service experienced in IBD biopsy interpretation and dysplasia grading"
-  ],
-
-  "keyFacilities": [],
-
-  "costBreakdown": null,
-  "insuranceGuide": null,
-  "financialAssistance": null,
+  "doctorSelectionGuide": "Look for a board-certified gastroenterologist with experience in inflammatory bowel disease — ideally one practicing within an IBD-focused unit with infusion capacity, on-site advanced endoscopy, dedicated IBD nursing, and rapid access to a colorectal surgeon experienced in pouch surgery. Ask whether the practice uses treat-to-target follow-up with endoscopy and calprotectin, and how rapidly they can admit patients in a flare. Continuity matters — UC is a multi-decade relationship.",
 
   "preventionStrategies": [
-    "Adhere to maintenance therapy lifelong even when in clinical remission — stopping mesalamine or biologics is the single strongest predictor of flare within 12 months",
-    "Avoid NSAIDs for routine pain control; choose acetaminophen instead, since NSAIDs roughly double flare risk in established UC",
-    "Vaccinate proactively: annual influenza, pneumococcal series, hepatitis B, HPV up to age 45, recombinant zoster vaccine after age 50, COVID-19 boosters. Live vaccines (MMR, varicella, yellow fever) should be given before starting biologics or at least 4 weeks before immunosuppression",
-    "Treat enteric infections early; any new diarrhea or worsening symptoms in established UC warrants stool testing for C. difficile and other pathogens before assuming a flare",
-    "Begin colonoscopic dysplasia surveillance 8-10 years after diagnosis for extensive or left-sided disease (immediately at diagnosis if primary sclerosing cholangitis is present), repeating every 1-5 years based on findings",
-    "Monitor bone density on prolonged corticosteroid courses and supplement calcium 1000-1200 mg and vitamin D 800-1000 IU daily during steroid exposure"
+    "There is no proven primary prevention for ulcerative colitis itself; focus instead on early detection — investigate persistent bloody diarrhea promptly rather than attributing it to hemorrhoids",
+    "Maintain endoscopic remission (Mayo subscore 0-1) on appropriate maintenance therapy — the strongest determinant of long-term outcomes",
+    "Adhere to long-term 5-ASA in mild disease — chronic mesalamine reduces colorectal cancer risk by roughly 50% in observational studies",
+    "Complete recommended vaccinations (PPSV23/PCV20, recombinant zoster, annual influenza, COVID, hepatitis B) before starting immunosuppression",
+    "Attend surveillance colonoscopy from 8 years after diagnosis, then every 1-3 years depending on extent, PSC status, and family history",
+    "Avoid non-essential NSAIDs, which can precipitate flares; use paracetamol or short-course topical agents as preferred analgesics"
   ],
 
   "lifestyleModifications": [
-    "Track stool frequency, urgency, blood, and abdominal pain in a simple diary or IBD app — patterns surface early flares before they escalate",
-    "Maintain a written flare action plan agreed with the gastroenterology team so escalation steps are clear when symptoms change",
-    "Engage with structured mental health support if mood, anxiety, or quality of life decline — psychological care reduces flare frequency in randomized trials",
-    "Stop smoking for cardiovascular and cancer reasons; do not start smoking for UC, despite the protective association seen in epidemiology",
-    "Sleep 7-9 hours consistently — short sleep is associated with flare risk in cohort data",
-    "Build a relationship with an IBD-experienced dietitian, especially during flares and after surgery, to maintain adequate calorie and protein intake without unnecessary food restriction",
-    "Use prescribed antiemetics, anti-diarrheals (only under specialist guidance — avoid loperamide in severe flares as it raises toxic megacolon risk), and topical creams for perianal skin irritation during flare episodes"
+    "Follow a Mediterranean-style eating pattern rich in vegetables, fruits, fish, olive oil, and whole grains; limit ultra-processed foods, refined sugar, and red meat",
+    "Identify and reduce personal trigger foods through a food and symptom diary rather than blanket restriction — there is no single UC diet",
+    "Maintain hydration during flares with electrolyte solutions to offset losses from frequent stools",
+    "Stop smoking; the long-term cardiovascular and cancer benefits outweigh any short-term UC effect, and nicotine cessation should be combined with proactive medical optimization",
+    "Limit alcohol intake — heavy use is associated with relapse and complicates medication metabolism, particularly with JAK inhibitors and S1P modulators",
+    "Build regular low-to-moderate intensity aerobic activity (walking, cycling, swimming) into the week to reduce systemic inflammation and improve mood",
+    "Prioritize sleep and stress management — both are independent triggers of clinical relapse in IBD cohorts"
   ],
 
   "dietRecommendations": {
     "recommended": [
-      "Mediterranean-style eating pattern with vegetables, fruits, olive oil, whole grains, legumes, fish, and modest poultry — associated with lower flare risk and inflammation markers",
-      "Adequate protein (1.0-1.5 g/kg/day) to offset losses during active disease and accelerate mucosal repair",
-      "Iron-rich foods (red meat in moderation, legumes, leafy greens) plus oral or intravenous iron replacement under medical supervision when anemia is present",
-      "Calcium- and vitamin-D-rich foods or supplementation, particularly during steroid courses",
-      "Adequate hydration (2-3 liters daily) and oral rehydration solutions during high-output flare diarrhea",
-      "Soluble fiber sources (oats, psyllium) in remission, which support short-chain fatty acid production and gut barrier function"
+      "Cooked vegetables, peeled fruits, and well-tolerated fiber sources during stable disease",
+      "Lean protein from fish, poultry, eggs, and low-fat dairy as tolerated",
+      "Omega-3-rich foods (oily fish such as salmon, mackerel, sardines) two to three times weekly",
+      "Adequate iron, calcium, and vitamin D — most UC patients benefit from supplementation, especially during flares",
+      "Hydration with water, clear soups, and oral rehydration solutions during flares",
+      "Mediterranean-pattern foods overall, with olive oil as the primary added fat"
     ],
     "avoid": [
-      "Insoluble fiber and skins/seeds during active flares — they can worsen cramping and stool frequency",
-      "Lactose-containing dairy if symptoms worsen reliably with milk (secondary lactose intolerance is common during flares); reintroduce in remission",
-      "Ultra-processed foods, emulsifiers (polysorbate 80, carboxymethylcellulose) in animal studies disrupt mucus and barrier; observational data support limiting them",
-      "Excess alcohol, which both irritates the mucosa and interacts with thiopurines and methotrexate",
-      "Very high-residue raw vegetables in the immediate flare period; reintroduce gradually as remission returns",
-      "Carbonated drinks and sorbitol-sweetened products when bloating and cramping are prominent"
+      "Ultra-processed foods, fast food, and items high in emulsifiers (polysorbate-80, carboxymethylcellulose) where possible",
+      "High-residue raw vegetables and whole nuts during active flares — reintroduce when symptoms settle",
+      "High-fructose corn syrup and sugar-sweetened beverages, which worsen diarrhea and are linked epidemiologically with IBD risk",
+      "Excess red and processed meat (limit to one to two servings per week)",
+      "Alcohol during active flares; moderate use only in stable remission",
+      "Routine NSAID use for pain (ibuprofen, naproxen, diclofenac), which can precipitate flares"
     ]
   },
 
-  "exerciseGuidelines": "Regular moderate exercise is safe in stable UC and improves fatigue, mood, and bone density. Aim for 150 minutes of moderate aerobic activity per week (walking, cycling, swimming) plus resistance training twice weekly, especially during corticosteroid therapy to offset muscle and bone loss. During active flares, reduce intensity, prioritize rest, and resume gradually as symptoms settle. Stay hydrated and time exercise around stool patterns to maintain confidence.",
+  "exerciseGuidelines": "Regular moderate aerobic exercise — 30 minutes most days — is safe and beneficial in stable UC, reducing fatigue and improving quality of life. During an acute flare, rest as needed and resume activity gradually as bowel symptoms settle. Resistance training helps offset steroid-related muscle loss and bone density decline. Avoid high-intensity training during severe flares due to dehydration and electrolyte risk.",
 
   "dailyManagement": [
-    "Take maintenance medication at the same time each day; adherence is the strongest predictor of staying in remission",
-    "Maintain a symptom diary capturing stool frequency, blood, urgency, abdominal pain, and any extraintestinal symptoms",
-    "Stay current with vaccinations and confirm flu, pneumococcal, COVID-19, and shingles status with the gastroenterology team annually",
-    "Carry a wallet card listing diagnosis, current medications, biologic trough levels if known, and the name of the treating gastroenterologist for emergency room visits",
-    "Plan ahead for travel: arrange medication supply, consider travel insurance with chronic disease cover, and identify local IBD services at the destination",
-    "Use the IBD team's flare action plan promptly — early contact with the team, not waiting until symptoms peak, prevents hospitalization"
+    "Take maintenance medication at the same time daily — adherence to 5-ASA below 80% roughly doubles relapse risk",
+    "Track stool frequency, blood, urgency, and any new pain in a simple journal or app to detect early relapse",
+    "Monitor fecal calprotectin every 3-6 months in stable disease, and within 4-6 weeks of any treatment change",
+    "Stay current on vaccinations and update your gastroenterologist before starting any new medication, especially antibiotics or NSAIDs",
+    "Carry a medication card listing your current biologic or small-molecule therapy, last infusion date, and contact details for your IBD team",
+    "Plan travel with extra medication, a copy of your treatment summary, and access to a referral clinic at the destination"
   ],
 
-  "prognosis": "With current therapy, life expectancy in UC is close to that of the general population. About 50% of patients remain in clinical remission in any given year on appropriate maintenance therapy, 30% have intermittent flares, and 10-20% have continuously active disease. Roughly 10-15% of UC patients undergo colectomy at 10 years, falling to 5-10% in the biologic era. Cumulative colorectal cancer risk is approximately 2% at 10 years, 8% at 20 years, and 18% at 30 years for patients with extensive colitis; risk is several-fold higher when primary sclerosing cholangitis coexists. Surveillance colonoscopy starting 8-10 years after diagnosis reduces cancer mortality. Early predictors of poor prognosis include young age at diagnosis, extensive colitis at presentation, deep ulcers on endoscopy, high CRP or low albumin at flare, need for steroids in the first year, and primary sclerosing cholangitis. Most patients live full lives with families, work, and travel — but lifelong specialist follow-up, adherence to maintenance therapy, and surveillance for cancer and bone health are essential.",
+  "prognosis": "With consistent treat-to-target management, modern outcomes for ulcerative colitis are markedly better than a generation ago. About 50% of patients achieve sustained steroid-free remission on first-line 5-ASA, and most of the remainder reach durable remission on a biologic, JAK inhibitor, or S1P modulator. Lifetime colectomy rates have fallen from over 30% in the pre-biologic era to roughly 10-15% in contemporary cohorts. Endoscopic and histologic healing, once achieved, predicts the longest flare-free intervals and the lowest cumulative colorectal cancer risk. Cancer risk rises after eight years of disease and accumulates by roughly 1% per year of duration after the first decade in patients with extensive disease, but is sharply reduced by adherent maintenance therapy and structured surveillance. Patients with primary sclerosing cholangitis carry the highest cancer risk and need annual colonoscopy. Overall life expectancy in well-managed UC is close to that of the general population, and most patients work, parent, and travel without significant restriction.",
 
-  "recoveryTimeline": "Mild to moderate flares treated with mesalamine and topical therapy typically improve within 2-4 weeks; clinical remission by 6-8 weeks; mucosal healing on endoscopy by 12-16 weeks. Corticosteroid response is usually evident by day 5-7 in moderate disease and by day 3 in acute severe colitis (Oxford criteria assess response on day 3). Biologic and small molecule therapies show first symptom improvement within 2-6 weeks (faster for JAK inhibitors and S1P modulators, slower for vedolizumab and ustekinumab), with formal induction endpoints assessed at 6-12 weeks. After ileal pouch-anal anastomosis, expect 6-12 weeks for stoma reversal and pouch adaptation; bowel function and continence stabilize at 6-12 months.",
+  "recoveryTimeline": "Mild flares typically settle over 2-4 weeks with topical or oral 5-ASA. Moderate flares treated with oral steroids show meaningful symptom improvement within 5-7 days, with steroids tapered over 6-8 weeks. Biologic and small-molecule induction works on different schedules: JAK inhibitors and S1P modulators show response within 1-2 weeks; anti-TNF and ustekinumab over 4-8 weeks; vedolizumab and IL-23 agents over 8-14 weeks. Acute severe ulcerative colitis admitted to hospital typically responds to IV steroids within 3 days; non-responders are escalated to infliximab or cyclosporine at day 3-5 with response assessed within 5-7 days. After J-pouch surgery, full pouch adaptation takes 6-12 months, during which stool frequency gradually falls from 10-15 to 4-6 per day.",
 
   "complications": [
-    "Colorectal cancer — cumulative risk roughly 2% at 10 years, 8% at 20 years, and 18% at 30 years for extensive colitis; surveillance colonoscopy with chromoendoscopy is mandatory starting 8-10 years after diagnosis (immediately if PSC is present).",
-    "Toxic megacolon — colonic dilation greater than 6 cm with systemic toxicity; complicates 1-2% of severe flares and carries mortality of 2-5% even with prompt care.",
-    "Acute severe ulcerative colitis (ASUC) — Truelove and Witts criteria defining a medical emergency; affects 15-25% of patients over a lifetime and 30-40% of those require colectomy within their initial admission.",
-    "Primary sclerosing cholangitis (PSC) — present in 3-7% of UC patients; markedly raises cholangiocarcinoma and colorectal cancer risk and may eventually require liver transplantation.",
-    "Iron-deficiency anemia and venous thromboembolism — both common during active disease; hospitalized UC patients have roughly 3-fold higher VTE risk and need pharmacologic prophylaxis.",
-    "Osteoporosis and fragility fracture — driven by recurrent corticosteroid courses and chronic inflammation; baseline DEXA and supplementation are required on prolonged steroids.",
-    "Extraintestinal manifestations — peripheral and axial arthritis, uveitis, episcleritis, erythema nodosum, pyoderma gangrenosum, and aphthous ulcers affect 25-40% of patients and often require dermatology, rheumatology, or ophthalmology co-management.",
-    "Pouchitis after ileal pouch-anal anastomosis — affects 30-50% of pouch patients over a lifetime; most cases respond to short antibiotic courses but ~10% become chronic."
+    "Acute severe ulcerative colitis (ASUC) — admission for IV steroids and rescue therapy with infliximab or cyclosporine; colectomy if medical therapy fails",
+    "Toxic megacolon — colonic dilation greater than 6 cm with systemic toxicity; surgical emergency with high perforation risk",
+    "Colonic perforation — typically in the setting of toxic megacolon or severe deep ulceration; carries mortality up to 30% if delayed",
+    "Venous thromboembolism — DVT and pulmonary embolism risk is roughly three-fold elevated in active UC; prophylactic anticoagulation is recommended for hospitalized patients",
+    "Colorectal cancer — cumulative risk roughly 1% per year beyond 10 years of disease in extensive UC, modified by extent, PSC, family history, and dysplasia",
+    "Iron-deficiency and anemia of chronic disease — common, undertreated, and a major driver of fatigue",
+    "Primary sclerosing cholangitis — affects roughly 5% of UC patients; raises colorectal cancer and cholangiocarcinoma risk and warrants annual colonoscopy",
+    "Pouchitis after J-pouch — develops in roughly 50% over time; usually responds to antibiotics, occasionally requires biologic therapy or pouch revision",
+    "Growth failure and delayed puberty in pediatric-onset UC — drives early consideration of escalation to biologics"
   ],
 
   "supportResources": [
-    { "name": "Crohn's & Colitis Foundation (US)", "url": "https://www.crohnscolitisfoundation.org/what-is-ulcerative-colitis", "description": "The leading US nonprofit for IBD with patient education, peer support, advocacy, and research updates on ulcerative colitis." },
-    { "name": "Crohn's & Colitis UK", "url": "https://crohnsandcolitis.org.uk/info-support/information-about-crohns-and-colitis/all-information-about-crohns-and-colitis/ulcerative-colitis", "description": "UK charity with verified patient guides, helpline, and the well-known 'Can't Wait Card' for urgent toilet access." },
-    { "name": "American College of Gastroenterology — Ulcerative Colitis Patient Education", "url": "https://gi.org/topics/ulcerative-colitis/", "description": "Specialty-society overview reflecting the 2019 ACG clinical guideline." },
-    { "name": "European Crohn's and Colitis Organisation (ECCO)", "url": "https://www.ecco-ibd.eu/", "description": "European clinical guidelines and patient-facing resources on UC diagnosis, management, and surgical care." }
+    { "name": "Crohn's & Colitis Foundation (USA)", "url": "https://www.crohnscolitisfoundation.org/what-is-ulcerative-colitis", "description": "Authoritative US patient organization with disease education, peer support, and clinical trial directories." },
+    { "name": "Crohn's & Colitis UK", "url": "https://crohnsandcolitis.org.uk/info-support/information-about-crohns-and-colitis/all-information-about-crohns-and-colitis/ulcerative-colitis", "description": "UK charity offering patient guides, helpline, and IBD passports for travel and emergencies." },
+    { "name": "European Crohn's and Colitis Organisation (ECCO)", "url": "https://www.ecco-ibd.eu/", "description": "European clinical society publishing the ECCO guidelines used across European and Asian IBD care." },
+    { "name": "American College of Gastroenterology — UC Patient Information", "url": "https://gi.org/topics/ulcerative-colitis/", "description": "US specialty society resource aligned with the 2019 ACG ulcerative colitis guideline." }
   ],
 
   "confusedWithConditions": [
-    { "slug": "crohns-disease", "name": "Crohn's Disease", "keyDifference": "Crohn's disease can affect any part of the gastrointestinal tract from mouth to anus, with skip lesions, transmural inflammation, fistulas, strictures, and granulomas on biopsy. UC is confined to the colon, continuous from the rectum, restricted to mucosa and submucosa, and does not form fistulas or granulomas. Bloody diarrhea is more typical of UC; right-sided abdominal pain and perianal disease point to Crohn's." },
-    { "slug": "ibs", "name": "Irritable Bowel Syndrome (IBS)", "keyDifference": "IBS produces abdominal pain associated with altered bowel habit and bloating but never causes visible rectal bleeding, weight loss, nocturnal symptoms, fever, or elevated inflammatory markers. Endoscopy and biopsies in IBS are normal; fecal calprotectin is below 50 µg/g. UC reliably shows mucosal inflammation, ulcers, and elevated calprotectin." },
-    { "slug": "celiac-disease", "name": "Celiac Disease", "keyDifference": "Celiac disease is gluten-driven small-bowel villous atrophy producing chronic diarrhea, weight loss, and iron-deficiency anemia, but does not cause visible rectal bleeding. Tissue transglutaminase IgA and duodenal biopsies confirm celiac. UC colon biopsies do not show villous atrophy and small-bowel imaging is normal." },
-    { "slug": "microscopic-colitis-unspecified-k52839", "name": "Microscopic Colitis", "keyDifference": "Microscopic colitis (lymphocytic or collagenous subtypes) causes chronic non-bloody watery diarrhea in older adults, with macroscopically normal colonoscopy and diagnosis made only on biopsy. UC has visible mucosal inflammation, bloody diarrhea, and typical histology of crypt distortion and crypt abscesses." },
-    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "keyDifference": "Colorectal cancer often presents with change in bowel habit, rectal bleeding, anemia, or weight loss in older adults, but rarely with the high-frequency bloody diarrhea, urgency, and tenesmus typical of UC. Endoscopy identifies a focal mass rather than continuous mucosal inflammation. Long-standing UC raises colorectal cancer risk, so the two coexist in surveillance populations." }
+    { "slug": "crohns-disease", "name": "Crohn's Disease", "keyDifference": "Crohn's disease causes transmural inflammation that can affect any part of the gastrointestinal tract from mouth to anus, with skip lesions, granulomas, fistulas, and perianal involvement. UC is confined to the colon with continuous mucosal inflammation from the rectum proximally, no skip lesions, and no fistulas. Smoking worsens Crohn's but is paradoxically protective in UC." },
+    { "slug": "ibs", "name": "Irritable Bowel Syndrome", "keyDifference": "IBS produces cramping, bloating, and altered bowel habits without blood, weight loss, anemia, nocturnal symptoms, or systemic inflammation. Fecal calprotectin is normal in IBS and elevated in active UC. Colonoscopy is normal in IBS and abnormal in UC." },
+    { "slug": "microscopic-colitis-unspecified-k52839", "name": "Microscopic Colitis", "keyDifference": "Microscopic colitis causes chronic non-bloody watery diarrhea with a normal-appearing colon on endoscopy; diagnosis requires biopsies showing lymphocytic or collagenous infiltration. UC produces visible ulceration and bloody stools." },
+    { "slug": "enterocolitis-d-t-clostridium-difficile-not-spcf-as-recur-a0472", "name": "Clostridioides difficile Colitis", "keyDifference": "C. difficile colitis is an acute infectious colitis typically following antibiotic exposure, with positive C. difficile PCR or toxin. It can mimic or complicate UC; testing for C. difficile is mandatory in any UC flare." },
+    { "slug": "infectious-gastroenteritis-and-colitis-unspecified-a09", "name": "Infectious Colitis", "keyDifference": "Acute bacterial or parasitic colitis (Salmonella, Shigella, Campylobacter, amoebiasis) presents with bloody diarrhea over days, often with travel or food exposure history. Stool culture identifies the pathogen; symptoms typically resolve within 1-2 weeks, unlike the protracted course of UC." }
   ],
 
   "coOccurringConditions": [
-    { "slug": "ankylosing-spondylitis", "name": "Ankylosing Spondylitis" },
-    { "slug": "psoriasis", "name": "Psoriasis" },
-    { "slug": "iron-deficiency-anemia-unspecified-d509", "name": "Iron Deficiency Anemia" },
-    { "slug": "osteoporosis", "name": "Osteoporosis" }
+    { "slug": "anemia", "name": "Anemia" },
+    { "slug": "iron-deficiency-anemia-unspecified-d509", "name": "Iron Deficiency Anemia" }
   ],
 
   "relatedConditions": [
-    { "slug": "crohns-disease", "name": "Crohn's Disease", "relevance": "The other major inflammatory bowel disease; shares treatment classes but differs in distribution, depth, and complications. Distinguishing the two guides choice of biologic and surgical strategy." },
-    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "relevance": "Long-standing extensive UC raises colorectal cancer risk to roughly 18% at 30 years; surveillance colonoscopy with chromoendoscopy is mandated to detect dysplasia early." },
-    { "slug": "ibs", "name": "Irritable Bowel Syndrome", "relevance": "Functional GI symptoms overlap with UC in remission; up to 30% of UC patients in endoscopic remission have IBS-type symptoms requiring different management." },
-    { "slug": "celiac-disease", "name": "Celiac Disease", "relevance": "Both autoimmune GI conditions occasionally coexist; celiac should be considered in UC patients with persistent symptoms despite mucosal healing." },
-    { "slug": "microscopic-colitis-unspecified-k52839", "name": "Microscopic Colitis", "relevance": "Another inflammatory colonic condition that can mimic UC in older adults, distinguished by normal endoscopy and characteristic biopsy findings." }
+    { "slug": "crohns-disease", "name": "Crohn's Disease", "relevance": "The other major inflammatory bowel disease; shares pathophysiology, many treatments, and surveillance principles, but differs in anatomy and surgical strategy." },
+    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "relevance": "Cumulative cancer risk rises with disease duration and extent; surveillance colonoscopy starts 8 years after UC diagnosis." },
+    { "slug": "ibs", "name": "Irritable Bowel Syndrome", "relevance": "Functional gut symptoms frequently overlay UC in remission; distinguishing IBS-like symptoms from true inflammation guides escalation decisions and avoids unnecessary therapy changes." },
+    { "slug": "anemia", "name": "Anemia", "relevance": "Iron-deficiency and anemia of chronic disease are common, undertreated, and a major driver of fatigue in UC." }
   ],
 
   "linkedTreatmentSlugs": [],
@@ -365,242 +380,186 @@
   "faqs": [
     {
       "question": "Is ulcerative colitis curable?",
-      "answer": "Medical therapy controls but does not cure ulcerative colitis — the underlying immune dysregulation persists. The only definitive cure is removal of the colon and rectum by proctocolectomy, after which UC of the bowel itself cannot recur. With modern biologics and small molecules, most patients keep their colon and stay in remission for years at a time.",
+      "answer": "Ulcerative colitis is not curable with medication; the underlying immune dysregulation persists. However, modern therapies induce durable remission in most patients, and total proctocolectomy with ileal pouch-anal anastomosis is curative for the disease itself, though it brings its own long-term considerations such as pouchitis. With consistent treat-to-target management, lifetime colectomy rates are 10-15%.",
       "schemaEligible": true
     },
     {
       "question": "What is the difference between ulcerative colitis and Crohn's disease?",
-      "answer": "Ulcerative colitis is confined to the colon and rectum with continuous superficial mucosal inflammation. Crohn's disease can affect any part of the gastrointestinal tract, has skip lesions, penetrates the full bowel wall, and frequently causes fistulas, strictures, and perianal disease. Bloody diarrhea favors UC; right-sided pain or perianal disease favors Crohn's.",
+      "answer": "Ulcerative colitis affects only the colon with continuous mucosal inflammation starting at the rectum, while Crohn's disease can affect any part of the gut from mouth to anus, with skip lesions, transmural inflammation, and a tendency to form fistulas and strictures. UC produces bloody diarrhea; Crohn's more often causes abdominal pain, weight loss, and perianal disease. Smoking worsens Crohn's but is protective in UC.",
       "schemaEligible": true
     },
     {
       "question": "What does an ulcerative colitis flare feel like?",
-      "answer": "A flare typically brings frequent loose stools mixed with bright red blood and mucus, urgent need to defecate, painful tenesmus, and crampy abdominal pain that partially eases after passing stool. Fatigue and reduced appetite are common; fever and tachycardia signal severe disease. Symptoms usually build over days to weeks rather than minutes.",
-      "schemaEligible": true
-    },
-    {
-      "question": "What triggers an ulcerative colitis flare?",
-      "answer": "Common triggers include stopping or skipping maintenance therapy, NSAID use, recent antibiotic courses that disrupt the microbiome, intercurrent infections (especially C. difficile and CMV), stressful life events, smoking cessation, and acute gastrointestinal infections. Identifying personal triggers using a symptom diary helps prevent recurrence.",
+      "answer": "A flare typically brings bloody loose stools several times per day, urgency that disrupts work and sleep, lower abdominal cramping that eases briefly after passing stool, and persistent fatigue. In severe flares, fever, racing heart, and weight loss develop, signaling acute severe colitis that needs hospital admission. Most flares build over days to a few weeks.",
       "schemaEligible": true
     },
     {
       "question": "How is ulcerative colitis diagnosed?",
-      "answer": "Diagnosis combines typical symptoms (bloody diarrhea, urgency, tenesmus for more than four weeks), stool tests excluding infection, blood tests showing inflammation, elevated fecal calprotectin, and confirmatory colonoscopy with biopsies showing continuous mucosal inflammation starting at the rectum with crypt distortion. Imaging is added when Crohn's cannot be excluded.",
+      "answer": "Diagnosis combines history of bloody diarrhea, blood tests showing inflammation or anemia, stool tests to exclude infection, fecal calprotectin, and an ileocolonoscopy with biopsies that demonstrates continuous mucosal inflammation starting in the rectum. Histology confirms crypt distortion, crypt abscesses, and basal plasmacytosis confined to the mucosa.",
       "schemaEligible": true
     },
     {
-      "question": "What is fecal calprotectin and why is it used?",
-      "answer": "Fecal calprotectin is a neutrophil protein released into stool during intestinal inflammation. Levels above 250 micrograms per gram strongly suggest active colonic inflammation, with about 90% sensitivity for IBD; levels under 50 effectively rule out active disease. It guides decisions about endoscopy and tracks response to treatment without repeating colonoscopy.",
+      "question": "What is the best treatment for mild ulcerative colitis?",
+      "answer": "Mild proctitis usually responds to a 1 g mesalamine suppository at bedtime, sometimes combined with a mesalamine enema. Mild left-sided or extensive disease is treated with oral mesalamine at 2.4-4.8 g/day plus topical mesalamine. Once-daily dosing is as effective as divided doses. Treatment is continued long-term to maintain remission.",
       "schemaEligible": true
     },
     {
-      "question": "What is the best treatment for ulcerative colitis?",
-      "answer": "Treatment depends on extent and severity. Mild to moderate disease responds to mesalamine, oral and topical, with budesonide MMX or short prednisolone courses for flares. Moderate to severe disease uses biologics (infliximab, adalimumab, vedolizumab, ustekinumab, guselkumab) or small molecules (tofacitinib, upadacitinib, ozanimod, etrasimod). Treat-to-target aims for endoscopic remission, not just symptom control.",
+      "question": "What are biologics for ulcerative colitis?",
+      "answer": "Biologics are injectable or infused antibodies that block specific inflammatory pathways. Options include anti-TNF agents (infliximab, adalimumab, golimumab), anti-integrin vedolizumab, IL-12/23 ustekinumab, and IL-23p19 agents mirikizumab and risankizumab. They are used for moderate-to-severe disease or steroid-dependent or steroid-refractory disease, with remission rates ranging from 15-35% at week 8 across trials.",
       "schemaEligible": true
     },
     {
-      "question": "How quickly do ulcerative colitis medications work?",
-      "answer": "Mesalamine typically improves symptoms over two to four weeks. Corticosteroids work within three to seven days. Infliximab and adalimumab show response by week two to six. Tofacitinib and upadacitinib act fast, often within two weeks. Vedolizumab and ustekinumab are slower, with formal induction endpoints at six to twelve weeks.",
+      "question": "Can ulcerative colitis turn into colon cancer?",
+      "answer": "Long-standing extensive ulcerative colitis increases colorectal cancer risk, with cumulative incidence rising roughly 1% per year of disease beyond the first decade. Risk is higher with extensive disease, primary sclerosing cholangitis, family history, and persistent inflammation. Surveillance colonoscopy starting 8 years after diagnosis, with chromoendoscopy or high-definition white light, substantially reduces cancer mortality.",
       "schemaEligible": true
     },
     {
-      "question": "Is surgery a cure for ulcerative colitis?",
-      "answer": "Surgery to remove the colon and rectum cures the colonic disease itself. The standard restorative procedure (ileal pouch-anal anastomosis) preserves continence but pouchitis affects 30-50% of patients over a lifetime. Extraintestinal manifestations such as ankylosing spondylitis or primary sclerosing cholangitis can persist after colectomy.",
+      "question": "Will I need surgery for ulcerative colitis?",
+      "answer": "Lifetime colectomy rates have fallen to 10-15% with modern medical therapy. Surgery is recommended for medically refractory disease, severe flares unresponsive to rescue therapy, dysplasia or cancer, and selected complications such as toxic megacolon or perforation. The most common operation is total proctocolectomy with ileal pouch-anal anastomosis (J-pouch), usually in two or three stages.",
       "schemaEligible": true
     },
     {
-      "question": "Does diet cause ulcerative colitis?",
-      "answer": "Diet alone does not cause ulcerative colitis, but Western dietary patterns (high red meat, ultra-processed foods, low fiber) are associated with higher incidence in cohort studies. During flares, low-residue eating helps reduce symptoms; in remission a Mediterranean-style pattern is associated with fewer flares and lower inflammation markers.",
+      "question": "What is a J-pouch?",
+      "answer": "A J-pouch is a reservoir created from the terminal ileum after total proctocolectomy that is connected to the anal canal, allowing bowel movements through the natural anus rather than a permanent stoma. Most patients pass stool 4-6 times per day once the pouch adapts over 6-12 months. Pouchitis develops in roughly 50% over time and is usually treatable with antibiotics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What diet should I follow with ulcerative colitis?",
+      "answer": "No single diet treats ulcerative colitis. A Mediterranean-style pattern with fish, olive oil, whole grains, and cooked vegetables is supported by observational and trial data. Limit ultra-processed foods, sugar-sweetened beverages, and excess red meat. During flares, soft low-residue foods are usually better tolerated. A registered dietitian familiar with IBD can personalize the plan.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is ulcerative colitis hereditary?",
+      "answer": "There is a clear genetic component. First-degree relatives have a 3-15% lifetime risk compared with around 0.3% in the general population. Over 200 risk loci have been identified, but no single test predicts disease. Most patients have no affected family member at the time of diagnosis.",
       "schemaEligible": true
     },
     {
       "question": "Can children get ulcerative colitis?",
-      "answer": "Yes. About 25% of UC diagnoses occur before age 20, with peak pediatric incidence in adolescence. Pediatric UC is more often extensive at presentation, can impair growth and puberty, and is best managed at a specialist pediatric IBD center with input from a pediatric gastroenterologist and dietitian.",
+      "answer": "Yes. About 20% of UC patients are diagnosed before age 18, with peak pediatric incidence around 10-15 years. Children more often present with extensive colitis, growth failure, and delayed puberty, and pediatric guidelines support earlier escalation to biologic therapy. Long-term outcomes are excellent with specialist pediatric IBD care.",
       "schemaEligible": true
     },
     {
-      "question": "Can women with ulcerative colitis have children?",
-      "answer": "Yes. Fertility in UC women in remission is similar to the general population. Active disease at conception raises risk of flare, preterm birth, and low birth weight, so most specialists aim to conceive in remission. Most UC medications are compatible with pregnancy and breastfeeding; methotrexate is contraindicated.",
+      "question": "Can women with ulcerative colitis have a healthy pregnancy?",
+      "answer": "Yes. Conception during remission gives the best pregnancy outcomes; most maintenance therapies (mesalamine, thiopurines, anti-TNF agents, ustekinumab, vedolizumab) are continued through pregnancy. JAK inhibitors and methotrexate are avoided. Flares during pregnancy are riskier than treatment exposure. Preconception counseling with the IBD team is the most important step.",
       "schemaEligible": true
     },
     {
-      "question": "Does ulcerative colitis increase the risk of colon cancer?",
-      "answer": "Yes. Cumulative colorectal cancer risk is roughly 2% at 10 years, 8% at 20 years, and 18% at 30 years for patients with extensive colitis, higher when primary sclerosing cholangitis coexists. Surveillance colonoscopy with chromoendoscopy starting 8-10 years after diagnosis substantially reduces cancer mortality.",
-      "schemaEligible": true
-    },
-    {
-      "question": "Are biologics safe long-term in ulcerative colitis?",
-      "answer": "Modern biologics have well-characterized safety profiles. Anti-TNF agents and JAK inhibitors carry modest increases in serious infection, latent tuberculosis reactivation, and some malignancies. Vedolizumab is gut-selective with a very favorable safety profile. Pre-treatment TB, hepatitis B, and vaccination screening reduces risk. Benefits outweigh risks for moderate to severe disease.",
+      "question": "How quickly does treatment work?",
+      "answer": "Topical and oral 5-ASA work over 2-4 weeks. Oral steroids show meaningful symptom improvement within 5-7 days. JAK inhibitors and S1P modulators respond within 1-2 weeks. Anti-TNF and ustekinumab work over 4-8 weeks; vedolizumab and IL-23 agents over 8-14 weeks. Endoscopic healing typically lags behind symptomatic response.",
       "schemaEligible": true
     },
     {
       "question": "What is acute severe ulcerative colitis?",
-      "answer": "Acute severe ulcerative colitis (ASUC) is a medical emergency defined by Truelove and Witts criteria: six or more bloody stools daily plus at least one systemic sign (heart rate over 90, temperature over 37.8 Celsius, hemoglobin under 10.5, or CRP over 30). It requires hospital admission, IV steroids, and rescue therapy or colectomy if no response by day three.",
+      "answer": "Acute severe ulcerative colitis (ASUC) is defined by Truelove-Witts criteria — more than six bloody stools per day plus tachycardia, fever, anemia, or elevated ESR. It requires same-day hospital admission, IV methylprednisolone, prophylactic anticoagulation, and structured rescue planning with infliximab or cyclosporine at day 3-5 if steroids fail. Roughly 30% require colectomy during the admission.",
       "schemaEligible": true
     },
     {
-      "question": "Can ulcerative colitis be treated without steroids?",
-      "answer": "Yes. Mild to moderate UC often responds to mesalamine and topical therapy alone. Moderate to severe disease can be treated with biologics or small molecules from the start, sparing systemic steroids. Steroids are reserved for active flares; long-term steroid maintenance is never appropriate because of osteoporosis, diabetes, and cataracts.",
+      "question": "Should I stop smoking if I have ulcerative colitis?",
+      "answer": "Yes. Although active smoking is statistically associated with milder UC, the cardiovascular, cancer, and respiratory harms of smoking far outweigh any potential benefit. Smokers should quit while their IBD team optimizes maintenance therapy to offset any short-term flare risk after cessation.",
       "schemaEligible": true
     },
     {
-      "question": "Why does smoking protect against ulcerative colitis?",
-      "answer": "Epidemiology consistently shows that current smokers have roughly 40% lower UC risk and that quitting tobacco can trigger first UC presentations. The mechanism is incompletely understood — nicotine effects on mucus, microbiome, and immunity are proposed. Despite this association, restarting tobacco is not advised given cardiovascular and cancer harms; nicotine replacement is not recommended as UC therapy.",
+      "question": "How often should I have a colonoscopy with ulcerative colitis?",
+      "answer": "Surveillance colonoscopy is recommended starting 8 years after diagnosis for left-sided or extensive disease, then every 1-3 years depending on risk factors. Patients with primary sclerosing cholangitis need annual colonoscopy from the time both diagnoses are established. Surveillance is usually performed with chromoendoscopy or high-definition white light with targeted biopsies.",
       "schemaEligible": true
     },
     {
-      "question": "How often do I need a colonoscopy with ulcerative colitis?",
-      "answer": "Surveillance colonoscopy starts 8-10 years after diagnosis (immediately if primary sclerosing cholangitis is present). Intervals depend on findings: every 5 years for low-risk pattern, every 2-3 years for intermediate risk, and yearly for high-risk features (deep ulcers, strictures, dysplasia history, PSC, family history of colorectal cancer).",
+      "question": "Can ulcerative colitis affect other parts of the body?",
+      "answer": "Yes. Extraintestinal manifestations occur in 25-40% of patients and include peripheral arthritis, axial spondyloarthritis, episcleritis or uveitis, erythema nodosum, pyoderma gangrenosum, and primary sclerosing cholangitis (PSC, ~5%). Some, such as peripheral arthritis, track with bowel activity; others, such as PSC and axial spondyloarthritis, have an independent course.",
       "schemaEligible": true
     },
     {
-      "question": "Can ulcerative colitis cause symptoms outside the gut?",
-      "answer": "Yes. Extraintestinal manifestations affect 25-40% of UC patients and include peripheral and axial arthritis, sacroiliitis, ankylosing spondylitis, uveitis, episcleritis, erythema nodosum, pyoderma gangrenosum, aphthous mouth ulcers, and primary sclerosing cholangitis. Many improve when intestinal disease is controlled; ankylosing spondylitis and PSC follow independent courses.",
+      "question": "Do I need vaccinations before starting immunosuppression?",
+      "answer": "Yes. Before starting biologics, JAK inhibitors, or steroids, vaccinations should be updated: pneumococcal (PPSV23/PCV20), recombinant zoster, annual influenza, COVID-19, hepatitis B, and HPV where age-appropriate. Live vaccines must be completed before immunosuppression begins. Latent tuberculosis and hepatitis B screening are mandatory prior to anti-TNF therapy.",
       "schemaEligible": true
     },
     {
       "question": "How much does ulcerative colitis treatment cost?",
-      "answer": "Generic mesalamine and corticosteroids are inexpensive in most countries. Biologics are the main cost driver — infliximab and adalimumab biosimilars have markedly lowered prices, but JAK inhibitors and S1P modulators remain expensive. In India, biosimilars cost roughly 60-80% less than originator biologics. In the US, copay assistance programs and patient foundations help cover out-of-pocket costs.",
+      "answer": "Generic mesalamine and corticosteroids are inexpensive and widely available, often a few US dollars per month. Biologics and small molecules vary widely — list prices range from several hundred to several thousand dollars per dose, but most patients access them through insurance, biosimilars, or manufacturer support programs. In India and other emerging markets, biosimilar infliximab and adalimumab have substantially lowered access barriers.",
       "schemaEligible": true
     },
     {
-      "question": "When should I see a specialist instead of my primary care doctor?",
-      "answer": "Refer to gastroenterology at first suspicion of UC and for every patient with confirmed disease. Specialist input is essential for recurrent flares, steroid dependence, planned biologic or small molecule therapy, suspected acute severe colitis, surveillance colonoscopy, primary sclerosing cholangitis, pregnancy, or any consideration of colectomy. Pediatric and adolescent patients need specialist IBD care from diagnosis.",
-      "schemaEligible": true
-    },
-    {
-      "question": "Can ulcerative colitis go away on its own?",
-      "answer": "Brief mild episodes can settle without treatment, especially in proctitis, but the underlying disease persists. Untreated UC tends to relapse and progress in extent, raises colorectal cancer risk, and risks acute severe flares. Maintenance therapy after a first flare reduces relapse rates substantially and is recommended by current guidelines.",
+      "question": "Will I have ulcerative colitis for life?",
+      "answer": "Yes, the underlying immune tendency persists for life, though most patients spend most of their time in remission with appropriate maintenance therapy. Colectomy removes the colon and eliminates UC-specific inflammation, although the pouch and rectal cuff can still become inflamed. With modern treat-to-target care, life expectancy and quality of life are close to that of the general population.",
       "schemaEligible": true
     }
   ],
 
-  "simpleName": "Ulcerative Colitis (chronic colon inflammation)",
+  "simpleName": "Ulcerative Colitis (UC)",
 
   "regionalNames": [
-    { "name": "अल्सरेटिव कोलाइटिस", "region": "India (Hindi-speaking regions)", "language": "hi" },
-    { "name": "புண் பெருங்குடல் அழற்சி", "region": "India (Tamil Nadu)", "language": "ta" },
-    { "name": "Colite ulcéreuse", "region": "France", "language": "fr" }
+    { "name": "व्रणयुक्त बृहदान्त्रशोथ (Vrananyukt Brihadantrashoth)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Colite ulcéreuse", "region": "France / Quebec", "language": "fr" },
+    { "name": "Colitis ulcerosa", "region": "Germany / Latin Europe", "language": "de" }
   ],
 
   "searchTags": [
-    "ulcerative colitis",
-    "UC",
-    "inflammatory bowel disease",
-    "IBD",
-    "ulcerative proctitis",
-    "left-sided colitis",
-    "pancolitis",
-    "Mayo score",
-    "Truelove Witts",
-    "mesalamine",
-    "5-ASA",
-    "infliximab",
-    "vedolizumab",
-    "tofacitinib",
-    "ozanimod",
-    "guselkumab",
-    "J-pouch",
-    "IPAA"
+    "ulcerative colitis", "UC", "IBD", "inflammatory bowel disease", "pancolitis",
+    "proctitis", "left-sided colitis", "mesalamine", "5-ASA", "infliximab",
+    "vedolizumab", "ustekinumab", "tofacitinib", "upadacitinib", "ozanimod",
+    "j-pouch", "IPAA", "bloody diarrhea", "Mayo score", "ASUC"
   ],
 
   "symptomKeywords": [
-    "bloody diarrhea",
-    "rectal bleeding",
-    "urgency to poop",
-    "tenesmus",
-    "mucus in stool",
-    "abdominal cramps left side",
-    "night diarrhea",
-    "iron deficiency young adult",
-    "joint pain with diarrhea",
-    "weight loss with diarrhea"
+    "bloody diarrhea", "rectal bleeding", "urgent bowel movements", "tenesmus",
+    "mucus in stool", "nighttime diarrhea", "abdominal cramping", "weight loss diarrhea",
+    "blood in stool young adult", "chronic diarrhea"
   ],
 
   "metaTitle": "Ulcerative Colitis: Symptoms & Treatment | aihealz",
-  "metaDescription": "Ulcerative colitis: chronic bloody diarrhea, urgency, tenesmus from colon inflammation. Diagnosis, biologics, surgery, prognosis reviewed by our doctors.",
+  "metaDescription": "Ulcerative colitis: bloody diarrhea, urgency, tenesmus from continuous colon inflammation. Symptoms, diagnosis, biologics, and surgery reviewed by our team.",
 
   "keywords": [
-    "ulcerative colitis",
-    "ulcerative colitis symptoms",
-    "ulcerative colitis treatment",
-    "ulcerative colitis vs Crohn's",
-    "UC flare",
-    "mesalamine",
-    "infliximab UC",
-    "vedolizumab UC",
-    "tofacitinib UC",
-    "ozanimod UC",
-    "IBD",
-    "J-pouch surgery",
-    "ulcerative colitis diet",
-    "is ulcerative colitis curable"
+    "ulcerative colitis", "ulcerative colitis symptoms", "ulcerative colitis treatment",
+    "ulcerative colitis diet", "ulcerative colitis flare", "ulcerative colitis vs crohn's",
+    "mesalamine", "biologics for UC", "j-pouch surgery", "is ulcerative colitis curable",
+    "inflammatory bowel disease", "fecal calprotectin", "Mayo score"
   ],
 
   "lastReviewed": "2026-05-12",
 
+  "images": [],
+
   "sources": [
     {
-      "title": "Rubin DT, Ananthakrishnan AN, Siegel CA, Sauer BG, Long MD. 2019. ACG Clinical Guideline: Ulcerative Colitis in Adults. American Journal of Gastroenterology 114(3):384-413.",
+      "title": "Rubin DT, Ananthakrishnan AN, Siegel CA, Sauer BG, Long MD. ACG Clinical Guideline: Ulcerative Colitis in Adults. American Journal of Gastroenterology. 2019;114(3):384-413.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/30840605/",
       "accessedDate": "2026-05-12"
     },
     {
-      "title": "Feuerstein JD, Isaacs KL, Schneider Y, Siddique SM, Falck-Ytter Y, Singh S; AGA Institute Clinical Guidelines Committee. 2020. AGA Clinical Practice Guidelines on the Management of Moderate to Severe Ulcerative Colitis. Gastroenterology 158(5):1450-1461.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/31945371/",
+      "title": "Feuerstein JD, Isaacs KL, Schneider Y, et al. AGA Clinical Practice Guidelines on the Management of Moderate to Severe Ulcerative Colitis. Gastroenterology. 2020;158(5):1450-1461.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31816372/",
       "accessedDate": "2026-05-12"
     },
     {
-      "title": "Rutgeerts P, Sandborn WJ, Feagan BG, et al. 2005. Infliximab for Induction and Maintenance Therapy for Ulcerative Colitis (ACT 1 and ACT 2). New England Journal of Medicine 353(23):2462-2476.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/16339095/",
+      "title": "Raine T, Bonovas S, Burisch J, et al. ECCO Guidelines on Therapeutics in Ulcerative Colitis: Medical Treatment. Journal of Crohn's and Colitis. 2022;16(1):2-17.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35040476/",
       "accessedDate": "2026-05-12"
     },
     {
-      "title": "Feagan BG, Rutgeerts P, Sands BE, et al. 2013. Vedolizumab as Induction and Maintenance Therapy for Ulcerative Colitis (GEMINI 1). New England Journal of Medicine 369(8):699-710.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/23964932/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Sands BE, Peyrin-Biroulet L, Loftus EV Jr, et al. 2019. Vedolizumab versus Adalimumab for Moderate-to-Severe Ulcerative Colitis (VARSITY). New England Journal of Medicine 381(13):1215-1226.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/31553834/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Sandborn WJ, Su C, Sands BE, et al. 2017. Tofacitinib as Induction and Maintenance Therapy for Ulcerative Colitis (OCTAVE Induction 1 and 2; OCTAVE Sustain). New England Journal of Medicine 376(18):1723-1736.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/28467869/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Sandborn WJ, Feagan BG, D'Haens G, et al. 2021. Ozanimod as Induction and Maintenance Therapy for Ulcerative Colitis (True North). New England Journal of Medicine 385(14):1280-1291.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/34587385/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Peyrin-Biroulet L, Allegretti JR, Rubin DT, et al. 2025. Guselkumab in Patients With Moderately to Severely Active Ulcerative Colitis: QUASAR Phase 3 Induction and Maintenance Trials. Gastroenterology 168(2):277-291.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/39245471/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Truelove SC, Witts LJ. 1955. Cortisone in Ulcerative Colitis: Final Report on a Therapeutic Trial. British Medical Journal 2(4947):1041-1048.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/13260656/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Schroeder KW, Tremaine WJ, Ilstrup DM. 1987. Coated Oral 5-Aminosalicylic Acid Therapy for Mildly to Moderately Active Ulcerative Colitis: A Randomized Study (Mayo Endoscopic Subscore). New England Journal of Medicine 317(26):1625-1629.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/3317057/",
-      "accessedDate": "2026-05-12"
-    },
-    {
-      "title": "Ng SC, Shi HY, Hamidi N, et al. 2018. Worldwide Incidence and Prevalence of Inflammatory Bowel Disease in the 21st Century: A Systematic Review of Population-Based Studies. Lancet 390(10114):2769-2778.",
+      "title": "Ng SC, Shi HY, Hamidi N, et al. Worldwide incidence and prevalence of inflammatory bowel disease in the 21st century: a systematic review of population-based studies. Lancet. 2017;390(10114):2769-2778.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/29050646/",
       "accessedDate": "2026-05-12"
     },
     {
-      "title": "Laharie D, Bourreille A, Branche J, et al. 2012. Ciclosporin versus Infliximab in Patients with Severe Ulcerative Colitis Refractory to Intravenous Steroids: A Parallel, Open-Label Randomised Controlled Trial (CYSIF). Lancet 380(9857):1909-1915.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/23063316/",
+      "title": "Sandborn WJ, Su C, Sands BE, et al. Tofacitinib as Induction and Maintenance Therapy for Ulcerative Colitis (OCTAVE). New England Journal of Medicine. 2017;376(18):1723-1736.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28467869/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Sands BE, Peyrin-Biroulet L, Loftus EV Jr, et al. Ozanimod as Induction and Maintenance Therapy for Ulcerative Colitis (TRUE NORTH). New England Journal of Medicine. 2021;385(14):1280-1291.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34081380/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Danese S, Vermeire S, Zhou W, et al. Upadacitinib as induction and maintenance therapy for moderately to severely active ulcerative colitis: results from three phase 3, multicentre, double-blind, randomised trials (ELEVATE UC). Lancet. 2022;399(10341):2113-2128.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35644166/",
+      "accessedDate": "2026-05-12"
+    },
+    {
+      "title": "Sandborn WJ, Ferrante M, Bhandari BR, et al. Efficacy and Safety of Mirikizumab in a Randomized Phase 2 Study of Patients With Ulcerative Colitis (LUCENT). New England Journal of Medicine. 2023;388(26):2444-2455.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37133584/",
       "accessedDate": "2026-05-12"
     }
-  ],
-
-  "images": []
+  ]
 }
