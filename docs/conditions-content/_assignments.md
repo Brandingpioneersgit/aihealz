@@ -294,7 +294,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | heart-valve-replacement | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
 | exertional-heat-stroke | 3 | Sports Medicine | (open) | — | open | Batch 004, 1 variant |
 | hemolytic-uremic-syndrome | 3 | Nephrology | (open) | — | open | Batch 004, 1 variant |
-| hepatitis-b | 3 | Gastroenterologist | (open) | — | open | Batch 004, 1 variant |
+| hepatitis-b | 1 | Hepatology | claude-2026-05-14 | 2026-05-14 | done | 5,326 words, 21 FAQs (all schemaEligible), 8 sources; row 583 |
 | hepatitis-c | 3 | Gastroenterologist | (open) | — | open | Batch 004, 1 variant |
 | herniated-disc-mri | 3 | Radiology | (open) | — | open | Batch 004, 1 variant |
 | herniated-disc-surgical | 3 | Neurosurgery | (open) | — | open | Batch 004, 1 variant |

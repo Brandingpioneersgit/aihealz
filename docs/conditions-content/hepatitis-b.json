@@ -1,0 +1,457 @@
+{
+  "_meta": {
+    "slug": "hepatitis-b",
+    "tier": 1,
+    "headTerm": "hepatitis B",
+    "longTailKeywords": [
+      "hepatitis B symptoms",
+      "hepatitis B treatment",
+      "hepatitis B vaccine",
+      "HBV",
+      "HBsAg positive",
+      "tenofovir hepatitis B",
+      "entecavir",
+      "chronic hepatitis B",
+      "acute hepatitis B",
+      "hepatitis B in pregnancy",
+      "hepatitis B liver cancer",
+      "hepatitis B cure"
+    ],
+    "primarySpecialty": "Hepatology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Burden, transmission, and elimination targets from WHO Hepatitis B fact sheet 2024 and WHO Global Hepatitis Report 2024. Clinical phases and natural history per Terrault et al. AASLD 2018 guidance (PMID 29405329), EASL 2017 Clinical Practice Guidelines (PMID 28427875), and APASL 2016 guidelines. Treatment thresholds and drug data per Lok et al. Hepatology 2018 (PMID 28370788), Marcellin et al. Lancet 2013 (TDF data, PMID 23234725), and Chang et al. NEJM 2006 ETV (PMID 16525138). Vaccine performance per Schillie et al. MMWR 2018 (PMID 29336422). Mother-to-child transmission and TDF prophylaxis per Pan et al. NEJM 2016 (PMID 27305192). HBV-HDV coinfection per Negro F. Cold Spring Harb Perspect Med 2014 (PMID 25281663). Functional cure data per Lampertico et al. Lancet Gastroenterol Hepatol 2024 reviews."
+  },
+
+  "h1Title": "Hepatitis B: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hepatology",
+
+  "heroOverview": "Hepatitis B is a viral infection of the liver caused by hepatitis B virus (HBV), a small DNA virus transmitted through blood, sexual contact, and mother-to-child exposure. WHO estimates 296 million people live with chronic hepatitis B and the infection causes around 1.1 million deaths each year from cirrhosis and hepatocellular carcinoma. Acute hepatitis B is asymptomatic in most adults but produces jaundice in roughly 30-50%; it resolves spontaneously in over 95% of immunocompetent adults but becomes chronic in 90% of perinatally infected infants and 25-50% of children infected between ages 1 and 5. Chronic infection moves through several phases over decades, with cumulative risks of cirrhosis (8-20%) and hepatocellular carcinoma (2-5% per year once cirrhosis is established). Highly effective oral nucleos(t)ide analogues — tenofovir alafenamide, tenofovir disoproxil fumarate, and entecavir — suppress viral replication to undetectable levels in over 95% of treated patients and prevent progression to cirrhosis and liver cancer; the recombinant hepatitis B vaccine has been available since 1982 and confers protection in over 95% of fully vaccinated infants and adults. The WHO 2030 elimination targets call for a 90% reduction in new chronic infections and a 65% reduction in mortality, achievable through universal birth-dose vaccination, treatment scale-up, and screening of at-risk populations.",
+
+  "keyStats": {
+    "prevalence": "Approximately 296 million people living with chronic hepatitis B globally (WHO 2024); 1.5 million new infections per year",
+    "demographics": "Western Pacific (97 million) and African (65 million) regions carry over half the global burden; substantial populations in South-East Asia, Eastern Mediterranean, and Eastern Europe",
+    "avgAge": "Most chronic infections established in early childhood; clinical disease typically presents age 30-60",
+    "globalCases": "1.1 million deaths per year from cirrhosis and hepatocellular carcinoma; HBV causes 50-55% of hepatocellular carcinoma worldwide"
+  },
+
+  "definition": "Hepatitis B (ICD-10: B16 acute, B18.1 chronic) is an infection of hepatocytes caused by hepatitis B virus (HBV), a partially double-stranded circular DNA virus in the Hepadnaviridae family. The virus has at least eight major genotypes (A-H) and several subgenotypes with regional clustering: genotypes A, D, E predominate in Africa and Europe; B and C in Asia; F and H in the Americas. HBV does not directly kill hepatocytes; liver injury follows the host immune response to infected cells. Infection is divided clinically into acute hepatitis B (lasting up to 6 months from exposure) and chronic hepatitis B (persistent hepatitis B surface antigen positivity for more than 6 months). Acute infection is asymptomatic in roughly two-thirds of adults; the remainder develop jaundice, fatigue, nausea, abdominal pain, and dark urine over 1-3 months. Fulminant hepatic failure occurs in approximately 0.1-1% of adult acute cases. Chronic HBV infection passes through up to five phases per current EASL nomenclature: HBeAg-positive chronic infection (formerly 'immune tolerant') with high viral load and normal ALT; HBeAg-positive chronic hepatitis (immune active) with high viral load and elevated ALT; HBeAg-negative chronic infection (formerly 'inactive carrier') with low viral load and normal ALT; HBeAg-negative chronic hepatitis with fluctuating viral load and elevated ALT; HBsAg-negative phase (occult/resolved). Patients can move between phases over decades. Chronic HBV is the leading cause of hepatocellular carcinoma globally and a major cause of cirrhosis. Hepatitis D virus is a defective RNA virus that requires HBsAg for replication; HBV/HDV coinfection accelerates progression and increases morbidity. The disease is managed by hepatology, infectious disease, and primary care services, with global public-health response coordinated by WHO, the World Hepatitis Alliance, and ministries of health.",
+
+  "typesClassification": [
+    { "type": "Acute hepatitis B", "description": "Self-limited infection lasting up to 6 months. Most adults clear the virus and develop lifelong immunity (HBsAg-negative, anti-HBs and anti-HBc positive). About 0.1-1% develop fulminant hepatic failure." },
+    { "type": "Chronic hepatitis B (HBsAg positive >6 months)", "description": "Persistent infection with potential for progression to cirrhosis, hepatic decompensation, and hepatocellular carcinoma. WHO estimates 296 million chronic carriers globally." },
+    { "type": "HBeAg-positive chronic infection (immune-tolerant phase)", "description": "Very high HBV DNA (>10⁷ IU/mL), normal ALT, minimal histologic activity. Often follows perinatal infection in Asian and African genotype B/C/E settings. Limited indication for treatment unless there is family history of HCC or liver disease progression." },
+    { "type": "HBeAg-positive chronic hepatitis (immune-active phase)", "description": "High HBV DNA, elevated ALT, active necroinflammation on biopsy or non-invasive markers. Standard indication for antiviral therapy." },
+    { "type": "HBeAg-negative chronic infection (inactive carrier)", "description": "HBV DNA usually <2,000 IU/mL, normal ALT, minimal histologic activity. Annual monitoring; treatment generally not indicated unless reactivation occurs." },
+    { "type": "HBeAg-negative chronic hepatitis", "description": "Pre-core or basal core-promoter mutants with HBV DNA >2,000 IU/mL and elevated ALT despite HBeAg-negativity. Common cause of progressive liver disease in older adults, particularly with genotype D." },
+    { "type": "HBsAg-negative phase (occult or resolved HBV)", "description": "HBsAg loss with persistent low-level HBV DNA in hepatocytes (cccDNA). Risk of reactivation under immunosuppression (chemotherapy, rituximab, transplant). Screen all candidates for immunosuppressive therapy." },
+    { "type": "Hepatitis B with hepatitis D coinfection", "description": "Hepatitis D virus is a defective RNA virus requiring HBsAg. Coinfection or superinfection with HBV accelerates liver disease in 15-20 million chronic HBV/HDV patients globally. Bulevirtide is the first approved HDV-specific therapy in Europe (2020)." }
+  ],
+
+  "primarySymptoms": [
+    "Two-thirds of adult acute hepatitis B infections are asymptomatic; the remaining third experience the prodrome and icteric phases described below.",
+    "Prodromal flu-like illness with fatigue, low-grade fever, nausea, anorexia, right-upper-quadrant abdominal pain, headache, and joint pains 1-4 weeks before jaundice.",
+    "Urticaria, polyarthralgia, and serum-sickness-like syndrome in roughly 10% of acute cases, driven by immune complexes.",
+    "Yellowing of skin and sclera, dark urine, and pale stools developing over 1-2 weeks with peak transaminases at 10-100× upper limit of normal.",
+    "Right-upper-quadrant tenderness with a slightly enlarged tender liver during the icteric phase.",
+    "In chronic hepatitis B, most patients are entirely asymptomatic for decades; symptoms (fatigue, mild right-upper-quadrant discomfort) appear when significant fibrosis or active hepatitis is present.",
+    "Symptoms and signs of cirrhosis in advanced chronic disease: ascites, peripheral oedema, easy bruising, spider naevi, palmar erythema, splenomegaly, encephalopathy.",
+    "Hematemesis or melena from variceal bleeding in decompensated cirrhosis.",
+    "Confusion, asterixis, sleep-wake reversal, and personality change from hepatic encephalopathy.",
+    "Insidious weight loss, abdominal distension, and new pain in the setting of hepatocellular carcinoma."
+  ],
+
+  "earlyWarningSigns": [
+    "Mild persistently elevated transaminases on routine blood tests in a person born in or with parental origin from an HBV-endemic region",
+    "Family history of hepatocellular carcinoma or chronic hepatitis B",
+    "Anti-HBc total positive with negative HBsAg and negative anti-HBs — past exposure that may reactivate under immunosuppression",
+    "New-onset fatigue, polyarthralgia, or rash combined with subtle right-upper-quadrant discomfort in young adults",
+    "Acute jaundice without obvious cause in a sexually active adult or person with intravenous drug use"
+  ],
+
+  "emergencySigns": [
+    "Profound jaundice with prolonged prothrombin time, encephalopathy, hypoglycemia, or rising ammonia — acute liver failure requires transplant referral",
+    "Hematemesis or melena in a known cirrhotic patient — variceal hemorrhage requires resuscitation, endoscopic band ligation, and vasoactive drugs",
+    "Acute kidney injury, oliguria, and ascites in cirrhotic patient — possible hepatorenal syndrome",
+    "Confusion, agitation, asterixis, or coma — hepatic encephalopathy",
+    "Reactivation flare with very high HBV DNA, marked ALT rise, and jaundice in a previously inactive patient — needs urgent antiviral therapy and may require transplant assessment"
+  ],
+
+  "causes": [
+    {
+      "cause": "Mother-to-child (perinatal) transmission",
+      "description": "Vertical transmission from HBsAg-positive mothers, typically at or near delivery rather than transplacentally. Risk approaches 90% if mother is HBeAg-positive without intervention; reduced to under 5% with combined hepatitis B immune globulin and active vaccination at birth, and to under 1% with maternal tenofovir disoproxil fumarate from week 28 of pregnancy when HBV DNA exceeds 200,000 IU/mL."
+    },
+    {
+      "cause": "Horizontal childhood transmission",
+      "description": "Close household contact, shared toothbrushes and razors, traditional scarification, and minor open wounds account for early-childhood acquisition that drives chronicity in 25-50% of cases. Particularly important in sub-Saharan Africa."
+    },
+    {
+      "cause": "Sexual transmission",
+      "description": "HBV is far more transmissible than HIV (100× higher per exposure) through unprotected vaginal, anal, or oral sex with infected partners. Dominant route of new infections in non-endemic adult populations."
+    },
+    {
+      "cause": "Percutaneous and parenteral exposure",
+      "description": "Injection drug use with shared needles, unsterile medical or dental procedures, traditional tattooing and piercing without sterile equipment, occupational needlestick injuries, and (historically) contaminated blood products."
+    },
+    {
+      "cause": "Healthcare exposure",
+      "description": "Pre-1990s blood transfusion, hemodialysis without segregation of HBsAg-positive patients, multidose vials, and unsterile injection practices. Risk has dropped dramatically in countries with universal donor screening and single-use syringes."
+    },
+    {
+      "cause": "Iatrogenic reactivation during immunosuppression",
+      "description": "Latent HBV (resolved or occult infection) can reactivate during chemotherapy, rituximab, glucocorticoids, anti-TNF therapy, hematopoietic stem-cell transplantation, or HIV antiretroviral changes. Reactivation can cause fatal hepatic failure if not prevented with prophylactic antivirals."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Birth in or origin from an HBV-endemic region", "category": "non-modifiable", "description": "China, sub-Saharan Africa, South-East Asia, Pacific Islands, and Eastern Europe have HBsAg prevalence above 5%. Children of mothers from these regions are at highest risk, especially without birth-dose vaccination." },
+    { "factor": "HIV co-infection", "category": "modifiable", "description": "HIV-positive individuals have 5-10× higher HBV chronicity rate, faster progression to cirrhosis, and higher mortality. Combined antiretroviral therapy with TDF/TAF treats both infections." },
+    { "factor": "Injection drug use", "category": "modifiable", "description": "Shared needles, syringes, cookers, or filters dramatically increase HBV risk. Comprehensive harm reduction (needle exchange, opioid substitution therapy) reduces transmission." },
+    { "factor": "Multiple sexual partners or unprotected sex with infected partner", "category": "modifiable", "description": "HBV is more efficiently transmitted sexually than HIV. Vaccination provides reliable protection; condoms reduce but do not eliminate risk." },
+    { "factor": "Healthcare or laboratory occupation", "category": "modifiable", "description": "Surgeons, dentists, dialysis staff, laboratory technicians, and traditional birth attendants face elevated exposure to blood. Universal vaccination of healthcare workers is standard." },
+    { "factor": "Household contact with HBsAg-positive person", "category": "modifiable", "description": "Sharing personal items (razors, toothbrushes, manicure tools) with an HBsAg-positive household member transmits HBV. Vaccinate household and sexual contacts." },
+    { "factor": "Immunosuppression (chemotherapy, rituximab, transplant)", "category": "non-modifiable", "description": "Risk of HBV reactivation requires screening before immunosuppression. Patients with positive anti-HBc, even without HBsAg, may need antiviral prophylaxis during high-risk treatment." }
+  ],
+
+  "affectedDemographics": [
+    "Western Pacific Region (China, Vietnam, Philippines, Mongolia, Korea, Cambodia): approximately 97 million chronic infections.",
+    "African Region: approximately 65 million chronic infections, with horizontal childhood transmission a dominant route.",
+    "South-East Asia Region (India, Indonesia, Bangladesh, Thailand): approximately 60 million chronic infections, mixed transmission patterns.",
+    "Eastern Mediterranean Region: approximately 19 million chronic infections, with focal high prevalence in Pakistan and Egypt.",
+    "Europe and Americas: lower endemicity (HBsAg under 2%), with infections concentrated in migrant populations, people who inject drugs, men who have sex with men, and people living with HIV.",
+    "Universal birth-dose HBV vaccination has cut HBsAg prevalence in children under 5 from approximately 5% in 1990 to under 1% in 2022 (WHO 2024)."
+  ],
+
+  "diagnosisOverview": "Diagnosis combines clinical assessment with a defined panel of serological markers, viral nucleic acid testing, and biochemical and imaging staging of liver disease. The initial test is HBsAg: positive HBsAg indicates current HBV infection (acute or chronic). HBsAg present for more than 6 months establishes chronic infection. The complementary panel — anti-HBs (immunity from prior infection or vaccination), anti-HBc total (past or current infection), IgM anti-HBc (acute infection), HBeAg (active replication and high infectivity), anti-HBe (often associated with lower viral replication) — defines the phase of infection. Quantitative HBV DNA by real-time PCR measures viral load and guides treatment decisions and monitoring. Liver function tests (ALT, AST, GGT, alkaline phosphatase, bilirubin, albumin, INR) and platelets define disease activity and synthetic function. Non-invasive markers of fibrosis (FIB-4, APRI), transient elastography (Fibroscan), or shear-wave elastography stage fibrosis without biopsy. Liver biopsy is reserved for ambiguous cases or research. All chronic HBV patients are also tested for HIV, hepatitis C, hepatitis D (HBV/HDV coinfection in 5-10% of chronic HBV), and hepatocellular carcinoma surveillance (abdominal ultrasound and alpha-fetoprotein every 6 months in patients with cirrhosis, family history of HCC, or other high-risk features). Pregnant women are screened universally for HBsAg at first antenatal visit; HBsAg-positive women with HBV DNA above 200,000 IU/mL receive tenofovir disoproxil fumarate from week 28 of pregnancy to reduce mother-to-child transmission. Genotype testing is helpful when interferon therapy is considered (genotype A responds best) but not routine for nucleos(t)ide treatment.",
+
+  "diagnosticTests": [
+    { "test": "Hepatitis B surface antigen (HBsAg)", "purpose": "Indicates current HBV infection — acute or chronic", "whatToExpect": "Standard blood draw; result within 24 hours. Positive HBsAg for over 6 months defines chronic infection." },
+    { "test": "Anti-HBs and anti-HBc total", "purpose": "Distinguishes resolved infection (anti-HBs and anti-HBc positive), vaccination (anti-HBs positive alone), and current infection (anti-HBc positive, HBsAg positive)", "whatToExpect": "Same blood sample as HBsAg; result within 24-48 hours. Anti-HBs above 10 mIU/mL is considered protective." },
+    { "test": "HBeAg, anti-HBe", "purpose": "Identifies replicative phase and infectivity", "whatToExpect": "Same blood sample; result within 24-48 hours. HBeAg-positive disease typically has higher viral load." },
+    { "test": "Quantitative HBV DNA (real-time PCR)", "purpose": "Measures viral load to guide treatment decisions, monitor response, and detect relapse", "whatToExpect": "Standard blood draw; result within 3-7 days in most centres. Reported in IU/mL on a log scale." },
+    { "test": "Liver function tests, full blood count, INR, albumin", "purpose": "Assesses inflammation, synthetic function, and platelet count", "whatToExpect": "Standard blood draw; results within hours." },
+    { "test": "Non-invasive fibrosis assessment (FIB-4, APRI, transient elastography)", "purpose": "Stages liver fibrosis without biopsy", "whatToExpect": "FIB-4 and APRI are calculated from routine blood tests. Transient elastography (Fibroscan) is a painless probe applied to the right chest wall measuring liver stiffness in 10 minutes." },
+    { "test": "Abdominal ultrasound and alpha-fetoprotein (HCC surveillance)", "purpose": "Surveillance for hepatocellular carcinoma in patients at risk (cirrhosis, family history of HCC, certain age and genotype thresholds)", "whatToExpect": "Standard abdominal ultrasound and blood AFP every 6 months; takes 20-30 minutes; results within 24 hours." },
+    { "test": "Hepatitis D virus antibody and HDV RNA", "purpose": "Detects HDV coinfection that accelerates liver disease", "whatToExpect": "Performed at HBV diagnosis and periodically; results within 7-14 days at reference laboratories." }
+  ],
+
+  "treatmentOverview": "Treatment goals are durable suppression of HBV replication, prevention of cirrhosis and hepatocellular carcinoma, prevention of mother-to-child transmission, and where possible functional cure (HBsAg loss with or without seroconversion). Acute hepatitis B in immunocompetent adults usually requires only supportive care (rest, hydration, avoidance of hepatotoxins) because over 95% clear the virus spontaneously; severe or fulminant acute disease is treated with tenofovir or entecavir and considered for transplant. Chronic hepatitis B is treated when there is evidence of active disease — HBV DNA above 2,000 IU/mL (HBeAg-negative chronic hepatitis) or 20,000 IU/mL (HBeAg-positive chronic hepatitis) with elevated ALT and significant fibrosis or inflammation; treatment is also indicated for cirrhosis at any viral load, for HBV-HIV coinfection, for HBV-HDV coinfection, for pregnancy with high viral load, and prophylactically before immunosuppression. First-line nucleos(t)ide analogues are tenofovir alafenamide (TAF) 25 mg orally once daily, tenofovir disoproxil fumarate (TDF) 300 mg orally once daily, and entecavir (ETV) 0.5 mg orally once daily (1.0 mg in lamivudine-experienced patients). These suppress HBV DNA to undetectable in over 95% of treated patients within 12-24 months, normalize ALT, halt or reverse fibrosis (even cirrhosis can regress on long-term therapy), and reduce HCC risk by approximately 50% although not eliminating it. Resistance is rare with TAF, TDF, and ETV (under 1% at 5 years in treatment-naive patients). Treatment is generally lifelong; stopping risks viral rebound, ALT flare, and hepatic decompensation. Pegylated interferon alpha-2a 180 µg subcutaneously weekly for 48 weeks remains an alternative in selected patients (young, low viral load, high ALT, genotype A) and achieves HBsAg loss in 3-7% — the closest current approximation to a functional cure. Several emerging therapies (siRNA, capsid assembly modulators, TLR agonists, bulevirtide for HDV) are in late-phase trials. Multi-disciplinary care includes vaccination of all household and sexual contacts, alcohol avoidance, vaccination against hepatitis A, screening and prophylaxis before immunosuppression, and HCC surveillance every 6 months in high-risk patients. Liver transplantation cures end-stage HBV with post-transplant prophylaxis using tenofovir and HBIG.",
+
+  "medicalTreatments": [
+    { "name": "Tenofovir alafenamide (TAF) 25 mg orally daily", "description": "Prodrug of tenofovir with reduced systemic exposure and improved renal and bone safety compared with TDF. First-line for most chronic HBV patients, especially with comorbid renal or bone disease. Lifelong therapy.", "effectiveness": "Undetectable HBV DNA in 94% at 96 weeks; HBeAg loss in 22%; HBsAg loss <1% per year" },
+    { "name": "Tenofovir disoproxil fumarate (TDF) 300 mg orally daily", "description": "Long-established first-line therapy with extensive safety and efficacy data and very low resistance rate. Monitor renal function, phosphate, and bone density.", "effectiveness": "Undetectable HBV DNA in over 95% by 5 years; resistance <1% lifetime (Marcellin Lancet 2013, PMID 23234725)" },
+    { "name": "Entecavir 0.5 mg orally daily (1 mg in lamivudine-experienced patients)", "description": "Potent guanosine nucleoside analogue; first-line for treatment-naive chronic HBV. Avoid in patients with prior lamivudine resistance because of cross-resistance.", "effectiveness": "Undetectable HBV DNA in over 90% by 1 year; resistance <1% in naive patients (Chang NEJM 2006, PMID 16525138)" },
+    { "name": "Pegylated interferon alpha-2a 180 µg subcutaneously weekly for 48 weeks", "description": "Finite-course therapy used in selected patients (young, low viral load, high ALT, genotype A or B). Significant side-effects: flu-like symptoms, depression, cytopenias, autoimmune flares. Contraindicated in decompensated cirrhosis.", "effectiveness": "HBeAg seroconversion in 30-40%; HBsAg loss in 3-7% at 6 months post-treatment — highest 'functional cure' rate of approved agents" },
+    { "name": "Tenofovir disoproxil fumarate prophylaxis in pregnancy from week 28", "description": "Given to HBsAg-positive pregnant women with HBV DNA above 200,000 IU/mL to reduce mother-to-child transmission. Continued until 4-12 weeks postpartum.", "effectiveness": "Mother-to-child transmission reduced from approximately 7-10% to under 1% when combined with infant birth-dose vaccine and HBIG (Pan NEJM 2016, PMID 27305192)" },
+    { "name": "Combination antiretroviral therapy (TDF/TAF + emtricitabine + integrase inhibitor) for HBV-HIV coinfection", "description": "Treats both infections simultaneously with single tablet regimens. Avoid HIV-only regimens without HBV-active component to prevent HBV resistance and reactivation.", "effectiveness": "Suppression of both HBV and HIV in over 90% of adherent patients" },
+    { "name": "Bulevirtide 2-10 mg subcutaneously daily for HBV/HDV coinfection", "description": "First approved (Europe 2020) therapy specifically targeting hepatitis D virus entry through the NTCP receptor. Used for compensated HBV/HDV chronic hepatitis with active viral replication and elevated ALT.", "effectiveness": "Combined virological and biochemical response in approximately 45% at 48 weeks in pivotal trials" },
+    { "name": "Hepatitis B immune globulin (HBIG) for post-exposure prophylaxis", "description": "Used at birth for infants of HBsAg-positive mothers, after needlestick or sexual exposure, and after liver transplantation. Given as a single intramuscular dose along with active vaccination.", "effectiveness": "Combined with vaccine, reduces mother-to-child transmission by over 95%" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Liver transplantation", "description": "Definitive therapy for end-stage HBV cirrhosis, acute liver failure, and hepatocellular carcinoma within Milan criteria. Post-transplant prophylaxis with tenofovir or entecavir, with or without HBIG, prevents recurrence.", "successRate": "5-year survival 75-85% in modern series with combined prophylaxis; recurrence rate under 5%" },
+    { "name": "Hepatocellular carcinoma resection or ablation", "description": "Surgical resection or radiofrequency / microwave ablation for HCC in patients with preserved liver function. Locoregional therapy (transarterial chemoembolization, TACE) for intermediate-stage disease.", "successRate": "5-year survival 60-80% for early-stage HCC; lower for intermediate or advanced disease" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Adefovir, lamivudine, telbivudine (legacy agents)", "description": "Older nucleos(t)ide analogues with higher resistance rates than TAF/TDF/entecavir; no longer first-line but occasionally used in resource-limited settings." },
+    { "name": "Investigational therapies (siRNA, capsid assembly modulators, therapeutic vaccines)", "description": "Several agents are in phase 2/3 trials with the goal of achieving functional cure. Examples include bepirovirsen, GSK3228836, vebicorvir, and JNJ-3989. None yet approved." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "tenofovir-therapy",
+    "entecavir-therapy",
+    "hepatitis-b-vaccine",
+    "liver-transplantation"
+  ],
+
+  "whySeeSpecialist": "Hepatology referral is recommended for all patients with chronic hepatitis B for staging of liver disease, treatment decision-making, HCC surveillance, and management of comorbidities. Patients with cirrhosis, hepatic decompensation, HCC, HBV/HDV coinfection, complex pregnancy, or pre-immunosuppression need specialist care.",
+  "doctorSelectionGuide": "Choose a hepatologist or infectious disease specialist familiar with current AASLD, EASL, or APASL guidelines and with access to FibroScan, HBV DNA quantitation, and HCC surveillance imaging. For transplant evaluation, work with a designated transplant centre.",
+
+  "hospitalCriteria": [
+    "Access to quantitative HBV DNA testing",
+    "Access to non-invasive fibrosis assessment (FibroScan or equivalent)",
+    "Pharmacy stocking tenofovir alafenamide, tenofovir disoproxil fumarate, entecavir, and pegylated interferon",
+    "HCC surveillance ultrasound and contrast-enhanced imaging",
+    "Liver transplant service or referral pathway"
+  ],
+  "keyFacilities": [
+    "Tertiary hepatology and gastroenterology units",
+    "Liver transplant centres",
+    "Designated HBV treatment clinics in national hepatitis elimination programmes",
+    "Public-health hepatitis testing and vaccination services",
+    "HIV-HBV coinfection specialty clinics"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Receive the universal birth-dose hepatitis B vaccine within 24 hours of birth, followed by routine pediatric vaccination schedule.",
+    "Vaccinate all unvaccinated adults at high risk (healthcare workers, people with multiple sexual partners, men who have sex with men, injection drug users, household contacts of HBsAg-positive persons, HIV-positive persons, dialysis patients).",
+    "Screen all pregnant women for HBsAg at first antenatal visit; deliver hepatitis B immune globulin and birth-dose vaccine to infants of HBsAg-positive mothers, and treat mother with tenofovir from week 28 if HBV DNA above 200,000 IU/mL.",
+    "Use barrier protection during sex with new partners and avoid sharing needles, razors, toothbrushes, or other items contaminated with blood.",
+    "Ensure sterile injection practices, single-use equipment, and screened blood products in healthcare.",
+    "Screen all candidates for chemotherapy, biologic therapy, or transplantation for HBV and provide antiviral prophylaxis where indicated.",
+    "Implement universal precautions in healthcare and laboratory settings; provide post-exposure prophylaxis after needlestick injuries."
+  ],
+
+  "lifestyleModifications": [
+    "Avoid alcohol entirely or limit to less than 14 units per week with no binge drinking.",
+    "Maintain healthy body weight to reduce coexisting non-alcoholic fatty liver disease.",
+    "Take antiviral therapy at the same time daily and do not stop without specialist advice — sudden discontinuation can cause severe hepatic flare.",
+    "Disclose chronic HBV status to all sexual partners and household members and ensure they are vaccinated.",
+    "Avoid raw or undercooked shellfish (risk of hepatitis A or vibrio coinfection).",
+    "Vaccinate against hepatitis A and consider influenza and pneumococcal vaccination annually.",
+    "Attend regular HCC surveillance appointments every 6 months if cirrhosis or high-risk features are present."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style diet with abundant vegetables, fruit, legumes, fish, and olive oil — associated with reduced fibrosis progression",
+      "Adequate protein intake (1-1.2 g/kg/day) unless restricted for encephalopathy",
+      "Coffee — moderate consumption (2-3 cups daily) is associated with reduced HCC risk in epidemiological studies",
+      "Low-glycemic carbohydrates to reduce coexisting non-alcoholic fatty liver disease"
+    ],
+    "avoid": [
+      "Alcohol — accelerates fibrosis and increases HCC risk",
+      "Aflatoxin-contaminated foods (poorly stored peanuts, maize) — synergistic HCC risk in HBV",
+      "Raw or undercooked shellfish — risk of hepatitis A coinfection and vibrio sepsis in cirrhosis",
+      "Iron supplements without testing — iron overload accelerates fibrosis"
+    ]
+  },
+  "exerciseGuidelines": "Regular moderate aerobic exercise (150 minutes per week) and resistance training reduce hepatic steatosis, support weight management, and improve quality of life. Vigorous exercise is safe in chronic HBV unless decompensated cirrhosis or active flare is present. Avoid contact sports during severe thrombocytopenia.",
+
+  "dailyManagement": [
+    "Take antiviral therapy at the same time daily with or without food, as advised.",
+    "Attend appointments for HBV DNA, ALT, and liver function every 3-6 months during treatment.",
+    "Schedule HCC surveillance ultrasound and AFP every 6 months if cirrhosis or family history of HCC.",
+    "Maintain weight, blood pressure, and metabolic indices to reduce coexisting NAFLD.",
+    "Update contact tracing and vaccination of household and sexual contacts.",
+    "Carry medical-alert documentation if cirrhotic; carry a medication list."
+  ],
+
+  "prognosis": "Outcome depends on age at infection, phase of disease, and timely treatment. Adult acute hepatitis B resolves spontaneously in over 95% of immunocompetent adults; chronic infection develops in 90% of perinatally infected infants and 25-50% of children infected aged 1-5. Without treatment, roughly 8-20% of chronic HBV patients develop cirrhosis over 20-30 years; once cirrhosis is established, the annual risk of hepatocellular carcinoma is 2-5%. Effective antiviral therapy with TAF, TDF, or entecavir suppresses HBV DNA in over 95% of patients, normalizes ALT, halts or reverses fibrosis (compensated cirrhosis can regress on long-term therapy), and reduces but does not eliminate HCC risk — surveillance every 6 months continues even on therapy. HBsAg loss (functional cure) is uncommon (under 1% per year on NA therapy, 3-7% with pegIFN) but profoundly reduces HCC and disease-related death. HBV/HDV coinfection progresses faster — 10-20 year cumulative cirrhosis risk approaches 50-70% — and benefits from bulevirtide and pegIFN combinations. Liver transplantation cures end-stage HBV with 5-year post-transplant survival of 75-85% under modern antiviral prophylaxis. The WHO 2030 elimination targets (90% reduction in new infections, 65% reduction in mortality) are achievable with universal birth-dose vaccination, screen-and-treat expansion, and access to affordable generic nucleos(t)ide analogues.",
+
+  "recoveryTimeline": "Acute hepatitis B: jaundice and acute symptoms resolve over 2-12 weeks; HBsAg clearance occurs in over 95% of immunocompetent adults within 6 months. Chronic hepatitis B on antiviral therapy: HBV DNA suppression within 6-12 months; ALT normalization within 6-18 months; fibrosis improvement over 1-5 years; HBsAg loss is uncommon and slow (sometimes >10 years on NA). After liver transplant: graft function recovers over weeks; HBV prophylaxis lifelong.",
+
+  "complications": [
+    "Cirrhosis with portal hypertension, esophageal varices, ascites, hepatic encephalopathy, and synthetic failure.",
+    "Hepatocellular carcinoma — 50-55% of global HCC; annual risk 2-5% in cirrhotic patients; lifetime risk substantial even in non-cirrhotic HBV.",
+    "Hepatic decompensation with variceal hemorrhage, refractory ascites, hepatorenal syndrome, or encephalopathy.",
+    "Fulminant acute liver failure — 0.1-1% of acute infections; high mortality without transplant.",
+    "Membranous nephropathy, polyarteritis nodosa, mixed cryoglobulinemia, and other extra-hepatic immune-complex manifestations.",
+    "Reactivation hepatitis during chemotherapy, rituximab, transplantation, or other immunosuppression with high mortality if not prevented.",
+    "HBV/HDV coinfection accelerating disease progression."
+  ],
+
+  "supportResources": [
+    { "name": "WHO Hepatitis B", "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b", "description": "Authoritative global epidemiology, elimination targets, and clinical guidelines." },
+    { "name": "Hepatitis B Foundation", "url": "https://www.hepb.org/", "description": "US-based patient organisation with extensive education, peer support, and research updates." },
+    { "name": "European Association for the Study of the Liver (EASL) — Hepatitis B Guidelines", "url": "https://easl.eu/publications/clinical-practice-guidelines/", "description": "Authoritative European clinical practice guidelines for chronic hepatitis B." },
+    { "name": "American Association for the Study of Liver Diseases (AASLD) — HBV Guidance", "url": "https://www.aasld.org/practice-guidelines", "description": "AASLD clinical guidance on prevention, diagnosis, and treatment of chronic hepatitis B." },
+    { "name": "World Hepatitis Alliance", "url": "https://www.worldhepatitisalliance.org/", "description": "Global coalition advocating for hepatitis elimination and supporting national patient groups." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "hepatitis-c", "name": "Hepatitis C", "keyDifference": "Both are blood-borne viral hepatitides that cause cirrhosis and HCC. Hepatitis C is an RNA virus (Flaviviridae) treated with direct-acting antivirals achieving cure in over 95% within 8-12 weeks. Hepatitis B is a DNA virus typically managed with lifelong oral antivirals; functional cure (HBsAg loss) is uncommon. Diagnosis distinguishes them by HBsAg vs anti-HCV antibodies and HCV RNA." },
+    { "slug": "hepatitis-general", "name": "Hepatitis", "keyDifference": "The general term hepatitis covers several different etiologies — A, B, C, D, E, autoimmune, drug-induced, alcoholic, and NAFLD/MASLD. Each has a distinct diagnostic panel and management. HBV is identified by HBsAg positivity and is the specific entity discussed here." },
+    { "slug": "alcoholic-cirrhosis-of-liver-without-ascites-k7030", "name": "Alcoholic cirrhosis", "keyDifference": "Alcoholic cirrhosis is driven by chronic excess alcohol intake and shows AST > ALT, raised GGT, and history of heavy drinking. HBV cirrhosis shows positive HBsAg and HBV DNA on quantitative PCR. Patients can have both, with synergistic risk of HCC." },
+    { "slug": "malignant-neoplasm-of-liver-primary-unspecified-as-to-type-c228", "name": "Liver cancer (hepatocellular carcinoma)", "keyDifference": "Hepatocellular carcinoma is a frequent complication of long-standing HBV infection, not a separate diagnosis. Identification of HCC in a patient with HBV always raises the question of timing of antiviral therapy and locoregional or surgical management." },
+    { "slug": "unspecified-cirrhosis-of-liver-k7460", "name": "Cirrhosis (unspecified)", "keyDifference": "Unspecified cirrhosis refers to the structural endpoint of many liver diseases. HBV cirrhosis specifically is diagnosed by positive HBsAg, raised HBV DNA, and characteristic histology. Treatment of HBV is essential regardless of cirrhosis stage." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hepatitis-c", "name": "Hepatitis C" },
+    { "slug": "hiv-aids", "name": "HIV/AIDS" },
+    { "slug": "alcoholic-cirrhosis-of-liver-without-ascites-k7030", "name": "Alcoholic cirrhosis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hepatitis-c", "name": "Hepatitis C", "relevance": "Another major chronic viral hepatitis; commonly co-screened and shares cirrhosis and HCC outcomes." },
+    { "slug": "hepatitis-general", "name": "Hepatitis", "relevance": "Broad category of liver inflammation including viral, autoimmune, drug-induced, and metabolic causes." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "HIV-HBV coinfection accelerates liver disease and requires combined antiretroviral therapy with HBV-active drugs." },
+    { "slug": "malignant-neoplasm-of-liver-primary-unspecified-as-to-type-c228", "name": "Liver cancer (HCC)", "relevance": "Major complication of chronic HBV; surveillance every 6 months in high-risk patients." },
+    { "slug": "unspecified-cirrhosis-of-liver-k7460", "name": "Cirrhosis", "relevance": "Common late outcome of chronic HBV; requires staging, surveillance, and management of portal hypertension." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is hepatitis B?",
+      "answer": "Hepatitis B is a viral infection of the liver caused by hepatitis B virus (HBV), a DNA virus transmitted through blood, sexual contact, and from mother to child. Most adults clear acute infection, but 90% of infected infants and 25-50% of young children develop chronic infection that can lead to cirrhosis and liver cancer.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is hepatitis B spread?",
+      "answer": "HBV is transmitted through blood, semen, and other body fluids. The dominant routes are mother-to-child at birth, sexual contact, shared needles or razors, and unsterile medical or tattoo procedures. HBV is roughly 100 times more transmissible per exposure than HIV. It is not spread by casual contact, kissing, or breastfeeding without nipple trauma.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hepatitis B curable?",
+      "answer": "Acute hepatitis B is cleared spontaneously in over 95% of immunocompetent adults. Chronic hepatitis B can be effectively controlled but not yet fully cured. Oral antivirals (tenofovir, entecavir) suppress the virus in over 95% of patients and prevent cirrhosis and HCC, but functional cure (HBsAg loss) is uncommon.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of hepatitis B?",
+      "answer": "Two-thirds of acute infections are asymptomatic. The remaining third have fatigue, fever, nausea, abdominal pain, dark urine, and jaundice over 1-3 months. Chronic infection is usually silent for decades until cirrhosis or HCC develops, which can produce fatigue, ascites, jaundice, encephalopathy, or weight loss.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is the hepatitis B vaccine effective?",
+      "answer": "Yes. The recombinant HBsAg vaccine, available since 1982, induces protective antibody in over 95% of healthy infants and adults after three doses (or two doses with Heplisav-B in adults). WHO recommends universal birth-dose vaccination followed by completion of the infant schedule. Protection is durable, with no booster needed for healthy adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis B be transmitted by kissing?",
+      "answer": "No. HBV is not spread by casual contact, hugging, kissing, or sharing utensils. Transmission requires exposure to infected blood or body fluids — primarily through sexual contact, shared needles, unsterile medical procedures, or mother-to-child during childbirth.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is HBsAg?",
+      "answer": "Hepatitis B surface antigen (HBsAg) is a protein on the outer surface of the hepatitis B virus. Its presence in blood indicates current HBV infection — acute (less than 6 months) or chronic (more than 6 months). Loss of HBsAg with development of anti-HBs antibody indicates recovery and immunity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What treatments are used for chronic hepatitis B?",
+      "answer": "First-line treatments are oral nucleos(t)ide analogues — tenofovir alafenamide, tenofovir disoproxil fumarate, and entecavir — taken once daily for years to lifelong. They suppress HBV DNA in over 95% of patients and reduce risk of cirrhosis and liver cancer. Pegylated interferon alpha is an alternative finite-course option in selected patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does hepatitis B treatment last?",
+      "answer": "Most patients on oral antivirals continue therapy indefinitely. Stopping treatment can cause severe flares and rapid progression to liver failure. Pegylated interferon is given as a 48-week course. Treatment may be reassessed in patients who achieve HBsAg loss or who are at very low risk of progression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnant women take hepatitis B treatment?",
+      "answer": "Yes. Tenofovir disoproxil fumarate is given to HBsAg-positive pregnant women with HBV DNA above 200,000 IU/mL from week 28 of pregnancy to reduce mother-to-child transmission. This, combined with hepatitis B immune globulin and birth-dose vaccine, reduces transmission to under 1%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between hepatitis B and hepatitis C?",
+      "answer": "Hepatitis B is caused by a DNA virus, transmitted predominantly perinatally or sexually, prevented by vaccine, and managed with lifelong antivirals. Hepatitis C is caused by an RNA virus, transmitted predominantly by blood (injection drug use, contaminated transfusion), with no vaccine, but curable in 95% with 8-12 weeks of direct-acting antivirals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis B cause liver cancer?",
+      "answer": "Yes. Hepatitis B causes 50-55% of hepatocellular carcinoma worldwide. Annual HCC risk in cirrhotic HBV patients is 2-5%. Even non-cirrhotic HBV carriers have elevated risk, particularly with Asian or African origin, age over 40, family history of HCC, or high viral load. Surveillance with ultrasound and AFP every 6 months is standard for high-risk patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hepatitis B reactivation dangerous?",
+      "answer": "Yes. HBV reactivation during chemotherapy, rituximab, transplantation, biologic therapy, or HIV treatment changes can cause severe hepatitis and death. All candidates for immunosuppression should be screened for HBsAg, anti-HBc, and HBV DNA, and prophylactic antiviral therapy given where indicated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should family members of hepatitis B patients be tested?",
+      "answer": "Yes. Household and sexual contacts of HBsAg-positive patients should be tested for HBsAg, anti-HBs, and anti-HBc. Susceptible contacts should be vaccinated. Newborns of HBsAg-positive mothers must receive birth-dose vaccine and hepatitis B immune globulin within 12 hours of delivery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a one-time test for hepatitis B?",
+      "answer": "WHO and CDC recommend at least one-time hepatitis B screening for all adults aged 18 and older, regardless of risk factors. The screening panel includes HBsAg, anti-HBs, and anti-HBc total. People with positive HBsAg or anti-HBc need further evaluation by a hepatologist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can people with hepatitis B donate blood or organs?",
+      "answer": "People with active HBV infection (HBsAg positive) cannot donate blood. Organ donation is possible in selected circumstances with full disclosure and recipient consent. People with resolved HBV (anti-HBc positive, HBsAg negative) may be eligible to donate blood in some jurisdictions after thorough screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hepatitis D?",
+      "answer": "Hepatitis D virus (HDV) is a defective RNA virus that requires HBsAg for replication. HBV/HDV coinfection accelerates liver disease in 15-20 million chronic HBV patients globally. Bulevirtide became the first specific HDV therapy approved in Europe in 2020. All chronic HBV patients should be tested for HDV at least once.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does hepatitis B affect life expectancy?",
+      "answer": "Chronic HBV with effective antiviral suppression and good adherence has near-normal life expectancy. Untreated chronic HBV with progression to cirrhosis or HCC carries significantly reduced life expectancy. Early diagnosis, sustained treatment, and HCC surveillance dramatically improve outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis B be passed through breast milk?",
+      "answer": "Breastfeeding by HBsAg-positive mothers is considered safe when the infant has received birth-dose vaccine and HBIG. The infant's protection comes from vaccination, not from avoiding breast milk. Mothers with cracked nipples should temporarily express and discard milk while healing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What lifestyle changes help hepatitis B?",
+      "answer": "Avoid alcohol entirely, maintain healthy weight, eat a Mediterranean-style diet, take prescribed antivirals at the same time daily, attend regular follow-up, get vaccinated against hepatitis A, and ensure household and sexual contacts are vaccinated. Avoid raw shellfish and aflatoxin-contaminated foods.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hepatitis B going to be eliminated?",
+      "answer": "WHO has set 2030 elimination targets — 90% reduction in new chronic infections and 65% reduction in mortality. Reaching these targets requires universal birth-dose vaccination, scale-up of testing and treatment, prevention of mother-to-child transmission, and access to affordable generic antivirals. Progress is significant but uneven globally.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Hepatitis B (HBV)",
+  "regionalNames": [
+    { "name": "HBV", "region": "Global academic", "language": "English" },
+    { "name": "Serum hepatitis", "region": "Older medical literature", "language": "English" },
+    { "name": "Hépatite B", "region": "Francophone", "language": "French" },
+    { "name": "Hepatitis B", "region": "Hispanophone", "language": "Spanish" },
+    { "name": "हेपेटाइटिस बी", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "hepatitis B",
+    "HBV",
+    "HBsAg",
+    "chronic hepatitis B",
+    "acute hepatitis B",
+    "hepatitis B vaccine",
+    "tenofovir",
+    "TAF",
+    "TDF",
+    "entecavir",
+    "pegylated interferon",
+    "hepatitis B cure",
+    "HBV DNA",
+    "hepatitis B pregnancy",
+    "hepatitis B cirrhosis",
+    "hepatitis D coinfection"
+  ],
+  "symptomKeywords": [
+    "yellow eyes fatigue",
+    "dark urine pale stools",
+    "abdominal pain jaundice",
+    "right upper quadrant pain liver",
+    "raised liver enzymes",
+    "blood transfusion years ago jaundice",
+    "asian heritage liver function abnormal"
+  ],
+
+  "metaTitle": "Hepatitis B: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Hepatitis B: chronic viral liver infection causing cirrhosis and liver cancer. Symptoms, testing, vaccine, tenofovir/entecavir treatment reviewed.",
+
+  "keywords": [
+    "hepatitis B",
+    "HBV",
+    "HBsAg",
+    "chronic hepatitis B",
+    "hepatitis B vaccine",
+    "tenofovir alafenamide",
+    "tenofovir disoproxil fumarate",
+    "entecavir hepatitis B",
+    "hepatitis B treatment",
+    "hepatitis B symptoms",
+    "HBV DNA",
+    "hepatitis B pregnancy",
+    "hepatitis B cirrhosis",
+    "hepatitis B liver cancer"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "World Health Organization. Hepatitis B fact sheet. WHO Geneva, 2024.", "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b", "accessedDate": "2026-05-14" },
+    { "title": "Terrault NA, Lok ASF, McMahon BJ, et al. 2018. Update on prevention, diagnosis, and treatment of chronic hepatitis B: AASLD 2018 hepatitis B guidance. Hepatology 67(4):1560-1599.", "url": "https://pubmed.ncbi.nlm.nih.gov/29405329/", "accessedDate": "2026-05-14" },
+    { "title": "European Association for the Study of the Liver. 2017. EASL 2017 Clinical Practice Guidelines on the management of hepatitis B virus infection. J Hepatol 67(2):370-398.", "url": "https://pubmed.ncbi.nlm.nih.gov/28427875/", "accessedDate": "2026-05-14" },
+    { "title": "Marcellin P, Gane E, Buti M, et al. 2013. Regression of cirrhosis during treatment with tenofovir disoproxil fumarate for chronic hepatitis B: a 5-year open-label follow-up study. Lancet 381(9865):468-75.", "url": "https://pubmed.ncbi.nlm.nih.gov/23234725/", "accessedDate": "2026-05-14" },
+    { "title": "Chang TT, Gish RG, de Man R, et al. 2006. A comparison of entecavir and lamivudine for HBeAg-positive chronic hepatitis B. New England Journal of Medicine 354(10):1001-10.", "url": "https://pubmed.ncbi.nlm.nih.gov/16525138/", "accessedDate": "2026-05-14" },
+    { "title": "Pan CQ, Duan Z, Dai E, et al. 2016. Tenofovir to prevent hepatitis B transmission in mothers with high viral load. New England Journal of Medicine 374(24):2324-34.", "url": "https://pubmed.ncbi.nlm.nih.gov/27305192/", "accessedDate": "2026-05-14" },
+    { "title": "Schillie S, Vellozzi C, Reingold A, et al. 2018. Prevention of hepatitis B virus infection in the United States: recommendations of the Advisory Committee on Immunization Practices. MMWR Recomm Rep 67(1):1-31.", "url": "https://pubmed.ncbi.nlm.nih.gov/29336422/", "accessedDate": "2026-05-14" },
+    { "title": "World Health Organization. 2024. Global hepatitis report 2024: action for access in low- and middle-income countries.", "url": "https://www.who.int/publications/i/item/9789240091672", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}
