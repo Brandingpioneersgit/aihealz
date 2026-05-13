@@ -244,7 +244,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | carotid-endarterectomy | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
 | carpal-tunnel-syndrome-rehab | 3 | Physical Medicine & Rehabilitation | (open) | — | open | Batch 004, 1 variant |
 | carpal-tunnel-syndrome-occupational | 3 | Occupational Medicine | (open) | — | open | Batch 004, 1 variant |
-| cataracts | 3 | Ophthalmologist | (open) | — | open | Batch 004, 1 variant |
+| cataracts | 1 | Ophthalmology | claude-2026-05-14 | 2026-05-14 | done | 5,487 words, 21 FAQs (all schemaEligible), 8 sources; row 589 |
 | cervical-dysplasia-pap | 3 | Pathology | (open) | — | open | Batch 004, 1 variant |
 | chemical-burns-occupational | 3 | Occupational Medicine | (open) | — | open | Batch 004, 1 variant |
 | childhood-immunization-schedules | 3 | Family Medicine | (open) | — | open | Batch 004, 1 variant |

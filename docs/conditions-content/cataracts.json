@@ -1,0 +1,475 @@
+{
+  "_meta": {
+    "slug": "cataracts",
+    "tier": 1,
+    "headTerm": "cataract",
+    "longTailKeywords": [
+      "cataract symptoms",
+      "cataract surgery",
+      "phacoemulsification",
+      "intraocular lens IOL",
+      "monofocal IOL",
+      "multifocal IOL",
+      "toric IOL",
+      "femtosecond laser cataract",
+      "nuclear sclerotic cataract",
+      "posterior subcapsular cataract",
+      "diabetic cataract",
+      "congenital cataract"
+    ],
+    "primarySpecialty": "Ophthalmology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Epidemiology and global burden from WHO World Report on Vision 2019 and Bourne RRA et al. Lancet Glob Health 2021 (PMID 33275949). Pathophysiology and classification per Liu YC et al. Lancet 2017 (PMID 28617528) and Asbell PA et al. Lancet 2005 (PMID 15721471). Surgical technique and outcomes per Olson RJ et al. Ophthalmology 2017 AAO Preferred Practice Pattern and ESCRS recommendations. IOL types per Kohnen T & Schwiegerling J. Curr Opin Ophthalmol 2018. PCO (posterior capsule opacification) treatment per Apple DJ et al. Surv Ophthalmol 2000 (PMID 11033038). Endophthalmitis per Behndig A et al. Br J Ophthalmol 2014 ESCRS data (PMID 25237121). Femtosecond laser-assisted cataract surgery (FLACS) per Day AC et al. Ophthalmology 2016 FACT trial (PMID 27425031). Pediatric cataract per Birch EE et al. Am J Ophthalmol 2010. India-specific burden from National Programme for Control of Blindness data."
+  },
+
+  "h1Title": "Cataracts: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Ophthalmology",
+
+  "heroOverview": "A cataract is a clouding of the crystalline lens of the eye that causes painless, progressive loss of vision and is the single leading cause of blindness worldwide. The Global Burden of Disease 2020 estimates 100 million people have moderate-to-severe vision impairment from cataract and 17 million are blind from untreated cataract, with the heaviest burden in South Asia, sub-Saharan Africa, and Latin America where surgical access is limited. Most cataracts are age-related: more than 50% of adults over 80 in the US and UK have a clinically significant cataract, and roughly half of these have had cataract surgery. Symptoms include gradual blurring of vision, glare and halos around lights (particularly at night), dimming or yellowing of colors, difficulty reading, and the appearance of a yellowed or whitened pupil in dense disease. Diagnosis is straightforward with slit-lamp examination by an ophthalmologist or optometrist. Treatment is surgical: phacoemulsification with intraocular lens implantation is the world's most performed operation, with over 95% of patients in high-income countries achieving good visual outcomes and rapid recovery. Femtosecond laser-assisted technique and a wide range of intraocular lens designs (monofocal, multifocal, toric, extended depth of focus, accommodating) tailor outcomes to lifestyle and refractive needs.",
+
+  "keyStats": {
+    "prevalence": "Approximately 100 million people with moderate-to-severe vision impairment from cataract globally; 17 million blind from untreated cataract (GBD 2020)",
+    "demographics": "Age-related cataract affects over 50% of US and UK adults over age 80; congenital and pediatric cataract affect approximately 3 per 10,000 children",
+    "avgAge": "Most cataract surgery performed at age 65-80; bilateral surgery sequentially over weeks to months",
+    "globalCases": "Over 28 million cataract surgeries performed globally each year; surgical backlog remains large in low-income countries"
+  },
+
+  "definition": "A cataract (ICD-10: H25 age-related, H26 other, H28 cataract in diseases classified elsewhere) is an opacification of the crystalline lens of the eye, the biconvex transparent structure behind the iris that focuses light onto the retina. With age, lens proteins (crystallins) undergo oxidative modification, cross-linking, and aggregation, producing progressive loss of transparency. The clinical classifications of age-related cataract are: nuclear sclerotic (the most common, in which the central nuclear lens darkens and yellows, producing 'second sight' myopia and gradual visual loss); cortical (spoke-like cortical opacities radiating from the equator into the visual axis, often with glare and difficulty in bright sunlight); posterior subcapsular (a plaque-like opacity beneath the posterior lens capsule that disproportionately impairs near vision and produces marked glare, often appearing earlier in life and accelerated by corticosteroid use, diabetes, or radiation); and anterior subcapsular and mixed cataracts (combinations of these features). Beyond age-related cataract, congenital cataract (present at birth, often from genetic mutations, intrauterine infection, or metabolic disease), pediatric cataract (developing in childhood), traumatic cataract (after blunt or penetrating ocular injury), iatrogenic cataract (after intraocular surgery or systemic corticosteroid use), and metabolic cataract (in diabetes, galactosemia, Wilson disease) account for the remaining cases. Cataract is managed by ophthalmologists with referral as needed to pediatric ophthalmology, retina specialists, glaucoma specialists, and cornea specialists.",
+
+  "typesClassification": [
+    { "type": "Nuclear sclerotic cataract", "description": "Most common age-related cataract. Yellowing and darkening of the central lens nucleus producing gradual blurred vision, second-sight myopia (transient improvement in near vision before further progression), and difficulty distinguishing colors. Surgery is timed by visual symptoms and lifestyle impact." },
+    { "type": "Cortical cataract", "description": "Spoke-like or wedge-shaped opacities in the lens cortex radiating from the equator into the visual axis. Causes glare and difficulty seeing in bright sunlight or with headlights at night. Surgery timed by visual symptoms." },
+    { "type": "Posterior subcapsular cataract (PSC)", "description": "Plaque-like opacity beneath the posterior lens capsule, in the visual axis. Disproportionately impairs reading and near vision and produces marked glare. Often appears at younger ages; accelerated by corticosteroid use, diabetes, and radiation exposure. Often requires earlier surgery." },
+    { "type": "Anterior subcapsular and mixed cataracts", "description": "Anterior subcapsular opacities (less common) and combinations of nuclear, cortical, and subcapsular changes (mixed) account for a substantial proportion of clinical cataracts." },
+    { "type": "Congenital cataract", "description": "Present at birth, occurring in roughly 1-3 per 10,000 live births. Causes include autosomal dominant genetic mutations (CRYAA, CRYAB, GJA8 etc.), intrauterine infections (rubella, cytomegalovirus, toxoplasmosis, herpes simplex), metabolic disease (galactosemia, Lowe syndrome), and trisomy 21. Early surgery within weeks of birth is critical to prevent deprivation amblyopia." },
+    { "type": "Traumatic cataract", "description": "Develops after blunt or penetrating ocular trauma. Can present acutely (rapid lens hydration and opacification) or chronically (months to years later). Often involves capsular rupture and zonular weakness that complicate surgery." },
+    { "type": "Iatrogenic and metabolic cataracts", "description": "Long-term systemic, inhaled, or topical corticosteroid use, diabetes mellitus (snowflake cataract), radiation exposure, prior intraocular surgery (vitrectomy), and metabolic disorders (galactosemia, Wilson disease) all produce characteristic cataract patterns." }
+  ],
+
+  "primarySymptoms": [
+    "Gradual, painless, progressive blurring of vision over months to years that does not fully improve with glasses.",
+    "Increased glare and halos around lights, particularly at night when driving or reading.",
+    "Dimming or yellowing of colors — patients often report colors appearing 'faded' or 'duller' compared with the unaffected eye or with how they remember them.",
+    "Difficulty reading small print despite previously functional reading glasses; frequent prescription changes that fail to maintain clear vision.",
+    "Second-sight myopia: temporary improvement in near vision in nuclear sclerotic cataract — patients sometimes report being able to read without glasses for the first time in years, soon followed by further deterioration.",
+    "Monocular diplopia (double vision in one eye) from refractive irregularity within the cataract.",
+    "Difficulty driving at night because of headlight glare and inability to see contrast against bright lights.",
+    "A visibly cloudy, gray, or yellowish pupil in dense or mature cataract — visible to others.",
+    "Reduced contrast sensitivity that makes faces, edges, and low-light environments harder to discern despite measured Snellen visual acuity being only modestly impaired.",
+    "Falls, dropped items, and reduced confidence in mobility in older adults with bilateral cataract.",
+    "White or asymmetric pupil reflex (leukocoria) in pediatric cataract — requires urgent ophthalmology referral to exclude retinoblastoma and other serious causes."
+  ],
+
+  "earlyWarningSigns": [
+    "Frequent changes in glasses prescription that fail to provide clear vision in middle-aged or older adults",
+    "Increasing glare while driving at night and avoidance of night driving",
+    "Difficulty reading small print, telephone screens, and menus in dim light",
+    "Subjective sense that one eye is 'dimmer' or that colors look different between the two eyes",
+    "Leukocoria (white pupil reflex) in an infant — requires urgent ophthalmology referral"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe vision loss — exclude retinal detachment, vitreous hemorrhage, or other acute ocular emergency",
+    "Severe eye pain with red eye, vomiting, and halos — exclude acute angle-closure glaucoma",
+    "Sudden onset of floaters or flashing lights — exclude retinal tear or detachment",
+    "Post-operative red painful eye with reduced vision — exclude endophthalmitis (rare but devastating complication, <0.1% of modern cataract surgery)",
+    "Acute white pupil (leukocoria) in a child — exclude retinoblastoma, Coats disease, persistent fetal vasculature"
+  ],
+
+  "causes": [
+    {
+      "cause": "Age-related oxidative damage to lens proteins",
+      "description": "Cumulative ultraviolet and oxidative damage to crystallins (the main lens proteins) produces protein cross-linking, aggregation, and loss of transparency. This is the dominant cause of cataract — more than 90% of cataracts are age-related, with prevalence rising sharply over age 60."
+    },
+    {
+      "cause": "Ultraviolet (UV) light exposure",
+      "description": "Cumulative UV-B exposure across the lifespan accelerates cataract formation. Outdoor occupational exposure (fishermen, farmers, construction workers) and equatorial residence increase risk. UV-blocking sunglasses and broad-brimmed hats reduce cumulative dose."
+    },
+    {
+      "cause": "Diabetes mellitus",
+      "description": "Hyperglycemia accelerates cataract formation through the polyol pathway (glucose -> sorbitol accumulation in the lens, causing osmotic swelling and protein damage). Type 1 and type 2 diabetes both raise cataract risk, with onset 10-20 years earlier than age-matched controls."
+    },
+    {
+      "cause": "Corticosteroid exposure (systemic, inhaled, topical, intraocular)",
+      "description": "Long-term corticosteroid use causes posterior subcapsular cataract dose-dependent and reversible-only with discontinuation in early stages. Long-term high-dose systemic corticosteroid, inhaled corticosteroid above 800 µg fluticasone equivalent/day, and topical ocular steroids are recognized risks."
+    },
+    {
+      "cause": "Ocular trauma and intraocular surgery",
+      "description": "Blunt ocular trauma can cause Vossius ring, lens dislocation, or rapidly developing cataract. Penetrating injury with lens capsule violation produces acute cataract within days. Prior pars plana vitrectomy accelerates nuclear sclerotic cataract in over 80% of patients within 2 years."
+    },
+    {
+      "cause": "Smoking and alcohol",
+      "description": "Cigarette smoking approximately doubles cataract risk in a dose-dependent manner. Heavy alcohol consumption is independently associated with cataract risk."
+    },
+    {
+      "cause": "Genetic and metabolic causes (congenital and early-onset cataract)",
+      "description": "Mutations in crystallin genes (CRYAA, CRYAB, CRYBB1-3, CRYGC-D), connexin genes (GJA3, GJA8), and other lens structural genes cause autosomal dominant congenital cataract. Metabolic disorders (galactosemia, Lowe syndrome, Wilson disease, mannosidosis, Fabry disease) and intrauterine infections (rubella, CMV, toxoplasmosis) also cause pediatric cataract."
+    },
+    {
+      "cause": "Radiation and chemical exposure",
+      "description": "Ionizing radiation (radiotherapy fields including the eye, occupational exposures, atomic bomb survivors), microwave exposure, and intraocular chemical injuries can all cause cataract."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age 60 and older", "category": "non-modifiable", "description": "By far the strongest risk factor. Prevalence rises from approximately 5% at age 50 to over 50% at age 80." },
+    { "factor": "Cumulative UV light exposure", "category": "modifiable", "description": "Outdoor work, equatorial residence, and life-long sun exposure. UV-blocking sunglasses and hats reduce cumulative dose." },
+    { "factor": "Diabetes mellitus", "category": "modifiable", "description": "Both type 1 and type 2 diabetes raise cataract risk; cataract typically appears 10-20 years earlier than in non-diabetics." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Doubles cataract risk in a dose-dependent manner. Smoking cessation reduces risk gradually." },
+    { "factor": "Chronic corticosteroid use", "category": "modifiable", "description": "Systemic, inhaled, topical, and intraocular corticosteroids all increase cataract risk. Use the lowest effective dose and consider alternatives when possible." },
+    { "factor": "Family history of cataract", "category": "genetic", "description": "Familial early-onset cataract suggests crystallin or other lens gene mutations; family history also contributes to age-related cataract susceptibility." },
+    { "factor": "Prior intraocular surgery (vitrectomy)", "category": "non-modifiable", "description": "Pars plana vitrectomy accelerates nuclear sclerotic cataract — over 80% of vitrectomy patients develop visually significant cataract within 2 years." },
+    { "factor": "High myopia, high hyperopia, retinal disease requiring intraocular procedures", "category": "non-modifiable", "description": "Highly myopic eyes have higher rates of nuclear cataract; eyes with prior surgery, glaucoma drainage devices, or chronic uveitis are at higher risk." },
+    { "factor": "Nutritional deficiency", "category": "modifiable", "description": "Antioxidant deficiency (vitamin C, E, lutein, zeaxanthin) is associated with elevated cataract risk in some studies; balanced diet may slow progression." }
+  ],
+
+  "affectedDemographics": [
+    "Global: cataract is the leading cause of blindness worldwide, affecting roughly 17 million blind people and 100 million with significant vision impairment.",
+    "South Asia and sub-Saharan Africa: bear the heaviest burden of untreated cataract because of limited surgical access; cataract surgical rate (operations per million per year) is the key public-health metric.",
+    "High-income countries: cataract surgery is one of the most performed operations; majority of patients over 75 have either had surgery or have early cataract.",
+    "India: National Programme for Control of Blindness coordinates cataract elimination; over 6 million surgeries per year.",
+    "Children: congenital and pediatric cataract affect 3 per 10,000 live births; urgent surgery within weeks prevents deprivation amblyopia.",
+    "Diabetics: cataract develops 10-20 years earlier than age-matched controls and accounts for a substantial proportion of cataract surgery in middle age."
+  ],
+
+  "diagnosisOverview": "Diagnosis of cataract is straightforward and based on history of progressive painless visual loss with characteristic slit-lamp examination findings. An ophthalmologist or optometrist examines the lens after dilating drops (tropicamide 1% or phenylephrine 2.5%) using a slit-lamp biomicroscope, which provides magnified illumination of the lens. The lens is graded using the Lens Opacities Classification System III (LOCS III) for nuclear color, nuclear opalescence, cortical, and posterior subcapsular changes, providing standardized documentation and progression tracking. Visual acuity is measured with a Snellen chart in standard illumination and with glare testing (brightness acuity testing, BAT) which often reveals greater visual impairment than Snellen alone. Contrast sensitivity testing (Pelli-Robson, CSV-1000) detects subtle disability that standard acuity misses. Color vision testing (Ishihara, Farnsworth D-15) documents the yellowing effect of nuclear sclerosis. Optical coherence tomography (OCT) of the macula and optic nerve is performed before cataract surgery to exclude coexisting macular pathology (macular degeneration, epiretinal membrane, diabetic macular edema) that would limit post-operative visual outcome. Intraocular pressure measurement excludes glaucoma. Biometry (optical or ultrasound) measures axial length, corneal curvature, and anterior chamber depth to calculate the appropriate intraocular lens power for surgery. Corneal topography or tomography assesses regular and irregular astigmatism for toric IOL selection. Endothelial cell count (specular microscopy) is performed in patients with corneal opacities or prior surgery. Once the cataract is significant enough to limit lifestyle, work, or driving, surgery is offered. There is no specific 'visual acuity threshold' — surgery is offered based on functional impact, not a fixed Snellen line.",
+
+  "diagnosticTests": [
+    { "test": "Visual acuity testing (Snellen and pinhole)", "purpose": "Quantifies visual impairment; pinhole correction excludes refractive contribution", "whatToExpect": "Painless test in the clinic with eye chart; 5-10 minutes." },
+    { "test": "Slit-lamp biomicroscopy with pupil dilation", "purpose": "Direct visualization of lens opacities and classification by LOCS III", "whatToExpect": "Dilating drops (tropicamide 1%, phenylephrine 2.5%) are applied; pupil dilates within 20-30 minutes. The ophthalmologist examines the lens through the slit lamp. Painless. Vision may be blurred for 4-6 hours after dilating drops." },
+    { "test": "Glare (brightness acuity) testing", "purpose": "Reveals visual impairment caused by glare that standard acuity testing misses", "whatToExpect": "Patient reads the chart while a bright light source is directed into the eye; 5-10 minutes. Often documents marked drop in acuity supporting surgical indication." },
+    { "test": "Optical coherence tomography (OCT) of the macula and optic nerve", "purpose": "Excludes coexisting macular and optic nerve pathology that would limit post-operative visual outcome", "whatToExpect": "Painless scan with no eye contact; 5-10 minutes per eye. Result during the same visit." },
+    { "test": "Biometry (IOL Master, Lenstar, or A-scan ultrasound)", "purpose": "Measures axial length, corneal curvature, and anterior chamber depth for accurate IOL power calculation", "whatToExpect": "Optical biometry: painless, no contact, 2-3 minutes per eye. A-scan ultrasound: minimal contact under topical anesthesia, 5 minutes per eye." },
+    { "test": "Corneal topography or tomography (Pentacam, OPD-Scan)", "purpose": "Maps corneal astigmatism and detects irregular astigmatism; informs toric IOL selection and identifies subclinical keratoconus", "whatToExpect": "Painless scan with no contact; 5 minutes per eye." },
+    { "test": "Intraocular pressure measurement (Goldmann tonometry or non-contact)", "purpose": "Excludes glaucoma which can affect visual outcomes and management approach", "whatToExpect": "Painless or minor pressure on the eye after topical anesthesia; result immediately." }
+  ],
+
+  "treatmentOverview": "Cataract is managed conservatively in early disease with updated glasses prescription, anti-glare measures (broad-brimmed hats, UV-blocking sunglasses, anti-glare car windscreens), and increased ambient lighting for reading. Surgery is the only effective treatment for visually significant cataract and is offered when visual impairment affects driving, reading, work, hobbies, or general independence. There is no specific Snellen visual acuity threshold — surgery is patient-centred. Modern cataract surgery uses phacoemulsification: under topical or peribulbar anesthesia, the surgeon creates a 2.2-3.0 mm corneal incision, removes the anterior capsule (capsulorhexis), fragments and aspirates the lens nucleus using ultrasound, and inserts a foldable intraocular lens (IOL) into the capsular bag. The procedure typically takes 15-30 minutes per eye as a day-case under topical anesthesia. Femtosecond laser-assisted cataract surgery (FLACS) uses a femtosecond laser to perform the corneal incision, capsulorhexis, and lens fragmentation steps. The FACT trial (Day Ophthalmology 2016) and other randomized comparisons show similar visual outcomes with FLACS and conventional phacoemulsification, with higher cost but slightly faster recovery in some metrics. IOL selection: monofocal IOLs (the standard) provide excellent distance or near vision but require glasses for the other range; multifocal IOLs provide both distance and near vision but trade contrast and produce some glare and halos; toric IOLs correct corneal astigmatism; extended depth of focus (EDOF) IOLs provide intermediate vision with fewer glare/halo effects than multifocal; accommodating IOLs provide modest accommodation. Patient lifestyle, ocular pathology, and informed choice guide IOL selection. Surgery success is excellent: over 95% of patients in modern series achieve 6/12 (20/40) or better visual acuity in the absence of coexisting eye disease. Complications are rare: endophthalmitis 0.05-0.1%, posterior capsule rupture 1-3% (more in difficult cases), retinal detachment around 1%, cystoid macular edema 1-2%, and posterior capsule opacification (PCO) developing in 20-40% within 5 years, treated with Nd:YAG laser capsulotomy as a brief outpatient procedure. Pediatric cataract requires urgent surgery within weeks of detection to prevent deprivation amblyopia, with subsequent intensive amblyopia therapy and refractive correction.",
+
+  "medicalTreatments": [
+    { "name": "Updated glasses prescription and lifestyle adjustments", "description": "Used in early cataract before surgery is indicated. Brighter ambient lighting for reading, anti-glare strategies, broad-brimmed hats, and UV-blocking sunglasses. Manage modifiable risk factors (smoking cessation, glycemic control, minimize corticosteroid exposure).", "effectiveness": "Improves function in mild cataract; does not slow progression of established lens opacity" },
+    { "name": "Topical corticosteroids (post-operative)", "description": "Prednisolone acetate 1% or dexamethasone 0.1% applied 4 times daily for 3-4 weeks post-operatively to control inflammation. Tapered over weeks.", "effectiveness": "Reduces post-operative inflammation; prevents cystoid macular edema" },
+    { "name": "Topical NSAIDs (post-operative)", "description": "Ketorolac, bromfenac, or nepafenac applied for 4-6 weeks post-operatively. Reduces inflammation and risk of cystoid macular edema, particularly in diabetic and high-risk patients.", "effectiveness": "Reduces cystoid macular edema incidence by 50-70% versus steroid alone" },
+    { "name": "Topical antibiotics (post-operative)", "description": "Moxifloxacin or other fourth-generation fluoroquinolone applied 4 times daily for 1-2 weeks post-operatively to prevent endophthalmitis. Many surgeons supplement with intracameral cefuroxime or moxifloxacin at the end of surgery.", "effectiveness": "Intracameral antibiotics reduce endophthalmitis risk fivefold (ESCRS Endophthalmitis Study)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Phacoemulsification with foldable IOL implantation", "description": "Standard modern cataract surgery. Topical or peribulbar anesthesia; 2.2-3.0 mm corneal incision; capsulorhexis; ultrasonic lens fragmentation; foldable IOL implantation in the capsular bag. 15-30 minutes per eye as day-case.", "successRate": "Over 95% achieve 6/12 (20/40) or better visual acuity in eyes without coexisting pathology; serious complication rate under 2%" },
+    { "name": "Femtosecond laser-assisted cataract surgery (FLACS)", "description": "Uses femtosecond laser for corneal incision, capsulorhexis, and lens fragmentation; remaining steps performed with phacoemulsification. Adds cost; visual outcomes broadly similar to conventional phacoemulsification.", "successRate": "Equivalent visual outcomes to conventional phacoemulsification; slightly faster recovery in some metrics (FACT trial Day Ophthalmology 2016, PMID 27425031)" },
+    { "name": "Extracapsular cataract extraction (ECCE) and manual small-incision cataract surgery (MSICS)", "description": "Used in advanced or hyper-mature cataract, in low-resource settings, or when phacoemulsification is contraindicated. MSICS uses a self-sealing scleral incision and is the workhorse of high-volume cataract programmes in India, Nepal, and sub-Saharan Africa.", "successRate": "Visual outcomes nearly comparable to phaco; cost-effective in resource-limited settings" },
+    { "name": "Nd:YAG laser capsulotomy", "description": "Outpatient laser procedure to treat posterior capsule opacification (PCO), the most common late complication of cataract surgery. Creates an opening in the cloudy capsule behind the IOL to restore clear vision. Takes 5 minutes.", "successRate": "Restoration of clear vision in over 95% of treated patients; complications (retinal detachment, IOL damage) rare" },
+    { "name": "Pediatric cataract surgery with primary or secondary IOL implantation", "description": "Performed within weeks of detection in congenital and infantile cataract to prevent deprivation amblyopia. Lensectomy with anterior vitrectomy is standard in infants; IOL implantation may be primary (in older children) or deferred (in infants under 6-12 months). Followed by intensive amblyopia therapy with patching and refractive correction.", "successRate": "Visual outcomes highly dependent on timing of surgery, severity of cataract, and quality of amblyopia therapy; bilateral congenital cataract operated early can achieve 6/12 vision or better" },
+    { "name": "Combined surgery for cataract and glaucoma or other ocular pathology", "description": "Combined phacoemulsification with trabeculectomy, micro-invasive glaucoma surgery (MIGS), corneal transplantation, or retinal procedures in selected patients. Performed by appropriately trained surgeons.", "successRate": "Variable depending on combined procedures; reduces total operative burden for the patient" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Anti-cataract eye drops (lanosterol, others)", "description": "Investigational topical lanosterol has shown preclinical and small clinical evidence of partial reversal of lens opacity but has not been validated in large trials. No anti-cataract eye drop is currently approved by regulatory authorities and surgical treatment remains the only effective intervention." },
+    { "name": "Optical aids and lifestyle adaptations", "description": "Magnifiers, increased illumination, large-print materials, and anti-glare strategies maintain function in patients who are not yet ready for surgery or who decline surgery." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "phacoemulsification-cataract-surgery",
+    "femtosecond-laser-cataract-surgery",
+    "intraocular-lens-implantation",
+    "nd-yag-laser-capsulotomy"
+  ],
+
+  "whySeeSpecialist": "Diagnosis and surgical management of cataracts is the province of ophthalmology. An optometrist or general ophthalmologist makes the initial diagnosis; cataract surgery is performed by an ophthalmologist with subspecialty training in cataract and refractive surgery. Pediatric cataract requires referral to pediatric ophthalmology. Patients with coexisting glaucoma, retinal disease, or corneal disease benefit from combined subspecialty input.",
+  "doctorSelectionGuide": "Choose an ophthalmologist who performs at least 200 cataract operations per year and reports outcomes (visual acuity, complication rates, refractive accuracy). Look for board certification, fellowship training in cataract and refractive surgery for complex cases, and use of modern equipment (femtosecond laser, advanced biometry, premium IOLs as needed). For pediatric cataract, choose a pediatric ophthalmologist.",
+
+  "hospitalCriteria": [
+    "Day-case surgical facility with cataract surgery infrastructure",
+    "Modern phacoemulsification equipment and femtosecond laser (where available)",
+    "Comprehensive optical biometry and corneal topography",
+    "Pharmacy stocking range of monofocal, toric, multifocal, and EDOF IOLs",
+    "Post-operative follow-up and refractive optometry services"
+  ],
+  "keyFacilities": [
+    "Tertiary ophthalmology centres",
+    "Designated high-volume cataract surgery programmes (Aravind, Sankara Nethralaya, LV Prasad, Sightsavers)",
+    "Pediatric ophthalmology services",
+    "ASC (ambulatory surgery centres) with cataract surgery",
+    "WHO IAPB Vision Atlas designated programmes"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Wear UV-blocking sunglasses (UV400 / 100% UVA-UVB protection) outdoors from childhood.",
+    "Wear a broad-brimmed hat outdoors to further reduce UV exposure.",
+    "Stop smoking — risk reduction begins immediately and accumulates over years.",
+    "Maintain tight glycemic control if you have diabetes (HbA1c target individualized).",
+    "Minimize use of long-term systemic, inhaled, and topical corticosteroids where possible; use lowest effective dose.",
+    "Wear protective eyewear during occupational, recreational, and DIY activities that risk eye injury.",
+    "Eat a balanced diet with antioxidant-rich foods (vegetables, fruit, fish).",
+    "Have regular eye examinations every 1-2 years over age 50 to detect early cataract and other eye disease."
+  ],
+
+  "lifestyleModifications": [
+    "Update glasses prescription regularly as cataract progresses.",
+    "Use bright reading lights and anti-glare measures for evening activities.",
+    "Wear sunglasses outdoors, especially during the day when symptoms are worst.",
+    "Limit night driving if glare is significant; consider day-driving only.",
+    "Plan cataract surgery before vision impairment causes accidents, falls, or loss of independence.",
+    "Manage diabetes, blood pressure, and other systemic conditions before and after surgery.",
+    "Disclose all medications (especially alpha-blockers such as tamsulosin, which can cause intraoperative floppy iris syndrome) before surgery."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Antioxidant-rich foods (leafy greens, berries, citrus, nuts) — observational benefit on cataract progression",
+      "Omega-3 fatty acid-rich foods (oily fish, flaxseed) — modest cataract benefit in cohort studies",
+      "Lutein- and zeaxanthin-rich foods (spinach, kale, corn, eggs) — beneficial for general eye health",
+      "Adequate hydration with water (especially in the postoperative period)"
+    ],
+    "avoid": [
+      "Excess alcohol — independently associated with cataract risk",
+      "Smoking — strongly associated with cataract and other ocular disease",
+      "Excess refined sugar in poorly controlled diabetes",
+      "Aspirin in the immediate post-operative period unless required for cardiovascular reasons (small bleeding risk)"
+    ]
+  },
+  "exerciseGuidelines": "Regular physical activity is encouraged. After cataract surgery, avoid heavy lifting (over 5-10 kg) for 1 week, swimming and saunas for 2 weeks, and contact sports for 4 weeks. Walking, light cycling, and gentle yoga can resume the day after surgery. Resume normal activity from 4 weeks with surgeon approval.",
+
+  "dailyManagement": [
+    "Apply post-operative eye drops on the prescribed schedule (typically 4 times daily for 3-4 weeks for steroids and antibiotics).",
+    "Avoid rubbing the operated eye; wear the protective shield at night for the first week.",
+    "Attend post-operative follow-up at day 1, week 1, and week 4-6.",
+    "Wear sunglasses outdoors after surgery for at least 2-4 weeks.",
+    "Report any sudden vision loss, red painful eye, or new floaters immediately.",
+    "Schedule second-eye surgery (if needed) typically 2-6 weeks after the first eye.",
+    "Use prescribed reading glasses if monofocal IOL was placed for distance."
+  ],
+
+  "prognosis": "The prognosis of cataract is excellent. With modern phacoemulsification surgery and high-quality intraocular lens implantation, over 95% of patients in the absence of coexisting ocular pathology achieve 6/12 (20/40) or better visual acuity, restoring driving vision and reading function. Patients with coexisting macular degeneration, diabetic retinopathy, glaucoma, or other eye disease have outcomes limited by the additional condition rather than by the cataract surgery itself. The most common late complication is posterior capsule opacification (PCO) developing in 20-40% within 5 years, easily treated with Nd:YAG laser capsulotomy. Endophthalmitis remains the most feared complication at 0.05-0.1% in modern series with intracameral antibiotic prophylaxis. Retinal detachment occurs in roughly 0.5-1% over 10 years post-cataract surgery, with higher risk in highly myopic eyes. Refractive outcomes have improved substantially with modern biometry — over 80% of patients achieve refractive accuracy within ±0.5 D of target. Pediatric cataract operated within weeks of detection followed by intensive amblyopia therapy can achieve good visual outcomes; delayed surgery (after 6 weeks for unilateral disease, beyond infancy for bilateral) results in permanent deprivation amblyopia. WHO and IAPB target cataract elimination as a leading cause of blindness through expanded surgical access and high-volume programmes such as Aravind, LV Prasad, and Sightsavers.",
+
+  "recoveryTimeline": "Immediate post-operative recovery: vision often improves within hours; return home same day. Day 1: substantial visual improvement in most patients. Week 1: vision continues to improve and stabilize; eye drops continue. Week 2: most activities can resume. Week 4-6: surgery considered fully healed; second eye surgery can be scheduled. Final refractive outcome and glasses prescription typically stable by 6 weeks. PCO if it occurs is treated with Nd:YAG laser at any later time.",
+
+  "complications": [
+    "Posterior capsule opacification (PCO) — most common late complication; 20-40% within 5 years; treated with Nd:YAG laser capsulotomy.",
+    "Endophthalmitis — rare (0.05-0.1%) but devastating intraocular infection; managed with vitreous tap and intravitreal antibiotics, sometimes vitrectomy.",
+    "Posterior capsule rupture during surgery (1-3% in routine cases; higher in complex cases) — may require vitrectomy and altered IOL placement.",
+    "Cystoid macular edema (CMO) — 1-2%; treated with topical and intraocular anti-inflammatory therapy.",
+    "Retinal detachment — 0.5-1% over 10 years; higher in highly myopic eyes.",
+    "Suprachoroidal hemorrhage — rare; can cause major vision loss.",
+    "Refractive surprise (post-operative refraction different from target) — managed with glasses, IOL exchange, or refractive enhancement.",
+    "Glare, halos, dysphotopsia after multifocal or EDOF IOLs.",
+    "Posterior segment complications in pre-existing macular or retinal disease.",
+    "Failure of amblyopia therapy in pediatric cases despite successful cataract surgery."
+  ],
+
+  "supportResources": [
+    { "name": "American Academy of Ophthalmology (AAO) — Cataract", "url": "https://www.aao.org/eye-health/diseases/what-are-cataracts", "description": "Authoritative patient-facing information on cataract diagnosis, surgery, and post-operative care." },
+    { "name": "Royal National Institute of Blind People (RNIB)", "url": "https://www.rnib.org.uk/your-eyes/eye-conditions/cataracts/", "description": "UK charity providing patient information and support for cataract and other vision-impairing conditions." },
+    { "name": "International Agency for the Prevention of Blindness (IAPB)", "url": "https://www.iapb.org/", "description": "Global coalition coordinating cataract elimination programmes and Vision Atlas data." },
+    { "name": "American Society of Cataract and Refractive Surgery (ASCRS)", "url": "https://ascrs.org/", "description": "Professional body for cataract and refractive surgeons; resource for patients researching IOL options and surgeon credentials." },
+    { "name": "Aravind Eye Care System", "url": "https://aravind.org/", "description": "World's largest high-volume eye care provider; major contributor to global cataract surgery scale-up." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "glaucoma", "name": "Glaucoma", "keyDifference": "Glaucoma is optic nerve damage usually from elevated intraocular pressure, producing gradual peripheral visual field loss while central vision is preserved until late. Cataract produces gradual central blurring with preserved peripheral vision. Both are common in older adults and can coexist; routine eye exams distinguish them." },
+    { "slug": "age-related-macular-degeneration", "name": "Age-related Macular Degeneration", "keyDifference": "AMD damages the central retina (macula), producing distorted central vision with intact peripheral vision. Cataract produces gradual generalized blurring without distortion. OCT and slit-lamp examination distinguish them; both can coexist." },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy", "keyDifference": "Diabetic retinopathy is microvascular damage to the retina causing variable vision loss with characteristic fundus findings (microaneurysms, hemorrhages, neovascularization). Cataract is lens opacification. Both are common in diabetics; both need treatment." },
+    { "slug": "dry-eye-syndrome-of-bilateral-lacrimal-glands-h04123", "name": "Dry eye syndrome", "keyDifference": "Dry eye produces intermittent blurring, foreign-body sensation, and fluctuating vision relieved by blinking or artificial tears. Cataract produces persistent painless blurring not relieved by lubrication. Both can coexist." },
+    { "slug": "presbycusis", "name": "Age-related Hearing Loss (Presbycusis)", "keyDifference": "Both are age-related sensory deficits; they coexist commonly in older adults but affect different senses. Cataract affects vision; presbycusis affects hearing. The point of mentioning them together is that both are common reasons for falls and reduced independence in older adults and need coordinated assessment." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "glaucoma", "name": "Glaucoma" },
+    { "slug": "age-related-macular-degeneration", "name": "Age-related Macular Degeneration" },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy" },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "glaucoma", "name": "Glaucoma", "relevance": "Common coexisting cause of vision loss; combined cataract and glaucoma surgery sometimes indicated." },
+    { "slug": "age-related-macular-degeneration", "name": "Age-related Macular Degeneration", "relevance": "Major cause of poor visual outcome after cataract surgery; routinely assessed pre-operatively." },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy", "relevance": "Common in diabetic patients with cataract; control of retinopathy before surgery is important." },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus", "relevance": "Accelerates cataract formation; glycemic control influences progression." },
+    { "slug": "dry-eye-syndrome-of-bilateral-lacrimal-glands-h04123", "name": "Dry eye syndrome", "relevance": "Common comorbid condition that can worsen after cataract surgery; pre-operative ocular surface optimization improves outcomes." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is a cataract?",
+      "answer": "A cataract is a clouding of the natural lens of the eye, the biconvex transparent structure behind the iris that focuses light onto the retina. It causes painless progressive blurring of vision, glare, dimming of colors, and difficulty with reading and night driving. Cataract is the leading cause of treatable blindness worldwide.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes cataracts?",
+      "answer": "Most cataracts are caused by age-related changes to lens proteins after years of UV exposure and oxidative stress. Other causes include diabetes (especially uncontrolled), corticosteroid use (systemic, inhaled, topical, or intraocular), ocular trauma, prior intraocular surgery (especially vitrectomy), smoking, family history, and genetic mutations in congenital cataract.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of cataracts?",
+      "answer": "Symptoms include gradual painless blurring of vision, glare and halos around lights (worst at night), dimming or yellowing of colors, difficulty reading despite glasses, frequent prescription changes, monocular double vision, and reduced contrast. Dense cataract appears as a visibly cloudy pupil. In children, a white pupil reflex requires urgent ophthalmology referral.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How are cataracts diagnosed?",
+      "answer": "Diagnosis is straightforward by an eye examination with pupil dilation and slit-lamp biomicroscopy. Visual acuity, glare testing, contrast sensitivity, optical coherence tomography (OCT), corneal topography, and biometry (for IOL calculation) complete the workup before surgery. No blood test is needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cataracts be cured without surgery?",
+      "answer": "No. There is no medication, eye drop, or non-surgical treatment that reverses or removes established cataract. Surgery is the only effective treatment for visually significant cataract. Conservative management with updated glasses and anti-glare measures supports function in early disease before surgery is indicated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I have cataract surgery?",
+      "answer": "Surgery is offered when cataract significantly affects your quality of life — driving, reading, work, hobbies, or independence. There is no specific visual acuity threshold; the decision is patient-centred. Waiting too long can risk complications (lens-induced glaucoma, harder surgery in mature cataract); operating too early gains little.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is cataract surgery painful?",
+      "answer": "No. Cataract surgery is performed under topical or peribulbar anesthesia and is virtually painless. Patients feel pressure or mild discomfort but no sharp pain. Light sedation is used for anxious patients. Recovery is typically rapid with mild gritty sensation or watering for 1-3 days after surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does cataract surgery take?",
+      "answer": "Phacoemulsification cataract surgery typically takes 15-30 minutes per eye. Including pre-operative preparation, anesthesia, and post-operative observation, the total visit is 2-4 hours. Most cataract surgery is performed as a day-case procedure with discharge the same day.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is phacoemulsification?",
+      "answer": "Phacoemulsification is the standard modern cataract surgery technique. A 2.2-3.0 mm corneal incision is made, the anterior lens capsule is opened (capsulorhexis), the lens nucleus is fragmented and aspirated with ultrasonic energy, and a foldable intraocular lens is inserted into the capsular bag. Day-case under topical anesthesia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is an intraocular lens (IOL)?",
+      "answer": "An intraocular lens (IOL) is an artificial lens implanted in the eye to replace the natural lens during cataract surgery. Options include monofocal IOLs (excellent distance or near vision but glasses needed for the other range), multifocal IOLs (distance plus near with some glare), toric IOLs (correct astigmatism), and extended depth of focus (EDOF) IOLs (intermediate vision with fewer glare effects).",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long is recovery from cataract surgery?",
+      "answer": "Most patients see substantial improvement within 24 hours of surgery and resume normal activities within 1 week. Eye drops continue for 3-4 weeks. Driving is usually allowed within a few days; heavy lifting and swimming should be avoided for 2 weeks. Full healing typically by 4-6 weeks; second-eye surgery can be scheduled then.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I still need glasses after cataract surgery?",
+      "answer": "With monofocal IOLs (the standard), most patients need glasses for either near or distance vision (the one not corrected). With multifocal or EDOF IOLs, many patients function without glasses for most activities but may have reduced contrast or some glare. With toric IOLs, astigmatism is corrected. The right choice depends on lifestyle and refractive needs.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is cataract surgery safe?",
+      "answer": "Yes. Cataract surgery is one of the most successful and safest surgeries performed. Over 95% achieve good visual outcomes. Serious complications are rare: endophthalmitis 0.05-0.1%, posterior capsule rupture 1-3%, retinal detachment around 1%, cystoid macular edema 1-2%. Risks rise modestly in complex cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is posterior capsule opacification?",
+      "answer": "Posterior capsule opacification (PCO) is the most common late complication of cataract surgery — clouding of the lens capsule that holds the IOL, developing in 20-40% of patients within 5 years. It produces gradual blurring of vision and is easily treated with Nd:YAG laser capsulotomy as a 5-minute painless outpatient procedure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cataracts come back after surgery?",
+      "answer": "The cataract itself cannot return because the natural lens is removed. However, posterior capsule opacification can develop in the remaining lens capsule, producing similar symptoms; it is treated with Nd:YAG laser capsulotomy. After laser treatment, vision typically remains clear permanently.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can both eyes have cataract surgery at the same time?",
+      "answer": "Bilateral same-day cataract surgery is performed at some centres for selected patients, particularly during the COVID-19 pandemic and for highly motivated patients. Most surgeons still recommend separating the two eyes by 1-6 weeks to verify outcomes, manage any complications, and stage anesthesia. Same-day surgery and staged surgery have similar outcomes in published series.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is laser cataract surgery better than standard surgery?",
+      "answer": "Femtosecond laser-assisted cataract surgery (FLACS) uses laser for some steps (corneal incision, capsulorhexis, lens fragmentation) and adds cost. Randomized trials including FACT (2016) show similar visual outcomes and complication rates to conventional phacoemulsification. FLACS offers some procedural advantages in selected cases; it is not categorically 'better'.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I have cataract surgery if I have other eye disease?",
+      "answer": "Yes. Patients with glaucoma, macular degeneration, diabetic retinopathy, or other eye disease can have cataract surgery — the cataract is the lens, not the retina. Coexisting eye disease may limit the visual outcome from cataract surgery, but removing the cataract still typically improves vision and enables better management of other conditions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do children get cataracts?",
+      "answer": "Yes. Congenital cataract affects approximately 3 per 10,000 live births and pediatric cataract develops in childhood. Causes include genetic mutations, intrauterine infections, metabolic disorders, and trauma. Urgent surgery within weeks of detection prevents deprivation amblyopia. Subsequent amblyopia therapy with patching is essential for visual development.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I prevent cataracts?",
+      "answer": "Wear UV-blocking sunglasses and broad-brimmed hats outdoors. Stop smoking. Control diabetes tightly. Minimize long-term corticosteroid exposure. Eat a balanced diet rich in antioxidants. Have regular eye examinations after age 50. No proven medication or supplement prevents cataract from developing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does cataract surgery cost?",
+      "answer": "Cost varies widely by country, healthcare system, and IOL choice. In the UK NHS, surgery is free at point of use; premium IOLs (multifocal, toric, EDOF) may require private fees. In the US, Medicare and most insurance cover monofocal IOL surgery; premium IOLs incur out-of-pocket costs of $1,500-3,500 per eye. Globally, cost-effective high-volume programmes (Aravind, Sankara Nethralaya) deliver surgery at very low cost.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Cataracts (clouding of the eye lens)",
+  "regionalNames": [
+    { "name": "Lens opacification", "region": "Medical literature", "language": "English" },
+    { "name": "Catarata", "region": "Hispanophone and Lusophone", "language": "Spanish/Portuguese" },
+    { "name": "Cataracte", "region": "Francophone", "language": "French" },
+    { "name": "मोतियाबिंद", "region": "India", "language": "Hindi" },
+    { "name": "கண்புரை", "region": "Tamil Nadu", "language": "Tamil" }
+  ],
+  "searchTags": [
+    "cataract",
+    "cataracts",
+    "cataract surgery",
+    "phacoemulsification",
+    "phaco",
+    "intraocular lens",
+    "IOL",
+    "monofocal IOL",
+    "multifocal IOL",
+    "toric IOL",
+    "EDOF IOL",
+    "femtosecond laser cataract",
+    "FLACS",
+    "nuclear sclerotic cataract",
+    "posterior subcapsular cataract",
+    "congenital cataract",
+    "diabetic cataract",
+    "Nd:YAG capsulotomy"
+  ],
+  "symptomKeywords": [
+    "blurred vision older adult",
+    "glare night driving",
+    "halos around lights",
+    "frequent glasses changes elderly",
+    "yellowing colors vision",
+    "cloudy pupil older person",
+    "white pupil reflex infant",
+    "second sight reading"
+  ],
+
+  "metaTitle": "Cataracts: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Cataracts: clouding of the eye lens causing gradual vision loss. Symptoms, diagnosis, phacoemulsification surgery, and intraocular lens options reviewed.",
+
+  "keywords": [
+    "cataract",
+    "cataracts",
+    "cataract surgery",
+    "phacoemulsification",
+    "intraocular lens",
+    "monofocal IOL",
+    "multifocal IOL",
+    "toric IOL",
+    "femtosecond cataract surgery",
+    "Nd:YAG capsulotomy",
+    "diabetic cataract",
+    "congenital cataract",
+    "cataract symptoms",
+    "cataract treatment"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Liu YC, Wilkins M, Kim T, Malyugin B, Mehta JS. 2017. Cataracts. Lancet 390(10094):600-612.", "url": "https://pubmed.ncbi.nlm.nih.gov/28242111/", "accessedDate": "2026-05-14" },
+    { "title": "Asbell PA, Dualan I, Mindel J, Brocks D, Ahmad M, Epstein S. 2005. Age-related cataract. Lancet 365(9459):599-609.", "url": "https://pubmed.ncbi.nlm.nih.gov/15721471/", "accessedDate": "2026-05-14" },
+    { "title": "Bourne RRA, Cicinelli MV, Sedighi T, et al. 2021. Effective refractive error coverage in adults aged 50 years and older: estimates from population-based surveys in 61 countries. Lancet Global Health 9(10):e1411-e1422.", "url": "https://pubmed.ncbi.nlm.nih.gov/34297962/", "accessedDate": "2026-05-14" },
+    { "title": "American Academy of Ophthalmology. 2021. Preferred Practice Pattern: Cataract in the Adult Eye.", "url": "https://www.aao.org/education/preferred-practice-pattern/cataract-in-adult-eye-ppp-2021", "accessedDate": "2026-05-14" },
+    { "title": "Day AC, Gore DM, Bunce C, Evans JR. 2016. Laser-assisted cataract surgery versus standard ultrasound phacoemulsification cataract surgery (FACT). Cochrane Database Syst Rev 7:CD010735.", "url": "https://pubmed.ncbi.nlm.nih.gov/27425031/", "accessedDate": "2026-05-14" },
+    { "title": "Apple DJ, Solomon KD, Tetz MR, et al. 2000. Posterior capsule opacification. Surv Ophthalmol 45(2):75-89.", "url": "https://pubmed.ncbi.nlm.nih.gov/11033038/", "accessedDate": "2026-05-14" },
+    { "title": "Behndig A, Cochener-Lamard B, Güell JL, Kodjikian L, Mencucci R, Nuijts R, Pleyer U, Rosen P, Szaflik J, Tassignon MJ. 2014. Endophthalmitis prophylaxis in cataract surgery: overview of current practice patterns in 9 European countries. J Cataract Refract Surg 39(9):1421-31.", "url": "https://pubmed.ncbi.nlm.nih.gov/23916471/", "accessedDate": "2026-05-14" },
+    { "title": "World Health Organization. 2019. World Report on Vision. WHO Geneva.", "url": "https://www.who.int/publications/i/item/9789241516570", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}
