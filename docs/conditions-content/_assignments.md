@@ -39,7 +39,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 <!-- BATCH 002 — 100 conditions, generated 2026-05-12 -->
 | allergic-contact-dermatitis | 1 | Dermatology | claude-2026-05-12 | 2026-05-12 | done | 6,690 words, 22 FAQs, 10 sources, 4 images; row 524 |
 | filariasis | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 5 variants |
-| schistosomiasis | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 5 variants |
+| schistosomiasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,049 words, 21 FAQs (all schemaEligible), 8 sources; row 575 |
 | malaria | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | done | 7,121 words, 22 FAQs, 9 sources, 3 images; row 522 |
 | tinnitus | 1 | ENT Specialist | claude-2026-05-12 | 2026-05-12 | done | 5,992 words, 22 FAQs, 8 sources; row 521 |
 | fibromyalgia | 1 | Rheumatologist | claude-2026-05-12 | 2026-05-12 | done | 6,295 words, 22 FAQs, 9 sources; row 512 |
@@ -633,452 +633,565 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | tuberculous-enteritis-a1832 | 2 | Infectious Disease | (open) | — | open | Batch 008, 1 variant |
 | retroperitoneal-tuberculosis-a1839 | 2 | Infectious Disease | (open) | — | open | Batch 008, 1 variant |
 
+<!-- BATCH 009 — 100 conditions, generated 2026-05-12 -->
+| actinomycotic-sepsis-a427 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gas-gangrene-a480 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-congenital-syphilitic-oculopathy-a5001 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-congenital-syphilitic-osteochondropathy-a5002 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-congenital-syphilitic-pharyngitis-a5003 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-cutaneous-congenital-syphilis-a5006 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-mucocutaneous-congenital-syphilis-a5007 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-visceral-congenital-syphilis-a5008 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-congenital-syphilis-latent-a501 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-interstitial-keratitis-a5031 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-chorioretinitis-a5032 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-meningitis-a5041 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-encephalitis-a5042 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-polyneuropathy-a5043 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-optic-nerve-atrophy-a5044 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| juvenile-general-paresis-a5045 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| clutton-s-joints-a5051 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| hutchinson-s-teeth-a5052 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| hutchinson-s-triad-a5053 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-cardiovascular-syphilis-a5054 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-arthropathy-a5055 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilitic-osteochondropathy-a5056 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-congenital-syphilitic-pneumonia-a5004 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-congenital-syphilitic-rhinitis-a5005 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-congenital-syphilis-latent-a506 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| primary-genital-syphilis-a510 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| primary-anal-syphilis-a511 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| primary-syphilis-of-other-sites-a512 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| condyloma-latum-a5131 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilitic-alopecia-a5132 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| secondary-syphilitic-meningitis-a5141 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| secondary-syphilitic-female-pelvic-disease-a5142 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| secondary-syphilitic-oculopathy-a5143 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| secondary-syphilitic-nephritis-a5144 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| secondary-syphilitic-osteopathy-a5146 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| early-syphilis-latent-a515 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilitic-aortitis-a5202 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilitic-cerebral-arteritis-a5204 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| tabes-dorsalis-a5211 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-syphilitic-meningitis-a5213 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-syphilitic-encephalitis-a5214 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-syphilitic-neuropathy-a5215 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| general-paresis-a5217 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| asymptomatic-neurosyphilis-a522 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| secondary-syphilitic-hepatitis-a5145 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilitic-aneurysm-of-aorta-a5201 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilitic-endocarditis-a5203 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-syphilitic-oculopathy-a5271 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilis-of-lung-and-bronchus-a5272 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| symptomatic-late-syphilis-of-other-respiratory-organs-a5273 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilis-of-liver-and-other-viscera-a5274 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilis-of-kidney-and-ureter-a5275 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilis-of-bone-and-joint-a5277 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| syphilis-of-other-musculoskeletal-tissue-a5278 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| late-syphilis-latent-a528 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| zoster-encephalitis-b020 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonocl-infct-of-lower-gu-tract-w-periureth-and-acc-glnd-abcs-a541 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-infection-of-kidney-and-ureter-a5421 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-prostatitis-a5422 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-infection-of-other-male-genital-organs-a5423 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-female-pelvic-inflammatory-disease-a5424 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-iridocyclitis-a5432 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-keratitis-a5433 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-spondylopathy-a5441 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-arthritis-a5442 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| white-piedra-b362 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-conjunctivitis-a5431 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-osteomyelitis-a5443 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-infection-of-other-musculoskeletal-tissue-a5449 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-pharyngitis-a545 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-infection-of-anus-and-rectum-a546 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-meningitis-a5481 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-heart-infection-a5483 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| chlamydial-cystitis-and-urethritis-a5601 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| chlamydial-vulvovaginitis-a5602 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| chlamydial-female-pelvic-inflammatory-disease-a5611 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| chlamydial-infection-of-anus-and-rectum-a563 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| chlamydial-infection-of-pharynx-a564 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| sexually-transmitted-chlamydial-infection-of-other-sites-a568 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| chancroid-a57 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| granuloma-inguinale-a58 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| trichomonal-vulvovaginitis-a5901 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| trichomonal-prostatitis-a5902 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| trichomonal-cystitis-and-urethritis-a5903 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| trichomoniasis-of-other-sites-a598 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| herpesviral-infection-of-penis-a6001 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| herpesviral-infection-of-other-male-genital-organs-a6002 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| paraphimosis-n472 | 2 | Urology | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-brain-abscess-a5482 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-peritonitis-a5485 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-pneumonia-a5484 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| gonococcal-sepsis-a5486 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| herpesviral-cervicitis-a6003 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| herpesviral-vulvovaginitis-a6004 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| herpesviral-infection-of-other-urogenital-tract-a6009 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| herpesviral-infection-of-perianal-skin-and-rectum-a601 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| nonvenereal-syphilis-a65 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| initial-lesions-of-yaws-a660 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| multiple-papillomata-and-wet-crab-yaws-a661 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+| hyperkeratosis-of-yaws-a663 | 2 | Infectious Disease | (open) | — | open | Batch 009, 1 variant |
+
+<!-- BATCH 010 — 100 conditions, generated 2026-05-12 -->
+| tuberculosis-of-skin-and-subcutaneous-tissue-a184 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| bagassosis-j671 | 2 | Pulmonology | (open) | — | open | Batch 010, 1 variant |
+| malig-neoplasm-of-aryepiglottic-fold-hypopharyngeal-aspect-c131 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| sleep-related-bruxism-g4763 | 2 | Neurology | (open) | — | open | Batch 010, 1 variant |
+| systemic-sclerosis-with-lung-involvement-m3481 | 2 | Orthopedics | (open) | — | open | Batch 010, 1 variant |
+| polytrichia-l683 | 2 | Dermatology | (open) | — | open | Batch 010, 1 variant |
+| intramural-leiomyoma-of-uterus-d251 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| iron-deficiency-e611 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| typical-atrial-flutter-i483 | 2 | Cardiology | (open) | — | open | Batch 010, 1 variant |
+| vascular-dementia-without-behavioral-disturbance-f0150 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| severe-sepsis-without-septic-shock-r6520 | 2 | General Medicine | (open) | — | open | Batch 010, 1 variant |
+| tuberculous-episcleritis-a1851 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| suberosis-j673 | 2 | Pulmonology | (open) | — | open | Batch 010, 1 variant |
+| malig-neoplm-of-ovrlp-sites-of-lip-oral-cavity-and-pharynx-c148 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| huntington-s-disease-g10 | 2 | Neurology | (open) | — | open | Batch 010, 1 variant |
+| systemic-sclerosis-with-myopathy-m3482 | 2 | Orthopedics | (open) | — | open | Batch 010, 1 variant |
+| atopic-neurodermatitis-l2081 | 2 | Dermatology | (open) | — | open | Batch 010, 1 variant |
+| subserosal-leiomyoma-of-uterus-d252 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| magnesium-deficiency-e612 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| vascular-dementia-with-behavioral-disturbance-f0151 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| severe-sepsis-with-septic-shock-r6521 | 2 | General Medicine | (open) | — | open | Batch 010, 1 variant |
+| tuberculous-chorioretinitis-a1853 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| chlamydial-pneumonia-j160 | 2 | Pulmonology | (open) | — | open | Batch 010, 1 variant |
+| meckel-s-diverticulum-malignant-c173 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| pick-s-disease-g3101 | 2 | Neurology | (open) | — | open | Batch 010, 1 variant |
+| systemic-sclerosis-with-polyneuropathy-m3483 | 2 | Orthopedics | (open) | — | open | Batch 010, 1 variant |
+| flexural-eczema-l2082 | 2 | Dermatology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-penis-d074 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| manganese-deficiency-e613 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| dementia-in-oth-diseases-classd-elswhr-w-behavioral-disturb-f0281 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| tuberculous-iridocyclitis-a1854 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malig-neoplasm-of-ovrlp-sites-of-rectum-anus-and-anal-canal-c218 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| sicca-syndrome-with-lung-involvement-m3502 | 2 | Orthopedics | (open) | — | open | Batch 010, 1 variant |
+| granuloma-annulare-l920 | 2 | Dermatology | (open) | — | open | Batch 010, 1 variant |
+| ben-neoplm-of-connctv-soft-tiss-of-r-upper-limb-inc-shldr-d2111 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| chromium-deficiency-e614 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| mood-disord-d-t-physiol-cond-w-major-depressive-like-epsd-f0632 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| tuberculosis-of-adrenal-glands-a187 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| liver-cell-carcinoma-c220 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| sicca-syndrome-with-myopathy-m3503 | 2 | Orthopedics | (open) | — | open | Batch 010, 1 variant |
+| benign-carcinoid-tumor-of-the-stomach-d3a092 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| molybdenum-deficiency-e615 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| postconcussional-syndrome-f0781 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| tuberculosis-of-thyroid-gland-a1881 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| intrahepatic-bile-duct-carcinoma-c221 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| neoplasm-of-uncertain-behavior-of-mediastinum-d383 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| vanadium-deficiency-e616 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-uncomplicated-f1010 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| tuberculosis-of-other-endocrine-glands-a1882 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| hepatoblastoma-c222 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-prostate-d075 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| nutritional-marasmus-e41 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-in-remission-f1011 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| tuberculosis-of-heart-a1884 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| angiosarcoma-of-liver-c223 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-labial-mucosa-and-vermilion-border-d0001 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| congenital-iodine-deficiency-syndrome-neurological-type-e000 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-with-intoxication-uncomplicated-f10120 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| tuberculosis-of-spleen-a1885 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malig-neoplasm-of-liver-not-specified-as-primary-or-sec-c229 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-buccal-mucosa-d0002 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| congenital-iodine-deficiency-syndrome-myxedematous-type-e001 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-with-intoxication-delirium-f10121 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| tuberculosis-of-other-sites-a1889 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malig-neoplm-of-ovrlp-sites-of-heart-mediastinum-and-pleura-c388 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-gingiva-and-edentulous-alveolar-ridge-d0003 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| congenital-iodine-deficiency-syndrome-mixed-type-e002 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-with-alcohol-induced-mood-disorder-f1014 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| acute-miliary-tuberculosis-of-a-single-specified-site-a190 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malig-neoplm-of-ovrlp-sites-of-bone-artic-cartl-of-r-limb-c4081 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-soft-palate-d0004 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| subclinical-iodine-deficiency-hypothyroidism-e02 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-w-alcoh-induce-psychotic-disorder-w-delusions-f10150 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| acute-miliary-tuberculosis-of-multiple-sites-a191 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malignant-melanoma-of-lip-c430 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-hard-palate-d0005 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| congenital-hypothyroidism-with-diffuse-goiter-e030 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-w-alcoh-induce-psychotic-disorder-w-hallucin-f10151 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| bubonic-plague-a200 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malignant-melanoma-of-anal-skin-c4351 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-floor-of-mouth-d0006 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| congenital-hypothyroidism-without-goiter-e031 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-with-alcohol-induced-anxiety-disorder-f10180 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| cellulocutaneous-plague-a201 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malignant-melanoma-of-skin-of-breast-c4352 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-tongue-d0007 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| postinfectious-hypothyroidism-e033 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-with-alcohol-induced-sexual-dysfunction-f10181 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| pneumonic-plague-a202 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| malignant-melanoma-of-overlapping-sites-of-skin-c438 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-pharynx-d0008 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| myxedema-coma-e035 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-with-alcohol-induced-sleep-disorder-f10182 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| plague-meningitis-a203 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| merkel-cell-carcinoma-of-lip-c4a0 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
+| carcinoma-in-situ-of-esophagus-d001 | 2 | Hematology | (open) | — | open | Batch 010, 1 variant |
+| nontoxic-diffuse-goiter-e040 | 2 | Endocrinology | (open) | — | open | Batch 010, 1 variant |
+| alcohol-abuse-with-other-alcohol-induced-disorder-f10188 | 2 | Psychiatry | (open) | — | open | Batch 010, 1 variant |
+| septicemic-plague-a207 | 2 | Infectious Disease | (open) | — | open | Batch 010, 1 variant |
+| merkel-cell-carcinoma-of-anal-skin-c4a51 | 2 | Oncology | (open) | — | open | Batch 010, 1 variant |
 
 
 
-<!-- BATCH 011 — 100 conditions, generated 2026-05-12 -->
-| tuberculosis-of-skin-and-subcutaneous-tissue-a184 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| bagassosis-j671 | 2 | Pulmonology | (open) | — | open | Batch 011, 1 variant |
-| malig-neoplasm-of-aryepiglottic-fold-hypopharyngeal-aspect-c131 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| sleep-related-bruxism-g4763 | 2 | Neurology | (open) | — | open | Batch 011, 1 variant |
-| systemic-sclerosis-with-lung-involvement-m3481 | 2 | Orthopedics | (open) | — | open | Batch 011, 1 variant |
-| polytrichia-l683 | 2 | Dermatology | (open) | — | open | Batch 011, 1 variant |
-| intramural-leiomyoma-of-uterus-d251 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| iron-deficiency-e611 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| typical-atrial-flutter-i483 | 2 | Cardiology | (open) | — | open | Batch 011, 1 variant |
-| vascular-dementia-without-behavioral-disturbance-f0150 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| severe-sepsis-without-septic-shock-r6520 | 2 | General Medicine | (open) | — | open | Batch 011, 1 variant |
-| tuberculous-episcleritis-a1851 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| suberosis-j673 | 2 | Pulmonology | (open) | — | open | Batch 011, 1 variant |
-| malig-neoplm-of-ovrlp-sites-of-lip-oral-cavity-and-pharynx-c148 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| huntington-s-disease-g10 | 2 | Neurology | (open) | — | open | Batch 011, 1 variant |
-| systemic-sclerosis-with-myopathy-m3482 | 2 | Orthopedics | (open) | — | open | Batch 011, 1 variant |
-| atopic-neurodermatitis-l2081 | 2 | Dermatology | (open) | — | open | Batch 011, 1 variant |
-| subserosal-leiomyoma-of-uterus-d252 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| magnesium-deficiency-e612 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| vascular-dementia-with-behavioral-disturbance-f0151 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| severe-sepsis-with-septic-shock-r6521 | 2 | General Medicine | (open) | — | open | Batch 011, 1 variant |
-| tuberculous-chorioretinitis-a1853 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| chlamydial-pneumonia-j160 | 2 | Pulmonology | (open) | — | open | Batch 011, 1 variant |
-| meckel-s-diverticulum-malignant-c173 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| pick-s-disease-g3101 | 2 | Neurology | (open) | — | open | Batch 011, 1 variant |
-| systemic-sclerosis-with-polyneuropathy-m3483 | 2 | Orthopedics | (open) | — | open | Batch 011, 1 variant |
-| flexural-eczema-l2082 | 2 | Dermatology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-penis-d074 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| manganese-deficiency-e613 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| dementia-in-oth-diseases-classd-elswhr-w-behavioral-disturb-f0281 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| tuberculous-iridocyclitis-a1854 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malig-neoplasm-of-ovrlp-sites-of-rectum-anus-and-anal-canal-c218 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| sicca-syndrome-with-lung-involvement-m3502 | 2 | Orthopedics | (open) | — | open | Batch 011, 1 variant |
-| granuloma-annulare-l920 | 2 | Dermatology | (open) | — | open | Batch 011, 1 variant |
-| ben-neoplm-of-connctv-soft-tiss-of-r-upper-limb-inc-shldr-d2111 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| chromium-deficiency-e614 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| mood-disord-d-t-physiol-cond-w-major-depressive-like-epsd-f0632 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| tuberculosis-of-adrenal-glands-a187 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| liver-cell-carcinoma-c220 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| sicca-syndrome-with-myopathy-m3503 | 2 | Orthopedics | (open) | — | open | Batch 011, 1 variant |
-| benign-carcinoid-tumor-of-the-stomach-d3a092 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| molybdenum-deficiency-e615 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| postconcussional-syndrome-f0781 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| tuberculosis-of-thyroid-gland-a1881 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| intrahepatic-bile-duct-carcinoma-c221 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| neoplasm-of-uncertain-behavior-of-mediastinum-d383 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| vanadium-deficiency-e616 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-uncomplicated-f1010 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| tuberculosis-of-other-endocrine-glands-a1882 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| hepatoblastoma-c222 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-prostate-d075 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| nutritional-marasmus-e41 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-in-remission-f1011 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| tuberculosis-of-heart-a1884 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| angiosarcoma-of-liver-c223 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-labial-mucosa-and-vermilion-border-d0001 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| congenital-iodine-deficiency-syndrome-neurological-type-e000 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-with-intoxication-uncomplicated-f10120 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| tuberculosis-of-spleen-a1885 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malig-neoplasm-of-liver-not-specified-as-primary-or-sec-c229 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-buccal-mucosa-d0002 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| congenital-iodine-deficiency-syndrome-myxedematous-type-e001 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-with-intoxication-delirium-f10121 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| tuberculosis-of-other-sites-a1889 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malig-neoplm-of-ovrlp-sites-of-heart-mediastinum-and-pleura-c388 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-gingiva-and-edentulous-alveolar-ridge-d0003 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| congenital-iodine-deficiency-syndrome-mixed-type-e002 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-with-alcohol-induced-mood-disorder-f1014 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| acute-miliary-tuberculosis-of-a-single-specified-site-a190 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malig-neoplm-of-ovrlp-sites-of-bone-artic-cartl-of-r-limb-c4081 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-soft-palate-d0004 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| subclinical-iodine-deficiency-hypothyroidism-e02 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-w-alcoh-induce-psychotic-disorder-w-delusions-f10150 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| acute-miliary-tuberculosis-of-multiple-sites-a191 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malignant-melanoma-of-lip-c430 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-hard-palate-d0005 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| congenital-hypothyroidism-with-diffuse-goiter-e030 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-w-alcoh-induce-psychotic-disorder-w-hallucin-f10151 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| bubonic-plague-a200 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malignant-melanoma-of-anal-skin-c4351 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-floor-of-mouth-d0006 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| congenital-hypothyroidism-without-goiter-e031 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-with-alcohol-induced-anxiety-disorder-f10180 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| cellulocutaneous-plague-a201 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malignant-melanoma-of-skin-of-breast-c4352 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-tongue-d0007 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| postinfectious-hypothyroidism-e033 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-with-alcohol-induced-sexual-dysfunction-f10181 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| pneumonic-plague-a202 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| malignant-melanoma-of-overlapping-sites-of-skin-c438 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-pharynx-d0008 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| myxedema-coma-e035 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-with-alcohol-induced-sleep-disorder-f10182 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| plague-meningitis-a203 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| merkel-cell-carcinoma-of-lip-c4a0 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
-| carcinoma-in-situ-of-esophagus-d001 | 2 | Hematology | (open) | — | open | Batch 011, 1 variant |
-| nontoxic-diffuse-goiter-e040 | 2 | Endocrinology | (open) | — | open | Batch 011, 1 variant |
-| alcohol-abuse-with-other-alcohol-induced-disorder-f10188 | 2 | Psychiatry | (open) | — | open | Batch 011, 1 variant |
-| septicemic-plague-a207 | 2 | Infectious Disease | (open) | — | open | Batch 011, 1 variant |
-| merkel-cell-carcinoma-of-anal-skin-c4a51 | 2 | Oncology | (open) | — | open | Batch 011, 1 variant |
+<!-- BATCH 011 (parent-injection) — 13 parent concepts, 132 subtypes rescued -->
+| syphilis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 47 subtypes |
+| gonorrhea | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 19 subtypes |
+| congenital-syphilis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 13 subtypes |
+| salmonella-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 8 subtypes |
+| typhoid-fever | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 8 subtypes |
+| chlamydia-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 7 subtypes |
+| herpes-simplex-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 6 subtypes |
+| amebiasis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 5 subtypes |
+| foodborne-illness | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 5 subtypes |
+| trichomoniasis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 4 subtypes |
+| e-coli-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 4 subtypes |
+| paratyphoid-fever | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 3 subtypes |
+| yaws | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 3 subtypes |
 
 
 
-<!-- BATCH 012 (parent-injection) — 13 parent concepts, 132 subtypes rescued -->
-| syphilis | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 47 subtypes |
-| gonorrhea | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 19 subtypes |
-| congenital-syphilis | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 13 subtypes |
-| salmonella-infection | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 8 subtypes |
-| typhoid-fever | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 8 subtypes |
-| chlamydia-infection | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 7 subtypes |
-| herpes-simplex-infection | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 6 subtypes |
-| amebiasis | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 5 subtypes |
-| foodborne-illness | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 5 subtypes |
-| trichomoniasis | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 4 subtypes |
-| e-coli-infection | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 4 subtypes |
-| paratyphoid-fever | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 3 subtypes |
-| yaws | 1 | Infectious Disease | (open) | — | open | Batch 012 (parent-injection), rescues 3 subtypes |
+<!-- BATCH 012 — 100 conditions, generated 2026-05-12 -->
+| ulceroglandular-tularemia-a210 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| merkel-cell-carcinoma-of-skin-of-breast-c4a52 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-stomach-d002 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| nontoxic-single-thyroid-nodule-e041 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-uncomplicated-f1020 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| oculoglandular-tularemia-a211 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| merkel-cell-carcinoma-of-overlapping-sites-c4a8 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-colon-d010 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| nontoxic-multinodular-goiter-e042 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-in-remission-f1021 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| pulmonary-tularemia-a212 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| basal-cell-carcinoma-of-skin-of-lip-c4401 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-rectosigmoid-junction-d011 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| thyrotoxicosis-w-diffuse-goiter-w-thyrotoxic-crisis-or-storm-e0501 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-intoxication-uncomplicated-f10220 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| gastrointestinal-tularemia-a213 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| squamous-cell-carcinoma-of-skin-of-lip-c4402 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-rectum-d012 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| thyrotxcosis-w-toxic-single-thyroid-nodule-w-thyrotxc-crisis-e0511 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-intoxication-delirium-f10221 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| generalized-tularemia-a217 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| basal-cell-carcinoma-skin-r-ear-and-external-auric-canal-c44212 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-other-parts-of-intestine-d0149 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| thyrotxcosis-w-toxic-multinodular-goiter-w-thyrotoxic-crisis-e0521 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-withdrawal-uncomplicated-f10230 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| tuberculous-peritonitis-a1831 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| squamous-cell-carcinoma-skin-r-ear-and-external-auric-canal-c44222 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-anus-and-anal-canal-d013 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| thyrotxcosis-from-ectopic-thyroid-tissue-w-thyrotoxic-crisis-e0531 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-withdrawal-delirium-f10231 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| cutaneous-anthrax-a220 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| basal-cell-carcinoma-of-anal-skin-c44510 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-liver-gallbladder-and-bile-ducts-d015 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| thyrotoxicosis-factitia-without-thyrotoxic-crisis-or-storm-e0540 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-w-withdrawal-with-perceptual-disturbance-f10232 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| pulmonary-anthrax-a221 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| basal-cell-carcinoma-of-skin-of-breast-c44511 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-larynx-d020 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| thyrotoxicosis-factitia-with-thyrotoxic-crisis-or-storm-e0541 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-alcohol-induced-mood-disorder-f1024 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| gastrointestinal-anthrax-a222 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| squamous-cell-carcinoma-of-anal-skin-c44520 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-trachea-d021 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| acute-thyroiditis-e060 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-depend-w-alcoh-induce-psychotic-disorder-w-delusions-f10250 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| glanders-a240 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| squamous-cell-carcinoma-of-skin-of-breast-c44521 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-other-parts-of-respiratory-system-d023 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| subacute-thyroiditis-e061 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-depend-w-alcoh-induce-psychotic-disorder-w-hallucin-f10251 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| acute-and-fulminating-melioidosis-a241 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| basal-cell-carcinoma-of-overlapping-sites-of-skin-c4481 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| melanoma-in-situ-of-lip-d030 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| chronic-thyroiditis-with-transient-thyrotoxicosis-e062 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-depend-w-alcoh-induce-persisting-amnestic-disorder-f1026 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| subacute-and-chronic-melioidosis-a242 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| squamous-cell-carcinoma-of-overlapping-sites-of-skin-c4482 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| melanoma-in-situ-of-anal-skin-d0351 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| autoimmune-thyroiditis-e063 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-alcohol-induced-persisting-dementia-f1027 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| spirillosis-a250 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| mesothelioma-of-pleura-c450 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| melanoma-in-situ-of-other-sites-d038 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| drug-induced-thyroiditis-e064 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-alcohol-induced-anxiety-disorder-f10280 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| streptobacillosis-a251 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| mesothelioma-of-peritoneum-c451 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-skin-of-lip-d040 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| hypersecretion-of-calcitonin-e070 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-alcohol-induced-sexual-dysfunction-f10281 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| cutaneous-erysipeloid-a260 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| mesothelioma-of-pericardium-c452 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| melanocytic-nevi-of-lip-d220 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| dyshormogenetic-goiter-e071 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-alcohol-induced-sleep-disorder-f10282 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| aseptic-meningitis-in-leptospirosis-a2781 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| mesothelioma-of-other-sites-c457 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-skin-of-other-sites-d048 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| sick-euthyroid-syndrome-e0781 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| alcohol-dependence-with-other-alcohol-induced-disorder-f10288 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| pasteurellosis-a280 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| kaposi-s-sarcoma-of-skin-c460 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-scrotum-d0761 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| drug-chem-diabetes-mellitus-w-hyperosmolarity-w-coma-e0901 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| opioid-abuse-uncomplicated-f1110 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| cat-scratch-disease-a281 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| kaposi-s-sarcoma-of-soft-tissue-c461 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-other-male-genital-organs-d0769 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| drug-chem-diabetes-mellitus-w-ketoacidosis-w-coma-e0911 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| opioid-abuse-in-remission-f1111 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| extraintestinal-yersiniosis-a282 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| kaposi-s-sarcoma-of-palate-c462 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-bladder-d090 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| drug-chem-diabetes-mellitus-w-diabetic-nephropathy-e0921 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| opioid-abuse-with-intoxication-uncomplicated-f11120 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+| indeterminate-leprosy-a300 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
+| kaposi-s-sarcoma-of-lymph-nodes-c463 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
+| carcinoma-in-situ-of-other-urinary-organs-d0919 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
+| marasmic-kwashiorkor-e42 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| opioid-abuse-with-intoxication-delirium-f11121 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
+
+<!-- BATCH 013 — 15 conditions, generated 2026-05-12 -->
+| alcohol-use-disorder | 1 | Psychiatry | (open) | — | open | Batch 013, 24 variants |
+| opioid-use-disorder | 1 | Psychiatry | (open) | — | open | Batch 013, 21 variants |
+| goiter | 1 | Endocrinology | (open) | — | open | Batch 013, 8 variants |
+| leprosy | 1 | Infectious Disease | (open) | — | open | Batch 013, 7 variants |
+| kaposi-sarcoma | 1 | Oncology | (open) | — | open | Batch 013, 6 variants |
+| tularemia | 1 | Infectious Disease | (open) | — | open | Batch 013, 5 variants |
+| plague | 1 | Infectious Disease | (open) | — | open | Batch 013, 5 variants |
+| thyroiditis | 1 | Endocrinology | (open) | — | open | Batch 013, 5 variants |
+| basal-cell-carcinoma | 1 | Oncology | (open) | — | open | Batch 013, 5 variants |
+| squamous-cell-carcinoma | 1 | Oncology | (open) | — | open | Batch 013, 5 variants |
+| anthrax | 1 | Infectious Disease | (open) | — | open | Batch 013, 4 variants |
+| thyrotoxicosis | 1 | Endocrinology | (open) | — | open | Batch 013, 4 variants |
+| merkel-cell-carcinoma | 1 | Oncology | (open) | — | open | Batch 013, 4 variants |
+| melioidosis | 1 | Infectious Disease | (open) | — | open | Batch 013, 2 variants |
+| atypical-mycobacterial-infection | 1 | Infectious Disease | (open) | — | open | Batch 013, 2 variants |
+
+<!-- BATCH 014 — 100 conditions, generated 2026-05-12 -->
+| hurler-s-syndrome-e7601 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| genetic-anomalies-of-leukocytes-d720 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| type-2-diabetes-mellitus-with-hyperosmolarity-with-coma-e1101 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| severe-combined-immunodeficiency-with-reticular-dysgenesis-d810 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| neoplasm-of-uncertain-behavior-of-prostate-d400 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| primary-adrenocortical-insufficiency-e271 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| nondiabetic-hypoglycemic-coma-e15 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| sideropenic-dysphagia-d501 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| com-variab-immunodef-w-predom-abnlt-of-b-cell-nums-functn-d830 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| drug-induced-autoimmune-hemolytic-anemia-d590 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| drug-induced-aplastic-anemia-d611 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| acromegaly-and-pituitary-gigantism-e220 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| hereditary-spherocytosis-d580 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| hyposplenism-d730 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| chronic-acquired-pure-red-cell-aplasia-d600 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| primary-hyperparathyroidism-e210 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| functional-disorders-of-polymorphonuclear-neutrophils-d71 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| intraop-hemor-hemtom-of-the-spleen-comp-a-proc-on-the-spleen-d7801 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| brief-psychotic-disorder-f23 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| classical-phenylketonuria-e700 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| kwashiorkor-e40 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| maple-syrup-urine-disease-e710 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| myeloid-sarcoma-in-remission-c9231 | 2 | Oncology | (open) | — | open | Batch 014, 1 variant |
+| riboflavin-deficiency-e530 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| acute-chagas-disease-with-heart-involvement-b570 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| carcinoid-syndrome-e340 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| drug-induced-obesity-e661 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| ben-neoplm-of-prph-nrv-autonm-nrv-sys-upr-lmb-inc-shldr-d3612 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| hereditary-erythropoietic-porphyria-e800 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| dengue-fever-classical-dengue-a90 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| wilson-s-disease-e8301 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| cystinuria-e7201 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| deficiency-of-vitamin-e-e560 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| dietary-selenium-deficiency-e59 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| allergic-purpura-d690 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| monkeypox-b04 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| pulmonary-mucormycosis-b460 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| drug-induced-hypoglycemia-without-coma-e160 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| sandhoff-disease-e7501 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| shared-psychotic-disorder-f24 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| ascorbic-acid-deficiency-e54 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| toxoplasma-chorioretinitis-b5801 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| benign-carcinoid-tumor-of-the-duodenum-d3a010 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| bipolar-disorder-current-episode-hypomanic-f310 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| pneumocystosis-b59 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| opioid-abuse-with-intoxication-with-perceptual-disturbance-f11122 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| trichinellosis-b75 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| enteroviral-exanthematous-fever-boston-exanthem-a880 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| disseminated-intravascular-coagulation-d65 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| anemia-in-neoplastic-disease-d630 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| hepatitis-a-with-hepatic-coma-b150 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| nicotine-dependence-cigarettes-uncomplicated-f17210 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| sylvatic-yellow-fever-a950 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| oropouche-virus-disease-a930 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| acute-pulmonary-histoplasmosis-capsulati-b390 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| acute-pulmonary-blastomycosis-b400 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| dietary-calcium-deficiency-e58 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| trichuriasis-b79 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| japanese-encephalitis-a830 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| intraop-hemor-hemtom-of-endo-sys-org-comp-an-endo-sys-proc-e3601 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| plasmodium-vivax-malaria-with-rupture-of-spleen-b510 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| smallpox-b03 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| congenital-methemoglobinemia-d740 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| familial-erythrocytosis-d750 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| primary-lesions-of-pinta-a670 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| onchocerciasis-with-endophthalmitis-b7301 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| alpha-thalassemia-d560 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| babesiosis-b600 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| conn-s-syndrome-e2601 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| dietary-folate-deficiency-anemia-d520 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| panic-disorder-episodic-paroxysmal-anxiety-f410 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| hymenolepiasis-b710 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| echinococcus-granulosus-infection-of-liver-b670 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| scarlet-fever-with-otitis-media-a380 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| chikungunya-virus-disease-a920 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| gummata-and-ulcers-of-yaws-a664 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| lobomycosis-b480 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| measles-complicated-by-encephalitis-b050 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| visceral-larva-migrans-b830 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| hypercarotinemia-e671 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| intestinal-strongyloidiasis-b780 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| hemophagocytic-lymphohistiocytosis-d761 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| sarcoidosis-of-lung-d860 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| acute-paralytic-poliomyelitis-vaccine-associated-a800 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| essential-fatty-acid-efa-deficiency-e630 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| neoplasm-of-uncertain-behavior-of-thyroid-gland-d440 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| cyclothymic-disorder-f340 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| ascariasis-pneumonia-b7781 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| small-cell-b-cell-lymphoma-nodes-of-axilla-and-upper-limb-c8304 | 2 | Oncology | (open) | — | open | Batch 014, 1 variant |
+| agoraphobia-with-panic-disorder-f4001 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| pulmonary-actinomycosis-a420 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| malig-neoplm-of-ovrlp-sites-of-prph-nrv-and-autonm-nrv-sys-c478 | 2 | Oncology | (open) | — | open | Batch 014, 1 variant |
+| acute-hepatitis-c-with-hepatic-coma-b1711 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| secondary-malignant-neoplasm-of-r-kidney-and-renal-pelvis-c7901 | 2 | Oncology | (open) | — | open | Batch 014, 1 variant |
+| opisthorchiasis-b660 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| dissociative-amnesia-f440 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
+| multiple-myeloma-not-having-achieved-remission-c9000 | 2 | Oncology | (open) | — | open | Batch 014, 1 variant |
+| moderate-protein-calorie-malnutrition-e440 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| eumycetoma-b470 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| loiasis-b743 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
 
 
 
-<!-- BATCH 013 — 100 conditions, generated 2026-05-12 -->
-| ulceroglandular-tularemia-a210 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| merkel-cell-carcinoma-of-skin-of-breast-c4a52 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-stomach-d002 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| nontoxic-single-thyroid-nodule-e041 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-uncomplicated-f1020 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| oculoglandular-tularemia-a211 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| merkel-cell-carcinoma-of-overlapping-sites-c4a8 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-colon-d010 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| nontoxic-multinodular-goiter-e042 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-in-remission-f1021 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| pulmonary-tularemia-a212 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| basal-cell-carcinoma-of-skin-of-lip-c4401 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-rectosigmoid-junction-d011 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| thyrotoxicosis-w-diffuse-goiter-w-thyrotoxic-crisis-or-storm-e0501 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-intoxication-uncomplicated-f10220 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| gastrointestinal-tularemia-a213 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| squamous-cell-carcinoma-of-skin-of-lip-c4402 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-rectum-d012 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| thyrotxcosis-w-toxic-single-thyroid-nodule-w-thyrotxc-crisis-e0511 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-intoxication-delirium-f10221 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| generalized-tularemia-a217 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| basal-cell-carcinoma-skin-r-ear-and-external-auric-canal-c44212 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-other-parts-of-intestine-d0149 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| thyrotxcosis-w-toxic-multinodular-goiter-w-thyrotoxic-crisis-e0521 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-withdrawal-uncomplicated-f10230 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| tuberculous-peritonitis-a1831 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| squamous-cell-carcinoma-skin-r-ear-and-external-auric-canal-c44222 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-anus-and-anal-canal-d013 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| thyrotxcosis-from-ectopic-thyroid-tissue-w-thyrotoxic-crisis-e0531 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-withdrawal-delirium-f10231 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| cutaneous-anthrax-a220 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| basal-cell-carcinoma-of-anal-skin-c44510 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-liver-gallbladder-and-bile-ducts-d015 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| thyrotoxicosis-factitia-without-thyrotoxic-crisis-or-storm-e0540 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-w-withdrawal-with-perceptual-disturbance-f10232 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| pulmonary-anthrax-a221 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| basal-cell-carcinoma-of-skin-of-breast-c44511 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-larynx-d020 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| thyrotoxicosis-factitia-with-thyrotoxic-crisis-or-storm-e0541 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-alcohol-induced-mood-disorder-f1024 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| gastrointestinal-anthrax-a222 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| squamous-cell-carcinoma-of-anal-skin-c44520 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-trachea-d021 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| acute-thyroiditis-e060 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-depend-w-alcoh-induce-psychotic-disorder-w-delusions-f10250 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| glanders-a240 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| squamous-cell-carcinoma-of-skin-of-breast-c44521 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-other-parts-of-respiratory-system-d023 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| subacute-thyroiditis-e061 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-depend-w-alcoh-induce-psychotic-disorder-w-hallucin-f10251 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| acute-and-fulminating-melioidosis-a241 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| basal-cell-carcinoma-of-overlapping-sites-of-skin-c4481 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| melanoma-in-situ-of-lip-d030 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| chronic-thyroiditis-with-transient-thyrotoxicosis-e062 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-depend-w-alcoh-induce-persisting-amnestic-disorder-f1026 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| subacute-and-chronic-melioidosis-a242 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| squamous-cell-carcinoma-of-overlapping-sites-of-skin-c4482 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| melanoma-in-situ-of-anal-skin-d0351 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| autoimmune-thyroiditis-e063 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-alcohol-induced-persisting-dementia-f1027 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| spirillosis-a250 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| mesothelioma-of-pleura-c450 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| melanoma-in-situ-of-other-sites-d038 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| drug-induced-thyroiditis-e064 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-alcohol-induced-anxiety-disorder-f10280 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| streptobacillosis-a251 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| mesothelioma-of-peritoneum-c451 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-skin-of-lip-d040 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| hypersecretion-of-calcitonin-e070 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-alcohol-induced-sexual-dysfunction-f10281 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| cutaneous-erysipeloid-a260 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| mesothelioma-of-pericardium-c452 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| melanocytic-nevi-of-lip-d220 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| dyshormogenetic-goiter-e071 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-alcohol-induced-sleep-disorder-f10282 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| aseptic-meningitis-in-leptospirosis-a2781 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| mesothelioma-of-other-sites-c457 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-skin-of-other-sites-d048 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| sick-euthyroid-syndrome-e0781 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| alcohol-dependence-with-other-alcohol-induced-disorder-f10288 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| pasteurellosis-a280 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| kaposi-s-sarcoma-of-skin-c460 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-scrotum-d0761 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| drug-chem-diabetes-mellitus-w-hyperosmolarity-w-coma-e0901 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| opioid-abuse-uncomplicated-f1110 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| cat-scratch-disease-a281 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| kaposi-s-sarcoma-of-soft-tissue-c461 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-other-male-genital-organs-d0769 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| drug-chem-diabetes-mellitus-w-ketoacidosis-w-coma-e0911 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| opioid-abuse-in-remission-f1111 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| extraintestinal-yersiniosis-a282 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| kaposi-s-sarcoma-of-palate-c462 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-bladder-d090 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| drug-chem-diabetes-mellitus-w-diabetic-nephropathy-e0921 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| opioid-abuse-with-intoxication-uncomplicated-f11120 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-| indeterminate-leprosy-a300 | 2 | Infectious Disease | (open) | — | open | Batch 013, 1 variant |
-| kaposi-s-sarcoma-of-lymph-nodes-c463 | 2 | Oncology | (open) | — | open | Batch 013, 1 variant |
-| carcinoma-in-situ-of-other-urinary-organs-d0919 | 2 | Hematology | (open) | — | open | Batch 013, 1 variant |
-| marasmic-kwashiorkor-e42 | 2 | Endocrinology | (open) | — | open | Batch 013, 1 variant |
-| opioid-abuse-with-intoxication-delirium-f11121 | 2 | Psychiatry | (open) | — | open | Batch 013, 1 variant |
-
+<!-- BATCH 015 (parent-injection) — 8 parent concepts, 50 subtypes rescued -->
+| carcinoma-in-situ | 1 | Oncology | (open) | — | open | Batch 015 (parent-injection), rescues 27 subtypes |
+| hepatitis-general | 1 | Infectious Disease | (open) | — | open | Batch 015 (parent-injection), rescues 6 subtypes |
+| mesothelioma-general | 1 | Oncology | (open) | — | open | Batch 015 (parent-injection), rescues 5 subtypes |
+| type-2-diabetes-mellitus | 1 | Endocrinology | (open) | — | open | Batch 015 (parent-injection), rescues 3 subtypes |
+| melanoma-in-situ | 1 | Oncology | (open) | — | open | Batch 015 (parent-injection), rescues 3 subtypes |
+| pituitary-disorders | 1 | Endocrinology | (open) | — | open | Batch 015 (parent-injection), rescues 2 subtypes |
+| mood-disorder | 1 | Psychiatry | (open) | — | open | Batch 015 (parent-injection), rescues 2 subtypes |
+| panic-disorder | 1 | Psychiatry | (open) | — | open | Batch 015 (parent-injection), rescues 2 subtypes |
 
 
 
 <!-- BATCH 016 — 100 conditions, generated 2026-05-12 -->
-| hurler-s-syndrome-e7601 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| genetic-anomalies-of-leukocytes-d720 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| type-2-diabetes-mellitus-with-hyperosmolarity-with-coma-e1101 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| severe-combined-immunodeficiency-with-reticular-dysgenesis-d810 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| neoplasm-of-uncertain-behavior-of-prostate-d400 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| primary-adrenocortical-insufficiency-e271 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| nondiabetic-hypoglycemic-coma-e15 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| sideropenic-dysphagia-d501 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| com-variab-immunodef-w-predom-abnlt-of-b-cell-nums-functn-d830 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| drug-induced-autoimmune-hemolytic-anemia-d590 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| drug-induced-aplastic-anemia-d611 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| acromegaly-and-pituitary-gigantism-e220 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| hereditary-spherocytosis-d580 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| hyposplenism-d730 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| chronic-acquired-pure-red-cell-aplasia-d600 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| primary-hyperparathyroidism-e210 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| functional-disorders-of-polymorphonuclear-neutrophils-d71 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| intraop-hemor-hemtom-of-the-spleen-comp-a-proc-on-the-spleen-d7801 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| brief-psychotic-disorder-f23 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| classical-phenylketonuria-e700 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| kwashiorkor-e40 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| maple-syrup-urine-disease-e710 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| myeloid-sarcoma-in-remission-c9231 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
-| riboflavin-deficiency-e530 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| acute-chagas-disease-with-heart-involvement-b570 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| carcinoid-syndrome-e340 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| drug-induced-obesity-e661 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| ben-neoplm-of-prph-nrv-autonm-nrv-sys-upr-lmb-inc-shldr-d3612 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| hereditary-erythropoietic-porphyria-e800 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| dengue-fever-classical-dengue-a90 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| wilson-s-disease-e8301 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| cystinuria-e7201 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| deficiency-of-vitamin-e-e560 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| dietary-selenium-deficiency-e59 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| allergic-purpura-d690 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| monkeypox-b04 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| pulmonary-mucormycosis-b460 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| drug-induced-hypoglycemia-without-coma-e160 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| sandhoff-disease-e7501 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| shared-psychotic-disorder-f24 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| ascorbic-acid-deficiency-e54 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| toxoplasma-chorioretinitis-b5801 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| benign-carcinoid-tumor-of-the-duodenum-d3a010 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| bipolar-disorder-current-episode-hypomanic-f310 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| pneumocystosis-b59 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| opioid-abuse-with-intoxication-with-perceptual-disturbance-f11122 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| trichinellosis-b75 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| enteroviral-exanthematous-fever-boston-exanthem-a880 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| disseminated-intravascular-coagulation-d65 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| anemia-in-neoplastic-disease-d630 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| hepatitis-a-with-hepatic-coma-b150 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| nicotine-dependence-cigarettes-uncomplicated-f17210 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| sylvatic-yellow-fever-a950 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| oropouche-virus-disease-a930 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| acute-pulmonary-histoplasmosis-capsulati-b390 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| acute-pulmonary-blastomycosis-b400 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| dietary-calcium-deficiency-e58 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| trichuriasis-b79 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| japanese-encephalitis-a830 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| intraop-hemor-hemtom-of-endo-sys-org-comp-an-endo-sys-proc-e3601 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| plasmodium-vivax-malaria-with-rupture-of-spleen-b510 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| smallpox-b03 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| congenital-methemoglobinemia-d740 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| familial-erythrocytosis-d750 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| primary-lesions-of-pinta-a670 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| onchocerciasis-with-endophthalmitis-b7301 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| alpha-thalassemia-d560 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| babesiosis-b600 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| conn-s-syndrome-e2601 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| dietary-folate-deficiency-anemia-d520 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| panic-disorder-episodic-paroxysmal-anxiety-f410 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| hymenolepiasis-b710 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| echinococcus-granulosus-infection-of-liver-b670 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| scarlet-fever-with-otitis-media-a380 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| chikungunya-virus-disease-a920 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| gummata-and-ulcers-of-yaws-a664 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| lobomycosis-b480 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| measles-complicated-by-encephalitis-b050 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| visceral-larva-migrans-b830 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| hypercarotinemia-e671 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| intestinal-strongyloidiasis-b780 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| hemophagocytic-lymphohistiocytosis-d761 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| sarcoidosis-of-lung-d860 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| acute-paralytic-poliomyelitis-vaccine-associated-a800 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| essential-fatty-acid-efa-deficiency-e630 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| neoplasm-of-uncertain-behavior-of-thyroid-gland-d440 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
-| cyclothymic-disorder-f340 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| ascariasis-pneumonia-b7781 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| small-cell-b-cell-lymphoma-nodes-of-axilla-and-upper-limb-c8304 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
-| agoraphobia-with-panic-disorder-f4001 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| pulmonary-actinomycosis-a420 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| malig-neoplm-of-ovrlp-sites-of-prph-nrv-and-autonm-nrv-sys-c478 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
-| acute-hepatitis-c-with-hepatic-coma-b1711 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| secondary-malignant-neoplasm-of-r-kidney-and-renal-pelvis-c7901 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
-| opisthorchiasis-b660 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| dissociative-amnesia-f440 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
-| multiple-myeloma-not-having-achieved-remission-c9000 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
-| moderate-protein-calorie-malnutrition-e440 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| eumycetoma-b470 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-| loiasis-b743 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
-
-
-
-<!-- BATCH 017 (parent-injection) — 8 parent concepts, 50 subtypes rescued -->
-| carcinoma-in-situ | 1 | Oncology | (open) | — | open | Batch 017 (parent-injection), rescues 27 subtypes |
-| hepatitis-general | 1 | Infectious Disease | (open) | — | open | Batch 017 (parent-injection), rescues 6 subtypes |
-| mesothelioma-general | 1 | Oncology | (open) | — | open | Batch 017 (parent-injection), rescues 5 subtypes |
-| type-2-diabetes-mellitus | 1 | Endocrinology | (open) | — | open | Batch 017 (parent-injection), rescues 3 subtypes |
-| melanoma-in-situ | 1 | Oncology | (open) | — | open | Batch 017 (parent-injection), rescues 3 subtypes |
-| pituitary-disorders | 1 | Endocrinology | (open) | — | open | Batch 017 (parent-injection), rescues 2 subtypes |
-| mood-disorder | 1 | Psychiatry | (open) | — | open | Batch 017 (parent-injection), rescues 2 subtypes |
-| panic-disorder | 1 | Psychiatry | (open) | — | open | Batch 017 (parent-injection), rescues 2 subtypes |
-
-
-
-<!-- BATCH 018 — 100 conditions, generated 2026-05-12 -->
-| tyrosinemia-e7021 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| anisakiasis-b810 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| eczema-herpeticum-b000 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| viral-pharyngoconjunctivitis-b302 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| plasmodium-ovale-malaria-b530 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| cutaneous-strongyloidiasis-b781 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| systemic-bartonellosis-a440 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| mediastnl-large-b-cell-lymph-nodes-of-axilla-and-upper-limb-c8524 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| hepatitis-a-without-hepatic-coma-b159 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| rubella-encephalitis-b0601 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| q-fever-a78 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| cysticercosis-of-central-nervous-system-b690 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| intermediate-lesions-of-pinta-a671 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| chronic-pulmonary-blastomycosis-b401 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| refractory-anemia-without-ring-sideroblasts-so-stated-d460 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| hereditary-hypogammaglobulinemia-d800 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| benign-lipomatous-neoplasm-of-intrathoracic-organs-d174 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| neoplasm-of-uncertain-behavior-of-oth-male-genital-organs-d408 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| submucous-leiomyoma-of-uterus-d250 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| cercarial-dermatitis-b653 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| sandfly-fever-a931 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| invasive-pulmonary-aspergillosis-b440 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| intraop-hemor-hemtom-of-an-endo-sys-org-comp-oth-procedure-e3602 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| long-chain-very-long-chain-acyl-coa-dehydrogenase-deficiency-e71310 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| acute-posthemorrhagic-anemia-d62 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| cutaneous-listeriosis-a320 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| ben-neoplm-of-prph-nrv-autonm-nrv-sys-of-low-lmb-inc-hip-d3613 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| hurler-scheie-syndrome-e7602 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| tuberculoid-leprosy-a301 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| legionnaires-disease-a481 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| disorders-of-endocrine-glands-in-diseases-classd-elswhr-e35 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| nodular-lymphocy-predom-hodgkin-lymphoma-intrathorac-nodes-c8102 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| acute-stress-reaction-f430 | 2 | Psychiatry | (open) | — | open | Batch 018, 1 variant |
-| kaposi-s-sarcoma-of-gastrointestinal-sites-c464 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| varicella-meningitis-b010 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| hemophagocytic-syndrome-infection-associated-d762 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| clonorchiasis-b661 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| hereditary-sideroblastic-anemia-d640 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| constitutional-tall-stature-e344 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| enterobiasis-b80 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| postproc-hemor-of-an-endo-sys-org-fol-an-endo-sys-procedure-e89810 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| congenital-adrenogenital-disorders-assoc-w-enzyme-deficiency-e250 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| anemia-in-chronic-kidney-disease-d631 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| secondary-malignant-neoplasm-of-mediastinum-c781 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| mixed-obsessional-thoughts-and-acts-f422 | 2 | Psychiatry | (open) | — | open | Batch 018, 1 variant |
-| opioid-abuse-with-opioid-induced-mood-disorder-f1114 | 2 | Psychiatry | (open) | — | open | Batch 018, 1 variant |
-| neoplasm-of-uncertain-behavior-of-brain-infratentorial-d431 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| bipolar-disorder-current-episode-depressed-mild-f3131 | 2 | Psychiatry | (open) | — | open | Batch 018, 1 variant |
-| disorders-of-zinc-metabolism-e832 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| inhalant-abuse-uncomplicated-f1810 | 2 | Psychiatry | (open) | — | open | Batch 018, 1 variant |
-| familial-hypercholesterolemia-e7801 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| congenital-lactase-deficiency-e730 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| far-eastern-tick-borne-encephalitis-a840 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| small-cell-b-cell-lymph-nodes-of-ing-region-and-lower-limb-c8305 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| epidemic-vertigo-a881 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| mild-protein-calorie-malnutrition-e441 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| congenital-agranulocytosis-d700 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| persistent-hyperplasia-of-thymus-e320 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| pulmonary-cryptococcosis-b450 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| cocaine-abuse-in-remission-f1411 | 2 | Psychiatry | (open) | — | open | Batch 018, 1 variant |
-| tetanus-neonatorum-a33 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| dengue-hemorrhagic-fever-a91 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| dietary-zinc-deficiency-e60 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| gangosa-a665 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| human-immunodeficiency-virus-hiv-disease-b20 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| neoplasm-of-uncertain-behavior-of-parathyroid-gland-d442 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| abdominal-actinomycosis-a421 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| follicular-lymphoma-grade-i-intrathoracic-lymph-nodes-c8202 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| epidemic-louse-borne-typhus-fever-d-t-rickettsia-prowazekii-a750 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| carcinoma-in-situ-of-thyroid-and-other-endocrine-glands-d093 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| sarcoidosis-of-lymph-nodes-d861 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| leptospirosis-icterohemorrhagica-a270 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| type-1-diabetes-mellitus-with-ketoacidosis-without-coma-e1010 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| scabies-b86 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| sedative-hypnotic-or-anxiolytic-abuse-uncomplicated-f1310 | 2 | Psychiatry | (open) | — | open | Batch 018, 1 variant |
-| testicular-hyperfunction-e290 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| variant-creutzfeldt-jakob-disease-a8101 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| chronic-viral-hepatitis-b-with-delta-agent-b180 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| acute-paralytic-poliomyelitis-wild-virus-imported-a801 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| louse-borne-relapsing-fever-a680 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| acute-erythroid-leukemia-not-having-achieved-remission-c9400 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| obstetrical-tetanus-a34 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| gammaherpesviral-mononucleosis-with-polyneuropathy-b2701 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| wiskott-aldrich-syndrome-d820 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| malig-neoplasm-of-ovrlp-sites-of-retroperiton-and-peritoneum-c488 | 2 | Oncology | (open) | — | open | Batch 018, 1 variant |
-| gnathostomiasis-b831 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| allescheriasis-b482 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| neoplasm-of-uncertain-behavior-of-oth-urinary-organs-d418 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| cutaneous-chromomycosis-b430 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| hemorrhagic-fever-with-renal-syndrome-a985 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| ehrlichiosis-chafeensis-e-chafeensis-a7741 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| scarlet-fever-with-myocarditis-a381 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| lassa-fever-a962 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| protein-deficiency-anemia-d530 | 2 | Hematology | (open) | — | open | Batch 018, 1 variant |
-| tay-sachs-disease-e7502 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| erysipelas-a46 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| cutaneous-myiasis-b870 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| onchocerciasis-with-glaucoma-b7302 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
-| lesch-nyhan-syndrome-e791 | 2 | Endocrinology | (open) | — | open | Batch 018, 1 variant |
-| human-herpesvirus-6-encephalitis-b1001 | 2 | Infectious Disease | (open) | — | open | Batch 018, 1 variant |
+| tyrosinemia-e7021 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| anisakiasis-b810 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| eczema-herpeticum-b000 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| viral-pharyngoconjunctivitis-b302 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| plasmodium-ovale-malaria-b530 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| cutaneous-strongyloidiasis-b781 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| systemic-bartonellosis-a440 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| mediastnl-large-b-cell-lymph-nodes-of-axilla-and-upper-limb-c8524 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| hepatitis-a-without-hepatic-coma-b159 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| rubella-encephalitis-b0601 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| q-fever-a78 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| cysticercosis-of-central-nervous-system-b690 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| intermediate-lesions-of-pinta-a671 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| chronic-pulmonary-blastomycosis-b401 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| refractory-anemia-without-ring-sideroblasts-so-stated-d460 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| hereditary-hypogammaglobulinemia-d800 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| benign-lipomatous-neoplasm-of-intrathoracic-organs-d174 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| neoplasm-of-uncertain-behavior-of-oth-male-genital-organs-d408 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| submucous-leiomyoma-of-uterus-d250 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| cercarial-dermatitis-b653 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| sandfly-fever-a931 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| invasive-pulmonary-aspergillosis-b440 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| intraop-hemor-hemtom-of-an-endo-sys-org-comp-oth-procedure-e3602 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| long-chain-very-long-chain-acyl-coa-dehydrogenase-deficiency-e71310 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| acute-posthemorrhagic-anemia-d62 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| cutaneous-listeriosis-a320 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| ben-neoplm-of-prph-nrv-autonm-nrv-sys-of-low-lmb-inc-hip-d3613 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| hurler-scheie-syndrome-e7602 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| tuberculoid-leprosy-a301 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| legionnaires-disease-a481 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| disorders-of-endocrine-glands-in-diseases-classd-elswhr-e35 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| nodular-lymphocy-predom-hodgkin-lymphoma-intrathorac-nodes-c8102 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| acute-stress-reaction-f430 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| kaposi-s-sarcoma-of-gastrointestinal-sites-c464 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| varicella-meningitis-b010 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| hemophagocytic-syndrome-infection-associated-d762 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| clonorchiasis-b661 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| hereditary-sideroblastic-anemia-d640 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| constitutional-tall-stature-e344 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| enterobiasis-b80 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| postproc-hemor-of-an-endo-sys-org-fol-an-endo-sys-procedure-e89810 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| congenital-adrenogenital-disorders-assoc-w-enzyme-deficiency-e250 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| anemia-in-chronic-kidney-disease-d631 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| secondary-malignant-neoplasm-of-mediastinum-c781 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| mixed-obsessional-thoughts-and-acts-f422 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| opioid-abuse-with-opioid-induced-mood-disorder-f1114 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| neoplasm-of-uncertain-behavior-of-brain-infratentorial-d431 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| bipolar-disorder-current-episode-depressed-mild-f3131 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| disorders-of-zinc-metabolism-e832 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| inhalant-abuse-uncomplicated-f1810 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| familial-hypercholesterolemia-e7801 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| congenital-lactase-deficiency-e730 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| far-eastern-tick-borne-encephalitis-a840 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| small-cell-b-cell-lymph-nodes-of-ing-region-and-lower-limb-c8305 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| epidemic-vertigo-a881 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| mild-protein-calorie-malnutrition-e441 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| congenital-agranulocytosis-d700 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| persistent-hyperplasia-of-thymus-e320 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| pulmonary-cryptococcosis-b450 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| cocaine-abuse-in-remission-f1411 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| tetanus-neonatorum-a33 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| dengue-hemorrhagic-fever-a91 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| dietary-zinc-deficiency-e60 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| gangosa-a665 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| human-immunodeficiency-virus-hiv-disease-b20 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| neoplasm-of-uncertain-behavior-of-parathyroid-gland-d442 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| abdominal-actinomycosis-a421 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| follicular-lymphoma-grade-i-intrathoracic-lymph-nodes-c8202 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| epidemic-louse-borne-typhus-fever-d-t-rickettsia-prowazekii-a750 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| carcinoma-in-situ-of-thyroid-and-other-endocrine-glands-d093 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| sarcoidosis-of-lymph-nodes-d861 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| leptospirosis-icterohemorrhagica-a270 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| type-1-diabetes-mellitus-with-ketoacidosis-without-coma-e1010 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| scabies-b86 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| sedative-hypnotic-or-anxiolytic-abuse-uncomplicated-f1310 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| testicular-hyperfunction-e290 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| variant-creutzfeldt-jakob-disease-a8101 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| chronic-viral-hepatitis-b-with-delta-agent-b180 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| acute-paralytic-poliomyelitis-wild-virus-imported-a801 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| louse-borne-relapsing-fever-a680 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| acute-erythroid-leukemia-not-having-achieved-remission-c9400 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| obstetrical-tetanus-a34 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| gammaherpesviral-mononucleosis-with-polyneuropathy-b2701 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| wiskott-aldrich-syndrome-d820 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| malig-neoplasm-of-ovrlp-sites-of-retroperiton-and-peritoneum-c488 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
+| gnathostomiasis-b831 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| allescheriasis-b482 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| neoplasm-of-uncertain-behavior-of-oth-urinary-organs-d418 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| cutaneous-chromomycosis-b430 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| hemorrhagic-fever-with-renal-syndrome-a985 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| ehrlichiosis-chafeensis-e-chafeensis-a7741 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| scarlet-fever-with-myocarditis-a381 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| lassa-fever-a962 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| protein-deficiency-anemia-d530 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| tay-sachs-disease-e7502 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| erysipelas-a46 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| cutaneous-myiasis-b870 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| onchocerciasis-with-glaucoma-b7302 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+| lesch-nyhan-syndrome-e791 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
+| human-herpesvirus-6-encephalitis-b1001 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
 
 ## Rules
 
