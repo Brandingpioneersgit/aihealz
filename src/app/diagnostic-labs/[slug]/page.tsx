@@ -534,7 +534,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             </div>
 
             {/* Right: Sidebar */}
-            <aside className="col gap-3" style={{ position: 'sticky', top: 96 }}>
+            <aside className="col gap-3 v4-sticky-md" style={{ position: 'sticky', top: 96 }}>
               {/* Contact */}
               <div className="card col gap-4" style={{ padding: 22 }}>
                 <div className="kicker"><span className="dot" />contact</div>

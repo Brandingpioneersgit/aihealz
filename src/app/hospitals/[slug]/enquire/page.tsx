@@ -339,7 +339,7 @@ function LoadingFallback() {
             <div style={{ height: 11, width: 280, background: 'var(--rule)', borderRadius: 'var(--r-1)' }} />
             <div className="col gap-2">
                 <div style={{ height: 11, width: 200, background: 'var(--rule)', borderRadius: 'var(--r-1)' }} />
-                <div style={{ height: 36, width: 320, background: 'var(--rule)', borderRadius: 'var(--r-2)' }} />
+                <div style={{ height: 36, width: '100%', maxWidth: 320, background: 'var(--rule)', borderRadius: 'var(--r-2)' }} />
             </div>
             <div className="card col gap-4" style={{ padding: 28 }}>
                 <div style={{ height: 44, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />

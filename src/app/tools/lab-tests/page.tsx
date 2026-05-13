@@ -221,7 +221,8 @@ export default function LabTestsDirectory() {
                                         borderRadius: 'var(--r-2)',
                                         boxShadow: 'var(--shadow-2)',
                                         zIndex: 50,
-                                        minWidth: 220,
+                                        minWidth: 200,
+                                        maxWidth: 'calc(100vw - 32px)',
                                         padding: '6px 0',
                                     }}
                                 >

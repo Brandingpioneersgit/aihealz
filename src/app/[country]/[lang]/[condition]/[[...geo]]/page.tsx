@@ -1658,7 +1658,7 @@ export default async function ConditionPage({ params }: PageProps) {
                         </div>
 
                         {/* ─── RIGHT COLUMN — Sidebar ─── */}
-                        <aside className="col gap-3" style={{ position: 'sticky', top: 96 }}>
+                        <aside className="col gap-3 v4-sticky-md" style={{ position: 'sticky', top: 96 }}>
                             {/* On this page */}
                             <div className="card col gap-3" style={{ padding: 22 }}>
                                 <div className="kicker"><span className="dot" />on this page</div>

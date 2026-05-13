@@ -344,7 +344,7 @@ export default async function TestDetailPage({ params }: PageProps) {
             </div>
 
             {/* Right: Booking sidebar */}
-            <aside className="col gap-3" style={{ position: 'sticky', top: 96 }}>
+            <aside className="col gap-3 v4-sticky-md" style={{ position: 'sticky', top: 96 }}>
               <div className="card col gap-4" style={{ padding: 22 }}>
                 <div className="kicker"><span className="dot" />book this test</div>
                 {test.prices.length > 0 ? (

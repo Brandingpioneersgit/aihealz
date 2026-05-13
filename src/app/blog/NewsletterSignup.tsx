@@ -34,8 +34,8 @@ export default function NewsletterSignup() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@example.com"
         style={{
-          flex: 1,
-          minWidth: 220,
+          flex: '1 1 180px',
+          minWidth: 0,
           padding: '10px 14px',
           borderRadius: 10,
           border: '1px solid var(--line, rgba(0,0,0,0.12))',

@@ -72,7 +72,7 @@ export default function AIGuide() {
                         position: 'relative',
                         marginBottom: 12,
                         padding: 22,
-                        width: 320,
+                        width: 'min(320px, calc(100vw - 32px))',
                         animation: 'slide-up 280ms ease-out',
                     }}
                 >

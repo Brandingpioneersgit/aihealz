@@ -724,7 +724,7 @@ export default async function TreatmentPage({ params }: { params: Promise<{ coun
                         </div>
 
                         {/* Sidebar */}
-                        <aside className="col gap-3" style={{ position: 'sticky', top: 96 }}>
+                        <aside className="col gap-3 v4-sticky-md" style={{ position: 'sticky', top: 96 }}>
                             <div className="card-ink col gap-3" style={{ padding: 22 }}>
                                 <span
                                     className="mono"

@@ -129,7 +129,7 @@ export default function BookTestPage({ params }: { params: Promise<{ slug: strin
       <main style={{ background: 'var(--bg)', color: 'var(--ink)', minHeight: '100vh', paddingTop: 96, paddingBottom: 64 }}>
         <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 clamp(16px, 4vw, 28px)' }} className="col gap-5">
           <div style={{ height: 11, width: 200, background: 'var(--rule)', borderRadius: 'var(--r-1)' }} />
-          <div style={{ height: 36, width: 360, background: 'var(--rule)', borderRadius: 'var(--r-2)' }} />
+          <div style={{ height: 36, width: '100%', maxWidth: 360, background: 'var(--rule)', borderRadius: 'var(--r-2)' }} />
           <div className="card col gap-4" style={{ padding: 28 }}>
             <div style={{ height: 44, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
             <div style={{ height: 44, background: 'var(--bg-2)', borderRadius: 'var(--r-2)' }} />
@@ -500,7 +500,7 @@ export default function BookTestPage({ params }: { params: Promise<{ slug: strin
 
           {/* Order summary */}
           <aside>
-            <div className="card col" style={{ padding: 0, position: 'sticky', top: 96 }}>
+            <div className="card col v4-sticky-md" style={{ padding: 0, position: 'sticky', top: 96 }}>
               <div className="hairline-b" style={{ padding: '16px 20px' }}>
                 <h3
                   className="display"

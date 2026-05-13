@@ -583,7 +583,7 @@ export default async function DoctorProfilePage({ params }: { params: PageParams
                         </div>
 
                         {/* Sidebar */}
-                        <aside className="col gap-3" style={{ flex: '1 1 300px', minWidth: 280, position: 'sticky', top: 96 }}>
+                        <aside className="col gap-3 v4-sticky-md" style={{ flex: '1 1 300px', minWidth: 0, position: 'sticky', top: 96 }}>
                             {/* Contact card */}
                             <div id="contact" className="card-ink" style={{ padding: 24 }}>
                                 <div className="row between ai-center" style={{ marginBottom: 12 }}>

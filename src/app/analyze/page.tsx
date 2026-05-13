@@ -267,7 +267,7 @@ function UploadView({
 
             {/* Steps ribbon */}
             <div
-                className="row"
+                className="row v4-steps-row"
                 style={{
                     borderTop: '1px solid var(--rule)',
                     borderBottom: '1px solid var(--rule)',

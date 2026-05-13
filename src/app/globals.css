@@ -418,6 +418,28 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   }
 }
 
+/* Generic mobile guard: sidebars/asides that are sticky on desktop should
+   become static on phones so they don't pin to the viewport and crowd
+   the main content after the column wraps to the next row. Apply to any
+   inline `position: sticky` element by adding `.v4-sticky-md`. */
+@media (max-width: 900px) {
+  .v4-sticky-md {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+/* Analyze page process-steps: 4 columns separated by right-borders on
+   wide screens; when items wrap on phones, swap to bottom-borders so
+   stacked items look like rows, not orphaned right borders. */
+@media (max-width: 720px) {
+  .v4-steps-row > * {
+    border-right: none !important;
+    border-bottom: 1px solid var(--rule);
+  }
+  .v4-steps-row > *:last-child { border-bottom: none; }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    CARDS / SURFACES
    ═══════════════════════════════════════════════════════════════════════════ */
