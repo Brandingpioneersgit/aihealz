@@ -40,7 +40,8 @@ export default async function AdminTreatmentsPage() {
             </div>
 
             <div className="card" style={{ overflow: 'hidden' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+                <table style={{ width: '100%', minWidth: 420, borderCollapse: 'collapse' }}>
                     <thead className="hairline-b" style={{ background: 'var(--bg-2)' }}>
                         <tr>
                             <th scope="col" style={thStyle}>Specialty</th>
@@ -58,6 +59,7 @@ export default async function AdminTreatmentsPage() {
                         ))}
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     );

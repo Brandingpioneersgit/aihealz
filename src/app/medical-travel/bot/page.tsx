@@ -707,9 +707,11 @@ export default function MedicalTravelBot() {
                                     overflow: 'hidden',
                                 }}
                             >
+                                <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
                                 <table
                                     style={{
                                         width: '100%',
+                                        minWidth: 520,
                                         borderCollapse: 'collapse',
                                         textAlign: 'left',
                                     }}
@@ -874,6 +876,7 @@ export default function MedicalTravelBot() {
                                         </tr>
                                     </tbody>
                                 </table>
+                                </div>
                             </div>
                         </div>
 

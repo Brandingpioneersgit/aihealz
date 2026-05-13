@@ -375,7 +375,8 @@ export default function ContentHealthPage() {
                             <p className="muted" style={{ fontSize: 13 }}>No recent submissions</p>
                         </div>
                     ) : (
-                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+                        <table style={{ width: '100%', minWidth: 560, fontSize: 13, borderCollapse: 'collapse' }}>
                             <thead style={{ background: 'var(--bg-2)' }}>
                                 <tr style={{ borderBottom: '1px solid var(--rule)' }}>
                                     <th scope="col" className="mono" style={{ textAlign: 'left', padding: 14, fontSize: 11, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500 }}>URL</th>
@@ -399,6 +400,7 @@ export default function ContentHealthPage() {
                                 ))}
                             </tbody>
                         </table>
+                        </div>
                     )}
                 </div>
             )}
@@ -415,7 +417,8 @@ export default function ContentHealthPage() {
                             <p className="muted" style={{ fontSize: 13 }}>No keyword gaps identified</p>
                         </div>
                     ) : (
-                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+                        <table style={{ width: '100%', minWidth: 680, fontSize: 13, borderCollapse: 'collapse' }}>
                             <thead style={{ background: 'var(--bg-2)' }}>
                                 <tr style={{ borderBottom: '1px solid var(--rule)' }}>
                                     {['Keyword', 'Volume', 'Your rank', 'Competitor', 'Opportunity', 'Action'].map(h => (
@@ -460,6 +463,7 @@ export default function ContentHealthPage() {
                                 ))}
                             </tbody>
                         </table>
+                        </div>
                     )}
                 </div>
             )}

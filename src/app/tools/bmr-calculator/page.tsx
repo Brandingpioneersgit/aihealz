@@ -230,9 +230,10 @@ export default function BMRCalculatorPage() {
                                 <div className="hairline" />
 
                                 <div
+                                    className="bmr-result-grid"
                                     style={{
                                         display: 'grid',
-                                        gridTemplateColumns: '1fr 1fr 1fr',
+                                        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
                                         gap: 0,
                                         border: '1px solid var(--rule)',
                                         borderRadius: 'var(--r-2)',
@@ -246,7 +247,8 @@ export default function BMRCalculatorPage() {
                                     ].map((item, i) => (
                                         <div
                                             key={item.label}
-                                            className="col gap-1"
+                                            className="col gap-1 bmr-result-cell"
+                                            data-last={i === 2 ? 'true' : undefined}
                                             style={{
                                                 padding: '14px 16px',
                                                 borderRight: i < 2 ? '1px solid var(--rule)' : 'none',

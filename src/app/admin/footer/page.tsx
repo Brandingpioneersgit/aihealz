@@ -326,7 +326,8 @@ export default function FooterPage() {
                             </button>
                         </div>
                     ) : (
-                        <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+                        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+                        <table style={{ width: '100%', minWidth: 640, fontSize: 13, borderCollapse: 'collapse' }}>
                             <thead style={{ background: 'var(--bg-2)' }}>
                                 <tr style={{ borderBottom: '1px solid var(--rule)' }}>
                                     {['Rule name', 'Match type', 'Match value', 'Priority', 'Status'].map(h => (
@@ -370,6 +371,7 @@ export default function FooterPage() {
                                 ))}
                             </tbody>
                         </table>
+                        </div>
                     )}
                 </section>
 

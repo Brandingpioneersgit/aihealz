@@ -450,7 +450,8 @@ export default function LabTestsDirectory() {
                                                     overflow: 'hidden',
                                                 }}
                                             >
-                                                <table className="w-full" style={{ borderCollapse: 'collapse', width: '100%', fontSize: 13 }}>
+                                                <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+                                                <table className="w-full" style={{ borderCollapse: 'collapse', width: '100%', minWidth: 480, fontSize: 13 }}>
                                                     <caption className="sr-only">
                                                         Lab test components and normal reference ranges
                                                     </caption>
@@ -531,6 +532,7 @@ export default function LabTestsDirectory() {
                                                         ))}
                                                     </tbody>
                                                 </table>
+                                                </div>
                                             </div>
                                         </div>
 

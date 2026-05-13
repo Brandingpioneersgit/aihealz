@@ -111,7 +111,7 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                         })}
                     </nav>
                 </div>
-                <div className="row ai-center gap-3 v4-nav-actions">
+                <div className="row ai-center gap-3 v4-nav-actions" style={{ flexWrap: 'nowrap', minWidth: 0 }}>
                     <div
                         className="row ai-center gap-2 mono v4-geo-pill"
                         role="status"
@@ -158,9 +158,10 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                     <Link
                         href="/analyze"
                         className="v4-btn v4-btn-cobalt v4-btn-sm"
+                        aria-label="Analyze a medical report"
                         style={{ minHeight: 44, display: 'inline-flex', alignItems: 'center' }}
                     >
-                        Analyze report{' '}
+                        <span className="v4-analyze-cta-label">Analyze report</span>
                         <span aria-hidden="true">→</span>
                     </Link>
                     <MobileMenu items={MOBILE_NAV_ITEMS} />

@@ -142,6 +142,12 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
+/* Mobile safety net: prevent any rogue inline-width content from causing
+   the entire page to scroll horizontally. `clip` (not `hidden`) preserves
+   `position: sticky` on the navbar and other ancestors. */
+html, body { overflow-x: clip; }
+img, video, svg { max-width: 100%; height: auto; }
+
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -391,6 +397,15 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
 }
 @media (max-width: 640px) {
   .v4-stack-sm > * { flex-basis: 100% !important; }
+}
+
+/* BMR-calculator result grid: stack vertically on narrow phones so each
+   cell can breathe (label + big number + sub). Bordered cells use
+   border-bottom instead of border-right when stacked. */
+@media (max-width: 480px) {
+  .bmr-result-grid { grid-template-columns: 1fr !important; }
+  .bmr-result-cell { border-right: none !important; }
+  .bmr-result-cell:not([data-last="true"]) { border-bottom: 1px solid var(--rule); }
 }
 
 /* Healz AI page: sidebar is sticky on desktop only. On mobile it stacks
@@ -747,9 +762,20 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   .v4-nav-desktop-only,
   .v4-geo-pill { display: none; }
   .v4-nav-mobile-only { display: inline-flex; }
+  /* Tighter spacing inside the navbar action cluster on phones */
+  .v4-nav-actions { gap: 8px !important; }
 }
 @media (max-width: 640px) {
   .v4-fullpage-toggle-label { display: none; }
+  /* Hide the long "Analyze report" label below 640 — keep just the arrow.
+     Saves ~90px and prevents the action cluster from overflowing iPhone SE. */
+  .v4-analyze-cta-label { display: none; }
+  /* Tighten button paddings on phones */
+  .v4-nav-actions .v4-btn-sm { padding-left: 10px; padding-right: 10px; }
+}
+@media (max-width: 380px) {
+  /* On the smallest phones, also drop the SOS text to icon only */
+  .v4-nav-actions { gap: 6px !important; }
 }
 .v4-fullpage-toggle:hover {
   background: var(--bg-2, rgba(15,23,42,.04));

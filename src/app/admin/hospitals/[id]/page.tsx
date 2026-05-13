@@ -286,7 +286,7 @@ export default function HospitalDetailPage() {
                                 <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{hospital.description}</span>
                             </div>
                         )}
-                        <div className="grid grid-cols-2" style={{ gap: 12 }}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12 }}>
                             {[
                                 { label: 'Address', value: hospital.address },
                                 { label: 'Pincode', value: hospital.pincode },

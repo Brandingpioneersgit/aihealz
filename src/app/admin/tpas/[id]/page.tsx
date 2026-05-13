@@ -215,7 +215,7 @@ export default function TpaDetailPage() {
                                 <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{tpa.description}</span>
                             </div>
                         )}
-                        <div className="grid grid-cols-2" style={{ gap: 12 }}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12 }}>
                             {[
                                 { label: 'License Number', value: tpa.licenseNumber },
                                 { label: 'Regulatory Body', value: tpa.regulatoryBody },

@@ -275,7 +275,7 @@ export default function DiagnosticProviderDetailPage() {
                 <span style={{ fontSize: 13, color: 'var(--ink-2)' }}>{provider.description}</span>
               </div>
             )}
-            <div className="grid grid-cols-2" style={{ gap: 12 }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12 }}>
               {[
                 { label: 'Address', value: provider.address },
                 { label: 'Phone', value: provider.phone },
