@@ -3,10 +3,11 @@
  * Inserts countries, states/provinces, and major cities into the geographies table.
  * Run: node scripts/seed-geographies.mjs
  */
+import 'dotenv/config';
 import pg from 'pg';
 const { Pool } = pg;
 
-const pool = new Pool({ connectionString: 'postgresql://taps@localhost:5432/aihealz?schema=public' });
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
 // ─── Helper ────────────────────────────────────────────────
 async function upsertGeo(name, slug, level, parentId = null, isoCode = null, langs = ['en']) {
@@ -41,7 +42,7 @@ async function seedCity(name, slug, stateId, langs = ['en']) {
 // ─── Data ──────────────────────────────────────────────────
 const WORLD = [
     {
-        country: ['India', 'in', 'IN', ['en', 'hi']],
+        country: ['India', 'india', 'IN', ['en', 'hi']],
         states: [
             { name: 'Maharashtra', slug: 'maharashtra', cities: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Aurangabad', 'Thane', 'Navi Mumbai'] },
             { name: 'Delhi', slug: 'delhi', cities: ['New Delhi', 'North Delhi', 'South Delhi', 'East Delhi', 'West Delhi'] },
@@ -67,7 +68,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['United States', 'us', 'US', ['en']],
+        country: ['United States', 'usa', 'US', ['en']],
         states: [
             { name: 'California', slug: 'california', cities: ['Los Angeles', 'San Francisco', 'San Diego', 'San Jose', 'Sacramento'] },
             { name: 'New York', slug: 'new-york', cities: ['New York City', 'Buffalo', 'Rochester', 'Albany'] },
@@ -87,7 +88,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['United Kingdom', 'gb', 'GB', ['en']],
+        country: ['United Kingdom', 'uk', 'GB', ['en']],
         states: [
             { name: 'England', slug: 'england', cities: ['London', 'Manchester', 'Birmingham', 'Liverpool', 'Leeds', 'Bristol', 'Sheffield', 'Oxford', 'Cambridge'] },
             { name: 'Scotland', slug: 'scotland', cities: ['Edinburgh', 'Glasgow', 'Aberdeen'] },
@@ -96,7 +97,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['United Arab Emirates', 'ae', 'AE', ['en', 'ar']],
+        country: ['United Arab Emirates', 'uae', 'AE', ['en', 'ar']],
         states: [
             { name: 'Dubai', slug: 'dubai', cities: ['Dubai City', 'Dubai Marina', 'Deira'] },
             { name: 'Abu Dhabi', slug: 'abu-dhabi', cities: ['Abu Dhabi City', 'Al Ain'] },
@@ -104,7 +105,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Singapore', 'sg', 'SG', ['en', 'zh']],
+        country: ['Singapore', 'singapore', 'SG', ['en', 'zh']],
         states: [
             { name: 'Singapore', slug: 'singapore-central', cities: ['Singapore CBD', 'Orchard', 'Novena'] },
         ]

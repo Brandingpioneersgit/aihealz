@@ -3,10 +3,11 @@
  * Inserts ALL states/UTs with their tier 2-6 cities and regional languages.
  * Run: node scripts/seed-india-complete.mjs
  */
+import 'dotenv/config';
 import pg from 'pg';
 const { Pool } = pg;
 
-const pool = new Pool({ connectionString: 'postgresql://taps@localhost:5432/aihealz?schema=public' });
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
 async function upsertGeo(name, slug, level, parentId, isoCode, langs) {
     const ex = await pool.query(
@@ -23,7 +24,7 @@ async function upsertGeo(name, slug, level, parentId, isoCode, langs) {
 
 // Get existing India country ID
 async function getIndiaId() {
-    const res = await pool.query(`SELECT id FROM geographies WHERE slug = 'in' AND level = 'country'::"GeoLevel" LIMIT 1`);
+    const res = await pool.query(`SELECT id FROM geographies WHERE slug = 'india' AND level = 'country'::"GeoLevel" LIMIT 1`);
     return res.rows[0]?.id;
 }
 
