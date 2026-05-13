@@ -38,7 +38,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 
 <!-- BATCH 002 — 100 conditions, generated 2026-05-12 -->
 | allergic-contact-dermatitis | 1 | Dermatology | claude-2026-05-12 | 2026-05-12 | done | 6,690 words, 22 FAQs, 10 sources, 4 images; row 524 |
-| filariasis | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 5 variants |
+| filariasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 4,866 words, 21 FAQs (all schemaEligible), 8 sources; row 576 |
 | schistosomiasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,049 words, 21 FAQs (all schemaEligible), 8 sources; row 575 |
 | malaria | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | done | 7,121 words, 22 FAQs, 9 sources, 3 images; row 522 |
 | tinnitus | 1 | ENT Specialist | claude-2026-05-12 | 2026-05-12 | done | 5,992 words, 22 FAQs, 8 sources; row 521 |
