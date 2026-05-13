@@ -70,7 +70,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | plantar-fasciitis | 1 | Podiatrist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | chronic-sinusitis | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | multiple-sclerosis | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| cushings-syndrome | 1 | Endocrinologist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| cushings-syndrome | 1 | Endocrinology | claude-2026-05-14 | 2026-05-14 | done | 5,103 words, 21 FAQs (all schemaEligible), 8 sources; row 578 |
 | ulcerative-colitis | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | ebola-virus-disease | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | parkinsons-disease | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |

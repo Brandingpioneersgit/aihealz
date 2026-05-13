@@ -1,0 +1,455 @@
+{
+  "_meta": {
+    "slug": "cushings-syndrome",
+    "tier": 1,
+    "headTerm": "Cushing's syndrome",
+    "longTailKeywords": [
+      "Cushing's syndrome symptoms",
+      "Cushing's syndrome causes",
+      "Cushing disease vs syndrome",
+      "ACTH-secreting tumor",
+      "iatrogenic Cushing",
+      "dexamethasone suppression test",
+      "transsphenoidal surgery Cushing",
+      "ketoconazole Cushing",
+      "osilodrostat",
+      "pasireotide",
+      "moon face buffalo hump",
+      "abdominal striae cortisol"
+    ],
+    "primarySpecialty": "Endocrinology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Epidemiology, clinical features, and pathophysiology synthesized from Lacroix et al. Lancet 2015 (PMID 26004339), Newell-Price et al. Lancet 2006 (PMID 16698415), and Pivonello et al. Endocr Rev 2017 (PMID 28938803). Diagnostic workup per Endocrine Society Clinical Practice Guideline (Nieman et al. J Clin Endocrinol Metab 2008, PMID 18334580; Fleseriu et al. Lancet Diabetes Endocrinol 2021 update). Surgical cure rates per Patil et al. JCEM 2008 and modern transsphenoidal series. Pharmacological treatment data per Pivonello et al. NEJM 2020 (osilodrostat LINC-3 trial, PMID 32027909) and Newell-Price et al. Lancet Diabetes Endocrinol 2021 (osilodrostat LINC-4). Mortality figures per Clayton et al. Lancet Diabetes Endocrinol 2016 and Yale Cushing's Registry."
+  },
+
+  "h1Title": "Cushing's Syndrome: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology",
+
+  "heroOverview": "Cushing's syndrome is the constellation of physical and metabolic changes that result from chronic exposure to excess glucocorticoids, most often from prescribed corticosteroid medication and less commonly from endogenous overproduction of cortisol. Iatrogenic Cushing's is common — anyone on supraphysiologic prednisone, dexamethasone, or potent inhaled or topical steroids for more than a few weeks can develop the syndrome — while endogenous Cushing's is rare, with an incidence of 0.7-2.4 cases per million per year. The endogenous form is dominated by Cushing's disease (an ACTH-secreting pituitary adenoma, around 70% of cases) and adrenal cortisol-producing tumors (around 20%), with the remainder caused by ectopic ACTH-secreting tumors. Untreated endogenous Cushing's carries a 5-year mortality of 30-50%, driven by cardiovascular disease, infection, and thromboembolism. With successful surgery or modern medical therapy, mortality approaches that of the general population. Recognizing the syndrome early is the central clinical challenge, because its features — weight gain, hypertension, diabetes, depression — are individually common.",
+
+  "keyStats": {
+    "prevalence": "Endogenous Cushing's: incidence 0.7-2.4 per million per year; prevalence approximately 39-79 per million. Iatrogenic Cushing's: orders of magnitude more common, affecting up to 1% of long-term oral glucocorticoid users",
+    "demographics": "Endogenous Cushing's affects women 3-5 times more than men; peak age 25-50",
+    "avgAge": "Cushing's disease (pituitary) peaks in the third to fifth decade; ectopic ACTH typically in older adults with lung tumors",
+    "globalCases": "Estimated several hundred thousand patients with endogenous Cushing's globally; tens of millions exposed to long-term systemic glucocorticoids"
+  },
+
+  "definition": "Cushing's syndrome (ICD-10: E24) is a clinical disorder caused by chronic exposure to excess glucocorticoid. Aetiologically it is divided into exogenous (iatrogenic) Cushing's, from administration of glucocorticoid medication, and endogenous Cushing's, from unregulated production of cortisol by the adrenal cortex. Endogenous Cushing's is further divided by ACTH dependence: ACTH-dependent forms (around 80%) include Cushing's disease (a pituitary corticotroph adenoma releasing ACTH, around 70% of endogenous cases) and ectopic ACTH syndrome (most often from small-cell lung carcinoma, bronchial or thymic carcinoid, medullary thyroid carcinoma, or pancreatic neuroendocrine tumor); ACTH-independent forms (around 20%) include unilateral cortisol-secreting adrenal adenoma, adrenal carcinoma, primary bilateral macronodular adrenal hyperplasia, and primary pigmented nodular adrenal disease. Cushing's disease is the name given specifically to the pituitary form, originally described by Harvey Cushing in 1932; Cushing's syndrome is the broader clinical phenotype regardless of cause. The syndrome is managed primarily by endocrinology, with neurosurgery, adrenal surgery, oncology, radiation oncology, cardiology, and psychiatry input depending on the underlying lesion and complications.",
+
+  "typesClassification": [
+    { "type": "Iatrogenic (exogenous) Cushing's syndrome", "description": "Caused by exogenous glucocorticoid administration — oral prednisone or dexamethasone, intra-articular or epidural injections, potent topical steroids over large body-surface area, or inhaled high-dose corticosteroids. By far the most common form globally. Reversible on cautious dose reduction." },
+    { "type": "Cushing's disease (pituitary ACTH-secreting adenoma)", "description": "Approximately 70% of endogenous cases. A pituitary corticotroph adenoma — usually a microadenoma under 6 mm — autonomously secretes ACTH, driving bilateral adrenal hyperplasia and cortisol excess. Women affected 3-5 times more often than men." },
+    { "type": "Ectopic ACTH syndrome", "description": "Roughly 10-15% of endogenous Cushing's. Non-pituitary neoplasms (small-cell lung carcinoma, bronchial or thymic carcinoid, pancreatic neuroendocrine tumor, medullary thyroid cancer, pheochromocytoma) secrete ACTH or CRH ectopically. Aggressive presentation with rapid onset, severe hypokalemia, hyperpigmentation, and weight loss in some cancers." },
+    { "type": "Adrenal Cushing's (cortisol-secreting adrenal tumor)", "description": "Roughly 15-20% of endogenous cases. Unilateral cortisol-producing adrenal adenoma (most common), adrenocortical carcinoma (aggressive, often with androgen excess), or bilateral macronodular or micronodular hyperplasia. ACTH is suppressed and the contralateral adrenal is atrophic." },
+    { "type": "Cyclical Cushing's syndrome", "description": "Episodic cortisol hypersecretion with intervals of normal or even subnormal cortisol; can arise from any of the above causes. Diagnosis requires repeated testing during symptomatic phases and a high index of suspicion." },
+    { "type": "Subclinical (mild autonomous cortisol secretion)", "description": "Found in roughly 10-15% of adrenal incidentalomas. Cortisol secretion is mildly autonomous without overt clinical features; nonetheless associated with increased cardiovascular events, diabetes, osteoporosis, and mortality." }
+  ],
+
+  "primarySymptoms": [
+    "Progressive central obesity with truncal weight gain, supraclavicular and dorsocervical fat pads (the so-called moon face and buffalo hump), and relatively thin arms and legs from proximal muscle wasting.",
+    "New or rapidly worsening violaceous abdominal, axillary, and thigh striae more than 1 cm wide — a highly specific sign reflecting collagen loss in the dermis.",
+    "Easy bruising after minor trauma, thin atrophic skin that tears with adhesive removal, and poor wound healing.",
+    "Hypertension with diastolic predominance, frequently resistant to standard antihypertensives.",
+    "New or markedly worsening type 2 diabetes or impaired glucose tolerance from cortisol-driven gluconeogenesis and insulin resistance.",
+    "Proximal muscle weakness — difficulty rising from a chair, climbing stairs, or lifting arms above the head — that often precedes other features by months.",
+    "Hirsutism, acne, oligomenorrhoea or amenorrhoea, and androgenic alopecia in women, particularly in adrenal carcinoma where androgen excess is prominent.",
+    "Mood disturbance — depression, anxiety, irritability, emotional lability, insomnia, and occasionally psychosis — present in up to 70% of patients.",
+    "Recurrent skin and soft-tissue infections, dental caries, and reactivation of latent infections (TB, fungal disease) from immune suppression.",
+    "Low-trauma vertebral or rib fractures and osteoporosis on DEXA, often the presenting complaint in older patients.",
+    "Hyperpigmentation of skin folds, gums, and recent scars in ACTH-dependent disease — most prominent in ectopic ACTH syndrome.",
+    "Polyuria, polydipsia, and weight loss with rapid onset and marked hypokalemia in ectopic ACTH-secreting malignancy."
+  ],
+
+  "earlyWarningSigns": [
+    "Difficulty losing weight despite calorie restriction and rising central waist circumference",
+    "New violaceous striae in unusual locations (axillae, breasts, thighs) within months",
+    "Resistant hypertension requiring three or more antihypertensives in a young adult",
+    "Steroid-induced diabetes following corticosteroid administration",
+    "Vertebral compression fracture in a premenopausal woman or middle-aged man without other risk factors"
+  ],
+
+  "emergencySigns": [
+    "Acute psychosis, severe depression with suicidal ideation, or new manic episode in a patient on glucocorticoids or with suspected Cushing's",
+    "Severe hypokalemia (potassium under 3.0 mmol/L) with metabolic alkalosis — classic for ectopic ACTH and severe Cushing's; risk of arrhythmia",
+    "Active venous thromboembolism (deep vein thrombosis or pulmonary embolism) — Cushing's increases risk 3-10×",
+    "Acute infection, particularly opportunistic (Pneumocystis, candida, herpes) in severely hypercortisolemic patients",
+    "Adrenal crisis after surgical cure or abrupt cessation of long-term glucocorticoid therapy — hypotension, hypoglycemia, vomiting; requires immediate IV hydrocortisone"
+  ],
+
+  "causes": [
+    {
+      "cause": "Exogenous glucocorticoid administration",
+      "description": "Oral prednisone or dexamethasone, intra-articular and epidural injections, potent topical or inhaled steroids over prolonged periods, or megestrol acetate (which has glucocorticoid activity) can all produce iatrogenic Cushing's. By far the most common cause globally and the first to exclude in every patient."
+    },
+    {
+      "cause": "Pituitary corticotroph adenoma (Cushing's disease)",
+      "description": "A monoclonal adenoma of pituitary corticotrope cells autonomously secretes ACTH, driving bilateral adrenal hyperplasia and cortisol excess. Usually a microadenoma (under 6 mm) and challenging to identify on MRI in roughly 40% of cases. USP8 somatic mutations are present in about a third of adenomas."
+    },
+    {
+      "cause": "Ectopic ACTH secretion by non-pituitary tumor",
+      "description": "Small-cell lung carcinoma is the classic cause, but slow-growing neuroendocrine tumors — bronchial carcinoid, thymic carcinoid, pancreatic neuroendocrine tumor, medullary thyroid carcinoma, and pheochromocytoma — can also secrete ACTH. Slow-growing tumors mimic Cushing's disease clinically and biochemically; rapid-growing tumors produce severe acute hypercortisolism with profound hypokalemia."
+    },
+    {
+      "cause": "Cortisol-secreting adrenal adenoma or carcinoma",
+      "description": "Unilateral adrenal tumor produces cortisol independently of ACTH. Adenomas are usually well-defined and benign on imaging; adrenal carcinoma is larger, heterogeneous, and may co-secrete androgens producing virilization. Plasma ACTH is suppressed and the contralateral adrenal is atrophic."
+    },
+    {
+      "cause": "Primary bilateral macronodular or pigmented nodular adrenal disease",
+      "description": "Bilateral adrenal hyperplasia or multiple cortisol-producing nodules that function autonomously. Macronodular forms can be familial (ARMC5 mutations) and may have aberrant expression of GIP, vasopressin, or beta-adrenergic receptors. Primary pigmented nodular adrenocortical disease is part of Carney complex (PRKAR1A mutations)."
+    },
+    {
+      "cause": "Pseudo-Cushing states (functional hypercortisolism)",
+      "description": "Severe alcohol use, depression, anxiety disorders, severe obesity, polycystic ovary syndrome, uncontrolled diabetes, and pregnancy can produce mild biochemical hypercortisolism that mimics Cushing's. Important to identify before invasive testing or surgery."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Long-term systemic or high-potency topical glucocorticoid use", "category": "modifiable", "description": "Risk is dose- and duration-dependent. Prednisone equivalents of 7.5 mg/day or more for several months, repeated joint or epidural injections, and potent topical steroids over large body-surface area are common triggers. Inhaled steroids at high dose (especially in HIV patients on ritonavir-based regimens) can produce systemic Cushing's." },
+    { "factor": "Female sex (endogenous)", "category": "non-modifiable", "description": "Endogenous Cushing's is 3-5 times more common in women, especially Cushing's disease and adrenal adenoma; ectopic ACTH is more often male." },
+    { "factor": "Age 25-50 years (Cushing's disease)", "category": "non-modifiable", "description": "Cushing's disease most often presents in the third to fifth decade; ectopic ACTH and adrenal carcinoma can present at any age." },
+    { "factor": "Pre-existing pituitary or adrenal lesion", "category": "non-modifiable", "description": "Patients with incidentally discovered adrenal adenomas or pituitary microadenomas have a higher prevalence of subclinical and overt Cushing's; screening of incidentalomas is now standard." },
+    { "factor": "Genetic syndromes", "category": "genetic", "description": "Multiple endocrine neoplasia type 1 (MEN1), Carney complex (PRKAR1A), familial isolated pituitary adenoma (AIP), McCune-Albright syndrome (GNAS), and ARMC5 mutations all predispose to Cushing's." },
+    { "factor": "Underlying neuroendocrine tumor", "category": "non-modifiable", "description": "Bronchial, thymic, and pancreatic neuroendocrine tumors and medullary thyroid carcinoma can secrete ACTH ectopically." }
+  ],
+
+  "affectedDemographics": [
+    "Endogenous Cushing's incidence is 0.7-2.4 per million per year in European registries (Etxabe & Vazquez 1994; Lindholm 2001), with similar figures from US and Asian cohorts.",
+    "Female-to-male ratio is approximately 3-5:1 for Cushing's disease and adrenal adenoma; ectopic ACTH is more often male.",
+    "Peak age at diagnosis 25-50 years for Cushing's disease; ectopic ACTH typically in older adults with lung tumors; adrenal Cushing's spans childhood to old age.",
+    "Cushing's during pregnancy is rare but distinct: adrenal adenoma accounts for over half of cases (versus a third outside pregnancy), with high maternal and fetal morbidity.",
+    "Iatrogenic Cushing's affects all ages, sexes, and ethnicities according to glucocorticoid exposure patterns; estimated to affect 1% of patients on chronic oral glucocorticoid therapy."
+  ],
+
+  "diagnosisOverview": "Diagnosis proceeds in three steps: confirm hypercortisolism, determine whether it is ACTH-dependent or independent, and localize the source. The first step is recognition — clinicians should screen any patient with multiple features, particularly violaceous striae, proximal myopathy, easy bruising, supraclavicular fat pads, or resistant hypertension and diabetes appearing together. Screening tests recommended by the Endocrine Society are: 24-hour urinary free cortisol (collected over 2-3 separate days), late-night salivary cortisol (collected at 23:00 on two separate evenings; ideally a normal cortisol nadir is below 4 nmol/L or 1.5 ng/mL), and the overnight 1 mg dexamethasone suppression test (suppression of plasma cortisol to under 50 nmol/L or 1.8 µg/dL excludes Cushing's). Two positive screening tests confirm hypercortisolism. Once hypercortisolism is confirmed, plasma ACTH separates ACTH-dependent (ACTH >15 pg/mL) from ACTH-independent (ACTH <5 pg/mL) disease. In ACTH-dependent cases, MRI of the pituitary, high-dose dexamethasone suppression, and inferior petrosal sinus sampling (IPSS) distinguish Cushing's disease from ectopic ACTH syndrome — IPSS achieves over 95% accuracy in experienced centres. CRH stimulation and desmopressin testing are sometimes used. In ACTH-independent disease, CT or MRI of the adrenals localizes the lesion. For ectopic disease, 68Ga-DOTATATE PET-CT, octreoscan, and chest-abdomen CT search for occult neuroendocrine tumors. Pseudo-Cushing states require dexamethasone-CRH testing or repeated late-night salivary cortisol once the suspected trigger (alcohol, depression, severe stress) is controlled.",
+
+  "diagnosticTests": [
+    { "test": "Late-night salivary cortisol", "purpose": "Detects loss of normal evening cortisol nadir — a sensitive screen for hypercortisolism", "whatToExpect": "Patient collects saliva by passive drool or cotton swab at 23:00 on two separate nights, after avoiding food, drink, and smoking for 30 minutes. Samples are mailed to the lab; results in 1-2 weeks." },
+    { "test": "24-hour urinary free cortisol (×2-3 collections)", "purpose": "Quantifies integrated cortisol production over 24 hours", "whatToExpect": "Patient collects all urine over a 24-hour period and brings it on ice to the lab. Two or three separate collections increase sensitivity. Result in 3-7 days." },
+    { "test": "Overnight 1 mg dexamethasone suppression test", "purpose": "Screens for loss of normal cortisol suppression in response to exogenous glucocorticoid", "whatToExpect": "Patient takes 1 mg dexamethasone orally at 23:00 and has plasma cortisol measured the next morning at 08:00-09:00. Same-day result; values under 50 nmol/L exclude Cushing's." },
+    { "test": "Plasma ACTH and high-dose (8 mg) dexamethasone suppression test", "purpose": "Distinguishes ACTH-dependent from ACTH-independent Cushing's and helps separate pituitary from ectopic ACTH", "whatToExpect": "A morning blood draw for ACTH followed (if needed) by 8 mg dexamethasone test over 2 days with serum and urine cortisol measurement. Suppression of more than 50% favors pituitary disease; failure to suppress suggests ectopic ACTH." },
+    { "test": "Pituitary MRI with dynamic contrast", "purpose": "Identifies pituitary corticotroph adenoma; sensitivity around 60-70% even with optimal protocols", "whatToExpect": "30-45 minutes lying still in the scanner with gadolinium contrast. Result within 24 hours; microadenomas under 4 mm may be missed and require IPSS." },
+    { "test": "Inferior petrosal sinus sampling (IPSS) with CRH stimulation", "purpose": "Gold standard for distinguishing Cushing's disease from ectopic ACTH; can also lateralize the pituitary adenoma", "whatToExpect": "Interventional radiology procedure under conscious sedation: catheters are placed via the femoral veins into both inferior petrosal sinuses and ACTH is sampled at baseline and after CRH stimulation. 60-90 minutes; mild groin bruising. Results within hours." },
+    { "test": "CT or MRI of the adrenals", "purpose": "Localizes cortisol-secreting adrenal adenoma, carcinoma, or bilateral hyperplasia in ACTH-independent disease", "whatToExpect": "Standard cross-sectional imaging; result within 24 hours. Adrenal carcinoma is usually larger than 4 cm, heterogeneous, with delayed contrast washout." },
+    { "test": "68Ga-DOTATATE PET-CT", "purpose": "Localizes occult ectopic ACTH-secreting neuroendocrine tumors when CT and MRI are negative", "whatToExpect": "Injected somatostatin-receptor tracer followed by PET-CT scan, 2-3 hours total. Available at specialized centres; results within 24-48 hours." }
+  ],
+
+  "treatmentOverview": "Treatment depends on the underlying cause and aims to normalize cortisol, treat the source, and reverse complications. Iatrogenic Cushing's is managed by the slowest possible glucocorticoid taper to minimize adrenal insufficiency while resolving Cushing's features. For Cushing's disease, first-line therapy is transsphenoidal endoscopic pituitary surgery performed by a high-volume pituitary surgeon; cure rates are 65-90% for microadenomas and 50-70% for macroadenomas, with adenoma-specific complications under 5% at experienced centres. When surgery fails or is contraindicated, second-line options include repeat surgery, stereotactic or fractionated pituitary radiotherapy, medical therapy with adrenal-blocking agents (ketoconazole, metyrapone, osilodrostat, mitotane) or pituitary-targeted agents (pasireotide, cabergoline), and bilateral adrenalectomy as a last resort. For adrenal Cushing's, laparoscopic adrenalectomy of the affected gland is curative for adenoma and the primary treatment for resectable carcinoma, with adjuvant mitotane and chemotherapy for advanced or recurrent carcinoma. For ectopic ACTH syndrome, treatment of the underlying tumor (surgical resection of carcinoid, chemotherapy for small-cell lung cancer) is the goal; medical therapy is used to control cortisol pre-operatively or when the tumor is unresectable. All severely hypercortisolemic patients need prophylactic anticoagulation, antibiotic prophylaxis (Pneumocystis), close glucose and potassium monitoring, and gradual postoperative glucocorticoid replacement to manage transient or permanent adrenal insufficiency. Mortality in untreated endogenous Cushing's is roughly 5-fold higher than the general population; with biochemical control mortality approaches that of unaffected controls.",
+
+  "medicalTreatments": [
+    { "name": "Ketoconazole 200-400 mg orally 2-3 times daily", "description": "Inhibits multiple cytochrome P450 enzymes in adrenal steroidogenesis. First-line oral agent in many countries because of cost and clinical experience. Hepatotoxicity in 5-15% requires baseline and monthly liver function tests.", "effectiveness": "Cortisol normalization in 50-75% of patients; widely used while awaiting surgery or radiotherapy effect" },
+    { "name": "Osilodrostat (Isturisa) 2-30 mg orally twice daily", "description": "Potent oral inhibitor of 11β-hydroxylase (and to a lesser extent aldosterone synthase). Rapid cortisol normalization; main side-effects are hypokalemia, hyperandrogenism, and QT prolongation.", "effectiveness": "Mean urinary free cortisol normalization in 86% at 24 weeks in LINC-3 (Pivonello NEJM 2020, PMID 32027909); 81% at 48 weeks in LINC-4 (Newell-Price Lancet Diabetes Endocrinol 2021)" },
+    { "name": "Metyrapone 250-1000 mg orally three to four times daily", "description": "Inhibits 11β-hydroxylase; used for short-term control before surgery and longer-term in resistant cases. Side-effects include adrenal androgen excess (hirsutism, acne), hypertension, and gastrointestinal upset.", "effectiveness": "Cortisol normalization in 50-75% in single-centre series; widely used in Europe" },
+    { "name": "Pasireotide (Signifor) 0.3-0.9 mg subcutaneous twice daily or 10-30 mg intramuscular monthly", "description": "Somatostatin receptor ligand acting on pituitary corticotroph adenoma. First medical therapy specifically approved for Cushing's disease (2012); hyperglycemia in 70% is the main limitation.", "effectiveness": "Urinary free cortisol normalization in 26-41% at 6-12 months in pivotal trials; better response in mild-to-moderate disease" },
+    { "name": "Cabergoline 0.5-3 mg orally weekly", "description": "Dopamine agonist with off-label use in Cushing's disease, particularly when residual disease persists after surgery. Generally well tolerated; rare valvular regurgitation at high doses.", "effectiveness": "Sustained cortisol control in approximately 30% of patients in single-centre studies" },
+    { "name": "Mitotane (Lysodren) 0.5-6 g orally daily", "description": "Adrenolytic agent used in advanced adrenal carcinoma and as long-term medical adrenalectomy. Slow onset (weeks-months); requires therapeutic drug monitoring (target 14-20 mg/L). Significant gastrointestinal, neurological, and hormonal toxicity.", "effectiveness": "Adrenal cortisol control in 75% at 6-12 months in expert centres; primary adjuvant in adrenocortical carcinoma" },
+    { "name": "Mifepristone 300-1200 mg orally daily", "description": "Glucocorticoid receptor antagonist approved for hyperglycemia in Cushing's syndrome. Does not lower cortisol; treats the metabolic consequences. Cortisol cannot be used to monitor efficacy because levels rise.", "effectiveness": "Glycemic improvement in 60% at 24 weeks in SEISMIC trial; weight loss and blood-pressure improvement common" },
+    { "name": "Hydrocortisone replacement after surgical cure", "description": "Most patients require glucocorticoid replacement for months to years after successful surgery while the suppressed hypothalamic-pituitary-adrenal axis recovers. Standard regimen 15-25 mg/day in divided doses, with stress-dose adjustments.", "effectiveness": "Prevents adrenal crisis; HPA axis recovers fully in roughly 70% of patients within 12-24 months" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Transsphenoidal endoscopic pituitary surgery", "description": "First-line treatment for Cushing's disease performed via the nasal sinus. Selective adenomectomy preserves pituitary function in most patients. High-volume centres consistently achieve better outcomes.", "successRate": "Cure rates 65-90% for microadenomas and 50-70% for macroadenomas; recurrence rate 10-25% over 10 years" },
+    { "name": "Laparoscopic adrenalectomy", "description": "Standard treatment for unilateral cortisol-secreting adrenal adenoma. Day-case or one-night stay in most centres. Postoperative hydrocortisone replacement is needed because the contralateral gland is suppressed.", "successRate": "Cure rate over 95% for benign adenoma; contralateral adrenal function typically recovers within 6-18 months" },
+    { "name": "Open adrenalectomy for adrenocortical carcinoma", "description": "Open en-bloc resection is the standard for suspected or known adrenocortical carcinoma to preserve oncological margins. Adjuvant mitotane is added based on Ki-67, tumor stage, and margin status.", "successRate": "5-year overall survival 40-55% for localized resectable disease; under 20% for metastatic disease" },
+    { "name": "Bilateral adrenalectomy", "description": "Last-resort treatment for Cushing's disease unresponsive to pituitary surgery, radiotherapy, and medical therapy. Produces immediate cortisol control at the cost of lifelong glucocorticoid and mineralocorticoid replacement. Nelson syndrome — corticotroph adenoma growth after adrenalectomy — occurs in approximately 20%.", "successRate": "Immediate biochemical control in over 95%; trade-off is lifelong adrenal insufficiency" },
+    { "name": "Surgical resection of ectopic ACTH-secreting tumor", "description": "Definitive treatment of bronchial or thymic carcinoid, pancreatic NET, or medullary thyroid carcinoma producing ectopic ACTH. Pre-operative medical control of cortisol is required.", "successRate": "Cure rate for localized carcinoid 60-80%; outcomes for small-cell lung cancer depend on tumor stage and chemotherapy response" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Pituitary radiotherapy (stereotactic radiosurgery or fractionated radiotherapy)", "description": "Indicated for residual or recurrent Cushing's disease after surgery, or as primary treatment when surgery is contraindicated. Stereotactic radiosurgery (gamma knife) is single-session; fractionated radiotherapy is delivered over 4-6 weeks. Onset of cortisol control takes 12-36 months." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "transsphenoidal-pituitary-surgery",
+    "adrenalectomy",
+    "pituitary-radiosurgery",
+    "ketoconazole-therapy"
+  ],
+
+  "whySeeSpecialist": "Cushing's diagnosis and management are highly subspecialty-dependent. An endocrinologist with experience in pituitary and adrenal disease coordinates testing, interprets discordant results, and selects between medical and surgical options. Pituitary or adrenal surgery should be performed by high-volume surgeons because outcomes correlate strongly with operative volume.",
+  "doctorSelectionGuide": "Choose an endocrinologist affiliated with a designated pituitary or neuroendocrine centre, ideally with access to inferior petrosal sinus sampling, dynamic pituitary MRI, and the full range of medical therapies. For pituitary surgery, look for a neurosurgeon performing at least 50 transsphenoidal cases per year and reporting cure rates with hormone-specific follow-up data.",
+
+  "hospitalCriteria": [
+    "Endocrinology service with experience in Cushing's diagnostic algorithms",
+    "Pituitary-dedicated neurosurgical team performing >50 transsphenoidal cases/year",
+    "Interventional radiology team experienced in inferior petrosal sinus sampling",
+    "Laparoscopic adrenal surgery service and high-volume oncology service for adrenocortical carcinoma",
+    "Stereotactic radiosurgery and fractionated radiotherapy availability"
+  ],
+  "keyFacilities": [
+    "Designated pituitary and neuroendocrine tumor centres",
+    "Tertiary endocrinology departments with cortisol and ACTH assay reliability",
+    "Interventional radiology suites for IPSS",
+    "Adrenal surgery services within urology or general surgery",
+    "Pituitary-radiotherapy and stereotactic-radiosurgery units"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Use the lowest effective dose of glucocorticoid for the shortest necessary time; review chronic prescriptions every 3-6 months.",
+    "Prefer topical, inhaled, or local injection routes when systemic therapy can be avoided.",
+    "Avoid concomitant use of CYP3A4 inhibitors (ritonavir, itraconazole) with potent inhaled steroids, which can cause iatrogenic Cushing's.",
+    "Screen adrenal incidentalomas larger than 1 cm for autonomous cortisol secretion at diagnosis.",
+    "Educate patients on chronic glucocorticoids about adrenal insufficiency risk and provide a steroid card or medical-alert bracelet.",
+    "Schedule regular bone-density assessment and vitamin D / calcium repletion in any patient on glucocorticoids longer than 3 months."
+  ],
+
+  "lifestyleModifications": [
+    "Adhere strictly to prescribed medical therapy and attend cortisol monitoring appointments.",
+    "Carry an emergency steroid kit and identification once on replacement therapy.",
+    "Maintain regular sleep schedule; cortisol excess severely disrupts sleep architecture.",
+    "Track weight, blood pressure, and home glucose closely during active disease.",
+    "Reduce salt intake to manage volume overload and hypertension.",
+    "Engage in resistance training under physiotherapy supervision to counter steroid-induced myopathy."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein diet (1.2-1.5 g/kg/day) to counter muscle wasting",
+      "Calcium- and vitamin-D-rich foods (dairy or fortified alternatives) to protect bone",
+      "Potassium-rich foods (bananas, oranges, leafy greens) in patients on ketoconazole or osilodrostat with hypokalemia",
+      "Mediterranean-pattern diet to address coexisting diabetes and dyslipidemia"
+    ],
+    "avoid": [
+      "Excess salt and processed foods that worsen hypertension and edema",
+      "Refined carbohydrates and sugary drinks that worsen steroid-induced hyperglycemia",
+      "Excessive alcohol that contributes to bone loss and hepatotoxicity (relevant on ketoconazole)",
+      "Grapefruit juice if taking ketoconazole or osilodrostat — CYP3A4 interaction"
+    ]
+  },
+  "exerciseGuidelines": "Resistance training under physiotherapy supervision (twice weekly) is the most effective intervention against proximal myopathy. Low-impact aerobic activity (walking, swimming) protects against deconditioning. Avoid high-impact loading during severe osteoporosis; falls prevention is essential.",
+
+  "dailyManagement": [
+    "Take cortisol-lowering medications at fixed times to maintain steady levels.",
+    "Self-monitor blood pressure and home glucose if abnormalities are present.",
+    "Track weight weekly during active treatment and after surgery to detect adrenal insufficiency.",
+    "Apply broad-spectrum sun protection because thin steroid-affected skin burns easily.",
+    "Attend periodic ophthalmology follow-up if pituitary surgery has affected vision.",
+    "Carry emergency hydrocortisone after pituitary or adrenal surgery for sick-day use."
+  ],
+
+  "prognosis": "Outlook is excellent with timely diagnosis and effective treatment, and dismal without it. Untreated endogenous Cushing's carries 5-year mortality of 30-50%, driven by cardiovascular events, thromboembolism, opportunistic infection, and metabolic complications. With surgical or medical control of cortisol, mortality falls and approaches that of the general population, although some excess cardiovascular risk persists for years. Pituitary surgery cures 65-90% of microadenomas and 50-70% of macroadenomas at first operation; recurrence develops in 10-25% over a decade and requires lifelong surveillance with late-night salivary cortisol and 24-hour urinary free cortisol. Adrenal adenoma is cured by laparoscopic adrenalectomy in over 95%. Adrenocortical carcinoma has a much poorer outlook, with 5-year overall survival of 40-55% for localized resectable disease and under 20% for metastatic disease. Reversal of physical features after successful treatment is substantial — striae fade and muscle bulk returns within 6-18 months — but bone loss recovers slowly and cognitive and mood symptoms may take 1-3 years to improve. Up to 50% of patients have persistent quality-of-life impairment after biochemical cure, justifying long-term multidisciplinary follow-up.",
+
+  "recoveryTimeline": "Weeks 1-4: cortisol control after surgery or with osilodrostat/metyrapone; adrenal insufficiency requires hydrocortisone cover. Months 1-6: blood pressure, glucose, and electrolytes normalize; muscle strength begins to return. Months 6-12: weight redistributes from central to peripheral; striae fade from violaceous to pale; menstrual cycles resume. Years 1-3: bone density recovers slowly; cognitive and mood symptoms improve. HPA axis recovers in roughly 70% of patients by 24 months after surgical cure.",
+
+  "complications": [
+    "Cardiovascular disease — accelerated atherosclerosis, hypertension, dyslipidemia, and arrhythmia; persistent cardiovascular risk even after cure.",
+    "Venous thromboembolism — 3-10× increased risk; routine pharmacological prophylaxis around surgery is standard.",
+    "Type 2 diabetes mellitus and impaired glucose tolerance; often improves with cortisol control but persists in roughly 30%.",
+    "Osteoporosis and low-trauma fractures — universal in active disease; bone-density recovery is slow and incomplete.",
+    "Opportunistic infections (Pneumocystis, candida, herpes zoster, atypical mycobacteria) during active hypercortisolism.",
+    "Psychiatric morbidity — depression, anxiety, cognitive impairment, occasional psychosis; long-term impact on quality of life is the most underappreciated complication.",
+    "Adrenal insufficiency or crisis after surgical cure or rapid taper; lifelong steroid-card and education essential.",
+    "Nelson syndrome (corticotroph adenoma expansion with hyperpigmentation and pituitary enlargement) after bilateral adrenalectomy in roughly 20%."
+  ],
+
+  "supportResources": [
+    { "name": "Cushing's Support and Research Foundation (CSRF)", "url": "https://csrf.net/", "description": "Patient-led non-profit providing education, peer support, and an annual conference for patients with all forms of Cushing's." },
+    { "name": "Pituitary Network Association", "url": "https://pituitary.org/", "description": "US-based patient organisation covering pituitary tumors including Cushing's disease, with surgeon directories and patient guides." },
+    { "name": "American Association of Clinical Endocrinology (AACE)", "url": "https://pro.aace.com/clinical-guidance/disease-state-resources/cushings-syndrome", "description": "Professional resources and patient-facing guidance on Cushing's syndrome diagnosis and treatment." },
+    { "name": "Endocrine Society Clinical Practice Guideline — Treatment of Cushing's Syndrome", "url": "https://pubmed.ncbi.nlm.nih.gov/26222757/", "description": "Authoritative guideline by Nieman et al. 2015 covering modern surgical and medical management." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "pcos", "name": "PCOS", "keyDifference": "Polycystic ovary syndrome and Cushing's both produce weight gain, irregular periods, hirsutism, acne, and insulin resistance. PCOS shows normal cortisol, normal dexamethasone suppression, and polycystic ovarian morphology on ultrasound. Cushing's adds violaceous striae, proximal myopathy, easy bruising, and abnormal cortisol testing." },
+    { "slug": "metabolic-syndrome-e8881", "name": "Metabolic syndrome", "keyDifference": "Metabolic syndrome combines central obesity, hypertension, dyslipidemia, and impaired glucose tolerance without abnormal cortisol. Pseudo-Cushing biochemical changes can occur in severe obesity but cortisol normalizes with weight loss. True Cushing's shows persistently elevated cortisol with characteristic catabolic features." },
+    { "slug": "depression", "name": "Depression", "keyDifference": "Severe depression can produce mild hypercortisolism (pseudo-Cushing) without the catabolic phenotype. Late-night salivary cortisol is more often equivocal and dexamethasone-CRH testing clarifies. True Cushing's has progressive proximal weakness, striae, and bruising not seen in depression alone." },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus", "keyDifference": "Type 2 diabetes is overwhelmingly more common and shares features with Cushing's (weight gain, hypertension, glucose intolerance). Cushing's adds catabolic features (myopathy, striae, bruising) and is confirmed with abnormal cortisol testing. Up to 5% of poorly controlled diabetes patients have unrecognized Cushing's." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" },
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "osteoporosis", "name": "Osteoporosis" },
+    { "slug": "depression", "name": "Depression" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "pituitary-disorders", "name": "Pituitary Disorders", "relevance": "Cushing's disease is the most clinically dangerous pituitary disorder; broader pituitary evaluation and follow-up apply." },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus", "relevance": "Cortisol-driven insulin resistance frequently produces secondary diabetes; treatment overlap with metformin and insulin." },
+    { "slug": "hypertension", "name": "High Blood Pressure", "relevance": "Resistant hypertension is a hallmark; cortisol excess engages mineralocorticoid receptors and the renin-angiotensin system." },
+    { "slug": "osteoporosis", "name": "Osteoporosis", "relevance": "Cortisol-induced bone resorption causes accelerated bone loss; secondary osteoporosis workup must include Cushing's." },
+    { "slug": "depression", "name": "Depression", "relevance": "Cortisol excess is both a cause and a mimic of depression; cortisol screening is reasonable in treatment-resistant depression with metabolic features." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Cushing's syndrome?",
+      "answer": "Cushing's syndrome is the clinical condition caused by chronically high levels of the stress hormone cortisol. It can result from prescribed corticosteroid medication or from a tumor that overproduces cortisol or ACTH. Untreated, it causes weight gain, hypertension, diabetes, bone loss, mood change, and increased mortality.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between Cushing's syndrome and Cushing's disease?",
+      "answer": "Cushing's syndrome is the broader clinical phenotype of cortisol excess from any cause. Cushing's disease is the specific subtype caused by an ACTH-secreting pituitary adenoma — Harvey Cushing's original 1932 description. About 70% of endogenous Cushing's syndrome is Cushing's disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes Cushing's syndrome?",
+      "answer": "By far the most common cause is prescribed glucocorticoid medication (iatrogenic Cushing's). Endogenous causes are rare and include pituitary adenomas (Cushing's disease, 70%), adrenal tumors (15-20%), and ectopic ACTH from lung or other neuroendocrine tumors (10-15%).",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of Cushing's syndrome?",
+      "answer": "Early features include progressive central weight gain, new violaceous striae, easy bruising, proximal muscle weakness (difficulty climbing stairs), resistant hypertension, and new or worsening diabetes. Mood change and sleep disturbance often precede physical findings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Cushing's syndrome diagnosed?",
+      "answer": "Diagnosis is a three-step process. First, hypercortisolism is confirmed with two of three tests: late-night salivary cortisol, 24-hour urinary free cortisol, or overnight 1 mg dexamethasone suppression. Plasma ACTH then divides cases into ACTH-dependent or independent. Pituitary or adrenal imaging and sometimes inferior petrosal sinus sampling localize the source.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Cushing's syndrome curable?",
+      "answer": "Yes, in most cases. Pituitary surgery cures 65-90% of Cushing's disease microadenomas; adrenal surgery cures over 95% of cortisol-producing adenomas. Iatrogenic Cushing's resolves with gradual glucocorticoid taper. Adrenocortical carcinoma and ectopic ACTH from malignant tumors have a more variable cure rate.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is iatrogenic Cushing's syndrome?",
+      "answer": "Iatrogenic Cushing's is caused by exogenous glucocorticoid medication — oral prednisone or dexamethasone, joint or epidural steroid injections, potent topical or inhaled steroids — used in supraphysiologic doses for weeks to months. It is the most common form of Cushing's and reverses with slow steroid taper.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the main treatment for Cushing's disease?",
+      "answer": "First-line treatment is transsphenoidal pituitary surgery to remove the ACTH-secreting adenoma. Cure rates reach 90% for microadenomas in high-volume centres. When surgery fails or is contraindicated, second-line options include radiotherapy, medical therapy (osilodrostat, ketoconazole, pasireotide), and bilateral adrenalectomy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to recover from Cushing's syndrome?",
+      "answer": "Cortisol levels normalize within days to weeks after surgical or medical treatment. Physical features fade gradually: muscle strength returns within 3-6 months, striae fade from purple to pale over 12-18 months, and weight redistributes over a year. Bone density and cognitive function recover slowly over 1-3 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause Cushing's syndrome?",
+      "answer": "Severe psychological stress, depression, and uncontrolled alcohol use can produce mild biochemical hypercortisolism known as pseudo-Cushing. It is reversible with treatment of the underlying problem and does not produce true catabolic features such as striae, proximal myopathy, or easy bruising.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Cushing's syndrome hereditary?",
+      "answer": "Most cases are sporadic, but several genetic syndromes predispose to endocrine tumors that can cause Cushing's, including multiple endocrine neoplasia type 1 (MEN1), Carney complex (PRKAR1A), and familial isolated pituitary adenoma (AIP). Familial macronodular adrenal hyperplasia is associated with ARMC5 mutations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate of Cushing's syndrome?",
+      "answer": "Untreated endogenous Cushing's has 5-year mortality of 30-50%, mainly from cardiovascular disease, infection, and thromboembolism. With successful surgery or medical control of cortisol, mortality approaches that of the general population, although some residual cardiovascular risk persists.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does Cushing's syndrome cause moon face?",
+      "answer": "Chronic cortisol excess redistributes adipose tissue centrally, depositing fat in the face, supraclavicular fossae, and dorsocervical area while wasting subcutaneous fat from the limbs. The rounding of the facial contour is termed moon face and is a hallmark of established Cushing's.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get Cushing's syndrome?",
+      "answer": "Yes, although it is rare. Pediatric Cushing's most often arises from pituitary microadenomas or adrenal adenomas; carcinoma is more common than in adults. Growth arrest combined with weight gain in a child is the most characteristic clue and should prompt cortisol testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is inferior petrosal sinus sampling done?",
+      "answer": "Inferior petrosal sinus sampling (IPSS) is performed by an interventional radiologist who advances catheters through the groin veins into both petrosal sinuses below the pituitary. ACTH is measured at baseline and after CRH stimulation. A high central-to-peripheral ratio confirms a pituitary source with over 95% accuracy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is osilodrostat?",
+      "answer": "Osilodrostat is an oral medication approved in 2020 for Cushing's disease. It inhibits the 11β-hydroxylase enzyme in cortisol synthesis and produces rapid cortisol normalization in roughly 86% of patients at 24 weeks. The main side-effects are hypokalemia, hyperandrogenism, and QT prolongation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Cushing's syndrome cause infertility?",
+      "answer": "Yes. Cortisol excess suppresses gonadotropin secretion, causing amenorrhea or oligomenorrhoea in 70-80% of women and erectile dysfunction in many men. Most reproductive function returns after biochemical control, but adrenal androgen excess from adrenal carcinoma can produce persistent hirsutism and virilization.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Nelson syndrome?",
+      "answer": "Nelson syndrome is the rapid growth of a pituitary corticotroph adenoma after bilateral adrenalectomy for Cushing's disease, occurring in roughly 20% of such patients. It produces increasing hyperpigmentation, headache, and visual loss. Pituitary irradiation around the time of adrenalectomy reduces the risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Cushing's syndrome be misdiagnosed?",
+      "answer": "Yes. The features overlap with very common conditions — obesity, type 2 diabetes, hypertension, PCOS, depression — and diagnosis is often delayed by 2-5 years. Repeated weight gain with hypertension and diabetes in a young adult, especially with striae or proximal weakness, warrants cortisol screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do you need lifelong medication after Cushing's surgery?",
+      "answer": "Most patients require hydrocortisone replacement for months to years after successful surgery while the suppressed hypothalamic-pituitary-adrenal axis recovers. About 70% recover full function within 24 months and can stop replacement. After bilateral adrenalectomy or recurrent disease, replacement may be lifelong.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What follow-up is needed after Cushing's treatment?",
+      "answer": "Long-term follow-up includes annual or biannual late-night salivary cortisol and 24-hour urinary free cortisol to detect recurrence, monitoring of blood pressure, glucose, lipids, and bone density, and surveillance of pituitary or adrenal imaging. Cushing's disease can recur years after apparent cure.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Cushing's syndrome (cortisol excess)",
+  "regionalNames": [
+    { "name": "Hypercortisolism", "region": "Global academic", "language": "English" },
+    { "name": "Cushing's disease", "region": "Global", "language": "English" },
+    { "name": "Síndrome de Cushing", "region": "Hispanophone", "language": "Spanish" },
+    { "name": "Syndrome de Cushing", "region": "Francophone", "language": "French" },
+    { "name": "कुशिंग सिंड्रोम", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "Cushing's syndrome",
+    "Cushing syndrome",
+    "Cushing's disease",
+    "hypercortisolism",
+    "ACTH-dependent Cushing's",
+    "ectopic ACTH",
+    "pituitary adenoma cortisol",
+    "adrenal adenoma",
+    "moon face",
+    "buffalo hump",
+    "abdominal striae",
+    "dexamethasone suppression test",
+    "late-night salivary cortisol",
+    "osilodrostat",
+    "ketoconazole Cushing",
+    "transsphenoidal surgery"
+  ],
+  "symptomKeywords": [
+    "round face weight gain hypertension",
+    "purple stretch marks young adult",
+    "proximal muscle weakness climbing stairs",
+    "easy bruising thin skin",
+    "resistant hypertension young woman",
+    "new diabetes weight gain depression",
+    "vertebral fracture young woman"
+  ],
+
+  "metaTitle": "Cushing's Syndrome: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Cushing's syndrome and disease: cortisol excess from steroids or pituitary/adrenal tumors. Symptoms, dexamethasone testing, surgery, osilodrostat reviewed.",
+
+  "keywords": [
+    "Cushing's syndrome",
+    "Cushing's disease",
+    "hypercortisolism",
+    "ACTH-secreting adenoma",
+    "ectopic ACTH",
+    "adrenal Cushing",
+    "iatrogenic Cushing",
+    "dexamethasone suppression test",
+    "late-night salivary cortisol",
+    "osilodrostat",
+    "ketoconazole",
+    "pasireotide",
+    "transsphenoidal surgery",
+    "Cushing diagnosis"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Lacroix A, Feelders RA, Stratakis CA, Nieman LK. 2015. Cushing's syndrome. Lancet 386(9996):913-27.", "url": "https://pubmed.ncbi.nlm.nih.gov/26004339/", "accessedDate": "2026-05-14" },
+    { "title": "Nieman LK, Biller BMK, Findling JW, et al. 2008. The diagnosis of Cushing's syndrome: an Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab 93(5):1526-40.", "url": "https://pubmed.ncbi.nlm.nih.gov/18334580/", "accessedDate": "2026-05-14" },
+    { "title": "Newell-Price J, Bertagna X, Grossman AB, Nieman LK. 2006. Cushing's syndrome. Lancet 367(9522):1605-17.", "url": "https://pubmed.ncbi.nlm.nih.gov/16698415/", "accessedDate": "2026-05-14" },
+    { "title": "Pivonello R, De Leo M, Cozzolino A, Colao A. 2015. The treatment of Cushing's disease. Endocrine Reviews 36(4):385-486.", "url": "https://pubmed.ncbi.nlm.nih.gov/26067718/", "accessedDate": "2026-05-14" },
+    { "title": "Nieman LK, Biller BMK, Findling JW, et al. 2015. Treatment of Cushing's syndrome: an Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab 100(8):2807-31.", "url": "https://pubmed.ncbi.nlm.nih.gov/26222757/", "accessedDate": "2026-05-14" },
+    { "title": "Pivonello R, Fleseriu M, Newell-Price J, et al. 2020. Efficacy and safety of osilodrostat in patients with Cushing's disease (LINC 3): a multicentre phase III study. Lancet Diabetes Endocrinol 8(9):748-761.", "url": "https://pubmed.ncbi.nlm.nih.gov/32730798/", "accessedDate": "2026-05-14" },
+    { "title": "Clayton RN, Jones PW, Reulen RC, et al. 2016. Mortality in patients with Cushing's disease more than 10 years after remission: a multicentre, multinational, retrospective cohort study. Lancet Diabetes Endocrinol 4(7):569-576.", "url": "https://pubmed.ncbi.nlm.nih.gov/27265184/", "accessedDate": "2026-05-14" },
+    { "title": "Bertagna X, Guignat L, Groussin L, Bertherat J. 2009. Cushing's disease. Best Pract Res Clin Endocrinol Metab 23(5):607-23.", "url": "https://pubmed.ncbi.nlm.nih.gov/19945026/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}
