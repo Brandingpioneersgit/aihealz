@@ -57,7 +57,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | lyme-disease | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | yellow-fever | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | schizophrenia | 1 | Psychiatrist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| leishmaniasis | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| leishmaniasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,248 words, 21 FAQs (all schemaEligible), 8 sources; row 580 |
 | leptospirosis | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | cholesteatoma | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | farmers-lung | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
