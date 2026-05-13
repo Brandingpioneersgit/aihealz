@@ -9,7 +9,7 @@ set -euo pipefail
 SERVER_USER="${SERVER_USER:-root}"
 SERVER_IP="${SERVER_IP:?Set SERVER_IP=<ip-or-hostname> before running}"
 SERVER_PORT="${SERVER_PORT:-22}"
-DEPLOY_PATH="${DEPLOY_PATH:-/home/aihealz.com/public_html}"
+DEPLOY_PATH="${DEPLOY_PATH:-/opt/aihealz}"
 APP_NAME="${APP_NAME:-aihealz}"
 
 echo "🚀 Starting AIHEALZ deployment..."
@@ -21,6 +21,10 @@ echo "📦 Step 1: Installing dependencies..."
 npm ci --production=false
 
 echo ""
+echo "🧬 Step 1.5: Generating Prisma client (local)..."
+npx prisma generate
+
+echo ""
 echo "🔨 Step 2: Building application..."
 npm run build
 
@@ -30,22 +34,25 @@ echo "📤 Step 3: Syncing files to server..."
 rsync -avz --delete \
     --exclude 'node_modules' \
     --exclude '.git' \
-    --exclude '.env' \
-    --exclude '.env.local' \
-    --exclude '.env.production' \
+    --exclude '.env*' \
     --exclude 'secrets/' \
     --exclude '*.sql.gz' \
     --exclude '*.dump' \
     --exclude 'prisma/dev.db*' \
     --exclude '.next/cache' \
+    --exclude '.next/dev' \
+    --exclude '.next/diagnostics' \
+    --exclude 'logs' \
+    --exclude '.planning' \
+    --exclude 'tasks' \
     -e "ssh -p ${SERVER_PORT}" \
     ./ ${SERVER_USER}@${SERVER_IP}:${DEPLOY_PATH}/
 
 # Step 4: Install production dependencies and restart on server
 echo ""
 echo "🔧 Step 4: Setting up server..."
-ssh -p ${SERVER_PORT} ${SERVER_USER}@${SERVER_IP} << 'ENDSSH'
-cd /home/aihealz.com/public_html
+ssh -p ${SERVER_PORT} ${SERVER_USER}@${SERVER_IP} "DEPLOY_PATH=${DEPLOY_PATH} bash -s" << 'ENDSSH'
+cd "$DEPLOY_PATH"
 
 # Install production dependencies
 echo "Installing production dependencies..."
