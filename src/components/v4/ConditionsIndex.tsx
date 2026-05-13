@@ -100,7 +100,7 @@ export default function ConditionsIndex({
                     }}
                 />
                 <select
-                    className="v4-select"
+                    className="v4-select v4-filter-select"
                     value={severity}
                     onChange={(e) => setSeverity(e.target.value as typeof severity)}
                     style={{ flex: '0 0 200px' }}

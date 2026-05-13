@@ -440,6 +440,51 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   .v4-steps-row > *:last-child { border-bottom: none; }
 }
 
+/* Provider/admin dashboards: stack the fixed-width sidebar above main
+   content on mobile so the main column gets full viewport width. */
+@media (max-width: 900px) {
+  .v4-dashboard-shell { flex-direction: column !important; }
+  .v4-dashboard-sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--rule);
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+  .v4-dashboard-sidebar nav { flex-direction: row !important; flex-wrap: wrap; gap: 4px !important; }
+  .v4-dashboard-sidebar nav button,
+  .v4-dashboard-sidebar nav a { flex: 0 1 auto !important; }
+  /* Lab/admin shells that pin a fixed sidebar to the viewport edge:
+     unpin it and let it flow as a top bar on mobile so the main area
+     doesn't sit under marginLeft: 240. */
+  .v4-fixed-sidebar {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    padding: 12px 16px !important;
+    border-right: none !important;
+    border-bottom: 1px solid #1A3052;
+  }
+  .v4-fixed-sidebar > nav { flex-direction: row !important; flex-wrap: wrap; }
+  .v4-fixed-sidebar-main { margin-left: 0 !important; }
+}
+
+/* Filter dropdowns on listing pages (Conditions/Treatments index): the
+   hard 200px basis next to a flexible input crowds the input on phones.
+   Force the select onto its own row below 640px. */
+@media (max-width: 640px) {
+  .v4-filter-select { flex: 1 1 100% !important; }
+}
+
+/* Media gallery: compact mode shows 4 thumbs in one row, which crushes
+   to ~70px each on iPhone SE. Drop to 3-up on phones so each thumb is
+   ~100px and remains tappable. */
+@media (max-width: 640px) {
+  .v4-media-gallery-compact { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    CARDS / SURFACES
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -663,6 +708,17 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   outline: none;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
+/* iOS Safari zooms in when a focused input has font-size < 16px. Lift
+   form controls to 16px on small screens so focus doesn't cause a
+   disorienting zoom-and-pan. Desktop keeps the tighter 14px. */
+@media (max-width: 640px) {
+  .input, .select, .textarea, .form-input,
+  input[type="text"], input[type="email"], input[type="password"],
+  input[type="number"], input[type="tel"], input[type="url"],
+  input[type="search"], input[type="date"], select, textarea {
+    font-size: 16px !important;
+  }
+}
 .input:focus, .select:focus, .textarea:focus, .form-input:focus {
   border-color: var(--cobalt);
   box-shadow: 0 0 0 3px var(--cobalt-50);
@@ -768,6 +824,9 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   color: var(--ink);
   outline: none;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+@media (max-width: 640px) {
+  .v4-input { font-size: 16px; }
 }
 .v4-input:focus {
   border-color: var(--cobalt);

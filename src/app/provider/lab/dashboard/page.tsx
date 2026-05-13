@@ -148,6 +148,7 @@ function LabDashboardContent() {
 
             {/* Sidebar */}
             <aside
+                className="v4-fixed-sidebar"
                 style={{
                     width: 240,
                     position: 'fixed',
@@ -212,7 +213,7 @@ function LabDashboardContent() {
             </aside>
 
             {/* Main */}
-            <main style={{ flex: 1, marginLeft: 240, paddingTop: bannerOffset }}>
+            <main className="v4-fixed-sidebar-main" style={{ flex: 1, marginLeft: 240, paddingTop: bannerOffset, minWidth: 0 }}>
                 <div
                     style={{
                         height: 64,

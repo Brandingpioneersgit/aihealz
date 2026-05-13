@@ -143,7 +143,7 @@ export default function TreatmentsIndex({
                     }}
                 />
                 <select
-                    className="v4-select"
+                    className="v4-select v4-filter-select"
                     value={type}
                     onChange={(e) => setType(e.target.value as typeof type)}
                     style={{ flex: '0 0 200px' }}

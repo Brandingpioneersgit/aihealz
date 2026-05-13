@@ -33,6 +33,21 @@ interface MediaGalleryProps {
 /**
  * Extract video ID and platform from URL
  */
+/**
+ * Google Places photo URLs (`places.googleapis.com/v1/.../photos/.../media`)
+ * carry short-lived photo references that expire ~1h after issuance and 400
+ * thereafter. Many of those URLs were persisted by the admin populate-real-data
+ * job and are now stale. Drop them at render time so hospital cards don't show
+ * broken images and so next/image stops logging upstream-400s.
+ *
+ * Proper fix (TODO): store only `googlePlaceId` in the DB; serve fresh photo
+ * URLs through a server route that re-queries Places on demand and caches.
+ */
+function isLikelyStalePhotoUrl(url: string | null | undefined): boolean {
+    if (!url) return true;
+    return /places\.googleapis\.com\/v1\/.*\/photos\//.test(url);
+}
+
 function parseVideoUrl(url: string): { platform: 'youtube' | 'vimeo' | 'direct'; id: string } | null {
     if (!url) return null;
 
@@ -128,7 +143,7 @@ export default function MediaGallery({
             });
         }
 
-        if (coverImage) {
+        if (coverImage && !isLikelyStalePhotoUrl(coverImage)) {
             items.push({
                 type: 'image',
                 url: coverImage,
@@ -137,7 +152,7 @@ export default function MediaGallery({
         }
 
         images.forEach((img, i) => {
-            if (img && img !== coverImage) {
+            if (img && img !== coverImage && !isLikelyStalePhotoUrl(img)) {
                 items.push({
                     type: 'image',
                     url: img,
@@ -210,7 +225,7 @@ export default function MediaGallery({
         <>
             {/* Gallery Grid */}
             <div
-                className="grid"
+                className={compact ? 'grid v4-media-gallery-compact' : 'grid'}
                 style={{
                     gridTemplateColumns: compact ? 'repeat(4, 1fr)' : 'repeat(2, 1fr)',
                     gap: 8,

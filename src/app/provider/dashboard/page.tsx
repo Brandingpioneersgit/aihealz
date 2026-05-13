@@ -325,7 +325,7 @@ function DashboardContent({ initialDoctorId }: DashboardContentProps) {
     ];
 
     return (
-        <div style={{ background: 'var(--bg)', minHeight: '100vh', display: 'flex', color: 'var(--ink)' }}>
+        <div className="v4-dashboard-shell" style={{ background: 'var(--bg)', minHeight: '100vh', display: 'flex', color: 'var(--ink)' }}>
             {/* Toasts */}
             {errorMessage && (
                 <div
@@ -367,7 +367,7 @@ function DashboardContent({ initialDoctorId }: DashboardContentProps) {
             )}
 
             {/* Sidebar */}
-            <aside style={{ width: 240, flexShrink: 0, background: 'var(--paper)', borderRight: '1px solid var(--rule)', padding: 24, display: 'flex', flexDirection: 'column', gap: 24 }}>
+            <aside className="v4-dashboard-sidebar" style={{ width: 240, flexShrink: 0, background: 'var(--paper)', borderRight: '1px solid var(--rule)', padding: 24, display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <div className="row ai-center gap-3">
                     <span className="spec-icon" style={{ background: 'var(--cobalt)' }}>DR</span>
                     <div className="col gap-1" style={{ minWidth: 0 }}>
@@ -424,7 +424,7 @@ function DashboardContent({ initialDoctorId }: DashboardContentProps) {
             </aside>
 
             {/* Main */}
-            <main style={{ flex: 1, padding: 32, overflow: 'auto' }} className="col gap-6">
+            <main style={{ flex: 1, padding: 'clamp(16px, 4vw, 32px)', overflow: 'auto', minWidth: 0 }} className="col gap-6">
                 {loading ? (
                     <div className="row center ai-center" style={{ height: 256 }}>
                         <div
