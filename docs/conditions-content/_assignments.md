@@ -52,7 +52,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | scoliosis | 1 | Orthopedic Surgeon | claude-2026-05-12 | 2026-05-12 | done | 6,677 words, 22 FAQs, 10 sources; row 518 |
 | sarcopenia | 1 | Geriatrics | claude-2026-05-12 | 2026-05-12 | done | 6,235 words, 22 FAQs, 10 sources; row 517 |
 | lymphedema-rehab | 1 | Physical Medicine & Rehabilitation | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| mesothelioma | 1 | Occupational Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| mesothelioma | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,284 words, 21 FAQs (all schemaEligible), 8 sources; row 586 |
 | otosclerosis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | 4,740 words, 21 FAQs (all schemaEligible), 8 sources; row 584 |
 | lyme-disease | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | yellow-fever | 1 | Infectious Disease | claude-2026-05-14 | 2026-05-14 | done | 4,732 words, 21 FAQs (all schemaEligible), 8 sources; row 582 |
