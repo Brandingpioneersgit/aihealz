@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { AvatarWithFallback } from '@/components/ui/image-with-fallback';
 
 /* ─── Helpers ──────────────────────────────────────────────────────────── */
@@ -134,7 +134,8 @@ export default function AnalyzePage() {
     const [processingStep, setProcessingStep] = useState(0);
     const [dossierData, setDossierData] = useState<DossierData | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const [uploadMode, setUploadMode] = useState<'paste' | 'drive'>('paste');
+    const [uploadMode, setUploadMode] = useState<'file' | 'paste' | 'drive'>('file');
+    const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
     async function handleAnalyze() {
         if (uploadMode === 'paste' && (!reportText.trim() || reportText.trim().length < 20)) {
@@ -143,6 +144,10 @@ export default function AnalyzePage() {
         }
         if (uploadMode === 'drive' && !driveLink.trim()) {
             setError('Please provide a Google Drive link.');
+            return;
+        }
+        if (uploadMode === 'file' && !uploadedFile) {
+            setError('Choose a PDF or screenshot of your report.');
             return;
         }
 
@@ -156,23 +161,32 @@ export default function AnalyzePage() {
         }
 
         try {
-            const body =
-                uploadMode === 'paste'
-                    ? { text: reportText, reportType }
-                    : { driveLink, reportType };
+            let response: Response;
+            if (uploadMode === 'file' && uploadedFile) {
+                const formData = new FormData();
+                formData.append('file', uploadedFile);
+                response = await fetch('/api/analyze/upload', { method: 'POST', body: formData });
+            } else {
+                const body =
+                    uploadMode === 'paste'
+                        ? { text: reportText, reportType }
+                        : { driveLink, reportType };
+                response = await fetch('/api/analyze', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body),
+                });
+            }
 
-            const response = await fetch('/api/analyze', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(body),
-            });
-
-            if (!response.ok) throw new Error('Analysis failed');
+            if (!response.ok) {
+                const errBody = await response.json().catch(() => ({}));
+                throw new Error(errBody.error || 'Analysis failed');
+            }
             const data = await response.json();
             setDossierData(data);
             setStage('dossier');
-        } catch {
-            setError('Failed to process your report. Please try again.');
+        } catch (e) {
+            setError(e instanceof Error ? e.message : 'Failed to process your report. Please try again.');
             setStage('upload');
         }
     }
@@ -189,6 +203,8 @@ export default function AnalyzePage() {
                     setDriveLink={setDriveLink}
                     uploadMode={uploadMode}
                     setUploadMode={setUploadMode}
+                    uploadedFile={uploadedFile}
+                    setUploadedFile={setUploadedFile}
                     onAnalyze={handleAnalyze}
                     error={error}
                 />
@@ -201,6 +217,7 @@ export default function AnalyzePage() {
                         setStage('upload');
                         setReportText('');
                         setDriveLink('');
+                        setUploadedFile(null);
                         setDossierData(null);
                     }}
                 />
@@ -220,6 +237,8 @@ function UploadView({
     setDriveLink,
     uploadMode,
     setUploadMode,
+    uploadedFile,
+    setUploadedFile,
     onAnalyze,
     error,
 }: {
@@ -229,8 +248,10 @@ function UploadView({
     setReportType: (v: string) => void;
     driveLink: string;
     setDriveLink: (v: string) => void;
-    uploadMode: 'paste' | 'drive';
-    setUploadMode: (v: 'paste' | 'drive') => void;
+    uploadMode: 'file' | 'paste' | 'drive';
+    setUploadMode: (v: 'file' | 'paste' | 'drive') => void;
+    uploadedFile: File | null;
+    setUploadedFile: (f: File | null) => void;
     onAnalyze: () => void;
     error: string | null;
 }) {
@@ -261,7 +282,7 @@ function UploadView({
                     <span style={{ color: 'var(--orange)' }}>.</span>
                 </h1>
                 <p className="lede" style={{ fontSize: 'clamp(16px, 1.6vw, 20px)', maxWidth: 640 }}>
-                    Bloodwork, MRI findings, biopsy notes — paste the text or share a Drive link. We strip every identifier, find what matters, and translate it.
+                    Bloodwork, MRI findings, biopsy notes &mdash; upload a PDF or screenshot of the report. We strip every identifier, find what matters, and translate it.
                 </p>
             </div>
 
@@ -321,6 +342,15 @@ function UploadView({
                     <span className="kicker"><span className="dot" />upload report</span>
                     <div className="row gap-1" role="tablist" aria-label="Upload method">
                         <button
+                            className={uploadMode === 'file' ? 'btn btn-paper btn-sm' : 'btn btn-ghost btn-sm'}
+                            style={uploadMode === 'file' ? { borderColor: 'var(--ink)' } : undefined}
+                            role="tab"
+                            aria-selected={uploadMode === 'file'}
+                            onClick={() => setUploadMode('file')}
+                        >
+                            Upload file
+                        </button>
+                        <button
                             className={uploadMode === 'paste' ? 'btn btn-paper btn-sm' : 'btn btn-ghost btn-sm'}
                             style={uploadMode === 'paste' ? { borderColor: 'var(--ink)' } : undefined}
                             role="tab"
@@ -370,6 +400,11 @@ function UploadView({
                         })}
                     </div>
                 </div>
+
+                {/* File mode */}
+                {uploadMode === 'file' && (
+                    <FileUploadPanel uploadedFile={uploadedFile} setUploadedFile={setUploadedFile} />
+                )}
 
                 {/* Paste mode */}
                 {uploadMode === 'paste' && (
@@ -492,7 +527,13 @@ function UploadView({
                     </div>
                     <button
                         onClick={onAnalyze}
-                        disabled={uploadMode === 'paste' ? !reportText.trim() : !driveLink.trim()}
+                        disabled={
+                            uploadMode === 'file'
+                                ? !uploadedFile
+                                : uploadMode === 'paste'
+                                    ? !reportText.trim()
+                                    : !driveLink.trim()
+                        }
                         className="btn btn-cobalt btn-lg"
                     >
                         Analyze report →
@@ -533,6 +574,160 @@ function UploadView({
                         </div>
                     ))}
                 </div>
+            </div>
+        </div>
+    );
+}
+
+/* ─── File Upload Panel ────────────────────────────────────────────────── */
+
+function FileUploadPanel({
+    uploadedFile,
+    setUploadedFile,
+}: {
+    uploadedFile: File | null;
+    setUploadedFile: (f: File | null) => void;
+}) {
+    const inputRef = useRef<HTMLInputElement>(null);
+    const [dragOver, setDragOver] = useState(false);
+    const ACCEPTED = '.pdf,application/pdf,image/png,image/jpeg,image/jpg,image/webp';
+    const MAX_MB = 10;
+
+    function pick(file: File | null | undefined) {
+        if (!file) return;
+        if (file.size > MAX_MB * 1024 * 1024) {
+            alert(`File too large. Max ${MAX_MB} MB.`);
+            return;
+        }
+        const okMime = file.type === 'application/pdf' || file.type.startsWith('image/');
+        if (!okMime) {
+            alert('Unsupported file. Upload a PDF or image (PNG, JPG, WebP).');
+            return;
+        }
+        setUploadedFile(file);
+    }
+
+    return (
+        <div className="col gap-2">
+            <label
+                className="mono"
+                style={{
+                    fontSize: 11,
+                    color: 'var(--ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                }}
+            >
+                Upload PDF or screenshot
+            </label>
+            <div
+                role="button"
+                tabIndex={0}
+                onClick={() => inputRef.current?.click()}
+                onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        inputRef.current?.click();
+                    }
+                }}
+                onDragOver={e => {
+                    e.preventDefault();
+                    setDragOver(true);
+                }}
+                onDragLeave={() => setDragOver(false)}
+                onDrop={e => {
+                    e.preventDefault();
+                    setDragOver(false);
+                    pick(e.dataTransfer.files?.[0]);
+                }}
+                style={{
+                    border: dragOver
+                        ? '1px dashed var(--cobalt)'
+                        : '1px dashed var(--rule)',
+                    background: dragOver ? 'var(--cobalt-50)' : 'var(--paper-2)',
+                    borderRadius: 'var(--r-3, 8px)',
+                    padding: '36px 22px',
+                    cursor: 'pointer',
+                    transition: 'background 120ms, border-color 120ms',
+                    textAlign: 'center',
+                }}
+            >
+                <input
+                    ref={inputRef}
+                    type="file"
+                    accept={ACCEPTED}
+                    onChange={e => pick(e.target.files?.[0])}
+                    style={{ display: 'none' }}
+                />
+                {uploadedFile ? (
+                    <div className="col gap-2 ai-center">
+                        <div
+                            className="display"
+                            style={{
+                                fontSize: 16,
+                                fontWeight: 500,
+                                color: 'var(--ink)',
+                                letterSpacing: '-0.01em',
+                            }}
+                        >
+                            {uploadedFile.name}
+                        </div>
+                        <div
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            {(uploadedFile.size / 1024).toFixed(0)} KB · {uploadedFile.type || 'file'}
+                        </div>
+                        <button
+                            type="button"
+                            className="btn btn-ghost btn-sm"
+                            onClick={e => {
+                                e.stopPropagation();
+                                setUploadedFile(null);
+                                if (inputRef.current) inputRef.current.value = '';
+                            }}
+                            style={{ marginTop: 4 }}
+                        >
+                            Choose a different file
+                        </button>
+                    </div>
+                ) : (
+                    <div className="col gap-2 ai-center">
+                        <div
+                            className="display"
+                            style={{
+                                fontSize: 18,
+                                fontWeight: 500,
+                                color: 'var(--ink)',
+                                letterSpacing: '-0.015em',
+                            }}
+                        >
+                            Drop a PDF or screenshot here
+                        </div>
+                        <div
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em',
+                            }}
+                        >
+                            or click to choose · PDF, PNG, JPG, WebP · max {MAX_MB} MB
+                        </div>
+                    </div>
+                )}
+            </div>
+            <div
+                className="mono"
+                style={{ fontSize: 11, color: 'var(--ink-3)' }}
+            >
+                ↳ text-based PDFs read natively · screenshots and image-only PDFs use AI OCR · everything deleted after 24h
             </div>
         </div>
     );

@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import prisma from '@/lib/db';
-import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import HomepageSpecialties from '@/components/ui/homepage-specialties';
 import Reveal from '@/components/v4/Reveal';
+import MediaTile from '@/components/v4/MediaTile';
 import { normalizeSpecialty, SPECIALTY_ICON_MAP } from '@/lib/normalize-specialty';
 import { getGeoContext } from '@/lib/geo-context';
 import { HERO_IMAGES } from '@/lib/stock-images';
@@ -538,18 +538,13 @@ export default async function Home() {
                 },
                 {
                   href: '/analyze',
-                  title: 'Report & scan analysis',
-                  blurb: 'Drop labs, prescriptions, or imaging. Severity-ranked findings in 60 seconds.',
+                  title: 'AI second opinion',
+                  blurb: 'Upload a PDF or screenshot of your report. Severity-ranked findings + specialist match in 60 seconds.',
                 },
                 {
                   href: '/symptoms',
                   title: 'Symptom checker',
                   blurb: 'Triage with red-flag detection. Specialty match included.',
-                },
-                {
-                  href: '/chat/consult',
-                  title: 'AI second opinion',
-                  blurb: 'Async consult before you book. Bring the questions; we bring the structure.',
                 },
                 {
                   href: '/vault',
@@ -991,21 +986,12 @@ export default async function Home() {
                 margin: 0,
               }}
             >
-              <Image
-                src={HERO_IMAGES.consult.src}
+              <MediaTile
                 alt={HERO_IMAGES.consult.alt}
-                fill
-                sizes="(max-width: 1280px) 100vw, 1280px"
-                style={{ objectFit: 'cover' }}
-              />
-              <div
-                aria-hidden="true"
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background:
-                    'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.30) 35%, rgba(10,26,47,0) 70%)',
-                }}
+                icon={HERO_IMAGES.consult.icon}
+                tone="cobalt"
+                aspect="24 / 9"
+                iconSize={96}
               />
               <figcaption
                 className="col gap-2"
@@ -1015,14 +1001,14 @@ export default async function Home() {
                   top: '50%',
                   transform: 'translateY(-50%)',
                   maxWidth: 480,
-                  color: 'var(--paper)',
+                  color: 'var(--ink)',
                 }}
               >
                 <span
                   className="mono"
                   style={{
                     fontSize: 11,
-                    color: 'var(--cobalt-3)',
+                    color: 'var(--cobalt)',
                     textTransform: 'uppercase',
                     letterSpacing: '0.12em',
                     fontWeight: 500,
@@ -1042,12 +1028,12 @@ export default async function Home() {
                 >
                   Verified physicians.
                   <br />
-                  <span style={{ color: 'var(--cobalt-3)' }}>Real consultations.</span>
+                  <span style={{ color: 'var(--cobalt)' }}>Real consultations.</span>
                 </h3>
                 <p
                   style={{
                     fontSize: 14,
-                    color: 'rgba(255,255,255,0.78)',
+                    color: 'var(--ink-2)',
                     margin: 0,
                     lineHeight: 1.55,
                     maxWidth: 380,

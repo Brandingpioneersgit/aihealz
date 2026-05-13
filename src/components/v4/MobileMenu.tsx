@@ -22,9 +22,8 @@ const GROUPS: MenuGroup[] = [
         accent: true,
         links: [
             { label: 'Healz AI — chat', href: '/healz-ai' },
-            { label: 'Report & scan analysis', href: '/analyze' },
+            { label: 'AI second opinion', href: '/analyze' },
             { label: 'Symptom checker', href: '/symptoms' },
-            { label: 'AI second opinion', href: '/chat/consult' },
             { label: 'Health vault', href: '/vault' },
         ],
     },
