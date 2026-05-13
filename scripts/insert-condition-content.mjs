@@ -25,7 +25,7 @@ if (!slug) {
   process.exit(1);
 }
 
-const ROOT = '/Users/taps/Desktop/Aihealz';
+const ROOT = process.cwd();
 const contentPath = path.join(ROOT, 'docs/conditions-content', `${slug}.json`);
 const reviewerPath = path.join(ROOT, 'docs/editorial-reviewer.json');
 

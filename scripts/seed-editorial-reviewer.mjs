@@ -44,7 +44,7 @@ const out = {
   warning: 'Replace with real named MDs per specialty before public launch.',
   generatedAt: new Date().toISOString(),
 };
-fs.writeFileSync('/Users/taps/Desktop/Aihealz/docs/editorial-reviewer.json', JSON.stringify(out, null, 2));
+fs.writeFileSync('docs/editorial-reviewer.json', JSON.stringify(out, null, 2));
 console.log('Wrote docs/editorial-reviewer.json with reviewerDoctorId =', reviewer.id);
 
 await p.$disconnect();
