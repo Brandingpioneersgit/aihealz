@@ -111,7 +111,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Germany', 'de', 'DE', ['de', 'en']],
+        country: ['Germany', 'germany', 'DE', ['de', 'en']],
         states: [
             { name: 'Bavaria', slug: 'bavaria', cities: ['Munich', 'Nuremberg', 'Augsburg'] },
             { name: 'Berlin', slug: 'berlin', cities: ['Berlin City'] },
@@ -122,7 +122,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Canada', 'ca', 'CA', ['en', 'fr']],
+        country: ['Canada', 'canada', 'CA', ['en', 'fr']],
         states: [
             { name: 'Ontario', slug: 'ontario', cities: ['Toronto', 'Ottawa', 'Mississauga', 'Hamilton'] },
             { name: 'British Columbia', slug: 'british-columbia', cities: ['Vancouver', 'Victoria', 'Surrey'] },
@@ -131,7 +131,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Australia', 'au', 'AU', ['en']],
+        country: ['Australia', 'australia', 'AU', ['en']],
         states: [
             { name: 'New South Wales', slug: 'new-south-wales', cities: ['Sydney', 'Newcastle', 'Wollongong'] },
             { name: 'Victoria', slug: 'victoria', cities: ['Melbourne', 'Geelong'] },
@@ -141,7 +141,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Japan', 'jp', 'JP', ['ja', 'en']],
+        country: ['Japan', 'japan', 'JP', ['ja', 'en']],
         states: [
             { name: 'Tokyo', slug: 'tokyo', cities: ['Shinjuku', 'Shibuya', 'Chiyoda', 'Minato'] },
             { name: 'Osaka', slug: 'osaka', cities: ['Osaka City', 'Sakai'] },
@@ -151,7 +151,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['South Korea', 'kr', 'KR', ['ko', 'en']],
+        country: ['South Korea', 'south-korea', 'KR', ['ko', 'en']],
         states: [
             { name: 'Seoul', slug: 'seoul', cities: ['Gangnam', 'Jongno', 'Mapo'] },
             { name: 'Busan', slug: 'busan', cities: ['Busan City'] },
@@ -159,7 +159,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Thailand', 'th', 'TH', ['th', 'en']],
+        country: ['Thailand', 'thailand', 'TH', ['th', 'en']],
         states: [
             { name: 'Bangkok', slug: 'bangkok', cities: ['Bangkok City', 'Sukhumvit', 'Silom'] },
             { name: 'Chiang Mai', slug: 'chiang-mai', cities: ['Chiang Mai City'] },
@@ -167,7 +167,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Malaysia', 'my', 'MY', ['ms', 'en']],
+        country: ['Malaysia', 'malaysia', 'MY', ['ms', 'en']],
         states: [
             { name: 'Kuala Lumpur', slug: 'kuala-lumpur', cities: ['KL City Centre', 'Bukit Bintang'] },
             { name: 'Penang', slug: 'penang', cities: ['George Town'] },
@@ -175,7 +175,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['France', 'fr', 'FR', ['fr', 'en']],
+        country: ['France', 'france', 'FR', ['fr', 'en']],
         states: [
             { name: 'Île-de-France', slug: 'ile-de-france', cities: ['Paris', 'Versailles', 'Boulogne-Billancourt'] },
             { name: 'Provence-Alpes-Côte d\'Azur', slug: 'provence', cities: ['Marseille', 'Nice', 'Toulon'] },
@@ -183,7 +183,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Brazil', 'br', 'BR', ['pt', 'en']],
+        country: ['Brazil', 'brazil', 'BR', ['pt', 'en']],
         states: [
             { name: 'São Paulo', slug: 'sao-paulo-state', cities: ['São Paulo', 'Campinas', 'Santos'] },
             { name: 'Rio de Janeiro', slug: 'rio-de-janeiro-state', cities: ['Rio de Janeiro', 'Niterói'] },
@@ -191,7 +191,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Mexico', 'mx', 'MX', ['es', 'en']],
+        country: ['Mexico', 'mexico', 'MX', ['es', 'en']],
         states: [
             { name: 'Mexico City', slug: 'cdmx', cities: ['Mexico City', 'Polanco', 'Roma Norte'] },
             { name: 'Jalisco', slug: 'jalisco', cities: ['Guadalajara', 'Puerto Vallarta'] },
@@ -199,7 +199,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Saudi Arabia', 'sa', 'SA', ['ar', 'en']],
+        country: ['Saudi Arabia', 'saudi-arabia', 'SA', ['ar', 'en']],
         states: [
             { name: 'Riyadh Region', slug: 'riyadh-region', cities: ['Riyadh'] },
             { name: 'Makkah Region', slug: 'makkah-region', cities: ['Jeddah', 'Mecca'] },
@@ -207,7 +207,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['South Africa', 'za', 'ZA', ['en', 'af']],
+        country: ['South Africa', 'south-africa', 'ZA', ['en', 'af']],
         states: [
             { name: 'Gauteng', slug: 'gauteng', cities: ['Johannesburg', 'Pretoria', 'Sandton'] },
             { name: 'Western Cape', slug: 'western-cape', cities: ['Cape Town', 'Stellenbosch'] },
@@ -215,7 +215,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Nigeria', 'ng', 'NG', ['en']],
+        country: ['Nigeria', 'nigeria', 'NG', ['en']],
         states: [
             { name: 'Lagos State', slug: 'lagos-state', cities: ['Lagos', 'Ikeja', 'Victoria Island'] },
             { name: 'Abuja FCT', slug: 'abuja-fct', cities: ['Abuja'] },
@@ -223,21 +223,21 @@ const WORLD = [
         ]
     },
     {
-        country: ['Kenya', 'ke', 'KE', ['en', 'sw']],
+        country: ['Kenya', 'kenya', 'KE', ['en', 'sw']],
         states: [
             { name: 'Nairobi County', slug: 'nairobi-county', cities: ['Nairobi'] },
             { name: 'Mombasa County', slug: 'mombasa-county', cities: ['Mombasa'] },
         ]
     },
     {
-        country: ['Philippines', 'ph', 'PH', ['en', 'fil']],
+        country: ['Philippines', 'philippines', 'PH', ['en', 'fil']],
         states: [
             { name: 'Metro Manila', slug: 'metro-manila', cities: ['Manila', 'Makati', 'Quezon City', 'Taguig'] },
             { name: 'Cebu', slug: 'cebu', cities: ['Cebu City'] },
         ]
     },
     {
-        country: ['Turkey', 'tr', 'TR', ['tr', 'en']],
+        country: ['Turkey', 'turkey', 'TR', ['tr', 'en']],
         states: [
             { name: 'Istanbul Province', slug: 'istanbul-province', cities: ['Istanbul', 'Kadikoy', 'Besiktas'] },
             { name: 'Ankara Province', slug: 'ankara-province', cities: ['Ankara'] },
@@ -245,7 +245,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Italy', 'it', 'IT', ['it', 'en']],
+        country: ['Italy', 'italy', 'IT', ['it', 'en']],
         states: [
             { name: 'Lazio', slug: 'lazio', cities: ['Rome'] },
             { name: 'Lombardy', slug: 'lombardy', cities: ['Milan', 'Bergamo'] },
@@ -254,7 +254,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Spain', 'es', 'ES', ['es', 'en']],
+        country: ['Spain', 'spain', 'ES', ['es', 'en']],
         states: [
             { name: 'Community of Madrid', slug: 'community-of-madrid', cities: ['Madrid'] },
             { name: 'Catalonia', slug: 'catalonia', cities: ['Barcelona'] },
@@ -271,7 +271,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Indonesia', 'id', 'ID', ['id', 'en']],
+        country: ['Indonesia', 'indonesia', 'ID', ['id', 'en']],
         states: [
             { name: 'Jakarta', slug: 'jakarta', cities: ['Jakarta City', 'South Jakarta'] },
             { name: 'Bali', slug: 'bali', cities: ['Denpasar', 'Ubud'] },
@@ -279,14 +279,14 @@ const WORLD = [
         ]
     },
     {
-        country: ['Egypt', 'eg', 'EG', ['ar', 'en']],
+        country: ['Egypt', 'egypt', 'EG', ['ar', 'en']],
         states: [
             { name: 'Cairo Governorate', slug: 'cairo-governorate', cities: ['Cairo', 'Heliopolis'] },
             { name: 'Alexandria Governorate', slug: 'alexandria-governorate', cities: ['Alexandria'] },
         ]
     },
     {
-        country: ['Israel', 'il', 'IL', ['he', 'en']],
+        country: ['Israel', 'israel', 'IL', ['he', 'en']],
         states: [
             { name: 'Tel Aviv District', slug: 'tel-aviv-district', cities: ['Tel Aviv', 'Ramat Gan'] },
             { name: 'Jerusalem District', slug: 'jerusalem-district', cities: ['Jerusalem'] },
@@ -294,7 +294,7 @@ const WORLD = [
         ]
     },
     {
-        country: ['Switzerland', 'ch', 'CH', ['de', 'fr', 'en']],
+        country: ['Switzerland', 'switzerland', 'CH', ['de', 'fr', 'en']],
         states: [
             { name: 'Zurich Canton', slug: 'zurich', cities: ['Zurich City'] },
             { name: 'Geneva Canton', slug: 'geneva', cities: ['Geneva City'] },
@@ -302,46 +302,46 @@ const WORLD = [
         ]
     },
     {
-        country: ['Poland', 'pl', 'PL', ['pl', 'en']],
+        country: ['Poland', 'poland', 'PL', ['pl', 'en']],
         states: [
             { name: 'Masovia', slug: 'masovia', cities: ['Warsaw'] },
             { name: 'Lesser Poland', slug: 'lesser-poland', cities: ['Krakow'] },
         ]
     },
     {
-        country: ['Netherlands', 'nl', 'NL', ['nl', 'en']],
+        country: ['Netherlands', 'netherlands', 'NL', ['nl', 'en']],
         states: [
             { name: 'North Holland', slug: 'north-holland', cities: ['Amsterdam'] },
             { name: 'South Holland', slug: 'south-holland', cities: ['Rotterdam', 'The Hague'] },
         ]
     },
     {
-        country: ['Sweden', 'se', 'SE', ['sv', 'en']],
+        country: ['Sweden', 'sweden', 'SE', ['sv', 'en']],
         states: [
             { name: 'Stockholm County', slug: 'stockholm-county', cities: ['Stockholm'] },
             { name: 'Västra Götaland', slug: 'vastra-gotaland', cities: ['Gothenburg'] },
         ]
     },
     // Smaller but medically relevant
-    { country: ['Bangladesh', 'bd', 'BD', ['bn', 'en']], states: [{ name: 'Dhaka Division', slug: 'dhaka-division', cities: ['Dhaka', 'Gazipur'] }, { name: 'Chittagong Division', slug: 'chittagong-division', cities: ['Chittagong'] }] },
-    { country: ['Sri Lanka', 'lk', 'LK', ['si', 'en']], states: [{ name: 'Western Province', slug: 'western-province-lk', cities: ['Colombo', 'Kandy'] }] },
-    { country: ['Nepal', 'np', 'NP', ['ne', 'en']], states: [{ name: 'Bagmati Province', slug: 'bagmati', cities: ['Kathmandu'] }] },
-    { country: ['Pakistan', 'pk', 'PK', ['ur', 'en']], states: [{ name: 'Punjab', slug: 'punjab-pk', cities: ['Lahore', 'Islamabad', 'Rawalpindi'] }, { name: 'Sindh', slug: 'sindh', cities: ['Karachi', 'Hyderabad PK'] }] },
-    { country: ['Vietnam', 'vn', 'VN', ['vi', 'en']], states: [{ name: 'Ho Chi Minh City Province', slug: 'hcmc', cities: ['Ho Chi Minh City'] }, { name: 'Hanoi', slug: 'hanoi', cities: ['Hanoi City'] }] },
-    { country: ['New Zealand', 'nz', 'NZ', ['en']], states: [{ name: 'Auckland Region', slug: 'auckland-region', cities: ['Auckland'] }, { name: 'Wellington Region', slug: 'wellington-region', cities: ['Wellington'] }] },
-    { country: ['Ireland', 'ie', 'IE', ['en']], states: [{ name: 'Leinster', slug: 'leinster', cities: ['Dublin'] }, { name: 'Munster', slug: 'munster', cities: ['Cork'] }] },
-    { country: ['Qatar', 'qa', 'QA', ['ar', 'en']], states: [{ name: 'Doha Municipality', slug: 'doha-municipality', cities: ['Doha'] }] },
-    { country: ['Kuwait', 'kw', 'KW', ['ar', 'en']], states: [{ name: 'Capital Governorate', slug: 'capital-kw', cities: ['Kuwait City'] }] },
-    { country: ['Bahrain', 'bh', 'BH', ['ar', 'en']], states: [{ name: 'Capital Governorate BH', slug: 'capital-bh', cities: ['Manama'] }] },
-    { country: ['Oman', 'om', 'OM', ['ar', 'en']], states: [{ name: 'Muscat Governorate', slug: 'muscat-gov', cities: ['Muscat'] }] },
-    { country: ['Russia', 'ru', 'RU', ['ru', 'en']], states: [{ name: 'Moscow Oblast', slug: 'moscow-oblast', cities: ['Moscow'] }, { name: 'Saint Petersburg', slug: 'saint-petersburg', cities: ['Saint Petersburg City'] }] },
-    { country: ['Colombia', 'co', 'CO', ['es', 'en']], states: [{ name: 'Bogota DC', slug: 'bogota-dc', cities: ['Bogota'] }, { name: 'Antioquia', slug: 'antioquia', cities: ['Medellin'] }] },
-    { country: ['Argentina', 'ar', 'AR', ['es', 'en']], states: [{ name: 'Buenos Aires Province', slug: 'buenos-aires', cities: ['Buenos Aires'] }] },
-    { country: ['Chile', 'cl', 'CL', ['es', 'en']], states: [{ name: 'Santiago Metropolitan', slug: 'santiago-metro', cities: ['Santiago'] }] },
-    { country: ['Peru', 'pe', 'PE', ['es', 'en']], states: [{ name: 'Lima Province', slug: 'lima-province', cities: ['Lima'] }] },
-    { country: ['Ghana', 'gh', 'GH', ['en']], states: [{ name: 'Greater Accra', slug: 'greater-accra', cities: ['Accra'] }] },
-    { country: ['Tanzania', 'tz', 'TZ', ['sw', 'en']], states: [{ name: 'Dar es Salaam', slug: 'dar-es-salaam', cities: ['Dar es Salaam City'] }] },
-    { country: ['Ethiopia', 'et', 'ET', ['am', 'en']], states: [{ name: 'Addis Ababa Region', slug: 'addis-ababa', cities: ['Addis Ababa'] }] },
+    { country: ['Bangladesh', 'bangladesh', 'BD', ['bn', 'en']], states: [{ name: 'Dhaka Division', slug: 'dhaka-division', cities: ['Dhaka', 'Gazipur'] }, { name: 'Chittagong Division', slug: 'chittagong-division', cities: ['Chittagong'] }] },
+    { country: ['Sri Lanka', 'sri-lanka', 'LK', ['si', 'en']], states: [{ name: 'Western Province', slug: 'western-province-lk', cities: ['Colombo', 'Kandy'] }] },
+    { country: ['Nepal', 'nepal', 'NP', ['ne', 'en']], states: [{ name: 'Bagmati Province', slug: 'bagmati', cities: ['Kathmandu'] }] },
+    { country: ['Pakistan', 'pakistan', 'PK', ['ur', 'en']], states: [{ name: 'Punjab', slug: 'punjab-pk', cities: ['Lahore', 'Islamabad', 'Rawalpindi'] }, { name: 'Sindh', slug: 'sindh', cities: ['Karachi', 'Hyderabad PK'] }] },
+    { country: ['Vietnam', 'vietnam', 'VN', ['vi', 'en']], states: [{ name: 'Ho Chi Minh City Province', slug: 'hcmc', cities: ['Ho Chi Minh City'] }, { name: 'Hanoi', slug: 'hanoi', cities: ['Hanoi City'] }] },
+    { country: ['New Zealand', 'new-zealand', 'NZ', ['en']], states: [{ name: 'Auckland Region', slug: 'auckland-region', cities: ['Auckland'] }, { name: 'Wellington Region', slug: 'wellington-region', cities: ['Wellington'] }] },
+    { country: ['Ireland', 'ireland', 'IE', ['en']], states: [{ name: 'Leinster', slug: 'leinster', cities: ['Dublin'] }, { name: 'Munster', slug: 'munster', cities: ['Cork'] }] },
+    { country: ['Qatar', 'qatar', 'QA', ['ar', 'en']], states: [{ name: 'Doha Municipality', slug: 'doha-municipality', cities: ['Doha'] }] },
+    { country: ['Kuwait', 'kuwait', 'KW', ['ar', 'en']], states: [{ name: 'Capital Governorate', slug: 'capital-kw', cities: ['Kuwait City'] }] },
+    { country: ['Bahrain', 'bahrain', 'BH', ['ar', 'en']], states: [{ name: 'Capital Governorate BH', slug: 'capital-bh', cities: ['Manama'] }] },
+    { country: ['Oman', 'oman', 'OM', ['ar', 'en']], states: [{ name: 'Muscat Governorate', slug: 'muscat-gov', cities: ['Muscat'] }] },
+    { country: ['Russia', 'russia', 'RU', ['ru', 'en']], states: [{ name: 'Moscow Oblast', slug: 'moscow-oblast', cities: ['Moscow'] }, { name: 'Saint Petersburg', slug: 'saint-petersburg', cities: ['Saint Petersburg City'] }] },
+    { country: ['Colombia', 'colombia', 'CO', ['es', 'en']], states: [{ name: 'Bogota DC', slug: 'bogota-dc', cities: ['Bogota'] }, { name: 'Antioquia', slug: 'antioquia', cities: ['Medellin'] }] },
+    { country: ['Argentina', 'argentina', 'AR', ['es', 'en']], states: [{ name: 'Buenos Aires Province', slug: 'buenos-aires', cities: ['Buenos Aires'] }] },
+    { country: ['Chile', 'chile', 'CL', ['es', 'en']], states: [{ name: 'Santiago Metropolitan', slug: 'santiago-metro', cities: ['Santiago'] }] },
+    { country: ['Peru', 'peru', 'PE', ['es', 'en']], states: [{ name: 'Lima Province', slug: 'lima-province', cities: ['Lima'] }] },
+    { country: ['Ghana', 'ghana', 'GH', ['en']], states: [{ name: 'Greater Accra', slug: 'greater-accra', cities: ['Accra'] }] },
+    { country: ['Tanzania', 'tanzania', 'TZ', ['sw', 'en']], states: [{ name: 'Dar es Salaam', slug: 'dar-es-salaam', cities: ['Dar es Salaam City'] }] },
+    { country: ['Ethiopia', 'ethiopia', 'ET', ['am', 'en']], states: [{ name: 'Addis Ababa Region', slug: 'addis-ababa', cities: ['Addis Ababa'] }] },
 ];
 
 // ─── Execution ─────────────────────────────────────────────
