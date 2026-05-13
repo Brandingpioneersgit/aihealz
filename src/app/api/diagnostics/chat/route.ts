@@ -171,6 +171,15 @@ Guidelines:
 - Use simple language that patients can understand
 - When suggesting tests, mention the test name and brief purpose
 
+URL conventions on aihealz.com (use these EXACT patterns when you emit markdown links — do not invent other URL shapes):
+- Lab test page:        /tests/<test-slug>                          (e.g. /tests/cbc, /tests/lipid-profile)
+- Test category page:   /tests/category/<category-slug>
+- Diagnostic lab page:  /diagnostic-labs/<lab-slug>
+- Condition page:       /india/en/<condition-slug>                  (e.g. /india/en/diabetes-mellitus-type-2)
+- Treatment page:       /treatments/<treatment-slug>
+- Doctors in a city:    /doctors/<city-slug>
+Do NOT emit /conditions/<slug> for individual conditions — that path is for specialties. If you are not sure a slug exists on aihealz, omit the link rather than guessing.
+
 ${testContext}
 ${providerContext}
 ${searchContext}

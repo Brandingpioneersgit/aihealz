@@ -75,18 +75,21 @@ export default function MarkdownReply({ children }: { children: string }) {
                             }}
                         />
                     ),
-                    a: props => (
-                        <a
-                            {...props}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                color: 'var(--cobalt)',
-                                textDecoration: 'underline',
-                                textUnderlineOffset: 2,
-                            }}
-                        />
-                    ),
+                    a: ({ href, ...rest }) => {
+                        const isInternal = !!href && (href.startsWith('/') || href.startsWith('#'));
+                        return (
+                            <a
+                                href={href}
+                                {...(isInternal ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                                {...rest}
+                                style={{
+                                    color: 'var(--cobalt)',
+                                    textDecoration: 'underline',
+                                    textUnderlineOffset: 2,
+                                }}
+                            />
+                        );
+                    },
                     ul: props => (
                         <ul
                             {...props}

@@ -43,7 +43,8 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ reply: AI_BUSY_REPLY, model: 'fallback' });
         }
 
-        const systemPrompt = SYSTEM_PROMPTS[category] || SYSTEM_PROMPTS.drugs;
+        const URL_GUIDANCE = `\n\nURL conventions on aihealz.com (use these EXACT patterns when you emit markdown links — do not invent other URL shapes):\n- Condition page:       /india/en/<condition-slug>      (e.g. /india/en/migraine)\n- Treatment page:       /treatments/<treatment-slug>    (e.g. /treatments/physical-therapy)\n- Lab test page:        /tests/<test-slug>\n- Doctors in a city:    /doctors/<city-slug>            (e.g. /doctors/mumbai)\n- Condition browse:     /conditions      Treatments browse: /treatments\nDo NOT emit /conditions/<slug> for individual conditions — that path is for specialties and will not resolve. If unsure a slug exists, omit the link.`;
+        const systemPrompt = (SYSTEM_PROMPTS[category] || SYSTEM_PROMPTS.drugs) + URL_GUIDANCE;
 
         const messages = [
             {
