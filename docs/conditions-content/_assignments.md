@@ -249,7 +249,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | chemical-burns-occupational | 3 | Occupational Medicine | (open) | — | open | Batch 004, 1 variant |
 | childhood-immunization-schedules | 3 | Family Medicine | (open) | — | open | Batch 004, 1 variant |
 | chronic-disease-management | 3 | Family Medicine | (open) | — | open | Batch 004, 1 variant |
-| chronic-fatigue-syndrome | 3 | Internal Medicine | (open) | — | open | Batch 004, 1 variant |
+| chronic-fatigue-syndrome | 1 | Internal Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,054 words, 21 FAQs (all schemaEligible), 8 sources; row 588 |
 | chronic-migraine-pain-management | 3 | Pain Medicine & Palliative Care | (open) | — | open | Batch 004, 1 variant |
 | cleft-lip-and-palate | 3 | Maxillofacial & Oral Surgery | (open) | — | open | Batch 004, 1 variant |
 | coal-workers-pneumoconiosis | 3 | Occupational Medicine | (open) | — | open | Batch 004, 1 variant |
