@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { Metadata } from 'next';
 import { getGeoContext } from '@/lib/geo-context';
 import AIKioskFinder from '@/components/diagnostic/AIKioskFinder';
+import MediaTile from '@/components/v4/MediaTile';
 import { HERO_IMAGES } from '@/lib/stock-images';
 
 export const revalidate = 86400;
@@ -173,22 +174,13 @@ export default async function DiagnosticLabsPage() {
             border: '1px solid var(--rule)',
           }}
         >
-          <Image
-            src={HERO_IMAGES.lab.src}
+          <MediaTile
             alt={HERO_IMAGES.lab.alt}
-            fill
-            sizes="(max-width: 1280px) 100vw, 1280px"
+            icon={HERO_IMAGES.lab.icon}
+            tone="cobalt"
+            aspect="32 / 9"
+            iconSize={88}
             priority
-            style={{ objectFit: 'cover' }}
-          />
-          <div
-            aria-hidden="true"
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background:
-                'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
-            }}
           />
           <span
             className="mono"
@@ -196,7 +188,7 @@ export default async function DiagnosticLabsPage() {
               position: 'absolute',
               left: 'clamp(16px, 3vw, 28px)',
               bottom: 18,
-              color: 'rgba(255,255,255,0.9)',
+              color: 'var(--ink-3)',
               fontSize: 11,
               textTransform: 'uppercase',
               letterSpacing: '0.12em',

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import V4Page from '@/components/v4/Shell';
 
 export const metadata: Metadata = {
     title: 'Page not found (404)',
@@ -10,63 +11,141 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-950 text-white flex flex-col items-center justify-center px-6 py-24">
-            <div className="text-center max-w-lg">
-                {/* Large 404 */}
-                <div className="text-[150px] md:text-[200px] font-black text-transparent bg-clip-text bg-gradient-to-br from-teal-400 to-cyan-600 leading-none mb-4 select-none">
-                    404
-                </div>
+        <V4Page>
+            <main
+                style={{
+                    minHeight: 'calc(100vh - 200px)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '96px clamp(16px, 4vw, 28px) 80px',
+                }}
+            >
+                <div
+                    className="col gap-6 ai-center"
+                    style={{ maxWidth: 720, width: '100%', textAlign: 'center' }}
+                >
+                    <span className="section-mark" style={{ alignSelf: 'center' }}>
+                        Error · 404
+                    </span>
 
-                {/* Message */}
-                <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                    Page Not Found
-                </h1>
-                <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-                    The page you're looking for doesn't exist or has been moved.
-                    Let's get you back on track.
-                </p>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Link
-                        href="/"
-                        className="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold rounded-xl shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 transition-all hover:-translate-y-0.5 flex items-center gap-2"
+                    <div
+                        className="display"
+                        aria-hidden
+                        style={{
+                            fontSize: 'clamp(120px, 18vw, 220px)',
+                            lineHeight: 0.88,
+                            letterSpacing: '-0.055em',
+                            fontWeight: 600,
+                            color: 'var(--ink)',
+                            userSelect: 'none',
+                        }}
                     >
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                        Go Home
-                    </Link>
-                    <Link
-                        href="/conditions"
-                        className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all flex items-center gap-2"
-                    >
-                        Browse Conditions
-                    </Link>
-                </div>
+                        404<span style={{ color: 'var(--orange)' }}>.</span>
+                    </div>
 
-                {/* Quick Links */}
-                <div className="mt-16 pt-8 border-t border-white/10">
-                    <p className="text-sm text-slate-500 mb-4">Popular sections:</p>
-                    <div className="flex flex-wrap items-center justify-center gap-3">
-                        <Link href="/symptoms" className="text-sm text-teal-400 hover:text-teal-300 transition-colors">
-                            AI Diagnosis
+                    <h1
+                        className="display"
+                        style={{
+                            fontSize: 'clamp(28px, 4vw, 44px)',
+                            lineHeight: 1.05,
+                            letterSpacing: '-0.035em',
+                            fontWeight: 600,
+                            margin: 0,
+                            color: 'var(--ink)',
+                        }}
+                    >
+                        We couldn&apos;t find{' '}
+                        <span style={{ color: 'var(--cobalt)' }}>that page</span>.
+                    </h1>
+
+                    <p
+                        className="lede"
+                        style={{
+                            fontSize: 18,
+                            color: 'var(--ink-2)',
+                            maxWidth: 540,
+                            margin: 0,
+                            lineHeight: 1.55,
+                        }}
+                    >
+                        The link may be broken or the page may have moved. From here you can head home,
+                        browse conditions, or ask Healz AI for help.
+                    </p>
+
+                    <div
+                        className="row ai-center gap-3"
+                        style={{ flexWrap: 'wrap', justifyContent: 'center', marginTop: 8 }}
+                    >
+                        <Link href="/" className="btn btn-cobalt">
+                            Back to home
                         </Link>
-                        <span className="text-slate-600">•</span>
-                        <Link href="/doctors" className="text-sm text-teal-400 hover:text-teal-300 transition-colors">
-                            Find Doctors
+                        <Link href="/conditions" className="btn">
+                            Browse conditions
                         </Link>
-                        <span className="text-slate-600">•</span>
-                        <Link href="/analyze" className="text-sm text-teal-400 hover:text-teal-300 transition-colors">
-                            Report Analysis
-                        </Link>
-                        <span className="text-slate-600">•</span>
-                        <Link href="/contact" className="text-sm text-teal-400 hover:text-teal-300 transition-colors">
-                            Contact Us
+                        <Link href="/healz-ai" className="btn">
+                            Ask Healz AI
                         </Link>
                     </div>
+
+                    <div
+                        className="col gap-3"
+                        style={{
+                            marginTop: 40,
+                            paddingTop: 28,
+                            borderTop: '1px solid var(--rule)',
+                            width: '100%',
+                            maxWidth: 480,
+                        }}
+                    >
+                        <span
+                            className="mono"
+                            style={{
+                                fontSize: 11,
+                                color: 'var(--ink-3)',
+                                letterSpacing: '.08em',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            Popular sections
+                        </span>
+                        <div
+                            className="row ai-center gap-2"
+                            style={{ flexWrap: 'wrap', justifyContent: 'center', columnGap: 14 }}
+                        >
+                            {[
+                                { href: '/symptoms', label: 'Symptom checker' },
+                                { href: '/doctors', label: 'Find doctors' },
+                                { href: '/tests', label: 'Lab tests' },
+                                { href: '/treatments', label: 'Treatments' },
+                                { href: '/analyze', label: 'Report analysis' },
+                                { href: '/contact', label: 'Contact' },
+                            ].map((item, i, arr) => (
+                                <span
+                                    key={item.href}
+                                    className="row ai-center gap-2"
+                                    style={{ fontSize: 14 }}
+                                >
+                                    <Link
+                                        href={item.href}
+                                        style={{
+                                            color: 'var(--cobalt)',
+                                            textDecoration: 'none',
+                                            fontWeight: 500,
+                                        }}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                    {i < arr.length - 1 && (
+                                        <span style={{ color: 'var(--ink-4)', opacity: 0.6 }}>·</span>
+                                    )}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </V4Page>
     );
 }
