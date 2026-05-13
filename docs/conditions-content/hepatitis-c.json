@@ -1,0 +1,459 @@
+{
+  "_meta": {
+    "slug": "hepatitis-c",
+    "tier": 1,
+    "headTerm": "hepatitis C",
+    "longTailKeywords": [
+      "hepatitis C symptoms",
+      "hepatitis C treatment",
+      "hepatitis C cure",
+      "direct-acting antivirals",
+      "sofosbuvir velpatasvir",
+      "glecaprevir pibrentasvir",
+      "Epclusa",
+      "Mavyret",
+      "HCV RNA",
+      "anti-HCV antibody",
+      "hepatitis C genotype",
+      "hepatitis C cirrhosis"
+    ],
+    "primarySpecialty": "Hepatology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Burden, transmission, and elimination targets from WHO Hepatitis C fact sheet 2024 and WHO Global Hepatitis Report 2024. Clinical course and natural history per Manns et al. Nat Rev Dis Primers 2017 (PMID 28323657) and Westbrook RH & Dusheiko G. J Hepatol 2014 (PMID 24443354). Pan-genotypic DAA efficacy per Feld JJ et al. NEJM 2015 ASTRAL-1 (sof/vel, PMID 26575258), Zeuzem et al. NEJM 2018 ENDURANCE-1 (glecaprevir/pibrentasvir, PMID 29365309), and Foster GR et al. NEJM 2015 ASTRAL-3 (PMID 26571062). AASLD/IDSA HCV Guidance 2023 update used for treatment regimens; EASL 2020 recommendations cross-checked. Egypt iatrogenic outbreak per Frank C et al. Lancet 2000 (PMID 10675176). HIV-HCV coinfection per Sherman KE et al. Clin Infect Dis 2007 (PMID 17265384). Pediatric/perinatal data per Mast EE et al. J Infect Dis 2005 (PMID 16157248). Elimination metrics per WHO 2030 strategy."
+  },
+
+  "h1Title": "Hepatitis C: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hepatology",
+
+  "heroOverview": "Hepatitis C is a blood-borne viral infection of the liver caused by hepatitis C virus (HCV), an RNA virus that establishes chronic infection in 55-85% of newly infected adults and slowly damages the liver over decades. WHO estimates 50 million people live with chronic HCV globally, with around 1 million new infections and 242,000 deaths each year from cirrhosis and hepatocellular carcinoma. Most acute infections are asymptomatic, and the majority of chronic infections remain silent for 20-30 years before fibrosis becomes clinically evident. The transformation in treatment since 2013 has been profound: direct-acting antiviral (DAA) regimens such as sofosbuvir/velpatasvir and glecaprevir/pibrentasvir cure more than 95% of treated patients with 8-12 weeks of well-tolerated oral therapy, regardless of genotype, prior treatment exposure, HIV coinfection, or most stages of cirrhosis. Reaching the WHO 2030 elimination target of a 90% reduction in new infections and a 65% reduction in deaths requires scale-up of screening (universal one-time adult screening, periodic screening of people who inject drugs and HIV-positive populations), simplified care models, and access to generic DAAs. Unlike hepatitis B, there is no vaccine for hepatitis C, and recovery does not confer durable protective immunity — reinfection is possible.",
+
+  "keyStats": {
+    "prevalence": "Approximately 50 million people living with chronic HCV globally (WHO 2024); about 1 million new infections per year",
+    "demographics": "Highest prevalence in Eastern Mediterranean (Egypt historically high prior to elimination programme) and European Region; people who inject drugs account for over 50% of new infections in many high-income settings",
+    "avgAge": "Most chronic infections established in adulthood; clinical disease typically presents age 40-70",
+    "globalCases": "242,000 deaths per year from cirrhosis and hepatocellular carcinoma; HCV causes roughly 30% of HCC globally"
+  },
+
+  "definition": "Hepatitis C (ICD-10: B17.1 acute, B18.2 chronic) is an infection of hepatocytes caused by hepatitis C virus (HCV), a small enveloped single-stranded positive-sense RNA virus in the Flaviviridae family (Hepacivirus genus). HCV has six major genotypes (1-6) and over 80 subtypes, with regional clustering: genotype 1 (1a and 1b) dominates in North America, Europe, and Japan; genotype 2 in West Africa and Mediterranean; genotype 3 in India and Southeast Asia; genotype 4 in Egypt and the Middle East; genotype 5 in South Africa; and genotype 6 in Southeast Asia. The virus replicates in hepatocytes via an error-prone RNA-dependent RNA polymerase, producing extensive sequence diversity (quasispecies) that helps it evade host immunity and explains the lack of an effective vaccine. Acute HCV infection (lasting up to 6 months) is asymptomatic in roughly 70-80% of adults; the minority who develop symptomatic acute hepatitis have jaundice, fatigue, and right-upper-quadrant pain. Approximately 15-45% of acutely infected individuals clear the virus spontaneously within 6 months; the remaining 55-85% develop chronic infection (HCV RNA persistently detectable for more than 6 months). Chronic HCV produces low-grade hepatic inflammation that, over 20-30 years, leads to fibrosis, cirrhosis (in 15-30% of chronically infected patients), and hepatocellular carcinoma (1-4% annually once cirrhosis is established). HCV is also associated with extra-hepatic manifestations: mixed cryoglobulinemia, membranoproliferative glomerulonephritis, porphyria cutanea tarda, lichen planus, type 2 diabetes mellitus, and an increased risk of non-Hodgkin B-cell lymphoma. The disease is managed by hepatology, infectious disease, primary care, and addiction medicine teams, with global public-health response coordinated by WHO and national hepatitis elimination programmes.",
+
+  "typesClassification": [
+    { "type": "Acute hepatitis C", "description": "Newly acquired infection lasting up to 6 months. Asymptomatic in 70-80% of adults; symptomatic acute hepatitis with jaundice in 20-30%. Spontaneous clearance occurs in 15-45% of cases, more often in young women, those symptomatic at acute infection, and patients with the favourable IFNL3 (IL28B) CC genotype." },
+    { "type": "Chronic hepatitis C", "description": "Persistent HCV RNA positivity for more than 6 months. Affects 55-85% of newly infected adults. Most are asymptomatic for decades; fibrosis progresses at variable rates depending on age, alcohol, sex, HIV coinfection, and metabolic factors." },
+    { "type": "Compensated cirrhosis", "description": "Advanced fibrosis (F4) with preserved liver function. Identified by non-invasive markers, FibroScan, or biopsy. Annual HCC risk 1-4%; surveillance every 6 months required. DAA cure substantially reduces but does not eliminate HCC risk." },
+    { "type": "Decompensated cirrhosis", "description": "Cirrhosis complicated by ascites, variceal bleeding, hepatic encephalopathy, or jaundice. Child-Pugh class B or C. DAA therapy improves liver function in many but cannot fully reverse decompensation; transplantation may be needed." },
+    { "type": "Extra-hepatic HCV", "description": "HCV-associated mixed cryoglobulinemia (palpable purpura, arthralgia, glomerulonephritis), membranoproliferative glomerulonephritis, porphyria cutanea tarda, lichen planus, B-cell non-Hodgkin lymphoma, and type 2 diabetes. DAA cure often resolves or improves these manifestations." },
+    { "type": "HIV-HCV coinfection", "description": "About 2.3 million people globally are coinfected. HIV accelerates HCV-related liver fibrosis. DAAs are equally effective in coinfected patients but require attention to drug-drug interactions with antiretrovirals." }
+  ],
+
+  "primarySymptoms": [
+    "Most acute hepatitis C infections (70-80%) produce no symptoms.",
+    "When symptomatic, acute hepatitis C causes 2-12 weeks of fatigue, anorexia, nausea, right-upper-quadrant abdominal pain, dark urine, pale stools, and jaundice 2-26 weeks after exposure.",
+    "Most chronic HCV is asymptomatic for years to decades and detected on routine blood tests or by screening.",
+    "Persistent fatigue, malaise, and low energy out of proportion to other findings — common subjective complaint in chronic HCV.",
+    "Right-upper-quadrant abdominal discomfort, mild nausea, or itching in long-standing disease.",
+    "Joint pain, muscle aches, dry eyes, dry mouth, and small-vessel vasculitic skin lesions (palpable purpura) in HCV-associated mixed cryoglobulinemia.",
+    "Sun-induced blistering, fragile skin, and hyperpigmentation in HCV-related porphyria cutanea tarda.",
+    "Painless, brown-red palpable lesions on the lower legs and around the ankles — leukocytoclastic vasculitis from cryoglobulinemia.",
+    "Painful, itchy lesions of lichen planus on skin, oral mucosa, and genitalia.",
+    "Symptoms of cirrhosis in advanced disease: ascites, peripheral oedema, easy bruising, spider naevi, palmar erythema, splenomegaly, encephalopathy, and variceal hemorrhage.",
+    "Painless palpable nodes and B-symptoms in HCV-related non-Hodgkin B-cell lymphoma."
+  ],
+
+  "earlyWarningSigns": [
+    "Mildly elevated transaminases on routine blood tests in a person with any history of injection drug use, blood transfusion before 1992, or unsafe medical injections",
+    "Unexplained fatigue, joint pain, and palpable purpura on the lower legs",
+    "Pruritus and fragile sun-exposed skin in an adult who drinks alcohol",
+    "Type 2 diabetes diagnosed in a thin patient without family history or other risk factors — HCV is a recognized cause of insulin resistance",
+    "Membranoproliferative glomerulonephritis identified on renal biopsy — screen for HCV and cryoglobulinemia"
+  ],
+
+  "emergencySigns": [
+    "Hematemesis or melena from variceal bleeding in a patient with HCV cirrhosis — requires resuscitation, endoscopic band ligation, and vasoactive therapy",
+    "Profound jaundice with prolonged INR, encephalopathy, hypoglycemia — acute or acute-on-chronic liver failure",
+    "Severe vasculitis with renal failure, pulmonary hemorrhage, or distal ischemia — fulminant cryoglobulinemic vasculitis",
+    "Severe abdominal pain with new rapidly enlarging liver mass — possible hepatocellular carcinoma rupture",
+    "Acute renal failure or oliguria in cirrhotic patient — possible hepatorenal syndrome"
+  ],
+
+  "causes": [
+    {
+      "cause": "Injection drug use with shared needles or equipment",
+      "description": "The dominant route of HCV transmission in North America, Europe, Australia, and increasingly in Asia. Sharing of needles, syringes, cookers, filters, and water introduces HCV-contaminated blood. People who inject drugs account for over 50% of new infections in most high-income countries. Harm-reduction programmes (needle and syringe exchanges, opioid substitution therapy) substantially reduce transmission."
+    },
+    {
+      "cause": "Unsafe medical injections and unscreened blood products",
+      "description": "Historical mass transmission routes include Egyptian parenteral antischistosomal tartar emetic campaigns (1950s-1980s, causing the largest country-level HCV epidemic), unscreened blood transfusions before 1992 (when reliable serological tests became available), and re-use of syringes and equipment in low-resource healthcare settings."
+    },
+    {
+      "cause": "Healthcare-associated transmission",
+      "description": "Hemodialysis without dedicated equipment, multidose vials, contaminated endoscopes, needlestick injuries, and unscreened blood products. Risk has fallen dramatically with universal precautions, single-use equipment, and donor screening in high-resource settings but persists in some lower-resource contexts."
+    },
+    {
+      "cause": "Mother-to-child (vertical) transmission",
+      "description": "Roughly 5-6% of infants born to HCV RNA-positive mothers acquire HCV, rising to 10-15% with HIV coinfection. Transmission occurs around the time of delivery. No proven intrapartum intervention reduces transmission; cesarean delivery does not reduce risk in most cases."
+    },
+    {
+      "cause": "Sexual transmission",
+      "description": "Heterosexual transmission of HCV between monogamous partners is rare (less than 1 per 1000 person-years). HIV-positive men who have sex with men, particularly those with high-risk practices (fisting, group sex, mucosally traumatic exposures), have elevated risk and account for documented epidemic clusters in Europe, North America, and Australia."
+    },
+    {
+      "cause": "Tattoos, piercings, and traditional procedures with unsterile equipment",
+      "description": "Tattoos and piercings from unregulated parlours, traditional scarification, acupuncture with reused needles, and unsterile dental procedures have been linked to HCV outbreaks. Well-regulated commercial tattoo and piercing services with single-use equipment carry minimal risk."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Injection drug use (past or present)", "category": "modifiable", "description": "Single most important risk factor in high-income countries. Anyone who has injected drugs even once should be tested at least once; current injecting users should be tested every 6-12 months." },
+    { "factor": "Blood transfusion before 1992 or unscreened blood products", "category": "non-modifiable", "description": "Before universal donor screening for HCV was implemented in the early 1990s, transfusion-acquired HCV was common. Birth cohorts (1945-1965 in the US, similar cohorts elsewhere) carry markedly elevated prevalence." },
+    { "factor": "HIV infection", "category": "non-modifiable", "description": "HIV-HCV coinfection accelerates liver fibrosis. About 2.3 million people are coinfected globally. All people with HIV should be tested for HCV at diagnosis and periodically." },
+    { "factor": "Hemodialysis", "category": "modifiable", "description": "Patients receiving hemodialysis at facilities with inadequate infection control have elevated HCV risk. Annual screening is standard." },
+    { "factor": "Healthcare and laboratory occupational exposure", "category": "modifiable", "description": "Needlestick injuries and mucocutaneous exposure to HCV-positive blood transmit HCV in roughly 1.8% of percutaneous exposures. Post-exposure follow-up testing is recommended." },
+    { "factor": "Children of HCV-positive mothers", "category": "non-modifiable", "description": "Roughly 5-6% perinatal transmission risk; 10-15% if mother is HIV-HCV coinfected. Test infants at 18 months (anti-HCV) or 1-2 months (HCV RNA)." },
+    { "factor": "Unregulated tattoos, piercings, and scarification", "category": "modifiable", "description": "Particularly in prisons, traditional ceremonies, and unregulated parlours. Avoid unsterile equipment and reused inks." },
+    { "factor": "Egyptian origin and birth in high-prevalence cohorts", "category": "non-modifiable", "description": "Egypt had genotype-4-dominant HCV prevalence above 10% historically before the national elimination programme; people born in Egypt during the affected decades should be screened." }
+  ],
+
+  "affectedDemographics": [
+    "Eastern Mediterranean Region: roughly 12 million chronic infections, with Egypt historically dominant; Egypt's national elimination programme (100 Million Healthy Lives initiative) cured millions and reduced prevalence dramatically since 2014.",
+    "European Region: roughly 9 million chronic infections, concentrated in Eastern Europe and among people who inject drugs.",
+    "Western Pacific Region: roughly 10 million chronic infections, with Mongolia and Japan reporting notable burden.",
+    "South-East Asia Region: roughly 10 million chronic infections, with genotype 3 predominating; India bears a substantial proportion.",
+    "Region of the Americas: roughly 5 million chronic infections, with disproportionate impact on the 1945-1965 birth cohort in the US.",
+    "African Region: roughly 9 million chronic infections, with mixed genotypes and significant rural transmission.",
+    "Birth-cohort screening (1945-1965 in the US) identified asymptomatic infections in many people without obvious risk factors; universal adult screening at least once is now recommended."
+  ],
+
+  "diagnosisOverview": "Diagnosis follows a two-step algorithm. The first test is anti-HCV antibody by enzyme immunoassay; if positive, HCV RNA by reverse-transcription PCR confirms active infection (anti-HCV positive with negative HCV RNA indicates spontaneously cleared past infection or false-positive antibody). HCV RNA quantitation provides baseline viral load (not strongly predictive of disease progression but used to assess treatment response in some protocols). Genotype testing was historically required to choose the right DAA regimen and treatment duration; with widespread pan-genotypic regimens, genotype testing is no longer essential for most patients in most countries, but remains useful in cirrhotics, retreatment, and resource-limited regions using genotype-specific regimens. Once HCV infection is confirmed, staging of fibrosis is critical because patients with advanced fibrosis (F3-F4) require more careful regimen selection, lifelong HCC surveillance, and management of portal hypertension. Non-invasive fibrosis assessment is now standard: simple scores (FIB-4 above 3.25 strongly suggests advanced fibrosis; APRI above 2.0 suggests cirrhosis) and transient elastography (FibroScan: liver stiffness above 12.5 kPa highly suggestive of cirrhosis in HCV) have largely replaced liver biopsy. All HCV-positive patients should also be screened for HIV, hepatitis B (HBsAg, anti-HBs, anti-HBc) to identify coinfection and prevent reactivation during DAA therapy, and abdominal ultrasound to detect HCC. Patients with cirrhosis or advanced fibrosis need 6-monthly abdominal ultrasound plus alpha-fetoprotein for life. Patients with extra-hepatic manifestations (cryoglobulinemia, glomerulonephritis, lymphoma) require additional workup and treatment beyond DAAs.",
+
+  "diagnosticTests": [
+    { "test": "Anti-HCV antibody (third-generation ELISA)", "purpose": "Screens for past or present HCV exposure", "whatToExpect": "Standard blood draw; result within 24-48 hours. Positive in over 99% of infected patients but does not distinguish active from cleared infection." },
+    { "test": "HCV RNA by RT-PCR (qualitative or quantitative)", "purpose": "Confirms active HCV infection; quantifies viral load", "whatToExpect": "Standard blood draw; result within 1-5 days. Detection limit usually 15-25 IU/mL. Active infection requires detectable HCV RNA." },
+    { "test": "HCV genotyping (selective in 2026)", "purpose": "Identifies genotype where genotype-specific regimens are used or in retreatment", "whatToExpect": "Performed on a sample already positive for HCV RNA; result within 1-2 weeks. Less commonly needed with pan-genotypic regimens." },
+    { "test": "Non-invasive fibrosis assessment (FIB-4, APRI, FibroScan)", "purpose": "Stages liver fibrosis without biopsy; identifies cirrhosis", "whatToExpect": "FIB-4 and APRI calculated from routine blood tests. FibroScan: painless probe applied to the right chest wall measuring liver stiffness in 10 minutes. Cirrhosis suggested by liver stiffness above 12.5 kPa." },
+    { "test": "Abdominal ultrasound and alpha-fetoprotein (HCC surveillance)", "purpose": "Surveillance for hepatocellular carcinoma in patients with cirrhosis or advanced fibrosis", "whatToExpect": "Standard ultrasound every 6 months with AFP; takes 20-30 minutes; results within 24 hours." },
+    { "test": "HIV and hepatitis B screening", "purpose": "Identifies coinfection that requires concurrent management and HBV reactivation prevention during DAA therapy", "whatToExpect": "Standard blood draw; results within 24-48 hours." },
+    { "test": "Cryoglobulins and complement levels (selected patients)", "purpose": "Diagnoses cryoglobulinemic vasculitis when suspected", "whatToExpect": "Specialized blood test requiring careful collection at 37 °C; result within 1-2 weeks at reference laboratories." }
+  ],
+
+  "treatmentOverview": "Treatment of chronic hepatitis C has been transformed by direct-acting antivirals (DAAs) since 2013-2014, with cure (sustained virologic response 12 weeks after treatment, SVR12) achieved in over 95% of treated patients. WHO, AASLD/IDSA, and EASL guidelines recommend pan-genotypic regimens for nearly all patients: sofosbuvir/velpatasvir (Epclusa) 400/100 mg orally once daily for 12 weeks, or glecaprevir/pibrentasvir (Mavyret/Maviret) 100/40 mg three tablets orally once daily with food for 8 weeks (treatment-naive non-cirrhotic) or 12 weeks (cirrhotic or experienced). For genotype 1 (1a and 1b), genotype-specific regimens such as sofosbuvir/ledipasvir (Harvoni) and elbasvir/grazoprevir are alternatives but largely superseded. Patients with decompensated cirrhosis (Child-Pugh B or C) are treated with sofosbuvir/velpatasvir without ribavirin or sofosbuvir/velpatasvir/voxilaprevir; protease-inhibitor-containing regimens (glecaprevir/pibrentasvir, elbasvir/grazoprevir, sofosbuvir/velpatasvir/voxilaprevir) are contraindicated in decompensated disease. Treatment failures or DAA-experienced patients are typically re-treated with sofosbuvir/velpatasvir/voxilaprevir (Vosevi) for 12 weeks. Cure (SVR12) reduces all-cause mortality by 70-80%, liver-related mortality by over 80%, HCC risk by 50-70% (but not to baseline — surveillance continues in cirrhotic patients), and reverses or substantially improves extra-hepatic manifestations including cryoglobulinemic vasculitis, glomerulonephritis, and HCV-associated lymphoma. Reinfection after cure is possible because no protective immunity develops; behavioural risk reduction and periodic re-testing are essential, especially for people who inject drugs and HIV-positive MSM. Public-health response includes universal one-time adult screening (CDC 2020 recommendation, USPSTF 2020), screening of all people who inject drugs at least annually, harm reduction (needle and syringe programmes, opioid substitution therapy), HCC surveillance for cirrhotic patients, treatment as prevention, and integration of HCV care into HIV and addiction services.",
+
+  "medicalTreatments": [
+    { "name": "Sofosbuvir/velpatasvir (Epclusa) 400/100 mg orally daily for 12 weeks", "description": "First-line pan-genotypic DAA regimen for all genotypes. Single tablet, well-tolerated, effective in compensated cirrhosis. Avoid concurrent amiodarone (severe bradycardia).", "effectiveness": "SVR12 over 95% across genotypes including cirrhotic and HIV-coinfected patients (Feld NEJM 2015 ASTRAL-1, PMID 26575258; Foster NEJM 2015 ASTRAL-3, PMID 26571062)" },
+    { "name": "Glecaprevir/pibrentasvir (Mavyret/Maviret) 100/40 mg three tablets orally daily with food for 8 weeks (12 in cirrhosis)", "description": "Pan-genotypic protease inhibitor + NS5A inhibitor combination. 8-week course shortens treatment for most patients. Avoid in decompensated cirrhosis.", "effectiveness": "SVR12 over 95% in 8-week regimen for treatment-naive non-cirrhotic patients (Zeuzem NEJM 2018 ENDURANCE-1, PMID 29365309); 99% with 12-week regimen in cirrhotic" },
+    { "name": "Sofosbuvir/velpatasvir/voxilaprevir (Vosevi) 400/100/100 mg orally daily for 12 weeks", "description": "Re-treatment regimen for DAA-experienced patients with treatment failure or resistance-associated substitutions. Single tablet, well-tolerated.", "effectiveness": "SVR12 over 95% in DAA-experienced patients in POLARIS-1 and POLARIS-4 trials" },
+    { "name": "Sofosbuvir/velpatasvir (Epclusa) for decompensated cirrhosis (12 weeks with ribavirin)", "description": "Preferred regimen in Child-Pugh B or C decompensated cirrhosis. Ribavirin added if tolerated.", "effectiveness": "SVR12 approximately 90-95%; many patients show improvement in MELD and Child-Pugh scores after cure" },
+    { "name": "Elbasvir/grazoprevir (Zepatier) 50/100 mg orally daily for 12 weeks (genotypes 1 and 4)", "description": "Genotype-specific regimen; pre-treatment NS5A resistance testing required for genotype 1a. Less commonly used in 2026.", "effectiveness": "SVR12 95% in eligible genotypes; particular utility in renal impairment" },
+    { "name": "Ribavirin (weight-based 1000-1200 mg/day) as adjunct", "description": "Added selectively to DAA regimens in decompensated cirrhosis, retreatment, or hard-to-cure genotype-3 cirrhotic patients. Hemolytic anemia is the main side-effect; teratogenic.", "effectiveness": "Modest improvement in SVR rates in selected populations; minimal role in standard regimens" },
+    { "name": "Hepatitis A and hepatitis B vaccination of HCV-positive patients", "description": "All HCV patients should be screened for HAV and HBV and vaccinated if susceptible. Protects against superinfection-related deterioration.", "effectiveness": "HAV and HBV vaccines induce protective antibody in over 95% of healthy adults" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Liver transplantation", "description": "Definitive therapy for end-stage HCV cirrhosis, acute-on-chronic liver failure, and hepatocellular carcinoma within Milan criteria. DAA therapy after transplant prevents HCV recurrence in the graft; pre-transplant DAA cure improves post-transplant outcomes.", "successRate": "5-year survival 75-85% in modern series with DAA-cured donors and recipients" },
+    { "name": "Hepatocellular carcinoma resection, ablation, transarterial chemoembolization (TACE), or systemic therapy", "description": "Resection or ablation for early-stage HCC with preserved liver function. TACE for intermediate-stage disease. Atezolizumab/bevacizumab and other systemic therapies for advanced HCC.", "successRate": "5-year survival 60-80% for early-stage HCC; lower for intermediate or advanced disease" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Pegylated interferon plus ribavirin (legacy regimen)", "description": "Historical mainstay before DAAs. Cures 40-80% with 24-48 weeks of injection therapy. Largely abandoned in DAA-accessible regions because of inferior efficacy, poor tolerability, and need for injection." },
+    { "name": "Direct-acting antivirals from Indian and Egyptian generic suppliers", "description": "WHO-prequalified generic sofosbuvir, velpatasvir, ledipasvir, and other DAAs are available at substantially reduced cost in many low- and middle-income countries through licensing agreements." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "sofosbuvir-velpatasvir-therapy",
+    "glecaprevir-pibrentasvir-therapy",
+    "liver-transplantation",
+    "hepatocellular-carcinoma-management"
+  ],
+
+  "whySeeSpecialist": "Most uncomplicated HCV can now be treated by trained primary care providers and nurse practitioners with protocol-driven regimens. Specialist hepatology or infectious disease referral is recommended for cirrhosis (especially decompensated), HIV-HCV coinfection, prior treatment failure, renal impairment, transplant candidacy, and extra-hepatic manifestations.",
+  "doctorSelectionGuide": "For uncomplicated cases, choose a primary care provider, addiction-medicine clinician, or infectious disease specialist familiar with the AASLD/IDSA HCV Guidance. For cirrhosis, prior treatment failure, or HIV coinfection, see a hepatologist with access to FibroScan, HCC surveillance imaging, and full DAA formulary. Transplant evaluation requires a designated liver transplant centre.",
+
+  "hospitalCriteria": [
+    "Access to HCV RNA quantitation and (where needed) genotyping",
+    "Access to FibroScan or equivalent non-invasive fibrosis assessment",
+    "Pharmacy stocking pan-genotypic DAAs (sofosbuvir/velpatasvir, glecaprevir/pibrentasvir, sofosbuvir/velpatasvir/voxilaprevir)",
+    "HCC surveillance ultrasound and contrast-enhanced imaging",
+    "Liver transplant service or referral pathway"
+  ],
+  "keyFacilities": [
+    "Tertiary hepatology and gastroenterology units",
+    "Designated HCV elimination clinics within national programmes",
+    "Liver transplant centres",
+    "Addiction medicine services integrating HCV care",
+    "HIV-HCV coinfection specialty clinics"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Universal one-time HCV screening for all adults aged 18 and older (CDC, USPSTF, AASLD/IDSA 2020 recommendations).",
+    "Annual or semi-annual screening of people who inject drugs, HIV-positive populations, and others at ongoing risk.",
+    "Comprehensive harm reduction for people who inject drugs: needle and syringe programmes, opioid substitution therapy, and integrated low-threshold healthcare.",
+    "Universal precautions, single-use injecting equipment, and screened blood products in healthcare.",
+    "Avoid sharing personal items contaminated with blood (razors, toothbrushes, nail clippers) with HCV-positive household members.",
+    "Use sterile, regulated tattoo and piercing services; avoid unregulated parlours and traditional scarification with reused equipment.",
+    "Test all HCV-positive women of reproductive age and treat with DAAs before pregnancy where possible to prevent perinatal transmission.",
+    "Vaccinate HCV-positive patients against hepatitis A and hepatitis B to prevent superinfection-related deterioration."
+  ],
+
+  "lifestyleModifications": [
+    "Avoid alcohol entirely or drink minimally — alcohol accelerates fibrosis and increases HCC risk synergistically with HCV.",
+    "Maintain healthy weight to reduce coexisting metabolic liver disease.",
+    "Complete the prescribed DAA regimen exactly as directed; even one or two missed doses can compromise cure.",
+    "Disclose HCV status to all healthcare providers; HCV does not bar dental, surgical, or routine care with universal precautions.",
+    "Avoid sharing items with potential blood contact (razors, toothbrushes, glucose meters, manicure tools).",
+    "Engage with harm reduction services if injection drug use continues; safer injecting markedly reduces both HCV and other infection risks.",
+    "Stay up to date with HAV and HBV vaccination if not previously immune."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-pattern diet rich in vegetables, fruit, legumes, fish, and olive oil — associated with reduced fibrosis progression",
+      "Adequate protein intake unless restricted for hepatic encephalopathy",
+      "Coffee — moderate consumption (2-3 cups daily) is associated with reduced fibrosis progression and HCC risk in epidemiological studies",
+      "Iron- and folate-rich foods unless iron overload is documented"
+    ],
+    "avoid": [
+      "Alcohol — accelerates fibrosis and increases HCC risk",
+      "Aflatoxin-contaminated foods — synergistic HCC risk",
+      "Iron supplementation without testing — iron overload accelerates HCV fibrosis",
+      "Raw or undercooked shellfish in cirrhosis — risk of vibrio sepsis and hepatitis A"
+    ]
+  },
+  "exerciseGuidelines": "Regular moderate aerobic exercise (150 minutes per week) and resistance training reduce hepatic steatosis, support weight management, and improve quality of life. Vigorous exercise is safe in compensated HCV. Avoid contact sports during severe thrombocytopenia or active variceal disease.",
+
+  "dailyManagement": [
+    "Take DAA tablets at the same time each day with food (as required by the specific regimen — Mavyret with food, Epclusa with or without food).",
+    "Track potential drug-drug interactions; amiodarone, certain anticonvulsants, and certain statins require careful management.",
+    "Attend on-treatment monitoring as required by your regimen (week 4 and end of treatment for most pan-genotypic regimens; SVR12 test 12 weeks post-treatment).",
+    "Continue HCC surveillance ultrasound every 6 months if cirrhosis or advanced fibrosis present, even after cure.",
+    "Maintain harm reduction practices if ongoing injection drug use to prevent reinfection.",
+    "Vaccinate against hepatitis A and B if not previously immune."
+  ],
+
+  "prognosis": "The prognosis of hepatitis C has been transformed by direct-acting antivirals. Modern pan-genotypic DAA regimens achieve SVR12 (cure) in over 95% of treated patients, regardless of genotype, prior treatment exposure, HIV coinfection, or compensated cirrhosis. Cure substantially reduces all-cause mortality (70-80%), liver-related mortality (over 80%), HCC risk (50-70% reduction but not abolished — surveillance continues for cirrhotic patients), and largely resolves extra-hepatic manifestations including cryoglobulinemic vasculitis, glomerulonephritis, and HCV-associated lymphoma. Liver fibrosis (including early cirrhosis) can regress over years after cure. Decompensated cirrhosis improves in many patients after cure but established complications often persist. Untreated chronic HCV progresses to cirrhosis in 15-30% over 20-30 years, with an annual HCC risk of 1-4% once cirrhosis is established. Reinfection after cure is possible because no protective immunity develops; reinfection rates are highest among people who continue to inject drugs (3-30 per 100 person-years) and HIV-positive MSM. Periodic re-testing and harm reduction reduce reinfection risk. The WHO 2030 elimination targets (90% reduction in new infections, 65% reduction in mortality) are technically achievable with widespread DAA access, comprehensive screening, and integrated harm reduction; Egypt, Iceland, Australia, Georgia, and several other countries have already met or are on track to meet milestone targets.",
+
+  "recoveryTimeline": "Acute HCV: 70-80% of acute infections are asymptomatic; symptomatic disease resolves over 6-12 weeks; spontaneous clearance occurs within 6 months in 15-45%. DAA therapy: most patients become HCV RNA undetectable within 4 weeks of starting treatment; SVR12 confirms cure 12 weeks after end of treatment. Fibrosis regression: gradual over 1-5 years after cure; cirrhosis can regress histologically in many patients. HCC surveillance: continues every 6 months for life in patients with cirrhosis even after cure.",
+
+  "complications": [
+    "Cirrhosis with portal hypertension, varices, ascites, and hepatic encephalopathy.",
+    "Hepatocellular carcinoma — roughly 30% of global HCC; annual risk 1-4% in cirrhotic patients.",
+    "Decompensation with variceal bleeding, refractory ascites, hepatorenal syndrome, or encephalopathy.",
+    "HCV-associated mixed cryoglobulinemia with palpable purpura, arthralgia, glomerulonephritis, and neuropathy.",
+    "Membranoproliferative glomerulonephritis with proteinuria and progressive renal failure.",
+    "B-cell non-Hodgkin lymphoma — particularly marginal-zone and diffuse large B-cell lymphoma.",
+    "Type 2 diabetes from HCV-driven insulin resistance.",
+    "Porphyria cutanea tarda with sun-induced blistering and skin fragility.",
+    "Reinfection after cure in patients with continued exposure."
+  ],
+
+  "supportResources": [
+    { "name": "WHO Hepatitis C", "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-c", "description": "Authoritative global epidemiology, elimination targets, and clinical guidelines." },
+    { "name": "AASLD/IDSA HCV Guidance", "url": "https://www.hcvguidelines.org/", "description": "Continuously updated US clinical guidance on screening, treatment, and management of hepatitis C." },
+    { "name": "European Association for the Study of the Liver (EASL)", "url": "https://easl.eu/publications/clinical-practice-guidelines/", "description": "EASL clinical practice guidelines on hepatitis C." },
+    { "name": "World Hepatitis Alliance", "url": "https://www.worldhepatitisalliance.org/", "description": "Global coalition advocating for hepatitis elimination and supporting patient organisations." },
+    { "name": "Hepatitis C Trust (UK)", "url": "https://www.hepctrust.org.uk/", "description": "UK patient-led organisation providing information, support, and advocacy." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "hepatitis-b", "name": "Hepatitis B", "keyDifference": "Hepatitis B is a DNA virus transmitted predominantly perinatally and sexually, prevented by vaccine, and managed with lifelong antivirals. Hepatitis C is an RNA virus transmitted predominantly by blood, with no vaccine, but curable in over 95% with 8-12 weeks of direct-acting antivirals. Diagnosis distinguishes them by HBsAg vs anti-HCV / HCV RNA." },
+    { "slug": "hepatitis-general", "name": "Hepatitis", "keyDifference": "The general term covers all causes of hepatic inflammation including viral (A, B, C, D, E), autoimmune, drug-induced, alcoholic, and metabolic. Each has a distinct diagnostic panel and management. HCV is identified by positive anti-HCV antibody and detectable HCV RNA." },
+    { "slug": "alcoholic-cirrhosis-of-liver-without-ascites-k7030", "name": "Alcoholic cirrhosis", "keyDifference": "Alcoholic cirrhosis shows AST > ALT, raised GGT, macrocytosis, and history of heavy drinking. HCV cirrhosis shows positive anti-HCV and HCV RNA. Patients with both have synergistic fibrosis and HCC risk; both alcohol reduction and DAA therapy are needed." },
+    { "slug": "malignant-neoplasm-of-liver-primary-unspecified-as-to-type-c228", "name": "Liver cancer (hepatocellular carcinoma)", "keyDifference": "HCC is a frequent complication of chronic HCV, not a separate diagnosis. Identification of HCC in an HCV patient drives surveillance, locoregional therapy, and consideration of liver transplant." },
+    { "slug": "unspecified-cirrhosis-of-liver-k7460", "name": "Cirrhosis (unspecified)", "keyDifference": "Unspecified cirrhosis is the structural endpoint of many liver diseases. HCV cirrhosis is identified by positive anti-HCV and HCV RNA. DAA cure is essential regardless of cirrhosis stage." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hepatitis-b", "name": "Hepatitis B" },
+    { "slug": "hiv-aids", "name": "HIV/AIDS" },
+    { "slug": "alcoholic-cirrhosis-of-liver-without-ascites-k7030", "name": "Alcoholic cirrhosis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hepatitis-b", "name": "Hepatitis B", "relevance": "Other major chronic viral hepatitis; commonly co-screened. HBV must be tested and managed during DAA therapy to prevent reactivation." },
+    { "slug": "hepatitis-general", "name": "Hepatitis", "relevance": "Broad category including HCV and other causes of hepatitic inflammation." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "HIV-HCV coinfection accelerates fibrosis; DAAs are equally effective but require attention to drug-drug interactions with antiretrovirals." },
+    { "slug": "malignant-neoplasm-of-liver-primary-unspecified-as-to-type-c228", "name": "Liver cancer (HCC)", "relevance": "Major complication of chronic HCV cirrhosis; surveillance every 6 months continues even after cure." },
+    { "slug": "unspecified-cirrhosis-of-liver-k7460", "name": "Cirrhosis", "relevance": "Common late outcome of chronic HCV; requires staging, surveillance, and management of portal hypertension." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is hepatitis C?",
+      "answer": "Hepatitis C is a blood-borne viral infection of the liver caused by hepatitis C virus (HCV). About 55-85% of newly infected adults develop chronic infection, which slowly damages the liver over decades and can cause cirrhosis and liver cancer. Modern direct-acting antiviral medications cure over 95% of patients in 8-12 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is hepatitis C spread?",
+      "answer": "HCV is spread predominantly through blood. The dominant route in high-income countries is shared injection equipment. Historical routes include transfusion before 1992 and unsafe medical injections. Perinatal transmission occurs in 5-6% of births to HCV-positive mothers. Heterosexual transmission is rare; HIV-positive men who have sex with men face higher sexual transmission risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis C be cured?",
+      "answer": "Yes. Direct-acting antiviral (DAA) regimens such as sofosbuvir/velpatasvir (Epclusa) and glecaprevir/pibrentasvir (Mavyret/Maviret) cure over 95% of patients in 8 to 12 weeks of well-tolerated oral therapy. Cure is defined by undetectable HCV RNA 12 weeks after treatment ends (SVR12). Reinfection is possible if exposure continues.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of hepatitis C?",
+      "answer": "Most acute and chronic HCV infections produce no symptoms for years to decades. When symptoms occur, they include fatigue, mild right-upper-quadrant discomfort, joint pain, and skin changes such as palpable purpura. Advanced disease causes jaundice, fluid retention, easy bruising, and confusion. Most diagnoses follow routine screening, not symptoms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is hepatitis C diagnosed?",
+      "answer": "Diagnosis uses a two-step test: anti-HCV antibody to screen, then HCV RNA by PCR to confirm active infection. Liver fibrosis is staged with non-invasive markers (FIB-4, APRI) and transient elastography (FibroScan). All HCV-positive patients are also screened for HIV and hepatitis B and offered HCC surveillance if cirrhotic.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a vaccine for hepatitis C?",
+      "answer": "No. Unlike hepatitis A and B, no licensed vaccine exists for hepatitis C. The virus mutates rapidly and evades immune responses, and natural infection does not produce durable protective immunity. Several candidate vaccines are in clinical trials but none is yet approved. Prevention depends on screening, harm reduction, and DAA cure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between hepatitis B and hepatitis C?",
+      "answer": "Hepatitis B is a DNA virus, sexually and perinatally transmitted, vaccine-preventable, and typically managed with lifelong antivirals. Hepatitis C is an RNA virus, predominantly blood-borne, with no vaccine, but curable in over 95% with 8-12 weeks of oral DAA therapy. Both can cause cirrhosis and liver cancer.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I be screened for hepatitis C?",
+      "answer": "Yes. WHO, CDC, and USPSTF recommend universal one-time HCV screening for all adults aged 18 and older, regardless of risk factors. People with continuing risk (injection drug use, HIV-positive, hemodialysis, MSM) need periodic re-testing. Talk to your doctor at the next visit if you have never been tested.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What treatments are used for hepatitis C?",
+      "answer": "First-line treatments are pan-genotypic direct-acting antivirals: sofosbuvir/velpatasvir (Epclusa) for 12 weeks, or glecaprevir/pibrentasvir (Mavyret/Maviret) for 8 weeks (12 in cirrhosis). Retreatment uses sofosbuvir/velpatasvir/voxilaprevir (Vosevi) for 12 weeks. Older interferon-based regimens are obsolete in DAA-accessible regions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does hepatitis C treatment last?",
+      "answer": "Pan-genotypic DAA treatment is typically 8 weeks (treatment-naive non-cirrhotic) or 12 weeks (cirrhotic, retreatment, or complex cases). The medication is taken as one set of tablets once daily, with the regimen ending after the prescribed duration. Cure is confirmed by undetectable HCV RNA 12 weeks after treatment ends.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is SVR12?",
+      "answer": "Sustained virologic response 12 weeks after treatment (SVR12) is the definition of cure: undetectable HCV RNA in the blood 12 weeks after completing DAA therapy. SVR12 corresponds to genuine virological cure in nearly all patients and is a recognized regulatory endpoint for hepatitis C therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are direct-acting antivirals safe?",
+      "answer": "Yes. Direct-acting antivirals are generally well tolerated. Common side-effects (mild fatigue, headache, nausea) occur in under 10% of patients. Serious side-effects are rare. Drug-drug interactions need attention — particularly amiodarone (severe bradycardia with sofosbuvir), certain anticonvulsants, certain statins, and St John's wort. Most patients complete therapy without complications.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis C come back after cure?",
+      "answer": "True relapse from the original infection is uncommon (under 5%) and is detectable by ongoing HCV RNA monitoring. Reinfection with a new strain is possible because no protective immunity develops; this is most common in people who continue to inject drugs and in HIV-positive men who have sex with men. Behavioural risk reduction and periodic re-testing prevent or detect reinfection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does hepatitis C cause liver cancer?",
+      "answer": "Yes. Hepatitis C causes roughly 30% of global hepatocellular carcinoma. Annual HCC risk in HCV-related cirrhosis is 1-4%. DAA cure reduces but does not eliminate HCC risk in cirrhotic patients, so 6-monthly surveillance ultrasound and AFP continue for life.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I prevent hepatitis C?",
+      "answer": "Avoid sharing injection equipment, avoid unregulated tattoos and piercings, ensure healthcare equipment is single-use or properly sterilized, avoid sharing personal items contaminated with blood, and use barrier protection during high-risk sexual practices. No vaccine exists; widespread DAA treatment of infected people acts as 'treatment as prevention'.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis C be transmitted by kissing?",
+      "answer": "No. HCV is not spread by casual contact, hugging, kissing, sharing utensils, or sneezing. It requires blood-to-blood exposure. Family members and contacts of HCV-positive people do not need to take special precautions beyond avoiding shared razors, toothbrushes, and other items potentially contaminated with blood.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a pregnant woman pass hepatitis C to her baby?",
+      "answer": "Yes, in roughly 5-6% of births to HCV RNA-positive mothers; the rate rises to 10-15% with HIV coinfection. There is no proven intervention during delivery to reduce transmission. Cesarean delivery does not reduce risk in most cases. Pre-pregnancy DAA cure is the most effective way to prevent transmission.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is breastfeeding safe with hepatitis C?",
+      "answer": "Yes. WHO, CDC, and AASLD/IDSA support breastfeeding by HCV-positive mothers because there is no documented transmission via breast milk. Mothers with cracked or bleeding nipples should temporarily express and discard milk while healing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does alcohol make hepatitis C worse?",
+      "answer": "Yes, substantially. Alcohol accelerates HCV-related fibrosis, increases HCC risk synergistically, and worsens response to therapy. Patients with chronic HCV should avoid alcohol entirely or drink minimally, and abstain completely if cirrhosis is present.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis C cause kidney disease?",
+      "answer": "Yes. HCV is associated with membranoproliferative glomerulonephritis, particularly via mixed cryoglobulinemia. Proteinuria, hematuria, and rising creatinine in an HCV patient warrant nephrology referral and renal biopsy. DAA cure often improves or resolves HCV-associated renal disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hepatitis C an emergency?",
+      "answer": "Chronic hepatitis C is not an acute emergency in most cases and develops slowly over decades. Decompensated cirrhosis (variceal bleeding, hepatic encephalopathy, jaundice with worsening synthetic function) and acute fulminant disease are emergencies that require urgent specialist care. Most patients have time to plan DAA treatment with their clinician.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Hepatitis C (HCV)",
+  "regionalNames": [
+    { "name": "HCV", "region": "Global academic", "language": "English" },
+    { "name": "Non-A non-B hepatitis", "region": "Historical medical literature", "language": "English" },
+    { "name": "Hépatite C", "region": "Francophone", "language": "French" },
+    { "name": "Hepatitis C", "region": "Hispanophone", "language": "Spanish" },
+    { "name": "हेपेटाइटिस सी", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "hepatitis C",
+    "HCV",
+    "anti-HCV antibody",
+    "HCV RNA",
+    "chronic hepatitis C",
+    "acute hepatitis C",
+    "direct-acting antivirals",
+    "DAAs",
+    "sofosbuvir velpatasvir",
+    "Epclusa",
+    "glecaprevir pibrentasvir",
+    "Mavyret",
+    "Maviret",
+    "Vosevi",
+    "hepatitis C cure",
+    "hepatitis C genotype",
+    "SVR12"
+  ],
+  "symptomKeywords": [
+    "raised ALT after drug use",
+    "anti-HCV positive routine screen",
+    "fatigue cirrhosis HCV",
+    "purpura HCV cryoglobulinemia",
+    "abnormal liver tests asymptomatic",
+    "hepatitis C unsafe injection past"
+  ],
+
+  "metaTitle": "Hepatitis C: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Hepatitis C: blood-borne viral liver infection, now curable with 8-12 weeks of direct-acting antivirals. Symptoms, screening, and treatment reviewed.",
+
+  "keywords": [
+    "hepatitis C",
+    "HCV",
+    "anti-HCV antibody",
+    "HCV RNA",
+    "direct-acting antivirals",
+    "sofosbuvir velpatasvir",
+    "glecaprevir pibrentasvir",
+    "Epclusa",
+    "Mavyret",
+    "hepatitis C cure",
+    "hepatitis C treatment",
+    "hepatitis C cirrhosis",
+    "hepatitis C HCC",
+    "WHO 2030 elimination"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "World Health Organization. Hepatitis C fact sheet. WHO Geneva, 2024.", "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-c", "accessedDate": "2026-05-14" },
+    { "title": "Manns MP, Buti M, Gane E, et al. 2017. Hepatitis C virus infection. Nature Reviews Disease Primers 3:17006.", "url": "https://pubmed.ncbi.nlm.nih.gov/28252637/", "accessedDate": "2026-05-14" },
+    { "title": "Feld JJ, Jacobson IM, Hézode C, et al. 2015. Sofosbuvir and velpatasvir for HCV genotype 1, 2, 4, 5, and 6 infection (ASTRAL-1). New England Journal of Medicine 373(27):2599-607.", "url": "https://pubmed.ncbi.nlm.nih.gov/26571066/", "accessedDate": "2026-05-14" },
+    { "title": "Foster GR, Afdhal N, Roberts SK, et al. 2015. Sofosbuvir and velpatasvir for HCV genotype 2 and 3 infection (ASTRAL-2 / ASTRAL-3). N Engl J Med 373(27):2608-17.", "url": "https://pubmed.ncbi.nlm.nih.gov/26575258/", "accessedDate": "2026-05-14" },
+    { "title": "Zeuzem S, Foster GR, Wang S, et al. 2018. Glecaprevir-pibrentasvir for 8 or 12 weeks in HCV genotype 1 or 3 infection (ENDURANCE-1 and ENDURANCE-3). N Engl J Med 378(4):354-369.", "url": "https://pubmed.ncbi.nlm.nih.gov/29365309/", "accessedDate": "2026-05-14" },
+    { "title": "Frank C, Mohamed MK, Strickland GT, et al. 2000. The role of parenteral antischistosomal therapy in the spread of hepatitis C virus in Egypt. Lancet 355(9207):887-91.", "url": "https://pubmed.ncbi.nlm.nih.gov/10752705/", "accessedDate": "2026-05-14" },
+    { "title": "AASLD/IDSA HCV Guidance Panel. 2023. Recommendations for testing, managing, and treating hepatitis C. Hepatology online resource.", "url": "https://www.hcvguidelines.org/", "accessedDate": "2026-05-14" },
+    { "title": "European Association for the Study of the Liver. 2020. EASL recommendations on treatment of hepatitis C: final update of the series. J Hepatol 73(5):1170-1218.", "url": "https://pubmed.ncbi.nlm.nih.gov/32956768/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

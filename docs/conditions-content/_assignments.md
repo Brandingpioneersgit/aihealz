@@ -295,7 +295,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | exertional-heat-stroke | 3 | Sports Medicine | (open) | — | open | Batch 004, 1 variant |
 | hemolytic-uremic-syndrome | 3 | Nephrology | (open) | — | open | Batch 004, 1 variant |
 | hepatitis-b | 1 | Hepatology | claude-2026-05-14 | 2026-05-14 | done | 5,326 words, 21 FAQs (all schemaEligible), 8 sources; row 583 |
-| hepatitis-c | 3 | Gastroenterologist | (open) | — | open | Batch 004, 1 variant |
+| hepatitis-c | 1 | Hepatology | claude-2026-05-14 | 2026-05-14 | done | 5,157 words, 21 FAQs (all schemaEligible), 8 sources; row 585 |
 | herniated-disc-mri | 3 | Radiology | (open) | — | open | Batch 004, 1 variant |
 | herniated-disc-surgical | 3 | Neurosurgery | (open) | — | open | Batch 004, 1 variant |
 | hiv-aids-prevention | 3 | Preventive & Public Health | (open) | — | open | Batch 004, 1 variant |
