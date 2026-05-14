@@ -298,7 +298,7 @@ export async function stitchPageData(
             orderBy: { createdAt: 'desc' },
             take: 12,
         }),
-        fetchDoctorsForPage(condition.id, deepestGeo?.id ?? null, geoChain),
+        fetchDoctorsForPage(condition.specialistType, geoChain),
         fetchReviewer(condition.id, deepestGeo?.id ?? null, geoChain),
     ]);
 
@@ -584,24 +584,56 @@ async function resolveLocalContent(
 }
 
 /**
+ * Resolve the set of city-level geography IDs a doctor query should match
+ * for a given geo chain. Doctors are pinned to cities, so:
+ *   - deepest = city      → that city
+ *   - deepest = locality  → its parent city
+ *   - deepest = state     → every city under that state
+ *   - deepest = country   → every city under that country
+ *   - deepest = none      → null (no geo filter)
+ */
+async function getDoctorGeoIds(geoChain: GeoChain): Promise<number[] | null> {
+    const deepest =
+        geoChain.locality || geoChain.city || geoChain.state || geoChain.country;
+    if (!deepest) return null;
+
+    // City/locality: a single city is enough — no recursion needed.
+    if (deepest.level === 'city') return [deepest.id];
+    if (deepest.level === 'locality') {
+        return [deepest.parentId ?? deepest.id];
+    }
+
+    // State/country: walk the hierarchy down to every descendant city.
+    const rows = await prisma.$queryRaw<{ id: number }[]>`
+        WITH RECURSIVE descendants AS (
+            SELECT id, level, parent_id FROM geographies WHERE id = ${deepest.id}
+            UNION ALL
+            SELECT g.id, g.level, g.parent_id
+            FROM geographies g
+            JOIN descendants d ON g.parent_id = d.id
+        )
+        SELECT id FROM descendants WHERE level = 'city'
+    `;
+    return rows.map(r => r.id);
+}
+
+/**
  * Fetch doctors for a condition page.
- * Single query covering all geo levels.
+ * Matches doctors by specialty (every condition in a specialty surfaces that
+ * specialty's doctors) and by geography (region-scoped via getDoctorGeoIds).
  */
 async function fetchDoctorsForPage(
-    conditionId: number,
-    geoId: number | null,
+    specialistType: string | null,
     geoChain: GeoChain
 ): Promise<PageData['doctors']> {
-    const geoIds: number[] = [];
-    if (geoChain.locality) geoIds.push(geoChain.locality.id);
-    if (geoChain.city) geoIds.push(geoChain.city.id);
-    if (geoChain.state) geoIds.push(geoChain.state.id);
-    if (geoChain.country) geoIds.push(geoChain.country.id);
+    if (!specialistType) return { premium: [], free: [] };
+
+    const geoIds = await getDoctorGeoIds(geoChain);
 
     const allDoctors = await prisma.doctorProvider.findMany({
         where: {
-            specialties: { some: { conditionId } },
-            geographyId: geoIds.length > 0 ? { in: geoIds } : undefined,
+            specialty: specialistType,
+            geographyId: geoIds && geoIds.length > 0 ? { in: geoIds } : undefined,
             isVerified: true,
         },
         select: {
@@ -609,10 +641,6 @@ async function fetchDoctorsForPage(
             experienceYears: true, rating: true, reviewCount: true,
             consultationFee: true, feeCurrency: true, profileImage: true,
             subscriptionTier: true, isVerified: true,
-            specialties: {
-                where: { conditionId },
-                select: { isPrimary: true },
-            },
         },
         orderBy: [
             { subscriptionTier: 'desc' },
@@ -640,7 +668,9 @@ async function fetchDoctorsForPage(
             profileImage: doc.profileImage,
             subscriptionTier: doc.subscriptionTier,
             isVerified: doc.isVerified,
-            isPrimarySpecialist: doc.specialties[0]?.isPrimary || false,
+            // Doctor is matched on specialty, so they are a specialist for
+            // every condition in that specialty by definition.
+            isPrimarySpecialist: true,
         };
 
         if (doc.subscriptionTier === 'premium' || doc.subscriptionTier === 'enterprise') {
