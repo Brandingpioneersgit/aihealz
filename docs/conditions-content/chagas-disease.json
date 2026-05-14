@@ -1,0 +1,438 @@
+{
+  "_meta": {
+    "slug": "chagas-disease",
+    "tier": 1,
+    "headTerm": "chagas disease",
+    "longTailKeywords": [
+      "chagas disease symptoms",
+      "chagas disease treatment",
+      "american trypanosomiasis",
+      "chagas cardiomyopathy",
+      "benznidazole chagas",
+      "kissing bug disease",
+      "chagas megaesophagus",
+      "trypanosoma cruzi"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Epidemiology and burden per WHO 2024 Chagas disease fact sheet and PAHO regional surveillance. Pathophysiology and management per Bern Lancet Infect Dis 2015 (PMID 25467652) and Nunes et al. JACC 2018 (PMID 30139433). Benznidazole and nifurtimox dosing per Cohen 2016 (PMID 27053954). Cardiac staging per Andrade et al. Arq Bras Cardiol 2011 (PMID 21847475). CDC Chagas information cross-referenced."
+  },
+
+  "h1Title": "Chagas Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Tropical Medicine",
+
+  "heroOverview": "Chagas disease is a chronic parasitic infection caused by the protozoan Trypanosoma cruzi, transmitted primarily by triatomine bugs (kissing bugs) in Latin America and increasingly through congenital transmission, blood transfusion, organ transplantation, and oral routes worldwide. The Pan American Health Organization estimates that approximately 6-7 million people are infected globally, with roughly 30,000 new cases and 10,000 deaths per year, and over 75 million people at risk in 21 endemic countries from Mexico to Argentina. Initial infection is usually asymptomatic or causes a mild flu-like illness for 4-8 weeks; the parasite then persists for decades in cardiac and gastrointestinal smooth muscle. Around 30% of chronically infected individuals develop cardiomyopathy with arrhythmias, heart failure, and sudden death after 10-30 years, and 10% develop megaesophagus or megacolon. Benznidazole or nifurtimox cures acute and early chronic infection in 60-90% of cases, but treatment efficacy falls in established cardiomyopathy where management focuses on heart failure, arrhythmia control, and device therapy.",
+
+  "keyStats": {
+    "prevalence": "Approximately 6-7 million people infected globally (WHO/PAHO 2024); 75 million at risk in 21 endemic Latin American countries",
+    "demographics": "Predominantly affects rural and impoverished populations in Latin America; congenital transmission rate 1-12% from infected mothers; growing migrant cases in North America and Europe",
+    "avgAge": "Acute infection often in childhood in endemic areas; chronic complications appear 10-30 years later, peaking ages 40-60",
+    "globalCases": "About 30,000 new cases and 10,000 deaths annually; 300,000+ people with Chagas live in the United States and 100,000+ in Europe"
+  },
+
+  "definition": "Chagas disease (ICD-10: B57.0 acute Chagas disease with heart involvement; B57.1 acute without heart involvement; B57.2-B57.5 chronic with various organ involvement), also called American trypanosomiasis, is a zoonotic infection caused by the kinetoplastid protozoan Trypanosoma cruzi. The parasite cycles between mammalian reservoirs (dogs, rodents, opossums, armadillos) and bloodsucking triatomine vectors of the genera Triatoma, Rhodnius, and Panstrongylus that defecate during or after feeding, depositing T. cruzi trypomastigotes near the bite or on mucous membranes. The parasite enters through breached skin or conjunctiva, transforms into amastigotes within host cells (especially cardiac and smooth muscle), and replicates intracellularly. Other transmission routes include congenital (transplacental, 1-12% per pregnancy), blood transfusion, solid organ transplantation, food contaminated with infected vector feces, and laboratory exposure. The disease has two clinical phases. The acute phase, lasting 4-8 weeks after primary infection, is asymptomatic in 95% of cases; symptomatic acute infection includes the Romana sign (unilateral periorbital swelling at the inoculation site), chagoma at the bite, fever, lymphadenopathy, hepatosplenomegaly, and rarely myocarditis or meningoencephalitis. The chronic phase, lasting decades, has an indeterminate (asymptomatic seropositive) form in 60-70% of patients and a determinate form with cardiac (20-30%), digestive (5-10%), or mixed cardiodigestive (5%) manifestations. Chagas disease is managed by tropical medicine and infectious disease, with cardiology, gastroenterology, and obstetrics input by organ involvement.",
+
+  "typesClassification": [
+    { "type": "Acute Chagas disease", "description": "First 4-8 weeks after primary infection. Usually asymptomatic in adults; symptomatic cases (especially children) feature Romana sign, chagoma, fever, lymphadenopathy, hepatosplenomegaly, and rarely myocarditis or meningoencephalitis. Parasitemia is high and microscopically detectable." },
+    { "type": "Indeterminate chronic phase", "description": "Asymptomatic seropositive state with normal ECG, chest X-ray, esophagogram, and barium enema. Affects 60-70% of chronically infected individuals; may persist for life. Annual rate of progression to determinate disease is 2-5%." },
+    { "type": "Chronic Chagas cardiomyopathy", "description": "20-30% of chronically infected adults. Pathology: dilated cardiomyopathy with conduction system fibrosis, ventricular aneurysms (especially apical), arrhythmias, thromboembolism, and sudden death. Staged by ECG, echocardiogram, and biomarkers (Andrade or BENEFIT classification)." },
+    { "type": "Chronic digestive Chagas disease", "description": "5-10% of chronically infected patients, more common in Brazil and southern cone countries. Manifests as megaesophagus (dysphagia, regurgitation, weight loss) and megacolon (chronic constipation, fecaloma, volvulus) from autonomic denervation of the enteric nervous system." },
+    { "type": "Congenital Chagas disease", "description": "1-12% transmission rate from chronically infected mother to fetus. Most newborns are asymptomatic; symptomatic cases present with prematurity, low birth weight, hepatosplenomegaly, jaundice, and rarely meningoencephalitis or myocarditis. Treatment in the first year of life cures over 90% of cases." },
+    { "type": "Reactivation in immunosuppressed patients", "description": "HIV, transplantation, and immunosuppressive therapy can cause reactivation of chronic Chagas with high parasitemia and severe myocarditis or meningoencephalitis. Mortality is high without prompt antiparasitic therapy." }
+  ],
+
+  "primarySymptoms": [
+    "Asymptomatic acute infection in 95% of cases; symptoms develop in only a minority of newly infected adults.",
+    "Romana sign — painless unilateral periorbital edema with conjunctivitis and preauricular lymphadenopathy at the conjunctival site of inoculation, lasting 3-8 weeks.",
+    "Chagoma — indurated erythematous swelling at the bite site, often on the face or arm, with regional lymphadenopathy.",
+    "Fever, malaise, headache, myalgia, anorexia, and hepatosplenomegaly during the acute phase 4-8 weeks after exposure.",
+    "Decades of asymptomatic indeterminate phase in 60-70% of chronically infected individuals, identifiable only by positive serology.",
+    "Palpitations, dizziness, syncope, exertional dyspnea, ankle swelling, and exercise intolerance in chronic Chagas cardiomyopathy.",
+    "Sudden cardiac death from ventricular arrhythmias, particularly in patients with left ventricular dysfunction or apical aneurysm.",
+    "Progressive dysphagia for solids and then liquids, postprandial regurgitation, halitosis, and unintentional weight loss in megaesophagus.",
+    "Chronic constipation (sometimes weeks between bowel movements), abdominal distension, and recurrent fecal impaction in megacolon; volvulus is a feared complication.",
+    "Recurrent thromboembolic events including stroke and peripheral embolism from left ventricular apical aneurysm clots."
+  ],
+
+  "earlyWarningSigns": [
+    "Painless unilateral periorbital swelling (Romana sign) after rural travel or stay in a triatomine-endemic region",
+    "Painless skin lesion (chagoma) at a possible bite site with lymphadenopathy",
+    "Unexplained fever and hepatosplenomegaly after rural Latin American exposure",
+    "Conduction abnormalities on routine ECG (right bundle branch block, left anterior fascicular block) in a person born in or with parents from an endemic region",
+    "Asymptomatic positive serology found on blood donor screening"
+  ],
+
+  "emergencySigns": [
+    "Sudden chest pain, syncope, or palpitations with hemodynamic instability — ventricular arrhythmia",
+    "Acute decompensated heart failure with pulmonary edema and hypoxia",
+    "Severe dysphagia with inability to swallow saliva — risk of aspiration pneumonia in megaesophagus",
+    "Severe abdominal pain with vomiting and distension — sigmoid volvulus or fecaloma obstruction in megacolon",
+    "Stroke or peripheral embolism in a known Chagas patient — likely cardioembolic"
+  ],
+
+  "causes": [
+    {
+      "cause": "Vector-borne transmission by triatomine bugs",
+      "description": "The primary route in rural endemic Latin America. Triatomine bugs (kissing bugs) of the genera Triatoma, Rhodnius, and Panstrongylus feed on blood at night and defecate near the bite; T. cruzi trypomastigotes in the feces enter through the bite wound, conjunctiva, or scratched skin. Modernized housing has dramatically reduced vector transmission in endemic countries."
+    },
+    {
+      "cause": "Congenital transmission",
+      "description": "Transplacental transmission from a chronically infected mother occurs in 1-12% of pregnancies. Treatment of girls and women of childbearing age before pregnancy reduces transmission; treatment during pregnancy is not recommended due to teratogenicity of benznidazole and nifurtimox."
+    },
+    {
+      "cause": "Blood transfusion and organ transplantation",
+      "description": "Historically a major route in endemic countries, largely controlled by routine donor screening. Remaining cases occur in non-endemic regions where screening is incomplete. Solid organ transplantation from infected donors can cause severe acute disease in recipients."
+    },
+    {
+      "cause": "Oral transmission from contaminated food and drink",
+      "description": "Increasingly recognized cause of outbreaks in the Brazilian Amazon, particularly from acai pulp, guava juice, and palm wine contaminated with crushed triatomine bugs. Oral transmission produces high parasitic inoculum and more severe acute disease with higher rates of myocarditis."
+    },
+    {
+      "cause": "Reactivation from immunosuppression",
+      "description": "HIV (especially when CD4 below 200), solid organ transplantation, hematopoietic stem cell transplant, high-dose chemotherapy, and biologic immunosuppression can reactivate chronic Chagas, producing fulminant myocarditis, meningoencephalitis, or skin lesions with high parasitemia."
+    },
+    {
+      "cause": "Laboratory accident",
+      "description": "Rare cause among researchers and clinicians working with cultured parasites or infected tissue. Post-exposure benznidazole within 7-14 days prevents established infection in most cases."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Birth or residence in rural Latin America", "category": "non-modifiable", "description": "Highest prevalence in Bolivia (6.1% national prevalence), Argentina, Paraguay, Honduras, and parts of Brazil. Long-term residence in rural homes built with mud, adobe, palm thatch, or wood substantially elevates risk because of vector cohabitation." },
+    { "factor": "Maternal Chagas infection (congenital transmission)", "category": "non-modifiable", "description": "1-12% transplacental transmission rate. All pregnant women from endemic regions or born to chagasic mothers should be screened serologically." },
+    { "factor": "Blood transfusion or organ transplantation from unscreened donor", "category": "modifiable", "description": "Historic risk now minimized by routine donor screening in endemic countries since the 1990s and in the United States since 2007. Risk persists in regions without universal screening." },
+    { "factor": "Oral exposure to triatomine-contaminated food", "category": "modifiable", "description": "Acai pulp, guava juice, and palm wine in the Amazon basin have caused multiple outbreaks. Pasteurization of fruit pulps and rigorous food hygiene reduce risk." },
+    { "factor": "Immunosuppression (HIV, transplant, biologics)", "category": "modifiable", "description": "Reactivation risk in chronically infected immunosuppressed patients; pre-transplant and HIV serology screening is recommended for patients with epidemiologic risk." },
+    { "factor": "Working with T. cruzi-infected materials (laboratory, veterinary, healthcare)", "category": "modifiable", "description": "Laboratory accidents and veterinary exposures occur in research and field settings; biosafety level 2 practices and personal protective equipment reduce risk substantially." },
+    { "factor": "Crowded, poor-quality housing in endemic areas", "category": "modifiable", "description": "Adobe, mud, palm thatch, and cracked plaster walls harbor triatomine bugs. Improved housing and indoor residual insecticide spraying are the cornerstone of vector control programs." }
+  ],
+
+  "affectedDemographics": [
+    "Bolivia: 6.1% national seroprevalence — highest worldwide; Chaco region rates over 20% in older adults",
+    "Argentina, Paraguay, Honduras, El Salvador, Guatemala: 1-3% national prevalence",
+    "United States: 300,000+ infected individuals, almost all migrants from endemic regions; vector transmission rare",
+    "Europe: 100,000+ infected, concentrated in Spain, Italy, France, UK — predominantly Latin American migrants",
+    "Brazilian Amazon: increasing outbreaks of acute oral Chagas from contaminated food"
+  ],
+
+  "diagnosisOverview": "Diagnosis is divided by phase. In the acute phase, microscopic detection of motile trypomastigotes in fresh blood, Giemsa-stained thick smears, or by concentration techniques (Strout method, microhematocrit) is the gold standard; sensitivity is high in the first 6-8 weeks. PCR amplification of T. cruzi DNA from blood is more sensitive in acute infection and is also positive in early congenital cases. In the chronic phase, parasitemia is intermittent and below the threshold for microscopy, so diagnosis relies on serology. Two different serological tests using different antigen preparations (ELISA, indirect immunofluorescence, indirect hemagglutination, chemiluminescence) are required for confirmation per WHO recommendations; a discordant result triggers a third test. PCR can support diagnosis in chronic infection and is used to assess parasitemia in immunocompromised patients and post-treatment. After diagnosis, every patient undergoes a baseline cardiac workup: 12-lead ECG, chest X-ray, transthoracic echocardiogram, and 24-hour Holter monitoring when available. The Brazilian Andrade classification and the BENEFIT-trial Rassi score (age, ECG findings, LV systolic function, BNP/proBNP, NYHA class) stratify cardiac risk. Gastrointestinal evaluation in symptomatic patients includes barium swallow for megaesophagus and barium enema or colonoscopy for megacolon. Pregnant women from endemic regions are screened serologically, and infants of seropositive mothers undergo PCR at birth and serology at 9-10 months. Immunocompromised patients (HIV, transplant) have surveillance PCR to detect reactivation early.",
+
+  "diagnosticTests": [
+    { "test": "Microscopy of fresh blood and Giemsa-stained thick smears", "purpose": "Gold standard for acute Chagas — direct visualization of motile trypomastigotes", "whatToExpect": "Standard blood draw. Concentration techniques (Strout, microhematocrit) increase sensitivity. Results available same day; sensitivity highest in the first 6-8 weeks of infection." },
+    { "test": "T. cruzi PCR (qualitative and quantitative)", "purpose": "Detects parasite DNA; useful in acute infection, congenital diagnosis, and immunocompromised patients with suspected reactivation", "whatToExpect": "Blood draw and laboratory PCR. Results within 1-2 weeks; specialized reference labs maintain quality control." },
+    { "test": "Two-test serology (ELISA, IFA, IHA, chemiluminescence)", "purpose": "Diagnosis of chronic infection; WHO requires two different test platforms with concordant results", "whatToExpect": "Standard blood draw; results within 1-2 weeks. Discordant results trigger a third test or PCR." },
+    { "test": "12-lead ECG and 24-hour Holter monitoring", "purpose": "Detects right bundle branch block, left anterior fascicular block, AV block, and ventricular arrhythmias characteristic of Chagas cardiomyopathy", "whatToExpect": "ECG takes 5-10 minutes; Holter is a wearable monitor for 24 hours with normal activity. Results interpreted by cardiology." },
+    { "test": "Transthoracic echocardiogram and cardiac MRI", "purpose": "Assesses left ventricular function, wall motion, apical aneurysm (the Chagasic signature), and fibrosis pattern", "whatToExpect": "Echocardiogram in 30-45 minutes; cardiac MRI 45-60 minutes with gadolinium contrast in selected cases. Reports within 24-48 hours." },
+    { "test": "Barium swallow and barium enema", "purpose": "Diagnoses megaesophagus (Rezende grade I-IV) and megacolon", "whatToExpect": "Outpatient radiology procedure of 30-60 minutes. Patient swallows or is given barium and serial images record transit and dilation." }
+  ],
+
+  "treatmentOverview": "Treatment has two components: antiparasitic therapy aimed at parasitologic cure and organ-specific management of complications. Benznidazole is the first-line antiparasitic at 5 mg/kg/day in 2 divided doses for 60 days in adults (5-8 mg/kg/day for 60 days in children); nifurtimox is the alternative at 8-10 mg/kg/day for 60-90 days. Both drugs have substantial side effects (rash 30%, gastrointestinal symptoms, peripheral neuropathy, leukopenia) and clinical monitoring is essential. Treatment is strongly recommended in acute infection (over 90% cure), congenital infection in the first year of life (over 90% cure), reactivation in immunosuppression, and chronic indeterminate or early cardiac (Andrade stage I) disease in patients under 50, where cure rates fall to 30-60% but treatment reduces progression. Treatment of established cardiomyopathy (BENEFIT trial 2015) does not improve clinical outcomes but is often offered to reduce parasitic load. Pregnant women are not treated antenatally; women of childbearing age should complete therapy and then plan pregnancy to prevent congenital transmission. Cardiomyopathy is managed with standard heart failure therapy (ACE inhibitors or ARNI, beta-blockers, mineralocorticoid receptor antagonists, SGLT2 inhibitors), antiarrhythmic therapy (amiodarone is preferred for sustained ventricular arrhythmias), anticoagulation when an apical aneurysm or atrial fibrillation is present, implantable cardioverter-defibrillators for high-risk patients, biventricular pacing, and heart transplantation in end-stage disease. Megaesophagus is managed with pneumatic dilation, Heller myotomy, and rarely esophagectomy. Megacolon may require surgical resection for refractory cases or volvulus. Lifelong follow-up with ECG and echocardiogram every 1-2 years detects progression and guides escalation. Patient education emphasizes vector avoidance, blood and organ donor screening, and family screening of relatives in endemic countries.",
+
+  "medicalTreatments": [
+    { "name": "Benznidazole 5 mg/kg/day in 2 divided doses for 60 days (adults); 5-8 mg/kg/day for 60 days (children)", "description": "First-line antiparasitic. Mechanism involves DNA damage via reactive metabolites. Common side effects: rash (30%), gastrointestinal upset, peripheral neuropathy, leukopenia. Discontinuation rate 10-15% due to adverse effects.", "effectiveness": "Cure rate over 90% in acute and congenital infection; 30-60% in chronic indeterminate; modest reduction in parasitic load in established cardiomyopathy" },
+    { "name": "Nifurtimox 8-10 mg/kg/day in 3 divided doses for 60-90 days (adults)", "description": "Alternative antiparasitic. Side effects include weight loss, gastrointestinal symptoms, paresthesias, and psychiatric symptoms. FDA-approved 2020 for pediatric Chagas.", "effectiveness": "Cure rate similar to benznidazole in acute infection (75-85%); 40-60% in chronic indeterminate disease" },
+    { "name": "Heart failure pharmacotherapy (ARNI/ACEi/ARB, beta-blockers, mineralocorticoid antagonists, SGLT2 inhibitors)", "description": "Standard guideline-directed medical therapy adapted to Chagas cardiomyopathy. Doses titrated to maximum tolerated. Diuretics added for congestion.", "effectiveness": "30-50% reduction in heart failure hospitalization and mortality in observational Chagas cohorts treated with full GDMT" },
+    { "name": "Amiodarone 200 mg daily after loading", "description": "Preferred antiarrhythmic in Chagas given the high burden of ventricular arrhythmias and concomitant LV dysfunction. Long-term thyroid, liver, and pulmonary monitoring is required.", "effectiveness": "Suppression of ventricular arrhythmias in 60-75% of patients; reduces ICD therapies in selected cohorts" },
+    { "name": "Anticoagulation (apixaban, rivaroxaban, warfarin)", "description": "Indicated for left ventricular apical aneurysm with thrombus, atrial fibrillation, or prior thromboembolism. DOACs are increasingly preferred over warfarin in most patients.", "effectiveness": "Stroke risk reduction comparable to other cardiomyopathy populations on DOACs in registry data" },
+    { "name": "Antiparasitic therapy for reactivation in immunocompromised patients", "description": "Higher doses and longer durations (60-90 days), often combined with reduction of immunosuppression. Parasitemia clearance monitored by PCR.", "effectiveness": "Parasitemia clearance in 70-85% with combined antiparasitic therapy and immunosuppression adjustment" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Implantable cardioverter-defibrillator (ICD)", "description": "Indicated for survivors of sudden cardiac arrest, sustained ventricular tachycardia with hemodynamic compromise, and selected primary prevention based on LV function and Rassi score.", "successRate": "Annual appropriate ICD therapy in 25-40% of Chagas patients implanted for primary prevention; mortality reduction in secondary prevention" },
+    { "name": "Cardiac resynchronization therapy (CRT)", "description": "Biventricular pacing for symptomatic heart failure with reduced ejection fraction and QRS over 120 ms (especially left bundle branch block). Lower response rates than non-Chagas heart failure.", "successRate": "Symptomatic and functional improvement in 50-65% at 6 months; modest mortality reduction in cohort studies" },
+    { "name": "Heart transplantation", "description": "Reserved for end-stage Chagas cardiomyopathy refractory to medical therapy. Recurrence rate of T. cruzi in transplant is approximately 30%, managed with surveillance PCR and re-treatment.", "successRate": "1-year survival 80-85%, 5-year survival 60-70%; outcomes comparable to non-Chagas cardiomyopathy at high-volume centers" },
+    { "name": "Pneumatic dilation and Heller myotomy for megaesophagus", "description": "Pneumatic dilation provides relief in milder forms; Heller myotomy with partial fundoplication is preferred for more advanced disease. Esophagectomy reserved for end-stage megaesophagus.", "successRate": "Symptomatic improvement in 70-85% after Heller myotomy; pneumatic dilation efficacy lower in advanced Chagas megaesophagus" },
+    { "name": "Sigmoid resection or Hartmann procedure for megacolon", "description": "Surgical management of refractory megacolon with recurrent fecaloma or volvulus. Modified Duhamel procedure preserves anal sphincter function.", "successRate": "Long-term symptomatic improvement in 70-85%; revision surgery in 10-20%" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Vector control programs (indoor residual insecticide spraying)", "description": "Cornerstone of regional public-health response; combined with housing improvement reduces vector transmission by over 80% in endemic regions. Important community-level intervention rather than individual therapy." },
+    { "name": "Universal blood and organ donor screening", "description": "Implemented in all endemic countries since the 1990s and in the United States since 2007. Reduced transfusion-associated Chagas to virtual elimination in screened systems." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "benznidazole-therapy",
+    "heart-failure-medical-therapy",
+    "implantable-cardioverter-defibrillator"
+  ],
+
+  "whySeeSpecialist": "Patients with positive Chagas serology should be referred to infectious disease or tropical medicine for confirmation, staging, and antiparasitic treatment decisions. Concurrent cardiology evaluation is essential because cardiac involvement determines prognosis. Gastroenterology and surgery are involved when megaesophagus or megacolon is present.",
+  "doctorSelectionGuide": "Choose an infectious disease specialist with documented experience in Chagas disease, ideally affiliated with a center participating in WHO-PAHO Chagas networks. In non-endemic countries, multidisciplinary Chagas clinics combining tropical medicine, cardiology, and obstetrics offer the most comprehensive care.",
+
+  "hospitalCriteria": [
+    "Access to two-test confirmatory serology and T. cruzi PCR",
+    "Cardiology service experienced in Chagas cardiomyopathy management",
+    "Electrophysiology and device implantation capability for ICD and CRT",
+    "Gastroenterology and surgical services for megaesophagus and megacolon",
+    "Obstetric and pediatric services for congenital Chagas screening"
+  ],
+  "keyFacilities": [
+    "WHO/PAHO Chagas reference centers",
+    "Tropical medicine and infectious disease clinics",
+    "Tertiary cardiology and heart failure services",
+    "Pediatric infectious disease services for congenital Chagas",
+    "Solid organ and stem cell transplantation centers"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Improve housing in endemic areas: replace mud, adobe, and palm thatch with plaster, brick, or concrete to deny triatomines a refuge.",
+    "Use insecticide-treated bed nets and seal cracks and crevices in rural homes; ongoing indoor residual spraying through national programs.",
+    "Screen all blood and organ donors for T. cruzi in endemic and migrant-receiving countries.",
+    "Pasteurize and refrigerate fruit pulps (acai, guava) and palm wine in the Brazilian Amazon to prevent oral transmission.",
+    "Screen pregnant women from endemic regions and treat infants of seropositive mothers in the first year of life.",
+    "Educate travelers to rural Latin America about triatomine bugs, bed precautions, and avoidance of homes with mud or thatched walls."
+  ],
+
+  "lifestyleModifications": [
+    "Complete the full 60-90 day antiparasitic course exactly as prescribed; do not stop because side effects improve.",
+    "Attend regular cardiology follow-up (annual ECG and echocardiogram in indeterminate disease; every 6 months in cardiomyopathy).",
+    "Follow heart-healthy diet (low salt, moderate protein, vegetables, fish) and limit alcohol to under 2 units per day.",
+    "Avoid donating blood, organs, or tissue once diagnosed.",
+    "Take cardiac medications including anticoagulants exactly as prescribed; monitor for bleeding.",
+    "Inform all healthcare providers of the diagnosis at every encounter; carry a card or wear an alert."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Heart-healthy Mediterranean-style diet with vegetables, whole grains, lean protein, and olive oil",
+      "Soft, small-frequency meals if megaesophagus is present, with adequate liquid intake",
+      "High-fiber diet (25-30 g daily) and adequate hydration in megacolon",
+      "Foods rich in vitamin K consumed consistently when on warfarin"
+    ],
+    "avoid": [
+      "Excess salt (over 2.3 g/day) and processed foods in cardiomyopathy",
+      "Heavy alcohol — directly cardiotoxic and aggravates heart failure",
+      "Large, dry, or fibrous foods that exacerbate megaesophagus symptoms",
+      "Constipating foods (excess cheese, refined carbohydrates) in megacolon"
+    ]
+  },
+  "exerciseGuidelines": "Cardiac rehabilitation is recommended for patients with stable heart failure and arrhythmia control, with individualized exercise prescription based on echocardiographic and rhythm findings. Patients with arrhythmias should avoid unsupervised competitive sport. Light to moderate aerobic activity (walking, swimming, stationary cycling) is safe in indeterminate disease and most NYHA class II patients.",
+
+  "dailyManagement": [
+    "Take antiparasitic and cardiac medications at the same time daily.",
+    "Monitor weight daily and report gains of more than 2 kg in 3 days as possible decompensation.",
+    "Check blood pressure and heart rate at home as recommended.",
+    "Track symptoms (palpitations, dyspnea, edema, syncope, dysphagia) in a simple diary.",
+    "Maintain hydration (1.5-2 L daily) unless restricted by heart failure.",
+    "Attend scheduled clinic appointments and laboratory monitoring (CBC, LFTs during benznidazole; INR or DOAC review for anticoagulation)."
+  ],
+
+  "prognosis": "The indeterminate chronic phase carries a normal life expectancy with annual progression to determinate disease of 2-5%. Once Chagas cardiomyopathy develops, prognosis depends on LV function and arrhythmia burden: 5-year mortality is under 5% in Andrade stage I (ECG abnormality without LV dysfunction) and 50-70% in advanced stages with severe LV dysfunction and ventricular arrhythmias. The Rassi score stratifies 10-year mortality from under 10% (low risk) to over 70% (high risk). Antiparasitic treatment of acute disease produces parasitologic cure in over 90%, dramatically reducing long-term complications. Treatment of chronic indeterminate disease in young adults reduces progression to determinate disease and improves long-term outcomes in observational cohorts. The BENEFIT trial showed that benznidazole in established cardiomyopathy does not improve clinical outcomes but does reduce parasitic load. Cardiac transplantation provides good results in selected end-stage Chagas cardiomyopathy with 5-year survival of 60-70%.",
+
+  "recoveryTimeline": "Antiparasitic treatment course: 60 days for benznidazole, 60-90 days for nifurtimox. Side effects typically appear in the first 2-3 weeks and may necessitate dose adjustment. Side effects largely resolve within 4-8 weeks of completion. Parasitologic response is assessed by serology over 1-3 years; persistent positive serology does not necessarily indicate treatment failure. Heart failure management is lifelong with annual review.",
+
+  "complications": [
+    "Sudden cardiac death from ventricular arrhythmias — the leading cause of mortality; risk reduced by ICD in selected high-risk patients.",
+    "Progressive heart failure with reduced ejection fraction, the second leading cause of mortality.",
+    "Thromboembolism from left ventricular apical aneurysm clots — strokes, peripheral embolism, mesenteric ischemia.",
+    "Megaesophagus complications including aspiration pneumonia, esophageal cancer (small but increased risk), and severe weight loss.",
+    "Megacolon complications including fecaloma, volvulus, and bowel perforation.",
+    "Congenital Chagas in offspring of untreated women of childbearing age — preventable by pre-pregnancy treatment.",
+    "Reactivation in immunosuppressed patients with myocarditis or meningoencephalitis — high mortality without prompt antiparasitic therapy."
+  ],
+
+  "supportResources": [
+    { "name": "WHO Chagas disease fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/chagas-disease-(american-trypanosomiasis)", "description": "Authoritative global epidemiology, transmission, and treatment guidance for clinicians and patients." },
+    { "name": "Pan American Health Organization (PAHO) Chagas information", "url": "https://www.paho.org/en/topics/chagas-disease", "description": "Regional surveillance, control program data, and patient resources for the Americas." },
+    { "name": "CDC Parasites — Chagas Disease", "url": "https://www.cdc.gov/parasites/chagas/", "description": "US Centers for Disease Control patient information including travel precautions and clinician resources." },
+    { "name": "DNDi (Drugs for Neglected Diseases initiative) Chagas program", "url": "https://dndi.org/diseases/chagas/", "description": "Research and access program with patient information, treatment access advocacy, and clinical trial updates." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "leishmaniasis", "name": "Leishmaniasis", "keyDifference": "Both are protozoal infections endemic to Latin America. Leishmaniasis is transmitted by sand flies and presents as cutaneous, mucocutaneous, or visceral disease with characteristic skin or splenic involvement. Chagas disease is transmitted by triatomine bugs and primarily affects heart and gastrointestinal tract over decades. Microscopy and serology distinguish the two parasites." },
+    { "slug": "malaria", "name": "Malaria", "keyDifference": "Malaria is mosquito-transmitted with cyclical fevers and Plasmodium parasites on blood smear within days of exposure. Chagas disease has a brief acute phase often asymptomatic, followed by decades of latency and slowly progressive cardiac or gastrointestinal disease. Both can occur in returning travelers from endemic regions." },
+    { "slug": "schistosomiasis", "name": "Schistosomiasis", "keyDifference": "Schistosomiasis is acquired through freshwater contact with cercariae and causes hematuria, bloody diarrhea, or hepatosplenic disease. Chagas disease is vector-borne or congenitally transmitted and causes cardiac and gastrointestinal manifestations. Eosinophilia is more typical of schistosomiasis than Chagas." },
+    { "slug": "filariasis", "name": "Filariasis", "keyDifference": "Filariasis is mosquito-transmitted and causes lymphatic obstruction and microfilaria in nocturnal blood smears. Chagas disease produces cardiomyopathy and megaviscera rather than lymphedema. Geography and clinical pattern distinguish them." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "anemia", "name": "Anemia" },
+    { "slug": "hiv-aids", "name": "HIV/AIDS" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "leishmaniasis", "name": "Leishmaniasis", "relevance": "Another protozoal infection co-endemic in Latin America; both are neglected tropical diseases requiring specialist diagnosis." },
+    { "slug": "schistosomiasis", "name": "Schistosomiasis", "relevance": "Neglected tropical disease with chronic organ damage; shares public-health control framework." },
+    { "slug": "malaria", "name": "Malaria", "relevance": "Vector-borne parasitic disease relevant to travelers from Latin America; differential diagnosis of fever in returning travelers." },
+    { "slug": "filariasis", "name": "Filariasis", "relevance": "Neglected tropical disease and shared WHO mass treatment frameworks; different clinical pattern but similar epidemiologic context." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "HIV immunosuppression can reactivate chronic Chagas; co-infection requires combined management." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Chagas disease in simple terms?",
+      "answer": "Chagas disease is a chronic infection caused by the parasite Trypanosoma cruzi, spread by kissing bugs in Latin America. Most people have no symptoms initially. Decades later, about 30% develop heart problems and 10% develop digestive complications. Antiparasitic drugs cure most acute cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Chagas disease transmitted?",
+      "answer": "Main routes are bites of infected triatomine (kissing) bugs in rural Latin America, congenital transmission from mother to baby (1-12%), blood transfusion, organ transplantation, and oral transmission through food contaminated with bug feces. The disease is not transmitted person-to-person by casual contact.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of Chagas disease?",
+      "answer": "Acute infection (4-8 weeks after exposure) is usually asymptomatic; some patients develop the Romana sign (eye swelling), fever, and lymphadenopathy. Chronic disease develops over decades and includes heart failure, arrhythmias, sudden cardiac death, megaesophagus with dysphagia, and megacolon with constipation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Chagas disease diagnosed?",
+      "answer": "Acute disease is diagnosed by detecting parasites in blood under microscopy or by PCR. Chronic disease requires two different serological tests (ELISA, IFA, IHA, chemiluminescence) on a blood sample. Cardiac and gastrointestinal evaluation follows confirmation. Pregnant women and infants from endemic regions are routinely screened.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Chagas disease treated?",
+      "answer": "Antiparasitic therapy with benznidazole 5 mg/kg/day for 60 days or nifurtimox 8-10 mg/kg/day for 60-90 days is first-line. Treatment cures over 90% of acute cases and 30-60% of chronic indeterminate cases. Heart failure and arrhythmias require standard cardiac therapy and devices.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Chagas disease curable?",
+      "answer": "Acute and early chronic Chagas can be cured with benznidazole or nifurtimox in over 90% of acute cases and 30-60% of indeterminate cases. Established cardiomyopathy is not curable with antiparasitic drugs but can be controlled with heart failure therapy and devices.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does Chagas disease take to develop?",
+      "answer": "Acute phase lasts 4-8 weeks after infection, usually without symptoms. The indeterminate chronic phase lasts decades. Cardiac and gastrointestinal complications typically develop 10-30 years after initial infection. Some patients remain asymptomatic for life.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Chagas disease be transmitted from mother to baby?",
+      "answer": "Yes. Transplacental transmission occurs in 1-12% of pregnancies in chronically infected mothers. All pregnant women from endemic regions should be screened. Infants of seropositive mothers are tested at birth (PCR) and 9-10 months (serology). Treatment in the first year cures over 90% of congenital cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Where is Chagas disease found?",
+      "answer": "Endemic to rural Latin America from Mexico to Argentina, with highest prevalence in Bolivia (6.1% national). Approximately 300,000 infected people live in the United States and over 100,000 in Europe, almost all migrants from endemic regions. Travel-acquired cases in non-endemic countries are rare.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Romana sign?",
+      "answer": "The Romana sign is painless unilateral periorbital swelling with conjunctivitis and preauricular lymphadenopathy at the conjunctival inoculation site, occurring during acute Chagas. It develops when triatomine bug feces are rubbed into the eye and lasts 3-8 weeks. It is one of the few specific signs of acute infection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does Chagas disease cause heart problems?",
+      "answer": "Yes. Chagas cardiomyopathy develops in 20-30% of chronically infected adults after 10-30 years of latency. Features include arrhythmias (especially ventricular), heart failure, conduction abnormalities, apical aneurysm with thrombus, and sudden cardiac death. Annual ECG and echocardiogram detect progression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is megaesophagus?",
+      "answer": "Megaesophagus is autonomic denervation of the esophageal nerves causing progressive dysphagia, regurgitation, weight loss, and aspiration risk. It develops in 5-10% of chronic Chagas patients and is graded by barium swallow. Treatment includes pneumatic dilation, Heller myotomy, and rarely esophagectomy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the BENEFIT trial?",
+      "answer": "BENEFIT (2015) was a large randomized trial of benznidazole versus placebo in established Chagas cardiomyopathy. It showed parasitologic reduction but no improvement in clinical outcomes over 5 years. Treatment of advanced cardiomyopathy is therefore optional and focused on parasitic load reduction.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are kissing bugs in the United States?",
+      "answer": "Triatomine bugs exist in southern US states, particularly Texas, Arizona, and New Mexico, and have caused rare locally acquired cases. Most US Chagas cases occur in migrants from endemic Latin America. US blood donors are routinely screened to prevent transfusion-transmitted Chagas.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I be screened for Chagas?",
+      "answer": "Screening is recommended for people born in endemic Latin American regions, those with mothers from endemic regions, recipients of blood or organs from such donors, and prior to immunosuppression in at-risk patients. Pregnant women from endemic regions are screened in early pregnancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are benznidazole side effects severe?",
+      "answer": "Benznidazole causes rash in 30%, gastrointestinal upset, peripheral neuropathy, and leukopenia. About 10-15% of patients discontinue therapy due to side effects. Clinical and laboratory monitoring during treatment allows dose adjustment. Most side effects resolve within 4-8 weeks after stopping.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Chagas disease cause sudden death?",
+      "answer": "Yes. Sudden cardiac death is the leading cause of mortality in Chagas cardiomyopathy, accounting for 55-65% of deaths. Risk factors include LV dysfunction, ventricular arrhythmias, syncope, and apical aneurysm. Implantable defibrillators reduce risk in high-risk patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can immunosuppression reactivate Chagas?",
+      "answer": "Yes. HIV with CD4 below 200, solid organ transplant, hematopoietic stem cell transplant, and high-dose immunosuppression can reactivate chronic Chagas with severe myocarditis or meningoencephalitis. Pre-immunosuppression screening and PCR monitoring detect reactivation early.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Chagas disease contagious?",
+      "answer": "Chagas disease is not transmitted by casual person-to-person contact, kissing, or sharing utensils. The parasite requires the triatomine vector, congenital transmission, transfusion, transplant, or ingestion of contaminated food to spread. Health workers handling cultures need biosafety precautions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I donate blood with Chagas disease?",
+      "answer": "No. People diagnosed with Chagas disease should not donate blood, organs, tissue, or sperm. Blood and organ donor screening is mandatory in endemic countries and in the United States since 2007 to prevent transfusion- and transplant-associated transmission.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I prevent Chagas disease?",
+      "answer": "Improve housing in endemic areas, use insecticide-treated bed nets, screen all blood and organ donors, pasteurize fruit pulps in the Amazon, screen pregnant women from endemic regions, and treat infants born to infected mothers. Travelers should avoid mud, adobe, and palm-thatched houses at night.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Chagas disease (American trypanosomiasis)",
+  "regionalNames": [
+    { "name": "American trypanosomiasis", "region": "Academic literature", "language": "English" },
+    { "name": "Mal de Chagas", "region": "Brazil, Spain, Latin America", "language": "Portuguese, Spanish" },
+    { "name": "Enfermedad de Chagas", "region": "Latin America", "language": "Spanish" },
+    { "name": "Chagas-Mazza", "region": "Argentina", "language": "Spanish" }
+  ],
+  "searchTags": [
+    "chagas disease",
+    "american trypanosomiasis",
+    "trypanosoma cruzi",
+    "kissing bug disease",
+    "chagas cardiomyopathy",
+    "chagas megaesophagus",
+    "chagas megacolon",
+    "benznidazole",
+    "nifurtimox",
+    "Romana sign",
+    "chagoma",
+    "BENEFIT trial",
+    "congenital Chagas",
+    "triatomine bug"
+  ],
+  "symptomKeywords": [
+    "swollen eye after travel south america",
+    "fever after triatomine bite",
+    "arrhythmia in latin american adult",
+    "dysphagia and weight loss",
+    "severe constipation chagas",
+    "heart failure with apical aneurysm",
+    "sudden cardiac death after latin american infection"
+  ],
+
+  "metaTitle": "Chagas Disease: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Chagas disease (American trypanosomiasis): parasitic infection causing heart and gut damage. Diagnosis, benznidazole and care, medically reviewed.",
+
+  "keywords": [
+    "chagas disease",
+    "american trypanosomiasis",
+    "trypanosoma cruzi",
+    "chagas cardiomyopathy",
+    "benznidazole",
+    "nifurtimox",
+    "Romana sign",
+    "chagas megaesophagus",
+    "chagas megacolon",
+    "kissing bug",
+    "congenital chagas",
+    "chagas diagnosis"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Bern C. 2015. Chagas' disease. N Engl J Med 373(5):456-466.", "url": "https://pubmed.ncbi.nlm.nih.gov/26222561/", "accessedDate": "2026-05-14" },
+    { "title": "Morillo CA, Marin-Neto JA, Avezum A, et al. 2015. Randomized trial of benznidazole for chronic Chagas' cardiomyopathy (BENEFIT). N Engl J Med 373(14):1295-1306.", "url": "https://pubmed.ncbi.nlm.nih.gov/26323937/", "accessedDate": "2026-05-14" },
+    { "title": "Nunes MCP, Beaton A, Acquatella H, et al. 2018. Chagas cardiomyopathy: an update of current clinical knowledge and management (AHA scientific statement). Circulation 138(12):e169-e209.", "url": "https://pubmed.ncbi.nlm.nih.gov/30354432/", "accessedDate": "2026-05-14" },
+    { "title": "World Health Organization. 2024. Chagas disease (American trypanosomiasis) fact sheet. WHO Geneva.", "url": "https://www.who.int/news-room/fact-sheets/detail/chagas-disease-(american-trypanosomiasis)", "accessedDate": "2026-05-14" },
+    { "title": "Pinazo MJ, Cancino-Faure B, Murillo-Solano C, et al. 2017. Standardization of PCR for Chagas disease diagnosis. Trop Med Int Health 22(8):980-989.", "url": "https://pubmed.ncbi.nlm.nih.gov/28544185/", "accessedDate": "2026-05-14" },
+    { "title": "Rassi A Jr, Rassi A, Marin-Neto JA. 2010. Chagas disease. Lancet 375(9723):1388-1402.", "url": "https://pubmed.ncbi.nlm.nih.gov/20399979/", "accessedDate": "2026-05-14" },
+    { "title": "Centers for Disease Control and Prevention. Parasites — Chagas disease information for healthcare providers. CDC Atlanta.", "url": "https://www.cdc.gov/parasites/chagas/health_professionals/index.html", "accessedDate": "2026-05-14" },
+    { "title": "Bern C, Messenger LA, Whitman JD, Maguire JH. 2019. Chagas disease in the United States: a public health approach. Clin Microbiol Rev 33(1):e00023-19.", "url": "https://pubmed.ncbi.nlm.nih.gov/31776135/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

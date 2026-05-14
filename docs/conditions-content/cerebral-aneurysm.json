@@ -1,0 +1,453 @@
+{
+  "_meta": {
+    "slug": "cerebral-aneurysm",
+    "tier": 1,
+    "headTerm": "cerebral aneurysm",
+    "longTailKeywords": [
+      "brain aneurysm symptoms",
+      "ruptured cerebral aneurysm",
+      "subarachnoid hemorrhage",
+      "unruptured brain aneurysm treatment",
+      "cerebral aneurysm coiling",
+      "aneurysm clipping surgery",
+      "flow diverter stent",
+      "PHASES score aneurysm",
+      "cerebral aneurysm screening",
+      "Hunt and Hess grade",
+      "brain aneurysm size",
+      "cerebral aneurysm survival rate"
+    ],
+    "primarySpecialty": "Neurosurgery / Neurology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Diagnostic and management framework anchored to the 2023 AHA/ASA Guideline for the Management of Patients with Aneurysmal Subarachnoid Hemorrhage (Hoh et al. Stroke 2023, PMID 37212182), the AHA/ASA 2015 unruptured intracranial aneurysm management guideline (Thompson et al. Stroke 2015, PMID 26034368), and ESO 2023 guideline (Steiner et al.). PHASES risk score per Greving et al. Lancet Neurol 2014 (PMID 24290159). Coiling vs clipping evidence from ISAT (Molyneux et al. Lancet 2002, PMID 12414200) and BRAT (McDougall et al. J Neurosurg 2012). Epidemiology per Vlak et al. Lancet Neurol 2011 (PMID 21641282). Flow diverter outcomes per PUFS (Becske et al. Neurosurgery 2017, PMID 27566480)."
+  },
+
+  "h1Title": "Cerebral Aneurysm: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neurosurgery / Neurology",
+
+  "heroOverview": "A cerebral aneurysm is a focal weakening and outpouching of an artery in the brain, most commonly at the branch points of the circle of Willis. Population imaging studies estimate that 3-5% of adults harbor an unruptured cerebral aneurysm, with a worldwide prevalence of approximately 230 million people. Most are small and never rupture, but each year roughly 0.5-1% rupture overall, with much higher rates for larger and posterior-circulation lesions. Rupture causes aneurysmal subarachnoid hemorrhage — a sudden 'thunderclap' headache often described as the worst headache of life, with mortality of 35-50% in the first 30 days and severe disability in 30% of survivors. Modern care has transformed outcomes: endovascular coiling, flow diverter stenting, and microsurgical clipping each prevent rebleeding when applied to the right anatomy, and dedicated neurocritical care units have lowered hospital mortality. Risk-stratification with the PHASES score and shared decision-making guide treatment of unruptured aneurysms.",
+
+  "keyStats": {
+    "prevalence": "3-5% of adults harbor an unruptured intracranial aneurysm (Vlak et al. 2011); approximately 30,000 ruptures per year in the US, 700,000 worldwide",
+    "demographics": "Women affected 1.6x more often than men; black and Hispanic populations have higher rupture rates than white populations in US data; Finnish and Japanese populations have the highest documented prevalence",
+    "avgAge": "Peak rupture age 50-60; unruptured aneurysms found across adulthood, increasingly identified incidentally on imaging",
+    "globalCases": "Approximately 230 million people worldwide live with an unruptured intracranial aneurysm; aneurysmal subarachnoid hemorrhage causes roughly 500,000 deaths per year globally (GBD 2021)"
+  },
+
+  "definition": "A cerebral aneurysm (intracranial aneurysm) is an abnormal focal dilatation of an intracranial artery resulting from weakening of the vessel wall. The most common type is the saccular ('berry') aneurysm, a focal outpouching at arterial bifurcations of the circle of Willis where the internal elastic lamina and tunica media are thinner. Other forms include fusiform aneurysms (diffuse expansion of an arterial segment, often atherosclerotic), mycotic aneurysms (infected, distal, multiple), traumatic pseudoaneurysms, and giant aneurysms (>25 mm). Approximately 85% of saccular aneurysms occur in the anterior circulation (anterior communicating artery, posterior communicating artery, middle cerebral artery bifurcation, internal carotid artery), and 15% in the posterior circulation (basilar tip, posterior inferior cerebellar artery, vertebral artery). The natural history depends on size, location, family history, prior subarachnoid hemorrhage, hypertension, and active smoking. Rupture produces aneurysmal subarachnoid hemorrhage with characteristic clinical and imaging features. Cerebral aneurysm care is delivered by neurosurgery and interventional neuroradiology, supported by neurology, neurocritical care, and rehabilitation services in dedicated comprehensive stroke and neurovascular centers. ICD-10 codes include I67.1 (unruptured cerebral aneurysm) and I60.x for nontraumatic subarachnoid hemorrhage from specific sites.",
+
+  "typesClassification": [
+    { "type": "Saccular (berry) aneurysm", "description": "Most common type — approximately 90% of cerebral aneurysms. Focal outpouching at arterial bifurcations of the circle of Willis. Has a distinct neck and dome; ratio of these dimensions influences treatment choice between coiling, clipping, and flow diversion. Predominantly anterior circulation (85%)." },
+    { "type": "Fusiform aneurysm", "description": "Diffuse, circumferential dilatation of an arterial segment without a distinct neck. Often atherosclerotic and most common in the basilar and vertebral arteries. More difficult to treat surgically because of lack of a defined neck; flow diverters and bypass strategies are increasingly used." },
+    { "type": "Giant aneurysm (>25 mm)", "description": "Approximately 5% of all cerebral aneurysms. High risk of rupture (up to 50% over 5 years for posterior circulation giants), mass effect on cranial nerves or brainstem, and thromboembolic complications. Typically requires combined endovascular and surgical approaches in high-volume centers." },
+    { "type": "Mycotic (infectious) aneurysm", "description": "Caused by septic embolization (commonly from infective endocarditis) of arterial walls. Usually distal to the circle of Willis, often multiple. Treated initially with prolonged antibiotics; persistent or growing lesions require endovascular embolization or surgery." },
+    { "type": "Traumatic pseudoaneurysm", "description": "Focal arterial wall disruption following penetrating or severe blunt head injury. Pseudoaneurysms are not lined by all three vessel-wall layers and have a high rupture risk. Diagnosed by repeat angiography after head trauma; treated with embolization or surgical repair." }
+  ],
+
+  "primarySymptoms": [
+    "Sudden, severe headache — often described as the 'worst headache of life' or 'thunderclap' headache, peaking within seconds and reaching maximal intensity in under one minute, the hallmark of aneurysm rupture.",
+    "Neck stiffness (meningismus) within minutes to hours of rupture, from blood irritating the meninges.",
+    "Photophobia and phonophobia accompanying the sudden headache.",
+    "Brief loss of consciousness or syncope in 10-20% of rupture cases, sometimes with seizure at onset.",
+    "Nausea and vomiting often accompany the sudden headache.",
+    "Focal neurological deficit (cranial nerve palsy, hemiparesis, language disturbance) — depends on aneurysm location and any blood collection or vasospasm.",
+    "Painful third cranial nerve palsy with pupil dilation (oculomotor palsy from posterior communicating artery aneurysm expansion) — classic finding requiring urgent imaging even without rupture.",
+    "Visual changes (blurred or double vision, visual field cut) from compression of cranial nerves III, IV, VI, or the optic chiasm by a large unruptured aneurysm.",
+    "Sentinel ('warning') headache in the days or weeks before major rupture in 10-40% of patients — often dismissed as migraine; severe, unusual, sudden, and short-lived.",
+    "Most unruptured aneurysms produce no symptoms and are detected incidentally on imaging done for other reasons."
+  ],
+
+  "earlyWarningSigns": [
+    "Sentinel (warning) headache: a sudden severe headache, unlike usual headaches, that resolves but may be a sign of a small leak preceding major rupture — warrants urgent CT and lumbar puncture if CT is non-diagnostic",
+    "New painful third cranial nerve palsy with pupil involvement — urgent CT angiography to exclude posterior communicating artery aneurysm",
+    "New diplopia, visual field deficit, or other cranial nerve symptom with no other explanation",
+    "Family history of cerebral aneurysm in two or more first-degree relatives — discuss screening",
+    "Symptomatic large aneurysm: mass effect (cranial neuropathy, brainstem compression, hydrocephalus)"
+  ],
+
+  "emergencySigns": [
+    "Sudden 'worst headache of life' — call emergency services immediately; immediate non-contrast CT and lumbar puncture if CT negative",
+    "Sudden severe headache with loss of consciousness, seizure, or focal neurological deficit",
+    "Painful third nerve palsy with new pupil dilation",
+    "Acute confusion, drowsiness, or coma in a person previously well — exclude subarachnoid hemorrhage, hydrocephalus, or rebleeding",
+    "Cardiac arrest or pulmonary edema following sudden severe headache — neurogenic stunned myocardium can complicate subarachnoid hemorrhage"
+  ],
+
+  "causes": [
+    {
+      "cause": "Hemodynamic stress at arterial branch points",
+      "description": "Wall shear stress and flow turbulence at cerebral artery bifurcations stress an already thinner internal elastic lamina and media at those locations. Over time, focal degeneration produces saccular outpouchings. This explains why aneurysms cluster at specific anatomical sites (anterior communicating artery, MCA bifurcation, posterior communicating artery, basilar tip)."
+    },
+    {
+      "cause": "Hypertension",
+      "description": "Chronic high blood pressure accelerates wall degeneration and increases aneurysm growth and rupture risk. Patients with treated hypertension still have higher rupture rates than normotensive populations. Blood pressure control is the single most important modifiable risk factor for preventing rupture of known unruptured aneurysms."
+    },
+    {
+      "cause": "Cigarette smoking",
+      "description": "Smoking doubles the lifetime risk of aneurysm formation and approximately quadruples rupture risk. Mechanisms include accelerated atherosclerosis, direct effects on collagen and elastin synthesis, and increased inflammation in the arterial wall. Smoking cessation reduces but does not eliminate the elevated risk."
+    },
+    {
+      "cause": "Family history and genetic syndromes",
+      "description": "First-degree relatives of patients with cerebral aneurysm have a 4-10× higher risk. Genetic conditions associated with cerebral aneurysm include autosomal dominant polycystic kidney disease (5-10% lifetime prevalence), Ehlers-Danlos syndrome type IV (vascular), Marfan syndrome, fibromuscular dysplasia, coarctation of the aorta, and Loeys-Dietz syndrome. Genome-wide studies have identified specific susceptibility loci."
+    },
+    {
+      "cause": "Female sex and hormonal factors",
+      "description": "Women have 1.6× higher prevalence and 1.3-1.6× higher rupture rates than men. The gap widens after menopause. Estrogen exposure may be protective; surgical menopause before age 45 is associated with higher rupture rates."
+    },
+    {
+      "cause": "Heavy alcohol use and stimulant drugs",
+      "description": "Heavy episodic drinking (≥3 drinks per day) increases rupture risk. Cocaine and methamphetamine use are independent risk factors for aneurysm formation and rupture, particularly in younger patients."
+    },
+    {
+      "cause": "Inflammatory and infectious causes",
+      "description": "Septic emboli from infective endocarditis cause mycotic aneurysms — usually distal, often multiple, with high rupture risk. Vasculitis (including cocaine-induced) and rare infections (Aspergillus, syphilis historically) can also produce aneurysmal change."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women have approximately 1.6× higher prevalence and 1.3-1.6× higher rupture rates, partly explained by post-menopausal change in vascular biology." },
+    { "factor": "Age 40-65", "category": "non-modifiable", "description": "Peak rupture age 50-60; prevalence of unruptured aneurysms rises with age. Rupture risk also rises after age 60 in cohort studies." },
+    { "factor": "Hypertension", "category": "modifiable", "description": "Hypertension doubles rupture risk in cohort and case-control studies. Effective blood pressure control reduces formation, growth, and rupture rates." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Active smoking quadruples rupture risk and doubles new aneurysm formation. Smoking cessation is the single most effective behavioral intervention." },
+    { "factor": "Family history of cerebral aneurysm or subarachnoid hemorrhage", "category": "non-modifiable", "description": "Two or more first-degree relatives with cerebral aneurysm increase prevalence to 8-10% and warrant discussion of MRA screening." },
+    { "factor": "Autosomal dominant polycystic kidney disease (ADPKD)", "category": "genetic", "description": "5-10% lifetime aneurysm prevalence; routine screening with MRA recommended for selected ADPKD patients, especially those with family history of intracranial aneurysm." },
+    { "factor": "Connective tissue disorders (Ehlers-Danlos IV, Marfan, Loeys-Dietz, fibromuscular dysplasia)", "category": "genetic", "description": "Higher cerebral and systemic aneurysm rates; require multidisciplinary monitoring and tailored thresholds for intervention." },
+    { "factor": "Heavy alcohol use, cocaine, methamphetamine use", "category": "modifiable", "description": "Heavy episodic drinking and stimulant drug use are independent risk factors for rupture, particularly in younger patients." }
+  ],
+
+  "affectedDemographics": [
+    "Adults worldwide: 3-5% prevalence of unruptured aneurysms (Vlak et al. Lancet Neurol 2011)",
+    "Finnish and Japanese populations: highest documented prevalence and rupture rates of any studied populations",
+    "Women aged 45-60: peak rupture incidence in cohort and registry data",
+    "Patients with ADPKD: 5-10% lifetime cerebral aneurysm prevalence",
+    "African American and Hispanic populations in the US: higher rupture rates and worse outcomes than white populations, partly mediated by hypertension and access to care"
+  ],
+
+  "diagnosisOverview": "Diagnosis of cerebral aneurysm and aneurysmal subarachnoid hemorrhage hinges on rapid imaging in suspected rupture. In a patient with sudden severe headache, non-contrast CT of the head within 6 hours of symptom onset has >98% sensitivity for subarachnoid hemorrhage. Beyond 6 hours sensitivity drops, and lumbar puncture is performed if CT is negative and suspicion remains — xanthochromia on cerebrospinal fluid spectrophotometry confirms hemorrhage from 12 hours onward. Once subarachnoid hemorrhage is confirmed, CT angiography (CTA) or digital subtraction angiography (DSA) identifies the bleeding aneurysm in 85% of cases on first study; DSA remains the gold standard and is repeated within 1-2 weeks if initial study is negative. Clinical grading uses the Hunt and Hess scale (1-5) and World Federation of Neurosurgical Societies (WFNS) grade combining Glasgow Coma Scale with focal deficit; both predict outcomes. Modified Fisher scale (0-4) grades CT blood burden and predicts vasospasm risk. Unruptured aneurysms are usually found incidentally on imaging for unrelated symptoms (chronic headache, dizziness, head trauma, stroke workup, family or syndrome screening). MR angiography (MRA) is the screening modality of choice and is non-invasive; CTA provides higher resolution and is preferred for surgical planning. DSA is reserved for treatment planning or when MRA and CTA are equivocal. The PHASES (Population, Hypertension, Age, Size, Earlier subarachnoid hemorrhage, Site) score estimates 5-year rupture risk and supports shared decision-making for unruptured aneurysm management. Vascular and genetic screening is performed when family history, ADPKD, or connective tissue features are present.",
+
+  "diagnosticTests": [
+    { "test": "Non-contrast CT head (within 6 hours of headache onset)", "purpose": "Detects subarachnoid hemorrhage with >98% sensitivity within 6 hours; sensitivity falls thereafter", "whatToExpect": "Standard rapid CT scan, 5-10 minutes in the scanner. Most patients with sudden severe headache receive CT within minutes of emergency department arrival. Result reviewed urgently by a radiologist." },
+    { "test": "Lumbar puncture for xanthochromia", "purpose": "Confirms subarachnoid hemorrhage when CT is negative but clinical suspicion remains; xanthochromia appears 12 hours after bleed and persists for 1-2 weeks", "whatToExpect": "Spinal needle inserted in lumbar region under local anesthesia. CSF analyzed for opening pressure, red cells (clearing in successive tubes vs traumatic tap), and xanthochromia by spectrophotometry. Headache after procedure is common but usually self-limited." },
+    { "test": "CT angiography (CTA) of head and neck", "purpose": "Identifies aneurysm size, location, and shape for treatment planning; high sensitivity for aneurysms ≥3 mm", "whatToExpect": "Contrast IV line placed, then CT scan acquired during contrast bolus, total 15-30 minutes. Results available within hours. Allergy to iodinated contrast and renal impairment may preclude or modify protocol." },
+    { "test": "Digital subtraction angiography (DSA)", "purpose": "Gold standard for cerebral aneurysm anatomy, particularly for treatment planning, neck definition, and assessment of parent vessel branches", "whatToExpect": "Catheter inserted via femoral or radial artery under conscious sedation; contrast injected selectively into cerebral arteries. Procedure takes 60-90 minutes. Risk of stroke approximately 0.1-0.5% in experienced centers; brief bed rest after femoral access." },
+    { "test": "MR angiography (MRA) — time-of-flight or contrast-enhanced", "purpose": "Non-invasive screening for unruptured aneurysms and follow-up imaging; sensitivity 85-95% for aneurysms ≥3 mm", "whatToExpect": "MRI scanner, 30-45 minutes total. No ionizing radiation. Time-of-flight does not require contrast; contrast-enhanced MRA uses gadolinium. Excellent for follow-up of treated aneurysms and screening high-risk patients." },
+    { "test": "PHASES risk score calculation", "purpose": "Estimates 5-year rupture risk of an unruptured aneurysm based on Population, Hypertension, Age, Size, Earlier SAH, Site", "whatToExpect": "Calculated by the neurosurgery or neurovascular team using clinical and imaging data. Provides a probability of rupture over 5 years to guide shared decision-making between observation and intervention." },
+    { "test": "Genetic counseling and screening MRA for high-risk individuals", "purpose": "Screening recommended for those with 2+ first-degree relatives with cerebral aneurysm and for ADPKD patients with family history", "whatToExpect": "Genetic counseling and decision aid before screening. MRA every 5-7 years in most protocols; intervals shortened if initial finding or new symptoms." }
+  ],
+
+  "treatmentOverview": "Management depends on whether the aneurysm has ruptured. Aneurysmal subarachnoid hemorrhage is a neurological emergency: immediate transfer to a comprehensive stroke center, blood pressure control (systolic <140-160 mmHg before securing aneurysm), reversal of any anticoagulation, and securing of the aneurysm within 24-72 hours of presentation to prevent rebleeding. The ISAT trial established that endovascular coiling is superior to surgical clipping for many anatomically suitable ruptured aneurysms, with lower rates of dependence or death at 1 year (24% vs 31%); BRAT confirmed similar advantage. Long-term durability remains higher for clipping, with retreatment needed in 5-15% of coiled aneurysms at 5-10 years. Choice depends on aneurysm size, location, neck-to-dome ratio, parent vessel anatomy, and patient factors — discussed by multidisciplinary neurovascular teams. Flow diverter stents have become a major option for large, giant, fusiform, and wide-necked aneurysms in the cavernous, ophthalmic, and paraclinoid segments of the internal carotid artery, with high long-term occlusion rates. Web devices and other intrasaccular flow disruptors are increasingly used for wide-necked bifurcation aneurysms. Post-rupture care focuses on preventing and managing vasospasm and delayed cerebral ischemia (oral nimodipine 60 mg every 4 hours for 21 days; transcranial Doppler monitoring; rescue hypertensive therapy or endovascular vasodilator/angioplasty when symptomatic), hydrocephalus (external ventricular drain), and seizures. Unruptured aneurysm management is risk-stratified: small (<7 mm) anterior circulation aneurysms in older patients without high-risk features are often observed with serial imaging; larger, symptomatic, or posterior circulation aneurysms in younger patients are usually treated. Multidisciplinary shared decision-making weighs PHASES and ELAPSS scores, patient values, and procedural risk. Comprehensive cerebrovascular centers achieve the best outcomes for all categories.",
+
+  "medicalTreatments": [
+    { "name": "Nimodipine (oral 60 mg every 4 hours for 21 days post-SAH)", "description": "Calcium channel blocker shown to improve neurological outcomes after aneurysmal subarachnoid hemorrhage, primarily by reducing delayed cerebral ischemia rather than vasospasm directly. Standard of care in all SAH patients (AHA/ASA 2023 guideline Class I recommendation).", "effectiveness": "Reduces poor outcome and mortality by approximately 18-30% in randomized trials and meta-analyses" },
+    { "name": "Blood pressure control (target systolic <140-160 mmHg before securing aneurysm)", "description": "Pre-securing: lower blood pressure to reduce rebleeding while maintaining cerebral perfusion. Agents: labetalol, nicardipine, clevidipine. Post-securing: liberalized targets to support cerebral perfusion if vasospasm risk.", "effectiveness": "Modest reduction in rebleeding when treated promptly; standard in all aneurysmal SAH care" },
+    { "name": "Reversal of anticoagulation and antiplatelet therapy", "description": "In patients on warfarin: prothrombin complex concentrate plus vitamin K. On direct oral anticoagulants: andexanet alfa for factor Xa inhibitors, idarucizumab for dabigatran. On antiplatelets: platelet transfusion may be considered but evidence is limited.", "effectiveness": "Reverses coagulopathy effectively; reduces rebleeding risk" },
+    { "name": "Hypertensive therapy for symptomatic vasospasm", "description": "Induced hypertension (typically norepinephrine, phenylephrine) to maintain cerebral perfusion when delayed cerebral ischemia develops. Used alongside intra-arterial vasodilators and angioplasty in refractory cases.", "effectiveness": "Reverses neurological deficit in 60-70% of patients with symptomatic vasospasm when initiated promptly" },
+    { "name": "Endovascular vasodilator therapy and angioplasty for severe vasospasm", "description": "Intra-arterial verapamil, nicardipine, or milrinone for diffuse vasospasm; balloon angioplasty for focal large-vessel vasospasm. Performed in interventional neuroradiology suite.", "effectiveness": "Resolves angiographic vasospasm and improves perfusion in 70-90% of cases; clinical improvement in 60-70%" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Endovascular coiling (Guglielmi detachable coils, stent-assisted coiling)", "description": "Microcatheter advanced from femoral or radial artery to the aneurysm; platinum coils packed into the sac, inducing thrombosis. Stent-assisted coiling enables treatment of wide-necked aneurysms. First-line for many ruptured and unruptured aneurysms.", "successRate": "Initial complete occlusion 70-85%; recurrence requiring retreatment in 5-15% over 5-10 years; lower mortality and dependence than clipping in ISAT and BRAT trials" },
+    { "name": "Microsurgical clipping", "description": "Open craniotomy with placement of a titanium clip across the aneurysm neck. Highest durability and lowest retreatment rate. Preferred for some MCA bifurcation aneurysms, ruptured aneurysms with intracerebral hematoma needing evacuation, and complex anatomy unfavorable to endovascular approaches.", "successRate": "Long-term occlusion 95-98%; recurrence <2%; higher upfront morbidity than coiling but more durable" },
+    { "name": "Flow diverter stent placement (Pipeline, Surpass, FRED)", "description": "Densely woven self-expanding stent placed across the aneurysm neck; redirects flow away from the aneurysm sac, leading to progressive thrombosis. First-line for large, giant, fusiform, and wide-necked aneurysms in selected anatomic locations.", "successRate": "Complete occlusion 75-90% at 12 months in PUFS and ASPIRe studies; lower retreatment than coiling for large aneurysms" },
+    { "name": "Intrasaccular flow disruption (Web device, Contour)", "description": "Self-expanding mesh device placed inside the aneurysm sac to disrupt flow and induce thrombosis. Useful for wide-necked bifurcation aneurysms where coils alone are unstable.", "successRate": "Adequate occlusion 80-85% at 1-3 years in WEB-IT and contemporary registries" },
+    { "name": "Bypass surgery for complex aneurysms (extracranial-intracranial or in-situ)", "description": "Reserved for fusiform, giant, dissecting, or mycotic aneurysms in which parent vessel sacrifice is needed. Combines bypass to maintain distal perfusion with aneurysm trapping.", "successRate": "Patency rates 90%+ in expert centers; reserved for complex anatomy not amenable to standard techniques" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Conservative observation with serial imaging", "description": "Appropriate for small (<7 mm) anterior-circulation incidentally discovered aneurysms in older patients without high-risk features. Surveillance MRA at 6-12 months initially, then every 1-2 years if stable. Combined with rigorous risk factor modification (blood pressure control, smoking cessation)." },
+    { "name": "Aggressive cardiovascular risk factor modification", "description": "Smoking cessation reduces but does not eliminate elevated rupture risk; intensive blood pressure control (systolic <130 mmHg in eligible patients) reduces growth and rupture. Statins are sometimes used though direct evidence in aneurysm growth is limited." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "endovascular-coiling-aneurysm",
+    "microsurgical-clipping-aneurysm",
+    "flow-diverter-stent",
+    "external-ventricular-drain"
+  ],
+
+  "whySeeSpecialist": "Cerebral aneurysm care requires multidisciplinary expertise from neurosurgery, interventional neuroradiology, neurology, and neurocritical care. Comprehensive stroke centers and dedicated cerebrovascular programs achieve substantially better outcomes than community hospitals, with mortality differences of 30-50% in major registries. Urgent transfer to a comprehensive center is indicated for any suspected ruptured aneurysm. Unruptured aneurysms benefit from formal multidisciplinary consultation to weigh PHASES risk, treatment risks, and patient values.",
+  "doctorSelectionGuide": "Prefer Joint Commission-certified comprehensive stroke centers or Cerebrovascular Society of America/Society for NeuroInterventional Surgery-recognized programs. The treating neurosurgeon and interventional neuroradiologist should have documented high case volumes (typically >50 aneurysm cases per year for the program). Confirm 24/7 availability of both endovascular and microsurgical options for ruptured aneurysm management.",
+
+  "hospitalCriteria": [
+    "Comprehensive Stroke Center certification (Joint Commission, DNV, or equivalent)",
+    "Dedicated neurocritical care unit with neurointensivist coverage",
+    "24/7 availability of endovascular and microsurgical aneurysm treatment",
+    "Interventional neuroradiology suite with biplane angiography",
+    "Cerebrovascular conference for multidisciplinary case review",
+    "Vasospasm monitoring with transcranial Doppler and CT perfusion"
+  ],
+  "keyFacilities": [
+    "Comprehensive Stroke Centers (Joint Commission certified)",
+    "Cerebrovascular and skull base surgery centers",
+    "Academic medical centers with neurointerventional fellowship programs",
+    "Tertiary neurosciences services with dedicated SAH protocols",
+    "Multidisciplinary aneurysm clinics for unruptured aneurysm management"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain blood pressure under 130/80 mmHg in eligible adults; the largest modifiable risk factor for rupture.",
+    "Quit smoking and avoid all tobacco products; the most effective single behavioral intervention to reduce aneurysm formation and rupture.",
+    "Limit alcohol to no more than moderate drinking and avoid heavy episodic drinking.",
+    "Avoid cocaine, methamphetamine, and other vasoactive stimulants.",
+    "Discuss screening MRA with a neurologist or neurosurgeon if two or more first-degree relatives have cerebral aneurysm, or if you have ADPKD, Ehlers-Danlos IV, Marfan, Loeys-Dietz, or fibromuscular dysplasia.",
+    "For patients with known unruptured aneurysm, attend regular follow-up imaging on the schedule advised by the neurovascular team.",
+    "Avoid heavy isometric straining (Valsalva maneuvers) and uncontrolled high-intensity exertion if a large unruptured aneurysm is being observed."
+  ],
+
+  "lifestyleModifications": [
+    "Take prescribed antihypertensives reliably; check blood pressure regularly at home.",
+    "Engage in regular moderate aerobic activity; intense isometric exercise (heavy weightlifting with Valsalva) is generally discouraged in patients with unsecured aneurysms.",
+    "Avoid stimulant drugs and limit caffeine to moderate intake during the immediate post-rupture period.",
+    "Attend all scheduled follow-up imaging and clinic visits; aneurysms can grow or new ones develop over time.",
+    "Wear a medical alert identifier indicating cerebral aneurysm or recent treatment.",
+    "Carry contact information for the treating neurovascular team for any new severe headache."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style or DASH eating pattern, both shown to reduce blood pressure and cardiovascular risk",
+      "Reduce sodium to under 2,300 mg/day (or 1,500 mg/day in salt-sensitive hypertension)",
+      "Plenty of fruits, vegetables, whole grains, lean protein, and unsaturated fats",
+      "Adequate hydration to support cerebral perfusion, especially during acute vasospasm period after rupture"
+    ],
+    "avoid": [
+      "Excess sodium from processed foods",
+      "Heavy alcohol consumption (>2 drinks/day for men, >1 for women)",
+      "Stimulant supplements (high-dose caffeine, ephedra, energy drinks) in patients with unsecured aneurysms",
+      "Smoking and vaping"
+    ]
+  },
+  "exerciseGuidelines": "Regular moderate aerobic activity (brisk walking, cycling, swimming) is encouraged for cardiovascular and blood pressure benefits. For patients with unsecured aneurysms, heavy isometric resistance training with Valsalva maneuvers (heavy weightlifting, max-effort straining) is generally discouraged because of transient hypertensive surges. After definitive treatment (coiling, clipping, flow diversion with confirmed occlusion), most activity restrictions are lifted on a case-by-case basis at 6-12 weeks. Discuss specific exercise plans with the treating neurovascular team.",
+
+  "dailyManagement": [
+    "Take antihypertensive medications consistently at the prescribed times each day.",
+    "Check and log home blood pressure several times per week.",
+    "Avoid smoking and exposure to second-hand smoke; use cessation aids as needed.",
+    "Maintain a calendar of follow-up imaging and clinic appointments.",
+    "Be alert for any sudden severe headache, vision change, or focal neurological symptom; seek emergency care promptly.",
+    "Update treating clinicians on new medications (especially anticoagulants, antiplatelets, stimulant drugs) and major life events (pregnancy planning)."
+  ],
+
+  "prognosis": "Unruptured aneurysm prognosis is excellent for small (<7 mm) anterior-circulation lesions in older patients without high-risk features — 5-year rupture risk under 1% in many strata. Larger, posterior-circulation, symptomatic, or previously ruptured aneurysms have substantially higher rupture risk and warrant intervention. Treatment carries procedural risk: combined morbidity and mortality is approximately 3-5% for endovascular coiling, 5-10% for clipping, and 4-8% for flow diversion in expert centers. After aneurysmal subarachnoid hemorrhage, outcomes depend on initial clinical grade: Hunt and Hess grade 1-2 patients have 80-90% good outcomes; grade 4-5 have only 20-30% good outcomes. Overall 30-day mortality of aneurysmal SAH is 35-50%; among survivors approximately 30% are dependent or severely disabled at 6 months. Delayed cerebral ischemia from vasospasm affects 20-30% of patients and is a major driver of long-term disability. Cognitive impairment, fatigue, mood disorders, and reduced quality of life persist in roughly half of long-term survivors. Comprehensive stroke center care, multidisciplinary teams, and timely aneurysm securing have improved outcomes substantially over the last 20 years.",
+
+  "recoveryTimeline": "Aneurysm securing within 24-72 hours of rupture. Hospital stay typically 14-21 days for SAH care including vasospasm window (days 4-14). Rehabilitation in inpatient or outpatient settings over 3-12 months for moderate-to-severe deficit. Cognitive and mood symptoms may persist or emerge over 6-24 months and benefit from neuropsychological assessment and treatment. For elective unruptured aneurysm treatment: hospital stay 1-3 days for coiling and flow diversion, 4-7 days for clipping; return to most activities at 4-8 weeks; full clearance after follow-up imaging at 3-6 months.",
+
+  "complications": [
+    "Aneurysm rerupture before securing (15-20% within first 24 hours if untreated, mortality up to 80% from rebleed)",
+    "Delayed cerebral ischemia from vasospasm (20-30% of SAH patients), causing infarction and disability — managed with nimodipine, hypertensive therapy, and endovascular vasodilator/angioplasty",
+    "Hydrocephalus from blood obstructing CSF flow — affects 20-30% of patients, managed with external ventricular drain and sometimes permanent ventriculoperitoneal shunt",
+    "Seizures (10-20% of SAH patients), particularly in those with intracerebral hemorrhage",
+    "Hyponatremia from cerebral salt wasting or SIADH — common and contributes to vasospasm risk",
+    "Neurocardiogenic injury: stunned myocardium, takotsubo cardiomyopathy, neurogenic pulmonary edema in 20-30% of severe SAH",
+    "Cognitive impairment, depression, anxiety, fatigue, and reduced quality of life in long-term survivors"
+  ],
+
+  "supportResources": [
+    { "name": "Brain Aneurysm Foundation", "url": "https://www.bafound.org/", "description": "US non-profit dedicated to research, awareness, and patient support for cerebral aneurysm and SAH survivors." },
+    { "name": "American Heart Association / American Stroke Association", "url": "https://www.stroke.org/", "description": "Official US patient and professional resources on stroke and aneurysmal SAH, including guidelines and recovery information." },
+    { "name": "European Stroke Organisation (ESO)", "url": "https://eso-stroke.org/", "description": "Authoritative European source for stroke and SAH guidelines, training, and patient information." },
+    { "name": "Society of NeuroInterventional Surgery (SNIS)", "url": "https://www.snisonline.org/", "description": "US professional society with patient resources on endovascular aneurysm treatment and center finder." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "migraine", "name": "Migraine", "keyDifference": "Migraine typically builds over minutes to hours rather than peaking in seconds, is recurrent, and has typical features (unilateral, throbbing, photophobia, often family history). Aneurysmal subarachnoid hemorrhage produces a sudden 'worst headache' peaking in seconds — different time course warrants emergency imaging." },
+    { "slug": "stroke", "name": "Stroke", "keyDifference": "Ischemic and hemorrhagic stroke are broad categories; aneurysmal subarachnoid hemorrhage is one specific cause of hemorrhagic stroke. SAH produces thunderclap headache and characteristic CT pattern around the circle of Willis. Treatment differs substantially from large-vessel ischemic stroke." },
+    { "slug": "trigeminal-neuralgia", "name": "Trigeminal Neuralgia", "keyDifference": "Trigeminal neuralgia produces brief, recurrent, electric-shock-like facial pain triggered by touch. Aneurysm-related headache is severe, sudden, persistent, and not trigger-dependent. The two are unrelated." },
+    { "slug": "meningioma", "name": "Meningioma", "keyDifference": "Meningiomas are slowly growing brain tumors causing gradual neurological symptoms and seizures. Aneurysms typically present with sudden hemorrhage or are asymptomatic. Both are evaluated by neurosurgery but pathways differ substantially." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "stroke", "name": "Stroke" },
+    { "slug": "alport-syndrome", "name": "Alport Syndrome (and related connective tissue/renal disorders)" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "stroke", "name": "Stroke", "relevance": "Aneurysmal SAH is one of the major causes of hemorrhagic stroke; shared comprehensive stroke center care." },
+    { "slug": "hypertension", "name": "Hypertension", "relevance": "Single largest modifiable risk factor for aneurysm growth and rupture." },
+    { "slug": "migraine", "name": "Migraine", "relevance": "Differential diagnosis for severe headache; sentinel headache can mimic atypical migraine." },
+    { "slug": "meningioma", "name": "Meningioma", "relevance": "Other intracranial pathology managed by neurosurgery; sometimes coexists incidentally." },
+    { "slug": "pituitary-adenoma", "name": "Pituitary Adenoma", "relevance": "Other intracranial mass managed by neurosurgery; aneurysms occasionally found in same paraclinoid region." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is a cerebral aneurysm?",
+      "answer": "A cerebral aneurysm is an abnormal outpouching or weakening of a brain artery, most often at the branch points of the circle of Willis. About 3-5% of adults harbor one, and most never rupture. When they do rupture, they cause subarachnoid hemorrhage — a life-threatening type of stroke.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a brain aneurysm feel like when it ruptures?",
+      "answer": "A ruptured cerebral aneurysm produces a sudden, severe headache that peaks within seconds, often described as the 'worst headache of life' or 'thunderclap'. It is frequently accompanied by neck stiffness, nausea, vomiting, photophobia, and sometimes brief loss of consciousness or seizure. Emergency evaluation is critical.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How common are cerebral aneurysms?",
+      "answer": "About 3-5% of adults harbor an unruptured cerebral aneurysm — roughly 230 million people worldwide. Most are small and never rupture. Aneurysmal subarachnoid hemorrhage occurs in approximately 6-10 per 100,000 people per year, with higher rates in women and certain populations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes a brain aneurysm?",
+      "answer": "Aneurysms develop where chronic blood flow stress weakens the artery wall. The main risk factors are hypertension, cigarette smoking, family history, certain genetic conditions (polycystic kidney disease, Ehlers-Danlos type IV, Marfan, Loeys-Dietz), female sex, age 40-65, heavy alcohol use, and cocaine or methamphetamine use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a cerebral aneurysm diagnosed?",
+      "answer": "Suspected rupture is diagnosed with urgent non-contrast CT head, which detects subarachnoid hemorrhage with >98% sensitivity within 6 hours of onset. If CT is negative, lumbar puncture follows. CT angiography or digital subtraction angiography then identifies the aneurysm. Unruptured aneurysms are usually found on MRA or CTA done for other reasons.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How are unruptured aneurysms treated?",
+      "answer": "Choice depends on size, location, shape, age, comorbidities, and rupture risk estimated by tools like the PHASES score. Options include observation with serial imaging, endovascular coiling, flow diverter stenting, or microsurgical clipping. Small, low-risk anterior-circulation aneurysms are often observed; larger or higher-risk lesions are treated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is endovascular coiling?",
+      "answer": "Endovascular coiling delivers tiny platinum coils into the aneurysm sac through a catheter inserted from the groin or wrist. The coils induce blood clotting that seals the aneurysm. Coiling avoids open surgery and is first-line for many ruptured and unruptured aneurysms with suitable anatomy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is aneurysm clipping?",
+      "answer": "Microsurgical clipping is an open operation in which a titanium clip is placed across the aneurysm neck to exclude it from the bloodstream. It requires a craniotomy and carries higher upfront risk than coiling but has the lowest long-term recurrence rate and is preferred for certain anatomies and ruptured aneurysms with hematoma.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a flow diverter stent?",
+      "answer": "A flow diverter is a densely woven self-expanding stent placed across the aneurysm neck inside the parent artery. It redirects blood flow away from the aneurysm sac, causing progressive thrombosis. Used for large, giant, fusiform, and wide-necked aneurysms in selected locations with high long-term occlusion rates.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a cerebral aneurysm be cured?",
+      "answer": "Successful coiling, clipping, or flow diversion effectively eliminates rupture risk for that aneurysm, but does not prevent new aneurysms from forming. Patients require regular follow-up imaging and ongoing risk-factor management (blood pressure control, smoking cessation) for life.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate after a ruptured cerebral aneurysm?",
+      "answer": "Overall 30-day mortality after aneurysmal subarachnoid hemorrhage is 35-50%; among survivors approximately 30% are dependent or severely disabled. Better clinical grade at presentation, early aneurysm securing, comprehensive stroke center care, and avoidance of delayed cerebral ischemia all improve outcomes substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is vasospasm after SAH?",
+      "answer": "Vasospasm is narrowing of cerebral arteries 4-14 days after subarachnoid hemorrhage. It can cause delayed cerebral ischemia and stroke in 20-30% of patients. It is treated with oral nimodipine for 21 days, induced hypertension when symptomatic, and endovascular vasodilator therapy or angioplasty for refractory cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I be screened for a cerebral aneurysm?",
+      "answer": "Screening is recommended for people with two or more first-degree relatives with cerebral aneurysm, and discussed for those with autosomal dominant polycystic kidney disease (especially with family history of intracranial aneurysm), Ehlers-Danlos type IV, Marfan, Loeys-Dietz, or fibromuscular dysplasia. MRA is the screening modality of choice.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does high blood pressure cause aneurysms?",
+      "answer": "Hypertension does not directly cause aneurysm formation but accelerates growth and approximately doubles rupture risk. Blood pressure control is the single most important modifiable factor for preventing rupture of known unruptured aneurysms. Target is typically <130/80 mmHg in eligible adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does smoking cause cerebral aneurysm?",
+      "answer": "Yes. Smoking doubles the lifetime risk of forming a cerebral aneurysm and approximately quadruples rupture risk. Smoking cessation is the single most effective behavioral intervention to reduce risk. Stopping smoking after diagnosis substantially lowers but does not eliminate elevated risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause a cerebral aneurysm to rupture?",
+      "answer": "Acute hypertensive surges from heavy isometric straining or severe emotional stress can transiently increase rupture risk. Chronic stress contributes mainly through blood pressure elevation. Most ruptures occur during ordinary activities; only a minority follow an identifiable acute stressor.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnancy cause an aneurysm to rupture?",
+      "answer": "Rupture risk during pregnancy is similar to non-pregnant women of the same age. Risk rises during labor with severe hypertensive surges. Women with known unruptured aneurysms should be managed jointly by obstetrics and neurosurgery; planned epidural analgesia and avoiding Valsalva-heavy delivery may be considered.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the PHASES score?",
+      "answer": "The PHASES score estimates 5-year rupture risk for unruptured aneurysms based on six factors: Population (Finnish, Japanese, North American), Hypertension, Age, Size, Earlier SAH from another aneurysm, and Site (anterior vs posterior). It helps guide shared decision-making between observation and treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get cerebral aneurysms?",
+      "answer": "Pediatric cerebral aneurysms are rare, accounting for under 5% of all cases. They are more often associated with infection, trauma, or genetic conditions and tend to be larger and located in atypical sites. Treatment principles are similar to adult care but tailored to pediatric anatomy and risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a sentinel headache?",
+      "answer": "A sentinel ('warning') headache is a sudden severe headache occurring days to weeks before major aneurysm rupture, sometimes from a small leak. It occurs in 10-40% of patients but is frequently misdiagnosed as migraine. Any sudden severe new headache warrants urgent evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What lifestyle changes help after aneurysm diagnosis?",
+      "answer": "Key changes: quit smoking and avoid all tobacco; control blood pressure under 130/80 mmHg with medication and DASH-style diet; limit alcohol; avoid cocaine and stimulant drugs; maintain regular moderate aerobic activity; and adhere to all follow-up imaging. Discuss specific activity limits with the neurovascular team.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Cerebral Aneurysm (brain aneurysm)",
+  "regionalNames": [
+    { "name": "Brain aneurysm", "region": "US, UK, common usage", "language": "English" },
+    { "name": "Intracranial aneurysm", "region": "Medical literature, global", "language": "English" },
+    { "name": "Anévrisme cérébral", "region": "France, Francophone countries", "language": "French" },
+    { "name": "Aneurisma cerebral", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "मस्तिष्क धमनी विस्फार", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "cerebral aneurysm",
+    "brain aneurysm",
+    "intracranial aneurysm",
+    "ruptured aneurysm",
+    "subarachnoid hemorrhage",
+    "thunderclap headache",
+    "berry aneurysm",
+    "saccular aneurysm",
+    "endovascular coiling",
+    "aneurysm clipping",
+    "flow diverter",
+    "PHASES score",
+    "Hunt and Hess",
+    "WFNS grade",
+    "aneurysm screening MRA"
+  ],
+  "symptomKeywords": [
+    "worst headache of my life",
+    "sudden severe headache",
+    "thunderclap headache",
+    "stiff neck after headache",
+    "vision loss with headache",
+    "drooping eyelid headache",
+    "lost consciousness sudden headache",
+    "neck pain sudden headache"
+  ],
+
+  "metaTitle": "Cerebral Aneurysm: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Cerebral aneurysm: brain artery outpouching, risk of rupture causing subarachnoid hemorrhage. Diagnosis, coiling, clipping, flow diverter, medically reviewed.",
+
+  "keywords": [
+    "cerebral aneurysm",
+    "brain aneurysm",
+    "subarachnoid hemorrhage",
+    "ruptured brain aneurysm",
+    "unruptured cerebral aneurysm",
+    "endovascular coiling",
+    "aneurysm clipping",
+    "flow diverter stent",
+    "PHASES score",
+    "Hunt and Hess grade",
+    "WFNS grade",
+    "intracranial aneurysm screening"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Hoh BL, Ko NU, Amin-Hanjani S, et al. 2023. 2023 Guideline for the Management of Patients With Aneurysmal Subarachnoid Hemorrhage: A Guideline From the American Heart Association/American Stroke Association. Stroke 54(7):e314-e370.", "url": "https://pubmed.ncbi.nlm.nih.gov/37212182/", "accessedDate": "2026-05-14" },
+    { "title": "Thompson BG, Brown RD Jr, Amin-Hanjani S, et al. 2015. Guidelines for the Management of Patients With Unruptured Intracranial Aneurysms: A Guideline for Healthcare Professionals From the American Heart Association/American Stroke Association. Stroke 46(8):2368-400.", "url": "https://pubmed.ncbi.nlm.nih.gov/26089327/", "accessedDate": "2026-05-14" },
+    { "title": "Molyneux A, Kerr R, Stratton I, et al. 2002. International Subarachnoid Aneurysm Trial (ISAT) of neurosurgical clipping versus endovascular coiling in 2143 patients with ruptured intracranial aneurysms: a randomised trial. Lancet 360(9342):1267-74.", "url": "https://pubmed.ncbi.nlm.nih.gov/12414200/", "accessedDate": "2026-05-14" },
+    { "title": "Greving JP, Wermer MJ, Brown RD Jr, et al. 2014. Development of the PHASES score for prediction of risk of rupture of intracranial aneurysms: a pooled analysis of six prospective cohort studies. Lancet Neurology 13(1):59-66.", "url": "https://pubmed.ncbi.nlm.nih.gov/24290159/", "accessedDate": "2026-05-14" },
+    { "title": "Vlak MH, Algra A, Brandenburg R, Rinkel GJ. 2011. Prevalence of unruptured intracranial aneurysms, with emphasis on sex, age, comorbidity, country, and time period: a systematic review and meta-analysis. Lancet Neurology 10(7):626-36.", "url": "https://pubmed.ncbi.nlm.nih.gov/21641282/", "accessedDate": "2026-05-14" },
+    { "title": "Becske T, Brinjikji W, Potts MB, et al. 2017. Long-term clinical and angiographic outcomes following Pipeline embolization device treatment of complex internal carotid artery aneurysms: five-year results of the Pipeline for Uncoilable or Failed Aneurysms trial. Neurosurgery 80(1):40-48.", "url": "https://pubmed.ncbi.nlm.nih.gov/27566480/", "accessedDate": "2026-05-14" },
+    { "title": "Connolly ES Jr, Rabinstein AA, Carhuapoma JR, et al. 2012. Guidelines for the management of aneurysmal subarachnoid hemorrhage: a guideline for healthcare professionals from the American Heart Association/American Stroke Association. Stroke 43(6):1711-37.", "url": "https://pubmed.ncbi.nlm.nih.gov/22556195/", "accessedDate": "2026-05-14" },
+    { "title": "Brain Aneurysm Foundation. 2024. Patient Resources and Statistics. Brain Aneurysm Foundation, Boston MA.", "url": "https://www.bafound.org/statistics-and-facts/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

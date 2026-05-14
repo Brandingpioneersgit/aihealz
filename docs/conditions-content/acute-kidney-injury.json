@@ -1,0 +1,438 @@
+{
+  "_meta": {
+    "slug": "acute-kidney-injury",
+    "tier": 1,
+    "headTerm": "acute kidney injury",
+    "longTailKeywords": [
+      "acute kidney injury symptoms",
+      "acute renal failure",
+      "AKI stages",
+      "KDIGO acute kidney injury",
+      "prerenal AKI",
+      "acute tubular necrosis",
+      "acute kidney injury causes",
+      "AKI treatment",
+      "dialysis acute kidney injury",
+      "contrast-induced nephropathy",
+      "acute kidney injury creatinine",
+      "AKI recovery"
+    ],
+    "primarySpecialty": "Nephrology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Definition and staging per KDIGO 2012 Clinical Practice Guideline for Acute Kidney Injury (Kidney Int Suppl 2012). Epidemiology per Susantitaphong P et al. Clin J Am Soc Nephrol 2013 world incidence meta-analysis (PMID 23744003) and Hoste EAJ et al. Intensive Care Med 2015 (PMID 26162677). Pathophysiology and clinical approach per Bellomo R, Kellum JA, Ronco C. Lancet 2012 (PMID 22617274) and Ronco C, Bellomo R, Kellum JA. Lancet 2019 (PMID 31777389). Long-term outcomes and AKI-to-CKD transition per Chawla LS et al. NEJM 2014 (PMID 25184865). Contrast-associated AKI per Weisbord SD et al. NEJM 2018 PRESERVE trial (PMID 29360743). Renal replacement timing per Gaudry S et al. NEJM 2016 AKIKI and Bhatt GC, Das RR meta-analyses."
+  },
+
+  "h1Title": "Acute Kidney Injury: Symptoms, Causes & Treatment",
+  "specialistType": "Nephrology",
+
+  "heroOverview": "Acute kidney injury is a sudden, potentially reversible decline in kidney function occurring over hours to days, defined by a rise in serum creatinine or a fall in urine output. It complicates roughly 10-15% of all hospital admissions and over half of intensive care admissions, and even mild acute kidney injury is independently associated with longer hospital stays, higher mortality, and an increased long-term risk of chronic kidney disease. The causes are grouped into three categories: prerenal (reduced blood flow to the kidneys from dehydration, hemorrhage, sepsis, or heart failure), intrinsic renal (direct damage to kidney tissue, most often acute tubular necrosis from prolonged ischemia or nephrotoxins), and postrenal (obstruction of urine outflow). Many patients have no symptoms and are detected only by blood testing; others develop reduced urine output, fluid overload with breathlessness and swelling, nausea, confusion, or, in severe cases, dangerous electrolyte and acid-base disturbances. Treatment centers on rapidly identifying and reversing the cause, optimizing fluid status and blood pressure, stopping nephrotoxic drugs, and supporting the kidneys — with dialysis reserved for life-threatening complications. Most patients recover kidney function, but a significant minority progress to chronic kidney disease.",
+
+  "keyStats": {
+    "prevalence": "Complicates roughly 10-15% of hospital admissions and over 50% of intensive care admissions (Hoste Intensive Care Med 2015)",
+    "demographics": "Risk rises sharply with age, pre-existing chronic kidney disease, diabetes, heart failure, and acute severe illness",
+    "avgAge": "Most common in older adults, but occurs at all ages in the context of severe illness, dehydration, or nephrotoxic exposure",
+    "globalCases": "Estimated to affect over 13 million people per year worldwide and to contribute to around 1.7 million deaths annually"
+  },
+
+  "definition": "Acute kidney injury (ICD-10: N17) is an abrupt decline in kidney function, developing over hours to days, that results in retention of nitrogenous waste products and dysregulation of fluid, electrolyte, and acid-base balance. The KDIGO 2012 criteria define it as any of: a rise in serum creatinine of 26.5 micromol/L (0.3 mg/dL) or more within 48 hours; a rise in serum creatinine to 1.5 times baseline or more within the prior 7 days; or urine output below 0.5 mL/kg/hour for 6 hours. It is staged 1 to 3 by the magnitude of the creatinine rise and the degree and duration of oliguria, with stage 3 including the need for renal replacement therapy. Acute kidney injury is mechanistically classified into three categories. Prerenal acute kidney injury results from reduced renal perfusion — hypovolemia, hemorrhage, sepsis, heart failure, cirrhosis, or drugs that impair renal autoregulation — and is potentially fully reversible if perfusion is restored before tubular damage occurs. Intrinsic (renal) acute kidney injury reflects direct damage to kidney tissue: acute tubular necrosis (from prolonged ischemia or nephrotoxins) is the most common, but acute interstitial nephritis, glomerulonephritis, and vascular causes also occur. Postrenal acute kidney injury results from obstruction of urine flow anywhere from the renal pelvis to the urethra, and is reversible if relieved promptly. The term has replaced 'acute renal failure' to emphasize that the spectrum begins well before kidney function fails completely. Acute kidney injury is managed by nephrology, intensive care, internal medicine, surgery, and urology depending on the cause and setting.",
+
+  "typesClassification": [
+    { "type": "Prerenal acute kidney injury", "description": "Caused by reduced blood flow to structurally normal kidneys — dehydration, hemorrhage, sepsis, heart failure, cirrhosis, or drugs that impair renal autoregulation (NSAIDs, ACE inhibitors, ARBs). Fully reversible if perfusion is restored before tubular damage develops; the most common category." },
+    { "type": "Acute tubular necrosis", "description": "The most common form of intrinsic acute kidney injury, caused by prolonged ischemia (untreated prerenal injury, prolonged hypotension) or nephrotoxins (aminoglycosides, contrast media, chemotherapy, myoglobin in rhabdomyolysis). Recovery is possible but takes days to weeks." },
+    { "type": "Acute interstitial nephritis", "description": "Inflammation of the kidney interstitium, most often a hypersensitivity reaction to drugs (antibiotics, proton pump inhibitors, NSAIDs), sometimes from infection or autoimmune disease. Often improves when the trigger is removed, sometimes with corticosteroids." },
+    { "type": "Acute glomerulonephritis and vascular causes", "description": "Rapidly progressive glomerulonephritis, vasculitis, thrombotic microangiopathy, and renal artery or vein occlusion are less common intrinsic causes that require urgent specific diagnosis and treatment." },
+    { "type": "Postrenal (obstructive) acute kidney injury", "description": "Caused by obstruction of urine outflow — bladder outlet obstruction from prostate disease, ureteric stones, pelvic tumors, or retroperitoneal fibrosis. Reversible if relieved promptly; prolonged obstruction causes permanent damage." },
+    { "type": "Acute-on-chronic kidney injury", "description": "Acute kidney injury superimposed on pre-existing chronic kidney disease. These patients have less renal reserve, worse outcomes, and a higher risk of progression to end-stage kidney disease." }
+  ],
+
+  "primarySymptoms": [
+    "Often no symptoms at all in early or mild acute kidney injury — it is frequently detected only on routine blood testing showing a rising creatinine.",
+    "Reduced urine output (oliguria) or, less commonly, complete absence of urine (anuria); some patients maintain normal or even increased urine volume despite failing kidney function.",
+    "Swelling of the legs, ankles, and around the eyes, and weight gain, from fluid retention.",
+    "Breathlessness from pulmonary edema when fluid overload is severe.",
+    "Nausea, vomiting, and loss of appetite from accumulating waste products.",
+    "Fatigue, weakness, and general malaise.",
+    "Confusion, drowsiness, or, in severe uremia, seizures.",
+    "Symptoms of the underlying cause — fever and low blood pressure in sepsis, chest pain or breathlessness in heart failure, flank pain in obstruction, or bloody diarrhea in some forms of intrinsic disease.",
+    "Easy bruising or bleeding from uremic platelet dysfunction in advanced cases.",
+    "A rash, joint pains, or fever in drug-induced acute interstitial nephritis."
+  ],
+
+  "earlyWarningSigns": [
+    "A rise in serum creatinine or fall in eGFR on routine or pre-procedure blood tests",
+    "Falling urine output during or after an acute illness, surgery, or hospital admission",
+    "New leg or facial swelling and unexplained weight gain over a few days",
+    "Becoming unwell with vomiting or diarrhea while taking ACE inhibitors, ARBs, diuretics, or NSAIDs ('sick day' medication risk)",
+    "New confusion or marked fatigue in an older adult with an acute illness"
+  ],
+
+  "emergencySigns": [
+    "Severe breathlessness from pulmonary edema with inability to lie flat — needs urgent treatment and possible dialysis",
+    "Symptoms of severe hyperkalemia — muscle weakness, palpitations, or collapse — a life-threatening emergency requiring immediate ECG and treatment",
+    "Reduced consciousness, seizures, or pericarditis from severe uremia",
+    "Anuria (no urine output) with rapidly rising creatinine",
+    "Acute kidney injury with sepsis, major bleeding, or hemodynamic instability requiring critical care"
+  ],
+
+  "causes": [
+    {
+      "cause": "Reduced renal perfusion (prerenal)",
+      "description": "Hypovolemia from dehydration, vomiting, diarrhea, hemorrhage, or burns; reduced effective circulating volume in heart failure and cirrhosis; and systemic vasodilation in sepsis all reduce blood flow to the kidneys. This is the single most common cause and is reversible if treated early."
+    },
+    {
+      "cause": "Sepsis and severe acute illness",
+      "description": "Sepsis is the leading cause of acute kidney injury in hospitalized and critically ill patients, through a combination of reduced perfusion, inflammation, microvascular dysfunction, and direct tubular injury. Acute kidney injury complicates a large proportion of severe infections."
+    },
+    {
+      "cause": "Nephrotoxic drugs and contrast media",
+      "description": "Aminoglycoside antibiotics, NSAIDs, ACE inhibitors and ARBs (especially in volume depletion), iodinated contrast media, certain chemotherapy agents, calcineurin inhibitors, and amphotericin B all cause or contribute to acute kidney injury. Drug-related causes are common and often preventable."
+    },
+    {
+      "cause": "Acute tubular necrosis from ischemia or toxins",
+      "description": "Prolonged hypotension, untreated prerenal injury, major surgery, and direct tubular toxins (including myoglobin from rhabdomyolysis and hemoglobin from hemolysis) damage the renal tubules, the commonest form of intrinsic acute kidney injury."
+    },
+    {
+      "cause": "Urinary tract obstruction (postrenal)",
+      "description": "Bladder outlet obstruction from an enlarged prostate, bilateral ureteric stones, pelvic or retroperitoneal tumors, and blocked urinary catheters obstruct urine flow and raise back-pressure on the kidneys. It is reversible if relieved promptly."
+    },
+    {
+      "cause": "Intrinsic renal disease — glomerular, interstitial, and vascular",
+      "description": "Rapidly progressive glomerulonephritis, vasculitis, acute interstitial nephritis (often drug-induced), thrombotic microangiopathy, and renal vascular occlusion cause intrinsic acute kidney injury that needs urgent specific diagnosis and treatment."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Pre-existing chronic kidney disease", "category": "non-modifiable", "description": "Reduced renal reserve makes the kidneys far more vulnerable to any acute insult and worsens outcomes; acute-on-chronic kidney injury is common." },
+    { "factor": "Older age", "category": "non-modifiable", "description": "Age-related decline in kidney function, multiple comorbidities, and polypharmacy all increase acute kidney injury risk in older adults." },
+    { "factor": "Diabetes mellitus", "category": "non-modifiable", "description": "Diabetes is associated with underlying kidney disease and vascular disease that increase susceptibility to acute kidney injury." },
+    { "factor": "Heart failure and liver cirrhosis", "category": "non-modifiable", "description": "Both reduce effective circulating volume and renal perfusion and predispose to prerenal acute kidney injury and hepatorenal or cardiorenal syndromes." },
+    { "factor": "Sepsis and acute severe illness", "category": "modifiable", "description": "Sepsis, major trauma, burns, and major surgery are leading precipitants; prompt resuscitation and source control reduce the risk." },
+    { "factor": "Nephrotoxic medications", "category": "modifiable", "description": "NSAIDs, ACE inhibitors, ARBs, aminoglycosides, and iodinated contrast media frequently contribute; reviewing and withholding these during acute illness is a key preventive measure." },
+    { "factor": "Hypovolemia and dehydration", "category": "modifiable", "description": "Inadequate fluid intake, vomiting, diarrhea, and over-diuresis reduce renal perfusion; prompt rehydration prevents progression." },
+    { "factor": "Major surgery and contrast procedures", "category": "modifiable", "description": "Cardiac surgery, major vascular and abdominal surgery, and contrast-requiring procedures carry defined acute kidney injury risk that is reduced by optimizing volume status and avoiding additional nephrotoxins." }
+  ],
+
+  "affectedDemographics": [
+    "Acute kidney injury complicates 10-15% of all hospital admissions and more than half of intensive care admissions.",
+    "Risk and severity rise sharply with age, with the highest rates in adults over 65.",
+    "People with chronic kidney disease, diabetes, heart failure, and cirrhosis are disproportionately affected.",
+    "In low- and middle-income countries a larger share of acute kidney injury occurs in younger, previously healthy people, driven by infections (including malaria and leptospirosis), obstetric complications, and toxins.",
+    "Acute kidney injury is estimated to affect over 13 million people per year worldwide and to contribute to around 1.7 million deaths annually."
+  ],
+
+  "diagnosisOverview": "The diagnosis of acute kidney injury rests on detecting a rise in serum creatinine or a fall in urine output against a known or estimated baseline, using the KDIGO criteria, and then determining the cause. The first steps are a focused history (recent illness, fluid losses, medications including over-the-counter NSAIDs, contrast exposure, lower urinary tract symptoms) and examination of volume status (blood pressure, pulse, jugular venous pressure, skin turgor, edema, lung fields). A bladder scan or catheterization rapidly identifies postrenal obstruction, and a renal tract ultrasound is recommended in most patients to look for obstruction, kidney size, and chronicity. Blood tests track creatinine, urea, electrolytes (especially potassium), bicarbonate, and full blood count; the pattern can suggest the cause. Urinalysis is central: a bland urinary sediment suggests prerenal injury or obstruction; granular 'muddy brown' casts suggest acute tubular necrosis; red cell casts and proteinuria suggest glomerulonephritis; and white cells and eosinophils may indicate acute interstitial nephritis. Urinary electrolytes and the fractional excretion of sodium or urea can help distinguish prerenal injury from established tubular necrosis. When an intrinsic glomerular or vasculitic cause is suspected — for example with hematuria, heavy proteinuria, systemic features, or unexplained rapidly rising creatinine — urgent immunological tests (ANCA, anti-GBM antibody, ANA, complement, immunoglobulins) and often a kidney biopsy are needed, because these conditions require specific, time-critical treatment. Reviewing the trajectory of creatinine, the clinical context, and the response to initial fluid and drug measures usually establishes the category of acute kidney injury within the first day or two.",
+
+  "diagnosticTests": [
+    { "test": "Serum creatinine, urea, and electrolytes", "purpose": "Confirms and stages acute kidney injury and detects dangerous hyperkalemia, acidosis, and uremia", "whatToExpect": "A standard blood draw, often repeated daily during the acute illness; results within hours. The creatinine trend against baseline is central to diagnosis." },
+    { "test": "Urinalysis with microscopy", "purpose": "Helps distinguish prerenal injury, acute tubular necrosis, glomerulonephritis, and interstitial nephritis by the urinary sediment pattern", "whatToExpect": "A urine sample tested with a dipstick and examined under the microscope; results the same day. Casts, blood, and protein point to specific causes." },
+    { "test": "Renal tract ultrasound", "purpose": "Identifies obstruction (postrenal cause), assesses kidney size, and helps distinguish acute from chronic disease", "whatToExpect": "A painless ultrasound scan of the kidneys and bladder, 15-20 minutes. Recommended for most patients with acute kidney injury, especially when the cause is unclear." },
+    { "test": "Bladder scan or catheterization", "purpose": "Rapidly detects or excludes lower urinary tract obstruction and relieves it if present", "whatToExpect": "A quick bedside ultrasound of the bladder; if a large residual volume is found, a catheter is placed both to diagnose and to treat obstruction." },
+    { "test": "Urinary electrolytes and fractional excretion of sodium or urea", "purpose": "Helps differentiate prerenal acute kidney injury from established acute tubular necrosis", "whatToExpect": "A spot urine sample taken alongside a blood sample; results within hours. Interpretation is affected by diuretic use." },
+    { "test": "Immunological tests and kidney biopsy", "purpose": "Used when an intrinsic glomerular, vasculitic, or interstitial cause is suspected and requires urgent specific treatment", "whatToExpect": "Blood tests (ANCA, anti-GBM, ANA, complement); kidney biopsy is an ultrasound-guided day-case procedure under local anesthesia with several hours of observation afterwards." }
+  ],
+
+  "treatmentOverview": "Treatment of acute kidney injury has three priorities: identify and reverse the cause, support the kidneys and prevent further injury, and manage the complications of impaired kidney function. There is no specific drug that 'treats' acute kidney injury itself; management is supportive and cause-directed. For prerenal injury, prompt restoration of renal perfusion — intravenous fluid resuscitation in hypovolemia and sepsis, treatment of heart failure, control of bleeding — is the central intervention, with careful attention not to overload patients who are not volume-depleted. For postrenal injury, urgent relief of obstruction (urinary catheter, nephrostomy, or ureteric stent) restores function. For intrinsic causes, treatment is specific: stopping the offending drug and considering corticosteroids in acute interstitial nephritis, and urgent immunosuppression (corticosteroids, cyclophosphamide, rituximab, plasma exchange) in rapidly progressive glomerulonephritis and vasculitis. Across all causes, supportive care is essential: all nephrotoxic drugs (NSAIDs, ACE inhibitors, ARBs, aminoglycosides) are withheld or dose-adjusted; medications cleared by the kidney are dose-adjusted; blood pressure is optimized; fluid balance is carefully managed to avoid both hypoperfusion and overload; and electrolyte and acid-base disturbances are corrected. Hyperkalemia is treated urgently with calcium (to protect the heart), insulin-dextrose and salbutamol (to shift potassium into cells), and measures to remove potassium. Renal replacement therapy — hemodialysis, hemofiltration, or peritoneal dialysis — is started for life-threatening complications that cannot be controlled medically: refractory hyperkalemia, severe acidosis, refractory fluid overload with pulmonary edema, and severe uremia with encephalopathy or pericarditis. Trials such as AKIKI have shown that, in the absence of these emergency indications, a watchful 'delayed' strategy is reasonable and avoids unnecessary dialysis. Nutritional support, infection prevention, and meticulous medication review continue throughout. Once the acute episode resolves, follow-up of kidney function is important because a significant minority of patients do not return fully to baseline and are at increased long-term risk of chronic kidney disease.",
+
+  "medicalTreatments": [
+    { "name": "Intravenous fluid resuscitation", "description": "Balanced crystalloid fluids restore circulating volume and renal perfusion in prerenal acute kidney injury and sepsis. Volume status is reassessed frequently to avoid fluid overload, which itself worsens outcomes.", "effectiveness": "Reverses prerenal acute kidney injury when given early before tubular damage occurs; the single most important intervention in the commonest category" },
+    { "name": "Withdrawal of nephrotoxic drugs and renal dose adjustment", "description": "Stopping or holding NSAIDs, ACE inhibitors, ARBs, aminoglycosides, and other nephrotoxins, and dose-adjusting renally cleared medications, prevents further injury and drug accumulation.", "effectiveness": "Prevents progression and is a core, evidence-based component of management in every patient" },
+    { "name": "Treatment of the underlying cause", "description": "Antibiotics and source control in sepsis, relief of obstruction in postrenal injury, optimization of heart failure, and immunosuppression for glomerulonephritis or vasculitis — each cause has a specific, often time-critical treatment.", "effectiveness": "Cause-directed treatment is the determinant of recovery; outcomes depend heavily on how quickly the cause is addressed" },
+    { "name": "Urgent treatment of hyperkalemia", "description": "Intravenous calcium gluconate stabilizes the heart, insulin with dextrose and nebulized salbutamol shift potassium into cells, and potassium binders or dialysis remove it. A time-critical intervention.", "effectiveness": "Rapidly lowers the risk of fatal cardiac arrhythmia from severe hyperkalemia" },
+    { "name": "Careful fluid balance and management of fluid overload", "description": "Diuretics may be used to manage established fluid overload in patients who are not volume-depleted, although they do not prevent or treat acute kidney injury itself. Fluid balance is monitored closely.", "effectiveness": "Controls pulmonary edema and overload; diuretics improve symptoms but do not change the course of acute kidney injury" },
+    { "name": "Correction of acidosis and other electrolyte disturbances", "description": "Metabolic acidosis, hyperphosphatemia, hypocalcemia, and other disturbances are corrected as needed. Severe refractory acidosis is an indication for renal replacement therapy.", "effectiveness": "Reduces complications and stabilizes the patient while kidney function recovers or while awaiting dialysis" },
+    { "name": "Corticosteroids for acute interstitial nephritis or immunosuppression for glomerulonephritis", "description": "Drug-induced acute interstitial nephritis may be treated with corticosteroids after the trigger is stopped; rapidly progressive glomerulonephritis and vasculitis need urgent corticosteroids with cyclophosphamide or rituximab, sometimes plasma exchange.", "effectiveness": "Time-critical in intrinsic immune-mediated causes; early treatment substantially improves the chance of renal recovery" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Renal replacement therapy (intermittent hemodialysis, continuous renal replacement therapy, peritoneal dialysis)", "description": "Used when life-threatening complications — refractory hyperkalemia, severe acidosis, refractory fluid overload, or severe uremia — cannot be controlled medically. Continuous renal replacement therapy is preferred in hemodynamically unstable critically ill patients.", "successRate": "Life-saving for emergency indications; most survivors of acute kidney injury requiring temporary dialysis recover enough function to come off it, though a minority remain dialysis-dependent" },
+    { "name": "Relief of urinary tract obstruction (catheter, nephrostomy, ureteric stent)", "description": "Bladder catheterization for outlet obstruction, or percutaneous nephrostomy and ureteric stenting for upper tract obstruction, rapidly relieves postrenal acute kidney injury.", "successRate": "Rapid improvement in kidney function when obstruction is relieved early; prolonged obstruction causes permanent damage" },
+    { "name": "Surgical source control in sepsis", "description": "Drainage of an abscess, removal of infected tissue, or repair of a perforation removes the septic focus driving acute kidney injury and is an essential part of treatment when an operable source is present.", "successRate": "Improves survival and renal recovery when combined with antibiotics and resuscitation" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Preventive care bundles for high-risk patients", "description": "Structured 'care bundles' — recognizing at-risk patients, optimizing volume status, avoiding nephrotoxins, withholding 'sick day' medications, and monitoring kidney function — reduce the incidence and severity of hospital-acquired acute kidney injury, though they are prevention rather than a treatment of established injury." },
+    { "name": "Avoidance and minimization strategies for contrast-associated acute kidney injury", "description": "In patients at risk who need iodinated contrast, intravenous volume expansion with isotonic fluid and using the lowest necessary contrast dose are evidence-based protective measures; routine sodium bicarbonate and N-acetylcysteine have not shown clear added benefit in large trials." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "renal-replacement-therapy",
+    "fluid-resuscitation",
+    "hyperkalemia-management"
+  ],
+
+  "whySeeSpecialist": "Mild acute kidney injury with an obvious, reversible cause is often managed by the admitting medical or surgical team. Nephrology referral is warranted for acute kidney injury that is severe (stage 3), not improving, of uncertain cause, or has features suggesting an intrinsic glomerular, vasculitic, or interstitial cause, and whenever renal replacement therapy or kidney biopsy may be needed. Urology is involved for obstruction, and intensive care for the critically ill.",
+  "doctorSelectionGuide": "In hospital, acute kidney injury is managed by the treating team with nephrology input as needed; choose or seek a hospital with a nephrology service, renal replacement therapy capability, and a kidney biopsy pathway. After discharge, patients who have not fully recovered baseline kidney function should have nephrology or structured primary-care follow-up to monitor for chronic kidney disease.",
+
+  "hospitalCriteria": [
+    "Nephrology service with capacity for kidney biopsy and immunological diagnosis",
+    "Renal replacement therapy (hemodialysis and continuous renal replacement therapy)",
+    "Intensive care unit for critically ill patients",
+    "Urology and interventional radiology for relief of obstruction",
+    "Laboratory and imaging available 24 hours for urgent assessment"
+  ],
+  "keyFacilities": [
+    "Hospital nephrology departments",
+    "Intensive care units with renal replacement therapy",
+    "Urology and interventional radiology services",
+    "Acute kidney injury prevention and recognition programs",
+    "Post-discharge kidney health follow-up clinics"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Recognize and resuscitate at-risk patients early — those with sepsis, hypovolemia, major surgery, or pre-existing kidney disease.",
+    "Maintain good hydration during acute illnesses with vomiting or diarrhea, particularly in older adults and people with kidney disease.",
+    "Follow 'sick day rules': temporarily stop ACE inhibitors, ARBs, diuretics, NSAIDs, and certain other drugs during acute dehydrating illnesses, on medical advice.",
+    "Avoid NSAIDs in people with chronic kidney disease, heart failure, cirrhosis, or volume depletion.",
+    "Optimize volume status and use the lowest necessary contrast dose before contrast-requiring procedures in at-risk patients.",
+    "Monitor kidney function and electrolytes when starting or changing nephrotoxic or renally cleared medications.",
+    "Use hospital acute kidney injury care bundles to prevent and detect hospital-acquired injury early."
+  ],
+
+  "lifestyleModifications": [
+    "Stay well hydrated, particularly during hot weather, exercise, and illnesses causing fluid loss.",
+    "Know your 'sick day' medications and the plan for pausing them during acute illness, agreed in advance with your doctor.",
+    "Avoid over-the-counter NSAIDs if you have kidney disease, heart failure, or cirrhosis, or during acute illness.",
+    "Keep a current list of all medications, including over-the-counter and herbal products, to share with healthcare providers.",
+    "Attend follow-up blood tests after an episode of acute kidney injury to check whether kidney function has fully recovered.",
+    "Manage underlying conditions — diabetes, blood pressure, heart failure — well to reduce future risk."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate fluid intake guided by clinical advice — generally to maintain good hydration, but restricted if fluid overload is present",
+      "A balanced diet with controlled potassium, phosphate, and salt during the acute phase as advised by the renal team",
+      "Sufficient calories and protein to support recovery, individualized by a renal dietitian in severe cases",
+      "Fresh, home-prepared foods that allow control of salt and additives"
+    ],
+    "avoid": [
+      "High-potassium foods (bananas, oranges, potatoes, tomatoes) when blood potassium is high, as advised",
+      "High-salt and highly processed foods, which worsen fluid overload and blood pressure",
+      "Excess protein during the acute phase unless advised otherwise by the renal team",
+      "Over-the-counter NSAID-containing pain and cold remedies"
+    ]
+  },
+  "exerciseGuidelines": "During an acute episode, rest is appropriate and activity is guided by the overall illness. After recovery, regular moderate physical activity supports cardiovascular and kidney health and is encouraged. People left with chronic kidney disease after acute kidney injury benefit from individualized exercise advice as part of kidney health follow-up.",
+
+  "dailyManagement": [
+    "Take all medications exactly as prescribed and follow renal dose adjustments.",
+    "Monitor and record fluid intake, urine output, and daily weight if asked to by the renal team.",
+    "Follow dietary advice on potassium, phosphate, salt, and fluids during the acute phase.",
+    "Attend all blood test appointments to track kidney function recovery.",
+    "Report reduced urine output, swelling, breathlessness, or new symptoms promptly.",
+    "Keep an up-to-date medication list and a documented 'sick day' plan."
+  ],
+
+  "prognosis": "The prognosis of acute kidney injury depends on its cause, severity, the speed of treatment, the patient's baseline kidney function, and the overall clinical context. Prerenal injury caught and treated early is often fully reversible. Acute tubular necrosis usually recovers over days to weeks if the patient survives the underlying illness, though recovery can be incomplete. Postrenal injury recovers well if obstruction is relieved promptly. However, acute kidney injury is not a benign event: even a mild, transient rise in creatinine is independently associated with longer hospital stays and higher in-hospital mortality, and severe acute kidney injury requiring renal replacement therapy in critically ill patients carries a hospital mortality of around 40-60%. Among survivors, a significant minority do not return fully to baseline kidney function: acute kidney injury is now recognized as a major risk factor for the later development and acceleration of chronic kidney disease, and for end-stage kidney disease, cardiovascular events, and recurrent acute kidney injury. The risk of these long-term outcomes rises with the severity, duration, and number of acute kidney injury episodes. This is why structured follow-up of kidney function after an episode — to detect and manage chronic kidney disease early — is now considered an essential part of care rather than an optional extra.",
+
+  "recoveryTimeline": "Prerenal acute kidney injury treated early can reverse within hours to a few days. Acute tubular necrosis typically recovers over 1-3 weeks, sometimes longer, often with an initial oliguric phase followed by a diuretic recovery phase. Postrenal injury improves within hours to days of relieving obstruction. Patients requiring temporary dialysis are usually weaned over days to weeks as kidney function returns. Full recovery is monitored over the following weeks to months, and a check at around 3 months helps identify those left with chronic kidney disease.",
+
+  "complications": [
+    "Life-threatening hyperkalemia causing cardiac arrhythmia.",
+    "Fluid overload with pulmonary edema.",
+    "Severe metabolic acidosis.",
+    "Uremic complications — encephalopathy, pericarditis, and bleeding from platelet dysfunction.",
+    "Increased susceptibility to infection and drug toxicity from impaired clearance.",
+    "Progression to chronic kidney disease and end-stage kidney disease in a significant minority of survivors.",
+    "Increased long-term risk of cardiovascular events and death.",
+    "Higher risk of recurrent acute kidney injury with future illnesses."
+  ],
+
+  "supportResources": [
+    { "name": "National Kidney Foundation", "url": "https://www.kidney.org/", "description": "US patient organisation with extensive information on acute kidney injury, chronic kidney disease, and kidney health." },
+    { "name": "Kidney Disease: Improving Global Outcomes (KDIGO)", "url": "https://kdigo.org/guidelines/acute-kidney-injury/", "description": "International body publishing the definitive clinical practice guideline for acute kidney injury." },
+    { "name": "American Society of Nephrology", "url": "https://www.asn-online.org/", "description": "Professional body with clinical resources and patient information on kidney disease." },
+    { "name": "Kidney Care UK", "url": "https://www.kidneycareuk.org/", "description": "UK charity providing patient support and information, including on acute kidney injury and recovery." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic kidney disease", "keyDifference": "Chronic kidney disease develops gradually over months to years and is largely irreversible, with small kidneys and anemia on testing. Acute kidney injury develops over hours to days and is often reversible. They can coexist as acute-on-chronic kidney injury, and a known baseline creatinine is needed to distinguish them." },
+    { "slug": "nephrotic-syndrome", "name": "Nephrotic Syndrome", "keyDifference": "Nephrotic syndrome is defined by heavy proteinuria, low blood albumin, and edema, and kidney function may be normal. Acute kidney injury is defined by a sudden fall in kidney function. Some glomerular diseases can cause both, but the defining features differ." },
+    { "slug": "nephritic-syndrome", "name": "Nephritic Syndrome", "keyDifference": "Nephritic syndrome is a specific intrinsic-renal presentation with hematuria, red cell casts, hypertension, and some loss of kidney function from glomerular inflammation. It is one cause of intrinsic acute kidney injury rather than a separate entity, and identifying it changes treatment toward urgent immunosuppression." },
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis", "keyDifference": "Sepsis is a dysregulated response to infection causing organ dysfunction; it is the leading cause of acute kidney injury in hospitalized patients rather than a competing diagnosis. The kidney injury is a consequence of the sepsis, and treating the sepsis is central to treating the kidney injury." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis" },
+    { "slug": "hypertension", "name": "High Blood Pressure" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic kidney disease", "relevance": "Acute kidney injury is a major risk factor for developing and accelerating chronic kidney disease; the two are closely linked." },
+    { "slug": "end-stage-renal-disease-n186", "name": "End stage renal disease", "relevance": "Severe or repeated acute kidney injury increases the long-term risk of progression to end-stage kidney disease requiring dialysis or transplant." },
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis", "relevance": "The leading cause of acute kidney injury in hospitalized and critically ill patients." },
+    { "slug": "nephritic-syndrome", "name": "Nephritic Syndrome", "relevance": "An intrinsic glomerular cause of acute kidney injury requiring urgent specific treatment." },
+    { "slug": "diabetic-nephropathy", "name": "Diabetic Nephropathy", "relevance": "A common form of underlying chronic kidney disease that increases vulnerability to acute kidney injury." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is acute kidney injury?",
+      "answer": "Acute kidney injury is a sudden decline in kidney function over hours to days, defined by a rise in serum creatinine or a fall in urine output. It causes retention of waste products and disturbances of fluid, electrolyte, and acid-base balance, and it is often reversible if the cause is treated promptly.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes acute kidney injury?",
+      "answer": "Causes fall into three groups: prerenal (reduced blood flow from dehydration, bleeding, sepsis, or heart failure), intrinsic renal (direct kidney damage, most often acute tubular necrosis from ischemia or nephrotoxins), and postrenal (obstruction of urine flow). Sepsis and nephrotoxic drugs are among the most common precipitants.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of acute kidney injury?",
+      "answer": "Mild acute kidney injury often has no symptoms and is found on blood tests. As it worsens, symptoms include reduced urine output, swelling of the legs and face, breathlessness from fluid overload, nausea, fatigue, and confusion. Severe cases can cause dangerous electrolyte and acid-base disturbances.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is acute kidney injury reversible?",
+      "answer": "Often yes, especially when caught early. Prerenal injury can reverse fully if blood flow is restored before tubular damage occurs, and obstruction reverses if relieved promptly. Acute tubular necrosis usually recovers over weeks. However, a significant minority of patients do not return fully to baseline kidney function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is acute kidney injury diagnosed?",
+      "answer": "Diagnosis is based on a rise in serum creatinine or fall in urine output against baseline, using the KDIGO criteria. Investigations to find the cause include urinalysis, renal tract ultrasound, a bladder scan for obstruction, urinary electrolytes, and, when an intrinsic cause is suspected, immunological tests and sometimes a kidney biopsy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is acute kidney injury treated?",
+      "answer": "Treatment is supportive and cause-directed: restoring blood flow with fluids in prerenal injury, relieving obstruction in postrenal injury, stopping nephrotoxic drugs, optimizing blood pressure and fluid balance, and correcting dangerous electrolyte disturbances. Dialysis is reserved for life-threatening complications that cannot be controlled medically.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does acute kidney injury always need dialysis?",
+      "answer": "No. Most acute kidney injury is managed without dialysis. Dialysis is started only for life-threatening complications — refractory high potassium, severe acidosis, severe fluid overload, or severe uremia. Trials show that, without these emergency indications, a watchful delayed approach is reasonable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are 'sick day rules' for kidney medications?",
+      "answer": "Sick day rules are advice to temporarily stop certain medications — ACE inhibitors, ARBs, diuretics, NSAIDs, and some others — during acute illnesses with vomiting, diarrhea, or dehydration, because they can worsen kidney injury. The plan should be agreed in advance with your doctor and resumed once you recover.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can dehydration cause acute kidney injury?",
+      "answer": "Yes. Dehydration from inadequate fluid intake, vomiting, diarrhea, or excessive sweating reduces blood flow to the kidneys and is a common cause of prerenal acute kidney injury, especially in older adults and people with kidney disease. Prompt rehydration usually reverses it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do painkillers cause acute kidney injury?",
+      "answer": "Non-steroidal anti-inflammatory drugs such as ibuprofen, diclofenac, and naproxen can cause or worsen acute kidney injury, particularly in people who are dehydrated or have kidney disease, heart failure, or cirrhosis. They should be avoided in these situations. Paracetamol is generally safer for the kidneys.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between acute kidney injury and chronic kidney disease?",
+      "answer": "Acute kidney injury develops suddenly over hours to days and is often reversible. Chronic kidney disease develops gradually over months to years and is largely irreversible. They are linked — acute kidney injury increases the long-term risk of chronic kidney disease — and can occur together as acute-on-chronic kidney injury.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How serious is acute kidney injury?",
+      "answer": "Acute kidney injury is a serious condition. Even mild cases are linked to longer hospital stays and higher mortality, and severe acute kidney injury requiring dialysis in critically ill patients carries a hospital mortality of 40-60%. Outcomes depend heavily on the cause and how quickly it is treated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can acute kidney injury lead to permanent kidney damage?",
+      "answer": "It can. While many people recover, a significant minority do not return fully to baseline kidney function. Acute kidney injury is a recognized risk factor for developing and accelerating chronic kidney disease, end-stage kidney disease, and cardiovascular disease, which is why follow-up testing is important.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is acute tubular necrosis?",
+      "answer": "Acute tubular necrosis is the most common form of intrinsic acute kidney injury, caused by damage to the kidney tubules from prolonged poor blood flow or from toxins such as certain antibiotics, contrast media, or muscle breakdown products. It usually recovers over one to three weeks if the patient survives the underlying illness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is high potassium treated in acute kidney injury?",
+      "answer": "Severe high potassium (hyperkalemia) is a medical emergency. Treatment includes intravenous calcium to protect the heart, insulin with dextrose and nebulized salbutamol to shift potassium into cells, and potassium binders or dialysis to remove it. An ECG is done urgently to check for dangerous heart rhythm changes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does contrast dye cause acute kidney injury?",
+      "answer": "Iodinated contrast used in CT scans and angiography can contribute to acute kidney injury in at-risk patients, although the risk is lower than once thought. In high-risk patients, giving intravenous fluids before the procedure and using the lowest necessary contrast dose are the main protective measures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to recover from acute kidney injury?",
+      "answer": "Prerenal injury treated early can reverse within hours to days. Acute tubular necrosis usually recovers over one to three weeks, sometimes longer. Obstruction improves within hours to days of being relieved. Full recovery is monitored over weeks to months, with a check at around three months to detect any lasting kidney disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who is most at risk of acute kidney injury?",
+      "answer": "The highest-risk groups are older adults, people with chronic kidney disease, diabetes, heart failure, or cirrhosis, and anyone who becomes acutely and severely ill — particularly with sepsis, major surgery, or significant fluid loss. Nephrotoxic medications add further risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can acute kidney injury be prevented?",
+      "answer": "Many cases can. Recognizing at-risk patients, maintaining good hydration, following sick day medication rules, avoiding NSAIDs in vulnerable people, optimizing volume status before contrast procedures, and using hospital care bundles all reduce the incidence and severity of acute kidney injury.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What follow-up is needed after acute kidney injury?",
+      "answer": "After an episode, kidney function should be rechecked to confirm recovery, typically with blood tests over the following weeks and a review around three months. Patients who do not fully recover need ongoing monitoring for chronic kidney disease, blood pressure control, medication review, and cardiovascular risk management.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Acute kidney injury (acute renal failure)",
+  "regionalNames": [
+    { "name": "Acute renal failure", "region": "Global (older term)", "language": "English" },
+    { "name": "AKI", "region": "Global academic", "language": "English" },
+    { "name": "Acute kidney failure", "region": "Global colloquial", "language": "English" },
+    { "name": "तीव्र गुर्दा चोट", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "acute kidney injury",
+    "acute renal failure",
+    "AKI",
+    "KDIGO",
+    "prerenal AKI",
+    "acute tubular necrosis",
+    "postrenal obstruction",
+    "acute interstitial nephritis",
+    "hyperkalemia",
+    "renal replacement therapy",
+    "contrast-associated AKI",
+    "nephrotoxic drugs",
+    "sick day rules",
+    "AKI to CKD"
+  ],
+  "symptomKeywords": [
+    "reduced urine output hospital",
+    "rising creatinine blood test",
+    "swelling legs after illness",
+    "breathless fluid overload kidneys",
+    "confusion older adult kidney",
+    "no urine output emergency"
+  ],
+
+  "metaTitle": "Acute Kidney Injury: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Acute kidney injury: sudden loss of kidney function from poor perfusion, toxins, or obstruction. Causes, KDIGO staging, treatment and dialysis reviewed.",
+
+  "keywords": [
+    "acute kidney injury",
+    "acute renal failure",
+    "AKI",
+    "KDIGO acute kidney injury",
+    "prerenal AKI",
+    "acute tubular necrosis",
+    "postrenal obstruction",
+    "acute kidney injury treatment",
+    "renal replacement therapy",
+    "nephrotoxic drugs",
+    "acute kidney injury causes",
+    "AKI recovery"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. 2012. KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney International Supplements 2(1):1-138.", "url": "https://kdigo.org/guidelines/acute-kidney-injury/", "accessedDate": "2026-05-14" },
+    { "title": "Bellomo R, Kellum JA, Ronco C. 2012. Acute kidney injury. Lancet 380(9843):756-66.", "url": "https://pubmed.ncbi.nlm.nih.gov/22617274/", "accessedDate": "2026-05-14" },
+    { "title": "Hoste EAJ, Bagshaw SM, Bellomo R, et al. 2015. Epidemiology of acute kidney injury in critically ill patients: the multinational AKI-EPI study. Intensive Care Medicine 41(8):1411-23.", "url": "https://pubmed.ncbi.nlm.nih.gov/26162677/", "accessedDate": "2026-05-14" },
+    { "title": "Chawla LS, Eggers PW, Star RA, Kimmel PL. 2014. Acute kidney injury and chronic kidney disease as interconnected syndromes. New England Journal of Medicine 371(1):58-66.", "url": "https://pubmed.ncbi.nlm.nih.gov/24988558/", "accessedDate": "2026-05-14" },
+    { "title": "Gaudry S, Hajage D, Schortgen F, et al. 2016. Initiation strategies for renal-replacement therapy in the intensive care unit (AKIKI). New England Journal of Medicine 375(2):122-33.", "url": "https://pubmed.ncbi.nlm.nih.gov/27181456/", "accessedDate": "2026-05-14" },
+    { "title": "Weisbord SD, Gallagher M, Jneid H, et al. 2018. Outcomes after angiography with sodium bicarbonate and acetylcysteine (PRESERVE). New England Journal of Medicine 378(7):603-614.", "url": "https://pubmed.ncbi.nlm.nih.gov/29130810/", "accessedDate": "2026-05-14" },
+    { "title": "Susantitaphong P, Cruz DN, Cerda J, et al. 2013. World incidence of AKI: a meta-analysis. Clinical Journal of the American Society of Nephrology 8(9):1482-93.", "url": "https://pubmed.ncbi.nlm.nih.gov/23744003/", "accessedDate": "2026-05-14" },
+    { "title": "Ronco C, Bellomo R, Kellum JA. 2019. Acute kidney injury. Lancet 394(10212):1949-1964.", "url": "https://pubmed.ncbi.nlm.nih.gov/31777389/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

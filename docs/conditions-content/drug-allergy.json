@@ -1,0 +1,440 @@
+{
+  "_meta": {
+    "slug": "drug-allergy",
+    "tier": 1,
+    "headTerm": "drug allergy",
+    "longTailKeywords": [
+      "drug allergy symptoms",
+      "penicillin allergy",
+      "drug allergy vs side effect",
+      "drug allergy test",
+      "graded drug challenge",
+      "delayed drug allergy",
+      "SCAR drug reaction",
+      "drug allergy skin test",
+      "drug allergy management",
+      "antibiotic allergy",
+      "NSAID allergy",
+      "drug rash"
+    ],
+    "primarySpecialty": "Allergy & Immunology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Classification per Pichler Lancet 2003 (PMID 14570549) and 2024 ICON drug allergy update. Penicillin allergy delabeling per Shenoy et al. JAMA 2019 (PMID 30776290). Severe cutaneous adverse reactions per Roujeau et al. NEJM 1994 and updated reviews. UK NICE CG183 (Drug allergy: diagnosis and management) 2014/2023 update."
+  },
+
+  "h1Title": "Drug Allergy: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Allergy & Immunology",
+
+  "heroOverview": "Drug allergy is an immune-mediated hypersensitivity reaction to a medication that affects roughly 7% of the general adult population over their lifetime, with antibiotics, NSAIDs, and chemotherapy agents accounting for most cases. Reactions span minutes to weeks after exposure and range from mild rash to fatal anaphylaxis and severe cutaneous adverse reactions (Stevens-Johnson syndrome and toxic epidermal necrolysis). Up to 10% of hospital patients carry a penicillin allergy label in their chart, yet 90-95% of these labels are inaccurate on formal testing — incorrect labels drive use of broader-spectrum antibiotics, longer admissions, and higher costs. Diagnosis combines history, validated skin testing (immediate and delayed), specific IgE blood tests, and supervised drug challenges. Management depends on the clinical phenotype: immediate IgE-mediated reactions are treated with adrenaline, antihistamines, and corticosteroids; severe cutaneous reactions require immediate drug discontinuation, supportive care in a burn unit, and avoidance of cross-reactive agents for life.",
+
+  "keyStats": {
+    "prevalence": "Lifetime prevalence of self-reported drug allergy 7-10% of adults; penicillin allergy label prevalence approximately 10% in hospitalized patients",
+    "demographics": "Women more frequently labeled than men (roughly 2:1); incidence rises with age and number of medications used",
+    "avgAge": "Reactions occur at any age; severe cutaneous adverse reactions (SCAR) more common in adults aged 40-70",
+    "globalCases": "Severe drug allergy responsible for an estimated 100,000+ deaths globally per year; SCAR mortality 5-50% depending on subtype"
+  },
+
+  "definition": "Drug allergy (ICD-10: T88.7 unspecified adverse effect of drug or medicament; specific subtypes coded under T78 and L51) is an immune-mediated hypersensitivity reaction to a medication or biological agent. It is distinct from non-immune adverse drug reactions, which account for roughly 80% of all adverse medication events and include pharmacologic side effects, drug interactions, idiosyncratic reactions, and intolerance. True drug allergy is classified by the Gell-Coombs framework into four immunopathologic types: Type I (IgE-mediated immediate reactions including urticaria, angioedema, bronchospasm, and anaphylaxis within minutes to two hours); Type II (cytotoxic antibody-mediated reactions such as drug-induced immune hemolytic anemia, thrombocytopenia, neutropenia); Type III (immune complex reactions including serum sickness, drug-induced vasculitis); and Type IV (T-cell-mediated delayed reactions ranging from morbilliform exanthema to severe cutaneous adverse reactions). Type IV is further subdivided into IVa (Th1 with macrophage activation), IVb (Th2 with eosinophil involvement, e.g. DRESS), IVc (cytotoxic T cells, SJS/TEN), and IVd (neutrophilic, AGEP). The most clinically important agents are antibiotics (especially beta-lactams), NSAIDs, anticonvulsants, antiretrovirals, monoclonal antibodies, chemotherapy, and radiocontrast media. Drug allergy is managed by allergists/immunologists, dermatologists, pharmacists, and clinicians in every specialty; complex cases (SCAR, multiple drug allergies, surgery requiring a critical drug) need specialist evaluation including skin testing and supervised drug challenge.",
+
+  "typesClassification": [
+    { "type": "Type I (IgE-mediated, immediate)", "description": "Urticaria, angioedema, bronchospasm, anaphylaxis within minutes to two hours of exposure. Caused by IgE cross-linking on mast cells and basophils. Common culprits: beta-lactams, neuromuscular blocking agents, platinum chemotherapy, monoclonal antibodies." },
+    { "type": "Type II (cytotoxic, antibody-mediated)", "description": "IgG or IgM antibodies bind drug-modified cell surface antigens, triggering complement and phagocytic destruction. Causes drug-induced immune hemolytic anemia (penicillin, cephalosporins, methyldopa), thrombocytopenia (heparin, quinine), and neutropenia (clozapine, propylthiouracil)." },
+    { "type": "Type III (immune complex)", "description": "Drug-antibody complexes deposit in tissues and trigger complement-mediated inflammation. Causes serum sickness (cefaclor, anti-thymocyte globulin), drug-induced vasculitis (hydralazine, propylthiouracil, levamisole-cocaine), and serum sickness-like reactions." },
+    { "type": "Type IV (T-cell-mediated, delayed)", "description": "T cells recognize drug-MHC complexes and trigger delayed inflammatory responses 24 hours to several weeks after exposure. Spectrum from mild morbilliform exanthema (90% of delayed reactions) to severe cutaneous adverse reactions including SJS/TEN, DRESS, and AGEP." },
+    { "type": "Severe cutaneous adverse reactions (SCAR)", "description": "Life-threatening Type IV reactions including Stevens-Johnson syndrome / toxic epidermal necrolysis (sulfa, allopurinol, lamotrigine, carbamazepine, NSAIDs), DRESS (anticonvulsants, allopurinol, sulfa), and AGEP (beta-lactams, terbinafine, calcium channel blockers). Mortality 5-50% depending on subtype and extent." }
+  ],
+
+  "primarySymptoms": [
+    "Sudden itchy maculopapular rash, hives, or angioedema within minutes to two hours of exposure (IgE-mediated immediate reactions).",
+    "Wheezing, throat tightness, or stridor with hypotension developing minutes after drug exposure — anaphylaxis.",
+    "Symmetric morbilliform (measles-like) rash on the trunk and extremities developing 5-14 days after starting a new drug (typical delayed reaction).",
+    "Painful, spreading erythema followed by blistering, mucosal involvement, and skin detachment in Stevens-Johnson syndrome or toxic epidermal necrolysis.",
+    "Fever, facial edema, widespread rash, lymphadenopathy, and abnormal liver enzymes in DRESS syndrome (drug reaction with eosinophilia and systemic symptoms) 2-8 weeks after starting an anticonvulsant or allopurinol.",
+    "Rapidly spreading sterile pustules on a background of erythema, fever, and neutrophilia in acute generalized exanthematous pustulosis (AGEP).",
+    "Joint pain, urticaria, fever, and proteinuria 7-21 days after exposure — serum sickness or serum sickness-like reaction.",
+    "Bruising, mucosal bleeding, or unexpected anemia developing days to weeks after starting a drug — drug-induced immune cytopenia.",
+    "Hepatitis, nephritis, or interstitial pneumonitis developing over weeks of treatment — drug-induced organ-specific reactions.",
+    "Tongue or throat swelling with hoarseness or stridor — severe Type I reaction needing immediate adrenaline."
+  ],
+
+  "earlyWarningSigns": [
+    "Itching, tingling of the lips or palate within minutes of taking the first dose of a new medication",
+    "New mild rash within a week of starting a new antibiotic or anticonvulsant",
+    "Low-grade fever and facial swelling 2-4 weeks after starting a drug",
+    "Recurrent unexplained urticaria associated with intermittent medication use",
+    "Eosinophilia or rising liver enzymes on routine blood tests after starting a new drug"
+  ],
+
+  "emergencySigns": [
+    "Difficulty breathing, throat swelling, or stridor — anaphylaxis; give intramuscular adrenaline immediately",
+    "Painful spreading rash with mucosal involvement (mouth, eyes, genitals) or skin detachment — Stevens-Johnson syndrome or toxic epidermal necrolysis, transfer to burn or specialty center urgently",
+    "Fever above 38.5°C with widespread rash and facial edema after starting a new drug — DRESS, immediate hospitalization",
+    "Loss of consciousness, weak rapid pulse, pale clammy skin — anaphylactic shock",
+    "Severe abdominal pain, mucosal bleeding, or rapidly worsening jaundice — exclude severe drug-induced organ damage"
+  ],
+
+  "causes": [
+    {
+      "cause": "Beta-lactam antibiotics (penicillins, cephalosporins, carbapenems, monobactams)",
+      "description": "Most common cause of immediate IgE-mediated drug allergy. Penicillin allergy is reported by approximately 10% of patients but confirmed on testing in only 5-10% of these. Cross-reactivity between penicillins and cephalosporins is roughly 1-2% with modern cephalosporins (much lower than older estimates)."
+    },
+    {
+      "cause": "Sulfonamide antibiotics and non-antibiotic sulfa drugs",
+      "description": "Sulfa antibiotics (sulfamethoxazole-trimethoprim) cause delayed maculopapular rashes and severe cutaneous reactions, especially in HIV-positive patients. Non-antibiotic sulfa drugs (loop diuretics, thiazides, sulfonylureas, celecoxib) generally do not cross-react with sulfa antibiotics."
+    },
+    {
+      "cause": "NSAIDs and aspirin",
+      "description": "Cause both IgE-mediated immediate reactions (rare) and pseudo-allergic reactions through COX-1 inhibition (much more common). NSAID-exacerbated respiratory disease (asthma, polyposis, NSAID hypersensitivity) affects roughly 7% of adult asthmatics. Selective COX-2 inhibitors are usually tolerated."
+    },
+    {
+      "cause": "Anticonvulsants (carbamazepine, lamotrigine, phenytoin, allopurinol)",
+      "description": "Major culprits in Type IV delayed reactions including SJS/TEN and DRESS. HLA-B*15:02 strongly predicts carbamazepine SJS/TEN in Han Chinese, Thai, and Malay populations; HLA-B*58:01 predicts allopurinol SJS/TEN and DRESS. Pharmacogenetic screening prevents many cases."
+    },
+    {
+      "cause": "Monoclonal antibodies and biological agents",
+      "description": "Infusion reactions to rituximab, infliximab, cetuximab, and others combine cytokine release with anti-drug antibody formation. Premedication and slow infusion mitigate most reactions. True allergic reactions require alternative agents or desensitization."
+    },
+    {
+      "cause": "Radiocontrast media and chemotherapy",
+      "description": "Iodinated contrast causes pseudo-allergic reactions (most common) and true IgE-mediated allergy (less common). Platinum agents (carboplatin, oxaliplatin), taxanes, and asparaginase produce dose-dependent and cumulative IgE-mediated reactions, often manageable with desensitization protocols."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Prior drug allergic reaction (especially to same drug class)", "category": "non-modifiable", "description": "A documented prior reaction increases the risk of recurrence on re-exposure several-fold and is the strongest predictor of severe reactions. Detailed history-taking and accurate documentation are essential." },
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women are roughly twice as likely as men to be labeled with drug allergy, although the true biological difference is smaller. Hormonal modulation of immune responses contributes to higher rates of urticaria and immediate reactions in women." },
+    { "factor": "Genetic HLA susceptibility (HLA-B*15:02, HLA-B*58:01, HLA-B*57:01)", "category": "genetic", "description": "Specific HLA alleles predict severe Type IV reactions: HLA-B*15:02 for carbamazepine SJS/TEN in some Asian populations, HLA-B*58:01 for allopurinol SCAR, HLA-B*57:01 for abacavir hypersensitivity. Pre-prescription screening is standard for some agents." },
+    { "factor": "HIV infection", "category": "non-modifiable", "description": "Patients with HIV/AIDS develop drug allergies (especially to sulfa antibiotics) at 10-100x higher rates than the general population, partly because of immune dysregulation and recurrent infections requiring drug courses." },
+    { "factor": "Frequent or prolonged drug exposure", "category": "modifiable", "description": "Patients on multiple antibiotics, anticonvulsants, or chemotherapy face cumulative sensitization risk. Antibiotic stewardship and avoidance of unnecessary drug courses reduce sensitization." },
+    { "factor": "Autoimmune or inflammatory disease", "category": "non-modifiable", "description": "Lupus, mixed connective tissue disease, and inflammatory bowel disease patients have higher rates of drug allergic reactions, possibly through immune dysregulation. Sulfa-containing drugs especially are poorly tolerated." },
+    { "factor": "Family history of severe cutaneous adverse reactions", "category": "genetic", "description": "First-degree relatives of patients with SJS/TEN or DRESS to specific drugs have modestly elevated risk and warrant particularly careful drug history-taking and pre-prescription HLA screening where applicable." }
+  ],
+
+  "affectedDemographics": [
+    "Approximately 7-10% of US adults report a drug allergy on health questionnaires.",
+    "Approximately 10% of hospital inpatients carry a penicillin allergy label, of which 90-95% are inaccurate on testing.",
+    "HIV-positive patients have 10-100x the rate of sulfa allergy compared with the general population.",
+    "Severe cutaneous adverse reactions (SJS/TEN/DRESS) have an incidence of approximately 1-6 cases per million person-years in the general population, higher in certain ethnic groups due to HLA susceptibility.",
+    "Children: drug allergy label prevalence approximately 5%; confirmed on testing in only 5-15% of these, with antibiotic-related labels predominating."
+  ],
+
+  "diagnosisOverview": "Diagnosis begins with a detailed history covering drug name and dose, indication, timing of reaction relative to first dose and last dose, character and distribution of symptoms, presence of systemic features (fever, mucosal involvement, organ dysfunction), prior exposures, and concomitant medications and infections. The history alone determines next steps: a mild morbilliform rash on day 7 of amoxicillin in a child is often safely confirmed with a graded oral challenge; a vesiculobullous eruption with mucosal involvement is SJS/TEN until proven otherwise and demands immediate drug withdrawal, supportive care, and never re-challenge. Skin testing is the gold standard for immediate Type I reactions to beta-lactams: skin prick test with major and minor determinants and amoxicillin, followed by intradermal testing if negative. Negative skin tests followed by a supervised graded oral challenge confirm safety with 95-99% accuracy for penicillin. Patch testing helps diagnose delayed reactions to many drugs at 48-96 hours. Specific IgE in vitro tests are useful adjuncts for some drugs (penicillin, neuromuscular blockers, chlorhexidine, omeprazole). Tryptase drawn 30 minutes to 4 hours after an anaphylactic episode confirms mast cell activation. For severe cutaneous reactions (SJS/TEN, DRESS, AGEP), skin biopsy and laboratory studies (complete blood count, liver function, renal function, eosinophil count) support diagnosis; the RegiSCAR criteria grade DRESS severity. Drug challenge is contraindicated in patients with history of severe cutaneous adverse reaction, anaphylaxis to high-risk agents, or unstable comorbidities. Penicillin allergy delabeling clinics are now widespread because incorrect labels drive worse antibiotic outcomes; structured assessment safely removes labels in approximately 90% of patients.",
+
+  "diagnosticTests": [
+    { "test": "Detailed drug allergy-focused history", "purpose": "Establishes likelihood of true allergy, identifies high-risk features, and guides further testing decisions", "whatToExpect": "30-60 minute interview with an allergist or immunologist. Bring a complete list of medications, including over-the-counter and supplements, and photographs of any rash. A drug exposure and reaction timeline written in advance is very helpful." },
+    { "test": "Skin prick testing with drug allergen panel", "purpose": "Detects IgE-mediated sensitization to specific drugs (mainly penicillins, neuromuscular blocking agents, chlorhexidine)", "whatToExpect": "Drops of standardized drug solutions applied to the forearm and pricked through. A wheal at 15-20 minutes indicates sensitization. Antihistamines must be stopped 5-7 days beforehand. Minor itching and small wheals are expected." },
+    { "test": "Intradermal testing", "purpose": "Detects IgE-mediated sensitization at higher sensitivity than skin prick testing; performed when skin prick is negative", "whatToExpect": "A small volume of diluted drug is injected into the forearm dermis with a fine needle. Reactions are read at 15-20 minutes (immediate) and 24-48 hours (delayed). Slight stinging during injection." },
+    { "test": "Specific IgE blood test (ImmunoCAP)", "purpose": "In vitro detection of IgE to specific drug antigens (penicillin, suxamethonium, chlorhexidine, others) when skin testing is contraindicated or inconclusive", "whatToExpect": "Standard blood draw. Results in 5-10 days. Sensitivity is lower than skin testing for most drugs; positive result must be interpreted with clinical history." },
+    { "test": "Supervised graded drug challenge", "purpose": "Gold standard for confirming or excluding drug allergy when history and skin testing are equivocal or low-risk", "whatToExpect": "Performed in a monitored setting (clinic with resuscitation equipment). Gradual increasing doses (typically 1/10, 1/10, 1/10, 7/10) given over 2-4 hours under physician supervision. Plan for a half-day visit." },
+    { "test": "Patch testing for delayed reactions", "purpose": "Identifies T-cell-mediated delayed hypersensitivity to specific drugs", "whatToExpect": "Patches containing drug allergens applied to the back for 48 hours, then read at 48, 72, and 96 hours. Mild itching at positive sites is expected. Two clinic visits over a week." },
+    { "test": "Serum tryptase (acute and baseline)", "purpose": "Confirms mast cell activation in suspected anaphylaxis; identifies underlying mastocytosis or hereditary alpha-tryptasemia", "whatToExpect": "Blood drawn within 4 hours of an acute reaction and again at least 24 hours later. Result within 3-5 days from most labs." }
+  ],
+
+  "treatmentOverview": "Treatment of drug allergy combines immediate management of the reaction, definitive identification of the culprit, avoidance, communication, and (where needed) alternative therapy or desensitization. Acute immediate IgE-mediated reactions with anaphylactic features are treated with intramuscular adrenaline 0.3-0.5 mg, intravenous H1 and H2 antihistamines, corticosteroids, and supportive care. Severe cutaneous adverse reactions (SJS/TEN, DRESS, AGEP) demand immediate withdrawal of all suspected drugs, transfer to a burn or specialty unit, supportive care including fluid balance, wound care, and nutrition, and avoidance of cross-reactive agents for life. Cyclosporine in TEN, systemic corticosteroids in DRESS (when liver enzymes allow), and IVIG in selected cases are used by specialists. Documentation of the reaction and offending drug in the electronic health record with appropriate flag is critical to prevent future re-exposure. Medical-alert identification (bracelet, smartphone health record, cards) accompanies the patient. Where the offending drug is essential (e.g. carboplatin in cancer, aspirin in coronary disease, ceftriaxone in life-threatening infection) and no equivalent alternative exists, drug desensitization protocols administer the drug in graded doses over hours to days, inducing temporary tolerance. Desensitization must be repeated for each treatment course. For low-risk penicillin labels (mild rash decades ago, no anaphylactic features), structured delabeling pathways with skin testing and supervised oral challenge safely remove the label in 90% or more of patients, restoring access to first-line antibiotics. Pre-prescription HLA screening prevents severe reactions to abacavir (HLA-B*57:01), allopurinol in some Asian populations (HLA-B*58:01), and carbamazepine (HLA-B*15:02 in Han Chinese, Thai, Malay populations).",
+
+  "medicalTreatments": [
+    { "name": "Intramuscular adrenaline (epinephrine) 0.3-0.5 mg for anaphylaxis", "description": "First-line treatment for any drug-induced anaphylaxis. Given into the anterolateral thigh, repeatable every 5-15 minutes. Patients at risk are prescribed self-injectors and trained in their use.", "effectiveness": "Single intramuscular dose resolves anaphylactic symptoms in 70-80% of cases; early administration reduces fatal outcomes by an order of magnitude" },
+    { "name": "Non-sedating H1 antihistamines (cetirizine 10 mg, fexofenadine 180 mg, bilastine 20 mg)", "description": "Used for itching, hives, and angioedema in immediate hypersensitivity reactions. Standard-dose for mild reactions; up to 4x dose for chronic urticaria or persistent symptoms.", "effectiveness": "Symptom control in 60-75% of mild to moderate cutaneous drug reactions" },
+    { "name": "Systemic corticosteroids (prednisolone 0.5-1 mg/kg orally; methylprednisolone IV in severe cases)", "description": "Used for moderate to severe immediate reactions, DRESS, and other Type IV reactions. Tapered over 4-12 weeks in DRESS; shorter courses in immediate reactions.", "effectiveness": "Symptomatic improvement in over 80% of moderate to severe reactions; reduces relapse in DRESS" },
+    { "name": "Drug desensitization (graded protocols)", "description": "Standardized protocols administer the drug in incremental doses over hours to days, inducing temporary clinical tolerance. Used when no alternative exists. Must be repeated for each treatment course.", "effectiveness": "Successful completion in 90-95% of selected patients; severe reactions during desensitization in 1-5%" },
+    { "name": "Cyclosporine 3-5 mg/kg/day for toxic epidermal necrolysis", "description": "T-cell-targeted therapy used in severe TEN; emerging evidence suggests reduced mortality compared with supportive care alone in some cohorts. Specialist administration only.", "effectiveness": "Suggested mortality benefit in some observational studies and small RCTs; standard of care varies by center" },
+    { "name": "Pre-prescription HLA screening (HLA-B*57:01, HLA-B*58:01, HLA-B*15:02)", "description": "Genetic testing before prescription of abacavir (HLA-B*57:01), allopurinol in selected Asian populations (HLA-B*58:01), and carbamazepine in Han Chinese, Thai, and Malay populations (HLA-B*15:02). Standard of care in many settings.", "effectiveness": "Prevention of severe cutaneous adverse reactions in over 95% of screened patients with the at-risk allele who avoid the drug" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Wound care and surgical debridement in toxic epidermal necrolysis", "description": "Severe TEN with extensive skin detachment is managed in burn units with sterile dressings, surgical debridement of necrotic tissue, and aggressive fluid and nutritional support. Sequelae include scarring, contractures, and pigmentary change.", "successRate": "Optimal burn unit care reduces SCORTEN-predicted mortality by approximately 20-30% relative to standard care" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Structured penicillin allergy delabeling pathway", "description": "Multi-step assessment with history, skin testing, and graded oral challenge under specialist or trained primary care supervision. Safely removes the penicillin allergy label in over 90% of patients, restoring access to first-line antibiotics." },
+    { "name": "Patient education and medication-list management", "description": "Coordinated counseling on identifying offending drugs, reading labels, communicating allergy status, and managing future medical encounters. Reduces re-exposure rates and improves medication safety." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "drug-allergy-skin-testing",
+    "drug-desensitization",
+    "epipen-prescription",
+    "penicillin-allergy-delabeling"
+  ],
+
+  "whySeeSpecialist": "Allergy and immunology referral is appropriate after any anaphylactic reaction to a drug, suspected severe cutaneous adverse reaction (SJS/TEN, DRESS, AGEP), drug allergy that limits use of essential medications (penicillins, contrast media, chemotherapy), multiple drug allergies, and any patient labeled as drug-allergic who needs an excluded drug for a life-threatening indication. Specialists confirm or exclude allergy through validated testing and supervise desensitization if needed.",
+  "doctorSelectionGuide": "Look for a board-certified allergist/immunologist with documented experience in drug allergy testing, including penicillin skin testing, supervised oral challenge, and desensitization. Tertiary centers offering chemotherapy and antibiotic desensitization, severe cutaneous adverse reaction follow-up, and HLA testing provide the most complete care.",
+
+  "hospitalCriteria": [
+    "Allergy and immunology service offering skin testing and graded drug challenge",
+    "Pharmacy and clinical immunology team supporting desensitization protocols",
+    "Burn or specialty unit experience for SJS/TEN and severe DRESS",
+    "Access to HLA-B*57:01, HLA-B*58:01, HLA-B*15:02 pharmacogenomic testing",
+    "Electronic health record allergy module with appropriate flagging and decision support"
+  ],
+  "keyFacilities": [
+    "Tertiary allergy and immunology clinics",
+    "Penicillin allergy delabeling services",
+    "Drug desensitization units",
+    "Severe cutaneous adverse reaction registries and follow-up clinics",
+    "Pharmacogenomic testing laboratories"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid known offending drugs and any drug in the cross-reactive class identified by an allergist.",
+    "Maintain a written and electronic record of confirmed drug allergies, including reaction type, date, and reference clinician.",
+    "Wear a medical-alert bracelet or carry an allergy ID card listing severe allergies.",
+    "Use only one pharmacy where possible so that drug interaction and allergy alerts function across all prescriptions.",
+    "Receive pre-prescription HLA screening for abacavir (HLA-B*57:01), allopurinol in selected populations (HLA-B*58:01), and carbamazepine (HLA-B*15:02 in Han Chinese, Thai, Malay populations) where local guidelines require.",
+    "Request formal allergist evaluation for low-risk penicillin allergy labels rather than accepting them indefinitely — most can be safely delabeled."
+  ],
+
+  "lifestyleModifications": [
+    "Bring a complete, current medication list to every medical encounter.",
+    "Photograph any rash that develops on a medication and date the image.",
+    "Promptly stop a suspected drug and contact the prescriber rather than continuing in hope that the rash will settle.",
+    "Inform all healthcare providers (dentist, optometrist, surgical team) of every confirmed allergy before any prescription or procedure.",
+    "Carry two in-date adrenaline auto-injectors if you have a history of drug-induced anaphylaxis.",
+    "Update the allergy section of your electronic health record after any change with clinician sign-off."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Whole foods and single-ingredient meals during the acute reaction phase, simplifying label-reading and minimizing accidental drug exposure (some drugs share excipients with foods)",
+      "Adequate hydration (2-2.5 L water per day) to support drug clearance during recovery",
+      "Anti-inflammatory whole foods (oily fish, vegetables, fruit, nuts, olive oil) for general support",
+      "Protein-rich foods to support skin recovery after severe cutaneous adverse reactions"
+    ],
+    "avoid": [
+      "Any drug, supplement, or herbal preparation containing the offending agent — read labels carefully",
+      "Excessive alcohol — interacts with many drugs and impairs the immune response",
+      "Self-medicating with over-the-counter NSAIDs or sulfa-containing preparations if these are documented triggers",
+      "Untested herbal supplements that may contain unlisted pharmacologic ingredients"
+    ]
+  },
+  "exerciseGuidelines": "Light to moderate exercise is safe between reactions. Pause structured exercise during the acute phase of any moderate to severe reaction and resume gradually after symptoms resolve. Patients recovering from severe cutaneous adverse reactions need rehabilitation guided by the burn or specialty team, with skin care, scar management, and progressive activity reintroduction over months.",
+
+  "dailyManagement": [
+    "Check every new prescription against your documented allergy list before starting.",
+    "Photograph any new rash or symptom that develops on a medication and date the image.",
+    "Carry adrenaline auto-injectors if prescribed and check expiry dates monthly.",
+    "Wear medical-alert ID listing confirmed severe allergies.",
+    "Use a smartphone health record with allergy information accessible from the lock screen.",
+    "Attend follow-up with the allergist as advised for retesting or updated guidance."
+  ],
+
+  "prognosis": "Outcomes vary widely by reaction type. Mild immediate and delayed drug allergic reactions resolve within days of discontinuing the drug, usually without long-term consequences. Anaphylactic reactions have a case-fatality under 1% when adrenaline is given promptly. Severe cutaneous adverse reactions have substantial mortality: TEN approximately 25-50% in mortality despite optimal care; SJS approximately 5-15%; DRESS approximately 5-10% (mostly from organ involvement). Long-term sequelae of SJS/TEN include ocular scarring (up to 50%), chronic skin pigmentary change, nail dystrophy, and psychological burden. DRESS survivors have a roughly 10% incidence of autoimmune disease (thyroiditis, type 1 diabetes, lupus) in the years following recovery and require long-term follow-up. Penicillin allergy labels that are correctly removed restore access to first-line antibiotics and are associated with shorter hospital stays, lower MRSA and C. difficile rates, and lower healthcare costs. Pharmacogenomic screening continues to expand and shift the prognosis of drug allergy toward primary prevention.",
+
+  "recoveryTimeline": "Immediate IgE-mediated reactions: symptoms resolve over hours to days; full recovery in 1-2 weeks. Mild delayed reactions: rash resolves over 1-3 weeks after drug withdrawal. DRESS: 4-12 weeks; relapses possible during steroid taper. SJS/TEN: skin recovery 3-6 weeks; eye and mucosal complications may persist for months. Drug desensitization induces temporary tolerance only — protective effect lost within hours of stopping the drug.",
+
+  "complications": [
+    "Anaphylactic shock with respiratory failure and cardiac arrest in untreated severe Type I reactions.",
+    "Stevens-Johnson syndrome / toxic epidermal necrolysis with skin detachment, mucosal ulceration, ocular scarring, and high mortality.",
+    "Drug reaction with eosinophilia and systemic symptoms (DRESS) with hepatitis, nephritis, myocarditis, and late-onset autoimmune disease in survivors.",
+    "Drug-induced immune cytopenias — hemolytic anemia, thrombocytopenia, neutropenia — requiring transfusion support and drug avoidance.",
+    "Serum sickness with arthritis, fever, and proteinuria 7-21 days after exposure to selected agents.",
+    "Iatrogenic harm from incorrect allergy labels — broader-spectrum antibiotics, drug-resistant infections, longer hospitalization, and higher costs."
+  ],
+
+  "supportResources": [
+    { "name": "American Academy of Allergy, Asthma & Immunology (AAAAI) — Drug Allergies", "url": "https://www.aaaai.org/conditions-treatments/allergies/drug-allergy", "description": "Patient-facing condition guide on drug allergies, find-an-allergist tool, and printable allergy plans." },
+    { "name": "World Allergy Organization (WAO)", "url": "https://www.worldallergy.org/", "description": "Global allergy and immunology professional society with patient and clinician resources on drug allergy classification and management." },
+    { "name": "SJS Awareness UK", "url": "https://www.sjsawareness.org.uk/", "description": "Patient organization for Stevens-Johnson syndrome and toxic epidermal necrolysis survivors and families." },
+    { "name": "RegiSCAR — European Registry of Severe Cutaneous Adverse Reactions", "url": "https://regiscar.uni-freiburg.de/", "description": "European registry and clinical resource for SJS/TEN, DRESS, AGEP, and other severe cutaneous adverse reactions." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "keyDifference": "Anaphylaxis is the systemic IgE-mediated syndrome that some drug allergies cause. Drug allergy is the broader term covering all immune-mediated drug reactions including non-anaphylactic forms. Drug-induced anaphylaxis is one phenotype of drug allergy and demands immediate adrenaline." },
+    { "slug": "stevens-johnson-syndrome-l511", "name": "Stevens-Johnson Syndrome", "keyDifference": "SJS is a severe cutaneous adverse reaction that is one of the most dangerous drug allergy phenotypes. Drug allergy as a broader category includes everything from mild rash to fatal SJS/TEN. Recognition of SJS requires immediate drug withdrawal, supportive care, and lifetime avoidance of the offending drug class." },
+    { "slug": "chronic-urticaria", "name": "Chronic Urticaria", "keyDifference": "Chronic urticaria is hives persisting longer than 6 weeks, often idiopathic or auto-immune. Drug allergy with urticaria has a clear temporal relationship to medication exposure; chronic urticaria is independent of medication and is managed with high-dose antihistamines and omalizumab." },
+    { "slug": "allergic-contact-dermatitis-due-to-cosmetics-l232", "name": "Allergic Contact Dermatitis", "keyDifference": "Contact dermatitis is a delayed T-cell-mediated reaction to topical agents (jewelry, cosmetics, plants). Drug allergy involves systemic exposure to medications. Patch testing is shared diagnostically but distribution and history distinguish the two." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "chronic-urticaria", "name": "Chronic Urticaria" },
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis" },
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis (Eczema)" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "relevance": "Systemic IgE-mediated syndrome that some drug allergies cause; requires intramuscular adrenaline." },
+    { "slug": "angioedema-allergy", "name": "Allergic Angioedema", "relevance": "Common manifestation of immediate drug hypersensitivity, especially with beta-lactams and NSAIDs." },
+    { "slug": "stevens-johnson-syndrome-l511", "name": "Stevens-Johnson Syndrome", "relevance": "Severe cutaneous adverse reaction phenotype of drug allergy, most often caused by antibiotics, anticonvulsants, and allopurinol." },
+    { "slug": "chronic-urticaria", "name": "Chronic Urticaria", "relevance": "Patients with chronic urticaria are more prone to NSAID-induced exacerbations and may need to avoid these agents." },
+    { "slug": "food-allergy", "name": "Food Allergy", "relevance": "Shares IgE-mediated mechanism with immediate drug allergy; patients with multiple drug allergies frequently have food and environmental allergies." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is a drug allergy?",
+      "answer": "A drug allergy is an immune-mediated reaction to a medication, distinct from common side effects, drug interactions, or intolerance. Reactions range from mild rash to anaphylaxis and severe skin reactions like Stevens-Johnson syndrome. They are confirmed by detailed history, skin or blood testing, and where safe, supervised drug challenge.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I know if I have a drug allergy?",
+      "answer": "Suspect a drug allergy if you develop rash, hives, swelling, breathing difficulty, or other unusual symptoms within minutes to weeks of starting a new medication. Confirmation requires a thorough history with an allergist and may involve skin testing, blood tests, or supervised drug challenge. Many self-reported drug allergies are not confirmed on testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the most common drug allergy?",
+      "answer": "Penicillin (and other beta-lactam antibiotics) is the most commonly reported drug allergy, present on about 10% of hospital patients' charts. However, 90-95% of these labels are not confirmed on formal testing. Sulfa antibiotics, NSAIDs, anticonvulsants, and contrast media are other common culprits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is a drug allergy the same as a side effect?",
+      "answer": "No. Side effects are predictable, dose-dependent pharmacological effects of a drug (drowsiness, nausea). Drug allergies are immune-mediated reactions that are dose-independent above a threshold and produce rash, swelling, anaphylaxis, or other immune-driven symptoms. Distinguishing the two is essential for safe future prescribing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can drug allergies be tested?",
+      "answer": "Yes. Skin prick testing, intradermal testing, blood tests for specific IgE, patch testing for delayed reactions, and supervised graded drug challenges all confirm or exclude allergy depending on the suspected drug and reaction type. Penicillin and beta-lactams have the most validated test panels.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are drug allergies permanent?",
+      "answer": "IgE-mediated drug allergies may wane over years — roughly 80% of penicillin-specific IgE becomes undetectable within 10 years. Severe cutaneous adverse reactions like SJS, TEN, and DRESS, however, leave permanent immunologic memory and the offending drug and cross-reactive agents must be avoided for life.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between drug allergy and intolerance?",
+      "answer": "Drug allergy is immune-mediated and produces rash, swelling, anaphylaxis, or other immunologic features. Drug intolerance refers to non-immune side effects (nausea, headache, dizziness) that occur even at therapeutic doses. The distinction matters because true allergy requires avoidance whereas intolerance may be managed by dose reduction or alternative formulation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I take a drug I am allergic to in an emergency?",
+      "answer": "In life-threatening situations where no alternative exists, drug desensitization protocols administer the drug in graded doses over hours, inducing temporary tolerance under careful medical supervision. Desensitization must be repeated for each treatment course. Decisions are made by allergy specialists in consultation with the treating team.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I prove I am no longer allergic to a drug?",
+      "answer": "Formal evaluation by an allergist with skin testing and a supervised graded drug challenge is the standard. For low-risk penicillin labels, this process safely removes the label in over 90% of patients. Documentation in the electronic health record is updated to reflect the new status.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is penicillin allergy real?",
+      "answer": "Real penicillin allergy is uncommon — only 5-10% of those labeled as penicillin-allergic are truly allergic when tested. Most labels reflect childhood viral rashes incorrectly attributed to amoxicillin, family history, or mild side effects misclassified as allergy. Delabeling restores first-line antibiotic access in over 90% of cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can drug allergies cause skin peeling?",
+      "answer": "Yes. Severe cutaneous adverse reactions like Stevens-Johnson syndrome and toxic epidermal necrolysis cause spreading erythema followed by blistering, mucosal involvement, and skin detachment. These are medical emergencies requiring immediate hospitalization, drug withdrawal, and burn-unit care. The offending drug must be avoided for life.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is DRESS syndrome?",
+      "answer": "DRESS (Drug Reaction with Eosinophilia and Systemic Symptoms) is a severe delayed drug reaction with fever, facial edema, widespread rash, lymphadenopathy, eosinophilia, and organ involvement (hepatitis, nephritis). It develops 2-8 weeks after starting drugs like anticonvulsants, allopurinol, or sulfa, has 5-10% mortality, and requires immediate drug withdrawal and corticosteroids.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children have drug allergies?",
+      "answer": "Yes, though confirmed drug allergies in children are uncommon — most childhood rashes attributed to antibiotics are actually viral exanthems. Formal allergy evaluation with skin testing and graded challenge confirms or excludes allergy and prevents lifelong incorrect labels. Pediatric allergists offer specialized testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are sulfa antibiotics and sulfa diuretics the same allergy?",
+      "answer": "No. Sulfa antibiotics (sulfamethoxazole-trimethoprim) and non-antibiotic sulfa drugs (loop diuretics, thiazides, sulfonylureas, celecoxib) do not generally cross-react. Patients with confirmed sulfa antibiotic allergy can usually take sulfa-containing diuretics and other non-antibiotic sulfa medications safely, but discuss with an allergist before exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What should I do if I think I am having a drug reaction?",
+      "answer": "Stop the suspected drug immediately and contact your prescriber. For mild rash or itching without breathing or swallowing difficulty, an oral antihistamine and clinical review the same day are appropriate. For breathing difficulty, throat swelling, low blood pressure, or skin peeling, call emergency services and use an adrenaline auto-injector if available.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does insurance cover drug allergy testing?",
+      "answer": "Most insurance plans cover drug allergy evaluation when ordered by an allergist for a clinical indication (limiting access to essential drugs, history of severe reaction, pre-surgical planning). Coverage for elective penicillin delabeling varies; many health systems now invest in delabeling because of downstream cost savings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is drug desensitization?",
+      "answer": "Drug desensitization is a controlled, graded administration of a drug to a patient with a confirmed allergy, inducing temporary tolerance under medical supervision. Used when the drug is essential and no alternative exists. The protection lasts only as long as the drug is continued; protocols must be repeated for each new treatment course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can drug allergies be inherited?",
+      "answer": "Drug allergy itself is not inherited in a simple Mendelian way, but specific HLA alleles (HLA-B*57:01 for abacavir, HLA-B*58:01 for allopurinol, HLA-B*15:02 for carbamazepine) strongly predict risk in specific populations. Pre-prescription HLA screening prevents severe reactions in carriers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a drug allergy documented?",
+      "answer": "Confirmed drug allergies are documented in the electronic health record allergy section with the drug name, reaction type, date, and severity. A medical-alert bracelet and allergy card are recommended for severe allergies. All healthcare encounters should review and update this information.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hospital monitoring needed after drug allergy testing?",
+      "answer": "Skin testing and graded oral challenge are performed in outpatient allergy clinics with on-site resuscitation equipment. Supervised drug challenges with high-risk agents may need hospital day-case admission. Severe reactions during testing are rare (under 1%) when patient selection and protocols are followed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is HLA-B*57:01 testing for abacavir?",
+      "answer": "HLA-B*57:01 strongly predicts hypersensitivity to the antiretroviral drug abacavir. Testing before prescription identifies carriers who must avoid the drug to prevent severe reactions. Routine screening has dramatically reduced abacavir hypersensitivity since its introduction in 2008 and is standard of care in HIV medicine.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Drug allergy (medication hypersensitivity)",
+  "regionalNames": [
+    { "name": "Drug hypersensitivity", "region": "Worldwide medical", "language": "English" },
+    { "name": "Medication allergy", "region": "US", "language": "English" },
+    { "name": "Allergie médicamenteuse", "region": "France", "language": "French" },
+    { "name": "दवा एलर्जी", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "drug allergy",
+    "medication allergy",
+    "penicillin allergy",
+    "antibiotic allergy",
+    "NSAID allergy",
+    "drug rash",
+    "drug hypersensitivity",
+    "Stevens-Johnson syndrome",
+    "DRESS syndrome",
+    "drug desensitization",
+    "penicillin delabeling",
+    "HLA screening",
+    "abacavir hypersensitivity"
+  ],
+  "symptomKeywords": [
+    "rash from antibiotic",
+    "swelling after medication",
+    "allergy to penicillin symptoms",
+    "hives from new medicine",
+    "anaphylaxis from drug",
+    "peeling skin from medication",
+    "drug rash with fever",
+    "drug induced angioedema"
+  ],
+
+  "metaTitle": "Drug Allergy: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Drug allergy: immune reaction to medication causing rash, swelling, or anaphylaxis. Testing, treatment, penicillin delabeling and prevention, reviewed.",
+
+  "keywords": [
+    "drug allergy",
+    "medication allergy",
+    "penicillin allergy",
+    "drug allergy testing",
+    "drug desensitization",
+    "Stevens-Johnson syndrome",
+    "DRESS syndrome",
+    "NSAID allergy",
+    "penicillin delabeling",
+    "HLA-B*57:01",
+    "abacavir hypersensitivity",
+    "drug rash"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Pichler WJ. 2003. Delayed drug hypersensitivity reactions. Lancet 362(9398):1820-9.", "url": "https://pubmed.ncbi.nlm.nih.gov/14570549/", "accessedDate": "2026-05-14" },
+    { "title": "Shenoy ES, Macy E, Rowe T, Blumenthal KG. 2019. Evaluation and management of penicillin allergy: a review. JAMA 321(2):188-99.", "url": "https://pubmed.ncbi.nlm.nih.gov/30776290/", "accessedDate": "2026-05-14" },
+    { "title": "Mallal S, Phillips E, Carosi G, et al. 2008. HLA-B*5701 screening for hypersensitivity to abacavir. New England Journal of Medicine 358(6):568-79.", "url": "https://pubmed.ncbi.nlm.nih.gov/18256392/", "accessedDate": "2026-05-14" },
+    { "title": "Roujeau JC, Stern RS. 1994. Severe adverse cutaneous reactions to drugs. New England Journal of Medicine 331(19):1272-85.", "url": "https://pubmed.ncbi.nlm.nih.gov/7794310/", "accessedDate": "2026-05-14" },
+    { "title": "Demoly P, Adkinson NF, Brockow K, et al. 2014. International Consensus on drug allergy. Allergy 69(4):420-37.", "url": "https://pubmed.ncbi.nlm.nih.gov/24697291/", "accessedDate": "2026-05-14" },
+    { "title": "Kardaun SH, Sekula P, Valeyrie-Allanore L, et al. 2013. Drug reaction with eosinophilia and systemic symptoms (DRESS): an original multisystem adverse drug reaction. Results from the prospective RegiSCAR study. British Journal of Dermatology 169(5):1071-80.", "url": "https://pubmed.ncbi.nlm.nih.gov/23855313/", "accessedDate": "2026-05-14" },
+    { "title": "National Institute for Health and Care Excellence. Drug allergy: diagnosis and management (CG183). NICE London, 2014, updated 2023.", "url": "https://www.nice.org.uk/guidance/cg183", "accessedDate": "2026-05-14" },
+    { "title": "Khan DA, Solensky R. 2010. Drug allergy. Journal of Allergy and Clinical Immunology 125(2 Suppl 2):S126-37.", "url": "https://pubmed.ncbi.nlm.nih.gov/20176256/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

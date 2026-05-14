@@ -1,0 +1,426 @@
+{
+  "_meta": {
+    "slug": "brain-tumor-glioma",
+    "tier": 1,
+    "headTerm": "brain tumor glioma",
+    "primarySpecialty": "Neurosurgery / Neuro-oncology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Incidence and survival data from CBTRUS Statistical Report 2024 (Ostrom et al. Neuro-Oncology 2024). WHO 2021 CNS5 classification per Louis et al. Neuro-Oncology 2021 (PMID 34185076). Glioblastoma treatment per Stupp et al. NEJM 2005 (PMID 15758009) and Tumor Treating Fields (Stupp JAMA 2017, PMID 29260225). IDH-mutant glioma management per CATNON and CODEL trials. SNO and EANO guidelines 2021."
+  },
+
+  "h1Title": "Brain Tumor (Glioma): Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neurosurgery",
+
+  "heroOverview": "Glioma is a group of primary brain tumors that arise from glial cells (astrocytes, oligodendrocytes, ependymal cells) and accounts for approximately 27% of all primary brain tumors and 80% of malignant primary brain tumors. The age-adjusted annual incidence is roughly 6 per 100,000 in the United States, with a slight male predominance and peak between ages 55 and 70. The 2021 WHO classification reorganized gliomas around molecular markers (IDH1/2 mutation, 1p/19q codeletion, MGMT promoter methylation, CDKN2A/B status, EGFR amplification, TERT promoter mutation, H3 K27M and G34 alterations) rather than histology alone, and these markers drive both prognosis and treatment. Presentation depends on tumor location: headaches that worsen in the morning, new-onset seizures (in 40-60% of low-grade gliomas), progressive focal weakness, language disturbance, visual field loss, or personality change. Five-year survival ranges from over 70% for IDH-mutant oligodendroglioma to roughly 7% for IDH-wildtype glioblastoma; recent advances in maximal safe resection, radiotherapy, temozolomide chemotherapy, Tumor Treating Fields, and IDH-inhibitor therapy (vorasidenib for IDH-mutant low-grade glioma) are extending progression-free and overall survival.",
+
+  "keyStats": {
+    "prevalence": "Age-adjusted incidence approximately 6 per 100,000/year in the US; gliomas account for 80% of malignant primary CNS tumors (CBTRUS 2024)",
+    "demographics": "Male:female ratio approximately 1.6:1 for glioblastoma; white populations higher incidence than Black or Asian populations in US data",
+    "avgAge": "Median age at glioblastoma diagnosis 65 years; IDH-mutant gliomas median age 35-40 years; diffuse midline glioma in children median age 5-9 years",
+    "globalCases": "Approximately 308,000 new primary CNS tumor cases worldwide annually with 251,000 deaths (GBD 2021)"
+  },
+
+  "definition": "Gliomas (ICD-10: C71.x for malignant neoplasm of brain; D33.x for benign; D43.x for uncertain behavior) are primary central nervous system tumors arising from cells of glial lineage — astrocytes, oligodendrocytes, and ependymal cells. The 2021 WHO Classification of CNS Tumors (CNS5) integrates histology with molecular features into the diagnosis, replacing the older purely-histologic system. Adult-type diffuse gliomas now include three families: astrocytoma IDH-mutant (grades 2, 3, 4); oligodendroglioma IDH-mutant and 1p/19q-codeleted (grades 2, 3); and glioblastoma IDH-wildtype (grade 4). Pediatric-type diffuse gliomas (low-grade and high-grade), circumscribed astrocytic gliomas (pilocytic astrocytoma, pleomorphic xanthoastrocytoma, subependymal giant cell astrocytoma), glioneuronal and neuronal tumors, and ependymal tumors form additional families. Molecular markers — IDH1/IDH2 mutations, 1p/19q codeletion, MGMT promoter methylation, CDKN2A/B homozygous deletion, EGFR amplification, +7/-10 chromosome pattern, TERT promoter mutation, ATRX loss, and H3 K27M or H3 G34 mutations — determine WHO grade, prognosis, and treatment selection. Glioblastoma is the most common and most aggressive adult diffuse glioma. Diagnosis requires MRI followed by surgical resection or biopsy with comprehensive molecular profiling. Management is multidisciplinary and led by neurosurgery, neuro-oncology, radiation oncology, neuropathology, and supportive specialties.",
+
+  "typesClassification": [
+    { "type": "Glioblastoma, IDH-wildtype (WHO grade 4)", "description": "The most common and aggressive adult diffuse glioma. Defined by IDH-wildtype status with at least one of: TERT promoter mutation, EGFR amplification, or +7/-10 chromosome pattern, or by histological glioblastoma features. Median overall survival 14-18 months with optimal therapy; MGMT-methylated tumors have better temozolomide response and longer survival." },
+    { "type": "Astrocytoma, IDH-mutant (WHO grade 2, 3, 4)", "description": "Diffuse astrocytic glioma with IDH1 R132H or IDH2 mutation. Grade is determined by histology and CDKN2A/B homozygous deletion (grade 4 if present). Median survival 6-10 years for grade 2-3 and 4-5 years for grade 4 IDH-mutant astrocytoma — substantially better than IDH-wildtype glioblastoma." },
+    { "type": "Oligodendroglioma, IDH-mutant and 1p/19q codeleted (WHO grade 2, 3)", "description": "Defined by IDH mutation plus whole-arm codeletion of chromosomes 1p and 19q. Most chemo- and radiotherapy-responsive adult diffuse glioma; median overall survival 14-18 years with combined RT and PCV chemotherapy in RTOG 9802 and 9402 trials." },
+    { "type": "Pediatric-type high-grade glioma (diffuse midline glioma H3 K27-altered; diffuse hemispheric glioma H3 G34-mutant)", "description": "Aggressive pediatric and young-adult tumors driven by H3 histone mutations. Diffuse midline glioma of the pons (formerly DIPG) carries median survival under 1 year. H3 G34-mutant tumors arise in cerebral hemispheres of older children and young adults." },
+    { "type": "Pilocytic astrocytoma (WHO grade 1)", "description": "Circumscribed, often cystic tumor most common in children and young adults, typically in cerebellum, optic pathway, or hypothalamus. BRAF fusion or mutation in many. Surgical cure rates over 90% when complete resection is feasible; 10-year overall survival above 90%." },
+    { "type": "Ependymoma (supratentorial, posterior fossa, spinal)", "description": "Tumor of ependymal cells of ventricles and central canal. Posterior fossa ependymoma in children is the most common form; supratentorial ZFTA-fused ependymoma has worse prognosis. Treatment combines maximal safe resection with focal radiotherapy." }
+  ],
+
+  "primarySymptoms": [
+    "Headache that is new, persistent, progressively worsening, worse in the morning, or worsened by Valsalva (coughing, straining); present in 50-70% of glioma patients at diagnosis.",
+    "New-onset focal or generalized seizures, the first symptom in 40-60% of low-grade gliomas and 20-30% of glioblastomas.",
+    "Progressive focal neurological deficit: hemiparesis, hemisensory loss, hemianopia, or cranial-nerve palsy depending on tumor location.",
+    "Aphasia (word-finding difficulty, expressive or receptive language impairment) with dominant frontal or temporal tumors.",
+    "Cognitive change: slowed processing, memory impairment, executive dysfunction, apathy, personality or behavioral change.",
+    "Nausea and vomiting, especially morning emesis, from raised intracranial pressure or posterior fossa involvement.",
+    "Papilledema, visual blurring, or diplopia from raised intracranial pressure or direct optic-pathway involvement.",
+    "Gait disturbance, ataxia, or vertigo with posterior fossa, brainstem, or cerebellar tumors.",
+    "Endocrine and visual symptoms (bitemporal hemianopia, hypopituitarism) with sellar or hypothalamic gliomas.",
+    "Sudden severe headache, decreased consciousness, or new focal deficit due to intratumoral hemorrhage."
+  ],
+
+  "earlyWarningSigns": [
+    "New persistent headache, especially morning headache or one woken by sleep",
+    "First-ever seizure in an adult or a change in seizure pattern in someone with prior epilepsy",
+    "Subtle word-finding difficulty, slowed cognition, or family-noticed personality change",
+    "New-onset focal weakness or sensory changes evolving over days to weeks",
+    "Progressive visual field loss or new diplopia"
+  ],
+
+  "emergencySigns": [
+    "Status epilepticus or recurrent seizures without recovery in between",
+    "Acute decreased level of consciousness, severe headache, vomiting, and pupillary changes — possible raised intracranial pressure or herniation",
+    "Sudden severe headache with new focal deficit — intratumoral hemorrhage",
+    "Rapidly progressive hemiparesis, language loss, or visual loss",
+    "Stroke-like presentation in a known or suspected glioma — exclude hemorrhage, ischemia, or progression on urgent CT"
+  ],
+
+  "causes": [
+    {
+      "cause": "Sporadic acquired molecular alterations",
+      "description": "The overwhelming majority of gliomas arise from somatic mutations in glial progenitor cells. Key drivers include IDH1/IDH2 mutations, TP53 mutations, ATRX loss, 1p/19q codeletion in oligodendrogliomas, EGFR amplification and mutation, PDGFRA amplification, PTEN loss, CDKN2A/B deletion, TERT promoter mutations, and H3 K27 or G34 substitutions in pediatric tumors."
+    },
+    {
+      "cause": "Prior ionizing radiation exposure",
+      "description": "Therapeutic cranial radiation (especially for childhood leukemia, retinoblastoma, prior brain tumor) increases later glioma risk approximately 5-15-fold, with a latency of 10-30 years. Diagnostic radiation and atomic-bomb survivor cohorts show smaller but measurable effects."
+    },
+    {
+      "cause": "Genetic syndromes",
+      "description": "Approximately 5% of gliomas are associated with cancer predisposition syndromes: neurofibromatosis type 1 (optic-pathway and brainstem gliomas), Li-Fraumeni syndrome (TP53 mutation), Turcot/Lynch syndrome (mismatch repair), and constitutional mismatch-repair deficiency. Family history of glioma in a first-degree relative doubles risk."
+    },
+    {
+      "cause": "Older age",
+      "description": "Incidence of malignant gliomas, particularly glioblastoma, rises sharply with age; median age at glioblastoma diagnosis is 65. Accumulation of somatic mutations and decline in immune surveillance with age are leading hypotheses."
+    },
+    {
+      "cause": "Unconfirmed or rejected environmental factors",
+      "description": "Mobile phone radiofrequency exposure has been extensively studied; large prospective cohorts and pooled analyses have not shown a consistent association with glioma. Dietary, occupational, and viral exposures have not been confirmed as causal in adequately powered studies."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Older age (50-75)", "category": "non-modifiable", "description": "Strongest risk factor for glioblastoma; incidence rises from 1/100,000 below age 30 to over 13/100,000 by age 75." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Male:female ratio approximately 1.6:1 for glioblastoma; smaller difference for low-grade gliomas. Hypothesized hormonal and immune contributions." },
+    { "factor": "White ethnicity (relative to Black, Asian, and Hispanic populations)", "category": "non-modifiable", "description": "Glioblastoma incidence is approximately twice as high in non-Hispanic White populations as in Black populations in US data. The reason is incompletely understood." },
+    { "factor": "Prior therapeutic cranial radiation", "category": "non-modifiable", "description": "Radiation exposure for childhood leukemia, retinoblastoma, or prior CNS tumor raises glioma risk 5-15-fold with 10-30 year latency." },
+    { "factor": "Family history of primary brain tumor", "category": "genetic", "description": "First-degree relative with brain tumor approximately doubles glioma risk; less than 5% of gliomas are syndromic." },
+    { "factor": "Cancer predisposition syndromes (NF1, Li-Fraumeni, Lynch, CMMRD)", "category": "genetic", "description": "NF1 confers a 15-20% lifetime risk of optic-pathway and brainstem glioma. Li-Fraumeni TP53 mutation raises childhood and adult glioma risk significantly. CMMRD presents with multiple early-life malignancies including high-grade glioma." },
+    { "factor": "Atopy and elevated IgE — inverse association", "category": "non-modifiable", "description": "Multiple meta-analyses show patients with asthma, hay fever, eczema, and elevated IgE have approximately 30-40% lower glioma risk; the mechanism is hypothesized to involve enhanced immune surveillance." }
+  ],
+
+  "affectedDemographics": [
+    "Median age at glioblastoma diagnosis 65 years; IDH-mutant gliomas typically present at age 30-45.",
+    "Male-to-female ratio approximately 1.6:1 for glioblastoma; oligodendroglioma incidence is more nearly equal between sexes.",
+    "Non-Hispanic White adults in the US have approximately twice the glioblastoma incidence of Black, Hispanic, and Asian/Pacific Islander adults (CBTRUS 2024).",
+    "Pediatric brain tumors are the most common solid tumor of childhood and the second most common pediatric malignancy after leukemia.",
+    "Patients with neurofibromatosis type 1 have a 15-20% lifetime risk of optic-pathway or brainstem glioma."
+  ],
+
+  "diagnosisOverview": "Diagnosis begins with brain MRI with and without gadolinium contrast, which is the cornerstone imaging study. Typical glioblastoma shows an irregular ring-enhancing mass with central necrosis, surrounding T2/FLAIR hyperintensity (edema and infiltrating tumor), and mass effect. Low-grade gliomas are usually non-enhancing T2/FLAIR-hyperintense lesions. Advanced MRI sequences — perfusion (MR perfusion CBV), diffusion (apparent diffusion coefficient), magnetic resonance spectroscopy (choline-to-N-acetylaspartate ratio, 2-hydroxyglutarate detection in IDH-mutant tumors), and diffusion tensor imaging tractography — refine diagnosis and operative planning. Functional MRI and direct cortical stimulation are used for eloquent-cortex tumors. CT is reserved for emergency assessment (hemorrhage, herniation) and for patients who cannot undergo MRI. Histological and molecular diagnosis requires tissue obtained at maximal safe resection or stereotactic biopsy. The WHO 2021 classification mandates integrated histologic-plus-molecular diagnosis: IDH1/IDH2 mutation status (immunohistochemistry and sequencing), 1p/19q codeletion (FISH or next-generation sequencing), MGMT promoter methylation, CDKN2A/B status, EGFR amplification, TERT promoter mutation, and additional markers depending on suspected entity. Comprehensive next-generation sequencing panels are now standard at major academic centers. Staging is unnecessary for most adult diffuse gliomas because they are confined to the central nervous system; spinal MRI is added for medulloblastoma, ependymoma, and selected diffuse midline gliomas. Multidisciplinary tumor-board review is the standard of care for treatment planning.",
+
+  "diagnosticTests": [
+    { "test": "Brain MRI with and without gadolinium", "purpose": "Cornerstone imaging; characterizes tumor location, enhancement, edema, mass effect, and aids in differential diagnosis and surgical planning", "whatToExpect": "30-60 minutes in the scanner with intravenous gadolinium contrast through a small cannula. Sequences include T1, T2, FLAIR, post-contrast T1, diffusion-weighted, susceptibility-weighted, and often perfusion. Results within 24 hours." },
+    { "test": "Advanced MRI (MR perfusion, MR spectroscopy, fMRI, DTI)", "purpose": "Distinguishes tumor types, grades cellularity, detects metabolic markers (including 2-HG for IDH-mutant tumors), maps eloquent cortex and white-matter tracts", "whatToExpect": "Additional 20-30 minutes during the same MRI session at experienced centers. Functional MRI requires patient cooperation with motor and language tasks during scanning." },
+    { "test": "Stereotactic or open biopsy or surgical resection", "purpose": "Provides tissue for histological and molecular diagnosis; resection is often combined with cytoreduction", "whatToExpect": "Stereotactic biopsy is a same-day or single-overnight procedure under general or local anesthesia using image guidance. Open craniotomy for resection is a 4-8 hour procedure with 3-7 day hospitalization." },
+    { "test": "Comprehensive molecular profiling (IDH, 1p/19q, MGMT, CDKN2A/B, TERT, EGFR, ATRX, H3)", "purpose": "Determines WHO 2021 integrated diagnosis, prognosis, and eligibility for targeted therapies", "whatToExpect": "Performed on tumor tissue at the pathology department. Includes immunohistochemistry (often available within 1-2 days) and DNA/RNA sequencing (1-3 weeks). Targeted therapy decisions await full molecular profile." },
+    { "test": "Postoperative MRI within 48-72 hours", "purpose": "Documents extent of resection, residual tumor, surgical complications", "whatToExpect": "Standard MRI protocol after surgery. Extent of resection is a major prognostic factor; gross-total resection is associated with longer survival in most glioma subtypes." },
+    { "test": "MR spectroscopy for 2-hydroxyglutarate (selected centers)", "purpose": "Non-invasive detection of IDH-mutant gliomas through accumulation of 2-HG metabolite", "whatToExpect": "Specialized MR sequence on 3T scanners; not yet routine outside academic centers. Useful for surgical planning and monitoring response to IDH inhibitors." },
+    { "test": "Neuropsychological assessment", "purpose": "Quantifies baseline cognitive function, monitors treatment effects, and guides rehabilitation", "whatToExpect": "1-3 hour structured testing of memory, attention, language, executive function, and processing speed. Repeated at 3-6 month intervals during treatment and follow-up." }
+  ],
+
+  "treatmentOverview": "Treatment is individualized based on tumor histology, WHO 2021 molecular classification, age, performance status, and tumor location. The first step for almost every glioma is maximal safe surgical resection: gross-total or near-total resection improves overall survival across nearly all glioma subtypes and provides definitive tissue diagnosis. Awake craniotomy with intraoperative cortical mapping is standard for tumors near eloquent areas (motor, language, visual cortex). Fluorescence guidance with 5-aminolevulinic acid improves extent of resection in glioblastoma. Stereotactic biopsy alone is used for tumors in deep or eloquent locations or in patients unfit for resection. For glioblastoma (IDH-wildtype, WHO grade 4), the standard of care after resection is the Stupp protocol: 60 Gy in 30 fractions of focal radiotherapy with concurrent daily temozolomide 75 mg/m², followed by 6 cycles of adjuvant temozolomide 150-200 mg/m²/day for 5 days every 28 days. The addition of Tumor Treating Fields (alternating electric fields delivered through scalp-mounted transducer arrays) extends median overall survival by approximately 4-5 months in the EF-14 trial. For elderly patients (over 70) and those with poor performance status, hypofractionated radiotherapy (40 Gy in 15 fractions) with temozolomide based on MGMT status is preferred. For IDH-mutant astrocytoma WHO grade 2-3 and oligodendroglioma WHO grade 2-3, post-operative radiotherapy with PCV chemotherapy or temozolomide (per CATNON, CODEL, and RTOG 9802) substantially extends survival. The recent INDIGO trial (Mellinghoff NEJM 2023) demonstrated that the IDH1/2 inhibitor vorasidenib delays progression in residual or recurrent IDH-mutant grade 2 glioma after surgery and represents the first targeted disease-modifying therapy in this group. Recurrent glioblastoma is treated with re-resection where feasible, repeat radiotherapy in selected cases, lomustine, regorafenib, bevacizumab for symptomatic edema, and clinical trial enrollment. Supportive care includes anti-epileptic medications (preferably levetiracetam), corticosteroids for edema (titrated to minimum effective dose), prophylaxis against Pneumocystis pneumonia during prolonged steroid use, venous thromboembolism prevention, neurorehabilitation, and palliative-care integration from diagnosis.",
+
+  "medicalTreatments": [
+    { "name": "Temozolomide chemotherapy (75 mg/m² concurrent with RT; 150-200 mg/m² adjuvant)", "description": "Oral alkylating agent given concurrent with radiotherapy and as adjuvant therapy in glioblastoma and other diffuse gliomas. Standard adjuvant regimen is 5 days every 28 days for 6 cycles; selected patients continue for longer. MGMT promoter methylation predicts benefit.", "effectiveness": "Stupp regimen improved median overall survival from 12.1 to 14.6 months in glioblastoma; 2-year survival rose from 10.4% to 26.5%; MGMT-methylated patients have median survival over 21 months" },
+    { "name": "Standard fractionated radiotherapy (60 Gy in 30 fractions)", "description": "External-beam radiotherapy targeting the tumor cavity and surrounding T2/FLAIR-defined region with 1.5-2 cm margin. Delivered concurrently with temozolomide.", "effectiveness": "Doubles median survival vs surgery alone in glioblastoma; standard adjuvant therapy for grade 3 and 4 gliomas and selected grade 2 tumors" },
+    { "name": "Hypofractionated radiotherapy (40 Gy in 15 fractions; 25 Gy in 5 fractions)", "description": "Shorter course preferred for elderly patients, poor performance status, and palliative settings. Recent Perry trial showed similar survival to 60 Gy in older patients.", "effectiveness": "Equivalent overall survival to standard fractionation in patients over 65; reduced treatment burden" },
+    { "name": "PCV combination chemotherapy (procarbazine, lomustine, vincristine)", "description": "Standard adjuvant chemotherapy for 1p/19q-codeleted oligodendroglioma in the RTOG 9402 and 9802 trials. Combined with radiotherapy in grade 3 oligodendroglioma and selected high-risk grade 2 tumors.", "effectiveness": "Median overall survival 14.7 years vs 7.3 years with RT alone in 1p/19q-codeleted grade 3 oligodendroglioma (RTOG 9402 long-term follow-up)" },
+    { "name": "Tumor Treating Fields (Optune)", "description": "Continuous alternating electric fields delivered through scalp transducer arrays worn at least 18 hours per day. Added to adjuvant temozolomide in newly diagnosed glioblastoma. Most common adverse event is mild scalp dermatitis.", "effectiveness": "EF-14 trial: median overall survival 20.9 vs 16.0 months; 5-year survival 13% vs 5% with adjuvant TMZ alone" },
+    { "name": "Vorasidenib (IDH1/2 inhibitor)", "description": "Oral targeted therapy for residual or recurrent grade 2 IDH-mutant astrocytoma and oligodendroglioma after surgery. Inhibits mutant IDH1 and IDH2 enzymes to suppress 2-hydroxyglutarate production.", "effectiveness": "INDIGO phase 3 trial: median progression-free survival 27.7 vs 11.1 months with placebo; hazard ratio 0.39; FDA approved August 2024" },
+    { "name": "Bevacizumab (anti-VEGF antibody)", "description": "Used at recurrence for symptomatic peritumoral edema, mass effect, and steroid sparing. Reduces edema rapidly through normalization of tumor vasculature; modest progression-free benefit but no clear overall survival advantage in randomized trials.", "effectiveness": "Symptomatic improvement in 60-70% of patients with edema-related deficits; allows steroid reduction in many; no overall survival improvement at first recurrence" },
+    { "name": "Antiepileptic therapy (levetiracetam, lacosamide, valproate)", "description": "Levetiracetam is preferred for tumor-related epilepsy because of minimal drug interactions and tolerability. Enzyme-inducing antiepileptics (phenytoin, carbamazepine) are avoided when chemotherapy or targeted agents are planned.", "effectiveness": "Seizure control in 60-80% of patients on first or second agent; complete freedom from seizures often achievable with surgical resection plus medication" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Maximal safe craniotomy and tumor resection", "description": "Gross-total or near-total resection guided by intraoperative MRI, neuronavigation, fluorescence (5-ALA), and intraoperative neurophysiologic monitoring. Standard initial treatment for most resectable gliomas. Hospital stay 3-7 days; rehabilitation may follow.", "successRate": "Extent of resection independently associated with longer overall survival across glioma subtypes; gross-total resection extends median survival in glioblastoma by approximately 4-6 months compared with subtotal resection" },
+    { "name": "Awake craniotomy with intraoperative cortical mapping", "description": "Patient is awake during tumor resection in eloquent areas to allow real-time mapping of motor, language, and cognitive function. Reduces postoperative deficit while maximizing resection.", "successRate": "Reduces permanent neurological deficit by approximately 50-70% in eloquent-area tumors while allowing comparable or greater extent of resection" },
+    { "name": "Stereotactic needle biopsy", "description": "Image-guided biopsy through a small burr hole, used when resection is not safe (deep midline, brainstem, eloquent-area infiltration, multifocal disease). Provides molecular and histologic diagnosis to guide non-surgical therapy.", "successRate": "Diagnostic yield 90-95%; major complication rate (hemorrhage, neurological deficit) approximately 2-3%" },
+    { "name": "Laser interstitial thermal therapy (LITT)", "description": "Minimally invasive MRI-guided laser ablation of deep-seated tumors and selected recurrences. Useful for small, deep, surgically inaccessible tumors. Same-day or overnight stay.", "successRate": "Local control 70-85% at 12 months in selected small-volume tumors; particularly useful for radiation necrosis vs. tumor differentiation in some cases" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Ketogenic diet adjunct (investigational)", "description": "Strict low-carbohydrate, high-fat diet hypothesized to exploit altered tumor glucose metabolism. Currently investigational with small pilot trials; reasonable as adjunct under medical supervision but not a substitute for standard therapy." },
+    { "name": "Clinical trial enrollment", "description": "Trials of novel agents (CAR-T cell therapy targeting EGFRvIII or IL13Rα2, checkpoint inhibitors, oncolytic viruses, combination targeted therapy) are recommended for newly diagnosed and recurrent glioblastoma at experienced centers. Enrollment in well-designed trials is considered standard of care for these patients." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "craniotomy-tumor-resection",
+    "stereotactic-radiosurgery",
+    "temozolomide-chemotherapy"
+  ],
+
+  "whySeeSpecialist": "Glioma care requires a multidisciplinary team including neurosurgery, neuro-oncology, radiation oncology, neuropathology with molecular diagnostic capability, neuropsychology, and rehabilitation medicine. Treatment at high-volume academic neurosurgical centers is associated with longer survival and lower complication rates than treatment at low-volume centers. Clinical trial access is also concentrated at major centers.",
+  "doctorSelectionGuide": "Choose a neurosurgeon with a dedicated brain-tumor practice and access to intraoperative MRI, awake mapping, and 5-ALA fluorescence. Confirm a multidisciplinary tumor board reviews the case and that molecular profiling (IDH, 1p/19q, MGMT, full sequencing panel) is performed. For pediatric tumors, choose a pediatric neuro-oncology center.",
+
+  "hospitalCriteria": [
+    "Multidisciplinary brain-tumor program with neurosurgery, neuro-oncology, and radiation oncology",
+    "Intraoperative MRI, awake craniotomy capability, and 5-ALA fluorescence",
+    "Comprehensive molecular pathology with IDH, 1p/19q, MGMT, EGFR, and next-generation sequencing",
+    "Tumor Treating Fields and IDH-inhibitor therapy availability",
+    "Clinical trial program and access to phase 1-3 trials"
+  ],
+  "keyFacilities": [
+    "Comprehensive cancer centers with neuro-oncology programs",
+    "High-volume academic neurosurgical centers",
+    "Pediatric neuro-oncology programs",
+    "Radiation oncology departments with proton therapy (selected pediatric cases)",
+    "Neurorehabilitation services"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid unnecessary ionizing radiation, particularly diagnostic head CT in children, weighing risks and benefits with the clinician.",
+    "Patients with known cancer predisposition syndromes (NF1, Li-Fraumeni, Lynch, CMMRD) follow surveillance protocols including periodic brain MRI per syndrome-specific guidelines.",
+    "Manage chronic hypertension and avoid smoking — both are associated with vascular complications that worsen outcomes after glioma treatment.",
+    "Genetic counseling for individuals with multiple family members affected by brain tumor or with childhood-onset cancer syndromes.",
+    "Maintain general health and cardiovascular fitness, which improve treatment tolerance and recovery.",
+    "Participate in research registries and biobanks to advance future prevention strategies."
+  ],
+
+  "lifestyleModifications": [
+    "Maintain seizure precautions during active disease: driving restrictions per local law, avoidance of unsupervised swimming, height work, and operation of heavy machinery.",
+    "Follow medication schedules strictly for temozolomide, anti-epileptic agents, and corticosteroids; missed doses can have significant consequences.",
+    "Monitor and report new or worsening symptoms (headache, weakness, seizure, language change) promptly between scheduled visits.",
+    "Use nutrition and exercise programs to counter steroid-induced weight gain, muscle loss, and bone-density loss.",
+    "Engage early with palliative care and supportive services regardless of prognosis — improves quality of life and may extend survival.",
+    "Maintain social and cognitive engagement during and after treatment to support recovery and quality of life."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Balanced diet with adequate protein (1-1.5 g/kg/day) to support recovery from surgery and chemotherapy",
+      "Mediterranean-pattern eating with vegetables, fruits, whole grains, legumes, fish, and olive oil",
+      "Adequate hydration, especially during temozolomide and radiation",
+      "Vitamin D and calcium supplementation during prolonged corticosteroid use"
+    ],
+    "avoid": [
+      "Excessive simple sugars and saturated fats, especially during corticosteroid therapy",
+      "Grapefruit and Seville orange (interactions with several oncology drugs)",
+      "Alcohol during active chemotherapy and within 48 hours of temozolomide",
+      "Raw, undercooked, or improperly stored foods during prolonged steroid or chemotherapy-induced neutropenia"
+    ]
+  },
+  "exerciseGuidelines": "Aerobic and resistance exercise is recommended during and after treatment when safely tolerated. Even 20-30 minutes of walking 3-5 times per week reduces fatigue, improves mood, and supports cognitive function. Avoid contact sports and activities with fall risk while seizures are uncontrolled or anticoagulation is needed. Coordinate with neurorehabilitation for tailored programs after neurological deficit.",
+
+  "dailyManagement": [
+    "Take temozolomide and other oral oncology drugs at the same time each day, on an empty stomach with anti-emetic premedication during induction cycles.",
+    "Monitor and record temperature, headache severity, seizures, and any new neurological symptoms.",
+    "Wear Tumor Treating Fields transducer arrays at least 18 hours per day if prescribed.",
+    "Apply moisturizers and protect scalp skin during radiotherapy and TTFields use.",
+    "Use a written symptom diary to share with the neuro-oncology team at follow-up visits.",
+    "Maintain a current medication list including supplements; alert the team to any new prescription or over-the-counter product."
+  ],
+
+  "prognosis": "Prognosis is highly dependent on histologic and molecular type. For IDH-wildtype glioblastoma, median overall survival with optimal Stupp protocol plus Tumor Treating Fields is 20-21 months, with 5-year survival around 13%; MGMT-methylated tumors do best, with median survival over 30 months in some series. For IDH-mutant grade 4 astrocytoma, median survival is 5-8 years. IDH-mutant grade 2-3 astrocytomas typically have 6-10 year median survival with combined chemo-radiation. 1p/19q-codeleted oligodendrogliomas have the best outcomes — median survival 14-18 years with combined modality treatment. Pilocytic astrocytoma (WHO grade 1) is often curable surgically, with 10-year survival above 90%. Pediatric diffuse midline glioma H3 K27-altered remains a devastating disease with median survival under 12 months. Modifiable prognostic factors include extent of surgical resection, treatment at high-volume centers, completion of planned multimodal therapy, and management of seizures and treatment toxicity. Unmodifiable factors include age, performance status at diagnosis, and molecular profile.",
+
+  "recoveryTimeline": "Hospital recovery after craniotomy: 3-7 days. Initial functional recovery: 4-8 weeks with neurorehabilitation if needed. Concurrent chemoradiation: 6 weeks of daily treatment followed by 4-week break. Adjuvant temozolomide cycles: 6 cycles over 6 months. Tumor Treating Fields: continued at least 18 hours/day for months to years until progression. Surveillance MRI every 2-3 months in the first 1-2 years, then every 4-6 months.",
+
+  "complications": [
+    "Tumor progression or recurrence — surveillance MRI every 2-3 months in the first 1-2 years tracks early progression.",
+    "Tumor-related seizures, status epilepticus, and post-ictal deficit; medications and surgical resection improve control.",
+    "Treatment-related toxicities: hematologic suppression from temozolomide, radiation-induced cognitive decline and necrosis, surgical site infection, and venous thromboembolism.",
+    "Cognitive decline, depression, anxiety, and post-traumatic stress, affecting up to 70% of patients during treatment and survivorship.",
+    "Steroid-related complications: hyperglycemia, myopathy, osteoporosis, opportunistic infection, and psychiatric effects when used at higher doses or for extended periods.",
+    "Endocrine dysfunction from radiation to the hypothalamic-pituitary region, requiring hormone replacement and monitoring."
+  ],
+
+  "supportResources": [
+    { "name": "American Brain Tumor Association (ABTA)", "url": "https://www.abta.org/", "description": "Patient information, support groups, helpline, and research funding for primary brain tumors." },
+    { "name": "National Brain Tumor Society", "url": "https://braintumor.org/", "description": "Patient navigation, clinical-trial finder, and research advocacy for adult and pediatric brain tumors." },
+    { "name": "Society for Neuro-Oncology (SNO)", "url": "https://www.soc-neuro-onc.org/", "description": "Professional society with clinician directory, guidelines, and patient resources." },
+    { "name": "CERN Foundation (ependymoma)", "url": "https://www.cern-foundation.org/", "description": "Patient-focused resources and research support for ependymoma." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "meningioma", "name": "Meningioma", "keyDifference": "Meningioma is a primary tumor of arachnoid cells (the meninges), not of glial cells. It typically appears as a well-circumscribed, dural-based, homogeneously enhancing mass on MRI, often without significant edema. Meningiomas are usually WHO grade 1 with excellent prognosis after surgical resection. Glioma is intra-axial, infiltrative, and arises from within brain parenchyma." },
+    { "slug": "stroke", "name": "Stroke", "keyDifference": "Ischemic and hemorrhagic stroke can produce acute focal deficits, headache, and seizure that overlap with glioma presentations. Stroke onset is typically minutes (ischemic) to hours (hemorrhagic), with characteristic vascular-territory imaging changes. Gliomas evolve over weeks to months with progressive deficits and demonstrate mass-like infiltration on MRI." },
+    { "slug": "epilepsy", "name": "Epilepsy", "keyDifference": "New-onset seizures in adults raise concern for an underlying structural lesion such as a brain tumor; MRI with contrast is mandatory for every first adult seizure. Idiopathic or genetic epilepsy is a diagnosis of exclusion after imaging is negative. Glioma-associated seizures are caused by the tumor and respond to combined oncologic and antiepileptic therapy." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "epilepsy", "name": "Epilepsy" },
+    { "slug": "depression", "name": "Depression" },
+    { "slug": "anxiety", "name": "Anxiety" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "meningioma", "name": "Meningioma", "relevance": "Most common non-glial primary intracranial tumor; key differential and frequently co-managed by the same neurosurgical team." },
+    { "slug": "epilepsy", "name": "Epilepsy", "relevance": "Tumor-related epilepsy is a leading symptom and complication of glioma; antiepileptic management overlaps." },
+    { "slug": "stroke", "name": "Stroke", "relevance": "Important differential for acute neurological presentations; gliomas may also bleed and mimic hemorrhagic stroke." },
+    { "slug": "depression", "name": "Depression", "relevance": "Affects 30-50% of patients during treatment and survivorship; bidirectional effect on cognition and quality of life." },
+    { "slug": "mesothelioma", "name": "Mesothelioma", "relevance": "Unrelated histology, but listed because both are aggressive solid tumors with multidisciplinary care and complex survivorship issues." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is a glioma?",
+      "answer": "A glioma is a primary brain tumor that arises from glial cells — astrocytes, oligodendrocytes, or ependymal cells — within the central nervous system. Gliomas account for about 80% of malignant primary brain tumors. The 2021 WHO classification groups them by molecular markers including IDH mutation, 1p/19q codeletion, and others.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is glioma always cancer?",
+      "answer": "Most adult diffuse gliomas (astrocytoma, oligodendroglioma, glioblastoma) are malignant (WHO grade 2-4). Pilocytic astrocytoma (WHO grade 1) is considered benign and is often curable by surgery. The 2021 WHO classification uses molecular markers in addition to grade to refine prognosis and treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is glioblastoma?",
+      "answer": "Glioblastoma (IDH-wildtype, WHO grade 4) is the most common and most aggressive adult diffuse glioma. Median overall survival with the Stupp protocol (surgery, radiotherapy, temozolomide) is 14-18 months; adding Tumor Treating Fields extends it to 20-21 months. MGMT-methylated tumors have the best outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of a brain tumor?",
+      "answer": "Common early signs include new or progressively worsening headache (often worse in the morning), first-ever seizure in an adult, new focal weakness or numbness, language or memory changes, personality changes, visual disturbance, and persistent nausea or vomiting. Any of these in an adult warrants brain MRI with contrast.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is glioma diagnosed?",
+      "answer": "Diagnosis begins with brain MRI with and without gadolinium contrast. Tissue obtained at surgery or stereotactic biopsy is examined for histology and molecular markers (IDH, 1p/19q, MGMT, CDKN2A/B, EGFR, TERT, and others). The 2021 WHO classification integrates histology and molecular data into a single diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is glioblastoma treated?",
+      "answer": "Standard treatment is maximal safe surgical resection followed by 60 Gy of focal radiotherapy with concurrent daily temozolomide, then 6 cycles of adjuvant temozolomide every 28 days. Tumor Treating Fields added to adjuvant therapy extends survival. Recurrent disease may be treated with re-resection, bevacizumab, lomustine, regorafenib, or clinical trial.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for glioma?",
+      "answer": "Survival varies dramatically by type. Glioblastoma 5-year survival is approximately 7%. IDH-mutant grade 4 astrocytoma 5-year survival is 30-50%. Grade 2-3 oligodendroglioma with 1p/19q codeletion has median survival of 14-18 years. Pilocytic astrocytoma has 10-year survival over 90% with complete resection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are IDH mutations and why do they matter?",
+      "answer": "IDH1 and IDH2 mutations occur in most lower-grade adult diffuse gliomas and predict longer survival than IDH-wildtype glioblastoma. They also identify candidates for IDH-inhibitor therapy. The 2021 WHO classification uses IDH status to define glioma type and direct treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the MGMT methylation status?",
+      "answer": "MGMT promoter methylation silences a DNA-repair enzyme that protects glioma cells from alkylating chemotherapy. Methylated tumors respond better to temozolomide; in glioblastoma, methylated patients have median survival over 21 months vs. about 13 months for unmethylated, and methylation guides treatment decisions especially in older adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is vorasidenib?",
+      "answer": "Vorasidenib is an oral IDH1/IDH2 inhibitor that crosses the blood-brain barrier and suppresses 2-hydroxyglutarate production in IDH-mutant glioma cells. The phase 3 INDIGO trial showed median progression-free survival of 27.7 vs 11.1 months with placebo in residual IDH-mutant grade 2 glioma after surgery. FDA approved in 2024.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are Tumor Treating Fields?",
+      "answer": "Tumor Treating Fields (Optune) deliver alternating electric fields through scalp-mounted transducer arrays worn at least 18 hours per day. In the EF-14 trial, adding TTFields to adjuvant temozolomide in newly diagnosed glioblastoma increased median survival from 16.0 to 20.9 months and 5-year survival from 5% to 13%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are brain tumors caused by cell phones?",
+      "answer": "No consistent link has been established between mobile phone use and glioma in large prospective cohorts, including the Million Women Study and recent pooled analyses. Older case-control data showed weak associations that were not replicated in higher-quality studies. Therapeutic ionizing radiation is the established environmental risk factor.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can gliomas be inherited?",
+      "answer": "Most gliomas are sporadic. Less than 5% occur in hereditary syndromes such as neurofibromatosis type 1, Li-Fraumeni syndrome (TP53), Lynch syndrome, and constitutional mismatch-repair deficiency. A first-degree relative with brain tumor about doubles personal risk, but absolute risk remains low.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is awake craniotomy?",
+      "answer": "Awake craniotomy is a surgical technique in which the patient is woken during tumor resection to allow real-time mapping of motor, language, and cognitive function. It reduces permanent neurological deficit by 50-70% in eloquent-area tumors while allowing maximal safe resection. Pain is controlled with local anesthesia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do all gliomas need surgery?",
+      "answer": "Maximal safe resection is the goal for most gliomas because it provides definitive diagnosis and extends survival. Deep, brainstem, or eloquent-area tumors that cannot be safely resected are biopsied stereotactically to obtain tissue for molecular analysis before non-surgical treatment. Watch-and-wait is used for some asymptomatic low-grade tumors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between glioma and meningioma?",
+      "answer": "Glioma arises from glial cells within brain parenchyma and is infiltrative. Meningioma arises from arachnoid cells in the meninges and is typically a well-circumscribed, dural-based mass. Meningiomas are usually WHO grade 1 with excellent prognosis; most gliomas are malignant with more complex treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a glioma be cured?",
+      "answer": "Pilocytic astrocytoma (WHO grade 1) can often be cured by complete surgical resection. Adult diffuse gliomas, including all IDH-mutant astrocytomas, oligodendrogliomas, and glioblastomas, are not curable with current therapy and ultimately recur, but treatment can extend survival substantially and preserve function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens at glioma recurrence?",
+      "answer": "Options at recurrence include re-resection, repeat focal radiotherapy or stereotactic radiosurgery, second-line chemotherapy (lomustine, regorafenib, bevacizumab), targeted therapy if a tractable alteration is present, and clinical trial enrollment. Decisions are made by a multidisciplinary tumor board.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do gliomas cause seizures?",
+      "answer": "Yes. Tumor-related seizures occur in 40-60% of low-grade gliomas and 20-30% of glioblastomas. Levetiracetam is preferred for prophylaxis and treatment because of minimal drug interactions. Maximal tumor resection improves seizure control. Routine antiepileptic prophylaxis in seizure-free patients is not recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can someone drive after a glioma diagnosis?",
+      "answer": "Driving restrictions apply after a seizure or after craniotomy, with seizure-free intervals (often 6-12 months) required by local law. Restrictions also depend on visual field, cognition, and motor function. Patients should consult their treatment team and review local driver-licensing regulations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often is follow-up imaging needed?",
+      "answer": "Follow-up MRI is typically every 2-3 months in the first 1-2 years after treatment, then every 4-6 months. Frequency is adjusted based on tumor grade, molecular markers, and clinical course. Imaging at first sign of new symptoms is essential to distinguish progression from treatment-related changes such as pseudoprogression.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Brain Tumor (Glioma)",
+  "regionalNames": [
+    { "name": "Glioma cerebral", "region": "Spanish-speaking countries", "language": "Spanish" },
+    { "name": "Gliome", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "ब्रेन ट्यूमर (ग्लियोमा)", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "glioma",
+    "brain tumor",
+    "glioblastoma",
+    "GBM",
+    "astrocytoma",
+    "oligodendroglioma",
+    "IDH mutation",
+    "MGMT methylation",
+    "1p/19q codeletion",
+    "WHO 2021 CNS",
+    "temozolomide",
+    "Tumor Treating Fields",
+    "vorasidenib",
+    "Stupp protocol",
+    "diffuse midline glioma"
+  ],
+  "symptomKeywords": [
+    "new headache adult",
+    "first seizure adult",
+    "weakness one side",
+    "trouble finding words",
+    "morning vomiting headache",
+    "personality change confusion",
+    "double vision brain",
+    "memory loss tumor"
+  ],
+
+  "metaTitle": "Brain Tumor (Glioma): Symptoms & Treatment | aihealz",
+  "metaDescription": "Glioma brain tumor: glioblastoma, astrocytoma, oligodendroglioma. Symptoms, IDH/MGMT testing, Stupp protocol, TTFields and vorasidenib — guide.",
+
+  "keywords": [
+    "glioma",
+    "brain tumor",
+    "glioblastoma",
+    "astrocytoma",
+    "oligodendroglioma",
+    "IDH mutation",
+    "MGMT methylation",
+    "1p 19q codeletion",
+    "temozolomide",
+    "Tumor Treating Fields",
+    "vorasidenib",
+    "Stupp protocol"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Ostrom QT, Price M, Neff C, et al. 2024. CBTRUS Statistical Report: Primary Brain and Other Central Nervous System Tumors Diagnosed in the United States in 2017-2021. Neuro-Oncology 26(Supplement_6):vi1-vi85.", "url": "https://pubmed.ncbi.nlm.nih.gov/39371042/", "accessedDate": "2026-05-14" },
+    { "title": "Louis DN, Perry A, Wesseling P, et al. 2021. The 2021 WHO Classification of Tumors of the Central Nervous System: a summary. Neuro-Oncology 23(8):1231-51.", "url": "https://pubmed.ncbi.nlm.nih.gov/34185076/", "accessedDate": "2026-05-14" },
+    { "title": "Stupp R, Mason WP, van den Bent MJ, et al. 2005. Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma. New England Journal of Medicine 352(10):987-96.", "url": "https://pubmed.ncbi.nlm.nih.gov/15758009/", "accessedDate": "2026-05-14" },
+    { "title": "Stupp R, Taillibert S, Kanner A, et al. 2017. Effect of tumor-treating fields plus maintenance temozolomide vs maintenance temozolomide alone on survival in patients with glioblastoma: a randomized clinical trial. JAMA 318(23):2306-16.", "url": "https://pubmed.ncbi.nlm.nih.gov/29260225/", "accessedDate": "2026-05-14" },
+    { "title": "Mellinghoff IK, van den Bent MJ, Blumenthal DT, et al. 2023. Vorasidenib in IDH1- or IDH2-mutant low-grade glioma. New England Journal of Medicine 389:589-601.", "url": "https://pubmed.ncbi.nlm.nih.gov/37272516/", "accessedDate": "2026-05-14" },
+    { "title": "Buckner JC, Shaw EG, Pugh SL, et al. 2016. Radiation plus procarbazine, CCNU, and vincristine in low-grade glioma. New England Journal of Medicine 374(14):1344-55.", "url": "https://pubmed.ncbi.nlm.nih.gov/27050206/", "accessedDate": "2026-05-14" },
+    { "title": "Cairncross G, Wang M, Shaw E, et al. 2013. Phase III trial of chemoradiotherapy for anaplastic oligodendroglioma: long-term results of RTOG 9402. Journal of Clinical Oncology 31(3):337-43.", "url": "https://pubmed.ncbi.nlm.nih.gov/23071247/", "accessedDate": "2026-05-14" },
+    { "title": "Weller M, van den Bent M, Preusser M, et al. 2021. EANO guidelines on the diagnosis and treatment of diffuse gliomas of adulthood. Nature Reviews Clinical Oncology 18(3):170-86.", "url": "https://pubmed.ncbi.nlm.nih.gov/33293629/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

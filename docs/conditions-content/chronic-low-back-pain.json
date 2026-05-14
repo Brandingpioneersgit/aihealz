@@ -1,0 +1,432 @@
+{
+  "_meta": {
+    "slug": "chronic-low-back-pain",
+    "tier": 1,
+    "headTerm": "chronic low back pain",
+    "primarySpecialty": "Physical Medicine & Rehabilitation / Pain Medicine",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Definitions and burden per Hartvigsen et al. Lancet 2018 (PMID 29573870) and GBD 2021 Lancet Rheumatology 2023. Management per ACP 2017 noninvasive treatment guideline (Qaseem et al. Ann Intern Med 2017, PMID 28192789), NICE NG59 (BMJ 2017 Bernstein PMID 28062522), and ACP/ASA 2022 update. Multidisciplinary biopsychosocial care per Kamper Cochrane 2015 (PMID 26334846). Opioid risk per CDC 2022 Clinical Practice Guideline. Imaging restraint per Chou Lancet 2009 (PMID 19200918)."
+  },
+
+  "h1Title": "Chronic Low Back Pain: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Physical Medicine & Rehabilitation",
+
+  "heroOverview": "Chronic low back pain is pain in the lower back persisting for more than 12 weeks despite usual care, with or without leg pain. It is the leading cause of years lived with disability worldwide, affecting roughly 619 million people globally in 2020 (Global Burden of Disease 2021 update), with lifetime prevalence approaching 80% and point prevalence around 12-15%. Most cases are non-specific — that is, no precise pathoanatomical source can be reliably identified — and reflect interacting biomechanical, neurophysiological, and psychosocial factors. Red-flag features (cancer, infection, fracture, cauda equina syndrome) account for under 1-2% of presentations but must be excluded. Modern guidelines (ACP 2017, NICE NG59, ACP/ASA 2022) recommend a stepped biopsychosocial approach: education, encouragement of activity, structured exercise and supervised physical therapy, manual therapy, cognitive-behavioral therapy and pain neuroscience education, NSAIDs and short courses of muscle relaxants as needed, and selective use of interventional procedures. Routine imaging is discouraged in the absence of red flags. Opioids are not first-line and are limited to short courses with explicit risk discussion; long-term opioid therapy worsens function and increases mortality. Multidisciplinary rehabilitation produces the largest functional gains for established chronic disability.",
+
+  "keyStats": {
+    "prevalence": "Approximately 12-15% point prevalence globally; lifetime prevalence near 80% (GBD 2021, Hartvigsen Lancet 2018)",
+    "demographics": "Affects all ages but peaks at 40-60 years; female sex slightly higher prevalence; rates rise in manual workers, smokers, and people with obesity, depression, and anxiety",
+    "avgAge": "Mean age at first presentation for chronic LBP 35-50 years; prevalence continues to rise through older adulthood",
+    "globalCases": "619 million prevalent cases worldwide in 2020; leading cause of years lived with disability globally; projected to rise to 843 million by 2050 (GBD 2023)"
+  },
+
+  "definition": "Chronic low back pain (ICD-10: M54.5 low back pain, M54.50 unspecified, M54.51 vertebrogenic, M54.59 other) is pain in the lumbosacral region persisting for more than 12 weeks, regardless of whether leg pain is present. The Global Burden of Disease and NICE NG59 use this 12-week threshold; some specialty guidelines use 3 months. The condition is classified into three broad categories using the 'diagnostic triage' approach endorsed by NICE, ACP, and EFIC. Category 1, specific spinal pathology (less than 1-2% of cases), includes vertebral fracture, cancer, infection, ankylosing spondylitis and other spondyloarthritis, and cauda equina syndrome — all requiring targeted workup and treatment. Category 2, radiculopathy or spinal stenosis (about 5-10% of cases), produces leg-dominant pain with neurological signs and benefits from targeted treatment. Category 3, non-specific chronic low back pain (85-95% of cases), is pain without a definable pathoanatomical source, best understood through a biopsychosocial model that integrates degenerative changes seen on imaging (which are common in pain-free adults), nociplastic central sensitization, motor control changes, depression, anxiety, fear-avoidance behavior, sleep disorder, and social and occupational factors. The 2017 Lancet Low Back Pain Series argued for global recognition of chronic low back pain as a public-health priority requiring upstream prevention, evidence-based first-line care, and rational use of imaging, opioids, and surgery. Management is by primary care, physical medicine and rehabilitation, pain medicine, physical therapy, behavioral medicine, and rheumatology, orthopedic surgery, or neurosurgery for selected cases.",
+
+  "typesClassification": [
+    { "type": "Non-specific chronic low back pain", "description": "Accounts for 85-95% of chronic cases. No precise pathoanatomical source can be reliably identified; degenerative findings on imaging are common in pain-free adults and correlate poorly with pain. Managed through biopsychosocial care: education, exercise, manual therapy, psychological treatments, and selective medication." },
+    { "type": "Mechanical or discogenic chronic low back pain", "description": "Pain attributed to disc, facet joint, or sacroiliac joint pathology with a relatively localized pattern. Diagnostic blocks may identify a contributing structure in selected cases, but specificity is limited. Treatment overlaps substantially with non-specific care." },
+    { "type": "Radiculopathy or spinal stenosis with chronic axial pain", "description": "5-10% of cases. Leg-dominant pain in a dermatomal pattern (radiculopathy) or bilateral neurogenic claudication (stenosis) overlapping with axial pain. Treatment targets the radicular component while addressing chronic pain management for the axial component." },
+    { "type": "Inflammatory back pain (axial spondyloarthritis)", "description": "Less than 5% of cases. Early-morning stiffness more than 30 minutes, improvement with exercise, alternating buttock pain, and onset before age 45. Associated with HLA-B27. Requires rheumatology referral and disease-modifying therapy (NSAIDs first; TNF inhibitors and IL-17 inhibitors for established disease)." },
+    { "type": "Red-flag chronic low back pain", "description": "Specific spinal pathology including vertebral compression fracture (osteoporotic, traumatic, malignant), infection (vertebral osteomyelitis, discitis, epidural abscess), and tumor (metastatic disease, multiple myeloma, primary bone tumor). Less than 1-2% of presentations but high consequence if missed." }
+  ],
+
+  "primarySymptoms": [
+    "Continuous or recurrent dull, aching pain in the lumbosacral region persisting for more than 12 weeks despite usual care.",
+    "Pain worse with prolonged sitting, standing, bending, or lifting and partially relieved by changes of position or rest.",
+    "Stiffness in the lower back, especially in the morning or after prolonged inactivity, that often improves with gentle movement.",
+    "Muscle tightness or spasm in the paraspinal, gluteal, or pelvic floor muscles palpable on examination.",
+    "Functional limitation: difficulty bending, twisting, lifting, prolonged sitting, standing, walking, or sleeping, with secondary impact on work, family, and social activities.",
+    "Radiating pain into the buttock, thigh, or beyond the knee in a subset with radiculopathy or referred pain patterns.",
+    "Reduced spinal range of motion (forward flexion, extension, lateral bending, rotation) on examination.",
+    "Tenderness over the paraspinal muscles, sacroiliac joints, or trochanteric region.",
+    "Mood symptoms: irritability, frustration, sadness, anxiety related to ongoing pain and functional limitation.",
+    "Sleep disturbance, fatigue, reduced concentration, and decreased quality of life accompanying long-standing pain."
+  ],
+
+  "earlyWarningSigns": [
+    "Episodes of low back pain that recur more frequently or last longer than previous episodes",
+    "Pain that interferes with sleep, work, or recreational activities for more than a few weeks",
+    "Development of fear about returning to work or activity because of back pain",
+    "New depression, anxiety, or hopelessness in the context of persistent back pain",
+    "Sustained use of NSAIDs or analgesics for more than 2-3 weeks for back pain"
+  ],
+
+  "emergencySigns": [
+    "New saddle anesthesia (numbness in the perineum, inner thighs, or buttocks)",
+    "New urinary retention, urinary incontinence, or fecal incontinence",
+    "Bilateral or progressive leg weakness",
+    "Fever, night sweats, weight loss, or known intravenous drug use with back pain",
+    "Severe sudden back pain after minimal trauma in an older adult or person on long-term steroids (osteoporotic fracture)"
+  ],
+
+  "causes": [
+    {
+      "cause": "Disc, facet joint, and sacroiliac joint degenerative changes",
+      "description": "Age-related degenerative changes in lumbar discs, facet joints, and sacroiliac joints are nearly universal by middle age. However, MRI findings of disc degeneration, bulge, or annular tear are seen in 30-50% of asymptomatic adults under 40 and in over 80% of those above 60, demonstrating that imaging findings do not equate to symptoms. Specific identification of a single pain source is rarely possible without invasive testing."
+    },
+    {
+      "cause": "Muscle and ligamentous dysfunction",
+      "description": "Deconditioning, motor-control deficits, asymmetric loading, and persistent paraspinal and gluteal muscle activity contribute to and result from chronic pain. Targeted exercise therapy reverses many of these changes."
+    },
+    {
+      "cause": "Central sensitization (nociplastic pain)",
+      "description": "Long-standing back pain produces central nervous system changes including descending inhibitory dysfunction, dorsal horn sensitization, and altered functional connectivity in pain-processing networks. Patients describe spreading pain, hyperalgesia, allodynia, and pain that 'doesn't make anatomical sense.' Treatment includes pain neuroscience education, graded exercise, and centrally acting agents (duloxetine, low-dose tricyclics)."
+    },
+    {
+      "cause": "Psychosocial factors (depression, anxiety, catastrophizing, fear-avoidance)",
+      "description": "Depression, anxiety, fear-avoidance beliefs, pain catastrophizing, and low self-efficacy independently predict transition from acute to chronic LBP and worsen function regardless of structural findings. Job dissatisfaction, workplace conflict, and litigation also independently worsen outcomes."
+    },
+    {
+      "cause": "Modifiable lifestyle factors",
+      "description": "Obesity, physical inactivity, smoking, poor sleep, and high stress increase incidence and prolong duration of chronic LBP. Each 5-unit increase in BMI is associated with 25% higher risk of severe back pain. Smoking impairs disc nutrition and prolongs recovery."
+    },
+    {
+      "cause": "Specific pathology (uncommon)",
+      "description": "Vertebral fracture (osteoporotic, traumatic, malignant), infection (osteomyelitis, discitis, epidural abscess), inflammatory arthritis (axial spondyloarthritis), tumor (metastatic disease, multiple myeloma), and cauda equina syndrome together account for under 2% of presentations but require specific workup and management."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Prior episode of low back pain", "category": "non-modifiable", "description": "Strongest individual predictor of future chronic LBP; recurrence rates 50-70% within 1 year and over 80% within 5 years of an acute episode." },
+    { "factor": "Heavy occupational lifting, prolonged sitting, and whole-body vibration", "category": "modifiable", "description": "Manual handling, prolonged driving, and seated occupations increase incidence. Workplace ergonomic interventions and movement breaks reduce risk." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Each 5-unit BMI rise is associated with approximately 25% higher risk of severe back pain. Weight loss of 5-10% improves pain and function in observational and intervention studies." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Nicotine impairs disc nutrition and is independently associated with higher prevalence and worse outcomes. Smoking cessation modestly improves long-term back pain outcomes." },
+    { "factor": "Depression, anxiety, and post-traumatic stress disorder", "category": "modifiable", "description": "Independently predict transition from acute to chronic LBP and worsen function. Effect sizes comparable to or larger than most biomechanical factors. Treatment of mood disorder improves pain outcomes." },
+    { "factor": "Sedentary lifestyle and low cardiovascular fitness", "category": "modifiable", "description": "Reduced aerobic capacity, core strength, and flexibility predispose to back pain. Regular exercise reduces both incidence and recurrence by 25-40%." },
+    { "factor": "Sleep disorders (insomnia, sleep apnea)", "category": "modifiable", "description": "Bidirectional relationship: pain worsens sleep and poor sleep worsens pain through pro-inflammatory and central sensitization pathways. Sleep optimization is a core intervention." },
+    { "factor": "Low socioeconomic status and workplace dissatisfaction", "category": "modifiable", "description": "Job demands, workplace dissatisfaction, litigation, and lower socioeconomic status are independently associated with worse outcomes. Workplace interventions and early return-to-work programs help." }
+  ],
+
+  "affectedDemographics": [
+    "Approximately 619 million people worldwide had low back pain in 2020 (GBD 2023); projected to rise to 843 million by 2050.",
+    "Low back pain is the leading cause of years lived with disability globally across both sexes and most age groups.",
+    "Lifetime prevalence approaches 80% in high-income countries; point prevalence 12-15% globally.",
+    "Female sex has slightly higher prevalence; rates rise through middle age and continue rising into older adulthood.",
+    "Highest disability burdens are in manual workers, individuals with obesity, smokers, and those with comorbid depression and anxiety."
+  ],
+
+  "diagnosisOverview": "Diagnosis of chronic low back pain is clinical, anchored by careful history and examination to identify red flags and to distinguish non-specific pain from specific pathology and radiculopathy or stenosis. The history covers onset, duration, pain pattern (continuous vs. episodic, axial vs. radicular, mechanical vs. inflammatory), aggravating and relieving factors, functional impact, response to prior treatments, mood, sleep, and workplace context. Red-flag screening covers age over 50 with new pain, history of cancer, weight loss, fever, night sweats, intravenous drug use, immunosuppression, recent procedure, anticoagulant therapy, severe night pain not relieved by rest, progressive neurological deficit, and bladder or bowel symptoms. Physical examination includes gait observation, spinal range of motion, palpation, neurological screening (motor, sensory, reflexes, straight-leg raise), sacroiliac joint provocation, and gait. Imaging is not indicated in the absence of red flags or progressive neurological deficits — ACP and NICE strongly discourage routine imaging in non-specific LBP because findings correlate poorly with pain and are common in asymptomatic adults. MRI is reserved for severe progressive symptoms, neurological deficit, suspected radiculopathy unresponsive to 6 weeks of conservative care, red flags, or pre-procedural planning. Laboratory tests (CBC, ESR, CRP, calcium, alkaline phosphatase, PSA in older men) are added for suspected infection, malignancy, or inflammatory arthritis. Validated tools — Roland-Morris Disability Questionnaire, Oswestry Disability Index, STarT Back tool for risk stratification, and PHQ-9 and GAD-7 for mood — guide assessment of disability and guide stepped care. The STarT Back tool stratifies patients into low, medium, and high-risk groups for chronification and directs proportional intensity of intervention. Diagnostic blocks (facet, sacroiliac, medial branch) may localize a putative pain source but specificity is limited; they are used selectively in pain-medicine practice to guide ablative or surgical procedures.",
+
+  "diagnosticTests": [
+    { "test": "Comprehensive clinical assessment with red-flag screening", "purpose": "Identifies specific pathology, radiculopathy, and psychosocial risk factors and characterizes pain pattern", "whatToExpect": "30-60 minute clinician interview and examination including gait observation, spinal range of motion, neurological exam, and provocation tests for sacroiliac joint and facet joint. No imaging at this stage in the absence of red flags." },
+    { "test": "STarT Back screening tool", "purpose": "Risk-stratifies patients into low, medium, and high-risk groups for chronification, guiding proportional intensity of intervention", "whatToExpect": "9-item self-report questionnaire taking 3-5 minutes. Validated in primary care; targeted intervention based on stratification improves outcomes and reduces unnecessary referrals." },
+    { "test": "Oswestry Disability Index (ODI) and Roland-Morris Disability Questionnaire", "purpose": "Quantifies functional impact and monitors treatment response", "whatToExpect": "Self-report questionnaires taking 5-10 minutes. Used at baseline and follow-up to track changes in function." },
+    { "test": "MRI lumbar spine (selected cases only)", "purpose": "Identifies disc herniation, foraminal stenosis, spinal stenosis, fracture, infection, or tumor in the presence of red flags or progressive neurological deficit", "whatToExpect": "30-45 minutes in the scanner. Not indicated in non-specific chronic LBP; reserved for red flags, persistent radiculopathy after 6 weeks of conservative care, or pre-procedural planning. Findings are common in asymptomatic adults and should be interpreted with caution." },
+    { "test": "Laboratory studies (CBC, ESR, CRP, metabolic panel)", "purpose": "Screens for infection, inflammation, malignancy, or metabolic bone disease when red flags are present", "whatToExpect": "Standard blood draw. Indications include age over 50 with new pain, fever, weight loss, immunosuppression, IV drug use, recent procedure, anticoagulation, or known malignancy. Results within 24 hours." },
+    { "test": "PHQ-9 and GAD-7 for depression and anxiety", "purpose": "Identifies coexisting mood disorders that worsen pain and function and are major treatment targets", "whatToExpect": "Self-report questionnaires of 9 and 7 items respectively, taking 3-5 minutes. Scores >10 prompt structured mental-health care alongside back-pain treatment." },
+    { "test": "Diagnostic facet joint, sacroiliac joint, or medial branch blocks", "purpose": "Localizes putative pain source for patients with persistent axial pain; guides selection for radiofrequency ablation or other procedures", "whatToExpect": "Fluoroscopy-guided injection of local anesthetic taking 15-30 minutes in an outpatient setting. Two blocks with concordant >50% relief are typically required before ablative procedures." }
+  ],
+
+  "treatmentOverview": "Treatment follows a stepped biopsychosocial model emphasized by ACP 2017, NICE NG59, and the 2018 Lancet Low Back Pain Series. First-line care is reassurance, education about the favorable natural history, advice to remain active, and structured exercise — supervised group exercise, motor control training, Pilates, yoga, or tai chi all have evidence with effect sizes of d=0.3-0.5 vs. usual care. Manual therapy (spinal manipulation, mobilization, massage) provides modest short-term benefit and is reasonable for acute and subacute flares. Pharmacotherapy is adjunctive: NSAIDs (ibuprofen, naproxen) are first-line, used at lowest effective dose with attention to renal, gastrointestinal, and cardiovascular risk; acetaminophen has minimal effect in LBP based on randomized trials and is no longer recommended as first-line monotherapy. Duloxetine 30-60 mg/day has evidence for chronic LBP particularly when central sensitization or depression coexists. Short courses of skeletal muscle relaxants (cyclobenzaprine, tizanidine) may help acute flares. Opioids are not first-line and are restricted to short courses with explicit risk discussion; long-term opioid therapy worsens function, increases mortality, and is discouraged by CDC 2022 guidelines. Gabapentin and pregabalin have modest evidence for radicular pain only, not for axial LBP. Cognitive-behavioral therapy and pain neuroscience education have strong evidence for chronic LBP (d=0.5-0.7) and target catastrophizing, fear-avoidance, and depression. Multidisciplinary biopsychosocial rehabilitation programs that combine physical, psychological, and educational components produce the largest gains for established chronic LBP (NNT for clinically meaningful improvement approximately 5-6, Kamper Cochrane 2015). Interventional procedures (epidural steroid injection for radicular pain, facet medial branch block followed by radiofrequency ablation, sacroiliac joint injection) are used selectively for specific pain sources after failed conservative care. Surgery is reserved for specific pathology (severe radiculopathy with structural correlate, cauda equina syndrome, spinal stenosis with neurogenic claudication, severe instability or deformity); evidence for fusion in non-specific chronic LBP is weak and the procedure is increasingly questioned. Spinal cord stimulation is an option for refractory radicular pain after failed surgery.",
+
+  "medicalTreatments": [
+    { "name": "Patient education, reassurance, and advice to stay active", "description": "Cornerstone first-line intervention with strong evidence. Includes explanation of biopsychosocial model, demonstration that imaging findings are common in pain-free adults, and prescription to maintain daily activity within tolerance. Brief interventions in primary care reduce disability and unnecessary imaging.", "effectiveness": "Effect size d=0.2-0.4 vs. usual care; modest individual effect but high public-health impact; reduces unnecessary imaging, opioid prescriptions, and referrals" },
+    { "name": "Structured exercise therapy (supervised group, motor control, yoga, tai chi, Pilates)", "description": "8-12 week supervised programs; specific approach matters less than consistent active participation. Combinations of aerobic, resistance, and motor-control training are typical.", "effectiveness": "Cochrane and ACP evidence: effect size d=0.3-0.5 vs. usual care for pain and function; reduces recurrence by 25-40%" },
+    { "name": "Cognitive-behavioral therapy and pain neuroscience education", "description": "Structured psychotherapy and education targeting catastrophizing, fear-avoidance, and depression. Delivered in 6-12 sessions in person or via telehealth, often in combination with physical therapy.", "effectiveness": "Effect size d=0.5-0.7 vs. control across meta-analyses; strongest non-physical evidence for chronic LBP outcomes" },
+    { "name": "Multidisciplinary biopsychosocial rehabilitation", "description": "Combined physical, psychological, and educational program delivered by an integrated team (physician, physical therapist, psychologist, occupational therapist) over 3-12 weeks. NICE recommends for high-risk and high-disability cases.", "effectiveness": "NNT approximately 5-6 for clinically meaningful pain improvement; largest gains for established chronic LBP with disability (Kamper Cochrane 2015)" },
+    { "name": "NSAIDs (ibuprofen, naproxen, diclofenac)", "description": "First-line pharmacotherapy at lowest effective dose for shortest necessary duration. Co-prescribe PPI for those over 65 or with GI risk. Monitor renal function and blood pressure.", "effectiveness": "Modest pain reduction (NNT 6 for 50% pain relief at 1 week); useful for flares; sustained benefit declines over 4-6 weeks" },
+    { "name": "Duloxetine (30-60 mg/day)", "description": "SNRI with FDA approval for chronic musculoskeletal pain. Particularly useful when central sensitization or depression coexists. Titrate over 1-2 weeks; sleep, mood, and pain often improve together.", "effectiveness": "Effect size d=0.3-0.4 for pain and function in chronic LBP; NNT approximately 5-7 for meaningful improvement" },
+    { "name": "Manual therapy (spinal manipulation, mobilization, massage)", "description": "Short-term symptomatic relief delivered by qualified manual therapists, physical therapists, chiropractors, or osteopaths. Most useful in combination with active treatment.", "effectiveness": "Effect size d=0.2-0.4 short-term for pain; modest functional benefit; effects fade by 12 weeks if not combined with exercise" },
+    { "name": "Selected interventional procedures (epidural steroid for radicular pain, facet medial branch block and radiofrequency ablation, SIJ injection)", "description": "Targeted procedures based on diagnostic blocks and clinical pattern. Used when conservative care has been inadequate after 6-12 weeks and a specific pain source is identified.", "effectiveness": "Epidural steroid for radicular pain: 40-70% short-term relief, 25-40% sustained at 1 year. Facet RFA: 50-70% improvement at 6-12 months after positive diagnostic blocks" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Decompression surgery for radiculopathy or spinal stenosis with chronic axial pain", "description": "Microdiscectomy or laminectomy for radiculopathy or stenosis-dominant disease that has failed 6-12 weeks of optimal non-operative care. Addresses leg-dominant pain better than axial pain.", "successRate": "60-80% report meaningful improvement in leg pain at 1-2 years; axial back pain improvement is more variable" },
+    { "name": "Lumbar spinal fusion", "description": "Reserved for severe instability, degenerative spondylolisthesis with neurogenic claudication, isthmic spondylolisthesis with persistent symptoms, severe deformity, and failed back surgery. Evidence for fusion in pure non-specific chronic LBP is weak.", "successRate": "Symptom improvement in 60-70% at 2 years for selected indications; reoperation rates 10-20% at 5-10 years; recovery 3-6 months" },
+    { "name": "Spinal cord stimulation", "description": "Implantable device delivering electrical stimulation to the dorsal columns for refractory radicular pain after failed lumbar surgery (FBSS). Trial period precedes permanent implantation.", "successRate": "50-60% achieve ≥50% pain reduction at 12-24 months in selected patients; durable in responders" },
+    { "name": "Vertebral augmentation (kyphoplasty, vertebroplasty)", "description": "Reserved for symptomatic osteoporotic vertebral compression fractures that fail conservative care. Cement is injected into the fractured vertebral body to stabilize it and relieve pain.", "successRate": "Rapid pain reduction in 70-90% in observational studies; randomized trials show smaller effects with continued debate about indications and timing" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Acupuncture", "description": "Modest short-term benefit in chronic LBP in meta-analyses, with effect size d=0.2-0.4. Reasonable adjunct to standard care; effects fade within months when discontinued." },
+    { "name": "Yoga, tai chi, and Pilates", "description": "Mind-body movement practices with evidence equivalent to or modestly better than usual care for chronic LBP. Improves pain, function, and quality of life over 6-12 weeks." },
+    { "name": "Mindfulness-based stress reduction (MBSR)", "description": "Eight-week structured program improving pain, function, and depression in chronic LBP with effect sizes comparable to CBT in randomized trials. Useful for high catastrophizing and pain-related anxiety." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "epidural-steroid-injection",
+    "physical-therapy",
+    "cognitive-behavioral-therapy"
+  ],
+
+  "whySeeSpecialist": "Refer to physical medicine and rehabilitation, pain medicine, or rheumatology for chronic LBP not responding to 6-12 weeks of structured first-line care, when red flags emerge, or when interventional procedures or multidisciplinary rehabilitation is being considered. Surgical referral is reserved for radiculopathy or stenosis with structural correlate and failure of comprehensive non-operative management.",
+  "doctorSelectionGuide": "Choose a physiatrist, pain specialist, or rheumatologist with explicit experience in chronic LBP and access to multidisciplinary support (physical therapy, behavioral medicine, interventional pain). For surgical consideration, prefer high-volume spine programs with both neurosurgery and orthopedic spine and willingness to recommend non-operative care when appropriate.",
+
+  "hospitalCriteria": [
+    "Multidisciplinary chronic pain program with physical, behavioral, and pharmacological services",
+    "Pain medicine specialists with interventional capability",
+    "Physical therapy with motor-control and graded exercise expertise",
+    "Behavioral medicine and clinical psychology services for CBT and pain neuroscience education",
+    "Selective access to spine surgery for appropriate indications"
+  ],
+  "keyFacilities": [
+    "Physical medicine and rehabilitation outpatient clinics",
+    "Multidisciplinary chronic pain rehabilitation programs",
+    "Comprehensive pain medicine clinics",
+    "Spine surgery programs for selected surgical candidates",
+    "Behavioral medicine and chronic-pain psychology services"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain healthy weight (BMI <30) to reduce mechanical load on lumbar structures.",
+    "Engage in regular aerobic exercise plus core strengthening 2-3 times per week — among the most effective preventive strategies.",
+    "Quit smoking, which impairs disc nutrition and prolongs recovery from any back episode.",
+    "Use proper lifting mechanics: keep loads close to the body, bend at hips and knees, avoid combined lifting and twisting.",
+    "Take movement breaks every 30-45 minutes during prolonged sitting; use supportive chairs and consider sit-stand desks.",
+    "Address sleep and stress with sleep hygiene, mindfulness, and treatment of insomnia and sleep apnea, both independent predictors of new low-back episodes."
+  ],
+
+  "lifestyleModifications": [
+    "Maintain regular aerobic exercise (walking, swimming, cycling) and core-strengthening workouts at least 3 times per week.",
+    "Address fear-avoidance and catastrophizing thoughts through CBT and pain neuroscience education; avoid prolonged rest and activity avoidance.",
+    "Optimize sleep with consistent schedule, daylight exposure, treatment of sleep apnea, and limiting screen time before bed.",
+    "Limit alcohol and avoid sedating medications that worsen sleep, mood, and pain perception.",
+    "Use ergonomic modifications at work (chair, monitor height, supportive lumbar support, sit-stand desk) and take movement breaks.",
+    "Engage with a multidisciplinary team if pain is interfering with work, sleep, or daily function for more than 6-12 weeks despite first-line care."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-pattern diet to reduce systemic inflammation and support healthy weight",
+      "Adequate protein (1-1.2 g/kg/day) and resistance training to maintain muscle and bone",
+      "Vitamin D and calcium for bone health, particularly in older adults",
+      "Hydration of 1.5-2 L/day to support disc water content"
+    ],
+    "avoid": [
+      "Ultra-processed foods that worsen weight and inflammation",
+      "Excessive alcohol, which interacts with NSAIDs, gabapentinoids, and opioids",
+      "Smoking and nicotine products — strongly associated with worse outcomes",
+      "Crash diets that promote muscle loss and worsen rehabilitation"
+    ]
+  },
+  "exerciseGuidelines": "Aim for 150 minutes per week of moderate aerobic activity (walking, swimming, stationary cycling) plus twice-weekly resistance and core training. Choose any sustainable form that engages the patient — yoga, tai chi, Pilates, gym-based, walking groups. Start low and progress gradually; supervised initial sessions with a physical therapist improve adherence and technique. Avoid prolonged rest and bed rest, which worsen outcomes.",
+
+  "dailyManagement": [
+    "Perform prescribed exercise program at least 4-5 times per week, including core, flexibility, and aerobic components.",
+    "Take medications on schedule and at lowest effective dose; review NSAID, antidepressant, and any opioid prescriptions periodically with the clinician.",
+    "Track pain, function, mood, and sleep in a weekly log; share with the clinician at follow-up.",
+    "Practice CBT and pain neuroscience principles: challenge catastrophizing thoughts, pace activity, and avoid both overdoing and under-doing.",
+    "Maintain consistent sleep schedule and address insomnia through sleep hygiene or CBT for insomnia.",
+    "Attend follow-up at 4-6 week intervals during active treatment and quarterly thereafter; escalate care if pain or function worsens."
+  ],
+
+  "prognosis": "Outcomes vary by initial severity, duration, and comorbidity. Approximately 30-50% of patients with established chronic LBP achieve a clinically meaningful pain reduction with first-line care over 6-12 months; structured exercise and CBT produce the most durable gains. Multidisciplinary biopsychosocial rehabilitation produces the largest functional gains in those with significant disability (NNT 5-6 for meaningful improvement). Persistent high disability beyond 12 months occurs in 10-20% of cases, often associated with high baseline disability, depression, catastrophizing, low self-efficacy, occupational dissatisfaction, and litigation. Long-term opioid therapy is associated with worse function and higher mortality. Surgery for non-specific chronic LBP without clear structural correlate produces variable results and is increasingly discouraged. Modifiable predictors of better outcome include exercise adherence, weight loss, smoking cessation, treatment of depression and anxiety, sleep optimization, and early return to work. Recurrence is common: 50-70% of patients experience another acute episode within 1 year of recovery, and 80% within 5 years. Long-term outlook is improved by integrating physical activity, behavioral strategies, and proportional medical treatment over years rather than relying on episodic acute care.",
+
+  "recoveryTimeline": "Meaningful pain improvement typically over 8-12 weeks of structured care. Functional gains continue for 6-12 months with sustained exercise and behavioral therapy. Multidisciplinary rehabilitation programs run 3-12 weeks with continued benefit over 1-2 years. Recurrence of acute episodes 50-70% within 1 year is common, with shorter and less disabling recurrences in those maintaining exercise and behavioral strategies.",
+
+  "complications": [
+    "Persistent high-disability state in 10-20% of patients with established chronic LBP; reduces work, function, and quality of life.",
+    "Mood disorders (depression, anxiety) coexist in 30-50% of cases and worsen pain outcomes; treatment of mood improves pain trajectory.",
+    "Opioid use disorder and overdose risk with long-term opioid therapy — limit duration and use combined strategies.",
+    "Sleep disorders, sarcopenia, deconditioning, and weight gain related to prolonged inactivity.",
+    "Workplace and financial impact: job loss, disability claims, reduced income, and family stress.",
+    "Surgical complications when surgery is inappropriately offered for non-specific pain: infection, dural tear, adjacent segment degeneration, and failed back surgery syndrome."
+  ],
+
+  "supportResources": [
+    { "name": "American Chronic Pain Association", "url": "https://www.theacpa.org/", "description": "Patient self-management resources, peer support, and educational materials on chronic pain including low back pain." },
+    { "name": "National Institute of Neurological Disorders and Stroke — Low Back Pain Fact Sheet", "url": "https://www.ninds.nih.gov/health-information/disorders/low-back-pain", "description": "NIH-curated authoritative patient information on acute and chronic low back pain." },
+    { "name": "American Academy of Physical Medicine and Rehabilitation (AAPM&R)", "url": "https://www.aapmr.org/", "description": "Patient resources and physiatrist directory for chronic LBP and rehabilitation." },
+    { "name": "American Physical Therapy Association (APTA)", "url": "https://www.apta.org/", "description": "Find a physical therapist with chronic-pain and spine expertise; patient resources on exercise and prevention." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "back-pain", "name": "Back Pain", "keyDifference": "Back pain is a broad clinical descriptor that includes acute, subacute, and chronic episodes. Chronic low back pain is specifically defined as pain persisting more than 12 weeks. Acute back pain often resolves spontaneously within 6 weeks; chronic LBP requires sustained biopsychosocial management." },
+    { "slug": "sciatica", "name": "Sciatica", "keyDifference": "Sciatica is leg-dominant radiating pain in the sciatic nerve distribution and is typically caused by lumbar nerve root irritation. Chronic LBP can occur with or without sciatica; treatment overlaps but radiculopathy management adds specific neuropathic-pain strategies and a different role for surgery." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "keyDifference": "Fibromyalgia is widespread pain (more than three months, multiple body regions) with tenderness, fatigue, and sleep disturbance, often without local structural cause. Chronic LBP is regional rather than widespread. The two often coexist and share central sensitization mechanisms; treatment overlaps in CBT, exercise, and centrally acting agents." },
+    { "slug": "lumbar-radiculopathy", "name": "Lumbar Radiculopathy", "keyDifference": "Lumbar radiculopathy is a specific neurological diagnosis with confirmed nerve-root involvement (clinical exam plus imaging). It usually presents with leg-dominant pain in a dermatomal pattern. Chronic LBP is predominantly axial pain without clear nerve-root involvement, though the two frequently coexist." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "depression", "name": "Depression" },
+    { "slug": "anxiety", "name": "Anxiety" },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "back-pain", "name": "Back Pain", "relevance": "Broader category of back pain; chronic LBP is the >12-week subset with distinct management." },
+    { "slug": "lumbar-radiculopathy", "name": "Lumbar Radiculopathy", "relevance": "Common coexisting condition; targeted treatment of radicular component alongside chronic-pain management." },
+    { "slug": "sciatica", "name": "Sciatica", "relevance": "Frequent overlap; assessment and treatment pathways intersect." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "relevance": "Widespread pain with central sensitization mechanisms shared with chronic LBP; common comorbidity." },
+    { "slug": "depression", "name": "Depression", "relevance": "Major comorbidity that worsens pain and function; treatment of depression improves pain outcomes." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is chronic low back pain?",
+      "answer": "Chronic low back pain is pain in the lower back that persists for more than 12 weeks despite usual care, with or without leg pain. It affects roughly 619 million people worldwide and is the leading cause of years lived with disability globally. Most cases are non-specific without a single identifiable pathoanatomical source.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why don't I need an MRI for chronic back pain?",
+      "answer": "Imaging is not routinely indicated because MRI findings of disc degeneration, bulge, and annular tear are common in pain-free adults — 30-50% under 40 and over 80% above 60. Imaging in the absence of red flags increases unnecessary procedures and surgeries without improving outcomes. MRI is reserved for red flags or progressive neurological deficits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the red flags for serious back pain?",
+      "answer": "Red flags include saddle anesthesia, new urinary or bowel symptoms, progressive leg weakness, fever or night sweats, unexplained weight loss, history of cancer, IV drug use, recent procedure or immunosuppression, severe night pain unrelieved by rest, age over 50 with new pain, and significant trauma. Any of these warrants prompt evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for chronic low back pain?",
+      "answer": "First-line treatment combines patient education, advice to stay active, structured exercise (any sustainable form — supervised group, motor control, yoga, tai chi), cognitive-behavioral therapy and pain neuroscience education, and selective medication. Multidisciplinary biopsychosocial rehabilitation produces the largest functional gains for established chronic LBP.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I rest or stay active with chronic back pain?",
+      "answer": "Stay active. Prolonged rest worsens outcomes by causing deconditioning, fear-avoidance behavior, and depression. Modern guidelines (ACP, NICE) strongly recommend advice to remain active within tolerance, return to normal activity gradually, and engage with structured exercise.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are opioids effective for chronic back pain?",
+      "answer": "No. Opioids are not first-line for chronic LBP. Long-term opioid therapy worsens function and increases mortality without superior pain relief compared with non-opioid strategies. The CDC 2022 guidelines and ACP 2017 guideline discourage routine opioid use; short courses may be considered only in severe flares with explicit risk discussion.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does spinal surgery cure chronic back pain?",
+      "answer": "Surgery is effective for specific structural pathology (severe radiculopathy with neurological deficit, cauda equina, severe spinal stenosis, significant instability or deformity). For non-specific chronic LBP without clear structural correlate, evidence for fusion is weak and many guidelines discourage surgical treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What exercises are best for chronic low back pain?",
+      "answer": "Any sustainable form of exercise that engages the patient — supervised group exercise, motor control training, yoga, tai chi, Pilates, swimming, or walking. The specific approach matters less than consistent active participation. Effect sizes are similar across modalities; choose the one the patient will adhere to.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does weight loss help chronic low back pain?",
+      "answer": "Yes. Each 5-unit increase in BMI is associated with approximately 25% higher risk of severe back pain. Weight loss of 5-10% improves pain and function in observational and intervention studies and also improves cardiovascular and metabolic outcomes that affect overall back pain trajectory.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does depression affect chronic back pain?",
+      "answer": "Depression coexists with chronic LBP in 30-50% of cases and independently worsens pain, function, and treatment response. Treatment of depression with CBT and SSRI or SNRI improves both mood and pain outcomes. Every chronic LBP assessment should include screening for depression and anxiety.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is pain neuroscience education?",
+      "answer": "Pain neuroscience education teaches patients how the nervous system produces and modulates pain, distinguishing pain from injury and reducing catastrophizing and fear-avoidance. Delivered in 2-6 sessions, often combined with physical therapy or CBT, it has effect sizes of d=0.3-0.5 for pain and function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is cognitive-behavioral therapy effective for back pain?",
+      "answer": "Yes. CBT is one of the strongest non-physical treatments for chronic LBP, with effect sizes d=0.5-0.7 vs. control in randomized trials. It targets catastrophizing, fear-avoidance, and depression. Often delivered in 6-12 sessions in person or via telehealth, alongside physical therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are NSAIDs safe for chronic use?",
+      "answer": "Long-term NSAID use carries gastrointestinal, renal, and cardiovascular risks, especially in older adults and those with comorbidities. Use the lowest effective dose for the shortest necessary duration, co-prescribe a PPI for those over 65 or with GI risk, and reassess regularly. Topical NSAIDs are an alternative with lower systemic exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is duloxetine and when is it used in chronic LBP?",
+      "answer": "Duloxetine is an SNRI with FDA approval for chronic musculoskeletal pain. It is used in chronic LBP particularly when central sensitization, depression, or anxiety coexist. Typical dose 30-60 mg/day. Effect size d=0.3-0.4 for pain and function with NNT around 5-7.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I see a chiropractor for chronic back pain?",
+      "answer": "Spinal manipulation has modest short-term benefit and is reasonable as part of a multimodal approach. Combined with exercise and education, it can be useful. Manipulation alone has small and short-lived effects; chronic LBP benefits more from sustained active treatment than from passive modalities alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is epidural steroid injection used for?",
+      "answer": "Epidural steroid injection is used for radicular pain (leg-dominant pain from nerve root irritation), not for axial low back pain alone. It provides clinically meaningful short-term relief in 40-70% of radicular patients and sustained benefit in 25-40% at 1 year. Not first-line for chronic axial LBP.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can yoga help chronic back pain?",
+      "answer": "Yes. Yoga has comparable evidence to other structured exercise interventions for chronic LBP, improving pain, function, and quality of life over 6-12 weeks. Iyengar, Hatha, and Viniyoga have evidence in randomized trials. Best when started with experienced instructors and adapted to individual capacity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does my back pain come back after I get better?",
+      "answer": "Chronic low back pain has a relapsing-remitting pattern; 50-70% experience recurrence within 1 year and 80% within 5 years. Recurrence does not mean treatment failed. Sustained exercise, weight management, behavioral strategies, and addressing modifiable lifestyle factors reduce frequency and severity of recurrences.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long should I try conservative treatment before considering surgery?",
+      "answer": "Surgery for non-specific chronic LBP is rarely indicated and has weak evidence. Surgery for radiculopathy or stenosis with clear structural correlate is considered after 6-12 weeks of optimal conservative care fails to improve leg-dominant pain. Multidisciplinary rehabilitation should typically be attempted before surgery in chronic non-radicular cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is chronic low back pain a disability?",
+      "answer": "Chronic LBP is the leading cause of years lived with disability worldwide. About 10-20% of those with chronic LBP have severe persistent disability affecting work and daily life. Multidisciplinary biopsychosocial care, early return-to-work programs, and treatment of comorbid mood disorders reduce long-term disability.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is multidisciplinary rehabilitation for back pain?",
+      "answer": "Multidisciplinary biopsychosocial rehabilitation combines physical (exercise, manual therapy), psychological (CBT, mindfulness), and educational components delivered by an integrated team over 3-12 weeks. It produces the largest pain and functional gains for established chronic LBP, with NNT approximately 5-6 for meaningful improvement.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Chronic Low Back Pain",
+  "regionalNames": [
+    { "name": "Lumbalgia crónica", "region": "Spanish-speaking countries", "language": "Spanish" },
+    { "name": "Lombalgie chronique", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "क्रोनिक लो बैक पेन", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "chronic low back pain",
+    "chronic LBP",
+    "non-specific low back pain",
+    "lumbar pain chronic",
+    "back pain 3 months",
+    "ACP 2017 guideline",
+    "NICE NG59",
+    "exercise back pain",
+    "CBT back pain",
+    "duloxetine back pain",
+    "biopsychosocial rehabilitation",
+    "pain neuroscience education",
+    "central sensitization",
+    "multidisciplinary pain rehab",
+    "lumbar radiculopathy"
+  ],
+  "symptomKeywords": [
+    "back pain 3 months",
+    "lower back pain wont go away",
+    "ongoing back pain stiff",
+    "dull low back pain daily",
+    "back pain sleeping problem",
+    "low back pain leg radiating",
+    "back pain depression",
+    "back pain sitting all day"
+  ],
+
+  "metaTitle": "Chronic Low Back Pain: Causes & Treatment | aihealz",
+  "metaDescription": "Chronic low back pain: causes, biopsychosocial care, exercise, CBT, NSAIDs, duloxetine, injections and surgery — evidence guide per ACP and NICE.",
+
+  "keywords": [
+    "chronic low back pain",
+    "non-specific low back pain",
+    "biopsychosocial rehabilitation",
+    "exercise back pain",
+    "CBT back pain",
+    "duloxetine chronic pain",
+    "pain neuroscience education",
+    "NICE NG59",
+    "ACP 2017 low back pain",
+    "multidisciplinary chronic pain",
+    "epidural steroid injection",
+    "central sensitization back pain"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Hartvigsen J, Hancock MJ, Kongsted A, et al. 2018. What low back pain is and why we need to pay attention. Lancet 391(10137):2356-67.", "url": "https://pubmed.ncbi.nlm.nih.gov/29573870/", "accessedDate": "2026-05-14" },
+    { "title": "Qaseem A, Wilt TJ, McLean RM, Forciea MA. 2017. Noninvasive treatments for acute, subacute, and chronic low back pain: a clinical practice guideline from the American College of Physicians. Annals of Internal Medicine 166(7):514-30.", "url": "https://pubmed.ncbi.nlm.nih.gov/28192789/", "accessedDate": "2026-05-14" },
+    { "title": "Bernstein IA, Malik Q, Carville S, Ward S. 2017. Low back pain and sciatica: summary of NICE guidance. BMJ 356:i6748.", "url": "https://pubmed.ncbi.nlm.nih.gov/28062522/", "accessedDate": "2026-05-14" },
+    { "title": "Kamper SJ, Apeldoorn AT, Chiarotto A, et al. 2015. Multidisciplinary biopsychosocial rehabilitation for chronic low back pain: Cochrane systematic review and meta-analysis. BMJ 350:h444.", "url": "https://pubmed.ncbi.nlm.nih.gov/25694111/", "accessedDate": "2026-05-14" },
+    { "title": "Foster NE, Anema JR, Cherkin D, et al. 2018. Prevention and treatment of low back pain: evidence, challenges, and promising directions. Lancet 391(10137):2368-83.", "url": "https://pubmed.ncbi.nlm.nih.gov/29573872/", "accessedDate": "2026-05-14" },
+    { "title": "Buchbinder R, van Tulder M, Öberg B, et al. 2018. Low back pain: a call for action. Lancet 391(10137):2384-88.", "url": "https://pubmed.ncbi.nlm.nih.gov/29573871/", "accessedDate": "2026-05-14" },
+    { "title": "Chou R, Qaseem A, Snow V, et al. 2007. Diagnosis and treatment of low back pain: a joint clinical practice guideline from the American College of Physicians and the American Pain Society. Annals of Internal Medicine 147(7):478-91.", "url": "https://pubmed.ncbi.nlm.nih.gov/17909209/", "accessedDate": "2026-05-14" },
+    { "title": "GBD 2021 Low Back Pain Collaborators. 2023. Global, regional, and national burden of low back pain, 1990-2020: estimates from the Global Burden of Disease Study 2021. Lancet Rheumatology 5(6):e316-e329.", "url": "https://pubmed.ncbi.nlm.nih.gov/37273833/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

@@ -1,0 +1,453 @@
+{
+  "_meta": {
+    "slug": "nephritic-syndrome",
+    "tier": 1,
+    "headTerm": "nephritic syndrome",
+    "longTailKeywords": [
+      "nephritic syndrome symptoms",
+      "acute glomerulonephritis",
+      "post-streptococcal glomerulonephritis",
+      "IgA nephropathy",
+      "anti-GBM disease",
+      "rapidly progressive glomerulonephritis",
+      "red cell casts urine",
+      "crescentic glomerulonephritis",
+      "ANCA vasculitis kidney"
+    ],
+    "primarySpecialty": "Nephrology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "KDIGO 2021 Glomerular Diseases Guideline; ANCA-associated vasculitis treatment per RITUXVAS Jones et al. NEJM 2010 (PMID 20647199) and PEXIVAS Walsh et al. NEJM 2020 (PMID 32053298). Anti-GBM disease per Pusey 2003 KI (PMID 12612027). PSGN epidemiology per Carapetis et al. Lancet ID 2005 (PMID 16253886). IgA nephropathy MEST-C scoring per Trimarchi et al. KI 2017 (PMID 28760335). Rodriguez-Iturbe NEJM 2007 (PMID 17329701) for post-streptococcal nephritis pathogenesis."
+  },
+
+  "h1Title": "Nephritic Syndrome: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Nephrology",
+
+  "heroOverview": "Nephritic syndrome is a glomerular inflammatory state defined by hematuria with dysmorphic red blood cells and red-cell casts, hypertension, reduced glomerular filtration rate, mild-to-moderate proteinuria (usually under 3.5 g per 24 hours), and variable peripheral edema. The underlying mechanism is immune-complex deposition, anti-glomerular basement membrane antibody binding, or pauci-immune capillary wall injury that triggers neutrophil and complement activation inside the glomerulus. Causes range from post-streptococcal glomerulonephritis in children — still affecting hundreds of thousands per year globally — to IgA nephropathy, lupus nephritis, ANCA-associated vasculitis, anti-GBM (Goodpasture) disease, cryoglobulinemia, and infection-related glomerulonephritis. Rapidly progressive crescentic glomerulonephritis can destroy kidney function within weeks, making prompt recognition and pulse immunosuppression with corticosteroids, cyclophosphamide, rituximab, or plasma exchange essential.",
+
+  "keyStats": {
+    "prevalence": "Post-streptococcal glomerulonephritis: approximately 470,000 new cases per year worldwide (mostly children in low-income settings). IgA nephropathy: incidence 2.5 per 100,000 per year in adults, the most common primary glomerulonephritis globally",
+    "demographics": "Post-streptococcal GN: 5-12 year olds, males 2× females. IgA nephropathy: peaks at 20-40 years, Asian and White populations affected more than Black populations. ANCA vasculitis: peak age 65-74. Anti-GBM disease: bimodal at 20-30 and 60-70 years",
+    "avgAge": "Highly variable by cause: children with PSGN, young adults with IgA, lupus, anti-GBM (younger peak); older adults with ANCA vasculitis, anti-GBM (older peak), infection-related GN",
+    "globalCases": "Global incidence dominated by post-streptococcal GN in low-resource settings (Carapetis 2005); IgA nephropathy estimated at over 1 million prevalent cases in East Asia alone"
+  },
+
+  "definition": "Nephritic syndrome (ICD-10: N00 acute; N03 chronic) is a glomerular inflammatory syndrome characterized by the constellation of hematuria with dysmorphic red blood cells and red-cell casts, proteinuria typically below 3.5 g per 24 hours, hypertension, oliguria, peripheral or facial edema, and an acute or subacute decline in glomerular filtration rate. The unifying pathology is intra-glomerular inflammation: immune complexes deposit in mesangial, subendothelial, or subepithelial positions; anti-glomerular basement membrane antibodies bind type IV collagen; or pauci-immune capillary necrosis develops in ANCA-associated vasculitis. Neutrophil recruitment, complement activation, and crescent formation reduce the glomerular filtration surface and breach the capillary wall, allowing red cells and protein to enter the urinary space. The clinical spectrum spans isolated microscopic hematuria with preserved function, full nephritic syndrome with hypertension and acute kidney injury, and rapidly progressive glomerulonephritis (RPGN) with crescents in over 50% of glomeruli and weekly losses of GFR. Histologic patterns include diffuse proliferative (post-streptococcal, lupus class IV), mesangial proliferative (IgA), membranoproliferative (cryoglobulinemia, MPGN), and crescentic (anti-GBM, ANCA-associated, severe lupus). Distinction from nephrotic syndrome — proteinuria-dominant, bland sediment — is the first cognitive step in glomerular disease evaluation. Management is by nephrology and rheumatology, with kidney biopsy as the definitive diagnostic step in almost all adult presentations.",
+
+  "typesClassification": [
+    { "type": "Post-streptococcal (post-infectious) glomerulonephritis", "description": "Develops 1-3 weeks after group A streptococcal pharyngitis or 3-6 weeks after streptococcal skin infection. Immune-complex deposition produces diffuse proliferative glomerulonephritis with low C3 that normalizes over 8-12 weeks. Excellent prognosis in children (>95% full recovery); worse in adults." },
+    { "type": "IgA nephropathy (Berger disease)", "description": "Most common primary glomerulonephritis globally. IgA1 deposits in the mesangium produce mesangial proliferation. Presents with synpharyngitic hematuria within 24-72 hours of upper respiratory infection or with persistent microscopic hematuria. MEST-C histologic score and proteinuria predict progression." },
+    { "type": "Lupus nephritis (class III, IV, IV+V)", "description": "Subendothelial immune-complex deposition with focal or diffuse proliferative glomerulonephritis in 30-50% of SLE patients. Treated with induction immunosuppression (mycophenolate or cyclophosphamide plus glucocorticoids) followed by maintenance; rituximab or belimumab added in refractory disease." },
+    { "type": "ANCA-associated vasculitis (granulomatosis with polyangiitis, microscopic polyangiitis, eosinophilic GPA)", "description": "Pauci-immune crescentic glomerulonephritis with circulating anti-neutrophil cytoplasmic antibodies (PR3-ANCA or MPO-ANCA). Often part of multi-system vasculitis with pulmonary, ENT, neurologic, and skin involvement. Standard induction is rituximab or cyclophosphamide plus glucocorticoids." },
+    { "type": "Anti-glomerular basement membrane disease (Goodpasture syndrome)", "description": "Antibodies to the non-collagenous domain of type IV collagen alpha-3 chain produce rapidly progressive crescentic glomerulonephritis with pulmonary hemorrhage in 60-80%. Treatment combines plasmapheresis, cyclophosphamide, and high-dose glucocorticoids." },
+    { "type": "Cryoglobulinemic and membranoproliferative glomerulonephritis", "description": "Cold-precipitable immune complexes (often hepatitis C-related type II mixed cryoglobulinemia) deposit in subendothelial position producing membranoproliferative pattern with low C3 and C4, nephritic-nephrotic features. Treat the underlying cause; rituximab in severe cryoglobulinemic vasculitis." },
+    { "type": "Infection-related glomerulonephritis (non-streptococcal)", "description": "Endocarditis, deep abscess, infected ventriculoperitoneal shunt, and chronic infection (hepatitis B, hepatitis C, HIV, syphilis) produce immune-complex glomerulonephritis. Diabetic adults are increasingly recognized as a vulnerable group." }
+  ],
+
+  "primarySymptoms": [
+    "Visible (macroscopic) hematuria — urine described as cola, tea, or smoky brown — often the first symptom that prompts medical contact, particularly in IgA nephropathy and post-streptococcal disease.",
+    "Periorbital and facial puffiness on waking, more prominent than dependent leg edema in the early phase of post-streptococcal glomerulonephritis.",
+    "New-onset hypertension that may be severe enough to cause headache, visual disturbance, or seizure (hypertensive encephalopathy in children with PSGN).",
+    "Reduced urine output (oliguria), often the most concerning symptom and a marker of significant glomerular filtration loss.",
+    "Mild-to-moderate proteinuria producing foamy urine, but typically not the dominant clinical feature (unlike nephrotic syndrome).",
+    "Flank or loin pain with hematuria after a recent upper respiratory tract infection, classic synpharyngitic hematuria of IgA nephropathy.",
+    "Systemic symptoms (purpuric rash, arthralgia, fever, weight loss, sinusitis, hemoptysis, mononeuritis multiplex) when the cause is vasculitis or lupus.",
+    "Acute pulmonary hemorrhage with hemoptysis, hypoxia, and bilateral infiltrates — pulmonary-renal syndrome of anti-GBM disease or ANCA vasculitis."
+  ],
+
+  "earlyWarningSigns": [
+    "Tea-colored or cola-colored urine in a child 1-3 weeks after a sore throat or skin infection",
+    "Asymptomatic microscopic hematuria detected on routine urinalysis, especially with dysmorphic red blood cells or red-cell casts on microscopy",
+    "New-onset hypertension in a previously well young adult with no risk factors",
+    "Recurrent visible hematuria during upper respiratory infections (synpharyngitic) in an adult — suggests IgA nephropathy",
+    "Unexplained malaise, low-grade fever, and arthralgia with new microscopic hematuria — consider lupus or ANCA-associated vasculitis"
+  ],
+
+  "emergencySigns": [
+    "Hemoptysis with bilateral pulmonary infiltrates and hematuria — pulmonary-renal syndrome (anti-GBM or ANCA-associated vasculitis) requires immediate plasmapheresis and immunosuppression",
+    "Hypertensive encephalopathy (severe hypertension with seizure, altered consciousness, papilledema) in a child with PSGN",
+    "Acute kidney injury with creatinine doubling over days to a week — rapidly progressive glomerulonephritis demands urgent biopsy",
+    "Acute pulmonary edema with hypertension and oliguria — fluid overload requires diuretics and consideration of dialysis",
+    "Purpuric rash, abdominal pain, joint pain, and hematuria in a child — IgA vasculitis (Henoch-Schönlein purpura) with potential gastrointestinal complications",
+    "Severe hyperkalemia (>6.5 mmol/L) with ECG changes in oliguric acute kidney injury — urgent dialysis indicated"
+  ],
+
+  "causes": [
+    {
+      "cause": "Post-streptococcal (post-infectious) glomerulonephritis",
+      "description": "Immune complexes containing streptococcal antigens (SpeB, NAPlr) and host antibody deposit in the glomerular basement membrane 1-3 weeks after group A streptococcal pharyngitis or 3-6 weeks after streptococcal pyoderma. Activates complement (low C3), recruits neutrophils, and produces diffuse proliferative glomerulonephritis."
+    },
+    {
+      "cause": "IgA nephropathy",
+      "description": "Galactose-deficient IgA1 forms immune complexes with anti-glycan IgG and deposits in the mesangium. Triggered by mucosal infections, particularly upper respiratory and gastrointestinal. The most common primary glomerulonephritis worldwide with strong genetic, ethnic, and geographic predisposition."
+    },
+    {
+      "cause": "Lupus nephritis",
+      "description": "Anti-double-stranded DNA, anti-Sm, and anti-C1q antibodies form immune complexes deposited in mesangial and subendothelial spaces. Triggers complement activation (low C3 and C4), recruits neutrophils and mononuclear cells, and produces focal or diffuse proliferative glomerulonephritis."
+    },
+    {
+      "cause": "ANCA-associated vasculitis (GPA, MPA, EGPA)",
+      "description": "ANCA antibodies (PR3 in GPA, MPO in MPA) activate primed neutrophils on the glomerular capillary endothelium, releasing reactive oxygen species and proteases that produce necrotizing pauci-immune crescentic glomerulonephritis. Often accompanies upper airway, lung, neurologic, and skin disease."
+    },
+    {
+      "cause": "Anti-glomerular basement membrane disease",
+      "description": "IgG antibodies bind the non-collagenous domain of the alpha-3 chain of type IV collagen on the glomerular and alveolar basement membranes. Linear IgG staining on immunofluorescence is diagnostic. Produces rapidly progressive crescentic glomerulonephritis and, in 60-80%, alveolar hemorrhage."
+    },
+    {
+      "cause": "Cryoglobulinemic and hepatitis-C-related glomerulonephritis",
+      "description": "Type II mixed cryoglobulins (monoclonal IgM rheumatoid factor with polyclonal IgG) precipitate in cold temperatures and deposit subendothelially, producing membranoproliferative glomerulonephritis. Hepatitis C is the cause in 80-90% of mixed cryoglobulinemia."
+    },
+    {
+      "cause": "Infection-related glomerulonephritis (non-streptococcal)",
+      "description": "Infective endocarditis (Staphylococcus aureus increasingly common), deep abscesses, infected vascular grafts, and chronic infections (hepatitis B, hepatitis C, HIV) generate circulating immune complexes that deposit in glomeruli. Often in diabetic adults; outcomes track infection control."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Recent group A streptococcal infection (pharyngitis or pyoderma)", "category": "environmental", "description": "Primary risk for post-streptococcal glomerulonephritis. Most common in children aged 5-12 in low- and middle-income settings; pyoderma-associated PSGN now exceeds pharyngitic PSGN globally." },
+    { "factor": "Asian and White ethnic ancestry", "category": "genetic", "description": "IgA nephropathy is much more common in East Asia (Japan, China, Korea) and in White populations than in Black African populations. Familial clustering and HLA associations support strong genetic susceptibility." },
+    { "factor": "Systemic lupus erythematosus", "category": "non-modifiable", "description": "30-50% of SLE patients develop kidney involvement; up to half of those have proliferative (nephritic) histology requiring immunosuppression." },
+    { "factor": "Age 65-74 years", "category": "non-modifiable", "description": "Peak age for ANCA-associated vasculitis. Older adults with ANCA vasculitis present more often with isolated kidney disease and have worse renal outcomes." },
+    { "factor": "Tobacco smoking and hydrocarbon exposure", "category": "modifiable", "description": "Smoking and hydrocarbon inhalation (gasoline, paint solvents) increase the risk of anti-GBM disease through alveolar basement membrane exposure and immunogenicity." },
+    { "factor": "Chronic hepatitis C infection", "category": "modifiable", "description": "Hepatitis C is the principal cause of type II mixed cryoglobulinemia and cryoglobulinemic membranoproliferative glomerulonephritis. Direct-acting antiviral therapy can resolve the kidney disease." },
+    { "factor": "Infective endocarditis or chronic deep infection", "category": "modifiable", "description": "Staphylococcus, Streptococcus, and enterococcal endocarditis produce immune-complex glomerulonephritis. Antibiotic treatment and source control are essential for renal recovery." }
+  ],
+
+  "affectedDemographics": [
+    "Post-streptococcal glomerulonephritis: 470,000 new cases globally per year (Carapetis 2005); mostly children 5-12 in low- and middle-income countries.",
+    "IgA nephropathy: most common primary glomerulonephritis globally with marked Asian predominance; incidence 5-7 per 100,000 per year in Japan versus 2.5 in Europe and under 1 in sub-Saharan Africa.",
+    "Lupus nephritis: 30-50% of SLE patients develop kidney involvement; women affected 9× more than men in the reproductive years.",
+    "ANCA-associated vasculitis: incidence 13-25 per million per year in the United Kingdom and Sweden, peak age 65-74; PR3-ANCA predominant in Northern Europe, MPO-ANCA in East Asia.",
+    "Anti-GBM disease: rare (1 per million per year) with bimodal age distribution at 20-30 and 60-70 years."
+  ],
+
+  "diagnosisOverview": "Evaluation begins with the urinalysis: dipstick hematuria, microscopic confirmation of red blood cells (dysmorphic morphology, acanthocytes), and identification of red-cell casts and proteinuria are highly suggestive of glomerular inflammation. Quantification of proteinuria (urine protein/creatinine ratio), creatinine and electrolytes, and complete blood count establish baseline severity. The serologic workup is structured around the differential: complement (C3, C4) — low C3 with normal C4 in post-streptococcal GN, low both in lupus and MPGN; antinuclear and anti-dsDNA antibody for lupus; ANCA (PR3 and MPO) for vasculitis; anti-GBM antibody for Goodpasture syndrome; cryoglobulins and hepatitis B and C serology; antistreptolysin O (ASO) or anti-DNase B for recent streptococcal infection; HIV and syphilis serology; blood cultures and echocardiogram when endocarditis is suspected. Imaging (renal ultrasound) excludes obstruction and assesses kidney size. Kidney biopsy is performed in nearly all adults with suspected glomerulonephritis to identify histologic pattern, immunofluorescence (IgA mesangial deposits, full-house staining of lupus, linear anti-GBM staining, pauci-immune ANCA pattern), electron microscopy (electron-dense deposits, podocyte effacement, basement membrane abnormalities), and the presence and percentage of crescents. Rapidly progressive glomerulonephritis (RPGN) — falling GFR over days to weeks with crescents in >50% of glomeruli — is a medical emergency requiring same-day biopsy and immunosuppression.",
+
+  "diagnosticTests": [
+    { "test": "Urine microscopy for dysmorphic red cells and red-cell casts", "purpose": "Confirms glomerular origin of hematuria; red-cell casts are pathognomonic for glomerulonephritis", "whatToExpect": "Fresh urine sample examined under phase-contrast or bright-field microscopy within 1 hour; report within 2 hours." },
+    { "test": "Urine protein/creatinine ratio and 24-hour urine collection", "purpose": "Quantifies proteinuria; usually <3.5 g/24 h in pure nephritic syndrome", "whatToExpect": "Single random urine sample or 24-hour collection; results same day." },
+    { "test": "Serum creatinine, electrolytes, urea, and complete blood count", "purpose": "Assesses kidney function, hyperkalemia, anemia, and platelet count before biopsy", "whatToExpect": "Single blood draw; results within hours." },
+    { "test": "Serum complement (C3, C4)", "purpose": "Differentiates causes: low C3 alone (PSGN, MPGN type II), low both (lupus, cryoglobulinemia), normal (IgA, anti-GBM, ANCA vasculitis)", "whatToExpect": "Single blood draw; results within 24-48 hours." },
+    { "test": "ANCA, anti-GBM, ANA, anti-dsDNA, anti-Sm, cryoglobulins, hepatitis B and C serology, HIV, ASO", "purpose": "Identifies specific underlying cause of glomerulonephritis", "whatToExpect": "Comprehensive panel of blood tests; results within 3-10 days depending on assay." },
+    { "test": "Renal ultrasound", "purpose": "Excludes obstruction; assesses kidney size (small kidneys suggest chronic disease); identifies cysts and masses", "whatToExpect": "30-minute non-invasive scan; results read same day." },
+    { "test": "Echocardiogram and blood cultures (when endocarditis suspected)", "purpose": "Diagnoses infective endocarditis, a treatable cause of immune-complex glomerulonephritis", "whatToExpect": "Echocardiogram 30-60 minutes; blood cultures 24-72 hours for organism identification." },
+    { "test": "Percutaneous kidney biopsy", "purpose": "Gold standard — identifies histologic pattern, immune deposit type and location, crescent percentage, and chronicity", "whatToExpect": "Ultrasound-guided needle biopsy under local anesthetic, day case. Bed rest 6-24 hours afterward; gross hematuria 5-10%, major bleeding <1%. Full report (light microscopy, IF, EM) within 5-10 days." }
+  ],
+
+  "treatmentOverview": "Treatment depends on the specific cause and the rate of GFR decline. Post-streptococcal glomerulonephritis is managed supportively in most children: sodium and fluid restriction, loop diuretics for edema, and antihypertensives (typically calcium-channel blockers in the acute phase, ACE inhibitors when proteinuria persists). Antibiotics (penicillin) eradicate residual streptococcus and prevent secondary cases. Spontaneous recovery is the rule. IgA nephropathy with persistent proteinuria above 0.75-1 g/day receives maximally tolerated ACE inhibitor or ARB; SGLT2 inhibitors (per DAPA-CKD and EMPA-KIDNEY trials) now reduce progression in this group; targeted-release budesonide (Nefecon, NefIgArd trial) and rituximab are emerging options in moderate-to-high-risk disease. Lupus nephritis class III, IV, or V requires induction therapy with mycophenolate mofetil 2-3 g/day or cyclophosphamide (Euro-Lupus regimen) plus pulse methylprednisolone followed by oral prednisone taper; maintenance with mycophenolate or azathioprine; rituximab or belimumab added for refractory disease. ANCA-associated vasculitis with kidney involvement is treated with induction by rituximab (375 mg/m² weekly × 4 or 1 g × 2; RITUXVAS, RAVE) or cyclophosphamide plus glucocorticoids (PEXIVAS demonstrated lower-dose steroid is non-inferior); plasma exchange is now reserved for the most severe cases (creatinine above 500 µmol/L or alveolar hemorrhage). Anti-GBM disease requires daily plasmapheresis (14 sessions or until anti-GBM antibody is undetectable), oral cyclophosphamide, and high-dose corticosteroids — kidneys not on dialysis at presentation have 80-90% renal recovery, while those already on dialysis rarely recover. Cryoglobulinemic glomerulonephritis with hepatitis C requires direct-acting antivirals and, in severe cases, rituximab. Infection-related glomerulonephritis hinges on infection control with appropriate antibiotics.",
+
+  "medicalTreatments": [
+    { "name": "Loop diuretic (furosemide 40-160 mg/day, IV in oliguria) and salt restriction (<2 g sodium/day)", "description": "Standard supportive treatment for fluid overload and hypertension in post-streptococcal glomerulonephritis and other causes. Restores euvolemia and reduces blood pressure.", "effectiveness": "Symptomatic improvement in 70-90% of post-streptococcal GN within 1-2 weeks" },
+    { "name": "ACE inhibitor or ARB (lisinopril 10-40 mg, losartan 50-100 mg, irbesartan 150-300 mg)", "description": "Renin-angiotensin blockade reduces intraglomerular pressure and proteinuria by 30-40%. Used in all causes once acute kidney injury has stabilized. Avoid in pregnancy.", "effectiveness": "Proteinuria reduction 30-40%; slows GFR decline in proteinuric chronic glomerulonephritis" },
+    { "name": "SGLT2 inhibitor (dapagliflozin 10 mg, empagliflozin 10 mg)", "description": "Now standard in proteinuric glomerular disease with eGFR above 20 mL/min/1.73 m² per DAPA-CKD and EMPA-KIDNEY. Reduces composite kidney failure or death by 28-30%.", "effectiveness": "Risk reduction for kidney failure and cardiovascular death of 28-30% in proteinuric CKD" },
+    { "name": "Pulse methylprednisolone (500-1000 mg IV daily for 3 days) followed by oral prednisone (60 mg/day taper)", "description": "Induction component for severe lupus nephritis, ANCA-associated vasculitis, and rapidly progressive glomerulonephritis. PEXIVAS established lower oral-steroid taper as non-inferior in ANCA vasculitis.", "effectiveness": "Combined with steroid-sparing agents, remission rates 70-85% in lupus nephritis and ANCA vasculitis" },
+    { "name": "Rituximab (375 mg/m² weekly × 4 or 1 g × 2)", "description": "First-line induction in ANCA-associated vasculitis (RITUXVAS, RAVE), used in lupus nephritis (refractory cases), cryoglobulinemic vasculitis, and IgA nephropathy under investigation.", "effectiveness": "Induction remission in ANCA vasculitis 64-75% at 6 months, non-inferior to cyclophosphamide" },
+    { "name": "Cyclophosphamide (Euro-Lupus 500 mg IV every 2 weeks × 6 for lupus; 15 mg/kg IV every 2-3 weeks for ANCA vasculitis)", "description": "Established induction agent for lupus nephritis and ANCA-associated vasculitis. Important toxicities include infertility, bone marrow suppression, infection, and bladder cancer with cumulative exposure.", "effectiveness": "Remission in lupus nephritis 60-80% at 24 weeks with maintenance; ANCA vasculitis remission rate similar to rituximab" },
+    { "name": "Mycophenolate mofetil (2-3 g/day for induction, 1-2 g/day for maintenance)", "description": "Induction and maintenance immunosuppressant in lupus nephritis. Equivalent or superior to cyclophosphamide in non-Black populations (Aspreva Lupus Management Study).", "effectiveness": "Complete or partial renal response 56-67% at 24 weeks in lupus nephritis" },
+    { "name": "Plasmapheresis (1 plasma volume daily × 14 sessions or until anti-GBM negative)", "description": "Standard in anti-GBM disease and reserved for severe ANCA vasculitis (creatinine >500 µmol/L or alveolar hemorrhage). Removes pathogenic antibodies.", "effectiveness": "Renal recovery 80-90% in dialysis-independent anti-GBM disease; under 10% if dialysis-dependent at presentation" },
+    { "name": "Direct-acting antivirals (sofosbuvir/velpatasvir, glecaprevir/pibrentasvir) for hepatitis C-related cryoglobulinemic GN", "description": "Modern interferon-free regimens cure hepatitis C in 95-99% and produce sustained remission of cryoglobulinemic vasculitis and glomerulonephritis.", "effectiveness": "Hepatitis C cure >95%; proteinuria reduction and cryoglobulin clearance in most patients" },
+    { "name": "Targeted-release budesonide (Nefecon 16 mg/day for 9 months) for IgA nephropathy", "description": "Gut-released corticosteroid that reduces mucosal IgA production. The NefIgArd trial demonstrated proteinuria reduction and GFR preservation versus placebo.", "effectiveness": "Proteinuria reduction 27-31% and slowed GFR decline at 12-24 months versus placebo in NefIgArd" },
+    { "name": "Penicillin or amoxicillin (10-day course)", "description": "Eradicates residual group A streptococcus in PSGN and prevents household transmission; does not alter the course of established nephritis.", "effectiveness": "Prevents secondary household cases; no impact on resolution time" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Kidney transplantation", "description": "Definitive treatment for end-stage kidney disease from chronic or refractory glomerulonephritis. Recurrence rates vary: IgA nephropathy 20-30%, FSGS 20-40%, anti-GBM disease rare if pre-transplant antibody is negative.", "successRate": "5-year graft survival 80-90% for living-donor and 70-80% for deceased-donor transplants" },
+    { "name": "Hemodialysis or peritoneal dialysis access", "description": "Required when GFR falls below 10-15 mL/min/1.73 m² or in fulminant RPGN with severe AKI not responding to immunosuppression.", "successRate": "AVF primary patency 60-70% at 1 year; PD catheter survival 75-85% at 2 years" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Tonsillectomy for relapsing IgA nephropathy", "description": "Practiced in Japan with observational benefit on hematuria and renal survival in selected patients; not endorsed by KDIGO 2021 outside research settings." },
+    { "name": "Mediterranean-style anti-inflammatory diet", "description": "Adjunctive lifestyle measure supporting cardiovascular risk reduction in proteinuric chronic glomerulonephritis." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "kidney-biopsy",
+    "kidney-transplantation",
+    "hemodialysis",
+    "plasma-exchange"
+  ],
+
+  "whySeeSpecialist": "All patients with suspected nephritic syndrome need urgent nephrology evaluation. Specialist input is essential for kidney biopsy decisions, choice and dosing of immunosuppression, treatment of associated systemic disease (vasculitis, lupus, hepatitis C), and management of complications including hypertension, fluid overload, and acute kidney injury. Rheumatology co-management is standard in lupus and ANCA vasculitis.",
+  "doctorSelectionGuide": "Choose a nephrology service affiliated with renal pathology offering immunofluorescence and electron microscopy on biopsy specimens, and with rapid access to immunosuppression, plasmapheresis, and dialysis. Joint glomerular disease and rheumatology clinics deliver optimal care for lupus, ANCA, and anti-GBM disease.",
+
+  "hospitalCriteria": [
+    "On-site renal pathology with immunofluorescence and electron microscopy",
+    "24-hour kidney biopsy capability",
+    "Plasma exchange (apheresis) service",
+    "Inpatient nephrology and dialysis units",
+    "Joint rheumatology-nephrology clinic for lupus and vasculitis"
+  ],
+  "keyFacilities": [
+    "Tertiary academic nephrology centers",
+    "Glomerular disease specialty clinics",
+    "Apheresis/plasmapheresis units",
+    "Pediatric nephrology services for PSGN",
+    "Transplant nephrology programs"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Early treatment of streptococcal pharyngitis with penicillin reduces but does not eliminate the risk of post-streptococcal glomerulonephritis.",
+    "Prompt treatment of streptococcal pyoderma with topical and systemic antibiotics in endemic regions reduces population burden.",
+    "Vaccination against hepatitis B prevents virus-associated glomerulonephritis.",
+    "Antiviral cure of chronic hepatitis C eliminates cryoglobulinemic glomerulonephritis risk.",
+    "Smoking cessation reduces anti-GBM disease risk and improves outcomes in all forms of glomerulonephritis.",
+    "Pneumococcal, influenza, and hepatitis B vaccination prior to long-term immunosuppression."
+  ],
+
+  "lifestyleModifications": [
+    "Adhere strictly to immunosuppression schedules including infusion appointments.",
+    "Restrict dietary sodium to under 2 g per day to support blood pressure and diuretic action.",
+    "Self-monitor blood pressure at home twice daily during active disease and report sustained readings above target.",
+    "Track daily weight and urine color; report new visible hematuria or sudden weight gain.",
+    "Stop smoking — accelerates kidney disease and increases infection risk during immunosuppression.",
+    "Avoid NSAIDs unless explicitly approved by the nephrology team.",
+    "Complete pneumococcal, influenza, hepatitis B, varicella, and COVID-19 vaccinations as early as possible."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Sodium-restricted (1.5-2 g/day) plant-rich diet",
+      "Moderate protein intake of 0.8-1.0 g/kg/day, individualized to GFR",
+      "Omega-3-rich foods (oily fish, flaxseed) for cardiovascular protection",
+      "Adequate fiber and whole grains for gut health on long-term immunosuppression"
+    ],
+    "avoid": [
+      "Salt-heavy processed foods, canned soups, restaurant meals, and pickles",
+      "Excess animal protein loading that may worsen hyperfiltration in residual CKD",
+      "Grapefruit and Seville orange on tacrolimus or cyclosporine (alters drug levels)",
+      "Raw or undercooked meat and unpasteurized dairy during heavy immunosuppression"
+    ]
+  },
+  "exerciseGuidelines": "Moderate aerobic activity is encouraged once acute kidney injury and severe hypertension have stabilized; 150 minutes per week of walking, cycling, or swimming is appropriate. Resistance training counteracts corticosteroid-induced muscle loss. Avoid contact sports during plasmapheresis or anticoagulation due to bleeding risk.",
+
+  "dailyManagement": [
+    "Take prescribed immunosuppression on time, with consistent food/empty-stomach instructions for tacrolimus or mycophenolate.",
+    "Measure blood pressure twice daily during active treatment and record.",
+    "Weigh daily at the same time and report sudden gains above 2 kg in a week.",
+    "Use a urine dipstick where supplied to monitor proteinuria and hematuria trends.",
+    "Avoid sick contacts during heavy immunosuppression; mask in healthcare settings.",
+    "Maintain hydration 1.5-2 L water per day unless restricted; report dark concentrated urine."
+  ],
+
+  "prognosis": "Outcome depends strongly on the underlying cause, the severity at presentation, and timeliness of treatment. Post-streptococcal glomerulonephritis in children has an excellent prognosis with over 95% achieving complete recovery; adult PSGN has worse outcomes with 30-60% developing chronic kidney disease. IgA nephropathy progresses to end-stage kidney disease in 20-40% over 20 years, with strongest predictors being proteinuria above 1 g/day, GFR at presentation, hypertension, and MEST-C histologic score. Lupus nephritis treated to complete renal remission achieves 10-year kidney survival above 90%; failure of induction (no remission at 6-12 months) carries 10-year kidney survival of 30-50%. ANCA-associated vasculitis treated promptly achieves induction remission in 70-85%, with 5-year patient survival above 80% and renal survival 60-80%. Anti-GBM disease prognosis hinges entirely on the dialysis status at presentation: dialysis-independent patients have 80-90% renal recovery, while dialysis-dependent patients rarely recover kidney function. Cryoglobulinemic glomerulonephritis with hepatitis C achieves disease remission in most patients with direct-acting antiviral cure. Across all forms, modern combination therapy with RAAS blockade and SGLT2 inhibitors substantially extends time to kidney failure even in residual proteinuria.",
+
+  "recoveryTimeline": "Post-streptococcal glomerulonephritis: hematuria and edema resolve over 2-6 weeks; C3 normalizes within 8-12 weeks; microscopic hematuria can persist for 6-12 months. IgA nephropathy: synpharyngitic hematuria episodes resolve within days to weeks; persistent proteinuria managed long term. Lupus and ANCA induction: 24-week course followed by maintenance for 2-3 years or longer. Anti-GBM: plasmapheresis course typically 14 sessions over 2-3 weeks with concurrent immunosuppression for 3 months.",
+
+  "complications": [
+    "Rapidly progressive glomerulonephritis with permanent kidney function loss if biopsy and immunosuppression are delayed — requires same-day biopsy when suspected.",
+    "Pulmonary hemorrhage in anti-GBM disease and ANCA-associated vasculitis (incidence 60-80% in anti-GBM); manage with plasmapheresis and respiratory support.",
+    "Hypertensive emergency including encephalopathy and seizure, especially in pediatric PSGN; manage with IV antihypertensives and diuresis.",
+    "Acute kidney injury requiring renal replacement therapy; recovery depends on histology and chronicity.",
+    "Treatment-related complications: infection on heavy immunosuppression, infertility and bladder cancer from cyclophosphamide, glucocorticoid toxicity, calcineurin inhibitor nephrotoxicity.",
+    "Progression to chronic kidney disease and end-stage kidney disease over years."
+  ],
+
+  "supportResources": [
+    { "name": "National Kidney Foundation — Glomerulonephritis", "url": "https://www.kidney.org/atoz/content/glomerul", "description": "Patient education on glomerulonephritis, causes, diagnosis, and treatment." },
+    { "name": "KDIGO Glomerular Diseases Guideline 2021", "url": "https://kdigo.org/guidelines/gd/", "description": "Authoritative clinical practice guideline for management of glomerular diseases globally." },
+    { "name": "Cure GN (CureGN consortium)", "url": "https://curegn.org/", "description": "International longitudinal registry and cohort study for IgA nephropathy, FSGS, minimal change, and membranous nephropathy." },
+    { "name": "Vasculitis Foundation", "url": "https://www.vasculitisfoundation.org/", "description": "Patient advocacy organization for ANCA-associated and other vasculitides with educational resources and physician finder." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "nephrotic-syndrome", "name": "Nephrotic Syndrome", "keyDifference": "Nephrotic syndrome features heavy proteinuria (>3.5 g/24 h), hypoalbuminemia, edema, and bland urinary sediment with minimal hematuria. Nephritic syndrome is dominated by hematuria with dysmorphic red cells and red-cell casts, hypertension, lower proteinuria, and active sediment from glomerular inflammation." },
+    { "slug": "iga-nephropathy", "name": "IgA Nephropathy", "keyDifference": "IgA nephropathy is a specific cause of nephritic syndrome with mesangial IgA1 deposition. Nephritic syndrome is the broader clinical phenotype which can result from IgA nephropathy as well as post-streptococcal GN, lupus, ANCA vasculitis, anti-GBM disease, or cryoglobulinemia." },
+    { "slug": "lupus-nephritis", "name": "Lupus Nephritis", "keyDifference": "Lupus nephritis is a specific cause of nephritic syndrome (classes III, IV) with subendothelial immune-complex deposition, low C3 and C4, and systemic lupus features. Idiopathic nephritic syndrome lacks lupus serology and systemic features." },
+    { "slug": "alport-syndrome", "name": "Alport Syndrome", "keyDifference": "Alport syndrome is a hereditary type IV collagen disorder presenting with persistent microscopic hematuria, sensorineural hearing loss, and ocular lesions, often in young men with a family history of kidney failure. Acquired nephritic syndromes lack the family history, audiologic features, and characteristic basement membrane splitting on biopsy." },
+    { "slug": "uti", "name": "Urinary Tract Infection", "keyDifference": "UTI produces dysuria, frequency, urgency, suprapubic pain, and bacteriuria with white-cell casts. Nephritic syndrome produces glomerular hematuria (dysmorphic red cells, red-cell casts), hypertension, and reduced GFR without bacterial infection." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "lupus", "name": "Systemic Lupus Erythematosus" },
+    { "slug": "hepatitis-c", "name": "Hepatitis C" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "nephrotic-syndrome", "name": "Nephrotic Syndrome", "relevance": "Sister syndrome with opposite urinary profile; some glomerular diseases (lupus, MPGN) produce mixed nephritic-nephrotic features." },
+    { "slug": "iga-nephropathy", "name": "IgA Nephropathy", "relevance": "Most common primary glomerulonephritis globally and a leading cause of nephritic syndrome." },
+    { "slug": "lupus-nephritis", "name": "Lupus Nephritis", "relevance": "Common cause of nephritic syndrome in young women with systemic lupus erythematosus." },
+    { "slug": "acute-kidney-injury", "name": "Acute Kidney Injury", "relevance": "Rapidly progressive glomerulonephritis is a leading cause of intrinsic acute kidney injury." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease", "relevance": "Long-term sequela of incomplete recovery from nephritic syndrome." },
+    { "slug": "end-stage-renal-disease-n186", "name": "End-Stage Renal Disease", "relevance": "Ultimate outcome of progressive glomerulonephritis when remission is not achieved." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is nephritic syndrome?",
+      "answer": "Nephritic syndrome is a glomerular inflammatory state featuring hematuria with red-cell casts, hypertension, reduced kidney function, mild-to-moderate proteinuria, and edema. It results from immune-complex deposits, anti-GBM antibodies, or pauci-immune capillary injury within glomeruli.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the main symptoms of nephritic syndrome?",
+      "answer": "Classic features include tea- or cola-colored urine, periorbital and facial swelling, new-onset hypertension, reduced urine output, mild proteinuria producing foamy urine, and fatigue. Severe disease can present with hypertensive encephalopathy, pulmonary edema, or rapidly progressive kidney failure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between nephritic and nephrotic syndrome?",
+      "answer": "Nephritic syndrome is characterized by hematuria with red-cell casts, hypertension, mild-to-moderate proteinuria, and reduced GFR from glomerular inflammation. Nephrotic syndrome features heavy proteinuria over 3.5 g/day, low serum albumin, edema, hyperlipidemia, and a bland urinary sediment from podocyte injury.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes nephritic syndrome in children?",
+      "answer": "Post-streptococcal glomerulonephritis is the most common cause in children worldwide, developing 1-3 weeks after streptococcal pharyngitis or 3-6 weeks after skin infection. IgA vasculitis (Henoch-Schönlein purpura) is another important pediatric cause. Rare causes include lupus nephritis and hereditary nephritis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes nephritic syndrome in adults?",
+      "answer": "Common adult causes include IgA nephropathy (most common primary form), lupus nephritis, ANCA-associated vasculitis, anti-GBM (Goodpasture) disease, cryoglobulinemic glomerulonephritis from hepatitis C, infection-related glomerulonephritis (endocarditis, deep abscess), and post-streptococcal disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is nephritic syndrome diagnosed?",
+      "answer": "Diagnosis is based on urinalysis showing dysmorphic red blood cells and red-cell casts, raised creatinine, mild-to-moderate proteinuria, and hypertension. Serologic workup includes complement, ANA, anti-dsDNA, ANCA, anti-GBM, hepatitis B and C, ASO, and cryoglobulins. Kidney biopsy provides definitive histologic diagnosis in adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is nephritic syndrome an emergency?",
+      "answer": "Rapidly progressive glomerulonephritis with creatinine doubling over days to a week, pulmonary hemorrhage, or hypertensive encephalopathy is an emergency. Same-day kidney biopsy and immediate immunosuppression (pulse steroids, rituximab, cyclophosphamide, plasmapheresis) are required to prevent permanent kidney function loss.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does cola-colored urine mean?",
+      "answer": "Cola, tea, or smoky brown urine is the classic appearance of glomerular hematuria. It indicates red blood cells passing through inflamed glomeruli rather than bleeding from the urinary tract. Most commonly seen in post-streptococcal glomerulonephritis and IgA nephropathy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can nephritic syndrome be cured?",
+      "answer": "Post-streptococcal glomerulonephritis resolves completely in over 95% of children. IgA nephropathy can be controlled but progresses to kidney failure in 20-40% over 20 years. Lupus nephritis and ANCA-associated vasculitis can achieve durable remission with modern immunosuppression. Anti-GBM disease can be controlled but rarely recurs.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is post-streptococcal glomerulonephritis treated?",
+      "answer": "Treatment is supportive: sodium and fluid restriction, loop diuretics for edema, antihypertensives for blood pressure control, and a 10-day course of penicillin to eradicate residual streptococcus. Most children recover fully within weeks; immunosuppression is rarely needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is IgA nephropathy serious?",
+      "answer": "IgA nephropathy is the most common primary glomerulonephritis worldwide. About 20-40% progress to end-stage kidney disease over 20 years. Strongest predictors are proteinuria above 1 g/day, hypertension, and the MEST-C histologic score. Modern management with ACE inhibitors, SGLT2 inhibitors, and targeted-release budesonide improves outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is rapidly progressive glomerulonephritis?",
+      "answer": "Rapidly progressive glomerulonephritis (RPGN) is a clinical syndrome of rapid loss of kidney function over days to weeks with crescents in more than 50% of glomeruli on biopsy. Causes include ANCA-associated vasculitis, anti-GBM disease, severe lupus nephritis, and severe IgA nephropathy. Urgent immunosuppression and plasmapheresis are required.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is ANCA-associated vasculitis treated?",
+      "answer": "First-line induction is rituximab (375 mg/m² weekly × 4 or 1 g × 2) or cyclophosphamide plus glucocorticoids. The PEXIVAS trial showed a lower oral steroid taper is non-inferior to high-dose steroids and reduces infection. Plasma exchange is reserved for severe disease with creatinine above 500 µmol/L or alveolar hemorrhage.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is anti-GBM disease?",
+      "answer": "Anti-GBM (Goodpasture) disease is a rare autoimmune disorder where antibodies to type IV collagen attack glomeruli and alveoli, producing rapidly progressive crescentic glomerulonephritis with pulmonary hemorrhage in 60-80%. Treatment combines daily plasmapheresis, cyclophosphamide, and high-dose corticosteroids.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can lupus cause nephritic syndrome?",
+      "answer": "Yes. Lupus nephritis classes III, IV, and IV+V cause nephritic syndrome with hematuria, proteinuria, hypertension, and reduced GFR. Treatment includes mycophenolate mofetil or cyclophosphamide plus glucocorticoids for induction, then mycophenolate or azathioprine maintenance; rituximab or belimumab for refractory cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is a kidney biopsy needed?",
+      "answer": "Kidney biopsy is the gold-standard test that identifies the specific histologic pattern, immune-deposit type and location (mesangial, subendothelial, subepithelial), crescent percentage, and chronicity index. This determines the underlying cause and guides choice of immunosuppression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can nephritic syndrome go away on its own?",
+      "answer": "Post-streptococcal glomerulonephritis usually resolves spontaneously with supportive care in children. IgA nephropathy episodes during upper respiratory infections often clear, though underlying disease persists. Lupus, ANCA vasculitis, and anti-GBM disease do not remit without immunosuppression and demand prompt treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hematuria after a sore throat dangerous?",
+      "answer": "Tea-colored or cola-colored urine 1-3 weeks after a sore throat in a child suggests post-streptococcal glomerulonephritis and warrants urgent medical evaluation including blood pressure measurement, urinalysis, kidney function tests, and ASO/anti-DNase B serology. Most children recover fully with supportive care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can nephritic syndrome cause high blood pressure?",
+      "answer": "Yes. Sodium retention and volume expansion from reduced glomerular filtration produce hypertension in most patients with active nephritic syndrome. Blood pressure can rise rapidly, especially in pediatric post-streptococcal disease, and may precipitate hypertensive encephalopathy or seizure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does treatment for nephritic syndrome take?",
+      "answer": "Post-streptococcal disease resolves over 6-12 weeks. IgA nephropathy requires lifelong RAAS blockade and SGLT2 inhibitor therapy. Lupus nephritis and ANCA-associated vasculitis induction lasts 24 weeks, followed by 2-3 years or longer of maintenance immunosuppression. Anti-GBM treatment is typically 3 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children outgrow nephritic syndrome?",
+      "answer": "Children with post-streptococcal glomerulonephritis recover completely in over 95% of cases. Children with IgA vasculitis (HSP) nephritis usually do well, with under 5% progressing to chronic kidney disease. Genetic forms (Alport, hereditary nephritis) and severe lupus do not resolve spontaneously.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Nephritic Syndrome (kidney inflammation with bloody urine)",
+  "regionalNames": [
+    { "name": "Acute glomerulonephritis", "region": "Global", "language": "English (medical)" },
+    { "name": "Síndrome nefrítico", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "Bright disease", "region": "Historical UK", "language": "English" },
+    { "name": "वृक्क शोथ", "region": "India (academic)", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "nephritic syndrome",
+    "acute glomerulonephritis",
+    "post-streptococcal glomerulonephritis",
+    "IgA nephropathy",
+    "lupus nephritis",
+    "ANCA vasculitis",
+    "anti-GBM disease",
+    "Goodpasture syndrome",
+    "RPGN",
+    "rapidly progressive glomerulonephritis",
+    "red-cell casts",
+    "hematuria glomerular",
+    "cola-colored urine",
+    "crescentic glomerulonephritis",
+    "cryoglobulinemic glomerulonephritis"
+  ],
+  "symptomKeywords": [
+    "blood in urine swelling",
+    "cola colored urine",
+    "tea colored urine after sore throat",
+    "puffy face high blood pressure kidney",
+    "decreased urine output edema",
+    "child blood urine after strep",
+    "hematuria red cell casts",
+    "rapidly rising creatinine"
+  ],
+
+  "metaTitle": "Nephritic Syndrome: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Nephritic syndrome: glomerular inflammation with hematuria, hypertension and edema. Causes, diagnosis, biopsy, immunosuppression and KDIGO treatment reviewed.",
+
+  "keywords": [
+    "nephritic syndrome",
+    "acute glomerulonephritis",
+    "post-streptococcal glomerulonephritis",
+    "IgA nephropathy",
+    "lupus nephritis",
+    "ANCA vasculitis",
+    "anti-GBM disease",
+    "RPGN",
+    "crescentic glomerulonephritis",
+    "red-cell casts",
+    "hematuria nephritis",
+    "kidney biopsy nephritis"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Kidney Disease: Improving Global Outcomes (KDIGO) Glomerular Diseases Work Group. 2021. KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases. Kidney International 100(4S):S1-S276.", "url": "https://kdigo.org/guidelines/gd/", "accessedDate": "2026-05-14" },
+    { "title": "Jones RB, Tervaert JWC, Hauser T, et al. 2010. Rituximab versus cyclophosphamide in ANCA-associated renal vasculitis (RITUXVAS). New England Journal of Medicine 363(3):211-220.", "url": "https://pubmed.ncbi.nlm.nih.gov/20647199/", "accessedDate": "2026-05-14" },
+    { "title": "Walsh M, Merkel PA, Peh CA, et al. 2020. Plasma Exchange and Glucocorticoids in Severe ANCA-Associated Vasculitis (PEXIVAS). New England Journal of Medicine 382(7):622-631.", "url": "https://pubmed.ncbi.nlm.nih.gov/32053298/", "accessedDate": "2026-05-14" },
+    { "title": "Carapetis JR, Steer AC, Mulholland EK, Weber M. 2005. The global burden of group A streptococcal diseases. Lancet Infectious Diseases 5(11):685-94.", "url": "https://pubmed.ncbi.nlm.nih.gov/16253886/", "accessedDate": "2026-05-14" },
+    { "title": "Trimarchi H, Barratt J, Cattran DC, et al. 2017. Oxford Classification of IgA nephropathy 2016 — an update from the IgA Nephropathy Classification Working Group. Kidney International 91(5):1014-1021.", "url": "https://pubmed.ncbi.nlm.nih.gov/28760335/", "accessedDate": "2026-05-14" },
+    { "title": "Rodriguez-Iturbe B, Musser JM. 2007. The current state of poststreptococcal glomerulonephritis. New England Journal of Medicine 357(13):1390-91.", "url": "https://pubmed.ncbi.nlm.nih.gov/17329701/", "accessedDate": "2026-05-14" },
+    { "title": "Pusey CD. 2003. Anti-glomerular basement membrane disease. Kidney International 64(4):1535-1550.", "url": "https://pubmed.ncbi.nlm.nih.gov/12970178/", "accessedDate": "2026-05-14" },
+    { "title": "Heerspink HJL, Stefansson BV, Correa-Rotter R, et al. 2020. Dapagliflozin in Patients with Chronic Kidney Disease (DAPA-CKD). New England Journal of Medicine 383(15):1436-1446.", "url": "https://pubmed.ncbi.nlm.nih.gov/32970396/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

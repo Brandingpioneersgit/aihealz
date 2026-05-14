@@ -43,15 +43,15 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | malaria | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | done | 7,121 words, 22 FAQs, 9 sources, 3 images; row 522 |
 | tinnitus | 1 | ENT Specialist | claude-2026-05-12 | 2026-05-12 | done | 5,992 words, 22 FAQs, 8 sources; row 521 |
 | fibromyalgia | 1 | Rheumatologist | claude-2026-05-12 | 2026-05-12 | done | 6,295 words, 22 FAQs, 9 sources; row 512 |
-| hydrocephalus-neurosurg | 1 | Neurosurgery | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 3 variants |
+| hydrocephalus-neurosurg | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | erectile-dysfunction | 1 | Urology | claude-2026-05-12 | 2026-05-12 | done | 6,614 words, 22 FAQs, 9 sources; row 510 |
-| sensorineural-hearing-loss | 1 | Ophthalmology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 3 variants |
+| sensorineural-hearing-loss | 1 | Ophthalmology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | acne | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | done | 6,953 words, 21 FAQs, 9 sources, 3 images; row 503 |
 | rosacea | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | vitiligo | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | scoliosis | 1 | Orthopedic Surgeon | claude-2026-05-12 | 2026-05-12 | done | 6,677 words, 22 FAQs, 10 sources; row 518 |
 | sarcopenia | 1 | Geriatrics | claude-2026-05-12 | 2026-05-12 | done | 6,235 words, 22 FAQs, 10 sources; row 517 |
-| lymphedema-rehab | 1 | Physical Medicine & Rehabilitation | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| lymphedema-rehab | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | mesothelioma | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,284 words, 21 FAQs (all schemaEligible), 8 sources; row 586 |
 | otosclerosis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | 4,740 words, 21 FAQs (all schemaEligible), 8 sources; row 584 |
 | lyme-disease | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
@@ -59,13 +59,13 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | schizophrenia | 1 | Psychiatrist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | leishmaniasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,248 words, 21 FAQs (all schemaEligible), 8 sources; row 580 |
 | leptospirosis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 4,665 words, 21 FAQs (all schemaEligible), 8 sources; row 581 |
-| cholesteatoma | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| farmers-lung | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| hyperlipidemia-family | 1 | Family Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| stress-fracture-sports | 1 | Sports Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| cholesteatoma | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| farmers-lung | 1 | Pulmonology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| hyperlipidemia-family | 1 | Family Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| stress-fracture-sports | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | alport-syndrome | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | 5,112 words, 21 FAQs (all schemaEligible), 8 sources; row 587 |
 | alopecia | 1 | Dermatology | claude-2026-05-14 | 2026-05-14 | done | 5,453 words, 21 FAQs (all schemaEligible), 8 sources; row 577 |
-| strongyloidiasis | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| strongyloidiasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | bipolar-disorder | 1 | Psychiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | plantar-fasciitis | 1 | Podiatrist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | chronic-sinusitis | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
@@ -78,61 +78,61 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | atrial-fibrillation | 1 | Cardiology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | trigeminal-neuralgia | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
 | macular-degeneration | 1 | Ophthalmology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| central-pain-syndrome | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| chronic-pain-syndrome | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| deviated-nasal-septum | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| peritonsillar-abscess | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| central-pain-syndrome | 1 | Neurology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| chronic-pain-syndrome | 1 | Neurology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| deviated-nasal-septum | 1 | Pulmonology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| peritonsillar-abscess | 1 | Pulmonology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | carpal-tunnel | 1 | Orthopedic Surgeon | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| polymyalgia-rheumatica | 1 | Orthopedics | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| polymyalgia-rheumatica | 1 | Orthopedics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | eosinophilic-esophagitis | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| antiphospholipid-syndrome | 1 | Hematology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| common-variable-immunodeficiency | 1 | Hematology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| abpa | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| antiphospholipid-syndrome | 1 | Hematology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| common-variable-immunodeficiency | 1 | Hematology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| abpa | 1 | Infectious Disease | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | lupus | 1 | Rheumatologist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
 | vertigo | 1 | ENT Specialist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
 | hiv-aids | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| acl-tear | 1 | Sports Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| silicosis | 1 | Occupational Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| heel-spur | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| parotitis | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| angioedema-allergy | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| acl-tear | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| silicosis | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| heel-spur | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| parotitis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| angioedema-allergy | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | meningioma | 1 | Neurosurgery | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| groin-pull | 1 | Sports Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| asbestosis | 1 | Occupational Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| zika-virus | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| hammer-toe | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| groin-pull | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| asbestosis | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| zika-virus | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| hammer-toe | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | anaphylaxis | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| chikungunya | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| chikungunya | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | tuberculosis | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| dengue-fever | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| dengue-fever | 1 | Infectious Disease | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | food-allergy | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| drug-allergy | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| shin-splints | 1 | Sports Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| ankle-sprain-pod | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| drug-allergy | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| shin-splints | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| ankle-sprain-pod | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | nasal-polyps | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| epiglottitis | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| polymyositis | 1 | Rheumatology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| charcot-foot | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| latex-allergy | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| prenatal-care | 1 | Family Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| meniscus-tear | 1 | Sports Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| metatarsalgia | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| serum-sickness | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| chagas-disease | 1 | Tropical Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| behcet-disease | 1 | Rheumatology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| iga-nephropathy | 1 | Nephrology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| lupus-nephritis | 1 | Nephrology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| whiplash-injury | 1 | Physical Medicine & Rehabilitation | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| allergic-asthma | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| ingrown-toenail | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| epiglottitis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| polymyositis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| charcot-foot | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| latex-allergy | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| prenatal-care | 1 | Family Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| meniscus-tear | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| metatarsalgia | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| serum-sickness | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| chagas-disease | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| behcet-disease | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| iga-nephropathy | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| lupus-nephritis | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| whiplash-injury | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| allergic-asthma | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| ingrown-toenail | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | meniere-disease | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| dermatomyositis | 1 | Rheumatology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| frailty-syndrome | 1 | Geriatrics | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| falls-in-elderly | 1 | Geriatrics | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| dermatomyositis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| frailty-syndrome | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| falls-in-elderly | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | neuropathic-pain | 1 | Pain Medicine & Palliative Care | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| hamstring-strain | 1 | Sports Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| muscle-contusion | 1 | Sports Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| burnout-syndrome | 1 | Occupational Medicine | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| hamstring-strain | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| muscle-contusion | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| burnout-syndrome | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | mortons-neuroma | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | done | 6,135 words, 22 FAQs, 10 sources; row 520. ⚠ link-check pending (cited from training data, not live-verified) |
 | gout-podiatric | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
 | laryngeal-cancer | 1 | ENT | claude-2026-05-12 | 2026-05-12 | done | 6,932 words, 22 FAQs, 9 sources; row 519. ⚠ link-check pending (cited from training data, not live-verified) |
@@ -143,55 +143,55 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 
 
 <!-- BATCH 003 — 68 conditions, generated 2026-05-12 -->
-| intractable-pain | 1 | Pain Medicine & Palliative Care | (open) | — | open | Batch 003, 1 variant |
-| chronic-urticaria | 1 | Allergy & Immunology | (open) | — | open | Batch 003, 1 variant |
-| phantom-limb-pain | 1 | Pain Medicine & Palliative Care | (open) | — | open | Batch 003, 1 variant |
-| breakthrough-pain | 1 | Pain Medicine & Palliative Care | (open) | — | open | Batch 003, 1 variant |
-| well-child-visits | 1 | Family Medicine | (open) | — | open | Batch 003, 1 variant |
-| cerebral-aneurysm | 1 | Neurosurgery | (open) | — | open | Batch 003, 1 variant |
-| pituitary-adenoma | 1 | Neurosurgery | (open) | — | open | Batch 003, 1 variant |
-| subdural-hematoma | 1 | Neurosurgery | (open) | — | open | Batch 003, 1 variant |
-| epidural-hematoma | 1 | Neurosurgery | (open) | — | open | Batch 003, 1 variant |
-| labral-tear-hip | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |
+| intractable-pain | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| chronic-urticaria | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| phantom-limb-pain | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| breakthrough-pain | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| well-child-visits | 1 | Family Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| cerebral-aneurysm | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| pituitary-adenoma | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| subdural-hematoma | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| epidural-hematoma | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| labral-tear-hip | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | sleep-apnea-ent | 1 | ENT | (open) | — | open | Batch 003, 1 variant |
-| nephrotic-syndrome | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| nephritic-syndrome | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| obesity-management | 1 | Family Medicine | (open) | — | open | Batch 003, 1 variant |
-| hookworm-infection | 1 | Tropical Medicine | (open) | — | open | Batch 003, 1 variant |
-| vocal-cord-nodules | 1 | ENT | (open) | — | open | Batch 003, 1 variant |
-| reactive-arthritis | 1 | Rheumatology | (open) | — | open | Batch 003, 1 variant |
-| raynaud-phenomenon | 1 | Rheumatology | (open) | — | open | Batch 003, 1 variant |
-| delirium-in-elderly | 1 | Geriatrics | (open) | — | open | Batch 003, 1 variant |
-| senile-osteoporosis | 1 | Geriatrics | (open) | — | open | Batch 003, 1 variant |
-| sundowning-syndrome | 1 | Geriatrics | (open) | — | open | Batch 003, 1 variant |
-| chiari-malformation | 1 | Neurosurgery | (open) | — | open | Batch 003, 1 variant |
-| occupational-asthma | 1 | Occupational Medicine | (open) | — | open | Batch 003, 1 variant |
-| diabetic-foot-ulcer | 1 | Podiatry | (open) | — | open | Batch 003, 1 variant |
-| achilles-tendinitis | 1 | Podiatry | (open) | — | open | Batch 003, 1 variant |
-| psoriatic-arthritis | 1 | Rheumatology | (open) | — | open | Batch 003, 1 variant |
-| diabetic-nephropathy | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| renal-cell-carcinoma | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| goodpasture-syndrome | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| elder-abuse-syndrome | 1 | Geriatrics | (open) | — | open | Batch 003, 1 variant |
-| geriatric-depression | 1 | Geriatrics | (open) | — | open | Batch 003, 1 variant |
-| lumbar-radiculopathy | 1 | Physical Medicine & Rehabilitation | (open) | — | open | Batch 003, 1 variant |
-| insect-venom-allergy | 1 | Allergy & Immunology | (open) | — | open | Batch 003, 1 variant |
-| brain-tumor-glioma | 1 | Neurosurgery | (open) | — | open | Batch 003, 1 variant |
-| concussion-in-sports | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |
-| vocal-cord-paralysis | 1 | ENT | (open) | — | open | Batch 003, 1 variant |
-| giant-cell-arteritis | 1 | Rheumatology | (open) | — | open | Batch 003, 1 variant |
-| vesicoureteral-reflux | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| chronic-low-back-pain | 1 | Physical Medicine & Rehabilitation | (open) | — | open | Batch 003, 1 variant |
-| spasticity-management | 1 | Physical Medicine & Rehabilitation | (open) | — | open | Batch 003, 1 variant |
-| hereditary-angioedema | 1 | Allergy & Immunology | (open) | — | open | Batch 003, 1 variant |
-| overtraining-syndrome | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |
-| salivary-gland-stones | 1 | ENT | (open) | — | open | Batch 003, 1 variant |
-| renal-tubular-acidosis | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| membranous-nephropathy | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| minimal-change-disease | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| interstitial-nephritis | 1 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| geriatric-malnutrition | 1 | Geriatrics | (open) | — | open | Batch 003, 1 variant |
-| cervical-radiculopathy | 1 | Physical Medicine & Rehabilitation | (open) | — | open | Batch 003, 1 variant |
+| nephrotic-syndrome | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| nephritic-syndrome | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| obesity-management | 1 | Family Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| hookworm-infection | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| vocal-cord-nodules | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| reactive-arthritis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| raynaud-phenomenon | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| delirium-in-elderly | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| senile-osteoporosis | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| sundowning-syndrome | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| chiari-malformation | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| occupational-asthma | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| diabetic-foot-ulcer | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| achilles-tendinitis | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| psoriatic-arthritis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| diabetic-nephropathy | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| renal-cell-carcinoma | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| goodpasture-syndrome | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| elder-abuse-syndrome | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| geriatric-depression | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| lumbar-radiculopathy | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| insect-venom-allergy | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| brain-tumor-glioma | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| concussion-in-sports | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| vocal-cord-paralysis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| giant-cell-arteritis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| vesicoureteral-reflux | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| chronic-low-back-pain | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| spasticity-management | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| hereditary-angioedema | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| overtraining-syndrome | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| salivary-gland-stones | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| renal-tubular-acidosis | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| membranous-nephropathy | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| minimal-change-disease | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| interstitial-nephritis | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| geriatric-malnutrition | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
+| cervical-radiculopathy | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | cancer-pain-management | 1 | Pain Medicine & Palliative Care | (open) | — | open | Batch 003, 1 variant |
 | postherpetic-neuralgia | 1 | Pain Medicine & Palliative Care | (open) | — | open | Batch 003, 1 variant |
 | labral-tear-shoulder | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |

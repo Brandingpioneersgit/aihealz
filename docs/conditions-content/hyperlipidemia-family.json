@@ -1,0 +1,459 @@
+{
+  "_meta": {
+    "slug": "hyperlipidemia-family",
+    "tier": 1,
+    "headTerm": "hyperlipidemia",
+    "longTailKeywords": [
+      "hyperlipidemia symptoms",
+      "hyperlipidemia treatment",
+      "high cholesterol diagnosis",
+      "LDL cholesterol target",
+      "statin therapy guidelines",
+      "familial hypercholesterolemia",
+      "PCSK9 inhibitor",
+      "ezetimibe statin combination",
+      "bempedoic acid",
+      "ApoB measurement",
+      "ASCVD risk score",
+      "lipid panel interpretation"
+    ],
+    "primarySpecialty": "Family Medicine",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Treatment and risk assessment per 2018 AHA/ACC Cholesterol Guideline (Grundy et al. J Am Coll Cardiol 2019 PMID 30586774) and 2019 ESC/EAS Dyslipidemia Guideline (Mach et al. Eur Heart J 2020 PMID 31504418). FH detection per Sturm/Knowles 2018 (Familial Hypercholesterolemia Foundation) and Nordestgaard Eur Heart J 2013 (PMID 23956253). Statin efficacy meta-analysis per CTT Collaboration Lancet 2010 PMID 21067804 and 2019. PCSK9 inhibitor outcomes from FOURIER (Sabatine NEJM 2017 PMID 28304224) and ODYSSEY OUTCOMES (Schwartz NEJM 2018 PMID 30403574). Bempedoic acid CLEAR Outcomes (Nissen NEJM 2023 PMID 36876740). USPSTF statin screening 2022 (PMID 35997723)."
+  },
+
+  "h1Title": "Hyperlipidemia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Family Medicine",
+
+  "heroOverview": "Hyperlipidemia is an elevation of one or more circulating lipid fractions — most importantly low-density lipoprotein cholesterol (LDL-C), triglycerides, and lipoprotein(a) — that drives atherosclerotic cardiovascular disease, the leading cause of death worldwide. Roughly 38% of US adults have total cholesterol above 200 mg/dL (NHANES 2017-2020), and 86 million American adults need statin consideration under current AHA/ACC guidelines. The condition is usually silent until plaque rupture causes myocardial infarction, ischemic stroke, or peripheral arterial disease; physical signs (xanthelasma, tendon xanthomas, corneal arcus) appear only in severe or familial forms. High-intensity statin therapy reduces LDL-C by 50% and cuts major cardiovascular events by 25-30% per 39 mg/dL drop sustained over years (CTT 2010). PCSK9 inhibitors, ezetimibe, bempedoic acid, and inclisiran provide additional event reduction in high-risk patients.",
+
+  "keyStats": {
+    "prevalence": "38% of US adults have total cholesterol ≥200 mg/dL; 11.5% have LDL-C ≥130 mg/dL (NHANES 2017-2020); 86 million eligible for statin under 2018 AHA/ACC guidelines",
+    "demographics": "Roughly equal prevalence between sexes overall, with rising rates in men 35-65 and post-menopausal women; non-Hispanic White and Mexican-American adults slightly higher than Black adults in US data",
+    "avgAge": "Heterozygous familial hypercholesterolemia detectable from age 2-5; polygenic hyperlipidemia typical onset 30-50; severe untreated FH causes cardiovascular events in men under 50 and women under 60",
+    "globalCases": "WHO estimates raised cholesterol contributes to 4.4 million deaths annually; approximately 1 in 250 adults carry heterozygous familial hypercholesterolemia mutations (Nordestgaard 2013)"
+  },
+
+  "definition": "Hyperlipidemia (ICD-10: E78.5 unspecified; E78.0 familial hypercholesterolemia; E78.1 familial hypertriglyceridemia; E78.2 mixed) is an abnormal elevation of plasma lipids and lipoproteins. Cholesterol and triglyceride circulate in apolipoprotein-containing particles: chylomicrons (intestinal fat absorption), VLDL (liver-derived triglyceride transport), IDL, LDL (the major atherogenic particle), HDL (reverse cholesterol transport), and lipoprotein(a). The clinically dominant fractions are LDL cholesterol — directly atherogenic at concentrations above 100 mg/dL — non-HDL cholesterol (total minus HDL), apolipoprotein B (ApoB, particle count), triglycerides (which signal residual cardiovascular risk and pancreatitis at very high levels), and lipoprotein(a) (genetically determined, atherogenic and thrombogenic). Primary forms include familial hypercholesterolemia (LDLR, APOB, PCSK9 mutations causing LDL-C above 190 mg/dL and premature ASCVD), familial combined hyperlipidemia, dysbetalipoproteinemia (APOE2/E2), and familial hypertriglyceridemia. Secondary forms accompany hypothyroidism, type 2 diabetes mellitus, chronic kidney disease, nephrotic syndrome, cholestasis, obesity, alcohol excess, and medications (corticosteroids, retinoids, antipsychotics, antiretrovirals). Diagnosis and management are primarily by family medicine and primary care, with cardiology, endocrinology, and lipid specialist input in resistant or familial cases.",
+
+  "typesClassification": [
+    { "type": "Polygenic primary hypercholesterolemia", "description": "The most common form, accounting for 80-90% of adults with elevated LDL-C. Caused by interaction of multiple common variants in lipid-handling genes with lifestyle factors (diet, weight, activity). Typical LDL-C 130-190 mg/dL." },
+    { "type": "Heterozygous familial hypercholesterolemia (HeFH)", "description": "Autosomal codominant disorder affecting roughly 1 in 250 adults globally. Mutations in LDLR (most common), APOB, or PCSK9 produce untreated LDL-C 190-450 mg/dL from birth. Untreated men develop ASCVD by 50 and women by 60; statin therapy plus PCSK9 inhibitor doubles event-free survival." },
+    { "type": "Homozygous familial hypercholesterolemia (HoFH)", "description": "Rare (1 in 250,000-1 million), with biallelic LDLR mutations producing LDL-C above 450-1,000 mg/dL from infancy, cutaneous and tendon xanthomas, and aortic stenosis with childhood-onset ASCVD. Requires evolocumab, lomitapide, evinacumab, or LDL apheresis." },
+    { "type": "Familial combined hyperlipidemia", "description": "Most common inherited dyslipidemia (1-2% of population). Variable elevation of LDL-C, triglycerides, and ApoB; often associated with metabolic syndrome, central obesity, and type 2 diabetes risk. Treat both LDL-C and triglycerides." },
+    { "type": "Familial dysbetalipoproteinemia (Type III)", "description": "Caused by APOE2/E2 genotype with a second metabolic trigger (hypothyroidism, diabetes, obesity). Elevated remnant lipoproteins, palmar and tuboeruptive xanthomas, premature ASCVD. Responds dramatically to statin and fibrate therapy." },
+    { "type": "Severe hypertriglyceridemia (Type V, chylomicronemia)", "description": "Triglycerides above 500-1,000 mg/dL with risk of pancreatitis at levels above 1,000 mg/dL. Causes include LPL or APOC2 mutations, alcohol, diabetes, and estrogen therapy. Acute management with fasting, insulin if diabetic, and fibrate or omega-3 therapy." },
+    { "type": "Elevated lipoprotein(a)", "description": "Genetically determined Lp(a) levels above 50 mg/dL or 125 nmol/L affect 20% of the population and confer 2-3 fold higher ASCVD and aortic stenosis risk. Currently no specific Lp(a)-lowering therapy in clinical use; PCSK9 inhibitors reduce Lp(a) by 25%, and novel apolipoprotein(a) antisense agents are in late-phase trials." }
+  ],
+
+  "primarySymptoms": [
+    "Most patients are asymptomatic until cardiovascular complications develop — the diagnosis is made on lipid panel screening rather than symptoms.",
+    "Tendon xanthomas on the Achilles tendons or extensor tendons of the hands — present in 30-50% of untreated heterozygous familial hypercholesterolemia patients by age 30.",
+    "Xanthelasma palpebrarum — soft yellow plaques on the medial eyelids, present in 4% of FH patients and a non-specific finding in older adults.",
+    "Corneal arcus — a grey-white ring around the iris that suggests FH when present before age 45, but is non-specific in older adults.",
+    "Tuboeruptive xanthomas on elbows, knees, and buttocks in dysbetalipoproteinemia or homozygous FH.",
+    "Palmar crease xanthomas (orange-yellow streaks in the palmar creases) — pathognomonic for dysbetalipoproteinemia.",
+    "Eruptive xanthomas — crops of small yellow-red papules on extensor surfaces during episodes of severe hypertriglyceridemia.",
+    "Lipemia retinalis — pale 'salmon-colored' retinal vessels when triglycerides exceed 1,000 mg/dL; reversible with treatment.",
+    "Acute pancreatitis — severe epigastric pain, nausea, and elevated lipase developing at triglyceride levels above 1,000 mg/dL.",
+    "Cardiovascular event presentations (chest pain, dyspnea on exertion, claudication, transient ischemic attack) — frequently the first indication of long-standing hyperlipidemia in untreated patients."
+  ],
+
+  "earlyWarningSigns": [
+    "Family history of premature coronary artery disease (men under 55, women under 65) in a first-degree relative",
+    "Total cholesterol above 240 mg/dL or LDL-C above 160 mg/dL on routine screening",
+    "Tendon xanthomas on the Achilles, especially in young or middle-aged adults",
+    "Corneal arcus appearing before age 45",
+    "Recurrent acute pancreatitis without gallstones or significant alcohol use — consider severe hypertriglyceridemia"
+  ],
+
+  "emergencySigns": [
+    "Severe central or left-sided crushing chest pain, breathlessness, sweating, or arm/jaw pain — exclude acute coronary syndrome with ECG, troponin, and immediate emergency assessment",
+    "Sudden focal neurological deficit (facial droop, arm weakness, speech change) — exclude acute ischemic stroke; activate stroke pathway",
+    "Severe persistent epigastric pain radiating to the back with vomiting in a known hypertriglyceridemic patient — exclude acute pancreatitis with lipase and abdominal imaging",
+    "Sudden, severe leg pain with cold, pale, pulseless limb — acute limb ischemia",
+    "Sudden, severe dyspnea, hemoptysis, or syncope — exclude pulmonary embolism (associated with elevated Lp(a) and prothrombotic states)"
+  ],
+
+  "causes": [
+    {
+      "cause": "Genetic variants in LDL handling genes (LDLR, APOB, PCSK9, LDLRAP1)",
+      "description": "Mutations in the LDL receptor account for 60-80% of heterozygous familial hypercholesterolemia. APOB mutations (about 5%) reduce LDL clearance; PCSK9 gain-of-function variants raise LDLR degradation. These produce LDL-C 190-450 mg/dL from birth and dominate the genetic causes of premature ASCVD."
+    },
+    {
+      "cause": "Polygenic burden of common variants",
+      "description": "Most hyperlipidemia is polygenic — small effects from dozens of common variants combine with lifestyle to produce LDL-C 130-190 mg/dL in adults. Cumulative cardiovascular risk depends on level, duration, and other risk factors."
+    },
+    {
+      "cause": "Dietary saturated and trans fat, refined carbohydrate, and excess calories",
+      "description": "Saturated fat raises LDL-C by 0.04 mg/dL per 1% energy substitution; trans fat is even more deleterious. Excess refined carbohydrate raises triglycerides and lowers HDL-C. Healthy dietary patterns (Mediterranean, DASH, plant-based) reduce LDL-C by 5-15%."
+    },
+    {
+      "cause": "Hypothyroidism, type 2 diabetes, chronic kidney disease, and nephrotic syndrome",
+      "description": "Secondary hyperlipidemia accompanies these endocrine and renal disorders. Hypothyroidism slows LDL receptor clearance; type 2 diabetes raises triglycerides and small-dense LDL; nephrotic syndrome can produce LDL-C above 300 mg/dL. Treating the underlying disorder partially or fully reverses the lipid abnormality."
+    },
+    {
+      "cause": "Medications: corticosteroids, oral retinoids, antipsychotics, antiretrovirals, immunosuppressants",
+      "description": "Drug-induced dyslipidemia commonly raises triglycerides and LDL-C. Atypical antipsychotics, protease inhibitors, and second-generation retinoids are particular offenders. Lipid panels are recommended before and 3-6 months after starting these medications."
+    },
+    {
+      "cause": "Excess alcohol intake",
+      "description": "Alcohol consumption above 2 drinks/day in men and 1 drink/day in women raises triglycerides through hepatic VLDL production. Abstinence reduces triglycerides by 30-50% within weeks in heavy drinkers."
+    },
+    {
+      "cause": "Obesity, central adiposity, and physical inactivity",
+      "description": "Excess visceral fat increases hepatic VLDL secretion, raises ApoB, and lowers HDL-C. Weight loss of 5-10% reduces triglycerides by 20-40% and modestly improves LDL-C and HDL-C."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of premature ASCVD or familial hypercholesterolemia", "category": "genetic", "description": "First-degree relative with premature coronary artery disease (men under 55, women under 65) doubles personal cardiovascular risk and triggers FH cascade screening. About 1 in 250 adults carry a heterozygous FH mutation." },
+    { "factor": "Age over 40 (men) or post-menopause (women)", "category": "non-modifiable", "description": "Cardiovascular risk and LDL-C levels rise progressively with age. Post-menopausal women show LDL-C increases of 10-20%, making lipid screening particularly important after menopause." },
+    { "factor": "Type 2 diabetes mellitus", "category": "modifiable", "description": "Diabetes doubles ASCVD risk for any LDL-C level and is a statin-benefit group per 2018 AHA/ACC guideline regardless of 10-year risk. Atherogenic dyslipidemia (high triglycerides, low HDL, small dense LDL) is typical." },
+    { "factor": "Hypertension", "category": "modifiable", "description": "Combined hypertension and hyperlipidemia multiply cardiovascular risk roughly 4-fold. ASCVD risk calculators integrate both, and combined risk reduction (statin plus blood pressure control) yields proportionally greater benefit." },
+    { "factor": "Tobacco use", "category": "modifiable", "description": "Smoking is among the strongest modifiable cardiovascular risk factors, accelerating atherosclerosis and raising acute event risk. Smoking cessation reduces 10-year cardiovascular risk by 25-35% within 1-2 years." },
+    { "factor": "Overweight, obesity, and metabolic syndrome", "category": "modifiable", "description": "BMI ≥30 raises ASCVD risk through dyslipidemia, hypertension, diabetes, and inflammation. Weight loss of 5-10% improves all components of metabolic syndrome." },
+    { "factor": "Sedentary lifestyle", "category": "modifiable", "description": "Inactivity raises LDL-C, lowers HDL-C, and increases triglycerides. 150 minutes weekly of moderate exercise reduces ASCVD risk approximately 20%." },
+    { "factor": "Chronic kidney disease (eGFR under 60)", "category": "modifiable", "description": "Chronic kidney disease accelerates atherosclerosis and is a statin-benefit group in 2018 AHA/ACC guidelines regardless of LDL-C level. Apolipoprotein B and lipoprotein(a) measurement adds value in this population." }
+  ],
+
+  "affectedDemographics": [
+    "United States: 38% of adults have total cholesterol ≥200 mg/dL; 28% of adults aged 40-75 are statin-eligible per 2018 AHA/ACC guideline (NHANES 2017-2020).",
+    "Familial hypercholesterolemia: approximately 1 in 250 adults globally have heterozygous FH; under 10% are diagnosed in most countries, representing a major missed prevention opportunity.",
+    "Adults over 65: nearly half exceed LDL-C 130 mg/dL; cardiovascular event rates are highest in this group, making absolute risk reduction from statins largest.",
+    "Patients with diabetes: virtually universal atherogenic dyslipidemia with elevated triglycerides and small-dense LDL particles; cardiovascular event rates 2-4x higher than non-diabetic counterparts.",
+    "Lp(a) elevation: 20% of the global population has Lp(a) above 50 mg/dL; substantially higher prevalence in South Asians and Black African populations."
+  ],
+
+  "diagnosisOverview": "Diagnosis is by fasting or non-fasting lipid panel: total cholesterol, HDL-C, triglycerides, and LDL-C (calculated by Friedewald equation, Martin/Hopkins equation, or direct measurement). Non-fasting samples are accepted for screening in most patients (2018 AHA/ACC); fasting samples are preferred when triglycerides exceed 400 mg/dL or to recheck after dietary changes. Universal screening is recommended for adults age 20+ at least every 5 years; the US Preventive Services Task Force recommends statin consideration for adults 40-75 with one or more cardiovascular risk factors and a 10-year ASCVD risk ≥ 10% (2022 statement). For risk assessment, the Pooled Cohort Equations or the newer PREVENT calculator estimate 10-year ASCVD risk integrating age, sex, race, blood pressure, smoking, diabetes, and lipid levels. Risk-enhancing factors (family history of premature CAD, metabolic syndrome, chronic kidney disease, chronic inflammatory disease, persistently elevated triglycerides, persistent LDL-C ≥160 mg/dL) refine risk in intermediate-risk patients. Coronary artery calcium (CAC) scoring is the most powerful subclinical atherosclerosis test in patients with intermediate risk: CAC = 0 supports deferral of statin in many cases; CAC ≥100 or ≥75th percentile for age/sex supports statin initiation. ApoB and non-HDL-C provide superior cardiovascular risk discrimination than LDL-C alone in patients with elevated triglycerides, diabetes, or metabolic syndrome. Lp(a) should be measured at least once in adulthood in patients with family history of premature ASCVD or recurrent events despite optimal therapy; values above 50 mg/dL or 125 nmol/L are atherogenic. Familial hypercholesterolemia is diagnosed by the Dutch Lipid Clinic Network or Simon Broome criteria; cascade screening of first-degree relatives identifies new cases at low cost per case found.",
+
+  "diagnosticTests": [
+    { "test": "Fasting or non-fasting lipid panel (total cholesterol, HDL-C, triglycerides, calculated LDL-C)", "purpose": "Screens for hyperlipidemia, monitors response to therapy, and supports cardiovascular risk calculation", "whatToExpect": "Standard blood draw. Non-fasting samples accepted for routine screening per AHA/ACC; fasting preferred for triglycerides above 400 mg/dL. Results within 24 hours." },
+    { "test": "Apolipoprotein B (ApoB)", "purpose": "Counts atherogenic particles directly; superior risk marker when LDL-C is discordant with risk (high triglycerides, diabetes, metabolic syndrome)", "whatToExpect": "Single blood draw; ApoB above 100 mg/dL is high, above 130 mg/dL is very high. Most modern labs offer ApoB without need for fasting." },
+    { "test": "Lipoprotein(a) [Lp(a)] level", "purpose": "Measures genetically determined Lp(a) — atherogenic and thrombogenic at levels above 50 mg/dL or 125 nmol/L; affects 20% of adults", "whatToExpect": "Standard blood draw; measured at least once in adulthood. Result does not change materially with diet, exercise, or current lipid-lowering therapy." },
+    { "test": "Coronary artery calcium (CAC) score", "purpose": "Quantifies subclinical coronary atherosclerosis; refines statin decision in intermediate-risk patients", "whatToExpect": "5-10 minute non-contrast CT scan; low radiation. CAC = 0 supports deferring statin in many low-intermediate risk patients; CAC ≥100 supports starting statin." },
+    { "test": "Hemoglobin A1c, fasting glucose, TSH, creatinine, urine protein-to-creatinine ratio", "purpose": "Identifies secondary causes (diabetes, hypothyroidism, chronic kidney disease, nephrotic syndrome) that modify lipid handling and management strategy", "whatToExpect": "Bloodwork plus urine sample; standard outpatient testing." },
+    { "test": "Genetic testing for familial hypercholesterolemia (LDLR, APOB, PCSK9)", "purpose": "Confirms FH diagnosis in patients meeting clinical criteria; supports cascade screening of relatives", "whatToExpect": "Blood draw; results in 2-6 weeks. Identifies a causative variant in 60-80% of clinical FH cases." },
+    { "test": "Ankle-brachial index (ABI) and carotid duplex (when clinically indicated)", "purpose": "Assesses peripheral arterial disease in patients with claudication and carotid stenosis when stroke risk warrants further imaging", "whatToExpect": "Non-invasive office or vascular lab assessment, 20-30 minutes." }
+  ],
+
+  "treatmentOverview": "Management combines lifestyle modification and pharmacotherapy guided by absolute cardiovascular risk and LDL-C level. Lifestyle is foundational for all patients: Mediterranean or DASH dietary pattern, saturated fat below 7% of calories, soluble fiber 10-25 g/day, weight loss when indicated, 150 minutes weekly of moderate aerobic exercise, smoking cessation, and limited alcohol. These reduce LDL-C by 5-15% and lower cardiovascular events independently. Pharmacotherapy starts with statins in all statin-benefit groups: (1) established ASCVD; (2) LDL-C ≥190 mg/dL (likely FH); (3) diabetes age 40-75; (4) age 40-75 with 10-year ASCVD risk ≥7.5% and risk-enhancing factors. High-intensity statins (atorvastatin 40-80 mg or rosuvastatin 20-40 mg) reduce LDL-C by ~50% and major cardiovascular events by 25-30%; moderate-intensity (atorvastatin 10-20 mg, rosuvastatin 5-10 mg, simvastatin 20-40 mg) reduce LDL-C by 30-49%. Statin intensification or addition of ezetimibe 10 mg daily produces an additional 15-20% LDL-C reduction (IMPROVE-IT NEJM 2015). PCSK9 inhibitors (alirocumab, evolocumab) added to maximally tolerated statin and ezetimibe in patients with ASCVD or FH whose LDL-C remains above 70 mg/dL reduce LDL-C by an additional 50-60% and major events by 15% (FOURIER, ODYSSEY OUTCOMES). Bempedoic acid (180 mg/day) reduces LDL-C by 17-25% and major events by 13% in statin-intolerant patients (CLEAR Outcomes NEJM 2023). Inclisiran is an siRNA PCSK9-targeted therapy dosed every 6 months. For triglycerides above 500 mg/dL, fibrates and omega-3 fatty acids reduce pancreatitis risk; in patients with ASCVD or diabetes plus persistent triglycerides 135-499 mg/dL on statin, icosapent ethyl 4 g/day reduces major events by 25% (REDUCE-IT NEJM 2018). LDL targets vary by guideline: 2018 AHA/ACC favors LDL-C reduction of ≥50% in high-risk patients; 2019 ESC/EAS targets LDL-C under 55 mg/dL in very high-risk and under 40 mg/dL after recurrent events.",
+
+  "medicalTreatments": [
+    { "name": "High-intensity statin (atorvastatin 40-80 mg or rosuvastatin 20-40 mg daily)", "description": "First-line therapy for high-risk patients including established ASCVD, FH, and primary prevention with 10-year risk ≥20%. Taken at any time of day; once-daily dosing. Common side-effects: myalgia in 5-10%, mild liver enzyme elevation, slightly increased diabetes incidence.", "effectiveness": "Reduces LDL-C by 50%; reduces major cardiovascular events by 25-30% per 39 mg/dL drop (CTT Lancet 2010)" },
+    { "name": "Moderate-intensity statin (atorvastatin 10-20 mg, rosuvastatin 5-10 mg, simvastatin 20-40 mg)", "description": "Recommended for primary prevention in intermediate-risk patients and statin-intolerant individuals. Reduces LDL-C by 30-49%; once-daily dosing.", "effectiveness": "Reduces LDL-C 30-49%; reduces major cardiovascular events approximately 20% over 5 years" },
+    { "name": "Ezetimibe (10 mg once daily)", "description": "Inhibits intestinal cholesterol absorption via NPC1L1. Added to statin when LDL-C target not reached; well-tolerated alone or in combination tablets.", "effectiveness": "Additional 15-20% LDL-C reduction over statin alone; reduces ASCVD events by 6.4% absolute over 7 years in IMPROVE-IT (NEJM 2015)" },
+    { "name": "PCSK9 inhibitor (alirocumab 75-150 mg q2 weeks; evolocumab 140 mg q2 weeks or 420 mg monthly)", "description": "Subcutaneous monoclonal antibodies that prevent PCSK9-mediated LDL receptor degradation. Used in ASCVD or FH when LDL-C remains above 70 mg/dL despite maximally tolerated statin and ezetimibe.", "effectiveness": "Reduces LDL-C by 50-60% additional to statin/ezetimibe; reduces major events by 15% (FOURIER 2017, ODYSSEY 2018)" },
+    { "name": "Inclisiran (284 mg SC at 0, 3, then every 6 months)", "description": "Small interfering RNA targeting hepatic PCSK9 mRNA. Twice-yearly dosing simplifies long-term adherence. Approved for ASCVD or heterozygous FH with LDL-C above target on statin therapy.", "effectiveness": "Reduces LDL-C by 50-55% versus placebo (ORION-9, -10, -11 trials NEJM 2020)" },
+    { "name": "Bempedoic acid (180 mg once daily)", "description": "ATP-citrate lyase inhibitor that lowers cholesterol synthesis upstream of HMG-CoA reductase. Activated in liver but not muscle, so muscle side-effects are uncommon. Approved for ASCVD or FH and now for primary prevention in statin-intolerant patients.", "effectiveness": "Reduces LDL-C by 17-25%; reduces major adverse cardiovascular events by 13% in CLEAR Outcomes (NEJM 2023)" },
+    { "name": "Icosapent ethyl (2 g twice daily)", "description": "Highly purified EPA omega-3 fatty acid. Approved for patients on statin with ASCVD or diabetes plus triglycerides 135-499 mg/dL. Side-effects: increased atrial fibrillation (3% vs 2%), bleeding tendency.", "effectiveness": "Reduces major adverse cardiovascular events by 25% in REDUCE-IT (NEJM 2018)" },
+    { "name": "Fibrates (fenofibrate 145 mg, gemfibrozil 600 mg twice daily) and omega-3 fatty acids for hypertriglyceridemia", "description": "Reduce triglycerides by 30-50%; used in severe hypertriglyceridemia (>500 mg/dL) to prevent pancreatitis. Combined with statin in mixed dyslipidemia (fenofibrate preferred; gemfibrozil contraindicated with statin).", "effectiveness": "Reduces pancreatitis risk in severe hypertriglyceridemia; modest cardiovascular event reduction in mixed dyslipidemia subgroups" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Coronary revascularization (PCI or CABG)", "description": "Indicated for established symptomatic coronary artery disease secondary to atherosclerosis. Not a hyperlipidemia treatment per se but addresses the downstream complication. Aggressive secondary prevention with statin and PCSK9 inhibitor is mandatory after revascularization.", "successRate": "PCI relieves angina in 70-80%; CABG provides durable revascularization with 90% 5-year graft patency in arterial conduits; both reduce events when combined with intensive lipid lowering" },
+    { "name": "LDL apheresis", "description": "Extracorporeal removal of LDL particles every 2-4 weeks for homozygous FH and severe heterozygous FH with inadequate response to maximal medical therapy. Reduces LDL-C 50-75% per session.", "successRate": "Reduces cardiovascular events in HoFH cohorts; allows survival into adulthood when started in childhood" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Plant sterols and stanols (2 g/day)", "description": "Reduce intestinal cholesterol absorption and LDL-C by 6-10%. Available in fortified margarines, yogurts, and supplements. Adjunct to diet, not a substitute for statin in high-risk patients." },
+    { "name": "Red yeast rice", "description": "Contains naturally occurring monacolin K (chemically identical to lovastatin). Can lower LDL-C by 15-25% but lacks quality control of pharmaceutical statins; product-to-product variation is substantial. Not recommended as a substitute for prescription statin." },
+    { "name": "Soluble fiber (psyllium, oat bran, beta-glucan)", "description": "Soluble fiber 10-25 g/day reduces LDL-C by 5-10% by binding bile acids. Inexpensive, well-tolerated, recommended in all guidelines as part of cardio-protective diet." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "statin-therapy",
+    "pcsk9-inhibitor-injection",
+    "ezetimibe-therapy",
+    "lifestyle-modification-program"
+  ],
+
+  "whySeeSpecialist": "Most hyperlipidemia is managed in primary care. Refer to a lipid specialist, cardiologist, or endocrinologist for: confirmed or suspected familial hypercholesterolemia, statin intolerance, persistently elevated LDL-C despite maximal therapy, severe hypertriglyceridemia, recurrent cardiovascular events on therapy, or for advanced therapies (PCSK9 inhibitor, inclisiran, evinacumab, lipoprotein apheresis). Cardiology partnership is mandatory in established ASCVD for combined secondary prevention.",
+  "doctorSelectionGuide": "Choose a family medicine physician or internist comfortable with statin initiation, intensification, and side-effect management. For complex cases, choose a lipid clinic with FH cascade screening capacity, access to PCSK9 inhibitors and inclisiran, and coordination with cardiology. Pediatric and adolescent FH is best managed at academic centers with combined pediatric cardiology and lipid expertise. Lp(a)-driven recurrent events benefit from research-active centers with access to clinical trials.",
+
+  "hospitalCriteria": [
+    "Primary care service with electronic ASCVD risk calculator integration",
+    "Pharmacy formulary covering high-intensity statins, ezetimibe, PCSK9 inhibitors, inclisiran, bempedoic acid, and icosapent ethyl",
+    "Coronary artery calcium scoring availability",
+    "Lp(a) and ApoB testing on routine lab menu",
+    "Genetic testing pathway for familial hypercholesterolemia",
+    "Cascade screening service for first-degree relatives",
+    "LDL apheresis program for homozygous FH (tertiary)",
+    "Cardiology and endocrinology referral pathway"
+  ],
+  "keyFacilities": [
+    "Primary care and family medicine clinics",
+    "Lipid and dyslipidemia specialty clinics",
+    "Cardiology services with secondary prevention pathways",
+    "Endocrinology services for diabetes and metabolic disease",
+    "Genetic counseling services"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Adopt a Mediterranean or DASH dietary pattern with saturated fat below 7% of calories, trans fat below 1%, and soluble fiber 10-25 g/day.",
+    "Engage in at least 150 minutes per week of moderate-intensity aerobic activity plus resistance training twice weekly.",
+    "Maintain a healthy body weight (BMI 18.5-25 kg/m²) and waist circumference under 40 inches (men) or 35 inches (women).",
+    "Avoid all tobacco products and minimize alcohol intake (men ≤2 drinks/day, women ≤1 drink/day).",
+    "Screen all adults aged 20+ every 5 years; more frequently in those with risk factors, diabetes, or family history.",
+    "Treat secondary causes promptly: hypothyroidism with levothyroxine, type 2 diabetes with appropriate glycemic agents, nephrotic syndrome with renal team input.",
+    "Implement family cascade screening when familial hypercholesterolemia is identified — first-degree relatives have 50% mutation probability."
+  ],
+
+  "lifestyleModifications": [
+    "Replace saturated fats (butter, fatty red meat, full-fat dairy) with unsaturated fats (olive oil, nuts, seeds, fatty fish).",
+    "Increase soluble fiber intake (oats, beans, lentils, fruit) to 10-25 g daily.",
+    "Limit added sugar to under 10% of daily energy and avoid sugar-sweetened beverages.",
+    "Include two servings of fatty fish (salmon, mackerel, sardines) weekly for omega-3 fatty acids.",
+    "Engage in 30-45 minutes of brisk walking, cycling, or swimming 5 days per week.",
+    "Take statin or other prescribed therapy at the same time each day to support adherence.",
+    "Attend annual primary care review for lipid panel, blood pressure, weight, and cardiovascular risk reassessment."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean dietary pattern with olive oil, fish, nuts, legumes, fruits, vegetables, and whole grains",
+      "Soluble fiber from oats, beans, lentils, psyllium (10-25 g/day) and plant sterols (2 g/day)",
+      "Two servings weekly of fatty fish (salmon, mackerel, sardines) for omega-3 fatty acids",
+      "Lean protein sources (chicken, turkey, legumes, tofu) replacing red and processed meat"
+    ],
+    "avoid": [
+      "Saturated fat above 7% of daily calories (butter, lard, fatty cuts, full-fat dairy)",
+      "Industrial trans fats (margarines, baked goods, fried foods)",
+      "Sugar-sweetened beverages and refined carbohydrate-heavy diets",
+      "Heavy alcohol intake (above 1 drink/day women, 2 drinks/day men) in patients with hypertriglyceridemia"
+    ]
+  },
+  "exerciseGuidelines": "Aim for 150 minutes per week of moderate-intensity aerobic activity (brisk walking, cycling, swimming) or 75 minutes per week of vigorous activity, plus resistance training of major muscle groups twice weekly. Regular activity reduces LDL-C by 5%, raises HDL-C by 4-7%, lowers triglycerides by 10-15%, and improves insulin sensitivity. Patients with established cardiovascular disease should join a supervised cardiac rehabilitation program initially.",
+
+  "dailyManagement": [
+    "Take statin (or other prescribed lipid-lowering therapy) at the same time each day",
+    "Apply Mediterranean diet principles at every meal",
+    "Walk or exercise at least 30 minutes most days",
+    "Monitor blood pressure at home weekly if hypertensive",
+    "Track weight monthly and adjust activity or diet as needed",
+    "Attend annual lipid panel and primary care review with target updates"
+  ],
+
+  "prognosis": "Prognosis is excellent with adherent treatment and lifestyle change. Every 39 mg/dL (1 mmol/L) reduction in LDL-C reduces major vascular events by 23%, cardiovascular death by 14%, and all-cause mortality by 10% over 5 years (CTT Lancet 2010). High-intensity statins reduce 10-year ASCVD events by 25-30%, with additional benefits from ezetimibe, PCSK9 inhibitors, and bempedoic acid in high-risk patients. Untreated heterozygous familial hypercholesterolemia carries a 50% risk of fatal or non-fatal coronary event by age 50 in men and 60 in women; treated FH approaches normal life expectancy when LDL-C is reduced by 50% sustained over decades. Statin therapy is well-tolerated long-term in 90-95% of patients; myalgia accounts for most discontinuations but is genuinely statin-caused in only 1-3% on placebo-controlled re-challenge. Severe adverse events (rhabdomyolysis, hepatic failure) are rare (under 1 per 10,000 person-years). Statin-induced diabetes occurs in 1 per 250 patient-years but the cardiovascular benefit overwhelms this risk in eligible groups.",
+
+  "recoveryTimeline": "Statin therapy reduces LDL-C by 80-90% of maximum effect within 4 weeks; lipid panel reassessed at 4-12 weeks after starting or dose changes. Cardiovascular event-reduction benefits accumulate over 1-5 years. PCSK9 inhibitor effect is achieved within 2-4 weeks and sustained as long as therapy continues. Lifestyle effect on LDL-C is measurable within 6-12 weeks of consistent dietary change and exercise.",
+
+  "complications": [
+    "Atherosclerotic cardiovascular disease — coronary artery disease, ischemic stroke, peripheral arterial disease — the dominant complication and leading cause of death globally.",
+    "Acute pancreatitis at triglyceride levels above 1,000 mg/dL; severe attacks carry 5-10% mortality and recurrence rates above 50% without lipid control.",
+    "Aortic stenosis associated with elevated Lp(a) and lifelong cholesterol burden, particularly in homozygous and heterozygous FH.",
+    "Xanthomatous skin and tendon lesions causing cosmetic concern and rare functional impairment.",
+    "Statin-related complications: myalgia (5-10% subjective, 1-3% objective), mild liver enzyme elevation, statin-induced diabetes (1 per 250 patient-years).",
+    "Refractory dyslipidemia despite maximal therapy — particularly in homozygous FH, requiring evinacumab, lomitapide, or LDL apheresis."
+  ],
+
+  "supportResources": [
+    { "name": "American Heart Association — Cholesterol", "url": "https://www.heart.org/en/health-topics/cholesterol", "description": "Comprehensive patient resource on cholesterol testing, treatment, and lifestyle change from the leading US cardiovascular society." },
+    { "name": "FH Foundation (Family Heart Foundation)", "url": "https://familyheart.org/", "description": "US patient organization dedicated to familial hypercholesterolemia and elevated Lp(a), with cascade screening tools and patient registry." },
+    { "name": "American College of Cardiology — ASCVD Risk Estimator+", "url": "https://tools.acc.org/ASCVD-Risk-Estimator-Plus/", "description": "Validated online 10-year ASCVD risk calculator integrating age, sex, race, blood pressure, lipids, smoking, and diabetes; used in shared decision-making." },
+    { "name": "CDC — High Cholesterol", "url": "https://www.cdc.gov/cholesterol/", "description": "US Centers for Disease Control patient-facing resource on prevention, screening, and treatment of high cholesterol." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "familial-hypercholesterolemia-e7801", "name": "Familial Hypercholesterolemia", "keyDifference": "FH is a specific genetic subset of hyperlipidemia with LDL-C above 190 mg/dL from birth, family history of premature coronary disease, and often tendon xanthomas. Diagnosed by Dutch Lipid Clinic Network or Simon Broome criteria and confirmed by LDLR/APOB/PCSK9 sequencing. Polygenic hyperlipidemia lacks these monogenic features." },
+    { "slug": "metabolic-syndrome-e8881", "name": "Metabolic Syndrome", "keyDifference": "Metabolic syndrome is a constellation of central obesity, hypertension, dyslipidemia (high triglycerides, low HDL-C), and impaired glucose tolerance. Hyperlipidemia is one component, often associated with high triglycerides and low HDL-C rather than isolated high LDL-C. Both increase cardiovascular risk and overlap substantially." },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes Mellitus", "keyDifference": "Type 2 diabetes produces atherogenic dyslipidemia (high triglycerides, low HDL, small dense LDL) as a consequence of insulin resistance. Patients with diabetes age 40-75 are statin-eligible regardless of 10-year risk. Primary hyperlipidemia without diabetes is treated according to risk-based thresholds." },
+    { "slug": "hypothyroidism", "name": "Hypothyroidism", "keyDifference": "Hypothyroidism raises LDL-C and total cholesterol through reduced LDL receptor expression; treating with levothyroxine partially or fully reverses the lipid abnormality. Always check TSH before starting statin in newly identified hyperlipidemia." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" },
+    { "slug": "metabolic-syndrome-e8881", "name": "Metabolic Syndrome" },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease", "relevance": "The primary cardiovascular complication of long-standing hyperlipidemia; aggressive lipid lowering is the cornerstone of secondary prevention." },
+    { "slug": "familial-hypercholesterolemia-e7801", "name": "Familial Hypercholesterolemia", "relevance": "Monogenic subset of hyperlipidemia causing severe LDL-C elevation from birth; requires earlier and more intensive therapy." },
+    { "slug": "metabolic-syndrome-e8881", "name": "Metabolic Syndrome", "relevance": "Closely linked metabolic disorder featuring atherogenic dyslipidemia; management overlaps substantially." },
+    { "slug": "hypertension", "name": "Hypertension", "relevance": "Synergistic cardiovascular risk factor; combined risk reduction (statin plus blood pressure control) yields proportionally greater benefit." },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes", "relevance": "Doubles ASCVD risk; diabetic adults age 40-75 are statin-eligible regardless of 10-year risk under current guidelines." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is hyperlipidemia in simple terms?",
+      "answer": "Hyperlipidemia means abnormally high levels of cholesterol or triglycerides in the blood. It usually has no symptoms but drives heart attacks, strokes, and peripheral arterial disease over years. It is diagnosed on a lipid panel and treated with lifestyle change and medications such as statins.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a normal cholesterol level?",
+      "answer": "Optimal LDL-C is under 100 mg/dL for healthy adults, under 70 mg/dL in established cardiovascular disease, and under 55 mg/dL in very high-risk patients (ESC/EAS 2019). Total cholesterol under 200 mg/dL, HDL-C above 40 mg/dL in men and 50 mg/dL in women, and triglycerides under 150 mg/dL are general goals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need to fast before a cholesterol test?",
+      "answer": "Non-fasting samples are acceptable for routine screening per 2018 AHA/ACC. Fasting samples are recommended when triglycerides exceed 400 mg/dL, when calculating LDL-C accurately, or after major dietary changes. Most modern labs accept non-fasting samples for ApoB, HDL-C, and total cholesterol.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between LDL and HDL cholesterol?",
+      "answer": "LDL ('bad') cholesterol carries cholesterol from the liver to tissues and deposits it in arterial walls, driving atherosclerosis. HDL ('good') cholesterol returns cholesterol to the liver for excretion. Treatment focuses on lowering LDL-C and ApoB rather than directly raising HDL-C.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do statins really reduce heart attacks?",
+      "answer": "Yes. Statins reduce major cardiovascular events by 25-30% per 39 mg/dL drop in LDL-C sustained over 5 years (CTT Lancet 2010). Benefit accrues both in primary and secondary prevention. They are the cornerstone of lipid-lowering therapy and one of the most evidence-based drug classes in cardiology.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the side effects of statins?",
+      "answer": "The most common side effect is mild muscle aches, reported by 5-10% of patients but objectively caused by statin in only 1-3% on blinded re-challenge. Liver enzyme elevation is mild and rarely clinically significant. Statin-induced diabetes occurs in 1 per 250 patient-years, but cardiovascular benefit outweighs this risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who should take a statin?",
+      "answer": "Statins are recommended for: established ASCVD, LDL-C ≥190 mg/dL (likely FH), diabetes age 40-75, and primary prevention with 10-year ASCVD risk ≥7.5% plus risk-enhancing factors. Shared decision-making applies in intermediate-risk patients, where coronary calcium scoring can help.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is familial hypercholesterolemia?",
+      "answer": "Familial hypercholesterolemia (FH) is a genetic condition affecting 1 in 250 adults, caused by mutations in LDLR, APOB, or PCSK9. It produces LDL-C above 190 mg/dL from birth and premature coronary disease (men under 55, women under 65). Early statin and PCSK9 inhibitor therapy normalizes life expectancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a PCSK9 inhibitor?",
+      "answer": "PCSK9 inhibitors (alirocumab, evolocumab) are subcutaneous monoclonal antibodies given every 2-4 weeks. They prevent degradation of LDL receptors, lowering LDL-C by an additional 50-60% on top of statin therapy. They are used in ASCVD or FH patients whose LDL-C remains above 70 mg/dL on maximal statin and ezetimibe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Lp(a) and why does it matter?",
+      "answer": "Lipoprotein(a) is a genetically determined lipid particle that is both atherogenic and thrombogenic. Levels above 50 mg/dL or 125 nmol/L affect about 20% of adults and confer 2-3 fold higher cardiovascular and aortic stenosis risk. Measure once in adulthood; PCSK9 inhibitors lower Lp(a) by 25%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I lower cholesterol with diet alone?",
+      "answer": "A Mediterranean or DASH diet with saturated fat below 7% of calories, soluble fiber 10-25 g/day, and plant sterols 2 g/day can reduce LDL-C by 10-20%. This is often insufficient on its own in high-risk patients but provides a strong foundation for statin therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should children be screened for high cholesterol?",
+      "answer": "Universal screening between ages 9 and 11 (and again at 17-21) is recommended by the AAP, NHLBI, and AHA, particularly to identify familial hypercholesterolemia early. Children with family history of premature ASCVD or FH should be screened from age 2-5.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is coronary calcium scoring useful?",
+      "answer": "Coronary artery calcium (CAC) scoring is the most powerful subclinical atherosclerosis test in intermediate-risk patients. CAC = 0 supports deferring statin in many cases; CAC ≥100 or ≥75th percentile for age/sex supports statin initiation. Useful for shared decision-making.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should I have my cholesterol checked?",
+      "answer": "Adults age 20+ should have a lipid panel at least every 4-6 years if normal, more frequently with risk factors or diabetes. After starting or changing therapy, check 4-12 weeks later. Annual review is reasonable for patients on stable therapy or with multiple risk factors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can supplements lower cholesterol?",
+      "answer": "Plant sterols 2 g/day lower LDL-C by 6-10%; soluble fiber 10-25 g/day reduces LDL-C by 5-10%; red yeast rice contains natural lovastatin but with inconsistent dosing. None substitute for prescription statin therapy in high-risk patients but support overall management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is bempedoic acid?",
+      "answer": "Bempedoic acid is an oral cholesterol-lowering agent that works upstream of statins and is activated only in the liver, so muscle side effects are uncommon. It reduces LDL-C by 17-25% and major cardiovascular events by 13% in statin-intolerant patients (CLEAR Outcomes NEJM 2023).",
+      "schemaEligible": true
+    },
+    {
+      "question": "What if my triglycerides are very high?",
+      "answer": "Triglycerides above 500 mg/dL risk pancreatitis. Initial management includes alcohol abstinence, low-fat diet, weight loss, treatment of diabetes, fibrate therapy, and omega-3 fatty acids. Triglycerides above 1,000 mg/dL require fasting and may need inpatient management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are there gender differences in hyperlipidemia?",
+      "answer": "Women under 50 have lower LDL-C and higher HDL-C than age-matched men. After menopause, women's LDL-C rises 10-20% and cardiovascular event risk approaches that of men. Familial hypercholesterolemia presents 10 years later in women but with equivalent severity over a lifetime.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does losing weight lower cholesterol?",
+      "answer": "Weight loss of 5-10% reduces LDL-C by 5-10%, triglycerides by 20-40%, and raises HDL-C by 3-5%. Greater weight loss produces proportionally larger benefits. Combined with exercise and a healthy dietary pattern, sustained weight loss substantially reduces ASCVD risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hyperlipidemia be cured?",
+      "answer": "Most polygenic and lifestyle-driven hyperlipidemia is not cured but well-controlled with lifelong lifestyle and medication. Familial forms require lifelong therapy. Treating secondary causes (hypothyroidism, nephrotic syndrome) can fully normalize lipids if addressed early.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I stop statins if I'm pregnant?",
+      "answer": "Statins are typically discontinued during pregnancy and breastfeeding because of theoretical risk of fetal cholesterol synthesis disruption, although recent FDA guidance has softened this position. Discuss with your physician before conception. PCSK9 inhibitors are also avoided in pregnancy.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Hyperlipidemia (high cholesterol)",
+  "regionalNames": [
+    { "name": "High cholesterol", "region": "UK, US", "language": "English" },
+    { "name": "Hipercolesterolemia", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "Hyperlipidémie", "region": "France", "language": "French" },
+    { "name": "उच्च कोलेस्ट्रॉल", "region": "India", "language": "Hindi" },
+    { "name": "Hipercolesterolemia", "region": "Brazil", "language": "Portuguese" }
+  ],
+  "searchTags": [
+    "hyperlipidemia",
+    "high cholesterol",
+    "high LDL",
+    "high triglycerides",
+    "statin therapy",
+    "atorvastatin",
+    "rosuvastatin",
+    "ezetimibe",
+    "PCSK9 inhibitor",
+    "inclisiran",
+    "bempedoic acid",
+    "familial hypercholesterolemia",
+    "Lp(a)",
+    "ApoB",
+    "ASCVD risk"
+  ],
+  "symptomKeywords": [
+    "high cholesterol diagnosis",
+    "tendon lump achilles",
+    "yellow eyelid plaques",
+    "chest pain risk factors",
+    "high cholesterol family history",
+    "elevated triglycerides",
+    "fatty deposits skin",
+    "ldl over 190"
+  ],
+
+  "metaTitle": "Hyperlipidemia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Hyperlipidemia (high cholesterol): causes, lipid panel, statin and PCSK9 inhibitor therapy, lifestyle and prevention. Medically reviewed primary care guide.",
+
+  "keywords": [
+    "hyperlipidemia",
+    "high cholesterol",
+    "LDL cholesterol",
+    "statin therapy",
+    "atorvastatin",
+    "rosuvastatin",
+    "ezetimibe",
+    "PCSK9 inhibitor",
+    "inclisiran",
+    "bempedoic acid",
+    "familial hypercholesterolemia",
+    "ASCVD prevention"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Grundy SM, Stone NJ, Bailey AL, et al. 2019. 2018 AHA/ACC/AACVPR/AAPA/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Blood Cholesterol. J Am Coll Cardiol 73(24):e285-e350.", "url": "https://pubmed.ncbi.nlm.nih.gov/30586774/", "accessedDate": "2026-05-14" },
+    { "title": "Mach F, Baigent C, Catapano AL, et al. 2020. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. European Heart Journal 41(1):111-188.", "url": "https://pubmed.ncbi.nlm.nih.gov/31504418/", "accessedDate": "2026-05-14" },
+    { "title": "Cholesterol Treatment Trialists' Collaboration. 2010. Efficacy and safety of more intensive lowering of LDL cholesterol: meta-analysis of data from 170,000 participants in 26 randomised trials. Lancet 376(9753):1670-81.", "url": "https://pubmed.ncbi.nlm.nih.gov/21067804/", "accessedDate": "2026-05-14" },
+    { "title": "Sabatine MS, Giugliano RP, Keech AC, et al. 2017. Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease (FOURIER). New England Journal of Medicine 376(18):1713-1722.", "url": "https://pubmed.ncbi.nlm.nih.gov/28304224/", "accessedDate": "2026-05-14" },
+    { "title": "Schwartz GG, Steg PG, Szarek M, et al. 2018. Alirocumab and Cardiovascular Outcomes after Acute Coronary Syndrome (ODYSSEY OUTCOMES). New England Journal of Medicine 379(22):2097-2107.", "url": "https://pubmed.ncbi.nlm.nih.gov/30403574/", "accessedDate": "2026-05-14" },
+    { "title": "Nissen SE, Lincoff AM, Brennan D, et al. 2023. Bempedoic Acid and Cardiovascular Outcomes in Statin-Intolerant Patients (CLEAR Outcomes). New England Journal of Medicine 388(15):1353-1364.", "url": "https://pubmed.ncbi.nlm.nih.gov/36876740/", "accessedDate": "2026-05-14" },
+    { "title": "Nordestgaard BG, Chapman MJ, Humphries SE, et al. 2013. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population. European Heart Journal 34(45):3478-90.", "url": "https://pubmed.ncbi.nlm.nih.gov/23956253/", "accessedDate": "2026-05-14" },
+    { "title": "US Preventive Services Task Force. 2022. Statin Use for the Primary Prevention of Cardiovascular Disease in Adults. JAMA 328(8):746-753.", "url": "https://pubmed.ncbi.nlm.nih.gov/35997723/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

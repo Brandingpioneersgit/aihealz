@@ -1,0 +1,441 @@
+{
+  "_meta": {
+    "slug": "allergic-asthma",
+    "tier": 1,
+    "headTerm": "allergic asthma",
+    "longTailKeywords": [
+      "allergic asthma symptoms",
+      "allergic asthma treatment",
+      "atopic asthma",
+      "extrinsic asthma",
+      "Type 2 inflammation",
+      "biologics asthma",
+      "omalizumab",
+      "dupilumab asthma",
+      "mepolizumab",
+      "IgE asthma",
+      "GINA guidelines",
+      "ICS-formoterol"
+    ],
+    "primarySpecialty": "Allergy & Immunology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Treatment guidance from GINA 2024 Global Strategy for Asthma Management. Biologic trials: omalizumab (Busse 2001 PMID 11529934), mepolizumab MENSA (Ortega 2014 PMID 25199059), benralizumab SIROCCO/CALIMA (Bleecker 2016 PMID 27609406), dupilumab QUEST (Castro 2018 PMID 29782224), tezepelumab NAVIGATOR (Menzies-Gow 2021 PMID 33979488). Epidemiology per GBD 2021 and Global Asthma Report 2022. Pediatric guidance per NAEPP 2020."
+  },
+
+  "h1Title": "Allergic Asthma: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Allergy & Immunology",
+
+  "heroOverview": "Allergic asthma is the most common phenotype of asthma, defined by chronic airway inflammation driven by Type 2 immune responses to inhaled allergens such as house dust mite, animal dander, mould, and pollen. Roughly 60-80% of children and 50-60% of adults with asthma have an allergic phenotype, and globally an estimated 260 million people live with asthma overall (GBD 2021). Patients present with episodic wheeze, breathlessness, chest tightness, and dry cough — typically worse at night, with cold air, exercise, viral infection, or specific allergen exposure. Without controller therapy, recurrent exacerbations damage airway architecture and increase hospitalisation and death — about 1,000 people die from asthma every day worldwide. Inhaled corticosteroid-formoterol combinations are now first-line, and patients with severe Type 2 disease can achieve near-remission with targeted biologic therapy.",
+
+  "keyStats": {
+    "prevalence": "Approximately 8-12% of adults and 10-15% of children in high-income countries have asthma; 50-70% have an allergic phenotype",
+    "demographics": "Female:male ratio 1.5:1 in adults; male predominance in children before puberty",
+    "avgAge": "Onset most commonly age 3-15 years; adult-onset allergic asthma typically presents in the 20s-40s",
+    "globalCases": "260 million people with asthma worldwide; over 1,000 asthma deaths per day (GBD 2021)"
+  },
+
+  "definition": "Allergic asthma (ICD-10: J45.0), also called atopic or extrinsic asthma, is a chronic inflammatory disease of the airways triggered by IgE-mediated and Type 2 immune responses to inhaled aeroallergens. Inhaled allergen binds IgE on mast cells and triggers degranulation, releasing histamine, leukotrienes, and prostaglandins that produce immediate bronchospasm. A second, late-phase response 4-8 hours later recruits eosinophils, T-helper 2 lymphocytes, and innate lymphoid cells, releasing interleukins IL-4, IL-5, IL-13, and thymic stromal lymphopoietin (TSLP). Chronic inflammation thickens the airway smooth muscle, increases mucous gland mass, and causes basement membrane fibrosis (airway remodelling). The Global Initiative for Asthma (GINA) defines asthma as a heterogeneous disease characterised by chronic airway inflammation with variable expiratory airflow limitation and respiratory symptoms. Severity is graded by the level of treatment needed to maintain control (mild, moderate, severe). Biomarkers — blood eosinophils, fractional exhaled nitric oxide (FeNO), and total/specific IgE — identify the Type 2 phenotype and guide biologic therapy. Specialist care is led by allergy & immunology, paediatrics, and respiratory medicine.",
+
+  "typesClassification": [
+    { "type": "Mild intermittent allergic asthma", "description": "Symptoms less than twice per week, brief exacerbations, nocturnal awakening less than twice monthly, normal lung function between episodes. Treated as needed with low-dose ICS-formoterol per GINA Track 1." },
+    { "type": "Mild persistent allergic asthma", "description": "Symptoms more than twice per week but not daily, exacerbations affecting activity, nocturnal symptoms more than twice monthly. Daily low-dose ICS-formoterol or alternative controller required." },
+    { "type": "Moderate persistent allergic asthma", "description": "Daily symptoms, exacerbations more than twice yearly, nocturnal symptoms more than weekly, FEV1 60-80% predicted. Medium-dose ICS-LABA combination needed." },
+    { "type": "Severe allergic asthma (Type 2 high)", "description": "Daily symptoms despite high-dose ICS-LABA, frequent exacerbations, FEV1 below 60% predicted, with elevated blood eosinophils (>150/uL), FeNO (>20 ppb), or total IgE >30 IU/mL. Eligible for biologic therapy." },
+    { "type": "Allergen-induced occupational asthma", "description": "Onset after exposure to a specific workplace allergen (flour, latex, animal proteins, isocyanates, persulphates). Diagnosed by serial peak flow recordings at and away from work; treatment includes allergen removal and standard inhaled therapy." }
+  ],
+
+  "primarySymptoms": [
+    "Episodic dry cough, especially at night or in the early morning, often the first and only symptom in milder allergic asthma.",
+    "Audible wheeze on exhalation, sometimes also on inspiration, produced by narrowed airways and turbulent airflow.",
+    "Chest tightness, described as a band or weight on the chest, often worse during exacerbations.",
+    "Breathlessness on exertion, with cold air, or after laughing — exercise-induced bronchoconstriction occurs in 70-90% of patients.",
+    "Symptoms triggered or worsened by specific allergens (house dust mite, cat or dog dander, mould, tree, grass, or weed pollen, cockroach).",
+    "Seasonal pattern of symptoms matching pollen calendars (spring tree, summer grass, autumn weed, year-round perennial allergens).",
+    "Coexisting allergic rhinitis (sneezing, itchy nose, blocked nose, watery eyes) in 70-80% of patients with allergic asthma.",
+    "Atopic dermatitis or eczema, food allergy, and family history of atopy in many patients (the atopic march).",
+    "Acute exacerbations triggered by viral upper respiratory infections, second-hand smoke, air pollution, or aeroallergen surges."
+  ],
+
+  "earlyWarningSigns": [
+    "Reduced morning peak flow on a home diary, 20% or more below personal best",
+    "Increased reliever inhaler use (more than two days a week)",
+    "Awakening at night with cough, wheeze, or breathlessness",
+    "Daytime symptoms with usual activities (climbing stairs, brisk walking)",
+    "Recent upper respiratory tract infection in a known asthmatic"
+  ],
+
+  "emergencySigns": [
+    "Severe breathlessness preventing speech in full sentences, peak flow under 50% of personal best, heart rate above 110/min",
+    "Cyanosis, exhaustion, drowsiness, or confusion — features of life-threatening asthma",
+    "Silent chest on auscultation in a deteriorating patient — pre-arrest sign",
+    "Oxygen saturation below 92% on room air with respiratory distress",
+    "No symptomatic relief after 6-8 puffs of salbutamol within 20 minutes — call emergency services"
+  ],
+
+  "causes": [
+    {
+      "cause": "House dust mite sensitisation",
+      "description": "Dermatophagoides pteronyssinus and Dermatophagoides farinae are the dominant indoor aeroallergens worldwide. Mite faecal pellets contain Der p 1 and Der p 2 proteases that drive Type 2 airway inflammation. Year-round exposure in mattresses, carpets, and upholstery sustains chronic disease."
+    },
+    {
+      "cause": "Pet dander sensitisation",
+      "description": "Cat (Fel d 1) and dog (Can f 1) allergens are airborne and persist in homes for months after a pet leaves. Sensitisation predicts asthma severity and exacerbation risk independently of mite sensitisation."
+    },
+    {
+      "cause": "Pollen and mould sensitisation",
+      "description": "Tree pollens (birch, oak, cedar) in spring, grass pollens in summer, and weed pollens (ragweed, mugwort) in autumn drive seasonal exacerbations. Outdoor moulds (Alternaria, Cladosporium) cause severe asthma and have been linked to thunderstorm asthma epidemics."
+    },
+    {
+      "cause": "Cockroach and rodent allergens",
+      "description": "Bla g 1 (cockroach) and Mus m 1 (mouse) sensitisation are particularly prevalent in inner-city housing and predict severe asthma in children. Integrated pest management improves symptom control."
+    },
+    {
+      "cause": "Viral respiratory infections",
+      "description": "Rhinovirus, respiratory syncytial virus, and influenza precipitate 60-80% of asthma exacerbations and contribute to asthma inception in early childhood when interacting with allergen sensitisation."
+    },
+    {
+      "cause": "Occupational allergens",
+      "description": "More than 300 substances are recognised as causes of occupational asthma — flour and grain, animal proteins, latex, isocyanates, persulphates in hairdressing, and laboratory animals. Sensitisation often follows several years of exposure."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Atopy and family history", "category": "genetic", "description": "First-degree relative with asthma, eczema, or hay fever increases asthma risk 2-4 fold. Heritability estimates from twin studies are 60-80%." },
+    { "factor": "Childhood RSV or rhinovirus bronchiolitis", "category": "non-modifiable", "description": "Severe early-life lower respiratory infection doubles the risk of childhood asthma, particularly in genetically predisposed children. Newer nirsevimab prophylaxis may reduce this risk." },
+    { "factor": "Early-life aeroallergen exposure", "category": "environmental", "description": "Exposure to high mite, mould, or cockroach allergen loads in early life increases sensitisation and asthma risk; this effect is modified by microbial exposure and breastfeeding." },
+    { "factor": "Maternal smoking and second-hand smoke", "category": "modifiable", "description": "In-utero and childhood tobacco smoke exposure increase asthma incidence by 60-90% and worsen severity. Cessation in pregnancy halves the relative risk." },
+    { "factor": "Air pollution (PM2.5, NO2, ozone)", "category": "modifiable", "description": "Living within 50 m of major roads or in cities with high PM2.5 levels increases asthma incidence and exacerbations. NO2 augments allergen-induced airway inflammation." },
+    { "factor": "Obesity (BMI ≥30 kg/m2)", "category": "modifiable", "description": "Obesity doubles asthma incidence in adults and worsens control. Mechanical effects on lung volumes plus systemic inflammation contribute." },
+    { "factor": "Occupational sensitiser exposure", "category": "modifiable", "description": "Bakers, hairdressers, healthcare workers, animal handlers, and isocyanate-exposed workers have 3-10 fold higher occupational asthma incidence; early identification and exposure control are protective." },
+    { "factor": "Vitamin D deficiency", "category": "modifiable", "description": "Low 25-OH-vitamin-D (<25 nmol/L) is associated with more exacerbations in some cohorts; supplementation reduces severe exacerbations in patients with low baseline levels (VIDA, Brehm)." }
+  ],
+
+  "affectedDemographics": [
+    "Asthma prevalence is highest in high-income countries: 14-18% in the UK, Australia, and Canada; 8-12% in the United States (GBD 2021).",
+    "Childhood-onset asthma is more common in boys; adult-onset and severe asthma are more common in women.",
+    "Black and Hispanic populations in the United States have higher asthma mortality, with rates 2-3 times that of non-Hispanic White populations.",
+    "Allergic phenotype predominates in children (over 80% sensitised) and in adults with onset before age 40.",
+    "Occupational asthma accounts for an estimated 10-25% of adult-onset asthma."
+  ],
+
+  "diagnosisOverview": "Diagnosis combines a typical history with objective evidence of variable airflow obstruction. The classic history includes episodic wheeze, cough, chest tightness, or breathlessness triggered by allergens, exercise, viral infection, or cold air, with day-to-day variability and a personal or family history of atopy. Spirometry is the primary lung function test: a post-bronchodilator increase in FEV1 of 12% and 200 mL (children: 12%) confirms reversible airflow obstruction. If baseline spirometry is normal, alternative objective tests include peak flow variability (more than 10% in adults, 13% in children over two weeks), bronchial challenge with methacholine or mannitol (PC20 <8 mg/mL is positive), or exercise challenge for exercise-induced bronchoconstriction. Type 2 biomarkers refine the phenotype and guide biologic eligibility: blood eosinophils above 150/µL, fractional exhaled nitric oxide (FeNO) above 25 ppb in adults (35 ppb in children 5-12), and total IgE above 30 IU/mL. Allergy assessment with skin-prick testing or serum specific IgE to common aeroallergens identifies modifiable triggers and informs allergen avoidance and allergen immunotherapy. A chest X-ray excludes alternative diagnoses (pneumonia, cardiac failure, malignancy) in adults with new wheeze. Differential diagnoses include COPD, vocal cord dysfunction, hyperventilation syndrome, eosinophilic granulomatosis with polyangiitis, allergic bronchopulmonary aspergillosis, and cardiac failure.",
+
+  "diagnosticTests": [
+    { "test": "Spirometry with bronchodilator reversibility test", "purpose": "Confirms reversible airflow obstruction (post-bronchodilator FEV1 increase ≥12% and 200 mL)", "whatToExpect": "Patient breathes forcefully into a mouthpiece three times, then receives 400 mcg salbutamol via a spacer, waits 15 minutes, and repeats. Total time 30 minutes; results available immediately." },
+    { "test": "Peak expiratory flow monitoring", "purpose": "Detects diurnal variability >10% in adults (13% in children) supporting asthma diagnosis and guiding self-management plans", "whatToExpect": "Patient uses a handheld peak flow meter morning and evening for 2 weeks, recording in a diary or app." },
+    { "test": "Fractional exhaled nitric oxide (FeNO)", "purpose": "Biomarker of Type 2 airway inflammation; supports the diagnosis and predicts ICS response", "whatToExpect": "Patient exhales slowly into a hand-held device at a controlled flow rate for 10 seconds. Result available immediately." },
+    { "test": "Allergy assessment (skin-prick test or serum specific IgE)", "purpose": "Identifies sensitisation to common aeroallergens to guide avoidance, immunotherapy, and biologic selection", "whatToExpect": "Skin-prick test: drops of allergen applied to the forearm; the skin is gently pricked through each drop and read at 15 minutes for wheal size. Specific IgE: a single blood draw with results in 3-5 days." },
+    { "test": "Bronchial provocation challenge (methacholine, mannitol, or exercise)", "purpose": "Detects airway hyperresponsiveness when spirometry is normal and asthma is suspected", "whatToExpect": "Patient inhales increasing doses of methacholine or mannitol with spirometry after each dose; or performs a structured exercise test. Total time 30-60 minutes in a lung function laboratory." },
+    { "test": "Blood eosinophil count and total IgE", "purpose": "Type 2 inflammatory biomarkers guiding ICS dose and biologic eligibility", "whatToExpect": "Standard blood draw; results available within 24 hours." }
+  ],
+
+  "treatmentOverview": "Treatment follows the Global Initiative for Asthma (GINA) 2024 strategy and is organised as a stepwise approach guided by symptom control, exacerbation history, and biomarkers. GINA Track 1 is the preferred approach: as-needed low-dose inhaled corticosteroid-formoterol (ICS-formoterol, anti-inflammatory reliever or AIR) for mild disease (steps 1-2), and daily ICS-formoterol as maintenance and reliever therapy (MART) for moderate to severe disease (steps 3-5). This single-inhaler approach reduces severe exacerbations by approximately 60% compared with short-acting beta-2-agonist-only reliever treatment and addresses the long-standing problem of SABA overuse, which doubles asthma death risk when more than three canisters per year are dispensed. Step-up therapy adds long-acting muscarinic antagonists (tiotropium 5 mcg daily) at step 4, and step 5 introduces biologic therapy: omalizumab (anti-IgE) for allergic asthma with elevated total IgE 30-1,500 IU/mL and documented perennial allergen sensitisation; mepolizumab, reslizumab, and benralizumab (anti-IL-5 and anti-IL-5Rα) for eosinophilic asthma with blood eosinophils above 150-300/µL; dupilumab (anti-IL-4Rα) for Type 2 high asthma with eosinophils above 150/µL or FeNO above 25 ppb, also approved for oral-steroid-dependent disease; and tezepelumab (anti-TSLP) for severe asthma regardless of Type 2 status. Biologics reduce exacerbations by 40-60%, enable oral corticosteroid tapering, and improve lung function and quality of life. Personalised written asthma action plans, allergen avoidance strategies, smoking cessation, and treatment of comorbidities (allergic rhinitis, gastro-oesophageal reflux disease, obesity, obstructive sleep apnoea) further optimise control. Allergen-specific immunotherapy with subcutaneous or sublingual extracts is considered for adults and older children with persistent allergic asthma and confirmed sensitisation to a single dominant allergen (typically house dust mite or grass pollen), provided FEV1 is above 70% predicted and disease is well controlled on inhaled corticosteroids. Annual influenza, pneumococcal, and SARS-CoV-2 vaccination is recommended for all asthma patients.",
+
+  "medicalTreatments": [
+    { "name": "Inhaled corticosteroid-formoterol (budesonide-formoterol 200/6 mcg, beclometasone-formoterol 100/6 mcg)", "description": "GINA preferred therapy. Used as-needed in mild asthma (AIR) and as maintenance plus reliever (MART) in moderate to severe disease. Combines anti-inflammatory and rapid bronchodilator action in one inhaler.", "effectiveness": "60% reduction in severe exacerbations versus SABA alone; equivalent control to traditional ICS-LABA at lower steroid dose (SYGMA, PRACTICAL trials)" },
+    { "name": "Inhaled corticosteroid (budesonide, fluticasone, mometasone, ciclesonide)", "description": "Cornerstone controller for asthma. Doses titrated by symptom control, FeNO, and exacerbation history. Spacer use and rinse-and-spit reduce oropharyngeal candidiasis.", "effectiveness": "Reduces exacerbations by 50-60%; improves FEV1 by 200-300 mL within 6-8 weeks" },
+    { "name": "Long-acting muscarinic antagonist (tiotropium 5 mcg once daily)", "description": "Added at GINA step 4 in adults and children aged 6 and over with persistent symptoms despite ICS-LABA. Bronchodilator effect distinct from beta-2-agonists.", "effectiveness": "Reduces severe exacerbations by 20-25% on top of ICS-LABA; improves FEV1 by 100-150 mL (Kerstjens, TIOSPIR)" },
+    { "name": "Omalizumab (anti-IgE) 150-375 mg every 2-4 weeks subcutaneously", "description": "Approved for moderate-severe allergic asthma with positive specific IgE to perennial aeroallergen and total IgE 30-1,500 IU/mL. Reduces free IgE and dampens mast cell and basophil activation.", "effectiveness": "Reduces severe exacerbations by 25-50%; improves quality of life and reduces oral steroid courses (Busse 2001)" },
+    { "name": "Mepolizumab 100 mg subcutaneously every 4 weeks (anti-IL-5)", "description": "Indicated in adults and children aged 6 and over with severe eosinophilic asthma and blood eosinophils above 150/µL on therapy or 300/µL pre-treatment.", "effectiveness": "MENSA trial: 53% reduction in severe exacerbations; oral steroid reduction in 50% of patients (Ortega 2014)" },
+    { "name": "Benralizumab 30 mg subcutaneously every 4 weeks for 3 doses then every 8 weeks (anti-IL-5Rα)", "description": "Depletes eosinophils through antibody-dependent cell-mediated cytotoxicity. Approved for adults with severe eosinophilic asthma; convenient 8-weekly schedule after loading.", "effectiveness": "SIROCCO/CALIMA: 28-51% reduction in severe exacerbations; FEV1 improvement of 100-150 mL" },
+    { "name": "Dupilumab 200-300 mg every 2 weeks (anti-IL-4Rα)", "description": "Blocks IL-4 and IL-13 signalling. Approved for moderate-severe Type 2 asthma (eosinophils ≥150/µL or FeNO ≥25 ppb) and for oral-steroid-dependent asthma regardless of biomarkers.", "effectiveness": "QUEST trial: 47-67% exacerbation reduction; oral steroid dose halved in 80% of dependent patients (Castro 2018)" },
+    { "name": "Tezepelumab 210 mg subcutaneously every 4 weeks (anti-TSLP)", "description": "Blocks thymic stromal lymphopoietin, an alarm cytokine upstream of Type 2 and non-Type 2 inflammation. Effective regardless of eosinophil count, FeNO, or allergic status — broadest biologic indication.", "effectiveness": "NAVIGATOR: 56% exacerbation reduction overall, 41% reduction in patients with low eosinophils (Menzies-Gow 2021)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Bronchial thermoplasty", "description": "Radiofrequency energy delivered via bronchoscopy to reduce airway smooth muscle mass. Reserved for adults with severe persistent asthma not controlled despite biologic and high-dose ICS-LABA. Performed in three sessions 3 weeks apart.", "successRate": "AIR2 trial: 32% reduction in severe exacerbations and improved quality of life at 12 months; effects sustained at 5 years; rare procedural complications" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Allergen-specific immunotherapy (subcutaneous or sublingual)", "description": "Disease-modifying therapy for selected allergic asthma patients with confirmed single-allergen sensitisation, FEV1 above 70% predicted, and well-controlled disease on ICS. Reduces medication need and may prevent asthma in children with allergic rhinitis." },
+    { "name": "Vitamin D supplementation in deficient patients", "description": "Reduces severe exacerbations by 26% in patients with baseline 25-OH-vitamin-D below 25 nmol/L (Cochrane 2016, Jolliffe 2017). Aim for level above 50 nmol/L." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "inhaled-corticosteroid-therapy",
+    "biologic-therapy-asthma",
+    "allergen-immunotherapy"
+  ],
+
+  "whySeeSpecialist": "Patients with frequent exacerbations (more than two per year), persistent symptoms despite medium-dose ICS-LABA, FEV1 below 70% predicted, oral corticosteroid dependence, or features of Type 2 inflammation should be referred to an allergist or respiratory physician for phenotyping and biologic assessment. Children with frequent symptoms or poor inhaler response benefit from paediatric allergy review.",
+  "doctorSelectionGuide": "Choose a clinician with subspecialty training in asthma and allergy who has access to spirometry, FeNO, allergy testing, and biologic prescribing. Ask whether the clinic offers a severe asthma multidisciplinary team review including respiratory physiotherapy, allergy nurse specialist, and clinical psychology, and whether they use validated outcome measures (ACT, ACQ).",
+
+  "hospitalCriteria": [
+    "Spirometry and bronchodilator reversibility testing on-site",
+    "FeNO and total IgE assays available",
+    "Allergy testing with skin-prick and specific IgE panels",
+    "Specialist nurse-led asthma clinic with biologic administration",
+    "Multidisciplinary severe asthma service"
+  ],
+  "keyFacilities": [
+    "Allergy and immunology clinics",
+    "Specialist respiratory medicine outpatients",
+    "Paediatric allergy and respiratory services",
+    "Severe asthma centres with biologic capability",
+    "Pulmonary rehabilitation services"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid second-hand tobacco smoke and never smoke indoors; in-utero and childhood smoke exposure double asthma risk.",
+    "Encase mattresses and pillows in mite-impermeable covers and wash bedding weekly at 60 °C in mite-sensitised patients.",
+    "Vacuum carpets weekly with a HEPA-filter vacuum and use hard flooring where possible.",
+    "Treat allergic rhinitis with intranasal corticosteroids and antihistamines — uncontrolled rhinitis worsens asthma.",
+    "Vaccinate against influenza annually and ensure pneumococcal and COVID-19 vaccinations are up to date.",
+    "Avoid known occupational sensitisers and use appropriate respiratory protection where exposure is unavoidable."
+  ],
+
+  "lifestyleModifications": [
+    "Use the prescribed maintenance inhaler every day, even when feeling well.",
+    "Carry the reliever inhaler at all times and use a spacer for metered-dose inhalers to improve drug delivery.",
+    "Keep a written personalised asthma action plan and follow yellow/red zone instructions promptly.",
+    "Avoid known allergen and irritant triggers (smoke, strong perfumes, cold air, paint fumes).",
+    "Maintain a healthy body mass index of 18.5-24.9 kg/m2 — weight loss in obesity improves asthma control.",
+    "Exercise regularly with pre-exercise warm-up and reliever inhaler if exercise-induced symptoms occur."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style diet rich in fruits, vegetables, fish, nuts, and olive oil",
+      "Oily fish twice weekly for omega-3 fatty acids",
+      "Foods rich in vitamin D (oily fish, fortified dairy) plus supplementation in deficient patients",
+      "Adequate hydration to support mucociliary clearance"
+    ],
+    "avoid": [
+      "Sulfite-containing foods and drinks (some wines, dried fruits) in sulfite-sensitive patients",
+      "Aspirin and other NSAIDs in patients with NSAID-exacerbated respiratory disease",
+      "Excessive processed and ultra-processed foods that worsen systemic inflammation",
+      "Heavy alcohol use, which worsens sleep and may trigger asthma in some patients"
+    ]
+  },
+  "exerciseGuidelines": "Regular aerobic exercise (150 minutes per week) improves cardiovascular fitness and asthma control. Use a 10-15 minute warm-up to reduce exercise-induced bronchoconstriction; pre-exercise inhaled corticosteroid-formoterol or salbutamol can be added when needed. Swimming in chlorinated pools may benefit some patients but worsens others — try alternatives if symptoms develop after swimming.",
+
+  "dailyManagement": [
+    "Take the maintenance inhaler at the same time every day; use a spacer for pressurised metered-dose inhalers.",
+    "Rinse the mouth and spit after each ICS dose to reduce oral candidiasis and hoarseness.",
+    "Check inhaler technique with a healthcare professional at least annually.",
+    "Record symptoms and reliever use; review the action plan when reaching the yellow zone (worsening symptoms or peak flow 60-80% of best).",
+    "Take any prescribed leukotriene receptor antagonist (montelukast) at night.",
+    "Attend annual asthma review including spirometry, biomarker check, and inhaler review."
+  ],
+
+  "prognosis": "Most patients with mild to moderate allergic asthma achieve good control on inhaled corticosteroid-formoterol with rare exacerbations and normal life expectancy. About 50% of children with allergic asthma improve substantially or enter clinical remission by adolescence, although airway hyperresponsiveness often persists. Severe allergic asthma now responds to targeted biologic therapy in 60-80% of well-phenotyped patients, with halving of severe exacerbations, halving of oral corticosteroid use, and substantial quality-of-life improvement. Asthma-related mortality has fallen substantially in countries with widespread access to inhaled corticosteroids — UK and US rates now around 1.5 per 100,000 — but remains higher among lower-income and minority populations. The major modifiable risk factors for poor prognosis are non-adherence, smoking, persistent allergen exposure, and untreated comorbid rhinitis or obesity.",
+
+  "recoveryTimeline": "Symptomatic improvement begins within hours of initiating ICS-formoterol. FEV1 and FeNO improve over 6-8 weeks. Biologic therapy effects are usually apparent by 4-12 weeks with maximal exacerbation reduction by 6 months. Allergen immunotherapy requires 3-5 years for long-lasting benefit. Step-down to lower controller doses can be considered after 3 months of good control.",
+
+  "complications": [
+    "Severe exacerbations requiring emergency care, oral corticosteroids, or hospitalisation — drive most asthma costs and a small but significant share of asthma deaths.",
+    "Airway remodelling with fixed airflow obstruction in chronic uncontrolled asthma, particularly in adult-onset disease.",
+    "Side-effects of long-term oral corticosteroids in severe disease — osteoporosis, cataracts, diabetes, hypertension — addressed by steroid-sparing biologic therapy.",
+    "Pneumonia and oropharyngeal candidiasis from inhaled corticosteroid use, mitigated by spacer use and mouth rinsing.",
+    "Untreated comorbidities (allergic rhinitis, sinusitis, GORD, obstructive sleep apnoea, anxiety) reducing control.",
+    "Sudden asthma death, especially in patients with frequent reliever use, previous near-fatal asthma, and poor adherence."
+  ],
+
+  "supportResources": [
+    { "name": "Global Initiative for Asthma (GINA)", "url": "https://ginasthma.org/", "description": "Authoritative international clinical strategy for asthma diagnosis, treatment, and prevention." },
+    { "name": "Asthma + Lung UK", "url": "https://www.asthmaandlung.org.uk/", "description": "UK patient charity with helpline, action-plan templates, and resources for adults and children." },
+    { "name": "Asthma and Allergy Foundation of America (AAFA)", "url": "https://aafa.org/", "description": "US patient organisation with disease information, advocacy, and certified asthma educator program." },
+    { "name": "American Academy of Allergy, Asthma & Immunology (AAAAI)", "url": "https://www.aaaai.org/", "description": "Specialty society with patient-facing information on allergic asthma, immunotherapy, and biologics." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "copd", "name": "Chronic Obstructive Pulmonary Disease", "keyDifference": "Allergic asthma typically begins in childhood or young adulthood with reversible airflow obstruction and atopic features. COPD presents in patients over 40 with a heavy smoking or biomass exposure history, fixed (largely irreversible) obstruction, and progressive dyspnoea. Spirometry and reversibility testing distinguish them." },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis (Hay Fever)", "keyDifference": "Allergic rhinitis affects the upper airway (nose and eyes) and shares allergic triggers with asthma. The two often coexist in the 'united airway' but asthma adds wheeze, breathlessness, and lower airway obstruction not present in isolated rhinitis." },
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis (Eczema)", "keyDifference": "Eczema is a skin disease with itchy red rashes; allergic asthma involves the airways. Both share Type 2 inflammation and the same biologic targets (dupilumab) and frequently co-exist in the atopic march from infancy onwards." },
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "keyDifference": "Anaphylaxis is an acute systemic IgE-mediated reaction with airway, skin, gastrointestinal, and cardiovascular features developing within minutes of allergen exposure. Allergic asthma is chronic and limited to the airways, although severe asthma exacerbations can occur during anaphylaxis." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis" },
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis" },
+    { "slug": "food-allergy", "name": "Food Allergy" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "asthma", "name": "Asthma (general)", "relevance": "The broader umbrella condition; allergic asthma is the most common phenotype." },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis", "relevance": "Coexists in 70-80% of allergic asthma patients; treatment of rhinitis improves asthma control." },
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis", "relevance": "Common comorbidity in the atopic march; shares Type 2 inflammation and IL-4/IL-13 biology." },
+    { "slug": "food-allergy", "name": "Food Allergy", "relevance": "Coexists in many children with allergic asthma; food-triggered anaphylaxis can include bronchospasm." },
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "relevance": "Bronchospasm during anaphylaxis is a major contributor to morbidity, especially in patients with poorly controlled asthma." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is allergic asthma?",
+      "answer": "Allergic asthma is the most common type of asthma, in which airway inflammation is triggered by IgE-mediated immune responses to inhaled allergens such as house dust mite, pet dander, mould, and pollen. It causes episodic wheeze, cough, breathlessness, and chest tightness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is allergic asthma different from regular asthma?",
+      "answer": "Allergic asthma is the subtype driven by allergen-specific IgE and Type 2 inflammation. Non-allergic asthma can be triggered by irritants, infection, exercise, or unknown causes without identifiable allergen sensitisation. Both share airway inflammation and respond to inhaled corticosteroids.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of allergic asthma?",
+      "answer": "Symptoms include episodic wheeze, dry cough, chest tightness, and breathlessness, often worse at night, with exercise, cold air, or specific allergen exposure. Many patients also have allergic rhinitis (sneezing, blocked nose, itchy eyes) and a personal or family history of atopy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is allergic asthma diagnosed?",
+      "answer": "Diagnosis combines typical symptoms with objective evidence of variable airflow obstruction on spirometry (post-bronchodilator FEV1 increase ≥12% and 200 mL) or peak flow variability. Allergy assessment with skin-prick test or specific IgE confirms aeroallergen sensitisation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What triggers allergic asthma?",
+      "answer": "Common triggers include house dust mite, cat and dog dander, mould, pollen (tree, grass, weed), cockroach allergens, and occupational sensitisers. Viral upper respiratory infections, air pollution, tobacco smoke, cold air, exercise, and aspirin or NSAIDs can also provoke attacks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for allergic asthma?",
+      "answer": "Inhaled corticosteroid-formoterol combinations are first-line, used as-needed in mild disease and as maintenance plus reliever in moderate to severe disease. Long-acting muscarinic antagonists are added at higher steps, and biologics (omalizumab, mepolizumab, dupilumab, tezepelumab) are reserved for severe disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are biologics safe for allergic asthma?",
+      "answer": "Biologics for asthma (omalizumab, mepolizumab, benralizumab, reslizumab, dupilumab, tezepelumab) have an excellent safety profile in trials and registries. Common side effects include injection-site reactions; rare anaphylaxis with omalizumab occurs in under 0.2% of patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can allergic asthma be cured?",
+      "answer": "There is no cure, but most patients achieve excellent control with inhaled therapy. Up to 50% of children with allergic asthma improve substantially or enter clinical remission by adolescence. Allergen immunotherapy can be disease-modifying in selected patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I get allergy testing for asthma?",
+      "answer": "Allergy testing with skin-prick or specific IgE panels is recommended in most patients with allergic features (rhinitis, eczema, family history, suspected trigger). Results guide avoidance, immunotherapy, and biologic selection (omalizumab needs documented sensitisation).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children outgrow allergic asthma?",
+      "answer": "About 30-50% of children with allergic asthma have substantial improvement or remission of symptoms by late adolescence, but airway hyperresponsiveness may persist. Risk of recurrence in adulthood is higher in those with severe early disease, persistent atopy, or smoking.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is allergic asthma hereditary?",
+      "answer": "Yes. Heritability of asthma is 60-80% in twin studies. A first-degree relative with asthma, eczema, or hay fever increases asthma risk 2-4 fold. Multiple susceptibility loci have been identified including 17q21 (ORMDL3) and IL33.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I reduce dust mites at home?",
+      "answer": "Encase mattresses, pillows, and duvets in mite-impermeable covers; wash bedding weekly at 60 °C; use hard flooring or low-pile carpet; vacuum weekly with a HEPA-filter device; and maintain indoor humidity below 50%. These measures reduce mite allergen by 50-80%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise with allergic asthma?",
+      "answer": "Yes. Regular aerobic exercise improves cardiovascular fitness and asthma control. Use a 10-15 minute warm-up and a pre-exercise reliever (ICS-formoterol or salbutamol) when exercise-induced symptoms occur. Swimming in chlorinated pools may worsen symptoms in some patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is allergen immunotherapy effective?",
+      "answer": "Yes, in selected patients. Subcutaneous or sublingual immunotherapy for 3-5 years reduces medication needs and may prevent asthma in children with allergic rhinitis. Best evidence is for house dust mite and grass pollen. Patients need FEV1 above 70% predicted and well-controlled disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is an asthma action plan?",
+      "answer": "A personalised written plan describing daily controller medication, what to do for worsening symptoms (yellow zone), and when to seek emergency care (red zone). Action plans reduce hospitalisations by 30-40% and are recommended by GINA for every asthma patient.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnancy affect allergic asthma?",
+      "answer": "Asthma worsens in about a third of pregnancies, improves in a third, and remains stable in a third. Uncontrolled asthma is more harmful to mother and baby than asthma medications. Inhaled corticosteroids, formoterol, salbutamol, and most biologics are considered safe in pregnancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How serious is allergic asthma?",
+      "answer": "Most allergic asthma is mild to moderate and well controlled with inhaled therapy. Severe asthma affects 5-10% of patients and is associated with frequent exacerbations and reduced quality of life. Worldwide, more than 1,000 people die of asthma every day; access to inhaled corticosteroids reduces deaths dramatically.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a specialist?",
+      "answer": "Refer to allergy or respiratory specialists for frequent exacerbations (more than two per year), persistent symptoms despite medium-dose ICS-LABA, FEV1 under 70% predicted, oral corticosteroid dependence, suspected occupational asthma, or consideration of biologics or immunotherapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pets stay if I have allergic asthma?",
+      "answer": "Removing the offending pet from the home reduces exposure but allergen persists for months. Keeping pets out of bedrooms, weekly washing of the animal, and HEPA air filtration help when removal is not possible. Sensitised patients with severe asthma usually benefit from rehoming.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does smoking affect allergic asthma?",
+      "answer": "Active and second-hand smoking worsen asthma control, reduce ICS effectiveness, accelerate airway remodelling, and increase exacerbations. Smoking cessation rapidly improves lung function and reduces exacerbations and emergency visits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is bronchial thermoplasty?",
+      "answer": "Bronchial thermoplasty delivers controlled radiofrequency heat via bronchoscopy to reduce airway smooth muscle in severe asthma. Three procedures 3 weeks apart reduce severe exacerbations by 32% at 12 months with effects sustained at 5 years, used in patients failing biologic therapy.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Allergic Asthma (atopic asthma)",
+  "regionalNames": [
+    { "name": "Atopic asthma", "region": "USA, UK", "language": "English" },
+    { "name": "Extrinsic asthma", "region": "Global (historic)", "language": "English" },
+    { "name": "Asma alérgica", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "Asthme allergique", "region": "France, Francophone Africa", "language": "French" }
+  ],
+  "searchTags": [
+    "allergic asthma",
+    "atopic asthma",
+    "extrinsic asthma",
+    "Type 2 asthma",
+    "eosinophilic asthma",
+    "IgE asthma",
+    "ICS-formoterol",
+    "MART",
+    "omalizumab",
+    "mepolizumab",
+    "benralizumab",
+    "dupilumab",
+    "tezepelumab",
+    "house dust mite asthma",
+    "GINA",
+    "biologic asthma"
+  ],
+  "symptomKeywords": [
+    "wheezing at night",
+    "cough after exercise",
+    "breathlessness with pollen",
+    "chest tightness allergy",
+    "wheezing with cat or dog",
+    "asthma attack triggers",
+    "early morning cough wheeze"
+  ],
+
+  "metaTitle": "Allergic Asthma: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Allergic asthma: wheeze, cough, breathlessness from dust mite, pet, pollen. GINA treatment with ICS-formoterol, biologics, immunotherapy explained clearly.",
+
+  "keywords": [
+    "allergic asthma",
+    "atopic asthma",
+    "allergic asthma symptoms",
+    "allergic asthma treatment",
+    "GINA asthma",
+    "ICS-formoterol MART",
+    "omalizumab",
+    "dupilumab asthma",
+    "house dust mite",
+    "asthma biologics",
+    "FeNO asthma",
+    "asthma action plan"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Global Initiative for Asthma. 2024. Global Strategy for Asthma Management and Prevention. GINA Geneva.", "url": "https://ginasthma.org/2024-report/", "accessedDate": "2026-05-14" },
+    { "title": "Castro M, Corren J, Pavord ID, et al. 2018. Dupilumab efficacy and safety in moderate-to-severe uncontrolled asthma (QUEST). New England Journal of Medicine 378(26):2486-2496.", "url": "https://pubmed.ncbi.nlm.nih.gov/29782217/", "accessedDate": "2026-05-14" },
+    { "title": "Ortega HG, Liu MC, Pavord ID, et al. 2014. Mepolizumab treatment in patients with severe eosinophilic asthma (MENSA). New England Journal of Medicine 371(13):1198-1207.", "url": "https://pubmed.ncbi.nlm.nih.gov/25199059/", "accessedDate": "2026-05-14" },
+    { "title": "Bleecker ER, FitzGerald JM, Chanez P, et al. 2016. Efficacy and safety of benralizumab for patients with severe asthma uncontrolled with high-dosage inhaled corticosteroids and long-acting beta2-agonists (SIROCCO): a randomised, multicentre, placebo-controlled phase 3 trial. Lancet 388(10056):2115-2127.", "url": "https://pubmed.ncbi.nlm.nih.gov/27609408/", "accessedDate": "2026-05-14" },
+    { "title": "Menzies-Gow A, Corren J, Bourdin A, et al. 2021. Tezepelumab in adults and adolescents with severe, uncontrolled asthma (NAVIGATOR). New England Journal of Medicine 384(19):1800-1809.", "url": "https://pubmed.ncbi.nlm.nih.gov/33979488/", "accessedDate": "2026-05-14" },
+    { "title": "O'Byrne PM, FitzGerald JM, Bateman ED, et al. 2018. Inhaled combined budesonide-formoterol as needed in mild asthma (SYGMA 1). New England Journal of Medicine 378(20):1865-1876.", "url": "https://pubmed.ncbi.nlm.nih.gov/29768149/", "accessedDate": "2026-05-14" },
+    { "title": "Busse W, Corren J, Lanier BQ, et al. 2001. Omalizumab, anti-IgE recombinant humanized monoclonal antibody, for the treatment of severe allergic asthma. Journal of Allergy and Clinical Immunology 108(2):184-190.", "url": "https://pubmed.ncbi.nlm.nih.gov/11496232/", "accessedDate": "2026-05-14" },
+    { "title": "Global Burden of Disease 2021. Asthma prevalence and mortality. Lancet Respiratory Medicine 2023;11(11):975-997.", "url": "https://pubmed.ncbi.nlm.nih.gov/37708884/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

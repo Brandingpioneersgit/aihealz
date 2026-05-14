@@ -1,0 +1,425 @@
+{
+  "_meta": {
+    "slug": "vesicoureteral-reflux",
+    "tier": 1,
+    "headTerm": "vesicoureteral reflux",
+    "primarySpecialty": "Pediatric Urology / Nephrology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Diagnosis and management per AUA 2010 management guideline (Peters et al. J Urol 2010, PMID 20728101 — updated 2017) and 2010 AAP UTI guideline for febrile infants and young children. Grading per the International Reflux Study Committee. Antibiotic prophylaxis evidence per RIVUR trial (NEJM 2014, PMID 24795142). Surgical outcomes per STING/HIT meta-analyses and Dwyer Pediatr Nephrol 2013. EAU/ESPU pediatric urology guideline 2024."
+  },
+
+  "h1Title": "Vesicoureteral Reflux: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Pediatric Urology",
+
+  "heroOverview": "Vesicoureteral reflux (VUR) is the retrograde flow of urine from the bladder up the ureter and sometimes into the kidney, predisposing to febrile urinary tract infections, pyelonephritis, and renal scarring. Primary VUR is present in roughly 1-3% of healthy children and is found in 30-40% of children evaluated after a first febrile UTI. Secondary VUR results from elevated bladder pressure or obstruction, including posterior urethral valves and neurogenic bladder. The condition is graded I-V by international convention based on extent of contrast reflux on voiding cystourethrogram (VCUG). Most low-grade VUR (I-III) resolves spontaneously in 50-80% of cases over 1-5 years as the patient grows. The 2014 RIVUR trial showed continuous antibiotic prophylaxis halves recurrent febrile UTI risk in children with VUR. Treatment ranges from active surveillance with bladder and bowel optimization, antibiotic prophylaxis (trimethoprim-sulfamethoxazole or nitrofurantoin), endoscopic injection (Deflux), to ureteric reimplantation surgery, depending on grade, age, sex, presence of renal scarring, and recurrence pattern.",
+
+  "keyStats": {
+    "prevalence": "Approximately 1-3% of healthy children; 30-40% of children with first febrile UTI have detectable VUR (AAP, AUA)",
+    "demographics": "Female-to-male ratio approximately 2-3:1 overall; boys present earlier (infancy) and have higher rates of secondary VUR from posterior urethral valves; girls predominate at presentation after first UTI",
+    "avgAge": "Most diagnoses made between 1-5 years of age after a febrile UTI; prenatal hydronephrosis detected on routine ultrasound prompts diagnosis at birth in some cases",
+    "globalCases": "Tens of thousands of new pediatric diagnoses annually in the US; substantially under-diagnosed in low- and middle-income countries"
+  },
+
+  "definition": "Vesicoureteral reflux (ICD-10: N13.70 unspecified, N13.71 without reflux nephropathy, N13.72 with reflux nephropathy without hydroureter, N13.73 with reflux nephropathy with hydroureter) is the retrograde flow of urine from the bladder into one or both ureters and possibly into the renal pelvis and intrarenal collecting system. Primary VUR is caused by a deficient ureterovesical junction (short submucosal ureteric tunnel, abnormal angle of insertion) that fails to provide a competent flap-valve mechanism during bladder filling and voiding. Secondary VUR is the consequence of elevated bladder pressure or distal obstruction, including posterior urethral valves, neurogenic bladder, dysfunctional voiding, and severe bladder outlet obstruction. The International Reflux Study Committee grades VUR I to V based on the voiding cystourethrogram appearance: grade I (reflux into ureter only), II (reflux up to renal pelvis without dilatation), III (mild ureteric and pelvic dilatation), IV (moderate dilatation with blunting of fornices), and V (severe dilatation with tortuous ureter and loss of papillary impressions). Reflux nephropathy refers to renal parenchymal scarring associated with VUR and recurrent pyelonephritis; it is best detected by 99m-Tc DMSA scintigraphy. The American Academy of Pediatrics 2011 guideline (UTI in 2-24 month-olds) and the American Urological Association 2010/2017 VUR guideline define the evaluation and management pathway. The European Association of Urology and European Society for Paediatric Urology issued joint guidelines in 2024. Management combines pediatric urology, pediatric nephrology, primary care, and family education.",
+
+  "typesClassification": [
+    { "type": "Primary VUR (developmental)", "description": "Caused by a short or absent submucosal ureteric tunnel at the ureterovesical junction, allowing retrograde flow during bladder filling and voiding. Most common form (>70% of cases). Hereditary contribution: 25-50% of siblings of an affected index child have VUR." },
+    { "type": "Secondary VUR (from elevated bladder pressure or obstruction)", "description": "Result of detrusor overactivity, neurogenic bladder, dysfunctional elimination syndrome, posterior urethral valves, or bladder outlet obstruction. Treatment requires correction of the underlying cause; reflux often resolves once normal bladder dynamics are restored." },
+    { "type": "Reflux nephropathy", "description": "Renal parenchymal scarring associated with VUR, recurrent pyelonephritis, and high-grade reflux during early childhood. Detected by 99m-Tc DMSA scintigraphy; manifests later as hypertension, proteinuria, and chronic kidney disease in some patients." },
+    { "type": "Sibling VUR (asymptomatic)", "description": "Reflux detected in siblings of an index case during screening. 25-50% of siblings have some grade of VUR, often low-grade and self-resolving. The 2010 AUA guideline updated 2017 leaves routine sibling screening to clinician discretion." },
+    { "type": "Prenatal/postnatal hydronephrosis with VUR", "description": "Prenatal hydronephrosis detected on routine maternal ultrasound prompts postnatal evaluation. VUR is found in 10-40% of these infants; many have spontaneous resolution but high-grade postnatal hydronephrosis warrants further imaging." },
+    { "type": "Grade by VCUG", "description": "Grades I to V based on extent of contrast reflux on voiding cystourethrogram, from reflux into the ureter only (I) to severe dilatation with tortuous ureter (V). Higher grades have lower spontaneous resolution rates and higher renal scarring risk." }
+  ],
+
+  "primarySymptoms": [
+    "Febrile urinary tract infection in an infant or young child, often with fever above 38.5°C, irritability, poor feeding, and vomiting; UTI is the typical presentation of previously undiagnosed VUR.",
+    "Recurrent febrile UTIs (two or more episodes), often with the same or different organisms; pattern raises suspicion for VUR even before imaging.",
+    "Pyelonephritis with flank pain, costovertebral tenderness, fever, and pyuria in an older child or adolescent.",
+    "Dysfunctional voiding symptoms: urgency, frequency, urinary incontinence (daytime wetting), constipation, holding maneuvers, and incomplete bladder emptying.",
+    "Failure to thrive, poor weight gain, or unexplained anemia in an infant with recurrent UTIs and reflux.",
+    "Hypertension in older children or adolescents with established reflux nephropathy and renal scarring.",
+    "Proteinuria detected on routine urinalysis in an older child with prior pyelonephritis or known reflux nephropathy.",
+    "Prenatally detected hydronephrosis (urinary tract dilatation) on routine fetal ultrasound, often during the second or third trimester.",
+    "Cystitis-like symptoms (dysuria, frequency, urgency) in older girls with low-grade reflux and incomplete bladder emptying.",
+    "Asymptomatic finding on screening of siblings of an index case."
+  ],
+
+  "earlyWarningSigns": [
+    "Unexplained fever in an infant under 24 months — UTI must be excluded",
+    "Recurrent low-grade fevers and irritability in toddlers without obvious source",
+    "Repeated UTIs in a girl over 4 years of age",
+    "Daytime urinary incontinence, urgency, frequency, or constipation",
+    "Family history of VUR or reflux nephropathy"
+  ],
+
+  "emergencySigns": [
+    "High fever (≥38.5°C), severe flank pain, vomiting, and hypotension in a child with known reflux — possible urosepsis",
+    "Acute oliguria, anuria, or rapidly rising creatinine in any child with reflux",
+    "Severe hematuria after instrumentation, blunt trauma, or with associated symptoms of renal injury",
+    "Newborn with bilateral severe hydronephrosis, abnormal voiding pattern, or palpable bladder — possible posterior urethral valves",
+    "Persistent vomiting, lethargy, or seizure in a febrile child with suspected UTI — possible severe pyelonephritis or sepsis"
+  ],
+
+  "causes": [
+    {
+      "cause": "Primary congenital defect of the ureterovesical junction",
+      "description": "Short or absent submucosal tunnel of the distal ureter as it passes obliquely through the bladder wall, producing an incompetent flap valve mechanism. The normal 4-5 mm tunnel functions as a one-way valve during bladder filling and voiding; shorter tunnels allow retrograde flow."
+    },
+    {
+      "cause": "Posterior urethral valves (boys)",
+      "description": "Congenital obstructing membrane in the posterior urethra of male infants causing bladder outlet obstruction, secondary VUR, and bilateral hydroureteronephrosis. Most severe cause of secondary VUR in infancy. Requires prompt cystoscopic valve ablation."
+    },
+    {
+      "cause": "Neurogenic bladder",
+      "description": "Bladder dysfunction from spinal dysraphism (myelomeningocele, tethered cord, sacral agenesis) or other neurological disease produces high storage pressure that overcomes ureterovesical junction competence. Causes secondary VUR in 30-50% of affected children."
+    },
+    {
+      "cause": "Dysfunctional voiding and bladder-bowel dysfunction",
+      "description": "Functional bladder and bowel disorders (urgency, frequency, withholding behavior, constipation, encopresis) elevate bladder pressure and impair complete emptying, contributing to or unmasking secondary VUR. Treatment of constipation and dysfunctional voiding often resolves the reflux."
+    },
+    {
+      "cause": "Genetic factors",
+      "description": "VUR shows clear familial aggregation. Siblings of index cases have 25-50% prevalence and offspring 30-65%. Several candidate genes (PAX2, ROBO2, RET) are implicated in the embryonic development of the ureterovesical junction, but no single high-penetrance gene accounts for most cases."
+    },
+    {
+      "cause": "Bladder outlet obstruction or instrumentation",
+      "description": "Severe phimosis, urethral stricture, prior surgical instrumentation, and chronic indwelling catheter can produce secondary VUR. Each is potentially correctable."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of VUR or reflux nephropathy", "category": "genetic", "description": "Siblings of an affected index child have 25-50% prevalence; offspring have 30-65% prevalence. The 2017 AUA update considers but does not mandate sibling screening; many centers obtain renal ultrasound on younger siblings." },
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Female-to-male ratio approximately 2-3:1 at presentation, partly reflecting higher rates of UTI as the presenting event. Boys are diagnosed earlier (infancy) and have higher rates of secondary VUR from PUV." },
+    { "factor": "Prior febrile urinary tract infection", "category": "non-modifiable", "description": "30-40% of children with a first febrile UTI have detectable VUR on VCUG. The AAP 2011 guideline recommends ultrasound after the first febrile UTI in children 2-24 months and VCUG only in those with abnormal ultrasound or recurrent UTI." },
+    { "factor": "Bladder-bowel dysfunction (dysfunctional voiding, constipation, encopresis)", "category": "modifiable", "description": "Strongly associated with VUR persistence and recurrent UTI. Treatment of constipation and dysfunctional voiding alone resolves a substantial proportion of low-grade reflux." },
+    { "factor": "Prenatal hydronephrosis", "category": "non-modifiable", "description": "10-40% of children with prenatal hydronephrosis have postnatal VUR. Persistent or severe postnatal hydronephrosis prompts VCUG; mild cases are often serially monitored with ultrasound." },
+    { "factor": "Posterior urethral valves (boys)", "category": "non-modifiable", "description": "Major cause of severe secondary VUR in male infants; requires endoscopic valve ablation followed by long-term urology and nephrology follow-up." },
+    { "factor": "Race and ethnicity", "category": "non-modifiable", "description": "Higher prevalence of VUR identified in White children compared with Black children in US cohorts; lower in some African and Asian populations. The reason is incompletely understood." }
+  ],
+
+  "affectedDemographics": [
+    "Approximately 1-3% of healthy children have asymptomatic VUR.",
+    "30-40% of children with first febrile UTI have detectable VUR on VCUG (AAP, AUA).",
+    "Female-to-male ratio approximately 2-3:1 at presentation; boys present earlier and often with secondary VUR.",
+    "Siblings of an index case have 25-50% prevalence; offspring have 30-65% prevalence.",
+    "Reflux nephropathy is detectable in 10-30% of children with high-grade VUR; chronic kidney disease attributable to reflux nephropathy accounts for 7-17% of pediatric end-stage renal disease in some series."
+  ],
+
+  "diagnosisOverview": "Diagnosis is initiated by clinical suspicion (febrile UTI, recurrent UTIs, prenatal hydronephrosis, family history, or dysfunctional voiding) and confirmed with imaging. The standard imaging pathway combines renal and bladder ultrasound with voiding cystourethrogram (VCUG), the gold-standard test for grading VUR. Ultrasound assesses for hydronephrosis, ureteric dilatation, bladder wall thickening, post-void residual, and other anatomical issues; it can suggest but cannot exclude VUR. VCUG fills the bladder with iodinated contrast through a urethral catheter and obtains fluoroscopic images during filling and voiding, grading reflux I-V by the International Reflux Study Committee. Radionuclide cystography (RNC) is a lower-radiation alternative used for follow-up after diagnosis but less anatomical detail than VCUG. Contrast-enhanced voiding ultrasound is gaining adoption as a radiation-free alternative in some centers. 99m-Tc DMSA renal scintigraphy detects renal parenchymal scarring (reflux nephropathy) and acute pyelonephritis with high sensitivity; it is recommended at baseline in high-grade VUR and after febrile UTIs. Functional bladder evaluation with non-invasive uroflowmetry and post-void residual addresses bladder-bowel dysfunction; formal urodynamics is reserved for neurogenic bladder and complex cases. Laboratory workup includes urinalysis, urine culture during UTI, complete blood count, renal function, and blood pressure measurement. Imaging follow-up depends on grade, age, and clinical course; spontaneous resolution is documented by repeat VCUG every 12-24 months until reflux resolves or surgical intervention is selected.",
+
+  "diagnosticTests": [
+    { "test": "Renal and bladder ultrasound", "purpose": "Screens for hydronephrosis, ureteric dilatation, bladder anomalies, and renal scarring; initial imaging after first febrile UTI in children 2-24 months", "whatToExpect": "Painless 15-30 minute test in radiology. No contrast or sedation needed. Identifies anatomical issues but cannot exclude VUR; normal ultrasound does not rule out reflux." },
+    { "test": "Voiding cystourethrogram (VCUG)", "purpose": "Gold-standard diagnosis and grading of VUR; visualizes urethra and bladder anatomy", "whatToExpect": "45-60 minutes in radiology. Urethral catheter placed in the bladder, iodinated contrast instilled, fluoroscopic images obtained during filling and voiding. Mild discomfort during catheter placement. Reflux is graded I-V based on the appearance of contrast." },
+    { "test": "Radionuclide cystography (RNC, direct)", "purpose": "Lower-radiation alternative for follow-up monitoring of known VUR; less anatomical detail than VCUG", "whatToExpect": "Similar procedure to VCUG using radionuclide instead of iodinated contrast. Useful for siblings and serial follow-up. Higher sensitivity for detecting reflux but does not show urethral anatomy." },
+    { "test": "Contrast-enhanced voiding ultrasound (CEVUS)", "purpose": "Radiation-free alternative for diagnosis and follow-up where expertise is available", "whatToExpect": "Bladder is filled with ultrasound contrast through a urethral catheter and imaged with bladder ultrasound. Gaining adoption in Europe and some US centers. Performance comparable to VCUG in trained hands." },
+    { "test": "99m-Tc DMSA renal scintigraphy", "purpose": "Detects renal cortical scarring (reflux nephropathy) and acute pyelonephritis", "whatToExpect": "Outpatient nuclear medicine test of 2-3 hours including 2-4 hours after intravenous radiotracer injection. Identifies areas of decreased cortical uptake corresponding to scars. Used at baseline in high-grade VUR and after febrile UTIs." },
+    { "test": "Urinalysis and urine culture", "purpose": "Diagnoses urinary tract infection and identifies organism for targeted antibiotic therapy", "whatToExpect": "Clean-catch midstream or catheter sample for older children and infants. Results within 24-48 hours. Pyuria plus single organism growth at appropriate threshold confirms UTI." },
+    { "test": "Bladder function assessment (uroflowmetry, post-void residual)", "purpose": "Identifies bladder-bowel dysfunction contributing to reflux and recurrent infection", "whatToExpect": "Non-invasive test in office or outpatient department; child urinates into a flow meter and post-void residual is measured by ultrasound. Formal urodynamics reserved for neurogenic bladder or complex cases." }
+  ],
+
+  "treatmentOverview": "Management is individualized based on age, sex, grade of reflux, presence of renal scarring, recurrent UTIs, and bladder-bowel dysfunction. The 2017 AUA and 2024 EAU/ESPU guidelines emphasize active surveillance as the default for low-grade VUR (I-III) in children without renal scarring, given high spontaneous resolution rates (50-80% over 1-5 years). Optimization of bladder-bowel dysfunction is fundamental — toilet training, scheduled voiding, double voiding, constipation management with osmotic laxatives, and behavioral therapy — and frequently resolves low-grade reflux on its own. Continuous antibiotic prophylaxis (CAP) with trimethoprim-sulfamethoxazole (2 mg/kg of trimethoprim once daily) or nitrofurantoin (1-2 mg/kg once daily) is offered selectively for children with high-grade VUR, history of febrile UTI, or bladder-bowel dysfunction. The 2014 RIVUR trial demonstrated CAP reduced febrile UTI recurrence by 50% (12% vs. 25% over 2 years) in children with grade I-IV VUR aged 2-71 months following a first or second UTI; the absolute benefit is greatest in those with bladder-bowel dysfunction. Antibiotic resistance was higher in the prophylaxis arm. Endoscopic injection of bulking agent (dextranomer/hyaluronic acid copolymer, Deflux) into the submucosa at the ureteric orifice is an option for grade II-IV reflux when surgery is desired but open intervention is not; success rates are 70-85% after one injection and 90% after two. Surgical ureteric reimplantation (open Cohen, Politano-Leadbetter, or Lich-Gregoir techniques, or laparoscopic and robotic variants) is reserved for high-grade VUR (IV-V), persistent VUR with renal scarring, breakthrough febrile UTIs despite CAP, and adolescent or adult presentations. Success rates exceed 95% for open reimplantation. Treatment of secondary VUR addresses the underlying cause (PUV ablation, neurogenic bladder management with clean intermittent catheterization, anticholinergics, botulinum toxin). Long-term follow-up includes serial imaging, blood pressure monitoring, urine cultures with febrile illness, and renal function and proteinuria assessment in those with scarring.",
+
+  "medicalTreatments": [
+    { "name": "Active surveillance and bladder-bowel optimization", "description": "Toilet training, scheduled voiding every 2-3 hours, double voiding, treatment of constipation with osmotic laxatives, behavioral therapy. Combined with serial ultrasound and VCUG follow-up every 12-24 months.", "effectiveness": "Spontaneous resolution rates 50-80% for grades I-III over 1-5 years; bladder-bowel dysfunction treatment alone resolves a substantial proportion of low-grade reflux" },
+    { "name": "Continuous antibiotic prophylaxis (TMP-SMX 2 mg/kg/day or nitrofurantoin 1-2 mg/kg/day)", "description": "Once-daily oral antibiotic at suppressive dose in selected children. Continued for 1-2 years or until reflux resolves or surgery is performed.", "effectiveness": "RIVUR trial: reduced febrile UTI recurrence by 50% (12% vs 25% over 2 years); greatest benefit in those with bladder-bowel dysfunction; increases antibiotic resistance among breakthrough infections" },
+    { "name": "Treatment of underlying cause (PUV ablation, neurogenic bladder management)", "description": "Endoscopic valve ablation for posterior urethral valves; clean intermittent catheterization, anticholinergics, and botulinum toxin for neurogenic bladder; addresses secondary VUR by correcting bladder dynamics.", "effectiveness": "Resolution of secondary VUR in 60-85% after correction of PUV; sustained normal bladder pressure in 70-90% of neurogenic patients with optimized CIC and antimuscarinic regimen" },
+    { "name": "Treatment of acute UTI and pyelonephritis", "description": "Targeted antibiotics based on culture and sensitivity (often cefalexin, amoxicillin-clavulanate, or cefdinir for cystitis; intravenous ceftriaxone or oral cefixime for pyelonephritis). Duration 10-14 days for pyelonephritis.", "effectiveness": "Clinical response within 48-72 hours; reduces risk of new renal scarring when initiated promptly; failure of fever to defervesce within 72 hours prompts re-imaging" },
+    { "name": "Cranberry and probiotics — limited adjunct", "description": "Modest evidence in adults for cranberry-product reduction of recurrent UTI; pediatric evidence weaker. Probiotic Lactobacillus rhamnosus may reduce recurrence in some series. Reasonable as adjunct, not substitute for prophylaxis or surgery.", "effectiveness": "Adult studies show 30-40% reduction in recurrent UTI; pediatric evidence inconsistent" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Endoscopic injection of bulking agent (Deflux — dextranomer/hyaluronic acid)", "description": "Cystoscopic injection of bulking agent into the submucosa beneath the ureteric orifice to lengthen and re-orient the submucosal tunnel. Outpatient procedure under general anesthesia, taking 30-60 minutes.", "successRate": "Resolution of reflux 70-85% after one injection; 90% after two injections; lower success rates in higher grades (IV-V)" },
+    { "name": "Open ureteric reimplantation (Cohen, Politano-Leadbetter, Lich-Gregoir)", "description": "Open surgical reimplantation of the ureter with creation of a longer submucosal tunnel for a competent flap valve. Hospital stay 1-3 days. Bladder catheter for 1-3 days postoperatively.", "successRate": "Resolution of reflux in 95-98% in modern series across grades; preferred for grade IV-V VUR and persistent or recurrent disease" },
+    { "name": "Laparoscopic and robotic ureteric reimplantation (extravesical and intravesical)", "description": "Minimally invasive ureteric reimplantation with shorter recovery and comparable success rates to open surgery in experienced hands. Increasingly preferred for older children and selected high-grade cases.", "successRate": "Resolution of reflux 92-98% in published series; reduces hospitalization and recovery time compared with open" },
+    { "name": "Ureteric reimplantation with augmentation cystoplasty (neurogenic bladder)", "description": "Combined procedure for severe secondary VUR with high-pressure neurogenic bladder; augments bladder capacity with ileal or other intestinal segment plus ureteric reimplantation.", "successRate": "Resolution of reflux 85-95% with concomitant control of high bladder pressure; long-term metabolic and mechanical issues with intestinal segments require monitoring" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Behavioral and timed voiding programs", "description": "Structured toilet training with timed voiding every 2-3 hours, complete bladder emptying technique, biofeedback for dysfunctional voiding, and constipation management. First-line non-pharmacological intervention." },
+    { "name": "Pelvic floor and bladder retraining therapy", "description": "Pediatric physical therapy with biofeedback for dysfunctional voiding and urinary incontinence. Particularly useful for older children with bladder-bowel dysfunction contributing to reflux." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "ureteric-reimplantation",
+    "deflux-injection",
+    "antibiotic-prophylaxis"
+  ],
+
+  "whySeeSpecialist": "Pediatric urology and pediatric nephrology jointly manage VUR. Pediatric urologists evaluate anatomy, perform endoscopic injection and reimplantation surgery, and manage posterior urethral valves and neurogenic bladder. Pediatric nephrologists assess renal function, hypertension, and proteinuria, and manage children with reflux nephropathy and chronic kidney disease. Referral to a pediatric center is recommended for grade IV-V VUR, breakthrough UTIs, renal scarring, and complex secondary VUR.",
+  "doctorSelectionGuide": "Choose a pediatric urology center with experience in endoscopic injection (Deflux), open and minimally invasive reimplantation, and management of neurogenic bladder. Combined pediatric urology and nephrology programs offer integrated long-term care. Confirm availability of nuclear medicine (DMSA) and contrast-enhanced voiding ultrasound where preferred.",
+
+  "hospitalCriteria": [
+    "Pediatric urology service with endoscopic injection and open/minimally invasive reimplantation capability",
+    "Pediatric nephrology service for long-term renal follow-up",
+    "Pediatric radiology with VCUG, RNC, and DMSA expertise",
+    "Bladder-bowel dysfunction clinic with biofeedback and behavioral therapy",
+    "Multidisciplinary spina bifida and neurogenic bladder program"
+  ],
+  "keyFacilities": [
+    "Children's hospitals with pediatric urology departments",
+    "Pediatric nephrology programs",
+    "Pediatric continence and bladder-bowel dysfunction clinics",
+    "Multidisciplinary spina bifida centers",
+    "Pediatric kidney transplant programs for end-stage reflux nephropathy"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Recognize and treat constipation early in toddlers and young children; constipation is a major contributor to bladder-bowel dysfunction and recurrent UTI.",
+    "Teach scheduled voiding every 2-3 hours during toilet training; double voiding (urinating twice) helps empty the bladder completely.",
+    "Maintain adequate hydration with age-appropriate fluid intake throughout the day.",
+    "Address dysfunctional voiding habits (urgency, frequency, holding maneuvers) with behavioral therapy or biofeedback.",
+    "Investigate febrile UTIs in young children with renal and bladder ultrasound; VCUG is added selectively per AAP and AUA guidelines.",
+    "Consider screening siblings of children with high-grade VUR, especially those under 3 years of age."
+  ],
+
+  "lifestyleModifications": [
+    "Adhere to scheduled voiding (every 2-3 hours) and complete bladder emptying techniques (double voiding, relaxed sitting).",
+    "Treat constipation aggressively with osmotic laxatives, fiber, and adequate fluid intake.",
+    "Take prescribed antibiotic prophylaxis once daily at the same time, without skipping doses.",
+    "Maintain good perineal hygiene (front-to-back wiping in girls) and avoid bubble baths and harsh soaps.",
+    "Report any febrile illness to the medical team; submit urine culture before starting empirical antibiotics when possible.",
+    "Attend scheduled follow-up imaging and renal function appointments."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate fluid intake distributed throughout the day (age-appropriate)",
+      "High-fiber diet with whole grains, fruits, and vegetables to prevent constipation",
+      "Adequate calcium and vitamin D for normal growth",
+      "Probiotic-rich foods (yogurt, kefir) may modestly reduce UTI recurrence"
+    ],
+    "avoid": [
+      "Excessive caffeinated beverages (sodas, energy drinks) that irritate the bladder",
+      "Constipating foods (excess dairy in some children, processed snacks)",
+      "Bladder irritants (acidic juices, spicy foods) when symptomatic",
+      "Skipping meals or restricting fluids out of fear of incontinence"
+    ]
+  },
+  "exerciseGuidelines": "Normal age-appropriate physical activity is encouraged. Children with VUR participate fully in sports. After ureteric reimplantation, contact sports are typically restricted for 4-6 weeks to allow healing. After endoscopic injection, normal activity can resume within 24-48 hours.",
+
+  "dailyManagement": [
+    "Take prophylactic antibiotic once daily at the same time, after dinner or before bedtime.",
+    "Schedule bathroom visits every 2-3 hours during the day; do not hold urine for prolonged periods.",
+    "Use double voiding technique (urinate, wait 1-2 minutes, urinate again) to empty the bladder completely.",
+    "Treat constipation daily with prescribed laxatives, fiber, and adequate fluid intake; aim for a soft, well-formed stool daily.",
+    "Maintain a UTI symptom diary noting fever, dysuria, urgency, abdominal pain, or new wetting.",
+    "Submit urine culture during any febrile illness; do not start antibiotics empirically without communicating with the urology team."
+  ],
+
+  "prognosis": "Most children with low-grade VUR (I-III) without renal scarring have an excellent long-term prognosis. Spontaneous resolution occurs in 80% of grade I, 60% of grade II, and 40% of grade III within 5 years; resolution is less common in higher grades and bilateral disease. Endoscopic injection and ureteric reimplantation each have high success rates (70-85% and 95-98% respectively) in achieving anatomical correction. Long-term renal outcomes depend on the presence of renal scarring at diagnosis and on prevention of recurrent pyelonephritis: children without scarring have normal long-term renal function in over 95%, while those with bilateral scarring have a 10-20% risk of progressive chronic kidney disease, hypertension, or proteinuria by adulthood. Reflux nephropathy accounts for 7-17% of pediatric end-stage renal disease and a small but meaningful share of adult dialysis. Hypertension develops in 10-30% of those with bilateral scarring during long-term follow-up. Pregnancy in women with prior VUR and renal scarring carries higher risks of pyelonephritis, hypertension, and preterm birth and warrants pre-pregnancy counseling and close obstetric monitoring.",
+
+  "recoveryTimeline": "Acute UTI resolves over 7-14 days with appropriate antibiotics. Bladder-bowel dysfunction therapy yields measurable improvement over 3-6 months. Spontaneous resolution of low-grade VUR typically over 12-60 months. Endoscopic injection: bladder catheter rarely needed; return to normal activity within 24-48 hours. Open ureteric reimplantation: hospital stay 1-3 days, full recovery 4-6 weeks. Long-term monitoring with annual to biennial imaging and renal function testing for at least 5-10 years.",
+
+  "complications": [
+    "Reflux nephropathy (renal cortical scarring) in 10-30% of children with high-grade VUR — detected by DMSA scan and prevented by prompt UTI treatment and prophylaxis or surgery when indicated.",
+    "Hypertension developing during childhood and adulthood in 10-30% of those with bilateral scarring — monitor blood pressure annually.",
+    "Chronic kidney disease and progression to end-stage renal disease — accounts for 7-17% of pediatric ESRD; lifelong renal function monitoring is essential.",
+    "Proteinuria and focal segmental glomerulosclerosis in adolescents and young adults with significant reflux nephropathy.",
+    "Pregnancy complications including pyelonephritis, hypertension, and preterm birth in women with prior VUR and renal scarring.",
+    "Antibiotic resistance, gastrointestinal effects, and allergic reactions from prolonged prophylaxis; weighed against UTI prevention benefit."
+  ],
+
+  "supportResources": [
+    { "name": "American Urological Association — Patient Information on VUR", "url": "https://www.urologyhealth.org/urology-a-z/v/vesicoureteral-reflux", "description": "Authoritative patient information aligned with AUA guidelines on diagnosis and management." },
+    { "name": "American Academy of Pediatrics — Healthy Children: UTI in Young Children", "url": "https://www.healthychildren.org/", "description": "Patient and family resources from the AAP including UTI evaluation guidance." },
+    { "name": "National Kidney Foundation — Pediatric Kidney Resources", "url": "https://www.kidney.org/", "description": "Patient and family resources on reflux nephropathy, pediatric chronic kidney disease, and long-term follow-up." },
+    { "name": "Pediatric Urology Section of the AAP", "url": "https://www.aap.org/", "description": "Specialty section with patient resources and 'Find a Pediatric Urologist' directory." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "acute-pyelonephritis-n10", "name": "Acute Pyelonephritis", "keyDifference": "Acute pyelonephritis is the kidney infection that often results from VUR but can also occur without underlying reflux. Pyelonephritis is the clinical syndrome (fever, flank pain, pyuria, positive culture); VUR is the underlying anatomical or functional predisposition. Treatment of acute infection is the same, but identification of VUR alters longer-term management." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease", "keyDifference": "Chronic kidney disease (CKD) describes reduced renal function from any cause; reflux nephropathy is one specific cause and accounts for 7-17% of pediatric ESRD. Workup of CKD in children includes evaluation for VUR; conversely, VUR with renal scarring is monitored for CKD progression with annual GFR and proteinuria testing." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "acute-pyelonephritis-n10", "name": "Acute Pyelonephritis" },
+    { "slug": "hypertension", "name": "Hypertension" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "acute-pyelonephritis-n10", "name": "Acute Pyelonephritis", "relevance": "Most common acute complication of VUR; recurrent pyelonephritis drives reflux nephropathy and long-term renal damage." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease", "relevance": "Reflux nephropathy is a leading cause of pediatric CKD; long-term renal surveillance is core to management." },
+    { "slug": "hypertension", "name": "Hypertension", "relevance": "Develops in 10-30% of patients with bilateral renal scarring; annual blood pressure monitoring is essential." },
+    { "slug": "iga-nephropathy", "name": "IgA Nephropathy", "relevance": "Another important pediatric glomerular disease in the differential of hematuria and proteinuria; managed by pediatric nephrology." },
+    { "slug": "alport-syndrome", "name": "Alport Syndrome", "relevance": "Inherited renal disease with hematuria and progressive renal failure; differential for pediatric nephropathy." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is vesicoureteral reflux?",
+      "answer": "Vesicoureteral reflux (VUR) is the backward flow of urine from the bladder up the ureter and sometimes into the kidney. It predisposes to kidney infections and renal scarring. About 1-3% of healthy children have VUR, and 30-40% of children with a first febrile urinary tract infection are found to have it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is vesicoureteral reflux diagnosed?",
+      "answer": "Diagnosis is made with a voiding cystourethrogram (VCUG), in which contrast is instilled into the bladder through a urethral catheter and X-rays are taken during filling and voiding. Renal and bladder ultrasound is the initial screening test, and DMSA scintigraphy detects renal scarring.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the grades of VUR?",
+      "answer": "VUR is graded I to V by the International Reflux Study Committee. Grade I is reflux into the ureter only; grade II up to the renal pelvis without dilatation; grade III mild dilatation; grade IV moderate dilatation with blunting of fornices; grade V severe dilatation with tortuous ureter and loss of papillary impressions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will my child outgrow VUR?",
+      "answer": "Most children outgrow low-grade VUR. Spontaneous resolution occurs in approximately 80% of grade I, 60% of grade II, 40% of grade III, and 20% of grade IV within 5 years. Higher grades and bilateral disease are less likely to resolve spontaneously and may require intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the treatment for VUR?",
+      "answer": "Treatment is individualized by grade, age, scarring, and recurrent UTI history. Options include active surveillance with bladder-bowel optimization, continuous antibiotic prophylaxis, endoscopic Deflux injection (70-85% success), or open or minimally invasive ureteric reimplantation (95-98% success).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are antibiotics required for VUR?",
+      "answer": "Continuous antibiotic prophylaxis (TMP-SMX or nitrofurantoin) is offered selectively for high-grade VUR, recurrent febrile UTI, or bladder-bowel dysfunction. The RIVUR trial showed a 50% reduction in febrile UTI recurrence over 2 years. Not all children with VUR require prophylaxis; decisions are individualized.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Deflux?",
+      "answer": "Deflux is dextranomer/hyaluronic acid copolymer, a bulking agent injected cystoscopically into the submucosa beneath the ureteric orifice to lengthen the submucosal tunnel and restore the flap-valve mechanism. It is an outpatient procedure with success rates of 70-85% after one injection and 90% after two.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is surgery needed for VUR?",
+      "answer": "Ureteric reimplantation is offered for high-grade VUR (IV-V), breakthrough febrile UTIs despite prophylaxis, persistent VUR with renal scarring, severe bladder-bowel dysfunction not amenable to medical therapy, and patient or family preference for definitive correction. Success rates exceed 95%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is reflux nephropathy?",
+      "answer": "Reflux nephropathy is renal cortical scarring caused by VUR and recurrent pyelonephritis. It develops in 10-30% of children with high-grade VUR and can progress to hypertension, proteinuria, and chronic kidney disease. DMSA scintigraphy is the most sensitive test for scarring.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does VUR run in families?",
+      "answer": "Yes. Siblings of an affected child have 25-50% prevalence of VUR, and offspring have 30-65% prevalence. The 2017 AUA update considers but does not require sibling screening; many centers obtain renal ultrasound on younger siblings, especially those under 3 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can VUR cause kidney failure?",
+      "answer": "Reflux nephropathy accounts for 7-17% of pediatric end-stage renal disease and a smaller proportion of adult dialysis cases. Most children with VUR have excellent long-term renal function; those at risk are those with bilateral scarring, persistent high-grade reflux, and recurrent untreated pyelonephritis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is bladder-bowel dysfunction?",
+      "answer": "Bladder-bowel dysfunction is the combination of dysfunctional voiding (urgency, frequency, holding behavior, incomplete emptying) and constipation. It is strongly linked to recurrent UTI and persistent VUR. Treatment of constipation and scheduled voiding training alone resolves a substantial proportion of low-grade reflux.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is VUR found before birth?",
+      "answer": "Prenatal hydronephrosis (urinary tract dilatation) detected on routine fetal ultrasound prompts postnatal evaluation. VUR is found in 10-40% of these infants. Persistent or severe postnatal hydronephrosis warrants VCUG; mild cases are often monitored with serial ultrasound only.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the RIVUR trial?",
+      "answer": "The Randomized Intervention for Children with Vesicoureteral Reflux (RIVUR) trial published in the NEJM 2014 randomized 607 children with grade I-IV VUR after a first or second febrile UTI to TMP-SMX prophylaxis or placebo. Prophylaxis reduced febrile UTI recurrence by 50% (12% vs 25% over 2 years).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do all children with febrile UTI need a VCUG?",
+      "answer": "No. The 2011 AAP guideline recommends renal and bladder ultrasound after a first febrile UTI in children 2-24 months. VCUG is added when ultrasound is abnormal, when a second febrile UTI occurs, or when atypical features are present (poor response, unusual organism, family history).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children with VUR play sports?",
+      "answer": "Yes. Most children with VUR participate in normal age-appropriate sports and physical activities. After endoscopic injection, normal activity resumes within 1-2 days. After open reimplantation, contact sports are typically restricted for 4-6 weeks to allow surgical site healing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should women with prior VUR be monitored during pregnancy?",
+      "answer": "Yes. Women with prior VUR, especially those with renal scarring, have higher rates of pyelonephritis, hypertension, and preterm birth during pregnancy. Pre-pregnancy counseling, close obstetric and renal follow-up, and consideration of low-dose antibiotic prophylaxis in selected cases are recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is VCUG painful for children?",
+      "answer": "VCUG involves placement of a urethral catheter, which causes brief discomfort and anxiety. Topical anesthetic gel, calm preparation, presence of a parent, and sometimes mild sedation reduce distress. Most children tolerate the test well, and child-life specialists often help with preparation and coping at major centers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are posterior urethral valves?",
+      "answer": "Posterior urethral valves are a congenital obstructing membrane in the posterior urethra of male infants causing bladder outlet obstruction, secondary VUR, and bilateral hydroureteronephrosis. They are a leading cause of severe pediatric chronic kidney disease and require prompt cystoscopic valve ablation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often does my child need follow-up?",
+      "answer": "Follow-up typically includes renal and bladder ultrasound every 12-24 months and VCUG every 12-24 months until reflux resolves or surgery is performed. DMSA scintigraphy is repeated after febrile UTIs and at baseline for high-grade VUR. Blood pressure and urinalysis are checked at every visit.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a pediatric urologist?",
+      "answer": "Refer to pediatric urology for grade IV-V VUR, recurrent or breakthrough febrile UTIs despite prophylaxis, renal scarring on DMSA, posterior urethral valves or other anatomical anomalies, persistent reflux beyond age 5-6, and any case where surgery or endoscopic intervention is being considered.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Vesicoureteral Reflux (VUR — urine backflow from bladder to kidney)",
+  "regionalNames": [
+    { "name": "Reflujo vesicoureteral", "region": "Spanish-speaking countries", "language": "Spanish" },
+    { "name": "Reflux vésico-urétéral", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "वेसिकोयूरेटेरल रिफ्लक्स", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "vesicoureteral reflux",
+    "VUR",
+    "urinary reflux child",
+    "kidney reflux",
+    "VCUG",
+    "Deflux injection",
+    "ureteric reimplantation",
+    "reflux nephropathy",
+    "RIVUR trial",
+    "antibiotic prophylaxis UTI",
+    "pediatric UTI",
+    "posterior urethral valves",
+    "International Reflux Study grading",
+    "DMSA scan",
+    "bladder-bowel dysfunction"
+  ],
+  "symptomKeywords": [
+    "recurrent UTI in child",
+    "fever no other symptoms toddler",
+    "kidney infection child",
+    "wetting accidents older child",
+    "constipation and UTI",
+    "prenatal hydronephrosis",
+    "back pain child fever",
+    "blood in urine kidney child"
+  ],
+
+  "metaTitle": "Vesicoureteral Reflux: Symptoms & Treatment | aihealz",
+  "metaDescription": "Vesicoureteral reflux (VUR) in children: grading, VCUG diagnosis, antibiotic prophylaxis, Deflux injection and ureteric reimplantation guide.",
+
+  "keywords": [
+    "vesicoureteral reflux",
+    "VUR",
+    "urinary reflux",
+    "kidney reflux child",
+    "VCUG",
+    "Deflux injection",
+    "ureteric reimplantation",
+    "reflux nephropathy",
+    "RIVUR trial",
+    "pediatric UTI",
+    "antibiotic prophylaxis VUR",
+    "pediatric urology"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Peters CA, Skoog SJ, Arant BS Jr, et al. 2010. Summary of the AUA Guideline on management of primary vesicoureteral reflux in children. Journal of Urology 184(3):1134-44.", "url": "https://pubmed.ncbi.nlm.nih.gov/20728101/", "accessedDate": "2026-05-14" },
+    { "title": "RIVUR Trial Investigators, Hoberman A, Greenfield SP, et al. 2014. Antimicrobial prophylaxis for children with vesicoureteral reflux. New England Journal of Medicine 370(25):2367-76.", "url": "https://pubmed.ncbi.nlm.nih.gov/24795142/", "accessedDate": "2026-05-14" },
+    { "title": "Subcommittee on Urinary Tract Infection, AAP. 2011. Urinary tract infection: clinical practice guideline for the diagnosis and management of the initial UTI in febrile infants and children 2 to 24 months. Pediatrics 128(3):595-610.", "url": "https://pubmed.ncbi.nlm.nih.gov/21873693/", "accessedDate": "2026-05-14" },
+    { "title": "Skoog SJ, Peters CA, Arant BS Jr, et al. 2010. Pediatric Vesicoureteral Reflux Guidelines Panel Summary Report: clinical practice guidelines for screening siblings of children with vesicoureteral reflux and neonates/infants with prenatal hydronephrosis. Journal of Urology 184(3):1145-51.", "url": "https://pubmed.ncbi.nlm.nih.gov/20650494/", "accessedDate": "2026-05-14" },
+    { "title": "Brandström P, Esbjörner E, Herthelius M, Swerkersson S, Jodal U, Hansson S. 2010. The Swedish reflux trial in children: III. Urinary tract infection pattern. Journal of Urology 184(1):286-91.", "url": "https://pubmed.ncbi.nlm.nih.gov/20488494/", "accessedDate": "2026-05-14" },
+    { "title": "Routh JC, Bogaert GA, Kaefer M, et al. 2012. Vesicoureteral reflux: current trends in diagnosis, screening, and treatment. European Urology 61(4):773-82.", "url": "https://pubmed.ncbi.nlm.nih.gov/22264440/", "accessedDate": "2026-05-14" },
+    { "title": "EAU/ESPU Guidelines on Paediatric Urology. European Association of Urology, 2024.", "url": "https://uroweb.org/guidelines/paediatric-urology", "accessedDate": "2026-05-14" },
+    { "title": "Mathews R, Carpenter MA, Chesney RW, et al. 2009. Controversies in the management of vesicoureteral reflux: the rationale for the RIVUR study. Journal of Pediatric Urology 5(5):336-41.", "url": "https://pubmed.ncbi.nlm.nih.gov/19493701/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

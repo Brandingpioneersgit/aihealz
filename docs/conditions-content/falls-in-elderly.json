@@ -1,0 +1,453 @@
+{
+  "_meta": {
+    "slug": "falls-in-elderly",
+    "tier": 1,
+    "headTerm": "falls in elderly",
+    "longTailKeywords": [
+      "falls prevention older adults",
+      "fall risk assessment",
+      "Otago exercise programme",
+      "STEADI",
+      "falls clinic",
+      "tai chi falls prevention",
+      "hip fracture prevention",
+      "vitamin D falls",
+      "Timed Up and Go",
+      "polypharmacy falls"
+    ],
+    "primarySpecialty": "Geriatrics",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Epidemiology and guidelines per WHO Global Report on Falls Prevention 2007, CDC STEADI initiative, NICE CG161 (2013, updated 2024), World Falls Guidelines 2022 (Montero-Odasso Age Ageing PMID 36055760). Cochrane review on exercise for falls prevention (Sherrington 2019 PMID 30703272). Otago programme per Robertson 2001 BMJ. Multifactorial interventions per Tinetti 1994 NEJM (PMID 8078528)."
+  },
+
+  "h1Title": "Falls in Elderly: Causes, Prevention, and Treatment",
+  "specialistType": "Geriatrics",
+
+  "heroOverview": "Falls are the leading cause of injury and injury-related death in adults aged 65 and over, affecting roughly one in three community-dwelling older adults and one in two over age 80 each year. The World Health Organization estimates 684,000 fall-related deaths and 37 million falls requiring medical attention globally per year. Around 5-10% of falls result in serious injury (hip fracture, head injury, major laceration), with 250,000 hip fractures annually in the United States alone. Falls are rarely single-cause events — they reflect the interaction of intrinsic factors (sarcopenia, polypharmacy, vision loss, orthostatic hypotension, cognitive impairment) and extrinsic factors (loose rugs, poor lighting, slippery floors, unsafe footwear). Multifactorial assessment in a falls clinic followed by structured exercise (Otago programme, tai chi), medication review, home hazard removal, and vitamin D supplementation in deficient adults reduces falls by 20-30% and fall-related fractures by similar amounts.",
+
+  "keyStats": {
+    "prevalence": "Annual falls incidence ~30% in adults aged 65+ and 50% in those over 80; ~5-10% of falls cause serious injury",
+    "demographics": "Female:male injury ratio approximately 2:1 because of higher osteoporosis and hip-fracture risk",
+    "avgAge": "Median age at first injurious fall 75-85 years; risk doubles each decade after 65",
+    "globalCases": "684,000 fall-related deaths globally per year; 37 million falls requiring medical attention (WHO 2021)"
+  },
+
+  "definition": "Falls in elderly (ICD-10: R29.6 history of falling; W19 unspecified fall) describes the syndrome of unintentional descent to a lower level not from a major mechanical force, occurring in older adults aged 65 and over. The World Health Organization defines a fall as an event resulting in a person coming to rest inadvertently on the ground, floor, or other lower level. Falls are classified into accidental (typically a single environmental cause), recurrent (two or more in 12 months), and injurious. The clinical entity is a geriatric syndrome, where a final common pathway (loss of balance, postural reflex failure) results from multiple interacting impairments rather than a single disease. Falls predict functional decline, loss of independence, residential care admission, and death; they generate over US$50 billion in annual medical costs in the United States. Assessment frameworks include the CDC STEADI initiative, the World Falls Guidelines 2022 (a unified international consensus), and the NICE CG161 falls in older people guideline. Management is led by geriatric medicine and falls clinics, with input from primary care, physiotherapy, occupational therapy, optometry, audiology, pharmacy, and old-age psychiatry.",
+
+  "typesClassification": [
+    { "type": "Accidental fall", "description": "Single-event fall due to a specific environmental hazard (rug, ice, poor lighting) in a person without significant intrinsic risk factors. Lowest recurrence rate." },
+    { "type": "Recurrent falls", "description": "Two or more falls in 12 months. Higher recurrence and injury risk; warrants multifactorial assessment and intervention." },
+    { "type": "Injurious fall", "description": "Fall causing fracture, head injury, major laceration, or requiring hospital attendance. Triggers urgent multifactorial assessment regardless of prior fall history." },
+    { "type": "Syncopal fall", "description": "Fall preceded by transient loss of consciousness. Requires cardiovascular evaluation (ECG, lying and standing BP, echocardiography, tilt-table testing) to identify arrhythmia, valvular disease, or autonomic dysfunction." },
+    { "type": "Fall without long lie", "description": "Patient gets up promptly and recovers fully — favourable prognostic feature." },
+    { "type": "Fall with long lie (over 1 hour on the floor)", "description": "Strong predictor of poor outcome including rhabdomyolysis, pressure injury, hypothermia, pneumonia, and residential care admission, particularly when associated with cognitive impairment." }
+  ],
+
+  "primarySymptoms": [
+    "Loss of balance with or without injury, with the patient ending up on the floor.",
+    "Bruising, lacerations, or pain after the fall, most often over the hip, shoulder, head, or wrist.",
+    "Inability to weight-bear suggesting hip or femoral neck fracture.",
+    "Confusion, drowsiness, or amnesia for the event, especially if head impact occurred — exclude intracranial bleeding.",
+    "Fear of falling and reduced confidence in mobility, leading to avoidance of activities (post-fall syndrome).",
+    "Multiple falls or near-falls in the preceding year.",
+    "Difficulty getting up from the floor without assistance after a fall (functional reach impairment).",
+    "Long lie on the floor with stiffness, dehydration, hypothermia, and pressure injury when unable to call for help."
+  ],
+
+  "earlyWarningSigns": [
+    "Two or more near-falls or stumbles in the preceding 6 months",
+    "Slow walking speed under 0.8 m/s",
+    "Difficulty rising from a chair without using the hands",
+    "Frequent need to grasp furniture when walking",
+    "New unsteadiness on standing from a seated or lying position (possible orthostatic hypotension)"
+  ],
+
+  "emergencySigns": [
+    "Inability to bear weight or rotational deformity of the leg after a fall — likely hip fracture",
+    "Reduced level of consciousness, severe headache, or vomiting after head impact — exclude intracranial haemorrhage with urgent CT",
+    "Neck pain or paraesthesia in a patient on anticoagulation or with osteoporosis — possible cervical fracture",
+    "Long lie of more than one hour with confusion, dehydration, or muscle pain — exclude rhabdomyolysis, pressure injury, hypothermia",
+    "Recurrent syncopal falls — exclude high-grade atrioventricular block, aortic stenosis, or sustained ventricular arrhythmia"
+  ],
+
+  "causes": [
+    {
+      "cause": "Age-related sarcopenia and frailty",
+      "description": "Loss of muscle mass and strength (sarcopenia) reduces postural reflexes and ability to recover from a stumble. Frailty (Fried phenotype) doubles to triples fall risk independently of comorbidity."
+    },
+    {
+      "cause": "Polypharmacy and high-risk medications",
+      "description": "Falls risk rises 5-15% per additional daily medication. Specific drugs — benzodiazepines, Z-drugs (zolpidem), opioids, antipsychotics, tricyclic antidepressants, anticholinergics, antihypertensives causing orthostatic hypotension, hypoglycaemic agents — independently increase falls and fractures."
+    },
+    {
+      "cause": "Orthostatic hypotension and autonomic dysfunction",
+      "description": "Postural systolic drop of 20 mmHg or diastolic drop of 10 mmHg within 3 minutes of standing affects 20-50% of older adults. Drugs (antihypertensives, alpha blockers, diuretics), dehydration, autonomic neuropathy (diabetes, Parkinson disease), and prolonged bed rest all contribute."
+    },
+    {
+      "cause": "Vision and hearing impairment",
+      "description": "Cataract, age-related macular degeneration, glaucoma, and uncorrected refractive error reduce contrast sensitivity and depth perception. Bifocal and varifocal spectacles double outdoor falls risk; cataract surgery on the first eye reduces falls by 34%."
+    },
+    {
+      "cause": "Cognitive impairment and dementia",
+      "description": "Mild cognitive impairment and dementia at least double falls incidence through impaired attention, judgement, and visuospatial function. Patients with dementia also have higher rates of long lie and post-fall fractures."
+    },
+    {
+      "cause": "Neurological disorders",
+      "description": "Parkinson disease, stroke, peripheral neuropathy, normal-pressure hydrocephalus, and spinal stenosis disrupt gait, balance, and proprioception. Falls are a leading cause of disability in Parkinson disease."
+    },
+    {
+      "cause": "Cardiovascular causes (syncope, arrhythmia, valvular disease)",
+      "description": "Vasovagal syncope, carotid sinus hypersensitivity, atrial fibrillation, sick sinus syndrome, high-grade AV block, and aortic stenosis cause syncopal falls. ECG and lying/standing blood pressure are mandatory after any unexplained or syncopal fall."
+    },
+    {
+      "cause": "Environmental hazards",
+      "description": "Loose rugs, poor lighting, missing stair handrails, uneven floors, slippery bathrooms without grab bars, and unsafe footwear (loose slippers, high heels) contribute to roughly 30-50% of community falls."
+    },
+    {
+      "cause": "Footwear and foot problems",
+      "description": "Painful feet, bunions, hallux valgus, sensory loss, and ill-fitting shoes raise falls risk. Slippers without back support, soft sole materials, and high heels double outdoor fall risk."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 65 (especially over 80)", "category": "non-modifiable", "description": "Falls incidence rises from 28% at age 65-69 to over 50% in those over 80; injury severity doubles in the same range." },
+    { "factor": "Female sex (for injurious falls)", "category": "non-modifiable", "description": "Women have similar fall rates to men but 2-3 times higher rates of hip fracture due to greater osteoporosis prevalence." },
+    { "factor": "Previous fall", "category": "modifiable", "description": "A single fall in the past 12 months triples the risk of future falls. Two or more falls warrant immediate multifactorial assessment." },
+    { "factor": "Frailty and sarcopenia", "category": "modifiable", "description": "Pre-frail and frail older adults have 2-3 fold higher fall incidence and 1.5-2 fold higher injurious fall rates than robust peers." },
+    { "factor": "Polypharmacy and high-risk medications", "category": "modifiable", "description": "Each additional daily medication beyond 4 increases falls risk 5-15%. Specific drugs (benzodiazepines, opioids, antipsychotics, anticholinergics) have particularly strong associations." },
+    { "factor": "Orthostatic hypotension", "category": "modifiable", "description": "Present in 20-50% of older adults; doubles fall risk; reversible with medication review, hydration, compression, and graded standing." },
+    { "factor": "Vision impairment (cataract, macular degeneration, glaucoma)", "category": "modifiable", "description": "Uncorrected refractive error and cataract independently double fall risk; cataract surgery on the first eye reduces falls by 34%." },
+    { "factor": "Cognitive impairment", "category": "non-modifiable", "description": "Mild cognitive impairment and dementia double the risk of falls and increase the risk of long lie and post-fall fractures." },
+    { "factor": "Foot pain and inappropriate footwear", "category": "modifiable", "description": "Bunions, hallux valgus, painful feet, peripheral neuropathy, and loose slippers raise fall risk 1.5-2 fold." },
+    { "factor": "Environmental hazards in the home", "category": "modifiable", "description": "Loose rugs, missing handrails, dim lighting, and slippery bathrooms contribute to 30-50% of community falls; home-hazard programmes reduce falls by 19%." }
+  ],
+
+  "affectedDemographics": [
+    "One in three community-dwelling adults aged 65+ falls each year, rising to one in two over age 80 (Tinetti 1988; WHO).",
+    "Falls cause 95% of hip fractures and 60% of traumatic brain injury deaths in older adults.",
+    "Women have 2-3 times higher hip-fracture rates than men because of higher osteoporosis prevalence.",
+    "Nursing home residents have 50-75% annual fall rates and 10-25 falls per resident-year.",
+    "Falls cost over US$50 billion per year in direct medical costs in the United States alone (CDC)."
+  ],
+
+  "diagnosisOverview": "Assessment starts with the post-fall consultation in primary care or the emergency department. The history asks: timing, location, witnesses, prodromal symptoms (light-headedness, palpitations, chest pain, focal weakness, loss of consciousness), injury, ability to get up, and prior falls. Examination includes lying and standing blood pressure (after 1 and 3 minutes), pulse rhythm and rate, neurological examination, cognition (Mini-Cog, MMSE, MoCA), vision and hearing screen, foot and footwear inspection, and functional testing with the Timed Up and Go (over 12-14 seconds suggests increased falls risk), 4-metre gait speed (under 0.8 m/s), 30-second chair stand, and the Berg Balance Scale or short physical performance battery. ECG is mandatory after any syncopal or unexplained fall; tilt-table testing and prolonged ECG monitoring are reserved for refractory cases. Cardiac causes (atrial fibrillation, conduction disease, aortic stenosis) need echocardiography. Medication review uses STOPP/START or Beers criteria to identify high-risk drugs. Blood tests target reversible contributors: full blood count, electrolytes, urea, creatinine, glucose, HbA1c, vitamin D, B12, folate, ferritin, calcium, and TSH. Imaging follows clinical suspicion — CT head for any head injury with anticoagulation or persistent symptoms; pelvic X-ray for hip pain; spine imaging for vertebral tenderness or neurology. Home assessment by an occupational therapist identifies and remedies environmental hazards. The CDC STEADI algorithm, World Falls Guidelines 2022, and NICE CG161 each integrate these elements into a structured pathway for assessment, intervention, and follow-up.",
+
+  "diagnosticTests": [
+    { "test": "Timed Up and Go (TUG) test", "purpose": "Brief functional measure of mobility and fall risk; ≥12-14 seconds indicates increased risk", "whatToExpect": "Patient rises from a chair, walks 3 metres, turns, returns, and sits. Takes 1-2 minutes." },
+    { "test": "Lying and standing blood pressure (1 and 3 minutes)", "purpose": "Detects orthostatic hypotension, a major reversible cause of falls", "whatToExpect": "Three measurements over 5 minutes with manual or automated cuff. Total time 5-10 minutes." },
+    { "test": "12-lead ECG", "purpose": "Identifies atrial fibrillation, conduction disease, and other arrhythmic causes of syncope", "whatToExpect": "Standard ECG; 5 minutes. Reviewed by clinician for rhythm, intervals, and ischaemia." },
+    { "test": "Medication review with STOPP/START criteria", "purpose": "Identifies high-risk drugs (benzodiazepines, opioids, antipsychotics, anticholinergics, antihypertensives) for deprescribing", "whatToExpect": "Pharmacist or GP-led review of all prescribed and over-the-counter medications; takes 30-45 minutes." },
+    { "test": "Comprehensive geriatric assessment", "purpose": "Identifies and addresses multifactorial contributors — frailty, cognition, mood, vision, hearing, nutrition", "whatToExpect": "Multidisciplinary structured assessment, 60-90 minutes." },
+    { "test": "Vitamin D, B12, calcium, full blood count, renal function, TSH, HbA1c", "purpose": "Detects reversible biochemical contributors", "whatToExpect": "Single blood draw; results within 24 hours." },
+    { "test": "Home hazard assessment by occupational therapist", "purpose": "Identifies and removes environmental risks (loose rugs, poor lighting, missing handrails, bathroom hazards)", "whatToExpect": "60-90 minute home visit followed by written recommendations and minor adaptations." }
+  ],
+
+  "treatmentOverview": "Effective falls prevention is multifactorial and tailored to the individual. The strongest single intervention is structured exercise targeting strength, balance, and gait — a Cochrane meta-analysis of 108 trials (Sherrington 2019) found a 23% reduction in rate of falls with exercise that challenges balance. The Otago Exercise Programme (a 6-month home-based progressive strength and balance regimen) reduces falls by 35% in community-dwelling older adults. Tai chi reduces falls by 19% and is particularly suited to mildly frail individuals. Multifactorial intervention combining exercise, medication review with deprescribing of high-risk drugs (benzodiazepines, antipsychotics, opioids, anticholinergics, sedating antihistamines), management of orthostatic hypotension (graded compression, hydration, careful taper of antihypertensives), vision correction (cataract surgery on the first eye reduces falls 34%), home hazard reduction by an occupational therapist (19% fall reduction), appropriate footwear, and vitamin D 800 IU/day in deficient adults reduces falls by 24-39% (NICE CG161, World Falls Guidelines 2022). Hip fracture prevention adds bone protection with calcium 1,200 mg/day, vitamin D 800 IU/day, weight-bearing exercise, and osteoporosis treatment (bisphosphonates, denosumab, romosozumab) in those with low bone mineral density or fragility fracture. Cardiac pacing benefits highly selected older adults with documented vasovagal or carotid sinus syncope (SAFE-PACE 2 trial). Wearable hip protectors offer modest benefit in care-home residents with high adherence. Following an injurious fall, post-acute rehabilitation in a falls service or community geriatric unit improves mobility and reduces recurrent falls. Cognitive behavioural therapy and gradual mobility-building programmes are effective for post-fall syndrome with disabling fear of falling.",
+
+  "medicalTreatments": [
+    { "name": "Otago Exercise Programme (strength + balance training, home-based, 6 months)", "description": "Progressive strength and balance training delivered by trained physiotherapy or nurse staff with home visits and telephone follow-up. Five exercise sessions per week, 30 minutes each, plus walking three times weekly.", "effectiveness": "35% reduction in falls; effective in adults aged 80+ and those with previous falls (Robertson 2002 BMJ)" },
+    { "name": "Tai chi 2-3 sessions per week", "description": "Group-based moderate-intensity tai chi with Yang or Sun-style forms emphasising slow weight shifting and balance. Suitable for mildly to moderately frail older adults.", "effectiveness": "19-29% reduction in falls; improvements in balance, fear of falling, and quality of life (Cochrane 2019)" },
+    { "name": "Multifactorial falls clinic assessment with tailored intervention", "description": "Combines exercise, medication review, vision correction, home modification, footwear, and management of orthostatic hypotension. Delivered by geriatrician-led multidisciplinary team.", "effectiveness": "24-39% reduction in falls when adherence is high (Tinetti 1994; World Falls Guidelines 2022)" },
+    { "name": "Medication review and deprescribing", "description": "Targeted reduction of benzodiazepines, Z-drugs, opioids, antipsychotics, anticholinergics, sedating antihistamines, and antihypertensives causing orthostasis. Structured taper schedule.", "effectiveness": "20-30% reduction in falls; sustained when deprescribing is reinforced at follow-up" },
+    { "name": "Vitamin D 800 IU/day in vitamin-D-deficient adults", "description": "Recommended in adults aged 65+ with low or unmeasured 25-OH-vitamin-D, particularly those with limited sun exposure. Avoid single high-dose ergocalciferol regimens.", "effectiveness": "Reduces falls by 20-30% in deficient older adults (Cochrane 2018); also supports bone health" },
+    { "name": "Cataract surgery (first eye)", "description": "Reduces visual impairment and improves contrast sensitivity. Best evidence is for the first eye; second-eye benefit is more modest.", "effectiveness": "34% reduction in falls in the first eye after surgery (Harwood 2005 Br J Ophthalmol)" },
+    { "name": "Bone protection (calcium 1,200 mg/day, vitamin D 800 IU/day, bisphosphonate or denosumab)", "description": "Reduces fracture risk in older adults with osteoporosis or fragility fracture. Choice between oral bisphosphonate, IV zoledronate, denosumab, or romosozumab depends on bone density, fracture history, and renal function.", "effectiveness": "30-50% reduction in vertebral and hip fractures with first-line agents; sustained over 3-10 years" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Cardiac pacing for vasovagal syncope or carotid sinus syndrome with falls", "description": "Reserved for older adults with documented bradycardia-mediated syncope, recurrent falls, and a positive carotid sinus massage test. Pacing protocols use dual-chamber rate-adaptive devices.", "successRate": "70-80% reduction in syncopal falls in selected patients (SAFE-PACE 2 trial)" },
+    { "name": "Hip fracture fixation or arthroplasty", "description": "Standard orthopaedic management of femoral neck or intertrochanteric fractures. Aim for surgery within 36 hours and early mobilisation with multidisciplinary orthogeriatric care.", "successRate": "30-day mortality 5-8%; 1-year mortality 20-30%; better outcomes with orthogeriatric care, early surgery, and rehabilitation" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Cognitive behavioural therapy for fear of falling", "description": "Structured psychological intervention helping older adults reframe catastrophic thoughts about falling and gradually re-engage with activity. Reduces fear and improves function." },
+    { "name": "Wearable hip protectors", "description": "Energy-absorbing pads worn over the greater trochanter that reduce hip-fracture risk in care-home residents with high adherence. Effectiveness in community-dwelling adults is more limited because of lower adherence." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "otago-exercise-programme",
+    "comprehensive-geriatric-assessment",
+    "hip-replacement"
+  ],
+
+  "whySeeSpecialist": "Refer to a falls clinic or geriatric medicine service after any of the following: two or more falls in 12 months, an injurious fall, a syncopal fall, fall with cognitive impairment, recurrent unexplained falls, or failure of primary-care multifactorial intervention. Cardiologist input is needed for syncopal falls with abnormal ECG or echocardiography findings.",
+  "doctorSelectionGuide": "Choose a falls clinic with a geriatrician-led multidisciplinary team (physiotherapy, occupational therapy, pharmacy). Confirm the service offers structured exercise prescription (Otago, tai chi), medication deprescribing, home hazard assessment, and bone-health management. Ask about same-day access for high-risk patients and falls registry follow-up.",
+
+  "hospitalCriteria": [
+    "Geriatric medicine-led falls clinic with multidisciplinary team",
+    "Access to ECG, echocardiography, and tilt-table testing",
+    "Orthogeriatric service for hip and other fragility fractures",
+    "Bone health and osteoporosis service",
+    "Community physiotherapy and occupational therapy for home assessment"
+  ],
+  "keyFacilities": [
+    "Falls clinics with multidisciplinary teams",
+    "Orthogeriatric units for hip-fracture care",
+    "Community rehabilitation and intermediate-care services",
+    "Memory clinics and old-age psychiatry",
+    "Cardiology syncope clinics"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Engage in structured strength and balance exercise (Otago programme or tai chi) for at least 6 months.",
+    "Have an annual medication review by GP or pharmacist using STOPP/START or Beers criteria.",
+    "Maintain vitamin D and calcium intake; treat osteoporosis where present.",
+    "Have annual vision and hearing checks; address cataract and refractive error promptly.",
+    "Improve home safety: remove loose rugs, install grab bars in bathrooms, ensure stair handrails, improve lighting.",
+    "Wear well-fitting, supportive shoes both indoors and outdoors; avoid loose slippers."
+  ],
+
+  "lifestyleModifications": [
+    "Perform Otago exercises or tai chi at least three times weekly.",
+    "Stand up slowly from sitting or lying; pause for 30 seconds if light-headed.",
+    "Drink 1.5-2 litres of fluid daily unless restricted; treat orthostatic hypotension before walking.",
+    "Wear supportive footwear with a low broad heel and non-slip sole; avoid loose slippers.",
+    "Use mobility aids prescribed by physiotherapy (stick, frame) consistently.",
+    "Keep a fall diary to identify triggers (medication change, infection, dehydration, environment)."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate protein intake (1.0-1.2 g/kg/day) for muscle health",
+      "Calcium-rich foods (dairy, leafy greens, fortified products) totalling ~1,000-1,200 mg/day",
+      "Vitamin-D-rich foods (oily fish, fortified dairy) plus 800 IU daily supplementation when needed",
+      "Sufficient hydration (1.5-2 L/day water unless fluid restriction is advised)"
+    ],
+    "avoid": [
+      "Heavy alcohol intake, which doubles falls risk",
+      "Long fasting periods that worsen orthostatic hypotension",
+      "Excess caffeine in the evening which disrupts sleep and balance the next day",
+      "Restrictive low-energy diets that accelerate sarcopenia"
+    ]
+  },
+  "exerciseGuidelines": "Aim for resistance training 2-3 times weekly (legs, arms, trunk), balance work daily or near-daily (tai chi, Otago exercises, single-leg stance), and aerobic activity (brisk walking, cycling) on most days for at least 30 minutes. Group exercise classes encourage adherence and social engagement. Supervised programmes are preferable for high-risk adults; home programmes work for many community-dwelling older adults with adequate instruction.",
+
+  "dailyManagement": [
+    "Perform balance and strength exercises every day or every other day.",
+    "Stand up slowly from sitting or lying down, pausing for 30 seconds.",
+    "Wear supportive shoes both indoors and outdoors.",
+    "Check that walking aids are within reach overnight and in the bathroom.",
+    "Drink fluids regularly; avoid prolonged fasting in hot weather.",
+    "Use a personal alarm or pendant if living alone with a previous fall."
+  ],
+
+  "prognosis": "About 5-10% of falls cause serious injury (hip fracture, traumatic brain injury, major laceration). Hip fracture has a 30-day mortality of 5-8% and 1-year mortality of 20-30%, with only 50-60% of survivors regaining baseline function. Fear of falling develops in 30-50% of fallers and triples the risk of activity restriction, disability, and residential care admission. Multifactorial assessment with tailored intervention reduces falls by 24-39% and injurious falls by similar amounts. Otago and tai chi programmes reduce falls by 19-35%. Cataract surgery on the first eye reduces falls by 34%. Medication review with deprescribing reduces falls by 20-30%. Coordinated post-fall rehabilitation halves the rate of repeat falls in the following year. The strongest predictors of poor outcome are dementia, severe frailty, polypharmacy, low body weight, and untreated osteoporosis. Even after an injurious fall, structured rehabilitation, bone protection, and falls prevention restore function and independence in most older adults.",
+
+  "recoveryTimeline": "Soft tissue injuries from minor falls recover within 1-3 weeks. Hip-fracture rehabilitation runs 3-6 months, with the most rapid functional recovery in the first 6-12 weeks. Strength and balance training reduces falls by 12-24 weeks. Vision and medication interventions show effect within 4-12 weeks. Long-term maintenance requires continued exercise and regular review.",
+
+  "complications": [
+    "Fractures, especially hip, vertebrae, wrist, and humerus, often in patients with osteoporosis.",
+    "Traumatic brain injury including subdural haematoma in patients on anticoagulants; obtain CT head if there is any loss of consciousness, vomiting, persistent headache, or focal neurology.",
+    "Rhabdomyolysis, pressure injuries, dehydration, and hypothermia after a long lie on the floor.",
+    "Post-fall syndrome with disabling fear of falling, activity restriction, and accelerated deconditioning.",
+    "Loss of independence, residential care admission, and mortality.",
+    "Hospital-acquired infections, delirium, and venous thromboembolism during admission for fall-related injury."
+  ],
+
+  "supportResources": [
+    { "name": "CDC STEADI (Stopping Elderly Accidents, Deaths & Injuries)", "url": "https://www.cdc.gov/steadi/", "description": "US CDC initiative with clinician and patient tools, screening algorithms, and education resources." },
+    { "name": "World Falls Guidelines 2022", "url": "https://pubmed.ncbi.nlm.nih.gov/36055760/", "description": "International consensus guideline integrating risk assessment and intervention recommendations for falls in older adults." },
+    { "name": "Age UK Falls Prevention", "url": "https://www.ageuk.org.uk/information-advice/health-wellbeing/conditions-illnesses/falls/", "description": "UK charity providing patient information, exercise advice, and home safety guidance." },
+    { "name": "National Council on Aging — Falls Prevention", "url": "https://www.ncoa.org/older-adults/health/prevention/falls-prevention/", "description": "US national organisation with falls prevention programmes, exercise classes, and advocacy." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "frailty-syndrome", "name": "Frailty Syndrome", "keyDifference": "Frailty is the underlying state of vulnerability that increases fall risk; falls are events that can occur in frail or robust older adults. Many frail patients have recurrent falls, but falls in robust adults may be caused by environmental hazards alone." },
+    { "slug": "sarcopenia", "name": "Sarcopenia", "keyDifference": "Sarcopenia is age-related muscle loss and a major biological driver of falls. Falls are events; sarcopenia is a chronic state that increases fall risk through reduced strength and impaired postural reflexes." },
+    { "slug": "osteoporosis", "name": "Osteoporosis", "keyDifference": "Osteoporosis is the underlying bone fragility that converts a fall into a fragility fracture. Falls and osteoporosis often coexist; assessment and treatment of both are essential to reduce hip and vertebral fractures." },
+    { "slug": "parkinsons-disease", "name": "Parkinson's Disease", "keyDifference": "Parkinson disease causes characteristic motor signs (bradykinesia, rigidity, resting tremor, postural instability) and a high fall rate. Falls in non-parkinsonian older adults reflect multifactorial causes without those specific motor signs." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "osteoporosis", "name": "Osteoporosis" },
+    { "slug": "frailty-syndrome", "name": "Frailty Syndrome" },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "frailty-syndrome", "name": "Frailty Syndrome", "relevance": "Single most important predictor of falls and fall-related injury in older adults." },
+    { "slug": "osteoporosis", "name": "Osteoporosis", "relevance": "Underlies most fragility fractures triggered by a fall; assessment and treatment are essential after any injurious fall." },
+    { "slug": "sarcopenia", "name": "Sarcopenia", "relevance": "Major biological cause of falls; resistance training addresses both falls and sarcopenia." },
+    { "slug": "parkinsons-disease", "name": "Parkinson's Disease", "relevance": "Leading neurological cause of falls in older adults; specialist multidisciplinary care reduces falls." },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease", "relevance": "Cognitive impairment doubles falls risk; combined geriatric and memory clinic assessment improves outcomes." }
+  ],
+
+  "faqs": [
+    {
+      "question": "How common are falls in older adults?",
+      "answer": "About one in three community-dwelling adults aged 65 and over and one in two over age 80 falls each year. Around 5-10% of falls cause serious injury such as hip fracture or head injury. Falls are the leading cause of injury-related death in older adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes falls in elderly people?",
+      "answer": "Falls usually result from several interacting factors: muscle weakness and sarcopenia, polypharmacy, orthostatic hypotension, vision impairment, cognitive impairment, neurological disorders such as Parkinson disease, cardiac causes including arrhythmia and aortic stenosis, foot problems, inappropriate footwear, and environmental hazards.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can falls in elderly be prevented?",
+      "answer": "Yes. Multifactorial assessment with structured exercise (Otago programme, tai chi), medication review, vision correction, home hazard removal, and vitamin D in deficient adults reduces falls by 24-39% and injurious falls by similar amounts in randomised trials.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which exercises help prevent falls?",
+      "answer": "Programmes combining strength and balance training are most effective. The Otago Exercise Programme (home-based progressive strength and balance over 6 months) reduces falls by 35%. Tai chi reduces falls by 19-29%. Walking alone is not sufficient — balance work is essential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Timed Up and Go test?",
+      "answer": "The Timed Up and Go is a brief functional test: the patient rises from a chair, walks 3 metres, turns, returns, and sits. Times of 12-14 seconds or more indicate increased fall risk. It takes 1-2 minutes and is widely used in primary care and falls clinics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which medications increase fall risk?",
+      "answer": "Benzodiazepines, Z-drugs (zolpidem), opioids, antipsychotics, tricyclic antidepressants, anticholinergics, sedating antihistamines, antihypertensives that cause orthostatic hypotension, and hypoglycaemic agents independently increase falls. Each additional daily medication beyond four raises risk 5-15%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does vitamin D prevent falls?",
+      "answer": "Vitamin D 800 IU per day reduces falls by 20-30% in older adults with low or unmeasured 25-OH-vitamin-D levels. Single very high doses above 100,000 IU should be avoided as they have been linked to higher fall risk. Most older adults benefit from routine 800 IU daily.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I see a doctor after a fall?",
+      "answer": "Yes if you sustain an injury, hit your head, are on blood thinners, cannot get up, or have more than one fall in 12 months. A primary-care or falls clinic assessment identifies reversible causes and reduces the risk of further falls.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a falls clinic?",
+      "answer": "A falls clinic is a multidisciplinary geriatric service that provides comprehensive falls assessment — medical, functional, environmental, and medication review — and tailored intervention. Most services include geriatrician, physiotherapist, occupational therapist, and pharmacist input.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I make my home safer?",
+      "answer": "Remove loose rugs, install grab bars in the bathroom and stair handrails, improve lighting (especially on stairs), keep walkways clear, use non-slip bath mats, secure carpet edges, and ensure cordless phones or alarms are within reach. Home hazard assessment by an occupational therapist reduces falls by 19%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What footwear is safest?",
+      "answer": "Well-fitting shoes with a low broad heel, non-slip sole, and good fastening (laces or Velcro) are safest. Avoid loose slippers, high heels, and shoes with slick leather soles. Bare feet or socks alone on hard floors are also unsafe; non-slip socks are a reasonable option indoors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does cataract surgery reduce falls?",
+      "answer": "Yes. Cataract surgery on the first eye improves visual acuity and contrast sensitivity and reduces falls by 34%. Second-eye surgery offers more modest fall-reduction benefits but improves driving and reading function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-fall syndrome?",
+      "answer": "Post-fall syndrome is a state of disabling fear of falling that develops in 30-50% of older fallers. It leads to activity restriction, deconditioning, social isolation, and a tripled risk of further falls. Cognitive behavioural therapy and graded mobility training help patients regain confidence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Otago programme?",
+      "answer": "The Otago Exercise Programme is a home-based progressive strength and balance training programme delivered over 6 months by a physiotherapist or trained nurse with home visits and telephone follow-up. It reduces falls by 35% in community-dwelling adults aged 65 and over.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How serious is a hip fracture from a fall?",
+      "answer": "Hip fracture is a major injury. 30-day mortality is 5-8% and 1-year mortality 20-30%; only 50-60% of survivors regain their pre-fracture functional status. Surgery within 36 hours, orthogeriatric care, and structured rehabilitation improve outcomes substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is exercise safe if I have already fallen?",
+      "answer": "Yes, and exercise is the single strongest evidence-based intervention. Supervised strength and balance programmes are safe and effective even after injurious falls. Avoid unsupervised high-risk exercise until cleared by a clinician or physiotherapist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I use a walking stick or frame?",
+      "answer": "Mobility aids should be prescribed and fitted by a physiotherapist after individual assessment. Used correctly, sticks and frames reduce falls and increase confidence; used incorrectly, they can increase risk. Aids should match the user's needs and abilities.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are hip protectors effective?",
+      "answer": "Hip protectors are energy-absorbing pads worn over the greater trochanter. They reduce hip-fracture risk in care-home residents with high adherence but have limited effect in community-dwelling adults because of low everyday use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does dementia increase fall risk?",
+      "answer": "Yes. Mild cognitive impairment and dementia at least double falls risk through impaired attention, judgement, and visuospatial function. They also raise the risk of long lie on the floor, head injury, and post-fall fracture.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is orthostatic hypotension?",
+      "answer": "Orthostatic hypotension is a drop in systolic blood pressure of 20 mmHg or diastolic of 10 mmHg within 3 minutes of standing. It affects 20-50% of older adults and doubles falls risk. Treatment involves medication review, hydration, compression stockings, and graded standing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I drive after a fall?",
+      "answer": "Most older adults can continue driving after a single uncomplicated fall once any injury has healed. Recurrent falls, syncopal falls, or new cognitive impairment may require driving assessment. Discuss any fall with the GP, especially before resuming long or motorway journeys.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Falls in the Elderly",
+  "regionalNames": [
+    { "name": "Falls in older adults", "region": "Global", "language": "English" },
+    { "name": "Chutes du sujet âgé", "region": "France, Francophone countries", "language": "French" },
+    { "name": "Caídas en el anciano", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "高齢者の転倒", "region": "Japan", "language": "Japanese" }
+  ],
+  "searchTags": [
+    "falls in elderly",
+    "falls prevention older adults",
+    "Timed Up and Go",
+    "Otago exercise programme",
+    "tai chi falls",
+    "STEADI",
+    "vitamin D falls",
+    "hip fracture prevention",
+    "orthostatic hypotension elderly",
+    "polypharmacy falls",
+    "multifactorial intervention",
+    "home hazard assessment",
+    "falls clinic",
+    "World Falls Guidelines 2022",
+    "geriatric medicine"
+  ],
+  "symptomKeywords": [
+    "recurrent falls elderly",
+    "elderly relative falling at home",
+    "dizziness on standing older adult",
+    "fear of falling",
+    "older adult unsteady walking",
+    "long lie on the floor",
+    "elderly fall after medication change"
+  ],
+
+  "metaTitle": "Falls in Elderly: Causes, Prevention & Treatment | aihealz",
+  "metaDescription": "Falls in elderly: causes, multifactorial assessment, Otago and tai chi exercise programs, medication review, home safety, and bone protection explained.",
+
+  "keywords": [
+    "falls in elderly",
+    "falls prevention",
+    "fall risk assessment",
+    "Timed Up and Go",
+    "Otago exercise programme",
+    "tai chi falls",
+    "STEADI",
+    "vitamin D falls",
+    "hip fracture prevention",
+    "polypharmacy falls",
+    "orthostatic hypotension",
+    "World Falls Guidelines 2022"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Montero-Odasso M, van der Velde N, Martin FC, et al. 2022. World guidelines for falls prevention and management for older adults: a global initiative. Age and Ageing 51(9):afac205.", "url": "https://pubmed.ncbi.nlm.nih.gov/36055760/", "accessedDate": "2026-05-14" },
+    { "title": "Sherrington C, Fairhall NJ, Wallbank GK, et al. 2019. Exercise for preventing falls in older people living in the community. Cochrane Database of Systematic Reviews 1:CD012424.", "url": "https://pubmed.ncbi.nlm.nih.gov/30703272/", "accessedDate": "2026-05-14" },
+    { "title": "Tinetti ME, Baker DI, McAvay G, et al. 1994. A multifactorial intervention to reduce the risk of falling among elderly people living in the community. New England Journal of Medicine 331(13):821-827.", "url": "https://pubmed.ncbi.nlm.nih.gov/8078528/", "accessedDate": "2026-05-14" },
+    { "title": "Robertson MC, Devlin N, Gardner MM, Campbell AJ. 2001. Effectiveness and economic evaluation of a nurse delivered home exercise programme to prevent falls. BMJ 322(7288):697-701.", "url": "https://pubmed.ncbi.nlm.nih.gov/11264207/", "accessedDate": "2026-05-14" },
+    { "title": "Centers for Disease Control and Prevention. 2023. Older Adult Falls: Stopping Elderly Accidents, Deaths and Injuries (STEADI) Initiative. CDC Atlanta.", "url": "https://www.cdc.gov/steadi/", "accessedDate": "2026-05-14" },
+    { "title": "Harwood RH, Foss AJ, Osborn F, Gregson RM, Zaman A, Masud T. 2005. Falls and health status in elderly women following first eye cataract surgery: a randomised controlled trial. British Journal of Ophthalmology 89(1):53-59.", "url": "https://pubmed.ncbi.nlm.nih.gov/15615747/", "accessedDate": "2026-05-14" },
+    { "title": "Bischoff-Ferrari HA, Dawson-Hughes B, Staehelin HB, et al. 2009. Fall prevention with supplemental and active forms of vitamin D: a meta-analysis of randomised controlled trials. BMJ 339:b3692.", "url": "https://pubmed.ncbi.nlm.nih.gov/19797342/", "accessedDate": "2026-05-14" },
+    { "title": "National Institute for Health and Care Excellence. 2013, updated 2024. Falls in older people: assessing risk and prevention. Clinical guideline CG161.", "url": "https://www.nice.org.uk/guidance/cg161", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

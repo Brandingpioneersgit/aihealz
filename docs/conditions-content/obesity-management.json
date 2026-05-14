@@ -1,0 +1,457 @@
+{
+  "_meta": {
+    "slug": "obesity-management",
+    "tier": 1,
+    "headTerm": "obesity management",
+    "longTailKeywords": [
+      "obesity treatment",
+      "GLP-1 weight loss",
+      "semaglutide weight loss",
+      "tirzepatide obesity",
+      "bariatric surgery options",
+      "BMI calculator",
+      "weight loss medication",
+      "obesity in children",
+      "anti-obesity drugs"
+    ],
+    "primarySpecialty": "Endocrinology / Family Medicine (Obesity Medicine)",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Epidemiology per NHANES 2017-2020 and World Obesity Atlas 2023. STEP trials semaglutide per Wilding et al. NEJM 2021 (PMID 33567185). SURMOUNT-1 tirzepatide per Jastreboff et al. NEJM 2022 (PMID 35658024). Bariatric surgery long-term outcomes per Sjöström SOS Lancet 2012 (PMID 22922416), and STAMPEDE Schauer et al. NEJM 2017 (PMID 28199805). AACE/ACE 2016 guidelines and AGA 2022 pharmacologic management guideline. Look AHEAD lifestyle intervention NEJM 2013 (PMID 23796131). ICD-10 E66."
+  },
+
+  "h1Title": "Obesity Management: Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology / Family Medicine (Obesity Medicine)",
+
+  "heroOverview": "Obesity is a chronic, relapsing disease of body-fat regulation that increases the risk of more than 200 health conditions, including type 2 diabetes, cardiovascular disease, obstructive sleep apnea, fatty liver disease, and at least 13 cancers. World Health Organization data show 890 million adults living with obesity (BMI ≥30) in 2022, triple the 1990 number. Modern management is multimodal: structured behavioral and dietary intervention can achieve sustained 5-10% weight loss; GLP-1 and dual GLP-1/GIP receptor agonists (semaglutide 2.4 mg, tirzepatide 5-15 mg) produce 15-22% mean weight loss in 16-72 weeks; metabolic and bariatric surgery delivers 25-35% durable weight loss and reduces all-cause mortality 30-50% over 15-20 years. The goal of treatment is not cosmetic — it is the prevention and reversal of obesity-associated diseases through structured, lifelong care.",
+
+  "keyStats": {
+    "prevalence": "Approximately 41.9% of US adults have obesity (BMI ≥30) and 9.2% have severe obesity (BMI ≥40) per NHANES 2017-2020; childhood obesity prevalence 19.7%",
+    "demographics": "WHO 2022: 890 million adults with obesity globally; women slightly higher prevalence than men in most regions. Black and Hispanic populations in the US show higher prevalence than non-Hispanic White populations",
+    "avgAge": "Adult obesity onset typically 30-50 years with continued weight gain into the 60s; childhood obesity onset frequently in the preschool years",
+    "globalCases": "World Obesity Atlas 2023 projects 1.9 billion adults with obesity by 2035 if current trends continue"
+  },
+
+  "definition": "Obesity (ICD-10: E66) is a chronic relapsing disease characterized by an excess of adipose tissue that impairs health. The most widely used clinical definition uses body mass index (BMI): overweight 25-29.9 kg/m², class I obesity 30-34.9, class II 35-39.9, and class III (severe) ≥40 kg/m². BMI is an imperfect surrogate — waist circumference (≥102 cm men, ≥88 cm women in non-Asian populations; ≥90 and ≥80 cm in Asian populations) better reflects visceral adiposity and cardiometabolic risk. Asian populations have a lower BMI threshold for cardiometabolic risk: WHO defines overweight ≥23 and obesity ≥27.5 kg/m². The pathophysiology is multifactorial: hypothalamic, gut hormone, and reward-system dysregulation set defended fat mass higher than is healthy, while obesogenic environments (calorie-dense food, sedentary work, sleep loss, chronic stress) provide the load. Adipose tissue is not inert: it secretes adipokines (leptin, adiponectin, resistin), promotes systemic inflammation, drives insulin resistance, and accelerates atherosclerosis. Obesity is now recognized as a disease by the American Medical Association (2013), World Health Organization, World Obesity Federation, and most national obesity societies. It is managed across primary care, endocrinology, obesity medicine, dietetics, behavioral therapy, and bariatric surgery — frequently in shared multidisciplinary clinics.",
+
+  "typesClassification": [
+    { "type": "Class I obesity (BMI 30-34.9)", "description": "Mild obesity. Many patients respond to structured lifestyle programs alone; pharmacotherapy is added when BMI ≥30 (or ≥27 with comorbidity) does not achieve adequate response by 3-6 months. Comorbidity prevalence already elevated." },
+    { "type": "Class II obesity (BMI 35-39.9)", "description": "Moderate obesity. Lifestyle alone rarely sufficient; combined lifestyle + pharmacotherapy is standard. Bariatric surgery is appropriate when comorbidity is present and BMI ≥35." },
+    { "type": "Class III severe obesity (BMI ≥40)", "description": "Severe obesity. Multimodal care including pharmacotherapy and consideration of bariatric surgery. Risk of cardiovascular, metabolic, and mechanical complications is highest." },
+    { "type": "Visceral / metabolic obesity", "description": "Defined by elevated waist circumference and waist-to-hip ratio with or without elevated BMI. Carries higher cardiometabolic risk than peripheral obesity at the same BMI; common in South Asian, East Asian, and many Latin American populations." },
+    { "type": "Childhood and adolescent obesity", "description": "Defined by CDC growth charts (≥95th percentile BMI for age and sex) or WHO standards. Trajectory tracks strongly into adulthood; early intervention with structured family-based lifestyle programs is the foundation, with GLP-1 receptor agonists (e.g., semaglutide) and bariatric surgery options in selected adolescents from age 12-13." },
+    { "type": "Monogenic and syndromic obesity", "description": "Rare causes including leptin deficiency, leptin-receptor and POMC mutations, MC4R variants, and Prader-Willi syndrome present with early-onset severe obesity. Setmelanotide (MC4R agonist) is approved for several monogenic forms." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent weight gain over months to years despite stable or restricted eating patterns, reflecting altered fat-mass regulation rather than simple over-eating.",
+    "Increasing waist circumference and central body shape, often with progressive belt-size and clothing-size changes.",
+    "Daytime fatigue, exertional breathlessness, and reduced exercise tolerance from increased metabolic demand and respiratory load.",
+    "Knee, hip, and lower-back pain reflecting increased joint loading and inflammatory adipokine signaling.",
+    "Loud snoring, witnessed apneas, morning headaches, and unrefreshing sleep — symptoms of obesity-related obstructive sleep apnea.",
+    "Skin changes including acanthosis nigricans (velvety dark patches in the neck, axilla, and groin) reflecting insulin resistance; intertrigo and chafing in skin folds; and stretch marks.",
+    "Heartburn and acid reflux from increased intra-abdominal pressure on the lower esophageal sphincter.",
+    "Menstrual irregularity, hirsutism, and acne in women suggestive of polycystic ovary syndrome; reduced libido and erectile difficulty in men.",
+    "Mood symptoms — low mood, anxiety, weight-related stigma, disordered eating patterns — that both contribute to and result from obesity."
+  ],
+
+  "earlyWarningSigns": [
+    "Steady annual weight gain of 0.5-1.5 kg over 5-10 years (the most common adult pattern)",
+    "Crossing growth-chart BMI percentiles upward in childhood or adolescence",
+    "New onset acanthosis nigricans, especially in adolescents",
+    "Rising waist circumference even without major BMI change",
+    "Snoring with daytime sleepiness or fatigue"
+  ],
+
+  "emergencySigns": [
+    "Severe shortness of breath at rest with low oxygen saturation in obesity hypoventilation syndrome (Pickwickian syndrome) — requires hospital assessment",
+    "Acute leg swelling with calf tenderness — pulmonary embolism and deep vein thrombosis risk is roughly 2-3× elevated",
+    "Chest pain with diaphoresis or radiating discomfort — myocardial infarction must be excluded urgently",
+    "New significant breathlessness, orthopnea, or paroxysmal nocturnal dyspnea — heart failure from obesity cardiomyopathy",
+    "Suicidal ideation or severe disordered-eating behaviors — urgent mental health assessment"
+  ],
+
+  "causes": [
+    {
+      "cause": "Obesogenic environment and energy imbalance",
+      "description": "Chronic positive energy balance from calorie-dense ultra-processed foods, large portion sizes, sedentary work, screen time, sleep deprivation, and limited active transport drives most adult obesity. Even small daily surpluses (50-100 kcal) accumulate to clinically significant fat gain over years."
+    },
+    {
+      "cause": "Genetic and epigenetic susceptibility",
+      "description": "Twin studies estimate 40-70% of BMI variation is heritable. Common-variant risk (FTO, MC4R, BDNF, others) shifts the defended fat-mass setpoint; rare monogenic causes (leptin deficiency, LEPR, POMC, MC4R, PCSK1) produce severe early-onset disease. Family history is the strongest single non-modifiable risk factor."
+    },
+    {
+      "cause": "Hormonal and metabolic disorders",
+      "description": "Hypothyroidism, Cushing's syndrome, polycystic ovary syndrome, growth hormone deficiency, hypothalamic injury (post-surgical, traumatic, tumor-related), and insulinoma can drive weight gain. Always screened for in atypical or rapid presentations."
+    },
+    {
+      "cause": "Medication-induced weight gain",
+      "description": "Atypical antipsychotics (olanzapine, clozapine, risperidone), valproate, lithium, sulfonylureas, insulin, thiazolidinediones, beta-blockers, corticosteroids, gabapentin/pregabalin, and some antidepressants (mirtazapine, paroxetine) all cause clinically significant weight gain. Drug substitution where feasible mitigates risk."
+    },
+    {
+      "cause": "Chronic sleep deprivation and circadian disruption",
+      "description": "Sleep below 6 hours per night and shift work raise ghrelin, lower leptin, increase late-evening eating, and impair glucose homeostasis. Meta-analyses show approximately 30% higher obesity risk in adults sleeping less than 6 hours nightly."
+    },
+    {
+      "cause": "Adverse childhood experiences and stress",
+      "description": "Trauma, neglect, food insecurity, and chronic psychological stress elevate cortisol, alter reward and emotion regulation, and increase emotional and binge eating patterns. ACE score correlates strongly with adult obesity risk."
+    },
+    {
+      "cause": "Pregnancy-associated weight retention and perimenopausal shift",
+      "description": "Excess gestational weight gain, particularly with multiple pregnancies, contributes to long-term weight retention in many women. The perimenopausal transition accompanies a shift to visceral adiposity even without major weight change."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of obesity in a first-degree relative", "category": "genetic", "description": "Strongest non-modifiable risk factor; children with two parents with obesity have approximately 80% lifetime risk versus 14% with neither parent affected." },
+    { "factor": "South Asian, Pacific Islander, or Middle Eastern ancestry", "category": "genetic", "description": "These populations develop cardiometabolic disease at lower BMI thresholds (WHO Asian-specific BMI cutoffs ≥27.5 for obesity) and have elevated visceral adiposity at the same BMI as European populations." },
+    { "factor": "Sedentary lifestyle and occupation", "category": "modifiable", "description": "Less than 150 minutes of moderate physical activity per week is associated with substantially elevated obesity risk. Active commuting and standing desks modestly reduce risk." },
+    { "factor": "Ultra-processed food consumption", "category": "modifiable", "description": "Ultra-processed foods now account for >50% of US adult calories. Each 10% increase in ultra-processed food share is associated with approximately 12% higher obesity risk in cohort studies." },
+    { "factor": "Sleep below 6 hours per night", "category": "modifiable", "description": "Short sleep duration carries 25-50% higher obesity risk in adults and 1.5-2× higher risk in children, independent of physical activity and diet." },
+    { "factor": "Use of obesogenic medications", "category": "modifiable", "description": "Atypical antipsychotics, certain antidepressants, anticonvulsants, insulin, sulfonylureas, beta-blockers, and corticosteroids contribute to clinically significant weight gain." },
+    { "factor": "Adverse childhood experiences (ACE score ≥4)", "category": "non-modifiable", "description": "Substantial childhood adversity doubles adult obesity risk through stress-regulated eating, cortisol elevation, and altered reward signaling." },
+    { "factor": "Pregnancy and perimenopausal hormonal transition (women)", "category": "non-modifiable", "description": "Each pregnancy contributes 1.5-3 kg of long-term weight retention on average; perimenopause shifts adipose distribution centrally." }
+  ],
+
+  "affectedDemographics": [
+    "United States: 41.9% of adults have obesity and 9.2% have severe obesity; childhood obesity 19.7% (CDC NHANES 2017-2020).",
+    "Sex distribution: women have slightly higher prevalence than men in most regions, with the difference greatest in low- and middle-income countries.",
+    "Ethnic distribution in the US: non-Hispanic Black adults 49.9% obesity prevalence, Hispanic 45.6%, non-Hispanic White 41.4%, non-Hispanic Asian 16.1% (BMI ≥30; rises substantially using Asian-specific cutoff).",
+    "Global: WHO 2022 estimates 890 million adults with obesity (16% of adults), nearly tripling 1990 figures. Highest prevalence in Pacific islands; lowest in South and East Asia by raw BMI."
+  ],
+
+  "diagnosisOverview": "Diagnosis combines anthropometry, history, and assessment of obesity-associated complications. Body mass index (weight in kg / height in m²) is the standard screening tool with WHO and ethnic-specific cutoffs. Waist circumference (measured at the midpoint between the lowest rib and the iliac crest) refines cardiometabolic risk and is often more informative than BMI in Asian populations. Body composition by bioelectrical impedance or DEXA can clarify cases at the BMI threshold or in muscular individuals. Workup screens for obesity-associated diseases (the Edmonton Obesity Staging System or similar): fasting glucose, HbA1c, lipid profile, liver function tests, TSH, vitamin D, hepatic ultrasound or FibroScan for MASLD/NAFLD, sleep questionnaires (STOP-BANG, Epworth) with polysomnography when positive, blood pressure measurement (multiple readings), and assessment of osteoarthritis, reflux, and mental-health symptoms. Secondary causes of obesity are screened in atypical presentations: cortisol testing for Cushing's syndrome, prolactin and FSH/LH for hypothalamic and pituitary causes, PCOS workup in women, genetic testing for early-onset severe obesity (MC4R, LEPR, POMC). Quantifying readiness to change, prior weight-loss attempts, eating patterns (using validated tools), psychological history, and goals informs treatment selection. The 2023 American Heart Association advisory and 2022 AGA pharmacologic management guideline frame contemporary diagnostic workflow.",
+
+  "diagnosticTests": [
+    { "test": "Body mass index (BMI) calculation", "purpose": "Initial classification of overweight and obesity using weight/height²; cutoffs ≥25 overweight, ≥30 obesity, ≥40 severe obesity (Asian-specific ≥23 and ≥27.5)", "whatToExpect": "Height and weight measurement on a clinical scale; calculation immediate. Repeat at each obesity-focused visit." },
+    { "test": "Waist circumference measurement", "purpose": "Quantifies central adiposity; better predictor of cardiometabolic risk than BMI alone, especially in Asian populations", "whatToExpect": "Measurement with tape at the midpoint between the lowest rib and iliac crest at end-expiration; takes under one minute." },
+    { "test": "Comprehensive metabolic profile (fasting glucose, HbA1c, lipids, liver function, TSH, vitamin D)", "purpose": "Screens for type 2 diabetes, prediabetes, dyslipidemia, MASLD/NAFLD, hypothyroidism, and vitamin D deficiency", "whatToExpect": "Fasting blood draw; results within hours for most tests, 1-2 weeks for vitamin D." },
+    { "test": "Hepatic ultrasound or transient elastography (FibroScan)", "purpose": "Diagnoses metabolic dysfunction-associated steatotic liver disease (MASLD/NAFLD) and assesses fibrosis severity", "whatToExpect": "Non-invasive ultrasound or elastography, 10-30 minutes. Results read same day." },
+    { "test": "Sleep evaluation (STOP-BANG, Epworth Sleepiness Scale, polysomnography when indicated)", "purpose": "Identifies obstructive sleep apnea, which complicates 40-90% of obesity", "whatToExpect": "Questionnaires take 5-10 minutes; positive screen leads to home or in-laboratory sleep study." },
+    { "test": "Validated eating behavior tools (Eating Disorder Examination Questionnaire, Binge Eating Scale)", "purpose": "Identifies binge eating disorder, night eating syndrome, and bulimia which influence treatment selection", "whatToExpect": "Self-administered questionnaire; 10-15 minutes." },
+    { "test": "Genetic and endocrine workup in selected patients", "purpose": "Screens for monogenic obesity (MC4R, LEPR, POMC) and secondary causes (Cushing's syndrome, hypothalamic injury)", "whatToExpect": "Targeted testing based on history; cortisol assays (24-hour urinary cortisol, low-dose dexamethasone suppression), prolactin, FSH/LH, and obesity gene panels when indicated." }
+  ],
+
+  "treatmentOverview": "Modern obesity management is staged, multimodal, and lifelong. The foundation across all stages is structured behavioral and nutritional intervention: caloric deficit of 500-750 kcal/day individualized to baseline intake, dietary pattern emphasizing whole foods (Mediterranean, DASH, plant-forward, or structured meal replacement), 150-300 minutes/week of moderate aerobic activity plus resistance training twice weekly, sleep optimization, stress management, and ongoing behavioral support. Intensive lifestyle programs (Look AHEAD, Diabetes Prevention Program) produce 5-8% mean weight loss with reductions in type 2 diabetes incidence and cardiovascular events. When lifestyle alone is insufficient, pharmacotherapy is added at BMI ≥30 (or ≥27 with weight-related comorbidity). Modern first-line agents include glucagon-like peptide-1 (GLP-1) receptor agonists semaglutide 2.4 mg weekly (STEP trials: mean 14.9% weight loss at 68 weeks) and liraglutide 3 mg daily, and the dual GLP-1/GIP receptor agonist tirzepatide 5-15 mg weekly (SURMOUNT-1: 20.9% weight loss at 72 weeks with 15 mg). Older agents — phentermine-topiramate, naltrexone-bupropion, orlistat — remain options with smaller effect sizes. Setmelanotide is approved for several monogenic obesities. Metabolic and bariatric surgery is offered to adults with BMI ≥40, or ≥35 with comorbidity (and increasingly ≥30 in selected diabetic patients per 2022 ASMBS/IFSO guideline): sleeve gastrectomy and Roux-en-Y gastric bypass produce 25-35% durable weight loss, with the SOS and STAMPEDE trials showing 30-50% reductions in all-cause mortality, durable type 2 diabetes remission in 30-60%, and major reductions in cancer incidence and cardiovascular events over 15-20 years. Endoscopic options (intragastric balloon, endoscopic sleeve gastroplasty) offer intermediate effect for selected patients. All treatment requires lifelong follow-up because obesity is relapsing — weight regain occurs when active treatment is stopped, particularly with GLP-1 receptor agonist discontinuation (STEP-4: ~67% of lost weight regained within a year of cessation).",
+
+  "medicalTreatments": [
+    { "name": "Intensive lifestyle intervention (structured diet, exercise, behavioral support — Look AHEAD, DPP model)", "description": "Multicomponent program with caloric deficit of 500-750 kcal/day, 150-300 minutes/week moderate activity plus resistance training, behavioral therapy, and ongoing follow-up. Often delivered as a 6-12 month group program with maintenance phase.", "effectiveness": "5-8% mean weight loss at 12 months; reduces type 2 diabetes incidence by 58% (DPP) and cardiovascular events in high-risk subgroups (Look AHEAD post-hoc)" },
+    { "name": "Semaglutide 2.4 mg subcutaneous weekly (GLP-1 receptor agonist)", "description": "First-in-class once-weekly GLP-1 receptor agonist for chronic weight management. Slow titration over 16 weeks. Common adverse effects nausea, vomiting, diarrhea, constipation, gallstones; rare pancreatitis. Contraindicated in personal/family history of medullary thyroid cancer or MEN2.", "effectiveness": "Mean weight loss 14.9% at 68 weeks vs 2.4% placebo (STEP-1, NEJM 2021); cardiovascular event reduction 20% in patients with cardiovascular disease (SELECT trial NEJM 2023)" },
+    { "name": "Tirzepatide 5-15 mg subcutaneous weekly (GLP-1/GIP dual agonist)", "description": "Dual incretin receptor agonist. Slow titration to target dose over 16-20 weeks. Highest weight-loss efficacy among approved pharmacotherapies. Adverse effect profile similar to GLP-1 receptor agonists.", "effectiveness": "Mean weight loss 20.9% at 72 weeks with 15 mg vs 3.1% placebo (SURMOUNT-1, NEJM 2022); approximately 57% of patients achieved ≥20% weight loss" },
+    { "name": "Liraglutide 3 mg subcutaneous daily (GLP-1 receptor agonist)", "description": "Once-daily GLP-1 receptor agonist for chronic weight management. Titrated over 5 weeks. Useful in patients without weekly injection access; same safety considerations as semaglutide.", "effectiveness": "Mean weight loss 8.0% at 56 weeks vs 2.6% placebo (SCALE Obesity and Prediabetes trial)" },
+    { "name": "Phentermine-topiramate extended release (3.75-15 mg / 23-92 mg)", "description": "Combination sympathomimetic and topiramate at low doses; useful adjunct to lifestyle. Adverse effects include insomnia, paresthesia, taste alteration, mood symptoms, and teratogenicity; pregnancy must be excluded.", "effectiveness": "Mean weight loss 9-11% at 56 weeks (CONQUER, EQUIP trials)" },
+    { "name": "Naltrexone-bupropion sustained release (32 mg / 360 mg)", "description": "Combination opioid antagonist and dopamine/norepinephrine reuptake inhibitor; modulates reward and hunger. Adverse effects include nausea, headache, constipation, insomnia, and seizure risk; avoid in uncontrolled hypertension or seizure disorder.", "effectiveness": "Mean weight loss 5-6% at 56 weeks (COR-I, COR-II trials)" },
+    { "name": "Orlistat 120 mg three times daily with meals", "description": "Pancreatic lipase inhibitor that blocks dietary fat absorption. Gastrointestinal adverse effects (oily stool, fecal urgency) limit tolerance; reduces fat-soluble vitamin absorption requiring supplementation.", "effectiveness": "Mean weight loss 3-5% at 12 months versus placebo (XENDOS, Sjöström meta-analysis)" },
+    { "name": "Setmelanotide 1-3 mg subcutaneous daily (MC4R agonist)", "description": "FDA-approved for monogenic obesity from POMC, PCSK1, and LEPR deficiency, and for Bardet-Biedl syndrome. Adverse effects include injection-site reaction, hyperpigmentation, and male spontaneous penile erection.", "effectiveness": "≥10% weight loss in 80% of patients with POMC/PCSK1/LEPR deficiency and 32% with Bardet-Biedl over 12 months" },
+    { "name": "Cardiometabolic comorbidity management (statin, ACE inhibitor, SGLT2 inhibitor, metformin)", "description": "Concurrent treatment of dyslipidemia, hypertension, diabetes, and MASLD/NAFLD is integral to obesity care, particularly when full weight loss cannot be achieved promptly.", "effectiveness": "Substantial cardiovascular and metabolic risk reduction; SGLT2 inhibitors and GLP-1 receptor agonists overlap obesity and diabetes care" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Laparoscopic sleeve gastrectomy", "description": "Most common bariatric operation worldwide. Approximately 80% of the stomach is resected longitudinally, leaving a tubular sleeve. Lower complication rate than gastric bypass; durable hormonal effects through reduced ghrelin and altered gut hormones.", "successRate": "25-30% total body weight loss at 1-2 years; durable ≥20% weight loss at 5-10 years in 60-70%; 30-50% remission of type 2 diabetes at 5 years" },
+    { "name": "Roux-en-Y gastric bypass", "description": "Small gastric pouch created and connected directly to the jejunum, bypassing 100-150 cm of small bowel. Stronger anti-diabetic effect than sleeve through gut hormone changes. Risk of internal hernia, dumping syndrome, marginal ulcer, and micronutrient deficiencies.", "successRate": "30-35% total body weight loss at 1-2 years; STAMPEDE 5-year diabetes remission 29% vs 5% medical therapy; SOS 30% reduction in all-cause mortality over 15-20 years" },
+    { "name": "Biliopancreatic diversion with duodenal switch (BPD-DS) and SADI-S", "description": "More extensive malabsorptive procedure for severe obesity (BMI ≥50). Higher weight loss but greater nutritional risk and operative complexity. Reserved for selected high-volume centers.", "successRate": "35-45% total body weight loss; highest rates of diabetes remission (70-80%) but malnutrition and reoperation risk higher" },
+    { "name": "Endoscopic sleeve gastroplasty (ESG) and intragastric balloon", "description": "Less-invasive endoscopic procedures producing intermediate weight loss; appropriate for patients not yet ready for or eligible for surgical bariatric procedures. Reversible.", "successRate": "ESG: 15-20% total body weight loss at 18-24 months; balloon: 10-15% at 6 months (regain common after removal)" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Mediterranean dietary pattern", "description": "Plant-forward dietary pattern emphasizing olive oil, vegetables, fruits, legumes, whole grains, fish, and nuts. Robust evidence for cardiovascular risk reduction (PREDIMED) and modest weight loss when calorie-controlled." },
+    { "name": "Mindfulness-based eating awareness training (MB-EAT)", "description": "Behavioral program improving interoceptive awareness and reducing emotional and binge eating; effective adjunct in patients with binge eating disorder." },
+    { "name": "Cognitive behavioral therapy for obesity (CBT-OB)", "description": "Structured therapy targeting eating-pattern triggers, body-image, and weight-related cognitions; improves long-term maintenance when combined with pharmacotherapy and lifestyle." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "bariatric-surgery",
+    "sleeve-gastrectomy",
+    "gastric-bypass",
+    "weight-loss-medication",
+    "lifestyle-intervention"
+  ],
+
+  "whySeeSpecialist": "Patients with BMI ≥30, or ≥27 with weight-related comorbidity, who do not respond to primary-care guidance benefit from obesity medicine specialist referral. Specialist input is essential for safe titration of GLP-1 receptor agonists and tirzepatide, evaluation for bariatric surgery, management of medication-related weight gain, and coordination of multidisciplinary team (dietetics, behavioral therapy, exercise physiology, sleep medicine).",
+  "doctorSelectionGuide": "Choose a physician certified by the American Board of Obesity Medicine (or international equivalent), or an endocrinology service with a dedicated obesity clinic. Bariatric surgery should be performed at a Center of Excellence accredited by the American Society for Metabolic and Bariatric Surgery (ASMBS) or the International Federation for the Surgery of Obesity, ensuring multidisciplinary support before and after surgery.",
+
+  "hospitalCriteria": [
+    "Multidisciplinary obesity medicine clinic with physician, dietitian, behavioral therapist, exercise physiologist",
+    "Bariatric surgery program accredited by ASMBS or international equivalent",
+    "Access to GLP-1 receptor agonists, tirzepatide, and other approved anti-obesity medications",
+    "On-site polysomnography for obstructive sleep apnea",
+    "Hepatology service with elastography and MASLD/NAFLD management"
+  ],
+  "keyFacilities": [
+    "Academic obesity medicine programs",
+    "ASMBS Centers of Excellence for bariatric surgery",
+    "Pediatric obesity multidisciplinary clinics",
+    "Endocrinology and diabetes services with obesity focus",
+    "Cardiometabolic risk reduction clinics"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain a stable healthy weight with a sustainable dietary pattern emphasizing whole foods and limiting ultra-processed products.",
+    "Achieve 150-300 minutes of moderate aerobic activity plus resistance training twice weekly.",
+    "Sleep 7-9 hours per night; manage shift-work patterns with extra structure.",
+    "Limit screen time (especially in children) and prioritize active leisure.",
+    "Address adverse childhood experiences and chronic stress with evidence-based mental health support.",
+    "Review obesogenic medications regularly with the prescribing clinician and consider weight-neutral alternatives."
+  ],
+
+  "lifestyleModifications": [
+    "Plan and prepare most meals at home; restaurant and ultra-processed foods drive excess intake.",
+    "Use plate-method portion control: half non-starchy vegetables, one quarter lean protein, one quarter complex carbohydrate.",
+    "Limit sugar-sweetened beverages including juices; replace with water, sparkling water, or unsweetened tea.",
+    "Build incidental activity: walking meetings, stairs, active commute, standing desks.",
+    "Track food and activity for at least the first 12 weeks of intervention; consistent self-monitoring is the strongest behavioral predictor of weight loss.",
+    "Establish a regular sleep schedule and screen-free evening routine.",
+    "Engage social support — partner, family, peer group, or structured program — for accountability."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean dietary pattern (vegetables, fruits, legumes, whole grains, olive oil, fish, nuts)",
+      "Adequate protein 1.2-1.6 g/kg/day during weight loss to preserve lean mass, especially on GLP-1 therapy or after bariatric surgery",
+      "High-fiber foods (vegetables, legumes, whole grains) of 30 g/day or more for satiety and metabolic health",
+      "Plain water, unsweetened tea or coffee, sparkling water as primary beverages"
+    ],
+    "avoid": [
+      "Sugar-sweetened beverages, fruit juice, sweetened coffee drinks",
+      "Ultra-processed snacks, sweet biscuits, chips, processed meat",
+      "Refined carbohydrate-heavy breakfasts (sweet cereals, pastries, white bread)",
+      "Alcohol calories during active weight loss; limit to occasional moderate consumption"
+    ]
+  },
+  "exerciseGuidelines": "Target 150-300 minutes per week of moderate-intensity aerobic activity (brisk walking, cycling, swimming) plus resistance training of major muscle groups twice weekly. After bariatric surgery, progress from walking in week 1-2 to full activity by 6-8 weeks under surgical guidance. During GLP-1 receptor agonist therapy, resistance training is particularly important to mitigate lean-mass loss.",
+
+  "dailyManagement": [
+    "Weigh weekly at the same time and condition, tracking trend rather than day-to-day fluctuation.",
+    "Plan three balanced meals plus one or two snacks; structured meal timing supports satiety.",
+    "Take prescribed pharmacotherapy on schedule; injectables on the same weekday weekly.",
+    "Hydrate consistently with 2-3 L of fluid daily.",
+    "Track activity with wearable or app; aim for at least 7,000-10,000 steps daily.",
+    "Maintain regular sleep schedule and review monthly with the obesity care team."
+  ],
+
+  "prognosis": "Obesity is a chronic, relapsing disease that responds to long-term treatment rather than short courses. Sustained 5-10% weight loss reduces the incidence of type 2 diabetes by approximately 58% (Diabetes Prevention Program), improves blood pressure and lipids, reduces sleep apnea severity, slows MASLD/NAFLD progression, and lowers cardiovascular event risk. Modern GLP-1 and dual incretin therapies deliver mean weight losses (14-21%) previously achievable only with bariatric surgery, and SELECT (NEJM 2023) showed semaglutide 2.4 mg weekly reduces major adverse cardiovascular events by 20% in patients with established cardiovascular disease. Bariatric surgery produces durable 25-35% weight loss, 30-50% reductions in all-cause mortality over 15-20 years (Swedish Obese Subjects study), substantial reductions in cancer incidence (particularly female reproductive cancers and colorectal), and durable type 2 diabetes remission in 30-60%. Weight regain is the dominant long-term challenge: STEP-4 showed approximately two-thirds of weight loss is regained within a year of stopping semaglutide, mirroring the pattern seen with most behavioral and pharmacologic interventions when stopped. Lifelong treatment, multidisciplinary support, and ongoing monitoring deliver the best outcomes.",
+
+  "recoveryTimeline": "Lifestyle programs produce 3-5% weight loss in 12 weeks and 5-8% at 12 months. GLP-1 receptor agonists reach plateau weight loss at 60-68 weeks; tirzepatide at 72 weeks. Bariatric surgery patients lose maximum weight at 12-18 months and stabilize at 18-24 months. Improvements in comorbidities (type 2 diabetes, hypertension, sleep apnea, MASLD/NAFLD) begin within weeks of significant weight loss and often progress over years.",
+
+  "complications": [
+    "Type 2 diabetes — twice as likely with BMI ≥30 and 10× more likely with BMI ≥35; weight loss of 7-10% can prevent or reverse early disease.",
+    "Cardiovascular disease (myocardial infarction, stroke, heart failure) — risk rises continuously with BMI above 25; treatment of obesity reduces events.",
+    "Obstructive sleep apnea (40-90% of severe obesity) — screen all patients with BMI ≥35; treat with CPAP, weight loss, and addressing positional factors.",
+    "Metabolic dysfunction-associated steatotic liver disease (MASLD) and fibrosis — affects 60-80% of severe obesity; FibroScan or MRE for fibrosis assessment.",
+    "Osteoarthritis (especially knee), back pain, plantar fasciitis from increased joint load.",
+    "Mental-health comorbidity: depression, anxiety, eating disorders, and weight-related stigma require active management.",
+    "Increased cancer risk: at least 13 cancers including breast (postmenopausal), endometrial, colorectal, kidney, esophageal, pancreatic, and liver."
+  ],
+
+  "supportResources": [
+    { "name": "World Obesity Federation", "url": "https://www.worldobesity.org/", "description": "Global advocacy body with epidemiology data, evidence-based resources, and World Obesity Atlas." },
+    { "name": "Obesity Medicine Association", "url": "https://obesitymedicine.org/", "description": "Professional society for clinicians treating obesity; patient finder for board-certified obesity medicine specialists." },
+    { "name": "American Society for Metabolic and Bariatric Surgery (ASMBS)", "url": "https://asmbs.org/", "description": "Professional body for bariatric surgery with patient resources and accredited Center of Excellence directory." },
+    { "name": "Obesity Action Coalition", "url": "https://www.obesityaction.org/", "description": "US patient advocacy organization with educational resources, weight bias resources, and policy advocacy." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "cushings-syndrome", "name": "Cushing's Syndrome", "keyDifference": "Cushing's syndrome produces central obesity with characteristic features — moon face, buffalo hump, purple striae, easy bruising, hypertension, hyperglycemia, and elevated cortisol on 24-hour urinary, salivary, or low-dose dexamethasone testing. Primary obesity lacks the dramatic cortisol elevation and characteristic body shape." },
+    { "slug": "hypothyroidism", "name": "Hypothyroidism", "keyDifference": "Hypothyroidism typically causes 3-6 kg weight gain at most, with fatigue, cold intolerance, dry skin, and bradycardia, alongside elevated TSH. Primary obesity is unrelated to TSH and does not respond to thyroid replacement unless TSH is genuinely elevated." },
+    { "slug": "pcos", "name": "Polycystic Ovary Syndrome", "keyDifference": "PCOS causes weight gain (especially central), menstrual irregularity, hirsutism, and acne in women, with hyperandrogenism on biochemistry. It coexists with obesity in 50-60% and may need parallel treatment; PCOS-specific therapy (metformin, combined hormonal contraceptive, GLP-1) targets the syndrome features beyond obesity itself." },
+    { "slug": "depression", "name": "Major Depressive Disorder", "keyDifference": "Depression can cause significant weight gain (or loss) through altered appetite, fatigue, and reward dysregulation, and overlap with obesity is bidirectional. Untreated depression undermines obesity treatment; combined care addresses both." },
+    { "slug": "binge-eating-disorder-f5081", "name": "Binge Eating Disorder", "keyDifference": "Binge eating disorder features recurrent episodes of consuming large quantities with loss of control and distress, in the absence of regular compensatory behaviors. It coexists with obesity in roughly 30%; CBT, lisdexamfetamine, and SSRIs treat the disorder while structured weight management runs in parallel." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" },
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "sleep-apnea", "name": "Sleep Apnea" },
+    { "slug": "pcos", "name": "Polycystic Ovary Syndrome" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus", "relevance": "Strongest metabolic consequence of obesity; weight loss of 7-10% can prevent or reverse early type 2 diabetes." },
+    { "slug": "hypertension", "name": "Hypertension", "relevance": "Risk rises continuously with BMI; weight loss reduces blood pressure 1 mmHg per kg lost." },
+    { "slug": "sleep-apnea", "name": "Sleep Apnea", "relevance": "Affects 40-90% of severe obesity; weight loss substantially reduces apnea-hypopnea index." },
+    { "slug": "pcos", "name": "Polycystic Ovary Syndrome", "relevance": "Coexists with obesity in 50-60% of women; weight loss restores ovulation and improves metabolic features." },
+    { "slug": "cushings-syndrome", "name": "Cushing's Syndrome", "relevance": "Important secondary cause of weight gain that must be excluded in atypical or rapidly progressive obesity." },
+    { "slug": "hypothyroidism", "name": "Hypothyroidism", "relevance": "Common comorbidity contributing to modest weight gain and energy alterations; screened in initial workup." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is obesity?",
+      "answer": "Obesity is a chronic disease of excess body fat that impairs health. The standard clinical definition uses body mass index: overweight 25-29.9, class I obesity 30-34.9, class II 35-39.9, and class III ≥40 kg/m². Asian populations have lower thresholds (overweight ≥23, obesity ≥27.5) reflecting earlier cardiometabolic risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes obesity?",
+      "answer": "Obesity has multifactorial causes: 40-70% heritability of body weight, obesogenic environments (calorie-dense food, sedentary work, sleep loss), medications that promote weight gain (antipsychotics, insulin, corticosteroids), hormonal and metabolic disorders, chronic stress, and adverse childhood experiences. It is rarely simply a question of willpower.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the most effective obesity treatment?",
+      "answer": "Bariatric surgery delivers the largest sustained weight loss (25-35% at 1-2 years, durable at 5-10 years) and reduces all-cause mortality 30-50% over 15-20 years. Among medications, tirzepatide 15 mg weekly produces 20.9% mean weight loss at 72 weeks (SURMOUNT-1), and semaglutide 2.4 mg weekly produces 14.9% at 68 weeks (STEP-1).",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does semaglutide cause weight loss?",
+      "answer": "Semaglutide is a GLP-1 receptor agonist. It slows gastric emptying, increases satiety through brainstem and hypothalamic GLP-1 receptors, and reduces food reward. The STEP-1 trial showed 14.9% mean weight loss at 68 weeks at the 2.4 mg weekly dose, with greatest losses in patients reaching target dose and continuing therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who is a candidate for bariatric surgery?",
+      "answer": "Bariatric surgery is offered to adults with BMI ≥40, or ≥35 with weight-related comorbidity, and increasingly to those with BMI 30-35 and type 2 diabetes (2022 ASMBS/IFSO guideline). Candidates require medical and psychological evaluation, demonstrated engagement with multidisciplinary care, and willingness to commit to lifelong follow-up.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can obesity be cured?",
+      "answer": "Obesity is a chronic relapsing disease rather than a curable one. Significant durable improvement (5-25% sustained weight loss with major reductions in obesity-related disease) is achievable with combined lifestyle, pharmacotherapy, and surgery. Stopping active treatment usually leads to weight regain, so management is lifelong.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is BMI an accurate measure of obesity?",
+      "answer": "BMI is a useful screening tool but not perfect. It cannot distinguish muscle from fat, may overestimate adiposity in muscular athletes, and underestimate cardiometabolic risk in Asian populations. Waist circumference, body composition, and assessment of obesity-related complications refine the diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are GLP-1 weight loss drugs safe?",
+      "answer": "GLP-1 receptor agonists are generally well-tolerated. Common adverse effects are nausea, vomiting, diarrhea, constipation, and gallstones, mostly mild and improving with slow titration. Rare risks include pancreatitis and gastroparesis. They are contraindicated in personal or family history of medullary thyroid cancer or MEN2.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if I stop taking semaglutide or tirzepatide?",
+      "answer": "Weight regain is typical. The STEP-4 trial showed approximately two-thirds of lost weight was regained within a year of stopping semaglutide. Obesity is a chronic disease that responds to ongoing treatment; current evidence supports indefinite continuation of effective therapy when tolerated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much weight do you lose after gastric sleeve surgery?",
+      "answer": "Sleeve gastrectomy produces 25-30% total body weight loss at 1-2 years, with durable ≥20% weight loss at 5-10 years in 60-70% of patients. Type 2 diabetes remission occurs in 30-50% at 5 years, and substantial improvements in hypertension, sleep apnea, and MASLD/NAFLD are typical.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is obesity surgery dangerous?",
+      "answer": "Modern bariatric surgery in accredited centers has 30-day mortality of 0.1-0.3% and major complication rates of 3-5%, comparable to laparoscopic cholecystectomy. Long-term complications include nutritional deficiencies, dumping syndrome, and internal hernia (bypass), all manageable with appropriate follow-up.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children be treated for obesity?",
+      "answer": "Yes. The 2023 American Academy of Pediatrics guideline supports intensive health behavior and lifestyle treatment for children 6 and older, and offers pharmacotherapy (semaglutide, liraglutide) from age 12 and bariatric surgery for adolescents with severe obesity and comorbidity. Family-based programs are foundational.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What diet works best for obesity?",
+      "answer": "No single diet is uniquely effective; adherence is the strongest predictor. Mediterranean, DASH, low-carbohydrate, plant-forward, and structured meal-replacement patterns all produce similar weight loss in head-to-head trials when calorie-controlled. Choose a sustainable pattern aligned with preferences and culture.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does sleep affect weight?",
+      "answer": "Sleep below 6 hours per night raises ghrelin (hunger), lowers leptin (satiety), increases late-evening eating, impairs glucose tolerance, and is associated with 25-50% higher obesity risk in adults. Improving sleep duration and quality is a core component of obesity treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does exercise alone cause weight loss?",
+      "answer": "Exercise alone produces modest weight loss (typically 2-3 kg at 12 months) because energy expenditure is partially offset by increased hunger and reduced spontaneous activity. Combined with dietary change and behavioral support, however, exercise is critical for maintaining weight loss and preserving lean mass.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are there genetic causes of obesity?",
+      "answer": "Yes. Common-variant heritability accounts for 40-70% of BMI variation. Rare monogenic forms (MC4R, LEPR, POMC, PCSK1, BDNF mutations) cause severe early-onset obesity and may respond to targeted therapies such as setmelanotide. Genetic testing is offered in early-onset severe obesity or syndromic features.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does weight loss reverse type 2 diabetes?",
+      "answer": "Yes, in many patients. The DiRECT trial showed 46% of patients with type 2 diabetes of less than 6 years duration achieved remission with a structured weight-loss program. Bariatric surgery produces durable diabetes remission in 30-60%. Tirzepatide and semaglutide both substantially improve glycemic control with weight loss.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do people regain weight?",
+      "answer": "Weight regain reflects biological defense of a higher fat-mass setpoint, including reduced resting metabolic rate, increased hunger hormones (ghrelin), and reduced satiety signals (leptin, PYY) for years after weight loss. Continued active treatment — lifestyle, pharmacotherapy, or surgical effects — counteracts these mechanisms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is obesity hereditary?",
+      "answer": "Family history is the strongest non-modifiable risk factor. Children with two parents with obesity have an approximately 80% lifetime risk. This combines polygenic susceptibility, shared environment, and learned behaviors. Identifying family history early supports earlier intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is severe obesity?",
+      "answer": "Severe (class III) obesity is BMI ≥40 kg/m², or ≥35 with weight-related comorbidity. Approximately 9.2% of US adults meet this threshold. Severe obesity carries the highest risk of cardiovascular disease, sleep apnea, MASLD/NAFLD, and obesity-related cancers, and is the strongest indication for bariatric surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress and trauma cause obesity?",
+      "answer": "Yes. Chronic psychological stress elevates cortisol, alters reward and emotion regulation, and increases emotional and binge eating patterns. Adverse Childhood Experiences scores correlate strongly with adult obesity risk. Mental health support is a core component of comprehensive obesity treatment.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Obesity (excess body fat with health impact)",
+  "regionalNames": [
+    { "name": "Obesity", "region": "Global", "language": "English" },
+    { "name": "Obesidad", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "Obésité", "region": "France, Francophone", "language": "French" },
+    { "name": "मोटापा", "region": "India", "language": "Hindi" },
+    { "name": "肥満", "region": "Japan", "language": "Japanese" }
+  ],
+  "searchTags": [
+    "obesity",
+    "obesity management",
+    "BMI",
+    "weight loss medication",
+    "GLP-1 weight loss",
+    "semaglutide Wegovy",
+    "tirzepatide Mounjaro Zepbound",
+    "bariatric surgery",
+    "sleeve gastrectomy",
+    "gastric bypass",
+    "weight management",
+    "anti-obesity medication",
+    "obesity medicine",
+    "morbid obesity",
+    "severe obesity",
+    "metabolic surgery"
+  ],
+  "symptomKeywords": [
+    "gaining weight despite eating less",
+    "high BMI",
+    "obesity weight loss",
+    "fat around belly waist",
+    "snoring overweight",
+    "tired all the time overweight",
+    "knee pain heavy",
+    "obesity diabetes risk"
+  ],
+
+  "metaTitle": "Obesity Management: GLP-1, Bariatric Surgery | aihealz",
+  "metaDescription": "Obesity management: BMI, GLP-1 drugs like semaglutide and tirzepatide, lifestyle programs, and bariatric surgery. Evidence-based, medically reviewed care.",
+
+  "keywords": [
+    "obesity",
+    "obesity management",
+    "GLP-1 receptor agonist",
+    "semaglutide",
+    "tirzepatide",
+    "bariatric surgery",
+    "weight loss medication",
+    "BMI",
+    "sleeve gastrectomy",
+    "gastric bypass",
+    "metabolic surgery",
+    "lifestyle intervention obesity"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Wilding JPH, Batterham RL, Calanna S, et al. 2021. Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP-1). New England Journal of Medicine 384(11):989-1002.", "url": "https://pubmed.ncbi.nlm.nih.gov/33567185/", "accessedDate": "2026-05-14" },
+    { "title": "Jastreboff AM, Aronne LJ, Ahmad NN, et al. 2022. Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1). New England Journal of Medicine 387(3):205-216.", "url": "https://pubmed.ncbi.nlm.nih.gov/35658024/", "accessedDate": "2026-05-14" },
+    { "title": "Sjöström L, Peltonen M, Jacobson P, et al. 2012. Bariatric surgery and long-term cardiovascular events (Swedish Obese Subjects study). Lancet 379(9837):1393-401.", "url": "https://pubmed.ncbi.nlm.nih.gov/22922416/", "accessedDate": "2026-05-14" },
+    { "title": "Schauer PR, Bhatt DL, Kirwan JP, et al. 2017. Bariatric Surgery versus Intensive Medical Therapy for Diabetes — 5-Year Outcomes (STAMPEDE). New England Journal of Medicine 376(7):641-651.", "url": "https://pubmed.ncbi.nlm.nih.gov/28199805/", "accessedDate": "2026-05-14" },
+    { "title": "Look AHEAD Research Group. 2013. Cardiovascular Effects of Intensive Lifestyle Intervention in Type 2 Diabetes. New England Journal of Medicine 369(2):145-154.", "url": "https://pubmed.ncbi.nlm.nih.gov/23796131/", "accessedDate": "2026-05-14" },
+    { "title": "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al. 2023. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes (SELECT). New England Journal of Medicine 389:2221-2232.", "url": "https://pubmed.ncbi.nlm.nih.gov/37952131/", "accessedDate": "2026-05-14" },
+    { "title": "World Health Organization. 2024. Obesity and Overweight Fact Sheet. WHO Geneva.", "url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight", "accessedDate": "2026-05-14" },
+    { "title": "Centers for Disease Control and Prevention. NHANES 2017-2020 Prevalence of Obesity and Severe Obesity Among Adults: United States. NCHS Data Brief.", "url": "https://www.cdc.gov/obesity/data/adult.html", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

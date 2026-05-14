@@ -1,0 +1,429 @@
+{
+  "_meta": {
+    "slug": "spasticity-management",
+    "tier": 1,
+    "headTerm": "spasticity",
+    "longTailKeywords": [
+      "spasticity treatment",
+      "spasticity causes",
+      "modified ashworth scale",
+      "botulinum toxin for spasticity",
+      "baclofen for spasticity",
+      "intrathecal baclofen pump",
+      "post-stroke spasticity",
+      "spasticity after spinal cord injury",
+      "spasticity vs rigidity",
+      "spasticity in cerebral palsy",
+      "selective dorsal rhizotomy"
+    ],
+    "primarySpecialty": "Physical Medicine & Rehabilitation",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Definitions follow Lance 1980 and the SPASM EU-COST consortium consensus (Pandyan et al. Disabil Rehabil 2005, PMID 15799140). Prevalence and burden after stroke from Wissel et al. Stroke 2013 (PMID 23271519) and Urban et al. Stroke 2010 (PMID 20413740). Cerebral-palsy prevalence from CDC ADDM/MADDSP. Management framework follows AAN 2010 botulinum toxin guideline (Simpson et al. Neurology 2016 update PMID 27178701) and the WFNR / RCP consensus on spasticity in adults. Intrathecal baclofen evidence from Albright JAMA 1993 and McIntyre Stroke 2014 systematic review. Selective dorsal rhizotomy from Tedroff Dev Med Child Neurol 2015 (PMID 25557135)."
+  },
+
+  "h1Title": "Spasticity Management: Symptoms, Causes, Diagnosis & Treatment",
+  "specialistType": "Physical Medicine & Rehabilitation",
+
+  "heroOverview": "Spasticity is a velocity-dependent increase in muscle tone caused by loss of upper-motor-neuron control after stroke, spinal cord injury, traumatic brain injury, cerebral palsy, multiple sclerosis, or anoxic brain injury. About 30-43% of stroke survivors develop persistent spasticity by 12 months, roughly 65-78% of people with spinal cord injury show clinically meaningful tone after one year, and 75-80% of children with cerebral palsy live with some form of spasticity. The cardinal sign is a catch followed by give as a limb is moved quickly, often accompanied by clonus, painful spasms, and fixed contractures over time. Untreated spasticity drives pain, pressure injuries, hygiene problems, and loss of mobility. Treatment combines stretching and task-specific rehabilitation, focal injections of botulinum toxin, oral antispasmodics such as baclofen and tizanidine, intrathecal baclofen pumps for severe generalized disease, and selective dorsal rhizotomy or orthopedic surgery for fixed deformity.",
+
+  "keyStats": {
+    "prevalence": "30-43% of stroke survivors at 12 months (Wissel 2013); 65-78% after spinal cord injury at 1 year; 75-80% of children with cerebral palsy",
+    "demographics": "All ages affected; pediatric cohort dominated by cerebral palsy (3.4 per 1,000 children, CDC ADDM 2020); adult cohort dominated by stroke survivors (~795,000 new US strokes/year)",
+    "avgAge": "Cerebral palsy spasticity recognized at age 1-3; post-stroke spasticity peaks 1-3 months after stroke; multiple-sclerosis spasticity averages onset in the 30s-50s",
+    "globalCases": "Approximately 12 million people globally living with post-stroke spasticity (extrapolated from GBD 2021 stroke prevalence and Wissel 2013 incidence)"
+  },
+
+  "definition": "Spasticity (ICD-10: R25.2 for muscle spasm; encoded under the primary upper-motor-neuron diagnosis) is one component of the upper-motor-neuron syndrome that follows damage to descending motor pathways anywhere from the motor cortex through the brainstem and spinal cord. Lance defined it in 1980 as a motor disorder characterized by a velocity-dependent increase in tonic stretch reflexes (muscle tone) with exaggerated tendon jerks, resulting from hyperexcitability of the stretch reflex. The SPASM EU-COST consortium widened the definition in 2005 to include the broader phenomena of disordered sensorimotor control resulting in intermittent or sustained involuntary activation of muscles. The pathophysiology involves loss of supraspinal inhibition of alpha-motor neurons, sprouting of intraspinal afferents, and intrinsic muscle changes (sarcomere shortening, fibrosis, fatty infiltration). Spasticity differs from rigidity (uniform resistance not velocity-dependent, seen in Parkinson disease), dystonia (sustained co-contraction with abnormal posture), and contracture (fixed mechanical shortening). It is managed by physical medicine and rehabilitation, neurology, neurosurgery, orthopedics, and pediatric specialists working together within an integrated rehabilitation team.",
+
+  "typesClassification": [
+    { "type": "Cerebral spasticity (cerebral palsy, stroke, traumatic brain injury, anoxic injury)", "description": "Driven by lesions above the brainstem. Typical pattern is hemiplegic in stroke (flexed elbow, pronated forearm, clenched fist, plantarflexed foot) or quadriplegic/diplegic in cerebral palsy. Associated cognitive and bulbar features common." },
+    { "type": "Spinal spasticity (spinal cord injury, multiple sclerosis, transverse myelitis, hereditary spastic paraplegia)", "description": "Lesion at or below the brainstem. Bilateral lower-limb involvement predominates, with adductor tightness, scissoring, clonus, and bladder dyssynergia. Often features painful flexor spasms triggered by skin, bowel, or bladder stimuli." },
+    { "type": "Focal spasticity", "description": "Limited to one or a few muscles or muscle groups (e.g., calf, biceps, finger flexors). Particularly suitable for botulinum toxin injection." },
+    { "type": "Multifocal or regional spasticity", "description": "Several adjacent muscle groups in the same limb or region; combination of botulinum toxin, oral therapy, and casting." },
+    { "type": "Generalized spasticity", "description": "Widespread upper- and lower-limb involvement, typically after high cervical spinal cord injury, severe traumatic brain injury, or progressive multiple sclerosis. Often warrants intrathecal baclofen." },
+    { "type": "Dynamic versus fixed spasticity", "description": "Dynamic spasticity is reversible by movement, posture, or sedation. Fixed spasticity has progressed to soft-tissue and joint contracture and no longer relaxes on examination under anesthesia." }
+  ],
+
+  "primarySymptoms": [
+    "Velocity-dependent stiffness in a limb — moved slowly the joint feels normal, moved quickly the muscle catches sharply, sometimes followed by sudden release (the clasp-knife phenomenon).",
+    "Clonus: rhythmic involuntary muscle contractions, typically four to seven beats per second at the ankle after a sudden dorsiflexion stretch.",
+    "Painful flexor or extensor spasms triggered by movement, full bladder, constipation, infection, or pressure injuries, lasting seconds to minutes.",
+    "Exaggerated deep-tendon reflexes (3+ or 4+) and an upgoing plantar response (Babinski sign) on the affected side.",
+    "Loss of selective motor control: difficulty moving one joint without the rest of the limb moving together (synergy pattern after stroke).",
+    "Stereotyped postures — flexed elbow, wrist, and fingers and adducted shoulder in the upper limb; extended knee with plantarflexed and inverted foot in the lower limb after stroke and spinal cord injury.",
+    "Progressive joint contracture and loss of range of motion if untreated, eventually requiring tenotomy or arthrodesis.",
+    "Pain, particularly nocturnal aching pain in spastic muscles and at attachment points (enthesopathy from chronic overpull).",
+    "Hygiene and skin problems: hand-in-palm wound, perineal hygiene difficulty from adductor spasticity, heel pressure injury from equinus deformity.",
+    "Gait abnormalities — scissoring, circumduction, toe-walking, and stiff-knee gait — that worsen the longer the limb stays untreated."
+  ],
+
+  "earlyWarningSigns": [
+    "A weak limb after stroke or brain injury that starts to feel stiff or heavy when the person tries to relax it",
+    "Increased difficulty putting on socks, shoes, or splints because the foot or hand resists positioning",
+    "New nocturnal leg cramps or jerks after spinal cord injury or in multiple sclerosis",
+    "Catching of a limb during quick transfers or stretches that did not happen in the first weeks after the neurological event",
+    "Progressive loss of passive range of motion at the elbow, wrist, ankle, or hip even though the limb remains flaccid to active movement"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe worsening of spasticity or autonomic symptoms (sweating, hypertension, bradycardia) in spinal cord injury — suspect autonomic dysreflexia and look for triggers (blocked catheter, pressure injury, fecal impaction)",
+    "Acute new flaccid weakness, sensory loss, or bladder change in a person with established spasticity — suspect new neurological lesion (syringomyelia, new cord compression, new stroke) and image urgently",
+    "Withdrawal-like syndrome — fever, hyperthermia, severe rebound spasticity, altered mental status, rhabdomyolysis — in a patient with an intrathecal baclofen pump suggests pump failure or catheter dislodgement and is an emergency",
+    "Sudden inability to inject or program a baclofen pump with rapid tone return",
+    "New respiratory distress in a patient receiving high-dose oral baclofen — risk of oversedation"
+  ],
+
+  "causes": [
+    { "cause": "Stroke (ischemic or hemorrhagic)", "description": "Lesion of the corticospinal tract anywhere from motor cortex to internal capsule, brainstem, or pyramidal decussation leaves alpha-motor neurons disinhibited. Spasticity emerges in 30-43% of survivors within 12 months and clusters in patients with severe initial paresis and cortical hemorrhagic lesions." },
+    { "cause": "Spinal cord injury", "description": "Disruption of descending serotoninergic and adrenergic inhibition produces spinal-shock flaccidity followed by hyperreflexia and spasticity over weeks to months. Approximately 65-78% of patients have clinically meaningful spasticity at 1 year (Sköld 1999); incomplete cervical injuries are most spastic." },
+    { "cause": "Cerebral palsy", "description": "Static encephalopathy from antenatal or perinatal injury (prematurity, hypoxic-ischemic encephalopathy, periventricular leukomalacia) damages corticospinal pathways. Spasticity is the dominant motor feature in 75-80% of cases; presents with delayed motor milestones, persistent primitive reflexes, and tone changes from infancy." },
+    { "cause": "Multiple sclerosis", "description": "Inflammatory demyelinating plaques in the spinal cord and brainstem produce ascending spasticity, painful flexor spasms, and bladder dyssynergia. Prevalence rises with disease duration; approximately 84% of MS patients report some spasticity in cross-sectional surveys (Rizzo 2004)." },
+    { "cause": "Traumatic brain injury and anoxic brain injury", "description": "Diffuse axonal injury and pyramidal-tract damage cause spastic hemiplegia or quadriplegia. Patterns include decorticate (flexor) or decerebrate (extensor) posturing in the acute phase, evolving into chronic limb deformities." },
+    { "cause": "Hereditary and degenerative motor system diseases", "description": "Hereditary spastic paraplegias (SPG genes), primary lateral sclerosis, amyotrophic lateral sclerosis (mixed upper- and lower-motor-neuron involvement), human T-lymphotropic virus type 1 myelopathy, and adrenoleukodystrophy all cause progressive spasticity, predominantly in the legs." }
+  ],
+
+  "riskFactors": [
+    { "factor": "Severity of initial neurological injury", "category": "non-modifiable", "description": "More extensive motor stroke (NIHSS arm score 3-4) and complete (AIS A) spinal cord injury triple the rate of disabling spasticity compared with mild injuries (Wissel Stroke 2013)." },
+    { "factor": "Cortical hemorrhagic stroke and middle-cerebral-artery territory infarcts", "category": "non-modifiable", "description": "Both increase incidence of severe spasticity compared with lacunar or posterior-circulation strokes." },
+    { "factor": "Younger age", "category": "non-modifiable", "description": "Stroke survivors under 65 develop spasticity more often, partly because they survive larger infarcts and have more years of disability." },
+    { "factor": "Delay in rehabilitation onset", "category": "modifiable", "description": "Late initiation of stretching, positioning, and task-specific therapy increases contracture risk and worsens spasticity-related disability." },
+    { "factor": "Comorbid noxious stimuli (urinary tract infection, pressure injury, ingrown toenail, constipation)", "category": "modifiable", "description": "Trigger autonomic activity and spinal reflex amplification, worsening tone — especially in spinal cord injury and severe traumatic brain injury." },
+    { "factor": "Inadequate seating and positioning", "category": "modifiable", "description": "Asymmetric wheelchair posture and lack of nighttime resting splints accelerate fixed contracture, particularly in non-ambulatory adults and children." },
+    { "factor": "Hereditary spastic paraplegia and genetic motor system disease", "category": "genetic", "description": "Autosomal dominant SPAST (SPG4) and SPG3A account for the majority of pure HSP cases. Family history of progressive leg stiffness is the strongest clue." }
+  ],
+
+  "affectedDemographics": [
+    "Post-stroke survivors: approximately 12 million people worldwide at any time with some degree of spasticity (extrapolated from WHO stroke prevalence).",
+    "Spinal cord injury: roughly 250,000-368,000 prevalent cases in the US (NSCISC), with 65-78% experiencing clinically meaningful spasticity in long-term follow-up.",
+    "Cerebral palsy: 3.4 per 1,000 children in the United States (CDC ADDM 2020), of whom 75-80% have spasticity as the dominant motor feature.",
+    "Multiple sclerosis: 2.9 million people globally (MS International Federation 2023); around 84% report some spasticity, and 34% describe it as moderate to severe.",
+    "Traumatic brain injury: more than 70 million new cases per year worldwide (Lancet Neurology 2019), with spasticity emerging in a substantial subset of severe cases."
+  ],
+
+  "diagnosisOverview": "Diagnosis of spasticity is clinical: history, exam, and goal-setting decide who needs treatment more than any test. The clinician asks about onset, distribution, triggers, pain, hygiene difficulties, and function. Examination starts with passive limb movement at slow and fast velocities to feel the velocity-dependent catch, plus assessment of deep-tendon reflexes, clonus, plantar response, range of motion, and selective active movement. Two validated bedside scales document severity and track response: the Modified Ashworth Scale (0-4, scored on resistance to fast passive movement) and the Tardieu Scale (which separates dynamic tone from contracture by comparing slow and fast stretch). The Modified Tardieu is preferred for distinguishing fixed contracture from spasticity. Goal Attainment Scaling captures patient-centered outcomes. Differential diagnosis includes rigidity (Parkinson disease), paratonia (gegenhalten in dementia), dystonia, contracture, and rigidity from stiff-person syndrome. Investigations target the underlying cause: MRI of brain or spinal cord identifies new lesions; urinalysis and culture exclude infection; bladder ultrasound checks post-void residual; rectal exam excludes fecal impaction; and gait analysis with surface electromyography and three-dimensional motion capture refines decisions about botulinum toxin targets or surgery in ambulatory patients. Examination under anesthesia or diagnostic nerve blocks with short-acting local anesthetic are used selectively to separate spasticity from contracture before considering surgery.",
+
+  "diagnosticTests": [
+    { "test": "Modified Ashworth Scale (MAS)", "purpose": "Quantify resistance to passive stretch from grade 0 (no increase in tone) to grade 4 (rigid in flexion or extension)", "whatToExpect": "Bedside examination in 5-10 minutes. The clinician moves each joint quickly through its full range while the patient relaxes. Repeated over time to track therapy response." },
+    { "test": "Modified Tardieu Scale", "purpose": "Separate spasticity from contracture by comparing slow-velocity (V1) and fast-velocity (V3) joint movement and recording the angle of catch", "whatToExpect": "A more thorough bedside test using a goniometer to record joint angles at two velocities. Adds 10-15 minutes. The angle difference between V1 and V3 estimates dynamic spasticity." },
+    { "test": "Goal Attainment Scaling and Spasticity-Related Functional Goals", "purpose": "Set patient-specific functional or symptom-control targets (hand hygiene, transfers, gait speed, pain) and score on a five-point scale at follow-up", "whatToExpect": "Discussion with the patient and family at the start of treatment. Goals reviewed 6-12 weeks after botulinum toxin or other intervention." },
+    { "test": "MRI brain or spinal cord", "purpose": "Identify or monitor underlying lesion (stroke, MS plaques, syrinx, tumor, cord compression, hereditary leukodystrophy)", "whatToExpect": "30-60 minutes lying still in the scanner. Contrast may be added. Especially indicated when spasticity worsens suddenly without a clear trigger." },
+    { "test": "Surface electromyography and three-dimensional gait analysis", "purpose": "Localize spastic muscle activity during walking, identify timing co-contractions, and plan precise botulinum toxin targets or single-event multilevel surgery", "whatToExpect": "Specialized gait laboratory visit, 1-2 hours, with reflective markers and surface electrodes on the legs. Report integrates kinematics, kinetics, and EMG." },
+    { "test": "Diagnostic motor nerve block with lidocaine or bupivacaine", "purpose": "Temporarily silence a specific nerve (e.g., obturator, musculocutaneous, tibial) to estimate functional gain from durable treatment and separate dynamic spasticity from fixed contracture", "whatToExpect": "Outpatient procedure with ultrasound or nerve-stimulator guidance, 20-30 minutes. The effect lasts 2-6 hours, during which the rehabilitation team retests range and function." },
+    { "test": "Bladder ultrasound, urinalysis, and stool exam", "purpose": "Identify reversible spasticity triggers — urinary tract infection, urinary retention, fecal impaction — particularly in spinal cord injury and multiple sclerosis", "whatToExpect": "Standard outpatient tests at the rehabilitation clinic; ultrasound takes 10 minutes; urine culture results in 2-3 days." }
+  ],
+
+  "treatmentOverview": "Treatment is goal-directed, team-based, and stepwise. Step 1 is removal of triggers (infection, retention, constipation, pressure injury, ingrown toenail) and optimization of positioning and stretching through a daily home program plus formal physical and occupational therapy. Step 2 adds focal therapy with botulinum toxin type A (onabotulinumtoxinA, abobotulinumtoxinA, incobotulinumtoxinA) injected with ultrasound or electromyographic guidance into spastic target muscles every 12 weeks; AAN 2016 rates Level A evidence for benefit on tone and patient goals in adult upper- and lower-limb spasticity. Step 3 layers oral antispasmodics — baclofen, tizanidine, dantrolene, gabapentin, and short-course benzodiazepines — for generalized symptoms not amenable to injections, accepting sedation, weakness, and hepatotoxicity tradeoffs. Step 4 is intrathecal baclofen via a programmable subcutaneous pump for severe generalized spasticity, especially after high spinal cord injury, severe traumatic brain injury, and select cerebral palsy and multiple sclerosis. Step 5 is surgical: selective dorsal rhizotomy in ambulatory children with diplegic cerebral palsy aged 4-10 years, peripheral neurectomy for focal disease, or orthopedic procedures (tendon lengthening, tendon transfer, osteotomy, arthrodesis) for fixed contracture. Cannabinoid mouth-spray (nabiximols, Sativex) has Level B evidence in multiple sclerosis spasticity and is licensed in many countries. Treatment is reviewed every 12 weeks with goal scoring and Ashworth/Tardieu scales to decide on continuation, escalation, or de-escalation.",
+
+  "medicalTreatments": [
+    { "name": "Botulinum toxin type A (onabotulinumtoxinA 50-400 U, abobotulinumtoxinA 250-1500 U, incobotulinumtoxinA 50-400 U per session)", "description": "Injected directly into spastic muscles under ultrasound or EMG guidance every 12 weeks. Blocks acetylcholine release at the neuromuscular junction; effect begins at 3-7 days, peaks at 4-6 weeks, and wanes by 12 weeks. AAN 2016 Level A recommendation for adult upper- and lower-limb spasticity.", "effectiveness": "Mean Ashworth reduction of 0.9-1.4 grades and patient goal attainment in 60-75% of sessions; modest objective gain in active function (Cochrane 2019)" },
+    { "name": "Oral baclofen (5-80 mg/day in divided doses)", "description": "GABA-B receptor agonist, the most-prescribed oral antispasmodic. Useful for spinal spasticity in particular. Dose-limiting side effects are sedation, weakness, confusion, and lowered seizure threshold; abrupt withdrawal can cause hallucinations and seizures.", "effectiveness": "Reduces tone and spasm frequency in 60-70% of multiple-sclerosis and spinal-cord-injury patients in placebo-controlled trials" },
+    { "name": "Tizanidine (2-36 mg/day in divided doses)", "description": "Centrally acting alpha-2 adrenergic agonist with shorter half-life than baclofen and a different side-effect profile (dry mouth, hypotension, transaminitis). Useful in patients who cannot tolerate baclofen.", "effectiveness": "Comparable tone reduction to baclofen in head-to-head trials; better tolerated by some MS patients (Cochrane 2009)" },
+    { "name": "Dantrolene sodium (25-400 mg/day in divided doses)", "description": "Acts peripherally on the ryanodine receptor in skeletal muscle to reduce calcium release. Less sedating than centrally acting drugs but hepatotoxic — monthly liver enzymes required.", "effectiveness": "Useful particularly in cerebral spasticity (cerebral palsy, stroke, anoxic injury); cure rate not applicable but symptom relief in 30-60% of trial participants" },
+    { "name": "Intrathecal baclofen pump (50-1500 µg/day infused into the subarachnoid space)", "description": "Subcutaneous programmable pump delivers baclofen directly to the spinal CSF, allowing 100-1000× the equivalent oral dose without systemic sedation. Reserved for severe generalized spasticity after pump trial. Pump replaced every 7-10 years; refilled every 1-6 months.", "effectiveness": "Ashworth reductions of 2-3 grades in spinal spasticity (Penn 1989); patient-rated benefit sustained over 5-10 years" },
+    { "name": "Nabiximols (delta-9-THC + cannabidiol oromucosal spray)", "description": "Licensed in Europe, Canada, and select markets for MS spasticity unresponsive to first-line oral therapy. Up to 12 sprays/day, titrated against symptoms and side effects.", "effectiveness": "30% of treated MS patients meet the prespecified 20% improvement on a 0-10 spasticity scale at 6 weeks (Notcutt 2012)" },
+    { "name": "Phenol or alcohol motor-point and nerve blocks", "description": "Chemical neurolysis used in selected adults with large-muscle spasticity (obturator, musculocutaneous, tibial nerves). Effect lasts 3-9 months. Carries risk of painful dysesthesia.", "effectiveness": "Tone reduction comparable to botulinum toxin in target muscle; lower cost, but technically demanding and less precise" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Selective dorsal rhizotomy (SDR)", "description": "Pediatric neurosurgical procedure cutting selected L1-S2 dorsal rootlets to reduce afferent input that drives spasticity. Best evidence in ambulatory children with spastic diplegic cerebral palsy aged 4-10 years (GMFCS levels II-III).", "successRate": "Sustained spasticity reduction in over 90% at 10-20 years; improved Gross Motor Function Measure by 5-10 points when combined with intensive postoperative therapy (Tedroff 2015, McLaughlin 2002 meta-analysis)" },
+    { "name": "Intrathecal baclofen pump implantation", "description": "Surgical placement of programmable pump and intrathecal catheter for severe generalized spasticity. Trial dose precedes permanent implant. Pumps replaced when battery depletes (7-10 years).", "successRate": "Patient-reported satisfaction 75-85% at 5 years; complication rates 20-30% over lifetime (catheter dislodgement, infection, granuloma)" },
+    { "name": "Selective peripheral neurectomy", "description": "Surgical division of selected motor nerve branches (e.g., obturator for adductor spasticity, tibial for equinus) to produce focal denervation. Used when botulinum toxin has been effective but needs to be made permanent.", "successRate": "Durable tone reduction in over 80% of treated muscles at 2-5 years; some recurrence from collateral sprouting" },
+    { "name": "Orthopedic soft-tissue and bony surgery", "description": "Tendon lengthening (e.g., Achilles, hamstrings), tendon transfer, osteotomy, and arthrodesis address fixed contractures and joint deformities. Single-event multilevel surgery (SEMLS) is the standard in ambulatory cerebral palsy.", "successRate": "70-85% achieve preset goals at 2 years; gait speed and energy cost improve modestly when combined with intensive rehabilitation" },
+    { "name": "Deep brain stimulation (selected dystonic-spastic cerebral palsy)", "description": "Investigational in dystonic-spastic patterns of cerebral palsy and dystonic adults; targets globus pallidus internus. Not standard of care for pure spasticity.", "successRate": "Modest BFMDRS reductions in case series; long-term outcomes unsettled" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Functional electrical stimulation (FES)", "description": "Cyclical low-level electrical stimulation of antagonist muscles improves reciprocal inhibition and reduces tone, particularly in foot drop after stroke. Pooled evidence supports modest gait-speed and goal improvement." },
+    { "name": "Whole-body vibration and focal vibration therapy", "description": "Limited evidence (small RCTs) suggests transient tone reduction. Adjunct only; does not replace established pharmacological or surgical therapy." },
+    { "name": "Extracorporeal shockwave therapy (ESWT)", "description": "Several randomized trials in post-stroke and cerebral-palsy spasticity show short-term Ashworth reduction of 0.5-1.0 grade after 3-5 sessions, comparable to early botulinum toxin effect but shorter-lived." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "botulinum-toxin-spasticity-injection",
+    "intrathecal-baclofen-pump",
+    "selective-dorsal-rhizotomy",
+    "physical-therapy-spasticity"
+  ],
+
+  "whySeeSpecialist": "Specialist input is needed once spasticity interferes with hygiene, function, sleep, or skin integrity, or when a focal injection or pump is being considered. Physiatrists (PMR) lead the assessment and oral therapy, perform botulinum toxin injections, and coordinate with neurosurgeons for SDR and intrathecal baclofen and with orthopedists for contracture surgery.",
+  "doctorSelectionGuide": "Look for a physiatrist or neurologist who runs a dedicated spasticity or spasticity-management clinic, performs at least 50 botulinum toxin injections a year under ultrasound or EMG guidance, and works in a multidisciplinary team with physical therapy, occupational therapy, orthotics, and neurosurgery. For children with cerebral palsy, prefer a pediatric rehabilitation team affiliated with a cerebral palsy registry.",
+
+  "hospitalCriteria": [
+    "Multidisciplinary spasticity clinic with physiatry, physical therapy, occupational therapy, orthotics, and access to neurosurgery and orthopedics",
+    "Ultrasound and electromyography guidance available for botulinum toxin injections",
+    "Three-dimensional gait analysis laboratory for ambulatory candidates",
+    "Intrathecal baclofen pump program with surgeons, pharmacy, and 24-hour pump-emergency cover",
+    "Pediatric spasticity service with SDR pathway for children with cerebral palsy"
+  ],
+  "keyFacilities": [
+    "Comprehensive stroke and rehabilitation centers",
+    "Pediatric cerebral palsy specialty centers",
+    "Spinal cord injury rehabilitation units",
+    "Multiple sclerosis comprehensive care centers",
+    "Movement disorders and functional neurosurgery programs"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Start active and passive range of motion within 48-72 hours of stroke, spinal cord injury, or traumatic brain injury and continue daily.",
+    "Maintain symmetrical, neutral seating with custom cushions and arm supports to limit asymmetric posturing.",
+    "Use nighttime resting splints for the wrist, hand, and ankle in any non-ambulatory patient with emerging tone.",
+    "Treat reversible noxious triggers promptly — urinary tract infection, urinary retention, fecal impaction, pressure injuries, ingrown toenails — to prevent spasticity flares.",
+    "Review medication for spasticity-aggravating drugs (some antipsychotics, antiemetics, SSRIs that lower seizure threshold) and adjust if possible."
+  ],
+
+  "lifestyleModifications": [
+    "Perform a daily stretching routine of the major spastic muscle groups (15-30 minutes), guided by a physical therapist.",
+    "Wear prescribed splints and orthoses for the recommended hours each day or night.",
+    "Use heat, cold, or vibration before stretching to facilitate elongation.",
+    "Manage spasm triggers proactively: scheduled bowel and bladder care, regular pressure relief every 15-30 minutes when seated.",
+    "Keep weight stable; rapid weight gain in adults with non-ambulatory spasticity increases pressure-injury and contracture risk.",
+    "Plan tasks at the time of day when spasticity is best controlled (often 4-8 weeks after botulinum toxin)."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate fiber and 2-2.5 L water daily to prevent constipation, a major spasticity trigger in spinal cord injury",
+      "Protein 1.2-1.5 g/kg/day to support muscle quality during rehabilitation",
+      "Vitamin D 800-2000 IU/day in non-ambulatory adults to maintain bone health",
+      "Mediterranean-style pattern with vegetables, fruit, whole grains, and oily fish for general cardiovascular and inflammatory benefit"
+    ],
+    "avoid": [
+      "Excess alcohol, which interacts with baclofen, tizanidine, and benzodiazepines and worsens sedation",
+      "High-caffeine energy drinks that can amplify clonus and spasms",
+      "Crash diets that drop weight rapidly and accelerate sarcopenia",
+      "Grapefruit juice in tizanidine users — substantially increases plasma drug levels and side effects"
+    ]
+  },
+  "exerciseGuidelines": "Aerobic exercise (cycling, arm ergometry, adapted swimming) for 20-40 minutes most days improves cardiovascular fitness and may reduce tone transiently. Task-specific repetitive practice (constraint-induced movement therapy, locomotor training, treadmill walking with body-weight support) is the rehabilitation backbone. Resistance training of antagonist muscles is encouraged; classic concerns that strength training worsens spasticity have not been borne out by trials.",
+
+  "dailyManagement": [
+    "Complete the prescribed stretching and splinting routine each morning before transfers and dressing.",
+    "Empty bowel and bladder on schedule; check for impaction or retention if tone suddenly worsens.",
+    "Inspect skin daily over heels, sacrum, and any joint held in a spastic posture.",
+    "Take baclofen, tizanidine, or dantrolene at the prescribed intervals; never stop oral baclofen abruptly.",
+    "Track spasms in a diary — frequency, triggers, time of day — to guide medication and toxin timing.",
+    "Attend 12-weekly spasticity clinic reviews before, during, and after botulinum toxin cycles."
+  ],
+
+  "prognosis": "Outlook depends on the underlying diagnosis and on how early team-based management begins. After stroke, two-thirds of patients with mild spasticity at 6 months remain at the same level or improve with treatment over the following year; severe contracture is largely preventable when therapy and focal injections start by 3 months. In cerebral palsy, the Gross Motor Function Measure typically plateaus by age 6-7; selective dorsal rhizotomy and intensive therapy can shift trajectories upward, but ambulatory status is set largely by initial GMFCS level. In multiple sclerosis and progressive hereditary spastic paraplegia, spasticity tends to worsen over years; symptomatic therapy slows but does not reverse the trajectory. Intrathecal baclofen patient-reported satisfaction remains above 75% at 5 years. Across diagnoses, the strongest predictors of good outcome are early specialist referral, attention to noxious triggers, and access to a multidisciplinary spasticity service.",
+
+  "recoveryTimeline": "Botulinum toxin effect begins at 3-7 days, peaks at 4-6 weeks, and wanes by 12 weeks. Oral baclofen and tizanidine produce noticeable tone reduction within 1-2 weeks of titration. Intrathecal baclofen trials produce immediate response within 4-6 hours of test dose; permanent pump effect is stable within 2-4 weeks. Selective dorsal rhizotomy produces tone reduction within days, with functional gains accruing over 6-12 months of intensive postoperative therapy. Orthopedic surgery for fixed contracture requires 3-6 months of rehabilitation before maximum benefit is achieved.",
+
+  "complications": [
+    "Fixed joint contractures and limb deformity if dynamic spasticity is left untreated — assess passive range of motion at every clinic visit.",
+    "Pressure injuries from spastic limbs held in fixed postures against mattresses, splints, or wheelchair surfaces; daily skin checks are essential.",
+    "Pain from chronic muscle overpull, joint dysfunction, and spasms — present in up to 60% of MS and stroke patients.",
+    "Falls due to clonus, sudden spasms, or stiff-knee gait, particularly during transfers and turning.",
+    "Hygiene failure (hand-in-palm wound, perineal candidiasis from adductor spasticity, heel ulcer from equinus).",
+    "Intrathecal baclofen pump complications: catheter dislodgement (4-8%), pump infection (3-6%), catheter granuloma, and life-threatening withdrawal if delivery is interrupted."
+  ],
+
+  "supportResources": [
+    { "name": "AAPM&R Spasticity Clinical Pathway", "url": "https://www.aapmr.org/", "description": "American Academy of Physical Medicine and Rehabilitation member-curated guidance on team-based spasticity management." },
+    { "name": "Cerebral Palsy Alliance Research Foundation", "url": "https://research.cerebralpalsy.org.au/", "description": "Patient and family resources, plus high-quality systematic reviews and treatment summaries." },
+    { "name": "National Multiple Sclerosis Society — Spasticity", "url": "https://www.nationalmssociety.org/Symptoms-Diagnosis/MS-Symptoms/Spasticity", "description": "Patient guide to MS spasticity, treatments, and lifestyle." },
+    { "name": "Christopher and Dana Reeve Foundation Paralysis Resource Center", "url": "https://www.christopherreeve.org/living-with-paralysis/", "description": "Practical day-to-day resources and a clinician-reviewed library for spinal cord injury management." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "parkinsons-disease", "name": "Parkinson's Disease", "keyDifference": "Parkinson disease produces rigidity that is uniform through the range of motion (lead-pipe or cogwheel) and not velocity-dependent, plus bradykinesia and resting tremor. Spasticity is velocity-dependent with hyperreflexia and an upgoing plantar response, and reflects an upper-motor-neuron lesion rather than basal-ganglia dopamine loss." },
+    { "slug": "multiple-sclerosis", "name": "Multiple Sclerosis", "keyDifference": "Multiple sclerosis is one of the most common causes of spasticity rather than a separate condition. The distinction is between the underlying disease (relapsing or progressive demyelination) and its motor manifestation. MRI demonstrating disseminated plaques in time and space, oligoclonal bands in CSF, and disease-modifying therapy needs separate management." },
+    { "slug": "cerebral-palsy-unspecified-g809", "name": "Cerebral Palsy", "keyDifference": "Cerebral palsy is a static encephalopathy of antenatal or perinatal origin that produces spasticity (and sometimes dystonia or ataxia) from infancy. The cause is not progressive; spasticity-management approach overlaps with adult upper-motor-neuron syndrome but with developmental and growth-related considerations." },
+    { "slug": "stroke", "name": "Stroke", "keyDifference": "Stroke is the acute event (cerebrovascular ischemia or hemorrhage) that causes upper-motor-neuron injury; post-stroke spasticity is a downstream consequence. Stroke management focuses on revascularization, secondary prevention, and rehabilitation; spasticity management is the long-term motor-symptom layer." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "stroke", "name": "Stroke" },
+    { "slug": "multiple-sclerosis", "name": "Multiple Sclerosis" },
+    { "slug": "cerebral-palsy-unspecified-g809", "name": "Cerebral Palsy" },
+    { "slug": "post-stroke-rehabilitation", "name": "Post-stroke Rehabilitation" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "post-stroke-rehabilitation", "name": "Post-stroke Rehabilitation", "relevance": "The primary care pathway for adult-onset spasticity after cerebral infarction or hemorrhage." },
+    { "slug": "cerebral-palsy-unspecified-g809", "name": "Cerebral Palsy", "relevance": "Most common pediatric cause of long-term spasticity; selective dorsal rhizotomy and orthopedic surgery are mainstays." },
+    { "slug": "multiple-sclerosis", "name": "Multiple Sclerosis", "relevance": "Progressive spasticity affects up to 84% of patients; nabiximols and intrathecal baclofen are MS-specific options." },
+    { "slug": "tbi-rehabilitation", "name": "Traumatic Brain Injury Rehabilitation", "relevance": "TBI patients develop spastic hemiplegia or quadriplegia requiring early team-based management." },
+    { "slug": "carpal-tunnel-syndrome-rehab", "name": "Carpal Tunnel Syndrome (Rehab)", "relevance": "Wrist-flexion contracture and median-nerve compression complicate spastic upper-limb posture and overlap in PMR clinics." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is spasticity in simple terms?",
+      "answer": "Spasticity is unwanted stiffness in muscles caused by damage to the brain or spinal cord. Affected muscles resist being moved quickly, jerk in clonus, and can pull joints into fixed positions over time. It is treated with stretching, botulinum toxin injections, oral medicines such as baclofen, and surgery in severe cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is spasticity different from rigidity?",
+      "answer": "Spasticity is velocity-dependent — the faster a limb is moved, the stiffer it feels — and is paired with hyperreflexia and an upgoing plantar response. Rigidity, the hallmark of Parkinson disease, is uniform throughout the movement and not velocity-dependent. The underlying mechanisms and treatments differ.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes spasticity after stroke?",
+      "answer": "Stroke damages the corticospinal tract, removing supraspinal inhibition of spinal motor neurons. Affected muscles fire abnormally in response to stretch, producing the catch and stereotyped postures seen on the weaker side. About one-third of stroke survivors develop persistent spasticity within 12 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is spasticity painful?",
+      "answer": "Spasticity is painful in 40-60% of adults with stroke, spinal cord injury, or multiple sclerosis. Pain comes from chronic muscle overpull, joint dysfunction, spasms, and pressure injuries. Treating tone usually reduces pain; persistent pain often responds to neuropathic-pain agents and physical therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is spasticity measured?",
+      "answer": "Clinicians use the Modified Ashworth Scale (grades 0-4) to score resistance to fast passive stretch and the Modified Tardieu Scale to separate dynamic spasticity from fixed contracture. Goal Attainment Scaling tracks patient-centered outcomes such as hand hygiene, transfers, and walking speed at follow-up visits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is botulinum toxin used for in spasticity?",
+      "answer": "Botulinum toxin type A is injected directly into spastic muscles every 12 weeks under ultrasound or electromyographic guidance. It blocks acetylcholine release at the neuromuscular junction, reducing tone for 10-12 weeks. AAN 2016 rates Level A evidence for adult upper- and lower-limb spasticity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does baclofen cure spasticity?",
+      "answer": "Oral baclofen reduces tone and spasm frequency in 60-70% of people with spinal spasticity but does not cure the underlying neurological injury. Doses range from 5 to 80 mg per day in divided doses. Common side effects are sedation, weakness, and lowered seizure threshold; abrupt withdrawal is dangerous.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is an intrathecal baclofen pump considered?",
+      "answer": "Pumps are considered for severe generalized spasticity not controlled by oral antispasmodics and focal botulinum toxin injections, particularly in high spinal cord injury, severe traumatic brain injury, multiple sclerosis, and selected cerebral palsy. A trial bolus through lumbar puncture confirms response before permanent implantation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is selective dorsal rhizotomy?",
+      "answer": "Selective dorsal rhizotomy is a neurosurgical procedure in which selected L1-S2 dorsal sensory rootlets are cut to reduce reflex input that drives spasticity. The best evidence is in ambulatory children with spastic diplegic cerebral palsy aged 4-10 years, where 90%+ retain durable tone reduction at 10-20 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stretching alone control spasticity?",
+      "answer": "Daily stretching and proper positioning prevent contracture but rarely control significant spasticity alone. They are foundational to every treatment plan and combined with botulinum toxin, oral medication, or intrathecal baclofen for more severe disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is spasticity progressive?",
+      "answer": "After stroke and spinal cord injury, spasticity emerges and stabilizes over the first 12 months. In multiple sclerosis and hereditary spastic paraplegia, spasticity worsens slowly over years. Sudden worsening at any time should prompt search for new lesions or reversible triggers such as infection, retention, or pressure injury.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does spasticity always need treatment?",
+      "answer": "No. Low-level spasticity that does not cause pain, hygiene problems, or functional limitation, or that actually supports standing by stabilizing a knee, may be left alone. Treatment is goal-directed: clinicians treat spasticity that interferes with what the patient needs to do.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children outgrow spasticity?",
+      "answer": "Children with cerebral palsy do not outgrow the underlying brain injury, but their motor function can improve with early therapy, botulinum toxin, orthotic support, and in selected cases selective dorsal rhizotomy. Growth itself can worsen relative muscle shortening, so regular reassessment through adolescence is essential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is autonomic dysreflexia in spinal cord injury?",
+      "answer": "Autonomic dysreflexia is a dangerous reflex rise in blood pressure triggered by a noxious stimulus (full bladder, blocked catheter, pressure injury, fecal impaction) below the injury level, usually in lesions at or above T6. Treatment is upright posture, removal of the trigger, and antihypertensives if BP stays above 150 mmHg.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are cannabis-based medicines effective for MS spasticity?",
+      "answer": "Nabiximols (Sativex), a 1:1 THC and cannabidiol oromucosal spray, is licensed for MS spasticity in Europe, Canada, and select markets after failure of first-line oral therapy. Around 30% of treated patients achieve 20% improvement on a 0-10 spasticity scale at 6 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does pregnancy affect spasticity?",
+      "answer": "Pregnancy often modifies spasticity through changes in posture, hormones, and bladder function. Oral baclofen, tizanidine, and dantrolene are usually paused or minimized; botulinum toxin is generally avoided in the first trimester. Care should be planned with a high-risk obstetrics and physiatry team.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can spasticity come back after botulinum toxin?",
+      "answer": "Yes. Botulinum toxin produces a reversible chemodenervation that wears off by 12 weeks. Most patients are re-injected every 12-16 weeks. If response declines, clinicians check injection technique, dose, target muscles, and consider antibody-mediated resistance after long-term use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if baclofen is stopped suddenly?",
+      "answer": "Sudden withdrawal of oral or intrathecal baclofen can cause hallucinations, severe rebound spasticity, fever, hyperthermia, autonomic instability, and seizures. Intrathecal baclofen withdrawal can be life-threatening. Doses must be tapered, and pump alarms require urgent evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does spasticity improve walking?",
+      "answer": "Mild spasticity sometimes supports stance by stiffening a weak limb. Beyond that threshold, spasticity worsens gait — toe-walking, scissoring, stiff-knee patterns — and reduces speed. Treatment aims to preserve helpful stiffness while reducing patterns that block effective stepping.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is surgery a last resort for spasticity?",
+      "answer": "Surgery is one option in a layered plan, not always the last. Selective dorsal rhizotomy and orthopedic single-event multilevel surgery for cerebral palsy are timed to maximize developmental gain. Tendon lengthening for fixed contracture and pump implantation for severe generalized spasticity follow trials of non-surgical therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should spasticity be reviewed?",
+      "answer": "Active spasticity should be reviewed every 12 weeks in line with the botulinum toxin cycle, with Ashworth/Tardieu scores and Goal Attainment Scaling. Stable, well-controlled spasticity can be reviewed every 6-12 months with earlier review if function changes or new triggers appear.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Spasticity (muscle stiffness after brain or spinal cord injury)",
+  "regionalNames": [
+    { "name": "Espasticidad", "region": "Latin America, Spain", "language": "Spanish" },
+    { "name": "Spasticité", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "Spastik", "region": "Germany, Austria", "language": "German" },
+    { "name": "मांसपेशियों में जकड़न", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "spasticity",
+    "muscle spasticity",
+    "spastic limb",
+    "clonus",
+    "modified ashworth",
+    "tardieu scale",
+    "baclofen",
+    "tizanidine",
+    "botulinum toxin spasticity",
+    "intrathecal baclofen pump",
+    "selective dorsal rhizotomy",
+    "post-stroke spasticity",
+    "cerebral palsy spasticity",
+    "MS spasticity",
+    "spinal cord injury spasticity"
+  ],
+  "symptomKeywords": [
+    "stiff arm after stroke",
+    "leg jerks at night",
+    "muscle spasms spinal cord",
+    "clenched fist hemiplegia",
+    "toe walking child",
+    "tight calf MS",
+    "fixed contracture limb",
+    "painful muscle spasm chronic"
+  ],
+
+  "metaTitle": "Spasticity Management: Causes & Treatment | aihealz",
+  "metaDescription": "Spasticity: stiff muscles after stroke, spinal cord injury, cerebral palsy or MS. Botulinum toxin, baclofen, pump and rhizotomy treatment options explained.",
+
+  "keywords": [
+    "spasticity",
+    "spasticity management",
+    "post-stroke spasticity",
+    "cerebral palsy spasticity",
+    "MS spasticity",
+    "modified ashworth scale",
+    "botulinum toxin spasticity",
+    "baclofen dose",
+    "intrathecal baclofen pump",
+    "selective dorsal rhizotomy",
+    "spasticity treatment",
+    "spasticity vs rigidity"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Pandyan AD, Gregoric M, Barnes MP, et al. 2005. Spasticity: clinical perceptions, neurological realities and meaningful measurement. Disability and Rehabilitation 27(1-2):2-6.", "url": "https://pubmed.ncbi.nlm.nih.gov/15799140/", "accessedDate": "2026-05-14" },
+    { "title": "Wissel J, Manack A, Brainin M. 2013. Toward an epidemiology of poststroke spasticity. Neurology 80(3 Suppl 2):S13-9.", "url": "https://pubmed.ncbi.nlm.nih.gov/23271519/", "accessedDate": "2026-05-14" },
+    { "title": "Simpson DM, Hallett M, Ashman EJ, et al. 2016. Practice guideline update summary: botulinum neurotoxin for the treatment of blepharospasm, cervical dystonia, adult spasticity, and headache. Neurology 86(19):1818-26.", "url": "https://pubmed.ncbi.nlm.nih.gov/27164716/", "accessedDate": "2026-05-14" },
+    { "title": "Tedroff K, Lowing K, Astrom E. 2015. A prospective cohort study investigating gross motor function, pain, and health-related quality of life 17 years after selective dorsal rhizotomy in cerebral palsy. Developmental Medicine and Child Neurology 57(5):484-90.", "url": "https://pubmed.ncbi.nlm.nih.gov/25557135/", "accessedDate": "2026-05-14" },
+    { "title": "Penn RD, Savoy SM, Corcos D, et al. 1989. Intrathecal baclofen for severe spinal spasticity. New England Journal of Medicine 320(23):1517-21.", "url": "https://pubmed.ncbi.nlm.nih.gov/2657424/", "accessedDate": "2026-05-14" },
+    { "title": "Royal College of Physicians. 2018. Spasticity in adults: management using botulinum toxin. National guidelines, 2nd edition, London.", "url": "https://www.rcplondon.ac.uk/guidelines-policy/spasticity-adults-management-using-botulinum-toxin", "accessedDate": "2026-05-14" },
+    { "title": "Rizzo MA, Hadjimichael OC, Preiningerova J, Vollmer TL. 2004. Prevalence and treatment of spasticity reported by multiple sclerosis patients. Multiple Sclerosis 10(5):589-95.", "url": "https://pubmed.ncbi.nlm.nih.gov/15471378/", "accessedDate": "2026-05-14" },
+    { "title": "American Academy for Cerebral Palsy and Developmental Medicine. 2020. Care pathway for spasticity in cerebral palsy.", "url": "https://www.aacpdm.org/publications/care-pathways", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

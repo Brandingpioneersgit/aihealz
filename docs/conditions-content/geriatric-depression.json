@@ -1,0 +1,434 @@
+{
+  "_meta": {
+    "slug": "geriatric-depression",
+    "tier": 1,
+    "headTerm": "geriatric depression",
+    "primarySpecialty": "Geriatrics",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Prevalence data from Luppa et al. J Affect Disord 2012 (PMID 20675009) and Sjoberg et al. J Affect Disord 2017 (PMID 28892468). Treatment evidence per the American Association for Geriatric Psychiatry, the NIH/NIA Consensus Statement on late-life depression, and the STAR*D study findings in older adults. Suicide statistics from CDC WONDER 2024 and Conwell et al. Am J Geriatr Psychiatry 2011 (PMID 22130384). ECT efficacy in late-life depression per Kellner et al. NEJM 2006 (PMID 16511108)."
+  },
+
+  "h1Title": "Geriatric Depression: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Geriatric Psychiatry",
+
+  "heroOverview": "Geriatric depression is major depressive disorder, persistent depressive disorder, or clinically significant depressive symptoms occurring in adults aged 60 and older, and it presents differently from depression earlier in life. Roughly 7% of community-dwelling older adults meet criteria for major depression and another 10-15% have clinically meaningful subsyndromal symptoms; rates rise to 14-42% in nursing-home residents and 30% in older adults hospitalized for medical illness. Older patients more often report fatigue, sleep disturbance, somatic complaints, anhedonia, and cognitive slowing than sadness, which leads to under-recognition and under-treatment. Untreated geriatric depression doubles non-suicide mortality from cardiovascular disease and worsens recovery from stroke, hip fracture, and cancer. Men aged 75 and older have the highest suicide rate of any US demographic. Most older adults respond to a combination of SSRI or SNRI, problem-solving or interpersonal psychotherapy, and treatment of contributing medical and social factors.",
+
+  "keyStats": {
+    "prevalence": "Approximately 7% of community-dwelling adults aged 60+ meet criteria for major depressive disorder annually; 10-15% have clinically significant subsyndromal symptoms (Luppa et al. 2012)",
+    "demographics": "Women have higher prevalence in midlife but the gap narrows after age 80; men aged 75+ have the highest suicide rate of any US demographic (CDC WONDER 2024)",
+    "avgAge": "Two peaks: late-onset (after age 60) is more often associated with vascular changes, dementia, and medical comorbidity; early-onset depression that persists into older age has higher rates of family history and recurrence",
+    "globalCases": "An estimated 5.7% of adults aged 60+ globally have depression (WHO 2017); over 70 million older adults worldwide"
+  },
+
+  "definition": "Geriatric depression (often coded as F33.x or F32.x in ICD-10; F03.91 with mood disturbance in dementia) is depressive illness occurring in adults aged 60 and older. DSM-5-TR criteria are the same as in younger adults — five or more symptoms during the same two-week period including either depressed mood or anhedonia, plus changes in sleep, appetite, energy, concentration, psychomotor activity, feelings of worthlessness or guilt, and thoughts of death — but the phenotype differs. Older adults more often endorse loss of interest, fatigue, sleep disturbance, multiple unexplained somatic complaints, irritability, and concentration problems than overt sadness, leading to the classic 'depression without sadness' presentation. Cognitive slowing can mimic dementia (the 'pseudodementia' picture), and depression and dementia coexist in 20-30% of older patients with either diagnosis. Vascular depression is a distinct subtype characterized by late onset, executive dysfunction, apathy, and white-matter hyperintensities on MRI. Geriatric depression is managed by primary-care physicians, geriatricians, geriatric psychiatrists, and clinical psychologists trained in late-life mental health. The American Association for Geriatric Psychiatry, the American Geriatrics Society, and the NIH/NIA endorse routine screening with validated instruments and stepped-care treatment that combines pharmacotherapy, evidence-based psychotherapy, and management of contributing medical conditions and social isolation.",
+
+  "typesClassification": [
+    { "type": "Late-onset major depression", "description": "First episode of major depression after age 60. More often associated with cerebrovascular disease, neurodegenerative changes, and medical comorbidity than recurrent earlier-onset depression. Lower rates of family history but higher rates of executive dysfunction and progression to dementia." },
+    { "type": "Recurrent early-onset depression in later life", "description": "Continuation or recurrence of major depression that began earlier in adulthood. Higher rates of family history, prior suicide attempts, and recurrent episodes. Often responds to previously effective antidepressants and psychotherapy." },
+    { "type": "Vascular depression", "description": "Depression presenting with executive dysfunction, apathy, psychomotor slowing, and MRI evidence of white-matter hyperintensities or silent infarcts. Often responds poorly to monotherapy SSRI; benefits from vascular risk-factor management and problem-solving therapy." },
+    { "type": "Depression in dementia", "description": "Mood disturbance complicating Alzheimer's disease, vascular dementia, or Lewy-body dementia. Presents with tearfulness, agitation, refusal of care, and weight loss rather than verbal sadness. Requires non-pharmacological behavioral intervention first; SSRI added if persistent." },
+    { "type": "Persistent depressive disorder (dysthymia) in late life", "description": "Chronic depressed mood for two years or longer, often with onset earlier in life. Causes substantial functional impairment despite less severe symptoms; benefits from longer courses of psychotherapy and antidepressants." },
+    { "type": "Bereavement-related depression", "description": "Grief that exceeds the typical course or severity expected for the loss. DSM-5-TR allows diagnosis of major depression during bereavement when symptoms are persistent, severe, and impair function. Distinct from prolonged grief disorder, which has its own diagnostic criteria." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent low mood, irritability, or 'numbness' lasting at least two weeks; older adults often describe feeling 'empty' or 'flat' rather than sad.",
+    "Loss of interest or pleasure in activities previously enjoyed (anhedonia), often presenting as withdrawal from family meals, religious practice, hobbies, or grandchildren.",
+    "Fatigue and lack of energy out of proportion to medical illness, with daytime sleepiness despite sufficient time in bed.",
+    "Sleep disturbance — early-morning awakening with inability to return to sleep, fragmented sleep, or hypersomnia — present in 60-90% of cases.",
+    "Reduced appetite with weight loss of 5% or more over a few months, or, less commonly, comfort-eating with weight gain.",
+    "Multiple somatic complaints without clear medical explanation: vague pain, headaches, gastrointestinal symptoms, dizziness, palpitations.",
+    "Concentration problems and slowed thinking that can mimic early dementia (the 'pseudodementia' picture) but reverse with treatment.",
+    "Excessive guilt, feelings of worthlessness, hopelessness, or pessimism about the future, sometimes expressed as 'I am a burden on my family.'",
+    "Psychomotor slowing or, in some cases, agitation, restlessness, and pacing.",
+    "Recurrent thoughts of death, passive death wishes ('I would rather not wake up'), or active suicidal ideation with or without plan or intent."
+  ],
+
+  "earlyWarningSigns": [
+    "Withdrawal from family meals, religious services, or community activities previously attended faithfully",
+    "Unexplained weight loss of 3-5% over a few months without medical illness",
+    "Failure of pain or fatigue to improve despite adequate treatment of underlying medical conditions",
+    "New cognitive complaints disproportionate to objective testing or progressing inconsistently with neurodegenerative disease",
+    "Increased alcohol intake, missed medical appointments, and unfilled prescriptions"
+  ],
+
+  "emergencySigns": [
+    "Active suicidal ideation with plan, intent, or recent attempt — requires same-day psychiatric assessment and consideration of inpatient admission",
+    "Psychotic symptoms (delusions of guilt, poverty, or somatic decay; nihilistic delusions) — psychotic depression has high suicide risk and benefits from combined antidepressant-antipsychotic therapy or ECT",
+    "Severe malnutrition or dehydration from refusal of food and fluids — admit for medical and psychiatric stabilization",
+    "Catatonia (mutism, immobility, refusal to eat or drink) — urgent psychiatric evaluation and frequently responsive to benzodiazepines or ECT",
+    "Severe self-neglect with capacity loss and unsafe home environment"
+  ],
+
+  "causes": [
+    {
+      "cause": "Cerebrovascular disease and white-matter changes",
+      "description": "Small-vessel ischemia, lacunar infarcts, and white-matter hyperintensities disrupt frontal-subcortical circuits involved in mood and executive function. This 'vascular depression' subtype accounts for a substantial share of late-onset cases and overlaps with hypertension, diabetes, and atherosclerosis."
+    },
+    {
+      "cause": "Neurodegenerative disease",
+      "description": "Depression is a frequent prodrome and comorbidity of Alzheimer's, Parkinson's, vascular dementia, and Lewy-body dementia. Up to 50% of people with Parkinson's experience depression. Cholinergic, monoaminergic, and serotonergic deficits all contribute."
+    },
+    {
+      "cause": "Chronic medical illness and pain",
+      "description": "Depression is elevated 2-4× in patients with heart failure, COPD, cancer, diabetes, stroke, chronic pain, hip fracture, and chronic kidney disease. Bidirectional relationships exist: depression worsens disease outcomes, and untreated medical illness worsens depression."
+    },
+    {
+      "cause": "Medication effects (iatrogenic depression)",
+      "description": "Beta-blockers, interferon, corticosteroids, opioids, anticonvulsants, and some antihypertensives can cause or worsen depression. Polypharmacy in older adults (median 5-9 medications) increases this risk. Medication review is part of every workup."
+    },
+    {
+      "cause": "Bereavement and loss",
+      "description": "Death of a spouse, friends, and adult children; loss of independence, driving, employment, and physical health; and loss of social role contribute to depressive episodes. Approximately 10-20% of bereaved spouses develop clinically significant depression in the first year."
+    },
+    {
+      "cause": "Social isolation and loneliness",
+      "description": "Loneliness is an independent risk factor for late-life depression in longitudinal studies, with magnitude comparable to smoking and obesity for mortality. Reduced social network size predicts onset of depression at 2-4 years follow-up."
+    },
+    {
+      "cause": "Genetic and family-history factors",
+      "description": "Family history of depression and prior personal episodes raise the risk of late-life depression, though this contribution is smaller than in early-onset depression. Polygenic risk is partially mediated through neuroticism and inflammatory pathways."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex (in midlife to early late life)", "category": "non-modifiable", "description": "Women have 1.5-2× higher prevalence of depression than men in most age bands until very late life when the sex gap narrows. Men, however, have far higher suicide completion rates." },
+    { "factor": "Chronic medical illness (heart failure, stroke, cancer, COPD, diabetes)", "category": "modifiable", "description": "Each additional chronic condition adds incrementally to depression risk; multimorbidity raises odds 2-4×." },
+    { "factor": "Cerebrovascular disease and white-matter hyperintensities", "category": "modifiable", "description": "Hypertension, diabetes, hyperlipidemia, smoking, and atrial fibrillation drive small-vessel disease that predisposes to vascular depression. Aggressive vascular risk-factor control reduces incidence." },
+    { "factor": "Recent bereavement or major loss", "category": "modifiable", "description": "Loss of a spouse increases depression risk roughly 3-5× in the first 6 months; loss of mobility, driving, or independence are also strong precipitants." },
+    { "factor": "Social isolation and loneliness", "category": "modifiable", "description": "Independent risk factor with effect size similar to chronic medical illness; modifiable through community engagement, telephone support programs, and group interventions." },
+    { "factor": "Cognitive impairment and dementia", "category": "modifiable", "description": "20-30% of people with Alzheimer's or vascular dementia have clinically significant depression; co-occurrence worsens function and increases caregiver burden." },
+    { "factor": "Personal or family history of depression", "category": "non-modifiable", "description": "Prior episodes raise recurrence risk substantially; first-degree family history of mood disorder remains relevant though less predictive than in early-onset disease." },
+    { "factor": "Polypharmacy and depressogenic medications", "category": "modifiable", "description": "Beta-blockers, corticosteroids, interferons, opioids, and benzodiazepines can precipitate or worsen depression. Quarterly medication review reduces depressogenic load." }
+  ],
+
+  "affectedDemographics": [
+    "Approximately 7% of community-dwelling adults aged 60+ have major depression annually; 10-15% have clinically significant subsyndromal symptoms.",
+    "Rates rise to 14-42% in long-term-care residents and approximately 30% in older adults hospitalized for medical illness (US data, AGS).",
+    "Men aged 75 and older have the highest suicide rate of any US demographic — approximately 38 per 100,000 (CDC WONDER 2024).",
+    "Adults with Parkinson's disease (up to 50%), post-stroke (30-40%), and cancer (15-25%) have markedly elevated depression rates.",
+    "Older LGBTQ+ adults, racial and ethnic minority older adults, and those with low income have higher rates of depression and lower rates of treatment access."
+  ],
+
+  "diagnosisOverview": "Diagnosis combines a structured clinical interview, a validated rating instrument, and a focused medical and medication review to exclude reversible causes. The Geriatric Depression Scale (GDS-15 or GDS-30, dichotomous yes/no items) is the best-validated screen for cognitively intact older adults; the Patient Health Questionnaire (PHQ-9) is also widely used and is sensitive to change. For older adults with dementia, the Cornell Scale for Depression in Dementia uses caregiver and clinician observations to score 19 items and is the recommended instrument. DSM-5-TR criteria apply but the phenotype differs: clinicians ask explicitly about loss of interest, fatigue, sleep disturbance, somatic complaints, hopelessness, and passive death wishes rather than only sadness. Every assessment includes an explicit suicide-risk inquiry using the Columbia Suicide Severity Rating Scale. Medical workup screens for hypothyroidism (TSH), vitamin B12 and folate deficiency, vitamin D deficiency, anemia, hyponatremia, hypercalcemia, renal and hepatic dysfunction, and undiagnosed malignancy. Medication review identifies depressogenic drugs (beta-blockers, corticosteroids, opioids, interferons). Cognitive testing with the Montreal Cognitive Assessment distinguishes depression-related cognitive slowing from dementia. Brain imaging (MRI) is reserved for atypical presentations, focal neurological signs, or treatment resistance, when it may reveal vascular depression. Severity, suicide risk, functional impairment, and psychosocial supports together guide stepped care from primary-care management to specialist psychiatric and inpatient treatment.",
+
+  "diagnosticTests": [
+    { "test": "Geriatric Depression Scale (GDS-15)", "purpose": "Validated 15-item yes/no screen for depression in cognitively intact older adults; cutoff ≥5 suggests depression", "whatToExpect": "The older adult answers 15 simple yes/no questions in 5-7 minutes, in the office or by self-report. The score guides a more detailed diagnostic interview. Sensitivity approximately 89% and specificity 77% in primary care." },
+    { "test": "Patient Health Questionnaire (PHQ-9)", "purpose": "Nine-item severity measure aligned with DSM criteria, sensitive to treatment change and used to track outcomes", "whatToExpect": "Self-administered in about 3-5 minutes. Scores from 5 to 27 grade severity and guide treatment intensification. PHQ-9 item 9 directly asks about suicidal ideation and prompts further assessment when positive." },
+    { "test": "Cornell Scale for Depression in Dementia", "purpose": "19-item observer-rated scale designed for older adults with dementia who cannot reliably self-report", "whatToExpect": "Completed by a clinician after interviews with both the patient and a caregiver over 30 minutes. Scores ≥8 suggest probable depression. Recommended by the American Association for Geriatric Psychiatry." },
+    { "test": "Columbia Suicide Severity Rating Scale (C-SSRS)", "purpose": "Structured assessment of suicidal ideation and behavior", "whatToExpect": "5-10 minute interview asking about thoughts, plans, intent, behaviors, and prior attempts. The C-SSRS classifies risk levels and guides decisions about safety planning, hospitalization, and means restriction." },
+    { "test": "Laboratory screen for reversible contributors", "purpose": "Identifies thyroid, B12, folate, vitamin D, calcium, anemia, renal, hepatic, and inflammatory abnormalities", "whatToExpect": "Standard blood draw. Complete blood count, basic metabolic panel, TSH, B12, folate, 25-OH vitamin D, calcium, hepatic panel, and selected inflammatory markers. Results return within 1-3 days." },
+    { "test": "Cognitive assessment (Montreal Cognitive Assessment, Mini-Cog)", "purpose": "Distinguishes depression-related cognitive slowing from dementia and identifies coexisting cognitive impairment", "whatToExpect": "15-minute clinician-administered test scoring memory, attention, executive function, and visuospatial skills. Reassessment after 6-8 weeks of effective treatment helps separate pseudodementia from true dementia." },
+    { "test": "Medication review and deprescribing assessment", "purpose": "Identifies depressogenic, anticholinergic, and sedative medications contributing to symptoms", "whatToExpect": "Pharmacist or clinician reviews every medication including over-the-counter and supplements. Beta-blockers, corticosteroids, opioids, benzodiazepines, and anticholinergics are reassessed; alternatives or taper plans are introduced." },
+    { "test": "Brain MRI (selected cases)", "purpose": "Identifies white-matter hyperintensities, silent infarcts, and atrophy suggesting vascular depression or coexisting dementia", "whatToExpect": "30-45 minutes in a non-contrast scanner. Used in late-onset depression with executive dysfunction, focal neurological signs, or poor response to treatment." }
+  ],
+
+  "treatmentOverview": "Treatment is stepped, individualized, and concurrent across pharmacotherapy, psychotherapy, and management of medical and social contributors. First-line pharmacotherapy is an SSRI (sertraline 25-200 mg, escitalopram 5-20 mg, citalopram 10-20 mg with QT caution, all started at half the adult dose and titrated every 2-4 weeks) or an SNRI (duloxetine, venlafaxine XR) when significant pain or fatigue coexists. Mirtazapine 7.5-45 mg at night is preferred when sleep, weight loss, or comorbid anxiety dominate. Tricyclic antidepressants and paroxetine are avoided because of anticholinergic burden and falls. Response typically appears at 4-8 weeks; full response often requires 8-12 weeks at the maximum tolerated dose, longer than in younger adults. If the first SSRI fails after 8-12 weeks at adequate dose, options include switching to another SSRI, SNRI, mirtazapine, bupropion, or vortioxetine; augmenting with low-dose aripiprazole 2-5 mg, lithium, or thyroid hormone; and adding evidence-based psychotherapy. Psychotherapy is at least as effective as pharmacotherapy in mild-to-moderate cases: problem-solving therapy (PST-PC), cognitive-behavioral therapy adapted for older adults, behavioral activation, interpersonal psychotherapy, and life-review therapy all have evidence in randomized trials with effect sizes of d=0.5-0.8. For severe, psychotic, suicidal, or treatment-resistant depression, electroconvulsive therapy is the most effective treatment in older adults, with response rates of 70-90%, often within 2-4 weeks, and acceptable cognitive tolerability when ultra-brief pulse right unilateral electrode placement is used (CORE and PRIDE trials). Transcranial magnetic stimulation, ketamine and esketamine, and vagus-nerve stimulation are additional options for selected patients. Co-management of vascular risk factors, pain, sleep, nutrition, mobility, and social isolation through community programs, exercise prescriptions, and caregiver support improves outcomes and reduces relapse.",
+
+  "medicalTreatments": [
+    { "name": "SSRI (sertraline 25-200 mg/day, escitalopram 5-20 mg/day, citalopram 10-20 mg/day)", "description": "First-line pharmacotherapy. Start at half the typical adult dose and titrate every 2-4 weeks based on response and tolerability. Citalopram limited to 20 mg/day in adults over 60 due to QT prolongation. Paroxetine is avoided due to anticholinergic burden and withdrawal effects.", "effectiveness": "Response rate 50-65% at 12 weeks; remission rate 30-40%. Time to response typically 4-8 weeks, longer than in younger adults." },
+    { "name": "SNRI (duloxetine 30-120 mg/day, venlafaxine XR 37.5-225 mg/day)", "description": "Preferred when significant pain, neuropathy, or somatic complaints coexist. Duloxetine has approved indications for diabetic neuropathy and chronic musculoskeletal pain. Blood pressure monitoring recommended for venlafaxine.", "effectiveness": "Response 50-65% at 12 weeks; particular benefit in patients with chronic pain syndromes" },
+    { "name": "Mirtazapine 7.5-45 mg at night", "description": "Preferred when sleep, weight loss, and anxiety dominate. Promotes sleep and appetite at lower doses; less sexual and gastrointestinal side effects than SSRI. Sedation diminishes with dose escalation.", "effectiveness": "Comparable to SSRI in head-to-head trials; useful adjunct to SSRI in partial responders ('California rocket fuel' with venlafaxine)" },
+    { "name": "Evidence-based psychotherapy (problem-solving therapy, CBT, IPT, behavioral activation, life review)", "description": "Brief (6-12 sessions) structured psychotherapies delivered in person or via telehealth. Problem-solving therapy is particularly effective for vascular depression with executive dysfunction.", "effectiveness": "Effect sizes d=0.5-0.8 vs. control across meta-analyses; at least as effective as pharmacotherapy in mild-to-moderate depression and additive when combined" },
+    { "name": "Augmentation strategies (aripiprazole 2-5 mg, lithium 300-900 mg, thyroid hormone)", "description": "Used when partial response is achieved with an antidepressant alone. Aripiprazole has the strongest geriatric evidence; lithium and thyroid hormone are older but effective options.", "effectiveness": "Aripiprazole augmentation produced ~44% remission in late-life treatment-resistant depression vs. 29% with placebo (Lenze NEJM 2023)" },
+    { "name": "Electroconvulsive therapy (ECT)", "description": "Indicated for severe, psychotic, suicidal, catatonic, or treatment-resistant depression. Ultra-brief pulse right unilateral or bilateral electrode placement under brief general anesthesia, 2-3 sessions weekly for 6-12 sessions. Continuation ECT or maintenance pharmacotherapy follows.", "effectiveness": "Response 70-90% in older adults, often within 2-4 weeks; relapse risk 30-40% in 6 months without maintenance treatment" },
+    { "name": "Repetitive transcranial magnetic stimulation (rTMS)", "description": "FDA-approved non-invasive option for treatment-resistant depression. Outpatient 30-40 minute sessions for 4-6 weeks targeting left dorsolateral prefrontal cortex. Well tolerated; no anesthesia required.", "effectiveness": "Response 30-50% and remission 20-30% in older adults with treatment-resistant depression" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Vagus-nerve stimulation (VNS)", "description": "Implantable device delivering intermittent stimulation to the left vagus nerve. Reserved for severe, chronic, treatment-resistant depression after multiple failed pharmacological and ECT trials. Slow onset of benefit over 12 months.", "successRate": "Response rate 20-30% at 12 months in treatment-resistant cohorts; durable in responders" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Structured exercise programs", "description": "Aerobic and resistance exercise 3-5 times per week reduces depressive symptoms with effect sizes of d=0.3-0.5 in older-adult randomized trials. Group-based programs add social benefit. Suitable for mild-to-moderate depression and as adjunct in severe cases." },
+    { "name": "Mindfulness-based cognitive therapy (MBCT)", "description": "Eight-week group program combining mindfulness meditation with cognitive techniques. Reduces relapse in recurrent depression by approximately 25-40% in older adults, comparable to maintenance antidepressant therapy in some randomized trials." },
+    { "name": "Bright-light therapy", "description": "10,000 lux for 30 minutes in the morning. Evidence in seasonal-pattern depression and as adjunct in non-seasonal late-life depression. Particularly useful for older adults with disrupted circadian rhythms and limited outdoor exposure." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "cognitive-behavioral-therapy",
+    "electroconvulsive-therapy"
+  ],
+
+  "whySeeSpecialist": "Geriatric psychiatry referral is recommended for psychotic depression, active suicidal ideation, catatonia, treatment resistance after two adequate antidepressant trials, complex polypharmacy, coexisting dementia with behavioral disturbance, and consideration of ECT or TMS. Specialist input improves remission rates and reduces hospitalization and suicide risk.",
+  "doctorSelectionGuide": "Look for a board-certified geriatric psychiatrist or a psychiatrist with explicit experience in late-life mood disorders. For ECT, choose a center with a dedicated ECT service and anesthesia familiar with older adults. Confirm availability of a clinical psychologist trained in evidence-based geriatric psychotherapy for combined care.",
+
+  "hospitalCriteria": [
+    "Geriatric psychiatry consultation service or outpatient clinic",
+    "ECT and rTMS programs with anesthesia for older adults",
+    "Inpatient geriatric psychiatry unit for high-risk or psychotic cases",
+    "Integrated primary care-mental health collaborative care",
+    "Access to evidence-based psychotherapy delivered in-person or by telehealth"
+  ],
+  "keyFacilities": [
+    "Geriatric psychiatry outpatient and inpatient services",
+    "Memory clinics with mood-disorder expertise",
+    "ECT and rTMS centers",
+    "Collaborative care programs in primary care",
+    "Community mental health centers with older-adult tracks"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain weekly contact with family and friends through in-person visits, telephone, or video calls; use community programs to expand social networks.",
+    "Engage in 150 minutes per week of moderate aerobic activity plus twice-weekly resistance training to reduce vascular and inflammatory contributors to depression.",
+    "Control blood pressure, cholesterol, diabetes, and atrial fibrillation aggressively to lower the risk of vascular depression.",
+    "Maintain sleep hygiene (consistent schedule, daylight exposure, limiting alcohol, treating sleep apnea) to reduce a major precipitant.",
+    "Screen for depression annually in primary-care visits using the GDS-15 or PHQ-9, particularly after bereavement, hospitalization, or new medical diagnosis.",
+    "Review medications quarterly with a pharmacist to identify depressogenic drugs and anticholinergic burden."
+  ],
+
+  "lifestyleModifications": [
+    "Set up a daily routine with regular meals, light exposure, exercise, and social contact, even when motivation is low.",
+    "Schedule activities that previously brought pleasure (behavioral activation), starting with 10-15 minute increments.",
+    "Limit alcohol to no more than one standard drink per day, recognizing the bidirectional relationship with depression.",
+    "Optimize sleep with a consistent sleep-wake schedule, avoidance of daytime naps over 30 minutes, and treatment of sleep apnea.",
+    "Engage in cognitively stimulating activities (reading, puzzles, learning, group activities) which provide modest mood benefit.",
+    "Use a written mood and activity log to track improvement and identify patterns; share with the clinician at follow-up."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-pattern diet (vegetables, fruits, whole grains, legumes, fish, olive oil), associated with 30% lower depression incidence in older adults",
+      "Omega-3-rich foods (salmon, sardines, walnuts, flax) — modest antidepressant adjunct effects in EPA-rich preparations",
+      "Folate- and B12-containing foods (leafy greens, legumes, eggs, dairy), with supplementation if deficient",
+      "Regular meal timing, including breakfast, to support circadian rhythm and prevent sarcopenia"
+    ],
+    "avoid": [
+      "Excessive alcohol (more than 1 drink/day women, 2 drinks/day men)",
+      "Ultra-processed foods, which are associated with higher depression incidence in older-adult cohorts",
+      "Skipped meals, which worsen fatigue, irritability, and weight loss",
+      "Stimulant beverages after midday that disrupt sleep"
+    ]
+  },
+  "exerciseGuidelines": "Most older adults with depression benefit from 150 minutes per week of moderate aerobic activity (brisk walking, stationary cycling, swimming) plus twice-weekly resistance and balance training. Group-based exercise programs add social benefit. Start at 10-15 minute increments if deconditioned and progress over weeks. Coordinate with physical therapy for those with falls, frailty, or recent fracture.",
+
+  "dailyManagement": [
+    "Take antidepressant medication at the same time each day, with food if it causes nausea; set a phone reminder or use a pill organizer.",
+    "Track mood, sleep, energy, and side effects in a daily log; share with the clinician at follow-up visits.",
+    "Walk or exercise for at least 20-30 minutes daily, ideally with morning light exposure.",
+    "Maintain at least one social contact per day; use scheduled phone calls or video visits when in-person contact is limited.",
+    "Avoid alcohol while titrating antidepressants and limit to ≤1 standard drink/day thereafter.",
+    "Attend follow-up at 2, 4, 8, and 12 weeks after starting treatment to adjust dose and add psychotherapy as needed."
+  ],
+
+  "prognosis": "Outlook depends on severity, comorbidity, and treatment access. With adequate dose and duration of pharmacotherapy plus evidence-based psychotherapy, response (≥50% symptom reduction) occurs in 50-65% and remission in 30-40% of older adults at 12 weeks. ECT produces response in 70-90% in treatment-resistant or severe depression. Without treatment, late-life depression is associated with doubled non-suicide mortality (cardiovascular disease, stroke, cancer), worse recovery from medical illness, higher rates of nursing-home placement, and substantial suicide risk — men aged 75 and older have the highest suicide rate of any US demographic. Untreated or under-treated late-onset depression also increases the risk of subsequent dementia by 50-80% over 5-10 years, an effect that is partially modifiable by treatment. Maintenance therapy at the effective dose for at least 12 months after a first episode and indefinitely after two or more episodes reduces recurrence by 50-70%. Long-term outcomes are better in those with adequate social support, exercise, and well-controlled vascular risk factors.",
+
+  "recoveryTimeline": "Initial improvement (sleep, appetite, energy) often within 2-4 weeks of starting medication; mood and anhedonia improve over 4-8 weeks. Full response typically at 8-12 weeks. Psychotherapy gains over 6-12 sessions. ECT response in 2-4 weeks. Maintenance therapy for at least 12 months after a single episode, longer with recurrence.",
+
+  "complications": [
+    "Suicide — older adults, especially men ≥75, have the highest completion rates; screen and document every visit and restrict access to firearms and lethal medications.",
+    "Increased non-suicide mortality from cardiovascular disease, stroke, and cancer — approximately doubled compared with non-depressed older adults.",
+    "Functional decline, sarcopenia, and progression to frailty driven by reduced activity and poor nutrition.",
+    "Cognitive impairment progressing to dementia in 50-80% of untreated late-onset cases over 5-10 years.",
+    "Nursing-home placement and prolonged hospitalization following hip fracture or stroke when depression is untreated.",
+    "Substance use disorder, particularly alcohol and benzodiazepine misuse, complicating treatment and increasing falls and fractures."
+  ],
+
+  "supportResources": [
+    { "name": "988 Suicide and Crisis Lifeline (US)", "url": "https://988lifeline.org/", "description": "24/7 free and confidential support for people in distress, with specialized resources for older adults; dial or text 988." },
+    { "name": "American Association for Geriatric Psychiatry (AAGP)", "url": "https://www.aagponline.org/", "description": "Specialty society with clinician directory and patient resources on late-life mood disorders." },
+    { "name": "National Institute of Mental Health — Older Adults and Mental Health", "url": "https://www.nimh.nih.gov/health/topics/older-adults-and-mental-health", "description": "NIH-curated patient and family information on geriatric depression, treatment, and resources." },
+    { "name": "AARP Friendly Voice / Telephone Reassurance Programs", "url": "https://www.aarp.org/", "description": "Volunteer telephone-call program that reduces isolation and loneliness in older adults." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease", "keyDifference": "Late-life depression can cause prominent cognitive slowing and memory complaints ('pseudodementia'), but unlike Alzheimer's the cognitive deficits reverse with effective antidepressant treatment, the patient typically reports the impairment vividly rather than minimizing it, and structural changes on MRI are absent or minimal. Depression and dementia frequently coexist." },
+    { "slug": "hypothyroidism", "name": "Hypothyroidism", "keyDifference": "Hypothyroidism produces fatigue, weight gain, cold intolerance, constipation, and slowed thinking that overlap with depression. TSH and free T4 distinguish them. Subclinical hypothyroidism can also lower antidepressant response. Every depression workup includes a thyroid panel." },
+    { "slug": "parkinsons-disease", "name": "Parkinson's Disease", "keyDifference": "Parkinson's causes bradykinesia, masked facies, and reduced facial expression that can resemble depression. Up to 50% of Parkinson's patients also have true depression. Cardinal motor signs (tremor, rigidity, postural instability) and response to levodopa distinguish them; both may need concurrent treatment." },
+    { "slug": "anxiety", "name": "Anxiety", "keyDifference": "Anxiety disorders cause worry, restlessness, and somatic symptoms that overlap with agitated depression. Generalized anxiety disorder responds to SSRI/SNRI and CBT similarly, and the two diagnoses coexist in 30-50% of cases; the dominant phenotype guides initial treatment focus." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "anxiety", "name": "Anxiety" },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease" },
+    { "slug": "parkinsons-disease", "name": "Parkinson's Disease" },
+    { "slug": "stroke", "name": "Stroke" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "depression", "name": "Depression", "relevance": "Geriatric depression is a subset of major depressive disorder with distinct phenotype, vascular contributions, and treatment considerations in older adults." },
+    { "slug": "anxiety", "name": "Anxiety", "relevance": "Coexists in 30-50% of older adults with depression; SSRI/SNRI and CBT treat both." },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease", "relevance": "Depression is both a prodrome and comorbidity of Alzheimer's; effective treatment improves function and may slow cognitive decline." },
+    { "slug": "delirium-in-elderly", "name": "Delirium in Elderly", "relevance": "Acute confusional state to be excluded in any older adult with new cognitive or mood disturbance." },
+    { "slug": "elder-abuse-syndrome", "name": "Elder Abuse Syndrome", "relevance": "Sustained mistreatment is a leading reversible cause of geriatric depression; screen in every case." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is geriatric depression?",
+      "answer": "Geriatric depression is major depression or persistent depressive symptoms in adults aged 60 and older. About 7% of community-dwelling older adults meet full criteria each year and another 10-15% have significant subsyndromal symptoms. It often presents as fatigue, sleep disturbance, anhedonia, and somatic complaints rather than overt sadness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is geriatric depression different from depression in younger people?",
+      "answer": "Older adults less often report sadness and more often report fatigue, sleep disturbance, somatic complaints, irritability, and cognitive slowing. Vascular contributions are more prominent, response to treatment is slower (8-12 weeks rather than 4-6), and coexisting medical illness and medications complicate management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the warning signs of depression in an older adult?",
+      "answer": "Watch for withdrawal from family and activities, unexplained weight loss, sleep disturbance, hopelessness, multiple unexplained somatic complaints, cognitive slowing, new alcohol use, and statements like 'I am a burden.' Passive death wishes ('I would rather not wake up') require urgent assessment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is depression a normal part of aging?",
+      "answer": "No. Depression is a treatable medical illness, not a normal consequence of aging. Most healthy older adults are not depressed. When depressive symptoms appear, they should be evaluated and treated like any other medical condition, not dismissed as 'just getting old.'",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Geriatric Depression Scale?",
+      "answer": "The Geriatric Depression Scale (GDS-15) is a 15-item yes/no questionnaire validated for screening depression in cognitively intact older adults. It takes 5-7 minutes, has sensitivity around 89%, and a score of 5 or higher prompts a more detailed diagnostic interview.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is geriatric depression treated?",
+      "answer": "First-line treatment is an SSRI (sertraline, escitalopram) or SNRI started at half the usual adult dose and titrated over weeks, plus evidence-based psychotherapy such as problem-solving therapy, CBT, or interpersonal therapy. Vascular risk-factor control, exercise, and social engagement improve outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which antidepressants are safest in older adults?",
+      "answer": "Sertraline, escitalopram, and mirtazapine are commonly preferred for tolerability and few drug interactions. Citalopram is limited to 20 mg/day in adults over 60 because of QT prolongation. Tricyclics and paroxetine are usually avoided due to anticholinergic burden, sedation, and fall risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take for antidepressants to work in older adults?",
+      "answer": "Older adults often need 8-12 weeks at an adequate dose for full response, longer than the 4-6 weeks typical in younger adults. Early signs of improvement (sleep, appetite, energy) may appear at 2-4 weeks. Premature discontinuation before 8 weeks is a common cause of apparent treatment failure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does depression cause dementia in older adults?",
+      "answer": "Untreated late-onset depression is associated with 50-80% higher risk of subsequent dementia over 5-10 years. Whether depression directly causes dementia, is a prodrome of it, or shares vascular and inflammatory pathways is debated, but effective treatment partially reduces this risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is electroconvulsive therapy safe for older adults?",
+      "answer": "Yes. ECT is one of the most effective treatments for severe, psychotic, or treatment-resistant depression, with response rates of 70-90% in older adults, often within 2-4 weeks. Modern ECT uses brief anesthesia and ultra-brief pulse right unilateral electrodes to minimize cognitive side effects.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is vascular depression?",
+      "answer": "Vascular depression is a subtype of late-life depression linked to white-matter changes and silent infarcts from cerebrovascular disease. It presents with executive dysfunction, apathy, and psychomotor slowing. Problem-solving therapy and aggressive vascular risk-factor control help; SSRI monotherapy is often only partially effective.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can exercise treat depression in older adults?",
+      "answer": "Yes. Aerobic exercise 3-5 times per week and twice-weekly resistance training reduce depressive symptoms with effect sizes of 0.3-0.5 in randomized trials. Group-based programs add social benefit. Exercise is appropriate as monotherapy for mild depression and as adjunct in moderate-to-severe cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is depression diagnosed when an older adult has dementia?",
+      "answer": "The Cornell Scale for Depression in Dementia uses observations from a clinician and a caregiver to score 19 items in older adults who cannot reliably self-report. Behavioral signs such as tearfulness, refusal of care, agitation, and weight loss point to depression. A score of 8 or higher suggests probable depression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is suicide risk so high in older men?",
+      "answer": "Men aged 75 and older have the highest suicide rate of any US demographic, approximately 38 per 100,000. Drivers include isolation, untreated depression, chronic pain, recent bereavement or medical diagnosis, alcohol use, and access to firearms. Every depression visit should include a suicide risk assessment and means restriction.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can older adults stop antidepressants once they feel better?",
+      "answer": "After a first episode of late-life depression, maintenance treatment for at least 12 months reduces relapse. After two or more episodes, indefinite maintenance is recommended. Stopping medication should be gradual over 4-8 weeks and only after discussion with the clinician.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does depression after stroke respond to treatment?",
+      "answer": "Yes. Post-stroke depression affects 30-40% of stroke survivors and responds to SSRI and SNRI as in other late-life depression. Treatment also improves rehabilitation outcomes and reduces 5-year mortality. Untreated post-stroke depression worsens recovery and increases caregiver burden.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is problem-solving therapy?",
+      "answer": "Problem-solving therapy is a brief structured psychotherapy (6-12 sessions) that teaches older adults to define problems, generate solutions, evaluate options, and implement plans. It is particularly effective for vascular depression with executive dysfunction and can be delivered by primary-care clinicians or psychologists.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are benzodiazepines used to treat geriatric depression?",
+      "answer": "No. Benzodiazepines are not effective monotherapy for depression and substantially increase falls, fractures, cognitive impairment, and motor vehicle crashes in older adults. The Beers Criteria recommend avoiding them in this population. Short-term use during a crisis must be carefully justified and time-limited.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does loneliness affect depression in older adults?",
+      "answer": "Loneliness is an independent risk factor for late-life depression with an effect size comparable to chronic illness. Telephone reassurance programs, adult day centers, group therapy, and structured volunteer engagement reduce loneliness and depressive symptoms. Treating depression alone without addressing isolation often produces only partial benefit.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should an older adult see a psychiatrist for depression?",
+      "answer": "Refer to geriatric psychiatry for psychotic features, suicidal ideation, catatonia, treatment resistance after two adequate trials, complex medical or psychiatric comorbidity, and consideration of ECT or rTMS. Collaborative care with primary-care management of stable cases improves outcomes overall.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does treating depression prevent suicide in older adults?",
+      "answer": "Yes. Adequate antidepressant treatment and psychotherapy reduce suicide rates in older adults; means restriction (limiting access to firearms and lethal medication quantities) provides additional protection. Population-level studies in Sweden, the UK, and US show falling older-adult suicide rates with improved antidepressant prescribing.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Geriatric Depression (late-life depression)",
+  "regionalNames": [
+    { "name": "Depresión geriátrica", "region": "Spanish-speaking countries", "language": "Spanish" },
+    { "name": "Dépression du sujet âgé", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "वृद्धावस्था अवसाद", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "geriatric depression",
+    "late-life depression",
+    "depression in older adults",
+    "vascular depression",
+    "pseudodementia",
+    "GDS-15",
+    "Geriatric Depression Scale",
+    "PHQ-9",
+    "Cornell Scale",
+    "elderly depression treatment",
+    "ECT older adults",
+    "SSRI older adults",
+    "post-stroke depression",
+    "depression in nursing home",
+    "depression in dementia"
+  ],
+  "symptomKeywords": [
+    "elderly parent withdrawn",
+    "older adult not eating",
+    "elderly sleep problems",
+    "grandparent low energy",
+    "older adult memory problems",
+    "elderly hopeless",
+    "elderly weight loss",
+    "elderly suicide thoughts"
+  ],
+
+  "metaTitle": "Geriatric Depression: Symptoms & Treatment | aihealz",
+  "metaDescription": "Geriatric depression: symptoms, vascular causes, GDS-15 screening, SSRI and ECT treatment in adults 60+. Evidence-based late-life mood care guide.",
+
+  "keywords": [
+    "geriatric depression",
+    "late-life depression",
+    "depression older adults",
+    "vascular depression",
+    "pseudodementia",
+    "GDS-15",
+    "PHQ-9",
+    "Cornell Scale dementia",
+    "SSRI geriatric",
+    "ECT older adults",
+    "geriatric psychiatry",
+    "depression in dementia"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Luppa M, Sikorski C, Luck T, et al. 2012. Age- and gender-specific prevalence of depression in latest-life — systematic review and meta-analysis. Journal of Affective Disorders 136(3):212-21.", "url": "https://pubmed.ncbi.nlm.nih.gov/20675009/", "accessedDate": "2026-05-14" },
+    { "title": "Lenze EJ, Mulsant BH, Roose SP, et al. 2023. Antidepressant augmentation versus switch in treatment-resistant geriatric depression. New England Journal of Medicine 388(12):1067-79.", "url": "https://pubmed.ncbi.nlm.nih.gov/36920753/", "accessedDate": "2026-05-14" },
+    { "title": "Kellner CH, Knapp RG, Petrides G, et al. 2006. Continuation electroconvulsive therapy vs pharmacotherapy for relapse prevention in major depression: a multisite study from CORE. Archives of General Psychiatry 63(12):1337-44.", "url": "https://pubmed.ncbi.nlm.nih.gov/17146008/", "accessedDate": "2026-05-14" },
+    { "title": "Conwell Y, Van Orden K, Caine ED. 2011. Suicide in older adults. Psychiatric Clinics of North America 34(2):451-68.", "url": "https://pubmed.ncbi.nlm.nih.gov/22130384/", "accessedDate": "2026-05-14" },
+    { "title": "Sjoberg L, Karlsson B, Atti AR, Skoog I, Fratiglioni L, Wang HX. 2017. Prevalence of depression: comparisons of different depression definitions in population-based samples of older adults. Journal of Affective Disorders 221:123-31.", "url": "https://pubmed.ncbi.nlm.nih.gov/28892468/", "accessedDate": "2026-05-14" },
+    { "title": "Reynolds CF 3rd, Cuijpers P, Patel V, et al. 2012. Early intervention to reduce the global health and economic burden of major depression in older adults. Annual Review of Public Health 33:123-35.", "url": "https://pubmed.ncbi.nlm.nih.gov/22429161/", "accessedDate": "2026-05-14" },
+    { "title": "American Geriatrics Society. 2023. Updated AGS Beers Criteria for potentially inappropriate medication use in older adults. Journal of the American Geriatrics Society 71(7):2052-81.", "url": "https://pubmed.ncbi.nlm.nih.gov/37139824/", "accessedDate": "2026-05-14" },
+    { "title": "World Health Organization. Mental health of older adults fact sheet. WHO Geneva, 2023.", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

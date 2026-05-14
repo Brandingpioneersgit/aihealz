@@ -1,0 +1,453 @@
+{
+  "_meta": {
+    "slug": "subdural-hematoma",
+    "tier": 1,
+    "headTerm": "subdural hematoma",
+    "longTailKeywords": [
+      "subdural hematoma symptoms",
+      "chronic subdural hematoma treatment",
+      "acute subdural hematoma",
+      "burr hole drainage",
+      "middle meningeal artery embolization",
+      "subdural hematoma after fall",
+      "subdural hematoma anticoagulation",
+      "subdural hemorrhage CT",
+      "Marshall score",
+      "Glasgow Coma Scale",
+      "elderly head injury",
+      "subdural hematoma recovery time"
+    ],
+    "primarySpecialty": "Neurosurgery",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Diagnostic and management framework anchored to the 2020 Neurocritical Care Society and Society of Critical Care Medicine joint guidelines, the 2017 Brain Trauma Foundation Severe TBI Guidelines (Carney et al. Neurosurgery 2017, PMID 27654000), and the 2023 chronic SDH management consensus (von der Brelie et al.). MMA embolization evidence from EMBOLISE and STEM trials (Kan et al. NEJM 2024). Epidemiology per Frontera et al. Stroke 2017 and Adhiyaman et al. J R Soc Med 2002. Outcome data per Bullock et al. Neurosurgery 2006 (PMID 16540743). Anticoagulation reversal per AHA/Neurocritical Care Society guidance."
+  },
+
+  "h1Title": "Subdural Hematoma: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neurosurgery",
+
+  "heroOverview": "A subdural hematoma is a collection of blood between the dura and the arachnoid membrane covering the brain, most commonly caused by tearing of bridging veins from head injury but also occurring spontaneously in older adults on anticoagulation. It is classified by time course: acute (within 3 days of injury, usually severe high-energy trauma), subacute (3-21 days), and chronic (more than 21 days, often after seemingly minor trauma in older adults). Acute subdural hematoma carries 30-day mortality of 40-60% in severely injured patients; chronic subdural hematoma — increasingly common as populations age and anticoagulant use rises — affects 17-58 per 100,000 adults over 65 per year and has 30-day mortality of 5-15% with modern care. Symptoms range from progressive headache, confusion, and one-sided weakness over days to weeks in chronic forms, to rapid deterioration with coma in acute forms. Treatment is surgical evacuation for symptomatic or large hematomas via burr hole drainage (chronic SDH) or craniotomy (acute SDH), with increasing use of middle meningeal artery embolization to prevent recurrence.",
+
+  "keyStats": {
+    "prevalence": "Acute traumatic subdural hematoma: 1-1.5 per 1,000 hospital admissions; chronic subdural hematoma: 17-58 per 100,000 adults over 65 (Adhiyaman 2002 and contemporary registries)",
+    "demographics": "Men affected approximately twice as often as women; acute SDH affects all ages with peaks in young men (high-energy trauma) and older adults (falls); chronic SDH primarily affects older adults",
+    "avgAge": "Acute SDH median age 50-65 in modern series with rising age over time; chronic SDH median age 75-80",
+    "globalCases": "Estimated 10 million new traumatic brain injuries annually with intracranial hemorrhage worldwide; chronic SDH incidence expected to double globally by 2030 with population aging (GBD 2021)"
+  },
+
+  "definition": "A subdural hematoma (ICD-10: I62.0 nontraumatic; S06.5 traumatic) is a collection of blood between the dura mater and the arachnoid membrane in the cranial vault. Anatomically distinct from epidural hematoma (between skull and dura) and intracerebral hemorrhage (within brain parenchyma). The most common mechanism is tearing of bridging veins crossing the subdural space from the cerebral cortex to the dural venous sinuses; less commonly arterial bleeding (especially in acute trauma) and rarely spontaneous bleeding from cortical aneurysm rupture. Time-course classification: acute (under 3 days post-injury, with hyperdense blood on CT and often associated brain contusion), subacute (3-21 days, mixed density), and chronic (more than 21 days, hypodense or mixed-density collection with neomembrane formation). A chronic SDH is initiated by minor trauma, sometimes too trivial to recall, with brain shrinkage in older adults and anticoagulant use being the dominant predisposing factors. Acute subdural hematoma is one of the most lethal traumatic brain injuries; chronic SDH is among the most surgically curable in older neurosurgical patients. Management is neurosurgery-led with substantial neurology, neurocritical care, geriatrics, and rehabilitation involvement, and increasingly involves multidisciplinary head injury or fall prevention services. The Brain Trauma Foundation, AHA/ASA, and Neurocritical Care Society publish core guidelines.",
+
+  "typesClassification": [
+    { "type": "Acute subdural hematoma (under 3 days)", "description": "Usually caused by high-energy trauma (motor vehicle crash, fall from height, assault) with concurrent brain contusion. Hyperdense on CT. Mortality 40-60% in patients with severe TBI; survival and functional outcome depend on initial GCS, age, pupillary findings, hematoma volume, and surgical timing. Standard treatment is craniotomy with evacuation for thickness >10 mm, midline shift >5 mm, or neurological deterioration." },
+    { "type": "Subacute subdural hematoma (3-21 days)", "description": "Often clinically silent or producing gradually worsening symptoms. Mixed density on CT. Management individualized — observation for small asymptomatic collections, drainage for symptomatic or progressive lesions." },
+    { "type": "Chronic subdural hematoma (>21 days)", "description": "Common in older adults after seemingly minor trauma. Hypodense or mixed-density on CT. Symptoms develop insidiously over days to weeks: progressive headache, cognitive decline, gait disturbance, one-sided weakness, seizure. Treatment is burr hole drainage in most symptomatic cases, with 80-90% improvement at 6 weeks. Recurrence rate 10-20%; middle meningeal artery embolization increasingly added to reduce recurrence." },
+    { "type": "Acute-on-chronic subdural hematoma", "description": "Acute rebleed into an existing chronic SDH. Mixed-density appearance on CT with hyperdense and hypodense components. Requires evacuation similar to acute SDH and is more common in patients on antiplatelet or anticoagulant therapy." },
+    { "type": "Bilateral subdural hematoma", "description": "Hematomas on both sides of the brain, often with subtle bilateral symptoms and balanced midline. Can be missed on CT when the two collections balance shift. Common in elderly patients on anticoagulants; often requires bilateral surgical drainage." }
+  ],
+
+  "primarySymptoms": [
+    "Progressive headache developing over days to weeks (chronic SDH) or rapidly worsening severe headache (acute SDH).",
+    "Cognitive decline, confusion, and personality change, often mistaken for dementia or delirium in older adults with chronic SDH.",
+    "One-sided weakness (hemiparesis), most commonly affecting arm and leg on the side opposite the hematoma.",
+    "Gait disturbance, frequent falls, and clumsiness — sometimes the first noticed symptom in older adults.",
+    "Slurred speech, dysphasia, or language comprehension difficulty.",
+    "Seizures, occurring in 10-15% of patients at presentation or during the course.",
+    "Drowsiness, lethargy, and altered consciousness, ranging from sleepy but rousable to coma depending on hematoma size and brain compression.",
+    "Vomiting, especially in children with subdural hematoma from abusive head trauma.",
+    "Pupil asymmetry (unilateral dilation from uncal herniation) — a late and ominous sign of acute hematoma expansion.",
+    "Subtle behavior change (apathy, mood lability, urinary incontinence) in chronic SDH — often the only manifestation in elderly patients."
+  ],
+
+  "earlyWarningSigns": [
+    "New persistent headache or change in usual headache pattern after head injury, especially in older adults on anticoagulation",
+    "Progressive cognitive change, gait disturbance, or one-sided weakness developing over days to weeks",
+    "Repeated falls in an older adult — recurrent minor head injury may produce chronic SDH",
+    "New focal seizure, especially after fall or minor head injury",
+    "Worsening drowsiness after head injury — even days or weeks later"
+  ],
+
+  "emergencySigns": [
+    "Decreasing level of consciousness or coma after head injury — call emergency services and arrange immediate CT",
+    "Severe headache with vomiting, unilateral pupil dilation, or focal neurological deficit",
+    "Seizure after head injury — first-aid principles plus emergency evaluation",
+    "Fixed dilated pupil with hemiparesis — uncal herniation requires emergency neurosurgical evaluation; mortality without intervention is extremely high",
+    "Hypotension, bradycardia, irregular respiration (Cushing's triad) — late signs of raised intracranial pressure requiring immediate intervention"
+  ],
+
+  "causes": [
+    {
+      "cause": "Head trauma with tearing of bridging veins",
+      "description": "The most common mechanism. Bridging veins crossing the subdural space tear during acceleration-deceleration or rotational forces, producing acute subdural hematoma. Mechanism causes range from major trauma (motor vehicle crash, fall from height) to minor falls in older adults whose brain shrinkage stretches the bridging veins."
+    },
+    {
+      "cause": "Cerebral atrophy in older adults",
+      "description": "With aging the brain shrinks within the skull, leaving more space and longer, more taut bridging veins. Minor trauma sufficient to tear these veins may be a simple ground-level fall or even no remembered trauma. This is the dominant predisposing factor for chronic SDH after age 65."
+    },
+    {
+      "cause": "Anticoagulant and antiplatelet medications",
+      "description": "Warfarin, direct oral anticoagulants (apixaban, rivaroxaban, dabigatran, edoxaban), and antiplatelets (aspirin, clopidogrel, prasugrel, ticagrelor) substantially increase SDH risk after trauma. Estimated relative risk 3-7x for anticoagulants. Combined antiplatelet plus anticoagulant therapy is particularly high risk."
+    },
+    {
+      "cause": "Coagulopathy from liver disease, hematological disorders, or alcohol use",
+      "description": "Liver cirrhosis, thrombocytopenia, hemophilia, and chronic heavy alcohol use all impair coagulation and increase SDH risk for any given mechanism of injury."
+    },
+    {
+      "cause": "Abusive head trauma in infants",
+      "description": "Shaken baby syndrome and inflicted head injury are major causes of subdural hematoma in infants under 1 year. Often bilateral, with retinal hemorrhage, and disproportionate to history given. Mandatory child protection investigation when suspected."
+    },
+    {
+      "cause": "Spontaneous rupture of cortical arteries or vascular malformations",
+      "description": "Uncommon cause — typically involves a small cortical artery aneurysm or arteriovenous malformation. Suspected when no trauma history and no anticoagulation. Cerebral angiography may be needed in atypical presentations."
+    },
+    {
+      "cause": "Intracranial hypotension (low CSF pressure)",
+      "description": "Spontaneous or post-procedure CSF leak (after lumbar puncture, epidural injection, spinal surgery) can cause brain sagging and stretching of bridging veins, producing subdural hematoma or hygroma. CT myelography or MRI identifies the leak; epidural blood patch addresses the cause."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 65", "category": "non-modifiable", "description": "Cerebral atrophy with aging substantially increases chronic SDH risk after any head injury, including minor falls. Incidence rises from 3-8 per 100,000 in adults under 65 to 50-60 per 100,000 in those over 80." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men have approximately twice the risk of women across age groups, partly explained by higher trauma exposure and higher alcohol use." },
+    { "factor": "Anticoagulant and antiplatelet therapy", "category": "modifiable", "description": "Warfarin, direct oral anticoagulants, and antiplatelets multiply SDH risk after any trauma by 3-7x. Risk-benefit decisions are individualized; modern reversal agents reduce but do not eliminate the risk." },
+    { "factor": "Recurrent falls", "category": "modifiable", "description": "Falls are the most common cause of chronic SDH in older adults. Multifactorial fall risk reduction (medication review, vision correction, gait training, home safety, vitamin D) lowers SDH incidence." },
+    { "factor": "Chronic alcohol use", "category": "modifiable", "description": "Heavy alcohol use increases SDH risk through cerebral atrophy, coagulopathy, recurrent falls, and seizures. Up to 30% of chronic SDH patients have a history of significant alcohol use." },
+    { "factor": "Coagulopathy (liver disease, thrombocytopenia, hemophilia)", "category": "modifiable", "description": "Any impairment of coagulation increases SDH risk and complicates surgical management. Pre-operative correction of coagulopathy reduces complications." },
+    { "factor": "Prior subdural hematoma", "category": "non-modifiable", "description": "Patients with a prior SDH have a higher risk of recurrence and new contralateral hematomas, partly because the predisposing factors (atrophy, anticoagulation, falls) persist." }
+  ],
+
+  "affectedDemographics": [
+    "Adults over 65: largest and fastest-growing group affected by chronic subdural hematoma",
+    "Patients on anticoagulation: 3-7x higher risk of SDH after any trauma; chronic SDH incidence rises markedly in atrial fibrillation cohorts on warfarin or DOAC",
+    "Young men with high-energy trauma: motor vehicle crashes, falls from height, assault — predominant in acute SDH",
+    "Infants with abusive head trauma: peak rates under age 1; mandatory reporting and child protection involvement",
+    "Patients with chronic alcohol use and falls: a distinct high-risk group, often presenting with chronic SDH"
+  ],
+
+  "diagnosisOverview": "Diagnosis of subdural hematoma is established by emergency non-contrast CT of the head, the first-line imaging modality. Acute SDH appears as a hyperdense crescent-shaped collection along the cerebral convexity, often crossing skull suture lines but not falx cerebri. Subacute SDH appears mixed-density and chronic SDH is hypodense with possible neomembranes producing internal density variation. CT volumes, midline shift, basal cistern compression, contusions, and other intracranial injuries are quantified using the Rotterdam or Marshall scores. MRI is more sensitive for small hematomas, posterior fossa lesions, and dating of mixed-density collections, particularly useful when CT is equivocal or for surgical planning. Clinical assessment includes Glasgow Coma Scale (GCS), pupil examination, motor function, brainstem reflexes, and history of trauma, anticoagulation, falls, and alcohol use. Coagulation studies (PT/INR, aPTT, platelet count, fibrinogen) are obtained urgently in all patients, particularly those on anticoagulation, with specific drug levels or anti-Xa where relevant. In acute presentations, point-of-care viscoelastic testing (TEG/ROTEM) guides reversal. CT angiography is added for atraumatic presentations or with associated subarachnoid hemorrhage to exclude underlying aneurysm or vascular malformation. Acute SDH requires immediate neurosurgical assessment; chronic SDH may be managed less urgently if the patient is neurologically stable, but progressive symptoms warrant prompt surgical planning. Falls assessment and underlying coagulopathy or substance use should be evaluated in parallel with the acute care plan.",
+
+  "diagnosticTests": [
+    { "test": "Non-contrast CT head", "purpose": "First-line imaging for acute, subacute, and chronic SDH; identifies blood, midline shift, mass effect, contusions, and other injuries", "whatToExpect": "Rapid CT scan, 5-10 minutes in the scanner. Most patients with head injury or new neurological symptoms receive immediate CT. Findings interpreted urgently by radiology with direct communication to the treating team." },
+    { "test": "MRI of brain (selected cases)", "purpose": "More sensitive than CT for small or isodense hematomas, dating of subacute lesions, and identification of underlying vascular malformation", "whatToExpect": "30-45 minutes in the scanner. Susceptibility-weighted imaging is sensitive to small blood products; gradient-echo sequences detect microhemorrhages. Often added for treatment planning in chronic SDH." },
+    { "test": "CT angiography of head and neck", "purpose": "Excludes underlying aneurysm, AVM, or dural fistula in atraumatic or atypical presentations", "whatToExpect": "Contrast IV line then CT angiogram, 15-30 minutes. Particularly important for nontraumatic SDH or unusual locations." },
+    { "test": "Coagulation studies and drug levels", "purpose": "Identifies coagulopathy contributing to bleed and guides reversal", "whatToExpect": "Urgent blood sample: PT/INR, aPTT, platelet count, fibrinogen; direct oral anticoagulant level (DOAC) or anti-Xa activity where available; thromboelastography (TEG/ROTEM) at trauma centers." },
+    { "test": "Glasgow Coma Scale and neurological examination", "purpose": "Quantifies severity and tracks deterioration; baseline for surgical decision making", "whatToExpect": "Standard bedside assessment: eye opening, verbal response, motor response (each scored), pupil size and reactivity, motor strength, sensation. Performed at presentation and repeatedly during observation." },
+    { "test": "Marshall and Rotterdam CT classification scores", "purpose": "Standardized grading of CT findings to estimate prognosis and guide management", "whatToExpect": "Scored from CT imaging by neurosurgery or neurocritical care team. Includes hematoma size, midline shift, basal cistern compression, and presence of contusions." },
+    { "test": "Comprehensive geriatric and falls assessment", "purpose": "Identifies modifiable causes of falls and other contributors to chronic SDH in older adults", "whatToExpect": "Geriatric or falls-clinic evaluation with medication review (especially anticoagulants, sedatives), gait analysis, vision, cognition, vitamin D level, and home safety review. Pursued in parallel with neurosurgical care." }
+  ],
+
+  "treatmentOverview": "Treatment depends on type, size, neurological status, and patient factors. Acute subdural hematoma in adults: surgical evacuation via craniotomy is indicated for hematoma thickness >10 mm, midline shift >5 mm, GCS deterioration, asymmetric pupils, or refractory raised intracranial pressure (Brain Trauma Foundation criteria). Decompressive craniectomy may be added for refractory ICP. Smaller acute SDH without mass effect can be observed with serial CT and neurological monitoring in a neurocritical care unit. Reversal of anticoagulation is urgent — prothrombin complex concentrate plus vitamin K for warfarin, andexanet alfa for factor Xa inhibitors (apixaban, rivaroxaban, edoxaban), idarucizumab for dabigatran, and platelet transfusion when antiplatelets are involved. Blood pressure is tightly controlled (systolic 140-160 mmHg pre-surgery, 100-140 mmHg post-surgery), seizures are prevented and treated (levetiracetam first-line), and raised ICP is managed with head-of-bed elevation, hyperosmolar therapy (mannitol 1 g/kg or hypertonic saline), and occasionally CSF drainage. Chronic subdural hematoma: burr hole drainage is first-line for symptomatic or large hematomas, with 80-90% clinical improvement at 6 weeks. Subdural drain is placed for 24-48 hours; outpatient or short inpatient stay typical for stable older adults. Recurrence rate 10-20%. Middle meningeal artery embolization is increasingly used as adjunct (after EMBOLISE and STEM 2024 trials) to reduce recurrence — placed before or after surgery via interventional neuroradiology with halving of recurrence rate. Resumption of anticoagulation is individualized: typically restarted 1-4 weeks after stable hematoma resolution depending on thromboembolic risk; some patients are switched to alternative therapy or referred for left atrial appendage closure for atrial fibrillation. Rehabilitation, falls prevention, and home modifications are essential after recovery, particularly in older adults.",
+
+  "medicalTreatments": [
+    { "name": "Urgent anticoagulation reversal (4-factor PCC, andexanet, idarucizumab, platelets)", "description": "For warfarin: 4-factor prothrombin complex concentrate 25-50 IU/kg plus vitamin K 10 mg IV. For DOACs: andexanet alfa for factor Xa inhibitors, idarucizumab 5 g IV for dabigatran. For antiplatelets: platelet transfusion in selected cases; evidence base limited but standard practice in active bleeding.", "effectiveness": "Reverses anticoagulation effect within minutes to hours; reduces hematoma expansion and improves surgical outcomes" },
+    { "name": "Antiepileptic prophylaxis (levetiracetam 500-1500 mg twice daily for 1-2 weeks)", "description": "Used for 7-14 days after acute traumatic SDH to prevent early post-traumatic seizures per Brain Trauma Foundation guidance. Levetiracetam preferred over phenytoin in older patients due to fewer interactions. Long-term prophylaxis only if seizures occur.", "effectiveness": "Reduces early post-traumatic seizures by approximately 60% in randomized trials (Temkin 1990 and subsequent)" },
+    { "name": "Hyperosmolar therapy for raised intracranial pressure", "description": "Mannitol 0.5-1 g/kg IV bolus or 3% hypertonic saline 250 mL IV bolus to lower ICP. Used as bridge to definitive surgical evacuation or to manage refractory ICP after surgery.", "effectiveness": "Lowers ICP within 15-30 minutes; bridge to definitive intervention" },
+    { "name": "Blood pressure management protocols", "description": "Pre-surgery systolic target 140-160 mmHg with labetalol, nicardipine, clevidipine, or hydralazine. Avoidance of hypotension (systolic <90 mmHg) which worsens secondary brain injury.", "effectiveness": "Reduces hematoma expansion and secondary brain injury" },
+    { "name": "Conservative observation for small asymptomatic chronic SDH (less than 10 mm thick, no midline shift, stable neurologically)", "description": "Serial CT at 2 and 6 weeks with neurological monitoring. Many small chronic SDH resolve spontaneously without surgery. Used particularly in fit older adults willing to accept observation.", "effectiveness": "60-80% resolve without surgery in small asymptomatic cases; close monitoring essential" },
+    { "name": "Atorvastatin therapy for chronic SDH (emerging)", "description": "Phase 2-3 trials suggest atorvastatin 20 mg daily reduces chronic SDH size and may reduce surgery need or recurrence. Mechanism via anti-inflammatory and angiogenic effects on neomembranes. Not yet standard of care but increasingly studied.", "effectiveness": "Reduced hematoma volume in some randomized trials; ongoing research" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Burr hole craniostomy with drainage", "description": "First-line for symptomatic chronic SDH. One or two burr holes drilled in the skull; the hematoma is washed out with saline; a subdural drain is left in place for 24-48 hours. Performed under local or general anesthesia; hospital stay 2-5 days.", "successRate": "80-90% achieve significant clinical improvement at 6 weeks; recurrence rate 10-20%" },
+    { "name": "Craniotomy with hematoma evacuation", "description": "First-line for acute SDH and for chronic SDH with thick membranes, organized clot, or after burr hole failure. Bone flap raised; dura opened and clot removed; bridging vein source identified and controlled.", "successRate": "Mortality reduction in selected acute SDH; better evacuation in organized chronic SDH but higher complication rate than burr hole" },
+    { "name": "Middle meningeal artery (MMA) embolization", "description": "Endovascular procedure delivering embolic material to the middle meningeal artery to reduce blood supply to SDH neomembranes. Used as adjunct to surgery or as primary therapy in selected patients. Increasingly first-line based on EMBOLISE and STEM 2024 RCT results.", "successRate": "Reduces recurrence by approximately 50% compared with surgery alone (EMBOLISE 2024); useful in high recurrence risk patients" },
+    { "name": "Decompressive craniectomy", "description": "Large portion of skull removed (without immediate replacement) to allow brain swelling; dura widely opened. Reserved for refractory raised intracranial pressure after acute SDH evacuation. Skull replaced with autologous bone or custom implant after recovery.", "successRate": "Reduces mortality in selected severe TBI with refractory ICP; long-term functional outcomes variable; cranioplasty needed at 3-6 months" },
+    { "name": "Twist-drill craniostomy (subdural evacuating port system, SEPS)", "description": "Bedside alternative for chronic SDH in selected patients — small drill creates an opening for a closed drainage system. Less invasive than burr hole; useful in frail elderly patients.", "successRate": "70-80% achieve adequate drainage; recurrence rates similar to burr hole; useful when general anesthesia is high risk" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Subdural drain protocols (Santarius drain study)", "description": "Routine placement of a subdural drain for 24-48 hours after burr hole drainage halves recurrence rate (Santarius et al. Lancet 2009). Standard of care for chronic SDH at most centers." },
+    { "name": "Aggressive falls prevention and anticoagulant review", "description": "Multifactorial falls prevention (medication review, vision correction, vitamin D, gait training, home modifications) reduces SDH recurrence by reducing repeat trauma. Anticoagulant review and consideration of left atrial appendage closure or DOAC alternative in atrial fibrillation patients with recurrent SDH." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "burr-hole-drainage-chronic-sdh",
+    "craniotomy-acute-sdh",
+    "middle-meningeal-artery-embolization",
+    "decompressive-craniectomy"
+  ],
+
+  "whySeeSpecialist": "Subdural hematoma always requires neurosurgical evaluation — even apparently small lesions can deteriorate rapidly. Acute SDH is a surgical emergency. Chronic SDH is managed by neurosurgery, often in collaboration with geriatrics, neurology, neurocritical care, and rehabilitation. Comprehensive stroke centers or major neurotrauma centers offer the best outcomes for severe acute SDH.",
+  "doctorSelectionGuide": "Choose a neurosurgeon at a center with 24/7 emergency neurosurgical coverage, neurocritical care unit, and access to interventional neuroradiology (for MMA embolization). For chronic SDH in older adults, look for combined geriatric and neurosurgery pathways. Verify that the center participates in trauma center accreditation or comprehensive stroke center programs.",
+
+  "hospitalCriteria": [
+    "24/7 neurosurgical coverage and dedicated neurocritical care unit",
+    "Trauma center accreditation (Level I or II) for acute traumatic SDH",
+    "Interventional neuroradiology capability for MMA embolization",
+    "Rapid anticoagulation reversal protocols and access to reversal agents",
+    "Integrated geriatric, neurology, and rehabilitation services"
+  ],
+  "keyFacilities": [
+    "ACS-verified Level I or II trauma centers",
+    "Comprehensive Stroke Centers (Joint Commission certified)",
+    "Academic medical centers with neurotrauma programs",
+    "Centers with combined geriatric-neurosurgical chronic SDH pathways",
+    "Interventional neuroradiology programs with MMA embolization expertise"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Implement multifactorial falls prevention in older adults: medication review (reduce sedatives, antihypertensives causing orthostasis), vision correction, vitamin D supplementation, gait and balance training, home safety modifications.",
+    "Review anticoagulation indication and risk-benefit balance regularly in older adults; consider DOACs over warfarin where appropriate (similar efficacy, lower intracranial bleeding risk).",
+    "Consider left atrial appendage closure (Watchman device) in atrial fibrillation patients with recurrent bleeding or high SDH risk on anticoagulation.",
+    "Strict use of helmets and seatbelts for high-energy activities (cycling, motorcycling, sports); enforce graduated driver licensing.",
+    "Address heavy alcohol use, both as a falls risk factor and a coagulopathy contributor.",
+    "Avoid combined anticoagulant and antiplatelet therapy unless specifically indicated (e.g., recent stenting); review for duration limitation.",
+    "Treat osteoporosis, sarcopenia, and orthostatic hypotension that contribute to falls risk."
+  ],
+
+  "lifestyleModifications": [
+    "Take medications as prescribed; do not stop anticoagulants without clinician advice but report any new headache, confusion, or weakness immediately.",
+    "Use mobility aids (cane, walker, grab rails) as advised after acute SDH or in older adults with falls history.",
+    "Maintain good lighting, remove loose rugs, install bathroom grab rails, and consider a home safety assessment.",
+    "Limit or stop alcohol use; alcohol both raises falls risk and impairs coagulation.",
+    "Attend physical therapy after surgery to recover strength, balance, and gait; many older adults benefit from 6-12 weeks of supervised rehabilitation.",
+    "Carry medical alert identifier if on anticoagulants, after recent neurosurgery, or with persistent neurological deficit.",
+    "Schedule and attend post-operative follow-up CT and clinic visits to monitor for recurrence and adjust anticoagulation."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style diet supporting brain health and reducing cardiovascular risk",
+      "Adequate vitamin D and calcium for bone health and falls prevention (vitamin D >30 ng/mL reduces falls in older adults)",
+      "Adequate protein intake (1-1.2 g/kg/day) to prevent sarcopenia and support recovery",
+      "Hydration to prevent orthostatic hypotension and dehydration-related falls"
+    ],
+    "avoid": [
+      "Alcohol — raises falls risk and impairs coagulation",
+      "Foods that strongly interact with warfarin if used (vitamin K consistency rather than avoidance is the goal)",
+      "Restrictive diets that worsen sarcopenia in older adults",
+      "Foods that interact with DOACs (limited interactions but follow specific drug guidance)"
+    ]
+  },
+  "exerciseGuidelines": "Graded rehabilitation is essential after SDH treatment. Begin with bed mobility and transfers, advance to standing and walking with supervision, then progressive resistance and balance training. Tai chi and structured falls-prevention programs reduce falls and SDH recurrence in older adults. Avoid contact sports and activities with significant fall or head injury risk until cleared by neurosurgery; in older adults, lifelong avoidance of high-risk activities is often appropriate. Resume routine activity in 4-8 weeks after burr hole drainage; longer (8-16 weeks) after craniotomy or with persistent deficits.",
+
+  "dailyManagement": [
+    "Take antiplatelet, anticoagulant, antiepileptic, and other prescribed medications consistently at the same times each day.",
+    "Monitor blood pressure regularly; report values consistently above target.",
+    "Use mobility aids and practice safe ambulation techniques learned in physical therapy.",
+    "Maintain a fall log; report any fall to the treating team for evaluation.",
+    "Report any new headache, vomiting, confusion, weakness, or speech difficulty immediately — could indicate recurrent SDH.",
+    "Attend scheduled neurosurgical follow-up appointments and post-operative CT scans."
+  ],
+
+  "prognosis": "Acute subdural hematoma carries 30-day mortality of 40-60% in severely injured patients, dropping to 20-30% in younger patients with smaller hematomas. Functional outcome at 6 months is dichotomous — good recovery or moderate disability in approximately 30%, severe disability or death in 60-70%. Age, initial GCS, pupillary findings, hematoma volume, midline shift, associated injuries, time to surgery, and anticoagulation reversal are the strongest prognostic factors. Chronic subdural hematoma has substantially better outcomes: 80-90% achieve good clinical improvement after surgical drainage; 30-day mortality 5-15%; recurrence rate 10-20% with surgery alone, halved with adjunctive MMA embolization. Cognitive recovery is typically gradual over 3-6 months; many older adults regain prior function. Predictors of poor chronic SDH outcome: very advanced age, severe baseline cognitive impairment, multiple comorbidities, large bilateral hematomas, severe neurological deficit at presentation. Resumption of anticoagulation is associated with substantially better long-term cardiovascular outcomes in atrial fibrillation patients despite slightly higher SDH recurrence — restarted in 70-85% of cases after consensus risk-benefit discussion at 1-4 weeks.",
+
+  "recoveryTimeline": "Acute SDH: hospital stay typically 7-21 days depending on severity; rehabilitation over 3-12 months; cognitive and functional improvements continue up to 2 years post-injury. Chronic SDH burr hole drainage: hospital stay 2-5 days; clinical improvement evident within days to weeks; full CT resolution over 6-12 weeks. Anticoagulation typically resumed 1-4 weeks after surgery in patients with strong indication and stable hematoma. Driving cleared after individual neurological and neurocognitive assessment, typically at 1-3 months minimum.",
+
+  "complications": [
+    "Recurrence of subdural hematoma (10-20% after burr hole drainage; halved with MMA embolization)",
+    "Seizures, occurring in 10-15% of acute and 5-10% of chronic SDH",
+    "Cognitive impairment, particularly in elderly patients with chronic SDH; usually improves over 3-6 months but can persist",
+    "Surgical complications: infection (1-3%), bleeding into surgical site, CSF leak, pneumocephalus",
+    "Deep vein thrombosis and pulmonary embolism — common in immobilized SDH patients; prophylaxis usually started 24-72 hours after surgery",
+    "Anticoagulation dilemma: stopping anticoagulants raises ischemic stroke risk; resuming risks SDH recurrence — careful individualized decisions needed",
+    "Functional decline and loss of independence in older adults, even after successful surgery"
+  ],
+
+  "supportResources": [
+    { "name": "Brain Trauma Foundation", "url": "https://www.braintrauma.org/", "description": "US non-profit providing evidence-based clinical guidelines on traumatic brain injury management including subdural hematoma." },
+    { "name": "American Association of Neurological Surgeons (AANS) — patient information", "url": "https://www.aans.org/Patients/Neurosurgical-Conditions-and-Treatments/Subdural-Hematoma", "description": "Authoritative patient-facing information from the US professional society of neurosurgeons." },
+    { "name": "Headway — the brain injury association (UK)", "url": "https://www.headway.org.uk/", "description": "UK charity providing information, support, and rehabilitation resources for brain injury survivors including SDH." },
+    { "name": "American Heart Association — Stroke Association resources", "url": "https://www.stroke.org/", "description": "Patient and professional resources on intracranial hemorrhage including SDH, anticoagulation, and stroke prevention." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "epidural-hematoma", "name": "Epidural Hematoma", "keyDifference": "Epidural hematoma is between the skull and dura, usually from arterial bleeding (middle meningeal artery) after temporal bone fracture, and produces a biconvex (lens-shaped) collection on CT that does not cross suture lines. Subdural hematoma is beneath the dura, usually from bridging vein injury, and produces a crescent-shaped collection that crosses sutures but not falx. Treatment and prognosis differ substantially." },
+    { "slug": "stroke", "name": "Stroke", "keyDifference": "Stroke encompasses ischemic infarction and intracerebral hemorrhage. Both can mimic SDH clinically. Non-contrast CT distinguishes: SDH is an extra-axial crescent, intracerebral hemorrhage is within brain tissue, and acute ischemic stroke initially shows no blood. Treatment pathways differ — thrombolysis for ischemic stroke is contraindicated when SDH is present." },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease", "keyDifference": "Alzheimer's disease produces gradual cognitive decline over years with characteristic memory and language deterioration. Chronic SDH in older adults can mimic dementia but develops over days to weeks. Suspicion of SDH should prompt imaging in any older adult with subacute cognitive change, particularly after recent fall or on anticoagulation." },
+    { "slug": "cerebral-aneurysm", "name": "Cerebral Aneurysm (Subarachnoid Hemorrhage)", "keyDifference": "Aneurysmal subarachnoid hemorrhage produces thunderclap headache with blood pattern around the circle of Willis on CT. SDH produces a crescent over the cortex. The two have distinct treatment pathways, although both can coexist after major trauma." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation" },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease" },
+    { "slug": "alcohol-use-disorder", "name": "Alcohol Use Disorder" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "epidural-hematoma", "name": "Epidural Hematoma", "relevance": "Other intracranial extra-axial hemorrhage; differs in location, mechanism, and management." },
+    { "slug": "stroke", "name": "Stroke", "relevance": "Subdural hematoma is a form of hemorrhagic stroke under broader stroke umbrella; shares neurocritical care infrastructure." },
+    { "slug": "cerebral-aneurysm", "name": "Cerebral Aneurysm", "relevance": "Another major cause of intracranial hemorrhage; differential diagnosis when no clear trauma history." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "relevance": "Common reason for anticoagulation that complicates and predisposes to SDH; requires shared decision-making about resumption." },
+    { "slug": "alzheimers-disease", "name": "Alzheimer's Disease", "relevance": "Common comorbidity in older adults presenting with chronic SDH; SDH can mimic dementia." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is a subdural hematoma?",
+      "answer": "A subdural hematoma is a collection of blood between the dura and arachnoid membranes covering the brain, usually caused by tearing of bridging veins. It is classified as acute (under 3 days, often from severe trauma) or chronic (over 21 days, often in older adults after minor injury). Both require neurosurgical evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of subdural hematoma?",
+      "answer": "Symptoms include progressive headache, confusion, weakness on one side of the body, gait problems, slurred speech, drowsiness, vomiting, and seizures. In older adults with chronic SDH, symptoms develop slowly over days to weeks and can mimic stroke or dementia. Acute SDH from severe trauma often causes rapid loss of consciousness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a subdural hematoma diagnosed?",
+      "answer": "A non-contrast CT scan of the head is the first-line test. Acute SDH appears as a hyperdense crescent on the brain surface; chronic SDH appears hypodense or mixed. MRI is added when CT is equivocal, when small lesions are suspected, or for surgical planning. Coagulation studies are taken in parallel.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is subdural hematoma a stroke?",
+      "answer": "Subdural hematoma is a form of hemorrhagic stroke caused by bleeding outside the brain rather than within it. It is treated by neurosurgery rather than the typical stroke protocols. The two conditions are distinguished by CT findings: SDH shows blood in the subdural space; ischemic stroke shows no blood and later infarcted tissue.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is subdural hematoma treated?",
+      "answer": "Acute SDH is treated with craniotomy and evacuation when large or causing brain compression. Chronic SDH is usually treated with burr hole drainage — a small skull opening with washout. Middle meningeal artery embolization is increasingly added to reduce recurrence. Anticoagulation is urgently reversed in active bleeding.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a subdural hematoma heal on its own?",
+      "answer": "Small asymptomatic chronic SDH in stable patients can sometimes resolve without surgery and is managed with observation and serial CT. Symptomatic or large hematomas require surgical drainage. Acute SDH virtually never resolves without intervention if causing mass effect.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to recover from subdural hematoma?",
+      "answer": "Chronic SDH after burr hole drainage typically shows clinical improvement within days to weeks; full CT resolution takes 6-12 weeks. Acute SDH recovery is longer, with rehabilitation over 3-12 months and continued functional improvement up to 2 years. Older adults often need supported recovery and home modifications.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can blood thinners cause a subdural hematoma?",
+      "answer": "Anticoagulants (warfarin, apixaban, rivaroxaban, dabigatran, edoxaban) and antiplatelets (aspirin, clopidogrel) increase the risk of SDH after any head injury by 3-7 times. Risk is highest with combined anticoagulant plus antiplatelet therapy. Modern reversal agents allow safer surgical management when SDH does occur.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for subdural hematoma?",
+      "answer": "Chronic SDH has 30-day mortality of 5-15% with modern care; most older adults recover well. Acute SDH from severe trauma carries 30-day mortality of 40-60%, with substantial disability in survivors. Outcome depends heavily on age, initial Glasgow Coma Scale, hematoma size, and time to treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you have a subdural hematoma without symptoms?",
+      "answer": "Small chronic SDH can be asymptomatic and discovered incidentally on imaging done for another reason. Acute SDH is usually symptomatic. Even asymptomatic SDH requires neurosurgical evaluation because deterioration can occur unpredictably, particularly in patients on anticoagulants.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between subdural and epidural hematoma?",
+      "answer": "Subdural hematoma is beneath the dura, usually from torn bridging veins, with a crescent shape on CT that can cross skull suture lines. Epidural hematoma is between skull and dura, usually from arterial bleeding after temporal fracture, with a biconvex lens shape that does not cross sutures. Treatment urgency and prognosis differ.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is burr hole drainage?",
+      "answer": "Burr hole drainage is a minimally invasive neurosurgical procedure for chronic subdural hematoma. Under local or general anesthesia, the surgeon drills one or two small openings in the skull and washes the hematoma out with saline, leaving a soft drain for 24-48 hours. Hospital stay is typically 2-5 days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is MMA embolization for subdural hematoma?",
+      "answer": "Middle meningeal artery embolization is an endovascular procedure that uses tiny particles to block the artery supplying the membranes around a chronic subdural hematoma. The 2024 EMBOLISE and STEM trials showed it cuts recurrence rate roughly in half compared with surgery alone. It is increasingly added to or replacing surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I restart blood thinners after a subdural hematoma?",
+      "answer": "In most patients with a strong indication (atrial fibrillation, mechanical heart valve), anticoagulation is resumed 1-4 weeks after stable hematoma resolution. Decisions are individualized weighing stroke risk and bleeding risk. Options include resuming the same drug, switching to a DOAC, or referring for left atrial appendage closure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a minor fall cause a subdural hematoma in older adults?",
+      "answer": "Yes. With age-related brain shrinkage, bridging veins are stretched and more easily torn. A ground-level fall or even no remembered trauma can cause a chronic SDH in older adults, especially those on anticoagulants. Any new headache, confusion, or weakness after a fall warrants medical evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a subdural hematoma cause dementia symptoms?",
+      "answer": "Yes. Chronic SDH commonly causes progressive confusion, memory problems, gait disturbance, and personality change that mimic dementia. Imaging detects it and surgical drainage often reverses the cognitive symptoms substantially. SDH should be considered in any older adult with subacute cognitive decline.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is subdural hematoma always from head injury?",
+      "answer": "Most subdural hematomas follow head trauma, but spontaneous SDH can occur from cortical arterial rupture, vascular malformations, intracranial hypotension, or coagulopathy. In atraumatic presentations, CT or MR angiography is added to find an underlying vascular cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens after subdural hematoma surgery?",
+      "answer": "After burr hole drainage, the subdural drain is removed in 24-48 hours and most patients are discharged in 2-5 days. Follow-up CT is done at 4-6 weeks. After craniotomy for acute SDH, hospital stay is longer (1-3 weeks) and rehabilitation typically extends 3-12 months depending on neurological status.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can subdural hematoma recur?",
+      "answer": "Yes. Chronic SDH recurs in 10-20% of patients after burr hole drainage. Risk factors include incomplete drainage, anticoagulation, larger initial hematoma, and bilateral involvement. Recurrence rates are roughly halved when MMA embolization is added to surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get subdural hematomas?",
+      "answer": "Yes. In infants, subdural hematoma is a hallmark of abusive head trauma (shaken baby syndrome), often with retinal hemorrhages and disproportionate injury to history. Older children develop SDH from significant accidental trauma. All pediatric SDH requires careful evaluation including consideration of non-accidental injury.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I prevent another subdural hematoma?",
+      "answer": "Multifactorial falls prevention is the most effective measure in older adults: medication review (especially sedatives and orthostatic-hypotension medications), vision correction, vitamin D supplementation, gait and balance training, home safety modifications, and minimizing alcohol use. Review anticoagulation and consider DOAC or left atrial appendage closure if appropriate.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Subdural Hematoma (SDH, brain bleed under dura)",
+  "regionalNames": [
+    { "name": "Subdural haemorrhage", "region": "UK spelling", "language": "English" },
+    { "name": "Hématome sous-dural", "region": "France, Francophone countries", "language": "French" },
+    { "name": "Hematoma subdural", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "Subduralhämatom", "region": "Germany, Austria", "language": "German" },
+    { "name": "अवदूरीय रक्ताधिक्य", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "subdural hematoma",
+    "subdural haemorrhage",
+    "SDH",
+    "acute subdural hematoma",
+    "chronic subdural hematoma",
+    "burr hole drainage",
+    "craniotomy",
+    "MMA embolization",
+    "middle meningeal artery embolization",
+    "head injury elderly",
+    "bridging vein",
+    "Glasgow Coma Scale",
+    "Marshall score",
+    "warfarin head injury",
+    "DOAC reversal"
+  ],
+  "symptomKeywords": [
+    "headache after fall",
+    "confused after head injury",
+    "weak side of body after fall",
+    "drowsy after hitting head",
+    "memory loss elderly fall",
+    "gait change after head injury",
+    "headache on blood thinners",
+    "dementia after fall"
+  ],
+
+  "metaTitle": "Subdural Hematoma: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Subdural hematoma: blood collection under dura from head injury. Acute vs chronic SDH, burr hole drainage, MMA embolization, medically reviewed.",
+
+  "keywords": [
+    "subdural hematoma",
+    "acute subdural hematoma",
+    "chronic subdural hematoma",
+    "subdural hemorrhage",
+    "burr hole drainage",
+    "craniotomy",
+    "middle meningeal artery embolization",
+    "MMA embolization",
+    "Brain Trauma Foundation guideline",
+    "Glasgow Coma Scale",
+    "Marshall CT classification",
+    "elderly head injury"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Carney N, Totten AM, O'Reilly C, et al. 2017. Guidelines for the Management of Severe Traumatic Brain Injury, Fourth Edition. Neurosurgery 80(1):6-15.", "url": "https://pubmed.ncbi.nlm.nih.gov/27654000/", "accessedDate": "2026-05-14" },
+    { "title": "Bullock MR, Chesnut R, Ghajar J, et al. 2006. Surgical management of acute subdural hematomas. Neurosurgery 58(3 Suppl):S16-24.", "url": "https://pubmed.ncbi.nlm.nih.gov/16540743/", "accessedDate": "2026-05-14" },
+    { "title": "Santarius T, Kirkpatrick PJ, Ganesan D, et al. 2009. Use of drains versus no drains after burr-hole evacuation of chronic subdural haematoma: a randomised controlled trial. Lancet 374(9695):1067-73.", "url": "https://pubmed.ncbi.nlm.nih.gov/19782872/", "accessedDate": "2026-05-14" },
+    { "title": "Kan P, Fiorella D, Dabus G, et al. 2024. Middle meningeal artery embolization for chronic subdural hematoma (EMBOLISE trial). New England Journal of Medicine 391(20):1859-1871.", "url": "https://pubmed.ncbi.nlm.nih.gov/39565148/", "accessedDate": "2026-05-14" },
+    { "title": "Adhiyaman V, Asghar M, Ganeshram KN, Bhowmick BK. 2002. Chronic subdural haematoma in the elderly. Postgraduate Medical Journal 78(916):71-5.", "url": "https://pubmed.ncbi.nlm.nih.gov/11807186/", "accessedDate": "2026-05-14" },
+    { "title": "Frontera JA, Lewin JJ 3rd, Rabinstein AA, et al. 2016. Guideline for Reversal of Antithrombotics in Intracranial Hemorrhage: A Statement for Healthcare Professionals from the Neurocritical Care Society and Society of Critical Care Medicine. Neurocritical Care 24(1):6-46.", "url": "https://pubmed.ncbi.nlm.nih.gov/26714677/", "accessedDate": "2026-05-14" },
+    { "title": "Brennan PM, Kolias AG, Joannides AJ, et al. 2017. The management and outcome for patients with chronic subdural hematoma: a prospective, multicenter, observational cohort study in the United Kingdom. Journal of Neurosurgery 127(4):732-739.", "url": "https://pubmed.ncbi.nlm.nih.gov/27834594/", "accessedDate": "2026-05-14" },
+    { "title": "Brain Trauma Foundation. 2024. TBI Guidelines and Patient Resources. Brain Trauma Foundation, New York.", "url": "https://www.braintrauma.org/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

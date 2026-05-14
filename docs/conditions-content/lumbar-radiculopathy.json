@@ -1,0 +1,433 @@
+{
+  "_meta": {
+    "slug": "lumbar-radiculopathy",
+    "tier": 1,
+    "headTerm": "lumbar radiculopathy",
+    "primarySpecialty": "Physical Medicine & Rehabilitation",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Prevalence and natural history per Konstantinou & Dunn Spine 2008 (PMID 18404105) and Tarulli & Raynor Neurol Clin 2007 (PMID 17445733). Treatment evidence per North American Spine Society 2012 guideline on lumbar disc herniation, NICE NG59 (low back pain and sciatica), and the SPORT trial (Weinstein NEJM 2008 PMID 18171941). Imaging per ACR Appropriateness Criteria 2021."
+  },
+
+  "h1Title": "Lumbar Radiculopathy: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Physical Medicine & Rehabilitation",
+
+  "heroOverview": "Lumbar radiculopathy is pain, paresthesia, and weakness in a dermatomal pattern caused by irritation or compression of a lumbar nerve root, most often L5 or S1. Lifetime prevalence is approximately 3-5% in adults, with annual incidence near 1-2% in working-age populations. The classic presentation is unilateral leg pain radiating below the knee, often described as electrical, burning, or sharp, frequently worse with sitting, coughing, or sneezing. Disc herniation accounts for roughly 90% of cases under age 50 and lumbar spinal stenosis or foraminal narrowing dominates in older adults. About 70-90% of patients improve substantially within 6-12 weeks with non-operative treatment that combines education, NSAIDs, neuropathic pain agents when needed, physiotherapy, and selective epidural steroid injection. Surgery (microdiscectomy) achieves faster pain relief in patients with persistent severe symptoms or progressive motor deficit but produces similar long-term outcomes to non-operative care at 2 years.",
+
+  "keyStats": {
+    "prevalence": "Lifetime prevalence 3-5%; annual incidence 1-2% in working-age adults (Konstantinou & Dunn Spine 2008)",
+    "demographics": "Peak incidence age 30-50 for disc-related cases; older adults more often have stenosis-related radiculopathy. Male-to-female ratio approximately 1.3:1 in surgical series",
+    "avgAge": "Mean age at first presentation 40-45 years for disc herniation; 60-75 years for foraminal stenosis",
+    "globalCases": "Global burden of low back pain (which includes radiculopathy) is the leading cause of years lived with disability worldwide (GBD 2021)"
+  },
+
+  "definition": "Lumbar radiculopathy (ICD-10: M54.16-M54.18 and M51.16-M51.17 for disc-related causes) is a clinical syndrome of pain, paresthesia, sensory loss, weakness, and reduced reflexes in the distribution of one or more lumbar or sacral nerve roots, caused by compression or chemical irritation of the affected root. The most commonly affected roots are L5 and S1, which together account for over 90% of cases. The L5 root supplies the dorsum of the foot and the great toe and powers ankle dorsiflexion and great-toe extension; the S1 root supplies the lateral foot and powers ankle plantarflexion and the ankle reflex; the L4 root supplies the medial calf and powers the quadriceps and knee reflex. Mechanisms include disc herniation (the most common cause under 50), lumbar foraminal or central stenosis, spondylolisthesis, facet hypertrophy, synovial cysts, vertebral fracture, infection (discitis-osteomyelitis), and tumor (metastatic disease, schwannoma). Radiculopathy is distinct from referred low back pain and from non-specific sciatica, which describes radiating leg pain without confirmed root pathology. Diagnosis is clinical, supported by neurologic exam and selective imaging. The condition is managed by physical medicine and rehabilitation, primary care, pain medicine, orthopedic spine surgery, and neurosurgery, depending on severity, response to conservative treatment, and presence of red-flag features such as progressive motor weakness or cauda equina syndrome.",
+
+  "typesClassification": [
+    { "type": "Disc-related radiculopathy (acute)", "description": "Soft-tissue protrusion or extrusion of nucleus pulposus through a torn annulus, compressing or chemically irritating the traversing nerve root. Onset is often sudden, sometimes after lifting or twisting. Most common cause in adults aged 20-50; 60-90% improve within 6-12 weeks." },
+    { "type": "Foraminal and lateral recess stenosis", "description": "Progressive narrowing of the bony foramen or lateral recess by osteophyte, hypertrophic facet joint, or ligamentum flavum thickening. Typical patient is over 55 with positional pain, often worse with standing or walking and relieved by spinal flexion." },
+    { "type": "Central canal stenosis with neurogenic claudication", "description": "Multilevel narrowing of the central spinal canal producing bilateral leg pain, numbness, and weakness that appear with walking or standing and resolve with sitting or flexion. Often coexists with foraminal stenosis." },
+    { "type": "Degenerative spondylolisthesis with radiculopathy", "description": "Anterolisthesis (most commonly L4 on L5) due to facet arthropathy, narrowing the foramen and compressing the L5 root. More common in women over 60." },
+    { "type": "Synovial cyst, fracture, infection, or tumor-related radiculopathy", "description": "Less common but important causes. Vertebral compression fractures may compress the exiting root; epidural abscess and metastatic disease present with progressive pain and red-flag systemic symptoms requiring urgent imaging." },
+    { "type": "Cauda equina syndrome", "description": "Compression of multiple lumbar and sacral roots in the cauda equina producing bilateral leg weakness, saddle anesthesia, bowel and bladder dysfunction. Surgical emergency requiring decompression within 24-48 hours to preserve function." }
+  ],
+
+  "primarySymptoms": [
+    "Unilateral leg pain radiating from the buttock down the back or lateral thigh, past the knee, into the calf, foot, or toes, in a dermatomal pattern.",
+    "Sharp, electrical, burning, or shooting pain quality that often dominates over any associated low back pain.",
+    "Pain worse with sitting, forward bending, coughing, sneezing, or Valsalva; often relieved by lying down or in some patients by walking.",
+    "Numbness or paresthesia (tingling, pins-and-needles) in the dermatomal distribution: dorsum of foot and great toe (L5), lateral foot and heel (S1), medial calf (L4).",
+    "Weakness in muscles supplied by the affected root: ankle dorsiflexion and great-toe extension (L5), plantarflexion and toe-walking (S1), knee extension (L4).",
+    "Foot slap, tripping, or catching of the foot on uneven ground in moderate to severe L5 radiculopathy with foot drop.",
+    "Positive straight-leg-raise test reproducing the patient's leg pain at 30-70 degrees of hip flexion (sensitivity 80-91%, specificity 26% for disc herniation).",
+    "Positive crossed straight-leg-raise (pain in the symptomatic leg with raising the asymptomatic leg) — less sensitive but more specific.",
+    "Loss or asymmetry of the ankle reflex (S1) or knee reflex (L4) on the affected side.",
+    "In central stenosis: bilateral neurogenic claudication — progressive leg pain, heaviness, or numbness with walking, relieved by flexion (leaning on a shopping cart) or sitting."
+  ],
+
+  "earlyWarningSigns": [
+    "New unilateral leg pain after lifting, twisting, or a minor trauma, especially radiating below the knee",
+    "Mild numbness or tingling on the dorsum of the foot, great toe, or lateral foot edge",
+    "Subtle weakness when standing on the toes or heels of one foot",
+    "Pain that worsens specifically with sitting, particularly in a low chair or car seat",
+    "Cough- or sneeze-triggered shooting pain down one leg"
+  ],
+
+  "emergencySigns": [
+    "Saddle anesthesia (numbness of the inner thighs, perineum, and buttocks) — possible cauda equina syndrome",
+    "New urinary retention, urinary incontinence, or fecal incontinence",
+    "Bilateral leg weakness, especially progressive, with or without bladder symptoms",
+    "Acute foot drop (ankle dorsiflexion strength 3/5 or less) or rapidly progressing weakness",
+    "Fever, intravenous drug use, recent spinal procedure, or immunosuppression with new severe back and leg pain — exclude epidural abscess urgently"
+  ],
+
+  "causes": [
+    {
+      "cause": "Lumbar disc herniation",
+      "description": "Acute or subacute extrusion of nucleus pulposus material through a torn annulus fibrosus, compressing and chemically irritating the adjacent nerve root. Approximately 90% of disc-related radiculopathy involves L4-L5 or L5-S1. Posterolateral herniations preferentially affect the traversing root; far-lateral herniations affect the exiting root."
+    },
+    {
+      "cause": "Degenerative foraminal stenosis",
+      "description": "Age-related narrowing of the intervertebral foramen by osteophytes, hypertrophic facet joints, and ligamentum flavum thickening. Most common cause in adults over 60. Often produces positional pain worse with extension and standing."
+    },
+    {
+      "cause": "Central canal stenosis (neurogenic claudication)",
+      "description": "Multilevel narrowing of the central canal, usually L3-L5, by disc bulge, facet hypertrophy, and infolded ligamentum flavum. Produces bilateral exertional leg symptoms relieved by spinal flexion."
+    },
+    {
+      "cause": "Spondylolisthesis",
+      "description": "Forward slippage of one vertebra on another, most commonly L4 on L5 (degenerative) or L5 on S1 (isthmic). Narrows the foramen and compresses the exiting root. Degenerative form predominates in women over 60."
+    },
+    {
+      "cause": "Vertebral compression fracture",
+      "description": "Acute osteoporotic or traumatic fracture causing kyphotic collapse, retropulsion of bone fragments into the canal or foramen, and root compression. Look for older adults with low-trauma onset and tender focal vertebrae."
+    },
+    {
+      "cause": "Infection (discitis, vertebral osteomyelitis, epidural abscess)",
+      "description": "Hematogenous or post-procedural infection causing inflammatory destruction of disc and vertebra with possible epidural extension. Risk factors include diabetes, intravenous drug use, immunosuppression, and recent spinal injection. Fever may be absent."
+    },
+    {
+      "cause": "Neoplasm",
+      "description": "Metastatic disease (breast, lung, prostate, kidney, multiple myeloma), primary bone tumors, and intraspinal tumors (schwannoma, meningioma, ependymoma) can compress roots. Progressive night pain, weight loss, and known malignancy are red flags."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age 30-50 (disc herniation) or over 60 (stenosis)", "category": "non-modifiable", "description": "Disc water content peaks in the third decade and declines with age, predisposing to herniation in midlife and to degenerative stenosis in later life." },
+    { "factor": "Occupational heavy lifting, twisting, and prolonged sitting", "category": "modifiable", "description": "Construction, healthcare, and material-handling workers have 2-3× higher rates of clinically significant lumbar radiculopathy. Prolonged driving is also independently associated." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Each 5-unit rise in BMI increases lumbar disc herniation risk by approximately 25%. Obesity also worsens recovery and surgical outcomes." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Nicotine impairs disc nutrition and accelerates degeneration. Smokers have 1.5-2.5× higher rates of radiculopathy and slower recovery after surgery." },
+    { "factor": "Tall stature and male sex", "category": "non-modifiable", "description": "Taller individuals and men have slightly higher rates of disc herniation in epidemiologic studies, possibly related to mechanical load." },
+    { "factor": "Prior lumbar surgery or recurrent disc herniation", "category": "non-modifiable", "description": "Recurrence after microdiscectomy is approximately 5-10% in 2 years and 15-25% over 10 years; same-level recurrence is the most common pattern." },
+    { "factor": "Genetic predisposition to disc degeneration", "category": "genetic", "description": "Twin studies suggest 50-70% heritability of lumbar disc degeneration. COL9A2, COL9A3, and aggrecan polymorphisms are reproducible associations." }
+  ],
+
+  "affectedDemographics": [
+    "Working-age adults (30-50) dominate disc-herniation cases; older adults (60+) account for most stenosis-related radiculopathy.",
+    "Men have slightly higher rates than women (approximately 1.3:1) in surgical series, although community prevalence is closer to equal.",
+    "Occupational groups with heavy lifting, twisting, vibration exposure, and prolonged driving (construction, nursing assistants, truck drivers) have 2-3× higher incidence.",
+    "Obese adults (BMI ≥30) have substantially higher prevalence and slower recovery.",
+    "Smokers and adults with diabetes have higher rates and worse outcomes after both conservative and surgical treatment."
+  ],
+
+  "diagnosisOverview": "Diagnosis is clinical, anchored in a careful history and neurological examination. Key history elements are onset (acute vs gradual), pain location and radiation pattern, exacerbating positions, response to walking, presence of red flags (fever, weight loss, malignancy history, intravenous drug use, recent procedure, anticoagulation, age over 70 with low-trauma onset, bowel or bladder symptoms), and prior treatments. Examination tests sensation in L4-S1 dermatomes, motor strength of ankle dorsiflexors (L4-L5), great-toe extensor (L5), plantarflexors (S1), and quadriceps (L4), and reflexes (knee for L4, ankle for S1). Provocative tests include straight-leg raise (sensitive ~80-91% for disc herniation), crossed straight-leg raise (more specific), femoral nerve stretch test (for L2-L4), and slump test. Imaging is not required for typical presentations within the first 6 weeks unless red flags or progressive neurological deficits are present. When indicated, MRI without contrast is the modality of choice (ACR Appropriateness Criteria, North American Spine Society guidelines), demonstrating disc herniations, stenosis, spondylolisthesis, tumors, and infections. CT is reserved for patients who cannot undergo MRI or for assessing bony detail before surgery. Electrodiagnostic studies (EMG and nerve conduction) are useful at 3-6 weeks when the diagnosis is unclear, multiple roots are suspected, or polyneuropathy must be excluded; they are not a routine first-line test. Laboratory studies (CBC, ESR, CRP, calcium, alkaline phosphatase, PSA) are added when infection, malignancy, or metabolic disease is suspected. The diagnostic workup also evaluates psychosocial factors (depression, anxiety, fear-avoidance, occupational dissatisfaction) that strongly influence outcome.",
+
+  "diagnosticTests": [
+    { "test": "Comprehensive neurological examination including straight-leg raise", "purpose": "Localizes the affected nerve root and identifies severity of motor, sensory, and reflex involvement", "whatToExpect": "Clinician examines sensation, strength, and reflexes in the lower extremities and performs the straight-leg raise and crossed straight-leg raise tests. Takes 10-15 minutes; no imaging required at this stage." },
+    { "test": "Lumbar MRI without contrast", "purpose": "Identifies disc herniation, foraminal and central stenosis, spondylolisthesis, tumor, and infection", "whatToExpect": "30-45 minutes lying supine in the scanner. No injection unless contrast is requested. Indicated for severe or progressive symptoms, red flags, or failure of 6 weeks of conservative care. Results within 24-48 hours." },
+    { "test": "Lumbar CT scan", "purpose": "Bony detail and alternative when MRI is contraindicated (pacemaker, severe claustrophobia, metal in-body)", "whatToExpect": "5-10 minutes in the scanner. Lower soft-tissue resolution than MRI; useful for fracture, spondylolysis, and pre-surgical bone planning. CT myelogram is reserved for complex cases." },
+    { "test": "Electromyography (EMG) and nerve conduction studies", "purpose": "Identifies acute and chronic root involvement, distinguishes radiculopathy from peripheral neuropathy or plexopathy, and grades severity", "whatToExpect": "60-90 minute outpatient test using surface electrodes for nerve conduction and a thin needle for EMG. Yields results within 24-48 hours. Most useful at 3-6 weeks after symptom onset." },
+    { "test": "Laboratory studies (CBC, ESR, CRP, metabolic panel)", "purpose": "Screens for infection, inflammation, malignancy, and metabolic bone disease when red flags are present", "whatToExpect": "Standard blood draw with results within 24 hours. Indications include fever, weight loss, immunosuppression, recent procedure, intravenous drug use, anticoagulant therapy, age over 70 with new pain, or known malignancy." },
+    { "test": "Diagnostic selective nerve root block", "purpose": "Confirms the symptomatic level when MRI shows multilevel pathology or anatomy and symptoms are incongruent", "whatToExpect": "Fluoroscopy-guided injection of local anesthetic adjacent to a single root, takes 30-60 minutes outpatient. A diagnostic pain relief response identifies the symptomatic root before surgical planning." }
+  ],
+
+  "treatmentOverview": "Treatment follows a stepped approach favored by the North American Spine Society and NICE NG59 guidelines, escalating only when symptoms fail to improve or when red flags are present. The first step is patient education about the favorable natural history (60-90% improvement at 6-12 weeks), pain-control strategies, and the importance of maintaining activity within tolerance. NSAIDs (ibuprofen 400-800 mg three times daily, naproxen 500 mg twice daily) are first-line pharmacotherapy with attention to renal, gastrointestinal, and cardiovascular risk. Acetaminophen is added for analgesia. Short courses of muscle relaxants (cyclobenzaprine, tizanidine) help with associated paraspinal spasm. Neuropathic pain agents (gabapentin titrated to 900-1800 mg/day, pregabalin 75-300 mg/day, duloxetine 30-60 mg/day) help for predominantly neuropathic leg pain, though evidence in disc-related radiculopathy specifically is modest. Oral steroids (short tapers of prednisone) have not shown sustained benefit in recent randomized trials. Opioids are not first-line and, when used, are limited to short courses with explicit risk discussion. Physical therapy at 2-6 weeks combines neural mobilization, directional preference exercises (often extension-biased in centralizing disc patients), core stabilization, and aerobic conditioning. Epidural steroid injection — transforaminal or interlaminar — produces meaningful short-term pain relief in 40-70% of patients with persistent radicular pain at 4-6 weeks and may avoid surgery in some. Surgical referral is indicated for cauda equina syndrome (emergency), progressive motor weakness, refractory severe pain beyond 6-12 weeks of optimal non-operative care, and disabling neurogenic claudication from spinal stenosis. Microdiscectomy and laminotomy are the most common procedures; the SPORT trial (Weinstein NEJM 2008) showed faster recovery with surgery and similar 2-year outcomes between surgical and non-operative cohorts, with high crossover. Decompression with or without fusion is offered for symptomatic spinal stenosis and degenerative spondylolisthesis. Multidisciplinary care that integrates physical therapy, behavioral interventions for chronic pain, and weight-loss support improves long-term outcomes.",
+
+  "medicalTreatments": [
+    { "name": "NSAIDs (ibuprofen 400-800 mg three times daily; naproxen 500 mg twice daily)", "description": "First-line analgesic and anti-inflammatory therapy. Use the lowest effective dose and shortest duration; co-prescribe a proton-pump inhibitor for those over 65 or with gastrointestinal risk factors. Monitor renal function and blood pressure.", "effectiveness": "Modest pain reduction (NNT approximately 6 for 50% pain relief at 1 week); time to meaningful benefit 3-7 days" },
+    { "name": "Neuropathic pain agents (gabapentin 300-1800 mg/day; pregabalin 75-300 mg/day; duloxetine 30-60 mg/day)", "description": "Add when neuropathic pain quality dominates (burning, electrical) or when NSAIDs are insufficient. Start low and titrate over 1-2 weeks; sedation, dizziness, and falls are common in older adults.", "effectiveness": "Gabapentinoids: modest benefit (NNT ~6-8 for ≥30% pain relief); duloxetine: useful for mixed radicular and back pain with depression" },
+    { "name": "Short-course muscle relaxants (cyclobenzaprine 5-10 mg up to three times daily; tizanidine 2-8 mg three times daily)", "description": "Useful for associated paraspinal muscle spasm in the first 1-2 weeks. Avoid in older adults due to anticholinergic burden, sedation, and fall risk.", "effectiveness": "Short-term pain and spasm relief; benefit typically within 24-48 hours; no role beyond 2-4 weeks" },
+    { "name": "Structured physical therapy", "description": "Active rehabilitation with neural mobilization, directional preference exercises, core stabilization, aerobic conditioning, and graded return to function. Starts at 2-6 weeks after onset in most patients. 8-12 sessions over 6-12 weeks.", "effectiveness": "Comparable to surgery at 2 years for non-emergent cases (SPORT non-operative arm); reduces recurrence and improves function" },
+    { "name": "Epidural steroid injection (transforaminal or interlaminar)", "description": "Fluoroscopy- or CT-guided injection of corticosteroid and local anesthetic near the affected root. Considered after 4-6 weeks of conservative treatment for persistent radicular pain.", "effectiveness": "40-70% achieve clinically meaningful short-term pain relief (4-12 weeks); approximately 25-40% sustained relief at 1 year; may delay or avoid surgery in selected patients" },
+    { "name": "Cognitive-behavioral therapy and pain neuroscience education", "description": "Addresses fear-avoidance, catastrophizing, and depression that worsen and prolong radicular pain. Delivered in person or by telehealth over 6-12 sessions, often in combination with physical therapy.", "effectiveness": "Effect size 0.3-0.5 for pain and disability outcomes in chronic radicular pain; reduces opioid escalation" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Microdiscectomy (open or microendoscopic)", "description": "Removal of herniated disc material through a small incision under magnification, decompressing the affected root. Most common procedure for disc-related radiculopathy. Outpatient or single overnight stay.", "successRate": "Good or excellent outcomes in 80-90% at 1 year; faster pain relief than non-operative care in SPORT and similar trials; 2-year outcomes converge with non-operative cohorts" },
+    { "name": "Laminectomy or laminotomy for spinal stenosis", "description": "Removal of part of the lamina and ligamentum flavum to decompress the central canal or foramen in patients with disabling neurogenic claudication or stenosis-related radiculopathy.", "successRate": "70-80% report improved walking distance and reduced leg pain at 1-2 years; durability 60-70% at 5-10 years" },
+    { "name": "Decompression with instrumented fusion", "description": "Decompression combined with pedicle-screw fusion for patients with degenerative spondylolisthesis, segmental instability, or recurrent disc herniation. Higher morbidity and longer recovery than decompression alone.", "successRate": "Symptomatic improvement in 70-80% at 1-2 years for symptomatic spondylolisthesis; reoperation rates 5-15% at 5 years" },
+    { "name": "Endoscopic discectomy", "description": "Percutaneous tubular endoscopic removal of disc material under local or general anesthesia. Less tissue disruption than open microdiscectomy in selected single-level posterolateral herniations.", "successRate": "Outcomes comparable to microdiscectomy in randomized trials; faster return to work in some studies; technical learning curve" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Spinal manipulation by qualified providers", "description": "Has modest short-term benefit in non-radicular low back pain; evidence in true radiculopathy is limited and benefit is small. Contraindicated in red-flag presentations, suspected cauda equina, or progressive neurological deficits." },
+    { "name": "Acupuncture", "description": "Modest short-term pain relief in chronic low back pain in meta-analyses; specific benefit in lumbar radiculopathy is less well established but reasonable as adjunct to standard care." },
+    { "name": "Yoga and Pilates-based exercise programs", "description": "Improve flexibility, core strength, and self-reported pain in chronic low back pain; useful as long-term maintenance after acute radicular symptoms have resolved." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "microdiscectomy",
+    "epidural-steroid-injection",
+    "physical-therapy"
+  ],
+
+  "whySeeSpecialist": "Refer to physical medicine and rehabilitation, pain medicine, or spine surgery for severe or persistent radicular pain beyond 6 weeks of optimal non-operative care, progressive neurological deficit, or red-flag features. Emergency neurosurgical or orthopedic spine referral is required for cauda equina syndrome, acute foot drop, or suspected epidural abscess. Multidisciplinary spine programs improve outcomes and reduce inappropriate surgery.",
+  "doctorSelectionGuide": "Choose a physiatrist, pain specialist, or spine surgeon affiliated with a high-volume spine program. Confirm experience with the specific procedure being considered (microdiscectomy, fluoroscopic injections) and access to multidisciplinary support (physical therapy, behavioral medicine). For older adults, prefer programs with experience in osteoporotic spine surgery.",
+
+  "hospitalCriteria": [
+    "Multidisciplinary spine program with physical therapy, pain medicine, and surgical input",
+    "Fluoroscopy- and CT-equipped pain procedure suite",
+    "Experienced spine surgery service (neurosurgery or orthopedic spine)",
+    "Electrodiagnostic laboratory",
+    "Behavioral medicine and chronic-pain rehabilitation program"
+  ],
+  "keyFacilities": [
+    "Physiatry and spine rehabilitation centers",
+    "Comprehensive pain medicine clinics",
+    "Spine surgery programs with neurosurgery and orthopedic spine",
+    "Electrodiagnostic laboratories",
+    "Multidisciplinary chronic pain programs"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain a healthy weight (BMI <30) to reduce mechanical load on lumbar discs.",
+    "Quit smoking — nicotine impairs disc nutrition and worsens recovery from any back episode.",
+    "Use proper lifting mechanics: keep loads close to the body, bend at hips and knees, avoid combined lifting and twisting.",
+    "Incorporate core stabilization (planks, bird-dog, dead-bug) and hip mobility into a regular exercise routine 2-3 times per week.",
+    "For desk workers, use a supportive chair, take movement breaks every 30-45 minutes, and consider a sit-stand desk.",
+    "Address sleep and stress, both independent predictors of new low back episodes in prospective studies."
+  ],
+
+  "lifestyleModifications": [
+    "Stay as active as pain allows during an acute episode — prolonged bed rest worsens outcomes.",
+    "Use heat or cold compresses for symptom relief, alternating as needed.",
+    "Sleep with a pillow between the knees if side-lying or under the knees if supine to reduce nerve-root tension.",
+    "Avoid heavy lifting, prolonged sitting, and combined bending-twisting during the acute phase (first 2-6 weeks).",
+    "Gradually return to walking, swimming, or stationary cycling once acute pain is settled; progress to structured rehabilitation.",
+    "Address anxiety, fear-avoidance, and catastrophic thinking with structured pain education; both are independent predictors of chronic disability."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-pattern diet to support healthy weight, reduce inflammation, and lower cardiovascular risk",
+      "Adequate calcium (1000-1200 mg/day) and vitamin D (800-2000 IU/day), especially in older adults with osteoporosis risk",
+      "Lean protein at each meal (1-1.2 g/kg/day) to support muscle and rehabilitation",
+      "Adequate hydration (1.5-2 L/day) to support disc water content"
+    ],
+    "avoid": [
+      "Ultra-processed foods that worsen weight and systemic inflammation",
+      "Excessive alcohol, which interacts with NSAIDs, gabapentinoids, and opioids",
+      "Smoking and nicotine products — strongly associated with worse outcomes",
+      "Crash diets that promote muscle loss and worsen rehabilitation"
+    ]
+  },
+  "exerciseGuidelines": "Once acute pain settles (typically within 2-4 weeks), aim for 150 minutes per week of moderate aerobic activity (walking, swimming, stationary cycling) plus twice-weekly core stabilization and resistance training under physical-therapy guidance. McKenzie-style directional preference exercises (often extension-biased for centralizing disc-related pain) and graded return to flexion-rotation activities are guided by symptom response. Avoid heavy unsupported lifting and high-impact activities until pain-free.",
+
+  "dailyManagement": [
+    "Take NSAIDs and any neuropathic agents on schedule, with food, during the acute phase.",
+    "Apply heat for 15-20 minutes before stretching and movement; cold for acute flares.",
+    "Perform prescribed physical-therapy exercises at least once daily.",
+    "Track pain, leg-symptom location, and motor strength in a daily log; report progressive weakness, saddle numbness, or bladder changes immediately.",
+    "Limit prolonged sitting to 30-45 minute blocks during the acute phase; alternate with standing or walking.",
+    "Attend scheduled physical-therapy and clinician follow-up at 2, 6, and 12 weeks."
+  ],
+
+  "prognosis": "Most lumbar radiculopathy resolves substantially with non-operative care: 60-90% of patients with disc-related disease report meaningful improvement in pain and function by 6-12 weeks. Persistent radiculopathy beyond 12 weeks affects 10-30%, and a smaller subset (5-15%) develops chronic radicular pain. The SPORT trial (Weinstein NEJM 2008) showed faster pain relief with surgery but similar 2-year outcomes between surgical and non-operative cohorts, with substantial crossover. Predictors of poor outcome include severe baseline disability, prolonged symptoms before treatment, depression, fear-avoidance, smoking, obesity, workers' compensation status, and severe sensorimotor deficit. Stenosis-related radiculopathy in older adults has a more chronic course; decompression surgery produces durable improvement in walking distance and leg pain in 60-80% at 5 years. Recurrence after microdiscectomy is approximately 5-10% at 2 years. Long-term outcomes are best when treatment integrates physical, behavioral, and pharmacological components and addresses modifiable factors (weight, smoking, conditioning, mood).",
+
+  "recoveryTimeline": "Acute pain typically improves substantially within 2-6 weeks; most non-operative cases approach baseline function by 8-12 weeks. After microdiscectomy, pain often improves within days and return to sedentary work occurs at 2-4 weeks; manual work at 6-12 weeks. After laminectomy with fusion, recovery extends to 3-6 months. Foot-drop strength may continue improving for 6-12 months and may not fully recover when motor deficits were severe at presentation.",
+
+  "complications": [
+    "Cauda equina syndrome — surgical emergency causing potentially permanent bowel, bladder, and sexual dysfunction if not decompressed within 24-48 hours.",
+    "Persistent neurological deficit (foot drop, sensory loss, reflex changes) that may not fully reverse despite decompression.",
+    "Chronic radicular pain progressing to neuropathic pain syndrome requiring long-term multimodal management.",
+    "Recurrent disc herniation after microdiscectomy (approximately 5-10% at 2 years).",
+    "Surgical complications including infection, dural tear, epidural hematoma, and adjacent-segment degeneration.",
+    "Opioid use disorder and dependence when long-term opioids are prescribed."
+  ],
+
+  "supportResources": [
+    { "name": "North American Spine Society — Patient Information", "url": "https://www.spine.org/", "description": "Evidence-based patient education materials, guideline summaries, and surgeon directory." },
+    { "name": "American Academy of Physical Medicine and Rehabilitation (AAPM&R)", "url": "https://www.aapmr.org/", "description": "Patient resources on spine rehabilitation and physiatrist directory." },
+    { "name": "National Institute of Neurological Disorders and Stroke — Low Back Pain Fact Sheet", "url": "https://www.ninds.nih.gov/health-information/disorders/low-back-pain", "description": "NIH-curated patient information on low back pain, sciatica, and radiculopathy." },
+    { "name": "American Chronic Pain Association", "url": "https://www.theacpa.org/", "description": "Patient self-management resources and peer support for chronic radicular and back pain." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "sciatica", "name": "Sciatica", "keyDifference": "Sciatica is a clinical description of radiating leg pain along the sciatic nerve distribution; lumbar radiculopathy is the underlying neurological diagnosis with confirmed root involvement on exam or imaging. Most sciatica is caused by lumbar radiculopathy, but non-radicular causes (piriformis syndrome, hip pathology, hamstring tendinopathy) can mimic it." },
+    { "slug": "herniated-disc-surgical", "name": "Herniated Disc (Surgical)", "keyDifference": "Herniated disc describes a structural lesion seen on imaging; radiculopathy describes the clinical syndrome. Asymptomatic disc herniations are found in 20-30% of healthy adults on MRI. Treatment is guided by symptoms and exam, not by imaging alone." },
+    { "slug": "back-pain", "name": "Back Pain", "keyDifference": "Non-specific low back pain is predominantly axial (in the back), without dermatomal radiation below the knee, and lacks neurological signs. Lumbar radiculopathy radiates beyond the knee in a dermatomal pattern with neurological signs. Mixed presentations are common and require careful evaluation." },
+    { "slug": "chronic-low-back-pain", "name": "Chronic Low Back Pain", "keyDifference": "Chronic low back pain by definition persists more than 12 weeks and may or may not include radicular features. Persistent radiculopathy beyond 12 weeks is one specific cause; many patients with chronic low back pain do not have a radicular component." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "chronic-low-back-pain", "name": "Chronic Low Back Pain" },
+    { "slug": "depression", "name": "Depression" },
+    { "slug": "anxiety", "name": "Anxiety" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "sciatica", "name": "Sciatica", "relevance": "Clinical description most commonly caused by lumbar radiculopathy; shared treatment pathway." },
+    { "slug": "herniated-disc-surgical", "name": "Herniated Disc (Surgical)", "relevance": "Most common structural cause of acute lumbar radiculopathy in adults aged 30-50." },
+    { "slug": "back-pain", "name": "Back Pain", "relevance": "Overlapping spine syndrome; differential diagnosis from non-radicular pain shapes treatment." },
+    { "slug": "chronic-low-back-pain", "name": "Chronic Low Back Pain", "relevance": "Common downstream outcome when acute radiculopathy fails to resolve; shared rehabilitation strategies." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "relevance": "Coexisting central sensitization complicates radicular pain assessment and treatment response." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is lumbar radiculopathy?",
+      "answer": "Lumbar radiculopathy is pain, numbness, tingling, or weakness in the leg caused by irritation or compression of a lumbar nerve root, most often L5 or S1. The classic presentation is sharp or electrical pain radiating from the buttock down the back of the leg past the knee, often called sciatica.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes lumbar radiculopathy?",
+      "answer": "The most common cause in adults aged 30-50 is a herniated lumbar disc. In adults over 60, foraminal or central stenosis from degenerative changes is more common. Other causes include spondylolisthesis, vertebral fracture, infection (discitis or epidural abscess), and tumor.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is lumbar radiculopathy different from sciatica?",
+      "answer": "Sciatica is the clinical description of pain radiating along the sciatic nerve. Lumbar radiculopathy is the diagnosis when the cause is confirmed compression or irritation of a lumbar nerve root. Most cases of sciatica are caused by lumbar radiculopathy, but not all radiculopathy involves the sciatic distribution.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does lumbar radiculopathy take to heal?",
+      "answer": "Roughly 60-90% of patients improve substantially within 6-12 weeks with non-operative care. Persistent symptoms beyond 12 weeks affect 10-30%, and a smaller subset develops chronic radicular pain. Early activity, physical therapy, and avoiding prolonged bed rest improve recovery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is lumbar radiculopathy a serious condition?",
+      "answer": "Most cases are not serious and resolve with conservative care. Serious features that need urgent evaluation include progressive leg weakness, foot drop, saddle numbness, or new urinary or bowel symptoms — these may indicate cauda equina syndrome and require emergency surgery to preserve function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When do I need an MRI for back and leg pain?",
+      "answer": "MRI is not needed in the first 6 weeks of typical lumbar radiculopathy. Indications include progressive neurological deficit, suspected cauda equina syndrome, red flags for infection or malignancy, severe symptoms not responding to 6 weeks of conservative care, and pre-procedural planning for injection or surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need surgery for lumbar radiculopathy?",
+      "answer": "Most patients do not. Surgery is offered for cauda equina syndrome (emergency), progressive motor weakness, and severe pain that fails 6-12 weeks of optimal non-operative care. The SPORT trial showed surgery provides faster pain relief but similar 2-year outcomes compared with non-operative treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is microdiscectomy?",
+      "answer": "Microdiscectomy is a minimally invasive operation that removes the herniated portion of a lumbar disc through a small incision under magnification. It decompresses the affected nerve root. Hospital stay is usually one night, and 80-90% report good or excellent outcomes at one year.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How effective are epidural steroid injections?",
+      "answer": "Epidural steroid injections produce clinically meaningful short-term pain relief in 40-70% of patients with persistent radicular pain. Effects typically last 4-12 weeks; about 25-40% have sustained benefit at one year. Injections may delay or avoid surgery in selected cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is cauda equina syndrome?",
+      "answer": "Cauda equina syndrome is compression of multiple nerve roots in the lumbar canal causing bilateral leg weakness, saddle anesthesia (numbness of the perineum and inner thighs), and bowel or bladder dysfunction. It is a surgical emergency requiring decompression within 24-48 hours to preserve function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can lumbar radiculopathy cause permanent weakness?",
+      "answer": "Yes, severe or prolonged compression can leave residual weakness (foot drop, quadriceps weakness) that may improve only partially after decompression. Most mild-to-moderate motor deficits recover with timely treatment; severe pre-operative weakness predicts incomplete recovery in 20-40% of cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What exercises help lumbar radiculopathy?",
+      "answer": "Initial exercises include gentle walking and directional preference movements (often extension-biased for centralizing disc patients) guided by a physical therapist. Core stabilization, hip-flexor and hamstring stretching, and aerobic conditioning are added as pain improves. Avoid heavy unsupported lifting and combined bending-twisting until pain-free.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does walking help or worsen lumbar radiculopathy?",
+      "answer": "In disc-related radiculopathy, walking is usually helpful and recommended within tolerance. In central spinal stenosis, walking often worsens leg symptoms (neurogenic claudication) and relief comes with sitting or leaning forward. Stationary cycling is well tolerated in stenosis because it places the spine in flexion.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are opioids needed for lumbar radiculopathy?",
+      "answer": "Opioids are not first-line and are usually unnecessary. NSAIDs, acetaminophen, neuropathic pain agents, and physical therapy provide most patients with adequate relief. Short courses of opioids (under 1 week) may be considered for severe acute pain; long-term opioids increase dependence risk without improving function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can lumbar radiculopathy come back after surgery?",
+      "answer": "Recurrence rates after microdiscectomy are approximately 5-10% within 2 years and 15-25% over 10 years. Risk factors include smoking, obesity, occupation requiring heavy lifting, and high body mass index. Same-level recurrence is the most common pattern and may require revision surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is foot drop?",
+      "answer": "Foot drop is weakness of ankle dorsiflexion (lifting the foot up), most often caused by L5 nerve-root compression in lumbar radiculopathy. Patients drag the toe, lift the knee high, or develop a slapping gait. Acute or progressive foot drop is a relative surgical urgency to preserve recovery potential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get lumbar radiculopathy?",
+      "answer": "Yes, but it is uncommon. Causes in adolescents include sports-related disc herniation, spondylolysis, slipped vertebral apophysis, and rarely tumor. Adolescent radiculopathy often responds to rest, physical therapy, and bracing; surgery is reserved for refractory cases or progressive deficits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is neurogenic claudication?",
+      "answer": "Neurogenic claudication is bilateral leg pain, heaviness, or numbness that appears with walking or standing and improves with sitting or leaning forward. It is caused by central canal stenosis. It must be distinguished from vascular claudication, which improves with rest in any position and is associated with absent peripheral pulses.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does weight loss help lumbar radiculopathy?",
+      "answer": "Yes. Each 5-unit increase in BMI raises lumbar disc herniation risk by approximately 25% and worsens outcomes after both conservative and surgical treatment. Weight loss of 5-10% improves pain, function, and surgical recovery in observational and intervention studies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnancy cause lumbar radiculopathy?",
+      "answer": "Yes. Hormonal ligamentous laxity, increased lumbar lordosis, and weight gain during pregnancy can precipitate or worsen radiculopathy, most often in the second and third trimesters. Symptoms usually improve postpartum. Treatment focuses on physical therapy and posture; imaging and most medications are restricted.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a spine specialist?",
+      "answer": "See a spine specialist for symptoms not improving after 4-6 weeks of conservative care, progressive neurological deficit, severe disabling pain, or red flags such as fever, weight loss, or known cancer. Emergency referral is required for cauda equina syndrome, acute foot drop, or rapidly progressing weakness.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Lumbar Radiculopathy (pinched nerve in lower back, sciatica)",
+  "regionalNames": [
+    { "name": "Lumbociática", "region": "Spanish-speaking countries", "language": "Spanish" },
+    { "name": "Radiculopathie lombaire", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "कमर की नस का दबना", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "lumbar radiculopathy",
+    "sciatica",
+    "pinched nerve lower back",
+    "L5 radiculopathy",
+    "S1 radiculopathy",
+    "disc herniation",
+    "lumbar disc",
+    "foot drop",
+    "neurogenic claudication",
+    "epidural steroid injection",
+    "microdiscectomy",
+    "spinal stenosis",
+    "lumbar nerve compression",
+    "cauda equina",
+    "radicular pain"
+  ],
+  "symptomKeywords": [
+    "shooting pain down leg",
+    "sharp leg pain when sitting",
+    "tingling toes back pain",
+    "weak ankle dorsiflexion",
+    "foot drop walking",
+    "numb foot lower back pain",
+    "burning leg sciatica",
+    "pain worse coughing"
+  ],
+
+  "metaTitle": "Lumbar Radiculopathy: Symptoms & Treatment | aihealz",
+  "metaDescription": "Lumbar radiculopathy: leg pain, numbness, weakness from a pinched nerve. Causes, diagnosis, MRI, injections, microdiscectomy and rehab — guide.",
+
+  "keywords": [
+    "lumbar radiculopathy",
+    "sciatica",
+    "pinched nerve lower back",
+    "L5 radiculopathy",
+    "S1 radiculopathy",
+    "lumbar disc herniation",
+    "foot drop",
+    "epidural steroid injection",
+    "microdiscectomy",
+    "neurogenic claudication",
+    "lumbar spine MRI",
+    "radicular leg pain"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Konstantinou K, Dunn KM. 2008. Sciatica: review of epidemiological studies and prevalence estimates. Spine 33(22):2464-72.", "url": "https://pubmed.ncbi.nlm.nih.gov/18923325/", "accessedDate": "2026-05-14" },
+    { "title": "Tarulli AW, Raynor EM. 2007. Lumbosacral radiculopathy. Neurologic Clinics 25(2):387-405.", "url": "https://pubmed.ncbi.nlm.nih.gov/17445733/", "accessedDate": "2026-05-14" },
+    { "title": "Weinstein JN, Lurie JD, Tosteson TD, et al. 2008. Surgical versus nonoperative treatment for lumbar disk herniation: four-year results for the Spine Patient Outcomes Research Trial (SPORT). Spine 33(25):2789-800.", "url": "https://pubmed.ncbi.nlm.nih.gov/19018250/", "accessedDate": "2026-05-14" },
+    { "title": "Kreiner DS, Hwang SW, Easa JE, et al. 2014. An evidence-based clinical guideline for the diagnosis and treatment of lumbar disc herniation with radiculopathy. North American Spine Society. Spine Journal 14(1):180-91.", "url": "https://pubmed.ncbi.nlm.nih.gov/24239490/", "accessedDate": "2026-05-14" },
+    { "title": "Bernstein IA, Malik Q, Carville S, Ward S. 2017. Low back pain and sciatica: summary of NICE guidance. BMJ 356:i6748.", "url": "https://pubmed.ncbi.nlm.nih.gov/28062522/", "accessedDate": "2026-05-14" },
+    { "title": "Lurie J, Tomkins-Lane C. 2016. Management of lumbar spinal stenosis. BMJ 352:h6234.", "url": "https://pubmed.ncbi.nlm.nih.gov/26727925/", "accessedDate": "2026-05-14" },
+    { "title": "Hartvigsen J, Hancock MJ, Kongsted A, et al. 2018. What low back pain is and why we need to pay attention. Lancet 391(10137):2356-67.", "url": "https://pubmed.ncbi.nlm.nih.gov/29573870/", "accessedDate": "2026-05-14" },
+    { "title": "Jensen MC, Brant-Zawadzki MN, Obuchowski N, Modic MT, Malkasian D, Ross JS. 1994. Magnetic resonance imaging of the lumbar spine in people without back pain. New England Journal of Medicine 331(2):69-73.", "url": "https://pubmed.ncbi.nlm.nih.gov/8208267/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

@@ -1,0 +1,422 @@
+{
+  "_meta": {
+    "slug": "hereditary-angioedema",
+    "tier": 1,
+    "headTerm": "hereditary angioedema",
+    "longTailKeywords": [
+      "hereditary angioedema symptoms",
+      "HAE C1 inhibitor deficiency",
+      "HAE attacks treatment",
+      "berotralstat",
+      "lanadelumab",
+      "icatibant",
+      "ecallantide",
+      "C1 esterase inhibitor concentrate",
+      "HAE type 1 vs type 2",
+      "HAE with normal C1 inhibitor",
+      "bradykinin angioedema"
+    ],
+    "primarySpecialty": "Allergy & Immunology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Diagnostic criteria and management follow the WAO/EAACI HAE 2021 international guideline (Maurer et al. Allergy 2022, PMID 35001401), US HAEA Medical Advisory Board 2020 update (Busse et al. JAIP 2021, PMID 32898710), and ACAAI/AAAAI 2020 angioedema practice parameter. Genetics from Zuraw NEJM 2008 (PMID 18768947). Prevalence (1 in 50,000) from Bygum 2009 (PMID 19140762) and Bork Mayo Clin Proc 2003. Long-term prophylaxis evidence from HELP trial (Banerji NEJM 2018 PMID 30403942) and APeX-2 trial (Aygören-Pürsün NEJM 2018 PMID 30403945). On-demand therapy comparisons from EDEMA trials and Bjorkander 2009."
+  },
+
+  "h1Title": "Hereditary Angioedema: Symptoms, Causes, Diagnosis & Treatment",
+  "specialistType": "Allergy & Immunology",
+
+  "heroOverview": "Hereditary angioedema (HAE) is a rare autosomal-dominant disease that produces unpredictable attacks of non-itchy, non-urticarial swelling of the skin, abdominal wall, larynx, and oropharynx, driven by uncontrolled bradykinin generation rather than histamine. Prevalence is approximately 1 in 50,000 worldwide (Bygum 2009), and over 90% of cases are caused by deficient (type 1) or dysfunctional (type 2) C1-esterase inhibitor (C1-INH). Attacks last 2-5 days and respond neither to adrenaline, antihistamines, nor corticosteroids — drugs reflexively given for allergic angioedema. Up to one-quarter of untreated patients die from laryngeal asphyxiation before targeted therapy was developed. Modern care combines on-demand therapy with C1-INH concentrate, ecallantide, or icatibant for attacks and long-term prophylaxis with subcutaneous C1-INH, lanadelumab, berotralstat, or pdC1-INH, which together reduce attack frequency by 70-95% and have transformed the disease from frequently fatal to highly manageable.",
+
+  "keyStats": {
+    "prevalence": "Approximately 1 in 50,000 in most populations (Bygum 2009); estimated 6,000-10,000 diagnosed cases in the United States and 25,000-50,000 worldwide",
+    "demographics": "Autosomal dominant; women and men equally affected genetically, but women experience more frequent and severe attacks because estrogens upregulate kininogenesis",
+    "avgAge": "First attack typically age 5-15; over 90% have first attack before age 30; median diagnostic delay 8-13 years from first attack",
+    "globalCases": "Estimated 1 in 50,000 globally; under-recognition substantial — many countries have a fraction of expected prevalence diagnosed (HAEi 2022)"
+  },
+
+  "definition": "Hereditary angioedema (ICD-10: D84.1, hereditary deficiency of complement component C1 inhibitor) is a bradykinin-mediated swelling disorder caused by inherited dysfunction or deficiency of C1-esterase inhibitor (C1-INH) — a serine protease inhibitor (serpin) encoded by SERPING1 that regulates the classical complement, contact, fibrinolytic, and coagulation pathways. Three classic phenotypes are recognized. HAE type 1 (85% of cases) features low antigenic and functional C1-INH from missense, nonsense, or splicing variants in SERPING1. HAE type 2 (15%) features normal antigenic but reduced functional C1-INH from mutations that produce a dysfunctional protein, typically at the reactive-center loop. HAE with normal C1-INH (HAE-nC1INH) presents with the same clinical picture but normal complement testing; pathogenic variants in F12, PLG, KNG1, ANGPT1, MYOF, HS3ST6, and others have been described, though many cases remain genetically unsolved. Uncontrolled kallikrein activity cleaves high-molecular-weight kininogen to generate bradykinin, which binds B2 receptors on endothelial cells and increases vascular permeability. Allergy and immunology specialists, and dedicated HAE centers, lead long-term care; emergency physicians, anesthesiologists, gastroenterologists, and obstetricians manage acute and life-stage-specific issues.",
+
+  "typesClassification": [
+    { "type": "HAE type 1 (low C1-INH antigen and function)", "description": "85% of HAE cases. SERPING1 mutations produce truncated or rapidly degraded C1-INH protein; both antigenic level and functional activity are below the lower limit of normal." },
+    { "type": "HAE type 2 (normal antigen, low function)", "description": "15% of HAE cases. SERPING1 missense mutations, typically near the reactive-center loop, produce a dysfunctional but normally-secreted C1-INH protein. Antigenic level is normal or even elevated; functional activity is reduced." },
+    { "type": "HAE with normal C1-INH (HAE-nC1INH)", "description": "Approximately 5-10% of clinical HAE. Includes FXII-HAE, PLG-HAE, KNG1-HAE, and several other genetic subtypes plus a substantial proportion of unknown genetic origin (HAE-U). Predominantly affects women; estrogen exposure is a major trigger." },
+    { "type": "Acquired angioedema (AAE-1 and AAE-2)", "description": "Not inherited but mechanistically related: C1-INH consumption by lymphoproliferative disorders (AAE-1) or anti-C1-INH autoantibodies (AAE-2). Usually presents after age 40 without family history and warrants malignancy workup." }
+  ],
+
+  "primarySymptoms": [
+    "Recurrent attacks of non-pitting, non-itchy subcutaneous swelling of the hands, feet, face, genitals, or limbs that build over 12-36 hours and resolve over 2-5 days without treatment.",
+    "Severe colicky abdominal pain with nausea, vomiting, and watery diarrhea from bowel-wall edema, often mimicking surgical abdomen — a frequent cause of unnecessary appendectomy or laparotomy before diagnosis.",
+    "Laryngeal edema with throat tightness, hoarseness, dysphagia, stridor, and progressive airway obstruction — accounts for most pre-treatment deaths.",
+    "A flat, serpiginous, non-pruritic skin rash (erythema marginatum) preceding 25-50% of attacks by hours to a day.",
+    "Tingling, tightness, or fullness in the affected area as a prodrome 4-24 hours before visible swelling.",
+    "Triggers identifiable in 60-70% of attacks — minor trauma (dental work, intubation, surgery), psychological stress, infections, menstruation, hormonal contraceptives or hormone replacement therapy, ACE inhibitors, and some antibiotics.",
+    "Mood symptoms (irritability, fatigue, low mood) commonly preceding an attack, particularly in adolescents.",
+    "Headache and vomiting from gastrointestinal attacks or, rarely, transient cerebral edema.",
+    "Pelvic and perineal swelling with severe pain in women; can mimic ovarian or appendicular pathology.",
+    "Bladder or urethral swelling causing urinary retention in rare attacks."
+  ],
+
+  "earlyWarningSigns": [
+    "Erythema marginatum: a non-pruritic, serpiginous, blanching, ring-shaped rash that may precede an attack by hours",
+    "Tingling, prickling, or tightness in a body area that goes on to swell",
+    "Sudden unexplained mood change, anxiety, or fatigue several hours before a typical attack",
+    "Vague abdominal discomfort that escalates rapidly into severe colic and vomiting",
+    "Mild voice change or sensation of a lump in the throat — high-risk warning for laryngeal involvement"
+  ],
+
+  "emergencySigns": [
+    "Voice change, hoarseness, stridor, difficulty swallowing saliva, or dyspnea — call emergency services and self-administer on-demand HAE therapy immediately; airway intervention before swelling progresses can be life-saving",
+    "Severe abdominal pain with vomiting and hypotension — bowel-wall edema can cause hypovolemic shock from third-space losses",
+    "Facial swelling involving the lips, tongue, or floor of mouth, even when initially mild — risk of rapid progression to airway obstruction",
+    "Failure of an attack to begin to resolve within 2-4 hours of on-demand treatment — repeat dose and seek emergency care",
+    "Any HAE attack in a child under 5 years — pediatric airway is small and progression can be rapid"
+  ],
+
+  "causes": [
+    { "cause": "SERPING1 mutations causing C1-INH deficiency (HAE type 1)", "description": "More than 700 distinct pathogenic variants in SERPING1 (chromosome 11q12-q13.1) cause haploinsufficiency. C1-INH plasma levels and function fall to 5-30% of normal, freeing kallikrein and factor XIIa to cleave high-molecular-weight kininogen and release bradykinin." },
+    { "cause": "SERPING1 mutations causing C1-INH dysfunction (HAE type 2)", "description": "Missense variants near the reactive-center loop produce a normally secreted but functionally impaired C1-INH protein. Antigenic levels are normal or elevated, but functional activity is below the lower limit of normal." },
+    { "cause": "F12 mutations and other non-C1-INH genes (HAE-nC1INH)", "description": "Gain-of-function variants in F12 (factor XII), and pathogenic variants in PLG, KNG1, ANGPT1, MYOF, and HS3ST6 cause an HAE-like phenotype with normal C1-INH testing. Estrogen exposure and the early reproductive years predominate." },
+    { "cause": "Estrogen exposure", "description": "Combined oral contraceptives, hormone replacement therapy, and pregnancy increase factor XII expression and worsen attack frequency, particularly in HAE-nC1INH. Stopping estrogen reduces attacks substantially in many women." },
+    { "cause": "ACE inhibitor exposure", "description": "Angiotensin-converting enzyme inhibitors block bradykinin breakdown and convert subclinical HAE into severe recurrent attacks. ACE inhibitors are contraindicated in all forms of HAE." },
+    { "cause": "Physical and emotional triggers", "description": "Dental procedures, surgery, intubation, sports trauma, infections (especially Helicobacter pylori, EBV, herpes simplex), psychological stress, menstrual cycle phase, and certain antibiotics (rarely) precipitate attacks in known patients." }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of HAE or unexplained recurrent angioedema", "category": "genetic", "description": "75% of patients have an affected parent; spontaneous SERPING1 mutations explain the remaining 25%. Any first-degree relative with recurrent swelling, unexplained abdominal pain, or sudden death from airway swelling raises suspicion." },
+    { "factor": "Female sex (especially HAE-nC1INH)", "category": "non-modifiable", "description": "Women have more frequent and severe attacks than men with the same mutation, driven by estrogen-mediated upregulation of the contact system. HAE-nC1INH affects women disproportionately." },
+    { "factor": "Estrogen exposure (combined oral contraceptives, HRT, pregnancy)", "category": "modifiable", "description": "Estrogens increase plasma factor XII and high-molecular-weight kininogen; combined hormonal contraception can transform a previously mild HAE phenotype into severe disease. Progestin-only contraception is generally safe." },
+    { "factor": "ACE inhibitor therapy", "category": "modifiable", "description": "Contraindicated in HAE. ACE inhibitors block bradykinin degradation and can precipitate severe, life-threatening laryngeal attacks even in patients previously well controlled." },
+    { "factor": "Pediatric onset", "category": "non-modifiable", "description": "Earlier first attack predicts a more severe lifetime course; over 50% of patients with childhood-onset HAE describe their disease as severe by adulthood." },
+    { "factor": "Trauma and surgery", "category": "modifiable", "description": "Dental procedures, intubation, endoscopy, abdominal and pelvic surgery, and ENT procedures precipitate up to 30% of attacks. Pre-procedural short-term prophylaxis with C1-INH concentrate reduces attack rate to under 10%." },
+    { "factor": "Helicobacter pylori infection", "category": "modifiable", "description": "Several studies link H. pylori infection to increased HAE attack frequency. Eradication reduces attack rate in some patients, particularly those with predominantly abdominal attacks." }
+  ],
+
+  "affectedDemographics": [
+    "Prevalence approximately 1 in 50,000 across populations studied (Denmark, UK, Spain, US, Israel) without consistent ethnic or geographic clustering.",
+    "Diagnostic delay averages 8-13 years from first attack to confirmed diagnosis worldwide (HAEi global registry); shorter in countries with HAE patient organizations.",
+    "Women experience more frequent and severe attacks than men; HAE-nC1INH is predominantly female.",
+    "First attack age 5-15 in two-thirds of patients; 90% before age 30.",
+    "Sudden death from laryngeal asphyxiation occurred in roughly 25-30% of untreated patients in pre-1980s case series; modern treatment has reduced this to under 1%."
+  ],
+
+  "diagnosisOverview": "Diagnosis is biochemical and depends on three blood tests in the right clinical setting: serum C4, antigenic C1-INH, and functional C1-INH. In HAE type 1, both antigenic and functional C1-INH are below the lower limit of normal and C4 is low. In HAE type 2, antigenic C1-INH is normal or elevated but functional C1-INH is low and C4 is low. C4 alone is approximately 88-92% sensitive and 96% specific when measured outside an attack; sensitivity exceeds 98% during an attack. Acquired angioedema (AAE) shares low C4, low C1-INH function, and low antigenic C1-INH but classically also low C1q (versus normal C1q in hereditary disease). HAE with normal C1-INH (HAE-nC1INH) shows normal C4 and C1-INH testing; the diagnosis combines a strong clinical picture (recurrent bradykinin-pattern angioedema, family history, lack of response to antihistamines and steroids) with genetic testing for F12, PLG, KNG1, and other recognized genes. WAO/EAACI 2021 guidelines recommend confirmatory testing twice at least 4 weeks apart. Genetic testing is offered when the diagnosis remains uncertain, before family screening, or for HAE-nC1INH. Differential diagnosis includes mast-cell-mediated allergic angioedema (acute onset, often with urticaria, responsive to adrenaline), ACE inhibitor angioedema (clinically similar but acquired and reversible with drug withdrawal), and idiopathic histaminergic angioedema. Imaging is rarely required; abdominal CT during an attack shows characteristic bowel-wall edema with ascites that resolves within days.",
+
+  "diagnosticTests": [
+    { "test": "Serum C4", "purpose": "Highly cost-effective screening test; low between attacks supports HAE diagnosis", "whatToExpect": "Standard blood draw. Result available within 24-48 hours. Sensitivity 88-92% between attacks, near 100% during attacks; specificity 96%." },
+    { "test": "Antigenic C1-esterase inhibitor", "purpose": "Distinguishes HAE type 1 (low antigen) from HAE type 2 (normal/elevated antigen)", "whatToExpect": "Standard blood draw, often on the same sample as C4. Result available in 5-10 days at specialty labs. Repeat 4 weeks later for confirmation." },
+    { "test": "Functional C1-esterase inhibitor", "purpose": "Required to confirm HAE type 2 and to exclude HAE in patients with low antigen from non-genetic causes", "whatToExpect": "Standard blood draw; the lab measures the inhibitory activity of C1-INH in a chromogenic or ELISA functional assay. Result in 7-14 days." },
+    { "test": "Serum C1q", "purpose": "Distinguishes acquired angioedema (AAE, often with low C1q) from hereditary angioedema (normal C1q)", "whatToExpect": "Standard blood draw. Especially important when patient is over 40 at first attack, or has no family history. Low C1q triggers a workup for lymphoproliferative disease." },
+    { "test": "Genetic testing (SERPING1; F12, PLG, KNG1, ANGPT1, MYOF, HS3ST6 for HAE-nC1INH)", "purpose": "Confirms diagnosis when biochemical results are equivocal, identifies HAE-nC1INH, and supports family cascade screening", "whatToExpect": "Blood or saliva sample sent to a specialty molecular lab. Results in 4-8 weeks. Pre- and post-test genetic counseling recommended." },
+    { "test": "Abdominal CT or ultrasound during an attack", "purpose": "Demonstrates bowel-wall thickening, ascites, and absence of obstruction — supports diagnosis when clinical picture is unclear", "whatToExpect": "Standard imaging in the emergency department. Bowel-wall edema typically resolves within 2-5 days, distinguishing HAE from inflammatory bowel disease." }
+  ],
+
+  "treatmentOverview": "Treatment is organized along three axes: on-demand therapy for acute attacks, short-term prophylaxis around predictable triggers (dental work, surgery, intubation), and long-term prophylaxis for patients with frequent or severe disease. On-demand options approved by FDA and EMA include intravenous plasma-derived C1-INH (Berinert, Cinryze) and recombinant C1-INH (Ruconest), the kallikrein inhibitor ecallantide (Kalbitor, US only), and the bradykinin B2 receptor antagonist icatibant (Firazyr). All four reduce attack duration from days to hours when given early; WAO/EAACI 2021 recommends treating any attack as early as possible regardless of location, and all patients should carry two doses of on-demand therapy at all times. Long-term prophylaxis is indicated when attacks are frequent, severe, or have involved the airway. Options include subcutaneous plasma-derived C1-INH (HAEGARDA, 60 IU/kg twice weekly) which reduces attacks by 84-95% in the COMPACT trial; the subcutaneous monoclonal antibody against plasma kallikrein lanadelumab (Takhzyro) 300 mg every 2 weeks, which produced 87% attack reduction in the HELP trial; and the oral plasma kallikrein inhibitor berotralstat (Orladeyo) 150 mg daily, which achieved 44% attack reduction in APeX-2. Older agents — attenuated androgens (danazol 100-200 mg/day) and antifibrinolytics (tranexamic acid 1-3 g/day) — are second-line, more useful in resource-limited settings. Short-term prophylaxis with plasma-derived C1-INH 1000-2000 IU IV 1-6 hours before a dental or surgical procedure prevents 90-99% of provoked attacks. Care should be coordinated through an accredited HAE comprehensive care center.",
+
+  "medicalTreatments": [
+    { "name": "Plasma-derived C1-esterase inhibitor IV concentrate (Berinert, Cinryze) 20 IU/kg on-demand", "description": "Replaces deficient or dysfunctional C1-INH directly. Used for all attack sites and ages; safe in pregnancy. Effects begin within 30-60 minutes; complete resolution within hours.", "effectiveness": "Symptom relief begins at median 30 minutes; cumulative symptom resolution within 4 hours in over 90% of attacks (Craig 2009)" },
+    { "name": "Recombinant human C1-esterase inhibitor (Ruconest) 50 IU/kg IV on-demand", "description": "Recombinant from transgenic rabbit milk, given by IV bolus. Effects start within 30 minutes. Contraindicated in patients with rabbit allergy.", "effectiveness": "Symptom relief at median 90 minutes versus 152 minutes for placebo (Riedl 2014)" },
+    { "name": "Icatibant 30 mg subcutaneously on-demand", "description": "Selective bradykinin B2 receptor antagonist; pre-filled syringe enables home self-administration. Approved for adults and children; effects within 30-60 minutes.", "effectiveness": "Median time to symptom improvement 2.0 hours versus 19.8 hours with placebo in FAST-3 (Lumry 2011)" },
+    { "name": "Ecallantide 30 mg subcutaneously on-demand", "description": "Plasma kallikrein inhibitor approved in the US. Given as three 10 mg subcutaneous injections. Anaphylaxis in approximately 3-4% requires administration in a healthcare setting.", "effectiveness": "Significant symptom relief at 4 hours in EDEMA studies; not approved in EU due to anaphylaxis risk" },
+    { "name": "Lanadelumab (Takhzyro) 300 mg subcutaneously every 2 weeks", "description": "Fully human monoclonal antibody to plasma kallikrein; long-term prophylaxis. After 6 months of stable control, dosing can be extended to every 4 weeks.", "effectiveness": "87% reduction in monthly attack rate versus placebo in HELP (Banerji NEJM 2018); 73% of patients attack-free during steady state" },
+    { "name": "Subcutaneous plasma-derived C1-INH (HAEGARDA) 60 IU/kg twice weekly", "description": "Subcutaneous formulation for long-term prophylaxis; self-administered at home. Approved for adults and adolescents.", "effectiveness": "84-95% reduction in monthly attack rate versus placebo in COMPACT (Longhurst NEJM 2017)" },
+    { "name": "Berotralstat (Orladeyo) 150 mg oral daily", "description": "First oral long-term prophylaxis for HAE; selective plasma kallikrein inhibitor. Convenient but slightly less effective than parenteral options.", "effectiveness": "44% reduction in monthly attack rate at 24 weeks (Aygören-Pürsün APeX-2 2018)" },
+    { "name": "Attenuated androgens (danazol 100-200 mg daily, stanozolol 2 mg daily)", "description": "Second-line long-term prophylaxis; increase hepatic C1-INH synthesis. Side effects (weight gain, virilization, hepatotoxicity, lipid changes) limit long-term use, particularly in women.", "effectiveness": "Attack reduction 60-90% but discontinuation due to side effects in 30-40% of patients over 2 years" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Emergency surgical airway (cricothyroidotomy or tracheostomy)", "description": "Required when laryngeal HAE attack progresses despite on-demand therapy. Performed in resuscitation or operating room. Most HAE comprehensive care centers have a written airway plan for every patient.", "successRate": "Life-saving when performed in time; not a long-term solution. Modern on-demand therapy has dramatically reduced need for emergency surgical airway." }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Helicobacter pylori eradication", "description": "In patients with predominantly abdominal HAE attacks and confirmed H. pylori infection, eradication has been associated with reduced attack frequency in observational studies. Treat as per local antimicrobial guidance." },
+    { "name": "Tranexamic acid 1-3 g/day", "description": "Antifibrinolytic that reduces attack frequency modestly; cheap and widely available. Useful in HAE-nC1INH and as adjunct in resource-limited settings; thrombosis risk requires caution." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "c1-inhibitor-replacement-therapy",
+    "lanadelumab-injection",
+    "icatibant-injection",
+    "berotralstat-oral"
+  ],
+
+  "whySeeSpecialist": "Care should be coordinated through an allergy and immunology specialist with HAE expertise, ideally at a designated comprehensive care center. Specialists handle confirmatory testing, family cascade screening, individualized prophylaxis selection, pregnancy planning, dental and surgical pre-medication, and access to expensive targeted therapies.",
+  "doctorSelectionGuide": "Look for an allergist or immunologist who is part of a HAE comprehensive care center (US HAEA Angioedema Center of Excellence or equivalent international designation), follows at least 10 HAE patients, and has 24-hour access to on-demand therapy. Pediatric HAE warrants a pediatric allergist with HAE experience and an established airway plan.",
+
+  "hospitalCriteria": [
+    "Functional and antigenic C1-INH testing available locally or by reliable referral",
+    "On-site emergency stocks of plasma-derived or recombinant C1-INH, icatibant, and ecallantide where licensed",
+    "Anesthesia and ENT cover for emergency airway",
+    "Designated HAE comprehensive care or Angioedema Center of Excellence",
+    "Patient education program with self-administration training and home-supply pathway"
+  ],
+  "keyFacilities": [
+    "HAEA Angioedema Centers of Excellence",
+    "HAEi reference centers worldwide",
+    "Allergy and immunology comprehensive care centers",
+    "Pediatric tertiary allergy units",
+    "High-risk obstetrics services for pregnant HAE patients"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Carry two doses of on-demand therapy (C1-INH, icatibant, or ecallantide) at all times and ensure family or partner can recognize an attack and call for help.",
+    "Avoid ACE inhibitors and combined oral contraceptives; consider progestin-only contraception if hormonal control is required.",
+    "Schedule short-term prophylaxis with C1-INH concentrate before dental work, surgery, intubation, and endoscopy.",
+    "Treat Helicobacter pylori infection if confirmed and attacks are predominantly abdominal.",
+    "Wear medical identification stating diagnosis and treatment plan; carry an HAE emergency card.",
+    "Enroll in an HAE patient registry and update emergency department care plans annually."
+  ],
+
+  "lifestyleModifications": [
+    "Avoid ACE inhibitors lifelong; document the allergy/contraindication clearly in the medical record.",
+    "Switch from combined oral contraceptives or estrogen-containing HRT to progestin-only or non-hormonal alternatives.",
+    "Plan pregnancies with an allergist and high-risk obstetrician; pdC1-INH is the preferred on-demand and prophylactic option in pregnancy.",
+    "Build a written action plan that lists triggers, on-demand therapy choice, dose, contact numbers, and escalation criteria.",
+    "Educate household, school, workplace, and dentist about HAE and how to respond to laryngeal warning signs.",
+    "Maintain a diary of attacks and triggers to refine prophylactic strategy and dose."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Balanced Mediterranean-style diet with adequate calorie intake",
+      "Adequate hydration to support fibrinolysis and reduce attack severity",
+      "Vitamin D 800-2000 IU/day, especially in patients on long-term androgen therapy"
+    ],
+    "avoid": [
+      "Alcohol in excess — small association with attack frequency in observational data and interactions with danazol and tranexamic acid",
+      "Smoking, which appears to increase attack frequency in some cohorts",
+      "Recreational stimulants that raise blood pressure (cocaine, amphetamines), which can amplify symptoms",
+      "Foods or supplements linked to attacks in the personal diary — variable between individuals"
+    ]
+  },
+  "exerciseGuidelines": "Regular moderate exercise is encouraged and does not provoke attacks for most patients. Avoid contact sports that involve repeated facial trauma if attacks are frequent. Pre-treat with on-demand therapy before high-risk activities in particularly trigger-sensitive patients. Stress-management approaches (CBT, mindfulness) reduce psychological triggers in observational studies.",
+
+  "dailyManagement": [
+    "Take long-term prophylaxis on schedule (lanadelumab fortnightly, berotralstat daily, subcutaneous C1-INH twice weekly) without missed doses.",
+    "Inspect injection sites for redness or induration and rotate sites for subcutaneous therapies.",
+    "Track every attack — location, time of onset, treatment time, response time — for clinic review.",
+    "Keep on-demand therapy at room temperature in a labeled travel kit; replace before expiry.",
+    "Hydrate well; rest after any minor trauma.",
+    "Update the personal HAE emergency card with current treatment and contact details every year."
+  ],
+
+  "prognosis": "Modern targeted therapy has transformed HAE outlook. Pre-1980s case series reported mortality from laryngeal asphyxiation in 25-30% of untreated patients; post-2010 cohorts on consistent on-demand therapy and long-term prophylaxis show mortality close to general-population rates. The HELP, COMPACT, and APeX-2 trials each demonstrated attack-rate reductions of 44-95% with modern prophylactic agents, and over 70% of patients on lanadelumab achieve a 12-month attack-free interval. Quality-of-life scores rise substantially: AE-QoL scores improve by 20-30 points on prophylaxis in trial data. Childbearing is generally safe with planning and pdC1-INH support. Major unmet needs include diagnostic delay, equitable access in low- and middle-income countries, and HAE with normal C1-INH, where biomarkers and trial evidence remain limited.",
+
+  "recoveryTimeline": "An acute attack treated early with on-demand C1-INH, icatibant, or ecallantide begins to improve within 30-90 minutes and fully resolves within 4-24 hours. Untreated attacks last 2-5 days. Long-term prophylaxis reaches steady-state attack reduction within 4-8 weeks of starting subcutaneous C1-INH, lanadelumab, or berotralstat. Quality of life typically improves within 3-6 months of effective prophylaxis.",
+
+  "complications": [
+    "Laryngeal asphyxiation — historically responsible for one in four untreated HAE deaths; modern emergency on-demand therapy and self-administration training have largely prevented it.",
+    "Unnecessary abdominal surgery (appendectomy, laparotomy) before diagnosis, occurring in up to 30% of patients in older series and contributing to diagnostic delay.",
+    "Hypovolemic shock from third-space fluid losses during severe abdominal attacks.",
+    "Adverse effects from chronic androgen therapy: weight gain, hirsutism, hepatic adenoma, dyslipidemia, mood change.",
+    "Anaphylaxis after ecallantide (3-4% of doses) requires administration in monitored settings.",
+    "Pregnancy complications including increased attack rate in the third trimester, particularly in HAE-nC1INH; pdC1-INH-supported deliveries are very safe."
+  ],
+
+  "supportResources": [
+    { "name": "US HAE Association (HAEA)", "url": "https://www.haea.org/", "description": "Patient organization that runs Angioedema Centers of Excellence, supports research, and provides emergency-card and travel guidance." },
+    { "name": "HAE International (HAEi)", "url": "https://haei.org/", "description": "Global federation of HAE patient organizations and reference centers; multilingual disease information and country directory." },
+    { "name": "WAO/EAACI Hereditary Angioedema Guidelines 2021", "url": "https://pubmed.ncbi.nlm.nih.gov/35001401/", "description": "International evidence-based clinical guidelines covering diagnosis, treatment, and special populations." },
+    { "name": "ACAAI Angioedema Center Locator", "url": "https://acaai.org/", "description": "American College of Allergy, Asthma and Immunology directory of allergists with HAE expertise." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "keyDifference": "Anaphylaxis is histamine-mediated, presents with urticaria, pruritus, wheeze, hypotension, and tachycardia, and responds to intramuscular adrenaline. HAE is bradykinin-mediated with non-itchy non-urticarial swelling, no wheeze, and does not respond to adrenaline, antihistamines, or steroids." },
+    { "slug": "angioedema-allergy", "name": "Allergic angioedema", "keyDifference": "Allergic angioedema accompanies hives, is histamine-driven, follows IgE-mediated exposure, and responds to antihistamines, steroids, and adrenaline. HAE is recurrent without urticaria, has a positive family history, and requires HAE-specific therapy (C1-INH replacement, kallikrein or bradykinin antagonists)." },
+    { "slug": "chronic-urticaria", "name": "Chronic Urticaria", "keyDifference": "Chronic urticaria features wheals lasting under 24 hours with intense itching and often angioedema; mediator is histamine from mast cells. HAE has no urticaria, lasts 2-5 days per episode, and does not improve with H1 antihistamines." },
+    { "slug": "defects-in-the-complement-system-d841", "name": "Complement deficiency disorder", "keyDifference": "Broader complement deficiencies predispose to encapsulated-organism infections (meningococcus, pneumococcus) rather than angioedema. HAE is a specific C1-INH deficiency producing bradykinin-mediated swelling without infection susceptibility." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "anxiety", "name": "Anxiety" },
+    { "slug": "depression", "name": "Depression" },
+    { "slug": "angioedema-allergy", "name": "Angioedema" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "angioedema-allergy", "name": "Angioedema", "relevance": "Umbrella category of swelling disorders that includes HAE; differential diagnosis is essential to direct correct therapy." },
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "relevance": "Critical histamine-mediated differential diagnosis with different acute management." },
+    { "slug": "chronic-urticaria", "name": "Chronic Urticaria", "relevance": "Common histaminergic differential; coexists with HAE only rarely." },
+    { "slug": "defects-in-the-complement-system-d841", "name": "Complement system defect", "relevance": "Wider class of complement abnormalities; HAE is one specific subtype." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is hereditary angioedema?",
+      "answer": "Hereditary angioedema (HAE) is a rare inherited disease that causes recurrent attacks of non-itchy swelling of the skin, abdomen, and airway driven by excess bradykinin. Most cases are due to deficient or dysfunctional C1-esterase inhibitor. It is treated with on-demand and long-term prophylactic therapies specific to bradykinin pathways.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is HAE different from an allergic reaction?",
+      "answer": "Allergic reactions are histamine-mediated, present with urticaria and itch, and respond to adrenaline, antihistamines, and steroids. HAE is bradykinin-mediated, has no hives or itch, and does not respond to those drugs. Recognizing the difference is critical because using allergy drugs alone can delay life-saving HAE-specific treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes HAE attacks?",
+      "answer": "Attacks are triggered by minor trauma, dental procedures, surgery, infections, psychological stress, menstruation, hormonal contraceptives, and ACE inhibitors. Spontaneous attacks without an identifiable trigger occur in about 30% of episodes. Recognizing personal triggers is part of long-term management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is HAE life-threatening?",
+      "answer": "Yes when laryngeal swelling occurs without treatment — historic mortality from asphyxiation was 25-30% of untreated patients. Modern self-administered on-demand therapy with C1-inhibitor concentrate, icatibant, or ecallantide has reduced HAE mortality close to general-population levels.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is HAE diagnosed?",
+      "answer": "Diagnosis combines clinical history with three blood tests: C4 (low in 88-92% of patients between attacks), antigenic C1-INH (low in type 1, normal in type 2), and functional C1-INH (low in both). Tests are repeated after 4 weeks to confirm. Genetic testing identifies SERPING1 mutations and HAE with normal C1-INH variants.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can HAE be cured?",
+      "answer": "There is no cure for the inherited gene defect, but modern treatment controls the disease so well that most patients live normal lives. Lanadelumab, subcutaneous C1-INH, and berotralstat reduce attack frequency by 44-95%; over 70% of lanadelumab patients have 12-month attack-free intervals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is on-demand treatment in HAE?",
+      "answer": "On-demand therapy is medication given at the start of an HAE attack to shorten its duration. Options are intravenous plasma-derived or recombinant C1-INH, subcutaneous icatibant (bradykinin B2 antagonist), and subcutaneous ecallantide (kallikrein inhibitor). All patients should carry two doses at all times.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should long-term prophylaxis be considered in HAE?",
+      "answer": "Long-term prophylaxis is recommended when attacks are frequent, severe, or have involved the airway, when on-demand therapy is unavailable, or when quality of life is significantly impaired. Options include subcutaneous C1-INH, lanadelumab every 2 weeks, oral berotralstat daily, and (second-line) attenuated androgens.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is HAE inherited?",
+      "answer": "Yes. HAE is autosomal dominant — each child of an affected parent has a 50% chance of inheriting the condition. About 25% of cases have no family history and arise from new (de novo) SERPING1 mutations or are HAE with normal C1-INH. Genetic counseling is recommended for family screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children have HAE?",
+      "answer": "Yes. Two-thirds of patients have their first attack between ages 5 and 15. Pediatric HAE is treated with the same agents as adult HAE; plasma-derived C1-INH is approved for all ages, and icatibant is approved in many countries down to age 2. Pediatric airway attacks require urgent action.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why are ACE inhibitors dangerous in HAE?",
+      "answer": "ACE inhibitors block bradykinin breakdown by angiotensin-converting enzyme, raising bradykinin levels and provoking severe attacks even in mild HAE. They are contraindicated in HAE; angiotensin receptor blockers (ARBs) are generally tolerated and preferred when antihypertensive therapy is needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are hormonal contraceptives safe in HAE?",
+      "answer": "Combined oral contraceptives containing estrogen worsen HAE attacks in many women and should be avoided. Progestin-only methods (mini-pill, implant, IUD, depot injection) are generally safe and may reduce attack frequency. Choice should be made with an allergist and gynecologist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnancy affect HAE?",
+      "answer": "Pregnancy often changes attack frequency — some women improve, others worsen, particularly in the third trimester. Plasma-derived C1-INH is the on-demand and prophylactic option of choice in pregnancy. Vaginal delivery is preferred; cesarean section warrants C1-INH pre-medication. Breastfeeding is safe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do antihistamines help HAE?",
+      "answer": "No. HAE attacks are driven by bradykinin, not histamine. Antihistamines, corticosteroids, and adrenaline do not shorten HAE attacks. Relying on these drugs delays effective HAE-specific therapy and is associated with worse outcomes, especially in laryngeal involvement.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is short-term prophylaxis for HAE procedures?",
+      "answer": "Short-term prophylaxis is C1-INH concentrate (1000-2000 IU IV) given 1-6 hours before a high-risk event such as dental work, intubation, endoscopy, or surgery. It reduces provoked attack rate from 20-30% to under 10%. Tranexamic acid and danazol are alternatives where C1-INH is unavailable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does an HAE attack last?",
+      "answer": "Untreated attacks build over 12-36 hours and resolve over 2-5 days. Treated attacks improve within 30 minutes to 2 hours after on-demand C1-INH, icatibant, or ecallantide and fully resolve within hours rather than days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause HAE attacks?",
+      "answer": "Psychological stress is a recognized trigger in 60-70% of patients. Mechanisms likely involve cortisol and autonomic changes affecting the contact system. Stress management (CBT, mindfulness, exercise) reduces attack frequency in observational studies but is an adjunct, not a replacement for medical therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is acquired angioedema the same as HAE?",
+      "answer": "No. Acquired angioedema (AAE) is not inherited; it usually presents after age 40 and is caused by C1-INH consumption from lymphoproliferative disorders (AAE-1) or autoantibodies (AAE-2). C1q is typically low in AAE and normal in HAE, helping distinguish them; AAE requires malignancy workup.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is HAE with normal C1 inhibitor?",
+      "answer": "HAE-nC1INH is a subtype with the same clinical picture but normal C4 and C1-INH testing. Gain-of-function mutations in F12, PLG, KNG1, ANGPT1, MYOF, and HS3ST6 have been identified. It is predominantly seen in women, is highly estrogen-responsive, and is treated with the same on-demand agents.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are there oral medications for HAE?",
+      "answer": "Yes. Berotralstat (Orladeyo) 150 mg daily, approved in 2020, is the first oral plasma kallikrein inhibitor for long-term HAE prophylaxis, reducing attack rate by 44% versus placebo. Attenuated androgens (danazol) and tranexamic acid are older oral options used as second-line or in resource-limited settings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can family members be tested for HAE?",
+      "answer": "All first-degree relatives of a confirmed HAE patient should be offered C4 and C1-INH antigenic/functional testing, regardless of symptoms, and ideally before age 1 with confirmation after age 1. If the family mutation is known, genetic testing provides definitive diagnosis. Early identification saves lives by enabling pre-emptive emergency planning.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Hereditary Angioedema (HAE, C1-inhibitor deficiency)",
+  "regionalNames": [
+    { "name": "Angio-œdème héréditaire", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "Hereditäres Angioödem", "region": "Germany, Austria", "language": "German" },
+    { "name": "Angioedema hereditario", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "वंशानुगत एंजियोएडीमा", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "hereditary angioedema",
+    "HAE",
+    "C1 inhibitor deficiency",
+    "C1 esterase inhibitor",
+    "bradykinin angioedema",
+    "SERPING1",
+    "lanadelumab",
+    "icatibant",
+    "berotralstat",
+    "ecallantide",
+    "Berinert",
+    "Cinryze",
+    "Ruconest",
+    "HAE type 1",
+    "HAE type 2",
+    "HAE with normal C1 inhibitor",
+    "non-allergic angioedema"
+  ],
+  "symptomKeywords": [
+    "recurrent swelling without itching",
+    "swollen face no hives",
+    "abdominal pain attacks family history",
+    "throat tightness no allergy",
+    "hands and feet swelling weekly",
+    "swelling not responding to antihistamines",
+    "laryngeal angioedema",
+    "swelling after dental work"
+  ],
+
+  "metaTitle": "Hereditary Angioedema: Symptoms & Treatment | aihealz",
+  "metaDescription": "Hereditary angioedema (HAE): inherited C1-inhibitor disorder causing recurrent swelling attacks. Symptoms, diagnosis, on-demand and prophylactic treatments.",
+
+  "keywords": [
+    "hereditary angioedema",
+    "HAE treatment",
+    "C1 esterase inhibitor",
+    "bradykinin angioedema",
+    "lanadelumab",
+    "icatibant",
+    "berotralstat",
+    "ecallantide",
+    "HAE type 1",
+    "HAE type 2",
+    "HAE with normal C1 inhibitor",
+    "SERPING1 mutation"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Maurer M, Magerl M, Betschel S, et al. 2022. The international WAO/EAACI guideline for the management of hereditary angioedema - the 2021 revision and update. Allergy 77(7):1961-90.", "url": "https://pubmed.ncbi.nlm.nih.gov/35001401/", "accessedDate": "2026-05-14" },
+    { "title": "Banerji A, Riedl MA, Bernstein JA, et al. 2018. Effect of lanadelumab compared with placebo on prevention of hereditary angioedema attacks: HELP randomized clinical trial. JAMA 320(20):2108-21.", "url": "https://pubmed.ncbi.nlm.nih.gov/30403942/", "accessedDate": "2026-05-14" },
+    { "title": "Aygören-Pürsün E, Bygum A, Grivcheva-Panovska V, et al. 2018. Oral plasma kallikrein inhibitor for prophylaxis in hereditary angioedema. New England Journal of Medicine 379(4):352-62.", "url": "https://pubmed.ncbi.nlm.nih.gov/30067924/", "accessedDate": "2026-05-14" },
+    { "title": "Longhurst H, Cicardi M, Craig T, et al. 2017. Prevention of hereditary angioedema attacks with a subcutaneous C1 inhibitor (COMPACT). New England Journal of Medicine 376(12):1131-40.", "url": "https://pubmed.ncbi.nlm.nih.gov/28328347/", "accessedDate": "2026-05-14" },
+    { "title": "Busse PJ, Christiansen SC, Riedl MA, et al. 2021. US HAEA Medical Advisory Board 2020 guidelines for the management of hereditary angioedema. Journal of Allergy and Clinical Immunology Practice 9(1):132-50.", "url": "https://pubmed.ncbi.nlm.nih.gov/32898710/", "accessedDate": "2026-05-14" },
+    { "title": "Zuraw BL. 2008. Hereditary angioedema. New England Journal of Medicine 359(10):1027-36.", "url": "https://pubmed.ncbi.nlm.nih.gov/18768947/", "accessedDate": "2026-05-14" },
+    { "title": "Bygum A. 2009. Hereditary angio-oedema in Denmark: a nationwide survey. British Journal of Dermatology 161(5):1153-8.", "url": "https://pubmed.ncbi.nlm.nih.gov/19298272/", "accessedDate": "2026-05-14" },
+    { "title": "US Hereditary Angioedema Association (HAEA). 2024. Patient and clinician resources.", "url": "https://www.haea.org/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}
