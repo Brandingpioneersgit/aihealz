@@ -40,6 +40,27 @@ const CRUFT = [
     'without', 'with complication', 'in diseases classified',
 ];
 
+// Service / workup / specialty-angle terms. An entry whose name or slug
+// carries one of these is not a distinct patient-facing condition — it is a
+// service ("chronic disease management"), a workup variant ("thyroid nodule
+// evaluation"), or the same condition re-filed under a specialty ("gout
+// (podiatric)"). Generating pages for these recreates the near-duplicate
+// problem WS1 exists to fix, so they are rejected.
+const NON_CONDITION_TERMS = [
+    'management', 'counseling', 'counselling', 'consultation', 'consultations',
+    'evaluation', 'screening', 'staging', 'scintigraphy', 'ablation',
+    'primary care', 'nuclear imaging', 'nuclear medicine', 'histopathology',
+    'cytology', 'pathology testing', 'pathology staging', 'ultrasound findings',
+    'imaging procedures', 'interventional radiology',
+];
+
+// Strip a trailing/parenthetical specialty qualifier — "Gout (Podiatric)",
+// "Osteoarthritis (Primary Care)", "Herniated Disc (MRI)" — so the base-name
+// dedup folds them onto the real condition instead of treating each as new.
+function stripQualifier(name: string): string {
+    return name.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s{2,}/g, ' ').trim();
+}
+
 function scoreCondition(commonName: string, slug: string, hasDesc: boolean): number {
     const base = getBaseConditionName(commonName);
     const lower = commonName.toLowerCase();
@@ -93,14 +114,20 @@ async function main() {
         if (!r.has_desc) continue;
         if (isNonCondition(r.common_name)) continue;
         if (isPoorlyFormatted(r.common_name)) continue;
+        // Reject services / workup variants / specialty re-files.
+        const haystack = `${r.common_name} ${r.slug.replace(/-/g, ' ')}`.toLowerCase();
+        if (NON_CONDITION_TERMS.some(t => haystack.includes(t))) continue;
         const score = scoreCondition(r.common_name, r.slug, r.has_desc);
         if (score < 0) continue;
+        // Base name with the parenthetical specialty qualifier stripped, so
+        // "Gout (Podiatric)" dedups onto plain "gout".
+        const baseName = getBaseConditionName(stripQualifier(r.common_name));
         candidates.push({
             id: r.id,
             slug: r.slug,
             commonName: r.common_name,
             cleanName: cleanConditionName(r.common_name),
-            baseName: getBaseConditionName(r.common_name),
+            baseName,
             specialistType: r.specialist_type,
             hasContent: haveContent.has(r.id),
             score,
