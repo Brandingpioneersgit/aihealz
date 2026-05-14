@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ location:
 
     const levelLabel = geo.level === 'country' ? 'Country' : geo.level === 'state' ? 'State' : 'City';
     return {
-        title: `Top Doctors in ${geo.name} – Verified Specialists | aihealz`,
+        title: { absolute: `Top Doctors in ${geo.name} – Verified Specialists | aihealz` },
         description: `Find the best verified doctors and specialists in ${geo.name} (${levelLabel}). Compare ratings, read patient reviews, and book consultations.`,
         keywords: [`doctors in ${geo.name}`, `best doctors ${geo.name}`, `specialists ${geo.name}`, `hospitals ${geo.name}`, 'aihealz'],
         openGraph: {

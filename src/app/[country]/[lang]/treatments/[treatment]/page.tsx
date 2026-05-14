@@ -126,7 +126,11 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
     const countryLabel = findCountryBySlug(country)?.label || 'Global';
 
     return {
-        title: `${treatmentName} - Cost, Procedure & Recovery in ${countryLabel} | AIHealz`,
+        // `absolute` so the root layout's "%s | aihealz" template doesn't
+        // append a second site name.
+        title: {
+            absolute: `${treatmentName} — Cost, Procedure & Recovery in ${countryLabel} | aihealz`,
+        },
         description: metaDescription + priceInfo,
         keywords,
         openGraph: {

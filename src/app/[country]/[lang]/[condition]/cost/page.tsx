@@ -32,7 +32,13 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
         ?? country.charAt(0).toUpperCase() + country.slice(1);
     const canonical = `/${country}/${lang}/${condition}/cost`;
     return {
-        title: mc ? `Cost of ${mc.commonName} Treatment in ${countryName} | aihealz` : 'Treatment Costs | aihealz',
+        // `absolute` so the root layout's "%s | aihealz" template doesn't
+        // double the site name.
+        title: {
+            absolute: mc
+                ? `Cost of ${mc.commonName} Treatment in ${countryName} | aihealz`
+                : 'Treatment Costs | aihealz',
+        },
         description: mc ? `Compare treatment costs for ${mc.commonName} in ${countryName}. AI-estimated pricing from verified hospitals.` : 'Compare medical treatment costs.',
         alternates: {
             canonical,

@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ location:
     const langName = LANG_NAMES[lang] || lang;
 
     return {
-        title: `Doctors in ${geo.name} — ${langName} | aihealz`,
+        title: { absolute: `Doctors in ${geo.name} — ${langName} | aihealz` },
         description: `Browse top verified doctors in ${geo.name}. Page available in ${langName}. AI-powered specialist matching and ranking.`,
         keywords: [`doctors ${geo.name}`, `${langName} doctors`, `specialists ${geo.name}`, 'aihealz'],
     };
@@ -55,7 +55,7 @@ export default async function LanguageLocationDoctors({ params }: { params: Prom
     });
     if (!geo) notFound();
 
-    const supportedLangs: string[] = (geo.supportedLanguages as string[]) || ['en'];
+    const supportedLangs: string[] = geo.supportedLanguages.length > 0 ? geo.supportedLanguages : ['en'];
     if (!supportedLangs.includes(lang)) notFound();
 
     const descendantIds = await getDescendantIds(geo.id);

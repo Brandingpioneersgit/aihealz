@@ -189,6 +189,21 @@ export interface PageData {
     needsTranslation?: boolean;
     conditionId?: number;
 
+    // ─── Local Data Density (uniqueness / indexation gate) ───
+    // Quantifies how much genuinely location-specific data backs this
+    // page. Drives the robots index/noindex decision in generateMetadata
+    // so thin sub-country pages don't compete as near-duplicates of the
+    // country-level page. See computeLocalDataDensity().
+    localData: {
+        geoLevel: string;            // country | state | city | locality
+        doctorCount: number;         // geo-matched verified doctors
+        hasAnyCost: boolean;         // any TreatmentCost row for this country
+        hasCityCost: boolean;        // city-level TreatmentCost row
+        hasLocalContent: boolean;    // non-fallback, geo-specific LocalizedContent
+        score: number;               // weighted density score (for audits)
+        isIndexable: boolean;        // robots: index when true
+    };
+
     // ─── Variant Fallback (canonical consolidation for ICD-10 variants) ───
     // When the requested slug has no ConditionPageContent but a sibling base
     // condition does, we serve the sibling's content here. The page must then:
@@ -279,7 +294,7 @@ export async function stitchPageData(
 
     // ─── Phase 2: All independent queries in parallel ────────
     let [
-        { localContent, isFallbackContent },
+        { localContent, isFallbackContent: localContentIsFallback },
         pageContent,
         costRaw,
         mediaAssets,
@@ -436,6 +451,18 @@ export async function stitchPageData(
     const heroImg = images.find(i => i.assetType === 'feature' || i.section === 'hero') || images[0];
     const featureImage = heroImg ? heroImg.url : null;
 
+    // ─── Local data density / indexation gate ────────────────
+    const doctorCount = doctors.premium.length + doctors.free.length;
+    const localData = computeLocalDataDensity({
+        countryCode,
+        geoChain,
+        doctorCount,
+        costCitySlug: costRaw?.citySlug ?? null,
+        hasAnyCost: !!costRaw,
+        hasLocalContent: !!localContent && !localContentIsFallback,
+        hasPageContent: !!pageContent,
+    });
+
     const result: PageData = {
         condition: {
             ...condition,
@@ -456,6 +483,7 @@ export async function stitchPageData(
         conditionId: condition.id,
         doctors,
         reviewer,
+        localData,
         isVariantFallback,
         canonicalSlug,
         canonicalCommonName,
@@ -737,4 +765,67 @@ async function fetchReviewer(
     }
 
     return null;
+}
+
+// ─── Local Data Density / Indexation Gate ──────────────────
+//
+// Rollout allowlist: only these country codes are eligible for
+// indexable location pages today. Expanding to a new market is a
+// one-line change here once that market has doctor + cost data
+// seeded. Scoped to India + USA for the initial rollout.
+const ROLLOUT_COUNTRY_CODES = new Set(['in', 'us']);
+
+/**
+ * Quantify how much genuinely location-specific data backs a page and
+ * decide whether it should be indexed.
+ *
+ * Country-level pages are the canonical hubs — indexable whenever the
+ * condition has real content AND the country is in the rollout
+ * allowlist. Sub-country pages (state / city / locality) must add
+ * something the country page does not — city-level cost data, a
+ * meaningful local doctor pool, or geo-specific localized content —
+ * otherwise they are near-duplicates of the country page and get
+ * noindex + a canonical pointing up to the hub.
+ *
+ * The weighted `score` is not used for the gate itself; it exists so
+ * the coverage audit script can rank pages by data richness.
+ */
+function computeLocalDataDensity(args: {
+    countryCode: string;
+    geoChain: GeoChain;
+    doctorCount: number;
+    costCitySlug: string | null;
+    hasAnyCost: boolean;
+    hasLocalContent: boolean;
+    hasPageContent: boolean;
+}): PageData['localData'] {
+    const deepest = getDeepestGeo(args.geoChain);
+    const geoLevel = deepest?.level ?? 'country';
+    const hasCityCost = args.costCitySlug !== null;
+
+    let score = 0;
+    if (args.hasPageContent) score += 2;
+    if (args.hasAnyCost) score += 1;
+    if (hasCityCost) score += 2;
+    if (args.hasLocalContent) score += 3;
+    score += Math.min(args.doctorCount, 6) * 0.5;
+
+    const countryAllowed = ROLLOUT_COUNTRY_CODES.has(args.countryCode.toLowerCase());
+    const isIndexable =
+        countryAllowed &&
+        args.hasPageContent &&
+        (geoLevel === 'country' ||
+            hasCityCost ||
+            args.hasLocalContent ||
+            args.doctorCount >= 3);
+
+    return {
+        geoLevel,
+        doctorCount: args.doctorCount,
+        hasAnyCost: args.hasAnyCost,
+        hasCityCost,
+        hasLocalContent: args.hasLocalContent,
+        score: Math.round(score * 10) / 10,
+        isIndexable,
+    };
 }

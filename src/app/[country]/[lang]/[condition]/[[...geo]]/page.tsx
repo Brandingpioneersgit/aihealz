@@ -41,6 +41,28 @@ function pluralizeSpecialist(specialistType: string | null | undefined): string 
 }
 
 /**
+ * Build a human-readable location phrase from a geo chain, most specific
+ * first, capped at two parts for readability. Drives per-page uniqueness
+ * of title / description / H1 across the condition × geography fan-out.
+ * e.g. {locality: Saket, city: New Delhi, country: India} → "Saket, New Delhi"
+ *      {city: New Delhi, country: India}                 → "New Delhi, India"
+ *      {country: India}                                  → "India"
+ */
+function buildLocationPhrase(geoChain: {
+    locality?: { name: string };
+    city?: { name: string };
+    state?: { name: string };
+    country?: { name: string };
+}): string {
+    const parts: string[] = [];
+    if (geoChain.locality) parts.push(geoChain.locality.name);
+    if (geoChain.city) parts.push(geoChain.city.name);
+    else if (geoChain.state) parts.push(geoChain.state.name);
+    if (geoChain.country) parts.push(geoChain.country.name);
+    return [...new Set(parts)].slice(0, 2).join(', ');
+}
+
+/**
  * Get the correct article ("a" or "an").
  */
 function getArticle(word: string | null | undefined): string {
@@ -186,23 +208,54 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const locationName = deepestGeo?.name || '';
     const conditionName = data.condition.commonName;
 
-    const metaTitle = data.automatedContent?.metaTitle || data.automatedContent?.h1Title || data.localContent?.metaTitle ||
-        `${conditionName} Treatment in ${locationName} | aihealz`;
+    // ─── Per-page uniqueness: weave the resolved location into title,
+    //     description and H1 so each condition × geography page is
+    //     distinct (instead of 7M near-duplicates). Geo is always present
+    //     (country is the minimum), so this always applies.
+    const locationPhrase = buildLocationPhrase(data.geoChain);
+    const specialistPlural = pluralizeSpecialist(data.condition.specialistType);
+    const doctorCount = data.doctors.premium.length + data.doctors.free.length;
 
-    const metaDescription = data.automatedContent?.metaDescription ||
-        (data.automatedContent?.heroOverview ? data.automatedContent.heroOverview.substring(0, 155) + '...' : null) ||
-        data.localContent?.metaDescription ||
-        `Find the best ${pluralizeSpecialist(data.condition.specialistType)} for ${conditionName} treatment in ${locationName}. Verified specialists, patient reviews, and appointment booking.`;
+    const metaTitle = locationPhrase
+        ? `${conditionName} in ${locationPhrase}: Symptoms, Causes & Treatment`
+        : (data.automatedContent?.metaTitle || data.automatedContent?.h1Title ||
+           `${conditionName}: Symptoms, Causes & Treatment`);
+
+    const metaDescription = locationPhrase
+        ? (
+            `${conditionName} in ${locationPhrase} — symptoms, causes, diagnosis and treatment options. ` +
+            (doctorCount > 0
+                ? `Connect with ${doctorCount}+ verified ${specialistPlural} in ${locationName}, `
+                : `Find verified ${specialistPlural}, `) +
+            `compare treatment costs and book appointments.`
+          ).slice(0, 158)
+        : (data.automatedContent?.metaDescription ||
+           (data.automatedContent?.heroOverview ? data.automatedContent.heroOverview.substring(0, 155) + '...' : null) ||
+           `Find verified ${specialistPlural} for ${conditionName}. Symptoms, treatment options, costs and appointment booking.`);
 
     const hreflangTags = generateHreflangTags(condition, data.geoChain, lang, data.availableLanguages);
     const urlPath = `/${country}/${lang}/${condition}${geo ? '/' + geo.join('/') : ''}`;
 
-    // When this slug is a variant being served via canonical fallback, the
-    // canonical URL points at the canonical slug — Google consolidates SEO
-    // signal there. The user-facing URL stays intact.
-    const canonicalPath = data.isVariantFallback && data.canonicalSlug
-        ? `/${country}/${lang}/${data.canonicalSlug}${geo ? '/' + geo.join('/') : ''}`
-        : urlPath;
+    // Data-density gate (content-engine.ts → computeLocalDataDensity).
+    // Optional-chained: Redis-cached PageData written before this field
+    // existed won't carry it — fall back to indexable until the 5-min
+    // cache TTL refreshes those entries.
+    const isIndexable = data.localData?.isIndexable ?? true;
+    const geoLevel = data.localData?.geoLevel ?? 'country';
+
+    // Canonical resolution, in priority order:
+    //   1. Variant fallback → the canonical sibling slug, so Google
+    //      consolidates SEO signal there. The user-facing URL stays intact.
+    //   2. Thin sub-country page (noindex) → the country-level page, so
+    //      crawl signal consolidates on the hub instead of fragmenting
+    //      across near-duplicate city pages.
+    //   3. Otherwise → self.
+    let canonicalPath = urlPath;
+    if (data.isVariantFallback && data.canonicalSlug) {
+        canonicalPath = `/${country}/${lang}/${data.canonicalSlug}${geo ? '/' + geo.join('/') : ''}`;
+    } else if (!isIndexable && geoLevel !== 'country') {
+        canonicalPath = `/${country}/${lang}/${condition}`;
+    }
     const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${canonicalPath}`;
 
     const symptomsSnippet = (data.automatedContent?.primarySymptoms || data.condition.symptoms || []).slice(0, 5).join(', ');
@@ -219,10 +272,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         locationName ? `This page covers ${conditionName} care in ${locationName}.` : '',
     ].filter(Boolean).join(' ');
 
-    const aeoDescription = data.automatedContent?.metaDescription || metaDescription;
+    // Use the location-aware description built above — do NOT fall back to
+    // the geo-agnostic automatedContent.metaDescription, or every geo
+    // variant collapses to the same string.
+    const aeoDescription = metaDescription;
+
+    // metaTitle carries no site suffix; set it absolute so the root
+    // layout's "%s | aihealz" template doesn't double it.
+    const titleAbsolute = `${metaTitle.replace(/\s*\|\s*aihealz\s*$/i, '').trim()} | aihealz`;
 
     return {
-        title: metaTitle,
+        title: { absolute: titleAbsolute },
         description: aeoDescription,
         other: {
             'llm-summary': llmSummary,
@@ -253,7 +313,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             canonical: canonicalUrl,
             languages: Object.fromEntries(hreflangTags.map(tag => [tag.hreflang, tag.href])),
         },
-        robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' as const, 'max-video-preview': -1 },
+        // index/noindex is data-driven: thin location pages get noindex
+        // (still follow, so doctors/costs stay crawlable) and canonical up
+        // to the country page, so they don't compete as near-duplicates.
+        // See computeLocalDataDensity in content-engine.ts.
+        robots: { index: isIndexable, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' as const, 'max-video-preview': -1 },
     };
 }
 
@@ -285,6 +349,13 @@ export default async function ConditionPage({ params }: PageProps) {
     const t = await getCachedTranslations(lang);
     const urlPath = `/${country}/${lang}/${condition}${geo ? '/' + geo.join('/') : ''}`;
     const allDoctors = [...data.doctors.premium, ...data.doctors.free];
+
+    // Per-page uniqueness: resolved location, woven into the H1 and lede so
+    // each condition × geography page reads distinctly.
+    const locationPhrase = buildLocationPhrase(data.geoChain);
+    const deepestGeoName =
+        data.geoChain.locality?.name || data.geoChain.city?.name ||
+        data.geoChain.state?.name || data.geoChain.country?.name || '';
 
     // Schema - use pre-generated or generate dynamically
     const faqsForSchema = (data.automatedContent?.faqs?.map(faq => ({
@@ -504,9 +575,27 @@ export default async function ConditionPage({ params }: PageProps) {
                                 >
                                     {cleanConditionName}
                                     <span style={{ color: 'var(--orange)' }}>.</span>
+                                    {locationPhrase && (
+                                        <span
+                                            style={{
+                                                display: 'block',
+                                                fontSize: 'clamp(15px, 1.6vw, 22px)',
+                                                fontWeight: 500,
+                                                letterSpacing: '-0.02em',
+                                                color: 'var(--ink-3)',
+                                                marginTop: 'clamp(8px, 1vw, 14px)',
+                                                lineHeight: 1.2,
+                                            }}
+                                        >
+                                            Care &amp; specialists in {locationPhrase}
+                                        </span>
+                                    )}
                                 </h1>
                                 {heroOverviewText && (
                                     <p className="lede" style={{ fontSize: 'clamp(16px, 1.7vw, 22px)', maxWidth: 720, margin: 0 }}>
+                                        {deepestGeoName
+                                            ? `In ${deepestGeoName}, ${cleanConditionName.charAt(0).toLowerCase()}${cleanConditionName.slice(1)} is managed by ${pluralizeSpecialist(data.condition.specialistType).toLowerCase()}. `
+                                            : ''}
                                         {heroOverviewText.split('. ').slice(0, 2).join('. ')}.
                                     </p>
                                 )}

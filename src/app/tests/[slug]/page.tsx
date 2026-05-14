@@ -23,7 +23,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: test.metaTitle || `${test.name} - Cost, Preparation, Normal Range | aihealz`,
+    title: {
+      absolute: (test.metaTitle || `${test.name} - Cost, Preparation, Normal Range | aihealz`)
+        .replace(/\s*\|\s*aihealz\s*$/i, '') + ' | aihealz',
+    },
     description: test.metaDescription || test.description || `Get ${test.name} done at certified labs near you. Compare prices, read preparation instructions, and book online with home collection available.`,
     keywords: test.keywords || [test.name, test.shortName || '', 'lab test', 'diagnostic', 'price', 'near me'].filter(Boolean),
     openGraph: {
