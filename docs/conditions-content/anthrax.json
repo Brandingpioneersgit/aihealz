@@ -1,0 +1,502 @@
+{
+  "_meta": {
+    "slug": "anthrax",
+    "tier": 1,
+    "headTerm": "anthrax",
+    "longTailKeywords": [
+      "anthrax symptoms",
+      "cutaneous anthrax",
+      "inhalation anthrax",
+      "bacillus anthracis",
+      "anthrax treatment",
+      "anthrax vaccine",
+      "anthrax bioterrorism",
+      "anthrax exposure",
+      "woolsorter disease",
+      "gastrointestinal anthrax"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against CDC Anthrax 2023, Inglesby JAMA 2002 (PMID 11939866), Hendricks 2014 CDC clinical framework, Sweeney 2011 anthrax critical care, Bower 2019 CDC clinical guidelines update. ICD-10 A22."
+  },
+
+  "h1Title": "Anthrax: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Anthrax is an acute infection caused by Bacillus anthracis, a large gram-positive spore-forming rod whose hardy spores survive in soil for decades and can be aerosolized as a biological weapon. The disease produces four distinct clinical syndromes depending on portal of entry — cutaneous (95% of naturally occurring cases), inhalation, gastrointestinal, and injection (in heroin users). Untreated inhalation anthrax kills 85-90% of patients within 4-10 days through the action of edema toxin and lethal toxin produced by germinating spores. The 2001 US anthrax letter attacks infected 22 people and killed 5, demonstrating real-world bioterrorism feasibility. Modern combination antibiotic therapy with ciprofloxacin or doxycycline plus a protein-synthesis inhibitor and toxin-neutralizing agents (raxibacumab, obiltoxaximab) reduces mortality of treated inhalation anthrax to 45%. B. anthracis is classified as a CDC Tier 1 select agent and Category A bioterrorism agent. The licensed AVA-BioThrax vaccine is given to military personnel and laboratory workers; civilian post-exposure prophylaxis combines antibiotics with vaccination.",
+
+  "keyStats": {
+    "prevalence": "~2,000 cases reported globally each year, mostly cutaneous and concentrated in agricultural communities (WHO)",
+    "demographics": "Predominantly farmers, herders, abattoir workers, wool sorters, veterinarians, and laboratory personnel; men 2-3x more affected than women due to occupational exposure",
+    "avgAge": "Median age 30-50 in occupational cases; injection anthrax in heroin users typically aged 25-45",
+    "globalCases": "Endemic across Mediterranean countries, Central Asia, sub-Saharan Africa, and parts of Latin America; rare in industrialized countries with effective veterinary public health"
+  },
+
+  "definition": "Anthrax (ICD-10: A22) is a zoonotic infection caused by Bacillus anthracis, a large (1-1.5 µm × 3-10 µm) gram-positive, aerobic, spore-forming rod. The organism produces three plasmid-encoded virulence factors: protective antigen (PA), lethal factor (LF), and edema factor (EF). PA forms a heptameric channel in host cell membranes through which LF and EF translocate into the cytoplasm. Lethal toxin (PA + LF) cleaves mitogen-activated protein kinase kinases and triggers macrophage death; edema toxin (PA + EF) raises intracellular cAMP and produces massive fluid extravasation. Spores enter the body through cuts in skin (cutaneous, 95% of natural cases), inhalation of fine aerosols (inhalation anthrax), ingestion (gastrointestinal anthrax), or injection of contaminated heroin (injection anthrax — first described in 2009 in Scotland). Once inside the body, spores are taken up by macrophages, germinate in regional lymph nodes, and toxin-producing vegetative bacilli enter the bloodstream causing sepsis, hemorrhagic mediastinitis, and meningitis. The infection is internationally notifiable, classified by the CDC as a Tier 1 select agent and Category A bioterrorism agent, and listed by WHO under the International Health Regulations. Management is coordinated by infectious disease physicians and public health authorities, with critical care, neurosurgery, and surgery involved depending on form.",
+
+  "typesClassification": [
+    { "type": "Cutaneous anthrax", "description": "The most common form (95% of natural cases). Spores enter through cuts or abrasions, producing a painless papule that ulcerates and forms a characteristic black eschar with massive surrounding non-tender edema. Mortality under 1% with antibiotics. ICD-10 A22.0." },
+    { "type": "Inhalation anthrax", "description": "The most dangerous form. Spores inhaled and deposited in alveoli are carried to mediastinal lymph nodes where they germinate and produce hemorrhagic mediastinitis. Untreated mortality 85-90%; treated mortality 45%. ICD-10 A22.1." },
+    { "type": "Gastrointestinal anthrax", "description": "Follows ingestion of contaminated undercooked meat. Two patterns: oropharyngeal (pseudomembranous pharyngitis with massive cervical edema) and intestinal (severe abdominal pain, hematemesis, bloody diarrhea). Mortality 25-60%. ICD-10 A22.2." },
+    { "type": "Injection anthrax", "description": "First described in Scottish heroin users in 2009. Spores injected with contaminated heroin produce severe soft-tissue infection with massive edema, necrotizing fasciitis, and high mortality. ICD-10 A22.8 / A22.9." },
+    { "type": "Anthrax sepsis", "description": "Bacteremic spread from any primary form, producing septic shock and disseminated intravascular coagulation. ICD-10 A22.7." },
+    { "type": "Anthrax meningitis", "description": "Hemorrhagic meningoencephalitis complicating inhalation, gastrointestinal, or injection anthrax. Cerebrospinal fluid is grossly bloody. Mortality near 100% even with treatment; doxycycline does not penetrate the CNS adequately. ICD-10 A22.8." }
+  ],
+
+  "primarySymptoms": [
+    "A painless papule appearing 1-7 days after exposure that progresses through vesicle, then ulceration, then a depressed black eschar surrounded by massive non-tender edema — the pathognomonic feature of cutaneous anthrax.",
+    "Marked extension of edema beyond the primary lesion, sometimes involving an entire limb or the face, often with regional lymphadenopathy disproportionate to the modest skin lesion.",
+    "Initial flu-like illness with fever, malaise, dry cough, mild chest discomfort, and fatigue lasting 2-5 days in inhalation anthrax — clinically indistinguishable from viral upper respiratory infection at this stage.",
+    "Abrupt clinical deterioration after the initial phase of inhalation anthrax with high fever, severe dyspnea, hypotension, profuse diaphoresis, and progressive shock over hours to days.",
+    "Cyanosis, stridor, and respiratory failure from massive hemorrhagic mediastinal lymphadenopathy and pleural effusion in inhalation anthrax — the classic widened mediastinum on chest imaging.",
+    "Severe sore throat, dysphagia, and a pseudomembranous lesion at the base of the tongue or tonsillar pillar with massive cervical edema (oropharyngeal anthrax).",
+    "Severe abdominal pain, fever, hematemesis, and bloody diarrhea with ascites in intestinal anthrax, with peritonitis if untreated.",
+    "Painful soft-tissue swelling, massive edema, and crepitus at injection sites in injection anthrax, with rapid progression to necrotizing fasciitis.",
+    "High fever, severe headache, meningismus, altered consciousness, and grossly bloody cerebrospinal fluid in anthrax meningitis — survival is rare even with optimal treatment.",
+    "Septic shock with disseminated intravascular coagulation, multi-organ dysfunction, and hemorrhagic skin lesions in advanced disease."
+  ],
+
+  "earlyWarningSigns": [
+    "A painless ulcer with a developing black center in a farmer, herder, abattoir worker, wool sorter, or veterinarian — diagnostic of cutaneous anthrax until proven otherwise",
+    "Flu-like illness in a person with possible powder exposure or in a known anthrax outbreak setting — public-health emergency, evaluate immediately",
+    "Severe sore throat with massive neck swelling and history of consuming undercooked meat in an endemic area — possible oropharyngeal anthrax",
+    "Severe soft-tissue infection with disproportionate edema at a heroin injection site — injection anthrax requires urgent surgical and infectious disease consultation"
+  ],
+
+  "emergencySigns": [
+    "Sudden respiratory distress, hypotension, and widened mediastinum on chest imaging in a patient with flu-like prodrome — inhalation anthrax requires immediate triple antibiotic therapy and antitoxin",
+    "Rapid expansion of skin edema beyond a black eschar with signs of sepsis — systemic anthrax requires hospital admission and intravenous therapy",
+    "Severe headache, meningismus, and altered consciousness in a patient with known or suspected anthrax — meningitis requires immediate lumbar puncture and CNS-penetrating antibiotics",
+    "Cluster of unexplained severe respiratory illnesses in a community without obvious source — possible aerosol release and public-health emergency"
+  ],
+
+  "causes": [
+    {
+      "cause": "Direct skin contact with infected animals or animal products",
+      "description": "Cutaneous anthrax follows handling of infected cattle, sheep, goats, horses, or their hides, wool, hair, or bone meal. Spores enter through small skin breaks. Farmers, herders, abattoir workers, butchers, and tanners account for over 95% of natural cases worldwide."
+    },
+    {
+      "cause": "Inhalation of B. anthracis spores",
+      "description": "Aerosolized spores of 1-5 µm diameter reach the alveoli, where alveolar macrophages transport them to mediastinal lymph nodes. Inhalation anthrax was historically called woolsorter disease for occupational exposure in wool mills; the 2001 letter attacks and Soviet Sverdlovsk accident demonstrate aerosol release mechanisms."
+    },
+    {
+      "cause": "Ingestion of undercooked contaminated meat",
+      "description": "Gastrointestinal anthrax follows eating meat from animals that died of anthrax, particularly in rural agricultural communities. Two clinical patterns occur: oropharyngeal (deposition in the upper aerodigestive tract) and intestinal (deposition in the terminal ileum and cecum)."
+    },
+    {
+      "cause": "Injection of contaminated heroin",
+      "description": "Injection anthrax was first recognized in Scotland in 2009 with an outbreak that affected 119 heroin users across Europe. Contaminated heroin powder inoculated into soft tissue or muscle produces severe necrotizing infection. Subsequent outbreaks have occurred in northern Europe."
+    },
+    {
+      "cause": "Intentional aerosol release as a biological weapon",
+      "description": "B. anthracis is a CDC Category A select agent and the agent of the 2001 US anthrax letter attacks. WHO 1970 modeling estimated 50 kg released over a city of 5 million would kill 95,000 within days. The Soviet Sverdlovsk accident in 1979 killed at least 66 people."
+    },
+    {
+      "cause": "Laboratory exposure",
+      "description": "B. anthracis is among the most stringently regulated select agents in clinical microbiology. Laboratory-acquired infection has been documented in research settings; sniff testing of plates, aerosol-generating procedures without BSL-3 containment, and needle sticks all transmit disease."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Occupational exposure to livestock or animal products", "category": "environmental", "description": "Farmers, herders, abattoir workers, butchers, wool sorters, tanners, and veterinarians comprise the great majority of natural anthrax cases globally. Exposure occurs through skin contact and inhalation of dust from hides and wool." },
+    { "factor": "Living in an anthrax-endemic region", "category": "environmental", "description": "Mediterranean countries, Central Asia, Mongolia, China, sub-Saharan Africa, and parts of Latin America have endemic livestock anthrax. Outbreaks follow drought-and-rainfall cycles that expose buried spores." },
+    { "factor": "Heroin injection drug use", "category": "modifiable", "description": "Injection anthrax in heroin users has caused multiple European outbreaks since 2009. Spore-contaminated heroin entering soft tissue produces severe necrotizing infection. Public health surveillance of drug user populations identifies clusters early." },
+    { "factor": "Laboratory work with B. anthracis", "category": "modifiable", "description": "Research and clinical laboratories handling B. anthracis require BSL-3 containment, select-agent registration, and pre-exposure vaccination. Breaches have caused multiple laboratory-acquired cases." },
+    { "factor": "Military deployment to endemic regions", "category": "non-modifiable", "description": "US, UK, and other military personnel deployed to endemic regions face occupational exposure; military vaccination programs reduce this risk substantially." },
+    { "factor": "Bioterrorism event exposure", "category": "environmental", "description": "Postal workers, news media employees, and anyone in proximity to aerosol release are at risk in bioterrorism scenarios. Public health investigations identify exposed populations for post-exposure prophylaxis." },
+    { "factor": "Immunocompromised state", "category": "non-modifiable", "description": "HIV, chemotherapy, and chronic corticosteroids increase risk of severe and disseminated disease. Standard antibiotic prophylaxis is recommended in any exposed immunocompromised individual." }
+  ],
+
+  "affectedDemographics": [
+    "Globally about 2,000 reported cases annually, predominantly cutaneous (over 95%) and from agricultural communities (WHO)",
+    "United States: 1-2 naturally occurring cases per year, plus the 2001 letter attack outbreak (22 cases, 5 deaths)",
+    "Injection anthrax: over 119 cases across Europe since 2009, mostly in Scottish, German, and Danish heroin users",
+    "Inhalation anthrax: historically called woolsorter disease; rare today outside bioterrorism scenarios"
+  ],
+
+  "diagnosisOverview": "Diagnosis of anthrax begins with clinical recognition of the four syndromes and epidemiologic suspicion. Cutaneous anthrax presents a near-pathognomonic picture: painless papule progressing through vesicle to black eschar with massive non-tender edema. Inhalation anthrax masquerades as influenza early in its course; the diagnostic clue is rapid clinical deterioration with a widened mediastinum on chest imaging — a finding that, in the right exposure context, demands immediate empirical therapy. Gram stain of blood, lesion swab, sputum, cerebrospinal fluid, or pleural fluid shows large gram-positive rods, often in chains. Blood cultures grow B. anthracis on standard media within 12-24 hours; growth is rapid but the organism is a select agent requiring BSL-3 containment, so laboratories must be informed in advance. Real-time PCR for the pagA gene (protective antigen) and capB gene (capsule biosynthesis) confirms diagnosis within hours and is available through the Laboratory Response Network. Antigen-capture immunoassays for protective antigen support rapid diagnosis. Serology by ELISA for IgG to protective antigen documents recent exposure for post-event surveillance but is too slow for acute management. Imaging: chest X-ray and CT in inhalation anthrax show the classic widened mediastinum, hemorrhagic mediastinal adenopathy, and pleural effusions. Differential diagnosis depends on form: cutaneous anthrax mimics brown recluse spider bite, ecthyma gangrenosum, tularemia, plague, and necrotizing soft-tissue infection; inhalation anthrax mimics influenza early and dissecting aortic aneurysm or pulmonary embolism later; oropharyngeal anthrax mimics severe streptococcal pharyngitis with peritonsillar abscess; intestinal anthrax mimics severe gastroenteritis with peritonitis. Because anthrax kills so quickly, empirical antibiotic therapy must start on clinical suspicion without waiting for laboratory confirmation. All suspected and confirmed cases must be reported to public health within 24 hours.",
+
+  "diagnosticTests": [
+    {
+      "test": "Gram stain of lesion fluid, blood, sputum, or cerebrospinal fluid",
+      "purpose": "Large gram-positive rods in chains provide rapid presumptive diagnosis. Lesion fluid from the vesicular or eschar margin is high-yield in cutaneous anthrax; blood cultures grow rapidly in systemic disease.",
+      "whatToExpect": "Swab of vesicle base or eschar margin, blood draw, or lumbar puncture as clinically indicated. Results in 1-2 hours. Alert the laboratory in advance: B. anthracis requires BSL-3 handling."
+    },
+    {
+      "test": "Blood and tissue culture",
+      "purpose": "Definitive isolation of B. anthracis. The organism grows rapidly on standard blood and chocolate agar; characteristic non-hemolytic gray colonies with comma-shaped projections ('Medusa head') confirm identification.",
+      "whatToExpect": "Standard blood draws or tissue swabs. Plates flag positive within 12-24 hours. Notify the laboratory clearly: unannounced cultures put bench staff at risk."
+    },
+    {
+      "test": "Real-time PCR for pagA and capB genes",
+      "purpose": "Rapid confirmation within hours by detecting B. anthracis-specific virulence plasmid genes (pXO1 protective antigen; pXO2 capsule). Sensitivity over 95%; specificity over 99%.",
+      "whatToExpect": "Sample collection takes minutes; transport to a Laboratory Response Network site under select-agent protocols. Results return within 24 hours."
+    },
+    {
+      "test": "Chest radiograph and CT in suspected inhalation anthrax",
+      "purpose": "Demonstrates the classic widened mediastinum, hemorrhagic mediastinal lymphadenopathy, and pleural effusions. CT is more sensitive than plain film and should be performed when inhalation anthrax is suspected.",
+      "whatToExpect": "Standard imaging studies. Chest X-ray takes minutes; CT 10-15 minutes with IV contrast where indicated. Performed urgently when inhalation anthrax is suspected."
+    },
+    {
+      "test": "Protective antigen ELISA for IgG antibodies",
+      "purpose": "Documents recent exposure to B. anthracis for post-event surveillance and case identification. Becomes positive 2-4 weeks after infection.",
+      "whatToExpect": "Standard blood draw at presentation and 2-4 weeks later. Results take 5-7 days from reference laboratories. Useful for confirming exposure in mass-casualty scenarios."
+    },
+    {
+      "test": "Lumbar puncture in suspected anthrax meningitis",
+      "purpose": "Cerebrospinal fluid is grossly bloody with high protein, low glucose, and abundant gram-positive rods. CSF Gram stain and culture confirm meningitis.",
+      "whatToExpect": "Sterile lumbar puncture under local anesthetic with manometry. Procedure takes 15-30 minutes. CSF analysis returns within hours."
+    }
+  ],
+
+  "treatmentOverview": "Anthrax treatment is guided by CDC clinical management framework (Hendricks 2014; Bower 2019). Empirical antibiotic therapy must start within hours of clinical suspicion in suspected systemic disease — every additional 24 hours of delay roughly doubles mortality in inhalation anthrax. For systemic anthrax (inhalation, gastrointestinal, injection, or anthrax sepsis without meningitis), combination therapy with a bactericidal fluoroquinolone (ciprofloxacin 400 mg IV every 8 hours) plus a protein-synthesis inhibitor (linezolid 600 mg IV every 12 hours, or clindamycin 900 mg IV every 8 hours) is the first-line regimen. The protein-synthesis inhibitor suppresses toxin production at a transcriptional and translational level. For suspected anthrax meningitis or when meningitis cannot be excluded, triple therapy adds meropenem (2 g IV every 8 hours) to ensure cerebrospinal fluid coverage. Toxin-neutralizing monoclonal antibodies — raxibacumab (40 mg/kg IV single dose) or obiltoxaximab (16 mg/kg IV single dose) — bind protective antigen and prevent toxin entry into host cells; both are FDA-approved adjuncts under animal-rule efficacy data. Anthrax immune globulin intravenous (AIG-IV) is an additional option for severe disease. Cutaneous anthrax without systemic features is treated with oral ciprofloxacin (500 mg twice daily) or doxycycline (100 mg twice daily) as monotherapy for 7-10 days; never excise the eschar — surgical manipulation can cause bacteremia. Treatment duration for systemic disease is at least 14 days of IV therapy followed by oral antibiotics to complete 60 days, because spore germination in lymphatic tissue can occur late. Post-exposure prophylaxis after aerosol exposure is 60 days of oral ciprofloxacin or doxycycline combined with three doses of anthrax vaccine adsorbed (AVA-BioThrax). The full course of antibiotics and vaccine is essential because spore germination has been documented up to 100 days after exposure in primates. Supportive critical care includes aggressive fluid resuscitation, vasopressors, mechanical ventilation, pleural drainage, and management of disseminated intravascular coagulation.",
+
+  "medicalTreatments": [
+    {
+      "name": "Ciprofloxacin (500 mg orally twice daily for cutaneous disease; 400 mg IV every 8 hours for systemic disease)",
+      "description": "First-line fluoroquinolone for all forms of anthrax, both treatment and post-exposure prophylaxis. Bactericidal activity against B. anthracis vegetative cells; rapid intracellular penetration. Treatment lasts 60 days total in systemic disease.",
+      "effectiveness": "Reduces cutaneous anthrax mortality from 20% to under 1%; reduces inhalation anthrax mortality from 85-90% to 45% when combined with toxin-neutralizing therapy."
+    },
+    {
+      "name": "Doxycycline (100 mg orally or IV twice daily)",
+      "description": "Alternative to ciprofloxacin for both treatment and prophylaxis. Bacteriostatic but effective against B. anthracis vegetative cells when started early. Avoided in suspected meningitis because of poor CNS penetration.",
+      "effectiveness": "Equivalent to ciprofloxacin for cutaneous anthrax and post-exposure prophylaxis; suboptimal for meningitis."
+    },
+    {
+      "name": "Linezolid (600 mg IV every 12 hours, combined with ciprofloxacin)",
+      "description": "Protein-synthesis inhibitor that suppresses toxin production. Used as second drug in systemic anthrax combination therapy. Penetrates the central nervous system adequately and is suitable for meningitis regimens.",
+      "effectiveness": "Adjunctive role in combination therapy; in animal models reduces toxin-mediated mortality when added to fluoroquinolone."
+    },
+    {
+      "name": "Meropenem (2 g IV every 8 hours)",
+      "description": "Carbapenem with excellent CNS penetration. Added to fluoroquinolone and protein-synthesis inhibitor for suspected or confirmed anthrax meningitis. Treatment duration matches the systemic regimen.",
+      "effectiveness": "Improves CNS bactericidal activity in meningitis; mortality remains very high (over 90%) despite optimal therapy."
+    },
+    {
+      "name": "Raxibacumab (40 mg/kg IV single dose)",
+      "description": "Human monoclonal antibody against protective antigen, blocking toxin entry into host cells. FDA-approved under animal-rule for inhalation anthrax. Single dose given in addition to antibiotics for treatment and post-exposure prophylaxis.",
+      "effectiveness": "In rabbit and macaque models, raxibacumab plus antibiotics reduces mortality from over 80% to 30-50% versus antibiotics alone."
+    },
+    {
+      "name": "Obiltoxaximab (16 mg/kg IV single dose)",
+      "description": "Chimeric IgG monoclonal antibody against protective antigen with mechanism similar to raxibacumab. FDA-approved as adjunctive therapy. Single dose added to antibiotic regimen.",
+      "effectiveness": "Comparable to raxibacumab in animal models; clinical experience limited."
+    },
+    {
+      "name": "Anthrax immune globulin intravenous (AIG-IV)",
+      "description": "Pooled human polyclonal IgG from AVA-vaccinated donors. Used for severe systemic anthrax in patients in whom raxibacumab or obiltoxaximab cannot be given. Held in Strategic National Stockpile.",
+      "effectiveness": "Survival benefit when combined with antibiotics in case-series of severe anthrax; supports use when monoclonal alternatives are unavailable."
+    },
+    {
+      "name": "Anthrax vaccine adsorbed (AVA-BioThrax)",
+      "description": "Inactivated cell-free filtrate vaccine licensed for pre-exposure prophylaxis (5 dose primary series plus annual boosters) and as part of post-exposure prophylaxis (3 doses on days 0, 14, and 28 combined with 60 days of antibiotics).",
+      "effectiveness": "Pre-exposure protection over 90% against cutaneous anthrax; post-exposure regimen reduces incidence of late-onset anthrax in exposed individuals."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Pleural fluid drainage",
+      "description": "Indicated for the large hemorrhagic pleural effusions of inhalation anthrax, which contain free toxin and impair gas exchange. Performed as soon as effusion is identified to improve oxygenation and remove toxin.",
+      "successRate": "Improves oxygenation in most cases; survival of inhalation anthrax remains around 45% with combined antibiotic, antitoxin, and supportive care."
+    },
+    {
+      "name": "Surgical debridement of injection anthrax",
+      "description": "Required for necrotizing soft-tissue infection following heroin injection. Extensive debridement with serial operative reviews; the eschar of cutaneous anthrax is not debrided because manipulation risks bacteremia.",
+      "successRate": "Limb salvage in 60-80% of injection anthrax cases when debridement is timely; mortality 20-30%."
+    },
+    {
+      "name": "Tracheostomy in oropharyngeal anthrax",
+      "description": "May be required for airway compromise from massive cervical edema. Performed by ENT or head-and-neck surgery in an intensive care setting.",
+      "successRate": "Secures airway in 90% of cases; underlying disease mortality remains 25-50%."
+    }
+  ],
+
+  "alternativeTreatments": [],
+
+  "whySeeSpecialist": "Suspected anthrax warrants immediate infectious disease consultation, hospitalization, and public-health notification. Inhalation, gastrointestinal, injection, and disseminated cutaneous anthrax require intensive care unit admission. Critical care, ENT, neurosurgery, and surgical teams collaborate as indicated. Self-treatment of suspected anthrax is not appropriate; even a localized cutaneous lesion mandates evaluation because of select-agent reporting and risk of progression.",
+
+  "doctorSelectionGuide": "Suspected anthrax should bypass primary care for emergency department or infectious disease referral. Hospitals with Laboratory Response Network affiliation maintain anthrax preparedness protocols. In bioterrorism scenarios, treatment and prophylaxis are coordinated by local public health authorities and the CDC. Patients with workplace exposure to wool, hides, or livestock should be evaluated in occupational health.",
+
+  "hospitalCriteria": [
+    "Negative-pressure airborne isolation rooms when initial differential includes pneumonic plague or other airborne pathogens",
+    "Infectious disease consultation available within hours of admission",
+    "Laboratory Response Network referral relationship for select-agent testing",
+    "Critical care capacity for hemodynamic support, mechanical ventilation, and pleural drainage in systemic disease",
+    "Access to Strategic National Stockpile antitoxin (raxibacumab, obiltoxaximab, AIG-IV)"
+  ],
+
+  "keyFacilities": [
+    "Centers for Disease Control and Prevention Bacterial Special Pathogens Branch",
+    "Laboratory Response Network reference centers",
+    "Strategic National Stockpile distribution sites"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Vaccinate at-risk populations (laboratory workers, military personnel, livestock handlers in endemic regions) with anthrax vaccine adsorbed (AVA-BioThrax) per CDC pre-exposure schedule",
+    "Wear protective gloves, masks, and clothing when handling livestock, hides, wool, or animal products in endemic regions",
+    "Cook meat thoroughly to an internal temperature of at least 165°F (74°C) and avoid meat from animals that died suddenly or unexplained",
+    "Implement strict animal vaccination and surveillance programs in livestock — the foundation of human anthrax prevention worldwide",
+    "Provide 60 days of post-exposure prophylaxis (oral ciprofloxacin or doxycycline plus 3 doses of vaccine) after confirmed aerosol exposure",
+    "Avoid heroin from sources implicated in injection anthrax outbreaks; harm-reduction services play a critical role"
+  ],
+
+  "lifestyleModifications": [
+    "Maintain occupational hygiene standards including handwashing and personal protective equipment in livestock industries",
+    "Complete the full 60-day course of post-exposure prophylaxis even if asymptomatic — spore germination can be delayed",
+    "Receive the full primary series and annual boosters of AVA-BioThrax if you are in an at-risk occupation",
+    "Report unusual livestock deaths to veterinary public health to enable rapid response",
+    "Avoid raw or undercooked meat in regions with endemic livestock anthrax"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Thoroughly cooked meat at minimum internal temperature 165°F (74°C); B. anthracis spores are destroyed at this temperature",
+      "Pasteurized dairy products from reliable sources",
+      "Bottled or boiled water when traveling in endemic regions",
+      "Adequate nutrition and hydration during acute illness and recovery"
+    ],
+    "avoid": [
+      "Raw or undercooked meat in endemic regions",
+      "Meat from animals that died of unknown cause in livestock-endemic areas",
+      "Unpasteurized dairy in endemic regions",
+      "Sharing food prepared by symptomatic contacts during outbreaks"
+    ]
+  },
+
+  "exerciseGuidelines": "Strict bed rest during acute systemic disease. Gradual return to activity after at least 48 hours afebrile and clinically improving. Cardiopulmonary recovery from inhalation anthrax can take 3-6 months; pulmonary rehabilitation helps restore exercise tolerance. Patients on the 60-day antibiotic course can resume normal activity once acute illness has resolved, with avoidance of strenuous exercise during fluoroquinolone therapy if tendinopathy symptoms develop.",
+
+  "dailyManagement": [
+    "Take all prescribed antibiotics on schedule for the full 60-day course; partial therapy permits late spore germination",
+    "Receive all 3 post-exposure vaccine doses on days 0, 14, and 28",
+    "Monitor for new or recurrent symptoms during and after the antibiotic course; relapse has been documented",
+    "Attend follow-up appointments at 30, 60, and 180 days to confirm resolution",
+    "Report any new fever, respiratory symptoms, or skin lesions immediately during follow-up"
+  ],
+
+  "prognosis": "Prognosis varies dramatically by clinical form and treatment timing. Cutaneous anthrax treated with appropriate antibiotics has a case fatality rate under 1% — among the lowest of any acute bacterial infection. Inhalation anthrax untreated has a case fatality of 85-90% over 4-10 days; with optimal modern combination antibiotic therapy plus toxin-neutralizing monoclonal antibodies and intensive care, mortality falls to roughly 45% in the limited modern experience. Gastrointestinal anthrax carries mortality of 25-60% depending on form and access to care. Injection anthrax (heroin users) has mortality of 20-30% with surgical debridement and antibiotics. Anthrax meningitis is almost uniformly fatal even with optimal therapy (over 90% mortality). The 2001 US letter attack cohort demonstrated that early recognition, combination antibiotic therapy, and aggressive critical care can save inhalation anthrax patients who in earlier decades would have died — 6 of 11 inhalation cases survived in that outbreak. Survivors of severe systemic anthrax may face long-term consequences including chronic lung damage, cognitive impairment from post-sepsis encephalopathy, and post-traumatic stress disorder. The decisive prognostic factor across forms is timely initiation of combination antibiotic therapy plus antitoxin in systemic disease.",
+
+  "recoveryTimeline": "Cutaneous anthrax eschar typically separates and heals over 6-8 weeks, often leaving a depressed scar. Antibiotic therapy continues for 7-10 days in localized cutaneous disease and 60 days in systemic disease. Inhalation anthrax survivors typically spend 2-4 weeks in intensive care followed by 3-6 months of pulmonary rehabilitation. Gastrointestinal anthrax requires 2-6 weeks for clinical recovery. Full return to baseline energy can take 6-12 months after severe systemic disease.",
+
+  "complications": [
+    "Septicemic dissemination from cutaneous anthrax in roughly 10-20% of untreated cases — universally fatal historically",
+    "Hemorrhagic mediastinitis and respiratory failure in inhalation anthrax — the primary cause of inhalation anthrax mortality",
+    "Anthrax meningitis with grossly bloody cerebrospinal fluid — over 90% mortality even with optimal treatment",
+    "Disseminated intravascular coagulation with hemorrhagic skin lesions and multi-organ dysfunction in systemic disease",
+    "Permanent scarring at the site of cutaneous eschar separation",
+    "Long-term post-sepsis disability including cognitive impairment, fatigue, and reduced exercise capacity",
+    "Recurrent infection if the 60-day antibiotic course is not completed — spore germination can occur late"
+  ],
+
+  "supportResources": [
+    { "name": "CDC Anthrax", "url": "https://www.cdc.gov/anthrax/index.html", "description": "Authoritative US public-health resource with clinical, laboratory, and preparedness information." },
+    { "name": "WHO Anthrax in Humans and Animals", "url": "https://www.who.int/health-topics/anthrax", "description": "International guidance on epidemiology, diagnosis, treatment, and outbreak management." },
+    { "name": "CDC Emergency Preparedness — Anthrax", "url": "https://emergency.cdc.gov/agent/anthrax/index.asp", "description": "US bioterrorism preparedness portal with provider information and clinical management framework." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "tularemia", "name": "Tularemia", "keyDifference": "Tularemia produces a small painful punched-out skin ulcer with tender regional lymphadenopathy. Cutaneous anthrax produces a painless black eschar with massive non-tender edema. Both are CDC Category A zoonoses but exposure histories differ — anthrax follows livestock or wool exposure, tularemia follows tick or rabbit exposure." },
+    { "slug": "plague", "name": "Plague", "keyDifference": "Plague produces an exquisitely tender, erythematous bubo with surrounding gel-like edema and rapid progression to sepsis. Cutaneous anthrax produces a painless black eschar with massive non-tender edema. Both are CDC Category A agents but plague follows flea bites in western US and anthrax follows livestock or wool exposure." },
+    { "slug": "pneumonia", "name": "Pneumonia", "keyDifference": "Community-acquired pneumonia presents with productive cough and responds to standard beta-lactams or macrolides. Inhalation anthrax begins with a flu-like prodrome and progresses to widened mediastinum with hemorrhagic pleural effusion within days. Anthrax requires combination antibiotics plus toxin-neutralizing therapy." },
+    { "slug": "leprosy-hansen-disease", "name": "Leprosy (Hansen Disease)", "keyDifference": "Leprosy is a chronic mycobacterial infection causing painless hypopigmented or anesthetic skin patches and peripheral nerve thickening over months to years. Cutaneous anthrax is an acute bacterial infection with a black eschar developing over days. Treatment regimens differ entirely." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "pneumonia", "name": "Pneumonia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "tularemia", "name": "Tularemia", "relevance": "Fellow CDC Category A bioterrorism agent and zoonotic gram-negative infection; differential diagnosis when fever and skin lesions follow agricultural exposure." },
+    { "slug": "plague", "name": "Plague", "relevance": "Co-classified Category A bioterrorism agent with overlapping post-exposure prophylaxis protocols using doxycycline and ciprofloxacin." },
+    { "slug": "pneumonia", "name": "Pneumonia", "relevance": "Inhalation anthrax mimics severe community-acquired pneumonia but progresses far faster, shows characteristic mediastinal widening, and is unresponsive to standard antibiotics." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is anthrax?",
+      "answer": "Anthrax is an acute bacterial infection caused by Bacillus anthracis, a spore-forming organism that infects livestock and transmits to humans through skin contact, inhalation, ingestion, or injection. Four forms exist. Modern therapy reduces inhalation mortality to 45%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do people catch anthrax?",
+      "answer": "Most natural cases (95%) follow skin contact with infected livestock or animal products like hides, wool, or bone meal. Inhalation anthrax follows breathing aerosolized spores. GI anthrax follows eating undercooked contaminated meat. Injection anthrax has emerged in heroin users.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of cutaneous anthrax?",
+      "answer": "Cutaneous anthrax begins as a painless papule 1-7 days after exposure that progresses through vesicle to ulceration, then a depressed black eschar. The lesion is surrounded by massive non-tender edema. Regional lymphadenopathy is often disproportionate to the modest skin finding.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How dangerous is inhalation anthrax?",
+      "answer": "Inhalation anthrax is among the most lethal bacterial infections. Untreated mortality is 85-90% within 4-10 days. Modern combination antibiotics with toxin-neutralizing antibodies and intensive care reduces mortality to roughly 45%. Early recognition during the flu-like prodrome is decisive.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is anthrax contagious between people?",
+      "answer": "Person-to-person transmission is extremely rare. Even inhalation anthrax patients do not spread disease through respiratory droplets. Standard precautions suffice for hospital care. The exception is direct contact with cutaneous lesion fluid, which can rarely transmit through broken skin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What antibiotics treat anthrax?",
+      "answer": "Cutaneous anthrax: oral ciprofloxacin or doxycycline for 7-10 days. Systemic anthrax: IV ciprofloxacin plus linezolid or clindamycin (and meropenem for meningitis) for at least 14 days, then oral to complete 60 days. Toxin-neutralizing antibodies are added for systemic disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a vaccine for anthrax?",
+      "answer": "Yes. Anthrax vaccine adsorbed (AVA-BioThrax) is licensed in the US for pre-exposure prophylaxis in laboratory workers, military, and others with occupational exposure. It is given as a 5-dose primary series plus annual boosters. The vaccine is also part of post-exposure prophylaxis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why was anthrax used in bioterrorism?",
+      "answer": "B. anthracis is CDC Category A because its hardy spores can be produced in bulk, dried, aerosolized, and dispersed widely. A WHO model estimated 50 kg released over a city of 5 million would kill 95,000 people. The 2001 US letter attacks demonstrated real-world feasibility.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What was the 2001 anthrax attack?",
+      "answer": "Letters containing dried B. anthracis spores were mailed to news media and US senators in September-October 2001, killing 5 and infecting 22 (11 inhalation, 11 cutaneous). The FBI eventually attributed the attack to a US biodefense researcher. Major preparedness investment followed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does anthrax treatment last?",
+      "answer": "Cutaneous anthrax requires 7-10 days of oral antibiotics. Systemic anthrax requires 14-21 days of IV combination therapy followed by oral antibiotics to complete 60 days total. Post-exposure prophylaxis is 60 days of antibiotics plus 3 doses of anthrax vaccine.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can anthrax be cured?",
+      "answer": "Cutaneous anthrax has a cure rate over 99% with prompt antibiotics. Systemic anthrax is harder — inhalation mortality is about 45% with optimal modern therapy, GI disease 25-60%, meningitis over 90%. Early antibiotics, antitoxin antibodies, and intensive care offer the best chance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-exposure prophylaxis for anthrax?",
+      "answer": "After confirmed aerosol exposure to B. anthracis, CDC recommends 60 days of oral ciprofloxacin 500 mg twice daily or doxycycline 100 mg twice daily, combined with 3 doses of AVA-BioThrax vaccine on days 0, 14, and 28. Begin within 24 hours of exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is injection anthrax?",
+      "answer": "Injection anthrax was first described in Scottish heroin users in 2009 and has caused multiple European outbreaks since. Spore-contaminated heroin injected into soft tissue produces severe necrotizing infection with massive edema. Treatment combines antibiotics, surgical debridement, and antitoxin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Where is anthrax most common?",
+      "answer": "Naturally occurring anthrax is endemic in livestock across Mediterranean countries, Central Asia, Mongolia, sub-Saharan Africa, and parts of Latin America. Industrialized countries see only sporadic occupational cases. WHO reports about 2,000 cases globally each year.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I get anthrax from working with livestock?",
+      "answer": "Yes — occupational exposure remains the leading cause of natural anthrax. Farmers, herders, abattoir workers, butchers, wool sorters, tanners, and veterinarians in endemic regions face the highest risk. Protective gear, prompt reporting of livestock deaths, and vaccination reduce risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does an anthrax skin lesion look like?",
+      "answer": "Cutaneous anthrax begins as a small painless papule that progresses through vesicle to ulceration and then a characteristic depressed black eschar (scab) surrounded by massive non-tender edema. Pain suggests an alternative diagnosis such as cellulitis or necrotizing fasciitis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does anthrax kill?",
+      "answer": "B. anthracis produces three toxins. Protective antigen binds host cells and translocates lethal factor and edema factor inside. Lethal toxin triggers macrophage death and septic shock; edema toxin raises cAMP causing fluid extravasation. Together they produce hemorrhagic shock within days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I be worried about anthrax?",
+      "answer": "Naturally occurring anthrax is rare in industrialized countries with effective animal control programs — fewer than 5 US cases per year. Bioterrorism remains the principal concern; preparedness includes Strategic National Stockpile antibiotics, vaccines, and antitoxin. Individual risk is very low.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get anthrax?",
+      "answer": "Yes, particularly in endemic regions through livestock contact or contaminated meat. Pediatric treatment matches adults with weight-based dosing. Ciprofloxacin and doxycycline are used despite usual age restrictions because anthrax mortality outweighs minor cartilage or dental side effects.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is anthrax diagnosed?",
+      "answer": "Diagnosis combines clinical features with rapid lab tests. Gram stain shows large gram-positive rods; cultures grow B. anthracis within 12-24 hours; PCR for pagA and capB genes confirms within hours. Chest imaging shows widened mediastinum in inhalation anthrax. Alert the lab beforehand.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is anthrax reported to public health?",
+      "answer": "Yes. Anthrax is a nationally notifiable disease in the US and internationally notifiable under WHO IHR. Clinicians and labs must report suspected or confirmed cases immediately. B. anthracis is a CDC Tier 1 select agent and any lab isolation triggers Laboratory Response Network involvement.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Anthrax (cutaneous, inhalation, gastrointestinal, or injection anthrax)",
+
+  "regionalNames": [
+    { "name": "Woolsorter disease", "region": "Historical United Kingdom", "language": "en" },
+    { "name": "Charbon", "region": "France / French West Africa", "language": "fr" },
+    { "name": "Ragpicker disease", "region": "Historical United States", "language": "en" },
+    { "name": "Malignant pustule", "region": "Historical clinical literature", "language": "en" }
+  ],
+
+  "searchTags": [
+    "anthrax", "bacillus anthracis", "cutaneous anthrax", "inhalation anthrax",
+    "gastrointestinal anthrax", "injection anthrax", "woolsorter disease",
+    "anthrax bioterrorism", "anthrax vaccine", "AVA-BioThrax",
+    "raxibacumab", "obiltoxaximab", "category A agent"
+  ],
+
+  "symptomKeywords": [
+    "black eschar skin", "painless skin ulcer", "flu after powder exposure",
+    "widened mediastinum chest x-ray", "fever with massive neck swelling",
+    "necrotic skin lesion farmer", "bloody diarrhea after raw meat"
+  ],
+
+  "metaTitle": "Anthrax: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Anthrax (Bacillus anthracis): cutaneous, inhalation, gastrointestinal, and injection forms. Symptoms, diagnosis, antibiotic treatment, and bioterrorism context.",
+
+  "keywords": [
+    "anthrax", "bacillus anthracis", "anthrax symptoms", "anthrax treatment",
+    "cutaneous anthrax", "inhalation anthrax", "anthrax vaccine",
+    "anthrax bioterrorism", "woolsorter disease", "injection anthrax",
+    "anthrax exposure", "is anthrax curable"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Centers for Disease Control and Prevention. Anthrax — Information for Clinicians. CDC; 2023.",
+      "url": "https://www.cdc.gov/anthrax/healthcare/index.html",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Inglesby TV, O'Toole T, Henderson DA, et al. Anthrax as a Biological Weapon, 2002: Updated Recommendations for Management. JAMA. 2002;287(17):2236-2252.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11980524/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Hendricks KA, Wright ME, Shadomy SV, et al. Centers for Disease Control and Prevention Expert Panel Meetings on Prevention and Treatment of Anthrax in Adults. Emerging Infectious Diseases. 2014;20(2):e130687.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24447897/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Sweeney DA, Hicks CW, Cui X, Li Y, Eichacker PQ. Anthrax Infection. American Journal of Respiratory and Critical Care Medicine. 2011;184(12):1333-1341.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21852539/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Bower WA, Schiffer J, Atmar RL, et al. Use of Anthrax Vaccine in the United States: Recommendations of the Advisory Committee on Immunization Practices. MMWR Recommendations and Reports. 2019;68(4):1-14.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31834290/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Holty JE, Bravata DM, Liu H, et al. Systematic Review: A Century of Inhalational Anthrax Cases from 1900 to 2005. Annals of Internal Medicine. 2006;144(4):270-280.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16490913/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Booth MG, Hood J, Brooks TJ, Hart A. Anthrax Infection in Drug Users. Lancet. 2010;375(9723):1345-1346.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20399978/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

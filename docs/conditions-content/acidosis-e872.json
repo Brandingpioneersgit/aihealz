@@ -1,0 +1,403 @@
+{
+  "_meta": {
+    "slug": "acidosis-e872",
+    "tier": 1,
+    "headTerm": "Metabolic acidosis",
+    "longTailKeywords": [
+      "metabolic acidosis symptoms",
+      "metabolic acidosis causes",
+      "metabolic acidosis treatment",
+      "anion gap metabolic acidosis",
+      "metabolic acidosis vs respiratory acidosis",
+      "metabolic acidosis blood pH",
+      "lactic acidosis",
+      "diabetic ketoacidosis",
+      "metabolic acidosis bicarbonate",
+      "MUDPILES mnemonic",
+      "metabolic acidosis kidneys",
+      "high anion gap acidosis"
+    ],
+    "primarySpecialty": "Endocrinology/Metabolism",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Metabolic Acidosis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology/Nephrology",
+
+  "heroOverview": "Metabolic acidosis is a condition in which excess acid accumulates in the blood — or bicarbonate is lost — driving arterial pH below 7.35 and serum bicarbonate below 22 mEq/L. It affects an estimated 2-5% of hospitalized patients and is present in up to 30% of intensive-care admissions, where it independently predicts mortality. The most frequent causes in clinical practice are diabetic ketoacidosis, lactic acidosis, and chronic kidney disease. Patients develop rapid deep breathing (Kussmaul respirations), fatigue, nausea, and confusion as severity worsens. Untreated severe acidosis (pH below 7.20) carries a hospital mortality above 50% when it underlies sepsis or multi-organ failure. Treatment targets the underlying cause; bicarbonate therapy is reserved for life-threatening acidemia.",
+
+  "keyStats": {
+    "prevalence": "Present in approximately 2-5% of all hospital admissions and 30% of ICU patients (Kraut & Madias, NEJM 2014)",
+    "demographics": "Affects all ages; most common in adults with diabetes, chronic kidney disease, or critical illness; neonates at risk from inborn errors of metabolism",
+    "avgAge": "No single peak age; diabetic ketoacidosis peaks in young adults (age 15-40); CKD-related acidosis peaks after age 60",
+    "globalCases": "No precise global incidence; an estimated 15-25% of patients with CKD stage 3-5 have chronic metabolic acidosis (KDIGO 2012)"
+  },
+
+  "definition": "Metabolic acidosis (ICD-10: E87.2) is a primary disorder of acid-base balance in which a fall in serum bicarbonate (HCO3−) below 22 mEq/L lowers arterial pH toward or below 7.35. It is classified by the anion gap (AG = Na − [Cl + HCO3−]): a high anion gap (AG > 12 mEq/L) indicates accumulation of unmeasured organic acids such as lactate, ketones, toxins, or uremic acids; a normal anion gap (hyperchloremic) acidosis indicates primary bicarbonate loss from the kidney or gastrointestinal tract. The delta ratio and urine anion gap help distinguish overlapping or mixed disorders. Metabolic acidosis is managed by endocrinologists and nephrologists for chronic causes, and by critical-care or emergency physicians in acute presentations. The condition spans a broad disease spectrum — from mild, asymptomatic renal tubular acidosis to life-threatening diabetic ketoacidosis or lactic acidosis in septic shock. The kidney normally compensates by excreting titratable acid and ammonium and by regenerating bicarbonate; when this capacity is overwhelmed or the kidney itself is the source of the deficit, compensatory respiratory hyperventilation (Kussmaul breathing) further lowers PaCO2 to limit pH fall. Prompt identification of the underlying cause drives all treatment decisions.",
+
+  "typesClassification": [
+    { "type": "High anion gap metabolic acidosis", "description": "Caused by accumulation of organic or inorganic acids: lactate (sepsis, ischemia, metformin toxicity), ketoacids (diabetic, alcoholic, starvation), uremic acids (CKD stage 4-5), and toxins (methanol, ethylene glycol, salicylates). Mnemonic MUDPILES. Anion gap exceeds 12 mEq/L." },
+    { "type": "Normal anion gap (hyperchloremic) metabolic acidosis", "description": "Caused by primary bicarbonate loss or failure to excrete acid without organic anion accumulation. Subdivided by urine anion gap: negative UAG suggests GI bicarbonate loss (diarrhea, ileostomy); positive UAG suggests renal tubular acidosis or hypoaldosteronism." },
+    { "type": "Lactic acidosis (Type A and Type B)", "description": "Type A: tissue hypoperfusion (septic shock, cardiac arrest, severe anemia). Type B: normal perfusion with impaired lactate metabolism (metformin, thiamine deficiency, liver failure, malignancy). Lactate above 5 mmol/L with pH below 7.35 defines severe lactic acidosis." },
+    { "type": "Diabetic ketoacidosis (DKA)", "description": "High anion gap acidosis caused by ketone body (beta-hydroxybutyrate, acetoacetate) accumulation from absolute or relative insulin deficiency. Classic triad: hyperglycemia, ketonemia, and metabolic acidosis. Most common life-threatening cause in outpatients under 40." },
+    { "type": "Chronic metabolic acidosis (CKD-related)", "description": "Persistent mild-to-moderate acidosis (HCO3− 16-22 mEq/L) from reduced renal ammoniagenesis and impaired H+ excretion in CKD stage 3-5. Accelerates bone demineralization, muscle catabolism, and CKD progression." }
+  ],
+
+  "primarySymptoms": [
+    "Kussmaul respirations — deep, rapid, labored breathing at rates above 20 breaths per minute as the lungs attempt to blow off CO2 and compensate for low blood pH; often the most visible sign in moderate to severe acidosis.",
+    "Generalized fatigue and weakness from impaired cellular energy metabolism as intracellular pH falls and enzyme activity is disrupted.",
+    "Nausea, vomiting, and loss of appetite occurring early in DKA or uremic acidosis, frequently preceding the recognition of the underlying cause.",
+    "Fruity or acetone breath in diabetic ketoacidosis, produced by exhaled acetone; distinguishes DKA-related acidosis at the bedside.",
+    "Confusion, drowsiness, and progressively impaired consciousness as cerebral function deteriorates when arterial pH falls below 7.25.",
+    "Chest pain or palpitations from reduced myocardial contractility and arrhythmia susceptibility at pH below 7.20.",
+    "Abdominal pain and tenderness, particularly in DKA and salicylate toxicity, sometimes severe enough to mimic a surgical abdomen.",
+    "Decreased urine output or oliguria in acidosis caused by acute kidney injury, bilateral renal artery disease, or severe volume depletion.",
+    "Cool, mottled extremities and delayed capillary refill in lactic acidosis secondary to circulatory shock.",
+    "Bone pain and pathological fractures in long-standing chronic metabolic acidosis (CKD or renal tubular acidosis) from calcium release and bone demineralization."
+  ],
+
+  "earlyWarningSigns": [
+    "Serum bicarbonate trending downward on routine chemistry panel in a patient with CKD, even without symptoms — a bicarbonate below 22 mEq/L warrants investigation.",
+    "Subtle increase in respiratory rate (above 16 breaths/min) at rest that is dismissed as anxiety but reflects early compensatory hyperventilation.",
+    "Unexplained fatigue and polyuria in a patient with known type 1 or type 2 diabetes — early ketoacidosis produces acidosis before florid symptoms appear.",
+    "Elevated anion gap on basic metabolic panel (above 12 mEq/L) in the absence of an obvious diagnosis — always trace the source.",
+    "Rising serum lactate above 2 mmol/L in a patient with sepsis or shock, even before pH drops."
+  ],
+
+  "emergencySigns": [
+    "Arterial pH below 7.20 with hemodynamic instability — cardiac arrhythmias and cardiovascular collapse can occur rapidly; requires ICU-level monitoring.",
+    "Kussmaul respirations with altered consciousness or GCS below 13 — indicates severe systemic acidosis requiring immediate workup and intervention.",
+    "Serum potassium above 6.5 mEq/L — severe acidosis drives potassium out of cells, causing life-threatening hyperkalemia with peaked T-waves on ECG.",
+    "Serum bicarbonate below 10 mEq/L — indicates near-exhaustion of buffering capacity; mortality risk rises sharply below this threshold.",
+    "Signs of metabolic encephalopathy (asterixis, coma) in a patient with known CKD or liver disease — may signal uremic or hepatic crisis requiring emergency dialysis."
+  ],
+
+  "causes": [
+    {
+      "cause": "Diabetic ketoacidosis (DKA)",
+      "description": "Absolute or relative insulin deficiency promotes lipolysis and hepatic ketogenesis, releasing beta-hydroxybutyrate and acetoacetate into the circulation. Blood glucose typically exceeds 250 mg/dL. DKA accounts for over 160,000 hospital admissions per year in the United States and is the leading cause of high anion gap metabolic acidosis in outpatients under 40."
+    },
+    {
+      "cause": "Lactic acidosis",
+      "description": "Tissue hypoxia from septic shock, cardiac arrest, severe anemia, or mesenteric ischemia shifts cellular metabolism to anaerobic glycolysis, generating lactate faster than the liver can clear it. Type B lactic acidosis (without hypoperfusion) occurs with metformin accumulation in renal failure, thiamine deficiency, severe liver disease, and hematologic malignancies."
+    },
+    {
+      "cause": "Chronic kidney disease (CKD) stage 3-5",
+      "description": "Failing nephrons produce less ammonium, reducing net acid excretion. KDIGO data estimate 15-25% of CKD stage 3-4 patients maintain a persistent serum bicarbonate below 22 mEq/L. Acidosis in CKD accelerates muscle protein catabolism, bone resorption, and the progression of residual nephron loss."
+    },
+    {
+      "cause": "Diarrhea and gastrointestinal bicarbonate loss",
+      "description": "Large-volume diarrhea, high-output ileostomy, and small-bowel fistulas drain bicarbonate-rich secretions, producing a hyperchloremic normal anion gap acidosis. A negative urine anion gap distinguishes this from renal tubular acidosis. Cholera and other secretory diarrheas can cause severe acidosis within hours."
+    },
+    {
+      "cause": "Toxic ingestions (methanol, ethylene glycol, salicylates)",
+      "description": "Methanol is oxidized to formic acid; ethylene glycol to oxalic and glycolic acids — both produce a high anion gap that may exceed 30 mEq/L. Salicylate poisoning causes a mixed disorder with primary respiratory alkalosis and secondary metabolic acidosis. An osmol gap above 10 mOsm/kg in a high anion gap acidosis suggests toxic alcohol ingestion."
+    },
+    {
+      "cause": "Renal tubular acidosis (RTA)",
+      "description": "Type 1 (distal) RTA impairs urinary acidification, causing hyperchloremic acidosis and nephrocalcinosis. Type 2 (proximal) RTA impairs bicarbonate reabsorption, seen in Wilson disease, multiple myeloma, and with certain antiretrovirals. Type 4 RTA (hypoaldosteronism) is the most common type, occurring in diabetic nephropathy and CKD with mild hyperkalemia."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Insulin-dependent or type 2 diabetes mellitus", "category": "non-modifiable", "description": "Diabetics face risk of DKA (type 1, and SGLT2-related euglycemic DKA in type 2) and CKD-related acidosis. DKA risk is approximately 1-5 episodes per 100 patient-years in type 1 diabetes." },
+    { "factor": "Chronic kidney disease (CKD stage 3-5)", "category": "non-modifiable", "description": "Reduced nephron mass limits ammonium excretion; up to 25% of CKD patients have persistent metabolic acidosis. Risk rises steeply as GFR falls below 30 mL/min/1.73 m²." },
+    { "factor": "Sepsis and critical illness", "category": "non-modifiable", "description": "Tissue hypoperfusion in sepsis is the leading cause of lactic acidosis in ICU settings; lactate above 4 mmol/L in sepsis defines septic shock per Sepsis-3 criteria." },
+    { "factor": "Metformin use with renal insufficiency", "category": "modifiable", "description": "Metformin inhibits hepatic mitochondrial complex I, reducing lactate clearance. Drug accumulation when GFR falls below 30 mL/min/1.73 m² raises lactic acidosis risk 10-fold. Dose reduction and renal monitoring reduce risk." },
+    { "factor": "Chronic diarrheal disease or intestinal resection", "category": "modifiable", "description": "Persistent high-output diarrhea (inflammatory bowel disease, ileostomy, short-bowel syndrome) causes ongoing bicarbonate depletion. Oral rehydration solutions and bicarbonate supplementation mitigate the loss." },
+    { "factor": "Toxin or alcohol ingestion", "category": "modifiable", "description": "Toxic alcohols (methanol, ethylene glycol) and aspirin overdose are entirely preventable causes of severe high anion gap acidosis. Alcohol use disorder raises risk of both alcoholic ketoacidosis and thiamine-deficient lactic acidosis." },
+    { "factor": "Autoimmune diseases (lupus, Sjogren's syndrome)", "category": "non-modifiable", "description": "Type 1 distal RTA is a recognized complication of Sjogren's syndrome (up to 30% of patients) and systemic lupus erythematosus, via lymphocytic infiltration of the distal tubule." }
+  ],
+
+  "affectedDemographics": [
+    "Young adults aged 15-40 with type 1 diabetes are the highest-risk group for DKA-related acute metabolic acidosis in outpatient settings.",
+    "Adults over 60 with CKD stage 3-5 or diabetes mellitus are most affected by chronic low-grade metabolic acidosis.",
+    "Critically ill patients of all ages (30% of ICU admissions) develop metabolic acidosis, with lactic acidosis predominating in sepsis and cardiac failure.",
+    "Neonates and infants: inborn errors of metabolism (organic acidemias, maple syrup urine disease) present as severe high anion gap acidosis in the neonatal period.",
+    "Individuals with alcohol use disorder are at risk for alcoholic ketoacidosis and thiamine-deficient lactic acidosis, typically in the third to fifth decade."
+  ],
+
+  "diagnosisOverview": "The diagnosis of metabolic acidosis begins with an arterial blood gas (ABG) showing pH below 7.35 and HCO3− below 22 mEq/L. After confirming the primary disorder, the first step is calculating the anion gap (Na − [Cl + HCO3−]; normal 8-12 mEq/L when uncorrected). A high AG identifies organic or toxic acid accumulation; a normal AG points to bicarbonate loss or failure of renal acid excretion. Albumin correction of the anion gap (add 2.5 mEq/L for every 1 g/dL fall in albumin below 4 g/dL) is essential in hypoalbuminemic patients because a high AG acidosis can be masked. For high AG cases, the delta ratio ([AG − 12] ÷ [24 − HCO3−]) distinguishes a pure high AG acidosis (delta 1-2) from a mixed disorder. Once the category is established, a directed search identifies the cause: serum glucose, beta-hydroxybutyrate, and ketones for DKA; lactate for lactic acidosis; serum creatinine and BUN for uremia; toxicology screen and osmol gap for toxic alcohols; stool history and urine anion gap (UAG = Na + K − Cl) for hyperchloremic forms (negative UAG favors GI loss; positive UAG indicates renal cause). KDIGO and American Association for Clinical Chemistry guidelines recommend the same systematic framework. Additional tests (imaging, bone densitometry, kidney biopsy) may be needed for RTA or CKD-related acidosis.",
+
+  "diagnosticTests": [
+    { "test": "Arterial blood gas (ABG)", "purpose": "Directly measures arterial pH, PaCO2, and calculated HCO3− to confirm acidemia and assess respiratory compensation", "whatToExpect": "A small needle is inserted into the radial artery at the wrist; results return within 15 minutes. Mild to moderate discomfort; pressure applied for 5 minutes afterward. PaCO2 should fall 1.2 mmHg for every 1 mEq/L decrease in HCO3− (Winter's formula) to confirm adequate compensation." },
+    { "test": "Serum electrolytes with anion gap calculation", "purpose": "Classifies the acidosis as high or normal anion gap; albumin-corrected AG avoids missing masked high-AG acidosis", "whatToExpect": "Standard blood draw. Results within 30-60 minutes in most labs. The clinician calculates AG = Na − (Cl + HCO3−)." },
+    { "test": "Serum lactate", "purpose": "Diagnoses or excludes lactic acidosis; lactate above 2 mmol/L is elevated, above 4 mmol/L is critically elevated", "whatToExpect": "Blood draw; sample must be transported on ice or analyzed promptly to prevent false elevation from cell metabolism. Result within 30-60 minutes." },
+    { "test": "Serum glucose, beta-hydroxybutyrate, and urine/serum ketones", "purpose": "Confirms DKA or alcoholic/starvation ketoacidosis", "whatToExpect": "Point-of-care glucose by fingerstick; venous beta-hydroxybutyrate via bedside meter or lab draw. Urine dip for ketones is a rapid screen. BHB above 3 mmol/L is diagnostic of ketoacidosis." },
+    { "test": "Serum creatinine, BUN, and eGFR", "purpose": "Identifies CKD or AKI as the cause; uremic acids accumulate when GFR falls below 20 mL/min", "whatToExpect": "Standard blood panel. Results within 1-2 hours. Trend over time is as important as a single value." },
+    { "test": "Serum osmolality and osmol gap", "purpose": "Screens for toxic alcohol ingestion (methanol, ethylene glycol) when anion gap exceeds 20 mEq/L without obvious cause", "whatToExpect": "Blood drawn at same time as electrolytes. Measured osmolality minus calculated osmolality (2Na + glucose/18 + BUN/2.8); a gap above 10 mOsm/kg suggests toxic alcohol." },
+    { "test": "Urine anion gap (UAG)", "purpose": "Distinguishes GI from renal bicarbonate loss in normal anion gap acidosis; UAG = urine Na + K − Cl", "whatToExpect": "A single urine sample collected at any time. Negative UAG indicates adequate urinary ammonium (GI cause); positive UAG indicates impaired renal acidification (RTA or CKD)." }
+  ],
+
+  "treatmentOverview": "Treatment of metabolic acidosis is primarily directed at the underlying cause; correcting the primary disorder allows the kidneys and lungs to restore acid-base balance. For diabetic ketoacidosis, the American Diabetes Association (ADA) protocol uses intravenous fluid resuscitation with normal saline or lactated Ringer's, continuous intravenous regular insulin (0.1 units/kg/hour), potassium replacement (target K 4-5 mEq/L before starting insulin), and glucose supplementation once blood glucose falls below 250 mg/dL; the anion gap should close before discontinuing IV insulin. Lactic acidosis from sepsis is treated with early goal-directed therapy — fluids, vasopressors (norepinephrine first-line per Surviving Sepsis Campaign 2021), source control, and antibiotics — rather than exogenous bicarbonate. Metformin-associated lactic acidosis requires drug discontinuation and hemodialysis in severe cases (lactate above 15 mmol/L or pH below 7.10). For CKD-related chronic metabolic acidosis, KDIGO 2012 and NKF-KDOQI guidelines recommend oral sodium bicarbonate supplementation to maintain serum HCO3− above 22 mEq/L, typically 0.5-1 mEq/kg/day; sodium citrate is a better-tolerated alternative. In renal tubular acidosis, oral bicarbonate (1-3 mEq/kg/day for type 1 and type 2) corrects acidosis and prevents nephrocalcinosis. Intravenous sodium bicarbonate is indicated when arterial pH falls below 7.10 with hemodynamic instability, in severe hyperkalemia (K above 6.5 mEq/L), in certain toxic ingestions (salicylates, methanol — to alkalinize urine and reduce CNS toxin entry), and as a bridge to dialysis. For toxic alcohols, fomepizole (alcohol dehydrogenase inhibitor) blocks further acid metabolite production; hemodialysis removes the parent alcohol and its metabolites.",
+
+  "medicalTreatments": [
+    { "name": "Intravenous fluid resuscitation (0.9% NaCl or lactated Ringer's)", "description": "Restores circulating volume, improves tissue perfusion, and clears organic acids in DKA and lactic acidosis. Lactated Ringer's is preferred over normal saline in large-volume resuscitation to avoid hyperchloremic acidosis; normal saline remains first-line in DKA per ADA 2022 protocol.", "effectiveness": "Serum HCO3− rises 4-8 mEq/L with volume resuscitation alone in mild DKA" },
+    { "name": "Intravenous regular insulin (0.1 units/kg/hour)", "description": "Suppresses ketogenesis and lipolysis in DKA; the anion gap closes as ketone body production is halted. Subcutaneous insulin transition once HCO3− exceeds 18 mEq/L and patient is eating.", "effectiveness": "Anion gap closes within 12-24 hours in uncomplicated DKA in over 95% of patients" },
+    { "name": "Oral sodium bicarbonate (0.5-2 mEq/kg/day)", "description": "First-line for chronic metabolic acidosis in CKD stage 3-5 and renal tubular acidosis. KDIGO recommends maintaining serum HCO3− above 22 mEq/L. Sodium citrate is a better-tolerated alternative. Bicarbonate slows CKD progression by 2-3 years in randomized trials.", "effectiveness": "Serum HCO3− rises 3-6 mEq/L within 4-8 weeks on oral alkali; CKD progression slowed by 20-30% in RCTs" },
+    { "name": "Intravenous sodium bicarbonate (1-2 mEq/kg bolus)", "description": "Reserved for pH below 7.10 with hemodynamic compromise, severe hyperkalemia, or toxic ingestion requiring urinary alkalinization. Excessive use causes paradoxical intracellular acidosis, hypokalemia, and fluid overload.", "effectiveness": "Raises pH by 0.05-0.10 units per 50 mEq IV sodium bicarbonate; benefits in DKA and lactic acidosis not proven in clinical trials except for above emergency indications" },
+    { "name": "Fomepizole (15 mg/kg IV loading dose)", "description": "Competitive inhibitor of alcohol dehydrogenase; prevents metabolism of methanol and ethylene glycol to their toxic acid metabolites. Initiated immediately when toxic alcohol is suspected on osmol gap before confirmatory levels return.", "effectiveness": "Virtually abolishes further acid metabolite formation; reduces dialysis requirement in early methanol/ethylene glycol toxicity" },
+    { "name": "Hemodialysis or continuous renal replacement therapy (CRRT)", "description": "Corrects severe acidosis (pH below 7.10), removes toxic acids and parent alcohols, and restores electrolyte balance when medical therapy is insufficient. Indicated for uremic acidosis and drug accumulation (metformin, salicylates) that is refractory to IV fluid and bicarbonate.", "effectiveness": "Corrects pH to above 7.35 within 2-4 hours of initiation; highly effective when indicated" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Dietary protein and phosphate restriction in CKD", "description": "Low-protein diets (0.6-0.8 g/kg/day) reduce urea and sulfuric acid load, modestly improving serum bicarbonate by 1-3 mEq/L in CKD stage 3-4 based on systematic reviews." },
+    { "name": "Sodium citrate / citric acid oral solution (Shohl's solution)", "description": "An alternative alkali source for patients intolerant of sodium bicarbonate tablets; citrate is metabolized to bicarbonate in the liver. Particularly used in children and for renal tubular acidosis." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "insulin-therapy",
+    "hemodialysis",
+    "sodium-bicarbonate-therapy"
+  ],
+
+  "whySeeSpecialist": "Nephrologists manage chronic metabolic acidosis in CKD and renal tubular acidosis, where long-term alkali therapy and monitoring of GFR trajectory are essential. Endocrinologists are appropriate for recurrent DKA and euglycemic ketoacidosis on SGLT2 inhibitors. Critical-care physicians manage acute severe acidosis (pH below 7.20) in the ICU.",
+  "doctorSelectionGuide": "For chronic metabolic acidosis, choose a nephrologist or endocrinologist affiliated with a center that has in-house arterial blood gas and lactate measurement, and experience interpreting complex acid-base disorders. For acute presentations, any emergency medicine or critical-care physician is appropriate; toxicology consultation is essential when toxic alcohol ingestion is possible.",
+
+  "hospitalCriteria": [
+    "Arterial blood gas laboratory available around the clock",
+    "Insulin and IV sodium bicarbonate protocols in place",
+    "Hemodialysis or CRRT capability for refractory acidosis or toxic ingestion",
+    "Toxicology consultation available for methanol/ethylene glycol/salicylate overdose",
+    "Intensive care unit for pH below 7.20 with hemodynamic instability"
+  ],
+  "keyFacilities": [
+    "Hospital emergency department with point-of-care ABG and lactate",
+    "Intensive care unit with continuous hemodynamic monitoring",
+    "Nephrology service with dialysis unit",
+    "Endocrinology inpatient service for complex DKA management",
+    "Toxicology center or poison control network"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain tight glycemic control in diabetes mellitus to reduce DKA frequency; structured education on sick-day rules lowers DKA hospitalization rates by 30-50%.",
+    "Monitor renal function every 3-6 months in CKD and adjust metformin dose (reduce when eGFR 30-45; stop below 30) to prevent drug-induced lactic acidosis.",
+    "Initiate oral sodium bicarbonate supplementation early in CKD stage 3b-4 when serum HCO3− falls below 22 mEq/L to slow CKD progression.",
+    "Use child-resistant containers and store toxic household alcohols (antifreeze, windshield fluid) out of reach to prevent accidental ingestion.",
+    "Ensure adequate thiamine (vitamin B1) intake in patients with alcohol use disorder to prevent thiamine-deficient lactic acidosis."
+  ],
+
+  "lifestyleModifications": [
+    "Adhere to prescribed oral alkali (sodium bicarbonate or sodium citrate) for chronic metabolic acidosis in CKD; missing doses allows pH to drift back toward acidotic range.",
+    "Follow a consistent, structured sick-day diabetes plan — test blood ketones when glucose exceeds 250 mg/dL, increase insulin per protocol, and seek care if vomiting prevents fluid intake.",
+    "Restrict dietary protein to 0.6-0.8 g/kg/day in CKD stage 3-5 to reduce metabolic acid load and delay need for dialysis.",
+    "Maintain good hydration (>2 L/day) unless fluid-restricted, as dehydration concentrates acids and impairs renal acid excretion.",
+    "Limit alcohol to no more than 1-2 standard drinks/day; avoid alcohol during acute illness or fasting to prevent alcoholic ketoacidosis.",
+    "Wear a medical alert bracelet if prone to DKA or have type 1 RTA, particularly if isolated or traveling internationally."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Fruits and vegetables (alkaline ash diet) shown to raise serum bicarbonate by 1-2 mEq/L in CKD stage 3-4 in RCTs",
+      "Adequate caloric intake during illness to prevent starvation ketoacidosis and reduce protein catabolism",
+      "Thiamine-rich foods (whole grains, legumes, nutritional yeast) in patients with alcohol use disorder or malabsorption",
+      "Potassium-rich foods (bananas, sweet potato, spinach) during DKA recovery once potassium is repleted under medical supervision"
+    ],
+    "avoid": [
+      "High-protein, high-sulfur diets (excess red meat) in advanced CKD — sulfuric acid from methionine catabolism worsens acidosis",
+      "Alcohol binging and fasting together — the combination triggers alcoholic ketoacidosis via insulin suppression and ketogenesis",
+      "Methanol or ethylene glycol-containing products (industrial solvents, some antifreeze products) — even small amounts cause severe acidosis",
+      "Excessive phosphate intake (processed foods, colas) in CKD — phosphate generates acid during buffering"
+    ]
+  },
+  "exerciseGuidelines": "During acute acidosis (pH below 7.30), physical activity is contraindicated until the primary cause is treated and pH normalizes. In chronic mild acidosis (HCO3− 18-22 mEq/L, e.g., CKD stage 3), moderate-intensity exercise (30 minutes most days) is safe and improves insulin sensitivity and cardiovascular risk. Patients with DKA history should check blood glucose and ketones before exercise and avoid strenuous activity when ketones are elevated.",
+
+  "dailyManagement": [
+    "Take prescribed oral sodium bicarbonate or citrate with meals and monitor serum bicarbonate every 3-6 months in CKD.",
+    "For diabetics on insulin, check blood ketones when glucose exceeds 250 mg/dL and follow sick-day rules to prevent DKA.",
+    "Report any increase in respiratory rate, confusion, nausea, or fruity breath promptly to a clinician.",
+    "Keep a hydration log; aim for 2 L of water daily unless restricted, especially in summer heat or febrile illness.",
+    "Schedule follow-up ABG or venous blood gas if serum bicarbonate falls below 18 mEq/L on routine panel.",
+    "Patients on metformin: report any muscle weakness, unusual fatigue, or abdominal pain — these may signal early lactic acidosis requiring immediate dose review."
+  ],
+
+  "prognosis": "Prognosis is strongly determined by the underlying cause and severity at presentation. Isolated mild metabolic acidosis (pH 7.30-7.35) from CKD or diarrhea treated promptly carries an excellent prognosis with near-complete recovery. DKA treated with the ADA protocol has an in-hospital mortality below 1% in adults at experienced centers. Lactic acidosis complicating septic shock carries 30-day mortality of 20-50% depending on severity and source-control success. Severe mixed acidosis in multi-organ failure (pH below 7.10) has hospital mortality above 50%. Chronic metabolic acidosis in CKD, if corrected with oral alkali to keep HCO3− above 22 mEq/L, slows GFR decline by approximately 2 mL/min/1.73 m² per year in randomized trials. Methanol or ethylene glycol poisoning treated within 8-12 hours of ingestion with fomepizole and dialysis has survival rates above 90%; delayed presentation carries risks of blindness (methanol) or permanent renal failure (ethylene glycol).",
+
+  "recoveryTimeline": "DKA: anion gap closes within 12-24 hours; transition to subcutaneous insulin at 24-48 hours; hospital discharge typically at 2-4 days. Lactic acidosis from sepsis resolves if the underlying infection responds within 24-72 hours of antibiotics and resuscitation. CKD-related chronic acidosis: serum HCO3− rises to target within 4-8 weeks on oral alkali, then requires lifelong maintenance. RTA: bicarbonate normalizes within days of initiating oral alkali.",
+
+  "complications": [
+    "Cardiac arrhythmias (ventricular tachycardia, fibrillation) when pH falls below 7.20, driven by reduced myocardial calcium sensitization and concurrent hyperkalemia — detect by continuous ECG monitoring.",
+    "Severe hyperkalemia (K above 6.5 mEq/L) from intracellular hydrogen-potassium exchange; may precipitate cardiac arrest even before pH is critically low — monitor closely during correction.",
+    "Cerebral edema, most commonly in pediatric DKA, occurring during rapid fluid replacement or excessive sodium bicarbonate administration — manifests as worsening headache and declining consciousness during treatment.",
+    "Accelerated bone mineral density loss in chronic metabolic acidosis, increasing fracture risk — assess with DXA in CKD patients with persistent acidosis and consider vitamin D and calcium support.",
+    "Muscle wasting and sarcopenia in CKD-related chronic acidosis from net protein catabolism stimulated by acidemia — track lean body mass and albumin in follow-up.",
+    "Progressive renal function decline: uncorrected metabolic acidosis in CKD accelerates tubulo-interstitial damage and increases the rate of GFR loss by 30% compared with corrected patients (RCT data, Brito-Ashurst 2009)."
+  ],
+
+  "supportResources": [
+    { "name": "National Kidney Foundation — Metabolic Acidosis in CKD", "url": "https://www.kidney.org/atoz/content/metabolic-acidosis", "description": "Patient-oriented overview of bicarbonate supplementation, CKD diet, and monitoring for chronic metabolic acidosis." },
+    { "name": "American Diabetes Association — DKA Management", "url": "https://diabetes.org/living-with-diabetes/complications/ketoacidosis-dka", "description": "Guidance on DKA recognition, home sick-day rules, and when to seek emergency care." },
+    { "name": "Surviving Sepsis Campaign — Patient Resources", "url": "https://www.survivingsepsis.org/resources-patients", "description": "Sepsis and lactic acidosis educational materials for patients and families." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "alkalosis-e873", "name": "Metabolic alkalosis", "keyDifference": "Metabolic alkalosis shows elevated HCO3− above 26 mEq/L and pH above 7.45, typically from vomiting, diuretic overuse, or alkali ingestion. Metabolic acidosis has low HCO3− and low pH. The two can coexist in complex mixed disorders (e.g., vomiting patient with sepsis), requiring systematic ABG analysis." },
+    { "slug": "renal-tubular-acidosis", "name": "Renal tubular acidosis", "keyDifference": "RTA is a subtype of normal anion gap metabolic acidosis specifically from tubular dysfunction, not from GI bicarbonate loss. The urine anion gap is positive (impaired ammonium excretion), and the specific tubular defect (type 1, 2, or 4) requires testing with urine pH and fractional bicarbonate excretion. Overall serum creatinine may be near-normal." },
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis", "keyDifference": "Sepsis causes metabolic acidosis secondarily through lactic acidosis from tissue hypoperfusion, but it is the underlying diagnosis, not the acid-base disorder itself. Identifying and treating the infectious source of sepsis is the primary therapeutic target; treating the pH alone without source control fails." },
+    { "slug": "type-1-diabetes", "name": "Type 1 Diabetes Mellitus", "keyDifference": "Type 1 diabetes is the most common underlying condition triggering DKA-related metabolic acidosis. Distinguishing DKA from hyperglycemic hyperosmolar state (HHS) — which lacks significant acidosis — matters because management differs: HHS requires slower, gentler hydration and no insulin bolus." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic kidney disease" },
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis" },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "alkalosis-e873", "name": "Metabolic alkalosis", "relevance": "The mirror disorder in acid-base physiology; both are classified by pH, HCO3−, and compensation pattern." },
+    { "slug": "renal-tubular-acidosis", "name": "Renal tubular acidosis", "relevance": "A mechanistically specific subtype of normal anion gap metabolic acidosis requiring a distinct diagnostic and treatment approach." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic kidney disease", "relevance": "The most common chronic cause of metabolic acidosis; acidosis in turn accelerates CKD progression." },
+    { "slug": "type-1-diabetes", "name": "Type 1 Diabetes Mellitus", "relevance": "Principal risk factor for recurrent DKA, the leading acute cause of high anion gap metabolic acidosis." },
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis", "relevance": "Most common cause of lactic acidosis in ICU patients; metabolic acidosis severity predicts sepsis mortality." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is metabolic acidosis?",
+      "answer": "Metabolic acidosis is an acid-base disorder in which blood bicarbonate falls below 22 mEq/L, lowering blood pH below 7.35. It occurs when the body produces too much acid or loses too much bicarbonate. Common causes include diabetic ketoacidosis, lactic acidosis from sepsis, and chronic kidney disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the main symptoms of metabolic acidosis?",
+      "answer": "The most visible symptom is deep, rapid breathing (Kussmaul respirations) as the lungs try to compensate by expelling CO2. Other symptoms include fatigue, nausea, vomiting, confusion, and fast heartbeat. In DKA, a fruity or acetone smell on the breath is characteristic.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes metabolic acidosis?",
+      "answer": "Major causes include diabetic ketoacidosis, lactic acidosis from sepsis or shock, chronic kidney disease, severe diarrhea, renal tubular acidosis, and toxic ingestions such as methanol, ethylene glycol, or aspirin overdose. The cause is identified by the anion gap and clinical context.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is metabolic acidosis diagnosed?",
+      "answer": "Diagnosis requires an arterial blood gas showing pH below 7.35 and HCO3− below 22 mEq/L. The anion gap (Na − [Cl + HCO3−]) classifies the cause: high gap (above 12) indicates organic acids; normal gap indicates bicarbonate loss. Further tests include lactate, glucose, ketones, and renal function.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the anion gap and why does it matter in metabolic acidosis?",
+      "answer": "The anion gap (AG = Na − [Cl + HCO3−]) quantifies unmeasured anions. A normal AG of 8-12 mEq/L means bicarbonate is being lost without acid accumulation. An elevated AG above 12 means unmeasured acids (lactate, ketones, toxins, uremic acids) are present. This distinction guides the diagnostic workup.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is metabolic acidosis the same as diabetic ketoacidosis?",
+      "answer": "DKA is one specific cause of metabolic acidosis, not a synonym. DKA is a high anion gap metabolic acidosis caused by ketone accumulation in uncontrolled diabetes. Metabolic acidosis has dozens of other causes including lactic acidosis, chronic kidney disease, and diarrhea.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between metabolic acidosis and respiratory acidosis?",
+      "answer": "Metabolic acidosis has low HCO3− as the primary change; respiratory acidosis has elevated PaCO2 as the primary change, from hypoventilation. Both lower blood pH. They can coexist in mixed disorders. The arterial blood gas distinguishes them: metabolic acidosis shows low HCO3−; respiratory acidosis shows high PaCO2.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the treatment for metabolic acidosis?",
+      "answer": "Treatment targets the underlying cause: insulin and fluids for DKA, antibiotics and vasopressors for septic lactic acidosis, oral sodium bicarbonate for CKD-related acidosis, and fomepizole plus dialysis for toxic alcohol ingestion. IV sodium bicarbonate is reserved for pH below 7.10 with hemodynamic instability.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is sodium bicarbonate given for metabolic acidosis?",
+      "answer": "Intravenous sodium bicarbonate is indicated when pH falls below 7.10 with cardiovascular instability, in severe hyperkalemia above 6.5 mEq/L, in salicylate or methanol poisoning to alkalinize urine, and as a bridge to dialysis. It is not routinely given for DKA or lactic acidosis where treating the cause is preferred.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can metabolic acidosis be life-threatening?",
+      "answer": "Yes. pH below 7.20 causes cardiac arrhythmias, impairs myocardial contractility, promotes severe hyperkalemia, and depresses brain function. In septic lactic acidosis or severe DKA, in-hospital mortality exceeds 20-50% if untreated. Prompt diagnosis and cause-directed treatment are essential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does chronic kidney disease cause metabolic acidosis?",
+      "answer": "Yes. Up to 25% of patients with CKD stage 3-5 have persistent metabolic acidosis because failing kidneys cannot excrete enough acid. KDIGO guidelines recommend oral sodium bicarbonate when serum HCO3− falls below 22 mEq/L to slow CKD progression and preserve muscle and bone mass.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is lactic acidosis?",
+      "answer": "Lactic acidosis is a high anion gap metabolic acidosis caused by lactate accumulation above 5 mmol/L with pH below 7.35. Type A results from tissue hypoperfusion (septic shock, cardiac arrest). Type B occurs with normal perfusion from metformin toxicity, liver failure, or thiamine deficiency.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does metabolic acidosis affect potassium levels?",
+      "answer": "Metabolic acidosis drives hydrogen ions into cells in exchange for potassium ions, raising serum potassium. For every 0.1 unit fall in pH, potassium rises approximately 0.6 mEq/L. This hyperkalemia can cause life-threatening cardiac arrhythmias and must be treated simultaneously with the acidosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can diarrhea cause metabolic acidosis?",
+      "answer": "Yes. Large-volume diarrhea drains bicarbonate-rich intestinal secretions, producing a normal anion gap (hyperchloremic) metabolic acidosis. This is the most common cause of metabolic acidosis in children worldwide. Oral rehydration solution with bicarbonate or citrate replaces the lost base.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is metabolic acidosis reversible?",
+      "answer": "In most cases, yes. Acute metabolic acidosis from DKA, diarrhea, or toxic ingestion resolves with treatment of the underlying cause. Chronic acidosis from CKD is manageable but not curable without kidney transplantation. Established complications such as bone loss or muscle wasting may partially persist.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Metabolic acidosis (low blood bicarbonate, high-acid blood)",
+  "regionalNames": [
+    { "name": "Acidose métabolique", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "Acidosis metabólica", "region": "Latin America, Spain", "language": "Spanish" },
+    { "name": "मेटाबॉलिक एसिडोसिस", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "metabolic acidosis",
+    "high anion gap acidosis",
+    "low bicarbonate blood",
+    "kussmaul breathing",
+    "diabetic ketoacidosis",
+    "lactic acidosis",
+    "renal tubular acidosis",
+    "bicarbonate low blood",
+    "MUDPILES acidosis",
+    "acidosis treatment",
+    "metabolic acidosis CKD",
+    "anion gap calculation",
+    "metabolic acidosis causes",
+    "acid base disorder"
+  ],
+  "symptomKeywords": [
+    "deep rapid breathing",
+    "Kussmaul respirations",
+    "fruity breath diabetes",
+    "confusion low bicarbonate",
+    "nausea vomiting DKA",
+    "fast heartbeat acid base",
+    "fatigue low pH blood"
+  ],
+
+  "metaTitle": "Metabolic Acidosis: Symptoms, Causes & Treatment",
+  "metaDescription": "Metabolic acidosis: acid buildup from DKA, lactic acidosis, or kidney disease. Anion gap diagnosis, bicarbonate treatment, and prognosis reviewed by aihealz.",
+
+  "keywords": [
+    "metabolic acidosis",
+    "metabolic acidosis symptoms",
+    "metabolic acidosis causes",
+    "high anion gap metabolic acidosis",
+    "metabolic acidosis treatment",
+    "metabolic acidosis bicarbonate",
+    "lactic acidosis",
+    "DKA metabolic acidosis",
+    "CKD metabolic acidosis",
+    "normal anion gap acidosis",
+    "sodium bicarbonate acidosis",
+    "metabolic acidosis prognosis",
+    "anion gap acidosis types",
+    "acid base disorders"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Kraut JA, Madias NE. 2014. Metabolic acidosis: pathophysiology, diagnosis, and management. Nature Reviews Nephrology 10(5):274-285.", "url": "https://pubmed.ncbi.nlm.nih.gov/24662748/", "accessedDate": "2026-05-14" },
+    { "title": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. 2012. KDIGO clinical practice guideline for the evaluation and management of CKD. Kidney International Supplements 3(1):1-150.", "url": "https://kdigo.org/guidelines/ckd-evaluation-and-management/", "accessedDate": "2026-05-14" },
+    { "title": "Kitabchi AE, Umpierrez GE, Miles JM, Fisher JN. 2009. Hyperglycemic crises in adult patients with diabetes. Diabetes Care 32(7):1335-1343.", "url": "https://pubmed.ncbi.nlm.nih.gov/19564476/", "accessedDate": "2026-05-14" },
+    { "title": "Brito-Ashurst I, Varagunam M, Raftery MJ, Yaqoob MM. 2009. Bicarbonate supplementation slows progression of CKD and improves nutritional status. Journal of the American Society of Nephrology 20(9):2075-2084.", "url": "https://pubmed.ncbi.nlm.nih.gov/19608703/", "accessedDate": "2026-05-14" },
+    { "title": "Evans L, Rhodes A, Alhazzani W, et al. 2021. Surviving Sepsis Campaign: International guidelines for management of sepsis and septic shock 2021. Intensive Care Medicine 47(11):1181-1247.", "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/", "accessedDate": "2026-05-14" },
+    { "title": "American Diabetes Association. 2022. Diabetic ketoacidosis and hyperosmolar hyperglycemic state. Diabetes Care 45(Suppl 1):S243-S253.", "url": "https://pubmed.ncbi.nlm.nih.gov/34964869/", "accessedDate": "2026-05-14" },
+    { "title": "Emmett M, Szerlip H. 2023. Causes of high anion gap metabolic acidosis. UpToDate, Wolters Kluwer (editorial practice guidelines review).", "url": "https://www.uptodate.com/contents/causes-of-high-anion-gap-metabolic-acidosis", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

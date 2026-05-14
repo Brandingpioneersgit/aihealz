@@ -20,29 +20,38 @@
     "version": "v1-hand-written-eeat",
     "authoringNotes": "Citations cross-verified against DSM-5-TR (APA 2022), NIAAA 2023 reports, Carvalho AF Lancet 2019 review, and VA/DoD Clinical Practice Guidelines for SUD 2021. Drug doses cross-checked against AAP/SAMHSA references."
   },
-
   "h1Title": "Alcohol Use Disorder: Symptoms, Causes, Diagnosis, and Treatment",
   "specialistType": "Psychiatry",
-
   "heroOverview": "Alcohol use disorder (AUD) is a chronic, relapsing brain condition defined by impaired control over drinking despite mounting harm to health, work, and relationships. About 29.5 million Americans aged 12 and older met DSM-5-TR criteria for AUD in 2022 (SAMHSA NSDUH), and globally alcohol contributes to roughly 2.6 million deaths per year. AUD develops along a spectrum from mild to severe, marked by tolerance, withdrawal, craving, and progressive loss of choice over the substance. It is treatable: FDA-approved medications — naltrexone, acamprosate, and disulfiram — combined with behavioral therapy roughly double abstinence rates compared with no treatment. Recognition is the bottleneck: under 10% of people with AUD receive any treatment in a given year.",
-
   "keyStats": {
     "prevalence": "29.5 million Americans aged 12+ (10.5%) met AUD criteria in 2022 (SAMHSA NSDUH)",
     "demographics": "Men 2x more affected than women, though the gap is narrowing rapidly in adults under 40",
     "avgAge": "Onset typically late adolescence to mid-20s; peak severity in 30s-40s",
     "globalCases": "~283 million people worldwide with AUD; 2.6 million annual alcohol-attributable deaths (WHO 2024)"
   },
-
   "definition": "Alcohol use disorder (ICD-10: F10.10-F10.99) is the DSM-5-TR diagnosis that replaced the older categorical split of alcohol abuse and alcohol dependence in 2013. It is defined by a pattern of alcohol use leading to clinically significant impairment, with at least 2 of 11 criteria within a 12-month period: drinking more or longer than intended, persistent desire or unsuccessful efforts to cut down, large time spent obtaining or recovering from drinking, craving, role failure, interpersonal problems, giving up activities, hazardous use, continued use despite harm, tolerance, and withdrawal. Severity is graded as mild (2-3 criteria), moderate (4-5), or severe (≥6). AUD is a brain disorder involving reward-system dysregulation (mesolimbic dopamine), stress-system upregulation (extended amygdala corticotropin-releasing factor), and prefrontal executive impairment, all of which persist long after acute intoxication or withdrawal resolves. It is heritable — twin and adoption studies place heritability at 50-60% — and shares genetic architecture with mood, anxiety, and other substance use disorders. Care is led by psychiatrists, addiction medicine specialists, and primary care clinicians, with peer-support communities (Alcoholics Anonymous, SMART Recovery) playing a major adjunctive role.",
-
   "typesClassification": [
-    { "type": "Mild AUD", "description": "Meets 2-3 of 11 DSM-5-TR criteria. Often unrecognized; responds well to brief intervention and behavioral therapy. Many people remit without formal treatment if they engage with the diagnosis." },
-    { "type": "Moderate AUD", "description": "Meets 4-5 criteria. Functional impairment evident in work, relationships, or health. Combined behavioral plus pharmacotherapy is standard of care." },
-    { "type": "Severe AUD", "description": "Meets 6 or more criteria. High risk for medical complications including withdrawal seizures, delirium tremens, liver disease, and Wernicke's encephalopathy. Often requires medically-supervised detoxification before maintenance treatment." },
-    { "type": "AUD in early remission", "description": "Previously met criteria but has not met any criteria (other than craving) for 3-12 months. Relapse risk remains highest in this window." },
-    { "type": "AUD in sustained remission", "description": "No criteria (other than craving) met for 12 months or more. Relapse rates fall but the underlying vulnerability persists; many specialists consider AUD a lifelong chronic condition similar to type 2 diabetes." }
+    {
+      "type": "Mild AUD",
+      "description": "Meets 2-3 of 11 DSM-5-TR criteria. Often unrecognized; responds well to brief intervention and behavioral therapy. Many people remit without formal treatment if they engage with the diagnosis."
+    },
+    {
+      "type": "Moderate AUD",
+      "description": "Meets 4-5 criteria. Functional impairment evident in work, relationships, or health. Combined behavioral plus pharmacotherapy is standard of care."
+    },
+    {
+      "type": "Severe AUD",
+      "description": "Meets 6 or more criteria. High risk for medical complications including withdrawal seizures, delirium tremens, liver disease, and Wernicke's encephalopathy. Often requires medically-supervised detoxification before maintenance treatment."
+    },
+    {
+      "type": "AUD in early remission",
+      "description": "Previously met criteria but has not met any criteria (other than craving) for 3-12 months. Relapse risk remains highest in this window."
+    },
+    {
+      "type": "AUD in sustained remission",
+      "description": "No criteria (other than craving) met for 12 months or more. Relapse rates fall but the underlying vulnerability persists; many specialists consider AUD a lifelong chronic condition similar to type 2 diabetes."
+    }
   ],
-
   "primarySymptoms": [
     "Drinking more alcohol or for longer periods than originally intended on most occasions over the past year.",
     "Repeated unsuccessful attempts to cut down or stop drinking, including failed promises to oneself or others.",
@@ -56,7 +65,6 @@
     "Tolerance — needing markedly more alcohol to achieve the same effect, or noticeably reduced effect from the same amount.",
     "Withdrawal symptoms (tremor, sweating, anxiety, insomnia, nausea, racing heart) when drinking is stopped or reduced, or drinking to relieve or avoid these symptoms."
   ],
-
   "earlyWarningSigns": [
     "Drinking more than 14 standard drinks per week for men or 7 for women (NIAAA at-risk thresholds)",
     "Family or friends starting to comment on the amount or frequency of drinking",
@@ -64,7 +72,6 @@
     "Failed attempts to set personal rules about drinking (no drinks before 6pm, only on weekends, etc.) within the past 12 months",
     "Memory blackouts during or after drinking episodes"
   ],
-
   "emergencySigns": [
     "Severe tremor, confusion, hallucinations, or seizures within 6-72 hours of the last drink — possible delirium tremens, mortality 5-15% untreated",
     "Sudden confusion with eye-movement abnormalities and ataxia — Wernicke's encephalopathy requiring immediate IV thiamine before glucose",
@@ -72,7 +79,6 @@
     "Severe abdominal pain with nausea, vomiting, and tenderness — possible acute pancreatitis",
     "Acute suicidality during intoxication or withdrawal — drinking and suicide risk are tightly linked"
   ],
-
   "causes": [
     {
       "cause": "Genetic vulnerability",
@@ -99,18 +105,48 @@
       "description": "Population-level alcohol consumption tracks closely with price, density of liquor outlets, marketing exposure, and cultural norms. Tax increases and outlet restrictions consistently reduce AUD prevalence in epidemiologic data."
     }
   ],
-
   "riskFactors": [
-    { "factor": "Family history of AUD", "category": "genetic", "description": "First-degree relative with AUD triples personal lifetime risk. Genetic loci include ADH1B, ALDH2 (East Asian flush variant is actually protective), GABRA2, and OPRM1." },
-    { "factor": "Male sex", "category": "non-modifiable", "description": "Men have twice the prevalence of AUD in most populations, though the gap is narrowing rapidly — women under 40 now drink at near-male rates in many high-income countries." },
-    { "factor": "Onset of drinking before age 14", "category": "modifiable", "description": "Early drinking initiation predicts 4-fold higher lifetime AUD risk. Adolescent brain plasticity heightens neuroadaptive change from alcohol exposure." },
-    { "factor": "Comorbid depression, anxiety, PTSD, or bipolar disorder", "category": "modifiable", "description": "Roughly 40% of people with AUD have a co-occurring psychiatric disorder. Integrated treatment of both conditions improves outcomes for each." },
-    { "factor": "Adverse childhood experiences (ACEs)", "category": "non-modifiable", "description": "ACE score of 4 or more raises lifetime AUD risk approximately 7-fold (Felitti 1998 ACE Study). Trauma-informed care improves engagement." },
-    { "factor": "Chronic pain or insomnia", "category": "modifiable", "description": "Drinking for sleep or pain relief is a common entry point. Addressing the underlying pain or sleep disorder substantially improves AUD outcomes." },
-    { "factor": "High alcohol availability and low price", "category": "environmental", "description": "Population-level consumption tracks with outlet density, tax level, and advertising exposure. Policy-level interventions reduce population AUD prevalence by 10-25% in modeling studies." },
-    { "factor": "Occupation with high drinking culture", "category": "modifiable", "description": "Hospitality, military, finance, and trades historically have above-average AUD rates due to availability, peer norms, and stress." }
+    {
+      "factor": "Family history of AUD",
+      "category": "genetic",
+      "description": "First-degree relative with AUD triples personal lifetime risk. Genetic loci include ADH1B, ALDH2 (East Asian flush variant is actually protective), GABRA2, and OPRM1."
+    },
+    {
+      "factor": "Male sex",
+      "category": "non-modifiable",
+      "description": "Men have twice the prevalence of AUD in most populations, though the gap is narrowing rapidly — women under 40 now drink at near-male rates in many high-income countries."
+    },
+    {
+      "factor": "Onset of drinking before age 14",
+      "category": "modifiable",
+      "description": "Early drinking initiation predicts 4-fold higher lifetime AUD risk. Adolescent brain plasticity heightens neuroadaptive change from alcohol exposure."
+    },
+    {
+      "factor": "Comorbid depression, anxiety, PTSD, or bipolar disorder",
+      "category": "modifiable",
+      "description": "Roughly 40% of people with AUD have a co-occurring psychiatric disorder. Integrated treatment of both conditions improves outcomes for each."
+    },
+    {
+      "factor": "Adverse childhood experiences (ACEs)",
+      "category": "non-modifiable",
+      "description": "ACE score of 4 or more raises lifetime AUD risk approximately 7-fold (Felitti 1998 ACE Study). Trauma-informed care improves engagement."
+    },
+    {
+      "factor": "Chronic pain or insomnia",
+      "category": "modifiable",
+      "description": "Drinking for sleep or pain relief is a common entry point. Addressing the underlying pain or sleep disorder substantially improves AUD outcomes."
+    },
+    {
+      "factor": "High alcohol availability and low price",
+      "category": "environmental",
+      "description": "Population-level consumption tracks with outlet density, tax level, and advertising exposure. Policy-level interventions reduce population AUD prevalence by 10-25% in modeling studies."
+    },
+    {
+      "factor": "Occupation with high drinking culture",
+      "category": "modifiable",
+      "description": "Hospitality, military, finance, and trades historically have above-average AUD rates due to availability, peer norms, and stress."
+    }
   ],
-
   "affectedDemographics": [
     "US prevalence: 29.5 million people aged 12+ in 2022; ~10.5% of the adolescent and adult population (SAMHSA NSDUH)",
     "Native American and Alaska Native populations historically carry the highest prevalence; East Asian populations the lowest, partly due to protective ALDH2 variants",
@@ -118,9 +154,7 @@
     "Women under 40 in high-income countries have the fastest-rising AUD rates in the past decade; binge-drinking rates have nearly converged with men",
     "Veterans have AUD prevalence roughly 1.5-2x the general population, driven by PTSD, chronic pain, and service-related trauma"
   ],
-
   "diagnosisOverview": "Diagnosis is clinical, made by interview using the DSM-5-TR criteria — a person who meets 2 or more of 11 criteria within a 12-month period has AUD, with severity graded by criterion count. Screening should be universal in primary care; the AUDIT (Alcohol Use Disorders Identification Test) is the WHO-validated 10-item instrument with sensitivity over 90% at a cutoff of 8. The 3-item AUDIT-C is the most common short version used in busy practice; a score of 4+ in men or 3+ in women triggers further assessment. The single-question screen — 'How many times in the past year have you had X or more drinks in a day?' (5 for men, 4 for women) — is over 80% sensitive. After a positive screen, a structured DSM-5-TR criterion review establishes the diagnosis and severity. Biomarkers play a secondary role: gamma-glutamyl transferase, mean corpuscular volume, carbohydrate-deficient transferrin, and phosphatidylethanol (PEth) can support the diagnosis or monitor abstinence, but none are sensitive or specific enough to replace clinical interview. Always assess comorbid conditions: depression and anxiety screening, suicide risk, hepatic function (ALT, AST, GGT, INR, platelets, albumin), nutritional status, and withdrawal risk using the CIWA-Ar scale if recent heavy use. Distinguish AUD from primary mood and anxiety disorders by attending to which preceded the other and how symptoms behave during periods of sobriety lasting at least 4 weeks.",
-
   "diagnosticTests": [
     {
       "test": "AUDIT (Alcohol Use Disorders Identification Test) — 10-item screening tool",
@@ -153,9 +187,7 @@
       "whatToExpect": "Brief clinical assessment of 10 symptoms (tremor, sweating, agitation, hallucinations, etc.). Repeated every 1-4 hours during detox."
     }
   ],
-
   "treatmentOverview": "Treatment is most effective when behavioral therapy is combined with pharmacotherapy and continued for at least 6-12 months. VA/DoD 2021 Clinical Practice Guidelines and APA recommend offering FDA-approved medications to every patient with moderate or severe AUD who is willing. Three first-line medications have robust randomized-trial evidence: naltrexone (oral 50 mg daily or extended-release injectable 380 mg monthly) reduces heavy-drinking days and craving by acting on mu-opioid receptors; acamprosate (333 mg three tablets three times daily) supports abstinence by modulating glutamate; disulfiram (250 mg daily) creates an acetaldehyde-mediated aversive reaction with any alcohol intake and works best in monitored, motivated patients. Effect sizes are modest (number-needed-to-treat 7-12 to prevent return to heavy drinking) but real, and exceed effect sizes of many cardiovascular medications. Second-line options include topiramate (50-300 mg daily, off-label, with the strongest non-FDA evidence base), gabapentin (900-1800 mg daily, especially helpful with co-occurring sleep disturbance), and baclofen (30-80 mg daily, useful in advanced liver disease). For severe AUD with high tolerance, medically supervised withdrawal management — fixed-dose or symptom-triggered benzodiazepines guided by CIWA-Ar, plus parenteral thiamine 100-500 mg daily to prevent Wernicke's encephalopathy — precedes maintenance treatment. Behavioral approaches with the strongest evidence include cognitive behavioral therapy (CBT), motivational enhancement therapy (MET), the Community Reinforcement Approach (CRA), and 12-step facilitation; mutual-support participation (AA, SMART Recovery, Refuge Recovery) roughly doubles abstinence at one year in observational studies. Harm-reduction approaches — including controlled drinking goals for selected lower-severity patients, naltrexone-as-needed under the Sinclair Method, and managed alcohol programs in homeless populations — have growing evidence and are recognized in modern guidelines. Treatment matching to severity and patient goals matters more than rigid abstinence-only protocols.",
-
   "medicalTreatments": [
     {
       "name": "Naltrexone (oral 50 mg daily, or extended-release injection 380 mg IM monthly)",
@@ -193,7 +225,6 @@
       "effectiveness": "Prevents conversion to Wernicke-Korsakoff syndrome in over 90% of at-risk patients when given before glucose loads."
     }
   ],
-
   "surgicalOptions": [
     {
       "name": "Liver transplantation (for alcohol-related cirrhosis)",
@@ -201,16 +232,18 @@
       "successRate": "5-year survival 70-75%, comparable to transplant for other indications when patients engage in post-transplant AUD treatment."
     }
   ],
-
   "alternativeTreatments": [
-    { "name": "Mindfulness-Based Relapse Prevention (MBRP)", "description": "8-week group program combining mindfulness meditation with relapse prevention skills. Bowen 2014 RCT showed reduced relapse and heavy drinking at 12 months vs standard relapse prevention." },
-    { "name": "Mutual-support groups (Alcoholics Anonymous, SMART Recovery, Refuge Recovery)", "description": "Regular AA attendance roughly doubles 1-year abstinence rates in observational and matched-cohort studies (Kaskutas 2009). SMART Recovery uses CBT-based self-management for those preferring a secular approach." }
+    {
+      "name": "Mindfulness-Based Relapse Prevention (MBRP)",
+      "description": "8-week group program combining mindfulness meditation with relapse prevention skills. Bowen 2014 RCT showed reduced relapse and heavy drinking at 12 months vs standard relapse prevention."
+    },
+    {
+      "name": "Mutual-support groups (Alcoholics Anonymous, SMART Recovery, Refuge Recovery)",
+      "description": "Regular AA attendance roughly doubles 1-year abstinence rates in observational and matched-cohort studies (Kaskutas 2009). SMART Recovery uses CBT-based self-management for those preferring a secular approach."
+    }
   ],
-
   "whySeeSpecialist": "A psychiatrist or addiction medicine specialist should be involved for moderate-to-severe AUD, for patients with co-occurring psychiatric disorders, after failed initial treatment, for medically complex withdrawal, or where extended-release injectable medications and structured intensive outpatient programs are needed. Primary care can effectively manage mild AUD with brief intervention plus oral naltrexone or acamprosate, and screening should always begin in primary care.",
-
   "doctorSelectionGuide": "Look for board certification in addiction psychiatry or addiction medicine, comfort prescribing all three FDA-approved AUD medications, willingness to incorporate harm-reduction goals where appropriate, and availability of structured behavioral therapy on-site or by warm referral. Continuity matters — AUD recovery is a multi-year process and a long-term clinical relationship outperforms episodic referrals. Ask whether the practice integrates mental-health treatment for common comorbidities (depression, anxiety, PTSD).",
-
   "hospitalCriteria": [
     "On-site addiction medicine or psychiatric consultation service",
     "Protocols for symptom-triggered benzodiazepine withdrawal management using CIWA-Ar",
@@ -218,18 +251,15 @@
     "Linkage to outpatient AUD pharmacotherapy clinic on discharge",
     "Capacity to manage acute medical complications (variceal bleeding, hepatic encephalopathy, pancreatitis)"
   ],
-
   "keyFacilities": [
     "Hazelden Betty Ford Foundation (US), Caron Treatment Centers (US) — residential treatment with strong evidence base",
     "Veterans Health Administration addiction programs (US) — integrated mental-health and AUD care",
     "Priory Group hospitals (UK) — private inpatient and outpatient addiction care",
     "NIAAA Alcohol Treatment Navigator — free public tool to find evidence-based US treatment"
   ],
-
   "costBreakdown": null,
   "insuranceGuide": null,
   "financialAssistance": null,
-
   "preventionStrategies": [
     "Limit drinking to no more than 14 standard drinks per week for men and 7 for women, and no more than 4 in a single occasion — NIAAA low-risk guidelines",
     "Avoid drinking before age 21 (US) or local legal age; early-onset drinking is the single most powerful predictor of adult AUD",
@@ -237,7 +267,6 @@
     "Treat co-occurring depression, anxiety, PTSD, and chronic pain with evidence-based therapies to remove the self-medication driver",
     "Limit population alcohol availability through tax, outlet density regulation, and minimum unit pricing — the most cost-effective public-health levers"
   ],
-
   "lifestyleModifications": [
     "Identify personal high-risk triggers (specific people, places, emotions, times of day) and develop concrete avoidance or coping plans for each",
     "Build a structured weekly routine including exercise, sleep, social contact, and meaningful activity — boredom and unstructured time are major relapse triggers",
@@ -246,7 +275,6 @@
     "Engage with a mutual-support group at least weekly during the first year of recovery; AA, SMART Recovery, Refuge Recovery, and online communities all work",
     "Inform trusted family or friends about the diagnosis and ask for explicit support — secrecy is a relapse risk factor"
   ],
-
   "dietRecommendations": {
     "recommended": [
       "High-quality protein at every meal to support hepatic repair and neurotransmitter synthesis",
@@ -262,9 +290,7 @@
       "Heavily restricted diets during the first 6 months of recovery; nutritional repletion takes priority"
     ]
   },
-
   "exerciseGuidelines": "Regular aerobic exercise (30 minutes most days) reduces craving, improves mood, and supports sleep — all major drivers of relapse. Strength training twice weekly counters sarcopenia from chronic alcohol use. Avoid high-intensity exercise during the first 5-7 days of withdrawal due to autonomic instability. Group exercise classes can substitute for the social rituals previously built around drinking.",
-
   "dailyManagement": [
     "Take medication at the same time daily — adherence is the single strongest predictor of treatment success",
     "Keep a daily log of cravings, triggers, and slips; review weekly with your clinician or sponsor",
@@ -272,11 +298,8 @@
     "Maintain consistent sleep, exercise, and meal timing to stabilize the dysregulated stress and reward systems",
     "Have an explicit relapse plan: who you will call, where you will go, and what you will do in the first hour after a slip"
   ],
-
   "prognosis": "AUD is a chronic relapsing condition with outcomes comparable to type 2 diabetes or hypertension in adherence-corrected analyses. Roughly one-third of people achieve sustained remission (no recurrence at 1 year) after a single course of evidence-based treatment, another third achieve substantial reduction in drinking and harm without full abstinence, and the remaining third return to problematic use within 12 months. Relapse rates fall over time: at 5 years of continuous abstinence, the annual relapse rate drops to under 10%. Medications combined with behavioral therapy roughly double abstinence rates compared with no treatment. Long-term mortality from AUD is significantly elevated — 26-fold higher than population baseline in severe AUD, driven by liver disease, cardiovascular events, accidents, and suicide. Untreated, life expectancy is reduced by an average of 24-28 years compared to people without AUD (Westman 2015 Scandinavian cohort). Treated patients reach population-typical life expectancy when sustained abstinence is achieved before significant organ damage.",
-
   "recoveryTimeline": "Acute withdrawal resolves over 3-7 days with appropriate management. Post-acute withdrawal — sleep disturbance, mood instability, craving — lasts 2-12 weeks. Cognitive recovery from chronic alcohol exposure continues over 6-24 months. Liver enzymes normalize within 6-8 weeks of abstinence in the absence of cirrhosis. Most patients describe meaningful quality-of-life improvement within 3 months. Long-term remission rates rise progressively with each year of continuous abstinence, with the steepest reduction in relapse risk during years 1-5.",
-
   "complications": [
     "Alcohol-related liver disease — fatty liver, alcoholic hepatitis, and cirrhosis, occurring in 10-20% of long-term heavy drinkers",
     "Alcohol withdrawal seizures and delirium tremens — mortality 5-15% untreated, requiring inpatient management",
@@ -286,123 +309,185 @@
     "Suicide, accidents, and interpersonal violence — alcohol is implicated in roughly 25% of US suicides and 30% of homicides",
     "Fetal alcohol spectrum disorders if drinking continues during pregnancy"
   ],
-
   "supportResources": [
-    { "name": "NIAAA Alcohol Treatment Navigator", "url": "https://alcoholtreatment.niaaa.nih.gov/", "description": "US National Institute on Alcohol Abuse and Alcoholism free tool to identify evidence-based treatment providers." },
-    { "name": "SAMHSA National Helpline", "url": "https://www.samhsa.gov/find-help/national-helpline", "description": "1-800-662-HELP (4357) — free, confidential, 24/7 US treatment referral and information service." },
-    { "name": "Alcoholics Anonymous", "url": "https://www.aa.org/", "description": "Global fellowship of mutual support; meetings free and available in nearly every community and online." },
-    { "name": "SMART Recovery", "url": "https://www.smartrecovery.org/", "description": "Secular, CBT-based mutual-support program with in-person and online meetings worldwide." }
+    {
+      "name": "NIAAA Alcohol Treatment Navigator",
+      "url": "https://alcoholtreatment.niaaa.nih.gov/",
+      "description": "US National Institute on Alcohol Abuse and Alcoholism free tool to identify evidence-based treatment providers."
+    },
+    {
+      "name": "SAMHSA National Helpline",
+      "url": "https://www.samhsa.gov/find-help/national-helpline",
+      "description": "1-800-662-HELP (4357) — free, confidential, 24/7 US treatment referral and information service."
+    },
+    {
+      "name": "Alcoholics Anonymous",
+      "url": "https://www.aa.org/",
+      "description": "Global fellowship of mutual support; meetings free and available in nearly every community and online."
+    },
+    {
+      "name": "SMART Recovery",
+      "url": "https://www.smartrecovery.org/",
+      "description": "Secular, CBT-based mutual-support program with in-person and online meetings worldwide."
+    }
   ],
-
   "confusedWithConditions": [
-    { "slug": "depression", "name": "Major Depressive Disorder", "keyDifference": "Depression and AUD frequently coexist and look similar (insomnia, fatigue, low mood, weight change), but the directionality matters. If mood symptoms persist after 4 weeks of sobriety, treat as primary depression; if they remit, they were alcohol-induced. About 30-40% of people with AUD have a co-occurring mood disorder requiring its own treatment." },
-    { "slug": "anxiety", "name": "Generalized Anxiety Disorder", "keyDifference": "Anxiety often drives drinking and rebounds during early withdrawal, mimicking primary GAD. Reassess after 4-6 weeks of sobriety. True GAD persists; alcohol-induced anxiety resolves. Both can coexist." },
-    { "slug": "bipolar-disorder", "name": "Bipolar Disorder", "keyDifference": "Bipolar disorder is strongly comorbid with AUD (lifetime co-occurrence ~50%). Mood episodes in bipolar persist across periods of sobriety, while alcohol-induced mood changes resolve. Antimanic medication is required regardless of drinking status." },
-    { "slug": "ptsd", "name": "Post-Traumatic Stress Disorder", "keyDifference": "PTSD precedes AUD in most comorbid cases, with alcohol used to manage hyperarousal and intrusive memories. Trauma-focused therapy (CPT, EMDR, prolonged exposure) plus AUD pharmacotherapy outperforms either alone." }
+    {
+      "slug": "depression",
+      "name": "Major Depressive Disorder",
+      "keyDifference": "Depression and AUD frequently coexist and look similar (insomnia, fatigue, low mood, weight change), but the directionality matters. If mood symptoms persist after 4 weeks of sobriety, treat as primary depression; if they remit, they were alcohol-induced. About 30-40% of people with AUD have a co-occurring mood disorder requiring its own treatment."
+    },
+    {
+      "slug": "anxiety",
+      "name": "Generalized Anxiety Disorder",
+      "keyDifference": "Anxiety often drives drinking and rebounds during early withdrawal, mimicking primary GAD. Reassess after 4-6 weeks of sobriety. True GAD persists; alcohol-induced anxiety resolves. Both can coexist."
+    },
+    {
+      "slug": "bipolar-disorder",
+      "name": "Bipolar Disorder",
+      "keyDifference": "Bipolar disorder is strongly comorbid with AUD (lifetime co-occurrence ~50%). Mood episodes in bipolar persist across periods of sobriety, while alcohol-induced mood changes resolve. Antimanic medication is required regardless of drinking status."
+    },
+    {
+      "slug": "ptsd",
+      "name": "Post-Traumatic Stress Disorder",
+      "keyDifference": "PTSD precedes AUD in most comorbid cases, with alcohol used to manage hyperarousal and intrusive memories. Trauma-focused therapy (CPT, EMDR, prolonged exposure) plus AUD pharmacotherapy outperforms either alone."
+    }
   ],
-
   "coOccurringConditions": [
-    { "slug": "depression", "name": "Major Depressive Disorder" },
-    { "slug": "anxiety", "name": "Generalized Anxiety Disorder" },
-    { "slug": "ptsd", "name": "Post-Traumatic Stress Disorder" },
-    { "slug": "bipolar-disorder", "name": "Bipolar Disorder" }
+    {
+      "slug": "depression",
+      "name": "Major Depressive Disorder"
+    },
+    {
+      "slug": "anxiety",
+      "name": "Generalized Anxiety Disorder"
+    },
+    {
+      "slug": "ptsd",
+      "name": "Post-Traumatic Stress Disorder"
+    },
+    {
+      "slug": "bipolar-disorder",
+      "name": "Bipolar Disorder"
+    }
   ],
-
   "relatedConditions": [
-    { "slug": "depression", "name": "Major Depressive Disorder", "relevance": "Co-occurs in 30-40% of AUD cases; integrated treatment improves outcomes for both." },
-    { "slug": "anxiety", "name": "Anxiety Disorders", "relevance": "Common comorbidity; alcohol's short-acting anxiolysis drives a self-medication cycle." },
-    { "slug": "bipolar-disorder", "name": "Bipolar Disorder", "relevance": "Lifetime AUD co-occurrence approaches 50%; mood stabilization is prerequisite to durable sobriety." },
-    { "slug": "gerd", "name": "Gastroesophageal Reflux Disease", "relevance": "Alcohol lowers lower esophageal sphincter tone and is a leading reversible cause of refractory GERD." },
-    { "slug": "hypertension", "name": "Hypertension", "relevance": "Alcohol intake above two drinks daily raises blood pressure; reducing intake is part of standard hypertension management." },
-    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "AUD reduces ART adherence and accelerates HIV-related liver disease in coinfected patients." }
+    {
+      "slug": "depression",
+      "name": "Major Depressive Disorder",
+      "relevance": "Co-occurs in 30-40% of AUD cases; integrated treatment improves outcomes for both."
+    },
+    {
+      "slug": "anxiety",
+      "name": "Anxiety Disorders",
+      "relevance": "Common comorbidity; alcohol's short-acting anxiolysis drives a self-medication cycle."
+    },
+    {
+      "slug": "bipolar-disorder",
+      "name": "Bipolar Disorder",
+      "relevance": "Lifetime AUD co-occurrence approaches 50%; mood stabilization is prerequisite to durable sobriety."
+    },
+    {
+      "slug": "gerd",
+      "name": "Gastroesophageal Reflux Disease",
+      "relevance": "Alcohol lowers lower esophageal sphincter tone and is a leading reversible cause of refractory GERD."
+    },
+    {
+      "slug": "hypertension",
+      "name": "Hypertension",
+      "relevance": "Alcohol intake above two drinks daily raises blood pressure; reducing intake is part of standard hypertension management."
+    },
+    {
+      "slug": "hiv-aids",
+      "name": "HIV/AIDS",
+      "relevance": "AUD reduces ART adherence and accelerates HIV-related liver disease in coinfected patients."
+    }
   ],
-
   "linkedTreatmentSlugs": [],
-
   "faqs": [
     {
       "question": "What is alcohol use disorder?",
-      "answer": "Alcohol use disorder (AUD) is the medical diagnosis for problematic drinking. It is defined by meeting 2 or more of 11 criteria in the DSM-5-TR within a 12-month period — including loss of control over how much you drink, tolerance, withdrawal, craving, and continued use despite harm. Severity is graded mild (2-3 criteria), moderate (4-5), or severe (6+).",
+      "answer": "Alcohol use disorder (AUD) is the medical diagnosis for problematic drinking. It is defined by meeting 2 or more of 11 criteria in the DSM-5-TR within a 12-month period — including loss of control over how much you drink, tolerance, withdrawal, craving, and continued use despite harm.",
       "schemaEligible": true
     },
     {
       "question": "How do I know if I have alcohol use disorder?",
-      "answer": "The simplest screen is the AUDIT-C: how often do you drink, how many drinks on a typical day, and how often do you have 6 or more drinks on one occasion. A score of 4+ in men or 3+ in women indicates at-risk drinking. A clinician then reviews the DSM-5-TR criteria; meeting 2 or more confirms the diagnosis.",
+      "answer": "The simplest screen is the AUDIT-C: how often do you drink, how many drinks on a typical day, and how often do you have 6 or more drinks on one occasion. A score of 4+ in men or 3+ in women indicates at-risk drinking.",
       "schemaEligible": true
     },
     {
       "question": "Is alcohol use disorder a disease?",
-      "answer": "Yes. The American Medical Association classified alcoholism as a disease in 1956. Brain-imaging and genetic studies confirm that chronic alcohol use produces measurable changes in reward, stress, and executive-function circuits. AUD is a chronic relapsing condition similar in pattern to type 2 diabetes or hypertension.",
+      "answer": "Yes. The American Medical Association classified alcoholism as a disease in 1956. Brain-imaging and genetic studies confirm that chronic alcohol use produces measurable changes in reward, stress, and executive-function circuits.",
       "schemaEligible": true
     },
     {
       "question": "Can alcohol use disorder be cured?",
-      "answer": "AUD is not curable in the sense that the underlying vulnerability remains, but it is highly treatable and goes into long-term remission for many people. With evidence-based medications plus behavioral therapy, roughly one-third achieve sustained sobriety after a single course of treatment, and many more substantially reduce drinking and harm.",
+      "answer": "AUD is not curable in the sense that the underlying vulnerability remains, but it is highly treatable and goes into long-term remission for many people.",
       "schemaEligible": true
     },
     {
       "question": "What medications treat alcohol use disorder?",
-      "answer": "Three medications have FDA approval: naltrexone (oral or monthly injection) reduces craving and heavy drinking; acamprosate supports abstinence after detox; disulfiram causes an aversive reaction if alcohol is consumed. Off-label evidence supports topiramate, gabapentin, and baclofen. All work best combined with behavioral therapy.",
+      "answer": "Three medications have FDA approval: naltrexone (oral or monthly injection) reduces craving and heavy drinking; acamprosate supports abstinence after detox; disulfiram causes an aversive reaction if alcohol is consumed. Off-label evidence supports topiramate, gabapentin, and baclofen.",
       "schemaEligible": true
     },
     {
       "question": "What is alcohol withdrawal?",
-      "answer": "Alcohol withdrawal is the constellation of symptoms that follow stopping or reducing heavy drinking. Mild withdrawal (tremor, anxiety, insomnia, sweating) starts 6-24 hours after the last drink. Severe withdrawal can include seizures (12-48 hours) and delirium tremens (48-96 hours), which has a mortality of 5-15% untreated and requires hospital care.",
+      "answer": "Alcohol withdrawal is the constellation of symptoms that follow stopping or reducing heavy drinking. Mild withdrawal (tremor, anxiety, insomnia, sweating) starts 6-24 hours after the last drink.",
       "schemaEligible": true
     },
     {
       "question": "Do I need to be hospitalized to stop drinking?",
-      "answer": "Not always. Mild withdrawal can be managed at home with a clinician's supervision. Hospital detoxification is indicated for prior withdrawal seizures, prior delirium tremens, heavy daily drinking (>10 drinks/day), severe medical or psychiatric comorbidity, or a CIWA-Ar score above 15. Outpatient detox protocols work well for lower-risk patients.",
+      "answer": "Not always. Mild withdrawal can be managed at home with a clinician's supervision. Hospital detoxification is indicated for prior withdrawal seizures, prior delirium tremens, heavy daily drinking (>10 drinks/day), severe medical or psychiatric comorbidity, or a CIWA-Ar score above 15.",
       "schemaEligible": true
     },
     {
       "question": "Is moderate drinking safe in alcohol use disorder?",
-      "answer": "For most people with moderate or severe AUD, sustained abstinence is the most reliable outcome. For mild AUD, controlled drinking goals can work for selected motivated patients with no medical complications, and naltrexone supports this approach. Harm-reduction and moderation goals are evidence-based options in modern treatment, not failures of motivation.",
+      "answer": "For most people with moderate or severe AUD, sustained abstinence is the most reliable outcome. For mild AUD, controlled drinking goals can work for selected motivated patients with no medical complications, and naltrexone supports this approach.",
       "schemaEligible": true
     },
     {
       "question": "How does naltrexone work for alcohol use disorder?",
-      "answer": "Naltrexone blocks mu-opioid receptors, blunting the dopamine release that makes alcohol rewarding. People still feel the alcohol but report it as less pleasurable, which reduces heavy drinking and craving. It can be taken as a daily pill or as a once-monthly intramuscular injection (Vivitrol). It does not require abstinence at start.",
+      "answer": "Naltrexone blocks mu-opioid receptors, blunting the dopamine release that makes alcohol rewarding. People still feel the alcohol but report it as less pleasurable, which reduces heavy drinking and craving. It can be taken as a daily pill or as a once-monthly intramuscular injection (Vivitrol).",
       "schemaEligible": true
     },
     {
       "question": "What is the Sinclair Method?",
-      "answer": "The Sinclair Method is an evidence-based approach using naltrexone taken 1 hour before drinking rather than daily. Over months, the brain's association of alcohol with reward fades, and many users gradually drink much less or stop altogether. Trials show effect sizes similar to or better than daily naltrexone for people who continue to drink during treatment.",
+      "answer": "The Sinclair Method is an evidence-based approach using naltrexone taken 1 hour before drinking rather than daily. Over months, the brain's association of alcohol with reward fades, and many users gradually drink much less or stop altogether.",
       "schemaEligible": true
     },
     {
       "question": "Can alcohol use disorder be genetic?",
-      "answer": "Yes. Twin and adoption studies place AUD heritability at 50-60%. Having a first-degree relative with AUD triples personal lifetime risk. Specific gene variants in ADH1B, ALDH2, GABRA2, OPRM1, and CHRNA5 modulate metabolism, reward sensitivity, and craving. Genetics is necessary context, not destiny — environment and choices remain decisive.",
+      "answer": "Yes. Twin and adoption studies place AUD heritability at 50-60%. Having a first-degree relative with AUD triples personal lifetime risk. Specific gene variants in ADH1B, ALDH2, GABRA2, OPRM1, and CHRNA5 modulate metabolism, reward sensitivity, and craving.",
       "schemaEligible": true
     },
     {
       "question": "How long does alcohol withdrawal last?",
-      "answer": "Acute physical withdrawal symptoms peak within 24-72 hours after the last drink and resolve over 5-7 days. Post-acute withdrawal — sleep disturbance, mood instability, craving — can last 2-12 weeks. Full cognitive recovery from chronic alcohol exposure continues over 6-24 months of sustained abstinence.",
+      "answer": "Acute physical withdrawal symptoms peak within 24-72 hours after the last drink and resolve over 5-7 days. Post-acute withdrawal — sleep disturbance, mood instability, craving — can last 2-12 weeks.",
       "schemaEligible": true
     },
     {
       "question": "Will my liver recover if I stop drinking?",
-      "answer": "Fatty liver (steatosis) reverses fully within 4-6 weeks of abstinence. Alcoholic hepatitis can resolve over 3-6 months in many cases. Cirrhosis (advanced scarring) does not reverse, but progression halts and complications (variceal bleeding, ascites, encephalopathy) become manageable. The earlier sobriety begins, the more recovery is possible.",
+      "answer": "Fatty liver (steatosis) reverses fully within 4-6 weeks of abstinence. Alcoholic hepatitis can resolve over 3-6 months in many cases. Cirrhosis (advanced scarring) does not reverse, but progression halts and complications (variceal bleeding, ascites, encephalopathy) become manageable.",
       "schemaEligible": true
     },
     {
       "question": "Is Alcoholics Anonymous effective?",
-      "answer": "Yes. Multiple rigorous studies (including a 2020 Cochrane review) show AA roughly doubles 1-year abstinence rates compared to no treatment and matches or exceeds professional CBT in some head-to-head trials. AA works best combined with medication and is free and globally available. SMART Recovery is an evidence-based secular alternative.",
+      "answer": "Yes. Multiple rigorous studies (including a 2020 Cochrane review) show AA roughly doubles 1-year abstinence rates compared to no treatment and matches or exceeds professional CBT in some head-to-head trials. AA works best combined with medication and is free and globally available.",
       "schemaEligible": true
     },
     {
       "question": "Can women get alcohol use disorder?",
-      "answer": "Yes, and rates in women are rising rapidly. Women metabolize alcohol differently due to lower body water and less gastric alcohol dehydrogenase, so the same intake produces higher blood alcohol levels. Women also develop liver disease and cardiovascular complications at lower lifetime intakes than men. AUD risk thresholds for women are correspondingly lower.",
+      "answer": "Yes, and rates in women are rising rapidly. Women metabolize alcohol differently due to lower body water and less gastric alcohol dehydrogenase, so the same intake produces higher blood alcohol levels.",
       "schemaEligible": true
     },
     {
       "question": "Can teenagers have alcohol use disorder?",
-      "answer": "Yes. AUD can be diagnosed in adolescents using DSM-5-TR criteria, with adjustments for developmental context. About 1.5 million US adolescents aged 12-17 met AUD criteria in 2022 (SAMHSA). First drink before age 14 raises lifetime AUD risk approximately 4-fold. Screening and brief intervention in pediatric primary care is recommended by the AAP and USPSTF.",
+      "answer": "Yes. AUD can be diagnosed in adolescents using DSM-5-TR criteria, with adjustments for developmental context. 5 million US adolescents aged 12-17 met AUD criteria in 2022 (SAMHSA). First drink before age 14 raises lifetime AUD risk approximately 4-fold.",
       "schemaEligible": true
     },
     {
       "question": "What is delirium tremens?",
-      "answer": "Delirium tremens (DTs) is the most severe form of alcohol withdrawal, occurring in 3-5% of patients with severe AUD who stop drinking abruptly. It features severe confusion, hallucinations, tremor, autonomic instability, and seizures, beginning 48-96 hours after the last drink. Mortality is 5-15% untreated and under 1% with modern ICU care.",
+      "answer": "Delirium tremens (DTs) is the most severe form of alcohol withdrawal, occurring in 3-5% of patients with severe AUD who stop drinking abruptly. It features severe confusion, hallucinations, tremor, autonomic instability, and seizures, beginning 48-96 hours after the last drink.",
       "schemaEligible": true
     },
     {
@@ -412,49 +497,81 @@
     },
     {
       "question": "Does alcohol cause cancer?",
-      "answer": "Yes. The International Agency for Research on Cancer (IARC) classifies alcohol as a Group 1 carcinogen with strong evidence for cancers of the mouth, throat, esophagus, liver, breast, and colorectum. Risk rises with intake but is measurable even at light drinking levels (one drink per day raises breast cancer risk approximately 10%).",
+      "answer": "Yes. The International Agency for Research on Cancer (IARC) classifies alcohol as a Group 1 carcinogen with strong evidence for cancers of the mouth, throat, esophagus, liver, breast, and colorectum.",
       "schemaEligible": true
     },
     {
       "question": "How much does AUD treatment cost?",
-      "answer": "Outpatient medications (oral naltrexone, acamprosate, disulfiram) are inexpensive generics, often under USD 30 per month. Extended-release naltrexone injection costs roughly USD 1,500 per month at retail but is widely covered by insurance. Behavioral therapy costs vary; AA and SMART Recovery are free. Residential treatment ranges from publicly-funded free programs to USD 30,000+ per month in private facilities.",
+      "answer": "Outpatient medications (oral naltrexone, acamprosate, disulfiram) are inexpensive generics, often under USD 30 per month. Extended-release naltrexone injection costs roughly USD 1,500 per month at retail but is widely covered by insurance.",
       "schemaEligible": true
     }
   ],
-
   "simpleName": "Alcohol Use Disorder (alcoholism)",
-
   "regionalNames": [
-    { "name": "Madyapana Vyasana", "region": "India (Ayurvedic literature)", "language": "sa" },
-    { "name": "शराब की लत (Sharab ki lat)", "region": "India (Hindi)", "language": "hi" },
-    { "name": "Alcoolisme", "region": "France, Quebec", "language": "fr" }
+    {
+      "name": "Madyapana Vyasana",
+      "region": "India (Ayurvedic literature)",
+      "language": "sa"
+    },
+    {
+      "name": "शराब की लत (Sharab ki lat)",
+      "region": "India (Hindi)",
+      "language": "hi"
+    },
+    {
+      "name": "Alcoolisme",
+      "region": "France, Quebec",
+      "language": "fr"
+    }
   ],
-
   "searchTags": [
-    "alcohol use disorder", "AUD", "alcoholism", "alcohol dependence", "alcohol abuse",
-    "alcohol addiction", "problem drinking", "heavy drinking", "naltrexone",
-    "acamprosate", "disulfiram", "AUDIT", "DSM-5 AUD", "alcohol withdrawal",
-    "delirium tremens", "Sinclair Method"
+    "alcohol use disorder",
+    "AUD",
+    "alcoholism",
+    "alcohol dependence",
+    "alcohol abuse",
+    "alcohol addiction",
+    "problem drinking",
+    "heavy drinking",
+    "naltrexone",
+    "acamprosate",
+    "disulfiram",
+    "AUDIT",
+    "DSM-5 AUD",
+    "alcohol withdrawal",
+    "delirium tremens",
+    "Sinclair Method"
   ],
-
   "symptomKeywords": [
-    "drinking too much", "can't stop drinking", "alcohol craving", "hangover everyday",
-    "withdrawal shakes", "blackouts from drinking", "drinking alone", "morning drinking",
-    "alcohol tolerance", "drinking despite consequences"
+    "drinking too much",
+    "can't stop drinking",
+    "alcohol craving",
+    "hangover everyday",
+    "withdrawal shakes",
+    "blackouts from drinking",
+    "drinking alone",
+    "morning drinking",
+    "alcohol tolerance",
+    "drinking despite consequences"
   ],
-
   "metaTitle": "Alcohol Use Disorder: Symptoms & Treatment | aihealz",
   "metaDescription": "Alcohol use disorder: a treatable brain condition affecting 29.5M Americans. DSM-5 symptoms, naltrexone, acamprosate, and recovery options reviewed.",
-
   "keywords": [
-    "alcohol use disorder", "AUD", "alcoholism treatment", "alcohol dependence",
-    "DSM-5 alcohol use disorder", "naltrexone for alcohol", "acamprosate",
-    "AUDIT screening", "alcohol withdrawal", "delirium tremens",
-    "is alcoholism curable", "signs of alcoholism", "AA effectiveness"
+    "alcohol use disorder",
+    "AUD",
+    "alcoholism treatment",
+    "alcohol dependence",
+    "DSM-5 alcohol use disorder",
+    "naltrexone for alcohol",
+    "acamprosate",
+    "AUDIT screening",
+    "alcohol withdrawal",
+    "delirium tremens",
+    "is alcoholism curable",
+    "signs of alcoholism",
+    "AA effectiveness"
   ],
-
   "lastReviewed": "2026-05-13",
-
   "images": [
     {
       "assetType": "feature",
@@ -469,7 +586,6 @@
       "height": 960
     }
   ],
-
   "sources": [
     {
       "title": "American Psychiatric Association. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR). Washington, DC: American Psychiatric Association Publishing; 2022.",

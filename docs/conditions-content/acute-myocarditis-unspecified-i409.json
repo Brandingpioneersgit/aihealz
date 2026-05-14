@@ -1,0 +1,391 @@
+{
+  "_meta": {
+    "slug": "acute-myocarditis-unspecified-i409",
+    "tier": 1,
+    "headTerm": "acute myocarditis",
+    "longTailKeywords": [
+      "myocarditis symptoms",
+      "myocarditis treatment",
+      "myocarditis causes",
+      "viral myocarditis",
+      "myocarditis ECG",
+      "myocarditis cardiac MRI",
+      "myocarditis vs heart attack",
+      "myocarditis recovery",
+      "myocarditis in athletes",
+      "myocarditis after COVID"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Clinical criteria from Lake Louise Consensus (Ferreira et al. JCMR 2018, PMID 30126395) and 2013 ESC Position Statement on Myocarditis (Caforio et al. Eur Heart J 2013, PMID 23824828). Epidemiology and COVID-19-associated myocarditis data from recent systematic reviews."
+  },
+
+  "h1Title": "Acute Myocarditis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "Acute myocarditis is inflammation of the heart muscle (myocardium), most commonly triggered by viral infection, that can impair cardiac function ranging from minor troponin elevation to life-threatening cardiogenic shock and sudden death. Autopsy and MRI studies estimate incidence at 10-22 per 100,000 per year, though many mild cases go undetected. Young adults and male individuals are disproportionately affected; myocarditis accounts for approximately 9-16% of sudden cardiac death in athletes and young adults under 35. Most patients with mild disease recover fully within weeks. Those with acute LV dysfunction above 40% ejection fraction have an 80-90% recovery rate; fulminant myocarditis with shock and mechanical support has a paradoxically better long-term prognosis than non-fulminant disease.",
+
+  "keyStats": {
+    "prevalence": "Estimated incidence 10-22 per 100,000 person-years; likely higher due to subclinical cases (Caforio et al. 2013)",
+    "demographics": "Male-to-female ratio approximately 2:1; highest incidence in men aged 20-40; also affects children and older adults",
+    "avgAge": "Peak incidence in adults aged 20-40 years; second peak in infants and children under 2 years",
+    "globalCases": "Myocarditis accounts for approximately 9-16% of sudden cardiac death in young adults under 35 (Doolan et al. JACC 2004)"
+  },
+
+  "definition": "Acute myocarditis (ICD-10: I40.9) is an inflammatory disease of the myocardium characterised histologically by inflammatory infiltration of the cardiac muscle with necrosis or degeneration of adjacent cardiomyocytes not typical of ischaemic injury. The Dallas criteria (1986) define myocarditis histologically as lymphocytic infiltrate with adjacent myocyte necrosis on endomyocardial biopsy; the updated Lake Louise Criteria (Ferreira et al. 2018) classify myocarditis on cardiac MRI using T1 and T2-weighted sequences with late gadolinium enhancement. Myocarditis is caused most often by cardiotropic viruses — particularly Coxsackie B, parvovirus B19, adenovirus, and SARS-CoV-2 — through direct cytopathic injury and immune-mediated cardiomyocyte destruction. The inflammatory cascade recruits T lymphocytes, natural killer cells, and macrophages into the myocardium, releasing cytokines that suppress contractile function and can trigger fatal arrhythmias. Clinical presentations span four syndromes: an acute coronary syndrome-like presentation with chest pain and troponin rise; a new-onset heart failure with reduced EF; life-threatening ventricular arrhythmia; and cardiogenic shock. Fulminant myocarditis presents within 4 weeks of symptom onset with acute haemodynamic compromise. Cardiology, cardiac imaging, and cardiac intensive care manage acute disease; long-term follow-up for arrhythmia and heart failure recovery is ongoing.",
+
+  "typesClassification": [
+    { "type": "Viral myocarditis (lymphocytic)", "description": "The most common form in developed countries. Lymphocytic infiltrate on biopsy. Caused by Coxsackievirus B, parvovirus B19, adenovirus, influenza, CMV, EBV, and SARS-CoV-2. Most cases resolve spontaneously; 10-15% progress to dilated cardiomyopathy." },
+    { "type": "Fulminant myocarditis", "description": "Acute severe myocarditis with haemodynamic compromise within 2-4 weeks of onset, requiring mechanical circulatory support. Counterintuitively has better long-term cardiac function recovery than non-fulminant disease (90% vs 45% at 11 years, McCarthy et al. NEJM 2000, PMID 10821430)." },
+    { "type": "Giant cell myocarditis (GCM)", "description": "Rare autoimmune myocarditis with multinucleated giant cells on biopsy. Rapidly progressive; median survival without transplantation approximately 5.5 months. Associated with inflammatory bowel disease and thymoma. Immunosuppressive therapy (cyclosporin + prednisolone) delays progression." },
+    { "type": "Eosinophilic myocarditis", "description": "Peripheral eosinophilia with eosinophilic infiltration of the myocardium. Causes include hypersensitivity reactions (drug-induced: clozapine, ampicillin, dobutamine), Churg-Strauss/EGPA, and idiopathic hypereosinophilic syndrome. Responds to corticosteroids." },
+    { "type": "Sarcoid myocarditis", "description": "Granulomatous inflammation in the myocardium, occurring in approximately 5-10% of systemic sarcoidosis. Causes AV block, ventricular arrhythmias, and cardiomyopathy. Diagnosed by FDG-PET or cardiac MRI; treated with systemic corticosteroids." }
+  ],
+
+  "primarySymptoms": [
+    "Chest pain ranging from sharp and pleuritic (when pericardium is co-inflamed) to pressure-like central discomfort mimicking acute MI, often appearing 1-2 weeks after a viral illness.",
+    "Shortness of breath at rest or on minimal exertion, reflecting reduced LV systolic function and elevated filling pressures from acute myocardial inflammation.",
+    "Abnormal heartbeat sensations — palpitations, awareness of irregular beats — from ventricular ectopy or ventricular tachycardia arising from inflammatory cardiomyocyte dysfunction.",
+    "Fatigue disproportionate to physical exertion, often the dominant symptom in mild myocarditis without significant LV dysfunction.",
+    "Dizziness, presyncope, or syncope from haemodynamic compromise, AV block, or ventricular arrhythmia — requires urgent evaluation in any patient with myocarditis.",
+    "Fever and flu-like symptoms (myalgia, headache, malaise) reflecting systemic viral infection preceding or accompanying cardiac symptoms.",
+    "Rapidly progressive breathlessness and ankle oedema in fulminant myocarditis as cardiogenic pulmonary oedema develops within days of symptom onset.",
+    "Nausea, vomiting, and abdominal discomfort from reduced cardiac output and hepatic congestion in patients with biventricular involvement.",
+    "Sweating, pallor, and cool peripheries in severe myocarditis with cardiogenic shock — systolic BP below 90 mmHg despite adequate filling is a medical emergency."
+  ],
+
+  "earlyWarningSigns": [
+    "Viral upper respiratory or gastrointestinal illness within the preceding 1-2 weeks followed by new exertional dyspnoea, palpitations, or chest pain — the classic viral-prodrome-to-cardiac-symptom sequence of myocarditis.",
+    "Troponin elevation above the 99th-percentile URL in a young patient under 45 with chest pain and a recent febrile illness but normal coronary arteries on angiography.",
+    "New unexplained sinus tachycardia or first-degree AV block on ECG in a febrile patient with recent respiratory illness.",
+    "New LV wall-motion abnormality in a non-coronary distribution on echocardiography in a patient without coronary artery disease risk factors."
+  ],
+
+  "emergencySigns": [
+    "Syncope or near-syncope with palpitations in a patient with known or suspected myocarditis — ventricular tachycardia or fibrillation causing haemodynamic collapse requires immediate resuscitation.",
+    "Cardiogenic shock: systolic BP below 90 mmHg, cold clammy extremities, decreased urine output, and altered consciousness in fulminant myocarditis — requires IABP, Impella, or ECMO support.",
+    "Complete heart block (absent AV conduction) on ECG with symptomatic bradycardia below 40 bpm — temporary pacing required.",
+    "Acute respiratory failure with oxygen saturation below 90% and bilateral pulmonary infiltrates from cardiogenic pulmonary oedema in myocarditis with severely reduced LVEF."
+  ],
+
+  "causes": [
+    {
+      "cause": "Viral infection (cardiotropic viruses)",
+      "description": "Coxsackievirus B serotypes 1-6 and parvovirus B19 are the most frequently identified causes in endomyocardial biopsy series. Adenovirus, influenza A/B, EBV, CMV, HHV6, and enteroviruses contribute. SARS-CoV-2 causes myocarditis via direct viral infection of cardiomyocytes (ACE2 receptor) and through cytokine-storm-mediated immune injury. Reported incidence of COVID-19-associated myocarditis approximately 1-2 per 1,000 SARS-CoV-2 infections."
+    },
+    {
+      "cause": "Post-mRNA COVID-19 vaccine myocarditis",
+      "description": "Recognised rare adverse event predominantly in young males (16-30 years) after the second mRNA dose. Incidence approximately 2-7 per 100,000 second doses in males aged 16-24 (CDC VAERS, Myocarditis Safety Working Group 2022). Mechanism proposed to involve molecular mimicry or hypersensitivity. Cases are typically mild and self-limiting with complete MRI resolution in 90% by 6-12 months."
+    },
+    {
+      "cause": "Autoimmune and systemic inflammatory disease",
+      "description": "Systemic lupus erythematosus, systemic sclerosis, polymyositis, dermatomyositis, rheumatoid arthritis, and giant cell arteritis can all cause immune-mediated myocarditis. Anti-Ro/La, anti-myosin, and anti-receptor antibodies detected in subsets of patients drive direct antibody-mediated cardiomyocyte injury."
+    },
+    {
+      "cause": "Drug hypersensitivity and toxicity",
+      "description": "Clozapine is the most clinically important drug cause; eosinophilic myocarditis occurs in 0.015-0.18% of patients, necessitating ECG and troponin monitoring in the first 28 days. Immune checkpoint inhibitors (pembrolizumab, nivolumab) used in cancer therapy cause fulminant myocarditis in 0.5-1% of recipients. Amphetamines, anthracyclines, and cocaine also cause myocardial injury."
+    },
+    {
+      "cause": "Bacterial and protozoal infection",
+      "description": "Trypanosoma cruzi (Chagas disease) is the leading cause of infectious myocarditis globally by burden, producing dilated cardiomyopathy in approximately 30% of chronically infected individuals in Latin America. Lyme disease (Borrelia burgdorferi) causes AV block and myocarditis. Diphtheria toxin, meningococcal, and group A streptococcal infections are rare but important causes."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Young male sex", "category": "non-modifiable", "description": "Male individuals aged 16-40 have 2-3 times higher viral myocarditis incidence than females of similar age; sex-hormone differences in immune regulation and cardiomyocyte ACE2 expression are proposed mechanisms." },
+    { "factor": "Recent viral infection", "category": "environmental", "description": "A febrile respiratory or gastrointestinal illness within the preceding 2 weeks is the most common identifiable precipitant; Coxsackie B and parvovirus B19 are the most frequently implicated." },
+    { "factor": "Competitive athletics", "category": "modifiable", "description": "High-intensity exercise during active myocardial inflammation dramatically increases arrhythmia risk; myocarditis accounts for 9-16% of sudden cardiac death in young athletes, often in those who continued training through symptoms." },
+    { "factor": "Immune checkpoint inhibitor therapy", "category": "modifiable", "description": "Anti-PD-1/PD-L1 and anti-CTLA-4 drugs used in melanoma, lung cancer, and other malignancies cause immune-mediated myocarditis in 0.5-1% of recipients; early recognition and high-dose corticosteroids are required." },
+    { "factor": "Clozapine or antipsychotic use", "category": "modifiable", "description": "Clozapine-induced eosinophilic myocarditis is a rare but potentially fatal complication; weekly CRP and troponin monitoring in the first 28 days is recommended in high-prescribing centres." },
+    { "factor": "Living in or visiting Chagas-endemic region", "category": "environmental", "description": "Trypanosoma cruzi infection, transmitted by the triatomine bug in Latin America, infects approximately 6-7 million people and causes the highest global burden of infectious myocarditis and subsequent dilated cardiomyopathy." }
+  ],
+
+  "affectedDemographics": [
+    "Young to middle-aged adults: myocarditis incidence peaks in adults aged 20-40; it is the leading cause of new dilated cardiomyopathy in adults under 50.",
+    "Male individuals: 2-3 times higher incidence in men than women across all age groups for viral myocarditis; vaccine-associated myocarditis affects males aged 16-24 disproportionately.",
+    "Children and infants: neonatal myocarditis from vertical transmission of enterovirus or coxsackievirus carries high mortality; older children develop myocarditis after respiratory viruses and streptococcal infection.",
+    "South American populations: Chagas disease (T. cruzi) affects approximately 6-7 million people in Latin America, predominantly Bolivia, Brazil, and Argentina; chronic Chagasic cardiomyopathy is the dominant cause of heart failure in endemic regions.",
+    "Athletes: the diagnosis must be considered in any young athlete who presents with chest pain, syncope, or exertional palpitations following a viral illness; sudden cardiac death during vigorous exercise is a recognised presentation."
+  ],
+
+  "diagnosisOverview": "Myocarditis is suspected clinically in a young patient with chest pain, dyspnoea, arrhythmia, or new LV dysfunction after a recent viral illness, or in any patient with suspected MI and normal coronary arteries. The ESC 2013 position statement defines clinically suspected myocarditis by the combination of clinical presentation plus at least one of: new ECG/Holter abnormalities, elevated troponin, new impairment of ventricular function on imaging, or cardiac MRI tissue characterisation. The 12-lead ECG shows a range of changes: diffuse ST elevation (when pericardium is co-involved), ST depression, T-wave inversions, new bundle branch block, QRS widening, or ventricular arrhythmias. Echocardiography identifies LV dysfunction, wall-motion abnormality, and pericardial effusion. Cardiac MRI with Lake Louise Criteria 2018 (Ferreira et al.) is the non-invasive gold standard: two independent tissue markers (either T1 mapping or T2 mapping plus LGE in a non-ischaemic distribution, or wall-motion abnormality as a functional criterion) confirm the diagnosis with sensitivity 88% and specificity 96%. LGE in myocarditis typically involves the sub-epicardial or midwall layers in a non-coronary-territory distribution — distinct from the sub-endocardial LGE of ischaemic disease. Endomyocardial biopsy (EMB) remains the gold standard histological diagnosis by Dallas criteria but sensitivity is only 50-60% due to sampling error; it is reserved for haemodynamically unstable, deteriorating, or refractory cases where specific diagnosis will change management (giant cell myocarditis, eosinophilic myocarditis, cardiac sarcoidosis). Viral PCR on biopsy specimens improves yield. Coronary angiography is performed in patients over 35 or with high coronary risk to exclude obstructive CAD as the cause of LV dysfunction.",
+
+  "diagnosticTests": [
+    { "test": "12-lead ECG and Holter monitoring", "purpose": "Identifies ST changes, T-wave abnormalities, AV block, bundle branch block, and ventricular arrhythmias; Holter detects non-sustained VT in ambulatory patients", "whatToExpect": "Resting ECG takes 1 minute. Holter is a wearable ECG recorder for 24-72 hours at home. Results reviewed by a cardiologist. All patients with suspected myocarditis should have both performed." },
+    { "test": "High-sensitivity cardiac troponin (hs-cTn)", "purpose": "Confirms myocardial cell injury; magnitude of rise correlates roughly with extent of inflammation but not with severity of LV dysfunction", "whatToExpect": "Blood draw at 0 and 3 hours. Results in 30-60 minutes. Troponin is elevated in approximately 50-70% of acute myocarditis presentations. Normal troponin does not exclude myocarditis." },
+    { "test": "Transthoracic echocardiography", "purpose": "Measures LVEF, detects wall-motion abnormality, pericardial effusion, and assesses right ventricular function; guides severity classification", "whatToExpect": "Painless 30-minute ultrasound scan. Performed urgently when myocarditis is suspected. LVEF below 50% classifies significant LV dysfunction requiring intensive monitoring." },
+    { "test": "Cardiac MRI with Lake Louise Criteria (T1, T2, LGE)", "purpose": "Non-invasive gold standard for myocarditis diagnosis; characterises tissue inflammation, oedema, and fibrosis; guides return-to-sport decisions", "whatToExpect": "45-75 minutes in the MRI bore. IV gadolinium contrast injected via cannula. No claustrophobia or metallic implant contraindications. LGE in sub-epicardial or midwall distribution confirms myocarditis. Results in 24-48 hours." },
+    { "test": "Coronary angiography or CT coronary angiography", "purpose": "Excludes obstructive coronary artery disease as the cause of troponin rise and LV dysfunction, particularly in patients over 35", "whatToExpect": "Invasive angiography: radial artery access under local anaesthesia, 30-60 minutes. CT angiography: IV contrast, 5-10 minutes. Normal coronaries in the setting of LV dysfunction in a young patient strongly supports myocarditis." },
+    { "test": "Endomyocardial biopsy (EMB)", "purpose": "Histological gold standard by Dallas criteria; confirms giant cell, eosinophilic, or sarcoid myocarditis when specific aetiology will change management", "whatToExpect": "Catheter inserted via internal jugular or femoral vein under local anaesthesia; small samples taken from the right ventricular septum. Procedure 30-45 minutes. Serious complication rate under 0.5% in experienced centres. Results within 5-7 days." }
+  ],
+
+  "treatmentOverview": "There is no established disease-specific antiviral therapy for most viral myocarditis; management is supportive and guideline-directed heart failure therapy for those with LV dysfunction. The 2013 ESC position statement and 2022 ESC heart failure guidelines guide management. Patients with haemodynamically stable myocarditis are treated with standard heart failure therapy when LVEF is below 50%: ACE inhibitors or ARBs, beta-blockers (started at low dose once haemodynamically stable), and mineralocorticoid receptor antagonists for LVEF ≤35% with fluid retention. SGLT2 inhibitors (empagliflozin, dapagliflozin) have established mortality benefits in HFrEF and are now first-line in this context. Diuretics provide symptomatic relief from congestion. Physical activity restriction is mandatory — at least 3-6 months from symptom onset and full cardiac MRI resolution (Lake Louise remission criteria) before athletes return to competitive sport. Ventricular arrhythmia suppression with amiodarone or lidocaine is used acutely; ICDs are implanted if LVEF remains below 35% after 3 months of optimal therapy. For haemodynamically compromised fulminant myocarditis, mechanical circulatory support with IABP, Impella, or venoarterial ECMO bridges the patient until myocardial recovery. Giant cell myocarditis requires urgent immunosuppression (prednisolone plus cyclosporin plus azathioprine), reduced mortality from 5.5 to approximately 12 months median survival in the GCM registry. Immune checkpoint inhibitor myocarditis is treated with high-dose methylprednisolone (1-2 g/day) and abrupt checkpoint inhibitor discontinuation. Cardiac transplantation is the option of last resort for end-stage myocarditis-related dilated cardiomyopathy.",
+
+  "medicalTreatments": [
+    { "name": "ACE inhibitor (ramipril 2.5-10 mg daily) or ARB (candesartan 4-32 mg daily)", "description": "Reduces cardiac afterload and prevents LV remodelling in myocarditis with reduced EF. Started at low dose when haemodynamically stable and uptitrated weekly. Mandatory when LVEF ≤40%.", "effectiveness": "Reduces mortality and hospitalisation by 20-26% in HFrEF across multiple landmark trials (SOLVD, CONSENSUS); presumed equivalent benefit in myocarditis-related HFrEF" },
+    { "name": "Beta-blocker (carvedilol 3.125-25 mg twice daily or bisoprolol 2.5-10 mg daily)", "description": "Reduces sympathetic activation, heart rate, and arrhythmia risk in myocarditis. Not initiated during acute haemodynamic instability. Uptitrated to maximum tolerated dose over 4-8 weeks.", "effectiveness": "MERIT-HF, COPERNICUS, CIBIS-II trials collectively show 34-35% relative risk reduction in mortality in HFrEF; comparable benefit expected in myocarditis-related LV dysfunction" },
+    { "name": "SGLT2 inhibitor (empagliflozin 10 mg daily or dapagliflozin 10 mg daily)", "description": "Novel heart failure therapy with diuretic and cardioprotective properties. Reduces cardiovascular death and HF hospitalisation when added to standard therapy. Now included in all four quadrants of HFrEF treatment per 2022 ESC HF guidelines.", "effectiveness": "EMPEROR-Reduced (empagliflozin): 25% reduction in combined CV death/HF hospitalisation vs placebo (PMID 32865377); DAPA-HF (dapagliflozin): 26% reduction (PMID 31535829)" },
+    { "name": "Loop diuretic (furosemide 20-80 mg daily, titrated to fluid balance)", "description": "Reduces pulmonary and peripheral congestion in myocarditis with acute HF. Dosed to achieve euvolaemia (dry weight). Potassium replacement required to prevent hypokalaemia.", "effectiveness": "Symptomatic benefit within 24-48 hours of IV administration in acute decompensation; no mortality benefit shown in RCTs but essential for symptom management" },
+    { "name": "Immunosuppression (prednisolone 1 mg/kg/day + azathioprine 2 mg/kg/day) for giant cell or autoimmune myocarditis", "description": "Giant cell myocarditis requires urgent combined immunosuppression. Autoimmune myocarditis (anti-heart antibody positive) with persistent LV dysfunction may benefit from prednisolone plus azathioprine per TIMIC trial (PMID 19467195).", "effectiveness": "GCM Registry: immunosuppression increased median transplant-free survival from 3 to 12.3 months; TIMIC trial: biopsy-proven autoimmune myocarditis treated with prednisolone + azathioprine vs placebo showed significantly better LVEF recovery at 6 months" },
+    { "name": "Amiodarone (200-400 mg daily maintenance after loading) for ventricular arrhythmia", "description": "Used for sustained ventricular tachycardia or ventricular fibrillation complicating acute myocarditis. IV loading in haemodynamically compromised patients; oral maintenance for arrhythmia suppression pending device evaluation.", "effectiveness": "Suppresses ventricular arrhythmia in 60-80% of acute VT episodes; ICD implantation required if LVEF remains ≤35% at 3 months despite optimal therapy" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Mechanical circulatory support (IABP, Impella, VA-ECMO)", "description": "Intraaortic balloon pump (IABP), percutaneous LVAD (Impella), or venoarterial extracorporeal membrane oxygenation (VA-ECMO) provides haemodynamic support during fulminant myocarditis until myocardial recovery or bridge to transplantation. ECMO provides the highest level of biventricular support.", "successRate": "Fulminant myocarditis with ECMO bridge: 50-60% survival to hospital discharge; spontaneous myocardial recovery in approximately 60-70% of fulminant myocarditis if haemodynamics are supported effectively" },
+    { "name": "Cardiac transplantation", "description": "Last resort for end-stage myocarditis-related dilated cardiomyopathy unresponsive to guideline-directed medical therapy and mechanical support. Giant cell myocarditis may recur in the transplanted heart; concurrent immunosuppression reduces recurrence.", "successRate": "5-year post-transplant survival approximately 70-75% for myocarditis-related cardiomyopathy; GCM recurrence in transplanted heart in approximately 20-25% of cases" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Physical activity restriction and cardiac rehabilitation", "description": "Mandatory rest from competitive sport for at least 3-6 months from symptom onset with return only after full clinical recovery confirmed by cardiac MRI (resolution of oedema and LGE on Lake Louise remission criteria) per AHA/ACC 2015 competitive sports recommendations and ESC 2020 guidelines. Cardiac rehabilitation with supervised graduated exercise may begin 3-6 months after recovery." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "heart-failure-management",
+    "cardiac-rehabilitation",
+    "extracorporeal-membrane-oxygenation"
+  ],
+
+  "whySeeSpecialist": "All patients with suspected myocarditis require urgent cardiac evaluation because ventricular arrhythmia and haemodynamic collapse can develop rapidly. A cardiologist experienced in cardiac imaging should supervise the cardiac MRI, interpret troponin trends, and oversee the decision about endomyocardial biopsy in fulminant or atypical presentations.",
+  "doctorSelectionGuide": "Choose a cardiologist at a centre with on-site cardiac MRI capability, heart failure expertise, and access to mechanical circulatory support (Impella, VA-ECMO) for fulminant cases. For giant cell myocarditis, cardiology centres with active cardiac transplant programmes and experience with combined immunosuppression provide the best outcomes.",
+
+  "hospitalCriteria": [
+    "24/7 echocardiography and ECG monitoring for all suspected myocarditis cases",
+    "Cardiac MRI capability within 24-72 hours for non-emergent cases",
+    "Mechanical circulatory support capacity (IABP, Impella, VA-ECMO) for fulminant myocarditis",
+    "Cardiac intensive care unit for haemodynamically unstable presentations",
+    "Endomyocardial biopsy capability with experienced cardiac pathology laboratory"
+  ],
+  "keyFacilities": [
+    "Tertiary cardiac centres with cardiac MRI and cardiac intensive care",
+    "Cardiac transplant centres for refractory or end-stage myocarditis-related cardiomyopathy",
+    "Electrophysiology services for ICD implantation and arrhythmia management",
+    "Heart failure clinics for long-term surveillance post-myocarditis"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid vigorous exercise during and for at least 1-2 weeks after any febrile viral illness — exercise during active myocarditis amplifies inflammatory injury and is associated with sudden death.",
+    "Adhere to recommended vaccination schedules including annual influenza vaccine, which reduces influenza-associated myocarditis risk.",
+    "Report symptoms of chest pain, palpitations, or dyspnoea that begin within 1-2 weeks of a viral illness to a physician rather than dismissing them as viral fatigue.",
+    "For athletes returning after myocarditis, follow specialist clearance protocol with cardiac MRI before resuming competitive sport.",
+    "For patients on immune checkpoint inhibitor cancer therapy, baseline ECG and troponin before each cycle; report new dyspnoea or palpitations immediately."
+  ],
+
+  "lifestyleModifications": [
+    "Strict physical activity restriction until full clinical and cardiac MRI recovery is confirmed; premature return to sport is the primary preventable cause of sudden death in myocarditis.",
+    "Adhere to all prescribed heart failure medications without interruption; do not stop beta-blockers abruptly.",
+    "Monitor weight and fluid balance daily; weight gain above 2 kg in 48 hours indicates fluid retention requiring urgent medical review.",
+    "Limit alcohol consumption; alcohol is directly cardiotoxic and worsens LV dysfunction.",
+    "Participate in cardiac rehabilitation when cleared, typically 3-6 months post-myocarditis, under supervised exercise training.",
+    "Attend all follow-up appointments including repeat echocardiography and cardiac MRI at 3, 6, and 12 months after discharge."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Low-sodium diet (below 2 g per day) to reduce fluid retention and preload when LV function is impaired",
+      "Protein-adequate diet (1-1.2 g/kg/day) to support myocardial recovery during convalescence",
+      "Mediterranean dietary pattern to reduce cardiovascular inflammation and secondary cardiovascular events",
+      "Adequate potassium from fresh fruits and vegetables when taking loop diuretics"
+    ],
+    "avoid": [
+      "Alcohol — directly cardiotoxic at any dose when myocardial function is impaired",
+      "High-sodium processed foods that worsen fluid retention in heart failure",
+      "Excessive caffeine which may trigger cardiac ectopy in the context of myocardial irritability",
+      "Ergogenic supplements and anabolic steroids which may promote cardiac remodelling and arrhythmia"
+    ]
+  },
+  "exerciseGuidelines": "Complete rest from all competitive and vigorous recreational activity until confirmed full recovery on cardiac MRI (normal T2, no active LGE in 6-month imaging). Non-competitive low-intensity walking may begin at 4-8 weeks if symptoms resolve and LVEF normalises. Athletes must demonstrate normal LVEF, no complex arrhythmias on Holter, and normalised cardiac MRI biomarkers before return to sport (AHA/ACC 2015, ESC 2020 criteria). Supervised cardiac rehabilitation exercise begins at approximately 3-6 months post-myocarditis under cardiologist guidance.",
+
+  "dailyManagement": [
+    "Take all heart failure medications at consistent times; report any side-effects (dry cough from ACE inhibitor, weight gain, reduced exercise tolerance) to the care team.",
+    "Weigh daily at the same time; report increases of more than 2 kg in 48 hours to clinician — may indicate developing fluid retention requiring diuretic adjustment.",
+    "Monitor heart rate and blood pressure weekly in the first 3 months; maintain resting HR 55-65 bpm on beta-blocker.",
+    "Keep a symptom diary recording any palpitations, pre-syncope, or chest pain — these may indicate arrhythmia requiring urgent review.",
+    "Attend ECG and echocardiography appointments at 4-6 weeks, 3 months, and 6 months post-diagnosis.",
+    "Inform any new treating physician that you have had myocarditis, as certain drugs (NSAIDs, decongestants, stimulants) may worsen heart failure or trigger arrhythmia."
+  ],
+
+  "prognosis": "The majority of acute viral or idiopathic myocarditis cases resolve with full cardiac function recovery. Approximately 80-90% of patients with mild disease and preserved LVEF recover completely within weeks to months. Among patients presenting with LV dysfunction, LVEF normalises in approximately 50-80% within 6-12 months on guideline-directed heart failure therapy. Fulminant myocarditis — despite the severity of presentation — has the best long-term prognosis: McCarthy et al. (NEJM 2000) reported 93% transplant-free survival at 11 years versus 45% for non-fulminant acute myocarditis. Approximately 10-15% of viral myocarditis progresses to dilated cardiomyopathy. Giant cell myocarditis without immunosuppression carries a median transplant-free survival of 5.5 months; with immunosuppression this extends to approximately 12 months, with cardiac transplantation offering long-term survival. Myocarditis accounts for 9-16% of sudden cardiac death in young adults, primarily in those who continue exercise during active inflammation. ICD implantation reduces SCD risk when LVEF remains below 35% at 3-6 months.",
+
+  "recoveryTimeline": "Mild myocarditis with preserved LVEF: symptom improvement within 2-4 weeks; cardiac MRI remission at 3-6 months; return to sport at 3-6 months after MRI confirmation. Moderate myocarditis with reduced EF: LVEF recovery in 50-80% by 6-12 months; heart failure therapy continues for at least 24 months even after LVEF normalisation. Fulminant myocarditis with MCS: haemodynamic stabilisation within days to weeks; long-term cardiac function recovery in 60-70% who survive the acute phase.",
+
+  "complications": [
+    "Dilated cardiomyopathy: occurs in approximately 10-15% of acute viral myocarditis cases as persistent inflammation leads to myocardial fibrosis and irreversible LV dilation; the leading treatable cause of DCM in adults under 50.",
+    "Ventricular arrhythmia and sudden cardiac death: ventricular tachycardia and fibrillation from ischaemic cardiomyocyte injury; risk highest during acute phase and in those who exercise during active inflammation.",
+    "Heart block: AV block (first, second, or third degree) from inflammation at the atrioventricular node, requiring temporary or permanent pacing in approximately 5-10% of cases.",
+    "Cardiogenic shock: develops in fulminant myocarditis with severe LV dysfunction; 30-day mortality approximately 30-50% without mechanical circulatory support.",
+    "Thromboembolic events: LV mural thrombus in severely dilated cardiomyopathy increases stroke risk; anticoagulation with vitamin K antagonist or DOAC recommended when LVEF ≤30% with thrombus evidence.",
+    "Recurrence: viral myocarditis can recur with subsequent viral infections, each episode potentially leaving additional myocardial fibrosis and reducing recovery capacity."
+  ],
+
+  "supportResources": [
+    { "name": "Myocarditis Foundation", "url": "https://www.myocarditisfoundation.org/", "description": "Patient community, medical advisory board, and educational resources on myocarditis diagnosis, treatment, and return-to-activity guidance." },
+    { "name": "American Heart Association — Myocarditis", "url": "https://www.heart.org/en/health-topics/heart-attack/warning-signs-of-a-heart-attack/myocarditis", "description": "AHA patient guide on myocarditis symptoms, diagnosis, and recovery." },
+    { "name": "British Heart Foundation — Myocarditis", "url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/medical/ask-the-experts/myocarditis", "description": "BHF patient-facing explanations of myocarditis, treatment options, and return-to-sport guidance." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "acute-myocardial-infarction-unspecified-i219", "name": "Acute Myocardial Infarction", "keyDifference": "MI from coronary artery disease produces focal ST elevation in a coronary territory, sub-endocardial LGE on cardiac MRI, and obstructive coronary disease on angiography. Myocarditis in young patients presents after a viral illness with non-coronary ST changes, sub-epicardial or midwall LGE, and normal or non-obstructive coronary arteries." },
+    { "slug": "acute-pericarditis-unspecified-i309", "name": "Acute Pericarditis", "keyDifference": "Pericarditis causes sharp pleuritic pain worsened by inspiration with a pericardial friction rub and diffuse saddle-shaped ST elevation. Myocarditis is distinguished by higher troponin elevation, significant LV dysfunction, ventricular arrhythmias, and LGE pattern on cardiac MRI involving the myocardium rather than pericardium alone." },
+    { "slug": "alcoholic-cardiomyopathy-i426", "name": "Alcoholic Cardiomyopathy", "keyDifference": "Alcoholic cardiomyopathy from chronic heavy alcohol use causes dilated cardiomyopathy indistinguishable from viral myocarditis on echo alone; cardiac MRI may show midwall fibrosis. History of prolonged excessive alcohol intake (>80 g/day for >5 years) and absence of acute viral prodrome favour alcoholic aetiology." },
+    { "slug": "systemic-lupus-erythematosus", "name": "Systemic Lupus Erythematosus", "keyDifference": "SLE can cause immune-complex-mediated myocarditis or Libman-Sacks endocarditis alongside pericarditis. Lupus myocarditis is suggested by elevated anti-dsDNA antibodies, complement consumption, and multi-system involvement; it requires steroid therapy rather than standard antiviral supportive management." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "acute-pericarditis-unspecified-i309", "name": "Acute Pericarditis" },
+    { "slug": "heart-failure", "name": "Heart Failure" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "acute-pericarditis-unspecified-i309", "name": "Acute Pericarditis", "relevance": "Myo-pericarditis involves simultaneous inflammation of both the myocardium and pericardium, presenting with features of both conditions on cardiac MRI." },
+    { "slug": "heart-failure", "name": "Heart Failure", "relevance": "Dilated cardiomyopathy from unresolved myocarditis is the most common cause of new-onset heart failure in adults under 50." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "relevance": "Atrial inflammation in myocarditis triggers AF in approximately 15-20% of cases; AF worsens haemodynamics when LV function is already impaired." },
+    { "slug": "systemic-lupus-erythematosus", "name": "Systemic Lupus Erythematosus", "relevance": "SLE-associated myocarditis is a recognised form of autoimmune myocarditis requiring both standard heart failure therapy and disease-specific immunosuppression." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What are the symptoms of acute myocarditis?",
+      "answer": "Symptoms include chest pain (sharp or pressure-like), shortness of breath, palpitations, fatigue, dizziness, and fever. They usually start within 1-2 weeks of a viral illness. Severe cases present with rapid-onset breathlessness at rest, rapid heart rate, and low blood pressure indicating heart failure or cardiogenic shock.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is myocarditis diagnosed?",
+      "answer": "Myocarditis is diagnosed by troponin blood test, ECG, echocardiography, and cardiac MRI. Cardiac MRI using Lake Louise Criteria (T2 mapping for oedema and late gadolinium enhancement for fibrosis) is the non-invasive gold standard with sensitivity over 88%. Endomyocardial biopsy confirms diagnosis histologically in complex or refractory cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes myocarditis?",
+      "answer": "Most cases in developed countries result from viral infections — Coxsackievirus B, parvovirus B19, adenovirus, influenza, and SARS-CoV-2. Other causes include autoimmune diseases, drug hypersensitivity (clozapine, immune checkpoint inhibitors), and Trypanosoma cruzi infection (Chagas disease) in Latin America.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can myocarditis be cured?",
+      "answer": "Most acute viral myocarditis resolves fully with supportive care; approximately 80-90% of patients with preserved LV function recover completely within weeks to months. About 10-15% develop dilated cardiomyopathy requiring long-term heart failure therapy. Giant cell myocarditis requires urgent immunosuppression and often cardiac transplantation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does myocarditis last?",
+      "answer": "Mild myocarditis with preserved ejection fraction typically resolves within 4-12 weeks. Those with reduced LV function recover in 50-80% of cases by 6-12 months on guideline-directed heart failure therapy. Cardiac MRI remission (resolution of inflammation markers) typically lags behind clinical recovery by several months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can athletes exercise with myocarditis?",
+      "answer": "No. Exercise during active myocarditis amplifies inflammation and is associated with sudden cardiac death. Athletes must rest for at least 3-6 months and demonstrate full cardiac MRI recovery before returning to competitive sport. All exercise except gentle walking is contraindicated during active disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can myocarditis cause sudden death?",
+      "answer": "Yes. Myocarditis accounts for approximately 9-16% of sudden cardiac death in young adults under 35 and is a leading cause in athletes. Death results from ventricular fibrillation triggered by inflamed cardiomyocytes. Risk is highest when vigorous exercise occurs during active inflammation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is COVID-19 vaccine myocarditis serious?",
+      "answer": "mRNA COVID-19 vaccine-associated myocarditis is predominantly mild and self-limiting, occurring most often in males aged 16-24 after the second dose. About 90% of cases resolve on cardiac MRI by 6-12 months. Hospitalisation is brief; most patients require only NSAIDs and rest. The risk of myocarditis from COVID-19 infection itself is higher than from vaccination.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between myocarditis and pericarditis?",
+      "answer": "Myocarditis inflames the heart muscle, causing troponin rise, LV dysfunction, and ventricular arrhythmias. Pericarditis inflames the pericardial sac, causing sharp pleuritic chest pain with diffuse ECG changes but typically preserved LV function. Myo-pericarditis involves both simultaneously and is confirmed by cardiac MRI.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is fulminant myocarditis?",
+      "answer": "Fulminant myocarditis presents within 2-4 weeks of viral illness with severe haemodynamic compromise: low blood pressure, poor organ perfusion, and severely reduced LV ejection fraction requiring mechanical circulatory support. Despite its dramatic presentation, fulminant myocarditis has a paradoxically better long-term prognosis than non-fulminant disease, with 93% transplant-free survival at 11 years in one cohort.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does myocarditis show on ECG?",
+      "answer": "Myocarditis can produce a range of ECG changes: diffuse ST elevation (when pericardium is co-involved), widespread T-wave inversions, new bundle branch block, PR prolongation, or ventricular arrhythmias. About 50% have ECG abnormalities at presentation; normal ECG does not exclude myocarditis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What blood tests detect myocarditis?",
+      "answer": "High-sensitivity cardiac troponin (hs-cTnI or hs-cTnT) is the primary blood test, elevated in approximately 50-70% of acute myocarditis cases. CRP and ESR confirm systemic inflammation. CK-MB is less specific. Anti-heart antibody panels may identify autoimmune aetiology. Viral serologies are low-yield and not routinely recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can myocarditis cause heart failure?",
+      "answer": "Yes. Approximately 10-15% of acute myocarditis cases progress to dilated cardiomyopathy with chronic heart failure. This is the most common cause of dilated cardiomyopathy and heart failure with reduced ejection fraction in adults under 50. Guideline-directed heart failure therapy (ACE inhibitor, beta-blocker, SGLT2 inhibitor) improves outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is giant cell myocarditis treated?",
+      "answer": "Giant cell myocarditis requires urgent immunosuppression with combined prednisolone, cyclosporin, and azathioprine. This is the most aggressive form of inflammatory myocarditis; median transplant-free survival without treatment is 5.5 months. Cardiac transplantation is offered when the condition progresses despite maximal immunosuppression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When can I return to sport after myocarditis?",
+      "answer": "Return to competitive sport requires full clinical recovery: normal LVEF, no symptoms, no complex arrhythmias on Holter monitoring, and confirmed resolution of inflammation on cardiac MRI (normal T2, resolved LGE). Minimum 3-6 months from symptom onset. A cardiologist must confirm clearance before resuming competitive training.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Myocarditis (inflamed heart muscle)",
+  "regionalNames": [
+    { "name": "Myocardite aiguë", "region": "France", "language": "French" },
+    { "name": "Miocarditis aguda", "region": "Spain / Latin America", "language": "Spanish" },
+    { "name": "Hriday-ki paishii sujan", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "myocarditis",
+    "acute myocarditis",
+    "myocarditis symptoms",
+    "viral myocarditis",
+    "myocarditis treatment",
+    "cardiac MRI myocarditis",
+    "myocarditis athletes",
+    "COVID myocarditis",
+    "vaccine myocarditis",
+    "fulminant myocarditis",
+    "myocarditis vs heart attack",
+    "giant cell myocarditis",
+    "myocarditis recovery",
+    "troponin myocarditis",
+    "heart inflammation"
+  ],
+  "symptomKeywords": [
+    "chest pain after viral illness",
+    "heart racing after flu",
+    "breathlessness after cold",
+    "palpitations after COVID",
+    "chest pain young athlete",
+    "troponin elevated young person",
+    "fatigue after viral illness heart"
+  ],
+
+  "metaTitle": "Acute Myocarditis: Symptoms & Treatment | aihealz",
+  "metaDescription": "Acute myocarditis: viral heart muscle inflammation causing chest pain and LV dysfunction. Cardiac MRI diagnosis and heart failure management reviewed.",
+
+  "keywords": [
+    "acute myocarditis",
+    "myocarditis symptoms",
+    "myocarditis treatment",
+    "viral myocarditis",
+    "myocarditis cardiac MRI",
+    "myocarditis vs heart attack",
+    "fulminant myocarditis",
+    "giant cell myocarditis",
+    "myocarditis athletes",
+    "myocarditis recovery",
+    "COVID myocarditis",
+    "myocarditis heart failure"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Caforio AL, Pankuweit S, Arbustini E, et al. 2013. Current state of knowledge on aetiology, diagnosis, management, and therapy of myocarditis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases. Eur Heart J 34(33):2636-48.", "url": "https://pubmed.ncbi.nlm.nih.gov/23824828/", "accessedDate": "2026-05-14" },
+    { "title": "Ferreira VM, Schulz-Menger J, Holmvang G, et al. 2018. Cardiovascular magnetic resonance in nonischemic myocardial inflammation: expert recommendations (Lake Louise Criteria Update). J Am Coll Cardiol 72(24):3158-3176.", "url": "https://pubmed.ncbi.nlm.nih.gov/30017317/", "accessedDate": "2026-05-14" },
+    { "title": "McCarthy RE 3rd, Boehmer JP, Hruban RH, et al. 2000. Long-term outcome of fulminant myocarditis as compared with acute (nonfulminant) myocarditis. N Engl J Med 342(10):690-5.", "url": "https://pubmed.ncbi.nlm.nih.gov/10706898/", "accessedDate": "2026-05-14" },
+    { "title": "Cooper LT, Berry GJ, Shabetai R. 1997. Idiopathic giant-cell myocarditis — natural history and treatment (Multicenter Giant Cell Myocarditis Study Group). N Engl J Med 336(26):1860-6.", "url": "https://pubmed.ncbi.nlm.nih.gov/9197214/", "accessedDate": "2026-05-14" },
+    { "title": "Ammirati E, Veronese G, Cipriani M, et al. 2019. Acute and fulminant myocarditis: a pragmatic clinical approach to diagnosis and treatment. Curr Cardiol Rep 21(11):129.", "url": "https://pubmed.ncbi.nlm.nih.gov/31696374/", "accessedDate": "2026-05-14" },
+    { "title": "Puntmann VO, Carerj ML, Wieters I, et al. 2020. Outcomes of cardiovascular magnetic resonance imaging in patients recently recovered from COVID-19. JAMA Cardiol 5(11):1265-1273.", "url": "https://pubmed.ncbi.nlm.nih.gov/32730619/", "accessedDate": "2026-05-14" },
+    { "title": "McDonagh TA, Metra M, Adamo M, et al. 2021. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J 42(36):3599-3726.", "url": "https://pubmed.ncbi.nlm.nih.gov/34447992/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

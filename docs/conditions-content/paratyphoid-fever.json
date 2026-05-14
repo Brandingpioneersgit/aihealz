@@ -1,0 +1,572 @@
+{
+  "_meta": {
+    "slug": "paratyphoid-fever",
+    "tier": 1,
+    "headTerm": "paratyphoid fever",
+    "longTailKeywords": [
+      "paratyphoid fever symptoms",
+      "paratyphoid vs typhoid",
+      "paratyphoid treatment",
+      "salmonella paratyphi",
+      "paratyphoid in travelers",
+      "azithromycin paratyphoid",
+      "ceftriaxone enteric fever",
+      "paratyphoid vaccine",
+      "paratyphoid diagnosis",
+      "paratyphoid prevention"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against Crump JA NEJM 2015 (enteric fever review), Antillón M PLoS NTD 2017 (global burden), WHO Typhoid Position Paper 2018, Effa EE Cochrane azithromycin review, and CDC Yellow Book 2024. Paratyphoid A is the predominant serotype in South Asia, while paratyphoid B is more common in Europe and the Americas — addressed in epidemiology and classification."
+  },
+  "h1Title": "Paratyphoid Fever: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+  "heroOverview": "Paratyphoid fever is a systemic febrile illness caused by Salmonella enterica serovars Paratyphi A, B, and C — clinically similar to typhoid fever but generally milder and increasingly common across South Asia. Together with typhoid fever, it is called enteric fever. Global estimates from Antillón and colleagues (2017) put paratyphoid incidence at 5.4 million cases annually, with 19,100 deaths. Paratyphi A is the dominant cause in South Asia (responsible for over 30% of enteric fever in some Karachi and Kathmandu cohorts), while Paratyphi B and C are sporadic in Europe and the Americas. Symptoms develop 6-30 days after fecally-contaminated food or water exposure, with sustained fever, malaise, abdominal pain, and relative bradycardia. Antibiotic resistance — particularly to fluoroquinolones — has shifted first-line therapy in most settings to azithromycin or ceftriaxone.",
+  "keyStats": {
+    "prevalence": "Approximately 5.4 million cases globally per year; 19,100 deaths (Antillón 2017 PLoS NTD)",
+    "demographics": "Highest burden in South and Southeast Asia, particularly Pakistan, Nepal, India, Bangladesh; emerging issue in sub-Saharan Africa",
+    "avgAge": "Most cases in children and young adults aged 5-25; mean age younger in highly endemic regions and older in returned travelers",
+    "globalCases": "5.4 million paratyphoid cases per year (~25% of total enteric fever burden)"
+  },
+  "definition": "Paratyphoid fever (ICD-10: A01.1-A01.4) is enteric fever caused by Salmonella enterica subspecies enterica serovars Paratyphi A, Paratyphi B, or Paratyphi C — three closely related Gram-negative bacilli that are restricted to humans and produce a clinical syndrome similar to typhoid fever. After ingestion of contaminated food or water, the bacteria survive gastric acid, invade the small intestinal mucosa through M cells over Peyer's patches, are taken up by macrophages where they survive and replicate, and disseminate through the lymphatic system and bloodstream. The bacteria preferentially seed the liver, spleen, bone marrow, and gallbladder, producing the characteristic prolonged bacteremia that defines enteric fever. Clinical features include 5-30 day incubation, then stepwise rising fever to 39-40°C over the first week, relative bradycardia (Faget sign), abdominal pain (often right lower quadrant), constipation more often than diarrhea in adults (the reverse in children), hepatosplenomegaly, and occasionally the salmon-colored 'rose spot' rash on the trunk. Paratyphoid is generally milder than typhoid, with shorter duration, lower mortality, and fewer complications, though the clinical syndromes overlap substantially and cannot be reliably distinguished without microbiology. The disease is managed by infectious disease specialists, primary care clinicians, and tropical medicine teams. Public health reporting is mandatory in most countries because each case can seed outbreaks through fecal-oral transmission, particularly during convalescent shedding.",
+  "typesClassification": [
+    {
+      "type": "Paratyphoid A (Salmonella Paratyphi A)",
+      "description": "The dominant cause of paratyphoid in South Asia, responsible for over 30% of enteric fever in Karachi, Dhaka, and Kathmandu cohorts. Increasingly fluoroquinolone-resistant. Clinically indistinguishable from typhoid; recovery is usually within 2-4 weeks."
+    },
+    {
+      "type": "Paratyphoid B (Salmonella Paratyphi B)",
+      "description": "More common than Paratyphi A in Europe, the Middle East, and Latin America. Generally milder course, with fewer complications. Two biotypes exist: typhoidal (causing classic enteric fever) and non-typhoidal (Java variant, causing gastroenteritis)."
+    },
+    {
+      "type": "Paratyphoid C (Salmonella Paratyphi C)",
+      "description": "Rare globally; sporadic cases in parts of Asia, Africa, and Eastern Europe. Can cause severe disease with high case-fatality, particularly bacteremia and osteomyelitis. Often presents with extra-intestinal foci."
+    },
+    {
+      "type": "Chronic carrier state",
+      "description": "Approximately 1-5% of paratyphoid patients develop chronic biliary carriage, shedding bacteria in stool for over 12 months. Gallbladder stones predispose to carriage. Carriers are infectious without symptoms and have been responsible for documented outbreaks (the Mary Mallon archetype was typhoid, but the carrier biology is identical for paratyphoid)."
+    }
+  ],
+  "primarySymptoms": [
+    "Stepwise rising fever to 39-40°C over the first week, reaching a sustained plateau in week two — the hallmark of enteric fever as opposed to abrupt-onset bacterial enterocolitis.",
+    "Profound malaise, fatigue, headache, and anorexia accompanying the fever — patients describe weakness disproportionate to a typical viral illness.",
+    "Abdominal pain often localized to the right lower quadrant and exacerbated by palpation; constipation more common in adults, diarrhea more common in children (Crump 2015).",
+    "Relative bradycardia for the degree of fever (Faget sign) — pulse rate lower than expected for the temperature, a classical though imperfect clinical clue.",
+    "Hepatosplenomegaly developing in the second week of illness in 30-50% of cases, contributing to abdominal discomfort.",
+    "Salmon-colored maculopapular 'rose spot' rash on the trunk in 5-30% of paratyphoid patients, transient and easily missed.",
+    "Dry cough, particularly in the first week, and sometimes pharyngitis — a non-specific finding that can lead to initial misdiagnosis as viral upper respiratory infection.",
+    "Mental status change (apathy, confusion, 'typhoid stare') in the second week of more severe untreated disease — historically called 'typhoid state'.",
+    "Symptoms often build gradually over a week rather than appearing suddenly, distinguishing enteric fever from acute bacterial gastroenteritis.",
+    "Recovery, when treated, with defervescence within 3-5 days; without treatment, the illness lasts 3-4 weeks and may follow a relapsing course in approximately 10% of cases."
+  ],
+  "earlyWarningSigns": [
+    "Sustained or stepwise rising fever after travel to South Asia, sub-Saharan Africa, or Latin America in the prior 30 days",
+    "Persistent fever for over a week with malaise, abdominal pain, and headache in a returned traveler",
+    "Fever with relative bradycardia or hepatosplenomegaly — physical signs suggesting enteric fever rather than common infections",
+    "Failure of empirical antibiotics targeting common bacterial infections in a febrile traveler",
+    "Asymptomatic stool shedding of Salmonella Paratyphi in a household contact of a confirmed case"
+  ],
+  "emergencySigns": [
+    "Sudden severe abdominal pain with peritoneal signs in the third or fourth week of illness — intestinal perforation requiring emergency laparotomy",
+    "Hematemesis or melena — gastrointestinal hemorrhage from Peyer patch ulceration, occurring in 1-10% of untreated cases",
+    "Profound confusion, coma, or seizures — 'typhoid encephalopathy' requiring hospital admission and high-dose dexamethasone",
+    "Fever with cardiovascular collapse and rigors — bacteremia with septic shock requires urgent IV antibiotics",
+    "New-onset jaundice with right upper quadrant tenderness in confirmed paratyphoid — suspect typhoid hepatitis or cholecystitis",
+    "Persistent high fever after 7 days of appropriate antibiotic therapy — possible antimicrobial resistance requiring susceptibility-guided therapy"
+  ],
+  "causes": [
+    {
+      "cause": "Ingestion of food or water contaminated with Salmonella Paratyphi via human fecal route",
+      "description": "Paratyphi serovars are restricted to humans — there is no animal reservoir. Disease spreads via fecally contaminated food or water from acute cases or chronic carriers. Endemic transmission requires inadequate sanitation, sewage treatment, and water purification at the community level."
+    },
+    {
+      "cause": "Travel to endemic regions",
+      "description": "Most paratyphoid in high-income countries occurs in returned travelers or recent migrants from South Asia (especially Pakistan, India, Nepal, Bangladesh), Southeast Asia, and parts of sub-Saharan Africa. CDC Yellow Book data show paratyphoid risk approaching that of typhoid for some destinations."
+    },
+    {
+      "cause": "Chronic biliary carriers in the community",
+      "description": "Approximately 1-5% of paratyphoid patients become chronic biliary carriers, shedding bacteria for over a year — often for life. Gallbladder stones harbor the organism. Carriers are infectious without symptoms; identifying and treating them is a public health priority."
+    },
+    {
+      "cause": "Poor hygiene of food handlers in endemic regions",
+      "description": "Street food, unwashed produce, and food prepared by carriers in restaurants and homes are documented vehicles. Cold dishes and salads carry higher risk than thoroughly cooked hot food. Hand hygiene of food handlers is a key intervention."
+    },
+    {
+      "cause": "Contaminated drinking water and ice",
+      "description": "Untreated or inadequately treated drinking water transmits paratyphoid efficiently. Ice made from contaminated water carries the same risk. Outbreaks have been traced to municipal water failures, recreational water bodies, and contaminated bottled water."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Travel to South Asia, Southeast Asia, or sub-Saharan Africa",
+      "category": "modifiable",
+      "description": "CDC and ISTM data show enteric fever risk concentrated in these regions, with the highest rates in Pakistan, India, Nepal, and Bangladesh. Duration of travel and food/water hygiene during the trip define exposure intensity."
+    },
+    {
+      "factor": "Visiting friends and relatives (VFR travelers) in endemic regions",
+      "category": "modifiable",
+      "description": "VFR travelers have 3-7 times the enteric fever rate of tourists because they stay longer, in private homes, and eat local food in higher-risk settings. Many do not receive pre-travel vaccination or counseling."
+    },
+    {
+      "factor": "Residence in endemic communities",
+      "category": "environmental",
+      "description": "Children in endemic urban settings have annual incidence of 500-1,000 per 100,000 in some published South Asian cohorts. Most acquire enteric fever before age 15."
+    },
+    {
+      "factor": "Inadequate sanitation and limited access to safe water",
+      "category": "environmental",
+      "description": "Communities without piped water and sealed sewage have ongoing paratyphoid transmission. Improving sanitation infrastructure is the most effective long-term prevention."
+    },
+    {
+      "factor": "Achlorhydria or proton pump inhibitor use",
+      "category": "modifiable",
+      "description": "Reduced gastric acid lowers the infectious dose required for paratyphoid colonization. PPI users may need a smaller inoculum to develop disease."
+    },
+    {
+      "factor": "Immunosuppression (HIV, transplant, biologics, malnutrition)",
+      "category": "modifiable",
+      "description": "Higher rates of bacteremia, metastatic infection (bone, joint, vascular), and prolonged carriage. HIV-positive patients are particularly susceptible to non-typhoidal Salmonella bacteremia, and may also have higher paratyphoid severity."
+    },
+    {
+      "factor": "Gallbladder pathology (cholelithiasis, prior cholecystectomy)",
+      "category": "modifiable",
+      "description": "Gallbladder stones harbor Salmonella organisms and predispose to chronic biliary carrier state. Cholecystectomy is sometimes performed in chronic carriers who fail antibiotic eradication."
+    },
+    {
+      "factor": "No prior enteric fever vaccination",
+      "category": "modifiable",
+      "description": "Typhoid vaccines (Vi capsular polysaccharide, live oral Ty21a, and newer Vi-conjugate vaccines) do not cover Paratyphi serovars effectively. Ty21a provides modest cross-protection against Paratyphi B but limited against Paratyphi A."
+    }
+  ],
+  "affectedDemographics": [
+    "Approximately 5.4 million paratyphoid cases globally per year per Antillón 2017 PLoS NTD estimates",
+    "Paratyphi A is the dominant serovar in South Asia, accounting for 30-60% of culture-confirmed enteric fever in some cohorts",
+    "Paratyphi B more common in Europe, Middle East, and Latin America",
+    "Mean age of paratyphoid in endemic settings is 5-25 years; mean age in returned travelers is older",
+    "In high-income countries, over 90% of paratyphoid cases are travel-associated or in recent migrants"
+  ],
+  "diagnosisOverview": "Paratyphoid fever is suspected on the basis of compatible clinical features — sustained fever with malaise, abdominal pain, hepatosplenomegaly — in a patient with relevant travel or contact history, and is confirmed microbiologically. Blood culture is the gold-standard test, with sensitivity 40-80% in the first week of illness, falling thereafter. At least 10-15 mL of blood (proportional to weight in children) should be drawn into both aerobic and anaerobic bottles before any antibiotics are given. Bone marrow culture has higher sensitivity (over 90%) at any stage and is used in patients pretreated with antibiotics or when blood cultures are negative despite high clinical suspicion, though it is rarely performed in routine practice. Stool culture is positive in only 30-50% of cases and tends to be positive later in the illness; it is most useful for detecting chronic carriers. Urine culture has limited sensitivity. Modern molecular methods (PCR on blood) are increasingly available in reference laboratories and can detect Salmonella nucleic acid even after antibiotics have started, but are not yet standard of care. The Widal test — historical serologic test detecting antibodies to O and H antigens — has poor sensitivity and specificity, with high false-positive rates in endemic regions due to prior exposure, and is now discouraged by WHO and CDC. The newer Typhidot and TUBEX rapid tests have improved performance but are still inferior to blood culture. After diagnosis, all isolates should undergo antibiotic susceptibility testing, particularly for fluoroquinolone resistance (assessed by ciprofloxacin MIC and nalidixic acid screening; many South Asian isolates carry gyrA mutations), ceftriaxone susceptibility, and azithromycin susceptibility. The differential diagnosis is broad — malaria, dengue, leptospirosis, rickettsial infections, viral hepatitis, brucellosis, and amebic liver abscess all overlap clinically — so endemic-region fever workup includes thick and thin blood films for malaria, dengue NS1 antigen, leptospirosis serology, and abdominal imaging as appropriate.",
+  "diagnosticTests": [
+    {
+      "test": "Blood culture (multiple sets before antibiotics)",
+      "purpose": "Gold-standard diagnostic test. Identifies Salmonella Paratyphi A, B, or C from blood, allowing speciation and susceptibility testing. Sensitivity 40-80% in week 1 of illness; higher with multiple sets and larger volume.",
+      "whatToExpect": "10-15 mL of blood drawn into both aerobic and anaerobic culture bottles; ideally repeated 24 hours apart. Results in 1-5 days with preliminary growth typically by day 2-3."
+    },
+    {
+      "test": "Stool culture",
+      "purpose": "Detects Salmonella shedding, useful for confirming late or convalescent infection, identifying chronic carriers, and outbreak investigation. Sensitivity 30-50% in acute disease.",
+      "whatToExpect": "Standard stool collection container submitted to the lab. Results in 2-5 days. Multiple samples may be collected over consecutive days."
+    },
+    {
+      "test": "Bone marrow culture",
+      "purpose": "Highest-sensitivity diagnostic test (over 90% throughout illness), useful when blood cultures are negative despite strong clinical suspicion or when patients have already received antibiotics. Rarely performed because of invasiveness.",
+      "whatToExpect": "Sample obtained from the posterior iliac crest under local anesthetic; takes 15-20 minutes. Some discomfort during aspiration; mild soreness for a few days."
+    },
+    {
+      "test": "Antibiotic susceptibility testing on isolated organism",
+      "purpose": "Essential to guide therapy in an era of widespread resistance. Tests fluoroquinolone susceptibility (ciprofloxacin MIC, nalidixic acid screening), ceftriaxone susceptibility, and azithromycin susceptibility.",
+      "whatToExpect": "Performed automatically by the laboratory once an isolate grows; results available 1-2 days after initial isolate identification."
+    },
+    {
+      "test": "Full blood count, liver function, renal function",
+      "purpose": "Detects characteristic findings — leukopenia or normal white count (high WBC suggests perforation or alternative diagnosis), mild thrombocytopenia, transaminitis, mild hyponatremia.",
+      "whatToExpect": "Standard blood draw; results within 1-2 hours."
+    },
+    {
+      "test": "Abdominal imaging (ultrasound or CT) in selected cases",
+      "purpose": "Evaluates suspected complications — perforation, gastrointestinal bleeding, hepatosplenomegaly, biliary disease. Distinguishes from amebic liver abscess and other tropical etiologies.",
+      "whatToExpect": "Ultrasound 20-30 minutes; CT 15 minutes with contrast. CT delivers radiation; ultrasound does not."
+    },
+    {
+      "test": "Co-tests for endemic-region fever differentials (malaria film, dengue NS1, leptospirosis, HIV)",
+      "purpose": "Endemic-region fever workup is broad because clinical features of paratyphoid overlap with several treatable diseases. Comprehensive co-testing reduces diagnostic delay.",
+      "whatToExpect": "Combined blood tests submitted on initial presentation; most results return within 1-2 days."
+    }
+  ],
+  "treatmentOverview": "Antibiotic resistance has substantially reshaped paratyphoid treatment over the past two decades. First-line empirical therapy depends on local susceptibility data. In South Asia, where fluoroquinolone resistance exceeds 70% in some isolates, first-line is azithromycin 1 g orally daily for 5-7 days for uncomplicated disease, or IV ceftriaxone 2 g daily for 10-14 days for severe disease or inability to take oral medication. Where local susceptibility supports it (parts of sub-Saharan Africa, the Americas), fluoroquinolones such as ciprofloxacin 500 mg twice daily for 7-10 days remain effective. Multidrug-resistant strains (resistant to ampicillin, chloramphenicol, and trimethoprim-sulfamethoxazole) emerged in the 1990s; extensively drug-resistant (XDR) Salmonella Typhi (now also documented in Paratyphi A in some Pakistani isolates) is resistant to first-line agents plus fluoroquinolones and third-generation cephalosporins, leaving azithromycin and carbapenems as the few remaining options. Defervescence after starting effective antibiotics typically takes 3-5 days; persistent fever beyond 7 days warrants susceptibility-guided adjustment. Adjunctive measures include adequate hydration, antipyretics (paracetamol preferred over NSAIDs to reduce GI bleeding risk), and nutritional support. Corticosteroids (dexamethasone 3 mg/kg followed by 1 mg/kg every 6 hours for 48 hours) reduce mortality in severe enteric fever with delirium, obtundation, or shock per Hoffman 1984 — still the standard for severe complicated cases. Hospital admission is warranted for severe disease, hemodynamic instability, inability to take oral medication, suspected complications, immunocompromise, pregnancy, and extremes of age. Surgical intervention is needed for intestinal perforation — typically simple closure or resection — usually presenting in week 3 or 4 of untreated illness. Public health reporting is mandatory in most countries; the case prompts investigation of source and identification of household contacts and possible carriers. Patients are typically advised to avoid food handling and high-risk occupations until stool cultures clear, which may take weeks. Chronic biliary carriers — approximately 1-5% of cases — may need prolonged ciprofloxacin or azithromycin courses, or cholecystectomy if antibiotic eradication fails and gallstones are present. Travelers and migrants returning to endemic regions should be counseled on prevention including vaccination (typhoid vaccine provides minimal paratyphoid protection but is still recommended for typhoid), water and food hygiene, and prompt fever evaluation.",
+  "medicalTreatments": [
+    {
+      "name": "Azithromycin (1 g orally daily for 5-7 days, or 500 mg twice daily for 7 days)",
+      "description": "First-line oral therapy in South Asia and other high-resistance regions. Active against fluoroquinolone-resistant and most ESBL-producing Salmonella Paratyphi. Concentrates intracellularly in macrophages, where the bacteria reside. Reduces relapse rate compared with shorter courses.",
+      "effectiveness": "Clinical cure in 90-95% of uncomplicated paratyphoid in randomized trials; defervescence within 3-5 days. Reduces stool carriage at follow-up to under 5%."
+    },
+    {
+      "name": "Ceftriaxone (2 g IV daily for 10-14 days)",
+      "description": "First-line IV therapy for severe disease, complicated paratyphoid, or inability to take oral medication. Broad-spectrum activity covers fluoroquinolone-resistant isolates. Switch to oral azithromycin or fluoroquinolone (if susceptible) after clinical improvement.",
+      "effectiveness": "Clinical cure 90-95% in randomized trials; mean time to defervescence 5-7 days."
+    },
+    {
+      "name": "Ciprofloxacin (500 mg twice daily for 7-10 days) where local susceptibility supports use",
+      "description": "First-line in regions with low fluoroquinolone resistance (parts of sub-Saharan Africa, the Americas). Avoid empirically in South Asian travelers due to widespread resistance. Susceptibility testing using nalidixic acid screening or ciprofloxacin MIC guides use.",
+      "effectiveness": "Cure rate over 95% for susceptible isolates with rapid defervescence in 3-5 days. Failure rate exceeds 30% in nalidixic-acid-resistant strains even when ciprofloxacin MIC appears susceptible by older breakpoints."
+    },
+    {
+      "name": "Carbapenems (meropenem 1 g IV every 8 hours, or ertapenem 1 g IV daily) for XDR strains",
+      "description": "Reserved for extensively drug-resistant Salmonella documented to be resistant to fluoroquinolones and third-generation cephalosporins. Used for 10-14 days, then step-down to oral azithromycin where possible.",
+      "effectiveness": "Cure rate over 90% in published series of XDR enteric fever treated with meropenem-based regimens."
+    },
+    {
+      "name": "Dexamethasone (3 mg/kg initial dose, then 1 mg/kg every 6 hours for 48 hours) for severe complicated disease",
+      "description": "Adjunctive treatment for severe paratyphoid with delirium, obtundation, shock, or marked typhoid encephalopathy. Reduces mortality from approximately 50% to under 10% in this subset (Hoffman 1984 landmark trial; still the standard).",
+      "effectiveness": "Reduces mortality in severe enteric fever from approximately 50% to 10% in randomized data."
+    },
+    {
+      "name": "Prolonged azithromycin or ciprofloxacin for chronic biliary carrier state",
+      "description": "Chronic carriers receive azithromycin 500 mg daily for 4 weeks, or ciprofloxacin 750 mg twice daily for 4-6 weeks, often combined with cholecystectomy if gallstones are present and eradication fails.",
+      "effectiveness": "Eradication achieved in approximately 65-80% with prolonged ciprofloxacin; up to 95% when combined with cholecystectomy in stone carriers."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Emergency laparotomy for intestinal perforation",
+      "description": "Required when paratyphoid causes terminal ileum perforation, typically in week 3-4 of untreated disease. Treatment is simple closure of perforations (often multiple) or ileal resection with anastomosis. Continued IV antibiotic therapy throughout perioperative period.",
+      "successRate": "Mortality from operative perforation has fallen from 30-60% in early series to 10-20% with modern surgery and antibiotics; outcome depends heavily on time from perforation to operation."
+    },
+    {
+      "name": "Cholecystectomy in chronic biliary carriers with gallstones",
+      "description": "Considered when antibiotic eradication fails and gallstones are present. Removes the bacterial reservoir within the gallbladder and stones. Modern laparoscopic approach has low operative morbidity.",
+      "successRate": "Combined antibiotic-plus-cholecystectomy regimens achieve eradication in approximately 95% of stone-associated carriers."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Oral rehydration and electrolyte management",
+      "description": "Essential adjunctive supportive care. Patients with paratyphoid often have anorexia and intermittent diarrhea, especially in children, contributing to dehydration. WHO oral rehydration solution corrects mild-to-moderate dehydration."
+    }
+  ],
+  "whySeeSpecialist": "Refer to infectious disease or tropical medicine specialist for any confirmed or strongly suspected paratyphoid, particularly in travelers returning from South Asia where antibiotic resistance is widespread. Hospitalization with specialist input is warranted for severe disease, complications, suspected drug resistance, immunocompromise, pregnancy, and pediatric cases. Chronic carriers should be managed by infectious disease physicians with experience in prolonged antibiotic regimens.",
+  "doctorSelectionGuide": "Look for centers with access to rapid blood culture systems, full susceptibility testing including fluoroquinolone MIC and ESBL screening, and IV antibiotic options for severe disease. In endemic countries, specialty infectious disease departments and government hospitals routinely manage high case volumes. Travel medicine clinics provide pre-travel counseling and post-travel evaluation.",
+  "preventionStrategies": [
+    "Drink only boiled, bottled, or properly filtered water; avoid ice from unknown sources when traveling in endemic regions",
+    "Eat only thoroughly cooked food served hot; avoid raw vegetables, salads, and street food",
+    "Peel fruits yourself; avoid pre-cut or vendor-prepared fruits",
+    "Wash hands frequently with soap and water before eating, after using the toilet, and after contact with potentially contaminated surfaces",
+    "Get typhoid vaccination before travel — note that current vaccines provide limited protection against Paratyphi A and B but still reduce overall enteric fever burden",
+    "Identify and treat chronic carriers in households where a confirmed case has occurred; food handlers should be excluded until stool clearance is documented",
+    "Improve community sanitation infrastructure — piped water, sewage treatment, and hygiene education are the most durable population-level interventions"
+  ],
+  "lifestyleModifications": [
+    "Complete the full antibiotic course even after symptoms resolve — premature discontinuation risks relapse and persistent carriage",
+    "Maintain hydration with oral rehydration solution or balanced fluids during acute illness",
+    "Avoid food preparation for others until stool cultures clear, particularly important for food handlers and healthcare workers",
+    "Practice strict hand hygiene to prevent household transmission during shedding",
+    "Avoid NSAIDs and aspirin during acute paratyphoid — these increase risk of GI bleeding from Peyer patch ulceration; use paracetamol for fever",
+    "Schedule follow-up stool cultures at 4-6 weeks post-treatment to confirm clearance and exclude chronic carrier state"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Soft, easily digestible foods during acute illness — rice, congee, plain noodles, toast",
+      "Adequate caloric intake to support recovery — paratyphoid is catabolic and weight loss is common",
+      "Oral rehydration solution during diarrhea, vomiting, or poor oral intake",
+      "Cooked vegetables and fruits in convalescence; avoid raw produce until full recovery"
+    ],
+    "avoid": [
+      "Raw or undercooked food during travel in endemic regions",
+      "Untreated water, ice cubes, and unbottled drinks when traveling",
+      "Street food, salads, and pre-cut fruits in endemic settings",
+      "NSAIDs and aspirin during acute illness — increased GI bleeding risk",
+      "Alcohol during antibiotic therapy and convalescence"
+    ]
+  },
+  "exerciseGuidelines": "Strict bed rest is recommended during the febrile phase. Light activity may resume after defervescence and full clinical recovery, typically 2-3 weeks into treatment. Avoid abdominal strain (heavy lifting, contact sports) for 4-6 weeks because intestinal ulcers heal slowly and rare late perforations are described. Return to full athletic activity once asymptomatic and at least 4 weeks post-treatment.",
+  "dailyManagement": [
+    "Take antibiotics on schedule with adequate hydration",
+    "Monitor temperature twice daily — persistent fever beyond 7 days warrants medical re-evaluation",
+    "Use paracetamol for fever and discomfort; avoid NSAIDs",
+    "Practice meticulous hand hygiene and avoid preparing food for others",
+    "Report new symptoms (severe abdominal pain, dark stools, jaundice, confusion) to clinical team immediately",
+    "Schedule follow-up stool cultures and clinical review"
+  ],
+  "prognosis": "With prompt diagnosis and appropriate antibiotic therapy, paratyphoid fever has an excellent prognosis. Defervescence typically occurs within 3-5 days of starting effective antibiotics; complete recovery within 2-4 weeks. Case-fatality is under 1% in adequately treated paratyphoid, compared with 10-20% in untreated cases in historical series. Mortality is higher in pregnancy, extremes of age, immunocompromise, and complicated disease (perforation, hemorrhage, severe sepsis). Relapse occurs in approximately 5-10% of treated cases, more common with shorter antibiotic courses; relapse responds to a repeat course. Chronic biliary carriage develops in 1-5% of cases, more frequently in women, older patients, and those with gallstones — carriers can shed organisms for years and serve as community sources. The major prognostic concern is antibiotic resistance: fluoroquinolone resistance exceeds 70% in many South Asian Paratyphi A isolates, and extensively drug-resistant strains are emerging. Each case prompts public health investigation to identify carriers and prevent secondary spread. Vaccination provides minimal direct protection against Paratyphi (existing typhoid vaccines do not cover Paratyphi A well) but reduces overall enteric fever burden. Long-term sequelae are uncommon in adequately treated cases.",
+  "recoveryTimeline": "Defervescence within 3-5 days of starting effective antibiotics for sensitive isolates. Full clinical recovery within 2-3 weeks for uncomplicated disease. Complicated disease (perforation, hemorrhage, severe sepsis) extends hospital stay to 3-6 weeks. Stool cultures should be repeated at 4-6 weeks post-treatment to detect carrier state. Return to work or school is typically permitted at 1-2 weeks if symptoms have resolved, but food handlers and healthcare workers require documented stool clearance. Carrier eradication takes 4-6 weeks of prolonged antibiotic therapy, sometimes combined with cholecystectomy.",
+  "complications": [
+    "Intestinal perforation, typically of the terminal ileum, in 1-3% of treated cases and 5-10% of untreated disease — usually presents in week 3 or 4 with acute abdomen",
+    "Gastrointestinal hemorrhage from Peyer patch ulceration, in 1-10% of untreated cases, presenting with melena or hematochezia",
+    "Typhoid encephalopathy — delirium, obtundation, seizures — in severe untreated or resistant disease; responds to dexamethasone",
+    "Metastatic infection: osteomyelitis (especially Paratyphi C), septic arthritis, endocarditis, meningitis, abscesses",
+    "Cholecystitis and chronic biliary carriage developing in 1-5% of cases",
+    "Relapse in 5-10% of treated cases, particularly with inadequate antibiotic course",
+    "Antibiotic resistance — fluoroquinolone, ceftriaxone, and azithromycin resistance limit treatment options in increasing numbers of cases",
+    "Maternal complications in pregnancy: increased rates of fetal loss, preterm delivery, and maternal mortality"
+  ],
+  "supportResources": [
+    {
+      "name": "CDC Yellow Book — Travelers' Health Typhoid and Paratyphoid",
+      "url": "https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/typhoid-and-paratyphoid-fever",
+      "description": "Authoritative US guidance for travelers and clinicians on pre-travel prevention and post-travel evaluation."
+    },
+    {
+      "name": "WHO — Typhoid and Paratyphoid Fever",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+      "description": "Global epidemiology, vaccination recommendations, and public health context."
+    },
+    {
+      "name": "International Society for Travel Medicine",
+      "url": "https://www.istm.org/",
+      "description": "Pre-travel and post-travel resources for travelers visiting endemic regions."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "typhoid-fever",
+      "name": "Typhoid Fever",
+      "keyDifference": "Typhoid is caused by Salmonella Typhi while paratyphoid is caused by Salmonella Paratyphi A, B, or C. Clinical features overlap substantially and cannot be reliably distinguished without blood culture and serotyping. Paratyphoid is generally milder with shorter duration and lower complication rates, but management is similar."
+    },
+    {
+      "slug": "salmonella-infection",
+      "name": "Salmonella Infection (Non-typhoidal)",
+      "keyDifference": "Non-typhoidal Salmonella enteritis causes acute watery or bloody diarrhea with fever lasting 4-7 days; paratyphoid is a systemic illness with sustained fever and less prominent diarrhea. Stool culture identifies Salmonella but only blood culture and serotyping confirm Paratyphi serovars."
+    },
+    {
+      "slug": "malaria",
+      "name": "Malaria",
+      "keyDifference": "Malaria presents with paroxysmal fever, rigors, headache, and hemolysis in a traveler from endemic regions. Blood film identifies parasites. Paratyphoid produces sustained rather than paroxysmal fever, with abdominal symptoms and hepatosplenomegaly. Both must be tested in returned-traveler fever workup."
+    },
+    {
+      "slug": "amebiasis",
+      "name": "Amebiasis",
+      "keyDifference": "Amebiasis produces gradual-onset dysentery with bloody stools and risk of liver abscess; paratyphoid is a systemic febrile illness without dysenteric features. Stool antigen/PCR distinguishes amebiasis; blood culture confirms paratyphoid."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "typhoid-fever",
+      "name": "Typhoid Fever"
+    },
+    {
+      "slug": "malaria",
+      "name": "Malaria"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "typhoid-fever",
+      "name": "Typhoid Fever",
+      "relevance": "Sibling enteric fever caused by Salmonella Typhi; clinically indistinguishable from paratyphoid without microbiology and managed similarly."
+    },
+    {
+      "slug": "salmonella-infection",
+      "name": "Salmonella Infection",
+      "relevance": "Same genus and species (S. enterica) — non-typhoidal Salmonella causes acute gastroenteritis while paratyphoid serovars cause systemic enteric fever."
+    },
+    {
+      "slug": "foodborne-illness",
+      "name": "Foodborne Illness",
+      "relevance": "Paratyphoid is one of the foodborne diseases relevant to travelers and migrants from endemic regions; same fecal-oral prevention strategies apply."
+    },
+    {
+      "slug": "malaria",
+      "name": "Malaria",
+      "relevance": "Co-endemic in many regions; routine differential in returned travelers with fever; thick and thin film mandatory in this workup."
+    },
+    {
+      "slug": "amebiasis",
+      "name": "Amebiasis",
+      "relevance": "Differential for fever and abdominal symptoms in returned travelers; transmitted through similar contaminated food and water."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is paratyphoid fever?",
+      "answer": "Paratyphoid fever is a systemic illness caused by Salmonella enterica serovars Paratyphi A, B, or C — similar to typhoid but usually milder. Global estimates are 5.4 million cases and 19,100 deaths per year, causing sustained fever, malaise, and abdominal pain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between typhoid and paratyphoid?",
+      "answer": "Typhoid is caused by Salmonella Typhi; paratyphoid by Salmonella Paratyphi A, B, or C. Clinical features overlap and need blood culture to distinguish. Paratyphoid is usually milder. Current typhoid vaccines do not protect well against Paratyphi A.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is paratyphoid fever transmitted?",
+      "answer": "Paratyphoid spreads through ingestion of food or water contaminated with human feces from acute cases or chronic carriers. There is no animal reservoir. Travel to endemic regions (South Asia especially), eating contaminated food or water, and contact with chronic carriers are the main routes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of paratyphoid fever?",
+      "answer": "Symptoms develop 6-30 days after exposure: stepwise rising fever to 39-40°C, malaise, headache, abdominal pain, hepatosplenomegaly, and sometimes rose spots. Constipation predominates in adults, diarrhea in children. Pulse may be slow for the fever.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is paratyphoid diagnosed?",
+      "answer": "Blood culture is the gold-standard test. At least 10-15 mL drawn into aerobic and anaerobic bottles before antibiotics gives best yield (40-80% sensitivity in week 1). Stool culture and PCR supplement. The Widal serology is no longer recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is paratyphoid treated?",
+      "answer": "In South Asia: azithromycin 1 g daily for 5-7 days for uncomplicated disease, or IV ceftriaxone 2 g daily for 10-14 days for severe disease. In low-resistance regions, ciprofloxacin 500 mg twice daily for 7-10 days remains effective when susceptibility is confirmed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why can't I take ciprofloxacin for South Asian paratyphoid?",
+      "answer": "Fluoroquinolone resistance exceeds 70% in many South Asian Paratyphi A isolates due to gyrA mutations. Empirical ciprofloxacin often fails. Azithromycin or ceftriaxone are first-line until susceptibility testing returns; treatment is then refined.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a vaccine for paratyphoid?",
+      "answer": "Existing typhoid vaccines (Vi capsular polysaccharide, oral live Ty21a, and newer Vi-conjugate vaccines) provide minimal protection against Paratyphi A and modest cross-protection against Paratyphi B. Several candidate paratyphoid-specific vaccines are in development. Travelers still benefit from typhoid vaccination because of overall enteric fever burden.",
+      "schemaEligible": false
+    },
+    {
+      "question": "How long does paratyphoid fever last?",
+      "answer": "With appropriate antibiotics, defervescence occurs within 3-5 days and full recovery within 2-3 weeks. Untreated, illness lasts 3-4 weeks and may relapse. Perforation typically appears in week 3-4 of untreated disease. Complicated recovery may take 4-6 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can paratyphoid come back after treatment?",
+      "answer": "Yes. Relapse occurs in approximately 5-10% of treated cases, often within 2-4 weeks of completing therapy and more common after shorter or less-effective antibiotic courses. Relapse responds to a repeat course of appropriate antibiotics. Confirmation of clearance with follow-up stool culture is recommended.",
+      "schemaEligible": false
+    },
+    {
+      "question": "What is a chronic carrier?",
+      "answer": "1-5% of paratyphoid patients become chronic carriers, shedding bacteria for over 12 months — sometimes lifelong. Gallbladder stones harbor the organism. Carriers are asymptomatic but infectious. Eradication needs 4-6 weeks of antibiotics, sometimes plus cholecystectomy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I prevent paratyphoid when traveling?",
+      "answer": "Drink only bottled, boiled, or filtered water; avoid ice from unknown sources; eat food served hot; avoid raw vegetables, salads, and street food; peel fruits yourself; wash hands often. Typhoid vaccine offers partial cross-protection against paratyphoid B.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is paratyphoid dangerous?",
+      "answer": "Paratyphoid is generally milder than typhoid, with mortality under 1% in treated cases. Untreated, mortality reaches 10-20%. Complications including intestinal perforation, hemorrhage, and severe sepsis are uncommon with prompt treatment. Severe disease responds to early IV antibiotics; some severe cases benefit from adjunctive dexamethasone.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can children get paratyphoid?",
+      "answer": "Yes. Children in endemic regions have annual incidence of 500-1,000 per 100,000 in some published cohorts. Pediatric paratyphoid presents similarly to adult disease, though diarrhea is more common than constipation, and dehydration is a more prominent issue. Treatment doses are weight-based.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is paratyphoid contagious?",
+      "answer": "Yes — through fecal-oral transmission, especially during convalescent shedding or in chronic carriers. Strict hand hygiene during and after illness, exclusion of food handlers until stool cultures clear, and identification of carriers prevent secondary cases. Person-to-person spread requires close contact or shared food/water.",
+      "schemaEligible": false
+    },
+    {
+      "question": "What is the difference between paratyphoid and food poisoning?",
+      "answer": "Most food poisoning (norovirus, non-typhoidal Salmonella, Staphylococcus aureus toxin) produces acute gastroenteritis lasting 1-7 days. Paratyphoid is a systemic illness with sustained fever and constitutional symptoms over weeks. The pathogens are different though transmission is similarly food and water-borne. Blood culture confirms paratyphoid.",
+      "schemaEligible": false
+    },
+    {
+      "question": "How much does paratyphoid treatment cost?",
+      "answer": "Generic azithromycin, ceftriaxone, and ciprofloxacin are inexpensive in most countries — typically under USD 20 for an oral course, more for IV therapy. In India and other generic-supply markets, costs are much lower. Hospital admission for severe disease and complications adds substantial cost.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need to be admitted to hospital for paratyphoid?",
+      "answer": "Hospital admission is recommended for severe disease, complications, inability to tolerate oral medication, suspected drug resistance, pregnancy, immunocompromise, and pediatric cases. Most uncomplicated paratyphoid in adults can be managed as outpatient with oral azithromycin and close follow-up in stable patients.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can I go to work with paratyphoid?",
+      "answer": "Stay off work or school until symptoms have fully resolved and you have completed antibiotic therapy. Food handlers, healthcare workers, and daycare workers require documented stool clearance — typically 2-3 negative stool cultures collected 24 hours apart starting at least 48 hours after the last antibiotic dose.",
+      "schemaEligible": false
+    },
+    {
+      "question": "What if I have antibiotic-resistant paratyphoid?",
+      "answer": "Extensively drug-resistant (XDR) Salmonella Paratyphi A — resistant to first-line antibiotics, fluoroquinolones, and third-generation cephalosporins — is documented in Pakistan and elsewhere. Carbapenems (meropenem) and azithromycin remain the main treatment options. Infectious disease specialist input is essential for resistant cases.",
+      "schemaEligible": false
+    }
+  ],
+  "simpleName": "Paratyphoid Fever (Salmonella Paratyphi)",
+  "regionalNames": [
+    {
+      "name": "पैराटाइफाइड बुखार",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Fiebre paratifoidea",
+      "region": "Latin America",
+      "language": "es"
+    },
+    {
+      "name": "Fièvre paratyphoïde",
+      "region": "France",
+      "language": "fr"
+    }
+  ],
+  "searchTags": [
+    "paratyphoid",
+    "paratyphoid fever",
+    "salmonella paratyphi",
+    "enteric fever",
+    "azithromycin paratyphoid",
+    "ceftriaxone enteric fever",
+    "traveler fever",
+    "south asia fever",
+    "paratyphi a",
+    "paratyphi b"
+  ],
+  "symptomKeywords": [
+    "sustained fever",
+    "fever after travel",
+    "abdominal pain fever",
+    "headache fever malaise",
+    "rose spots",
+    "constipation fever",
+    "hepatosplenomegaly",
+    "relative bradycardia"
+  ],
+  "metaTitle": "Paratyphoid Fever: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Paratyphoid fever (Salmonella Paratyphi): enteric fever symptoms, blood culture diagnosis, antibiotics, and travel prevention reviewed by our medical board.",
+  "keywords": [
+    "paratyphoid fever",
+    "paratyphoid",
+    "salmonella paratyphi",
+    "enteric fever",
+    "paratyphi a",
+    "paratyphi b",
+    "azithromycin paratyphoid",
+    "ceftriaxone enteric fever",
+    "fluoroquinolone resistance",
+    "traveler fever",
+    "paratyphoid vaccine",
+    "paratyphoid diagnosis",
+    "paratyphoid prevention"
+  ],
+  "lastReviewed": "2026-05-13",
+  "sources": [
+    {
+      "title": "Crump JA, Sjölund-Karlsson M, Gordon MA, Parry CM. Epidemiology, Clinical Presentation, Laboratory Diagnosis, Antimicrobial Resistance, and Antimicrobial Management of Invasive Salmonella Infections. Clinical Microbiology Reviews. 2015;28(4):901-937.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26180063/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Antillón M, Warren JL, Crawford FW, et al. The burden of typhoid fever in low- and middle-income countries: A meta-regression approach. PLoS Neglected Tropical Diseases. 2017;11(2):e0005376.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28241011/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Parry CM, Hien TT, Dougan G, et al. Typhoid fever. New England Journal of Medicine. 2002;347(22):1770-1782.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12456854/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Sahastrabuddhe S, Carbis R, Wierzba TF, Ochiai RL. Increasing rates of Salmonella Paratyphi A and the current status of its vaccine development. Expert Review of Vaccines. 2013;12(9):1021-1031.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24053396/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Effa EE, Lassi ZS, Critchley JA, et al. Fluoroquinolones for treating typhoid and paratyphoid fever (enteric fever). Cochrane Database of Systematic Reviews. 2011;(10):CD004530.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21975746/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Hoffman SL, Punjabi NH, Kumala S, et al. Reduction of mortality in chloramphenicol-treated severe typhoid fever by high-dose dexamethasone. New England Journal of Medicine. 1984;310(2):82-88.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6361558/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "WHO. Typhoid vaccines: WHO position paper, March 2018 — Recommendations. Vaccine. 2019;37(2):214-216.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29661581/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Date KA, Newton AE, Medalla F, et al. Changing Patterns in Enteric Fever Incidence and Increasing Antibiotic Resistance of Enteric Fever Isolates in the United States, 2008-2012. Clinical Infectious Diseases. 2016;63(3):322-329.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27090993/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

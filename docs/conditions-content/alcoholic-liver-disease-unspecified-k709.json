@@ -1,0 +1,390 @@
+{
+  "_meta": {
+    "slug": "alcoholic-liver-disease-unspecified-k709",
+    "tier": 1,
+    "headTerm": "alcoholic liver disease",
+    "longTailKeywords": [
+      "alcoholic liver disease symptoms",
+      "alcoholic liver disease treatment",
+      "alcoholic liver disease stages",
+      "alcoholic liver disease diet",
+      "alcoholic hepatitis treatment",
+      "fatty liver alcohol",
+      "alcoholic cirrhosis prognosis",
+      "liver damage from drinking",
+      "alcoholic liver disease reversible",
+      "alcoholic liver disease diagnosis"
+    ],
+    "primarySpecialty": "Gastroenterology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Alcoholic Liver Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Gastroenterology",
+
+  "heroOverview": "Alcoholic liver disease (ALD) encompasses a spectrum of hepatic injury from reversible alcoholic fatty liver through alcoholic hepatitis to irreversible alcoholic cirrhosis, all directly caused by sustained heavy alcohol consumption. Globally, alcohol misuse accounts for approximately 48% of liver cirrhosis deaths and is the third most common cause of preventable death in high-income countries. In the United States, over 21,000 deaths were attributed to alcoholic liver disease in 2020. The early stages — fatty liver and mild alcoholic hepatitis — are reversible with alcohol abstinence, while advanced fibrosis and cirrhosis are not. Severe alcoholic hepatitis carries a 90-day mortality of 20-50% despite treatment, making early recognition and intervention critical.",
+
+  "keyStats": {
+    "prevalence": "ALD accounts for over 48% of cirrhosis deaths globally; in the US, approximately 21,000 deaths per year attributed to ALD (CDC 2020); prevalence of alcoholic fatty liver in heavy drinkers approximately 80-90%",
+    "demographics": "Men historically predominate (2:1 male-to-female ratio for cirrhosis), but women develop more severe liver disease per unit of alcohol consumed; peak age 45-65 for cirrhosis presentation",
+    "avgAge": "Alcoholic cirrhosis typically presents at age 45-65 after 15-25 years of heavy drinking; alcoholic hepatitis may occur at any adult age",
+    "globalCases": "Approximately 2.4 million deaths annually attributable to alcohol globally (WHO 2022); ALD accounts for 30-40% of end-stage liver disease in liver transplant waitlists in Europe and North America"
+  },
+
+  "definition": "Alcoholic liver disease (ICD-10: K70.9) encompasses all forms of alcohol-induced hepatic injury, classified by histopathological and clinical stage. Alcoholic fatty liver (steatosis) arises when hepatocyte fat accumulation exceeds 5% of liver weight, occurring in 80-90% of heavy drinkers — it is histologically reversible within weeks of abstinence. Alcoholic steatohepatitis (ASH) — superimposed inflammation on steatosis — produces hepatocyte balloon degeneration, lobular neutrophilic infiltration, and Mallory-Denk bodies; it is clinically recognized as alcoholic hepatitis when it presents acutely with jaundice and coagulopathy. Fibrosis progresses through perivenular and pericellular patterns to bridging fibrosis (Metavir F3) and ultimately cirrhosis (F4), where the hepatic architecture is permanently distorted by regenerative nodules and fibrous septa. A small proportion of heavy drinkers — only 8-20% — develop cirrhosis despite decades of exposure, implying genetic and constitutional co-factors. Alcoholic liver disease is managed by hepatology and gastroenterology specialists, with addiction medicine, nutrition, and transplant teams for advanced stages.",
+
+  "typesClassification": [
+    { "type": "Alcoholic fatty liver (alcoholic steatosis)", "description": "The earliest and most common form; fat accumulates in hepatocytes after heavy alcohol consumption. No symptoms or only mild right upper quadrant discomfort. Completely reversible within 4-6 weeks of abstinence. Present in 80-90% of heavy drinkers; not independently predictive of progression to cirrhosis unless combined with inflammatory changes." },
+    { "type": "Alcoholic steatohepatitis / alcoholic hepatitis", "description": "Acute or subacute inflammatory injury superimposed on steatosis, presenting with rapid-onset jaundice, fever, tender hepatomegaly, and deteriorating liver function. Discriminant function (DF) or MELD score guides prognosis. Severe disease (DF ≥32 or MELD ≥20) carries 90-day mortality of 20-50%." },
+    { "type": "Alcoholic fibrosis", "description": "Progressive collagen deposition from activated hepatic stellate cells, beginning perivenularly (zone 3), progressing to pericellular and bridging fibrosis. Not clinically apparent but detectable on liver biopsy or elastography. May partially regress with sustained abstinence at Metavir F2-F3 stage." },
+    { "type": "Alcoholic cirrhosis", "description": "Irreversible end-stage ALD with diffuse nodular regeneration and fibrous septa. Presents with complications of portal hypertension (varices, ascites, hepatic encephalopathy) and reduced synthetic function. Continued drinking after diagnosis produces a mean 5-year survival below 35%." }
+  ],
+
+  "primarySymptoms": [
+    "Jaundice — yellow discoloration of skin and sclera from impaired bilirubin conjugation and excretion, the defining feature of alcoholic hepatitis and decompensated cirrhosis, present in over 80% of hospitalised cases.",
+    "Right upper quadrant pain or tenderness from hepatomegaly and liver capsule stretching, present in 50-70% of acute alcoholic hepatitis presentations.",
+    "Abdominal distension from ascites — accumulation of fluid in the peritoneal cavity driven by portal hypertension and hypoalbuminaemia, a cardinal sign of decompensated cirrhosis.",
+    "Nausea, vomiting, and profound anorexia occurring during acute alcoholic hepatitis episodes and in advanced cirrhosis with impaired hepatic metabolism of gut-derived toxins.",
+    "Fatigue, malaise, and progressive weakness from hepatocellular dysfunction, malnutrition, and systemic inflammation — often the earliest and most persistent complaint.",
+    "Coagulopathy manifesting as easy bruising, prolonged bleeding from minor cuts, gum bleeding, or spontaneous skin petechiae, reflecting impaired hepatic synthesis of clotting factors.",
+    "Muscle wasting (sarcopenia) and peripheral oedema from hypoalbuminaemia and impaired protein synthesis, disproportionate to overall body weight in cirrhotic patients.",
+    "Fever with systemic inflammatory response in acute alcoholic hepatitis from cytokine release, present in 50-60% and mimicking infectious disease.",
+    "Confusion, drowsiness, and personality change from hepatic encephalopathy — accumulation of ammonia and other neurotoxins from impaired hepatic detoxification; ranges from subtle cognitive slowing to overt coma.",
+    "Haematemesis or melaena from ruptured oesophageal or gastric varices — a life-threatening complication of portal hypertension, occurring in 30% of cirrhotic patients within 2 years of variceal development."
+  ],
+
+  "earlyWarningSigns": [
+    "Persistent fatigue and right-sided abdominal fullness in a patient with daily alcohol intake exceeding 3-4 units, even in the absence of jaundice — fatty liver may be present without symptoms.",
+    "Incidental finding of hepatomegaly or bright echogenic liver on ultrasound performed for another indication — this is often the first detected sign of alcoholic steatosis.",
+    "Elevated gamma-glutamyltransferase (GGT) and alanine aminotransferase (ALT) at routine blood screening in a heavy drinker, with AST:ALT ratio above 2:1 suggesting alcoholic etiology.",
+    "Thrombocytopenia (platelet count below 150,000/µL) in a drinker without other cause — early hypersplenism from subclinical portal hypertension."
+  ],
+
+  "emergencySigns": [
+    "Massive haematemesis or melaena from variceal bleeding — life-threatening emergency requiring immediate resuscitation, IV terlipressin or somatostatin, urgent endoscopy, and antibiotic prophylaxis for bacterial infection.",
+    "Rapid-onset confusion, disorientation, or unresponsiveness in a cirrhotic patient — hepatic encephalopathy requiring urgent lactulose, rifaximin, and investigation for precipitants (infection, GI bleed, electrolyte disturbance).",
+    "Fever, abdominal pain, and worsening ascites — spontaneous bacterial peritonitis (SBP), diagnosed by ascitic neutrophil count above 250 cells/µL; requires IV cefotaxime or ceftriaxone and IV albumin.",
+    "Rapidly worsening jaundice, coagulopathy (INR above 1.5), and encephalopathy — acute-on-chronic liver failure (ACLF) with high 90-day mortality; requires ICU-level care and urgent transplant evaluation."
+  ],
+
+  "causes": [
+    {
+      "cause": "Sustained heavy alcohol consumption",
+      "description": "The dose-threshold relationship for ALD is approximately 40 g ethanol per day (3-4 standard drinks) in men and 20-30 g per day in women for a duration of 10-20 years. Alcohol and its primary metabolite acetaldehyde cause direct hepatocyte toxicity, mitochondrial damage, oxidative stress, and activation of hepatic stellate cells leading to fibrosis. Binge-pattern drinking may be less harmful per unit than sustained daily drinking."
+    },
+    {
+      "cause": "Female sex and body composition",
+      "description": "Women develop more severe liver disease at lower cumulative alcohol doses than men because of lower gastric first-pass alcohol metabolism, higher body fat percentage, and possible estrogen-mediated effects on hepatic inflammation. A woman consuming 20-30 g per day carries equivalent hepatotoxicity risk to a man consuming 40-80 g per day."
+    },
+    {
+      "cause": "Genetic susceptibility factors",
+      "description": "Polymorphisms in alcohol metabolism genes (ADH1B, ALDH2) and in cytokines (TNF-alpha, IL-10, IL-6) modify individual risk. PNPLA3 (patatin-like phospholipase domain-containing protein 3) rs738409 variant is the most strongly associated genetic risk factor for ALD severity, increasing cirrhosis risk approximately 2-3-fold in G allele carriers."
+    },
+    {
+      "cause": "Nutritional deficiency and protein malnutrition",
+      "description": "Heavy drinkers typically have caloric replacement of macronutrients with alcohol, leading to protein, B-vitamin, zinc, and selenium deficiencies. Malnutrition independently worsens hepatic stellate cell activation, impairs hepatocyte regeneration, and is a strong predictor of mortality in alcoholic hepatitis and cirrhosis."
+    },
+    {
+      "cause": "Co-existing liver diseases (viral hepatitis, NAFLD)",
+      "description": "Concurrent hepatitis B or hepatitis C infection synergistically accelerates fibrosis compared with either insult alone. Non-alcoholic fatty liver disease from metabolic syndrome adds steatotic and inflammatory injury. Patients with ALD should be screened for viral hepatitis and metabolic cofactors at diagnosis."
+    },
+    {
+      "cause": "Gut microbiome dysbiosis and increased intestinal permeability",
+      "description": "Alcohol alters the gut microbiome and increases intestinal permeability, allowing bacterial lipopolysaccharides (LPS) to enter the portal circulation and activate hepatic Kupffer cells via TLR4 signaling, amplifying hepatic inflammation. This gut-liver axis mechanism is increasingly recognized as central to ALD pathogenesis."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Heavy alcohol use (>14 units/week women, >21 units/week men)", "category": "modifiable", "description": "Risk is dose-dependent; daily drinking above 40 g (men) or 20 g (women) for over 10 years produces significant hepatic injury in most individuals. Pattern of drinking (sustained daily vs. episodic binge) and type of beverage are less important than cumulative dose." },
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women develop cirrhosis at lower alcohol doses and after shorter drinking histories than men, related to lower gastric ADH activity, higher percentage body fat, and possible hormonal effects. Women represent a growing proportion of ALD presentations and liver transplant candidates." },
+    { "factor": "PNPLA3 rs738409 G allele", "category": "genetic", "description": "The most common known genetic modifier of ALD risk; the GG genotype increases cirrhosis risk 2-3-fold in heavy drinkers. Present in approximately 20-25% of European and higher proportions of Hispanic populations. Not clinically tested routinely but valuable in research stratification." },
+    { "factor": "Concurrent hepatitis B or hepatitis C infection", "category": "modifiable", "description": "Viral hepatitis co-infection doubles the rate of cirrhosis progression in ALD. All patients with ALD should be screened for HBV and HCV; antiviral treatment for HCV achieves cure and reduces fibrosis progression even in the context of ongoing alcohol use, though abstinence remains essential." },
+    { "factor": "Obesity and metabolic syndrome", "category": "modifiable", "description": "BMI above 30 doubles the risk of cirrhosis from alcohol compared with normal-weight drinkers. Steatosis from metabolic syndrome provides additive substrate for alcoholic hepatitis and accelerates fibrosis." },
+    { "factor": "Protein-calorie malnutrition", "category": "modifiable", "description": "Malnutrition, present in 80-100% of patients with alcoholic hepatitis at hospital admission, is an independent predictor of 30-day and 6-month mortality. Nutritional support (enteral nutrition 1,500-2,000 kcal/day targeting 1.2-1.5 g protein/kg/day) is a first-line intervention." },
+    { "factor": "Tobacco smoking", "category": "modifiable", "description": "Smoking accelerates hepatic fibrosis independently of alcohol, worsens portal hypertension, and substantially increases the risk of hepatocellular carcinoma in patients with ALD cirrhosis. All ALD patients should be encouraged to stop smoking." }
+  ],
+
+  "affectedDemographics": [
+    "Historically male predominance (2:1 for cirrhosis), but the male-to-female gap is narrowing as alcohol consumption patterns among women have increased over the past 20 years.",
+    "Peak age for alcoholic cirrhosis presentation is 45-65 years after 15-25 years of heavy drinking; alcoholic hepatitis may present at any adult age including in the third and fourth decades.",
+    "Hispanic men have a higher prevalence of severe ALD than non-Hispanic white or Black men in US cohort studies, partly explained by higher PNPLA3 risk allele frequency.",
+    "Individuals with lower socioeconomic status and educational attainment have higher rates of heavy alcohol use and ALD due to multiple intersecting social determinants.",
+    "Eastern European countries have among the highest liver-cirrhosis mortality rates in the world, driven largely by alcohol consumption patterns."
+  ],
+
+  "diagnosisOverview": "Diagnosis of ALD begins with a clinical history of heavy alcohol use combined with biochemical and imaging evidence of liver disease. The characteristic blood profile is elevated AST and ALT with an AST:ALT ratio above 2 (and usually below 10), elevated GGT (often disproportionately), elevated total bilirubin, prolonged prothrombin time (INR), and thrombocytopenia. Hypoalbuminaemia and hyponatraemia suggest advanced disease. Abdominal ultrasound is the initial imaging study, demonstrating hepatic echogenicity changes (bright liver in steatosis), hepatomegaly, nodularity and splenomegaly in cirrhosis, and ascites. Liver stiffness measurement by transient elastography (FibroScan) non-invasively grades fibrosis with a stiffness above 12-14 kPa indicating advanced fibrosis and above 20-25 kPa suggesting cirrhosis — validated in ALD and recommended by EASL guidelines. Upper GI endoscopy is performed to screen for oesophageal varices in all newly diagnosed cirrhotic patients. Liver biopsy remains the gold standard for histological staging but is reserved for cases where the diagnosis is uncertain, viral hepatitis is co-suspected, or clinical trials require histological endpoints. For alcoholic hepatitis, the Maddrey Discriminant Function (DF = 4.6 × (PT − control) + serum bilirubin) and MELD score guide prognosis and corticosteroid therapy decisions: a DF above 32 or MELD above 20 identifies severe disease with short-term mortality risk above 20-50%.",
+
+  "diagnosticTests": [
+    { "test": "Liver function tests and AST:ALT ratio", "purpose": "Identifies hepatocellular injury pattern; AST:ALT above 2:1 is characteristic of ALD; GGT elevation is a sensitive marker of ongoing alcohol use", "whatToExpect": "Standard blood draw. Results in hours. AST above 8× ULN, bilirubin above 100 µmol/L, and INR above 1.5 constitute severe alcoholic hepatitis biochemically." },
+    { "test": "Abdominal ultrasound", "purpose": "First-line imaging; assesses liver size, echogenicity (fat), nodularity (cirrhosis), splenomegaly, ascites, and portal vein diameter", "whatToExpect": "Probe pressed over the abdomen, 15-20 minutes. No radiation. An experienced sonographer grades the hepatic echotexture and estimates hepatic and splenic size. Results immediately available." },
+    { "test": "Liver stiffness measurement (FibroScan / transient elastography)", "purpose": "Non-invasive fibrosis grading; values above 12 kPa suggest F3-F4 fibrosis in ALD after ruling out acute hepatitis (which artificially elevates stiffness)", "whatToExpect": "A small probe placed over the right flank delivers vibration pulses and measures liver stiffness. Takes 5-10 minutes; no preparation required. Unreliable within 6 weeks of acute alcoholic hepatitis." },
+    { "test": "Upper GI endoscopy", "purpose": "Screens for oesophageal and gastric varices in all newly diagnosed cirrhotic patients; guides primary prophylaxis decision (band ligation or beta-blocker)", "whatToExpect": "Sedated or unsedated scope procedure, 10-15 minutes. The endoscopist grades variceal size and presence of red wale signs that predict imminent bleed risk." },
+    { "test": "Maddrey Discriminant Function and MELD score calculation", "purpose": "Risk stratification in acute alcoholic hepatitis; DF ≥32 or MELD ≥20 defines severe disease with >20% 90-day mortality and determines eligibility for corticosteroid therapy", "whatToExpect": "Calculated from serum bilirubin, prothrombin time, and creatinine — no additional tests beyond routine blood draw. Online calculators are widely available." },
+    { "test": "Liver biopsy (percutaneous or transjugular)", "purpose": "Gold-standard histological staging; confirms diagnosis, grades inflammation and fibrosis, and excludes alternative causes when clinical diagnosis is uncertain", "whatToExpect": "Transjugular biopsy preferred in coagulopathic patients. A needle is passed under ultrasound guidance (percutaneous) or via neck vein (transjugular). Requires 4-6 hours observation post-procedure. Histology available in 3-5 days." }
+  ],
+
+  "treatmentOverview": "The cornerstone of ALD treatment at all stages is alcohol abstinence — the only intervention proven to stop fibrosis progression, partially reverse fatty liver and early fibrosis, and substantially improve survival. For mild-to-moderate ALD, structured alcohol treatment programs (brief intervention, motivational interviewing, naltrexone, acamprosate, or baclofen for relapse prevention) are combined with nutritional rehabilitation and treatment of co-existing viral hepatitis. For severe alcoholic hepatitis (DF ≥32 or MELD ≥20), the EASL 2018 and ACG 2018 Clinical Practice Guidelines recommend oral prednisolone 40 mg/day for 28 days, with response assessed by the Lille score at Day 7; a Lille score above 0.45 indicates non-response and the steroid is discontinued. The STOPAH trial (UK, 2015) confirmed prednisolone reduces 28-day mortality but not 90-day mortality compared to placebo; no additive benefit with pentoxifylline. Enteral nutrition (1,500-2,000 kcal/day, 1.2-1.5 g protein/kg/day) is a mandatory first-line measure in all hospitalized patients regardless of corticosteroid use. For decompensated alcoholic cirrhosis, management follows standard portal hypertension care: non-selective beta-blockers (propranolol, carvedilol) or band ligation for variceal prophylaxis; diuretics (spironolactone 100-400 mg, furosemide 40-160 mg) for ascites; rifaximin 550 mg twice daily for secondary prevention of hepatic encephalopathy; regular large-volume paracentesis for refractory ascites; and liver transplantation for selected patients who achieve sustained sobriety.",
+
+  "medicalTreatments": [
+    { "name": "Alcohol abstinence — the primary and most effective intervention", "description": "Complete alcohol cessation reverses fatty liver within 4-6 weeks, reduces hepatic inflammation, and — at Metavir F1-F3 stage — significantly reduces fibrosis progression. Abstinence combined with addiction treatment reduces 5-year mortality by approximately 60% in patients with cirrhosis compared to continued drinking.", "effectiveness": "Fatty liver reversal in 90% within 6 weeks; reduction in cirrhosis-related mortality by 60% at 5 years in abstinent patients versus continued drinkers" },
+    { "name": "Prednisolone (40 mg/day orally for 28 days) for severe alcoholic hepatitis", "description": "Reduces hepatic inflammatory cytokines and improves short-term bilirubin trajectory. Lille score at Day 7 (using bilirubin response) determines continuation: Lille score below 0.45 indicates response; above 0.45 indicates non-response and prednisolone is stopped.", "effectiveness": "28-day mortality reduction from 34% to 27% (absolute reduction 7%) in the STOPAH RCT; no significant 90-day benefit; response rate approximately 50-60%" },
+    { "name": "Enteral nutrition (1,500-2,000 kcal/day, protein 1.2-1.5 g/kg/day)", "description": "First-line treatment for malnutrition in all hospitalized ALD patients; improves liver regeneration, reduces infection risk, and lowers 6-month mortality. Nasogastric feeding is used if oral intake is inadequate.", "effectiveness": "6-month mortality reduction of approximately 30-40% in malnourished alcoholic hepatitis patients in controlled trials; comparable short-term survival benefit to corticosteroids in some series" },
+    { "name": "Rifaximin (550 mg twice daily) for hepatic encephalopathy prevention", "description": "Non-absorbed oral antibiotic that reduces gut ammonia production by suppressing urease-producing bacteria. Used for secondary prophylaxis of overt hepatic encephalopathy in cirrhotic patients. Added to lactulose 15-30 mL twice to three times daily (titrated to 2-3 soft stools per day).", "effectiveness": "Risk of overt hepatic encephalopathy recurrence reduced by 58% versus placebo in RFHE1-301 trial; hospitalisation reduced by 50%" },
+    { "name": "Non-selective beta-blockers (propranolol 40-80 mg twice daily; carvedilol 6.25-12.5 mg daily) for variceal prophylaxis", "description": "Reduce portal pressure by decreasing cardiac output (beta-1) and splanchnic vasoconstriction (beta-2). Used for primary prophylaxis in medium-to-large varices and secondary prophylaxis after variceal bleed, alongside band ligation.", "effectiveness": "First variceal bleed risk reduced by 40-50%; meta-analysis of 11 RCTs shows benefit across non-selective beta-blockers" },
+    { "name": "Spironolactone (100-400 mg/day) plus furosemide (40-160 mg/day) for ascites", "description": "Spironolactone counteracts aldosterone-driven sodium retention; furosemide provides additional tubular sodium excretion. Titrated to achieve weight loss of 0.5 kg/day in non-oedematous and 1 kg/day in oedematous patients. Serum sodium, potassium, and creatinine monitored weekly initially.", "effectiveness": "Complete ascites response in 60-70% at 4-6 weeks; partial response in additional 15-20%; albumin infusions added for tense or refractory ascites" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Transjugular intrahepatic portosystemic shunt (TIPS)", "description": "An expandable metallic stent placed between the portal and hepatic veins via jugular vein access to decompress portal hypertension. Used for refractory ascites not controlled by diuretics and large-volume paracentesis, and for recurrent variceal bleeding after pharmacological and endoscopic failure.", "successRate": "Ascites control in 70-80% at 12 months; variceal rebleed rate reduced to 10-15%; encephalopathy complicates 30-40% of cases" },
+    { "name": "Liver transplantation", "description": "Definitive treatment for end-stage ALD. Most centres historically required 6 months of abstinence before listing (the 6-month rule), though evidence for this threshold is weak. Selected patients with severe alcoholic hepatitis not responding to corticosteroids are now considered for early transplant at specialist centres following the French ACCELERATE-AH criteria.", "successRate": "5-year survival after liver transplantation for ALD of 75-85% — comparable to transplantation for other indications; sustained sobriety achieved in 70-80% of transplant recipients at 5 years" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "N-acetylcysteine (NAC) as adjunct in alcoholic hepatitis", "description": "A small French RCT (Nguyen-Khac 2011) showed improved 30-day but not 90-day survival when NAC was added to prednisolone in severe alcoholic hepatitis. Not yet in mainstream guidelines but may provide incremental benefit in units that use it as an adjunct to steroids." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "alcohol-use-disorder-treatment",
+    "liver-transplantation"
+  ],
+
+  "whySeeSpecialist": "Hepatologist involvement is mandatory for decompensated ALD, severe alcoholic hepatitis, and cirrhosis. Assessment by an addiction medicine specialist is equally critical because abstinence is the single most effective treatment, and pharmacotherapy plus psychosocial support doubles the probability of sustained sobriety. Transplant hepatology assessment should be initiated early in patients with Meld scores above 15 to allow adequate evaluation time.",
+  "doctorSelectionGuide": "Seek a hepatologist at a centre with a multidisciplinary liver team including nutrition, addiction medicine, and a liver transplant program. For severe alcoholic hepatitis, admission to a hospital with intensive care, renal replacement therapy, and TIPS capability is optimal. The clinical outcome differences between high- and low-volume hepatology centres for ALD are substantial.",
+
+  "hospitalCriteria": [
+    "Hepatology unit with intensive care capability for severe alcoholic hepatitis and ACLF",
+    "Endoscopy unit for variceal screening and band ligation",
+    "Interventional radiology for TIPS placement",
+    "Liver transplant program or formal referral pathway",
+    "Addiction medicine or alcohol liaison service"
+  ],
+  "keyFacilities": [
+    "Tertiary hepatology centres with liver transplant programs",
+    "Alcohol use disorder treatment services co-located with liver services",
+    "Nutrition support teams experienced in cirrhotic malnutrition",
+    "Intensive hepatology care units for ACLF management",
+    "Palliative care teams for end-stage liver disease"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain alcohol consumption below UK NICE/AHA guidelines: no more than 14 units per week for both men and women, spread across at least 3 days, with at least 2 alcohol-free days per week.",
+    "Seek addiction medicine support or a brief intervention programme if alcohol use exceeds safe limits — naltrexone, acamprosate, and baclofen are pharmacological aids to abstinence with proven efficacy.",
+    "Screen and vaccinate against hepatitis B in drinkers without protective immunity — preventing co-infection reduces cumulative hepatic insult.",
+    "Treat obesity and metabolic syndrome to reduce the additive steatotic burden on an already alcohol-injured liver.",
+    "Achieve hepatitis C cure with direct-acting antiviral therapy if co-infected — even continued alcohol use, sustained virological response slows fibrosis progression."
+  ],
+
+  "lifestyleModifications": [
+    "Achieve and maintain complete alcohol abstinence — the single most important intervention at every stage from fatty liver to cirrhosis.",
+    "Follow an evidence-based dietary plan providing 1,500-2,000 kcal/day with 1.2-1.5 g protein/kg/day; malnutrition is present in nearly all hospitalized patients and worsens prognosis independently.",
+    "Stop smoking; tobacco accelerates hepatic fibrosis and increases hepatocellular carcinoma risk 2-3-fold in ALD cirrhosis.",
+    "Engage with structured addiction support — AA, SMART Recovery, or individual therapy — for the strongest long-term abstinence rates.",
+    "Attend surveillance endoscopy as scheduled (every 2 years if no varices at baseline; annually if small varices present) and liver ultrasound every 6 months for hepatocellular carcinoma surveillance in cirrhosis."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein foods (eggs, lean poultry, fish, legumes, dairy) at 1.2-1.5 g/kg/day to maintain muscle mass and support hepatic regeneration",
+      "Complex carbohydrates and fibre (oats, vegetables, whole grains) for steady glycaemic control and gut microbiome support",
+      "Thiamine (vitamin B1) 100 mg daily to prevent Wernicke encephalopathy — mandatory in all ALD patients",
+      "Zinc supplementation 50-220 mg/day zinc sulfate, as deficiency impairs hepatic alcohol dehydrogenase and worsens liver injury",
+      "Calcium and vitamin D supplementation to reduce osteopenia associated with malnutrition and cholestasis"
+    ],
+    "avoid": [
+      "Alcohol completely at all stages of ALD — even small amounts accelerate injury in established disease",
+      "Raw shellfish and sushi in patients with cirrhosis — risk of Vibrio vulnificus infection, which is rapidly fatal in liver disease",
+      "High-sodium foods and processed meats that worsen fluid retention in patients with ascites",
+      "Over-the-counter paracetamol (acetaminophen) above 2 g/day in active drinkers — risk of acute liver failure at doses safe for non-drinkers"
+    ]
+  },
+
+  "exerciseGuidelines": "Moderate aerobic exercise (30 minutes, 5 days per week) is safe and beneficial in stable ALD, reducing sarcopenia, improving insulin resistance, and supporting abstinence. Resistance training helps maintain muscle mass in cirrhotic patients with sarcopenia. Patients with large-volume ascites, active hepatic encephalopathy, or recent variceal bleeding should defer exercise until clinically stabilised.",
+
+  "dailyManagement": [
+    "Maintain complete alcohol abstinence; engage with a dedicated addiction support resource on a regular basis.",
+    "Take thiamine and prescribed nutritional supplements as directed; take lactulose and rifaximin if prescribed for encephalopathy prevention.",
+    "Monitor body weight daily in patients with ascites — weight gain of more than 1 kg/day or new abdominal tightness should prompt same-day medical review.",
+    "Report any confusion, personality change, or reversal of sleep pattern immediately — these may signal early hepatic encephalopathy.",
+    "Attend all scheduled hepatology appointments and surveillance imaging — hepatocellular carcinoma detected at a nodule stage under 2 cm is potentially curable."
+  ],
+
+  "prognosis": "Prognosis is strongly stage- and behaviour-dependent. Alcoholic fatty liver is fully reversible with abstinence; this stage carries no excess mortality. Alcoholic hepatitis mortality depends on severity: mild-to-moderate disease has less than 5% 28-day mortality; severe disease (DF ≥32, MELD ≥20) carries 20-50% 90-day mortality despite corticosteroid treatment. Alcoholic cirrhosis without decompensation (ascites, encephalopathy, variceal bleed) has a 5-year survival of approximately 70% with abstinence but under 35% with continued drinking. Decompensated cirrhosis with MELD scores above 15 has a predicted 3-month mortality above 20%, and transplant evaluation should begin. Liver transplantation in carefully selected ALD patients achieves 5-year survival of 75-85% — comparable to non-ALD indications. The risk of hepatocellular carcinoma in ALD cirrhosis is approximately 1-2% per year; semi-annual ultrasound surveillance is mandatory.",
+
+  "recoveryTimeline": "Fatty liver reverses within 4-6 weeks of abstinence. Alcoholic hepatitis inflammatory markers improve over 2-4 weeks with treatment. Fibrosis at F1-F3 may improve over 12-24 months of sustained abstinence on liver stiffness assessment. Cirrhosis is irreversible but portal pressure and synthetic function can improve substantially with abstinence over 6-24 months.",
+
+  "complications": [
+    "Oesophageal variceal haemorrhage: 30% of cirrhotic patients bleed within 2 years of first variceal diagnosis; 6-week mortality approximately 20% with modern treatment; prevented by beta-blockers or band ligation.",
+    "Spontaneous bacterial peritonitis (SBP): infected ascites from bacterial translocation; mortality 20-30% per episode without prompt antibiotic therapy; secondary prevention with norfloxacin 400 mg/day in high-risk patients.",
+    "Hepatic encephalopathy: occurs in 30-45% of cirrhotic patients; ranges from covert cognitive impairment to overt coma; managed with lactulose plus rifaximin; may be triggered by GI bleed, infection, constipation, or electrolyte disturbance.",
+    "Hepatorenal syndrome (HRS): acute kidney injury in the context of advanced cirrhosis from splanchnic vasodilation and renal vasoconstriction; Type 1 HRS (rapid) mortality above 80% without treatment; treated with IV albumin plus vasoconstrictors (terlipressin).",
+    "Hepatocellular carcinoma (HCC): 1-2% annual risk in ALD cirrhosis; detected early by 6-monthly ultrasound with AFP; curative options include radiofrequency ablation, resection, and transplant for Milan Criteria-eligible lesions.",
+    "Acute-on-chronic liver failure (ACLF): sudden decompensation precipitated by bacterial infection, variceal haemorrhage, or alcohol binge; grade 3 ACLF (3+ organ failures) carries 28-day mortality above 75%."
+  ],
+
+  "supportResources": [
+    { "name": "British Liver Trust — Alcoholic Liver Disease", "url": "https://britishlivertrust.org.uk/liver-information/liver-conditions/alcohol-related-liver-disease/", "description": "Evidence-based patient information on ALD stages, treatments, and alcohol support services." },
+    { "name": "Alcoholics Anonymous", "url": "https://www.aa.org/", "description": "International peer-support network for alcohol use disorder providing meeting finder and literature for recovery." },
+    { "name": "American Liver Foundation", "url": "https://liverfoundation.org/liver-diseases/alcohol-related-liver-disease/", "description": "US-based patient organisation with ALD information, clinical trial finder, and physician directory." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "hepatitis-b", "name": "Hepatitis B", "keyDifference": "Hepatitis B causes liver inflammation from HBV viral infection detectable by HBsAg and HBV DNA serology, unrelated to alcohol intake. ALD produces AST:ALT above 2:1, elevated GGT, and history of heavy drinking; hepatitis B shows ALT predominance with a low AST:ALT ratio and positive viral markers. Both can cause cirrhosis, and co-infection synergistically worsens outcomes." },
+    { "slug": "hepatitis-c", "name": "Hepatitis C", "keyDifference": "Hepatitis C is caused by HCV RNA infection, identified by anti-HCV antibody and HCV PCR. ALT is typically elevated with AST:ALT ratio below 1.5. ALD has a characteristic AST:ALT above 2:1, elevated GGT, and heavy drinking history. Co-infection of HCV with alcohol dramatically accelerates cirrhosis — abstinence improves antiviral therapy outcomes." },
+    { "slug": "alcoholic-fatty-liver-k700", "name": "Alcoholic fatty liver", "keyDifference": "Alcoholic fatty liver (K70.0) is the earliest reversible stage of ALD with fat accumulation in hepatocytes, minimal inflammatory activity, and near-normal or mildly elevated transaminases. Alcoholic liver disease unspecified (K70.9) covers the full spectrum including steatohepatitis, fibrosis, and cirrhosis, or cases where histological staging is not yet complete." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "alcohol-use-disorder", "name": "Alcohol use disorder" },
+    { "slug": "alcohol-induced-chronic-pancreatitis-k860", "name": "Chronic pancreatitis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "alcoholic-cirrhosis-of-liver-without-ascites-k7030", "name": "Alcoholic cirrhosis of the liver", "relevance": "The end-stage form of alcoholic liver disease; all management decisions for ALD cirrhosis including transplant assessment apply to this diagnosis." },
+    { "slug": "alcoholic-fatty-liver-k700", "name": "Alcoholic fatty liver", "relevance": "The earliest reversible stage of ALD; staging the position on the ALD spectrum determines prognosis and urgency of intervention." },
+    { "slug": "alcohol-use-disorder", "name": "Alcohol use disorder", "relevance": "The underlying cause of ALD; treatment of alcohol use disorder is inseparable from treatment of the liver disease." },
+    { "slug": "unspecified-cirrhosis-of-liver-k7460", "name": "Cirrhosis of the liver", "relevance": "General cirrhosis management principles (variceal surveillance, HCC screening, nutrition) apply to all patients reaching cirrhotic stage of ALD." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is alcoholic liver disease?",
+      "answer": "Alcoholic liver disease is a spectrum of liver damage caused by sustained heavy alcohol use, progressing from reversible fatty liver through alcoholic hepatitis to irreversible cirrhosis. It accounts for nearly half of all cirrhosis deaths globally. Early stages can fully recover with alcohol abstinence; advanced fibrosis and cirrhosis are permanent.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the stages of alcoholic liver disease?",
+      "answer": "The three main stages are alcoholic fatty liver (reversible steatosis in 80-90% of heavy drinkers), alcoholic hepatitis (acute inflammatory injury with jaundice, fever, and coagulopathy), and alcoholic cirrhosis (permanent scar tissue replacing normal liver architecture). Each stage carries progressively worse prognosis and limited reversibility.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can alcoholic liver disease be reversed?",
+      "answer": "Alcoholic fatty liver reverses completely within 4-6 weeks of abstinence. Mild-to-moderate fibrosis (Metavir F1-F3) can improve significantly over 12-24 months of abstinence. Cirrhosis (F4) is irreversible but its complications can be managed and portal pressure may decrease. Continued drinking after any stage substantially worsens prognosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of alcoholic liver disease?",
+      "answer": "Early disease may cause no symptoms, or only fatigue and right-sided abdominal discomfort. Alcoholic hepatitis produces jaundice, fever, abdominal pain, and nausea. Decompensated cirrhosis causes ascites (swollen abdomen), leg oedema, confusion (hepatic encephalopathy), and vomiting blood from variceal rupture.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is alcoholic liver disease diagnosed?",
+      "answer": "Blood tests show elevated AST and ALT with an AST:ALT ratio above 2:1, high GGT, raised bilirubin, and prolonged prothrombin time. Abdominal ultrasound or FibroScan assesses fatty change and fibrosis. Liver biopsy confirms diagnosis when clinical findings are atypical or competing diagnoses are considered.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is severe alcoholic hepatitis?",
+      "answer": "Severe alcoholic hepatitis is defined by a Maddrey Discriminant Function score of 32 or above, or MELD score above 20, indicating a 90-day mortality risk of 20-50%. It is treated with prednisolone 40 mg/day for 28 days, with response assessed by the Lille score at Day 7. Liver transplantation is considered for non-responders at specialist centres.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you have a liver transplant for alcoholic liver disease?",
+      "answer": "Yes. ALD is the leading indication for liver transplantation in Europe and North America, accounting for 30-40% of transplants. Most centres require a period of documented abstinence and addiction treatment. Carefully selected ALD patients achieve 5-year post-transplant survival of 75-85%, comparable to transplantation for other liver diseases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much alcohol causes liver disease?",
+      "answer": "The risk threshold is approximately 40 g of alcohol per day (3-4 standard drinks) for men and 20-30 g per day for women over 10-20 years. However, genetic factors mean only 8-20% of heavy drinkers develop cirrhosis. Women develop more severe disease at lower doses. No dose of alcohol is safe in established liver disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for alcoholic cirrhosis?",
+      "answer": "5-year survival for compensated alcoholic cirrhosis with abstinence is approximately 70%. With continued drinking, it falls below 35%. Decompensated cirrhosis with MELD above 15 has 3-month mortality above 20% and warrants transplant evaluation. Liver transplantation improves 5-year survival to 75-85% in selected patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does stopping drinking reverse liver damage?",
+      "answer": "Yes, at early stages. Fatty liver reverses within 4-6 weeks of abstinence. Mild fibrosis (Metavir F1-F2) improves significantly over 12-24 months. Cirrhosis does not reverse, but abstinence reduces complications, lowers portal pressure, and extends survival by 60% at 5 years compared with continued drinking.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What blood tests are abnormal in alcoholic liver disease?",
+      "answer": "Characteristic findings are elevated AST and ALT with AST:ALT above 2:1, disproportionately elevated GGT, raised bilirubin, prolonged PT or INR, thrombocytopenia, and low albumin in advanced disease. These patterns distinguish ALD from viral hepatitis (lower AST:ALT ratio) and non-alcoholic fatty liver disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can alcoholic liver disease cause liver cancer?",
+      "answer": "Yes. Alcoholic cirrhosis carries a risk of hepatocellular carcinoma (HCC) of approximately 1-2% per year. All patients with ALD cirrhosis require surveillance with abdominal ultrasound every 6 months to detect HCC at a curable stage. Smoking and hepatitis B or C co-infection further increase this risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What medications are used to treat alcoholic liver disease?",
+      "answer": "Severe alcoholic hepatitis is treated with prednisolone 40 mg/day for 28 days. Cirrhosis complications are managed with propranolol or carvedilol for variceal prophylaxis, spironolactone and furosemide for ascites, and rifaximin plus lactulose for hepatic encephalopathy. Thiamine is given to all patients to prevent Wernicke encephalopathy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hepatic encephalopathy in alcoholic liver disease?",
+      "answer": "Hepatic encephalopathy is brain dysfunction caused by the liver's failure to detoxify ammonia and other neurotoxins from the gut. It ranges from subtle cognitive slowing and sleep disturbance (covert HE) to confusion, disorientation, and coma. It is treated with lactulose titrated to 2-3 soft stools daily and rifaximin 550 mg twice daily to prevent recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is ascites dangerous in alcoholic liver disease?",
+      "answer": "Ascites is a marker of decompensated cirrhosis and is associated with significant 2-year mortality (approximately 50% without transplant). It can be complicated by spontaneous bacterial peritonitis — a serious infection treated with IV antibiotics and albumin. Large-volume paracentesis (draining several litres) provides immediate relief for tense ascites.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Alcoholic liver disease (alcohol-related liver damage)",
+  "regionalNames": [
+    { "name": "Alcohol-related liver disease (ARLD)", "region": "UK clinical usage", "language": "English" },
+    { "name": "Maladie alcoolique du foie", "region": "France and francophone countries", "language": "French" }
+  ],
+
+  "searchTags": [
+    "alcoholic liver disease",
+    "alcohol-related liver disease",
+    "alcoholic hepatitis",
+    "alcoholic cirrhosis",
+    "ALD",
+    "fatty liver from drinking",
+    "liver damage from alcohol",
+    "alcohol liver failure",
+    "ascites liver disease",
+    "hepatic encephalopathy alcohol",
+    "K70.9 liver disease"
+  ],
+
+  "symptomKeywords": [
+    "jaundice from drinking",
+    "swollen belly liver disease",
+    "confusion liver disease",
+    "vomiting blood liver",
+    "fatigue right upper quadrant pain",
+    "liver pain from alcohol",
+    "bruising easily liver"
+  ],
+
+  "metaTitle": "Alcoholic Liver Disease: Symptoms & Treatment | aihealz",
+  "metaDescription": "Alcoholic liver disease: from fatty liver to cirrhosis caused by heavy drinking. Symptoms, diagnosis, prednisolone and transplant criteria reviewed.",
+
+  "keywords": [
+    "alcoholic liver disease",
+    "alcoholic hepatitis treatment",
+    "alcoholic cirrhosis",
+    "ALD stages",
+    "liver disease from alcohol",
+    "alcoholic liver disease symptoms",
+    "MELD score liver",
+    "prednisolone alcoholic hepatitis",
+    "liver transplant alcohol",
+    "hepatic encephalopathy treatment"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "EASL Clinical Practice Guidelines: management of alcohol-related liver disease. 2018. Journal of Hepatology 69(1):154-181.", "url": "https://pubmed.ncbi.nlm.nih.gov/29628280/", "accessedDate": "2026-05-14" },
+    { "title": "Thursz MR, Richardson P, Allison M, et al. (STOPAH trial). 2015. Prednisolone or pentoxifylline for alcoholic hepatitis. New England Journal of Medicine 372(17):1619-28.", "url": "https://pubmed.ncbi.nlm.nih.gov/25901427/", "accessedDate": "2026-05-14" },
+    { "title": "Singal AK, Bataller R, Ahn J, Kamath PS, Shah VH. 2018. ACG Clinical Guideline: Alcoholic Liver Disease. American Journal of Gastroenterology 113(2):175-194.", "url": "https://pubmed.ncbi.nlm.nih.gov/29336789/", "accessedDate": "2026-05-14" },
+    { "title": "Lucey MR, Mathurin P, Morgan TR. 2009. Alcoholic hepatitis. New England Journal of Medicine 360(26):2758-69.", "url": "https://pubmed.ncbi.nlm.nih.gov/19553649/", "accessedDate": "2026-05-14" },
+    { "title": "Roth NC, Qin J, Suk KT, et al. 2019. A systematic review and meta-analysis of donor and recipient outcomes after liver transplant for alcoholic liver disease. Transplantation 103(9):1900-1907.", "url": "https://pubmed.ncbi.nlm.nih.gov/30985578/", "accessedDate": "2026-05-14" },
+    { "title": "WHO Global Status Report on Alcohol and Health 2022. World Health Organization, Geneva.", "url": "https://www.who.int/publications/i/item/9789240060937", "accessedDate": "2026-05-14" },
+    { "title": "Stickel F, Datz C, Hampe J, Bataller R. 2017. Pathophysiology and management of alcoholic liver disease: update 2016. Gut and Liver 11(2):173-188.", "url": "https://pubmed.ncbi.nlm.nih.gov/28274104/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

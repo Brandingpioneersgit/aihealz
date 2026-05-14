@@ -1,0 +1,599 @@
+{
+  "_meta": {
+    "slug": "e-coli-infection",
+    "tier": 1,
+    "headTerm": "e coli infection",
+    "longTailKeywords": [
+      "e coli symptoms",
+      "e coli o157 h7",
+      "shiga toxin e coli",
+      "etec traveler diarrhea",
+      "e coli hemolytic uremic syndrome",
+      "e coli food poisoning",
+      "e coli vs salmonella",
+      "e coli treatment",
+      "stec antibiotics",
+      "e coli prevention"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against Croxen MA Nat Rev Microbiol 2013, CDC E. coli surveillance reports, Tarr PI Lancet 2005 (STEC review), Riddle/IDSA guidelines, and Scheiring J Eur J Pediatr 2008 (HUS). Distinct E. coli pathotypes (STEC, ETEC, EPEC, EIEC, EAEC, UPEC) addressed in classification."
+  },
+  "h1Title": "Escherichia coli Infection: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease",
+  "heroOverview": "Escherichia coli infection refers to disease caused by pathogenic strains of a normally commensal gut bacterium, ranging from mild traveler's diarrhea to lethal hemolytic uremic syndrome. Six diarrheagenic pathotypes — STEC, ETEC, EPEC, EIEC, EAEC, and DAEC — produce distinct clinical syndromes through different virulence mechanisms. Shiga-toxin-producing E. coli (STEC) including O157:H7 causes approximately 265,000 US illnesses per year (CDC) and is the leading bacterial cause of pediatric acute kidney injury, with 5-10% of childhood STEC cases progressing to hemolytic uremic syndrome. ETEC causes 280-400 million traveler's diarrhea episodes globally per year. Treatment is supportive in most cases; antibiotics are pathotype-specific and contraindicated in STEC.",
+  "keyStats": {
+    "prevalence": "STEC: 265,000 US illnesses/year (CDC); ETEC: 280-400 million global cases/year of traveler's diarrhea (WHO)",
+    "demographics": "Children under 5 and adults over 65 have highest STEC complication rates; ETEC affects travelers and residents of low-resource settings broadly",
+    "avgAge": "STEC hemolytic uremic syndrome peaks in children under 5; ETEC affects all ages but documented most in travelers and infants in endemic regions",
+    "globalCases": "WHO and CDC combined estimates: tens of millions of E. coli diarrhea cases annually plus uncounted millions of urinary tract infections from extraintestinal pathogenic E. coli"
+  },
+  "definition": "Escherichia coli infection (ICD-10: A04.0-A04.4 for intestinal infections) covers disease caused by pathogenic strains of Escherichia coli, a Gram-negative facultative anaerobic bacterium that normally colonizes the human colon as a commensal. Pathogenic strains are categorized as either diarrheagenic (causing gastrointestinal disease) or extraintestinal pathogenic E. coli (ExPEC, causing UTI, sepsis, neonatal meningitis). Six diarrheagenic pathotypes are recognized: Shiga-toxin-producing E. coli (STEC, including enterohemorrhagic E. coli or EHEC), enterotoxigenic E. coli (ETEC), enteropathogenic E. coli (EPEC), enteroinvasive E. coli (EIEC), enteroaggregative E. coli (EAEC), and diffusely adherent E. coli (DAEC). Each pathotype expresses distinct virulence factors — Shiga toxin in STEC, heat-labile (LT) and heat-stable (ST) enterotoxins in ETEC, attaching-effacing intimin in EPEC, plasmid-mediated invasion in EIEC, aggregative adherence fimbriae in EAEC. STEC O157:H7 is the most clinically prominent strain worldwide, but non-O157 STEC (O26, O45, O103, O111, O121, O145, the 'Top 6') causes nearly as many US cases. Hemolytic uremic syndrome (HUS) — the triad of microangiopathic hemolytic anemia, thrombocytopenia, and acute kidney injury — develops in 5-10% of pediatric STEC infections and 5-15% of adult STEC cases, with mortality 3-5% in children and up to 20% in elderly. Management spans primary care, emergency medicine, infectious disease, gastroenterology, pediatrics, nephrology (for HUS), and public health.",
+  "typesClassification": [
+    {
+      "type": "Shiga-toxin-producing E. coli (STEC / EHEC, including O157:H7)",
+      "description": "Causes bloody diarrhea typically 3-4 days after exposure to undercooked ground beef, raw produce, unpasteurized milk/cider, petting-zoo animals, or person-to-person spread. Hemolytic uremic syndrome (HUS) complicates 5-10% of pediatric cases. Antibiotics may worsen HUS risk and are contraindicated."
+    },
+    {
+      "type": "Enterotoxigenic E. coli (ETEC)",
+      "description": "The leading cause of traveler's diarrhea — affects 30-40% of visitors to high-risk regions. Produces heat-labile (LT) and/or heat-stable (ST) enterotoxins that cause secretory watery diarrhea without blood, lasting 3-5 days. Empirical azithromycin or fluoroquinolone shortens the illness."
+    },
+    {
+      "type": "Enteropathogenic E. coli (EPEC)",
+      "description": "Causes acute and chronic watery diarrhea predominantly in infants under 2 in low-resource settings. Attaching-effacing lesions on enterocytes via intimin-Tir interaction destroy microvilli. Antibiotic therapy is sometimes used but supportive rehydration is the mainstay."
+    },
+    {
+      "type": "Enteroinvasive E. coli (EIEC)",
+      "description": "Closely related to Shigella and produces a similar dysenteric syndrome — fever, bloody mucoid stools, tenesmus. Less common than other pathotypes in the US but recognized in international outbreaks. Treated similarly to Shigella with fluoroquinolone or azithromycin."
+    },
+    {
+      "type": "Enteroaggregative E. coli (EAEC)",
+      "description": "Increasingly recognized cause of persistent watery diarrhea (over 14 days) particularly in immunocompromised hosts and travelers. Aggregative adherence fimbriae create a biofilm on intestinal epithelium. Associated with environmental enteropathy in children of low-resource settings."
+    },
+    {
+      "type": "Extraintestinal pathogenic E. coli (ExPEC) including uropathogenic E. coli (UPEC)",
+      "description": "Cause UTIs (over 80% of community-acquired cystitis), neonatal meningitis, and adult sepsis. Distinct virulence repertoire from diarrheagenic E. coli — adhesins, capsule, toxins enabling colonization beyond the gut."
+    }
+  ],
+  "primarySymptoms": [
+    "Watery diarrhea starting 1-3 days after a high-risk meal or exposure — characteristic of ETEC traveler's diarrhea and EPEC; typically 4-10 stools per day with crampy abdominal pain.",
+    "Bloody diarrhea starting 3-4 days after exposure to undercooked ground beef, leafy greens, or unpasteurized dairy — STEC pattern; often non-bloody initially then becoming hemorrhagic over 24-48 hours.",
+    "Severe abdominal cramping and tenderness, particularly in the right lower quadrant in STEC infection — sometimes mistaken for appendicitis.",
+    "Low-grade or absent fever in classic STEC — high fever points toward Salmonella, Shigella, or EIEC rather than STEC.",
+    "Nausea, vomiting, and anorexia accompanying the diarrhea, particularly in children with STEC or ETEC.",
+    "Dehydration symptoms — thirst, dry mouth, decreased urine output, lightheadedness, sunken eyes — particularly serious in infants and elderly.",
+    "Dysuria, frequency, urgency, and suprapubic pain in UTI from uropathogenic E. coli (UPEC) — the dominant cause of community-acquired cystitis.",
+    "Tenesmus and small-volume bloody stools in EIEC infection, mimicking Shigella dysentery.",
+    "Persistent diarrhea beyond 14 days, often associated with weight loss and malabsorption, in EAEC infection.",
+    "Pallor, fatigue, decreased urine output, easy bruising, and confusion 5-14 days into a STEC illness — warning signs for hemolytic uremic syndrome requiring immediate hospital evaluation."
+  ],
+  "earlyWarningSigns": [
+    "Bloody diarrhea after eating ground beef, leafy greens, raw sprouts, or unpasteurized dairy — possible STEC infection",
+    "Watery diarrhea starting within 1-3 days of travel to a region with poor sanitation — typical ETEC",
+    "Diarrhea persisting beyond 14 days, especially in immunocompromised or international travelers — consider EAEC",
+    "Pale skin, decreased urine output, easy bruising in a child recovering from bloody diarrhea — HUS warning signs",
+    "Dysuria with frequency in a sexually active or postmenopausal woman — likely UPEC cystitis"
+  ],
+  "emergencySigns": [
+    "Bloody diarrhea with pale appearance, decreased urine output, or easy bruising — possible hemolytic uremic syndrome requiring immediate hospital assessment",
+    "Severe dehydration with confusion, fainting, cold extremities, weak rapid pulse, or no urine output for over 8 hours",
+    "Bloody diarrhea with severe abdominal pain mimicking surgical abdomen — STEC colitis can produce ileus, ischemic-appearing colon, or perforation",
+    "Fever above 38.5°C with rigors and signs of sepsis — possible E. coli bacteremia, especially in immunocompromised hosts",
+    "Severe flank pain with fever and dysuria — possible pyelonephritis with risk of urosepsis",
+    "Neurological signs (seizure, focal deficit) in a STEC patient — central nervous system involvement in severe HUS",
+    "Persistent vomiting preventing oral rehydration in young children or elderly"
+  ],
+  "causes": [
+    {
+      "cause": "Ingestion of undercooked ground beef and other beef products contaminated with STEC",
+      "description": "Cattle are the principal STEC reservoir, harboring the bacteria in their gut without illness. Slaughterhouse contamination of carcass surfaces can disseminate STEC through ground beef, where surface bacteria are mixed throughout. Internal cooking to 160°F (71°C) kills STEC."
+    },
+    {
+      "cause": "Consumption of leafy greens, raw sprouts, or produce contaminated with animal manure",
+      "description": "Multiple US STEC outbreaks since 2006 have been traced to spinach, romaine lettuce, alfalfa sprouts, and cucumbers grown near cattle operations or irrigated with contaminated water. Washing reduces but does not eliminate surface bacteria."
+    },
+    {
+      "cause": "Unpasteurized dairy, juices, and cider",
+      "description": "Raw milk and unpasteurized apple cider/juice can harbor STEC, Salmonella, Campylobacter, and Listeria. Cider outbreaks have been traced to fallen apples contaminated with deer or cattle feces."
+    },
+    {
+      "cause": "Person-to-person fecal-oral transmission",
+      "description": "STEC has a low infectious dose (10-100 organisms) and spreads readily within households, daycare centers, and nursing homes when hand hygiene is inadequate. Secondary transmission accounts for 10-20% of outbreak cases."
+    },
+    {
+      "cause": "Contact with farm animals or petting-zoo exposure",
+      "description": "Direct contact with cattle, sheep, goats, deer, and their environment (fences, soil, water troughs) is a documented STEC risk, particularly for children. Petting-zoo outbreaks recur each year despite hand-washing stations."
+    },
+    {
+      "cause": "Fecally contaminated water in endemic regions (ETEC, EAEC, EPEC)",
+      "description": "Drinking water, recreational water, and water used to wash produce can carry pathogenic E. coli in regions with inadequate sanitation. ETEC traveler's diarrhea is overwhelmingly water- and food-borne."
+    },
+    {
+      "cause": "Ascending uropathogenic E. coli colonization of the urinary tract",
+      "description": "UPEC strains from gut flora ascend the urethra to colonize the bladder and sometimes kidneys. Female anatomy (short urethra, proximity to anus), sexual activity, urinary catheterization, and urinary stasis facilitate ascending infection."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Age under 5 or over 65",
+      "category": "non-modifiable",
+      "description": "Children under 5 have the highest STEC HUS rate (10-15% of infections progress to HUS). Adults over 65 have 4-5x higher STEC fatality from HUS. Both groups also have higher dehydration risk."
+    },
+    {
+      "factor": "Consumption of undercooked ground beef, raw milk, raw sprouts, leafy greens, or unpasteurized juices",
+      "category": "modifiable",
+      "description": "All documented as outbreak vehicles. CDC FoodNet data show these foods responsible for most identified STEC outbreak sources. Cooking and pasteurization reliably eliminate the pathogens."
+    },
+    {
+      "factor": "Travel to areas with poor food and water safety",
+      "category": "modifiable",
+      "description": "ETEC infection rate in travelers to South Asia, sub-Saharan Africa, and parts of Latin America reaches 30-40% during a typical 2-week stay. Risk persists for the duration of travel."
+    },
+    {
+      "factor": "Direct contact with farm animals or petting zoos",
+      "category": "modifiable",
+      "description": "Documented STEC outbreaks repeatedly traced to cattle, sheep, goat, and deer contact. Children are particularly affected. Hand washing reduces but does not eliminate risk."
+    },
+    {
+      "factor": "Immunosuppression (HIV, transplant, biologics, advanced age)",
+      "category": "modifiable",
+      "description": "Higher risk of severe E. coli bacteremia and prolonged diarrhea. ExPEC sepsis is the leading cause of Gram-negative bacteremia in many transplant populations."
+    },
+    {
+      "factor": "Female sex (for UTI)",
+      "category": "non-modifiable",
+      "description": "Women have 50-fold higher UTI incidence than men due to short urethra and proximity to fecal flora. Lifetime UTI risk in women is approximately 50%."
+    },
+    {
+      "factor": "Urinary catheterization and urological instrumentation",
+      "category": "modifiable",
+      "description": "Catheter-associated UTI is the most common healthcare-associated infection in the US, with E. coli the leading pathogen. Each day of catheterization adds approximately 5% risk."
+    },
+    {
+      "factor": "Daycare attendance and institutional living",
+      "category": "environmental",
+      "description": "Close contact and shared bathrooms enable rapid STEC and other diarrheal disease transmission. Outbreaks in daycare centers commonly require facility-wide cohorting."
+    }
+  ],
+  "affectedDemographics": [
+    "STEC: approximately 265,000 US illnesses per year per CDC; O157:H7 accounts for 36%, non-O157 STEC for 64%",
+    "ETEC: 280-400 million traveler's diarrhea cases per year globally; the single most common cause of traveler's diarrhea",
+    "Pediatric HUS from STEC: peak incidence in children under 5, with US incidence of 0.7-1.0 per 100,000 children per year",
+    "UTIs from UPEC: over 80% of community-acquired cystitis cases in women; over 50% of healthcare-associated UTIs",
+    "EAEC: increasingly recognized cause of persistent diarrhea in immunocompromised hosts and travelers; associated with environmental enteropathy in children of low-resource settings"
+  ],
+  "diagnosisOverview": "Diagnosing E. coli infection has been transformed by multiplex PCR stool panels, which simultaneously detect STEC (by Shiga toxin gene), enterotoxigenic E. coli (by LT/ST genes), enteropathogenic E. coli (by eae gene), enteroaggregative E. coli, and enteroinvasive E. coli pathotypes, along with other diarrheal pathogens. Stool culture remains essential for STEC public health surveillance, serotyping, and antibiotic susceptibility. Traditional sorbitol-MacConkey agar culture identifies E. coli O157:H7 by its inability to ferment sorbitol — a feature unique among common E. coli. Non-O157 STEC require Shiga toxin assay or PCR for detection because they ferment sorbitol normally. CDC and IDSA recommendations call for stool Shiga toxin testing in any patient with acute bloody diarrhea, regardless of whether STEC is suspected clinically. Serotyping and whole-genome sequencing of STEC isolates support outbreak investigation. For complicated STEC infection, additional testing includes complete blood count and blood film (looking for schistocytes), LDH (elevated in microangiopathic hemolysis), reticulocyte count, coagulation studies, electrolytes, urea, creatinine, and urinalysis. The CDC defines HUS as the simultaneous occurrence of microangiopathic hemolytic anemia, thrombocytopenia under 150,000, and acute kidney injury (creatinine elevation, oliguria, or hematuria/proteinuria) within 3 weeks of bloody diarrhea. UTI diagnosis combines symptoms with urinalysis (pyuria, nitrites) and urine culture; for uncomplicated cystitis in young women with classic symptoms, empirical treatment without culture is acceptable. Pyelonephritis, complicated UTI, recurrent UTI, and hospital-onset UTI require culture and sensitivity testing. Blood cultures are obtained in suspected sepsis or pyelonephritis.",
+  "diagnosticTests": [
+    {
+      "test": "Multiplex stool PCR panel (BioFire FilmArray GI)",
+      "purpose": "Detects all diarrheagenic E. coli pathotypes (STEC, ETEC, EPEC, EIEC, EAEC) plus other diarrheal pathogens in one sample. Sensitivity over 90% with results in hours.",
+      "whatToExpect": "Single stool sample in standard container; results typically the same or next day. No special preparation."
+    },
+    {
+      "test": "Stool culture on sorbitol-MacConkey agar plus Shiga toxin assay",
+      "purpose": "Identifies E. coli O157:H7 (sorbitol non-fermenter) and Shiga-toxin-producing non-O157 strains. Provides isolates for serotyping, whole-genome sequencing, and susceptibility testing.",
+      "whatToExpect": "Stool sample in standard collection container. Results 48-72 hours. Critical for public health investigation."
+    },
+    {
+      "test": "Complete blood count, blood film, LDH, reticulocyte count, creatinine",
+      "purpose": "Monitor for hemolytic uremic syndrome in patients with confirmed or suspected STEC. Hemolytic anemia, thrombocytopenia, schistocytes on blood film, and rising creatinine establish HUS.",
+      "whatToExpect": "Standard blood draw; results within 1-2 hours at acute care settings. Daily monitoring during high-risk period (days 5-14 of illness)."
+    },
+    {
+      "test": "Urinalysis with microscopy and urine culture",
+      "purpose": "First-line test for UTI. Pyuria (white blood cells), nitrites (E. coli converts urinary nitrate), and bacteriuria support diagnosis. Culture identifies organism and antibiotic sensitivity.",
+      "whatToExpect": "Midstream clean-catch urine sample. Dipstick results immediately; microscopy within an hour; culture 1-3 days."
+    },
+    {
+      "test": "Blood cultures",
+      "purpose": "Identify bacteremia in pyelonephritis, suspected sepsis, immunocompromised hosts, and complicated infections. Important for guiding antibiotic choice in serious illness.",
+      "whatToExpect": "Two sets of blood cultures from separate venipunctures, ideally before antibiotics. Results 1-5 days with preliminary growth often by day 2."
+    },
+    {
+      "test": "Abdominal imaging (CT, ultrasound) in selected cases",
+      "purpose": "Evaluates complications — bowel ischemia or perforation in severe STEC colitis; renal abscess or obstruction in complicated pyelonephritis; suspected appendicitis differential.",
+      "whatToExpect": "CT with IV contrast 15-20 minutes; ultrasound 20-30 minutes. CT delivers radiation; ultrasound does not."
+    }
+  ],
+  "treatmentOverview": "Treatment of E. coli infection depends critically on the pathotype and clinical syndrome. For STEC infection — confirmed or suspected — supportive care alone is the standard. The CDC, IDSA, and AAP all advise against antibiotic use in suspected or confirmed STEC infection because several studies suggest antibiotics may increase the risk of hemolytic uremic syndrome, possibly through induction of Shiga toxin release with bacterial lysis. Antimotility agents (loperamide) are similarly contraindicated. Treatment is intravenous isotonic fluid resuscitation to maintain renal perfusion, careful electrolyte management, and avoidance of anything that might exacerbate HUS. Patients with HUS require hospital admission and often intensive care: red cell transfusion, platelet transfusion (only for active bleeding), dialysis when oliguric, and meticulous fluid balance. Eculizumab is sometimes used in severe atypical HUS but its role in typical Shiga toxin-mediated HUS remains debated. For ETEC traveler's diarrhea, empirical antibiotics shorten illness by approximately 1-1.5 days. First-line is azithromycin 1 g single dose or 500 mg daily for 3 days, particularly for travel to South or Southeast Asia where fluoroquinolone resistance is widespread. Fluoroquinolones (ciprofloxacin 500 mg twice daily for 1-3 days) remain effective in Latin America and Africa. Rifaximin is licensed for ETEC traveler's diarrhea in adults and is a non-absorbed alternative that minimizes systemic side effects. Loperamide can be combined with antibiotics in ETEC for symptomatic relief in non-febrile, non-bloody cases. For EPEC and EAEC, antibiotics are sometimes used (azithromycin, rifaximin, fluoroquinolones) but evidence is mixed; rehydration remains the priority. For UTI from uropathogenic E. coli, uncomplicated cystitis in women is treated with nitrofurantoin 100 mg twice daily for 5 days, trimethoprim-sulfamethoxazole 160/800 mg twice daily for 3 days (if local resistance under 20%), or fosfomycin 3 g single dose; cure rates exceed 90%. Pyelonephritis requires fluoroquinolone or extended-spectrum oral therapy for 7-14 days, or IV antibiotics in severe cases. Multidrug-resistant E. coli (extended-spectrum beta-lactamase producers) is increasingly common and may require carbapenem therapy. Prevention focuses on food and water safety in the case of STEC and ETEC, and hygiene measures plus prompt antibiotic treatment in recurrent UTI.",
+  "medicalTreatments": [
+    {
+      "name": "Supportive care with intravenous isotonic crystalloids for STEC infection",
+      "description": "First-line for STEC. Aggressive volume resuscitation maintains renal perfusion and may reduce risk of HUS progression (Ake 2005 cohort data). Antibiotics and antimotility agents are contraindicated due to potential HUS risk.",
+      "effectiveness": "Reduces severe HUS incidence and mortality compared to permissive fluid strategies; primary intervention in published HUS prevention cohorts."
+    },
+    {
+      "name": "Azithromycin (1 g single dose or 500 mg daily for 3 days) for ETEC traveler's diarrhea",
+      "description": "First-line empirical antibiotic for traveler's diarrhea worldwide, particularly in regions with fluoroquinolone-resistant Campylobacter and ETEC (most of South and Southeast Asia). Effective against most diarrheagenic pathogens.",
+      "effectiveness": "Reduces traveler's diarrhea duration by approximately 30 hours compared with placebo; cure rate over 90% for susceptible ETEC."
+    },
+    {
+      "name": "Ciprofloxacin (500 mg twice daily for 1-3 days) for non-Asian traveler's diarrhea",
+      "description": "First-line empirical therapy for traveler's diarrhea in Latin America, the Caribbean, and Africa where fluoroquinolone resistance is less prevalent. Active against ETEC, Salmonella, Shigella, and most pathogenic E. coli pathotypes.",
+      "effectiveness": "Reduces traveler's diarrhea duration by approximately 24-30 hours; cure rate over 85% for sensitive ETEC."
+    },
+    {
+      "name": "Rifaximin (200 mg three times daily for 3 days) for adult ETEC traveler's diarrhea",
+      "description": "Non-absorbed antibiotic that acts in the gut lumen with minimal systemic side effects. FDA-approved for non-invasive ETEC traveler's diarrhea in adults. Not appropriate for invasive disease, fever, or bloody diarrhea.",
+      "effectiveness": "Reduces traveler's diarrhea duration by approximately 32 hours in randomized trials; comparable to fluoroquinolones in non-invasive cases."
+    },
+    {
+      "name": "Nitrofurantoin (100 mg twice daily for 5 days) for uncomplicated UTI from UPEC",
+      "description": "First-line oral antibiotic for uncomplicated cystitis in women per IDSA 2010 guidelines. Achieves high urinary concentrations with low systemic absorption, reducing collateral effects on gut and vaginal flora.",
+      "effectiveness": "Cure rate 88-94% for uncomplicated cystitis. Resistance remains low for E. coli in most US settings."
+    },
+    {
+      "name": "Fosfomycin (3 g single oral dose) for uncomplicated UTI",
+      "description": "Single-dose alternative to nitrofurantoin or trimethoprim-sulfamethoxazole. Effective against extended-spectrum beta-lactamase (ESBL)-producing E. coli, an increasingly important consideration in recurrent or multidrug-resistant cases.",
+      "effectiveness": "Cure rate 80-90% for uncomplicated cystitis; particularly useful when resistance to other agents is suspected."
+    },
+    {
+      "name": "Ceftriaxone (1-2 g IV daily) or piperacillin-tazobactam for severe pyelonephritis or E. coli bacteremia",
+      "description": "Broad-spectrum IV beta-lactam options for hospitalized patients with severe UTI, urosepsis, or bacteremia. Step-down to oral therapy guided by culture sensitivity.",
+      "effectiveness": "Cure rate 90-95% for sensitive E. coli pyelonephritis. ESBL-producing strains require carbapenems."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Dialysis (hemodialysis or peritoneal dialysis) for STEC-HUS with acute kidney injury",
+      "description": "Required in approximately 50% of children with HUS during the acute phase. Continuous renal replacement therapy is often used in pediatric intensive care. Most children recover renal function within 1-3 weeks of starting dialysis.",
+      "successRate": "Acute mortality 3-5% in children with dialysis support; over 70% recover renal function fully, though 20-30% have long-term proteinuria or chronic kidney disease."
+    },
+    {
+      "name": "Drainage of renal or perinephric abscess in complicated pyelonephritis",
+      "description": "Percutaneous or surgical drainage required when pyelonephritis progresses to abscess formation not resolving with antibiotics alone. Combined with continued IV antibiotic therapy.",
+      "successRate": "Cure rate 85-95% when abscess is adequately drained and antibiotic course completed."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Cranberry products for UTI prevention",
+      "description": "Cochrane review (Jepson 2012, updated 2023) shows modest reduction in recurrent UTI with cranberry capsules or juice — approximately 26% reduction in symptomatic UTI in women with recurrent infection. Not a treatment for active UTI."
+    },
+    {
+      "name": "D-mannose 2 g daily for UTI prevention",
+      "description": "Small randomized trial (Kranjčec 2014) showed reduced UTI recurrence comparable to nitrofurantoin prophylaxis. Mechanism is competitive inhibition of type 1 pilus adhesion to bladder uroplakin. Adjunctive to standard prevention."
+    }
+  ],
+  "whySeeSpecialist": "Refer to infectious disease, gastroenterology, or pediatric nephrology for suspected STEC infection requiring HUS monitoring, persistent diarrhea over 14 days, recurrent UTI, multidrug-resistant E. coli, complicated pyelonephritis, immunocompromised patients with severe infection, or outbreak investigation. Most uncomplicated cases are managed in primary care or emergency departments.",
+  "doctorSelectionGuide": "For suspected STEC, prioritize centers with rapid molecular stool diagnostics and pediatric nephrology access. For recurrent UTI, urology or infectious disease consultation is helpful when standard prevention fails. Travel medicine clinics provide pre-travel counseling and self-treatment plans for ETEC. Look for systems with established care pathways for multidrug-resistant organisms.",
+  "preventionStrategies": [
+    "Cook ground beef to an internal temperature of at least 160°F (71°C); use a meat thermometer rather than relying on appearance",
+    "Avoid raw or unpasteurized milk, soft cheese from raw milk, and unpasteurized apple cider or juice",
+    "Wash all produce thoroughly, especially leafy greens and sprouts; avoid raw sprouts in vulnerable populations (children, pregnancy, immunocompromise)",
+    "Wash hands with soap and water after using the toilet, changing diapers, and contact with farm animals, especially before eating or preparing food",
+    "When traveling, drink only bottled, boiled, or properly filtered water; avoid ice and raw foods that may have been washed in contaminated water",
+    "Use catheters only when essential and remove as soon as possible — each catheter-day adds approximately 5% UTI risk",
+    "Empty bladder after sexual intercourse to reduce UTI risk in women; avoid spermicides in recurrent UTI"
+  ],
+  "lifestyleModifications": [
+    "Maintain aggressive oral rehydration during any diarrheal illness — use WHO oral rehydration solution rather than plain water",
+    "Avoid antimotility drugs (loperamide) in bloody diarrhea, fever, or suspected STEC",
+    "Watch for HUS warning signs after STEC infection: pallor, decreased urine output, bruising, fatigue — return immediately if these develop",
+    "Complete the prescribed antibiotic course for UTI even after symptoms resolve",
+    "Drink adequate fluids (1.5-2 L daily) to support urinary tract health and reduce stagnation",
+    "Practice front-to-back wiping after toileting to reduce fecal-urethral transmission of E. coli"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Oral rehydration solution during acute diarrheal illness",
+      "Bland complex carbohydrates (rice, toast, oatmeal) during recovery",
+      "Bananas and other potassium-rich foods to replace electrolytes lost in diarrhea",
+      "Yogurt with live cultures — modest evidence for shortening diarrhea duration",
+      "Cranberry products or D-mannose for recurrent UTI prevention (adjunctive, modest effect)"
+    ],
+    "avoid": [
+      "Raw or undercooked ground beef, raw milk, soft unpasteurized cheese, raw sprouts, and unpasteurized juices",
+      "Caffeine and alcohol — worsen dehydration",
+      "Antimotility agents (loperamide) in any bloody diarrhea or suspected STEC",
+      "Foods high in fat or fiber during acute diarrhea — delays gut recovery",
+      "Spermicidal contraceptive products in women with recurrent UTI"
+    ]
+  },
+  "exerciseGuidelines": "Rest during acute diarrheal illness and for 24-48 hours after symptom resolution. Vigorous exercise during dehydration is hazardous. Light activity may resume as fluid intake catches up with losses. Recovery from severe HUS may require weeks to months before return to normal physical activity.",
+  "dailyManagement": [
+    "Sip oral rehydration solution continuously during diarrheal illness",
+    "Watch for signs of HUS during the 5-14 day window after STEC infection — pale skin, decreased urine output, easy bruising",
+    "Take antibiotics for UTI exactly as prescribed and finish the full course",
+    "Wash hands thoroughly after every bathroom visit and before preparing food",
+    "Use clean water for drinking, cooking, and washing produce when traveling"
+  ],
+  "prognosis": "Most E. coli infections resolve completely with supportive care or appropriate antibiotics. Uncomplicated UTIs cure in 88-94% with first-line therapy; ETEC traveler's diarrhea resolves in 3-5 days with empirical antibiotics. STEC infection without HUS resolves in 5-10 days. The major prognostic story centers on STEC-associated hemolytic uremic syndrome: acute mortality is 3-5% in pediatric HUS and up to 20% in elderly HUS, with most deaths from cardiovascular, neurological, or pulmonary complications during the acute phase. Among children who survive acute HUS, approximately 70% recover renal function fully; 20-30% develop long-term proteinuria, hypertension, or chronic kidney disease, and 3-5% progress to end-stage renal disease requiring dialysis or transplant within 10 years. Long-term neurological sequelae (seizures, behavioral changes) occur in 5-10% of severe HUS survivors. Adult HUS is less common but carries worse mortality. UTI from uropathogenic E. coli has excellent prognosis with appropriate antibiotics, though recurrence rates exceed 25% in women within 6 months of an initial UTI. Multidrug resistance — particularly ESBL and carbapenem-resistant E. coli — is an increasingly important determinant of outcome, with limited treatment options and higher mortality in resistant infections.",
+  "recoveryTimeline": "ETEC traveler's diarrhea: 3-5 days with antibiotics, 5-7 days without. STEC infection: 5-10 days of diarrhea; HUS, if it develops, declares itself within days 5-14 of illness and requires hospital care for 2-6 weeks. Uncomplicated UTI: symptom relief within 24-48 hours of starting effective antibiotics. Pyelonephritis: 7-14 days for full clinical recovery; recheck urine culture 1-2 weeks after treatment completion. Recovery from HUS-associated acute kidney injury takes weeks to months; long-term renal monitoring is required.",
+  "complications": [
+    "Hemolytic uremic syndrome (HUS) following STEC infection — affects 5-15% of cases, with acute kidney injury, hemolytic anemia, and thrombocytopenia; requires hospital care including dialysis in approximately half",
+    "Chronic kidney disease, hypertension, and proteinuria as long-term sequelae of HUS in 20-30% of pediatric survivors",
+    "Bowel ischemia, perforation, or toxic megacolon in severe STEC colitis — surgical management may be required",
+    "E. coli bacteremia and sepsis from extraintestinal pathogenic strains — particularly in immunocompromised hosts",
+    "Pyelonephritis, renal abscess, and emphysematous pyelonephritis (especially in diabetics) from ascending UPEC",
+    "Neonatal E. coli sepsis and meningitis — second-leading cause of neonatal sepsis and bacterial meningitis after Group B Streptococcus",
+    "Multidrug-resistant infection from ESBL or carbapenem-resistant strains — limited treatment options and higher mortality"
+  ],
+  "supportResources": [
+    {
+      "name": "CDC — E. coli",
+      "url": "https://www.cdc.gov/ecoli/",
+      "description": "Authoritative US guidance on diagnosis, treatment, prevention, and current outbreaks."
+    },
+    {
+      "name": "FoodSafety.gov",
+      "url": "https://www.foodsafety.gov/",
+      "description": "Practical food safety advice and current US food recalls relevant to E. coli prevention."
+    },
+    {
+      "name": "American Society of Nephrology — HUS resources",
+      "url": "https://www.kidney-international.org",
+      "description": "Clinical resources for healthcare providers caring for HUS patients."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "salmonella-infection",
+      "name": "Salmonella Infection",
+      "keyDifference": "Salmonella typically causes fever with watery or bloody diarrhea 12 hours to 4 days after exposure to contaminated poultry, eggs, or reptile contact. STEC tends to produce bloody diarrhea without prominent fever 3-4 days after ground beef or produce exposure. Stool PCR or culture distinguishes specifically."
+    },
+    {
+      "slug": "amebiasis",
+      "name": "Amebiasis",
+      "keyDifference": "Amebiasis produces dysentery with insidious onset over 1-4 weeks plus risk of liver abscess; STEC and other invasive E. coli produce abrupt-onset diarrhea over days. Stool antigen or PCR for E. histolytica vs E. coli pathotype PCR differentiates."
+    },
+    {
+      "slug": "foodborne-illness",
+      "name": "Foodborne Illness",
+      "keyDifference": "Foodborne illness is the umbrella category; pathogenic E. coli is one of several leading causes. Specific pathogen identification via stool PCR or culture directs management — particularly the contraindication of antibiotics in STEC."
+    },
+    {
+      "slug": "hemolytic-uremic-syndrome",
+      "name": "Hemolytic Uremic Syndrome",
+      "keyDifference": "HUS is the most serious complication of STEC infection rather than a separate disease; it presents with anemia, thrombocytopenia, and acute kidney injury 5-14 days into a bloody diarrheal illness. Typical Shiga-toxin HUS follows confirmed STEC; atypical HUS is genetic/complement-mediated and requires different management."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "hemolytic-uremic-syndrome",
+      "name": "Hemolytic Uremic Syndrome"
+    },
+    {
+      "slug": "uti",
+      "name": "UTI"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "hemolytic-uremic-syndrome",
+      "name": "Hemolytic Uremic Syndrome",
+      "relevance": "Most serious complication of Shiga-toxin-producing E. coli infection — 5-15% of STEC cases progress to HUS."
+    },
+    {
+      "slug": "salmonella-infection",
+      "name": "Salmonella Infection",
+      "relevance": "Common differential for foodborne bacterial diarrhea; routinely co-tested on stool PCR panels."
+    },
+    {
+      "slug": "foodborne-illness",
+      "name": "Foodborne Illness",
+      "relevance": "Pathogenic E. coli is one of the leading causes of US foodborne disease and is routinely identified on multiplex stool panels."
+    },
+    {
+      "slug": "uti",
+      "name": "Urinary Tract Infection",
+      "relevance": "Uropathogenic E. coli causes over 80% of community-acquired UTIs — same organism, distinct extraintestinal syndrome."
+    },
+    {
+      "slug": "typhoid-fever",
+      "name": "Typhoid Fever",
+      "relevance": "Differential for febrile traveler with abdominal symptoms; both transmitted via contaminated food and water."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is E. coli infection?",
+      "answer": "E. coli infection is disease caused by pathogenic strains of Escherichia coli, normally a commensal gut bacterium. Six diarrheagenic pathotypes cause illnesses from mild traveler's diarrhea (ETEC) to bloody diarrhea with hemolytic uremic syndrome (STEC/O157:H7).",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do you get E. coli?",
+      "answer": "STEC spreads via undercooked ground beef, raw milk, unpasteurized cider, leafy greens, sprouts, farm animals, and person-to-person fecal-oral contact. ETEC spreads via contaminated food and water during travel. Uropathogenic E. coli ascends from gut flora.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of E. coli infection?",
+      "answer": "STEC: bloody diarrhea with severe abdominal cramps 3-4 days after exposure, often without fever. ETEC: watery diarrhea, cramps, nausea 1-3 days after exposure. UTI: dysuria, frequency, urgency. Severe cases may show dehydration, kidney failure, or sepsis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is E. coli treated with antibiotics?",
+      "answer": "It depends on the type. ETEC traveler's diarrhea responds to azithromycin or ciprofloxacin. UTI is treated with nitrofurantoin, trimethoprim-sulfamethoxazole, or fosfomycin. STEC is NOT treated with antibiotics — they may raise hemolytic uremic syndrome risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hemolytic uremic syndrome?",
+      "answer": "Hemolytic uremic syndrome (HUS) is a severe complication of STEC, with hemolytic anemia, low platelets, and acute kidney injury. It affects 5-15% of STEC cases — especially children under 5 — appearing 5-14 days into illness. Half need acute dialysis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does E. coli infection last?",
+      "answer": "ETEC traveler's diarrhea typically lasts 3-5 days, shorter with antibiotics. STEC infection lasts 5-10 days for the diarrheal phase. HUS, if it develops, requires hospital care for 2-6 weeks and may have long-term kidney consequences. UTI symptoms resolve within 24-48 hours of starting effective antibiotics.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Why can't I take antibiotics for STEC?",
+      "answer": "Studies suggest antibiotics may increase hemolytic uremic syndrome risk in STEC, possibly by triggering Shiga toxin release as bacteria are killed. CDC, IDSA, and AAP advise against antibiotics in STEC. Treatment is supportive — IV fluids and HUS monitoring.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What temperature kills E. coli?",
+      "answer": "Internal cooking to 160°F (71°C) for ground beef and 145°F (63°C) for whole cuts reliably kills E. coli including O157:H7. Pasteurization kills E. coli in milk and juice. Surface washing of produce reduces but does not eliminate contamination.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can E. coli be spread person to person?",
+      "answer": "Yes. STEC has a very low infectious dose (10-100 bacteria) and spreads readily through fecal-oral transmission, particularly within households, daycare centers, and nursing homes. Secondary transmission accounts for 10-20% of outbreak cases. Strict hand hygiene during and after illness is essential.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between E. coli and salmonella?",
+      "answer": "Both cause foodborne diarrhea. STEC produces bloody diarrhea without fever 3-4 days after ground beef or produce exposure. Salmonella produces fever with watery (sometimes bloody) diarrhea 12 hours to 4 days after poultry or egg exposure. Stool PCR distinguishes them.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is traveler's diarrhea?",
+      "answer": "Traveler's diarrhea affects 30-70% of visitors to high-risk regions and is most often caused by enterotoxigenic E. coli (ETEC), with norovirus, Campylobacter, Salmonella, and Shigella also contributing. Self-treatment with azithromycin or ciprofloxacin shortens illness by approximately 1-1.5 days. Aggressive oral rehydration is essential.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Who is at highest risk for severe E. coli?",
+      "answer": "Children under 5 and adults over 65 have the highest STEC complication rates, particularly HUS. Immunocompromised hosts develop more severe bacteremic disease. Pregnant women and patients with chronic illness have higher hospitalization rates. Patients on urinary catheters have markedly elevated UTI risk.",
+      "schemaEligible": false
+    },
+    {
+      "question": "How is E. coli diagnosed?",
+      "answer": "Stool multiplex PCR panels rapidly identify all diarrheagenic E. coli pathotypes including STEC. Stool culture with Shiga toxin testing is recommended for any bloody diarrhea. UTI is diagnosed with urinalysis and urine culture. Blood cultures are added in suspected sepsis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can E. coli be prevented?",
+      "answer": "Yes. Cook ground beef thoroughly (160°F internal); avoid raw milk and unpasteurized cider; wash produce thoroughly; wash hands after toileting, animal contact, and before food preparation; drink safe water when traveling; remove urinary catheters when not essential. Population-level food safety regulation prevents most outbreaks.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Is E. coli infection contagious?",
+      "answer": "STEC, EIEC, and other invasive pathotypes spread person-to-person via fecal-oral contact, especially in households, daycares, and institutions. Strict hand hygiene during and for 48 hours after symptom resolution prevents most secondary cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is uropathogenic E. coli?",
+      "answer": "Uropathogenic E. coli (UPEC) is the subgroup of E. coli adapted to colonize the urinary tract and causes over 80% of community-acquired UTIs. UPEC expresses virulence factors including adhesins (P-fimbriae, type 1 pili), toxins, and iron-acquisition systems that enable ascending infection from the urethra.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can I get a UTI from E. coli more than once?",
+      "answer": "Yes. Recurrent UTI affects approximately 25% of women within 6 months of an initial E. coli UTI. Risk factors include sexual activity, spermicide use, postmenopausal vaginal atrophy, and urinary catheter use. Long-term low-dose antibiotic prophylaxis, vaginal estrogen, cranberry products, and D-mannose can reduce recurrence.",
+      "schemaEligible": false
+    },
+    {
+      "question": "What if my E. coli is multidrug-resistant?",
+      "answer": "Multidrug-resistant E. coli — particularly extended-spectrum beta-lactamase (ESBL) producers — is increasingly common and requires alternative antibiotics. Fosfomycin or nitrofurantoin work for many ESBL UTI cases; carbapenems (meropenem, ertapenem) are used for severe ESBL bacteremia. Infectious disease specialist input is helpful.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Are recalls real warnings about E. coli?",
+      "answer": "Yes. CDC and FDA food recalls for E. coli contamination are based on confirmed outbreaks or surveillance findings. Consumers should check recalled products and discard or return them. CDC outbreak pages and FoodSafety.gov provide updated information during active outbreaks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does the body develop immunity to E. coli?",
+      "answer": "Partial pathotype-specific immunity develops to some E. coli strains, but the diversity of pathogenic strains and ongoing exposure to new variants means repeated infection is possible. ETEC vaccines for travelers are in advanced development; no broadly effective E. coli vaccine is currently licensed for general use.",
+      "schemaEligible": false
+    }
+  ],
+  "simpleName": "E. coli Infection (Escherichia coli)",
+  "regionalNames": [
+    {
+      "name": "ई कोलाई संक्रमण",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Infección por E. coli",
+      "region": "Latin America",
+      "language": "es"
+    },
+    {
+      "name": "Infection à E. coli",
+      "region": "France",
+      "language": "fr"
+    }
+  ],
+  "searchTags": [
+    "e coli",
+    "escherichia coli",
+    "stec",
+    "ehec",
+    "o157 h7",
+    "etec",
+    "epec",
+    "eaec",
+    "shiga toxin",
+    "hemolytic uremic syndrome",
+    "hus",
+    "traveler diarrhea",
+    "uropathogenic e coli",
+    "upec",
+    "uti e coli",
+    "food poisoning"
+  ],
+  "symptomKeywords": [
+    "bloody diarrhea",
+    "watery diarrhea after travel",
+    "stomach cramps",
+    "dysuria",
+    "frequent urination",
+    "fever and diarrhea",
+    "pale child decreased urine",
+    "weight loss diarrhea"
+  ],
+  "metaTitle": "E. coli Infection: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "E. coli infection: STEC O157, ETEC traveler's diarrhea, HUS, and UTI. Symptoms, diagnosis, antibiotic guidance, and prevention reviewed by our medical board.",
+  "keywords": [
+    "e coli infection",
+    "escherichia coli",
+    "stec",
+    "o157 h7",
+    "etec",
+    "traveler diarrhea",
+    "shiga toxin e coli",
+    "hemolytic uremic syndrome",
+    "uti e coli",
+    "uropathogenic e coli",
+    "e coli treatment",
+    "e coli antibiotics",
+    "e coli prevention",
+    "e coli food poisoning"
+  ],
+  "lastReviewed": "2026-05-13",
+  "sources": [
+    {
+      "title": "Croxen MA, Law RJ, Scholz R, et al. Recent advances in understanding enteric pathogenic Escherichia coli. Clinical Microbiology Reviews. 2013;26(4):822-880.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24092857/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Tarr PI, Gordon CA, Chandler WL. Shiga-toxin-producing Escherichia coli and haemolytic uraemic syndrome. Lancet. 2005;365(9464):1073-1086.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15781103/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Shane AL, Mody RK, Crump JA, et al. 2017 Infectious Diseases Society of America Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea. Clinical Infectious Diseases. 2017;65(12):e45-e80.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29053792/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Freedman SB, Xie J, Neufeld MS, et al. Shiga Toxin-Producing Escherichia coli Infection, Antibiotics, and Risk of Developing Hemolytic Uremic Syndrome: A Meta-analysis. Clinical Infectious Diseases. 2016;62(10):1251-1258.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26917812/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Gupta K, Hooton TM, Naber KG, et al. International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases. Clinical Infectious Diseases. 2011;52(5):e103-120.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21292654/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Foxman B. The epidemiology of urinary tract infection. Nature Reviews Urology. 2010;7(12):653-660.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21139641/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Riddle MS, Connor BA, Beeching NJ, et al. Guidelines for the prevention and treatment of travelers' diarrhea: a graded expert panel report. Journal of Travel Medicine. 2017;24(suppl_1):S57-S74.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28521004/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Scallan E, Hoekstra RM, Angulo FJ, et al. Foodborne illness acquired in the United States — major pathogens. Emerging Infectious Diseases. 2011;17(1):7-15.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21192848/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

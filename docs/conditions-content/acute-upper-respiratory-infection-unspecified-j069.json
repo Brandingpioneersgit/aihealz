@@ -1,0 +1,395 @@
+{
+  "_meta": {
+    "slug": "acute-upper-respiratory-infection-unspecified-j069",
+    "tier": 1,
+    "headTerm": "acute upper respiratory infection",
+    "longTailKeywords": [
+      "acute upper respiratory infection symptoms",
+      "URI treatment",
+      "upper respiratory infection vs cold",
+      "acute URI antibiotics",
+      "upper respiratory infection duration",
+      "upper respiratory infection in children",
+      "URTI diagnosis",
+      "acute upper respiratory infection remedies",
+      "URI vs strep throat",
+      "upper respiratory infection complications"
+    ],
+    "primarySpecialty": "Pulmonology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Acute Upper Respiratory Infection: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Pulmonology",
+
+  "heroOverview": "Acute upper respiratory infection (URI) is the most common acute illness in humans, with each adult averaging 2-4 episodes per year and children 6-8 per year according to US CDC surveillance data. The condition encompasses viral infections of the nose, sinuses, pharynx, and larynx — including the common cold, acute pharyngitis, acute sinusitis, and laryngitis — caused most frequently by rhinoviruses (30-50% of all URIs) and coronaviruses (10-15%). More than 200 distinct viral strains can cause the syndrome, which explains why immunity from one episode does not prevent future ones. Symptoms typically resolve in 7-10 days in healthy adults without antibiotics, which are ineffective against the viral causes that account for 85-95% of URIs. Antibiotic stewardship for URI is a global health priority because inappropriate prescribing drives antimicrobial resistance.",
+
+  "keyStats": {
+    "prevalence": "Adults average 2-4 URI episodes per year; children 6-8 per year; accounts for approximately 150 million outpatient visits annually in the US (CDC 2023)",
+    "demographics": "All ages affected; highest frequency in children under 5 years and adults in close-contact occupations (teachers, healthcare workers, childcare providers)",
+    "avgAge": "Peak incidence in children under 5 years; incidence declines with age as immunity accumulates; elderly adults have fewer but potentially more severe episodes",
+    "globalCases": "One of the top two causes of illness globally; estimated 500 billion working/school days lost annually worldwide"
+  },
+
+  "definition": "Acute upper respiratory infection (ICD-10: J06.9) is a self-limited, predominantly viral infection of the upper airway mucosa — encompassing the nasal passages (rhinitis), nasopharynx (nasopharyngitis), pharynx (pharyngitis), larynx (laryngitis), and sinuses (sinusitis) — typically lasting 7-10 days. The ICD-10 code J06.9 designates the unspecified acute upper respiratory infection when the anatomical site of predominant involvement cannot be determined or when multiple sites are simultaneously affected. Rhinoviruses are responsible for 30-50% of all episodes, with adenovirus, respiratory syncytial virus (RSV), parainfluenza, metapneumovirus, and human coronaviruses accounting for most of the remainder. Bacteria — most importantly Streptococcus pyogenes (Group A Streptococcus) causing streptococcal pharyngitis — cause fewer than 10-15% of pharyngitis cases and an even smaller proportion of undifferentiated URIs in adults. The pathophysiology involves viral adherence to mucosal epithelial cell receptors, local replication, recruitment of inflammatory mediators (prostaglandins, bradykinin, interleukins), and the characteristic symptoms of nasal congestion, rhinorrhea, sore throat, cough, and malaise. URIs are primarily managed in primary care by general practitioners and family physicians, and most episodes self-resolve without prescription treatment.",
+
+  "typesClassification": [
+    { "type": "Nasopharyngitis (common cold)", "description": "The classic URI — predominantly nasal and nasopharyngeal involvement with rhinorrhea, nasal congestion, sneezing, low-grade fever, and sore throat. Caused most often by rhinovirus. Symptoms peak at days 2-3 and resolve in 7-10 days in most adults." },
+    { "type": "Acute pharyngitis / tonsillitis", "description": "Sore throat as the predominant symptom, caused by viral agents (adenovirus, Epstein-Barr virus) in 85-95% of adults and by Streptococcus pyogenes in 5-15% of adults and up to 30% of children. The Centor or McIsaac score helps identify candidates for streptococcal testing." },
+    { "type": "Acute sinusitis (rhinosinusitis)", "description": "Viral sinusitis accompanies most URIs; true acute bacterial sinusitis occurs when symptoms persist beyond 10 days without improvement or worsen after initial improvement. Only bacterial sinusitis benefits from antibiotics." },
+    { "type": "Acute laryngitis", "description": "Involves the larynx and produces hoarseness, voice loss, and a barking cough. The vast majority are viral. Resting the voice and humidified air are the mainstays of management; antibiotics provide no benefit." },
+    { "type": "Acute epiglottitis", "description": "A rare but potentially life-threatening bacterial infection (Haemophilus influenzae type b or Group A Streptococcus) of the epiglottis causing high fever, drooling, muffled voice, and progressive stridor. A distinct emergency subset of URI requiring immediate airway management." }
+  ],
+
+  "primarySymptoms": [
+    "Nasal congestion with mucopurulent or clear rhinorrhea — the most universal URI symptom — typically progressing from watery clear discharge to thicker, yellow-green secretions as the immune response mounts over days 3-5.",
+    "Sore or scratchy throat, often the first symptom, varying from mild irritation to severe pain on swallowing; severe exudative pharyngitis with tonsillar swelling suggests streptococcal or EBV infection.",
+    "Sneezing — repetitive, forceful nasal expulsions triggered by histamine release in the nasal mucosa during viral replication — most pronounced in the first 1-3 days.",
+    "Low-grade fever (typically 37.5-38.5°C) in adults; higher fever up to 39.5°C is more common in children and suggests more extensive viral replication or secondary bacterial infection.",
+    "Headache and facial pressure or fullness from congestion of the paranasal sinuses, usually frontal or maxillary in distribution.",
+    "Dry or productive cough from post-nasal drip irritating the posterior pharynx and upper trachea; cough can persist up to 3 weeks after other symptoms resolve.",
+    "Hoarseness or voice change from laryngeal mucosal edema — usually mild in uncomplicated URI; severe voice loss suggests primary laryngitis.",
+    "General malaise, fatigue, and mild myalgia from systemic cytokine release; typically not as disabling as the profound fatigue of influenza.",
+    "Decreased sense of smell (hyposmia) and taste disturbance from nasal mucosal swelling blocking olfactory nerve access — common in rhinovirus infection and, notably, in SARS-CoV-2.",
+    "Watery, red, itchy eyes (conjunctivitis) accompanying adenoviral URI — helps distinguish adenovirus from rhinovirus."
+  ],
+
+  "earlyWarningSigns": [
+    "Fever above 39°C lasting more than 3 days, or a fever that resolves then recurs — raises concern for secondary bacterial sinusitis, otitis media, or pneumonia.",
+    "Unilateral facial pain and tenderness over the maxillary or frontal sinuses persisting beyond 10 days without improvement — suggests bacterial superinfection rather than viral sinusitis.",
+    "Severe, worsening sore throat with odynophagia (pain on swallowing) to the degree that the patient cannot swallow fluids — warrants urgent throat swab for streptococcal testing or urgent assessment.",
+    "Ear pain or decreased hearing developing during a URI — suggests acute otitis media, particularly in young children, requiring evaluation.",
+    "Purulent eye discharge combined with sore throat and fever in a school-age child — the triad classically associated with adenoviral pharyngoconjunctival fever."
+  ],
+
+  "emergencySigns": [
+    "Stridor (high-pitched inspiratory noise) or respiratory distress in a child or adult — indicates epiglottitis, croup, or retropharyngeal abscess, all of which can progress to airway obstruction and require immediate emergency care.",
+    "Drooling, inability to swallow saliva, sitting forward in a 'sniffing' position, and muffled voice with high fever — the classic presentation of epiglottitis requiring immediate airway management.",
+    "Trismus (inability to open the mouth fully) with unilateral peritonsillar swelling and muffled 'hot potato' voice — suggests peritonsillar abscess requiring emergency drainage.",
+    "High fever above 40°C with stiff neck, severe headache, and photophobia during a URI — must exclude bacterial meningitis with urgent lumbar puncture.",
+    "Sudden worsening of breathing with unilateral neck swelling and high fever — raises concern for retropharyngeal abscess, a surgical emergency in children."
+  ],
+
+  "causes": [
+    {
+      "cause": "Rhinovirus (30-50% of URIs)",
+      "description": "The most common cause of the common cold. Over 160 serotypes circulate year-round, peaking in autumn and spring. Rhinoviruses bind to ICAM-1 receptors on nasal epithelial cells, replicate optimally at 33-35°C (lower airway temperature), and trigger local prostaglandin and bradykinin release that produces nasal congestion, rhinorrhea, and sore throat."
+    },
+    {
+      "cause": "Coronavirus (10-15% of URIs)",
+      "description": "Four endemic human coronaviruses (HCoV-229E, HCoV-NL63, HCoV-OC43, HCoV-HKU1) cause 10-15% of common colds, predominantly in winter. SARS-CoV-2 produces a URI syndrome in mild disease that is clinically indistinguishable from other viral URIs without testing."
+    },
+    {
+      "cause": "Adenovirus (5-10% of URIs)",
+      "description": "Adenoviruses cause URI, pharyngoconjunctival fever (URI plus conjunctivitis), and acute respiratory disease predominantly in children and military recruits. Unlike rhinovirus, adenovirus is spread by fecal-oral as well as respiratory routes, making hand hygiene particularly important in institutional settings."
+    },
+    {
+      "cause": "Parainfluenza virus and respiratory syncytial virus (RSV)",
+      "description": "Parainfluenza viruses cause croup (laryngotracheobronchitis) in young children and URI in adults. RSV is the leading cause of bronchiolitis in infants under 2 years and causes URI in healthy older adults; it causes severe disease in the elderly and immunocompromised."
+    },
+    {
+      "cause": "Streptococcus pyogenes (Group A Strep)",
+      "description": "The most important bacterial cause of acute pharyngitis, responsible for 5-15% of sore-throat episodes in adults and up to 30% in school-age children. Unlike viral URIs, streptococcal pharyngitis can progress to acute rheumatic fever, streptococcal toxic shock syndrome, or peritonsillar abscess if untreated with appropriate antibiotics."
+    },
+    {
+      "cause": "Influenza and SARS-CoV-2 (when presenting as mild upper respiratory illness)",
+      "description": "Both influenza A/B and SARS-CoV-2 can present as classic URI syndromes, particularly in immunized individuals who develop mild or attenuated disease. Influenza is distinguished by its abrupt onset, higher fever, and marked myalgia; SARS-CoV-2 by anosmia and potential for rapid deterioration in high-risk patients."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Young age (under 5 years)", "category": "non-modifiable", "description": "Children average 6-8 URI episodes per year because of immature humoral immunity, frequent close contact in daycare and schools, and lack of prior antigen exposure to circulating serotypes." },
+    { "factor": "Close-contact occupations or living situations", "category": "environmental", "description": "Teachers, healthcare workers, childcare providers, dormitory students, and military recruits experience significantly higher URI incidence than the general population due to sustained aerosol and fomite exposure." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Smoking impairs mucociliary clearance and innate immune defense in the respiratory mucosa, increasing URI frequency and severity by approximately 1.5-2 fold compared with never-smokers in prospective cohort studies." },
+    { "factor": "Psychological stress and sleep deprivation", "category": "modifiable", "description": "Cohen et al. (NEJM 1991 and JAMA 2012) demonstrated that chronic psychological stress and sleeping fewer than 6 hours per night approximately double the risk of developing a clinical cold after rhinovirus challenge." },
+    { "factor": "Immune suppression", "category": "non-modifiable", "description": "Organ transplant recipients, patients on chemotherapy, HIV-positive individuals with low CD4 counts, and people on high-dose corticosteroids develop more frequent, more severe, and more prolonged URIs with atypical causative agents including RSV, metapneumovirus, and adenovirus." },
+    { "factor": "Season and climate", "category": "environmental", "description": "URI incidence peaks in autumn (September-October) and winter (December-February) in temperate climates, driven by lower absolute humidity that desiccates mucosal defenses, increased indoor crowding, and optimal temperature for rhinovirus replication." },
+    { "factor": "Allergy and atopic disease", "category": "non-modifiable", "description": "Atopic individuals have exaggerated rhinoviral URI responses; asthma exacerbations are triggered by rhinovirus in up to 60-85% of episodes in children. Pre-existing mucosal inflammation may enhance viral attachment and replication." }
+  ],
+
+  "affectedDemographics": [
+    "Children under 5 years: highest frequency, 6-8 episodes per year; daycare attendance doubles URI frequency in the first 2 years of life.",
+    "Adults in healthcare, education, and childcare: 3-5 episodes per year on average, with occupational exposure driving higher-than-average attack rates.",
+    "Adults over 65: fewer episodes (1-2 per year) but higher rates of complications including pneumonia, exacerbation of COPD, and heart failure decompensation triggered by URI.",
+    "Developing nations: URI morbidity is substantially higher from lack of vaccines against preventable causes (influenza, RSV), household air pollution, and malnutrition reducing immune competence."
+  ],
+
+  "diagnosisOverview": "Acute URI is a clinical diagnosis requiring no routine laboratory testing in immunocompetent patients with a typical presentation of nasal congestion, rhinorrhea, sore throat, and mild systemic symptoms lasting under 10 days. Guidelines from the CDC and NICE recommend against routine throat swabs, nasal cultures, or antigen testing in uncomplicated URI. The key clinical question is whether bacterial infection is present, because only Group A Streptococcal pharyngitis and acute bacterial sinusitis require antibiotics. The Centor score (tonsillar exudate, tender anterior cervical adenopathy, fever, and absence of cough) identifies patients at increased risk of streptococcal pharyngitis: a score of 3-4 justifies a rapid antigen detection test (RADT) or throat culture. Rapid streptococcal RADT has sensitivity of 70-90% and specificity of 95-99% — a positive test warrants treatment, a negative test in a high-risk child should be backed up with throat culture. Influenza rapid antigen tests and SARS-CoV-2 PCR or lateral flow tests should be used when those diagnoses have specific management implications — particularly in high-risk patients where antiviral therapy is indicated. Sinus X-rays have no role in diagnosing acute viral rhinosinusitis. CT sinuses is reserved for complications (orbital cellulitis, intracranial extension) or chronic/recurrent sinusitis workup. In children with recurrent URI and adenoidal hypertrophy, adenoid assessment may be warranted. Blood tests (CBC, CRP) are unnecessary in uncomplicated URI but may be used when bacterial sepsis or meningitis is a concern.",
+
+  "diagnosticTests": [
+    { "test": "Centor/McIsaac score assessment", "purpose": "Clinical scoring tool to estimate probability of Group A Streptococcal pharyngitis and guide testing decisions without routine swabbing", "whatToExpect": "The clinician examines the throat and neck, checks for tonsillar exudate, lymph node tenderness, fever, and absence of cough. Scores 0-2 have low streptococcal probability and need no swab; scores 3-4 warrant testing." },
+    { "test": "Rapid Group A Streptococcal antigen test (RADT)", "purpose": "Identifies streptococcal pharyngitis requiring antibiotic treatment in patients with a Centor score of 3-4", "whatToExpect": "A throat swab is taken from the tonsils and posterior pharynx — briefly uncomfortable. Result in 5-10 minutes. Positive result justifies penicillin or amoxicillin; negative result in a low-risk patient needs no further testing." },
+    { "test": "Throat culture for Group A Streptococcus", "purpose": "Reference standard for streptococcal pharyngitis; used to confirm a negative RADT in children at high clinical risk", "whatToExpect": "Same throat swab as RADT. Sent to laboratory; results in 24-48 hours. More sensitive than RADT in children but slower. Largely replaced by RADT in adults." },
+    { "test": "Influenza rapid antigen test or PCR", "purpose": "Identifies influenza A or B when antiviral treatment with oseltamivir is being considered in high-risk patients (age >65, immunocompromised, pregnant)", "whatToExpect": "Nasal or nasopharyngeal swab; rapid test result in 15 minutes with 50-70% sensitivity; PCR more sensitive (>95%) but takes 2-4 hours. Positive result in a high-risk patient justifies oseltamivir within 48 hours of symptom onset." },
+    { "test": "SARS-CoV-2 lateral flow test (antigen) or PCR", "purpose": "Distinguishes SARS-CoV-2 from other viral URIs when management or isolation decisions depend on the result", "whatToExpect": "Nasal swab, self-administered or clinician-performed; lateral flow result in 15 minutes. PCR (higher sensitivity) takes 4-24 hours. Important for hospitalized patients, healthcare workers, and immunocompromised individuals." },
+    { "test": "Monospot test (heterophile antibody) or EBV serology", "purpose": "Identifies infectious mononucleosis (EBV) as the cause when pharyngitis is severe, prolonged, or accompanied by marked lymphadenopathy and splenomegaly", "whatToExpect": "Blood draw. Monospot result in 5-10 minutes with approximately 85% sensitivity in adults. False negatives are common in children under 12; EBV-specific IgM antibodies are more reliable in equivocal cases." }
+  ],
+
+  "treatmentOverview": "Acute viral URI has no specific curative treatment. Management focuses on symptomatic relief while the immune system eliminates the causative virus over 7-10 days. Antibiotics must not be prescribed for viral URI — the WHO and CDC estimate that inappropriate antibiotic prescribing for respiratory infections is among the leading contributors to antimicrobial resistance globally, and broad systematic reviews (Kenealy and Arroll 2013, Cochrane) confirm that antibiotics neither shorten viral URI duration nor prevent bacterial complications in otherwise healthy adults. Symptomatic therapy is effective: oral decongestants (pseudoephedrine) reduce nasal congestion; topical decongestant nasal sprays (oxymetazoline) provide rapid congestion relief but must not be used beyond 3 days to avoid rebound rhinitis medicamentosa. Intranasal saline irrigation improves mucociliary clearance and symptom scores in multiple randomized trials and is recommended by the American Academy of Otolaryngology. Analgesics — paracetamol (acetaminophen) or ibuprofen — reduce fever and throat pain. First-generation antihistamines (chlorphenamine, diphenhydramine) have modest antirhinoviral activity and reduce rhinorrhea and sneezing via anticholinergic mechanisms, though they cause sedation. Vitamin C does not prevent URI in the general population (Cochrane 2013); high-dose zinc acetate lozenges started within 24 hours of symptom onset modestly reduce duration by approximately 33% (Hemilä and Chalker, Cochrane 2015). Streptococcal pharyngitis confirmed by RADT or culture requires a 10-day course of oral penicillin V (or amoxicillin 500 mg twice daily) or, in penicillin allergy, clarithromycin, to prevent rheumatic fever and streptococcal complications. Oseltamivir is indicated for influenza within 48 hours of symptom onset in patients at high risk of complications.",
+
+  "medicalTreatments": [
+    { "name": "Paracetamol / acetaminophen (500-1000 mg every 4-6 hours, max 4 g/day)", "description": "First-line for fever reduction and pain relief from sore throat, headache, and myalgia. Safe in adults, children, and pregnancy. Does not affect viral shedding or duration but significantly improves comfort.", "effectiveness": "Pain NRS reduction of approximately 1.5-2 points vs placebo in multiple trials; equivalent to ibuprofen for fever reduction" },
+    { "name": "Oral decongestants (pseudoephedrine 60 mg every 4-6 hours)", "description": "Alpha-adrenergic agonist that constricts nasal mucosal blood vessels, reducing nasal congestion and improving nasal airflow. Avoid in hypertension, cardiac arrhythmia, and BPH. Phenylephrine at standard oral doses is less effective than pseudoephedrine per FDA 2023 advisory committee review.", "effectiveness": "Cochrane 2012: pseudoephedrine produces statistically significant nasal airflow improvement vs placebo; clinical benefit modest at approximately 15-25% subjective improvement" },
+    { "name": "Topical nasal decongestants (oxymetazoline 0.05%, 2 sprays each nostril twice daily, maximum 3 days)", "description": "Faster onset than oral decongestants; highly effective for nasal blockage. Rebound congestion (rhinitis medicamentosa) develops after more than 3-5 days of use, making strict duration limits essential.", "effectiveness": "Symptom relief superior to oral decongestants for nasal blockage within minutes; do not use beyond 3 days" },
+    { "name": "Intranasal saline irrigation (0.9% or hypertonic 2% saline, 240 mL neti pot or squeeze bottle twice daily)", "description": "Flushes viral particles and inflammatory mediators from nasal passages, reduces mucosal swelling, and improves mucociliary transport. Safe in all ages including young children with age-appropriate devices.", "effectiveness": "King et al. 2010: saline irrigation reduces cold duration by approximately 1.8 days and symptom severity by 35% in children; Cochrane 2015: evidence of modest benefit in adults" },
+    { "name": "Penicillin V (500 mg three times daily for 10 days) or amoxicillin (500 mg twice daily for 10 days) for confirmed GAS pharyngitis", "description": "The only antibiotic indication within undifferentiated URI: confirmed Group A Streptococcal pharyngitis. Penicillin V or amoxicillin are first-line; clarithromycin or clindamycin for penicillin allergy. Treat to eradicate pharyngeal carriage and prevent rheumatic fever.", "effectiveness": "GAS pharyngitis: penicillin reduces fever within 24-48 hours, prevents acute rheumatic fever, and reduces suppurative complications (peritonsillar abscess) — NNT for rheumatic fever prevention approximately 50-100 in developed countries" },
+    { "name": "Zinc acetate lozenges (80-92 mg elemental zinc/day starting within 24 hours of onset)", "description": "Zinc ions inhibit rhinoviral protease activity. Must be formulated as acetate (not gluconate) and started within 24 hours to maximize benefit. Nausea and bad taste are common side-effects limiting adherence.", "effectiveness": "Hemilä and Chalker 2015 Cochrane meta-analysis: high-dose zinc lozenges reduced cold duration by 33% (95% CI 20-45%) in adults" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Honey (1-2 teaspoons, particularly dark buckwheat honey, before bedtime)", "description": "Multiple RCTs in children aged 2-18 years (Paul et al. 2007; Oduwole et al. Cochrane 2018) show honey outperforms placebo, diphenhydramine, and no treatment for nighttime cough severity. Not suitable for infants under 1 year (botulism risk)." },
+    { "name": "Echinacea extracts", "description": "Mixed evidence across preparations — standardized Echinacea purpurea root preparations show modest benefit in some meta-analyses (Karsch-Völk et al. Cochrane 2015), reducing duration by approximately half a day, but results are heterogeneous across product types. Not harmful but evidence does not robustly support routine use." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "antibiotic-therapy",
+    "intranasal-corticosteroid-therapy"
+  ],
+
+  "whySeeSpecialist": "Most acute URIs are managed in primary care without specialist referral. ENT (otolaryngology) referral is warranted for recurrent acute sinusitis (three or more episodes per year), tonsillar hypertrophy causing obstructive sleep apnea, suspected peritonsillar abscess, or any URI complicated by hearing loss or suspected otitis media with effusion lasting beyond 3 months. Infectious disease or pulmonology referral is appropriate for immunocompromised patients with atypical or prolonged URI.",
+  "doctorSelectionGuide": "General practitioners, family physicians, or urgent-care clinicians can manage most acute URIs. For children with very frequent episodes (more than 6 per year), ENT and/or allergy/immunology review is appropriate. Avoid clinicians known to prescribe antibiotics routinely for URI — adherence to antibiotic stewardship is a quality marker in respiratory primary care.",
+
+  "hospitalCriteria": [
+    "Any URI with features suggesting epiglottitis, retropharyngeal abscess, or peritonsillar abscess — these require emergency airway management",
+    "High fever above 39.5°C not responding to paracetamol, with neck stiffness or altered consciousness — must exclude bacterial meningitis",
+    "URI in immunocompromised patients with oxygen saturation below 94% — early hospitalization for observation and antiviral/antimicrobial therapy",
+    "Infants under 3 months with fever and URI — require hospitalization for sepsis workup"
+  ],
+  "keyFacilities": [
+    "Primary care and general practice clinics for routine URI diagnosis and management",
+    "Urgent care and walk-in centers for same-day assessment",
+    "Emergency departments for complicated URI with airway concerns",
+    "ENT outpatient clinics for recurrent or chronic rhinosinusitis"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Wash hands frequently with soap and water for at least 20 seconds, particularly before touching the face — hand hygiene is the single most effective prevention measure against rhinoviral and adenoviral URI.",
+    "Avoid close contact with visibly ill individuals during the first 2-3 days of their illness, when viral shedding and transmission are highest.",
+    "Vaccinate annually against influenza and maintain SARS-CoV-2 vaccination — vaccines significantly reduce the burden of viral URI in high-risk groups and prevent severe disease.",
+    "Keep nasal passages moist with saline spray or adequate indoor humidity (40-50%) during winter months when dry air impairs mucociliary defense.",
+    "Maintain adequate sleep (7-9 hours for adults) and manage chronic psychological stress — both of which have dose-dependent impacts on susceptibility to rhinovirus infection demonstrated in experimental challenge studies.",
+    "Ensure children's daycare and school facilities have adequate ventilation and hand-washing stations — school-based hand-hygiene programs reduce URI incidence in children by approximately 20-30%."
+  ],
+
+  "lifestyleModifications": [
+    "Rest and stay home during the first 2-3 days of illness when fever and rhinorrhea are at their peak — reduces transmission and allows the immune response to work.",
+    "Drink 2-3 L of fluids daily to replace losses from fever, sweating, and mouth breathing, and to thin secretions for easier clearance.",
+    "Use nasal saline irrigation twice daily to clear mucus and reduce nasal congestion without the rebound risk of topical decongestants.",
+    "Avoid tobacco smoke completely during the illness — smoke impairs mucociliary clearance and prolongs URI symptoms by 1-2 days on average.",
+    "Apply mentholated topical preparations (VapoRub on chest and neck) for nighttime symptomatic relief — evidence of modest benefit for cough and congestion in children over 2 years.",
+    "Return to work or school only when fever-free for 24 hours without antipyretics — typically by day 4-5 in uncomplicated URI."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Warm liquids — hot soup, broth, herbal teas, warm water with honey and lemon — reduce nasal congestion by steam inhalation and improve mucociliary flow",
+      "Honey (one to two teaspoons) as a cough suppressant in children over 1 year and adults — supported by multiple randomized trials",
+      "Zinc-containing foods (oysters, red meat, pumpkin seeds, chickpeas) — plausible mechanism of viral protease inhibition, though food sources provide lower zinc concentrations than lozenge doses",
+      "Adequate calories and protein to support the metabolic demands of fever and immune activation"
+    ],
+    "avoid": [
+      "Alcohol — impairs mucociliary function, worsens dehydration, and sedates at doses that may mask worsening symptoms",
+      "Dairy products if they subjectively worsen mucus thickness — evidence is weak but some patients report benefit from temporary avoidance",
+      "Cold drinks and ice cream in patients with severe sore throat — may worsen laryngeal discomfort though not harmful",
+      "Excessive sugar — no proven effect on URI duration but excessive refined sugar may transiently impair neutrophil function in some studies"
+    ]
+  },
+  "exerciseGuidelines": "The 'neck check' rule: mild symptoms above the neck (congestion, mild sore throat) without fever — light exercise such as walking is safe and may modestly improve immune surveillance. Exercise should be avoided with fever above 38°C, severe myalgia, or chest symptoms, as vigorous activity during febrile illness may increase myocarditis risk with certain viral pathogens. Return to full exercise when fever-free and fatigue resolves.",
+
+  "dailyManagement": [
+    "Monitor temperature morning and evening; seek medical care if fever exceeds 39.5°C, lasts more than 3 days, or returns after resolution.",
+    "Perform nasal saline rinses on waking and before bed to reduce congestion and clear viral particles.",
+    "Take paracetamol or ibuprofen at scheduled intervals (rather than only when painful) to maintain consistent symptom control during the acute phase.",
+    "Limit topical decongestant use to a maximum of 3 days; switch to oral pseudoephedrine or saline after day 3.",
+    "Avoid prescribing antibiotics without confirmed streptococcal or bacterial sinusitis indication — document the decision for stewardship.",
+    "If symptoms persist beyond 10 days or worsen after initial improvement, re-evaluate for bacterial sinusitis, streptococcal pharyngitis, or underlying allergy."
+  ],
+
+  "prognosis": "Acute viral URI is self-limited in immunocompetent adults and children, with full resolution in 7-10 days in the vast majority of cases. Rhinoviral colds resolve in a median of 7.4 days; adenoviral URI may persist slightly longer at 10-14 days. Cough is the last symptom to resolve and may persist 3 weeks post-URI as post-infectious bronchial hyperresponsiveness. Complications — acute bacterial sinusitis, acute otitis media, lower respiratory tract extension — occur in approximately 2-5% of URI episodes in healthy adults and somewhat more frequently in young children. Streptococcal pharyngitis untreated or inadequately treated carries a less than 0.3% risk of acute rheumatic fever in developed countries (higher in low-income settings) and less than 1% risk of glomerulonephritis. Mortality from uncomplicated URI is negligible in healthy adults; excess mortality in the elderly and immunocompromised arises from secondary pneumonia or exacerbation of chronic conditions such as COPD, asthma, or heart failure. Frequent childhood URIs do not predict recurrent adult URI — the high childhood frequency reflects immature immunity rather than chronic susceptibility.",
+
+  "recoveryTimeline": "Day 1-2: sore throat, sneezing, nasal irritation. Days 3-5: peak nasal congestion and rhinorrhea; yellow-green discharge is normal and does not indicate bacterial infection. Days 5-7: congestion and discharge begin to resolve; fatigue improves. Days 7-10: most symptoms resolve; residual cough may persist 2-3 weeks. Children recover slightly faster than older adults; smokers and the elderly have a 2-3 day longer average duration.",
+
+  "complications": [
+    "Acute otitis media — occurs in approximately 20% of URI episodes in children under 5 years and 2-3% in adults; presents with ear pain, fever, or hearing loss developing during or after a URI.",
+    "Acute bacterial rhinosinusitis — develops in approximately 2-5% of viral URIs when secondary bacterial infection (Streptococcus pneumoniae, H. influenzae) invades the obstructed sinuses; diagnosed when symptoms persist beyond 10 days without improvement or worsen after initial improvement.",
+    "Lower respiratory tract extension — viral pneumonitis, tracheobronchitis, or secondary bacterial pneumonia affects a small proportion of URI cases; higher risk in smokers, elderly, and COPD patients.",
+    "COPD or asthma exacerbation — rhinovirus is responsible for 60-85% of asthma exacerbations in children and approximately 40% in adults; URIs are the most important trigger for COPD acute exacerbations.",
+    "Peritonsillar or retropharyngeal abscess — rare but severe complications of streptococcal or mixed bacterial pharyngitis causing severe throat pain, trismus, and systemic sepsis requiring urgent surgical drainage.",
+    "Acute rheumatic fever — rare in high-income countries (fewer than 1 case per 100,000 per year) but a leading cause of acquired heart disease in low-income countries when streptococcal pharyngitis is untreated."
+  ],
+
+  "supportResources": [
+    { "name": "CDC — Common Colds: Protect Yourself and Others", "url": "https://www.cdc.gov/antibiotic-use/colds.html", "description": "CDC patient guidance on URI prevention, when antibiotics are and are not appropriate, and symptom management." },
+    { "name": "NHS — Common Cold", "url": "https://www.nhs.uk/conditions/common-cold/", "description": "NHS patient information on cold symptoms, self-care, and when to seek medical attention." },
+    { "name": "American Academy of Family Physicians — URI Patient Education", "url": "https://familydoctor.org/condition/upper-respiratory-infections/", "description": "Patient guide from AAFP covering symptoms, treatment choices, and antibiotic stewardship." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "asthma", "name": "Asthma", "keyDifference": "Asthma causes recurrent episodic wheeze, breathlessness, and nocturnal cough triggered by URI but independent of active viral infection. Spirometry shows reversible airflow obstruction. URI symptoms (rhinorrhea, fever, nasal congestion) are not hallmarks of asthma, though URI is the most common exacerbation trigger. Asthma requires long-term inhaled corticosteroids; URI does not." },
+    { "slug": "acute-bronchitis-unspecified-j209", "name": "Acute bronchitis", "keyDifference": "Acute bronchitis involves the lower respiratory tract (bronchi) with cough as the dominant symptom, often producing mucopurulent sputum, and auscultatory wheezes or rhonchi. URI predominantly affects the upper airway with nasal symptoms. Both are usually viral; both do not require antibiotics in immunocompetent adults, but bronchitis carries higher risk of asthma exacerbation and lower respiratory complications." },
+    { "slug": "copd", "name": "COPD", "keyDifference": "COPD causes chronic dyspnea, productive cough, and airflow limitation on spirometry independent of URI. A viral URI is the most common trigger for COPD acute exacerbations, but COPD diagnosis requires spirometry showing post-bronchodilator FEV1/FVC below 0.70. URI symptoms alone without baseline dyspnea do not indicate COPD." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "copd", "name": "COPD" },
+    { "slug": "acute-bronchitis-unspecified-j209", "name": "Acute bronchitis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "acute-bronchitis-unspecified-j209", "name": "Acute bronchitis", "relevance": "Shares viral etiology and can follow URI when infection spreads to the lower respiratory tract; the most common complication of URI." },
+    { "slug": "asthma", "name": "Asthma", "relevance": "Rhinovirus URI is the leading trigger of acute asthma exacerbations in children and adults; patients with asthma need prompt recognition and management of URI." },
+    { "slug": "copd", "name": "COPD", "relevance": "Viral URI — particularly rhinovirus — triggers approximately 40% of COPD acute exacerbations; influenza vaccination reduces exacerbation-related hospitalizations by 50% in COPD." },
+    { "slug": "pneumonia", "name": "Pneumonia", "relevance": "Bacterial pneumonia is the most serious complication of viral URI, particularly in the elderly, smokers, and immunocompromised patients." }
+  ],
+
+  "faqs": [
+    {
+      "question": "How long does an acute upper respiratory infection last?",
+      "answer": "Most acute URIs caused by rhinovirus resolve in 7-10 days. Adenoviral infections may last up to 14 days. Cough is the last symptom to disappear and can persist for 2-3 weeks after other symptoms resolve without indicating ongoing infection or the need for antibiotics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need antibiotics for an upper respiratory infection?",
+      "answer": "No, unless a bacterial cause is confirmed. Antibiotics are ineffective against the viruses responsible for 85-95% of URIs and do not shorten duration or prevent complications in healthy adults. Antibiotics are only needed for confirmed Group A Streptococcal pharyngitis, acute bacterial sinusitis, or acute otitis media.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the fastest way to recover from an upper respiratory infection?",
+      "answer": "Rest, adequate hydration (2-3 L fluid daily), saline nasal irrigation, and symptomatic relief with paracetamol or ibuprofen are the most effective strategies. Zinc acetate lozenges started within 24 hours of onset reduce duration by about 33%. There is no antiviral drug approved specifically for rhinoviral URI.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I know if my URI is bacterial or viral?",
+      "answer": "Viral URIs predominate (85-95%) and produce nasal congestion, rhinorrhea, mild sore throat, and gradual onset over hours to a day. Bacterial pharyngitis (strep throat) causes severe throat pain, high fever, tonsillar exudate, and absence of cough. A Centor score of 3-4 warrants rapid strep testing to distinguish the two.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can an upper respiratory infection turn into pneumonia?",
+      "answer": "Yes, in a small proportion of cases — approximately 2-5% of URIs progress to lower respiratory tract infection. Risk is higher in elderly adults, smokers, people with COPD, and immunocompromised patients. Warning signs include fever persisting beyond 3 days, shortness of breath, and pleuritic chest pain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between a URI and strep throat?",
+      "answer": "Strep throat is a specific bacterial URI caused by Group A Streptococcus, presenting with severe sore throat, high fever, white tonsillar exudate, and swollen neck lymph nodes without significant nasal symptoms. Viral URI causes runny nose, congestion, and milder sore throat. Strep throat requires penicillin; viral URI does not.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a URI spread and how can I avoid it?",
+      "answer": "Viral URIs spread via respiratory droplets from an infected person's cough or sneeze, and by touching contaminated surfaces then touching the face. Hand washing for 20 seconds with soap, avoiding face-touching, and keeping distance from symptomatic individuals are the most effective prevention measures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is a URI contagious?",
+      "answer": "Yes. Viral URI is most contagious in the first 1-3 days when nasal viral shedding peaks. Infected individuals should stay home from school or work for at least 24 hours after their fever resolves, and avoid close contact with vulnerable people including elderly adults and immunocompromised individuals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can vitamin C prevent a cold?",
+      "answer": "Vitamin C does not prevent colds in the general population. Cochrane 2013 analysis of 29 trials found no significant reduction in cold incidence with routine vitamin C supplementation. A modest reduction in duration (8% in adults, 14% in children) was seen at high doses, but the benefit is small and inconsistent.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What over-the-counter medicines work best for a URI?",
+      "answer": "Paracetamol or ibuprofen for fever and sore throat pain; pseudoephedrine or oxymetazoline spray for nasal congestion (oxymetazoline no more than 3 days); saline nasal irrigation for congestion clearance; first-generation antihistamines (chlorphenamine) for rhinorrhea. Cough suppressants such as dextromethorphan provide modest relief.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I go to the doctor for an upper respiratory infection?",
+      "answer": "Seek medical attention if fever exceeds 39.5°C or lasts more than 3 days, symptoms suddenly worsen after initial improvement, you develop difficulty swallowing, neck stiffness, ear pain, facial pain or pressure persisting beyond 10 days, shortness of breath, or if you are immunocompromised or pregnant.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How many times a year is normal to get a URI?",
+      "answer": "Adults average 2-4 URIs per year; children average 6-8 per year, with daycare attendance adding approximately 3-4 additional episodes. More than 6 URIs per year in adults, or URIs that require hospitalization or prolonged antibiotic courses, warrants evaluation for immunodeficiency or anatomical abnormalities.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise with an upper respiratory infection?",
+      "answer": "Light exercise (walking, gentle yoga) is generally safe if symptoms are mild and above the neck without fever. Vigorous exercise should be avoided with fever above 38°C, marked fatigue, or chest symptoms. The 'neck check' rule: symptoms above the neck — exercise cautiously; symptoms with fever or below the neck — rest.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do nasal decongestant sprays help a URI?",
+      "answer": "Topical oxymetazoline or xylometazoline nasal sprays provide rapid, effective nasal decongestion within minutes. They must not be used for more than 3 consecutive days because prolonged use causes rebound congestion (rhinitis medicamentosa) worse than the original symptom. Saline spray is safe for any duration.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is yellow or green mucus a sign I need antibiotics?",
+      "answer": "No. Yellow or green nasal discharge in the first 7-10 days is a normal part of the immune response to viral infection — colour is caused by neutrophil activity against the virus, not bacteria. Purulent nasal discharge alone does not indicate bacterial sinusitis or justify antibiotics unless symptoms persist beyond 10 days.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Upper respiratory infection (common cold, sore throat, URI)",
+  "regionalNames": [
+    { "name": "Common cold", "region": "US, UK, Australia", "language": "English" },
+    { "name": "URTI", "region": "UK medical abbreviation", "language": "English" },
+    { "name": "Resfriado común / catarro", "region": "Latin America, Spain", "language": "Spanish" },
+    { "name": "सामान्य सर्दी-खांसी / ऊपरी श्वसन संक्रमण", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "upper respiratory infection",
+    "URI",
+    "URTI",
+    "common cold",
+    "acute URI",
+    "sore throat virus",
+    "rhinovirus cold",
+    "nasal congestion runny nose",
+    "upper respiratory infection treatment",
+    "upper respiratory infection antibiotics",
+    "cold flu difference",
+    "strep throat vs cold",
+    "URI duration",
+    "URI in children",
+    "URI no antibiotics"
+  ],
+  "symptomKeywords": [
+    "runny nose congestion",
+    "sore throat nasal discharge",
+    "blocked nose sneezing",
+    "cough after cold",
+    "mild fever sore throat",
+    "yellow mucus cold",
+    "post nasal drip cough"
+  ],
+
+  "metaTitle": "Acute Upper Respiratory Infection: Symptoms & Treatment",
+  "metaDescription": "Acute upper respiratory infection: viral cold, sore throat, cough. When antibiotics are needed, treatment options, and recovery reviewed by our medical board.",
+
+  "keywords": [
+    "acute upper respiratory infection",
+    "URI symptoms",
+    "upper respiratory infection treatment",
+    "common cold treatment",
+    "URI antibiotics",
+    "strep throat vs cold",
+    "URI duration",
+    "URTI",
+    "rhinovirus cold",
+    "URI in children",
+    "URI complications",
+    "upper respiratory infection remedies"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Kenealy T, Arroll B. 2013. Antibiotics for the common cold and acute purulent rhinitis. Cochrane Database Syst Rev (6):CD000247.", "url": "https://pubmed.ncbi.nlm.nih.gov/23733381/", "accessedDate": "2026-05-14" },
+    { "title": "Hemilä H, Chalker E. 2015. Vitamin C for preventing and treating the common cold. Cochrane Database Syst Rev (1):CD000980.", "url": "https://pubmed.ncbi.nlm.nih.gov/25560240/", "accessedDate": "2026-05-14" },
+    { "title": "Hemilä H, Chalker E. 2015. The effectiveness of high dose zinc acetate lozenges on various common cold symptoms: a meta-analysis. BMC Fam Pract 16:24.", "url": "https://pubmed.ncbi.nlm.nih.gov/25888289/", "accessedDate": "2026-05-14" },
+    { "title": "Cohen S, Tyrrell DA, Smith AP. 1991. Psychological stress and susceptibility to the common cold. N Engl J Med 325(9):606-12.", "url": "https://pubmed.ncbi.nlm.nih.gov/1713648/", "accessedDate": "2026-05-14" },
+    { "title": "Hayward G, Thompson MJ, Perera R, Del Mar CB, Glasziou PP, Heneghan CJ. 2015. Corticosteroids for the common cold. Cochrane Database Syst Rev (10):CD008116.", "url": "https://pubmed.ncbi.nlm.nih.gov/26461493/", "accessedDate": "2026-05-14" },
+    { "title": "Centers for Disease Control and Prevention. 2023. Antibiotic prescribing and use: colds and flu. CDC Atlanta.", "url": "https://www.cdc.gov/antibiotic-use/colds.html", "accessedDate": "2026-05-14" },
+    { "title": "Shulman ST, Bisno AL, Clegg HW, et al. 2012. IDSA clinical practice guideline for the diagnosis and management of group A streptococcal pharyngitis. Clin Infect Dis 55(10):e86-102.", "url": "https://pubmed.ncbi.nlm.nih.gov/22965026/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

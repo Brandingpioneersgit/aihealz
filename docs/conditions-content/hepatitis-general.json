@@ -1,0 +1,536 @@
+{
+  "_meta": {
+    "slug": "hepatitis-general",
+    "tier": 1,
+    "headTerm": "hepatitis",
+    "longTailKeywords": [
+      "hepatitis symptoms",
+      "hepatitis types A B C D E",
+      "viral hepatitis treatment",
+      "hepatitis A vaccine",
+      "hepatitis B vaccine",
+      "hepatitis C cure",
+      "autoimmune hepatitis",
+      "alcoholic hepatitis",
+      "acute vs chronic hepatitis",
+      "hepatitis transmission"
+    ],
+    "primarySpecialty": "Infectious Disease",
+    "lastReviewed": "2026-05-13",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Umbrella page covering viral (A/B/C/D/E), autoimmune, alcoholic, and drug-induced hepatitis. Citations cross-verified against WHO Global Hepatitis Strategy 2022-2030, AASLD-IDSA HCV Guidance, EASL HBV 2017, Polaris Observatory, and CDC. Rescues 6 ICD-10 subtypes."
+  },
+
+  "h1Title": "Hepatitis: Symptoms, Causes, Types, and Treatment",
+  "specialistType": "Infectious Disease",
+
+  "heroOverview": "Hepatitis is inflammation of the liver, most commonly caused by hepatitis viruses A, B, C, D, and E, with smaller contributions from autoimmune disease, alcohol, drugs, metabolic dysfunction, and toxins. WHO estimates 354 million people live with chronic hepatitis B or C globally and 1.1 million die each year from cirrhosis and liver cancer caused by these viruses. Acute hepatitis can present with fatigue, jaundice, nausea, and right upper quadrant pain, while chronic disease is often silent until advanced liver damage develops. Hepatitis A and E are preventable through vaccination and safe water; hepatitis B has a highly effective vaccine and lifelong oral antiviral suppression; hepatitis C is now curable in over 95% of patients with 8-12 weeks of direct-acting antivirals.",
+
+  "keyStats": {
+    "prevalence": "354 million people living with chronic HBV (296M) or HCV (58M) globally (WHO 2022)",
+    "demographics": "Hepatitis B: highest prevalence in Western Pacific and Africa; hepatitis C: highest in Eastern Mediterranean and Europe; hepatitis A: common where sanitation is limited",
+    "avgAge": "Acute hepatitis A peaks in children in endemic regions and unvaccinated travelers; chronic HBV and HCV typically diagnosed in adults aged 30-60",
+    "globalCases": "1.1 million hepatitis-related deaths per year (WHO 2022); hepatocellular carcinoma is the major cause of mortality"
+  },
+
+  "definition": "Hepatitis (ICD-10: B15-B19 for viral; K70-K77 for non-viral) means inflammation of the liver, defined biochemically by elevation of hepatocellular enzymes alanine aminotransferase (ALT) and aspartate aminotransferase (AST) and histologically by inflammatory infiltrate and hepatocyte injury. The most common causes are viral: hepatitis A virus (HAV), spread by the fecal-oral route, causes acute self-limited disease; hepatitis B virus (HBV), spread by blood, sexual contact, and mother-to-child transmission, causes both acute and chronic disease; hepatitis C virus (HCV), spread predominantly by blood, causes chronic disease in 75% of those infected; hepatitis D virus (HDV) infects only those with concurrent HBV and accelerates progression; and hepatitis E virus (HEV), spread by contaminated water and pork, causes acute disease with severe outcomes in pregnant women. Non-viral hepatitis includes autoimmune hepatitis (mediated by T-cell attack on hepatocytes), alcoholic hepatitis (from sustained heavy alcohol intake), drug-induced liver injury (from over-the-counter, prescription, and herbal agents), and metabolic dysfunction-associated steatotic liver disease (MASLD) with steatohepatitis. Hepatitis is described as acute if liver inflammation lasts less than 6 months and chronic if it persists beyond that threshold. Progression of chronic hepatitis to cirrhosis, decompensated liver failure, and hepatocellular carcinoma drives the global burden. Hepatology, infectious disease, and gastroenterology jointly manage the condition.",
+
+  "typesClassification": [
+    { "type": "Hepatitis A (HAV)", "description": "Single-stranded RNA picornavirus transmitted by the fecal-oral route. Acute, self-limited illness lasting 4-12 weeks. Does not cause chronic infection. Vaccine-preventable. Approximately 1.5 million symptomatic cases per year globally; case-fatality 0.1-0.3% rising with age and underlying liver disease." },
+    { "type": "Hepatitis B (HBV)", "description": "Partially double-stranded DNA hepadnavirus transmitted by blood, sexual contact, and mother-to-child. Acute infection in adults clears in over 90%; perinatally acquired infection becomes chronic in 90%. Chronic HBV affects 296 million people globally. Vaccine-preventable; chronic infection treatable but rarely curable." },
+    { "type": "Hepatitis C (HCV)", "description": "Single-stranded RNA flavivirus transmitted predominantly by blood. Becomes chronic in 75% of infected adults. Affects approximately 58 million people globally. Curable in over 95% with 8-12 weeks of direct-acting antivirals — the only chronic viral hepatitis with a true cure." },
+    { "type": "Hepatitis D (HDV)", "description": "Defective RNA virus requiring HBV surface antigen to replicate. Coinfects 12-72 million HBV-positive individuals worldwide. Accelerates progression of chronic HBV to cirrhosis and hepatocellular carcinoma. Limited treatment options, with bulevirtide newly approved in Europe." },
+    { "type": "Hepatitis E (HEV)", "description": "Single-stranded RNA hepevirus transmitted by contaminated water (genotypes 1 and 2) and zoonotically by undercooked pork or game meat (genotypes 3 and 4). Acute self-limited disease in most; severe in pregnant women with up to 30% case-fatality in third trimester; chronic infection in immunosuppressed patients." },
+    { "type": "Autoimmune hepatitis", "description": "Chronic immune-mediated liver inflammation with autoantibodies (ANA, ASMA, anti-LKM1), elevated IgG, and characteristic interface hepatitis on biopsy. Responds to corticosteroids and azathioprine in over 80% of patients. Lifetime risk roughly 1 in 6,000." },
+    { "type": "Alcoholic and metabolic-associated hepatitis", "description": "Alcoholic hepatitis follows sustained heavy drinking and can be fatal in severe presentations. Metabolic dysfunction-associated steatohepatitis (MASH) — formerly NASH — affects approximately 5% of adults globally and is now a leading indication for liver transplant in the US." }
+  ],
+
+  "primarySymptoms": [
+    "Profound fatigue lasting weeks, often the dominant complaint and present across all hepatitis types.",
+    "Right upper quadrant abdominal discomfort, ache, or fullness from hepatic capsular distension.",
+    "Nausea, reduced appetite, and a particular aversion to fatty food, often with mild weight loss over weeks.",
+    "Jaundice — yellowing of the skin and the sclera of the eyes — appearing when serum bilirubin exceeds 3 mg/dL, present in 30-50% of symptomatic acute viral hepatitis.",
+    "Dark tea-colored urine and pale, clay-colored stools, reflecting conjugated bilirubin in urine and reduced biliary excretion to the gut.",
+    "Itch (pruritus) across the body, especially in cholestatic forms of hepatitis, sometimes preceding visible jaundice.",
+    "Low-grade fever and joint pain in the prodromal phase of acute viral hepatitis, sometimes mistaken for influenza.",
+    "Most chronic hepatitis is asymptomatic for years — fatigue, vague abdominal symptoms, and abnormal liver tests on routine bloodwork are often the only clues until cirrhosis develops."
+  ],
+
+  "earlyWarningSigns": [
+    "Persistently elevated ALT or AST on routine blood work without an obvious explanation",
+    "Unexplained fatigue lasting more than 4 weeks in someone with risk factors (injection drug use, multiple sexual partners, transfusion before 1992, healthcare exposure, birth in an endemic region)",
+    "Acholic (pale) stools and dark urine appearing together",
+    "New or worsening yellowing of the eyes or skin, especially with recent travel to a region with unsafe water",
+    "Vague right upper quadrant discomfort in adults with alcohol use disorder or metabolic syndrome"
+  ],
+
+  "emergencySigns": [
+    "Confusion, drowsiness, agitation, or asterixis (flapping tremor) — possible hepatic encephalopathy requiring urgent hospital evaluation",
+    "Vomiting blood or passing black tarry stools — possible variceal bleeding requiring emergency endoscopy",
+    "Rapidly progressive jaundice with INR above 1.5 in acute hepatitis — possible acute liver failure requiring transplant center referral",
+    "Severe abdominal swelling (ascites) with fever and abdominal pain — possible spontaneous bacterial peritonitis requiring urgent paracentesis and antibiotics",
+    "Pregnant woman with acute hepatitis in the third trimester — particularly hepatitis E, with high maternal mortality requiring urgent specialist care"
+  ],
+
+  "causes": [
+    {
+      "cause": "Hepatitis A virus infection",
+      "description": "Acquired by ingestion of food or water contaminated with fecal material. Outbreaks occur with contaminated produce, shellfish, or food handlers in non-vaccinated populations. The virus replicates in hepatocytes, causing T-cell-mediated injury and acute hepatitis without chronic carriage."
+    },
+    {
+      "cause": "Hepatitis B virus infection",
+      "description": "Transmitted by exposure to infected blood, semen, or vaginal fluids — through unprotected sex, shared needles, unsafe medical injections, mother-to-child transmission at birth, and rarely transfusion. HBV integrates and persists in hepatocytes, with chronicity rate depending heavily on age at exposure."
+    },
+    {
+      "cause": "Hepatitis C virus infection",
+      "description": "Transmitted predominantly by blood-to-blood contact — injection drug use, transfusion before 1992 routine screening, unsafe medical and tattoo procedures, occasional vertical and sexual transmission. Chronic infection follows in 75% of adults; without treatment, leads to cirrhosis in 15-30% over 20-30 years."
+    },
+    {
+      "cause": "Hepatitis D, E and other viral hepatitides",
+      "description": "Hepatitis D requires HBV surface antigen and infects only HBV-positive individuals, accelerating disease. Hepatitis E spreads by contaminated water (genotypes 1, 2) and zoonotically by pork or game meat (genotypes 3, 4). Other viruses (CMV, EBV, HSV) can cause hepatitis in immunocompromised patients."
+    },
+    {
+      "cause": "Autoimmune attack on hepatocytes",
+      "description": "T-cell-mediated destruction of hepatocytes driven by loss of self-tolerance and association with HLA-DR3 and HLA-DR4 in white populations. Characterized by autoantibodies, elevated IgG, and interface hepatitis on biopsy. Female predominance and bimodal age distribution (peri-adolescent and middle age)."
+    },
+    {
+      "cause": "Alcohol-related liver injury",
+      "description": "Sustained alcohol intake (over 40 g/day in women, 60 g/day in men for years) produces steatosis, oxidative stress, and immune-mediated injury that can manifest as alcoholic hepatitis — sometimes severe and life-threatening, particularly when combined with HCV, MASLD, or HBV."
+    },
+    {
+      "cause": "Drug- and toxin-induced liver injury",
+      "description": "Acetaminophen overdose, antibiotics (amoxicillin-clavulanate, isoniazid), antiepileptics, statins, methotrexate, herbal preparations (kava, green tea extract, comfrey), and dietary supplements are leading causes of drug-induced liver injury. Acute presentation can resemble viral hepatitis."
+    },
+    {
+      "cause": "Metabolic dysfunction-associated steatohepatitis (MASH)",
+      "description": "Hepatic insulin resistance and lipotoxicity drive accumulation of free fatty acids and inflammation in hepatocytes. Now the most rapidly rising indication for liver transplant in the US and projected to overtake HCV as the leading cause of liver-related mortality."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Injection drug use", "category": "modifiable", "description": "Most important modifiable risk factor for hepatitis C transmission, accounting for over 60% of new HCV cases in high-income countries. Also raises HBV and HIV co-infection risk substantially." },
+    { "factor": "Birth in an HBV-endemic region", "category": "non-modifiable", "description": "Adults born in regions with HBV surface antigen prevalence above 2% (Asia, Africa, Pacific Islands, Eastern Europe) have prevalence rates of 5-15%. CDC recommends universal screening of all adults born in these regions." },
+    { "factor": "Multiple sexual partners or unprotected sex", "category": "modifiable", "description": "Raises HBV transmission risk; lesser effect on HCV transmission except with traumatic anal intercourse or HIV co-infection. Condom use and vaccination of partners reduce risk." },
+    { "factor": "Heavy alcohol use", "category": "modifiable", "description": "Daily intake over 30 g for men and 20 g for women raises risk of alcoholic hepatitis and accelerates fibrosis in any underlying liver disease. Abstinence is the single most effective intervention." },
+    { "factor": "Obesity, type 2 diabetes, and metabolic syndrome", "category": "modifiable", "description": "Drive metabolic dysfunction-associated steatohepatitis (MASH). Weight loss of 7-10% can reverse steatohepatitis in clinical trials." },
+    { "factor": "Maternal HBV infection at birth", "category": "non-modifiable", "description": "Without intervention, 70-90% of infants born to HBeAg-positive mothers develop chronic HBV. Universal birth-dose HBV vaccination and HBIG for high-risk infants reduce transmission by over 95%." },
+    { "factor": "Healthcare exposure to blood and body fluids", "category": "occupational", "description": "Needlestick injuries and mucocutaneous exposures raise HBV, HCV, and HIV risk. Universal precautions, vaccination, and post-exposure prophylaxis substantially reduce occupational risk." },
+    { "factor": "Travel or residence in regions with unsafe water and food", "category": "environmental", "description": "Hepatitis A and E are acquired through contaminated water and food. Travelers should be vaccinated for HAV; hepatitis E avoidance relies on water and food safety practices." }
+  ],
+
+  "affectedDemographics": [
+    "WHO estimates 354 million people live with chronic HBV or HCV worldwide (Polaris Observatory; WHO Global Hepatitis Report 2022)",
+    "Highest HBV prevalence in Western Pacific (6.2%) and African (6.1%) regions; lowest in the Americas (0.5%)",
+    "Highest HCV prevalence in Eastern Mediterranean (2.3%) and European (1.5%) regions",
+    "Approximately 1.5 million new HBV and 1.5 million new HCV infections per year globally",
+    "Hepatitis A causes approximately 1.5 million symptomatic cases per year globally, predominantly in countries with limited sanitation"
+  ],
+
+  "diagnosisOverview": "Diagnosis of hepatitis follows a structured pathway: confirm hepatocellular injury, identify the cause, assess severity, and characterize chronicity. Initial blood tests show elevated ALT and AST with variable bilirubin, albumin, and INR. Acute viral hepatitis typically produces ALT in the thousands; alcoholic hepatitis shows AST greater than ALT with a ratio above 2; autoimmune hepatitis shows moderate transaminase elevation with hypergammaglobulinemia. Serologic testing for each virus is essential: HAV IgM for acute hepatitis A; HBsAg, anti-HBc IgM, and anti-HBs for HBV (with HBeAg, HBV DNA, and anti-HDV in chronic disease); anti-HCV antibody followed by HCV RNA for HCV; anti-HEV IgM and HEV RNA in suspected cases. The 2020 CDC and AASLD-IDSA guidelines recommend at least one-time HBV and HCV screening for all adults, plus risk-based testing. Autoimmune hepatitis is identified by autoantibodies (ANA, ASMA, anti-LKM1, anti-LC1), elevated serum IgG, and confirmed by liver biopsy showing interface hepatitis. Acute alcoholic hepatitis is diagnosed by history (over 40 g/day for women or 60 g/day for men over several months), serum bilirubin above 3 mg/dL, and AST greater than ALT with AST under 500 IU/L. Imaging with ultrasound, transient elastography (FibroScan), or magnetic resonance elastography quantifies fibrosis non-invasively. Liver biopsy remains the gold standard for autoimmune hepatitis confirmation and for staging when non-invasive assessment is discordant. In chronic disease, twice-yearly ultrasound with alpha-fetoprotein measurement screens for hepatocellular carcinoma in cirrhotic patients and selected non-cirrhotic chronic HBV carriers.",
+
+  "diagnosticTests": [
+    {
+      "test": "Liver function tests (ALT, AST, bilirubin, albumin, INR)",
+      "purpose": "Confirm hepatocellular injury, assess severity, and characterize the pattern (hepatitic vs cholestatic). Elevations in the thousands suggest acute viral hepatitis or ischemic injury; AST/ALT ratio above 2 suggests alcoholic disease.",
+      "whatToExpect": "Standard blood draw with same-day results in most labs. No fasting is generally required, although fasting LFTs are sometimes ordered for accuracy."
+    },
+    {
+      "test": "Hepatitis A IgM antibody",
+      "purpose": "Confirms acute hepatitis A infection. Positive within 5-10 days of symptom onset and remains positive for 3-6 months.",
+      "whatToExpect": "Drawn at the same time as routine liver function tests; results in 1-3 days."
+    },
+    {
+      "test": "Hepatitis B serologic panel (HBsAg, anti-HBs, anti-HBc, HBV DNA)",
+      "purpose": "Identifies acute or chronic HBV infection, prior exposure, vaccine response, and viral replication level. HBsAg positive for over 6 months defines chronic infection.",
+      "whatToExpect": "Single blood sample tested for multiple markers; results return in 1-3 days. HBV DNA quantitation may take 1-2 weeks."
+    },
+    {
+      "test": "Hepatitis C antibody with reflex HCV RNA",
+      "purpose": "Anti-HCV antibody indicates current or prior infection; HCV RNA distinguishes current viremia from cleared infection. RNA quantitation guides treatment monitoring.",
+      "whatToExpect": "Standard blood draw; antibody result in 1-3 days, RNA in 1-2 weeks. Some clinics offer same-day rapid antibody testing."
+    },
+    {
+      "test": "Autoimmune hepatitis serology (ANA, ASMA, anti-LKM1, anti-LC1, anti-SLA, IgG)",
+      "purpose": "Identifies type 1 (ANA, ASMA) and type 2 (anti-LKM1, anti-LC1) autoimmune hepatitis. Elevated serum IgG above 1.1 times the upper limit of normal supports the diagnosis.",
+      "whatToExpect": "Drawn with other liver tests; antibody and IgG results in 5-10 days. Sent to a reference laboratory in some regions."
+    },
+    {
+      "test": "Liver ultrasound and Doppler",
+      "purpose": "Assesses liver echogenicity, size, surface nodularity, and portal vein flow. Detects features of cirrhosis, focal lesions, and biliary obstruction.",
+      "whatToExpect": "Painless 20-minute outpatient scan with gel and a transducer over the upper abdomen. No radiation."
+    },
+    {
+      "test": "Transient elastography (FibroScan)",
+      "purpose": "Non-invasive measurement of liver stiffness as a surrogate for fibrosis stage. Replaces biopsy in many patients for staging chronic hepatitis B, C, and MASH.",
+      "whatToExpect": "Outpatient procedure lasting 10-15 minutes. A handheld probe is applied over the right lower ribcage and emits mild vibrations to measure tissue stiffness."
+    },
+    {
+      "test": "Liver biopsy with histopathology",
+      "purpose": "Definitive assessment of inflammation grade and fibrosis stage; essential for diagnosing autoimmune hepatitis and distinguishing overlap syndromes.",
+      "whatToExpect": "Percutaneous or transjugular biopsy under local anesthetic, taking 30-60 minutes. Day case with 4-6 hours of observation. Mild discomfort and bruising are typical."
+    }
+  ],
+
+  "treatmentOverview": "Treatment of hepatitis is cause-specific. For acute hepatitis A and E, care is supportive: hydration, rest, antiemetics, avoidance of hepatotoxic medications and alcohol, and monitoring for acute liver failure. Vaccination of close contacts and infection control prevent further transmission. For chronic hepatitis B, indefinite suppressive therapy with tenofovir disoproxil (300 mg daily), tenofovir alafenamide (25 mg daily), or entecavir (0.5-1.0 mg daily) achieves sustained viral suppression in over 95% of treated patients, reducing cirrhosis and hepatocellular carcinoma incidence by 50-70% according to EASL 2017 and AASLD 2018 guidelines. Functional cure (HBsAg loss) occurs in 1-3% per year. Hepatitis B requires lifelong therapy in most patients. For chronic hepatitis C, the AASLD-IDSA guidance recommends 8-12 weeks of direct-acting antiviral combination therapy — sofosbuvir-velpatasvir, glecaprevir-pibrentasvir, or sofosbuvir-velpatasvir-voxilaprevir for prior treatment failures. Sustained virologic response 12 weeks after end of treatment (SVR12) — equivalent to cure — is achieved in over 95% of patients across all genotypes. For autoimmune hepatitis, induction therapy with prednisolone 40-60 mg daily tapered to maintenance prednisolone with azathioprine 1-2 mg/kg daily induces remission in 80% of patients within 6-12 months. Long-term maintenance therapy is required to prevent relapse, with treatment withdrawal attempted only after 2-4 years of complete biochemical and histological remission. For acute severe alcoholic hepatitis with Maddrey discriminant function above 32, prednisolone 40 mg daily for 28 days reduces 28-day mortality by approximately 50% in the Lille model responders; complete alcohol abstinence remains the single most effective intervention. For drug-induced liver injury, immediate discontinuation of the offending agent is the primary treatment; acetaminophen overdose requires N-acetylcysteine within 24 hours. Hepatitis D currently has limited options, with bulevirtide newly approved in Europe and pegylated interferon as historical second-line. Across all chronic hepatitis, surveillance for hepatocellular carcinoma with ultrasound every 6 months is recommended in cirrhotic patients and selected non-cirrhotic HBV carriers.",
+
+  "medicalTreatments": [
+    {
+      "name": "Tenofovir disoproxil 300 mg, tenofovir alafenamide 25 mg, or entecavir 0.5-1.0 mg orally daily (chronic HBV)",
+      "description": "Nucleos(t)ide analogues that suppress HBV replication. First-line for chronic HBV requiring treatment. Indefinite duration in most patients; lifelong in cirrhotic patients regardless of HBeAg or HBV DNA status.",
+      "effectiveness": "Sustained viral suppression in over 95% at 5 years. Reduces hepatocellular carcinoma incidence by 50-70% and slows or reverses fibrosis."
+    },
+    {
+      "name": "Direct-acting antivirals for HCV (sofosbuvir-velpatasvir 400/100 mg daily, glecaprevir-pibrentasvir 300/120 mg daily)",
+      "description": "Pangenotypic regimens given for 8-12 weeks (depending on cirrhosis status and prior treatment). All-oral, well-tolerated, and curative. Replaced interferon-based regimens for hepatitis C globally.",
+      "effectiveness": "Sustained virologic response 12 weeks after end of treatment in 95-99% of patients — operationally equivalent to cure."
+    },
+    {
+      "name": "Prednisolone induction with azathioprine maintenance (autoimmune hepatitis)",
+      "description": "Prednisolone 40-60 mg daily tapered to 10 mg over 4-6 months; azathioprine 1-2 mg/kg/day added once steroid is tapered. Long-term maintenance for years before considering withdrawal.",
+      "effectiveness": "Induces remission in 80% of patients within 6-12 months; relapse on withdrawal in 70% within 3 years, often requiring lifelong maintenance."
+    },
+    {
+      "name": "Prednisolone 40 mg daily for 28 days (severe alcoholic hepatitis)",
+      "description": "Indicated when Maddrey discriminant function exceeds 32 or MELD above 20. Continued for 28 days in Lille-model responders at day 7. Combined with complete alcohol abstinence and nutritional support.",
+      "effectiveness": "Reduces 28-day mortality by approximately 50% in responders (STOPAH trial; Thursz 2015). No benefit beyond day 28 and no role in non-responders."
+    },
+    {
+      "name": "N-acetylcysteine (acetaminophen overdose)",
+      "description": "Loading dose 150 mg/kg IV over 1 hour, followed by 50 mg/kg over 4 hours and 100 mg/kg over 16 hours. Most effective when started within 8 hours of ingestion; benefit decreases but persists beyond 24 hours.",
+      "effectiveness": "Prevents acute liver failure in over 90% when given within 8-10 hours of ingestion; mortality reduction of 50-70% when given later."
+    },
+    {
+      "name": "Bulevirtide 2 mg subcutaneous daily (chronic hepatitis D, Europe)",
+      "description": "First targeted HDV therapy, approved in Europe in 2020. Blocks viral entry into hepatocytes via the bile acid transporter NTCP. Used long-term in suppressive fashion.",
+      "effectiveness": "Combined virological and biochemical response in 45% at 48 weeks in the MYR301 phase 3 trial (Wedemeyer 2023)."
+    },
+    {
+      "name": "Hepatitis A and B immunoglobulin (post-exposure prophylaxis)",
+      "description": "Immune globulin or hepatitis B immune globulin (HBIG) administered to unvaccinated individuals after high-risk exposure. Most effective when given within 14 days (HAV) or 24 hours (HBV) of exposure.",
+      "effectiveness": "Reduces clinical hepatitis A by 80-90% when given within 14 days; HBIG with HBV vaccine after needlestick exposure reduces HBV transmission by 75-90%."
+    },
+    {
+      "name": "Supportive care (acute viral hepatitis)",
+      "description": "Hydration, rest, antiemetics, avoidance of hepatotoxic drugs and alcohol, and monitoring of mental status and INR for acute liver failure. Most acute hepatitis A and E recover with supportive care alone.",
+      "effectiveness": "Acute hepatitis A and E resolve fully in over 95-99% of immunocompetent adults; case-fatality is under 1% except in pregnancy and severe underlying liver disease."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Liver transplantation",
+      "description": "Definitive treatment for decompensated cirrhosis, acute liver failure with poor prognostic indicators, and hepatocellular carcinoma within Milan criteria. Indications include chronic HBV, HCV, autoimmune hepatitis, alcoholic liver disease (after sustained abstinence), and acute liver failure.",
+      "successRate": "1-year graft survival above 90% and 5-year survival above 75% in adult elective transplantation in high-volume centers (UNOS data)."
+    },
+    {
+      "name": "Transjugular intrahepatic portosystemic shunt (TIPS)",
+      "description": "Used for variceal bleeding refractory to endoscopic therapy and refractory ascites in cirrhotic patients. Lowers portal pressure by creating a shunt between portal and hepatic veins under fluoroscopic guidance.",
+      "successRate": "Variceal rebleeding rates fall to under 20% with TIPS versus over 50% with endoscopic therapy alone; risk of hepatic encephalopathy in 20-30%."
+    },
+    {
+      "name": "Hepatocellular carcinoma resection and ablation",
+      "description": "Surgical resection or thermal ablation (radiofrequency, microwave) for early-stage HCC in patients with preserved liver function. Performed by hepatobiliary surgeons or interventional radiologists.",
+      "successRate": "5-year survival 60-70% for resectable solitary HCC; comparable for small tumors treated by ablation."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Coffee consumption (3-4 cups daily)", "description": "Observational data consistently associate coffee intake with lower fibrosis progression and hepatocellular carcinoma incidence in chronic hepatitis C and other liver diseases. Mechanism unclear but may relate to caffeine, polyphenols, and anti-inflammatory effects. Adjunctive only — not a substitute for antiviral therapy." }
+  ],
+
+  "whySeeSpecialist": "Patients with confirmed chronic viral hepatitis (HBV, HCV, HDV), autoimmune hepatitis, acute severe alcoholic hepatitis, decompensated liver disease, or hepatocellular carcinoma should be managed by a hepatologist or infectious disease specialist with hepatitis experience. Primary care can manage uncomplicated acute hepatitis A and E and routine post-cure HCV follow-up, but treatment initiation and staging belong with the specialist. Liver transplant evaluation is mandatory for decompensated cirrhosis and acute liver failure with adverse prognostic indicators.",
+
+  "doctorSelectionGuide": "Look for a hepatologist or infectious disease specialist with experience in viral hepatitis treatment, access to fibrosis assessment (FibroScan, MRI elastography), and a multidisciplinary team including hepatobiliary surgery and interventional radiology. For HCV treatment, expertise with current direct-acting antiviral regimens and access to insurance prior authorization support are essential. For autoimmune hepatitis, prefer centers with hepatology and rheumatology collaboration.",
+
+  "preventionStrategies": [
+    "Receive the hepatitis B vaccination series at birth and complete the schedule by 6-18 months; universal adult vaccination is now recommended for all adults 19-59 (CDC 2022)",
+    "Receive the hepatitis A vaccine series before travel to endemic regions and as part of routine childhood vaccination",
+    "Use safe injection practices: never share needles, syringes, or drug preparation equipment; use sterile equipment for tattoos and piercings",
+    "Practice safer sex with condoms, particularly in serodiscordant relationships and for hepatitis B prevention",
+    "Drink safe (boiled or bottled) water and avoid raw shellfish in regions with hepatitis A or E transmission"
+  ],
+
+  "lifestyleModifications": [
+    "Abstain from alcohol completely if you have any chronic hepatitis — alcohol accelerates fibrosis progression at any intake level",
+    "Maintain a healthy body weight; weight loss of 7-10% can reverse metabolic-associated steatohepatitis in clinical trials",
+    "Avoid herbal supplements and high-dose acetaminophen (more than 2 g daily) in chronic liver disease",
+    "Receive hepatitis A and B vaccination if not previously vaccinated and serologically susceptible",
+    "Take all prescribed antiviral medications without missed doses — adherence is critical for HBV viral suppression",
+    "Disclose hepatitis status to all healthcare providers to enable safe care and infection control"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Balanced Mediterranean-style diet with vegetables, fruits, whole grains, fish, and olive oil",
+      "Adequate protein (1.0-1.2 g/kg per day; up to 1.5 g/kg in cirrhotic patients with sarcopenia) to prevent muscle wasting",
+      "Coffee — 3-4 cups daily, associated with lower fibrosis progression and HCC risk in observational studies",
+      "Whole-grain complex carbohydrates and high-fiber foods to support glycemic control",
+      "Vitamin D-rich foods and supplementation to maintain 25-OH-D above 30 ng/mL"
+    ],
+    "avoid": [
+      "Alcohol in any amount with chronic hepatitis",
+      "Acetaminophen above 2 g daily, particularly with cirrhosis or chronic hepatitis",
+      "Herbal supplements (kava, green tea extract, comfrey, chaparral) which can cause drug-induced liver injury",
+      "Raw or undercooked shellfish, which can transmit hepatitis A and aggravate cirrhosis through vibriosis risk",
+      "Excessive sodium (over 2 g per day) in cirrhotic patients with ascites"
+    ]
+  },
+
+  "exerciseGuidelines": "At least 150 minutes of moderate aerobic exercise weekly plus twice-weekly resistance training. Exercise improves insulin sensitivity, reduces hepatic fat, and counteracts sarcopenia of advanced liver disease. In cirrhotic patients, avoid heavy resistance training that produces a Valsalva maneuver and worsens portal hypertension. Adjust intensity downward during active acute hepatitis until biochemical recovery.",
+
+  "dailyManagement": [
+    "Take chronic HBV antiviral medication at the same time daily — adherence directly determines viral suppression and progression risk",
+    "Attend scheduled monitoring: liver function tests every 3-6 months and HCC surveillance ultrasound every 6 months in high-risk patients",
+    "Avoid alcohol, acetaminophen above 2 g daily, and unprescribed herbal supplements",
+    "Carry a medical card noting your chronic hepatitis diagnosis and current medications",
+    "Inform all healthcare providers and dentists of your hepatitis status to enable safe care",
+    "Vaccinate household contacts and sexual partners against hepatitis A and B"
+  ],
+
+  "prognosis": "Prognosis depends heavily on cause, chronicity, and timing of intervention. Acute hepatitis A and E in immunocompetent adults resolve fully in over 95-99% of cases; acute hepatitis B in adults clears in over 90%. Untreated chronic hepatitis B progresses to cirrhosis in 15-40% over 30 years, with HCC incidence rising further once cirrhosis is established. Antiviral suppression with tenofovir or entecavir reduces cirrhosis and HCC by 50-70% and improves overall survival. Untreated chronic hepatitis C progresses to cirrhosis in 15-30% over 20-30 years. Cure with direct-acting antivirals reverses fibrosis in many patients and reduces HCC incidence by 70%, though residual risk persists in cirrhotic patients who achieved cure. Autoimmune hepatitis has an excellent prognosis with treatment — 10-year survival above 90% — but requires long-term maintenance therapy. Severe alcoholic hepatitis carries 28-day mortality of 20-40% depending on severity score and response to steroid therapy; sustained alcohol abstinence reduces long-term mortality substantially. Metabolic-associated steatohepatitis with advanced fibrosis is now the most rapidly rising indication for liver transplant. Across all causes, early detection through risk-based screening and prompt initiation of treatment are the strongest predictors of favorable long-term outcome.",
+
+  "recoveryTimeline": "Acute hepatitis A symptoms resolve over 4-8 weeks with full biochemical recovery by 6 months in most cases. Acute hepatitis B in adults resolves over 8-16 weeks. Chronic HCV cured with direct-acting antivirals shows liver enzyme normalization within weeks of starting therapy and SVR12 confirms cure 12 weeks after treatment ends. Chronic HBV on suppressive therapy shows viral suppression within 6-12 months and fibrosis improvement over 1-5 years. Autoimmune hepatitis remission is reached in 6-12 months with corticosteroid and azathioprine therapy. Severe alcoholic hepatitis recovery depends on alcohol abstinence and response to corticosteroid therapy assessed at day 7 with the Lille score.",
+
+  "complications": [
+    "Cirrhosis with portal hypertension, ascites, variceal bleeding, and hepatic encephalopathy — develops in 15-40% of untreated chronic HBV and HCV over 30 years",
+    "Hepatocellular carcinoma — rising risk once cirrhosis is established; requires 6-monthly ultrasound surveillance with or without alpha-fetoprotein",
+    "Acute liver failure with coagulopathy and altered mental status — most common in severe acute HBV, drug-induced injury, and hepatitis E in pregnancy",
+    "Renal dysfunction (hepatorenal syndrome) in decompensated cirrhosis",
+    "Extrahepatic manifestations: cryoglobulinemic vasculitis and lymphoma in HCV; polyarteritis nodosa and membranous nephropathy in HBV",
+    "Vertical (mother-to-child) transmission of HBV and HCV, particularly in mothers with high viral load"
+  ],
+
+  "supportResources": [
+    { "name": "American Liver Foundation", "url": "https://liverfoundation.org/", "description": "US patient organization with educational resources, support groups, and information on all forms of hepatitis." },
+    { "name": "WHO Hepatitis Resources", "url": "https://www.who.int/health-topics/hepatitis", "description": "World Health Organization global hepatitis program with country-level data, prevention guidance, and strategy documents." },
+    { "name": "CDC Viral Hepatitis", "url": "https://www.cdc.gov/hepatitis/", "description": "US CDC patient and clinician information on hepatitis A, B, C, D, and E with current screening and treatment recommendations." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "gerd", "name": "Acid Reflux (GERD)", "keyDifference": "GERD causes heartburn, regurgitation, and chest discomfort after meals. Hepatitis causes fatigue, jaundice, right upper quadrant rather than mid-chest discomfort, and elevated liver enzymes on blood testing. The two can coexist but are distinct conditions with different treatments." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "keyDifference": "HIV is a chronic viral infection that progressively impairs the immune system and may cause hepatitis through opportunistic infections or co-infection with HBV/HCV. Hepatitis is liver inflammation from many causes including but not limited to HIV co-infection. Co-infection with HIV and HBV or HCV requires coordinated antiretroviral and antiviral therapy." },
+    { "slug": "alcohol-use-disorder", "name": "Alcohol Use Disorder", "keyDifference": "Alcohol use disorder is a behavioral health diagnosis based on patterns of drinking and consequences. Alcoholic hepatitis is one of its potential consequences — acute liver inflammation from sustained heavy drinking. The two conditions overlap heavily in cause and management but represent different domains: behavioral vs hepatic." },
+    { "slug": "anemia", "name": "Anemia", "keyDifference": "Anemia is a deficiency of hemoglobin or red blood cells presenting with fatigue, pallor, and shortness of breath. Hepatitis can cause secondary anemia through hypersplenism and chronic disease, but its primary findings are liver enzyme elevation, jaundice, and right upper quadrant discomfort. Both can present with fatigue, making blood tests essential for distinction." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hiv-aids", "name": "HIV/AIDS" },
+    { "slug": "alcohol-use-disorder", "name": "Alcohol Use Disorder" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "Frequent co-infection with HBV and HCV; shared transmission routes; co-infection accelerates liver disease progression." },
+    { "slug": "alcohol-use-disorder", "name": "Alcohol Use Disorder", "relevance": "Underlying behavioral cause of alcoholic hepatitis and accelerator of any chronic hepatitis." },
+    { "slug": "gerd", "name": "Acid Reflux", "relevance": "Common comorbidity producing upper GI symptoms that can overlap with hepatitis presentation; distinct in pathophysiology." },
+    { "slug": "anemia", "name": "Anemia", "relevance": "Frequently coexists with chronic liver disease through hypersplenism, gastrointestinal bleeding, or nutritional deficiency." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What are the main types of hepatitis?",
+      "answer": "The main types are viral hepatitis A, B, C, D, and E, plus non-viral causes including autoimmune hepatitis, alcoholic hepatitis, drug-induced hepatitis, and metabolic dysfunction-associated steatohepatitis (MASH). Each type has distinct transmission, course, treatment, and prevention strategies. Hepatitis A and E are typically acute; B, C, and D can become chronic.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is hepatitis spread?",
+      "answer": "Hepatitis A and E spread through contaminated food and water. Hepatitis B and C spread through blood and body fluids — injection drug use, unprotected sex, unsafe medical injections, and mother-to-child transmission. Hepatitis D only infects people already infected with hepatitis B. Non-viral hepatitis is not contagious.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of hepatitis?",
+      "answer": "Common symptoms include fatigue, nausea, loss of appetite, abdominal discomfort, dark urine, pale stools, and yellowing of the skin and eyes (jaundice). Many people with chronic hepatitis B or C are asymptomatic for years until advanced liver damage develops. Routine screening is recommended because of this silent course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hepatitis curable?",
+      "answer": "Hepatitis C is curable in over 95% of patients with 8-12 weeks of direct-acting antiviral therapy. Hepatitis A and E are self-limiting and recover fully. Hepatitis B is rarely cured but can be suppressed indefinitely with oral antivirals. Hepatitis D has limited options but bulevirtide is newly approved in Europe. Autoimmune hepatitis is controlled long-term but typically not cured.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between hepatitis A, B, and C?",
+      "answer": "Hepatitis A is spread by fecal-oral route, is acute and self-limited, and is vaccine-preventable. Hepatitis B is spread by blood and sex, can be acute or chronic, and is vaccine-preventable but rarely cured. Hepatitis C is spread mostly by blood, becomes chronic in 75% of adults, and is curable in over 95% with direct-acting antivirals — though no vaccine exists.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a vaccine for hepatitis?",
+      "answer": "Yes, for hepatitis A and B. Both are part of routine childhood vaccination in most countries and recommended for all adults. There is no vaccine for hepatitis C, D (other than via HBV vaccination), or E (a vaccine exists in China but is not widely available). Hepatitis B vaccination protects against hepatitis D since HDV requires HBV to replicate.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is hepatitis diagnosed?",
+      "answer": "Diagnosis starts with blood tests showing elevated liver enzymes (ALT, AST) and bilirubin. Specific testing follows: hepatitis A IgM, hepatitis B surface antigen and antibodies, hepatitis C antibody and RNA, autoantibodies for autoimmune hepatitis, and history for alcoholic and drug-induced hepatitis. Imaging and sometimes liver biopsy stage the severity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis be treated at home?",
+      "answer": "Mild acute hepatitis A or E without dehydration or signs of liver failure can often be managed at home with rest, fluids, antiemetics, avoidance of alcohol and hepatotoxic drugs, and close clinician follow-up. Chronic hepatitis B and C require specialist evaluation and treatment. Any signs of confusion, vomiting blood, or progressive jaundice require immediate hospital care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does hepatitis last?",
+      "answer": "Acute hepatitis A lasts 4-8 weeks with full recovery in over 95% of cases. Acute hepatitis B in adults usually resolves over 8-16 weeks; only 5-10% become chronic. Hepatitis C becomes chronic in 75% of infected adults and is lifelong without treatment. With current direct-acting antivirals, HCV is cured in 8-12 weeks in over 95% of treated patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chronic hepatitis cause liver cancer?",
+      "answer": "Yes. Chronic hepatitis B and C are leading global causes of hepatocellular carcinoma. Risk rises substantially once cirrhosis develops but also occurs in non-cirrhotic HBV carriers. Six-monthly ultrasound surveillance with or without alpha-fetoprotein is recommended in patients with cirrhosis or high-risk HBV. Antiviral therapy reduces but does not eliminate cancer risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is alcoholic hepatitis the same as cirrhosis?",
+      "answer": "No. Alcoholic hepatitis is acute liver inflammation from sustained heavy drinking that can occur with or without underlying cirrhosis. Cirrhosis is the end-stage scarring of the liver after years of chronic injury — sometimes precipitated by repeated alcoholic hepatitis. Severe alcoholic hepatitis carries 28-day mortality of 20-40%; abstinence is the single most effective intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis be passed from mother to baby?",
+      "answer": "Yes. Hepatitis B is the most common: without intervention, 70-90% of infants born to HBeAg-positive mothers develop chronic hepatitis B. Universal birth-dose HBV vaccine and HBIG for high-risk infants prevent over 95% of transmissions. Hepatitis C transmission to infants is approximately 5-6%, higher in HIV co-infection. Hepatitis E in pregnancy can be severe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do all chronic hepatitis B patients need treatment?",
+      "answer": "Not all chronic hepatitis B patients require immediate treatment. Treatment is recommended for those with active hepatitis (elevated ALT plus high HBV DNA), evidence of fibrosis, cirrhosis, or extrahepatic manifestations. Patients in the inactive carrier phase are monitored every 6-12 months. EASL 2017 and AASLD 2018 guidelines define eligibility criteria.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do direct-acting antivirals cure hepatitis C?",
+      "answer": "Direct-acting antivirals (DAAs) block specific steps in HCV replication — NS3/4A protease, NS5A, and NS5B polymerase. Pangenotypic combinations like sofosbuvir-velpatasvir and glecaprevir-pibrentasvir achieve sustained virologic response in 95-99% across all genotypes, including in cirrhotic patients. Treatment duration is typically 8-12 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hepatitis sexually transmitted?",
+      "answer": "Hepatitis B is efficiently transmitted by sexual contact and is considered a sexually transmitted infection. Hepatitis C transmission by sex is uncommon between monogamous heterosexual partners but more common in men who have sex with men, particularly in HIV co-infection. Hepatitis A can occasionally spread by oral-anal sexual practices. Condom use and vaccination reduce risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hepatitis cause autoimmune disease?",
+      "answer": "Hepatitis C is associated with cryoglobulinemic vasculitis, glomerulonephritis, and B-cell lymphoma. Chronic hepatitis B is associated with polyarteritis nodosa and membranous nephropathy. Autoimmune hepatitis itself is an autoimmune disease causing liver inflammation. The relationship between infection, autoimmunity, and hepatitis is complex and frequently bidirectional.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hepatitis E?",
+      "answer": "Hepatitis E is acute viral hepatitis caused by hepatitis E virus, spread by contaminated water (genotypes 1 and 2 in Asia and Africa) and undercooked pork or game meat (genotypes 3 and 4 in Europe and North America). Most cases recover fully but mortality reaches 30% in third-trimester pregnant women. Chronic infection occurs in immunosuppressed patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I get screened for hepatitis B and C?",
+      "answer": "Yes. The CDC and US Preventive Services Task Force now recommend universal one-time screening for hepatitis B and C in all adults 18 and older, in addition to risk-based and pregnancy screening. Most chronic hepatitis B and C is asymptomatic for years, and early diagnosis allows effective treatment that prevents cirrhosis and liver cancer.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What should I avoid if I have hepatitis?",
+      "answer": "Avoid alcohol completely, limit acetaminophen to under 2 g daily, and avoid herbal supplements and unprescribed medications that can cause additional liver injury. Avoid raw shellfish, which can transmit hepatitis A and cause severe infection in cirrhotic patients. Disclose your hepatitis status to all healthcare providers so they can prescribe safely.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get hepatitis?",
+      "answer": "Yes. Hepatitis A is common in children where sanitation is limited and is often mild or asymptomatic. Hepatitis B can be acquired at birth from infected mothers and becomes chronic in 90% of perinatally exposed infants. Universal HBV birth-dose vaccination prevents this. Hepatitis C in children is uncommon but occurs through vertical transmission.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Hepatitis (liver inflammation)",
+
+  "regionalNames": [
+    { "name": "Hépatite", "region": "France", "language": "fr" },
+    { "name": "Hepatitis", "region": "Spain, Latin America", "language": "es" },
+    { "name": "हेपेटाइटिस", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "肝炎 (Gānyán)", "region": "China and Taiwan", "language": "zh" }
+  ],
+
+  "searchTags": [
+    "hepatitis", "viral hepatitis", "hepatitis A", "hepatitis B", "hepatitis C",
+    "hepatitis D", "hepatitis E", "autoimmune hepatitis", "alcoholic hepatitis",
+    "drug induced liver injury", "MASH", "NASH", "liver inflammation",
+    "jaundice", "tenofovir", "entecavir", "direct acting antivirals"
+  ],
+
+  "symptomKeywords": [
+    "yellow eyes skin", "jaundice", "dark urine pale stool", "right upper quadrant pain",
+    "elevated liver enzymes", "fatigue liver", "loss of appetite liver",
+    "itching liver", "raised ALT AST"
+  ],
+
+  "metaTitle": "Hepatitis: Symptoms, Types, Causes & Treatment | aihealz",
+  "metaDescription": "Hepatitis: viral (A/B/C/D/E), autoimmune, alcoholic liver inflammation. Symptoms, types, diagnosis, treatment and prevention reviewed by our medical board.",
+
+  "keywords": [
+    "hepatitis", "viral hepatitis", "hepatitis A", "hepatitis B", "hepatitis C",
+    "hepatitis D", "hepatitis E", "autoimmune hepatitis", "alcoholic hepatitis",
+    "hepatitis treatment", "hepatitis symptoms", "hepatitis vaccine",
+    "hepatitis cure", "liver inflammation"
+  ],
+
+  "lastReviewed": "2026-05-13",
+
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jaundice_eye.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Jaundice_eye.jpg",
+      "altText": "Close-up of a patient eye showing yellowing of the sclera characteristic of jaundice in hepatitis",
+      "caption": "Scleral icterus (yellowing of the white of the eye) — a classic clinical sign of hepatitis.",
+      "license": "CC BY-SA 3.0",
+      "credit": "James Heilman, MD / Wikimedia Commons",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liver_anatomy.png",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Liver_anatomy.png",
+      "altText": "Anatomical diagram of the liver showing right and left lobes, gallbladder, and hepatic blood supply",
+      "caption": "Normal liver anatomy — the organ involved in all forms of hepatitis.",
+      "license": "Public Domain",
+      "credit": "US National Cancer Institute via Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "World Health Organization. Global Health Sector Strategies on, Respectively, HIV, Viral Hepatitis and Sexually Transmitted Infections for the Period 2022-2030. WHO; 2022.",
+      "url": "https://www.who.int/publications/i/item/9789240053779",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "European Association for the Study of the Liver. EASL 2017 Clinical Practice Guidelines on the Management of Hepatitis B Virus Infection. Journal of Hepatology. 2017;67(2):370-398.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28427875/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "AASLD-IDSA HCV Guidance Panel. Recommendations for Testing, Managing, and Treating Hepatitis C. Hepatology. 2018;67(4):1477-1492.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29377194/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Polaris Observatory Collaborators. Global Prevalence, Treatment, and Prevention of Hepatitis B Virus Infection in 2016: A Modelling Study. Lancet Gastroenterology & Hepatology. 2018;3(6):383-403.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29599078/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Thursz MR, Richardson P, Allison M, et al. Prednisolone or Pentoxifylline for Alcoholic Hepatitis (STOPAH). New England Journal of Medicine. 2015;372(17):1619-1628.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25901427/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Mack CL, Adams D, Assis DN, et al. Diagnosis and Management of Autoimmune Hepatitis in Adults and Children: 2019 Practice Guidance and Guidelines From the AASLD. Hepatology. 2020;72(2):671-722.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31863477/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Screening and Testing for Hepatitis B Virus Infection: CDC Recommendations - United States, 2023. MMWR Recommendations and Reports. 2023;72(1):1-25.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36893044/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Wedemeyer H, Aleman S, Brunetto MR, et al. A Phase 3, Randomized Trial of Bulevirtide in Chronic Hepatitis D. New England Journal of Medicine. 2023;389(1):22-32.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37345876/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

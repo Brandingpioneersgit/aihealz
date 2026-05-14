@@ -1,0 +1,583 @@
+{
+  "_meta": {
+    "slug": "panic-disorder",
+    "tier": 1,
+    "headTerm": "panic disorder",
+    "longTailKeywords": [
+      "panic disorder symptoms",
+      "panic attack",
+      "panic disorder treatment",
+      "panic disorder vs anxiety",
+      "panic attack chest pain",
+      "agoraphobia",
+      "SSRI panic disorder",
+      "cognitive behavioral therapy panic",
+      "panic attack at night",
+      "panic disorder cure"
+    ],
+    "primarySpecialty": "Psychiatry",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations verified against NICE CG113 Anxiety Disorders (2011, updated 2020), APA Practice Guideline for Treatment of Panic Disorder (2009, 2nd edition), Roy-Byrne PP Lancet 2006 (PMID 16934299), and Bandelow B Int J Neuropsychopharmacol 2017 systematic review."
+  },
+  "h1Title": "Panic Disorder: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Psychiatry",
+  "heroOverview": "Panic disorder is an anxiety disorder defined by recurrent unexpected panic attacks — sudden surges of intense fear or discomfort peaking within minutes — followed by persistent worry about more attacks or significant behavioral change to avoid them. Lifetime prevalence is roughly 2-3% in US adults (NCS-R) and 4-5% globally, with women affected twice as often as men. Most cases begin between late adolescence and the mid-thirties. Untreated, panic disorder often progresses to agoraphobia, increases substance misuse, doubles depression risk, and produces functional impairment comparable to major depression. The decisive insight in treatment is that panic responds well to focused intervention: cognitive behavioral therapy and SSRIs each produce response rates of 60-80% within 8-12 weeks, and combined therapy outperforms either alone for severe or refractory disease.",
+  "keyStats": {
+    "prevalence": "Lifetime prevalence 2-3% of US adults (NCS-R); past-year 2.7%",
+    "demographics": "Women 2x more affected than men; peak onset 20-30 years",
+    "avgAge": "Mean age of onset 24 years; rare new onset after age 45",
+    "globalCases": "Roughly 45 million adults globally (WHO 2017 estimate)"
+  },
+  "definition": "Panic disorder (ICD-10: F41.0) is defined in DSM-5-TR by recurrent unexpected panic attacks plus at least one month of persistent concern about additional attacks, worry about their implications, or significant maladaptive behavioral change (such as avoidance of activities or places that might trigger an attack). A panic attack is a discrete period of intense fear or discomfort that develops abruptly and peaks within 10 minutes, with four or more of thirteen DSM-defined symptoms (palpitations, sweating, trembling, shortness of breath, choking sensation, chest pain, nausea, dizziness, derealization, fear of losing control, fear of dying, paresthesias, chills or hot flushes). Panic attacks must not be attributable to substance effects or medical conditions, and must not be explained better by another mental disorder. Agoraphobia frequently accompanies panic disorder — about 30-50% of patients develop avoidance of places or situations where escape would be difficult or help unavailable. The disorder is thought to arise from dysregulation of the brainstem-limbic-prefrontal fear circuit with hypersensitivity of the locus coeruleus and amygdala, modulated by serotonin, norepinephrine, GABA, and CO2 chemosensitivity. Care is led by psychiatrists, primary care physicians, and psychologists, often within integrated mental health programs.",
+  "typesClassification": [
+    {
+      "type": "Panic disorder without agoraphobia",
+      "description": "Recurrent unexpected panic attacks plus persistent worry or maladaptive change for at least one month, without avoidance of places or situations."
+    },
+    {
+      "type": "Panic disorder with agoraphobia",
+      "description": "30-50% of panic disorder patients develop fear of two or more agoraphobic situations (public transport, open spaces, enclosed places, crowds, being outside home alone). Agoraphobia substantially increases functional impairment."
+    },
+    {
+      "type": "Nocturnal panic disorder",
+      "description": "Subset of patients (roughly 25-50%) experience attacks during non-REM sleep, often waking with maximal fear within 1-2 hours of sleep onset. Distinguished from sleep terrors by full recall and adult onset."
+    },
+    {
+      "type": "Limited-symptom panic attacks",
+      "description": "Attacks with fewer than four DSM symptoms; common in panic disorder, particularly as treatment progresses. They still count toward the worry and avoidance criteria."
+    }
+  ],
+  "primarySymptoms": [
+    "Sudden surge of intense fear or discomfort that peaks within 10 minutes — the defining feature of a panic attack.",
+    "Palpitations, pounding heart, or accelerated heart rate, often the first symptom noticed and frequently mistaken for cardiac disease.",
+    "Sweating, trembling, or shaking that may continue for 20-30 minutes after the peak of the attack.",
+    "Shortness of breath or feelings of smothering, often with rapid shallow breathing that compounds the physiologic arousal.",
+    "Chest pain or discomfort that can closely mimic angina and is the most common reason for emergency department presentation.",
+    "Nausea or abdominal distress, sometimes with diarrhea or urgency during severe attacks.",
+    "Dizziness, lightheadedness, or feeling faint — common but rarely progressing to actual syncope.",
+    "Derealization (feelings of unreality) or depersonalization (feeling detached from oneself) that can be more frightening than physical symptoms.",
+    "Fear of losing control or going 'crazy' during the attack — a key cognitive feature that drives behavioral avoidance.",
+    "Fear of dying, often interpreted as imminent heart attack or stroke, especially during first attacks.",
+    "Paresthesias (numbness or tingling), typically in fingers, lips, or face, related to hyperventilation-induced hypocapnia.",
+    "Chills or hot flushes, contributing to the sense of physiologic crisis."
+  ],
+  "earlyWarningSigns": [
+    "First unexpected panic attack with worry about its recurrence in the following days or weeks",
+    "Avoidance of caffeine, exercise, or specific situations that triggered prior attacks",
+    "Repeated emergency department visits or cardiology assessments for chest pain or palpitations with negative workups",
+    "Family history of panic disorder or other anxiety disorders in first-degree relatives",
+    "Onset or worsening of symptoms after a stressful life event, medical illness, or substance use change"
+  ],
+  "emergencySigns": [
+    "Chest pain in a first-time attack — even when panic disorder is suspected, exclude acute coronary syndrome, pulmonary embolism, and pneumothorax in the emergency department first",
+    "Sudden severe headache or focal neurological deficit during an attack — exclude stroke or subarachnoid hemorrhage",
+    "Acute suicidal ideation with plan or attempt — emergency mental health assessment",
+    "Severe withdrawal symptoms when discontinuing benzodiazepines abruptly — seizure risk; medical supervision needed",
+    "First panic-like episode after age 45 — investigate cardiac, endocrine, neurological, and substance causes before attributing to primary panic disorder"
+  ],
+  "causes": [
+    {
+      "cause": "Genetic vulnerability and family transmission",
+      "description": "Heritability is approximately 40-50%. First-degree relatives of panic disorder probands have a 5-8 fold elevated risk. No single gene explains susceptibility; multiple common variants modulate risk through serotonergic, noradrenergic, and CO2-sensitive pathways."
+    },
+    {
+      "cause": "Dysregulated brainstem-limbic fear circuit",
+      "description": "Hypersensitivity of the locus coeruleus (noradrenergic), amygdala (fear processing), and brainstem CO2 chemoreceptors produces exaggerated alarm responses to internal physiologic signals. Functional MRI studies show altered amygdala-prefrontal connectivity in panic disorder."
+    },
+    {
+      "cause": "Cognitive misinterpretation of bodily sensations",
+      "description": "Patients with panic disorder tend to catastrophically misinterpret normal physiologic sensations — a benign palpitation becomes 'I am having a heart attack' — which amplifies arousal in a positive feedback loop. This cognitive model underpins effective cognitive behavioral therapy."
+    },
+    {
+      "cause": "Stressful life events and trauma",
+      "description": "Major life events such as bereavement, relationship loss, or job change often precede the first panic attack. Childhood adversity and early separation experiences raise lifetime risk roughly 2-fold. Trauma exposure can trigger first-onset panic disorder in adults."
+    },
+    {
+      "cause": "Substance use and withdrawal",
+      "description": "Cannabis (especially in adolescents and young adults), stimulants, alcohol withdrawal, and benzodiazepine withdrawal all precipitate panic attacks. Caffeine and nicotine intake also increase panic frequency in susceptible individuals."
+    },
+    {
+      "cause": "Medical contributors",
+      "description": "Hyperthyroidism, pheochromocytoma, mitral valve prolapse, asthma, and vestibular disorders can produce panic-like symptoms or worsen existing panic disorder. Workup excludes these in atypical presentations or first onset after age 45."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Family history of panic disorder or other anxiety disorders",
+      "category": "genetic",
+      "description": "First-degree relatives have 5-8 fold elevated risk; twin heritability roughly 40-50%."
+    },
+    {
+      "factor": "Female sex",
+      "category": "non-modifiable",
+      "description": "Women have approximately 2x the lifetime prevalence of panic disorder, possibly reflecting hormonal, neurodevelopmental, and psychosocial factors. The sex difference is consistent across countries and cultures."
+    },
+    {
+      "factor": "Childhood adversity and trauma",
+      "category": "environmental",
+      "description": "Childhood physical, sexual, or emotional abuse, early parental loss, and household instability double the lifetime risk of panic disorder. Trauma-focused therapy improves outcomes when present."
+    },
+    {
+      "factor": "Comorbid major depressive disorder",
+      "category": "modifiable",
+      "description": "50-60% of patients with panic disorder have lifetime major depression. Comorbidity worsens prognosis and necessitates integrated treatment."
+    },
+    {
+      "factor": "Substance use",
+      "category": "modifiable",
+      "description": "Cannabis (especially in adolescents), stimulants, alcohol misuse, and benzodiazepine withdrawal precipitate panic attacks. Caffeine and nicotine intake worsen symptoms in established disease."
+    },
+    {
+      "factor": "Major life stressors",
+      "category": "modifiable",
+      "description": "Bereavement, relationship breakdown, job loss, or financial strain often trigger the first attack. Subsequent attacks may occur without an obvious trigger."
+    },
+    {
+      "factor": "Smoking",
+      "category": "modifiable",
+      "description": "Adolescent smoking doubles adult panic disorder risk in pooled prospective data; mechanism may involve early respiratory sensitization."
+    },
+    {
+      "factor": "Behavioral inhibition temperament",
+      "category": "non-modifiable",
+      "description": "Children who show behavioral inhibition (withdrawal from novelty) have a 2-3 fold elevated risk of developing anxiety disorders including panic disorder in adulthood."
+    }
+  ],
+  "affectedDemographics": [
+    "US lifetime prevalence 2.7% (NCS-R); past-year 2.7%",
+    "Globally roughly 45 million adults affected (WHO 2017 estimate)",
+    "Women 2x more affected than men across all studied populations",
+    "Peak onset late teens through mid-thirties; new onset after age 45 is rare and warrants medical workup"
+  ],
+  "diagnosisOverview": "Diagnosis follows DSM-5-TR criteria after clinical interview that documents the presence of recurrent unexpected panic attacks, persistent worry about additional attacks or maladaptive behavioral change for at least one month, exclusion of substance and medical causes, and exclusion of other mental disorders that better explain the symptoms. Validated rating scales support diagnosis and severity tracking: the Panic Disorder Severity Scale (PDSS) provides a 7-item clinician or self-report measure of severity, and the Beck Anxiety Inventory or GAD-7 capture co-occurring anxiety. Suicide risk should be assessed at every visit (C-SSRS or equivalent) given the comorbid depression prevalence of 50-60%. The medical workup excludes contributors that mimic or trigger panic: TSH and free T4 (hyperthyroidism), 12-lead ECG (cardiac arrhythmia), urine toxicology in suspected substance involvement, and selected tests guided by clinical features (24-hour metanephrines if pheochromocytoma is suspected, echocardiography only if cardiac signs persist). Brain imaging is reserved for atypical presentations or focal neurological signs. Differential diagnosis includes generalized anxiety disorder (persistent worry without discrete attacks), social anxiety disorder (fear of social scrutiny), specific phobias, post-traumatic stress disorder (panic following trauma cues), obsessive-compulsive disorder, major depressive disorder, hyperthyroidism, pheochromocytoma, and substance-induced panic. Agoraphobia is identified by asking about avoidance of public transport, open spaces, enclosed places, crowds, or being outside home alone. Patients often present first to cardiology, gastroenterology, or the emergency department before psychiatric assessment, contributing to diagnostic delay of 2-5 years on average.",
+  "diagnosticTests": [
+    {
+      "test": "Structured psychiatric interview using DSM-5-TR criteria",
+      "purpose": "Establishes the diagnosis by documenting recurrent unexpected panic attacks, persistent worry or behavioral change for one month, exclusion of substance and medical causes, and exclusion of other mental disorders that better explain symptoms.",
+      "whatToExpect": "A 45-60 minute clinical interview with a psychiatrist, primary care clinician, or psychologist. The clinician asks about attack frequency, duration, peak symptoms, between-attack worry, and avoidance behaviors."
+    },
+    {
+      "test": "Panic Disorder Severity Scale (PDSS)",
+      "purpose": "Validated 7-item clinician or self-report measure of panic disorder severity. Used at baseline and to track treatment response.",
+      "whatToExpect": "A brief questionnaire completed in 5 minutes covering attack frequency, distress, worry, avoidance, sensation avoidance, work, and social impairment."
+    },
+    {
+      "test": "12-lead electrocardiogram",
+      "purpose": "Excludes cardiac arrhythmias (supraventricular tachycardia, atrial fibrillation) that can mimic panic attacks. Recommended at initial presentation or with new or atypical chest symptoms.",
+      "whatToExpect": "A brief painless test taking 5-10 minutes. Electrodes are placed on the chest, arms, and legs. Results are interpreted immediately."
+    },
+    {
+      "test": "Thyroid function tests (TSH, free T4)",
+      "purpose": "Excludes hyperthyroidism, which can produce palpitations, tremor, anxiety, and panic-like attacks.",
+      "whatToExpect": "Standard blood draws; results typically return within 1-2 days. Treating any thyroid abnormality is essential before attributing symptoms to primary panic disorder."
+    },
+    {
+      "test": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "purpose": "Structured assessment of suicidal ideation, plan, intent, and behavior. Used at every mental health visit because comorbid depression in panic disorder reaches 50-60%.",
+      "whatToExpect": "A 5-10 minute clinician interview with direct questions about thoughts of death, plans, and prior attempts. Truthful answers support effective care."
+    },
+    {
+      "test": "Urine toxicology and substance use history",
+      "purpose": "Identifies substance-induced panic from cannabis, stimulants, alcohol withdrawal, or benzodiazepine withdrawal. Treatment differs substantially when substance use is involved.",
+      "whatToExpect": "A urine sample and a detailed history of alcohol, cannabis, stimulants, and prescription medications. Results return within 1-2 days."
+    }
+  ],
+  "treatmentOverview": "Treatment of panic disorder is highly effective when matched to the patient. The APA Practice Guideline (2009, 2nd edition), NICE CG113 (2011, updated 2020), and Bandelow systematic reviews endorse cognitive behavioral therapy and SSRIs as first-line, with combined treatment outperforming either alone for severe or refractory disease. CBT for panic disorder typically runs 12-16 weekly sessions and uses psychoeducation about the physiology of panic, cognitive restructuring of catastrophic misinterpretations, interoceptive exposure (deliberately inducing physical sensations to break the fear-sensation cycle), and in vivo exposure to feared situations when agoraphobia is present. Response rates with CBT reach 60-80%, with sustained benefit at 1-2 year follow-up. SSRIs (sertraline 50-200 mg, escitalopram 10-20 mg, fluoxetine 20-60 mg, paroxetine 20-60 mg) are first-line pharmacotherapy. Start low (half the usual antidepressant dose) to avoid initial activation-related worsening, then titrate every 1-2 weeks. SNRIs (venlafaxine XR 75-225 mg, duloxetine 30-120 mg) are second-line. Tricyclic antidepressants (clomipramine, imipramine) remain effective but are less commonly used due to side-effect burden. Benzodiazepines (alprazolam, clonazepam, lorazepam) provide rapid relief and may be used as short-term adjuncts during SSRI initiation, but long-term use is limited by tolerance, dependence, cognitive effects, and withdrawal panic. Many guidelines recommend reserving benzodiazepines for breakthrough symptoms or specific situations rather than long-term monotherapy. Comprehensive care addresses comorbid depression and substance use, includes sleep hygiene and exercise, and uses agoraphobia-focused exposure when avoidance is established. Continuation treatment for at least 12 months after remission reduces relapse; many patients benefit from 2-3 years of maintenance. Treatment-resistant panic disorder is approached with combination therapy, switching SSRIs, augmentation with low-dose mirtazapine or pregabalin, and intensive specialist CBT including interoceptive exposure.",
+  "medicalTreatments": [
+    {
+      "name": "Selective serotonin reuptake inhibitors (sertraline 25-200 mg, escitalopram 5-20 mg, fluoxetine 10-60 mg, paroxetine 10-60 mg)",
+      "description": "First-line pharmacotherapy. Start at half the usual antidepressant starting dose because initial activation can worsen anxiety. Titrate every 1-2 weeks toward therapeutic dose. Full effect at 6-12 weeks.",
+      "effectiveness": "Response rates 60-80% at 8-12 weeks; remission rates 30-40%. Effect persists with continued treatment; relapse common within 6-12 months of discontinuation."
+    },
+    {
+      "name": "Serotonin-norepinephrine reuptake inhibitors (venlafaxine XR 37.5-225 mg, duloxetine 30-120 mg)",
+      "description": "Second-line pharmacotherapy when SSRIs are not tolerated or fully effective. Similar starting-low principle to avoid initial activation.",
+      "effectiveness": "Response rates 55-70% in randomized trials; some patients respond after SSRI failure."
+    },
+    {
+      "name": "Tricyclic antidepressants (clomipramine 25-150 mg, imipramine 25-200 mg)",
+      "description": "Effective but less commonly used due to anticholinergic, cardiovascular, and overdose-toxicity profile. Considered when SSRIs and SNRIs fail and benzodiazepines are inappropriate.",
+      "effectiveness": "Response rates 50-70%; lower tolerability and higher discontinuation than SSRIs."
+    },
+    {
+      "name": "Benzodiazepines (alprazolam 0.25-4 mg daily in divided doses, clonazepam 0.25-2 mg, lorazepam 0.5-2 mg)",
+      "description": "Provide rapid relief of acute panic and bridge SSRI initiation. Long-term use is limited by tolerance, cognitive effects, and dependence. Withdrawal causes rebound panic; taper slowly when discontinuing.",
+      "effectiveness": "Rapid response within 1-2 weeks; 60-80% of patients improve initially. Long-term efficacy unclear; many guidelines recommend short-term adjunct rather than maintenance therapy."
+    },
+    {
+      "name": "Pregabalin (150-600 mg daily) — augmentation or alternative",
+      "description": "Calcium channel modulator with anxiolytic effect. Used in treatment-resistant panic disorder or as a non-benzodiazepine alternative when SSRIs are not tolerated. Slower onset than benzodiazepines.",
+      "effectiveness": "Response rates 50-70% in randomized trials of generalized anxiety; supportive evidence in panic disorder."
+    },
+    {
+      "name": "Mirtazapine (15-45 mg at night) — selected cases",
+      "description": "Sedating noradrenergic and specific serotonergic antidepressant. Useful when insomnia, weight loss, and panic coexist, or as augmentation in SSRI-resistant cases.",
+      "effectiveness": "Modest evidence in panic disorder; useful adjunct in complex presentations."
+    }
+  ],
+  "surgicalOptions": [],
+  "alternativeTreatments": [
+    {
+      "name": "Cognitive behavioral therapy for panic (CBT)",
+      "description": "First-line non-pharmacological treatment. Twelve to sixteen weekly sessions combining psychoeducation, cognitive restructuring, interoceptive exposure, and in vivo exposure for agoraphobia. Response rates 60-80% with sustained benefit at 1-2 year follow-up."
+    },
+    {
+      "name": "Internet-delivered CBT",
+      "description": "Structured online CBT programs with clinician support match face-to-face CBT outcomes for many patients. Increases access in regions with limited mental health workforce. NICE-endorsed as low-intensity intervention."
+    },
+    {
+      "name": "Mindfulness-based stress reduction (MBSR)",
+      "description": "Eight-week structured mindfulness program with modest evidence as adjunct in anxiety disorders. Useful for relapse prevention and stress management."
+    },
+    {
+      "name": "Regular aerobic exercise",
+      "description": "Moderate aerobic activity 3-5 times weekly reduces anxiety symptoms with effect sizes comparable to brief psychotherapy in mild-moderate anxiety. Important adjunct for all patients."
+    }
+  ],
+  "whySeeSpecialist": "A psychiatrist or specialist mental health team should be involved when first-line SSRI plus structured CBT fails to produce remission after 12-16 weeks, when panic disorder coexists with severe depression or substance use, when suicide risk is moderate to high, in pregnancy or postpartum, and when agoraphobia severely limits functioning. Primary care manages most uncomplicated panic disorder effectively with stepped care.",
+  "doctorSelectionGuide": "Look for a clinician or therapist with formal CBT training and experience with panic disorder including interoceptive exposure, access to internet-delivered CBT programs as alternative or adjunct, and integration with primary care for medical comorbidity. Continuity matters more than prestige — panic disorder treatment is typically a 1-3 year relationship including maintenance.",
+  "preventionStrategies": [
+    "Identify and address risk factors early in adolescence and young adulthood, particularly substance use and untreated anxiety in family members",
+    "Learn breathing and grounding techniques before attacks become recurrent — slows the catastrophic appraisal cycle",
+    "Limit caffeine to under 200 mg daily and avoid nicotine, particularly in early adulthood when adolescent smoking doubles adult panic risk",
+    "Engage in regular aerobic exercise — has consistent anxiolytic effect and reduces panic attack frequency",
+    "Address sleep disturbance promptly; insomnia raises panic disorder onset risk",
+    "Seek treatment for any major depressive episode early — comorbid depression with panic is bidirectional"
+  ],
+  "lifestyleModifications": [
+    "Practice slow diaphragmatic breathing daily, especially before known trigger situations",
+    "Eliminate caffeine, energy drinks, and nicotine — all worsen panic frequency and severity",
+    "Maintain consistent sleep schedule (7-9 hours) with stable bedtime and wake time",
+    "Exercise aerobically 30-45 minutes at least 3-5 times weekly",
+    "Use interoceptive exposure exercises (controlled hyperventilation, breath holding) learned in CBT to break the fear-sensation cycle",
+    "Limit alcohol — short-term it dampens anxiety but rebound anxiety on withdrawal worsens panic",
+    "Write down catastrophic thoughts during attacks and challenge them between attacks using CBT techniques"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean dietary pattern — moderate observational evidence for lower anxiety prevalence",
+      "Regular meals to stabilize blood glucose; hypoglycemia can mimic panic symptoms",
+      "Adequate magnesium and B vitamins through whole grains, leafy greens, and legumes",
+      "Adequate hydration — dehydration produces lightheadedness and palpitations that can trigger attacks",
+      "Omega-3 rich fish (salmon, sardines, mackerel) twice weekly — modest evidence in anxiety reduction"
+    ],
+    "avoid": [
+      "Caffeine — coffee, tea, energy drinks, cola, and chocolate; even moderate intake can trigger attacks",
+      "Alcohol — short-term anxiolytic effect followed by rebound anxiety and disrupted sleep",
+      "Recreational stimulants and high-dose cannabis, especially in adolescents and young adults",
+      "Crash dieting and prolonged fasting — hypoglycemia and ketosis can mimic panic",
+      "Excess processed sugar and refined carbohydrates that produce rapid blood glucose swings"
+    ]
+  },
+  "exerciseGuidelines": "Aim for 150-300 minutes weekly of moderate aerobic activity, ideally including outdoor activity for daylight exposure. Exercise has a consistent anxiolytic effect and is part of evidence-based panic disorder management. Start gently if exertion has been a panic trigger — graded exercise is itself a form of interoceptive exposure that builds tolerance to physical arousal.",
+  "dailyManagement": [
+    "Take SSRI or SNRI at the same time daily — adherence is the strongest predictor of sustained remission",
+    "Practice breathing and grounding techniques as a daily habit, not only during attacks",
+    "Track panic attacks (frequency, triggers, duration, severity) in a brief diary to identify patterns",
+    "Apply CBT techniques between sessions — challenge catastrophic thoughts and complete homework assignments",
+    "Maintain regular sleep, exercise, and meal schedules",
+    "Avoid caffeine, nicotine, and recreational substances",
+    "Engage with support groups or peer networks for shared experience and accountability"
+  ],
+  "prognosis": "Prognosis with appropriate treatment is favorable. Response rates with CBT or SSRI reach 60-80% at 12 weeks, and combined treatment improves outcomes for severe or treatment-resistant cases. Sustained remission is achievable in roughly 50% of patients with consistent treatment, though chronic course persists in about 30%. Without treatment, panic disorder tends to become chronic with episodes lasting years and high relapse rates between symptomatic periods. Agoraphobia, comorbid depression, substance use, and chronic medical illness worsen prognosis. The most robust predictor of long-term outcome is completion of evidence-based CBT, which produces durable benefit beyond medication. Lifetime suicide risk in panic disorder is roughly 7-12% in pooled data, driven primarily by comorbid depression and substance use; integrated treatment of comorbidities is essential. Decisive prognostic factors include early treatment, adherence to CBT and medication, absence of substance use, social support, and integrated management of comorbid depression.",
+  "recoveryTimeline": "Benzodiazepines produce relief within hours to days but are limited to short-term or breakthrough use. SSRI or SNRI response emerges over 4-8 weeks with full effect at 12 weeks. CBT shows meaningful symptom reduction at 4-6 weeks and full benefit at 12-16 weeks. Sustained remission typically requires 12 months of continued treatment after symptoms remit; many guidelines recommend 2-3 years of maintenance for recurrent or severe panic disorder. Functional recovery (returning to avoided activities) often takes longer than symptomatic improvement and is supported by graded exposure work.",
+  "complications": [
+    "Agoraphobia — avoidance of public transport, open spaces, enclosed spaces, crowds, or being alone outside home; develops in 30-50% of untreated panic disorder",
+    "Comorbid major depressive disorder — develops in 50-60% over the lifetime, increasing functional impairment and suicide risk",
+    "Substance use disorders — alcohol, benzodiazepines, and cannabis used as self-medication; 25-30% of panic disorder patients develop alcohol use disorder",
+    "Excess healthcare utilization — repeated emergency department visits for chest pain, palpitations, and dizziness with negative workups",
+    "Occupational impairment and absenteeism comparable to major depression",
+    "Suicide — lifetime risk roughly 7-12% in pooled data, driven by comorbid depression and substance use"
+  ],
+  "supportResources": [
+    {
+      "name": "Anxiety and Depression Association of America (ADAA)",
+      "url": "https://adaa.org/",
+      "description": "US patient organization with evidence-based information, therapist finder, and peer support communities specifically for panic and anxiety disorders."
+    },
+    {
+      "name": "Mind UK",
+      "url": "https://www.mind.org.uk/information-support/types-of-mental-health-problems/panic-attacks/",
+      "description": "UK mental health charity offering panic-disorder-specific information, helplines, and local services."
+    },
+    {
+      "name": "988 Suicide and Crisis Lifeline (US)",
+      "url": "https://988lifeline.org/",
+      "description": "24/7 free and confidential support for people in distress, including panic crises with suicidal thoughts. Call or text 988 in the United States."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "anxiety",
+      "name": "Generalized Anxiety Disorder",
+      "keyDifference": "Generalized anxiety disorder features persistent excessive worry about everyday matters for at least six months, without the discrete sudden attacks that define panic disorder. Both can coexist; treatment overlaps but emphasizes worry-focused interventions in GAD versus interoceptive exposure in panic disorder."
+    },
+    {
+      "slug": "depression",
+      "name": "Major Depressive Disorder",
+      "keyDifference": "Major depression centers on sustained low mood and loss of interest rather than recurrent acute panic attacks. The two often coexist (50-60% comorbidity in panic disorder); integrated treatment addressing both is essential. Antidepressants treat both, but CBT protocols differ."
+    },
+    {
+      "slug": "bipolar-disorder",
+      "name": "Bipolar Disorder",
+      "keyDifference": "Bipolar disorder is defined by manic or hypomanic episodes alongside depression, not by recurrent panic attacks. Patients with bipolar disorder may experience anxiety during episodes, but mood disturbance is primary. Antidepressant monotherapy for misdiagnosed bipolar can trigger manic switch."
+    },
+    {
+      "slug": "agoraphobia-unspecified-f4000",
+      "name": "Agoraphobia",
+      "keyDifference": "Agoraphobia is fear and avoidance of situations where escape would be difficult or help unavailable. It frequently coexists with panic disorder (30-50%) and may also occur independently. DSM-5 separates the two diagnoses but they share treatment principles of exposure-based therapy."
+    },
+    {
+      "slug": "ptsd",
+      "name": "PTSD",
+      "keyDifference": "PTSD involves panic-like reactions specifically triggered by reminders of a past traumatic event, accompanied by intrusive re-experiencing, avoidance, hyperarousal, and negative mood changes. Panic disorder features unexpected attacks not tied to specific trauma cues."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "depression",
+      "name": "Major Depressive Disorder"
+    },
+    {
+      "slug": "anxiety",
+      "name": "Generalized Anxiety Disorder"
+    },
+    {
+      "slug": "agoraphobia-unspecified-f4000",
+      "name": "Agoraphobia"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "anxiety",
+      "name": "Anxiety",
+      "relevance": "Closely related anxiety disorder; generalized anxiety frequently coexists with panic disorder and shares serotonin-noradrenergic pathways."
+    },
+    {
+      "slug": "depression",
+      "name": "Major Depressive Disorder",
+      "relevance": "Comorbid in 50-60% of panic disorder patients over the lifetime; bidirectional relationship requires integrated treatment."
+    },
+    {
+      "slug": "bipolar-disorder",
+      "name": "Bipolar Disorder",
+      "relevance": "Differential diagnosis in patients with mood instability; treatment differs because antidepressant monotherapy in bipolar can trigger manic switch."
+    },
+    {
+      "slug": "agoraphobia-unspecified-f4000",
+      "name": "Agoraphobia",
+      "relevance": "Frequently develops in panic disorder; DSM-5 treats them as separate diagnoses but they share exposure-based treatment."
+    },
+    {
+      "slug": "ptsd",
+      "name": "PTSD",
+      "relevance": "Trauma-related anxiety disorder that produces panic-like episodes; distinguished by tie to specific trauma cues and additional PTSD criteria."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is panic disorder?",
+      "answer": "Panic disorder is a psychiatric condition defined by recurrent unexpected panic attacks — sudden surges of intense fear or discomfort peaking within minutes — plus at least one month of persistent worry about more attacks or maladaptive behavioral change to avoid them.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a panic attack feel like?",
+      "answer": "A panic attack is a sudden surge of intense fear or discomfort that peaks within 10 minutes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes panic disorder?",
+      "answer": "Panic disorder arises from a combination of genetic vulnerability (heritability roughly 40-50%), dysregulated brainstem-limbic fear circuitry, catastrophic misinterpretation of bodily sensations, stressful life events, childhood adversity, and substance use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is panic disorder diagnosed?",
+      "answer": "Diagnosis follows DSM-5-TR criteria after a structured clinical interview documenting recurrent unexpected panic attacks, persistent worry or behavioral change for one month, exclusion of substance and medical causes, and exclusion of other mental disorders.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can panic disorder be cured?",
+      "answer": "Panic disorder is highly treatable, with response rates of 60-80% to cognitive behavioral therapy or SSRIs at 12 weeks. Sustained remission is achievable in roughly 50% of patients with consistent treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for panic disorder?",
+      "answer": "First-line treatment is cognitive behavioral therapy (CBT) or an SSRI such as sertraline, escitalopram, fluoxetine, or paroxetine. Combined CBT plus SSRI improves outcomes for severe or treatment-resistant disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are panic attacks dangerous?",
+      "answer": "Panic attacks are intensely frightening but not physically dangerous in themselves. The body's stress response cannot sustain attack-level activation for long.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does a panic attack last?",
+      "answer": "Most panic attacks peak within 10 minutes and resolve within 20-30 minutes. The intense fear and physical symptoms cannot be sustained indefinitely by the body. Some patients experience after-effects (fatigue, soreness, residual anxiety) lasting several hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between panic disorder and generalized anxiety?",
+      "answer": "Generalized anxiety disorder features persistent excessive worry about everyday matters for at least six months without discrete sudden attacks. Panic disorder is defined by recurrent unexpected panic attacks with brief duration.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need medication forever for panic disorder?",
+      "answer": "Many patients respond to SSRIs and can taper medication after 12-24 months of remission, especially with concurrent CBT. Some patients benefit from longer maintenance, particularly with severe, recurrent, or treatment-resistant disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can panic disorder cause chest pain?",
+      "answer": "Yes. Chest pain is one of the thirteen DSM criteria for panic attacks and the most common reason for emergency department visits in panic disorder. First-time chest pain should always be medically evaluated to exclude cardiac causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does panic disorder run in families?",
+      "answer": "Yes. Heritability is roughly 40-50%, and first-degree relatives of probands have a 5-8 fold elevated lifetime risk. Multiple common genetic variants contribute to susceptibility through serotonergic, noradrenergic, and CO2-sensitivity pathways.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is cognitive behavioral therapy for panic?",
+      "answer": "CBT for panic combines psychoeducation about the physiology of panic, cognitive restructuring of catastrophic misinterpretations, interoceptive exposure (deliberately inducing physical sensations to break the fear-sensation cycle), and in vivo exposure to feared situations when agoraphobia is present. Typically 12-16 weekly sessions with response rates of 60-80%.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Can caffeine cause panic attacks?",
+      "answer": "Yes. Caffeine is a stimulant that increases heart rate, jitteriness, and physiologic arousal, all of which can trigger panic attacks in susceptible individuals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I take benzodiazepines for panic disorder?",
+      "answer": "Benzodiazepines (alprazolam, clonazepam, lorazepam) provide rapid relief and can bridge SSRI initiation or treat breakthrough attacks. Long-term daily use is limited by tolerance, cognitive effects, dependence, and rebound anxiety on withdrawal.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is agoraphobia?",
+      "answer": "Agoraphobia is fear and avoidance of situations where escape would be difficult or help unavailable — public transport, open spaces, enclosed places, crowds, or being outside home alone. It develops in 30-50% of untreated panic disorder.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can panic disorder be triggered by trauma?",
+      "answer": "Yes. Major life stressors, bereavement, and childhood adversity raise lifetime risk of panic disorder roughly 2-fold. PTSD is a separate diagnosis featuring panic-like reactions specifically tied to trauma cues, plus intrusive re-experiencing, avoidance, and hyperarousal. Trauma-focused therapy improves outcomes when PTSD is present.",
+      "schemaEligible": false
+    },
+    {
+      "question": "Are panic attacks at night different?",
+      "answer": "Roughly 25-50% of panic disorder patients experience nocturnal attacks — sudden awakening within 1-2 hours of sleep onset with maximal panic symptoms. Nocturnal attacks are distinguished from sleep terrors by full recall and adult onset. Treatment overlaps with daytime attacks but requires evening dosing planning of medications.",
+      "schemaEligible": false
+    },
+    {
+      "question": "When should I see a psychiatrist for panic disorder?",
+      "answer": "See a psychiatrist when first-line SSRI plus structured CBT fails to produce remission after 12-16 weeks, when panic coexists with severe depression or substance use, when suicide risk is moderate to high, in pregnancy or postpartum, and when agoraphobia severely limits functioning. Primary care manages most uncomplicated cases with stepped care.",
+      "schemaEligible": false
+    },
+    {
+      "question": "How much does panic disorder treatment cost?",
+      "answer": "Generic SSRIs are inexpensive (USD 5-20 monthly in most countries). CBT typically runs USD 75-300 per session in the US, often partially covered by insurance for medically necessary treatment. Internet-delivered CBT programs are increasingly available at low or no cost. In India and other emerging markets, generic medications and public mental health services lower costs substantially.",
+      "schemaEligible": false
+    }
+  ],
+  "simpleName": "Panic Disorder (recurrent panic attacks)",
+  "regionalNames": [
+    {
+      "name": "पैनिक डिसऑर्डर",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Trouble panique",
+      "region": "France",
+      "language": "fr"
+    },
+    {
+      "name": "Trastorno de pánico",
+      "region": "Spain / Latin America",
+      "language": "es"
+    }
+  ],
+  "searchTags": [
+    "panic disorder",
+    "panic attack",
+    "panic attacks",
+    "anxiety attack",
+    "agoraphobia",
+    "DSM-5 panic disorder",
+    "SSRI panic",
+    "sertraline panic",
+    "escitalopram panic",
+    "cognitive behavioral therapy panic",
+    "interoceptive exposure",
+    "alprazolam",
+    "clonazepam",
+    "nocturnal panic",
+    "chest pain anxiety"
+  ],
+  "symptomKeywords": [
+    "racing heart",
+    "shortness of breath panic",
+    "chest pain anxiety",
+    "dizziness panic",
+    "fear of dying",
+    "feeling unreal",
+    "tingling fingers",
+    "sudden fear",
+    "panic attack symptoms",
+    "hot flush cold sweat"
+  ],
+  "metaTitle": "Panic Disorder: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Panic disorder: recurrent panic attacks of sudden fear, palpitations, and chest pain. Symptoms, causes, CBT, SSRI treatment, and outlook reviewed by clinicians.",
+  "keywords": [
+    "panic disorder",
+    "panic attack",
+    "panic disorder symptoms",
+    "panic disorder treatment",
+    "panic vs anxiety",
+    "agoraphobia",
+    "SSRI panic",
+    "CBT for panic",
+    "panic chest pain",
+    "panic at night",
+    "panic disorder cure",
+    "nocturnal panic"
+  ],
+  "lastReviewed": "2026-05-13",
+  "images": [],
+  "sources": [
+    {
+      "title": "Roy-Byrne PP, Craske MG, Stein MB. Panic disorder. Lancet. 2006;368(9540):1023-1032.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16934299/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Bandelow B, Reitt M, Röver C, et al. Efficacy of treatments for anxiety disorders: a meta-analysis. International Clinical Psychopharmacology. 2015;30(4):183-192.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25932596/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "American Psychiatric Association. Practice Guideline for the Treatment of Patients with Panic Disorder, Second Edition. 2009.",
+      "url": "https://psychiatryonline.org/pb/assets/raw/sitewide/practice_guidelines/guidelines/panicdisorder.pdf",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "NICE CG113. Generalised anxiety disorder and panic disorder in adults: management. National Institute for Health and Care Excellence; 2011, updated 2020.",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Pompoli A, Furukawa TA, Imai H, et al. Psychological therapies for panic disorder with or without agoraphobia in adults: a network meta-analysis. Cochrane Database of Systematic Reviews. 2016;(4):CD011004.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27071857/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Kessler RC, Chiu WT, Jin R, et al. The epidemiology of panic attacks, panic disorder, and agoraphobia in the National Comorbidity Survey Replication. Archives of General Psychiatry. 2006;63(4):415-424.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16585471/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Otto MW, Tuby KS, Gould RA, McLean RY, Pollack MH. An effect-size analysis of the relative efficacy and tolerability of serotonin selective reuptake inhibitors for panic disorder. American Journal of Psychiatry. 2001;158(12):1989-1992.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11729012/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}

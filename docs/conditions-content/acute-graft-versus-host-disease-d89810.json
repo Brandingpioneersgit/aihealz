@@ -1,0 +1,371 @@
+{
+  "_meta": {
+    "slug": "acute-graft-versus-host-disease-d89810",
+    "tier": 1,
+    "headTerm": "Acute graft-versus-host disease",
+    "primarySpecialty": "Hematology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Acute Graft-versus-Host Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hematology",
+
+  "heroOverview": "Acute graft-versus-host disease (aGVHD) is a life-threatening immune complication of allogeneic hematopoietic stem cell transplantation in which donor T-lymphocytes recognize host tissues as foreign and launch a cytotoxic attack against the skin, gastrointestinal tract, and liver. It affects approximately 40-70% of transplant recipients, with severe (grade III-IV) disease occurring in 15-40% and carrying a mortality exceeding 50% when refractory to first-line corticosteroids. Onset typically falls within the first 100 days after transplant, with the peak incidence between days 14 and 35. Ruxolitinib, an oral JAK1/JAK2 inhibitor, became the first FDA-approved second-line therapy in 2019, improving response rates from roughly 25% to 62% compared with best available therapy. Prevention through HLA matching, T-cell depletion strategies, and calcineurin inhibitor-based prophylaxis remains the most effective approach.",
+
+  "keyStats": {
+    "prevalence": "40-70% of allogeneic stem cell transplant recipients develop aGVHD; approximately 30,000 allogeneic transplants are performed annually in the US",
+    "demographics": "Risk is higher with matched unrelated donors (50-70%) vs. matched sibling donors (25-40%); increases with recipient age, HLA mismatch, and stem cell source (peripheral blood > bone marrow > cord blood)",
+    "avgAge": "Median transplant recipient age is now above 55 years due to expansion of reduced-intensity conditioning; aGVHD risk does not plateau with age",
+    "globalCases": "Approximately 45,000-50,000 allogeneic transplants performed globally each year; aGVHD is the leading non-relapse cause of transplant mortality worldwide"
+  },
+
+  "definition": "Acute graft-versus-host disease (ICD-10: D89.810) is an alloimmune inflammatory syndrome occurring after allogeneic hematopoietic stem cell transplantation (HCT) when donor-derived T-cells engraft and attack host tissues bearing alloantigens — primarily the skin, gastrointestinal mucosa, and hepatic bile ducts. Classic aGVHD is defined as occurring within 100 days of transplant, though the 2005 NIH consensus criteria recognize a 'classic' form based on clinical features rather than time alone, alongside a 'persistent, recurrent, or late-onset' acute form occurring beyond day 100 without chronic GVHD features. The pathophysiology involves three phases: tissue damage from conditioning (radiochemotherapy) releases danger signals that activate host antigen-presenting cells; donor T-cells are then primed against host antigens; and activated T-cells and inflammatory cytokines including TNF-alpha, IFN-gamma, and IL-1 drive epithelial destruction in target organs. Grading follows the MAGIC (Mount Sinai Acute GVHD International Consortium) or modified Glucksberg scale, which combines the extent of skin rash (percentage of body surface area), degree of diarrhea (stool volume), and bilirubin level into grades I-IV. Grade I-II disease is considered mild to moderate; grade III-IV is severe and carries 5-year survival below 30% without response to corticosteroids. aGVHD is managed within specialized bone marrow transplant programs.",
+
+  "typesClassification": [
+    { "type": "Classic acute GVHD (within 100 days of transplant)", "description": "Onset within 100 days post-transplant with typical features (maculopapular rash, diarrhea, hyperbilirubinemia). This is the most common form, accounting for the majority of aGVHD episodes in allogeneic HCT." },
+    { "type": "Late-onset acute GVHD (beyond 100 days)", "description": "Occurs after day 100 but retains the acute phenotype (skin, gut, liver triad) without features of chronic GVHD. Often precipitated by reduction in immunosuppression. Now included in NIH consensus criteria for aGVHD." },
+    { "type": "Grade I-II (mild to moderate)", "description": "Skin rash covering ≤50% of body surface area, diarrhea under 1,000 mL/day, or bilirubin 2-6 mg/dL. Responds to systemic corticosteroids in 50-70% of cases with good long-term outcomes." },
+    { "type": "Grade III-IV (severe)", "description": "Extensive skin rash or desquamation, diarrhea exceeding 1,500 mL/day, or bilirubin >6 mg/dL. Steroid-refractory disease in this group carries a 12-month mortality above 50%, primarily from infection and organ failure." }
+  ],
+
+  "primarySymptoms": [
+    "Maculopapular rash beginning on the palms, soles, and ears, then spreading to involve the trunk and extremities; may progress to painful blistering and epidermal detachment in severe cases.",
+    "Persistent watery diarrhea, often exceeding 1 liter per day, with crampy abdominal pain, nausea, and anorexia from gastrointestinal mucosal inflammation and crypt destruction.",
+    "Abdominal cramping and distension preceding or accompanying diarrhea, reflecting GI tract wall edema and motility disturbance.",
+    "Jaundice (scleral icterus and yellow skin discoloration) from immune-mediated bile duct damage causing cholestatic hyperbilirubinemia.",
+    "Right upper quadrant or diffuse abdominal pain reflecting hepatic inflammation and capsule stretching.",
+    "Nausea and vomiting, sometimes severe enough to prevent oral medication administration, reflecting upper GI tract involvement.",
+    "Generalized pruritus accompanying the skin rash, occasionally preceding visible rash changes and mimicking drug hypersensitivity.",
+    "Anorexia and rapid weight loss driven by GI tract involvement, pain-related food avoidance, and systemic inflammatory cytokine burden.",
+    "Fluid and electrolyte losses from high-volume diarrhea, with hypokalemia, hyponatremia, and hypomagnesemia complicating the clinical picture.",
+    "Fever, often low-grade, reflecting systemic cytokine release from alloreactive T-cells; must be distinguished from infection in the immunosuppressed transplant host."
+  ],
+
+  "earlyWarningSigns": [
+    "Subtle erythema limited to the palms and soles in the second or third week after transplant — the earliest skin manifestation, often dismissed as drug reaction or sunburn",
+    "A sudden increase in stool frequency (more than 4 episodes per day) after engraftment in a patient previously tolerating oral intake",
+    "Rising bilirubin or transaminases on routine post-transplant laboratory monitoring, beginning in the first 4 weeks after infusion",
+    "Unexpected nausea and early satiety starting 2-3 weeks after transplant, suggesting early upper GI involvement before overt diarrhea"
+  ],
+
+  "emergencySigns": [
+    "Diarrhea exceeding 2 liters per day or bloody diarrhea — Grade IV GI GVHD with risk of bowel perforation and sepsis",
+    "Skin desquamation, bullae, or frank epidermal separation over more than 50% of body surface — toxic epidermal necrolysis-like Grade IV skin GVHD requiring urgent barrier care and intensive support",
+    "Jaundice with bilirubin above 15 mg/dL combined with coagulopathy — hepatic GVHD with risk of fulminant hepatic failure",
+    "Deteriorating neurological status or respiratory failure in the context of active GVHD — consider GVHD-associated neurological involvement or secondary infection"
+  ],
+
+  "causes": [
+    {
+      "cause": "Donor T-cell alloreactivity against host major histocompatibility complex (HLA) antigens",
+      "description": "Despite HLA matching, donor T-cells recognize minor histocompatibility antigens (miHAs) or incompletely matched HLA alleles on host antigen-presenting cells. The ensuing T-cell activation and cytotoxic response is the central event of GVHD pathophysiology, triggering a cytokine cascade that amplifies tissue destruction beyond what T-cells alone cause."
+    },
+    {
+      "cause": "HLA mismatch between donor and recipient",
+      "description": "Each additional HLA mismatch at the allele level significantly raises aGVHD risk. A 10/10 HLA-matched unrelated donor carries higher risk than a matched sibling because of undetected miHA differences. Haploidentical donors (half-matched) require intensive T-cell depletion to prevent severe GVHD."
+    },
+    {
+      "cause": "Conditioning regimen-induced tissue damage ('cytokine storm' priming)",
+      "description": "High-dose chemotherapy and total body irradiation before transplant damage host gut mucosa, releasing lipopolysaccharide and damage-associated molecular patterns (DAMPs) that activate innate immune cells and provide a co-stimulatory inflammatory environment priming donor T-cell activation — a 'three-signal' model of GVHD initiation."
+    },
+    {
+      "cause": "Peripheral blood stem cell (PBSC) source rather than bone marrow",
+      "description": "PBSC grafts contain up to 10 times more T-cells than bone marrow grafts, increasing engraftment speed and graft-versus-leukemia effect but also raising aGVHD incidence and shifting the risk toward chronic GVHD. Cord blood grafts have the lowest T-cell content and the lowest aGVHD rates but slower engraftment."
+    },
+    {
+      "cause": "Female donor to male recipient (sex mismatch)",
+      "description": "The H-Y minor histocompatibility antigen system, encoded on the Y chromosome, is a target for alloreactive T-cells in female donors transplanting into male recipients. This sex mismatch is associated with a 10-15% increase in both aGVHD and chronic GVHD risk independent of HLA matching."
+    },
+    {
+      "cause": "Older recipient age",
+      "description": "Host tissue damage from pre-existing comorbidities, thymic involution reducing regulatory T-cell output, and reduced gut barrier integrity in older patients all amplify the inflammatory response. Recipients over age 60 have roughly 1.5 times higher aGVHD mortality than recipients under 40."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "HLA mismatch (unrelated or haploidentical donor)", "category": "non-modifiable", "description": "Unrelated donors matched at 9/10 or 8/10 HLA loci double aGVHD incidence compared with 10/10-matched unrelated donors; haploidentical transplants require T-cell depletion to achieve acceptable aGVHD rates." },
+    { "factor": "Peripheral blood stem cell graft source", "category": "modifiable", "description": "PBSC grafts produce faster engraftment but carry 10 times more T-cells than bone marrow; randomized trials show higher chronic GVHD rates with PBSC vs. bone marrow, with aGVHD rates similar or slightly higher." },
+    { "factor": "Older recipient age (> 60 years)", "category": "non-modifiable", "description": "Thymic atrophy reduces regulatory T-cell generation; cumulative comorbidities impair gut barrier function; conditioning-induced tissue damage is greater in older patients." },
+    { "factor": "Female-to-male transplant (H-Y minor antigen mismatch)", "category": "non-modifiable", "description": "The Y-chromosome-encoded H-Y antigen system elicits alloreactive responses in female-donor grafts to male hosts; associated with 10-15% excess aGVHD and chronic GVHD risk." },
+    { "factor": "Myeloablative conditioning regimen", "category": "modifiable", "description": "High-dose busulfan/cyclophosphamide or total body irradiation causes more mucosal damage and DAMPs release than reduced-intensity conditioning, priming a stronger GVHD response." },
+    { "factor": "Prior herpesviruses reactivation (CMV seropositivity)", "category": "non-modifiable", "description": "CMV seropositivity in either donor or recipient increases the cytokine milieu post-transplant and is independently associated with higher aGVHD incidence and severity in several registry studies." },
+    { "factor": "Inadequate GVHD prophylaxis intensity or early withdrawal", "category": "modifiable", "description": "Dose reductions or premature taper of calcineurin inhibitors or methotrexate during the first 100 days, often necessitated by toxicity, are among the most common precipitants of breakthrough aGVHD." }
+  ],
+
+  "affectedDemographics": [
+    "Adults undergoing HLA-mismatched or unrelated donor transplantation have a 50-70% aGVHD incidence, compared with 25-40% after matched sibling transplants.",
+    "Older adults (over age 60) have become the fastest-growing transplant population; reduced-intensity conditioning has expanded eligibility, but aGVHD risk and treatment-related mortality remain higher than in younger patients.",
+    "Children receiving transplants for acute leukemia or immune deficiency have lower aGVHD severity overall but are not protected when receiving mismatched grafts.",
+    "Individuals receiving transplants for non-malignant conditions (aplastic anemia, hemoglobinopathies) may have aGVHD that is harder to attribute to pre-existing disease, complicating diagnosis."
+  ],
+
+  "diagnosisOverview": "aGVHD diagnosis is primarily clinical, based on timing after transplant, organ involvement pattern, and exclusion of alternative causes. The classic triad of maculopapular rash, diarrhea, and hyperbilirubinemia appearing 14-35 days after engraftment in an allogeneic transplant recipient is highly characteristic. Differential diagnoses include drug rash, infectious diarrhea (CMV colitis, Clostridium difficile), hepatic sinusoidal obstruction syndrome, and engraftment syndrome. Biopsy of affected organs is frequently performed — skin punch biopsy, GI endoscopy with biopsies, and liver biopsy when indicated — to confirm histologic features of GVHD: apoptotic epithelial cells, satellite cell necrosis, crypt drop-out in the GI tract, and bile duct damage in the liver. Serum biomarkers including ELISA-based ST2 (suppression of tumorigenicity 2) and REG3-alpha (regenerating islet-derived protein 3-alpha) are validated in multicenter studies to predict aGVHD severity and mortality at day 7 post-onset, guiding treatment intensity decisions. Endoscopy is recommended for upper and lower GI symptoms to grade involvement and exclude CMV colitis, which can coexist with GI GVHD and requires antiviral treatment. Laboratory findings include rising bilirubin, elevated alkaline phosphatase out of proportion to transaminases, and often hypoalbuminemia from GI protein loss.",
+
+  "diagnosticTests": [
+    { "test": "Clinical staging and grading (modified Glucksberg or MAGIC grading)", "purpose": "Assesses aGVHD severity across skin, GI, and liver domains to guide treatment intensity", "whatToExpect": "A bedside assessment — clinician measures skin rash extent as percentage of body surface area, records daily stool volume, and reviews bilirubin levels. No painful procedure; result is immediate once labs are available." },
+    { "test": "Skin punch biopsy", "purpose": "Histologically confirms GVHD in the skin and excludes drug rash or viral exanthem", "whatToExpect": "A 3-4 mm core of skin is removed under local anesthetic from an area of active rash; takes under 5 minutes. Histology results within 1-3 days. Findings: interface dermatitis, satellite cell necrosis, and lymphocytic infiltration of the dermo-epidermal junction." },
+    { "test": "Lower GI endoscopy (colonoscopy/sigmoidoscopy) with biopsies", "purpose": "Confirms GI GVHD, grades mucosal involvement, and excludes CMV colitis as alternative or co-existing pathology", "whatToExpect": "Performed under light sedation; the endoscopist biopsies the terminal ileum, colon, and rectum. Histology shows crypt apoptosis and epithelial destruction. Results within 1-3 days." },
+    { "test": "Serum ST2 and REG3-alpha (MAGIC biomarkers)", "purpose": "Predicts treatment failure and 6-month non-relapse mortality at GVHD onset better than clinical grading alone", "whatToExpect": "Blood draw at day 7 post-onset or on day 14/28 post-transplant for risk stratification. ELISA-based assay; results in 3-5 days at reference centers. High ST2 predicts steroid refractoriness." },
+    { "test": "Serum bilirubin, alkaline phosphatase, ALT, albumin, and coagulation screen", "purpose": "Grades hepatic GVHD severity and monitors organ function throughout treatment", "whatToExpect": "Routine blood draw; results within hours. Serial measurements every 2-3 days are standard in the acute phase." },
+    { "test": "CMV PCR (blood and colon biopsy if GI GVHD)", "purpose": "Excludes CMV colitis co-infection, which can mimic or coexist with GI GVHD and requires separate antiviral treatment", "whatToExpect": "Blood draw for quantitative CMV PCR; biopsy specimens sent for CMV immunohistochemistry. PCR results within 24-48 hours." }
+  ],
+
+  "treatmentOverview": "Treatment follows a tiered approach based on aGVHD grade and response. First-line treatment for grade II-IV aGVHD is systemic corticosteroids — methylprednisolone 1-2 mg/kg/day (or prednisone equivalent) — combined with continuation of calcineurin inhibitor prophylaxis. Approximately 50-60% of patients achieve a complete or partial response at day 28, and this group has favorable long-term outcomes. Corticosteroids are tapered over 8-12 weeks in responders. For grade I skin-only aGVHD, topical steroids or local management may suffice without systemic therapy. Second-line treatment is required in 40-50% of patients whose disease progresses after 72 hours of corticosteroids, fails to respond by day 7, or relapses during taper. Ruxolitinib (10 mg twice daily), a JAK1/JAK2 inhibitor, is FDA-approved (2019) and EMA-approved for steroid-refractory aGVHD based on the REACH2 randomized trial, which demonstrated an overall response rate of 62% vs. 39% for best available therapy at day 28, with a durable response at day 56 of 40% vs. 22%. Other second-line options investigated in clinical trials include mycophenolate mofetil, extracorporeal photopheresis (ECP), anti-TNF agents (infliximab), and sirolimus, though none is supported by randomized evidence equivalent to ruxolitinib. Management also encompasses aggressive supportive care: infection prophylaxis (antimicrobial, antifungal, antiviral), nutritional support (often enteral or parenteral in grade III-IV GI GVHD), electrolyte replacement, and pain management. Prevention remains the most important strategy — calcineurin inhibitor (tacrolimus or cyclosporine) plus methotrexate or mycophenolate mofetil is standard prophylaxis; post-transplant cyclophosphamide (PTCy) has markedly reduced severe aGVHD in haploidentical and unrelated donor transplants.",
+
+  "medicalTreatments": [
+    { "name": "Methylprednisolone (1-2 mg/kg/day IV or oral prednisone equivalent)", "description": "First-line treatment for grade II-IV aGVHD. Broadly suppresses T-cell activation and cytokine production. Tapered over 8-12 weeks in responders; abrupt taper precipitates flare.", "effectiveness": "Complete or partial response in 50-60% at day 28; grade II disease responds better (60-70%) than grade IV (20-30%)" },
+    { "name": "Ruxolitinib (10 mg twice daily orally)", "description": "FDA- and EMA-approved second-line therapy for steroid-refractory aGVHD; inhibits JAK1/JAK2, blocking the IFN-gamma and IL-6 signaling pathways driving alloreactive inflammation. Key toxicities: cytopenias, CMV reactivation, and increased infection risk.", "effectiveness": "Overall response rate 62% at day 28 vs. 39% for best available therapy in REACH2 RCT; durable response at day 56 in 40% vs. 22%" },
+    { "name": "Tacrolimus or cyclosporine (GVHD prophylaxis)", "description": "Calcineurin inhibitors are the cornerstone of GVHD prevention, blocking IL-2 production and T-cell activation. Used from day -3 to +100 or longer in unrelated donor transplants; levels monitored by trough immunoassay.", "effectiveness": "Reduce aGVHD incidence by approximately 30-40% vs. no prophylaxis; combination with methotrexate is superior to either agent alone" },
+    { "name": "Post-transplant cyclophosphamide (PTCy, 50 mg/kg on days +3 and +4)", "description": "Selectively depletes alloreactive T-cells expanding after transplant while sparing regulatory T-cells and hematopoietic progenitors. Has transformed haploidentical transplantation and is increasingly used in matched unrelated donor transplants.", "effectiveness": "Reduces grade III-IV aGVHD to 5-15% in haploidentical transplants; comparable outcomes to standard prophylaxis in matched donor settings (BMT CTN 1301 trial)" },
+    { "name": "Mycophenolate mofetil (MMF, 15 mg/kg twice to three times daily)", "description": "Inhibits purine synthesis and T-cell/B-cell proliferation; used as part of prophylaxis or as second-line treatment in combination with calcineurin inhibitors. Commonly substituted for methotrexate in reduced-intensity conditioning transplants.", "effectiveness": "Non-inferior to methotrexate in several phase II trials when combined with tacrolimus; second-line response rates approximately 30-40% as monotherapy" },
+    { "name": "Extracorporeal photopheresis (ECP)", "description": "Peripheral blood mononuclear cells are collected, exposed to 8-methoxypsoralen and UV-A light, then reinfused; induces tolerogenic dendritic cells and regulatory T-cells. Performed twice weekly initially.", "effectiveness": "Response rates 50-60% in skin-predominant steroid-refractory aGVHD; less effective for severe GI disease; retrospective series, no randomized data" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Fecal microbiota transplantation (FMT) for GI GVHD", "description": "Emerging experimental approach: several small trials and case series report clinical response in steroid-refractory lower GI GVHD; restoration of microbial diversity correlates with symptom improvement in pilot studies (Kakihana et al., Nat Med 2016)." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "corticosteroid-therapy",
+    "immunosuppressive-therapy"
+  ],
+
+  "whySeeSpecialist": "aGVHD should be managed exclusively within a specialized bone marrow transplant center by transplant hematologists experienced in GVHD grading, organ-specific management, and infection prophylaxis. Second-line therapy decisions, biomarker-guided risk stratification, and access to clinical trials require tertiary transplant expertise.",
+  "doctorSelectionGuide": "Seek a transplant center with at least 50 allogeneic procedures per year, a dedicated GVHD management team, and access to ruxolitinib and clinical trials for steroid-refractory disease. CIBMTR-registered centers publish outcomes data — review center-specific non-relapse mortality for the relevant diagnosis before proceeding.",
+
+  "hospitalCriteria": [
+    "Dedicated bone marrow transplant inpatient unit with laminar-flow rooms and HEPA filtration",
+    "Access to CMV and fungal monitoring, antimicrobial prophylaxis protocols, and infection management expertise",
+    "Availability of ruxolitinib and enrollment in second-line clinical trials",
+    "Extracorporeal photopheresis service for skin-dominant steroid-refractory disease",
+    "Multidisciplinary team including gastroenterology, hepatology, dermatology, and infectious disease"
+  ],
+  "keyFacilities": [
+    "CIBMTR-registered allogeneic transplant centers",
+    "Tertiary academic medical centers with dedicated BMT units",
+    "Oncology centers with access to advanced GVHD biomarker assays"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Select the best available HLA-matched donor — an 8/8 or 10/10 matched unrelated donor reduces aGVHD risk substantially compared with mismatched donors.",
+    "Choose post-transplant cyclophosphamide-based prophylaxis for haploidentical transplants and consider it in unrelated donor settings to minimize severe aGVHD.",
+    "Use calcineurin inhibitor (tacrolimus) plus methotrexate or MMF as standard prophylaxis, maintaining therapeutic tacrolimus trough levels throughout the first 100 days.",
+    "Consider bone marrow rather than peripheral blood stem cells in patients with good-prognosis disease and high chronic GVHD risk, as bone marrow grafts carry lower GVHD rates.",
+    "Maintain CMV surveillance and pre-emptive antiviral treatment to reduce CMV reactivation, which primes the inflammatory environment.",
+    "Taper immunosuppression gradually and on schedule; premature or rapid taper is a common precipitant of GVHD flare."
+  ],
+
+  "lifestyleModifications": [
+    "Strict hand hygiene and avoidance of infectious contacts during the immunosuppressed phase to prevent infections that amplify GVHD risk.",
+    "Adhere to all prescribed medications including tacrolimus and antimicrobial prophylaxis without missed doses.",
+    "Maintain adequate caloric and protein intake; work with a transplant dietitian to manage GI symptoms and prevent severe malnutrition.",
+    "Avoid sun exposure during skin GVHD as UV radiation can precipitate flare; use high-SPF sunscreen and protective clothing.",
+    "Report new skin rash, diarrhea, or jaundice to the transplant team immediately — early recognition and treatment of aGVHD improves outcomes."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Low-residue, easily digestible diet during acute GI GVHD to reduce fecal bulk and cramping",
+      "Oral rehydration solution or electrolyte-containing fluids to replace losses from diarrhea",
+      "Small frequent meals to limit gastric distension and nausea",
+      "High-protein, high-calorie supplemental feeds when oral intake is inadequate to prevent hypoalbuminemia"
+    ],
+    "avoid": [
+      "Raw or undercooked foods during immunosuppressed phase — infection risk is high and gut barrier is compromised",
+      "Lactose-containing products during active GI GVHD as mucosal lactase activity is reduced",
+      "High-fiber, high-residue foods that increase stool volume during acute diarrheal phase",
+      "Grapefruit and St. John's Wort, which interact with tacrolimus metabolism via CYP3A4"
+    ]
+  },
+  "exerciseGuidelines": "Gentle mobilization and walking are encouraged as tolerated during hospitalization to preserve muscle mass. Strenuous exercise is deferred during active GVHD, cytopenias, and high-dose corticosteroid therapy due to infection and fracture risk. Progressive rehabilitation is reintroduced under physiotherapy supervision after stabilization.",
+
+  "dailyManagement": [
+    "Take immunosuppressant medications at exactly the same time each day; do not skip or double doses.",
+    "Monitor tacrolimus trough levels as scheduled and report symptoms of toxicity (tremor, headache, impaired kidney function) promptly.",
+    "Record stool frequency and volume during GI GVHD — daily diary guides response assessment and dosing decisions.",
+    "Apply topical steroids twice daily to active skin lesions; protect blistered areas with non-adhesive dressings.",
+    "Attend all scheduled follow-up visits — weekly initially for labs, clinical assessment, and drug-level monitoring."
+  ],
+
+  "prognosis": "Prognosis depends heavily on aGVHD grade and treatment response. Grade I-II disease responding to first-line steroids carries a 5-year overall survival exceeding 50%. Grade III-IV disease has a 1-year non-relapse mortality of 40-60% in most series, driven by infection, multi-organ failure, and steroid-refractory GVHD. Overall response to ruxolitinib at day 28 in steroid-refractory disease is approximately 62%, but durable long-term remissions are achieved in only about 40%. Prognosis is worsened by advanced recipient age, multi-organ involvement, GI GVHD with hypoalbuminemia, and elevated day-7 ST2 and REG3-alpha biomarkers. Patients achieving complete response retain a meaningful graft-versus-leukemia effect, which is the intended therapeutic benefit of allogeneic transplantation. The development of chronic GVHD after aGVHD is a common transition, occurring in 30-50% of acute survivors and adding further long-term morbidity.",
+
+  "recoveryTimeline": "Grade I-II disease typically responds within 7-14 days of starting corticosteroids, with full resolution over 4-8 weeks of taper. Grade III-IV disease requiring second-line therapy may take 8-16 weeks to stabilize. Long-term immunosuppression, infection screening, and rehabilitation extend 12-24 months after transplant.",
+
+  "complications": [
+    "Invasive fungal and bacterial infections from prolonged high-dose corticosteroid and ruxolitinib immunosuppression — the leading cause of death in GVHD; prophylaxis with fluconazole or voriconazole and antibacterial regimens is essential.",
+    "CMV reactivation and CMV disease (pneumonitis, colitis), both precipitated and mimicked by GVHD; weekly CMV PCR monitoring and pre-emptive ganciclovir treatment are standard.",
+    "Steroid-related complications: hyperglycemia, hypertension, avascular necrosis, osteoporosis, and Cushing's syndrome from prolonged high-dose corticosteroid therapy.",
+    "Protein-calorie malnutrition from severe GI GVHD, requiring total parenteral nutrition in 20-40% of grade III-IV cases, with associated line sepsis risk.",
+    "Transition to chronic GVHD in 30-50% of acute GVHD survivors, causing long-term autoimmune organ damage particularly to the lungs, eyes, mouth, and skin.",
+    "Multi-organ failure combining hepatic, renal, and pulmonary dysfunction in the most severe cases — associated with near-universal mortality without aggressive supportive care."
+  ],
+
+  "supportResources": [
+    { "name": "Be The Match / National Marrow Donor Program", "url": "https://bethematch.org/patients-and-families/life-after-transplant/gvhd/", "description": "Patient and caregiver guide to GVHD prevention, recognition, and management after stem cell transplant." },
+    { "name": "BMT InfoNet", "url": "https://www.bmtinfonet.org/", "description": "Non-profit providing education and support for transplant patients, including condition-specific resources on GVHD." },
+    { "name": "Aplastic Anemia and MDS International Foundation", "url": "https://www.aamds.org/", "description": "Patient support organization for bone marrow failure and transplant complications including GVHD." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "leukemia", "name": "Leukemia", "keyDifference": "Leukemia relapse after transplant can cause cytopenias, fever, and general deterioration mimicking GVHD, but it shows leukemic blasts in bone marrow biopsy and often a rising minimal residual disease signal, whereas GVHD shows alloreactive immune histology on target organ biopsy without blasts." },
+    { "slug": "hepatitis-b", "name": "Hepatitis B", "keyDifference": "Hepatitis B reactivation post-transplant causes liver injury with elevated transaminases and bilirubin similar to hepatic GVHD. Differentiation requires hepatitis B surface antigen and viral load testing; GVHD is negative for hepatitis B markers and shows bile duct damage on liver biopsy." },
+    { "slug": "hiv-aids", "name": "HIV/AIDS", "keyDifference": "HIV-related enteropathy can cause diarrhea and weight loss similar to GI GVHD; distinction requires HIV serology and viral load assessment. Post-transplant patients are not typically HIV-positive, but co-infected patients undergoing transplant require careful monitoring of both conditions." },
+    { "slug": "acquired-hemolytic-anemia-unspecified-d599", "name": "Acquired Hemolytic Anemia", "keyDifference": "Autoimmune hemolytic anemia can occur post-transplant as a manifestation of immune dysregulation related to GVHD but is distinguished by positive direct Coombs test, falling hemoglobin, raised LDH, and spherocytes on blood film — features not present in primary GVHD affecting skin, gut, and liver." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "aplastic-anemia-unspecified-d619", "name": "Aplastic Anemia" },
+    { "slug": "leukemia", "name": "Leukemia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "activated-protein-c-resistance-d6851", "name": "Factor V Leiden", "relevance": "Patients with inherited thrombophilias including Factor V Leiden may face elevated VTE risk in the peri-transplant period when GVHD drives a highly inflammatory state." },
+    { "slug": "aplastic-anemia-unspecified-d619", "name": "Aplastic Anemia", "relevance": "Aplastic anemia is a major indication for allogeneic transplantation; post-transplant GVHD is a principal complication in this population." },
+    { "slug": "lymphoma", "name": "Lymphoma", "relevance": "Lymphoma patients undergoing allogeneic transplant are at risk for aGVHD; the graft-versus-lymphoma effect partially overlaps with the GVHD immune response." },
+    { "slug": "acquired-coagulation-factor-deficiency-d684", "name": "Acquired Coagulation Factor Deficiency", "relevance": "Severe hepatic GVHD can reduce hepatic synthesis of coagulation factors, producing a secondary coagulopathy in transplant patients." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is acute graft-versus-host disease?",
+      "answer": "Acute graft-versus-host disease (aGVHD) is a complication of bone marrow or stem cell transplantation in which the donor's immune cells attack the recipient's skin, gut, and liver. It occurs in 40-70% of allogeneic transplant recipients and typically begins within the first 100 days after transplant.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of acute GVHD?",
+      "answer": "The first signs are usually a rash on the palms and soles that spreads to the trunk, followed by watery diarrhea, abdominal cramping, and in some patients yellowing of the skin or eyes (jaundice). Symptoms typically appear 2-5 weeks after the transplant. Early recognition and rapid treatment improve outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is acute GVHD treated?",
+      "answer": "First-line treatment is high-dose corticosteroids (methylprednisolone 1-2 mg/kg/day). About 50-60% of patients respond. For steroid-refractory disease, ruxolitinib (an oral JAK inhibitor) is FDA-approved and achieves a response in about 62% of patients who did not respond to steroids.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Grade III-IV acute GVHD?",
+      "answer": "Grade III-IV is the most severe category of aGVHD, characterized by a rash covering most of the body, diarrhea exceeding 1.5 liters per day, or bilirubin above 6 mg/dL. It carries a 12-month mortality above 50% in steroid-refractory cases and requires aggressive second-line immunosuppression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can GVHD be prevented?",
+      "answer": "Yes. Standard prevention uses calcineurin inhibitors (tacrolimus or cyclosporine) combined with methotrexate or mycophenolate, started before transplant infusion. Post-transplant cyclophosphamide markedly reduces severe GVHD in mismatched and haploidentical transplants. Choosing the best HLA-matched donor is the single most effective preventive step.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What organs does acute GVHD affect?",
+      "answer": "The three classic target organs are skin (rash), gastrointestinal tract (diarrhea, abdominal pain), and liver (jaundice, elevated bilirubin). Rarely, GVHD can affect the lungs and central nervous system. The organs involved and extent of disease determine the overall grade and treatment intensity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is ruxolitinib used for in GVHD?",
+      "answer": "Ruxolitinib is an oral JAK1/JAK2 inhibitor approved by the FDA in 2019 as second-line treatment for acute GVHD that has not responded to corticosteroids. In the REACH2 trial it achieved an overall response in 62% of steroid-refractory patients at day 28, compared with 39% for best available therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does acute GVHD last?",
+      "answer": "Mild to moderate aGVHD responding to first-line steroids typically resolves over 4-8 weeks with gradual taper. Severe or steroid-refractory disease can persist for months and may transition into chronic GVHD. Total immunosuppression duration is often 12-24 months from transplant.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is graft-versus-host disease curable?",
+      "answer": "Many patients with grade I-II aGVHD achieve complete, lasting remission with steroid treatment. Severe (grade III-IV) disease is harder to cure and carries significant mortality. Patients who achieve a durable response maintain the graft-versus-leukemia effect that is part of the transplant's anti-cancer benefit.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between acute and chronic GVHD?",
+      "answer": "Acute GVHD classically occurs within 100 days of transplant with skin rash, diarrhea, and jaundice driven by donor T-cell attack. Chronic GVHD develops later and resembles autoimmune disorders, affecting the mouth, eyes, lungs, skin (fibrosis), and gut with a different immune mechanism and distinct treatment approach.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who is most at risk for acute GVHD?",
+      "answer": "Risk is highest with a mismatched or unrelated donor, peripheral blood stem cell grafts, myeloablative conditioning, female donor to male recipient, and older recipient age. Matched sibling donors carry a 25-40% aGVHD risk vs. 50-70% with matched unrelated donors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does GVHD affect the gut?",
+      "answer": "GI GVHD destroys the epithelial lining of the intestines, causing high-volume watery diarrhea (up to several liters per day), severe cramps, nausea, and blood in severe cases. Protein is lost through the damaged mucosa, causing hypoalbuminemia. Nutritional support including parenteral feeding is often required.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What biomarkers predict GVHD severity?",
+      "answer": "ST2 and REG3-alpha measured at day 7 after GVHD onset predict treatment failure and 6-month non-relapse mortality better than clinical grade alone. The MAGIC algorithm risk score combining these two biomarkers guides treatment intensification decisions at specialized centers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can GVHD improve the anti-cancer effect of transplant?",
+      "answer": "Yes. The same alloreactive donor T-cells that cause GVHD also attack residual cancer cells — the graft-versus-leukemia (GVL) or graft-versus-tumor effect. This immune benefit is one reason allogeneic transplant reduces leukemia relapse rates; complete T-cell depletion to prevent GVHD increases relapse risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is acute GVHD contagious?",
+      "answer": "No. Acute GVHD is an immune complication specific to transplant recipients and cannot spread to other people. It results from the donor's immune cells attacking the recipient's own tissues and is not caused by an infectious agent.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Graft-versus-host disease (GVHD) after transplant",
+  "regionalNames": [
+    { "name": "GVHD", "region": "Global (clinical abbreviation)", "language": "English" },
+    { "name": "Transplantat-gegen-Wirt-Reaktion", "region": "Germany / Austria", "language": "German" }
+  ],
+  "searchTags": [
+    "acute GVHD",
+    "graft versus host disease",
+    "GVHD after bone marrow transplant",
+    "stem cell transplant complication",
+    "GVHD rash",
+    "GVHD diarrhea",
+    "steroid refractory GVHD",
+    "ruxolitinib GVHD",
+    "GVHD grades",
+    "allogeneic transplant complication",
+    "GVHD treatment",
+    "GVHD prevention",
+    "aGVHD"
+  ],
+  "symptomKeywords": [
+    "rash after bone marrow transplant",
+    "diarrhea after stem cell transplant",
+    "jaundice after transplant",
+    "skin peeling after transplant",
+    "abdominal pain post transplant"
+  ],
+
+  "metaTitle": "Acute Graft-versus-Host Disease: Symptoms & Treatment",
+  "metaDescription": "Acute GVHD: immune complication of stem cell transplant attacking skin, gut, and liver in up to 70% of recipients. Grades, treatment, and outcomes reviewed.",
+
+  "keywords": [
+    "acute graft-versus-host disease",
+    "aGVHD treatment",
+    "GVHD symptoms",
+    "steroid refractory GVHD",
+    "ruxolitinib GVHD",
+    "GVHD grades",
+    "GVHD prevention",
+    "GVHD diagnosis",
+    "bone marrow transplant complication",
+    "GI GVHD",
+    "hepatic GVHD",
+    "GVHD prognosis"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Zeiser R, Blazar BR. 2017. Acute graft-versus-host disease — biologic process, prevention, and therapy. New England Journal of Medicine 377(22):2167-2179.", "url": "https://pubmed.ncbi.nlm.nih.gov/29171822/", "accessedDate": "2026-05-14" },
+    { "title": "Greinix HT, Worel N. 2022. New developments in acute and chronic GVHD. Transplantation and Cellular Therapy 28(5):253-260.", "url": "https://pubmed.ncbi.nlm.nih.gov/35183785/", "accessedDate": "2026-05-14" },
+    { "title": "Zeiser R, von Bubnoff N, Butler J, et al. (REACH2 trial). 2020. Ruxolitinib for glucocorticoid-refractory acute graft-versus-host disease. New England Journal of Medicine 382(19):1800-1810.", "url": "https://pubmed.ncbi.nlm.nih.gov/32320564/", "accessedDate": "2026-05-14" },
+    { "title": "Levine JE, Braun TM, Harris AC, et al. 2015. A prognostic score for acute graft-versus-host disease based on biomarkers: a multicentre study. Lancet Haematology 2(1):e21-29.", "url": "https://pubmed.ncbi.nlm.nih.gov/25544075/", "accessedDate": "2026-05-14" },
+    { "title": "Przepiorka D, Weisdorf D, Martin P, et al. 1995. 1994 Consensus Conference on Acute GVHD Grading. Bone Marrow Transplantation 15(6):825-828.", "url": "https://pubmed.ncbi.nlm.nih.gov/7581076/", "accessedDate": "2026-05-14" },
+    { "title": "National Cancer Institute. 2023. Chronic and Acute Graft-Versus-Host Disease. NCI Cancer Topics.", "url": "https://www.cancer.gov/about-cancer/treatment/types/stem-cell-transplant/gvhd-fact-sheet", "accessedDate": "2026-05-14" },
+    { "title": "Moe S, Gooley TA, Mielcarek M, Martin PJ. 2022. Risk factors for acute GVHD in modern allogeneic HCT — CIBMTR analysis. Blood Advances 6(7):2041-2052.", "url": "https://pubmed.ncbi.nlm.nih.gov/35100333/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

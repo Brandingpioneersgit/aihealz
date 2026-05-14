@@ -1,0 +1,399 @@
+{
+  "_meta": {
+    "slug": "alkalosis-e873",
+    "tier": 1,
+    "headTerm": "Metabolic alkalosis",
+    "longTailKeywords": [
+      "metabolic alkalosis symptoms",
+      "metabolic alkalosis causes",
+      "metabolic alkalosis treatment",
+      "metabolic alkalosis vs respiratory alkalosis",
+      "metabolic alkalosis chloride responsive",
+      "metabolic alkalosis vomiting",
+      "metabolic alkalosis diuretics",
+      "saline responsive alkalosis",
+      "metabolic alkalosis bicarbonate high",
+      "metabolic alkalosis low potassium",
+      "metabolic alkalosis diagnosis ABG",
+      "Bartter syndrome alkalosis"
+    ],
+    "primarySpecialty": "Endocrinology/Metabolism",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Metabolic Alkalosis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Nephrology/Endocrinology",
+
+  "heroOverview": "Metabolic alkalosis is a primary acid-base disorder in which serum bicarbonate rises above 26 mEq/L and arterial pH climbs above 7.45, driven by net loss of acid or net gain of base. It is the most common acid-base abnormality found on routine hospital chemistry panels, present in approximately 40% of patients with any acid-base disturbance in hospitalized populations. The dominant causes are vomiting or nasogastric suction, loop and thiazide diuretic use, and primary hyperaldosteronism. Patients develop muscle cramps, weakness, tetany, and cardiac arrhythmias, especially when hypokalemia coexists. Mild cases self-resolve, but serum bicarbonate above 40 mEq/L carries significant mortality in critically ill patients. Treatment hinges on correcting the underlying cause and, for saline-responsive forms, restoring chloride with normal saline.",
+
+  "keyStats": {
+    "prevalence": "Present in approximately 40% of hospitalized patients with any acid-base disturbance; incidence in ICU populations reaches 30-40% (Khanna & Kurtzman, Seminars in Nephrology 2006)",
+    "demographics": "Most common in older adults on diuretics or with primary hyperaldosteronism; also seen in young women with eating disorders and purging behaviors",
+    "avgAge": "No single age of onset; diuretic-related alkalosis peaks after age 60; Bartter/Gitelman syndromes present in childhood or early adulthood",
+    "globalCases": "No global incidence data; a leading cause of electrolyte abnormality in patients receiving nasogastric drainage, mechanical ventilation, or high-dose loop diuretics"
+  },
+
+  "definition": "Metabolic alkalosis (ICD-10: E87.3) is an acid-base disorder characterized by a primary rise in serum bicarbonate above 26 mEq/L with a secondary increase in arterial pH above 7.45. Two conditions must coexist for the disorder to sustain: an initiating event that adds base or removes acid from the body, and a perpetuating mechanism that impairs the normal renal capacity to excrete excess bicarbonate. Under normal conditions the kidney can excrete several hundred mEq of bicarbonate daily; alkalosis persists only when renal bicarbonate excretion is impaired by volume depletion, chloride deficiency, or hyperaldosteronism. The condition is classified by its response to intravenous saline: saline-responsive forms (urine chloride below 25 mEq/L) reflect effective arterial volume depletion from vomiting, diuretics, or nasogastric drainage, where chloride and volume repletion corrects the disorder. Saline-resistant forms (urine chloride above 40 mEq/L) indicate mineralocorticoid excess, severe potassium depletion, Bartter syndrome, or Gitelman syndrome, and are not corrected by saline alone. Respiratory compensation raises PaCO2 by approximately 0.7 mmHg for every 1 mEq/L rise in HCO3−. Metabolic alkalosis is managed primarily by nephrologists and endocrinologists.",
+
+  "typesClassification": [
+    { "type": "Saline-responsive metabolic alkalosis (urine Cl < 25 mEq/L)", "description": "Results from effective arterial volume depletion with chloride loss — most commonly from vomiting, nasogastric suction, or diuretic therapy. Kidney retains bicarbonate to preserve volume. Responds reliably to isotonic saline and potassium repletion." },
+    { "type": "Saline-resistant metabolic alkalosis (urine Cl > 40 mEq/L)", "description": "Driven by mineralocorticoid excess (primary hyperaldosteronism, Cushing's syndrome, ectopic ACTH), severe hypokalemia (K below 2.5 mEq/L), Bartter syndrome, Gitelman syndrome, or post-hypercapnia alkalosis. Volume is not contracted; saline infusion does not correct the disorder." },
+    { "type": "Diuretic-induced alkalosis", "description": "Loop diuretics (furosemide, bumetanide) and thiazides cause urinary chloride wasting, volume contraction, and secondary hyperaldosteronism, all of which impair bicarbonate excretion. The most common cause in outpatient and inpatient settings." },
+    { "type": "Post-hypercapnia alkalosis", "description": "Occurs after rapid correction of chronic respiratory acidosis (e.g., mechanical ventilation of a COPD patient). The kidney had retained HCO3− to compensate for chronically elevated PaCO2; when CO2 is quickly normalized, bicarbonate remains elevated temporarily." },
+    { "type": "Milk-alkali syndrome", "description": "Excessive calcium carbonate ingestion (antacids, calcium supplements) with concurrent renal impairment, producing the triad of hypercalcemia, metabolic alkalosis, and renal insufficiency. Now often caused by over-the-counter calcium carbonate for osteoporosis prevention." }
+  ],
+
+  "primarySymptoms": [
+    "Muscle cramps, spasms, and carpopedal spasm driven by the alkalosis-induced decrease in ionized calcium, even when total calcium is normal; may be indistinguishable from hypocalcemic tetany.",
+    "Generalized muscle weakness from coexistent hypokalemia, which almost universally accompanies metabolic alkalosis; severe weakness can impair respiratory drive.",
+    "Paresthesias (tingling and numbness) of the hands, feet, and perioral region as decreased ionized calcium lowers the threshold for peripheral nerve firing.",
+    "Nausea and vomiting — both as a cause and as a consequence of the alkalosis and associated electrolyte disturbances.",
+    "Tetany and positive Chvostek's and Trousseau's signs when ionized calcium falls significantly despite normal or near-normal total serum calcium.",
+    "Cardiac arrhythmias including supraventricular tachycardia, premature ventricular complexes, and — in severe alkalosis — ventricular fibrillation, particularly when hypokalemia coexists.",
+    "Headache, irritability, and cognitive slowing from cerebral vasoconstriction secondary to reduced PaCO2 in the compensatory respiratory response.",
+    "Shallow respirations as the respiratory compensation hypoventilates to allow PaCO2 to rise — can worsen hypoxia in patients with underlying lung disease.",
+    "Hypertension and peripheral edema when metabolic alkalosis results from primary hyperaldosteronism or Cushing's syndrome driving sodium and water retention.",
+    "Polyuria and polydipsia from concurrent hypokalemia-induced nephrogenic diabetes insipidus in patients with severe potassium depletion."
+  ],
+
+  "earlyWarningSigns": [
+    "Serum bicarbonate above 30 mEq/L on routine chemistry panel in a patient on diuretics or with recurrent vomiting — warrants clinical review before symptoms appear.",
+    "Serum potassium below 3.0 mEq/L in the context of diuretic use — hypokalemia and metabolic alkalosis are almost always linked and each perpetuates the other.",
+    "Urine chloride below 25 mEq/L combined with diuretic use or nasogastric drainage — confirms saline-responsive alkalosis before full symptoms develop.",
+    "Mild hand cramping or tingling after vomiting or prolonged vomiting — early carpopedal spasm from alkalosis-lowered ionized calcium.",
+    "Unexplained hypokalemia in a patient not on diuretics — consider Bartter or Gitelman syndrome, particularly in a young person."
+  ],
+
+  "emergencySigns": [
+    "Arterial pH above 7.60 — severe alkalosis impairs oxygen release from hemoglobin, causes coronary vasospasm, and dramatically increases the risk of fatal ventricular arrhythmia.",
+    "Tetany progressing to laryngospasm or generalized seizure from severe reduction in ionized calcium — requires emergency intravenous calcium gluconate.",
+    "Sustained ventricular arrhythmia (VT/VF) in a patient with known metabolic alkalosis and hypokalemia — electrolyte correction must accompany arrhythmia management.",
+    "Respiratory failure from severe alkalosis-driven hypoventilation in a patient with baseline hypoxia or COPD — monitor SpO2 closely during treatment.",
+    "Serum potassium below 2.0 mEq/L with weakness progressing to ascending paralysis — risk of respiratory muscle failure requiring airway protection."
+  ],
+
+  "causes": [
+    {
+      "cause": "Loss of gastric hydrochloric acid",
+      "description": "Vomiting, bulimia-related purging, and prolonged nasogastric suction remove HCl from the stomach. For each mole of HCl lost, the body retains one mole of bicarbonate. Chloride depletion impairs renal bicarbonate excretion, perpetuating the alkalosis. This is the most common initiating cause of metabolic alkalosis globally."
+    },
+    {
+      "cause": "Loop and thiazide diuretic use",
+      "description": "Furosemide, bumetanide, and hydrochlorothiazide cause urinary chloride loss in excess of sodium loss, volume contraction, and secondary hyperaldosteronism. Aldosterone promotes H+ secretion in the collecting duct and increases bicarbonate reabsorption. Diuretic-induced alkalosis is the most common cause in hospital inpatients over age 60."
+    },
+    {
+      "cause": "Primary hyperaldosteronism (Conn's syndrome)",
+      "description": "Autonomous aldosterone production from an adrenal adenoma or bilateral adrenal hyperplasia stimulates principal cell sodium reabsorption and alpha-intercalated cell H+ and K+ secretion in the collecting duct. Hypertension, hypokalemia, and metabolic alkalosis form the classic triad. Affects approximately 5-10% of patients with hypertension."
+    },
+    {
+      "cause": "Bartter syndrome and Gitelman syndrome",
+      "description": "Autosomal recessive channelopathies affecting thick ascending limb or distal tubule transporters mimic chronic loop or thiazide diuretic use from within the kidney. Both produce renal chloride wasting, hypokalemia, hyperreninism, and metabolic alkalosis without hypertension. Gitelman syndrome is milder, often identified incidentally in young adults."
+    },
+    {
+      "cause": "Exogenous alkali administration",
+      "description": "Excessive oral calcium carbonate or sodium bicarbonate (antacid overuse, milk-alkali syndrome), massive blood transfusion (citrate metabolism yields bicarbonate), and sodium bicarbonate infusion for acidosis management can all elevate serum HCO3−. The kidney normally excretes excess bicarbonate rapidly unless concurrent volume depletion or renal impairment is present."
+    },
+    {
+      "cause": "Severe hypokalemia (K below 2.5 mEq/L)",
+      "description": "Severe potassium depletion independently stimulates renal H+ secretion and ammoniagenesis, driving new bicarbonate generation. Hypokalemia also shifts potassium out of cells in exchange for hydrogen ions, lowering intracellular pH and paradoxically increasing bicarbonate reabsorption in the proximal tubule."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Loop or thiazide diuretic use", "category": "modifiable", "description": "The most prevalent risk factor in hospitalized patients and outpatients; chronic high-dose furosemide or combination diuretic use raises serum HCO3− by 4-8 mEq/L on average. Risk is modifiable by electrolyte monitoring and dose adjustment." },
+    { "factor": "Chronic vomiting or purging disorder", "category": "modifiable", "description": "Bulimia nervosa and other eating disorders with regular purging cause recurrent HCl loss and can produce persistent metabolic alkalosis (HCO3− 30-45 mEq/L). Prevalence in young women is approximately 1-2%." },
+    { "factor": "Primary hyperaldosteronism", "category": "non-modifiable", "description": "Affects 5-10% of hypertensive patients and produces saline-resistant metabolic alkalosis with hypokalemia. Adrenal adenoma (Conn's) is surgically curable; bilateral hyperplasia is managed with aldosterone antagonists." },
+    { "factor": "Nasogastric drainage in hospitalized patients", "category": "modifiable", "description": "Continuous nasogastric suction removes 60-120 mEq of HCl per hour; unaccompanied by adequate IV chloride replacement, this produces metabolic alkalosis within 24-48 hours in most patients." },
+    { "factor": "Bartter or Gitelman syndrome (rare genetic channelopathy)", "category": "genetic", "description": "Autosomal recessive mutations in SLC12A1 (Bartter type 1), KCNJ1 (Bartter type 2), CLCNKB (Bartter type 3), and SLC12A3 (Gitelman) cause life-long chloride-wasting nephropathy and metabolic alkalosis." },
+    { "factor": "Exogenous corticosteroid therapy or Cushing's syndrome", "category": "modifiable", "description": "Endogenous or exogenous glucocorticoid excess activates mineralocorticoid receptors, promotes tubular H+ and K+ secretion, and produces saline-resistant alkalosis with hypertension and hypokalemia." },
+    { "factor": "Post-hypercapnic state in ventilated COPD patients", "category": "non-modifiable", "description": "After rapid CO2 normalization during mechanical ventilation, the kidney's accumulated bicarbonate reserve is not immediately excreted; a transient but sometimes severe metabolic alkalosis persists until renal excretion catches up." }
+  ],
+
+  "affectedDemographics": [
+    "Adults over 60 on chronic diuretic therapy for heart failure or hypertension represent the largest group with sustained metabolic alkalosis.",
+    "Young women with bulimia nervosa or other purging disorders: prevalence of bulimia 1-2% in women aged 15-30 worldwide; most will show metabolic alkalosis with hypokalemia on laboratory testing.",
+    "Patients with primary hyperaldosteronism: affects an estimated 5-10% of hypertensive individuals globally, with metabolic alkalosis as a near-universal biochemical finding.",
+    "ICU patients on mechanical ventilation or receiving continuous nasogastric drainage — alkalosis develops in 30-40% of this population if chloride replacement is inadequate.",
+    "Children and young adults with Bartter syndrome (1 in 1,000,000 births) or Gitelman syndrome (prevalence approximately 1 in 40,000) presenting with failure to thrive, muscle cramps, or incidental electrolyte abnormalities."
+  ],
+
+  "diagnosisOverview": "Metabolic alkalosis is confirmed by arterial blood gas showing pH above 7.45 and HCO3− above 26 mEq/L with appropriately elevated PaCO2 (respiratory compensation raises PaCO2 by 0.7 mmHg per 1 mEq/L rise in HCO3−; expected PaCO2 = 0.7 × HCO3− + 21 ± 2). Once confirmed, the key classification step is measuring the urine chloride concentration on a spot urine sample. Urine chloride below 25 mEq/L indicates chloride-responsive (saline-responsive) alkalosis — the most common type, caused by vomiting, diuretics, or nasogastric drainage. Urine chloride above 40 mEq/L points to saline-resistant alkalosis from mineralocorticoid excess, severe hypokalemia, or tubular channelopathies. The urine chloride provides better guidance than urine sodium in this context because alkalosis itself causes bicarbonaturia, which obligates some sodium excretion. Serum potassium is essential; hypokalemia both generates and perpetuates metabolic alkalosis. Serum aldosterone, plasma renin activity, and 24-hour urine aldosterone distinguish primary from secondary hyperaldosteronism. CT or MRI of the adrenal glands, or adrenal vein sampling, localizes adrenal adenomas in confirmed primary hyperaldosteronism. Bartter and Gitelman syndromes require genetic testing of SLC12A1, KCNJ1, CLCNKB, and SLC12A3. Arterial blood gas is repeated after initial treatment to assess response. In critically ill patients with concurrent disorders, a systematic approach using the modified Winters' formula and delta-ratio prevents missing a superimposed high anion gap acidosis.",
+
+  "diagnosticTests": [
+    { "test": "Arterial blood gas (ABG)", "purpose": "Confirms metabolic alkalosis with elevated pH and HCO3−; assesses adequacy of respiratory compensation", "whatToExpect": "Needle inserted into the radial artery; mild discomfort, results within 15 minutes. Expected PaCO2 rise = 0.7 × (HCO3− − 24) confirms pure metabolic alkalosis; higher PaCO2 suggests concurrent respiratory acidosis." },
+    { "test": "Serum electrolytes (Na, K, Cl, HCO3−)", "purpose": "Identifies coexistent hypokalemia and hypochloremia; quantifies bicarbonate elevation", "whatToExpect": "Standard blood draw. Serum potassium below 3.5 mEq/L and chloride below 98 mEq/L strongly support saline-responsive metabolic alkalosis." },
+    { "test": "Urine chloride (spot urine)", "purpose": "The single most useful test to classify metabolic alkalosis: urine Cl below 25 mEq/L = saline-responsive; above 40 mEq/L = saline-resistant", "whatToExpect": "A single random urine sample sent to the lab. Results within 1-2 hours. Avoids false guidance from urine sodium, which varies with bicarbonaturia." },
+    { "test": "Serum aldosterone and plasma renin activity", "purpose": "Diagnoses primary hyperaldosteronism when urine chloride is high; elevated aldosterone with suppressed renin confirms the diagnosis", "whatToExpect": "Blood draw in the morning after sitting upright for 30 minutes; some medications (spironolactone, diuretics, ACE inhibitors) must be withheld for 2-4 weeks for accurate results." },
+    { "test": "24-hour urine for potassium and chloride excretion", "purpose": "Quantifies renal potassium wasting in Bartter/Gitelman syndrome or primary hyperaldosteronism vs. GI loss", "whatToExpect": "All urine collected over a full 24-hour period. A FEK (fractional excretion of potassium) above 15% during hypokalemia indicates inappropriate renal potassium loss." },
+    { "test": "Adrenal CT or MRI with adrenal vein sampling", "purpose": "Localizes unilateral adrenal adenoma vs. bilateral hyperplasia in confirmed primary hyperaldosteronism, guiding surgical vs. medical management", "whatToExpect": "CT: 10-15 minutes in scanner, IV contrast used. Adrenal vein sampling is a catheter-based procedure requiring fluoroscopic guidance, performed under conscious sedation." }
+  ],
+
+  "treatmentOverview": "Treatment of metabolic alkalosis follows a cause-directed approach. For saline-responsive forms (urine Cl below 25 mEq/L), intravenous isotonic saline (0.9% NaCl) expands effective arterial volume and delivers chloride to the kidney, which resumes bicarbonate excretion; most patients normalize HCO3− within 24-72 hours. Potassium chloride (oral or IV) is added as soon as urine output is adequate, targeting serum K above 3.5 mEq/L — failure to correct hypokalemia prevents alkalosis resolution regardless of fluid status. In diuretic-induced alkalosis, dose reduction or temporary cessation of the diuretic is definitive; acetazolamide (250-500 mg twice daily) can accelerate renal bicarbonate excretion and is particularly useful in patients with heart failure who cannot receive large volumes of saline. The carbonic anhydrase inhibitor blocks proximal tubular HCO3− reabsorption, enhancing its urinary excretion at the cost of increasing urine output. For saline-resistant forms, treatment targets the specific cause: aldosterone antagonists (spironolactone 12.5-25 mg/day, titrated; or eplerenone) for primary hyperaldosteronism; laparoscopic adrenalectomy for unilateral adenoma (Conn's syndrome); potassium-sparing diuretics and indomethacin for Bartter syndrome; magnesium and potassium supplementation for Gitelman syndrome. In post-hypercapnia alkalosis following mechanical ventilation, lowering the ventilator rate to allow PaCO2 to rise modestly corrects the alkalosis within hours. In severe life-threatening alkalosis (pH above 7.60), hydrochloric acid 0.1 N can be infused via central venous access in selected patients, or hemofiltration used to remove excess bicarbonate when dialysis is already indicated. American Thoracic Society and AHA electrolyte guidelines inform current practice.",
+
+  "medicalTreatments": [
+    { "name": "Intravenous isotonic saline (0.9% NaCl) with potassium chloride", "description": "First-line for saline-responsive metabolic alkalosis. Restores chloride deficit, expands effective arterial volume, and suppresses secondary aldosteronism. Potassium chloride 10-40 mEq/hour IV is added to correct concurrent hypokalemia. Monitor serum K every 4-6 hours during rapid repletion.", "effectiveness": "Normalizes serum HCO3− within 24-72 hours in 90%+ of saline-responsive cases; potassium correction alone when Cl is sufficient raises HCO3− by 2-4 mEq/L per 1 mEq/L rise in serum K" },
+    { "name": "Oral or IV potassium chloride supplementation", "description": "Corrects the coexistent hypokalemia that perpetuates alkalosis; potassium must be replaced as chloride salt, not as phosphate or bicarbonate, to replenish the chloride deficit. Oral potassium chloride extended-release tablets are preferred when patient is tolerating oral intake.", "effectiveness": "Each 10 mEq of potassium chloride raises serum K approximately 0.1 mEq/L in a 70-kg patient; serum K should reach above 3.5 mEq/L before bicarbonate normalizes" },
+    { "name": "Acetazolamide (250-500 mg orally twice daily)", "description": "Carbonic anhydrase inhibitor that blocks proximal tubule HCO3− reabsorption, increasing urinary bicarbonate excretion. Particularly useful in volume-overloaded patients (heart failure, cirrhosis) where large saline volumes are contraindicated. Causes kaluresis — add potassium replacement.", "effectiveness": "Lowers serum HCO3− by 3-6 mEq/L within 24-48 hours; may reduce ventilator weaning time in post-hypercapnia alkalosis" },
+    { "name": "Spironolactone or eplerenone (25-50 mg/day, titrated)", "description": "Aldosterone antagonists block mineralocorticoid receptors in the collecting duct, reducing H+ and K+ secretion. First-line medical therapy for primary hyperaldosteronism and saline-resistant alkalosis. Eplerenone is more selective and causes less gynecomastia.", "effectiveness": "Normalizes potassium in 80-90% and reduces HCO3− to target range in 70-85% of primary hyperaldosteronism patients" },
+    { "name": "Potassium-sparing diuretics (amiloride, triamterene) with indomethacin", "description": "Used for Bartter syndrome to block aldosterone-independent potassium secretion in the collecting duct. Indomethacin reduces prostaglandin-driven hyperreninemia. Magnesium supplementation is essential in Gitelman syndrome.", "effectiveness": "Reduces urinary potassium wasting by 40-60% and raises serum K by 0.5-1.0 mEq/L in Bartter syndrome trials" },
+    { "name": "Dilute hydrochloric acid (HCl 0.1N, central venous infusion)", "description": "Reserved for severe alkalosis (pH above 7.60) where other approaches have failed and urgent correction is needed. Infused at 0.2 mEq/kg/hour via central venous catheter with hourly ABG monitoring. Risk of local sclerosis if extravasated.", "effectiveness": "Reduces pH by 0.05-0.10 units per mmol of H+ delivered; highly effective but used only as a rescue measure in critical care" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Laparoscopic adrenalectomy for Conn's adenoma", "description": "Indicated for unilateral adrenal adenoma confirmed by CT and adrenal vein sampling. Removes the source of autonomous aldosterone secretion, resolving or substantially improving hypertension, hypokalemia, and metabolic alkalosis.", "successRate": "Biochemical cure of hyperaldosteronism in 90-95%; hypertension resolved or improved in 70-80%; median hospital stay 2-3 days" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Dietary sodium and potassium optimization", "description": "Increasing dietary potassium intake (fruits, vegetables, legumes) and moderating sodium intake in diuretic-treated patients reduces the degree of urinary potassium and chloride wasting, modestly attenuating alkalosis severity." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "potassium-replacement-therapy",
+    "adrenalectomy",
+    "acetazolamide-therapy"
+  ],
+
+  "whySeeSpecialist": "A nephrologist is appropriate when urine chloride is above 40 mEq/L (saline-resistant forms), when hypokalemia is severe (below 2.5 mEq/L), or when the alkalosis does not respond to initial saline and potassium replacement. Endocrinology referral is warranted when primary hyperaldosteronism or Cushing's syndrome is suspected, as hormonal suppression testing and adrenal imaging guide management.",
+  "doctorSelectionGuide": "For diuretic-induced or vomiting-related alkalosis, an internist or hospitalist can manage most cases. Persistent or severe alkalosis should involve a nephrologist experienced in tubular disorders and electrolyte physiology. For suspected primary hyperaldosteronism, choose an endocrinologist at a center that performs adrenal vein sampling, which requires technical expertise to interpret accurately.",
+
+  "hospitalCriteria": [
+    "Arterial blood gas available around the clock",
+    "Capability for continuous cardiac monitoring in alkalosis with pH above 7.55",
+    "Adrenal vein sampling capability for localization of aldosteronoma",
+    "Surgical service for laparoscopic adrenalectomy",
+    "ICU service for severe alkalosis (pH above 7.60) requiring dilute HCl infusion"
+  ],
+  "keyFacilities": [
+    "Hospital with 24-hour ABG and electrolyte laboratory",
+    "Nephrology service with expertise in tubular channelopathies",
+    "Endocrinology center with adrenal imaging and sampling programs",
+    "Surgical oncology or general surgical service for adrenalectomy",
+    "Intensive care unit for critical alkalosis management"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Monitor serum electrolytes (potassium, chloride, bicarbonate) every 3-6 months in patients on chronic loop or thiazide diuretics and adjust doses proactively.",
+    "Replace chloride and potassium in patients receiving continuous nasogastric drainage — administer 0.45% NaCl with 20-40 mEq/L KCl as maintenance fluid.",
+    "Screen for primary hyperaldosteronism in all patients with hypertension and unprovoked hypokalemia using plasma aldosterone-to-renin ratio.",
+    "Limit oral calcium carbonate to recommended daily allowance (1,000-1,200 mg elemental calcium) to prevent milk-alkali syndrome, especially in patients with renal impairment.",
+    "Treat bulimia nervosa and purging behaviors with evidence-based psychological therapies (CBT) to interrupt recurrent HCl loss."
+  ],
+
+  "lifestyleModifications": [
+    "Take prescribed oral potassium chloride supplements with meals; avoid skipping doses as potassium deficit perpetuates the alkalosis.",
+    "Report new muscle cramps, hand spasms, or irregular heartbeat promptly — these may reflect worsening alkalosis or hypokalemia.",
+    "Limit antacid use to recommended doses; do not self-treat indigestion with large amounts of calcium carbonate or sodium bicarbonate long-term.",
+    "Stay adequately hydrated, especially in hot weather or with increased activity, to maintain effective arterial volume and renal bicarbonate handling.",
+    "Keep all scheduled electrolyte monitoring appointments if on chronic diuretic therapy; asymptomatic hypokalemia and alkalosis are common and detectable only on labs.",
+    "Patients with Bartter or Gitelman syndrome: carry written emergency instructions for potassium and magnesium replacement during febrile illnesses or gastrointestinal losses."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Potassium-rich foods (bananas, avocados, sweet potatoes, spinach, beans) to help maintain serum K above 3.5 mEq/L in patients at risk of hypokalemia",
+      "Foods naturally high in chloride (tomatoes, olives, celery, seaweed) to partially offset chloride deficiency in diuretic-treated patients",
+      "Magnesium-rich foods (nuts, seeds, dark chocolate, leafy greens) particularly for Gitelman syndrome, which causes renal magnesium wasting",
+      "Moderate dairy — adequate calcium through diet rather than high-dose supplements reduces milk-alkali syndrome risk"
+    ],
+    "avoid": [
+      "Excessive antacid use (calcium carbonate, sodium bicarbonate) beyond recommended dosing, especially in patients with reduced kidney function",
+      "Very high protein diets combined with diuretics, which amplify chloride and potassium losses in the kidney",
+      "Alcohol and laxative overuse, both of which promote potassium depletion and worsen alkalosis",
+      "Large sodium restriction while on diuretics without potassium replacement — extreme sodium restriction activates the renin-angiotensin-aldosterone axis and worsens hypokalemia"
+    ]
+  },
+  "exerciseGuidelines": "Light to moderate exercise is safe in compensated metabolic alkalosis. During episodes of severe alkalosis (pH above 7.55) or significant hypokalemia (K below 2.8 mEq/L), exercise should be deferred — arrhythmia risk is elevated. Patients with Bartter or Gitelman syndrome can usually exercise normally when electrolytes are maintained; aggressive sustained exercise may require extra oral potassium-chloride supplementation to replace sweat losses.",
+
+  "dailyManagement": [
+    "Take oral KCl supplements as prescribed; use sustained-release tablets to minimize GI upset.",
+    "Check blood pressure daily at home if on spironolactone for primary hyperaldosteronism; report systolic above 160 mmHg.",
+    "Attend scheduled labs (K, Cl, HCO3−, Mg) every 3-6 months or as directed when on maintenance diuretics.",
+    "Report vomiting lasting more than 24 hours — prolonged emesis causes HCl loss and can precipitate acute alkalosis.",
+    "Carry electrolyte replacement sachets (oral rehydration solution) when traveling to regions with gastrointestinal illness risk.",
+    "Patients with Gitelman syndrome: check and replenish magnesium monthly, as hypomagnesemia worsens potassium wasting."
+  ],
+
+  "prognosis": "Prognosis depends heavily on severity and cause. Mild diuretic-induced or post-emetic alkalosis (HCO3− 26-34 mEq/L) corrects completely with saline and potassium repletion and carries no lasting impact on organ function. Severe alkalosis (pH above 7.60) is associated with significantly increased mortality — published series report in-hospital mortality of 40-80% for pH above 7.65 in critically ill patients, though much of this reflects severity of the underlying disease rather than the alkalosis alone. Primary hyperaldosteronism, if diagnosed and treated before significant end-organ damage, has excellent long-term prognosis; cardiovascular risk reverts toward normal after aldosterone excess is corrected. Bartter and Gitelman syndromes are life-long disorders requiring electrolyte monitoring; renal prognosis is generally favorable in Gitelman syndrome but some Bartter patients develop chronic kidney disease. Post-hypercapnia alkalosis resolves within 12-24 hours of appropriate ventilator adjustment.",
+
+  "recoveryTimeline": "Saline-responsive alkalosis from vomiting or diuretics: HCO3− normalizes within 24-72 hours of IV saline and KCl. Diuretic-induced chronic alkalosis: correction complete within 3-7 days of dose reduction or drug change. Post-hyperaldosteronism correction after adrenalectomy: potassium and bicarbonate normalize within 1-4 weeks. Post-hypercapnia alkalosis: resolves within hours of ventilator rate reduction.",
+
+  "complications": [
+    "Life-threatening ventricular arrhythmias (ventricular tachycardia, fibrillation) when pH rises above 7.60 and concurrent hypokalemia is present — monitor with continuous telemetry and correct potassium aggressively.",
+    "Tetany and laryngospasm from ionized hypocalcemia secondary to alkalosis; although total calcium may be normal, ionized fraction falls as protein binding increases with rising pH — treat with IV calcium gluconate.",
+    "Hypokalemia-induced rhabdomyolysis in severe cases (K below 2.0 mEq/L); measure creatine kinase and urine myoglobin when profound weakness accompanies very low potassium.",
+    "Cardiovascular end-organ damage (left ventricular hypertrophy, stroke, atrial fibrillation) from the years-long hypertension and aldosterone excess of undiagnosed primary hyperaldosteronism — screening prevents this complication.",
+    "Progressive renal impairment in Bartter syndrome type I-II from chronic tubular inflammation and electrolyte dysregulation over decades.",
+    "Hypoxia from alkalosis-driven rightward shift in oxyhemoglobin dissociation curve impairing oxygen release to tissues; compounded by hypoventilatory compensation reducing respiratory oxygen delivery."
+  ],
+
+  "supportResources": [
+    { "name": "National Kidney Foundation — Electrolyte Disorders", "url": "https://www.kidney.org/atoz/content/electrolyte-disorders", "description": "Patient-focused explanations of electrolyte disorders including metabolic alkalosis, diuretic management, and when to call your doctor." },
+    { "name": "Bartter Syndrome Network (RareConnect)", "url": "https://www.rareconnect.org/en/community/bartter-syndrome", "description": "International patient community for Bartter and Gitelman syndrome, with peer resources and clinical trial information." },
+    { "name": "Endocrine Society — Primary Hyperaldosteronism Patient Resources", "url": "https://www.endocrine.org/patient-engagement/endocrine-library/primary-hyperaldosteronism", "description": "Guideline-based information for patients about Conn's syndrome, blood pressure management, and surgical options." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "acidosis-e872", "name": "Metabolic acidosis", "keyDifference": "Metabolic acidosis shows low HCO3− (below 22 mEq/L) and low pH (below 7.35), whereas metabolic alkalosis shows high HCO3− (above 26 mEq/L) and high pH (above 7.45). The two can coexist in mixed disorders (e.g., a patient vomiting and simultaneously in septic shock), where the pH and anion gap help unravel the components." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "keyDifference": "Hyperthyroidism can cause muscle weakness, tachycardia, and anxiety that superficially mimic the neuromuscular symptoms of alkalosis. However, thyroid hormone levels are elevated in hyperthyroidism; ABG is normal; bicarbonate and electrolytes are not typically deranged except in thyrotoxic hypokalemic periodic paralysis." },
+    { "slug": "hypothyroidism", "name": "Hypothyroidism", "keyDifference": "Severe hypothyroidism can cause hypoventilation and a secondary respiratory acidosis with compensatory bicarbonate elevation. The elevated HCO3− here is a compensatory response to respiratory acidosis, not primary metabolic alkalosis; ABG will show elevated PaCO2 rather than the reduced or normal PaCO2 seen in primary metabolic alkalosis." },
+    { "slug": "addisonian-crisis-e272", "name": "Adrenal crisis (Addisonian crisis)", "keyDifference": "Adrenal crisis from primary adrenal insufficiency produces the opposite acid-base picture — metabolic acidosis with hyponatremia and hyperkalemia. Primary hyperaldosteronism (the most common cause of saline-resistant metabolic alkalosis) produces hypokalemia and alkalosis, not acidosis. Plasma cortisol and aldosterone levels distinguish the two." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism" },
+    { "slug": "unspecified-adrenocortical-insufficiency-e2740", "name": "Adrenocortical insufficiency" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "acidosis-e872", "name": "Metabolic acidosis", "relevance": "The mirror acid-base disorder; both are classified by serum HCO3− and pH, and often coexist in complex critical illness." },
+    { "slug": "unspecified-adrenocortical-insufficiency-e2740", "name": "Adrenocortical insufficiency", "relevance": "The adrenal axis influences acid-base balance; hyperaldosteronism causes alkalosis while adrenal insufficiency causes acidosis." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic kidney disease", "relevance": "CKD impairs renal bicarbonate excretion and can perpetuate metabolic alkalosis; also the main cause of metabolic acidosis." },
+    { "slug": "addisonian-crisis-e272", "name": "Adrenal crisis", "relevance": "Acute aldosterone deficiency causes the opposite acid-base picture to hyperaldosteronism-related alkalosis, serving as a useful clinical contrast." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is metabolic alkalosis?",
+      "answer": "Metabolic alkalosis is an acid-base disorder where serum bicarbonate rises above 26 mEq/L and blood pH rises above 7.45. It occurs when the body loses too much acid (from vomiting or diuretics) or retains too much base. It is the most common acid-base abnormality in hospitalized patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes metabolic alkalosis?",
+      "answer": "The most common causes are vomiting or nasogastric suction (removing stomach acid), loop and thiazide diuretic use, and primary hyperaldosteronism. Less common causes include Bartter syndrome, Gitelman syndrome, and excessive antacid or bicarbonate use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of metabolic alkalosis?",
+      "answer": "Symptoms include muscle cramps, hand and foot spasms (carpopedal spasm), tingling in the hands and lips, weakness, nausea, and palpitations. Severe cases can cause tetany, confusion, and dangerous cardiac arrhythmias, especially when low potassium coexists.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is metabolic alkalosis diagnosed?",
+      "answer": "Diagnosis requires an arterial blood gas showing pH above 7.45 and HCO3− above 26 mEq/L. A spot urine chloride is then measured: below 25 mEq/L indicates saline-responsive alkalosis (vomiting, diuretics); above 40 mEq/L indicates saline-resistant alkalosis (hyperaldosteronism, Bartter syndrome).",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between saline-responsive and saline-resistant metabolic alkalosis?",
+      "answer": "Saline-responsive alkalosis has urine chloride below 25 mEq/L and corrects with intravenous saline and potassium. Saline-resistant alkalosis has urine chloride above 40 mEq/L and requires treatment of the underlying mineralocorticoid excess, channelopathy, or severe potassium depletion.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is metabolic alkalosis treated?",
+      "answer": "Saline-responsive forms are treated with intravenous 0.9% saline and potassium chloride replacement. Saline-resistant forms require aldosterone antagonists (spironolactone), potassium-sparing diuretics, or surgery for an aldosteronoma. Acetazolamide accelerates renal bicarbonate excretion in fluid-overloaded patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can vomiting cause metabolic alkalosis?",
+      "answer": "Yes. Each episode of vomiting removes hydrochloric acid from the stomach. The body retains bicarbonate to balance the lost hydrogen ions. Chloride depletion from vomiting then prevents the kidney from excreting the excess bicarbonate, sustaining the alkalosis. Replacing fluid and potassium chloride corrects it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can diuretics cause metabolic alkalosis?",
+      "answer": "Yes. Loop diuretics (furosemide) and thiazides cause urinary chloride loss, volume contraction, and secondary aldosteronism, all of which impair renal bicarbonate excretion. Diuretic-induced alkalosis is the most common cause in hospitalized adults over 60.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is primary hyperaldosteronism and how does it cause alkalosis?",
+      "answer": "Primary hyperaldosteronism is autonomous overproduction of aldosterone from an adrenal adenoma or bilateral adrenal hyperplasia. Excess aldosterone drives H+ and K+ secretion in the renal collecting duct, generating new bicarbonate. It causes hypertension, hypokalemia, and metabolic alkalosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is metabolic alkalosis dangerous?",
+      "answer": "Mild alkalosis (HCO3− 26-34 mEq/L) is rarely dangerous. Severe alkalosis with pH above 7.60 causes cardiac arrhythmias, seizures, and laryngospasm, and carries 40-80% mortality in critically ill patients, largely reflecting severity of the underlying disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Bartter syndrome and Gitelman syndrome?",
+      "answer": "Both are rare autosomal recessive kidney disorders where genetic mutations cause persistent urinary salt and potassium wasting, mimicking chronic diuretic use. Patients develop hypokalemia and metabolic alkalosis from birth or early life. Gitelman syndrome is milder and often found incidentally in young adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does metabolic alkalosis affect potassium?",
+      "answer": "Metabolic alkalosis drives potassium into cells in exchange for hydrogen ions, lowering serum potassium. Hypokalemia in turn stimulates renal H+ secretion, perpetuating the alkalosis. This reinforcing cycle means both must be corrected simultaneously — potassium should be replaced as potassium chloride.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-hypercapnia alkalosis?",
+      "answer": "Post-hypercapnia alkalosis occurs after rapid correction of chronic respiratory acidosis, typically in a ventilated COPD patient. The kidney had accumulated bicarbonate to compensate for chronically high CO2; when CO2 is quickly normalized, bicarbonate remains elevated temporarily until the kidney excretes it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can antacids cause metabolic alkalosis?",
+      "answer": "Excessive use of calcium carbonate or sodium bicarbonate antacids can raise serum bicarbonate, particularly in patients with underlying renal impairment. This is called milk-alkali syndrome and presents with high calcium, metabolic alkalosis, and reduced kidney function. Using antacids within recommended doses is safe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the relationship between metabolic alkalosis and hypokalemia?",
+      "answer": "Metabolic alkalosis and hypokalemia almost always coexist and perpetuate each other. Alkalosis pushes K+ into cells; hypokalemia stimulates renal H+ excretion that generates more HCO3−. Correcting one without the other fails. Potassium must be given as KCl to replenish both potassium and chloride.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Metabolic alkalosis (high blood bicarbonate, low-acid blood)",
+  "regionalNames": [
+    { "name": "Alcalose métabolique", "region": "France, Francophone Africa", "language": "French" },
+    { "name": "Alcalosis metabólica", "region": "Latin America, Spain", "language": "Spanish" },
+    { "name": "मेटाबॉलिक एल्कलोसिस", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "metabolic alkalosis",
+    "high bicarbonate blood",
+    "saline responsive alkalosis",
+    "chloride responsive alkalosis",
+    "diuretic metabolic alkalosis",
+    "vomiting alkalosis",
+    "Bartter syndrome",
+    "Gitelman syndrome",
+    "primary hyperaldosteronism alkalosis",
+    "low potassium alkalosis",
+    "post-hypercapnia alkalosis",
+    "acid base disorder alkalosis",
+    "alkalosis treatment",
+    "Conn syndrome alkalosis"
+  ],
+  "symptomKeywords": [
+    "muscle cramps low potassium",
+    "hand spasms tingling",
+    "carpopedal spasm",
+    "irregular heartbeat low potassium",
+    "nausea after vomiting alkalosis",
+    "weakness diuretics",
+    "tetany high bicarbonate"
+  ],
+
+  "metaTitle": "Metabolic Alkalosis: Symptoms, Causes & Treatment",
+  "metaDescription": "Metabolic alkalosis: high bicarbonate from vomiting, diuretics, or aldosteronism. Symptoms, saline vs resistant forms, and treatment reviewed by aihealz.",
+
+  "keywords": [
+    "metabolic alkalosis",
+    "metabolic alkalosis symptoms",
+    "metabolic alkalosis causes",
+    "saline responsive metabolic alkalosis",
+    "metabolic alkalosis treatment",
+    "metabolic alkalosis potassium",
+    "metabolic alkalosis diuretics",
+    "Bartter syndrome metabolic alkalosis",
+    "primary hyperaldosteronism alkalosis",
+    "metabolic alkalosis bicarbonate",
+    "acid base disorder",
+    "metabolic alkalosis urine chloride",
+    "acetazolamide alkalosis"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Khanna A, Kurtzman NA. 2006. Metabolic alkalosis. Seminars in Nephrology 26(2):96-111.", "url": "https://pubmed.ncbi.nlm.nih.gov/16713497/", "accessedDate": "2026-05-14" },
+    { "title": "Galla JH. 2000. Metabolic alkalosis. Journal of the American Society of Nephrology 11(2):369-375.", "url": "https://pubmed.ncbi.nlm.nih.gov/10665943/", "accessedDate": "2026-05-14" },
+    { "title": "Fauver LE, Khalil PA, Weintraub NL. 2014. Evaluation and management of metabolic alkalosis. Hospital Practice 42(1):45-53.", "url": "https://pubmed.ncbi.nlm.nih.gov/24566607/", "accessedDate": "2026-05-14" },
+    { "title": "Funder JW, Carey RM, Mantero F, et al. 2016. The management of primary aldosteronism: case detection, diagnosis, and treatment — an Endocrine Society clinical practice guideline. Journal of Clinical Endocrinology & Metabolism 101(5):1889-1916.", "url": "https://pubmed.ncbi.nlm.nih.gov/26934393/", "accessedDate": "2026-05-14" },
+    { "title": "Blanchard A, Vallet M, Caumont-Prim A, et al. 2016. Bartter syndrome: clinical management and long-term outcome. Nephrology Dialysis Transplantation 32(1):88-96.", "url": "https://pubmed.ncbi.nlm.nih.gov/26253999/", "accessedDate": "2026-05-14" },
+    { "title": "Kraut JA, Nagami GT. 2013. The serum anion gap in the evaluation of acid-base disorders: what are its limitations and can its effectiveness be improved? Clinical Journal of the American Society of Nephrology 8(11):2018-2024.", "url": "https://pubmed.ncbi.nlm.nih.gov/23833313/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

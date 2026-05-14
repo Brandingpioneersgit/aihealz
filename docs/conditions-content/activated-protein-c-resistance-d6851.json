@@ -1,0 +1,365 @@
+{
+  "_meta": {
+    "slug": "activated-protein-c-resistance-d6851",
+    "tier": 1,
+    "headTerm": "Factor V Leiden (activated protein C resistance)",
+    "primarySpecialty": "Hematology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Factor V Leiden: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hematology",
+
+  "heroOverview": "Factor V Leiden is the most common inherited thrombophilia in people of European ancestry, present in approximately 5% of that population and accounting for roughly 20-25% of all venous thromboembolism (VTE) events in the United States. The mutation — a single nucleotide change (G1691A) in the Factor V gene — makes Factor V resistant to inactivation by activated protein C, the physiological anticoagulant that normally limits clot formation. Most carriers never develop a clot; heterozygous carriers face a 4-8 times higher lifetime VTE risk than non-carriers, while homozygous carriers carry a 50-80 times higher risk. Blood clots typically form in the deep veins of the legs or the lungs, and risk rises sharply during pregnancy, surgery, or prolonged immobility. Anticoagulation during high-risk periods is the primary treatment strategy.",
+
+  "keyStats": {
+    "prevalence": "3-8% of people of European descent carry at least one copy; approximately 1 in 5,000 people are homozygous",
+    "demographics": "Most prevalent in Northern European populations; uncommon in people of African or Asian ancestry; affects men and women equally at the genetic level, but women experience more events due to pregnancy and oral contraceptive use",
+    "avgAge": "First thrombotic event typically occurs between ages 20 and 50 in heterozygous carriers; often earlier in homozygous individuals",
+    "globalCases": "Estimated 20-40 million carriers worldwide based on European carrier prevalence data"
+  },
+
+  "definition": "Factor V Leiden (ICD-10: D68.51), formally called activated protein C (APC) resistance, is an inherited hypercoagulable disorder caused by a point mutation in the F5 gene on chromosome 1. The mutation substitutes arginine with glutamine at position 506 of the Factor V protein — the primary cleavage site where APC normally inactivates Factor Va. When APC cannot inactivate Factor Va efficiently, the prothrombinase complex remains active longer than normal, generating excess thrombin and increasing the tendency to form venous clots. The disorder follows an autosomal dominant pattern; heterozygous carriers (one mutant allele) constitute the vast majority of cases, while homozygous individuals (two mutant alleles) are rare but face dramatically higher thrombotic risk. Factor V Leiden belongs to the thrombophilia spectrum managed by hematologists and vascular medicine specialists. It accounts for approximately 40-50% of all inherited thrombophilias identified in families with venous thromboembolism. While the mutation is generally associated with venous disease, arterial thrombotic events have been reported in young patients with additional cardiovascular risk factors. The diagnosis does not change management in the absence of prior VTE for most individuals, but it shapes anticoagulation decisions during surgery, pregnancy, and after a first clot event.",
+
+  "typesClassification": [
+    { "type": "Heterozygous Factor V Leiden", "description": "One mutant F5 allele. Lifetime VTE risk is 4-8 times higher than background. The majority of carriers never develop a clinically detectable clot; the risk materializes primarily in the presence of additional prothrombotic triggers such as pregnancy, oral contraceptives, surgery, or prolonged immobility." },
+    { "type": "Homozygous Factor V Leiden", "description": "Two mutant F5 alleles. VTE risk is 50-80 times higher than background population, with many affected individuals experiencing a first thrombotic event before age 40 without an obvious trigger. Anticoagulation strategies are often more aggressive." },
+    { "type": "Compound heterozygous thrombophilia", "description": "Factor V Leiden co-inherited with a second thrombophilic mutation such as prothrombin G20210A, protein C deficiency, or protein S deficiency. Risk is multiplicative rather than additive; such combinations are associated with spontaneous VTE and recurrence even in young adults." }
+  ],
+
+  "primarySymptoms": [
+    "Deep vein thrombosis (DVT): unilateral leg swelling, warmth, redness, and aching pain in the calf or thigh, often appearing during or after periods of prolonged immobility or after a triggering event such as surgery or a long flight.",
+    "Pulmonary embolism: sudden-onset shortness of breath, pleuritic chest pain, rapid heart rate, and — in large emboli — low blood pressure or syncope; occurs when a leg or pelvic thrombus detaches and lodges in a pulmonary artery.",
+    "Superficial thrombophlebitis: painful, cord-like redness along a superficial vein, most often in the leg; less life-threatening than DVT but a marker of underlying hypercoagulability.",
+    "Pregnancy complications: recurrent pregnancy loss (typically second-trimester), placental abruption, intrauterine growth restriction, and severe preeclampsia linked to placental microthrombi in women with Factor V Leiden.",
+    "Cerebral venous sinus thrombosis: severe headache, visual changes, focal neurological deficits, or seizures caused by thrombosis in the dural venous sinuses; rare but strongly associated with Factor V Leiden, particularly in women on oral contraceptives.",
+    "Mesenteric vein thrombosis: sudden abdominal pain with distension and bloody stool from thrombosis of intestinal veins; a rare but serious presentation of Factor V Leiden in young patients.",
+    "Portal vein thrombosis: right upper quadrant pain, ascites, and gastrointestinal bleeding from portal hypertension when the portal venous system is affected.",
+    "Post-thrombotic syndrome: chronic leg swelling, pain, skin pigmentation, and venous ulcers developing months to years after a DVT due to persistent venous outflow obstruction and valvular damage."
+  ],
+
+  "earlyWarningSigns": [
+    "Unexplained unilateral leg edema or calf tenderness persisting more than 24 hours, especially after a long journey or after starting oral contraceptives",
+    "Family history of VTE in a first-degree relative under age 50 without a clear provoked cause",
+    "Two or more unexplained pregnancy losses in the second trimester, prompting thrombophilia screening",
+    "A first unprovoked DVT or PE in a patient under age 50 with no identifiable clinical risk factors"
+  ],
+
+  "emergencySigns": [
+    "Sudden-onset breathlessness, chest pain, and oxygen saturation below 94% — suspected pulmonary embolism requiring immediate CT pulmonary angiography and anticoagulation",
+    "Syncope or hemodynamic instability with right heart strain on ECG after recent leg swelling — massive PE requiring urgent specialist evaluation",
+    "Severe headache with nausea, papilledema, or focal neurological signs — cerebral venous sinus thrombosis requiring urgent MRI venography",
+    "Acute abdomen with bloody stool in a young patient — mesenteric vein thrombosis is a surgical and anticoagulation emergency"
+  ],
+
+  "causes": [
+    {
+      "cause": "Inherited F5 gene mutation (G1691A point mutation)",
+      "description": "The G-to-A transition at nucleotide 1691 of the Factor V gene replaces arginine with glutamine at position 506 of the mature protein. This arginine residue is the primary site where APC cleaves and inactivates Factor Va; its substitution reduces APC-mediated inactivation 10-fold in heterozygotes and up to 100-fold in homozygotes."
+    },
+    {
+      "cause": "Autosomal dominant inheritance from one or both parents",
+      "description": "A child of a heterozygous carrier has a 50% chance of inheriting the mutation. When both parents are heterozygous carriers, 25% of offspring will be homozygous. The mutation arose once in a common Northern European ancestor approximately 21,000-34,000 years ago and spread throughout European populations."
+    },
+    {
+      "cause": "Acquired APC resistance (phenotypic, not genotypic)",
+      "description": "Elevated Factor VIII levels, antiphospholipid antibodies, and elevated levels of other procoagulant factors can phenotypically mimic APC resistance on functional clotting assays without a genetic F5 mutation being present. This must be distinguished from true Factor V Leiden by DNA-based genotyping."
+    },
+    {
+      "cause": "Interaction with exogenous progestins and estrogens",
+      "description": "Combined oral contraceptives and estrogen-containing hormone therapy increase procoagulant factor synthesis and further suppress protein S, amplifying the APC-resistance already present in Factor V Leiden carriers. The combined risk of VTE is multiplicative: heterozygous women on the pill have a 30-50 times greater VTE risk than non-carrier women not using contraception."
+    },
+    {
+      "cause": "Synergistic effect of additional thrombophilic traits",
+      "description": "Concomitant protein C deficiency, protein S deficiency, antithrombin deficiency, or prothrombin G20210A mutation co-inherited with Factor V Leiden dramatically amplifies thrombotic risk. Compound thrombophilia accounts for many of the spontaneous, recurrent, and unusual-site VTE events seen in thrombophilia clinics."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Carrying the F5 Leiden allele — heterozygous", "category": "genetic", "description": "4-8 times greater lifetime VTE risk than population baseline; absolute risk remains approximately 0.5-1% per year without other triggers." },
+    { "factor": "Carrying the F5 Leiden allele — homozygous", "category": "genetic", "description": "50-80 times greater lifetime VTE risk; first thrombotic event frequently occurs spontaneously before age 40 in homozygous individuals." },
+    { "factor": "Combined oral contraceptive or estrogen use", "category": "modifiable", "description": "Estrogen-containing preparations increase procoagulant factors and reduce protein S. In heterozygous carriers the combined risk of DVT is approximately 30-50 times that of non-carrier women not on contraception; progestin-only preparations carry substantially lower risk." },
+    { "factor": "Pregnancy and the puerperium", "category": "non-modifiable", "description": "Pregnancy increases procoagulant factors and decreases protein S physiologically; VTE risk in pregnant heterozygous carriers is roughly 1-2% per pregnancy vs. 0.1% in non-carriers, with greatest risk in the third trimester and puerperium." },
+    { "factor": "Major surgery or trauma", "category": "modifiable", "description": "Surgical immobility, venous stasis, and inflammation combine with the thrombophilic background to elevate perioperative VTE risk substantially; orthopedic procedures and neurosurgery carry the highest absolute risk." },
+    { "factor": "Prolonged immobility (hospitalization, long-haul travel)", "category": "modifiable", "description": "Venous stasis in the lower extremities during bed rest or seated travel exceeding 4 hours approximately doubles VTE risk in the general population; in Factor V Leiden carriers the marginal risk is proportionally higher." },
+    { "factor": "Concurrent thrombophilic mutation", "category": "genetic", "description": "Compound thrombophilia (e.g., Factor V Leiden plus prothrombin G20210A) multiplies VTE risk further; 10-20% of Factor V Leiden carriers referred to thrombophilia clinics carry an additional hereditary defect." }
+  ],
+
+  "affectedDemographics": [
+    "3-8% of people of European ancestry are heterozygous carriers; prevalence is highest in Northern and Central European populations (up to 15% in Sweden).",
+    "Factor V Leiden is present in fewer than 1% of people of East Asian, African, or Indigenous American descent, reflecting the founder effect of the Northern European origin of the mutation.",
+    "Women are disproportionately affected clinically because of interactions with pregnancy, hormonal contraception, and hormone replacement therapy.",
+    "Children with homozygous Factor V Leiden may present with thrombotic events in unusual locations including cerebral venous sinuses, hepatic veins, or renal veins before age 10."
+  ],
+
+  "diagnosisOverview": "Suspicion for Factor V Leiden arises in any patient with unprovoked VTE, VTE under age 50, VTE in unusual sites (cerebral, mesenteric, portal, or hepatic veins), two or more episodes of VTE, recurrent pregnancy loss, or a family history of clotting disorders. Initial evaluation includes a complete blood count, basic metabolic panel, and coagulation screen. The functional APC resistance assay (APC-R ratio) measures how much a patient's clotting time prolongs when APC is added — a low ratio indicates reduced sensitivity to APC. However, the functional assay is affected by anticoagulants and antiphospholipid antibodies, so confirmatory genetic testing is required. The definitive diagnosis is a PCR-based DNA test for the F5 G1691A mutation, which identifies heterozygous and homozygous status unambiguously and is unaffected by current anticoagulation or pregnancy. Guidelines from the American College of Hematology and the British Society for Haematology recommend testing only when the result would influence management, since finding Factor V Leiden in an asymptomatic family member generally does not change pharmacologic prophylaxis decisions unless the individual faces a high-risk trigger. Testing is most clearly indicated after a first unprovoked VTE event, in pregnant women with a family history of VTE, and before prescribing combined hormonal contraception to women with a strong thrombophilia family history.",
+
+  "diagnosticTests": [
+    { "test": "APC resistance functional assay", "purpose": "Screens for reduced sensitivity to activated protein C; a low APC-R ratio raises suspicion for Factor V Leiden", "whatToExpect": "A standard blood draw into a citrate tube. The lab mixes patient plasma with exogenous APC and measures clotting time; results available within 1-2 days. The test can be falsely abnormal with anticoagulants or in pregnancy." },
+    { "test": "PCR-based Factor V Leiden genotyping (F5 G1691A mutation)", "purpose": "Definitively identifies heterozygous or homozygous carrier status; unaffected by anticoagulation or inflammatory state", "whatToExpect": "A standard blood draw for DNA extraction. The laboratory amplifies and sequences the relevant F5 locus. Results returned within 5-10 days from most reference labs; this is the confirmatory standard." },
+    { "test": "Prothrombin G20210A genotyping", "purpose": "Co-testing for the second most common hereditary thrombophilia, often performed alongside Factor V Leiden given clinical synergy", "whatToExpect": "Same blood draw used for Factor V Leiden PCR. Identifies individuals with compound thrombophilia who face higher thrombotic and recurrence risk." },
+    { "test": "Protein C activity assay", "purpose": "Measures functional protein C levels; low levels suggest protein C deficiency which can co-exist with Factor V Leiden and further elevate risk", "whatToExpect": "Blood draw; best done at least 10 days off warfarin, as warfarin lowers protein C. Results within 2-3 days." },
+    { "test": "Antiphospholipid antibody screen (lupus anticoagulant, anticardiolipin IgG/IgM, anti-beta2-glycoprotein I)", "purpose": "Excludes antiphospholipid syndrome as a co-existing acquired thrombophilia causing APC resistance phenotypically", "whatToExpect": "Blood draw; positive results must be confirmed on a repeat sample at least 12 weeks apart to meet diagnostic criteria for antiphospholipid syndrome." },
+    { "test": "Duplex ultrasound of lower extremities", "purpose": "Confirms acute DVT when the patient presents with leg swelling and pain; guides anticoagulation initiation", "whatToExpect": "Non-invasive ultrasound scan lasting 20-30 minutes; the technician compresses veins to check for non-compressibility. Results available the same day." }
+  ],
+
+  "treatmentOverview": "Most Factor V Leiden carriers require no daily medication; management centers on risk stratification and prophylaxis during high-risk periods. For asymptomatic heterozygous individuals, the first-line approach is patient education about VTE warning signs and mechanical prophylaxis (compression stockings, early ambulation) during surgery, hospitalization, or long flights. Anticoagulant prophylaxis with low-molecular-weight heparin (LMWH) is added for moderate-to-high risk surgical procedures and throughout pregnancy in women with a prior VTE, per American Society of Hematology (ASH) 2023 guidelines. After a first provoked VTE (e.g., post-surgical), treatment anticoagulation lasts the standard 3 months, with discontinuation considered safe for most heterozygous carriers since recurrence risk is similar to that of non-carriers after a provoked event. After a first unprovoked VTE in a heterozygous carrier, guidelines recommend at least 3 months of anticoagulation, followed by shared decision-making about indefinite therapy based on bleeding risk, recurrence risk, and patient preference. Homozygous carriers or those with compound thrombophilia who have had a VTE generally receive indefinite anticoagulation. First-line anticoagulants include direct oral anticoagulants (DOACs) — rivaroxaban or apixaban — which are as effective as vitamin K antagonists with lower intracranial hemorrhage risk and more predictable pharmacokinetics. Vitamin K antagonists (warfarin) remain preferred during pregnancy, where DOACs are contraindicated; LMWH is used for most of the pregnancy and warfarin is reintroduced postpartum. Women who carry Factor V Leiden should discuss contraception alternatives with their clinician; progestin-only pills, levonorgestrel intrauterine devices, and copper IUDs carry substantially lower VTE risk than combined estrogen-progestin formulations.",
+
+  "medicalTreatments": [
+    { "name": "Rivaroxaban (15 mg twice daily for 3 weeks, then 20 mg once daily with evening meal)", "description": "Direct Factor Xa inhibitor; first-line DOAC for acute VTE treatment and secondary prevention. Fixed dosing without routine monitoring. Contraindicated in pregnancy.", "effectiveness": "Non-inferior to LMWH/warfarin for VTE treatment (EINSTEIN DVT/PE trials); recurrence rates below 2.5% per year on treatment" },
+    { "name": "Apixaban (10 mg twice daily for 7 days, then 5 mg twice daily)", "description": "Direct Factor Xa inhibitor; alternative first-line DOAC for VTE treatment. Lower major bleeding rates than rivaroxaban in meta-analyses. Contraindicated in pregnancy.", "effectiveness": "Major bleeding 1.4% vs. 3.3% for warfarin (AMPLIFY trial); VTE recurrence <2% per year on extended therapy" },
+    { "name": "Low-molecular-weight heparin (e.g., enoxaparin 1 mg/kg subcutaneously twice daily)", "description": "Subcutaneous injection; first-line for VTE treatment in pregnancy and cancer-associated VTE. Also used for perioperative and antenatal prophylaxis at reduced doses (40 mg once daily for prophylaxis).", "effectiveness": "Reduces DVT risk by approximately 60-70% as prophylaxis in high-risk surgical patients; treatment-dose enoxaparin achieves therapeutic anticoagulation within hours" },
+    { "name": "Warfarin (dose adjusted to INR 2.0-3.0)", "description": "Vitamin K antagonist; used when DOACs are unavailable or in specific situations such as antiphospholipid syndrome or mechanical heart valves. Requires regular INR monitoring. Drug and food interactions limit use.", "effectiveness": "Reduces VTE recurrence by approximately 90% vs. placebo when INR maintained 2.0-3.0 (PREVENT trial)" },
+    { "name": "Aspirin (100 mg daily) for extended secondary prevention after anticoagulation completion", "description": "Low-dose aspirin reduces VTE recurrence by approximately 30% compared to placebo after anticoagulation withdrawal — a less effective but lower-bleeding option for patients declining continued anticoagulation.", "effectiveness": "33% relative risk reduction in recurrent VTE vs. placebo (WARFASA, ASPIRE trials); not equivalent to therapeutic anticoagulation" },
+    { "name": "Compression stockings (knee-high, 30-40 mmHg) post-DVT", "description": "Graduated elastic compression reduces post-thrombotic syndrome development after proximal DVT, particularly when worn consistently for 2 years post-event.", "effectiveness": "Reduces post-thrombotic syndrome by approximately 30-50% in compliant users; most benefit in the first 6 months" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Mechanical thromboprophylaxis (intermittent pneumatic compression devices)", "description": "Used perioperatively when anticoagulants are contraindicated due to bleeding risk; clinical trials show roughly 50% reduction in DVT rate after major orthopedic surgery when combined with pharmacologic prophylaxis." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "anticoagulation-therapy",
+    "low-molecular-weight-heparin"
+  ],
+
+  "whySeeSpecialist": "Hematologists or thrombosis specialists should be involved when Factor V Leiden is diagnosed in a patient with unexplained VTE, recurrent VTE, VTE in pregnancy, or compound thrombophilia, to guide duration of anticoagulation and long-term risk management. Genetic counseling is recommended for individuals considering testing asymptomatic family members.",
+  "doctorSelectionGuide": "Seek a hematologist with a dedicated thrombophilia or hemostasis clinic, ideally affiliated with an anticoagulation management service. For management during pregnancy, a combined hematology-maternal-fetal medicine team is preferable, as antenatal thromboprophylaxis decisions require both perspectives.",
+
+  "hospitalCriteria": [
+    "Capacity to perform PCR-based Factor V genotyping in-house or via reference laboratory",
+    "Anticoagulation management service for dose adjustment and patient education",
+    "Access to hematology or thrombosis specialist outpatient clinics",
+    "Maternal-fetal medicine or high-risk obstetrics for pregnant patients with Factor V Leiden and prior VTE"
+  ],
+  "keyFacilities": [
+    "Thrombophilia and anticoagulation clinics",
+    "Hematology outpatient departments",
+    "High-risk obstetrics services",
+    "Genetic counseling services at tertiary centers"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Inform all treating clinicians (surgeons, obstetricians, general practitioners) of the Factor V Leiden diagnosis so that perioperative and antenatal prophylaxis can be planned in advance.",
+    "Choose progestin-only or non-hormonal contraception rather than combined estrogen-progestin pills, especially in heterozygous or homozygous carriers with additional risk factors.",
+    "Use below-knee compression stockings and perform calf-pump exercises (ankle flexion-extension) during flights exceeding 4 hours or prolonged periods of seated immobility.",
+    "Maintain a healthy body weight and avoid obesity, which independently triples VTE risk and compounds the inherited hypercoagulable state.",
+    "Stop smoking, as tobacco use increases platelet activation and vascular endothelial injury, adding to thrombotic risk.",
+    "Encourage first-degree relatives to be informed of the genetic finding so they can discuss cascade screening with their own physicians before high-risk events such as surgery or pregnancy."
+  ],
+
+  "lifestyleModifications": [
+    "Maintain regular physical activity — walking 30 minutes daily improves venous return and reduces stasis in the lower-extremity venous system.",
+    "Stay well hydrated, particularly during air travel and hot weather, to prevent haemoconcentration.",
+    "Avoid prolonged sitting without movement breaks; set a reminder to stand and walk at least every 2 hours during sedentary work.",
+    "If anticoagulated with warfarin, maintain consistent dietary vitamin K intake (green leafy vegetables are fine in consistent amounts) to avoid INR fluctuations.",
+    "Carry a medication alert card or wear a medical ID bracelet identifying the thrombophilia diagnosis and current anticoagulant therapy."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate hydration (1.5-2 L of water daily) to prevent haemoconcentration",
+      "Heart-healthy diet rich in vegetables, whole grains, and lean protein to manage cardiovascular risk factors",
+      "Consistent dietary vitamin K intake when on warfarin — leafy greens such as spinach and kale are fine in stable amounts",
+      "Omega-3 fatty acid-containing fish (salmon, mackerel, sardines) two to three times per week for anti-inflammatory and mild antiplatelet effects"
+    ],
+    "avoid": [
+      "Abrupt large changes in vitamin K intake (binge eating of leafy greens after avoidance) if on warfarin",
+      "Grapefruit and grapefruit juice with apixaban or rivaroxaban as it can inhibit CYP3A4 and increase drug levels",
+      "Alcohol excess, which increases bleeding risk and interacts with anticoagulants",
+      "Obesity-promoting diets — excess body fat directly increases VTE risk independent of the genetic mutation"
+    ]
+  },
+  "exerciseGuidelines": "Regular low-to-moderate intensity aerobic exercise (brisk walking, cycling, swimming) is safe and encouraged; it improves venous tone and reduces stasis. Avoid high-contact sports and activities with significant bleeding or fall risk during anticoagulation. Patients with active DVT should begin graduated walking as soon as anticoagulation is established, rather than resting in bed.",
+
+  "dailyManagement": [
+    "Take anticoagulant medications at the same time each day and do not skip doses without discussing with the prescribing clinician.",
+    "Monitor for bleeding signs (prolonged oozing from cuts, unexplained bruising, blood in urine or stool, unusual headaches) and report promptly.",
+    "Attend regular follow-up INR checks if on warfarin; aim for INR in the therapeutic range on at least 70% of tests to minimize both thrombotic and bleeding risk.",
+    "Keep a leg-swelling diary if post-thrombotic syndrome is present — note severity, diurnal variation, and any new areas of redness or warmth.",
+    "Inform all treating clinicians of the diagnosis before any invasive procedure, dental surgery, or new prescription, as many medications interact with anticoagulants."
+  ],
+
+  "prognosis": "Prognosis for most heterozygous Factor V Leiden carriers is excellent, with the majority living their entire lives without a VTE event. Among those who develop VTE, mortality is primarily attributable to pulmonary embolism — approximately 1-3% of PE episodes are fatal with modern treatment. The 10-year recurrence rate after a first unprovoked VTE in a heterozygous carrier is approximately 25-35%, similar to recurrence rates seen with other thrombophilias. Homozygous carriers and those with compound thrombophilia face higher recurrence rates, often exceeding 50% over 10 years without indefinite anticoagulation. Recurrence risk falls below 5-10% per year with therapeutic anticoagulation maintained long-term. Post-thrombotic syndrome occurs in 20-50% of patients within 2 years of a proximal DVT and is the main source of chronic morbidity. Long-term management, patient education, and adherence to anticoagulation regimens are the primary determinants of outcome.",
+
+  "recoveryTimeline": "Acute DVT resolves with anticoagulation over 3-6 months; ultrasound evidence of clot lysis is often seen by 3 months. Pulmonary embolism improves symptomatically within days to weeks; functional recovery from large PE can take 3-6 months. Post-thrombotic syndrome develops over 1-2 years and requires ongoing compression therapy.",
+
+  "complications": [
+    "Pulmonary embolism from propagation or dislodgement of a lower-extremity DVT — risk is highest in the first 6 weeks after DVT diagnosis; early anticoagulation is critical to prevention.",
+    "Post-thrombotic syndrome: chronic leg pain, swelling, and skin changes in 20-50% of patients after proximal DVT; compression stockings and prompt DVT treatment reduce severity.",
+    "Recurrent VTE after anticoagulation withdrawal, particularly in unprovoked events or homozygous carriers; recurrence risk guides the duration-of-therapy decision.",
+    "Major hemorrhage from anticoagulation — annual major bleeding risk is approximately 1-3% on DOACs and 2-4% on warfarin; intracranial hemorrhage is the most feared.",
+    "Pregnancy complications: placental thrombosis leading to fetal growth restriction, pregnancy loss, or preeclampsia in carriers not receiving antenatal prophylaxis.",
+    "Chronic thromboembolic pulmonary hypertension (CTEPH): approximately 1-4% of PE survivors develop persistent pulmonary vascular obstruction causing progressive right heart failure; detected by echocardiography and V/Q scan 3-6 months post-PE."
+  ],
+
+  "supportResources": [
+    { "name": "National Blood Clot Alliance (NBCA)", "url": "https://www.stoptheclot.org/", "description": "US patient advocacy organization providing education on blood clots, thrombophilia, and anticoagulation management." },
+    { "name": "American Society of Hematology — Thrombophilia Information", "url": "https://www.hematology.org/education/patients/blood-clots", "description": "ASH patient education resources on VTE diagnosis, treatment, and thrombophilia testing." },
+    { "name": "AARDA / Thrombosis Canada", "url": "https://thrombosiscanada.ca/", "description": "Evidence-based clinical guides and patient fact sheets on Factor V Leiden and other thrombophilias." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "antiphospholipid-syndrome", "name": "Antiphospholipid Syndrome", "keyDifference": "Antiphospholipid syndrome is an acquired autoimmune disorder, not a genetic mutation, causing both arterial and venous thrombosis plus pregnancy morbidity. It requires persistent positive antibodies (lupus anticoagulant, anticardiolipin, or anti-beta2-GPI) confirmed at least 12 weeks apart. Factor V Leiden is diagnosed by PCR genotyping and rarely causes arterial events." },
+    { "slug": "acquired-hemophilia-d68311", "name": "Acquired Hemophilia", "keyDifference": "Acquired hemophilia is a bleeding disorder caused by autoantibodies against clotting factor VIII, presenting with spontaneous or excessive bleeding rather than thrombosis. Factor V Leiden is a hypercoagulable state associated with clotting. Laboratory work-up diverges sharply: hemophilia shows prolonged aPTT that does not correct on mixing, while Factor V Leiden has normal routine coagulation tests." },
+    { "slug": "acquired-coagulation-factor-deficiency-d684", "name": "Acquired Coagulation Factor Deficiency", "keyDifference": "Acquired coagulation factor deficiency presents with bleeding due to reduced factor levels from liver disease, vitamin K deficiency, or inhibitor development. Factor V Leiden presents with thrombosis due to resistance to anticoagulant factor inactivation. The two conditions sit at opposite ends of the haemostatic spectrum." },
+    { "slug": "lupus-anticoagulant-syndrome-d6862", "name": "Lupus Anticoagulant Syndrome", "keyDifference": "Lupus anticoagulant causes a falsely prolonged aPTT in vitro (and thus mimics APC resistance phenotypically on older functional assays) but acts as a procoagulant in vivo. Distinguishing lupus anticoagulant from Factor V Leiden requires the mixing test and PCR genotyping of the F5 gene, as management differs significantly." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "antiphospholipid-syndrome", "name": "Antiphospholipid Syndrome" },
+    { "slug": "lupus", "name": "Lupus" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "acquired-coagulation-factor-deficiency-d684", "name": "Acquired Coagulation Factor Deficiency", "relevance": "Both are managed by hematologists in the context of abnormal hemostasis, though one predisposes to thrombosis and the other to bleeding." },
+    { "slug": "acute-graft-versus-host-disease-d89810", "name": "Acute Graft-versus-Host Disease", "relevance": "Hematopoietic stem cell transplant recipients with Factor V Leiden may face elevated VTE risk in the peri-transplant period and during GVHD-associated inflammatory states." },
+    { "slug": "disseminated-intravascular-coagulation-d65", "name": "Disseminated Intravascular Coagulation", "relevance": "DIC and inherited thrombophilias both alter systemic coagulation balance; Factor V Leiden may modify the thrombotic phenotype of DIC." },
+    { "slug": "anemia-in-chronic-kidney-disease-d631", "name": "Anemia of Chronic Kidney Disease", "relevance": "Patients with CKD and Factor V Leiden require careful anticoagulant selection, as renal clearance affects DOAC dosing significantly." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is Factor V Leiden?",
+      "answer": "Factor V Leiden is the most common inherited cause of abnormal blood clotting in people of European ancestry. A single gene mutation makes Factor V resistant to being switched off by its natural regulator (activated protein C), so blood clots form more easily than normal. About 5% of Europeans carry at least one copy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Factor V Leiden serious?",
+      "answer": "For most heterozygous carriers the lifetime risk of a blood clot is low and many never develop one. Homozygous carriers (two mutant copies) face a 50-80 times higher risk and typically need closer monitoring. Seriousness depends on carrier status, additional risk factors, and whether a clot has already occurred.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is Factor V Leiden diagnosed?",
+      "answer": "The definitive test is a PCR blood test that detects the F5 G1691A gene mutation, identifying whether a person is heterozygous or homozygous. A functional APC resistance assay is used as a screen but can be affected by anticoagulants and requires genetic confirmation. Results from PCR testing typically return in 5-10 days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need blood thinners if I have Factor V Leiden but no clots?",
+      "answer": "Most asymptomatic heterozygous carriers do not need daily anticoagulants. Short-term prophylactic blood thinners are recommended during high-risk periods such as major surgery, hospitalization, or pregnancy in carriers with additional risk factors. The decision is individualized based on other risk factors and family history.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I take the birth control pill if I have Factor V Leiden?",
+      "answer": "Combined estrogen-progestin pills are generally avoided in Factor V Leiden carriers because they multiply DVT risk by up to 30-50 times compared with non-carriers not on contraception. Progestin-only pills, hormonal IUDs, and copper IUDs carry substantially lower thrombotic risk and are preferred alternatives.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long do I need to take anticoagulants after a blood clot?",
+      "answer": "After a first provoked DVT (e.g., post-surgical) in a heterozygous carrier, 3 months of anticoagulation is standard, similar to non-carriers. After a first unprovoked DVT, at least 3 months is required, followed by an individualized decision about extended therapy. Homozygous carriers or those with compound thrombophilia generally receive indefinite anticoagulation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Factor V Leiden cause miscarriage?",
+      "answer": "Factor V Leiden is associated with placental microthrombi and has been linked to recurrent second-trimester pregnancy loss, placental abruption, severe preeclampsia, and intrauterine growth restriction in some studies. Women with Factor V Leiden and recurrent pregnancy loss are often evaluated by both a hematologist and a maternal-fetal medicine specialist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Factor V Leiden hereditary?",
+      "answer": "Yes. Factor V Leiden follows an autosomal dominant pattern. Each child of a heterozygous carrier has a 50% chance of inheriting the mutation. Both parents must be carriers for a child to be homozygous. The mutation arose once in a Northern European ancestor roughly 21,000-34,000 years ago.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should my children be tested for Factor V Leiden?",
+      "answer": "Routine genetic testing of asymptomatic children is not generally recommended, as it does not change management until high-risk events such as surgery or pregnancy arise. Most hematology guidelines suggest testing in adolescence or early adulthood when the result will inform contraceptive or perioperative prophylaxis decisions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What blood thinners are used for Factor V Leiden?",
+      "answer": "Direct oral anticoagulants (DOACs) rivaroxaban and apixaban are now first-line for most adults with VTE and Factor V Leiden. Low-molecular-weight heparin (LMWH) is used in pregnancy and cancer-associated VTE. Warfarin is an alternative requiring regular INR monitoring and is still preferred in some clinical situations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between heterozygous and homozygous Factor V Leiden?",
+      "answer": "Heterozygous carriers have one mutant F5 gene copy and face a 4-8 times higher VTE risk than the general population. Homozygous individuals have two copies and face 50-80 times higher risk, often developing thrombosis spontaneously without a triggering event. Approximately 1 in 5,000 people of European ancestry is homozygous.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Factor V Leiden cause a stroke?",
+      "answer": "Factor V Leiden primarily causes venous thrombosis (DVT, PE). Cerebral venous sinus thrombosis — a rare type of stroke affecting brain draining veins — is associated with Factor V Leiden, especially in women on oral contraceptives. Arterial strokes are not consistently associated with Factor V Leiden alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Factor V Leiden common?",
+      "answer": "Factor V Leiden is the most common inherited thrombophilia, affecting 3-8% of people of European descent. It is found in roughly 20-25% of patients presenting with a first VTE and about 50% of patients with familial thrombophilia in thrombosis clinics. It is uncommon in East Asian, African, and Indigenous populations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can Factor V Leiden be cured?",
+      "answer": "There is no cure for the genetic mutation. Management focuses on preventing clots during high-risk periods and treating any clots that do occur. With appropriate anticoagulation and lifestyle modifications, most carriers with Factor V Leiden have a normal or near-normal life expectancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does Factor V Leiden affect surgery?",
+      "answer": "Yes. Surgeons and anesthesiologists should be informed of the diagnosis before any procedure. Most patients require pharmacologic prophylaxis (LMWH or a DOAC) around major surgery, particularly orthopedic, neurologic, or abdominal procedures. The specific regimen depends on bleeding risk, type of surgery, and carrier status.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Factor V Leiden (clotting gene mutation)",
+  "regionalNames": [
+    { "name": "APC resistance", "region": "Global (clinical shorthand)", "language": "English" },
+    { "name": "Factor-V-Leiden-Mutation", "region": "Germany / Austria / Switzerland", "language": "German" }
+  ],
+  "searchTags": [
+    "factor v leiden",
+    "activated protein c resistance",
+    "APC resistance",
+    "inherited thrombophilia",
+    "factor 5 leiden",
+    "factor V mutation",
+    "DVT genetic cause",
+    "blood clot gene",
+    "thrombophilia testing",
+    "hypercoagulable state",
+    "clotting disorder",
+    "VTE genetic risk",
+    "factor V G1691A"
+  ],
+  "symptomKeywords": [
+    "leg swelling clotting disorder",
+    "DVT young person",
+    "blood clot pregnancy",
+    "recurrent miscarriage clotting",
+    "inherited clotting disorder",
+    "unexplained blood clot"
+  ],
+
+  "metaTitle": "Factor V Leiden: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Factor V Leiden: inherited clotting gene mutation raising DVT risk 4-8x. Symptoms, diagnosis, anticoagulation and pregnancy management reviewed.",
+
+  "keywords": [
+    "factor V leiden",
+    "activated protein C resistance",
+    "inherited thrombophilia",
+    "factor V leiden symptoms",
+    "factor V leiden treatment",
+    "DVT genetic risk",
+    "blood clot mutation",
+    "factor V leiden pregnancy",
+    "APC resistance test",
+    "anticoagulation thrombophilia",
+    "factor V leiden diagnosis",
+    "homozygous factor V leiden"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Kujovich JL. 2011. Factor V Leiden thrombophilia. Genetics in Medicine 13(1):1-16.", "url": "https://pubmed.ncbi.nlm.nih.gov/21116184/", "accessedDate": "2026-05-14" },
+    { "title": "Middeldorp S, van Hylckama Vlieg A. 2008. Does thrombophilia testing help in the clinical management of patients? British Journal of Haematology 143(3):321-335.", "url": "https://pubmed.ncbi.nlm.nih.gov/18691266/", "accessedDate": "2026-05-14" },
+    { "title": "Connors JM. 2017. Thrombophilia testing and venous thrombosis. New England Journal of Medicine 377(12):1177-1187.", "url": "https://pubmed.ncbi.nlm.nih.gov/28930509/", "accessedDate": "2026-05-14" },
+    { "title": "American Society of Hematology 2023 Guidelines for Management of Venous Thromboembolism: Thrombophilia Testing.", "url": "https://www.hematology.org/education/clinicians/guidelines-and-quality-care/clinical-practice-guidelines/venous-thromboembolism-guidelines", "accessedDate": "2026-05-14" },
+    { "title": "Rosendaal FR, Koster T, Vandenbroucke JP, Reitsma PH. 1995. High risk of thrombosis in patients homozygous for factor V Leiden. Blood 85(6):1504-1508.", "url": "https://pubmed.ncbi.nlm.nih.gov/7888671/", "accessedDate": "2026-05-14" },
+    { "title": "Blanco AN, Cardoso SH, Candela M, et al. 2001. Oral contraceptives and Factor V Leiden: thrombotic risk in Latin America. Thrombosis and Haemostasis 85(6):997-1001.", "url": "https://pubmed.ncbi.nlm.nih.gov/11434724/", "accessedDate": "2026-05-14" },
+    { "title": "National Heart, Lung, and Blood Institute. Factor V Leiden. NHLBI, NIH.", "url": "https://www.nhlbi.nih.gov/health/factor-v-leiden", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

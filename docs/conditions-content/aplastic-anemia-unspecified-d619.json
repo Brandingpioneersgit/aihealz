@@ -1,0 +1,401 @@
+{
+  "_meta": {
+    "slug": "aplastic-anemia-unspecified-d619",
+    "tier": 1,
+    "headTerm": "aplastic anemia",
+    "longTailKeywords": [
+      "aplastic anemia symptoms",
+      "aplastic anemia treatment",
+      "aplastic anemia causes",
+      "bone marrow failure",
+      "aplastic anemia diagnosis",
+      "horse ATG aplastic anemia",
+      "bone marrow transplant aplastic anemia",
+      "aplastic anemia prognosis",
+      "severe aplastic anemia",
+      "acquired aplastic anemia"
+    ],
+    "primarySpecialty": "Hematology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Epidemiology from Shapiro et al. Blood 2024 and SEER data. Clinical criteria per Camitta et al. Blood 1976 (PMID 1260423) and updated ASH 2022 guidelines. Treatment data from Young NS NEJM 2018 (PMID 29924687) and Townsley et al. NEJM 2017 (PMID 28723330)."
+  },
+
+  "h1Title": "Aplastic Anemia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hematology",
+
+  "heroOverview": "Aplastic anemia is a rare but life-threatening disorder in which the bone marrow produces too few red blood cells, white blood cells, and platelets due to destruction or suppression of hematopoietic stem cells. The annual incidence is approximately 2 per million people in Western countries, rising to 3–7 per million in East Asia — a geographic difference attributed partly to viral exposures and genetic susceptibility. Patients present with progressive fatigue, recurrent infections, and easy bruising or bleeding from pancytopenia. Without treatment, severe aplastic anemia carries a 1-year mortality exceeding 70%. Two curative approaches exist: allogeneic bone marrow transplantation for younger patients with a matched sibling donor, and immunosuppressive therapy with anti-thymocyte globulin plus cyclosporine for those ineligible for transplant.",
+
+  "keyStats": {
+    "prevalence": "2 per million per year in Western countries; 3–7 per million per year in East Asia (NEJM 2018)",
+    "demographics": "Bimodal age distribution: peak incidence at ages 15–25 and a second peak after age 60; slight male predominance in some registries",
+    "avgAge": "Median age at diagnosis approximately 30–35 years in hospital series; second peak after age 60",
+    "globalCases": "Estimated 10,000–15,000 new cases worldwide annually; most common cause of bone marrow failure in non-malignant disease"
+  },
+
+  "definition": "Aplastic anemia (ICD-10: D61.9) is a syndrome of bone marrow failure characterized by peripheral blood pancytopenia — reduced red cells, white cells, and platelets — due to loss of hematopoietic stem and progenitor cells from the bone marrow. The marrow biopsy shows a hypocellular marrow replaced largely by fat cells, with fewer than 25% of the normal cellularity in severe disease. Aplastic anemia is classified by severity: severe aplastic anemia (SAA) requires at least two of the following: absolute neutrophil count below 0.5 × 10⁹/L, platelet count below 20 × 10⁹/L, and reticulocyte count below 20 × 10⁹/L; very severe aplastic anemia (VSAA) adds an absolute neutrophil count below 0.2 × 10⁹/L. Non-severe aplastic anemia (NSAA) has cytopenias that do not meet SAA criteria. The disorder is managed by hematologists and, for transplant candidates, by stem-cell transplant specialists. Aplastic anemia sits at the intersection of immune-mediated marrow destruction — the dominant mechanism in most acquired cases — and constitutional marrow failure syndromes such as Fanconi anemia and dyskeratosis congenita, which require distinct evaluation and treatment strategies.",
+
+  "typesClassification": [
+    { "type": "Severe aplastic anemia (SAA)", "description": "Meets at least two Camitta criteria: neutrophils < 0.5 × 10⁹/L, platelets < 20 × 10⁹/L, or reticulocytes < 20 × 10⁹/L, with a hypocellular marrow. Requires urgent treatment." },
+    { "type": "Very severe aplastic anemia (VSAA)", "description": "All SAA criteria plus absolute neutrophil count below 0.2 × 10⁹/L. Carries the highest short-term mortality risk and warrants the most urgent intervention." },
+    { "type": "Non-severe aplastic anemia (NSAA)", "description": "Cytopenias present but not meeting SAA thresholds. May be managed with eltrombopag, cyclosporine, or observation alone; about 10–20% progress to SAA." },
+    { "type": "Acquired aplastic anemia", "description": "Immune-mediated destruction of hematopoietic stem cells, accounting for roughly 80% of cases. May be idiopathic or triggered by viral infection, drug exposure, or toxic exposure." },
+    { "type": "Inherited aplastic anemia / constitutional bone marrow failure", "description": "Includes Fanconi anemia, dyskeratosis congenita, Shwachman-Diamond syndrome, and Diamond-Blackfan anemia. Physical stigmata and genetic testing distinguish these from acquired disease." }
+  ],
+
+  "primarySymptoms": [
+    "Profound fatigue and exertional dyspnea from anemia, often developing insidiously over weeks to months as the hemoglobin falls below 8 g/dL.",
+    "Pallor of the skin, conjunctivae, nail beds, and oral mucosa as erythropoiesis fails.",
+    "Easy bruising, petechiae (pinpoint hemorrhages under the skin), and purpura from thrombocytopenia when platelets fall below 20 × 10⁹/L.",
+    "Spontaneous mucosal bleeding: gingival oozing, epistaxis, prolonged bleeding from small cuts, or heavy menstrual periods in women.",
+    "Recurrent or prolonged bacterial and fungal infections — pneumonia, cellulitis, or oral candidiasis — from neutropenia below 0.5 × 10⁹/L.",
+    "Fever without an obvious source, often the first sign of neutropenic infection requiring urgent evaluation.",
+    "Tachycardia and palpitations at rest in severe anemia when hemoglobin drops below 7 g/dL.",
+    "Headache, dizziness, and difficulty concentrating from cerebral hypoperfusion in severe anemia.",
+    "Retinal hemorrhages, visible as small red spots on fundoscopic examination, in very low platelet states.",
+    "Intracranial bleeding or GI hemorrhage as catastrophic presentations of severe thrombocytopenia."
+  ],
+
+  "earlyWarningSigns": [
+    "Unexplained fatigue and pallor in a young adult without dietary iron deficiency or obvious chronic disease.",
+    "Two or more CBC values below normal on routine testing — pancytopenia on a complete blood count prompts urgent hematology review.",
+    "Skin bruising out of proportion to trauma in a patient not on antiplatelet therapy.",
+    "Recurrent mouth sores, gingival bleeding, or oral thrush without an immunosuppressive medication history.",
+    "Marked macrocytosis (MCV above 100 fL) on CBC — can signal early dyskeratosis congenita or early paroxysmal nocturnal hemoglobinuria complicating aplastic anemia."
+  ],
+
+  "emergencySigns": [
+    "Fever above 38°C with absolute neutrophil count below 0.5 × 10⁹/L — neutropenic fever, requires immediate broad-spectrum antibiotics and hospital admission within one hour.",
+    "Spontaneous intracranial bleeding — thunderclap headache, sudden neurological deficits, or altered consciousness with known thrombocytopenia.",
+    "Massive GI hemorrhage or hemoptysis with platelet count below 20 × 10⁹/L — immediate platelet transfusion and specialist review.",
+    "Signs of septic shock: fever, hypotension, tachycardia, and confusion in the context of known neutropenia.",
+    "Rapidly worsening dyspnea and chest pain with hemoglobin below 6 g/dL — emergent red cell transfusion required."
+  ],
+
+  "causes": [
+    {
+      "cause": "Autoimmune T-cell-mediated destruction of hematopoietic stem cells",
+      "description": "In approximately 70–80% of acquired cases, oligoclonal cytotoxic T cells attack hematopoietic stem cells through Fas-ligand and perforin pathways. Studies show elevated INF-γ and TNF-α in marrow biopsies. This immune destruction explains why immunosuppression with anti-thymocyte globulin and cyclosporine restores hematopoiesis in 60–70% of patients."
+    },
+    {
+      "cause": "Viral infections",
+      "description": "Epstein–Barr virus, cytomegalovirus, parvovirus B19, hepatitis viruses (particularly seronegative hepatitis — non-A, non-B, non-C), and rarely HIV can precipitate aplastic anemia. Post-hepatitis aplastic anemia accounts for 2–5% of cases in the United States and carries particularly poor outcomes without transplant."
+    },
+    {
+      "cause": "Drug and chemical exposures",
+      "description": "Idiosyncratic drug reactions cause a minority of cases. Implicated agents include chloramphenicol, benzene, certain NSAIDs (phenylbutazone, indomethacin), sulfonamides, gold salts, carbamazepine, and antithyroid drugs. Benzene from occupational exposure is a well-documented environmental trigger, and organophosphate pesticides are associated with aplastic anemia in some agricultural cohorts."
+    },
+    {
+      "cause": "Inherited genetic mutations (constitutional bone marrow failure syndromes)",
+      "description": "Fanconi anemia (biallelic mutations in FANC genes), dyskeratosis congenita (telomere maintenance gene mutations), Shwachman-Diamond syndrome (SBDS mutations), and Diamond-Blackfan anemia each cause inherited marrow failure with distinct clinical features and cancer predispositions. These must be excluded before standard immunosuppressive treatment."
+    },
+    {
+      "cause": "Paroxysmal nocturnal hemoglobinuria (PNH) clone expansion",
+      "description": "PNH is present as a small clone in 40–60% of acquired aplastic anemia patients due to the selection advantage of PIG-A-mutant cells against immune attack. Large PNH clones (above 10–20%) carry a risk of thrombosis and hemolysis, influencing treatment choices including complement inhibitor therapy."
+    },
+    {
+      "cause": "Radiation and cytotoxic chemotherapy",
+      "description": "High-dose radiation and certain alkylating agents (cyclophosphamide, busulfan) predictably suppress marrow in a dose-dependent manner. This is usually reversible if the dose is not ablative. Aplastic anemia after therapeutic radiation is more common in areas with high-dose pelvic or spinal exposure."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age 15–25 years or over 60 years", "category": "non-modifiable", "description": "The bimodal age distribution suggests two distinct triggering mechanisms — immune dysregulation in young adults and clonal hematopoiesis or occult inherited syndromes in older adults. Together these age groups account for over 60% of cases." },
+    { "factor": "East Asian ethnicity", "category": "non-modifiable", "description": "Incidence in East Asia (Japan, China, Thailand) is 3–7 per million per year — up to 3.5× higher than in Western countries. HLA-DR15 (DRB1*15:01) is significantly over-represented in aplastic anemia patients, particularly in East Asian populations." },
+    { "factor": "Occupational exposure to benzene or organophosphate pesticides", "category": "environmental", "description": "Benzene is a well-established cause of aplastic anemia; workers in rubber, shoe, and petroleum industries historically had elevated rates. Pesticide applicators have 1.5–2× higher incidence in case-control studies." },
+    { "factor": "Certain medications (chloramphenicol, NSAIDs, sulfonamides, antithyroid drugs)", "category": "modifiable", "description": "Risk is idiosyncratic and unpredictable but chloramphenicol carries an estimated 1 in 25,000–40,000 treatment courses risk. Avoiding unnecessary use of high-risk drugs mitigates exposure." },
+    { "factor": "Recent viral hepatitis or EBV infection", "category": "non-modifiable", "description": "Post-hepatitis aplastic anemia typically follows an acute seronegative hepatitis episode by 2–3 months. Parvovirus B19 causes pure red cell aplasia and occasionally pancytopenia in immunocompromised hosts." },
+    { "factor": "Family history of bone marrow failure or congenital abnormalities", "category": "genetic", "description": "First-degree relatives of patients with Fanconi anemia are carriers of FANC gene mutations. Short telomeres run in families with dyskeratosis congenita; genetic counseling is indicated." },
+    { "factor": "History of immunosuppressive therapy or solid organ transplant", "category": "modifiable", "description": "Prior cytotoxic therapy and certain immunosuppressants (alemtuzumab, mycophenolate) can expose patients to dose-dependent or idiosyncratic marrow suppression; vigilant CBC monitoring is required." }
+  ],
+
+  "affectedDemographics": [
+    "Bimodal age distribution: highest incidence at age 15–25 and again after 60 years (ASH 2022).",
+    "East Asia has 3–7 times higher annual incidence than Western Europe and North America, with HLA-DR15 over-representation as one contributing factor.",
+    "Slight male predominance (male-to-female ratio approximately 1.1–1.3:1) in most hospital-based series.",
+    "Post-hepatitis aplastic anemia: predominantly young males (median age 18–20) in North American and European reports.",
+    "Inherited marrow failure syndromes (Fanconi anemia, dyskeratosis congenita) typically present in children and adolescents; adult-onset cases have milder phenotypes."
+  ],
+
+  "diagnosisOverview": "Diagnosis starts with a complete blood count showing pancytopenia — decreased red cells, white cells, and platelets — without an obvious nutritional or medication cause. The reticulocyte count is low (reticulocytopenia), confirming hypoproductive anemia rather than destruction. The critical next step is bilateral bone marrow aspiration and biopsy, which reveals hypocellularity (less than 25% cellularity in severe disease) and empty fat spaces replacing hematopoietic tissue. The biopsy result both confirms aplastic anemia and excludes leukemia, myelodysplastic syndrome, and lymphoma.\n\nOnce aplastic anemia is established, workup proceeds to severity classification using Camitta criteria (absolute neutrophil count, platelet count, reticulocyte count), PNH clone analysis by flow cytometry on peripheral blood, cytogenetics (marrow chromosomes to exclude MDS and detect Fanconi anemia clonal changes), and a FISH panel for monosomy 7. Inherited marrow failure must be excluded in all patients below age 40: chromosome fragility testing with mitomycin C (for Fanconi anemia) and telomere length assay with targeted gene panel (for dyskeratosis congenita) are recommended. HLA typing is performed immediately in all patients who may be transplant candidates so sibling and unrelated donor searches can begin without delay. Hepatitis serologies, EBV, CMV, and parvovirus B19 PCR complete the infectious workup.",
+
+  "diagnosticTests": [
+    { "test": "Complete blood count (CBC) with differential and reticulocyte count", "purpose": "Quantifies the depth of pancytopenia and confirms hypoproductive anemia via low reticulocyte index", "whatToExpect": "A standard venous blood draw. Results return within 1–2 hours in most hospitals. The combination of low red cells, neutrophils, and platelets with a low reticulocyte count is the first trigger for urgent hematology referral." },
+    { "test": "Bone marrow aspiration and trephine biopsy", "purpose": "Confirms hypocellularity, excludes acute leukemia and MDS, and grades marrow cellularity", "whatToExpect": "A 30–45 minute procedure under local anesthetic, usually sampling the posterior iliac crest. Patients lie prone or on their side; pressure discomfort and a brief sharp pain during aspiration are typical. Mild soreness for 1–2 days afterward. Results in 3–5 business days." },
+    { "test": "PNH clone analysis by flow cytometry", "purpose": "Detects glycosylphosphatidylinositol-anchor-deficient cells; large clones predict thrombosis risk and guide treatment choice", "whatToExpect": "A blood draw; the laboratory uses fluorescent-labeled antibodies on CD59 and FLAER assays. Result within 3–5 days. Sensitivity detects clones as small as 0.01% of cells." },
+    { "test": "Chromosome fragility test (mitomycin C DEB test)", "purpose": "Screens for Fanconi anemia by exposing chromosomes to a DNA crosslinker; Fanconi cells show excessive breakage", "whatToExpect": "A blood draw sent to a reference laboratory. Results typically in 7–10 days. Performed in all aplastic anemia patients under 40; also recommended in older patients with dysmorphic features or unexplained cytopenias." },
+    { "test": "Telomere length assay and germline telomere-maintenance gene panel", "purpose": "Diagnoses dyskeratosis congenita and related telomeropathies; short telomeres below the 1st percentile are diagnostic", "whatToExpect": "Blood or buccal swab sent to a specialized genetics lab; results in 2–4 weeks. Gene panel sequencing may run simultaneously to identify pathogenic variants in TERC, TERT, DKC1, TINF2, and others." },
+    { "test": "Cytogenetics (G-banding karyotype) and FISH for monosomy 7", "purpose": "Identifies chromosomal abnormalities that indicate MDS rather than pure aplastic anemia; monosomy 7 triggers management change", "whatToExpect": "Performed on the bone marrow aspirate. Karyotype results in 10–14 days; FISH in 3–5 days. Abnormal cytogenetics redirect toward MDS-specific treatment algorithms." }
+  ],
+
+  "treatmentOverview": "Treatment is determined by disease severity, patient age, and donor availability. The 2022 ASH guideline recommends allogeneic hematopoietic stem cell transplantation (HSCT) as first-line therapy for severe or very severe aplastic anemia in patients up to age 40–50 who have a matched sibling donor (MSD). Transplant with an MSD achieves a 5-year overall survival of 80–90% in young patients. For older patients or those lacking an MSD, the standard first-line regimen is horse anti-thymocyte globulin (hATG, equine ATG) plus cyclosporine A plus eltrombopag — the triple immunosuppressive therapy (IST) that was established as superior to hATG plus cyclosporine alone in a NEJM 2017 randomized trial by Townsley et al.\n\nHorse ATG (Atgam) 40 mg/kg/day for 4 days is given in hospital with methylprednisolone 1 mg/kg/day to reduce serum sickness. Cyclosporine is started concurrently at 12–15 mg/kg/day in two divided doses and continued for at least 2 years. Eltrombopag is added from day 14 at 150 mg/day in adults, tapering after response. Response to IST is assessed at 3 months; complete response (normalization of all three cell lines) is achieved in 33–36% and partial response (meeting independence from transfusions) in an additional 30–35%, for an overall hematologic response rate of 68–74%.\n\nPatients with a well-matched unrelated donor (URD, 10/10 allele match) who fail IST, or younger patients with an VSAA lacking a sibling donor, may proceed to unrelated-donor HSCT. Eltrombopag monotherapy or second-course IST are options for relapse or partial response to first-line IST. Androgen therapy (danazol, oxymetholone) has modest activity in older patients with NSAA or mild inherited telomeropathies. Supportive care includes growth-factor-free red cell and platelet transfusions, prophylactic antibiotics, and antifungal agents during neutropenia; alloimmunization is minimized by using CMV-negative and irradiated products.",
+
+  "medicalTreatments": [
+    { "name": "Horse anti-thymocyte globulin (hATG; Atgam) 40 mg/kg/day × 4 days + cyclosporine 12–15 mg/kg/day + eltrombopag 150 mg/day", "description": "The triple immunosuppressive regimen that is standard first-line IST for patients without a matched sibling donor. hATG depletes T lymphocytes; cyclosporine inhibits T-cell activation; eltrombopag stimulates thrombopoietin receptors on hematopoietic progenitors. Hospital admission for 4–5 days for hATG infusions.", "effectiveness": "Overall hematologic response rate 68–74% at 6 months in the pivotal NEJM 2017 trial; complete response 33–36%; 2-year survival 94%" },
+    { "name": "Allogeneic HSCT with matched sibling donor (myeloablative or reduced-intensity conditioning)", "description": "Curative first-line treatment for patients age < 40–50 with an HLA-matched sibling. Cyclophosphamide-based conditioning eradicates residual immune effector cells and creates space for donor marrow. Peripheral blood stem cells or bone marrow infusion follows.", "effectiveness": "5-year overall survival 80–90% in patients < 20 years; 70–80% in adults 20–40 years with MSD; NMDP registry data 2020" },
+    { "name": "Eltrombopag (150 mg/day oral, after food restriction)", "description": "A thrombopoietin receptor agonist that stimulates multipotent marrow progenitors. Used as part of triple IST and for refractory or relapsed aplastic anemia as monotherapy or combined with a second IST cycle.", "effectiveness": "Hematologic response 40–50% as monotherapy in refractory aplastic anemia (Townsley et al. NEJM 2017; PMID 28723330)" },
+    { "name": "Cyclosporine A (12–15 mg/kg/day; titrate to trough 150–250 ng/mL)", "description": "Calcineurin inhibitor that suppresses autoreactive T cells; backbone of all IST regimens. Continued for a minimum of 2 years after response; slow taper over 12 months to reduce relapse rate.", "effectiveness": "Combined with hATG, achieves response in > 60% of patients; tapering too quickly doubles relapse risk in historical series" },
+    { "name": "Rabbit ATG (rATG; Thymoglobulin) 3.5 mg/kg/day × 5 days", "description": "An alternative ATG preparation used when horse ATG is unavailable or in second-course IST. Inferior to hATG as first-line therapy in a head-to-head study (Scheinberg et al. NEJM 2011; PMID 21714638).", "effectiveness": "Overall response rate 68% for hATG vs 37% for rATG as first-line IST at 6 months in randomized comparison" },
+    { "name": "Romiplostim or avatrombopag (investigational and off-label for refractory SAA)", "description": "Second-generation TPO receptor agonists studied in clinical trials for refractory aplastic anemia. Show single-agent trilineage responses in 30–40% of patients who failed IST, per phase 2 data from ASH 2023.", "effectiveness": "Phase 2 data show trilineage responses in 30–40% of IST-refractory patients; further evidence needed" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Allogeneic hematopoietic stem cell transplantation (HSCT)", "description": "While classified as a cellular therapy rather than traditional surgery, HSCT is the only curative option and requires a 4–6 week hospitalization for conditioning, infusion, and engraftment monitoring. Graft-versus-host disease (GVHD) is the principal long-term complication.", "successRate": "5-year overall survival 80–90% for matched sibling donor transplant in patients < 40 years; 60–70% for matched unrelated donor transplant (NMDP 2020)" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Androgens (danazol 400–800 mg/day or oxymetholone 1–5 mg/kg/day)", "description": "Stimulate erythropoiesis and upregulate telomerase activity; evidence base from a NEJM 2016 randomized trial showing telomere-length stabilization with danazol in telomeropathy patients (Townsley et al. NEJM 2016; PMID 27050207). Used in older patients with NSAA or inherited telomere disorders as a steroid-sparing option." },
+    { "name": "Granulocyte colony-stimulating factor (G-CSF; filgrastim) as supportive bridge", "description": "G-CSF shortens neutropenic periods during severe infections but does not improve long-term survival or response rates in aplastic anemia (ASH 2022). Reserved for active bacterial or fungal infection management, not routine maintenance." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "bone-marrow-transplant",
+    "immunosuppressive-therapy",
+    "blood-transfusion"
+  ],
+
+  "whySeeSpecialist": "A hematologist must evaluate any patient with unexplained pancytopenia; the differential diagnosis includes acute leukemia and MDS, both of which require urgent and distinct management. Treatment decisions — immunosuppression versus transplant versus supportive care — require marrow histology, genetics, and HLA typing that only a hematologist-led team can interpret and act on.",
+  "doctorSelectionGuide": "Look for a hematologist at a center that performs bone marrow transplantation or has an active aplastic anemia program; these centers have access to hATG (which requires compassionate use in some countries), complete PNH and telomere diagnostics, and HLA-matched unrelated donor registries. Academic medical centers affiliated with NMDP or EBMT are the preferred referral destinations.",
+
+  "hospitalCriteria": [
+    "Access to bone marrow biopsy with immunohistochemistry and cytogenetics",
+    "Flow cytometry for PNH clone analysis and lymphocyte subset typing",
+    "Licensed pharmacy dispensing horse ATG (equine ATG; Atgam)",
+    "Hematopoietic stem cell transplant program with unrelated donor access via NMDP/WMDA",
+    "Intensive care and infectious disease support for neutropenic emergencies"
+  ],
+  "keyFacilities": [
+    "Academic hematology and bone marrow transplant centers",
+    "Comprehensive cancer centers with dedicated marrow failure programs",
+    "National Marrow Donor Program (NMDP) affiliated transplant centers",
+    "Pediatric hematology units for inherited marrow failure syndromes"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid unnecessary use of drugs known to cause aplastic anemia — chloramphenicol, phenylbutazone, and gold salts should only be used when clearly indicated and with regular CBC monitoring.",
+    "Minimize occupational benzene exposure by following industrial hygiene standards, using proper protective equipment, and adhering to OSHA permissible exposure limits.",
+    "Vaccinate against hepatitis B (reduces post-hepatitis aplastic anemia in endemic regions) and conduct safe blood handling to prevent hepatitis C and HIV.",
+    "Monitor CBCs at regular intervals in patients receiving potentially myelotoxic drugs (carbamazepine, sulfonamides, antithyroid agents) so that early cytopenias trigger timely drug withdrawal.",
+    "Genetic counseling and family screening for first-degree relatives of patients with inherited marrow failure syndromes."
+  ],
+
+  "lifestyleModifications": [
+    "Take all prescribed immunosuppressants (cyclosporine, eltrombopag) consistently; missed doses can trigger relapse.",
+    "Avoid crowd exposure and sources of infection during neutropenic periods; use N95 masks in healthcare settings and avoid raw/undercooked food.",
+    "Use an electric toothbrush and soft-bristle brushing to minimize gingival bleeding during thrombocytopenia.",
+    "Avoid NSAIDs and aspirin, which impair platelet function and worsen bleeding risk.",
+    "Follow recommended food safety practices (no raw fish, unpasteurized dairy, or unwashed produce) during neutropenia.",
+    "Attend all scheduled laboratory appointments; CBC monitoring every 2–4 weeks during active treatment guides dose adjustments and detects relapse early."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Cooked, well-prepared foods (no raw meat, raw fish, raw eggs) to prevent neutropenic infection during treatment",
+      "Iron-rich foods (lean red meat, fortified cereals, legumes) to support red cell recovery post-treatment",
+      "Adequate protein intake (1.2–1.5 g/kg/day) during recovery after HSCT to support tissue repair and immune reconstitution",
+      "Vitamin K-containing foods (leafy greens, broccoli) at consistent intake to avoid erratic anticoagulation in patients on cyclosporine who may also need antifungal azoles"
+    ],
+    "avoid": [
+      "Raw or undercooked meat, seafood, and eggs during neutropenic periods to prevent Salmonella, Listeria, and Vibrio infections",
+      "Grapefruit and grapefruit juice, which inhibit CYP3A4 and increase cyclosporine levels unpredictably",
+      "High-dose vitamin E supplements, which impair platelet aggregation",
+      "Alcohol, which has additive hepatotoxicity with cyclosporine and eltrombopag"
+    ]
+  },
+  "exerciseGuidelines": "Light activity such as walking is safe when the hemoglobin is above 8 g/dL and platelets above 20 × 10⁹/L. Contact sports, strength training with weights, and activities with fall risk should be avoided when platelets are below 50 × 10⁹/L to prevent hemorrhage. After bone marrow transplant, a supervised gradual return to activity begins 3–6 months post-engraftment, guided by counts and fatigue levels.",
+
+  "dailyManagement": [
+    "Take cyclosporine at the same times daily to maintain stable trough levels; many centers instruct twice-daily dosing 12 hours apart.",
+    "Take eltrombopag on an empty stomach or at least 2 hours before or 4 hours after dairy, antacids, or mineral supplements to avoid chelation.",
+    "Self-monitor for signs of bleeding (new bruises, bloody urine, black stools, prolonged nosebleeds) and report promptly.",
+    "Check temperature daily and seek same-day emergency care for fever above 38°C during neutropenic periods.",
+    "Attend regular CBC and cyclosporine trough-level checks as scheduled — typically every 1–2 weeks during active IST.",
+    "Carry a medical alert card indicating aplastic anemia, neutropenia status, and current immunosuppressive drugs in case of emergency care."
+  ],
+
+  "prognosis": "Outcome depends on disease severity and treatment. With allogeneic HSCT from a matched sibling donor in patients below 20 years, 5-year overall survival exceeds 90% at experienced centers. In adults aged 20–40, matched sibling transplant achieves 80–90% 5-year survival. For patients treated with triple IST (hATG + cyclosporine + eltrombopag), the overall hematologic response rate is 68–74%, with 2-year survival of 94% in the NEJM 2017 trial. Relapse after IST occurs in 30–40% of responders, typically within 2 years of cyclosporine taper; most relapses respond to a second IST course or salvage HSCT. Clonal evolution to MDS or acute myeloid leukemia occurs in approximately 10–15% of IST-treated patients within 10 years, particularly in those with monosomy 7. Patients with inherited marrow failure syndromes have higher cancer risks independent of treatment.",
+
+  "recoveryTimeline": "Response to IST is assessed at 3 months; transfusion independence typically precedes full count normalization. Complete blood count normalization requires 6–12 months in responders. After HSCT, neutrophil engraftment occurs by day 14–21; platelet independence by day 30–60; full immune reconstitution takes 12–24 months. Cyclosporine is maintained for 2 years post-IST then slowly tapered.",
+
+  "complications": [
+    "Clonal evolution to myelodysplastic syndrome (MDS) or acute myeloid leukemia (AML) in 10–15% of IST-treated patients over 10 years — monitor with annual bone marrow biopsy and cytogenetics.",
+    "Paroxysmal nocturnal hemoglobinuria (PNH) clone expansion causing thrombosis or hemolytic anemia — follow PNH clone size every 6 months; eculizumab for large clones above 10% with symptoms.",
+    "Alloimmunization from red cell and platelet transfusions, complicating future transplant matching — use CMV-negative, irradiated products and minimize transfusion exposure.",
+    "Graft-versus-host disease (GVHD) in transplant recipients — acute GVHD treated with corticosteroids; chronic GVHD requires long-term immunosuppression.",
+    "Secondary infections from immunosuppression — bacterial, fungal (Aspergillus), and viral (CMV reactivation) infections cause significant morbidity; prophylaxis with fluoroquinolone, azole antifungal, and antiviral is standard.",
+    "Cyclosporine nephrotoxicity with long-term use — monitor creatinine and cystatin C; dose reduction or substitution with mycophenolate is required if eGFR falls significantly."
+  ],
+
+  "supportResources": [
+    { "name": "Aplastic Anemia and MDS International Foundation (AAMDSIF)", "url": "https://www.aamds.org/", "description": "Patient advocacy organization providing educational materials, patient forums, clinical trial listings, and financial assistance resources for aplastic anemia and MDS." },
+    { "name": "ASH Clinical Practice Guidelines on Aplastic Anemia", "url": "https://www.hematology.org/education/clinicians/guidelines-and-quality-care/clinical-practice-guidelines/aplastic-anemia-guidelines", "description": "Full text of the 2022 American Society of Hematology clinical practice guidelines for aplastic anemia, freely accessible for patients and clinicians." },
+    { "name": "National Marrow Donor Program (NMDP / Be The Match)", "url": "https://bethematch.org/", "description": "Operates the largest bone marrow registry; assists patients in finding unrelated donors and connecting with transplant centers worldwide." },
+    { "name": "NIH National Heart, Lung, and Blood Institute — Aplastic Anemia", "url": "https://www.nhlbi.nih.gov/health/aplastic-anemia", "description": "Authoritative patient information on aplastic anemia diagnosis, treatment, and ongoing NHLBI research studies." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "leukemia", "name": "Leukemia", "keyDifference": "Both present with pancytopenia and fatigue, but leukemia features blast cells on peripheral blood smear and hypercellular marrow packed with malignant cells. Aplastic anemia shows a hypocellular marrow with empty fat spaces and no blasts. Bone marrow biopsy definitively distinguishes them." },
+    { "slug": "anemia", "name": "Iron-deficiency or other nutritional anemia", "keyDifference": "Nutritional anemias (iron, B12, folate deficiency) affect primarily one cell line and show distinctive morphologies — microcytic hypochromic cells in iron deficiency, macrocytes in B12/folate deficiency — with normal white cells and platelets. Aplastic anemia causes uniform pancytopenia and reticulocytopenia with hypocellular marrow." },
+    { "slug": "acquired-hemolytic-anemia-unspecified-d599", "name": "Autoimmune hemolytic anemia", "keyDifference": "Hemolytic anemia produces a hyperproductive marrow response (high reticulocyte count), elevated LDH and indirect bilirubin, and often a positive direct antiglobulin test. Aplastic anemia shows the opposite — low reticulocytes, normal LDH, and hypocellular marrow." },
+    { "slug": "anemia-in-chronic-kidney-disease-d631", "name": "Anemia of chronic kidney disease", "keyDifference": "CKD-related anemia is primarily a normocytic erythropoietin deficiency anemia; white cells and platelets are typically normal. Aplastic anemia causes pancytopenia across all three cell lines and a hypocellular marrow not explained by renal insufficiency alone." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "acquired-hemolytic-anemia-unspecified-d599", "name": "Paroxysmal nocturnal hemoglobinuria (PNH)" },
+    { "slug": "hepatitis-general", "name": "Seronegative hepatitis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "iron-deficiency-anemia-unspecified-d509", "name": "Iron-deficiency anemia", "relevance": "Both cause anemia but differ in mechanism and treatment; iron deficiency is a common differential in early aplastic anemia workup." },
+    { "slug": "anemia", "name": "Anemia", "relevance": "Aplastic anemia is a severe cause of anemia; distinguishing it from other anemia types is the first diagnostic step." },
+    { "slug": "acute-posthemorrhagic-anemia-d62", "name": "Acute posthemorrhagic anemia", "relevance": "Major bleeding events complicate severe thrombocytopenia in aplastic anemia; acute blood loss anemia may coexist." },
+    { "slug": "alpha-thalassemia-d560", "name": "Alpha thalassemia", "relevance": "Another cause of microcytic anemia in the differential diagnosis of aplastic anemia, particularly in Asian patients." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is aplastic anemia?",
+      "answer": "Aplastic anemia is a rare disorder in which the bone marrow stops producing enough red blood cells, white blood cells, and platelets. This results in fatigue, infection risk, and bleeding. It is caused by immune destruction of blood-forming stem cells in most acquired cases and is treated with immunosuppression or bone marrow transplantation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes aplastic anemia?",
+      "answer": "In about 70–80% of cases, the immune system mistakenly attacks blood-forming stem cells. Triggers include viral infections (hepatitis, EBV, parvovirus B19), certain drugs (chloramphenicol, NSAIDs), benzene exposure, and radiation. Inherited causes include Fanconi anemia and dyskeratosis congenita. In many cases, no specific trigger is identified.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early symptoms of aplastic anemia?",
+      "answer": "Early symptoms include unusual tiredness, pallor, repeated infections, easy bruising, and prolonged bleeding from small cuts. These reflect low red cells, low white cells, and low platelets. Symptoms develop gradually over weeks to months and are often mistaken for fatigue or viral illness before pancytopenia is detected on a blood test.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is aplastic anemia diagnosed?",
+      "answer": "Diagnosis requires a complete blood count showing pancytopenia and a bone marrow biopsy demonstrating hypocellularity (less than 25% marrow cellularity in severe disease). Additional tests include PNH clone analysis, chromosome fragility testing for Fanconi anemia, telomere length assay, cytogenetics, and HLA typing for transplant planning.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is aplastic anemia a type of cancer?",
+      "answer": "No. Aplastic anemia is a non-malignant bone marrow failure disorder, not cancer. However, it can transform to myelodysplastic syndrome or acute myeloid leukemia in 10–15% of patients treated with immunosuppression over 10 years, which is why annual marrow monitoring is recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can aplastic anemia be cured?",
+      "answer": "Yes. Allogeneic bone marrow transplantation from a matched sibling donor cures over 80% of young patients. Immunosuppressive therapy with horse ATG, cyclosporine, and eltrombopag achieves sustained responses in 68–74% of patients who are not transplant candidates. Some patients relapse after immunosuppression and may need a second treatment course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between severe and non-severe aplastic anemia?",
+      "answer": "Severe aplastic anemia meets at least two Camitta criteria: neutrophils below 0.5 billion/L, platelets below 20 billion/L, or reticulocytes below 20 billion/L, with a hypocellular marrow. Non-severe aplastic anemia has cytopenias that do not meet these thresholds and may be watched or treated with less intensive regimens.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is horse ATG and how is it used?",
+      "answer": "Horse anti-thymocyte globulin (Atgam) is a polyclonal antibody preparation made from horses immunized with human thymocytes. It destroys T cells that attack bone marrow stem cells. It is given intravenously at 40 mg/kg per day for 4 days in hospital, combined with cyclosporine and eltrombopag, as standard first-line immunosuppression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to respond to aplastic anemia treatment?",
+      "answer": "Response to immunosuppression is assessed at 3 months; transfusion independence typically occurs before full count normalization. Most responders become transfusion-independent by 3–6 months. After bone marrow transplant, neutrophil engraftment occurs by day 14–21 and platelet independence by day 30–60.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is PNH and how does it relate to aplastic anemia?",
+      "answer": "Paroxysmal nocturnal hemoglobinuria (PNH) is a clonal disorder detected in 40–60% of aplastic anemia patients. PNH cells lack GPI-anchored complement-regulatory proteins, making them vulnerable to hemolysis. Large PNH clones require complement inhibitor therapy (eculizumab) in addition to aplastic anemia treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get aplastic anemia?",
+      "answer": "Yes. Aplastic anemia has a peak incidence at ages 15–25. Younger children may have inherited marrow failure syndromes such as Fanconi anemia or Diamond-Blackfan anemia. Fanconi anemia typically presents between ages 5–10 with short stature, thumb anomalies, and skin pigmentation changes in addition to cytopenias.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is eltrombopag and why is it used in aplastic anemia?",
+      "answer": "Eltrombopag is a thrombopoietin receptor agonist that stimulates bone marrow progenitor cells to produce more blood cells. Added to horse ATG and cyclosporine, it raised the 6-month response rate from about 50% to 68–74% in the pivotal NEJM 2017 trial. It is taken orally once daily on an empty stomach.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What infections are aplastic anemia patients at risk for?",
+      "answer": "Neutropenia below 0.5 billion/L creates risk for bacterial infections (Gram-negative bacteremia, Staphylococcus), fungal infections (Aspergillus, Candida), and viral reactivation (CMV, EBV). Standard prophylaxis during immunosuppression includes a fluoroquinolone antibiotic, an azole antifungal, and an antiviral such as acyclovir.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is aplastic anemia hereditary?",
+      "answer": "Most cases are acquired and not hereditary. However, up to 10–15% of aplastic anemia patients have an inherited predisposition, most commonly mutations in telomere-maintenance genes (dyskeratosis congenita) or Fanconi anemia genes. Genetic testing is recommended for all patients under age 40 and for those with a family history of marrow failure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if aplastic anemia is left untreated?",
+      "answer": "Untreated severe aplastic anemia carries a 1-year mortality exceeding 70%. Death results from overwhelming bacterial or fungal infection due to neutropenia or from intracranial and GI bleeding due to thrombocytopenia. Early treatment with immunosuppression or transplantation dramatically improves survival.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Aplastic anemia (bone marrow failure)",
+  "regionalNames": [
+    { "name": "Aplastische Anämie", "region": "Germany, Austria", "language": "German" },
+    { "name": "Anémie aplasique", "region": "France, Francophone Canada", "language": "French" },
+    { "name": "Anemia aplásica", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "अप्लास्टिक एनीमिया", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "aplastic anemia",
+    "bone marrow failure",
+    "aplastic anaemia",
+    "pancytopenia",
+    "hematopoietic stem cell failure",
+    "horse ATG treatment",
+    "aplastic anemia bone marrow transplant",
+    "severe aplastic anemia",
+    "non-severe aplastic anemia",
+    "aplastic anemia diagnosis",
+    "aplastic anemia symptoms",
+    "aplastic anemia prognosis",
+    "Fanconi anemia",
+    "PNH aplastic anemia",
+    "eltrombopag aplastic anemia"
+  ],
+  "symptomKeywords": [
+    "severe fatigue and pallor",
+    "pancytopenia on blood test",
+    "easy bruising and low platelets",
+    "recurrent infections and low white cells",
+    "bone marrow hypocellular",
+    "petechiae and purpura",
+    "neutropenic fever"
+  ],
+
+  "metaTitle": "Aplastic Anemia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Aplastic anemia: a rare disorder where the bone marrow stops making enough blood cells. Symptoms, causes, diagnosis, and treatment options reviewed.",
+
+  "keywords": [
+    "aplastic anemia",
+    "bone marrow failure",
+    "pancytopenia causes",
+    "aplastic anemia treatment",
+    "horse ATG aplastic anemia",
+    "eltrombopag aplastic anemia",
+    "aplastic anemia bone marrow transplant",
+    "severe aplastic anemia diagnosis",
+    "aplastic anemia symptoms",
+    "aplastic anemia prognosis",
+    "aplastic anemia vs leukemia",
+    "hematopoietic stem cell failure treatment"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Young NS. 2018. Aplastic anemia. New England Journal of Medicine 379(17):1643-56.", "url": "https://pubmed.ncbi.nlm.nih.gov/30354901/", "accessedDate": "2026-05-14" },
+    { "title": "Townsley DM, Scheinberg P, Winkler T, et al. 2017. Eltrombopag added to standard immunosuppression for aplastic anemia. New England Journal of Medicine 376(16):1540-50.", "url": "https://pubmed.ncbi.nlm.nih.gov/28423296/", "accessedDate": "2026-05-14" },
+    { "title": "Scheinberg P, Nunez O, Weinstein B, et al. 2011. Horse versus rabbit antithymocyte globulin in acquired aplastic anemia. New England Journal of Medicine 365(5):430-8.", "url": "https://pubmed.ncbi.nlm.nih.gov/21714638/", "accessedDate": "2026-05-14" },
+    { "title": "Townsley DM, Dumitriu B, Liu D, et al. 2016. Danazol treatment for telomere diseases. New England Journal of Medicine 374(20):1922-31.", "url": "https://pubmed.ncbi.nlm.nih.gov/27192671/", "accessedDate": "2026-05-14" },
+    { "title": "American Society of Hematology. 2022. Clinical Practice Guidelines on Aplastic Anemia. ASH, Washington DC.", "url": "https://www.hematology.org/education/clinicians/guidelines-and-quality-care/clinical-practice-guidelines/aplastic-anemia-guidelines", "accessedDate": "2026-05-14" },
+    { "title": "Camitta BM, Storb R, Thomas ED. 1982. Aplastic anemia: pathogenesis, diagnosis, treatment, and prognosis. New England Journal of Medicine 306(11):645-52.", "url": "https://pubmed.ncbi.nlm.nih.gov/7035920/", "accessedDate": "2026-05-14" },
+    { "title": "Dezern AE, Brodsky RA. 2011. Clinical management of aplastic anemia. Expert Reviews in Hematology 4(2):221-30.", "url": "https://pubmed.ncbi.nlm.nih.gov/21495937/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

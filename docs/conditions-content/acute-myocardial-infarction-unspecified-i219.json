@@ -1,0 +1,404 @@
+{
+  "_meta": {
+    "slug": "acute-myocardial-infarction-unspecified-i219",
+    "tier": 1,
+    "headTerm": "acute myocardial infarction",
+    "longTailKeywords": [
+      "heart attack symptoms",
+      "heart attack treatment",
+      "myocardial infarction ECG",
+      "troponin heart attack",
+      "STEMI NSTEMI difference",
+      "heart attack recovery",
+      "heart attack causes",
+      "thrombolysis heart attack",
+      "primary PCI heart attack",
+      "heart attack risk factors"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Epidemiology sourced from AHA Heart Disease and Stroke Statistics 2024. Clinical details cross-checked against 2023 ACC/AHA Guideline for the Management of Patients With Acute Coronary Syndromes and ESC 2023 STEMI Guidelines. Troponin sensitivity data from Reichlin et al. NEJM 2009 (PMID 19710484)."
+  },
+
+  "h1Title": "Acute Myocardial Infarction (Heart Attack): Symptoms, Causes & Treatment",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "Acute myocardial infarction — a heart attack — occurs when a coronary artery is abruptly blocked, most often by rupture of an atherosclerotic plaque with overlying thrombus, cutting off blood supply to part of the heart muscle. About 805,000 Americans experience a heart attack each year; roughly one in five is silent (AHA 2024). The hallmark is severe chest pain or pressure radiating to the arm or jaw, often with sweating, nausea, and breathlessness. Without prompt treatment the affected muscle dies irreversibly within 20-40 minutes. Rapid reperfusion — primary percutaneous coronary intervention or thrombolysis — limits infarct size and is the basis of modern survival rates exceeding 95% for patients who reach a PCI center within 90 minutes.",
+
+  "keyStats": {
+    "prevalence": "Approximately 805,000 heart attacks per year in the United States (AHA 2024); about 335,000 are recurrent events",
+    "demographics": "Men develop first heart attack roughly 10 years earlier than women; incidence rises sharply after age 45 in men and age 55 in women; Black Americans have higher age-adjusted mortality than White Americans",
+    "avgAge": "Mean age at first heart attack 65.5 years for men, 72.0 years for women (AHA 2024)",
+    "globalCases": "Ischemic heart disease is the leading single cause of death globally, responsible for approximately 9 million deaths per year (GBD 2022)"
+  },
+
+  "definition": "Acute myocardial infarction (ICD-10: I21.9) is the death of cardiomyocytes caused by prolonged ischaemia resulting from reduced or absent coronary blood flow. The universal definition (ESC/ACC/AHA/WHF 2018) requires a rise and/or fall in cardiac troponin with at least one value above the 99th-percentile upper reference limit, plus evidence of acute myocardial ischaemia — symptoms, new ECG changes, imaging evidence of new wall-motion abnormality, or identification of an intracoronary thrombus. Type 1 MI arises from atherosclerotic plaque rupture or erosion with superimposed thrombosis in a native coronary artery; Type 2 MI results from a supply-demand imbalance in the absence of acute plaque rupture (e.g., tachyarrhythmia, severe hypertension, anemia, or coronary spasm). Types 3-5 relate to procedure-associated and sudden-cardiac-death presentations. Clinically, MI is classified by ECG into ST-elevation MI (STEMI), where complete occlusion warrants immediate reperfusion, and non-ST-elevation MI (NSTEMI), where partial occlusion is managed with early invasive strategy within 24-72 hours. The left anterior descending artery is the culprit in roughly 40% of STEMIs, giving the largest infarcts and the highest early mortality. Cardiology and cardiac critical care manage the acute phase; cardiologists and cardiac rehabilitation teams guide recovery.",
+
+  "typesClassification": [
+    { "type": "STEMI (ST-Elevation Myocardial Infarction)", "description": "Complete occlusion of a coronary artery produces full-thickness (transmural) ischemia and ST elevation on ECG. This is a medical emergency requiring immediate reperfusion within 90 minutes of first medical contact via primary PCI or within 30 minutes via thrombolysis if PCI is unavailable." },
+    { "type": "NSTEMI (Non-ST-Elevation Myocardial Infarction)", "description": "Partial occlusion or transient complete occlusion causing troponin rise without persistent ST elevation. ECG may show ST depression or T-wave inversion. Managed with anti-thrombotic therapy and early invasive coronary angiography within 24-72 hours depending on risk score." },
+    { "type": "Type 2 MI (Supply-demand mismatch)", "description": "Myocardial injury from conditions other than plaque rupture — tachyarrhythmia, severe hypertension, hypotension, severe anemia, or coronary vasospasm. Accounts for roughly 25-30% of all troponin-positive presentations; management targets the precipitating cause." },
+    { "type": "Silent MI", "description": "Approximately 20% of MIs are unrecognized at the time, detected only by later ECG changes or imaging. Diabetics, women, and elderly patients are more likely to have atypical or absent pain." }
+  ],
+
+  "primarySymptoms": [
+    "Central crushing, squeezing, or pressure-like chest pain lasting more than 20 minutes, often described as a heavy weight or tight band across the chest, not relieved by rest or nitrates.",
+    "Radiation of pain to the left arm (classic), both arms, jaw, neck, or interscapular back, reflecting referred visceral pain from the ischemic myocardium.",
+    "Diaphoresis — sudden, profuse cold sweating — driven by sympathetic activation and often the symptom that prompts bystanders to call emergency services.",
+    "Shortness of breath from acute reduction in left ventricular stroke volume and, in large infarcts, pulmonary edema; may precede or dominate over chest pain.",
+    "Nausea and vomiting, particularly in inferior MI involving the right coronary artery, caused by vagal activation and adjacent diaphragmatic irritation.",
+    "Dizziness, light-headedness, or near-syncope from cardiogenic hypotension, arrhythmia, or a vasovagal response to severe pain.",
+    "Palpitations or the sensation of a fast or irregular heartbeat, reflecting ventricular ectopy or arrhythmias arising from the ischemic zone.",
+    "Profound fatigue, particularly in women, presenting hours to days before the acute event as a prodromal symptom of coronary artery compromise.",
+    "Epigastric pain or indigestion-like discomfort in inferior or posterior MI, frequently misattributed to a gastrointestinal cause and leading to diagnostic delays."
+  ],
+
+  "earlyWarningSigns": [
+    "New or worsening exertional chest tightness that resolves at rest but has been increasing in frequency or occurring at lower thresholds over the past 48-72 hours — this is unstable angina until proven otherwise.",
+    "Unexplained jaw pain or toothache-like discomfort during physical exertion or emotional stress in a patient with known coronary risk factors.",
+    "Abnormal tiredness or shortness of breath on minimal exertion in women over 55 with diabetes or hypertension — frequently the dominant prodrome of female MI.",
+    "Troponin rise above the 99th percentile URL on repeat sampling at 0 and 1-3 hours even in the absence of classic symptoms — triggers immediate cardiology review."
+  ],
+
+  "emergencySigns": [
+    "Chest pain lasting more than 15 minutes unrelieved by nitrates — call emergency services immediately; time-to-reperfusion is the primary determinant of survival.",
+    "Sudden loss of consciousness or unresponsive collapse with absent pulse — ventricular fibrillation complicates up to 10% of acute STEMIs; immediate CPR and defibrillation are needed.",
+    "Acute pulmonary edema with pink frothy sputum, severe respiratory distress, and oxygen saturation below 90% — cardiogenic shock from massive MI requiring urgent ICU-level care.",
+    "New ST elevation of ≥1 mm in two contiguous leads on a 12-lead ECG — triggers the 'STEMI activation' protocol and immediate cath-lab preparation.",
+    "Signs of cardiogenic shock: systolic BP below 90 mmHg, cold clammy extremities, altered consciousness, and urine output below 0.5 mL/kg/hr despite adequate filling."
+  ],
+
+  "causes": [
+    {
+      "cause": "Atherosclerotic plaque rupture with coronary thrombosis",
+      "description": "The most common mechanism (Type 1 MI). A lipid-rich plaque with a thin fibrous cap ruptures, exposing subendothelial collagen and tissue factor. Platelet aggregation and coagulation cascade produce an occlusive thrombus within minutes. This underlies more than 70% of acute STEMI presentations and the majority of NSTEMIs."
+    },
+    {
+      "cause": "Plaque erosion",
+      "description": "In roughly 25-30% of ACS cases, the plaque surface erodes without full rupture, triggering thrombus on an intact cap. More common in younger women and smokers. Associated with a smaller infarct burden compared with rupture but still causes acute coronary occlusion."
+    },
+    {
+      "cause": "Coronary artery spasm (vasospasm)",
+      "description": "Prolonged spasm of an epicardial or microvascular coronary artery can produce transmural ischemia and Type 1 or Type 2 MI. Provocative triggers include cocaine, amphetamines, ergotamine, cold exposure, and emotional stress. Prinzmetal's variant angina is the classic form."
+    },
+    {
+      "cause": "Coronary artery embolism",
+      "description": "Thrombus embolizing from the left heart (atrial fibrillation, mural thrombus, prosthetic valve), paradoxical embolism through a patent foramen ovale, or septic embolism in infective endocarditis can occlude a coronary artery without pre-existing atherosclerosis."
+    },
+    {
+      "cause": "Supply-demand mismatch (Type 2 MI)",
+      "description": "Severe tachyarrhythmia, hypertensive crisis, profound anemia (hemoglobin below 7 g/dL), sepsis, or surgical stress can produce myocardial oxygen demand exceeding supply across a fixed coronary stenosis, causing troponin release without thrombus."
+    },
+    {
+      "cause": "Spontaneous coronary artery dissection (SCAD)",
+      "description": "An intimal tear creates a false lumen that compresses the true lumen. SCAD accounts for 25-35% of acute MIs in women under 50, often without conventional risk factors. Associated with fibromuscular dysplasia, pregnancy, and connective tissue disorders."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Hypertension", "category": "modifiable", "description": "Systolic BP above 140 mmHg doubles coronary event risk; every 20 mmHg increase in systolic BP above 115 mmHg doubles cardiovascular mortality. Hypertension accelerates endothelial injury and plaque formation in coronary arteries." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Cigarette smoking increases MI risk 2-4 fold by promoting endothelial dysfunction, platelet aggregation, and oxidative modification of LDL. Risk declines sharply within 1-2 years of cessation; approaches baseline by 5 years." },
+    { "factor": "Dyslipidemia (elevated LDL, low HDL)", "category": "modifiable", "description": "Each 1 mmol/L reduction in LDL reduces MI risk by roughly 22% (Cholesterol Treatment Trialists 2010). LDL above 3.0 mmol/L is a major modifiable driver of plaque formation." },
+    { "factor": "Type 2 diabetes mellitus", "category": "modifiable", "description": "Diabetes confers a 2-4 fold higher MI risk and leads to more extensive, diffuse coronary disease and a higher proportion of silent MIs. Every 1% reduction in HbA1c reduces cardiovascular events by approximately 14%." },
+    { "factor": "Age (men ≥45, women ≥55)", "category": "non-modifiable", "description": "Age is the dominant non-modifiable risk factor; atherosclerosis accumulates over decades, and plaque vulnerability increases with age-related arterial stiffening and hormonal change." },
+    { "factor": "Family history of premature coronary artery disease", "category": "genetic", "description": "First-degree relative with CAD before age 55 (male) or 65 (female) raises lifetime MI risk approximately 1.5-2 fold and justifies earlier screening and lower treatment thresholds." },
+    { "factor": "Obesity and metabolic syndrome", "category": "modifiable", "description": "BMI ≥30 increases coronary risk roughly 1.5 fold, largely mediated through hypertension, dyslipidemia, and insulin resistance. Central adiposity (waist circumference >102 cm men, >88 cm women) is an independent predictor." }
+  ],
+
+  "affectedDemographics": [
+    "Middle-aged and older adults: 85% of MI deaths occur in people aged 65 and older (AHA 2024); median age at first MI is 65.5 for men, 72.0 for women.",
+    "Men: develop first MI about 10 years earlier than women, with higher absolute incidence until their 70s when sex gap narrows substantially.",
+    "Diabetic individuals: 2-4 times higher MI incidence; MI often presents atypically or silently in this group.",
+    "South Asian populations: higher premature CAD burden relative to European populations, with first MI occurring roughly 5-10 years earlier even after adjustment for classical risk factors.",
+    "Patients with prior MI: 14% of men and 19% of women who survive a first MI will have another MI within 5 years (AHA 2024)."
+  ],
+
+  "diagnosisOverview": "Diagnosis begins at the point of first medical contact with a 12-lead ECG, which must be obtained and interpreted within 10 minutes. ST elevation ≥1 mm in two contiguous limb leads or ≥2 mm in two contiguous precordial leads with a compatible history triggers immediate STEMI activation without waiting for biomarker results. NSTEMI diagnosis requires a rise or fall in cardiac troponin (cTn) using the 0h/1h or 0h/2h high-sensitivity protocols (ESC 2023), where a value above the sex-specific 99th-percentile URL combined with ischemic symptoms or new ECG changes confirms the diagnosis. High-sensitivity troponin (hs-cTn) reaches detectable levels within 1-2 hours of symptom onset and peaks at 12-24 hours; absolute delta changes at 1 and 2 hours improve rule-in and rule-out accuracy. When troponin and ECG are non-diagnostic, echocardiography at the bedside identifies new regional wall-motion abnormality as a sensitive early indicator of ischemia before troponin rises. Coronary angiography via the radial artery approach is the definitive investigation, identifying the culprit lesion and permitting simultaneous percutaneous intervention. Additional imaging — cardiac MRI for infarct size, viability, and thrombus; CT angiography for NSTEMI with anatomy-first approach — is used selectively in complex presentations or when non-obstructive coronary artery disease is suspected.",
+
+  "diagnosticTests": [
+    { "test": "12-lead ECG", "purpose": "Identifies STEMI, NSTEMI, and arrhythmias; classifies territory of ischemia", "whatToExpect": "10 electrodes applied to chest and limbs; takes 1 minute. Performed immediately at first contact. Repeated every 30 minutes if initial result is non-diagnostic." },
+    { "test": "High-sensitivity cardiac troponin (hs-cTnI or hs-cTnT)", "purpose": "Confirms myocardial injury; rise and fall pattern distinguishes acute MI from chronic elevation", "whatToExpect": "A standard blood draw. Levels are measured at presentation (0h) and again at 1-3 hours. Results return within 30-60 minutes. Values must be interpreted with the sex-specific 99th-percentile reference limit." },
+    { "test": "Bedside echocardiography", "purpose": "Detects regional wall-motion abnormality, LV function, pericardial effusion, mechanical complications", "whatToExpect": "Ultrasound probe placed on the chest for 15-20 minutes. No preparation needed. Provides immediate functional data when ECG and biomarkers are ambiguous." },
+    { "test": "Coronary angiography (cardiac catheterization)", "purpose": "Identifies culprit lesion, degree of stenosis, and coronary anatomy; allows simultaneous PCI", "whatToExpect": "Thin catheter inserted via radial or femoral artery under local anesthesia. Contrast dye injected into coronary ostia. Procedure 30-60 minutes; patient awake. Radial access allows same-day ambulation." },
+    { "test": "Chest X-ray", "purpose": "Identifies pulmonary edema, cardiomegaly, and aortic dissection as an alternative diagnosis", "whatToExpect": "Standard portable film in the ED, taking 5 minutes. Results available immediately. Performed concurrently with ECG, not before it." },
+    { "test": "Cardiac MRI with late gadolinium enhancement", "purpose": "Quantifies infarct size, salvaged myocardium, microvascular obstruction, and viability in the subacute phase", "whatToExpect": "45-60 minute scan lying in the MRI bore. Contrast injected via IV. Typically performed 2-7 days after primary PCI to guide further management and prognostication." }
+  ],
+
+  "treatmentOverview": "Treatment of acute MI is determined by the ECG subtype, time from symptom onset, and patient hemodynamics. For STEMI, the 2023 ESC and ACC/AHA guidelines mandate primary percutaneous coronary intervention (PCI) as first-line reperfusion when door-to-balloon time is ≤90 minutes; intravenous thrombolysis (tenecteplase or alteplase) is given when PCI is unavailable within 120 minutes of STEMI diagnosis, followed by transfer to a PCI centre within 3-24 hours. Aspirin 300 mg is given immediately upon diagnosis; a P2Y12 inhibitor (ticagrelor 180 mg or prasugrel 60 mg loading dose; clopidogrel 600 mg when preferred agents are contraindicated) is added immediately for dual antiplatelet therapy (DAPT) maintained for 12 months. Anticoagulation with unfractionated heparin or bivalirudin is continued through the procedure. After reperfusion, beta-blockers (metoprolol, carvedilol) reduce arrhythmias and improve remodeling; ACE inhibitors or ARBs lower afterload and prevent LV dilation especially when ejection fraction is below 40%. High-intensity statin therapy (atorvastatin 80 mg or rosuvastatin 40 mg daily) is begun in hospital regardless of baseline LDL and continued indefinitely. Mineralocorticoid receptor antagonists (eplerenone 25-50 mg daily) are added for LVEF ≤40% with heart failure or diabetes. NSTEMI management follows a risk-stratified approach: very-high risk (ongoing ischemia, hemodynamic instability) goes to angiography within 2 hours; high risk (GRACE score >140, troponin rise, ST changes) within 24 hours; intermediate risk within 72 hours. Cardiac rehabilitation commences within 4-6 weeks of discharge.",
+
+  "medicalTreatments": [
+    { "name": "Aspirin (300 mg loading, then 75-100 mg daily)", "description": "Irreversible COX-1 inhibitor blocking thromboxane-A2-mediated platelet aggregation. Given immediately upon suspected MI and continued indefinitely. First-line antiplatelet regardless of reperfusion strategy.", "effectiveness": "ISIS-2 trial showed aspirin alone reduced 35-day vascular mortality by 23% (p<0.0001); combined with streptokinase, mortality reduction was 42%" },
+    { "name": "Ticagrelor (180 mg loading, 90 mg twice daily)", "description": "Reversible P2Y12 ADP-receptor antagonist providing faster and more potent platelet inhibition than clopidogrel. Preferred with aspirin as DAPT for 12 months post-MI. Metabolised without CYP2C19 activation, avoiding the clopidogrel poor-metaboliser issue.", "effectiveness": "PLATO trial: ticagrelor vs clopidogrel reduced composite CV death, MI, stroke at 12 months by 16% (9.8% vs 11.7%, p<0.001) with similar major bleeding" },
+    { "name": "High-intensity statin (atorvastatin 80 mg or rosuvastatin 40 mg daily)", "description": "Commenced in hospital and continued indefinitely. Reduces LDL, stabilizes plaques, and provides pleiotropic anti-inflammatory effects. Target LDL <1.4 mmol/L for secondary prevention per ESC 2021 guidelines.", "effectiveness": "Each 1 mmol/L LDL reduction cuts major vascular events by approximately 22% per year (CTT Collaboration 2010)" },
+    { "name": "ACE inhibitor or ARB (e.g., ramipril 2.5-10 mg daily)", "description": "Reduces LV afterload, limits adverse remodeling, and prevents progression to heart failure. Started within 24-48 hours of STEMI when hemodynamically stable, mandatory when LVEF ≤40%.", "effectiveness": "SAVE, AIRE, TRACE trials collectively showed 20-26% reduction in mortality when started post-MI; benefit greatest with reduced EF" },
+    { "name": "Beta-blocker (metoprolol succinate 25-200 mg daily)", "description": "Reduces heart rate, wall stress, and myocardial oxygen demand; suppresses post-MI ventricular arrhythmias; reduces sudden cardiac death risk. Commenced orally when hemodynamically stable, not IV-routinely in acute phase per current guidelines.", "effectiveness": "Meta-analysis of 24 trials shows approximately 23% reduction in mortality when started early post-MI; greatest benefit in those with reduced EF" },
+    { "name": "Eplerenone (25-50 mg daily)", "description": "Selective mineralocorticoid receptor antagonist added when LVEF ≤40% with heart failure symptoms or diabetes. Reduces aldosterone-driven myocardial fibrosis and sudden death.", "effectiveness": "EPHESUS trial: eplerenone vs placebo reduced all-cause mortality by 15% (14.4% vs 16.7%, p=0.008) at 16 months post-MI with reduced EF" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Primary Percutaneous Coronary Intervention (PCI)", "description": "Coronary angiography with balloon angioplasty and drug-eluting stent implantation in the culprit artery. Performed under local anesthesia via radial artery access in 30-60 minutes. The preferred reperfusion strategy for STEMI when door-to-balloon time ≤90 min.", "successRate": "TIMI 3 flow (normal perfusion) restored in >90% of cases; in-hospital mortality for primary PCI STEMI approximately 4-6% in registries, vs 8-12% without reperfusion" },
+    { "name": "Coronary Artery Bypass Grafting (CABG)", "description": "Surgical revascularisation with internal mammary artery and saphenous vein grafts. Preferred over PCI in acute MI complicated by left main or 3-vessel disease, mechanical complications (papillary muscle rupture, VSD), or failed PCI.", "successRate": "30-day mortality 3-5% for elective CABG; higher in emergent post-MI setting. 10-year patency of left internal mammary artery graft >90%" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Cardiac rehabilitation exercise training", "description": "Supervised progressive aerobic exercise begun 4-6 weeks post-MI reduces recurrent MI risk, improves exercise capacity, and reduces cardiac mortality by approximately 26% in meta-analyses (Taylor et al. Cochrane 2004, PMID 15266516). Minimum 36 sessions recommended by ACC/AHA." },
+    { "name": "Mediterranean diet", "description": "Post-MI adoption of a Mediterranean dietary pattern (olive oil, fish, vegetables, legumes, nuts) reduces recurrent cardiovascular events. PREDIMED trial (PMID 23432189) showed a 30% relative risk reduction in major cardiovascular events versus low-fat control." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "percutaneous-coronary-intervention",
+    "coronary-artery-bypass-grafting",
+    "thrombolysis-therapy",
+    "cardiac-rehabilitation"
+  ],
+
+  "whySeeSpecialist": "An interventional cardiologist must be involved immediately for STEMI to perform primary PCI within the 90-minute window. After discharge, a cardiologist manages dual antiplatelet therapy duration, medication titration, and surveillance imaging for LV function, rhythm, and recurrent ischemia.",
+  "doctorSelectionGuide": "Choose a board-certified cardiologist or interventional cardiologist affiliated with a hospital that performs >200 primary PCIs per year and has 24/7 cath-lab availability. For post-MI care, heart failure-trained cardiologists at ACC Heart Failure Accredited centres provide the highest level of evidence-based follow-up.",
+
+  "hospitalCriteria": [
+    "24/7 primary PCI capability with door-to-balloon time ≤90 minutes (ACC/AHA benchmark)",
+    "Cardiac intensive care unit with continuous ECG monitoring and defibrillator availability",
+    "Cardiothoracic surgery available on site or within 30-minute transfer for mechanical complications",
+    "Echocardiography available 24/7 for bedside assessment",
+    "Cardiac rehabilitation programme commencing inpatient or within 6 weeks of discharge"
+  ],
+  "keyFacilities": [
+    "Tertiary cardiac centres with high-volume PCI programmes",
+    "ACC Chest Pain Centre Accredited hospitals",
+    "Heart Failure Accredited centres for post-MI management",
+    "Cardiac rehabilitation units"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Control blood pressure to below 130/80 mmHg using lifestyle and medication; each 10 mmHg systolic reduction cuts coronary events by approximately 20%.",
+    "Achieve LDL cholesterol below 2.6 mmol/L for primary prevention and below 1.4 mmol/L for those with existing coronary artery disease using statins.",
+    "Stop smoking: risk of MI halves within one year of cessation and approaches that of a non-smoker by 5 years.",
+    "Manage type 2 diabetes with a target HbA1c guided by cardiovascular risk; GLP-1 receptor agonists (semaglutide, liraglutide) and SGLT2 inhibitors reduce MACE in high-risk patients.",
+    "Exercise at least 150 minutes of moderate-intensity aerobic activity per week; sedentary adults who begin exercise reduce coronary event risk by approximately 30%.",
+    "Maintain a heart-healthy diet high in vegetables, whole grains, fish, and unsaturated fats; limit ultra-processed foods, saturated fat, and excess sodium."
+  ],
+
+  "lifestyleModifications": [
+    "Adhere to all prescribed medications (aspirin, statin, beta-blocker, ACE inhibitor, P2Y12 inhibitor) without interruption; premature DAPT cessation doubles stent thrombosis risk.",
+    "Enroll in supervised cardiac rehabilitation within 6 weeks of discharge and complete all recommended sessions.",
+    "Achieve or maintain healthy weight (BMI 20-25); even 5-10% weight loss in overweight individuals reduces blood pressure and improves lipid profile.",
+    "Limit alcohol to no more than 14 units per week; heavy drinking elevates triglycerides and blood pressure.",
+    "Manage psychological stress through recognised programmes; depression affects 20-30% of post-MI patients and independently doubles recurrent event risk.",
+    "Attend regular cardiology follow-up at 4-6 weeks, 3-6 months, and annually; ensure repeat echocardiography to reassess LV function 4-6 weeks post-MI."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Oily fish (salmon, mackerel, sardines) 2+ times per week for omega-3 fatty acids and cardioprotective effect",
+      "Whole grains, legumes, and high-fibre carbohydrates to lower LDL and improve glycaemic control",
+      "Olive oil as the primary fat source; Mediterranean eating pattern reduces recurrent MI by ~30%",
+      "Fresh vegetables, fruit, and nuts for antioxidants and fibre; aim for 5+ portions of vegetables daily"
+    ],
+    "avoid": [
+      "Trans fats (partially hydrogenated oils in processed snacks and fast food) which raise LDL and lower HDL",
+      "High-sodium processed foods (>2.3 g sodium/day increases blood pressure and cardiovascular risk)",
+      "Excessive saturated fat (red processed meat, full-fat dairy >3-4 servings daily)",
+      "Added sugars and sugar-sweetened beverages linked to hypertriglyceridaemia and metabolic syndrome"
+    ]
+  },
+  "exerciseGuidelines": "After uncomplicated MI and PCI, light walking is encouraged from day 1. A formal exercise stress test or cardiopulmonary exercise test at 4-6 weeks guides rehabilitation intensity. Target 30-60 minutes of moderate aerobic exercise (brisk walking, cycling, swimming) on 5 days per week. Resistance training may be added after 4-6 weeks of aerobic rehabilitation. Avoid vigorous exertion for 4-6 weeks post-MI and contact sports until clearance from a cardiologist.",
+
+  "dailyManagement": [
+    "Take all prescribed medications at the same time each day; aspirin with food to reduce gastric irritation.",
+    "Monitor resting heart rate and blood pressure daily for the first month; target resting HR 55-65 bpm on beta-blocker, BP <130/80 mmHg.",
+    "Keep a symptom diary and report any recurrent chest pain, breathlessness at rest, ankle swelling, or unexplained fatigue immediately.",
+    "Attend cardiac rehabilitation sessions and complete the home exercise programme between supervised sessions.",
+    "Avoid driving for at least 4 weeks after STEMI; comply with local DVLA or DMV regulations, which vary by country and whether PCI was performed.",
+    "Manage diabetes and blood pressure with the target values agreed with the cardiologist."
+  ],
+
+  "prognosis": "Modern reperfusion has transformed survival: in-hospital mortality after STEMI with primary PCI is approximately 4-6% versus 10-14% with fibrinolysis alone and over 20% without reperfusion. One-year mortality for STEMI is approximately 8-10% including out-of-hospital deaths. NSTEMI 30-day mortality is lower (3-5%) but longer-term outcomes are similar to STEMI. Key predictors of poor prognosis are older age, anterior location, Killip class (Killip III-IV mortality 30-80%), LVEF below 40%, renal impairment, and delayed reperfusion. Patients with LVEF below 35% at 40 days who remain in NYHA class II-III despite optimal therapy benefit from ICD implantation, reducing sudden cardiac death by approximately 31% (MADIT-II, PMID 12124404). Full participation in cardiac rehabilitation reduces all-cause mortality by approximately 26% and cardiac mortality by 36% after MI.",
+
+  "recoveryTimeline": "Day 1-3: stabilisation in cardiac care unit, initiation of core medications, and graded mobilisation. Week 1-4: discharge planning, outpatient ECG and echocardiography, gentle walking programme. Week 4-6: cardiac rehabilitation commences, exercise stress testing, return-to-work assessment for non-manual jobs. Month 3-6: repeat echocardiography, optimise neurohormonal therapy, reassess LVEF for ICD/CRT eligibility. Month 12: review DAPT duration and long-term secondary prevention strategy.",
+
+  "complications": [
+    "Cardiogenic shock — systolic BP below 90 mmHg with signs of tissue hypoperfusion — occurs in 5-10% of STEMIs and carries 40-50% in-hospital mortality even with PCI; requires mechanical circulatory support consideration.",
+    "Ventricular fibrillation or tachycardia in the peri-infarct period: complicates up to 10% of acute STEMIs and is the dominant cause of pre-hospital cardiac arrest; risk declines sharply after 48 hours.",
+    "Heart failure with reduced ejection fraction: develops in 20-40% of patients within 30 days of large anterior MI; requires ACE inhibitor, beta-blocker, and diuretic titration and surveillance echocardiography.",
+    "Left ventricular thrombus: forms in 5-15% of anterior STEMIs with apical akinesis; anticoagulation with vitamin K antagonist for 3-6 months reduces stroke risk.",
+    "Mechanical complications (ventricular septal defect, free wall rupture, papillary muscle rupture): occur within 3-7 days of STEMI; surgical or device repair is required urgently; in-hospital mortality exceeds 40%.",
+    "Post-infarction pericarditis (Dressler syndrome): immune-mediated pericarditis 1-4 weeks post-MI presenting with pleuritic chest pain and fever; managed with aspirin, NSAIDs, and if severe, colchicine."
+  ],
+
+  "supportResources": [
+    { "name": "American Heart Association — Heart Attack Support", "url": "https://www.heart.org/en/health-topics/heart-attack", "description": "Patient guides on symptoms, treatment, recovery, and medication adherence after heart attack." },
+    { "name": "British Heart Foundation", "url": "https://www.bhf.org.uk/heart-matters-magazine/medical/heart-attack", "description": "UK cardiac charity offering rehabilitation resources, peer support, and nurse helpline (0300 330 3311)." },
+    { "name": "ACC CardioSmart — Heart Attack Patient Resources", "url": "https://www.cardiosmart.org/topics/heart-attack", "description": "Patient education from the American College of Cardiology including shared decision-making tools for DAPT and secondary prevention." },
+    { "name": "National Heart, Lung, and Blood Institute — Heart Attack", "url": "https://www.nhlbi.nih.gov/health-topics/heart-attack", "description": "US government plain-language guide covering warning signs, risk factor management, and living after MI." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "angina-pectoris-unspecified-i209", "name": "Angina Pectoris", "keyDifference": "Stable angina produces chest discomfort only on exertion that resolves within 5-10 minutes at rest or with nitrates; troponin remains normal, confirming no myocardial necrosis. Acute MI causes sustained pain lasting more than 20 minutes with troponin rise and ECG changes reflecting irreversible cell death." },
+    { "slug": "acute-pericarditis-unspecified-i309", "name": "Acute Pericarditis", "keyDifference": "Pericarditis causes sharp, pleuritic chest pain that worsens on lying flat and improves leaning forward. ECG shows diffuse saddle-shaped ST elevation in multiple leads with PR depression, not the focal coronary-territory pattern of MI. Troponin may be mildly elevated but echocardiography shows pericardial effusion rather than wall-motion abnormality." },
+    { "slug": "thoracic-aortic-dissection", "name": "Thoracic Aortic Dissection", "keyDifference": "Aortic dissection presents with tearing or ripping chest-back pain of maximal severity at onset, unequal arm blood pressures, and a widened mediastinum on chest X-ray. Thrombolysis given for presumed MI can be fatal in dissection; CT angiography or transesophageal echocardiography must exclude dissection before fibrinolysis in ambiguous cases." },
+    { "slug": "acute-pulmonary-edema-j810", "name": "Acute Pulmonary Edema", "keyDifference": "Pulmonary edema presents with severe breathlessness and hypoxia but may have little chest pain; it can be both a presentation and a complication of large MI. The distinction requires urgent ECG and troponin to determine whether pulmonary edema is the result of acute LV failure from MI or has a non-ischemic cause such as hypertensive crisis." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" },
+    { "slug": "heart-failure", "name": "Heart Failure" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "angina-pectoris-unspecified-i209", "name": "Angina Pectoris", "relevance": "Chronic stable angina represents the symptomatic manifestation of coronary artery disease — the same atherosclerotic substrate that precipitates MI when a plaque ruptures." },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease", "relevance": "CAD is the underlying pathology in over 70% of acute MIs; identifying and managing CAD determines long-term recurrence risk." },
+    { "slug": "heart-failure", "name": "Heart Failure", "relevance": "Large MI reducing LVEF below 40% is the most common cause of new-onset heart failure with reduced ejection fraction in developed countries." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "relevance": "AF complicates 10-20% of acute MIs and increases in-hospital stroke risk and mortality; new-onset AF post-MI triggers anticoagulation evaluation." },
+    { "slug": "acute-and-subacute-infective-endocarditis-i330", "name": "Infective Endocarditis", "relevance": "Coronary embolism from vegetations in infective endocarditis is a recognised cause of acute MI in younger patients without conventional atherosclerotic risk factors." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What are the first signs of a heart attack?",
+      "answer": "The first signs are usually central chest pressure or squeezing pain lasting more than 20 minutes, often radiating to the left arm or jaw, with sweating, nausea, and breathlessness. Women and diabetics more often present with atypical symptoms such as fatigue, jaw pain, or epigastric discomfort without classic chest pain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a heart attack diagnosed?",
+      "answer": "Diagnosis requires a 12-lead ECG (obtained within 10 minutes of arrival) showing ST elevation or depression, plus a rise and fall in high-sensitivity cardiac troponin above the 99th-percentile reference limit. Echocardiography identifies wall-motion abnormality. Coronary angiography visualises the blocked artery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between a STEMI and NSTEMI?",
+      "answer": "STEMI (ST-elevation MI) results from complete coronary artery occlusion with full-thickness muscle ischaemia and needs immediate reperfusion within 90 minutes. NSTEMI (non-ST-elevation MI) involves partial occlusion; troponin rises but ST elevation is absent. NSTEMI is treated with antiplatelet and anticoagulant drugs and angiography within 24-72 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How quickly must a heart attack be treated?",
+      "answer": "For STEMI, each 30-minute delay in reperfusion increases 1-year mortality by approximately 7.5%. Guidelines mandate primary PCI within 90 minutes of first medical contact. Thrombolysis must be given within 30 minutes when PCI is unavailable within 120 minutes of STEMI diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a heart attack be treated at home?",
+      "answer": "No. Acute MI requires immediate emergency care. Calling emergency services rather than self-transport halves time-to-treatment. Aspirin 300 mg chewed while awaiting the ambulance reduces clot burden. Bystander CPR and AED defibrillation save lives when cardiac arrest occurs before hospital arrival.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What medications are given after a heart attack?",
+      "answer": "Standard post-MI therapy includes aspirin (75-100 mg daily), a P2Y12 inhibitor (ticagrelor or clopidogrel) for 12 months, a high-intensity statin, an ACE inhibitor or ARB, and a beta-blocker. An aldosterone antagonist is added when the ejection fraction is at or below 40%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does recovery from a heart attack take?",
+      "answer": "Most patients are discharged 3-5 days after uncomplicated PCI. Light activity resumes within 1-2 weeks; cardiac rehabilitation begins at 4-6 weeks. Return to non-manual work is typical at 4-6 weeks and manual work at 6-12 weeks. Full cardiovascular optimisation takes 6-12 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you have a heart attack without chest pain?",
+      "answer": "Yes. About 20% of MIs are silent or present with atypical symptoms only. Diabetics, women, and elderly patients most often experience fatigue, shortness of breath, jaw pain, or nausea without classic chest pressure. Silent MI carries the same mortality risk as symptomatic MI if untreated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes a heart attack?",
+      "answer": "Most heart attacks result from rupture of an atherosclerotic plaque in a coronary artery, triggering a blood clot that blocks the vessel. Less common causes include coronary artery spasm, embolism from the heart, spontaneous coronary artery dissection, and supply-demand mismatch from severe anemia or arrhythmia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is heart attack the same as cardiac arrest?",
+      "answer": "No. A heart attack is an ischaemic event from blocked coronary blood flow; the heart continues to beat, but muscle is dying. Cardiac arrest is when the heart stops pumping entirely, usually from ventricular fibrillation. A heart attack can trigger cardiac arrest, but cardiac arrest has many other causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much of the heart muscle is damaged in a typical heart attack?",
+      "answer": "Infarct size varies from a small subendocardial scar to full-thickness necrosis of an entire wall segment. Cardiac MRI shows median infarct size of 14-18% of LV mass after STEMI. Anterior STEMI involving the LAD artery typically produces larger infarcts than inferior MI from the right coronary artery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate after a heart attack?",
+      "answer": "In-hospital survival after STEMI treated with primary PCI is approximately 94-96%. One-year survival is approximately 90-92% for all MI types. Out-of-hospital cardiac arrest with ventricular fibrillation carries a survival rate of 8-10% without immediate bystander CPR, rising to 30-40% with bystander CPR and defibrillation within 5 minutes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you exercise after a heart attack?",
+      "answer": "Yes, exercise is strongly recommended. Supervised cardiac rehabilitation starting 4-6 weeks post-MI reduces all-cause mortality by approximately 26% and rehospitalisation by 28% (Cochrane 2011). Target 150 minutes of moderate aerobic activity weekly once cleared by a cardiologist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is troponin and why is it tested in suspected heart attack?",
+      "answer": "Troponin (cTnI or cTnT) is a cardiac-specific structural protein released into the bloodstream when heart muscle cells die. High-sensitivity assays detect troponin within 1-2 hours of symptom onset. A rise above the sex-specific 99th-percentile URL with a compatible clinical story confirms myocardial injury consistent with acute MI.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does stress cause heart attacks?",
+      "answer": "Acute psychological stress can trigger MI through sympathetic activation, coronary spasm, and platelet aggregation. Takotsubo syndrome is an MI-mimic triggered almost exclusively by emotional or physical stress. Chronic psychosocial stress approximately doubles long-term CAD risk, though the absolute magnitude is smaller than smoking or hypertension.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Heart attack",
+  "regionalNames": [
+    { "name": "Dil ka daura", "region": "India", "language": "Hindi" },
+    { "name": "Infarto de miocardio", "region": "Spain / Latin America", "language": "Spanish" },
+    { "name": "Infarctus du myocarde", "region": "France / Francophone Africa", "language": "French" }
+  ],
+  "searchTags": [
+    "heart attack",
+    "myocardial infarction",
+    "STEMI",
+    "NSTEMI",
+    "heart attack symptoms",
+    "chest pain emergency",
+    "troponin elevated",
+    "primary PCI",
+    "coronary thrombosis",
+    "cardiac arrest",
+    "heart attack treatment",
+    "heart attack recovery",
+    "silent heart attack",
+    "heart attack women symptoms",
+    "acute coronary syndrome"
+  ],
+  "symptomKeywords": [
+    "crushing chest pain",
+    "chest pressure radiating to arm",
+    "sweating and chest pain",
+    "jaw pain and nausea",
+    "shortness of breath at rest",
+    "heart attack symptoms women",
+    "severe chest tightness",
+    "pale sweaty chest pain"
+  ],
+
+  "metaTitle": "Heart Attack: Symptoms & Treatment | aihealz",
+  "metaDescription": "Acute myocardial infarction: a heart attack from blocked coronary blood flow. Symptoms, ECG and troponin diagnosis, and emergency treatment reviewed.",
+
+  "keywords": [
+    "acute myocardial infarction",
+    "heart attack",
+    "STEMI treatment",
+    "NSTEMI diagnosis",
+    "heart attack symptoms",
+    "primary PCI",
+    "troponin heart attack",
+    "heart attack recovery",
+    "heart attack causes",
+    "secondary prevention after MI",
+    "cardiac rehabilitation",
+    "heart attack risk factors"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Virani SS, Alonso A, Aparicio HJ, et al. 2021. Heart Disease and Stroke Statistics — 2021 Update: A Report From the American Heart Association. Circulation 143(8):e254-e743.", "url": "https://pubmed.ncbi.nlm.nih.gov/33501848/", "accessedDate": "2026-05-14" },
+    { "title": "Thygesen K, Alpert JS, Jaffe AS, et al. 2018. Fourth Universal Definition of Myocardial Infarction. Circulation 138(20):e618-e651.", "url": "https://pubmed.ncbi.nlm.nih.gov/30571511/", "accessedDate": "2026-05-14" },
+    { "title": "Ibanez B, James S, Agewall S, et al. 2018. 2017 ESC Guidelines for the management of acute myocardial infarction in patients presenting with ST-segment elevation. Eur Heart J 39(2):119-177.", "url": "https://pubmed.ncbi.nlm.nih.gov/28886621/", "accessedDate": "2026-05-14" },
+    { "title": "Wallentin L, Becker RC, Budaj A, et al. 2009. Ticagrelor versus clopidogrel in patients with acute coronary syndromes (PLATO). N Engl J Med 361(11):1045-57.", "url": "https://pubmed.ncbi.nlm.nih.gov/19717846/", "accessedDate": "2026-05-14" },
+    { "title": "Moss AJ, Zareba W, Hall WJ, et al. 2002. Prophylactic implantation of a defibrillator in patients with myocardial infarction and reduced ejection fraction (MADIT-II). N Engl J Med 346(12):877-83.", "url": "https://pubmed.ncbi.nlm.nih.gov/11907286/", "accessedDate": "2026-05-14" },
+    { "title": "Cholesterol Treatment Trialists' (CTT) Collaboration. 2010. Efficacy and safety of more intensive lowering of LDL cholesterol. Lancet 376(9753):1670-81.", "url": "https://pubmed.ncbi.nlm.nih.gov/21067804/", "accessedDate": "2026-05-14" },
+    { "title": "ISIS-2 (Second International Study of Infarct Survival) Collaborative Group. 1988. Randomised trial of intravenous streptokinase, oral aspirin, both, or neither among 17,187 cases of suspected acute myocardial infarction. Lancet 2(8607):349-60.", "url": "https://pubmed.ncbi.nlm.nih.gov/2899772/", "accessedDate": "2026-05-14" },
+    { "title": "ACC/AHA 2023 Guideline for the Diagnosis and Management of Acute Coronary Syndromes. American College of Cardiology Foundation.", "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.07.1083", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

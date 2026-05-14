@@ -1,0 +1,376 @@
+{
+  "_meta": {
+    "slug": "abdominal-aortic-aneurysm-ruptured-i713",
+    "tier": 1,
+    "headTerm": "ruptured abdominal aortic aneurysm",
+    "longTailKeywords": [
+      "ruptured abdominal aortic aneurysm symptoms",
+      "ruptured aortic aneurysm survival rate",
+      "ruptured AAA treatment",
+      "abdominal aortic aneurysm rupture signs",
+      "ruptured AAA surgery",
+      "ruptured aorta prognosis",
+      "EVAR vs open repair ruptured AAA",
+      "aortic aneurysm rupture emergency"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Ruptured Abdominal Aortic Aneurysm: Symptoms, Causes, and Emergency Treatment",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "A ruptured abdominal aortic aneurysm (AAA) occurs when the dilated infrarenal aorta — defined as a diameter greater than 3 cm — tears through its wall, causing life-threatening hemorrhage into the retroperitoneum or peritoneal cavity. Ruptured AAA is one of the most lethal vascular emergencies: population-based mortality including pre-hospital deaths reaches 80-90%, and even among patients who reach a surgical center, operative mortality is 40-50% for open repair and 20-35% for endovascular repair. In the United Kingdom, ruptured AAA causes approximately 3,000 deaths per year; in the United States, roughly 10,000-15,000 annually. Immediate vascular surgery is the only definitive treatment, and survival depends almost entirely on the speed from symptom onset to operating theatre.",
+
+  "keyStats": {
+    "prevalence": "Intact AAA prevalence 4-8% in men over 65; rupture occurs in 5-10 per 100,000 per year in Western populations (UK NHS Screening Programme data)",
+    "demographics": "Men represent 75-80% of ruptured AAA cases; average age 70-75 years; smokers and those with family history of AAA are at disproportionate risk",
+    "avgAge": "Mean age at rupture approximately 71-76 years; rare before age 55 in the absence of connective tissue disorders",
+    "globalCases": "Estimated 200,000 deaths attributable to aortic aneurysm rupture per year globally (GBD 2019)"
+  },
+
+  "definition": "Ruptured abdominal aortic aneurysm (ICD-10: I71.3) is a catastrophic complication of an infrarenal aortic aneurysm in which the vessel wall fails under hemodynamic pressure, allowing blood to escape into surrounding tissues. An abdominal aortic aneurysm is defined as permanent focal dilatation of the aorta to at least 1.5 times its normal diameter, or an absolute transverse diameter exceeding 3 cm. Most ruptures involve the infrarenal aorta, from the renal arteries to the aortic bifurcation. Retroperitoneal rupture — containment by the retroperitoneal fascia — allows a brief window for resuscitation and surgical intervention; free rupture into the peritoneal cavity causes rapid exsanguination and cardiac arrest within minutes. The annual rupture risk for an intact aneurysm correlates strongly with size: below 5 cm the risk is approximately 0.5-1% per year; at 6-7 cm it reaches 10-15%; above 7 cm, rupture risk exceeds 30-35% per year. Aortic dissection and traumatic aortic injury must be distinguished. Management requires immediate vascular surgery — either emergency endovascular aneurysm repair (EVAR) or open surgical repair — and is the domain of vascular surgery, emergency medicine, and critical care in a trauma-capable center.",
+
+  "typesClassification": [
+    { "type": "Retroperitoneal rupture", "description": "Blood tracks posteriorly into the retroperitoneal space. The retroperitoneal fascia provides temporary tamponade that can maintain a brief period of hemodynamic stability ('contained rupture'), allowing time for imaging and transfer to an operating theatre. This pattern accounts for the majority of patients who survive to reach hospital." },
+    { "type": "Free intraperitoneal rupture", "description": "Blood pours directly into the peritoneal cavity. Rapid exsanguination causes hemodynamic collapse and cardiac arrest within minutes. Very few patients with free rupture survive to reach surgery; those who do have extremely high operative mortality." },
+    { "type": "Aortocaval fistula rupture", "description": "Uncommon variant where the aneurysm ruptures into the adjacent inferior vena cava. Presents with a continuous machinery murmur, high-output cardiac failure, and lower extremity venous hypertension rather than classic hypotensive shock. Requires emergency repair with venous reconstruction." },
+    { "type": "Aortoenteric fistula rupture", "description": "Rare primary fistulation of an AAA into the duodenum or other bowel, causing massive gastrointestinal hemorrhage, hematemesis, and melena. Must be distinguished from secondary aortoenteric fistula after prior aortic graft." }
+  ],
+
+  "primarySymptoms": [
+    "Sudden-onset severe abdominal, flank, or back pain — typically described as tearing, ripping, or boring in character, often maximal at onset, localized to the umbilical region, flanks, or lower back.",
+    "Hypotension and hemodynamic instability — the triad of abdominal pain, hypotension, and a pulsatile epigastric mass is present in only 50% of patients but is the classical diagnostic triad for ruptured AAA.",
+    "Collapse or syncope — sudden loss of consciousness caused by acute hemorrhagic shock when blood loss exceeds compensatory mechanisms.",
+    "A palpable pulsatile midline abdominal mass — detectable on examination in up to 60% of cases, though obesity limits sensitivity; sensitivity of clinical examination alone is insufficient to rule out the diagnosis.",
+    "Radiation of pain to the groin or thighs from retroperitoneal hematoma dissecting inferiorly, mimicking renal colic or musculoskeletal pain and causing frequent misdiagnosis.",
+    "Tachycardia (heart rate above 100 bpm) with pallor, sweating, and cool clammy extremities from sympathetic activation in haemorrhagic shock.",
+    "Distended, tender abdomen — particularly in free intraperitoneal rupture; peritonism (guarding and rebound tenderness) develops as blood irritates the peritoneum.",
+    "Lower limb ischaemia — loss of femoral or distal pulses from aortic occlusion by thrombus or hypoperfusion during shock."
+  ],
+
+  "earlyWarningSigns": [
+    "Sudden severe back or flank pain in an older male smoker — even without hypotension, this presentation demands urgent ultrasound or CT to exclude ruptured AAA before attributing pain to musculoskeletal causes.",
+    "Known AAA with new or worsening abdominal pain — any change in pain character in a patient with a documented aneurysm is a rupture alert until proven otherwise.",
+    "Unexplained syncope in an older adult with known or suspected AAA — vasovagal syncope and rupture can present identically; bedside ultrasound takes 2 minutes to check aortic diameter at the bedside.",
+    "Abdominal pulsatile mass discovered incidentally on imaging in an asymptomatic patient — this is an intact AAA requiring elective repair planning, but its presence means rupture must be excluded if abdominal pain develops."
+  ],
+
+  "emergencySigns": [
+    "Tearing abdominal or back pain with systolic blood pressure below 90 mmHg — hemodynamic instability with aortic pain demands immediate vascular surgery activation and transfer to the operating theatre without delay for CT if the patient is in extremis.",
+    "Cardiac arrest in a patient with known or suspected aortic aneurysm — cardiopulmonary resuscitation during aortic rupture rarely succeeds without emergency aortic clamping; immediate surgical team activation is the only life-saving measure.",
+    "Rapidly deteriorating conscious level with abdominal rigidity — free intraperitoneal rupture causing exsanguination; requires immediate activation of a massive transfusion protocol and surgical emergency.",
+    "Loss of femoral pulses with abdominal pain — suggests aortic occlusion from thrombosis or hypoperfusion, signaling impending or established rupture; requires immediate vascular assessment."
+  ],
+
+  "causes": [
+    {
+      "cause": "Atherosclerosis and progressive aortic wall degeneration",
+      "description": "The primary underlying cause. Atherosclerosis destroys the elastic lamina of the aortic media, reducing the wall's tensile strength. Proteolytic enzymes — matrix metalloproteinases (MMPs) — degrade elastin and collagen, causing progressive aortic dilation. Once the aneurysm exceeds a critical diameter, wall stress rises exponentially according to the law of Laplace, reaching the point of rupture."
+    },
+    {
+      "cause": "Tobacco smoking",
+      "description": "The single most modifiable risk factor for both AAA formation and rupture. Smokers have approximately 4-7 times the risk of developing AAA compared with non-smokers; the risk increases with pack-year exposure. Nicotine and oxidative stress from tobacco combustion accelerate MMP activity and proteolytic aortic wall breakdown."
+    },
+    {
+      "cause": "Hypertension",
+      "description": "Chronic hypertension increases transmural aortic wall pressure and the mechanical stress on an already weakened aneurysm wall. Each 10 mmHg rise in systolic blood pressure is associated with a meaningful increase in rupture risk. Optimal blood pressure control is the most effective medical strategy to reduce rupture risk in intact AAA."
+    },
+    {
+      "cause": "Genetic predisposition and family history",
+      "description": "First-degree relatives of AAA patients have a 20-30% lifetime risk of AAA. Genetic variants in genes encoding elastin, collagen type III (COL3A1), and MMP regulators contribute. Connective tissue disorders including Marfan syndrome and Loeys-Dietz syndrome dramatically increase risk and cause aneurysms at younger ages and smaller diameters."
+    },
+    {
+      "cause": "Male sex and older age",
+      "description": "Men are 4-6 times more likely to develop AAA than women. The aortic wall in men has lower collagen content per unit area. Female sex hormones appear protective. Age is a co-risk factor as decades of hemodynamic stress compound proteolytic wall degradation; incidence rises steeply above age 60."
+    },
+    {
+      "cause": "Large aneurysm diameter and rapid expansion rate",
+      "description": "Diameter is the strongest predictor of rupture. Aneurysms growing more than 1 cm per year or reaching 5.5 cm in men (5 cm in women) have sufficient rupture risk to justify elective repair. Once ruptured, the underlying size and rate of growth are the proximate mechanical causes."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Tobacco smoking", "category": "modifiable", "description": "Current smoking raises the risk of AAA formation 4-7 fold and the risk of rupture independently. Former smokers have intermediate risk. Cessation at any point reduces progression and rupture risk, with risk declining toward that of non-smokers after 10 years." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men account for 75-80% of ruptures. The male-to-female risk ratio is approximately 4:1 for AAA formation and rupture. Women with AAA rupture at smaller diameters, suggesting that sex-specific criteria should guide elective repair thresholds — the threshold for women is currently set at 5 cm vs 5.5 cm in men." },
+    { "factor": "Age over 65", "category": "non-modifiable", "description": "AAA prevalence increases exponentially with age. Screening programs in the UK, US, and Australia target men aged 65 or above based on peak incidence in this decade." },
+    { "factor": "Hypertension", "category": "modifiable", "description": "Present in 50-60% of AAA patients. Systolic hypertension increases aortic wall stress, accelerating both growth and rupture risk. Aggressive antihypertensive management — targeting systolic BP below 130 mmHg — is the principal medical intervention to slow aneurysm progression." },
+    { "factor": "Family history of AAA", "category": "genetic", "description": "First-degree relatives, especially male siblings, of AAA patients have an approximately 25-30% lifetime risk. Guidelines recommend one-time ultrasound screening of male siblings of a known AAA patient from age 60." },
+    { "factor": "Chronic obstructive pulmonary disease (COPD)", "category": "modifiable", "description": "COPD is an independent risk factor for AAA, possibly through shared inflammatory and proteolytic pathways from tobacco smoke and systemic inflammation. Approximately 50% of AAA patients have coexistent COPD." },
+    { "factor": "Connective tissue disorders (Marfan syndrome, Ehlers-Danlos syndrome)", "category": "genetic", "description": "These disorders reduce structural integrity of the aortic wall through defective fibrillin or collagen. Patients with Marfan syndrome develop ascending aortic aneurysms predominantly but can have infrarenal disease; Ehlers-Danlos type IV (vascular) has the highest arterial rupture risk." }
+  ],
+
+  "affectedDemographics": [
+    "Men aged 65-80 years represent the primary affected group; peak incidence of rupture at ages 71-76.",
+    "Women develop AAA at an older age and smaller initial size but have disproportionately high rupture risk at smaller diameters — guidelines now recommend repair at 5 cm (vs 5.5 cm in men) in women.",
+    "Smokers of either sex have substantially elevated lifetime risk; AAA is one of the most smoking-attributable non-cancer diseases.",
+    "Patients with a family history of AAA, particularly male siblings of affected individuals, are at significantly elevated risk from age 60 onwards."
+  ],
+
+  "diagnosisOverview": "In the emergency setting, diagnosis must be rapid and must not delay surgical treatment in a hemodynamically unstable patient. The classic triad — sudden severe abdominal or back pain, a pulsatile epigastric mass, and hypotension — has a diagnostic specificity above 90% but is present in only 50% of cases, meaning a substantial proportion are missed at first clinical assessment. Bedside point-of-care ultrasound by emergency or vascular physicians is the fastest initial test: it takes under 2 minutes to confirm an aortic diameter above 3 cm and the presence of retroperitoneal haematoma. A positive bedside ultrasound in a hemodynamically unstable patient should trigger immediate transfer to the operating theatre without waiting for CT. In hemodynamically stable patients, CT angiography of the abdomen and pelvis is the definitive investigation, providing anatomy for operative planning including neck length, iliac diameters, and the relationship to renal arteries that determines EVAR eligibility. The differential diagnosis includes acute pancreatitis, renal colic, mesenteric ischemia, aortic dissection, and musculoskeletal back pain — all of which can mimic the presentation. In elderly men with sudden back or abdominal pain, the default position should be to exclude ruptured AAA before attributing pain to other causes. Routine investigations (full blood count, cross-match for at least 10 units of packed red cells, coagulation screen, lactate, creatinine, ECG) run simultaneously with imaging without delaying surgical preparation.",
+
+  "diagnosticTests": [
+    { "test": "Bedside point-of-care ultrasound (eFAST/POCUS)", "purpose": "Immediate confirmation of aortic dilation and retroperitoneal haematoma in the emergency department; takes under 2 minutes at the bedside", "whatToExpect": "A small ultrasound probe is placed over the abdomen with gel. The clinician measures aortic diameter in less than two minutes. If the aorta measures over 3 cm and the patient is haemodynamically compromised, this is enough to trigger immediate surgical transfer." },
+    { "test": "CT angiography of the abdomen and pelvis (CTA)", "purpose": "Definitive imaging in stable patients; characterizes rupture pattern, aneurysm neck dimensions, iliac anatomy, and EVAR eligibility; guides operative planning", "whatToExpect": "A 5-10 minute CT scan with intravenous contrast. The patient must be stable enough to travel to the scanner and remain still. Provides precise measurements for surgical or endovascular planning. Performed only in hemodynamically stable patients — unstable patients go directly to surgery." },
+    { "test": "Blood group and cross-match", "purpose": "Preparation for massive transfusion; typically 6-10 units of packed red cells, fresh frozen plasma, and platelets are cross-matched before surgery", "whatToExpect": "A large-bore venous blood draw in the emergency department while initial assessment is underway. Results in 20-30 minutes for emergency cross-match. Massive transfusion protocol is activated simultaneously." },
+    { "test": "Full blood count, coagulation screen, urea and electrolytes, lactate", "purpose": "Baseline assessment of hemorrhagic shock severity, coagulopathy from massive blood loss, and renal function; guides resuscitation and predicts operative risk", "whatToExpect": "Multiple tubes drawn from a large-bore IV cannula. Results in 30-60 minutes. Lactate above 4 mmol/L indicates severe tissue hypoperfusion." },
+    { "test": "Electrocardiogram (ECG)", "purpose": "Exclude acute myocardial infarction (which can present with abdominal pain) and detect pre-existing cardiac arrhythmia or ischaemia relevant to operative risk", "whatToExpect": "Immediate bedside ECG taking 2 minutes. Does not delay resuscitation or surgical transfer in unstable patients." }
+  ],
+
+  "treatmentOverview": "Ruptured AAA is a vascular surgical emergency with a narrow treatment window. The only life-saving intervention is aortic repair to stop the hemorrhage, and this must be accomplished within the shortest possible time from symptom onset. Two surgical strategies are available: emergency endovascular aneurysm repair (EVAR) and open surgical repair. Emergency EVAR — deployment of a stent-graft through femoral artery access to exclude the aneurysm sac — has become the preferred approach at centers with 24-hour endovascular capability when the anatomy is suitable, based on the AJAX, IMPROVE, and ECAR randomized trials showing 30-day mortality of 24-42% for EVAR vs 30-50% for open repair in ruptured AAA, with faster recovery and shorter ICU stay in EVAR survivors. Open repair via laparotomy with aortic cross-clamping remains the standard at centers without immediate EVAR capability and for patients with unfavorable anatomy (short neck, tortuous iliac vessels). Resuscitation during the perioperative period follows the permissive hypotension strategy — targeting systolic BP 50-80 mmHg in the emergency phase to prevent clot displacement from the retroperitoneal tamponade before aortic control is achieved, while simultaneously initiating 1:1:1 ratio packed red cell/fresh frozen plasma/platelet resuscitation under a massive transfusion protocol. Postoperative intensive care includes monitoring for abdominal compartment syndrome (bladder pressure monitoring, decompressive laparotomy if needed), acute kidney injury from renal ischemia, and spinal cord ischemia from iliac or lumbar artery occlusion. Elective repair of intact AAA at 5.5 cm (men) or 5 cm (women) prevents rupture: this remains the primary prevention strategy.",
+
+  "medicalTreatments": [
+    { "name": "Permissive hypotension resuscitation (target SBP 50-80 mmHg pre-aortic control)", "description": "Deliberate limitation of fluid resuscitation before surgical control of bleeding. Aggressive fluid loading raises blood pressure and dislodges the retroperitoneal clot maintaining tamponade, accelerating hemorrhage. Permissive hypotension preserves tamponade while the patient is moved to the operating theatre.", "effectiveness": "Associated with improved survival compared with aggressive crystalloid resuscitation in hemorrhagic shock with ongoing bleeding in trauma and vascular literature" },
+    { "name": "Massive transfusion protocol (MTP): 1:1:1 ratio of packed red cells, FFP, and platelets", "description": "Immediately activated on clinical suspicion of ruptured AAA. The 1:1:1 ratio of blood products prevents dilutional coagulopathy and maintains clot stability. Tranexamic acid (1 g IV within 3 hours of symptom onset) reduces fibrinolytic bleeding.", "effectiveness": "MTP implementation reduces 30-day mortality by approximately 20-30% compared with crystalloid-dominant resuscitation in hemorrhagic shock (PROPPR trial)" },
+    { "name": "Antihypertensive therapy (beta-blockers and ACE inhibitors) for intact AAA surveillance", "description": "For patients with known intact AAA not yet at repair threshold, beta-blockers (atenolol, propranolol) and ACE inhibitors slow aortic growth modestly and reduce rupture risk through blood pressure control. Statins are prescribed for cardiovascular risk reduction.", "effectiveness": "Beta-blockers reduce aortic growth rate by approximately 0.3-0.5 mm/year; no pharmacological agent eliminates rupture risk in a large aneurysm" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Emergency endovascular aneurysm repair (EVAR)", "description": "A stent-graft is delivered through the femoral arteries under fluoroscopic guidance and deployed to exclude the aneurysm sac from circulation. The procedure can be performed under local anaesthesia with sedation, reducing the physiological insult in critically ill patients. Requires suitable anatomy — adequate aortic neck length of at least 10-15 mm and iliac access.", "successRate": "30-day operative mortality 24-35% for ruptured AAA at high-volume centers; 30-day mortality advantage over open repair of approximately 10-15% in the IMPROVE trial; 30-day survival advantage maintained at 30 days" },
+    { "name": "Open surgical repair via laparotomy", "description": "A midline abdominal incision provides direct access to the aorta. The aorta is cross-clamped above the aneurysm neck to control bleeding; the aneurysm is opened, and a prosthetic graft (straight or bifurcated Dacron or ePTFE) is sutured in place. Standard when anatomy precludes EVAR or EVAR is unavailable.", "successRate": "30-day operative mortality 30-50% for ruptured AAA in population-based series; better longer-term durability than EVAR, with fewer secondary interventions at 5 years" },
+    { "name": "Aortic balloon occlusion (REBOA — Resuscitative Endovascular Balloon Occlusion of the Aorta)", "description": "A balloon catheter deployed through the femoral artery into the aorta above the aneurysm provides temporary hemorrhage control as a bridge to definitive repair. Used as a temporizing measure in patients in extremis while surgical preparation proceeds.", "successRate": "Mortality benefit in ruptured AAA not established in RCTs; used as a bridge device in extremis patients at centers with endovascular capability" }
+  ],
+
+  "alternativeTreatments": [],
+
+  "linkedTreatmentSlugs": [
+    "endovascular-aneurysm-repair",
+    "aortic-aneurysm-repair",
+    "aaa-screening"
+  ],
+
+  "whySeeSpecialist": "Ruptured AAA is treated by vascular surgeons and interventional vascular radiologists in hospitals with 24-hour endovascular capability. Any patient with suspected ruptured AAA should be taken to the nearest vascular surgical center, not the nearest emergency department without vascular surgery. Intact AAA surveillance and elective repair require a vascular surgeon experienced in both open and endovascular techniques.",
+  "doctorSelectionGuide": "For elective intact AAA, choose a vascular surgeon at a center performing more than 30 elective EVAR procedures per year — volume-outcome relationships are strong in aortic surgery. For emergency presentation, call for immediate transfer to the nearest 24-hour vascular surgery center with EVAR capability. Do not delay transport for imaging at a center without surgical facilities.",
+
+  "hospitalCriteria": [
+    "24-hour vascular surgery and endovascular repair capability",
+    "Immediate availability of CT angiography and hybrid operating theatre",
+    "Massive transfusion protocol and blood bank with 24-hour availability",
+    "Level-1 trauma-capable intensive care unit for postoperative care",
+    "Aortic stent-graft inventory (bifurcated aortic EVAR systems) available at all times"
+  ],
+  "keyFacilities": [
+    "Regional vascular surgery centers with hybrid catheterization-operating theaters",
+    "Level-1 trauma centers with 24-hour vascular surgical coverage",
+    "Academic medical centers with high-volume aortic surgery programs"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Participate in one-time abdominal aortic ultrasound screening at age 65 for all men — the UK NHS AAA Screening Programme and US USPSTF recommend this and have demonstrated 50% reduction in AAA-related mortality.",
+    "Stop smoking completely — tobacco cessation is the single most effective way to reduce aneurysm growth rate and overall cardiovascular mortality.",
+    "Control blood pressure aggressively — target systolic BP below 130 mmHg; even a 10 mmHg reduction in systolic pressure reduces rupture risk.",
+    "Screen first-degree male relatives of known AAA patients with one-time abdominal ultrasound from age 60.",
+    "Undertake regular moderate physical activity and maintain a healthy weight to reduce systemic cardiovascular risk and blood pressure load on the aortic wall."
+  ],
+
+  "lifestyleModifications": [
+    "Absolute tobacco cessation — the only modifiable factor with a direct dose-response relationship to AAA growth and rupture risk.",
+    "Home blood pressure monitoring twice daily; target systolic BP consistently below 130 mmHg with prescribed medications.",
+    "Attend all scheduled ultrasound surveillance appointments — aneurysm growth rate is unpredictable; missing a surveillance scan can mean a missed expansion that indicates early repair.",
+    "Report any new or worsening abdominal, flank, or back pain to emergency services immediately — do not manage at home while awaiting a routine appointment.",
+    "Take all prescribed cardiovascular medications: antihypertensives, statins, and antiplatelet agents as directed."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Low-sodium diet (<2 g/day) to optimize blood pressure management",
+      "Mediterranean diet — associated with reduced cardiovascular events and lower inflammatory markers",
+      "Adequate potassium intake from fruit and vegetables to support antihypertensive therapy",
+      "High-fiber diet to maintain bowel function and avoid straining that transiently raises abdominal pressure"
+    ],
+    "avoid": [
+      "High-sodium processed and canned foods that raise blood pressure",
+      "Excessive alcohol, which acutely raises blood pressure and chronically impairs vascular health",
+      "Tobacco in all forms — no safe threshold for AAA patients",
+      "Heavy straining during defecation (prevent with adequate dietary fiber) — Valsalva maneuver transiently increases aortic wall stress"
+    ]
+  },
+  "exerciseGuidelines": "For patients with intact AAA under surveillance, regular moderate aerobic exercise is recommended for general cardiovascular health — walking, swimming, cycling at moderate intensity. High-intensity isometric exercise (heavy weight lifting, straining) that markedly raises intra-abdominal pressure should be avoided in aneurysms above 4.5 cm. After successful EVAR or open repair, gradual return to light activity within 4-6 weeks; heavy lifting restricted for 3 months after open surgery.",
+
+  "dailyManagement": [
+    "Take antihypertensive and statin medications as prescribed daily without interruption.",
+    "Measure blood pressure at home each morning and evening; aim for consistent systolic readings below 130 mmHg.",
+    "Follow the surveillance imaging schedule provided by your vascular surgeon — ultrasound typically every 6 months for aneurysms 4-5 cm and every 3 months for aneurysms 5-5.5 cm.",
+    "Seek emergency care immediately for sudden severe back, flank, or abdominal pain — call emergency services and tell them your AAA diagnosis.",
+    "If you have had a successful repair, attend annual CT or duplex ultrasound surveillance for endoleak after EVAR or graft surveillance after open repair."
+  ],
+
+  "prognosis": "Ruptured AAA carries the highest perioperative mortality of any elective or emergency vascular condition. Overall population-based mortality — including pre-hospital deaths — is 80-90%. Of patients who reach an operating table alive, operative mortality for open repair is 40-50% and for EVAR is 25-35% at experienced centers. Survivors who leave hospital have reasonable longer-term outcomes: 5-year survival after successful open repair is approximately 60-70%, equivalent to an age-matched population. EVAR survivors have similar 5-year survival but require annual imaging surveillance and have a secondary intervention rate of 15-25% over 5 years. Predictors of death include older age, female sex, pre-operative hemodynamic instability (systolic BP below 80 mmHg), loss of consciousness before surgery, serum creatinine above 200 μmol/L, and free intraperitoneal rupture. Elective repair of intact AAA at the appropriate size threshold reduces mortality risk to below 1-2% with EVAR and 2-4% with open repair — demonstrating the transformative value of pre-rupture screening and intervention.",
+
+  "recoveryTimeline": "EVAR survivors are typically mobile within 1-2 days and discharged within 5-10 days after uncomplicated emergency repair. Open repair requires 7-14 days in hospital, including ICU and high-dependency care, with recovery to independent function over 6-12 weeks. Long-term annual CT surveillance is mandatory after EVAR to detect endoleaks.",
+
+  "complications": [
+    "Acute kidney injury from renal ischemia during aortic cross-clamping or contrast nephropathy — affects 20-40% of patients; requires ICU-level monitoring of fluid balance and creatinine, with renal replacement therapy in severe cases.",
+    "Abdominal compartment syndrome from bowel edema and retroperitoneal hematoma after repair — monitor with bladder pressure; intra-abdominal pressure above 20 mmHg with organ dysfunction requires decompressive laparotomy.",
+    "Spinal cord ischemia with paraplegia or paraparesis from occlusion of lumbar or hypogastric arteries — affects 1-3% of aortic repairs; treated with spinal cord perfusion augmentation (CSF drainage, elevated mean arterial pressure).",
+    "Endoleak after EVAR — persistent blood flow into the aneurysm sac outside the stent-graft, occurring in 15-25% of EVAR patients at 5 years; detected on annual CT surveillance and managed with repeat endovascular intervention in most cases.",
+    "Multi-organ failure from prolonged hemorrhagic shock, bowel ischemia, and reperfusion injury — a principal cause of mortality in the days following apparently successful repair.",
+    "Graft infection — rare (0.5-1%) but life-threatening late complication requiring graft explantation and reconstruction with cryopreserved or rifampicin-soaked graft."
+  ],
+
+  "supportResources": [
+    { "name": "Circulation Foundation — Aortic Aneurysm Information", "url": "https://www.circulationfoundation.org.uk/help-and-advice/aortic-aneurysm", "description": "UK vascular charity with patient-facing information on AAA screening, surgery, and recovery." },
+    { "name": "Society for Vascular Surgery — Patient Resources", "url": "https://vascular.org/patients-and-referring-physicians/conditions/aortic-aneurysm-disease", "description": "Clinical guidance, surgical options, and doctor-finder for aortic aneurysm patients in the United States." },
+    { "name": "NHS AAA Screening Programme", "url": "https://www.nhs.uk/conditions/abdominal-aortic-aneurysm-screening/", "description": "Information on the UK national screening programme offering one-time abdominal ultrasound to men at age 65." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "thoracic-aortic-dissection", "name": "Thoracic Aortic Dissection", "keyDifference": "Aortic dissection originates in the thoracic aorta and causes sharp tearing chest pain radiating to the back or interscapular area. Ruptured abdominal AAA causes abdominal or flank pain below the navel. CT angiography distinguishes the two definitively: dissection shows an intimal flap in the thoracic or thoracoabdominal aorta; AAA shows saccular aneurysm without dissection in the infrarenal segment." },
+    { "slug": "acute-myocardial-infarction-unspecified-i219", "name": "Acute Myocardial Infarction", "keyDifference": "Both cause sudden severe pain and hemodynamic instability in older adults. Myocardial infarction causes chest pain, ECG changes, and troponin elevation without abdominal findings or a pulsatile mass. Ruptured AAA presents with abdominal or back pain, a pulsatile mass, and no ECG changes unless shock-induced ischemia develops. Bedside ultrasound confirms or excludes aortic aneurysm in under 2 minutes." },
+    { "slug": "acute-pericarditis-unspecified-i309", "name": "Acute Pancreatitis", "keyDifference": "Acute pancreatitis causes epigastric pain radiating to the back with elevated serum lipase and amylase, nausea, and vomiting. Unlike ruptured AAA, pancreatitis does not cause hemodynamic collapse in the absence of severe necrotizing disease and lacks a pulsatile epigastric mass. CT can distinguish both simultaneously." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease" },
+    { "slug": "peripheral-artery-disease-surgical", "name": "Peripheral Artery Disease" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "abdominal-aortic-aneurysm-without-rupture-i714", "name": "Intact Abdominal Aortic Aneurysm", "relevance": "The precursor condition — most ruptured AAAs arise from untreated or undetected intact aneurysms that reach a critical diameter." },
+    { "slug": "thoracic-aortic-dissection", "name": "Aortic Dissection", "relevance": "A related aortic catastrophe involving wall failure — shares many risk factors and overlaps in clinical presentation and surgical management." },
+    { "slug": "peripheral-artery-disease-surgical", "name": "Peripheral Artery Disease", "relevance": "AAA and PAD share atherosclerotic etiology, risk factors (smoking, hypertension), and often coexist in the same patient." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is a ruptured abdominal aortic aneurysm?",
+      "answer": "A ruptured abdominal aortic aneurysm occurs when a balloon-like bulge in the lower part of the aorta tears open, causing massive internal bleeding. It is one of the most dangerous vascular emergencies, with an overall mortality of 80-90% including patients who collapse before reaching hospital. Emergency surgery is the only treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of a ruptured aortic aneurysm?",
+      "answer": "The classic symptoms are sudden severe abdominal, flank, or back pain — often described as tearing or ripping — combined with low blood pressure, rapid pulse, and collapse. A pulsatile mass is felt in the abdomen in about 60% of cases. Any sudden severe abdominal pain in an older adult warrants immediate emergency evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for ruptured AAA?",
+      "answer": "Overall survival including out-of-hospital deaths is approximately 10-20%. Of patients who reach a hospital alive and proceed to surgery, 30-day survival is 50-75% with modern emergency EVAR at experienced centers. Patients who are hemodynamically unstable on arrival have significantly lower survival than those with contained retroperitoneal rupture.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a ruptured AAA treated?",
+      "answer": "Emergency repair to stop the bleeding is the only treatment. Endovascular aneurysm repair (EVAR) — a catheter-based stent-graft placed through the femoral arteries — is preferred at centers with 24-hour capability. Open surgical repair through a laparotomy incision is performed when anatomy is unsuitable for EVAR or at centers without endovascular facilities.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes an aortic aneurysm to rupture?",
+      "answer": "Rupture occurs when an aneurysm grows large enough that the wall stress exceeds its tensile strength. The main drivers are aneurysm size (above 5.5 cm in men carries a 10-30% annual rupture risk), uncontrolled hypertension, rapid growth rate, and tobacco smoking. Connective tissue disorders also dramatically increase the risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What size aortic aneurysm is dangerous?",
+      "answer": "Aneurysms below 5 cm have a rupture risk of about 0.5-1% per year. The risk rises to 10-15% per year at 6-7 cm. Elective repair is offered at 5.5 cm in men and 5 cm in women, when the risk of rupture exceeds the risk of planned surgery. Any rapid growth above 1 cm per year also warrants early intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a ruptured aortic aneurysm be repaired?",
+      "answer": "Yes, but only if the patient reaches a vascular surgical center in time. Endovascular stent-graft repair or open surgery stops the bleeding. Survival depends heavily on how quickly surgery is performed. Patients with a contained retroperitoneal rupture have more time than those with free bleeding into the abdomen.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is an abdominal aortic aneurysm detected before rupture?",
+      "answer": "One-time abdominal ultrasound screening at age 65 for all men detects AAA before rupture. The UK NHS, US USPSTF, and Australian guidelines all recommend this screening. Ultrasound is painless, takes about 10 minutes, and has been shown to reduce AAA-related mortality by 50% in screened populations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between EVAR and open repair for ruptured AAA?",
+      "answer": "EVAR places a stent-graft via catheters through the groin arteries, avoiding open abdominal surgery. It requires suitable aortic anatomy and 24-hour endovascular capability. Open repair requires a large abdominal incision, aortic cross-clamping, and a sewn-in graft. EVAR has lower 30-day mortality but higher rates of requiring repeat procedures at 5 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I know if I have an aortic aneurysm?",
+      "answer": "Most intact aortic aneurysms cause no symptoms and are detected on screening ultrasound or incidentally on CT or MRI for other reasons. Some patients feel a pulsating sensation in the abdomen. Symptoms only develop when the aneurysm expands rapidly or ruptures. This is why ultrasound screening at age 65 is critical for men.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is smoking linked to aortic aneurysm rupture?",
+      "answer": "Yes, very strongly. Smokers have 4-7 times the risk of developing an abdominal aortic aneurysm compared with non-smokers. Tobacco also accelerates aneurysm growth and increases rupture risk. Stopping smoking is the single most effective lifestyle change to reduce both AAA risk and the chance of rupture.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can women get a ruptured aortic aneurysm?",
+      "answer": "Yes, though less commonly than men. Women represent about 20-25% of ruptured AAA cases. Women tend to develop aneurysms later than men and rupture at smaller diameters (around 5 cm), so guidelines recommend offering elective repair at a lower size threshold in women than in men.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens after surviving a ruptured AAA repair?",
+      "answer": "After EVAR, patients typically spend 1-5 days in hospital and recover to full activity within 2-6 weeks. Annual CT surveillance is mandatory to detect endoleaks. After open repair, hospital stay is 10-14 days with 6-12 weeks of recovery. Long-term cardiovascular risk management — blood pressure, statins, antiplatelet therapy — is continued indefinitely.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can blood pressure medications prevent aneurysm rupture?",
+      "answer": "Strict blood pressure control — targeting systolic BP below 130 mmHg — reduces wall stress on the aneurysm and lowers rupture risk. Beta-blockers modestly slow aneurysm growth. However, no medication eliminates rupture risk in a large aneurysm; elective surgical repair remains necessary when the aneurysm reaches the repair threshold.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is family history important for aortic aneurysms?",
+      "answer": "Yes. First-degree male relatives of a person with AAA have approximately a 25-30% lifetime risk of developing the condition themselves. Male siblings should undergo one-time ultrasound screening at age 60. A family history should be disclosed to a GP or internist so that appropriate screening can be arranged.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the pain from a ruptured aortic aneurysm like?",
+      "answer": "The pain is typically sudden, severe, and tearing or ripping in character. It usually starts in the abdomen or lower back and may radiate to the groin, buttocks, or legs. It is not colicky (does not come in waves) and is not relieved by position change. Any sudden severe abdominal or back pain in an older adult is a medical emergency.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Ruptured AAA (burst aortic aneurysm)",
+  "regionalNames": [
+    { "name": "Burst aorta", "region": "UK colloquial", "language": "English" },
+    { "name": "Ruptured aortic aneurysm", "region": "International", "language": "English" }
+  ],
+  "searchTags": [
+    "ruptured abdominal aortic aneurysm",
+    "ruptured AAA",
+    "burst aortic aneurysm",
+    "aortic aneurysm rupture",
+    "AAA emergency surgery",
+    "EVAR ruptured aneurysm",
+    "aortic aneurysm symptoms",
+    "abdominal aortic rupture",
+    "ICD I71.3",
+    "aortic rupture survival"
+  ],
+  "symptomKeywords": [
+    "sudden severe back pain older adult",
+    "tearing abdominal pain collapse",
+    "pulsating stomach low blood pressure",
+    "sudden hypotension abdominal pain",
+    "back pain syncope elderly"
+  ],
+
+  "metaTitle": "Ruptured Aortic Aneurysm: Emergency Guide | aihealz",
+  "metaDescription": "Ruptured abdominal aortic aneurysm: a life-threatening emergency causing sudden tearing abdominal pain. Symptoms, survival rates, EVAR vs open repair reviewed.",
+
+  "keywords": [
+    "ruptured abdominal aortic aneurysm",
+    "ruptured AAA",
+    "aortic aneurysm rupture symptoms",
+    "ruptured AAA survival rate",
+    "emergency EVAR ruptured aneurysm",
+    "abdominal aortic aneurysm treatment",
+    "AAA rupture causes",
+    "aortic rupture prognosis",
+    "burst aorta surgery",
+    "AAA screening ultrasound"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Earnshaw JJ, Shaw E, Whyman MR, et al. 2004. Screening for abdominal aortic aneurysms in men. British Journal of Surgery 91(9):1113-1117.", "url": "https://pubmed.ncbi.nlm.nih.gov/15286966/", "accessedDate": "2026-05-14" },
+    { "title": "IMPROVE Trial Investigators. 2014. Endovascular or open repair strategy for ruptured abdominal aortic aneurysm: 30 day outcomes from IMPROVE randomised trial. British Medical Journal 348:f7661.", "url": "https://pubmed.ncbi.nlm.nih.gov/24418306/", "accessedDate": "2026-05-14" },
+    { "title": "Wanhainen A, Verzini F, Van Herzeele I, et al. 2019. Editor's Choice - European Society for Vascular Surgery (ESVS) 2019 Clinical Practice Guidelines on the Management of Abdominal Aorto-iliac Artery Aneurysms. European Journal of Vascular and Endovascular Surgery 57(1):8-93.", "url": "https://pubmed.ncbi.nlm.nih.gov/30528142/", "accessedDate": "2026-05-14" },
+    { "title": "Chaikof EL, Dalman RL, Eskandari MK, et al. 2018. The Society for Vascular Surgery practice guidelines on the care of patients with an abdominal aortic aneurysm. Journal of Vascular Surgery 67(1):2-77.", "url": "https://pubmed.ncbi.nlm.nih.gov/29268916/", "accessedDate": "2026-05-14" },
+    { "title": "United States Preventive Services Task Force. 2019. Screening for Abdominal Aortic Aneurysm: US Preventive Services Task Force Recommendation Statement. JAMA 322(22):2211-2218.", "url": "https://pubmed.ncbi.nlm.nih.gov/31821437/", "accessedDate": "2026-05-14" },
+    { "title": "Moll FL, Powell JT, Fraedrich G, et al. 2011. Management of Abdominal Aortic Aneurysms Clinical Practice Guidelines of the European Society for Vascular Surgery. European Journal of Vascular and Endovascular Surgery 41(S1):S1-S58.", "url": "https://pubmed.ncbi.nlm.nih.gov/21215940/", "accessedDate": "2026-05-14" },
+    { "title": "Lederle FA, Johnson GR, Wilson SE, et al. 2002. Rupture rate of large abdominal aortic aneurysms in patients refusing or unfit for elective repair. JAMA 287(22):2968-2972.", "url": "https://pubmed.ncbi.nlm.nih.gov/12052126/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

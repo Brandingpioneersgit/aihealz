@@ -458,7 +458,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | suicidal-ideations-r45851 | 1 | General Medicine | (open) | — | open | Batch 007, 1 variant |
 | photokeratitis-unspecified-eye-h16139 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
 | histiocytic-sarcoma-c96a | 1 | Oncology | (open) | — | open | Batch 007, 1 variant |
-| acquired-hemophilia-d68311 | 1 | Hematology | (open) | — | open | Batch 007, 1 variant |
+| acquired-hemophilia-d68311 | 1 | Hematology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | isovaleric-acidemia-e71110 | 1 | Endocrinology | (open) | — | open | Batch 007, 1 variant |
 | collagenous-colitis-k52831 | 1 | Gastroenterology | (open) | — | open | Batch 007, 1 variant |
 | lymphocytic-colitis-k52832 | 1 | Gastroenterology | (open) | — | open | Batch 007, 1 variant |
@@ -484,7 +484,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | zellweger-like-syndrome-e71541 | 1 | Endocrinology | (open) | — | open | Batch 007, 1 variant |
 | thoracic-aortic-ectasia-i77810 | 1 | Cardiology | (open) | — | open | Batch 007, 1 variant |
 | oculocutaneous-albinism-unspecified-e70329 | 1 | Endocrinology | (open) | — | open | Batch 007, 1 variant |
-| acute-bronchitis-unspecified-j209 | 2 | Pulmonology | (open) | — | open | Batch 007, 10 variants |
+| acute-bronchitis-unspecified-j209 | 1 | Pulmonology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | congenital-pneumonia-unspecified-p239 | 2 | Neonatology | (open) | — | open | Batch 007, 9 variants |
 | neonatal-jaundice-unspecified-p599 | 2 | Neonatology | (open) | — | open | Batch 007, 9 variants |
 | shigellosis-unspecified-a039 | 2 | Infectious Disease | (open) | — | open | Batch 007, 5 variants |
@@ -492,7 +492,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | spotted-fever-unspecified-a779 | 2 | Infectious Disease | (open) | — | open | Batch 007, 5 variants |
 | dermatitis-unspecified-l309 | 2 | Dermatology | (open) | — | open | Batch 007, 5 variants |
 | oral-mucositis-ulcerative-unspecified-k1230 | 2 | Gastroenterology | (open) | — | open | Batch 007, 4 variants |
-| acute-bronchiolitis-unspecified-j219 | 2 | Pulmonology | (open) | — | open | Batch 007, 4 variants |
+| acute-bronchiolitis-unspecified-j219 | 1 | Pulmonology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | assault-by-unspecified-means-y09 | 2 | General Medicine | (open) | — | open | Batch 007, 4 variants |
 | meningitis-unspecified-g039 | 2 | Neurology | (open) | — | open | Batch 007, 3 variants |
 | typhus-fever-unspecified-a759 | 2 | Infectious Disease | (open) | — | open | Batch 007, 3 variants |
@@ -518,7 +518,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | urticaria-unspecified-l509 | 2 | Dermatology | (open) | — | open | Batch 007, 2 variants |
 | rickettsiosis-unspecified-a799 | 2 | Infectious Disease | (open) | — | open | Batch 007, 2 variants |
 | rubella-without-complication-b069 | 2 | Infectious Disease | (open) | — | open | Batch 007, 2 variants |
-| aplastic-anemia-unspecified-d619 | 2 | Hematology | (open) | — | open | Batch 007, 2 variants |
+| aplastic-anemia-unspecified-d619 | 1 | Hematology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | neutropenia-unspecified-d709 | 2 | Hematology | (open) | — | open | Batch 007, 2 variants |
 | nontoxic-goiter-unspecified-e049 | 2 | Endocrinology | (open) | — | open | Batch 007, 2 variants |
 | short-stature-child-r6252 | 2 | Endocrinology | (open) | — | open | Batch 007, 2 variants |
@@ -536,8 +536,8 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | acute-mastoiditis-without-complications-unspecified-ear-h70009 | 2 | Ophthalmology | (open) | — | open | Batch 008, 2 variants |
 | myocarditis-unspecified-i514 | 2 | Cardiology | (open) | — | open | Batch 008, 2 variants |
 | dissection-of-unspecified-artery-i7770 | 2 | Cardiology | (open) | — | open | Batch 008, 2 variants |
-| acute-pharyngitis-unspecified-j029 | 2 | Pulmonology | (open) | — | open | Batch 008, 2 variants |
-| acute-tonsillitis-unspecified-j0390 | 2 | Pulmonology | (open) | — | open | Batch 008, 2 variants |
+| acute-pharyngitis-unspecified-j029 | 1 | Pulmonology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
+| acute-tonsillitis-unspecified-j0390 | 1 | Pulmonology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | acute-recurrent-tonsillitis-unspecified-j0391 | 2 | Pulmonology | (open) | — | open | Batch 008, 2 variants |
 | hypotension-unspecified-i959 | 2 | Cardiology | (open) | — | open | Batch 008, 2 variants |
 | crohn-s-disease-of-small-intestine-with-unsp-complications-k50019 | 2 | Gastroenterology | (open) | — | open | Batch 008, 2 variants |
@@ -553,12 +553,12 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | spontaneous-rupture-of-other-tendons-other-m6688 | 2 | Orthopedics | (open) | — | open | Batch 008, 2 variants |
 | juvenile-osteochondrosis-unspecified-m929 | 2 | Orthopedics | (open) | — | open | Batch 008, 2 variants |
 | irregular-menstruation-unspecified-n926 | 2 | Urology | (open) | — | open | Batch 008, 2 variants |
-| abnormal-uterine-and-vaginal-bleeding-unspecified-n939 | 2 | Urology | (open) | — | open | Batch 008, 2 variants |
+| abnormal-uterine-and-vaginal-bleeding-unspecified-n939 | 1 | Urology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | induced-termination-of-pregnancy-with-unsp-complications-o0480 | 2 | Obstetrics | (open) | — | open | Batch 008, 2 variants |
 | obstetric-trauma-unspecified-o719 | 2 | Obstetrics | (open) | — | open | Batch 008, 2 variants |
 | undescended-testicle-unspecified-q539 | 2 | Genetics | (open) | — | open | Batch 008, 2 variants |
 | myelitis-unspecified-g0491 | 2 | Neurology | (open) | — | open | Batch 008, 2 variants |
-| acute-viral-hepatitis-unspecified-b179 | 2 | Infectious Disease | (open) | — | open | Batch 008, 2 variants |
+| acute-viral-hepatitis-unspecified-b179 | 1 | Infectious Disease | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | acute-disseminated-demyelination-unspecified-g369 | 2 | Neurology | (open) | — | open | Batch 008, 2 variants |
 | intestinal-obstruction-of-newborn-unspecified-p769 | 2 | Neonatology | (open) | — | open | Batch 008, 2 variants |
 | typhoid-meningitis-a0101 | 2 | Infectious Disease | (open) | — | open | Batch 008, 1 variant |
@@ -900,7 +900,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | gastrointestinal-anthrax-a222 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
 | squamous-cell-carcinoma-of-anal-skin-c44520 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
 | carcinoma-in-situ-of-trachea-d021 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
-| acute-thyroiditis-e060 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| acute-thyroiditis-e060 | 1 | Endocrinology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | alcohol-depend-w-alcoh-induce-psychotic-disorder-w-delusions-f10250 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
 | glanders-a240 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
 | squamous-cell-carcinoma-of-skin-of-breast-c44521 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
@@ -915,7 +915,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | subacute-and-chronic-melioidosis-a242 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
 | squamous-cell-carcinoma-of-overlapping-sites-of-skin-c4482 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
 | melanoma-in-situ-of-anal-skin-d0351 | 2 | Hematology | (open) | — | open | Batch 012, 1 variant |
-| autoimmune-thyroiditis-e063 | 2 | Endocrinology | (open) | — | open | Batch 012, 1 variant |
+| autoimmune-thyroiditis-e063 | 1 | Endocrinology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | alcohol-dependence-with-alcohol-induced-persisting-dementia-f1027 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
 | spirillosis-a250 | 2 | Infectious Disease | (open) | — | open | Batch 012, 1 variant |
 | mesothelioma-of-pleura-c450 | 2 | Oncology | (open) | — | open | Batch 012, 1 variant |
@@ -987,7 +987,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | com-variab-immunodef-w-predom-abnlt-of-b-cell-nums-functn-d830 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
 | drug-induced-autoimmune-hemolytic-anemia-d590 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
 | drug-induced-aplastic-anemia-d611 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
-| acromegaly-and-pituitary-gigantism-e220 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| acromegaly-and-pituitary-gigantism-e220 | 1 | Endocrinology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | hereditary-spherocytosis-d580 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
 | hyposplenism-d730 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
 | chronic-acquired-pure-red-cell-aplasia-d600 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
@@ -1001,7 +1001,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | myeloid-sarcoma-in-remission-c9231 | 2 | Oncology | (open) | — | open | Batch 014, 1 variant |
 | riboflavin-deficiency-e530 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
 | acute-chagas-disease-with-heart-involvement-b570 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
-| carcinoid-syndrome-e340 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
+| carcinoid-syndrome-e340 | 1 | Endocrinology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | drug-induced-obesity-e661 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
 | ben-neoplm-of-prph-nrv-autonm-nrv-sys-upr-lmb-inc-shldr-d3612 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
 | hereditary-erythropoietic-porphyria-e800 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
@@ -1010,7 +1010,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | cystinuria-e7201 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
 | deficiency-of-vitamin-e-e560 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
 | dietary-selenium-deficiency-e59 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
-| allergic-purpura-d690 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| allergic-purpura-d690 | 1 | Hematology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | monkeypox-b04 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
 | pulmonary-mucormycosis-b460 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
 | drug-induced-hypoglycemia-without-coma-e160 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
@@ -1030,8 +1030,8 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | nicotine-dependence-cigarettes-uncomplicated-f17210 | 2 | Psychiatry | (open) | — | open | Batch 014, 1 variant |
 | sylvatic-yellow-fever-a950 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
 | oropouche-virus-disease-a930 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
-| acute-pulmonary-histoplasmosis-capsulati-b390 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
-| acute-pulmonary-blastomycosis-b400 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
+| acute-pulmonary-histoplasmosis-capsulati-b390 | 1 | Infectious Disease | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
+| acute-pulmonary-blastomycosis-b400 | 1 | Infectious Disease | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | dietary-calcium-deficiency-e58 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
 | trichuriasis-b79 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
 | japanese-encephalitis-a830 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
@@ -1042,7 +1042,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | familial-erythrocytosis-d750 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
 | primary-lesions-of-pinta-a670 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
 | onchocerciasis-with-endophthalmitis-b7301 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
-| alpha-thalassemia-d560 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
+| alpha-thalassemia-d560 | 1 | Hematology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | babesiosis-b600 | 2 | Infectious Disease | (open) | — | open | Batch 014, 1 variant |
 | conn-s-syndrome-e2601 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
 | dietary-folate-deficiency-anemia-d520 | 2 | Hematology | (open) | — | open | Batch 014, 1 variant |
@@ -1116,7 +1116,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | invasive-pulmonary-aspergillosis-b440 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
 | intraop-hemor-hemtom-of-an-endo-sys-org-comp-oth-procedure-e3602 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
 | long-chain-very-long-chain-acyl-coa-dehydrogenase-deficiency-e71310 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| acute-posthemorrhagic-anemia-d62 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| acute-posthemorrhagic-anemia-d62 | 1 | Hematology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | cutaneous-listeriosis-a320 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
 | ben-neoplm-of-prph-nrv-autonm-nrv-sys-of-low-lmb-inc-hip-d3613 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
 | hurler-scheie-syndrome-e7602 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
@@ -1124,7 +1124,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | legionnaires-disease-a481 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
 | disorders-of-endocrine-glands-in-diseases-classd-elswhr-e35 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
 | nodular-lymphocy-predom-hodgkin-lymphoma-intrathorac-nodes-c8102 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
-| acute-stress-reaction-f430 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
+| acute-stress-reaction-f430 | 1 | Psychiatry | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | kaposi-s-sarcoma-of-gastrointestinal-sites-c464 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
 | varicella-meningitis-b010 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
 | hemophagocytic-syndrome-infection-associated-d762 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
@@ -1134,7 +1134,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | enterobiasis-b80 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
 | postproc-hemor-of-an-endo-sys-org-fol-an-endo-sys-procedure-e89810 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
 | congenital-adrenogenital-disorders-assoc-w-enzyme-deficiency-e250 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
-| anemia-in-chronic-kidney-disease-d631 | 2 | Hematology | (open) | — | open | Batch 016, 1 variant |
+| anemia-in-chronic-kidney-disease-d631 | 1 | Hematology | claude-2026-05-15 | 2026-05-15 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 3) |
 | secondary-malignant-neoplasm-of-mediastinum-c781 | 2 | Oncology | (open) | — | open | Batch 016, 1 variant |
 | mixed-obsessional-thoughts-and-acts-f422 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |
 | opioid-abuse-with-opioid-induced-mood-disorder-f1114 | 2 | Psychiatry | (open) | — | open | Batch 016, 1 variant |

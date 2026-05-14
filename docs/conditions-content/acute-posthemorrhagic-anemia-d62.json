@@ -1,0 +1,400 @@
+{
+  "_meta": {
+    "slug": "acute-posthemorrhagic-anemia-d62",
+    "tier": 1,
+    "headTerm": "acute posthemorrhagic anemia",
+    "longTailKeywords": [
+      "acute blood loss anemia",
+      "acute posthemorrhagic anemia symptoms",
+      "acute posthemorrhagic anemia treatment",
+      "anemia after blood loss",
+      "acute hemorrhagic anemia diagnosis",
+      "blood transfusion for blood loss anemia",
+      "hemoglobin drop after bleeding",
+      "acute anemia from trauma",
+      "GI bleed anemia",
+      "postoperative anemia"
+    ],
+    "primarySpecialty": "Hematology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Physiological response data from Schlichtig & Warshawsky J Appl Physiol 1990 (PMID 2379958) and Levi et al. Crit Care 2006. Transfusion threshold data from TRICC trial (Hébert et al. NEJM 1999, PMID 9971864) and TRISS trial (Holst et al. NEJM 2014, PMID 25270174). GI bleed management per BSG 2019 and Villanueva et al. NEJM 2013 (PMID 23281973)."
+  },
+
+  "h1Title": "Acute Posthemorrhagic Anemia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hematology",
+
+  "heroOverview": "Acute posthemorrhagic anemia is a sudden fall in circulating red cell mass caused by rapid blood loss from trauma, gastrointestinal hemorrhage, surgical bleeding, obstetric emergencies, or vascular rupture. Unlike chronic anemias, the hemoglobin drop lags the blood loss by 6–24 hours as plasma volume redistributes; a person can lose 30% of their blood volume before hemoglobin falls significantly. The primary physiological response is tachycardia, vasoconstriction, and increased cardiac output — signs that precede laboratory confirmation. Immediate management targets stopping the bleeding, restoring circulating volume, and transfusing red cells when hemoglobin falls below 7–8 g/dL or hemodynamic compromise persists. Without prompt treatment, severe acute blood loss causes hypovolemic shock, multi-organ failure, and death.",
+
+  "keyStats": {
+    "prevalence": "Acute blood loss anemia is a leading inpatient diagnosis: upper GI bleeding affects 50–150 per 100,000 adults per year in high-income countries; major trauma hemorrhage accounts for 30–40% of all trauma deaths worldwide (WHO 2019)",
+    "demographics": "All ages affected; traumatic hemorrhage peaks in young adults (ages 15–45) from road traffic accidents; GI bleeding is more common in adults over 60 due to peptic ulcer disease, vascular lesions, and anticoagulant use",
+    "avgAge": "Varies widely by cause: obstetric hemorrhage affects reproductive-age women (15–45); aortic aneurysm rupture peaks after age 65; traumatic hemorrhage is most common in men aged 20–40",
+    "globalCases": "Hemorrhage is the second leading cause of preventable trauma death globally; GI hemorrhage leads to approximately 300,000 hospital admissions per year in the US alone"
+  },
+
+  "definition": "Acute posthemorrhagic anemia (ICD-10: D62) is defined as anemia resulting from acute, substantial blood loss occurring over minutes to hours. It is classified by the American College of Surgeons Advanced Trauma Life Support (ATLS) system into four hemorrhage classes based on estimated blood loss: Class I (<15% blood volume, < 750 mL in a 70 kg adult), Class II (15–30%, 750–1,500 mL), Class III (30–40%, 1,500–2,000 mL), and Class IV (>40%, > 2,000 mL, immediately life-threatening). The anemia itself reflects a reduction in oxygen-carrying capacity, but in the acute phase, the hemoglobin and hematocrit do not immediately reflect the true degree of blood loss because plasma and red cell volumes fall together. Hemodilution from intravenous fluid resuscitation subsequently unmasks the full extent of red cell deficit. The condition is managed primarily by emergency physicians, surgeons, intensivists, and hematologists (for transfusion guidance and coagulopathy management). It overlaps clinically with trauma-induced coagulopathy, disseminated intravascular coagulation, and major obstetric hemorrhage.",
+
+  "typesClassification": [
+    { "type": "ATLS Class I hemorrhage (<15% blood volume)", "description": "Blood loss under 750 mL in an average adult. Heart rate minimally elevated or normal. Blood pressure and respiratory rate normal. No transfusion required; crystalloid fluid replacement usually sufficient." },
+    { "type": "ATLS Class II hemorrhage (15–30% blood volume)", "description": "Blood loss 750–1,500 mL. Tachycardia (100–120 bpm), mild drop in pulse pressure, increased respiratory rate. Anxiety and restlessness. Crystalloid resuscitation; transfusion usually not required if bleeding is controlled." },
+    { "type": "ATLS Class III hemorrhage (30–40% blood volume)", "description": "Blood loss 1,500–2,000 mL. Marked tachycardia (120–140 bpm), hypotension, oliguria, altered mental status. Blood transfusion usually required alongside surgical or endoscopic hemorrhage control." },
+    { "type": "ATLS Class IV hemorrhage (>40% blood volume)", "description": "Blood loss over 2,000 mL. Profound shock: heart rate above 140, systolic BP below 90, negligible urine output, loss of consciousness. Immediate massive transfusion protocol, vasopressors, and emergency surgical intervention required. Mortality above 50% without rapid intervention." },
+    { "type": "Obstetric hemorrhage", "description": "Defined as blood loss above 500 mL after vaginal delivery or above 1,000 mL after cesarean section. Postpartum hemorrhage affects approximately 6% of deliveries and is a leading cause of maternal mortality globally. Distinct management pathway involving uterotonic drugs, tranexamic acid, and obstetric surgical procedures." }
+  ],
+
+  "primarySymptoms": [
+    "Tachycardia — heart rate above 100 bpm — the earliest cardiovascular response to significant blood loss, appearing before hypotension and before hemoglobin falls.",
+    "Hypotension (systolic BP below 90 mmHg) with a narrowed pulse pressure, reflecting reduced venous return and cardiac output from circulating volume depletion.",
+    "Dizziness, lightheadedness, and syncope on standing or at rest, particularly when blood loss exceeds 20% of circulating volume.",
+    "Pallor of the skin, conjunctivae, and mucous membranes, most pronounced after hemodilution from resuscitation fluids.",
+    "Cool, clammy skin and peripheral vasoconstriction as catecholamines redirect blood to core organs.",
+    "Dyspnea and increased respiratory rate (compensatory hyperventilation to increase oxygen delivery despite reduced hemoglobin).",
+    "Rapid, weak pulse and decreased capillary refill time (more than 2 seconds) in moderate-to-severe hemorrhage.",
+    "Restlessness, agitation, and confusion, progressing to loss of consciousness in severe hemorrhagic shock from cerebral hypoperfusion.",
+    "Oliguria (urine output below 0.5 mL/kg/hour) or anuria from renal vasoconstriction as the kidney is spared in favor of cardiac and cerebral perfusion.",
+    "Fatigue and profound weakness during the recovery phase as the hemoglobin remains low while bleeding is controlled but red cell production has not yet fully compensated."
+  ],
+
+  "earlyWarningSigns": [
+    "Resting tachycardia of 100–120 bpm in a patient with a known bleeding source (peptic ulcer, varices, trauma) — the earliest quantifiable sign of significant hemorrhage.",
+    "Postural hypotension (drop of more than 20 mmHg systolic on standing) in a patient reporting blood in the stool or vomit, indicating at least 500–1,000 mL blood loss.",
+    "Passage of dark tarry stools (melena) or bright red blood per rectum, indicating active upper or lower GI bleeding requiring urgent assessment.",
+    "Hematemesis — vomiting blood that is bright red (active arterial bleeding) or coffee-ground colored (older blood) — always warrants same-day urgent evaluation.",
+    "Increasing pallor, dizziness, and fatigue after trauma or surgery, even without obvious external bleeding — internal hemorrhage must be excluded."
+  ],
+
+  "emergencySigns": [
+    "Systolic blood pressure below 90 mmHg with heart rate above 120 bpm in the context of known or suspected bleeding — hemorrhagic shock requiring immediate resuscitation and activation of a massive transfusion protocol.",
+    "Altered consciousness, confusion, or unresponsiveness in a bleeding patient — cerebral hypoperfusion from Class IV hemorrhage demanding simultaneous resuscitation and surgical hemorrhage control.",
+    "Visible blood loss estimated above 1,500 mL acutely — Class III hemorrhage or above; activate massive transfusion protocol with 1:1:1 ratio of packed red cells, fresh frozen plasma, and platelets.",
+    "Acute abdominal rigidity, board-like abdomen, or rapidly expanding abdomen after trauma — suspected intraperitoneal hemorrhage requiring emergency surgical exploration.",
+    "Postpartum hemorrhage with uterine atony and blood loss exceeding 1,000 mL after delivery — immediate oxytocin, ergometrine, tranexamic acid, and obstetric surgical consultation."
+  ],
+
+  "causes": [
+    {
+      "cause": "Gastrointestinal hemorrhage (peptic ulcer, esophageal varices, Mallory-Weiss tears, diverticulosis, angiodysplasia, colorectal cancer)",
+      "description": "The most common cause of non-traumatic acute blood loss anemia in adults. Upper GI bleeding (from the esophagus, stomach, or duodenum) produces hematemesis and/or melena; lower GI bleeding produces hematochezia. Peptic ulcer disease accounts for 40–50% of upper GI bleeds; variceal bleeding accounts for 15–20% and carries higher mortality."
+    },
+    {
+      "cause": "Traumatic hemorrhage (road traffic accidents, penetrating trauma, fractures)",
+      "description": "Major trauma causes both external and internal hemorrhage. A fractured femur can lose 1–2 L of blood internally; pelvic fractures 2–4 L; intraperitoneal bleeding from solid organ lacerations (liver, spleen) can be rapidly fatal. Road traffic accidents are the leading cause of traumatic hemorrhage globally, causing 1.35 million deaths per year (WHO)."
+    },
+    {
+      "cause": "Surgical and procedural bleeding",
+      "description": "Any major surgery carries a risk of intraoperative or postoperative hemorrhage. Cardiac surgery, hepatic resection, orthopedic arthroplasty, and complex colorectal surgery carry the highest blood-loss risk. Postoperative hemorrhage into a closed space (intracranial, thoracic, abdominal) may not be apparent externally."
+    },
+    {
+      "cause": "Obstetric hemorrhage (postpartum hemorrhage, placenta previa, abruptio placentae, uterine rupture)",
+      "description": "Postpartum hemorrhage (PPH) is the leading cause of maternal mortality globally, killing approximately 100,000 women per year. PPH affects 6% of vaginal deliveries. Uterine atony is responsible for 80% of PPH; retained placenta, genital tract trauma, and coagulopathy account for the rest."
+    },
+    {
+      "cause": "Ruptured aneurysm (aortic aneurysm, visceral artery aneurysm, intracranial aneurysm)",
+      "description": "Rupture of an abdominal aortic aneurysm causes rapid exsanguinating hemorrhage with mortality exceeding 80% outside hospital. Visceral artery aneurysms (splenic, hepatic, renal) present with acute abdominal pain and shock. Subarachnoid hemorrhage from intracranial aneurysm rupture causes neurological deterioration alongside potential blood loss."
+    },
+    {
+      "cause": "Hemoptysis from pulmonary vascular abnormality or bronchiectasis",
+      "description": "Massive hemoptysis (above 300 mL in 24 hours) causes acute blood loss anemia with asphyxia risk from blood flooding the airways. Causes include bronchiectasis, lung cancer, arteriovenous malformations, and pulmonary artery pseudoaneurysm. Mortality from massive hemoptysis approaches 50% without bronchial artery embolization."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Anticoagulant or antiplatelet therapy", "category": "modifiable", "description": "Warfarin, direct oral anticoagulants (DOACs — apixaban, rivaroxaban, dabigatran), heparin, and antiplatelet drugs (aspirin, clopidogrel) impair clotting and platelet function. The annual major bleeding risk on warfarin is 2–4%; DOACs carry similar overall rates but a lower risk of intracranial hemorrhage." },
+    { "factor": "Peptic ulcer disease or NSAID use", "category": "modifiable", "description": "NSAIDs damage the gastric mucosa, increasing peptic ulcer bleeding risk 3–5 fold. Helicobacter pylori infection in combination with NSAID use multiplies the risk. Proton pump inhibitor co-prescription reduces but does not eliminate the risk." },
+    { "factor": "Portal hypertension and esophageal varices", "category": "non-modifiable", "description": "Cirrhosis from any cause leads to portal hypertension and variceal formation. Annual bleeding risk from large varices is 15–20% per year. Variceal bleeding carries 15–20% short-term mortality; survivors have a 60% risk of re-bleeding without secondary prophylaxis." },
+    { "factor": "Major trauma (road traffic accidents, falls, penetrating injury)", "category": "environmental", "description": "Trauma is the leading cause of death in people under 45 globally. Hemorrhage accounts for 30–40% of trauma deaths, many preventable with early tourniquet application, pelvic binders, and massive transfusion protocols." },
+    { "factor": "Inherited or acquired coagulopathy", "category": "non-modifiable", "description": "Hemophilia A and B, von Willebrand disease, and platelet function disorders (acquired hemophilia, thrombocytopenia) impair hemostasis and convert minor bleeding into major hemorrhage. Acquired hemophilia in particular presents with life-threatening muscle hematomas." },
+    { "factor": "Renal failure with uremia", "category": "non-modifiable", "description": "Uremia impairs platelet function through multiple mechanisms (reduced ADP response, increased nitric oxide production), increasing bleeding risk from GI lesions and procedures. Dialysis patients have a 5–10× higher rate of GI bleeding than the general population." },
+    { "factor": "Obstetric risk factors (grand multiparity, placenta previa, uterine fibroids, prior uterine surgery)", "category": "non-modifiable", "description": "Women with a prior cesarean section have a 0.3–0.8% risk of placenta previa and accreta in subsequent pregnancies, both of which can cause catastrophic hemorrhage at delivery." }
+  ],
+
+  "affectedDemographics": [
+    "Traumatic hemorrhage disproportionately affects young men (ages 15–45) in road traffic accidents; males have a 2.7× higher trauma death rate than females (GBD 2019).",
+    "Upper GI hemorrhage from peptic ulcer disease and varices increases sharply with age; adults over 65 have a 3–4× higher hospitalization rate than younger adults.",
+    "Postpartum hemorrhage affects women globally at 6% of deliveries, with disproportionate mortality in low- and middle-income countries where blood banking and surgical capacity are limited.",
+    "Patients on anticoagulants are a rapidly growing high-risk group; more than 6 million Americans are on warfarin or a DOAC, with annual major bleeding rates of 2–4%.",
+    "Children with hereditary coagulopathies (hemophilia A and B) are at lifelong risk for acute posthemorrhagic anemia from spontaneous or traumatic bleeding."
+  ],
+
+  "diagnosisOverview": "Diagnosis of acute posthemorrhagic anemia begins at the bedside, not in the laboratory, because a patient in hemorrhagic shock needs immediate resuscitation — laboratory results catch up later. Vital signs (heart rate, blood pressure, respiratory rate, pulse pressure, capillary refill, and mental status) together with the clinical history of bleeding source are the primary diagnostic tools. Tachycardia precedes hypotension and laboratory findings by minutes to hours.\n\nA complete blood count reveals the full extent of anemia, but hemoglobin can remain deceptively normal in the first 6–12 hours before hemodilution occurs from IV fluid resuscitation or transcapillary fluid shift. Serial CBC checks (at 4–6-hour intervals in active hemorrhage) track the true nadir. Coagulation studies (PT, APTT, INR, fibrinogen, and thromboelastography or ROTEM where available) identify concurrent coagulopathy. Blood group and crossmatch must be performed urgently to facilitate blood product transfusion. Basic metabolic panel assesses renal perfusion and lactate quantifies the degree of tissue hypoperfusion (lactate above 4 mmol/L indicates severe shock).\n\nLocalization of the bleeding source drives further testing: upper GI endoscopy within 24 hours for suspected upper GI bleed (within 12 hours for variceal bleeding); CT angiography for suspected intra-abdominal, retroperitoneal, or aortic hemorrhage; FAST ultrasound in trauma for rapid bedside detection of free fluid; colonoscopy or CT colonography for lower GI bleeding; bronchoscopy for massive hemoptysis.",
+
+  "diagnosticTests": [
+    { "test": "Serial complete blood count (CBC) with hemoglobin and hematocrit", "purpose": "Quantifies anemia once hemodilution occurs; serial testing tracks the bleeding trajectory every 4–6 hours", "whatToExpect": "Standard venous blood draw with results within 30–60 minutes. Note that hemoglobin may be normal in the first 6 hours of major blood loss before IV fluids or natural fluid shift dilutes the red cell concentration." },
+    { "test": "Coagulation panel (PT, APTT, INR, fibrinogen) and thromboelastography (TEG/ROTEM)", "purpose": "Identifies consumptive coagulopathy (DIC), factor deficiencies, or anticoagulant effect complicating hemorrhage control", "whatToExpect": "Blood draw; standard coagulation results in 30–60 minutes. TEG/ROTEM provides viscoelastic point-of-care results within 15–30 minutes and guides ratio of plasma and platelets in massive transfusion." },
+    { "test": "Blood group and crossmatch (type and screen)", "purpose": "Enables provision of compatible red cells for transfusion within 10–30 minutes of request", "whatToExpect": "Venous blood draw; ABO/Rh type available within 5 minutes; full crossmatch in 30–60 minutes. In extreme emergencies, O-negative uncrossmatched blood can be used before crossmatch is complete." },
+    { "test": "Serum lactate and base deficit", "purpose": "Quantifies the degree of tissue oxygen debt from hemorrhagic shock; lactate above 4 mmol/L correlates with hemorrhagic shock Class III–IV", "whatToExpect": "Arterial or venous blood gas result within 10 minutes. Serial lactate clearance (> 10% per hour) indicates effective resuscitation and hemorrhage control." },
+    { "test": "Upper GI endoscopy (EGD)", "purpose": "Localizes and treats the bleeding source in upper GI hemorrhage; identifies peptic ulcer, varices, Mallory-Weiss tear, or gastric erosions", "whatToExpect": "A flexible camera is passed through the mouth into the esophagus, stomach, and duodenum under sedation. Performed within 24 hours (12 hours for suspected variceal bleeding). Dual therapy (adrenaline injection plus thermal coagulation or clipping) reduces re-bleeding rates by 70%." },
+    { "test": "CT angiography (CTA) of the abdomen/pelvis", "purpose": "Identifies intra-abdominal, retroperitoneal, or vascular hemorrhage for surgical or interventional radiology planning", "whatToExpect": "A CT scan with IV contrast injection lasting 10–15 minutes. Can detect bleeding rates as low as 0.3–0.5 mL/minute. Direct arterial embolization can be performed immediately in the interventional radiology suite if a bleeding vessel is identified." }
+  ],
+
+  "treatmentOverview": "Treatment is simultaneously resuscitative and directed at stopping the bleeding — both must occur in parallel. The 2019 European Trauma Guidelines and ATLS protocols emphasize permissive hypotension (target systolic BP 80–90 mmHg until hemorrhage is controlled in non-head-injury trauma) to avoid worsening coagulopathy through excessive crystalloid. Crystalloid resuscitation is used for Class I–II hemorrhage; for Class III–IV, a massive transfusion protocol (MTP) delivering packed red blood cells (pRBC), fresh frozen plasma (FFP), and platelets in a 1:1:1 ratio is standard. Tranexamic acid (TXA) 1 g IV bolus, given within 3 hours of injury onset (within 1 hour is optimal), reduces mortality from traumatic hemorrhage by 16% (CRASH-2 trial, Lancet 2010). For non-traumatic GI bleeding, IV proton pump inhibitors (pantoprazole or omeprazole 80 mg IV bolus then 8 mg/hour infusion) significantly reduce re-bleeding after peptic ulcer hemostasis. Vasopressin analogues (terlipressin 2 mg IV every 4–6 hours) reduce portal pressure and variceal bleeding mortality when given before endoscopy.\n\nHemoglobin-based transfusion thresholds: the TRICC trial (NEJM 1999) established 7 g/dL as the safe lower threshold in most ICU patients; the TRISS trial (NEJM 2014) confirmed this for septic shock and extends to most non-cardiac acute settings. A threshold of 8 g/dL applies in acute coronary syndrome and symptomatic cardiac patients. For obstetric hemorrhage, management follows the HAEMOSTASIS mnemonic with uterotonic agents (oxytocin, carboprost, misoprostol), balloon tamponade, surgical devascularization, and uterine compression sutures before resorting to hysterectomy. Factor concentrates (prothrombin complex concentrate for DOAC reversal, recombinant factor VIIa for refractory coagulopathy) are used when standard blood products are insufficient.",
+
+  "medicalTreatments": [
+    { "name": "Tranexamic acid (TXA) 1 g IV bolus over 10 minutes (within 3 hours of hemorrhage onset)", "description": "An antifibrinolytic that prevents clot breakdown, allowing natural hemostasis to seal bleeding vessels. The CRASH-2 trial (31,000 trauma patients) showed a relative reduction in trauma mortality of 16% when given within 1 hour and 10% within 3 hours. Also recommended for postpartum hemorrhage by WHO 2017.", "effectiveness": "Reduces all-cause trauma mortality: RR 0.91 (95% CI 0.85–0.97) per CRASH-2 Lancet 2010 (PMID 20554319); reduces PPH death risk by 19% in WOMAN trial (PMID 28456509)" },
+    { "name": "Packed red blood cells (pRBC) transfusion (target Hb ≥ 7–8 g/dL)", "description": "Each unit of pRBC raises hemoglobin by approximately 1 g/dL in a 70 kg adult. Transfusion within 1 hour of crossmatch in hemorrhagic shock; O-negative blood used when crossmatch is pending. Leukodepleted products preferred.", "effectiveness": "Immediate restoration of oxygen-carrying capacity; restrictive strategy (Hb > 7 g/dL) as effective as liberal (> 10 g/dL) with fewer transfusion-related complications per TRICC trial (PMID 9971864)" },
+    { "name": "Fresh frozen plasma (FFP) and platelet transfusion in massive transfusion protocol (1:1:1 ratio)", "description": "1:1:1 pRBC:FFP:platelets replicates whole blood for coagulopathy-complicated hemorrhage. PROPPR trial (JAMA 2015) showed improved 24-hour survival with 1:1:1 compared with 1:1:2 in massive trauma hemorrhage.", "effectiveness": "1:1:1 ratio achieved 24-hour hemostasis in 86% vs 78% with 1:2:1 (PROPPR trial, PMID 25647203); reduces coagulopathy-related bleeding death" },
+    { "name": "IV proton pump inhibitor (pantoprazole 80 mg IV bolus then 8 mg/hour infusion for 72 hours)", "description": "Reduces re-bleeding and surgery after peptic ulcer hemostasis by maintaining gastric pH above 6, promoting platelet aggregation, and stabilizing clot formation at the ulcer base.", "effectiveness": "Reduces re-bleeding by 50–60% and need for surgical intervention by 40% in peptic ulcer bleeding (Leontiadis et al. BMJ 2005; PMID 16183655)" },
+    { "name": "Terlipressin (2 mg IV every 4–6 hours) or vasopressin infusion for variceal bleeding", "description": "Vasopressin analogues constrict splanchnic vessels, reducing portal pressure and variceal blood flow. Given before endoscopy in suspected variceal bleeding and continued for 3–5 days after variceal band ligation.", "effectiveness": "Terlipressin reduces 7-day mortality by 34% versus placebo in variceal bleeding (D'Amico et al. J Hepatol 2010; PMID 19720430)" },
+    { "name": "Prothrombin complex concentrate (PCC; Kcentra/Beriplex 25–50 IU/kg IV) for anticoagulant reversal", "description": "Rapidly reverses warfarin and DOAC-related coagulopathy in life-threatening bleeding. PCC achieves INR normalization within 15–30 minutes, far faster than FFP. For dabigatran, idarucizumab (Praxbind 5 g IV) provides specific reversal.", "effectiveness": "Reverses warfarin anticoagulation (INR < 1.3) in 62–93% of patients within 30 minutes; reduces time to hemostasis and blood product use compared with FFP alone" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Endoscopic hemostasis (dual therapy with injection, thermal coagulation, and/or clip)", "description": "Primary treatment for bleeding peptic ulcers and visible vessels. Adrenaline injection reduces blood flow; thermal contact or Hemoclip application seals the vessel. Endoscopy within 24 hours (12 hours for variceal bleeding) reduces re-bleeding, surgery rates, and mortality.", "successRate": "Initial hemostasis achieved in 90–95% of peptic ulcer bleeds; re-bleeding after dual therapy 5–15% (versus 30–40% after injection alone)" },
+    { "name": "Endoscopic variceal band ligation (EVL)", "description": "Placement of elastic bands around esophageal varices under endoscopic visualization. Preferred first-line treatment for active variceal bleeding; obliterates varices in 3–6 sessions for secondary prophylaxis.", "successRate": "Acute hemostasis in 85–90% of variceal bleeds; 5-day re-bleeding rate below 10% in controlled trials" },
+    { "name": "Interventional radiology — transcatheter arterial embolization (TAE)", "description": "Catheter-directed embolization of the bleeding vessel using coils, gel foam, or particles. Used for GI bleeding refractory to endoscopy, trauma solid organ hemorrhage, pelvic fracture bleeding, and aortic branch aneurysms.", "successRate": "Technical success (cessation of arterial hemorrhage) in 80–95% of cases; re-bleeding rate 10–25% depending on etiology" },
+    { "name": "Emergency surgical hemostasis (laparotomy, damage-control surgery)", "description": "Required for intraperitoneal hemorrhage, aortic aneurysm rupture, refractory surgical bleeding, or bowel resection for lower GI bleeding. Damage-control surgery involves rapid packing, temporary vessel ligation, and resuscitation in the ICU before definitive repair.", "successRate": "Dependent on injury severity and time to operating room; damage-control survival rates of 50–70% in Class IV hemorrhage at trauma centers" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Topical hemostatic dressings (chitosan-impregnated Combat Gauze, QuikClot)", "description": "Prehospital wound-packing dressings that promote local hemostasis by activating clotting pathways at the wound site. Backed by US military data (TCCC guidelines) showing 85–90% hemorrhage control in junctional wounds where tourniquets cannot be applied." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "blood-transfusion",
+    "endoscopic-variceal-band-ligation",
+    "iron-replacement-therapy"
+  ],
+
+  "whySeeSpecialist": "Acute posthemorrhagic anemia severe enough to cause symptoms or requiring transfusion should be evaluated by the team managing the bleeding source — gastroenterology for GI bleed, surgery for trauma or surgical bleeding, maternal-fetal medicine for obstetric hemorrhage. A hematologist is essential when coagulopathy complicates hemorrhage, when an underlying bleeding disorder is suspected, or for guidance on complex transfusion and factor replacement strategies.",
+  "doctorSelectionGuide": "For suspected GI hemorrhage, a gastroenterologist at a center with 24/7 emergency endoscopy is essential. For traumatic hemorrhage, a level-1 trauma center with immediate access to interventional radiology, a massive transfusion protocol, and a specialized trauma team is optimal. A hematologist should be consulted when DOAC reversal, coagulopathy management, or an inherited bleeding disorder is involved.",
+
+  "hospitalCriteria": [
+    "24/7 emergency endoscopy capability with dual-therapy hemostasis",
+    "Blood bank with massive transfusion protocol and 1:1:1 pRBC:FFP:platelet inventory",
+    "Interventional radiology available around the clock for arterial embolization",
+    "Level-1 or Level-2 trauma center with immediate operating room availability",
+    "Intensive care unit with point-of-care coagulation testing (TEG/ROTEM)"
+  ],
+  "keyFacilities": [
+    "Level-1 trauma centers for traumatic hemorrhage",
+    "Academic medical centers with integrated gastroenterology and IR hemorrhage protocols",
+    "Tertiary obstetric units with maternal critical care capability",
+    "Vascular surgery centers for aortic hemorrhage"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Prescribe proton pump inhibitors as co-therapy whenever NSAIDs are given to patients over 65, those with a peptic ulcer history, or those on concurrent anticoagulants.",
+    "Perform upper endoscopy with prophylactic band ligation for large esophageal varices in cirrhotic patients before a bleed occurs (primary prophylaxis).",
+    "Apply pre-hospital tourniquet or hemostatic dressings immediately in accessible limb hemorrhage — the Stop The Bleed campaign estimates bystander tourniquet application could save 20,000 lives annually in the US.",
+    "Administer prophylactic oxytocin 10 IU IV or IM immediately after delivery to reduce postpartum hemorrhage risk by 40–50% (WHO 2012 recommendation).",
+    "Hold or dose-adjust anticoagulants before elective procedures using standardized peri-procedural bridging protocols from ASH and ACCP guidelines.",
+    "Monitor patients on long-term NSAIDs and anticoagulants for early signs of GI bleeding with annual iron studies and stool occult blood testing."
+  ],
+
+  "lifestyleModifications": [
+    "Avoid NSAIDs, aspirin, and other non-prescription antiplatelet agents unless prescribed by a physician aware of your GI or coagulopathy risk.",
+    "Take all prescribed anticoagulants at the specified time and dose; do not self-adjust without medical supervision.",
+    "Iron supplementation (ferrous sulfate 200 mg 2–3 times daily or IV iron if oral is not tolerated) is required for all patients once acute hemorrhage is controlled, as iron stores are depleted by red cell loss.",
+    "Adhere to regular follow-up endoscopy for variceal surveillance and band ligation to prevent re-bleeding.",
+    "Avoid alcohol, which promotes GI bleeding through gastric irritation and impairs hepatic coagulation factor production.",
+    "Return to activity gradually after significant hemorrhage: light activity when hemoglobin exceeds 8 g/dL; moderate activity when above 10 g/dL."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Iron-rich foods (lean red meat, dark-meat poultry, liver, lentils, tofu, fortified cereals) during the recovery phase to replenish depleted iron stores",
+      "Vitamin C-rich foods (citrus, bell peppers, strawberries) eaten with iron-containing meals to enhance non-heme iron absorption by 2–3 fold",
+      "Protein-rich foods (eggs, fish, legumes) providing amino acids for albumin synthesis and tissue repair during recovery",
+      "Leafy green vegetables providing vitamin K and folate to support clotting factor synthesis and erythropoiesis"
+    ],
+    "avoid": [
+      "Alcohol during recovery and in patients with GI bleeding risk or portal hypertension",
+      "NSAIDs and aspirin as self-medication for pain, which damage the gastric mucosa and inhibit platelet aggregation",
+      "Excessive coffee and tea with meals, which reduce dietary iron absorption by 40–60% through polyphenol binding",
+      "Calcium-rich foods or antacids taken simultaneously with oral iron supplements, which reduce iron absorption"
+    ]
+  },
+  "exerciseGuidelines": "Rest is recommended until hemoglobin stabilizes above 8 g/dL and the bleeding source is secured. Light walking is safe once hemoglobin exceeds 8 g/dL without symptoms. Return to full activity is guided by hemoglobin normalization (typically 8–12 weeks depending on blood loss volume) and absence of ongoing blood loss. Resistance exercise should be avoided while on full anticoagulation or with platelet counts below 50 × 10⁹/L.",
+
+  "dailyManagement": [
+    "Take prescribed oral iron supplementation (ferrous sulfate or iron bisglycinate) daily between meals or with vitamin C to maximize absorption, for a minimum of 3 months after acute hemorrhage.",
+    "Monitor stool color: black tarry stools after GI bleeding may represent re-bleeding; report immediately if stools become dark or bloody again.",
+    "Check daily resting heart rate; persistent tachycardia above 100 bpm warrants same-day medical review to exclude re-bleeding.",
+    "Attend scheduled follow-up for CBC to confirm hemoglobin recovery — weekly for the first 2–4 weeks after discharge, then monthly until normalization.",
+    "Carry a card or app record of anticoagulant type and dose if on DOAC or warfarin therapy, for emergency reversal if re-bleeding occurs.",
+    "Report any dizziness on standing, new fatigue, pallor, or dark stools to the care team promptly — these are the first warning signs of recurrent hemorrhage."
+  ],
+
+  "prognosis": "Prognosis depends on the magnitude of blood loss, the speed of hemorrhage control, patient age, and co-morbidities. ATLS Class I–II hemorrhage controlled quickly has an excellent prognosis with full hemoglobin recovery in 4–8 weeks. Class III–IV hemorrhage requiring massive transfusion carries in-hospital mortality rates of 15–40% in trauma series, with survivors at risk of multi-organ failure, transfusion-associated lung injury (TRALI), and coagulopathy. After controlled peptic ulcer bleeding with dual endoscopic therapy and PPI, re-bleeding occurs in 5–15% and 30-day mortality is 5–10%. Variceal bleeding carries higher mortality (15–25% per episode); without secondary prophylaxis, the re-bleeding rate within 1 year reaches 60%. Postpartum hemorrhage mortality in high-income countries is below 0.5 per 100,000 births with modern obstetric care; in low-income settings the rate is 10–100 times higher. After hemoglobin normalization, full functional recovery is the expectation for patients without end-organ damage from the acute episode.",
+
+  "recoveryTimeline": "Hemoglobin begins to rise within 48–72 hours as the marrow increases erythropoiesis 6–8 fold. With adequate iron stores, hemoglobin recovers at approximately 1 g/dL per week. Full normalization requires 4–8 weeks for moderate blood loss and 8–12 weeks for massive hemorrhage. Iron stores take 3–6 months to replenish with oral supplementation.",
+
+  "complications": [
+    "Multi-organ failure (renal, hepatic, respiratory) from prolonged tissue hypoperfusion in Class III–IV hemorrhagic shock — prevented by rapid hemorrhage control and goal-directed resuscitation.",
+    "Transfusion-associated complications: TRALI (1 in 5,000 units), transfusion-associated circulatory overload (TACO), febrile reactions, and alloimmunization — minimized with restrictive transfusion protocols and leukodepletion.",
+    "Dilutional coagulopathy from large-volume crystalloid resuscitation — prevented by early FFP and platelet co-administration in massive transfusion.",
+    "Re-bleeding from the original source — occurs in 5–15% of peptic ulcer patients, 15–20% of variceal patients, and up to 20% of post-traumatic patients; regular monitoring and secondary prophylaxis are essential.",
+    "Iron deficiency anemia persisting for months after acute hemorrhage if iron supplementation is inadequate — detected by CBC and ferritin at 4–8 weeks post-discharge.",
+    "Abdominal compartment syndrome after massive retroperitoneal or intraperitoneal hemorrhage — monitor intra-abdominal pressure in patients requiring large-volume resuscitation."
+  ],
+
+  "supportResources": [
+    { "name": "American Red Cross Blood Services — Patient Resources", "url": "https://www.redcrossblood.org/donate-blood/how-to-donate/eligibility-requirements/eligibility-information.html", "description": "Information on blood donation, transfusion safety, and resources for patients who require blood product support." },
+    { "name": "Stop The Bleed — American College of Surgeons", "url": "https://www.stopthebleed.org/", "description": "Bystander hemorrhage-control education campaign teaching tourniquet application and wound packing, with free training resources." },
+    { "name": "British Society of Gastroenterology GI Bleeding Guidelines", "url": "https://www.bsg.org.uk/clinical-resource/bsg-guidelines-for-the-management-of-acute-upper-and-lower-gastrointestinal-bleeding/", "description": "Full-text clinical guidelines for the management of acute upper and lower GI bleeding, freely available for patients and clinicians." },
+    { "name": "WHO Recommendations for the Prevention and Treatment of Postpartum Haemorrhage", "url": "https://www.who.int/publications/i/item/9789241548502", "description": "WHO guidance on preventing and managing the leading cause of maternal death worldwide." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "iron-deficiency-anemia-unspecified-d509", "name": "Iron-deficiency anemia (chronic)", "keyDifference": "Chronic iron-deficiency anemia develops gradually over months and usually has no hemodynamic instability, no history of acute bleeding event, and shows low serum ferritin as the earliest marker. Acute posthemorrhagic anemia presents acutely with cardiovascular signs and normal ferritin in the first 24–48 hours because iron stores have not yet been depleted." },
+    { "slug": "acquired-hemolytic-anemia-unspecified-d599", "name": "Hemolytic anemia", "keyDifference": "Hemolytic anemia causes red cell destruction in the circulation, producing elevated LDH, indirect bilirubin, and reticulocytosis without evidence of blood loss. Acute posthemorrhagic anemia has a clear history of bleeding and shows low reticulocyte count in the initial hours, before the marrow response begins." },
+    { "slug": "aplastic-anemia-unspecified-d619", "name": "Aplastic anemia", "keyDifference": "Aplastic anemia produces pancytopenia from marrow failure without an acute bleeding event, with a hypocellular marrow biopsy. Acute posthemorrhagic anemia occurs in the context of bleeding, with a normal or reactive marrow and reticulocytosis as recovery begins. White cells and platelets are normal unless trauma-induced coagulopathy is present." },
+    { "slug": "anemia-in-chronic-kidney-disease-d631", "name": "Anemia of chronic kidney disease", "keyDifference": "CKD anemia is normocytic, develops slowly, and results from reduced erythropoietin production with a low reticulocyte index. It does not present with hemodynamic instability, tachycardia, or history of acute blood loss. Ferritin may be elevated in CKD anemia while iron stores are genuinely depleted." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "acquired-hemophilia-d68311", "name": "Acquired hemophilia" },
+    { "slug": "antiphospholipid-syndrome", "name": "Antiphospholipid syndrome" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "anemia", "name": "Anemia", "relevance": "Acute posthemorrhagic anemia is one of the most dramatic presentations of anemia; it shares management principles with other acute anemias but has distinct hemodynamic features." },
+    { "slug": "iron-deficiency-anemia-unspecified-d509", "name": "Iron-deficiency anemia", "relevance": "Chronic occult GI bleeding causes iron deficiency anemia; acute hemorrhage causes posthemorrhagic anemia; both require iron supplementation during recovery." },
+    { "slug": "aplastic-anemia-unspecified-d619", "name": "Aplastic anemia", "relevance": "Both require red cell transfusion support; aplastic anemia can present with life-threatening bleeding from thrombocytopenia, overlapping clinically with posthemorrhagic anemia." },
+    { "slug": "acquired-hemophilia-d68311", "name": "Acquired hemophilia", "relevance": "Acquired hemophilia causes spontaneous massive soft-tissue hemorrhage and a coagulopathy that complicates the management of acute blood loss anemia." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is acute posthemorrhagic anemia?",
+      "answer": "Acute posthemorrhagic anemia is anemia caused by sudden significant blood loss from trauma, GI bleeding, surgery, or obstetric hemorrhage. The hemoglobin falls rapidly, reducing oxygen delivery to tissues and causing symptoms of shock. It is a medical emergency when severe and requires immediate hemorrhage control and blood transfusion.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is acute blood loss anemia different from chronic anemia?",
+      "answer": "Acute blood loss anemia occurs over minutes to hours with cardiovascular signs such as tachycardia and hypotension before hemoglobin falls significantly. Chronic anemia develops over weeks to months, allowing cardiovascular compensation; patients may have hemoglobin of 6–7 g/dL with few symptoms. Ferritin is normal in the acute phase and low in chronic iron deficiency.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the most common cause of acute posthemorrhagic anemia?",
+      "answer": "Gastrointestinal bleeding from peptic ulcers, esophageal varices, or diverticular disease is the most common non-traumatic cause. Traumatic hemorrhage from road traffic accidents and falls is the most common cause of hemorrhagic death under age 45 globally.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When does someone need a blood transfusion for acute blood loss?",
+      "answer": "Transfusion thresholds depend on symptoms and hemoglobin level. For most patients in the ICU or after surgery, transfusion is given when hemoglobin falls below 7 g/dL. For patients with heart disease or active cardiac ischemia, a threshold of 8 g/dL is used. In ongoing hemorrhagic shock, transfusion begins regardless of hemoglobin to restore oxygen-carrying capacity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is tranexamic acid and why is it given for bleeding?",
+      "answer": "Tranexamic acid is a drug that prevents blood clots from dissolving prematurely, allowing the body to seal bleeding vessels. Given within 3 hours of traumatic hemorrhage or postpartum hemorrhage, it reduces mortality by 10–16%. It is cheap, widely available, and recommended by WHO for major hemorrhage.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How fast does hemoglobin recover after blood loss?",
+      "answer": "With adequate iron stores and nutrition, hemoglobin increases at roughly 1 g/dL per week. Moderate blood loss takes 4–8 weeks to normalize; massive hemorrhage may take 8–12 weeks. Iron supplementation (oral or IV) is required for 3–6 months after significant blood loss to replenish both hemoglobin and iron stores.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a massive transfusion protocol?",
+      "answer": "A massive transfusion protocol (MTP) is an emergency plan activated when a patient requires more than 10 units of red blood cells within 24 hours or is in severe hemorrhagic shock. It delivers red cells, plasma, and platelets in a 1:1:1 ratio to treat coagulopathy alongside blood loss, reducing mortality in trauma and obstetric emergencies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can acute blood loss anemia be fatal?",
+      "answer": "Yes. Loss of over 40% of blood volume without treatment causes Class IV hemorrhagic shock with a mortality exceeding 50%. Variceal GI bleeding carries 15–25% mortality per episode. Rapid hemorrhage control, fluid resuscitation, and blood transfusion are essential to prevent death.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hemoglobin normal in the first hours after major blood loss?",
+      "answer": "Yes, hemoglobin can be misleadingly normal in the first 6–12 hours after major blood loss because plasma volume and red cell volume fall together. The drop becomes apparent only after IV fluids dilute the remaining red cells. This is why vital signs (tachycardia, hypotension) are more reliable early signs than the hemoglobin value alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What iron supplement should I take after a major bleed?",
+      "answer": "Ferrous sulfate 200 mg twice to three times daily is the most common oral iron supplement used after significant blood loss. If oral iron is not tolerated or absorption is poor (as after GI surgery), IV iron (ferric carboxymaltose or iron sucrose) provides rapid repletion in one or two doses. Continue iron for 3–6 months until ferritin normalizes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is upper GI bleeding stopped without surgery?",
+      "answer": "Most upper GI bleeds are controlled by endoscopy. A gastroenterologist passes a flexible camera through the mouth and uses injection of adrenaline, thermal coagulation, or metal clips to seal the bleeding vessel. This stops bleeding in 90–95% of peptic ulcer cases. Variceal bleeding is controlled with rubber band ligation placed over the varices.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the four ATLS classes of hemorrhage?",
+      "answer": "ATLS Class I: under 750 mL blood loss, no significant symptoms. Class II: 750–1,500 mL, tachycardia and restlessness. Class III: 1,500–2,000 mL, hypotension, oliguria, and confusion. Class IV: over 2,000 mL, severe shock with life-threatening hemodynamic compromise requiring immediate transfusion and surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can postpartum hemorrhage cause lasting anemia?",
+      "answer": "Yes. Postpartum hemorrhage can deplete iron stores and reduce hemoglobin for 6–12 weeks after delivery. Women should receive IV or oral iron supplementation after significant postpartum blood loss. Untreated iron deficiency anemia postpartum is associated with fatigue, depression, and impaired mother-infant bonding.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does anticoagulation increase risk of acute blood loss anemia?",
+      "answer": "Yes. Warfarin, direct oral anticoagulants, and heparin increase the risk of major bleeding by 2–4 times compared with no anticoagulation. Annual major bleeding rates are 2–4% per patient per year on warfarin. Bleeding can be rapidly reversed with vitamin K, prothrombin complex concentrate, or specific reversal agents.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods help recovery from acute blood loss anemia?",
+      "answer": "Iron-rich foods including lean red meat, liver, lentils, tofu, and fortified cereals speed hemoglobin recovery. Vitamin C from citrus or bell peppers eaten with iron-rich foods enhances absorption. Adequate protein (eggs, fish, legumes) supports erythropoiesis. Avoid tea, coffee, and calcium with iron-containing meals as they reduce absorption.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Acute blood loss anemia",
+  "regionalNames": [
+    { "name": "Anemia posthemorrágica aguda", "region": "Spain, Latin America", "language": "Spanish" },
+    { "name": "Anémie posthémorragique aiguë", "region": "France", "language": "French" },
+    { "name": "Akute posthämorrhagische Anämie", "region": "Germany", "language": "German" },
+    { "name": "तीव्र रक्तस्रावी एनीमिया", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "acute posthemorrhagic anemia",
+    "acute blood loss anemia",
+    "hemorrhagic anemia",
+    "anemia from bleeding",
+    "blood loss anemia",
+    "post hemorrhage anemia",
+    "GI bleed anemia",
+    "trauma anemia transfusion",
+    "postpartum hemorrhage anemia",
+    "hemorrhagic shock",
+    "acute anemia treatment",
+    "blood transfusion anemia",
+    "ATLS hemorrhage classes"
+  ],
+  "symptomKeywords": [
+    "sudden dizziness and pallor after blood loss",
+    "rapid heart rate after bleeding",
+    "low blood pressure after trauma",
+    "weakness and fatigue after surgery",
+    "blood in stool causing anemia",
+    "vomiting blood and dizziness"
+  ],
+
+  "metaTitle": "Acute Posthemorrhagic Anemia: Symptoms & Treatment | aihealz",
+  "metaDescription": "Acute posthemorrhagic anemia: anemia from sudden blood loss causing shock, tachycardia, and pallor. Causes, ATLS classes, transfusion, and recovery reviewed.",
+
+  "keywords": [
+    "acute posthemorrhagic anemia",
+    "acute blood loss anemia",
+    "hemorrhagic shock treatment",
+    "blood transfusion threshold",
+    "tranexamic acid hemorrhage",
+    "massive transfusion protocol",
+    "GI bleeding anemia",
+    "postpartum hemorrhage anemia",
+    "iron recovery after bleeding",
+    "ATLS hemorrhage classification",
+    "anemia from trauma"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Hébert PC, Wells G, Blajchman MA, et al. 1999. A multicenter, randomized, controlled clinical trial of transfusion requirements in critical care. New England Journal of Medicine 340(6):409-17.", "url": "https://pubmed.ncbi.nlm.nih.gov/9971864/", "accessedDate": "2026-05-14" },
+    { "title": "Holst LB, Haase N, Wetterslev J, et al. 2014. Lower versus higher hemoglobin threshold for transfusion in septic shock. New England Journal of Medicine 371(15):1381-91.", "url": "https://pubmed.ncbi.nlm.nih.gov/25270174/", "accessedDate": "2026-05-14" },
+    { "title": "CRASH-2 Trial Collaborators. 2010. Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients. Lancet 376(9734):23-32.", "url": "https://pubmed.ncbi.nlm.nih.gov/20554319/", "accessedDate": "2026-05-14" },
+    { "title": "Holcomb JB, Tilley BC, Baraniuk S, et al. 2015. Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio and mortality in patients with severe trauma: the PROPPR randomized clinical trial. JAMA 313(5):471-82.", "url": "https://pubmed.ncbi.nlm.nih.gov/25647203/", "accessedDate": "2026-05-14" },
+    { "title": "Villanueva C, Colomo A, Bosch A, et al. 2013. Transfusion strategies for acute upper gastrointestinal bleeding. New England Journal of Medicine 368(1):11-21.", "url": "https://pubmed.ncbi.nlm.nih.gov/23281973/", "accessedDate": "2026-05-14" },
+    { "title": "Shakur H, Roberts I, Fawole B, et al. 2017. Effect of early tranexamic acid administration on mortality, hysterectomy, and other morbidities in women with post-partum haemorrhage (WOMAN): an international, randomised, double-blind, placebo-controlled trial. Lancet 389(10084):2105-16.", "url": "https://pubmed.ncbi.nlm.nih.gov/28456509/", "accessedDate": "2026-05-14" },
+    { "title": "Laine L, Jensen DM. 2012. Management of patients with ulcer bleeding. American Journal of Gastroenterology 107(3):345-60.", "url": "https://pubmed.ncbi.nlm.nih.gov/22310222/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

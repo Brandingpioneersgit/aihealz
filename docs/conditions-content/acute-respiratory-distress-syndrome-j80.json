@@ -1,0 +1,396 @@
+{
+  "_meta": {
+    "slug": "acute-respiratory-distress-syndrome-j80",
+    "tier": 1,
+    "headTerm": "acute respiratory distress syndrome",
+    "longTailKeywords": [
+      "ARDS symptoms",
+      "ARDS treatment",
+      "acute respiratory distress syndrome causes",
+      "ARDS lung protective ventilation",
+      "Berlin definition ARDS",
+      "ARDS prognosis survival",
+      "ARDS ICU management",
+      "acute respiratory distress syndrome diagnosis",
+      "prone positioning ARDS",
+      "ARDS mortality rate"
+    ],
+    "primarySpecialty": "Pulmonology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Acute Respiratory Distress Syndrome (ARDS): Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Pulmonology",
+
+  "heroOverview": "Acute respiratory distress syndrome (ARDS) is a life-threatening form of respiratory failure in which widespread lung inflammation floods the air sacs with fluid, causing profound hypoxemia that cannot be corrected by supplemental oxygen alone. The Berlin Definition (2012) classifies ARDS into mild, moderate, and severe categories based on the ratio of arterial oxygen pressure to inspired oxygen fraction (PaO2/FiO2). Hospital mortality averages 35-46% in large multicenter trials, rising to roughly 45% in severe cases. ARDS complicates approximately 10% of all ICU admissions worldwide and occurs as a consequence of direct lung injury — pneumonia, aspiration — or indirect injury from sepsis, trauma, or blood transfusion. Lung-protective mechanical ventilation with low tidal volumes (6 mL/kg predicted body weight) remains the only intervention with proven mortality benefit.",
+
+  "keyStats": {
+    "prevalence": "Approximately 10% of ICU admissions worldwide; estimated 3 million cases per year globally (Bellani et al. JAMA 2016)",
+    "demographics": "Occurs at any age; median age approximately 58 years in LUNG SAFE study; male and female incidence roughly equal; higher risk in patients with sepsis, pneumonia, or trauma",
+    "avgAge": "Median age approximately 58 years; can affect any age from neonates to elderly",
+    "globalCases": "~3 million cases annually worldwide; accounts for 10.4% of all ICU admissions across 50 countries (LUNG SAFE 2016)"
+  },
+
+  "definition": "Acute respiratory distress syndrome (ICD-10: J80) is a syndrome of acute, diffuse, inflammatory lung injury producing hypoxemic respiratory failure not fully explained by cardiac failure or fluid overload. The 2012 Berlin Definition replaced the older American-European Consensus Conference criteria and requires: (1) onset within one week of a clinical insult or new/worsening respiratory symptoms; (2) bilateral opacities on chest imaging not fully explained by effusions, lobar collapse, or nodules; (3) respiratory failure not fully explained by cardiac failure or fluid overload; and (4) PaO2/FiO2 ratio below 300 mmHg on positive end-expiratory pressure (PEEP) of at least 5 cmH2O. Severity is stratified as mild (PaO2/FiO2 201-300), moderate (101-200), or severe (≤100). The pathophysiology involves a two-phase progression: an initial exudative phase (days 1-7) with disruption of the alveolar-capillary barrier, flooding of alveoli with protein-rich fluid, activation of neutrophils, and formation of hyaline membranes; followed by a proliferative phase (days 7-21) with fibroblast invasion and early fibrosis. ARDS is managed in the ICU by pulmonologists and intensivists, and requires mechanical ventilation in the vast majority of cases.",
+
+  "typesClassification": [
+    { "type": "Mild ARDS", "description": "PaO2/FiO2 ratio 201-300 mmHg on PEEP ≥5 cmH2O. Previously called acute lung injury (ALI) under older criteria. Hospital mortality approximately 27% in Berlin validation cohort." },
+    { "type": "Moderate ARDS", "description": "PaO2/FiO2 ratio 101-200 mmHg on PEEP ≥5 cmH2O. Majority of ARDS cases fall into this category. Hospital mortality approximately 32% in Berlin validation cohort." },
+    { "type": "Severe ARDS", "description": "PaO2/FiO2 ratio ≤100 mmHg on PEEP ≥10 cmH2O. Highest mortality tier, approximately 45% in the Berlin validation cohort. Most likely to benefit from prone positioning and neuromuscular blockade." },
+    { "type": "Direct (pulmonary) ARDS", "description": "Caused by a primary lung insult: pneumonia (most common cause, ~60% of ARDS), aspiration of gastric contents, near-drowning, inhalation injury, or pulmonary contusion." },
+    { "type": "Indirect (extrapulmonary) ARDS", "description": "Triggered by a systemic insult reaching the lungs via the bloodstream: sepsis (most common indirect cause), major trauma, pancreatitis, massive blood transfusion (TRALI), or drug overdose." }
+  ],
+
+  "primarySymptoms": [
+    "Severe progressive dyspnea that develops over hours to days following a precipitating event, typically requiring supplemental oxygen or ventilatory support.",
+    "Tachypnea with respiratory rates exceeding 30 breaths per minute, reflecting the drive to compensate for impaired gas exchange.",
+    "Profound hypoxemia with arterial oxygen saturation below 90% despite high-flow supplemental oxygen, the defining gas-exchange failure of ARDS.",
+    "Diffuse bilateral crackles on chest auscultation reflecting widespread alveolar flooding and consolidation.",
+    "Cyanosis of lips, fingertips, and peripheral skin when oxygen saturation falls below approximately 85%.",
+    "Agitation, confusion, and altered mental status from cerebral hypoxia, often preceding frank respiratory failure.",
+    "Use of accessory respiratory muscles — sternocleidomastoid, scalene, intercostal retraction — indicating severe work of breathing.",
+    "Bilateral diffuse opacities on chest X-ray or CT, described as 'white-out' in severe cases, from airspace consolidation and ground-glass change.",
+    "Frothy, non-purulent respiratory secretions from leakage of protein-rich edema fluid into airways.",
+    "Worsening hypoxemia despite increasing FiO2, the hallmark of the refractory hypoxemia that distinguishes ARDS from simpler causes of respiratory failure."
+  ],
+
+  "earlyWarningSigns": [
+    "Worsening oxygen requirements over 12-24 hours in a patient admitted with pneumonia, sepsis, or aspiration — the most common prodrome before full ARDS criteria are met.",
+    "Increasing respiratory rate above 25 breaths per minute paired with labored breathing and SpO2 remaining below 94% despite non-rebreather mask.",
+    "New bilateral opacities appearing on chest X-ray within 24-48 hours of a clinical insult, even without severe hypoxemia yet.",
+    "Rising lactate and falling PaO2/FiO2 ratio on serial arterial blood gas measurements in a critically ill patient.",
+    "Declining tidal volume or compliance noted during non-invasive ventilation, suggesting progressive lung stiffening."
+  ],
+
+  "emergencySigns": [
+    "PaO2 below 60 mmHg or SpO2 below 88% despite 100% non-rebreather mask — immediate preparation for intubation and mechanical ventilation is required.",
+    "Respiratory rate above 35 breaths per minute with accessory muscle use and inability to speak full sentences — impending respiratory arrest.",
+    "Sudden cardiac arrest or pulseless electrical activity in an ARDS patient — may reflect severe hypoxemia, tension pneumothorax from barotrauma, or right heart failure.",
+    "Abrupt deterioration in ARDS patient on ventilator — consider pneumothorax, endotracheal tube dislodgement, mucus plugging, or pulmonary embolism as immediately reversible causes.",
+    "New hemoptysis combined with worsening hypoxemia in an intubated ARDS patient — raises possibility of diffuse alveolar hemorrhage requiring bronchoscopy."
+  ],
+
+  "causes": [
+    {
+      "cause": "Pneumonia (bacterial, viral, or fungal)",
+      "description": "The single most common cause, responsible for approximately 60% of ARDS cases globally. Both community-acquired and hospital-acquired pneumonia can trigger ARDS, as can viral pneumonitis from influenza, SARS-CoV-2, and other respiratory viruses. Direct alveolar epithelial injury from pathogens activates an inflammatory cascade that disrupts the alveolar-capillary barrier."
+    },
+    {
+      "cause": "Sepsis",
+      "description": "The most common indirect (extrapulmonary) cause of ARDS. Systemic inflammatory mediators — including TNF-alpha, IL-6, and IL-8 — activate pulmonary endothelium, increasing vascular permeability and promoting neutrophil extravasation into alveoli even without a primary lung focus of infection. Sepsis-associated ARDS carries higher mortality than pneumonia-associated ARDS."
+    },
+    {
+      "cause": "Aspiration of gastric contents",
+      "description": "Aspiration of acidic gastric contents triggers a chemical burn of the bronchial epithelium followed by secondary bacterial infection in some cases. Major risk groups include patients with decreased consciousness from alcohol, drugs, or general anesthesia. The pH and volume of aspirate determine severity; pH below 2.5 causes the most acute injury."
+    },
+    {
+      "cause": "Major trauma and pulmonary contusion",
+      "description": "Blunt chest trauma disrupts the alveolar-capillary barrier directly through pulmonary contusion, and the systemic inflammatory response to major trauma can trigger indirect ARDS via the same cytokine pathways as sepsis. Fat embolism following long bone fractures is an additional indirect mechanism."
+    },
+    {
+      "cause": "Transfusion-related acute lung injury (TRALI)",
+      "description": "TRALI occurs within 6 hours of blood product transfusion and is thought to involve donor antibodies (HLA or HNA) reacting with recipient leucocytes, triggering endothelial activation and capillary leak. It is a leading cause of transfusion-related mortality and a recognized ARDS etiology in surgical and critically ill patients."
+    },
+    {
+      "cause": "Acute pancreatitis",
+      "description": "Severe pancreatitis releases lipases and inflammatory cytokines systemically, causing indirect lung injury. ARDS develops in approximately 10-20% of patients with severe acute pancreatitis and is associated with a substantially higher mortality than pancreatitis without lung involvement."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Sepsis", "category": "non-modifiable", "description": "The single biggest risk factor for ARDS, present in up to 40% of cases. The risk of developing ARDS from sepsis is approximately 25-42% in ICU populations. Earlier antibiotic therapy reduces the risk." },
+    { "factor": "Pneumonia (any cause)", "category": "non-modifiable", "description": "Both community- and hospital-acquired pneumonia carry a 10-25% risk of progressing to ARDS depending on severity, organism, and host immune state." },
+    { "factor": "Alcohol use disorder", "category": "modifiable", "description": "Chronic alcohol use depletes glutathione in lung epithelial cells and impairs macrophage function, increasing ARDS risk approximately 2.5-fold after sepsis or trauma compared with non-drinkers." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Current smokers have a roughly 1.8-fold higher risk of ARDS following critical illness compared with never-smokers, likely due to pre-existing airway inflammation and impaired mucociliary clearance." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Obesity increases ARDS risk approximately 1.6-fold, probably through increased abdominal pressure reducing functional residual capacity, adipokine-driven systemic inflammation, and aspiration risk." },
+    { "factor": "Major surgery or trauma", "category": "non-modifiable", "description": "Cardiopulmonary bypass, major abdominal surgery, and long bone fractures create systemic inflammatory states that increase ARDS risk, particularly in combination with blood transfusion or pre-existing lung disease." },
+    { "factor": "Immunosuppression", "category": "non-modifiable", "description": "Bone marrow transplant recipients, solid organ transplant patients on high-dose steroids, and patients receiving cancer chemotherapy are at increased risk of both opportunistic pulmonary infections (the ARDS trigger) and impaired resolution of lung injury." }
+  ],
+
+  "affectedDemographics": [
+    "All age groups can develop ARDS; median age in the LUNG SAFE study was approximately 58 years with a standard deviation of roughly 17 years.",
+    "Incidence is roughly equal between men and women, though some studies suggest slightly higher mortality in women with severe ARDS.",
+    "ARDS occurs in approximately 10.4% of all ICU admissions across high-, middle-, and low-income countries (LUNG SAFE 2016), with similar rates on all continents.",
+    "Patients in low-resource settings have higher ARDS mortality (>60%) than high-income settings (~35-40%), partly due to limited access to lung-protective ventilation."
+  ],
+
+  "diagnosisOverview": "ARDS is diagnosed at the bedside using the 2012 Berlin Definition, which requires four criteria: acute onset within one week of a clinical insult, bilateral opacities on chest imaging, hypoxemia with PaO2/FiO2 below 300 mmHg on PEEP ≥5 cmH2O, and exclusion of cardiac failure or fluid overload as the primary cause. The chest X-ray or CT scan is obtained immediately and typically shows diffuse bilateral ground-glass opacities and consolidation; CT provides more detail and may reveal the underlying cause. Arterial blood gas (ABG) measurement quantifies the PaO2/FiO2 ratio and guides severity classification. Brain natriuretic peptide (BNP) and echocardiography help exclude hydrostatic pulmonary edema (acute pulmonary edema from heart failure), which can mimic ARDS radiographically. Echocardiography also assesses right ventricular function, which frequently deteriorates in ARDS. Bronchoscopy with bronchoalveolar lavage (BAL) is performed when the underlying etiology is unclear — BAL yields the causative organism in pneumonia and confirms diffuse alveolar hemorrhage. Point-of-care lung ultrasound is increasingly used at the bedside to detect bilateral B-lines, consolidation, and pleural effusions and to guide ventilator management. No single biomarker is specific enough to diagnose ARDS, though plasma angiopoietin-2 and receptor for advanced glycation end-products (RAGE) are being studied as prognostic markers.",
+
+  "diagnosticTests": [
+    { "test": "Arterial blood gas (ABG) analysis", "purpose": "Measures PaO2, PaCO2, and pH to calculate PaO2/FiO2 ratio and confirm hypoxemic respiratory failure meeting Berlin criteria", "whatToExpect": "A small arterial blood sample drawn from the wrist (radial artery) or groin (femoral artery). Mild discomfort for a few seconds. Results return within 10-15 minutes. Repeated every few hours in acute ARDS." },
+    { "test": "Chest X-ray (portable AP)", "purpose": "Identifies bilateral opacities not explained by effusions or collapse; the first imaging test in ARDS workup", "whatToExpect": "Taken at the bedside in the ICU with a portable machine. No radiation exposure concerns for a single film. The radiologist reports bilateral ground-glass or consolidative opacities in ARDS." },
+    { "test": "CT chest (high-resolution)", "purpose": "Characterizes the pattern and distribution of lung injury more precisely than X-ray; identifies underlying causes and complications such as pneumothorax", "whatToExpect": "Patients are transported to the scanner — complex in critically ill intubated patients. Takes 10-15 minutes. Shows dependent consolidation with non-dependent ground-glass change, the typical ARDS pattern." },
+    { "test": "Echocardiography (transthoracic or transesophageal)", "purpose": "Excludes cardiogenic pulmonary edema by assessing left ventricular function; evaluates right ventricular dilation and failure common in ARDS", "whatToExpect": "Bedside transthoracic echo with gel applied to the chest, 15-20 minutes. Transesophageal echo (TEE) requires sedation and probe insertion but gives better images in ventilated patients." },
+    { "test": "Bronchoscopy with bronchoalveolar lavage (BAL)", "purpose": "Identifies the causative organism in pneumonia-associated ARDS; detects alveolar hemorrhage or eosinophilic pneumonia when the diagnosis is uncertain", "whatToExpect": "Performed under sedation via the endotracheal tube in intubated patients. A sterile saline lavage retrieves cells and microorganisms from the distal lung. BAL may transiently worsen oxygenation; results in 24-48 hours for cultures." },
+    { "test": "B-type natriuretic peptide (BNP) or NT-proBNP", "purpose": "Helps distinguish ARDS from cardiogenic pulmonary edema; markedly elevated BNP (>500 pg/mL) suggests a cardiac cause", "whatToExpect": "A standard blood draw. Results available in 1-2 hours. Normal or mildly elevated BNP in ARDS; very high values shift suspicion toward heart failure." }
+  ],
+
+  "treatmentOverview": "Management of ARDS is largely supportive — reversing the underlying cause while minimizing further lung injury from mechanical ventilation. The ARDSNet ARMA trial (2000) established that low tidal volume ventilation at 6 mL/kg predicted body weight, compared with 12 mL/kg, reduced 28-day mortality from 40% to 31%, the most important advance in ARDS management in decades. Current guidelines from the American Thoracic Society (ATS), European Society of Intensive Care Medicine (ESICM), and Society of Critical Care Medicine recommend plateau pressure below 30 cmH2O and permissive hypercapnia when needed to achieve low-tidal-volume targets. PEEP titration maintains recruitment of collapsed alveoli; higher PEEP strategies improve oxygenation but have not consistently reduced mortality in unselected patients. Prone positioning for at least 16 hours per day reduces mortality in severe ARDS (PaO2/FiO2 <150) — the PROSEVA trial (2013) demonstrated a mortality reduction from 32.8% to 16.0% with prone positioning. Neuromuscular blockade with cisatracurium for 48 hours reduces ventilator dyssynchrony and may reduce lung injury in severe cases, though the more recent ACURASYS and ROSE trial results are debated. Conservative fluid management after the acute phase (once hemodynamics are stable) shortens ventilator days without increasing non-pulmonary organ failure (FACTT trial). Corticosteroids benefit specific ARDS triggers — COVID-19, organizing pneumonia — and the DEXA-ARDS trial showed dexamethasone 20 mg/day reducing ventilator days and 60-day mortality in moderate-to-severe ARDS. Venovenous extracorporeal membrane oxygenation (VV-ECMO) is a rescue strategy for the most severe cases not responding to conventional ventilatory support; referral to an ECMO center should be considered early.",
+
+  "medicalTreatments": [
+    { "name": "Lung-protective mechanical ventilation (6 mL/kg PBW, Pplat <30 cmH2O)", "description": "Intubation and mechanical ventilation is required in most ARDS cases. Low tidal volumes reduce ventilator-induced lung injury (VILI) by limiting overdistension of the still-open alveoli. Daily interruption of sedation and spontaneous breathing trials accelerate weaning once the underlying cause is resolving.", "effectiveness": "ARDSNet ARMA trial: mortality reduced from 39.8% to 31.0% vs 12 mL/kg — a 22% relative risk reduction" },
+    { "name": "Prone positioning (≥16 hours/day for severe ARDS)", "description": "Turning the intubated patient face-down for 16 or more consecutive hours improves dorsal lung recruitment, reduces ventral overdistension, and more evenly distributes ventilation-perfusion matching. Requires a trained team of 4-6 staff and a dedicated turning protocol.", "effectiveness": "PROSEVA 2013: 28-day mortality 16.0% prone vs 32.8% supine (P<0.001) in severe ARDS (PaO2/FiO2 <150)" },
+    { "name": "Dexamethasone (20 mg/day IV days 1-5, then 10 mg/day days 6-10)", "description": "Reduces alveolar inflammation and potentially limits progression to fibrosing alveolitis. The DEXA-ARDS regimen is the most studied glucocorticoid protocol specifically for ARDS, distinct from the earlier methylprednisolone regimens.", "effectiveness": "DEXA-ARDS 2020: ventilator-free days increased by 4.8 days; 60-day mortality reduced from 43% to 21% in moderate-to-severe ARDS" },
+    { "name": "Conservative fluid management (CVP target 4-8, PAOP target 8-12 after shock is resolved)", "description": "Avoiding unnecessary fluid accumulation limits hydrostatic worsening of alveolar edema during the recovery phase. Conservative strategy is initiated once the patient is no longer in shock and hemodynamics are stable.", "effectiveness": "FACTT trial: 2.5 more ventilator-free days (15 vs 12.1 days, P=0.02) with conservative vs liberal fluid strategy" },
+    { "name": "Neuromuscular blockade (cisatracurium 37.5 mg/hr for 48 hours)", "description": "Eliminates patient-ventilator dyssynchrony ('breath-stacking'), which can amplify lung injury in severe ARDS. Requires deep sedation monitoring and daily assessment for reversal.", "effectiveness": "ACURASYS 2010: improved 90-day mortality and more ventilator-free days; ROSE 2019 did not replicate this benefit in a larger trial — benefit likely in dyssynchronous patients specifically" },
+    { "name": "Venovenous ECMO (rescue therapy for refractory ARDS)", "description": "Extracorporeal oxygenation and CO2 removal bypasses the injured lung, allowing ultra-low-tidal-volume 'rest' ventilation. Reserved for severe ARDS with PaO2/FiO2 <80 despite optimal conventional management; requires specialist ECMO center.", "effectiveness": "CESAR 2009: 63% vs 47% survival without severe disability at 6 months; EOLIA 2018 primary outcome narrowly missed significance, but rescue ECMO crossover showed benefit" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "High-flow nasal cannula (HFNC) oxygen therapy", "description": "For mild-to-moderate ARDS not yet requiring intubation, heated humidified high-flow oxygen (40-60 L/min) reduces work of breathing and may delay or prevent intubation. The ROX index (SpO2/FiO2 divided by respiratory rate) predicts HFNC failure; index <2.85 at 12 hours predicts need for intubation." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "mechanical-ventilation",
+    "prone-positioning-therapy",
+    "ecmo-therapy"
+  ],
+
+  "whySeeSpecialist": "ARDS requires immediate intensive care unit admission under a pulmonologist or intensivist. These specialists manage lung-protective ventilation protocols, prone positioning, ECMO referral, and weaning. Infectious disease consultation is frequently needed to optimize antibiotic or antiviral therapy for the precipitating cause.",
+  "doctorSelectionGuide": "Seek care at a hospital with a dedicated medical or surgical ICU staffed around the clock by intensivists, with an established prone positioning team. For refractory severe ARDS, early transfer to an ECMO center before the patient deteriorates further improves outcomes.",
+
+  "hospitalCriteria": [
+    "24/7 intensivist-staffed ICU with lung-protective ventilation protocols",
+    "Prone positioning team trained and available",
+    "ECMO capability or established transfer agreement with an ECMO center",
+    "Bronchoscopy service available for diagnostic BAL",
+    "Advanced cardiac echocardiography for right ventricular monitoring"
+  ],
+  "keyFacilities": [
+    "Medical or surgical ICU at academic or tertiary hospitals",
+    "ECMO centers for refractory severe ARDS",
+    "High-volume trauma centers with ARDS protocols",
+    "Pulmonary and critical care medicine fellowship programs"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Implement early goal-directed therapy in sepsis to limit the duration and severity of systemic inflammation that triggers indirect ARDS.",
+    "Restrict blood transfusions to evidence-based thresholds (hemoglobin <7 g/dL in stable patients) to reduce TRALI exposure.",
+    "Use lung-protective ventilation (6-8 mL/kg PBW) intraoperatively in high-risk surgical patients — shown to reduce postoperative pulmonary complications and ARDS.",
+    "Minimize aspiration risk by maintaining head-of-bed elevation at 30-45 degrees for all intubated or sedated patients.",
+    "Counsel patients with alcohol use disorder on cessation — reducing alcohol exposure lowers ARDS risk roughly 2.5-fold if a critical illness does develop.",
+    "Vaccinate against influenza and SARS-CoV-2 — both cause viral pneumonitis that is among the most common precipitants of ARDS."
+  ],
+
+  "lifestyleModifications": [
+    "During recovery: begin active mobilization and physical therapy as early as feasible after liberation from mechanical ventilation to reverse ICU-acquired weakness.",
+    "Abstain from cigarette smoking, which worsens pulmonary function and impairs the already-damaged airway epithelium during recovery.",
+    "Abstain from alcohol during recovery — alcohol worsens residual impairment in gas exchange and mucosal defense.",
+    "Follow up with pulmonology at 3 and 12 months post-discharge for spirometry and diffusing capacity measurement, as fibrotic residual changes are common.",
+    "Enroll in a post-ICU recovery or ARDS survivorship program if available — structured rehabilitation improves functional outcomes at 1 year.",
+    "Manage post-traumatic stress disorder (PTSD), which occurs in 20-30% of ARDS survivors, through psychological support and cognitive behavioral therapy."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein enteral nutrition (1.2-2.0 g protein/kg/day) to limit ICU-acquired muscle wasting during mechanical ventilation",
+      "Early enteral feeding within 24-48 hours of ICU admission when hemodynamics permit — reduces gut bacterial translocation and potentially worsens lung injury",
+      "Omega-3 fatty acid-enriched feeds (EPA/DHA) — evidence is mixed but some guidelines include them in ARDS protocols",
+      "Adequate caloric provision avoiding both underfeeding and overfeeding — overfeeding worsens CO2 production and ventilatory load"
+    ],
+    "avoid": [
+      "Prolonged parenteral nutrition when enteral feeding is feasible — associated with higher infection rates and impaired gut immunity",
+      "High-carbohydrate feeds in patients with hypercapnia — excess carbohydrate increases CO2 production and respiratory quotient",
+      "Large-volume bolus feeds that increase aspiration risk in partially sedated or supine patients",
+      "Antioxidant megadosing (selenium, zinc) at unvalidated doses — some studies suggest harm at very high doses in critical illness"
+    ]
+  },
+  "exerciseGuidelines": "Early mobilization in the ICU — sitting at the edge of the bed, passive and active limb exercises, standing, and walking with ventilator support — is safe and shortens ICU stay in ARDS survivors. Post-discharge, a graded pulmonary rehabilitation program starting at 6-8 weeks improves 6-minute walk distance and health-related quality of life at one year.",
+
+  "dailyManagement": [
+    "Monitor plateau pressure, driving pressure (Pplat minus PEEP), and dynamic compliance at least every 4 hours and adjust ventilator settings to maintain Pplat <30 cmH2O.",
+    "Implement daily sedation vacation and spontaneous breathing trial once the patient is haemodynamically stable and FiO2 requirements are decreasing.",
+    "Maintain strict fluid balance — daily weights or continuous bladder pressure monitoring to guide conservative fluid management in the recovery phase.",
+    "Perform prone positioning cycles of ≥16 hours in severe ARDS, with careful monitoring of endotracheal tube position, venous access, and pressure areas.",
+    "Monitor right ventricular function with bedside echocardiography every 24-48 hours — acute cor pulmonale occurs in approximately 20-25% of ARDS patients.",
+    "Screen for and prevent venous thromboembolism with pharmacological prophylaxis (LMWH) once bleeding risk is acceptable, as ARDS patients are at high VTE risk."
+  ],
+
+  "prognosis": "Hospital mortality from ARDS averages 35-40% in contemporary multicenter studies, ranging from approximately 27% in mild to 45% in severe disease per the Berlin validation cohort. Among survivors, most recover to near-normal lung function within 6-12 months, with spirometry and diffusing capacity (DLCO) returning to >70% predicted in the majority by one year (Herridge et al. N Engl J Med 2011). However, physical function — particularly 6-minute walk distance — remains below age-matched norms in roughly 50% of survivors at one year, driven more by peripheral muscle weakness and neurocognitive impairment than by residual lung disease. PTSD, depression, and anxiety occur in 20-40% of survivors. Predictors of worse outcome include higher severity scores on admission, advanced age, non-pulmonary organ failure, and immune compromise. Survivors of severe ARDS who required ECMO have similar long-term outcomes to those managed with conventional ventilation alone if they are discharged alive.",
+
+  "recoveryTimeline": "Acute phase 1-7 days: intensive ICU care, prone positioning, and optimization of ventilator settings. Days 7-21 (proliferative phase): gradual improvement in gas exchange as inflammation resolves; weaning from ventilator typically begins. Weeks 3-8: extubation, physical rehabilitation, and transition out of ICU. Months 3-12: outpatient pulmonary function recovery — most survivors achieve >70% predicted DLCO by 12 months. Beyond 12 months: persistent neurocognitive and psychological sequelae are common; structured follow-up is recommended.",
+
+  "complications": [
+    "Ventilator-induced lung injury (VILI) from barotrauma or volutrauma — manifests as pneumothorax, pneumomediastinum, or subcutaneous emphysema; prevented by strict plateau and driving pressure limits.",
+    "Acute cor pulmonale and right ventricular failure — occurs in approximately 20-25% of ARDS patients from hypoxic vasoconstriction and high PEEP; detected by echocardiography; managed with pulmonary vasodilators and prone positioning.",
+    "Hospital-acquired pneumonia and ventilator-associated pneumonia (VAP) — complicates up to 30% of prolonged ARDS cases; preventable with elevated head-of-bed, oral care protocols, and minimizing ventilator days.",
+    "ICU-acquired weakness — affects 25-50% of ARDS patients who require mechanical ventilation for more than 5-7 days; reduces functional status and quality of life for months after discharge.",
+    "Multi-organ failure — ARDS-associated hypoxemia and systemic inflammation damage the kidneys (acute kidney injury in 40-50%), liver, and heart; multi-organ failure is the leading cause of ARDS death.",
+    "Post-intensive care syndrome (PICS) — the constellation of cognitive, psychological, and physical impairments that persist after ICU discharge, affecting approximately 50% of ARDS survivors at 1 year."
+  ],
+
+  "supportResources": [
+    { "name": "ARDS Foundation", "url": "https://www.ardsusa.org/", "description": "US nonprofit providing patient education, support groups, and research information for ARDS survivors and families." },
+    { "name": "American Thoracic Society — ARDS Patient Information", "url": "https://www.thoracic.org/patients/patient-resources/resources/ards.pdf", "description": "Plain-language ATS patient fact sheet on ARDS, mechanical ventilation, and ICU care." },
+    { "name": "Society of Critical Care Medicine — Post-ICU Recovery", "url": "https://www.sccm.org/MyICUCare/THRIVE", "description": "THRIVE initiative providing resources for ICU survivors on recovery from critical illness including ARDS." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "acute-pulmonary-edema-j810", "name": "Acute pulmonary edema", "keyDifference": "Cardiogenic pulmonary edema (acute pulmonary edema) results from elevated left atrial pressure flooding alveoli with hydrostatic fluid, while ARDS is caused by inflammatory disruption of the alveolar-capillary barrier. Both produce bilateral opacities and hypoxemia, but pulmonary edema typically responds rapidly to diuretics, has an elevated BNP, and shows preserved left ventricular function clues pointing to a non-inflammatory cause." },
+    { "slug": "pneumonia", "name": "Pneumonia", "keyDifference": "Pneumonia is the most common precipitant of ARDS but is defined by infection of lung parenchyma, producing focal or lobar consolidation that may or may not progress to ARDS. ARDS requires bilateral opacities and a PaO2/FiO2 ratio below 300 regardless of whether infection was the trigger. Pneumonia without ARDS responds to antibiotics and supplemental oxygen alone." },
+    { "slug": "heart-failure", "name": "Heart failure", "keyDifference": "Decompensated heart failure causes pulmonary edema that can be indistinguishable from ARDS on chest imaging. Echocardiography showing left ventricular dysfunction, an elevated BNP, and rapid response to diuresis distinguish cardiogenic from ARDS-type non-cardiogenic edema. ARDS does not respond to diuresis or afterload reduction alone." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis" },
+    { "slug": "acute-kidney-injury", "name": "Acute kidney injury" },
+    { "slug": "heart-failure", "name": "Heart failure" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "acute-pulmonary-edema-j810", "name": "Acute pulmonary edema", "relevance": "Both cause acute hypoxemic respiratory failure with bilateral opacities; distinguishing cardiogenic from non-cardiogenic edema is a key diagnostic step in ARDS workup." },
+    { "slug": "pneumonia", "name": "Pneumonia", "relevance": "The most common direct cause of ARDS; viral and bacterial pneumonia together account for ~60% of ARDS cases." },
+    { "slug": "sepsis-unspecified-organism-a419", "name": "Sepsis", "relevance": "The most common indirect cause of ARDS, and both conditions frequently co-exist in the same ICU patient." },
+    { "slug": "acute-bronchitis-unspecified-j209", "name": "Acute bronchitis", "relevance": "Lower respiratory infection that, if severe or complicated in vulnerable hosts, can progress to pneumonia and then ARDS." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is ARDS and why is it so dangerous?",
+      "answer": "ARDS is acute respiratory distress syndrome, a form of respiratory failure where widespread lung inflammation floods air sacs with fluid, causing severe oxygen deficiency. It is dangerous because the hypoxemia cannot be corrected by supplemental oxygen alone and requires mechanical ventilation. Hospital mortality averages 35-40%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the most common causes of ARDS?",
+      "answer": "Pneumonia (bacterial, viral, fungal) causes approximately 60% of ARDS cases. Sepsis from any source is the most common indirect cause. Other triggers include aspiration of gastric contents, major trauma, blood transfusion (TRALI), and severe pancreatitis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is ARDS diagnosed?",
+      "answer": "ARDS is diagnosed using the 2012 Berlin Definition: acute onset within one week, bilateral opacities on chest X-ray or CT not explained by effusions, hypoxemia with PaO2/FiO2 below 300 mmHg on PEEP ≥5 cmH2O, and exclusion of cardiogenic pulmonary edema as the main cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does ARDS always require a ventilator?",
+      "answer": "Most ARDS patients require mechanical ventilation, but mild cases may be managed initially with high-flow nasal cannula or non-invasive ventilation. Intubation is necessary when SpO2 cannot be maintained above 88% or when work of breathing is unsustainable. Early intubation prevents respiratory arrest.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is lung-protective ventilation for ARDS?",
+      "answer": "Lung-protective ventilation uses a tidal volume of 6 mL/kg predicted body weight and limits plateau pressure below 30 cmH2O to prevent ventilator-induced lung injury. The ARDSNet ARMA trial showed this approach reduced 28-day mortality from 40% to 31% compared with conventional 12 mL/kg tidal volumes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is prone positioning and does it help ARDS?",
+      "answer": "Prone positioning turns the intubated patient face-down for at least 16 consecutive hours, improving oxygen delivery to the back of the lungs. The PROSEVA trial showed it reduced 28-day mortality from 32.8% to 16.0% in severe ARDS (PaO2/FiO2 below 150 mmHg). It requires a trained team of 4-6 staff.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for ARDS?",
+      "answer": "Hospital survival averages 60-65% overall. Mild ARDS has approximately 73% hospital survival, moderate ARDS approximately 68%, and severe ARDS approximately 55% per the Berlin validation cohort. Outcomes have improved steadily since the introduction of lung-protective ventilation in 2000.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a person fully recover from ARDS?",
+      "answer": "Most ARDS survivors recover near-normal lung function within 6-12 months. Spirometry and diffusing capacity return to above 70% predicted in the majority by one year. However, muscle weakness, cognitive problems, and anxiety or PTSD persist in roughly 50% of survivors beyond one year.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does ARDS last?",
+      "answer": "The acute exudative phase lasts approximately 1-7 days, followed by a proliferative phase from days 7-21. Most survivors are liberated from mechanical ventilation within 2-3 weeks. ICU stay averages 10-14 days. Full lung function recovery takes up to 12 months after discharge.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is ARDS the same as COVID lung?",
+      "answer": "COVID-19 pneumonia frequently causes ARDS — moderate-to-severe COVID-19 lung disease meets Berlin criteria for ARDS in most ICU patients. SARS-CoV-2-related ARDS responds to dexamethasone and lung-protective ventilation, the same as ARDS from other causes, though it can have a more prolonged course.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What medications treat ARDS?",
+      "answer": "There is no specific drug that cures ARDS. Dexamethasone (20 mg/day for 5 days then 10 mg/day for 5 days) reduces mortality in moderate-to-severe ARDS. Treatment of the underlying cause — antibiotics for pneumonia, source control for sepsis — is essential. Neuromuscular blockade may help selected patients with severe dyssynchrony.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is ECMO and when is it used in ARDS?",
+      "answer": "ECMO (extracorporeal membrane oxygenation) is a machine that oxygenates blood outside the body, allowing the lungs to rest. It is used in severe ARDS when PaO2/FiO2 falls below 80 mmHg despite optimal ventilation and prone positioning. Transfer to a specialist ECMO center should be considered early in refractory cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does ARDS differ from pneumonia?",
+      "answer": "Pneumonia is an infection of lung tissue and is the most common cause of ARDS, but ARDS is the syndrome of severe respiratory failure that can follow pneumonia. Pneumonia without ARDS is treated with antibiotics and oxygen. ARDS requires mechanical ventilation and lung-protective strategies regardless of the triggering cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can ARDS be prevented?",
+      "answer": "ARDS cannot always be prevented, but risk can be reduced by treating sepsis early, using lung-protective ventilation in high-risk surgical patients, minimizing blood transfusions, preventing aspiration with head-of-bed elevation, and vaccinating against influenza and SARS-CoV-2, which are common precipitants.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What long-term problems do ARDS survivors have?",
+      "answer": "Roughly 50% of ARDS survivors have reduced exercise capacity, muscle weakness, cognitive impairment, or mental health problems at one year. PTSD occurs in 20-30%, depression in 25-40%. Lung function usually normalizes by 12 months. Structured post-ICU rehabilitation and psychological support improve long-term outcomes.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "ARDS (acute respiratory distress syndrome)",
+  "regionalNames": [
+    { "name": "Acute lung injury (ALI)", "region": "Historical medical terminology, US/UK", "language": "English" },
+    { "name": "Síndrome de dificultad respiratoria aguda (SDRA)", "region": "Latin America, Spain", "language": "Spanish" },
+    { "name": "तीव्र श्वसन संकट सिंड्रोम", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "ARDS",
+    "acute respiratory distress syndrome",
+    "acute lung injury",
+    "respiratory failure ICU",
+    "Berlin definition ARDS",
+    "lung-protective ventilation",
+    "prone positioning ARDS",
+    "ECMO respiratory failure",
+    "ARDS COVID",
+    "ARDS sepsis",
+    "PaO2 FiO2 ratio",
+    "diffuse alveolar damage",
+    "ARDS survival rate",
+    "mechanical ventilation ARDS",
+    "ARDS mortality"
+  ],
+  "symptomKeywords": [
+    "sudden severe breathing difficulty",
+    "low oxygen despite oxygen mask",
+    "bilateral white lungs on X-ray",
+    "respiratory failure after pneumonia",
+    "breathing failure after sepsis",
+    "ICU breathing machine",
+    "blue lips oxygen deficiency"
+  ],
+
+  "metaTitle": "ARDS: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "ARDS: life-threatening lung inflammation causing severe hypoxemia. Berlin criteria, lung-protective ventilation, prone positioning, and prognosis reviewed here.",
+
+  "keywords": [
+    "acute respiratory distress syndrome",
+    "ARDS",
+    "ARDS treatment",
+    "ARDS symptoms",
+    "Berlin definition ARDS",
+    "lung-protective ventilation",
+    "ARDS mortality",
+    "prone positioning ARDS",
+    "ARDS diagnosis",
+    "ARDS causes",
+    "ARDS ICU",
+    "ARDS prognosis",
+    "ECMO ARDS"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "ARDS Definition Task Force; Ranieri VM et al. 2012. Acute respiratory distress syndrome: the Berlin Definition. JAMA 307(23):2526-33.", "url": "https://pubmed.ncbi.nlm.nih.gov/22797452/", "accessedDate": "2026-05-14" },
+    { "title": "The Acute Respiratory Distress Syndrome Network. 2000. Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and ARDS. N Engl J Med 342(18):1301-8.", "url": "https://pubmed.ncbi.nlm.nih.gov/10793162/", "accessedDate": "2026-05-14" },
+    { "title": "Guérin C, Reignier J, Richard JC, et al.; PROSEVA Study Group. 2013. Prone positioning in severe acute respiratory distress syndrome. N Engl J Med 368(23):2159-68.", "url": "https://pubmed.ncbi.nlm.nih.gov/23688302/", "accessedDate": "2026-05-14" },
+    { "title": "Villar J, Ferrando C, Martínez D, et al.; dexamethasone in ARDS network. 2020. Dexamethasone treatment for the acute respiratory distress syndrome: a multicentre, randomised controlled trial. Lancet Respir Med 8(3):267-276.", "url": "https://pubmed.ncbi.nlm.nih.gov/32043986/", "accessedDate": "2026-05-14" },
+    { "title": "Bellani G, Laffey JG, Pham T, et al.; LUNG SAFE Investigators. 2016. Epidemiology, patterns of care, and mortality for patients with acute respiratory distress syndrome in intensive care units in 50 countries. JAMA 315(8):788-800.", "url": "https://pubmed.ncbi.nlm.nih.gov/26903337/", "accessedDate": "2026-05-14" },
+    { "title": "Fan E, Del Sorbo L, Goligher EC, et al. 2017. An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine Clinical Practice Guideline: Mechanical Ventilation in Adult Patients with Acute Respiratory Distress Syndrome. Am J Respir Crit Care Med 195(9):1253-1263.", "url": "https://pubmed.ncbi.nlm.nih.gov/28459336/", "accessedDate": "2026-05-14" },
+    { "title": "Herridge MS, Tansey CM, Matté A, et al. 2011. Functional disability 5 years after acute respiratory distress syndrome. N Engl J Med 364(14):1293-304.", "url": "https://pubmed.ncbi.nlm.nih.gov/21470008/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

@@ -1,0 +1,404 @@
+{
+  "_meta": {
+    "slug": "acute-and-subacute-infective-endocarditis-i330",
+    "tier": 1,
+    "headTerm": "infective endocarditis",
+    "longTailKeywords": [
+      "infective endocarditis symptoms",
+      "endocarditis treatment",
+      "endocarditis causes",
+      "Duke criteria endocarditis",
+      "endocarditis diagnosis",
+      "endocarditis surgery",
+      "Staphylococcus endocarditis",
+      "IVDU endocarditis",
+      "prosthetic valve endocarditis",
+      "endocarditis vegetations"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Clinical criteria per 2023 ESC Guidelines on Infective Endocarditis (Delgado et al. Eur Heart J 2023) and modified Duke criteria (Habib 2009, Li 2000). Epidemiology from Fedeli et al. and Thornhill et al. Incidence data from Bin Abdulhak et al. GBD 2022."
+  },
+
+  "h1Title": "Infective Endocarditis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "Infective endocarditis (IE) is a microbial infection of the endocardial surface of the heart, primarily affecting the cardiac valves and producing friable vegetations of microorganisms embedded in fibrin and platelets. Annual incidence in high-income countries is approximately 3-10 episodes per 100,000 person-years, with rising incidence driven by cardiac device implantation, intravascular procedures, and injection drug use. Despite advances in diagnosis and surgery, in-hospital mortality remains 15-30%. Staphylococcus aureus is now the single most common causative organism globally, surpassing streptococcal species. The endocarditis team — cardiology, cardiac surgery, microbiology, and infectious disease — manages the majority of cases through a combination of 4-6 weeks of targeted intravenous antibiotics and, when indicated, timely cardiac surgery.",
+
+  "keyStats": {
+    "prevalence": "Annual incidence 3-10 per 100,000 person-years in developed countries; approximately 15,000-20,000 new cases per year in the United States",
+    "demographics": "Male-to-female ratio approximately 2:1; median age rising from 30-40 years in the 1960s to 47-69 years in contemporary series, reflecting ageing population and healthcare-associated acquisition",
+    "avgAge": "Median age approximately 60 years in developed countries; prosthetic valve IE and device IE peak at 65-75 years",
+    "globalCases": "Estimated 80-90 per 100,000 person-years in low-income countries with rheumatic heart disease; global incidence trending upward"
+  },
+
+  "definition": "Infective endocarditis (ICD-10: I33.0) is a microbial infection of the endocardium, most commonly the mitral and aortic valve leaflets, characterised pathologically by vegetations — aggregates of microorganisms within a fibrin-platelet matrix attached to the valve surface. The pathophysiological sequence begins with endothelial disruption from turbulent blood flow, jet injury, or foreign material (prosthetic valve, pacemaker lead), followed by adherence of microorganisms during bacteraemia. Streptococcal species historically dominated but Staphylococcus aureus (including MRSA) now accounts for 25-45% of native valve IE and over 30% of prosthetic valve IE in contemporary registries. Viridans streptococci remain the leading cause in dental-associated IE and in structurally abnormal native valves. Coagulase-negative staphylococci dominate prosthetic valve and cardiovascular implantable electronic device (CIED) infections within 12 months of implantation. The modified Duke criteria (Li et al. 2000) classify cases as definite, possible, or rejected IE based on major criteria (positive blood culture with a typical organism or evidence of endocardial involvement on echocardiography or PET/CT) and minor criteria (predisposing condition, fever, vascular phenomena, immunological phenomena). The 2023 ESC guidelines updated the Duke criteria to include PET/CT and cardiac CT as additional major imaging criteria. IE is classified as acute (rapid destruction within days to weeks, predominantly S. aureus) or subacute (weeks to months, typically viridans streptococci) based on clinical tempo.",
+
+  "typesClassification": [
+    { "type": "Native valve IE (NVE)", "description": "Infection of a patient's own cardiac valve leaflets. Mitral valve most often involved (41%), followed by aortic (38%), tricuspid (15%), and pulmonary (<5%). Previously abnormal valves (bicuspid aortic valve, MVP, rheumatic disease) are at higher risk than normal valves." },
+    { "type": "Prosthetic valve IE (PVE)", "description": "Infection of a bioprosthetic or mechanical valve replacement. Early PVE (within 12 months of surgery) is usually healthcare-acquired (CoNS, S. aureus); late PVE resembles NVE with oral streptococci more prominent. Carries higher mortality than NVE (up to 30-40%)." },
+    { "type": "Cardiac implantable electronic device (CIED) IE", "description": "Infection of pacemaker, ICD, or cardiac resynchronisation therapy leads. Presents as generator pocket infection and/or lead vegetations. Requires complete device removal (transcutaneous or open surgical), usually within 48-72 hours of diagnosis." },
+    { "type": "Right-sided IE (IVDU-associated)", "description": "Predominantly tricuspid valve; presents with septic pulmonary emboli causing bilateral cavitating lung infiltrates. More common in people who inject drugs (PWID). S. aureus the dominant pathogen. Surgery less often required; medical therapy alone achieves cure in many cases." },
+    { "type": "Healthcare-associated IE", "description": "Acquired within 72 hours of hospital admission or within 90 days of invasive procedures, haemodialysis, or IV catheterisation. Now accounts for approximately 25-30% of IE in developed countries. Staphylococcal species dominate; Enterococcus faecalis increasing from urological procedures." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent fever above 38°C lasting more than 7 days without an identified source — the cardinal symptom of IE, present in approximately 80-90% of cases, often with rigors and night sweats in subacute disease.",
+    "New or changed cardiac murmur on auscultation, reflecting valve leaflet destruction or regurgitation from vegetation; aortic regurgitation in acute S. aureus IE can be dramatic in onset.",
+    "Constitutional symptoms — fatigue, anorexia, weight loss, and night sweats — over weeks to months in subacute viridans streptococcal IE, mimicking malignancy or autoimmune disease.",
+    "Embolic events: sudden focal neurological deficit from cerebral embolism (occurring in 20-40% of IE cases), renal infarction causing flank pain, or splenic infarction causing left upper quadrant pain.",
+    "Painful red or purple nodules on the fingertip pulps (Osler's nodes), thought to be immune complex deposits, lasting hours to days and highly specific for IE when present.",
+    "Janeway lesions — non-tender haemorrhagic macules on the palms or soles — representing septic emboli; more common in S. aureus than streptococcal IE.",
+    "Splinter haemorrhages beneath fingernails or toenails — linear red-brown streaks from micro-emboli; non-specific but contribute to the clinical picture.",
+    "Roth spots — retinal haemorrhages with pale centres visible on fundoscopy — an immune complex or embolic phenomenon in subacute IE.",
+    "Splenomegaly from prolonged immune stimulation or splenic infarction from septic emboli — palpable in approximately 15-25% of subacute cases.",
+    "New onset heart failure with rapidly progressive breathlessness in acute IE when aortic or mitral valve destruction causes severe regurgitation."
+  ],
+
+  "earlyWarningSigns": [
+    "Unexplained fever above 38°C for more than 7 days in a patient with structural heart disease, prosthetic valve, CIED, history of previous IE, or injection drug use — blood cultures must be taken before antibiotics.",
+    "Bacteraemia with S. aureus, viridans streptococcus, or Enterococcus species in the absence of an obvious non-cardiac source — echocardiography must be performed within 24-48 hours.",
+    "New focal neurological deficit or non-haemorrhagic stroke in a young patient or one with predisposing cardiac condition without apparent atherosclerotic cause — embolic IE must be excluded.",
+    "New conduction abnormality (prolonged PR interval, bundle branch block, or complete heart block) in a febrile patient with aortic valve disease — perivalvular abscess extending to the conduction system."
+  ],
+
+  "emergencySigns": [
+    "Acute severe aortic or mitral regurgitation with pulmonary oedema and haemodynamic collapse — emergency cardiac surgery required within 24 hours; medical therapy alone has a very high short-term mortality.",
+    "Persistent sepsis (temperature >39°C, leucocytosis, hypotension) despite 48-72 hours of appropriate antibiotics — suggests uncontrolled infection, perivalvular abscess, or resistant organism requiring surgical consultation.",
+    "New neurological deficit from cerebral embolism or intracerebral haemorrhage — the timing of surgery relative to stroke is critical; liaise immediately between neurology and cardiac surgery.",
+    "Complete heart block or new bundle branch block in febrile IE — indicates perivalvular abscess extension and urgent surgical evaluation for debridement."
+  ],
+
+  "causes": [
+    {
+      "cause": "Staphylococcus aureus bacteraemia",
+      "description": "Now the most common cause of IE in developed countries, accounting for 25-45% of native valve and 30-35% of prosthetic valve IE. Virulent and destructive; produces rapid valve destruction within days. Sources include skin and soft tissue infections, vascular access devices, haemodialysis catheters, intravascular lines, and injection drug use. MRSA causes approximately 30% of S. aureus IE and is associated with higher mortality."
+    },
+    {
+      "cause": "Viridans group streptococcal bacteraemia",
+      "description": "Streptococcus sanguinis, S. mutans, S. gordonii, and S. mitis predominate. These oral commensal organisms enter the bloodstream during dental procedures or spontaneously from periodontal disease. They have relatively low virulence, producing subacute indolent disease that may have been present for weeks before diagnosis. They adhere avidly to fibronectin on damaged valve endothelium."
+    },
+    {
+      "cause": "Enterococcus faecalis",
+      "description": "The third most common cause of IE overall and the most rapidly increasing in recent series. Entry routes include urological procedures (transurethral resection, cystoscopy, prostate biopsy), gastrointestinal instrumentation, and abdominal surgery. Nearly all cases require aminoglycoside or ampicillin-based combination therapy; high-level aminoglycoside resistance complicates treatment in approximately 30-40% of strains."
+    },
+    {
+      "cause": "Coagulase-negative staphylococci (CoNS)",
+      "description": "Dominant cause of early prosthetic valve IE and CIED infection; Staphylococcus epidermidis most common species. Biofilm formation on prosthetic material makes eradication extremely difficult; surgical device removal is usually required. Bacteraemia with CoNS in a patient with a prosthetic valve or CIED should prompt immediate echocardiography."
+    },
+    {
+      "cause": "HACEK organisms",
+      "description": "Haemophilus, Aggregatibacter, Cardiobacterium, Eikenella, and Kingella species — fastidious gram-negative oral commensals causing approximately 1-3% of IE. Slow-growing; blood cultures may require extended incubation. Associated with large vegetations and high embolic risk. Highly sensitive to beta-lactam antibiotics."
+    },
+    {
+      "cause": "Non-HACEK gram-negative organisms",
+      "description": "Pseudomonas aeruginosa, Serratia, and Escherichia coli cause IE predominantly in PWID and healthcare-associated settings. High virulence with rapid valve destruction; mortality 40-60%; surgery almost always required."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Structural heart disease (bicuspid aortic valve, MVP, rheumatic valvular disease)", "category": "non-modifiable", "description": "Turbulent blood flow across abnormal valves creates endothelial injury facilitating microbial adherence. Bicuspid aortic valve confers a 5-10 fold higher lifetime IE risk compared with a normal tricuspid aortic valve." },
+    { "factor": "Prosthetic heart valve", "category": "non-modifiable", "description": "Lifetime IE risk approximately 0.5-1% per year for mechanical valves and 1-2% per year for bioprostheses; all prosthetic valves are at higher risk than native valves from any bacteraemic episode." },
+    { "factor": "Cardiovascular implantable electronic device (CIED)", "category": "non-modifiable", "description": "Pacemaker, ICD, and CRT device leads crossing the tricuspid valve are at risk from both pocket infection and haematogenous seeding; approximately 1-2 per 1,000 device-years incidence of CIED IE." },
+    { "factor": "Previous infective endocarditis", "category": "non-modifiable", "description": "Prior IE leaves scarred, fibrotic valve tissue susceptible to re-infection; recurrence risk approximately 4-5% per year for native valves and higher for prostheses." },
+    { "factor": "Injection drug use", "category": "modifiable", "description": "PWID have a 150-500 fold higher IE incidence than the general population. Skin flora (S. aureus) and environmental organisms are injected directly into the venous circulation; tricuspid valve is predominantly affected." },
+    { "factor": "Haemodialysis and vascular access devices", "category": "modifiable", "description": "Haemodialysis patients have an approximately 50-100 fold higher IE risk; S. aureus from arteriovenous fistula or catheter-associated bacteraemia is the dominant pathway. Indwelling central venous catheters are a major source of healthcare-associated IE." },
+    { "factor": "Immunosuppression (HIV, diabetes, malignancy)", "category": "modifiable", "description": "Impaired innate and adaptive immunity reduces clearance of bacteraemia; HIV infection approximately doubles IE incidence beyond injection drug use risk; HbA1c above 8% independently increases S. aureus bacteraemia risk." }
+  ],
+
+  "affectedDemographics": [
+    "Older adults: the median age of IE patients in contemporary developed-country registries is approximately 60-65 years; prosthetic valve IE predominates in those aged 65-75.",
+    "Individuals who inject drugs: PWID account for approximately 25-35% of all IE admissions in cities with high opioid injection prevalence; mean age 30-40 years; predominantly right-sided tricuspid disease.",
+    "Patients with congenital or structural heart disease: bicuspid aortic valve, MVP with regurgitation, ventricular septal defect, and repaired congenital heart disease confer substantial lifetime risk.",
+    "Healthcare-exposed patients: haemodialysis patients (50-100 fold higher risk), recent cardiac surgery patients, and individuals with prolonged vascular access devices represent a growing proportion of modern IE.",
+    "Men: male-to-female ratio of approximately 2:1 in most series, reflecting higher rates of cardiac device implantation and injection drug use, although rheumatic heart disease-associated IE is more common in women in low-income countries."
+  ],
+
+  "diagnosisOverview": "IE diagnosis is established by the modified Duke criteria (Li et al. 2000), updated by the 2023 ESC guidelines to include PET/CT and cardiac CT as imaging major criteria. Definite IE requires: two major criteria; one major and three minor criteria; or five minor criteria. The foundational diagnostic steps are blood cultures (3 sets from 3 separate venepunctures over at least 1 hour before antibiotics) and echocardiography. Transesophageal echocardiography (TOE) is the most sensitive modality, identifying vegetations in approximately 90-95% of cases versus 60-75% for transthoracic echocardiography (TTE); TOE is mandatory for prosthetic valve or device IE and when TTE is inconclusive. Blood culture positivity with a typical organism is a major Duke criterion; at least two sets drawn before the first antibiotic dose are essential. Negative cultures despite classic features should prompt specific serologies for Coxiella burnetii (Q-fever endocarditis), Bartonella species, Tropheryma whipplei, and Brucella, plus PCR/16S rRNA gene sequencing on excised valve tissue when surgery is performed. FDG-PET/CT has emerged as a sensitive adjunct imaging test, particularly for prosthetic valve IE (sensitivity 73-82% vs TTE 36%) and CIED IE, by identifying metabolic activity at the infected site. Cardiac CT provides anatomical detail for perivalvular extension, abscess, pseudoaneurysm, and fistula — critical for surgical planning. Serial blood cultures at 48-72 hours confirm microbiological response to therapy and are part of IE team monitoring.",
+
+  "diagnosticTests": [
+    { "test": "Blood cultures (3 sets before antibiotics)", "purpose": "Identifies causative organism and antibiotic susceptibility; positive with typical organism is a Duke major criterion", "whatToExpect": "Three blood draws from different venepuncture sites over at least 1 hour. Results at 24-72 hours for most organisms (HACEK and fastidious organisms may take 5-10 days). Essential before starting any antibiotics." },
+    { "test": "Transthoracic echocardiography (TTE)", "purpose": "First-line cardiac imaging; identifies vegetations, valvular regurgitation, perivalvular abscess, and heart failure", "whatToExpect": "Painless 30-minute ultrasound scan. Identifies vegetations in approximately 60-75% of native valve IE. Performed within 24 hours of clinical suspicion. Suboptimal acoustic windows (obesity, COPD) reduce sensitivity." },
+    { "test": "Transesophageal echocardiography (TOE)", "purpose": "Gold standard echocardiographic imaging; mandatory for prosthetic valve IE, CIED IE, and inconclusive TTE", "whatToExpect": "Ultrasound probe passed into the oesophagus under light sedation; throat spray applied before insertion. Takes 20-30 minutes. Sensitivity 90-95% for vegetations. Most patients are awake and can be discharged same day." },
+    { "test": "FDG-PET/CT scan", "purpose": "Detects metabolic activity at prosthetic valves, CIED leads, and extracardiac embolic sites; 2023 ESC Duke major imaging criterion for PVE", "whatToExpect": "Radioactive glucose tracer injected IV; whole-body scan 60 minutes later. Fasting required for 4-6 hours beforehand. Results in 24-48 hours. Particularly useful when TTE/TOE is non-diagnostic in PVE." },
+    { "test": "Cardiac CT angiography", "purpose": "Anatomically defines perivalvular extension, abscess, pseudoaneurysm, fistula, and degree of valve destruction; essential for pre-surgical planning", "whatToExpect": "IV contrast and ECG gating during scan; takes 10-15 minutes. Results in 24-48 hours. Considered a Duke major imaging criterion for PVE and NVE when abnormal in 2023 ESC guidelines." },
+    { "test": "Serial blood cultures at 48-72 hours", "purpose": "Confirms bacteraemia clearance; persistent positive cultures indicate uncontrolled infection, abscess, or resistant organism", "whatToExpect": "Additional blood draws 48 and 72 hours after initiation of therapy. Timely clearance (within 72 hours for S. aureus) is a prognostic milestone. Persistent positivity above 72 hours is an indication for urgent surgical review." }
+  ],
+
+  "treatmentOverview": "Management of IE requires the IE team — cardiology, cardiac surgery, and infectious disease — as mandated by the 2023 ESC guidelines. Treatment has two pillars: prolonged intravenous antibiotics and timely cardiac surgery when indicated. Antibiotic therapy begins promptly after obtaining at least 2-3 blood culture sets, tailored to the organism and susceptibility profile. Viridans streptococcal NVE on a susceptible strain (MIC ≤0.125 mg/L) is treated with beta-lactam (penicillin G or ceftriaxone) for 4 weeks; combined 2-week regimen with gentamicin may be used in uncomplicated cases. S. aureus native valve IE requires flucloxacillin 12 g/day IV in 6 divided doses for 6 weeks (vancomycin for MRSA); daptomycin 10 mg/kg IV daily is an alternative for right-sided MRSA IE. Enterococcus faecalis IE requires combination therapy: ampicillin plus ceftriaxone (ENTD study-validated, avoiding nephrotoxic aminoglycoside) for 6 weeks. Prosthetic valve S. aureus IE requires 6+ weeks and rifampicin added after 3-5 days of bacteraemia clearance. Anticoagulation management is complex: patients on anticoagulants for mechanical prostheses continue with vitamin K antagonist (not DOACs); new anticoagulation for stroke prevention is generally avoided in the first 2 weeks due to haemorrhagic transformation risk. Indications for urgent surgery within 24-48 hours include: acute severe valvular regurgitation with haemodynamic compromise; persistent bacteraemia or fever beyond 7-10 days; perivalvular extension (abscess, fistula, complete heart block); very large or mobile vegetations above 10 mm with recurrent embolism despite optimal antibiotics; and fungal IE. Surgery timing relative to prior stroke requires neuroimaging; stable ischaemic stroke without haemorrhage: surgery may proceed within 24-72 hours. Intracerebral haemorrhage: delay surgery 4 weeks.",
+
+  "medicalTreatments": [
+    { "name": "Flucloxacillin 12 g/day IV in 6 divided doses (MSSA native valve IE, 4-6 weeks)", "description": "First-line for methicillin-sensitive S. aureus native valve IE. Beta-lactamase-stable penicillin with excellent staphylococcal bactericidal activity. Oxacillin used in the USA. Duration 6 weeks for NVE; longer for PVE or complicated disease.", "effectiveness": "90-day mortality for S. aureus IE approximately 15-25% on appropriate therapy; flucloxacillin vs vancomycin: 20-30% lower mortality for MSSA (Lodise et al. 2007, PMID 17179311)" },
+    { "name": "Vancomycin (25-30 mg/kg/day IV in 2-3 doses, targeting trough 15-20 mg/L) for MRSA or penicillin-allergy", "description": "Glycopeptide for MRSA IE and penicillin-allergic patients. Renal function and vancomycin levels monitored every 48-72 hours. AUC/MIC-guided dosing with pharmacy input reduces nephrotoxicity.", "effectiveness": "Cure rates approximately 40-50% for MRSA IE vs 60-70% for MSSA with appropriate agent; inferior to flucloxacillin for MSSA — use flucloxacillin whenever possible" },
+    { "name": "Ceftriaxone 2 g IV once daily (viridans streptococcal or Enterococcus faecalis combination regimens)", "description": "Beta-lactam active against viridans streptococci (4-week monotherapy for susceptible NVE) and first component of the ampicillin + ceftriaxone doublet for E. faecalis IE (6 weeks, avoids aminoglycoside nephrotoxicity).", "effectiveness": "ENTD trial: ampicillin + ceftriaxone equivalent to ampicillin + gentamicin for E. faecalis IE with significantly lower nephrotoxicity (PMID 23375818)" },
+    { "name": "Gentamicin (3 mg/kg/day in 3 divided doses with renal monitoring)", "description": "Aminoglycoside added to beta-lactam for synergistic bactericidal activity in streptococcal and enterococcal IE. Use now limited to selected cases due to nephrotoxicity and ototoxicity; nephrotoxic in patients with pre-existing CKD or elderly patients.", "effectiveness": "Shortens bacteraemia clearance in streptococcal IE; no survival benefit vs monotherapy in most trials; replaced by ampicillin + ceftriaxone for E. faecalis in current guidelines" },
+    { "name": "Rifampicin (300-600 mg orally twice daily, added to beta-lactam or vancomycin for prosthetic valve IE)", "description": "Anti-biofilm activity against staphylococci on prosthetic material; started 3-5 days after bacteraemia clearance to avoid resistance. Always combined with another active agent. Used specifically in PVE caused by staphylococci.", "effectiveness": "2023 ESC guidelines recommend rifampicin as adjunctive therapy for staphylococcal PVE; reduces late treatment failure and relapse of biofilm-associated infection on prosthetic material" },
+    { "name": "Daptomycin 10 mg/kg IV once daily (MRSA right-sided IE, vancomycin-intolerant patients)", "description": "Lipopeptide antibiotic with rapid bactericidal activity against gram-positive organisms. Particularly effective for right-sided (tricuspid) MRSA IE. Not used for pulmonary infections (inactivated by surfactant).", "effectiveness": "CORE study and registry data: daptomycin 10 mg/kg superior to lower doses for S. aureus IE; cure rates approximately 55-60% for right-sided IE; avoid for left-sided pulmonary-involved disease" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Valve repair or replacement (urgent within 24-48 hours)", "description": "Indicated for acute severe valvular regurgitation with haemodynamic compromise, fungal IE, perivalvular abscess, persistent bacteraemia beyond 7-10 days of appropriate antibiotics, or large vegetations with recurrent embolism. Valve repair is preferred over replacement when technically feasible — lower rate of re-infection and reoperations.", "successRate": "30-day surgical mortality 10-20% in contemporary registries (range 5-30% depending on acuity); in-hospital mortality with surgery vs medical therapy alone approximately 15% vs 50-60% for indications with haemodynamic compromise" },
+    { "name": "Complete CIED device removal (transvenous or surgical)", "description": "Mandatory within 48-72 hours of confirmed CIED IE. Transvenous lead extraction (TLE) is the preferred approach in most cases; surgical extraction required for adherent leads, large lead vegetations, or concurrent valve surgery. New device implanted on the contralateral side after bacteraemia clears, typically 2-4 weeks later.", "successRate": "TLE success rate >95% in expert centres; 1-year survival approximately 70-80%; failure to remove device associated with near-doubling of 1-year mortality" },
+    { "name": "Abscess debridement and reconstruction", "description": "Perivalvular abscess complicates 10-40% of IE cases, particularly aortic valve IE. Surgical debridement, reconstruction with pericardial patch or homograft, and valve replacement are required. Predicts the highest surgical complexity and mortality.", "successRate": "30-day surgical mortality for aortic root abscess approximately 20-30%; 5-year survival approximately 60-70% with successful reconstruction" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Early discharge with outpatient parenteral antibiotic therapy (OPAT)", "description": "Selected hemodynamically stable IE patients who have achieved bacteraemia clearance and have no indication for surgery can complete 4-6 weeks of IV antibiotics via OPAT programmes. This is evidence-based for viridans streptococcal and Enterococcus NVE meeting strict OPAT eligibility criteria per ESC 2023 and IDSA guidelines. The POET trial (PMID 31216090) showed oral switch therapy after 10 days of IV antibiotics for select patients was non-inferior to full IV therapy." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "cardiac-valve-surgery",
+    "antimicrobial-therapy",
+    "outpatient-parenteral-antibiotic-therapy"
+  ],
+
+  "whySeeSpecialist": "All patients with suspected IE should be managed at a centre with an IE team (cardiology, cardiac surgery, and infectious disease) available 24/7. The 2023 ESC guidelines state that transferring patients with IE to such centres reduces mortality. Complex cases — prosthetic valve, CIED, large vegetations, cerebral embolism, or heart failure — require immediate specialist involvement.",
+  "doctorSelectionGuide": "Choose a tertiary cardiac centre with an established IE team, high-volume valve surgery programme (>50 cases per year), cardiac microbiology laboratory for blood culture processing and PCR, and on-site TOE and FDG-PET/CT imaging. For CIED-IE, centres with a dedicated electrophysiology service experienced in transvenous lead extraction are essential.",
+
+  "hospitalCriteria": [
+    "IE team: cardiology, cardiac surgery, infectious disease/microbiology — meeting daily to weekly for complex cases",
+    "Transesophageal echocardiography available within 24-48 hours of suspicion",
+    "High-volume valve surgery programme with 24/7 cardiac surgical coverage for urgent cases",
+    "Cardiac microbiology including prolonged blood culture incubation, MALDI-TOF identification, and antimicrobial susceptibility testing",
+    "FDG-PET/CT and cardiac CT available within 48-72 hours for complex or prosthetic valve IE"
+  ],
+  "keyFacilities": [
+    "Tertiary cardiac centres with 24/7 cardiac surgery and IE teams",
+    "Electrophysiology services with transvenous lead extraction capability",
+    "OPAT services for selected patients completing therapy at home or as outpatients",
+    "Rehabilitation services for post-valve surgery recovery"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Maintain scrupulous oral hygiene with twice-daily brushing, flossing, and regular dental check-ups; dental caries and periodontal disease are key sources of viridans streptococcal bacteraemia.",
+    "Antibiotic prophylaxis with amoxicillin 2 g orally 30-60 minutes before dental procedures in highest-risk patients: prosthetic valve, prior IE, complex cyanotic congenital heart disease, or surgically repaired CHD within 6 months (2023 ESC classification).",
+    "Avoid unnecessary venous cannulation, prefer peripheral IV over central lines, and remove intravascular devices as soon as clinically safe to reduce healthcare-associated bacteraemia.",
+    "For PWID: harm-reduction programmes including sterile injection equipment, supervised injection sites, and opioid agonist therapy reduce injection frequency and associated bacteraemia risk.",
+    "Pre-operative dental evaluation and clearance before elective prosthetic valve implantation or CIED insertion to treat dental sepsis sources that could seed the new device."
+  ],
+
+  "lifestyleModifications": [
+    "Complete the full prescribed 4-6 week course of IV antibiotics without interruption; premature cessation risks relapse with a more resistant organism and valve re-seeding.",
+    "Avoid all invasive dental procedures, endoscopy, and elective surgery until at least 3-6 months after completing IE treatment.",
+    "Abstain from injection drug use after IE; recurrent PWID-associated IE carries high surgical refusal rates and in-hospital mortality above 30%.",
+    "Attend all follow-up echocardiography and outpatient cardiology appointments at 1, 3, 6, and 12 months post-IE.",
+    "Wear a medical alert bracelet or carry a card indicating history of IE and prosthetic valve, prompting any treating physician to take blood cultures before antibiotics.",
+    "Report unexplained fever above 38°C to a physician or emergency department immediately — do not take antipyretics and wait to see if it resolves."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Protein-adequate diet to support immune function and post-operative cardiac recovery",
+      "Vitamin C-rich foods (citrus, bell peppers) to promote wound healing after cardiac surgery",
+      "Low-sodium diet after valve surgery, particularly if concurrent heart failure is present",
+      "Adequate hydration and balanced electrolytes when receiving nephrotoxic antibiotics (aminoglycosides, vancomycin)"
+    ],
+    "avoid": [
+      "Alcohol — worsens immune function, increases infection risk, and is hepatotoxic when combined with some antibiotics",
+      "Excess vitamin K-containing foods (leafy greens) if on vitamin K antagonist anticoagulation after mechanical valve replacement — consistent intake is acceptable, variable intake causes INR instability",
+      "Raw or undercooked meat, seafood, and unpasteurised dairy which may introduce additional bacteraemia risk during active IE",
+      "Energy drinks and caffeine supplements that raise heart rate and blood pressure during cardiac inflammation"
+    ]
+  },
+  "exerciseGuidelines": "Complete rest from all strenuous activity during active IE and for at least 6-8 weeks after completing antibiotic therapy. After successful completion of treatment and confirmed clinical remission on echocardiography, light activity (walking) may resume. Post-operative cardiac rehabilitation commences 6-8 weeks after valve surgery under cardiologist supervision. Contact sports and vigorous exercise are deferred for 3-6 months post-surgery and indefinitely avoided in patients with significant residual valvular dysfunction.",
+
+  "dailyManagement": [
+    "Administer IV antibiotics through a PICC or midline catheter according to the prescribed schedule; notify the IE team if fever recurs or line problems develop.",
+    "Monitor temperature twice daily and record in the discharge diary; any fever above 38°C during treatment indicates treatment failure until proved otherwise.",
+    "Report new headache, neurological symptoms, or vision changes — these may indicate cerebral embolism or intracranial haemorrhage from mycotic aneurysm.",
+    "Maintain meticulous IV line site care and inspect for signs of local infection daily.",
+    "Attend weekly outpatient IE clinic visits for blood cultures, inflammatory markers, renal function, and drug levels (gentamicin, vancomycin).",
+    "Inform every healthcare provider — including dentist, GP, and pharmacist — of active IE so that no drug or procedure is given without IE team consultation."
+  ],
+
+  "prognosis": "In-hospital mortality for IE averages 15-30% in modern registry data, with significant variation by organism, valve site, and whether surgery was performed when indicated. S. aureus native valve IE carries approximately 30-40% in-hospital mortality; viridans streptococcal IE approximately 5-10%. Prosthetic valve IE has in-hospital mortality approximately 30%, rising to 40-50% for S. aureus PVE. The 2023 ESC-endorsed EURODACS risk score predicts 6-month IE mortality from age, organism, valve type, heart failure, and cerebral emboli. One-year mortality after IE is approximately 30-40% overall, with cardiovascular deaths dominating in the first 3 months. Risk of relapse after completed antibiotic therapy is approximately 2-5% for most organisms. Recurrent IE (new episode with different organism or >6 months from first episode) occurs in 5-10% of patients over 5 years, predominantly in patients with prosthetic valves or who continue injection drug use. Left-sided IE with preserved LV function post-surgery has 5-year survival of approximately 60-70%.",
+
+  "recoveryTimeline": "Active intravenous antibiotic therapy: 4-6 weeks (viridans streptococci NVE 4 weeks; S. aureus NVE 6 weeks; PVE staphylococci 6+ weeks). Blood cultures must clear within 3-5 days of starting appropriate therapy. Fever typically resolves within 5-7 days for streptococcal and 7-14 days for staphylococcal IE. Post-valve surgery: 7-10 days hospital stay; cardiac rehabilitation commences 6-8 weeks post-operatively; full functional recovery 3-6 months. For OPAT/POET oral switch: hospital discharge after bacteraemia clearance and stable clinical status, typically day 10-14.",
+
+  "complications": [
+    "Embolic events: cerebral embolism (stroke or transient ischaemic attack) in 20-40% of left-sided IE; mesenteric, renal, and splenic infarctions; coronary artery embolism causing acute MI in aortic valve IE.",
+    "Heart failure from valve destruction: acute severe regurgitation is the leading indication for urgent surgery and a major cause of IE mortality; occurs in 30-50% of left-sided IE cases.",
+    "Perivalvular extension: abscess, pseudoaneurysm, or fistula formation — most common with aortic valve and staphylococcal IE; often requires complex surgical reconstruction.",
+    "Neurological complications: mycotic aneurysm from septic arteritis of intracranial vessels in 2-4% of IE; can cause subarachnoid haemorrhage if undiagnosed; managed with endovascular coiling or surgical clipping.",
+    "Renal failure: immune complex glomerulonephritis from prolonged bacteraemia, aminoglycoside nephrotoxicity, contrast nephropathy from CT imaging, and reduced cardiac output collectively impair renal function in 30-50% of IE patients.",
+    "Prosthetic valve dehiscence and paravalvular leak: destruction of the valve annulus by infection causes periannular abscess and loss of valve anchor integrity; presents with new regurgitant murmur and heart failure."
+  ],
+
+  "supportResources": [
+    { "name": "American Heart Association — Endocarditis Prevention and Treatment", "url": "https://www.heart.org/en/health-topics/infective-endocarditis", "description": "Patient guides on IE prophylaxis, dental hygiene, symptoms, and treatment from the AHA." },
+    { "name": "British Heart Foundation — Infective Endocarditis", "url": "https://www.bhf.org.uk/informationsupport/conditions/endocarditis", "description": "BHF patient information on endocarditis risks, diagnosis, antibiotic prophylaxis, and what to expect from treatment." },
+    { "name": "IDSA — Infective Endocarditis Guidelines Patient Resources", "url": "https://www.idsociety.org/public-health/heart-infections/", "description": "Infectious Diseases Society of America patient resources on IE prevention in high-risk individuals." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "acute-pericarditis-unspecified-i309", "name": "Acute Pericarditis", "keyDifference": "Pericarditis presents with pleuritic chest pain, ECG changes (diffuse ST elevation, PR depression), and pericardial friction rub without positive blood cultures or valvular vegetations. IE is characterised by persistent fever, positive blood cultures, and echocardiographic vegetations; pericarditic chest pain is absent unless myo-pericarditis co-occurs." },
+    { "slug": "acute-myocarditis-unspecified-i409", "name": "Acute Myocarditis", "keyDifference": "Myocarditis presents with chest pain, troponin rise, and LV dysfunction after a viral prodrome, without a persistent bacteraemia, positive blood cultures, or echocardiographic vegetations on valve leaflets. IE may cause myocardial abscess or septic foci but the hallmark is endocardial vegetation, not diffuse myocardial inflammation." },
+    { "slug": "systemic-lupus-erythematosus", "name": "Systemic Lupus Erythematosus", "keyDifference": "Libman-Sacks endocarditis in SLE produces sterile valve vegetations from immune complex deposition — indistinguishable from IE on TTE alone but with negative blood cultures, elevated ANA and anti-dsDNA antibodies, and multi-system lupus manifestations. TOE and FDG-PET/CT help differentiate active IE from non-bacterial thrombotic endocarditis." },
+    { "slug": "acute-myocardial-infarction-unspecified-i219", "name": "Acute Myocardial Infarction", "keyDifference": "Coronary embolism from IE vegetations can cause true MI with chest pain, ST elevation, and troponin rise in patients with left-sided IE. Coronary angiography shows embolic occlusion without underlying atherosclerosis. The context of fever, positive blood cultures, and aortic or mitral vegetations distinguishes IE-related from atherosclerotic MI." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "heart-failure", "name": "Heart Failure" },
+    { "slug": "stroke", "name": "Stroke" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "acute-myocardial-infarction-unspecified-i219", "name": "Acute Myocardial Infarction", "relevance": "Coronary artery embolism from IE vegetations causes approximately 2-5% of acute MI in patients with aortic or mitral valve IE and is managed differently from atherosclerotic MI." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "relevance": "New-onset AF complicates IE in approximately 15-20% of cases from atrial inflammation and haemodynamic changes from acute valvular regurgitation." },
+    { "slug": "stroke", "name": "Stroke", "relevance": "Cerebral embolism is the most feared complication of left-sided IE; timing of cardiac surgery relative to embolic stroke is a critical management decision." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease", "relevance": "Pre-existing CKD is both a risk factor for IE (haemodialysis access) and a complication (immune complex glomerulonephritis, aminoglycoside toxicity); renal function is closely monitored throughout IE treatment." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is infective endocarditis?",
+      "answer": "Infective endocarditis is a bacterial or fungal infection of the heart valves or inner lining of the heart chambers. Microorganisms form vegetations — clumps of bacteria embedded in fibrin and platelets — on valve leaflets. These can damage the valve and break off to cause strokes or organ infarctions. It requires 4-6 weeks of IV antibiotics and surgery in about 50% of cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of infective endocarditis?",
+      "answer": "The most common symptom is persistent fever above 38°C lasting more than a week. Other signs include fatigue, night sweats, weight loss, joint pain, a new or changed heart murmur, and embolic features such as stroke, Osler's nodes (tender finger nodules), Janeway lesions (palm macules), and splinter haemorrhages under fingernails.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What bacteria most commonly cause endocarditis?",
+      "answer": "Staphylococcus aureus is the most common cause globally, responsible for 25-45% of cases. Viridans streptococci (oral bacteria) are the second most common, particularly in patients with structural heart disease and dental sources. Enterococcus faecalis is the third most common and increasingly linked to urological procedures in older men.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is endocarditis diagnosed?",
+      "answer": "Diagnosis uses the modified Duke criteria: three blood culture sets before antibiotics (the most important step) and echocardiography showing vegetations or valve destruction. Transoesophageal echocardiography (TOE) is more sensitive than transthoracic echo and is mandatory for prosthetic valve IE. FDG-PET/CT and cardiac CT are now Duke major imaging criteria in the 2023 ESC guidelines.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long is the treatment for infective endocarditis?",
+      "answer": "Antibiotic treatment lasts 4-6 weeks of IV antibiotics. Viridans streptococcal native valve IE may be treated with 4 weeks of beta-lactam or a 2-week combined regimen in uncomplicated cases. Staphylococcal IE requires 6 weeks. Prosthetic valve or device IE may require 6+ weeks. Selected stable patients can complete therapy via OPAT.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is surgery needed for endocarditis?",
+      "answer": "Surgery is required in approximately 50% of IE cases. Urgent indications include: acute severe valvular regurgitation causing heart failure; perivalvular abscess; persistent bacteraemia beyond 7 days; and fungal endocarditis. Large vegetations causing recurrent embolism despite antibiotics also warrant surgery. Early surgery reduces mortality compared with delayed or no surgery when these criteria are met.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you survive infective endocarditis?",
+      "answer": "Yes, but mortality remains significant. In-hospital mortality averages 15-30%; Staphylococcus aureus IE has mortality of 30-40%. Streptococcal IE on native valves has a better prognosis at 5-10% in-hospital mortality. Outcomes improve substantially with early blood culture-guided antibiotics, IE team management, and timely surgery when indicated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who is at risk for infective endocarditis?",
+      "answer": "High-risk groups include patients with prosthetic heart valves, prior IE, bicuspid aortic valve, rheumatic valvular disease, congenital heart defects, cardiac implantable devices, haemodialysis patients, and people who inject drugs. Any bacteraemia with an oral, skin, or gut organism in these individuals requires blood cultures and echocardiography.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do you need antibiotics before dental work if you have a heart condition?",
+      "answer": "Only specific high-risk patients require dental antibiotic prophylaxis per 2023 ESC guidelines: those with prosthetic valves, prior IE, specific complex cyanotic congenital heart disease, or surgically repaired CHD within 6 months. Amoxicillin 2 g orally 30-60 minutes before the procedure is the standard regimen. Most patients with valvular disease do not require prophylaxis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are Osler's nodes in endocarditis?",
+      "answer": "Osler's nodes are painful, tender, red or purple nodules on the fingertip pulps, thenar, or hypothenar eminences, caused by immune complex deposition or microemboli in subacute bacterial endocarditis. They are transient (hours to days) and highly specific when present. They differ from Janeway lesions, which are non-tender haemorrhagic macules on the palms or soles from septic emboli.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Duke criteria for endocarditis?",
+      "answer": "The modified Duke criteria classify IE as definite, possible, or rejected based on major and minor criteria. Major criteria include positive blood culture with a typical organism and echocardiographic evidence of vegetation or valve destruction. Minor criteria include predisposing heart condition, fever, vascular or immunological phenomena. Definite IE requires two major, one major plus three minor, or five minor criteria.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between acute and subacute endocarditis?",
+      "answer": "Acute endocarditis, usually caused by Staphylococcus aureus, progresses rapidly over days to weeks with high fever, severe illness, and rapid valve destruction. Subacute endocarditis, typically caused by viridans streptococci, develops insidiously over weeks to months with low-grade fever, fatigue, weight loss, and gradually worsening murmur. Both forms require IV antibiotics and potential surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can endocarditis cause a stroke?",
+      "answer": "Yes. Cerebral embolism from infected vegetations occurs in approximately 20-40% of left-sided IE cases and is the most feared complication. Stroke can be ischaemic (vegetation fragment) or haemorrhagic (mycotic aneurysm rupture). New neurological symptoms in any patient with known or suspected IE require urgent brain imaging.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is endocarditis contagious?",
+      "answer": "No. Infective endocarditis is not transmitted from person to person. It develops when bacteria or fungi that are already present in the body (in the mouth, skin, or gut) enter the bloodstream during a procedure, infection, or injection, and seed a damaged or prosthetic heart valve. There is no person-to-person transmission risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you get endocarditis more than once?",
+      "answer": "Yes. Recurrent IE (different organism or more than 6 months from the first episode) occurs in approximately 5-10% of patients over 5 years. Risk is highest in patients with prosthetic valves, continued injection drug use, or haemodialysis dependence. Each episode causes additional valve damage and increases the likelihood of needing surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is CIED endocarditis?",
+      "answer": "Cardiovascular implantable electronic device (CIED) IE is infection of pacemaker, ICD, or CRT leads crossing the heart. It presents with pocket site infection, persistent bacteraemia, and lead vegetations visible on TOE. Complete device removal (transvenous lead extraction) within 48-72 hours is mandatory for cure, followed by 2-4 weeks of IV antibiotics before a new device is implanted.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Infective endocarditis (heart valve infection)",
+  "regionalNames": [
+    { "name": "Endocardite infectieuse", "region": "France", "language": "French" },
+    { "name": "Endocarditis infecciosa", "region": "Spain / Latin America", "language": "Spanish" },
+    { "name": "Hriday valva sankraman", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "infective endocarditis",
+    "endocarditis symptoms",
+    "endocarditis treatment",
+    "bacterial endocarditis",
+    "Duke criteria endocarditis",
+    "endocarditis antibiotics",
+    "valve infection",
+    "Osler nodes",
+    "Janeway lesions",
+    "endocarditis echocardiogram",
+    "endocarditis surgery",
+    "prosthetic valve infection",
+    "CIED infection",
+    "IVDU endocarditis",
+    "endocarditis prophylaxis"
+  ],
+  "symptomKeywords": [
+    "persistent fever unknown origin",
+    "fever and heart murmur",
+    "fever and stroke",
+    "tender fingertip nodules fever",
+    "splinter haemorrhages nails",
+    "fever after dental work",
+    "fever prosthetic valve"
+  ],
+
+  "metaTitle": "Infective Endocarditis: Symptoms & Treatment | aihealz",
+  "metaDescription": "Infective endocarditis: bacterial heart valve infection with fever, emboli, and vegetations. Duke criteria diagnosis, IV antibiotics, and surgery reviewed.",
+
+  "keywords": [
+    "infective endocarditis",
+    "endocarditis symptoms",
+    "endocarditis treatment",
+    "endocarditis antibiotics duration",
+    "Duke criteria",
+    "endocarditis surgery indications",
+    "staphylococcal endocarditis",
+    "prosthetic valve endocarditis",
+    "CIED endocarditis",
+    "endocarditis prophylaxis",
+    "echocardiography endocarditis",
+    "endocarditis complications"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J 44(39):3948-4042.", "url": "https://pubmed.ncbi.nlm.nih.gov/37622656/", "accessedDate": "2026-05-14" },
+    { "title": "Li JS, Sexton DJ, Mick N, et al. 2000. Proposed modifications to the Duke criteria for the diagnosis of infective endocarditis. Clin Infect Dis 30(4):633-8.", "url": "https://pubmed.ncbi.nlm.nih.gov/10770721/", "accessedDate": "2026-05-14" },
+    { "title": "Iversen K, Ihlemann N, Gill SU, et al. 2019. Partial oral versus intravenous antibiotic treatment of endocarditis (POET). N Engl J Med 380(5):415-424.", "url": "https://pubmed.ncbi.nlm.nih.gov/30152252/", "accessedDate": "2026-05-14" },
+    { "title": "Cahill TJ, Baddour LM, Habib G, et al. 2017. Challenges in infective endocarditis. J Am Coll Cardiol 69(3):325-344.", "url": "https://pubmed.ncbi.nlm.nih.gov/28104073/", "accessedDate": "2026-05-14" },
+    { "title": "Fernández-Hidalgo N, Almirante B, Gavaldà J, et al. 2013. Ampicillin plus ceftriaxone is as effective as ampicillin plus gentamicin for treating Enterococcus faecalis infective endocarditis (ENTD). Clin Infect Dis 56(9):1261-8.", "url": "https://pubmed.ncbi.nlm.nih.gov/23378283/", "accessedDate": "2026-05-14" },
+    { "title": "Habib G, Lancellotti P, Antunes MJ, et al. 2015. 2015 ESC Guidelines for the management of infective endocarditis. Eur Heart J 36(44):3075-3128.", "url": "https://pubmed.ncbi.nlm.nih.gov/26320109/", "accessedDate": "2026-05-14" },
+    { "title": "Holland TL, Baddour LM, Bayer AS, Hoen B, Miro JM, Fowler VG Jr. 2016. Infective endocarditis. Nat Rev Dis Primers 2:16059.", "url": "https://pubmed.ncbi.nlm.nih.gov/27582414/", "accessedDate": "2026-05-14" },
+    { "title": "Baddour LM, Wilson WR, Bayer AS, et al. 2015. Infective endocarditis in adults: diagnosis, antimicrobial therapy, and management of complications. Circulation 132(15):1435-86.", "url": "https://pubmed.ncbi.nlm.nih.gov/26373316/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}
