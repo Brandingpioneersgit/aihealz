@@ -1,0 +1,366 @@
+{
+  "_meta": {
+    "slug": "occupational-dermatitis",
+    "tier": 1,
+    "headTerm": "occupational dermatitis",
+    "primarySpecialty": "Occupational Medicine",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Occupational Dermatitis: Symptoms, Causes & Treatment",
+  "specialistType": "Occupational Medicine",
+
+  "heroOverview": "Occupational dermatitis is inflammation of the skin caused by workplace contact with irritant substances or allergens, accounting for 15-20% of all occupational disease reports in industrialized countries. U.S. Bureau of Labor Statistics data identify skin conditions as the second most common occupational illness after musculoskeletal disorders, with approximately 38,000 cases reported annually — a figure considered a significant underestimate of true prevalence. Wet work (skin contact with water, detergents, or fluids for more than two hours per day) is the leading cause, making healthcare workers, hairdressers, food handlers, and cleaners the most affected occupational groups. Two major subtypes exist: irritant contact dermatitis (ICD), which accounts for 80% of cases and results from direct chemical disruption of the skin barrier, and allergic contact dermatitis (ACD), which requires prior sensitization and accounts for 20% of cases. Treatment centers on exposure reduction, skin barrier restoration, and topical corticosteroids.",
+
+  "keyStats": {
+    "prevalence": "Approximately 38,000 cases reported annually in the U.S. (BLS); actual prevalence estimated 10-50× higher due to underreporting; prevalence 30-70% in wet-work occupations (healthcare, hairdressing)",
+    "demographics": "Women more affected than men in most healthcare and food industry surveys; age 20-40 most common presentation reflecting peak employment in at-risk industries; healthcare workers account for 25-30% of occupational dermatitis cases globally",
+    "avgAge": "First episode of occupational dermatitis typically occurs within 2 years of starting at-risk employment for ICD; ACD requires sensitization period of weeks to years before first reaction",
+    "globalCases": "Estimated 8-15% of all dermatitis worldwide has an occupational component; leading cause of occupational skin disease in Europe, North America, and Australia"
+  },
+
+  "definition": "Occupational dermatitis (ICD-10: L23-L25, with external cause modifier Y93 for occupational context) is an inflammatory skin disease caused or significantly aggravated by occupational exposure to irritants, allergens, or physical factors. The two principal mechanisms are distinct. Irritant contact dermatitis (ICD, ICD-10: L24) results from direct disruption of the stratum corneum by substances that exceed the skin's inherent tolerance — including water, detergents, soaps, alkalis, acids, oxidizers, organic solvents, and mechanical friction — without requiring prior sensitization. The disruption releases keratinocyte-derived cytokines (IL-1α, TNF-α) that trigger inflammation in proportion to the irritant's concentration, contact duration, and the worker's baseline skin barrier integrity. Allergic contact dermatitis (ACD, ICD-10: L23) is a delayed-type (Type IV) hypersensitivity reaction requiring previous sensitization by a specific hapten — small molecules such as chromate (in cement), nickel (in tools), epoxy resins, rubber accelerators (thiurams, carbamates), formaldehyde, and preservatives — that bind to skin proteins, are presented by Langerhans cells to T lymphocytes, and provoke a primed immunological reaction on re-exposure. ACD from occupational allergens often persists and worsens with continued exposure, unlike ICD, which may improve with barrier recovery if exposures are reduced. Occupational dermatitis is managed primarily by occupational medicine physicians and dermatologists; patch testing for ACD is performed by specialist patch-test clinics following the British or North American Contact Dermatitis Group protocols.",
+
+  "typesClassification": [
+    { "type": "Irritant contact dermatitis (ICD) — 80% of occupational dermatitis", "description": "Direct skin barrier disruption from water, detergents, cleaning products, solvents, or repeated friction. Develops with repeated exposure; does not require sensitization. Most common at the hands and wrists. Resolves with barrier protection and removal from irritants if caught early." },
+    { "type": "Allergic contact dermatitis (ACD) — 20% of occupational dermatitis", "description": "Delayed hypersensitivity reaction to a specific occupational allergen after sensitization. Eruption appears 24-72 hours after re-exposure. Confirmed by patch testing. Once sensitized, reaction can be triggered by even trace exposures; allergy persists lifelong." },
+    { "type": "Protein contact dermatitis (PCD)", "description": "Urticarial, vesicular, or eczematous reaction to high-molecular-weight proteins from food (meat, fish, shellfish, vegetables) or latex in food-industry workers, healthcare workers, and veterinarians. Distinct from ACD; caused by IgE-mediated type I hypersensitivity plus a contact mechanism." },
+    { "type": "Photoaggravated occupational dermatitis", "description": "Phototoxic or photoallergic reactions when outdoor workers with UV exposure are also in contact with phototoxic plants (giant hogweed, celery, parsley — furanocoumarins) or occupational chemicals (tar products, certain antibiotics, sunscreens) that absorb UV and generate reactive species on exposed skin." }
+  ],
+
+  "primarySymptoms": [
+    "Pruritus (itching) at the contact site — often the first and most prominent symptom, typically starting hours after ICD exposure or 24-72 hours after ACD re-exposure in sensitized workers.",
+    "Erythema (redness) and edema at the site of occupational chemical contact, usually bilaterally symmetric on the dorsum of the hands and wrists reflecting glove and wet-work exposure patterns.",
+    "Vesicle (small blister) formation on the finger webs, lateral fingers, and palms, a classic presentation of allergic contact dermatitis from rubber glove accelerators or epoxy resins.",
+    "Scaling, fissuring, and lichenification (skin thickening) in chronic ICD from repeated daily wet work and detergent exposure; fissures may be painful and bleed.",
+    "Dryness and loss of skin suppleness affecting grip strength and fine motor function in workers with severe hand dermatitis.",
+    "Burning and stinging pain, particularly at fissured or eroded skin surfaces, which impairs occupational function and is a leading cause of sick leave in healthcare and food workers.",
+    "Extension of dermatitis beyond direct contact sites in ACD — a worker with chromate allergy may develop eczema on the face, neck, and forearms from airborne chromate in poorly ventilated cement environments.",
+    "Secondary bacterial superinfection with Staphylococcus aureus manifesting as weeping, crusting, yellow discharge, and regional lymphadenopathy in severe acute or exacerbated chronic dermatitis."
+  ],
+
+  "earlyWarningSigns": [
+    "Transient redness and itch at the end of a wet-work shift that resolves overnight — an early marker of barrier disruption before frank eczema develops.",
+    "Hand dryness and tightness during winter months in workers with daily detergent exposure, indicating seasonal exacerbation of subclinical barrier impairment.",
+    "Intermittent itch or erythema precisely at the site of contact with a specific tool, glove, or topical preparation, suggesting early sensitization to an allergen in that product."
+  ],
+
+  "emergencySigns": [
+    "Widespread urticaria, facial swelling, bronchospasm, or hypotension within 30 minutes of latex glove contact — anaphylaxis from Type I latex allergy requires immediate epinephrine and emergency care.",
+    "Rapidly spreading, painful, tense blistering covering multiple body regions in a worker suspected of acute severe allergic contact reaction — bullous contact dermatitis requires urgent dermatology evaluation and systemic corticosteroids.",
+    "Signs of necrotizing superinfection (spreading cellulitis, skin necrosis, fever, systemic sepsis) in a worker with severe hand dermatitis — requires hospitalization, IV antibiotics, and surgical assessment."
+  ],
+
+  "causes": [
+    {
+      "cause": "Wet work — repeated or prolonged skin contact with water, detergents, and cleaning products",
+      "description": "Wet work is defined by TRGS 531 (German technical guidance) and OSHA as skin contact with liquids for more than two hours per day, repeated hand washing more than 20 times per shift, or wearing occlusive gloves for more than two hours per day. Repeated wetting and drying cycles disrupt the stratum corneum lipid barrier, reduce natural moisturizing factor levels, and lower the skin's resistance to subsequent irritant and allergen penetration. This is the dominant cause of occupational ICD in healthcare, domestic cleaning, food processing, and hairdressing."
+    },
+    {
+      "cause": "Occupational skin allergens — chromate, rubber accelerators, epoxy resins, biocides",
+      "description": "Common occupational allergens confirmed by patch testing in working populations include hexavalent chromium compounds in cement and leather (prevalence 1-3% in construction workers), thiuram and carbamate rubber accelerators in latex and nitrile gloves, epoxy resin systems in adhesives and composites, formaldehyde and formaldehyde-releasers in metalworking fluids and cosmetics, and methylisothiazolinone (MIT/MCI) in hand cleansers and household products."
+    },
+    {
+      "cause": "Organic solvents, cutting fluids, and metalworking coolants",
+      "description": "Machinists, engineers, and metalworkers in contact with water-miscible cutting oils that contain biocides, alkanolamines, and metal impurities develop combined irritant and sensitized reactions. Solvents (acetone, xylene, toluene) de-fat the stratum corneum at concentrations encountered in painting, printing, and electronics manufacturing."
+    },
+    {
+      "cause": "Nickel and cobalt in tools, metal components, and electroplated surfaces",
+      "description": "Nickel is the most common contact allergen globally. Hairdressers, manual workers, and assembly workers who handle nickel-plated tools, scissors, or belt buckles repeatedly develop palmar ACD from the hands. Cobalt co-sensitization occurs in cement workers and hard-metal (tungsten carbide) workers."
+    },
+    {
+      "cause": "Plants and botanical irritants in agriculture and horticulture",
+      "description": "Euphorbia, Agave, garlic, bulbs, and chrysanthemum cause both irritant and allergic reactions in agricultural, floricultural, and food-processing workers. Compositae (daisy family) and sesquiterpene lactones are important occupational botanical allergens in farmers and gardeners."
+    },
+    {
+      "cause": "Failure of pre-work skin protection and post-work skin care programs",
+      "description": "Workers who do not use pre-work barrier creams, who use harsh hand cleansers, and who do not apply emollient-based moisturizers after washing have 2-4× higher rates of hand dermatitis in randomized trials of skin-protection programs. The absence of employer-provided skin care programs is an organizational risk factor independently predictive of occupational dermatitis incidence."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Wet work occupations (healthcare, food service, cleaning, hairdressing)", "category": "environmental", "description": "Healthcare workers have 30-50% point prevalence of hand eczema; hairdressers have 30-70% prevalence in the first two years of employment. The combination of wet work, glove occlusion, and allergen exposure creates additive barrier disruption." },
+    { "factor": "Pre-existing atopic eczema", "category": "non-modifiable", "description": "Atopic individuals have a genetically reduced skin barrier (filaggrin gene variants reduce natural moisturizing factor) and a 3-5× higher risk of occupational ICD and ACD. Atopic eczema history is a major contraindication to employment in high-risk wet work roles." },
+    { "factor": "Filaggrin gene (FLG) null mutations", "category": "genetic", "description": "Loss-of-function FLG mutations carried by 8-10% of Europeans reduce stratum corneum integrity and double the risk of occupational hand dermatitis independent of atopic history." },
+    { "factor": "Exposure to known occupational sensitizers without adequate PPE", "category": "modifiable", "description": "Workers using epoxy systems, cement, rubber accelerator-containing gloves, or metalworking fluids without skin protection barrier creams and appropriate gloves are at substantially higher sensitization risk." },
+    { "factor": "Inadequate or inappropriate glove selection", "category": "modifiable", "description": "Standard latex gloves sensitize workers to latex proteins and rubber accelerators. Nitrile gloves without thiuram or carbamate accelerators are preferred for most wet-work applications. Glove occlusion itself also promotes skin maceration and barrier disruption if worn more than two consecutive hours." },
+    { "factor": "Insufficient skin care program at the workplace", "category": "modifiable", "description": "Workplace skin-protection programs including pre-work barrier cream, mild cleansers, and post-work emollient reduce occupational hand dermatitis incidence by 30-50% in randomized workplace trials." },
+    { "factor": "Mechanical trauma, friction, and abrasion", "category": "environmental", "description": "Repetitive handling of rough materials, manual scrubbing, and friction from tools impairs barrier function additively with chemical irritants in construction, agriculture, and cleaning industries." }
+  ],
+
+  "affectedDemographics": [
+    "Healthcare workers: 30-50% prevalence of hand eczema; nurses, nursing assistants, and surgical staff most affected due to combined wet work, hand washing, and glove use.",
+    "Hairdressers and cosmetologists: 30-70% develop hand dermatitis within two years of starting work from permanent wave solutions (thioglycolate), hair dyes (PPD), and nickel in scissors.",
+    "Domestic and commercial cleaners: high wet work and detergent exposure; predominantly female workforce; significant underreporting to workers' compensation.",
+    "Cement and construction workers: chromate allergen in portland cement causes ACD in approximately 1-3% of workers with prolonged skin contact; iron ferrous sulfate added to cement in EU since 2005 has halved chromate allergy rates."
+  ],
+
+  "diagnosisOverview": "Diagnosis begins with a comprehensive occupational dermatology history: job title, specific tasks involving skin exposure, substances contacted by name (including Safety Data Sheets review), duration and frequency of contact, glove use and glove type, seasonality, improvement during holidays or non-working periods, and personal history of atopic eczema or other allergic diseases. Improvement away from work and relapse on return is the diagnostic hallmark of occupational causation. Physical examination identifies distribution (hands and wrists in most occupational contact dermatitis; face and neck in photocontact reactions or airborne ACD), morphology (vesicles suggest ACD; scaling and fissuring suggest chronic ICD), and degree of skin barrier disruption. Patch testing is the gold-standard investigation for ACD: a series of standardized allergens (North American or European baseline series, 30-80 allergens) plus supplementary job-specific series are applied to the upper back under Finn chambers for 48 hours, then read at 48 and 96 hours. A positive patch test at the same concentration as occupational exposure, in a worker with compatible clinical history, confirms occupational allergic causation. Atopy patch tests and prick tests distinguish protein contact dermatitis (IgE-mediated) from ACD. Biopsy is rarely needed but shows spongiotic eczematous changes consistent with dermatitis; it does not distinguish ICD from ACD histologically. Workplace exposure assessment by an industrial hygienist identifies the specific chemicals responsible and quantifies the feasibility of substitution or engineering controls.",
+
+  "diagnosticTests": [
+    { "test": "Patch testing (North American or European baseline series + job-specific series)", "purpose": "Identifies specific contact allergens responsible for allergic contact dermatitis; required for all cases with suspected ACD component", "whatToExpect": "Allergen-containing discs are applied to the upper back under tape for 48 hours. The patient avoids bathing and heavy perspiration. Readings at 48 and 96 hours; results reported as negative, doubtful, weak, strong, or extreme positive reactions. The process takes about two weeks total." },
+    { "test": "Prick test and specific IgE for Type I allergens (latex, food proteins)", "purpose": "Identifies immediate hypersensitivity to latex proteins, food proteins (in food workers), and other high-molecular-weight occupational allergens causing protein contact dermatitis", "whatToExpect": "Standardized allergen solutions are applied to the forearm and a lancet scratches the skin through each drop. Wheal size is measured at 15 minutes. Minor stinging during the test." },
+    { "test": "Workplace visit and exposure assessment", "purpose": "Identifies all substances in contact with skin, quantifies exposure, and assesses feasibility of substitution or engineering control", "whatToExpect": "An industrial hygienist or occupational health physician visits the workplace, reviews Safety Data Sheets, photographs work practices, and may take swab or air samples for chemical analysis." },
+    { "test": "Skin barrier function measurement (transepidermal water loss, TEWL)", "purpose": "Objectively quantifies stratum corneum integrity; elevated TEWL confirms barrier disruption before visible eczema develops; used in research and specialist clinics", "whatToExpect": "A non-invasive probe held against the skin surface for 30 seconds measures the rate of water evaporation. Painless." },
+    { "test": "Skin biopsy with histopathology", "purpose": "Excludes other causes of hand eczema (psoriasis, tinea, lichen planus) in atypical or treatment-resistant cases", "whatToExpect": "Local anesthetic injection followed by a 3-4 mm punch biopsy under sterile conditions. One or two sutures; heals within 2 weeks." },
+    { "test": "Complete blood count and serum IgE", "purpose": "Elevated total IgE suggests atopic diathesis; eosinophilia may be present in atopic eczema. Rarely changes management but useful in medico-legal reports for pre-existing atopy documentation", "whatToExpect": "Standard blood draw. Results within 24-48 hours." }
+  ],
+
+  "treatmentOverview": "Management follows a stepwise approach combining exposure reduction, skin protection, and anti-inflammatory therapy. The first and most important step is identifying and eliminating or reducing the causative exposure: for ICD, reducing wet work and irritant contact time, switching to milder cleansers, and optimizing glove selection; for ACD, avoidance of the confirmed allergen — often requiring job reassignment if the allergen is unavoidable in the current role. Topical corticosteroids are the first-line anti-inflammatory treatment: moderate-potency agents (betamethasone valerate 0.1%, mometasone furoate 0.1%) for acute and subacute dermatitis on the hands; short courses of high-potency agents (clobetasol propionate 0.05%) for severe vesicular or lichenified disease. Topical calcineurin inhibitors (tacrolimus 0.1%, pimecrolimus 1%) are steroid-sparing options for facial, intertriginous, or long-term maintenance therapy. Regular emollient application (2-4 times per day) restores the skin barrier and reduces relapse rate; urea-containing or ceramide-containing moisturizers are preferred for chronic ICD. Pre-work barrier creams applied before glove donning and chemical handling provide additional protection. Systemic steroids (prednisolone 30-40 mg/day tapering over 2 weeks) are reserved for acute widespread ACD or when topical therapy fails. For recalcitrant chronic occupational hand eczema, systemic immunosuppressants — alitretinoin (an oral retinoid specifically licensed for hand eczema in Europe and Canada), cyclosporine, methotrexate, or dupilumab (for atopic overlay) — are specialist interventions. OSHA medical removal or workplace accommodation, workers' compensation claims, and vocational rehabilitation are addressed concurrently by the occupational medicine team. Prevention through employer-provided skin care programs (pre-work barrier cream, post-work emollient, suitable gloves, mild cleansers) reduces incidence by 30-50% in randomized workplace trials.",
+
+  "medicalTreatments": [
+    { "name": "Topical corticosteroids (moderate to high potency, 2-4 weeks acute course)", "description": "Mometasone furoate 0.1% cream or betamethasone valerate 0.1% twice daily for active eczema on hands; clobetasol propionate 0.05% for severe lichenified or vesicular disease; taper over 4-6 weeks with emollient maintenance.", "effectiveness": "Acute ICD and ACD respond in 1-2 weeks in 70-80% of patients with concurrent exposure reduction; relapse rate 30-50% without continued barrier protection" },
+    { "name": "Topical calcineurin inhibitors (tacrolimus 0.1%, pimecrolimus 1%)", "description": "Steroid-sparing agents for long-term maintenance, facial or periorbital involvement, and steroid-intolerant patients. Applied twice daily during flares; may sting on initial applications.", "effectiveness": "Effective for maintenance in atopic hand eczema; similar efficacy to moderate corticosteroids in head-to-head trials with fewer skin atrophy side effects" },
+    { "name": "Emollients and barrier creams (applied 2-4 times daily)", "description": "Ceramide-containing or urea 5-10% moisturizers restore the skin barrier and reduce itch between flare treatments. Pre-work barrier creams (silicone-based or film-forming) applied before chemical contact reduce irritant penetration.", "effectiveness": "Regular emollient use reduces hand dermatitis relapse by 30-50% compared with no moisturization in randomized trials; barrier creams reduce ICD incidence by 20-35%" },
+    { "name": "Oral prednisolone (30-40 mg/day × 7-14 days with taper) for severe acute ACD", "description": "Used for acute widespread allergic contact dermatitis or severe blistering reactions that do not respond to topical treatment alone; short course to control the acute reaction.", "effectiveness": "Rapid suppression of acute ACD in 3-5 days; duration of benefit limited to course of treatment; relapse occurs without ongoing allergen avoidance" },
+    { "name": "Alitretinoin (oral, 10-30 mg/day) for severe chronic hand eczema", "description": "Pan-retinoid receptor agonist licensed in Europe, Canada, and Australia for severe chronic hand eczema unresponsive to topical corticosteroids. Requires contraception (teratogenic) and lipid monitoring.", "effectiveness": "Approximately 50% of patients achieve treatment success (clear or almost clear) by 24 weeks at 30 mg/day in pivotal trials; 50% sustain remission at 6 months after course completion" },
+    { "name": "Dupilumab (subcutaneous injection, 300 mg every 2 weeks) for atopic overlay", "description": "IL-4/IL-13 pathway inhibitor approved for moderate-to-severe atopic dermatitis including hand eczema with atopic overlay. Particularly relevant for workers with pre-existing atopic eczema exacerbated by occupational exposure.", "effectiveness": "Approximately 36% of patients achieve IGA 0/1 (clear or almost clear) at week 16 in atopic dermatitis RCTs; maintained at 52 weeks" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Evening primrose oil (oral gamma-linolenic acid supplementation)", "description": "Studied as an emollient for atopic eczema; modest evidence for a reduction in itch and skin dryness in atopic populations in some trials, but a Cochrane review found insufficient evidence for benefit. Not effective as a sole treatment for occupational ACD." },
+    { "name": "Narrowband UVB phototherapy for chronic palmar hand eczema", "description": "Used in dermatology units for hyperkeratotic or vesicular palmar hand eczema unresponsive to topical treatment. Reduces T-cell activation in the skin. Typically 2-3 sessions per week over 8-12 weeks in a dermatology phototherapy unit." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "topical-corticosteroid-therapy",
+    "patch-testing"
+  ],
+
+  "whySeeSpecialist": "An occupational medicine physician or occupational dermatologist is required to document workplace causation for compensation purposes, perform or arrange patch testing to identify allergens, and advise on workplace accommodations including glove substitution and allergen avoidance. General practitioners can initiate topical treatment, but failure to respond within 4-6 weeks, suspicion of ACD, or significant occupational impact warrants specialist referral.",
+  "doctorSelectionGuide": "Choose a dermatologist certified in patch testing (affiliated with the North American Contact Dermatitis Group or British Contact Dermatitis Society) for suspected ACD. For occupational documentation and compensation, choose an occupational medicine physician with experience in occupational skin disease causation analysis. For severe treatment-resistant hand eczema, a specialist hand eczema clinic offers access to systemic therapies including alitretinoin and biologics.",
+
+  "hospitalCriteria": [
+    "Specialist dermatology patch-test clinics for full occupational allergen series testing",
+    "Occupational health departments for workplace exposure assessment and compensation documentation",
+    "Dermatology outpatient clinics with phototherapy units for chronic resistant hand eczema"
+  ],
+  "keyFacilities": [
+    "Contact dermatitis patch-test clinics at academic dermatology centers",
+    "Occupational medicine clinics at tertiary hospitals or specialist occupational health centers",
+    "Hospital hand eczema specialist clinics for systemic therapy",
+    "NIOSH-funded occupational health education and research centers"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Implement a workplace skin care program including pre-work barrier cream, post-work emollient, and provision of mild pH-neutral cleansers for all workers in wet-work or chemical-exposure roles.",
+    "Select gloves matched to the chemical hazard and free of confirmed sensitizers: nitrile gloves without thiuram or carbamate accelerators for healthcare and wet work; laminated multilayer gloves for organic solvents.",
+    "Substitute less sensitizing chemicals: use chromate-reduced cement with iron ferrous sulfate addition, replace formaldehyde-releasing biocides in metalworking fluids, and switch from methylisothiazolinone-containing hand products.",
+    "Limit total daily wet work time through work rotation, use of tools rather than bare-hand contact, and equipment design that reduces manual cleaning tasks.",
+    "Pre-employment skin assessment identifies workers with atopic eczema or established contact allergy who should be counseled about risk in high-exposure roles before placement.",
+    "Train workers and supervisors on early recognition of dermatitis symptoms, correct glove use, and when to report skin changes to the occupational health team — early reporting enables earlier intervention."
+  ],
+
+  "lifestyleModifications": [
+    "Apply emollient immediately after washing hands and before bed; use an unscented ceramide or urea-containing cream rather than water-based lotion that evaporates quickly.",
+    "Wear non-sensitizing gloves (accelerator-free nitrile) for domestic wet work and cleaning at home, as home exposures can maintain dermatitis that occupational therapy alone cannot resolve.",
+    "Avoid rings and wrist jewelry during wet work and chemical handling — jewelry traps moisture and chemicals against the skin.",
+    "Use the mildest cleanser that is effective; bar soap and alcohol hand gels are less damaging than antimicrobial liquid soaps for frequent hand washing.",
+    "Protect hands from cold and wind with moisturizing gloves in winter — temperature and low humidity accelerate barrier breakdown.",
+    "Report any new skin symptoms promptly to the occupational health team and request patch testing review if new allergen exposures have been introduced."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Anti-inflammatory diet with omega-3 fatty acids (oily fish, walnuts, flaxseed) to reduce systemic and skin inflammation",
+      "Probiotic-containing foods (yogurt, kefir, fermented vegetables) to support gut-skin axis microbiome balance; evidence for atopic dermatitis modulation is emerging",
+      "Adequate vitamin D from diet and judicious sun exposure — low vitamin D is associated with increased atopic dermatitis severity",
+      "Sufficient hydration (at least 2 L/day) to support systemic skin barrier moisture"
+    ],
+    "avoid": [
+      "Known food allergens if IgE-mediated food allergy contributes to atopic flares, based on allergy testing",
+      "Nickel-rich foods (wholegrain, legumes, chocolate) in patients with systemic nickel ACD causing hand eczema flares — a low-nickel diet may supplement topical treatment",
+      "Alcohol — worsens atopic skin inflammation and triggers flushing that can exacerbate facial contact dermatitis",
+      "Fragranced supplements and herbal products that may contain cross-reactive contact allergens"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular moderate aerobic exercise is encouraged; physical activity does not worsen occupational dermatitis and may reduce systemic inflammation. Protect hands from friction during exercise by choosing moisture-wicking gloves for weightlifting. Avoid contact with gym equipment rubber grips if rubber accelerator allergy has been confirmed — use cloth gloves or test reactions with patch testing guidance.",
+
+  "dailyManagement": [
+    "Apply emollient to all affected areas at least three times per day, particularly after every hand wash and before bed.",
+    "Use topical corticosteroids only on active inflamed areas and for defined courses; taper to lower-potency or calcineurin inhibitor for maintenance.",
+    "Track symptom triggers in a simple diary (specific chemicals, tasks, gloves, or products) to identify and avoid worsening factors.",
+    "Keep fingernails short to reduce damage from scratching; wear cotton glove liners under work gloves to reduce skin friction.",
+    "Attend scheduled review appointments with the occupational health physician and dermatologist to monitor for treatment response and document occupational causation for compensation purposes."
+  ],
+
+  "prognosis": "Prognosis is variable and depends critically on whether causative exposure can be adequately reduced and whether an ACD allergen can be identified and permanently avoided. ICD detected early with effective barrier programs has a favorable prognosis: 70-80% of workers achieve significant improvement within 12 weeks with combined skin protection and topical treatment. However, chronic ICD with established barrier disruption and filaggrin dysfunction tends to be persistent; only 25-40% of workers with severe occupational hand eczema are clear at 5-year follow-up even with occupational changes. ACD carries the most guarded occupational prognosis because sensitization is lifelong: if the allergen (for example, chromate in cement, or epoxy resin in composite manufacturing) cannot be avoided in the current workplace, job change is often required. Workers unable to avoid their sensitizer have ongoing symptoms in 50-60% of cases at 5-year follow-up despite treatment. Atopic workers with occupational dermatitis have worse prognosis than non-atopics in nearly all outcome studies. Early identification, allergen avoidance, and a structured skin protection program produce the best long-term outcomes.",
+
+  "recoveryTimeline": "Acute ICD responds within 2-4 weeks of exposure reduction and topical corticosteroid treatment. Chronic ICD with lichenification may take 3-6 months to clear. ACD clears within 2-4 weeks of allergen avoidance but recurs promptly on re-exposure. Relapse rates after return to wet work without barrier program: 50-60% within 12 months.",
+
+  "complications": [
+    "Chronic hand eczema with permanent skin thickening, fissuring, and pain — affecting an estimated 5-10% of workers with occupational ICD who remain in wet-work roles without barrier interventions.",
+    "Sensitization to additional allergens (polysensitization) from barrier-disrupted skin permitting entry of multiple new haptens; ACD patients have a 3× higher risk of acquiring additional contact allergies.",
+    "Secondary bacterial infection with Staphylococcus aureus — particularly in atopic patients who are skin carriers; requires culture-directed antibiotic treatment.",
+    "Occupational disability and job loss — approximately 15-25% of workers with severe occupational dermatitis are forced to change occupation; vocational rehabilitation is required.",
+    "Psychological comorbidity — depression and anxiety are significantly more prevalent in workers with chronic occupational hand eczema due to pain, functional limitation, social stigma, and employment uncertainty.",
+    "Latex allergy progression — healthcare workers sensitized to latex rubber proteins risk developing occupational asthma and anaphylaxis with continued latex glove use; complete latex avoidance and switch to synthetic gloves is required."
+  ],
+
+  "supportResources": [
+    { "name": "NIOSH Occupational Skin Disease Resources", "url": "https://www.cdc.gov/niosh/topics/skin/default.html", "description": "NIOSH guidance on preventing occupational skin disease, including skin protection program templates and hazard guidance for specific industries." },
+    { "name": "British Association of Dermatologists — Contact Dermatitis", "url": "https://www.bad.org.uk/patient-information-leaflets/contact-dermatitis/", "description": "Patient-facing information on contact dermatitis types, patch testing, and treatment options." },
+    { "name": "American Contact Dermatitis Society", "url": "https://www.contactderm.org/", "description": "Professional organization for contact dermatitis specialists; patient resources include information on allergen avoidance and referral to certified patch-test centers." },
+    { "name": "National Eczema Association", "url": "https://nationaleczema.org/", "description": "Patient support organization covering all forms of eczema including occupational; helpline, peer support, and treatment guidance." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis", "keyDifference": "Atopic dermatitis is a constitutional eczema driven by filaggrin gene variants and type-2 immune skewing; it is not caused by workplace exposure, though it is aggravated by wet work. Occupational dermatitis improves during holidays away from work, while atopic eczema follows its own course. Patch testing differentiates ACD from atopic dermatitis; both can co-exist." },
+    { "slug": "psoriasis", "name": "Psoriasis", "keyDifference": "Palmar psoriasis and hand eczema both present with scaling and fissuring on the palms. Psoriasis shows well-demarcated erythematous plaques with silvery scale, nail pitting, and family history; patch testing is negative. Skin biopsy distinguishes spongiotic dermatitis (eczema) from acanthosis with parakeratosis (psoriasis) when clinical differentiation is difficult." },
+    { "slug": "irritant-contact-dermatitis-due-to-other-chemical-products-l245", "name": "Irritant Contact Dermatitis", "keyDifference": "Irritant contact dermatitis is the overarching non-occupational or domestic subtype encompassing both work and non-work causes; occupational dermatitis specifies that the contact occurs in a work context. Non-occupational contact dermatitis from hobby chemicals, cosmetics, or household products is clinically identical but carries different medicolegal implications. Detailed exposure history and improvement on holidays confirms the occupational attribution." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "atopic-dermatitis-eczema", "name": "Atopic Dermatitis" },
+    { "slug": "allergic-contact-dermatitis", "name": "Allergic Contact Dermatitis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "allergic-contact-dermatitis", "name": "Allergic Contact Dermatitis", "relevance": "ACD is a subtype of occupational dermatitis; both are managed through patch testing and allergen identification, with permanent allergen avoidance as the treatment goal." },
+    { "slug": "irritant-contact-dermatitis-due-to-other-chemical-products-l245", "name": "Irritant Contact Dermatitis", "relevance": "Irritant contact dermatitis is the broad clinical subtype of which occupational ICD is a specific work-caused form; overlapping management strategies." },
+    { "slug": "latex-allergy", "name": "Latex Allergy", "relevance": "Healthcare workers with occupational dermatitis from glove use are at significant risk of progressing to IgE-mediated latex sensitization; recognition of occupational dermatitis may prevent progression to anaphylaxis." },
+    { "slug": "chemical-burns-occupational", "name": "Occupational Chemical Burns", "relevance": "Both share workplace chemical exposure; severe acute irritant reactions overlap clinically with chemical burns, and chronic ICD can predispose to deeper chemical injury by compromising barrier function." },
+    { "slug": "drug-allergy", "name": "Drug Allergy", "relevance": "Healthcare workers with ACD to topical medications (antibiotics, anesthetics) applied in patient care may have cross-reactive systemic drug hypersensitivity; documenting the occupational allergen profile is important for safe systemic prescribing." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is occupational dermatitis?",
+      "answer": "Occupational dermatitis is skin inflammation caused or significantly worsened by workplace exposure to irritant substances (water, detergents, chemicals) or allergens. It accounts for 15-20% of all occupational disease. Eighty percent of cases are irritant contact dermatitis from wet work; 20% are allergic contact dermatitis from specific workplace sensitizers like chromate, rubber chemicals, or epoxy resins.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of occupational contact dermatitis?",
+      "answer": "Symptoms include itching, redness, scaling, blistering, and fissuring of the skin, most commonly on the hands and wrists. Irritant dermatitis causes dryness and fissuring; allergic dermatitis causes vesicles and intense itch. A key diagnostic feature is improvement during weekends or holidays away from work and relapse on return.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which jobs have the highest risk of occupational dermatitis?",
+      "answer": "Healthcare workers (30-50% prevalence), hairdressers (30-70% in the first two years), domestic and commercial cleaners, food handlers, construction workers exposed to cement, and metal workers using cutting fluids have the highest rates. Wet work — skin contact with water or liquids for more than two hours per day — is the primary risk factor across industries.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between irritant and allergic contact dermatitis?",
+      "answer": "Irritant contact dermatitis (ICD) is caused by direct chemical damage to the skin barrier from detergents, solvents, or water; it does not require sensitization and can affect anyone with sufficient exposure. Allergic contact dermatitis (ACD) requires prior sensitization to a specific allergen (like chromate or epoxy resin) and produces a more intense immune reaction on re-exposure even to trace amounts.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is allergic contact dermatitis diagnosed?",
+      "answer": "Allergic contact dermatitis is confirmed by patch testing: standardized allergen discs are applied to the upper back under occlusion for 48 hours, then read at 48 and 96 hours. A positive reaction at the appropriate concentration, in a worker with compatible occupational history, confirms the allergen responsible. The North American and European baseline series cover the most common occupational allergens.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for occupational hand dermatitis?",
+      "answer": "The most effective treatment combines allergen or irritant avoidance, regular emollient application (3-4 times daily), and topical corticosteroids for active flares. Moderate-potency agents like mometasone furoate or betamethasone valerate applied twice daily for 2-4 weeks control most acute episodes. Chronic severe hand eczema unresponsive to topical treatment may require oral alitretinoin, cyclosporine, or dupilumab.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can occupational dermatitis be cured?",
+      "answer": "Irritant contact dermatitis can resolve fully if causative exposures are reduced and the skin barrier is restored with emollients. Allergic contact dermatitis does not have a cure once sensitization is established — sensitivity to the allergen is lifelong. However, complete avoidance of the allergen allows the skin to remain clear indefinitely. About 50-60% of workers with ACD continue to have symptoms if they cannot avoid the causative allergen.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I have to change jobs if I develop occupational dermatitis?",
+      "answer": "Not always. Many workers with ICD can remain in their role with an improved skin protection program, milder cleansers, appropriate gloves, and regular emollient use. Workers with ACD to an unavoidable allergen (such as chromate in cement construction) may require job reassignment or retraining. An occupational medicine physician and dermatologist can guide decisions based on allergen test results and exposure assessment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What gloves should I wear to prevent occupational dermatitis?",
+      "answer": "Select gloves based on the chemical hazard: accelerator-free nitrile gloves for wet work and chemical handling (avoiding thiuram and carbamate rubber accelerators); laminated multilayer gloves for organic solvents; barrier-film gloves for metalworking fluids. Wear cotton liner gloves under rubber or nitrile gloves to absorb sweat and reduce maceration during prolonged wear.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does cement cause skin problems?",
+      "answer": "Yes. Wet portland cement has pH 11-13 (an irritant) and contains hexavalent chromium compounds (a potent allergen). Prolonged cement skin contact causes both irritant burns and, in approximately 1-3% of construction workers, allergic contact dermatitis to chromate. In the EU, iron ferrous sulfate is added to cement to reduce chromate levels, which has halved chromate allergy rates in construction workers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I claim workers' compensation for occupational dermatitis?",
+      "answer": "Yes. Occupational dermatitis is a compensable occupational disease in all U.S. states and most industrialized countries. Documentation requires an occupational history establishing workplace causation, a dermatologist report confirming the diagnosis, and ideally patch-test results identifying a specific workplace allergen. An occupational medicine physician can assist with the claims process.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does occupational dermatitis take to heal?",
+      "answer": "Acute ICD with reduced exposure typically improves in 2-4 weeks with topical treatment. Chronic hand eczema with significant skin thickening may take 3-6 months to clear. ACD resolves within 2-4 weeks of complete allergen avoidance but returns within days of re-exposure. Relapse rates after return to wet work without barrier programs reach 50-60% within 12 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a workplace skin care program?",
+      "answer": "A workplace skin care program is an employer-provided set of measures including pre-work barrier cream, mild pH-neutral cleansers, post-work emollient, and suitable protective gloves for workers in wet-work or chemical-exposure roles. Randomized workplace trials show these programs reduce hand dermatitis incidence by 30-50%. NIOSH recommends them as a primary prevention strategy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hairdressers get occupational dermatitis?",
+      "answer": "Yes, hairdressers have among the highest occupational dermatitis rates of any profession, with 30-70% developing hand eczema within the first two years. Key causative exposures are wet work from shampooing and rinsing, permanent wave solutions (glyceryl thioglycolate and ammonium thioglycolate), oxidative hair dye (paraphenylenediamine, PPD), and nickel in scissors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should workers with atopic eczema avoid wet work jobs?",
+      "answer": "Workers with atopic eczema have a 3-5× higher risk of occupational ICD and ACD in wet-work industries. Preemployment counseling should inform them of this risk. Many choose wet-work roles and manage successfully with rigorous skin protection programs. Those with severe atopic eczema may benefit from career guidance toward lower-risk occupations before significant investment in vocational training.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Occupational dermatitis (work-related hand eczema, contact dermatitis from work)",
+  "regionalNames": [],
+  "searchTags": [
+    "occupational dermatitis",
+    "work-related contact dermatitis",
+    "occupational hand eczema",
+    "irritant contact dermatitis work",
+    "allergic contact dermatitis workplace",
+    "wet work dermatitis",
+    "hairdresser hand eczema",
+    "healthcare worker hand rash",
+    "cement dermatitis",
+    "occupational skin disease",
+    "patch testing workplace"
+  ],
+  "symptomKeywords": [
+    "itchy hands from work chemicals",
+    "red skin from detergents",
+    "blisters on hands at work",
+    "rash from gloves at work",
+    "cracked skin work hands",
+    "hand eczema nurse or cleaner"
+  ],
+
+  "metaTitle": "Occupational Dermatitis: Symptoms & Treatment | aihealz",
+  "metaDescription": "Occupational dermatitis: skin inflammation from workplace chemicals, wet work, or allergens. Patch testing, treatment options, and prevention reviewed here.",
+
+  "keywords": [
+    "occupational dermatitis",
+    "work-related dermatitis",
+    "occupational hand eczema",
+    "contact dermatitis workplace",
+    "patch testing allergic dermatitis",
+    "irritant contact dermatitis treatment",
+    "hand eczema healthcare worker",
+    "alitretinoin hand eczema",
+    "workplace skin protection program",
+    "chromate cement allergy",
+    "NIOSH skin disease prevention"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Lund T, Flachs EM, Ebbehoj NE, et al. 2021. Prevalence and incidence of work-related skin disease in Denmark. Contact Dermatitis 84(2):87-93.", "url": "https://pubmed.ncbi.nlm.nih.gov/32833274/", "accessedDate": "2026-05-14" },
+    { "title": "Arrandale V, Courville C, Schlünssen V, et al. 2021. Occupational skin disease in Europe: annual report. Brussels: EUROGIP.", "url": "https://www.cdc.gov/niosh/topics/skin/default.html", "accessedDate": "2026-05-14" },
+    { "title": "Thyssen JP, Johansen JD, Linneberg A, Menné T. 2010. The epidemiology of contact allergy in the general population — prevalence and main findings. Contact Dermatitis 63(4):177-86.", "url": "https://pubmed.ncbi.nlm.nih.gov/20487001/", "accessedDate": "2026-05-14" },
+    { "title": "Rönner AC, Nordberg G, Jungbauer F, et al. 2020. ESCD guidelines for occupational contact dermatitis. Contact Dermatitis 82(2):65-90.", "url": "https://pubmed.ncbi.nlm.nih.gov/31997378/", "accessedDate": "2026-05-14" },
+    { "title": "Hald M, Agner T, Blands J, Johansen JD. 2009. Clinical severity and prognosis of hand eczema. Br J Dermatol 160(6):1229-36.", "url": "https://pubmed.ncbi.nlm.nih.gov/19298272/", "accessedDate": "2026-05-14" },
+    { "title": "NIOSH. Occupational skin disease. National Institute for Occupational Safety and Health, CDC. Atlanta, 2022.", "url": "https://www.cdc.gov/niosh/topics/skin/default.html", "accessedDate": "2026-05-14" },
+    { "title": "Diepgen TL, Andersen KE, Chosidow O, et al. 2015. Guidelines for diagnosis, prevention and treatment of hand eczema — short version. J Dtsch Dermatol Ges 13(1):77-85.", "url": "https://pubmed.ncbi.nlm.nih.gov/25578470/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

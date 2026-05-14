@@ -1,0 +1,388 @@
+{
+  "_meta": {
+    "slug": "type-1-diabetes",
+    "tier": 1,
+    "headTerm": "type 1 diabetes",
+    "longTailKeywords": [
+      "type 1 diabetes symptoms",
+      "type 1 diabetes treatment",
+      "type 1 diabetes causes",
+      "type 1 diabetes insulin",
+      "type 1 diabetes diagnosis",
+      "juvenile diabetes",
+      "insulin pump diabetes",
+      "diabetic ketoacidosis",
+      "continuous glucose monitor",
+      "type 1 diabetes diet",
+      "type 1 vs type 2 diabetes",
+      "autoimmune diabetes"
+    ],
+    "primarySpecialty": "Endocrinology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Type 1 Diabetes: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology",
+
+  "heroOverview": "Type 1 diabetes is an autoimmune disease in which T-cell-mediated destruction of pancreatic beta cells eliminates endogenous insulin production, making exogenous insulin therapy permanently necessary for survival. It accounts for 5-10% of all diabetes cases worldwide, affecting approximately 8.4 million people globally in 2021, with incidence rising roughly 3% per year in high-income countries. The classic presentation is acute polyuria, polydipsia, and weight loss over days to weeks, progressing to diabetic ketoacidosis (DKA) in 25-40% of newly diagnosed patients. Without insulin, DKA is fatal. With modern basal-bolus insulin therapy and continuous glucose monitoring, most people with type 1 diabetes live near-normal lives, though microvascular and macrovascular complications remain substantial risks.",
+
+  "keyStats": {
+    "prevalence": "~8.4 million people with type 1 diabetes globally in 2021 (IDF Atlas 2021); ~1.9 million in the US (CDC 2022)",
+    "demographics": "Most common in European-descent populations; highest incidence in Finland, Sardinia, and Scandinavia (~60/100,000/year); incidence rising 3-4% annually in most high-income countries",
+    "avgAge": "Peak diagnosis at age 10-14 years; 50% of new cases now diagnosed after age 18; adult-onset type 1 (LADA) frequently misdiagnosed as type 2",
+    "globalCases": "~316,000 new diagnoses in children and adolescents annually worldwide; DKA at diagnosis in 25-40% of children and up to 60% in low-income countries"
+  },
+
+  "definition": "Type 1 diabetes mellitus (ICD-10: E10) is a chronic autoimmune condition characterized by the near-total destruction of insulin-secreting pancreatic beta cells by autoreactive CD8+ T lymphocytes. The autoimmune process is preceded by a presymptomatic period of months to years during which islet autoantibodies (against insulin, GAD65, IA-2, and ZnT8) accumulate and beta-cell mass progressively declines. Clinical diabetes manifests when approximately 80-90% of beta-cell mass is lost, causing absolute insulin deficiency, hyperglycemia, and susceptibility to diabetic ketoacidosis. The disease shares genetic susceptibility loci primarily within the HLA region on chromosome 6, with HLA-DR3 and HLA-DR4 haplotypes accounting for approximately 50% of genetic risk. Unlike type 2 diabetes, type 1 is not primarily driven by insulin resistance and does not respond to oral hypoglycemic agents alone. It is classified into three stages by the American Diabetes Association 2023 staging criteria: Stage 1 (multiple autoantibodies, normoglycemia), Stage 2 (multiple autoantibodies, dysglycemia), and Stage 3 (symptomatic clinical diabetes). Type 1 diabetes is managed lifelong by endocrinologists in collaboration with diabetes educators, dietitians, and certified diabetes care specialists.",
+
+  "typesClassification": [
+    { "type": "Classic type 1 diabetes (immune-mediated)", "description": "Most common form; polyautoantibody-positive; typically diagnosed in childhood or adolescence; requires insulin from diagnosis; genetic association with HLA-DR3/DR4." },
+    { "type": "Latent autoimmune diabetes in adults (LADA)", "description": "Autoimmune diabetes presenting in adults over 30, often initially misclassified as type 2 due to slower beta-cell destruction. GAD65 antibody positive; partial insulin secretion maintained for months to years before insulin dependence. Accounts for 3-10% of adults with new diabetes." },
+    { "type": "Fulminant type 1 diabetes", "description": "Rare subtype most common in East Asian populations; extremely rapid beta-cell destruction over days; DKA at diagnosis, minimal or absent autoantibody positivity, markedly elevated pancreatic enzymes, almost complete loss of insulin secretion at onset." },
+    { "type": "Type 1B (idiopathic)", "description": "Non-immune-mediated absolute insulin deficiency without autoantibody positivity; rare; more common in people of African or Asian ancestry; intermittent ketoacidosis with variable insulin requirements." }
+  ],
+
+  "primarySymptoms": [
+    "Polyuria — excessive urination including nocturia caused by osmotic diuresis when blood glucose exceeds the renal threshold of approximately 10 mmol/L (180 mg/dL), spilling glucose into urine.",
+    "Polydipsia — intense thirst driven by dehydration and hyperosmolarity from glucose-driven water loss in urine.",
+    "Unintentional weight loss of 5-10% body weight over days to weeks from caloric loss in urine, muscle catabolism, and lipolysis driven by insulin deficiency.",
+    "Polyphagia — persistent hunger despite normal or increased food intake, reflecting cellular starvation as glucose cannot enter insulin-dependent tissues.",
+    "Extreme fatigue and weakness from cellular energy deficit and dehydration; often the chief complaint in school-age children presenting to primary care.",
+    "Blurred vision from osmotic shifts in the lens of the eye as blood glucose fluctuates; resolves with glucose normalization and should not be confused with diabetic retinopathy at diagnosis.",
+    "Fruity (acetone) breath odor and nausea or vomiting in the setting of incipient diabetic ketoacidosis from accumulation of ketone bodies.",
+    "Abdominal pain, which in DKA can mimic an acute surgical abdomen and is caused by the metabolic acidosis itself and gastroparesis.",
+    "Deep, sighing respirations (Kussmaul breathing) during DKA as the respiratory system compensates for metabolic acidosis by blowing off CO2."
+  ],
+
+  "earlyWarningSigns": [
+    "Persistent thirst and increased urination in a child or young adult — the two symptoms present in over 95% of type 1 diabetes cases before DKA.",
+    "Unexplained weight loss of 4-5 kg over 2-4 weeks without dietary change — a hallmark of catabolic insulin-deficient state.",
+    "Islet autoantibody positivity on screening (GAD65, IA-2, anti-insulin, ZnT8) in a first-degree relative of a known type 1 patient — identifies Stage 1 or Stage 2 disease before symptoms.",
+    "Recurrent or persistent skin or urinary tract infections in a young person — hyperglycemia impairs neutrophil function and is a common incidental finding."
+  ],
+
+  "emergencySigns": [
+    "Vomiting, abdominal pain, and rapid breathing in a person with known or suspected diabetes — diabetic ketoacidosis requires emergency IV insulin and fluid resuscitation; delay raises mortality.",
+    "Confusion, drowsiness, or seizure in a person known to have type 1 diabetes — may indicate severe hypoglycemia (blood glucose <3.0 mmol/L or <54 mg/dL), which is immediately life-threatening and requires glucagon or IV dextrose.",
+    "Kussmaul breathing (deep, labored breathing) combined with acetone breath in any young person regardless of known diabetes status — DKA can be the presentation of new-onset type 1 diabetes.",
+    "Altered consciousness or coma in a type 1 patient — both DKA and hypoglycemic coma present this way; blood glucose measurement guides immediate treatment."
+  ],
+
+  "causes": [
+    {
+      "cause": "T-cell-mediated autoimmune destruction of pancreatic beta cells",
+      "description": "CD8+ cytotoxic T cells infiltrate the islets of Langerhans (insulitis) and kill beta cells by perforin-granzyme and Fas-FasL pathways. CD4+ T helper cells coordinate the immune attack. The trigger for loss of self-tolerance is not yet fully defined. This immune destruction precedes clinical diabetes by months to years."
+    },
+    {
+      "cause": "Genetic susceptibility (HLA region)",
+      "description": "About 50% of genetic risk is concentrated in the HLA class II region on chromosome 6p21. HLA-DR3/DQ2 and HLA-DR4/DQ8 haplotypes are the strongest risk alleles; HLA-DR2/DQ6 is protective. Concordance in identical twins is 30-50%, confirming that environmental triggers are required beyond genetics."
+    },
+    {
+      "cause": "Environmental triggers accelerating autoimmunity",
+      "description": "Proposed environmental triggers include enteroviral infections (particularly coxsackievirus B), early exposure to cow's milk proteins, gut microbiome dysbiosis, early childhood antibiotic use, and vitamin D deficiency. None has been proven causal in humans, but the 3% annual global rise in incidence exceeds genetic drift, implicating environmental change."
+    },
+    {
+      "cause": "Islet autoantibody production preceding clinical disease",
+      "description": "Before beta-cell mass falls below the threshold for symptomatic hyperglycemia, the immune system produces autoantibodies against islet cell antigens (GAD65, IA-2, anti-insulin, ZnT8). The more autoantibodies present, the higher the progression risk: three or more autoantibodies confer nearly 100% lifetime risk of clinical type 1 diabetes."
+    },
+    {
+      "cause": "Absolute insulin deficiency after near-total beta-cell loss",
+      "description": "Clinical diabetes emerges when approximately 80-90% of functional beta-cell mass is destroyed. Remaining beta cells may sustain a partial C-peptide response ('honeymoon phase') for months to 1-2 years, temporarily reducing insulin requirements before complete loss of endogenous secretion."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Family history of type 1 diabetes", "category": "genetic", "description": "First-degree relative with type 1 diabetes increases personal risk to 1-15% versus 0.3-0.4% in the general population; siblings carry 5-10% risk; identical twin concordance 30-50%." },
+    { "factor": "HLA-DR3/DR4 genotype", "category": "genetic", "description": "HLA-DR3/DQ2 and DR4/DQ8 haplotypes account for approximately 50% of genetic susceptibility. The specific DR3-DR4 heterozygous combination carries the highest risk — found in 30% of children with type 1 diabetes but only 3% of the general population." },
+    { "factor": "Islet autoantibody positivity", "category": "non-modifiable", "description": "Presence of two or more islet autoantibodies (GAD65, IA-2, anti-insulin, ZnT8) carries 50-70% cumulative 10-year risk of clinical diabetes regardless of symptoms. Three or more antibodies confer near-100% lifetime risk." },
+    { "factor": "European ancestry", "category": "non-modifiable", "description": "Incidence is highest in Finland (64/100,000/year), Sardinia, and Scandinavia, 60-fold higher than in China and Japan. European-descent individuals carry the highest prevalence in North America and Australia." },
+    { "factor": "Enteroviral infection history", "category": "environmental", "description": "Coxsackievirus B and other enteroviruses have been identified more frequently in islet tissue and gut biopsies of children at onset of type 1 diabetes versus controls in multiple studies; the causal link is probable but not proven." },
+    { "factor": "Other autoimmune diseases", "category": "non-modifiable", "description": "Autoimmune thyroid disease (Hashimoto's, Graves') occurs in 20-30% of type 1 diabetes patients; celiac disease in 5-10%; Addison's disease in 0.5-1%. Shared HLA haplotypes underlie this clustering (polyautoimmune syndrome)." }
+  ],
+
+  "affectedDemographics": [
+    "Children and adolescents: roughly 50% of new diagnoses are in people under 20, with the highest incidence at ages 10-14.",
+    "Adults: the other 50% of new type 1 diabetes cases are diagnosed after age 20, including adult-onset LADA, which peaks at ages 35-45.",
+    "European-descent populations: Finland, Sardinia, Norway, and Sweden have the world's highest type 1 diabetes incidence. Rates have been rising in previously low-incidence populations in Asia and Africa.",
+    "People with other autoimmune diseases: 20-30% of type 1 patients have autoimmune thyroid disease; celiac disease is present in 5-10%."
+  ],
+
+  "diagnosisOverview": "Type 1 diabetes is diagnosed using WHO criteria: a fasting plasma glucose ≥7.0 mmol/L (126 mg/dL), a 2-hour plasma glucose ≥11.1 mmol/L (200 mg/dL) on an oral glucose tolerance test, a random plasma glucose ≥11.1 mmol/L with symptoms, or HbA1c ≥48 mmol/mol (6.5%). In symptomatic patients with DKA, the clinical diagnosis is urgent and blood glucose, ketones, and pH at presentation are the primary diagnostic tools. Confirming type 1 versus type 2 diagnosis requires measurement of islet autoantibodies (GAD65 antibody is the most practical single test) and fasting C-peptide to assess residual beta-cell function. C-peptide below 200 pmol/L at least 3 years from diagnosis confirms near-total beta-cell loss. In children and lean young adults with acute presentation, the clinical picture alone usually confirms type 1; in adults over 30, particularly those not initially requiring insulin, GAD65 testing is essential to detect LADA. HbA1c reflects average glycemia over the preceding 2-3 months and is the primary monitoring tool after diagnosis. Continuous glucose monitoring (CGM) metrics — time-in-range (70-180 mg/dL target >70%), time-below-range (<70 mg/dL target <4%), and glucose management indicator — now supplement HbA1c as management targets.",
+
+  "diagnosticTests": [
+    { "test": "Fasting plasma glucose (FPG)", "purpose": "Diagnoses diabetes when ≥7.0 mmol/L (126 mg/dL) after an 8-hour fast; the standard first-line diagnostic test", "whatToExpect": "A blood draw after overnight fasting. Results available the same day or within hours. Values between 5.6 and 6.9 mmol/L indicate prediabetes." },
+    { "test": "HbA1c (glycated hemoglobin)", "purpose": "Reflects average blood glucose over 2-3 months; diagnoses diabetes at ≥6.5%; used for ongoing monitoring — ADA target <7.0% (53 mmol/mol) for most adults", "whatToExpect": "A non-fasting blood draw. Results within 1-3 days. Conditions affecting red blood cell turnover (hemolytic anemia, sickle cell) can give falsely low results." },
+    { "test": "GAD65 antibody (anti-glutamic acid decarboxylase)", "purpose": "The single most useful autoantibody for distinguishing type 1 from type 2 diabetes; positive in 70-80% of type 1 cases at diagnosis", "whatToExpect": "A standard blood draw; results in 3-5 days. A positive result in an adult with new diabetes confirms autoimmune etiology even without classic type 1 features." },
+    { "test": "Fasting C-peptide", "purpose": "Measures residual beta-cell secretory function; low C-peptide confirms insulin dependence", "whatToExpect": "A blood draw after overnight fasting. C-peptide below 200 pmol/L, especially more than 3 years after diagnosis, confirms near-total beta-cell loss and absolute insulin requirement." },
+    { "test": "Blood and urine ketones", "purpose": "Detects diabetic ketoacidosis; blood beta-hydroxybutyrate >1.5 mmol/L with hyperglycemia indicates ketosis requiring treatment", "whatToExpect": "Blood ketones by fingerstick or blood draw; urine dipstick for ketones. In DKA, blood gas showing pH <7.3 and bicarbonate <18 mmol/L is required for full assessment." },
+    { "test": "Continuous glucose monitor (CGM) metrics", "purpose": "Provides real-time interstitial glucose data and summary metrics (time-in-range, time-below-range, glucose variability) that supplement HbA1c", "whatToExpect": "A small sensor worn on the upper arm or abdomen for 10-14 days, scanning blood glucose every 1-5 minutes. Reports generate a daily glucose profile and ambulatory glucose profile (AGP) chart reviewed with the diabetes team." }
+  ],
+
+  "treatmentOverview": "Insulin replacement is the only treatment for type 1 diabetes; there are no oral alternatives that replace absent endogenous insulin. Modern best practice is basal-bolus insulin therapy: a long-acting basal insulin (glargine U-100, glargine U-300, detemir, or degludec) once or twice daily provides background coverage, and rapid-acting insulin (lispro, aspart, or glulisine) is given before each meal, dosed using a carbohydrate-to-insulin ratio and correction factor tailored to the individual. ADA Standards of Care 2024 recommend that all type 1 patients be offered continuous glucose monitoring (CGM) as it reduces HbA1c by 0.3-0.5% and halves hypoglycemic episodes. Insulin pump therapy (continuous subcutaneous insulin infusion, CSII) combined with real-time CGM in a closed-loop automated insulin delivery (AID) system — often called an artificial pancreas — is the current standard of care for patients with suboptimal control, severe hypoglycemia unawareness, or highly variable glucose. The CONTROL trial (2022) showed AID systems achieve time-in-range above 70% in 60-80% of users versus 40-50% with conventional therapy. Beyond insulin, adjunct therapies with proven benefit in type 1 include off-label SGLT2 inhibitors (sotagliflozin is FDA-approved as an adjunct to insulin in type 1; empagliflozin in the EU) for HbA1c reduction and weight management, with close monitoring for euglycemic DKA. Islet transplantation is reserved for patients with severe hypoglycemia unawareness unresponsive to AID technology, with insulin independence maintained in 50% of recipients at 3 years. A disease-modifying immunotherapy, teplizumab (anti-CD3 monoclonal antibody), is FDA-approved to delay clinical type 1 diabetes by 2 years in Stage 2 high-risk individuals.",
+
+  "medicalTreatments": [
+    { "name": "Basal insulin (insulin glargine U-100/U-300, detemir, degludec)", "description": "Long-acting insulin analogue given once or twice daily to suppress fasting hepatic glucose output. Starting dose typically 0.2-0.3 units/kg/day; titrated to fasting glucose target 4.4-7.2 mmol/L (80-130 mg/dL) per ADA 2024 guidelines.", "effectiveness": "Basal-bolus regimen achieves HbA1c target <7.0% in 30-40% of type 1 patients compared with 10-15% on conventional twice-daily insulin" },
+    { "name": "Rapid-acting insulin (lispro, aspart, glulisine)", "description": "Bolus insulin given 0-15 minutes before each meal, dosed per carbohydrate-to-insulin ratio (typically 1 unit per 10-15 g carbohydrate). A correction factor (1 unit lowers glucose by 2-3 mmol/L or 40-50 mg/dL) adjusts for pre-meal hyperglycemia. Ultra-rapid formulations (Fiasp, lyumjev) peak within 15-20 minutes, better matching postprandial glucose rises.", "effectiveness": "Rapid-acting analogues reduce postprandial glucose excursions by 1.5-2 mmol/L versus regular insulin; lower HbA1c by 0.2-0.4% in randomized trials" },
+    { "name": "Automated insulin delivery (closed-loop / artificial pancreas)", "description": "CGM sensor communicates with an insulin pump via an algorithm that automatically adjusts basal insulin delivery every 5 minutes. Commercially available systems (Tandem Control-IQ, Omnipod 5, Medtronic 780G) achieve time-in-range over 70% in most users. Best option for hypoglycemia unawareness and overnight control.", "effectiveness": "Time-in-range increases by 10-15 percentage points versus sensor-augmented pump; severe hypoglycemia events reduced 50% in pivotal trials" },
+    { "name": "Glucagon emergency kit (nasal glucagon or IM glucagon 1 mg)", "description": "Rescue treatment for severe hypoglycemia when the patient cannot swallow. Nasal glucagon (3 mg) is more convenient; IM injection equally effective. All type 1 patients and caregivers should be trained and have a kit available.", "effectiveness": "Nasal glucagon restores blood glucose above 4.0 mmol/L in 98% of severe hypoglycemia episodes within 15-30 minutes" },
+    { "name": "Teplizumab (anti-CD3 monoclonal antibody)", "description": "FDA-approved for Stage 2 type 1 diabetes (autoantibody-positive with dysglycemia) to delay onset of clinical disease. A 14-day IV infusion course in high-risk individuals. Not a treatment for established type 1 diabetes.", "effectiveness": "Delays onset of Stage 3 clinical diabetes by median 2 years in the TN-10 prevention trial (PMID 32682039)" },
+    { "name": "SGLT2 inhibitors as insulin adjuncts (sotagliflozin, empagliflozin)", "description": "Reduce HbA1c by 0.3-0.5% and body weight by 2-3 kg as adjuncts to insulin in type 1. Associated with a 2-4× increased risk of euglycemic DKA, which can occur at near-normal glucose levels; requires patient education on sick-day rules and insulin dose-hold caution.", "effectiveness": "HbA1c reduction 0.3-0.4%, time-in-range increase 7-10 percentage points in double-blind trials; FDA-approved for type 1 in the US (sotagliflozin)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Islet transplantation", "description": "Donor islets infused into the portal vein under local anesthesia; indicated for severe hypoglycemia unawareness unresponsive to optimized technology. Requires ongoing immunosuppression.", "successRate": "Insulin independence in 50% at 3 years; near-normal HbA1c with reduced or absent severe hypoglycemia in 80% of recipients at 1 year (CITR 2023)" },
+    { "name": "Whole pancreas transplantation", "description": "Reserved for patients with end-stage diabetic nephropathy undergoing simultaneous kidney transplant or as isolated pancreas transplant in those with severe hypoglycemia unawareness. Most durable route to insulin independence.", "successRate": "Insulin independence in 70-85% at 3 years in simultaneous pancreas-kidney transplant; 5-year graft survival 70-75%" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Structured carbohydrate-consistent diet", "description": "Consistent carbohydrate intake simplifies insulin dosing and reduces glucose variability. ADA 2024 does not mandate a specific diet for type 1 but supports individualized carbohydrate targets. Very low-carbohydrate diets can reduce insulin dose and postprandial excursions but require careful monitoring for hypoglycemia." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "insulin-therapy",
+    "continuous-glucose-monitoring",
+    "insulin-pump-therapy"
+  ],
+
+  "whySeeSpecialist": "An endocrinologist with diabetes expertise should manage all patients with type 1 diabetes. Specialist care is associated with 0.5-1.0% lower HbA1c and lower rates of DKA hospitalization versus primary care alone. Referral to a certified diabetes care and education specialist (CDCES) is essential for insulin management training, CGM optimization, and carbohydrate counting.",
+  "doctorSelectionGuide": "Seek an endocrinologist certified in diabetes management or affiliated with a dedicated diabetes center. Prioritize centers offering a multidisciplinary team including a dietitian, diabetes educator, and psychologist. For pediatric patients, a pediatric endocrinologist is preferred. Access to pump and CGM technology clinic support is an important consideration.",
+
+  "hospitalCriteria": [
+    "Emergency capability to manage DKA with IV insulin protocols and electrolyte monitoring",
+    "Endocrinology department with insulin pump and CGM training program",
+    "Inpatient blood glucose management protocols for surgical and critically ill patients with type 1 diabetes",
+    "Access to islet or pancreas transplantation program for severe hypoglycemia unawareness cases"
+  ],
+  "keyFacilities": [
+    "Dedicated diabetes education and management centers",
+    "Endocrinology outpatient clinics with CGM download capability",
+    "Pediatric endocrinology services for children and adolescents",
+    "Transplant centers with islet cell programs"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Screen first-degree relatives of people with type 1 diabetes for islet autoantibodies (TrialNet offers free screening); early detection of Stage 1 or 2 disease enables disease-modifying intervention with teplizumab.",
+    "Maintain breastfeeding of infants to at least 6 months; observational data suggest breastfeeding reduces type 1 diabetes risk in genetically susceptible infants by 20-30%.",
+    "Ensure adequate vitamin D status in childhood; cohort studies link low neonatal vitamin D to higher type 1 diabetes incidence, though intervention trials have not yet confirmed benefit.",
+    "Participate in clinical prevention trials (TrialNet, TEDDY) if a first-degree relative has type 1 diabetes and autoantibody screening is positive."
+  ],
+
+  "lifestyleModifications": [
+    "Carbohydrate counting at every meal enables accurate pre-meal insulin dosing; 10-15 g carbohydrate per unit of rapid-acting insulin is a typical starting ratio, individualized over time.",
+    "Regular aerobic and resistance exercise reduces insulin requirements and improves cardiovascular risk; adjust insulin and carbohydrate intake before, during, and after exercise to prevent hypoglycemia.",
+    "Wear medical identification (bracelet or app) stating type 1 diabetes and insulin use to enable emergency responders to identify hypoglycemia as a cause of altered consciousness.",
+    "Follow sick-day rules: continue basal insulin during illness, check ketones when blood glucose exceeds 14 mmol/L (252 mg/dL), and contact the diabetes team if ketones are elevated or vomiting prevents oral intake.",
+    "Attend annual screening for diabetic complications: HbA1c and lipids every 3-6 months, annual urine albumin-to-creatinine ratio, eGFR, dilated fundus examination, foot examination, and blood pressure measurement.",
+    "Avoid tobacco in all forms; smoking is independently associated with 2× higher rates of diabetic nephropathy and coronary artery disease in people with type 1 diabetes."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Complex carbohydrates with a low glycemic index (legumes, whole grains, most vegetables) for more predictable postprandial glucose rises compared with refined starches",
+      "Adequate dietary fiber (25-35 g/day) to slow glucose absorption and support gut microbiome health",
+      "Regular meal timing to simplify basal-bolus insulin dosing and reduce glucose variability",
+      "Heart-healthy fat sources (olive oil, fatty fish, nuts) given the high cardiovascular risk associated with long-duration type 1 diabetes"
+    ],
+    "avoid": [
+      "Refined and rapidly absorbed carbohydrates (sugary drinks, white bread, sweets) that cause large postprandial glucose spikes requiring high correction doses",
+      "Skipping meals without adjusting insulin, which risks severe hypoglycemia when rapid-acting insulin has been administered",
+      "Excessive alcohol without food; alcohol blocks hepatic gluconeogenesis and can cause prolonged hypoglycemia, especially overnight",
+      "High-sodium processed foods given the heightened hypertension and nephropathy risk associated with type 1 diabetes"
+    ]
+  },
+  "exerciseGuidelines": "Both aerobic and resistance exercise improve insulin sensitivity and cardiovascular outcomes in type 1 diabetes. Aerobic exercise typically lowers blood glucose; high-intensity anaerobic exercise can transiently raise it. The ADA recommends reducing basal insulin by 20-30% and consuming 15-30 g carbohydrate before moderate-intensity sessions lasting 30-60 minutes. CGM is essential for peri-exercise glucose management. Target time-in-range during exercise of 90-180 mg/dL (5-10 mmol/L).",
+
+  "dailyManagement": [
+    "Check blood glucose or CGM before all meals and at bedtime; aim for pre-meal glucose 4.4-7.2 mmol/L (80-130 mg/dL) and post-meal glucose below 10 mmol/L (180 mg/dL) per ADA 2024.",
+    "Administer rapid-acting insulin 0-15 minutes before each meal based on carbohydrate content and current glucose reading; adjust for exercise, illness, and stress.",
+    "Rotate injection or infusion sites to prevent lipohypertrophy, which impairs insulin absorption and contributes to erratic glucose control.",
+    "Keep a rescue glucose source (glucose tablets, gel, or sugary drink) accessible at all times for rapid treatment of hypoglycemia.",
+    "Review CGM data weekly with focus on time-in-range, overnight glucose trends, and hypoglycemia patterns; share with the diabetes team at each visit."
+  ],
+
+  "prognosis": "With optimized glucose management, the prognosis for type 1 diabetes has improved substantially. The DCCT-EDIC follow-up study demonstrated that intensive glucose control (HbA1c target 7%) achieved early in the disease course produces durable reductions in microvascular complications 30 years later — a 'metabolic memory' or 'legacy effect.' Time-in-range above 70% (approximately 17 hours per day) is now the primary target in CGM-guided care and is associated with lower retinopathy, nephropathy, and neuropathy progression. Life expectancy for people with type 1 diabetes in high-income countries has improved by 10-15 years since the 1970s and now approaches near-normal with excellent glycemic control and absence of cardiovascular disease. The leading causes of premature death remain cardiovascular disease (driven by dyslipidemia, hypertension, and nephropathy) and DKA. Microvascular complications are substantially delayed or prevented when HbA1c is maintained below 7% from early in the disease. Severe hypoglycemia affects 30-40% of type 1 patients annually; AID technology reduces this significantly.",
+
+  "recoveryTimeline": "DKA resolves with IV treatment in 12-24 hours; safe transition to subcutaneous insulin typically occurs within 24-36 hours of hospital admission. The 'honeymoon phase' after diagnosis may last 3-12 months, during which residual beta-cell function reduces insulin requirements. This resolves as remaining beta cells are destroyed. Long-term glycemic control targets are assessed by HbA1c every 3 months initially.",
+
+  "complications": [
+    "Diabetic ketoacidosis (DKA): acute, life-threatening complication from absolute insulin deficiency; mortality below 1% with prompt treatment but 5% in low-resource settings.",
+    "Severe hypoglycemia: blood glucose below 3.0 mmol/L with cognitive impairment requiring third-party assistance; affects 30-40% of type 1 patients annually; associated with seizures, falls, cardiovascular events, and rarely death.",
+    "Diabetic retinopathy: present in 25% of patients at 5 years and 80% at 15 years without intensive control; leading cause of blindness in working-age adults in high-income countries.",
+    "Diabetic nephropathy: approximately 20-30% of type 1 diabetes patients develop proteinuria within 20 years; 10% progress to end-stage renal disease; ACE inhibitors or ARBs delay progression once microalbuminuria appears.",
+    "Peripheral and autonomic neuropathy: painful or insensate peripheral neuropathy in 50% by 25 years of disease; autonomic neuropathy causes gastroparesis, orthostatic hypotension, and bladder dysfunction.",
+    "Cardiovascular disease: 2-4× higher coronary artery disease and stroke risk compared with age-matched peers; risk modified substantially by HbA1c, blood pressure, and lipid control."
+  ],
+
+  "supportResources": [
+    { "name": "JDRF (Juvenile Diabetes Research Foundation)", "url": "https://www.jdrf.org/", "description": "Largest type 1 diabetes research organization; provides peer support programs, device resources, and clinical trial registries." },
+    { "name": "Beyond Type 1", "url": "https://beyondtype1.org/", "description": "Digital community offering peer support, advocacy, and practical resources for people living with type 1 diabetes globally." },
+    { "name": "American Diabetes Association — Type 1 Diabetes Resources", "url": "https://diabetes.org/diabetes/type-1", "description": "Evidence-based patient guides, Standards of Care access, and clinical trial information for type 1 diabetes." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes", "keyDifference": "Type 2 diabetes is driven by insulin resistance and progressive relative insulin deficiency, not autoimmune beta-cell destruction. It is managed initially with metformin and other oral agents; insulin is required only later in the disease course. Type 1 requires insulin from diagnosis. GAD65 antibody positivity and low C-peptide distinguish type 1 in ambiguous adult cases." },
+    { "slug": "hashimotos-disease", "name": "Hashimoto's Disease", "keyDifference": "Hashimoto's thyroiditis is autoimmune destruction of the thyroid, causing hypothyroidism; it does not cause hyperglycemia or DKA but frequently co-exists with type 1 diabetes in the polyautoimmune syndrome (occurring in 20-30% of type 1 patients). Thyroid antibodies and TSH distinguish it; both conditions require separate management." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "keyDifference": "Hyperthyroidism causes weight loss, polyuria, palpitations, and heat intolerance that superficially mimic type 1 diabetes presentation. However, blood glucose is normal in hyperthyroidism, and thyroid function tests (low TSH, elevated free T4) confirm the diagnosis. Graves' disease co-occurs in 3-5% of type 1 patients." },
+    { "slug": "cushings-syndrome", "name": "Cushing's Syndrome", "keyDifference": "Cushing's syndrome from cortisol excess causes secondary diabetes that resembles type 2, with central obesity and insulin resistance rather than autoimmune beta-cell destruction. Autoantibody testing is negative and cortisol is elevated. Glucose normalizes after treatment of cortisol excess, unlike type 1 diabetes." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hashimotos-disease", "name": "Hashimoto's Disease" },
+    { "slug": "celiac-disease", "name": "Celiac Disease" },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes", "relevance": "Both conditions cause hyperglycemia and share long-term microvascular and macrovascular complications, but they differ fundamentally in pathophysiology and management approach." },
+    { "slug": "diabetic-nephropathy", "name": "Diabetic Nephropathy", "relevance": "The most common cause of end-stage renal disease in type 1 diabetes patients; intensive glucose and blood pressure control substantially delays its onset and progression." },
+    { "slug": "diabetic-foot-ulcer", "name": "Diabetic Foot Ulcer", "relevance": "Peripheral neuropathy from long-standing type 1 diabetes causes loss of protective sensation, predisposing to pressure injuries and infection-driven foot ulcers." },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy", "relevance": "Present in up to 80% of type 1 patients at 15 years without intensive glycemic control; the leading microvascular complication and cause of blindness in working-age adults." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is type 1 diabetes?",
+      "answer": "Type 1 diabetes is an autoimmune disease where the immune system destroys insulin-producing beta cells in the pancreas. Without insulin, the body cannot absorb glucose from the blood for energy. It requires lifelong insulin replacement and affects approximately 8.4 million people worldwide.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of type 1 diabetes?",
+      "answer": "The first signs are excessive thirst, frequent urination, unexplained weight loss, fatigue, and blurred vision, appearing over days to weeks. In 25-40% of newly diagnosed patients, the first presentation is diabetic ketoacidosis with vomiting, abdominal pain, and rapid breathing, which is a medical emergency.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes type 1 diabetes?",
+      "answer": "Type 1 diabetes is caused by autoimmune destruction of pancreatic beta cells by T lymphocytes. Genetic factors, especially specific HLA haplotypes (DR3/DR4), account for 50% of risk. Environmental triggers such as enteroviral infections and gut microbiome changes are also implicated in the rising global incidence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is type 1 diabetes the same as juvenile diabetes?",
+      "answer": "Type 1 diabetes was historically called juvenile diabetes because it often presents in childhood, but 50% of new cases are now diagnosed in adults. The term juvenile diabetes is outdated. Adult-onset type 1 (called LADA) is frequently misdiagnosed as type 2 diabetes, delaying appropriate insulin treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is type 1 diabetes different from type 2?",
+      "answer": "Type 1 diabetes is autoimmune — the immune system destroys beta cells, causing absolute insulin deficiency. Type 2 is driven by insulin resistance and relative insulin deficiency. Type 1 requires insulin from diagnosis; type 2 is initially managed with diet, metformin, and other oral agents. Both cause hyperglycemia but through different mechanisms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is type 1 diabetes treated?",
+      "answer": "Treatment requires lifelong insulin replacement. The standard approach is basal-bolus therapy: a long-acting basal insulin plus rapid-acting insulin before meals. Automated insulin delivery (closed-loop) systems combining a CGM sensor and insulin pump now achieve time-in-range above 70% and halve severe hypoglycemia rates in clinical trials.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can type 1 diabetes be cured?",
+      "answer": "There is no current cure, but islet transplantation achieves insulin independence in 50% of recipients at 3 years and is available for patients with severe hypoglycemia unawareness. Teplizumab delays onset by 2 years in high-risk Stage 2 individuals. Stem-cell-derived beta cell replacement is in Phase 2 trials as of 2025.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is diabetic ketoacidosis (DKA)?",
+      "answer": "DKA is a life-threatening complication of type 1 diabetes caused by absolute insulin deficiency, leading to uncontrolled fat breakdown and ketone acid accumulation. Symptoms include vomiting, abdominal pain, fruity breath, and rapid breathing. DKA requires emergency IV insulin and fluids; mortality is below 1% with prompt treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a continuous glucose monitor (CGM)?",
+      "answer": "A CGM is a wearable sensor placed on the skin that measures interstitial glucose every 1-5 minutes and transmits readings to a phone or receiver. CGM reduces HbA1c by 0.3-0.5%, halves severe hypoglycemia, and is recommended for all type 1 patients by the ADA 2024 Standards of Care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the HbA1c target for type 1 diabetes?",
+      "answer": "The ADA 2024 recommends an HbA1c below 7.0% (53 mmol/mol) for most non-pregnant adults with type 1 diabetes. A less stringent target of 7.5-8.0% is appropriate for patients with frequent severe hypoglycemia or limited self-management capacity. Time-in-range above 70% on CGM is now an equivalent primary target.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can type 1 diabetes be prevented?",
+      "answer": "Clinical type 1 diabetes can be delayed by 2 years in high-risk Stage 2 individuals with teplizumab (anti-CD3 monoclonal antibody), FDA-approved in 2022. First-degree relatives can be screened for autoantibodies through TrialNet to identify those who may benefit. Full prevention is not yet possible, but research trials are ongoing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children with type 1 diabetes exercise?",
+      "answer": "Yes, exercise is beneficial and encouraged. Children and adults with type 1 diabetes should reduce basal insulin and consume carbohydrates before exercise to prevent hypoglycemia. CGM is essential for real-time glucose monitoring during activity. Exercise improves insulin sensitivity, cardiovascular health, and mental well-being in type 1 diabetes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the long-term complications of type 1 diabetes?",
+      "answer": "Long-term complications affect the eyes (retinopathy leading to blindness), kidneys (nephropathy and end-stage renal disease), nerves (peripheral and autonomic neuropathy), heart, and blood vessels. The DCCT study showed that intensive glucose control from early in the disease reduces complication risk by 50-76% over 30 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is type 1 diabetes hereditary?",
+      "answer": "Type 1 diabetes has a significant genetic component. A sibling of a person with type 1 diabetes has a 5-10% risk, compared with 0.3-0.4% in the general population. The identical twin concordance rate is 30-50%, confirming that environmental triggers are also required. Multiple susceptibility genes, mostly in the HLA region, are involved.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the insulin pump for type 1 diabetes?",
+      "answer": "An insulin pump delivers continuous subcutaneous rapid-acting insulin via a small cannula placed under the skin, replacing the need for multiple daily injections. When linked to a CGM in a closed-loop automated insulin delivery system, it adjusts insulin automatically every 5 minutes, achieving better glucose control and fewer hypoglycemic episodes.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Type 1 diabetes (autoimmune diabetes, juvenile diabetes)",
+  "regionalNames": [
+    { "name": "Juvenile diabetes", "region": "General English (historical)", "language": "English" },
+    { "name": "Insulin-dependent diabetes", "region": "Global (historical)", "language": "English" },
+    { "name": "टाइप 1 मधुमेह", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "type 1 diabetes",
+    "juvenile diabetes",
+    "autoimmune diabetes",
+    "insulin-dependent diabetes",
+    "IDDM",
+    "diabetic ketoacidosis",
+    "insulin pump",
+    "continuous glucose monitor",
+    "CGM diabetes",
+    "LADA",
+    "type 1 diabetes diet",
+    "type 1 vs type 2 diabetes",
+    "HbA1c type 1",
+    "teplizumab",
+    "closed-loop insulin"
+  ],
+  "symptomKeywords": [
+    "excessive thirst and urination child",
+    "weight loss without dieting young person",
+    "fruity breath diabetic emergency",
+    "vomiting abdominal pain rapid breathing",
+    "fatigue and blurred vision teenager",
+    "frequent urination and hunger",
+    "high blood sugar type 1"
+  ],
+
+  "metaTitle": "Type 1 Diabetes: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Type 1 diabetes is autoimmune loss of all insulin production. Symptoms, DKA signs, insulin therapy, CGM, and complication prevention reviewed.",
+
+  "keywords": [
+    "type 1 diabetes",
+    "type 1 diabetes symptoms",
+    "type 1 diabetes treatment",
+    "insulin for type 1 diabetes",
+    "diabetic ketoacidosis",
+    "CGM type 1 diabetes",
+    "closed-loop insulin delivery",
+    "type 1 diabetes diet",
+    "LADA adult type 1 diabetes",
+    "type 1 vs type 2 diabetes",
+    "autoimmune diabetes",
+    "HbA1c target type 1"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "American Diabetes Association. 2024. Standards of Care in Diabetes — 2024. Diabetes Care 47(Suppl 1):S1-S321.", "url": "https://diabetesjournals.org/care/issue/47/Supplement_1", "accessedDate": "2026-05-14" },
+    { "title": "Atkinson MA, Eisenbarth GS, Michels AW. 2014. Type 1 diabetes. Lancet 383(9911):69-82.", "url": "https://pubmed.ncbi.nlm.nih.gov/23890997/", "accessedDate": "2026-05-14" },
+    { "title": "Diabetes Control and Complications Trial Research Group. 1993. The effect of intensive treatment of diabetes on the development and progression of long-term complications. New England Journal of Medicine 329(14):977-986.", "url": "https://pubmed.ncbi.nlm.nih.gov/8366922/", "accessedDate": "2026-05-14" },
+    { "title": "Herold KC, Bundy BN, Long SA, et al. 2019. An anti-CD3 antibody, teplizumab, in relatives at risk for type 1 diabetes. New England Journal of Medicine 381(7):603-613.", "url": "https://pubmed.ncbi.nlm.nih.gov/31180194/", "accessedDate": "2026-05-14" },
+    { "title": "Tauschmann M, Hovorka R. 2018. Technology in the management of type 1 diabetes mellitus — current status and future prospects. Nature Reviews Endocrinology 14(8):464-475.", "url": "https://pubmed.ncbi.nlm.nih.gov/29875516/", "accessedDate": "2026-05-14" },
+    { "title": "International Diabetes Federation. 2021. IDF Diabetes Atlas, 10th edition. Brussels, Belgium.", "url": "https://diabetesatlas.org/", "accessedDate": "2026-05-14" },
+    { "title": "NICE Guideline NG17. 2022. Type 1 diabetes in adults: diagnosis and management. National Institute for Health and Care Excellence, London.", "url": "https://www.nice.org.uk/guidance/ng17", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

@@ -1,0 +1,396 @@
+{
+  "_meta": {
+    "slug": "colorectal-cancer",
+    "tier": 1,
+    "headTerm": "colorectal cancer",
+    "longTailKeywords": [
+      "colorectal cancer symptoms",
+      "colorectal cancer treatment",
+      "colon cancer stages",
+      "colorectal cancer screening colonoscopy",
+      "Lynch syndrome colorectal cancer",
+      "colorectal cancer survival rate",
+      "colorectal cancer diagnosis",
+      "rectal cancer vs colon cancer",
+      "colorectal cancer chemotherapy FOLFOX"
+    ],
+    "primarySpecialty": "Oncology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Colorectal Cancer: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Oncology",
+
+  "heroOverview": "Colorectal cancer (CRC) is a malignant neoplasm of the colon or rectum and is the second leading cause of cancer death in the United States, accounting for approximately 52,550 deaths in 2023 (ACS). Worldwide, CRC is the third most commonly diagnosed cancer with 1.93 million new cases in 2020 (GCO). Most colorectal cancers arise from adenomatous polyps over 10-15 years, creating a prolonged window during which colonoscopic polypectomy is curative. Stage-specific 5-year survival ranges from 91% for Stage I to 14% for Stage IV, underscoring that survival is tightly linked to stage at detection. Screening colonoscopy, FIT-DNA testing, and CT colonography have reduced CRC incidence and mortality substantially in populations where they are systematically implemented.",
+
+  "keyStats": {
+    "prevalence": "1.93 million new cases globally in 2020 (GCO); approximately 153,020 new US cases estimated in 2023 (ACS); third most common cancer worldwide",
+    "demographics": "Risk rises sharply after age 45; men have a slightly higher incidence than women (RR approximately 1.2); Black Americans have approximately 20% higher incidence and 40% higher mortality than white Americans",
+    "avgAge": "Median age at diagnosis 66 years in the US (SEER); early-onset CRC (under 50) rising at approximately 2% per year in the US since the mid-1990s",
+    "globalCases": "935,000 deaths globally in 2020 (GCO); second leading cause of cancer death globally after lung cancer"
+  },
+
+  "definition": "Colorectal cancer (ICD-10: C18-C20; C18 colon, C19 rectosigmoid junction, C20 rectum) is a malignant neoplasm arising primarily from the mucosa of the large intestine or rectum. Over 95% of colorectal cancers are adenocarcinomas, with a small proportion comprising mucinous, signet-ring cell, medullary, serrated, and microsatellite instability-high (MSI-H) subtypes with distinct biological behavior. The adenoma-to-carcinoma sequence — through accumulation of somatic mutations in APC, KRAS, TP53, SMAD4, and BRAF — takes 10-15 years and is the pathway for approximately 80% of sporadic CRC arising from tubular, tubulovillous, and serrated adenomas. The serrated pathway (sessile serrated lesions with BRAF mutation and CpG island methylation) accounts for 15-20% of CRC and has a more rapid progression. Hereditary CRC syndromes include Lynch syndrome (mismatch repair gene defects in MLH1, MSH2, MSH6, PMS2; autosomal dominant; 3-5% of all CRC), familial adenomatous polyposis (FAP; APC gene; thousands of polyps), and MUTYH-associated polyposis. Staging follows the AJCC TNM system (8th edition), with Stage I-II representing local disease, Stage III regional nodal spread, and Stage IV distant metastasis. Management requires an integrated team of colorectal surgeons, medical and radiation oncologists, gastroenterologists, and pathologists.",
+
+  "typesClassification": [
+    { "type": "Colon adenocarcinoma (ICD-10: C18)", "description": "Malignancy of the colon mucosa. Right-sided colon cancers often present late (anemia, weight loss) due to large lumen; left-sided cancers more commonly cause obstruction and rectal bleeding. Molecular profiling guides therapy: KRAS/NRAS mutant tumors do not respond to anti-EGFR therapy." },
+    { "type": "Rectal adenocarcinoma (ICD-10: C20)", "description": "Cancers within 12 cm of the anal verge. Treatment differs substantially from colon cancer: preoperative chemoradiotherapy is standard for Stage II-III rectal cancer before surgery. Total mesorectal excision (TME) is the surgical gold standard, reducing local recurrence to under 10%." },
+    { "type": "MSI-H / dMMR colorectal cancer", "description": "Tumors with deficient mismatch repair (dMMR) or microsatellite instability-high (MSI-H) show highly mutated genomes and are strongly immunogenic. They have excellent prognosis at early stages, respond poorly to fluorouracil-based chemotherapy, and are exquisitely sensitive to PD-1 immune checkpoint inhibitors (pembrolizumab, nivolumab)." },
+    { "type": "Lynch syndrome-associated CRC", "description": "Germline mutation in MLH1, MSH2, MSH6, or PMS2 causes Lynch syndrome. Lifetime CRC risk 10-80% depending on gene. Typically right-sided, early-onset (mean age 44), MSI-H, with mucoid differentiation. Aggressive surveillance with colonoscopy every 1-2 years starting at age 20-25 dramatically reduces incidence." },
+    { "type": "Familial adenomatous polyposis (FAP)-associated CRC", "description": "APC germline mutation causing hundreds to thousands of colorectal adenomas from the second decade. Without prophylactic colectomy (usually by age 25), CRC risk approaches 100% by age 40. Managed with total proctocolectomy and NSAID chemoprevention (sulindac)." }
+  ],
+
+  "primarySymptoms": [
+    "Rectal bleeding (bright red or dark blood in the stool) or occult fecal blood detected on fecal immunochemical testing (FIT) — the most common presenting symptom, present in 40-60% of colorectal cancer cases.",
+    "Change in bowel habits persisting for more than 4 weeks: new onset of loose stools, constipation, or alternating diarrhea and constipation in an adult over 45.",
+    "Unexplained iron-deficiency anemia in men or postmenopausal women — caused by chronic occult blood loss from right-sided colon cancer where gross bleeding is often absent.",
+    "Persistent abdominal pain, cramping, or bloating, particularly related to meals or bowel movements and located in the right lower, left lower, or suprapubic regions depending on tumor site.",
+    "Tenesmus — a feeling of incomplete rectal emptying after defecation — and a sensation of persistent rectal fullness, characteristic of low rectal cancer.",
+    "Unintentional weight loss of more than 5% body weight over 3-6 months, combined with fatigue and reduced appetite in locally advanced or metastatic disease.",
+    "Narrow, pencil-thin, or ribbon-like stools caused by partial occlusion of the rectal lumen by a constricting annular tumor.",
+    "Acute large bowel obstruction with abdominal distension, inability to pass gas or stool, and colicky pain — the presenting event in approximately 8-29% of left-sided colon cancers.",
+    "Mucus in the stool — excessive mucus production from villous adenomas or mucin-secreting adenocarcinomas of the rectum."
+  ],
+
+  "earlyWarningSigns": [
+    "A positive FIT (fecal immunochemical test) result on any screening round — mandates colonoscopy within 6 weeks regardless of symptoms",
+    "Iron-deficiency anemia in a man or postmenopausal woman with no dietary or bleeding source identified — colon cancer must be excluded by colonoscopy before treating with iron",
+    "A new adenomatous polyp found on colonoscopy and removed — surveillance colonoscopy at 3-5 years depending on size, number, and histology",
+    "First-degree relative diagnosed with colorectal cancer before age 60 — begins colonoscopy surveillance at age 40 or 10 years before the relative's diagnosis age, whichever is earlier"
+  ],
+
+  "emergencySigns": [
+    "Large bowel obstruction: severe abdominal distension, inability to pass flatus or stool, with dilated colon on X-ray — requires emergency surgical assessment for stenting or defunctioning colostomy",
+    "Colorectal cancer perforation with peritonitis: sudden onset severe generalized abdominal pain, rigidity, and signs of septic shock — surgical emergency; mortality 30-50%",
+    "Massive lower gastrointestinal bleeding with hemodynamic compromise: tachycardia, hypotension, and ongoing rectal blood loss — requires urgent resuscitation and emergency colonoscopy or interventional radiology"
+  ],
+
+  "causes": [
+    {
+      "cause": "Sporadic adenomatous polyp progression",
+      "description": "Approximately 80% of CRC arises through the adenoma-carcinoma sequence over 10-15 years via APC gene inactivation, KRAS activation, chromosomal instability, and TP53 mutation. Tubular, tubulovillous, and serrated adenomas above 10 mm, with villous histology or high-grade dysplasia, carry the highest malignant potential. Regular colonoscopic polypectomy interrupts this sequence."
+    },
+    {
+      "cause": "Lynch syndrome and other hereditary CRC syndromes",
+      "description": "Germline defects in mismatch repair genes (MLH1, MSH2, MSH6, PMS2) cause Lynch syndrome, the most common hereditary CRC syndrome. APC mutations cause FAP; MUTYH biallelic mutations cause MUTYH-associated polyposis. Collectively, hereditary syndromes account for 5-10% of all CRC but are identifiable by family history, immunohistochemistry, and germline testing."
+    },
+    {
+      "cause": "Inflammatory bowel disease",
+      "description": "Long-standing ulcerative colitis (>8-10 years, extensive colitis) and Crohn's disease affecting the colon carry cumulative CRC risk of 5-8% at 20 years and 18% at 30 years. Chronic mucosal inflammation drives dysplasia through oxidative stress, cytokine-mediated DNA damage, and epigenetic changes; regular surveillance colonoscopy every 1-2 years is recommended from 8-10 years after diagnosis."
+    },
+    {
+      "cause": "Lifestyle risk factors",
+      "description": "Red and processed meat consumption (WHO Group 1 carcinogen for processed meat), physical inactivity, obesity (particularly visceral adiposity), smoking (RR approximately 1.2), and excessive alcohol use (each drink per day increases risk by approximately 8%) are established causal risk factors with dose-response relationships in large prospective cohorts."
+    },
+    {
+      "cause": "Low-fiber, high-fat diet",
+      "description": "Diets low in dietary fiber and high in saturated fat alter gut microbiome composition and bile acid metabolism, increasing mucosal exposure to secondary bile acids (deoxycholic acid) which promote proliferation and inhibit apoptosis in the colonocytes. Fiber intake above 30 g per day is associated with approximately 20% lower CRC risk in meta-analyses."
+    },
+    {
+      "cause": "Type 2 diabetes and insulin resistance",
+      "description": "Type 2 diabetes is associated with a 1.3-1.5× increased CRC risk, mediated through hyperinsulinemia (insulin is a proliferative growth factor for colonocytes), elevated IGF-1, and chronic inflammation. Metformin use is associated with a 20-25% lower CRC incidence in observational studies, though not yet proven in RCTs."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 45 years", "category": "non-modifiable", "description": "CRC incidence doubles approximately every decade after age 40; 90% of CRC is diagnosed in adults over 50. ACS revised US screening age to 45 in 2018 and USPSTF endorsed this in 2021." },
+    { "factor": "Lynch syndrome (hereditary)", "category": "genetic", "description": "MLH1 mutation: lifetime CRC risk 40-80%. MSH2: 35-70%. MSH6: 18-30%. PMS2: 10-20%. Universal tumor testing with MMR IHC and/or MSI PCR on all CRC diagnoses now recommended by ACS and NCCN." },
+    { "factor": "Personal or family history of polyps or CRC", "category": "non-modifiable", "description": "Prior adenoma: 1.5-3× risk. First-degree relative with CRC: RR 1.7-2×. Two first-degree relatives or diagnosis under 60: 3-4× risk. Colonoscopy surveillance adjusted accordingly." },
+    { "factor": "Inflammatory bowel disease", "category": "modifiable", "description": "UC with extensive colitis >8 years: annual surveillance colonoscopy. Crohn's colitis: CRC risk equivalent to UC of similar extent and duration." },
+    { "factor": "Red and processed meat consumption", "category": "modifiable", "description": "Processed meat (WHO Group 1 carcinogen): 18% increased CRC risk per 50 g/day. Red meat (Group 2A): approximately 17% increased risk per 100 g/day." },
+    { "factor": "Obesity", "category": "modifiable", "description": "BMI >30: RR approximately 1.3 for colon cancer. Waist circumference and waist-to-hip ratio are stronger CRC predictors than BMI, reflecting the specific role of visceral adiposity and insulin resistance." },
+    { "factor": "Physical inactivity", "category": "modifiable", "description": "Sedentary adults have a 20-30% higher colon cancer risk than active adults; effect is stronger for colon than rectum. Physical activity lowers circulating insulin and prostaglandin E2, reduces gut transit time, and modulates inflammatory cytokines." }
+  ],
+
+  "affectedDemographics": [
+    "Adults over 45 years: over 90% of US CRC diagnoses; median age 66; screening before 45 in high-risk groups is recommended.",
+    "Black Americans: approximately 20% higher CRC incidence and 40% higher mortality compared with white Americans; higher rates of proximal colon cancer and lower colonoscopy screening rates contribute.",
+    "Men: slightly higher age-adjusted incidence than women (RR approximately 1.2); screening adherence lower in men particularly for colonoscopy.",
+    "Early-onset CRC (under 50): incidence rising at approximately 2% per year in the US since the 1990s; more likely to be rectal, signet-ring cell, or MSI-H; genetic testing for Lynch syndrome and FAP is indicated.",
+    "Lynch syndrome carriers: 10-80% lifetime risk depending on the mutated gene; colonoscopy every 1-2 years from age 20-25 reduces CRC incidence by 50-60%."
+  ],
+
+  "diagnosisOverview": "Diagnosis of colorectal cancer begins with risk stratification: average-risk adults over 45 are eligible for screening (FIT annually, FIT-DNA every 1-3 years, colonoscopy every 10 years, CT colonography every 5 years). Symptomatic patients undergo colonoscopy as first-line investigation regardless of age — colonoscopy provides both diagnostic visualization and biopsy and removes synchronous polyps. Colonoscopy identifies colorectal cancer with sensitivity 94-97% and allows bimanual examination, tattooing for surgical localization, and tattooing for laparoscopic identification. CT colonography (CTC) is an alternative when colonoscopy is not possible and has sensitivity 92-96% for polyps above 10 mm. Biopsy at colonoscopy provides histological type, grade, and MMR/MSI status. MMR protein loss by IHC or MSI by PCR on the tumor is now recommended universally by NCCN to identify Lynch syndrome and guide immunotherapy eligibility in metastatic disease. Following tissue confirmation, staging involves CT of chest, abdomen, and pelvis with IV contrast (the standard staging investigation), plus MRI of the rectum for rectal cancer (required for circumferential resection margin assessment and nodal staging). FDG-PET may add value in equivocal Stage IV disease. Serum CEA (carcinoembryonic antigen) is measured at baseline as a prognostic marker and for surveillance after treatment, not for initial diagnosis. Molecular biomarker testing of the primary tumor — RAS/RAF mutation status (KRAS, NRAS, BRAF), HER2 amplification, and MSI-H status — is mandatory before starting systemic therapy for metastatic CRC.",
+
+  "diagnosticTests": [
+    { "test": "Colonoscopy with biopsy", "purpose": "Gold standard for colorectal cancer diagnosis and synchronous polyp detection and removal; provides tissue for histology, grade, and MMR/MSI testing", "whatToExpect": "Bowel preparation the day before (clear fluids plus laxative). Procedure under conscious sedation or propofol for 20-40 minutes. Mild abdominal cramping; fully recoverable same day. Biopsy results within 5-7 days." },
+    { "test": "Fecal immunochemical test (FIT)", "purpose": "Screening test detecting blood in stool from colonic lesions using antibodies to human hemoglobin; annually for average-risk adults 45+", "whatToExpect": "Patient collects one stool sample at home and returns it within 24 hours. Result within 2-3 days. A positive result requires colonoscopy within 6 weeks." },
+    { "test": "CT colonography (virtual colonoscopy)", "purpose": "Non-invasive visualization of the colon with sensitivity 92-96% for polyps >10 mm; used when colonoscopy is incomplete, contraindicated, or declined", "whatToExpect": "Bowel preparation as for colonoscopy. A small flexible tube inserted into the rectum to inflate the colon with CO2. CT scan takes 10 minutes. No sedation required; results within 24 hours." },
+    { "test": "CT staging (chest, abdomen, pelvis) with IV contrast", "purpose": "Identifies regional lymph node involvement, liver and lung metastases, and peritoneal disease; required for all confirmed CRC before treatment planning", "whatToExpect": "IV contrast injection followed by CT scanning taking 15-20 minutes. Contrast may cause warmth and brief nausea. Avoid for 24 hours if allergic or renally impaired. Results within 24-48 hours." },
+    { "test": "MRI rectum (high-resolution)", "purpose": "Mandatory staging for rectal cancer: assesses T and N stage, circumferential resection margin, extramural vascular invasion, and response to neoadjuvant therapy", "whatToExpect": "45 minutes in the scanner, no contrast required for initial staging. Phased-array coil used. Provides the road map for surgical and radiotherapy planning." },
+    { "test": "Molecular biomarker panel (RAS, RAF, MSI, HER2)", "purpose": "Determines eligibility for anti-EGFR therapy (require RAS/RAF wild-type), immunotherapy (MSI-H), and HER2-targeted therapy; performed on primary or metastatic tumor tissue", "whatToExpect": "Tests are performed on the tumor biopsy specimen (formalin-fixed paraffin-embedded tissue). No additional procedures for the patient. Results in 7-14 days from a molecular pathology laboratory." }
+  ],
+
+  "treatmentOverview": "Treatment of colorectal cancer is determined by disease site (colon vs rectum), AJCC stage, molecular profile, and patient factors. NCCN, ESMO, and ASCO guidelines are the primary evidence references. For Stage I-III colon cancer, the cornerstone is surgical resection with adequate lymphadenectomy (minimum 12 lymph nodes). Laparoscopic or robotic colectomy is now standard at experienced centers with equivalent oncological outcomes and faster recovery than open surgery. Adjuvant chemotherapy with FOLFOX (oxaliplatin, fluorouracil, leucovorin) or CAPOX (capecitabine, oxaliplatin) for 3 or 6 months is indicated for Stage III and high-risk Stage II colon cancer, reducing recurrence risk by approximately 25%. For rectal cancer, Stage II-III disease is treated with preoperative chemoradiotherapy (long-course fluorouracil-based or short-course radiotherapy) followed by total mesorectal excision (TME) surgery; this sequence reduces local recurrence from approximately 25% to under 5-10%. The RAPIDO trial demonstrated that short-course RT followed by FOLFOX/CAPOX chemotherapy prior to TME achieves high pCR rates and may allow organ-preservation in selected complete responders. Stage IV CRC is treated with intent ranging from cure (resectable liver-limited metastases) to life extension. FOLFOX, FOLFIRI, and FOLFOXIRI form the chemotherapy backbone, combined with bevacizumab (anti-VEGF) for KRAS/NRAS/BRAF mutant tumors, or cetuximab/panitumumab (anti-EGFR) for RAS/RAF wild-type left-sided tumors. MSI-H metastatic CRC responds to pembrolizumab as first-line therapy with substantially superior progression-free and overall survival vs chemotherapy. BRAF V600E-mutant CRC (approximately 8-10% of cases) is treated with encorafenib plus cetuximab after first-line failure.",
+
+  "medicalTreatments": [
+    { "name": "FOLFOX (oxaliplatin 85 mg/m², leucovorin 400 mg/m², fluorouracil 400 mg/m² bolus + 2,400 mg/m² 46-hour infusion; every 2 weeks)", "description": "Standard adjuvant chemotherapy for Stage III colon cancer and first-line option for metastatic CRC. 3 months (6 cycles) achieves equivalent efficacy to 6 months for T1-3N1 disease with less peripheral neuropathy (IDEA collaboration).", "effectiveness": "Reduces 3-year disease-free survival events by 25% vs fluorouracil alone in Stage III colon cancer; reduces death risk by approximately 17% (Andre et al., NEJM 2004, PMID 15487419)" },
+    { "name": "Capecitabine (1,250 mg/m² twice daily, days 1-14 every 3 weeks) ± oxaliplatin (CAPOX)", "description": "Oral prodrug of 5-fluorouracil; used as monotherapy for Stage II-III colon or in CAPOX combination for Stage III and metastatic disease. Preferred in older adults unable to tolerate infusional fluorouracil. Main toxicities: hand-foot syndrome, diarrhea.", "effectiveness": "CAPOX non-inferior to FOLFOX for Stage III adjuvant therapy; 3-month CAPOX equivalent to 6 months for low-risk Stage III (IDEA analysis)" },
+    { "name": "Bevacizumab (5 mg/kg IV every 2 weeks) added to FOLFOX or FOLFIRI", "description": "Anti-VEGF monoclonal antibody; first-line biologic agent for metastatic CRC regardless of RAS/BRAF mutation status. Improves PFS in combination with chemotherapy; does not benefit RAS wild-type left-sided colon cancer where anti-EGFR is preferred.", "effectiveness": "Adds approximately 4-6 months to median PFS in first-line metastatic CRC (Hurwitz et al., NEJM 2004, PMID 15175435)" },
+    { "name": "Cetuximab or panitumumab (anti-EGFR monoclonal antibody)", "description": "Reserved for RAS/RAF wild-type left-sided metastatic colon or rectal cancer. Cetuximab is given weekly or every 2 weeks; panitumumab every 2 weeks. Main toxicities: acneiform rash, hypomagnesemia. RAS mutation is a predictive biomarker for lack of benefit.", "effectiveness": "Improves median OS to 28-31 months vs approximately 20 months with chemotherapy alone in RAS wild-type left-sided mCRC (FIRE-3, PRIME trials)" },
+    { "name": "Pembrolizumab (200 mg IV every 3 weeks)", "description": "PD-1 checkpoint inhibitor; first-line therapy for MSI-H/dMMR metastatic CRC (KEYNOTE-177). Does not benefit MSS (microsatellite stable) tumors. Also approved second-line for progressive MSI-H CRC (KEYNOTE-158).", "effectiveness": "Median PFS 16.5 months vs 8.2 months for chemotherapy in first-line MSI-H metastatic CRC; overall survival benefit sustained at 5-year follow-up (PMID 33264544)" },
+    { "name": "Encorafenib + cetuximab (encorafenib 300 mg daily + cetuximab every 2 weeks)", "description": "Second-line treatment for BRAF V600E-mutant metastatic CRC. BRAF inhibition with concurrent EGFR blockade circumvents the MAPK reactivation that occurs with BRAF inhibitor monotherapy in colorectal cancer.", "effectiveness": "Improves overall survival to 9.3 months vs 5.9 months for irinotecan-based therapy in BRAF V600E mCRC (BEACON trial, PMID 31566309)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Colectomy (laparoscopic or robotic) with lymphadenectomy", "description": "Standard curative surgery for colon cancer. Segmental resection removing the affected colon segment with its mesenteric lymphovascular supply; minimum 12 lymph nodes required for adequate staging. Laparoscopic approach achieves equivalent oncological outcomes with faster recovery and reduced morbidity.", "successRate": "R0 (negative margin) resection achieved in 85-95% of elective colectomy; 5-year survival 90% for Stage I, 75-80% for Stage II, 55-60% for Stage III with adjuvant chemotherapy" },
+    { "name": "Total mesorectal excision (TME) for rectal cancer", "description": "Sharp dissection of the mesorectal fascia preserving the autonomic nerves (sexual and bladder function) while achieving a clear circumferential resection margin. Performed as low anterior resection (sphincter-sparing) or abdominoperineal resection (requiring permanent stoma) for very low tumors.", "successRate": "Local recurrence under 10% at 5 years after TME + preoperative chemoradiotherapy; versus 25-30% with surgery alone before TME became standard" },
+    { "name": "Hepatic resection for liver-limited Stage IV CRC", "description": "Surgical resection of colorectal liver metastases is potentially curative in 20-25% of Stage IV patients with liver-only or liver-predominant disease. Resectability requires adequate future liver remnant and ability to achieve R0. 5-year survival 35-50% in selected patients.", "successRate": "5-year OS approximately 35-50% after R0 hepatic resection; improved with perioperative FOLFOX chemotherapy (EPOC/EORTC 40983 trial, PMID 18445963)" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Daily aspirin (100-300 mg) for chemoprevention in Lynch syndrome", "description": "The CAPP2 RCT (PMID 21216318) showed that aspirin 600 mg daily for 2 years halved CRC incidence in Lynch syndrome carriers over 10-year follow-up. NCCN endorses aspirin 100-600 mg daily as a chemoprevention option in Lynch syndrome; ongoing CAPP3 trial optimizing the dose." },
+    { "name": "Fecal microbiota transplant (FMT) for CRC prevention in high-risk individuals", "description": "Preclinical and pilot clinical evidence that gut microbiome modulation influences CRC risk; FMT from CRC patients to germ-free mice promotes tumor development. No RCTs yet in humans for prevention; emerging area." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "folfox-chemotherapy",
+    "colonoscopy",
+    "colorectal-surgery"
+  ],
+
+  "whySeeSpecialist": "A medical oncologist should be consulted at diagnosis for all Stage II-IV colorectal cancer. A colorectal surgeon with high-volume TME experience is essential for rectal cancer. A radiation oncologist is needed for Stage II-III rectal cancer. Early genetic counseling referral is warranted for all patients diagnosed under 50, those with MSI-H tumors, or those with multiple affected relatives, to test for Lynch syndrome.",
+  "doctorSelectionGuide": "Choose an NCCN-member institution or Commission on Cancer (CoC)-accredited cancer center where a multidisciplinary CRC tumor board reviews every case before treatment. For rectal cancer, surgeon volume is critical — centers performing over 50 TME procedures per year have significantly lower local recurrence rates. For Stage IV disease, ensure the institution can perform hepatic resection and has access to molecular biomarker testing for RAS, RAF, HER2, and MSI.",
+
+  "hospitalCriteria": [
+    "Commission on Cancer (CoC)-accredited cancer program or NCCN-member institution",
+    "Colorectal surgical unit performing over 30 TME procedures per year for rectal cancer",
+    "Pathology with reflex MMR IHC and MSI testing on all CRC diagnoses",
+    "Molecular biomarker laboratory for RAS, RAF, HER2, and MSI testing",
+    "Hepatobiliary surgical unit for liver resection of Stage IV CRC"
+  ],
+  "keyFacilities": [
+    "NCI-designated comprehensive cancer centers",
+    "High-volume colorectal surgical programs",
+    "Hereditary cancer genetics clinics for Lynch syndrome assessment",
+    "Endoscopy centers with polypectomy expertise for adenoma surveillance"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Undergo regular CRC screening beginning at age 45 for average-risk adults: annual FIT, or colonoscopy every 10 years, or CT colonography every 5 years.",
+    "Begin colonoscopy surveillance at age 40 or 10 years before the youngest affected relative's diagnosis age (whichever comes first) if a first-degree relative had CRC or advanced adenoma.",
+    "Limit red meat to under 3 servings per week and avoid processed meat (bacon, hot dogs, salami) — WHO Group 1 carcinogen for colorectal cancer risk.",
+    "Engage in at least 150 minutes of moderate aerobic exercise per week — physically active adults have a 20-30% lower colon cancer risk than sedentary adults.",
+    "Maintain a healthy body weight; visceral obesity and insulin resistance are established CRC risk factors; weight loss of 5-10% reduces CRC-relevant biomarkers.",
+    "Discuss daily aspirin with a physician if aged 50-59, at elevated cardiovascular risk, and not at increased bleeding risk — USPSTF concludes aspirin reduces CRC incidence by 40% with 5-10 years of use."
+  ],
+
+  "lifestyleModifications": [
+    "Complete all prescribed adjuvant chemotherapy courses; early discontinuation increases recurrence risk, particularly in Stage III disease.",
+    "Attend all scheduled surveillance colonoscopies: every 1 year after CRC resection, then every 3 years, then every 5 years per NCCN and ESMO guidelines.",
+    "Monitor serum CEA at 3-monthly intervals for 2 years post-resection; rising CEA triggers CT restaging and earlier detection of resectable recurrence.",
+    "Increase dietary fiber to 25-35 g per day through whole grains, legumes, fruits, and vegetables to reduce CRC recurrence risk.",
+    "Stop smoking — smoking is associated with a 20% increased CRC risk and impairs healing after colorectal surgery.",
+    "Manage stoma care expertly if a permanent stoma is present: consult a specialist stoma nurse, prevent peristomal skin breakdown, and join a patient support group."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "High-fiber diet (25-35 g/day): whole grains, legumes, vegetables, and fruit reduce exposure of colonocytes to carcinogens by accelerating gut transit and increasing stool bulk",
+      "Calcium-rich foods (dairy, fortified plant milks, broccoli) — calcium supplements (1,000-1,200 mg/day) reduce recurrent adenoma risk in RCTs by approximately 19%",
+      "Fish and omega-3 fatty acids — regular fish consumption (twice weekly) associated with 12-16% lower CRC risk in pooled cohort analyses",
+      "Cruciferous vegetables (broccoli, cabbage, Brussels sprouts) — sulforaphane induces phase-2 detoxification enzymes that deactivate colonic carcinogens"
+    ],
+    "avoid": [
+      "Processed meats (bacon, ham, sausages, salami) — WHO Group 1 carcinogen; 18% higher CRC risk per 50 g/day consumed",
+      "Red meat above 3 servings per week — WHO Group 2A carcinogen; 17% increased risk per 100 g/day",
+      "Excessive alcohol — 8% increased CRC risk per 10 g/day; mechanism includes folate depletion, acetaldehyde-mediated DNA damage, and colorectal mucosal irritation",
+      "High-sugar, ultra-processed dietary pattern — associated with hyperinsulinemia and elevated IGF-1, promoting colonocyte proliferation"
+    ]
+  },
+  "exerciseGuidelines": "ASCO and NCCN recommend 150 minutes of moderate aerobic exercise per week plus resistance training for CRC survivors; evidence supports a 20-30% reduction in CRC-specific mortality with active versus sedentary lifestyle after diagnosis. During adjuvant chemotherapy, walking and cycling at moderate intensity reduce oxaliplatin-induced peripheral neuropathy and fatigue. After stoma creation, avoid heavy lifting above 5 kg for 6-8 weeks; most stoma patients resume normal exercise at 8-12 weeks.",
+
+  "dailyManagement": [
+    "Take oral capecitabine (if prescribed) with food at consistent 12-hour intervals to minimize nausea and maintain plasma levels.",
+    "Inspect and care for surgical wounds, drains, and stoma (if present) daily; report signs of infection (redness, discharge, fever above 38°C) promptly.",
+    "Maintain hydration — 2-2.5 L water per day during chemotherapy to protect kidneys from oxaliplatin; report reduced urine output or ankle swelling.",
+    "Report new or worsening peripheral numbness or tingling during oxaliplatin therapy — cumulative neuropathy at doses above 750 mg/m² may require dose reduction.",
+    "Follow surveillance schedule: CEA every 3 months for 2 years, CT every 6 months for 2 years, then annually to year 5; colonoscopy at 1 year post-resection.",
+    "Seek dietary advice from an oncology dietitian, particularly during chemotherapy or after right hemicolectomy — bile salt diarrhea and fat malabsorption may require dietary modification."
+  ],
+
+  "prognosis": "Stage-specific 5-year relative survival in the US (SEER, 2012-2018): Stage I 91%, Stage II 72-85% (IIA better than IIB), Stage III 53-72% (IIIA better than IIIC), Stage IV 14%. Approximately 20-25% of Stage IV patients with liver-limited resectable metastases achieve 5-year survival of 35-50% after combined surgical and systemic therapy. Molecular features significantly modify prognosis: MSI-H Stage II colon cancer has excellent prognosis and does not benefit from adjuvant fluorouracil monotherapy; BRAF V600E mutation is an adverse prognostic factor in Stage III and IV disease. Lynch syndrome carriers have somewhat better stage-adjusted outcomes than sporadic CRC, potentially due to MSI-H immunogenicity. The 10-year risk of recurrence after R0 resection and adjuvant chemotherapy for Stage III colon cancer is approximately 25-30%; recurrence is most common in the first 3 years, falling substantially after 5 years.",
+
+  "recoveryTimeline": "Laparoscopic colectomy: hospital discharge 3-5 days, return to normal activity 4-6 weeks, return to work 6-8 weeks. Open colectomy: 7-10 days hospital, 8-12 weeks recovery. Adjuvant FOLFOX: 3-6 months. Preoperative rectal chemoradiotherapy plus TME surgery: approximately 5-6 months total treatment duration. CEA and CT surveillance ongoing 5 years after R0 resection.",
+
+  "complications": [
+    "Anastomotic leak after colorectal resection: occurs in 3-8% of cases; presents with fever, peritonitis, and raised CRP at 3-7 days post-operation; may require reoperation or CT-guided drainage.",
+    "Permanent or temporary stoma: abdominoperineal resection for very low rectal cancer requires a permanent colostomy; protective loop ileostomy is reversible in 85-90% of patients after rectal resection.",
+    "Peripheral neuropathy from oxaliplatin: cumulative sensory neuropathy affects 20-50% of treated patients; prevents fine motor tasks and reduces quality of life; chronic neuropathy beyond 1 year is difficult to reverse.",
+    "Bowel obstruction from adhesions: occurs in 2-10% of patients within 1 year of colorectal surgery; presents with nausea, vomiting, colicky pain, and inability to pass flatus; requires NG decompression or surgical lysis.",
+    "Liver metastasis in Stage IV disease: present in approximately 20% at diagnosis and develops metachronously in a further 20-25% of Stage II-III cases; early detection by surveillance CT and CEA enables curative hepatic resection in selected patients.",
+    "Sexual dysfunction and bladder dysfunction after TME: autonomic nerve injury from pelvic dissection causes erectile dysfunction in 30-50% of men and bladder dysfunction in 20-30%; pre-operative counseling and nerve-sparing technique minimize but do not eliminate risk."
+  ],
+
+  "supportResources": [
+    { "name": "Colorectal Cancer Alliance", "url": "https://www.ccalliance.org/", "description": "Patient navigation, clinical trial matching, financial assistance, and educational resources for colorectal cancer patients in the US." },
+    { "name": "ASCO Cancer.Net — Colorectal Cancer", "url": "https://www.cancer.net/cancer-types/colorectal-cancer", "description": "ASCO oncologist-reviewed patient guide covering staging, treatment options, genetic testing, and survivorship." },
+    { "name": "Lynch Syndrome International", "url": "https://www.lynchcancers.com/", "description": "Patient organization for Lynch syndrome and hereditary colorectal cancer; registry, family testing support, and clinical trial resources." },
+    { "name": "United Ostomy Associations of America", "url": "https://www.ostomy.org/", "description": "Education, peer visitor programs, and support for patients who have undergone ostomy surgery following colorectal cancer treatment." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "ibs", "name": "Irritable bowel syndrome", "keyDifference": "IBS produces alternating diarrhea and constipation, abdominal bloating, and mucus in stool — symptoms that overlap with left-sided colorectal cancer. IBS does not cause rectal bleeding, weight loss, elevated CRP, or iron-deficiency anemia. New-onset bowel-habit change above age 45 or in the presence of alarm symptoms (bleeding, weight loss, nocturnal symptoms) requires colonoscopy to exclude CRC before attributing symptoms to IBS." },
+    { "slug": "crohns-disease", "name": "Crohn's disease", "keyDifference": "Crohn's disease can present with bloody diarrhea, abdominal pain, and weight loss identical to colorectal cancer symptoms. Distinction requires colonoscopy with biopsy: CRC shows malignant glands on histology; Crohn's shows transmural granulomatous inflammation, skip lesions, and cobblestone mucosa. Crohn's disease itself is a CRC risk factor requiring surveillance colonoscopy after 8-10 years of colonic involvement." },
+    { "slug": "ulcerative-colitis", "name": "Ulcerative colitis", "keyDifference": "Ulcerative colitis causes bloody diarrhea and weight loss that can mimic left-sided or rectal colorectal cancer. UC is distinguished by continuous mucosal inflammation from the rectum proximally, goblet cell depletion, and crypt distortion on biopsy without malignant glands. Long-standing UC is itself a CRC risk factor — surveillance colonoscopy every 1-2 years from 8-10 years after diagnosis is recommended." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 diabetes mellitus" },
+    { "slug": "obesity-management", "name": "Obesity" },
+    { "slug": "anemia", "name": "Iron-deficiency anemia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "breast-cancer", "name": "Breast cancer", "relevance": "Shared modifiable risk factors (alcohol, obesity, physical inactivity); Lynch syndrome (BRCA2 modestly elevates CRC risk) creates genetic overlap; combined lifestyle interventions reduce both cancers." },
+    { "slug": "ulcerative-colitis", "name": "Ulcerative colitis", "relevance": "Long-standing extensive ulcerative colitis is a major CRC risk factor; cumulative risk 18% at 30 years without surveillance colonoscopy." },
+    { "slug": "prostate-cancer", "name": "Prostate cancer", "relevance": "Shared lifestyle risk factors; both require surveillance programs; radiation treatment for prostate cancer can cause radiation proctitis and increase secondary rectal cancer risk." },
+    { "slug": "liver-cell-carcinoma-c220", "name": "Liver cell carcinoma", "relevance": "Colorectal cancer frequently metastasizes to the liver; hepatic resection of CRC liver metastases requires input from hepatobiliary surgeons who also manage primary liver tumors." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is colorectal cancer?",
+      "answer": "Colorectal cancer is a malignant tumor of the colon or rectum, most commonly an adenocarcinoma arising from adenomatous polyps over 10-15 years. It is the third most common cancer worldwide with 1.93 million new cases in 2020 and the second leading cause of cancer death in the US. Early detection through screening when still localized is associated with 5-year survival above 90%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of colorectal cancer?",
+      "answer": "Common symptoms include rectal bleeding, change in bowel habits persisting over 4 weeks, unexplained iron-deficiency anemia, persistent abdominal pain or bloating, tenesmus (feeling of incomplete emptying after defecation), pencil-thin stools, and unexplained weight loss. Many early colorectal cancers produce no symptoms and are detected by screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "At what age should I start colorectal cancer screening?",
+      "answer": "Average-risk adults should begin screening at age 45 per ACS 2018 guidance and USPSTF 2021 recommendations. High-risk individuals — those with a first-degree relative with CRC under 60, Lynch syndrome, FAP, or a personal history of inflammatory bowel disease — should start earlier based on their specific risk. The most appropriate interval and test depends on personal preference and risk level.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a colonoscopy and does it hurt?",
+      "answer": "Colonoscopy uses a thin flexible camera to visualize the entire colon and rectum. Most patients receive conscious sedation or propofol and feel minimal discomfort. The procedure takes 20-40 minutes. If polyps are found, they are removed at the same time. Some patients experience mild cramping during or after; recovery is same-day. It remains the gold standard for CRC detection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the stages of colorectal cancer?",
+      "answer": "Stage I: tumor invades submucosa or muscularis propria, no node involvement; 5-year survival 91%. Stage II: tumor invades through the bowel wall without nodal spread. Stage III: regional lymph node metastasis; survival 53-72%. Stage IV: distant metastasis to liver, lung, or peritoneum; 5-year survival 14%. Stage at diagnosis is the most important determinant of prognosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is colorectal cancer hereditary?",
+      "answer": "Approximately 5-10% of colorectal cancers are caused by hereditary syndromes. Lynch syndrome (MLH1, MSH2, MSH6, PMS2 mutations) accounts for 3-5% of all cases with lifetime CRC risk up to 80%. Familial adenomatous polyposis (FAP) is rarer but near-100% penetrant. First-degree family history without identified mutation still doubles the risk. Genetic testing is recommended for patients under 50 and all MSI-H tumors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the treatment for colorectal cancer?",
+      "answer": "Treatment combines surgery (colectomy for colon cancer; total mesorectal excision for rectal cancer), chemotherapy (FOLFOX or CAPOX for Stage III and Stage IV), targeted therapy (anti-EGFR for RAS wild-type, bevacizumab for RAS mutant, encorafenib plus cetuximab for BRAF V600E), and immunotherapy (pembrolizumab for MSI-H metastatic disease). Stage and molecular subtype determine the regimen.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can colorectal cancer be cured?",
+      "answer": "Yes, when detected at early stages. Stage I colorectal cancer is cured by surgery alone in over 90% of patients. Stage III requires adjuvant chemotherapy, achieving 55-72% 5-year survival. Stage IV is generally not curable except in 20-25% of patients with resectable liver-only metastases, where 5-year survival of 35-50% is achievable after combined surgical and systemic therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Lynch syndrome?",
+      "answer": "Lynch syndrome is the most common hereditary colorectal cancer syndrome, caused by germline mutations in DNA mismatch repair genes (MLH1, MSH2, MSH6, PMS2). It accounts for 3-5% of all CRC and confers lifetime CRC risk of 10-80% depending on the gene. Lynch syndrome also increases risk of endometrial, ovarian, stomach, urinary tract, and bile duct cancers. Colonoscopy every 1-2 years from age 20-25 dramatically reduces CRC incidence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between colon cancer and rectal cancer?",
+      "answer": "Colon cancer arises in the colon (ascending, transverse, descending, or sigmoid) and is treated primarily with surgery and adjuvant chemotherapy. Rectal cancer (within 12 cm of the anal verge) requires preoperative chemoradiotherapy and total mesorectal excision surgery to achieve low local recurrence rates. The distinction matters critically for treatment sequencing and potential organ preservation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does diet affect colorectal cancer risk?",
+      "answer": "Yes, strongly. Processed meat is a WHO Group 1 colorectal carcinogen; each 50 g/day increases risk by 18%. Red meat is Group 2A (probable carcinogen). High-fiber diets reduce risk by approximately 20% per 10 g/day increase. Alcohol, obesity, and physical inactivity are also established risk factors. Mediterranean-style diets are associated with 20-30% lower CRC risk in prospective cohorts.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is MSI-H colorectal cancer?",
+      "answer": "MSI-H (microsatellite instability-high) or dMMR (deficient mismatch repair) colorectal cancer has a highly mutated genome and is strongly immunogenic. It accounts for approximately 15% of Stage II-IV CRC. MSI-H tumors do not benefit from fluorouracil-based chemotherapy in Stage II but respond dramatically to PD-1 immune checkpoint inhibitors (pembrolizumab) in advanced disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the side effects of colorectal cancer chemotherapy?",
+      "answer": "FOLFOX and CAPOX commonly cause peripheral neuropathy (tingling and numbness in hands and feet from oxaliplatin), fatigue, nausea, diarrhea, and hand-foot syndrome (capecitabine). Bevacizumab adds hypertension and impaired wound healing. Peripheral neuropathy is the most limiting long-term toxicity and is cumulative with oxaliplatin dose above 750 mg/m².",
+      "schemaEligible": true
+    },
+    {
+      "question": "What follow-up care is needed after colorectal cancer surgery?",
+      "answer": "NCCN and ESMO recommend: serum CEA every 3 months for 2 years, then every 6 months to year 5; CT chest, abdomen, and pelvis every 6 months for 2 years, then annually to year 5; colonoscopy at 1 year post-resection, then every 3-5 years. Rising CEA triggers CT restaging; 20-30% of recurrences are detectable early enough to permit curative re-resection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is aspirin protective against colorectal cancer?",
+      "answer": "Yes. Regular aspirin use reduces CRC incidence by 20-40% in observational studies and RCTs. USPSTF recommends discussing aspirin for adults aged 50-59 at elevated cardiovascular risk. Aspirin 600 mg halved Lynch syndrome CRC incidence in the CAPP2 trial. Benefits must be weighed against gastrointestinal bleeding risk, particularly in adults over 70.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Colorectal cancer (colon and rectal cancer)",
+  "regionalNames": [
+    { "name": "Colon cancer", "region": "Common lay usage", "language": "English" },
+    { "name": "Bowel cancer", "region": "UK, Australia", "language": "English" },
+    { "name": "Cancer colorrectal", "region": "Spain/Latin America", "language": "Spanish" },
+    { "name": "पेट का कैंसर", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "colorectal cancer",
+    "colon cancer",
+    "rectal cancer",
+    "bowel cancer",
+    "colonoscopy screening",
+    "colorectal cancer symptoms",
+    "Lynch syndrome",
+    "colorectal cancer chemotherapy FOLFOX",
+    "colorectal cancer stages",
+    "MSI-H colorectal cancer",
+    "colorectal cancer survival",
+    "CRC prevention"
+  ],
+  "symptomKeywords": [
+    "blood in stool",
+    "rectal bleeding",
+    "change in bowel habits",
+    "weight loss no reason",
+    "feeling of incomplete emptying",
+    "narrow stools ribbon stool"
+  ],
+
+  "metaTitle": "Colorectal Cancer: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Colorectal cancer: the second deadliest cancer in the US, arising from colon or rectal polyps. Symptoms, screening, stages and treatment options reviewed here.",
+
+  "keywords": [
+    "colorectal cancer",
+    "colon cancer symptoms stages",
+    "bowel cancer UK",
+    "colorectal cancer FOLFOX chemotherapy",
+    "colonoscopy screening age 45",
+    "Lynch syndrome CRC",
+    "MSI-H dMMR colorectal cancer",
+    "rectal cancer TME surgery",
+    "colorectal cancer prognosis survival",
+    "bevacizumab cetuximab colon cancer",
+    "colorectal cancer prevention diet",
+    "CRC hereditary genetics"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Sung H, Ferlay J, Siegel RL, et al. 2021. Global cancer statistics 2020: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA Cancer J Clin 71(3):209-49.", "url": "https://pubmed.ncbi.nlm.nih.gov/33538338/", "accessedDate": "2026-05-14" },
+    { "title": "Andre T, Boni C, Mounedji-Boudiaf L, et al. 2004. Oxaliplatin, fluorouracil, and leucovorin as adjuvant treatment for colon cancer. N Engl J Med 350(23):2343-51.", "url": "https://pubmed.ncbi.nlm.nih.gov/15175435/", "accessedDate": "2026-05-14" },
+    { "title": "Andre T, Shiu KK, Kim TW, et al. 2020. Pembrolizumab in microsatellite-instability-high advanced colorectal cancer. N Engl J Med 383(23):2207-18.", "url": "https://pubmed.ncbi.nlm.nih.gov/33264544/", "accessedDate": "2026-05-14" },
+    { "title": "Kopetz S, Grothey A, Yaeger R, et al. 2019. Encorafenib, binimetinib, and cetuximab in BRAF V600E-mutated colorectal cancer. N Engl J Med 381(17):1632-43.", "url": "https://pubmed.ncbi.nlm.nih.gov/31566309/", "accessedDate": "2026-05-14" },
+    { "title": "Hurwitz H, Fehrenbacher L, Novotny W, et al. 2004. Bevacizumab plus irinotecan, fluorouracil, and leucovorin for metastatic colorectal cancer. N Engl J Med 350(23):2335-42.", "url": "https://pubmed.ncbi.nlm.nih.gov/15175435/", "accessedDate": "2026-05-14" },
+    { "title": "Burn J, Gerdes AM, Macrae F, et al. 2011. Long-term effect of aspirin on cancer risk in carriers of hereditary colorectal cancer: an analysis from the CAPP2 randomised controlled trial. Lancet 378(9809):2081-87.", "url": "https://pubmed.ncbi.nlm.nih.gov/21216318/", "accessedDate": "2026-05-14" },
+    { "title": "NCCN Clinical Practice Guidelines in Oncology. Colon Cancer / Rectal Cancer. Version 2.2024. National Comprehensive Cancer Network.", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1428", "accessedDate": "2026-05-14" },
+    { "title": "Sargent DJ, Marsoni S, Monges G, et al. 2010. Defective mismatch repair as a predictive marker for lack of efficacy of fluorouracil-based adjuvant therapy in colon cancer. J Clin Oncol 28(20):3219-26.", "url": "https://pubmed.ncbi.nlm.nih.gov/20498393/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

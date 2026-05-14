@@ -1,0 +1,391 @@
+{
+  "_meta": {
+    "slug": "leukemia",
+    "tier": 1,
+    "headTerm": "leukemia",
+    "longTailKeywords": [
+      "leukemia symptoms",
+      "leukemia types",
+      "leukemia treatment",
+      "acute myeloid leukemia",
+      "chronic lymphocytic leukemia",
+      "leukemia diagnosis blood test",
+      "leukemia survival rate",
+      "leukemia causes"
+    ],
+    "primarySpecialty": "Oncology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Leukemia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Oncology",
+
+  "heroOverview": "Leukemia is a cancer of the blood and bone marrow in which abnormal white blood cells proliferate uncontrollably, crowding out healthy red cells, normal white cells, and platelets. The American Cancer Society estimated approximately 59,610 new diagnoses in the United States in 2023, with the four main types — acute myeloid (AML), acute lymphoblastic (ALL), chronic myeloid (CML), and chronic lymphocytic (CLL) — each following a distinct biological course and treatment pathway. Acute forms progress rapidly over days to weeks; chronic forms may be asymptomatic for years. Without treatment, acute leukemia is fatal within weeks to months. Targeted therapies and stem cell transplantation have transformed outcomes: CML 5-year survival now exceeds 70% in many series, and childhood ALL cure rates reach 90%.",
+
+  "keyStats": {
+    "prevalence": "Approximately 59,610 new cases and 23,710 deaths in the US in 2023 (American Cancer Society)",
+    "demographics": "ALL peaks in children under 5; AML incidence rises sharply after age 60; CLL is the most common adult leukemia, median age at diagnosis 70",
+    "avgAge": "Median age at diagnosis: ALL ~15, AML ~68, CML ~64, CLL ~70",
+    "globalCases": "Over 470,000 new cases globally per year (GLOBOCAN 2022)"
+  },
+
+  "definition": "Leukemia (ICD-10: C91-C95) is a malignant neoplasm of hematopoietic stem or progenitor cells in the bone marrow. Clonal expansion of a transformed cell generates large numbers of immature or functionally abnormal white blood cells (blasts or atypical lymphocytes) that accumulate in the marrow, peripheral blood, lymph nodes, spleen, and liver. The result is bone marrow failure — insufficient production of normal red cells (causing anemia), functional neutrophils (causing susceptibility to infection), and platelets (causing bleeding). Leukemia is classified by the lineage of the malignant cell (myeloid vs. lymphoid) and the pace of progression (acute vs. chronic). Acute leukemias (AML, ALL) consist predominantly of immature blasts, progress rapidly, and require immediate treatment. Chronic leukemias (CML, CLL) contain more mature cells, often present incidentally, and follow an indolent course that may not require treatment for years in some patients. Leukemia is distinguished from lymphoma, which arises primarily in lymphoid tissue rather than bone marrow, though the boundary is blurred in advanced lymphoma with marrow involvement. Hematology-oncology specialists manage all forms using risk-adapted protocols incorporating cytogenetics, molecular genetics, and measurable residual disease (MRD) monitoring.",
+
+  "typesClassification": [
+    { "type": "Acute Myeloid Leukemia (AML)", "description": "Clonal expansion of myeloid blasts accounting for 80% of acute leukemia in adults. Defined by ≥20% blasts in marrow or blood, or by specific chromosomal translocations (e.g., t(15;17) PML-RARA in APL). Median survival without treatment measured in weeks." },
+    { "type": "Acute Lymphoblastic Leukemia (ALL)", "description": "Malignant B- or T-lymphoblasts; the most common childhood cancer. Philadelphia chromosome-positive ALL (Ph+ ALL) confers a historically poor prognosis now markedly improved by tyrosine kinase inhibitors added to chemotherapy." },
+    { "type": "Chronic Myeloid Leukemia (CML)", "description": "Driven by the BCR-ABL1 fusion gene from the Philadelphia chromosome t(9;22). Oral BCR-ABL tyrosine kinase inhibitors (imatinib, dasatinib, nilotinib, asciminib) produce deep molecular remission in most patients. Blast crisis represents transformation to acute leukemia." },
+    { "type": "Chronic Lymphocytic Leukemia (CLL)", "description": "The most common adult leukemia in Western countries. Small, mature-appearing B lymphocytes accumulate over years. Stratified by IGHV mutation status, del(17p)/TP53, and del(11q); many patients require no initial treatment. BTK inhibitors (ibrutinib, acalabrutinib, zanubrutinib) are first-line for most patients needing therapy." },
+    { "type": "Other leukemias", "description": "Includes hairy cell leukemia (rare, indolent B-cell leukemia responsive to cladribine), T-cell prolymphocytic leukemia (aggressive), and adult T-cell leukemia/lymphoma (HTLV-1-associated)." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent fatigue and pallor from anemia caused by red cell replacement in the bone marrow, often the first noticeable symptom in acute forms.",
+    "Unexplained fever, chills, and recurrent infections from neutropenia; infections may be bacterial, fungal, or viral and can rapidly become life-threatening.",
+    "Easy bruising, petechiae (pinpoint red or purple skin spots), and prolonged bleeding from cuts due to low platelet count (thrombocytopenia).",
+    "Painless swollen lymph nodes in the neck, armpits, or groin, particularly prominent in CLL and ALL.",
+    "Splenomegaly causing left-sided abdominal fullness, early satiety, and discomfort, especially in CML and CLL.",
+    "Bone pain or tenderness, especially in the sternum and long bones, from leukemic infiltration of the periosteum.",
+    "Night sweats and unintentional weight loss exceeding 10% body weight over 6 months — classic B symptoms of lymphoid malignancies.",
+    "Headache, visual disturbance, or cranial nerve palsy from central nervous system involvement, particularly in ALL and aggressive AML.",
+    "Petechial skin rashes and gingival hypertrophy (swollen, bleeding gums) in AML subtypes, particularly acute monocytic leukemia (M5).",
+    "Shortness of breath and dyspnea on exertion from anemia, mediastinal mass in T-ALL, or leukostasis when white cell count exceeds 100,000/µL."
+  ],
+
+  "earlyWarningSigns": [
+    "Unexplained complete blood count abnormality: lymphocytosis above 5,000/µL on routine testing, or any circulating blasts",
+    "Persistent fatigue unresponsive to iron supplementation in an adult over 60 — warrants a full blood count before attributing to lifestyle",
+    "Recurrent bacterial infections, especially sinusitis or pneumonia, within a 6-month period in a previously healthy adult",
+    "Unexplained bruising or bleeding in a child or adult without a prior bleeding history",
+    "Painless cervical lymphadenopathy persisting more than 6 weeks without a clear infectious cause"
+  ],
+
+  "emergencySigns": [
+    "Leukostasis: white cell count above 100,000/µL with altered consciousness, respiratory failure, or priapism — requires emergency leukapheresis or hydroxyurea",
+    "Tumor lysis syndrome: acute renal failure, hyperkalemia, hyperphosphatemia, and hypocalcemia after chemotherapy initiation — monitor electrolytes and uric acid hourly",
+    "Disseminated intravascular coagulation (DIC) with uncontrolled bleeding and prolonged PT/aPTT — hallmark of acute promyelocytic leukemia (APL), a medical emergency",
+    "Febrile neutropenia: fever above 38°C with absolute neutrophil count below 500/µL — begin broad-spectrum IV antibiotics within 60 minutes",
+    "Spinal cord compression or acute neurological deficit from CNS leukemia — requires urgent MRI and intrathecal chemotherapy"
+  ],
+
+  "causes": [
+    {
+      "cause": "Acquired somatic mutations in hematopoietic stem cells",
+      "description": "Most leukemias arise from acquired mutations rather than inherited defects. Key recurrent mutations include chromosomal translocations (BCR-ABL1 in CML, PML-RARA in APL), point mutations in FLT3, NPM1, DNMT3A, IDH1/2, and TP53, and copy number changes. These alter differentiation, promote self-renewal, and confer clonal advantage over normal precursors."
+    },
+    {
+      "cause": "Prior exposure to ionizing radiation",
+      "description": "Survivors of the atomic bombs in Hiroshima and Nagasaki showed 5-20× elevated leukemia incidence in the decade after exposure. Therapeutic radiation for prior malignancies (breast cancer, lymphoma) carries a 1-3% lifetime risk of therapy-related AML. Even low-dose diagnostic radiation contributes a small increase proportional to cumulative dose."
+    },
+    {
+      "cause": "Cytotoxic chemotherapy (therapy-related leukemia)",
+      "description": "Alkylating agents (cyclophosphamide, melphalan) cause therapy-related AML with 5q- and -7 deletions, typically appearing 5-7 years post-treatment. Topoisomerase II inhibitors (etoposide, doxorubicin) cause AML with 11q23 rearrangements at 1-3 years. Incidence increases with cumulative dose and age at treatment."
+    },
+    {
+      "cause": "Benzene and chemical exposure",
+      "description": "Benzene is the best-characterized occupational leukemogen. Dose-dependent risk for AML and MDS begins above 1 ppm cumulative exposure. Sources include petroleum refining, rubber manufacturing, shoe-making, and smoking (each cigarette contains trace benzene). Formaldehyde and pesticides show weaker associations in meta-analyses."
+    },
+    {
+      "cause": "Inherited genetic syndromes",
+      "description": "Down syndrome (trisomy 21) confers a 20-30× elevated risk of ALL and AML in children under 5; Fanconi anemia, Shwachman-Diamond syndrome, Diamond-Blackfan anemia, and GATA2 deficiency each predispose to AML through marrow failure. Familial CLL accounts for roughly 10% of CLL cases in Western populations."
+    },
+    {
+      "cause": "Viral infection",
+      "description": "Human T-lymphotropic virus type 1 (HTLV-1) causes adult T-cell leukemia/lymphoma in 3-5% of carriers after a 20-40 year latency period. Epstein-Barr virus is implicated in some cases of B-cell ALL. HIV itself does not cause leukemia but immunosuppression elevates the risk of secondary malignancies including CLL variants."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "AML and CLL incidence rises sharply with age. The median age at AML diagnosis is 68; age-adjusted AML incidence roughly doubles for each decade after age 40. Older patients also tolerate intensive chemotherapy less well, affecting treatment options." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "All major leukemia subtypes occur 1.5-2× more frequently in men than women in population-based registries. The basis is incompletely understood but may relate to X-chromosome-linked tumor suppressor gene differences." },
+    { "factor": "Prior chemotherapy or radiotherapy", "category": "modifiable", "description": "Alkylating agents, anthracyclines, and topoisomerase II inhibitors are the main iatrogenic risk. Therapy-related AML and MDS account for approximately 10-20% of all AML cases. Risk scales with cumulative dose." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Cigarette smoking approximately doubles the risk of AML through benzene and other leukemogen exposure. Smoking also worsens outcomes in established disease and increases therapy toxicity. A causal association with CLL is less established." },
+    { "factor": "Benzene and occupational chemical exposure", "category": "environmental", "description": "Occupations with historical benzene exposure (petroleum workers, rubber manufacturers, painters) carry elevated AML and MDS risk. Modern industrial hygiene limits have substantially reduced but not eliminated the risk." },
+    { "factor": "Down syndrome (trisomy 21)", "category": "genetic", "description": "Children with Down syndrome have 20-30× the general population risk of ALL and AML. They also develop a transient abnormal myelopoiesis in the neonatal period that in 20-30% of cases progresses to frank leukemia." },
+    { "factor": "Family history of CLL", "category": "genetic", "description": "First-degree relatives of CLL patients have approximately 8× elevated risk compared with the general population. Specific germline variants in IRF4, CLPTM1, and other loci have been identified by genome-wide association studies." }
+  ],
+
+  "affectedDemographics": [
+    "ALL: most common cancer in children under 15 (30% of all childhood cancers); bimodal age distribution with a second peak after age 50.",
+    "AML: predominantly a disease of older adults — 50% of patients are over 65 at diagnosis; incidence 3.8 per 100,000 per year in the US.",
+    "CML: incidence 1-2 per 100,000 annually; slight male predominance; rare in children.",
+    "CLL: almost exclusively in adults over 50 in Western countries; rare in East Asians; accounts for 25-30% of all leukemia in the US."
+  ],
+
+  "diagnosisOverview": "Diagnosis begins with a complete blood count (CBC) showing an abnormal white cell count — markedly elevated in leukostasis, depressed in hypoplastic presentations, or dominated by abnormal cells in the differential. A peripheral blood smear is the next step: circulating blasts confirm acute leukemia; smudge cells characterize CLL. Bone marrow biopsy and aspiration are mandatory for classification and risk stratification. The aspirate is assessed by morphology (FAB or WHO 2022 classification), multiparameter flow cytometry (immunophenotyping to distinguish B-ALL, T-ALL, AML, and myeloid subtypes), conventional cytogenetics (karyotype), and a comprehensive molecular panel including FISH for BCR-ABL1, PML-RARA, and other recurrent translocations, plus targeted NGS for FLT3-ITD, NPM1, IDH1/2, TP53, ASXL1, DNMT3A, and RUNX1. Molecular findings determine prognosis and guide targeted therapy selection. Lumbar puncture evaluates CNS involvement in ALL and high-risk AML. CT chest-abdomen-pelvis or PET-CT identifies lymphadenopathy and splenomegaly. FISH for del(17p), del(11q), trisomy 12, and del(13q) and IGHV mutation status are assessed in CLL. Performance status, organ function, and comorbidity index inform treatment intensity.",
+
+  "diagnosticTests": [
+    { "test": "Complete blood count (CBC) with differential", "purpose": "First screening test; identifies cytopenias, leukocytosis, and abnormal white cell proportions", "whatToExpect": "A standard blood draw from a vein. Results available within 1-2 hours in most hospital settings. Abnormal results trigger further testing immediately." },
+    { "test": "Peripheral blood smear", "purpose": "Morphological assessment of abnormal cells, including blasts, lymphocytes, smudge cells, and platelet clumps", "whatToExpect": "No additional sample required — performed on the same CBC sample. A trained hematologist reviews under microscope. Results within 4-8 hours." },
+    { "test": "Bone marrow aspiration and biopsy", "purpose": "Definitive sample for morphology, immunophenotyping, cytogenetics, and molecular testing; required for diagnosis and risk classification", "whatToExpect": "Outpatient or inpatient procedure under local anesthesia, typically from the posterior iliac crest. Mild to moderate pain lasting 30-60 minutes. Full results including molecular panel take 7-14 days." },
+    { "test": "Flow cytometry (immunophenotyping)", "purpose": "Identifies lineage and maturation stage of malignant cells; distinguishes AML from ALL and classifies subtypes", "whatToExpect": "Performed on marrow aspirate or peripheral blood. No additional procedure needed. Results return in 24-48 hours." },
+    { "test": "Cytogenetics (karyotype) and FISH", "purpose": "Detects chromosomal abnormalities (Philadelphia chromosome t(9;22), t(15;17), del(17p), etc.) that drive treatment selection and predict prognosis", "whatToExpect": "Performed on cultured bone marrow cells. Conventional karyotype takes 10-14 days; FISH returns within 48-72 hours." },
+    { "test": "Next-generation sequencing (NGS) molecular panel", "purpose": "Identifies targetable mutations (FLT3-ITD, NPM1, IDH1/2, TP53, ASXL1) and germline predisposition variants", "whatToExpect": "Performed on bone marrow DNA. Results in 7-21 days depending on laboratory. Directly guides choice of targeted agents including midostaurin, enasidenib, olutasidenib, and venetoclax combinations." }
+  ],
+
+  "treatmentOverview": "Treatment is dictated by leukemia subtype, cytogenetic/molecular risk, age, and performance status. The goal in acute leukemia is complete remission (CR) with subsequent consolidation to prevent relapse; measurable residual disease (MRD) negativity is the new benchmark for deep response. In AML, intensive induction with cytarabine plus an anthracycline (the '7+3' regimen) achieves CR in 60-80% of fit patients under 70. Post-remission therapy is stratified by risk: favorable-risk AML (CBF translocations, NPM1-mutated without FLT3-ITD) can be consolidated with high-dose cytarabine; adverse-risk disease (TP53, del(5q/7q), complex karyotype) benefits from allogeneic stem cell transplantation (alloSCT). FLT3-inhibitors midostaurin or quizartinib are added throughout induction and consolidation in FLT3-positive AML. IDH1/2 inhibitors (enasidenib, olutasidenib) and venetoclax-based regimens expand options for older or unfit patients. APL is treated with all-trans retinoic acid (ATRA) plus arsenic trioxide, which cures over 95% of patients. In ALL, pediatric-inspired multi-agent regimens include induction (vincristine, corticosteroid, asparaginase, anthracycline), CNS prophylaxis with intrathecal chemotherapy, and maintenance for 2-3 years; Ph+ ALL adds a tyrosine kinase inhibitor (ponatinib, dasatinib) to standard chemotherapy, converting a once uniformly fatal subtype to one where CR rates exceed 90%. CML is managed with oral BCR-ABL TKIs (imatinib 400 mg daily first-line; dasatinib or nilotinib for resistance or intolerance; asciminib for T315I mutation). Deep molecular remission (MR4.5) achieved in 30-50% of patients, and TKI discontinuation trials show treatment-free remission in eligible patients. CLL management follows a watch-and-wait approach until progression criteria (Rai/Binet staging) are met; BTK inhibitors (acalabrutinib, zanubrutinib preferred over ibrutinib for cardiac tolerability) and BCL-2 inhibitor venetoclax plus obinutuzumab are the preferred first-line choices per 2023 NCCN and iwCLL guidelines.",
+
+  "medicalTreatments": [
+    { "name": "Cytarabine plus anthracycline induction ('7+3')", "description": "Standard AML induction: cytarabine 100-200 mg/m² continuous infusion days 1-7 plus daunorubicin 60-90 mg/m² or idarubicin 12 mg/m² days 1-3. CPX-351 (liposomal cytarabine-daunorubicin) preferred for therapy-related AML and AML-MRC.", "effectiveness": "Complete remission in 60-80% of fit adults under 70; 30-50% in older patients" },
+    { "name": "BCR-ABL tyrosine kinase inhibitors (imatinib 400 mg daily, dasatinib 100 mg, nilotinib 300 mg twice daily, asciminib 40 mg twice daily)", "description": "Oral targeted therapy for CML in all phases and Ph+ ALL. Asciminib targets the myristoyl pocket and is active against all BCR-ABL mutations including T315I.", "effectiveness": "Major molecular response in 70-80% of CML patients at 12 months; 10-year overall survival exceeding 85% in chronic phase" },
+    { "name": "BTK inhibitors (acalabrutinib 100 mg twice daily, zanubrutinib 160 mg twice daily)", "description": "First- or second-line for CLL and MCL. Covalently inhibit Bruton's tyrosine kinase, blocking B-cell receptor signaling. Acalabrutinib and zanubrutinib have superior cardiac tolerability vs. ibrutinib.", "effectiveness": "Progression-free survival at 5 years approximately 65-70% in first-line CLL; overall response rate 93-95%" },
+    { "name": "Venetoclax (400 mg daily after ramp-up) plus obinutuzumab or rituximab", "description": "BCL-2 inhibitor plus anti-CD20 antibody for CLL. Fixed-duration combination (12 cycles) produces high MRD-negative CR rates. Also used with azacitidine or low-dose cytarabine for unfit AML patients.", "effectiveness": "MRD-negative CR in 42-57% of CLL patients; 3-year PFS 82% in treatment-naive CLL (MURANO and CLL14 trials)" },
+    { "name": "All-trans retinoic acid (ATRA) plus arsenic trioxide (ATO) for APL", "description": "ATRA 45 mg/m²/day plus ATO 0.15 mg/kg/day for low-risk APL. Differentiates leukemic promyelocytes and induces apoptosis. Considered curative in most non-high-risk cases.", "effectiveness": "Overall survival exceeding 95% in low- and intermediate-risk APL (GIMEMA/AIDA-2000 and APL0406 trials)" },
+    { "name": "Pediatric-inspired ALL regimen (vincristine, dexamethasone, asparaginase, anthracycline, plus TKI for Ph+ ALL)", "description": "Multi-agent induction followed by consolidation and 2-3 years of maintenance. CNS prophylaxis with intrathecal methotrexate has replaced cranial radiation in most protocols.", "effectiveness": "Childhood ALL overall cure rate 90%; adult ALL (age 18-40) CR 85-90% with pediatric regimens; Ph+ ALL CR exceeds 90% with TKI addition" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Allogeneic stem cell transplantation (alloSCT)", "description": "HLA-matched sibling or unrelated donor transplant using myeloablative or reduced-intensity conditioning. Provides both tumor-ablative chemotherapy effect and graft-versus-leukemia (GVL) immunotherapy. Indicated for adverse-risk AML, ALL in CR1 or beyond, CML in accelerated/blast phase refractory to TKIs, and relapsed/refractory CLL.", "successRate": "3-year overall survival 40-65% for AML in CR1 (CIBMTR data); procedure-related mortality 5-15% in experienced centers" },
+    { "name": "Autologous stem cell transplantation (autoSCT)", "description": "Patient's own stem cells harvested during remission and reinfused after high-dose conditioning chemotherapy. Used in selected ALL and AML patients who lack a suitable allogeneic donor.", "successRate": "5-year relapse-free survival 35-50% for AML in first CR; significantly lower than alloSCT due to lack of GVL effect but lower procedure-related mortality" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "CAR-T cell therapy (tisagenlecleucel, brexucabtagene autoleucel, axicabtagene ciloleucel)", "description": "FDA-approved for relapsed/refractory B-ALL (tisagenlecleucel in patients under 25) and relapsed/refractory CLL and mantle cell lymphoma. Autologous T cells are engineered to express anti-CD19 CAR. Response rates 70-80% in heavily pre-treated ALL." },
+    { "name": "Bispecific antibodies (blinatumomab)", "description": "Anti-CD19/CD3 BiTE engages T cells to destroy B-cell leukemia. FDA-approved for relapsed/refractory B-ALL and Ph+ ALL in adults. Achieves CR in 39-43% of heavily pre-treated patients per TOWER trial." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "chemotherapy",
+    "bone-marrow-transplant",
+    "radiation-therapy"
+  ],
+
+  "whySeeSpecialist": "Leukemia requires a hematologist-oncologist for accurate subtype classification, molecular risk stratification, and protocol-based treatment. Treatment decisions in AML, for example, are made within hours of diagnosis given the disease tempo; misclassification of APL as another AML subtype and starting standard chemotherapy instead of ATRA-ATO can be fatal.",
+  "doctorSelectionGuide": "Choose a hematologist-oncologist affiliated with an NCI-designated comprehensive cancer center or equivalent, particularly for AML, ALL, and relapsed CLL. These centers provide rapid access to flow cytometry, molecular panels, clinical trials, CAR-T programs, and allogeneic transplant teams. For CML managed with oral TKIs, an experienced community hematologist with access to molecular monitoring laboratories is appropriate.",
+
+  "hospitalCriteria": [
+    "24-hour hematopathology laboratory for CBC, blood smear, and flow cytometry",
+    "Bone marrow biopsy service with rapid turnaround for cytogenetics and molecular panels",
+    "ICU-level supportive care for tumor lysis syndrome, febrile neutropenia, and leukostasis",
+    "Blood bank with irradiated CMV-negative products and platelet pheresis capacity",
+    "Allogeneic and autologous stem cell transplant program"
+  ],
+  "keyFacilities": [
+    "NCI-designated comprehensive cancer centers",
+    "Major academic medical centers with dedicated leukemia services",
+    "CAR-T therapy certified centers",
+    "Bone marrow transplant programs with unrelated donor access (NMDP)"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Avoid smoking: benzene in tobacco smoke is the most modifiable leukemia risk factor; cessation reduces AML risk approximately 2-fold.",
+    "Minimize occupational benzene exposure: use personal protective equipment, follow OSHA permissible exposure limits, and request regular occupational health monitoring if employed in petrochemical, rubber, or shoe industries.",
+    "Optimize radiation dose during cancer treatment: request dose planning that minimizes bone marrow exposure during therapeutic radiation when feasible.",
+    "Genetic counseling for families with multiple first-degree relatives with CLL or known leukemia-predisposition syndromes.",
+    "Children with Down syndrome should have complete blood counts at birth and annually to detect transient abnormal myelopoiesis and leukemia early."
+  ],
+
+  "lifestyleModifications": [
+    "Take oral TKIs (imatinib, dasatinib, nilotinib) at the same time daily with food or water as directed; imatinib is taken with a large meal to reduce nausea.",
+    "Report fever above 38°C or unusual bleeding to the oncology team immediately — do not wait for a scheduled appointment.",
+    "Avoid live vaccines during active treatment and for at least 12 months after alloSCT; consult the transplant team before any vaccination.",
+    "Maintain meticulous oral hygiene to reduce the risk of oral mucositis and gingival infections during chemotherapy-induced neutropenia.",
+    "Limit alcohol, particularly during treatment with hepatotoxic agents such as methotrexate, arsenic trioxide, and azole antifungals.",
+    "Join a leukemia-specific support group or connect with the Leukemia and Lymphoma Society's patient navigators to reduce distress and improve adherence."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein foods (eggs, fish, legumes, fortified shakes) during chemotherapy to support marrow recovery and reduce treatment-related weight loss",
+      "Cooked or heat-processed foods during neutropenic episodes to minimize food-borne bacterial contamination",
+      "Iron-rich foods (lean meats, lentils, spinach) and folate sources (legumes, dark greens) to support erythropoiesis during recovery",
+      "Adequate hydration (2-3 L daily) during induction chemotherapy to prevent tumor lysis syndrome"
+    ],
+    "avoid": [
+      "Raw or undercooked meat, fish, and eggs during neutropenia (absolute neutrophil count below 500/µL)",
+      "Unpasteurized dairy, cheeses, and juices during immunosuppression",
+      "Grapefruit and grapefruit juice when taking imatinib, nilotinib, or azole antifungals that are CYP3A4 substrates",
+      "High-dose herbal supplements or antioxidant megadoses during active chemotherapy without oncologist approval"
+    ]
+  },
+  "exerciseGuidelines": "Light to moderate aerobic exercise (walking, stationary cycling) is safe and beneficial during treatment-free intervals and recovery phases, reducing fatigue and depression. Avoid exercise during febrile neutropenia or with platelet counts below 20,000/µL. After alloSCT, avoid contact sports and crowded public spaces for at least 6-12 months.",
+
+  "dailyManagement": [
+    "Take all oral targeted agents as prescribed: missed doses should be taken the same day if remembered, not doubled up.",
+    "Monitor temperature twice daily during chemotherapy cycles; a reading above 38°C requires immediate phone contact with the oncology team.",
+    "Keep a written log of symptoms, bruising episodes, and medication side-effects to review at each clinic visit.",
+    "Attend blood count monitoring appointments on schedule; CBCs during induction may be needed every 1-3 days.",
+    "Maintain excellent hand hygiene and avoid close contact with individuals who have active infections during neutropenic phases."
+  ],
+
+  "prognosis": "Prognosis varies dramatically by subtype and molecular risk. Childhood ALL: overall cure rate approximately 90% with modern pediatric protocols. Adult ALL: 5-year overall survival 40-60% with pediatric-inspired regimens; Ph+ ALL now reaches 50-70% 5-year survival with TKI combinations. AML overall 5-year survival approximately 30%; favorable-risk AML (CBF leukemias, NPM1 without FLT3-ITD) achieves 50-70% cure with chemotherapy alone; adverse-risk AML (TP53, complex karyotype) carries 5-year survival below 15% even with alloSCT. APL treated with ATRA-ATO achieves over 95% long-term disease-free survival and is the most curable AML subtype. CML in chronic phase treated with TKIs: 10-year overall survival exceeds 85%. CLL median survival exceeds 10 years from diagnosis; del(17p)/TP53-mutated CLL has historically shorter survival but BTK inhibitors have substantially improved outcomes in this group.",
+
+  "recoveryTimeline": "Acute leukemia induction: 4-6 weeks in hospital. Consolidation cycles: 3-4 months outpatient. AlloSCT: 30-100 days inpatient engraftment then 12-24 months immunosuppression. CML TKI therapy: most patients return to normal activity within 4-8 weeks. CLL watch-and-wait: no treatment required in early-stage disease for months to years.",
+
+  "complications": [
+    "Febrile neutropenia and life-threatening bacterial or fungal sepsis, most common during induction chemotherapy when ANC falls below 100/µL.",
+    "Tumor lysis syndrome with acute kidney injury, hyperkalemia, and cardiac arrhythmia — prevented with allopurinol or rasburicase before chemotherapy.",
+    "Graft-versus-host disease (GVHD) after alloSCT: acute GVHD in 30-50% of patients; chronic GVHD in 40-70%, potentially disabling and requiring years of immunosuppression.",
+    "Secondary malignancies, including therapy-related AML and MDS, in 1-3% of survivors of childhood ALL by 20 years post-treatment.",
+    "Cardiac toxicity from anthracycline cumulative dose exceeding 300 mg/m² doxorubicin equivalent — monitor with echocardiography.",
+    "Central nervous system relapse in ALL — prevented with CNS-directed intrathecal chemotherapy; may manifest as meningeal leukemia with headache, cranial nerve palsies, and CSF blasts."
+  ],
+
+  "supportResources": [
+    { "name": "Leukemia and Lymphoma Society (LLS)", "url": "https://www.lls.org/", "description": "Largest blood cancer non-profit; provides financial assistance, patient navigation, and information specialists accessible by phone." },
+    { "name": "National Cancer Institute — Leukemia Information", "url": "https://www.cancer.gov/types/leukemia", "description": "Comprehensive NCI patient guides for each leukemia subtype with treatment summaries and clinical trial links." },
+    { "name": "American Cancer Society — Leukemia", "url": "https://www.cancer.org/cancer/types/leukemia.html", "description": "Staging guides, treatment options, and survivorship resources for all four major leukemia types." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "lymphoma", "name": "Lymphoma", "keyDifference": "Lymphoma arises primarily in lymph nodes and lymphoid tissue, whereas leukemia originates in the bone marrow and circulates in the blood. In advanced lymphoma with marrow involvement the distinction blurs. Lymphoma staging uses Ann Arbor criteria and the PET-CT scan, whereas leukemia is classified by peripheral blood counts, marrow morphology, and molecular markers." },
+    { "slug": "anemia", "name": "Anemia", "keyDifference": "Anemia is a symptom of leukemia (marrow replacement) but is also the primary finding in iron deficiency, hemolysis, and B12 deficiency. Leukemia is distinguished by accompanying leukocyte abnormalities, blasts on the smear, and bone marrow examination. Treating anemia without evaluating an abnormal CBC can delay leukemia diagnosis." },
+    { "slug": "myelodysplastic-syndrome-unspecified-d469", "name": "Myelodysplastic Syndrome (MDS)", "keyDifference": "MDS is a clonal marrow disorder with dysplastic cells and peripheral cytopenias but fewer than 20% blasts, which is the diagnostic threshold for AML. MDS carries a risk of transformation to AML (typically 20-40% over the disease course depending on IPSS-R risk group). Treatment of MDS differs substantially from acute leukemia." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "anemia", "name": "Anemia" },
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "lymphoma", "name": "Lymphoma", "relevance": "Both are hematologic malignancies managed by the same oncology subspecialty; they share similar treatment modalities including chemotherapy, immunotherapy, and stem cell transplantation." },
+    { "slug": "mesothelioma-general", "name": "Mesothelioma", "relevance": "Both demonstrate dose-response associations with occupational carcinogen exposure (radiation and benzene for leukemia; asbestos for mesothelioma)." },
+    { "slug": "myelodysplastic-syndrome-unspecified-d469", "name": "Myelodysplastic Syndrome (MDS)", "relevance": "MDS is a clonal precursor state that transforms to AML in 20-40% of patients; the WHO 2022 classification integrates MDS and AML within a unified myeloid spectrum." },
+    { "slug": "polycythemia-vera-d45", "name": "Polycythemia Vera", "relevance": "A myeloproliferative neoplasm that, like CML, arises from clonal HSC transformation; PV shares the JAK2 landscape with CML and occasionally transforms to AML." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is leukemia?",
+      "answer": "Leukemia is a cancer of white blood cells that begins in the bone marrow. Abnormal white cells multiply uncontrollably, crowding out healthy red cells, platelets, and normal white cells. There are four main types: AML, ALL, CML, and CLL, each with different causes, pace, and treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of leukemia?",
+      "answer": "Early signs include persistent fatigue, unexplained bruising or bleeding, frequent infections, night sweats, and swollen lymph nodes. These stem from reduced normal blood cell production. Many patients are diagnosed after a routine blood count shows abnormal white cell numbers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is leukemia curable?",
+      "answer": "Cure depends on the subtype. Acute promyelocytic leukemia is cured in over 95% of cases with ATRA-arsenic trioxide. Childhood ALL is cured in roughly 90%. CML on TKI therapy has a normal life expectancy. AML overall 5-year survival is about 30%, varying widely by risk group.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is leukemia diagnosed?",
+      "answer": "Diagnosis requires a complete blood count, peripheral blood smear, and bone marrow biopsy with flow cytometry, cytogenetics, and molecular testing. The bone marrow sample identifies the specific subtype and molecular mutations that guide treatment decisions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes leukemia?",
+      "answer": "Leukemia arises from acquired mutations in bone marrow stem cells. Known risk factors include prior radiation or chemotherapy, benzene exposure, Down syndrome, and HTLV-1 infection. Most cases occur without a clearly identifiable cause.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between acute and chronic leukemia?",
+      "answer": "Acute leukemia (AML, ALL) consists of immature blasts that grow rapidly and require immediate treatment; it is fatal within weeks without therapy. Chronic leukemia (CML, CLL) involves more mature cells that grow slowly; many patients need no treatment for months or years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What blood test shows leukemia?",
+      "answer": "A complete blood count (CBC) with differential is the first test. Findings may include elevated white cells, anemia, low platelets, or circulating blasts. An abnormal CBC prompts a peripheral smear and bone marrow biopsy for definitive diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can leukemia be treated without chemotherapy?",
+      "answer": "Some leukemias are managed without traditional chemotherapy. CML is treated with oral BCR-ABL inhibitors taken daily. Early-stage CLL often requires only monitoring. APL is cured with ATRA and arsenic trioxide, which are not classified as conventional cytotoxic chemotherapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for leukemia in adults?",
+      "answer": "Adult leukemia 5-year survival varies: CML exceeds 70%, CLL approximately 85%, ALL around 40-60% with modern regimens, and AML about 30% overall. Age and molecular risk profile are the strongest determinants of outcome within each subtype.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get leukemia?",
+      "answer": "Yes. ALL is the most common childhood cancer, representing 30% of all malignancies in children under 15. With modern pediatric protocols, cure rates reach 90%. AML in children is rarer but carries a worse prognosis than childhood ALL.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is leukemia hereditary?",
+      "answer": "Most leukemias are not inherited. However, CLL shows familial clustering, with first-degree relatives having 8 times the general population risk. Down syndrome, Fanconi anemia, and GATA2 deficiency are genetic conditions that substantially elevate leukemia risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is CML and how is it treated?",
+      "answer": "CML is driven by the BCR-ABL1 fusion gene from the Philadelphia chromosome. Oral tyrosine kinase inhibitors (imatinib, dasatinib, nilotinib, asciminib) suppress the oncogene. Most patients achieve deep molecular remission, and up to 50% who reach MR4.5 can safely stop treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a bone marrow transplant for leukemia?",
+      "answer": "Allogeneic stem cell transplantation replaces the patient's leukemia-prone marrow with donor cells that provide graft-versus-leukemia immunity. It is used for adverse-risk AML, relapsed ALL, and refractory CLL. Procedure-related mortality is 5-15% in experienced centers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does leukemia cause pain?",
+      "answer": "Bone pain and tenderness from marrow infiltration are common, especially in ALL and AML. Abdominal discomfort from splenomegaly occurs in CML and CLL. Headache and cranial nerve pain suggest CNS involvement. Most pain is manageable with standard analgesics during treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does leukemia treatment take?",
+      "answer": "AML induction lasts 4-6 weeks in hospital; consolidation adds 3-6 months outpatient. ALL treatment spans 2-3 years total including maintenance. CML and CLL require indefinite oral therapy. Allogeneic transplant patients need 12-24 months of close follow-up post-engraftment.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Leukemia (blood cancer)",
+  "regionalNames": [
+    { "name": "Blood cancer", "region": "Global lay usage", "language": "English" },
+    { "name": "रक्त कैंसर", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "leukemia",
+    "leukaemia",
+    "blood cancer",
+    "AML",
+    "ALL",
+    "CML",
+    "CLL",
+    "acute myeloid leukemia",
+    "acute lymphoblastic leukemia",
+    "chronic myeloid leukemia",
+    "chronic lymphocytic leukemia",
+    "bone marrow cancer",
+    "white blood cell cancer"
+  ],
+  "symptomKeywords": [
+    "easy bruising unexplained",
+    "abnormal blood count",
+    "night sweats fatigue",
+    "swollen lymph nodes no infection",
+    "bone pain fatigue fever",
+    "frequent infections unexplained"
+  ],
+
+  "metaTitle": "Leukemia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Leukemia: cancer of white blood cells in the bone marrow. Covers AML, ALL, CML, CLL symptoms, diagnosis, TKI therapy, and 5-year survival rates reviewed.",
+
+  "keywords": [
+    "leukemia",
+    "leukemia symptoms",
+    "leukemia treatment",
+    "leukemia types",
+    "AML treatment",
+    "CML imatinib",
+    "CLL BTK inhibitor",
+    "ALL cure rate",
+    "leukemia survival rate",
+    "bone marrow cancer",
+    "leukemia diagnosis blood test",
+    "stem cell transplant leukemia"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Döhner H, Wei AH, Appelbaum FR, et al. 2022. Diagnosis and management of AML in adults: 2022 ELN recommendations. Blood 140(12):1345-77.", "url": "https://pubmed.ncbi.nlm.nih.gov/35797463/", "accessedDate": "2026-05-14" },
+    { "title": "National Comprehensive Cancer Network. 2024. NCCN Clinical Practice Guidelines in Oncology: Chronic Myeloid Leukemia v2.2024.", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1427", "accessedDate": "2026-05-14" },
+    { "title": "American Cancer Society. 2024. Cancer Facts and Figures 2024. Atlanta: ACS.", "url": "https://www.cancer.org/research/cancer-facts-statistics/all-cancer-facts-figures/2024-cancer-facts-figures.html", "accessedDate": "2026-05-14" },
+    { "title": "Hochhaus A, Baccarani M, Silver RT, et al. 2020. European LeukemiaNet 2020 recommendations for CML. Leukemia 34(4):966-984.", "url": "https://pubmed.ncbi.nlm.nih.gov/32127639/", "accessedDate": "2026-05-14" },
+    { "title": "Hallek M, Al-Sawaf O. 2021. Chronic lymphocytic leukemia: 2022 update on diagnostic and therapeutic procedures. Am J Hematol 96(12):1679-705.", "url": "https://pubmed.ncbi.nlm.nih.gov/34625994/", "accessedDate": "2026-05-14" },
+    { "title": "Litzow MR, Ferrando AA. 2015. How I treat T-cell acute lymphoblastic leukemia in adults. Blood 126(7):833-41.", "url": "https://pubmed.ncbi.nlm.nih.gov/26080811/", "accessedDate": "2026-05-14" },
+    { "title": "Sanz MA, Fenaux P, Tallman MS, et al. 2019. Management of acute promyelocytic leukemia: updated recommendations from an expert panel of the European LeukemiaNet. Blood 133(15):1630-43.", "url": "https://pubmed.ncbi.nlm.nih.gov/30803990/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

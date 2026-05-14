@@ -1,0 +1,389 @@
+{
+  "_meta": {
+    "slug": "prostate-cancer",
+    "tier": 1,
+    "headTerm": "prostate cancer",
+    "longTailKeywords": [
+      "prostate cancer symptoms",
+      "prostate cancer treatment",
+      "PSA test prostate cancer",
+      "prostate cancer stages",
+      "prostate cancer survival rate",
+      "Gleason score prostate cancer",
+      "prostate cancer active surveillance",
+      "hormone therapy prostate cancer"
+    ],
+    "primarySpecialty": "Oncology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Prostate Cancer: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Oncology",
+
+  "heroOverview": "Prostate cancer is the second most common cancer in men worldwide, with approximately 1.47 million new cases diagnosed globally in 2022 according to GLOBOCAN. In the United States, the American Cancer Society estimated 288,300 new diagnoses in 2023, making it the most common non-skin cancer in US men. Prostate cancer develops from glandular cells of the prostate and is typically detected by an elevated prostate-specific antigen (PSA) test before symptoms appear. The disease spans an enormous spectrum: low-risk, organ-confined tumors that may not require treatment for years, to metastatic castration-resistant prostate cancer (mCRPC) requiring multimodal therapy. Overall 5-year survival across all stages exceeds 97%, but metastatic disease carries a median survival of 3-5 years despite recent therapeutic advances including enzalutamide, abiraterone, and PARP inhibitors.",
+
+  "keyStats": {
+    "prevalence": "288,300 new US cases and 34,700 deaths estimated in 2023 (American Cancer Society); 1.47 million new cases globally (GLOBOCAN 2022)",
+    "demographics": "Exclusively in men; incidence 2× higher in Black men than White men in the US (SEER data); rare below age 45",
+    "avgAge": "Median age at diagnosis 67; over 95% of cases diagnosed in men over 50",
+    "globalCases": "1.47 million new cases and 397,000 deaths globally in 2022 (GLOBOCAN)"
+  },
+
+  "definition": "Prostate cancer (ICD-10: C61) is a malignant neoplasm arising from prostatic glandular epithelium (acinar adenocarcinoma in over 95% of cases). The prostate is a walnut-sized exocrine gland located below the bladder and anterior to the rectum; it produces prostatic fluid that constitutes part of semen. Prostate cancer is graded using the Gleason grading system (now replaced by the 2014 ISUP Grade Groups): grade group 1 (Gleason 6) is the most well-differentiated and indolent; grade group 5 (Gleason 9-10) is the least differentiated and most aggressive. The vast majority of localized prostate cancers are grade group 1-2, and their natural history may never threaten life if untreated. Disease is staged using the AJCC TNM system (T1-T4 primary, N0-N1 nodal, M0-M1 metastatic). Staging is refined by PSA level (ng/mL), Gleason grade group, and imaging (multiparametric MRI for local staging, CT/bone scan or PSMA PET for metastatic staging). Risk stratification (very low, low, intermediate, high, very high) determines the treatment pathway. Metastatic castration-sensitive prostate cancer (mCSPC) responds to androgen deprivation therapy (ADT) combined with novel hormonal agents or docetaxel; castration-resistant disease (rising PSA despite castrate testosterone) requires further therapy escalation.",
+
+  "typesClassification": [
+    { "type": "Localized prostate cancer (T1-T2, N0M0)", "description": "Confined to the prostate gland. Low-risk disease (Grade Group 1, PSA <10) can be managed by active surveillance. Intermediate- and high-risk localized disease is treated with radical prostatectomy or definitive radiotherapy with equivalent cure rates for most patients." },
+    { "type": "Locally advanced prostate cancer (T3-T4, N0M0)", "description": "Tumor extends beyond the prostate capsule, into seminal vesicles, or invades adjacent structures (bladder neck, external sphincter, rectum). Requires radiotherapy plus long-term ADT (18-36 months) or multimodal therapy." },
+    { "type": "Metastatic castration-sensitive prostate cancer (mCSPC)", "description": "Metastatic disease at diagnosis or relapse; testosterone remains in the castrate range but disease is still androgen-sensitive. Treated with ADT plus enzalutamide, apalutamide, darolutamide, or docetaxel depending on volume and fitness." },
+    { "type": "Metastatic castration-resistant prostate cancer (mCRPC)", "description": "PSA progression or radiographic progression despite castrate testosterone (<50 ng/dL). Treated with androgen receptor pathway inhibitors (enzalutamide, abiraterone-prednisone), docetaxel, cabazitaxel, Ra-223 for bone metastases, lutetium PSMA-617, and PARP inhibitors for homologous recombination deficient (HRD) tumors." },
+    { "type": "High-risk and very-high-risk localized disease", "description": "Grade Group 4-5, PSA >20 ng/mL, or T3b-T4. High risk of micrometastatic disease; treated with combined radiotherapy plus long-term ADT (24-36 months) ± docetaxel or abiraterone per STAMPEDE and CHAARTED trial evidence." }
+  ],
+
+  "primarySymptoms": [
+    "Most prostate cancers are asymptomatic at diagnosis — they are detected by elevated PSA on routine screening before producing any urinary or systemic symptoms.",
+    "Urinary frequency, urgency, nocturia, weak stream, hesitancy, or incomplete bladder emptying (lower urinary tract symptoms, LUTS), which overlap extensively with benign prostatic hyperplasia (BPH) and are not specific to cancer.",
+    "Hematuria (blood in urine) or hematospermia (blood in semen), occurring in fewer than 10% of prostate cancer patients but warranting evaluation.",
+    "Erectile dysfunction: cancer invasion of the neurovascular bundles adjacent to the prostate, or treatment side-effects, impair erectile function in 20-60% of patients after treatment.",
+    "Perineal, pelvic, or rectal discomfort from locally advanced tumor invading the pelvic floor or rectum.",
+    "Bone pain, especially in the lower back, pelvis, hips, and ribs, from skeletal metastases — the most common site of prostate cancer spread (80% of metastatic cases have bone lesions).",
+    "Spinal cord compression: new back pain with progressive leg weakness, sensory disturbance, or bladder and bowel dysfunction — an oncological emergency in metastatic disease.",
+    "Unintentional weight loss, anorexia, and fatigue in advanced or castration-resistant disease, indicating high tumor burden.",
+    "Leg edema from lymphatic obstruction by pelvic lymph node metastases.",
+    "Obstructive nephropathy: bilateral flank pain, rising creatinine, and reduced urine output from bilateral ureteral obstruction by retroperitoneal nodal disease in advanced disease."
+  ],
+
+  "earlyWarningSigns": [
+    "PSA above age-adjusted reference ranges (>2.5 ng/mL for age 40-49; >3.5 ng/mL for age 50-59; >4.0 ng/mL for age 60-69) on routine blood testing",
+    "Abnormal digital rectal examination (DRE) finding: palpable hard nodule, induration, or asymmetry of the prostate gland",
+    "PSA velocity: a rise of more than 0.35 ng/mL per year prompts further evaluation regardless of absolute PSA level",
+    "Free-to-total PSA ratio below 15% in a man with elevated total PSA — increases probability of cancer vs benign disease",
+    "New-onset lower urinary tract symptoms in a man over 50 without a known BPH diagnosis — warrants PSA and DRE"
+  ],
+
+  "emergencySigns": [
+    "Spinal cord compression: sudden worsening back pain with bilateral leg weakness, numbness below the waist, or urinary and fecal incontinence — requires urgent MRI spine, dexamethasone, and radiotherapy or surgical decompression",
+    "Acute urinary retention: inability to void with painful bladder distension — urethral catheterization followed by evaluation for prostate obstruction",
+    "Bilateral hydronephrosis with acute kidney injury — urgent nephrostomy tubes or ureteric stenting required",
+    "Symptomatic hypercalcemia (PSA >50, bone metastases, confusion, constipation, polyuria) — IV fluids and bisphosphonate or denosumab urgently",
+    "Pathological fracture of a weight-bearing bone: acute pain, inability to weight-bear — orthopedic assessment and surgical fixation followed by bone-directed radiation"
+  ],
+
+  "causes": [
+    {
+      "cause": "Androgen receptor signaling and testosterone metabolism",
+      "description": "Prostate glandular cells are dependent on testosterone and its more potent metabolite dihydrotestosterone (DHT) for growth. Disruption of normal androgen signaling is both a causative factor in prostate carcinogenesis and the central therapeutic target. 5-alpha reductase inhibitors (finasteride, dutasteride) reduce prostate cancer incidence by approximately 25% but shift the grade distribution toward higher-grade tumors in the protected group."
+    },
+    {
+      "cause": "Age-related accumulation of somatic mutations",
+      "description": "Prostate cancer is predominantly a disease of older men. Somatic mutations in ETS family transcription factors (TMPRSS2-ERG fusion in ~50%), TP53, PTEN deletion, RB1 loss, and CDK12 mutations accumulate over decades and drive malignant transformation. Aging reduces DNA repair efficiency and immune surveillance."
+    },
+    {
+      "cause": "Germline predisposition genes (BRCA2, BRCA1, ATM, CHEK2, Lynch syndrome)",
+      "description": "Germline BRCA2 mutations confer a 3.4-8× elevated lifetime prostate cancer risk and substantially worse prognosis (higher Gleason grade, earlier lymph node metastasis). BRCA1 mutations confer approximately 2× risk. ATM and CHEK2 heterozygous carriers have 2-3× elevated risk. Lynch syndrome (MLH1, MSH2, MSH6, PMS2 mutations) elevates risk and is associated with mismatch-repair-deficient prostate cancer responsive to pembrolizumab."
+    },
+    {
+      "cause": "Racial and ancestral risk in men of African descent",
+      "description": "Black men in the US have approximately 2× the age-adjusted incidence and 2.4× the mortality of White men, independent of access to care. Proposed mechanisms include higher circulating androgen levels, higher 5-alpha reductase activity, polymorphisms in BRCA2 and EMSY, and systematic underrepresentation in screening and treatment trials."
+    },
+    {
+      "cause": "Dietary and environmental factors",
+      "description": "High-fat Western diets, red and processed meat consumption, and obesity (elevated adipose-derived estrogen and insulin) are associated with advanced and high-grade prostate cancer in prospective cohorts. Lycopene-rich tomato-based foods show inverse associations in observational studies but no benefit in randomized trials. Cadmium exposure and farming chemicals show modest associations in occupational studies."
+    },
+    {
+      "cause": "Inflammation and infection (chronic prostatitis)",
+      "description": "Chronic prostatic inflammation from infection, dietary antigens, or autoimmune processes creates an environment of oxidative stress and DNA damage that may initiate or promote prostate carcinogenesis. Proliferative inflammatory atrophy (PIA) in the prostate periphery is proposed as an intermediate lesion."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 50", "category": "non-modifiable", "description": "95% of prostate cancers are diagnosed in men over 50. Incidence rises steeply — approximately 5-fold from age 50-54 to age 70-74. The lifetime risk for a US man is approximately 1 in 8." },
+    { "factor": "African ancestry (Black race)", "category": "non-modifiable", "description": "Black men in the US have 2× the incidence and 2.4× the prostate cancer mortality of White men. The ACS recommends that Black men discuss PSA screening starting at age 40-45. Screening initiation at age 40 in Black men reduces stage at diagnosis." },
+    { "factor": "Family history of prostate cancer", "category": "genetic", "description": "A first-degree relative (father or brother) with prostate cancer doubles individual risk; two or more affected first-degree relatives raise risk 4-fold. Earlier age of onset in the affected relative confers higher heritable risk." },
+    { "factor": "Germline BRCA2 mutation", "category": "genetic", "description": "BRCA2 carriers have 3.4-8× elevated lifetime prostate cancer risk and are more likely to develop aggressive disease. NCCN recommends prostate cancer screening beginning at age 40 in BRCA2 carriers." },
+    { "factor": "Obesity", "category": "modifiable", "description": "Obesity (BMI ≥30) is associated with 20-30% higher risk of advanced and fatal prostate cancer in prospective cohort studies, possibly through insulin, adipokine, and sex hormone pathways. Lean men have lower PSA levels (due to hemodilution), complicating screening interpretation." },
+    { "factor": "High-fat and red meat diet", "category": "modifiable", "description": "High consumption of processed and red meat is associated with a 10-30% elevated risk of advanced prostate cancer in prospective studies including the NIH-AARP Diet and Health Study. Mechanisms include heterocyclic amines and heme iron-mediated oxidative stress." },
+    { "factor": "Geographic variation (Western diet, low UV exposure)", "category": "environmental", "description": "Prostate cancer incidence is highest in North America, Australia, and Northern Europe. Low vitamin D (linked to limited sunlight exposure) is hypothesized to contribute to geographic variation, though vitamin D supplementation trials have not shown clear benefit." }
+  ],
+
+  "affectedDemographics": [
+    "US Black men: age-adjusted incidence 181 per 100,000 vs 105 per 100,000 in White men; mortality 37 per 100,000 vs 15 per 100,000 (SEER 2022).",
+    "Japan and China have historically low prostate cancer incidence (3-7 per 100,000) but incidence is rising with adoption of Western diets and widespread PSA screening.",
+    "Caribbean men of African descent have the world's highest prostate cancer mortality rates in some national statistics.",
+    "BRCA2 germline mutation carriers: lifetime prostate cancer risk of 20-40%, with a high proportion of grade group 4-5 tumors."
+  ],
+
+  "diagnosisOverview": "PSA screening is the entry point for most prostate cancer diagnoses; ACS recommends shared decision-making about PSA testing starting at age 50 for average-risk men (earlier for Black men and those with BRCA2 mutations). An elevated or rising PSA prompts multiparametric MRI (mpMRI) of the prostate, which stratifies lesions by PIRADS score (1-5); PIRADS 4-5 lesions are highly suspicious and warrant biopsy. Transrectal ultrasound (TRUS) or, preferably, MRI-targeted transperineal biopsy is performed; MRI-targeted plus systematic biopsy detects 5-20% more clinically significant cancers than systematic biopsy alone (PRECISION and MRI-FIRST trials). The biopsy report includes Gleason grade group, number and percentage of cores positive, and maximum core length involvement. Germline genetic testing for BRCA2, BRCA1, ATM, CHEK2, and Lynch syndrome genes is recommended for all men with metastatic prostate cancer and for those with high-risk or very-high-risk localized disease. Molecular tumor testing for homologous recombination deficiency (HRD) status and microsatellite instability guides use of PARP inhibitors and pembrolizumab respectively in mCRPC. PSMA PET-CT (68Ga-PSMA or 18F-DCFPyL) is now the preferred staging modality for intermediate-to-high-risk localized disease and for biochemical recurrence, detecting metastases missed by conventional CT and bone scan with higher sensitivity.",
+
+  "diagnosticTests": [
+    { "test": "PSA (prostate-specific antigen) blood test", "purpose": "Primary screening test; elevated or rising PSA triggers further evaluation; also used to monitor treatment response and detect recurrence", "whatToExpect": "Standard blood draw from a vein; results within 24 hours. No sexual activity or vigorous cycling for 48 hours before the test, as both transiently elevate PSA. PSA is prostatic-specific but not cancer-specific — BPH, prostatitis, and procedures also elevate PSA." },
+    { "test": "Multiparametric MRI (mpMRI) of the prostate", "purpose": "Characterizes prostate lesions by PIRADS scoring (1-5); guides targeted biopsy; assesses extracapsular extension, seminal vesicle invasion, and neurovascular bundle status", "whatToExpect": "30-45 minutes lying in MRI scanner; no contrast needed for most mpMRI (dynamic contrast enhancement is optional). No preparation beyond emptying the bladder. Results reported within 24-48 hours." },
+    { "test": "MRI-targeted transperineal prostate biopsy", "purpose": "Tissue diagnosis of PIRADS 4-5 lesions; transperineal approach reduces sepsis risk compared with transrectal; MRI-TRUS fusion guidance increases detection accuracy", "whatToExpect": "Outpatient or day-case procedure under local anesthesia or light sedation. Mild perineal discomfort for 24-48 hours. Antibiotic prophylaxis given. Pathology results in 5-10 business days." },
+    { "test": "PSMA PET-CT (68Ga-PSMA-11 or 18F-DCFPyL)", "purpose": "Highly sensitive whole-body staging for intermediate-to-high-risk localized disease, biochemical recurrence, and metastatic staging; superior to conventional CT and bone scan", "whatToExpect": "IV injection of PSMA radioligand; 60-minute uptake period; 30-minute scan. Mild radioactivity for 24 hours. Results within 48 hours." },
+    { "test": "Digital rectal examination (DRE)", "purpose": "Palpates the posterior prostate for hard nodules, induration, or asymmetry; abnormal DRE warrants biopsy regardless of PSA level", "whatToExpect": "Physical examination performed by a clinician; 30-60 seconds of mild discomfort. Performed in combination with PSA testing at initial evaluation." },
+    { "test": "Germline genetic panel (BRCA1/2, ATM, CHEK2, Lynch syndrome genes)", "purpose": "Identifies heritable risk variants that influence treatment selection (PARP inhibitors in HRD-positive mCRPC) and family cancer risk assessment", "whatToExpect": "Blood or saliva sample; results in 3-4 weeks. Required for all men with metastatic prostate cancer per NCCN 2024." }
+  ],
+
+  "treatmentOverview": "Treatment is risk-stratified using PSA, grade group, clinical T stage, and imaging findings. Very-low- and low-risk localized disease (Grade Group 1, PSA <10, T1-T2a): active surveillance (AS) per NCCN guidelines involves PSA every 6-12 months, DRE annually, repeat MRI at 12 months, and confirmatory biopsy at 12-18 months; curative therapy is deferred until grade reclassification occurs. Intermediate-risk disease: radical prostatectomy (RP) or external beam radiotherapy (EBRT) 76-80 Gy with 4-6 months ADT for unfavorable intermediate risk. High-risk and very-high-risk disease: EBRT 76-80 Gy plus 24-36 months ADT; abiraterone added to EBRT+ADT improves progression-free survival in high-risk disease (STAMPEDE). Locally advanced (N1): EBRT plus long-term ADT with abiraterone. Metastatic castration-sensitive prostate cancer (mCSPC): ADT plus enzalutamide (ARCHES trial: rPFS HR 0.39), apalutamide (TITAN: OS HR 0.65), darolutamide + docetaxel (ARASENS: OS HR 0.68), or abiraterone-prednisone (LATITUDE). Docetaxel 75 mg/m² × 6 cycles plus ADT is the alternative for high-volume mCSPC (CHAARTED). Metastatic castration-resistant prostate cancer (mCRPC) pre-docetaxel: enzalutamide 160 mg daily or abiraterone 1,000 mg daily plus prednisone 10 mg daily. Post-docetaxel: cabazitaxel 25 mg/m², Ra-223 (for bone-only metastases, ALSYMPCA trial), lutetium PSMA-617 (VISION trial: OS 15.3 vs 11.3 months), olaparib or rucaparib for HRD (BRCA1/2, ATM)-positive mCRPC, and pembrolizumab for mismatch-repair-deficient mCRPC.",
+
+  "medicalTreatments": [
+    { "name": "Androgen deprivation therapy (ADT) — LHRH agonist/antagonist ± anti-androgen", "description": "Medical castration using LHRH agonists (leuprolide, goserelin) or antagonists (degarelix, relugolix) suppresses testosterone to <50 ng/dL. Added to radiotherapy for intermediate-high risk, and combined with novel hormonal agents for metastatic disease. Relugolix achieves faster testosterone suppression and lower cardiovascular risk vs leuprolide.", "effectiveness": "Testosterone suppression to castrate levels in >95% within 4 weeks; PSA response >90% in castration-sensitive disease" },
+    { "name": "Enzalutamide (160 mg once daily)", "description": "Second-generation androgen receptor pathway inhibitor (ARPI); blocks androgen receptor nuclear translocation and DNA binding. First-line for mCRPC and mCSPC combined with ADT.", "effectiveness": "Median rPFS 33.3 months in mCSPC combined with ADT (ARCHES); OS benefit in mCRPC pre-chemotherapy: median OS 32.4 months (PREVAIL)" },
+    { "name": "Abiraterone acetate (1,000 mg daily with 5 mg prednisone twice daily)", "description": "CYP17A1 inhibitor that blocks androgen biosynthesis in adrenal glands, testes, and tumor itself; used with prednisone to prevent mineralocorticoid excess. Approved for mCRPC and mCSPC. Fine-particle formulation (Yonsa 500 mg with food) achieves equivalent exposure.", "effectiveness": "OS benefit in high-risk mCSPC: HR 0.62 (LATITUDE trial); in mCRPC: median OS 14.8 months (COU-AA-302)" },
+    { "name": "Lutetium-177 PSMA-617 (Lu-PSMA)", "description": "Radiolabeled small molecule that binds prostate-specific membrane antigen (PSMA) expressed on prostate cancer cells; delivers targeted beta radiation. Requires PSMA-positive PET scan before treatment. FDA approved for PSMA-positive mCRPC.", "effectiveness": "VISION trial: median OS 15.3 vs 11.3 months; PSA response 46% vs 7%; radiographic PFS 8.7 vs 3.4 months" },
+    { "name": "Olaparib (300 mg twice daily) or rucaparib (600 mg twice daily) for HRD-positive mCRPC", "description": "PARP inhibitors for BRCA1/2, ATM, or other homologous recombination deficiency (HRD)-positive mCRPC. Require germline or somatic HRD testing before use. Olaparib is often combined with abiraterone for BRCA-mutated mCRPC.", "effectiveness": "PROfound trial: median rPFS 7.4 vs 3.6 months for olaparib vs enzalutamide/abiraterone in BRCA1/2-mutant mCRPC; OS HR 0.69" },
+    { "name": "Docetaxel (75 mg/m² IV every 3 weeks, 6 cycles) plus ADT", "description": "First-line chemotherapy for high-volume or high-risk mCSPC and mCRPC. CHAARTED and STAMPEDE trials demonstrated OS benefit when added to ADT at first diagnosis of mCSPC.", "effectiveness": "CHAARTED: median OS 57.6 months with docetaxel-ADT vs 47.2 months with ADT alone in high-volume mCSPC; 13.6 months OS benefit in high-volume subgroup" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Radical prostatectomy (RP) — robotic-assisted or open", "description": "Removal of the entire prostate gland, seminal vesicles, and pelvic lymph nodes. Robot-assisted laparoscopic RP (RALP) is the dominant technique in high-volume centers; comparable oncological outcomes to open RP with lower blood loss and shorter catheter time. Nerve-sparing technique preserves erectile function in 60-70% of potent men at 12-18 months.", "successRate": "Biochemical recurrence-free survival at 10 years: 70-80% for low-risk, 50-65% for intermediate-risk, 30-50% for high-risk localized disease; 30-day mortality under 0.5% at high-volume centers" },
+    { "name": "Pelvic lymph node dissection (PLND) with RP", "description": "Extended PLND during RP in intermediate-high risk disease provides pathological staging and removes micrometastatic nodal disease. Limited PLND misses 50% of positive nodes compared with extended dissection. Complications include lymphocele and lymphedema.", "successRate": "Pathological N1 upstaging in 5-25% depending on risk group; survival benefit of PLND vs no dissection remains debated but staging data guides adjuvant therapy decisions" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "External beam radiotherapy (EBRT) with IMRT/VMAT plus HDR brachytherapy boost", "description": "Combination of external beam radiation (45-50 Gy) plus high-dose-rate brachytherapy (HDR-BT) boost delivers focal dose escalation to the prostate. Preferred for high-risk localized disease; comparable cure rates to RP in randomized trials." },
+    { "name": "Focal therapy (HIFU, cryotherapy, photodynamic therapy)", "description": "Targets only the cancer-bearing prostate zone, aiming to preserve erectile and urinary function. Best evidence for hemigland HIFU; results from HEAT and TARGET trials pending. Recommended only in select low-to-intermediate-risk patients at specialist centres." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "radiation-therapy",
+    "chemotherapy",
+    "hormone-therapy"
+  ],
+
+  "whySeeSpecialist": "Prostate cancer management requires a urologist for biopsy and surgical options, a radiation oncologist for radiotherapy planning, and a medical oncologist for metastatic disease. Treatment decisions for intermediate-risk disease — active surveillance vs. radical treatment vs. focal therapy — require shared decision-making and multidisciplinary input.",
+  "doctorSelectionGuide": "For surgical treatment, seek a urologist performing more than 100 radical prostatectomies annually at a high-volume center — operative volume strongly predicts better functional and oncological outcomes. For metastatic disease, ensure access to PSMA PET scanning and germline genetic testing, which guide PARP inhibitor and Lu-PSMA-617 eligibility.",
+
+  "hospitalCriteria": [
+    "High-volume robotic surgery program (RALP >100 per year) for radical prostatectomy",
+    "Radiation oncology with IMRT, SBRT, and brachytherapy capability",
+    "PSMA PET-CT availability for staging and biochemical recurrence",
+    "Germline and somatic HRD testing laboratory",
+    "Multidisciplinary prostate cancer tumor board"
+  ],
+  "keyFacilities": [
+    "NCI-designated comprehensive cancer centers",
+    "High-volume urological oncology centers",
+    "Centers certified to administer Lu-PSMA-617 (specialized training required)",
+    "Academic medical centers with access to ARCHES, TITAN, VISION trial-level expertise"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Undergo PSA screening discussion at age 50 for average-risk men; at 40-45 for Black men and those with BRCA2 mutations or a first-degree relative with prostate cancer.",
+    "Maintain a healthy body weight: a BMI below 25 reduces risk of advanced and fatal prostate cancer; avoid significant post-diagnosis weight gain.",
+    "Reduce red and processed meat consumption; dietary patterns rich in fish, vegetables, legumes, and tomato-based foods (lycopene) may lower advanced prostate cancer risk in observational studies.",
+    "Seek germline genetic testing if you have a family history of prostate, breast, ovarian, or colorectal cancer — BRCA2 or Lynch syndrome carriers benefit from earlier and more intensive screening.",
+    "Treat chronic prostatitis and sexually transmitted infections promptly to reduce ongoing prostatic inflammation."
+  ],
+
+  "lifestyleModifications": [
+    "Men on active surveillance must adhere to PSA and biopsy schedules; do not miss confirmatory biopsies, as reclassification drives the decision to treat.",
+    "Manage ADT side-effects proactively: exercise at least 150 minutes weekly to counter sarcopenia and bone loss; discuss bone mineral density testing and bisphosphonate or denosumab therapy with the oncologist.",
+    "Use phosphodiesterase-5 inhibitors (sildenafil, tadalafil) as part of a penile rehabilitation program starting at catheter removal after RP; early use preserves erectile function recovery.",
+    "Pelvic floor exercises (Kegel exercises) started before radical prostatectomy reduce the duration of post-operative urinary incontinence from months to weeks.",
+    "Monitor cardiovascular risk carefully on ADT: long-term ADT increases risk of metabolic syndrome, dyslipidemia, and cardiac events; statins and lifestyle modification are appropriate."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Tomato-based foods (tomato paste, cooked tomatoes) rich in lycopene — associated with 10-25% reduced advanced prostate cancer risk in meta-analyses",
+      "Fish high in omega-3 fatty acids (salmon, mackerel, sardines) twice weekly — associated with lower prostate cancer mortality in prospective data",
+      "Cruciferous vegetables (broccoli, cauliflower) and soy isoflavones — epidemiologically associated with lower prostate cancer risk in Asian populations",
+      "Calcium intake within recommended daily limits (1,000-1,200 mg/day); avoid very high calcium intakes above 2,000 mg/day, which may increase prostate cancer risk in some cohorts"
+    ],
+    "avoid": [
+      "Excessive red and processed meat (>500 g/week) — associated with advanced prostate cancer in NIH-AARP and WCRF/AICR evidence reviews",
+      "Very high calcium supplements (>2,000 mg/day) — may marginally increase prostate cancer risk",
+      "High-fat dairy in large quantities — associated with aggressive prostate cancer in some prospective studies",
+      "Obesity-promoting diets: excess body fat increases androgen availability and insulin resistance, which promote tumor growth"
+    ]
+  },
+  "exerciseGuidelines": "150 minutes per week of moderate aerobic exercise (brisk walking, cycling, swimming) reduces prostate cancer mortality by approximately 30% in prospective cohorts. Resistance training 2-3 days per week preserves muscle mass and bone density during ADT, reducing fracture risk. Exercise programs during and after treatment reduce fatigue, depression, and metabolic syndrome associated with ADT.",
+
+  "dailyManagement": [
+    "For active surveillance patients: complete PSA tests and DRE at every scheduled appointment; do not defer repeat biopsies.",
+    "Take oral agents (enzalutamide, abiraterone, apalutamide) at the prescribed time; abiraterone must be taken fasting 1 hour before or 2 hours after a meal.",
+    "Monitor for ADT side-effects: hot flashes, fatigue, mood changes, weight gain, and bone density loss — discuss management strategies at each oncology visit.",
+    "Report new back pain, particularly with any neurological symptoms, to the oncology team immediately — spinal cord compression from metastasis requires emergency treatment.",
+    "Annual DEXA scan for bone density in men receiving ADT for more than 12 months; use vitamin D and calcium supplementation and bisphosphonate or denosumab if osteoporosis is detected."
+  ],
+
+  "prognosis": "Prostate cancer overall 5-year relative survival in the US exceeds 97% (SEER data), reflecting the high proportion of localized diagnoses. Localized disease: 10-year disease-specific survival 99% for low-risk (Grade Group 1), 95% for favorable intermediate-risk, and 80-90% for high-risk after curative treatment. Regional disease (lymph node positive): 5-year OS 78%. Metastatic disease at presentation: 5-year OS 31% without novel hormonal therapy, improving to 50-60% in recent series incorporating enzalutamide or abiraterone into first-line treatment. Castration-resistant prostate cancer is not curable but is increasingly controllable: median OS after mCRPC development now approximately 3-5 years in sequential therapy series. BRCA2-mutant mCRPC responds to olaparib with rPFS benefit but median OS remains worse than BRCA wild-type due to aggressive biology. Lu-PSMA-617 provides a further 4-month OS benefit in heavily pre-treated mCRPC.",
+
+  "recoveryTimeline": "Radical prostatectomy: catheter removed 7-14 days post-operatively; continence recovery 3-12 months; erectile function recovery (nerve-sparing) 12-24 months. Radiotherapy (EBRT): outpatient 8-9 weeks; acute urinary symptoms resolve 4-8 weeks after completion. ADT for mCSPC: ongoing indefinitely in most patients; testosterone recovery 3-12 months after stopping if ADT is finite.",
+
+  "complications": [
+    "Urinary incontinence after radical prostatectomy: occurs in 5-20% of patients at 12 months, most requiring pads; severe incontinence requiring artificial urinary sphincter in 1-5%.",
+    "Erectile dysfunction: occurs in 30-70% of men after RP (depending on nerve-sparing status) and 30-50% after radiotherapy; treated with phosphodiesterase-5 inhibitors, intracavernosal injection, or vacuum erection device.",
+    "Rectal toxicity from radiotherapy: proctitis, rectal bleeding, and fistula in 2-5% after EBRT; reduced with IMRT and rectal spacer placement.",
+    "Osteoporosis and fragility fractures from ADT: bone mineral density decreases 2-5% per year on ADT; prevented by calcium, vitamin D, and bisphosphonate or denosumab therapy.",
+    "Metabolic syndrome and cardiovascular disease from ADT: increased risk of dyslipidemia, insulin resistance, weight gain, hypertension, and atrial fibrillation; requires proactive cardiovascular risk factor management.",
+    "Biochemical recurrence after curative treatment: PSA rise after RP (above 0.2 ng/mL) or after radiotherapy (above nadir + 2.0 ng/mL); requires PSMA PET staging and salvage radiotherapy or hormonal therapy."
+  ],
+
+  "supportResources": [
+    { "name": "Prostate Cancer Foundation (PCF)", "url": "https://www.pcf.org/", "description": "The world's largest private funder of prostate cancer research; provides patient guides, clinical trial matching, and a nurse navigation hotline." },
+    { "name": "ZERO — The End of Prostate Cancer", "url": "https://zerocancer.org/", "description": "US patient advocacy organization offering free PSA screenings, patient support programs, and clinical trial education." },
+    { "name": "American Cancer Society — Prostate Cancer", "url": "https://www.cancer.org/cancer/types/prostate-cancer.html", "description": "Comprehensive staging guides, treatment options, and survivorship resources including sexual health and urinary function recovery." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "bph", "name": "Benign Prostatic Hyperplasia (BPH)", "keyDifference": "BPH causes lower urinary tract symptoms (frequency, weak stream, hesitancy) from non-cancerous prostate enlargement and does not metastasize. Prostate cancer in its early stages is usually asymptomatic and detected by PSA; BPH elevates PSA but not to the same degree as cancer. Biopsy of PIRADS 4-5 mpMRI lesions is required to distinguish them definitively." },
+    { "slug": "lymphoma", "name": "Lymphoma", "keyDifference": "Lymphoma can present with pelvic or retroperitoneal lymphadenopathy that radiologically resembles prostate cancer nodal metastases. Lymphoma is a lymphocyte-derived malignancy with different staging, treatment, and prognosis. PSA levels are low or normal in lymphoma; biopsy is required for histological diagnosis." },
+    { "slug": "renal-cell-carcinoma", "name": "Renal Cell Carcinoma", "keyDifference": "Both prostate cancer and renal cell carcinoma can present with retroperitoneal lymph node enlargement. PSA distinguishes them: PSA is elevated in prostate cancer and normal in RCC. Imaging characteristics on mpMRI or CT differ; biopsy provides definitive histology when clinical uncertainty remains." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "bph", "name": "Benign Prostatic Hyperplasia (BPH)" },
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "bph", "name": "Benign Prostatic Hyperplasia (BPH)", "relevance": "BPH and prostate cancer co-exist in the same gland; both cause urinary symptoms and PSA elevation; differentiated by mpMRI and biopsy." },
+    { "slug": "breast-cancer", "name": "Breast Cancer", "relevance": "BRCA2 mutations predispose to both prostate and breast cancer; family history of breast cancer in female relatives increases a man's prostate cancer risk." },
+    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "relevance": "Lynch syndrome gene mutations predispose to both colorectal and mismatch-repair-deficient prostate cancer; both respond to pembrolizumab." },
+    { "slug": "anemia", "name": "Anemia", "relevance": "Bone marrow infiltration by metastatic prostate cancer and ADT-related bone marrow suppression both contribute to anemia in advanced disease." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is prostate cancer?",
+      "answer": "Prostate cancer is a malignant tumor arising from the prostate gland, a walnut-sized organ below the bladder in men. It develops from glandular cells and ranges from slow-growing tumors that may never require treatment to aggressive metastatic cancers. It is the most common cancer in US men.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of prostate cancer?",
+      "answer": "Most early prostate cancers cause no symptoms; they are detected by elevated PSA on routine blood tests. Advanced disease may cause urinary frequency, weak stream, blood in urine, bone pain in the back or hips, and fatigue. Symptoms alone are unreliable for early detection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a PSA test?",
+      "answer": "PSA (prostate-specific antigen) is a protein produced by the prostate. An elevated or rising PSA prompts further evaluation including MRI and biopsy. PSA above 4 ng/mL is the conventional threshold, though this varies by age and risk. PSA is not cancer-specific; BPH and prostatitis also raise PSA.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is prostate cancer curable?",
+      "answer": "Yes, when detected early. Localized prostate cancer treated with surgery or radiotherapy achieves 10-year disease-specific survival of 95-99% for low-risk disease. High-risk localized disease has 80-90% 10-year survival. Metastatic disease is not curable but is manageable for 3-5 years with current therapies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Gleason score for prostate cancer?",
+      "answer": "The Gleason score (now expressed as Grade Groups 1-5) grades how aggressive the cancer cells look under a microscope. Grade Group 1 (Gleason 6) is the least aggressive; Grade Group 5 (Gleason 9-10) is the most aggressive. Grade Group 1 cancers often qualify for active surveillance rather than immediate treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is active surveillance for prostate cancer?",
+      "answer": "Active surveillance is close monitoring of low-risk prostate cancer with PSA testing every 6-12 months, annual DRE, and repeat MRI and biopsy every 1-3 years. Treatment is deferred until cancer progresses to intermediate or higher risk. About 50-60% of Grade Group 1 patients avoid treatment for 10+ years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is prostate cancer diagnosed?",
+      "answer": "Diagnosis begins with PSA blood test and digital rectal examination. Elevated PSA triggers multiparametric MRI of the prostate. PIRADS 4-5 lesions are sampled by MRI-targeted biopsy. Histology, Gleason grading, and molecular testing guide treatment. PSMA PET-CT stages metastatic disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hormone therapy for prostate cancer?",
+      "answer": "Hormone therapy (androgen deprivation therapy, ADT) lowers testosterone to castrate levels using LHRH agonists or antagonists (leuprolide, degarelix, relugolix). Combined with novel antiandrogens (enzalutamide, abiraterone, apalutamide) in metastatic disease. ADT is used alongside radiotherapy for high-risk localized disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for prostate cancer?",
+      "answer": "The overall US 5-year relative survival rate for prostate cancer exceeds 97%, reflecting that most cases are diagnosed at a localized stage. Localized disease 5-year survival is near 100%. Metastatic disease 5-year survival is approximately 31%, improving with enzalutamide and abiraterone added to ADT.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can young men get prostate cancer?",
+      "answer": "Prostate cancer is rare below age 40, with fewer than 0.1% of cases in this group. However, men with BRCA2 germline mutations are recommended screening from age 40. Black men are advised to discuss PSA screening starting at 40-45. Most cases occur in men over 60.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is prostate cancer hereditary?",
+      "answer": "Yes. A first-degree relative with prostate cancer doubles individual risk; two affected relatives raise risk 4-fold. Germline BRCA2 mutations increase risk 3-8× and predict aggressive disease. Lynch syndrome also elevates prostate cancer risk and identifies men eligible for pembrolizumab if mCRPC develops.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is PSMA therapy for prostate cancer?",
+      "answer": "PSMA therapy (lutetium-177 PSMA-617) delivers targeted radiation to prostate cancer cells expressing prostate-specific membrane antigen. Approved for PSMA-positive metastatic castration-resistant prostate cancer (mCRPC). The VISION trial showed a 4-month overall survival benefit over standard care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the side effects of prostate cancer treatment?",
+      "answer": "Surgery causes urinary incontinence (5-20%) and erectile dysfunction (30-70%). Radiotherapy causes proctitis and urinary irritation. Hormone therapy causes hot flashes, fatigue, weight gain, bone loss, and cardiovascular effects. Side effects depend on treatment type and are manageable with targeted interventions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does prostate cancer cause pain?",
+      "answer": "Localized prostate cancer rarely causes pain. Bone metastases cause back, hip, and rib pain in approximately 40-50% of metastatic cases. Spinal cord compression from vertebral metastases causes acute severe back pain with neurological symptoms and is a medical emergency.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should men get screened for prostate cancer?",
+      "answer": "For average-risk men aged 50-74, PSA testing every 1-2 years is recommended after shared decision-making. Black men and those with BRCA2 mutations or a family history should discuss starting at 40-45. Men over 75 with limited life expectancy derive little benefit from continued screening.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Prostate cancer",
+  "regionalNames": [
+    { "name": "प्रोस्टेट कैंसर", "region": "India", "language": "Hindi" },
+    { "name": "Cancer de la prostate", "region": "France", "language": "French" }
+  ],
+  "searchTags": [
+    "prostate cancer",
+    "prostate cancer symptoms",
+    "PSA test",
+    "Gleason score",
+    "prostate cancer treatment",
+    "radical prostatectomy",
+    "active surveillance prostate",
+    "PSMA PET scan",
+    "enzalutamide abiraterone",
+    "hormone therapy prostate",
+    "prostate cancer screening",
+    "BRCA2 prostate cancer"
+  ],
+  "symptomKeywords": [
+    "elevated PSA blood test",
+    "weak urine stream older man",
+    "back pain bone prostate",
+    "blood in urine male",
+    "urinary frequency night time",
+    "incontinence after prostate surgery"
+  ],
+
+  "metaTitle": "Prostate Cancer: Symptoms & Treatment | aihealz",
+  "metaDescription": "Prostate cancer: the most common US men's cancer, 288,000 cases in 2023. PSA testing, Gleason grading, surgery, hormone therapy, and survival rates reviewed.",
+
+  "keywords": [
+    "prostate cancer",
+    "prostate cancer symptoms",
+    "PSA test prostate cancer",
+    "prostate cancer treatment",
+    "Gleason score prostate cancer",
+    "radical prostatectomy",
+    "active surveillance prostate",
+    "hormone therapy ADT prostate",
+    "enzalutamide abiraterone mCRPC",
+    "prostate cancer survival rate",
+    "PSMA PET staging",
+    "BRCA2 prostate cancer risk"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "National Comprehensive Cancer Network. 2024. NCCN Clinical Practice Guidelines in Oncology: Prostate Cancer v2.2024.", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459", "accessedDate": "2026-05-14" },
+    { "title": "Hussain M, Mateo J, Fizazi K, et al. (PROfound investigators). 2020. Olaparib for metastatic castration-resistant prostate cancer. N Engl J Med 383(24):2345-57.", "url": "https://pubmed.ncbi.nlm.nih.gov/32955174/", "accessedDate": "2026-05-14" },
+    { "title": "Sartor O, de Bono J, Chi KN, et al. (VISION investigators). 2021. Lutetium-177–PSMA-617 for metastatic castration-resistant prostate cancer. N Engl J Med 385(12):1091-1103.", "url": "https://pubmed.ncbi.nlm.nih.gov/34161051/", "accessedDate": "2026-05-14" },
+    { "title": "Fizazi K, Tran N, Fein L, et al. (LATITUDE investigators). 2017. Abiraterone plus prednisone in metastatic, castration-sensitive prostate cancer. N Engl J Med 377(4):352-360.", "url": "https://pubmed.ncbi.nlm.nih.gov/28578607/", "accessedDate": "2026-05-14" },
+    { "title": "American Cancer Society. 2024. Cancer Facts and Figures 2024. Atlanta: ACS.", "url": "https://www.cancer.org/research/cancer-facts-statistics/all-cancer-facts-figures/2024-cancer-facts-figures.html", "accessedDate": "2026-05-14" },
+    { "title": "Mottet N, van den Bergh RCN, Briers E, et al. 2021. EAU-EANM-ESTRO-ESUR-SIOG Guidelines on Prostate Cancer—2020 Update. Part 1: Screening, Diagnosis, and Local Treatment. Eur Urol 79(2):243-262.", "url": "https://pubmed.ncbi.nlm.nih.gov/32736/", "accessedDate": "2026-05-14" },
+    { "title": "Bray F, Laversanne M, Sung H, et al. 2024. Global cancer statistics 2022: GLOBOCAN. CA Cancer J Clin 74(3):229-263.", "url": "https://pubmed.ncbi.nlm.nih.gov/38572751/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

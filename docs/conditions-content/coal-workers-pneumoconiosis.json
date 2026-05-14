@@ -1,0 +1,366 @@
+{
+  "_meta": {
+    "slug": "coal-workers-pneumoconiosis",
+    "tier": 1,
+    "headTerm": "coal workers pneumoconiosis",
+    "primarySpecialty": "Occupational Medicine",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Coal Workers' Pneumoconiosis: Symptoms, Causes & Treatment",
+  "specialistType": "Occupational Medicine",
+
+  "heroOverview": "Coal workers' pneumoconiosis (CWP), commonly called black lung disease, is a progressive and irreversible occupational lung disease caused by the inhalation and accumulation of coal mine dust over years of underground or surface mining work. The U.S. National Institute for Occupational Safety and Health (NIOSH) reported a resurgence of advanced CWP in Appalachian miners from the mid-2000s onward, with prevalence among miners with 25 or more years of experience reaching 10% in some regional surveys — the highest rates since the 1970s. CWP begins as simple pneumoconiosis with small nodular opacities on chest radiograph but progresses in up to 30% of heavily exposed workers to progressive massive fibrosis (PMF), causing severe restrictive lung disease and respiratory failure. No drug reverses established fibrosis; management focuses on surveillance, preventing progression, and supportive care.",
+
+  "keyStats": {
+    "prevalence": "Approximately 10% of miners with 25+ years of experience in recent Appalachian U.S. surveys (NIOSH 2018); over 70,000 miners globally estimated to have CWP",
+    "demographics": "Almost exclusively in current or former underground coal miners; predominantly men aged 45 and older; highest rates in central Appalachia (Virginia, West Virginia, Kentucky)",
+    "avgAge": "Simple CWP typically detectable after 10-20 years of exposure; PMF usually apparent after 20-30 years; clinical disability commonly presents in the 50s-70s",
+    "globalCases": "Coal mining employs roughly 5 million workers worldwide (ILO); CWP is among the most prevalent occupational lung diseases globally, heavily concentrated in China, India, and the United States"
+  },
+
+  "definition": "Coal workers' pneumoconiosis (ICD-10: J60) is a fibrotic interstitial lung disease resulting from the prolonged inhalation of respirable coal mine dust, defined as particles smaller than 10 µm that deposit in the alveoli and terminal bronchioles. Inhaled coal particles that cannot be cleared by the mucociliary escalator are phagocytosed by alveolar macrophages; overwhelmed macrophages release pro-inflammatory cytokines (IL-1β, TNF-α, TGF-β) that drive fibroblast activation and progressive collagen deposition. The resulting fibrotic nodules characteristically begin in the upper lung zones, where respiratory bronchioles receive the greatest dustloading. Simple CWP is defined by nodular opacities less than 10 mm on chest radiography (ILO profusion 1/0 or above); complicated CWP or progressive massive fibrosis (PMF) is defined by lesions 10 mm or larger, coalescing to form bilateral upper-lobe masses that progressively destroy lung parenchyma. PMF behaves as an independent inflammatory process that can progress even after cessation of dust exposure. CWP is managed by occupational medicine, pulmonology, and respiratory therapy specialists; it is permanently and totally compensable under the U.S. Black Lung Benefits Act.",
+
+  "typesClassification": [
+    { "type": "Simple CWP (ILO profusion 1/0 to 3/+)", "description": "Small rounded opacities less than 10 mm on chest X-ray, predominantly in the upper lobes. Lung function may be near-normal in early stages. Many workers remain asymptomatic for years. Progression to PMF occurs in 5-30% depending on dust burden and crystalline silica co-exposure." },
+    { "type": "Complicated CWP — Progressive Massive Fibrosis (PMF)", "description": "Opacities 10 mm or larger, bilaterally symmetrical, with progressive coalescence. Causes severe restrictive and obstructive ventilatory deficits, right heart failure (cor pulmonale), and respiratory failure. PMF may advance despite complete dust cessation." },
+    { "type": "Accelerated CWP", "description": "Rapid-onset CWP developing within 5-10 years of first exposure, typically in workers exposed to unusually high silica-containing dust (from cutting through silica-bearing sandstone or rock as mining advances into new seams). Associated with especially high risk of PMF." },
+    { "type": "Caplan syndrome", "description": "Rare combination of CWP nodules and rheumatoid arthritis, producing large, well-defined peripheral lung nodules on chest X-ray. Named after the Welsh physician who described the association in coal miners with seropositivity." }
+  ],
+
+  "primarySymptoms": [
+    "Progressive exertional dyspnea — initially with climbing stairs or heavy exertion, advancing to breathlessness at rest in PMF; the dominant and most disabling symptom.",
+    "Chronic productive cough, often with grey-black or anthracotic mucus, present in up to 60% of miners with advanced disease from co-existing dust-related bronchitis.",
+    "Reduced exercise tolerance and functional limitation measured objectively as a decline in six-minute walk distance and peak oxygen consumption.",
+    "Chest tightness and wheezing in miners with co-existing coal dust-related COPD, which frequently accompanies CWP in heavy exposures.",
+    "Fatigue and weight loss in advanced PMF from the metabolic demand of increased work of breathing and chronic hypoxemia.",
+    "Recurrent respiratory tract infections — impaired mucociliary clearance and fibrosis create a substrate for bacterial colonization; frequency increases with disease severity.",
+    "Cyanosis, lower limb edema, and elevated jugular venous pressure in late-stage CWP with cor pulmonale from chronic hypoxic pulmonary vasoconstriction.",
+    "Melanoptysis — coughing up large quantities of black fluid — occurs rarely when a PMF cavity communicates with a bronchus; it is alarming but not acutely life-threatening."
+  ],
+
+  "earlyWarningSigns": [
+    "Exertional breathlessness disproportionate to age or general fitness in an active or retired coal miner, even with normal resting spirometry.",
+    "New rounded opacities in the upper lobes detected on surveillance chest X-ray before any symptoms have developed — the key purpose of mandatory periodic medical examinations under the Coal Mine Health and Safety Act.",
+    "A fall of 10% or more in FVC or FEV1 on consecutive annual spirometry in a miner with known simple CWP, suggesting accelerated progression toward PMF."
+  ],
+
+  "emergencySigns": [
+    "Acute respiratory failure with hypoxia (SpO2 <88% at rest) and hypercapnia in a miner with known PMF — requires emergency oxygen therapy, hospital admission, and assessment for mechanical ventilation.",
+    "Massive hemoptysis or melanoptysis from a PMF cavity rupture — requires airway protection, imaging, and bronchoscopic or surgical evaluation.",
+    "Acute cor pulmonale decompensation with severe edema, tachycardia, and hypotension — requires urgent echocardiography and treatment for right heart failure."
+  ],
+
+  "causes": [
+    {
+      "cause": "Prolonged inhalation of respirable coal mine dust",
+      "description": "Coal dust particles less than 10 µm in aerodynamic diameter reach alveoli. Particles smaller than 2.5 µm deposit most deeply in respiratory bronchioles where clearance is poorest. The cumulative exposure dose (mg/m³ × years) is the primary determinant of CWP risk; NIOSH recommends a respirable coal dust permissible exposure limit of 1.5 mg/m³ as a time-weighted average."
+    },
+    {
+      "cause": "Co-exposure to crystalline silica (quartz) in coal seams",
+      "description": "Modern Appalachian mines increasingly cut through thin seams with high rock content, liberating large quantities of crystalline silica. Silica is far more fibrogenic than pure coal dust per unit mass. NIOSH and MSHA surveillance data attribute the resurgence of PMF to rising silica exposure in Appalachian longwall and continuous-miner operations beginning around 1990-2000."
+    },
+    {
+      "cause": "Insufficient dust suppression and ventilation controls",
+      "description": "Water sprays, wet drilling, ventilation curtains, and enclosed cabs for equipment operators are the primary engineering controls. Failure or inadequate implementation of these controls allows dust concentrations to exceed permissible limits; MSHA inspection data show that small mines with fewer than 50 employees have the highest rates of overexposure."
+    },
+    {
+      "cause": "Underground mining environment and equipment generation",
+      "description": "Continuous miners, longwall shearers, roof bolting, and blasting generate the highest dust concentrations. Shuttle car operators and belt crew workers in enclosed poorly ventilated areas behind cutting equipment receive the highest secondary dust exposure."
+    },
+    {
+      "cause": "Surface coal mining dust (surface operations)",
+      "description": "Surface strip-mine drillers and blast crews can accumulate significant silica exposure from drill cuttings. Historically, CWP was considered an underground-only disease, but surface miners now account for a rising share of new CWP cases in U.S. surveillance data."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Duration of coal mining employment", "category": "non-modifiable", "description": "Risk rises sharply after 10-15 years of employment; miners with over 25 years of work in dusty conditions have the highest prevalence. The cumulative dust dose-response relationship is well established across multiple national cohort studies." },
+    { "factor": "High respirable dust concentration in the workplace", "category": "environmental", "description": "Workers in mines exceeding the NIOSH recommended exposure limit of 1.5 mg/m³ have substantially higher CWP rates. MSHA data show that overexposure events are concentrated in smaller underground Appalachian operations." },
+    { "factor": "Crystalline silica co-exposure", "category": "environmental", "description": "Mixed coal-silica dust is far more fibrogenic than pure coal dust. Silica content of the respirable fraction above 5% is associated with accelerated CWP and rapid PMF development. Mining through sandstone or quartz-bearing rock strata greatly elevates silica levels." },
+    { "factor": "Underground versus surface work location", "category": "environmental", "description": "Underground miners face the highest exposures from coal-cutting, roof bolting, and blasting. Surface miners cutting through rock faces have elevated risk from silica-rich drill cuttings." },
+    { "factor": "Tobacco smoking", "category": "modifiable", "description": "Smoking impairs mucociliary clearance and independently causes COPD, which worsens pulmonary function on top of CWP. Smoking does not cause CWP but accelerates functional decline in affected miners." },
+    { "factor": "Small mine employment", "category": "environmental", "description": "Mines with fewer than 50 employees have historically had lower compliance with dust sampling requirements and fewer engineering controls, resulting in higher worker exposures per MSHA data analyses." },
+    { "factor": "Genetic susceptibility to fibrosis", "category": "genetic", "description": "Polymorphisms in genes encoding TNF-α, IL-1β, and TGF-β have been associated with accelerated fibrosis in coal miners with similar exposures; the clinical significance for individual risk prediction remains under study." }
+  ],
+
+  "affectedDemographics": [
+    "Current and former underground coal miners: CWP occurs almost exclusively in this occupational group. Appalachian U.S. miners have the highest rates in recent surveillance.",
+    "China: the world's largest coal producer; Chinese surveillance studies report CWP prevalence rates of 5-25% in underground mining cohorts depending on region and mine type.",
+    "India: coal mining employs over 400,000 workers; CWP surveillance is less complete but regional studies report significant disease burden.",
+    "Men aged 50-75 represent the majority of patients presenting with disability from advanced CWP, reflecting the long latency from first exposure to symptomatic disease."
+  ],
+
+  "diagnosisOverview": "Diagnosis follows the ILO International Classification of Radiographs of Pneumoconioses. A detailed occupational history establishing cumulative coal dust exposure is the essential first step; duration, job title, mine type, and estimated dustiness of the work environment are documented. Posterior-anterior chest radiography is the primary screening and diagnostic tool: ILO profusion category 1/0 or higher for rounded opacities (p, q, r types, predominantly in upper zones) confirms simple CWP. Progressive massive fibrosis is diagnosed when opacities exceed 10 mm (ILO category A-C) or when CT demonstrates confluent upper-lobe masses. High-resolution CT (HRCT) is more sensitive than plain radiography for detecting early nodules, characterizing lesion morphology, and identifying complications including emphysema, PMF cavitation, and co-existing malignancy. HRCT also detects centrilobular emphysema — a component of dust-related COPD — that often accompanies CWP in heavily exposed miners. Pulmonary function testing (spirometry, DLCO, body plethysmography) quantifies the ventilatory deficit: simple CWP may show normal or mildly reduced spirometry; PMF produces progressive restriction with reduced FVC, reduced TLC, and reduced DLCO. Arterial blood gas or overnight oximetry assesses gas exchange in advanced disease. The six-minute walk test measures functional capacity for disability evaluation. NIOSH B-reader-certified physicians read radiographs to OSHA and Black Lung Benefits Program standards; two independent readings are required for program decisions.",
+
+  "diagnosticTests": [
+    { "test": "Posterior-anterior chest radiography (ILO classification)", "purpose": "Primary diagnostic and surveillance tool; classifies dust opacities by profusion, size, shape, and distribution", "whatToExpect": "Standard chest X-ray, non-invasive, 30 seconds. Read by a NIOSH-certified B reader using the ILO International Classification of Radiographs of Pneumoconioses." },
+    { "test": "High-resolution CT (HRCT) of the chest", "purpose": "More sensitive than plain X-ray for early nodules, PMF characterization, cavitation, emphysema, and occult lung cancer; required when X-ray findings are ambiguous", "whatToExpect": "Patient lies supine; CT gantry rotates around the chest. No contrast required. Takes 5-10 minutes. Radiation dose equivalent to about 20 chest X-rays." },
+    { "test": "Spirometry (FVC, FEV1, FEV1/FVC ratio)", "purpose": "Quantifies airflow obstruction and restriction; tracks progression and establishes disability severity", "whatToExpect": "Patient blows forcefully into a mouthpiece three or more times. Takes 20-30 minutes. Results compared against age-, sex-, and height-matched reference values." },
+    { "test": "Diffusion capacity (DLCO)", "purpose": "Measures gas transfer across the alveolar-capillary membrane; falls in PMF with extensive fibrosis and in co-existing emphysema", "whatToExpect": "Patient breathes a small amount of carbon monoxide at low concentration; exhaled gas is analyzed. Takes 15-20 minutes." },
+    { "test": "Arterial blood gas or overnight pulse oximetry", "purpose": "Assesses hypoxemia and hypercapnia in advanced CWP; determines eligibility for supplemental oxygen therapy", "whatToExpect": "Arterial blood gas: small needle into the radial artery; results in 10 minutes. Oximetry: overnight finger probe, non-invasive." },
+    { "test": "Six-minute walk test", "purpose": "Measures functional exercise capacity and SpO2 on exertion for disability assessment and oxygen prescription", "whatToExpect": "Patient walks as far as possible on a flat corridor for 6 minutes; distance and SpO2 are recorded. No equipment required beyond a corridor and pulse oximeter." }
+  ],
+
+  "treatmentOverview": "No pharmacological treatment reverses CWP fibrosis once established. The primary interventions are exposure elimination, pulmonary rehabilitation, and symptom management. Miners diagnosed with CWP must be removed from further coal dust exposure, as continued exposure drives progression toward PMF. Under U.S. MSHA regulations, a miner with Category 1 or higher CWP has the right to transfer to a lower-dust area without loss of pay or seniority (30 CFR 90). Smoking cessation is mandatory: tobacco smoke independently accelerates functional decline and doubles the rate of respiratory hospitalization in CWP patients. Influenza and pneumococcal vaccination are recommended by ACCP and NIOSH guidelines to reduce infectious exacerbations. For miners with airflow obstruction co-existing with CWP, inhaled bronchodilators (LABA, LAMA) following GOLD COPD guidelines provide meaningful symptom relief. Supplemental oxygen is prescribed when resting SpO2 is persistently ≤88% or drops below 88% on exertion; home oxygen improves survival and functional capacity in this setting as it does in COPD. Pulmonary rehabilitation — structured exercise training combined with disease self-management education — improves exercise capacity, dyspnea scores, and quality of life in advanced CWP. For end-stage PMF with respiratory failure, bilateral lung transplantation has been performed at selected centers with outcomes comparable to other fibrotic lung diseases. In the U.S., miners qualify for Black Lung Benefits (monthly disability payments and medical coverage) upon establishing a CWP diagnosis with 15 years or more of underground coal mine employment.",
+
+  "medicalTreatments": [
+    { "name": "Smoking cessation (pharmacological and behavioral)", "description": "The single most modifiable factor to slow functional decline. Nicotine replacement therapy, varenicline, or bupropion combined with behavioral counseling achieves long-term abstinence in 25-30% of smokers. Reduces rate of hospitalization and slows spirometric decline when achieved.", "effectiveness": "Long-term smoking cessation slows FEV1 decline by 30-50 mL/year in COPD populations; comparable benefit expected in CWP-COPD overlap" },
+    { "name": "Inhaled bronchodilators (LAMA, LABA) for co-existing COPD", "description": "Long-acting muscarinic antagonists (tiotropium 18 µg once daily) and long-acting beta-2 agonists (salmeterol 50 µg twice daily) reduce dyspnea and exacerbation frequency in the obstructive component of dust-related disease.", "effectiveness": "LAMA therapy reduces COPD exacerbations by approximately 25% and improves FEV1 by 100-150 mL in COPD; equivalent benefit is expected in dust-related COPD" },
+    { "name": "Long-term oxygen therapy (LTOT)", "description": "Supplemental oxygen at ≥15 hours/day for patients with resting SpO2 ≤88% or with exercise desaturation; improves survival and reduces cor pulmonale progression.", "effectiveness": "LTOT reduces mortality by 40-50% in hypoxic COPD (MRC trial); extrapolated to severe CWP with similar hypoxemia" },
+    { "name": "Pulmonary rehabilitation", "description": "Supervised structured exercise training (aerobic and resistance), breathing techniques, energy conservation, and patient education. Standardized programs run 8-12 weeks with sessions 2-3 times per week.", "effectiveness": "Improves 6-minute walk distance by 50-80 m and reduces Borg dyspnea score by 1-2 points in advanced COPD and fibrotic lung disease populations" },
+    { "name": "Influenza and pneumococcal vaccination", "description": "Annual influenza vaccine and pneumococcal polysaccharide vaccine (PPSV23) recommended by NIOSH and ACCP for all miners with CWP to prevent respiratory exacerbations.", "effectiveness": "Influenza vaccine reduces hospitalization for respiratory illness by 30-40% in patients with chronic lung disease" },
+    { "name": "Whole lung lavage (for selected severe cases)", "description": "Therapeutic bronchoalveolar lavage under general anesthesia washes out coal dust and macrophages from the airways. Used in severe progressive disease at specialized centers; more established for silicosis than CWP but applied in accelerated cases.", "effectiveness": "Case series report stabilization of radiographic progression and symptomatic improvement in selected miners; randomized trial data are limited" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Bilateral lung transplantation", "description": "Performed for end-stage CWP/PMF with FVC or DLCO below 40% predicted and functional class III-IV dyspnea refractory to maximum medical therapy. The fibrotic lung is replaced with donor lung. Surgical risk is elevated by pulmonary hypertension.", "successRate": "Median survival after bilateral lung transplantation for fibrotic lung disease is approximately 5-6 years in international registry data; outcomes in CWP comparable to IPF populations" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "N-acetylcysteine (NAC) supplementation", "description": "Antioxidant supplement that may reduce oxidative stress from coal dust-induced macrophage activation. Studied in silicosis and IPF; limited specific CWP trial data. PANTHER-IPF trial found no benefit in IPF; CWP-specific evidence is insufficient to recommend." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "pulmonary-rehabilitation",
+    "long-term-oxygen-therapy"
+  ],
+
+  "whySeeSpecialist": "An occupational medicine physician documents the exposure history and guides MSHA transfer rights and Black Lung Benefits applications. A pulmonologist monitors disease progression with serial spirometry, HRCT, and DLCO measurements, and manages co-existing COPD. Workers with rapidly progressing disease should be evaluated at centers with lung transplant programs.",
+  "doctorSelectionGuide": "Choose a pulmonologist with experience in occupational lung disease, ideally affiliated with a NIOSH-funded educational resource center or a state black lung clinic. For disability benefits evaluation, a NIOSH-certified B-reader physician is required to grade chest radiographs. For end-stage disease, select a transplant center with experience in fibrotic lung diseases.",
+
+  "hospitalCriteria": [
+    "Hospitals with pulmonary rehabilitation programs accredited by the AACVPR",
+    "Lung transplant centers for end-stage PMF with FVC <40% predicted",
+    "Black lung clinics operated through NIOSH educational resource centers for comprehensive evaluation and disability support",
+    "Facilities with NIOSH B-reader certified radiograph interpretation"
+  ],
+  "keyFacilities": [
+    "NIOSH-funded black lung clinics in Appalachian states",
+    "Occupational and environmental medicine specialist centers",
+    "Tertiary pulmonary rehabilitation programs",
+    "Lung transplant centers (major academic medical centers)"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Control respirable dust at the source through water sprays on cutting equipment, wet drilling, improved mine ventilation, and enclosed cabs with filtered HVAC on continuous miners and shearers.",
+    "Conduct mandatory periodic medical examinations as required by MSHA 30 CFR Part 70 and 90: annual chest X-ray and spirometry enable early detection and exposure reduction before PMF develops.",
+    "Enforce the MSHA permissible exposure limit of 1.5 mg/m³ for respirable coal dust (and 0.05 mg/m³ for quartz) through regular personal air sampling, and immediately investigate and correct overexposures.",
+    "Exercise the MSHA Part 90 transfer right upon Category 1 CWP detection: miners diagnosed with CWP have a federally guaranteed right to transfer to a lower-dust area without pay reduction.",
+    "Eliminate smoking among miners: even before CWP develops, smoking doubles the rate of lung function decline in dusty environments.",
+    "Reduce crystalline silica co-exposure by selecting cutting tools and techniques that minimize rock dust generation and by monitoring silica content of the respirable dust fraction quarterly."
+  ],
+
+  "lifestyleModifications": [
+    "Cease all coal dust exposure immediately upon CWP diagnosis to prevent progression to PMF.",
+    "Enroll in a structured pulmonary rehabilitation program to maintain exercise capacity and quality of life.",
+    "Obtain annual influenza vaccination and pneumococcal vaccination every 5 years.",
+    "Avoid respiratory triggers including second-hand smoke, strong chemical fumes, and cold air.",
+    "Monitor daily symptoms using a peak flow meter or SpO2 pulse oximeter; report any deterioration to the treating pulmonologist.",
+    "Maintain a healthy weight — obesity worsens dyspnea and cor pulmonale in restrictive lung disease."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Anti-inflammatory diet rich in omega-3 fatty acids (oily fish, flaxseed) to reduce systemic inflammation driving fibrosis",
+      "High-protein foods to maintain respiratory muscle mass, especially important during rehabilitation",
+      "Adequate calcium and vitamin D to prevent osteoporosis from corticosteroid use (if prescribed) and reduced outdoor activity",
+      "Foods high in antioxidants (berries, dark leafy greens) to reduce oxidative stress from dust-activated macrophages"
+    ],
+    "avoid": [
+      "Tobacco in all forms — the single most important modifiable factor in CWP progression",
+      "Excessive salt intake, which worsens cor pulmonale edema",
+      "Large meals that cause diaphragmatic splinting and worsen dyspnea; smaller, more frequent meals preferred",
+      "Alcohol in excess, which impairs respiratory muscle function and immune response"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular aerobic exercise at the level tolerated by pulmonary function is strongly recommended. Begin with supervised pulmonary rehabilitation exercise sessions (walking or cycling at 60-80% of peak work rate, 30 minutes, 3 days/week). Advance intensity guided by SpO2 monitoring — cease or reduce effort if SpO2 falls below 88%. Resistance training twice weekly maintains respiratory and peripheral muscle strength. Contact sports and high-altitude activities are generally contraindicated in advanced PMF.",
+
+  "dailyManagement": [
+    "Use prescribed inhaled bronchodilators daily, even when symptoms are temporarily better, to maintain airway patency.",
+    "Monitor SpO2 with a home pulse oximeter at rest and during minimal activity; titrate supplemental oxygen flow to maintain SpO2 ≥90%.",
+    "Practice breathing control techniques (pursed-lip breathing, diaphragmatic breathing) taught in pulmonary rehabilitation to reduce dyspnea during activity.",
+    "Attend scheduled surveillance radiography and spirometry appointments; bring previous results for comparison.",
+    "Keep Black Lung Benefits program paperwork updated and renew medical documentation annually for benefit continuation."
+  ],
+
+  "prognosis": "Prognosis in CWP depends on the category of disease at diagnosis and degree of silica co-exposure. Simple CWP with early detection and dust cessation has a relatively favorable outlook — many miners never progress to PMF and maintain near-normal lung function for years. However, up to 30% of miners with category 2-3 simple CWP on high silica exposure will develop PMF. Once PMF is established, FVC declines by 100-200 mL/year on average even without further dust exposure, and 5-year survival in patients with FVC below 60% predicted falls below 50% without lung transplant. The resurgence of rapidly progressive CWP in younger Appalachian miners (some in their 30s-40s) from high silica exposures represents a severe subgroup with median survival below 5 years after PMF diagnosis. Cor pulmonale, secondary polycythemia, and recurrent pneumonias are the major causes of death. Early detection through mandatory periodic medical surveillance is the primary means of improving outcome at the population level.",
+
+  "recoveryTimeline": "CWP is irreversible; there is no recovery in the traditional sense. With dust cessation at category 1 simple CWP, disease is stable in approximately 70% of miners over 10 years of follow-up. PMF progresses in virtually all affected miners, with disability commonly becoming total (inability to perform any physically demanding work) within 5-10 years of PMF diagnosis. Pulmonary rehabilitation improves functional capacity within 8-12 weeks and should be repeated annually.",
+
+  "complications": [
+    "Progressive massive fibrosis — the most feared complication; bilateral upper-lobe masses that progressively destroy ventilatory function even without further exposure.",
+    "Cor pulmonale and right heart failure from chronic hypoxic pulmonary hypertension — detected by echocardiography and managed with LTOT and diuretics.",
+    "Respiratory failure requiring home mechanical ventilation (non-invasive ventilation at night) in end-stage disease.",
+    "Increased risk of pulmonary tuberculosis — silica and coal dust impair alveolar macrophage killing of mycobacteria; TB incidence is 2-5 times higher in miners with CWP than in the general population.",
+    "Lung cancer — silica co-exposure (classified as a Group 1 carcinogen by IARC) increases lung cancer risk; tobacco smoking multiplies this risk further.",
+    "Melanoptysis from PMF cavity formation — usually self-limiting but alarming; large-volume hemoptysis requires bronchoscopic evaluation."
+  ],
+
+  "supportResources": [
+    { "name": "NIOSH Coal Workers' Health Surveillance Program", "url": "https://www.cdc.gov/niosh/topics/black-lung/default.html", "description": "Free surveillance radiographs and spirometry for working and retired miners; administers the Black Lung Benefits program." },
+    { "name": "American Lung Association — Black Lung Disease", "url": "https://www.lung.org/lung-health-diseases/lung-disease-lookup/black-lung-disease", "description": "Patient-focused information on CWP, treatment options, benefits, and support resources for miners and families." },
+    { "name": "Appalachian Citizens' Law Center — Black Lung Clinic", "url": "https://www.appalachiancitizens.org/black-lung/", "description": "Legal assistance and clinic services for Appalachian miners pursuing Black Lung Benefits claims." },
+    { "name": "MSHA — Coal Dust Control", "url": "https://www.msha.gov/programs-policy/technical-compliance-assistance/coal/coal-mine-dust-sampling", "description": "Federal Mine Safety and Health Administration guidance on coal mine dust permissible exposure limits, sampling methods, and compliance." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "silicosis", "name": "Silicosis", "keyDifference": "Both cause upper-lobe nodular fibrosis from inhaled mineral dust. Silicosis results from pure crystalline silica exposure (stone cutting, sandblasting, quarrying), while CWP results from coal dust. Mixed CWP-silicosis occurs in miners who also drill through silica-bearing rock. Silicosis typically progresses more rapidly and has higher lung cancer and TB risk per unit of radiographic severity." },
+    { "slug": "copd", "name": "COPD", "keyDifference": "Coal dust exposure causes both CWP (fibrotic nodules) and dust-related COPD (airflow obstruction). COPD alone shows emphysema and bronchitis without nodular fibrosis. Many miners have both conditions simultaneously. Spirometry distinguishes the obstructive pattern of COPD from the restrictive pattern of advanced CWP, but the overlap pattern is common." },
+    { "slug": "asbestosis", "name": "Asbestosis", "keyDifference": "Asbestosis causes lower-lobe subpleural fibrosis with pleural plaques from asbestos fiber inhalation; CT shows honeycombing and traction bronchiectasis. CWP produces upper-lobe rounded nodules from coal dust. Exposure history to the relevant industry (mining versus shipbuilding or construction) is the key differentiator." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "copd", "name": "COPD" },
+    { "slug": "hypertension", "name": "Hypertension" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "silicosis", "name": "Silicosis", "relevance": "Silica co-exposure in coal mines accelerates CWP; both diseases share the upper-lobe nodular fibrosis pattern and the regulatory framework of occupational pneumoconiosis." },
+    { "slug": "asbestosis", "name": "Asbestosis", "relevance": "Another occupational pneumoconiosis caused by a different mineral fiber; shares regulatory surveillance frameworks under OSHA and the Federal Mine Safety Health Act." },
+    { "slug": "occupational-asthma", "name": "Occupational Asthma", "relevance": "Coal dust can trigger bronchial hyperreactivity independently of CWP fibrosis; occupational asthma and CWP co-exist in some miners." },
+    { "slug": "mesothelioma-general", "name": "Mesothelioma", "relevance": "Both are serious occupational lung diseases with latent periods of decades; some workers have co-exposure to coal dust and asbestos." },
+    { "slug": "lung-cancer", "name": "Lung Cancer", "relevance": "Silica co-exposure in coal mining is an IARC Group 1 lung carcinogen; tobacco smoking in miners multiplicatively increases lung cancer risk above CWP background." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is coal workers' pneumoconiosis?",
+      "answer": "Coal workers' pneumoconiosis (CWP), called black lung disease, is an irreversible fibrotic lung disease caused by inhaling coal mine dust for years. Small dust particles deposit in the alveoli, triggering inflammation and progressive scarring. Simple CWP can advance to progressive massive fibrosis (PMF), causing severe breathing difficulty.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first symptoms of black lung disease?",
+      "answer": "The earliest symptom is exertional breathlessness that worsens over months and years. Chronic productive cough and reduced exercise tolerance follow. Many miners with simple CWP have no symptoms for years; the condition is detected on surveillance chest X-rays. By the time significant dyspnea appears, substantial fibrosis is usually present.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is coal workers' pneumoconiosis curable?",
+      "answer": "No. There is no drug that reverses the lung fibrosis of CWP. Management focuses on stopping further exposure, preventing progression, and treating symptoms. Pulmonary rehabilitation, inhaled bronchodilators, and supplemental oxygen improve quality of life. Bilateral lung transplantation is an option for end-stage disease at selected centers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is progressive massive fibrosis?",
+      "answer": "Progressive massive fibrosis (PMF) is the complicated stage of CWP in which lung nodules coalesce into large bilateral upper-lobe masses exceeding 10 mm. PMF destroys lung function progressively even after coal dust exposure stops. It causes severe restriction, low oxygen levels, right heart failure, and ultimately respiratory failure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to develop black lung disease?",
+      "answer": "Simple CWP usually takes 10-20 years of coal mining exposure to become detectable on chest X-ray. PMF typically appears after 20-30 years. However, recent Appalachian miners with high silica co-exposure have developed accelerated CWP within 5-10 years. Clinical disability commonly presents in the 50s and 60s.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can surface coal miners get black lung?",
+      "answer": "Yes. Surface miners who drill or blast through silica-bearing rock strata can develop CWP. Historically considered an underground-only disease, CWP in surface miners has increased in U.S. surveillance data since the 2000s due to thinner coal seams requiring more rock cutting and increased silica dust generation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is CWP diagnosed?",
+      "answer": "Diagnosis starts with occupational history of coal mining, then a posterior-anterior chest X-ray read by a NIOSH B-reader using the ILO classification. Rounded upper-lobe opacities at ILO profusion 1/0 or higher confirm simple CWP. High-resolution CT is used for ambiguous cases. Spirometry and DLCO quantify functional impairment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What treatment improves breathing in black lung disease?",
+      "answer": "Pulmonary rehabilitation improves 6-minute walk distance by 50-80 m and reduces dyspnea scores in CWP with airflow obstruction. Long-acting inhaled bronchodilators help the obstructive component. Long-term oxygen therapy reduces mortality and cor pulmonale progression when resting SpO2 is at or below 88%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are Black Lung Benefits?",
+      "answer": "The U.S. Black Lung Benefits Act provides monthly disability payments and medical coverage for coal miners totally disabled by CWP and for surviving dependents of miners who died from the disease. Eligibility requires a CWP diagnosis and at least 10-15 years of underground coal mining employment. NIOSH black lung clinics assist miners with claims.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the MSHA Part 90 transfer right?",
+      "answer": "Under 30 CFR Part 90, a miner diagnosed with CWP at Category 1 or higher has a federally guaranteed right to transfer to a working area with dust concentrations at or below 1.0 mg/m³ without pay reduction. This right can meaningfully slow progression if exercised early.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does smoking cause black lung disease?",
+      "answer": "Smoking does not cause CWP but significantly worsens it. Tobacco smoke impairs mucociliary clearance, causes COPD, and doubles the rate of lung function decline in miners with dust exposure. Smoking cessation is the most important modifiable intervention to slow progression once CWP is diagnosed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should coal miners have lung check-ups?",
+      "answer": "MSHA regulations require miners to be offered chest X-rays every 5 years and more frequently if CWP is detected. NIOSH recommends annual surveillance spirometry. Many occupational health clinics offer more frequent monitoring; miners with early findings should seek annual review rather than waiting 5 years.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is melanoptysis in black lung disease?",
+      "answer": "Melanoptysis is coughing up large volumes of black or very dark fluid from a PMF cavity that has eroded into a bronchus. It is alarming but rarely immediately life-threatening. Chest imaging and bronchoscopy evaluate the source. Recurrent melanoptysis requires close follow-up for cavity complications including infection and hemorrhage.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can CWP increase the risk of tuberculosis?",
+      "answer": "Yes. Coal dust and particularly silica impair the ability of alveolar macrophages to kill Mycobacterium tuberculosis. Miners with CWP have 2-5 times the TB incidence of the general population. TB screening with a tuberculin skin test or IGRA test is recommended at CWP diagnosis and periodically thereafter.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is a lung transplant an option for black lung disease?",
+      "answer": "Yes. Bilateral lung transplantation has been performed for end-stage PMF at selected transplant centers. Candidates typically have FVC or DLCO below 40% predicted and functional class III-IV dyspnea despite maximum medical therapy. Median survival after transplant is approximately 5-6 years in international registry data.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Black lung disease (coal workers' pneumoconiosis)",
+  "regionalNames": [
+    { "name": "Black lung disease", "region": "Appalachian United States", "language": "English" },
+    { "name": "Miners' asthma", "region": "UK (historical)", "language": "English" }
+  ],
+  "searchTags": [
+    "coal workers pneumoconiosis",
+    "black lung disease",
+    "CWP",
+    "progressive massive fibrosis",
+    "PMF",
+    "coal mining lung disease",
+    "black lung benefits",
+    "miners lung",
+    "anthracosis",
+    "coal dust lung",
+    "occupational pneumoconiosis"
+  ],
+  "symptomKeywords": [
+    "shortness of breath coal miner",
+    "black mucus coughing",
+    "breathing problems after mining",
+    "black lung disability",
+    "upper lobe fibrosis miner"
+  ],
+
+  "metaTitle": "Coal Workers' Pneumoconiosis: Symptoms & Treatment | aihealz",
+  "metaDescription": "Coal workers' pneumoconiosis (black lung): irreversible dust fibrosis in miners. Symptoms, progressive massive fibrosis, diagnosis, and benefits explained.",
+
+  "keywords": [
+    "coal workers pneumoconiosis",
+    "black lung disease",
+    "progressive massive fibrosis",
+    "coal mining lung disease",
+    "CWP diagnosis",
+    "black lung benefits",
+    "MSHA Part 90",
+    "coal dust fibrosis",
+    "pulmonary rehabilitation miners",
+    "NIOSH black lung surveillance",
+    "occupational lung disease"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "NIOSH. 2018. Resurgence of progressive massive fibrosis in coal miners — Eastern United States, 2016. MMWR 67(5):1505-1509.", "url": "https://pubmed.ncbi.nlm.nih.gov/30571669/", "accessedDate": "2026-05-14" },
+    { "title": "Blackley DJ, Halldin CN, Laney AS. 2018. Continued increase in prevalence of coal workers' pneumoconiosis in the United States. American Journal of Public Health 108(9):1220-1222.", "url": "https://pubmed.ncbi.nlm.nih.gov/30024801/", "accessedDate": "2026-05-14" },
+    { "title": "Castranova V, Vallyathan V. 2000. Silicosis and coal workers' pneumoconiosis. Environmental Health Perspectives 108(Suppl 4):675-684.", "url": "https://pubmed.ncbi.nlm.nih.gov/10931793/", "accessedDate": "2026-05-14" },
+    { "title": "ILO International Classification of Radiographs of Pneumoconioses. 2011 edition. International Labour Organization, Geneva.", "url": "https://www.ilo.org/safework/info/standards-and-instruments/lang--en/index.htm", "accessedDate": "2026-05-14" },
+    { "title": "NIOSH. Coal Workers' Health Surveillance Program. Centers for Disease Control and Prevention, Atlanta.", "url": "https://www.cdc.gov/niosh/topics/black-lung/default.html", "accessedDate": "2026-05-14" },
+    { "title": "Laney AS, Petsonk EL, Attfield MD. 2010. Pneumoconiosis among underground bituminous coal miners in the United States: is silicosis becoming more frequent? Occupational and Environmental Medicine 67(10):652-656.", "url": "https://pubmed.ncbi.nlm.nih.gov/20876224/", "accessedDate": "2026-05-14" },
+    { "title": "MSHA. 30 CFR Part 70 and 90 — Coal mine dust sampling and miner transfer rights. Mine Safety and Health Administration, Washington DC.", "url": "https://www.msha.gov/programs-policy/technical-compliance-assistance/coal/coal-mine-dust-sampling", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

@@ -1,0 +1,390 @@
+{
+  "_meta": {
+    "slug": "melanoma",
+    "tier": 1,
+    "headTerm": "melanoma",
+    "longTailKeywords": [
+      "melanoma symptoms",
+      "melanoma treatment",
+      "melanoma ABCDE rule",
+      "melanoma stages",
+      "melanoma survival rate",
+      "melanoma immunotherapy",
+      "melanoma diagnosis biopsy",
+      "BRAF melanoma"
+    ],
+    "primarySpecialty": "Oncology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Melanoma: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Oncology",
+
+  "heroOverview": "Melanoma is the most dangerous form of skin cancer, arising from melanocytes — the pigment-producing cells of the skin, eye, or mucous membranes. The American Cancer Society estimated 97,610 new invasive melanoma diagnoses in the United States in 2023. Although melanoma accounts for only 1% of skin cancers by case count, it causes approximately 75% of skin cancer deaths. The ABCDE rule — Asymmetry, Border irregularity, Color variation, Diameter greater than 6 mm, and Evolution — is the validated clinical screening tool. Survival drops sharply with stage: 5-year OS exceeds 99% for stage IA but falls to 22-32% for stage IV without treatment. Immune checkpoint inhibitors (nivolumab, pembrolizumab, ipilimumab-nivolumab) and BRAF-MEK targeted therapy (for BRAF V600-mutant disease) have transformed advanced melanoma from a near-uniformly fatal diagnosis to one where long-term remission is achievable in 30-40% of patients.",
+
+  "keyStats": {
+    "prevalence": "97,610 new invasive melanoma cases and 7,990 deaths estimated in the US in 2023 (American Cancer Society)",
+    "demographics": "Incidence 3× higher in White compared with Hispanic individuals in the US; male-to-female ratio approximately 1.5:1 overall; in young adults (age 20-44), incidence slightly higher in women",
+    "avgAge": "Median age at diagnosis 65; the most common cancer in adults aged 25-29 in the US",
+    "globalCases": "Approximately 325,000 new cases and 57,000 deaths globally in 2022 (GLOBOCAN)"
+  },
+
+  "definition": "Melanoma (ICD-10: C43) is a malignant tumor of melanocytes, arising most commonly in the skin (cutaneous melanoma, 90% of cases) and less commonly in the eye (uveal/conjunctival melanoma), mucous membranes (mucosal melanoma), or the leptomeninges. Cutaneous melanoma is classified into four main subtypes: superficial spreading (70%), nodular (15-30%), lentigo maligna melanoma (LMM, arising from lentigo maligna on chronically sun-damaged skin of older patients), and acral lentiginous melanoma (ALM, accounting for 1-3% of melanoma in White patients but 40-70% in Asian and Black populations). At the molecular level, approximately 50% of cutaneous melanomas harbor an activating BRAF V600 mutation (predominantly V600E), 15-20% have NRAS mutations, 10-15% have NF1 mutations, and 5% have KIT mutations (predominantly mucosal and acral subtypes). Melanoma thickness (Breslow depth in mm), ulceration, and mitotic rate are the primary histological determinants of T-stage. Sentinel lymph node biopsy (SLNB) at the time of wide local excision in T1b-T4 tumors provides pathological nodal staging. Disease is managed by dermatology-oncology for early stages and medical oncology for stage III-IV.",
+
+  "typesClassification": [
+    { "type": "Superficial spreading melanoma", "description": "Most common subtype (70%). Grows radially along the epidermis before vertical (invasive) growth begins. Characteristic irregular borders and multiple shades of brown, black, red, and white. Often arises in dysplastic nevi." },
+    { "type": "Nodular melanoma", "description": "Second most common (15-30%). Lacks a radial growth phase; presents as a rapidly growing raised nodule, often amelanotic (pink, red, or flesh-colored). Most likely to be diagnosed at a thick Breslow depth due to aggressive growth." },
+    { "type": "Lentigo maligna melanoma (LMM)", "description": "Arises from lentigo maligna (melanoma in situ) on chronically UV-damaged skin; mainly head, neck, and forearms of older adults. Slow radial growth phase may last years; invasive component carries the same prognosis as other invasive melanomas of equivalent thickness." },
+    { "type": "Acral lentiginous melanoma (ALM)", "description": "Arises on palms, soles, nail beds, and mucosal surfaces. Unrelated to UV exposure; no BRAF V600 mutation in most cases (KIT mutations more common). Disproportionately affects people with darker skin; often diagnosed at a later stage due to atypical location." },
+    { "type": "Mucosal and uveal melanoma", "description": "Mucosal melanoma arises in the oral cavity, nasal passages, vulva, vagina, or anorectal region. Uveal (eye) melanoma arises from choroidal melanocytes. Both have distinctly different molecular profiles (GNA11/GNAQ in uveal, KIT and SF3B1 in mucosal) and poorer outcomes than cutaneous melanoma." }
+  ],
+
+  "primarySymptoms": [
+    "A new mole or growth on the skin with asymmetric shape — one half does not mirror the other when bisected — the most sensitive single ABCDE sign.",
+    "Irregular, notched, or scalloped border of a pigmented lesion, contrasting with the smooth, regular edge of a benign nevus.",
+    "Color variation within a single lesion: multiple shades of brown, black, red, tan, or white, sometimes with areas of hypopigmentation indicating regression.",
+    "Diameter greater than 6 mm (approximately the size of a pencil eraser), though thin melanomas can be smaller, particularly at biopsy.",
+    "Evolution: any change in size, shape, color, or elevation of an existing lesion, or any new symptom such as bleeding, itching, or crusting over a 4-8 week period.",
+    "Bleeding, oozing, or crusting of a pigmented skin lesion, indicating erosion of the epidermis by vertical-growth-phase invasive tumor.",
+    "Satellite lesions: small discrete tumor deposits within 2 cm of the primary lesion, representing in-transit metastasis within dermal lymphatics.",
+    "Palpable, firm, non-tender lymph node in the draining nodal basin of a primary melanoma, signifying regional nodal metastasis.",
+    "A raised, rapidly growing flesh-colored or red nodule without obvious pigmentation — amelanotic nodular melanoma, notoriously easy to misdiagnose as a cyst or pyogenic granuloma.",
+    "Dark pigment under a fingernail or toenail (subungual melanoma) extending into the nail fold (Hutchinson's sign), most common in acral lentiginous melanoma."
+  ],
+
+  "earlyWarningSigns": [
+    "An existing mole that begins to itch, bleed, or become raised — any change in a known lesion warrants urgent dermatological review",
+    "New darkly pigmented lesion appearing on the plantar foot or palm in a patient of any ethnicity — acral sites require biopsy to exclude ALM",
+    "A flat, irregularly pigmented patch on the face or scalp of an older patient growing over months — consistent with lentigo maligna",
+    "Any pigmented lesion that bleeds without trauma, even briefly",
+    "Multiple atypical nevi (dysplastic nevus syndrome) with a family history of melanoma — carries an approximately 70× lifetime risk increase"
+  ],
+
+  "emergencySigns": [
+    "Sudden severe headache, seizure, or focal neurological deficit in a melanoma patient — brain metastases occur in 40-50% of stage IV patients; urgent CT or MRI required",
+    "Acute vision loss or floaters in a patient with uveal melanoma — choroidal detachment or vitreous hemorrhage from orbital metastasis; urgent ophthalmology assessment",
+    "Bowel obstruction or gastrointestinal bleeding in a patient with known or suspected melanoma — GI metastases occur in 2-4% of stage IV cases",
+    "Acute adrenal insufficiency with hypotension, hyponatremia, and hyperkalemia — adrenal metastases destroy adrenal cortex in 10-18% of stage IV melanoma; emergent cortisol replacement needed",
+    "Grade 3-4 immune-related adverse event during checkpoint inhibitor therapy: pneumonitis with hypoxia, colitis with bloody diarrhea, or severe liver enzyme elevation — hold immunotherapy and begin high-dose corticosteroids"
+  ],
+
+  "causes": [
+    {
+      "cause": "Ultraviolet radiation exposure",
+      "description": "UV-B radiation (280-315 nm) and UV-A radiation (315-400 nm) cause direct DNA damage, primarily cyclobutane pyrimidine dimers and (6-4) photoproducts in melanocyte DNA. This UV signature is present in more than 90% of cutaneous melanoma mutations. Both cumulative sun exposure (LMM, acral) and intermittent intense exposures with sunburn are risk factors for different melanoma subtypes."
+    },
+    {
+      "cause": "Indoor tanning device use",
+      "description": "Tanning beds emit primarily UV-A at intensities up to 10-15× stronger than midday summer sun. Ever-use of indoor tanning increases melanoma risk approximately 20%; first use before age 35 increases risk by 59-75% (IARC meta-analysis). The International Agency for Research on Cancer classifies tanning devices as Group 1 carcinogens."
+    },
+    {
+      "cause": "BRAF V600E and other somatic mutations",
+      "description": "BRAF V600E is present in approximately 50% of cutaneous melanomas and constitutively activates the MAP-kinase (RAS-RAF-MEK-ERK) proliferation pathway. It is one of the most common driver mutations targeted by approved therapies (vemurafenib, dabrafenib, encorafenib). NRAS mutations occur in 15-20% and activate both MAP-kinase and PI3K pathways."
+    },
+    {
+      "cause": "Dysplastic (atypical) nevi",
+      "description": "Dysplastic nevi are intermediate-risk precursor lesions; patients with ≥5 atypical nevi have approximately 10× the melanoma risk of the general population. Total nevus count is the strongest individual predictor of melanoma risk — more than 100 nevi raises lifetime risk approximately 7-fold."
+    },
+    {
+      "cause": "Familial melanoma and CDKN2A germline mutations",
+      "description": "Approximately 5-10% of melanomas occur in a familial setting. Germline mutations in CDKN2A (encoding p16/p14ARF) are the most common heritable cause, identified in 20-40% of familial melanoma kindreds with three or more affected first-degree relatives. CDK4 mutations occur in a smaller proportion."
+    },
+    {
+      "cause": "Immunosuppression",
+      "description": "Solid-organ transplant recipients have a 3-8× elevated melanoma risk attributable to calcineurin inhibitor-driven immunosuppression, impaired tumor immune surveillance, and UV-related DNA damage. HIV-positive individuals have 2.6× higher melanoma incidence than HIV-negative controls."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "History of sunburn, particularly blistering sunburns in childhood", "category": "modifiable", "description": "Five or more blistering sunburns doubles melanoma risk. Childhood sunburns are more strongly associated with future melanoma than adult exposures because of the longer subsequent latency period." },
+    { "factor": "Fair skin, light eyes, and red or blonde hair (phenotype I-II)", "category": "non-modifiable", "description": "MC1R gene variants responsible for red hair and fair skin reduce eumelanin (dark, photoprotective pigment) production, markedly increasing UV susceptibility. Fitzpatrick skin types I-II have approximately 5× higher melanoma incidence than types V-VI." },
+    { "factor": "Indoor tanning device use", "category": "modifiable", "description": "Ever-use increases melanoma risk approximately 20%; first use before age 35 increases risk 59-75%. Multiple countries and several US states have banned tanning device use for minors." },
+    { "factor": "Family history of melanoma (first-degree relative)", "category": "genetic", "description": "First-degree relative with melanoma approximately doubles individual risk; three affected first-degree relatives raises lifetime risk approximately 35-70×. CDKN2A testing is appropriate in families with three or more affected first-degree relatives." },
+    { "factor": "Multiple atypical nevi (≥5)", "category": "non-modifiable", "description": "Atypical nevus syndrome (formerly dysplastic nevus syndrome) with multiple atypical moles confers approximately 10× baseline melanoma risk. Total mole count above 100 is a strong independent predictor." },
+    { "factor": "Prior melanoma", "category": "non-modifiable", "description": "Patients with one melanoma have approximately 9× the general population risk of developing a second primary melanoma. Annual full-body skin examination is standard surveillance." },
+    { "factor": "Geographic latitude and altitude", "category": "environmental", "description": "Melanoma incidence in Australia and New Zealand is the highest in the world (40-60 per 100,000 annually). UV index rises with proximity to the equator and with altitude (UV increases approximately 10-12% per 1,000 m elevation)." }
+  ],
+
+  "affectedDemographics": [
+    "White populations in high-UV regions (Australia, New Zealand, US Sun Belt) have incidence rates of 20-60 per 100,000; Australia/NZ have the world's highest rates.",
+    "Younger women (age 25-44) in the US have slightly higher melanoma incidence than young men, likely reflecting greater indoor tanning use.",
+    "In populations with darker skin, ALM — arising on palms, soles, and nail beds — constitutes 40-70% of all melanoma; UV-independent mechanisms predominate.",
+    "Uveal melanoma is more common in individuals of Northern European descent; incidence approximately 5-6 per million per year in the US (SEER)."
+  ],
+
+  "diagnosisOverview": "The diagnostic pathway begins with the clinical ABCDE examination of any suspicious pigmented or changing lesion. Dermoscopy (handheld or digital dermatoscope) improves detection accuracy and reduces unnecessary biopsies. Any lesion suspicious for melanoma requires excision biopsy with narrow (1-2 mm) clinical margins — shave biopsies are inadequate because they prevent accurate Breslow depth measurement. The pathology report must document: Breslow depth (mm), Clark level (dermis penetration), ulceration (present/absent), mitotic rate per mm², microsatellitosis, and margin status. Wide local excision (WLE) follows histological confirmation: margins of 1 cm for T1 (≤1 mm), 1-2 cm for T2 (1.01-2 mm), and 2 cm for T3-T4 (>2 mm). Sentinel lymph node biopsy (SLNB) is recommended for T1b (ulcerated or mitotic rate ≥1/mm², 0.8-1.0 mm) through T4b tumors. Molecular testing of the primary tumor or metastatic deposit for BRAF V600E/K, NRAS, and KIT mutations guides targeted therapy selection in stage III-IV disease. Staging imaging (CT chest-abdomen-pelvis plus brain MRI) and lactate dehydrogenase (LDH) are assessed in stage III and IV. SLNB positivity (stage IIIA-IIID) guides adjuvant therapy selection.",
+
+  "diagnosticTests": [
+    { "test": "Dermoscopy (dermatoscopy)", "purpose": "Non-invasive examination of skin lesion architecture using polarized light; increases diagnostic accuracy for melanoma by 10-20% over unaided eye examination", "whatToExpect": "Clinician applies a handheld lens or digital dermatoscope to the skin with ultrasound gel or oil; painless, 30-60 seconds per lesion. No preparation needed." },
+    { "test": "Excision biopsy of suspicious pigmented lesion", "purpose": "Provides full-thickness specimen for histological diagnosis and complete Breslow depth measurement", "whatToExpect": "Outpatient procedure under local anesthesia; 15-30 minutes. 1-2 mm margin around the lesion. Small scar. Pathology results in 5-10 business days." },
+    { "test": "Sentinel lymph node biopsy (SLNB)", "purpose": "Identifies and samples the first draining lymph node(s) to detect occult nodal metastasis and stage the disease pathologically", "whatToExpect": "Performed at the same time as wide local excision. Radiotracer and blue dye injected around the primary site; the sentinel node is identified with a Geiger probe. Hospital stay 1-3 days. Results in 5-10 days." },
+    { "test": "BRAF V600 mutation testing (tumor tissue or ctDNA)", "purpose": "Identifies BRAF V600E/K mutations present in approximately 50% of cutaneous melanomas; required before initiating targeted therapy in stage III-IV disease", "whatToExpect": "Performed on formalin-fixed tissue from biopsy block, or on blood plasma (liquid biopsy). Results in 5-14 days." },
+    { "test": "CT chest-abdomen-pelvis plus brain MRI", "purpose": "Systemic staging for stage III and IV disease; detects lung, liver, bone, and brain metastases", "whatToExpect": "Contrast CT takes 20-30 minutes. Brain MRI with gadolinium takes 30-45 minutes. CT radiation dose approximately 10-15 mSv. Results reported within 24-48 hours." },
+    { "test": "LDH and S100B serum biomarkers", "purpose": "LDH is an independent prognostic factor in stage IV melanoma (elevated LDH indicates worse prognosis); S100B is a sensitive serial marker of disease activity in metastatic melanoma", "whatToExpect": "Standard blood draw. Results same day. LDH elevation above the upper limit of normal reclassifies stage IVA/B to stage IVM1d in the AJCC 8th edition." }
+  ],
+
+  "treatmentOverview": "Treatment is stage-driven. Stage 0 (melanoma in situ): WLE with 5 mm margins. Stage I-II (localized invasive): WLE with margins of 1-2 cm depending on Breslow depth; SLNB for T1b-T4b. No adjuvant therapy is indicated for stage I; adjuvant therapy is considered for stage IIB-IIC (pembrolizumab 200 mg every 6 weeks for 1 year based on KEYNOTE-716 trial, which reduced distant metastasis-free survival events by 35%). Stage III (regional nodal): completion lymph node dissection is no longer routine after a positive SLNB (MSLT-II trial); adjuvant therapy with pembrolizumab or nivolumab (12 months) reduces recurrence by approximately 35-40% (KEYNOTE-054 and CheckMate 238 trials). For BRAF V600-mutant stage IIIB-IIID, adjuvant dabrafenib plus trametinib (12 months) reduces recurrence by approximately 53% vs placebo (COMBI-AD trial). Stage IV (metastatic): treatment selection depends on BRAF mutation status and pace of disease. BRAF V600-mutant disease is treated with combination BRAF-MEK inhibitors (dabrafenib 150 mg twice daily plus trametinib 2 mg once daily, or encorafenib 450 mg once daily plus binimetinib 45 mg twice daily); response rates 60-70%, median PFS 11-14 months. Immunotherapy with nivolumab plus ipilimumab (CheckMate 067) achieves 5-year OS of 52% in all-comers, with a plateau in the survival curve suggesting durable benefit; pembrolizumab monotherapy achieves 5-year OS 34%. Oligometastatic resectable stage IV disease benefits from metastasectomy in selected patients with good performance status and limited sites.",
+
+  "medicalTreatments": [
+    { "name": "Nivolumab (240 mg every 2 weeks or 480 mg every 4 weeks) plus ipilimumab (1 mg/kg every 6 weeks)", "description": "Combination PD-1 plus CTLA-4 checkpoint inhibitor; first-line for all advanced melanoma regardless of BRAF status. Higher response rate and durable remissions compared with monotherapy, but also higher immune-related adverse event rate (grade 3-4 in 60%).", "effectiveness": "5-year OS 52% (CheckMate 067); 7-year OS 50%, the longest follow-up for any metastatic melanoma regimen" },
+    { "name": "Pembrolizumab (200 mg every 3 weeks or 400 mg every 6 weeks)", "description": "Anti-PD-1 checkpoint inhibitor; first-line option for advanced melanoma and adjuvant therapy for stage IIB-IIID. More favorable toxicity profile than combination IO.", "effectiveness": "5-year OS 34% in advanced melanoma (KEYNOTE-006); adjuvant pembrolizumab reduces recurrence by 35% vs placebo in stage IIB-IIC (KEYNOTE-716)" },
+    { "name": "Dabrafenib (150 mg twice daily) plus trametinib (2 mg once daily)", "description": "BRAF-MEK inhibitor combination for BRAF V600E/K-mutant advanced melanoma. Rapid deep responses; resistance develops in most patients by 12-14 months. Also approved adjuvantly for stage IIIA-IIID BRAF V600-mutant melanoma.", "effectiveness": "Median PFS 11.1 months; 5-year OS 28% in stage IV; adjuvant therapy reduces recurrence by 53% vs placebo (COMBI-AD)" },
+    { "name": "Encorafenib (450 mg daily) plus binimetinib (45 mg twice daily)", "description": "Alternative BRAF-MEK combination with improved tolerability profile; also effective in BRAF V600E colorectal cancer.", "effectiveness": "Median PFS 14.9 months (COLUMBUS trial); ORR 63%; superior to vemurafenib monotherapy and encorafenib monotherapy" },
+    { "name": "T-VEC (talimogene laherparepvec, 10⁸ PFU/mL intralesional injection)", "description": "Oncolytic herpesvirus genetically engineered to produce GM-CSF; injected directly into accessible melanoma lesions. Approved for unresectable stages IIIB-IVM1a. Produces local and distant bystander immune responses.", "effectiveness": "Durable response rate 16.3% (OPTiM trial); response in injected and uninjected distant lesions; median OS improvement 4.4 months over GM-CSF alone" },
+    { "name": "Adjuvant nivolumab or pembrolizumab (12 months) for stage III after complete resection", "description": "One year of anti-PD-1 therapy following complete resection and SLNB reduces recurrence by 35-43% vs placebo. Approved for stage IIIA-IIID based on CheckMate 238 and KEYNOTE-054 trials.", "effectiveness": "4-year recurrence-free survival: nivolumab 52% vs ipilimumab 41% (CheckMate 238); pembrolizumab 62% vs placebo 50% (KEYNOTE-054)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Wide local excision (WLE)", "description": "Primary treatment for all stages of localized melanoma. Margins: 5 mm for in situ, 1 cm for T1 (≤1 mm Breslow), 1-2 cm for T2 (1-2 mm), 2 cm for T3-T4 (>2 mm). Flap or skin graft repair where direct closure is not feasible.", "successRate": "Local recurrence below 2% with adequate margins for T1-T2 lesions; 10-year melanoma-specific survival 95-98% for stage IA" },
+    { "name": "Sentinel lymph node biopsy (SLNB)", "description": "Pathological staging procedure for T1b-T4b melanoma at the time of WLE. Lymphatic mapping with Tc-99m nanocolloid and patent blue dye identifies the sentinel node. Positive SLNB indicates stage III and triggers adjuvant therapy discussion; completion lymph node dissection is no longer routine (MSLT-II).", "successRate": "Negative SLNB has 90-95% negative predictive value for 5-year nodal disease; procedure-related lymphedema in 1-5%" },
+    { "name": "Isolated limb perfusion (ILP) or infusion (ILI) for in-transit melanoma", "description": "High-dose melphalan delivered to the limb via an isolated circuit to treat multiple in-transit metastases not amenable to excision. ILP under general anesthesia with hyperthermia; ILI is a percutaneous, less morbid alternative.", "successRate": "Complete response in 40-60% of ILP cases; ILI complete response 30-38%; both provide local disease control as a bridge to immunotherapy" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Stereotactic radiosurgery (SRS) for brain metastases", "description": "High-precision single-fraction radiation (15-24 Gy) for 1-3 brain metastases achieves 80-90% local control without whole-brain radiation. Increasingly used in combination with checkpoint inhibitors; simultaneous WBRT is avoided when possible to preserve neurocognitive function." },
+    { "name": "Electrochemotherapy", "description": "Electroporation of skin metastases combined with bleomycin; produces complete response in 70-90% of treated cutaneous or subcutaneous lesions. A palliative local control option for superficial disease before systemic therapy response." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "immunotherapy",
+    "radiation-therapy",
+    "chemotherapy"
+  ],
+
+  "whySeeSpecialist": "Suspicious pigmented lesions require dermoscopy-trained dermatologists for accurate diagnosis. Advanced melanoma must be managed by a multidisciplinary melanoma oncology team combining surgical oncology, dermatologic oncology, and medical oncology for optimal staging and treatment sequencing.",
+  "doctorSelectionGuide": "For excision and early-stage management, choose a dermatologist with dermoscopy expertise and surgical capability. For stage III-IV disease, seek an NCI-designated comprehensive cancer center with a dedicated melanoma service that includes molecular testing, access to combination immunotherapy, BRAF-MEK targeted therapy, and investigational trials.",
+
+  "hospitalCriteria": [
+    "Surgical oncology with expertise in SLNB and WLE for all Breslow depths",
+    "Histopathology laboratory providing complete AJCC 8th edition T-staging",
+    "In-house BRAF mutation testing (NGS or PCR-based)",
+    "Medical oncology with experience in nivolumab-ipilimumab combination management and irAE treatment",
+    "Neuro-oncology and SRS capability for brain metastases"
+  ],
+  "keyFacilities": [
+    "NCI-designated comprehensive cancer centers with dedicated melanoma programs",
+    "Surgical oncology centers certified in SLNB technique",
+    "Radiation oncology centers with SRS/SBRT for oligometastatic disease",
+    "Academic melanoma clinics with clinical trial access"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Apply broad-spectrum SPF 30+ sunscreen to all sun-exposed skin at least 15 minutes before outdoor exposure and reapply every 2 hours; SPF 50+ for prolonged or high-UV-index activities.",
+    "Avoid indoor tanning completely: a single tanning session raises melanoma risk; first use before age 35 raises risk by 59-75%.",
+    "Seek shade between 10 a.m. and 4 p.m. when UV index exceeds 3; use UV-protective clothing (UPF 50+), wide-brim hats, and UV-blocking sunglasses.",
+    "Perform a monthly self-examination of all skin surfaces including the scalp, between toes, and under nails using the ABCDE criteria.",
+    "Schedule annual full-body skin examination with a dermatologist, particularly if you have multiple atypical nevi, family history of melanoma, or prior dysplastic nevi.",
+    "Protect infants and children from sunburn — childhood UV exposures disproportionately contribute to lifetime melanoma risk."
+  ],
+
+  "lifestyleModifications": [
+    "Perform monthly skin self-examination; use a full-length mirror and a hand mirror to examine all skin surfaces; report any changing, new, or unusual lesion within 2 weeks.",
+    "Carry a sunscreen of SPF 30+ in your bag or car for unplanned sun exposure during recovery and lifelong surveillance.",
+    "Report any new neurological symptoms, visual changes, or rapidly growing lumps promptly during immunotherapy or BRAF-MEK therapy.",
+    "Manage immunotherapy-related fatigue with regular structured low-intensity exercise and maintain a regular sleep schedule.",
+    "Avoid self-medicating skin rash during checkpoint inhibitor therapy — some rashes are immune-related adverse events requiring systemic steroids, not topical moisturizer."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein, calorie-dense foods to maintain weight during checkpoint inhibitor-induced colitis and systemic inflammation",
+      "Antioxidant-rich foods (berries, dark leafy vegetables, cruciferous vegetables) as a general healthy diet pattern; no proven melanoma-specific benefit",
+      "Adequate hydration to support immunotherapy clearance and prevent nephrotoxicity",
+      "Vitamin D-replete diet or supplementation (800-1,000 IU/day) given sun avoidance in melanoma patients; low vitamin D is associated with worse melanoma outcomes in observational studies"
+    ],
+    "avoid": [
+      "Alcohol in excess during BRAF-MEK inhibitor therapy given hepatotoxicity risk",
+      "NSAID overuse in patients on ipilimumab-nivolumab due to compounded GI mucosal injury",
+      "High-fat meals before oral BRAF inhibitors like vemurafenib, which significantly increases absorption and peak blood levels"
+    ]
+  },
+  "exerciseGuidelines": "Regular moderate exercise (150 minutes per week) is recommended during and after melanoma treatment. For patients on checkpoint inhibitors, avoid vigorous exercise during active immune-related myositis or arthritis. Use sun-protective clothing, sunscreen, and shaded outdoor exercise times to prevent UV exposure during surveillance.",
+
+  "dailyManagement": [
+    "Apply broad-spectrum SPF 30+ sunscreen to all sun-exposed skin every morning as part of daily routine.",
+    "Inspect surgical excision scars and draining lymph node areas monthly for new pigmented lesions or nodules.",
+    "Take BRAF-MEK inhibitors at consistent times; dabrafenib is taken fasted or with a light meal; trametinib is taken once daily fasted.",
+    "Report diarrhea lasting more than 24 hours to the oncology team if on combination checkpoint inhibitor — colitis can progress rapidly to perforation.",
+    "Attend scheduled surveillance imaging (CT or MRI) at 3-6 month intervals during the first 3 years after stage III disease."
+  ],
+
+  "prognosis": "Prognosis is stage-dependent per AJCC 8th edition. Stage IA (Breslow ≤0.8 mm, no ulceration, SLNB negative): 5-year melanoma-specific survival 99%. Stage IB: 97%. Stage IIA: 94%. Stage IIB: 87%. Stage IIC (≥4 mm ulcerated): 82%. Stage IIIA: 93%; stage IIIB: 83%; stage IIIC: 69%; stage IIID: 32%. Stage IV: historically 5-year OS 10-15%, transformed by modern therapy. With nivolumab-ipilimumab combination, 5-year OS is 52% (all-comers), with a plateau suggesting durable control in a subset. BRAF-MEK-targeted therapy produces median OS of 29-36 months in BRAF V600-mutant stage IV disease. Normal LDH is the strongest single favorable prognostic factor in stage IV. Patients achieving complete response to immunotherapy have a 5-year PFS exceeding 90%.",
+
+  "recoveryTimeline": "WLE healing: 2-4 weeks for wound closure; full recovery 4-6 weeks. SLNB: same timeline, with arm or leg edema possible for 2-3 months. Adjuvant immunotherapy (12 months): ongoing immune-related side-effect monitoring. Systemic therapy response: first CT assessment at 12 weeks; clinical progression often detectable by 6-8 weeks if treatment is failing.",
+
+  "complications": [
+    "Brain metastases developing in 40-50% of stage IV patients, causing seizures, focal deficits, or cognitive changes — managed with SRS, corticosteroids, and continuation or escalation of systemic therapy.",
+    "Immune-related adverse events (irAEs) from checkpoint inhibitors: pneumonitis (3-5%), colitis (10-15%), hepatitis (5-10%), endocrinopathies (thyroiditis 10%, adrenalitis 1-2%) — most require steroids, some require permanent immunosuppression.",
+    "Cutaneous toxicity from BRAF inhibitors: squamous cell carcinoma and keratoacanthoma arise in approximately 20% of patients on vemurafenib monotherapy through paradoxical MAP-kinase activation in wild-type cells; prevented by MEK inhibitor co-administration.",
+    "Lymphedema after completion lymph node dissection (CLND): occurs in 20-30% of patients with axillary or inguinal CLND; significantly less common when CLND is omitted as per MSLT-II standard.",
+    "Local recurrence and satellite/in-transit metastases in 3-5% of stage IIB-III patients; treated with re-excision, T-VEC, or systemic therapy escalation.",
+    "Secondary primary melanoma in up to 9% of melanoma survivors over 20 years — requires lifelong annual full-body skin surveillance."
+  ],
+
+  "supportResources": [
+    { "name": "Melanoma Research Foundation (MRF)", "url": "https://www.melanoma.org/", "description": "Patient education, clinical trial database, community forums, and a helpline staffed by melanoma nurse educators." },
+    { "name": "Aim at Melanoma Foundation", "url": "https://www.aimatmelanoma.org/", "description": "State-by-state melanoma legislative advocacy, patient support, and education on early detection." },
+    { "name": "American Academy of Dermatology — Melanoma", "url": "https://www.aad.org/public/diseases/skin-cancer/types/common/melanoma", "description": "Authoritative patient-facing information on ABCDE criteria, sun protection, and melanoma treatment." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "basal-cell-carcinoma", "name": "Basal Cell Carcinoma", "keyDifference": "Basal cell carcinoma (BCC) is the most common skin cancer, arising from basal keratinocytes, not melanocytes. BCC rarely metastasizes and presents as a pearly papule or ulcerated nodule without brown pigmentation. Melanoma may be amelanotic and mimic BCC, but dermoscopy and biopsy distinguish them definitively." },
+    { "slug": "melanoma-in-situ", "name": "Melanoma In Situ (Lentigo Maligna)", "keyDifference": "Melanoma in situ (stage 0) has malignant melanocytes confined entirely to the epidermis with no dermal invasion; it is managed with 5 mm margin WLE and carries no metastatic risk. Invasive melanoma has breached the basement membrane and is staged by Breslow depth, requiring SLNB and potentially adjuvant therapy." },
+    { "slug": "oral-cancer", "name": "Oral Cancer", "keyDifference": "Mucosal melanoma in the oral cavity must be distinguished from squamous cell carcinoma, which is far more common in the mouth. Melanoma in the oral mucosa appears as a dark brown or black pigmented patch; SCC appears as a white, red, or ulcerated lesion. Biopsy with IHC (S100, HMB-45, Melan-A positive for melanoma) is definitive." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "basal-cell-carcinoma", "name": "Basal Cell Carcinoma" },
+    { "slug": "melanoma-in-situ", "name": "Melanoma In Situ" },
+    { "slug": "depression", "name": "Depression" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "basal-cell-carcinoma", "name": "Basal Cell Carcinoma", "relevance": "Both are UV-related skin cancers managed by dermatology; patients with BCC have elevated risk of developing melanoma and vice versa." },
+    { "slug": "melanoma-in-situ", "name": "Melanoma In Situ", "relevance": "The precursor or earliest stage of invasive melanoma; recognition and treatment prevent progression to invasive disease." },
+    { "slug": "renal-cell-carcinoma", "name": "Renal Cell Carcinoma", "relevance": "Both are highly responsive to checkpoint inhibitor immunotherapy; shared treatment principles and overlapping immunotherapy toxicity profiles." },
+    { "slug": "lung-cancer", "name": "Lung Cancer", "relevance": "A major site of melanoma metastasis and a separate primary cancer sharing immunotherapy treatment platforms (pembrolizumab, nivolumab)." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What does melanoma look like?",
+      "answer": "Melanoma typically presents as an asymmetric, irregularly bordered mole with multiple shades of brown, black, red, or white, usually larger than 6 mm. Use the ABCDE rule: Asymmetry, Border irregularity, Color variation, Diameter over 6 mm, and Evolution (change over weeks). About 5-10% of melanomas are amelanotic (pink or flesh-colored) without pigment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the ABCDE rule for melanoma?",
+      "answer": "The ABCDE rule screens pigmented skin lesions: A — Asymmetry (one half unlike the other); B — Border irregularity; C — Color variation within a lesion; D — Diameter over 6 mm; E — Evolution (any change in size, shape, or color). Any lesion meeting one or more criteria should be evaluated by a dermatologist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for melanoma?",
+      "answer": "5-year melanoma-specific survival: stage IA 99%, stage IIB 87%, stage IIIB 83%, stage IIID 32%. Stage IV overall: historically 10-15%, now 52% at 5 years with nivolumab-ipilimumab combination immunotherapy. Survival is highest when melanoma is detected early.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can melanoma be cured?",
+      "answer": "Yes. Early-stage melanoma (stages I-IIA) is cured in 87-99% of patients with surgery alone. Stage III is cured in 32-93% depending on substage with surgery plus adjuvant immunotherapy. Stage IV is rarely cured, but durable complete responses lasting over 5 years occur in 15-20% of patients treated with combination immunotherapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes melanoma?",
+      "answer": "The primary cause is UV radiation from sun exposure and tanning beds, which creates DNA mutations in melanocytes. Other risk factors include fair skin, multiple atypical moles, family history, immunosuppression, and germline CDKN2A mutations. Acral and mucosal melanomas are not UV-driven.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is melanoma treated?",
+      "answer": "Early melanoma is treated with surgery (wide local excision). Stage III benefits from sentinel lymph node biopsy and adjuvant immunotherapy (pembrolizumab, nivolumab) or BRAF-MEK inhibitors if BRAF V600-mutant. Stage IV is treated with combination immunotherapy (nivolumab plus ipilimumab) or BRAF-MEK targeted therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is melanoma hereditary?",
+      "answer": "About 5-10% of melanomas occur in families with germline CDKN2A mutations. First-degree relatives of melanoma patients have approximately 2-fold elevated risk. Genetic testing for CDKN2A is appropriate in families with 3 or more affected first-degree relatives.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can melanoma spread to the brain?",
+      "answer": "Yes. Brain metastases develop in 40-50% of stage IV melanoma patients. Some melanoma drugs, including BRAF-MEK inhibitors and checkpoint inhibitors, have intracranial activity. Stereotactic radiosurgery (SRS) achieves 80-90% local control for 1-3 lesions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is BRAF-positive melanoma?",
+      "answer": "BRAF-positive melanoma has a V600E or V600K mutation in the BRAF gene, present in approximately 50% of cutaneous melanomas. Targeted therapy with BRAF-MEK inhibitor combinations (dabrafenib-trametinib, encorafenib-binimetinib) produces response rates of 60-70% and median PFS of 11-15 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I do a skin self-examination for melanoma?",
+      "answer": "Use a full-length mirror and a handheld mirror in good light. Examine your face, scalp (use a comb or blow dryer), neck, chest, abdomen, arms (including underarms and between fingers), back, buttocks, genitals, legs (including between toes), and soles. Perform monthly and report any ABCDE-positive or changing lesion.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is immunotherapy for melanoma?",
+      "answer": "Immunotherapy uses checkpoint inhibitors (pembrolizumab, nivolumab, ipilimumab) that block PD-1, PD-L1, or CTLA-4 to unleash the immune system against melanoma cells. The nivolumab-ipilimumab combination achieves 5-year overall survival of 52% in advanced melanoma.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does sunscreen prevent melanoma?",
+      "answer": "Yes. Regular daily sunscreen use reduces melanoma incidence by approximately 50% in randomized trials. A Queensland study showed daily SPF 16+ sunscreen use over 4.5 years halved the melanoma incidence compared with discretionary use over 15 years of follow-up (Green et al, J Clin Oncol 2011).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can melanoma appear without a mole?",
+      "answer": "Yes. About 70-75% of melanomas arise in normal skin without a pre-existing mole. Any new, changing, or unusual pigmented or non-pigmented lesion should be evaluated by a dermatologist, not only lesions arising within existing moles.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between melanoma and a regular mole?",
+      "answer": "A benign mole is symmetric, has a smooth regular border, is one uniform shade of brown, is usually smaller than 6 mm, and does not change over time. Melanoma shows the ABCDE features: asymmetry, irregular border, multiple colors, diameter over 6 mm, and evolution. Any mole with even one ABCDE sign should be assessed by a dermatologist.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does melanoma treatment take?",
+      "answer": "WLE is outpatient, same-day surgery. SLNB adds 1-3 days of hospital stay. Adjuvant immunotherapy lasts 12 months with infusions every 3-6 weeks. Oral BRAF-MEK inhibitors are taken daily indefinitely or until progression. First response assessment with imaging is at 12 weeks.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Melanoma (skin cancer)",
+  "regionalNames": [
+    { "name": "त्वचा कैंसर (मेलानोमा)", "region": "India", "language": "Hindi" },
+    { "name": "Mélanome", "region": "France", "language": "French" }
+  ],
+  "searchTags": [
+    "melanoma",
+    "melanoma symptoms",
+    "skin cancer melanoma",
+    "ABCDE melanoma",
+    "melanoma mole",
+    "melanoma treatment",
+    "BRAF melanoma",
+    "melanoma immunotherapy",
+    "melanoma stages",
+    "acral lentiginous melanoma",
+    "nodular melanoma",
+    "melanoma survival rate"
+  ],
+  "symptomKeywords": [
+    "changing mole ABCDE",
+    "dark spot skin bleeding",
+    "new mole growing fast",
+    "irregular mole color",
+    "dark stripe under nail",
+    "black growth on skin"
+  ],
+
+  "metaTitle": "Melanoma: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Melanoma: the most lethal skin cancer, from melanocytes. ABCDE signs, Breslow staging, BRAF targeted therapy, immunotherapy, and 5-year survival data reviewed.",
+
+  "keywords": [
+    "melanoma",
+    "melanoma symptoms",
+    "melanoma ABCDE rule",
+    "melanoma treatment immunotherapy",
+    "BRAF melanoma dabrafenib",
+    "melanoma survival rate stages",
+    "melanoma diagnosis biopsy",
+    "melanoma prevention sunscreen",
+    "nodular melanoma",
+    "stage IV melanoma",
+    "melanoma in situ vs invasive",
+    "nivolumab ipilimumab melanoma"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Wolchok JD, Chiarion-Sileni V, Gonzalez R, et al. 2022. Long-term outcomes with nivolumab plus ipilimumab or nivolumab alone versus ipilimumab in patients with advanced melanoma. J Clin Oncol 40(2):127-137.", "url": "https://pubmed.ncbi.nlm.nih.gov/34614370/", "accessedDate": "2026-05-14" },
+    { "title": "Long GV, Hauschild A, Santinami M, et al. 2017. Adjuvant dabrafenib plus trametinib in stage III BRAF-mutated melanoma (COMBI-AD). N Engl J Med 377(19):1813-23.", "url": "https://pubmed.ncbi.nlm.nih.gov/28891408/", "accessedDate": "2026-05-14" },
+    { "title": "National Comprehensive Cancer Network. 2024. NCCN Clinical Practice Guidelines in Oncology: Melanoma — Cutaneous v3.2024.", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1457", "accessedDate": "2026-05-14" },
+    { "title": "Dummer R, Ascierto PA, Gogas HJ, et al. 2018. Encorafenib plus binimetinib versus vemurafenib or encorafenib in patients with BRAF-mutant melanoma (COLUMBUS): a multicentre, open-label, randomised phase 3 trial. Lancet Oncol 19(5):603-615.", "url": "https://pubmed.ncbi.nlm.nih.gov/29573941/", "accessedDate": "2026-05-14" },
+    { "title": "American Cancer Society. 2024. Cancer Facts and Figures 2024. Atlanta: ACS.", "url": "https://www.cancer.org/research/cancer-facts-statistics/all-cancer-facts-figures/2024-cancer-facts-figures.html", "accessedDate": "2026-05-14" },
+    { "title": "Michielin O, van Akkooi ACJ, Ascierto PA, et al. (ESMO Guidelines Committee). 2019. Cutaneous melanoma: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. Ann Oncol 30(12):1884-1901.", "url": "https://pubmed.ncbi.nlm.nih.gov/31566661/", "accessedDate": "2026-05-14" },
+    { "title": "Bray F, Laversanne M, Sung H, et al. 2024. Global cancer statistics 2022: GLOBOCAN. CA Cancer J Clin 74(3):229-263.", "url": "https://pubmed.ncbi.nlm.nih.gov/38572751/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

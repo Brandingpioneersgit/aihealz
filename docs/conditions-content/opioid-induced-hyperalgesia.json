@@ -1,0 +1,373 @@
+{
+  "_meta": {
+    "slug": "opioid-induced-hyperalgesia",
+    "tier": 1,
+    "headTerm": "opioid-induced hyperalgesia",
+    "longTailKeywords": [
+      "opioid induced hyperalgesia symptoms",
+      "OIH treatment",
+      "opioids making pain worse",
+      "opioid hyperalgesia vs tolerance",
+      "paradoxical pain opioids",
+      "opioid dose reduction hyperalgesia",
+      "OIH vs opioid tolerance",
+      "opioid-induced hyperalgesia management",
+      "NMDA receptor pain opioids"
+    ],
+    "primarySpecialty": "Pain Medicine & Palliative Care",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Opioid-Induced Hyperalgesia: Symptoms, Causes & Treatment",
+  "specialistType": "Pain Medicine & Palliative Care",
+
+  "heroOverview": "Opioid-induced hyperalgesia (OIH) is a paradoxical state of increased pain sensitivity caused by prolonged opioid exposure, in which escalating opioid doses intensify rather than relieve pain. The mechanism involves upregulation of central sensitization pathways — particularly NMDA receptor activation and descending facilitation in the spinal cord — that override opioid analgesia. OIH is distinct from opioid tolerance, which reflects pharmacological adaptation, not hyperalgesia. Prevalence estimates vary widely (3-35% of long-term opioid users), but the condition is likely under-recognized in pain clinic settings. Recognition is clinically urgent because the appropriate response to OIH is opioid dose reduction or rotation, not escalation.",
+
+  "keyStats": {
+    "prevalence": "Estimated 3-35% of patients on long-term opioid therapy; prevalence data are limited by absence of a standardized clinical diagnostic test",
+    "demographics": "Observed in patients on any opioid class; most studied in methadone-maintenance patients and post-surgical opioid users; women may be more susceptible based on experimental pain data",
+    "avgAge": "Can occur at any age; most commonly diagnosed in adults aged 30-60 on chronic opioid therapy for non-cancer pain",
+    "globalCases": "The US prescribes approximately 70% of global opioid supply; OIH is most prevalent where high-dose long-term opioid therapy is most common"
+  },
+
+  "definition": "Opioid-induced hyperalgesia (OIH; ICD-10: F11.988 — opioid use disorder, other specified complication) is a neuroplastic syndrome in which sustained opioid receptor activation produces a paradoxical increase in pain sensitivity. Clinically, patients on escalating opioid doses report pain that spreads beyond the original pain territory, becomes diffuse or migratory, and increases in intensity despite dose escalation — the opposite of the expected analgesic effect. OIH differs from opioid tolerance, where the same dose produces less analgesia over time (pharmacodynamic adaptation) but pain does not worsen with dose escalation. In OIH, dose escalation actively worsens the clinical state. The underlying neurobiology involves NMDA receptor sensitization of second-order neurons in the dorsal horn, downregulation of mu-opioid receptors through desensitization, and activation of spinal dynorphin and glial cell pathways that enhance nociceptive transmission. High-dose opioids, long duration of treatment, remifentanil infusions, and intrathecal morphine carry the highest OIH risk. Pain medicine and addiction medicine specialists diagnose and manage OIH, which requires interdisciplinary input including pharmacy, psychology, and physical therapy.",
+
+  "typesClassification": [
+    { "type": "Acute OIH from high-dose opioid infusion", "description": "Most clearly documented in patients receiving high-dose remifentanil intraoperatively; paradoxical post-operative hyperalgesia and increased opioid requirements develop within hours of remifentanil infusion. Also seen with rapidly escalated perioperative opioid doses. Typically resolves over days to weeks after opioid discontinuation." },
+    { "type": "Chronic OIH from long-term oral or transdermal opioids", "description": "Develops over months to years of sustained opioid use in chronic pain patients. Presents as diffuse pain beyond the original pain territory, with allodynia and spontaneous pain. Often conflated with undertreated pain, leading to counterproductive dose escalation." },
+    { "type": "OIH in methadone-maintained patients", "description": "The most extensively studied form. Methadone-maintained patients exhibit significantly lower cold-pressor pain tolerance and higher mechanical hyperalgesia than opioid-naive controls. The NMDA antagonist activity of methadone may partially mitigate but does not prevent OIH at high doses." }
+  ],
+
+  "primarySymptoms": [
+    "Diffuse, spreading pain extending well beyond the original anatomical pain territory — in contrast to opioid tolerance, where pain remains localized but analgesic response diminishes.",
+    "Worsening pain with increasing opioid dose — dose escalation produces either no improvement or a clear paradoxical worsening of pain intensity.",
+    "Generalized cutaneous allodynia — pain elicited by normally non-painful stimuli such as light clothing contact, hair brushing, or mild temperature changes.",
+    "Increased sensitivity to heat, cold, and mechanical stimuli on quantitative sensory testing, with lower thresholds than opioid-naive individuals.",
+    "Temporal summation (wind-up) on repeated stimulation — each identical stimulus feels increasingly painful, reflecting spinal sensitization.",
+    "Migratory or poorly localized deep aching pain that does not follow nerve root or peripheral nerve distributions.",
+    "Spontaneous pain between doses or at fixed opioid plasma levels that is inconsistent with undertreatment.",
+    "Psychological distress, anxiety, and hypervigilance to pain that develop progressively with the hyperalgesic syndrome.",
+    "Functional deterioration despite opioid dose escalation — loss of capacity to perform activities of daily living that the opioid was originally prescribed to maintain."
+  ],
+
+  "earlyWarningSigns": [
+    "Pain spreading outside the original distribution within weeks or months of starting or escalating opioid therapy.",
+    "Repeated requests for dose escalation with diminishing functional benefit and no evidence of disease progression explaining the worsening.",
+    "Spontaneous pain developing at previously pain-free sites in a patient on stable high-dose opioid therapy.",
+    "Increasing anxiety, hypervigilance to pain, and decreased pain coping in a patient on chronic opioids — precedes full OIH presentation.",
+    "Report of allodynia to light touch or temperature in a patient whose original pain was mechanical or nociceptive in character."
+  ],
+
+  "emergencySigns": [
+    "Opioid overdose presenting as unresponsiveness and respiratory depression below 8 breaths per minute — requires immediate naloxone and emergency services, particularly relevant in patients receiving escalating doses for suspected OIH.",
+    "Acute serotonin syndrome from serotonergic opioids (tramadol, meperidine) combined with other serotonergic drugs — presents with agitation, hyperthermia, clonus, and autonomic instability.",
+    "Precipitated opioid withdrawal during abrupt dose reduction implemented without specialist oversight — severe withdrawal in dependent patients requires supervised, gradual taper."
+  ],
+
+  "causes": [
+    {
+      "cause": "NMDA receptor sensitization of dorsal horn neurons",
+      "description": "Prolonged opioid receptor activation upregulates NMDA receptor function in dorsal horn second-order neurons through phosphorylation and receptor trafficking. Activated NMDA receptors amplify excitatory nociceptive input, lower the threshold for pain signaling, and sustain central sensitization independent of ongoing peripheral nociception. This is the principal molecular mechanism of OIH."
+    },
+    {
+      "cause": "Upregulation of descending pain-facilitating pathways",
+      "description": "Sustained opioid exposure activates spinal dynorphin, a neuropeptide that facilitates nociceptive transmission via bradykinin receptors. Simultaneously, descending serotonergic and noradrenergic pathways that normally inhibit pain are suppressed, shifting the balance toward facilitation. These changes outlast the opioid exposure period."
+    },
+    {
+      "cause": "Mu-opioid receptor desensitization and internalization",
+      "description": "Chronic mu-opioid receptor activation leads to receptor phosphorylation by GRK enzymes, beta-arrestin recruitment, and receptor internalization. Fewer surface receptors are available for analgesic signaling, while intracellular signaling through adenylyl cyclase superactivation drives hyperexcitability — contributing to both tolerance and hyperalgesia."
+    },
+    {
+      "cause": "Glial cell activation and neuroinflammation",
+      "description": "Opioids activate spinal microglia and astrocytes through toll-like receptor 4 (TLR4) signaling, independent of classical opioid receptors. Activated glia release pro-inflammatory cytokines (IL-1β, TNF-α, IL-6) and glutamate, amplifying central sensitization and opposing opioid analgesia."
+    },
+    {
+      "cause": "High-dose or rapidly escalated opioid exposure",
+      "description": "The risk of OIH is dose-dependent. Patients receiving morphine equivalents above 120 mg/day are at substantially higher risk than those on low doses. Rapid dose escalation, as in perioperative remifentanil infusions, produces the most acute and severe hyperalgesia. Methadone and fentanyl carry similar OIH risk to morphine at equianalgesic doses."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "High opioid dose (>120 mg oral morphine equivalents/day)", "category": "modifiable", "description": "Dose-dependent risk; patients on over 200 mg OME/day have significantly higher rates of diffuse hyperalgesia on quantitative sensory testing compared with low-dose opioid users and opioid-naive controls." },
+    { "factor": "Long duration of opioid therapy", "category": "non-modifiable", "description": "Risk accumulates over months to years of treatment. Most experimental evidence of OIH in clinical populations comes from patients treated for 1-5 or more years." },
+    { "factor": "Intraoperative remifentanil infusion", "category": "non-modifiable", "description": "Remifentanil's ultra-short half-life and high potency make it the opioid most consistently associated with acute post-operative OIH. Post-operative pain scores and opioid requirements are higher after remifentanil-based anesthesia in multiple RCTs." },
+    { "factor": "Genetic variation in OPRM1 and COMT genes", "category": "genetic", "description": "Polymorphisms in the mu-opioid receptor gene (OPRM1 A118G) and catechol-O-methyltransferase gene (COMT) influence pain sensitivity and the degree of central sensitization induced by opioids, with some variants conferring higher OIH susceptibility." },
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women show lower pain thresholds on experimental pain testing during opioid exposure compared with men in several studies, suggesting greater susceptibility to OIH, though clinical data are less consistent." },
+    { "factor": "Pre-existing central sensitization syndromes", "category": "non-modifiable", "description": "Patients with fibromyalgia, chronic widespread pain, or complex regional pain syndrome have already-upregulated central sensitization pathways, making OIH more likely to develop and more severe when it occurs." }
+  ],
+
+  "affectedDemographics": [
+    "Chronic non-cancer pain patients on long-term opioids: the largest clinical population at risk; estimates suggest 3-35% of this group shows evidence of OIH on quantitative sensory testing.",
+    "Methadone maintenance therapy patients: extensively studied, with documented lower pain thresholds and higher cold-pressor pain scores than controls — OIH is a recognized clinical challenge in addiction medicine.",
+    "Post-operative patients exposed to intraoperative remifentanil: measurably higher post-operative pain scores and opioid requirements in multiple controlled surgical trials.",
+    "Patients with cancer on escalating opioid doses: OIH may complicate end-of-life pain management and contribute to opioid rotation strategies."
+  ],
+
+  "diagnosisOverview": "OIH has no single definitive diagnostic test. Diagnosis is clinical and requires the integration of history, pain characteristics, opioid history, and quantitative sensory testing. The cardinal clinical features are: (1) worsening pain despite increasing opioid dose, (2) pain spreading beyond the original territory, and (3) diffuse allodynia or hyperalgesia. A key diagnostic maneuver is a supervised, gradual opioid dose reduction — if pain decreases as opioid dose falls, this provides strong evidence for OIH rather than undertreated nociceptive pain. Quantitative sensory testing (QST) — measuring pressure pain thresholds, cold-pressor pain tolerance, and temporal summation — formally quantifies central sensitization and is available in specialized pain centers. However, QST is not required for clinical diagnosis. Differential diagnosis must exclude disease progression (new metastasis, fracture, or infection worsening the original pain condition), opioid tolerance (same dose producing less analgesia without pain spreading), and opioid withdrawal-mediated hyperalgesia (occurring only during dose reduction). Psychological assessment is essential because anxiety, depression, and catastrophizing both mimic OIH features and amplify central sensitization, complicating the clinical picture. A urine toxicology screen confirms opioid compliance and excludes illicit drug use that may alter the clinical picture.",
+
+  "diagnosticTests": [
+    { "test": "Supervised opioid dose reduction trial", "purpose": "The most clinically practical diagnostic test — pain reduction with dose reduction strongly supports OIH rather than undertreated pain", "whatToExpect": "The prescribing physician reduces the opioid dose by 10-25% per week under close monitoring. The patient records pain scores daily. Improvement with reduction confirms OIH; worsening points toward undertreated nociceptive pain." },
+    { "test": "Quantitative sensory testing (QST)", "purpose": "Formally measures pressure pain thresholds, cold-pressor pain tolerance, and temporal summation to quantify central sensitization and hyperalgesia", "whatToExpect": "A series of standardized pressure and temperature stimuli applied to specific body sites while the patient rates pain and discomfort. Takes 30-60 minutes in a specialist pain testing laboratory. No blood draw required." },
+    { "test": "Urine toxicology screen", "purpose": "Confirms opioid compliance, identifies unexpected opioids or other drugs (benzodiazepines, illicit substances) that could alter the pain picture", "whatToExpect": "Standard urine specimen collection. Immunoassay results in minutes; confirmatory LC-MS/MS testing takes 2-5 days. Part of standard opioid monitoring protocol." },
+    { "test": "Opioid risk stratification assessment (ORT, DIRE)", "purpose": "Quantifies risk for opioid misuse and identifies patients requiring more intensive monitoring during dose reduction", "whatToExpect": "A validated questionnaire administered by the prescribing clinician, taking 5-10 minutes. Higher scores indicate higher risk of aberrant drug behavior during opioid tapering." },
+    { "test": "Psychological assessment (PHQ-9, PCS, Central Sensitization Inventory)", "purpose": "Quantifies depression, catastrophizing, and central sensitization-related somatic symptoms that overlap with OIH and influence treatment response", "whatToExpect": "Self-administered validated questionnaires, 10-15 minutes total. Central Sensitization Inventory (CSI) scores above 40 suggest clinically significant central sensitization." }
+  ],
+
+  "treatmentOverview": "The primary treatment for OIH is controlled opioid dose reduction or rotation. Counterintuitively, reducing opioid dose in OIH typically improves rather than worsens pain, because it allows central sensitization pathways to downregulate. The CDC 2022 Clinical Practice Guideline recommends a slow taper of 10% per week or slower for patients on long-term opioids, with patient education about expected initial increases in pain during the taper. Opioid rotation — switching from the current opioid to a different one at a reduced equianalgesic dose (typically 25-50% dose reduction at the time of rotation) — exploits incomplete cross-tolerance and may restore analgesia while reducing central sensitization. Methadone has theoretical advantages as a rotation target because its NMDA antagonist property may reduce central sensitization, but its complex pharmacokinetics require specialist prescribing. NMDA receptor antagonists — ketamine (low-dose intravenous or oral) and memantine — reduce central sensitization and have shown benefit in small trials of OIH. Gabapentinoids and duloxetine treat the central sensitization component without adding to opioid burden. Non-pharmacological multimodal pain management — cognitive behavioral therapy, mindfulness, and physical rehabilitation — is essential to address the psychological dimensions of OIH and provide non-opioid pain management strategies during taper. The goal of OIH management is not zero opioids in all patients but the lowest dose that provides functional benefit without driving hyperalgesia.",
+
+  "medicalTreatments": [
+    { "name": "Gradual opioid dose reduction (10% per week or slower)", "description": "The cornerstone of OIH treatment. Supervised reduction at a rate the patient can tolerate, typically 5-10% per week, guided by daily pain and functional scoring. Pre-taper education about expected initial pain increase improves adherence. Alpha-2 agonists (clonidine) manage withdrawal symptoms during taper.", "effectiveness": "In prospective studies, 30-70% of patients report improved pain following successful taper; functional gains documented in multiple studies" },
+    { "name": "Opioid rotation with 25-50% dose reduction", "description": "Switch to a different opioid using equianalgesic tables, applying a 25-50% dose reduction to account for incomplete cross-tolerance. Rotation to buprenorphine is increasingly favored because buprenorphine's partial agonist and kappa antagonist properties may reduce central sensitization.", "effectiveness": "Pain improvement in 50-70% of patients completing opioid rotation in observational studies; buprenorphine rotation reduces pain and opioid burden in multiple case series" },
+    { "name": "Ketamine (low-dose subcutaneous or oral, 0.1-0.5 mg/kg/day)", "description": "NMDA receptor antagonist that directly targets the central sensitization mechanism of OIH. Sub-anesthetic ketamine infusions or oral R,S-ketamine reduce central sensitization, lower analgesic requirements, and may facilitate opioid tapering. Specialist pain clinic prescribing required.", "effectiveness": "Short-term pain reduction in 50-60% in RCTs; NMDA antagonism specifically targets OIH mechanisms; long-term data limited" },
+    { "name": "Gabapentin (300-1,200 mg three times daily) or pregabalin (75-300 mg twice daily)", "description": "Alpha-2-delta ligands reduce central sensitization and neuropathic pain amplification without adding opioid burden. Particularly useful during opioid taper to manage the sensitization component and facilitate dose reduction.", "effectiveness": "30-50% reduction in neuropathic pain component; NNT 4-6 for 50% pain relief; reduces opioid requirements in post-operative OIH trials" },
+    { "name": "Buprenorphine (sublingual or transdermal)", "description": "Partial mu-agonist and kappa-opioid antagonist. Kappa receptor blockade reduces dysphoria and may directly oppose OIH mechanisms. Increasingly used as a rotation target from full agonist opioids in OIH, with published protocols for rotation from morphine and oxycodone.", "effectiveness": "Multiple case series report pain reduction and improved function after rotation from full agonists to buprenorphine in OIH patients" },
+    { "name": "Non-steroidal anti-inflammatory drugs (NSAIDs) or acetaminophen (step-down analgesia)", "description": "Provide non-opioid analgesia during opioid taper, reducing the analgesic gap. NSAIDs also reduce prostaglandin-mediated spinal sensitization. Use with caution in renal impairment or gastrointestinal risk.", "effectiveness": "Effective non-opioid analgesia reducing need for opioid rescue during taper; standard adjunct in multimodal pain protocols" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Cognitive behavioral therapy (CBT) for pain", "description": "Addresses catastrophizing, fear-avoidance, and pain hypervigilance — psychological mechanisms that amplify central sensitization and complicate OIH management. Meta-analyses show CBT reduces pain intensity by 0.5-1.0 SD and improves function in chronic pain, including during opioid tapering." },
+    { "name": "Mindfulness-based stress reduction (MBSR)", "description": "Structured 8-week program reducing pain catastrophizing and improving central pain modulation. RCT evidence shows 30% reduction in pain interference scores; complementary to pharmacological OIH management." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "cancer-pain-management",
+    "neuropathic-pain"
+  ],
+
+  "whySeeSpecialist": "A pain medicine specialist should be involved when opioid dose escalation fails to improve pain, when pain spreads beyond its original territory despite opioids, or when opioid dose is above 90-120 mg OME/day. Opioid rotation and ketamine protocols require specialist prescribing and monitoring.",
+  "doctorSelectionGuide": "Seek a board-certified pain medicine physician (ABPM or ABA subspecialty) with expertise in opioid management, quantitative sensory testing, and complex opioid tapering protocols. Addiction medicine co-management is appropriate when opioid use disorder is present alongside OIH.",
+
+  "hospitalCriteria": [
+    "Access to quantitative sensory testing laboratory",
+    "Inpatient or intensive outpatient opioid tapering service",
+    "Low-dose ketamine infusion capability",
+    "Multidisciplinary pain rehabilitation program",
+    "Pain psychology service integrated with pharmacological management"
+  ],
+  "keyFacilities": [
+    "Multidisciplinary pain clinics at academic medical centers",
+    "Addiction medicine programs with opioid rotation expertise",
+    "Interventional pain practices with ketamine infusion capability",
+    "Comprehensive cancer centers with palliative pain medicine teams"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Prescribe opioids at the lowest effective dose for the shortest necessary duration; avoid escalation beyond 90 mg OME/day for chronic non-cancer pain.",
+    "Reassess opioid efficacy and function at each visit using validated tools — if dose escalation does not improve function, investigate OIH before further escalation.",
+    "Use multimodal analgesia in perioperative settings — regional anesthesia, NSAIDs, ketamine adjuncts — to reduce the opioid dose required and minimize post-operative OIH risk.",
+    "Avoid intraoperative remifentanil infusions without adjunctive NMDA antagonism (ketamine, magnesium) when possible.",
+    "Screen for and address psychological risk factors for central sensitization before initiating long-term opioid therapy."
+  ],
+
+  "lifestyleModifications": [
+    "Engage in regular moderate aerobic exercise, which reduces central sensitization through endogenous analgesic mechanisms; even 20-30 minutes of walking daily produces measurable pain threshold improvements.",
+    "Practice daily mindfulness or relaxation techniques to reduce pain catastrophizing and hypervigilance — both perpetuate central sensitization.",
+    "Maintain a structured sleep schedule and optimize sleep hygiene; poor sleep exacerbates central sensitization and lowers pain thresholds.",
+    "Avoid alcohol, which disrupts sleep architecture and may worsen central sensitization, and cannabis, which has variable and unpredictable effects on opioid pain processing.",
+    "Keep a pain and medication diary to track opioid use patterns and identify dose-pain relationships — objective documentation supports the OIH diagnosis and taper planning."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Anti-inflammatory foods — omega-3-rich fatty fish, berries, turmeric, and leafy greens — reduce neuroinflammatory load contributing to central sensitization",
+      "High-fiber diet to prevent constipation during opioid use and tapering",
+      "Adequate hydration (1.5-2 L water daily) to support renal opioid clearance and general wellbeing",
+      "Magnesium-rich foods (nuts, seeds, whole grains) — magnesium has mild NMDA antagonist properties and may modestly reduce central sensitization"
+    ],
+    "avoid": [
+      "Alcohol — impairs opioid metabolism, worsens sleep, and may exacerbate central sensitization",
+      "High-sugar and ultra-processed foods that promote systemic inflammation",
+      "Grapefruit and grapefruit juice, which inhibit CYP3A4 and raise plasma levels of opioids metabolized by this pathway (e.g., oxycodone, fentanyl), increasing toxicity risk",
+      "Excessive caffeine, which disrupts sleep quality and can lower pain thresholds"
+    ]
+  },
+  "exerciseGuidelines": "Graded aerobic exercise is a key component of OIH management. Exercise activates endogenous opioid, serotonin, and noradrenaline systems, improving descending pain inhibition. Start with 10-15 minutes of low-impact activity (walking, swimming, cycling) three times weekly and increase gradually. Pain physiotherapist supervision is helpful in the early stages of an opioid taper.",
+
+  "dailyManagement": [
+    "Record pain scores morning and evening, along with opioid doses taken, to identify dose-pain relationships that guide taper planning.",
+    "Take breakthrough doses only when pain exceeds a pre-agreed threshold (e.g., NRS ≥6) to avoid habitual use that sustains sensitization.",
+    "Perform daily mindfulness or breathing practice for 10-15 minutes to reduce anxiety-driven pain amplification.",
+    "Complete the prescribed physical activity session regardless of pain fluctuations — supervised pacing prevents both overactivity and underactivity.",
+    "Attend all scheduled pain clinic appointments; opioid tapering requires close monitoring and dose adjustments based on weekly reassessment.",
+    "Contact the prescribing pain physician promptly if pain escalates sharply during a taper or new neurological symptoms develop."
+  ],
+
+  "prognosis": "OIH is a reversible neuroplastic state, and prognosis is favorable when the condition is recognized early and managed with opioid dose reduction. In prospective observational studies, 30-70% of patients completing a supervised opioid taper report improved pain and function compared with peak-dose levels, with the best outcomes in patients with shorter duration of opioid use and lower peak doses. Patients completing opioid rotation — particularly to buprenorphine — similarly show improved pain scores and function in case series. The challenge is that OIH often coexists with opioid use disorder, undertreated depression, and ongoing nociceptive pain, complicating management and prognosis. Quantitative sensory testing parameters normalize over 3-12 months following successful dose reduction, confirming biological reversal of central sensitization. Without intervention, OIH drives an escalating cycle of higher opioid doses and worsening pain, leading to functional deterioration, opioid use disorder, and potentially life-threatening respiratory depression.",
+
+  "recoveryTimeline": "Central sensitization begins to downregulate within days to weeks of opioid dose reduction. QST parameters show measurable normalization over 1-3 months. Clinical pain improvement is typically reported within 2-8 weeks of the taper beginning in responsive patients. Full neurobiological normalization may take 3-12 months.",
+
+  "complications": [
+    "Opioid use disorder developing alongside OIH — occurs in 3-26% of chronic opioid patients and requires integrated addiction medicine and pain management.",
+    "Opioid overdose from dose escalation without specialist supervision — risk increases when prescribers respond to OIH with higher doses.",
+    "Progressive central sensitization spreading to a generalized chronic pain syndrome if OIH is untreated for years.",
+    "Opioid withdrawal syndrome if dose reduction is too rapid — prevent with slow tapers (5-10% per week) and adjunctive clonidine for autonomic symptoms.",
+    "Respiratory depression and sleep-disordered breathing at high opioid doses, with highest risk in patients with obstructive sleep apnea.",
+    "Endocrine dysfunction — opioid-induced androgen deficiency (low testosterone, amenorrhea, infertility) — reversible with opioid dose reduction."
+  ],
+
+  "supportResources": [
+    { "name": "CDC Opioid Prescribing Clinical Practice Guidelines 2022", "url": "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm", "description": "US national clinical guidance on safe opioid prescribing, dose thresholds, monitoring, and tapering protocols." },
+    { "name": "American Chronic Pain Association (ACPA)", "url": "https://theacpa.org/", "description": "Patient education, peer support, and provider locator for chronic pain patients managing opioid medications." },
+    { "name": "SAMHSA National Helpline", "url": "https://www.samhsa.gov/find-help/national-helpline", "description": "24/7 free confidential treatment referral for opioid use disorder occurring alongside chronic pain conditions." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "chronic-pain-syndrome", "name": "Chronic Pain Syndrome", "keyDifference": "Chronic pain syndrome is a broad diagnosis for persistent pain with psychological, social, and functional dimensions; OIH is a specific neuroplastic mechanism within or complicating chronic pain syndromes. The key distinguishing feature of OIH is that pain worsens with opioid dose escalation rather than remaining stable or improving." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "keyDifference": "Fibromyalgia and OIH share diffuse allodynia, central sensitization, and widespread pain. Fibromyalgia occurs independently of opioid exposure; OIH is specifically opioid-induced. Opioids are relatively contraindicated in fibromyalgia because they may worsen central sensitization by the same NMDA receptor mechanisms as OIH." },
+    { "slug": "neuropathic-pain", "name": "Neuropathic Pain", "keyDifference": "Neuropathic pain arises from nerve injury or disease; OIH is pharmacologically induced central sensitization without primary nerve pathology. Both cause allodynia and hyperalgesia, but neuropathic pain follows nerve territory distributions, while OIH is typically diffuse and non-dermatomal." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "failed-back-surgery-syndrome", "name": "Failed Back Surgery Syndrome" },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia" },
+    { "slug": "depression", "name": "Depression" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "neuropathic-pain", "name": "Neuropathic Pain", "relevance": "OIH shares central sensitization mechanisms with neuropathic pain and is frequently comorbid; gabapentinoids treat both conditions." },
+    { "slug": "chronic-pain-syndrome", "name": "Chronic Pain Syndrome", "relevance": "OIH commonly develops in the context of long-term opioid treatment for chronic pain syndrome; its presence should be considered whenever opioid dose escalation fails to improve function." },
+    { "slug": "failed-back-surgery-syndrome", "name": "Failed Back Surgery Syndrome", "relevance": "A common clinical context in which OIH develops; patients with FBSS on escalating opioids should be screened for OIH before further dose escalation." },
+    { "slug": "cancer-pain-management", "name": "Cancer Pain Management", "relevance": "OIH may complicate escalating opioid regimens in cancer pain; opioid rotation is a recognized strategy in palliative oncology when dose escalation produces diminishing returns." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is opioid-induced hyperalgesia?",
+      "answer": "Opioid-induced hyperalgesia is a paradoxical increase in pain sensitivity caused by prolonged opioid exposure. Instead of relieving pain, escalating opioid doses worsen it. The condition involves NMDA receptor-driven central sensitization in the spinal cord and is distinct from opioid tolerance. The treatment is dose reduction, not escalation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is opioid-induced hyperalgesia different from opioid tolerance?",
+      "answer": "In opioid tolerance, the same dose produces less analgesia over time but dose escalation still improves pain. In OIH, dose escalation worsens pain or produces no benefit, and pain spreads beyond its original territory. OIH involves central sensitization; tolerance involves receptor downregulation without generalized hyperalgesia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes opioid-induced hyperalgesia?",
+      "answer": "OIH is caused by NMDA receptor sensitization in the spinal cord dorsal horn, upregulation of pro-nociceptive descending pathways, and glial cell activation triggered by chronic opioid receptor stimulation. These changes produce a generalized increase in pain sensitivity that persists and worsens with continued opioid use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of opioid-induced hyperalgesia?",
+      "answer": "Symptoms include diffuse pain spreading beyond the original painful area, worsening pain despite opioid dose escalation, allodynia (pain from light touch), and spontaneous pain at new sites. Patients may also report that each dose of opioid provides progressively less relief despite feeling physically dependent on the medication.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is opioid-induced hyperalgesia diagnosed?",
+      "answer": "OIH is diagnosed clinically based on pain spreading beyond its original territory, worsening with dose escalation, and diffuse allodynia or hyperalgesia. A supervised dose-reduction trial — pain improves when opioid dose is lowered — provides strong diagnostic confirmation. Quantitative sensory testing formally measures central sensitization in specialist pain centers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is opioid-induced hyperalgesia treated?",
+      "answer": "The primary treatment is a supervised opioid dose reduction, which counterintuitively reduces pain in OIH. Opioid rotation to a different agent (particularly buprenorphine) at a reduced dose is an alternative. NMDA antagonists such as ketamine target the central sensitization mechanism. Gabapentinoids and CBT address central sensitization and psychological amplification.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can OIH be reversed?",
+      "answer": "Yes. OIH is a reversible neuroplastic state. Quantitative sensory testing parameters normalize over 3-12 months following successful opioid dose reduction. Most patients with OIH who complete a supervised taper report improved pain and function within weeks to months of beginning dose reduction.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which opioids are most likely to cause hyperalgesia?",
+      "answer": "All opioids can cause OIH at sufficient doses and duration. Remifentanil (used intraoperatively) is associated with the most acute and severe form. High-dose long-term morphine, oxycodone, and fentanyl carry significant OIH risk. Methadone may have lower OIH risk due to its NMDA antagonist property, but it is not immune.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is OIH the same as addiction?",
+      "answer": "No. OIH is a neurobiological pain-sensitization phenomenon distinct from opioid use disorder (addiction). However, both can coexist in the same patient on chronic opioids. OIH drives dose escalation for pain relief; addiction drives dose escalation due to compulsive use. Both require specialist management but different treatment approaches.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the role of ketamine in OIH treatment?",
+      "answer": "Ketamine is an NMDA receptor antagonist that directly targets the central sensitization mechanism of OIH. Sub-anesthetic intravenous ketamine infusions (0.1-0.5 mg/kg/hour for 4-5 days) reduce central sensitization, lower opioid requirements, and facilitate tapering. It is used in specialist pain centers as adjunctive therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I know if my opioid is causing more pain?",
+      "answer": "Signs that opioids may be worsening your pain include: pain spreading to new areas, each dose providing progressively less relief, pain worsening at fixed opioid levels, and allodynia to touch or temperature. A pain specialist should evaluate any pattern where dose escalation fails to improve function or pain spreads to new sites.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can OIH occur after just a short course of opioids?",
+      "answer": "Acute OIH can occur after high-dose opioid infusions in the surgical setting within hours. Chronic OIH typically requires months to years of exposure. Brief courses at low doses are unlikely to cause clinically significant OIH, but even short-term perioperative exposure to remifentanil can induce measurable hyperalgesia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does reducing opioids cause withdrawal?",
+      "answer": "A slow, supervised taper of 5-10% per week minimizes withdrawal symptoms. Faster tapers or abrupt discontinuation produce withdrawal: sweating, anxiety, nausea, muscle aches, and insomnia. Adjunctive clonidine (0.1 mg three times daily) manages autonomic withdrawal symptoms during the taper period.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is buprenorphine used for opioid-induced hyperalgesia?",
+      "answer": "Yes. Buprenorphine is increasingly used as a rotation target for OIH because its kappa-opioid receptor antagonism may directly reduce central sensitization. Rotation protocols from full-agonist opioids to buprenorphine are published, and case series report improved pain and function after rotation in OIH patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the long-term outlook for patients with OIH?",
+      "answer": "Prognosis is favorable when OIH is recognized early. Most patients completing a supervised taper or opioid rotation report improved pain and function within weeks to months. Central sensitization normalizes over 3-12 months. Patients with shorter opioid history, lower peak doses, and no opioid use disorder have the best outcomes.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Opioid-induced hyperalgesia (OIH) — opioids worsening pain",
+  "regionalNames": [
+    { "name": "Paradoxical opioid pain", "region": "Lay/patient context", "language": "English" },
+    { "name": "Opioid-induced abnormal pain sensitivity", "region": "International clinical literature", "language": "English" }
+  ],
+  "searchTags": [
+    "opioid-induced hyperalgesia",
+    "OIH",
+    "opioids making pain worse",
+    "paradoxical opioid pain",
+    "opioid hyperalgesia",
+    "central sensitization opioids",
+    "tolerance vs hyperalgesia",
+    "ketamine OIH",
+    "buprenorphine opioid rotation",
+    "NMDA receptor pain",
+    "chronic opioid side effects",
+    "pain worse on opioids"
+  ],
+  "symptomKeywords": [
+    "pain spreading on opioids",
+    "pain worse after taking opioids",
+    "allodynia opioid treatment",
+    "opioid not working anymore",
+    "diffuse pain opioid therapy"
+  ],
+
+  "metaTitle": "Opioid-Induced Hyperalgesia: Symptoms & Treatment | aihealz",
+  "metaDescription": "Opioid-induced hyperalgesia: paradoxical pain worsening from chronic opioid use, distinct from tolerance. NMDA mechanisms, diagnosis and treatment reviewed.",
+
+  "keywords": [
+    "opioid-induced hyperalgesia",
+    "OIH treatment",
+    "opioids causing more pain",
+    "central sensitization opioids",
+    "NMDA receptor hyperalgesia",
+    "opioid rotation OIH",
+    "ketamine opioid hyperalgesia",
+    "buprenorphine OIH",
+    "opioid tolerance vs hyperalgesia",
+    "chronic opioid therapy complications"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Fishbain DA, Cole B, Lewis JE, Gao J, Rosomoff RS. 2009. Do opioids induce hyperalgesia in humans? An evidence-based structured review. Pain Med 10(5):829-839.", "url": "https://pubmed.ncbi.nlm.nih.gov/19671086/", "accessedDate": "2026-05-14" },
+    { "title": "Bannister K, Dickenson AH. 2016. Opioid hyperalgesia. Curr Opin Support Palliat Care 10(2):148-153.", "url": "https://pubmed.ncbi.nlm.nih.gov/27093535/", "accessedDate": "2026-05-14" },
+    { "title": "Mercadante S, Arcuri E, Santoni A. 2019. Opioid-induced tolerance and hyperalgesia. CNS Drugs 33(10):943-955.", "url": "https://pubmed.ncbi.nlm.nih.gov/31598879/", "accessedDate": "2026-05-14" },
+    { "title": "Dowell D, Ragan KR, Jones CM, Baldwin GT, Chou R. 2022. CDC Clinical Practice Guideline for Prescribing Opioids for Pain — United States, 2022. MMWR Recomm Rep 71(3):1-95.", "url": "https://pubmed.ncbi.nlm.nih.gov/36327391/", "accessedDate": "2026-05-14" },
+    { "title": "Fletcher D, Martinez V. 2014. Opioid-induced hyperalgesia in patients after surgery: a systematic review and a meta-analysis. Br J Anaesth 112(6):991-1004.", "url": "https://pubmed.ncbi.nlm.nih.gov/24829420/", "accessedDate": "2026-05-14" },
+    { "title": "Pud D, Cohen D, Lawental E, Eisenberg E. 2006. Opioids and abnormal pain perception: new evidence from a study of chronic opioid addicts and healthy subjects. Drug Alcohol Depend 82(3):218-223.", "url": "https://pubmed.ncbi.nlm.nih.gov/16243452/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

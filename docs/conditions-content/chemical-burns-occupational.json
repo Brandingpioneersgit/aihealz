@@ -1,0 +1,374 @@
+{
+  "_meta": {
+    "slug": "chemical-burns-occupational",
+    "tier": 1,
+    "headTerm": "occupational chemical burns",
+    "primarySpecialty": "Occupational Medicine",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Occupational Chemical Burns: Symptoms, Causes & Treatment",
+  "specialistType": "Occupational Medicine",
+
+  "heroOverview": "Occupational chemical burns result from workplace contact with acids, alkalis, oxidizers, or organic solvents that damage skin, eyes, or the respiratory tract through direct chemical destruction of tissue. The U.S. Bureau of Labor Statistics records roughly 20,000 chemical burn injuries requiring days away from work each year, with manufacturing, agriculture, and construction accounting for the majority of cases. Alkali burns from cement, sodium hydroxide, and calcium hydroxide penetrate deeper than acid burns because saponification liquefies tissue without immediate pain to signal ongoing damage. Burns to the eyes cause permanent vision loss in an estimated 10-15% of workplace eye exposures without prompt irrigation. Immediate copious water irrigation, removal of contaminated clothing, and specialist wound care are the pillars of acute management.",
+
+  "keyStats": {
+    "prevalence": "Approximately 20,000 chemical burn workplace injuries requiring days away from work annually in the U.S. (BLS 2022)",
+    "demographics": "Men account for roughly 75% of occupational chemical burn cases; manufacturing, agriculture, construction, and healthcare sectors most affected",
+    "avgAge": "Peak incidence age 25-44 years corresponding to peak manual-labor workforce participation",
+    "globalCases": "Chemical injuries account for 5-10% of all burn-unit admissions globally; occupational exposures represent 40-60% of chemical burn hospital admissions"
+  },
+
+  "definition": "Occupational chemical burns (ICD-10: T26-T28 for eye/face; T20-T25 for body surface; coded with occupational external-cause modifier Y93.8) are tissue injuries caused by workplace exposure to corrosive substances that denature proteins, disrupt cell membranes, or generate thermal energy on contact with body surfaces. Injury depth and extent depend on the chemical's pH, concentration, volume, contact duration, and mechanism of penetration. Strong alkalis (pH >11) — including portland cement, sodium hydroxide, potassium hydroxide, calcium hydroxide, and hypochlorite bleaches — cause liquefactive necrosis that continues deepening for hours after initial contact because alkali saponifies lipids and permits ongoing penetration. Strong acids (pH <3) — including sulfuric, hydrochloric, nitric, and hydrofluoric acid — cause coagulative necrosis that forms an eschar limiting deeper penetration, except for hydrofluoric acid, which penetrates dermis and bone and releases free fluoride ions capable of causing fatal systemic hypocalcemia. Organic solvents, oxidizing agents (chromic acid, hydrogen peroxide), and vesicants produce additional mechanisms including lipid solubilization, oxidative tissue damage, and blister formation. Occupational medicine, emergency medicine, ophthalmology, and plastic surgery share management responsibilities depending on the body region involved.",
+
+  "typesClassification": [
+    { "type": "Alkali burns (cement, NaOH, KOH, Ca(OH)2)", "description": "Penetrate deeply via liquefactive necrosis; wound depth is often underestimated in the first hours. Portland cement burns are the single most common occupational chemical burn in construction workers, often presenting after prolonged kneeling in wet cement." },
+    { "type": "Acid burns (sulfuric, hydrochloric, nitric acid)", "description": "Coagulative necrosis forms a leathery eschar that limits, but does not prevent, deep penetration. Sulfuric acid burns are common in battery manufacturing and plating industries." },
+    { "type": "Hydrofluoric acid burns", "description": "A uniquely dangerous acid that penetrates intact skin, sequestrates calcium and magnesium ions, and causes bone destruction, severe pain disproportionate to surface appearance, and potentially fatal hypocalcemia-induced cardiac arrhythmias." },
+    { "type": "Oxidizing agent burns (chromic acid, hydrogen peroxide, potassium permanganate)", "description": "Cause progressive oxidative tissue damage; chromic acid carries additional systemic toxicity from hexavalent chromium absorption, including nephrotoxicity and carcinogenesis." },
+    { "type": "Organic solvent burns (phenol, cresol)", "description": "Phenol and substituted phenols penetrate rapidly through skin, causing local burns and systemic toxicity — cardiac arrhythmias, CNS depression, and hepatotoxicity — from percutaneous absorption." }
+  ],
+
+  "primarySymptoms": [
+    "Immediate burning, stinging, or — in the case of hydrofluoric acid — deep aching pain at the contact site, which may be disproportionately severe relative to visible surface damage.",
+    "Erythema, blistering, and skin discoloration (white, grey, or brown) at the burn margin within minutes to hours, with the zone of injury sometimes expanding over 24-48 hours for alkali burns.",
+    "Severe eye pain, tearing, photophobia, conjunctival redness, and blurred vision following ocular chemical splash; alkali exposure causes a characteristic milky, hazy cornea.",
+    "Sore throat, hoarseness, stridor, or difficulty swallowing after inhalation or ingestion of chemical vapors or fumes — signaling upper-airway mucosal injury.",
+    "Chest tightness, cough, wheezing, and dyspnea from lower respiratory tract mucosal injury after inhalation of ammonia, chlorine, or acid vapors at high concentrations.",
+    "Pale or blanched skin with loss of pain sensation in deep burns where nerve endings have been destroyed; deceivingly painless zones often require the deepest surgical debridement.",
+    "Nausea, vomiting, hypotension, dysrhythmia, or seizures as systemic signs of significant percutaneous absorption — most commonly with hydrofluoric acid, phenol, or chromic acid.",
+    "Pruritus, vesicle formation, and lichenification in workers with chronic low-level alkali (cement) contact mimicking irritant contact dermatitis rather than an acute burn.",
+    "Conjunctival ischemia (blanched, white appearance of the conjunctiva) following severe alkali ocular burns, indicating limbal stem-cell ischemia and risk of permanent corneal blindness."
+  ],
+
+  "earlyWarningSigns": [
+    "Skin tingling or mild irritation at a site with recent chemical contact that the worker dismisses as 'normal'; with hydrofluoric acid, onset of deep pain may be delayed 1-8 hours for concentrations below 20%.",
+    "Redness of the conjunctiva or tearing after workplace dust or mist exposure, before full ocular pain develops.",
+    "Delayed-onset blister formation under intact skin 6-12 hours after cement contact while kneeling — classic presentation of subacute cement burn that workers often mistake for abrasion."
+  ],
+
+  "emergencySigns": [
+    "Chemical splash to the eyes: immediate, sustained irrigation for 15-30 minutes is the emergency intervention; pH of the conjunctival sac above 8 or below 6 after irrigation requires ophthalmology assessment within 24 hours.",
+    "Cardiac arrhythmia, tetany, hypotension, or seizures in a worker with hydrofluoric acid skin exposure — systemic hypocalcemia is life-threatening and requires IV calcium gluconate and cardiac monitoring.",
+    "Stridor, drooling, or inability to swallow after acid or alkali vapor inhalation — upper-airway edema may rapidly compromise the airway and require emergency intubation.",
+    "Burns covering >5% total body surface area, or any full-thickness chemical burn, require emergency department assessment and likely burn-center transfer.",
+    "Eye pain persisting after 15 minutes of irrigation combined with a white, hazy, or opaque cornea — limbal ischemia is an ophthalmic emergency requiring urgent specialist review."
+  ],
+
+  "causes": [
+    {
+      "cause": "Portland cement and concrete contact",
+      "description": "Wet cement has pH 11-13. Construction workers who kneel or work with cement inside boots and gloves sustain prolonged exposure, leading to full-thickness burns that appear hours after initial contact. Cement is the leading cause of occupational alkali burns in the construction industry, accounting for an estimated 30-40% of occupational chemical burn hospital admissions in developed countries."
+    },
+    {
+      "cause": "Industrial acid splash from manufacturing processes",
+      "description": "Battery manufacturing, metal plating, semiconductor fabrication, and chemical processing expose workers to concentrated sulfuric, hydrochloric, nitric, and phosphoric acids. High-pressure spray or pump failure during transfer operations produces sudden high-volume exposures."
+    },
+    {
+      "cause": "Hydrofluoric acid exposure in semiconductor and glass industries",
+      "description": "Hydrofluoric acid etches silicon and glass. It penetrates intact, gloved skin and sequestrates calcium, causing bone necrosis, nerve damage, and potentially lethal hypocalcemia. Even small surface area burns (2-3% TBSA) from concentrated HF have caused cardiac arrest."
+    },
+    {
+      "cause": "Cleaning and disinfectant chemical exposure in healthcare and food processing",
+      "description": "Healthcare workers and food-industry employees use concentrated hypochlorite bleaches, quaternary ammonium compounds, and caustic drain cleaners. Splashing during mixing or decanting concentrated solutions causes burns, particularly to hands, forearms, and eyes."
+    },
+    {
+      "cause": "Agricultural chemical exposure (anhydrous ammonia, pesticide solvents)",
+      "description": "Anhydrous ammonia used for soil fertilization causes severe alkaline burns and pulmonary injury when released as compressed gas. Organic solvent carriers in pesticide formulations cause dermal burns in field workers."
+    },
+    {
+      "cause": "Personal protective equipment failure or non-compliance",
+      "description": "Inadequate glove material selection (standard latex or nitrile offers limited protection against HF or concentrated sulfuric acid), gloves not rated for the specific chemical, or non-use of PPE accounts for the majority of preventable chemical burn injuries identified in OSHA incident investigations."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Construction and cement work", "category": "environmental", "description": "Construction workers have the highest incidence of occupational alkali burns; cement exposure accounts for roughly 10-15% of all occupational dermatological disease in the sector." },
+    { "factor": "Chemical manufacturing, metal plating, and semiconductor fabrication", "category": "environmental", "description": "Workers in these industries handle concentrated acids routinely; process failure rates and near-miss incidents are tracked by OSHA Process Safety Management regulations." },
+    { "factor": "Inadequate or unsuitable PPE", "category": "modifiable", "description": "OSHA data indicate that non-compliance or wrong PPE selection features in over 60% of investigated chemical burn incidents. Chemical-resistant gloves, face shields, and aprons matched to the specific agent dramatically reduce injury risk." },
+    { "factor": "Limited chemical safety training", "category": "modifiable", "description": "Workers without GHS/OSHA Hazard Communication Standard training on reading Safety Data Sheets and emergency procedures are 2-3× more likely to delay first aid and sustain deeper injuries." },
+    { "factor": "Working alone or in isolated settings", "category": "modifiable", "description": "Solo workers cannot receive immediate first-aid assistance. Emergency eyewash station access within 10 seconds is required by OSHA 29 CFR 1910.151 but is unavailable in some field settings." },
+    { "factor": "High-concentration or high-volume chemical processes", "category": "environmental", "description": "Bulk transfers, large-batch mixing, and high-pressure delivery systems increase the volume of chemical available per incident; deeper burns correlate directly with exposure volume and contact duration." },
+    { "factor": "Young or inexperienced workers", "category": "non-modifiable", "description": "Workers in their first two years on a job account for a disproportionate share of chemical burn injuries, reflecting training gaps and unfamiliarity with emergency procedures." }
+  ],
+
+  "affectedDemographics": [
+    "Men aged 25-44 in manual-labor industries represent the majority of occupational chemical burn patients globally.",
+    "Construction workers: cement burns account for roughly 10-15% of all occupational skin disease in the sector in Europe and North America.",
+    "Healthcare and domestic cleaning workers: mostly women; hypochlorite and disinfectant burns cluster in this group.",
+    "Agricultural workers in low-to-middle-income countries sustain high rates of chemical burn from unregulated pesticide and fertilizer handling."
+  ],
+
+  "diagnosisOverview": "Diagnosis of occupational chemical burns is primarily clinical. The evaluation starts with a detailed occupational exposure history: the chemical name (or Safety Data Sheet number), concentration, contact duration, body area affected, first-aid measures taken before arrival, and time elapsed since exposure. Chemical identity determines the systemic toxicity risk and antidote requirements — notably, HF exposures require serum calcium monitoring, and phenol exposures require hepatic and cardiac assessment. Burn depth is classified by inspection: first-degree burns show erythema without blistering; second-degree burns blister with moist wound beds; third-degree burns are white or charred, dry, and insensate. Alkali burns are notorious for underestimation of depth in the first 24-48 hours, requiring reassessment. For eye burns, ocular pH is measured with litmus paper in the inferior conjunctival fornix after copious irrigation, and slit-lamp examination assesses epithelial defects and limbal ischemia graded by the Roper-Hall or Dua classification (Grade I-IV). Systemic investigation is guided by the agent: serum calcium, magnesium, and fluoride levels for HF; ECG for HF and phenol; renal function and urinalysis for chromic acid and chromate; arterial blood gas and carboxyhemoglobin for workers in enclosed spaces with burning chemicals. Total body surface area estimation uses the Rule of Nines or Lund-Browder chart for burns exceeding one body region.",
+
+  "diagnosticTests": [
+    { "test": "Conjunctival pH measurement", "purpose": "Confirms adequate neutralization after ocular chemical exposure; residual pH outside 7-8 indicates inadequate irrigation", "whatToExpect": "Litmus or pH paper strip placed in the lower eyelid pocket after irrigation. Instantaneous result. Irrigation resumes if pH remains abnormal." },
+    { "test": "Burn depth assessment and total body surface area (TBSA) estimation", "purpose": "Determines management pathway: outpatient wound care for superficial partial-thickness burns, burn-unit referral for deep partial or full-thickness burns or >10% TBSA", "whatToExpect": "Clinician inspects and palpates the burn, notes wound color, moisture, and pin-prick sensation, and estimates TBSA using the Lund-Browder chart. Alkali burns require reassessment at 24-48 hours." },
+    { "test": "Serum calcium, magnesium, and potassium", "purpose": "Mandatory in all significant hydrofluoric acid exposures; hypocalcemia and hypomagnesemia can cause fatal cardiac arrhythmias", "whatToExpect": "A standard blood draw via venipuncture. Results available within 1-2 hours in an emergency laboratory." },
+    { "test": "12-lead ECG", "purpose": "Detects QT prolongation and arrhythmias in HF, phenol, or chromic acid exposures", "whatToExpect": "10 electrodes attached to the chest and limbs for a 30-second recording. Non-invasive and immediate." },
+    { "test": "Slit-lamp examination with fluorescein staining", "purpose": "Maps corneal epithelial defects, assesses limbal ischemia grade, and guides topical treatment decisions in ocular burns", "whatToExpect": "The ophthalmologist applies a drop of fluorescein dye, uses a blue-light lamp to examine the cornea and conjunctiva. Takes 5-10 minutes; slightly uncomfortable if the eye is already irritated." },
+    { "test": "Renal function panel and urinalysis", "purpose": "Monitors for nephrotoxicity from chromate, chromic acid, mercury compounds, or large-area burns with systemic absorption", "whatToExpect": "Blood draw and urine dipstick. Chromate workers may also have 24-hour urine chromium levels measured." }
+  ],
+
+  "treatmentOverview": "Acute management follows the principle of continuous copious irrigation: remove the chemical by flushing the affected area with large volumes of room-temperature water for a minimum of 15-30 minutes immediately after exposure, and for 30-60 minutes for alkali burns. Do not use neutralizing agents (vinegar for alkali, bicarbonate for acid) on skin burns because the neutralization reaction is exothermic and worsens injury. Remove all contaminated clothing and jewelry. After irrigation, wound care depends on burn depth: superficial partial-thickness burns are covered with non-adherent antimicrobial dressings (silver sulfadiazine or mafenide acetate) changed every 1-3 days; deep partial and full-thickness burns require debridement and often split-thickness skin grafting. Hydrofluoric acid burns require specific antidote: topical calcium gluconate 2.5% gel applied to the wound and massaged in for 15-30 minutes; subcutaneous or intraarterial calcium gluconate injection for digit or hand burns with persistent pain; and IV calcium gluconate 10% (10-20 mL) for systemic hypocalcemia. Cement burns that present after hours to days still benefit from prompt wound cleaning and specialist wound care because alkali continues to penetrate until fully removed. Ocular burns require immediate irrigation at the scene (minimum 15-30 min with tap water or saline), emergency ophthalmology assessment, topical steroids, ascorbate, antibiotics, and lubricants; severe limbal ischemia (Roper-Hall Grade III-IV) may require amniotic membrane transplantation or limbal stem cell transplantation to restore vision. Systemic resuscitation follows the Parkland formula for burns exceeding 15-20% TBSA. OSHA incident reporting, occupational exposure documentation, and return-to-work planning are managed concurrently by the occupational medicine team.",
+
+  "medicalTreatments": [
+    { "name": "Copious water irrigation (15-60 minutes at scene and emergency department)", "description": "First-line universal treatment for all chemical burns regardless of agent. Removes the chemical mechanically, dilutes residual concentration, and reduces tissue injury depth. Time to first irrigation is the single strongest predictor of burn depth and outcome.", "effectiveness": "Each minute of delay in starting irrigation increases burn depth; burns irrigated within 3 minutes of contact have significantly better outcomes in retrospective series" },
+    { "name": "Calcium gluconate antidote for hydrofluoric acid burns", "description": "Topical 2.5% calcium gluconate gel applied to the wound surface immediately; subcutaneous injection of 10% calcium gluconate (0.5 mL/cm2 of burn surface) for persistent pain; IV 10% calcium gluconate (10-20 mL in 100 mL D5W over 15 minutes) for systemic hypocalcemia or cardiac arrhythmia.", "effectiveness": "Prompt administration abolishes the deep pain of HF burns and prevents systemic hypocalcemia; delays in antidote administration associated with all reported fatal HF burn cases" },
+    { "name": "Split-thickness skin grafting", "description": "For deep partial-thickness or full-thickness chemical burns exceeding the self-healing threshold (~3 cm in diameter or any full-thickness burn). Early excision and grafting (within 48-72 hours for acid burns, 5-7 days for alkali burns after zone of injury stabilizes) reduces infection, hospitalization, and scarring.", "effectiveness": "Graft take rates 85-95% for acute chemical burns with adequate wound bed preparation in specialist burn units" },
+    { "name": "Silver sulfadiazine dressings (1% cream, changed every 24-48 hours)", "description": "Broad-spectrum antimicrobial wound coverage for partial-thickness burns awaiting epithelialization or prior to grafting. Reduces wound colonization and infection rates.", "effectiveness": "Wound infection rates below 10% with regular dressing changes in burns not requiring grafting" },
+    { "name": "Topical steroids, ascorbate, and lubricants for ocular burns", "description": "After adequate irrigation, topical prednisolone or dexamethasone reduces conjunctival and corneal inflammation; topical ascorbic acid 10% reduces free-radical damage; copious lubricant drops prevent symblepharon formation.", "effectiveness": "Roper-Hall Grade I-II burns treated promptly have >90% chance of full visual recovery; Grade III reduces with early treatment" },
+    { "name": "Systemic fluid resuscitation (Parkland formula for burns >15% TBSA)", "description": "Ringer's lactate 4 mL/kg per percentage TBSA burned, with half given in first 8 hours and the remainder in next 16 hours. Chemical burns with large TBSA cause systemic inflammatory response and fluid shifts similar to thermal burns.", "effectiveness": "Adequate resuscitation prevents acute kidney injury and reduces burn mortality when titrated to urine output 0.5-1 mL/kg/hour" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Split-thickness skin grafting", "description": "Thin skin harvested from a donor site (thigh, back) is meshed and applied to excised burn wound. Standard of care for deep partial and full-thickness chemical burns.", "successRate": "85-95% graft take in specialist burn centers for clean, well-prepared chemical burn wounds" },
+    { "name": "Amniotic membrane transplantation (for ocular burns)", "description": "Preserved amniotic membrane is sutured or glued to the corneal and conjunctival surface in Grade III-IV ocular burns to promote epithelialization, reduce inflammation, and prevent symblepharon.", "successRate": "Prevents corneal opacification and improves visual outcomes in 60-75% of Grade III-IV alkali burns when performed within 2 weeks" },
+    { "name": "Limbal stem cell transplantation (for severe alkali eye burns)", "description": "Limbal stem cells harvested from the fellow eye or a donor are transplanted to restore the corneal epithelial renewal zone destroyed by alkali ischemia. Reserved for bilateral severe burns where no autologous source is available.", "successRate": "Long-term corneal clarity restored in 50-70% of cases; outcomes dependent on severity of initial limbal ischemia" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Polyethylene glycol (PEG) decontamination for phenol burns", "description": "Low-molecular-weight PEG 400 dissolves and removes phenol from skin more effectively than water alone in bench studies; applied after initial water irrigation. Limited human clinical trial data but used in chemical weapons decontamination protocols." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "wound-debridement",
+    "skin-grafting"
+  ],
+
+  "whySeeSpecialist": "Occupational medicine physicians coordinate documentation of the workplace exposure, OSHA reporting requirements, and return-to-work planning. Burns exceeding superficial partial-thickness depth or involving the eyes, face, hands, feet, or genitalia require immediate burn surgery or ophthalmology evaluation. Hydrofluoric acid exposures warrant emergency assessment regardless of burn size.",
+  "doctorSelectionGuide": "For acute management, select a burn surgeon or emergency physician in a facility with a verified burn unit. For ongoing occupational assessment, choose an occupational medicine physician with experience in workplace chemical hazard evaluation and OSHA reporting. Workers with chronic low-grade chemical dermatitis may benefit from a patch-testing occupational dermatologist.",
+
+  "hospitalCriteria": [
+    "Verified burn centers for burns >10% TBSA, full-thickness burns, or burns involving face, hands, feet, genitalia, or major joints",
+    "Ophthalmology inpatient services for Grade III-IV ocular chemical burns requiring amniotic membrane or limbal stem cell procedures",
+    "Intensive care unit for HF burns with cardiac arrhythmia or systemic phenol toxicity",
+    "Plastic surgery inpatient services for early excision and grafting of deep chemical burns"
+  ],
+  "keyFacilities": [
+    "Verified burn centers accredited by the American Burn Association",
+    "Occupational health clinics with industrial hygiene capability",
+    "Ophthalmology departments with ocular surface surgery expertise",
+    "Emergency departments with trained HAZMAT decontamination capacity"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Match personal protective equipment precisely to the chemical agent: consult Safety Data Sheets and select gloves, face shields, and aprons with published breakthrough times exceeding exposure duration.",
+    "Install emergency eyewash stations within 10 seconds of any chemical handling area, maintain them weekly, and train workers on activation location and minimum 15-minute irrigation protocol.",
+    "Substitute less hazardous agents where technically feasible — for example, weaker acid concentrations, pre-neutralized cleaning products, or encapsulated cement additives that reduce free lime.",
+    "Implement engineering controls — local exhaust ventilation, closed transfer systems, and drip trays — to minimize the probability and volume of spills.",
+    "Conduct site-specific chemical hazard training on OSHA GHS standards, SDS reading, and emergency response at least annually and at new-hire orientation.",
+    "Establish and practice emergency response drills including eyewash station use, HF antidote administration, and burn unit transfer protocols at least twice yearly."
+  ],
+
+  "lifestyleModifications": [
+    "Change out of contaminated workwear immediately after a shift involving chemical exposure; do not take contaminated clothing home.",
+    "Moisturize hands and forearms daily with an oil-in-water barrier cream when working with cement, alkalis, or solvents to maintain skin barrier integrity.",
+    "Report all chemical contact incidents — even minor skin irritation — to the occupational health team for documentation and pattern analysis.",
+    "Take scheduled rest breaks away from chemical environments to reduce cumulative dermal absorption.",
+    "During wound healing, protect regenerating skin from sun exposure to reduce hypertrophic scarring risk."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein intake (1.5-2.0 g/kg/day) during active wound healing to support collagen synthesis and skin graft take",
+      "Vitamin C-rich foods (citrus, bell peppers) to support collagen formation and wound repair",
+      "Zinc-rich foods (shellfish, legumes, nuts) to support epithelialization",
+      "Adequate hydration (at least 2.5 L/day) to support renal clearance of absorbed chemical metabolites"
+    ],
+    "avoid": [
+      "Smoking and tobacco, which impair wound healing and skin graft perfusion",
+      "Alcohol during active healing, which interferes with collagen synthesis",
+      "Non-steroidal anti-inflammatory drugs without medical guidance, as they may impair platelet function during wound care",
+      "Restrictive diets that compromise the caloric surplus needed for healing"
+    ]
+  },
+
+  "exerciseGuidelines": "Patients with burns to extremities should begin early occupational therapy and range-of-motion exercises within 48-72 hours of wound stabilization to prevent contractures. Full activity restrictions apply while skin grafts are being revascularized (typically 5-10 days). Return to full occupational physical activity is guided by wound closure and graft integrity, typically 4-8 weeks for moderate burns.",
+
+  "dailyManagement": [
+    "Perform daily wound inspection and dressing changes according to the treating clinician's protocol; contact the wound care team if wound color, odor, or exudate changes.",
+    "Apply calcium gluconate gel prophylactically after HF acid re-exposure until medical clearance confirms no ongoing fluoride absorption.",
+    "Wear prescribed pressure garments for burns healing by secondary intention or skin grafting to reduce hypertrophic scarring.",
+    "Attend occupational therapy appointments for splinting, range-of-motion exercises, and scar management.",
+    "Document all follow-up serum calcium results and cardiac monitoring if recovering from HF burn."
+  ],
+
+  "prognosis": "Prognosis for occupational chemical burns depends primarily on the chemical agent, burn depth, body area involved, and time to first irrigation. Superficial partial-thickness burns heal within 2-3 weeks with minimal scarring when irrigated promptly. Deep partial-thickness and full-thickness burns requiring grafting have a favorable functional outcome in over 85% of cases managed at specialist burn centers, though hypertrophic scarring, joint contractures, and sensory changes may persist. Ocular alkali burns present the most guarded prognosis among occupational chemical injuries: Grade I-II burns recover full vision in over 90% of cases with early treatment, while Grade III-IV burns have residual visual impairment in 40-60% despite modern surgical intervention. Hydrofluoric acid burns carry mortality risk disproportionate to burn surface area; fatalities have been documented from less than 5% TBSA HF burns due to cardiac arrhythmia. Workers with healed chemical burns can return to equivalent or modified duties in most cases, though persistent chemical sensitivity may limit re-exposure to the causative agent.",
+
+  "recoveryTimeline": "Superficial partial-thickness burns re-epithelialize in 7-21 days. Deep partial-thickness and full-thickness burns requiring grafting achieve wound closure in 3-6 weeks after surgery. Scar maturation takes 12-24 months; pressure garment therapy continues for this period. Ocular burns: Grade I-II recover in 2-6 weeks. Grade III-IV may require months of staged surgery and rehabilitation.",
+
+  "complications": [
+    "Hypertrophic scarring and keloid formation — may impair joint function and cosmesis; treated with pressure therapy, silicone gel sheeting, or intralesional corticosteroid injections.",
+    "Joint contractures — particularly over hands, elbows, neck, and axillae from deep burns; prevented by early physiotherapy and splinting, corrected surgically if established.",
+    "Corneal opacification and permanent vision loss — the primary feared complication of alkali ocular burns; limbal ischemia on presentation predicts severity.",
+    "Systemic hypocalcemia-induced cardiac arrest in hydrofluoric acid burns — preventable with prompt calcium gluconate antidote administration and continuous ECG monitoring.",
+    "Chemical-induced sensitization dermatitis — workers with healed cement burns may develop occupational allergic contact dermatitis to chromate (a cement contaminant) on re-exposure.",
+    "Wound infection progressing to sepsis — risk is increased in immunocompromised workers, elderly patients, and burns with delayed treatment; managed with culture-directed antibiotics and early surgical debridement."
+  ],
+
+  "supportResources": [
+    { "name": "OSHA Chemical Hazard Communication Standard", "url": "https://www.osha.gov/hazcom", "description": "U.S. regulatory requirements for chemical labeling, Safety Data Sheets, and worker training on occupational chemical hazards." },
+    { "name": "American Burn Association — Burn Center Referral Criteria", "url": "https://ameriburn.org/quality-care/burn-center-referral-criteria/", "description": "Clinical criteria for transferring chemical burn patients to a verified burn center, plus patient-education resources." },
+    { "name": "CDC NIOSH — Chemical Safety", "url": "https://www.cdc.gov/niosh/topics/chemical-safety/default.html", "description": "NIOSH guidance on chemical exposure control, pocket guides to chemical hazards, and occupational exposure limits." },
+    { "name": "National Capital Poison Center", "url": "https://www.poison.org/", "description": "24-hour expert toxicology consultation for chemical exposures including HF acid antidote guidance." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "irritant-contact-dermatitis-due-to-other-chemical-products-l245", "name": "Irritant Contact Dermatitis", "keyDifference": "Irritant contact dermatitis from chronic low-level chemical exposure presents with erythema, dryness, and fissuring that develops over days to weeks and does not cause tissue necrosis. Acute chemical burns cause immediate coagulative or liquefactive necrosis. Distinction matters because burn treatment requires irrigation and wound care, while chronic dermatitis is managed with barrier protection and topical steroids." },
+    { "slug": "allergic-contact-dermatitis", "name": "Allergic Contact Dermatitis", "keyDifference": "Allergic contact dermatitis from chromate (in cement) produces a delayed hypersensitivity eruption requiring prior sensitization; it does not require the pH extremes or concentrated chemicals that cause acute burns. Patch testing identifies allergic sensitization; burns are diagnosed by clinical inspection and occupational history." },
+    { "slug": "eczema", "name": "Eczema", "keyDifference": "Chronic eczema from repeated skin irritation resembles subacute chemical burn in that both show erythema, scaling, and fissuring on the hands. Chemical burns cause acute tissue destruction with clear-cut onset after a concentrated exposure event; eczema is a recurrent inflammatory skin disease without acute necrosis. History of chemical contact and burn depth assessment distinguishes the two." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "occupational-dermatitis", "name": "Occupational Dermatitis" },
+    { "slug": "polyneuropathy-due-to-other-toxic-agents-g622", "name": "Toxic Polyneuropathy" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "occupational-dermatitis", "name": "Occupational Dermatitis", "relevance": "Chemical burns and occupational dermatitis share chemical workplace exposures and often co-occur in workers with repeated low-level contact followed by an acute high-concentration incident." },
+    { "slug": "coal-workers-pneumoconiosis", "name": "Coal Workers' Pneumoconiosis", "relevance": "Both are occupational diseases in industrial settings with regulatory frameworks under OSHA and NIOSH; lung diseases co-occur in some chemical and mining workers." },
+    { "slug": "lead-poisoning-occupational", "name": "Occupational Lead Poisoning", "relevance": "Heavy metals including lead are often co-handled with acid solutions in battery manufacturing and metal plating, creating combined chemical burn and systemic toxicity risk." },
+    { "slug": "noise-induced-hearing-loss", "name": "Noise-Induced Hearing Loss", "relevance": "Workers in manufacturing where chemical burns occur often face concurrent noise hazards; both conditions benefit from the same occupational health surveillance frameworks." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What causes occupational chemical burns?",
+      "answer": "Occupational chemical burns are caused by workplace contact with corrosive agents including alkalis (cement, sodium hydroxide), acids (sulfuric, hydrochloric, hydrofluoric), oxidizers, and organic solvents. The injury occurs when the chemical destroys skin, eye, or airway tissue by protein denaturation, lipid saponification, or oxidation. Construction, manufacturing, and agriculture have the highest rates.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the first aid for a chemical burn at work?",
+      "answer": "Remove the worker from exposure, remove all contaminated clothing and jewelry, and irrigate the affected skin or eye immediately with large volumes of room-temperature water for 15-30 minutes. Do not use neutralizing agents. For hydrofluoric acid burns, apply 2.5% calcium gluconate gel after irrigation. Call emergency services for burns larger than a palm or any eye exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long should you irrigate a chemical burn?",
+      "answer": "Irrigate skin burns for at least 15-20 minutes with running water; alkali burns should be irrigated for 30-60 minutes because they penetrate more deeply. Eye exposures require a minimum of 15-30 minutes of continuous irrigation at the scene and repeated in the emergency department until the conjunctival pH normalizes to 7-8.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are cement burns dangerous?",
+      "answer": "Yes. Wet portland cement has pH 11-13 and causes progressive alkali burns that may not become painful for several hours. Workers who kneel in wet cement or work with it inside boots sustain deep partial or full-thickness burns. Cement is the leading cause of occupational alkali burn admission in construction workers and can cause permanent scarring if not irrigated promptly.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is hydrofluoric acid especially dangerous?",
+      "answer": "Hydrofluoric acid penetrates intact skin and sequestrates calcium and magnesium ions, causing bone destruction and potentially fatal cardiac arrhythmias from hypocalcemia. Burns from HF may appear minor on the surface but cause severe deep pain and systemic toxicity. Even small exposures (under 5% body surface area from concentrated HF) have caused cardiac arrest.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the treatment for a hydrofluoric acid burn?",
+      "answer": "Treat HF burns by irrigating with water for 15-30 minutes, then applying 2.5% calcium gluconate gel while massaging the skin to neutralize free fluoride ions. Monitor serum calcium and cardiac rhythm. Subcutaneous calcium gluconate injection is used for persistent deep pain in hands or digits. IV calcium gluconate is given for systemic hypocalcemia or arrhythmia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a chemical burn heal on its own?",
+      "answer": "Superficial partial-thickness chemical burns involving only the outer skin layers heal within 2-3 weeks with proper wound care. Deep partial-thickness and full-thickness burns do not heal adequately without medical intervention and typically require skin grafting. Alkali burns to the eye rarely heal fully without specialist treatment and often require surgical procedures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What PPE prevents chemical burns?",
+      "answer": "Chemical-resistant gloves matched to the specific agent (butyl rubber for acids, neoprene for alkalis, laminated film gloves for HF), chemical splash goggles or face shields, chemical-resistant aprons, and boots protect against burns. The glove material must have published breakthrough times exceeding the expected exposure duration for the specific chemical.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can an alkali burn keep getting worse after treatment starts?",
+      "answer": "Yes. Alkali burns continue to deepen through liquefactive necrosis until the caustic agent is completely removed. Unlike acid burns, which form a limiting eschar, alkali burns can progress for 24-48 hours if irrigation is inadequate. This is why alkali exposures require longer irrigation periods and 24-48 hour reassessment of burn depth.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should a chemical burn be treated at a burn center?",
+      "answer": "Burns should be transferred to a verified burn center when they cover more than 10% total body surface area, involve full-thickness injury, affect the face, hands, feet, genitalia, or a major joint, or result from hydrofluoric acid or other systemically toxic chemicals. Eye burns causing corneal opacification require ophthalmology emergency evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the long-term effects of occupational chemical burns?",
+      "answer": "Long-term effects include hypertrophic scarring, joint contractures limiting range of motion, chronic pain, and chemical sensitization leading to future allergic contact dermatitis. Ocular chemical burns can cause permanent vision loss, corneal scarring, and dry eye. Workers with healed burns may require modified duty or retraining if re-exposure to the causative agent is not medically tolerable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does OSHA require eyewash stations for chemical workplaces?",
+      "answer": "Yes. OSHA 29 CFR 1910.151(c) requires suitable facilities for quick drenching or flushing of eyes and body when workers may be exposed to injurious corrosive materials. Eyewash stations must be reachable within 10 seconds or approximately 55 feet of the hazard and must flush both eyes simultaneously with potable water for at least 15 minutes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How are chemical burns different from thermal burns?",
+      "answer": "Chemical burns continue to deepen until the caustic agent is fully removed, while thermal burns stop progressing once the heat source is removed. Chemical burns may require agent-specific antidotes (such as calcium gluconate for HF). Alkali chemical burns are especially deceptive because they are initially painless and cause greater tissue destruction than their surface appearance suggests.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can workers return to work after a chemical burn?",
+      "answer": "Most workers with superficial burns return to work within 2-4 weeks after wound healing. Deep burns requiring grafting involve 6-12 weeks off work and may require modified duties during scar maturation. Workers who develop allergic sensitization to the causative agent may require permanent reassignment away from that chemical exposure.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the most common chemical burn in construction?",
+      "answer": "Portland cement burns are the most common occupational chemical burn in construction. Wet cement has a pH of 11-13 and causes alkali burns, often when workers kneel in it or when cement enters gloves or boots. The burns typically present hours after exposure and are frequently misidentified as abrasions or pressure injuries on initial assessment.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Occupational chemical burns (workplace acid/alkali injuries)",
+  "regionalNames": [],
+  "searchTags": [
+    "chemical burn",
+    "occupational chemical burn",
+    "cement burn",
+    "acid burn at work",
+    "alkali burn",
+    "hydrofluoric acid burn",
+    "HF burn",
+    "eye chemical burn",
+    "workplace burn",
+    "industrial chemical injury",
+    "caustic burn",
+    "corrosive burn"
+  ],
+  "symptomKeywords": [
+    "skin burning after chemical contact",
+    "eye pain after chemical splash",
+    "cement burn on knees",
+    "acid splash injury",
+    "white skin after chemical burn",
+    "deep pain after HF acid exposure",
+    "blister from chemical at work"
+  ],
+
+  "metaTitle": "Occupational Chemical Burns: Symptoms & Treatment | aihealz",
+  "metaDescription": "Occupational chemical burns from cement, acids, or HF: cause progressive tissue damage. Symptoms, first aid, irrigation, and specialist treatment reviewed.",
+
+  "keywords": [
+    "occupational chemical burns",
+    "chemical burn treatment",
+    "hydrofluoric acid burn",
+    "cement burn construction",
+    "alkali burn workplace",
+    "acid burn first aid",
+    "chemical eye burn",
+    "industrial burn injury",
+    "calcium gluconate HF burn",
+    "chemical burn OSHA",
+    "burn center referral criteria"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "NIOSH Pocket Guide to Chemical Hazards. Centers for Disease Control and Prevention, Atlanta. 2007.", "url": "https://www.cdc.gov/niosh/npg/npg.html", "accessedDate": "2026-05-14" },
+    { "title": "Palao R, Monge I, Ruiz M, Barret JP. 2010. Chemical burns: pathophysiology and treatment. Burns 36(3):295-304.", "url": "https://pubmed.ncbi.nlm.nih.gov/19864069/", "accessedDate": "2026-05-14" },
+    { "title": "Sawhney CP, Kaushish R. 1989. Acid and alkali burns: considerations in management. Burns 15(2):132-4.", "url": "https://pubmed.ncbi.nlm.nih.gov/2706067/", "accessedDate": "2026-05-14" },
+    { "title": "Hatzifotis M, Williams A, Muller M, Pegg S. 2004. Hydrofluoric acid burns. Burns 30(2):156-9.", "url": "https://pubmed.ncbi.nlm.nih.gov/15019120/", "accessedDate": "2026-05-14" },
+    { "title": "American Burn Association. 2022. Burn Center Referral Criteria. Chicago: ABA.", "url": "https://ameriburn.org/quality-care/burn-center-referral-criteria/", "accessedDate": "2026-05-14" },
+    { "title": "Wagoner MD. 1997. Chemical injuries of the eye: current concepts in pathophysiology and therapy. Survey of Ophthalmology 41(4):275-313.", "url": "https://pubmed.ncbi.nlm.nih.gov/9154276/", "accessedDate": "2026-05-14" },
+    { "title": "OSHA. 29 CFR 1910.151 — Medical services and first aid; eyewash and emergency shower requirements. Occupational Safety and Health Administration, Washington DC.", "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.151", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

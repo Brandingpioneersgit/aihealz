@@ -1,0 +1,404 @@
+{
+  "_meta": {
+    "slug": "coronary-artery-disease",
+    "tier": 1,
+    "headTerm": "coronary artery disease",
+    "longTailKeywords": [
+      "coronary artery disease symptoms",
+      "coronary artery disease treatment",
+      "CAD heart disease",
+      "angina chest pain",
+      "coronary artery disease causes",
+      "coronary angiogram",
+      "stents for coronary artery disease",
+      "bypass surgery CAD",
+      "coronary artery disease diet",
+      "coronary artery disease prognosis"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Coronary Artery Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "Coronary artery disease (CAD) develops when atherosclerotic plaque narrows or blocks the coronary arteries that supply oxygen-rich blood to the heart muscle. It is the leading cause of death globally, responsible for roughly 17.9 million cardiovascular deaths per year (WHO 2021). Approximately 20.1 million US adults have CAD, representing about 7.2% of the adult population (CDC 2023). The classic warning symptom is angina — pressure, tightness, or burning in the chest that occurs with exertion and resolves with rest. When a plaque ruptures acutely it can trigger a heart attack (myocardial infarction), the most dangerous complication. Treatment ranges from guideline-directed medical therapy with statins and aspirin through coronary stenting or bypass surgery, and aggressive risk-factor management substantially reduces event rates.",
+
+  "keyStats": {
+    "prevalence": "20.1 million US adults have diagnosed CAD, approximately 7.2% of the adult population (CDC 2023)",
+    "demographics": "Men develop CAD roughly 10 years earlier than women; risk equalises post-menopause. African Americans have higher mortality rates. South Asians have disproportionately higher incidence relative to traditional risk-factor burden.",
+    "avgAge": "Symptomatic CAD typically presents age 55-65 in men and 65-75 in women; acute MI can occur as early as the mid-40s with strong risk-factor burden",
+    "globalCases": "Approximately 523 million people worldwide live with ischemic heart disease (GBD 2021); CAD accounts for ~17.9 million cardiovascular deaths per year"
+  },
+
+  "definition": "Coronary artery disease (ICD-10: I25) is a chronic condition in which atherosclerosis — the build-up of cholesterol-laden plaques within the intima of the coronary arteries — progressively narrows the vessel lumen, reduces myocardial blood supply, and predisposes to acute thrombotic occlusion. The disease begins with endothelial dysfunction and low-density lipoprotein (LDL) oxidation, leading to foam-cell accumulation, fibrous cap formation, and over time, calcification. Stable obstructive plaques restrict flow during exertion, producing stable angina; vulnerable plaques with thin fibrous caps can rupture, exposing the lipid core to circulating platelets and triggering acute coronary syndromes — unstable angina, non-ST-elevation myocardial infarction (NSTEMI), or ST-elevation myocardial infarction (STEMI). CAD is managed by cardiologists and cardiothoracic surgeons and sits at the centre of preventive cardiovascular medicine. Risk staging follows the ACC/AHA pooled cohort equations (10-year atherosclerotic cardiovascular disease risk), which guides the intensity of lipid-lowering, antiplatelet, and blood-pressure therapy. The disease spectrum extends from asymptomatic subclinical atherosclerosis (detectable by coronary calcium scoring) through chronic coronary syndromes and acute coronary syndromes to ischemic cardiomyopathy and heart failure.",
+
+  "typesClassification": [
+    { "type": "Stable coronary artery disease (chronic coronary syndrome)", "description": "Fixed, obstructive plaques reduce flow during increased demand. Patients report exertional chest pain (stable angina) that resolves with rest or sublingual nitrate within 1-5 minutes. Ischaemia is reproducible on stress testing." },
+    { "type": "Unstable angina / NSTEMI", "description": "Acute coronary syndrome without persistent ST-elevation. Plaque rupture with partial thrombosis causes ischaemia at rest or with minimal exertion. Troponin is elevated in NSTEMI but not in unstable angina. Requires urgent risk stratification and antiplatelet therapy." },
+    { "type": "STEMI (ST-elevation myocardial infarction)", "description": "Complete acute occlusion of a coronary artery by thrombus; persistent ST-segment elevation on ECG. Emergent primary percutaneous coronary intervention (PCI) within 90 minutes of first medical contact is the gold standard." },
+    { "type": "Ischemic cardiomyopathy", "description": "Chronic ischaemia or prior infarcts produce left ventricular remodelling, wall motion abnormalities, and reduced ejection fraction. The end-stage of long-standing or recurrent CAD, managed as heart failure with reduced ejection fraction." },
+    { "type": "Microvascular coronary disease (INOCA)", "description": "Ischaemia with no obstructive coronary artery disease; dysfunction of small coronary vessels. Commoner in women and accounts for up to 50% of angina in women undergoing angiography." }
+  ],
+
+  "primarySymptoms": [
+    "Chest pressure, tightness, squeezing, or burning — typically retrosternal, radiating to the left arm, jaw, or shoulder — precipitated by exertion, emotion, cold, or a heavy meal and relieved by rest or sublingual nitroglycerin within 1-5 minutes (classic stable angina).",
+    "Shortness of breath on exertion or at rest, caused by elevated left ventricular filling pressure when ischaemia impairs diastolic relaxation or systolic function.",
+    "Chest pain at rest, lasting longer than 20 minutes, not fully relieved by nitrates — a red flag for acute coronary syndrome requiring emergency evaluation.",
+    "Radiation of discomfort to the left arm, jaw, neck, upper back, or epigastrium, reflecting shared dermatomal innervation of the heart and these structures.",
+    "Fatigue and exercise intolerance disproportionate to the level of activity, particularly in women with microvascular or occult ischaemic disease.",
+    "Palpitations or new irregular heartbeat from ischaemia-triggered atrial or ventricular arrhythmias, including ventricular fibrillation causing sudden cardiac arrest.",
+    "Diaphoresis (cold sweats), nausea, and light-headedness accompanying acute ischaemia, particularly during an acute myocardial infarction.",
+    "Syncope or pre-syncope from ventricular tachyarrhythmia or, rarely, haemodynamic compromise in extensive infarction.",
+    "Oedema of the ankles and legs when CAD has progressed to heart failure and left ventricular dysfunction with secondary right-sided volume overload."
+  ],
+
+  "earlyWarningSigns": [
+    "New exertional chest discomfort that resolves promptly with rest — even mild or atypical discomfort in a high-risk individual warrants urgent evaluation.",
+    "Unexplained new-onset dyspnea on exertion in a patient over 50 with cardiovascular risk factors, which may represent anginal equivalent rather than pulmonary disease.",
+    "Resting ECG showing ST-segment depression, T-wave inversion, or Q waves suggesting prior silent infarction.",
+    "Elevated coronary artery calcium score (CAC ≥100 Agatston units) on CT, indicating subclinical atherosclerosis and substantially elevated 10-year event risk.",
+    "Increasingly frequent or lower-threshold angina in a patient with known stable CAD — a harbinger of plaque instability."
+  ],
+
+  "emergencySigns": [
+    "Chest pain persisting more than 15 minutes at rest — call emergency services immediately; may represent STEMI requiring primary PCI within 90 minutes.",
+    "New ST-elevation ≥1 mm in two contiguous leads or new left bundle branch block on ECG — activate the catheterisation laboratory immediately.",
+    "Haemodynamic collapse (systolic BP < 90 mmHg, cold extremities, altered consciousness) with chest pain — cardiogenic shock from extensive infarction requires emergent reperfusion and circulatory support.",
+    "Sudden cardiac arrest with loss of consciousness and absent pulse — defibrillation and CPR are first-line; secondary cause is often ventricular fibrillation from acute ischaemia.",
+    "Resting tachycardia with chest pain and elevated jugular venous pressure — right ventricular infarction must be recognised because nitrate and diuretic use can cause catastrophic hypotension."
+  ],
+
+  "causes": [
+    {
+      "cause": "Atherosclerosis — lipid plaque accumulation in coronary artery walls",
+      "description": "LDL particles infiltrate damaged endothelium, undergo oxidation, and are ingested by macrophages that become foam cells within the intima. Cytokine release recruits smooth-muscle cells, which form a fibrous cap over the lipid core. Progressive plaque enlargement reduces luminal diameter; cap thinning predisposes to rupture and acute thrombosis. This process begins in the second and third decades of life."
+    },
+    {
+      "cause": "Endothelial dysfunction driven by cardiovascular risk factors",
+      "description": "Hypertension, diabetes, dyslipidaemia, and smoking all impair nitric oxide production and increase endothelial permeability, accelerating LDL entry and inflammatory cell recruitment. The interplay of multiple risk factors is multiplicative rather than additive; a 55-year-old male smoker with hypertension and diabetes has a 10-year CAD risk above 30%."
+    },
+    {
+      "cause": "Plaque rupture with acute coronary thrombosis",
+      "description": "Thin-capped fibroatheromas (TCFAs) are mechanically vulnerable to rupture from shear stress, blood pressure surges, or inflammation. Rupture exposes the lipid core to platelets and clotting factors, triggering rapid thrombus formation that can partially or completely occlude the lumen within minutes, causing acute coronary syndromes."
+    },
+    {
+      "cause": "Coronary artery spasm",
+      "description": "Vasospasm of a segment of coronary artery (Prinzmetal or variant angina) causes transient occlusion without fixed plaque, producing rest pain often in the early morning. Spasm can occur in angiographically normal arteries or superimposed on mild atherosclerosis and is triggered by cold, cocaine, smoking, or sympathomimetic drugs."
+    },
+    {
+      "cause": "Systemic inflammation and thrombogenic states",
+      "description": "Chronic inflammatory conditions — rheumatoid arthritis, psoriasis, lupus — independently increase CAD risk by 2-3-fold through accelerated atherosclerosis. Hypercoagulable states (antiphospholipid syndrome, elevated Lp(a)) promote intracoronary thrombosis at sites of even mild plaque, accounting for myocardial infarction in younger patients with modest risk-factor burden."
+    },
+    {
+      "cause": "Hereditary hyperlipidaemia and genetic predisposition",
+      "description": "Familial hypercholesterolaemia (FH) affects 1 in 250-500 people and causes LDL levels of 190-400 mg/dL, producing symptomatic CAD 20-30 years earlier than the general population if untreated. Polygenic risk scores now integrate hundreds of common variants; men in the top decile have 3-4× higher lifetime CAD risk than the bottom decile."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Hypertension", "category": "modifiable", "description": "Each 20/10 mmHg rise in blood pressure doubles cardiovascular risk. Sustained hypertension is present in roughly 50% of CAD patients; treatment to <130/80 mmHg reduces major adverse cardiac events by 25-30%." },
+    { "factor": "Dyslipidaemia (elevated LDL-C)", "category": "modifiable", "description": "LDL-C above 190 mg/dL confers up to 4-fold higher lifetime CAD risk. Each 38.7 mg/dL (1 mmol/L) reduction in LDL-C reduces major vascular events by approximately 22% per year of treatment (CTT Collaboration 2010)." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Smokers have 2-4× the CAD risk of non-smokers; smoking cessation reduces excess risk by 50% within 1 year and approaches non-smoker rates after 5-15 years. Passive smoke exposure also confers measurable risk." },
+    { "factor": "Type 2 diabetes", "category": "modifiable", "description": "Diabetes confers 2-3× excess CAD risk, with worse outcomes once CAD develops. Atherosclerosis progresses faster and is more diffuse; the ACC/AHA 2019 guidelines place diabetes as an automatic high-risk condition for statin therapy." },
+    { "factor": "Obesity (BMI ≥30)", "category": "modifiable", "description": "Obesity is independently associated with a 60-80% higher CAD incidence after adjustment for hypertension and dyslipidaemia. Central adiposity — waist circumference >102 cm in men, >88 cm in women — is a particularly strong predictor." },
+    { "factor": "Sedentary lifestyle", "category": "modifiable", "description": "Physical inactivity increases CAD risk by approximately 30-40%. Moderate-intensity aerobic activity 150 minutes/week reduces risk; even 30 minutes of brisk walking daily provides measurable cardiovascular benefit." },
+    { "factor": "Male sex and older age", "category": "non-modifiable", "description": "Men develop CAD approximately 10 years earlier than women. Risk rises steeply after age 45 in men and age 55 in women, with post-menopausal loss of oestrogen-mediated endothelial protection." }
+  ],
+
+  "affectedDemographics": [
+    "US adults: 20.1 million with diagnosed CAD; 7.2% prevalence (CDC 2023). Men predominate until age 65, after which sex prevalence equalises.",
+    "South Asians: CAD risk 2-4 times higher than White Europeans at comparable traditional risk-factor burden; presents a decade earlier on average, possibly related to elevated Lp(a), visceral adiposity, and insulin resistance.",
+    "African Americans: higher burden of hypertension, diabetes, and premature CAD; CAD mortality rates approximately 25% higher than White Americans despite similar prevalence.",
+    "Women: diagnosis often delayed because atypical symptoms (fatigue, dyspnea, nausea) are not recognised as angina equivalents; women with STEMI present later and have higher in-hospital mortality than men."
+  ],
+
+  "diagnosisOverview": "Diagnosis of CAD begins with a structured assessment of chest pain — onset, character, radiation, duration, precipitants, and relief — combined with the presence and number of cardiovascular risk factors. The ACC/AHA 2021 Chest Pain Guideline stratifies pre-test probability as low, intermediate, or high to select the optimal initial test. All patients receive a 12-lead ECG and high-sensitivity cardiac troponin to detect acute myocardial injury. In stable, non-high-risk patients with intermediate pre-test probability, coronary computed tomography angiography (CCTA) is now the preferred first-line anatomic test, with sensitivity above 95% and a very high negative predictive value. Functional stress testing — exercise ECG, stress echocardiography, or cardiac MRI with adenosine — is used when CCTA is contraindicated or when haemodynamic significance of known stenosis must be confirmed. Coronary artery calcium (CAC) scoring detects subclinical atherosclerosis and reclassifies risk in patients in whom the decision to initiate statins is uncertain. Invasive coronary angiography remains the reference standard for coronary anatomy and the platform for percutaneous intervention; it is preferred when CCTA shows significant stenosis or when non-invasive testing is inconclusive in high-risk patients. Fractional flow reserve (FFR) or instantaneous wave-free ratio (iFR) measured during angiography determines the functional significance of intermediate-severity stenoses before stenting.",
+
+  "diagnosticTests": [
+    { "test": "High-sensitivity cardiac troponin (hs-cTnI or hs-cTnT)", "purpose": "Detects myocardial cell injury; allows 0/1-hour or 0/2-hour rule-out and rule-in of NSTEMI in the emergency setting", "whatToExpect": "A standard blood draw. Results available within 30-60 minutes at most hospitals. Two serial measurements at 0 and 1-3 hours are standard; a rising or falling delta pattern confirms acute MI. Normal troponin does not exclude stable CAD." },
+    { "test": "12-lead electrocardiogram (ECG)", "purpose": "Identifies STEMI (persistent ST-elevation), ischaemia (ST depression, T-wave inversion), prior infarction (Q waves), and arrhythmias", "whatToExpect": "Takes less than 5 minutes; 10 adhesive electrodes are placed on the chest, arms, and legs. A cardiologist or algorithm reads the tracing; for suspected STEMI, interpretation must occur within 10 minutes of first medical contact." },
+    { "test": "Coronary CT angiography (CCTA)", "purpose": "Non-invasive anatomic visualisation of coronary plaque burden, degree of stenosis, and calcification", "whatToExpect": "Lasts 15-30 minutes; an iodinated contrast dye is injected via a forearm cannula and multiple X-ray images are taken while you hold your breath briefly. Heart rate control with oral metoprolol is often used. Mild allergic reaction to contrast is uncommon but should be disclosed if you have renal impairment or contrast allergy." },
+    { "test": "Exercise stress ECG (treadmill test)", "purpose": "Evaluates for exercise-induced ST changes, symptom reproduction, and haemodynamic response as a marker of significant ischaemia", "whatToExpect": "Walk on a treadmill at escalating speeds while attached to an ECG monitor. The test typically lasts 8-12 minutes; it can be stopped at any time. Sensitivity is 60-70%; normal result reduces but does not eliminate CAD probability." },
+    { "test": "Coronary artery calcium (CAC) score", "purpose": "Quantifies coronary calcification as a marker of subclinical atherosclerosis to refine 10-year cardiovascular risk and statin decision-making", "whatToExpect": "A 10-minute low-radiation CT scan of the chest without contrast injection. A CAC score of 0 confers very low 10-year risk; scores above 400 indicate extensive plaque burden and high risk." },
+    { "test": "Invasive coronary angiography", "purpose": "Gold-standard anatomic assessment of coronary stenosis; allows concurrent FFR and PCI if significant stenosis is confirmed", "whatToExpect": "Performed via a radial artery (wrist) catheter under local anaesthesia and light sedation as a day-case procedure. Dye is injected through the catheter into the coronary arteries while X-ray images are captured. Most patients go home the same day." }
+  ],
+
+  "treatmentOverview": "Treatment follows the ACC/AHA 2021 Chronic Coronary Disease guideline and the ESC 2019 Chronic Coronary Syndromes guideline, both of which stratify management into guideline-directed medical therapy (GDMT), lifestyle modification, and revascularisation based on symptom burden, ischaemic burden, and anatomy. Guideline-directed medical therapy is the cornerstone for all patients: high-intensity statin therapy (atorvastatin 40-80 mg or rosuvastatin 20-40 mg) targeting LDL-C below 70 mg/dL (and below 55 mg/dL in very-high-risk patients per ESC), aspirin 75-100 mg daily, and a beta-blocker post-MI for at least 12 months to reduce sudden cardiac death. ACE inhibitors or ARBs are added when ejection fraction is reduced, when hypertension persists, or when diabetes is present. Sublingual glyceryl trinitrate (GTN) provides rapid relief of acute angina. For chronic stable angina that is refractory to two anti-anginal drugs, revascularisation improves quality of life substantially: percutaneous coronary intervention (PCI) with drug-eluting stents is preferred for single-vessel or two-vessel disease, while coronary artery bypass grafting (CABG) is preferred for three-vessel disease, left main disease, or diabetes with multivessel disease (demonstrable SYNTAX score superiority in multiple trials). In acute coronary syndrome, anticoagulation with heparin or bivalirudin plus dual antiplatelet therapy (aspirin plus ticagrelor or prasugrel) is started on diagnosis; STEMI patients require emergent primary PCI, and NSTEMI patients with high-risk features need an early invasive strategy within 24 hours.",
+
+  "medicalTreatments": [
+    { "name": "High-intensity statin therapy (atorvastatin 40-80 mg/day or rosuvastatin 20-40 mg/day)", "description": "First-line lipid-lowering for all patients with established CAD regardless of baseline LDL-C. Stabilises existing plaques in addition to lowering LDL through hepatic LDL-receptor upregulation. Ezetimibe 10 mg is added if LDL remains above 70 mg/dL; PCSK9 inhibitors (evolocumab, alirocumab) are used for very-high-risk or statin-intolerant patients.", "effectiveness": "Each 38.7 mg/dL LDL-C reduction cuts major vascular events by 22%; high-intensity statins reduce cardiovascular death by 25-30% over 5 years (CTT meta-analysis, PMID 22007184)" },
+    { "name": "Aspirin 75-100 mg/day", "description": "Irreversibly inhibits platelet thromboxane A2 synthesis, reducing intracoronary platelet aggregation. First-line antiplatelet for all patients with established CAD; stopped only when the risk of major bleeding is deemed to outweigh benefit.", "effectiveness": "Reduces recurrent MI and cardiovascular death by approximately 25% in secondary prevention meta-analyses; absolute benefit greatest in high-risk patients" },
+    { "name": "Dual antiplatelet therapy — aspirin plus ticagrelor 90 mg twice daily or clopidogrel 75 mg/day", "description": "Mandatory for 6-12 months after PCI with drug-eluting stent or after ACS to prevent stent thrombosis. P2Y12 inhibitors block ADP-mediated platelet activation; ticagrelor is preferred over clopidogrel in ACS due to faster onset and more consistent platelet inhibition.", "effectiveness": "PLATO trial: ticagrelor vs. clopidogrel in ACS — 16% relative risk reduction in cardiovascular death, MI, or stroke (PMID 19717846)" },
+    { "name": "Beta-blockers (metoprolol succinate, carvedilol, bisoprolol)", "description": "Reduce myocardial oxygen demand by lowering heart rate and contractility; prevent ventricular remodelling post-MI. Used as anti-anginals, anti-arrhythmics, and post-MI heart-failure therapy.", "effectiveness": "Post-MI beta-blockers reduce all-cause mortality by 23% and sudden cardiac death by 32% in meta-analyses; first-year benefit is greatest" },
+    { "name": "ACE inhibitors or ARBs (ramipril 10 mg, lisinopril 10-40 mg, perindopril 10 mg)", "description": "Reduce afterload, prevent adverse left ventricular remodelling after MI, and lower cardiovascular events independently of blood pressure reduction. Mandatory in patients with EF <40%, hypertension, or diabetes.", "effectiveness": "HOPE trial (ramipril): 22% relative risk reduction in cardiovascular death, MI, and stroke in high-risk patients (PMID 10938172)" },
+    { "name": "Long-acting nitrates and ivabradine for refractory angina", "description": "Isosorbide mononitrate 30-120 mg/day reduces preload and dilates epicardial coronaries for angina prevention. Ivabradine selectively slows sinus rate and reduces angina in patients unable to tolerate beta-blockers or inadequately controlled on them.", "effectiveness": "Nitrates reduce angina frequency by 60-70%; ivabradine reduces hospitalisation for worsening heart failure by 26% in SHIFT trial (PMID 20801500)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Percutaneous coronary intervention (PCI) with drug-eluting stent", "description": "A catheter-based procedure performed through the radial artery under local anaesthesia. The stenotic lesion is crossed with a guide wire, dilated with a balloon, and stented open. Drug-eluting stents (DES) release antiproliferative agents (everolimus, zotarolimus) to prevent restenosis.", "successRate": "Procedural success in >95% of attempted lesions. Target-lesion revascularisation at 1 year below 5% with current-generation DES. Dual antiplatelet therapy required for minimum 6 months post-DES." },
+    { "name": "Coronary artery bypass grafting (CABG)", "description": "Conduits — left internal mammary artery (LIMA) and saphenous veins — are anastomosed to coronary arteries beyond the obstructions, bypassing plaque. LIMA-to-LAD graft patency exceeds 95% at 10 years. Preferred in three-vessel disease, left main stenosis ≥50%, and diabetics with multivessel disease.", "successRate": "10-year mortality advantage of 30-40% over PCI in three-vessel disease with high SYNTAX score (SYNTAXES 10-year data). In-hospital mortality approximately 1-2% for elective cases in major centres." }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Cardiac rehabilitation", "description": "Structured exercise training combined with risk-factor education reduces cardiovascular mortality by 20-26% and all-cause mortality by 15-20% after MI or revascularisation, per Cochrane 2021 meta-analysis (PMID 33834499). Should begin within 2-4 weeks of discharge." },
+    { "name": "Mediterranean diet", "description": "PREDIMED trial: Mediterranean diet supplemented with olive oil or nuts reduced incident cardiovascular events by 30% over 5 years in high-risk patients (PMID 23432189). Reduces LDL oxidation, systemic inflammation, and endothelial dysfunction." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "percutaneous-coronary-intervention",
+    "coronary-artery-bypass-grafting",
+    "statin-therapy",
+    "cardiac-rehabilitation"
+  ],
+
+  "whySeeSpecialist": "A cardiologist should be seen for any new exertional chest pain, a high-risk stress test result, or known CAD with worsening symptoms or reduced ejection fraction. Interventional cardiologists guide decisions on PCI versus CABG, and preventive cardiologists manage complex lipid disorders (familial hypercholesterolaemia, statin intolerance, and PCSK9 inhibitor initiation).",
+  "doctorSelectionGuide": "Choose a board-certified cardiologist with access to invasive catheterisation and cardiac surgery at the same centre. Interventional cardiologists should have volume above 200 PCI procedures per year. For complex multivessel disease or reoperation, seek a cardiothoracic surgical programme with annual CABG volume above 200 cases.",
+
+  "hospitalCriteria": [
+    "24/7 primary PCI capability with door-to-balloon time targets under 90 minutes for STEMI",
+    "Cardiac catheterisation laboratory with FFR/iFR capability for functional stenosis assessment",
+    "On-site cardiac surgery for CABG and high-risk PCI backup",
+    "Cardiac intensive care unit with intra-aortic balloon pump and ECMO capability",
+    "Accredited cardiac rehabilitation programme for post-event recovery"
+  ],
+  "keyFacilities": [
+    "STEMI-receiving centres with 24/7 catheterisation laboratories",
+    "Heart teams (cardiologist + cardiac surgeon) for complex multivessel decisions",
+    "Cardiac rehabilitation programmes (hospital-based or hybrid)",
+    "Preventive cardiology lipid clinics",
+    "Familial hypercholesterolaemia specialist centres"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Achieve and maintain LDL-C below 100 mg/dL in intermediate-risk individuals and below 70 mg/dL in high-risk individuals through dietary modification and statin therapy.",
+    "Control blood pressure to below 130/80 mmHg with lifestyle modification (sodium restriction, DASH diet, aerobic exercise) before adding antihypertensive medication.",
+    "Stop smoking: pharmacotherapy (varenicline, NRT) combined with behavioural counselling produces 12-month quit rates of 30-40%, roughly double unaided attempts.",
+    "Engage in at least 150 minutes per week of moderate-intensity aerobic exercise; each additional 10 MET-hours per week reduces CAD risk by approximately 12%.",
+    "Achieve or maintain a healthy BMI (18.5-24.9 kg/m²); weight loss of 5-10% reduces LDL, triglycerides, blood pressure, and insulin resistance simultaneously.",
+    "Undergo routine cardiovascular risk screening from age 40 (earlier with family history): fasting lipid profile, fasting glucose, blood pressure, and 10-year atherosclerotic cardiovascular disease (ASCVD) risk calculation."
+  ],
+
+  "lifestyleModifications": [
+    "Follow a Mediterranean-style or DASH dietary pattern: emphasise vegetables, legumes, whole grains, fish, and olive oil; limit saturated fat to below 7% of calories and trans fats to below 1%.",
+    "Limit sodium intake to below 2,300 mg/day (ideally below 1,500 mg/day for those with hypertension) to reduce blood pressure.",
+    "Exercise aerobically 150-300 minutes per week at moderate intensity; add resistance training twice weekly; resume exercise after MI under supervised cardiac rehabilitation.",
+    "Achieve 7-9 hours of quality sleep per night; sleep apnoea worsens cardiovascular risk and should be screened for and treated with CPAP.",
+    "Limit alcohol to no more than one standard drink per day for women and two for men; heavy alcohol intake raises blood pressure and contributes to arrhythmias.",
+    "Manage stress through evidence-based techniques — mindfulness-based stress reduction, cognitive behavioural therapy, or supervised relaxation — as chronic psychological stress is an independent CAD risk factor."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Oily fish (salmon, mackerel, sardines) 2-3 times per week — omega-3 fatty acids lower triglycerides and reduce platelet aggregation",
+      "Soluble fibre foods (oats, barley, psyllium, legumes) — 10 g/day of soluble fibre reduces LDL-C by approximately 5-7%",
+      "Nuts (walnuts, almonds) 30 g/day — associated with 28-45% reduction in CAD death in large prospective cohorts",
+      "Olive oil as the primary cooking fat — polyphenols reduce LDL oxidation and improve endothelial function",
+      "Colourful vegetables and fruits for antioxidants, potassium, and fibre"
+    ],
+    "avoid": [
+      "Trans fats (partially hydrogenated oils) — raise LDL and lower HDL; banned in many countries but still present in some processed foods",
+      "Saturated fat above 7% of daily calories (red meat, full-fat dairy, palm oil) — each 1% substitution of saturated fat with polyunsaturated fat reduces CAD risk by 2-3%",
+      "Excess sodium from processed foods, cured meats, and restaurant meals",
+      "Added sugars and refined carbohydrates — raise triglycerides and worsen insulin resistance; limit to below 10% of daily calories"
+    ]
+  },
+  "exerciseGuidelines": "Aim for 150-300 minutes per week of moderate-intensity aerobic exercise (brisk walking, cycling, swimming) or 75 minutes of vigorous-intensity exercise, plus twice-weekly resistance training. Post-MI and post-revascularisation patients should start with a supervised cardiac rehabilitation programme and advance gradually. High-intensity interval training (HIIT) provides additional cardiorespiratory benefit but requires medical clearance in CAD patients; avoid breath-holding (Valsalva) during heavy resistance training to prevent blood pressure surges.",
+
+  "dailyManagement": [
+    "Take statins, antiplatelet agents, and beta-blockers at the same time each day to maintain consistent plasma levels.",
+    "Carry sublingual nitrate spray or tablets at all times; use at the first sign of angina and call emergency services if pain persists beyond 5 minutes or does not respond to two doses.",
+    "Monitor blood pressure and resting heart rate weekly with a validated home device; target BP below 130/80 mmHg.",
+    "Log any change in angina frequency, threshold, or character — more frequent or lower-effort pain warrants prompt cardiologist review.",
+    "Adhere to dual antiplatelet therapy without interruption for the prescribed duration after PCI; consult the cardiologist before stopping for elective procedures.",
+    "Attend cardiac rehabilitation sessions and maintain the home exercise programme prescribed at discharge."
+  ],
+
+  "prognosis": "Prognosis is strongly influenced by extent of coronary disease, left ventricular ejection fraction (LVEF), and treatment compliance. With optimised guideline-directed medical therapy and revascularisation where indicated, the annual mortality for stable CAD is approximately 1-2% for single-vessel disease and rises to 3-5% for three-vessel disease or left main stenosis. Post-STEMI 30-day mortality has fallen from 15-18% in the thrombolysis era to below 5% with timely primary PCI. Patients who achieve LDL-C below 55 mg/dL, blood pressure below 130/80 mmHg, and abstain from smoking have regression of non-calcified plaque measurable on IVUS and substantially lower event rates. Ischaemic cardiomyopathy with LVEF below 35% carries a 5-year mortality of 20-30% without device therapy; implantable cardioverter-defibrillator (ICD) implantation reduces sudden cardiac death by 23-31% in this subgroup.",
+
+  "recoveryTimeline": "After STEMI with primary PCI: return to light activity in 1-2 weeks, driving (if no complications) after 4 weeks, full activity and work (depending on occupation) after 6-12 weeks. After CABG: sternal wound healing requires 6-8 weeks; full activity restoration typically at 3 months. Cardiac rehabilitation programmes run 12-36 sessions over 6-12 weeks and are associated with 20-25% reduction in readmission. Patients with chronic stable CAD who are medically managed do not have discrete recovery timelines — the goal is disease stability through lifelong risk-factor control.",
+
+  "complications": [
+    "Acute myocardial infarction — most dangerous complication of plaque rupture; each hour of delay to reperfusion destroys additional myocardium. Diagnosed by troponin rise, ECG change, and angiographic occlusion.",
+    "Heart failure with reduced ejection fraction (HFrEF) — develops in 20-30% of patients over 5 years after large MI or chronic diffuse ischaemia; screen with echocardiography at 6-8 weeks post-MI.",
+    "Ventricular arrhythmias and sudden cardiac death — ischaemic scarring creates re-entry circuits; primary prevention ICD is indicated when EF remains <35% after ≥3 months of optimal medical therapy.",
+    "Stroke — atrial fibrillation complicating CAD, left ventricular thrombus after anterior STEMI, and shared atherosclerotic risk factors; anticoagulation and carotid screening are indicated in specific subgroups.",
+    "Stent thrombosis — catastrophic acute occlusion of a stented vessel, usually from premature antiplatelet discontinuation; 30-day mortality 10-20%; prevented by uninterrupted dual antiplatelet therapy for minimum prescribed duration.",
+    "Contrast-induced acute kidney injury — occurs in 2-7% of patients undergoing coronary angiography, especially those with pre-existing chronic kidney disease; pre-hydration with IV saline and minimising contrast volume reduce risk."
+  ],
+
+  "supportResources": [
+    { "name": "American Heart Association — Heart Disease", "url": "https://www.heart.org/en/health-topics/heart-attack", "description": "Patient-facing guidelines, heart attack warning signs, risk calculators, and cardiac rehabilitation programme finder." },
+    { "name": "British Heart Foundation — Coronary Heart Disease", "url": "https://www.bhf.org.uk/informationsupport/conditions/coronary-heart-disease", "description": "Comprehensive patient information on angina, heart attacks, treatments, and lifestyle management." },
+    { "name": "ACC Patient Hub", "url": "https://www.acc.org/patient-hub", "description": "American College of Cardiology patient education including medication guides, heart-healthy living resources, and cardiac rehabilitation information." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "heart-failure", "name": "Heart Failure", "keyDifference": "Heart failure is a consequence of long-standing CAD in many patients but is a distinct syndrome of reduced cardiac output — presenting with breathlessness at rest, orthopnoea, ankle oedema, and elevated BNP. CAD refers to the underlying coronary arterial disease; heart failure is the downstream pump dysfunction that may result from it." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "keyDifference": "Atrial fibrillation is an arrhythmia characterised by an irregularly irregular heart rate, which shares CAD as a major risk factor and can coexist with it. However, AF is diagnosed by ECG rhythm analysis and is treated with rate or rhythm control plus anticoagulation, distinct from coronary revascularisation." },
+    { "slug": "gerd", "name": "Gastro-oesophageal Reflux Disease (GERD)", "keyDifference": "GERD causes retrosternal burning that can closely mimic angina; both worsen after meals and improve with rest. GERD pain is more often related to position or acidic food, is relieved by antacids rather than nitrates, and is not associated with exertional provocation or ECG changes." },
+    { "slug": "asthma", "name": "Asthma", "keyDifference": "Exertional breathlessness in asthma is accompanied by wheeze, prolonged expiration, and response to bronchodilators. CAD-related dyspnoea is associated with ST changes, reduced exercise capacity on formal testing, and cardiac rather than pulmonary physiology on spirometry." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "heart-failure", "name": "Heart Failure", "relevance": "Ischaemic cardiomyopathy from CAD is the leading cause of heart failure with reduced ejection fraction globally." },
+    { "slug": "stroke", "name": "Stroke", "relevance": "Shares the same atherosclerotic and risk-factor substrate; patients with CAD have 2-3× higher stroke risk." },
+    { "slug": "peripheral-artery-disease-surgical", "name": "Peripheral Artery Disease", "relevance": "Polyvascular disease: 40-60% of patients with peripheral artery disease have concomitant significant CAD." },
+    { "slug": "hypertension", "name": "Hypertension", "relevance": "The most prevalent modifiable risk factor for CAD; co-management with antihypertensives is universal in CAD care." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is coronary artery disease in simple terms?",
+      "answer": "Coronary artery disease is the build-up of fatty plaque inside the arteries that supply the heart muscle with blood. Over time the arteries narrow, reducing blood flow. When a plaque ruptures it can block the artery completely, causing a heart attack. It is the world's leading cause of death but is largely preventable through risk-factor control.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the warning signs of coronary artery disease?",
+      "answer": "The main warning sign is angina — chest pressure, tightness, or heaviness that comes on with exertion and eases with rest. Other warnings include unexplained shortness of breath, jaw or arm pain during activity, and palpitations. Sudden severe chest pain that does not resolve is an emergency.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can coronary artery disease be reversed?",
+      "answer": "Plaque cannot be fully reversed, but intensive treatment slows and partly regresses non-calcified plaque. Achieving LDL-C below 70 mg/dL with statin or PCSK9 inhibitor therapy reduces plaque volume measurably over 2 years on IVUS imaging. Risk factors must be controlled long-term to prevent further progression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between a heart attack and coronary artery disease?",
+      "answer": "Coronary artery disease is the chronic underlying condition — plaque narrowing the coronary arteries over decades. A heart attack (myocardial infarction) is an acute event when a plaque ruptures and a blood clot blocks the artery completely, cutting off blood supply to heart muscle. CAD is the soil; a heart attack is the acute crisis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is coronary artery disease diagnosed?",
+      "answer": "Diagnosis uses a combination of symptom history, ECG, high-sensitivity troponin, and imaging. Coronary CT angiography is the preferred first-line test for stable chest pain. Invasive coronary angiography confirms anatomy before stenting. Coronary calcium scoring detects subclinical plaque in asymptomatic high-risk individuals.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is coronary artery disease the same as blocked arteries?",
+      "answer": "Partially. Blocked arteries accurately describes advanced CAD where plaque narrows the lumen significantly. However, CAD includes a spectrum from mild plaque with no obstruction through moderate stenosis causing angina to complete occlusion causing a heart attack. Not all CAD causes blockage severe enough to restrict blood flow at rest.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods should I avoid with coronary artery disease?",
+      "answer": "Avoid trans fats (partially hydrogenated oils), saturated fat above 7% of daily calories, excess sodium above 2,300 mg/day, and added sugars. Specifically limit red meat, full-fat dairy, processed meats, fried foods, and sugary drinks. Replacing these with olive oil, fish, nuts, and whole grains reduces LDL and cardiovascular events.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best treatment for coronary artery disease?",
+      "answer": "All patients receive guideline-directed medical therapy: high-intensity statin, aspirin, and blood pressure control as a baseline. Stable angina refractory to two anti-anginal drugs is treated with PCI (stent) for single-vessel disease or CABG (bypass surgery) for three-vessel or left main disease. Cardiac rehabilitation after any event reduces re-hospitalisation by 20-25%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long can you live with coronary artery disease?",
+      "answer": "With modern treatment many people with stable CAD live decades with minimal limitation. Annual mortality for well-treated single-vessel disease is approximately 1-2%. Post-STEMI 30-day survival exceeds 95% with timely primary PCI. Prognosis depends heavily on ejection fraction, extent of disease, and adherence to medication and lifestyle measures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does stress cause coronary artery disease?",
+      "answer": "Chronic psychological stress is an independent CAD risk factor. It raises cortisol and catecholamines, increasing blood pressure and promoting inflammation and platelet activation. Emotional triggers account for a small proportion of acute MI presentations. Mindfulness-based stress reduction and cognitive behavioural therapy are recommended as adjuncts to medical therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can women get coronary artery disease?",
+      "answer": "Yes. CAD is the leading cause of death in women in most high-income countries. Women present a decade later than men on average, often with atypical symptoms such as fatigue, nausea, and dyspnoea rather than classic chest pressure. This leads to diagnostic delay. Women with STEMI have higher in-hospital mortality partly due to later presentation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is coronary artery disease hereditary?",
+      "answer": "Yes. A first-degree relative with premature CAD (male under 55, female under 65) roughly doubles an individual's risk. Familial hypercholesterolaemia affects 1 in 250-500 people and causes premature CAD by age 40-50 if untreated. Polygenic risk scores now identify high genetic risk even without a single large-effect variant.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a stent and how does it treat coronary artery disease?",
+      "answer": "A stent is a small metal mesh tube inserted via a catheter into a narrowed coronary artery, then expanded with a balloon to restore blood flow. Drug-eluting stents release a medication that prevents the artery from re-narrowing. The procedure is done under local anaesthetic via the wrist, usually as a day case, with most patients going home the same day.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is bypass surgery for coronary artery disease?",
+      "answer": "Coronary artery bypass grafting (CABG) uses blood vessel conduits — usually the left internal mammary artery and leg veins — sewn onto the coronary arteries beyond blockages, creating detour routes. It is preferred over stenting for three-vessel disease, left main stenosis, or diabetes with multivessel disease. Recovery takes 6-12 weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can exercise help coronary artery disease?",
+      "answer": "Yes. Moderate-intensity aerobic exercise 150 minutes per week reduces major cardiac events, improves endothelial function, lowers blood pressure, and raises HDL cholesterol. Cardiac rehabilitation after MI or revascularisation reduces all-cause mortality by 15-20% per Cochrane meta-analysis. Patients should obtain medical clearance before starting or substantially increasing exercise intensity.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Coronary artery disease (CAD, heart disease, blocked arteries)",
+  "regionalNames": [
+    { "name": "Coronary heart disease", "region": "United Kingdom", "language": "English" },
+    { "name": "Ischemic heart disease", "region": "International (WHO)", "language": "English" },
+    { "name": "Koronare Herzkrankheit", "region": "Germany", "language": "German" },
+    { "name": "दिल की धमनियों की बीमारी", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "coronary artery disease",
+    "CAD",
+    "coronary heart disease",
+    "ischemic heart disease",
+    "angina",
+    "heart blockage",
+    "blocked arteries",
+    "heart attack risk",
+    "stent procedure",
+    "bypass surgery",
+    "CABG",
+    "PCI",
+    "cardiac catheterisation",
+    "statins heart disease",
+    "cardiovascular disease"
+  ],
+  "symptomKeywords": [
+    "chest pressure with walking",
+    "chest tightness climbing stairs",
+    "jaw pain with exertion",
+    "left arm pain at rest",
+    "shortness of breath heart",
+    "angina chest pain",
+    "chest pain relieved by rest"
+  ],
+
+  "metaTitle": "Coronary Artery Disease: Symptoms & Treatment | aihealz",
+  "metaDescription": "Coronary artery disease: plaque narrows heart arteries causing angina and heart attack. Symptoms, diagnosis, statins, stents and bypass surgery reviewed.",
+
+  "keywords": [
+    "coronary artery disease",
+    "coronary artery disease symptoms",
+    "coronary artery disease treatment",
+    "angina causes",
+    "heart attack prevention",
+    "CAD diagnosis",
+    "coronary CT angiography",
+    "statin therapy heart disease",
+    "coronary stent",
+    "bypass surgery heart",
+    "coronary artery disease diet",
+    "CAD prognosis",
+    "coronary calcium score"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Virani SS, et al. 2021. 2021 ACC/AHA/ASE/CHEST/SAEM/HRS/SCAI/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. JACC 78(22):e187-e285.", "url": "https://pubmed.ncbi.nlm.nih.gov/34756653/", "accessedDate": "2026-05-14" },
+    { "title": "Knuuti J, et al. 2020. 2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes. Eur Heart J 41(3):407-477.", "url": "https://pubmed.ncbi.nlm.nih.gov/31504439/", "accessedDate": "2026-05-14" },
+    { "title": "Cholesterol Treatment Trialists Collaboration. 2010. Efficacy and safety of more intensive lowering of LDL cholesterol. Lancet 376(9753):1670-81.", "url": "https://pubmed.ncbi.nlm.nih.gov/21067804/", "accessedDate": "2026-05-14" },
+    { "title": "Wallentin L, et al. (PLATO investigators). 2009. Ticagrelor versus clopidogrel in patients with acute coronary syndromes. N Engl J Med 361(11):1045-57.", "url": "https://pubmed.ncbi.nlm.nih.gov/19717846/", "accessedDate": "2026-05-14" },
+    { "title": "Estruch R, et al. (PREDIMED Study Investigators). 2013. Primary prevention of cardiovascular disease with a Mediterranean diet. N Engl J Med 368(14):1279-90.", "url": "https://pubmed.ncbi.nlm.nih.gov/23432189/", "accessedDate": "2026-05-14" },
+    { "title": "Anderson L, et al. 2021. Cochrane review: Exercise-based cardiac rehabilitation for coronary heart disease. Cochrane Database Syst Rev 11:CD001800.", "url": "https://pubmed.ncbi.nlm.nih.gov/33834499/", "accessedDate": "2026-05-14" },
+    { "title": "CDC National Center for Health Statistics. 2023. Coronary Heart Disease Prevalence Data. Centers for Disease Control and Prevention.", "url": "https://www.cdc.gov/nchs/fastats/heart-disease.htm", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

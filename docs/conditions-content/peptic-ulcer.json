@@ -1,0 +1,387 @@
+{
+  "_meta": {
+    "slug": "peptic-ulcer",
+    "tier": 1,
+    "headTerm": "peptic ulcer disease",
+    "longTailKeywords": [
+      "peptic ulcer symptoms",
+      "peptic ulcer treatment",
+      "stomach ulcer",
+      "duodenal ulcer",
+      "H pylori ulcer",
+      "peptic ulcer bleeding",
+      "NSAID ulcer",
+      "peptic ulcer diet",
+      "peptic ulcer endoscopy",
+      "peptic ulcer PPI therapy"
+    ],
+    "primarySpecialty": "Gastroenterology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Peptic Ulcer Disease: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Gastroenterology",
+
+  "heroOverview": "Peptic ulcer disease (PUD) is an erosion of the mucosa of the stomach or duodenum extending into or through the submucosa, resulting from an imbalance between acid-pepsin attack and mucosal defence. Helicobacter pylori infection drives 80-90% of duodenal ulcers and 60-70% of gastric ulcers globally; NSAID use accounts for most of the remainder. An estimated 10% of people develop a peptic ulcer during their lifetime, with a global prevalence of 4-5% in symptomatic populations. Classic epigastric burning pain — relieved by food in duodenal ulcers, worsened by food in gastric ulcers — is the hallmark. H. pylori eradication heals over 90% of H. pylori-positive ulcers and reduces recurrence from 80% to under 10% at one year.",
+
+  "keyStats": {
+    "prevalence": "Estimated 4-5% prevalence in symptomatic adults globally (PMID 11105971); lifetime risk approximately 10% in Western populations; duodenal ulcer 4 times more common than gastric ulcer",
+    "demographics": "Duodenal ulcers peak in adults aged 25-50, with males affected 2-3 times more than females; gastric ulcers are more common in adults over 60 and in NSAID users",
+    "avgAge": "Duodenal ulcer: peak age 30-50; gastric ulcer: peak age 55-70; NSAID-related ulcers increase steeply after age 65",
+    "globalCases": "Approximately 8-10 million emergency admissions annually worldwide for peptic ulcer bleeding; declining incidence since H. pylori treatment became widespread"
+  },
+
+  "definition": "Peptic ulcer disease (ICD-10: K25-K27) encompasses gastric ulcers (K25) and duodenal ulcers (K26), defined as full-thickness mucosal defects extending beyond the muscularis mucosae, with a diameter typically above 5 mm. 'Peptic' refers to the role of acid and pepsin in mucosal degradation. Normal gastroduodenal mucosa is protected by mucus, bicarbonate secretion, prostaglandins, mucosal blood flow, and epithelial restitution. Ulcers form when this defence is breached — predominantly by H. pylori-driven inflammation or by NSAID-induced prostaglandin inhibition. Duodenal ulcers are most commonly located in the duodenal bulb (anterior wall) and are almost always associated with H. pylori or NSAIDs. Gastric ulcers arise more often in the lesser curvature near the angularis incisura; Type I (lesser curvature, low acid) are associated with H. pylori; Type II-III (pre-pyloric and pyloric) are associated with high acid and H. pylori; Type IV (high lesser curvature) are less common. Stress ulcers (Curling's, Cushing's) arise in critically ill patients from impaired mucosal perfusion. The condition is managed by gastroenterologists, with endoscopists providing diagnosis and haemostasis, and surgeons managing perforations.",
+
+  "typesClassification": [
+    { "type": "H. pylori-associated ulcer", "description": "Most common type globally. H. pylori colonizes gastric antrum and disrupts the protective mucosal layer through cytotoxins (CagA, VacA), triggering inflammation and increased acid secretion. First-line H. pylori eradication heals ulcers and reduces 1-year recurrence from 80% to under 5%." },
+    { "type": "NSAID-associated ulcer", "description": "Second commonest type, responsible for 25% of PUD in Western countries. NSAIDs inhibit COX-1-derived prostaglandins that maintain mucosal blood flow and mucus secretion. Risk is highest in the first 3 months of NSAID use, with age over 65, concurrent anticoagulation, and prior ulcer history." },
+    { "type": "H. pylori-negative, NSAID-negative ulcer", "description": "Accounts for 5-10% of peptic ulcers; causes include hypersecretory states (Zollinger-Ellison syndrome, systemic mastocytosis), CMV ulcers in immunocompromised patients, Crohn's disease, and idiopathic ulcer. Hypergastrinaemia should be excluded in any treatment-refractory ulcer." },
+    { "type": "Stress ulcer (critically ill patients)", "description": "Superficial erosions or true ulcers in ICU patients from mucosal ischaemia; prophylaxis with PPIs or H2 receptor antagonists reduces incidence in high-risk patients (mechanical ventilation, coagulopathy, head injury, major burns)." }
+  ],
+
+  "primarySymptoms": [
+    "Epigastric burning or gnawing pain, typically 2-5 hours after meals (duodenal ulcer, where fasting acid peaks in the duodenum) or immediately after eating (gastric ulcer, where food acid bathing the ulcer worsens pain).",
+    "Night-time epigastric pain waking the patient from sleep, occurring in up to 50-60% of duodenal ulcer patients and corresponding to the acid secretion peak in the early morning hours.",
+    "Pain relief with food, antacids, or milk in duodenal ulcer disease — a classic differentiating feature from gastric ulcer where food worsens pain.",
+    "Nausea and bloating, particularly with gastric ulcers, from pyloric inflammation or delayed gastric emptying.",
+    "Unintentional weight loss from food avoidance due to postprandial pain in gastric ulcer patients; absent in most duodenal ulcer patients who eat to relieve pain.",
+    "Haematemesis (vomiting of blood) or coffee-ground vomiting from upper gastrointestinal bleeding in peptic ulcer haemorrhage — occurs in 15-20% of ulcer patients as a complication.",
+    "Malaena (black, tarry, foul-smelling stools) from degraded blood in the gastrointestinal tract; indicates bleeding above the ligament of Treitz.",
+    "Sudden severe generalized abdominal pain with peritoneal signs (board-like rigidity, rebound tenderness) in peptic ulcer perforation — a surgical emergency."
+  ],
+
+  "earlyWarningSigns": [
+    "Recurrent epigastric burning lasting more than 2 weeks, particularly in patients over 50 or with NSAID use — warrants Helicobacter pylori testing or endoscopy.",
+    "Positive H. pylori stool antigen or urea breath test in a dyspeptic adult — confirms infection that requires treatment to prevent ulcer development or recurrence.",
+    "Iron-deficiency anaemia without obvious cause in a middle-aged adult — chronic ulcer occult bleeding is a common underlying cause.",
+    "Epigastric tenderness on examination with no prior diagnosis — combined with heartburn or nocturnal pain, this warrants upper endoscopy."
+  ],
+
+  "emergencySigns": [
+    "Haematemesis (bright red blood or coffee grounds in vomit) or malaena — upper GI bleeding requiring immediate hospital admission, IV access, fluid resuscitation, and urgent endoscopy within 24 hours.",
+    "Sudden-onset severe generalized abdominal pain with board-like rigidity — perforated peptic ulcer, a surgical emergency requiring immediate IV fluids, antibiotics, and laparoscopic or open repair.",
+    "Haemodynamic instability (systolic BP below 90 mmHg, heart rate above 100 bpm) with GI bleeding — Rockford or Glasgow-Blatchford score guides ICU versus ward admission and urgent endoscopy.",
+    "Projectile vomiting with visible peristalsis in an adult — gastric outlet obstruction from pyloric or duodenal scarring, requiring nasogastric decompression and endoscopic or surgical intervention."
+  ],
+
+  "causes": [
+    {
+      "cause": "Helicobacter pylori infection",
+      "description": "H. pylori colonizes 44% of the global population (WHO 2021). The bacterium produces urease, which hydrolyses urea to ammonia, neutralizing gastric acid locally and allowing survival. Virulence factors CagA and VacA trigger epithelial injury, neutrophil recruitment, and excess acid secretion through antral somatostatin suppression. H. pylori causes 80-90% of duodenal ulcers and 60-70% of gastric ulcers."
+    },
+    {
+      "cause": "NSAID use (aspirin, ibuprofen, naproxen, diclofenac)",
+      "description": "NSAIDs inhibit cyclo-oxygenase-1 (COX-1), reducing prostaglandin E2 and I2 synthesis. Prostaglandins normally stimulate mucus and bicarbonate secretion and maintain submucosal blood flow. NSAID use increases peptic ulcer risk 4-5 times; concomitant H. pylori infection and NSAIDs increase risk 60-fold versus neither factor alone."
+    },
+    {
+      "cause": "Gastric acid hypersecretion (Zollinger-Ellison syndrome)",
+      "description": "Gastrinomas — neuroendocrine tumours of the pancreas or duodenal wall — produce autonomous gastrin, driving acid output 5-10 times above normal. ZE syndrome accounts for under 1% of peptic ulcers but should be suspected when ulcers are multiple, recurrent, or involve the distal duodenum or jejunum, or when serum fasting gastrin exceeds 10 times the upper limit of normal."
+    },
+    {
+      "cause": "Smoking",
+      "description": "Smoking doubles peptic ulcer risk by reducing prostaglandin synthesis, impairing mucosal blood flow, reducing bicarbonate secretion, and delaying gastric emptying. Smoking also impairs H. pylori eradication rates by approximately 15%. Cessation accelerates healing and reduces recurrence."
+    },
+    {
+      "cause": "Physiological stress (ICU-related stress ulcers)",
+      "description": "Critical illness (mechanical ventilation, head injury, major burns, septic shock) impairs splanchnic perfusion and mucosal defence, leading to stress erosions within 24-48 hours of admission in approximately 50-100% of ICU patients without prophylaxis. Clinically significant bleeding occurs in 2-4% without PPI prophylaxis."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "H. pylori infection", "category": "environmental", "description": "H. pylori infects approximately 44% of the global population; 10-15% of infected individuals develop a peptic ulcer. Prevalence is highest in developing countries (up to 80-90% in adults) where transmission is predominantly person-to-person via the oral-oral or faecal-oral route in childhood." },
+    { "factor": "Regular NSAID or aspirin use", "category": "modifiable", "description": "Short-term NSAID use raises ulcer risk 4-5 times; concurrent H. pylori and NSAIDs raise risk 60-fold. Low-dose aspirin doubles GI bleeding risk even at 75-100 mg daily. Risk is highest in the first 90 days of NSAID use, in adults over 65, and with concurrent corticosteroids or anticoagulants." },
+    { "factor": "Tobacco smoking", "category": "modifiable", "description": "Doubles peptic ulcer risk and impairs eradication therapy efficacy. The mechanism involves reduced prostaglandin synthesis, impaired mucosal blood flow, and slowed bicarbonate secretion." },
+    { "factor": "Age above 65", "category": "non-modifiable", "description": "Mucosal defence declines with age; NSAID use is more prevalent; H. pylori acquisition is cumulative. Adults over 65 carry 3-5 times higher risk of NSAID-related ulcer complications compared with younger adults." },
+    { "factor": "Prior peptic ulcer history", "category": "non-modifiable", "description": "A history of peptic ulcer is the strongest predictor of recurrent ulcer and bleeding; recurrence rate without H. pylori eradication is 60-80% within one year." },
+    { "factor": "Corticosteroid use with NSAIDs", "category": "modifiable", "description": "Corticosteroids alone do not substantially increase ulcer risk but amplify NSAID-related risk approximately 5-fold; the combination warrants co-prescription of a PPI at standard dose." }
+  ],
+
+  "affectedDemographics": [
+    "H. pylori prevalence — and therefore H. pylori-related ulcer prevalence — is highest in South and East Asia, sub-Saharan Africa, and Latin America, where childhood infection rates exceed 50-80%.",
+    "In Western countries, NSAID-related ulcers dominate and disproportionately affect adults over 65 who take NSAIDs for arthritis and low-dose aspirin for cardiovascular prevention.",
+    "Duodenal ulcers are 4 times more common than gastric ulcers overall; males are affected 2-3 times more than females for duodenal ulcer, but rates are similar for gastric ulcer.",
+    "Recurrence rates in developing countries remain high because H. pylori re-infection rates are 5-10 times higher than in developed countries after eradication."
+  ],
+
+  "diagnosisOverview": "Diagnosis is established by upper gastrointestinal endoscopy (OGD), which directly visualizes the ulcer, describes its size, location, and stigmata of haemorrhage, and allows biopsy for H. pylori and malignancy exclusion. All gastric ulcers require biopsy (at least 6 samples from the rim and base) to exclude gastric adenocarcinoma. Duodenal ulcers are rarely malignant but should be biopsied if atypical. H. pylori must be tested in every peptic ulcer patient regardless of NSAID status; testing methods include rapid urease test on endoscopic biopsy, histology, culture, urea breath test (13C-UBT), and stool antigen test (SAT). The UBT and SAT are the non-invasive tests of choice for confirming eradication 4 weeks after treatment (proton pump inhibitors must be stopped 2 weeks before). Barium meal radiography is no longer recommended. Serum fasting gastrin is measured when ZE syndrome is suspected (multiple ulcers, no H. pylori, high acid secretion, refractory ulcer, or MEN-1 syndrome). In bleeding peptic ulcer, Glasgow-Blatchford score (before endoscopy) and Rockford or Forrest classification (endoscopic) stratify risk for transfusion, intervention, and 30-day mortality. NSAID use should be documented and quantified in every patient.",
+
+  "diagnosticTests": [
+    { "test": "Upper GI endoscopy (OGD)", "purpose": "Direct visualization of ulcer; biopsy for H. pylori and cancer exclusion in gastric ulcers; therapeutic haemostasis for bleeding ulcers", "whatToExpect": "Fasting for 6 hours. A flexible camera is passed through the mouth to the stomach and duodenum under light sedation or throat spray; takes 10-15 minutes. Mild throat soreness for 24 hours. Biopsy does not cause pain." },
+    { "test": "Rapid urease test (CLO test)", "purpose": "Tests biopsy specimens for H. pylori by detecting urease activity; result within 1-3 hours of endoscopy", "whatToExpect": "Performed on gastric biopsy taken at endoscopy; the biopsy changes the colour of a urea gel from yellow to pink within 20 minutes to 3 hours if H. pylori is present." },
+    { "test": "Urea breath test (13C-UBT)", "purpose": "Non-invasive confirmation of active H. pylori infection or post-treatment eradication; highly sensitive (95%) and specific (96%)", "whatToExpect": "Drink a citric acid solution and a 13C-labelled urea capsule; breath samples collected 30 minutes later. PPIs must be stopped 2 weeks before testing; antibiotics 4 weeks before." },
+    { "test": "H. pylori stool antigen test (SAT)", "purpose": "Non-invasive H. pylori test for initial diagnosis or post-treatment eradication; equivalent accuracy to UBT when monoclonal antibody test is used", "whatToExpect": "Provide a stool sample. Result available within 24 hours. Sensitivity 94%, specificity 97% with monoclonal SAT; PPIs reduce sensitivity and should be stopped 2 weeks before." },
+    { "test": "Serum fasting gastrin", "purpose": "Screens for Zollinger-Ellison syndrome in patients with recurrent, multiple, or treatment-refractory ulcers", "whatToExpect": "Blood draw while fasting and with PPIs stopped for 1-2 weeks (if clinically safe). Gastrin above 1,000 pg/mL with high acid secretion is diagnostic of ZE syndrome; gastrin 100-1,000 pg/mL requires secretin stimulation test." },
+    { "test": "Forrest classification on endoscopy (for bleeding ulcers)", "purpose": "Classifies haemorrhage risk of bleeding ulcers to guide endoscopic therapy; Ia (spurting) and Ib (oozing) require immediate haemostasis; IIa (visible vessel) requires haemostasis; IIb (adherent clot) managed individually", "whatToExpect": "Assessment made by the endoscopist during diagnostic or urgent OGD; guides use of adrenaline injection, bipolar electrocoagulation, clips, or combination therapy." }
+  ],
+
+  "treatmentOverview": "Treatment of peptic ulcer disease is guided by underlying cause. For H. pylori-positive ulcers, the primary goal is bacterial eradication combined with acid suppression. Current NICE NG238 (2022) and ACG 2022 guidelines recommend 14-day bismuth-containing quadruple therapy (bismuth, metronidazole, tetracycline, PPI) as first-line treatment in areas with high clarithromycin resistance (above 15%), which now includes most of Europe and North America. Where clarithromycin resistance is documented below 15%, clarithromycin triple therapy (PPI, clarithromycin, amoxicillin 14 days) remains an alternative. Eradication rates with bismuth quadruple reach 85-90%; with clarithromycin triple, 80-85%. A 13C-UBT or stool antigen test confirming eradication is mandatory 4-6 weeks after completing therapy, with PPIs stopped 2 weeks before. Successful eradication reduces 1-year ulcer recurrence from 80% to under 5%. For NSAID-related ulcers, NSAIDs should be discontinued if possible; PPI therapy heals ulcers in 4-8 weeks, with success rates above 90% for duodenal ulcers and 80-85% for gastric ulcers at 8 weeks. Where NSAID continuation is unavoidable, co-prescribing with a PPI at standard dose (omeprazole 20 mg/day) reduces ulcer recurrence by 80%. COX-2 selective inhibitors (celecoxib) carry lower GI risk than non-selective NSAIDs when used without concomitant aspirin. For bleeding peptic ulcers, NICE recommends urgent endoscopy within 24 hours; endoscopic haemostasis with clips plus adrenaline injection is standard for Forrest Ia/Ib/IIa ulcers; high-dose IV PPI infusion (pantoprazole 80 mg bolus then 8 mg/h for 72 hours) halves re-bleeding rates in treated ulcers.",
+
+  "medicalTreatments": [
+    { "name": "Bismuth quadruple therapy (BQT: PPI + bismuth + metronidazole + tetracycline, 14 days)", "description": "First-line H. pylori eradication per NICE 2022 and ACG 2022 guidelines; four drugs taken twice daily for 14 days. Pylera (bismuth-metronidazole-tetracycline combination capsule) simplifies dosing. Metallic taste and dark stools from bismuth are expected side-effects.", "effectiveness": "Eradication rates 85-90% intent-to-treat; superior to clarithromycin triple therapy in high-resistance areas (PMID 28242477)" },
+    { "name": "Clarithromycin triple therapy (PPI + clarithromycin + amoxicillin, 14 days)", "description": "Second-line or first-line only where clarithromycin resistance is below 15%. Twice-daily PPI (omeprazole 20 mg or esomeprazole 40 mg), clarithromycin 500 mg, and amoxicillin 1 g. Penicillin allergy: substitute metronidazole for amoxicillin.", "effectiveness": "Eradication 80-85% where clarithromycin resistance is below 15%; falls to 55-70% in high-resistance areas" },
+    { "name": "Proton pump inhibitor (PPI) maintenance (omeprazole 20 mg/day or equivalent)", "description": "Heals peptic ulcers by suppressing acid secretion. Duodenal ulcers typically heal in 4 weeks with PPI; gastric ulcers require 8 weeks. Maintenance PPI is continued for 1 year when NSAID cessation is impossible, during H. pylori eradication, and for complicated or refractory ulcers.", "effectiveness": "Duodenal ulcer healing 90-95% at 4 weeks; gastric ulcer healing 80-90% at 8 weeks (PMID 10999790)" },
+    { "name": "High-dose IV PPI infusion (pantoprazole 80 mg bolus + 8 mg/h for 72 hours) for bleeding ulcers", "description": "Used after endoscopic haemostasis in high-risk bleeding ulcers (Forrest Ia, Ib, IIa). Maintains intragastric pH above 6, stabilizing clot formation and reducing re-bleeding risk.", "effectiveness": "Re-bleeding rate reduced from 22% to 11% versus standard-dose PPI after endoscopic haemostasis (Cochrane meta-analysis, PMID 22419299)" },
+    { "name": "Misoprostol (200 mcg four times daily)", "description": "Prostaglandin analogue that substitutes for NSAID-depleted prostaglandins, restoring mucosal protection. Used as gastroprotection when NSAIDs cannot be avoided and PPI is contraindicated; less well tolerated due to diarrhoea and cramps.", "effectiveness": "Reduces risk of serious NSAID-related GI complications by 40% in controlled trials (PMID 8604274)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Emergency laparoscopic patch repair (perforated peptic ulcer)", "description": "Graham patch omentoplasty performed laparoscopically or openly within 6 hours of confirmed perforation on CT (free air under diaphragm). Patch covers the perforation with omentum secured with absorbable sutures.", "successRate": "Mortality 1-5% in patients operated within 6 hours; rises sharply with delay; laparoscopic approach reduces wound complications versus open" },
+    { "name": "Endoscopic haemostasis (clips, adrenaline injection, thermal coagulation)", "description": "Endoscopic treatment for actively bleeding or high-risk ulcers during urgent OGD. Combination therapy (adrenaline + clip or thermal device) is superior to monotherapy and is standard per ESGE 2021 guidelines.", "successRate": "Initial haemostasis in 90-95% of Forrest Ia/Ib ulcers; re-bleeding in 10-15% at 72 hours; repeat endoscopy before surgery for first re-bleed" },
+    { "name": "Angiographic embolization (interventional radiology)", "description": "Performed when endoscopic haemostasis fails and the patient is haemodynamically unstable; selective coeliac-axis angiography identifies the bleeding vessel; coil embolization or glue injection achieves haemostasis.", "successRate": "Technical success in 70-90% of cases; clinical success (avoidance of surgery) in 60-75%; re-bleeding in 20-30%" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Deglycyrrhizinated liquorice (DGL)", "description": "Extracts of Glycyrrhiza glabra with the glycyrrhizin removed have mucosal protective properties in small clinical trials; not recommended as a substitute for PPI therapy or H. pylori eradication but used as an adjunct in some integrative medicine settings." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "proton-pump-inhibitor-therapy",
+    "helicobacter-pylori-eradication",
+    "endoscopic-haemostasis"
+  ],
+
+  "whySeeSpecialist": "All gastric ulcers require gastroenterologist review and repeat endoscopy at 6-8 weeks to confirm healing and exclude malignancy — approximately 3% of gastric ulcers that appear benign turn out to be early gastric cancer. Duodenal ulcers not healing after 8 weeks of PPI require further investigation for H. pylori re-infection, ZE syndrome, or malignancy. Complicated ulcer disease (perforation, bleeding, obstruction) requires immediate surgical or endoscopic specialist input.",
+  "doctorSelectionGuide": "A consultant gastroenterologist with upper GI endoscopy expertise is appropriate for all peptic ulcer disease. For complex bleeding, a centre with 24-hour therapeutic endoscopy, interventional radiology, and upper GI surgical backup achieves lowest mortality. For suspected ZE syndrome or refractory ulcer, a centre with nuclear medicine for somatostatin-receptor scintigraphy is needed.",
+
+  "hospitalCriteria": [
+    "Endoscopy unit with 24-hour urgent OGD capability for bleeding ulcers",
+    "Interventional radiology for failed endoscopic haemostasis",
+    "Upper GI surgical team for perforation and refractory bleeding",
+    "H. pylori culture and antimicrobial susceptibility testing for salvage eradication regimens",
+    "ICU support for haemodynamically unstable upper GI bleeding"
+  ],
+  "keyFacilities": [
+    "Tertiary gastroenterology centres with therapeutic endoscopy and multidisciplinary GI bleeding teams",
+    "Specialist GI units accredited for complex upper GI endoscopy (ERCP, ESD, endoscopic haemostasis)"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Test and treat H. pylori in all patients with peptic ulcer history, first-degree relatives of gastric cancer patients, and adults initiating long-term NSAID therapy.",
+    "Co-prescribe a standard-dose PPI (omeprazole 20 mg/day) with every prescription of NSAIDs, particularly in adults over 65 or those with a prior ulcer history.",
+    "Use the lowest effective NSAID dose for the shortest duration necessary; consider a COX-2 selective inhibitor (celecoxib) over non-selective NSAIDs in high-risk patients.",
+    "Abstain from tobacco — smoking doubles ulcer risk, impairs healing, and reduces H. pylori eradication rates.",
+    "Limit alcohol intake — alcohol disrupts the gastric mucosal barrier and delays ulcer healing."
+  ],
+
+  "lifestyleModifications": [
+    "Complete all prescribed H. pylori eradication antibiotics and confirm eradication with urea breath test 4-6 weeks after completion.",
+    "Take PPIs before meals (30 minutes before breakfast) to maximize efficacy, as PPIs require active proton pumps to bind.",
+    "Avoid NSAID self-medication; if pain relief is needed, paracetamol is the safest alternative with the lowest ulcer risk.",
+    "Stop smoking — cessation accelerates ulcer healing and reduces recurrence significantly.",
+    "Eat regular small meals and avoid fasting for long periods, which allows acid to accumulate without buffering.",
+    "Reduce coffee and alcohol intake during the active ulcer healing phase, as both stimulate acid secretion."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Regular small meals at consistent intervals to buffer acid and maintain mucosal protection",
+      "Probiotic-rich foods (yoghurt, kefir) during and after antibiotic eradication therapy to reduce antibiotic-related gastrointestinal side-effects",
+      "Lean proteins (chicken, fish, eggs) and fibre-rich vegetables to support mucosal healing",
+      "Adequate hydration — at least 1.5-2 L of water daily to support mucosal blood flow"
+    ],
+    "avoid": [
+      "NSAIDs (aspirin, ibuprofen, naproxen, diclofenac) without medical advice and PPI cover",
+      "Tobacco in any form — nicotine impairs prostaglandin synthesis and mucosal blood flow",
+      "Excess alcohol — disrupts the gastric mucosal barrier and stimulates acid secretion",
+      "Large spicy meals and coffee late in the day if they individually trigger symptoms in the acute phase"
+    ]
+  },
+  "exerciseGuidelines": "Moderate aerobic exercise is safe during uncomplicated peptic ulcer healing. No specific exercise restriction applies unless there is active upper GI bleeding or recent ulcer perforation. After surgical repair of a perforation, light activity is encouraged from day 3-5; return to exercise in 4-6 weeks. Physical activity overall reduces H. pylori-associated gastric inflammation in observational studies.",
+
+  "dailyManagement": [
+    "Take the PPI 30 minutes before the first meal of the day; a twice-daily PPI is taken before breakfast and before the evening meal for maximum acid suppression.",
+    "Avoid NSAIDs for pain relief; use paracetamol 500-1,000 mg as first-line if analgesia is needed.",
+    "Monitor for recurrence of symptoms after completing H. pylori eradication and report promptly — a 13C-UBT confirms cure.",
+    "Ensure gastric ulcers are re-endoscoped at 6-8 weeks after therapy to document healing and exclude malignancy.",
+    "Report new-onset black stools or vomiting blood immediately — any suspected bleeding requires same-day emergency assessment."
+  ],
+
+  "prognosis": "Prognosis after successful H. pylori eradication is excellent. One-year ulcer recurrence falls from 60-80% without eradication to below 5% with confirmed H. pylori clearance. NSAID-related ulcers heal in 4-8 weeks of PPI therapy but recur in 40-60% per year if NSAIDs are continued without gastroprotection. Complicated peptic ulcer disease carries higher morbidity: 30-day mortality for bleeding peptic ulcer requiring endoscopic haemostasis is 5-10%, rising to 10-25% in the elderly or with haemodynamic instability at admission. Perforated peptic ulcer carries 5-30% mortality depending on time to surgery and patient comorbidity — repair within 6 hours achieves the best outcomes. After successful eradication, the small residual gastric cancer risk from H. pylori-associated gastric atrophy persists and warrants endoscopic surveillance per MAPS II European guidelines in patients with confirmed atrophy or intestinal metaplasia.",
+
+  "recoveryTimeline": "Duodenal ulcer healing: 4 weeks with PPI. Gastric ulcer healing: 8 weeks with PPI plus eradication. H. pylori eradication confirmed at 4-6 weeks post-treatment. After bleeding ulcer: re-endoscopy at 72 hours if initial haemostasis uncertain; discharge usually day 3-5. Perforation repair: hospital stay 3-7 days; return to normal activity 4-6 weeks.",
+
+  "complications": [
+    "Upper gastrointestinal bleeding — the most common complication (15-20% of PUD); the cause of 50-60% of emergency upper GI bleeds in adults; carries 5-10% 30-day mortality in hospitalized cases.",
+    "Perforation — occurs in 2-10% of peptic ulcers; presents with sudden severe peritonitis; free air visible under diaphragm on erect CXR in 75%; surgical emergency with mortality rising sharply beyond 6 hours.",
+    "Gastric outlet obstruction from pyloric or duodenal scarring — presents with vomiting undigested food, succussion splash, and weight loss; requires endoscopic or surgical bypass after nutritional rehabilitation.",
+    "Penetration — ulcer erodes into adjacent pancreas (posterior duodenal ulcer) causing persistent back pain and elevated amylase without peritonitis.",
+    "Gastric carcinoma — H. pylori-associated gastric atrophy progresses over decades to dysplasia and adenocarcinoma in a small subset; risk is higher in patients with intestinal metaplasia on biopsy.",
+    "Anaemia from chronic occult blood loss — iron-deficiency anaemia in 10-15% of peptic ulcer patients presenting with fatigue and dyspnoea rather than overt bleeding."
+  ],
+
+  "supportResources": [
+    { "name": "American College of Gastroenterology — H. pylori Patient Information", "url": "https://gi.org/topics/h-pylori/", "description": "Evidence-based patient information on H. pylori testing, eradication therapy, and follow-up from the leading US gastroenterology society." },
+    { "name": "British Society of Gastroenterology — Peptic Ulcer Disease", "url": "https://www.bsg.org.uk/clinical-resource/british-society-of-gastroenterology-guidelines-for-management-of-iron-deficiency-anaemia-in-adults/", "description": "BSG clinical guidelines on upper GI bleeding and iron deficiency anaemia management for patients and clinicians." },
+    { "name": "NHS UK — Stomach ulcer", "url": "https://www.nhs.uk/conditions/stomach-ulcer/", "description": "Plain-language NHS patient guide to peptic ulcer symptoms, testing, eradication therapy, and when to seek urgent help." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "gerd", "name": "Gastroesophageal Reflux Disease (GERD)", "keyDifference": "GERD causes retrosternal heartburn and regurgitation, worsened by lying flat or large meals; it does not cause localized epigastric tenderness. Peptic ulcer pain is more focal, often nocturnal, and related to food timing differently (relieved vs worsened). Upper endoscopy distinguishes esophagitis from gastric or duodenal ulcers." },
+    { "slug": "gallstones", "name": "Gallstones / Biliary Colic", "keyDifference": "Biliary colic from gallstones produces right upper quadrant or epigastric pain 30-90 minutes post-fatty meal, lasting 1-4 hours then fully resolving. Peptic ulcer pain is more central, episodic over days-to-weeks, partially food-related but without the sharp episodic pattern. Abdominal ultrasound detects gallstones; endoscopy detects peptic ulcer." },
+    { "slug": "ibs", "name": "Irritable Bowel Syndrome", "keyDifference": "IBS pain is typically lower abdominal, linked to bowel habit change, and relieved by defaecation. Peptic ulcer pain is epigastric, nocturnal, food-related, and not relieved by defaecation. H. pylori testing and upper endoscopy confirm or exclude peptic ulcer; both may coexist." },
+    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "keyDifference": "Colorectal cancer typically causes change in bowel habit, rectal bleeding, or lower abdominal pain. Peptic ulcer causes upper abdominal pain and when bleeding produces malaena (black stools) rather than fresh red blood per rectum. Colonoscopy and upper endoscopy distinguish the two." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "gerd", "name": "GERD" },
+    { "slug": "anemia", "name": "Anemia" },
+    { "slug": "depression", "name": "Depression" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "gerd", "name": "GERD", "relevance": "Both are acid-related mucosal disorders managed with PPIs; H. pylori infection contributes to both in some patients; both present with dyspepsia." },
+    { "slug": "gallstones", "name": "Gallstones", "relevance": "Both cause upper abdominal pain after meals and are leading diagnoses in patients presenting with epigastric pain to gastroenterology clinics." },
+    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "relevance": "Both can present with iron-deficiency anaemia from GI blood loss; endoscopy from both ends is often required to locate the source of occult GI bleeding." },
+    { "slug": "anemia", "name": "Anemia", "relevance": "Chronic peptic ulcer blood loss is a leading cause of iron-deficiency anaemia in adults; investigation for peptic ulcer should accompany iron deficiency workup." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is a peptic ulcer?",
+      "answer": "A peptic ulcer is an open sore in the lining of the stomach (gastric ulcer) or the first part of the small intestine (duodenal ulcer). It forms when acid damages the mucosal lining, most often due to Helicobacter pylori bacteria (80-90% of duodenal ulcers) or regular NSAID painkiller use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does peptic ulcer pain feel like?",
+      "answer": "Peptic ulcer pain is typically a burning or gnawing sensation in the upper abdomen. Duodenal ulcer pain classically appears 2-5 hours after eating or at night and is relieved by food or antacids. Gastric ulcer pain often worsens with eating. Pain may be intermittent over weeks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes peptic ulcers?",
+      "answer": "The two main causes are Helicobacter pylori bacteria, which infect 44% of the world's population, and regular use of NSAIDs (ibuprofen, aspirin, naproxen). H. pylori accounts for 80-90% of duodenal ulcers. Smoking, alcohol, and stress worsen but do not independently cause peptic ulcers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How are peptic ulcers diagnosed?",
+      "answer": "Upper GI endoscopy (gastroscopy) is the diagnostic gold standard, visualizing the ulcer directly and allowing biopsy to test for H. pylori and exclude malignancy. H. pylori can also be detected non-invasively by urea breath test or stool antigen test, which are preferred for confirming eradication after treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How are peptic ulcers treated?",
+      "answer": "For H. pylori-positive ulcers, 14-day bismuth quadruple antibiotic therapy eradicates the bacterium and heals the ulcer in 85-90% of patients. Proton pump inhibitors (omeprazole, lansoprazole) suppress acid and heal ulcers in 4-8 weeks. NSAID ulcers are treated by stopping NSAIDs and taking PPIs.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can peptic ulcers heal on their own?",
+      "answer": "Small peptic ulcers may temporarily improve with antacids, but they rarely heal permanently without treating the underlying cause (H. pylori eradication or NSAID discontinuation). Without eradication, recurrence within one year is 60-80%. Self-treatment without diagnosis risks masking malignancy in gastric ulcers.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods should I avoid with a peptic ulcer?",
+      "answer": "Avoid NSAIDs (ibuprofen, aspirin, naproxen), alcohol, and tobacco, which damage the mucosal lining. Spicy foods and coffee may worsen symptoms in some patients but do not directly cause ulcers. Regular small meals buffer stomach acid and reduce symptom frequency during the healing phase.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is a peptic ulcer dangerous?",
+      "answer": "Uncomplicated peptic ulcers are manageable but complications are serious. Bleeding ulcers require emergency endoscopy and carry 5-10% 30-day mortality when hospitalized. Perforation is a surgical emergency with mortality rising sharply beyond 6 hours. Prompt treatment prevents these complications in most patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are black stools with peptic ulcer?",
+      "answer": "Black, tarry, foul-smelling stools (malaena) indicate upper GI bleeding from a peptic ulcer. Blood is digested as it passes through the gut, turning black. Malaena with dizziness or vomiting blood requires immediate emergency department attendance for IV fluids, blood tests, and urgent endoscopy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does a peptic ulcer take to heal?",
+      "answer": "Duodenal ulcers typically heal within 4 weeks on proton pump inhibitor therapy. Gastric ulcers require 8 weeks of treatment. After H. pylori eradication, healing is confirmed by symptom resolution. Gastric ulcers require repeat endoscopy at 6-8 weeks to confirm healing and rule out malignancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause peptic ulcers?",
+      "answer": "Psychological stress alone does not cause peptic ulcers in otherwise healthy individuals. However, critical illness (ICU, major surgery, head injury) causes stress ulcers in 50% of untreated intensive care patients through mucosal ischaemia. PPI prophylaxis prevents stress ulcers in high-risk ICU patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is H. pylori and how does it cause ulcers?",
+      "answer": "Helicobacter pylori is a bacterium infecting 44% of the global population. It produces urease to survive stomach acid, then triggers mucosal inflammation and increased acid secretion. This breaks down the mucosal barrier, causing ulcers. Antibiotic eradication of H. pylori heals ulcers and prevents recurrence in over 90% of cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can NSAIDs cause peptic ulcers?",
+      "answer": "Yes. NSAIDs (ibuprofen, naproxen, aspirin, diclofenac) inhibit prostaglandins that protect the stomach lining, causing ulcers in 2-4% of users annually. Risk is highest in people over 65 or those with prior ulcer history. Co-prescribing a proton pump inhibitor reduces NSAID ulcer risk by 80%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a peptic ulcer turn into cancer?",
+      "answer": "Duodenal ulcers have essentially zero malignant potential. Gastric ulcers carry a small but real risk of being early gastric cancer mimicking a benign ulcer, which is why all gastric ulcers require biopsy at endoscopy and repeat scoping at 6-8 weeks to confirm healing. H. pylori eradication reduces long-term gastric cancer risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is peptic ulcer disease hereditary?",
+      "answer": "Peptic ulcer disease is not directly inherited, but first-degree relatives of H. pylori-positive patients have higher acquisition risk due to household transmission. Blood group O is weakly associated with duodenal ulcer susceptibility. Zollinger-Ellison syndrome and MEN-1, rare causes of ulcers, have strong hereditary components.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Peptic ulcer (stomach ulcer, duodenal ulcer)",
+  "regionalNames": [
+    { "name": "Ulcère gastrique / ulcère duodénal", "region": "France, Quebec", "language": "French" },
+    { "name": "Magengeschwür / Zwölffingerdarmgeschwür", "region": "Germany", "language": "German" },
+    { "name": "पेप्टिक अल्सर", "region": "India", "language": "Hindi" },
+    { "name": "Úlcera péptica", "region": "Spain, Latin America", "language": "Spanish" }
+  ],
+  "searchTags": [
+    "peptic ulcer",
+    "stomach ulcer",
+    "duodenal ulcer",
+    "H pylori ulcer",
+    "gastric ulcer",
+    "ulcer symptoms",
+    "PPI omeprazole ulcer",
+    "ulcer bleeding",
+    "NSAID ulcer",
+    "H pylori treatment",
+    "epigastric pain",
+    "upper GI bleeding",
+    "Zollinger Ellison syndrome",
+    "ulcer endoscopy"
+  ],
+  "symptomKeywords": [
+    "burning stomach pain at night",
+    "stomach pain relieved by eating",
+    "stomach pain after NSAIDs",
+    "black tarry stools",
+    "vomiting blood",
+    "stomach pain fasting",
+    "epigastric gnawing pain",
+    "upper belly pain between meals"
+  ],
+
+  "metaTitle": "Peptic Ulcer Disease: Symptoms & Treatment | aihealz",
+  "metaDescription": "Peptic ulcer: mucosal erosion in the stomach or duodenum from H. pylori or NSAIDs. Symptoms, endoscopy diagnosis, and eradication treatment options reviewed.",
+
+  "keywords": [
+    "peptic ulcer disease",
+    "stomach ulcer",
+    "duodenal ulcer",
+    "H pylori treatment",
+    "NSAID ulcer",
+    "peptic ulcer symptoms",
+    "peptic ulcer endoscopy",
+    "upper GI bleeding",
+    "proton pump inhibitor",
+    "ulcer healing",
+    "Zollinger Ellison syndrome",
+    "peptic ulcer diet"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Malfertheiner P, Megraud F, Rokkas T, et al. 2022. European Helicobacter and Microbiota Study Group. Management of Helicobacter pylori infection: the Maastricht VI/Florence Consensus Report. Gut 71(9):1724-1762.", "url": "https://pubmed.ncbi.nlm.nih.gov/35707400/", "accessedDate": "2026-05-14" },
+    { "title": "Laine L, Barkun AN, Saltzman JR, Martel M, Leontiadis GI. 2021. ACG Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding. Am J Gastroenterol 116(5):899-917.", "url": "https://pubmed.ncbi.nlm.nih.gov/33929377/", "accessedDate": "2026-05-14" },
+    { "title": "Crowe SE. 2019. Helicobacter pylori infection. N Engl J Med 380(12):1158-1165.", "url": "https://pubmed.ncbi.nlm.nih.gov/30893536/", "accessedDate": "2026-05-14" },
+    { "title": "Huang JQ, Sridhar S, Hunt RH. 2002. Role of Helicobacter pylori infection and non-steroidal anti-inflammatory drugs in peptic ulcer disease. Lancet 359(9300):14-22.", "url": "https://pubmed.ncbi.nlm.nih.gov/11809181/", "accessedDate": "2026-05-14" },
+    { "title": "National Institute for Health and Care Excellence. 2022. Gastro-oesophageal reflux disease and dyspepsia in adults. NICE Clinical Guideline NG238.", "url": "https://www.nice.org.uk/guidance/ng238", "accessedDate": "2026-05-14" },
+    { "title": "Gomollon F, McNicholl AG, O'Morain C, et al. 2022. Best practice in the management of Helicobacter pylori infection. Aliment Pharmacol Ther 56(5):834-853.", "url": "https://pubmed.ncbi.nlm.nih.gov/35770986/", "accessedDate": "2026-05-14" },
+    { "title": "Zullo A, Hassan C, De Francesco V, et al. 2018. Helicobacter pylori eradication therapies in clinical practice: a summary of the literature. Expert Opin Drug Deliv 15(1):91-98.", "url": "https://pubmed.ncbi.nlm.nih.gov/28670917/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

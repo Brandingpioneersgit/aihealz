@@ -1,0 +1,374 @@
+{
+  "_meta": {
+    "slug": "hemolytic-uremic-syndrome",
+    "tier": 1,
+    "headTerm": "hemolytic uremic syndrome",
+    "longTailKeywords": [
+      "HUS symptoms",
+      "hemolytic uremic syndrome causes",
+      "HUS treatment children",
+      "E coli HUS",
+      "atypical HUS",
+      "complement-mediated HUS",
+      "Shiga toxin HUS",
+      "HUS vs TTP",
+      "HUS kidney failure",
+      "hemolytic uremic syndrome diagnosis"
+    ],
+    "primarySpecialty": "Nephrology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Hemolytic Uremic Syndrome: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Nephrology",
+
+  "heroOverview": "Hemolytic uremic syndrome (HUS) is a thrombotic microangiopathy defined by the triad of microangiopathic hemolytic anemia, thrombocytopenia, and acute kidney injury occurring simultaneously. The most common form, Shiga toxin-associated HUS (STEC-HUS), follows infection by Shiga toxin-producing Escherichia coli, most often serotype O157:H7, and accounts for over 90% of pediatric cases. In the United States, STEC-HUS occurs in roughly 6 per 100,000 children under age 5. A rarer form — atypical HUS (aHUS) — is driven by dysregulation of the alternative complement pathway and carries a much higher risk of end-stage renal disease. Eculizumab, a complement C5 inhibitor, has transformed outcomes in aHUS since 2011.",
+
+  "keyStats": {
+    "prevalence": "STEC-HUS incidence approximately 2 per 100,000 overall; 6 per 100,000 in children under 5 in the US (CDC FoodNet surveillance 2022)",
+    "demographics": "STEC-HUS primarily affects children under 10; atypical HUS affects all ages with bimodal peak in early childhood and adulthood; females slightly predominate in aHUS",
+    "avgAge": "STEC-HUS peak age 1-5 years; atypical HUS can present at any age including in adults triggered by pregnancy, transplantation, or infection",
+    "globalCases": "Approximately 300-700 STEC-HUS cases annually in the US; large outbreaks from contaminated food (spinach 2006, bean sprouts 2011) report hundreds of cases"
+  },
+
+  "definition": "Hemolytic uremic syndrome (ICD-10: D59.3) is a thrombotic microangiopathy (TMA) characterized pathologically by endothelial cell injury, platelet activation, and fibrin-platelet thrombi in small renal vessels — arterioles and glomerular capillaries — producing mechanical red blood cell fragmentation (microangiopathic hemolysis), platelet consumption, and glomerular ischemia.\n\nTwo major subtypes exist. Typical or STEC-HUS (previously called D+ HUS) is triggered by Shiga toxins 1 and 2 produced by enterohemorrhagic E. coli (most commonly O157:H7, also O26, O111, O145) and, less often, Shigella dysenteriae type 1. Shiga toxin binds the globotriaosylceramide (Gb3) receptor on renal endothelial cells, triggering thrombosis and ischemia without primary complement activation. Atypical HUS (aHUS, previously D- HUS) results from loss-of-function mutations in complement regulatory proteins (CFH, CFI, MCP, THBD) or gain-of-function mutations in C3 or CFB, allowing uncontrolled alternative pathway activation. Secondary causes of TMA overlapping with HUS include drug toxicity (quinine, calcineurin inhibitors, chemotherapy), transplantation-associated TMA, malignant hypertension, and pregnancy-associated TMA (HELLP syndrome). Differentiation from thrombotic thrombocytopenic purpura (TTP) — caused by ADAMTS13 metalloprotease deficiency — is critical because treatment strategies differ fundamentally.",
+
+  "typesClassification": [
+    { "type": "STEC-HUS (Shiga toxin-associated, typical)", "description": "Follows bloody diarrhea caused by STEC O157:H7 or other Shiga toxin-producing serotypes. Affects predominantly children under 10. Managed with supportive care; dialysis required in 50% of cases; complete renal recovery in 70-85%. Antibiotic use is contraindicated — it increases toxin release and HUS risk." },
+    { "type": "Atypical HUS (complement-mediated)", "description": "Caused by complement dysregulation from genetic mutations or acquired antibodies against factor H. Not preceded by bloody diarrhea. Can recur spontaneously. High risk of ESRD (up to 50% within 1 year without treatment). Eculizumab dramatically improves outcomes." },
+    { "type": "Pneumococcal HUS (Streptococcus pneumoniae-associated)", "description": "Rare form in young children with invasive pneumococcal disease (meningitis, empyema). Neuraminidase produced by the bacterium exposes Thomsen-Friedenreich antigen on red blood cells, causing agglutination and TMA. Treat with antibiotics; plasma products are contraindicated in this form." },
+    { "type": "Drug-associated TMA mimicking HUS", "description": "Quinine, calcineurin inhibitors (cyclosporine, tacrolimus), gemcitabine, mitomycin C, and bevacizumab can trigger dose-independent or immune-mediated TMA. Drug withdrawal is the primary intervention." }
+  ],
+
+  "primarySymptoms": [
+    "Prodromal bloody diarrhea for 2-7 days before HUS onset in STEC-HUS — a key distinguishing feature; present in over 90% of STEC-HUS cases but absent in atypical HUS.",
+    "Sudden pallor and profound fatigue from acute hemolytic anemia, with hemoglobin typically falling below 8 g/dL over 24-72 hours.",
+    "Decreased or absent urine output (oliguria or anuria) as glomerular ischemia from microvascular thrombosis causes acute kidney injury.",
+    "Periorbital or dependent edema from fluid retention in acute kidney injury and low oncotic pressure from hemolysis.",
+    "Petechiae, bruising, and bleeding from mucous membranes due to severe thrombocytopenia (platelet count typically 20,000-60,000/µL).",
+    "Jaundice (yellow sclera and skin) from bilirubin released by massive intravascular red blood cell fragmentation.",
+    "Hypertension from fluid retention, renin release, and renal ischemia — frequently severe and requiring multiple antihypertensives.",
+    "Abdominal pain and vomiting accompanying the diarrheal prodrome or from renal capsular distension and bowel ischemia.",
+    "Neurological symptoms — confusion, seizures, or focal deficits — in 20-30% of STEC-HUS cases from cerebral microvascular thrombosis or severe uremia.",
+    "Dark or red-brown urine from hemoglobinuria and hematuria as damaged red cells release hemoglobin filtered by the kidney."
+  ],
+
+  "earlyWarningSigns": [
+    "Bloody diarrhea lasting more than two days in a child, especially after consuming undercooked beef, unpasteurized juice, raw sprouts, or during a community outbreak — warrants immediate stool culture for STEC.",
+    "Sudden drop in urine output in a child with recent gastroenteritis — a 6-hour oliguria window is a critical trigger for urgent blood count and creatinine.",
+    "Rapidly progressing pallor and lethargy in a child with diarrheal illness — hemolysis producing anemia can progress from normal hemoglobin to below 6 g/dL within 24-48 hours.",
+    "Thrombocytopenia detected incidentally in a child or adult with gastrointestinal symptoms — platelet count below 100,000/µL with any evidence of renal impairment should trigger TMA evaluation."
+  ],
+
+  "emergencySigns": [
+    "Anuria (no urine output for 12+ hours) with rising creatinine and hyperkalemia — renal replacement therapy may be needed urgently within hours.",
+    "New-onset seizure, decreased consciousness, or focal neurological deficit in a child with bloody diarrhea or known HUS — cerebral TMA requires immediate ICU transfer.",
+    "Potassium above 6.0 mEq/L with ECG changes (peaked T-waves, widened QRS) in a child with oliguria and HUS — requires emergency dialysis.",
+    "Hemoglobin below 5 g/dL with cardiorespiratory compromise — transfusion with washed packed red blood cells is urgently needed."
+  ],
+
+  "causes": [
+    {
+      "cause": "Shiga toxin-producing Escherichia coli (STEC)",
+      "description": "STEC O157:H7 is the most common trigger in developed countries, transmitted through undercooked ground beef, contaminated raw produce (spinach, sprouts), unpasteurized milk and juice, and person-to-person spread via the fecal-oral route. Shiga toxin binds Gb3 receptors on renal microvascular endothelial cells, triggering apoptosis, thrombosis, and glomerular ischemia."
+    },
+    {
+      "cause": "Alternative complement pathway dysregulation (atypical HUS)",
+      "description": "Loss-of-function mutations in complement regulatory proteins — factor H (CFH, most common), factor I (CFI), and membrane cofactor protein (MCP/CD46) — remove the brakes on alternative complement activation on endothelial surfaces. Gain-of-function mutations in C3 or factor B further amplify this process."
+    },
+    {
+      "cause": "Anti-CFH antibodies (acquired aHUS)",
+      "description": "IgG antibodies against factor H, often developing in association with CFHR1-CFHR3 gene deletion, block factor H complement-inhibiting function on endothelial surfaces, producing an antibody-mediated complement TMA indistinguishable clinically from genetic aHUS."
+    },
+    {
+      "cause": "Invasive Streptococcus pneumoniae infection",
+      "description": "Pneumococcal neuraminidase cleaves sialic acid from the surface of red blood cells, platelets, and glomerular endothelial cells, exposing the Thomsen-Friedenreich (T) antigen. Pre-formed anti-T IgM antibodies in plasma products can worsen this form, making plasma infusion contraindicated."
+    },
+    {
+      "cause": "Drug-induced thrombotic microangiopathy",
+      "description": "Quinine produces an immune-mediated TMA through drug-dependent antibodies against platelets and endothelial cells. Calcineurin inhibitors, gemcitabine, and VEGF inhibitors cause dose-dependent endothelial toxicity. Drug withdrawal is the primary intervention."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age under 10 years", "category": "non-modifiable", "description": "Children have higher gut expression of Gb3 Shiga toxin receptor and weaker immune responses to STEC, making them 10-20x more likely to develop HUS after STEC infection than adults." },
+    { "factor": "STEC infection (especially O157:H7)", "category": "environmental", "description": "Approximately 5-15% of STEC O157:H7 infections progress to HUS in children; risk is higher with Stx2-producing strains and antibiotic use." },
+    { "factor": "Complement gene mutations (CFH, CFI, MCP, C3, CFB, THBD)", "category": "genetic", "description": "Pathogenic variants present in 50-60% of aHUS patients; single heterozygous mutations are often incompletely penetrant, with a second trigger (infection, pregnancy, surgery) unmasking the phenotype." },
+    { "factor": "Pregnancy and postpartum period", "category": "non-modifiable", "description": "Complement activation increases during pregnancy; aHUS can present for the first time in the postpartum period, especially in women with underlying complement mutations." },
+    { "factor": "Organ transplantation", "category": "non-modifiable", "description": "Transplant-associated TMA occurs in 5-14% of solid-organ transplant recipients, driven by calcineurin inhibitor toxicity, ischemia-reperfusion injury, and complement activation; aHUS recurs in transplanted kidneys." },
+    { "factor": "Use of calcineurin inhibitors or quinine", "category": "modifiable", "description": "Calcineurin inhibitors (cyclosporine, tacrolimus) cause direct endothelial toxicity; quinine produces immune-mediated platelet destruction and TMA. Dose reduction or substitution is preventive." }
+  ],
+
+  "affectedDemographics": [
+    "STEC-HUS disproportionately affects children under 10, with the highest incidence in children 1-4 years (CDC FoodNet 2022). Adults can be affected during outbreaks but have lower HUS conversion rates.",
+    "Atypical HUS presents at all ages; in children it is more likely to be genetic (CFH, MCP mutations); in adults it is often triggered by pregnancy, malignancy, or transplantation.",
+    "Large community outbreaks of STEC-HUS have affected all ages — the 2011 Germany O104:H4 bean-sprout outbreak was notable for predominantly adult cases.",
+    "Patients of any age on calcineurin inhibitors or quinine-containing drugs are at risk for drug-associated TMA."
+  ],
+
+  "diagnosisOverview": "The clinical diagnosis of HUS requires confirming all three components of the triad: evidence of hemolytic anemia with schistocytes on peripheral blood smear, thrombocytopenia, and acute kidney injury. The workup differentiates STEC-HUS from other TMAs, particularly TTP and aHUS, as management differs substantially.\n\nFor STEC-HUS: stool culture on sorbitol-MacConkey agar detects O157:H7; PCR-based multiplex panels detect a broader range of STEC serotypes and Shiga toxin genes stx1 and stx2 with greater sensitivity. Serology for STEC O-antigen antibodies supports retrospective diagnosis. Antibiotics should not be started empirically in suspected STEC-HUS before laboratory confirmation.\n\nFor all TMA: blood tests include complete blood count with differential (schistocytes, thrombocytopenia), LDH (elevated from hemolysis), haptoglobin (reduced or absent), direct antiglobulin test (negative in TMA, positive in autoimmune hemolysis), serum creatinine, and urinalysis. ADAMTS13 activity must be measured urgently to exclude TTP — activity below 10% confirms TTP and warrants plasma exchange.\n\nFor suspected aHUS: complement panel including serum C3, C4, factor H, factor I, MCP expression on granulocytes, and anti-CFH antibodies should be sent before initiating eculizumab — complement levels may normalize with treatment, making retrospective testing unreliable. Genetic complement testing (CFH, CFI, MCP, C3, CFB, CFHR1-5, THBD) confirms the diagnosis and guides long-term management and transplant planning.",
+
+  "diagnosticTests": [
+    { "test": "Peripheral blood smear for schistocytes", "purpose": "Confirms microangiopathic hemolytic anemia by identifying fragmented red blood cells (schistocytes, helmet cells); present in over 95% of active HUS", "whatToExpect": "A blood drop is spread on a glass slide and examined under a microscope. Takes under an hour. Schistocytes in the setting of thrombocytopenia and renal failure confirm the TMA diagnosis." },
+    { "test": "Stool culture and STEC PCR panel", "purpose": "Identifies Shiga toxin-producing E. coli from stool to confirm STEC-HUS etiology and determine serotype", "whatToExpect": "Fresh stool sample collected in a sterile container. PCR results available in 24-48 hours at most laboratories; culture results take 2-3 days. Sample quality diminishes rapidly after the diarrheal phase ends." },
+    { "test": "ADAMTS13 activity assay", "purpose": "Distinguishes TTP (ADAMTS13 <10%) from HUS; critical because TTP requires plasma exchange which is not first-line in HUS", "whatToExpect": "A blood draw sent to a reference laboratory. Results in 12-48 hours. Must be drawn before starting any plasma therapy. Normal ADAMTS13 activity effectively excludes TTP." },
+    { "test": "Complement panel (C3, C4, factor H, factor I, anti-CFH antibody)", "purpose": "Screens for aHUS by identifying complement dysregulation; low C3 with normal C4 and low factor H activity supports aHUS", "whatToExpect": "Standard blood draw. Must be sent before starting eculizumab as complement levels rapidly normalize on treatment. Results from specialized labs in 3-7 days." },
+    { "test": "Renal function panel (creatinine, BUN, electrolytes, urinalysis)", "purpose": "Quantifies the severity of acute kidney injury and identifies hyperkalemia, metabolic acidosis, or fluid overload requiring intervention", "whatToExpect": "Standard blood and urine tests available within 2-4 hours in an emergency setting. Daily monitoring is required during active HUS." },
+    { "test": "Complement genetic panel (CFH, CFI, MCP, C3, CFB, CFHR1-5, THBD)", "purpose": "Identifies pathogenic variants in patients with confirmed aHUS to guide long-term treatment duration and transplant planning", "whatToExpect": "A blood sample sent to a specialized genetics laboratory. Results in 4-8 weeks. Genetic counseling is recommended as mutations affect family members." }
+  ],
+
+  "treatmentOverview": "Management of STEC-HUS is supportive because there is no specific anti-Shiga toxin therapy. The mainstay is careful fluid management — avoiding hypovolemia that worsens renal ischemia while preventing fluid overload — and early dialysis initiation for anuria, severe hyperkalemia (above 6.0 mEq/L), or uremia. Packed red blood cell transfusion is given when hemoglobin falls below 6-7 g/dL or sooner with cardiopulmonary compromise. Platelet transfusion is avoided unless there is active life-threatening bleeding, as it may fuel microvascular thrombosis. Antibiotics are contraindicated in STEC-HUS because they induce Stx2 phage and increase systemic toxin levels, raising HUS incidence by 14-fold in observational studies. Antidiarrheal agents and NSAIDs are also avoided. Eculizumab (a humanized anti-C5 monoclonal antibody) is the standard of care for atypical HUS. It blocks terminal complement activation, preventing further endothelial injury within 24-48 hours of the first dose. The PLEX regimen (plasma exchange or plasma infusion) was used before eculizumab and remains an interim measure when eculizumab is not immediately available. For pneumococcal HUS, aggressive antibiotic therapy targeting S. pneumoniae is the intervention — plasma products must be avoided because anti-T antibodies in donor plasma worsen agglutination. Renal replacement therapy — peritoneal dialysis or hemodialysis — is required in 50-60% of STEC-HUS children and in virtually all aHUS patients at presentation; most STEC-HUS patients achieve renal recovery within 2-4 weeks.",
+
+  "medicalTreatments": [
+    { "name": "Supportive fluid management and dialysis", "description": "Careful IV fluid resuscitation to maintain perfusion without overload. Peritoneal dialysis or hemodialysis for anuria, hyperkalemia, severe metabolic acidosis, or uremic symptoms. The cornerstone of STEC-HUS management.", "effectiveness": "Dialysis support allows 70-85% of children to recover renal function within 3 months" },
+    { "name": "Eculizumab (initial 900 mg IV weekly x 4, then 1,200 mg every 2 weeks)", "description": "Humanized anti-C5 monoclonal antibody that blocks terminal complement activation, preventing endothelial injury in atypical HUS. Standard of care for aHUS per KDIGO 2021 and EMA/FDA guidelines.", "effectiveness": "Complete TMA response in 80-90% of aHUS patients; ESRD rate reduced from >50% to <10% at 1 year in pivotal trials (Legendre et al., 2013)" },
+    { "name": "Packed red blood cell transfusion (washed cells for pneumococcal HUS)", "description": "Indicated when hemoglobin falls below 6-7 g/dL or when anemia produces cardiopulmonary compromise. Washed cells are used in pneumococcal HUS to avoid anti-T antibodies in plasma fractions.", "effectiveness": "Corrects symptomatic anemia within hours; does not alter TMA progression" },
+    { "name": "Antihypertensive therapy (amlodipine, labetalol, hydralazine acutely)", "description": "Hypertension is present in 70-90% of HUS patients and requires aggressive treatment. IV agents for hypertensive urgency; oral therapy for sustained control during hospitalization and follow-up.", "effectiveness": "Blood pressure control reduces risk of seizure, stroke, and cardiac complications during acute HUS" },
+    { "name": "Plasma exchange (for anti-CFH antibody aHUS and while awaiting eculizumab)", "description": "Removes anti-CFH antibodies and replenishes functional complement regulators. Used as a bridge to eculizumab and as ongoing therapy in anti-CFH antibody aHUS alongside immunosuppression.", "effectiveness": "Partial remission in 50-60% of aHUS cases; inferior to eculizumab in head-to-head comparisons" }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [],
+
+  "linkedTreatmentSlugs": [
+    "eculizumab-complement-therapy",
+    "renal-replacement-therapy"
+  ],
+
+  "whySeeSpecialist": "All children with confirmed or suspected HUS require urgent pediatric nephrology assessment within hours of diagnosis. Adults with TMA should be seen by a nephrologist within 24 hours. aHUS requires specialist complement expertise for eculizumab dosing and genetic workup — many cases are managed at tertiary centers with TMA or rare renal disease programs.",
+  "doctorSelectionGuide": "For STEC-HUS, seek a children's hospital with pediatric nephrology, PICU capability, and dialysis access. For atypical HUS, choose a tertiary nephrology center with experience in complement-mediated kidney disease and access to eculizumab — treatment delay worsens outcomes in aHUS.",
+
+  "hospitalCriteria": [
+    "Pediatric intensive care unit capable of managing fluid and electrolyte emergencies",
+    "Pediatric or adult dialysis service experienced in managing TMA complications",
+    "On-site or rapid-access laboratory for ADAMTS13 activity and complement panel",
+    "Access to eculizumab through hospital pharmacy or compassionate use for aHUS"
+  ],
+  "keyFacilities": [
+    "Tertiary children's hospitals with pediatric nephrology",
+    "Academic medical centers with complement-mediated kidney disease programs",
+    "Transplant nephrology centers for long-term aHUS management"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Cook ground beef to an internal temperature of 160°F (71°C) and avoid cross-contamination between raw meat and ready-to-eat foods.",
+    "Avoid unpasteurized milk, juice, and cheese, which are documented sources of STEC O157:H7 outbreaks.",
+    "Wash hands thoroughly after using the toilet, changing diapers, and before food handling — fecal-oral STEC transmission is common in day-care settings.",
+    "Avoid swimming in lakes, pools, or spray parks when experiencing diarrhea; STEC is transmitted in water contaminated by fecal material.",
+    "For aHUS patients with known complement mutations: promptly report febrile illnesses, pregnancy, or planned surgery to a nephrologist, as these trigger complement activation and HUS recurrence."
+  ],
+
+  "lifestyleModifications": [
+    "During the recovery phase, attend all scheduled nephrology follow-up appointments — GFR, blood pressure, and proteinuria should be monitored at 1, 3, 6, and 12 months post-discharge.",
+    "Maintain strict blood pressure control (below 130/80 mmHg) with prescribed antihypertensives during recovery from HUS-related kidney injury.",
+    "Restrict dietary sodium to under 2 g per day to support blood pressure management and reduce residual kidney strain.",
+    "Avoid NSAIDs and nephrotoxic drugs during the recovery period as residual kidney function remains vulnerable.",
+    "For aHUS patients on eculizumab: carry a meningococcal meningitis warning card, receive meningococcal vaccines (MenACWY and MenB) at least 2 weeks before starting treatment, and seek immediate care for fever above 38°C."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Low-sodium diet (under 2 g per day) to control blood pressure during and after acute HUS",
+      "Moderate protein intake of 0.8 g/kg/day to reduce residual kidney workload",
+      "Potassium-restricted foods if hyperkalemia is present (avoid bananas, oranges, potatoes, tomatoes)",
+      "Adequate caloric intake to support recovery and growth in children — include high-calorie soft foods during the acute phase"
+    ],
+    "avoid": [
+      "Undercooked or raw beef, unpasteurized dairy, raw sprouts, and unwashed produce during STEC outbreaks",
+      "High-potassium foods if oliguria persists and serum potassium exceeds 5.0 mEq/L",
+      "NSAIDs (ibuprofen, naproxen) which reduce GFR and worsen kidney injury",
+      "High-phosphate foods (cola drinks, processed cheeses) if GFR is persistently reduced"
+    ]
+  },
+
+  "exerciseGuidelines": "Complete rest is required during the acute phase of HUS. Once creatinine has stabilized and blood pressure is controlled, gradual return to light activity is encouraged. Children may return to school and normal activity once dialysis has been discontinued and blood counts have normalized — typically 4-8 weeks from onset for STEC-HUS.",
+
+  "dailyManagement": [
+    "Monitor blood pressure twice daily during recovery with a home cuff; report readings above 140/90 mmHg in adults or age-specific thresholds in children.",
+    "Record daily urine output, especially in the early recovery phase — oliguria or new anuria requires immediate medical contact.",
+    "Take all prescribed antihypertensive, ACE inhibitor, and immunosuppressive medications as directed, without stopping abruptly.",
+    "For aHUS on eculizumab: attend infusion appointments every two weeks without fail; never miss a dose without medical guidance.",
+    "Maintain a prophylactic antibiotic (penicillin or amoxicillin) for asplenia-like meningococcal risk while on eculizumab, as directed by your nephrologist.",
+    "Attend follow-up blood tests (creatinine, electrolytes, CBC) at all scheduled intervals — silent kidney function decline requires detection."
+  ],
+
+  "prognosis": "Prognosis differs markedly between STEC-HUS and aHUS. For STEC-HUS in children, kidney survival is excellent: 70-85% achieve complete renal recovery within three months, 10-15% have residual CKD, and fewer than 5% progress to ESRD. Mortality with modern supportive care is below 2%. Neurological complications occur in 20-30% of children during the acute phase but resolve fully in the majority. Children with persistent hypertension, proteinuria, or reduced GFR at one year after STEC-HUS are at higher risk of long-term CKD and warrant lifelong nephrology surveillance. Atypical HUS carries a much more guarded prognosis without treatment — ESRD within one year occurs in up to 50% of patients. With eculizumab, 85-90% achieve complete TMA response, kidney function improves or stabilizes, and dialysis can often be discontinued. Long-term eculizumab reduces aHUS ESRD rate to below 10% in treated cohorts; however, stopping the drug risks recurrence in most genotypes.",
+
+  "recoveryTimeline": "STEC-HUS: dialysis dependence typically lasts 1-4 weeks; kidney function recovery occurs over 2-12 weeks. aHUS: TMA response to eculizumab within 1-2 weeks; dialysis discontinuation over 4-12 weeks if GFR recovers. Long-term surveillance continues for life in both forms.",
+
+  "complications": [
+    "Chronic kidney disease with reduced GFR — affects 25-30% of STEC-HUS children and up to 60-80% of untreated aHUS patients; requires lifelong nephrology follow-up.",
+    "Arterial hypertension requiring lifelong antihypertensive therapy — found in 20-30% of STEC-HUS survivors; higher in aHUS.",
+    "Neurological sequelae — seizures, cognitive impairment, or stroke occur in 5-10% of STEC-HUS patients with cerebral involvement and are more common in severe STEC Stx2-producing strains.",
+    "End-stage renal disease requiring kidney transplantation — aHUS recurs in 50-90% of transplanted kidneys not covered by eculizumab.",
+    "Invasive meningococcal infection — a potentially fatal risk for patients receiving eculizumab, which blocks terminal complement and impairs opsonization of Neisseria meningitidis; vaccination and prophylactic antibiotics are mandatory."
+  ],
+
+  "supportResources": [
+    { "name": "National Kidney Foundation — HUS Information", "url": "https://www.kidney.org/atoz/content/hemolytic-uremic-syndrome-hus", "description": "Patient-facing overview of HUS diagnosis, treatment, and long-term kidney health." },
+    { "name": "CDC E. coli (Escherichia coli) Information", "url": "https://www.cdc.gov/ecoli/index.html", "description": "CDC surveillance data, food safety guidance, and outbreak updates related to STEC and HUS." },
+    { "name": "Atypical HUS Foundation", "url": "https://www.ahus.info/", "description": "International patient advocacy organization for atypical HUS, offering disease education, clinical trial information, and patient support." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "nephritic-syndrome", "name": "Nephritic Syndrome", "keyDifference": "Nephritic syndrome presents with hematuria, hypertension, mild proteinuria, and reduced GFR, but does not include the microangiopathic hemolysis and thrombocytopenia that define HUS. Nephritic syndrome is caused by immune-complex or anti-GBM glomerulonephritis; HUS is a thrombotic microangiopathy. Peripheral smear (schistocytes) and ADAMTS13 are key differentiators." },
+    { "slug": "acute-kidney-injury", "name": "Acute Kidney Injury", "keyDifference": "Acute kidney injury (AKI) from any cause reduces GFR and raises creatinine, but pure AKI does not produce the simultaneous microangiopathic anemia (schistocytes) and thrombocytopenia that define HUS as a thrombotic microangiopathy. The peripheral blood smear distinguishes HUS-related AKI from other AKI causes." },
+    { "slug": "immune-thrombocytopenic-purpura-d693", "name": "Immune Thrombocytopenic Purpura (ITP)", "keyDifference": "ITP causes isolated thrombocytopenia via autoimmune platelet destruction but does not produce hemolytic anemia, schistocytes, or acute kidney injury. In HUS, platelet destruction is microangiopathic (mechanical) rather than immune-mediated; the Coombs test is negative. ITP responds to steroids and IVIG; HUS does not." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "acute-kidney-injury", "name": "Acute Kidney Injury" },
+    { "slug": "anemia", "name": "Anemia" },
+    { "slug": "hypertension", "name": "Hypertension" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "nephritic-syndrome", "name": "Nephritic Syndrome", "relevance": "Another cause of hematuria and acute kidney injury; important differential diagnosis for HUS in the workup of glomerular disease." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease", "relevance": "Long-term sequel of HUS; up to 30% of STEC-HUS children and most aHUS patients develop CKD of varying severity." },
+    { "slug": "e-coli-infection", "name": "E. coli Infection", "relevance": "Enterohemorrhagic E. coli (EHEC) O157:H7 is the primary triggering infection for typical STEC-HUS; EHEC infection precedes HUS by 3-10 days." },
+    { "slug": "nephrotic-syndrome", "name": "Nephrotic Syndrome", "relevance": "Occasionally confused with HUS in the evaluation of edema and proteinuria; distinguished by absence of hemolysis and thrombocytopenia in nephrotic syndrome." },
+    { "slug": "end-stage-renal-disease-n186", "name": "End-Stage Renal Disease", "relevance": "The most feared outcome of untreated or treatment-resistant aHUS; the primary driver of eculizumab use in aHUS is preventing ESRD." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is hemolytic uremic syndrome?",
+      "answer": "Hemolytic uremic syndrome (HUS) is a disease causing three simultaneous problems: destruction of red blood cells (hemolytic anemia), low platelets (thrombocytopenia), and kidney failure. In children, it most often follows bloody diarrhea from E. coli O157:H7. An inherited form called atypical HUS is caused by complement system dysregulation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes hemolytic uremic syndrome?",
+      "answer": "The most common cause is Shiga toxin-producing E. coli (STEC), especially O157:H7, from contaminated food or water. A rarer form, atypical HUS, is caused by mutations in complement regulatory proteins. Other causes include Streptococcus pneumoniae infection and certain drugs like quinine and calcineurin inhibitors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the symptoms of HUS?",
+      "answer": "Symptoms include bloody diarrhea followed by pallor, decreased urine output, swelling, high blood pressure, bruising, and jaundice. Urine becomes dark or red-brown from hemoglobin. Neurological symptoms such as seizures or confusion can occur in severe cases. Atypical HUS may not have the diarrheal prodrome.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is HUS dangerous?",
+      "answer": "HUS is a medical emergency. Without treatment, STEC-HUS causes dialysis-requiring kidney failure in 50% of children; however, 70-85% recover full kidney function with supportive care. Atypical HUS is more dangerous — without eculizumab, over 50% reach end-stage kidney disease within one year.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should antibiotics be given for HUS?",
+      "answer": "No — antibiotics are contraindicated in STEC-HUS. Antibiotics induce the STEC bacteriophage to release more Shiga toxin, and observational studies show a 14-fold increase in HUS risk when antibiotics are given for STEC O157:H7 diarrhea. Supportive care only is recommended for typical HUS.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is HUS treated?",
+      "answer": "STEC-HUS is managed with careful fluid balance, blood pressure control, red blood cell transfusion when hemoglobin is critically low, and dialysis for kidney failure. Atypical HUS is treated with eculizumab, a complement inhibitor that blocks terminal complement activation and prevents further kidney damage.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is HUS different from TTP?",
+      "answer": "HUS and TTP are both thrombotic microangiopathies causing hemolysis and thrombocytopenia. TTP is caused by ADAMTS13 metalloprotease deficiency, produces more neurological symptoms, and requires plasma exchange. HUS causes more severe kidney failure. ADAMTS13 activity below 10% confirms TTP; normal activity suggests HUS.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can HUS come back?",
+      "answer": "STEC-HUS does not typically recur after full recovery. Atypical HUS recurs in 30-40% of patients if eculizumab is stopped, and in 50-90% of kidney transplants not protected by eculizumab. Genetic complement mutations cause an inherent susceptibility to recurrence with any complement-activating trigger.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do children recover from HUS?",
+      "answer": "Most children with STEC-HUS recover fully. Approximately 70-85% achieve complete kidney recovery within three months; 10-15% have some degree of lasting CKD; fewer than 5% progress to kidney failure. Neurological complications occur in 20-30% but fully resolve in the majority.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods cause HUS?",
+      "answer": "STEC-HUS most commonly follows eating undercooked ground beef, raw sprouts, unpasteurized milk or juice, or contaminated leafy greens such as spinach. Person-to-person spread also occurs in day-care settings. Cooking beef to 160°F (71°C) internal temperature kills E. coli O157:H7.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is atypical HUS?",
+      "answer": "Atypical HUS (aHUS) is caused by mutations in complement proteins (most commonly factor H, factor I, or MCP) that allow uncontrolled complement activation on kidney blood vessel walls. It is not related to E. coli infection, can affect any age, and recurs without treatment. Eculizumab is the standard therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is HUS diagnosed?",
+      "answer": "Diagnosis requires finding all three features: low hemoglobin with schistocytes (fragmented red cells) on blood smear, low platelets, and elevated creatinine. Stool PCR tests for STEC confirm typical HUS. ADAMTS13 activity excludes TTP. A complement panel and genetic testing diagnose atypical HUS.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can adults get HUS?",
+      "answer": "Yes. Adults develop STEC-HUS during outbreaks but less commonly than children. Atypical HUS can present at any age, including in the postpartum period, after transplantation, or during systemic illness. Drug-associated TMA affecting adults resembles HUS and is triggered by quinine or calcineurin inhibitors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does HUS cause long-term kidney damage?",
+      "answer": "STEC-HUS causes persistent CKD in 10-15% of children, often manifesting as hypertension, proteinuria, or modestly reduced GFR detectable on long-term follow-up. Atypical HUS without adequate treatment leads to ESRD in over 50% within one year. Lifelong nephrology follow-up is recommended for all HUS survivors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the role of dialysis in HUS?",
+      "answer": "Dialysis (peritoneal or hemodialysis) is required in about 50-60% of STEC-HUS children during the acute phase for oliguria, severe hyperkalemia, or uremia. It supports the patient while the kidney recovers. Most children with STEC-HUS are successfully weaned from dialysis within 1-4 weeks.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "HUS (hemolytic uremic syndrome)",
+  "regionalNames": [],
+  "searchTags": [
+    "hemolytic uremic syndrome",
+    "HUS",
+    "HUS children",
+    "atypical HUS",
+    "STEC HUS",
+    "E coli HUS",
+    "O157:H7 kidney disease",
+    "HUS treatment",
+    "HUS symptoms",
+    "complement HUS",
+    "eculizumab HUS",
+    "thrombotic microangiopathy",
+    "TMA kidney",
+    "HUS kidney failure"
+  ],
+  "symptomKeywords": [
+    "bloody diarrhea kidney failure child",
+    "low platelets kidney failure",
+    "red urine low platelets",
+    "hemolytic anemia kidney disease",
+    "no urine after diarrhea",
+    "HUS triad"
+  ],
+
+  "metaTitle": "Hemolytic Uremic Syndrome: Symptoms & Treatment | aihealz",
+  "metaDescription": "Hemolytic uremic syndrome causes anemia, low platelets, and kidney failure after E. coli infection. Diagnosis, eculizumab treatment, and prognosis reviewed.",
+
+  "keywords": [
+    "hemolytic uremic syndrome",
+    "HUS",
+    "HUS symptoms",
+    "STEC HUS treatment",
+    "atypical HUS eculizumab",
+    "E coli O157 kidney disease",
+    "HUS diagnosis",
+    "HUS dialysis",
+    "complement-mediated HUS",
+    "HUS prognosis children",
+    "thrombotic microangiopathy kidney"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Kidney Disease: Improving Global Outcomes (KDIGO). 2021. KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases. Kidney Int 100(4S):S1-S276.", "url": "https://kdigo.org/guidelines/gd/", "accessedDate": "2026-05-14" },
+    { "title": "Legendre CM, Licht C, Muus P, et al. 2013. Terminal complement inhibitor eculizumab in atypical hemolytic-uremic syndrome. N Engl J Med 368(23):2169-81.", "url": "https://pubmed.ncbi.nlm.nih.gov/23738544/", "accessedDate": "2026-05-14" },
+    { "title": "Tarr PI, Gordon CA, Chandler WL. 2005. Shiga-toxin-producing Escherichia coli and haemolytic uraemic syndrome. Lancet 365(9464):1073-86.", "url": "https://pubmed.ncbi.nlm.nih.gov/15781103/", "accessedDate": "2026-05-14" },
+    { "title": "Loirat C, Fakhouri F, Ariceta G, et al. 2016. An international consensus approach to the management of atypical hemolytic uremic syndrome in children. Pediatr Nephrol 31(1):15-39.", "url": "https://pubmed.ncbi.nlm.nih.gov/25859752/", "accessedDate": "2026-05-14" },
+    { "title": "Jokiranta TS. 2017. HUS and atypical HUS. Blood 129(21):2847-2856.", "url": "https://pubmed.ncbi.nlm.nih.gov/28408461/", "accessedDate": "2026-05-14" },
+    { "title": "Centers for Disease Control and Prevention. E. coli (Escherichia coli). CDC FoodNet Surveillance.", "url": "https://www.cdc.gov/ecoli/index.html", "accessedDate": "2026-05-14" },
+    { "title": "Noris M, Remuzzi G. 2009. Atypical hemolytic-uremic syndrome. N Engl J Med 361(17):1676-87.", "url": "https://pubmed.ncbi.nlm.nih.gov/19846853/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

@@ -1,0 +1,392 @@
+{
+  "_meta": {
+    "slug": "lung-cancer",
+    "tier": 1,
+    "headTerm": "lung cancer",
+    "longTailKeywords": [
+      "lung cancer symptoms",
+      "lung cancer treatment",
+      "lung cancer stages",
+      "non-small cell lung cancer",
+      "small cell lung cancer",
+      "lung cancer survival rate",
+      "lung cancer diagnosis CT scan",
+      "lung cancer causes"
+    ],
+    "primarySpecialty": "Oncology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Lung Cancer: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Oncology",
+
+  "heroOverview": "Lung cancer is the leading cause of cancer death globally, accounting for approximately 1.8 million deaths in 2022 according to GLOBOCAN. In the United States alone, an estimated 234,580 new cases were diagnosed in 2023. The disease divides into two major classes: non-small cell lung cancer (NSCLC), comprising about 85% of cases, and small cell lung cancer (SCLC), approximately 15%. Cigarette smoking causes 80-85% of cases, though never-smokers account for 10-15% of diagnoses. Most patients are diagnosed at an advanced stage, when tumors have spread beyond the lung. Early detection through low-dose CT screening in high-risk individuals reduces lung cancer mortality by 20-24%. Targeted therapies directed at driver mutations such as EGFR, ALK, ROS1, and KRAS G12C have transformed survival in advanced NSCLC.",
+
+  "keyStats": {
+    "prevalence": "234,580 new US cases and 125,070 deaths estimated in 2023 (American Cancer Society); 2.48 million new cases globally (GLOBOCAN 2022)",
+    "demographics": "Median age at diagnosis 70; slightly higher incidence in men; Black men have 15-20% higher incidence than White men in the US",
+    "avgAge": "Median age at diagnosis 70 years; rare below age 40",
+    "globalCases": "2.48 million new cases and 1.79 million deaths globally in 2022 (GLOBOCAN)"
+  },
+
+  "definition": "Lung cancer (ICD-10: C34) is a malignant neoplasm arising from the bronchial epithelium, alveolar cells, or neuroendocrine cells of the lung. Non-small cell lung cancer (NSCLC) encompasses adenocarcinoma (40-45% of all lung cancers), squamous cell carcinoma (25-30%), and large cell carcinoma (10-15%). Adenocarcinoma, the dominant NSCLC histotype, most often arises peripherally in the lung parenchyma and is more common in women and never-smokers; it frequently harbors targetable mutations including EGFR exon 19/21 deletions (10-15% of US NSCLC patients, up to 50% in East Asian populations), ALK rearrangements (3-5%), ROS1 rearrangements (1-2%), BRAF V600E (1-3%), MET exon 14 skipping (3-4%), RET fusions (1-2%), and KRAS G12C (13%). Squamous cell carcinoma arises centrally near bronchi and is strongly associated with smoking. Small cell lung cancer (SCLC, ICD-10: C34.9) is a high-grade neuroendocrine tumor that grows explosively, metastasizes early, and accounts for the majority of paraneoplastic syndromes. SCLC is staged as limited stage (LS-SCLC, one hemithorax) or extensive stage (ES-SCLC). Lung cancer is managed by thoracic oncologists, radiation oncologists, and thoracic surgeons within multidisciplinary teams.",
+
+  "typesClassification": [
+    { "type": "Adenocarcinoma (NSCLC)", "description": "The most common lung cancer subtype, arising in peripheral lung glandular cells. Most likely to harbor targetable driver mutations (EGFR, ALK, ROS1, KRAS G12C) that guide first-line therapy selection. Tends to present as a peripheral nodule or mass with pleural involvement." },
+    { "type": "Squamous cell carcinoma (NSCLC)", "description": "Arises centrally from bronchial epithelium; strongly associated with heavy smoking. Frequently presents with hemoptysis and central airway obstruction. Less commonly harbors EGFR or ALK mutations but may express PD-L1, making it immune checkpoint inhibitor-responsive." },
+    { "type": "Large cell carcinoma (NSCLC)", "description": "Undifferentiated NSCLC that does not fit adenocarcinoma or squamous cell criteria; diagnosis of exclusion by immunohistochemistry. Poorer prognosis than other NSCLC subtypes; some are now reclassified as large-cell neuroendocrine carcinoma (LCNEC)." },
+    { "type": "Small cell lung cancer (SCLC)", "description": "Neuroendocrine tumor with near-universal RB1 and TP53 loss; extremely aggressive with early hematogenous spread. Highly sensitive to platinum-etoposide chemotherapy initially, but relapse within 6-12 months is nearly universal at extensive stage." },
+    { "type": "Carcinoid tumors", "description": "Low- (typical carcinoid) and intermediate-grade (atypical carcinoid) neuroendocrine tumors; account for 1-2% of lung cancers. More indolent course; typical carcinoids have over 90% 5-year survival after resection." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent or worsening cough lasting more than 3 weeks, often dry or productive, representing the most common presenting symptom in central tumors.",
+    "Hemoptysis (coughing up blood or blood-streaked sputum), which occurs in up to 25% of patients, typically from centrally located squamous cell tumors eroding into bronchial vessels.",
+    "Progressive dyspnea and reduced exercise tolerance from tumor bulk, pleural effusion, lymphangitic carcinomatosis, or post-obstructive atelectasis.",
+    "Chest pain — dull, aching, or pleuritic — from pleural involvement or chest wall invasion; Pancoast tumor invasion of the brachial plexus causes severe shoulder and arm pain radiating down the ulnar distribution.",
+    "Hoarseness from recurrent laryngeal nerve compression by mediastinal nodal disease, most commonly on the left due to aortic arch anatomy.",
+    "Superior vena cava (SVC) syndrome: facial and upper extremity swelling, headache, dyspnea, and distended neck veins from SVC compression by right-sided or mediastinal tumor.",
+    "Unintentional weight loss exceeding 5-10% body weight and anorexia, present in 40-60% of patients at diagnosis and associated with worse prognosis.",
+    "Dysphagia from esophageal compression or mediastinal lymph node invasion.",
+    "Bone pain, particularly in the spine, pelvis, and proximal femur, from skeletal metastases, which occur in 30-40% of stage IV NSCLC.",
+    "Neurological symptoms — headache, seizures, focal deficits, personality change — from brain metastases, present in 25-30% of stage IV patients, particularly adenocarcinoma."
+  ],
+
+  "earlyWarningSigns": [
+    "A pulmonary nodule of 6-30 mm found incidentally on chest CT, requiring follow-up imaging per Fleischner Society guidelines",
+    "New cough or change in character of a chronic cough in a current or former heavy smoker over age 50",
+    "Unexplained hemoptysis even in small amounts — lung cancer is the cause in 20% of patients presenting to primary care with hemoptysis",
+    "Unilateral wheeze or stridor from partial bronchial obstruction not responding to bronchodilators",
+    "Clubbing of the fingers — a paraneoplastic sign present in 10-15% of lung cancer patients"
+  ],
+
+  "emergencySigns": [
+    "Superior vena cava syndrome with severe dyspnea, cyanosis, and altered consciousness — requires urgent oncological or interventional radiology assessment",
+    "Hemoptysis exceeding 100 mL in 24 hours (massive hemoptysis) — life-threatening airway emergency requiring emergent bronchoscopy, embolization, or surgery",
+    "Acute neurological deterioration from brain metastases with herniation signs — requires dexamethasone, urgent CT, and neurosurgical assessment",
+    "Malignant pericardial effusion causing tamponade with hypotension, elevated JVP, and muffled heart sounds — pericardiocentesis urgently required",
+    "Spinal cord compression from vertebral metastasis causing new limb weakness and bladder/bowel dysfunction — urgent MRI and dexamethasone"
+  ],
+
+  "causes": [
+    {
+      "cause": "Cigarette smoking",
+      "description": "Tobacco smoke contains over 70 known carcinogens including benzo[a]pyrene, nitrosamines, and benzene that cause multiple somatic mutations in bronchial epithelium. Current smokers have 15-30× the lung cancer risk of never-smokers; risk scales with pack-year history. Cessation reduces risk by 50% after 10 years but it never fully returns to baseline."
+    },
+    {
+      "cause": "Radon gas exposure",
+      "description": "Radon is the second leading cause of lung cancer in the US, responsible for approximately 21,000 deaths annually (EPA estimate). Radon is a radioactive gas that emanates from uranium decay in soil; it accumulates in basements and ground floors. The WHO indoor action level is 100 Bq/m³; US EPA recommends mitigation above 148 Bq/m³ (4 pCi/L)."
+    },
+    {
+      "cause": "Asbestos exposure",
+      "description": "Asbestos fibers trapped in the lung parenchyma cause adenocarcinoma and squamous cell carcinoma; the combination of asbestos exposure and smoking is synergistic, multiplying risk 50-90×. Occupational exposure (shipbuilding, construction, insulation) is the dominant source. Mesothelioma (from pleural asbestos exposure) is a distinct entity but frequently co-occurs."
+    },
+    {
+      "cause": "Air pollution (outdoor and indoor)",
+      "description": "Particulate matter PM2.5 from vehicle exhaust, industrial emissions, and biomass burning is classified as a Group 1 carcinogen by IARC. Indoor air pollution from burning coal or biomass for cooking in poorly ventilated homes is the dominant risk factor for lung cancer in non-smoking women in East Asia and sub-Saharan Africa."
+    },
+    {
+      "cause": "Occupational carcinogens",
+      "description": "Occupational exposures to arsenic, chromium, nickel, silica, diesel exhaust, and polycyclic aromatic hydrocarbons account for approximately 5-10% of lung cancers globally. Uranium miners face combined radon and dust exposure. IARC classifies diesel exhaust, chromium (VI), and crystalline silica as Group 1 lung carcinogens."
+    },
+    {
+      "cause": "Inherited genetic susceptibility",
+      "description": "Germline variants in EGFR, BRCA2, ATM, and other DNA-repair genes elevate lung cancer risk in never-smokers. Families with a first-degree relative with lung cancer carry approximately 2× the risk. Rare germline EGFR T790M mutations cause familial NSCLC with early onset."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Heavy smoking (>20 pack-years)", "category": "modifiable", "description": "The dominant risk factor for all lung cancer histotypes except pulmonary carcinoids. Risk rises linearly with pack-year history; a 40-pack-year history confers 20-30× the risk of a never-smoker. Secondhand smoke exposure accounts for approximately 7,300 US lung cancer deaths annually." },
+    { "factor": "Radon exposure above 4 pCi/L", "category": "environmental", "description": "Second leading cause of lung cancer. Risk is multiplicative with smoking — a smoker with high radon exposure has over 100× the baseline risk. Home radon testing and mitigation reduce exposure effectively." },
+    { "factor": "Asbestos or occupational carcinogen exposure", "category": "environmental", "description": "Synergistic with smoking. Insulation workers, shipbuilders, and plumbers with heavy historical asbestos exposure have 5-10× the baseline risk of non-exposed non-smokers." },
+    { "factor": "Age over 55 with 30+ pack-year smoking history", "category": "non-modifiable", "description": "The USPSTF and NCCN criteria for low-dose CT screening target current or former smokers aged 50-80 with a 20+ pack-year history. This group contains approximately 80% of preventable lung cancer deaths." },
+    { "factor": "East Asian ethnicity (never-smoker EGFR-mutant lung cancer)", "category": "genetic", "description": "East Asian women who have never smoked have EGFR-mutant adenocarcinoma at rates of 40-50%, compared with 10-15% in Western populations. Genetic and environmental factors including indoor air pollution from cooking fumes are proposed mechanisms." },
+    { "factor": "Prior lung disease (COPD, pulmonary fibrosis)", "category": "non-modifiable", "description": "COPD independently doubles lung cancer risk beyond the contribution of smoking. Idiopathic pulmonary fibrosis confers a 7-14% lifetime incidence of lung cancer, with most tumors arising at the fibrosis margins." },
+    { "factor": "Family history of lung cancer", "category": "genetic", "description": "First-degree relative with lung cancer approximately doubles the individual risk independent of smoking, suggesting heritable susceptibility loci identified in multiple GWAS studies." }
+  ],
+
+  "affectedDemographics": [
+    "US incidence 53.3 per 100,000 in men, 47.3 per 100,000 in women (age-adjusted, SEER 2022); gap between sexes narrowing as female smoking rates previously rose.",
+    "Never-smoker lung cancer accounts for 10-15% of US cases and is the seventh most common cause of cancer death if considered separately.",
+    "East Asian populations: EGFR-mutant adenocarcinoma accounts for 40-50% of NSCLC in never-smoking East Asian women.",
+    "Low-income countries bear 57% of global lung cancer deaths disproportionately due to delayed diagnosis and limited access to targeted therapies."
+  ],
+
+  "diagnosisOverview": "Diagnosis begins with imaging: a chest X-ray may show a mass, hilar enlargement, or pleural effusion, but CT of the chest (with contrast) is the mandatory first cross-sectional imaging step when lung cancer is suspected. PET-CT with 18-fluorodeoxyglucose identifies mediastinal nodal involvement, distant metastases, and guides biopsy targets. Brain MRI is performed in all patients being considered for curative-intent treatment and in any patient with stage III-IV NSCLC. Tissue diagnosis is essential and determines both histology and molecular biomarker status. Bronchoscopy with endobronchial ultrasound (EBUS) is used for central tumors and mediastinal staging. CT-guided percutaneous biopsy is the approach for peripheral lesions. In pleural effusions, thoracocentesis with cytology is often diagnostic. The biopsy specimen must be adequate for IHC (to distinguish NSCLC subtypes), and in NSCLC, comprehensive molecular profiling — EGFR, ALK, ROS1, BRAF V600E, MET, RET, KRAS G12C by NGS or hybrid-capture panels — plus PD-L1 expression by IHC (tumor proportion score, TPS) are required before starting first-line systemic therapy per ESMO and NCCN guidelines. Molecular testing from liquid biopsy (cell-free DNA) is an acceptable complementary or alternative approach when tissue is insufficient. Staging uses TNM 8th edition; stage I-II is potentially resectable, stage III is locally advanced (chemoradiotherapy ± immunotherapy), stage IV is metastatic.",
+
+  "diagnosticTests": [
+    { "test": "Low-dose CT (LDCT) chest — screening", "purpose": "Annual screening for lung cancer in high-risk individuals aged 50-80 with 20+ pack-year smoking history; reduces lung cancer mortality by 20% (NLST) to 24% (NELSON trial)", "whatToExpect": "A 10-15 second breath-hold CT scan with no contrast, low radiation dose (1-3 mSv), no preparation needed. Results within 24-48 hours." },
+    { "test": "CT chest with contrast — diagnostic", "purpose": "Characterizes the primary tumor (size, location, lymph node involvement, pleural or chest wall invasion) and guides biopsy planning", "whatToExpect": "Contrast injected via IV cannula; scan takes under 5 minutes. Mild flushing sensation during contrast injection. Results interpreted by radiologist within 24-48 hours." },
+    { "test": "PET-CT (18F-FDG)", "purpose": "Whole-body metabolic staging: identifies mediastinal nodes, distant metastases, and distinguishes benign from malignant lesions before surgery", "whatToExpect": "Fasting for 4-6 hours before the scan; radioactive glucose tracer injected IV; 60-minute uptake period; scan takes 30 minutes. Low radiation exposure. Results within 24-48 hours." },
+    { "test": "Bronchoscopy with endobronchial ultrasound (EBUS)", "purpose": "Tissue sampling of central tumors and real-time-guided mediastinal lymph node biopsy (EBUS-TBNA) for histology and molecular testing", "whatToExpect": "Outpatient procedure under moderate sedation; a flexible bronchoscope is passed through the mouth into the airways. The EBUS probe images and samples lymph nodes. Sore throat 24-48 hours afterward." },
+    { "test": "CT-guided percutaneous biopsy", "purpose": "Tissue diagnosis of peripheral lung lesions not accessible by bronchoscopy", "whatToExpect": "Local anesthesia, patient lies prone or supine in CT scanner. A needle is guided into the nodule. Mild pain and coughing during the procedure; pneumothorax occurs in 10-15% of cases, requiring a small chest drain in 2-3%." },
+    { "test": "Comprehensive NGS panel (tumor tissue or liquid biopsy)", "purpose": "Identifies EGFR, ALK, ROS1, KRAS G12C, BRAF V600E, MET, RET, and NTRK alterations; PD-L1 TPS guides immunotherapy decision-making", "whatToExpect": "Performed on biopsy block or blood sample. Results in 7-21 days. Critical before initiating first-line therapy in stage III-IV NSCLC." }
+  ],
+
+  "treatmentOverview": "Treatment is stage- and biomarker-driven. For early-stage (I-II) NSCLC, anatomic surgical resection (lobectomy or segmentectomy) is the standard of care; adjuvant osimertinib (3 years) is recommended for EGFR-mutant stage IB-IIIA NSCLC after complete resection per the ADAURA trial results (5-year DFS 65% vs 29%). Adjuvant atezolizumab is approved for PD-L1-positive stage II-IIIA resected NSCLC. For stage III (unresectable) NSCLC, concurrent chemoradiotherapy followed by consolidation durvalumab (12 months) is standard (PACIFIC trial: 5-year OS 42.9% vs 33.4%). In stage IV NSCLC, treatment is determined by molecular biomarkers: EGFR-mutant disease is treated with osimertinib 80 mg daily (first-line, FLAURA2 shows addition of chemotherapy extends PFS); ALK-positive disease with alectinib 600 mg twice daily or brigatinib 180 mg daily; ROS1 with entrectinib or crizotinib; KRAS G12C with sotorasib 960 mg daily or adagrasib 400 mg twice daily; MET exon 14 skipping with capmatinib or tepotinib; BRAF V600E with dabrafenib plus trametinib; RET with selpercatinib or pralsetinib; NTRK with entrectinib or larotrectinib. In driver-mutation-negative NSCLC with PD-L1 TPS ≥50%, pembrolizumab monotherapy is first-line; TPS 1-49% uses pembrolizumab plus platinum-based chemotherapy. SCLC limited stage is treated with concurrent chemoradiotherapy (cisplatin-etoposide) with prophylactic cranial irradiation; extensive stage with atezolizumab or durvalumab plus platinum-etoposide (IMpower133, CASPIAN trials).",
+
+  "medicalTreatments": [
+    { "name": "Osimertinib (80 mg daily) for EGFR-mutant NSCLC", "description": "Third-generation EGFR TKI that crosses the blood-brain barrier and covers both activating mutations and T790M resistance. First-line for EGFR exon 19/21 NSCLC (FLAURA trial) and adjuvant after resection. CNS activity makes it preferred over earlier-generation TKIs.", "effectiveness": "Median PFS 18.9 months vs 10.2 months vs earlier TKIs (FLAURA); adjuvant 5-year DFS 65% vs 29% (ADAURA)" },
+    { "name": "Alectinib (600 mg twice daily) for ALK-rearranged NSCLC", "description": "Second-generation ALK inhibitor; first-line for ALK-positive advanced NSCLC. Superior CNS penetration compared with crizotinib and less toxicity.", "effectiveness": "Median PFS 34.8 months vs 10.9 months for crizotinib (ALEX trial); 5-year OS 62.5% in patients not progressing on alectinib" },
+    { "name": "Pembrolizumab (200 mg IV every 3 weeks) ± platinum-based chemotherapy", "description": "PD-1 checkpoint inhibitor; first-line monotherapy for PD-L1 TPS ≥50% and in combination with chemotherapy for all PD-L1 levels in driver-mutation-negative advanced NSCLC.", "effectiveness": "Median OS 26.3 months with pembrolizumab monotherapy vs 14.2 months chemotherapy (KEYNOTE-024, TPS ≥50%)" },
+    { "name": "Platinum-etoposide plus atezolizumab or durvalumab for SCLC ES", "description": "Carboplatin AUC 5 day 1 plus etoposide 100 mg/m² days 1-3 every 21 days for 4 cycles with concurrent anti-PD-L1 antibody then maintenance immunotherapy until progression.", "effectiveness": "Median OS 12.3 months with atezolizumab vs 10.3 months chemotherapy alone (IMpower133); 1-year OS 51.7% vs 38.2%" },
+    { "name": "Sotorasib (960 mg daily) for KRAS G12C-mutant NSCLC", "description": "First-in-class KRAS G12C covalent inhibitor; second-line treatment for previously treated KRAS G12C-mutant NSCLC. Adagrasib 400 mg twice daily is an alternative with activity in KRAS G12C CNS metastases.", "effectiveness": "ORR 37%, median PFS 6.8 months (CodeBreaK 100); adagrasib KRYSTAL-1: ORR 43%, median PFS 6.5 months" },
+    { "name": "Concurrent chemoradiotherapy (cisplatin-etoposide or carboplatin-paclitaxel with 60-66 Gy) for stage III NSCLC", "description": "Platinum-doublet chemotherapy given concurrently with definitive thoracic radiation, followed by 12 months of consolidation durvalumab if no progression.", "effectiveness": "5-year OS 42.9% with durvalumab consolidation vs 33.4% with placebo (PACIFIC trial)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Lobectomy (standard resection for stage I-II NSCLC)", "description": "Anatomic removal of the affected lobe via VATS or open thoracotomy. Mediastinal lymph node dissection is performed concurrently for pathological staging. VATS lobectomy has comparable oncological outcomes to open surgery with lower complication rates.", "successRate": "5-year OS approximately 70-90% for stage IA, 55-65% for stage IB, 45-55% for stage IIA; 30-day mortality under 1% at high-volume centers" },
+    { "name": "Segmentectomy (sublobar resection)", "description": "Anatomic removal of a bronchopulmonary segment; preferred over wedge resection for tumors ≤2 cm with tumor-disappearance ratio >0.5 on CT (CT-guided GGO lesions). Non-inferior to lobectomy for stage IA tumors ≤2 cm (JCOG0802 trial).", "successRate": "5-year recurrence-free survival equivalent to lobectomy for CT-defined IA1-IA2 NSCLC in JCOG0802 and CALGB 140503 trials" },
+    { "name": "Stereotactic body radiotherapy (SBRT) as surgical alternative", "description": "High-dose, precisely targeted radiation in 3-5 fractions for medically inoperable stage I NSCLC. Not surgery per se, but the standard alternative for patients who cannot tolerate resection.", "successRate": "Local control at 3 years 85-95%; overall survival comparable to surgery in propensity-matched series" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Palliative radiotherapy for symptom control", "description": "Shorter-course radiation (20-30 Gy in 5-10 fractions) effectively palliates hemoptysis, bone pain, brain metastases, and SVC syndrome. No chemotherapy required; delivered on an outpatient basis." },
+    { "name": "Endobronchial interventions (stenting, laser, photodynamic therapy)", "description": "For patients with central airway obstruction causing dyspnea; performed bronchoscopically. Restores airway patency and can reduce hemoptysis acutely, serving as a bridge to systemic therapy." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "chemotherapy",
+    "radiation-therapy",
+    "immunotherapy"
+  ],
+
+  "whySeeSpecialist": "Lung cancer management requires a multidisciplinary thoracic oncology team — thoracic surgeon, medical oncologist, radiation oncologist, and pulmonologist — for optimal treatment sequencing. Molecular profiling results directly determine first-line therapy and must be interpreted by an oncologist with experience in targeted therapies.",
+  "doctorSelectionGuide": "Seek care at an NCI-designated cancer center or a thoracic oncology program that performs high-volume EBUS, VATS lobectomy, and SBRT. Ensure the center runs comprehensive NGS panels in-house or sends to a CLIA-certified reference laboratory with turnaround under 14 days, so systemic therapy is not delayed.",
+
+  "hospitalCriteria": [
+    "Multidisciplinary thoracic oncology tumor board meeting weekly",
+    "In-house or expedited molecular profiling (NGS panel turnaround <14 days)",
+    "EBUS bronchoscopy and CT-guided biopsy services",
+    "Thoracic surgery with VATS program and low operative mortality",
+    "Radiation oncology with SBRT and IMRT capability"
+  ],
+  "keyFacilities": [
+    "NCI-designated comprehensive cancer centers",
+    "Academic thoracic oncology programs with clinical trial access",
+    "SBRT-capable radiation oncology centers for inoperable early-stage disease",
+    "High-volume thoracic surgery centers performing VATS lobectomy"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Stop smoking: quitting reduces lung cancer risk by 50% after 10 years; even reducing from heavy to light smoking provides modest risk reduction.",
+    "Test your home for radon: purchase an EPA-approved short-term radon test kit or hire a professional; mitigate if levels exceed 4 pCi/L (148 Bq/m³).",
+    "Enroll in annual low-dose CT screening if you meet USPSTF criteria: age 50-80, current or former smoker, 20+ pack-year history, quit less than 15 years ago.",
+    "Reduce indoor biomass combustion: use clean cooking fuels (LPG, induction) and ventilate cooking spaces, particularly relevant for non-smoking women in low-income countries.",
+    "Use appropriate respiratory protection in occupational settings with carcinogen exposure (asbestos, chromium, diesel fumes, silica).",
+    "Avoid secondhand smoke: a non-smoker living with a smoker has 20-30% elevated lung cancer risk over their lifetime."
+  ],
+
+  "lifestyleModifications": [
+    "Quit smoking even after diagnosis: smokers who continue have higher rates of treatment toxicity, treatment failure, and second primary lung cancers.",
+    "Take oral TKIs (osimertinib, alectinib, sotorasib) at consistent times daily; some require food for absorption — follow specific instructions.",
+    "Report new or worsening dyspnea, skin rash, or diarrhea promptly when on immune checkpoint inhibitors, as these may be immune-related adverse events requiring urgent management.",
+    "Maintain pulmonary rehabilitation exercises after lobectomy: breathing exercises, progressive walking, and incentive spirometry restore lung function within 3-6 months.",
+    "Manage cancer-related fatigue with structured low-intensity aerobic exercise; meta-analyses show 30 minutes of walking 3-5 days per week reduces fatigue by 30-40%."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein foods (eggs, fish, legumes, dairy) to preserve muscle mass during chemotherapy and immunotherapy",
+      "Antioxidant-rich vegetables and fruits (cruciferous vegetables, berries, citrus) as part of a balanced diet — avoid megadose supplements",
+      "Small, frequent calorie-dense meals to manage chemotherapy-induced nausea and anorexia",
+      "Adequate hydration (2-2.5 L/day) to support renal clearance of cisplatin and other renally excreted agents"
+    ],
+    "avoid": [
+      "Smoking and tobacco products in all forms during and after treatment",
+      "Grapefruit and Seville orange juice with TKIs metabolized by CYP3A4",
+      "Excessive alcohol during platinum chemotherapy, which synergistically increases nephrotoxicity",
+      "Raw or undercooked foods during chemotherapy-induced neutropenia"
+    ]
+  },
+  "exerciseGuidelines": "Structured aerobic exercise 30-45 minutes on most days reduces cancer-related fatigue and improves quality of life during chemotherapy and immunotherapy. Pulmonary rehabilitation programs reduce dyspnea and improve 6-minute walk distance after lobectomy. Avoid vigorous activity on days with severe thrombocytopenia (platelets below 50,000/µL).",
+
+  "dailyManagement": [
+    "Take oral TKIs as prescribed without dose interruptions; contact the oncology team before holding any dose.",
+    "Monitor for skin rash, nail changes, and diarrhea with EGFR TKIs — grade 1-2 rash can be managed with topical antibiotics; grade 3 requires dose reduction.",
+    "Attend scheduled imaging (CT or PET-CT at 8-12 weeks) to assess treatment response per RECIST 1.1.",
+    "Keep a symptom diary for dyspnea, hemoptysis, and pain to communicate changes to the care team.",
+    "Complete thromboembolism prophylaxis as prescribed — lung cancer is one of the highest-risk malignancies for DVT/PE (Khorana score)."
+  ],
+
+  "prognosis": "Prognosis is determined by stage and molecular subtype. Stage I NSCLC after resection: 5-year OS 70-90%. Stage II: 45-65%. Stage IIIA: 20-40%. Stage IV overall 5-year OS historically under 10%, but targeted therapies have transformed specific subgroups: EGFR-mutant stage IV NSCLC on osimertinib achieves median OS of 38.6 months; ALK-positive NSCLC on alectinib achieves 5-year OS of 62.5%. PD-L1 high NSCLC on pembrolizumab: median OS 26 months, with a tail of long-term responders exceeding 5 years. SCLC extensive stage: median OS with chemotherapy plus immunotherapy 12-13 months; limited stage concurrent chemoradiotherapy achieves 5-year OS of 25-35%. The gap between detected-early and advanced-stage disease remains the dominant prognostic determinant; LDCT screening programs address this gap in high-risk populations.",
+
+  "recoveryTimeline": "VATS lobectomy recovery: hospital stay 3-5 days, return to light activity at 2-4 weeks, full recovery 6-12 weeks. SBRT: outpatient, no recovery period; radiation fibrosis at the treatment site develops over 6-12 months. Chemotherapy cycles: 21-day cycles, nadir at days 7-14; counts recover by day 21 in most patients. Oral TKI therapy: continuous daily dosing with no breaks; first response assessment at 8-12 weeks.",
+
+  "complications": [
+    "Malignant pleural effusion causing progressive dyspnea in 10-15% of advanced cases — managed with thoracocentesis, indwelling pleural catheter, or pleurodesis.",
+    "Immune-related adverse events (irAEs) with checkpoint inhibitors: pneumonitis (3-5% grade 3-4), colitis (1-2%), hepatitis (1%), thyroiditis (5-10%), requiring prompt steroid treatment.",
+    "EGFR TKI resistance: T790M mutation in 50-60% of osimertinib-naive patients after first-generation TKI; C797S mutation and MET amplification in 10-20% after osimertinib — detected by liquid biopsy.",
+    "Postoperative complications after lobectomy: bronchopleural fistula (1-3%), prolonged air leak (8-15%), atrial fibrillation (10-20%).",
+    "Brain metastases developing in up to 30-40% of advanced NSCLC patients over the disease course — managed with stereotactic radiosurgery (SRS) or, for TKI-responsive mutations, dose-escalated TKI.",
+    "Deep vein thrombosis and pulmonary embolism: lung cancer is a Khorana high-risk malignancy; incidence 10-15% per year without prophylaxis."
+  ],
+
+  "supportResources": [
+    { "name": "LUNGevity Foundation", "url": "https://lungevity.org/", "description": "Patient navigation, clinical trial matching, and peer-to-peer support for lung cancer patients and their families." },
+    { "name": "American Lung Association — Lung Cancer", "url": "https://www.lung.org/lung-health-diseases/lung-disease-lookup/lung-cancer", "description": "Comprehensive patient information on lung cancer types, screening guidelines, treatment, and advocacy." },
+    { "name": "GO2 Foundation for Lung Cancer", "url": "https://go2foundation.org/", "description": "Lung cancer advocacy and research foundation; hosts a free oncology nurse navigator hotline and clinical trial finder." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "mesothelioma-general", "name": "Mesothelioma", "keyDifference": "Mesothelioma arises from pleural mesothelial cells, not bronchial epithelium, and is almost exclusively caused by asbestos exposure. It presents with pleural thickening and effusion rather than an intraparenchymal mass. Histologically, mesothelioma is distinguished by calretinin and WT-1 positivity on IHC and requires a separate treatment pathway with pemetrexed-cisplatin plus bevacizumab or ipilimumab-nivolumab." },
+    { "slug": "copd", "name": "COPD", "keyDifference": "COPD and lung cancer share the same risk factor (smoking) and can coexist. COPD causes obstructive spirometry, air trapping, and emphysema on CT without a discrete mass. Lung cancer presents as a new or growing pulmonary nodule or mass; a new abnormality on CT in a COPD patient must trigger lung cancer evaluation." },
+    { "slug": "asbestosis", "name": "Asbestosis", "keyDifference": "Asbestosis is a diffuse interstitial lung fibrosis from heavy asbestos exposure, distinguished by bibasilar crackles, restrictive spirometry, and interstitial reticulation on HRCT without a focal mass. Lung cancer may arise alongside asbestosis; the two conditions are not mutually exclusive and both require surveillance." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "copd", "name": "COPD" },
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "depression", "name": "Depression" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "mesothelioma-general", "name": "Mesothelioma", "relevance": "Shares asbestos as a key causative agent and may co-occur in the same patient; both are managed by thoracic oncology." },
+    { "slug": "colorectal-cancer", "name": "Colorectal Cancer", "relevance": "A frequent site of metastasis from lung cancer and itself a common source of lung metastases; checkpoint inhibitor overlap in treatment." },
+    { "slug": "breast-cancer", "name": "Breast Cancer", "relevance": "Lung metastases from breast cancer must be distinguished from primary lung cancer — different treatment pathways; both use PET-CT for staging." },
+    { "slug": "asbestosis", "name": "Asbestosis", "relevance": "Shares asbestos exposure as causative agent; asbestosis independently elevates lung cancer risk." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What are the first signs of lung cancer?",
+      "answer": "The most common early signs are a persistent cough lasting more than 3 weeks, coughing up blood, shortness of breath, chest pain, and unexplained weight loss. Many early lung cancers cause no symptoms; they are detected on imaging. A new symptom in a heavy smoker over 50 warrants medical evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the survival rate for lung cancer?",
+      "answer": "5-year survival for stage I NSCLC after surgery is 70-90%. Stage IV overall survival was historically under 10% but has improved substantially: EGFR-mutant lung cancer on osimertinib achieves median survival of 38 months. PD-L1-high NSCLC on pembrolizumab has a median overall survival of 26 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does lung cancer always cause a cough?",
+      "answer": "No. Many lung cancers, particularly peripheral adenocarcinomas, cause no cough until they are advanced. Cough is more common with central tumors involving the main airways. Lung cancer can first present as back pain, neurological symptoms, or an incidental nodule found on imaging for another reason.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can non-smokers get lung cancer?",
+      "answer": "Yes. Never-smokers account for 10-15% of lung cancer cases. Their cancers are predominantly EGFR-mutant or ALK-rearranged adenocarcinomas, and they respond well to targeted therapies. Risk factors include radon exposure, air pollution, cooking fumes, and family history.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between NSCLC and SCLC?",
+      "answer": "Non-small cell lung cancer (NSCLC) comprises 85% of cases and includes adenocarcinoma, squamous cell, and large cell subtypes; it grows more slowly and may harbor targetable mutations. Small cell lung cancer (SCLC) is 15% of cases, grows very rapidly, spreads early, and is treated primarily with chemotherapy plus immunotherapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is lung cancer diagnosed?",
+      "answer": "Diagnosis requires CT scan, PET-CT for staging, and tissue biopsy (via bronchoscopy, EBUS, or CT-guided needle). The biopsy determines histology and molecular profile. Comprehensive molecular testing for EGFR, ALK, ROS1, KRAS G12C, and PD-L1 is performed before starting treatment in all stage IV NSCLC patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who should get lung cancer screening?",
+      "answer": "USPSTF recommends annual low-dose CT screening for adults aged 50-80 who have a 20+ pack-year smoking history and currently smoke or quit within the past 15 years. This screen reduces lung cancer mortality by 20-24%. Discuss eligibility with your doctor.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is EGFR-positive lung cancer?",
+      "answer": "EGFR-positive lung cancer has a mutation in the epidermal growth factor receptor gene, most commonly exon 19 deletion or L858R in exon 21. It is treated with oral targeted drugs called EGFR tyrosine kinase inhibitors. Osimertinib is the preferred first-line agent, with median progression-free survival of 18.9 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can lung cancer be cured?",
+      "answer": "Early-stage (I-II) NSCLC is potentially curable with surgery, with 5-year survival of 70-90% for stage I. Most patients present at advanced stage where cure is rare, though long-term remission is achievable in some biomarker-defined subgroups. SCLC limited stage achieves 5-year survival of 25-35% with chemoradiotherapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is immunotherapy for lung cancer?",
+      "answer": "Immunotherapy uses checkpoint inhibitors (pembrolizumab, atezolizumab, nivolumab, durvalumab) that block PD-1 or PD-L1 to allow the immune system to attack cancer cells. It is used as monotherapy in PD-L1-high NSCLC, combined with chemotherapy in lower PD-L1 disease, and as maintenance in SCLC and stage III NSCLC.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is lung cancer painful?",
+      "answer": "Lung cancer can cause chest pain from pleural or chest wall invasion. Bone metastases cause bone pain, particularly in the spine and hip. Pancoast tumors at the lung apex cause severe shoulder and arm pain. Many early lung cancers are painless. Pain management specialists work alongside oncologists to control cancer-related pain.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does smoking cause lung cancer?",
+      "answer": "Tobacco smoke contains over 70 carcinogens that cause DNA mutations in bronchial epithelial cells. Key targets include KRAS, TP53, and KEAP1 genes. Risk increases with both duration and intensity of smoking. A 40-pack-year smoking history confers 20-30 times the lung cancer risk of a never-smoker.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a lung cancer cough sound like?",
+      "answer": "There is no pathognomonic sound. A lung cancer cough may be dry and persistent, or productive with mucus. Blood-streaked sputum (hemoptysis) is a more specific sign. Any cough lasting over 3 weeks in a person over 50 with a smoking history should prompt medical evaluation and chest imaging.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can lung cancer spread to the brain?",
+      "answer": "Yes. Brain metastases occur in 25-40% of advanced NSCLC patients, particularly adenocarcinoma. Some TKIs, including osimertinib and alectinib, penetrate the blood-brain barrier and reduce brain metastasis risk. Brain MRI is performed at diagnosis in all patients planned for curative or aggressive treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does lung cancer treatment take?",
+      "answer": "Surgery for early-stage NSCLC takes 2-4 hours with a 3-5 day hospital stay. Concurrent chemoradiotherapy for stage III lasts 6 weeks then 12 months of immunotherapy. Oral TKI therapy is continuous (daily pills indefinitely or until progression). SCLC chemotherapy involves 4-6 cycles over 12-18 weeks.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Lung cancer",
+  "regionalNames": [
+    { "name": "फेफड़े का कैंसर", "region": "India", "language": "Hindi" },
+    { "name": "Cancer du poumon", "region": "France", "language": "French" }
+  ],
+  "searchTags": [
+    "lung cancer",
+    "NSCLC",
+    "SCLC",
+    "non-small cell lung cancer",
+    "small cell lung cancer",
+    "adenocarcinoma lung",
+    "squamous cell carcinoma lung",
+    "EGFR lung cancer",
+    "ALK lung cancer",
+    "lung cancer screening",
+    "lung cancer symptoms",
+    "lung nodule",
+    "Pancoast tumor"
+  ],
+  "symptomKeywords": [
+    "persistent cough smoker",
+    "coughing up blood",
+    "shortness of breath new",
+    "chest pain unexplained",
+    "weight loss night sweats",
+    "hoarse voice new onset"
+  ],
+
+  "metaTitle": "Lung Cancer: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Lung cancer: the world's deadliest cancer, with 2.48 million new cases in 2022. Symptoms, staging, EGFR and ALK targeted therapy, and survival rates reviewed.",
+
+  "keywords": [
+    "lung cancer",
+    "lung cancer symptoms",
+    "non-small cell lung cancer treatment",
+    "EGFR lung cancer osimertinib",
+    "lung cancer survival rate",
+    "lung cancer screening LDCT",
+    "ALK rearrangement lung cancer",
+    "SCLC treatment",
+    "lung cancer staging",
+    "pembrolizumab lung cancer",
+    "lung cancer diagnosis",
+    "lung cancer causes smoking"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Herbst RS, Morgensztern D, Boshoff C. 2018. The biology and management of non-small cell lung cancer. Nature 553(7689):446-454.", "url": "https://pubmed.ncbi.nlm.nih.gov/29364287/", "accessedDate": "2026-05-14" },
+    { "title": "National Comprehensive Cancer Network. 2024. NCCN Clinical Practice Guidelines in Oncology: Non-Small Cell Lung Cancer v4.2024.", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1450", "accessedDate": "2026-05-14" },
+    { "title": "Soria JC, Ohe Y, Vansteenkiste J, et al. 2018. Osimertinib in untreated EGFR-mutated advanced NSCLC. N Engl J Med 378(2):113-125.", "url": "https://pubmed.ncbi.nlm.nih.gov/29151359/", "accessedDate": "2026-05-14" },
+    { "title": "de Leyn P, et al. (on behalf of ESTS). 2014. Revised ESTS guidelines for preoperative mediastinal lymph node staging for NSCLC. Eur J Cardiothorac Surg 45(5):787-798.", "url": "https://pubmed.ncbi.nlm.nih.gov/24578407/", "accessedDate": "2026-05-14" },
+    { "title": "Antonia SJ, Villegas A, Daniel D, et al. (PACIFIC Investigators). 2017. Durvalumab after chemoradiotherapy in stage III non-small-cell lung cancer. N Engl J Med 377(20):1919-29.", "url": "https://pubmed.ncbi.nlm.nih.gov/28885881/", "accessedDate": "2026-05-14" },
+    { "title": "American Cancer Society. 2024. Cancer Facts and Figures 2024. Atlanta: ACS.", "url": "https://www.cancer.org/research/cancer-facts-statistics/all-cancer-facts-figures/2024-cancer-facts-figures.html", "accessedDate": "2026-05-14" },
+    { "title": "Bray F, Laversanne M, Sung H, et al. 2024. Global cancer statistics 2022: GLOBOCAN. CA Cancer J Clin 74(3):229-263.", "url": "https://pubmed.ncbi.nlm.nih.gov/38572751/", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

@@ -1,0 +1,394 @@
+{
+  "_meta": {
+    "slug": "nephrolithiasis",
+    "tier": 1,
+    "headTerm": "nephrolithiasis",
+    "longTailKeywords": [
+      "kidney stones symptoms",
+      "nephrolithiasis treatment",
+      "kidney stone types",
+      "calcium oxalate kidney stone",
+      "kidney stone pain location",
+      "ESWL kidney stones",
+      "kidney stone prevention diet",
+      "kidney stone diagnosis CT",
+      "uric acid kidney stone",
+      "recurrent kidney stones"
+    ],
+    "primarySpecialty": "Nephrology",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Nephrolithiasis (Kidney Stones): Symptoms, Causes & Treatment",
+  "specialistType": "Nephrology",
+
+  "heroOverview": "Nephrolithiasis — the formation of kidney stones — affects approximately 11% of men and 6% of women in the United States over their lifetime, with the annual prevalence rising from 3.2% in the 1970s to 8.8% by 2010 (NHANES data). Stones form when urinary concentrations of calcium, oxalate, uric acid, or other substances exceed their solubility threshold and crystallize in the collecting system. The passage of a stone through the ureter produces sudden, severe colicky flank pain radiating to the groin — one of the most intense acute pain syndromes encountered in emergency medicine. Most stones under 5 mm pass spontaneously; larger stones require urological intervention. Dietary modification and targeted medical therapy reduce recurrence by 50-90% depending on stone type.",
+
+  "keyStats": {
+    "prevalence": "Lifetime prevalence approximately 11% in men and 6% in women in the US (NHANES 2007-2010); 1 in 10 Americans will have a kidney stone during their lifetime",
+    "demographics": "Men 2x more affected than women; highest incidence in White adults aged 40-70; Southern US (stone belt) has highest regional prevalence; recurrence rate 50% within 10 years without treatment",
+    "avgAge": "Peak first stone incidence age 35-55 in men; incidence rising in women and adolescents, attributed to obesity and dietary shifts",
+    "globalCases": "Global prevalence rising; estimated 10-15% lifetime risk in North America and Europe; lower but increasing in Asia"
+  },
+
+  "definition": "Nephrolithiasis (ICD-10: N20.0) refers to the presence of calculi (stones) within the renal pelvis or calyces, formed by crystallization of supersaturated urinary solutes. Ureterolithiasis (N20.1) denotes a stone that has migrated into the ureter. The process of crystallization requires supersaturation, nucleation (crystal seed formation), and aggregation; promoters such as oxalate and uric acid accelerate crystal growth while inhibitors such as citrate, nephrocalcin, and Tamm-Horsfall protein retard it.\n\nStones are classified by mineral composition, which determines pathogenesis, metabolic workup, and medical prevention. Calcium oxalate stones (comprising calcium oxalate monohydrate and calcium oxalate dihydrate) account for 70-75% of all stones in Western populations; calcium phosphate stones for 10-15%; uric acid stones for 5-10%; struvite (magnesium ammonium phosphate, infection stones) for 5-10%; and cystine stones for 1-2%. Urology and nephrology jointly manage nephrolithiasis: urologists focus on stone removal (ESWL, ureteroscopy, PCNL), while nephrologists perform metabolic evaluation and medical recurrence prevention. AUA and EAU guidelines are the primary evidence bases for both disciplines.",
+
+  "typesClassification": [
+    { "type": "Calcium oxalate stones (70-75%)", "description": "The most common type. Form when urinary oxalate is elevated (dietary excess, malabsorption, primary hyperoxaluria), urinary calcium is high (hypercalciuria), or urinary citrate is low. Hypercalciuria is the single most common metabolic abnormality, present in 50-60% of stone formers." },
+    { "type": "Calcium phosphate stones (10-15%)", "description": "Form in alkaline urine (pH above 6.5). Associated with renal tubular acidosis (especially type 1), hyperparathyroidism, and systemic alkalosis. Brushite (calcium hydrogen phosphate) is a harder variant. ESWL is less effective for brushite stones." },
+    { "type": "Uric acid stones (5-10%)", "description": "Form in persistently acid urine (pH below 5.5) with high urinary uric acid concentration. Strongly associated with gout, diabetes, obesity, metabolic syndrome, and chronic diarrhea. Unique feature: dissolves with urine alkalinization — oral potassium citrate can prevent and dissolve existing uric acid stones." },
+    { "type": "Struvite (infection) stones (5-10%)", "description": "Composed of magnesium ammonium phosphate and form exclusively with urease-producing bacterial infection (Proteus, Klebsiella, Pseudomonas). Create large staghorn calculi filling the renal collecting system. Require surgical removal and antibiotic elimination of the underlying infection." },
+    { "type": "Cystine stones (1-2%)", "description": "Caused by cystinuria, an autosomal recessive transport defect. Form at high urine cystine concentrations. Present in younger patients, often with bilateral and recurrent stones. Managed with high fluid intake, urine alkalinization, and cystine-binding agents (D-penicillamine, tiopronin)." }
+  ],
+
+  "primarySymptoms": [
+    "Sudden-onset severe colicky flank pain radiating from the costovertebral angle toward the groin and inner thigh — the classic 'renal colic' — caused by ureteral spasm and peristalsis as the stone migrates distally.",
+    "Hematuria — gross or microscopic blood in the urine — present in 85-90% of acute stone episodes from mucosal abrasion by the stone against the urothelium.",
+    "Nausea and vomiting during acute colic, driven by visceral innervation shared between the ureter and the celiac plexus.",
+    "Urinary urgency and frequency when the stone reaches the distal ureter near the vesicoureteral junction, mimicking urinary tract infection symptoms.",
+    "Severe dysuria or burning with urination when the stone is at the ureterovesical junction before passing into the bladder.",
+    "Pain that comes in waves every few minutes, peaking severely then partially subsiding — reflecting ureteral peristaltic waves attempting to propel the stone.",
+    "Restlessness and inability to find a comfortable position — unlike the peritoneal irritation of appendicitis or cholecystitis where patients lie still, renal colic causes writhing.",
+    "Lower abdominal and groin pain mimicking appendicitis (right-sided) or ovarian pathology (left-sided) when a distal ureteral stone is present.",
+    "Fever and chills when urinary tract infection is superimposed above an obstructing stone — a urological emergency signaling infected hydronephrosis."
+  ],
+
+  "earlyWarningSigns": [
+    "Intermittent dull flank ache without colic in a patient with risk factors — may indicate a non-obstructing calyceal stone or early partial ureteral obstruction.",
+    "Microscopic hematuria on routine urinalysis in the absence of infection, especially in a patient with a family history of kidney stones or dietary risk factors.",
+    "Incidental detection of a small renal calcification on abdominal imaging done for other reasons — provides an opportunity for metabolic evaluation and prevention before a stone episode.",
+    "Recurrent unexplained urinary tract infections in a woman, especially with Proteus species — may indicate an underlying struvite stone acting as a nidus for repeated infection."
+  ],
+
+  "emergencySigns": [
+    "Fever (above 38°C) with unilateral flank pain and obstructing stone on imaging — infected hydronephrosis requires emergency decompression (ureteral stent or nephrostomy) and IV antibiotics within hours.",
+    "Bilateral obstructing stones or stone in a solitary kidney causing anuria — urological emergency requiring immediate decompression to prevent permanent renal damage.",
+    "Intractable vomiting with severe pain and inability to maintain oral hydration, especially in a patient on medications requiring adequate intake — requires emergency department assessment.",
+    "Septic shock (hypotension, tachycardia, altered consciousness) in the context of known obstructing stone — urosepsis from infected obstruction is life-threatening."
+  ],
+
+  "causes": [
+    {
+      "cause": "Hypercalciuria",
+      "description": "Elevated urinary calcium excretion (above 250 mg/day in women, above 300 mg/day in men) is the most common metabolic abnormality in calcium stone formers, present in 50-60%. Classified as absorptive (increased intestinal calcium absorption), renal (defective tubular reabsorption), or resportive (from hyperparathyroidism or malignancy)."
+    },
+    {
+      "cause": "Hyperoxaluria",
+      "description": "Dietary hyperoxaluria from high oxalate intake (spinach, nuts, chocolate, tea) or low calcium diet (paradoxically; dietary calcium binds oxalate in the gut). Enteric hyperoxaluria from Crohn disease, bariatric surgery, or chronic diarrhea increases colonic oxalate absorption dramatically. Primary hyperoxaluria is a rare genetic cause."
+    },
+    {
+      "cause": "Hypocitraturia",
+      "description": "Low urinary citrate (below 320 mg/day) removes a key crystallization inhibitor from the urine. Causes include renal tubular acidosis type 1, chronic diarrhea, thiazide diuretics, and high animal protein intake. Citrate binds urinary calcium and inhibits crystal nucleation directly."
+    },
+    {
+      "cause": "Chronic dehydration and low urine volume",
+      "description": "Urine volume below 1.5-2 L per day concentrates all lithogenic substances. Hot climate, heavy physical work, inadequate fluid intake, and inflammatory bowel disease are the most common drivers. A urine volume target above 2.5 L per day is the single most effective stone prevention intervention."
+    },
+    {
+      "cause": "Hyperuricosuria and acidic urine",
+      "description": "High dietary purine intake (red meat, shellfish, organ meats) raises urinary uric acid. Persistent urine pH below 5.5 from metabolic syndrome, chronic diarrhea, or high animal protein diet promotes uric acid stone formation because undissociated uric acid is insoluble."
+    },
+    {
+      "cause": "Urease-producing urinary infection",
+      "description": "Bacteria expressing urease (Proteus mirabilis, Klebsiella pneumoniae, Pseudomonas) hydrolyze urinary urea to ammonia, alkalinizing the urine and generating ammonium for struvite formation. Large staghorn calculi fill the renal pelvis and calyces and are almost exclusively caused by this mechanism."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Insufficient fluid intake and low urine output", "category": "modifiable", "description": "Urine output below 1.5 L/day is the most prevalent and most modifiable risk factor. Increasing fluid intake to produce over 2.5 L of urine per day reduces stone recurrence by 50% in randomized trials." },
+    { "factor": "Diet high in animal protein and sodium", "category": "modifiable", "description": "Animal protein increases urinary calcium, uric acid, and oxalate while reducing urinary citrate. High sodium raises urinary calcium excretion. Reducing animal protein to 0.8 g/kg/day and sodium to under 2 g/day reduces calcium stone recurrence." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men have roughly 2x higher lifetime stone risk; higher animal protein intake, higher testosterone levels (promoting liver oxalate synthesis), and lower citrate excretion contribute." },
+    { "factor": "Obesity and metabolic syndrome", "category": "modifiable", "description": "Obesity reduces urinary pH, increases urinary uric acid, and promotes insulin resistance-related impairment of ammonium excretion — all favoring uric acid stone formation. Each 5-unit increase in BMI increases stone risk by approximately 10-15%." },
+    { "factor": "Family history of kidney stones", "category": "genetic", "description": "First-degree relatives of stone formers have a 2-3x higher lifetime risk. Polygenic contributors include variants affecting intestinal calcium absorption, renal tubular calcium handling, and oxalate metabolism." },
+    { "factor": "Inflammatory bowel disease or bariatric surgery", "category": "non-modifiable", "description": "Crohn disease and jejunoileal bypass dramatically increase urinary oxalate from enhanced colonic absorption (enteric hyperoxaluria). Calcium oxalate stone risk increases 5-10x after extensive small bowel disease or resection." },
+    { "factor": "Geographic location (hot, dry climates)", "category": "environmental", "description": "The US 'stone belt' (southeastern states) has higher stone prevalence from heat-induced dehydration. Risk also increases with occupational outdoor heat exposure (military personnel, construction workers)." }
+  ],
+
+  "affectedDemographics": [
+    "Men aged 35-55 have peak stone incidence; lifetime risk of 11% in US men vs 6% in women, though the gender gap is narrowing as women's rates rise.",
+    "White Americans have higher stone prevalence than Black or Hispanic Americans in NHANES surveys; lower urinary calcium excretion may partially protect Black Americans.",
+    "The incidence in adolescents and young women is rising, attributed to increasing obesity rates, high-sodium diets, and reduced fluid intake.",
+    "Patients with IBD, bariatric surgery, or malabsorption syndromes are at 5-10x higher risk from enteric hyperoxaluria."
+  ],
+
+  "diagnosisOverview": "Acute renal colic is a clinical diagnosis supported by imaging. The gold-standard imaging modality is non-contrast low-dose computed tomography (CT) of the abdomen and pelvis, which detects over 97% of stones — including uric acid stones that are radiolucent on plain X-ray — and accurately measures stone size and location, guiding treatment decisions. Ultrasound is the preferred first-line imaging in pregnant patients, children, and as a radiation-sparing option; its sensitivity (45-80%) is lower than CT, but hydronephrosis detection is reliable. Plain X-ray (KUB) identifies calcium-containing and struvite stones but misses uric acid and cystine stones; it is used to monitor known calcified stones.\n\nUrinalysis is performed in all patients: hematuria (gross or microscopic) is present in 85-90% of acute episodes; pyuria and bacteriuria with fever suggest superimposed infection requiring urgent intervention; urine pH measurement guides metabolic assessment — pH below 5.5 suggests uric acid stone, above 7.5 suggests struvite or renal tubular acidosis. Serum creatinine evaluates renal function; serum calcium and phosphate screen for primary hyperparathyroidism. For recurrent stone formers or high-risk first-time patients, a 24-hour urine collection (two samples collected on separate days on a regular diet) measuring volume, pH, calcium, oxalate, uric acid, citrate, sodium, and creatinine is essential to guide targeted medical prevention. Stone analysis by infrared spectroscopy or X-ray diffraction identifies stone composition after passage or extraction.",
+
+  "diagnosticTests": [
+    { "test": "Non-contrast CT abdomen and pelvis (CT KUB)", "purpose": "Gold-standard imaging; detects >97% of stones including radiolucent uric acid stones; measures stone size, location, and degree of hydronephrosis", "whatToExpect": "A 5-minute scan lying on a table. No injection for standard CT KUB. Mild radiation exposure (3-5 mSv). Results available within 1-2 hours in an emergency department." },
+    { "test": "Renal and bladder ultrasound", "purpose": "First-line imaging in pregnancy, children, and when radiation is a concern; detects hydronephrosis and stones in the renal pelvis; lower sensitivity for ureteral stones", "whatToExpect": "A 20-minute painless ultrasound scan. No preparation required. Identifies hydronephrosis reliably; may miss small (under 3 mm) ureteral stones." },
+    { "test": "Urinalysis with microscopy", "purpose": "Detects hematuria (85-90% sensitivity in acute colic), infection (pyuria, bacteriuria), urine pH, and crystal type (calcium oxalate envelope/dumbbell shapes, uric acid rhomboids, cystine hexagons)", "whatToExpect": "A midstream urine sample collected in a sterile cup. Results in under 30 minutes. Crystal morphology on microscopy provides a preliminary clue to stone composition." },
+    { "test": "24-hour urine collection (two separate days)", "purpose": "Identifies specific metabolic risk factors — hypercalciuria, hyperoxaluria, hypocitraturia, hyperuricosuria, low urine volume — to guide targeted medical prevention in recurrent stone formers", "whatToExpect": "Collect all urine over a 24-hour period in a large jug starting after the first morning void. Two collections on different days improve accuracy. Avoid dietary changes during the collection days." },
+    { "test": "Stone composition analysis (infrared spectroscopy)", "purpose": "Identifies precise stone mineral composition from a passed or surgically retrieved stone, directing specific dietary and pharmacological prevention", "whatToExpect": "The passed stone or stone fragment is sent to a laboratory in a dry container. Results in 5-7 days. This is the most direct guide to recurrence prevention therapy." },
+    { "test": "Serum calcium, PTH, and uric acid", "purpose": "Screens for primary hyperparathyroidism (hypercalcemia with elevated PTH) as a correctable cause of hypercalciuria, and for hyperuricemia in uric acid stone disease", "whatToExpect": "Standard fasting blood draw. Elevated serum calcium with inappropriately high PTH indicates primary hyperparathyroidism; parathyroidectomy cures the underlying cause." }
+  ],
+
+  "treatmentOverview": "Treatment of an acute stone episode aims to control pain, facilitate stone passage, and prevent complications. NSAIDs (ketorolac 30-60 mg IV or IM, or diclofenac 75 mg IM) are the preferred analgesics because they reduce ureteral spasm in addition to providing analgesia; they are superior to opioids alone in randomized trials for acute colic. Opioids are added for pain inadequately controlled by NSAIDs. Alpha-blockers (tamsulosin 0.4 mg daily) are used as medical expulsive therapy (MET) to relax the ureteral smooth muscle at the vesicoureteral junction, increasing the likelihood of spontaneous passage of stones 5-10 mm by approximately 29% and reducing the time to passage.\n\nStones under 5-6 mm with tolerable pain, no infection, and normal kidney function are managed conservatively with MET, analgesia, and hydration; 80-90% pass within four weeks. Immediate urological intervention is required for stones causing infected hydronephrosis (urosepsis — decompression within hours), bilateral obstruction, solitary-kidney obstruction, complete ureteral obstruction with significant hydronephrosis, or intractable pain and vomiting.\n\nUrological procedures: ureteroscopy with laser lithotripsy (URS-LL) is the most widely used definitive treatment for ureteral stones and mid-to-lower renal stones; success rates exceed 90% for stones under 20 mm. Extracorporeal shock wave lithotripsy (ESWL) is the least invasive option for renal stones under 10-15 mm in favorable locations; success rates are 70-80% but require stone fragmentation. Percutaneous nephrolithotomy (PCNL) is reserved for staghorn calculi or large renal stones (above 20 mm) not amenable to ureteroscopy or ESWL. Medical prevention therapy — the nephrological component — reduces recurrence by 50-90% depending on the specific abnormality treated.",
+
+  "medicalTreatments": [
+    { "name": "NSAIDs for analgesia (ketorolac 30 mg IV or diclofenac 75 mg IM)", "description": "First-line analgesia for acute renal colic; superior to opioids alone in meta-analyses. Reduce ureteral smooth muscle spasm via prostaglandin inhibition in addition to pain control. Avoid in acute kidney injury or renal impairment.", "effectiveness": "NSAIDs provide equivalent analgesia to opioids with faster onset of ureteral relaxation; combination superior to either alone in Cochrane reviews" },
+    { "name": "Tamsulosin (0.4 mg daily, medical expulsive therapy)", "description": "Alpha-1 blocker relaxing the smooth muscle of the distal ureter, increasing the chance and speed of spontaneous stone passage. AUA and EAU guidelines support MET for ureteral stones 5-10 mm. Continue for up to four weeks.", "effectiveness": "Meta-analyses show 29% increase in spontaneous passage rate for 5-10 mm ureteral stones; reduces time to passage by approximately 5 days" },
+    { "name": "Potassium citrate (20-40 mEq twice daily)", "description": "Alkalinizes urine and increases urinary citrate, preventing calcium and uric acid crystallization. First-line prevention for uric acid stones (raises urine pH above 6.5), calcium stones with hypocitraturia, and cystinuria. Used lifelong for recurrent stone formers.", "effectiveness": "Reduces uric acid stone recurrence by 90%+ by keeping urine pH above 6.5; reduces calcium stone recurrence by 30-60% in citrate-deficient patients" },
+    { "name": "Hydrochlorothiazide (25-50 mg daily) or chlorthalidone", "description": "Thiazide diuretics reduce urinary calcium excretion by 30-50% in absorptive and renal hypercalciuria — the most common metabolic abnormality in calcium stone formers. Prescribed with potassium citrate to prevent hypocitraturia from thiazide-induced metabolic alkalosis.", "effectiveness": "Reduces calcium stone recurrence by 50% in patients with documented hypercalciuria (NEJM 1985 trial; confirmed in Cochrane review 2009)" },
+    { "name": "Allopurinol (300 mg daily)", "description": "Xanthine oxidase inhibitor reducing urinary uric acid in uric acid stone formers with hyperuricosuria and in calcium oxalate stone formers with hyperuricosuria (uric acid crystals seed calcium oxalate nucleation). Dose reduced in CKD.", "effectiveness": "Reduces calcium oxalate stone recurrence by 50% in hyperuricosuric stone formers (RCT Ettinger et al. N Engl J Med 1986)" },
+    { "name": "Increased fluid intake (target urine output above 2.5 L/day)", "description": "The single most universally applicable prevention strategy for all stone types. Distributing fluid intake evenly through the day and drinking before bed reduces supersaturation. Lemon juice adds citrate to the urine as a supplement.", "effectiveness": "Daily urine output above 2.5 L reduces stone recurrence by approximately 50% in randomized trial; the most cost-effective single intervention" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Ureteroscopy with laser lithotripsy (URS-LL)", "description": "A flexible or semi-rigid ureteroscope is advanced through the urethra, bladder, and ureter to the stone under general anesthesia. A holmium laser fragments the stone into passable pieces. A temporary ureteral stent is placed for 1-2 weeks in most cases.", "successRate": "Stone-free rates above 90% for ureteral stones and 80-90% for renal stones up to 20 mm; day-surgery procedure with return to work in 1-2 days" },
+    { "name": "Extracorporeal shock wave lithotripsy (ESWL)", "description": "Non-invasive procedure applying focused acoustic shockwaves through the skin to fragment kidney stones without anesthesia or incisions. Requires multiple sessions for large or hard stones. Less effective for lower-pole stones and brushite/cystine compositions.", "successRate": "Stone-free rate 70-80% for renal stones under 10 mm in favorable locations; lower for stones 10-20 mm (50-60%) and lower-pole calyceal stones" },
+    { "name": "Percutaneous nephrolithotomy (PCNL)", "description": "A percutaneous nephrostomy tract is created under fluoroscopic or ultrasound guidance under general anesthesia, and a nephroscope is passed directly into the renal collecting system to fragment and remove large or staghorn stones. Requires hospital admission for 1-3 days.", "successRate": "Stone-free rates 75-95% for large (>20 mm) renal stones including staghorn calculi; superior to ESWL for stones above 20 mm per AUA/EAU guidelines" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "High fluid intake with citrus beverages", "description": "Lemon juice and orange juice provide dietary citrate that alkalinizes urine and increases urinary citrate excretion. A systematic review found that 120 mL of lemon juice in water daily increases urinary citrate by approximately 50% — a useful adjunct to pharmacological citrate for patients intolerant of potassium citrate." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "ureteroscopy-lithotripsy",
+    "extracorporeal-shock-wave-lithotripsy"
+  ],
+
+  "whySeeSpecialist": "Urology referral is appropriate for stones above 6 mm, failure of spontaneous passage after four weeks, recurrent stone disease, or stones in a solitary kidney. Nephrology referral is indicated for metabolic evaluation of recurrent stone formers, stones associated with CKD, identified inherited disorders (primary hyperoxaluria, cystinuria), or hypercalcemia suggesting primary hyperparathyroidism.",
+  "doctorSelectionGuide": "For surgical stone management, seek a urologist performing high volumes of URS-LL and PCNL procedures at a center with flexible digital ureteroscopes and holmium laser. For metabolic stone prevention, a nephrologist experienced in 24-hour urine analysis and stone metabolic clinics provides the most targeted prevention strategy.",
+
+  "hospitalCriteria": [
+    "Emergency department with access to non-contrast CT and IV analgesia for acute colic management",
+    "Urology service with flexible ureteroscopy, holmium laser, and PCNL capability",
+    "Laboratory service for 24-hour urine analysis and stone composition by infrared spectroscopy"
+  ],
+  "keyFacilities": [
+    "Endourology and stone centers with flexible digital ureteroscopes",
+    "Metabolic stone clinics combining nephrology and urology",
+    "Academic medical centers for complex staghorn or struvite stone management"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Drink sufficient fluids to produce over 2.5 L of urine per day — distribute intake evenly including a glass before bed; water is preferred, with lemon water as a citrate-boosting addition.",
+    "Reduce dietary sodium to under 2 g per day — high sodium raises urinary calcium and is a preventable driver of calcium stone formation.",
+    "Limit animal protein to 0.8 g/kg/day — excess meat, poultry, fish, and seafood raises urinary calcium, uric acid, and oxalate while reducing urinary citrate.",
+    "Maintain adequate dietary calcium intake of 1,000-1,200 mg per day through food — paradoxically, adequate dietary calcium binds gut oxalate, reducing urinary oxalate; calcium supplements taken without food increase stone risk.",
+    "Avoid excessive dietary oxalate in patients with calcium oxalate stones: limit spinach, rhubarb, nuts, bran cereal, and instant coffee.",
+    "Treat underlying conditions: gout with urate-lowering therapy, primary hyperparathyroidism with parathyroidectomy, and Crohn disease with appropriate management all reduce stone risk significantly."
+  ],
+
+  "lifestyleModifications": [
+    "Carry a water bottle at all times and set reminders to drink fluids hourly, especially during exercise and hot weather.",
+    "Filter or strain urine through gauze when a stone is passing — recovering the stone for composition analysis is the most direct guide to targeted prevention.",
+    "Take prescribed potassium citrate, thiazide, or allopurinol consistently every day — stone prevention medications require continuous use to reduce supersaturation.",
+    "Complete all prescribed 24-hour urine collections — they are the foundation of personalized medical prevention and should be repeated annually in recurrent stone formers.",
+    "Reduce body weight if BMI is above 25 — obesity drives acidic urine and uric acid stone formation; each 10% weight reduction significantly improves urinary biochemistry.",
+    "Avoid vitamin C supplements above 1,000 mg/day — high-dose vitamin C is metabolized to oxalate and can precipitate calcium oxalate stone formation in susceptible individuals."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "High fluid intake — water, lemon water, and dilute fruit juice; target pale yellow urine color throughout the day",
+      "Adequate dairy or non-dairy calcium (1,000-1,200 mg/day from food) to bind gut oxalate; take dairy with meals, not as supplements",
+      "Fruits and vegetables high in potassium and citrate: citrus fruits, melon, bananas, and squash reduce uric acid and calcium stone risk",
+      "Whole grains and fiber which bind urinary calcium in the gut and reduce absorption"
+    ],
+    "avoid": [
+      "High-oxalate foods in confirmed calcium oxalate stone formers: spinach, beets, Swiss chard, rhubarb, nuts, wheat bran, and chocolate",
+      "Excessive animal protein (red meat, organ meat, shellfish) which raises urinary calcium, uric acid, and acid load",
+      "High-sodium foods (processed foods, canned goods, deli meats, fast food) which raise urinary calcium",
+      "Sugary drinks, especially colas containing phosphoric acid — associated with higher stone recurrence in observational studies"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular moderate aerobic exercise (30 minutes per day) maintains a healthy body weight and reduces metabolic syndrome, which is a risk factor for uric acid stones. Adequate fluid replacement during and after exercise is essential — vigorous exercise without adequate hydration concentrates the urine and raises stone risk. Contact sports do not affect stone formation but require adequate hydration.",
+
+  "dailyManagement": [
+    "Drink enough fluid to produce pale-colored urine throughout the day and at least one glass of water immediately before bed.",
+    "Take prescribed stone-prevention medications (potassium citrate, thiazide, allopurinol) at consistent times daily.",
+    "Check urine pH regularly with dipstick if on urine-alkalinizing therapy for uric acid stones — target pH 6.5-7.0.",
+    "Track any new flank pain, hematuria, or changes in urine stream — early stone passage symptoms warrant urgent evaluation if fever develops.",
+    "Strain urine for 2-3 weeks after a stone episode to catch any fragments passing — send caught stones to the lab for composition analysis.",
+    "Attend 24-hour urine collections and serum labs every 6-12 months while on prevention therapy to verify adequacy of treatment."
+  ],
+
+  "prognosis": "The natural history of nephrolithiasis is highly recurrent without preventive intervention — cumulative recurrence rates reach 50% at 10 years and 80% at 20 years in untreated patients. First-time stone formers with a single identifiable and correctable metabolic risk factor (e.g., low urine volume, hypocitraturia) have an excellent prognosis with targeted dietary and medical prevention, achieving 70-90% risk reduction in stone recurrence. Patients with genetic disorders such as primary hyperoxaluria or cystinuria have more guarded long-term kidney outcomes — primary hyperoxaluria types 1 and 2 can progress to oxalate nephropathy and ESRD without specific treatment (pyridoxine, AGXT enzyme replacement, or liver transplantation). Struvite staghorn calculi carry a risk of CKD and urosepsis if inadequately managed. Most kidney stones, however, do not cause permanent kidney damage when promptly treated; the risk of CKD from nephrolithiasis is small in patients with unilateral, non-recurrent disease.",
+
+  "recoveryTimeline": "Acute renal colic resolves when the stone passes or is removed, typically within 2-4 weeks for stones under 6 mm. Ureteroscopy recovery is 1-3 days. PCNL recovery requires 2-4 days inpatient, 2-4 weeks for return to full activity. Metabolic prevention therapy requires 3-6 months to demonstrate efficacy on 24-hour urine parameters.",
+
+  "complications": [
+    "Urosepsis from infected obstructing stone — life-threatening emergency; mortality 5-30% without rapid decompression and antibiotic therapy; requires immediate urological intervention.",
+    "Acute kidney injury from complete or bilateral ureteral obstruction — reversible if decompressed within hours to days; prolonged obstruction causes permanent nephron loss.",
+    "Chronic kidney disease from recurrent stone disease, recurrent infections, or primary metabolic disorders — uncommon with single-stone disease but risk rises significantly with frequent recurrence.",
+    "Steinstrasse (street of stones) after ESWL — fragments obstructing the ureter requiring secondary ureteroscopy; occurs in 5-10% of large stones fragmented by ESWL.",
+    "Ureteral stricture from stone trauma or ureteroscopy — late complication causing hydronephrosis; requires ureteral reconstruction.",
+    "Anxiety and reduced quality of life — recurrent stone episodes significantly impair work and social function; 40-60% of first-time stone formers report ongoing anxiety about recurrence."
+  ],
+
+  "supportResources": [
+    { "name": "National Kidney Foundation — Kidney Stones", "url": "https://www.kidney.org/atoz/content/kidneystones", "description": "Patient guide to kidney stone types, prevention diets, and treatment options." },
+    { "name": "American Urological Association — Kidney Stone Patient Guide", "url": "https://www.auanet.org/education/guidelines", "description": "Professional society guidelines and patient resources for kidney stone management." },
+    { "name": "Urology Care Foundation", "url": "https://www.urologyhealth.org/urologic-conditions/kidney-stones", "description": "Patient education on kidney stone types, imaging, procedures, and prevention strategies." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "uti", "name": "Urinary Tract Infection (UTI)", "keyDifference": "UTI and distal ureteral stones both cause urinary urgency, frequency, and dysuria. UTI typically produces pyuria and bacteriuria on urinalysis and responds to antibiotics; a stone does not. Crucially, fever with flank pain and obstructing stone is urosepsis — not simple UTI — and requires surgical decompression. CT distinguishes them definitively." },
+    { "slug": "kidney-stones", "name": "Kidney Stones (broader term)", "keyDifference": "Kidney stones is the lay term for nephrolithiasis and ureterolithiasis combined. Nephrolithiasis specifically denotes stones within the renal pelvis or calyces; ureterolithiasis refers to a stone that has migrated into the ureter. Clinically these are managed as a continuum." },
+    { "slug": "renal-tubular-acidosis", "name": "Renal Tubular Acidosis", "keyDifference": "Renal tubular acidosis type 1 is a common identifiable cause of calcium phosphate nephrolithiasis via hypocitraturia and alkaline urine; it should be distinguished from primary stone disease because treatment (potassium citrate) addresses both the acidosis and the stone diathesis. RTA presents with metabolic acidosis and a normal anion gap independent of stone symptoms." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "uti", "name": "Urinary Tract Infection" },
+    { "slug": "gout", "name": "Gout" },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "gout", "name": "Gout", "relevance": "Gout and uric acid nephrolithiasis share the same metabolic substrate — hyperuricemia and acid urine pH; 10-25% of gout patients develop kidney stones, and urate-lowering therapy with allopurinol prevents both." },
+    { "slug": "renal-tubular-acidosis", "name": "Renal Tubular Acidosis", "relevance": "Type 1 RTA causes calcium phosphate nephrolithiasis through hypocitraturia and alkaline urine; potassium citrate treats both the RTA and the stone diathesis." },
+    { "slug": "polycystic-kidney-disease", "name": "Polycystic Kidney Disease", "relevance": "PKD patients have a 20-30% lifetime risk of nephrolithiasis, often with uric acid and calcium oxalate stones, due to urinary stasis in cysts and reduced citrate excretion." },
+    { "slug": "chronic-kidney-disease-unspecified-n189", "name": "Chronic Kidney Disease", "relevance": "Recurrent nephrolithiasis, especially with bilateral disease or metabolic disorders, is a recognized risk factor for progressive CKD through obstructive nephropathy and scarring." },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus", "relevance": "Insulin resistance reduces urinary ammonium excretion and pH, creating an acid urine environment that promotes uric acid stone formation; diabetes is the strongest independent predictor of uric acid nephrolithiasis." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is nephrolithiasis?",
+      "answer": "Nephrolithiasis means kidney stones — solid mineral deposits that form in the kidney's collecting system when urine becomes too concentrated with calcium, oxalate, uric acid, or other substances. Stones cause severe cramping flank pain and blood in the urine when they pass into the ureter. Most small stones pass on their own; larger ones require treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does a kidney stone feel like?",
+      "answer": "The classic symptom is sudden, severe cramping pain in the flank (side of the back) that radiates toward the groin. Pain comes in waves every few minutes. Patients feel restless and cannot find a comfortable position. Nausea, vomiting, and blood in the urine are common. Pain typically resolves once the stone passes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes kidney stones?",
+      "answer": "The most common causes are low fluid intake concentrating the urine, high dietary sodium and animal protein, and high urinary calcium (hypercalciuria). Other causes include low urinary citrate, high urinary oxalate, gout, and persistent acid urine. Some people have an inherited predisposition to stone formation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How are kidney stones diagnosed?",
+      "answer": "Non-contrast CT scan of the abdomen and pelvis detects over 97% of stones. Urinalysis shows blood in the urine in 85-90% of cases. Urine pH guides stone type prediction. Serum calcium and uric acid screen for underlying metabolic causes. Stone composition analysis after passage guides prevention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will kidney stones pass on their own?",
+      "answer": "Most stones under 5 mm pass spontaneously within two to four weeks in about 70-80% of patients. Stones 5-9 mm pass in about 50% of cases; stones 10 mm or larger rarely pass without intervention. The alpha-blocker tamsulosin improves passage rates and speed for 5-10 mm stones.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the treatment for kidney stones?",
+      "answer": "Small stones are treated with NSAIDs for pain, tamsulosin to relax the ureter, and high fluid intake. Stones that do not pass require surgery: ureteroscopy with laser (most common), shock wave lithotripsy (ESWL), or percutaneous nephrolithotomy for large stones. Medical therapy with potassium citrate, thiazides, or allopurinol prevents recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I prevent kidney stones from coming back?",
+      "answer": "Drink enough water to produce over 2.5 L of urine per day. Reduce salt to under 2 g/day, limit animal protein, and maintain dietary calcium of 1,000 mg/day from food. Avoid high-oxalate foods if you have calcium oxalate stones. Potassium citrate prevents uric acid and citrate-deficient calcium stones by 50-90%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods cause kidney stones?",
+      "answer": "High-sodium foods raise urinary calcium. Excess animal protein increases urinary uric acid and calcium. High-oxalate foods (spinach, nuts, rhubarb, chocolate) worsen calcium oxalate stone risk. Sugary drinks, especially colas, are associated with higher recurrence. A balanced diet with adequate water is the most effective dietary strategy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the different types of kidney stones?",
+      "answer": "Calcium oxalate stones are most common (70-75%). Calcium phosphate stones (10-15%) form in alkaline urine. Uric acid stones (5-10%) form in acid urine and can dissolve with potassium citrate. Struvite stones arise from bacterial infection and form large staghorn calculi. Cystine stones come from a rare genetic disorder.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is surgery needed for kidney stones?",
+      "answer": "Surgery is needed when a stone is too large to pass (over 6-10 mm), causes a blocked infected kidney (urosepsis), blocks a single functioning kidney, or produces intractable pain. Ureteroscopy with laser is the most common procedure; shock wave lithotripsy works for smaller renal stones; percutaneous surgery is used for large staghorn calculi.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can kidney stones damage the kidneys?",
+      "answer": "Most stones cause no permanent kidney damage when treated promptly. Prolonged complete obstruction (over 4-6 weeks) causes irreversible nephron loss. Recurrent bilateral stones or metabolic disorders like primary hyperoxaluria can lead to CKD. Single-stone disease with rapid treatment rarely produces lasting kidney impairment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does kidney stone size matter?",
+      "answer": "Yes. Stones under 5 mm pass spontaneously in 70-80% of cases; 5-9 mm stones pass in about 50%; stones 10 mm or larger rarely pass without urological intervention. Stone location also matters: distal ureteral stones pass more easily than proximal stones, and lower-pole calyceal stones are harder to treat with shock waves.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are uric acid kidney stones different from calcium stones?",
+      "answer": "Yes. Uric acid stones form in persistently acid urine (pH below 5.5) and are radiolucent (invisible on plain X-ray). They are strongly linked to gout, obesity, and metabolic syndrome. Uniquely, uric acid stones can be dissolved by alkalinizing the urine with potassium citrate — making them the only common stone type that can be medically dissolved without surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the 24-hour urine test for kidney stones?",
+      "answer": "A 24-hour urine collection measures calcium, oxalate, uric acid, citrate, sodium, pH, and volume in the urine. It identifies the specific metabolic abnormality driving stone formation — such as hypercalciuria or hypocitraturia — and guides targeted medication. Two collections on separate days improve accuracy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does lemon juice help with kidney stones?",
+      "answer": "Lemon juice contains citric acid, which raises urinary citrate and pH, both of which inhibit kidney stone formation. Drinking 120 mL of lemon juice diluted in water daily increases urinary citrate by approximately 50% — a useful supplement to potassium citrate therapy in calcium and uric acid stone formers who cannot tolerate the medication.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Kidney stones (nephrolithiasis)",
+  "regionalNames": [
+    { "name": "Kidney stones", "region": "United States, UK, Australia", "language": "English" },
+    { "name": "Renal calculi", "region": "Medical literature worldwide", "language": "Latin/English" },
+    { "name": "Gurdey ki pathri (गुर्दे की पथरी)", "region": "India", "language": "Hindi" }
+  ],
+  "searchTags": [
+    "nephrolithiasis",
+    "kidney stones",
+    "renal calculi",
+    "renal colic",
+    "kidney stone pain",
+    "calcium oxalate stone",
+    "uric acid kidney stone",
+    "ESWL kidney stones",
+    "kidney stone prevention",
+    "kidney stone symptoms",
+    "kidney stone treatment",
+    "stone belt",
+    "ureteroscopy stones",
+    "tamsulosin kidney stone",
+    "kidney stone diet"
+  ],
+  "symptomKeywords": [
+    "severe flank pain",
+    "blood in urine pain",
+    "kidney pain radiating to groin",
+    "pain when passing urine stone",
+    "cloudy urine with side pain",
+    "sudden back pain nausea"
+  ],
+
+  "metaTitle": "Nephrolithiasis: Kidney Stone Symptoms & Treatment | aihealz",
+  "metaDescription": "Nephrolithiasis: kidney stones causing severe flank pain, blood in urine and nausea. Symptoms, CT diagnosis, and treatment options reviewed here.",
+
+  "keywords": [
+    "nephrolithiasis",
+    "kidney stones",
+    "kidney stone symptoms",
+    "kidney stone treatment",
+    "renal colic",
+    "calcium oxalate stone prevention",
+    "uric acid kidney stone treatment",
+    "ESWL kidney stones",
+    "ureteroscopy lithotripsy",
+    "kidney stone diet",
+    "24 hour urine kidney stone",
+    "tamsulosin kidney stone"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "American Urological Association. 2016. Medical Management of Kidney Stones: AUA Guideline (Amended 2019). AUA, Linthicum MD.", "url": "https://www.auanet.org/guidelines-and-quality/guidelines/kidney-stones-medical-management-guideline", "accessedDate": "2026-05-14" },
+    { "title": "Scales CD Jr, Smith AC, Hanley JM, Saigal CS. 2012. Prevalence of kidney stones in the United States. Eur Urol 62(1):160-5.", "url": "https://pubmed.ncbi.nlm.nih.gov/22503526/", "accessedDate": "2026-05-14" },
+    { "title": "Turk C, Petrik A, Sarica K, et al. 2016. EAU Guidelines on Urolithiasis. Eur Urol 69(3):475-82.", "url": "https://pubmed.ncbi.nlm.nih.gov/26344917/", "accessedDate": "2026-05-14" },
+    { "title": "Borghi L, Meschi T, Amato F, et al. 1996. Urinary volume, water and recurrences in idiopathic calcium nephrolithiasis: a 5-year randomized prospective study. J Urol 155(3):839-43.", "url": "https://pubmed.ncbi.nlm.nih.gov/8583588/", "accessedDate": "2026-05-14" },
+    { "title": "Ettinger B, Tang A, Citron JT, Livermore B, Williams T. 1986. Randomized trial of allopurinol in the prevention of calcium oxalate calculi. N Engl J Med 315(22):1386-9.", "url": "https://pubmed.ncbi.nlm.nih.gov/3534570/", "accessedDate": "2026-05-14" },
+    { "title": "Wang RC, Smith-Bindman R, Whitaker E, et al. 2017. Effect of tamsulosin on stone passage for ureteral stones: a systematic review and meta-analysis. Ann Emerg Med 69(3):353-361.", "url": "https://pubmed.ncbi.nlm.nih.gov/27665557/", "accessedDate": "2026-05-14" },
+    { "title": "National Kidney Foundation. Kidney Stones. NKF, New York.", "url": "https://www.kidney.org/atoz/content/kidneystones", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}

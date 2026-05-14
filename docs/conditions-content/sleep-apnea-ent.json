@@ -1,0 +1,392 @@
+{
+  "_meta": {
+    "slug": "sleep-apnea-ent",
+    "tier": 1,
+    "headTerm": "obstructive sleep apnea",
+    "longTailKeywords": [
+      "obstructive sleep apnea symptoms",
+      "sleep apnea treatment",
+      "CPAP therapy",
+      "sleep apnea diagnosis",
+      "sleep apnea ENT",
+      "obstructive sleep apnea surgery",
+      "AHI sleep apnea",
+      "sleep apnea snoring",
+      "sleep apnea weight loss",
+      "UPPP surgery sleep apnea"
+    ],
+    "primarySpecialty": "ENT / Sleep Medicine",
+    "lastReviewed": "2026-05-14",
+    "version": "v1-hand-written-eeat"
+  },
+
+  "h1Title": "Obstructive Sleep Apnea: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "ENT / Sleep Medicine",
+
+  "heroOverview": "Obstructive sleep apnea (OSA) is characterized by repeated collapse of the upper airway during sleep, causing apneas and hypopneas that fragment sleep, drop blood oxygen, and trigger surges in sympathetic nervous activity. An estimated 936 million adults aged 30-69 have mild-to-severe OSA globally (Benjafield et al. Lancet Respir Med 2019), with severe OSA affecting about 425 million. Most cases remain undiagnosed. OSA presents primarily as loud snoring, witnessed apneas, and excessive daytime sleepiness. Untreated severe OSA approximately doubles cardiovascular event risk and triples the risk of motor vehicle accidents. Positive airway pressure therapy is first-line treatment and is effective in virtually all anatomical phenotypes.",
+
+  "keyStats": {
+    "prevalence": "936 million adults aged 30-69 have mild-to-severe OSA worldwide (Benjafield et al. 2019, Lancet Respir Med); approximately 80% remain undiagnosed in most high-income countries",
+    "demographics": "Men are 2-3 times more commonly affected than premenopausal women; post-menopausal women approach male prevalence; obesity is the dominant modifiable risk factor",
+    "avgAge": "Prevalence rises steeply with age; peak diagnosis typically age 40-65; OSA affects approximately 3-7% of children aged 1-13 (pediatric form)",
+    "globalCases": "Estimated 936 million mild-to-severe and 425 million moderate-to-severe OSA globally (2019 estimate)"
+  },
+
+  "definition": "Obstructive sleep apnea (ICD-10: G47.33) is a sleep-disordered breathing condition defined by recurrent complete (apnea) or partial (hypopnea) obstruction of the upper airway during sleep, lasting at least 10 seconds, and occurring at a rate of five or more events per hour (apnea-hypopnea index, AHI). The obstruction arises from collapse of the pharyngeal airway — most commonly at the level of the soft palate, tongue base, and lateral pharyngeal walls — due to anatomical narrowing combined with loss of upper-airway muscle tone during sleep. Severity is graded by AHI: mild (5-14.9/h), moderate (15-29.9/h), and severe (≥30/h), or by the Respiratory Disturbance Index (RDI) when respiratory-effort-related arousals are included. Each apnea/hypopnea causes oxygen desaturation, arousal from sleep (often subcortical), surges in sympathetic tone, increased negative intrathoracic pressure, and endothelial stress. Cumulatively, these pathophysiological cascades drive cardiovascular, metabolic, and neurocognitive sequelae. OSA is distinguished from central sleep apnea (CSA), in which respiratory drive is absent during episodes rather than mechanically obstructed. OSA is managed primarily by sleep medicine physicians, ENT surgeons, and sleep-oriented respiratory physicians.",
+
+  "typesClassification": [
+    { "type": "Mild OSA (AHI 5-14.9/h)", "description": "Symptomatic mild OSA warrants CPAP or mandibular advancement device; asymptomatic mild OSA in the absence of cardiovascular comorbidity may be managed conservatively with weight loss and positional therapy." },
+    { "type": "Moderate OSA (AHI 15-29.9/h)", "description": "Consistent CPAP indication. Associated with meaningful daytime sleepiness, hypertension risk, and impaired cognitive performance. Most patients notice significant symptom improvement within 1-2 weeks of effective CPAP." },
+    { "type": "Severe OSA (AHI ≥30/h)", "description": "Strong CPAP indication; associated with doubled cardiovascular event risk, markedly impaired neurocognition, and metabolic dysfunction. Patients often have oxygen desaturation below 80% during events." },
+    { "type": "Positional OSA", "description": "AHI in the supine position at least twice that in the non-supine position; present in roughly 50% of OSA patients. Positional therapy using tennis-ball technique or commercial positional devices is an effective adjunct or sole therapy for mild-moderate positional OSA." },
+    { "type": "Pediatric OSA", "description": "Defined as AHI above 1/h in children. Adenotonsillar hypertrophy is the dominant cause; adenotonsillectomy is first-line surgical treatment with success rates of 70-80% in non-obese children. Residual OSA after surgery requires reassessment." }
+  ],
+
+  "primarySymptoms": [
+    "Loud habitual snoring on most nights, often reported by a bed partner as disruptive; snoring that stops abruptly then resumes loudly is the classic witnessed apnea pattern.",
+    "Witnessed apneas — the bed partner observes the sleeping person stop breathing for 10 seconds or longer, then gasp, choke, or snort when breathing resumes.",
+    "Excessive daytime sleepiness despite apparently adequate time in bed, measured by the Epworth Sleepiness Scale; score above 10 is abnormal.",
+    "Non-restorative sleep — waking unrefreshed even after 7-8 hours, with persistent fatigue throughout the day.",
+    "Nocturnal gasping or choking episodes that partially wake the patient, often without full arousal or memory of the event.",
+    "Morning headaches from nocturnal hypercapnia, typically frontal, resolving within 1-2 hours after waking.",
+    "Nocturia — frequent nighttime urination caused by atrial natriuretic peptide release during apnea-related negative intrathoracic pressure; often the symptom that finally prompts consultation.",
+    "Impaired concentration, memory difficulties, and impaired executive function from chronic sleep fragmentation.",
+    "Mood changes including irritability, low mood, and reduced motivation; depression and OSA have bidirectional comorbidity.",
+    "In men: reduced libido and erectile dysfunction, partly mediated by sleep fragmentation and testosterone suppression from nocturnal hypoxemia."
+  ],
+
+  "earlyWarningSigns": [
+    "Increasingly loud snoring with pauses noted by the bed partner — the most sensitive indicator before daytime symptoms develop.",
+    "Unexplained hypertension resistant to antihypertensive medication in an overweight adult — OSA is present in 30-50% of hypertensive patients.",
+    "Epworth Sleepiness Scale score of 8-10 with habitual snoring — borderline sleepiness with snoring warrants sleep study referral.",
+    "New-onset atrial fibrillation, particularly nocturnal episodes, in the absence of structural heart disease — OSA is a known trigger."
+  ],
+
+  "emergencySigns": [
+    "Acute respiratory failure with hypoxemia on overnight pulse oximetry below 80% sustained for more than 5 minutes — requires urgent hospital assessment and potentially non-invasive ventilation.",
+    "Sudden-onset stroke or myocardial infarction in a known or suspected OSA patient — OSA is a recognized precipitant and acute management must not delay diagnosis.",
+    "Cor pulmonale (right heart failure) from chronic nocturnal hypoxemia — peripheral edema, raised JVP, and exertional dyspnea in a patient with untreated severe OSA."
+  ],
+
+  "causes": [
+    {
+      "cause": "Anatomical narrowing of the upper airway",
+      "description": "Obesity deposits fat in the lateral pharyngeal walls, tongue, and parapharyngeal spaces, reducing the pharyngeal lumen by 20-30%. Retrognathia, micrognathia, macroglossia, enlarged tonsils, and low-hanging soft palate create structural predisposition that is unmasked when muscle tone falls during sleep."
+    },
+    {
+      "cause": "Loss of upper-airway dilator muscle tone during sleep",
+      "description": "Genioglossus, tensor palatini, and other pharyngeal muscles maintain airway patency during wakefulness. During NREM and especially REM sleep, these muscles relax substantially; in anatomically vulnerable individuals, this relaxation allows the airway to collapse under negative inspiratory pressure."
+    },
+    {
+      "cause": "Obesity and central fat deposition",
+      "description": "Each 1-unit increase in BMI is associated with a 14% increase in OSA prevalence; a 10% weight gain increases AHI by approximately 32%. Neck circumference above 40 cm in women and above 43 cm in men is a strong predictor. Visceral obesity is more strongly correlated with OSA than total body weight."
+    },
+    {
+      "cause": "High loop gain and arousal threshold instability",
+      "description": "Loop gain refers to the strength of the ventilatory response to a respiratory disturbance; high loop gain amplifies small perturbations into full apneas. Low arousal threshold (waking easily with minimal airway resistance) perpetuates cycling through partial obstruction, arousal, and re-obstruction — explaining OSA in non-obese patients."
+    },
+    {
+      "cause": "Craniofacial anatomy",
+      "description": "Retrognathia (recessed lower jaw), brachycephalic skull shape, and high-arched palate reduce the bony framework supporting the pharyngeal airway. Craniofacial anatomy explains OSA in thin, non-obese patients and is the primary driver in East Asian populations, who have higher OSA prevalence at lower BMI than Western populations."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Obesity (BMI ≥30 kg/m²)", "category": "modifiable", "description": "Obesity is the single strongest modifiable risk factor. Approximately 70% of severe OSA patients are obese; each 10% weight gain increases AHI by ~32%. Weight loss of 10-15% reduces AHI by 30-50% in randomized trials." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men are 2-3 times more likely to have OSA than premenopausal women, partly due to upper-airway anatomy, fat distribution, and ventilatory control differences. Post-menopause, female prevalence approaches male prevalence." },
+    { "factor": "Age above 50", "category": "non-modifiable", "description": "Pharyngeal muscle tone decreases with age, and upper airway collapsibility increases. OSA prevalence rises sharply after age 50, reaching 30-50% in adults above 65." },
+    { "factor": "Retrognathia or small mandible", "category": "genetic", "description": "Jaw size and position are inherited. East Asian populations have 2-3 times higher OSA prevalence at equivalent BMI compared to Caucasians, largely due to craniofacial anatomy. Retrognathia is the primary driver of OSA in lean individuals." },
+    { "factor": "Alcohol and sedative use", "category": "modifiable", "description": "Alcohol reduces upper-airway muscle tone and increases arousal threshold; even moderate intake (2 drinks) in the evening increases AHI by approximately 25%. Benzodiazepines and opioids similarly suppress airway reflexes." },
+    { "factor": "Nasal obstruction", "category": "modifiable", "description": "Chronic nasal obstruction (deviated septum, chronic rhinitis, nasal polyps) forces mouth breathing, which increases pharyngeal collapsibility. Treating nasal obstruction reduces CPAP pressure requirements and improves CPAP adherence." },
+    { "factor": "Family history of OSA", "category": "genetic", "description": "First-degree relatives of OSA patients carry 2-4 times baseline risk. Familial aggregation is mediated by shared craniofacial anatomy, ventilatory control genetics, and obesity predisposition." }
+  ],
+
+  "affectedDemographics": [
+    "Worldwide, approximately 936 million adults aged 30-69 have OSA (mild-to-severe AHI ≥5/h); the highest absolute numbers are in China, USA, Brazil, and India.",
+    "East and Southeast Asian populations have high OSA prevalence at relatively lower BMI compared to Western populations due to craniofacial anatomy.",
+    "Men aged 40-65 are the highest-risk demographic; obesity is the modifiable driver. Post-menopausal women approach male prevalence rates.",
+    "Children: pediatric OSA affects 3-7% of children; adenotonsillar hypertrophy is the primary cause; prevalence is higher in obese children and those with Down syndrome or craniofacial anomalies."
+  ],
+
+  "diagnosisOverview": "Diagnosis begins with structured symptom assessment using validated tools: the STOP-BANG questionnaire (sensitivity 93% for moderate-severe OSA at a score of 3+) and the Epworth Sleepiness Scale (ESS ≥10 indicates excessive sleepiness). Physical examination documents BMI, neck circumference, Mallampati score, tonsillar size, palate anatomy, and nasal patency. The diagnostic gold standard is in-laboratory polysomnography (PSG), which simultaneously records airflow, thoracoabdominal effort, electroencephalography, oxygen saturation, cardiac rhythm, eye movements, and limb electromyography. PSG defines AHI, sleep architecture, oxygen saturation nadir and time below 90%, sleep position, and cardiac arrhythmias. Home sleep apnea testing (HSAT) using a portable multi-channel monitor records airflow, oximetry, effort, and position; it is appropriate for adults with high pre-test probability, no significant cardiorespiratory comorbidity, and no suspicion of central or complex sleep apnea. HSAT tends to underestimate AHI by 10-20% versus PSG because it misses REMs and uses total recording time in the denominator. AASM 2023 guidelines consider both PSG and level 3 HSAT acceptable for initial diagnosis in appropriate patients. Fibreoptic nasopharyngolaryngoscopy with drug-induced sleep endoscopy (DISE) is performed by ENT surgeons when surgical management is planned, to identify the anatomical site and pattern of collapse.",
+
+  "diagnosticTests": [
+    { "test": "Home sleep apnea test (HSAT / level 3 portable monitor)", "purpose": "Diagnoses OSA in patients with high pre-test probability without significant cardiorespiratory comorbidity; records oximetry, airflow, and thoracoabdominal effort", "whatToExpect": "A small recording device is worn at home for one or two nights. Signals include nasal cannula airflow, chest/abdominal effort belts, and pulse oximeter. The device is returned to the lab for scoring. Results within 3-5 days." },
+    { "test": "In-laboratory polysomnography (PSG)", "purpose": "Gold-standard overnight sleep study; diagnoses OSA and characterizes sleep architecture, AHI, oxygen desaturation, and cardiac arrhythmias in complex cases", "whatToExpect": "Spending a night in a sleep laboratory with sensors attached: electrodes on scalp, face, and legs; belts around chest and abdomen; finger oximeter. A technician monitors remotely. Mild discomfort from adhesive electrodes; most patients sleep adequately." },
+    { "test": "STOP-BANG questionnaire", "purpose": "8-item validated screening tool for OSA; score ≥3 has 93% sensitivity for moderate-to-severe OSA", "whatToExpect": "A self-completed questionnaire about snoring, tiredness, observed apneas, blood pressure, BMI, age, neck circumference, and gender. Completed in 2 minutes at the point of care." },
+    { "test": "Epworth Sleepiness Scale (ESS)", "purpose": "8-item validated questionnaire assessing propensity to fall asleep in common situations; ESS ≥10 indicates pathological daytime sleepiness", "whatToExpect": "Self-report of likelihood to doze in eight situations (reading, TV, car as passenger, etc.) scored 0-3 each. Takes 2 minutes. Scores above 10 require investigation." },
+    { "test": "Overnight pulse oximetry", "purpose": "Screening test identifying repetitive oxygen desaturations suggestive of sleep-disordered breathing; oxygen desaturation index ≥15/h is suggestive of moderate-severe OSA", "whatToExpect": "Clip-on finger probe worn overnight at home. Desaturation patterns (3% or 4% drops) are counted. Low cost, widely available. Cannot alone confirm OSA diagnosis." },
+    { "test": "Drug-induced sleep endoscopy (DISE)", "purpose": "Identifies the anatomical level and pattern of upper-airway collapse under light propofol sedation; guides surgical planning for OSA", "whatToExpect": "Short-stay hospital procedure. Propofol is infused via an IV to induce drug-induced sleep. An ENT surgeon passes a flexible scope through the nose to view the collapsing airway. The patient wakes within 20 minutes. Results guide choice between UPPP, tongue-base surgery, or hypoglossal nerve stimulation." }
+  ],
+
+  "treatmentOverview": "The AASM 2019 clinical practice guidelines recommend positive airway pressure (PAP) therapy as first-line treatment for adults with OSA at any severity level who have symptoms or cardiovascular comorbidity. Continuous positive airway pressure (CPAP) splints the upper airway with pneumatic pressure, eliminating virtually all obstructive events at the therapeutic pressure. Auto-titrating CPAP (APAP) adjusts pressure breath-by-breath, providing adequate pressures with improved comfort. CPAP adherence of 4 hours per night on 70% of nights is the minimum threshold for clinical benefit; adherence at 6-7 hours correlates with maximum improvement in sleepiness, blood pressure, and neurocognition. For patients who cannot tolerate CPAP, mandibular advancement devices (MADs) custom-fitted to protrude the lower jaw 5-8 mm advance the tongue base and are effective for mild-moderate OSA with AHI reduction of 50-65%. Surgical options are second-line after CPAP failure or refusal; uvulopalatopharyngoplasty (UPPP) with or without tonsillectomy reduces AHI by 50% in 50-60% of selected patients and is most effective when DISE identifies palatal collapse. Hypoglossal nerve stimulation (HNS, Inspire device) is an implantable upper-airway pacemaker approved for moderate-to-severe OSA patients who have failed CPAP; it synchronizes tongue protrusion with inspiration, achieving AHI below 15 in 66% of patients at 5 years. Weight loss surgery (bariatric surgery) reduces AHI by 50-80% in morbidly obese patients and is the most durable intervention when obesity drives OSA.",
+
+  "medicalTreatments": [
+    { "name": "CPAP (continuous positive airway pressure)", "description": "Pressurized air through a nasal or full-face mask holds the upper airway open. Pressure is typically 6-15 cm H₂O; APAP mode adjusts automatically. Humidification and mask fitting substantially improve adherence. Effective at any severity level.", "effectiveness": "Eliminates 95%+ of obstructive events at therapeutic pressure; reduces ESS by 2-3 points; lowers blood pressure by 2-3 mmHg; reduces road traffic accident risk by approximately 50% with regular use (PMID 22552196)" },
+    { "name": "Auto-titrating CPAP (APAP)", "description": "Adjusts pressure automatically in response to airflow signals; preferred over fixed-pressure CPAP by most guidelines because it requires less in-laboratory titration and provides lower average pressure. Clinically equivalent to fixed CPAP in most outcomes.", "effectiveness": "Non-inferior to fixed CPAP for AHI reduction, ESS, and quality of life in randomized trials; similar adherence rates" },
+    { "name": "Mandibular advancement device (MAD)", "description": "Custom-made oral appliance fitted by a dentist or orthodontist; protrudes the mandible 5-8 mm during sleep, advancing the tongue base. Indicated for mild-moderate OSA or as CPAP alternative in all severities. Requires dental review every 12 months for temporomandibular joint and occlusal monitoring.", "effectiveness": "AHI reduction 50-65% versus baseline; complete response (AHI <5) in approximately 30-35% of patients; ESS improvement similar to CPAP in mild-moderate OSA (PMID 25547578)" },
+    { "name": "Positional therapy", "description": "Supine sleep avoidance using positional alarms, vibrating backpacks, or the tennis-ball-in-shirt technique. Indicated when supine AHI is at least twice non-supine AHI (positional OSA). Often combined with CPAP or MAD.", "effectiveness": "Reduces AHI by 30-50% in positional OSA; equally effective to CPAP for mild-moderate positional OSA in short-term trials (PMID 23284421)" },
+    { "name": "Weight loss intervention (behavioural/pharmacological/surgical)", "description": "10% weight loss reduces AHI by approximately 26% in controlled studies; 15% weight loss may achieve AHI below 5 in a subset. GLP-1 receptor agonists (tirzepatide, semaglutide) achieve 30-40% weight loss in trials and are being evaluated for OSA. Bariatric surgery in morbidly obese patients reduces AHI by 50-80%.", "effectiveness": "SCALE SLEEP trial: liraglutide 3 mg reduced AHI by 12.2 events/h versus 6.1 with placebo (PMID 26381679); bariatric surgery reduces AHI by median 38 events/h (PMID 19926098)" }
+  ],
+
+  "surgicalOptions": [
+    { "name": "Uvulopalatopharyngoplasty (UPPP) with or without tonsillectomy", "description": "Resection and reshaping of the soft palate, uvula, and lateral pharyngeal folds; tonsillectomy performed simultaneously if tonsils are enlarged. Most effective when DISE confirms palatal collapse is the primary obstruction site.", "successRate": "AHI reduction greater than 50% in approximately 50-60% of selected patients; complete cure (AHI <5) in 10-15%; best results in patients with palatal retropalatal collapse on DISE, normal BMI, and prominent tonsils" },
+    { "name": "Hypoglossal nerve stimulation (Inspire / upper airway stimulator)", "description": "Implantable device synchronizes stimulation of the hypoglossal nerve with inspiration, advancing the tongue and opening the tongue-base airway. Implanted under general anaesthesia in a 90-minute procedure. FDA-approved for moderate-to-severe OSA with AHI 15-65 and body mass index below 35, with CPAP failure.", "successRate": "AHI below 15 in 66% of patients at 5 years (STAR trial, PMID 24161215); median AHI reduced from 29 to 9/h; 94% of patients continue using the device at 5 years" },
+    { "name": "Maxillomandibular advancement (MMA)", "description": "Orthognathic surgery advancing both jaws 10-12 mm, enlarging the bony pharyngeal framework. Highest surgical success rate for OSA; reserved for patients with craniofacial abnormalities or failed other procedures.", "successRate": "AHI reduction greater than 50% in 85-90% of patients; complete cure in 40-60%; most effective OSA surgery available (PMID 20397882)" },
+    { "name": "Adenotonsillectomy (pediatric OSA)", "description": "First-line surgery for children with OSA caused by adenotonsillar hypertrophy; routinely performed if tonsils are grade 3-4 and AHI exceeds 1/h with symptoms.", "successRate": "Normalization of PSG (AHI <1) in approximately 59% of non-obese children; residual OSA requiring further evaluation in 15-20%" }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Myofunctional therapy (oropharyngeal exercises)", "description": "Structured exercises targeting the tongue, soft palate, and pharyngeal muscles; randomized trials show AHI reduction of 30-50% and snoring reduction in mild-moderate OSA (PMID 25950418). Most effective as adjunct to CPAP or MAD." },
+    { "name": "Intranasal corticosteroids for nasal OSA contributors", "description": "Chronic allergic rhinitis or nasal polyps increase CPAP pressure requirements; intranasal corticosteroids reduce nasal resistance and improve CPAP adherence by approximately 15% in patients with nasal obstruction." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "cpap-therapy",
+    "mandibular-advancement-device",
+    "uvulopalatopharyngoplasty"
+  ],
+
+  "whySeeSpecialist": "OSA with an AHI above 15, significant oxygen desaturation, or cardiovascular comorbidity warrants assessment by a sleep medicine physician or ENT surgeon. Patients planning surgery should undergo DISE to map the anatomical collapse sites. Pediatric OSA requires joint assessment by ENT and pediatric sleep medicine.",
+  "doctorSelectionGuide": "Look for a sleep medicine physician or respiratory physician with access to laboratory polysomnography and home sleep testing, and an ENT surgeon trained in DISE and upper-airway surgery. Multidisciplinary sleep centres providing both medical and surgical pathways achieve best outcomes. Accreditation by AASM (USA) or the British Sleep Society signals institutional quality.",
+
+  "hospitalCriteria": [
+    "Level 1 or level 2 sleep laboratory for polysomnography and CPAP titration",
+    "ENT surgeon trained in DISE and upper-airway surgery (UPPP, hypoglossal nerve stimulation)",
+    "Dental sleep medicine service for mandibular advancement device fitting",
+    "Access to home sleep testing equipment for initial diagnosis",
+    "Bariatric surgery program for morbidly obese OSA patients"
+  ],
+  "keyFacilities": [
+    "AASM-accredited sleep centres (USA)",
+    "NHS sleep and ventilation units (UK)",
+    "Academic hospital ENT departments with dedicated upper-airway surgery programs"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Achieve and maintain a healthy body weight — each 10% weight reduction decreases AHI by approximately 26% and may eliminate OSA entirely in overweight patients.",
+    "Avoid alcohol, sedatives, and opioids within 3 hours of bedtime, as these relax pharyngeal muscles and worsen obstruction.",
+    "Sleep on your side rather than your back — supine sleeping increases pharyngeal collapsibility; positional therapy reduces AHI by 30-50% in positional OSA.",
+    "Treat nasal obstruction from allergic rhinitis, septal deviation, or polyps to reduce upper-airway resistance and CPAP pressure requirements.",
+    "Request evaluation for OSA if you snore habitually, your partner witnesses apneas, or you have unexplained hypertension or excessive daytime sleepiness."
+  ],
+
+  "lifestyleModifications": [
+    "Use CPAP every night for the entire sleep period — adherence above 6 hours correlates with maximum reduction in sleepiness, blood pressure, and accident risk.",
+    "Attend CPAP follow-up within 4-6 weeks of initiation; up to 30% of patients need mask adjustment or pressure change at this visit.",
+    "Exercise 150 minutes per week of moderate aerobic activity — independent of weight loss, exercise reduces AHI by approximately 19% in overweight adults.",
+    "Avoid heavy meals and alcohol for 2-3 hours before sleep to minimize airway muscle relaxation during early NREM sleep.",
+    "If BMI is above 30, prioritize structured weight loss as it is the most durable intervention for OSA severity.",
+    "Report any new nocturnal chest pain, palpitations, or worsening breathlessness to assess for OSA-related cardiovascular complications."
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style diet (olive oil, vegetables, legumes, fish) — associated with reduced OSA severity and improved sleep quality in observational studies",
+      "Adequate hydration during the day to maintain mucosal moisture and reduce CPAP-related dryness",
+      "High-fiber, low-glycemic foods to support weight management",
+      "Omega-3 fatty acids (oily fish, walnuts, flaxseed) to reduce upper-airway inflammation"
+    ],
+    "avoid": [
+      "Alcohol in the 3 hours before bedtime — suppresses upper-airway muscle tone and worsens apneas",
+      "Large evening meals — abdominal distension raises the diaphragm and reduces functional residual capacity",
+      "High-sodium diet — aggravates fluid retention and may worsen pharyngeal edema",
+      "High-calorie, ultra-processed foods driving weight gain, the dominant modifiable risk factor"
+    ]
+  },
+  "exerciseGuidelines": "Aerobic exercise 150 minutes per week at moderate intensity (brisk walking, cycling, swimming) is strongly recommended regardless of weight loss. A meta-analysis (PMID 26378941) found aerobic exercise reduces AHI by approximately 19 events/h in overweight OSA patients independent of weight change. Resistance training is an appropriate adjunct. Evening exercise within 1-2 hours of bedtime does not worsen OSA and is well tolerated.",
+
+  "dailyManagement": [
+    "Clean CPAP mask, tubing, and humidifier chamber according to manufacturer instructions — weekly washing with mild soap; replace filters monthly.",
+    "Check CPAP device data (residual AHI, leak rate, usage hours) via the device app or clinic download every 3-6 months; aim for residual AHI below 5/h and mask leak below 24 L/min.",
+    "Sleep on your side using a body pillow or positional alarm if supine AHI is substantially worse.",
+    "Report persistent sleepiness despite adequate CPAP use — may indicate residual OSA from leak, pressure inadequacy, or undiagnosed central sleep apnea.",
+    "Annual review with sleep physician or ENT to assess device adequacy, OSA severity change with weight, and cardiovascular risk."
+  ],
+
+  "prognosis": "Prognosis with adherent CPAP therapy is very good. Excessive daytime sleepiness resolves in 80% of patients within 1-4 weeks of effective treatment. Blood pressure falls by a mean of 2-3 mmHg systolic and diastolic with nightly CPAP use. Cardiovascular event risk in treated OSA patients approaches that of matched non-OSA controls in most observational studies, though residual risk remains elevated in patients with severe pre-existing cardiovascular disease. Motor vehicle accident risk falls to background levels with CPAP use. Quality of life, mood, and cognitive function show clinically meaningful improvement. Untreated severe OSA doubles the risk of fatal and non-fatal cardiovascular events over 10-year follow-up (PMID 15710948). OSA severity fluctuates with weight — a 10% weight loss may reduce AHI enough to discontinue CPAP in mild-moderate cases.",
+
+  "recoveryTimeline": "Sleepiness and cognitive symptoms begin improving within the first week of effective CPAP. Blood pressure benefits emerge over 4-8 weeks of nightly use. Full cardiovascular risk reduction requires months to years of consistent therapy. Surgical outcomes (UPPP, HNS) are assessed at 3 months post-procedure with repeat polysomnography.",
+
+  "complications": [
+    "Uncontrolled systemic hypertension — resistant hypertension improves with CPAP; untreated OSA reduces antihypertensive medication effectiveness.",
+    "Atrial fibrillation — OSA is an independent risk factor for AF and OSA treatment reduces AF recurrence after cardioversion by approximately 40%.",
+    "Type 2 diabetes mellitus from insulin resistance driven by recurrent nocturnal hypoxemia and sympathetic hyperactivity.",
+    "Depression and anxiety — bidirectional comorbidity; CPAP adherence reduces depression severity scores by 20-30% in randomized trials.",
+    "Motor vehicle accidents — OSA patients have 2-7 times the road accident risk of non-OSA drivers; this risk is eliminated with effective treatment.",
+    "Cognitive impairment — chronic sleep fragmentation impairs memory encoding, executive function, and working memory; most improvements are partially reversible with CPAP."
+  ],
+
+  "supportResources": [
+    { "name": "American Academy of Sleep Medicine — Sleep Education", "url": "https://sleepeducation.org/sleep-disorders/obstructive-sleep-apnea/", "description": "Plain-language patient information on OSA diagnosis, treatment, and CPAP adherence from the professional body that sets clinical standards." },
+    { "name": "British Snoring & Sleep Apnoea Association", "url": "https://britishsnoring.co.uk/", "description": "UK patient charity providing information on diagnosis pathways, CPAP tips, and dental device access for OSA." },
+    { "name": "AASM — Find a Sleep Center", "url": "https://sleepeducation.org/find-a-sleep-center/", "description": "Directory of AASM-accredited sleep centers in the United States for formal polysomnography diagnosis." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "sleep-apnea", "name": "Central Sleep Apnea", "keyDifference": "Central sleep apnea involves loss of respiratory drive from the brain (absent thoracoabdominal effort during apneas) rather than mechanical airway obstruction. PSG distinguishes the two. OSA shows paradoxical breathing effort during events; CSA shows no effort. CPAP is effective for OSA; ASV (adaptive servo-ventilation) is required for most CSA." },
+    { "slug": "depression", "name": "Major Depressive Disorder", "keyDifference": "Both OSA and depression cause fatigue, low motivation, and cognitive slowing. OSA is distinguished by witnessed apneas, snoring, and nocturia; depression by anhedonia, low mood, and psychomotor changes. The two coexist in up to 20% of patients. CPAP improves depressive scores; antidepressants do not treat OSA." },
+    { "slug": "hypothyroidism", "name": "Hypothyroidism", "keyDifference": "Hypothyroidism causes fatigue, weight gain, and cognitive slowing similar to OSA. Both may coexist. TSH is the distinguishing test; thyroid replacement reduces AHI in hypothyroid OSA patients by 50% in some series but rarely eliminates the need for CPAP in moderate-severe cases." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "Hypertension" },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation" },
+    { "slug": "type-2-diabetes-mellitus", "name": "Type 2 Diabetes Mellitus" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "deviated-nasal-septum", "name": "Deviated Nasal Septum", "relevance": "Nasal obstruction from septal deviation increases pharyngeal collapsibility and CPAP pressure requirements; septoplasty improves CPAP adherence in affected patients." },
+    { "slug": "obesity-management", "name": "Obesity Management", "relevance": "Obesity is the dominant modifiable cause of OSA; weight reduction programs reduce AHI and may eliminate the need for CPAP in overweight patients." },
+    { "slug": "atrial-fibrillation", "name": "Atrial Fibrillation", "relevance": "OSA triggers nocturnal AF through sympathetic surges; CPAP reduces AF recurrence after cardioversion by approximately 40%." },
+    { "slug": "depression", "name": "Depression", "relevance": "Bidirectional comorbidity; CPAP adherence improves depressive symptom scores by 20-30% in randomized trials." }
+  ],
+
+  "faqs": [
+    {
+      "question": "What is obstructive sleep apnea?",
+      "answer": "Obstructive sleep apnea is a condition where the upper airway repeatedly collapses during sleep, causing pauses in breathing of 10 seconds or more. This drops blood oxygen, fragments sleep, and triggers heart and metabolic stress. About 936 million adults worldwide have OSA; most are undiagnosed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the main symptoms of sleep apnea?",
+      "answer": "The main symptoms are loud snoring with pauses in breathing witnessed by a bed partner, waking gasping or choking, excessive daytime sleepiness despite adequate sleep time, unrefreshing sleep, morning headaches, and nocturia. Impaired concentration and irritability are also common.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is sleep apnea diagnosed?",
+      "answer": "Diagnosis requires a sleep study — either a home sleep apnea test or in-laboratory polysomnography. Both measure breathing pauses, blood oxygen, and effort during sleep. An apnea-hypopnea index (AHI) of 5 or more per hour confirms OSA. The STOP-BANG questionnaire screens for risk before testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is CPAP and does it cure sleep apnea?",
+      "answer": "CPAP (continuous positive airway pressure) is a mask device that blows pressurized air to hold the airway open during sleep. It does not cure OSA but eliminates apneas while used. Symptoms return if the device is stopped. Most patients notice improved energy and reduced snoring within 1-2 weeks of nightly use.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a normal AHI score?",
+      "answer": "AHI below 5 events per hour is normal in adults. Mild OSA is AHI 5-14.9, moderate is 15-29.9, and severe is 30 or more. CPAP is recommended for all symptomatic OSA and for asymptomatic moderate-to-severe OSA due to cardiovascular risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can sleep apnea go away with weight loss?",
+      "answer": "Yes. A 10% weight reduction reduces AHI by approximately 26% on average; in overweight patients with mild-moderate OSA, weight loss may normalize AHI. However, most patients with severe OSA continue to need CPAP even after significant weight loss, though often at lower pressures.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the risks of untreated sleep apnea?",
+      "answer": "Untreated severe OSA doubles the risk of cardiovascular events (heart attack, stroke) over 10 years, increases motor vehicle accident risk 2-7 times, impairs cognitive function, and raises the risk of atrial fibrillation and type 2 diabetes. Effective CPAP treatment largely reverses these risks.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is sleep apnea surgery effective?",
+      "answer": "Surgery is effective in selected patients. Uvulopalatopharyngoplasty (UPPP) reduces AHI by over 50% in 50-60% of carefully selected patients. Hypoglossal nerve stimulation achieves AHI below 15 in 66% of patients at 5 years. Surgery is second-line after CPAP failure, guided by drug-induced sleep endoscopy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children have sleep apnea?",
+      "answer": "Yes. Pediatric OSA affects 3-7% of children, most commonly due to enlarged tonsils and adenoids. Symptoms include snoring, restless sleep, bedwetting, and behavioral problems. Adenotonsillectomy cures OSA in approximately 59% of non-obese children. Residual disease is reassessed with polysomnography 6 weeks post-surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does sleep apnea cause high blood pressure?",
+      "answer": "Yes. OSA is an independent cause of hypertension; approximately 30-50% of hypertensive patients have OSA. Nocturnal sympathetic surges from apneas raise blood pressure throughout the night and into the daytime. CPAP reduces systolic blood pressure by a mean of 2-3 mmHg and improves response to antihypertensives.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Inspire device for sleep apnea?",
+      "answer": "Inspire (hypoglossal nerve stimulation) is an implantable device that senses breathing and delivers gentle electrical stimulation to the hypoglossal nerve, moving the tongue forward to open the airway. It is FDA-approved for moderate-to-severe OSA in patients who cannot tolerate CPAP and have a specific collapse pattern on DISE.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is snoring the same as sleep apnea?",
+      "answer": "Not always. Snoring without apneas or daytime sleepiness is called primary snoring. OSA requires an AHI of 5 or more per hour. About 50% of habitual snorers have OSA; conversely, most OSA patients snore. A sleep study distinguishes primary snoring from OSA.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is drug-induced sleep endoscopy (DISE)?",
+      "answer": "DISE is a procedure where an ENT surgeon passes a flexible camera through the nose to observe the upper airway while the patient is lightly sedated to simulate sleep. It identifies exactly where the airway collapses — palate, tongue base, epiglottis, or tonsils — to guide surgical planning.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a mandibular advancement device replace CPAP?",
+      "answer": "For mild-to-moderate OSA, mandibular advancement devices (MADs) are clinically comparable to CPAP for symptom relief and are often preferred by patients due to convenience. For severe OSA, CPAP provides superior AHI reduction, though MADs remain an option when CPAP is refused. Annual dental review is required.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does alcohol worsen sleep apnea?",
+      "answer": "Yes. Alcohol relaxes pharyngeal muscles and suppresses arousal responses to apneas, increasing AHI by approximately 25% even with moderate intake. Avoiding alcohol within 3 hours of bedtime is recommended for all OSA patients, regardless of whether CPAP is used.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Obstructive sleep apnea (OSA, sleep apnoea)",
+  "regionalNames": [
+    { "name": "Sleep apnoea", "region": "UK, Australia, New Zealand", "language": "English (British spelling)" },
+    { "name": "Apnée du sommeil", "region": "France, Belgium, Quebec", "language": "French" },
+    { "name": "Schlafapnoe", "region": "Germany, Austria, Switzerland", "language": "German" }
+  ],
+  "searchTags": [
+    "obstructive sleep apnea",
+    "OSA",
+    "sleep apnoea",
+    "CPAP therapy",
+    "snoring treatment",
+    "AHI sleep study",
+    "daytime sleepiness",
+    "sleep disorder",
+    "polysomnography",
+    "STOP-BANG",
+    "mandibular advancement device",
+    "UPPP surgery",
+    "Inspire device",
+    "hypoglossal nerve stimulator",
+    "home sleep apnea test"
+  ],
+  "symptomKeywords": [
+    "loud snoring with pauses",
+    "waking gasping at night",
+    "tired despite 8 hours sleep",
+    "falling asleep at wheel",
+    "partner witnesses stopped breathing",
+    "morning headache",
+    "getting up to urinate multiple times",
+    "daytime sleepiness at work"
+  ],
+
+  "metaTitle": "Obstructive Sleep Apnea: Symptoms & Treatment | aihealz",
+  "metaDescription": "Obstructive sleep apnea: airway collapse during sleep causing snoring, oxygen drops, and daytime fatigue. CPAP, MADs, and surgery options explained.",
+
+  "keywords": [
+    "obstructive sleep apnea",
+    "sleep apnea symptoms",
+    "CPAP therapy",
+    "sleep apnea treatment",
+    "AHI polysomnography",
+    "mandibular advancement device",
+    "UPPP surgery",
+    "hypoglossal nerve stimulation",
+    "sleep apnea diagnosis",
+    "sleep apnea causes",
+    "OSA cardiovascular risk",
+    "ENT sleep apnea"
+  ],
+
+  "lastReviewed": "2026-05-14",
+
+  "sources": [
+    { "title": "Benjafield AV, Ayas NT, Eastwood PR, et al. 2019. Estimation of the global prevalence and burden of obstructive sleep apnoea. Lancet Respir Med 7(8):687-698.", "url": "https://pubmed.ncbi.nlm.nih.gov/31300334/", "accessedDate": "2026-05-14" },
+    { "title": "Kapur VK, Auckley DH, Chowdhuri S, et al. 2017. Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea. J Clin Sleep Med 13(3):479-504.", "url": "https://pubmed.ncbi.nlm.nih.gov/28162150/", "accessedDate": "2026-05-14" },
+    { "title": "Peppard PE, Young T, Barnet JH, et al. 2013. Increased prevalence of sleep-disordered breathing in adults. Am J Epidemiol 177(9):1006-14.", "url": "https://pubmed.ncbi.nlm.nih.gov/23589584/", "accessedDate": "2026-05-14" },
+    { "title": "Patil SP, Ayappa IA, Caples SM, et al. 2019. Treatment of adult obstructive sleep apnea with positive airway pressure: an American Academy of Sleep Medicine Clinical Practice Guideline. J Clin Sleep Med 15(2):335-343.", "url": "https://pubmed.ncbi.nlm.nih.gov/30736887/", "accessedDate": "2026-05-14" },
+    { "title": "Strollo PJ Jr, Soose RJ, Maurer JT, et al. 2014. Upper-airway stimulation for obstructive sleep apnea (STAR trial). N Engl J Med 370(2):139-49.", "url": "https://pubmed.ncbi.nlm.nih.gov/24161215/", "accessedDate": "2026-05-14" },
+    { "title": "Marin JM, Carrizo SJ, Vicente E, Agusti AG. 2005. Long-term cardiovascular outcomes in men with obstructive sleep apnoea-hypopnoea with or without treatment with CPAP. Lancet 365(9464):1046-53.", "url": "https://pubmed.ncbi.nlm.nih.gov/15760695/", "accessedDate": "2026-05-14" },
+    { "title": "American Academy of Sleep Medicine. 2023. International Classification of Sleep Disorders (ICSD-3). Darien, IL: AASM.", "url": "https://aasm.org/resources/pdf/scoring/ICSD3.pdf", "accessedDate": "2026-05-14" }
+  ],
+
+  "images": []
+}
