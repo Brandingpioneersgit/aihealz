@@ -47,12 +47,35 @@ const CRUFT = [
 // (podiatric)"). Generating pages for these recreates the near-duplicate
 // problem WS1 exists to fix, so they are rejected.
 const NON_CONDITION_TERMS = [
+    // services / workup / specialty-angle re-files
     'management', 'counseling', 'counselling', 'consultation', 'consultations',
     'evaluation', 'screening', 'staging', 'scintigraphy', 'ablation',
     'primary care', 'nuclear imaging', 'nuclear medicine', 'histopathology',
     'cytology', 'pathology testing', 'pathology staging', 'ultrasound findings',
-    'imaging procedures', 'interventional radiology',
+    'imaging procedures', 'interventional radiology', 'programs', 'prevention',
+    'rehabilitation', 'interpretation', 'incidental', 'cessation',
+    // procedures / imaging / surgery — these are treatment or workup pages,
+    // not patient-facing conditions, and don't fit the condition schema
+    'surgery', 'surgical', 'transplant', 'reconstruction', 'repair',
+    'replacement', 'grafting', 'graft', 'biopsy', 'imaging', ' scan',
+    '-scan', 'mapping', 'stimulation', 'free flap', 'free-flap',
+    'bypass', 'angioplasty', 'lithotripsy', 'perfusion imaging',
 ];
+
+// Procedure slugs by suffix — Greek/Latin procedure endings the term list
+// can miss (rhinoplasty, carotid-endarterectomy, thoracotomy, etc.).
+const PROCEDURE_SLUG = /(plasty|ectomy|ostomy|otomy|centesis|pexy|desis|scopy)(-|$)/;
+
+// Workup / imaging / device slugs: the slug carries an investigation modality
+// or device rather than naming a condition (herniated-disc-mri,
+// renal-mass-ct-finding, colon-polyp-histology, coronary-artery-calcium-score).
+const WORKUP_SLUG = /(-histology|-cytology|-pap|-mri|-ct-|-ct$|-ultrasound|-radioiodine|-score|-device|-dialysis|-finding|-lesion|-analysis|-scan)(-|$)/;
+
+// A handful of standalone procedure slugs with no give-away affix.
+const PROCEDURE_EXACT = new Set([
+    'liposuction', 'scar-revision', 'tissue-expansion', 'rhinoplasty',
+    'blepharoplasty', 'abdominoplasty', 'microsurgery-free-flap',
+]);
 
 // Strip a trailing/parenthetical specialty qualifier — "Gout (Podiatric)",
 // "Osteoarthritis (Primary Care)", "Herniated Disc (MRI)" — so the base-name
@@ -114,9 +137,12 @@ async function main() {
         if (!r.has_desc) continue;
         if (isNonCondition(r.common_name)) continue;
         if (isPoorlyFormatted(r.common_name)) continue;
-        // Reject services / workup variants / specialty re-files.
+        // Reject services / workup variants / specialty re-files / procedures.
         const haystack = `${r.common_name} ${r.slug.replace(/-/g, ' ')}`.toLowerCase();
         if (NON_CONDITION_TERMS.some(t => haystack.includes(t))) continue;
+        if (PROCEDURE_SLUG.test(r.slug)) continue;
+        if (WORKUP_SLUG.test(r.slug)) continue;
+        if (PROCEDURE_EXACT.has(r.slug)) continue;
         const score = scoreCondition(r.common_name, r.slug, r.has_desc);
         if (score < 0) continue;
         // Base name with the parenthetical specialty qualifier stripped, so
