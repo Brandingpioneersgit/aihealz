@@ -1,74 +1,152 @@
-# Aihealz local — broken features triage
+# Plan of Action — Make the Programmatic Pages Genuinely Unique & Indexable
 
-Generated 2026-05-07 after first-pass audit. Investigation method: curl every top-level route, grep `process.env.*` to map feature → env var, read pages that exceeded 1MB.
+> Created 2026-05-14. Supersedes the 2026-05-07 triage doc (archived in git history).
+>
+> Goal: grow the set of **indexed, genuinely-distinct** condition × geography
+> pages from ~800 today toward tens of thousands, tier by tier. The long
+> tail stays `noindex,follow` + canonical-to-country — that is correct SEO,
+> not a failure.
 
-Verdict at a glance: **the app is not crashed, it is starved**. Almost every external dependency is unconfigured locally, and two of the biggest pages over-fetch the entire DB into the HTML response.
+## The constraint we are building around
 
----
+`computeLocalDataDensity()` (content-engine.ts) decides `isIndexable`:
 
-## P0 — why "conditions page won't load" (the actual report)
+```
+isIndexable =
+  country ∈ {in, us}                       // ROLLOUT_COUNTRY_CODES
+  AND hasPageContent                       // condition_page_content row exists
+  AND ( geoLevel == 'country'
+        OR hasCityCost                     // city-level treatment_costs row
+        OR hasLocalContent                 // non-fallback localized_content row
+        OR doctorCount >= 3 )              // ≥3 geo-matched verified doctors
+```
 
-- [ ] **Conditions page returns 10.9 MB of HTML.** `src/app/conditions/page.tsx:75` runs `prisma.medicalCondition.findMany({ where: { isActive: true } })` with no take/skip and passes the full `categories` array (every one of ~72K rows) as a prop to the `<ConditionsIndex>` client component at line 299. Next.js RSC serializes that prop into the HTML, so the browser downloads, parses and hydrates a 10 MB document — on Safari/mobile this often appears as a blank page or "site can't be reached". This is the user-visible "can't access content" symptom.
-  - Fix: keep server-side aggregation but ship only what the client renders — e.g., return per-specialty counts + a paginated/searchable API (`/api/conditions/search`), and load specialty pages on demand. Net payload target: <200 KB.
-- [ ] **Treatments page has the same disease.** `/treatments` is 10.2 MB for the same reason. Apply the same fix pattern.
-- [ ] **`/conditions/[specialty]` (e.g. `/conditions/cardiology`) ships 3.2 MB.** Subset of the same problem — still over-fetching for a single specialty page. Should be paginated + filtered server-side.
+## Current state (measured 2026-05-14)
 
-## P0 — missing env vars that 500 entire features
+| Signal | State | Implication |
+|---|---|---|
+| `condition_page_content` | 404 conditions (of 72,135) | **Master gate.** Only 404 conditions can ever be indexed. |
+| `treatment_costs` | **0 rows** | `/cost` route empty; `hasCityCost` never true. |
+| `localized_content` | **0 rows** | `hasLocalContent` never true. |
+| Doctors ≥3 per (city×specialty) | 266 cells; India in 3 cities, USA in 2 | `doctorCount>=3` rarely true. |
+| Rollout cities | India 63 defined / 3 with doctors, USA 2 | Universe is small. |
+| `docs/conditions-content/*.json` | 319 files | Existing content pipeline output. |
 
-Local `.env` only has `DATABASE_URL`. The app expects ~30 vars. Concrete consequences:
+**Indexable today:** ~404 conditions × {india,usa} country pages ≈ **800 pages**.
+Every sub-country page is currently `noindex` (no costs, no local content,
+<3 doctors).
 
-- [ ] **AI symptom analysis returns 500.** `/api/symptoms/analyze` throws "AI service is not configured" without `OPENROUTER_API_KEY` (or `AI_API_KEY`). Affects symptom checker, /healz-ai chat path, condition detail "ask AI" widgets.
-- [ ] **Stripe checkout returns 500.** `/api/create-checkout-session` throws "STRIPE_SECRET_KEY is not set". Doctor signups, premium plans, vault paid tier — all 500.
-- [ ] **Stripe webhooks fail signature verification.** Without `STRIPE_WEBHOOK_SECRET`, no subscription/payment events get processed even if checkout works.
-- [ ] **All transactional email is dead.** Without `RESEND_API_KEY`, every `sendEmail()` returns `{ success: false }` — doctor registration, lead notifications, password resets, booking confirmations, payment-failed emails.
-- [ ] **Diagnostics chat (`/api/diagnostics/chat`) silently empties.** Same AI key issue, returns 502 / empty body.
-- [ ] **Vault encounter pipeline + Drive bridge dead.** `GOOGLE_DRIVE_SERVICE_ACCOUNT` / `GOOGLE_SERVICE_ACCOUNT_JSON` missing → patient health vault uploads fail; encounter clinical extraction fails.
-- [ ] **Sarvam multilingual content** dead without `SARVAM_API_KEY` — the `/india`, `/usa/[locale]/...` localized pages can't generate translations.
-- [ ] **Admin dashboard auth runs on dev defaults.** Without `ADMIN_PASSWORD_HASH` / `ADMIN_API_KEY` / `SESSION_SECRET`, falls back to dev hash `123456` and a default email — login *works* but is unsafe and any code path using `ADMIN_API_KEY` header auth fails.
-- [ ] **Google rapid indexing + IndexNow** silently fail (degrade gracefully, but SEO ping is dead).
+## Strategy — 5 workstreams, WS1 gates the rest
 
-**Decision needed from user**: pull the keys from `.env.production` into local `.env` (everything is already in `.env.production` on the box we downloaded), or set up dummy/sandbox keys locally and only wire prod keys for AI?
-
-## P1 — routes that don't behave as expected
-
-- [ ] **`/chat` returns 404.** No `src/app/chat/` directory exists, but the marketing surface links to it (header/CTA). Either create the route (it should likely alias to `/healz-ai`) or fix the links.
-- [ ] **`/provider` returns 307.** Need to confirm destination — likely redirecting to `/for-doctors` or `/admin`. If intentional, fine; if it's a stale redirect it should be cleaned up. Verify.
-- [ ] **Deprecated `middleware` convention.** Next 16 warns: "middleware file convention is deprecated, use proxy". `src/middleware.ts` should be renamed/refactored to `src/proxy.ts` per Next.js 16 guidance. Non-blocking but will break on next major.
-- [ ] **`next.config.ts` is being edited at runtime** (server keeps restarting in logs). Either an editor save loop or a stale `.next` cache. Confirm and stop.
-
-## P1 — DB seed/migration drift
-
-- [ ] **Migrations 003/005/007/008/009/010 had partial errors** during local replay (duplicate keys, missing `prompt_lab_entries.id` default, FK to `geographies(15)` that doesn't exist). I worked around it by restoring the production `pg_dump` instead — so the local DB matches prod content right now, but the migration scripts in `db/migrations/` are not idempotent and shouldn't be re-run blindly. Either:
-  - Make migrations idempotent (`ON CONFLICT DO NOTHING`, `IF NOT EXISTS`, etc.), or
-  - Fold the prod schema into a single Prisma migration and treat `db/migrations/*.sql` as history-only.
-- [ ] **`prisma/dev.db`** (SQLite file) is in the tree but unused — `schema.prisma` is Postgres. Delete to avoid confusion.
-
-## P2 — performance and quality
-
-- [ ] **`tsconfig.tsbuildinfo` is 1.3 MB and committed.** Should be in `.gitignore`.
-- [ ] **`.env.production` is in the working tree and tracked by git.** Real secrets (Stripe live key, AI keys, Google service account) are sitting in a file that was downloaded to a laptop. Rotate them or at minimum verify `.gitignore` covers `.env*` before any push.
-- [ ] **`curl_test.html` (11 MB) + `curl_treatment.html` (1.2 MB) + `mass-gen.log` (6.8 MB)** were on the production server's `public_html` (already excluded from local copy) — these should be removed from the server too.
-- [ ] **No tests.** No `__tests__/`, no Jest/Vitest config. Adding even smoke tests for the AI / Stripe / vault routes would catch the env-var-missing 500s before deploy.
+```
+WS1 Condition page content ──┬─> WS2 Treatment costs ──┐
+   (the master gate)         ├─> WS3 Doctor coverage   ├─> WS5 Rollout + verify
+                             └─> WS4 Localized content ┘
+```
 
 ---
 
-## Recommended sequencing
+## WS1 — Condition page content (UNBLOCKS EVERYTHING)
 
-1. Decide env strategy (copy prod keys vs dummy locally) — unblocks ~80% of "broken features" reports immediately.
-2. Fix conditions + treatments over-fetch (real bug, will affect prod too — even with fast bandwidth, RSC payload is 10MB on every cold visit).
-3. Resolve `/chat` 404 and `/provider` redirect intent.
-4. Make migrations idempotent OR delete in favor of Prisma-managed schema.
-5. Rotate any prod secrets that lived in `.env.production` before the local copy.
+Without `condition_page_content`, a condition is `noindex` at every geo.
+Scale the existing `docs/conditions-content/` → `insert-condition-content.mjs`
+pipeline.
 
-## Open questions for the user
+- [ ] Decide the **target condition set**: NOT all 72k (most are raw ICD-10
+      variant codes that correctly canonical to a base). Target the
+      consumer-facing conditions — estimate 1,500–3,000. Produce the list
+      (short slug, no trailing ICD code, has description, not `isNonCondition`).
+- [ ] Audit `generate-next-batch.mjs` — confirm it can batch-generate the
+      target set; measure per-batch AI cost & time.
+- [ ] Generate content in batches of ~50 (existing batch convention).
+- [ ] Import via `insert-condition-content.mjs`; verify `condition_page_content`
+      row count climbs.
+- [ ] Quality gate: word count ≥ target, EEAT fields populated, schema valid.
 
-1. Do you want me to copy keys from `.env.production` into local `.env`? (Fastest path to "everything works locally", but copies live secrets onto your laptop.)
-2. Do you want the conditions/treatments fix to be a true backend pagination API, or a quick win where we just slice to first N per specialty server-side and ship a "load more"?
-3. Is `/chat` supposed to exist as its own route, or is the right fix to redirect to `/healz-ai`?
-4. After answers above — should I implement fixes in order, or do you want to pick which ones to ship?
+**Exit:** target conditions all have `condition_page_content` → country-level
+pages for them become indexable.
+
+## WS2 — Treatment costs (powers /cost route + hasCityCost)
+
+`treatment_costs` is completely empty — the entire `/cost` route (~7M URLs)
+renders with no data, and `hasCityCost` can never be true.
+
+- [ ] **Country-level first.** Build `scripts/generate-treatment-costs.ts`:
+      per (condition × treatment × rollout country), produce min/max/avg from
+      AI estimate or a reference table. Start with `in` + `us`.
+- [ ] **City fan-out.** For major cities, derive city costs = country cost ×
+      city cost-of-living multiplier (reuse the regional-multiplier concept
+      already in `advertise/pricing`). Writes `city_slug` rows.
+- [ ] Verify `/india/en/<cond>/cost` renders real numbers; spot-check 10.
+- [ ] Confirm `hasCityCost` flips `isIndexable` for covered city pages.
+
+**Exit:** rollout-country `/cost` pages populated; major-city condition pages
+gain the `hasCityCost` signal.
+
+## WS3 — Doctor coverage (powers doctorCount ≥ 3)
+
+Only 3 Indian + 2 US cities have any doctors. Need ≥3 verified doctors per
+(major city × specialty).
+
+- [ ] Pick the **major-city set**: top ~25 India + top ~15 US cities by
+      population (from `geographies`).
+- [ ] Fix `seed-doctors-all-regions.ts` (its condition-slug linking is dead —
+      already bypassed by the new `specialty` column; just needs to set
+      `specialty` directly + `geography_id` + `is_verified`).
+- [ ] Seed ≥3 doctors per (major city × ~30 specialties) → ~40 cities × 30 ×
+      3 ≈ 3,600 doctor rows. Run `derive-doctor-specialty.ts` after.
+- [ ] Verify coverage query: every (major city × specialty) cell ≥ 3.
+- [ ] **Decision needed:** synthetic doctors (fast, precedent exists) vs.
+      importing a real dataset. Recommendation: synthetic now, real later.
+
+**Exit:** major-city condition pages gain the `doctorCount>=3` signal; doctor
+sections populate site-wide.
+
+## WS4 — Localized content (richest uniqueness signal)
+
+`localized_content` per (condition × geography) — genuinely location-specific
+text: local prevalence, treatment availability, consultation tips, local
+factors. This is the strongest anti-duplicate signal and powers
+`hasLocalContent`.
+
+- [ ] Build `scripts/generate-localized-content.ts` — AI pipeline keyed on
+      (condition_id, language_code, geography_id), writes `title`,
+      `description`, `localized_advice`, `local_factors`, `consultation_tips`,
+      `meta_title`, `meta_description`, `status='ai_draft'`.
+- [ ] **Tier it** — do NOT attempt 7M. Scope: WS1 target conditions ×
+      major-city set (WS3) × `en` first. Estimate rows & AI cost before run.
+- [ ] Confirm `resolveLocalContent` returns these as non-fallback so
+      `hasLocalContent` flips true for covered pages.
+- [ ] Generate in batches; track `word_count` + `status`.
+
+**Exit:** major-city condition pages have real local copy → genuinely unique,
+not just templated; `hasLocalContent` true for covered pages.
+
+## WS5 — Rollout expansion + verification
+
+- [ ] Expand `ROLLOUT_COUNTRY_CODES` in content-engine.ts as data lands per
+      country (start `in` → add `us` → expand).
+- [ ] Regenerate sitemap (`scripts/generate-sitemaps.ts`) after each major
+      data load so newly-indexable URLs surface.
+- [ ] Add `scripts/coverage-report.ts`: % conditions with page content, %
+      (city×specialty) cells ≥3 doctors, % conditions with costs/local content,
+      count of `isIndexable` pages. Run before/after each workstream.
+- [ ] Submit sitemap to Search Console; monitor indexed count + impressions.
+- [ ] Deploy after each workstream; verify live with the uniqueness probe.
 
 ---
 
-## Review (will be filled in as work lands)
+## Decisions — LOCKED 2026-05-14
 
-_(empty — nothing implemented yet, this is a triage doc)_
+1. **Target condition count (WS1):** ~1,500 core consumer conditions.
+2. **AI budget:** estimate first on a 10-item sample, project the full run,
+   confirm before committing the batch run.
+3. **Doctors (WS3):** **real dataset only** — WS3 is BLOCKED until the user
+   provides a real doctor dataset to import. No synthetic seeding.
+4. **City tier size:** TBD when WS2/WS4 start (default ~25 India + ~15 US).
+5. **Execution order:** WS1 → (WS2 + WS3) parallel → WS4 → WS5.
+   - WS3 blocked on dataset; WS2 proceeds alone in the parallel slot until then.
+
+## Review
+
+_(to be filled in as workstreams complete)_
