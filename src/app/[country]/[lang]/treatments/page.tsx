@@ -127,33 +127,43 @@ export default async function LocalizedTreatmentsDirectory({
         }
     });
 
+    // Same payload cap as /treatments (the non-prefixed twin) — see that file
+    // for context. Without this, /[country]/[lang]/treatments ships ~10MB HTML.
+    const TREATMENTS_PER_SPECIALTY = 50;
+
     const categories = Object.keys(specialtyMap)
         .sort()
-        .map(specialty => ({
-            specialty,
-            treatments: Array.from(specialtyMap[specialty].values())
-                .map(t => ({
-                    name: t.name,
-                    type: t.type as TreatmentType,
-                    brandNames: t.brandNames,
-                    genericAvailable: t.genericAvailable,
-                    requiresPrescription: t.requiresPrescription,
-                    description: t.description,
-                    costs: t.costs as {
-                        usa: TreatmentCost;
-                        uk: TreatmentCost;
-                        india: TreatmentCost;
-                        thailand: TreatmentCost;
-                        mexico: TreatmentCost;
-                        turkey: TreatmentCost;
-                        uae: TreatmentCost;
-                    } | undefined,
-                }))
-                .sort((a, b) => a.name.localeCompare(b.name)),
-        }))
+        .map(specialty => {
+            const all = Array.from(specialtyMap[specialty].values()).sort((a, b) =>
+                a.name.localeCompare(b.name),
+            );
+            return {
+                specialty,
+                totalCount: all.length,
+                treatments: all
+                    .slice(0, TREATMENTS_PER_SPECIALTY)
+                    .map(t => ({
+                        name: t.name,
+                        type: t.type as TreatmentType,
+                        brandNames: t.brandNames,
+                        genericAvailable: t.genericAvailable,
+                        requiresPrescription: t.requiresPrescription,
+                        // description omitted — TreatmentCard never reads it.
+                        costs: t.costs as {
+                            usa: TreatmentCost;
+                            uk: TreatmentCost;
+                            india: TreatmentCost;
+                            thailand: TreatmentCost;
+                            mexico: TreatmentCost;
+                            turkey: TreatmentCost;
+                            uae: TreatmentCost;
+                        } | undefined,
+                    })),
+            };
+        })
         .filter(c => c.treatments.length > 0);
 
-    const totalTreatments = categories.reduce((sum, c) => sum + c.treatments.length, 0);
+    const totalTreatments = categories.reduce((sum, c) => sum + c.totalCount, 0);
 
     const TREATMENT_TYPES = [
         { type: 'prescription', abbr: 'RX', label: ui.prescriptionDrug },

@@ -22,7 +22,7 @@ export default async function InsurancePlansPage() {
     };
 
     type PlanGroup = { provider: typeof plans[0]['provider']; plans: typeof plans };
-    const groupedPlans = plans.reduce((acc, plan) => {
+    const groupedPlans: Record<string, PlanGroup> = plans.reduce((acc, plan) => {
         const key = plan.provider.name;
         if (!acc[key]) acc[key] = { provider: plan.provider, plans: [] };
         acc[key].plans.push(plan);

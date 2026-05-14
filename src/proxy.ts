@@ -104,7 +104,10 @@ const NON_GEO_ROUTES = [
     'pricing',
     'remedies',
     'conditions',    // /conditions/[specialty] is non-geo, individual conditions are at /{country}/{lang}/{slug}
-    'treatments',    // /treatments listing page
+    // NOTE: 'treatments' intentionally NOT listed — /[country]/[lang]/treatments
+    // and /[country]/[lang]/treatments/[treatment] are real geo-prefixed routes
+    // (see src/app/[country]/[lang]/treatments/). Redirecting them killed the
+    // entire programmatic-SEO surface for treatment cost pages.
     'tests',         // /tests listing page
     'hospitals',     // /hospitals listing page
 ];
