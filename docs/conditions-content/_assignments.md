@@ -23,7 +23,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | migraine | 1 | Neurology | (already exists, needs upgrade) | — | open | In seed-99; needs EEAT upgrade to v2 spec |
 | hypertension | 1 | Cardiology | (already exists, needs upgrade) | — | open | In seed-99 (slug=hypertension, name "High Blood Pressure"); needs EEAT upgrade |
 | back-pain | 1 | Orthopedics | (already exists, needs upgrade) | — | open | In seed-99; needs EEAT upgrade |
-| diabetes-type-2 | 1 | Endocrinology | claude-2026-05-12 | 2026-05-12 | drafting | Tier-1 head term (`diabetes` → canonical slug `diabetes-type-2`); type-1-diabetes is a separate page |
+| diabetes-type-2 | 1 | Endocrinology | claude-2026-05-15 | 2026-05-15 | drafting | Tier-1 head term (`diabetes` → canonical slug `diabetes-type-2`); type-1-diabetes is a separate page |
 | asthma | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | done | 6,222 words, 21 FAQs, 8 sources; row 479 |
 | eczema | 1 | Dermatology | claude-2026-05-12 | 2026-05-12 | done | 5,884 words, 21 FAQs, 8 sources; row 487 |
 | depression | 1 | Psychiatry | claude-2026-05-12 | 2026-05-12 | done | 5,629 words, 21 FAQs, 8 sources; row 480 |
@@ -194,7 +194,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | cervical-radiculopathy | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | cancer-pain-management | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | postherpetic-neuralgia | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| labral-tear-shoulder | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |
+| labral-tear-shoulder | 1 | Sports Medicine | claude-2026-05-15 | 2026-05-15 | drafting | Batch 003, 1 variant |
 | bunion-hallux-valgus | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | flat-feet-pes-planus | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | tarsal-tunnel-syndrome | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
@@ -203,11 +203,11 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | achilles-tendon-rupture | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | exercise-induced-asthma | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |
 | occupational-dermatitis | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| chronic-kidney-disease-stage-1 | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| chronic-kidney-disease-stage-2 | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| chronic-kidney-disease-stage-3 | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| chronic-kidney-disease-stage-4 | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
-| chronic-kidney-disease-stage-5-esrd | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
+| chronic-kidney-disease-stage-1 | 2 | Nephrology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 003, 1 variant |
+| chronic-kidney-disease-stage-2 | 2 | Nephrology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 003, 1 variant |
+| chronic-kidney-disease-stage-3 | 2 | Nephrology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 003, 1 variant |
+| chronic-kidney-disease-stage-4 | 2 | Nephrology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 003, 1 variant |
+| chronic-kidney-disease-stage-5-esrd | 2 | Nephrology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 003, 1 variant |
 | end-of-life-symptom-management | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | type-2-diabetes-primary-care | 2 | Family Medicine | (open) | — | open | Batch 003, 1 variant |
 | urinary-tract-infection-primary-care | 2 | Family Medicine | (open) | — | open | Batch 003, 1 variant |
@@ -221,12 +221,12 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | acoustic-neuroma | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | adhd | 1 | Psychiatrist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | presbycusis | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| age-related-macular-degeneration | 3 | Geriatrics | (open) | — | open | Batch 004, 1 variant |
+| age-related-macular-degeneration | 3 | Geriatrics | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | allergic-rhinitis-hay-fever | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | amputation-rehabilitation | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | anxiety-disorder-primary-care | 3 | Family Medicine | (open) | — | open | Batch 004, 1 variant |
 | aortic-aneurysm-repair | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
-| aortic-calcification | 3 | Radiology | (open) | — | open | Batch 004, 1 variant |
+| aortic-calcification | 3 | Radiology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | av-fistula-creation-dialysis | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
 | arteriovenous-malformation | 1 | Neurosurgery | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | atopic-dermatitis-eczema | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
@@ -245,19 +245,19 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | carpal-tunnel-syndrome-rehab | 3 | Physical Medicine & Rehabilitation | (open) | — | open | Batch 004, 1 variant |
 | carpal-tunnel-syndrome-occupational | 3 | Occupational Medicine | (open) | — | open | Batch 004, 1 variant |
 | cataracts | 1 | Ophthalmology | claude-2026-05-14 | 2026-05-14 | done | 5,487 words, 21 FAQs (all schemaEligible), 8 sources; row 589 |
-| cervical-dysplasia-pap | 3 | Pathology | (open) | — | open | Batch 004, 1 variant |
+| cervical-dysplasia-pap | 3 | Pathology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | chemical-burns-occupational | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | childhood-immunization-schedules | 3 | Family Medicine | (open) | — | open | Batch 004, 1 variant |
 | chronic-disease-management | 3 | Family Medicine | (open) | — | open | Batch 004, 1 variant |
 | chronic-fatigue-syndrome | 1 | Internal Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,054 words, 21 FAQs (all schemaEligible), 8 sources; row 588 |
 | chronic-migraine-pain-management | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| cleft-lip-and-palate | 3 | Maxillofacial & Oral Surgery | (open) | — | open | Batch 004, 1 variant |
+| cleft-lip-and-palate | 3 | Maxillofacial & Oral Surgery | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | coal-workers-pneumoconiosis | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | colon-polyp-histology | 3 | Pathology | (open) | — | open | Batch 004, 1 variant |
 | colorectal-cancer | 1 | Oncologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | communicable-disease-control | 3 | Preventive & Public Health | (open) | — | open | Batch 004, 1 variant |
 | complex-regional-pain-syndrome | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| copd | 3 | Pulmonologist | (open) | — | open | Batch 004, 1 variant |
+| copd | 3 | Pulmonologist | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | coronary-artery-bypass-grafting | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
 | coronary-artery-calcium-score | 3 | Radiology | (open) | — | open | Batch 004, 1 variant |
 | coronary-artery-disease | 1 | Cardiologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
@@ -272,7 +272,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | endovascular-aneurysm-repair | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
 | bph | 3 | Urologist | (open) | — | open | Batch 004, 1 variant |
 | epidemiological-surveillance | 3 | Preventive & Public Health | (open) | — | open | Batch 004, 1 variant |
-| epilepsy | 3 | Neurologist | (open) | — | open | Batch 004, 1 variant |
+| epilepsy | 3 | Neurologist | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | epistaxis-recurrent | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | facial-trauma-reconstruction | 3 | Maxillofacial & Oral Surgery | (open) | — | open | Batch 004, 1 variant |
 | failed-back-surgery-syndrome | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
@@ -292,7 +292,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | hashimotos-disease | 1 | Endocrinologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | heart-transplant | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
 | heart-valve-replacement | 3 | Cardiothoracic & Vascular Surgery | (open) | — | open | Batch 004, 1 variant |
-| exertional-heat-stroke | 3 | Sports Medicine | (open) | — | open | Batch 004, 1 variant |
+| exertional-heat-stroke | 3 | Sports Medicine | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | hemolytic-uremic-syndrome | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | hepatitis-b | 1 | Hepatology | claude-2026-05-14 | 2026-05-14 | done | 5,326 words, 21 FAQs (all schemaEligible), 8 sources; row 583 |
 | hepatitis-c | 1 | Hepatology | claude-2026-05-14 | 2026-05-14 | done | 5,157 words, 21 FAQs (all schemaEligible), 8 sources; row 585 |
@@ -304,15 +304,15 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | hypertensive-nephrosclerosis | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | impacted-wisdom-teeth | 1 | Maxillofacial & Oral Surgery | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | interventional-radiology | 3 | Radiology | (open) | — | open | Batch 004, 1 variant |
-| ibs | 3 | Gastroenterologist | (open) | — | open | Batch 004, 1 variant |
-| jaw-fracture-mandibular | 3 | Maxillofacial & Oral Surgery | (open) | — | open | Batch 004, 1 variant |
+| ibs | 3 | Gastroenterologist | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
+| jaw-fracture-mandibular | 3 | Maxillofacial & Oral Surgery | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | keloid-treatment | 1 | Plastic & Reconstructive Surgery | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | kidney-biopsy-glomerulonephritis | 3 | Pathology | (open) | — | open | Batch 004, 1 variant |
 | kidney-stones | 3 | Urologist | (open) | — | open | Batch 004, 1 variant |
 | nephrolithiasis | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | laryngopharyngeal-reflux | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | lead-poisoning-occupational | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| leprosy-hansen-disease | 3 | Tropical Medicine | (open) | — | open | Batch 004, 1 variant |
+| leprosy-hansen-disease | 3 | Tropical Medicine | claude-2026-05-15 | 2026-05-15 | drafting | Batch 004, 1 variant |
 | leukemia | 1 | Oncologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | liposuction | 3 | Plastic & Reconstructive Surgery | (open) | — | open | Batch 004, 1 variant |
 | liver-biopsy-interpretation | 3 | Pathology | (open) | — | open | Batch 004, 1 variant |
@@ -320,7 +320,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 
 
 <!-- BATCH 005 — 100 conditions, generated 2026-05-12 -->
-| liver-hemangioma | 3 | Radiology | (open) | — | open | Batch 005, 1 variant |
+| liver-hemangioma | 3 | Radiology | claude-2026-05-15 | 2026-05-15 | drafting | Batch 005, 1 variant |
 | ludwig-angina | 1 | Maxillofacial & Oral Surgery | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | lung-cancer | 1 | Oncologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | lung-nodule-incidental | 3 | Radiology | (open) | — | open | Batch 005, 1 variant |
@@ -357,7 +357,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | osteoporosis | 1 | Endocrinologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | ovarian-cyst-ultrasound | 3 | Radiology | (open) | — | open | Batch 005, 1 variant |
 | hyperthyroidism | 1 | Endocrinologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| pcos | 3 | Endocrinologist | (open) | — | open | Batch 005, 1 variant |
+| pcos | 3 | Endocrinologist | claude-2026-05-15 | 2026-05-15 | drafting | Batch 005, 1 variant |
 | pelvic-inflammatory-disease | 1 | Gynecologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | peptic-ulcer | 1 | Gastroenterologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | peripheral-artery-disease-surgical | 1 | Cardiothoracic & Vascular Surgery | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
@@ -378,7 +378,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | renal-mass-ct-finding | 3 | Radiology | (open) | — | open | Batch 005, 1 variant |
 | rhinoplasty | 3 | Plastic & Reconstructive Surgery | (open) | — | open | Batch 005, 1 variant |
 | rotator-cuff-tendinopathy | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| runners-knee | 3 | Sports Medicine | (open) | — | open | Batch 005, 1 variant |
+| runners-knee | 3 | Sports Medicine | claude-2026-05-15 | 2026-05-15 | drafting | Batch 005, 1 variant |
 | salivary-gland-tumor | 1 | Maxillofacial & Oral Surgery | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | scar-revision | 3 | Plastic & Reconstructive Surgery | (open) | — | open | Batch 005, 1 variant |
 | sciatica | 1 | Orthopedic Surgeon | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
@@ -409,8 +409,8 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | african-trypanosomiasis | 3 | Tropical Medicine | (open) | — | open | Batch 005, 1 variant |
 | type-1-diabetes | 1 | Endocrinologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | diabetes-type-2 | 3 | Endocrinologist | (open) | — | open | Batch 005, 1 variant |
-| hypothyroidism | 3 | Endocrinologist | (open) | — | open | Batch 005, 1 variant |
-| upper-respiratory-infection | 3 | Family Medicine | (open) | — | open | Batch 005, 1 variant |
+| hypothyroidism | 3 | Endocrinologist | claude-2026-05-15 | 2026-05-15 | drafting | Batch 005, 1 variant |
+| upper-respiratory-infection | 3 | Family Medicine | claude-2026-05-15 | 2026-05-15 | drafting | Batch 005, 1 variant |
 | urinary-incontinence-elderly | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | fibroids | 1 | Gynecologist | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | vaccination-programs | 3 | Preventive & Public Health | (open) | — | open | Batch 005, 1 variant |
