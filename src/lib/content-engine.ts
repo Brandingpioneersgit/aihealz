@@ -460,7 +460,10 @@ export async function stitchPageData(
         costCitySlug: costRaw?.citySlug ?? null,
         hasAnyCost: !!costRaw,
         hasLocalContent: !!localContent && !localContentIsFallback,
-        hasPageContent: !!pageContent,
+        // Indexation requires PUBLISHED page content. Draft content still
+        // renders (resolvePageContent returns any status) so reviewers can
+        // preview it, but a draft must not flip the page to index.
+        hasPageContent: pageContent?.status === 'published',
     });
 
     const result: PageData = {

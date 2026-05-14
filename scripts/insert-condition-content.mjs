@@ -21,7 +21,20 @@ import path from 'node:path';
 
 const slug = process.argv[2];
 if (!slug) {
-  console.error('Usage: node scripts/insert-condition-content.mjs <condition-slug>');
+  console.error('Usage: node scripts/insert-condition-content.mjs <condition-slug> [--status=ai_draft|published]');
+  process.exit(1);
+}
+
+// Content status. Default `published` keeps legacy single-page usage working;
+// bulk WS1 generation passes --status=draft so pages stay noindex until a
+// human reviewer promotes them to `published`. Valid values are the
+// ConditionPageStatus enum: draft | review | published | archived.
+const statusArg = (process.argv.find(a => a.startsWith('--status=')) || '').split('=')[1];
+// Back-compat: callers may pass the LocalizedContent-style "ai_draft" — map it.
+const STATUS_ALIASES = { ai_draft: 'draft', needs_review: 'review' };
+const CONTENT_STATUS = STATUS_ALIASES[statusArg] || statusArg || 'published';
+if (!['draft', 'review', 'published', 'archived'].includes(CONTENT_STATUS)) {
+  console.error(`Invalid --status: ${statusArg} (valid: draft | review | published | archived)`);
   process.exit(1);
 }
 
@@ -273,7 +286,7 @@ const dataPayload = {
   sources: content.sources,
   schemaMedicalCondition,
   schemaFaqPage,
-  status: 'published',
+  status: CONTENT_STATUS,
   qualityScore: 0.95,
   wordCount,
   generationVersion: 'v2-hand-written-eeat',
