@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 import FAQAccordion from './FAQAccordion';
+import MediaTile from '@/components/v4/MediaTile';
 import { UTIL_IMAGES } from '@/lib/stock-images';
 
 export const revalidate = 604800;
@@ -126,32 +126,17 @@ export default function FAQPage() {
                 The things people ask us most often, grouped by what you came here for.
               </p>
             </div>
-            <div
-              style={{
-                position: 'relative',
-                flex: '1 1 320px',
-                minWidth: 0,
-                aspectRatio: '4 / 3',
-                overflow: 'hidden',
-                borderRadius: 'var(--r-3, 8px)',
-                border: '1px solid var(--rule)',
-              }}
-            >
-              <Image
-                src={UTIL_IMAGES.library.src}
+            <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+              <MediaTile
                 alt={UTIL_IMAGES.library.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 420px"
+                icon={UTIL_IMAGES.library.icon}
+                tone={UTIL_IMAGES.library.tone}
+                aspect="4 / 3"
+                iconSize={64}
                 priority
-                style={{ objectFit: 'cover' }}
-              />
-              <div
-                aria-hidden="true"
                 style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background:
-                    'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
+                  borderRadius: 'var(--r-3, 8px)',
+                  border: '1px solid var(--rule)',
                 }}
               />
             </div>

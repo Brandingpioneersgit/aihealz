@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Image from 'next/image';
 import type { StockImage } from '@/lib/stock-images';
+import MediaTile from './MediaTile';
 
 type EditorialFigureProps = {
     image: StockImage;
@@ -15,9 +15,10 @@ type EditorialFigureProps = {
 };
 
 /**
- * A captioned image with Bureau borders and a small italic caption.
- * Use inline within long-form sections (About, Blog, Careers) to give
- * the page rhythm and human texture.
+ * A captioned editorial tile rendered inline within long-form
+ * sections (About, Blog, Careers). The visual is a semantic Lucide
+ * icon tile so each figure remains on-topic without leaning on stock
+ * photography.
  */
 export default function EditorialFigure({
     image,
@@ -31,26 +32,18 @@ export default function EditorialFigure({
             className="col gap-2"
             style={{ margin: '24px 0' }}
         >
-            <div
+            <MediaTile
+                alt={image.alt}
+                icon={image.icon}
+                tone={image.tone}
+                aspect={aspect}
+                iconSize={56}
+                priority={priority}
                 style={{
-                    position: 'relative',
-                    width: '100%',
-                    aspectRatio: aspect,
-                    overflow: 'hidden',
                     borderRadius: 'var(--r-3, 8px)',
                     border: '1px solid var(--rule)',
-                    background: 'var(--bg-2)',
                 }}
-            >
-                <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 760px"
-                    priority={priority}
-                    style={{ objectFit: 'cover' }}
-                />
-            </div>
+            />
             {(caption || eyebrow) && (
                 <figcaption
                     className="col gap-1"

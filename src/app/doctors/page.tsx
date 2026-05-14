@@ -1,12 +1,12 @@
 import prisma from '@/lib/db';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { AvatarWithFallback } from '@/components/ui/image-with-fallback';
 import { getGeoContext } from '@/lib/geo-context';
 import { AIDiagnosisCTA, BookTestCTA, MedicalTravelCTA } from '@/components/ui/cta-sections';
-import { HERO_IMAGES } from '@/lib/stock-images';
+import MediaTile from '@/components/v4/MediaTile';
+import { HOSPITAL_IMAGES } from '@/lib/stock-images';
 import {
     generateItemListSchema,
     generateOrganizationSchema,
@@ -241,22 +241,13 @@ export default async function DoctorsDirectory() {
                         border: '1px solid var(--rule)',
                     }}
                 >
-                    <Image
-                        src={HERO_IMAGES.team.src}
-                        alt={HERO_IMAGES.team.alt}
-                        fill
-                        sizes="(max-width: 1280px) 100vw, 1280px"
+                    <MediaTile
+                        alt={HOSPITAL_IMAGES.consultation.alt}
+                        icon={HOSPITAL_IMAGES.consultation.icon}
+                        tone="cobalt"
+                        aspect="32 / 9"
+                        iconSize={88}
                         priority
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <div
-                        aria-hidden="true"
-                        style={{
-                            position: 'absolute',
-                            inset: 0,
-                            background:
-                                'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
-                        }}
                     />
                     <span
                         className="mono"
@@ -264,7 +255,7 @@ export default async function DoctorsDirectory() {
                             position: 'absolute',
                             left: 'clamp(16px, 3vw, 28px)',
                             bottom: 18,
-                            color: 'rgba(255,255,255,0.9)',
+                            color: 'var(--ink-3)',
                             fontSize: 11,
                             textTransform: 'uppercase',
                             letterSpacing: '0.12em',

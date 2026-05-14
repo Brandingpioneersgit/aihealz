@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import MediaTile from '@/components/v4/MediaTile';
 import { HERO_IMAGES } from '@/lib/stock-images';
 
 const SPECIALTIES = [
@@ -147,22 +147,13 @@ export default function ForDoctorsPage() {
                         border: '1px solid var(--rule)',
                     }}
                 >
-                    <Image
-                        src={HERO_IMAGES.tools.src}
+                    <MediaTile
                         alt={HERO_IMAGES.tools.alt}
-                        fill
-                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        icon={HERO_IMAGES.tools.icon}
+                        tone="cobalt"
+                        aspect="32 / 9"
+                        iconSize={88}
                         priority
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <div
-                        aria-hidden="true"
-                        style={{
-                            position: 'absolute',
-                            inset: 0,
-                            background:
-                                'linear-gradient(180deg, rgba(10,26,47,0.05) 0%, rgba(10,26,47,0.35) 100%), linear-gradient(90deg, rgba(28,91,255,0.10) 0%, rgba(28,91,255,0) 50%)',
-                        }}
                     />
                     <div
                         className="mono"
@@ -170,7 +161,7 @@ export default function ForDoctorsPage() {
                             position: 'absolute',
                             left: 24,
                             bottom: 20,
-                            color: 'rgba(255,255,255,0.95)',
+                            color: 'var(--ink-3)',
                             fontSize: 11,
                             textTransform: 'uppercase',
                             letterSpacing: '0.12em',

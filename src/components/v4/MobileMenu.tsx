@@ -63,9 +63,9 @@ const GROUPS: MenuGroup[] = [
         title: 'For doctors',
         links: [
             { label: 'For Doctors hub', href: '/for-doctors' },
+            { label: 'Provider sign-in', href: '/provider/login' },
             { label: 'Clinical scores', href: '/for-doctors/clinical-scores' },
             { label: 'Drug dosing', href: '/for-doctors/drug-dosing' },
-            { label: 'Surgical checklist', href: '/for-doctors/surgical-checklist' },
             { label: 'Clinical reference', href: '/clinical-reference' },
             { label: 'Get the ethical badge — mdrpedia', href: 'https://mdrpedia.com', external: true },
         ],
@@ -84,7 +84,7 @@ const GROUPS: MenuGroup[] = [
 ];
 
 const PRIMARY_CTAS: MenuLink[] = [
-    { label: 'Sign in', href: '/provider/login' },
+    { label: 'Sign in', href: '/login' },
     { label: 'Analyze a report →', href: '/analyze' },
     { label: 'SOS — emergency', href: '/tools/emergency' },
 ];

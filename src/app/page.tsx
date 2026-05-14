@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { promises as fs } from 'fs';
+import path from 'path';
 import prisma from '@/lib/db';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -11,6 +13,51 @@ import { getGeoContext } from '@/lib/geo-context';
 import { HERO_IMAGES } from '@/lib/stock-images';
 
 export const revalidate = 86400;
+
+type BoardMember = { name?: string; specialty?: string; initials?: string };
+
+/** Real editorial-board stats — keeps the homepage honest and in sync
+ *  with /editorial-board (same public/data/editorial-board.json source). */
+async function loadBoardStats(): Promise<{
+    count: number;
+    specialties: number;
+    initials: string[];
+}> {
+    try {
+        const file = await fs.readFile(
+            path.join(process.cwd(), 'public/data/editorial-board.json'),
+            'utf-8',
+        );
+        const parsed = JSON.parse(file);
+        const members: BoardMember[] = Array.isArray(parsed)
+            ? parsed
+            : Array.isArray(parsed?.members)
+              ? parsed.members
+              : [];
+        const specialties = new Set(
+            members.map((m) => m.specialty).filter(Boolean) as string[],
+        );
+        const initials = members
+            .map(
+                (m) =>
+                    m.initials ||
+                    (m.name
+                        ? m.name
+                              .replace(/^Dr\.\s*/, '')
+                              .split(/\s+/)
+                              .map((p) => p[0])
+                              .join('')
+                              .slice(0, 2)
+                              .toUpperCase()
+                        : ''),
+            )
+            .filter(Boolean)
+            .slice(0, 4);
+        return { count: members.length, specialties: specialties.size, initials };
+    } catch {
+        return { count: 0, specialties: 0, initials: [] };
+    }
+}
 
 export const metadata: Metadata = {
   title: 'aihealz — the medical directory that reads back',
@@ -96,6 +143,7 @@ function formatCount(n: number): string {
 
 export default async function Home() {
   const geo = await getGeoContext();
+  const board = await loadBoardStats();
   const countryName = geo.countrySlug
     ? COUNTRY_NAMES[geo.countrySlug] || geo.countrySlug
     : null;
@@ -353,7 +401,7 @@ export default async function Home() {
                       letterSpacing: '0.10em',
                     }}
                   >
-                    ● case 04,217
+                    ● sample case
                   </span>
                   <span
                     className="pill"
@@ -363,7 +411,7 @@ export default async function Home() {
                       borderColor: 'rgba(255,255,255,.15)',
                     }}
                   >
-                    routine
+                    illustrative
                   </span>
                 </div>
                 <div
@@ -407,7 +455,7 @@ export default async function Home() {
                   }}
                 >
                   <span className="mono" style={{ fontSize: 11, color: 'rgba(255,255,255,.5)' }}>
-                    analyzed in 38s
+                    example of how it reads
                   </span>
                   <Link
                     href="/conditions/hypothyroidism"
@@ -420,7 +468,7 @@ export default async function Home() {
                       fontWeight: 500,
                     }}
                   >
-                    Read dossier →
+                    See the page →
                   </Link>
                 </div>
               </div>
@@ -439,10 +487,10 @@ export default async function Home() {
                       letterSpacing: '0.08em',
                     }}
                   >
-                    now reading
+                    popular reads
                   </span>
                   <span className="mono" style={{ fontSize: 11, color: 'var(--mint-3)' }}>
-                    ● weekly editorial
+                    ● condition guides
                   </span>
                 </div>
                 <div className="col gap-2" style={{ padding: '14px 18px' }}>
@@ -465,6 +513,84 @@ export default async function Home() {
               </div>
             </Reveal>
           </div>
+        </section>
+
+        {/* ── CREDIBILITY STRIP ─────────────────────────── */}
+        {/* Real, verifiable claims only — no testimonials or press logos
+            are invented here. Each cell restates something the site can
+            stand behind: a live count, or an editorial/verification practice. */}
+        <section style={{ padding: '8px clamp(16px, 4vw, 28px) 0', maxWidth: 1280, margin: '0 auto' }}>
+          <Reveal
+            style={{
+              border: '1px solid var(--rule)',
+              borderRadius: 'var(--r-3, 8px)',
+              background: 'var(--paper)',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
+            }}
+          >
+            {[
+              {
+                k: 'physician-reviewed',
+                v: 'Every page',
+                d: 'Condition pages are reviewed by a board-certified physician in that specialty before they go live.',
+              },
+              {
+                k: 'registry-verified',
+                v: `${doctorsLabel}+ doctors`,
+                d: 'Every listed doctor is checked against a national medical registry — no pay-to-list profiles.',
+              },
+              {
+                k: 'sourced & updated',
+                v: 'Cited, yearly',
+                d: 'We cite our sources, review content annually, and never push miracle cures.',
+              },
+              {
+                k: 'cost, mapped',
+                v: '7 countries',
+                d: 'Procedure costs compared across seven countries so you can see the real spread.',
+              },
+            ].map((c, i, arr) => (
+              <div
+                key={c.k}
+                className="col gap-2"
+                style={{
+                  padding: '20px 22px',
+                  borderRight:
+                    i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                }}
+              >
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 10.5,
+                    color: 'var(--cobalt)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.10em',
+                    fontWeight: 500,
+                  }}
+                >
+                  ● {c.k}
+                </span>
+                <span
+                  className="display"
+                  style={{
+                    fontSize: 22,
+                    fontWeight: 600,
+                    letterSpacing: '-0.025em',
+                    color: 'var(--ink)',
+                  }}
+                >
+                  {c.v}
+                </span>
+                <span
+                  style={{ fontSize: 12.5, color: 'var(--ink-2)', lineHeight: 1.5 }}
+                >
+                  {c.d}
+                </span>
+              </div>
+            ))}
+          </Reveal>
         </section>
 
         {/* ── AI TOOLS HUB ──────────────────────────────── */}
@@ -971,36 +1097,26 @@ export default async function Home() {
           </Reveal>
         </section>
 
-        {/* ── EDITORIAL IMAGERY STRIP ────────────────────── */}
+        {/* ── EDITORIAL DISPATCH STRIP ───────────────────── */}
         <section style={{ padding: 'clamp(48px, 7vw, 72px) clamp(16px, 4vw, 28px) 0' }}>
           <Reveal style={{ maxWidth: 1280, margin: '0 auto' }}>
             <figure
+              className="row ai-center gap-6"
               style={{
-                position: 'relative',
-                width: '100%',
-                aspectRatio: '24 / 9',
-                maxHeight: 420,
-                overflow: 'hidden',
-                borderRadius: 'var(--r-3, 8px)',
-                border: '1px solid var(--rule)',
                 margin: 0,
+                flexWrap: 'wrap',
+                border: '1px solid var(--rule)',
+                borderRadius: 'var(--r-3, 8px)',
+                background: 'var(--paper)',
+                overflow: 'hidden',
               }}
             >
-              <MediaTile
-                alt={HERO_IMAGES.consult.alt}
-                icon={HERO_IMAGES.consult.icon}
-                tone="cobalt"
-                aspect="24 / 9"
-                iconSize={96}
-              />
               <figcaption
                 className="col gap-2"
                 style={{
-                  position: 'absolute',
-                  left: 'clamp(20px, 4vw, 36px)',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  maxWidth: 480,
+                  flex: '1 1 420px',
+                  minWidth: 0,
+                  padding: 'clamp(24px, 4vw, 40px)',
                   color: 'var(--ink)',
                 }}
               >
@@ -1026,8 +1142,7 @@ export default async function Home() {
                     lineHeight: 1.1,
                   }}
                 >
-                  Verified physicians.
-                  <br />
+                  Verified physicians.{' '}
                   <span style={{ color: 'var(--cobalt)' }}>Real consultations.</span>
                 </h3>
                 <p
@@ -1036,12 +1151,22 @@ export default async function Home() {
                     color: 'var(--ink-2)',
                     margin: 0,
                     lineHeight: 1.55,
-                    maxWidth: 380,
+                    maxWidth: 420,
                   }}
                 >
                   Every doctor on aihealz is checked against a national medical registry before they appear in your results.
                 </p>
               </figcaption>
+              <div style={{ flex: '0 1 360px', minWidth: 0, alignSelf: 'stretch' }}>
+                <MediaTile
+                  alt={HERO_IMAGES.consult.alt}
+                  icon={HERO_IMAGES.consult.icon}
+                  tone="cobalt"
+                  aspect="16 / 10"
+                  iconSize={72}
+                  style={{ height: '100%' }}
+                />
+              </div>
             </figure>
           </Reveal>
         </section>
@@ -1071,29 +1196,39 @@ export default async function Home() {
                 Every condition page reviewed by a board-certified physician in that specialty before it goes live. We cite sources. We update yearly. We don&rsquo;t push miracle cures.
               </p>
               <div className="row gap-3 ai-center" style={{ flexWrap: 'wrap' }}>
-                <div className="row" aria-hidden="true">
-                  {['MP', 'AR', 'JO', 'KE'].map((n, i) => (
-                    <div
-                      key={n}
-                      className="placeholder"
-                      style={{
-                        width: 48,
-                        height: 48,
-                        borderRadius: 99,
-                        fontSize: 11,
-                        marginLeft: i ? -12 : 0,
-                        background: 'var(--paper)',
-                        color: 'var(--ink-3)',
-                        borderColor: 'var(--rule)',
-                      }}
-                    >
-                      {n}
-                    </div>
-                  ))}
-                </div>
+                {board.initials.length > 0 && (
+                  <div className="row" aria-hidden="true">
+                    {board.initials.map((n, i) => (
+                      <div
+                        key={n + i}
+                        className="placeholder"
+                        style={{
+                          width: 48,
+                          height: 48,
+                          borderRadius: 99,
+                          fontSize: 11,
+                          marginLeft: i ? -12 : 0,
+                          background: 'var(--paper)',
+                          color: 'var(--ink-3)',
+                          borderColor: 'var(--rule)',
+                        }}
+                      >
+                        {n}
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <div className="col">
-                  <div className="num" style={{ fontSize: 16, fontWeight: 500 }}>47 reviewers</div>
-                  <div className="muted" style={{ fontSize: 12 }}>19 specialties · 6 continents</div>
+                  <div className="num" style={{ fontSize: 16, fontWeight: 500 }}>
+                    {board.count > 0
+                      ? `${board.count} ${board.count === 1 ? 'reviewer' : 'reviewers'}`
+                      : 'Board-certified reviewers'}
+                  </div>
+                  <div className="muted" style={{ fontSize: 12 }}>
+                    {board.specialties > 0
+                      ? `${board.specialties} ${board.specialties === 1 ? 'specialty' : 'specialties'} · growing`
+                      : 'Across core specialties'}
+                  </div>
                 </div>
                 <Link
                   href="/editorial-board"

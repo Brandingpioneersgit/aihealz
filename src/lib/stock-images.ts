@@ -1,157 +1,164 @@
 /**
- * Curated stock image registry. Files live in /public/images/stock/
- * served with `Cache-Control: public, max-age=31536000, immutable`
- * (configured in next.config.ts).
+ * Editorial media registry. Each entry describes the *meaning* of a
+ * slot (e.g. "the hero on the home page") and pairs it with a Lucide
+ * icon. The icon is rendered by <MediaTile> inside an editorial,
+ * Bureau-styled tile — never as a raw stock photo.
  *
- * Image descriptions below reflect what each file *actually depicts*
- * after a visual audit — file names are historical and may not match
- * the content (e.g. `hero-consult.jpg` is a surgery scene). Always
- * trust the `alt` text, not the filename.
+ * Why icons instead of photos:
+ *  - Generic stock photography reads as inauthentic and hard to keep
+ *    relevant per condition / specialty.
+ *  - Wikimedia hotlinks at scale are fragile (URLs change, no CDN).
+ *  - The Bureau system already favours typography + hairlines over
+ *    photographic decoration.
+ *
+ * Real photos still live for:
+ *  - Per-condition imagery pulled from the DB (`data.images`) on
+ *    condition detail pages.
+ *  - Doctor profile photos (`profileImage`) on doctor cards.
+ *  - Hospital photos populated by Google Places admin.
+ *
+ * If a section truly needs a photo, prefer adding it to the DB row
+ * for that entity rather than back to this registry.
  */
+import {
+    Activity,
+    BookOpen,
+    Briefcase,
+    Building2,
+    ClipboardList,
+    Compass,
+    Droplet,
+    FileText,
+    FlaskConical,
+    Heart,
+    HelpCircle,
+    Hospital,
+    LayoutGrid,
+    Microscope,
+    Newspaper,
+    Pill,
+    Scissors,
+    Search,
+    Shield,
+    Sparkles,
+    Stethoscope,
+    TestTube,
+    UserRound,
+    Users,
+    Wallet,
+    type LucideIcon,
+} from 'lucide-react';
+import {
+    getSpecialtyLucideIcon,
+    TREATMENT_LUCIDE_ICON,
+} from './specialty-icons';
 
+export type MediaTone = 'cobalt' | 'fog' | 'paper';
+
+/**
+ * Media slot describing an editorial tile. Compatible with the legacy
+ * StockImage shape so existing consumers keep compiling — `src` is
+ * always empty (we no longer hotlink stock photos), `width`/`height`
+ * are kept for prop-shape compatibility but unused.
+ */
 export type StockImage = {
+    /** Always empty in the new icon-led system. Kept for legacy props. */
     src: string;
     alt: string;
-    /** Width:height intrinsic ratio used by next/image for layout */
     width: number;
     height: number;
+    /** Lucide icon used by MediaTile to render this slot. */
+    icon: LucideIcon;
+    /** Background tint used by the tile. */
+    tone: MediaTone;
 };
 
-const make = (file: string, alt: string, width = 1600, height = 1067): StockImage => ({
-    src: `/images/stock/${file}`,
-    alt,
-    width,
-    height,
-});
+const slot = (
+    icon: LucideIcon,
+    alt: string,
+    tone: MediaTone = 'cobalt',
+    width = 1600,
+    height = 1067,
+): StockImage => ({ src: '', alt, width, height, icon, tone });
 
 /* ─── HERO / WIDE EDITORIAL ───────────────────────── */
 export const HERO_IMAGES = {
-    /** Two clinicians reviewing a scan together — best "consultation" image. */
-    consult: make('spec-warm.jpg', 'Two clinicians reviewing a patient scan together'),
-    /** Researcher at a microscope in a bright laboratory. */
-    lab: make('hero-lab.jpg', 'A researcher working at a microscope in a laboratory'),
-    /** A clinician holding a stethoscope, editorial composition. */
-    tools: make('hero-tools.jpg', 'A clinician holding a stethoscope, editorial portrait'),
-    /** A bright, empty hospital ward — best "clinic" stand-in. */
-    clinic: make('hospital-bright.jpg', 'A bright modern hospital ward with privacy curtains'),
-    /** A surgical team in scrubs, viewed from below — dramatic, editorial. */
-    team: make('hero-team.jpg', 'A surgical team in scrubs viewed from below'),
-    /** Two surgeons mid-procedure in a modern operating room. */
-    surgery: make('hero-consult.jpg', 'Two surgeons performing a procedure in a modern operating room'),
-    /** A bright, empty modern operating room. */
-    operatingRoom: make('hero-clinic.jpg', 'A bright modern operating room, ready for procedure'),
+    consult: slot(Stethoscope, 'Two clinicians reviewing a case together'),
+    lab: slot(FlaskConical, 'Diagnostic lab work and analysis'),
+    tools: slot(Stethoscope, 'A clinician with diagnostic tools'),
+    clinic: slot(Hospital, 'A bright modern hospital ward'),
+    team: slot(Users, 'A clinical team working together'),
+    surgery: slot(Scissors, 'A surgical procedure in progress'),
+    operatingRoom: slot(Hospital, 'A modern operating room'),
 };
 
 /* ─── SPECIALTY THUMBNAILS (16:9) ─────────────────── */
-const spec = (file: string, alt: string) => make(file, alt, 800, 533);
+const spec = (icon: LucideIcon, alt: string) => slot(icon, alt, 'cobalt', 800, 533);
 
 export const SPECIALTY_IMAGES = {
-    /** Anatomical heart model on a cardiology textbook — perfect for Cardiology. */
-    cardio: spec('util-blood-lab.jpg', 'An anatomical heart model on an open cardiology textbook'),
-    /** Anatomical brain model with neuron figure — for Neurology. */
-    neuro: spec('spec-cardio-alt.jpg', 'An anatomical brain model with a neuron figure'),
-    /** Dental examination close-up with mirror and probe. */
-    dental: spec('spec-dental.jpg', 'A dental examination with mirror and probe'),
-    /** Clinician reviewing dental X-rays on a lightbox. */
-    dentalAlt: spec('spec-dental-alt.jpg', 'A clinician reviewing dental X-rays on a lightbox'),
-    /** Skincare cleanser bottle — for Dermatology. */
-    derm: spec('spec-derm.jpg', 'A skincare cleanser bottle, editorial flat lay'),
-    /** Reading glasses resting on an open book — for Ophthalmology / vision. */
-    eye: spec('spec-eye.jpg', 'A pair of reading glasses resting on an open book'),
-    /** Blood collection tubes in a laboratory — for Hematology / Pathology. */
-    blood: spec('spec-pediatric.jpg', 'Blood collection tubes in a laboratory'),
-    /** Colourful tablets and capsules close-up — for Pharmacology / general meds. */
-    medication: spec('spec-medication.jpg', 'A close-up of colourful tablets and capsules'),
-    /** An older couple walking on a sunlit garden path — for Geriatrics / wellbeing. */
-    geriatrics: spec('spec-neuro.jpg', 'An older couple walking together on a sunlit garden path'),
-    /** A clinician holding a smartphone, stethoscope around the neck. */
-    telehealth: spec('spec-stethoscope.jpg', 'A clinician using a smartphone with a stethoscope around the neck'),
-    /** A doctor in white coat smiling outdoors — warm portrait. */
-    doctorOutdoor: spec('spec-chart.jpg', 'A doctor in a white coat smiling outdoors'),
-    /** A doctor with arms crossed holding a red stethoscope — generic clinician. */
-    doctorPortrait: spec('spec-tablet.jpg', 'A doctor with arms crossed holding a stethoscope'),
-    /** Two clinicians reviewing a radiology scan — the best general consultation image. */
-    consultation: spec('spec-warm.jpg', 'Two clinicians reviewing a radiology scan together'),
+    cardio: spec(Heart, 'Cardiology — heart and vascular care'),
+    neuro: spec(getSpecialtyLucideIcon('Neurology'), 'Neurology — brain and nervous system'),
+    dental: spec(getSpecialtyLucideIcon('Dentistry'), 'Dentistry — oral and dental care'),
+    dentalAlt: spec(getSpecialtyLucideIcon('Dentistry'), 'Dentistry — oral and dental care'),
+    derm: spec(Sparkles, 'Dermatology — skin, hair and nails'),
+    eye: spec(getSpecialtyLucideIcon('Ophthalmology'), 'Ophthalmology — eyes and vision'),
+    blood: spec(Droplet, 'Hematology — blood disorders and lab work'),
+    medication: spec(Pill, 'Pharmacology — medicines and prescriptions'),
+    geriatrics: spec(UserRound, 'Geriatrics — care for older adults'),
+    telehealth: spec(Stethoscope, 'Telehealth — remote care and consultation'),
+    doctorOutdoor: spec(UserRound, 'A doctor in a clinical setting'),
+    doctorPortrait: spec(UserRound, 'A doctor in a clinical setting'),
+    consultation: spec(Stethoscope, 'A consultation between clinicians'),
 };
 
 /* ─── TREATMENT IMAGES (3:2) ──────────────────────── */
-const treat = (file: string, alt: string) => make(file, alt, 1200, 800);
+const treat = (icon: LucideIcon, alt: string) => slot(icon, alt, 'cobalt', 1200, 800);
 
 export const TREATMENT_IMAGES = {
-    /** Two surgeons mid-procedure — for surgical-treatment cards. */
-    surgery: treat('hero-consult.jpg', 'Two surgeons performing a procedure in an operating room'),
-    /** Empty, bright operating room — sterile setting. */
-    operatingRoom: treat('hero-clinic.jpg', 'A bright modern operating room, ready for procedure'),
-    /** Radiologist reviewing brain CT scans on a lightbox. */
-    radiology: treat('treat-equipment.jpg', 'A radiologist reviewing brain CT scans on a lightbox'),
-    /** Pill blister packs on a blue surface. */
-    pills: treat('treat-pills.jpg', 'Pharmaceutical pill blister packs on a blue surface'),
-    /** Pills, capsules, thermometer and a mask on a yellow background. */
-    pharmacy: treat('treat-pharmacy.jpg', 'An assortment of pills, capsules and a thermometer on a yellow background'),
-    /** Patient resting in a hospital bed with a nasal cannula. */
-    recovery: treat('treat-recovery.jpg', 'A patient resting in a hospital bed during recovery'),
-    /** Hand X-ray displayed on a viewing screen. */
-    imaging: treat('treat-imaging.jpg', 'A hand X-ray displayed on a viewing screen'),
-    /** Laboratory technician with a pipette and reagent vials. */
-    lab: treat('treat-surgery-alt.jpg', 'A laboratory technician with a pipette and reagent vials'),
-    /** A wellness yoga class in a sunlit studio. */
-    wellness: treat('treat-wellness.jpg', 'A wellness yoga class in a sunlit studio'),
-    /** Active rehabilitation — a person on a yoga mat doing core work. */
-    rehab: treat('treat-fitness.jpg', 'A person on a yoga mat doing core work in a bright gym'),
+    surgery: treat(TREATMENT_LUCIDE_ICON.surgery, 'Surgical procedures and operative care'),
+    operatingRoom: treat(TREATMENT_LUCIDE_ICON.operatingRoom, 'A modern operating room'),
+    radiology: treat(TREATMENT_LUCIDE_ICON.radiology, 'Radiology and medical imaging'),
+    pills: treat(TREATMENT_LUCIDE_ICON.pills, 'Prescription medication'),
+    pharmacy: treat(TREATMENT_LUCIDE_ICON.pharmacy, 'Over-the-counter medication'),
+    recovery: treat(Heart, 'Recovery and aftercare'),
+    imaging: treat(TREATMENT_LUCIDE_ICON.imaging, 'Diagnostic imaging'),
+    lab: treat(TREATMENT_LUCIDE_ICON.lab, 'Laboratory testing'),
+    wellness: treat(TREATMENT_LUCIDE_ICON.wellness, 'Wellness and lifestyle medicine'),
+    rehab: treat(TREATMENT_LUCIDE_ICON.rehab, 'Rehabilitation and physical therapy'),
 };
 
 /* ─── ABOUT / CAREERS ─────────────────────────────── */
-const about = (file: string, alt: string) => make(file, alt, 1200, 800);
+const about = (icon: LucideIcon, alt: string) => slot(icon, alt, 'fog', 1200, 800);
 
 export const ABOUT_IMAGES = {
-    /** A small team collaborating around a shared workspace table. */
-    team: about('about-team.jpg', 'A small team collaborating around a shared workspace table'),
-    /** A team in a training session in a modern office. */
-    training: about('about-office.jpg', 'A team in a training session in a modern office'),
-    /** A team meeting around a large conference table by tall windows. */
-    meeting: about('about-portrait.jpg', 'A team meeting around a large conference table'),
-    /** Two colleagues pairing on a laptop with handwritten notes — true collaboration. */
-    pairing: about('about-workspace.jpg', 'Two colleagues pairing on a laptop with handwritten notes'),
-    /** Editorial portrait — young professional in blue. */
-    portraitBlue: about('about-collaboration.jpg', 'A young professional in a blue dress, editorial portrait'),
-    /** Editorial portrait — young woman laughing. */
-    portraitRed: about('about-portrait-2.jpg', 'A young woman laughing, editorial portrait'),
+    team: about(Users, 'A small team collaborating'),
+    training: about(Newspaper, 'A team training session'),
+    meeting: about(ClipboardList, 'An editorial planning meeting'),
+    pairing: about(Users, 'Two colleagues pairing on a problem'),
+    portraitBlue: about(UserRound, 'An editorial portrait'),
+    portraitRed: about(UserRound, 'An editorial portrait'),
 };
 
 /* ─── HOSPITAL / FACILITY ─────────────────────────── */
 export const HOSPITAL_IMAGES = {
-    /** A bright, empty hospital ward with privacy curtains. */
-    ward: make('hospital-bright.jpg', 'A bright empty hospital ward with privacy curtains', 1200, 800),
-    /** A nurse taking a patient's blood pressure — clinical care moment. */
-    consultation: make('hospital-interior.jpg', 'A nurse taking a patient’s blood pressure', 1200, 800),
-    /** A modern hospital reception interior. */
-    reception: make('util-clinic-bright.jpg', 'A modern hospital reception desk', 1200, 800),
-    /** Brick exterior of a modern hospital with covered drop-off. */
-    exterior: make('hospital-reception.jpg', 'The brick exterior of a modern hospital with covered drop-off', 1200, 800),
+    ward: slot(Hospital, 'A hospital ward', 'fog', 1200, 800),
+    consultation: slot(Stethoscope, 'A clinical consultation', 'cobalt', 1200, 800),
+    reception: slot(Building2, 'A hospital reception', 'fog', 1200, 800),
+    exterior: slot(Building2, 'A hospital building exterior', 'fog', 1200, 800),
 };
 
 /* ─── UTILITY (FAQ, BOOKING, EDITORIAL) ───────────── */
-const util = (file: string, alt: string) => make(file, alt, 1000, 667);
+const util = (icon: LucideIcon, alt: string) => slot(icon, alt, 'fog', 1000, 667);
 
 export const UTIL_IMAGES = {
-    /** A curved library with rows of bookshelves. */
-    library: util('util-library.jpg', 'A curved library with rows of bookshelves'),
-    /** Library bookshelves stretching down a corridor under hanging lights. */
-    libraryAlt: util('util-reading.jpg', 'Library bookshelves stretching down a corridor under hanging lights'),
-    /** A fountain pen writing cursive on lined paper — for editorial / writing. */
-    pen: util('util-writing.jpg', 'A fountain pen writing cursive on lined paper'),
-    /** Analytics dashboard with traffic and performance charts. */
-    analytics: util('util-analytics.jpg', 'An analytics dashboard with traffic and performance charts'),
-    /** A leader presenting to a small team in an open-plan office. */
-    presentation: util('util-office-detail.jpg', 'A leader presenting to a small team in an open office'),
+    library: util(BookOpen, 'Reference library and longform content'),
+    libraryAlt: util(BookOpen, 'Reference library and longform content'),
+    pen: util(FileText, 'Editorial and writing'),
+    analytics: util(LayoutGrid, 'Performance analytics dashboard'),
+    presentation: util(Briefcase, 'A team presentation'),
 };
 
-/* ─── SPECIALTY → IMAGE MAP ───────────────────────── */
-/**
- * Maps canonical specialty names (as returned by normalize-specialty.ts)
- * to a curated stock image. Any specialty not in the map falls back to
- * SPECIALTY_IMAGES.consultation — a neutral clinician-at-monitor shot.
- */
+/* ─── SPECIALTY → SLOT MAP ────────────────────────── */
 export const SPECIALTY_TO_IMAGE: Record<string, StockImage> = {
     'Cardiology': SPECIALTY_IMAGES.cardio,
     'Cardiothoracic & Vascular Surgery': SPECIALTY_IMAGES.cardio,
@@ -206,5 +213,22 @@ export const SPECIALTY_TO_IMAGE: Record<string, StockImage> = {
 
 export function getSpecialtyImage(specialty: string | null | undefined): StockImage {
     if (!specialty) return SPECIALTY_IMAGES.consultation;
-    return SPECIALTY_TO_IMAGE[specialty] || SPECIALTY_IMAGES.consultation;
+    // Re-key against the specialty so the icon stays in sync with
+    // whichever bucket SPECIALTY_TO_IMAGE points the name to.
+    const slot = SPECIALTY_TO_IMAGE[specialty];
+    if (!slot) return SPECIALTY_IMAGES.consultation;
+    return { ...slot, icon: getSpecialtyLucideIcon(specialty), alt: `${specialty}` };
 }
+
+/* ─── Misc helpers consumers may want ─────────────── */
+export const PAGE_ICONS = {
+    home: Compass,
+    search: Search,
+    pricing: Wallet,
+    insurance: Shield,
+    help: HelpCircle,
+    docs: FileText,
+    activity: Activity,
+    testTube: TestTube,
+    microscope: Microscope,
+};

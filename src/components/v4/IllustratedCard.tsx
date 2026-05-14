@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import type { StockImage } from '@/lib/stock-images';
+import MediaTile from './MediaTile';
 
 type IllustratedCardProps = {
     image: StockImage;
@@ -22,12 +22,13 @@ type IllustratedCardProps = {
 };
 
 /**
- * A Bureau-style card with a 16:9 image header. Use for content
+ * A Bureau-style card with a 16:9 icon tile header. Use for content
  * grids: conditions by specialty, treatment categories, blog posts,
  * advertised packages.
  *
- * Renders as a Link if `href` is given (internal), or `a` if
- * `external` is true. Falls back to a plain article otherwise.
+ * The header now renders a semantic Lucide icon tile (no stock
+ * photography) — keeps every card on-message and prevents the
+ * "generic medical photo" effect.
  */
 export default function IllustratedCard({
     image,
@@ -42,32 +43,13 @@ export default function IllustratedCard({
 }: IllustratedCardProps) {
     const body = (
         <>
-            <div
-                style={{
-                    position: 'relative',
-                    width: '100%',
-                    aspectRatio: aspect,
-                    overflow: 'hidden',
-                    background: 'var(--bg-2)',
-                }}
-            >
-                <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
-                    style={{ objectFit: 'cover' }}
-                />
-                <div
-                    aria-hidden="true"
-                    style={{
-                        position: 'absolute',
-                        inset: 0,
-                        background:
-                            'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.18) 100%)',
-                    }}
-                />
-            </div>
+            <MediaTile
+                alt={image.alt}
+                icon={image.icon}
+                tone={image.tone}
+                aspect={aspect}
+                iconSize={48}
+            />
             <div className="col gap-2" style={{ padding: 18 }}>
                 {eyebrow && (
                     <span

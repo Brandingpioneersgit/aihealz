@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function NewsletterSignup() {
+export default function NewsletterSignup({ source = 'blog' }: { source?: string }) {
   const [email, setEmail] = useState('');
   const [state, setState] = useState<'idle' | 'loading' | 'ok' | 'err'>('idle');
 
@@ -14,7 +14,7 @@ export default function NewsletterSignup() {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'blog' }),
+        body: JSON.stringify({ email, source }),
       });
       setState(res.ok ? 'ok' : 'err');
     } catch {
@@ -33,6 +33,7 @@ export default function NewsletterSignup() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@example.com"
+        aria-label="Email address"
         style={{
           flex: '1 1 180px',
           minWidth: 0,

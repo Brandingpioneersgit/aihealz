@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
-import NewsletterSignup from './NewsletterSignup';
+import NewsletterSignup from '@/components/ui/NewsletterSignup';
+import MediaTile from '@/components/v4/MediaTile';
 import { HERO_IMAGES, SPECIALTY_IMAGES } from '@/lib/stock-images';
+import type { StockImage } from '@/lib/stock-images';
 
 export const revalidate = 86400;
 
@@ -28,7 +29,7 @@ interface Post {
   excerpt: string;
   publishedAt: string;
   author?: string;
-  image?: { src: string; alt: string };
+  image?: StockImage;
   eyebrow?: string;
 }
 
@@ -96,22 +97,13 @@ export default async function BlogPage() {
               marginBottom: 32,
             }}
           >
-            <Image
-              src={HERO_IMAGES.tools.src}
+            <MediaTile
               alt={HERO_IMAGES.tools.alt}
-              fill
-              sizes="(max-width: 1080px) 100vw, 1080px"
+              icon={HERO_IMAGES.tools.icon}
+              tone="cobalt"
+              aspect="32 / 9"
+              iconSize={88}
               priority
-              style={{ objectFit: 'cover' }}
-            />
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                background:
-                  'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
-              }}
             />
             <span
               className="mono"
@@ -119,7 +111,7 @@ export default async function BlogPage() {
                 position: 'absolute',
                 left: 'clamp(16px, 3vw, 28px)',
                 bottom: 18,
-                color: 'rgba(255,255,255,0.9)',
+                color: 'var(--ink-3)',
                 fontSize: 11,
                 textTransform: 'uppercase',
                 letterSpacing: '0.12em',
@@ -190,33 +182,14 @@ export default async function BlogPage() {
                   {...wrapperProps}
                 >
                   {p.image && (
-                    <div
-                      style={{
-                        position: 'relative',
-                        width: '100%',
-                        aspectRatio: '16 / 9',
-                        overflow: 'hidden',
-                        background: 'var(--bg-2)',
-                        borderBottom: '1px solid var(--rule)',
-                      }}
-                    >
-                      <Image
-                        src={p.image.src}
-                        alt={p.image.alt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 360px"
-                        style={{ objectFit: 'cover' }}
-                      />
-                      <div
-                        aria-hidden="true"
-                        style={{
-                          position: 'absolute',
-                          inset: 0,
-                          background:
-                            'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.18) 100%)',
-                        }}
-                      />
-                    </div>
+                    <MediaTile
+                      alt={p.image.alt}
+                      icon={p.image.icon}
+                      tone={p.image.tone}
+                      aspect="16 / 9"
+                      iconSize={48}
+                      style={{ borderBottom: '1px solid var(--rule)' }}
+                    />
                   )}
                   <div className="col gap-2" style={{ padding: 18 }}>
                     {p.eyebrow && (

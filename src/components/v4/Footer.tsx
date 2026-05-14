@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { LogoLockup } from './Logo';
+import NewsletterSignup from '@/components/ui/NewsletterSignup';
 
 type Section = {
     heading: string;
@@ -9,13 +10,15 @@ type Section = {
 /**
  * Source of truth for the global site footer.
  *
+ * This is intentionally a static constant — the previous DB-backed
+ * `FooterTemplate` admin panel was removed (its schema couldn't express
+ * hrefs, sections, the newsletter, or the legal bar). The Prisma
+ * `FooterTemplate` model still exists if a richer footer CMS is built later.
+ *
  * Keep in sync with:
  *  - scripts/generate-sitemaps.ts — top-level hubs and /tools/* listings should mirror these.
- *  - src/app/admin/footer/page.tsx — currently manages FooterTemplate rows that are NOT consumed
- *    here. If/when admin edits should go live, refactor this component to read from those
- *    templates (or a `nav_items` / `footer_sections` table) instead of this constant.
- *  - src/lib/tools-list.ts — when extending the Tools / Calculators columns, mirror entries from
- *    that file so /tools, the footer, and the sitemap stay aligned.
+ *  - src/lib/tools-list.ts — when extending the Tools column, mirror entries from that file so
+ *    /tools, the footer, and the sitemap stay aligned.
  */
 const SECTIONS: Section[] = [
     {
@@ -29,49 +32,36 @@ const SECTIONS: Section[] = [
             { label: 'Lab tests', href: '/tests' },
             { label: 'Insurance', href: '/insurance' },
             { label: 'Medical travel', href: '/medical-travel' },
-            { label: 'Remedies', href: '/remedies' },
             { label: 'Symptoms', href: '/symptoms' },
+            { label: 'Remedies', href: '/remedies' },
         ],
     },
     {
         heading: 'Tools',
         items: [
             { label: 'Report analysis', href: '/analyze' },
-            { label: 'Symptom checker', href: '/symptoms' },
             { label: 'Ask Healz AI', href: '/healz-ai' },
-            { label: 'All tools', href: '/tools' },
+            { label: 'Patient vault', href: '/vault' },
             { label: 'Drug interactions', href: '/tools/drug-interactions' },
             { label: 'Medical glossary', href: '/tools/glossary' },
             { label: 'Vaccinations', href: '/tools/vaccinations' },
-            { label: 'Surgery checklist', href: '/tools/surgery-checklist' },
             { label: 'Emergency info', href: '/tools/emergency' },
-            { label: 'Patient vault', href: '/vault' },
-        ],
-    },
-    {
-        heading: 'Calculators',
-        items: [
-            { label: 'BMI', href: '/tools/bmi-calculator' },
-            { label: 'BMR', href: '/tools/bmr-calculator' },
-            { label: 'Body fat', href: '/tools/body-fat-calculator' },
-            { label: 'Heart risk', href: '/tools/heart-risk-calculator' },
-            { label: 'Diabetes risk', href: '/tools/diabetes-risk-calculator' },
-            { label: 'Kidney function', href: '/tools/kidney-function-calculator' },
-            { label: 'Water intake', href: '/tools/water-intake-calculator' },
-            { label: 'Pregnancy due date', href: '/tools/pregnancy-due-date-calculator' },
+            { label: 'BMI calculator', href: '/tools/bmi-calculator' },
+            { label: 'Heart risk calculator', href: '/tools/heart-risk-calculator' },
+            { label: 'All tools & calculators', href: '/tools' },
         ],
     },
     {
         heading: 'For Doctors',
         items: [
             { label: 'Overview', href: '/for-doctors' },
-            { label: 'Pricing', href: '/for-doctors/pricing' },
+            { label: 'Plans & pricing', href: '/for-doctors/pricing' },
             { label: 'Clinical scores', href: '/for-doctors/clinical-scores' },
             { label: 'Drug dosing', href: '/for-doctors/drug-dosing' },
             { label: 'Quick reference', href: '/for-doctors/quick-reference' },
             { label: 'Surgical checklist', href: '/for-doctors/surgical-checklist' },
             { label: 'Join as doctor', href: '/doctors/join' },
-            { label: 'Provider login', href: '/provider/login' },
+            { label: 'Provider sign-in', href: '/provider/login' },
         ],
     },
     {
@@ -96,7 +86,6 @@ const SECTIONS: Section[] = [
             { label: 'Contact', href: '/contact' },
             { label: 'Pricing', href: '/pricing' },
             { label: 'Advertise', href: '/advertise' },
-            { label: 'Advertise pricing', href: '/advertise/pricing' },
         ],
     },
     {
@@ -106,18 +95,15 @@ const SECTIONS: Section[] = [
             { label: 'FAQ', href: '/faq' },
             { label: 'Patient sign-in', href: '/login' },
             { label: 'Create account', href: '/register' },
-            { label: 'Provider sign-in', href: '/provider/login' },
         ],
     },
-    {
-        heading: 'Legal',
-        items: [
-            { label: 'Privacy', href: '/privacy' },
-            { label: 'Terms', href: '/terms' },
-            { label: 'Partner agreement', href: '/partner-agreement' },
-            { label: 'Sitemap', href: '/sitemap.xml' },
-        ],
-    },
+];
+
+const LEGAL_LINKS: { label: string; href: string }[] = [
+    { label: 'Privacy', href: '/privacy' },
+    { label: 'Terms', href: '/terms' },
+    { label: 'Partner agreement', href: '/partner-agreement' },
+    { label: 'Sitemap', href: '/sitemap' },
 ];
 
 export default function V4Footer() {
@@ -150,8 +136,42 @@ export default function V4Footer() {
                         >
                             The medical directory for the people who actually need one.
                         </div>
-                        <div className="row gap-2" style={{ marginTop: 6 }}>
-                            {['HIPAA', 'GDPR', 'ISO 27001'].map((tag) => (
+
+                        {/* Newsletter */}
+                        <div className="col gap-2" style={{ marginTop: 10, maxWidth: 320 }}>
+                            <span
+                                className="mono"
+                                style={{
+                                    fontSize: 11,
+                                    letterSpacing: '.10em',
+                                    color: 'var(--cobalt-3)',
+                                    textTransform: 'uppercase',
+                                    fontWeight: 500,
+                                }}
+                            >
+                                The weekly dispatch
+                            </span>
+                            <span
+                                style={{
+                                    fontSize: 13,
+                                    color: 'rgba(255,255,255,.65)',
+                                    lineHeight: 1.5,
+                                }}
+                            >
+                                Plain-English health writing, reviewed by clinicians. No spam.
+                            </span>
+                            <div style={{ marginTop: 2 }}>
+                                <NewsletterSignup source="footer" />
+                            </div>
+                        </div>
+
+                        {/*
+                          Practice-description language, not certification
+                          claims. If aihealz obtains a formal HIPAA / ISO 27001
+                          audit, swap these for the actual certification marks.
+                        */}
+                        <div className="row gap-2" style={{ marginTop: 10, flexWrap: 'wrap' }}>
+                            {['HIPAA-aligned', 'GDPR-ready', 'Encrypted at rest'].map((tag) => (
                                 <span
                                     key={tag}
                                     className="pill"
@@ -186,7 +206,7 @@ export default function V4Footer() {
                             key={section.heading}
                             aria-label={section.heading}
                             className="col gap-3"
-                            style={{ flex: '1 1 160px' }}
+                            style={{ flex: '1 1 150px' }}
                         >
                             <h3
                                 className="mono"
@@ -233,9 +253,27 @@ export default function V4Footer() {
                         gap: 12,
                     }}
                 >
-                    <span className="mono">© {year} aihealz inc</span>
-                    <span className="mono">ATZ Medappz Pvt Ltd, Gurgaon, IN</span>
-                    <span className="mono">v4.0 / bureau</span>
+                    <div className="row gap-4" style={{ flexWrap: 'wrap' }}>
+                        <span className="mono">© {year} aihealz inc</span>
+                        <span className="mono">ATZ Medappz Pvt Ltd, Gurgaon, IN</span>
+                    </div>
+                    <nav
+                        aria-label="Legal"
+                        className="row gap-4"
+                        style={{ flexWrap: 'wrap' }}
+                    >
+                        {LEGAL_LINKS.map((l) => (
+                            <Link
+                                key={l.href}
+                                href={l.href}
+                                className="mono"
+                                style={{ fontSize: 11, color: 'rgba(255,255,255,.6)' }}
+                            >
+                                {l.label}
+                            </Link>
+                        ))}
+                        <span className="mono">v4.0 / bureau</span>
+                    </nav>
                 </div>
             </div>
         </footer>

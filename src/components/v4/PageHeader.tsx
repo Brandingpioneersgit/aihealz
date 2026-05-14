@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Image from 'next/image';
 import type { StockImage } from '@/lib/stock-images';
+import MediaTile from './MediaTile';
 
 type PageHeaderProps = {
     /** Mono kicker eyebrow */
@@ -13,7 +13,8 @@ type PageHeaderProps = {
     actions?: React.ReactNode;
     /** Override the headline font-size clamp */
     titleSize?: string;
-    /** Optional editorial side-image (Bureau style) */
+    /** Optional editorial side-image (Bureau style) — now rendered as
+     *  a semantic icon tile via MediaTile. */
     image?: StockImage;
     /** How the optional image is laid out. Default: `side` */
     imageVariant?: 'side' | 'banner';
@@ -23,10 +24,9 @@ type PageHeaderProps = {
  * V4 editorial page header. Use at the top of any page that needs a
  * standard section-mark + display headline + lede block.
  *
- * Pass an `image` to add an editorial side-image (Bureau style). The
- * image sits to the right of the text on wide viewports, fading
- * subtly under a navy → transparent gradient at the inner edge so it
- * always reads as a complement to the typography, not a competitor.
+ * Pass an `image` to add an editorial side-illustration. It renders
+ * as a Bureau-style icon tile (no stock photo) so each section is
+ * unambiguously meaningful instead of decorative.
  */
 export default function PageHeader({
     eyebrow,
@@ -86,72 +86,40 @@ export default function PageHeader({
     if (imageVariant === 'banner') {
         return (
             <header className="col gap-5">
-                <div
+                <MediaTile
+                    alt={image.alt}
+                    icon={image.icon}
+                    tone={image.tone}
+                    aspect="21 / 7"
+                    iconSize={88}
+                    priority
                     style={{
-                        position: 'relative',
-                        width: '100%',
-                        aspectRatio: '21 / 7',
-                        overflow: 'hidden',
                         borderRadius: 'var(--r-3, 8px)',
-                        background: 'var(--bg-2)',
+                        border: '1px solid var(--rule)',
                     }}
-                >
-                    <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        sizes="(max-width: 1280px) 100vw, 1280px"
-                        priority
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <div
-                        aria-hidden="true"
-                        style={{
-                            position: 'absolute',
-                            inset: 0,
-                            background:
-                                'linear-gradient(180deg, rgba(10,26,47,0.05) 0%, rgba(10,26,47,0.25) 80%, rgba(10,26,47,0.45) 100%)',
-                        }}
-                    />
-                </div>
+                />
                 {TextBlock}
             </header>
         );
     }
 
-    // Default: side-image editorial layout
     return (
         <header
             className="row gap-7 ai-end"
             style={{ flexWrap: 'wrap', paddingBottom: 8 }}
         >
             {TextBlock}
-            <div
-                style={{
-                    position: 'relative',
-                    flex: '1 1 420px',
-                    minWidth: 0,
-                    aspectRatio: '4 / 3',
-                    overflow: 'hidden',
-                    borderRadius: 'var(--r-3, 8px)',
-                    background: 'var(--bg-2)',
-                }}
-            >
-                <Image
-                    src={image.src}
+            <div style={{ flex: '1 1 420px', minWidth: 0 }}>
+                <MediaTile
                     alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 580px"
+                    icon={image.icon}
+                    tone={image.tone}
+                    aspect="4 / 3"
+                    iconSize={72}
                     priority
-                    style={{ objectFit: 'cover' }}
-                />
-                <div
-                    aria-hidden="true"
                     style={{
-                        position: 'absolute',
-                        inset: 0,
-                        background:
-                            'linear-gradient(90deg, rgba(244,246,250,0.20) 0%, rgba(244,246,250,0) 35%), linear-gradient(180deg, rgba(28,91,255,0.06) 0%, rgba(10,26,47,0.18) 100%)',
+                        borderRadius: 'var(--r-3, 8px)',
+                        border: '1px solid var(--rule)',
                     }}
                 />
             </div>

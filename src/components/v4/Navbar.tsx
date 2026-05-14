@@ -2,12 +2,47 @@ import Link from 'next/link';
 import { LogoLockup } from './Logo';
 import { getGeoContext } from '@/lib/geo-context';
 import MobileMenu from './MobileMenu';
+import NavLinks, { type NavItem } from './NavLinks';
 
-type NavItem = { label: string; href: string };
+const CONDITION_SPECIALTIES: { label: string; href: string; desc: string }[] = [
+    { label: 'Cardiology', href: '/conditions/cardiology', desc: 'Heart & cardiovascular' },
+    { label: 'Neurology', href: '/conditions/neurology', desc: 'Brain & nervous system' },
+    { label: 'Orthopedics', href: '/conditions/orthopedics', desc: 'Bone, joint, muscle' },
+    { label: 'Dermatology', href: '/conditions/dermatology', desc: 'Skin, hair, nails' },
+    { label: 'Gastroenterology', href: '/conditions/gastroenterology', desc: 'Digestive system' },
+    { label: 'Oncology', href: '/conditions/oncology', desc: 'Cancer & tumors' },
+    { label: 'Pulmonology', href: '/conditions/pulmonology', desc: 'Lung & respiratory' },
+    { label: 'Endocrinology', href: '/conditions/endocrinology', desc: 'Hormones & metabolism' },
+];
+
+const TREATMENT_CATEGORIES: { label: string; href: string; desc: string }[] = [
+    { label: 'Prescription drugs', href: '/treatments?type=prescription', desc: 'Prescription-only medications' },
+    { label: 'Surgical procedures', href: '/treatments?type=surgical', desc: 'Operative & minimally invasive' },
+    { label: 'Injectable therapies', href: '/treatments?type=injection', desc: 'Biologics, vaccines, injectables' },
+    { label: 'Therapy & rehab', href: '/treatments?type=therapy', desc: 'Physical & occupational therapy' },
+    { label: 'OTC medications', href: '/treatments?type=otc', desc: 'Over-the-counter drugs' },
+    { label: 'Home remedies', href: '/treatments?type=home_remedy', desc: 'Natural & traditional remedies' },
+];
 
 const NAV_ITEMS: NavItem[] = [
-    { label: 'Conditions', href: '/conditions' },
-    { label: 'Treatments', href: '/treatments' },
+    {
+        label: 'Conditions',
+        href: '/conditions',
+        mega: {
+            items: CONDITION_SPECIALTIES,
+            footerLabel: 'Browse all conditions A–Z',
+            footerHref: '/conditions',
+        },
+    },
+    {
+        label: 'Treatments',
+        href: '/treatments',
+        mega: {
+            items: TREATMENT_CATEGORIES,
+            footerLabel: 'Browse all treatments',
+            footerHref: '/treatments',
+        },
+    },
     { label: 'Doctors', href: '/doctors' },
     { label: 'Hospitals', href: '/hospitals' },
     { label: 'Tests', href: '/tests' },
@@ -48,7 +83,7 @@ export type V4NavbarProps = {
     active?: string;
 };
 
-export default async function V4Navbar({ active }: V4NavbarProps) {
+export default async function V4Navbar(_props: V4NavbarProps) {
     const geo = await getGeoContext();
     const countryLabel =
         (geo.countrySlug && COUNTRY_DISPLAY[geo.countrySlug]) || 'Global';
@@ -61,9 +96,7 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
         <header
             style={{
                 borderBottom: '1px solid var(--rule)',
-                background: 'rgba(244,246,250,.85)',
-                backdropFilter: 'blur(10px)',
-                WebkitBackdropFilter: 'blur(10px)',
+                background: 'var(--bg)',
                 position: 'sticky',
                 top: 0,
                 zIndex: 50,
@@ -82,40 +115,13 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                     >
                         <LogoLockup size={28} scale={0.85} />
                     </Link>
-                    <nav
-                        aria-label="Primary"
-                        className="row gap-1 v4-nav-desktop"
-                        style={{ fontSize: 13 }}
-                    >
-                        {NAV_ITEMS.map((item) => {
-                            const isActive = active === item.label;
-                            return (
-                                <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    aria-current={isActive ? 'page' : undefined}
-                                    style={{
-                                        padding: '10px 12px',
-                                        minHeight: 44,
-                                        display: 'inline-flex',
-                                        alignItems: 'center',
-                                        borderRadius: 'var(--r-2)',
-                                        color: isActive ? 'var(--ink)' : 'var(--ink-3)',
-                                        background: isActive ? 'var(--bg-2)' : 'transparent',
-                                        fontWeight: isActive ? 500 : 400,
-                                    }}
-                                >
-                                    {item.label}
-                                </Link>
-                            );
-                        })}
-                    </nav>
+                    <NavLinks items={NAV_ITEMS} />
                 </div>
                 <div className="row ai-center gap-3 v4-nav-actions" style={{ flexWrap: 'nowrap', minWidth: 0 }}>
-                    <div
+                    <Link
+                        href="/settings/location"
                         className="row ai-center gap-2 mono v4-geo-pill"
-                        role="status"
-                        aria-label={`Location: ${locationLabel}`}
+                        aria-label={`Location: ${locationLabel}. Change location.`}
                         style={{
                             fontSize: 11,
                             color: 'var(--ink-3)',
@@ -134,7 +140,7 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                             }}
                         />
                         {locationLabel}
-                    </div>
+                    </Link>
                     <Link
                         href="/tools/emergency"
                         className="v4-btn v4-btn-sm v4-emergency-cta"
@@ -149,7 +155,7 @@ export default async function V4Navbar({ active }: V4NavbarProps) {
                         SOS
                     </Link>
                     <Link
-                        href="/provider/login"
+                        href="/login"
                         className="v4-btn v4-btn-ghost v4-btn-sm v4-nav-desktop-only"
                         style={{ minHeight: 44, display: 'inline-flex', alignItems: 'center' }}
                     >

@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -9,9 +8,10 @@ import { normalizeSpecialty } from '@/lib/normalize-specialty';
 import LanguageSwitcher from '@/components/ui/language-switcher';
 import SearchAutocomplete from '@/components/ui/search-autocomplete';
 import { AIDiagnosisCTA, FindDoctorCTA, BookTestCTA } from '@/components/ui/cta-sections';
-import { HERO_IMAGES, TREATMENT_IMAGES } from '@/lib/stock-images';
+import MediaTile from '@/components/v4/MediaTile';
+import { HERO_IMAGES, TREATMENT_IMAGES, type StockImage } from '@/lib/stock-images';
 
-const TREATMENT_TYPE_IMAGES: Record<string, { src: string; alt: string }> = {
+const TREATMENT_TYPE_IMAGES: Record<string, StockImage> = {
     prescription: TREATMENT_IMAGES.pills,
     injection: TREATMENT_IMAGES.lab,
     surgical: TREATMENT_IMAGES.surgery,
@@ -378,22 +378,13 @@ export default async function TreatmentsDirectory() {
                             border: '1px solid var(--rule)',
                         }}
                     >
-                        <Image
-                            src={HERO_IMAGES.tools.src}
+                        <MediaTile
                             alt={HERO_IMAGES.tools.alt}
-                            fill
-                            sizes="(max-width: 1280px) 100vw, 1280px"
+                            icon={HERO_IMAGES.tools.icon}
+                            tone="cobalt"
+                            aspect="32 / 9"
+                            iconSize={88}
                             priority
-                            style={{ objectFit: 'cover' }}
-                        />
-                        <div
-                            aria-hidden="true"
-                            style={{
-                                position: 'absolute',
-                                inset: 0,
-                                background:
-                                    'linear-gradient(90deg, rgba(10,26,47,0.55) 0%, rgba(10,26,47,0.20) 50%, rgba(10,26,47,0) 90%)',
-                            }}
                         />
                         <span
                             className="mono"
@@ -401,7 +392,7 @@ export default async function TreatmentsDirectory() {
                                 position: 'absolute',
                                 left: 'clamp(16px, 3vw, 28px)',
                                 bottom: 18,
-                                color: 'rgba(255,255,255,0.9)',
+                                color: 'var(--ink-3)',
                                 fontSize: 11,
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.12em',
@@ -576,33 +567,14 @@ export default async function TreatmentsDirectory() {
                                             overflow: 'hidden',
                                         }}
                                     >
-                                        <div
-                                            style={{
-                                                position: 'relative',
-                                                width: '100%',
-                                                aspectRatio: '16 / 9',
-                                                overflow: 'hidden',
-                                                background: 'var(--bg-2)',
-                                                borderBottom: '1px solid var(--rule)',
-                                            }}
-                                        >
-                                            <Image
-                                                src={img.src}
-                                                alt={img.alt}
-                                                fill
-                                                sizes="(max-width: 768px) 50vw, 320px"
-                                                style={{ objectFit: 'cover' }}
-                                            />
-                                            <div
-                                                aria-hidden="true"
-                                                style={{
-                                                    position: 'absolute',
-                                                    inset: 0,
-                                                    background:
-                                                        'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
-                                                }}
-                                            />
-                                        </div>
+                                        <MediaTile
+                                            alt={img.alt}
+                                            icon={img.icon}
+                                            tone="cobalt"
+                                            aspect="16 / 9"
+                                            iconSize={52}
+                                            style={{ borderBottom: '1px solid var(--rule)' }}
+                                        />
                                         <div className="col gap-3" style={{ padding: '16px 22px 20px' }}>
                                             <div className="row between ai-center">
                                                 <div className="spec-icon">{t.abbr}</div>

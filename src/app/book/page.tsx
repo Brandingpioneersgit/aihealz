@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
+import MediaTile from '@/components/v4/MediaTile';
 import { SPECIALTY_IMAGES } from '@/lib/stock-images';
 
 export const metadata: Metadata = {
@@ -48,32 +48,14 @@ export default function BookPage() {
               className="card"
               style={{ padding: 0, borderRadius: 18, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
             >
-              <div
-                style={{
-                  position: 'relative',
-                  width: '100%',
-                  aspectRatio: '16 / 9',
-                  overflow: 'hidden',
-                  background: 'var(--bg-2)',
-                  borderBottom: '1px solid var(--rule)',
-                }}
-              >
-                <Image
-                  src={SPECIALTY_IMAGES.consultation.src}
-                  alt={SPECIALTY_IMAGES.consultation.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 480px"
-                  style={{ objectFit: 'cover' }}
-                />
-                <div
-                  aria-hidden="true"
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
-                  }}
-                />
-              </div>
+              <MediaTile
+                alt={SPECIALTY_IMAGES.consultation.alt}
+                icon={SPECIALTY_IMAGES.consultation.icon}
+                tone="cobalt"
+                aspect="16 / 9"
+                iconSize={56}
+                style={{ borderBottom: '1px solid var(--rule)' }}
+              />
               <div style={{ padding: 24 }}>
                 <p style={{ fontSize: 12, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '.08em', marginBottom: 8 }}>For consultations</p>
                 <h2 style={{ fontSize: 24, fontWeight: 600, marginBottom: 8 }}>Book a doctor</h2>
@@ -89,32 +71,14 @@ export default function BookPage() {
               className="card"
               style={{ padding: 0, borderRadius: 18, textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
             >
-              <div
-                style={{
-                  position: 'relative',
-                  width: '100%',
-                  aspectRatio: '16 / 9',
-                  overflow: 'hidden',
-                  background: 'var(--bg-2)',
-                  borderBottom: '1px solid var(--rule)',
-                }}
-              >
-                <Image
-                  src={SPECIALTY_IMAGES.blood.src}
-                  alt={SPECIALTY_IMAGES.blood.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 480px"
-                  style={{ objectFit: 'cover' }}
-                />
-                <div
-                  aria-hidden="true"
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
-                  }}
-                />
-              </div>
+              <MediaTile
+                alt={SPECIALTY_IMAGES.blood.alt}
+                icon={SPECIALTY_IMAGES.blood.icon}
+                tone="cobalt"
+                aspect="16 / 9"
+                iconSize={56}
+                style={{ borderBottom: '1px solid var(--rule)' }}
+              />
               <div style={{ padding: 24 }}>
                 <p style={{ fontSize: 12, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '.08em', marginBottom: 8 }}>For diagnostics</p>
                 <h2 style={{ fontSize: 24, fontWeight: 600, marginBottom: 8 }}>Book a test</h2>

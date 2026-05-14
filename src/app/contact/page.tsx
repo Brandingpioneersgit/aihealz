@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 import ContactForm from './ContactForm';
+import MediaTile from '@/components/v4/MediaTile';
 import { HOSPITAL_IMAGES } from '@/lib/stock-images';
 
 export const revalidate = 604800;
@@ -50,32 +50,17 @@ export default function ContactPage() {
                             and reply within one working day.
                         </p>
                     </div>
-                    <div
-                        style={{
-                            position: 'relative',
-                            flex: '1 1 360px',
-                            minWidth: 0,
-                            aspectRatio: '4 / 3',
-                            overflow: 'hidden',
-                            borderRadius: 'var(--r-3, 8px)',
-                            border: '1px solid var(--rule)',
-                        }}
-                    >
-                        <Image
-                            src={HOSPITAL_IMAGES.exterior.src}
+                    <div style={{ flex: '1 1 360px', minWidth: 0 }}>
+                        <MediaTile
                             alt={HOSPITAL_IMAGES.exterior.alt}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 480px"
+                            icon={HOSPITAL_IMAGES.exterior.icon}
+                            tone={HOSPITAL_IMAGES.exterior.tone}
+                            aspect="4 / 3"
+                            iconSize={72}
                             priority
-                            style={{ objectFit: 'cover' }}
-                        />
-                        <div
-                            aria-hidden="true"
                             style={{
-                                position: 'absolute',
-                                inset: 0,
-                                background:
-                                    'linear-gradient(180deg, rgba(10,26,47,0) 55%, rgba(10,26,47,0.20) 100%)',
+                                borderRadius: 'var(--r-3, 8px)',
+                                border: '1px solid var(--rule)',
                             }}
                         />
                     </div>

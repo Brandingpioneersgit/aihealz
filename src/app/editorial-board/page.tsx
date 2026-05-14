@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { promises as fs } from 'fs';
 import path from 'path';
 import V4Page from '@/components/v4/Shell';
+import MediaTile from '@/components/v4/MediaTile';
 import { UTIL_IMAGES } from '@/lib/stock-images';
 
 export const revalidate = 604800;
@@ -66,31 +66,17 @@ export default async function EditorialBoardPage() {
                 Every patient-facing page on aihealz is written or reviewed by qualified clinicians.
               </p>
             </div>
-            <div
-              style={{
-                position: 'relative',
-                flex: '1 1 320px',
-                minWidth: 0,
-                aspectRatio: '4 / 3',
-                overflow: 'hidden',
-                borderRadius: 'var(--r-3, 8px)',
-                border: '1px solid var(--rule)',
-              }}
-            >
-              <Image
-                src={UTIL_IMAGES.pen.src}
+            <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+              <MediaTile
                 alt={UTIL_IMAGES.pen.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 420px"
+                icon={UTIL_IMAGES.pen.icon}
+                tone={UTIL_IMAGES.pen.tone}
+                aspect="4 / 3"
+                iconSize={64}
                 priority
-                style={{ objectFit: 'cover' }}
-              />
-              <div
-                aria-hidden="true"
                 style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.20) 100%)',
+                  borderRadius: 'var(--r-3, 8px)',
+                  border: '1px solid var(--rule)',
                 }}
               />
             </div>

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import V4Page from '@/components/v4/Shell';
 import EditorialFigure from '@/components/v4/EditorialFigure';
+import MediaTile from '@/components/v4/MediaTile';
 import { ABOUT_IMAGES, HOSPITAL_IMAGES } from '@/lib/stock-images';
 import {
     generateAboutPageSchema,
@@ -118,32 +118,17 @@ export default function AboutPage() {
                             compare costs across countries — from initial research to booking care abroad.
                         </p>
                     </div>
-                    <div
-                        style={{
-                            position: 'relative',
-                            flex: '1 1 420px',
-                            minWidth: 0,
-                            aspectRatio: '4 / 3',
-                            overflow: 'hidden',
-                            borderRadius: 'var(--r-3, 8px)',
-                            border: '1px solid var(--rule)',
-                        }}
-                    >
-                        <Image
-                            src={ABOUT_IMAGES.team.src}
+                    <div style={{ flex: '1 1 420px', minWidth: 0 }}>
+                        <MediaTile
                             alt={ABOUT_IMAGES.team.alt}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 540px"
+                            icon={ABOUT_IMAGES.team.icon}
+                            tone={ABOUT_IMAGES.team.tone}
+                            aspect="4 / 3"
+                            iconSize={72}
                             priority
-                            style={{ objectFit: 'cover' }}
-                        />
-                        <div
-                            aria-hidden="true"
                             style={{
-                                position: 'absolute',
-                                inset: 0,
-                                background:
-                                    'linear-gradient(180deg, rgba(10,26,47,0) 60%, rgba(10,26,47,0.18) 100%)',
+                                borderRadius: 'var(--r-3, 8px)',
+                                border: '1px solid var(--rule)',
                             }}
                         />
                     </div>
