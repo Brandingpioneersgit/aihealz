@@ -42,3 +42,91 @@ jobs:
           DATABASE_URL: postgresql://user:pass@localhost:5432/db
           NEXT_PUBLIC_SITE_URL: https://aihealz.com
         run: npm run build
+
+  deploy:
+    name: Deploy to VPS
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies (full, for build)
+        run: npm ci
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Build
+        env:
+          DATABASE_URL: postgresql://user:pass@localhost:5432/db
+          NEXT_PUBLIC_SITE_URL: https://aihealz.com
+        run: npm run build
+
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add VPS to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Rsync built app to VPS
+        # Excludes mirror deploy.sh — never sync .env*, secrets, dev/cache artifacts,
+        # or the .planning/ workspace. .github excluded so VPS never sees workflow files.
+        run: |
+          rsync -avz --delete \
+            --exclude 'node_modules' \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.env*' \
+            --exclude 'secrets/' \
+            --exclude '*.sql.gz' \
+            --exclude '*.dump' \
+            --exclude 'prisma/dev.db*' \
+            --exclude '.next/cache' \
+            --exclude '.next/dev' \
+            --exclude '.next/diagnostics' \
+            --exclude 'logs' \
+            --exclude '.planning' \
+            --exclude 'tasks' \
+            ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:${{ secrets.DEPLOY_PATH }}/
+
+      - name: Install prod deps + reload PM2 on VPS
+        run: |
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} \
+            "DEPLOY_PATH=${{ secrets.DEPLOY_PATH }} bash -s" <<'ENDSSH'
+          set -euo pipefail
+          cd "$DEPLOY_PATH"
+          npm ci --production
+          npx prisma generate
+          if pm2 describe aihealz > /dev/null 2>&1; then
+            pm2 reload ecosystem.aihealz.config.js --update-env
+          else
+            pm2 start ecosystem.aihealz.config.js
+          fi
+          pm2 save
+          ENDSSH
+
+      - name: Smoke test
+        run: |
+          sleep 5
+          curl -fsS --max-time 15 https://aihealz.com/ -o /dev/null \
+            && echo "✅ aihealz.com responded 2xx" \
+            || (echo "❌ smoke test failed" && exit 1)
