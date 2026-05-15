@@ -6,7 +6,7 @@ import prisma from '@/lib/db';
  * Master Sitemap Index → Country sub-sitemaps → City sub-sitemaps
  *
  * Since Google limits sitemaps to 50,000 URLs, we split:
- * - sitemap-index.xml (master)
+ * - sitemap.xml (master index — submit this one to search engines)
  * - sitemap-doctors-{country}.xml
  * - sitemap-conditions-{country}-{state}.xml
  * - sitemap-cities-{country}.xml
@@ -412,7 +412,7 @@ export async function generateAllSitemaps(): Promise<SitemapFile[]> {
     // Log the index itself
     await prisma.sitemapLog.create({
         data: {
-            sitemapName: 'sitemap-index.xml',
+            sitemapName: 'sitemap.xml',
             urlCount: totalUrls,
             generationMs: Date.now() - startTime,
             isIndex: true,

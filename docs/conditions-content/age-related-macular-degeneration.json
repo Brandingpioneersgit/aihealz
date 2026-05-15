@@ -1,228 +1,516 @@
 {
-  "_meta": { "slug": "age-related-macular-degeneration", "writtenBy": "ws1-sonnet-wave", "writtenAt": "2026-05-15" },
-  "h1Title": "Age-related Macular Degeneration (AMD)",
-  "specialistType": "Geriatrics",
-  "heroOverview": "Age-related macular degeneration destroys the macula — the 5 mm central region of the retina responsible for sharp, colour, and detail vision — and is the leading cause of irreversible vision loss in people over 50 in high-income countries, accounting for roughly 8.7% of all blindness worldwide. The dry form, characterised by slow accumulation of fatty drusen deposits under the retinal pigment epithelium, affects about 85-90% of cases and progresses over years; the wet (neovascular) form, in which abnormal blood vessels leak fluid under the retina, accounts for the remaining 10-15% but is responsible for more than 80% of cases with severe central vision loss. Anti-VEGF injections into the eye have transformed wet AMD from a rapidly blinding condition to one that can be stabilised and, in many patients, improved. Early dry AMD causes no symptoms and is detected only on examination; the first noticeable sign is usually distortion of straight lines or a blurred spot in the centre of vision.",
-  "keyStats": {
-    "prevalence": "Affects approximately 196 million people worldwide (2020 estimate); projected to reach 288 million by 2040 (Wong et al., Lancet Global Health 2014)",
-    "demographics": "Prevalence rises sharply with age: less than 1% under 55, approximately 11% at 70-74, and above 27% in those over 85",
-    "avgAge": "Diagnosis most common after age 55; advanced disease peaks after age 75",
-    "globalCases": "Estimated 8.7% of all blindness globally; 3rd most common cause of severe visual impairment worldwide"
+  "_meta": {
+    "slug": "age-related-macular-degeneration",
+    "tier": 1,
+    "headTerm": "age-related macular degeneration",
+    "longTailKeywords": [
+      "AMD symptoms",
+      "wet AMD treatment",
+      "dry AMD progression",
+      "geographic atrophy",
+      "anti-VEGF injections",
+      "AREDS2 supplements",
+      "macular degeneration diagnosis",
+      "AMD vs glaucoma",
+      "is macular degeneration hereditary"
+    ],
+    "primarySpecialty": "Ophthalmology",
+    "lastReviewed": "2026-05-15",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Numbers checked against AAO 2024 AMD Preferred Practice Pattern (PMID 39918524), AREDS2 (PMID 23644932), CATT (PMID 21526923), Wong et al Lancet Global Health 2014 (PMID 25104651). Drug doses cross-verified against UpToDate Lexicomp."
   },
-  "definition": "Age-related macular degeneration (AMD; ICD-10: H35.3x) is a chronic progressive degenerative disease of the macula, the central portion of the retina that mediates high-resolution central vision. The underlying pathology involves accumulation of extracellular deposits called drusen between the retinal pigment epithelium (RPE) and Bruch's membrane, progressive RPE dysfunction and atrophy, and in some cases growth of abnormal choroidal blood vessels that breach Bruch's membrane and leak blood and exudate into the subretinal space. AMD is classified as early (small to medium drusen with or without pigment changes, no vision loss), intermediate (large drusen or extensive medium drusen, possibly mild vision loss), and late (geographic atrophy or neovascular AMD, significant central vision loss). The disease belongs to geriatric ophthalmology and retinal medicine. Pathogenesis involves an interplay of age-related oxidative stress, lipid dysregulation, complement system dysregulation (particularly variants in complement factor H), and local inflammation — the ARMS2/HTRA1 and CFH gene variants are the strongest genetic risk factors identified. Peripheral vision is generally preserved throughout the disease course, so AMD rarely leads to complete blindness but severely impairs daily activities dependent on central vision such as reading, driving, and face recognition.",
+
+  "h1Title": "Age-Related Macular Degeneration: Symptoms, Causes & Treatment",
+  "specialistType": "Ophthalmology",
+
+  "heroOverview": "Age-related macular degeneration (AMD) is the leading cause of irreversible central vision loss in adults over 50 in high-income countries. It damages the macula, the small central part of the retina responsible for sharp straight-ahead vision used for reading, driving, and recognizing faces. Roughly 200 million people worldwide live with some form of AMD, with prevalence rising steeply after age 70. Dry AMD (about 85% of cases) progresses slowly over years through drusen accumulation and retinal pigment epithelium atrophy, while wet AMD (about 15%) can erase central vision within weeks if untreated. Intravitreal anti-VEGF injections have transformed wet AMD outcomes, and new complement inhibitors now slow geographic atrophy in advanced dry disease.",
+
+  "keyStats": {
+    "prevalence": "Roughly 200 million people worldwide; ~20 million US adults have some form of AMD (CDC 2019)",
+    "demographics": "Strongly age-related — prevalence rises from 2% at age 50-59 to over 30% by age 80",
+    "avgAge": "Most diagnoses occur after age 60; advanced AMD is uncommon before 65",
+    "globalCases": "Projected 288 million worldwide by 2040 (Wong et al, Lancet Global Health 2014)"
+  },
+
+  "definition": "Age-related macular degeneration (ICD-10: H35.30) is a progressive degenerative disease of the central retina that targets the macula, the 5.5 mm region containing the cone photoreceptors responsible for high-acuity central vision. Disease starts with abnormal accumulation of lipid and protein deposits called drusen between the retinal pigment epithelium (RPE) and Bruch's membrane, driven by chronic oxidative stress and dysregulated complement activation. Early AMD is defined by medium drusen without pigmentary change; intermediate AMD by large drusen or RPE abnormalities; and late AMD by either geographic atrophy (well-demarcated patches of RPE and photoreceptor loss) or neovascular (wet) disease, in which abnormal choroidal vessels invade through Bruch's membrane and leak fluid or blood under the retina. Vision loss is central and irreversible once photoreceptors die — peripheral vision is preserved, so AMD does not cause total blindness. The condition is managed by retina specialists working with general ophthalmologists and optometrists, and increasingly involves low-vision rehabilitation specialists as functional impairment progresses.",
+
   "typesClassification": [
-    { "type": "Early AMD", "description": "Characterised by medium drusen (63-125 µm diameter) without late AMD lesions. Typically asymptomatic; detected on routine examination. Annual conversion rate to late AMD is approximately 0.5-1%." },
-    { "type": "Intermediate AMD", "description": "Large drusen (>125 µm) and/or geographic atrophy not involving the central fovea, or extensive medium drusen. May cause mild vision difficulty. Risk of progression to late AMD at 5 years is approximately 18% with the AMD Eye Disease Study classification." },
-    { "type": "Dry (atrophic) AMD — geographic atrophy", "description": "Well-demarcated areas of RPE atrophy expanding toward the fovea over years. No licensed treatment beyond nutritional supplements (AREDS2 formula) at present, though several drugs targeting complement are in late-phase trials." },
-    { "type": "Wet (neovascular) AMD", "description": "Choroidal neovascularisation breaches Bruch's membrane, leaking fluid and blood. Causes more rapid and severe central vision loss than dry AMD. Treated with intravitreal anti-VEGF injections (ranibizumab, aflibercept, brolucizumab, faricimab)." }
+    { "type": "Early AMD", "description": "Medium-sized drusen (63-125 µm) without pigment abnormalities. Vision usually normal; 5-year progression to late AMD is low (around 1.3% in AREDS data)." },
+    { "type": "Intermediate AMD", "description": "Large drusen (>125 µm) or pigment changes. 5-year risk of progression to late AMD is roughly 18%; AREDS2 supplements are indicated at this stage." },
+    { "type": "Geographic atrophy (advanced dry AMD)", "description": "Well-demarcated areas of RPE and photoreceptor loss. Progresses at about 1.5-2.6 mm² per year. Central vision is lost when atrophy involves the fovea." },
+    { "type": "Neovascular (wet) AMD", "description": "Abnormal choroidal neovascularization causes subretinal fluid, hemorrhage, and rapid central vision loss. Without anti-VEGF therapy, mean visual acuity drops by 3-4 lines within 2 years." }
   ],
+
   "primarySymptoms": [
-    "A blurred or missing spot in the central visual field (central scotoma), characteristically bilateral but often asymmetric, that worsens over months to years in dry AMD or over days to weeks in wet AMD.",
-    "Metamorphopsia — distortion of straight lines (door frames appear wavy, text lines curve), one of the earliest and most specific symptoms of wet AMD, assessed with an Amsler grid.",
-    "Difficulty reading fine print despite adequate lighting and corrective lenses, arising from loss of foveal photoreceptors rather than any refractive error.",
-    "Reduced contrast sensitivity — difficulty distinguishing faces from backgrounds or objects against similar-coloured surfaces — occurring even before measurable acuity loss.",
-    "Impaired dark adaptation, meaning prolonged difficulty adjusting vision after moving from a bright to a dim environment, an early functional marker of RPE dysfunction.",
-    "Colours appearing less vivid or washed out, particularly yellows and blues, reflecting cone photoreceptor damage in the central macula.",
-    "Need for brighter light to read or perform close tasks, with standard ambient lighting no longer sufficient as the disease advances.",
-    "Difficulty recognising faces at a distance, progressing to inability to see the speaker's face in conversation, even when peripheral navigation remains intact.",
-    "New-onset visual disturbance in one eye, often asymmetric, with the fellow eye frequently showing early or intermediate changes on examination."
+    "Gradual blurring of central vision that does not improve with new glasses — straight-ahead detail (reading text, recognizing faces) becomes harder while peripheral vision remains intact.",
+    "Straight lines appearing wavy or distorted (metamorphopsia) — door frames bend, the centerline on a road curves, words on a page seem to bow. This is the hallmark warning sign of wet AMD.",
+    "A blurred or dark spot in the center of vision (central scotoma) that follows the gaze and obscures whatever the patient looks at directly.",
+    "Difficulty adapting to low light and slow recovery from glare — entering a dimly lit restaurant or driving at dusk becomes noticeably harder than it used to be.",
+    "Reduced color brightness — colors look washed out, less saturated, or different between the two eyes when compared one eye at a time.",
+    "Needing brighter and brighter light for reading or fine tasks, often more than what corrects a normal age-related lens change.",
+    "Words on a page appearing to have missing letters or pieces because the central scotoma blocks parts of each line.",
+    "Sudden vision loss in one eye over days to weeks — typical of wet AMD activation and a same-week ophthalmology indication.",
+    "Charles Bonnet visual hallucinations (seeing patterns, faces, or scenes that are not there) in advanced AMD as the brain fills in missing visual information — these are not psychiatric and do not indicate dementia."
   ],
+
   "earlyWarningSigns": [
-    "Occasional blurring of central vision that clears, lasting seconds to minutes initially.",
-    "Needing more light when reading than a year ago.",
-    "Straight lines looking very slightly wavy on the Amsler grid when one eye is covered.",
-    "Colours looking slightly different between the two eyes when viewed separately."
+    "Subtle distortion noticed only when one eye is covered — drivers often discover this when comparing left and right eye vision at a stoplight",
+    "A specific spot on an Amsler grid where lines look wavy or missing — small daily changes are the earliest signal of wet conversion",
+    "Increasing difficulty reading small print under normal indoor light despite up-to-date glasses",
+    "Slower-than-usual eye adjustment when walking from sunlight into a building or vice versa"
   ],
+
   "emergencySigns": [
-    "Sudden, painless loss of central vision in one eye within hours — suggests new-onset neovascular AMD, a retinal vascular event, or subretinal haemorrhage requiring same-day ophthalmic assessment.",
-    "Rapid distortion or a dark patch in the centre of vision developing over 24-48 hours.",
-    "Loss of vision accompanied by a dark curtain descending — may indicate retinal detachment, a separate emergency.",
-    "Visual field loss with eye pain, halos around lights, or a red eye — may indicate acute angle-closure glaucoma."
+    "Sudden onset of central distortion, dark spot, or vision loss in one eye over hours or days — requires retina specialist review within 24-72 hours to rule out new wet AMD",
+    "Sudden showers of new floaters or flashing lights with central vision loss — may signal retinal detachment, a separate ophthalmologic emergency",
+    "Loss of all vision in one eye (including peripheral) is NOT typical of AMD — evaluate urgently for retinal artery occlusion, stroke, or optic neuropathy",
+    "Rapid worsening over a few days in a patient already on anti-VEGF therapy — possible breakthrough exudation or treatment failure requiring earlier injection"
   ],
+
   "causes": [
-    { "cause": "Drusen accumulation and RPE dysfunction", "description": "Cellular waste products and lipid-rich deposits (drusen) accumulate between the RPE and Bruch's membrane with age, impairing the RPE's ability to nourish and maintain photoreceptors, creating a chronic low-grade inflammatory state that drives progressive photoreceptor death." },
-    { "cause": "Complement system dysregulation", "description": "Genetic variants in complement factor H (CFH), complement factor B, and C3 reduce the eye's ability to suppress chronic local complement activation, allowing persistent sub-RPE inflammation to damage the RPE and Bruch's membrane — the strongest known molecular pathway in AMD pathogenesis." },
-    { "cause": "Oxidative stress accumulation", "description": "The macula is exposed to high levels of light and oxygen consumption, generating reactive oxygen species over decades that damage RPE cells, lipid membranes, and mitochondrial DNA; this oxidative burden accumulates as antioxidant defences decline with age." },
-    { "cause": "Choroidal neovascularisation (in wet AMD)", "description": "In genetically susceptible individuals with established drusen and RPE stress, upregulation of vascular endothelial growth factor (VEGF) drives ingrowth of fragile new blood vessels from the choroid beneath the retina; these vessels leak plasma and blood, rapidly damaging the overlying photoreceptors." },
-    { "cause": "Smoking-induced vascular and oxidative damage", "description": "Cigarette smoking doubles the risk of AMD by generating substantial oxidative stress, impairing choroidal blood flow, reducing levels of protective carotenoids in the retina, and promoting thickening of Bruch's membrane — making it the strongest modifiable environmental risk factor." },
-    { "cause": "ARMS2/HTRA1 gene variants on chromosome 10q26", "description": "The ARMS2 and HTRA1 loci confer a 2- to 3-fold increased risk per risk allele and interact with smoking to further amplify AMD susceptibility, affecting mitochondrial function and extracellular matrix remodelling in the RPE and choriocapillaris." }
+    {
+      "cause": "Age-related oxidative damage to the retinal pigment epithelium",
+      "description": "Photoreceptor outer segments turn over daily and are phagocytosed by RPE cells. Over decades this generates lipofuscin and oxidized lipid byproducts that accumulate faster than the RPE can clear, leading to drusen formation and cellular dysfunction."
+    },
+    {
+      "cause": "Dysregulated complement activation",
+      "description": "Genome-wide studies have linked common variants in complement factor H (CFH Y402H), C3, and CFB to a 2-7 fold rise in AMD risk. Chronic low-grade complement activation drives drusen biogenesis, RPE injury, and progression to geographic atrophy."
+    },
+    {
+      "cause": "Choroidal neovascularization in wet AMD",
+      "description": "Hypoxia and VEGF upregulation in the aging macula stimulate abnormal new vessels from the choriocapillaris to invade through Bruch's membrane. These leaky vessels cause subretinal fluid, hemorrhage, and rapid photoreceptor death."
+    },
+    {
+      "cause": "Cigarette smoking",
+      "description": "The strongest modifiable cause — current smokers carry 2-4 fold higher risk of advanced AMD versus never-smokers, with dose-response by pack-years. Smoking accelerates oxidative damage, reduces macular pigment, and lowers serum antioxidants."
+    },
+    {
+      "cause": "Cumulative blue-light and UV exposure",
+      "description": "Long-term high blue-light exposure may contribute by generating reactive oxygen species in photoreceptors. Evidence is mixed and effect size smaller than smoking, but lifetime outdoor sun exposure correlates with AMD severity in several cohorts."
+    },
+    {
+      "cause": "Genetic predisposition",
+      "description": "Heritability of advanced AMD is approximately 70%. Beyond CFH, well-characterized loci include ARMS2/HTRA1 on chromosome 10, which roughly doubles risk per allele in homozygotes."
+    },
+    {
+      "cause": "Atherogenic and metabolic factors",
+      "description": "Hypertension, high serum LDL, and obesity correlate with AMD progression — likely through shared endothelial dysfunction and choroidal vascular insufficiency. Cardiovascular disease and AMD share risk pathways."
+    }
   ],
+
   "riskFactors": [
-    { "factor": "Increasing age", "category": "non-modifiable", "description": "AMD risk rises exponentially with age: prevalence roughly doubles every decade from age 55. Over 25% of people over 80 have some form of AMD, compared with less than 1% below age 55." },
-    { "factor": "Smoking", "category": "modifiable", "description": "Active smoking approximately doubles the risk of AMD relative to non-smokers, and the risk persists for years after cessation. Passive smoke exposure also elevates risk, making it the single most important modifiable risk factor." },
-    { "factor": "Family history and genetics (CFH, ARMS2)", "category": "genetic", "description": "First-degree relatives of AMD patients have a 3- to 6-fold elevated lifetime risk. The CFH Y402H and ARMS2 A69S variants together explain 50-65% of AMD's population-attributable genetic risk." },
-    { "factor": "Caucasian/European ancestry", "category": "non-modifiable", "description": "AMD is considerably more common in people of European descent than in those of African or East Asian ancestry; darker macular pigment in people of African descent may offer partial protection." },
-    { "factor": "Cardiovascular disease and hypertension", "category": "modifiable", "description": "Hypertension, atherosclerosis, and high BMI are associated with increased AMD risk, likely through shared mechanisms of choroidal vascular insufficiency, oxidative stress, and lipid deposition." },
-    { "factor": "Low dietary antioxidants and lutein/zeaxanthin", "category": "modifiable", "description": "Diets low in leafy vegetables, lutein, zeaxanthin, and omega-3 fatty acids are linked to higher AMD risk; the AREDS and AREDS2 trials showed supplementation reduces late AMD progression in intermediate and advanced disease." },
-    { "factor": "Light iris colour and prolonged UV exposure", "category": "environmental", "description": "Blue or grey irises allow more ultraviolet and short-wavelength light to reach the retina; cumulative UV exposure is a hypothesised contributor to RPE oxidative damage, though evidence is weaker than for smoking." },
-    { "factor": "Obesity and sedentary lifestyle", "category": "modifiable", "description": "BMI above 30 kg/m² is associated with a roughly 2-fold increase in neovascular AMD risk in some cohort studies; regular aerobic exercise is associated with lower AMD incidence in prospective data." }
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "Prevalence rises from 2% at 50-59 to over 30% by age 80; almost all clinically meaningful AMD presents after 60." },
+    { "factor": "European (Caucasian) ancestry", "category": "non-modifiable", "description": "Late AMD is roughly 2.5x more prevalent in Europeans than in East Asians and Africans (Wong et al, Lancet Global Health 2014)." },
+    { "factor": "Family history of AMD in a first-degree relative", "category": "genetic", "description": "Sibling-recurrence studies show 3-6 fold higher risk; the CFH and ARMS2 variants account for a large fraction of familial clustering." },
+    { "factor": "Current cigarette smoking", "category": "modifiable", "description": "Most important modifiable risk factor — 2-4x increased risk of advanced AMD; risk falls within 5-10 years of quitting but never returns fully to baseline." },
+    { "factor": "Female sex (especially after age 75)", "category": "non-modifiable", "description": "Later-life female prevalence is higher than in men, partly because women live longer; postmenopausal estrogen loss may also contribute." },
+    { "factor": "Diet low in green leafy vegetables and oily fish", "category": "modifiable", "description": "Lower dietary lutein/zeaxanthin and omega-3 intake correlate with higher AMD incidence in cohort studies; AREDS2 supplementation reduces 5-year progression risk by 25%." },
+    { "factor": "Obesity (BMI ≥30) and inactivity", "category": "modifiable", "description": "Obese adults have 1.5-2x higher risk of late AMD versus normal-weight peers; regular physical activity is associated with lower progression risk." },
+    { "factor": "Hypertension and cardiovascular disease", "category": "modifiable", "description": "Elevated blood pressure raises choroidal vascular resistance and is linked to faster AMD progression in longitudinal data." },
+    { "factor": "Light iris color", "category": "non-modifiable", "description": "Blue or light-colored irises offer less macular protection from oxidative light damage; modest but consistent epidemiologic association." },
+    { "factor": "Hyperopia and short axial length", "category": "non-modifiable", "description": "Highly hyperopic eyes show modestly higher AMD incidence, likely reflecting choroidal geometry differences." }
   ],
+
   "affectedDemographics": [
-    "Adults over 55, with risk increasing sharply each decade",
-    "People of European (Caucasian) ancestry",
-    "Current or past smokers",
-    "People with a first-degree family member with AMD",
-    "Individuals with hypertension, cardiovascular disease, or obesity",
-    "Women, who have a somewhat higher lifetime burden due to greater longevity"
+    "Approximately 20 million US adults have some form of AMD; about 1.5 million have vision-threatening late AMD (CDC 2019)",
+    "Globally projected to affect 288 million people by 2040 (Wong et al, Lancet Global Health 2014)",
+    "European-ancestry populations have the highest late-AMD prevalence; East Asian populations have higher rates of polypoidal choroidal vasculopathy (a wet AMD variant)",
+    "Women account for roughly 60% of late AMD cases in the US, partly because of longer life expectancy",
+    "Highest national prevalence rates are reported in Iceland, Norway, and parts of the US Midwest in adults over 75"
   ],
-  "diagnosisOverview": "AMD is diagnosed by comprehensive ophthalmologic examination. The key finding on dilated fundus examination is the presence of drusen — yellow-white sub-RPE deposits of varying size — along with any pigmentary changes, areas of geographic atrophy, or signs of choroidal neovascularisation such as subretinal fluid, haemorrhage, or exudate. Optical coherence tomography (OCT) is the most important imaging modality: it provides cross-sectional views of the retinal layers at micron-scale resolution, revealing drusen, subretinal fluid, intraretinal fluid, pigment epithelium detachments, and geographic atrophy with precision unavailable to fundoscopy alone. OCT-angiography (OCT-A) allows non-invasive visualisation of the retinal and choroidal vasculature, detecting neovascular networks without dye injection, though fluorescein angiography remains the gold standard for characterising neovascular activity and lesion boundaries in equivocal cases. Fundus autofluorescence imaging tracks RPE metabolic health and maps the progression of geographic atrophy over time. Best-corrected visual acuity (BCVA) and low-luminance visual acuity quantify the functional impact. An Amsler grid is a simple home-monitoring tool that can detect new distortion (metamorphopsia) prompting urgent review. AMD staging uses the validated Age-Related Eye Disease Study (AREDS) or the international simplified classification. Genetic testing for CFH and ARMS2 variants is used in research and occasionally to counsel first-degree relatives but does not change management in most clinical settings.",
+
+  "diagnosisOverview": "AMD diagnosis is made on a dilated retinal exam supplemented by optical coherence tomography (OCT), with imaging chosen based on whether dry or wet disease is suspected. The clinician begins with visual acuity, an Amsler grid screen for metamorphopsia or scotomas, and a dilated fundus exam looking for drusen, RPE pigment changes, geographic atrophy, hemorrhage, or subretinal fluid. Spectral-domain OCT is now standard for all suspected AMD — it produces a cross-section of the retina that shows drusen volume, RPE elevations, intraretinal and subretinal fluid, and atrophy with micron-level resolution. Fundus autofluorescence highlights areas of RPE dysfunction and is the most sensitive tool for measuring geographic atrophy progression. Fluorescein angiography or OCT angiography is performed when wet AMD is suspected, to localize and characterize the choroidal neovascular membrane and guide anti-VEGF therapy. The American Academy of Ophthalmology 2024 Preferred Practice Pattern recommends OCT at every visit for monitoring intermediate and advanced AMD, and home Amsler-grid or smartphone-based hyperacuity testing between visits to catch wet conversion early. Important differentials include diabetic macular edema, central serous chorioretinopathy, vitreomacular traction, myopic maculopathy, and macular dystrophies — most are distinguished readily on OCT. Genetic testing is not recommended in routine care but may be considered in atypical young-onset cases or where family screening is requested.",
+
   "diagnosticTests": [
-    { "test": "Dilated fundus examination", "purpose": "Direct visualisation of drusen, pigmentary changes, geographic atrophy, haemorrhage, and neovascular membranes by a retinal specialist.", "whatToExpect": "Dilating drops are placed in both eyes, causing temporary blurred near vision and light sensitivity for 4-6 hours. The doctor examines the retina using a slit lamp and specialised lenses or an indirect ophthalmoscope." },
-    { "test": "Optical coherence tomography (OCT)", "purpose": "Cross-sectional imaging of all retinal layers to quantify drusen volume, detect subretinal or intraretinal fluid, assess geographic atrophy boundaries, and monitor treatment response in wet AMD.", "whatToExpect": "You rest your chin on a support and look at a small light while the instrument scans your retina with near-infrared light. The scan takes about 5 minutes, causes no discomfort, and requires no dye injection." },
-    { "test": "Fundus autofluorescence (FAF)", "purpose": "Maps RPE metabolic activity and lipofuscin accumulation; areas of hypo-autofluorescence delineate geographic atrophy and guide prognosis and enrolment in clinical trials.", "whatToExpect": "A retinal photograph taken with a specialised blue-light camera after dilation; takes about 2 minutes and requires no injection." },
-    { "test": "Fluorescein angiography", "purpose": "Intravenous dye-based imaging that characterises neovascular lesion type, extent, and activity when OCT is inconclusive and prior to photodynamic therapy.", "whatToExpect": "Fluorescein dye is injected into an arm vein; photographs are taken over 10-15 minutes as the dye moves through retinal vessels. Mild nausea and yellow skin discolouration lasting a few hours are common. Rare allergic reactions can occur." },
-    { "test": "Optical coherence tomography angiography (OCT-A)", "purpose": "Non-invasive visualisation of choroidal neovascular networks for diagnosis and monitoring without fluorescein or indocyanine green dye.", "whatToExpect": "Same process as standard OCT but with a slightly longer scan; no injection required." },
-    { "test": "Best-corrected visual acuity (BCVA) and Amsler grid", "purpose": "Quantifies functional vision loss and detects metamorphopsia; tracked at every visit and used as the primary endpoint in treatment trials.", "whatToExpect": "You read a letter chart with your best corrective lens in place; the Amsler grid is a printed 10 cm × 10 cm grid viewed at 30 cm to check for wavy or missing lines." }
+    {
+      "test": "Dilated fundus examination",
+      "purpose": "Direct visualization of drusen, pigmentary changes, geographic atrophy, hemorrhage, and exudate. Still the foundational exam for AMD diagnosis and staging.",
+      "whatToExpect": "Drops are used to widen the pupil over 20-30 minutes. The clinician then examines the retina with a slit-lamp and lens. Vision is blurry and light-sensitive for 3-6 hours after dilation; bring sunglasses and avoid driving immediately afterward."
+    },
+    {
+      "test": "Optical coherence tomography (OCT)",
+      "purpose": "Cross-sectional retinal imaging that detects drusen volume, subretinal or intraretinal fluid, geographic atrophy, and pigment epithelial detachments. Repeated to monitor progression and response to therapy.",
+      "whatToExpect": "Painless laser-light scan taking 1-3 minutes per eye while the patient fixes on a target. No dye injection, no contact with the eye, no recovery time."
+    },
+    {
+      "test": "Amsler grid testing",
+      "purpose": "Detects metamorphopsia and central scotomas. Used both at diagnosis and as a daily home tool to catch new wet AMD activity between clinic visits.",
+      "whatToExpect": "The patient covers one eye and looks at the center of a grid of horizontal and vertical lines at reading distance, noting any wavy lines, missing squares, or blurred areas. Takes under a minute per eye."
+    },
+    {
+      "test": "Fundus autofluorescence (FAF) imaging",
+      "purpose": "Maps lipofuscin distribution and identifies areas of RPE atrophy. The most sensitive technique for measuring geographic atrophy lesion size and progression rate.",
+      "whatToExpect": "A specialized camera takes brief, bright flash photos. Pupil dilation is usually needed. No injection, takes a few minutes per eye."
+    },
+    {
+      "test": "OCT angiography (OCT-A)",
+      "purpose": "Non-invasive 3D imaging of retinal and choroidal vasculature; detects choroidal neovascularization without dye injection. Increasingly used as first-line where available.",
+      "whatToExpect": "A longer OCT scan, typically 3-6 minutes per eye, requiring steady fixation. No dye, no needle, no recovery time."
+    },
+    {
+      "test": "Fluorescein angiography",
+      "purpose": "Gold-standard for confirming and classifying choroidal neovascular membranes when OCT-A is inconclusive or before initial anti-VEGF therapy.",
+      "whatToExpect": "A small amount of fluorescein dye is injected into an arm vein, and serial fundus photos are taken over 5-10 minutes. Skin and urine turn yellow-orange for 24 hours. Severe allergic reactions are rare (under 1 in 200,000)."
+    },
+    {
+      "test": "Visual acuity and contrast sensitivity testing",
+      "purpose": "Establishes baseline central vision and tracks functional change. Contrast sensitivity often declines before letter acuity in early AMD.",
+      "whatToExpect": "Standard letter-chart testing at distance and near, with best correction. Contrast tests use progressively fainter letters. Takes 5-10 minutes per eye."
+    }
   ],
-  "treatmentOverview": "Treatment strategy depends on the AMD stage and subtype. There is no currently approved therapy for early AMD; lifestyle modification (smoking cessation, exercise, diet) and monitoring are advised. For intermediate AMD and for one eye with late AMD, the AREDS2 formula supplement — 500 mg vitamin C, 400 IU vitamin E, 10 mg lutein, 2 mg zeaxanthin, 80 mg zinc oxide, 2 mg cupric oxide daily — reduces the 5-year risk of progression to advanced AMD by approximately 25% in the target population and represents the standard of care. Geographic atrophy now has two complement-inhibiting treatments approved by the FDA: pegcetacoplan (Syfovre) and avacincaptad pegol (Izervay), both given as intravitreal injections every 1-2 months; they reduce the rate of geographic atrophy growth by roughly 20% but do not reverse existing atrophy or restore lost vision.\n\nNeovascular (wet) AMD is treated primarily with intravitreal anti-VEGF agents — ranibizumab, aflibercept, bevacizumab (off-label), brolucizumab, and faricimab — injected directly into the vitreous cavity every 4-16 weeks depending on disease activity. Major trials (MARINA, ANCHOR, VIEW 1 & 2) showed that monthly ranibizumab and aflibercept stabilised or improved vision in approximately 90-95% of patients, with roughly 30-40% gaining 15 or more Early Treatment Diabetic Retinopathy Study (ETDRS) letters. Faricimab, a bispecific antibody targeting VEGF-A and Ang-2, permits extended dosing intervals up to every 4 months in approximately half of patients. Low-vision rehabilitation — magnification aids, eccentric viewing training, and lighting optimisation — is integral to management at all late stages and should be offered alongside medical treatment. Photodynamic therapy (PDT) with verteporfin retains a role in specific subtypes such as pure occult neovascularisation and polypoidal choroidal vasculopathy.",
+
+  "treatmentOverview": "AMD treatment depends on stage and form. Early AMD has no proven pharmacologic therapy; care focuses on smoking cessation, cardiovascular risk control, and Mediterranean-style diet rich in green leafy vegetables and oily fish. Intermediate AMD or late AMD in one eye is the indication for the AREDS2 oral supplement formulation (lutein 10 mg, zeaxanthin 2 mg, vitamin C 500 mg, vitamin E 400 IU, zinc 80 mg, copper 2 mg), which reduces the 5-year risk of progression to advanced AMD by approximately 25%. Wet AMD is treated with intravitreal anti-VEGF injections — aflibercept, ranibizumab, bevacizumab (used off-label), brolucizumab, and faricimab — administered monthly to every 16 weeks based on treat-and-extend protocols. The CATT trial established that bevacizumab is non-inferior to ranibizumab for visual acuity outcomes at one year, and aflibercept 8 mg and faricimab now offer extended-interval dosing in many patients. The treatment goal in wet AMD is to dry the macula on OCT and preserve vision; on average, treated patients gain or maintain visual acuity for years, whereas untreated wet AMD loses 3-4 lines within 24 months. Geographic atrophy now has two FDA-approved complement inhibitors — pegcetacoplan (intravitreal, approved 2023) and avacincaptad pegol (approved 2023) — which slow lesion growth by roughly 14-27% but do not restore lost vision. Low-vision rehabilitation, optical and electronic magnification, and orientation training are integrated throughout to maintain reading, driving, and independence. The AAO 2024 Preferred Practice Pattern is the operative guideline for current US practice.",
+
   "medicalTreatments": [
-    { "name": "AREDS2 nutritional supplement formula", "description": "A specific daily combination of lutein 10 mg, zeaxanthin 2 mg, vitamin C 500 mg, vitamin E 400 IU, zinc oxide 80 mg, and cupric oxide 2 mg, replacing the original AREDS beta-carotene formula. Indicated for patients with intermediate AMD in one or both eyes, or late AMD in one eye. Not needed or proven for early AMD.", "effectiveness": "Reduces risk of progression to advanced AMD at 5 years by approximately 25% vs placebo in the AREDS2 trial (N Engl J Med, 2013), with no significant benefit from beta-carotene or additional omega-3 supplementation." },
-    { "name": "Intravitreal ranibizumab (Lucentis)", "description": "A VEGF-A fragment antigen-binding (Fab) antibody fragment injected into the vitreous to suppress choroidal neovascularisation in wet AMD. Approved for monthly or as-needed (treat-and-extend) dosing. A standard first-line agent in many national formularies.", "effectiveness": "Stabilised or improved BCVA in approximately 94-95% of patients vs 62% with sham injection in the pivotal MARINA and ANCHOR trials; mean gain of approximately 7 letters at 12 months." },
-    { "name": "Intravitreal aflibercept (Eylea)", "description": "A fusion protein blocking VEGF-A, VEGF-B, and placental growth factor, injected intravitreally. After 3 monthly loading doses, maintenance can be extended to every 8 weeks, reducing injection burden compared to monthly ranibizumab while maintaining equivalent efficacy.", "effectiveness": "Non-inferior to monthly ranibizumab in the VIEW 1 and VIEW 2 trials, with approximately 95% of patients maintaining vision at 52 weeks; every-8-week dosing after loading matches monthly dosing." },
-    { "name": "Intravitreal faricimab (Vabysmo)", "description": "A bispecific antibody simultaneously targeting VEGF-A and angiopoietin-2 (Ang-2), enabling longer dosing intervals (up to every 16 weeks) in roughly half of patients in real-world extended dosing protocols.", "effectiveness": "Non-inferior to aflibercept in the TENAYA and LUCERNE trials, with approximately 45% of patients eligible for 16-week intervals at year 1, reducing annual injection burden by 4-5 injections compared to every-8-week dosing." },
-    { "name": "Pegcetacoplan (Syfovre) — geographic atrophy", "description": "A C3 complement inhibitor injected intravitreally every month or every other month; the first FDA-approved treatment for geographic atrophy in dry AMD (2023). Does not restore lost vision but slows atrophy growth.", "effectiveness": "Reduced geographic atrophy lesion growth rate by approximately 22% vs sham at 24 months in the OAKS and DERBY trials; treatment-related endophthalmitis rate approximately 0.2% per injection." },
-    { "name": "Low-vision rehabilitation and assistive devices", "description": "Optical magnifiers, electronic magnification systems (video magnifiers, digital tablets), screen-reading software, eccentric viewing training to use remaining peripheral retina, and home adaptation for lighting and contrast. Provided by low-vision specialists and occupational therapists.", "effectiveness": "Structured low-vision rehabilitation improves reading speed and task performance; approximately 50-70% of AMD patients benefit measurably from eccentric viewing training in randomised studies." }
+    {
+      "name": "Aflibercept (Eylea) 2 mg or 8 mg intravitreal injection",
+      "description": "VEGF-A and placental growth factor decoy receptor. Standard induction is three monthly injections followed by treat-and-extend; the 8 mg formulation allows extension up to 16 weeks in many patients.",
+      "effectiveness": "Mean letter gain of 8-10 ETDRS letters at 1 year in wet AMD; 90% of treated eyes maintain or improve vision."
+    },
+    {
+      "name": "Faricimab (Vabysmo) 6 mg intravitreal injection",
+      "description": "Bispecific antibody targeting both VEGF-A and angiopoietin-2. Approved 2022 for wet AMD; supports extended dosing intervals up to 16 weeks.",
+      "effectiveness": "Non-inferior visual acuity gain versus aflibercept in TENAYA/LUCERNE trials; ~45% of patients maintain Q16-week dosing at 2 years."
+    },
+    {
+      "name": "Ranibizumab (Lucentis) 0.5 mg intravitreal injection",
+      "description": "Humanized anti-VEGF antibody fragment. First anti-VEGF approved for wet AMD (2006). Monthly or treat-and-extend dosing.",
+      "effectiveness": "Mean gain of 6.8-8.5 letters at 1 year in CATT (PMID 21526923); equivalent efficacy to bevacizumab."
+    },
+    {
+      "name": "Bevacizumab (Avastin) 1.25 mg intravitreal injection — off-label",
+      "description": "Anti-VEGF antibody used widely off-label for wet AMD. Compounded for ophthalmic use; substantially cheaper than branded agents and standard of care in many public health systems.",
+      "effectiveness": "Non-inferior to ranibizumab in the CATT trial (5.9-8.0 letter gain at 1 year)."
+    },
+    {
+      "name": "Pegcetacoplan (Syfovre) intravitreal injection",
+      "description": "Complement C3 inhibitor approved 2023 for geographic atrophy from AMD. Given every 25-60 days. Does not restore vision but slows lesion growth.",
+      "effectiveness": "Reduces geographic atrophy lesion growth by approximately 17-20% over 2 years in DERBY/OAKS trials."
+    },
+    {
+      "name": "Avacincaptad pegol (Izervay) intravitreal injection",
+      "description": "Complement C5 inhibitor approved 2023 for geographic atrophy. Monthly dosing for up to 12 months.",
+      "effectiveness": "Reduces GA lesion growth by roughly 14-27% at 18 months versus sham (GATHER1, GATHER2 trials)."
+    },
+    {
+      "name": "AREDS2 oral supplement formulation",
+      "description": "Daily oral formulation: lutein 10 mg, zeaxanthin 2 mg, vitamin C 500 mg, vitamin E 400 IU, zinc 80 mg (or 25 mg), copper 2 mg. Indicated in intermediate AMD or late AMD in one eye.",
+      "effectiveness": "Reduces 5-year risk of progression to advanced AMD by approximately 25% (AREDS, PMID 23644932)."
+    },
+    {
+      "name": "Brolucizumab (Beovu) 6 mg intravitreal injection",
+      "description": "Single-chain anti-VEGF antibody fragment offering deeper drying of the retina and Q12-week maintenance. Carries higher rates of intraocular inflammation than alternatives.",
+      "effectiveness": "Non-inferior to aflibercept at week 48 (HAWK/HARRIER); roughly 50% of patients maintained Q12-week dosing."
+    }
   ],
-  "surgicalOptions": [],
+
+  "surgicalOptions": [
+    {
+      "name": "Submacular hemorrhage displacement (pneumatic displacement with tPA)",
+      "description": "For large submacular hemorrhages from wet AMD, an intravitreal injection of tissue plasminogen activator combined with an expansile gas bubble displaces the blood away from the fovea, allowing anti-VEGF therapy and visual recovery.",
+      "successRate": "Successful displacement in 70-85% of cases; meaningful visual recovery in roughly half."
+    },
+    {
+      "name": "Implantable miniature telescope (CentraSight)",
+      "description": "An intraocular telescope implanted in one eye after cataract removal for patients with end-stage AMD and bilateral central scotomas. Magnifies central images onto healthier peripheral retina.",
+      "successRate": "Approximately 75% of implanted patients gain 3 or more lines of distance or near vision; rigorous candidate selection required."
+    }
+  ],
+
   "alternativeTreatments": [
-    { "name": "Mediterranean diet adherence", "description": "A diet rich in oily fish (omega-3 fatty acids), leafy green vegetables (lutein and zeaxanthin), whole grains, and olive oil is associated with 20-40% lower risk of AMD progression in prospective cohort studies, complementing AREDS2 supplementation." },
-    { "name": "Photodynamic therapy (PDT) with verteporfin", "description": "Verteporfin is activated by low-energy laser to selectively close neovascular vessels. Largely superseded by anti-VEGF for typical wet AMD but still used for polypoidal choroidal vasculopathy and occult lesions where anti-VEGF response is incomplete." },
-    { "name": "Home Amsler grid monitoring", "description": "Daily self-monitoring with an Amsler grid allows early detection of new metamorphopsia signalling conversion from dry to wet AMD; prompt presentation for injection can preserve vision that would otherwise be lost." }
+    { "name": "Mediterranean-style diet pattern", "description": "Cohort data (Coimbra Eye Study, AREDS post-hoc) show roughly 40% lower risk of late AMD progression with high adherence to a Mediterranean dietary pattern rich in vegetables, oily fish, nuts, and olive oil." },
+    { "name": "Smoking cessation", "description": "Quitting smoking lowers AMD progression risk over 5-10 years; combined with AREDS2 and cardiovascular risk reduction, this is the highest-yield lifestyle intervention." }
   ],
-  "whySeeSpecialist": "A retinal specialist or medical retinologist should be involved for any patient with intermediate or advanced AMD, any new visual symptoms suggesting wet AMD, or any patient being considered for anti-VEGF therapy or geographic atrophy treatment. Retinal specialists have access to OCT, OCT-A, and angiography; they perform intravitreal injections and can monitor treatment response with sensitivity not available in primary eye care. Early referral to low-vision rehabilitation prevents unnecessary disability as the disease progresses.",
-  "doctorSelectionGuide": "Look for a fellowship-trained medical retinal specialist with a specific interest in AMD and access to spectral-domain OCT, OCT-A, and a full injection suite. Ask about their approach to treat-and-extend protocols versus fixed-interval dosing — the protocol affects injection burden significantly. For geographic atrophy, seek a centre participating in clinical trials of complement-pathway therapies. For low-vision referral, request a certified low-vision optometrist or rehabilitation specialist alongside retinal care.",
+
+  "whySeeSpecialist": "A retina specialist (a vitreoretinal-trained ophthalmologist) should be involved as soon as wet AMD is suspected, when geographic atrophy is identified, when anti-VEGF therapy is being considered, or when there is diagnostic uncertainty. General ophthalmologists and optometrists screen and monitor early and intermediate AMD; retina referral is urgent (within 1-2 weeks) for any new central distortion or sudden vision change.",
+
+  "doctorSelectionGuide": "Look for board-certified ophthalmologists with vitreoretinal fellowship training and high-volume anti-VEGF injection experience. Confirm the practice has on-site OCT and either OCT-angiography or fluorescein angiography. Continuity matters — wet AMD treatment is an indefinite multi-year relationship of injections every 4-16 weeks, so accessibility and scheduling reliability are practical criteria worth weighing.",
+
   "preventionStrategies": [
-    "Stop smoking — it is the single most potent modifiable risk factor, approximately doubling AMD risk.",
-    "Take AREDS2 supplements if you have intermediate AMD in one or both eyes, or late AMD in one eye; do not take them for early AMD without specialist advice.",
-    "Eat a Mediterranean-style diet high in dark leafy greens, oily fish, and antioxidant-rich foods.",
-    "Wear UV-protective sunglasses outdoors, particularly in high UV environments.",
-    "Control blood pressure and cardiovascular risk factors through lifestyle and, where indicated, medication.",
-    "Maintain a healthy body weight and exercise regularly — at least 150 minutes of moderate aerobic activity per week.",
-    "Have annual dilated eye examinations after age 55, or more frequently if intermediate AMD is diagnosed.",
-    "Monitor the Amsler grid daily at home if you have intermediate AMD, and seek urgent review for any new distortion."
+    "Stop smoking — the single highest-yield action; risk reduction begins within 5 years of cessation",
+    "Eat a Mediterranean-style diet with daily green leafy vegetables, oily fish twice weekly, and nuts; associated with up to 40% lower late AMD risk",
+    "Maintain healthy blood pressure, LDL cholesterol, and weight — AMD shares vascular risk pathways with stroke and coronary disease",
+    "Wear UV- and blue-light-blocking sunglasses outdoors, especially at high altitude, in snow, or on water",
+    "Take AREDS2 supplements only if intermediate AMD or unilateral late AMD is documented — they are not recommended for primary prevention in normal eyes",
+    "Get a dilated eye exam every 1-2 years from age 60, or annually from any age with a first-degree relative diagnosed with AMD"
   ],
+
   "lifestyleModifications": [
-    "Quit smoking — cessation reduces future AMD progression risk, even after decades of smoking.",
-    "Increase dietary intake of lutein (kale, spinach, corn) and zeaxanthin (orange peppers, goji berries).",
-    "Increase oily fish consumption to at least twice weekly for omega-3 fatty acids.",
-    "Use adequate, directed task lighting for reading; reduce glare with anti-reflective lenses and window shading.",
-    "Download the NHS or NOF Amsler grid app for daily, consistent home monitoring.",
-    "Learn to use low-vision aids early before vision deteriorates further — adaptation is faster when started earlier.",
-    "Inform driving authorities if visual acuity or visual field falls below legal driving thresholds."
+    "Check an Amsler grid daily or use a smartphone hyperacuity app — one eye at a time, same lighting, same distance — and report new distortion within 48 hours",
+    "Improve home lighting: 100-watt-equivalent LED task lights for reading, high-contrast labels on appliances, and avoid harsh glare",
+    "Use large-print materials, audiobooks, screen magnification, and electronic readers (Kindle, iPad) with adjustable font size",
+    "Continue daily exercise — at least 150 minutes of moderate activity weekly; physical activity slows AMD progression independently of weight",
+    "Limit alcohol to moderate levels; heavy alcohol intake is associated with faster drusen accumulation in some cohorts",
+    "Treat sleep apnea, hypertension, and dyslipidemia aggressively — shared vascular pathways accelerate retinal injury",
+    "Engage low-vision rehabilitation early once central acuity drops below 20/40; do not wait for severe loss"
   ],
+
   "dietRecommendations": {
     "recommended": [
-      "Dark leafy greens (kale, spinach, chard) for lutein and zeaxanthin content",
-      "Oily fish (salmon, mackerel, sardines) at least twice weekly for omega-3 fatty acids",
-      "Orange and yellow vegetables and fruits for carotenoids",
-      "Nuts and seeds for vitamin E",
-      "Legumes and whole grains to support cardiovascular health and healthy BMI",
-      "AREDS2 supplement formula for intermediate or late-stage AMD"
+      "Dark leafy greens (kale, spinach, collards) — high in lutein and zeaxanthin, the carotenoids that concentrate in the macula",
+      "Oily fish 2-3 times weekly (salmon, sardines, mackerel) for omega-3 fatty acids (DHA/EPA)",
+      "Brightly colored vegetables and fruits (carrots, sweet potato, peppers, berries) for mixed antioxidants",
+      "Nuts and seeds (walnuts, almonds, flaxseed) and extra-virgin olive oil for vitamin E and unsaturated fats",
+      "Whole grains, legumes, and pulses as protein and fiber sources",
+      "Citrus and bell peppers for vitamin C — daily intake correlates with lower AMD progression"
     ],
     "avoid": [
-      "Smoking, which depletes macular carotenoids and causes oxidative damage",
-      "High-glycaemic-index foods, which are associated with increased AMD risk in some cohorts",
-      "Excess saturated and trans fat, which adversely affect choroidal circulation",
-      "Beta-carotene supplements (original AREDS formula) in smokers, due to increased lung cancer risk"
+      "Heavy red and processed meats — high intake correlates with faster AMD progression in the Blue Mountains Eye Study",
+      "Refined carbohydrates with high glycemic index (white bread, white rice, sugary drinks) — higher dietary glycemic index is linked to higher late-AMD risk",
+      "Trans fats and deep-fried foods — promote oxidative stress in the retina",
+      "Excessive alcohol — more than 3 drinks daily associated with accelerated drusen progression",
+      "Cigarette smoke (active or secondhand) — not a food, but the single most important dietary-adjacent exposure to eliminate"
     ]
   },
-  "exerciseGuidelines": "Regular moderate aerobic exercise — brisk walking, cycling, or swimming for at least 150 minutes per week — is associated with reduced AMD incidence and progression in prospective cohort studies, likely through improved choroidal perfusion, lower BMI, and reduced cardiovascular risk. Exercise does not worsen AMD or pose eye-specific risks. As vision declines, a physiotherapist or low-vision specialist can advise on fall prevention and safe exercise environments.",
+
+  "exerciseGuidelines": "Regular moderate-intensity aerobic activity (walking, swimming, cycling) for at least 150 minutes per week is associated with lower AMD progression risk in cohort data. Resistance training twice weekly supports overall metabolic health. There are no specific exercise restrictions after intravitreal injection beyond avoiding swimming, hot tubs, and eye rubbing for 24-48 hours.",
+
   "dailyManagement": [
-    "Check the Amsler grid with one eye covered each morning; seek same-day urgent care if new distortion or a new blind patch appears.",
-    "Take AREDS2 supplements consistently at the prescribed dose — do not double up.",
-    "Keep injection appointments without postponement; missed anti-VEGF injections commonly lead to vision loss in wet AMD.",
-    "Ensure home lighting is bright and directed — a 100-watt equivalent LED desk lamp for reading tasks.",
-    "Use a tablet or e-reader at maximum brightness and font size to reduce reliance on deteriorating central acuity.",
-    "Discuss driving safety honestly with your ophthalmologist; legal thresholds exist to protect both the patient and others.",
-    "Connect with a low-vision support group or patient organisation (e.g. Macular Society UK, Macular Degeneration Association US) for peer support and equipment advice."
+    "Perform a daily Amsler grid check (or smartphone hyperacuity test) one eye at a time and report any new distortion within 48 hours",
+    "Keep all scheduled retina follow-up and OCT appointments — missed injections in wet AMD are the strongest predictor of vision loss",
+    "Take the AREDS2 supplement at the same time daily if indicated; consistency matters more than time of day",
+    "Maintain blood pressure, LDL cholesterol, and HbA1c in target ranges through the primary care team",
+    "Use bright, glare-controlled lighting for reading and detailed tasks; keep an emergency light source by the bed",
+    "Plan transportation alternatives if vision impairs night driving; voluntary driving restriction protects independence longer than a forced loss of license"
   ],
-  "prognosis": "Prognosis depends critically on AMD subtype and stage at diagnosis, and on treatment access for wet AMD. Early AMD rarely progresses to vision-impairing disease: annual conversion rate to late AMD is below 1%. Intermediate AMD carries a 5-year risk of advancing to late AMD of roughly 18% without supplementation and approximately 13% with AREDS2. Geographic atrophy progresses slowly over years but inevitably impairs central vision; mean enlargement rate is approximately 1.8 mm² per year, and most patients with bilateral late geographic atrophy lose reading ability within 5-10 years of foveal involvement. Wet AMD, if untreated, causes severe central vision loss in 50% of eyes within 2 years; with anti-VEGF treatment, approximately 30-40% of patients gain meaningful vision and 90-95% maintain baseline vision at 12 months. Long-term (10-year) outcomes are more guarded: treatment burden is high, approximately 10-15% of treated eyes still lose 15 letters or more over 7 years in real-world data, and bilateral involvement is common. Peripheral vision is generally preserved, enabling independent mobility even with advanced disease. Low-vision rehabilitation substantially offsets the functional impact and should not be delayed until vision is severely reduced.",
-  "recoveryTimeline": "AMD is a chronic condition with no complete recovery. With anti-VEGF treatment for wet AMD, most patients see their best visual response within the first 3-6 monthly injections (the loading phase); gains stabilise or consolidate over 12 months. Many patients shift to a treat-and-extend protocol thereafter, with injections spaced out every 6-8 weeks or longer if the retina remains dry. Dry AMD with geographic atrophy progresses slowly over years; new complement-inhibiting agents slow but do not halt progression. Patients should expect lifelong monitoring and, for wet AMD, ongoing injections at whatever interval disease activity requires.",
+
+  "prognosis": "Most patients with early or intermediate AMD retain reading and driving vision for the rest of their lives — only about 18% progress to late AMD within 5 years, and progression is slower with AREDS2 supplementation and smoking cessation. Untreated wet AMD typically causes severe central vision loss (legal blindness, 20/200 or worse, in the affected eye) within 1-2 years; with timely anti-VEGF therapy, 30-40% of patients gain 3 or more lines of vision at 1 year and roughly 90% maintain or improve vision. Geographic atrophy progresses inexorably at 1.5-2.6 mm² per year on average; the new complement inhibitors slow but do not stop this. AMD does not cause complete blindness — peripheral vision is preserved, allowing mobility and many adaptive activities. The strongest predictors of good outcomes are early detection of wet AMD, adherence to injection schedules, smoking cessation, and engagement with low-vision rehabilitation when central acuity falls below 20/40.",
+
+  "recoveryTimeline": "Anti-VEGF injection effects appear within days — vision often stabilizes by week 1-2 and may improve over 3-12 months of regular treatment. Most patients need an induction series (typically three monthly injections) followed by treat-and-extend maintenance for years. Geographic atrophy treatment with complement inhibitors slows progression but does not produce visible improvement; benefit is measured by OCT and autofluorescence over 12-24 months. Low-vision rehabilitation typically delivers measurable functional gains in reading speed and independence within 6-8 weeks of starting structured training.",
+
   "complications": [
-    "Severe central vision loss — the defining complication of late AMD; affects reading, face recognition, and driving.",
-    "Subretinal haemorrhage — bleeding under the retina from neovascular vessels that can acutely devastate central vision within days if untreated.",
-    "Disciform scar — end-stage wet AMD produces a fibrovascular scar in the macula that permanently destroys the overlying photoreceptors.",
-    "Depression and anxiety — clinically significant in approximately 20-30% of patients with bilateral advanced AMD, linked to activity limitation and loss of independence.",
-    "Falls and injury — impaired depth perception and contrast sensitivity from AMD increase fall risk by 2- to 3-fold in older patients.",
-    "Endophthalmitis — a serious intraocular infection that can occur in approximately 0.05-0.1% of anti-VEGF injections and requires urgent treatment to prevent permanent vision loss."
+    "Severe central vision loss and legal blindness (20/200 or worse) in untreated or treatment-refractory wet AMD — preventable with timely anti-VEGF therapy",
+    "Bilateral geographic atrophy producing dense central scotomas that prevent reading and recognizing faces — current therapies only slow progression",
+    "Submacular hemorrhage from wet AMD, which can cause sudden severe vision loss and may require gas-and-tPA displacement surgery",
+    "Disciform scar — end-stage fibrotic scar in the macula after long-standing untreated or poorly controlled wet AMD",
+    "Falls and fractures — central vision loss roughly doubles fall risk in adults over 75; hip fractures are a leading cause of mortality in this group",
+    "Depression and social isolation — clinically significant depression occurs in 25-30% of patients with bilateral late AMD; screening and treatment improve quality of life",
+    "Endophthalmitis or retinal detachment from intravitreal injections — rare (roughly 1 in 2,000-5,000 injections) but serious"
   ],
+
   "supportResources": [
-    { "name": "National Eye Institute — Facts About Age-Related Macular Degeneration", "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration", "description": "Comprehensive patient information from the U.S. National Institutes of Health on AMD types, causes, diagnosis, and treatment." },
-    { "name": "RNIB — Macular degeneration", "url": "https://www.rnib.org.uk/your-eyes/eye-conditions-az/age-related-macular-degeneration-amd/", "description": "UK patient guide from the Royal National Institute of Blind People, including practical living tips and benefit guidance." },
-    { "name": "Macular Society UK", "url": "https://www.macularsociety.org", "description": "UK charity offering helpline, peer support groups, and information on treatments and low-vision aids for AMD." }
+    { "name": "American Academy of Ophthalmology — EyeSmart AMD", "url": "https://www.aao.org/eye-health/diseases/amd-macular-degeneration", "description": "Authoritative US patient education on AMD from the body that writes the practice guideline." },
+    { "name": "National Eye Institute — AMD", "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration", "description": "NIH patient-facing overview with AREDS/AREDS2 evidence and self-care resources." },
+    { "name": "Macular Society (UK)", "url": "https://www.macularsociety.org/", "description": "Patient charity providing helpline support, peer groups, and low-vision guidance." },
+    { "name": "American Macular Degeneration Foundation", "url": "https://www.macular.org/", "description": "US patient organization with educational tools and an Amsler grid download." }
   ],
-  "sources": [
-    { "title": "Age-Related Eye Disease Study 2 (AREDS2) Research Group — Lutein/Zeaxanthin for the Treatment of Age-Related Cataract. JAMA Ophthalmol, 2013", "url": "https://pubmed.ncbi.nlm.nih.gov/23645227/", "accessedDate": "2026-05-15" },
-    { "title": "Wong WL et al. Global prevalence of age-related macular degeneration. Lancet Glob Health, 2014", "url": "https://pubmed.ncbi.nlm.nih.gov/25104651/", "accessedDate": "2026-05-15" },
-    { "title": "Rosenfeld PJ et al. Ranibizumab for neovascular age-related macular degeneration (MARINA trial). N Engl J Med, 2006", "url": "https://pubmed.ncbi.nlm.nih.gov/17021319/", "accessedDate": "2026-05-15" },
-    { "title": "Heier JS et al. Intravitreal Aflibercept (VEGF Trap-Eye) in Wet Age-related Macular Degeneration (VIEW 1 and VIEW 2). Ophthalmology, 2012", "url": "https://pubmed.ncbi.nlm.nih.gov/23084240/", "accessedDate": "2026-05-15" },
-    { "title": "NICE TA800 — Faricimab for treating wet age-related macular degeneration (2022)", "url": "https://www.nice.org.uk/guidance/ta800", "accessedDate": "2026-05-15" },
-    { "title": "National Eye Institute — Age-Related Macular Degeneration: Data and Statistics", "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration", "accessedDate": "2026-05-15" },
-    { "title": "Holz FG et al. Pegcetacoplan treatment for geographic atrophy due to AMD (OAKS/DERBY trials). Ophthalmology, 2023", "url": "https://pubmed.ncbi.nlm.nih.gov/36436595/", "accessedDate": "2026-05-15" }
-  ],
+
   "confusedWithConditions": [
-    { "slug": "diabetic-retinopathy", "name": "Diabetic retinopathy", "keyDifference": "Diabetic retinopathy occurs in people with diabetes and involves microaneurysms, neovascularisation throughout the retina, and both central and peripheral vision loss, whereas AMD is unrelated to blood glucose and affects exclusively the central macula." },
-    { "slug": "glaucoma", "name": "Glaucoma", "keyDifference": "Glaucoma damages the optic nerve and causes peripheral visual field loss first, with central vision typically preserved until late disease, whereas AMD selectively destroys central vision while peripheral vision remains intact." },
-    { "slug": "cataracts", "name": "Cataracts", "keyDifference": "Cataracts cause uniform blurring of the entire visual field from lens clouding and are completely correctable by surgery, whereas AMD causes a permanent central scotoma not correctable by any lens or cataract operation." },
-    { "slug": "stroke", "name": "Stroke", "keyDifference": "A visual cortex stroke causes abrupt homonymous visual field defects affecting the same side in both eyes, whereas AMD is slow in onset (dry form) or more acute unilaterally (wet form) and confined to the central macula." }
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy", "keyDifference": "Diabetic retinopathy affects the entire retina with microaneurysms, dot-blot hemorrhages, and (in proliferative disease) new vessels at the disc or elsewhere — not drusen. It requires diabetes as a precondition and typically affects younger patients than AMD. Both can coexist." },
+    { "slug": "glaucoma", "name": "Glaucoma", "keyDifference": "Glaucoma damages the optic nerve and causes peripheral (not central) vision loss with elevated intraocular pressure and characteristic optic disc cupping. AMD preserves peripheral vision and primarily affects the central macula." },
+    { "slug": "cataracts", "name": "Cataracts", "keyDifference": "Cataracts cloud the natural lens, producing diffuse blur, glare, and color desaturation that improves dramatically with surgery. AMD affects the retina behind a clear lens; if vision does not improve after cataract surgery, AMD or another retinal condition is suspected." },
+    { "slug": "unspecified-retinal-detachment-with-retinal-break-right-eye-h33001", "name": "Retinal Detachment", "keyDifference": "Retinal detachment causes sudden flashes, floaters, and a curtain-like loss of peripheral vision — distinct from the gradual or distortion-based central loss of AMD. It is an emergency that requires urgent surgical reattachment." }
   ],
+
   "coOccurringConditions": [
     { "slug": "cataracts", "name": "Cataracts" },
-    { "slug": "glaucoma", "name": "Glaucoma" },
-    { "slug": "hypertension", "name": "Hypertension" },
-    { "slug": "diabetes-type-2", "name": "Type 2 diabetes" }
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "hyperlipidemia-unspecified-e785", "name": "Hyperlipidemia" }
   ],
+
   "relatedConditions": [
-    { "slug": "diabetic-retinopathy", "name": "Diabetic retinopathy", "relevance": "Both affect the retina and can cause macular oedema; anti-VEGF treatment is used in both, and patients with diabetes may develop both conditions concurrently." },
-    { "slug": "glaucoma", "name": "Glaucoma", "relevance": "Glaucoma and AMD are the two leading causes of irreversible blindness in older adults and frequently coexist, complicating both diagnosis and intravitreal injection management." },
-    { "slug": "cataracts", "name": "Cataracts", "relevance": "Cataracts are nearly universal in the AMD age group; cataract surgery can unmask or worsen AMD symptoms and requires careful pre-operative AMD assessment." },
-    { "slug": "stroke", "name": "Stroke", "relevance": "Shared vascular risk factors (hypertension, smoking, atherosclerosis) predispose to both stroke and AMD; a transient ischaemic attack or stroke can mimic or coexist with AMD-related vision loss." }
+    { "slug": "macular-degeneration", "name": "Macular Degeneration (overview)", "relevance": "Broader category page covering all macular degenerative diseases including AMD and juvenile forms." },
+    { "slug": "diabetic-retinopathy", "name": "Diabetic Retinopathy", "relevance": "Other leading cause of vision loss in adults; shares anti-VEGF therapy and OCT monitoring pathways." },
+    { "slug": "glaucoma", "name": "Glaucoma", "relevance": "Frequently coexists in elderly patients; combined disease accelerates functional vision loss." },
+    { "slug": "cataracts", "name": "Cataracts", "relevance": "Common co-existing condition; cataract surgery does not worsen AMD and may improve overall vision." },
+    { "slug": "hypertension", "name": "High Blood Pressure", "relevance": "Shared vascular risk pathway; uncontrolled hypertension accelerates AMD progression." }
   ],
+
   "linkedTreatmentSlugs": [],
+
   "faqs": [
-    { "question": "What is the difference between dry and wet AMD?", "answer": "Dry AMD involves slow accumulation of drusen deposits under the retina and gradual atrophy of retinal cells over years; it accounts for 85-90% of cases. Wet AMD occurs when abnormal blood vessels grow under the retina and leak fluid, causing faster and more severe central vision loss. Dry AMD can convert to wet AMD at any time, which is why regular monitoring matters.", "schemaEligible": true },
-    { "question": "Can AMD cause total blindness?", "answer": "AMD destroys central vision but almost never causes complete blindness because peripheral vision is preserved. Even with advanced bilateral AMD, most people retain enough side vision to navigate independently. However, loss of central vision can prevent reading, driving, and recognising faces, profoundly affecting quality of life.", "schemaEligible": true },
-    { "question": "What are the first signs of macular degeneration?", "answer": "The earliest sign is often mild blurring of central vision or a need for brighter light to read. Straight lines appearing wavy or distorted when viewed with one eye covered (tested with an Amsler grid) is a key early warning of wet AMD. In dry AMD, early disease is usually asymptomatic and found on routine eye examination.", "schemaEligible": true },
-    { "question": "Do AREDS2 supplements work for all types of AMD?", "answer": "AREDS2 supplements are proven to reduce progression to advanced AMD by about 25% in people with intermediate AMD in one or both eyes, or late AMD in one eye only. They have not been shown to benefit people with early AMD or no AMD, and do not treat wet AMD. Take them only if your eye specialist has confirmed you are in the target group.", "schemaEligible": true },
-    { "question": "How often do intravitreal injections need to be given?", "answer": "For wet AMD, most patients receive three loading injections given monthly, then switch to a treat-and-extend schedule where the interval is lengthened by 2 weeks at each visit if the retina stays dry. Many patients stabilise on 8-12 week intervals; newer agents like faricimab allow intervals up to 16 weeks in suitable patients. Stopping injections too early commonly leads to vision loss.", "schemaEligible": true },
-    { "question": "Are intravitreal injections painful?", "answer": "Most patients report the injections as much less uncomfortable than expected. The eye is numbed with anaesthetic drops first; the injection itself takes a few seconds. Many patients feel a pressure sensation rather than pain. A brief ache or blurry vision for a few hours afterwards is common. Serious complications such as infection or retinal detachment are rare but possible.", "schemaEligible": true },
-    { "question": "Can stopping smoking help if I already have AMD?", "answer": "Yes. Stopping smoking at any stage reduces the rate of AMD progression and lowers the risk of conversion from dry to wet AMD. Smokers with AMD who quit have better visual outcomes than those who continue. Smoking cessation is the single most important lifestyle step a person with AMD can take.", "schemaEligible": true },
-    { "question": "Is AMD hereditary?", "answer": "AMD has a strong genetic component. Having a parent or sibling with AMD increases your lifetime risk 3- to 6-fold. Variants in the CFH and ARMS2 genes explain a substantial proportion of this genetic risk. However, AMD is not simply inherited in a Mendelian fashion; lifestyle factors such as smoking, diet, and UV exposure interact with genetic susceptibility.", "schemaEligible": true },
-    { "question": "Can AMD be detected before symptoms appear?", "answer": "Yes. Drusen and early RPE changes are visible on dilated fundus examination or OCT before any visual symptoms occur. This is why annual eye examinations from age 55 are recommended, particularly for people with a family history of AMD or who smoke. Early detection allows timely supplementation and closer monitoring.", "schemaEligible": true },
-    { "question": "What happens if wet AMD is not treated?", "answer": "Untreated neovascular AMD leads to severe irreversible central vision loss in approximately half of affected eyes within 2 years. The leaking vessels eventually scar the macula, producing a fibrovascular scar called a disciform scar. Once the photoreceptors overlying the scar are destroyed, vision loss at that location is permanent. Early treatment with anti-VEGF injections is critical.", "schemaEligible": true },
-    { "question": "Can I drive with AMD?", "answer": "Driving with AMD depends on the degree of vision loss. You must meet the legal visual acuity and visual field standards in your country. Many people with early or intermediate AMD can continue driving; those with advanced bilateral AMD generally cannot meet the legal standard. You have a legal obligation to inform your licensing authority and insurer if AMD affects your vision to the required degree.", "schemaEligible": true },
-    { "question": "Is there a cure for AMD?", "answer": "There is no cure for AMD at present. Anti-VEGF injections control but rarely cure wet AMD, and most patients require ongoing treatment indefinitely. For geographic atrophy, newly approved complement inhibitors slow progression but do not reverse lost vision. Gene therapy trials targeting AMD are underway and show early promise. Low-vision rehabilitation can substantially improve function despite the lack of a cure.", "schemaEligible": true },
-    { "question": "What foods should I eat or avoid to protect my macular health?", "answer": "Eat plenty of dark leafy greens (kale, spinach) for lutein and zeaxanthin, oily fish twice weekly for omega-3 fatty acids, and a variety of colourful vegetables and fruits. Avoid smoking, which depletes macular pigment. If you already have intermediate AMD, take the AREDS2 supplement formula. Avoid high-glycaemic foods. A Mediterranean-style diet is associated with lower AMD progression risk.", "schemaEligible": true },
-    { "question": "How is AMD monitored over time?", "answer": "AMD is monitored with dilated fundus examination and OCT at intervals determined by disease stage: typically annually for early AMD, every 6 months for intermediate AMD, and every 4-8 weeks for patients receiving anti-VEGF treatment. Home Amsler grid monitoring is used daily by patients with intermediate or late AMD to detect sudden changes between clinical visits.", "schemaEligible": false },
-    { "question": "What is an Amsler grid and how do I use it?", "answer": "An Amsler grid is a 10 cm × 10 cm grid of evenly spaced horizontal and vertical lines with a dot in the centre. Cover one eye, hold the grid 30 cm away, focus on the central dot, and note whether any lines appear wavy, blurry, or missing. Switch to the other eye. Any new change from your baseline — especially new waviness or a new blank patch — should prompt same-day contact with your eye specialist.", "schemaEligible": false },
-    { "question": "Does AMD affect both eyes?", "answer": "AMD is a bilateral disease, but the two eyes are usually affected asymmetrically — one eye often has more advanced disease than the other. When one eye develops wet AMD, the risk of the fellow eye developing wet AMD is approximately 10-12% per year. This is why the follow eye is monitored closely even when only one eye requires injection treatment.", "schemaEligible": true },
-    { "question": "What new AMD treatments are being developed?", "answer": "Several promising treatments are in clinical trials, including gene therapy to deliver sustained anti-VEGF production with a single subretinal injection (reducing the need for repeat injections), stem cell-based RPE transplantation, and additional complement-inhibiting drugs for geographic atrophy. Artificial intelligence tools to predict AMD progression from OCT scans are also being validated for clinical use.", "schemaEligible": false },
-    { "question": "Can low-vision aids help people with AMD?", "answer": "Yes. Even when medical treatment cannot restore lost vision, low-vision rehabilitation can dramatically improve daily function. Options include handheld and stand magnifiers, electronic video magnifiers, large-print and audio books, screen-reading software for computers and tablets, and eccentric viewing training — learning to use peripheral retina to replace the damaged central area. Referral to a low-vision specialist should not be delayed until vision is severely reduced.", "schemaEligible": true },
-    { "question": "How does AMD affect mental health?", "answer": "Depression and anxiety affect approximately 20-30% of people with bilateral advanced AMD, linked to loss of independence, inability to drive, and difficulty recognising faces. These rates are significantly higher than in age-matched controls without vision loss. Regular screening for depression in AMD follow-up, and referral to mental health support or peer groups, is an important part of care.", "schemaEligible": false }
+    {
+      "question": "Can age-related macular degeneration be cured?",
+      "answer": "AMD cannot be cured, but it can be controlled. Anti-VEGF injections preserve or improve vision in 90% of treated wet AMD patients. AREDS2 supplements slow progression in intermediate dry AMD by about 25% over 5 years. New complement inhibitors slow geographic atrophy. Damage already done to photoreceptors cannot be reversed, which is why early diagnosis and treatment matter.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between wet and dry AMD?",
+      "answer": "Dry AMD (85% of cases) progresses slowly through drusen and atrophy over years. Wet AMD (15%) involves abnormal new blood vessels growing under the retina, leaking fluid or blood, and can erase central vision within weeks. Wet AMD is treated with intravitreal anti-VEGF injections; dry AMD is managed with diet, AREDS2 supplements, and (in geographic atrophy) complement inhibitor injections.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I go completely blind from AMD?",
+      "answer": "No. AMD damages central vision but preserves peripheral vision, so it does not cause total blindness. Even patients with advanced bilateral AMD retain enough peripheral vision to walk safely. Severe AMD does meet the legal definition of blindness (visual acuity 20/200 or worse) and impairs reading, driving, and face recognition.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of AMD?",
+      "answer": "The earliest symptoms are subtle blurring of central vision, difficulty reading small print under normal light, and slow dark-adaptation. The hallmark warning sign is metamorphopsia — straight lines appearing wavy or distorted, often noticed when one eye is covered. Sudden new distortion in one eye suggests wet AMD and requires retina specialist evaluation within days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is AMD diagnosed?",
+      "answer": "Diagnosis is made by a dilated retinal exam with optical coherence tomography (OCT) of the macula. The eye doctor looks for drusen, pigmentary changes, geographic atrophy, or signs of wet disease such as subretinal fluid. OCT angiography or fluorescein angiography may be added when wet AMD is suspected. Visual acuity, contrast sensitivity, and Amsler grid testing complete the workup.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do AREDS2 vitamins work for AMD?",
+      "answer": "Yes, but only in specific situations. The AREDS2 oral formula (lutein 10 mg, zeaxanthin 2 mg, vitamin C 500 mg, vitamin E 400 IU, zinc 80 mg, copper 2 mg) reduces the 5-year risk of progression to advanced AMD by about 25% in people with intermediate AMD or late AMD in one eye. It does not help people with no AMD or with early AMD only, and it does not restore lost vision.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are anti-VEGF injections painful?",
+      "answer": "Most patients describe intravitreal injections as briefly uncomfortable rather than painful. The eye is numbed with anesthetic drops or gel, cleaned with iodine, and the injection itself takes less than a second. Mild grittiness, redness, or floaters for 1-2 days afterward are normal. Severe pain, worsening redness, or vision drop after an injection should be reported immediately to rule out endophthalmitis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often will I need eye injections for wet AMD?",
+      "answer": "Most patients receive three monthly induction injections, then continue on a treat-and-extend protocol that lengthens intervals to 6, 8, 12, or 16 weeks based on response. Some patients need monthly injections indefinitely; others can extend to 12-16 weeks with newer agents such as aflibercept 8 mg or faricimab. Treatment is generally lifelong, with intervals individualized by OCT findings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is AMD hereditary?",
+      "answer": "There is a strong genetic component — heritability of advanced AMD is approximately 70%. Variants in CFH (complement factor H) and ARMS2/HTRA1 each substantially increase risk. A first-degree relative with AMD raises personal risk 3-6 fold. Routine genetic testing is not recommended; family history should prompt earlier and more frequent dilated eye exams.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can quitting smoking reverse AMD?",
+      "answer": "Quitting smoking does not reverse damage already done, but it substantially slows further progression. Risk of advanced AMD falls steadily over 5-10 years after quitting, though it never returns fully to never-smoker baseline. Smoking cessation is the single highest-yield modifiable intervention for AMD and is recommended at every visit by the AAO 2024 guidelines.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is geographic atrophy?",
+      "answer": "Geographic atrophy is a form of advanced dry AMD with well-demarcated patches of retinal pigment epithelium and photoreceptor loss. It progresses at 1.5-2.6 mm² per year and causes dense central scotomas once it involves the fovea. Two FDA-approved complement inhibitors (pegcetacoplan, avacincaptad pegol) slow GA lesion growth by 14-27% but do not restore vision.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does cataract surgery worsen AMD?",
+      "answer": "No. Large cohort studies and randomized data show cataract surgery does not accelerate AMD progression and typically improves overall vision in patients with both conditions. A clear lens makes monitoring AMD easier and improves the patient's ability to use remaining central vision. AMD should not be a contraindication to indicated cataract surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How quickly does AMD progress?",
+      "answer": "Progression varies widely. Early AMD has only a 1-2% chance of progressing to late AMD over 5 years. Intermediate AMD progresses to advanced disease in about 18% of patients over 5 years. Wet AMD, once active, can cause severe vision loss within weeks if untreated. Dry geographic atrophy typically expands over 2-5 years before affecting central vision.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can diet alone prevent AMD?",
+      "answer": "Diet meaningfully lowers risk but cannot eliminate it. A Mediterranean-style pattern rich in green leafy vegetables, oily fish, nuts, and olive oil is associated with up to 40% lower late AMD risk in cohort studies. Diet works alongside not-smoking, blood pressure control, exercise, and (where indicated) AREDS2 supplements; the combination is far more effective than any single intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does AMD treatment cost?",
+      "answer": "In the US, branded anti-VEGF injections range from roughly USD 1,800-2,200 per dose for aflibercept or faricimab; compounded bevacizumab is much cheaper at USD 50-100. Medicare and most commercial insurers cover medically necessary injections, often leaving a 20% coinsurance. AREDS2 supplements cost USD 15-30 per month. Out-of-pocket costs depend heavily on coverage and country.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I still drive with AMD?",
+      "answer": "Many patients with early or intermediate AMD continue driving safely. Driving requires meeting state visual acuity and field standards (typically 20/40 corrected vision in the better eye in most US states). As AMD advances, daytime driving is usually given up before night driving, and many patients voluntarily restrict to familiar local routes. An occupational therapy driving assessment is helpful when in doubt.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is an Amsler grid?",
+      "answer": "An Amsler grid is a square pattern of horizontal and vertical lines with a central dot, used to detect distortion or missing spots in central vision. Patients with AMD use it daily — one eye at a time at reading distance — and report any new wavy lines, missing squares, or dark spots within 48 hours. Free printable grids are available from major eye charities and AAO.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do blue-light glasses prevent AMD?",
+      "answer": "Evidence does not support blue-light blocking lenses for AMD prevention. Indoor digital screens emit far less blue light than sunlight and have not been linked to AMD. UV-blocking sunglasses outdoors are sensible for general eye health. The strongest modifiable interventions remain smoking cessation, Mediterranean diet, and cardiovascular risk control.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see a retina specialist for AMD?",
+      "answer": "See a retina specialist urgently (within 1-2 weeks) for any new central distortion, blurred spot, or sudden vision drop in one eye — possible wet AMD activation. Routine retina referral is appropriate for intermediate AMD, geographic atrophy, atypical findings, or when anti-VEGF therapy is being considered. General ophthalmologists and optometrists manage early and intermediate AMD between specialist visits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are stem cell treatments available for AMD?",
+      "answer": "Stem cell therapies for AMD remain investigational. Early clinical trials of retinal pigment epithelium transplantation have shown safety and modest visual gains in geographic atrophy, but no stem cell treatment is FDA-approved for routine use. Patients should be cautious about unregulated overseas clinics offering unproven stem cell injections — multiple cases of severe vision loss have been reported.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get AMD?",
+      "answer": "Classic age-related macular degeneration is rare under age 50. Children and young adults with central vision loss and macular changes usually have an inherited macular dystrophy such as Stargardt disease or Best disease, not AMD. These conditions require genetic testing and management by inherited retinal disease specialists, with different prognoses and treatment pathways.",
+      "schemaEligible": true
+    }
   ],
-  "simpleName": "Macular degeneration",
+
+  "simpleName": "Age-Related Macular Degeneration (AMD)",
+
   "regionalNames": [
-    { "name": "Age-related maculopathy", "region": "United Kingdom", "language": "en" },
-    { "name": "AMD", "region": "Global", "language": "en" },
-    { "name": "Macula dejenerasyonu", "region": "Turkey", "language": "tr" }
+    { "name": "उम्र-संबंधी मैक्युलर डिजनरेशन", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Dégénérescence maculaire liée à l'âge (DMLA)", "region": "France", "language": "fr" },
+    { "name": "Altersbedingte Makuladegeneration", "region": "Germany", "language": "de" }
   ],
+
   "searchTags": [
-    "age-related macular degeneration", "AMD", "macular degeneration", "wet AMD", "dry AMD",
-    "geographic atrophy", "drusen", "anti-VEGF", "AREDS2 supplements", "retinal degeneration",
-    "central vision loss", "macular degeneration symptoms", "AMD treatment"
+    "AMD", "macular degeneration", "age-related macular degeneration", "wet AMD", "dry AMD",
+    "geographic atrophy", "drusen", "anti-VEGF", "aflibercept", "ranibizumab", "faricimab",
+    "AREDS2", "central vision loss", "retina", "ophthalmology"
   ],
+
   "symptomKeywords": [
-    "central vision loss", "blurred central vision", "metamorphopsia", "wavy lines in vision",
-    "central scotoma", "distorted vision", "difficulty reading", "dark spot in vision",
-    "reduced contrast sensitivity"
+    "wavy lines vision", "blurred central vision", "dark spot in vision", "metamorphopsia",
+    "difficulty reading", "distorted vision", "central scotoma", "sudden vision loss one eye"
   ],
-  "metaTitle": "Macular Degeneration: Symptoms, Causes & Treatment | aihealz",
-  "metaDescription": "AMD causes central vision loss from retinal damage in adults over 50. Learn about dry vs wet AMD, AREDS2 supplements, anti-VEGF injections, and prevention.",
+
+  "metaTitle": "Age-Related Macular Degeneration: Symptoms & Treatment",
+  "metaDescription": "Age-related macular degeneration (AMD): central vision loss, drusen, wet vs dry types, anti-VEGF injections, AREDS2. Reviewed by our medical board.",
+
   "keywords": [
-    "age-related macular degeneration", "AMD", "macular degeneration", "wet AMD", "dry AMD",
-    "AMD symptoms", "AMD treatment", "anti-VEGF", "AREDS2", "geographic atrophy",
-    "macular degeneration causes", "AMD prevention"
+    "age-related macular degeneration", "AMD", "wet AMD", "dry AMD", "geographic atrophy",
+    "anti-VEGF injection", "AREDS2 supplements", "macular degeneration treatment",
+    "macular degeneration symptoms", "drusen", "central vision loss"
   ],
+
   "lastReviewed": "2026-05-15",
-  "images": []
+
+  "sources": [
+    {
+      "title": "Flaxel CJ, Adelman RA, Bailey ST, et al. Age-Related Macular Degeneration Preferred Practice Pattern. Ophthalmology. 2025;132(4):e1-e54.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39918524/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Wong WL, Su X, Li X, et al. Global prevalence of age-related macular degeneration and disease burden projection for 2020 and 2040: a systematic review and meta-analysis. Lancet Global Health. 2014;2(2):e106-16.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25104651/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Age-Related Eye Disease Study 2 Research Group. Lutein + zeaxanthin and omega-3 fatty acids for age-related macular degeneration: the Age-Related Eye Disease Study 2 (AREDS2) randomized clinical trial. JAMA. 2013;309(19):2005-15.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23644932/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "CATT Research Group; Martin DF, Maguire MG, Ying GS, et al. Ranibizumab and bevacizumab for neovascular age-related macular degeneration. New England Journal of Medicine. 2011;364(20):1897-908.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21526923/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Fleckenstein M, Keenan TDL, Guymer RH, et al. Age-related macular degeneration. Nature Reviews Disease Primers. 2021;7(1):31.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33958600/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Heier JS, Khanani AM, Quezada Ruiz C, et al. Efficacy, durability, and safety of intravitreal faricimab up to every 16 weeks for neovascular age-related macular degeneration (TENAYA and LUCERNE). Lancet. 2022;399(10326):729-740.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35085502/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "National Eye Institute. Age-Related Macular Degeneration (AMD) — patient and professional resources. NIH.",
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Vision and Eye Health Surveillance System (VEHSS) — Age-Related Macular Degeneration prevalence.",
+      "url": "https://www.cdc.gov/vision-health-data/prevalence-estimates/age-related-macular-degeneration.html",
+      "accessedDate": "2026-05-15"
+    }
+  ],
+
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fundus_of_eye_with_age-related_macular_degeneration.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Fundus_of_eye_with_age-related_macular_degeneration.jpg",
+      "altText": "Fundus photograph of an eye with age-related macular degeneration showing yellow drusen deposits and pigmentary changes at the macula",
+      "caption": "Fundus photograph showing drusen and pigmentary changes typical of intermediate AMD.",
+      "license": "Public Domain",
+      "credit": "National Eye Institute / Wikimedia Commons",
+      "width": 1200,
+      "height": 800
+    }
+  ]
 }

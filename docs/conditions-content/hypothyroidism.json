@@ -1,0 +1,515 @@
+{
+  "_meta": {
+    "slug": "hypothyroidism",
+    "tier": 1,
+    "headTerm": "hypothyroidism",
+    "longTailKeywords": [
+      "hypothyroidism symptoms",
+      "hypothyroidism treatment",
+      "underactive thyroid",
+      "hypothyroidism causes",
+      "levothyroxine dose",
+      "hashimoto vs hypothyroidism",
+      "subclinical hypothyroidism",
+      "hypothyroidism diet",
+      "TSH levels hypothyroidism",
+      "hypothyroidism weight gain"
+    ],
+    "primarySpecialty": "Endocrinology",
+    "lastReviewed": "2026-05-15",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2014 ATA treatment guideline (PMID 25266247), Chaker 2017 Lancet seminar (PMID 28336049), Hollowell NHANES III (PMID 11836274), and Taylor 2018 Nat Rev Endocrinol. Drug doses checked against current ATA recommendations."
+  },
+
+  "h1Title": "Hypothyroidism: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology",
+
+  "heroOverview": "Hypothyroidism is a deficiency of thyroid hormone, the chemical the thyroid gland releases to set the pace of metabolism in every tissue. When output falls, body processes slow: heart rate drops, body temperature falls, weight creeps up, and energy fades. It affects an estimated 4-5% of US adults overall, with another 5% carrying milder subclinical disease, and women are 5-8 times more likely to be affected than men. Most cases come on gradually over months, so symptoms — fatigue, cold intolerance, constipation, dry skin, low mood — are often mistaken for aging or stress. Untreated, severe hypothyroidism raises cholesterol, strains the heart, and can rarely progress to life-threatening myxedema coma. Treatment is straightforward: a once-daily levothyroxine tablet restores normal hormone levels in the large majority of patients.",
+
+  "keyStats": {
+    "prevalence": "Overt hypothyroidism in ~0.3-0.4% of US adults; subclinical in 4-10% (NHANES III, Hollowell 2002)",
+    "demographics": "Women affected 5-8x more often than men; risk rises sharply after age 60",
+    "avgAge": "Most commonly diagnosed between ages 30 and 60; congenital form detected at birth screening",
+    "globalCases": "Iodine deficiency remains the leading cause worldwide, affecting an estimated 2 billion people with inadequate iodine intake"
+  },
+
+  "definition": "Hypothyroidism (ICD-10: E03.9) is a clinical state caused by insufficient action of thyroid hormone on body tissues, almost always because the thyroid gland itself fails to produce enough thyroxine (T4) and triiodothyronine (T3). This is termed primary hypothyroidism and accounts for more than 99% of cases. Far less commonly, the pituitary gland or hypothalamus fails to stimulate a healthy thyroid — central or secondary hypothyroidism. The thyroid is a butterfly-shaped gland in the front of the neck; its hormones regulate basal metabolic rate, body temperature, heart rate, gut motility, and the metabolism of fats and carbohydrates in essentially every organ. When hormone supply drops, the pituitary senses it and raises thyroid-stimulating hormone (TSH), which is why an elevated TSH with a low free T4 is the laboratory signature of overt primary hypothyroidism. Subclinical hypothyroidism describes a raised TSH with a still-normal free T4, representing early or mild glandular failure. The condition is staged by biochemical severity rather than by anatomy, and the dominant cause in iodine-sufficient countries is Hashimoto's thyroiditis, an autoimmune attack on thyroid tissue. Hypothyroidism is managed by endocrinologists and primary care physicians, with the great majority of uncomplicated cases handled effectively in primary care once a stable levothyroxine dose is reached.",
+
+  "typesClassification": [
+    { "type": "Overt primary hypothyroidism", "description": "Elevated TSH together with a low free T4. The thyroid gland is failing and symptoms are usually present. This is the form that always warrants treatment." },
+    { "type": "Subclinical hypothyroidism", "description": "Elevated TSH with a normal free T4. Represents mild thyroid failure; many patients have few or no symptoms. Treatment is individualized, generally favored when TSH exceeds 10 mIU/L or in pregnancy." },
+    { "type": "Central (secondary) hypothyroidism", "description": "The thyroid is intact but understimulated because of pituitary or hypothalamic disease. TSH is low or inappropriately normal alongside a low free T4 — so it cannot be detected by TSH screening alone." },
+    { "type": "Congenital hypothyroidism", "description": "Present from birth, usually due to a missing or malformed thyroid gland. Detected by newborn heel-prick screening; immediate treatment prevents permanent intellectual disability." },
+    { "type": "Myxedema coma", "description": "The extreme, decompensated end of untreated hypothyroidism — hypothermia, depressed consciousness, and multi-organ slowdown. A medical emergency with historical mortality of 30-50%." }
+  ],
+
+  "primarySymptoms": [
+    "Persistent fatigue and low energy that does not improve with rest, often the first and most common complaint patients bring to a clinician.",
+    "Unexplained weight gain of a few kilograms despite no change in diet, driven by a slowed metabolic rate and fluid retention rather than fat alone.",
+    "Cold intolerance — feeling chilled in rooms that others find comfortable — because reduced thyroid hormone lowers heat production.",
+    "Constipation and sluggish digestion as gut motility slows, sometimes the symptom that prompts the initial blood test.",
+    "Dry, coarse skin and brittle hair, with hair thinning or loss including the outer third of the eyebrows in long-standing disease.",
+    "Low mood, depression, and difficulty concentrating or remembering, sometimes labeled 'brain fog,' which can be mistaken for a primary psychiatric condition.",
+    "Muscle aches, cramps, stiffness, and generalized weakness, particularly in the shoulders and hips.",
+    "Heavy or irregular menstrual periods in women, and reduced fertility, because thyroid hormone influences the ovarian cycle.",
+    "A slow heart rate (bradycardia) and, in more advanced disease, a puffy face, swollen eyelids, and a hoarse, deepened voice.",
+    "Goiter — a visibly or palpably enlarged thyroid in the front of the neck — when the gland enlarges in response to high TSH or autoimmune inflammation.",
+    "Elevated LDL cholesterol on routine blood work, since thyroid hormone is needed to clear LDL from the bloodstream.",
+    "Numbness or tingling in the hands from carpal tunnel syndrome, which is more common when tissues retain fluid in hypothyroidism."
+  ],
+
+  "earlyWarningSigns": [
+    "A mildly elevated TSH on routine blood work while free T4 is still normal — the biochemical picture of subclinical hypothyroidism",
+    "New, unexplained fatigue and cold intolerance developing over several months, especially in a woman over 40",
+    "A first-degree relative with autoimmune thyroid disease, type 1 diabetes, or another autoimmune condition",
+    "Gradual weight gain with constipation and dry skin that does not respond to lifestyle changes",
+    "Positive thyroid peroxidase (TPO) antibodies found incidentally, which predict progression to overt hypothyroidism at roughly 4% per year"
+  ],
+
+  "emergencySigns": [
+    "Confusion, extreme drowsiness, or unresponsiveness in someone with known or suspected hypothyroidism — possible myxedema coma requiring emergency care",
+    "Body temperature below 35.5°C with slow breathing and low blood pressure, particularly in an elderly patient during winter",
+    "A very slow heart rate with fainting or chest pain in a person with untreated thyroid disease",
+    "Rapidly worsening shortness of breath or leg swelling, which can signal hypothyroid heart failure or a pericardial effusion",
+    "Severe, persistent vomiting that prevents a patient from taking their levothyroxine for several days"
+  ],
+
+  "causes": [
+    {
+      "cause": "Hashimoto's (chronic autoimmune) thyroiditis",
+      "description": "The leading cause in iodine-sufficient countries. The immune system produces antibodies against thyroid peroxidase and thyroglobulin, causing lymphocytic infiltration that gradually destroys hormone-producing tissue. Damage accumulates over years, so onset is slow and often silent until significant gland loss has occurred."
+    },
+    {
+      "cause": "Iodine deficiency",
+      "description": "The dominant cause worldwide. Iodine is an essential building block of thyroid hormone; when dietary intake is inadequate the gland cannot synthesize enough T4, often enlarging into a goiter as it tries to compensate. Universal salt iodization has sharply reduced this in many countries."
+    },
+    {
+      "cause": "Thyroid surgery and radioactive iodine treatment",
+      "description": "Removal of the thyroid (thyroidectomy) for cancer, nodules, or Graves' disease leaves no gland to produce hormone, while radioactive iodine therapy for hyperthyroidism deliberately ablates thyroid tissue. Both predictably cause permanent hypothyroidism requiring lifelong replacement."
+    },
+    {
+      "cause": "Medications that suppress thyroid function",
+      "description": "Amiodarone, lithium, interferon-alpha, tyrosine kinase inhibitors, and immune checkpoint inhibitors used in cancer therapy can all impair hormone production or trigger autoimmune thyroid damage. Onset can be within weeks to months of starting the drug."
+    },
+    {
+      "cause": "External-beam radiation to the neck",
+      "description": "Radiotherapy for head, neck, or lymphoma cancers, or total-body irradiation before bone marrow transplant, damages the thyroid in the radiation field. Hypothyroidism can develop months to many years after treatment, so survivors need ongoing thyroid monitoring."
+    },
+    {
+      "cause": "Congenital thyroid abnormalities",
+      "description": "Some infants are born with an absent, underdeveloped, or misplaced thyroid gland, or with an inherited defect in a hormone-synthesis enzyme. Without newborn screening and prompt treatment, the resulting hormone deficiency causes irreversible brain and growth impairment."
+    },
+    {
+      "cause": "Pituitary or hypothalamic disease",
+      "description": "Tumors, surgery, radiation, infiltrative disorders, or postpartum pituitary infarction can reduce TSH output, leaving a structurally normal thyroid understimulated. This central hypothyroidism is uncommon and is missed if only TSH is measured."
+    },
+    {
+      "cause": "Postpartum and subacute thyroiditis",
+      "description": "Transient inflammation of the thyroid — after pregnancy or following a viral illness — can produce a hypothyroid phase as damaged tissue releases its stored hormone and then temporarily underproduces. Many cases recover, but some progress to permanent hypothyroidism."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Female sex", "category": "non-modifiable", "description": "Women develop hypothyroidism 5-8 times more often than men, largely because autoimmune thyroid disease is far more common in women, partly under the influence of sex hormones and X-chromosome factors." },
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "Thyroid autoimmunity and gland failure accumulate with age; the prevalence of elevated TSH rises steadily after age 60, particularly in women." },
+    { "factor": "Family or personal history of autoimmune disease", "category": "genetic", "description": "Hashimoto's thyroiditis clusters in families and co-occurs with type 1 diabetes, celiac disease, vitiligo, and pernicious anemia, reflecting shared autoimmune susceptibility genes such as HLA and CTLA-4 variants." },
+    { "factor": "Iodine intake at either extreme", "category": "environmental", "description": "Both deficiency and chronic excess of iodine can cause hypothyroidism — deficiency by limiting hormone synthesis, excess by triggering the Wolff-Chaikoff effect and unmasking autoimmune disease." },
+    { "factor": "Prior thyroid surgery or radioactive iodine", "category": "modifiable", "description": "Any procedure that removes or ablates thyroid tissue, including treatment for hyperthyroidism or thyroid cancer, predictably reduces hormone output and frequently causes permanent hypothyroidism." },
+    { "factor": "Neck radiation exposure", "category": "environmental", "description": "External-beam radiotherapy to the head or neck damages thyroid follicular cells; the risk of hypothyroidism rises with radiation dose and can appear decades later." },
+    { "factor": "Certain medications", "category": "modifiable", "description": "Amiodarone, lithium, interferon, and immune checkpoint inhibitors raise hypothyroidism risk; the effect is often reversible if the drug can be stopped, but not always." },
+    { "factor": "Pregnancy and the postpartum year", "category": "non-modifiable", "description": "Up to 5-10% of women develop postpartum thyroiditis within a year of delivery, and pregnancy increases thyroid hormone demand by 30-50%, unmasking marginal thyroid reserve." },
+    { "factor": "Down syndrome and Turner syndrome", "category": "genetic", "description": "Both chromosomal conditions carry a markedly elevated lifetime risk of autoimmune hypothyroidism, so periodic thyroid screening is part of their standard care." },
+    { "factor": "Smoking cessation and selenium status", "category": "modifiable", "description": "Smoking transiently masks autoimmune thyroid disease, so hypothyroidism can become apparent after quitting; low selenium has also been associated with higher thyroid antibody levels." }
+  ],
+
+  "affectedDemographics": [
+    "In the US NHANES III survey, 4.6% of the population had hypothyroidism (0.3% overt, 4.3% subclinical), rising to over 10% in women above age 70",
+    "Women are affected 5-8 times more often than men across all age groups",
+    "Worldwide, iodine deficiency remains the single largest cause; an estimated 2 billion people have inadequate iodine intake, concentrated in mountainous and inland regions",
+    "Congenital hypothyroidism occurs in roughly 1 in 2,000 to 1 in 4,000 newborns and is the most common preventable cause of intellectual disability where newborn screening exists",
+    "People of South Asian and white European ancestry have somewhat higher rates of autoimmune thyroid disease than Black populations in the same regions"
+  ],
+
+  "diagnosisOverview": "Diagnosis of hypothyroidism is primarily biochemical. A clinician who suspects it from symptoms — fatigue, weight gain, cold intolerance, constipation — orders a serum TSH, the most sensitive single test for primary thyroid failure. An elevated TSH triggers a free T4 measurement: a low free T4 confirms overt primary hypothyroidism, while a normal free T4 with raised TSH defines subclinical hypothyroidism. Because TSH has a wide normal range and rises slightly with age, borderline results are usually repeated after 6-8 weeks before treatment is committed, since transient illness, recovery from non-thyroidal illness, and lab variation can all nudge the value. Once primary hypothyroidism is established, thyroid peroxidase (TPO) antibodies are checked to confirm an autoimmune cause; a strongly positive result points to Hashimoto's thyroiditis and predicts that the condition is permanent and progressive. When the clinical picture suggests pituitary disease — for example a low or inappropriately normal TSH with a low free T4, or symptoms of other hormone deficiencies — central hypothyroidism is considered and pituitary imaging and additional hormone testing follow. Ultrasound of the thyroid is not needed to diagnose hypothyroidism itself but is used when a goiter is irregular or a nodule is palpable. Newborns are screened with a heel-prick TSH or T4 within the first days of life so that congenital hypothyroidism is caught and treated before brain development is harmed. The American Thyroid Association recommends against population-wide screening of healthy asymptomatic adults but supports targeted testing of those with symptoms, risk factors, pregnancy, or relevant family history.",
+
+  "diagnosticTests": [
+    {
+      "test": "Serum thyroid-stimulating hormone (TSH)",
+      "purpose": "The first-line and most sensitive test for primary hypothyroidism. A raised TSH signals that the pituitary is detecting inadequate thyroid hormone. Also used to titrate and monitor levothyroxine therapy.",
+      "whatToExpect": "A standard blood draw, no fasting required, often combined with other routine bloods. Results return within a day in most labs. Borderline values are usually repeated after 6-8 weeks."
+    },
+    {
+      "test": "Free thyroxine (free T4)",
+      "purpose": "Measures the active circulating hormone. Combined with TSH it distinguishes overt hypothyroidism (high TSH, low free T4) from subclinical disease (high TSH, normal free T4) and central hypothyroidism (low or normal TSH, low free T4).",
+      "whatToExpect": "Drawn from the same blood sample as TSH. No special preparation. Results available same day to next day."
+    },
+    {
+      "test": "Thyroid peroxidase (TPO) antibodies",
+      "purpose": "Confirms autoimmune (Hashimoto's) thyroiditis as the underlying cause. A positive result indicates the condition is permanent and helps predict progression of subclinical disease to overt hypothyroidism.",
+      "whatToExpect": "A single additional blood test, usually drawn at the same visit. It does not need to be repeated once positive."
+    },
+    {
+      "test": "Free triiodothyronine (free T3)",
+      "purpose": "Occasionally checked in complex or central cases, though it is normal until very late in primary hypothyroidism and is not used for routine diagnosis or monitoring.",
+      "whatToExpect": "Part of the same blood draw when ordered. Not required in most straightforward cases."
+    },
+    {
+      "test": "Lipid panel and complete blood count",
+      "purpose": "Hypothyroidism commonly raises LDL cholesterol and can cause a mild anemia; these tests document the metabolic consequences and improve with treatment.",
+      "whatToExpect": "A routine fasting or non-fasting blood draw depending on local lab practice. Results return within a day."
+    },
+    {
+      "test": "Thyroid ultrasound",
+      "purpose": "Not needed to diagnose hypothyroidism, but used when the gland is enlarged irregularly or a nodule is felt, to assess structure and guide whether a biopsy is needed.",
+      "whatToExpect": "A painless 15-20 minute scan with gel and a probe over the front of the neck. No radiation and no preparation."
+    },
+    {
+      "test": "Newborn screening TSH or T4 (heel-prick)",
+      "purpose": "Detects congenital hypothyroidism in the first days of life so treatment can start before brain development is harmed.",
+      "whatToExpect": "A few drops of blood taken from the baby's heel onto a card, usually 24-72 hours after birth, as part of routine newborn screening."
+    }
+  ],
+
+  "treatmentOverview": "Treatment of hypothyroidism replaces the missing hormone, and for the great majority of patients this means once-daily oral levothyroxine, a synthetic form of T4 that the body converts to active T3 as needed. The 2014 American Thyroid Association guideline names levothyroxine the standard of care and found no consistent evidence that combination T4/T3 therapy or desiccated thyroid extract is superior for most patients. In a young, otherwise healthy adult with overt hypothyroidism, treatment can begin at a full estimated replacement dose of roughly 1.6 micrograms per kilogram of body weight daily. In older adults, and in anyone with coronary artery disease, the dose is started low — commonly 25 to 50 micrograms daily — and titrated up gradually to avoid stressing the heart. The tablet is taken on an empty stomach, ideally 30-60 minutes before breakfast or at bedtime well after the last meal, because food, coffee, calcium, iron, and certain antacids reduce its absorption. The dose is adjusted using serum TSH: it is rechecked 6-8 weeks after starting or after any dose change, then every 6-12 months once stable, with the goal of returning TSH to the normal reference range. Subclinical hypothyroidism is treated more selectively — generally when TSH exceeds 10 mIU/L, when symptoms or positive antibodies are present, or during pregnancy and preconception, where adequate thyroid hormone is essential for fetal brain development. Pregnant women with established hypothyroidism typically need their dose increased by 25-50% early in pregnancy. Central hypothyroidism is managed by free T4 rather than TSH because the pituitary signal is unreliable. Persistent symptoms despite a normal TSH should prompt a search for other causes — anemia, depression, sleep disorders, celiac disease — rather than reflex dose escalation, though a carefully monitored trial of combination therapy is an option in selected patients under specialist care.",
+
+  "medicalTreatments": [
+    {
+      "name": "Levothyroxine (start ~1.6 mcg/kg/day in healthy young adults; 25-50 mcg/day in elderly or cardiac patients)",
+      "description": "Synthetic T4 and the first-line treatment for essentially all hypothyroidism. Taken once daily on an empty stomach, separated from food, coffee, calcium, and iron. Dose titrated against serum TSH every 6-8 weeks until normal, then monitored every 6-12 months.",
+      "effectiveness": "Restores TSH to the normal range and resolves symptoms in roughly 85-90% of treated patients; the remainder need dose refinement or evaluation for other contributing conditions."
+    },
+    {
+      "name": "Liothyronine (synthetic T3) as combination therapy with levothyroxine",
+      "description": "A carefully selected option for patients who remain symptomatic on adequate levothyroxine alone. Added in a small physiologic ratio and monitored closely. Avoided in pregnancy, the elderly, and those with heart disease because of its short half-life and peaks.",
+      "effectiveness": "Randomized trials show no consistent benefit over levothyroxine for the average patient; perhaps 10-20% of selected patients report symptomatic preference under specialist supervision."
+    },
+    {
+      "name": "Desiccated thyroid extract (porcine-derived)",
+      "description": "Contains both T4 and T3 in a fixed ratio derived from animal thyroid. Used by some patients historically and by preference, but the T4:T3 ratio is non-physiologic and potency can vary between batches.",
+      "effectiveness": "Not recommended as first-line by the ATA; trials show no proven superiority over levothyroxine and a higher rate of supraphysiologic T3 levels."
+    },
+    {
+      "name": "Dose adjustment in pregnancy",
+      "description": "Women with pre-existing hypothyroidism need a levothyroxine increase of 25-50% as soon as pregnancy is confirmed, because thyroid hormone demand rises sharply. TSH is monitored every 4 weeks through mid-pregnancy.",
+      "effectiveness": "Maintaining a trimester-appropriate TSH reduces the risk of miscarriage, preterm birth, and impaired fetal neurodevelopment; roughly 50-85% of treated pregnant women require a dose increase."
+    },
+    {
+      "name": "Intravenous levothyroxine and supportive care for myxedema coma",
+      "description": "The decompensated emergency form is treated in intensive care with IV thyroid hormone, stress-dose corticosteroids, rewarming, and treatment of the precipitating illness such as infection.",
+      "effectiveness": "Prompt treatment lowers mortality substantially, though it historically remains in the range of 25-40% even with optimal care, underscoring the importance of preventing decompensation."
+    }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Selenium supplementation in autoimmune thyroiditis", "description": "Several randomized trials report that selenium 200 mcg daily modestly lowers TPO antibody levels in Hashimoto's thyroiditis, though it does not replace levothyroxine or reliably change hard clinical outcomes. Reasonable as an adjunct in selected patients with documented low selenium status." },
+    { "name": "Adequate iodine intake through iodized salt", "description": "In iodine-deficient regions, restoring iodine through iodized salt or supplements corrects deficiency-related hypothyroidism and prevents goiter. This is a public-health intervention, not a treatment for autoimmune disease, and excess iodine can worsen autoimmune thyroiditis." }
+  ],
+
+  "whySeeSpecialist": "An endocrinologist should be involved when hypothyroidism is difficult to control, when TSH stays abnormal despite good adherence, when central hypothyroidism or another pituitary hormone deficiency is suspected, during pregnancy or preconception planning, when there is a suspicious thyroid nodule or rapidly enlarging goiter, or when a patient remains symptomatic despite a normal TSH. Uncomplicated primary hypothyroidism on a stable levothyroxine dose is managed well in primary care.",
+
+  "doctorSelectionGuide": "Look for board certification in endocrinology and, for surgical questions, a high-volume thyroid surgeon. Ask whether the clinician monitors with TSH and free T4, how they handle persistent symptoms with a normal TSH, and whether they have experience managing thyroid disease in pregnancy. Because hypothyroidism is a lifelong condition, continuity of care and reliable lab follow-up matter more than a single consultation.",
+
+  "preventionStrategies": [
+    "Use iodized salt and maintain adequate dietary iodine, particularly before and during pregnancy, since iodine deficiency is the leading preventable cause worldwide",
+    "Ask for thyroid screening if you have a family history of autoimmune thyroid disease, type 1 diabetes, or celiac disease, so subclinical disease is caught early",
+    "Request a TSH check before and during pregnancy if you have risk factors, because untreated hypothyroidism harms fetal brain development",
+    "Have thyroid function monitored periodically if you take amiodarone, lithium, or immune checkpoint inhibitors, or if you have had neck radiation",
+    "Do not take iodine or kelp supplements at high doses without medical advice, as iodine excess can trigger or worsen autoimmune hypothyroidism"
+  ],
+
+  "lifestyleModifications": [
+    "Take levothyroxine at the same time every day on an empty stomach to keep absorption consistent — adherence is the single biggest determinant of stable thyroid levels",
+    "Separate levothyroxine from coffee, calcium supplements, iron, and antacids by at least 4 hours, as these substantially reduce absorption",
+    "Tell every prescriber you take levothyroxine, since new medications and even some supplements can change the dose you need",
+    "Eat a balanced diet with adequate but not excessive iodine; there is no need for an iodine-loaded or restrictive 'thyroid diet' in treated autoimmune disease",
+    "Stay physically active within tolerance — exercise helps with the weight gain, low mood, and fatigue that hypothyroidism can cause",
+    "Get screened for and treat coexisting conditions such as anemia, vitamin D deficiency, celiac disease, and depression if symptoms persist despite a normal TSH",
+    "Keep regular follow-up blood tests, generally every 6-12 months once stable and sooner after any dose change, pregnancy, or large weight change"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Iodized salt and naturally iodine-containing foods such as dairy, eggs, and seafood in normal amounts",
+      "Selenium-containing foods such as Brazil nuts, fish, and eggs, which support thyroid antioxidant defenses",
+      "A balanced diet rich in vegetables, fruit, whole grains, and lean protein to support healthy weight and cholesterol",
+      "Adequate fiber and fluids to counter the constipation common in hypothyroidism",
+      "Iron- and zinc-containing foods if intake is low, since deficiency can blunt the response to treatment"
+    ],
+    "avoid": [
+      "High-dose iodine or kelp supplements, which can trigger or worsen autoimmune thyroid dysfunction",
+      "Taking calcium or iron supplements at the same time as levothyroxine — separate them by at least 4 hours",
+      "Excess soy protein or large amounts of high-fiber supplements close to the levothyroxine dose, as they impair absorption",
+      "Crash or very-low-calorie diets, which can worsen fatigue and are rarely effective for hypothyroid weight gain",
+      "Assuming any single food group is harmful — there is no evidence that gluten or goitrogenic vegetables need to be eliminated in treated hypothyroidism unless celiac disease is also present"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular moderate exercise — at least 150 minutes per week of walking, cycling, or swimming — is safe and beneficial, helping with the weight gain, fatigue, and low mood that accompany hypothyroidism. Untreated severe hypothyroidism can cause muscle weakness and reduced exercise capacity; these improve once thyroid hormone is replaced. Build intensity gradually as energy returns, and have thyroid levels rechecked if exercise tolerance does not improve after several months of treatment.",
+
+  "dailyManagement": [
+    "Take levothyroxine first thing each morning on an empty stomach, then wait 30-60 minutes before eating or drinking coffee",
+    "Keep a consistent routine — same time, same conditions — so blood levels stay stable between tests",
+    "Note any new symptoms of under- or over-replacement, such as returning fatigue or new palpitations, and report them rather than self-adjusting the dose",
+    "Refill the prescription before running out, and stay with the same manufacturer when possible, since formulations can differ slightly",
+    "Carry a note of your diagnosis and current dose, useful in emergencies and when seeing new clinicians"
+  ],
+
+  "prognosis": "The long-term outlook for treated hypothyroidism is excellent. Once a stable levothyroxine dose normalizes TSH, most patients return to normal energy, weight trends, cholesterol, and quality of life, and life expectancy is essentially unaffected. The condition is usually permanent — particularly when caused by Hashimoto's thyroiditis, surgery, or radioactive iodine — so treatment is lifelong, but it is simple, inexpensive, and well tolerated. Roughly 10-15% of patients report lingering symptoms despite a biochemically normal TSH; in most of these the cause is a coexisting condition such as anemia, depression, sleep apnea, or celiac disease rather than inadequate dosing. Subclinical hypothyroidism with positive TPO antibodies progresses to overt disease at about 4% per year, so monitoring matters even when treatment is deferred. The main avoidable poor outcomes come from undiagnosed or untreated disease: sustained high cholesterol, cardiovascular strain, infertility and pregnancy complications, and, rarely, myxedema coma. The decisive prognostic factor is consistent treatment and follow-up — patients who take their medication reliably and keep their monitoring appointments do very well.",
+
+  "recoveryTimeline": "After starting levothyroxine, biochemical levels move first and symptoms follow more slowly. TSH falls over several weeks and is rechecked at 6-8 weeks to guide the next dose adjustment. Patients often notice improving energy within 2-4 weeks, but full symptom resolution — stable weight, restored skin and hair, normalized cholesterol — typically takes 3-6 months as tissues respond and the dose is fine-tuned. Reaching a stable maintenance dose can take two or three adjustment cycles. Once stable, monitoring drops to every 6-12 months. Hair regrowth and complete reversal of skin changes lag the furthest behind, sometimes taking six months or more.",
+
+  "complications": [
+    "Cardiovascular disease — sustained hypothyroidism raises LDL cholesterol and diastolic blood pressure and is associated with accelerated atherosclerosis and heart failure; lipid profiles improve once treated",
+    "Myxedema coma — the rare, life-threatening decompensated form with hypothermia and depressed consciousness, usually triggered by infection, cold, or sedatives in someone with severe untreated disease",
+    "Infertility and pregnancy loss — inadequate thyroid hormone disrupts ovulation and raises the risk of miscarriage, preterm birth, and pre-eclampsia",
+    "Impaired fetal and infant neurodevelopment — untreated maternal or congenital hypothyroidism can cause irreversible intellectual disability, which newborn screening and prompt treatment prevent",
+    "Peripheral neuropathy and carpal tunnel syndrome — fluid retention and slowed nerve conduction can cause numbness, tingling, and weakness that improve with replacement",
+    "Goiter and, rarely, thyroid lymphoma — long-standing Hashimoto's thyroiditis can produce a bothersome goiter and carries a small increased risk of thyroid lymphoma"
+  ],
+
+  "supportResources": [
+    { "name": "American Thyroid Association — Patient Resources", "url": "https://www.thyroid.org/thyroid-information/", "description": "Authoritative US patient education from the body that writes the hypothyroidism treatment guidelines." },
+    { "name": "British Thyroid Foundation", "url": "https://www.btf-thyroid.org/", "description": "UK patient charity with plain-language guides on living with hypothyroidism and thyroid medication." },
+    { "name": "NIDDK — Hypothyroidism", "url": "https://www.niddk.nih.gov/health-information/endocrine-diseases/hypothyroidism", "description": "US National Institutes of Health patient information on causes, diagnosis, and treatment." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "hashimotos-disease", "name": "Hashimoto's Disease", "keyDifference": "Hashimoto's disease is the autoimmune cause of most hypothyroidism, not a separate condition — it describes the immune attack on the thyroid. A person can have positive Hashimoto's antibodies with still-normal thyroid hormone levels, so they have the autoimmune disease but not yet hypothyroidism. Hypothyroidism is defined by the hormone deficiency itself, whatever the cause." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "keyDifference": "Hyperthyroidism is the opposite state — too much thyroid hormone — causing weight loss, heat intolerance, fast heart rate, anxiety, and a low TSH with high free T4. Hypothyroidism causes weight gain, cold intolerance, slow heart rate, and a high TSH with low free T4. The two are distinguished immediately by the TSH and free T4 pattern." },
+    { "slug": "depression", "name": "Depression", "keyDifference": "Depression and hypothyroidism share fatigue, low mood, weight change, and poor concentration, and the two often coexist. Hypothyroidism is confirmed by an abnormal TSH and free T4, which is why thyroid testing is part of evaluating new depression. Treating hypothyroidism can relieve mood symptoms, but depression with normal thyroid tests needs its own treatment." },
+    { "slug": "anemia", "name": "Anemia", "keyDifference": "Anemia also causes fatigue, weakness, pallor, and cold intolerance, and hypothyroidism can itself cause a mild anemia. They are separated by a complete blood count versus thyroid function tests, and both should be checked when fatigue is unexplained because each can persist if only the other is treated." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "type-1-diabetes", "name": "Type 1 Diabetes" },
+    { "slug": "celiac-disease", "name": "Celiac Disease" },
+    { "slug": "anemia", "name": "Anemia" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "hashimotos-disease", "name": "Hashimoto's Disease", "relevance": "The autoimmune thyroiditis that causes the majority of hypothyroidism in iodine-sufficient countries." },
+    { "slug": "hyperthyroidism", "name": "Hyperthyroidism", "relevance": "The opposite thyroid state; treatment of hyperthyroidism with surgery or radioactive iodine is itself a common cause of hypothyroidism." },
+    { "slug": "goiter", "name": "Goiter", "relevance": "An enlarged thyroid that can accompany both iodine-deficiency and autoimmune hypothyroidism." },
+    { "slug": "thyroiditis", "name": "Thyroiditis", "relevance": "Inflammation of the thyroid, including postpartum and subacute forms, which can cause a transient or permanent hypothyroid phase." },
+    { "slug": "celiac-disease", "name": "Celiac Disease", "relevance": "Shares autoimmune susceptibility with Hashimoto's thyroiditis and frequently coexists with autoimmune hypothyroidism." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is the main cause of hypothyroidism?",
+      "answer": "In countries with adequate iodine intake, the leading cause is Hashimoto's thyroiditis, an autoimmune condition in which the immune system gradually destroys thyroid tissue. Worldwide, iodine deficiency remains the single largest cause. Other causes include thyroid surgery, radioactive iodine treatment, certain medications such as amiodarone and lithium, and neck radiation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early signs of an underactive thyroid?",
+      "answer": "Early signs are often subtle and develop slowly: persistent fatigue, feeling cold when others are comfortable, unexplained weight gain, constipation, dry skin, and low mood or poor concentration. A mildly raised TSH on a routine blood test, with normal free T4, is the earliest biochemical sign and is called subclinical hypothyroidism.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hypothyroidism curable?",
+      "answer": "Most hypothyroidism is permanent and not curable, especially when caused by Hashimoto's thyroiditis, thyroid surgery, or radioactive iodine. However, it is fully controllable with a once-daily levothyroxine tablet that replaces the missing hormone. Some cases caused by medication or transient thyroiditis can recover once the trigger resolves.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is hypothyroidism diagnosed?",
+      "answer": "Hypothyroidism is diagnosed with blood tests. An elevated TSH is the most sensitive first sign; a low free T4 alongside it confirms overt hypothyroidism. Thyroid peroxidase antibodies are checked to identify an autoimmune cause. Borderline results are usually repeated after 6-8 weeks before treatment is started.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a normal TSH level?",
+      "answer": "Most laboratories use a normal TSH reference range of roughly 0.4 to 4.0 to 4.5 mIU/L, though the upper limit rises slightly with age. In treated hypothyroidism the goal is usually to keep TSH within the normal range. Pregnancy uses lower trimester-specific targets. The exact range varies by lab and assay.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does hypothyroidism cause weight gain?",
+      "answer": "Yes, but usually modestly. A slowed metabolism and fluid retention typically add a few kilograms, not large amounts. Much of the early weight gain is fluid and reverses with treatment. Levothyroxine restores normal metabolism but is not a weight-loss drug, and weight gain that continues despite a normal TSH usually has other causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is hypothyroidism treated?",
+      "answer": "The standard treatment is once-daily oral levothyroxine, a synthetic form of the thyroid hormone T4. The dose is adjusted using the TSH blood test, rechecked 6-8 weeks after any change and then every 6-12 months once stable. The tablet is taken on an empty stomach, separated from food, coffee, calcium, and iron.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When and how should I take levothyroxine?",
+      "answer": "Take levothyroxine once daily on an empty stomach, ideally 30-60 minutes before breakfast or at bedtime well after the last meal. Keep at least a 4-hour gap from calcium supplements, iron, and antacids, which block its absorption. Taking it at the same time and in the same way every day keeps blood levels stable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need to take thyroid medication for life?",
+      "answer": "In most cases, yes. Hypothyroidism from Hashimoto's thyroiditis, thyroid surgery, or radioactive iodine is permanent, so levothyroxine is lifelong. The treatment is inexpensive and well tolerated. Hypothyroidism caused by certain medications or temporary thyroiditis may resolve, allowing treatment to stop under medical supervision.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if hypothyroidism is left untreated?",
+      "answer": "Untreated hypothyroidism raises LDL cholesterol and blood pressure, strains the heart, worsens fatigue and mood, and can impair fertility and pregnancy outcomes. In severe, long-standing cases it can progress to myxedema coma, a life-threatening emergency with hypothermia and depressed consciousness. Most complications are preventable with treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should subclinical hypothyroidism be treated?",
+      "answer": "Not always. Subclinical hypothyroidism means a raised TSH with a normal free T4. Treatment is generally recommended when TSH is above 10 mIU/L, when symptoms or positive thyroid antibodies are present, or during pregnancy and preconception. Milder cases are often monitored rather than treated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can women with hypothyroidism have a healthy pregnancy?",
+      "answer": "Yes. With well-controlled thyroid levels, women with hypothyroidism have normal pregnancies. Levothyroxine demand rises sharply in early pregnancy, so the dose usually needs increasing by 25-50% as soon as pregnancy is confirmed, with TSH checked every 4 weeks through mid-pregnancy. Adequate treatment protects fetal brain development.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do women get hypothyroidism more than men?",
+      "answer": "Women develop hypothyroidism 5-8 times more often than men, mainly because autoimmune thyroid disease is far more common in women. Sex hormones, X-chromosome-linked immune genes, and pregnancy-related immune shifts all contribute. Risk in both sexes rises with age, particularly after 60.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children and newborns get hypothyroidism?",
+      "answer": "Yes. Congenital hypothyroidism affects roughly 1 in 2,000 to 1 in 4,000 newborns and is detected by routine heel-prick screening, because untreated it causes permanent intellectual disability. Older children and teenagers can develop autoimmune hypothyroidism, which may show as slowed growth, delayed puberty, fatigue, or declining school performance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is there a special diet for hypothyroidism?",
+      "answer": "No restrictive diet is needed for treated autoimmune hypothyroidism. A balanced diet with adequate iodine from iodized salt and normal foods is sufficient. There is no good evidence that gluten or goitrogenic vegetables must be avoided unless celiac disease is also present. High-dose iodine or kelp supplements should be avoided as they can worsen autoimmune thyroid disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do I still feel tired even though my TSH is normal?",
+      "answer": "Roughly 10-15% of treated patients have persistent symptoms despite a normal TSH. The most common reasons are other conditions that share symptoms, including anemia, vitamin D deficiency, depression, sleep apnea, and celiac disease. These should be checked rather than simply increasing the levothyroxine dose, which can cause over-treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does hypothyroidism treatment cost?",
+      "answer": "Levothyroxine is an inexpensive generic medication, typically costing only a few dollars per month in most countries, including affordable generics widely available in India. The main ongoing costs are periodic TSH blood tests and occasional clinic visits. It is one of the least expensive chronic disease treatments to manage long-term.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between hypothyroidism and Hashimoto's disease?",
+      "answer": "Hashimoto's disease is the autoimmune attack on the thyroid that causes most hypothyroidism; hypothyroidism is the resulting hormone deficiency. A person can have Hashimoto's antibodies with still-normal thyroid hormone levels, meaning they have the autoimmune disease but not yet hypothyroidism. Hypothyroidism is defined by the low hormone level itself.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hypothyroidism cause hair loss?",
+      "answer": "Yes. Hypothyroidism slows hair growth and can cause diffuse thinning, dry brittle hair, and loss of the outer third of the eyebrows. Hair usually regrows once thyroid levels are restored, but it lags behind other improvements and can take six months or more after treatment starts.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress cause hypothyroidism?",
+      "answer": "Psychological stress does not directly cause hypothyroidism. The condition is caused by autoimmune disease, iodine problems, surgery, radiation, or medications. Stress and serious illness can temporarily alter thyroid blood test results, which is one reason borderline values are rechecked before treatment is started.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see an endocrinologist for hypothyroidism?",
+      "answer": "See an endocrinologist if your thyroid levels are hard to control, if you remain symptomatic despite a normal TSH, if central or pituitary disease is suspected, during pregnancy or preconception planning, or if you have a suspicious thyroid nodule or rapidly enlarging goiter. Stable, uncomplicated hypothyroidism is managed well in primary care.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Hypothyroidism (underactive thyroid)",
+
+  "regionalNames": [
+    { "name": "अवटु अल्पक्रियता (Avtu Alpakriyata)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Hypothyroïdie", "region": "France", "language": "fr" },
+    { "name": "Hipotiroidismo", "region": "Spain and Latin America", "language": "es" }
+  ],
+
+  "searchTags": [
+    "hypothyroidism", "underactive thyroid", "low thyroid", "Hashimoto", "TSH high",
+    "levothyroxine", "thyroxine", "thyroid hormone deficiency", "myxedema",
+    "subclinical hypothyroidism", "thyroid", "endocrinology", "goiter", "thyroid fatigue"
+  ],
+
+  "symptomKeywords": [
+    "always tired", "feeling cold all the time", "unexplained weight gain", "dry skin and hair",
+    "constipation", "brain fog", "puffy face", "slow heart rate", "hair thinning"
+  ],
+
+  "metaTitle": "Hypothyroidism: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Hypothyroidism: underactive thyroid causing fatigue, weight gain, and cold intolerance. Symptoms, TSH testing, levothyroxine treatment, and outlook explained.",
+
+  "keywords": [
+    "hypothyroidism", "underactive thyroid", "hypothyroidism symptoms", "hypothyroidism treatment",
+    "hypothyroidism causes", "levothyroxine", "TSH levels", "Hashimoto thyroiditis",
+    "subclinical hypothyroidism", "hypothyroidism diet", "thyroid hormone", "is hypothyroidism curable"
+  ],
+
+  "lastReviewed": "2026-05-15",
+
+  "images": [
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Illu_thyroid_parathyroid.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Illu_thyroid_parathyroid.jpg",
+      "altText": "Anatomical diagram of the thyroid and parathyroid glands in the front of the neck, the site of hormone production affected in hypothyroidism",
+      "caption": "The thyroid gland in the front of the neck — the source of the thyroid hormone that is deficient in hypothyroidism.",
+      "license": "Public Domain",
+      "credit": "U.S. National Cancer Institute / Wikimedia Commons",
+      "width": 400,
+      "height": 386
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "symptoms",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goiter.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Goiter.jpg",
+      "altText": "Clinical photograph of a visibly enlarged thyroid gland (goiter) in the front of the neck, a sign that can accompany hypothyroidism",
+      "caption": "Goiter — an enlarged thyroid that can accompany iodine-deficiency and autoimmune hypothyroidism.",
+      "license": "CC BY-SA 3.0",
+      "credit": "Drahreg01 / Wikimedia Commons",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hashimoto_thyroiditis_-_alt_-_very_high_mag.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Hashimoto_thyroiditis_-_alt_-_very_high_mag.jpg",
+      "altText": "High-magnification histology slide of Hashimoto thyroiditis showing dense lymphocytic infiltration of thyroid tissue, the autoimmune cause of most hypothyroidism",
+      "caption": "Histology of Hashimoto thyroiditis — lymphocytes infiltrating and destroying thyroid tissue.",
+      "license": "CC BY-SA 3.0",
+      "credit": "Nephron / Wikimedia Commons",
+      "width": 1280,
+      "height": 960
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "Jonklaas J, Bianco AC, Bauer AJ, et al. Guidelines for the Treatment of Hypothyroidism: Prepared by the American Thyroid Association Task Force on Thyroid Hormone Replacement. Thyroid. 2014;24(12):1670-1751.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25266247/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Chaker L, Bianco AC, Jonklaas J, Peeters RP. Hypothyroidism. The Lancet. 2017;390(10101):1550-1562.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28336049/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Hollowell JG, Staehling NW, Flanders WD, et al. Serum TSH, T(4), and thyroid antibodies in the United States population (1988 to 1994): NHANES III. Journal of Clinical Endocrinology & Metabolism. 2002;87(2):489-499.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11836274/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Taylor PN, Albrecht D, Scholz A, et al. Global epidemiology of hyperthyroidism and hypothyroidism. Nature Reviews Endocrinology. 2018;14(5):301-316.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29569622/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Garber JR, Cobin RH, Gharib H, et al. Clinical practice guidelines for hypothyroidism in adults: cosponsored by the AACE and the ATA. Endocrine Practice. 2012;18(6):988-1028.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23246686/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Biondi B, Cooper DS. Subclinical Hypothyroidism: A Review. JAMA. 2019;322(2):153-160.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31287527/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "American Thyroid Association — Hypothyroidism (Underactive Thyroid) patient information.",
+      "url": "https://www.thyroid.org/hypothyroidism/",
+      "accessedDate": "2026-05-15"
+    }
+  ]
+}

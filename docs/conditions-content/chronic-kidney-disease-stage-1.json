@@ -1,0 +1,478 @@
+{
+  "_meta": {
+    "slug": "chronic-kidney-disease-stage-1",
+    "tier": 1,
+    "headTerm": "chronic kidney disease stage 1",
+    "primarySpecialty": "Nephrology",
+    "lastReviewed": "2026-05-15",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against KDIGO 2024 CKD guideline, CDC CKD in the US 2023, USRDS 2023 ADR, and DAPA-CKD. Stage 1 = eGFR >=90 with a kidney damage marker (usually albuminuria) for >=3 months. Page deliberately leads with the asymptomatic, marker-defined nature of the stage."
+  },
+
+  "h1Title": "Chronic Kidney Disease Stage 1: Symptoms, Causes & Treatment",
+  "specialistType": "Nephrology",
+
+  "heroOverview": "Chronic kidney disease stage 1 means the kidneys are filtering at a normal rate — an estimated glomerular filtration rate of 90 mL/min/1.73m² or higher — but a marker of kidney damage, almost always protein leaking into the urine, has been present for at least three months. There are no symptoms at this stage; it is defined entirely by laboratory findings. Most people are diagnosed incidentally on routine diabetes, blood pressure, or insurance bloodwork. Stage 1 matters because it is the earliest point at which kidney decline can be slowed or stopped: controlling blood pressure, blood sugar, and albuminuria here can prevent progression to dialysis decades later. Treatment is medical and lifestyle-based, not procedural.",
+
+  "keyStats": {
+    "prevalence": "Stage 1 affects roughly 3-4% of US adults; part of the 35.5 million (14%) with any CKD (CDC 2023, NHANES 2017-2020)",
+    "demographics": "More common in adults with diabetes, hypertension, or a family history of kidney disease; slightly higher in women",
+    "avgAge": "Detected at any age, but rising sharply after 45; albuminuria can appear in the 20s-30s in people with type 1 diabetes",
+    "globalCases": "Part of the ~850 million people worldwide estimated to have some form of kidney disease"
+  },
+
+  "definition": "Chronic kidney disease stage 1 (ICD-10: N18.1) is defined by the KDIGO 2024 guideline as a normal estimated glomerular filtration rate — at or above 90 mL/min/1.73m² — accompanied by at least one persistent marker of kidney damage lasting three months or longer. The damage marker is most often albuminuria (urine albumin-to-creatinine ratio of 30 mg/g or higher), but it can also be hematuria of renal origin, structural abnormalities seen on imaging such as polycystic kidneys, biopsy-proven glomerular disease, or a history of kidney transplant. The key concept is that filtration rate alone is normal: it is the evidence of structural or functional injury that places a person in stage 1 rather than in the category of healthy kidneys. KDIGO classifies CKD on two axes — the G stage (G1 to G5, based on eGFR) and the A stage (A1 to A3, based on albuminuria) — so a typical stage 1 patient is labeled G1A2 or G1A3. The condition is managed primarily in primary care, with nephrology referral reserved for heavy proteinuria, unexplained findings, or rapidly worsening markers. Stage 1 sits at the very start of a disease continuum that, if the underlying cause goes uncontrolled, progresses through stages 2 to 5 over years to decades.",
+
+  "typesClassification": [
+    { "type": "G1A1 (normal eGFR, normal albuminuria)", "description": "Not classified as CKD unless another damage marker — such as a structural abnormality or biopsy finding — is present. A person here with polycystic kidneys, for example, still has stage 1 CKD." },
+    { "type": "G1A2 (normal eGFR, moderately increased albuminuria)", "description": "Urine albumin-to-creatinine ratio 30-300 mg/g. The most common stage 1 picture, frequently seen in early diabetic or hypertensive kidney disease." },
+    { "type": "G1A3 (normal eGFR, severely increased albuminuria)", "description": "Urine albumin-to-creatinine ratio above 300 mg/g. Heavy protein leak despite normal filtration — carries a meaningfully higher risk of progression and cardiovascular events." },
+    { "type": "Stage 1 from structural disease", "description": "Polycystic kidney disease, reflux nephropathy, or a solitary kidney with normal eGFR. Defined by imaging or genetics rather than albuminuria." }
+  ],
+
+  "primarySymptoms": [
+    "No symptoms in the overwhelming majority of cases — stage 1 CKD is silent and is defined by laboratory and imaging findings rather than by anything the person feels.",
+    "Foamy or bubbly urine can occasionally be noticed when albuminuria is heavy (A3 range), reflecting protein passing into the urine.",
+    "Visible or microscopic blood in the urine if the underlying cause is a glomerular disease such as IgA nephropathy, though this is a sign rather than a felt symptom.",
+    "Mildly elevated blood pressure may be the only outward clue, since kidney damage and hypertension drive each other from the earliest stage.",
+    "Swelling around the eyes in the morning or mild ankle puffiness can appear when protein loss is substantial, but this is uncommon at stage 1.",
+    "Flank discomfort or a dragging sensation may occur in people whose stage 1 CKD is caused by polycystic kidney disease, due to cyst enlargement rather than reduced filtration.",
+    "Increased nighttime urination is occasionally reported, more often reflecting the underlying diabetes or blood pressure than the kidney stage itself.",
+    "Fatigue, when present, is almost always due to the underlying condition — poorly controlled diabetes, anemia from another cause, or sleep apnea — not to stage 1 kidney function itself."
+  ],
+
+  "earlyWarningSigns": [
+    "A urine albumin-to-creatinine ratio that rises from normal into the 30 mg/g range on routine testing, especially in someone with diabetes or hypertension",
+    "Blood pressure that becomes harder to control or starts creeping upward on previously stable medication",
+    "Microscopic blood detected on a routine urine dipstick that persists on repeat testing weeks later",
+    "A family history of kidney disease, polycystic kidney disease, or dialysis in a first-degree relative",
+    "New diagnosis of diabetes or long-standing diabetes with worsening glucose control, the single most common pathway into stage 1 CKD"
+  ],
+
+  "emergencySigns": [
+    "Sudden, heavy swelling of the face, legs, or abdomen with markedly foamy urine — possible nephrotic-range proteinuria requiring urgent evaluation",
+    "Visible blood in the urine that is new, persistent, or accompanied by flank pain — needs prompt assessment to exclude glomerulonephritis or another acute process",
+    "A rapid, unexplained rise in blood pressure with headache or visual changes, which can signal accelerating kidney or vascular disease",
+    "Reduced urine output, nausea, and confusion — these point to acute kidney injury layered on top of CKD and require emergency care"
+  ],
+
+  "causes": [
+    {
+      "cause": "Diabetes mellitus (type 1 and type 2)",
+      "description": "Chronically high blood glucose damages the glomerular filtration barrier, allowing albumin to leak into the urine while filtration rate is still normal. Diabetic kidney disease is the leading cause of CKD worldwide and typically declares itself first as stage 1 albuminuria."
+    },
+    {
+      "cause": "Hypertension",
+      "description": "Sustained high pressure within the small kidney arteries injures the glomeruli and produces both albuminuria and, over time, a falling filtration rate. Hypertension is both a cause and a consequence of kidney damage, creating a self-reinforcing loop from stage 1 onward."
+    },
+    {
+      "cause": "Glomerular diseases",
+      "description": "Conditions such as IgA nephropathy, lupus nephritis, and focal segmental glomerulosclerosis inflame or scar the glomeruli directly. They often present at stage 1 with proteinuria or hematuria while eGFR remains in the normal range, and are confirmed by kidney biopsy."
+    },
+    {
+      "cause": "Polycystic kidney disease and other structural disorders",
+      "description": "Inherited polycystic kidney disease, reflux nephropathy, and obstructive uropathy cause structural kidney damage visible on imaging. A person with these conditions has stage 1 CKD even with a perfectly normal eGFR, because the structural abnormality is itself the damage marker."
+    },
+    {
+      "cause": "Recurrent or chronic kidney infections and obstruction",
+      "description": "Repeated pyelonephritis, long-standing kidney stones, or chronic urinary obstruction scar kidney tissue. The scarring shows up as albuminuria or imaging changes before measured filtration declines."
+    },
+    {
+      "cause": "Nephrotoxic exposure",
+      "description": "Long-term heavy use of NSAIDs, certain herbal preparations, and some chemotherapy or antiviral agents injures kidney tubules and glomeruli. Early damage is detectable as albuminuria while eGFR is preserved."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Diabetes", "category": "modifiable", "description": "The single largest driver of CKD; roughly 1 in 3 adults with diabetes has CKD (CDC 2023). Tight glucose control measurably slows the appearance and progression of albuminuria." },
+    { "factor": "Hypertension", "category": "modifiable", "description": "Present in most people with CKD and independently accelerates kidney damage. Each 10 mmHg reduction in systolic pressure lowers the rate of progression." },
+    { "factor": "Family history of kidney disease", "category": "genetic", "description": "A first-degree relative with kidney failure or polycystic kidney disease substantially raises personal risk. Autosomal dominant polycystic kidney disease alone affects about 1 in 1,000 people." },
+    { "factor": "Age over 45", "category": "non-modifiable", "description": "Kidney function and structure change with age; CKD prevalence rises from about 6% in adults 18-44 to 34% in those 65 and older (CDC 2023)." },
+    { "factor": "African, Hispanic, South Asian, or Indigenous ancestry", "category": "non-modifiable", "description": "CKD is more common in non-Hispanic Black adults (20%) than white adults (12%) in the US, driven partly by APOL1 gene variants and partly by access and social factors." },
+    { "factor": "Obesity", "category": "modifiable", "description": "Excess body weight raises intraglomerular pressure and promotes albuminuria independent of diabetes; weight loss reduces protein leak." },
+    { "factor": "Cardiovascular disease", "category": "modifiable", "description": "Heart disease and CKD share vascular mechanisms and frequently coexist; the presence of one raises the likelihood of the other." },
+    { "factor": "Acute kidney injury history", "category": "non-modifiable", "description": "Even a single episode of acute kidney injury that appears to recover fully leaves the kidneys more vulnerable and raises the long-term risk of developing CKD." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Tobacco use accelerates albuminuria and the decline of kidney function; stopping smoking slows both." },
+    { "factor": "Low birth weight or prematurity", "category": "environmental", "description": "Being born with fewer functioning nephrons reduces lifelong kidney reserve and raises the risk of CKD in adulthood." }
+  ],
+
+  "affectedDemographics": [
+    "An estimated 35.5 million US adults (14%) have CKD of any stage; stages 1-2 together account for a large share but are the least often diagnosed (CDC 2023)",
+    "As many as 9 in 10 adults with CKD do not know they have it — awareness is lowest at stages 1 and 2 because there are no symptoms",
+    "CKD is more common in non-Hispanic Black adults (20%) than in Asian (14%), Hispanic (14%), or white (12%) adults",
+    "People with diabetes or hypertension carry the bulk of stage 1 disease; about 1 in 3 adults with diabetes and 1 in 5 with hypertension have CKD"
+  ],
+
+  "diagnosisOverview": "Stage 1 CKD is diagnosed by laboratory testing, not by symptoms, and the KDIGO 2024 guideline anchors the workup on two measurements repeated to confirm chronicity. The first is estimated glomerular filtration rate, calculated from a serum creatinine blood test using the 2021 CKD-EPI equation; for stage 1 this value is 90 mL/min/1.73m² or higher. The second is the urine albumin-to-creatinine ratio on a spot urine sample, which detects protein leak; a value of 30 mg/g or higher is the damage marker that, when persistent, defines stage 1. Because both eGFR and albuminuria can fluctuate with hydration, infection, exercise, and recent illness, the abnormality must be confirmed on a repeat test at least three months later before CKD is diagnosed — a single abnormal result is not enough. Once chronicity is established, the workup turns to cause. This includes a focused history for diabetes, hypertension, autoimmune disease, family kidney disease, and nephrotoxic medication use; a urine microscopy to look for red cells, casts, or dysmorphic cells suggesting glomerular disease; and basic blood work covering electrolytes, glucose, and lipids. Kidney ultrasound is ordered when structural disease is suspected — to identify polycystic kidneys, obstruction, scarring, or a solitary kidney. Heavy proteinuria, persistent hematuria, an unexplained cause, or a rapid change in markers prompts nephrology referral and sometimes a kidney biopsy to identify a specific glomerular disease. The goal of the stage 1 workup is not just to label the stage but to name the underlying cause, because treatment is cause-directed.",
+
+  "diagnosticTests": [
+    {
+      "test": "Serum creatinine with estimated GFR (CKD-EPI 2021)",
+      "purpose": "Measures filtration rate. Confirms that eGFR is 90 mL/min/1.73m² or higher, which places the person in the G1 category when a damage marker is also present.",
+      "whatToExpect": "A standard blood draw, often bundled with routine bloodwork. Results return the same or next day. No fasting is required for creatinine alone."
+    },
+    {
+      "test": "Urine albumin-to-creatinine ratio (uACR)",
+      "purpose": "Detects and quantifies albuminuria, the most common stage 1 damage marker. A ratio of 30 mg/g or higher, confirmed on repeat testing, is diagnostic alongside normal eGFR.",
+      "whatToExpect": "A single spot urine sample, ideally a first-morning specimen. Painless and quick; results return within a day. Avoid strenuous exercise beforehand, as it can transiently raise the result."
+    },
+    {
+      "test": "Urinalysis with microscopy",
+      "purpose": "Screens for blood, white cells, and casts. Dysmorphic red cells or red-cell casts point toward a glomerular cause such as IgA nephropathy or lupus nephritis.",
+      "whatToExpect": "A clean-catch urine sample examined under a microscope in the lab. No discomfort; results usually available the same day."
+    },
+    {
+      "test": "Kidney ultrasound",
+      "purpose": "Assesses kidney size, structure, and the urinary tract. Identifies polycystic kidneys, scarring, obstruction, stones, or a solitary kidney — structural damage markers that can define stage 1 on their own.",
+      "whatToExpect": "A painless scan with gel and a probe over the abdomen and back, lasting about 20-30 minutes. No radiation and no preparation beyond sometimes a full bladder."
+    },
+    {
+      "test": "Blood pressure measurement and ambulatory monitoring",
+      "purpose": "Identifies and quantifies hypertension, which both causes and accelerates stage 1 CKD. Ambulatory or home monitoring captures pressure patterns missed in the clinic.",
+      "whatToExpect": "In-clinic readings take minutes; ambulatory monitoring uses a cuff worn for 24 hours that inflates periodically, including overnight."
+    },
+    {
+      "test": "Metabolic and lipid panel, HbA1c",
+      "purpose": "Identifies diabetes and assesses glucose control, electrolytes, and cardiovascular risk — the comorbidities that drive stage 1 disease and shape treatment.",
+      "whatToExpect": "A blood draw, usually fasting for the lipid and glucose components. Results return within a day."
+    },
+    {
+      "test": "Kidney biopsy (selected cases)",
+      "purpose": "Reserved for unexplained proteinuria, persistent hematuria, or suspected glomerular disease. Provides a precise tissue diagnosis that directs specific therapy.",
+      "whatToExpect": "A day-case procedure under local anesthetic and ultrasound guidance; a thin needle samples kidney tissue. A few hours of monitored bed rest follow to watch for bleeding."
+    }
+  ],
+
+  "treatmentOverview": "Treatment of stage 1 CKD is entirely medical and lifestyle-based, and its purpose is to stop the disease from advancing — there is no procedure and no dialysis at this stage. The KDIGO 2024 guideline frames management around three pillars: control the underlying cause, lower albuminuria, and reduce cardiovascular risk. The cornerstone drugs are renin-angiotensin system inhibitors — an ACE inhibitor such as ramipril or lisinopril, or an angiotensin receptor blocker such as losartan or telmisartan. These lower intraglomerular pressure, reduce albuminuria by 30-40%, and slow progression; they are recommended for any stage 1 patient with albuminuria, particularly those with diabetes or hypertension. Blood pressure is treated to a target below 120 mmHg systolic where tolerated, using standardized measurement. For patients with type 2 diabetes and albuminuria, an SGLT2 inhibitor such as dapagliflozin or empagliflozin is added; the DAPA-CKD trial showed a 39% reduction in kidney and cardiovascular events, and KDIGO 2024 extends this recommendation to many people with proteinuric CKD whether or not they have diabetes. Glucose is controlled to an individualized HbA1c target, often around 7%, and a statin is started in nearly all adults with CKD to reduce atherosclerotic risk. Lifestyle measures carry real weight at this stage: a moderate-sodium diet, weight loss where relevant, smoking cessation, regular physical activity, and avoidance of nephrotoxic NSAIDs. Because the kidneys filter normally at stage 1, most ordinary medications need no dose adjustment, but every new drug should still be checked against kidney safety. Monitoring is the other half of treatment — eGFR and uACR are rechecked every 6-12 months so that any drift toward stage 2 is caught early.",
+
+  "medicalTreatments": [
+    {
+      "name": "ACE inhibitors (ramipril 2.5-10 mg daily, lisinopril 10-40 mg daily)",
+      "description": "Block the renin-angiotensin system, lowering pressure inside the glomerulus and reducing protein leak. First-line for stage 1 CKD with albuminuria, especially alongside diabetes or hypertension. Kidney function and potassium are checked 1-2 weeks after starting or up-titrating.",
+      "effectiveness": "Reduce albuminuria by roughly 30-40% and slow progression; landmark trials show a 16-43% reduction in the risk of doubling of serum creatinine or kidney failure."
+    },
+    {
+      "name": "Angiotensin receptor blockers (losartan 50-100 mg daily, telmisartan 40-80 mg daily)",
+      "description": "Achieve the same renin-angiotensin blockade as ACE inhibitors and are used when an ACE inhibitor causes cough or angioedema. Not combined with an ACE inhibitor, as dual blockade raises the risk of hyperkalemia and acute kidney injury.",
+      "effectiveness": "Comparable to ACE inhibitors — roughly 30-35% reduction in albuminuria and similar slowing of progression in diabetic kidney disease trials."
+    },
+    {
+      "name": "SGLT2 inhibitors (dapagliflozin 10 mg daily, empagliflozin 10 mg daily)",
+      "description": "Reduce intraglomerular pressure and provide kidney and heart protection. Recommended in stage 1 CKD with type 2 diabetes and albuminuria, and increasingly in proteinuric CKD without diabetes per KDIGO 2024.",
+      "effectiveness": "In DAPA-CKD, dapagliflozin cut the composite of kidney decline, kidney failure, and death by 39% (hazard ratio 0.61) over a median 2.4 years."
+    },
+    {
+      "name": "Statins (atorvastatin 20-40 mg daily, rosuvastatin 10-20 mg daily)",
+      "description": "Lower LDL cholesterol and reduce atherosclerotic cardiovascular events, which are the leading cause of death in people with CKD. KDIGO 2024 recommends a statin for nearly all adults aged 50 and over with CKD.",
+      "effectiveness": "Reduce major atherosclerotic cardiovascular events by about 20-25% in people with CKD; the SHARP trial showed a 17% relative reduction."
+    },
+    {
+      "name": "Blood pressure agents (amlodipine, indapamide, others as needed)",
+      "description": "Added when renin-angiotensin blockade alone does not bring systolic pressure to target. Calcium channel blockers and thiazide-type diuretics are common second agents in stage 1 CKD.",
+      "effectiveness": "Each 10 mmHg reduction in systolic blood pressure is associated with roughly a 20% lower risk of CKD progression and cardiovascular events."
+    },
+    {
+      "name": "Cause-specific therapy (e.g. immunosuppression for glomerulonephritis, tolvaptan for ADPKD)",
+      "description": "When stage 1 CKD is driven by a specific glomerular or structural disease, targeted treatment is added — for example, immunosuppression for lupus nephritis or tolvaptan to slow cyst growth in autosomal dominant polycystic kidney disease.",
+      "effectiveness": "Varies by disease; tolvaptan slows the rate of eGFR decline by about 1 mL/min/year in ADPKD, and immunosuppression induces remission in the majority of treated lupus nephritis cases."
+    }
+  ],
+
+  "surgicalOptions": [],
+
+  "alternativeTreatments": [
+    { "name": "Dietary sodium reduction", "description": "Lowering sodium intake to under 2 grams per day reduces blood pressure and enhances the anti-proteinuric effect of ACE inhibitors and ARBs in controlled studies. Evidence-based and recommended by KDIGO 2024." },
+    { "name": "Plant-forward, moderate-protein diet", "description": "A diet emphasizing plant proteins and limiting excess animal protein is associated with slower CKD progression in observational data. At stage 1, severe protein restriction is not needed; the focus is on overall diet quality." }
+  ],
+
+  "whySeeSpecialist": "Most stage 1 CKD is managed well in primary care, but a nephrologist should be involved when albuminuria is in the severe (A3) range, when there is persistent unexplained hematuria, when a specific glomerular disease is suspected, when kidney function declines unexpectedly, or when the cause cannot be identified. Early specialist input shapes the treatment plan and arranges a kidney biopsy when one is needed.",
+
+  "doctorSelectionGuide": "Look for a nephrologist or a primary care physician comfortable with the KDIGO framework and treat-to-target use of renin-angiotensin inhibitors and SGLT2 inhibitors. Ask whether the practice routinely tracks uACR alongside eGFR, since albuminuria is the defining marker of stage 1. Continuity matters — CKD management is measured in years, and the same clinician seeing the trend over time catches progression earliest.",
+
+  "preventionStrategies": [
+    "Keep blood pressure below 120 mmHg systolic where tolerated, using home monitoring to confirm — the single most effective way to prevent progression beyond stage 1",
+    "Control blood glucose to an individualized HbA1c target if you have diabetes, since glucose control directly slows the appearance and worsening of albuminuria",
+    "Start an ACE inhibitor or ARB if albuminuria is present, as these drugs both lower protein leak and protect kidney function",
+    "Stop smoking — tobacco accelerates albuminuria and kidney function decline, and quitting slows both",
+    "Avoid regular use of NSAIDs such as ibuprofen and naproxen, and check every new medication and supplement for kidney safety"
+  ],
+
+  "lifestyleModifications": [
+    "Limit dietary sodium to under 2 grams per day to lower blood pressure and boost the anti-proteinuric effect of kidney-protective drugs",
+    "Reach and maintain a healthy body weight, since excess weight raises intraglomerular pressure and worsens albuminuria",
+    "Build up to at least 150 minutes of moderate physical activity per week, which improves blood pressure, glucose, and cardiovascular risk",
+    "Stay adequately hydrated with water, but do not force excessive fluid intake — there is no benefit to overhydration in stage 1 CKD",
+    "Moderate alcohol intake and avoid high-protein fad diets and unregulated herbal or bodybuilding supplements",
+    "Get screened and treated for sleep apnea if you snore heavily or wake unrefreshed, as it worsens blood pressure and cardiovascular risk",
+    "Keep up routine vaccinations, including influenza, pneumococcal, and hepatitis B, since infections can stress the kidneys"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Vegetables, fruits, whole grains, and legumes as the base of the diet — associated with slower CKD progression",
+      "Plant proteins such as beans, lentils, and tofu in place of some animal protein",
+      "Fish, particularly oily fish, in moderation for cardiovascular benefit",
+      "Low-fat or fat-free dairy in moderate amounts",
+      "Heart-healthy fats from olive oil, nuts, and seeds",
+      "Water as the main beverage, sufficient to maintain pale urine without forcing excess"
+    ],
+    "avoid": [
+      "High-sodium processed and packaged foods, cured meats, and salty snacks — the main dietary driver of high blood pressure",
+      "Sugar-sweetened beverages and excess added sugar, which worsen glucose control and weight",
+      "Excessive animal protein, especially red and processed meat in large daily portions",
+      "Herbal supplements marketed for weight loss or muscle gain, some of which are directly nephrotoxic",
+      "Heavy alcohol consumption, which raises blood pressure",
+      "Frequent use of NSAID-containing painkillers, which reduce kidney blood flow"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular aerobic and resistance exercise is safe and beneficial at stage 1 CKD and is encouraged without restriction beyond ordinary fitness sense. Aim for at least 150 minutes of moderate-intensity activity weekly, such as brisk walking, cycling, or swimming, plus muscle-strengthening twice a week. Exercise improves blood pressure, glucose control, weight, and cardiovascular risk — all of which directly slow CKD progression. Stay hydrated during activity and there is no need to avoid any particular form of exercise at this stage.",
+
+  "dailyManagement": [
+    "Take blood pressure and kidney-protective medications at the same time each day, as consistent adherence is the strongest predictor of staying at stage 1",
+    "Check home blood pressure on a set schedule and keep a log to share with the care team",
+    "Read food labels for sodium and keep a rough daily tally to stay under the 2-gram target",
+    "Avoid reaching for NSAIDs for everyday aches — use paracetamol or non-drug measures and ask before starting any new medication or supplement",
+    "Keep all scheduled blood and urine test appointments, since stage 1 is monitored by trend rather than by symptoms"
+  ],
+
+  "prognosis": "The outlook for stage 1 CKD is excellent when the underlying cause is treated and albuminuria is controlled. Many people with well-managed stage 1 disease never progress to a later stage and have a normal life expectancy. The risk of advancing depends heavily on the albuminuria category: people in the A1 range progress slowly if at all, while those with A3-level proteinuria face a substantially higher risk of declining kidney function and cardiovascular events. The most powerful prognostic levers are blood pressure control, glucose control in people with diabetes, consistent use of ACE inhibitors or ARBs, and now SGLT2 inhibitors, which together can flatten the trajectory of kidney decline. The greater near-term threat at stage 1 is not kidney failure — which is decades away if it ever arrives — but cardiovascular disease, which is the leading cause of death across all CKD stages. Stage 1 is best understood as a warning detected early enough to act on: the prognosis is largely written by what is done in the years immediately after diagnosis.",
+
+  "recoveryTimeline": "Stage 1 CKD is a chronic condition rather than an episode that resolves, so the timeline is one of disease control rather than recovery. Once an ACE inhibitor or ARB is started, albuminuria typically falls measurably within 4-8 weeks, and kidney function and potassium are checked 1-2 weeks after each dose change. With sustained treatment of the underlying cause, many people hold steady at stage 1 indefinitely; eGFR and uACR are rechecked every 6-12 months to confirm stability. In some cases — for example, when albuminuria is driven by newly controlled diabetes or treated glomerular disease — the damage marker can normalize over months, effectively returning the person to a pre-CKD state. Progression, when it happens, unfolds over years, which is what makes the monitoring schedule the practical measure of how treatment is going.",
+
+  "complications": [
+    "Progression to stage 2 and beyond — the central risk, detected by a falling eGFR or rising albuminuria on routine monitoring",
+    "Cardiovascular disease, including heart attack and stroke, which is more common at every CKD stage and is the leading cause of death; detected by blood pressure, lipid, and cardiac risk assessment",
+    "Worsening or new-onset hypertension, which both results from and accelerates kidney damage; caught by regular blood pressure monitoring",
+    "Acute kidney injury superimposed on CKD, often triggered by dehydration, NSAIDs, contrast dye, or infection; signaled by a sudden eGFR drop and reduced urine output",
+    "Nephrotic-range proteinuria if an underlying glomerular disease is uncontrolled, recognized by heavy foamy urine, swelling, and a high uACR",
+    "Hyperkalemia, usually drug-related from ACE inhibitors or ARBs rather than from stage 1 itself; detected on routine potassium monitoring"
+  ],
+
+  "supportResources": [
+    { "name": "National Kidney Foundation", "url": "https://www.kidney.org/", "description": "US patient education, A-to-Z health guide, free kidney risk quiz, and peer support programs." },
+    { "name": "CDC Chronic Kidney Disease", "url": "https://www.cdc.gov/kidney-disease/", "description": "US public health resource with national CKD statistics, risk factors, and prevention guidance." },
+    { "name": "American Kidney Fund", "url": "https://www.kidneyfund.org/", "description": "Patient education, financial assistance information, and an early-stage CKD learning hub." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "chronic-kidney-disease-stage-2", "name": "Chronic Kidney Disease Stage 2", "keyDifference": "Stage 2 has a mildly reduced eGFR of 60-89 mL/min/1.73m² alongside a damage marker, whereas stage 1 has a fully normal eGFR of 90 or higher. Both still require a persistent damage marker such as albuminuria; the only thing separating them is the filtration number." },
+    { "slug": "acute-kidney-injury", "name": "Acute Kidney Injury", "keyDifference": "Acute kidney injury is a sudden drop in kidney function over hours to days, often reversible, whereas stage 1 CKD is defined by abnormalities persisting at least three months. AKI is diagnosed on a rapidly changing creatinine; stage 1 CKD is diagnosed on stable findings confirmed over time." },
+    { "slug": "diabetic-nephropathy", "name": "Diabetic Nephropathy", "keyDifference": "Diabetic nephropathy is a specific cause of kidney damage, not a stage. A person with diabetic nephropathy and a normal eGFR plus albuminuria has stage 1 CKD; the nephropathy names the why, while the stage describes the how much." },
+    { "slug": "isolated-proteinuria-with-minor-glomerular-abnormality-n060", "name": "Isolated Proteinuria", "keyDifference": "Isolated proteinuria describes protein in the urine without other findings and may be benign or postural. It becomes stage 1 CKD only once the proteinuria is confirmed persistent over three months alongside a normal eGFR." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes" },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "chronic-kidney-disease-stage-2", "name": "Chronic Kidney Disease Stage 2", "relevance": "The next stage on the CKD continuum; stage 1 progresses to stage 2 when eGFR falls below 90." },
+    { "slug": "diabetic-nephropathy", "name": "Diabetic Nephropathy", "relevance": "The most common underlying cause of stage 1 CKD, typically first detected as albuminuria." },
+    { "slug": "hypertension", "name": "High Blood Pressure", "relevance": "Both a leading cause and a consequence of stage 1 CKD; controlling it is central to preventing progression." },
+    { "slug": "polycystic-kidney-disease", "name": "Polycystic Kidney Disease", "relevance": "A structural cause of stage 1 CKD that can be present with a completely normal eGFR." },
+    { "slug": "acute-kidney-injury", "name": "Acute Kidney Injury", "relevance": "A prior episode of acute kidney injury raises the long-term risk of developing CKD." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is stage 1 chronic kidney disease?",
+      "answer": "Stage 1 chronic kidney disease means the kidneys are still filtering normally — an estimated GFR of 90 mL/min/1.73m² or higher — but a marker of kidney damage, usually protein in the urine, has been present for at least three months. It is the earliest stage of CKD and is defined entirely by laboratory and imaging findings rather than by symptoms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does stage 1 kidney disease have symptoms?",
+      "answer": "No. Stage 1 CKD almost never causes symptoms. Kidney filtration is normal at this stage, so people feel well and are usually diagnosed by chance on routine blood or urine tests done for diabetes, blood pressure, or insurance. Any tiredness or other symptoms are typically due to the underlying condition rather than the kidney stage.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is stage 1 CKD diagnosed?",
+      "answer": "It is diagnosed with two tests: an estimated GFR from a blood creatinine sample showing a value of 90 or higher, and a urine albumin-to-creatinine ratio of 30 mg/g or higher showing kidney damage. Both must be confirmed on a repeat test at least three months apart, because a single abnormal result can be temporary.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stage 1 kidney disease be reversed?",
+      "answer": "Stage 1 CKD can sometimes be reversed if the underlying cause is treated early. When albuminuria is driven by newly controlled diabetes or a treated glomerular disease, protein leak can return to normal over months. Even when it cannot be fully reversed, stage 1 CKD can usually be stopped from progressing with good treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the life expectancy with stage 1 CKD?",
+      "answer": "Most people with well-managed stage 1 CKD have a normal life expectancy. The stage itself does not shorten life; what matters is controlling the underlying cause and reducing cardiovascular risk, since heart disease, not kidney failure, is the leading cause of death in people with CKD.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes stage 1 chronic kidney disease?",
+      "answer": "The most common causes are diabetes and high blood pressure, which damage the kidney's filtering units and cause protein to leak into the urine. Other causes include glomerular diseases such as IgA nephropathy or lupus nephritis, inherited polycystic kidney disease, recurrent kidney infections, and long-term use of nephrotoxic medications.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What medications are used for stage 1 CKD?",
+      "answer": "The main medications are ACE inhibitors or angiotensin receptor blockers, which lower protein leak and protect the kidneys. SGLT2 inhibitors are added for people with diabetes and albuminuria, statins are used to reduce heart risk, and additional blood pressure drugs are added as needed to reach target.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need a special diet for stage 1 kidney disease?",
+      "answer": "Severe protein or potassium restriction is not needed at stage 1. The main dietary goals are limiting sodium to under 2 grams per day, eating more vegetables, fruits, and whole grains, moderating animal protein, and avoiding sugary drinks. This diet supports blood pressure and slows progression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise with stage 1 CKD?",
+      "answer": "Yes. Regular exercise is safe and recommended at stage 1 CKD. Aim for at least 150 minutes of moderate activity such as brisk walking, cycling, or swimming each week, plus strength training twice weekly. Exercise improves blood pressure, glucose, and weight, all of which slow kidney disease progression.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should stage 1 CKD be monitored?",
+      "answer": "Stage 1 CKD is usually monitored every 6 to 12 months with a blood test for estimated GFR and a urine test for albumin. People with higher albuminuria or an unstable underlying condition may be checked more often. Monitoring is by trend, since there are no symptoms to track.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will stage 1 CKD lead to dialysis?",
+      "answer": "For most people, no. Dialysis is only needed at stage 5 kidney failure, which is decades away if it ever arrives. With good blood pressure and glucose control and kidney-protective medication, many people with stage 1 CKD never progress beyond it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between stage 1 and stage 2 CKD?",
+      "answer": "Both stages require a persistent kidney damage marker such as protein in the urine. The difference is the filtration rate: stage 1 has a normal eGFR of 90 or higher, while stage 2 has a mildly reduced eGFR of 60 to 89. Stage 2 is simply one step further along the same continuum.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is stage 1 CKD common?",
+      "answer": "Yes. CKD affects about 35.5 million US adults, roughly 14% of the adult population, and stages 1 and 2 make up a large share. However, because there are no symptoms, as many as 9 in 10 people with CKD do not know they have it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I see a nephrologist for stage 1 CKD?",
+      "answer": "Most stage 1 CKD is managed by a primary care doctor. A nephrologist is recommended when there is heavy protein in the urine, persistent blood in the urine, a suspected glomerular disease, an unexplained cause, or kidney function that declines unexpectedly. Early specialist input can guide testing and treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can young people get stage 1 CKD?",
+      "answer": "Yes. Stage 1 CKD can occur at any age. Young adults with type 1 diabetes can develop albuminuria in their 20s or 30s, and inherited conditions such as polycystic kidney disease or glomerular diseases like IgA nephropathy also affect younger people. It is not limited to older adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does stage 1 CKD affect medication doses?",
+      "answer": "Usually not. Because the kidneys filter normally at stage 1, most medications do not need dose adjustment. Still, every new drug, contrast dye, and supplement should be checked for kidney safety, and routine NSAID use should be avoided because it reduces kidney blood flow.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is protein in the urine always serious?",
+      "answer": "Not always. Small amounts of protein can appear temporarily after exercise, fever, or dehydration, or in benign postural proteinuria. It is considered significant only when a urine albumin-to-creatinine ratio of 30 mg/g or higher is confirmed on repeat testing over three months, which then defines stage 1 CKD.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does stage 1 CKD treatment cost?",
+      "answer": "Stage 1 CKD treatment is inexpensive because it relies on generic medications. ACE inhibitors, ARBs, and statins are low-cost generics worldwide, and SGLT2 inhibitors are becoming more affordable as generics emerge. The main costs are routine blood and urine monitoring and managing the underlying condition.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stage 1 CKD get worse without me noticing?",
+      "answer": "Yes, which is why monitoring matters. Stage 1 CKD has no symptoms, so progression to stage 2 or beyond is only detectable through regular blood and urine tests. Keeping every scheduled test appointment is the only reliable way to catch worsening early enough to act on it.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does drinking more water help stage 1 CKD?",
+      "answer": "Staying normally hydrated is good, but forcing large amounts of extra water does not protect the kidneys at stage 1 and is not recommended. Drink enough to keep urine pale and to avoid dehydration, which can cause acute kidney injury, but there is no benefit to overhydration.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Early kidney disease with normal filtration (CKD stage 1)",
+
+  "regionalNames": [
+    { "name": "गुर्दे की पुरानी बीमारी, चरण 1", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Enfermedad renal crónica etapa 1", "region": "Latin America / Spain", "language": "es" }
+  ],
+
+  "searchTags": [
+    "chronic kidney disease stage 1", "CKD stage 1", "stage 1 kidney disease", "early kidney disease",
+    "G1A2", "G1A3", "albuminuria normal eGFR", "kidney damage marker", "uACR 30", "nephrology",
+    "diabetic kidney disease early", "protein in urine kidney", "KDIGO stage 1", "slow CKD progression"
+  ],
+
+  "symptomKeywords": [
+    "foamy urine", "protein in urine", "high blood pressure kidney", "blood in urine",
+    "kidney damage no symptoms", "early kidney disease signs", "abnormal kidney blood test"
+  ],
+
+  "metaTitle": "Chronic Kidney Disease Stage 1: Symptoms & Treatment",
+  "metaDescription": "Chronic kidney disease stage 1: normal eGFR with kidney damage like albuminuria. Causes, diagnosis, treatment, and prognosis reviewed by our medical board.",
+
+  "keywords": [
+    "chronic kidney disease stage 1", "CKD stage 1", "stage 1 kidney disease symptoms",
+    "stage 1 CKD treatment", "stage 1 kidney disease causes", "is stage 1 CKD reversible",
+    "stage 1 CKD life expectancy", "albuminuria normal eGFR", "early chronic kidney disease",
+    "CKD stage 1 diet", "G1A2 kidney disease", "stage 1 vs stage 2 CKD"
+  ],
+
+  "lastReviewed": "2026-05-15",
+
+  "images": [
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kidney_Nephron.png",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Kidney_Nephron.png",
+      "altText": "Diagram of a kidney nephron showing the glomerulus and tubule where filtration and albumin handling occur",
+      "caption": "The nephron — the glomerular filtration barrier is where albuminuria first appears in stage 1 CKD.",
+      "license": "Public Domain",
+      "credit": "Wikimedia Commons",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Urine_dipstick_USMLE.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Urine_dipstick_USMLE.jpg",
+      "altText": "Urine dipstick test strip used to screen for protein and blood in the urine during CKD evaluation",
+      "caption": "Urine testing is the primary tool for detecting the albuminuria that defines stage 1 CKD.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney International. 2024;105(4S):S117-S314.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38490803/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Stevens PE, Ahmed SB, Carrero JJ, et al. Executive summary of the KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney International. 2024;105(4):684-701.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38519239/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Chronic Kidney Disease in the United States, 2023. National Center for Chronic Disease Prevention and Health Promotion.",
+      "url": "https://www.cdc.gov/kidney-disease/php/data-research/index.html",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Heerspink HJL, Stefansson BV, Correa-Rotter R, et al. Dapagliflozin in Patients with Chronic Kidney Disease. New England Journal of Medicine. 2020;383(15):1436-1446.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32970396/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Kalantar-Zadeh K, Jafar TH, Nitsch D, Neuen BL, Perkovic V. Chronic kidney disease. Lancet. 2021;398(10302):786-802.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34175022/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Kovesdy CP. Epidemiology of chronic kidney disease: an update 2022. Kidney International Supplements. 2022;12(1):7-11.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35529086/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "United States Renal Data System. 2023 USRDS Annual Data Report: Epidemiology of Kidney Disease in the United States. National Institutes of Health, NIDDK; 2023.",
+      "url": "https://usrds-adr.niddk.nih.gov/2023",
+      "accessedDate": "2026-05-15"
+    }
+  ]
+}

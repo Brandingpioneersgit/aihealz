@@ -1,231 +1,525 @@
 {
-  "_meta": { "slug": "aortic-calcification", "writtenBy": "ws1-sonnet-wave", "writtenAt": "2026-05-15" },
-  "h1Title": "Aortic Calcification",
-  "specialistType": "Radiology",
-  "heroOverview": "Aortic calcification is the deposition of calcium phosphate mineral within the wall of the aorta — the body's largest artery — and serves as a direct radiological marker of advanced atherosclerosis. It is detectable by plain abdominal X-ray in roughly 20-30% of people over 60 and by CT in up to 70% of adults over 70. The condition itself does not usually produce symptoms; its clinical significance lies in what it predicts: individuals with moderate to heavy aortic calcification have a 2-4-fold higher risk of cardiovascular events — heart attack, stroke, and cardiovascular death — compared with those without. The aorta is divided into the thoracic (chest) segment and the abdominal segment; abdominal aortic calcification (AAC) is the best-studied and most clinically relevant subtype. Calcium scoring on CT provides a quantitative assessment of atherosclerotic burden that helps guide statin therapy, antihypertensive treatment, and lifestyle intervention.",
-  "keyStats": {
-    "prevalence": "Detectable in approximately 20-30% of people over 60 on plain X-ray; up to 70% of adults over 70 on CT; prevalence rises sharply after age 50",
-    "demographics": "More prevalent in men under 70; rates equalise in women after menopause; strongly associated with chronic kidney disease, diabetes, and prolonged cigarette smoking",
-    "avgAge": "Typically first identified after age 50; highest prevalence in those over 70",
-    "globalCases": "Given global population ageing, hundreds of millions of adults carry some degree of aortic calcification; exact global figures depend heavily on the imaging modality used to measure it"
+  "_meta": {
+    "slug": "aortic-calcification",
+    "tier": 1,
+    "headTerm": "aortic calcification",
+    "longTailKeywords": [
+      "aortic calcification meaning",
+      "aortic valve calcification",
+      "abdominal aortic calcification",
+      "aortic calcification on chest x-ray",
+      "is aortic calcification dangerous",
+      "calcium score aorta",
+      "aortic atherosclerosis treatment",
+      "aortic calcification vs aortic stenosis",
+      "porcelain aorta"
+    ],
+    "primarySpecialty": "Cardiology",
+    "lastReviewed": "2026-05-15",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Aortic calcification is overwhelmingly an incidental imaging finding, not a symptomatic disease. Content frames it accordingly. Numbers checked against MESA cohort data, Otto NEJM aortic stenosis review, Rajamannan calcific aortic valve disease consensus (PMID 22007101), Lewis aortic valve calcification meta-analysis (PMID 31239172), and ACC/AHA 2020 valvular heart disease guideline."
   },
-  "definition": "Aortic calcification (ICD-10 context: I70 — Atherosclerosis; I77.89 — Other specified disorders of arteries and arterioles; specifically tracked as abdominal aortic calcification in population studies) refers to the accumulation of hydroxyapatite (calcium phosphate) crystals within the intima or media of the aortic wall as a consequence of chronic atherosclerosis, medial arterial calcification, or a combination of both. Intimal calcification is the predominant form in the atherosclerotic process: oxidised low-density lipoprotein triggers an inflammatory cascade in the arterial intima, macrophages become foam cells within plaques, and calcium deposits progressively mineralise the necrotic core of these plaques over years to decades. Medial (Mönckeberg) calcification — a patterned calcification of the tunica media without an inflammatory lipid core — is the dominant form in diabetes, chronic kidney disease, and ageing; it produces a characteristic eggshell or tram-track appearance on imaging and stiffens the vessel without necessarily narrowing it. Both forms increase aortic stiffness, raise pulse wave velocity, elevate systolic blood pressure, and independently predict cardiovascular mortality. The condition falls under the purview of vascular radiology for detection and quantification, cardiology for cardiovascular risk assessment, nephrology when kidney disease drives vascular mineralisation, and endocrinology in the context of calcium-phosphate metabolism disorders. Aortic calcification should be distinguished from aortic valve calcification (calcific aortic stenosis), which affects the aortic valve leaflets rather than the aortic wall, though both reflect systemic atherosclerotic burden.",
+
+  "h1Title": "Aortic Calcification: Causes, Significance & Management",
+  "specialistType": "Cardiology",
+
+  "heroOverview": "Aortic calcification is the deposition of calcium phosphate mineral within the wall of the aorta or its valve, and is usually discovered incidentally on chest X-ray, abdominal radiograph, or CT scan rather than from symptoms. By age 60, abdominal aortic calcification is visible on plain radiograph in 20-30% of adults; CT detects some calcium in over 70% of adults past age 70. The finding itself rarely causes symptoms, but it is a powerful marker of systemic atherosclerosis — moderate to severe aortic calcification doubles to quadruples the risk of future heart attack, stroke, and cardiovascular death. When calcium accumulates on the aortic valve cusps (calcific aortic valve disease), it can progress over years to aortic stenosis, the most common valve disease in adults over 70. Management is directed at the underlying atherosclerotic risk factors rather than the calcium itself.",
+
+  "keyStats": {
+    "prevalence": "Detected on abdominal radiograph in 20-30% of adults over 60; on CT in over 70% of adults over 70",
+    "demographics": "Roughly equal in men and women after age 65; earlier onset in men by about 5-10 years",
+    "avgAge": "First detection most often between 55 and 75; severe aortic valve calcification typically presents after 65",
+    "globalCases": "Most adults over 75 have some degree of aortic calcification on dedicated imaging"
+  },
+
+  "definition": "Aortic calcification (ICD-10: I70.0 for atherosclerosis of aorta; I35.0 for calcific aortic stenosis) is calcium phosphate deposition in the wall of the aorta, in atherosclerotic plaques along its intima, or on the cusps of the aortic valve. It is the radiographic and pathological end-point of an active, regulated, atherosclerotic and osteogenic process — not simple passive aging. Vascular smooth muscle cells transdifferentiate into osteoblast-like cells under the influence of inflammation, oxidized lipids, mineral metabolism imbalance, and uremic toxins, producing hydroxyapatite within the vessel wall. Three clinically distinct patterns are recognised: intimal (atherosclerotic) calcification, which marks the burden of plaque in the aorta and predicts cardiovascular events; medial (Mönckeberg) calcification, which is more uniform and is associated with chronic kidney disease and diabetes; and valvular calcification, which thickens and stiffens the aortic valve cusps and is the dominant cause of aortic stenosis in older adults. The finding is managed across cardiology, vascular surgery, and primary care depending on extent and which segment is involved, with imaging led by cardiothoracic radiology.",
+
   "typesClassification": [
-    { "type": "Abdominal aortic calcification (AAC)", "description": "Calcification in the infrarenal abdominal aorta, the best-validated imaging marker for cardiovascular risk. Quantified on lateral spine X-ray or abdominal CT using validated scoring systems (AAC-24, AAC-8). Strong independent predictor of myocardial infarction, stroke, peripheral artery disease, and all-cause mortality." },
-    { "type": "Thoracic aortic calcification (TAC)", "description": "Calcification in the ascending, arch, or descending thoracic aorta, most often detected on chest CT or incidentally on chest X-ray. Associated with coronary artery disease, aortic aneurysm, and elevated cardiovascular mortality independent of traditional risk factors." },
-    { "type": "Intimal atherosclerotic calcification", "description": "Calcium deposited within atheromatous plaques as part of the inflammatory lipid-driven atherosclerotic process; typically patchy or nodular in appearance and closely associated with plaque instability and thrombotic events." },
-    { "type": "Medial (Mönckeberg) calcification", "description": "Smooth, circumferential calcification of the tunica media without an atherosclerotic lipid core; predominant in diabetes mellitus, chronic kidney disease, and ageing. Produces vessel stiffness and elevated pulse pressure without luminal narrowing." }
+    { "type": "Intimal (atherosclerotic) aortic calcification", "description": "Patchy calcium deposits within atherosclerotic plaques in the intima of the aorta. The strongest cardiovascular risk marker among the patterns and shares pathway with coronary calcification." },
+    { "type": "Medial (Mönckeberg) calcification", "description": "Uniform ring-like calcification of the media, common in chronic kidney disease, diabetes, and advanced age. Stiffens the vessel wall, raises pulse pressure, and increases left ventricular afterload." },
+    { "type": "Aortic valve calcification (calcific aortic valve disease)", "description": "Calcium deposits on aortic valve cusps. Begins as aortic sclerosis (thickening without obstruction) and may progress to aortic stenosis with reduced cusp opening, raising left ventricular pressure." },
+    { "type": "Abdominal aortic calcification (AAC)", "description": "Calcification of the abdominal aorta, scored on lateral lumbar radiograph using the Kauppila 24-point AAC scale. Higher scores correlate with cardiovascular mortality and hip fracture risk." },
+    { "type": "Porcelain aorta", "description": "Near-circumferential, eggshell-like calcification of the ascending aorta. Uncommon (about 1-2% of cardiac surgery candidates) but complicates open cardiac surgery; transcatheter approaches are often preferred." }
   ],
+
   "primarySymptoms": [
-    "Aortic calcification itself is asymptomatic in the vast majority of cases and is discovered incidentally on imaging performed for another reason.",
-    "Claudication — cramping leg pain during walking that resolves with rest — when calcification is associated with significant atherosclerotic narrowing of the aorta or iliac arteries reducing blood flow to the legs.",
-    "Buttock, thigh, and hip pain on exertion (Leriche syndrome) when calcification accompanies aortoiliac occlusive disease obstructing flow to both legs.",
-    "Pulsating abdominal mass, sometimes accompanied by a bruit, when calcification marks an underlying aortic aneurysm that has expanded.",
-    "Renovascular hypertension — difficult-to-control high blood pressure — when calcification affects the renal artery origins and impairs kidney perfusion.",
-    "Erectile dysfunction in men, as a component of aortoiliac occlusive disease reducing pelvic blood flow.",
-    "Abdominal angina — post-prandial central abdominal pain with weight loss — when calcification accompanies significant mesenteric artery narrowing impairing gut blood flow.",
-    "Severe hypertension with wide pulse pressure reflecting generalised aortic stiffness rather than focal obstruction.",
-    "Incidental finding noted in radiology reports of spine X-rays, abdominal CT, or DXA scans without any accompanying symptoms."
+    "No symptoms in the majority of cases — aortic wall calcification itself does not produce pain or palpitations, and most cases are discovered as an incidental finding on imaging done for an unrelated reason.",
+    "Exertional chest pressure, breathlessness, or near-syncope developing only when valvular calcification has progressed to significant aortic stenosis, typically once the valve area drops below 1.0 cm².",
+    "Loss of stamina or unexplained fatigue on activities previously well tolerated, which can be an early symptom of moderate aortic stenosis caused by valve calcification.",
+    "A new heart murmur heard on routine examination — a harsh systolic ejection murmur at the right upper sternal border radiating to the carotids suggests calcific aortic stenosis.",
+    "Loss of peripheral pulses, claudication, or cool feet when atherosclerotic aortic calcification is part of more diffuse peripheral arterial disease.",
+    "Diminished or asymmetric blood pressure readings between the two arms in patients with extensive thoracic aortic calcification and atheromatous plaque.",
+    "Embolic events such as transient ischemic attack or acute limb ischemia from calcified atheromatous debris dislodging from the aortic wall — a recognised but uncommon presentation.",
+    "An incidentally noted abdominal aortic aneurysm or pulsatile mass on examination, since aortic calcification frequently accompanies aneurysmal dilation."
   ],
+
   "earlyWarningSigns": [
-    "Onset of mild exertional leg fatigue or cramping that resolves within minutes of rest, suggesting early peripheral artery involvement.",
-    "A gradual worsening of blood pressure control despite adequate medication.",
-    "An incidental radiology report mentioning calcification in the aorta, which warrants cardiovascular risk review even without symptoms.",
-    "Widening pulse pressure (large gap between systolic and diastolic readings) on routine blood pressure measurements."
+    "Strong cardiovascular risk profile (smoking, hypertension, dyslipidemia, diabetes, chronic kidney disease) — these predict aortic calcification before it appears on imaging",
+    "Family history of premature atherosclerosis or sudden cardiac death before age 55 (men) or 65 (women)",
+    "Coronary artery calcium score >0 on a screening CT — coronary and aortic calcium share pathways, so one usually implies the other",
+    "Elevated lipoprotein(a) — a heritable lipid particle that specifically accelerates calcific aortic valve disease"
   ],
+
   "emergencySigns": [
-    "Sudden severe tearing or ripping chest or back pain radiating to the abdomen — hallmark of thoracic aortic dissection, which can complicate a heavily calcified, stiff aorta.",
-    "Sudden severe abdominal and back pain with a pulsating mass in the midline — may indicate rupture of an aortic aneurysm associated with heavy calcification; this is immediately life-threatening.",
-    "Acute lower limb ischaemia — sudden onset cold, pale, pulseless, painful leg — from aortic or iliac thromboembolism.",
-    "Acute stroke or transient ischaemic attack in the context of known heavy aortic calcification or thoracic aortic plaque."
+    "Sudden severe tearing chest or back pain with hypotension — possible aortic dissection or rupture in a heavily diseased aorta; call emergency services immediately",
+    "Sudden cold, pale, painful limb with loss of pulses — acute embolism from aortic atheromatous debris; requires same-day vascular emergency review",
+    "Syncope, near-syncope on exertion, or new exertional chest pain in a patient with known aortic valve calcification — possible critical aortic stenosis; urgent cardiology referral",
+    "Acute pulmonary edema or new heart failure in someone with known aortic valve calcification — may signal valve decompensation",
+    "Stroke or transient ischemic attack — embolic source from a heavily calcified aorta or atheromatous plaque should be considered"
   ],
+
   "causes": [
-    { "cause": "Atherosclerosis", "description": "The dominant mechanism: chronic endothelial injury from dyslipidaemia, hypertension, and smoking triggers monocyte infiltration, foam cell formation, and plaque development in the aortic intima. Over decades, necrotic plaque cores calcify progressively as vascular smooth muscle cells undergo an osteoblast-like phenotypic switch, depositing hydroxyapatite under the influence of bone morphogenetic proteins (BMPs) and matrix Gla protein deficiency." },
-    { "cause": "Chronic kidney disease", "description": "Impaired renal phosphate excretion elevates serum phosphate, which directly promotes vascular smooth muscle calcification via the RANK/RANKL/OPG and sodium-phosphate co-transporter pathways. Reduced calcitriol production in CKD also disturbs calcium-phosphate balance; medial calcification is accelerated and begins earlier in the course of kidney disease than in the general population." },
-    { "cause": "Diabetes mellitus", "description": "Hyperglycaemia accelerates arterial calcification through advanced glycation end-products (AGEs) that stiffen the extracellular matrix and stimulate osteogenic gene expression in vascular smooth muscle cells; diabetic patients develop medial calcification at an earlier age and at lower absolute LDL levels than non-diabetic patients." },
-    { "cause": "Ageing and oestrogen deficiency", "description": "Matrix Gla protein, a potent endogenous calcification inhibitor, requires vitamin K-dependent carboxylation to function; its effectiveness declines with age. Oestrogen independently suppresses osteogenic gene expression in vascular cells; post-menopausal oestrogen decline accelerates aortic calcification, contributing to the convergence of male and female cardiovascular risk after age 55-60." },
-    { "cause": "Prolonged cigarette smoking", "description": "Tobacco smoke oxidises LDL particles and generates reactive oxygen species that perpetuate endothelial inflammation and plaque progression; heavy smokers develop significant aortic calcification approximately 5-10 years earlier than non-smokers in population studies." },
-    { "cause": "Vitamin K deficiency", "description": "Vitamin K2 activates matrix Gla protein, which prevents vascular mineralisation. A diet low in fermented foods and green vegetables, or use of vitamin K antagonists (warfarin), impairs MGP carboxylation and substantially accelerates arterial calcification, as demonstrated in randomised trials of vitamin K supplementation." }
+    {
+      "cause": "Atherosclerosis",
+      "description": "Lipid-laden plaques in the aortic intima undergo chronic inflammation, necrosis, and calcification over decades. Intimal aortic calcification is essentially the late-stage signature of systemic atherosclerosis and shares mechanism with coronary and carotid disease."
+    },
+    {
+      "cause": "Aging",
+      "description": "Vascular smooth muscle cells lose elastin and gain osteogenic transcription factors (RUNX2, BMP-2) with age, predisposing to mineral deposition. Calcification rises steeply with each decade past 50."
+    },
+    {
+      "cause": "Chronic kidney disease and dialysis",
+      "description": "Disordered calcium-phosphate metabolism, secondary hyperparathyroidism, elevated FGF-23, and uremic toxins drive aggressive medial calcification. Dialysis patients accumulate vascular calcium 2-4 times faster than age-matched controls."
+    },
+    {
+      "cause": "Diabetes mellitus",
+      "description": "Hyperglycemia, insulin resistance, and advanced glycation end-products accelerate both intimal and medial aortic calcification. Type 2 diabetes patients show roughly 2-fold higher abdominal aortic calcium scores at any given age."
+    },
+    {
+      "cause": "Elevated lipoprotein(a)",
+      "description": "Lipoprotein(a) carries oxidized phospholipids that uniquely deposit in aortic valve cusps and accelerate valvular calcification. Mendelian randomization data (PMID 37078819) establish a causal link to calcific aortic valve disease."
+    },
+    {
+      "cause": "Bicuspid aortic valve and other congenital valve abnormalities",
+      "description": "Abnormal flow shear stress on a malformed valve accelerates calcification by 10-20 years compared with a normal tricuspid valve. About half of patients needing aortic valve replacement for stenosis under age 70 have a bicuspid valve."
+    },
+    {
+      "cause": "Tobacco smoking",
+      "description": "Smoking accelerates endothelial injury, inflammation, and calcium deposition. Current smokers have aortic calcium scores 30-50% higher than never-smokers at the same age and risk profile."
+    },
+    {
+      "cause": "Prior chest radiation therapy",
+      "description": "Mediastinal radiation for breast cancer, Hodgkin lymphoma, or lung cancer accelerates fibrosis and calcification of the thoracic aorta and valves, often presenting 10-20 years after treatment."
+    }
   ],
+
   "riskFactors": [
-    { "factor": "Age over 50", "category": "non-modifiable", "description": "Aortic calcification prevalence rises steeply with age, from under 5% before 50 to over 70% by age 70-75 on CT, reflecting decades of cumulative atherosclerotic burden and declining inhibitory mechanisms." },
-    { "factor": "Chronic kidney disease", "category": "non-modifiable", "description": "CKD patients have an approximately 3-5-fold higher prevalence of severe aortic calcification compared with age-matched individuals with normal kidney function, and progression is faster; even mild CKD (eGFR 60-89) independently predicts accelerated calcification." },
-    { "factor": "Diabetes mellitus", "category": "modifiable", "description": "Type 2 and type 1 diabetes both accelerate medial and intimal calcification; tight glycaemic control (HbA1c below 7%) slows but does not fully arrest calcification progression." },
-    { "factor": "Hypertension", "category": "modifiable", "description": "Elevated arterial wall shear stress and pulse pressure promote endothelial injury and plaque formation; blood pressure control is one of the most modifiable targets to slow aortic stiffening and calcification progression." },
-    { "factor": "Dyslipidaemia — elevated LDL", "category": "modifiable", "description": "Oxidised LDL is the primary initiator of the inflammatory cascade within atherosclerotic plaques; statin therapy reduces plaque lipid content and can stabilise calcification, though it does not reverse existing calcium deposits." },
-    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Active and former smoking independently predicts aortic calcification severity; smoking cessation is the single most effective modifiable intervention for halting calcification progression in epidemiological studies." },
-    { "factor": "Low vitamin K intake or warfarin use", "category": "modifiable", "description": "Warfarin users have substantially higher coronary and aortic calcification scores than age-matched controls in multiple cross-sectional studies; newer anticoagulants do not share this effect." },
-    { "factor": "Post-menopausal status", "category": "non-modifiable", "description": "The loss of oestrogen's anti-calcific effects at menopause roughly doubles the rate of aortic calcification progression in women; HRT may partially attenuate but does not eliminate this acceleration." },
-    { "factor": "Male sex under age 65", "category": "non-modifiable", "description": "Men develop significant aortic calcification approximately 10 years earlier than women, largely because of earlier and more severe atherosclerotic plaque progression before menopause equalises risk." }
+    { "factor": "Age over 60", "category": "non-modifiable", "description": "Prevalence of any aortic calcification rises from under 10% at age 45 to over 70% at age 75 on CT imaging." },
+    { "factor": "Hypertension", "category": "modifiable", "description": "Sustained high blood pressure increases vascular wall stress and oxidative injury; longitudinal cohorts show 1.5-2x higher rate of aortic calcium progression in untreated hypertensives." },
+    { "factor": "Dyslipidemia (high LDL, low HDL, high lipoprotein(a))", "category": "modifiable", "description": "LDL drives intimal calcification; lipoprotein(a) specifically accelerates aortic valve calcification independent of LDL." },
+    { "factor": "Diabetes mellitus and metabolic syndrome", "category": "modifiable", "description": "Roughly doubles the rate of aortic calcium accumulation per year compared to non-diabetics of the same age." },
+    { "factor": "Chronic kidney disease, especially dialysis", "category": "modifiable", "description": "Strongest accelerator outside age — CKD stage 4-5 patients accumulate aortic calcium at 2-4 times the rate of normal renal function." },
+    { "factor": "Cigarette smoking", "category": "modifiable", "description": "Direct injurious effect on endothelium plus pro-inflammatory state; current smokers have 30-50% higher aortic calcium scores than never-smokers." },
+    { "factor": "Male sex", "category": "non-modifiable", "description": "Men develop aortic calcification 5-10 years earlier than women, although the gap narrows after menopause." },
+    { "factor": "Family history of premature coronary artery disease", "category": "genetic", "description": "First-degree relative with CAD before age 55 (men) or 65 (women) raises calcification risk 1.5-2 fold, partly mediated by lipoprotein(a) and apoB heritability." },
+    { "factor": "Bicuspid aortic valve", "category": "genetic", "description": "Accelerates valve calcification by 10-20 years; affects roughly 1-2% of the population and is the most common congenital cardiac anomaly." },
+    { "factor": "Prior chest or mediastinal radiation", "category": "environmental", "description": "Radiation-induced fibrosis and accelerated valve and aortic calcification appear 10-20 years after treatment for breast cancer, Hodgkin lymphoma, or thoracic malignancies." },
+    { "factor": "Postmenopausal status without hormone therapy", "category": "non-modifiable", "description": "Loss of estrogen-mediated vascular protection contributes to accelerated calcification in women after menopause." }
   ],
+
   "affectedDemographics": [
-    "Adults over 60, especially those with multiple cardiovascular risk factors",
-    "Patients with chronic kidney disease at any stage, particularly those on dialysis",
-    "People with poorly controlled type 2 diabetes",
-    "Long-term smokers and former heavy smokers",
-    "Post-menopausal women, particularly those not using HRT",
-    "Patients taking long-term warfarin anticoagulation",
-    "Individuals with familial hypercholesterolaemia or severely elevated LDL"
+    "Abdominal aortic calcification visible on lateral lumbar X-ray in roughly 25% of adults aged 60-69 and 60% over age 80 (Kauppila scoring studies)",
+    "Aortic valve calcification (without stenosis) detected on echocardiogram in roughly 25% of adults over 65 (MESA cohort)",
+    "Severe calcific aortic stenosis affects approximately 3% of adults over 75 in the US — the leading reason for aortic valve replacement",
+    "Chronic kidney disease stage 5 patients have aortic calcification prevalence over 80%, regardless of age",
+    "Bicuspid aortic valve carriers (1-2% of the population) develop clinically significant valve calcification a decade or more earlier than the general population"
   ],
-  "diagnosisOverview": "Aortic calcification is an incidental finding on imaging performed for another purpose rather than the target of a deliberate diagnostic workup. On plain abdominal X-ray, it appears as linear or patchy densities in the expected location of the aorta, typically to the left of the lumbar spine on a lateral view; the AAC-8 and AAC-24 scoring systems quantify severity on lateral lumbar spine radiographs. Abdominal CT detects and quantifies calcification with far greater sensitivity than X-ray, measuring calcium volume and density using the Agatston method; CT is the reference standard but involves radiation and is not obtained purely to score aortic calcification. DXA (dual-energy X-ray absorptiometry) scans for bone density, widely used in postmenopausal women, capture the lateral spine image and have been validated for AAC scoring, making them a valuable opportunistic screening tool. The coronary artery calcium (CAC) score on a dedicated non-contrast cardiac CT is now a validated cardiovascular risk stratification tool that correlates strongly with aortic calcification burden. When calcification is detected, clinical workup focuses on quantifying overall cardiovascular risk rather than directly treating the calcium: lipid profile, blood glucose, kidney function (eGFR), urine albumin-to-creatinine ratio, blood pressure, and smoking history are assessed. The ABI (ankle-brachial index) is obtained if peripheral artery disease symptoms are present. Vascular ultrasound screens for aneurysmal dilatation of the abdominal aorta when significant calcification is present.",
+
+  "diagnosisOverview": "Aortic calcification is most often diagnosed incidentally — a chest X-ray ordered for a respiratory complaint, an abdominal CT ordered for back pain, a DEXA scan ordered for osteoporosis screening that includes a lateral spine view. Once detected, the clinician's job is to characterize extent and location and then assess what it implies for global cardiovascular risk. Plain chest or abdominal radiographs identify calcification in roughly 20-30% of adults over 60 but underestimate the true burden. CT is the gold-standard non-invasive tool: a non-contrast cardiac CT measures the coronary calcium score and incidentally captures aortic and aortic valve calcium; a contrast-enhanced thoracic or abdominal CT angiogram defines plaque distribution and rules out aneurysm. Transthoracic echocardiography is the test of choice when valve calcification is suspected — it directly measures cusp thickening, leaflet excursion, peak velocity, and mean gradient across the aortic valve, distinguishing aortic sclerosis from aortic stenosis. The Kauppila 24-point lateral lumbar score is widely used in research and DEXA contexts to grade abdominal aortic calcification. Once detected, work-up includes blood pressure measurement, lipid panel with lipoprotein(a), HbA1c, renal function, and an ASCVD or QRISK score to drive primary prevention. Vascular surgery referral is appropriate where calcification is associated with aneurysm, severe peripheral arterial disease, or limits surgical access; cardiology referral is appropriate where there is significant valvular disease.",
+
   "diagnosticTests": [
-    { "test": "Plain abdominal or lateral lumbar spine X-ray", "purpose": "Detects visible aortic calcification and allows semi-quantitative scoring (AAC-8 or AAC-24 scale); limited sensitivity for mild calcification but widely available and low radiation.", "whatToExpect": "You stand or lie for a brief X-ray lasting seconds; no contrast or preparation is required. A lateral view of the lower spine shows the abdominal aorta and any calcification alongside the vertebrae." },
-    { "test": "Non-contrast abdominal CT", "purpose": "Gold-standard detection and quantification of aortic calcification with Agatston scoring; also identifies co-existing abdominal aortic aneurysm, renal artery disease, and visceral artery involvement.", "whatToExpect": "You lie in the CT scanner for 5-10 minutes; no contrast is needed. The scanner rotates around you taking thin cross-sectional images; a radiologist scores the calcium density on each slice." },
-    { "test": "DXA lateral spine image (opportunistic AAC scoring)", "purpose": "Lateral spine image captured during routine bone density scanning is validated for AAC scoring; allows incidental cardiovascular risk detection during osteoporosis screening without additional radiation.", "whatToExpect": "The DXA scan takes 10-15 minutes; you lie still while a low-dose X-ray arm passes over your spine. The calcification is read from the same image obtained for bone density measurement." },
-    { "test": "Coronary artery calcium (CAC) score CT", "purpose": "Dedicated non-contrast cardiac CT that quantifies coronary and sometimes aortic calcium; a score above 300 Agatston units identifies high cardiovascular risk and informs statin and aspirin prescribing decisions.", "whatToExpect": "A 5-10 minute non-contrast CT of the chest with breath-hold instructions; no injection is needed. The result is given as an Agatston score and compared to age- and sex-matched norms." },
-    { "test": "Lipid panel, fasting glucose, HbA1c, eGFR, urine ACR", "purpose": "Quantifies modifiable cardiovascular risk factors driving calcification; eGFR and albumin-creatinine ratio identify CKD, which accelerates vascular mineralisation.", "whatToExpect": "A fasting blood draw from the arm and a urine sample; most results available within 24-48 hours at routine laboratory turnaround." },
-    { "test": "Ankle-brachial index (ABI)", "purpose": "Non-invasive test comparing blood pressure at the ankle and arm; an ABI below 0.90 confirms peripheral artery disease, which commonly coexists with significant aortic calcification.", "whatToExpect": "Blood pressure cuffs are placed on both arms and both ankles; a handheld Doppler probe measures the pressure at each site. The test takes about 15 minutes and requires no needles." }
+    {
+      "test": "Plain radiograph (chest X-ray or lateral lumbar spine X-ray)",
+      "purpose": "Detects coarse aortic calcification incidentally. Lateral lumbar radiographs are commonly scored with the Kauppila 24-point Abdominal Aortic Calcification (AAC) scale.",
+      "whatToExpect": "Standard 5-minute X-ray, no preparation, no contrast. Often the original finding that triggers further work-up."
+    },
+    {
+      "test": "Non-contrast CT for calcium scoring",
+      "purpose": "Gold-standard quantification of vascular calcium burden. Coronary artery calcium scoring is the most studied, but the same scan visualizes aortic and aortic valve calcium and contributes to cardiovascular risk stratification.",
+      "whatToExpect": "A non-contrast CT taking 10-15 seconds of breath-hold, low radiation dose (about 1 mSv), no IV line. Results return as an Agatston calcium score within 24 hours."
+    },
+    {
+      "test": "Transthoracic echocardiogram",
+      "purpose": "First-line test for assessing aortic valve calcification and its hemodynamic consequences — leaflet thickening, peak velocity, mean gradient, valve area, and left ventricular response.",
+      "whatToExpect": "Painless 30-45 minute ultrasound on the chest. Gel and a probe; no needles or radiation. Results discussed at the time of scan or by the cardiologist soon after."
+    },
+    {
+      "test": "CT angiography of the aorta",
+      "purpose": "Contrast-enhanced CT delineates the entire aorta, characterizing plaque, calcification, aneurysm, ulcer, dissection, and accessibility for transcatheter procedures (TAVR planning).",
+      "whatToExpect": "IV contrast injection followed by a 15-30 second scan. Total appointment about 30 minutes. Requires normal renal function and screening for iodine allergy."
+    },
+    {
+      "test": "Abdominal aortic ultrasound",
+      "purpose": "Screens for abdominal aortic aneurysm; visualizes plaque and calcification in the aorta. USPSTF recommends one-time screening for AAA in men aged 65-75 who have ever smoked.",
+      "whatToExpect": "Fasting from food for 8 hours improves image quality. Painless 20-30 minute ultrasound with gel and a probe. No radiation, results often available immediately."
+    },
+    {
+      "test": "Lipid panel including lipoprotein(a)",
+      "purpose": "Identifies modifiable lipid drivers of progression. Lipoprotein(a) specifically accelerates aortic valve calcification and is measured once in a lifetime in most patients.",
+      "whatToExpect": "Standard fasting blood draw. Results return within 1-2 working days. Most labs report lipoprotein(a) in mg/dL or nmol/L."
+    },
+    {
+      "test": "Renal function panel (creatinine, eGFR, phosphate, calcium)",
+      "purpose": "Chronic kidney disease accelerates vascular calcification; abnormal phosphate-calcium balance is a major driver. Helps identify patients needing nephrology input.",
+      "whatToExpect": "Standard blood test, drawn at the same time as the lipid panel. Often repeated annually in patients with established calcification."
+    }
   ],
-  "treatmentOverview": "Aortic calcification is not itself a treatable lesion — existing calcium deposits cannot be pharmacologically dissolved or safely removed. Treatment instead targets the cardiovascular risk it represents. The evidence base for risk-factor modification in the setting of established calcification is the same as for atherosclerosis broadly: high-intensity statin therapy substantially reduces LDL and stabilises plaque composition even though it may paradoxically increase calcification density (denser but smaller plaques are generally more stable); ACE inhibitors or ARBs reduce aortic stiffness and proteinuria; antihypertensive agents lower the pulse pressure that accelerates calcification progression. Smoking cessation is the most impactful single behavioural intervention. For patients with CKD, phosphate binders and active vitamin D analogues reduce the hyperphosphataemia and secondary hyperparathyroidism that drive medial calcification; novel agents such as sodium thiosulphate and the calcimimetic cinacalcet are used in dialysis patients with severe calciphylaxis. Aspirin is added in secondary prevention. Vitamin K2 supplementation has shown promising results in slowing coronary calcification progression in randomised trials (Rotterdam Study, VitaK-CAC trial) but is not yet a formal guideline recommendation. When calcification identifies an abdominal aortic aneurysm at risk of rupture (diameter over 5.5 cm in men, 5.0 cm in women), surgical repair — either open or endovascular (EVAR) — is indicated. Renal artery stenosis or mesenteric artery stenosis producing clinical symptoms may be treated with stenting by interventional radiology.",
+
+  "treatmentOverview": "Aortic calcification itself cannot be reversed or removed with medications. Treatment focuses on three goals: slow progression by aggressive risk-factor control, treat any complications (valve disease, aneurysm, peripheral arterial disease, ischemic events), and use the imaging finding to drive overall cardiovascular prevention. High-intensity statin therapy (atorvastatin 40-80 mg or rosuvastatin 20-40 mg) is first-line — statins do not dissolve calcium but reduce ASCVD events by 25-35% and slow new plaque formation. Blood pressure should be controlled to <130/80 mm Hg in most adults under ACC/AHA 2017 guidance, ideally with an ACE inhibitor or ARB. Diabetes management targets HbA1c <7% for most adults, with SGLT2 inhibitors or GLP-1 agonists preferred where cardiovascular benefit is desired. Smoking cessation is non-negotiable. Lipoprotein(a) is currently not directly lowered by standard therapy, although phase-3 trials of pelacarsen, olpasiran, and lepodisiran are underway. Aspirin is not routinely prescribed for incidental calcification alone — current ACC/AHA 2019 primary prevention guidelines reserve aspirin for select 40-70 year-olds at high ASCVD risk with low bleeding risk. Calcium-based phosphate binders are avoided in dialysis patients with extensive vascular calcification; non-calcium binders such as sevelamer are preferred. When aortic valve calcification progresses to severe symptomatic stenosis, valve replacement — surgical aortic valve replacement (SAVR) or transcatheter aortic valve replacement (TAVR) — is the only definitive treatment, with TAVR now the dominant choice in adults over 75. Abdominal aortic aneurysm with calcification is monitored by ultrasound until diameter or growth crosses repair thresholds (5.5 cm in men, 5.0 cm in women, or growth >1 cm per year). The treatment philosophy is preventive medicine plus mechanical intervention when complications mandate it, guided by ACC/AHA valvular and cholesterol guidelines.",
+
   "medicalTreatments": [
-    { "name": "High-intensity statin therapy", "description": "Rosuvastatin 20-40 mg or atorvastatin 40-80 mg daily reduces LDL by 40-60%, stabilises atherosclerotic plaques, and markedly reduces cardiovascular event rates. Statins may cause a paradoxical increase in calcium density while reducing plaque lipid content, rendering plaques more stable rather than worse.", "effectiveness": "Reduces major cardiovascular events by approximately 25-35% per 1 mmol/L LDL reduction in high-risk patients (CTT meta-analysis); standard of care for significant aortic calcification with cardiovascular risk." },
-    { "name": "Antihypertensive therapy (ACE inhibitors, ARBs, calcium channel blockers)", "description": "Controlling blood pressure to below 130/80 mmHg reduces aortic wall stress, slows plaque progression, and attenuates aortic stiffness. ACE inhibitors and ARBs are preferred when diabetes or CKD coexists because of their renoprotective effects.", "effectiveness": "Each 10 mmHg reduction in systolic blood pressure reduces cardiovascular events by approximately 20% in high-risk populations (SPRINT trial and meta-analyses); directly addresses two of the main drivers of calcification progression." },
-    { "name": "Phosphate binders (calcium carbonate, sevelamer, lanthanum carbonate)", "description": "In CKD patients, elevated serum phosphate directly drives vascular smooth muscle calcification. Phosphate binders taken with meals reduce intestinal phosphate absorption and lower serum phosphate. Non-calcium-based binders (sevelamer, lanthanum) are preferred to avoid additional calcium loading.", "effectiveness": "Sevelamer reduces all-cause mortality by approximately 20% versus calcium-based binders in haemodialysis patients in randomised trials; phosphate control slows calcification progression in CKD." },
-    { "name": "Smoking cessation support", "description": "Combination pharmacotherapy (varenicline, bupropion) combined with behavioural counselling achieves long-term cessation in 20-30% of attempts. Smoking cessation reduces atherosclerotic progression and is the most effective modifiable intervention for long-term cardiovascular risk reduction in smokers.", "effectiveness": "Former smokers reduce their 10-year cardiovascular event rate by approximately 30-50% versus continuing smokers within 5 years of cessation; effect on calcification progression is measurable within 2-3 years." },
-    { "name": "Antiplatelet therapy (aspirin 75-100 mg daily)", "description": "Reduces thrombus formation on ruptured or eroded atherosclerotic plaques in patients with established cardiovascular disease or symptomatic peripheral artery disease associated with aortic calcification.", "effectiveness": "Reduces major adverse cardiovascular events by approximately 22% in secondary prevention settings; primary prevention benefit is narrower and must be weighed against bleeding risk." }
+    {
+      "name": "High-intensity statin therapy (atorvastatin 40-80 mg or rosuvastatin 20-40 mg daily)",
+      "description": "First-line lipid-lowering therapy. Statins do not reverse existing aortic calcium but slow new plaque formation, stabilize plaques, and reduce systemic cardiovascular events. Indicated in nearly all patients with established aortic calcification.",
+      "effectiveness": "Reduces ASCVD events (MI, stroke, cardiovascular death) by 25-35% over 5 years per 1 mmol/L LDL reduction (CTT meta-analyses)."
+    },
+    {
+      "name": "PCSK9 inhibitors (evolocumab 140 mg every 2 weeks; alirocumab 75-150 mg every 2 weeks)",
+      "description": "Subcutaneous monoclonal antibodies that lower LDL by 50-60% on top of maximum-tolerated statin. Indicated when statin alone fails to reach LDL target or in statin intolerance.",
+      "effectiveness": "Additional 15% reduction in major cardiovascular events over 2-3 years (FOURIER, ODYSSEY OUTCOMES trials)."
+    },
+    {
+      "name": "Ezetimibe 10 mg daily",
+      "description": "Cholesterol-absorption inhibitor that adds 18-22% LDL lowering on top of a statin. Useful when statin dose is maximal or limited by side effects.",
+      "effectiveness": "Reduces ASCVD events by an additional 6% over 7 years when added to a statin (IMPROVE-IT trial)."
+    },
+    {
+      "name": "Antihypertensive therapy (ACE inhibitor or ARB first-line; add CCB or thiazide)",
+      "description": "Targets blood pressure <130/80 mm Hg per ACC/AHA 2017 guidance. ACE inhibitors and ARBs are preferred in patients with chronic kidney disease and diabetes.",
+      "effectiveness": "Each 10 mm Hg systolic reduction lowers cardiovascular events by approximately 20% over 5 years."
+    },
+    {
+      "name": "SGLT2 inhibitors or GLP-1 receptor agonists (in diabetic patients)",
+      "description": "Empagliflozin, dapagliflozin, semaglutide, or liraglutide reduce cardiovascular events in patients with type 2 diabetes plus established or high-risk atherosclerotic disease.",
+      "effectiveness": "Reduce MACE by 12-26% over 3 years versus placebo (EMPA-REG, LEADER, DECLARE, SUSTAIN-6 trials)."
+    },
+    {
+      "name": "Smoking cessation pharmacotherapy (varenicline, bupropion, nicotine replacement)",
+      "description": "Combined behavioural support plus pharmacotherapy doubles or triples 6-month quit rates. Indicated in every current smoker with aortic calcification.",
+      "effectiveness": "Quitting reduces all-cause mortality by 30-40% over 10-15 years compared with continued smoking."
+    },
+    {
+      "name": "Non-calcium phosphate binders (sevelamer, lanthanum) in dialysis patients",
+      "description": "Used in advanced CKD and dialysis to control hyperphosphatemia without adding to calcium load. Calcium-based binders are avoided in patients with extensive vascular calcification.",
+      "effectiveness": "Slows progression of coronary and aortic calcification by roughly 30-50% versus calcium-based binders in randomized trials in dialysis populations."
+    }
   ],
+
   "surgicalOptions": [
-    { "name": "Endovascular aneurysm repair (EVAR)", "description": "Catheter-based deployment of a covered stent-graft within the calcified abdominal aorta to exclude an aneurysm from the circulation; the standard of care for abdominal aortic aneurysm exceeding 5.5 cm in men. Preferred over open repair in patients with significant comorbidities.", "successRate": "30-day mortality below 1.5% in elective EVAR for AAA in experienced centres; long-term re-intervention rate approximately 15-20% at 8 years due to endoleak." },
-    { "name": "Open aortic repair", "description": "Surgical replacement of the diseased aortic segment with a Dacron graft; used for aneurysms with anatomy unfavourable for EVAR, infected grafts, or connective tissue disorders. Requires a prolonged recovery but offers more durable long-term results.", "successRate": "Elective open repair carries 30-day mortality of 3-5% in high-volume centres; long-term durability superior to EVAR with lower re-intervention rates." },
-    { "name": "Renal or mesenteric artery stenting", "description": "Percutaneous balloon angioplasty and stent placement to relieve calcific stenosis of the renal arteries causing renovascular hypertension or the mesenteric arteries causing abdominal angina; performed by interventional radiology.", "successRate": "Technical success over 95%; blood pressure improvement in approximately 50-70% of renovascular hypertension cases; symptom resolution in 80-90% of symptomatic mesenteric artery disease." }
+    {
+      "name": "Transcatheter aortic valve replacement (TAVR)",
+      "description": "Catheter-delivered bioprosthetic valve implanted via the femoral artery for severe symptomatic calcific aortic stenosis. Standard of care in adults over 75 and in lower-risk patients in many centers.",
+      "successRate": "30-day mortality 1-3% in intermediate- and low-risk patients; 1-year survival 88-92% in contemporary trials (PARTNER 3, Evolut Low Risk)."
+    },
+    {
+      "name": "Surgical aortic valve replacement (SAVR)",
+      "description": "Open-heart replacement of a heavily calcified aortic valve with a mechanical or bioprosthetic valve. Preferred in younger patients (under 65) and when concomitant CABG or aortic root replacement is needed.",
+      "successRate": "30-day mortality 1-3% in elective low-risk cases; mechanical valves last decades but require lifelong anticoagulation."
+    },
+    {
+      "name": "Endovascular aortic aneurysm repair (EVAR) or open AAA repair",
+      "description": "Repair of an abdominal aortic aneurysm with calcified walls. EVAR is preferred when anatomy permits; open repair when EVAR is not feasible. Indicated when AAA diameter exceeds 5.5 cm (men) or 5.0 cm (women), or growth is rapid.",
+      "successRate": "EVAR 30-day mortality 1-2%; open repair 4-5%. Long-term survival similar by 5 years."
+    },
+    {
+      "name": "Thoracic endovascular aortic repair (TEVAR)",
+      "description": "Stent-graft repair of the descending thoracic aorta for aneurysm, dissection, or penetrating ulcer in heavily calcified aorta. Less invasive than open repair through a thoracotomy.",
+      "successRate": "30-day mortality 2-5% in elective cases; better outcomes than open repair in high-risk patients."
+    }
   ],
+
   "alternativeTreatments": [
-    { "name": "Vitamin K2 supplementation (menaquinone-7)", "description": "Vitamin K2 activates matrix Gla protein, a natural inhibitor of vascular calcification. The VitaK-CAC and Rotterdam trials showed slowing of coronary calcification progression with MK-7 supplementation (180-360 mcg/day) compared with placebo. Not yet a formal cardiology guideline recommendation but increasingly discussed in CKD and warfarin-switched patients." },
-    { "name": "Mediterranean-style diet", "description": "A diet rich in vegetables, olive oil, fish, and legumes reduces LDL oxidation and systemic inflammation; the PREDIMED trial showed a 30% reduction in major cardiovascular events versus a low-fat diet in high-risk adults, with implications for slowing atherosclerosis progression." },
-    { "name": "Supervised exercise rehabilitation", "description": "Regular aerobic exercise reduces pulse wave velocity (a measure of aortic stiffness), lowers blood pressure, and improves peripheral artery circulation. Supervised treadmill exercise for peripheral artery disease improves walking distance by 50-200% and is a Class IA recommendation in European guidelines." }
+    { "name": "Mediterranean dietary pattern", "description": "Adherence to a Mediterranean diet reduces major cardiovascular events by approximately 30% (PREDIMED trial) and slows progression of vascular disease, including aortic calcification, in cohort studies." },
+    { "name": "Structured cardiac rehabilitation", "description": "Supervised exercise and risk-factor education after a cardiovascular event reduces all-cause mortality by 20-25% over 3-5 years (Cochrane review). Also indicated after TAVR or SAVR." }
   ],
-  "whySeeSpecialist": "An incidental finding of aortic calcification on imaging warrants a formal cardiovascular risk assessment, ideally with a cardiologist or preventive cardiology service. Quantification (e.g., with a coronary calcium score) helps determine whether high-intensity statin therapy is warranted in patients near the treatment threshold and can avoid unnecessary medication in those with a zero score. Patients with symptomatic peripheral artery disease, an abdominal aortic aneurysm, or renovascular hypertension require vascular surgery or interventional radiology involvement.",
-  "doctorSelectionGuide": "Start with a cardiologist experienced in cardiovascular risk prevention and imaging, particularly if a calcium score CT or formal risk stratification is needed. For peripheral artery disease symptoms, a vascular surgeon's input is valuable. Patients with CKD driving accelerated calcification benefit from joint nephrology and cardiology care. Ask whether the service uses validated calcium scoring tools and follows current ACC/AHA or ESC cardiovascular prevention guidelines.",
+
+  "whySeeSpecialist": "A cardiologist should be involved when aortic valve calcification is associated with any suggestion of stenosis on echocardiogram, when ASCVD risk is high enough to consider PCSK9 inhibitors, or when there is established cardiovascular disease. A vascular surgeon is appropriate for abdominal aortic aneurysm, severe peripheral arterial disease, or symptomatic atheroembolic disease. Most adults with mild incidental aortic calcification and no other findings are managed in primary care with standard cardiovascular prevention.",
+
+  "doctorSelectionGuide": "For valve disease, look for a cardiologist or cardiac surgeon working within a structural heart program that does both surgical and transcatheter procedures — joint case review produces better individualized choices. For aortic aneurysm, choose a vascular surgeon with high-volume EVAR/TEVAR experience and clear shared-decision criteria. Continuity matters — these are long-term surveillance relationships.",
+
   "preventionStrategies": [
-    "Control all modifiable risk factors: quit smoking, reach LDL below 1.8 mmol/L (70 mg/dL) in high-risk individuals, keep blood pressure below 130/80 mmHg, and control blood glucose to HbA1c below 7% in diabetes.",
-    "Eat a Mediterranean-style diet high in vegetables, olive oil, fish, and nuts, and low in processed carbohydrates and trans fats.",
-    "Ensure adequate dietary vitamin K2 through fermented foods and green vegetables; discuss vitamin K2 supplementation with a clinician if you take warfarin.",
-    "Maintain CKD phosphate control with dietary phosphate restriction and phosphate binders as prescribed.",
-    "Exercise regularly — at least 150 minutes of moderate-intensity aerobic activity per week reduces aortic stiffness.",
-    "Attend cardiovascular screening if over 65 or have multiple risk factors; abdominal aortic aneurysm screening (one-time ultrasound) is recommended for men over 65 who have ever smoked."
+    "Maintain blood pressure under 130/80 mm Hg with diet, exercise, and medication where needed — strongest evidence-based slow of aortic calcium progression",
+    "Reach an LDL cholesterol target of <70 mg/dL for established atherosclerosis or <100 mg/dL for primary prevention with elevated risk, using high-intensity statins as needed",
+    "Stop smoking — every smoker with aortic calcification should be offered combined behavioural and pharmacologic cessation support",
+    "Achieve and sustain a Mediterranean-style dietary pattern with vegetables, fruit, whole grains, oily fish, nuts, and extra-virgin olive oil",
+    "Exercise at least 150 minutes per week of moderate aerobic activity plus 2 sessions of resistance training",
+    "Control diabetes to an individualized HbA1c target (typically under 7%) and select agents (SGLT2 inhibitor, GLP-1 agonist) with cardiovascular benefit when applicable",
+    "In chronic kidney disease, work with nephrology on phosphate control, avoiding calcium-based binders when vascular calcification is extensive"
   ],
+
   "lifestyleModifications": [
-    "Stop smoking completely — the most impactful single lifestyle change for preventing further calcification and cardiovascular events.",
-    "Follow a Mediterranean or DASH diet to reduce LDL oxidation, blood pressure, and systemic inflammation.",
-    "Exercise at least 30 minutes most days; supervised exercise therapy is formally recommended for those with peripheral artery disease symptoms.",
-    "Maintain a healthy body weight; obesity raises LDL, triglycerides, blood pressure, and blood sugar, all of which accelerate calcification.",
-    "Reduce sodium intake to below 5 g daily to support blood pressure control.",
-    "Minimise alcohol intake; excess alcohol raises blood pressure and triglycerides.",
-    "Attend all medication review appointments and do not stop statins, antihypertensives, or phosphate binders without discussing it with your clinician."
+    "Adopt the DASH or Mediterranean dietary pattern — both shown to lower blood pressure and reduce cardiovascular events",
+    "Limit sodium to under 2,000 mg per day to support blood pressure control",
+    "Walk briskly for 30 minutes most days; brisk walking is associated with 20-30% lower cardiovascular mortality in cohort studies",
+    "Limit alcohol to no more than 1 drink per day for women and 2 for men; heavy drinking accelerates hypertension and atrial fibrillation",
+    "Sleep 7-8 hours nightly and treat obstructive sleep apnea if present — both independently affect blood pressure and cardiovascular outcomes",
+    "Get an annual influenza vaccine and stay current with COVID-19 boosters; respiratory infections raise short-term cardiovascular event risk in vulnerable adults",
+    "Schedule routine dental care — periodontal disease is linked to systemic inflammation and atherosclerosis progression"
   ],
+
   "dietRecommendations": {
     "recommended": [
-      "Oily fish (salmon, mackerel, sardines) 2-3 times per week for omega-3 fatty acids that reduce triglycerides and inflammation",
-      "Green leafy vegetables (kale, spinach, broccoli) rich in vitamin K1 and protective antioxidants",
-      "Olive oil as the primary cooking fat, replacing saturated and trans fats",
-      "Legumes, nuts, and whole grains for soluble fibre that lowers LDL",
-      "Low-fat dairy and probiotic-rich fermented foods as sources of vitamin K2",
-      "Adequate calcium from food sources (not high-dose supplements, which may increase vascular calcification risk)"
+      "Vegetables and fruit — 5+ servings daily including dark leafy greens",
+      "Oily fish (salmon, sardines, mackerel) twice weekly for omega-3 fatty acids",
+      "Whole grains (oats, barley, brown rice, whole-wheat bread) and legumes",
+      "Nuts, seeds, and extra-virgin olive oil as primary fat sources",
+      "Low-fat dairy in moderation; DASH-style intake supports blood pressure goals",
+      "Water and unsweetened beverages; limit fruit juice to one small glass daily"
     ],
     "avoid": [
-      "High-phosphate processed foods (fizzy drinks with phosphoric acid, processed meats) if you have CKD",
-      "High-dose calcium supplements without medical supervision, as excess supplemental calcium may accelerate vascular calcification",
-      "Excessive salt (processed foods, ready meals, cured meats) that drives blood pressure",
-      "Trans fats and heavily refined carbohydrates that raise oxidised LDL",
-      "Excessive alcohol, which raises blood pressure and triglycerides"
+      "Processed and cured meats (bacon, sausage, deli meat) — high in saturated fat, sodium, and nitrates linked to vascular disease",
+      "Sugar-sweetened beverages and refined sweets — promote insulin resistance and weight gain",
+      "Trans fats and partially hydrogenated oils, still found in some packaged foods globally",
+      "Excessive salt (over 2,000 mg sodium per day) — raises blood pressure and accelerates vascular injury",
+      "Heavy alcohol intake — more than 14 drinks per week is associated with hypertension, atrial fibrillation, and increased cardiovascular events",
+      "Calcium supplements above the RDA in older adults with extensive vascular calcification — discuss with your physician before adding supplements"
     ]
   },
-  "exerciseGuidelines": "Aerobic exercise reduces aortic stiffness, lowers systolic blood pressure, and improves endothelial function. Aim for at least 150 minutes of moderate-intensity activity (brisk walking, cycling, swimming) per week, consistent with ACC/AHA and ESC guidelines. For those with claudication from peripheral artery disease, supervised treadmill walking to the point of moderate pain followed by rest — performed three times weekly for at least 3 months — is a Class I guideline-recommended treatment that improves walking distance by 50-200%. Avoid unsupervised high-intensity exercise if aortic aneurysm is present; confirm safe exercise limits with your clinician.",
+
+  "exerciseGuidelines": "Moderate-intensity aerobic activity for at least 150 minutes per week, or 75 minutes of vigorous activity, plus muscle-strengthening exercises twice weekly. Patients with significant aortic stenosis should avoid heavy isometric exertion (heavy lifting, intense competitive sport) until valve disease is addressed. After TAVR or SAVR, supervised cardiac rehabilitation is recommended starting within 4-6 weeks of the procedure.",
+
   "dailyManagement": [
-    "Take all prescribed medications — statins, antihypertensives, antiplatelet agents — at the same time each day without missing doses.",
-    "Monitor your blood pressure at home and keep a log; target below 130/80 mmHg.",
-    "Track walking distance if you have leg symptoms to detect any progression of peripheral artery disease.",
-    "Keep all imaging follow-up appointments for abdominal aortic aneurysm surveillance if one has been identified.",
-    "Seek same-day medical review for any sudden severe chest, back, or abdominal pain.",
-    "Inform your anaesthetist and surgeon about known aortic calcification before any elective procedure involving aortic cross-clamping or contrast injection."
+    "Take statin, antihypertensive, and antidiabetic medications at the same time daily — adherence matters more than which time of day",
+    "Check home blood pressure 2-3 times per week and share readings with the primary care team",
+    "Weigh weekly and note any sudden weight gain that could indicate fluid retention",
+    "Monitor for new exertional chest pressure, breathlessness, or near-syncope and report immediately — possible aortic stenosis progression",
+    "Schedule annual lipid panels, HbA1c, kidney function, and (if known valve disease) echocardiography to track progression",
+    "Stay up to date with vaccinations and flu shots; respiratory infections trigger cardiovascular events in vulnerable patients"
   ],
-  "prognosis": "Aortic calcification is a prognostic marker rather than a disease state with its own trajectory. Its clinical importance lies entirely in what it predicts about future cardiovascular events. Moderate to severe aortic calcification is associated with a 2-4-fold increase in the risk of myocardial infarction, stroke, and cardiovascular death in population studies, and it predicts cardiovascular events independently of traditional Framingham risk factors. However, with optimal medical therapy — high-intensity statins, blood pressure control, and smoking cessation — event rates can be substantially reduced even in those with heavy calcification. The calcium deposits themselves do not regress with treatment, but their presence can be used to motivate and guide therapy. In CKD patients, severe aortic and coronary calcification is associated with markedly elevated cardiovascular mortality, which remains the leading cause of death in dialysis patients. With modern risk management, many people with incidentally detected aortic calcification live without cardiovascular events for decades.",
-  "recoveryTimeline": "Aortic calcification is a chronic imaging finding without a defined course of illness or recovery timeline. For patients who have undergone EVAR for an associated abdominal aortic aneurysm, hospital stay is typically 1-3 days, with return to normal activity within 2-4 weeks. Open aortic repair requires 7-10 days in hospital and 6-8 weeks for full recovery. For the majority managing the condition medically, the focus is on long-term adherence to medications and lifestyle changes, with no acute recovery phase.",
+
+  "prognosis": "Most adults with mild incidental aortic calcification do not develop direct complications from the calcium itself; outcomes are driven by the underlying atherosclerotic process. Moderate to severe aortic calcification roughly doubles 10-year cardiovascular event risk versus age-matched peers (Lewis et al meta-analysis, PMID 31239172), and abdominal aortic calcification scores correlate strongly with all-cause mortality. Aortic valve calcification progresses to severe aortic stenosis in approximately 1.5-2% of people with sclerosis per year; once symptomatic, untreated severe aortic stenosis carries a 50% 2-year mortality, but TAVR or SAVR restores near-normal life expectancy in selected patients. Statin therapy, blood pressure control, smoking cessation, and diabetes management each independently improve prognosis; combined, they reduce 10-year cardiovascular mortality by 40-60% in high-risk patients. The single most powerful prognostic variable is whether the patient and clinician translate the imaging finding into sustained risk-factor management.",
+
+  "recoveryTimeline": "Aortic calcification is a chronic finding; it does not 'heal' or disappear. Risk-factor optimization produces measurable benefits within months — LDL falls within 4-6 weeks of starting a statin, blood pressure responds within 2-4 weeks of medication. Progression of calcium volume is typically slow (5-15% per year on serial CT). After valve replacement (TAVR or SAVR), hospital stay is 2-5 days for TAVR and 4-7 days for SAVR; most patients resume normal activity within 4-8 weeks with cardiac rehabilitation. After EVAR for abdominal aortic aneurysm, recovery is 1-2 weeks; open AAA repair recovery is 6-12 weeks.",
+
   "complications": [
-    "Aortic aneurysm formation and rupture — calcification weakens the aortic wall over time, and an abdominal aortic aneurysm can form and rupture, carrying greater than 80% mortality if not identified and treated before rupture.",
-    "Peripheral artery disease — progressive calcification and narrowing of the iliac and femoral arteries causes claudication, critical limb ischaemia, and in severe cases amputation.",
-    "Thoracic aortic dissection — heavy thoracic aortic calcification is associated with increased aortic stiffness and can occur as a catastrophic complication of hypertensive crisis in a diseased aorta.",
-    "Renal artery stenosis and renovascular hypertension — calcification extending to the renal artery origins can cause uncontrolled hypertension and progressive kidney function loss.",
-    "Cholesterol embolisation syndrome — disruption of calcified plaques (spontaneously or during procedures) can shower cholesterol crystal microemboli to the kidneys, skin, and intestines.",
-    "Increased surgical risk — heavy calcification of the aorta complicates any surgical procedure requiring aortic cross-clamping (cardiac bypass, aortic valve replacement) and increases the risk of embolism and dissection."
+    "Calcific aortic stenosis with exertional symptoms, heart failure, and 50% 2-year mortality if untreated — definitive treatment is valve replacement (TAVR or SAVR)",
+    "Aortic aneurysm formation and rupture — large abdominal aortic aneurysms carry an 80% mortality if they rupture before repair",
+    "Aortic dissection — sudden tearing chest or back pain, often in patients with hypertension and heavily diseased aortas; emergency surgery for Type A dissections",
+    "Cholesterol embolization syndrome — small atheromatous debris showers downstream after catheterization or anticoagulation, causing renal failure, blue toes, or mesenteric ischemia",
+    "Stroke or transient ischemic attack from aortic arch atheroma — recognised mechanism in older adults",
+    "Heart failure from cumulative left ventricular afterload in advanced valve calcification — reversible with timely valve replacement",
+    "Porcelain aorta complicating cardiac surgery — extensive circumferential ascending aortic calcification that limits clamping and cannulation; TAVR is often preferred over SAVR in this scenario"
   ],
+
   "supportResources": [
-    { "name": "American Heart Association — Atherosclerosis", "url": "https://www.heart.org/en/health-topics/cholesterol/about-cholesterol/atherosclerosis", "description": "Patient-facing AHA overview of atherosclerosis — the underlying process driving aortic calcification — with guidance on risk reduction." },
-    { "name": "ACC/AHA 2019 Guideline on Primary Prevention of Cardiovascular Disease", "url": "https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2019/03/07/15/53/2019-acc-aha-guideline-on-primary-prevention", "description": "Summary of ACC/AHA guidance on cardiovascular risk reduction including the role of calcium scoring in treatment decisions." },
-    { "name": "NHS — Peripheral arterial disease (PAD)", "url": "https://www.nhs.uk/conditions/peripheral-arterial-disease-pad/", "description": "UK NHS guide to peripheral artery disease, the most common symptomatic consequence of significant aortic and peripheral calcification." }
+    { "name": "American Heart Association — Aortic Disease", "url": "https://www.heart.org/en/health-topics/aortic-aneurysm", "description": "Patient-facing US resource on aortic disease, aneurysm, dissection, and prevention." },
+    { "name": "American College of Cardiology — CardioSmart", "url": "https://www.cardiosmart.org/topics/aortic-valve-disease", "description": "Patient education on aortic valve disease and treatment options from the body that co-authors US valve guidelines." },
+    { "name": "Society for Vascular Surgery — Aortic Aneurysm", "url": "https://vascular.org/patients-and-referring-physicians/conditions/abdominal-aortic-aneurysm-aaa", "description": "Vascular-surgeon-authored patient guide to aortic aneurysm screening and repair." },
+    { "name": "National Kidney Foundation — KDOQI Cardiovascular Guidelines", "url": "https://www.kidney.org/professionals/guidelines", "description": "Guidance for managing vascular calcification in chronic kidney disease and dialysis." }
   ],
-  "sources": [
-    { "title": "Criqui MH et al. Abdominal Aortic Calcium, Coronary Artery Calcium, and Cardiovascular Morbidity and Mortality in the Multi-Ethnic Study of Atherosclerosis. Arteriosclerosis, Thrombosis, and Vascular Biology, 2014", "url": "https://pubmed.ncbi.nlm.nih.gov/24652963/", "accessedDate": "2026-05-15" },
-    { "title": "Demer LL, Tintut Y. Vascular Calcification: Pathobiology of a Multifaceted Disease. Circulation, 2008", "url": "https://pubmed.ncbi.nlm.nih.gov/18519861/", "accessedDate": "2026-05-15" },
-    { "title": "Budoff MJ et al. Coronary Artery Calcium Scoring and Cardiovascular Risk. JACC, 2018", "url": "https://pubmed.ncbi.nlm.nih.gov/30213336/", "accessedDate": "2026-05-15" },
-    { "title": "Vliegenthart R et al. Aortic Calcification and Cardiovascular Disease Risk. Archives of Internal Medicine, 2002", "url": "https://pubmed.ncbi.nlm.nih.gov/11911718/", "accessedDate": "2026-05-15" },
-    { "title": "KDIGO 2017 Clinical Practice Guideline Update for the Diagnosis, Evaluation, Prevention, and Treatment of Chronic Kidney Disease-Mineral and Bone Disorder (CKD-MBD)", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6340430/", "accessedDate": "2026-05-15" },
-    { "title": "Knapen MH et al. Menaquinone-7 supplementation improves arterial stiffness in healthy postmenopausal women: double-blind randomised clinical trial (VitaK-CAC). Thrombosis and Haemostasis, 2015", "url": "https://pubmed.ncbi.nlm.nih.gov/25694037/", "accessedDate": "2026-05-15" },
-    { "title": "ACC/AHA 2019 Guideline on the Primary Prevention of Cardiovascular Disease. JACC, 2019", "url": "https://pubmed.ncbi.nlm.nih.gov/30894318/", "accessedDate": "2026-05-15" }
-  ],
+
   "confusedWithConditions": [
-    { "slug": "coronary-artery-calcium-score", "name": "Coronary artery calcium score", "keyDifference": "Coronary artery calcium scoring measures calcification within the coronary arteries specifically; aortic calcification refers to the aortic wall. Both are markers of systemic atherosclerosis but are scored separately and carry independent predictive value." },
-    { "slug": "thoracic-aortic-dissection", "name": "Thoracic aortic dissection", "keyDifference": "Aortic dissection is an acute, life-threatening tear of the inner aortic wall causing a false lumen, presenting with sudden tearing chest pain. Aortic calcification is a chronic finding that may be present alongside a dissecting aorta but is not the same condition." },
-    { "slug": "renal-artery-stenosis", "name": "Renal artery stenosis", "keyDifference": "Renal artery stenosis is a narrowing of the renal arteries causing hypertension and kidney impairment; it can coexist with aortic calcification but is a separate vascular lesion requiring its own diagnosis and treatment." }
+    { "slug": "atherosclerosis-of-aorta-i700", "name": "Atherosclerosis of the Aorta", "keyDifference": "Atherosclerosis of the aorta is the underlying disease process; aortic calcification is its late-stage radiographic signature. Atherosclerosis can exist without visible calcium (early plaque), but visible aortic calcium almost always reflects established atherosclerosis." },
+    { "slug": "rheumatic-aortic-stenosis-i060", "name": "Rheumatic Aortic Stenosis", "keyDifference": "Rheumatic aortic stenosis is caused by post-rheumatic-fever scarring and commissural fusion of the cusps — common in low- and middle-income countries and now rare in high-income settings. Calcific aortic valve disease is the dominant cause of aortic stenosis in older Western adults and has a distinct mechanism." },
+    { "slug": "abdominal-aortic-aneurysm-without-rupture-i714", "name": "Abdominal Aortic Aneurysm", "keyDifference": "An abdominal aortic aneurysm is a dilation of the abdominal aorta to >3 cm diameter, often accompanied by calcification but defined by size rather than calcium. AAA carries rupture risk that drives surgical thresholds; isolated calcification does not." },
+    { "slug": "thoracic-aortic-aneurysm-without-rupture-i712", "name": "Thoracic Aortic Aneurysm", "keyDifference": "Thoracic aortic aneurysm is dilation of the chest portion of the aorta. Calcification is a common companion finding but the aneurysm itself, not the calcium, drives risk of dissection or rupture and indication for repair." }
   ],
+
   "coOccurringConditions": [
-    { "slug": "coronary-artery-disease", "name": "Coronary artery disease" },
-    { "slug": "hypertension", "name": "Hypertension" },
-    { "slug": "chronic-kidney-disease-stage-3", "name": "Chronic kidney disease (stage 3)" }
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease" },
+    { "slug": "hypertension", "name": "High Blood Pressure" },
+    { "slug": "hyperlipidemia-unspecified-e785", "name": "Hyperlipidemia" }
   ],
+
   "relatedConditions": [
-    { "slug": "coronary-artery-disease", "name": "Coronary artery disease", "relevance": "Coronary and aortic calcification share the same underlying atherosclerotic process and co-occur in approximately 60-70% of adults with significant disease in either territory." },
-    { "slug": "heart-failure", "name": "Heart failure", "relevance": "Aortic stiffness from severe calcification raises cardiac afterload, contributes to left ventricular hypertrophy, and is an independent predictor of heart failure with preserved ejection fraction." },
-    { "slug": "diabetes-type-2", "name": "Type 2 diabetes", "relevance": "Diabetes accelerates both intimal and medial aortic calcification and is present in 30-40% of patients with significant aortic calcification in population studies." },
-    { "slug": "peripheral-artery-disease-surgical", "name": "Peripheral artery disease", "relevance": "Calcification involving the iliac and infrainguinal arteries is the anatomical basis of claudication and critical limb ischaemia; aortic and peripheral calcification frequently coexist." }
+    { "slug": "atherosclerosis-of-aorta-i700", "name": "Atherosclerosis of the Aorta", "relevance": "Underlying disease process; aortic calcification marks its extent." },
+    { "slug": "coronary-artery-disease", "name": "Coronary Artery Disease", "relevance": "Coronary and aortic calcification share pathways; one predicts the other." },
+    { "slug": "abdominal-aortic-aneurysm-without-rupture-i714", "name": "Abdominal Aortic Aneurysm", "relevance": "Aortic calcification is commonly found alongside aneurysm; AAA screening is indicated in ever-smoking men 65-75." },
+    { "slug": "hypertension", "name": "High Blood Pressure", "relevance": "Strongest modifiable driver of progression of aortic calcification and aneurysm growth." },
+    { "slug": "chronic-kidney-disease-stage-3-moderate-n183", "name": "Chronic Kidney Disease, Stage 3", "relevance": "CKD accelerates vascular calcification 2-4 fold and influences treatment choices, especially phosphate binder selection." },
+    { "slug": "diabetes-type-2", "name": "Type 2 Diabetes", "relevance": "Diabetes roughly doubles annual progression of aortic calcium; SGLT2 and GLP-1 therapies provide cardiovascular benefit." }
   ],
+
   "linkedTreatmentSlugs": [],
+
   "faqs": [
-    { "question": "What is aortic calcification?", "answer": "Aortic calcification is the build-up of calcium deposits within the wall of the aorta — the main artery carrying blood from the heart. It is a marker of advanced atherosclerosis (hardening of the arteries) and indicates that the aortic wall has been damaged and stiffened over years by cholesterol plaques.", "schemaEligible": true },
-    { "question": "Is aortic calcification dangerous?", "answer": "Aortic calcification itself does not usually cause direct symptoms, but it signals a significantly elevated risk of cardiovascular events. People with moderate to severe aortic calcification have a 2-4 times higher risk of heart attack, stroke, and cardiovascular death compared with those without. The danger lies in what it predicts, not in the calcium itself.", "schemaEligible": true },
-    { "question": "Can aortic calcification be reversed?", "answer": "Existing calcium deposits cannot be dissolved or removed by any currently approved medication. Statins, blood pressure control, and smoking cessation slow further progression and reduce cardiovascular event risk substantially, even without reversing the calcium already present.", "schemaEligible": true },
-    { "question": "What causes aortic calcification?", "answer": "Atherosclerosis is the main cause: chronic damage to the aortic wall from high cholesterol, high blood pressure, smoking, and diabetes triggers an inflammatory response that progressively calcifies plaque over decades. Chronic kidney disease accelerates calcification through elevated blood phosphate levels.", "schemaEligible": true },
-    { "question": "What are the symptoms of aortic calcification?", "answer": "Most people have no symptoms. When the underlying atherosclerosis narrows blood flow, symptoms depend on which arteries are affected: leg cramps or pain on walking (claudication), difficult-to-control blood pressure, or abdominal pain after eating. A pulsating abdominal mass may indicate an associated aortic aneurysm.", "schemaEligible": true },
-    { "question": "How is aortic calcification diagnosed?", "answer": "It is most often found incidentally on abdominal X-ray, CT, or a DXA bone scan performed for another reason. CT provides the most accurate quantification using the Agatston calcium scoring method. A dedicated coronary calcium score CT can quantify overall atherosclerotic burden to guide treatment decisions.", "schemaEligible": true },
-    { "question": "Does aortic calcification require treatment?", "answer": "The calcification itself cannot be treated, but the cardiovascular risk it signals requires aggressive management: high-intensity statin therapy, blood pressure control to below 130/80 mmHg, smoking cessation, and diabetes management. Surgery is reserved for complications such as abdominal aortic aneurysm over 5.5 cm.", "schemaEligible": true },
-    { "question": "Can diet slow aortic calcification?", "answer": "A Mediterranean-style diet — rich in olive oil, fish, vegetables, and nuts — reduces LDL oxidation and systemic inflammation, which are the primary drivers of atherosclerotic calcification. Adequate vitamin K2 intake, found in fermented foods and green vegetables, helps activate a natural calcification inhibitor in artery walls.", "schemaEligible": true },
-    { "question": "Is aortic calcification the same as aortic stenosis?", "answer": "No. Aortic calcification refers to calcium in the wall of the aorta. Aortic stenosis (specifically calcific aortic stenosis) is calcification of the aortic valve leaflets that impairs opening of the valve and restricts blood flow out of the heart. They share the same underlying atherosclerotic process but are separate conditions.", "schemaEligible": true },
-    { "question": "What is the link between aortic calcification and kidney disease?", "answer": "Chronic kidney disease accelerates vascular calcification dramatically. Impaired phosphate excretion raises blood phosphate levels, which directly stimulates smooth muscle cells in artery walls to deposit calcium. Even mild CKD increases calcification risk, and dialysis patients are particularly affected.", "schemaEligible": true },
-    { "question": "Does warfarin cause aortic calcification?", "answer": "Yes. Warfarin blocks vitamin K-dependent activation of matrix Gla protein, a natural inhibitor of artery-wall calcification. Long-term warfarin users have substantially higher coronary and aortic calcium scores than age-matched individuals. If anticoagulation is needed, newer direct oral anticoagulants do not share this effect.", "schemaEligible": true },
-    { "question": "What is abdominal aortic calcification (AAC)?", "answer": "Abdominal aortic calcification is calcification confined to the infrarenal abdominal aorta, scored on lateral lumbar spine X-ray or CT using the AAC-8 or AAC-24 systems. It is the most extensively studied subtype, strongly predicting heart attack, stroke, peripheral artery disease, and overall mortality across multiple large cohort studies.", "schemaEligible": true },
-    { "question": "Can exercise help with aortic calcification?", "answer": "Regular aerobic exercise reduces aortic stiffness and lowers blood pressure, both of which slow the cardiovascular consequences of calcification. Exercise cannot dissolve existing calcium but reduces event risk substantially. Supervised walking exercise is a Class I recommendation for those with claudication from associated peripheral artery disease.", "schemaEligible": true },
-    { "question": "What is the coronary calcium score and how does it relate to aortic calcification?", "answer": "A coronary artery calcium (CAC) score measures calcium specifically in the coronary arteries using non-contrast CT, providing an Agatston score that predicts heart attack risk. Aortic and coronary calcification frequently coexist and both reflect systemic atherosclerosis; a CAC score above 300 is a strong indicator of high cardiovascular risk regardless of other risk factors.", "schemaEligible": true },
-    { "question": "Is aortic calcification related to aortic aneurysm?", "answer": "Yes. Severe calcification weakens the structural integrity of the aortic wall and is consistently present in abdominal aortic aneurysms. When significant aortic calcification is detected, ultrasound surveillance for aneurysmal dilatation is recommended, particularly in men over 65 who have smoked.", "schemaEligible": false },
-    { "question": "Do statins help aortic calcification?", "answer": "Statins reduce LDL and stabilise atherosclerotic plaques, substantially lowering the risk of cardiovascular events. They may paradoxically increase calcium density on CT scans while shrinking the plaque's lipid core — denser, smaller plaques are more stable. Statins are the cornerstone of medical therapy for individuals with significant aortic calcification.", "schemaEligible": true },
-    { "question": "Who is at highest risk for severe aortic calcification?", "answer": "People at highest risk are those over 65 with multiple combined risk factors: heavy smoking history, poorly controlled diabetes, chronic kidney disease, long-standing hypertension, and high LDL. Dialysis patients are a particularly high-risk group; cardiovascular disease is the leading cause of death in this population.", "schemaEligible": true },
-    { "question": "What is vitamin K2 and can it help aortic calcification?", "answer": "Vitamin K2 (menaquinone-7) activates matrix Gla protein, a natural inhibitor of vascular calcification that requires vitamin K to function. Clinical trials have shown that MK-7 supplementation slows coronary calcification progression versus placebo. It is not yet in formal cardiovascular guidelines but is increasingly considered, particularly in patients with CKD or those previously on warfarin.", "schemaEligible": false },
-    { "question": "Should I be worried about an incidental finding of aortic calcification?", "answer": "An incidental finding should prompt a cardiovascular risk review with your doctor, not immediate alarm. The degree and distribution of calcification, combined with your blood pressure, cholesterol, blood sugar, kidney function, and smoking history, determine how aggressively risk factors need to be managed. Many people live for decades with incidental calcification when risk factors are well controlled.", "schemaEligible": true },
-    { "question": "What is the difference between intimal and medial aortic calcification?", "answer": "Intimal calcification occurs within cholesterol plaques in the artery's inner lining, driven by the atherosclerotic inflammatory process. Medial calcification (Mönckeberg's sclerosis) affects the middle muscular layer without a lipid core and is typical of diabetes, CKD, and ageing. Both stiffen the aorta and increase cardiovascular risk but differ in their appearance on imaging and their underlying mechanism.", "schemaEligible": false }
+    {
+      "question": "Is aortic calcification dangerous?",
+      "answer": "Aortic calcification itself is usually not dangerous in the short term — most people have no symptoms. It is dangerous as a marker: moderate to severe aortic calcification doubles to quadruples the risk of future heart attack, stroke, and cardiovascular death over 10 years. The finding is a prompt to control blood pressure, cholesterol, blood sugar, and smoking.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can aortic calcification be reversed?",
+      "answer": "Calcified deposits in the aorta cannot be dissolved or removed with medication. Statins, blood pressure control, and lifestyle changes slow new calcium formation and reduce cardiovascular events, but they do not erase existing calcium. Severe valve calcification causing stenosis is treated mechanically with TAVR or SAVR rather than pharmacologically.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does aortic calcification on a chest X-ray mean?",
+      "answer": "Aortic calcification on chest X-ray indicates atherosclerotic disease in the aortic wall. It is common in adults over 60 and by itself rarely causes symptoms. The finding should prompt a cardiovascular risk assessment — blood pressure, lipid panel, HbA1c, kidney function — and consideration of statin therapy when overall risk is elevated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is aortic calcification the same as aortic stenosis?",
+      "answer": "No. Aortic calcification is calcium deposition in the wall of the aorta or its valve. Aortic stenosis is a narrowing of the aortic valve that obstructs blood flow from the left ventricle. Aortic valve calcification can progress to aortic stenosis over years, but most people with aortic calcification do not have hemodynamically significant stenosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is aortic calcification diagnosed?",
+      "answer": "Aortic calcification is most often diagnosed incidentally on chest X-ray, abdominal X-ray, or CT scan performed for another reason. CT is the most sensitive non-invasive test and can quantify calcium with a calcium score. Echocardiography assesses the aortic valve specifically. Imaging is interpreted alongside cardiovascular risk factors and laboratory testing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does aortic calcification cause symptoms?",
+      "answer": "Aortic calcification itself typically causes no symptoms. Symptoms appear only when complications develop: exertional chest pain or breathlessness with severe aortic valve stenosis, claudication with peripheral disease, or sudden severe pain with aortic dissection. Most cases are found by chance on imaging done for unrelated reasons.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do statins help aortic calcification?",
+      "answer": "Statins do not dissolve existing calcium but reduce major cardiovascular events by 25-35% per 1 mmol/L LDL reduction. They slow progression of new atherosclerotic plaque and stabilize existing plaque. Statin therapy is recommended for almost all patients with moderate or greater aortic calcification, especially those with high ASCVD risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is calcific aortic valve disease?",
+      "answer": "Calcific aortic valve disease is the slow accumulation of calcium on the cusps of the aortic valve over years. It begins as aortic sclerosis (thickening without obstruction) and may progress to aortic stenosis as cusp mobility falls. About 1.5-2% of patients with sclerosis progress to significant stenosis per year; risk factors include age, smoking, hypertension, and high lipoprotein(a).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is aortic calcification linked to kidney disease?",
+      "answer": "Yes. Chronic kidney disease, particularly dialysis, accelerates vascular calcification 2-4 fold due to disordered calcium and phosphate metabolism, secondary hyperparathyroidism, and elevated FGF-23. Over 80% of dialysis patients have detectable aortic calcification regardless of age. Non-calcium phosphate binders are preferred in this group.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a porcelain aorta?",
+      "answer": "Porcelain aorta is near-circumferential, eggshell-like calcification of the ascending aorta. It is uncommon (1-2% of patients evaluated for cardiac surgery) but matters clinically because it makes aortic cross-clamping during open-heart surgery hazardous. TAVR is often preferred over surgical valve replacement when porcelain aorta is present.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can diet reduce aortic calcification?",
+      "answer": "Diet cannot remove existing calcium but slows progression and lowers cardiovascular events. A Mediterranean-style pattern reduces major cardiovascular events by about 30% in the PREDIMED trial. Salt restriction, alcohol moderation, and avoiding processed meats and sugar-sweetened drinks all support overall vascular health, although effects on calcium volume are modest.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I avoid calcium supplements with aortic calcification?",
+      "answer": "Older adults with extensive vascular calcification should discuss calcium supplements with their physician. Routine high-dose calcium supplementation above the recommended daily allowance may modestly raise cardiovascular event risk in some studies, though the data are mixed. Dietary calcium (dairy, leafy greens) does not appear harmful and may be protective.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Agatston calcium score?",
+      "answer": "The Agatston score is a numerical measure of vascular calcium burden from a non-contrast CT scan, most commonly used for coronary arteries. Higher scores indicate greater atherosclerotic burden and predict cardiovascular events. A coronary score of 0 indicates very low 10-year risk; scores above 100 typically warrant statin therapy and aggressive risk management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should aortic calcification be monitored?",
+      "answer": "Routine repeat imaging of aortic calcification alone is not recommended in the absence of new symptoms. Aortic valve calcification with sclerosis is monitored by echocardiogram every 3-5 years initially; mild stenosis annually; moderate to severe stenosis every 6-12 months. Abdominal aortic aneurysm is monitored by ultrasound every 6-12 months depending on size.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does aortic calcification mean I will need surgery?",
+      "answer": "Most people with aortic calcification never need surgery. Surgery is indicated when calcification progresses to severe symptomatic aortic stenosis, when an aortic aneurysm reaches the size threshold for repair, or when complications such as embolization occur. Risk-factor management may prevent or delay the need for intervention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is TAVR?",
+      "answer": "Transcatheter aortic valve replacement is a minimally invasive procedure that delivers a new bioprosthetic valve through a catheter, usually via the femoral artery. It is the dominant treatment for severe symptomatic calcific aortic stenosis in adults over 75 and in many lower-risk patients. Hospital stay is typically 2-3 days and recovery is much faster than open surgery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can young people get aortic calcification?",
+      "answer": "Premature aortic calcification before age 50 is uncommon and usually signals an underlying condition such as bicuspid aortic valve, familial hypercholesterolemia, chronic kidney disease, prior chest radiation, or rare metabolic disorders. Work-up in younger patients includes lipid panel with lipoprotein(a), genetic counselling, and echocardiogram to identify treatable causes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between intimal and medial calcification?",
+      "answer": "Intimal (atherosclerotic) calcification is patchy and located within plaques along the inner wall of the artery — it marks atherosclerosis and predicts heart attacks and strokes. Medial (Mönckeberg) calcification is uniform and located in the middle vessel wall, common in diabetes and kidney disease. Both stiffen vessels but they reflect different disease processes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is aortic calcification hereditary?",
+      "answer": "There is no single inherited gene that causes aortic calcification, but its drivers — lipoprotein(a) levels, familial hypercholesterolemia, bicuspid aortic valve, and predisposition to hypertension and diabetes — all have significant heritability. A family history of premature heart disease lowers the threshold for screening and statin therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should aspirin be taken for aortic calcification?",
+      "answer": "Aspirin is not routinely prescribed for incidental aortic calcification alone. Current ACC/AHA primary prevention guidelines reserve low-dose aspirin for adults 40-70 at high ASCVD risk with low bleeding risk. Aspirin remains standard for established cardiovascular disease (post-MI, stroke, stenting). The decision should be made with a clinician weighing benefits and bleeding risk.",
+      "schemaEligible": true
+    }
   ],
-  "simpleName": "Aortic calcification",
+
+  "simpleName": "Aortic Calcification (calcium build-up in the aorta)",
+
   "regionalNames": [
-    { "name": "Hardening of the aorta", "region": "United States (lay term)", "language": "en" },
-    { "name": "Aortic atherosclerosis", "region": "Medical usage", "language": "en" },
-    { "name": "Abdominal aortic calcification", "region": "Radiology/research", "language": "en" }
+    { "name": "महाधमनी कैल्सीफिकेशन", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Calcification aortique", "region": "France", "language": "fr" },
+    { "name": "Aortenverkalkung", "region": "Germany", "language": "de" }
   ],
+
   "searchTags": [
-    "aortic calcification", "abdominal aortic calcification", "aortic wall calcification",
-    "vascular calcification", "aortic hardening", "calcification of the aorta",
-    "calcium deposits in aorta", "aortic calcification CT", "AAC score", "cardiovascular risk",
-    "aortic atherosclerosis", "aortic calcium"
+    "aortic calcification", "aortic valve calcification", "abdominal aortic calcification",
+    "calcific aortic valve disease", "porcelain aorta", "calcium score", "Agatston score",
+    "aortic atherosclerosis", "aortic sclerosis", "Kauppila score", "vascular calcification"
   ],
+
   "symptomKeywords": [
-    "leg cramps walking", "claudication", "pulsating abdominal mass", "wide pulse pressure",
-    "incidental aortic calcification", "aortic stiffness", "renovascular hypertension"
+    "calcified aorta", "aortic calcification on x-ray", "incidental aortic calcium",
+    "calcified aortic valve", "shortness of breath aortic stenosis", "heart murmur older adult"
   ],
-  "metaTitle": "Aortic Calcification: Symptoms, Causes & Treatment | aihealz",
-  "metaDescription": "Aortic calcification marks atherosclerosis and raises heart attack and stroke risk 2-4-fold. Learn causes, diagnosis, and evidence-based treatment options.",
+
+  "metaTitle": "Aortic Calcification: Causes, Significance & Treatment",
+  "metaDescription": "Aortic calcification: usually an incidental finding marking atherosclerosis. Risks, valve disease link, prevention, treatment. Reviewed by our medical board.",
+
   "keywords": [
-    "aortic calcification", "abdominal aortic calcification", "vascular calcification",
-    "aortic atherosclerosis", "calcium in aorta", "aortic calcification treatment",
-    "AAC score", "coronary calcium score", "cardiovascular risk calcification",
-    "aortic calcification causes", "aortic calcification CKD"
+    "aortic calcification", "aortic valve calcification", "abdominal aortic calcification",
+    "porcelain aorta", "calcium score aorta", "aortic atherosclerosis treatment",
+    "calcific aortic valve disease", "aortic calcification causes", "aortic calcification prognosis"
   ],
+
   "lastReviewed": "2026-05-15",
-  "images": []
+
+  "sources": [
+    {
+      "title": "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Journal of the American College of Cardiology. 2021;77(4):e25-e197.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33342586/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Lewis JR, Schousboe JT, Lim WH, et al. Long-term atherosclerotic vascular disease risk and prognosis in elderly women with abdominal aortic calcification on lateral spine images captured during bone density testing: a prospective study. Journal of Bone and Mineral Research. 2018;33(6):1001-1010.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29470848/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Rajamannan NM, Evans FJ, Aikawa E, et al. Calcific aortic valve disease: not simply a degenerative process — a review and agenda for research from the NHLBI Aortic Stenosis Working Group. Circulation. 2011;124(16):1783-91.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22007101/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Otto CM, Prendergast B. Aortic-valve stenosis — from patients at risk to severe valve obstruction. New England Journal of Medicine. 2014;371(8):744-56.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25140960/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Wang Z, Jiang A, Wei F, Chen H. Cardiac valve calcification and risk of cardiovascular or all-cause mortality in dialysis patients: a meta-analysis. BMC Cardiovascular Disorders. 2018;18(1):12.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29361918/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Kamstrup PR, Tybjaerg-Hansen A, Steffensen R, Nordestgaard BG. Genetically elevated lipoprotein(a) and increased risk of myocardial infarction. JAMA. 2009;301(22):2331-9.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19509380/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Grundy SM, Stone NJ, Bailey AL, et al. 2018 AHA/ACC/AACVPR/AAPA/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Blood Cholesterol. Circulation. 2019;139(25):e1082-e1143.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30586774/",
+      "accessedDate": "2026-05-15"
+    },
+    {
+      "title": "Mack MJ, Leon MB, Thourani VH, et al. Transcatheter Aortic-Valve Replacement with a Balloon-Expandable Valve in Low-Risk Patients (PARTNER 3). New England Journal of Medicine. 2019;380(18):1695-1705.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30883058/",
+      "accessedDate": "2026-05-15"
+    }
+  ],
+
+  "images": [
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aortic_atherosclerosis_with_calcification.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Aortic_atherosclerosis_with_calcification.jpg/1024px-Aortic_atherosclerosis_with_calcification.jpg",
+      "altText": "Lateral abdominal radiograph showing extensive calcification of the abdominal aorta as a curvilinear bright line in front of the lumbar spine",
+      "caption": "Abdominal aortic calcification visible on lateral lumbar radiograph.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    }
+  ]
 }

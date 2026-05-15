@@ -1,0 +1,214 @@
+{
+  "_meta": { "slug": "bacteremia-r7881", "writtenBy": "ws1-sonnet-wave", "writtenAt": "2026-05-15" },
+  "h1Title": "Bacteremia (Bacteria in the Bloodstream)",
+  "specialistType": "General Medicine",
+  "heroOverview": "Bacteremia is the presence of viable bacteria circulating in the bloodstream, documented by a positive blood culture. It affects an estimated 200,000 to 300,000 hospitalised adults in the United States each year and serves as a precursor to sepsis in roughly 26–35% of cases if the causative source is not controlled. Most episodes arise from a recognisable entry point — a respiratory infection, urinary tract infection, intravenous catheter, or surgical wound — and resolve promptly when the source is treated alongside antibiotics. However, high-grade or persistent bacteremia, particularly with organisms such as Staphylococcus aureus or gram-negative bacilli, can seed distant organs, cause endocarditis, osteomyelitis, or meningitis, and progress to septic shock within hours. Identifying the organism and its sensitivities through blood cultures is central to reducing mortality from this condition.",
+  "keyStats": {
+    "prevalence": "Estimated 200,000–300,000 hospitalised bacteremia episodes annually in the United States (CDC, 2023)",
+    "demographics": "Highest incidence in neonates, elderly adults over 65, and immunocompromised patients",
+    "avgAge": "Bimodal distribution: neonates under 28 days and adults over 65 are most affected",
+    "globalCases": "Bacteremia underlies the majority of the estimated 48.9 million global sepsis cases per year (WHO, 2020)"
+  },
+  "definition": "Bacteremia (ICD-10: R78.81) is defined as the detection of bacteria in the blood by culture or, increasingly, by molecular assay. The term describes a laboratory finding rather than a specific disease: it can be transient, intermittent, or continuous. Transient bacteremia occurs briefly after dental procedures, endoscopy, or urological instrumentation in otherwise healthy individuals and typically clears without treatment. Intermittent bacteremia accompanies undrained abscesses or necrotising infections that periodically shed organisms into the circulation. Continuous bacteremia is the most serious pattern and is characteristic of infective endocarditis, infected intravascular devices, and some gram-negative bacillary infections. Bacteremia falls under general medicine and infectious disease. The distinction between bacteremia and sepsis hinges on the host response: bacteremia is a microbiological event; sepsis is bacteremia (or another infection) plus a dysregulated, life-threatening systemic inflammatory response with organ dysfunction, as defined by the Sepsis-3 criteria of 2016. The most common causative organisms in community-acquired bacteremia are Escherichia coli and Staphylococcus aureus; healthcare-associated episodes add coagulase-negative staphylococci, Enterococcus, Klebsiella pneumoniae, and Pseudomonas aeruginosa to the list. Prompt identification and treatment of the underlying source alongside organism-directed antibiotics are the cornerstones of management.",
+  "typesClassification": [
+    { "type": "Transient bacteremia", "description": "Brief, low-grade passage of bacteria into the blood after a procedure such as dental extraction or colonoscopy. It resolves spontaneously in healthy individuals within 15–30 minutes and rarely requires treatment beyond standard prophylaxis in high-risk patients." },
+    { "type": "Community-acquired bacteremia", "description": "Develops outside a healthcare setting, usually from urinary, respiratory, biliary, or skin sources; E. coli and S. aureus predominate." },
+    { "type": "Healthcare-associated bacteremia", "description": "Arises in hospital or within 48 hours of discharge; intravascular catheters are the leading source, with coagulase-negative staphylococci, S. aureus, Enterococcus, and resistant gram-negatives common." },
+    { "type": "Catheter-related bloodstream infection (CRBSI)", "description": "A subset of healthcare-associated bacteremia in which the intravascular device is the confirmed source; carries a 12–25% attributable mortality and prolongs hospitalisation by 7–21 days on average." },
+    { "type": "High-grade or persistent bacteremia", "description": "Three or more positive blood cultures or cultures positive beyond 72 hours of appropriate antibiotics, signalling endocarditis, osteomyelitis, an undrained abscess, or an infected prosthesis that requires source control." }
+  ],
+  "primarySymptoms": [
+    "Fever above 38°C or, at the other extreme, hypothermia below 36°C — the temperature response to circulating bacteria stimulating cytokine release from macrophages.",
+    "Rigors (shaking chills) often lasting several minutes, caused by the rapid elevation in core temperature as the hypothalamus resets its set point upward.",
+    "Tachycardia with a resting pulse above 90 beats per minute, reflecting both the fever and early cardiovascular compensation for reduced systemic vascular resistance.",
+    "Tachypnoea — a respiratory rate above 20 breaths per minute — as the body attempts to compensate for metabolic acidosis from early tissue hypoperfusion.",
+    "Diaphoresis and skin flushing during the defervescence phase when the fever breaks and the body rapidly loses heat.",
+    "Hypotension — a systolic blood pressure below 90 mmHg or a drop of more than 40 mmHg — indicating transition toward septic shock and requiring immediate resuscitation.",
+    "New or worsening confusion, disorientation, or reduced consciousness, particularly in elderly patients who may present with altered mental status as the dominant finding.",
+    "Localised signs pointing to the source: dysuria and flank pain from a urinary source, pleuritic chest pain and cough from pneumonia, or redness and warmth around a catheter site.",
+    "Nausea, vomiting, and anorexia related to systemic inflammation and circulating cytokines including interleukin-6 and tumour necrosis factor.",
+    "Petechiae or purpuric rash in meningococcaemia, a rare but immediately life-threatening form of gram-negative bacteremia that must be recognised within hours."
+  ],
+  "earlyWarningSigns": [
+    "A single temperature spike to 38.3°C or higher without an obvious explanation, particularly after a procedure or in a patient with an indwelling device.",
+    "Unexplained new-onset tachycardia in a hospitalised patient before fever or localising symptoms appear.",
+    "Mild mental status change such as increased confusion or unusual lethargy in an older adult.",
+    "A subtle drop in urine output suggesting early hypoperfusion before blood pressure falls."
+  ],
+  "emergencySigns": [
+    "Systolic blood pressure below 90 mmHg despite adequate fluid resuscitation, indicating septic shock requiring vasopressors.",
+    "A purpuric or non-blanching petechial rash spreading rapidly, which may signal meningococcal disease — a same-hour emergency.",
+    "New-onset confusion, agitation, or unresponsiveness alongside fever.",
+    "Persistent bacteremia with S. aureus — requires same-day echocardiography to exclude endocarditis.",
+    "Oliguria or anuria suggesting acute kidney injury requiring urgent critical-care assessment."
+  ],
+  "causes": [
+    { "cause": "Urinary tract infection and pyelonephritis", "description": "Gram-negative organisms, predominantly E. coli, ascend from the bladder to the kidneys and breach the renal vasculature, producing bacteremia in approximately 20–30% of pyelonephritis episodes. It is the most common community source in women and older men with benign prostatic hypertrophy." },
+    { "cause": "Intravascular catheter colonisation", "description": "Skin commensals migrate along the extraluminal surface of central venous or arterial catheters and form biofilm; hub contamination introduces organisms via the intraluminal route. CRBSI risk accumulates at roughly 1–3 per 1,000 catheter-days for central lines." },
+    { "cause": "Pneumonia and respiratory infection", "description": "Streptococcus pneumoniae, Klebsiella pneumoniae, and Staphylococcus aureus can breach the alveolar barrier during severe lung infection, producing bacteremia in 10–20% of hospitalised pneumonia cases and markedly worsening prognosis." },
+    { "cause": "Skin, soft tissue, and wound infections", "description": "Cellulitis, infected surgical wounds, pressure ulcers, and diabetic foot ulcers release S. aureus and beta-haemolytic streptococci into perilesional capillaries; the rate of bacteremia in hospitalised cellulitis reaches about 2–4%." },
+    { "cause": "Intra-abdominal and biliary infection", "description": "Cholecystitis, cholangitis, diverticulitis, and peritonitis allow enteric gram-negatives and anaerobes to enter the portal and systemic circulation; biliary obstruction in particular causes rapid high-grade bacteremia due to raised ductal pressure." },
+    { "cause": "Dental and oral sources", "description": "Bacteraemia with viridans streptococci occurs routinely during tooth brushing and dental procedures; in most healthy people it is transient and harmless, but in those with prosthetic heart valves or certain congenital defects it can seed endocarditis." },
+    { "cause": "Endocarditis as both cause and consequence", "description": "Infected heart valves continuously shed organisms into the bloodstream; equally, bacteremia with S. aureus, streptococci, or enterococci can seed previously normal or abnormal valves, creating a self-perpetuating cycle of metastatic seeding." }
+  ],
+  "riskFactors": [
+    { "factor": "Indwelling intravascular devices", "category": "modifiable", "description": "Central venous catheters, arterial lines, and haemodialysis access ports bypass skin defences and support biofilm formation; meticulous aseptic insertion and daily assessment for continued necessity reduce CRBSI rates by more than 60% in bundle programmes." },
+    { "factor": "Immunosuppression", "category": "modifiable", "description": "Chemotherapy-induced neutropenia (absolute neutrophil count below 500 cells/µL), long-term corticosteroids, organ transplant immunosuppression, and advanced HIV dramatically impair the ability to contain an initial bacteremia and clear organisms from the blood." },
+    { "factor": "Age over 65", "category": "non-modifiable", "description": "Declining immune surveillance, comorbid urological, respiratory, and dermatological conditions, and more frequent hospitalisation with device use compound to make older adults the highest-incidence group for bacteremia outside neonatal care." },
+    { "factor": "Diabetes mellitus", "category": "modifiable", "description": "Hyperglycaemia impairs neutrophil chemotaxis and phagocytosis; peripheral neuropathy and vascular disease predispose to foot infections and skin breakdown as entry portals; better glycaemic control measurably reduces infection risk." },
+    { "factor": "Chronic kidney or liver disease", "category": "non-modifiable", "description": "Uraemia disrupts T-cell and neutrophil function; cirrhosis impairs hepatic clearance of portal bacteremia and reduces complement synthesis, making these patients particularly susceptible to spontaneous bacterial peritonitis and systemic bacteremia." },
+    { "factor": "Recent surgery or hospitalisation", "category": "modifiable", "description": "Surgical wounds, drains, and perioperative devices create opportunities for skin colonisers to enter the bloodstream; adherence to surgical-site infection bundles reduces postoperative bacteremia incidence." },
+    { "factor": "Prosthetic materials", "category": "non-modifiable", "description": "Prosthetic heart valves, orthopaedic implants, vascular grafts, and electronic cardiac devices lack the local immune surveillance of native tissue and provide surfaces for biofilm that are extremely difficult to eradicate with antibiotics alone." }
+  ],
+  "affectedDemographics": [
+    "Neonates, particularly premature infants in intensive care with indwelling lines",
+    "Adults over 65, especially those with urological, respiratory, or skin conditions",
+    "Immunocompromised patients on chemotherapy, post-transplant, or with advanced HIV",
+    "People with diabetes, particularly those with foot ulcers or nephropathy",
+    "Hospitalised patients with central venous or urinary catheters",
+    "Patients with prosthetic heart valves or orthopaedic implants"
+  ],
+  "diagnosisOverview": "The definitive diagnosis of bacteremia rests on blood cultures, which must be obtained before antibiotics whenever possible. Standard practice is to draw two to three sets of aerobic and anaerobic bottles from separate venepuncture sites within 15–30 minutes — not from an indwelling catheter unless CRBSI is being specifically investigated. Each set drawn this way detects approximately 80% of true bacteremia episodes; three sets combined reach sensitivity above 96%. The laboratory incubates bottles for up to five days and reports preliminary identification within 12–24 hours of a positive flag using mass spectrometry (MALDI-TOF) or rapid multiplex PCR panels that identify organism and common resistance genes in 1–2 hours, enabling earlier antibiotic adjustment. Supporting blood tests quantify the severity: white cell count (leucocytosis above 12,000 or leucopenia below 4,000 cells/µL), C-reactive protein, procalcitonin (a level above 0.5 ng/mL supports bacterial infection; above 2 ng/mL supports bacteremia), lactate (above 2 mmol/L indicates tissue hypoperfusion), creatinine, and liver enzymes guide organ involvement. Imaging searches for the source: chest X-ray for pneumonia, renal ultrasound for obstructed pyelonephritis, CT abdomen for an intra-abdominal collection, and echocardiography when S. aureus bacteremia or endocarditis is suspected — transoesophageal echocardiography (TOE) is more sensitive than transthoracic (TTE) for vegetations. The IDSA recommends echocardiography for all adults with S. aureus bacteremia given the 10–30% risk of endocarditis. Contaminants — typically coagulase-negative staphylococci in a single bottle — must be distinguished from true pathogens by clinical context, repeat cultures, and colony timing.",
+  "diagnosticTests": [
+    { "test": "Blood cultures (two to three sets)", "purpose": "Identify the causative organism and determine antibiotic sensitivities — the cornerstone of bacteremia diagnosis.", "whatToExpect": "Blood is drawn from two separate venepuncture sites (not from lines); each draw produces two bottles (aerobic and anaerobic) that are incubated for up to five days. Preliminary species identification typically flags within 12–24 hours." },
+    { "test": "Rapid blood-culture identification (MALDI-TOF / multiplex PCR)", "purpose": "Identifies organism to genus/species and major resistance determinants within 1–2 hours of a positive culture flag, enabling earlier targeted therapy.", "whatToExpect": "Performed automatically by the laboratory on the positive culture bottle; no additional sample is needed; the clinician receives an early alert to adjust the empirical antibiotic." },
+    { "test": "Procalcitonin and C-reactive protein", "purpose": "Support the diagnosis of bacterial infection versus non-infectious causes of fever; guide antibiotic stewardship by tracking treatment response.", "whatToExpect": "Standard blood draw; procalcitonin results are usually available within two hours; a falling procalcitonin on serial measurements supports stopping or de-escalating antibiotics." },
+    { "test": "Echocardiography (TTE or TOE)", "purpose": "Detects valve vegetations and assesses cardiac function in patients with S. aureus bacteremia, high-risk organisms, or prolonged bacteremia where endocarditis is a concern.", "whatToExpect": "Transthoracic echo is a non-invasive ultrasound taking 20–30 minutes; transoesophageal echo requires a probe swallowed under mild sedation and is more sensitive for small vegetations." },
+    { "test": "CT scan of chest, abdomen, and pelvis", "purpose": "Locates the infective source — abscess, infected collection, pneumonia, or biliary obstruction — to guide source control.", "whatToExpect": "A CT with intravenous contrast takes 15–30 minutes; the contrast highlights inflammation and collections. Kidney function must be checked first if contrast is used." },
+    { "test": "Serum lactate", "purpose": "Quantifies the degree of tissue hypoperfusion; lactate above 2 mmol/L defines sepsis and above 4 mmol/L defines septic shock in the Sepsis-3 criteria.", "whatToExpect": "Measured on an arterial or venous blood gas sample returned within 30–60 minutes; serial measurements track response to fluid resuscitation." }
+  ],
+  "treatmentOverview": "Successful treatment of bacteremia requires two simultaneous actions: initiating effective antibiotic therapy and controlling the source. The Surviving Sepsis Campaign guidelines recommend administering the first antibiotic dose within one hour of recognising sepsis, and within three hours if sepsis is not yet confirmed but bacteremia is suspected clinically. Empirical regimens are chosen based on likely source, local resistance patterns, and patient-specific risk factors; they are then narrowed — de-escalated — to the most targeted agent once culture and sensitivity results are available, typically within 48–72 hours. For community-acquired gram-negative bacteremia from a urinary source, oral step-down therapy with ciprofloxacin or trimethoprim-sulfamethoxazole is appropriate once the patient can take oral medication and is clinically stable. S. aureus bacteremia, however, requires intravenous therapy for a minimum of 14 days for uncomplicated disease and four to six weeks for endocarditis; flucloxacillin or nafcillin is preferred for methicillin-sensitive S. aureus (MSSA), and vancomycin or daptomycin for MRSA. Catheter-related bacteremia requires prompt removal or exchange of the infected catheter in addition to antibiotics; prolonged antibiotics without catheter removal have a much higher failure rate. Intra-abdominal sources demand radiological or surgical drainage alongside antibiotics. Fever and leucocytosis should begin to resolve within 48–72 hours of effective treatment; persistent bacteremia beyond 72 hours is the trigger for imaging to find an undrained focus or an endovascular complication. Antibiotic stewardship — guided by culture results, procalcitonin kinetics, and clinical trajectory — determines the total duration, which ranges from 7 days for gram-negative bacteremia from a controlled source to six weeks for complicated S. aureus endocarditis.",
+  "medicalTreatments": [
+    { "name": "Beta-lactam antibiotics (flucloxacillin, cefazolin, piperacillin-tazobactam)", "description": "Flucloxacillin or cefazolin is the definitive treatment for MSSA bacteremia and is associated with lower mortality than vancomycin in head-to-head studies. Piperacillin-tazobactam provides broad gram-negative coverage for abdominal and biliary sources empirically.", "effectiveness": "Cefazolin achieves 30-day mortality of approximately 13% in MSSA bacteremia versus 20% for vancomycin in comparative data (Flynt et al., 2021)." },
+    { "name": "Vancomycin", "description": "Glycopeptide antibiotic used for MRSA bacteremia, penicillin-allergic patients, and healthcare-associated episodes pending cultures. Dose must be adjusted by pharmacokinetic targets (AUC/MIC 400–600) to balance efficacy and nephrotoxicity.", "effectiveness": "Clinical success in approximately 55–70% of MRSA bacteremia cases; inferior to beta-lactams for MSSA, which is why de-escalation once sensitivities are known is critical." },
+    { "name": "Daptomycin", "description": "Lipopeptide bactericidal antibiotic with activity against MRSA and vancomycin-resistant enterococci; not used for pneumonia as it is inactivated by pulmonary surfactant. Recommended as an alternative to vancomycin for MRSA bacteremia.", "effectiveness": "Non-inferior to vancomycin for S. aureus bacteremia in the pivotal trial (Fowler et al., NEJM 2006), with a clinical success rate of approximately 44% versus 42%." },
+    { "name": "Carbapenems (meropenem, ertapenem)", "description": "Reserved for extended-spectrum beta-lactamase (ESBL)-producing gram-negative bacteremia or carbapenem-susceptible Pseudomonas; used empirically in neutropenic fever or when resistant organisms are suspected based on prior cultures.", "effectiveness": "Mortality reduction compared with inadequate empirical therapy for ESBL bacteremia is approximately 50% in observational studies (Rodriguez-Baño et al., 2018)." },
+    { "name": "Aminoglycosides (gentamicin, amikacin)", "description": "Used as short-course synergistic therapy in enterococcal endocarditis and as part of combination regimens for Pseudomonas; careful therapeutic drug monitoring is required to prevent nephrotoxicity and ototoxicity.", "effectiveness": "Synergistic combination with ampicillin reduces enterococcal bacteremia treatment failure by approximately 30% in clinical series." }
+  ],
+  "surgicalOptions": [
+    { "name": "Source control (drainage, debridement, or removal of infected material)", "description": "Surgical or interventional drainage of abscesses, removal of infected prostheses, debridement of necrotising wounds, or cholecystectomy for biliary bacteremia. Source control is as important as antibiotics and failure to achieve it is the leading cause of persistent bacteremia.", "successRate": "When source control is achieved within 6–12 hours of diagnosis in intra-abdominal bacteremia, 30-day mortality is reduced by approximately 40% compared with delayed intervention in observational studies." }
+  ],
+  "alternativeTreatments": [
+    { "name": "Antibiotic stewardship programme review", "description": "Formal daily review by an infectious disease pharmacist or physician to de-escalate, narrow, or stop antibiotics based on culture results and clinical response, reducing resistance, side effects, and cost." },
+    { "name": "Antibiotic lock therapy", "description": "High-concentration antibiotic solution instilled into the lumen of a potentially salvageable intravascular catheter; used in carefully selected patients where catheter removal is not feasible and the organism is low-virulence." }
+  ],
+  "whySeeSpecialist": "An infectious disease specialist should be consulted for all S. aureus bacteremia, persistent bacteremia beyond 72 hours, bacteremia in a patient with a prosthetic valve or cardiac device, candidemia, and any case where the source is not clearly identified and controlled. Specialist-managed S. aureus bacteremia has been shown to reduce 30-day mortality by approximately 50% in multiple observational studies.",
+  "doctorSelectionGuide": "Look for an infectious disease physician with experience in bloodstream infections, endocarditis, and device-related infections. Centres with on-site interventional radiology and cardiac surgery are better equipped to manage complicated bacteremia requiring source control or valve replacement. Ask whether the team uses a formal antimicrobial stewardship programme and rapid diagnostic platforms.",
+  "preventionStrategies": [
+    "Use central line insertion bundles — hand hygiene, chlorhexidine skin preparation, maximum sterile barriers, optimal catheter site selection, and daily review of catheter necessity — which reduce CRBSI rates by more than 60%.",
+    "Limit indwelling catheters to the shortest clinically necessary duration; remove urinary catheters, peripheral IV lines, and central lines as soon as they are no longer required.",
+    "Maintain meticulous oral hygiene and attend regular dental care to reduce the frequency and magnitude of transient oral bacteremia.",
+    "Vaccinate against pneumococcus and influenza to reduce the risk of bacteremic pneumonia.",
+    "Treat skin infections, urinary tract infections, and other localised infections promptly before they can lead to bloodstream spread.",
+    "Optimise glycaemic control in people with diabetes to reduce immune impairment and skin barrier breakdown."
+  ],
+  "lifestyleModifications": [
+    "Keep skin clean and intact; treat cuts, abrasions, and pressure areas promptly to prevent bacterial entry.",
+    "Follow clinician instructions about catheter site care and report any redness, warmth, or discharge immediately.",
+    "Maintain adequate nutrition to support immune function, particularly during illness or recovery from surgery.",
+    "Avoid sharing needles or unsterile injection equipment, which bypass the skin barrier directly.",
+    "Complete full courses of antibiotics prescribed for localised infections to prevent recurrence and bloodstream extension."
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Protein-rich foods to support immune cell production during and after infection",
+      "Adequate hydration to support renal clearance and medication tolerance",
+      "Foods rich in zinc and vitamin C to support barrier repair",
+      "Probiotic foods during antibiotic therapy, with medical guidance, to reduce antibiotic-associated diarrhoea"
+    ],
+    "avoid": [
+      "Excess alcohol, which impairs neutrophil function and hepatic clearance of bacteremia",
+      "Foods that raise blood glucose unpredictably in people with diabetes, increasing infection risk"
+    ]
+  },
+  "exerciseGuidelines": "During active bacteremia, complete physical rest is recommended until fever, haemodynamic instability, and laboratory markers have normalised. Return to physical activity should be gradual and guided by the treating physician; patients with S. aureus bacteremia or suspected endocarditis must not return to exercise without cardiac clearance, as vigorous activity can dislodge embolic material from valve vegetations. After full recovery from uncomplicated bacteremia, resuming regular moderate exercise supports immune function.",
+  "dailyManagement": [
+    "Take intravenous or oral antibiotics on the exact schedule prescribed and complete the full course even when feeling better.",
+    "Monitor temperature, blood pressure, and urine output daily during outpatient antibiotic therapy.",
+    "Seek urgent review if fever returns, confusion develops, or a new rash appears during treatment.",
+    "Attend all follow-up blood culture appointments to confirm clearance of bacteremia.",
+    "Report any catheter site changes — redness, warmth, pus, or loosening of dressings — without delay."
+  ],
+  "prognosis": "The outcome of bacteremia depends on the causative organism, the speed of appropriate antibiotic initiation, and whether the source can be controlled. Overall 30-day mortality in adult bacteremia ranges from approximately 10% for uncomplicated gram-negative bacteremia from a urinary source to 20–30% for S. aureus bacteremia, and up to 40–50% once septic shock supervenes. Fungal bacteremia (candidemia) carries a 30-day mortality of roughly 35–40% even with antifungal treatment. When antibiotics are started within one hour of sepsis recognition and the source is controlled, mortality falls substantially — the Surviving Sepsis Campaign reports an approximately 7% absolute mortality reduction per hour of delay avoided in the first six hours. Long-term, survivors of bacteremia requiring intensive care have meaningful rates of physical deconditioning, cognitive impairment, and post-intensive care syndrome. Patients with S. aureus bacteremia who receive infectious disease consultation and undergo echocardiography and 14-day intravenous therapy have consistently better outcomes than those managed without specialist involvement.",
+  "recoveryTimeline": "In uncomplicated community-acquired gram-negative bacteremia from a urinary source, fever typically resolves within 48–72 hours of an effective antibiotic, and oral step-down therapy allows discharge within three to five days. S. aureus bacteremia requires a minimum of 14 days of intravenous antibiotics for uncomplicated disease — meaning no endocarditis, no prosthetic material, and negative blood cultures within four days — and four to six weeks for endocarditis. Catheter-related bacteremia with coagulase-negative staphylococci is often manageable with 7–14 days of antibiotics after catheter removal. Full functional recovery after complicated bacteremia requiring intensive care may take weeks to months.",
+  "complications": [
+    "Sepsis and septic shock — bacteremia that triggers a dysregulated host response leading to haemodynamic instability, organ dysfunction, and potential death; requires immediate ICU-level care.",
+    "Infective endocarditis — seeding of heart valves producing vegetations that embolise and require four to six weeks of intravenous antibiotics and sometimes valve surgery.",
+    "Osteomyelitis and septic arthritis — haematogenous seeding of bone or joints, particularly by S. aureus, producing infections that are difficult to eradicate and may require surgical debridement.",
+    "Metastatic abscess formation — bacteria settling in the liver, spleen, kidney, or brain and forming purulent collections that require imaging-guided or surgical drainage.",
+    "Acute kidney injury — from hypoperfusion in sepsis or from nephrotoxic antibiotics, requiring close monitoring and dose adjustment.",
+    "Post-intensive care syndrome — weakness, cognitive impairment, and psychological disturbance affecting up to 50% of ICU survivors of bacteremia and sepsis."
+  ],
+  "supportResources": [
+    { "name": "CDC — Bloodstream Infections and Sepsis", "url": "https://www.cdc.gov/sepsis/index.html", "description": "Patient and clinician information on sepsis, including bacteremia as a leading cause, from the U.S. Centers for Disease Control and Prevention." },
+    { "name": "Sepsis Alliance — Sepsis and Bacteremia", "url": "https://www.sepsis.org/sepsis-basics/", "description": "Plain-language information on sepsis risk, signs, and prevention from the leading U.S. patient advocacy organisation." },
+    { "name": "NIDDK — Urinary Tract Infections in Adults", "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-infection-uti-in-adults", "description": "Information on UTI, a leading source of bacteremia, from the National Institute of Diabetes and Digestive and Kidney Diseases." }
+  ],
+  "sources": [
+    { "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021", "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/", "accessedDate": "2026-05-15" },
+    { "title": "Fowler VG Jr et al. Daptomycin versus Standard Therapy for Bacteremia and Endocarditis Caused by Staphylococcus aureus. NEJM 2006", "url": "https://pubmed.ncbi.nlm.nih.gov/16908701/", "accessedDate": "2026-05-15" },
+    { "title": "IDSA Clinical Practice Guidelines for the Diagnosis and Management of Intravascular Catheter-Related Infection (2009)", "url": "https://pubmed.ncbi.nlm.nih.gov/19489710/", "accessedDate": "2026-05-15" },
+    { "title": "Ruhnke M et al. Treatment of Invasive Candida Infections: ESCMID Guidelines 2023", "url": "https://pubmed.ncbi.nlm.nih.gov/36812498/", "accessedDate": "2026-05-15" },
+    { "title": "CDC — Healthcare-Associated Infections: Bloodstream Infections", "url": "https://www.cdc.gov/hai/bsi/bsi.html", "accessedDate": "2026-05-15" },
+    { "title": "NICE NG51 — Sepsis: Recognition, Diagnosis and Early Management", "url": "https://www.nice.org.uk/guidance/ng51", "accessedDate": "2026-05-15" },
+    { "title": "WHO Global Report on the Epidemiology and Burden of Sepsis, 2020", "url": "https://www.who.int/publications/i/item/9789240010789", "accessedDate": "2026-05-15" }
+  ],
+  "confusedWithConditions": [
+    { "slug": "pneumonia", "name": "Pneumonia", "keyDifference": "Pneumonia is a lung parenchyma infection that commonly causes bacteremia as a complication; the distinction matters because pneumonia diagnosis relies on imaging and respiratory findings, while bacteremia is confirmed by blood culture and may require a different antibiotic choice." },
+    { "slug": "dental-abscess", "name": "Dental abscess", "keyDifference": "Dental abscess causes localised pain, swelling, and transient bacteremia with oral flora; persistent fever after dental treatment should prompt blood cultures to exclude sustained bacteremia from inadequate source control." }
+  ],
+  "coOccurringConditions": [
+    { "slug": "pneumonia", "name": "Pneumonia" },
+    { "slug": "dental-abscess", "name": "Dental abscess" }
+  ],
+  "relatedConditions": [
+    { "slug": "pneumonia", "name": "Pneumonia", "relevance": "Bacteraemic pneumonia occurs when respiratory pathogens breach into the bloodstream, markedly increasing mortality compared with non-bacteraemic pneumonia." },
+    { "slug": "dental-abscess", "name": "Dental abscess", "relevance": "Oral flora from untreated dental abscesses are a recognised source of bacteremia, particularly viridans streptococcal endocarditis in susceptible patients." }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    { "question": "What is bacteremia and how is it different from sepsis?", "answer": "Bacteremia means bacteria are present in the bloodstream, confirmed by a blood culture. Sepsis is bacteremia — or any infection — that causes a life-threatening, dysregulated immune response with organ dysfunction. All sepsis involves infection but not all bacteremia becomes sepsis.", "schemaEligible": true },
+    { "question": "How is bacteremia diagnosed?", "answer": "Blood cultures drawn from two separate sites before antibiotics are the standard test. Results flag positive within 12–24 hours; species identification and sensitivity testing follow within 48–72 hours. Supporting tests include procalcitonin, lactate, and imaging to find the source.", "schemaEligible": true },
+    { "question": "How long does it take to treat bacteremia?", "answer": "Duration depends on the organism and source. Gram-negative bacteremia from a urinary infection may resolve in 7–14 days. Staphylococcus aureus bacteremia requires at least 14 days of intravenous antibiotics, and 4–6 weeks if endocarditis is found.", "schemaEligible": true },
+    { "question": "Can bacteremia go away without antibiotics?", "answer": "Transient low-grade bacteremia after dental procedures usually clears on its own in healthy people. However, clinically significant bacteremia — causing fever, chills, or other symptoms — requires antibiotics and source control. Untreated bacteremia can progress to sepsis and is potentially fatal.", "schemaEligible": true },
+    { "question": "What bacteria most commonly cause bacteremia?", "answer": "Escherichia coli is the most common cause in community-acquired bacteremia, usually from a urinary source. Staphylococcus aureus is the most dangerous, with the highest risk of endocarditis and metastatic complications. Klebsiella, Pseudomonas, and Enterococcus are common in healthcare settings.", "schemaEligible": true },
+    { "question": "Is bacteremia contagious?", "answer": "No. Bacteremia results from your own bacteria entering your bloodstream, not from person-to-person transmission. The underlying source — such as a respiratory infection or wound — may be contagious, but the bloodstream infection itself does not spread between individuals.", "schemaEligible": true },
+    { "question": "What does a positive blood culture mean?", "answer": "A positive blood culture means bacteria grew from your blood sample. The laboratory identifies the organism and tests which antibiotics can kill it. A single positive bottle with a skin commensal may be a contaminant; two or more positive sets with the same organism strongly indicates true bacteremia.", "schemaEligible": true },
+    { "question": "Why is Staphylococcus aureus bacteremia considered serious?", "answer": "S. aureus bacteremia carries a 30-day mortality of 20–30% and a 10–30% risk of seeding heart valves (endocarditis). It requires at least 14 days of intravenous antibiotics, echocardiography, and usually infectious disease specialist involvement to achieve optimal outcomes.", "schemaEligible": true },
+    { "question": "Can a catheter cause bacteremia?", "answer": "Yes. Catheter-related bloodstream infections (CRBSI) are among the most common hospital-acquired infections. Bacteria migrate along the catheter surface or enter through the hub, reach the bloodstream, and cause fever, chills, and potentially sepsis. Removing or replacing the catheter is usually required for cure.", "schemaEligible": true },
+    { "question": "What is the mortality rate for bacteremia?", "answer": "Mortality varies widely: roughly 10% for gram-negative bacteremia from a controlled urinary source, 20–30% for S. aureus bacteremia, and up to 40–50% when septic shock develops. Starting appropriate antibiotics within the first hour reduces mortality significantly.", "schemaEligible": true },
+    { "question": "When should I go to hospital for suspected bacteremia?", "answer": "Seek emergency care if you have a fever above 38.5°C with shaking chills, confusion, a rash that does not blanch under pressure, a rapid heartbeat, or low blood pressure. Anyone with an indwelling catheter who develops a fever should be assessed the same day.", "schemaEligible": true },
+    { "question": "Can bacteremia cause a rash?", "answer": "Yes. Petechiae or purpuric non-blanching spots can appear in meningococcaemia, a form of gram-negative bacteremia that is a medical emergency. A diffuse erythematous rash can also indicate toxic shock syndrome from staphylococcal or streptococcal bacteremia.", "schemaEligible": true },
+    { "question": "How is catheter-related bacteremia treated?", "answer": "The infected catheter is removed or replaced over a guidewire in selected cases, and intravenous antibiotics are given for 7–14 days depending on the organism. Coagulase-negative staphylococci from short-term catheters are often treated for 5–7 days after removal if the patient is not immunocompromised.", "schemaEligible": true },
+    { "question": "Does bacteremia always cause symptoms?", "answer": "Low-grade transient bacteremia after dental or endoscopic procedures may cause no symptoms at all. Clinically significant bacteremia reliably causes fever, chills, and malaise, though elderly or immunocompromised patients may present atypically with only confusion or a drop in blood pressure.", "schemaEligible": true },
+    { "question": "Can bacteremia recur?", "answer": "Yes, particularly if the source is not fully controlled — for example, an undrained abscess, retained foreign body, or infected prosthesis. Persistent or relapsing bacteremia with S. aureus should prompt imaging for endocarditis, osteomyelitis, or other metastatic foci.", "schemaEligible": true },
+    { "question": "What is the role of infectious disease consultation in bacteremia?", "answer": "Studies consistently show that infectious disease consultation in S. aureus bacteremia reduces 30-day mortality by approximately 50% through ensuring echocardiography is obtained, optimal antibiotic selection and duration, and timely source control. Most guidelines recommend routine consultation for complex or high-risk bacteremia.", "schemaEligible": true },
+    { "question": "Is bacteremia the same as blood poisoning?", "answer": "Blood poisoning is a colloquial term that most people use to describe sepsis — the dangerous systemic response to infection including bacteremia. Bacteremia itself simply means bacteria are in the blood; sepsis or septicaemia describes the severe illness that can follow if the immune response becomes dysregulated.", "schemaEligible": true },
+    { "question": "What happens if bacteremia is left untreated?", "answer": "Untreated bacteremia can progress to sepsis, septic shock, and multi-organ failure within hours to days. Bacteria can seed distant organs, causing endocarditis, osteomyelitis, meningitis, or abscesses. Without antibiotics, S. aureus bacteremia is almost universally fatal.", "schemaEligible": true },
+    { "question": "Can children get bacteremia?", "answer": "Yes. Infants under 90 days are at high risk for occult bacteremia from Streptococcus agalactiae, E. coli, and Listeria. Older children may develop bacteremia from pneumococcal or meningococcal disease. Vaccination against pneumococcus and meningococcus has dramatically reduced these rates.", "schemaEligible": true },
+    { "question": "How do doctors find the source of bacteremia?", "answer": "Source investigation includes clinical examination, chest X-ray, urine culture, CT scan of the abdomen and pelvis, echocardiography for cardiac sources, and review of all indwelling devices. Identifying and controlling the source is as important as the antibiotic itself.", "schemaEligible": true }
+  ],
+  "simpleName": "Blood infection",
+  "regionalNames": [
+    { "name": "Blood poisoning", "region": "United Kingdom", "language": "en" },
+    { "name": "Bacteraemia", "region": "United Kingdom", "language": "en" },
+    { "name": "Khoon mein infection", "region": "India", "language": "hi" }
+  ],
+  "searchTags": [
+    "bacteremia", "bacteraemia", "blood infection", "bacteria in blood", "positive blood culture",
+    "bloodstream infection", "bacteremia symptoms", "bacteremia treatment", "bacteremia causes",
+    "catheter bloodstream infection", "CRBSI", "sepsis precursor"
+  ],
+  "symptomKeywords": [
+    "fever chills", "rigors", "tachycardia", "confusion bacteremia", "petechiae",
+    "positive blood culture", "hypotension", "high fever infection", "sweating chills fever"
+  ],
+  "metaTitle": "Bacteremia: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Bacteremia means bacteria circulate in the bloodstream. Learn causes, symptoms like fever and chills, blood culture diagnosis, and antibiotic treatment.",
+  "keywords": [
+    "bacteremia", "bacteraemia", "bloodstream infection", "positive blood culture", "sepsis",
+    "blood poisoning", "catheter infection", "S. aureus bacteremia", "bacteremia treatment"
+  ],
+  "lastReviewed": "2026-05-15",
+  "images": []
+}

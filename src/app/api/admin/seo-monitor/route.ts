@@ -9,7 +9,7 @@ import prisma from '@/lib/db';
 
 // Sample data for when database is empty
 const SAMPLE_SITEMAPS = [
-    { sitemapName: 'sitemap-index.xml', urlCount: 12, generationMs: 45, generatedAt: new Date().toISOString(), isIndex: true },
+    { sitemapName: 'sitemap.xml', urlCount: 12, generationMs: 45, generatedAt: new Date().toISOString(), isIndex: true },
     { sitemapName: 'sitemap-conditions.xml', urlCount: 850, generationMs: 1250, generatedAt: new Date().toISOString(), isIndex: false },
     { sitemapName: 'sitemap-treatments.xml', urlCount: 620, generationMs: 980, generatedAt: new Date().toISOString(), isIndex: false },
     { sitemapName: 'sitemap-doctors.xml', urlCount: 450, generationMs: 720, generatedAt: new Date().toISOString(), isIndex: false },

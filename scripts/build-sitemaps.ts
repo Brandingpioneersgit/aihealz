@@ -315,7 +315,7 @@ Summary:
   Build time:             ${duration}s
 
 Access sitemaps at:
-  Index:    ${SITE_URL}/sitemap-index.xml
+  Index:    ${SITE_URL}/sitemap.xml
   Chunk 0:  ${SITE_URL}/sitemap/0
   Chunk 1:  ${SITE_URL}/sitemap/1
   ...up to: ${SITE_URL}/sitemap/${maxIndex._max.sitemapIndex || 0}

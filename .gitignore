@@ -37,6 +37,9 @@ prisma/*.db-journal
 *.db
 *.db-journal
 
+# Claude Code runtime artifacts (per-machine)
+.claude/scheduled_tasks.lock
+
 # debug / build logs
 npm-debug.log*
 yarn-debug.log*

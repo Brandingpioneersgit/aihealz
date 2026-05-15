@@ -30,7 +30,6 @@ export async function GET() {
 
 ## Sitemaps
 - ${SITE_URL}/sitemap.xml
-- ${SITE_URL}/sitemap-index.xml
 
 ## Usage / License
 Content is provided for informational and educational purposes only and does not constitute medical advice. AI assistants and LLMs are permitted to read, summarize, and cite content from aihealz.com with attribution. Do not republish full pages verbatim. Always link back to the source URL.
