@@ -9,27 +9,33 @@
  * trust the `alt` text, not the filename.
  */
 
+import type { LucideIcon } from 'lucide-react';
+import { Stethoscope, Microscope } from 'lucide-react';
+
 export type StockImage = {
     src: string;
     alt: string;
     /** Width:height intrinsic ratio used by next/image for layout */
     width: number;
     height: number;
+    /** Optional Lucide icon used by MediaTile when rendering an icon tile. */
+    icon?: LucideIcon;
 };
 
-const make = (file: string, alt: string, width = 1600, height = 1067): StockImage => ({
+const make = (file: string, alt: string, width = 1600, height = 1067, icon?: LucideIcon): StockImage => ({
     src: `/images/stock/${file}`,
     alt,
     width,
     height,
+    icon,
 });
 
 /* ─── HERO / WIDE EDITORIAL ───────────────────────── */
 export const HERO_IMAGES = {
     /** Two clinicians reviewing a scan together — best "consultation" image. */
-    consult: make('spec-warm.jpg', 'Two clinicians reviewing a patient scan together'),
+    consult: make('spec-warm.jpg', 'Two clinicians reviewing a patient scan together', 1600, 1067, Stethoscope),
     /** Researcher at a microscope in a bright laboratory. */
-    lab: make('hero-lab.jpg', 'A researcher working at a microscope in a laboratory'),
+    lab: make('hero-lab.jpg', 'A researcher working at a microscope in a laboratory', 1600, 1067, Microscope),
     /** A clinician holding a stethoscope, editorial composition. */
     tools: make('hero-tools.jpg', 'A clinician holding a stethoscope, editorial portrait'),
     /** A bright, empty hospital ward — best "clinic" stand-in. */
