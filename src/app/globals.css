@@ -478,6 +478,15 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
   .v4-filter-select { flex: 1 1 100% !important; }
 }
 
+/* Conditions index hero band: a 32:9 ribbon collapses to ~96px on phones,
+   which causes the centered icon and the bottom-left "the index" mark to
+   overlap. Drop to 16:9 on mobile and hide the duplicate mark (the same
+   text appears below the band as the section-mark). */
+@media (max-width: 640px) {
+  .conditions-hero-band { --hero-band-aspect: 16 / 9; }
+  .conditions-hero-mark { display: none; }
+}
+
 /* Media gallery: compact mode shows 4 thumbs in one row, which crushes
    to ~70px each on iPhone SE. Drop to 3-up on phones so each thumb is
    ~100px and remains tappable. */
@@ -539,6 +548,7 @@ ol.clean, ul.clean { list-style: none; padding: 0; margin: 0; }
 .spec-icon {
   width: 36px;
   height: 36px;
+  flex-shrink: 0;
   border-radius: var(--r-2);
   background: var(--ink);
   color: var(--paper);

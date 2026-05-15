@@ -288,10 +288,11 @@ export default async function ConditionsDirectory() {
                 >
                     {/* ── Hero banner mark ─────────────────────── */}
                     <div
+                        className="conditions-hero-band"
                         style={{
                             position: 'relative',
                             width: '100%',
-                            aspectRatio: '32 / 9',
+                            aspectRatio: 'var(--hero-band-aspect, 32 / 9)',
                             maxHeight: 340,
                             overflow: 'hidden',
                             borderRadius: 'var(--r-3, 8px)',
@@ -301,12 +302,12 @@ export default async function ConditionsDirectory() {
                         <MediaTile
                             alt="Browse medical conditions A–Z by specialty"
                             icon={getPageLucideIcon('conditions')}
-                            aspect="32 / 9"
+                            aspect="var(--hero-band-aspect, 32 / 9)"
                             tone="cobalt"
                             iconSize={88}
                         />
                         <span
-                            className="mono"
+                            className="mono conditions-hero-mark"
                             style={{
                                 position: 'absolute',
                                 left: 'clamp(16px, 3vw, 28px)',
@@ -377,11 +378,11 @@ export default async function ConditionsDirectory() {
                     <div
                         style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-                            gap: 0,
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+                            gap: 1,
                             border: '1px solid var(--rule)',
                             borderRadius: 'var(--r-3)',
-                            background: 'var(--paper)',
+                            background: 'var(--rule)',
                             overflow: 'hidden',
                         }}
                     >
@@ -390,13 +391,13 @@ export default async function ConditionsDirectory() {
                             { v: specialtyCount.toLocaleString(), l: 'specialties' },
                             { v: '7', l: 'countries · cost mapped' },
                             { v: '15+', l: 'languages' },
-                        ].map((s, i, arr) => (
+                        ].map((s) => (
                             <div
                                 key={s.l}
                                 className="col gap-1"
                                 style={{
                                     padding: '20px 24px',
-                                    borderRight: i < arr.length - 1 ? '1px solid var(--rule)' : 'none',
+                                    background: 'var(--paper)',
                                 }}
                             >
                                 <div
@@ -455,20 +456,17 @@ export default async function ConditionsDirectory() {
                         <div
                             style={{
                                 display: 'grid',
-                                gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-                                gap: 0,
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                                gap: 1,
                                 border: '1px solid var(--rule)',
                                 borderRadius: 'var(--r-3)',
-                                background: 'var(--paper)',
+                                background: 'var(--rule)',
                                 overflow: 'hidden',
                             }}
                         >
-                            {FEATURED_SPECIALTIES.map((spec, i) => {
+                            {FEATURED_SPECIALTIES.map((spec) => {
                                 const cat = categories.find(c => c.specialty === spec.name);
                                 const count = cat?.conditions.length || 0;
-                                const cols = 4;
-                                const isLastCol = (i + 1) % cols === 0;
-                                const isLastRow = i >= FEATURED_SPECIALTIES.length - cols;
                                 const SpecIcon = getSpecialtyLucideIcon(spec.name);
                                 return (
                                     <Link
@@ -477,8 +475,7 @@ export default async function ConditionsDirectory() {
                                         className="col"
                                         style={{
                                             padding: 0,
-                                            borderRight: isLastCol ? 'none' : '1px solid var(--rule)',
-                                            borderBottom: isLastRow ? 'none' : '1px solid var(--rule)',
+                                            background: 'var(--paper)',
                                             overflow: 'hidden',
                                         }}
                                     >
