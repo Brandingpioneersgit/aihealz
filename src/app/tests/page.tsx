@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: 'Lab Tests & Diagnostic Services | Compare Prices & Book Online | AIHealz',
   description: 'Find lab tests, blood tests, imaging scans, and health checkups near you. Compare prices from certified diagnostic centers, read reviews, and book appointments online.',
   keywords: ['lab tests', 'blood tests', 'diagnostic tests', 'health checkup', 'MRI', 'CT scan', 'X-ray', 'ultrasound', 'pathology'],
+  alternates: { canonical: 'https://aihealz.com/tests' },
   openGraph: {
     title: 'Lab Tests & Diagnostic Services | AIHealz',
     description: 'Compare prices and book lab tests, imaging scans, and health checkups from certified diagnostic centers.',
