@@ -20,31 +20,46 @@
     "version": "v2-hand-written-eeat",
     "authoringNotes": "Citations cross-verified against 2021 CDC STI Treatment Guidelines (Workowski), Whitley/Roizman Lancet review, James SH Lancet 2020 antivirals review, WHO HSV global prevalence estimates 2016, and ACOG genital herpes in pregnancy bulletin."
   },
-
   "h1Title": "Herpes Simplex Infection: Symptoms, Causes, Diagnosis, and Treatment",
   "specialistType": "Infectious Disease",
-
   "heroOverview": "Herpes simplex infection is a lifelong viral condition caused by herpes simplex virus type 1 (HSV-1) or type 2 (HSV-2), which establish latency in sensory ganglia and reactivate periodically. WHO estimates 3.7 billion people under 50 carry HSV-1 (67% global seroprevalence) and 491 million adults aged 15-49 carry HSV-2. The classic presentation is recurrent painful vesicles on the lips (HSV-1 cold sores) or genitals (HSV-2 or genital HSV-1), preceded by a tingling prodrome. Most carriers shed virus asymptomatically, which drives most transmission. While no cure exists, daily antiviral suppression reduces outbreaks by 70-80% and cuts sexual transmission to partners by roughly 50%.",
-
   "keyStats": {
     "prevalence": "HSV-1: 67% of people under 50 globally; HSV-2: 13% of adults aged 15-49 (WHO 2016 estimates)",
     "demographics": "HSV-2 affects women nearly twice as often as men due to mucosal vulnerability; sub-Saharan Africa has the highest HSV-2 burden (44% in women)",
     "avgAge": "HSV-1 acquired in childhood (median age 5-10) when orally transmitted; HSV-2 acquired after sexual debut, typically ages 15-35",
     "globalCases": "3.7 billion HSV-1 infections; 491 million HSV-2 infections worldwide (WHO)"
   },
-
   "definition": "Herpes simplex infection (ICD-10: B00 for HSV non-genital; A60 for anogenital herpesviral infection) is caused by two closely related double-stranded DNA alphaherpesviruses: HSV-1 (Human alphaherpesvirus 1) and HSV-2 (Human alphaherpesvirus 2). After primary infection at mucosal or skin sites, the virus travels retrograde along sensory nerve axons to neuronal cell bodies in regional ganglia — the trigeminal ganglion for orofacial HSV-1, the sacral dorsal root ganglia for anogenital HSV-2. There, the viral genome persists as an episome in a latent state, expressing only latency-associated transcripts. Reactivation, triggered by ultraviolet light, fever, trauma, immune suppression, menstruation, or psychological stress, drives anterograde transport of new virions back to mucocutaneous sites, producing recurrent vesicular eruptions. HSV-1 traditionally caused orolabial disease and HSV-2 anogenital disease, but the picture has shifted: in many developed countries HSV-1 now causes more than half of new genital herpes cases, especially in young adults. The infection is managed primarily in primary care, dermatology, infectious disease, sexual health, and obstetric clinics for pregnancy considerations.",
-
   "typesClassification": [
-    { "type": "Orolabial herpes (HSV-1 in most cases)", "description": "Recurrent cold sores on the lip vermilion border or perioral skin. Primary infection in children may present as gingivostomatitis with extensive intraoral ulcers, fever, and lymphadenopathy." },
-    { "type": "Anogenital herpes (HSV-2 or HSV-1)", "description": "Painful vesicles and ulcers on the genitalia, perineum, buttocks, or thighs. First episodes can be severe with fever, dysuria, and inguinal lymphadenopathy lasting 2-3 weeks." },
-    { "type": "Herpetic whitlow", "description": "HSV infection of the finger, classically acquired by dental and healthcare workers from oral secretions before universal glove precautions; now seen mostly in children who suck thumbs during a primary oral infection." },
-    { "type": "Herpes gladiatorum", "description": "Cutaneous HSV-1 infection spread by skin-to-skin contact in wrestlers, rugby players, and other contact-sport athletes; lesions appear on the face, neck, and arms." },
-    { "type": "Herpes simplex keratitis", "description": "HSV-1 corneal infection producing dendritic ulcers — the leading infectious cause of corneal blindness in high-income countries. Repeated reactivation causes stromal scarring." },
-    { "type": "Neonatal herpes", "description": "Acquired peripartum from a mother with active genital shedding; classified as skin-eye-mouth (SEM), CNS disease, or disseminated disease. Mortality reaches 30% in disseminated cases despite treatment." },
-    { "type": "Herpes simplex encephalitis", "description": "HSV-1 reactivation in the temporal lobe, the most common cause of sporadic viral encephalitis in adults. Untreated mortality exceeds 70%; with acyclovir, mortality falls below 20%." }
+    {
+      "type": "Orolabial herpes (HSV-1 in most cases)",
+      "description": "Recurrent cold sores on the lip vermilion border or perioral skin. Primary infection in children may present as gingivostomatitis with extensive intraoral ulcers, fever, and lymphadenopathy."
+    },
+    {
+      "type": "Anogenital herpes (HSV-2 or HSV-1)",
+      "description": "Painful vesicles and ulcers on the genitalia, perineum, buttocks, or thighs. First episodes can be severe with fever, dysuria, and inguinal lymphadenopathy lasting 2-3 weeks."
+    },
+    {
+      "type": "Herpetic whitlow",
+      "description": "HSV infection of the finger, classically acquired by dental and healthcare workers from oral secretions before universal glove precautions; now seen mostly in children who suck thumbs during a primary oral infection."
+    },
+    {
+      "type": "Herpes gladiatorum",
+      "description": "Cutaneous HSV-1 infection spread by skin-to-skin contact in wrestlers, rugby players, and other contact-sport athletes; lesions appear on the face, neck, and arms."
+    },
+    {
+      "type": "Herpes simplex keratitis",
+      "description": "HSV-1 corneal infection producing dendritic ulcers — the leading infectious cause of corneal blindness in high-income countries. Repeated reactivation causes stromal scarring."
+    },
+    {
+      "type": "Neonatal herpes",
+      "description": "Acquired peripartum from a mother with active genital shedding; classified as skin-eye-mouth (SEM), CNS disease, or disseminated disease. Mortality reaches 30% in disseminated cases despite treatment."
+    },
+    {
+      "type": "Herpes simplex encephalitis",
+      "description": "HSV-1 reactivation in the temporal lobe, the most common cause of sporadic viral encephalitis in adults. Untreated mortality exceeds 70%; with acyclovir, mortality falls below 20%."
+    }
   ],
-
   "primarySymptoms": [
     "Tingling, itching, or burning at the site 12-48 hours before any visible lesion appears — the prodrome that signals imminent outbreak and the optimal window for antiviral treatment.",
     "Clusters of small fluid-filled vesicles on an erythematous base, most often on the lip vermilion, perioral skin, or anogenital region; vesicles typically number 3-10 and feel sharply painful.",
@@ -57,7 +72,6 @@
     "In primary herpetic gingivostomatitis (children) extensive painful intraoral ulcers, drooling, halitosis, fever to 39-40°C, and cervical lymphadenopathy can lead to dehydration from refusal to eat.",
     "Herpes simplex keratitis presents with unilateral red painful eye, photophobia, watering, and decreased vision — slit-lamp exam shows a branching dendritic ulcer staining with fluorescein."
   ],
-
   "earlyWarningSigns": [
     "Tingling, itching, or burning sensation at the typical lesion site 12-48 hours before vesicles appear",
     "Persistent painful crack at the corner of the mouth that does not heal within a week (atypical HSV presentation)",
@@ -65,7 +79,6 @@
     "Multiple painful genital ulcers within 2-12 days of a new sexual contact — primary genital herpes is high on the differential",
     "Fever, headache, and confusion in an adult with cold sores — herpes simplex encephalitis must be excluded urgently"
   ],
-
   "emergencySigns": [
     "Fever, headache, behavioral change, seizure, or focal neurological deficit — herpes simplex encephalitis requires immediate empirical IV acyclovir and lumbar puncture for HSV PCR",
     "Newborn with vesicles, fever, lethargy, poor feeding, or seizures in the first 6 weeks of life — neonatal herpes is a medical emergency with mortality reaching 30%",
@@ -74,7 +87,6 @@
     "Severe genital pain with urinary retention in primary genital herpes — may require catheterization and admission",
     "Disseminated HSV with multi-organ involvement in immunocompromised patients (transplant recipients, advanced HIV, neonates) — life-threatening and requires IV antivirals"
   ],
-
   "causes": [
     {
       "cause": "Direct mucocutaneous contact with infected secretions or lesions",
@@ -101,19 +113,53 @@
       "description": "Herpetic whitlow historically affected dentists, nurses, and respiratory therapists handling oral secretions without gloves. Universal precautions have largely eliminated occupational HSV transmission, but cases still occur with breached barriers."
     }
   ],
-
   "riskFactors": [
-    { "factor": "Multiple sexual partners or new sexual partner", "category": "modifiable", "description": "Each additional lifetime sexual partner roughly doubles HSV-2 acquisition risk. Inconsistent condom use, anal sex, and partner with known HSV-2 are independent risk drivers." },
-    { "factor": "Female sex", "category": "non-modifiable", "description": "Women have approximately twice the seroprevalence of HSV-2 as men at any age. The thinner vulvar and vaginal mucosa offer easier viral entry than penile skin." },
-    { "factor": "Lower socioeconomic status and limited healthcare access", "category": "environmental", "description": "HSV-2 seroprevalence is 2-3 times higher in low-income populations, partly due to earlier sexual debut, higher prevalence in sexual networks, and reduced access to suppressive therapy and counseling." },
-    { "factor": "HIV infection or other immunosuppression", "category": "modifiable", "description": "HIV-positive patients shed HSV more frequently, have more severe and prolonged outbreaks, and develop chronic non-healing ulcers. Transplant recipients on calcineurin inhibitors face similar risks." },
-    { "factor": "Age", "category": "non-modifiable", "description": "HSV-1 seroprevalence rises through childhood and adolescence; HSV-2 rises after sexual debut and peaks around age 40. Each year of additional exposure adds incremental risk." },
-    { "factor": "Atopic dermatitis or eczema", "category": "modifiable", "description": "Disrupted skin barrier allows widespread cutaneous HSV spread — eczema herpeticum — which can be severe. Patients with active eczema should avoid contact with anyone showing cold sores." },
-    { "factor": "Contact-sport participation", "category": "modifiable", "description": "Wrestlers, rugby players, and mixed martial artists are at risk for herpes gladiatorum from skin-to-skin contact. NCAA and similar bodies require lesion-free clearance before competition." },
-    { "factor": "Healthcare or dental occupation without barriers", "category": "modifiable", "description": "Direct contact with oral secretions causes herpetic whitlow. Universal glove use has nearly eliminated occupational HSV among modern dental and medical workers." },
-    { "factor": "Sub-Saharan African residence", "category": "environmental", "description": "WHO estimates HSV-2 prevalence reaches 44% in adult women in sub-Saharan Africa, compared to 12% in the Americas, driven by sexual network density and limited testing." }
+    {
+      "factor": "Multiple sexual partners or new sexual partner",
+      "category": "modifiable",
+      "description": "Each additional lifetime sexual partner roughly doubles HSV-2 acquisition risk. Inconsistent condom use, anal sex, and partner with known HSV-2 are independent risk drivers."
+    },
+    {
+      "factor": "Female sex",
+      "category": "non-modifiable",
+      "description": "Women have approximately twice the seroprevalence of HSV-2 as men at any age. The thinner vulvar and vaginal mucosa offer easier viral entry than penile skin."
+    },
+    {
+      "factor": "Lower socioeconomic status and limited healthcare access",
+      "category": "environmental",
+      "description": "HSV-2 seroprevalence is 2-3 times higher in low-income populations, partly due to earlier sexual debut, higher prevalence in sexual networks, and reduced access to suppressive therapy and counseling."
+    },
+    {
+      "factor": "HIV infection or other immunosuppression",
+      "category": "modifiable",
+      "description": "HIV-positive patients shed HSV more frequently, have more severe and prolonged outbreaks, and develop chronic non-healing ulcers. Transplant recipients on calcineurin inhibitors face similar risks."
+    },
+    {
+      "factor": "Age",
+      "category": "non-modifiable",
+      "description": "HSV-1 seroprevalence rises through childhood and adolescence; HSV-2 rises after sexual debut and peaks around age 40. Each year of additional exposure adds incremental risk."
+    },
+    {
+      "factor": "Atopic dermatitis or eczema",
+      "category": "modifiable",
+      "description": "Disrupted skin barrier allows widespread cutaneous HSV spread — eczema herpeticum — which can be severe. Patients with active eczema should avoid contact with anyone showing cold sores."
+    },
+    {
+      "factor": "Contact-sport participation",
+      "category": "modifiable",
+      "description": "Wrestlers, rugby players, and mixed martial artists are at risk for herpes gladiatorum from skin-to-skin contact. NCAA and similar bodies require lesion-free clearance before competition."
+    },
+    {
+      "factor": "Healthcare or dental occupation without barriers",
+      "category": "modifiable",
+      "description": "Direct contact with oral secretions causes herpetic whitlow. Universal glove use has nearly eliminated occupational HSV among modern dental and medical workers."
+    },
+    {
+      "factor": "Sub-Saharan African residence",
+      "category": "environmental",
+      "description": "WHO estimates HSV-2 prevalence reaches 44% in adult women in sub-Saharan Africa, compared to 12% in the Americas, driven by sexual network density and limited testing."
+    }
   ],
-
   "affectedDemographics": [
     "Global HSV-1: 3.7 billion people under 50 (67% of population) per WHO 2016 estimates",
     "Global HSV-2: 491 million adults aged 15-49 (13%), with highest rates in sub-Saharan Africa (women 44%, men 25%)",
@@ -121,9 +167,7 @@
     "Among new genital herpes cases in young adults in high-income countries, HSV-1 now causes 50-80% — a shift attributed to declining childhood oral HSV-1 acquisition",
     "Neonatal herpes incidence ranges from 1 in 3,000 to 1 in 20,000 live births depending on country and maternal screening practices"
   ],
-
   "diagnosisOverview": "Diagnosis of herpes simplex infection rests on the clinical appearance of typical grouped vesicles or ulcers in a recognizable distribution, supported by laboratory confirmation in any unclear, severe, or potentially transmissible case. The CDC 2021 STI Treatment Guidelines (Workowski et al.) recommend that all suspected genital herpes be virologically confirmed — empirical diagnosis is unreliable because syphilis, chancroid, and aphthous ulcers can mimic HSV. The diagnostic test of choice is nucleic acid amplification testing (NAAT, usually PCR) of a swab taken from an unroofed vesicle or moist ulcer. PCR detects 11-71% more cases than viral culture, distinguishes HSV-1 from HSV-2, and remains positive longer in the lesion. Viral culture is an acceptable alternative where PCR is unavailable but has limited sensitivity (35-50% in recurrent lesions). Type-specific serology (glycoprotein G-based HSV-1 and HSV-2 IgG antibodies) is used to confirm past infection in asymptomatic patients, to counsel a partner of a known carrier, or to clarify whether a primary outbreak is truly primary (seronegative) versus a recurrent first-recognized episode (seropositive). Serology takes 12 weeks after exposure to become reliably positive. Tzanck smears showing multinucleated giant cells are nonspecific and inferior to PCR. In suspected HSV encephalitis, CSF PCR for HSV DNA has 96% sensitivity and 99% specificity and should be sent immediately along with MRI, which classically shows temporal lobe hyperintensity. In neonatal herpes, surface swabs, CSF PCR, blood PCR, and LFTs are obtained simultaneously, and IV acyclovir is begun empirically before results return. Differential diagnosis includes syphilis, chancroid, lymphogranuloma venereum, candidiasis, aphthous ulcers, Behçet disease, and fixed drug eruption.",
-
   "diagnosticTests": [
     {
       "test": "HSV PCR from lesion swab",
@@ -161,9 +205,7 @@
       "whatToExpect": "Standard blood test or rapid finger-stick antibody/antigen assay. Most results return within an hour for rapid tests, 1-2 days for laboratory assays."
     }
   ],
-
   "treatmentOverview": "Herpes simplex infection is incurable but highly manageable with oral nucleoside analogue antivirals: acyclovir, valacyclovir (the prodrug of acyclovir with better bioavailability), and famciclovir. The CDC 2021 STI Treatment Guidelines and the BASHH 2023 guidelines lay out three treatment modes. The first is treatment of primary episodes: a 7-10 day oral course started as early as possible to shorten symptoms, reduce viral shedding, and prevent complications such as urinary retention or aseptic meningitis. The second is episodic recurrent treatment, in which patients are given a short, high-dose course (1-3 days) at home to start at the first prodromal symptom; this approach shortens outbreaks by approximately 1-2 days when initiated within 24 hours. The third is daily suppressive therapy for patients with six or more outbreaks per year, severe outbreaks, immunosuppression, or to reduce transmission to a partner — typically valacyclovir 500 mg or 1 g daily, acyclovir 400 mg twice daily, or famciclovir 250 mg twice daily. Suppression reduces outbreak frequency by 70-80% and cuts the risk of HSV-2 transmission to a susceptible partner by approximately 50% (Corey 2004 landmark trial). For severe disease — neonatal herpes, encephalitis, eczema herpeticum, disseminated disease, or HSV in immunocompromised hosts — intravenous acyclovir at 10 mg/kg every 8 hours (20 mg/kg in neonates) is the standard. Treatment of herpes simplex keratitis uses topical ganciclovir gel or trifluridine drops plus oral antivirals, managed by ophthalmology. Acyclovir resistance is uncommon in immunocompetent patients but occurs in 5-25% of HIV-positive or transplant recipients with chronic ulcers; foscarnet and cidofovir are reserved for resistant cases. Adjunctive measures include adequate analgesia (paracetamol, NSAIDs), keeping lesions clean and dry, topical lidocaine for severe orolabial or genital pain, and condom use to reduce transmission. Antibody-based vaccines and therapeutic vaccines remain investigational; an effective preventive HSV vaccine has not yet been licensed.",
-
   "medicalTreatments": [
     {
       "name": "Acyclovir (oral 400 mg three times daily for 7-10 days; IV 10 mg/kg every 8 hours for severe disease; topical 5% cream for orolabial)",
@@ -196,18 +238,19 @@
       "effectiveness": "Clinical response in 60-80% of acyclovir-resistant HSV cases in immunocompromised patients."
     }
   ],
-
   "surgicalOptions": [],
-
   "alternativeTreatments": [
-    { "name": "Sunscreen on the lips (SPF 30+ lip balm)", "description": "Reduces UV-triggered recurrent orolabial outbreaks. Randomized data show approximately 65% reduction in experimentally UV-induced cold sore recurrence when daily SPF lip protection is used." },
-    { "name": "L-lysine supplementation (1-3 g daily)", "description": "Limited evidence — some small trials report reduced recurrence frequency, but meta-analyses are inconclusive. Cheap and safe enough to try as an adjunct, but not a replacement for prescription antivirals in frequent recurrers." }
+    {
+      "name": "Sunscreen on the lips (SPF 30+ lip balm)",
+      "description": "Reduces UV-triggered recurrent orolabial outbreaks. Randomized data show approximately 65% reduction in experimentally UV-induced cold sore recurrence when daily SPF lip protection is used."
+    },
+    {
+      "name": "L-lysine supplementation (1-3 g daily)",
+      "description": "Limited evidence — some small trials report reduced recurrence frequency, but meta-analyses are inconclusive. Cheap and safe enough to try as an adjunct, but not a replacement for prescription antivirals in frequent recurrers."
+    }
   ],
-
   "whySeeSpecialist": "See an infectious disease physician, sexual health specialist, or dermatologist when outbreaks are frequent (>6 per year) despite suppression, when ulcers are chronic or atypical, when immunosuppression complicates management, when acyclovir-resistant HSV is suspected, or when pregnancy requires careful peripartum risk assessment. Most uncomplicated HSV is managed in primary care or by sexual health clinics. Ophthalmology referral is mandatory for any suspected herpes simplex keratitis; suspected HSV encephalitis is a neurological emergency that warrants immediate hospital admission.",
-
   "doctorSelectionGuide": "For genital herpes, sexual health clinics are typically free or low-cost and have rapid PCR testing. For frequent or atypical recurrences, look for an infectious disease physician or dermatologist comfortable with type-specific serology, suppression decisions, and discordant-couple counseling. In pregnancy, the obstetric team plus a maternal-fetal medicine consultant should coordinate management. Ask about access to acyclovir-resistance testing if you are immunocompromised with chronic ulcers.",
-
   "preventionStrategies": [
     "Use latex condoms consistently to reduce HSV-2 transmission by approximately 30% — partial protection because perineal and pubic skin is not covered",
     "Avoid sexual contact during prodromal symptoms and visible outbreaks, when shedding and infectivity peak",
@@ -216,7 +259,6 @@
     "Avoid sharing utensils, lip products, towels, and razors during active orolabial outbreaks",
     "Disclose HSV status before sex with a new partner so they can make informed decisions and consider pre-exposure suppression"
   ],
-
   "lifestyleModifications": [
     "Identify and avoid personal outbreak triggers — keep a brief diary noting sun exposure, illness, menstruation, stress, and outbreak dates",
     "Manage stress through regular exercise, adequate sleep (7-9 hours), and evidence-based techniques such as mindfulness or CBT",
@@ -225,7 +267,6 @@
     "Inform dentists of HSV history before procedures — dental trauma can trigger reactivation, and prophylactic valacyclovir can be considered for major work",
     "If immunocompromised or transplant recipient, discuss long-term suppressive therapy with your specialist"
   ],
-
   "dietRecommendations": {
     "recommended": [
       "Balanced diet rich in vegetables, lean protein, and whole grains — supports general immune function",
@@ -240,9 +281,7 @@
       "Heavily processed, high-arginine snacks (only if dietary lysine therapy is being trialed; evidence is weak)"
     ]
   },
-
   "exerciseGuidelines": "Regular moderate exercise is encouraged and does not trigger outbreaks. During active genital herpes, avoid activities that cause sweat and friction in the affected area (cycling, tight athletic wear) until lesions are crusted. Athletes with herpes gladiatorum must be lesion-free and on suppressive therapy before returning to contact sports — most governing bodies require 5-7 days of suppression and complete crusting.",
-
   "dailyManagement": [
     "If on suppressive therapy, take antivirals at the same time each day — adherence determines outbreak reduction",
     "Keep a small emergency supply of valacyclovir or famciclovir at home for episodic treatment at first prodrome",
@@ -250,11 +289,8 @@
     "Avoid touching eyes during oral or genital outbreaks to prevent ocular HSV",
     "Note prodromal symptoms early and start antiviral within the 24-hour window for maximum benefit"
   ],
-
   "prognosis": "Herpes simplex infection is a lifelong condition with an excellent long-term prognosis in immunocompetent patients. Recurrence frequency naturally declines with time — outbreak frequency falls by roughly 50% over a decade in HSV-2 carriers, and many patients become outbreak-free by middle age. Daily suppressive therapy reduces clinical outbreaks by 70-80%, reduces asymptomatic shedding by approximately 80%, and cuts transmission to a susceptible partner by about 50%. Genital HSV-1 recurs less often than HSV-2 (median 1 recurrence per year vs 4). Serious complications — encephalitis, neonatal disease, ocular disease, eczema herpeticum, disseminated disease — are uncommon but carry meaningful mortality if untreated; with prompt antiviral therapy, encephalitis mortality drops from over 70% to under 20%, and neonatal disseminated HSV mortality drops from 85% to about 30%. The principal long-term burden is psychological — stigma, anxiety, and relationship impact often outweigh the medical impact. Patients given accurate information, type-specific serology, and the option of suppression typically resume normal sexual and reproductive lives.",
-
   "recoveryTimeline": "Primary genital herpes lesions heal over 2-3 weeks; primary orolabial gingivostomatitis in children lasts 7-14 days. Recurrent outbreaks last 5-10 days untreated and 3-7 days with early antiviral treatment. Suppressive therapy benefits accumulate over 3-6 months as outbreak frequency falls. HSV encephalitis treatment continues for 14-21 days IV; neurological recovery can take months and may be incomplete. Neonatal HSV requires 14-21 days IV acyclovir plus 6 months of oral suppression to reduce neurological sequelae (Kimberlin 2011).",
-
   "complications": [
     "Herpes simplex encephalitis — the most common cause of sporadic fatal viral encephalitis; mortality 70%+ untreated, 15-20% with acyclovir; survivors often have memory and behavioral deficits",
     "Neonatal herpes (skin-eye-mouth, CNS, or disseminated) — disseminated form has 29% mortality despite high-dose IV acyclovir; up to half of CNS survivors have neurological impairment",
@@ -265,36 +301,87 @@
     "Acyclovir-resistant HSV in immunocompromised patients — chronic non-healing ulcers requiring foscarnet or cidofovir",
     "Psychosocial impact — anxiety, depression, and relationship strain documented in multiple cohort studies; targeted counseling improves outcomes"
   ],
-
   "supportResources": [
-    { "name": "CDC — Genital Herpes Fact Sheet", "url": "https://www.cdc.gov/std/herpes/stdfact-herpes.htm", "description": "Authoritative US patient education with up-to-date statistics, transmission, and treatment information." },
-    { "name": "American Sexual Health Association — Herpes Resource Center", "url": "https://www.ashasexualhealth.org/herpes/", "description": "Patient community, helpline, and counseling resources for newly diagnosed patients." },
-    { "name": "BASHH UK — Patient Information on Genital Herpes", "url": "https://www.bashh.org/resources/97/management_of_genital_herpes", "description": "UK clinical guideline and patient guidance from the British Association for Sexual Health and HIV." }
+    {
+      "name": "CDC — Genital Herpes Fact Sheet",
+      "url": "https://www.cdc.gov/std/herpes/stdfact-herpes.htm",
+      "description": "Authoritative US patient education with up-to-date statistics, transmission, and treatment information."
+    },
+    {
+      "name": "American Sexual Health Association — Herpes Resource Center",
+      "url": "https://www.ashasexualhealth.org/herpes/",
+      "description": "Patient community, helpline, and counseling resources for newly diagnosed patients."
+    },
+    {
+      "name": "BASHH UK — Patient Information on Genital Herpes",
+      "url": "https://www.bashh.org/resources/97/management_of_genital_herpes",
+      "description": "UK clinical guideline and patient guidance from the British Association for Sexual Health and HIV."
+    }
   ],
-
   "confusedWithConditions": [
-    { "slug": "syphilis", "name": "Syphilis (Primary Chancre)", "keyDifference": "A primary syphilis chancre is a single painless indurated ulcer, often missed because it is not painful; HSV produces clusters of painful vesicles or shallow ulcers. Dark-field microscopy or RPR/treponemal serology confirms syphilis. The two can coexist, so both should be tested." },
-    { "slug": "gonorrhea", "name": "Gonorrhea", "keyDifference": "Gonorrhea presents with urethral or cervical discharge, dysuria, and pelvic pain — not vesicular skin lesions. NAAT of urine or genital swab confirms gonorrhea. HSV and gonorrhea co-testing is standard in sexual health clinics." },
-    { "slug": "chlamydia-infection", "name": "Chlamydia", "keyDifference": "Chlamydia is usually asymptomatic or produces mild discharge and dysuria; it does not cause genital ulcers. NAAT distinguishes the two; both should be tested whenever genital HSV is diagnosed." },
-    { "slug": "anogenital-herpesviral-infection-unspecified-a609", "name": "Anogenital Herpesviral Infection (ICD A60.9)", "keyDifference": "This is the same disease (genital HSV) under a different ICD-10 code. Diagnosis and management are identical — patients reaching either page get the same evidence." }
+    {
+      "slug": "syphilis",
+      "name": "Syphilis (Primary Chancre)",
+      "keyDifference": "A primary syphilis chancre is a single painless indurated ulcer, often missed because it is not painful; HSV produces clusters of painful vesicles or shallow ulcers. Dark-field microscopy or RPR/treponemal serology confirms syphilis. The two can coexist, so both should be tested."
+    },
+    {
+      "slug": "gonorrhea",
+      "name": "Gonorrhea",
+      "keyDifference": "Gonorrhea presents with urethral or cervical discharge, dysuria, and pelvic pain — not vesicular skin lesions. NAAT of urine or genital swab confirms gonorrhea. HSV and gonorrhea co-testing is standard in sexual health clinics."
+    },
+    {
+      "slug": "chlamydia-infection",
+      "name": "Chlamydia",
+      "keyDifference": "Chlamydia is usually asymptomatic or produces mild discharge and dysuria; it does not cause genital ulcers. NAAT distinguishes the two; both should be tested whenever genital HSV is diagnosed."
+    },
+    {
+      "slug": "anogenital-herpesviral-infection-unspecified-a609",
+      "name": "Anogenital Herpesviral Infection (ICD A60.9)",
+      "keyDifference": "This is the same disease (genital HSV) under a different ICD-10 code. Diagnosis and management are identical — patients reaching either page get the same evidence."
+    }
   ],
-
   "coOccurringConditions": [
-    { "slug": "hiv-aids", "name": "HIV/AIDS" },
-    { "slug": "syphilis", "name": "Syphilis" },
-    { "slug": "gonorrhea", "name": "Gonorrhea" }
+    {
+      "slug": "hiv-aids",
+      "name": "HIV/AIDS"
+    },
+    {
+      "slug": "syphilis",
+      "name": "Syphilis"
+    },
+    {
+      "slug": "gonorrhea",
+      "name": "Gonorrhea"
+    }
   ],
-
   "relatedConditions": [
-    { "slug": "hiv-aids", "name": "HIV/AIDS", "relevance": "Genital HSV-2 ulcers double per-act HIV acquisition risk; co-testing is standard at any genital HSV diagnosis." },
-    { "slug": "syphilis", "name": "Syphilis", "relevance": "Primary chancre is the leading mimic of genital HSV; both can coexist and both should be tested." },
-    { "slug": "gonorrhea", "name": "Gonorrhea", "relevance": "Common co-infection in sexual networks; routine NAAT panel includes both." },
-    { "slug": "chlamydia-infection", "name": "Chlamydia", "relevance": "Most common bacterial STI co-tested when HSV is diagnosed." },
-    { "slug": "anogenital-herpesviral-infection-unspecified-a609", "name": "Anogenital Herpesviral Infection", "relevance": "ICD-10 sibling code for genital HSV — same disease, same management." }
+    {
+      "slug": "hiv-aids",
+      "name": "HIV/AIDS",
+      "relevance": "Genital HSV-2 ulcers double per-act HIV acquisition risk; co-testing is standard at any genital HSV diagnosis."
+    },
+    {
+      "slug": "syphilis",
+      "name": "Syphilis",
+      "relevance": "Primary chancre is the leading mimic of genital HSV; both can coexist and both should be tested."
+    },
+    {
+      "slug": "gonorrhea",
+      "name": "Gonorrhea",
+      "relevance": "Common co-infection in sexual networks; routine NAAT panel includes both."
+    },
+    {
+      "slug": "chlamydia-infection",
+      "name": "Chlamydia",
+      "relevance": "Most common bacterial STI co-tested when HSV is diagnosed."
+    },
+    {
+      "slug": "anogenital-herpesviral-infection-unspecified-a609",
+      "name": "Anogenital Herpesviral Infection",
+      "relevance": "ICD-10 sibling code for genital HSV — same disease, same management."
+    }
   ],
-
   "linkedTreatmentSlugs": [],
-
   "faqs": [
     {
       "question": "Is herpes curable?",
@@ -397,37 +484,72 @@
       "schemaEligible": true
     }
   ],
-
   "simpleName": "Herpes Simplex (Cold Sores & Genital Herpes)",
-
   "regionalNames": [
-    { "name": "हर्पीज सिम्प्लेक्स", "region": "India (Hindi-speaking regions)", "language": "hi" },
-    { "name": "Herpes labial / genital", "region": "Latin America", "language": "es" },
-    { "name": "Herpès simplex", "region": "France", "language": "fr" }
+    {
+      "name": "हर्पीज सिम्प्लेक्स",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Herpes labial / genital",
+      "region": "Latin America",
+      "language": "es"
+    },
+    {
+      "name": "Herpès simplex",
+      "region": "France",
+      "language": "fr"
+    }
   ],
-
   "searchTags": [
-    "herpes", "herpes simplex", "HSV", "HSV-1", "HSV-2", "cold sore", "fever blister",
-    "genital herpes", "acyclovir", "valacyclovir", "famciclovir", "herpes whitlow",
-    "herpes gladiatorum", "herpetic keratitis", "neonatal herpes", "herpes encephalitis"
+    "herpes",
+    "herpes simplex",
+    "HSV",
+    "HSV-1",
+    "HSV-2",
+    "cold sore",
+    "fever blister",
+    "genital herpes",
+    "acyclovir",
+    "valacyclovir",
+    "famciclovir",
+    "herpes whitlow",
+    "herpes gladiatorum",
+    "herpetic keratitis",
+    "neonatal herpes",
+    "herpes encephalitis"
   ],
-
   "symptomKeywords": [
-    "cold sore", "fever blister", "genital ulcer", "painful blister lip", "tingling lip",
-    "burning sensation genitals", "vesicles cluster", "painful sex ulcer", "recurrent mouth sore"
+    "cold sore",
+    "fever blister",
+    "genital ulcer",
+    "painful blister lip",
+    "tingling lip",
+    "burning sensation genitals",
+    "vesicles cluster",
+    "painful sex ulcer",
+    "recurrent mouth sore"
   ],
-
   "metaTitle": "Herpes Simplex: Symptoms, Causes & Treatment | aihealz",
   "metaDescription": "Herpes simplex (HSV-1/HSV-2): cold sores, genital herpes, transmission, antivirals, prognosis. Evidence-based guidance reviewed by our medical board.",
-
   "keywords": [
-    "herpes simplex", "HSV", "cold sores", "genital herpes", "HSV-1", "HSV-2",
-    "acyclovir", "valacyclovir", "famciclovir", "herpes outbreak", "is herpes curable",
-    "herpes transmission", "herpes during pregnancy", "herpes vs syphilis"
+    "herpes simplex",
+    "HSV",
+    "cold sores",
+    "genital herpes",
+    "HSV-1",
+    "HSV-2",
+    "acyclovir",
+    "valacyclovir",
+    "famciclovir",
+    "herpes outbreak",
+    "is herpes curable",
+    "herpes transmission",
+    "herpes during pregnancy",
+    "herpes vs syphilis"
   ],
-
   "lastReviewed": "2026-05-13",
-
   "sources": [
     {
       "title": "Workowski KA, Bachmann LH, Chan PA, et al. Sexually Transmitted Infections Treatment Guidelines, 2021. MMWR Recommendations and Reports. 2021;70(4):1-187.",
@@ -469,5 +591,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/32514197/",
       "accessedDate": "2026-05-13"
     }
-  ]
+  ],
+  "images": []
 }

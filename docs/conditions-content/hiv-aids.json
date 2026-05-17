@@ -22,29 +22,38 @@
     "version": "v2-hand-written-eeat",
     "authoringNotes": "Citations cross-verified against DHHS Adult ART Guidelines 2024 (clinicalinfo.hiv.gov), IAS-USA 2022 (Saag et al JAMA), START trial NEJM 2015, PARTNER2 (Rodger Lancet 2019), HPTN 083 (Landovitz NEJM 2021), and UNAIDS Global AIDS Update 2024. Drug names and dosing checked against current DHHS and IAS-USA guidance. No fabricated PMIDs."
   },
-
   "h1Title": "HIV/AIDS: Symptoms, Causes, Diagnosis, and Treatment",
   "specialistType": "Infectious Disease",
-
   "heroOverview": "HIV is a retrovirus that targets CD4+ T-lymphocytes, the immune cells that coordinate defense against infection. Untreated, HIV destroys CD4 cells over years and progresses to AIDS when the count falls below 200 cells/µL or an AIDS-defining illness develops. UNAIDS reports 39.9 million people living with HIV worldwide in 2023, with 1.3 million new infections and 630,000 AIDS-related deaths that year. Acute infection often produces a flu-like illness 2-4 weeks after exposure, then a long asymptomatic phase before opportunistic infections appear. Modern antiretroviral therapy started at diagnosis suppresses the virus to undetectable levels within 8-24 weeks, restores immune function, and produces near-normal life expectancy. People with sustained undetectable viral load do not sexually transmit HIV — the U=U principle confirmed by the PARTNER2 study.",
-
   "keyStats": {
     "prevalence": "39.9 million people living with HIV globally in 2023 (UNAIDS); ~1.2 million in the United States (CDC 2022 estimate)",
     "demographics": "Sub-Saharan Africa carries 65% of the global burden; in the US, men who have sex with men and Black and Hispanic communities are disproportionately affected",
     "avgAge": "Most new diagnoses occur between ages 25-44; pediatric HIV is now uncommon in countries with universal PMTCT programs",
     "globalCases": "39.9 million PLWH worldwide 2023; 1.3 million new infections and 630,000 AIDS-related deaths in 2023 (UNAIDS Global AIDS Update 2024)"
   },
-
   "definition": "HIV/AIDS (ICD-10: B20 for symptomatic HIV disease, Z21 for asymptomatic HIV infection status) is a chronic, progressive infection caused by the human immunodeficiency virus, a single-stranded RNA retrovirus of the genus Lentivirus. Two species infect humans: HIV-1 accounts for nearly all global infections, while HIV-2 is largely confined to West Africa and progresses more slowly. The virus binds CD4 receptors and CCR5 or CXCR4 co-receptors on T-helper lymphocytes, monocytes, and dendritic cells; reverse transcriptase converts viral RNA to DNA, which integrates into the host genome as a permanent reservoir. Without antiretroviral therapy, ongoing viral replication depletes CD4+ T cells at roughly 50-100 cells/µL per year, producing the clinical syndrome of acquired immunodeficiency syndrome (AIDS) once the count drops below 200 cells/µL or an AIDS-defining opportunistic infection or malignancy occurs. The CDC classification stages disease 1 through 3 by CD4 count and clinical events. HIV is managed by infectious disease specialists or HIV-experienced primary care clinicians; complex cases involve hepatology, oncology, obstetrics, and mental health. Modern care has shifted the disease from a uniformly fatal illness in the 1980s to a manageable chronic condition with near-normal life expectancy.",
-
   "typesClassification": [
-    { "type": "Acute HIV infection (Fiebig stages I-VI)", "description": "First 2-4 weeks after exposure. HIV RNA rises to millions of copies/mL before antibodies develop. Acute retroviral syndrome — fever, rash, pharyngitis, lymphadenopathy — occurs in 40-90% of patients but is often mistaken for influenza or mononucleosis." },
-    { "type": "Chronic HIV infection (clinical latency)", "description": "Lasts a median of 8-10 years untreated. Viral replication continues, CD4 count declines, but patients feel well. Without treatment, most progress to symptomatic disease within a decade; rapid progressors do so in 1-2 years, elite controllers maintain viral control without therapy." },
-    { "type": "Symptomatic HIV (CDC Stage 2)", "description": "CD4 between 200 and 499 cells/µL or non-AIDS-defining symptoms such as oral thrush, recurrent shingles, persistent generalized lymphadenopathy, weight loss, or chronic diarrhea. Marks accelerating immune decline." },
-    { "type": "AIDS (CDC Stage 3)", "description": "CD4 below 200 cells/µL OR an AIDS-defining illness regardless of CD4. Defining illnesses include Pneumocystis pneumonia, esophageal candidiasis, cerebral toxoplasmosis, cryptococcal meningitis, disseminated MAC, CMV retinitis, Kaposi sarcoma, and certain lymphomas." },
-    { "type": "HIV-2 infection", "description": "Endemic in West Africa, with smaller foci in India and Portugal. Lower transmissibility, slower progression, and intrinsic resistance to NNRTIs and enfuvirtide. Requires HIV-2-specific viral load assays and tailored regimens." }
+    {
+      "type": "Acute HIV infection (Fiebig stages I-VI)",
+      "description": "First 2-4 weeks after exposure. HIV RNA rises to millions of copies/mL before antibodies develop. Acute retroviral syndrome — fever, rash, pharyngitis, lymphadenopathy — occurs in 40-90% of patients but is often mistaken for influenza or mononucleosis."
+    },
+    {
+      "type": "Chronic HIV infection (clinical latency)",
+      "description": "Lasts a median of 8-10 years untreated. Viral replication continues, CD4 count declines, but patients feel well. Without treatment, most progress to symptomatic disease within a decade; rapid progressors do so in 1-2 years, elite controllers maintain viral control without therapy."
+    },
+    {
+      "type": "Symptomatic HIV (CDC Stage 2)",
+      "description": "CD4 between 200 and 499 cells/µL or non-AIDS-defining symptoms such as oral thrush, recurrent shingles, persistent generalized lymphadenopathy, weight loss, or chronic diarrhea. Marks accelerating immune decline."
+    },
+    {
+      "type": "AIDS (CDC Stage 3)",
+      "description": "CD4 below 200 cells/µL OR an AIDS-defining illness regardless of CD4. Defining illnesses include Pneumocystis pneumonia, esophageal candidiasis, cerebral toxoplasmosis, cryptococcal meningitis, disseminated MAC, CMV retinitis, Kaposi sarcoma, and certain lymphomas."
+    },
+    {
+      "type": "HIV-2 infection",
+      "description": "Endemic in West Africa, with smaller foci in India and Portugal. Lower transmissibility, slower progression, and intrinsic resistance to NNRTIs and enfuvirtide. Requires HIV-2-specific viral load assays and tailored regimens."
+    }
   ],
-
   "primarySymptoms": [
     "Acute retroviral syndrome 2-4 weeks after exposure: fever, fatigue, sore throat, swollen cervical and axillary lymph nodes, and a maculopapular trunk rash lasting 1-3 weeks in 40-90% of newly infected adults.",
     "Persistent generalized lymphadenopathy — painless rubbery nodes larger than 1 cm at two or more non-contiguous sites lasting more than 3 months, often the first physical sign during clinical latency.",
@@ -57,7 +66,6 @@
     "Peripheral neuropathy producing burning, tingling, or numbness in the feet, either from HIV itself or from older NRTIs such as stavudine.",
     "Persistent fevers above 38.0°C lasting more than a month without an obvious cause, frequently the presenting feature of disseminated Mycobacterium avium complex or tuberculosis."
   ],
-
   "earlyWarningSigns": [
     "Flu-like illness with rash, sore throat, and lymphadenopathy 2-4 weeks after a possible exposure (acute retroviral syndrome)",
     "New oral thrush in a non-immunosuppressed adult who is not on inhaled steroids or recent antibiotics",
@@ -65,7 +73,6 @@
     "Persistent painless lymph nodes larger than 1 cm at multiple sites lasting more than 3 months",
     "Unexplained low-grade fevers, night sweats, or weight loss without a clear infectious source"
   ],
-
   "emergencySigns": [
     "Severe headache with neck stiffness, fever, photophobia, or new neurological deficits — possible cryptococcal meningitis or cerebral toxoplasmosis requiring immediate imaging and lumbar puncture",
     "Progressive shortness of breath with dry cough and low oxygen saturation — possible Pneumocystis pneumonia; emergency assessment and empiric TMP-SMX may be needed",
@@ -73,7 +80,6 @@
     "Severe abdominal pain with fever, jaundice, or persistent vomiting — workup for opportunistic infection, drug toxicity, or pancreatitis",
     "Acute rash within 6 weeks of starting nevirapine, abacavir, dolutegravir, or efavirenz — possible Stevens-Johnson syndrome, DRESS, or hypersensitivity reaction; stop drug and seek emergency care"
   ],
-
   "causes": [
     {
       "cause": "Sexual transmission (vaginal and anal intercourse)",
@@ -100,20 +106,58 @@
       "description": "Breast milk contains free virus and infected cells. Without ART, mixed feeding accounts for 5-20% of cumulative vertical transmission. In settings where formula feeding is not safe, maternal ART with exclusive breastfeeding reduces transmission to under 2%."
     }
   ],
-
   "riskFactors": [
-    { "factor": "Condomless anal or vaginal sex with a partner of unknown or detectable HIV status", "category": "modifiable", "description": "Single greatest behavioural risk for new infection. Consistent condom use reduces transmission risk by about 80%; pre-exposure prophylaxis (PrEP) reduces it by more than 99% with daily adherence (HPTN 083)." },
-    { "factor": "Sharing needles, syringes, or other injection equipment", "category": "modifiable", "description": "Per-injection transmission risk roughly 0.6%. Needle and syringe programs, opioid agonist therapy, and PrEP all measurably lower risk in people who inject drugs." },
-    { "factor": "Sex with multiple partners or in high-prevalence networks", "category": "modifiable", "description": "Network prevalence drives individual risk more than absolute partner count. Men who have sex with men, transgender women, sex workers, and partners of people who inject drugs face the highest exposure rates in most regions." },
-    { "factor": "Concurrent sexually transmitted infection (syphilis, gonorrhea, chlamydia, HSV-2)", "category": "modifiable", "description": "Ulcerative and inflammatory STIs increase HIV acquisition risk 2-5 fold by disrupting mucosal barriers and recruiting susceptible CD4 cells. Routine STI screening is part of HIV prevention." },
-    { "factor": "Living in or originating from a high-prevalence region", "category": "environmental", "description": "Sub-Saharan Africa carries 65% of the global burden, with adult prevalence over 20% in parts of Eswatini and Lesotho. Geography shapes lifetime exposure risk." },
-    { "factor": "Maternal HIV infection without ART during pregnancy", "category": "non-modifiable", "description": "Vertical transmission risk without intervention is 15-45%. The single most important predictor of an infant's risk is the mother's viral load near delivery." },
-    { "factor": "Uncircumcised status (cisgender men)", "category": "modifiable", "description": "Voluntary medical male circumcision reduces female-to-male sexual transmission by approximately 60% (three randomised African trials). It is a WHO-endorsed prevention intervention in high-prevalence settings." },
-    { "factor": "Healthcare or laboratory work with sharps exposure", "category": "modifiable", "description": "Occupational exposure risk depends on source viral load and injury type. Universal precautions, safety-engineered devices, and rapid access to post-exposure prophylaxis reduce occupational seroconversions to fewer than 1 per million worker-years." },
-    { "factor": "Receipt of unscreened blood or blood products", "category": "environmental", "description": "Now rare in countries with nucleic-acid testing of donations; remains a risk where screening is incomplete or in undocumented transfusions." },
-    { "factor": "Intimate partner violence and gender inequity", "category": "environmental", "description": "Limits ability to negotiate condom use, refuse sex, or access prevention services. Independent risk factor across multiple cohort studies in southern Africa and Latin America." }
+    {
+      "factor": "Condomless anal or vaginal sex with a partner of unknown or detectable HIV status",
+      "category": "modifiable",
+      "description": "Single greatest behavioural risk for new infection. Consistent condom use reduces transmission risk by about 80%; pre-exposure prophylaxis (PrEP) reduces it by more than 99% with daily adherence (HPTN 083)."
+    },
+    {
+      "factor": "Sharing needles, syringes, or other injection equipment",
+      "category": "modifiable",
+      "description": "Per-injection transmission risk roughly 0.6%. Needle and syringe programs, opioid agonist therapy, and PrEP all measurably lower risk in people who inject drugs."
+    },
+    {
+      "factor": "Sex with multiple partners or in high-prevalence networks",
+      "category": "modifiable",
+      "description": "Network prevalence drives individual risk more than absolute partner count. Men who have sex with men, transgender women, sex workers, and partners of people who inject drugs face the highest exposure rates in most regions."
+    },
+    {
+      "factor": "Concurrent sexually transmitted infection (syphilis, gonorrhea, chlamydia, HSV-2)",
+      "category": "modifiable",
+      "description": "Ulcerative and inflammatory STIs increase HIV acquisition risk 2-5 fold by disrupting mucosal barriers and recruiting susceptible CD4 cells. Routine STI screening is part of HIV prevention."
+    },
+    {
+      "factor": "Living in or originating from a high-prevalence region",
+      "category": "environmental",
+      "description": "Sub-Saharan Africa carries 65% of the global burden, with adult prevalence over 20% in parts of Eswatini and Lesotho. Geography shapes lifetime exposure risk."
+    },
+    {
+      "factor": "Maternal HIV infection without ART during pregnancy",
+      "category": "non-modifiable",
+      "description": "Vertical transmission risk without intervention is 15-45%. The single most important predictor of an infant's risk is the mother's viral load near delivery."
+    },
+    {
+      "factor": "Uncircumcised status (cisgender men)",
+      "category": "modifiable",
+      "description": "Voluntary medical male circumcision reduces female-to-male sexual transmission by approximately 60% (three randomised African trials). It is a WHO-endorsed prevention intervention in high-prevalence settings."
+    },
+    {
+      "factor": "Healthcare or laboratory work with sharps exposure",
+      "category": "modifiable",
+      "description": "Occupational exposure risk depends on source viral load and injury type. Universal precautions, safety-engineered devices, and rapid access to post-exposure prophylaxis reduce occupational seroconversions to fewer than 1 per million worker-years."
+    },
+    {
+      "factor": "Receipt of unscreened blood or blood products",
+      "category": "environmental",
+      "description": "Now rare in countries with nucleic-acid testing of donations; remains a risk where screening is incomplete or in undocumented transfusions."
+    },
+    {
+      "factor": "Intimate partner violence and gender inequity",
+      "category": "environmental",
+      "description": "Limits ability to negotiate condom use, refuse sex, or access prevention services. Independent risk factor across multiple cohort studies in southern Africa and Latin America."
+    }
   ],
-
   "affectedDemographics": [
     "Sub-Saharan Africa: 25.9 million people living with HIV (65% of the global total); adult prevalence above 10% in Eswatini, Lesotho, Botswana, and South Africa (UNAIDS 2024)",
     "United States: 1.2 million people with HIV; 31,800 new diagnoses in 2022; Black/African American adults represent 39% of new diagnoses despite being 12% of the population (CDC 2024)",
@@ -121,9 +165,7 @@
     "Eastern Europe and Central Asia is the only region with rising new infections (49% increase 2010-2023), driven by injection drug use and slow ART scale-up",
     "Pediatric HIV: 1.4 million children under 15 living with HIV globally; 76% of pregnant women with HIV received ART in 2023, but coverage gaps persist in West and Central Africa"
   ],
-
   "diagnosisOverview": "Diagnosis of HIV follows a tiered testing algorithm endorsed by the CDC and WHO. First-line screening is a fourth-generation laboratory antigen/antibody combination immunoassay that detects both HIV-1/2 antibodies and the p24 capsid antigen, shortening the diagnostic window to about 2-4 weeks after infection. A reactive screen is followed by an HIV-1/HIV-2 antibody differentiation immunoassay to confirm seropositivity and distinguish the two species. Discordant results — reactive screen but negative differentiation — trigger HIV-1 RNA nucleic acid testing to detect acute infection before antibodies develop. In low-resource and community testing settings, rapid diagnostic tests using finger-stick blood or oral fluid provide same-visit results; WHO recommends a three-test algorithm for confirmed diagnosis where laboratory access is limited. HIV self-tests are now approved in over 100 countries and substantially raise testing uptake. At entry to care, the initial workup quantifies HIV RNA viral load and CD4+ T-cell count, performs genotypic resistance testing (and integrase resistance in selected regions), screens for hepatitis B, hepatitis C, syphilis, gonorrhea, chlamydia, tuberculosis (interferon-gamma release assay), and pregnancy where applicable, and assesses renal and hepatic function, lipids, glucose, and HLA-B*5701 before any abacavir-based regimen. Repeat testing every 3-6 months is recommended for people with ongoing risk; opt-out screening at least once in adulthood is recommended by USPSTF and CDC for ages 13-64.",
-
   "diagnosticTests": [
     {
       "test": "Fourth-generation HIV-1/2 antigen/antibody combination immunoassay",
@@ -166,9 +208,7 @@
       "whatToExpect": "Standard blood and urine tests collected at the initial visit. Most results available within 24-48 hours; repeated annually or as drug regimen requires."
     }
   ],
-
   "treatmentOverview": "Modern HIV care centers on lifelong antiretroviral therapy started at diagnosis regardless of CD4 count — the Rapid Start approach endorsed by DHHS, IAS-USA, and WHO. The START trial demonstrated a 57% reduction in serious AIDS and non-AIDS events when ART was initiated at CD4 above 500 cells/µL rather than deferred, settling decades of debate over when to begin. First-line regimens combine an integrase strand-transfer inhibitor (INSTI) with two nucleos(t)ide reverse transcriptase inhibitors. The most commonly used initial regimen is bictegravir, emtricitabine, and tenofovir alafenamide (Biktarvy) — a single daily tablet achieving viral suppression in 90-95% of treatment-naive patients at 48 weeks. Alternatives include dolutegravir combined with two NRTIs (TAF or TDF plus emtricitabine, or abacavir plus lamivudine if HLA-B*5701 negative), and the two-drug regimen dolutegravir/lamivudine (Dovato) for treatment-naive patients meeting eligibility criteria. Long-acting injectable therapy with cabotegravir plus rilpivirine given intramuscularly every 2 months offers an oral-free maintenance option for virally suppressed adults, validated in the ATLAS-2M and FLAIR trials. In pregnancy, DHHS now recommends dolutegravir-based regimens after the Tsepamo neural tube defect signal was downgraded with longer follow-up showing comparable rates to non-dolutegravir exposures. The treat-to-target principle defines success: HIV RNA below 50 copies/mL (or below the assay limit of detection, typically 20-40 copies/mL) within 24 weeks of starting therapy, sustained CD4 recovery, and full virologic suppression maintained for life. People with sustained undetectable viral load do not sexually transmit HIV — Undetectable equals Untransmittable, established by the PARTNER2 study of 783 serodifferent couples and confirmed across multiple cohorts. Opportunistic infection prophylaxis is added based on CD4: TMP-SMX for Pneumocystis when CD4 falls below 200 cells/µL; azithromycin for MAC when below 50 cells/µL; isoniazid or rifapentine-based regimens for latent TB.",
-
   "medicalTreatments": [
     {
       "name": "Bictegravir/emtricitabine/tenofovir alafenamide (Biktarvy, 50/200/25 mg once daily)",
@@ -206,7 +246,6 @@
       "effectiveness": "Reduces seroconversion risk by more than 80% in occupational exposures; observational data support similar magnitude in non-occupational exposures."
     }
   ],
-
   "surgicalOptions": [
     {
       "name": "Voluntary medical male circumcision (VMMC)",
@@ -219,251 +258,426 @@
       "successRate": "Outcomes approach those of HIV-negative patients when virologic suppression is achieved before and during cancer therapy."
     }
   ],
-
   "alternativeTreatments": [
-    { "name": "Nutritional support and micronutrient supplementation in advanced disease", "description": "Trial data support supplemental vitamin D, multivitamin, and protein-energy support in patients with wasting or advanced immunosuppression. Adjunctive only — does not replace antiretroviral therapy or opportunistic infection treatment." },
-    { "name": "Mental health and substance use treatment integrated with HIV care", "description": "Cognitive behavioural therapy, depression treatment, and opioid agonist therapy improve antiretroviral adherence and reduce onward transmission, with cohort-level survival benefit." }
+    {
+      "name": "Nutritional support and micronutrient supplementation in advanced disease",
+      "description": "Trial data support supplemental vitamin D, multivitamin, and protein-energy support in patients with wasting or advanced immunosuppression. Adjunctive only — does not replace antiretroviral therapy or opportunistic infection treatment."
+    },
+    {
+      "name": "Mental health and substance use treatment integrated with HIV care",
+      "description": "Cognitive behavioural therapy, depression treatment, and opioid agonist therapy improve antiretroviral adherence and reduce onward transmission, with cohort-level survival benefit."
+    }
   ],
-
   "whySeeSpecialist": "An infectious disease physician or HIV-experienced primary care clinician should manage initial diagnosis, regimen selection, and resistance interpretation. Specialist input is essential for treatment failure, multi-drug resistance, complex coinfections (hepatitis B or C, TB, opportunistic infections), pregnancy, pediatric HIV, post-exposure cases with source resistance, and long-acting injectable initiation. Centres of HIV expertise deliver markedly higher rates of viral suppression and lower mortality than non-experienced settings (NA-ACCORD cohort).",
-
   "doctorSelectionGuide": "Look for board certification in infectious disease or an HIV Specialist credential from the American Academy of HIV Medicine; experience with at least 25 active patients on ART; access to integrated pharmacy and case management; routine resistance testing; and explicit support for U=U counselling, PrEP, and harm reduction. In low- and middle-income settings, accredited national ART program sites and centres supported by Global Fund, PEPFAR, or Ryan White are typically the strongest options.",
-
   "preventionStrategies": [
-    "Use daily oral PrEP (emtricitabine/tenofovir) or long-acting injectable cabotegravir if at substantial risk — reduces HIV acquisition by more than 99% with adherence to daily oral dosing and by 66-89% with injectable regimens",
-    "Maintain consistent condom use during anal and vaginal sex with partners of unknown or detectable HIV status",
-    "Start post-exposure prophylaxis (PEP) within 72 hours of any possible high-risk exposure and complete the full 28-day course",
-    "Use sterile injection equipment and access syringe service programs and opioid agonist therapy if you inject drugs",
-    "Get tested at least annually if at ongoing risk, every 3 months on PrEP, and at every new partnership or after possible exposure",
-    "If pregnant and living with HIV, start ART as early as possible and maintain undetectable viral load — vertical transmission falls below 1% when sustained"
+    "Consistent condom use reduces heterosexual HIV transmission risk by approximately 80%; latex or polyurethane condoms with water-based lubricant are recommended.",
+    "Pre-exposure prophylaxis (PrEP) with emtricitabine/tenofovir disoproxil or alafenamide reduces acquisition by more than 99% with daily adherence; cabotegravir long-acting injectable every 2 months reduces risk by 66% vs daily oral PrEP.",
+    "Post-exposure prophylaxis (PEP) with a 3-drug regimen started within 72 hours of exposure and continued for 28 days reduces seroconversion risk by more than 80%.",
+    "Voluntary medical male circumcision reduces female-to-male sexual transmission by approximately 60% (WHO-endorsed, 15 priority African countries).",
+    "Needle and syringe programs combined with opioid agonist therapy reduce new infections among people who inject drugs; these services are among the most cost-effective HIV interventions available.",
+    "Treatment as Prevention (TasP): people with sustained undetectable viral load do not sexually transmit HIV (U=U, PARTNER2 Lancet 2019); universal ART access eliminates transmission at the population level.",
+    "Regular HIV testing for all sexually active adults and key populations enables early diagnosis and immediate ART initiation, reducing forward transmission.",
+    "Education and harm reduction programs that address stigma and structural barriers improve PrEP uptake, testing rates, and ART adherence in marginalized populations."
   ],
-
   "lifestyleModifications": [
-    "Take antiretroviral therapy at the same time every day — adherence above 95% is the strongest predictor of durable viral suppression",
-    "Quit smoking — people with HIV who smoke lose more life-years to tobacco than to HIV itself; cessation is the highest-impact lifestyle change",
-    "Limit alcohol to within national guidelines; heavy drinking worsens liver disease, adherence, and cardiovascular risk",
-    "Eat a Mediterranean-style diet, maintain healthy weight, and engage in 150 minutes of moderate activity weekly to mitigate cardiovascular and metabolic risk linked to HIV and some ART agents",
-    "Stay up to date on HIV-specific immunisations: hepatitis A and B, HPV up to age 26 (45 in many programs), pneumococcal (PCV20), annual influenza, COVID, and recombinant zoster vaccine from age 18",
-    "Engage with mental health and substance-use support proactively — depression, anxiety, and trauma are common, and treatment improves both quality of life and adherence",
-    "Disclose HIV status to sexual partners and to clinicians involved in your care; use U=U evidence to reduce stigma and inform shared decisions"
+    "Take antiretroviral medication at the same time every day, using a fixed routine (e.g., with a specific meal, alarm, or pill organizer) to minimize missed doses.",
+    "Build a relationship with an HIV-experienced clinician and attend all scheduled lab appointments (viral load, CD4, renal/liver function) to monitor treatment efficacy and safety.",
+    "Maintain mental health with regular screening for depression and anxiety; integrated mental health care improves ART adherence and overall survival.",
+    "Practice safer sex with consistent condom use to prevent reinfection with drug-resistant HIV strains and reduce transmission of other sexually transmitted infections.",
+    "Avoid smoking: people with HIV have a 2-3x higher cardiovascular disease risk than the general population, and smoking compounds this substantially.",
+    "Limit alcohol to reduce levels that interfere with adherence; heavy drinking is associated with worse viral suppression outcomes.",
+    "Stay up to date with recommended vaccinations: influenza annually, pneumococcal (PCV15/PCV20 + PPSV23), hepatitis A and B, HPV through age 45, COVID-19, and shingles (Shingrix for those over 50 or with CD4 below 200).",
+    "Disclose HIV status to trusted healthcare providers to ensure coordinated care and avoid drug interactions; inform all clinicians before new prescriptions.",
+    "Seek emergency care for severe rash within 6 weeks of starting nevirapine, abacavir, dolutegravir, or efavirenz — possible Stevens-Johnson syndrome or DRESS.",
+    "Carry a medical alert card or wear a bracelet identifying HIV status and current ART regimen for emergency responders."
   ],
-
   "dietRecommendations": {
     "recommended": [
-      "Mediterranean-style diet rich in vegetables, legumes, whole grains, nuts, olive oil, and fish — reduces cardiovascular risk that is elevated in HIV",
-      "Adequate protein intake (1.0-1.5 g/kg/day) to maintain lean body mass and support immune function",
-      "Calcium and vitamin D sufficiency to counter the bone density loss associated with HIV and some antiretroviral drugs",
-      "Iron, B12, and folate from food sources or measured supplementation to address commonly seen deficiencies",
-      "Safe water and pasteurised dairy to reduce risk of cryptosporidiosis, listeria, and salmonella in advanced disease"
+      "Balanced, nutrient-dense diet emphasizing fruits, vegetables, whole grains, and lean protein to support immune function and offset ART-associated metabolic changes.",
+      "Heart-healthy fat sources (olive oil, fatty fish, nuts) given the elevated cardiovascular risk associated with long-term HIV and some ART agents.",
+      "Adequate hydration and fiber intake to manage common ART side effects including nausea, diarrhea, and lipodystrophy-related constipation.",
+      "Calcium and vitamin D supplementation for patients on long-term corticosteroids or with bone density loss, common with prolonged HIV.",
+      "Probiotic-rich foods (yogurt, kefir, fermented vegetables) to support gut microbiome health, which plays a role in immune reconstitution and ART GI side effects."
     ],
     "avoid": [
-      "Raw or undercooked meat, fish, eggs, or unpasteurised dairy — higher risk of toxoplasmosis, salmonella, and listeria in immunosuppression",
-      "Unwashed raw produce in low-resource settings — risk of parasitic and bacterial infections when CD4 is low",
-      "Heavy alcohol intake — accelerates liver disease, worsens adherence, and interacts with several antiretrovirals",
-      "Grapefruit and grapefruit juice with protease inhibitors and some other ART — affects drug metabolism",
-      "Calcium, magnesium, iron, and antacid supplements within 2 hours of dolutegravir or bictegravir without food — chelation reduces drug absorption"
+      "Grapefruit and grapefruit juice: inhibits CYP3A4 and intestinal P-glycoprotein, substantially raising concentrations of many protease inhibitors (darunavir, atazanavir) and some integrase inhibitors.",
+      "St. John's wort (Hypericum perforatum): potent CYP3A4 inducer that dramatically reduces concentrations of all PIs, NNRTIs, and some INSTIs — can cause virologic failure and resistance.",
+      "Raw or undercooked meat, fish, eggs, and unpasteurized dairy: people with CD4 below 200 cells per mcL face higher risk of foodborne infections including Salmonella, Campylobacter, and Toxoplasma.",
+      "Excessive alcohol: interferes with adherence, damages the liver already stressed by some ART agents (particularly in hepatitis B or C coinfection), and raises risk of pancreatitis with certain regimens.",
+      "High-dose biotin (>5 mg/day): can interfere with troponin laboratory assays and mask cardiovascular events; also interferes with some autoimmune monitoring assays."
     ]
   },
-
-  "exerciseGuidelines": "Aim for 150 minutes per week of moderate aerobic activity plus two sessions of resistance training. Regular exercise improves CD4 recovery, reduces visceral adiposity associated with some antiretrovirals, lowers cardiovascular risk, and improves mood. People with severe immunosuppression or active opportunistic infection should start gradually under clinical guidance. Yoga and breathwork are safe adjuncts and help with adherence to a long-term treatment routine.",
-
+  "exerciseGuidelines": "Both aerobic and resistance exercise are beneficial for people with HIV across all CD4 strata. Regular moderate aerobic activity (150 minutes per week) reduces cardiovascular disease risk, improves psychological well-being, and mitigates ART-associated lipodystrophy. Resistance training 2-3 times per week maintains lean muscle mass and counters HIV-associated sarcopenia. High-intensity exercise is safe for patients with CD4 above 200 cells per mcL; those with CD4 below 200 should avoid gym equipment shared with potential skin pathogens and consult their specialist before beginning new regimens. Exercise does not accelerate CD4 decline or increase viral load.",
   "dailyManagement": [
-    "Take antiretroviral therapy at the same time each day; use a phone reminder, pillbox, or pharmacy refill sync to avoid missed doses",
-    "Keep a list of all medications and supplements available for every clinical visit — antiretrovirals have meaningful interactions with antacids, statins, hormonal contraception, and several common drugs",
-    "Attend scheduled viral load and CD4 monitoring every 3-6 months once suppressed; do not skip annual STI, hepatitis, and cardiovascular risk screens",
-    "Maintain hepatitis B and other recommended vaccinations on schedule; avoid live vaccines (yellow fever, MMR, varicella) if CD4 is below 200 cells/µL",
-    "Communicate any new symptoms — particularly fevers, weight loss, neurological changes, or new rashes — promptly rather than waiting for the next routine visit",
-    "Use U=U evidence as a foundation for disclosure conversations and combine with condoms or PrEP for partners as appropriate for STI risk"
+    "Take antiretroviral medication every day at the same time, ideally as part of a fixed daily routine (e.g., with morning coffee or a specific meal).",
+    "Use a pill organizer or phone alarm to maintain adherence; missing doses even 1-2 days per week substantially raises the risk of viral rebound and resistance development.",
+    "Attend all scheduled laboratory appointments (typically every 3-6 months once stable): viral load must remain below 50 copies/mL and CD4 above 200 cells per mcL for optimal outcomes.",
+    "Report any new rash, fever, persistent nausea, jaundice, severe headache, or neurological symptoms to the HIV clinician promptly — these may indicate drug hypersensitivity or opportunistic infection.",
+    "Maintain oral hygiene and see a dentist at least annually; oral candidiasis, oral hairy leukoplakia, and aphthous ulcers are common in untreated or poorly controlled HIV.",
+    "Apply daily broad-spectrum sunscreen (SPF 30+) and avoid prolonged sun exposure; several ART agents (particularly efavirenz) and advanced immunosuppression increase photosensitivity and skin cancer risk.",
+    "Avoid sharing personal items (razors, toothbrushes) and ensure sexual partners have been tested recently or are on PrEP.",
+    "Store ART at room temperature (25C/77F) away from direct sunlight and humidity; travel with medications in original packaging and a doctor's letter for airport security."
   ],
-
-  "prognosis": "Life expectancy for people who start antiretroviral therapy early and remain virally suppressed now approaches that of the general population. North American and European cohort studies (NA-ACCORD, ART-CC) show 20-year-olds starting ART today projected to live into their early 70s, with the gap to HIV-negative peers narrowing each year as cardiovascular and cancer screening improve. The strongest determinants of long-term outcome are time from infection to ART initiation, sustained adherence, smoking status, and management of comorbidities including hepatitis B and C, cardiovascular disease, and chronic kidney disease. Untreated HIV remains uniformly fatal: median survival from infection without ART is approximately 8-10 years in adults, with mortality rising rapidly once CD4 falls below 200 cells/µL. The most important prognostic message for newly diagnosed patients today is that with consistent therapy, HIV is a controllable chronic condition that does not shorten life span and does not pass to sexual partners or to children when treatment goals are maintained.",
-
-  "recoveryTimeline": "Viral load typically falls by 1-2 log within 4 weeks of starting ART and reaches below 50 copies/mL by week 12-24 in 90% of adherent patients. CD4 count rises by an average of 100-150 cells/µL during the first year of suppression, with continued slower gains over subsequent years. Opportunistic infection prophylaxis can usually be discontinued once CD4 has been above 200 cells/µL for 3-6 months on suppressive therapy. Patients with sustained suppression for 6 months meet U=U criteria for sexual non-transmission. Long-term recovery is measured in years: bone density, cardiovascular markers, and neurocognitive function improve over 2-5 years on therapy.",
-
+  "prognosis": "With modern antiretroviral therapy, the prognosis for people with HIV has been transformed. Life expectancy for a newly diagnosed 20-year-old in a high-income country who initiates ART promptly and achieves viral suppression now approaches that of the general population — a gain of 10-15 years since the 1990s. The UK CHIC cohort documented a median life expectancy of 73 years for men and 76 for women on suppressive ART. Viral suppression below 50 copies/mL maintained for at least 1 year eliminates sexual transmission risk (U=U, confirmed by PARTNER2, Rodger et al Lancet 2019). CD4 recovery is most rapid in the first year of ART, with gains of 100-200 cells per mcL per year; patients who start with CD4 above 350 typically reach age-appropriate CD4 counts. Those who start with CD4 below 200 face slower and often incomplete immune reconstitution and higher residual risk of non-AIDS events (cardiovascular disease, kidney disease, neurocognitive impairment). The leading causes of death in well-resourced settings are now non-AIDS malignancies and cardiovascular disease, not opportunistic infections — underscoring the importance of smoking cessation, lipid management, and age-appropriate cancer screening.",
+  "recoveryTimeline": "Viral suppression to below 50 copies/mL is achieved in approximately 90% of treatment-naive patients within 8-24 weeks of starting a modern INSTI-based regimen. CD4 counts rise most rapidly in the first 3-6 months of suppressive ART (median gain 50-100 cells per mcL per month in the first 3 months), then more gradually thereafter. Patients with higher baseline CD4 at treatment initiation recover to near-normal counts more completely than those who start with advanced immunosuppression. Some patients experience transient side effects in the first weeks (nausea, headache, rash) that typically resolve; persistent side effects warrant regimen adjustment with the HIV clinician. The HIV viral reservoir — integrated proviral DNA in resting CD4 cells — persists for life and is not eradicated by current ART; this is why treatment must continue indefinitely. ART does not cure HIV but transforms it into a manageable chronic condition with near-normal quality and length of life for those with sustained access to care.",
   "complications": [
-    "Pneumocystis jirovecii pneumonia (PCP) — most common AIDS-defining illness; presents with dry cough, exertional dyspnea, hypoxia when CD4 falls below 200 cells/µL; prevented by TMP-SMX prophylaxis",
-    "Cerebral toxoplasmosis — ring-enhancing brain lesions, focal deficits, and seizures with CD4 below 100 cells/µL; presumptive treatment based on imaging and serology",
-    "Cryptococcal meningitis — subacute headache, fever, altered mental status with CD4 below 100 cells/µL; high mortality without prompt antifungal therapy and lumbar pressure management",
-    "Disseminated Mycobacterium avium complex (MAC) — fevers, weight loss, and cytopenias with CD4 below 50 cells/µL; prevented by azithromycin prophylaxis",
-    "Cytomegalovirus retinitis and colitis — sight-threatening retinitis with CD4 below 50 cells/µL; ophthalmology referral mandatory for any visual change in advanced disease",
-    "AIDS-defining malignancies — Kaposi sarcoma, primary CNS lymphoma, invasive cervical cancer; non-AIDS cancers including anal, lung, liver, and Hodgkin lymphoma occur at elevated rates even with controlled HIV",
-    "Cardiovascular disease — myocardial infarction risk is approximately 50% higher than in HIV-negative peers; reflects chronic inflammation, traditional risk factors, and some ART effects",
-    "HIV-associated neurocognitive disorder (HAND) — mild cognitive slowing in 15-30% of treated adults; severe dementia is now uncommon with effective ART",
-    "Chronic kidney disease and bone demineralisation — accelerated by HIV, by tenofovir disoproxil in susceptible individuals, and by comorbid hypertension and diabetes"
+    "Opportunistic infections (OIs) in untreated or poorly controlled HIV: Pneumocystis jirovecii pneumonia (PCP), esophageal candidiasis, cryptococcal meningitis, cerebral toxoplasmosis, disseminated Mycobacterium avium complex (MAC). CD4 below 200 cells per mcL triggers OI risk; prophylaxis with TMP-SMX and azithromycin substantially reduces incidence.",
+    "HIV-associated malignancies: Kaposi sarcoma (HHV-8), non-Hodgkin lymphoma (EBV-driven), cervical cancer (HPV), anal cancer (HPV), and Hodgkin lymphoma occur at higher rates and require parallel oncologic and HIV treatment. Achieving virologic suppression before cancer therapy improves outcomes.",
+    "HIV-associated neurocognitive disorder (HAND): cognitive slowing, memory impairment, and gait disturbance from direct CNS HIV infection and chronic immune activation. Early-stage HAND improves with ART; advanced disease is less reversible.",
+    "Cardiovascular disease: HIV increases coronary artery disease risk 1.5-2x via chronic inflammation, endothelial dysfunction, and ART-specific effects (some PIs raise lipids; tenofovir disoproxil associated with higher LDL). Statins and cardiovascular risk reduction are essential components of long-term HIV care.",
+    "Bone disease: osteopenia and osteoporosis occur at higher rates in people with HIV due to chronic inflammation, vitamin D deficiency, and specific ART effects (tenofovir disoproxil and some PIs). DEXA scanning from age 50 and adequate calcium/vitamin D are recommended.",
+    "Renal disease: HIV-associated nephropathy (HIVAN) and ART-associated nephrotoxicity (particularly from tenofovir disoproxil without alafenamide) require regular eGFR monitoring; proteinuria or declining renal function warrants specialist review and possible regimen modification."
   ],
-
   "supportResources": [
-    { "name": "Clinicalinfo.HIV.gov — DHHS Adult and Adolescent ARV Guidelines", "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-arv", "description": "US Department of Health and Human Services living guidelines on antiretroviral therapy, opportunistic infections, and prevention — updated regularly and freely accessible." },
-    { "name": "UNAIDS — Global AIDS Update", "url": "https://www.unaids.org/en", "description": "Global epidemiological data, country profiles, and policy guidance on the HIV response." },
-    { "name": "Centers for Disease Control and Prevention — HIV", "url": "https://www.cdc.gov/hiv/", "description": "US public health information on testing, prevention, treatment access, and statistics. Includes PrEP, PEP, and partner services resources." },
-    { "name": "The Well Project — HIV information for women", "url": "https://www.thewellproject.org/", "description": "Patient-led education and community resources focused on women living with HIV, including pregnancy, contraception, and aging." }
+    {
+      "name": "CDC HIV Resources",
+      "url": "https://www.cdc.gov/hiv/default.html",
+      "description": "Federal guidelines, prevention information, testing center locator, and data surveillance reports for HIV in the United States."
+    },
+    {
+      "name": "UNAIDS",
+      "url": "https://www.unaids.org/",
+      "description": "Global HIV data, treatment targets (95-95-95), prevention guidance, and country-level epidemiological reports from the Joint United Nations Programme on HIV/AIDS."
+    },
+    {
+      "name": "NAM AIDSmap",
+      "url": "https://www.aidsmap.com/",
+      "description": "Evidence-based news, conference summaries, and patient information resources maintained by the National AIDS Trust affiliate; widely cited in clinical settings."
+    },
+    {
+      "name": "DHHS HIV Guidelines",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines",
+      "description": "The US Department of Health and Human Services Living Guidelines covering ART, opportunistic infection prophylaxis, and HIV management in special populations."
+    },
+    {
+      "name": "WHO HIV Guidelines",
+      "url": "https://www.who.int/health-topics/hiv-aids",
+      "description": "Global normative guidance, consolidated HIV treatment guidelines, and implementation tools for resource-limited settings from the World Health Organization."
+    },
+    {
+      "name": "AVERT",
+      "url": "https://www.avert.org/",
+      "description": "Educational resources covering HIV science, global epidemiology, prevention, and living with HIV; published from the UK and useful for patient education."
+    }
   ],
-
   "confusedWithConditions": [
-    { "slug": "tuberculosis", "name": "Tuberculosis", "keyDifference": "TB and HIV share constitutional symptoms (fever, weight loss, night sweats) and frequently coexist — TB is the leading cause of death among people with HIV globally. TB is diagnosed by sputum smear or molecular assay (Xpert MTB/RIF) and tissue culture; HIV by serology and viral load. All adults with TB should be tested for HIV, and all people with HIV should be screened for active and latent TB." },
-    { "slug": "hepatitis-b", "name": "Hepatitis B", "keyDifference": "Hepatitis B and HIV share sexual and parenteral transmission routes and frequently coexist. HBV causes hepatitic illness with elevated transaminases and is diagnosed by HBsAg and HBV DNA; HIV is diagnosed by serology and viral load. Tenofovir-containing antiretroviral regimens treat both simultaneously, which is why HBV status guides HIV regimen selection." },
-    { "slug": "hepatitis-c", "name": "Hepatitis C", "keyDifference": "Hepatitis C predominantly causes hepatic disease without immunosuppression and is now curable with 8-12 weeks of direct-acting antivirals. HIV is a lifelong infection requiring suppressive therapy. Coinfection is common; both should be screened in everyone with a possible parenteral or sexual exposure history." }
+    {
+      "slug": "herpes-simplex-infection",
+      "name": "Herpes Simplex Virus (HSV)",
+      "keyDifference": "Oral and genital HSV causes recurrent vesicular ulcers that can mimic HIV acute retroviral syndrome in the prodromal phase. HSV does not cause systemic illness, lymphadenopathy beyond the affected dermatome, or rash spanning the trunk. HIV testing should be performed in anyone with a new STI diagnosis."
+    },
+    {
+      "slug": "hepatitis-b",
+      "name": "Hepatitis B",
+      "keyDifference": "Acute HBV shares transmission routes with HIV (sexual, blood) and causes fatigue, nausea, and jaundice. HIV does not primarily affect the liver. HBV serology (HBsAg, anti-HBc, HBeAg) and HIV antibody/antigen testing differentiate them. Coinfection is common and requires both diagnoses to be made — each condition must be treated independently."
+    },
+    {
+      "slug": "hepatitis-c",
+      "name": "Hepatitis C",
+      "keyDifference": "Acute HCV shares transmission routes with HIV and is frequently asymptomatic, though it causes fatigue and jaundice in some cases. HIV does not primarily affect the liver. HCV antibody and RNA testing, combined with HIV testing, differentiate them. Coinfection accelerates liver disease progression in both conditions."
+    },
+    {
+      "slug": "pneumonia",
+      "name": "Pneumocystis jirovecii Pneumonia (PCP)",
+      "keyDifference": "PCP is an AIDS-defining OI occurring at CD4 below 200 cells/mcL, presenting with progressive dyspnea, dry cough, and hypoxia. PCP is not a differential for HIV infection — it is a complication of advanced HIV immunosuppression. HIV testing should be offered to anyone diagnosed with PCP."
+    },
+    {
+      "slug": "syphilis",
+      "name": "Syphilis",
+      "keyDifference": "Syphilis causes a painless chancre (primary) and rash (secondary) but is not accompanied by the systemic flu-like illness with lymphadenopathy, pharyngitis, and trunk rash that characterizes acute HIV infection. Syphilis and HIV bidirectionally increase each other's transmission risk and can coexist; both require independent diagnosis and treatment."
+    },
+    {
+      "slug": "tuberculosis",
+      "name": "Tuberculosis",
+      "keyDifference": "TB shares risk factors with HIV (poverty, imprisonment, HIV itself) and causes cough, fever, weight loss, and night sweats that can be present in advanced HIV without TB. However, TB is a bacterial infection that primarily affects the lungs and can occur at any CD4 count, whereas HIV is a viral infection that progressively destroys the immune system. HIV testing should be offered to all TB patients."
+    }
   ],
-
   "coOccurringConditions": [
-    { "slug": "tuberculosis", "name": "Tuberculosis" },
-    { "slug": "hepatitis-b", "name": "Hepatitis B" },
-    { "slug": "hepatitis-c", "name": "Hepatitis C" }
+    {
+      "slug": "hepatitis-c",
+      "name": "Hepatitis C"
+    },
+    {
+      "slug": "hepatitis-b",
+      "name": "Hepatitis B"
+    },
+    {
+      "slug": "tuberculosis",
+      "name": "Tuberculosis"
+    },
+    {
+      "slug": "depression",
+      "name": "Depression"
+    },
+    {
+      "slug": "pneumonia",
+      "name": "Pneumocystis Pneumonia (PCP)"
+    },
+    {
+      "slug": "syphilis",
+      "name": "Syphilis"
+    }
   ],
-
   "relatedConditions": [
-    { "slug": "tuberculosis", "name": "Tuberculosis", "relevance": "Leading cause of death among people with HIV worldwide; co-infection alters drug selection, drug interactions, and immune reconstitution risk." },
-    { "slug": "hepatitis-b", "name": "Hepatitis B", "relevance": "Shared transmission routes; tenofovir-based antiretroviral regimens treat both viruses, making HBV status central to HIV regimen choice." },
-    { "slug": "hepatitis-c", "name": "Hepatitis C", "relevance": "Frequent coinfection in people who inject drugs and men who have sex with men; cure with direct-acting antivirals is recommended for all HCV-infected people with HIV." },
-    { "slug": "pneumocystosis-b59", "name": "Pneumocystosis (Pneumocystis Pneumonia)", "relevance": "Most common AIDS-defining opportunistic infection; prevention with TMP-SMX is initiated once CD4 falls below 200 cells/µL." },
-    { "slug": "kaposi-s-sarcoma-unspecified-c469", "name": "Kaposi Sarcoma", "relevance": "AIDS-defining malignancy caused by human herpesvirus 8; incidence falls sharply on effective antiretroviral therapy, and ART is the cornerstone of treatment." }
+    {
+      "slug": "herpes-simplex-infection",
+      "name": "Herpes Simplex Virus Infection",
+      "relevance": "HSV-2 and HIV bidirectionally increase each other's transmission risk: genital HSV ulcers disrupt mucosal barriers and recruit CD4 cells. Daily valacyclovir reduces HIV acquisition risk by approximately 20% and is recommended for people with HIV who have frequent HSV recurrences."
+    },
+    {
+      "slug": "hepatitis-b",
+      "name": "Hepatitis B",
+      "relevance": "HBV and HIV share transmission routes and frequently coexist; HBV coinfection accelerates HIV disease progression and liver disease progression. Tenofovir-based ART regimens (tenofovir/disoproxil or alafenamide with emtricitabine or lamivudine) treat both HIV and HBV simultaneously — making tenofovir-based ART the preferred choice in coinfected patients."
+    },
+    {
+      "slug": "hepatitis-c",
+      "name": "Hepatitis C",
+      "relevance": "HCV and HIV share transmission routes (blood, injection drug use, rarely sexual transmission) and frequently coexist. HIV/HCV coinfection accelerates hepatic fibrosis progression and increases hepatotoxicity risk from some ART agents. Direct-acting antiviral (DAA) regimens cure HCV in 95%+ of patients, including those with HIV, and should be offered to all HIV/HCV-coinfected patients."
+    },
+    {
+      "slug": "tuberculosis",
+      "name": "Tuberculosis",
+      "relevance": "TB is the leading cause of death in people with HIV globally. LTBI screening (interferon-gamma release assay or tuberculin skin test) and treatment should be performed at HIV diagnosis. TB accelerates HIV progression and is the most common OI in resource-limited settings. Integrated TB/HIV care reduces mortality by approximately 40%."
+    },
+    {
+      "slug": "syphilis",
+      "name": "Syphilis",
+      "relevance": "Syphilis and HIV interact bidirectionally: syphilis ulcers increase HIV acquisition risk 2-3x and HIV alters the clinical presentation and treatment response of syphilis. People with HIV require more intensive syphilis treatment (benzathine penicillin G 2.4 million units IM weekly for 3 doses for late latent syphilis) and close serologic follow-up."
+    },
+    {
+      "slug": "pneumonia",
+      "name": "Pneumocystis Pneumonia (PCP)",
+      "relevance": "PCP is the most common AIDS-defining OI in the US and the leading cause of AIDS-related death globally. Prophylaxis with TMP-SMX is indicated when CD4 falls below 200 cells/mcL. All patients with PCP should be linked to HIV care for ART initiation and ongoing monitoring. PCP in a patient with previously undiagnosed HIV typically indicates advanced immunosuppression."
+    }
   ],
-
-  "linkedTreatmentSlugs": [],
-
+  "linkedTreatmentSlugs": [
+    "prep",
+    "pep",
+    "antiretroviral-therapy",
+    "hiv-care",
+    "hiv-resistance-testing",
+    "hiv-prevention",
+    "immunodeficiency-management",
+    "sexually-transmitted-infection-screening"
+  ],
   "faqs": [
     {
       "question": "What is the difference between HIV and AIDS?",
-      "answer": "HIV is the human immunodeficiency virus that infects CD4+ T cells. AIDS is the most advanced clinical stage of untreated HIV, defined by a CD4 count below 200 cells/µL or an AIDS-defining illness. With effective antiretroviral therapy, a person with HIV may never develop AIDS.",
+      "answer": "HIV (human immunodeficiency virus) is the virus that causes infection. AIDS (acquired immunodeficiency syndrome) is the most advanced stage of HIV, diagnosed when CD4 count falls below 200 cells per mcL or an AIDS-defining illness occurs. With modern treatment, most people with HIV never develop AIDS.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of HIV infection?",
+      "answer": "The first signs appear 2-4 weeks after exposure in 40-90% of newly infected people and include fever, sore throat, swollen lymph nodes, a maculopapular rash on the trunk, fatigue, and muscle aches. This acute retroviral syndrome is often mistaken for influenza or mononucleosis.",
       "schemaEligible": true
     },
     {
       "question": "How is HIV transmitted?",
-      "answer": "HIV is transmitted through condomless anal or vaginal sex, shared needles or syringes, mother-to-infant during pregnancy, delivery, or breastfeeding, and transfusion of unscreened blood. It is not transmitted through saliva, casual contact, food, mosquito bites, or toilet seats.",
+      "answer": "HIV is transmitted through specific body fluids: blood, semen, vaginal fluid, rectal fluid, and breast milk. The most common routes are unprotected anal or vaginal sex, sharing injection drug equipment, and mother-to-child transmission during pregnancy, birth, or breastfeeding. HIV is not transmitted by casual contact, saliva, or insect bites.",
       "schemaEligible": true
     },
     {
-      "question": "What are the early symptoms of HIV infection?",
-      "answer": "Acute HIV produces a flu-like illness in 40-90% of newly infected adults, 2-4 weeks after exposure: fever, sore throat, swollen lymph nodes, fatigue, muscle aches, and a maculopapular rash on the trunk lasting 1-3 weeks. Many cases are mistaken for influenza or mononucleosis.",
+      "question": "What is the window period for HIV testing?",
+      "answer": "Fourth-generation laboratory HIV tests detect infection approximately 2-4 weeks after exposure by detecting both HIV antibodies and the p24 antigen. Rapid point-of-care tests using blood or oral fluid may take 4-12 weeks to become positive. An HIV RNA test can detect infection as early as 10 days after exposure.",
       "schemaEligible": true
     },
     {
-      "question": "How accurate is HIV testing and how long until it is reliable after exposure?",
-      "answer": "Fourth-generation antigen/antibody tests detect over 99% of infections from day 14-21 after exposure. HIV RNA testing detects virus from day 10. A negative test at 6 weeks with a fourth-generation assay is considered conclusive for most exposures.",
+      "question": "What does undetectable mean in HIV?",
+      "answer": "Undetectable means the amount of HIV in the blood is so low (below 50 copies/mL) that it cannot be measured by standard viral load tests. People with sustained undetectable viral load cannot sexually transmit HIV — this is the U=U (Undetectable = Untransmittable) principle confirmed by the PARTNER2 study of 783 serodifferent couples.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is U=U in HIV?",
+      "answer": "U=U stands for Undetectable = Untransmittable. People with HIV who achieve and maintain an undetectable viral load (below 50 copies/mL) through effective antiretroviral therapy do not sexually transmit HIV to their partners. This is scientifically proven and endorsed by every major health authority including CDC, WHO, and UNAIDS.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How effective is antiretroviral therapy (ART)?",
+      "answer": "Modern ART is highly effective. INSTI-based regimens such as bictegravir/emtricitabine/tenofovir alafenamide (Biktarvy) achieve viral suppression below 50 copies/mL in 90-95% of treatment-naive adults at 48 weeks. With continued adherence, suppression is maintained long-term. Early treatment initiation (Rapid Start) further improves outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the side effects of HIV medication?",
+      "answer": "Modern HIV medications are generally well tolerated. Common short-term side effects include nausea, headache, diarrhea, and vivid dreams (particularly with efavirenz). Long-term effects vary by drug class: some PIs raise cholesterol; tenofovir disoproxil can affect kidney function and bone density. Most side effects improve after the first few weeks; persistent problems usually require a regimen switch under clinician guidance.",
       "schemaEligible": true
     },
     {
       "question": "Can HIV be cured?",
-      "answer": "Antiretroviral therapy does not cure HIV because the virus persists as integrated DNA in long-lived reservoir cells. A small number of people have been functionally cured after CCR5-Δ32 stem cell transplants for blood cancers, but this is not a generalisable treatment. ART is lifelong.",
+      "answer": "There is currently no cure for HIV. ART suppresses the virus to undetectable levels but does not eliminate the latent viral reservoir — integrated HIV DNA in resting CD4 cells that persists for life. Several cure research approaches are in development, including gene therapy, therapeutic vaccines, and latency-reversing agents, but none are yet available clinically.",
       "schemaEligible": true
     },
     {
-      "question": "What does undetectable viral load mean and is it the same as untransmittable?",
-      "answer": "Undetectable means HIV RNA is below the lower limit of laboratory assays, typically 20-50 copies/mL. The PARTNER2 study documented zero sexual HIV transmissions from virally suppressed partners. The principle is U=U: Undetectable equals Untransmittable when sustained at least 6 months.",
+      "question": "How long can a person with HIV live?",
+      "answer": "A person with HIV who is diagnosed early, starts ART promptly, and achieves sustained viral suppression can have a near-normal life expectancy. The UK CHIC cohort reported a median life expectancy of 73 years for men and 76 for women on suppressive ART — close to that of the general population. Life expectancy is lower for those who start treatment at very low CD4 counts or who have advanced disease.",
       "schemaEligible": true
     },
     {
-      "question": "What is PrEP and who should take it?",
-      "answer": "PrEP is pre-exposure prophylaxis — antiretroviral medication taken by HIV-negative people to prevent acquisition. Daily oral emtricitabine/tenofovir reduces sexual HIV acquisition by more than 99% with adherence. Long-acting cabotegravir every 2 months is an alternative.",
+      "question": "Is HIV transmitted through kissing?",
+      "answer": "No. HIV is not transmitted through saliva, tears, sweat, or casual contact including kissing, hugging, sharing utensils, or toilet seats. The concentration of HIV in saliva is extremely low — far below the infectious dose. No cases of HIV transmission through kissing have been documented in rigorous epidemiological studies.",
       "schemaEligible": true
     },
     {
-      "question": "What is PEP and how soon must it start?",
-      "answer": "PEP is post-exposure prophylaxis — a 28-day three-drug regimen (typically tenofovir/emtricitabine plus dolutegravir or raltegravir) started within 72 hours of possible exposure. Efficacy falls sharply after 72 hours. Available through emergency departments and sexual health clinics.",
+      "question": "What is PrEP and how does it work?",
+      "answer": "PrEP (pre-exposure prophylaxis) is a prevention strategy for HIV-negative people. Daily oral emtricitabine/tenofovir disoproxil (Truvada) or emtricitabine/tenofovir alafenamide (Descovy) reduces HIV acquisition risk by more than 99% with consistent daily use. Long-acting injectable cabotegravir given every 2 months (HPTN 083/084) reduces risk by 66% vs daily oral PrEP and 89% in women. PrEP is recommended for all high-risk populations.",
       "schemaEligible": true
     },
     {
-      "question": "Can people with HIV have HIV-negative children?",
-      "answer": "Yes. With antiretroviral therapy throughout pregnancy and undetectable viral load near delivery, vertical transmission falls below 1%. Where viral load remains elevated, planned caesarean delivery and neonatal antiretroviral prophylaxis reduce risk further.",
+      "question": "What is PEP for HIV?",
+      "answer": "PEP (post-exposure prophylaxis) is a 28-day course of antiretroviral medication taken after a possible HIV exposure to prevent infection. It must be started within 72 hours — the earlier the better. Standard PEP is tenofovir/emtricitabine plus dolutegravir or raltegravir. PEP reduces occupational seroconversion risk by more than 80% and non-occupational risk by similar magnitude.",
       "schemaEligible": true
     },
     {
-      "question": "How long does someone with HIV live today?",
-      "answer": "Life expectancy for people who start antiretroviral therapy early and adhere consistently now approaches that of the general population. Recent cohort studies project 20-year-olds starting ART today to live into their early 70s, with the gap to HIV-negative peers narrowing each year.",
+      "question": "Can women with HIV have children?",
+      "answer": "Yes. With effective antiretroviral therapy and an undetectable viral load near delivery, the risk of mother-to-child HIV transmission falls below 1%. DHHS now recommends dolutegravir-based regimens in pregnancy. HIV-positive women can breastfeed if their viral load is undetectable and they have access to safe formula feeding alternatives; WHO recommends breastfeeding with sustained ART in resource-limited settings where formula is not reliably clean water.",
       "schemaEligible": true
     },
     {
-      "question": "Are there long-acting HIV treatments instead of daily pills?",
-      "answer": "Yes. Cabenuva, an intramuscular injection of cabotegravir plus rilpivirine given every 1 or 2 months, maintains viral suppression in roughly 94% of patients at 96 weeks. It is approved for adults already virally suppressed on oral therapy with no known resistance.",
+      "question": "Does HIV affect gay and bisexual men more than other groups?",
+      "answer": "In the United States and many high-income countries, men who have sex with men carry a disproportionate burden of HIV (67% of new diagnoses in 2022) due to the higher per-act transmission risk of receptive anal sex and the epidemiology of sexual networks in which many gay and bisexual men are embedded. However, globally, heterosexual transmission is the dominant route. HIV affects all populations and prevention efforts must address the specific needs and barriers of each community.",
       "schemaEligible": true
     },
     {
-      "question": "Do antiretroviral drugs have serious side effects?",
-      "answer": "Modern first-line regimens are well tolerated. Most patients on bictegravir or dolutegravir-based therapy report few or no symptoms. Possible effects include nausea, headache, insomnia, and modest weight gain. Tenofovir alafenamide has a better kidney and bone profile than tenofovir disoproxil.",
+      "question": "What is a CD4 count?",
+      "answer": "A CD4 count measures the number of CD4+ T-helper lymphocytes per microliter of blood — the immune cells that HIV destroys. A healthy CD4 count is 500-1500 cells per mcL. HIV infection progressively depletes CD4 cells; below 200 cells per mcL defines AIDS and triggers risk of opportunistic infections. ART aims to restore and maintain CD4 above 200-350 cells per mcL.",
       "schemaEligible": true
     },
     {
-      "question": "How much does HIV treatment cost?",
-      "answer": "In the US, brand ART regimens cost approximately USD 30,000-45,000 per year before insurance. Ryan White and ADAP reduce out-of-pocket cost for uninsured patients to little or nothing. In low- and middle-income countries, generic ART through PEPFAR and the Global Fund costs USD 50-100 per year.",
+      "question": "How often should someone with HIV get lab tests?",
+      "answer": "Viral load and CD4 are tested at HIV diagnosis, then every 1-2 months until viral suppression is achieved, then every 3-6 months indefinitely. Renal and liver function, lipids, and fasting glucose are checked at baseline and annually. Genotypic resistance testing is performed at entry to care and on any viral rebound. Hepatitis B and C are screened at baseline; syphilis, gonorrhea, and chlamydia are screened at least annually.",
       "schemaEligible": true
     },
     {
-      "question": "What vaccines should I get if I have HIV?",
-      "answer": "Recommended adult HIV vaccines include hepatitis A and B, HPV, pneumococcal (PCV20), annual influenza, COVID, and recombinant zoster vaccine from age 18 when CD4 is reasonably preserved. Live vaccines (yellow fever, MMR, varicella) should be avoided if CD4 is below 200 cells/µL.",
+      "question": "Can I travel with HIV?",
+      "answer": "Most countries do not restrict travel for people with HIV. As of 2024, only 12 countries (including Singapore, Russia, and parts of the Middle East) have explicit travel restrictions. However, some countries require HIV medication in original packaging with a doctor's letter. Long-haul flights may increase DVT risk for those with low CD4; compression stockings are recommended. Always check current entry requirements before international travel.",
       "schemaEligible": true
     },
     {
-      "question": "Can I still get other infections if my HIV is well controlled?",
-      "answer": "Yes, but the risk of AIDS-defining opportunistic infections drops sharply once viral load is suppressed and CD4 rises above 200 cells/µL. Routine bacterial, viral, and sexually transmitted infections remain possible at baseline population rates. Continue STI screening and immunisations.",
+      "question": "What happens if HIV is left untreated?",
+      "answer": "Without treatment, HIV progresses through three stages: acute infection (2-4 weeks, often symptomatic), clinical latency (8-10 years median, feeling well but immune system declining), and AIDS (CD4 below 200 or AIDS-defining illness). AIDS is fatal without treatment, typically within 2-3 years of the CD4 count falling below 200. The median survival without ART is approximately 11 years from infection, varying with individual immune response.",
       "schemaEligible": true
     },
     {
-      "question": "Does HIV affect mental health?",
-      "answer": "Depression, anxiety, and substance use disorders are more common in people living with HIV than in the general population, driven by stigma, chronic illness, and shared risk factors. Treating mental health conditions improves antiretroviral adherence, quality of life, and survival.",
+      "question": "Is HIV hereditary?",
+      "answer": "HIV itself is not hereditary — it is an acquired infection transmitted through specific body fluids. However, genetic factors influence susceptibility: specific HLA genotypes affect acquisition risk and disease progression speed. Having a parent with HIV does increase a child's risk of infection during pregnancy, birth, or breastfeeding, but maternal viral suppression with ART reduces this to under 1%.",
       "schemaEligible": true
     },
     {
-      "question": "Is HIV more common in certain groups?",
-      "answer": "Globally, HIV is concentrated in sub-Saharan Africa, where 65% of people with HIV live. In the United States, men who have sex with men, transgender women, Black and Hispanic adults, and people who inject drugs are disproportionately affected, reflecting network prevalence and social determinants.",
+      "question": "Can people with HIV donate organs or blood?",
+      "answer": "In most high-income countries, people with HIV are not permitted to donate blood or organs for transplant — not because of transmission risk (which would be prevented by testing and treatment) but because of existing regulations written before the era of suppressive ART. An exception exists in the US: people with HIV can donate organs to other people with HIV under the HIV Organ Policy Equity (HOPE) Act of 2013.",
       "schemaEligible": true
     },
     {
-      "question": "Can older adults get HIV?",
-      "answer": "Yes. Adults aged 50 and older now account for roughly half of people living with HIV in the United States, partly reflecting longer survival on ART and partly new infections in mid- and later life. Routine opt-out testing is recommended through age 64 by USPSTF.",
-      "schemaEligible": true
-    },
-    {
-      "question": "What is HIV-2 and how is it different from HIV-1?",
-      "answer": "HIV-2 is a separate species largely confined to West Africa, with smaller foci in India and Portugal. It is less transmissible, progresses more slowly, and has intrinsic resistance to NNRTIs and enfuvirtide. Treatment uses INSTI or boosted protease inhibitor regimens.",
-      "schemaEligible": true
-    },
-    {
-      "question": "How is HIV transmission prevented in healthcare settings?",
-      "answer": "Standard precautions — gloves, safety-engineered sharps devices, and proper disposal — combined with rapid post-exposure prophylaxis within 72 hours have reduced occupational HIV transmission to fewer than 1 per million worker-years in high-income settings.",
-      "schemaEligible": true
-    },
-    {
-      "question": "What is the 95-95-95 UNAIDS target?",
-      "answer": "The UNAIDS 95-95-95 target aims for 95% of people with HIV to know their status, 95% of those diagnosed to be on antiretroviral therapy, and 95% of those on therapy to achieve viral suppression by 2030. Several countries — Switzerland, Australia, Denmark — have already passed 95-95-95.",
+      "question": "What is long-acting HIV treatment?",
+      "answer": "Long-acting injectable therapy with cabotegravir plus rilpivirine (Cabenuva) given intramuscularly every 2 months is FDA-approved for maintenance therapy in virally suppressed adults without resistance to either drug. It eliminates daily oral medication and is particularly valued by patients with pill fatigue or adherence challenges. ATLAS-2M (96 weeks) confirmed durable suppression in approximately 94% of participants.",
       "schemaEligible": true
     }
   ],
-
   "simpleName": "HIV/AIDS (Human Immunodeficiency Virus / Acquired Immunodeficiency Syndrome)",
-
   "regionalNames": [
-    { "name": "एचआईवी/एड्स", "region": "India (Hindi-speaking regions)", "language": "hi" },
-    { "name": "SIDA", "region": "France and francophone Africa", "language": "fr" },
-    { "name": "VIH/SIDA", "region": "Latin America and Spain", "language": "es" },
-    { "name": "艾滋病", "region": "China", "language": "zh" }
+    {
+      "name": "Human Immunodeficiency Virus / Acquired Immunodeficiency Syndrome",
+      "region": "Global English",
+      "language": "English"
+    },
+    {
+      "name": "HIV/AIDS",
+      "region": "India",
+      "language": "Hindi"
+    },
+    {
+      "name": "எச்ஐவி/ஏட்ஸ்",
+      "region": "Tamil Nadu, Sri Lanka",
+      "language": "Tamil"
+    },
+    {
+      "name": "హెచ్‌ఐవి/ఏడ్స్",
+      "region": "Andhra Pradesh, Telangana",
+      "language": "Telugu"
+    },
+    {
+      "name": "হইভ/এইডস",
+      "region": "Bengal",
+      "language": "Bengali"
+    },
+    {
+      "name": "VIH/SIDA",
+      "region": "Latin America, Europe",
+      "language": "Spanish/French/Portuguese"
+    },
+    {
+      "name": "艾滋病",
+      "region": "China, Taiwan, Singapore",
+      "language": "Mandarin Chinese"
+    },
+    {
+      "name": "СНІД",
+      "region": "Ukraine, Eastern Europe",
+      "language": "Ukrainian"
+    }
   ],
-
   "searchTags": [
-    "hiv", "aids", "human immunodeficiency virus", "acquired immunodeficiency syndrome",
-    "antiretroviral therapy", "art", "biktarvy", "dolutegravir", "cd4 count", "viral load",
-    "u equals u", "prep", "pep", "cabotegravir", "lenacapavir", "hiv test", "hiv rapid test",
-    "opportunistic infection", "icd-10 b20", "z21"
+    "hiv symptoms",
+    "aids symptoms",
+    "hiv treatment",
+    "antiretroviral therapy",
+    "hiv test",
+    "prep for hiv",
+    "u equals u",
+    "cd4 count",
+    "viral load",
+    "hiv diagnosis",
+    "hiv positive",
+    "living with hiv",
+    "hiv medication",
+    "hiv transmission",
+    "hiv prevention",
+    "pep hiv",
+    "hiv cure",
+    "undetectable hiv",
+    "hiv life expectancy",
+    "hiv acute infection",
+    "hiv rash",
+    "hiv nerve pain",
+    "hiv opportunistic infection",
+    "hiv support",
+    "hiv stages",
+    "hiv resistance",
+    "hiv undetectable",
+    "hiv保险"
   ],
-
   "symptomKeywords": [
-    "flu-like rash and fever after exposure", "swollen lymph nodes weeks after sex",
-    "persistent oral thrush in adult", "unexplained weight loss and night sweats",
-    "shingles in young adult", "chronic dry cough with low CD4", "white plaques on tongue",
-    "fever lasting weeks unexplained"
+    "fever rash sore throat after unprotected sex",
+    "flu-like illness with rash HIV",
+    "swollen lymph nodes weight loss HIV",
+    "night sweats HIV positive",
+    "oral thrush HIV early sign",
+    "hiv first symptoms acute retroviral syndrome",
+    "persistent fever without cause HIV",
+    "hiv cognitive symptoms memory loss"
   ],
-
-  "metaTitle": "HIV/AIDS: Symptoms, Treatment & Prevention | aihealz",
-  "metaDescription": "HIV/AIDS: symptoms, testing, antiretroviral therapy, PrEP, PEP, and U=U guidance from current DHHS and IAS-USA guidelines reviewed by our medical board.",
-
+  "metaTitle": "HIV/AIDS: Symptoms, Causes, Treatment & U=U | aihealz",
+  "metaDescription": "HIV attacks the immune system; AIDS is its late stage. Learn symptoms, causes, ART treatment, CD4 count, viral load, and U=U. Reviewed by our medical board.",
   "keywords": [
-    "hiv", "aids", "hiv symptoms", "hiv treatment", "antiretroviral therapy",
-    "hiv test", "prep for hiv", "pep for hiv", "u equals u", "biktarvy",
-    "cd4 count", "viral load", "cabotegravir injection", "is hiv curable",
-    "hiv life expectancy"
+    "hiv",
+    "aids",
+    "hiv symptoms",
+    "hiv treatment",
+    "antiretroviral therapy",
+    "hiv diagnosis",
+    "hiv transmission",
+    "hiv prevention",
+    "prep",
+    "pep",
+    "undetectable",
+    "u equals u",
+    "cd4 count",
+    "viral load",
+    "hiv life expectancy",
+    "hiv medication side effects",
+    "hiv cure"
   ],
-
-  "lastReviewed": "2026-05-12",
-
+  "lastReviewed": "2026-05-16",
   "sources": [
     {
       "title": "Panel on Antiretroviral Guidelines for Adults and Adolescents. Guidelines for the Use of Antiretroviral Agents in Adults and Adolescents with HIV. Department of Health and Human Services; updated 2024.",
@@ -501,6 +715,5 @@
       "accessedDate": "2026-05-12"
     }
   ],
-
   "images": []
 }

@@ -20,30 +20,42 @@
     "version": "v2-hand-written-eeat",
     "authoringNotes": "Citations cross-verified against Stanley SL Lancet 2003, Haque R NEJM 2003, WHO Amebiasis position 2015, CDC parasites/amebiasis. Entamoeba histolytica versus E. dispar/moshkovskii speciation requires PCR or antigen testing, reflected throughout the diagnosis section."
   },
-
   "h1Title": "Amebiasis: Symptoms, Causes, Diagnosis, and Treatment",
   "specialistType": "Infectious Disease",
-
   "heroOverview": "Amebiasis is intestinal and extraintestinal disease caused by the protozoan parasite Entamoeba histolytica, transmitted by ingestion of cysts from fecally contaminated food, water, or hands. WHO estimates 35-50 million symptomatic cases globally each year and 40,000-100,000 deaths, making it the second deadliest parasitic infection worldwide after malaria. Most cases are asymptomatic carriage; symptomatic disease ranges from mild diarrhea to fulminant amebic dysentery with blood and mucus in stool, and in 1-10% of patients to amebic liver abscess. Diagnosis hinges on distinguishing E. histolytica from morphologically identical non-pathogenic species using stool antigen tests or PCR. Treatment with metronidazole or tinidazole followed by a luminal agent achieves cure in over 90%.",
-
   "keyStats": {
     "prevalence": "Approximately 50 million symptomatic infections worldwide per year; 480 million carry Entamoeba species, though only ~10% are true E. histolytica (WHO)",
     "demographics": "Highest burden in tropical regions with poor sanitation — South Asia, sub-Saharan Africa, Central and South America, Mexico",
     "avgAge": "All ages affected; severe disease (dysentery, abscess) skews to adults aged 20-50, especially men for hepatic abscess (M:F 7-10:1)",
     "globalCases": "40,000-100,000 deaths annually; second deadliest parasitic disease after malaria"
   },
-
   "definition": "Amebiasis (ICD-10: A06) is infection of the colon and occasionally other organs by Entamoeba histolytica, a pseudopod-forming protozoan parasite. The lifecycle has two forms. Cysts — the infective, environmentally hardy quadrinucleate stage — are shed in feces and ingested by the next host. Once inside the small intestine, cysts excyst into trophozoites that colonize the colon. Trophozoites feed on bacteria and host tissue; in roughly 10% of infected hosts, they invade the colonic mucosa using galactose/N-acetylgalactosamine lectin-mediated adhesion and amebapore-mediated cytolysis, producing flask-shaped ulcers. Trophozoites can also enter the portal circulation and seed the liver, where they create characteristic amebic liver abscesses, typically in the right lobe. Disease severity ranges from asymptomatic luminal infection (the majority) through amebic colitis and dysentery to fulminant necrotizing colitis (perforation, toxic megacolon) and extraintestinal disease (liver, pleuropulmonary, brain, cutaneous). E. histolytica must be distinguished from morphologically identical but non-pathogenic Entamoeba dispar and Entamoeba moshkovskii — a distinction that microscopy alone cannot make. Amebiasis is primarily managed by infectious disease specialists, gastroenterologists, and tropical medicine clinicians; surgical input is required for liver abscess complications or fulminant colitis.",
-
   "typesClassification": [
-    { "type": "Asymptomatic intestinal infection (cyst passers)", "description": "Approximately 90% of E. histolytica infections. Carriers shed cysts but have no symptoms; nevertheless they require treatment with a luminal agent to prevent later invasive disease and onward transmission." },
-    { "type": "Amebic colitis (non-dysenteric)", "description": "Gradual onset over 1-3 weeks of crampy abdominal pain and loose stools, sometimes with mucus. Patients are systemically well. Mimics inflammatory bowel disease — empirical steroids can be catastrophic." },
-    { "type": "Amebic dysentery", "description": "Frequent small-volume bloody stools with mucus, severe lower abdominal cramping, tenesmus, and sometimes fever. Fulminant necrotizing colitis is a rare but lethal complication with mortality over 50%." },
-    { "type": "Ameboma", "description": "Localized amebic granulomatous mass in the colon, most often cecum, that mimics carcinoma on imaging and endoscopy. Resolves with anti-amebic therapy alone — surgery is rarely required." },
-    { "type": "Amebic liver abscess", "description": "The most common extraintestinal manifestation, occurring in 1-10% of invasive infections. Single right-lobe abscess in 80%. Presents with right upper quadrant pain, fever, hepatomegaly, and elevated alkaline phosphatase. Mortality under 1% with prompt treatment, but rises if abscess ruptures into pleura, pericardium, or peritoneum." },
-    { "type": "Pleuropulmonary amebiasis", "description": "Direct extension of liver abscess through the diaphragm into pleura or lung, producing empyema or hepatobronchial fistula with characteristic 'anchovy paste' sputum." }
+    {
+      "type": "Asymptomatic intestinal infection (cyst passers)",
+      "description": "Approximately 90% of E. histolytica infections. Carriers shed cysts but have no symptoms; nevertheless they require treatment with a luminal agent to prevent later invasive disease and onward transmission."
+    },
+    {
+      "type": "Amebic colitis (non-dysenteric)",
+      "description": "Gradual onset over 1-3 weeks of crampy abdominal pain and loose stools, sometimes with mucus. Patients are systemically well. Mimics inflammatory bowel disease — empirical steroids can be catastrophic."
+    },
+    {
+      "type": "Amebic dysentery",
+      "description": "Frequent small-volume bloody stools with mucus, severe lower abdominal cramping, tenesmus, and sometimes fever. Fulminant necrotizing colitis is a rare but lethal complication with mortality over 50%."
+    },
+    {
+      "type": "Ameboma",
+      "description": "Localized amebic granulomatous mass in the colon, most often cecum, that mimics carcinoma on imaging and endoscopy. Resolves with anti-amebic therapy alone — surgery is rarely required."
+    },
+    {
+      "type": "Amebic liver abscess",
+      "description": "The most common extraintestinal manifestation, occurring in 1-10% of invasive infections. Single right-lobe abscess in 80%. Presents with right upper quadrant pain, fever, hepatomegaly, and elevated alkaline phosphatase. Mortality under 1% with prompt treatment, but rises if abscess ruptures into pleura, pericardium, or peritoneum."
+    },
+    {
+      "type": "Pleuropulmonary amebiasis",
+      "description": "Direct extension of liver abscess through the diaphragm into pleura or lung, producing empyema or hepatobronchial fistula with characteristic 'anchovy paste' sputum."
+    }
   ],
-
   "primarySymptoms": [
     "Gradual onset over 1-4 weeks of crampy abdominal pain and loose stools — slower than the abrupt presentation of bacterial dysentery, helping distinguish amebic from shigella or salmonella colitis.",
     "Bloody mucoid diarrhea with small-volume stools and tenesmus — the classic amebic dysentery picture, often 6-10 stools per day with visible blood and mucus.",
@@ -56,7 +68,6 @@
     "Severe abdominal distension, peritoneal signs, and shock in fulminant amebic colitis with bowel perforation — mortality exceeds 50% even with surgery.",
     "Painful perianal or genital ulcers in cutaneous amebiasis — rare, usually from contiguous spread or autoinoculation in untreated invasive disease."
   ],
-
   "earlyWarningSigns": [
     "Persistent diarrhea lasting more than 7 days after travel to a region with poor sanitation",
     "Bloody mucus in stool with crampy lower abdominal pain, particularly in returned travelers or recent migrants",
@@ -64,7 +75,6 @@
     "Asymptomatic stool finding of Entamoeba cysts on routine ova-and-parasite examination — speciation testing is needed before treatment decisions",
     "Diarrheal symptoms that fail to respond to empirical antibiotics targeting bacterial dysentery"
   ],
-
   "emergencySigns": [
     "Severe abdominal pain, rigid abdomen, fever, and shock — possible amebic colonic perforation or peritonitis requiring emergency laparotomy",
     "Sudden right upper quadrant pain with breathlessness or shock — rupture of amebic liver abscess into pleura, pericardium, or peritoneum",
@@ -72,7 +82,6 @@
     "Profuse bloody diarrhea with signs of hypovolemic shock — fulminant amebic dysentery requires hospital admission and IV resuscitation",
     "New focal neurological signs in a patient with amebic disease — rare brain abscess requires urgent imaging and neurosurgical input"
   ],
-
   "causes": [
     {
       "cause": "Ingestion of Entamoeba histolytica cysts in contaminated food or water",
@@ -95,18 +104,48 @@
       "description": "Corticosteroids and immunosuppressive therapy increase the risk of fulminant amebic colitis many-fold. This is why distinguishing inflammatory bowel disease from amebic colitis is critical before initiating empirical steroids in returned travelers."
     }
   ],
-
   "riskFactors": [
-    { "factor": "Residence in or travel to endemic regions (South Asia, sub-Saharan Africa, Latin America)", "category": "environmental", "description": "Prevalence of E. histolytica seropositivity in highly endemic areas exceeds 25% in some communities. Duration of stay and food-water hygiene during travel modify risk." },
-    { "factor": "Poor sanitation and lack of access to safe drinking water", "category": "environmental", "description": "Communities relying on surface water, untreated wells, or open defecation have substantially higher transmission. UN data tie cyst burden to sanitation infrastructure metrics." },
-    { "factor": "Living in or working in institutional settings", "category": "environmental", "description": "Day-care centers, mental health institutions, and refugee camps have documented outbreaks where shared bathrooms and reduced hand-hygiene compliance enable transmission." },
-    { "factor": "Men who have sex with men (oral-anal contact)", "category": "modifiable", "description": "Documented increased seroprevalence and outbreak clusters; CDC includes amebiasis in differentials for proctocolitis in this population." },
-    { "factor": "Immunosuppression (corticosteroids, HIV/AIDS, malnutrition)", "category": "modifiable", "description": "Steroids increase fulminant colitis risk dramatically; HIV does not increase acquisition but worsens severity. Malnourished children have higher mortality from invasive disease." },
-    { "factor": "Male sex (for liver abscess)", "category": "non-modifiable", "description": "Amebic liver abscess shows a striking 7-10:1 male-to-female ratio, attributed to hormonal effects on hepatocyte susceptibility and possibly alcohol intake. Intestinal amebiasis has roughly equal sex distribution." },
-    { "factor": "Alcohol use disorder", "category": "modifiable", "description": "Alcohol-induced hepatocyte damage may facilitate hepatic seeding by trophozoites; observational data show higher abscess rates in heavy drinkers." },
-    { "factor": "Pregnancy", "category": "non-modifiable", "description": "Pregnancy is associated with more severe invasive amebiasis, possibly due to cell-mediated immune modulation. Maternal mortality from amebic colitis in pregnancy is reported at 15-25%." }
+    {
+      "factor": "Residence in or travel to endemic regions (South Asia, sub-Saharan Africa, Latin America)",
+      "category": "environmental",
+      "description": "Prevalence of E. histolytica seropositivity in highly endemic areas exceeds 25% in some communities. Duration of stay and food-water hygiene during travel modify risk."
+    },
+    {
+      "factor": "Poor sanitation and lack of access to safe drinking water",
+      "category": "environmental",
+      "description": "Communities relying on surface water, untreated wells, or open defecation have substantially higher transmission. UN data tie cyst burden to sanitation infrastructure metrics."
+    },
+    {
+      "factor": "Living in or working in institutional settings",
+      "category": "environmental",
+      "description": "Day-care centers, mental health institutions, and refugee camps have documented outbreaks where shared bathrooms and reduced hand-hygiene compliance enable transmission."
+    },
+    {
+      "factor": "Men who have sex with men (oral-anal contact)",
+      "category": "modifiable",
+      "description": "Documented increased seroprevalence and outbreak clusters; CDC includes amebiasis in differentials for proctocolitis in this population."
+    },
+    {
+      "factor": "Immunosuppression (corticosteroids, HIV/AIDS, malnutrition)",
+      "category": "modifiable",
+      "description": "Steroids increase fulminant colitis risk dramatically; HIV does not increase acquisition but worsens severity. Malnourished children have higher mortality from invasive disease."
+    },
+    {
+      "factor": "Male sex (for liver abscess)",
+      "category": "non-modifiable",
+      "description": "Amebic liver abscess shows a striking 7-10:1 male-to-female ratio, attributed to hormonal effects on hepatocyte susceptibility and possibly alcohol intake. Intestinal amebiasis has roughly equal sex distribution."
+    },
+    {
+      "factor": "Alcohol use disorder",
+      "category": "modifiable",
+      "description": "Alcohol-induced hepatocyte damage may facilitate hepatic seeding by trophozoites; observational data show higher abscess rates in heavy drinkers."
+    },
+    {
+      "factor": "Pregnancy",
+      "category": "non-modifiable",
+      "description": "Pregnancy is associated with more severe invasive amebiasis, possibly due to cell-mediated immune modulation. Maternal mortality from amebic colitis in pregnancy is reported at 15-25%."
+    }
   ],
-
   "affectedDemographics": [
     "Approximately 480 million people globally carry Entamoeba species; only about 10% are true E. histolytica per molecular speciation",
     "Highest mortality in young children in highly endemic regions — Bangladesh cohort data show 4-10% cumulative incidence of E. histolytica diarrhea per year in preschoolers",
@@ -114,9 +153,7 @@
     "Amebic liver abscess shows a 7-10:1 male predominance; intestinal disease has approximately equal sex distribution",
     "Mexico, Bangladesh, India, Vietnam, and Egypt have documented adult E. histolytica seroprevalence above 25%"
   ],
-
   "diagnosisOverview": "Diagnosing amebiasis requires distinguishing E. histolytica from morphologically identical non-pathogenic Entamoeba species — a task that traditional stool microscopy cannot do reliably. Microscopy that identifies 'Entamoeba histolytica/dispar/moshkovskii' on the basis of cyst morphology is reported in many laboratories worldwide and overestimates true infection rates roughly 10-fold. The 2015 WHO position and the CDC current recommendation is to use either a stool antigen test specific for the E. histolytica galactose/N-acetylgalactosamine lectin or stool PCR to confirm the pathogen. Antigen tests have sensitivity 80-95% and specificity over 90% on fresh unpreserved stool; PCR exceeds 90% sensitivity and remains positive on preserved or refrigerated specimens. For amebic colitis, colonoscopy can reveal flask-shaped ulcers with relatively normal intervening mucosa; biopsy edges show trophozoites with ingested erythrocytes — pathognomonic when seen. For amebic liver abscess, ultrasound is the first-line imaging modality, showing a round or oval hypoechoic lesion typically in the right lobe; CT and MRI further characterize the lesion and exclude pyogenic abscess. Serology (indirect hemagglutination assay or ELISA) is highly sensitive (over 90%) in invasive disease, especially liver abscess, but does not distinguish past from current infection in endemic populations. The combination of compatible imaging plus positive serology plus exclusion of pyogenic abscess by clinical context is usually diagnostic. Differential diagnoses include shigellosis, salmonellosis, campylobacter, inflammatory bowel disease, ischemic colitis, and pseudomembranous colitis for intestinal disease, and pyogenic liver abscess, hydatid cyst, and hepatocellular carcinoma with central necrosis for liver disease.",
-
   "diagnosticTests": [
     {
       "test": "Stool E. histolytica-specific antigen ELISA",
@@ -154,9 +191,7 @@
       "whatToExpect": "Image-guided percutaneous needle aspiration under local anesthetic, taking 30-45 minutes. Drain may be left in place. Hospital stay 24-48 hours."
     }
   ],
-
   "treatmentOverview": "Effective amebiasis treatment requires two sequential drug classes: a tissue-acting nitroimidazole to kill invasive trophozoites in mucosa and abscesses, followed by a luminal agent to eradicate intraluminal cysts that the tissue agent does not reach. Skipping the luminal phase leaves cysts in the colon, leading to relapse or onward transmission. The WHO and CDC standard regimen is metronidazole 750 mg orally three times daily for 7-10 days, followed by paromomycin 25-35 mg/kg/day in three divided doses for 7 days. Tinidazole 2 g daily for 3-5 days is equally effective and better tolerated than metronidazole, with fewer side effects and shorter duration; it is the first-line agent in many countries. Diloxanide furoate 500 mg three times daily for 10 days is an alternative luminal agent where available. Asymptomatic cyst passers — including all stool-antigen-positive contacts — should be treated with a luminal agent alone (paromomycin or diloxanide furoate) to prevent invasive disease and onward transmission. For amebic liver abscess, metronidazole or tinidazole alone produces clinical and radiographic resolution in over 90% of cases without drainage. Therapeutic aspiration is reserved for large abscesses (>10 cm), left-lobe abscesses with risk of pericardial rupture, failed response to medical therapy after 5-7 days, suspected pyogenic etiology, or imminent rupture. Surgery is rarely needed — reserved for fulminant colitis with perforation, severe hemorrhage, or toxic megacolon, all of which carry mortality over 50% even with operation. Adjunctive measures include adequate hydration, electrolyte correction, and bowel rest in severe colitis. Steroids must be avoided unless invasive amebiasis has been excluded — steroid administration to a patient with unrecognized amebic colitis can precipitate fulminant disease. Patients should be retested for stool antigen 4-6 weeks after completing treatment to confirm cure; cysts shed during convalescence indicate inadequate luminal clearance.",
-
   "medicalTreatments": [
     {
       "name": "Metronidazole (750 mg three times daily for 7-10 days for invasive disease; 500-750 mg three times daily for 5-7 days for liver abscess)",
@@ -189,7 +224,6 @@
       "effectiveness": "Equivalent efficacy to oral; choice driven by tolerability and ability to swallow."
     }
   ],
-
   "surgicalOptions": [
     {
       "name": "Emergency laparotomy for fulminant amebic colitis with perforation",
@@ -202,15 +236,14 @@
       "successRate": "When indicated, mortality remains 10-15% in the rupture setting; uncomplicated medically-managed abscess has under 1% mortality."
     }
   ],
-
   "alternativeTreatments": [
-    { "name": "Adequate oral or IV rehydration with electrolyte replacement", "description": "Essential supportive measure in amebic dysentery — diarrheal fluid loss can be substantial. WHO oral rehydration solution corrects mild-to-moderate dehydration; severe cases require IV fluids until volume status normalizes." }
+    {
+      "name": "Adequate oral or IV rehydration with electrolyte replacement",
+      "description": "Essential supportive measure in amebic dysentery — diarrheal fluid loss can be substantial. WHO oral rehydration solution corrects mild-to-moderate dehydration; severe cases require IV fluids until volume status normalizes."
+    }
   ],
-
   "whySeeSpecialist": "Infectious disease or tropical medicine specialist input is recommended for any imaging-confirmed amebic liver abscess, any suspected amebic colitis requiring distinction from inflammatory bowel disease before starting steroids, any failure of first-line therapy, any case in pregnancy or immunosuppression, and any institutional outbreak. Primary care manages straightforward asymptomatic cyst passage well using standard luminal regimens.",
-
   "doctorSelectionGuide": "Look for a clinician with access to E. histolytica-specific antigen testing or PCR — many regions still rely on microscopy that overdiagnoses non-pathogenic Entamoeba. For suspected liver abscess, interventional radiology backup is essential. In endemic countries, public hospitals and government infectious disease departments routinely handle large case volumes and tend to have established protocols.",
-
   "preventionStrategies": [
     "Drink only boiled, bottled, or filtered (≤1 micron) water when traveling in endemic regions — chlorination at standard doses does not reliably kill amebic cysts",
     "Eat only thoroughly cooked food served hot; avoid raw vegetables and salads washed with local water",
@@ -219,7 +252,6 @@
     "Test and treat asymptomatic household contacts of confirmed cases — cyst passers sustain transmission within families",
     "Improve community sanitation through sealed sewage, piped water, and education on hand hygiene — population-level interventions reduce endemic incidence substantially"
   ],
-
   "lifestyleModifications": [
     "Hydrate aggressively during diarrheal illness with oral rehydration solution; severe dehydration warrants medical assessment",
     "Avoid antimotility drugs (loperamide, diphenoxylate) in amebic dysentery — they prolong toxin contact with mucosa and can worsen disease",
@@ -228,7 +260,6 @@
     "Maintain household hygiene during convalescence — patients can shed cysts for weeks after symptom resolution",
     "Return for follow-up stool antigen test at 4-6 weeks post-treatment to confirm parasitological cure"
   ],
-
   "dietRecommendations": {
     "recommended": [
       "Oral rehydration solution during diarrheal illness — restores fluid, sodium, and glucose-coupled absorption",
@@ -244,9 +275,7 @@
       "High-fiber and high-fat foods during acute diarrheal phase — delays gut recovery"
     ]
   },
-
   "exerciseGuidelines": "Rest during acute disease and abscess resolution. Light activity may resume once fever and diarrhea have settled, typically within 1-2 weeks. After amebic liver abscess, avoid heavy lifting and contact sport for 4-6 weeks to reduce risk of bleeding into a partially-resolved cavity.",
-
   "dailyManagement": [
     "Take metronidazole or tinidazole with food to reduce nausea; avoid alcohol throughout treatment",
     "Complete the full luminal-agent course even when symptoms have resolved — cysts persist after invasion clears",
@@ -254,11 +283,8 @@
     "Track stool frequency, blood, and any new fever; report worsening symptoms promptly",
     "Schedule follow-up imaging for liver abscess at 4-12 weeks and a confirmatory stool test at 4-6 weeks"
   ],
-
   "prognosis": "With timely diagnosis and adequate combined tissue-plus-luminal therapy, the prognosis for amebiasis is excellent. Amebic colitis resolves clinically within 3-7 days of starting metronidazole or tinidazole, with parasitological cure exceeding 90% when paired with a luminal agent. Uncomplicated amebic liver abscess has mortality under 1% with prompt medical treatment; radiographic cavity resolution lags clinical recovery by months but typically completes by 9 months. Mortality rises sharply with complications: fulminant colitis with perforation exceeds 50%, rupture of liver abscess into pericardium can exceed 70%, and pleuropulmonary disease carries 15-30% mortality even with treatment. Risk factors for poor outcome include delayed diagnosis (especially when steroids were given for misdiagnosed IBD), pregnancy, malnutrition, age extremes, large or multiple abscesses, and immunosuppression. Recurrence is uncommon after adequate treatment but reflects ongoing exposure in endemic regions — prevention focuses on water and food safety rather than long-term prophylaxis. Children in highly endemic communities can have repeated infections; cumulative growth and cognitive impacts of recurrent diarrheal disease are well-documented.",
-
   "recoveryTimeline": "Clinical improvement in amebic colitis begins within 24-48 hours of starting nitroimidazole therapy; full symptom resolution within 7-10 days. Amebic liver abscess pain and fever resolve within 3-7 days; radiographic cavity persists for 3-9 months, with progressive shrinkage on serial ultrasound. The luminal-agent course adds 7-10 days. Confirmatory stool testing is recommended 4-6 weeks after treatment completion. Return to normal activities is generally possible within 2 weeks of starting therapy for uncomplicated colitis; 4-6 weeks for liver abscess.",
-
   "complications": [
     "Fulminant necrotizing amebic colitis with perforation, peritonitis, and septic shock — mortality over 50% even with surgery",
     "Amebic liver abscess complications: rupture into pleura (empyema), pericardium (cardiac tamponade), or peritoneum (peritonitis)",
@@ -269,35 +295,83 @@
     "Post-amebic colitis — persistent symptoms after cure, possibly from residual mucosal injury, mimicking irritable bowel syndrome",
     "Growth and cognitive impairment in children with repeated infections in endemic communities"
   ],
-
   "supportResources": [
-    { "name": "CDC — Amebiasis (Parasites)", "url": "https://www.cdc.gov/parasites/amebiasis/", "description": "Authoritative US patient and clinician guidance on diagnosis, treatment, and prevention." },
-    { "name": "WHO — Amebiasis Information", "url": "https://www.who.int/health-topics/neglected-tropical-diseases", "description": "Global health context and prevention recommendations relevant to endemic countries." },
-    { "name": "International Society for Travel Medicine", "url": "https://www.istm.org/", "description": "Pre-travel and post-travel resources for travelers visiting endemic regions." }
+    {
+      "name": "CDC — Amebiasis (Parasites)",
+      "url": "https://www.cdc.gov/parasites/amebiasis/",
+      "description": "Authoritative US patient and clinician guidance on diagnosis, treatment, and prevention."
+    },
+    {
+      "name": "WHO — Amebiasis Information",
+      "url": "https://www.who.int/health-topics/neglected-tropical-diseases",
+      "description": "Global health context and prevention recommendations relevant to endemic countries."
+    },
+    {
+      "name": "International Society for Travel Medicine",
+      "url": "https://www.istm.org/",
+      "description": "Pre-travel and post-travel resources for travelers visiting endemic regions."
+    }
   ],
-
   "confusedWithConditions": [
-    { "slug": "salmonella-infection", "name": "Salmonella Infection", "keyDifference": "Salmonella enteritis tends to present abruptly with fever, abdominal cramps, and watery (sometimes bloody) diarrhea within 12-72 hours of exposure, lasts 4-7 days, and self-resolves in most. Amebiasis has insidious onset over 1-4 weeks, often blood and mucus without fever, and requires antiparasitic therapy. Stool culture diagnoses Salmonella; antigen/PCR diagnoses amebiasis." },
-    { "slug": "typhoid-fever", "name": "Typhoid Fever", "keyDifference": "Typhoid fever is a systemic illness with sustained fever, relative bradycardia, abdominal pain, hepatosplenomegaly, and sometimes constipation more than diarrhea. Blood culture or Widal test confirms typhoid. Amebic dysentery is a localized colitis with blood/mucus stools but often without prominent fever." },
-    { "slug": "giardiasis-lambliasis-a071", "name": "Giardiasis", "keyDifference": "Giardiasis presents with greasy, foul-smelling, non-bloody stools, bloating, and weight loss after travel — there is no invasive colitis, no liver abscess, and no blood in stool. Stool antigen for Giardia identifies it; treatment is metronidazole or tinidazole but no luminal agent is needed." },
-    { "slug": "acute-amebic-dysentery-a060", "name": "Acute Amebic Dysentery (ICD A06.0)", "keyDifference": "This is the same disease (invasive amebic colitis with dysentery) under a different ICD-10 code. Identical diagnosis and management." }
+    {
+      "slug": "salmonella-infection",
+      "name": "Salmonella Infection",
+      "keyDifference": "Salmonella enteritis tends to present abruptly with fever, abdominal cramps, and watery (sometimes bloody) diarrhea within 12-72 hours of exposure, lasts 4-7 days, and self-resolves in most. Amebiasis has insidious onset over 1-4 weeks, often blood and mucus without fever, and requires antiparasitic therapy. Stool culture diagnoses Salmonella; antigen/PCR diagnoses amebiasis."
+    },
+    {
+      "slug": "typhoid-fever",
+      "name": "Typhoid Fever",
+      "keyDifference": "Typhoid fever is a systemic illness with sustained fever, relative bradycardia, abdominal pain, hepatosplenomegaly, and sometimes constipation more than diarrhea. Blood culture or Widal test confirms typhoid. Amebic dysentery is a localized colitis with blood/mucus stools but often without prominent fever."
+    },
+    {
+      "slug": "giardiasis-lambliasis-a071",
+      "name": "Giardiasis",
+      "keyDifference": "Giardiasis presents with greasy, foul-smelling, non-bloody stools, bloating, and weight loss after travel — there is no invasive colitis, no liver abscess, and no blood in stool. Stool antigen for Giardia identifies it; treatment is metronidazole or tinidazole but no luminal agent is needed."
+    },
+    {
+      "slug": "acute-amebic-dysentery-a060",
+      "name": "Acute Amebic Dysentery (ICD A06.0)",
+      "keyDifference": "This is the same disease (invasive amebic colitis with dysentery) under a different ICD-10 code. Identical diagnosis and management."
+    }
   ],
-
   "coOccurringConditions": [
-    { "slug": "amebic-liver-abscess-a064", "name": "Amebic Liver Abscess" },
-    { "slug": "hiv-aids", "name": "HIV/AIDS" }
+    {
+      "slug": "amebic-liver-abscess-a064",
+      "name": "Amebic Liver Abscess"
+    },
+    {
+      "slug": "hiv-aids",
+      "name": "HIV/AIDS"
+    }
   ],
-
   "relatedConditions": [
-    { "slug": "amebic-liver-abscess-a064", "name": "Amebic Liver Abscess", "relevance": "The most common extraintestinal complication of E. histolytica infection — occurs in 1-10% of invasive cases and warrants the same nitroimidazole-plus-luminal-agent regimen." },
-    { "slug": "salmonella-infection", "name": "Salmonella Infection", "relevance": "Major differential in travelers and patients with bloody or febrile diarrhea — stool culture is the discriminator." },
-    { "slug": "typhoid-fever", "name": "Typhoid Fever", "relevance": "Endemic in the same regions; sometimes co-infects travelers and migrants. Both require attention to food/water hygiene." },
-    { "slug": "foodborne-illness", "name": "Foodborne Illness", "relevance": "Amebiasis is the parasitic tail of the broader foodborne diarrhea spectrum; prevention strategies overlap." },
-    { "slug": "giardiasis-lambliasis-a071", "name": "Giardiasis", "relevance": "Common co-traveler parasitic infection; both transmitted by fecal-oral route through contaminated water and food." }
+    {
+      "slug": "amebic-liver-abscess-a064",
+      "name": "Amebic Liver Abscess",
+      "relevance": "The most common extraintestinal complication of E. histolytica infection — occurs in 1-10% of invasive cases and warrants the same nitroimidazole-plus-luminal-agent regimen."
+    },
+    {
+      "slug": "salmonella-infection",
+      "name": "Salmonella Infection",
+      "relevance": "Major differential in travelers and patients with bloody or febrile diarrhea — stool culture is the discriminator."
+    },
+    {
+      "slug": "typhoid-fever",
+      "name": "Typhoid Fever",
+      "relevance": "Endemic in the same regions; sometimes co-infects travelers and migrants. Both require attention to food/water hygiene."
+    },
+    {
+      "slug": "foodborne-illness",
+      "name": "Foodborne Illness",
+      "relevance": "Amebiasis is the parasitic tail of the broader foodborne diarrhea spectrum; prevention strategies overlap."
+    },
+    {
+      "slug": "giardiasis-lambliasis-a071",
+      "name": "Giardiasis",
+      "relevance": "Common co-traveler parasitic infection; both transmitted by fecal-oral route through contaminated water and food."
+    }
   ],
-
   "linkedTreatmentSlugs": [],
-
   "faqs": [
     {
       "question": "What is amebiasis?",
@@ -400,37 +474,67 @@
       "schemaEligible": true
     }
   ],
-
   "simpleName": "Amebiasis (Entamoeba histolytica Infection)",
-
   "regionalNames": [
-    { "name": "अमीबीयासिस", "region": "India (Hindi-speaking regions)", "language": "hi" },
-    { "name": "Amebiasis / Amibiasis", "region": "Latin America", "language": "es" },
-    { "name": "Amibiase", "region": "France", "language": "fr" }
+    {
+      "name": "अमीबीयासिस",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Amebiasis / Amibiasis",
+      "region": "Latin America",
+      "language": "es"
+    },
+    {
+      "name": "Amibiase",
+      "region": "France",
+      "language": "fr"
+    }
   ],
-
   "searchTags": [
-    "amebiasis", "amoebiasis", "entamoeba histolytica", "amebic dysentery", "amebic colitis",
-    "amebic liver abscess", "metronidazole", "tinidazole", "paromomycin", "diloxanide furoate",
-    "traveler diarrhea", "parasitic dysentery", "bloody diarrhea"
+    "amebiasis",
+    "amoebiasis",
+    "entamoeba histolytica",
+    "amebic dysentery",
+    "amebic colitis",
+    "amebic liver abscess",
+    "metronidazole",
+    "tinidazole",
+    "paromomycin",
+    "diloxanide furoate",
+    "traveler diarrhea",
+    "parasitic dysentery",
+    "bloody diarrhea"
   ],
-
   "symptomKeywords": [
-    "bloody diarrhea", "mucus stool", "right upper quadrant pain", "abdominal cramps",
-    "tenesmus", "fever liver pain", "traveler diarrhea", "weight loss diarrhea"
+    "bloody diarrhea",
+    "mucus stool",
+    "right upper quadrant pain",
+    "abdominal cramps",
+    "tenesmus",
+    "fever liver pain",
+    "traveler diarrhea",
+    "weight loss diarrhea"
   ],
-
   "metaTitle": "Amebiasis: Symptoms, Causes & Treatment | aihealz",
   "metaDescription": "Amebiasis: Entamoeba histolytica colitis, dysentery, and liver abscess. Diagnosis, antiparasitic treatment, and prevention reviewed by our medical board.",
-
   "keywords": [
-    "amebiasis", "amoebiasis", "amebic dysentery", "entamoeba histolytica", "amebic colitis",
-    "amebic liver abscess", "metronidazole amebiasis", "tinidazole", "paromomycin",
-    "traveler diarrhea", "parasitic dysentery", "amebiasis treatment", "amebiasis prevention"
+    "amebiasis",
+    "amoebiasis",
+    "amebic dysentery",
+    "entamoeba histolytica",
+    "amebic colitis",
+    "amebic liver abscess",
+    "metronidazole amebiasis",
+    "tinidazole",
+    "paromomycin",
+    "traveler diarrhea",
+    "parasitic dysentery",
+    "amebiasis treatment",
+    "amebiasis prevention"
   ],
-
   "lastReviewed": "2026-05-13",
-
   "sources": [
     {
       "title": "Stanley SL Jr. Amoebiasis. Lancet. 2003;361(9362):1025-1034.",
@@ -472,5 +576,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/23061067/",
       "accessedDate": "2026-05-13"
     }
-  ]
+  ],
+  "images": []
 }
