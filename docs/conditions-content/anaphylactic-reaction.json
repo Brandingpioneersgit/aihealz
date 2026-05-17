@@ -1,0 +1,537 @@
+{
+  "_meta": {
+    "slug": "anaphylactic-reaction",
+    "tier": 1,
+    "headTerm": "anaphylactic reaction",
+    "longTailKeywords": [
+      "anaphylactic reaction symptoms",
+      "anaphylactic reaction treatment",
+      "anaphylactic reaction first aid",
+      "epinephrine administration anaphylaxis",
+      "biphasic anaphylactic reaction",
+      "anaphylactic reaction observation time",
+      "post-anaphylaxis workup",
+      "anaphylactic reaction icd 10",
+      "anaphylactic reaction stages",
+      "anaphylactic reaction recovery"
+    ],
+    "primarySpecialty": "Emergency Medicine / Allergy & Immunology",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-event-focused-eeat",
+    "authoringNotes": "This page focuses on the acute reaction event — bedside recognition, IM epinephrine administration technique, biphasic course, ED observation, and post-event allergy workup. The sibling page /anaphylaxis covers the broader syndrome, mechanisms, triggers, and long-term management. Cross-linked. Citations: 2020 WAO Anaphylaxis Guidance (Cardona), 2020 AAAAI/ACAAI Joint Task Force Practice Parameter Update (Shaker), 2006 NIAID/FAAN criteria (Sampson), 2019 ICON update (Turner), Simons IM epinephrine pharmacokinetics, Pumphrey fatal-reaction series, Lieberman/Alqurashi biphasic, EAACI 2014 anaphylaxis guideline (Muraro)."
+  },
+
+  "h1Title": "Anaphylactic Reaction: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Emergency Medicine / Allergy & Immunology",
+
+  "heroOverview": "An anaphylactic reaction is an acute, multi-system hypersensitivity event that can collapse the airway and circulation within minutes of allergen exposure. US emergency departments treat an estimated 0.95 million anaphylaxis-coded visits per year, and the per-visit case-fatality is roughly 0.3% — overwhelmingly tied to delayed epinephrine. The episode typically begins within 5-30 minutes of food or drug exposure (seconds to minutes after a sting or IV agent), with hives, throat tightness, wheeze, vomiting, and a falling blood pressure appearing together. Intramuscular epinephrine 0.3-0.5 mg into the mid-outer thigh is the only first-line treatment; antihistamines and steroids do not reverse airway or circulatory collapse. After acute recovery, every patient needs at least four hours of monitored observation, two refilled auto-injectors, a written action plan, and allergist referral for trigger identification.",
+
+  "keyStats": {
+    "prevalence": "Roughly 0.95 million US ED visits per year coded for anaphylaxis (Motosue 2017, JACI: In Practice)",
+    "demographics": "Food triggers dominate in children and adolescents; drug and venom triggers dominate in adults over 50",
+    "avgAge": "Bimodal — food-triggered events peak before age 18; drug-, venom-, and contrast-triggered events peak between 40 and 70",
+    "globalCases": "Lifetime risk 1.6-5.1% of adults; case-fatality 0.7-2 per million person-years (Wood 2014, JACI)"
+  },
+
+  "definition": "An anaphylactic reaction (ICD-10: T78.2 anaphylactic reaction, unspecified) is a discrete, severe, acute systemic hypersensitivity event that meets the 2006 NIAID/FAAN diagnostic criteria endorsed by the 2020 World Allergy Organization update. Three clinical scenarios establish the diagnosis at the bedside: acute onset involving skin or mucosa plus airway or circulatory compromise; two or more organ systems affected after exposure to a likely allergen; or isolated hypotension after exposure to a known allergen for that patient. The episode is driven by abrupt release of histamine, tryptase, leukotrienes, prostaglandin D2, and platelet-activating factor from tissue mast cells and basophils, producing simultaneous vasodilation, capillary leak, smooth-muscle contraction, and mucus hypersecretion across the skin, upper and lower airway, gut, and cardiovascular system. The event itself is the focus of this page — bedside recognition, intramuscular epinephrine, supportive resuscitation, monitored observation for biphasic recurrence, and structured discharge planning. Allergy and immunology specialists then take over the longer-term workup: trigger confirmation by skin or specific-IgE testing, action-plan tailoring, auto-injector training, and immunotherapy where appropriate. Emergency medicine, anesthesia, and critical care manage the acute event when it occurs in healthcare settings.",
+
+  "typesClassification": [
+    { "type": "Uniphasic reaction", "description": "A single episode that resolves within minutes to a few hours of epinephrine and supportive care, with no symptom recurrence during monitored observation. This is the pattern in roughly 80% of treated cases." },
+    { "type": "Biphasic reaction", "description": "Recurrence of objective signs 1-72 hours (median 8-10 hours) after the initial event resolves, without re-exposure to the trigger. Affects approximately 5-20% of episodes and is more frequent when initial epinephrine was delayed or the first reaction was severe." },
+    { "type": "Protracted reaction", "description": "Signs persist for hours or days despite repeated epinephrine doses, requiring continuous epinephrine infusion, additional vasopressors, and intensive care admission. Most often seen with venom, contrast, or perioperative drug triggers." },
+    { "type": "Refractory anaphylactic reaction", "description": "Symptoms continue after three or more appropriately dosed intramuscular epinephrine injections and aggressive fluid resuscitation. EAACI 2021 defines this as a distinct category requiring escalation to IV epinephrine infusion and intensive monitoring." },
+    { "type": "Reaction without skin findings", "description": "Roughly 10-20% of true anaphylactic reactions occur without urticaria or angioedema, particularly drug-induced and perioperative events. Diagnosis rests on respiratory or circulatory signs after a probable trigger." }
+  ],
+
+  "primarySymptoms": [
+    "Generalized urticaria or flushing that appears within 5-30 minutes of exposure and spreads across the trunk and limbs — present in roughly 85-90% of reactions and often the first visible sign.",
+    "Angioedema of the lips, tongue, uvula, or periorbital tissue evolving over minutes, with a muffled voice, drooling, or stridor signaling upper-airway involvement that can become unsalvageable within minutes.",
+    "Wheeze, chest tightness, dyspnea, or audible inspiratory stridor reflecting lower-airway bronchospasm and laryngeal edema — the dominant cause of fatal food-triggered reactions in adolescents and young adults.",
+    "Light-headedness, syncope, tachycardia, weak peripheral pulses, or frank collapse from massive vasodilation and fluid extravasation; up to 35% of intravascular volume can third-space within 10 minutes.",
+    "Crampy abdominal pain, nausea, repeated vomiting, or explosive diarrhea within 30 minutes of food or oral drug exposure — gastrointestinal involvement appears in 30-45% of reactions and is the easiest organ system to miss.",
+    "A sense of impending doom, severe anxiety, or behavioural change preceding objective signs in adults; sudden quietness, limpness, pallor, or inconsolable crying in infants and toddlers carries the same diagnostic weight.",
+    "Pruritus of the palms, soles, scalp, or genitals before any rash is visible — an early signal in patients already aware of their allergy.",
+    "Conjunctival redness, watering, periorbital itching, and rapid nasal congestion that may precede the systemic phase.",
+    "Uterine cramping or transient vaginal bleeding in adult women when smooth-muscle effects dominate.",
+    "Cardiac chest pain or ischemic ECG changes in adults with coronary disease — Kounis syndrome, where coronary spasm is triggered by mast-cell mediators during the reaction."
+  ],
+
+  "earlyWarningSigns": [
+    "Metallic taste, tingling lips or tongue, or itching of the palate within seconds to minutes of eating, taking medication, or being injected",
+    "Generalised palmar, plantar, scalp, or genital itching without a visible rash in someone with a known severe allergy",
+    "Throat clearing, a tickling sensation, or a subtle voice change pointing to early laryngeal involvement",
+    "Repeated sneezing, nasal blockage, or conjunctival redness after a probable exposure",
+    "Cramping abdominal pain or vomiting within 30 minutes of a meal that may have contained the suspected allergen"
+  ],
+
+  "emergencySigns": [
+    "Audible stridor, hoarseness, drooling, or rapidly enlarging tongue or lip swelling — give intramuscular epinephrine immediately and call emergency services",
+    "Wheeze, severe dyspnea, or oxygen saturation under 92% on room air after a probable trigger — treat as anaphylactic reaction, not as isolated asthma",
+    "Light-headedness, collapse, loss of consciousness, or cool, pale, clammy skin — supine positioning with legs raised, IM epinephrine, and emergency transport",
+    "Cardiac arrest in a known allergic person after exposure — start CPR, administer epinephrine if available, defibrillate any shockable rhythm",
+    "Severe vomiting and diarrhea with low blood pressure within minutes of a known trigger, even without skin signs — gut-isolated reactions are well-described and require epinephrine",
+    "Recurrence of any symptoms (rash, throat, wheeze, blood pressure drop) hours after apparent recovery — biphasic course demands immediate return to emergency care"
+  ],
+
+  "causes": [
+    {
+      "cause": "Food allergens",
+      "description": "The dominant trigger in children and the largest single trigger globally. Peanut, tree nuts, shellfish, fish, cow's milk, hen's egg, wheat, soy, and sesame account for over 90% of food-triggered reactions. Adolescent and young-adult deaths are overwhelmingly peanut and tree nut."
+    },
+    {
+      "cause": "Drugs and biologic agents",
+      "description": "Beta-lactam antibiotics, NSAIDs, neuromuscular blockers, platinum chemotherapy, monoclonal antibodies, intravenous iron preparations, and chlorhexidine in surgical settings. Perioperative anaphylaxis occurs in roughly 1 in 10,000-20,000 anesthetics with case-fatality near 4% (NAP6 audit 2018)."
+    },
+    {
+      "cause": "Hymenoptera insect venom",
+      "description": "Honeybees, yellowjackets, hornets, paper wasps, and imported fire ants. Systemic reactions occur in 0.4-3% of children and roughly 3% of adults after a sting, and venom is the leading cause of fatal anaphylactic reactions in adults across many European registries."
+    },
+    {
+      "cause": "Radiocontrast and infusion agents",
+      "description": "Iodinated contrast triggers reactions in 0.6-3% of recipients; severe reactions occur in roughly 0.04%. Gadolinium and barium are far safer but not zero risk. Most contrast reactions are non-IgE direct mast-cell activation rather than classic allergy."
+    },
+    {
+      "cause": "Latex and chlorhexidine",
+      "description": "Latex remains a residual perioperative trigger, especially in patients with multiple prior surgeries, healthcare workers, and children with spina bifida. Chlorhexidine — in skin preps, central-line dressings, and oral rinses — is an increasingly recognised perioperative cause."
+    },
+    {
+      "cause": "Cofactor-augmented reactions",
+      "description": "Some patients react only when a trigger is combined with a cofactor: exercise, NSAIDs, alcohol, infection, menstruation, or hot showers. Wheat-dependent exercise-induced anaphylaxis (omega-5 gliadin) is the classic example. Alpha-gal syndrome from tick bites causes delayed (3-6 hour) reactions to red meat."
+    },
+    {
+      "cause": "Idiopathic or mast-cell-driven events",
+      "description": "Recurrent reactions without identifiable allergen account for 20-30% of allergy-clinic referrals. Baseline serum tryptase above 11.4 ng/mL or a KIT D816V mutation warrants hematology evaluation for mastocytosis or hereditary alpha-tryptasemia."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Prior anaphylactic reaction", "category": "non-modifiable", "description": "The strongest predictor of a future severe event. Roughly 25-30% of patients with one episode have another within 5 years when avoidance and emergency planning are inadequate." },
+    { "factor": "Coexisting asthma, especially poorly controlled", "category": "modifiable", "description": "Asthma is present in over 70% of fatal food-anaphylaxis cases. Bronchospasm during a reaction is more severe and harder to reverse when baseline asthma control is poor." },
+    { "factor": "Adolescence and young adulthood with food allergy", "category": "non-modifiable", "description": "Ages 13-21 carry the highest case-fatality rate for food-induced reactions, driven by risk-taking around known allergens and a documented pattern of delayed epinephrine use." },
+    { "factor": "Mast-cell disorders and hereditary alpha-tryptasemia", "category": "genetic", "description": "Baseline tryptase over 11.4 ng/mL or known KIT D816V mutation increases the risk of severe and recurrent reactions, especially to hymenoptera venom." },
+    { "factor": "Beta-blocker or ACE-inhibitor therapy", "category": "modifiable", "description": "Beta-blockers blunt the response to epinephrine; ACE inhibitors impair compensatory bradykinin metabolism. Both are linked to more severe and prolonged reactions and slower recovery." },
+    { "factor": "Atopy (allergic rhinitis, eczema, asthma)", "category": "genetic", "description": "Strong family or personal history of atopy raises the risk of food and venom sensitisation, although atopy alone is not sufficient to cause a reaction." },
+    { "factor": "Healthcare and laboratory work with latex or chlorhexidine exposure", "category": "environmental", "description": "Repeated occupational exposure produced sensitisation in 5-15% of nurses and dental staff during the powdered-latex era and continues for chlorhexidine in surgical environments." },
+    { "factor": "Outdoor occupations and beekeeping", "category": "environmental", "description": "Beekeepers, gardeners, foresters, and field agricultural workers face higher venom exposure and elevated reaction risk." },
+    { "factor": "Recent tick bite in alpha-gal-endemic regions", "category": "environmental", "description": "Lone-star tick bites in the southeastern US and similar tick species elsewhere induce IgE to galactose-α-1,3-galactose, causing delayed reactions to mammalian meat." },
+    { "factor": "Prior tolerance break during home food reintroduction", "category": "modifiable", "description": "Children who outgrow milk or egg allergy and reintroduce too quickly at home, without supervised challenge, can react severely. Supervised challenges in an allergy clinic are far safer." }
+  ],
+
+  "affectedDemographics": [
+    "US lifetime prevalence 1.6-5.1% across population surveys (Wood JACI 2014; Decker Ann Allergy 2008)",
+    "Food-triggered reactions peak in children under 5 — peanut, milk, and egg dominate in this age group",
+    "Drug-triggered reactions predominate in adults over 50, with beta-lactams, NSAIDs, and contrast media leading",
+    "Venom-triggered reactions are most common in adult males with outdoor occupations or recreation",
+    "Black children in the US have higher rates of food-anaphylaxis emergency-department visits and case-fatality than white children, reflecting access disparities in epinephrine prescription and specialist follow-up"
+  ],
+
+  "diagnosisOverview": "An anaphylactic reaction is diagnosed at the bedside; no laboratory test is required before treatment, and waiting for confirmation is dangerous. The 2006 NIAID/FAAN criteria, endorsed by the 2020 WAO update and the 2019 ICON paper, establish the diagnosis when any one of three scenarios applies. Scenario 1: acute onset of illness with skin or mucosal involvement plus either respiratory compromise or hypotension/end-organ dysfunction. Scenario 2: two or more of skin/mucosa, respiratory, cardiovascular, or persistent gastrointestinal involvement after exposure to a likely allergen. Scenario 3: hypotension alone after exposure to a known allergen for that patient. The criteria deliberately do not require all four organ systems; isolated severe respiratory or cardiovascular signs are sufficient. Serum total tryptase is the most useful confirmatory test when the diagnosis is uncertain or for medico-legal documentation: a rise of at least 1.2 times the baseline plus 2 ng/mL within 30 minutes to 4 hours of symptom onset supports mast-cell activation (Schwartz 1987; Valent 2012). Tryptase must be drawn within 4 hours of the reaction and a baseline sample obtained at least 24 hours after recovery so the delta can be interpreted. Tryptase is normal in 30-40% of food-triggered reactions, which are basophil-driven and produce a smaller tryptase signal, and is more often elevated in venom and drug events. After acute recovery, workup transfers to an allergist for trigger identification: detailed exposure history, skin-prick testing, serum-specific IgE (ImmunoCAP), and component-resolved diagnostics such as Ara h 2 for peanut, omega-5 gliadin for wheat-dependent exercise-induced reactions, and alpha-gal for delayed mammalian-meat events. Differentials to exclude include vasovagal syncope, panic attack, acute severe asthma without systemic signs, scombroid poisoning (histamine in spoiled fish), hereditary angioedema (no urticaria, slower onset, no bronchospasm), carcinoid syndrome, pheochromocytoma, and septic shock.",
+
+  "diagnosticTests": [
+    {
+      "test": "Bedside clinical diagnosis using 2020 WAO / NIAID-FAAN criteria",
+      "purpose": "The diagnosis is clinical. Recognising two-organ involvement after a probable trigger, or hypotension after a known allergen, establishes an anaphylactic reaction and mandates immediate epinephrine.",
+      "whatToExpect": "The treating clinician evaluates skin, airway, breathing, circulation, and gut findings. No laboratory test is needed to start treatment, and waiting for results before giving epinephrine increases mortality."
+    },
+    {
+      "test": "Serum total tryptase — acute and baseline",
+      "purpose": "Confirms mast-cell activation when drawn within 4 hours of symptom onset. A mature tryptase rise of at least 1.2× baseline plus 2 ng/mL supports the diagnosis. Baseline tryptase above 11.4 ng/mL also screens for underlying mast-cell disorders.",
+      "whatToExpect": "Two blood draws: one within 30 minutes to 4 hours of symptom onset and a second baseline sample at least 24 hours after full recovery, usually at outpatient follow-up. Results return in 1-3 days."
+    },
+    {
+      "test": "Skin-prick testing for suspected allergens",
+      "purpose": "Identifies IgE-mediated sensitisation to foods, drugs, venoms, latex, and chlorhexidine. Performed once the acute reaction has fully resolved, usually 4-6 weeks later, off antihistamines for 5-7 days.",
+      "whatToExpect": "A drop of allergen extract is placed on the forearm or back and the skin is gently pricked. A wheal and flare developing within 15 minutes indicates sensitisation. The test is mildly itchy and takes 30-45 minutes."
+    },
+    {
+      "test": "Serum-specific IgE (ImmunoCAP) and component-resolved diagnostics",
+      "purpose": "Quantifies allergen-specific IgE in blood. Useful when skin testing is impractical, when extensive eczema is present, or when antihistamines cannot be stopped. Components such as Ara h 2, omega-5 gliadin, alpha-gal, Api m 1, and Ves v 5 refine risk and distinguish true allergy from cross-reactivity.",
+      "whatToExpect": "Standard blood draw. Results return in 3-7 days. Levels are interpreted alongside clinical history; a positive test without matching exposure history does not establish clinical allergy."
+    },
+    {
+      "test": "Supervised oral, drug, or venom challenge",
+      "purpose": "Gold-standard test to confirm or exclude a suspected food or drug allergy when history and IgE testing are inconclusive. Performed only in dedicated allergy units with resuscitation equipment immediately available.",
+      "whatToExpect": "Graded doses of the suspected agent are given at intervals while vital signs and symptoms are monitored. The procedure takes 4-8 hours and is performed only when the benefit clearly outweighs the risk of provocation."
+    },
+    {
+      "test": "Baseline serum tryptase and KIT D816V mutation screening",
+      "purpose": "Identifies underlying mastocytosis or hereditary alpha-tryptasemia in patients with recurrent or idiopathic reactions, severe venom events, or unexplained perioperative hypotension.",
+      "whatToExpect": "Blood draw at a routine outpatient visit at least 24 hours after any reaction. Elevated baseline tryptase prompts hematology referral and consideration of bone-marrow biopsy."
+    },
+    {
+      "test": "Electrocardiogram and serial troponin in severe events",
+      "purpose": "Detects Kounis syndrome — coronary artery spasm triggered by mast-cell mediators in patients with underlying coronary disease, which can present as myocardial infarction during the reaction.",
+      "whatToExpect": "Standard 12-lead ECG and serial troponin during emergency evaluation. Chest discomfort during or after a reaction should never be attributed solely to anxiety until myocardial ischemia has been excluded."
+    }
+  ],
+
+  "treatmentOverview": "Treatment of an anaphylactic reaction rests on one drug given by one route, with supportive resuscitation around it. Intramuscular epinephrine 0.3-0.5 mg in adults (0.01 mg/kg in children, maximum 0.3 mg per dose) into the mid-outer thigh (vastus lateralis) is the first-line therapy for any patient meeting diagnostic criteria. IM thigh delivery achieves peak plasma levels in roughly 8 minutes, compared with 34 minutes for subcutaneous injection (Simons 1998 JACI); deltoid injection is markedly slower and should not be used. There is no absolute contraindication to epinephrine in a true reaction. The dose can be repeated every 5-15 minutes if symptoms persist or recur — roughly 10-20% of episodes need a second dose and around 5% need a third. Concurrent measures: position the patient supine with legs elevated unless vomiting or respiratory distress dictate otherwise (sudden upright posture in shock has caused empty-ventricle death); give high-flow oxygen; establish two large-bore IV lines and infuse normal saline 20 mL/kg as a rapid bolus for hypotension; nebulised salbutamol for bronchospasm; nebulised racemic epinephrine for laryngeal stridor; and prepare for advanced airway management if angioedema progresses. Antihistamines (H1: cetirizine, diphenhydramine; H2: famotidine) reduce hives and itching but do not treat airway, breathing, or circulation, and trials repeatedly show worse outcomes when they substitute for epinephrine. Corticosteroids do not improve acute outcomes; the 2020 AAAAI/ACAAI Joint Task Force Practice Parameter Update and the 2019 ICON paper removed routine steroids from first-line recommendations, and the once-presumed role in preventing biphasic recurrence is not supported by current evidence (Liyanage 2017 Cochrane; Alqurashi 2017). Glucagon 1-5 mg IV is used in patients on beta-blockers whose response to epinephrine is inadequate. Refractory hypotension requires an epinephrine infusion (starting 0.1 mcg/kg/min, titrated to MAP), additional vasopressors, and ICU admission. Every patient is observed for at least 4 hours after symptom resolution to detect biphasic recurrence; longer observation (8-24 hours) is appropriate after severe presentations, multiple epinephrine doses, or limited follow-up access. Discharge includes two refilled epinephrine auto-injectors, a written action plan, allergist referral, and clear instructions on when to re-use the device.",
+
+  "medicalTreatments": [
+    {
+      "name": "Intramuscular epinephrine (adult 0.3-0.5 mg IM into mid-outer thigh; pediatric 0.01 mg/kg, max 0.3 mg per dose)",
+      "description": "The only first-line treatment. Alpha-1 vasoconstriction reverses vasodilation and edema; beta-1 increases cardiac output; beta-2 bronchodilates and stabilises mast cells. IM thigh delivery achieves peak plasma levels in roughly 8 minutes versus 34 minutes for subcutaneous (Simons 1998). May be repeated every 5-15 minutes; no upper limit while symptoms remain active.",
+      "effectiveness": "Symptom resolution in 80-90% of episodes after a single dose. Delayed administration beyond 30 minutes from onset is associated with a 5-7 fold increase in fatality (Pumphrey 2000), and timely IM epinephrine prevents progression to fatal outcome in over 95% of cases."
+    },
+    {
+      "name": "Epinephrine auto-injector (EpiPen 0.3 mg adult / 0.15 mg pediatric; Auvi-Q; generic equivalents)",
+      "description": "Pre-loaded device delivering a fixed IM dose into the thigh through clothing if needed. Each prescription provides two devices because roughly 10-20% of episodes require a second dose before EMS arrival.",
+      "effectiveness": "Reduces fatal outcome by over 90% when used within 30 minutes of symptom onset. Failure to use a prescribed device remains the most common preventable factor in fatal reactions (Bock 2007 JACI)."
+    },
+    {
+      "name": "Intravenous fluid resuscitation (normal saline or balanced crystalloid, 20 mL/kg rapid bolus, repeated as needed)",
+      "description": "Massive third-spacing during an anaphylactic reaction can shift up to 35% of intravascular volume into tissues within 10 minutes. Aggressive crystalloid replacement is required for hypotension that does not respond to a single epinephrine dose.",
+      "effectiveness": "Restores perfusion in roughly 60-80% of hypotensive cases when combined with IM epinephrine; refractory shock requires an epinephrine infusion."
+    },
+    {
+      "name": "Nebulised salbutamol (2.5-5 mg) and nebulised racemic epinephrine for stridor",
+      "description": "Adjunct for bronchospasm not fully resolved by IM epinephrine, and for upper-airway edema with stridor. Does not replace IM epinephrine.",
+      "effectiveness": "Bronchodilation in 70-85% of cases with persistent wheeze; symptomatic relief of stridor while the team prepares for advanced airway management."
+    },
+    {
+      "name": "H1 antihistamines (cetirizine 10 mg PO, or diphenhydramine 25-50 mg IV/IM)",
+      "description": "Reduce urticaria, pruritus, and rhinorrhea. Do not treat airway, breathing, or circulatory compromise. Second-generation oral H1 agents (cetirizine, loratadine) are preferred over diphenhydramine because they are non-sedating, equally effective for histamine-mediated skin signs, and do not mask deteriorating mental status.",
+      "effectiveness": "Resolve cutaneous symptoms in 80-90% of cases as adjuncts. No effect on mortality."
+    },
+    {
+      "name": "H2 antihistamines (famotidine 20 mg IV)",
+      "description": "Adjunct to H1 agents for cutaneous and gastrointestinal symptoms. Evidence for incremental benefit is modest, but the safety profile is excellent.",
+      "effectiveness": "Small additional skin-symptom benefit when combined with H1 blockade; no airway, breathing, or circulation effect."
+    },
+    {
+      "name": "Glucagon (1-5 mg IV bolus, then 5-15 mcg/min infusion)",
+      "description": "Bypasses beta-receptor blockade by directly activating adenylate cyclase. Reserved for patients on beta-blockers whose hemodynamic response to epinephrine is inadequate.",
+      "effectiveness": "Restores hemodynamics in roughly 70% of beta-blocker-treated patients with refractory hypotension."
+    },
+    {
+      "name": "Continuous intravenous epinephrine infusion (0.1 mcg/kg/min, titrated to MAP)",
+      "description": "Used for refractory hypotension or symptom recurrence after two or three IM doses. Requires continuous cardiac monitoring and ICU-level care.",
+      "effectiveness": "Stabilises hemodynamics in over 80% of refractory cases when started promptly with adequate fluid resuscitation."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Emergency cricothyrotomy or surgical tracheostomy",
+      "description": "Reserved for catastrophic upper-airway obstruction from laryngeal edema when endotracheal intubation fails. Performed at the bedside by emergency physicians, anesthesiologists, or ENT surgeons.",
+      "successRate": "Life-saving in roughly 90% of cases when performed within 5 minutes of failed intubation; airway control beyond that window is associated with poor neurologic outcome."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Omalizumab (anti-IgE monoclonal antibody)", "description": "FDA-approved in 2024 for reducing reactions during accidental food exposure in patients with confirmed food allergy (OUtMATCH trial 2024). Also used off-label as an adjunct in high-risk oral immunotherapy, idiopathic recurrent reactions, and as a bridge in venom immunotherapy." },
+    { "name": "Allergen-specific immunotherapy", "description": "Venom immunotherapy reduces the risk of future systemic reactions from roughly 60% to under 5% over 3-5 years (Boyle 2012 Cochrane). Oral immunotherapy for peanut (Palforzia) reduces severity during accidental exposure but does not eliminate the need for an auto-injector." }
+  ],
+
+  "whySeeSpecialist": "Every patient with one anaphylactic reaction should be referred to allergy and immunology for trigger confirmation, action-plan tailoring, and consideration of immunotherapy. Allergists perform skin and component-resolved testing that primary care cannot, supervise food and drug challenges, and identify cofactor-augmented or mast-cell-driven cases. Recurrent idiopathic events or a baseline tryptase above 11.4 ng/mL warrants combined allergy-hematology evaluation for mast-cell disorders.",
+
+  "doctorSelectionGuide": "Look for board certification in allergy and immunology (or pediatric allergy for children), experience with venom and food immunotherapy, in-house oral food and drug challenge capability, and access to component-resolved IgE testing. Confirm the practice provides a written, signed action plan and trains patients and family on auto-injector technique. For perioperative reactions, an allergist with specific drug-allergy expertise and links to anesthesia is essential.",
+
+  "hospitalCriteria": [
+    "Emergency department with 24/7 epinephrine, oxygen, advanced airway, and adult and pediatric resuscitation capability",
+    "Allergy and immunology service or a rapid referral pathway for outpatient workup within 4-6 weeks",
+    "Anesthesia and ICU support for perioperative reactions and refractory cases requiring epinephrine infusion",
+    "Drug-allergy clinic capable of graded provocation and skin testing to beta-lactams, neuromuscular blockers, and chlorhexidine"
+  ],
+
+  "keyFacilities": [
+    "Tertiary academic centers with dedicated allergy and immunology programs",
+    "Children's hospitals with pediatric allergy services and supervised food-challenge units",
+    "Cancer centers experienced in chemotherapy desensitisation protocols",
+    "Major surgical hospitals with perioperative allergy clinics linked to anesthesia"
+  ],
+
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+
+  "preventionStrategies": [
+    "Carry two in-date epinephrine auto-injectors at all times if previously diagnosed with anaphylaxis, and verify the expiry date every six months",
+    "Identify and strictly avoid confirmed triggers — read every food label, ask in restaurants about cross-contact, and check ingredient lists before every medication or contrast study",
+    "Wear medical identification (bracelet, necklace, or phone medical ID) listing the allergen and the action plan",
+    "Receive venom immunotherapy if hymenoptera allergy is confirmed — five years of treatment reduces future systemic reactions to under 5%",
+    "Manage coexisting asthma aggressively with inhaled corticosteroids; uncontrolled asthma is the strongest modifiable risk factor for fatal food-triggered reactions",
+    "Premedicate before known unavoidable exposures (e.g., contrast media in patients with prior contrast reactions) according to ACR contrast manual protocols"
+  ],
+
+  "lifestyleModifications": [
+    "Train all close contacts — partner, parents, school staff, coaches, employer — on auto-injector use and the personal action plan",
+    "Notify schools, employers, and airlines in writing of the allergy and provide an in-date device for each setting",
+    "Switch from beta-blockers and ACE inhibitors to alternative antihypertensives where clinically reasonable, in consultation with the prescribing clinician",
+    "Avoid known cofactors during exposure windows: NSAIDs, alcohol, vigorous exercise, and hot showers in the 4 hours after a meal containing potential allergens for cofactor-dependent patients",
+    "Wash hands with soap and water before meals and after handling allergens — alcohol gel does not remove peanut protein",
+    "Inform every new clinician, dentist, and surgical team of the allergy at every visit, and confirm a non-allergenic alternative is documented in the record"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Whole, single-ingredient foods where the label is unambiguous — fresh produce, plain meats and fish if no allergy, plain grains",
+      "Allergen-free brand alternatives clearly labeled and certified by national allergen programmes (peanut-free, milk-free, gluten-free where relevant)",
+      "Adequate protein, calcium, vitamin D, and B12 from allergen-free sources, supplemented under dietitian guidance when major food groups are excluded",
+      "Home-cooked meals when travelling or eating in higher-risk settings, with allergen disclosure prepared in the local language"
+    ],
+    "avoid": [
+      "All confirmed personal trigger foods, including processed foods that carry 'may contain' or 'made on shared equipment' warnings for severe allergies",
+      "Restaurant and street-food settings without allergen disclosure for severe allergies, particularly where cross-contact risk is high (fryers, woks, buffets)",
+      "Mammalian meat (beef, pork, lamb) and gelatin products in confirmed alpha-gal syndrome",
+      "Wheat, shellfish, or specific foods within 4 hours of exercise in confirmed food-dependent exercise-induced reactions",
+      "Unfamiliar processed foods abroad where allergen labelling differs from the home country"
+    ]
+  },
+
+  "exerciseGuidelines": "Regular exercise is safe and encouraged after an anaphylactic reaction, except where food- or drug-dependent exercise-induced reactions have been diagnosed. In those cases, avoid trigger foods for at least 4 hours before exercise and never exercise alone in the first weeks after diagnosis. Always carry an epinephrine auto-injector during physical activity, and make sure exercise partners and coaches know how to use it.",
+
+  "dailyManagement": [
+    "Keep two epinephrine auto-injectors with you at all times — at home, school, work, in the car, and on travel",
+    "Review and rehearse the written action plan with family members and close contacts every 6-12 months",
+    "Check auto-injector expiry dates and viewing windows monthly; order replacements before expiry",
+    "Read every food label on every purchase, even for repeat purchases, because manufacturers change formulations without notice",
+    "Wear medical identification jewelry or carry a wallet card listing the trigger, action plan, and emergency contact",
+    "Keep a brief log of any suspected reactions — date, exposure, symptoms, time to epinephrine, response — and bring it to allergy follow-up visits"
+  ],
+
+  "prognosis": "With prompt epinephrine and structured follow-up the prognosis is excellent — overall case-fatality is 0.7-2 per million person-years and per-ED-visit mortality is roughly 0.3% in US registries. The dominant predictors of death are delayed or omitted epinephrine, uncontrolled asthma, adolescence with food allergy, and severe upfront cardiovascular collapse. Patients who receive specialist follow-up, a tailored action plan, and two auto-injectors have a less than 1% risk of a fatal future reaction when these resources are used correctly. Recurrence over five years approaches 25-30% in food allergy and exceeds 50% in venom allergy without immunotherapy, but venom and oral immunotherapy reduce recurrence to under 5%. Children with milk, egg, wheat, and soy allergy often outgrow them by adolescence (50-80%); peanut, tree nut, fish, and shellfish allergies typically persist for life. Death remains rare relative to incidence and is largely preventable when the chain of survival — rapid recognition, immediate IM epinephrine, and emergency transport within minutes — is intact.",
+
+  "recoveryTimeline": "An uncomplicated anaphylactic reaction treated promptly resolves clinically within 30-60 minutes of epinephrine administration. Monitored observation is at least 4 hours from symptom resolution — extended to 8-24 hours when there was hypotension, severe respiratory involvement, multiple epinephrine doses, poorly controlled asthma, or limited access to emergency care for the next 24 hours. Biphasic recurrence appears in roughly 5-20% of cases, typically 1-12 hours (median 8-10 hours) after initial recovery (Lieberman 2005; Alqurashi 2017). Most patients return to normal activity within 24-48 hours. Cognitive and emotional sequelae — anxiety, hypervigilance, post-traumatic stress, food-avoidance behaviour — are under-recognised and benefit from formal allergy follow-up and, where needed, psychological support.",
+
+  "complications": [
+    "Death from respiratory or cardiovascular arrest — overwhelmingly associated with delayed or omitted epinephrine, especially in adolescents with food allergy and adults with venom allergy",
+    "Biphasic recurrence within 1-72 hours of apparent recovery, requiring repeat epinephrine and extended observation",
+    "Hypoxic-ischemic brain injury from prolonged airway obstruction or cardiac arrest before epinephrine reaches effective tissue levels",
+    "Kounis syndrome — coronary artery spasm triggered by mast-cell mediators in patients with underlying coronary disease, presenting as myocardial infarction during the reaction",
+    "Aspiration pneumonia after loss of airway protection in severe events with vomiting",
+    "Post-traumatic stress, anxiety, food-avoidance disorder, and reduced quality of life — frequent and under-treated, especially in adolescents and parents of food-allergic children"
+  ],
+
+  "supportResources": [
+    { "name": "Food Allergy Research & Education (FARE)", "url": "https://www.foodallergy.org/", "description": "US patient organisation with action-plan templates, school resources, and clinical-trial directories." },
+    { "name": "AAAAI Anaphylaxis Resource Center", "url": "https://www.aaaai.org/conditions-treatments/allergies/anaphylaxis", "description": "Patient-facing summaries written by the body that co-authors the US practice parameter." },
+    { "name": "Anaphylaxis UK", "url": "https://www.anaphylaxis.org.uk/", "description": "UK national charity offering helpline support, training courses, and an evidence-based action plan." },
+    { "name": "World Allergy Organization Anaphylaxis Center", "url": "https://www.worldallergy.org/education-and-programs/education/allergic-disease-resource-center/anaphylaxis", "description": "International resource hub with translated patient guides and clinician toolkits." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "anaphylaxis", "name": "Anaphylaxis (the broader syndrome)", "keyDifference": "Anaphylaxis is the disease entity and lifetime condition; an anaphylactic reaction is the discrete acute event. The two share triggers, mechanisms, and treatment, but management of the reaction focuses on bedside resuscitation and biphasic monitoring, while management of the syndrome focuses on trigger identification, action planning, and immunotherapy." },
+    { "slug": "angioedema-allergy", "name": "Angioedema (Allergic and Hereditary)", "keyDifference": "Allergic angioedema accompanies urticaria, evolves over minutes, and responds to epinephrine and antihistamines. Hereditary angioedema (C1 esterase inhibitor deficiency) produces deep-tissue swelling without urticaria, evolves over hours, does not respond to epinephrine or antihistamines, and requires specific therapy with C1-INH concentrate or icatibant." },
+    { "slug": "asthma", "name": "Acute Severe Asthma Exacerbation", "keyDifference": "Severe asthma produces wheeze, dyspnea, and hypoxia but rarely with hives, hypotension, or gut symptoms. In a known asthmatic developing wheeze plus urticaria plus low blood pressure after a probable allergen exposure, treat as an anaphylactic reaction with IM epinephrine, not as asthma alone." },
+    { "slug": "panic-disorder", "name": "Panic Attack (vasovagal-like presentation)", "keyDifference": "Panic attacks can mimic some features — tachycardia, breathlessness, throat tightness — but lack objective urticaria, angioedema, wheeze, or true hypotension. Vasovagal syncope produces bradycardia and pallor, while an anaphylactic reaction usually produces tachycardia and flushing. When uncertain after a probable allergen exposure, treat as a reaction." },
+    { "slug": "hives", "name": "Acute Urticaria Alone", "keyDifference": "Isolated acute urticaria without airway, circulatory, or gut involvement is not an anaphylactic reaction and is treated with second-generation H1 antihistamines, not epinephrine. The diagnosis shifts the moment a second organ system is involved or hypotension appears." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "asthma", "name": "Asthma" },
+    { "slug": "food-allergy", "name": "Food Allergy" },
+    { "slug": "drug-allergy", "name": "Drug Allergy" },
+    { "slug": "allergic-rhinitis-hay-fever", "name": "Allergic Rhinitis" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "anaphylaxis", "name": "Anaphylaxis", "relevance": "The broader syndrome that this acute reaction event represents. The sibling page covers triggers, long-term management, immunotherapy, and prognosis in depth." },
+    { "slug": "food-allergy", "name": "Food Allergy", "relevance": "The single leading trigger of community-onset reactions, especially in children and young adults." },
+    { "slug": "drug-allergy", "name": "Drug Allergy", "relevance": "Beta-lactam antibiotics, NSAIDs, neuromuscular blockers, and contrast media are leading triggers of reactions in healthcare settings." },
+    { "slug": "insect-venom-allergy", "name": "Insect Venom Allergy", "relevance": "Hymenoptera venom is the leading cause of fatal reactions in adults; venom immunotherapy reduces recurrence to under 5%." },
+    { "slug": "latex-allergy", "name": "Latex Allergy", "relevance": "A residual perioperative reaction trigger that shares cross-reactivity with banana, kiwi, avocado, and chestnut." },
+    { "slug": "hereditary-angioedema", "name": "Hereditary Angioedema", "relevance": "Key differential when angioedema occurs without urticaria, wheeze, or hypotension; requires C1-INH concentrate or icatibant rather than epinephrine." }
+  ],
+
+  "linkedTreatmentSlugs": [],
+
+  "faqs": [
+    {
+      "question": "What is the first thing to do during an anaphylactic reaction?",
+      "answer": "Give intramuscular epinephrine into the mid-outer thigh immediately, then call emergency services. Lay the person flat with legs raised unless vomiting or struggling to breathe. Antihistamines are not a substitute.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Where on the body should an EpiPen be injected?",
+      "answer": "Into the mid-outer thigh (vastus lateralis), through clothing if needed. IM thigh injection reaches peak blood levels in about 8 minutes; subcutaneous or deltoid injection is slower and linked to treatment failure. Hold for 3 seconds.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How quickly do symptoms of an anaphylactic reaction appear?",
+      "answer": "Usually within 5-30 minutes of exposure for food and oral drug triggers, and within seconds to minutes for injected venom or IV drugs. Alpha-gal mammalian-meat reactions are unusual in starting 3-6 hours after eating red meat.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can an anaphylactic reaction occur without a rash?",
+      "answer": "Yes. About 10-20% of reactions occur without urticaria or angioedema, especially drug-induced and perioperative cases. Isolated bronchospasm with hypotension, or severe gut symptoms with circulatory collapse, still meets diagnostic criteria.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a biphasic anaphylactic reaction?",
+      "answer": "Recurrence of symptoms 1-72 hours (typically 8-10 hours) after the initial event resolves, without re-exposure. It affects 5-20% of treated cases, more often when initial epinephrine was delayed or the first reaction was severe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is epinephrine the first-line treatment rather than antihistamines?",
+      "answer": "Epinephrine constricts blood vessels, supports blood pressure, opens the airway, reduces swelling, and stabilises mast cells. Antihistamines treat only hives and itching. Patients given antihistamines or steroids instead of epinephrine have worse outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can someone die from an anaphylactic reaction?",
+      "answer": "Yes, though rarely with prompt treatment. Case-fatality is 0.7-2 per million person-years and per-ED-visit mortality is around 0.3%. The strongest predictor of death is delayed or omitted epinephrine. Timely IM epinephrine makes a fatal outcome highly preventable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the most common triggers of an anaphylactic reaction?",
+      "answer": "In children, food dominates (peanut, tree nuts, milk, egg, sesame, shellfish). In adults, drugs (beta-lactams, NSAIDs, neuromuscular blockers, contrast) and hymenoptera venom (bees, wasps, hornets, fire ants) are most common. Around 20-30% remain idiopathic.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is an anaphylactic reaction diagnosed?",
+      "answer": "Clinically, using the 2006 NIAID/FAAN criteria adopted by WAO 2020 and ICON 2019. Any one of three scenarios suffices: skin/mucosa plus airway or hypotension; two organ systems after a likely allergen; or hypotension alone after a known allergen.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do I need to go to hospital after using my EpiPen?",
+      "answer": "Yes. Every patient who receives epinephrine for an anaphylactic reaction must be transported to an emergency department, even if symptoms resolve. Roughly 5-20% of episodes have a biphasic recurrence, and a second dose may be needed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I take a second dose of epinephrine?",
+      "answer": "Yes. If symptoms persist or recur after 5-15 minutes, a second IM dose into the opposite thigh is appropriate. About 10-20% of episodes need a second dose before EMS arrives, which is why each prescription provides two auto-injectors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long do I need to be observed after an anaphylactic reaction?",
+      "answer": "At least 4 hours of monitored observation after symptoms resolve. Longer (8-24 hours) if epinephrine was delayed, multiple doses were needed, hypotension occurred, asthma is poorly controlled, or follow-up access is limited.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are epinephrine auto-injectors safe to use when not sure it is anaphylaxis?",
+      "answer": "Yes. There is no absolute contraindication to epinephrine in a suspected reaction. The risks of withholding far exceed the risks of giving it. Side effects (tremor, palpitations, mild headache) are brief and self-limited. When in doubt, give the dose.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do beta-blockers make an anaphylactic reaction harder to treat?",
+      "answer": "Yes. Beta-blockers blunt the response to epinephrine; ACE inhibitors also impair recovery. Both are linked to more severe and longer reactions. Glucagon is used when the response to epinephrine is inadequate due to beta-blockade.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is an anaphylactic reaction without skin signs?",
+      "answer": "About 10-20% of true reactions occur without urticaria or angioedema, especially with drugs and during anesthesia. Diagnosis rests on respiratory or circulatory signs after a probable trigger — wheeze, stridor, hypotension, or collapse.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should corticosteroids be given during an anaphylactic reaction?",
+      "answer": "Routine corticosteroids are no longer recommended as first-line therapy. The 2020 AAAAI/ACAAI Practice Parameter Update and the 2019 ICON paper found no evidence that steroids improve acute outcomes or prevent biphasic recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is alpha-gal syndrome?",
+      "answer": "A tick-bite-induced IgE response to galactose-α-1,3-galactose, a sugar in mammalian meat. Patients develop delayed reactions 3-6 hours after eating beef, pork, or lamb. Lone star tick bites in the southeastern US are the dominant trigger.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children outgrow food allergies that caused an anaphylactic reaction?",
+      "answer": "Yes for some foods. About 50-80% of children outgrow milk, egg, wheat, and soy allergy by adolescence. Peanut, tree-nut, fish, and shellfish allergies are more persistent, with only 15-25% of peanut-allergic children developing tolerance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is an anaphylactic reaction the same as an allergic reaction?",
+      "answer": "No. Most allergic reactions are mild — local urticaria, perioral itching, or rhinitis — and resolve with antihistamines. An anaphylactic reaction involves two or more organ systems, or causes hypotension or airway compromise, and requires epinephrine.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can stress or anxiety cause an anaphylactic reaction?",
+      "answer": "No. Stress alone does not cause a true reaction. Panic attacks can mimic some features (tachycardia, breathlessness, throat tightness). Objective signs — urticaria, angioedema, hypotension, wheeze — distinguish a real anaphylactic reaction.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is venom immunotherapy worth doing after a sting reaction?",
+      "answer": "Yes for patients with confirmed systemic reactions and specific IgE to the relevant venom. Five years of venom immunotherapy reduces future systemic reactions from roughly 60% to under 5%. AAAAI and EAACI recommend it for moderate-to-severe venom anaphylaxis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise after a previous anaphylactic reaction?",
+      "answer": "Yes for most patients, with the action plan and auto-injector at hand. Those with food-dependent exercise-induced reactions must avoid trigger foods for 4 hours before exercise and never exercise alone in the first weeks after diagnosis.",
+      "schemaEligible": true
+    }
+  ],
+
+  "simpleName": "Anaphylactic reaction (severe whole-body allergic episode)",
+
+  "regionalNames": [
+    { "name": "तीव्रग्राही अभिक्रिया (Tivragrahi Abhikriya)", "region": "India (Hindi-speaking regions)", "language": "hi" },
+    { "name": "Reacción anafiláctica", "region": "Latin America and Spain", "language": "es" },
+    { "name": "Réaction anaphylactique", "region": "France and Francophone regions", "language": "fr" }
+  ],
+
+  "searchTags": [
+    "anaphylactic reaction", "anaphylactic episode", "severe allergic reaction event", "epinephrine", "EpiPen",
+    "auto-injector use", "food anaphylactic reaction", "drug anaphylactic reaction", "venom reaction", "biphasic reaction",
+    "alpha-gal reaction", "tryptase test", "anaphylactic shock event", "anaphylactic emergency", "ED anaphylaxis observation"
+  ],
+
+  "symptomKeywords": [
+    "throat closing after eating", "hives and trouble breathing", "collapse after bee sting",
+    "tongue swelling after medication", "blood pressure drop allergy", "wheezing after drug",
+    "vomiting and hives", "biphasic allergy symptoms return", "anaphylactic warning signs", "stridor after exposure"
+  ],
+
+  "metaTitle": "Anaphylactic Reaction: Symptoms & Treatment | aihealz",
+  "metaDescription": "Anaphylactic reaction: severe allergic event needing IM epinephrine. Recognition, first aid, biphasic course, and ED workup, reviewed by our medical board.",
+
+  "keywords": [
+    "anaphylactic reaction", "anaphylactic episode", "IM epinephrine anaphylaxis", "EpiPen administration", "biphasic anaphylactic reaction",
+    "anaphylactic reaction icd 10", "anaphylactic reaction symptoms", "anaphylactic reaction treatment", "post anaphylaxis observation",
+    "anaphylactic reaction first aid", "tryptase test", "auto-injector use"
+  ],
+
+  "lastReviewed": "2026-05-18",
+
+  "images": [],
+
+  "sources": [
+    {
+      "title": "Cardona V, Ansotegui IJ, Ebisawa M, et al. World Allergy Organization Anaphylaxis Guidance 2020. World Allergy Organization Journal. 2020;13(10):100472.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33204386/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Shaker MS, Wallace DV, Golden DBK, et al. Anaphylaxis — A 2020 Practice Parameter Update, Systematic Review, and GRADE Analysis. Journal of Allergy and Clinical Immunology. 2020;145(4):1082-1123.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32001253/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Sampson HA, Muñoz-Furlong A, Campbell RL, et al. Second symposium on the definition and management of anaphylaxis: summary report — Second NIAID/Food Allergy and Anaphylaxis Network symposium. Journal of Allergy and Clinical Immunology. 2006;117(2):391-397.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16461139/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Turner PJ, Worm M, Ansotegui IJ, et al. Time to revisit the definition and clinical criteria for anaphylaxis? — ICON Anaphylaxis Update. World Allergy Organization Journal. 2019;12(10):100066.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31695850/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Muraro A, Roberts G, Worm M, et al. Anaphylaxis: guidelines from the European Academy of Allergy and Clinical Immunology. Allergy. 2014;69(8):1026-1045.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24909803/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Simons FER, Roberts JR, Gu X, Simons KJ. Epinephrine absorption in children with a history of anaphylaxis. Journal of Allergy and Clinical Immunology. 1998;101(1 Pt 1):33-37.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9449498/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Pumphrey RSH. Lessons for management of anaphylaxis from a study of fatal reactions. Clinical & Experimental Allergy. 2000;30(8):1144-1150.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10931122/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Lieberman P. Biphasic anaphylactic reactions. Annals of Allergy, Asthma & Immunology. 2005;95(3):217-226.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16200811/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Alqurashi W, Ellis AK. Do corticosteroids prevent biphasic anaphylaxis? Journal of Allergy and Clinical Immunology: In Practice. 2017;5(5):1194-1205.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28888250/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Wood RA, Camargo CA Jr, Lieberman P, et al. Anaphylaxis in America: the prevalence and characteristics of anaphylaxis in the United States. Journal of Allergy and Clinical Immunology. 2014;133(2):461-467.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24144575/",
+      "accessedDate": "2026-05-18"
+    }
+  ]
+}

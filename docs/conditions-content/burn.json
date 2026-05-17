@@ -1,0 +1,735 @@
+{
+  "_meta": {
+    "slug": "burn",
+    "tier": 1,
+    "headTerm": "burn injury",
+    "longTailKeywords": [
+      "burn injury treatment",
+      "first second third degree burns",
+      "burn TBSA rule of 9s",
+      "Parkland formula fluid resuscitation",
+      "burn center referral criteria",
+      "thermal burn first aid",
+      "chemical burn treatment",
+      "electrical burn injury",
+      "radiation burn",
+      "burn wound care",
+      "hypertrophic burn scar"
+    ],
+    "primarySpecialty": "Emergency Medicine / Plastic Surgery / Burn Specialist",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Cross-verified against American Burn Association (ABA) 2023 burn center referral criteria, Advanced Burn Life Support (ABLS) 2018 provider manual, WHO Burns Fact Sheet 2023, and peer-reviewed PubMed sources. Parkland formula doses cross-checked against current ABA 2024 fluid resuscitation consensus."
+  },
+  "h1Title": "Burn Injury: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Emergency Medicine / Plastic Surgery / Burn Specialist",
+  "heroOverview": "A burn injury is tissue damage caused by heat, chemicals, electricity, friction, or radiation that destroys skin layers and, in deeper burns, underlying muscle, tendon, or bone. Globally, burns cause an estimated 180,000 deaths each year, with the heaviest burden in low- and middle-income countries, while the United States records roughly 450,000 burn injuries requiring medical treatment annually. Severity is classified by depth (first to fourth degree) and by total body surface area burned, calculated with the Lund-Browder chart or Wallace's rule of 9s. Outcomes hinge on the first 24 hours: airway protection, fluid resuscitation using the Parkland formula, and timely transfer to a verified burn center using the American Burn Association referral criteria. With current treatment, survival exceeds 95% for adults with burns under 40% body surface area.",
+  "keyStats": {
+    "prevalence": "~450,000 burn injuries requiring medical treatment in the US each year (American Burn Association 2023)",
+    "demographics": "Men account for roughly two-thirds of burn admissions; children under 5 and adults over 60 are at highest mortality risk",
+    "avgAge": "Bimodal: peak in children under 5 (scalds) and working-age adults 20-59 (flame, electrical, occupational)",
+    "globalCases": "~11 million burns annually requiring care; 180,000 deaths per year worldwide (WHO 2023)"
+  },
+  "definition": "A burn injury (ICD-10: T20-T32, with T30.0 reserved for unspecified body region and degree) is a coagulative injury to skin and deeper tissue caused by transfer of energy from a thermal, chemical, electrical, radiation, or friction source. The injury begins at a central zone of coagulation where cells are killed outright, surrounded by a zone of stasis where tissue is hypoperfused but salvageable, and an outer zone of hyperemia that typically recovers. Depth is classified as superficial (first degree, epidermis only), superficial partial-thickness (second degree, papillary dermis), deep partial-thickness (second degree, reticular dermis), full-thickness (third degree, through the dermis), and full-thickness with deeper injury (fourth degree, involving muscle, tendon, or bone). Burns trigger a systemic inflammatory response that drives plasma loss, hypovolemic shock, hypermetabolism, immune suppression, and a heightened infection risk that persists for weeks. Major burns are managed by multidisciplinary burn teams that include emergency physicians, plastic and reconstructive surgeons, intensivists, burn-trained nurses, respiratory therapists, dietitians, physical and occupational therapists, and clinical psychologists. The condition is staged at presentation by depth, total body surface area, anatomic site, and presence of inhalation or associated trauma.",
+  "typesClassification": [
+    {
+      "type": "Superficial burn (first degree)",
+      "description": "Confined to the epidermis. Skin is dry, red, painful, and blanches with pressure but does not blister. The classic example is mild sunburn. Heals within 3-6 days without scarring and is excluded from total body surface area calculations for fluid resuscitation."
+    },
+    {
+      "type": "Superficial partial-thickness burn (second degree)",
+      "description": "Extends into the papillary dermis. Skin is pink to red, moist, blisters within hours, and is intensely painful because nerve endings are exposed but intact. Typically heals in 7-21 days with minimal scarring if infection is prevented."
+    },
+    {
+      "type": "Deep partial-thickness burn (second degree)",
+      "description": "Reaches the reticular dermis. Surface appears mottled red and white or waxy, blisters may be ruptured, capillary refill is sluggish, and sensation is reduced. Healing takes more than 21 days and carries a high risk of hypertrophic scarring; early excision and grafting are often preferred."
+    },
+    {
+      "type": "Full-thickness burn (third degree)",
+      "description": "Destroys the entire dermis including hair follicles, sweat glands, and dermal nerves. Skin is leathery, white, brown, or charred, dry, non-blanching, and painless within the burn itself because cutaneous nerves are destroyed. Will not heal without surgical excision and skin grafting."
+    },
+    {
+      "type": "Full-thickness burn with deeper tissue involvement (fourth degree)",
+      "description": "Extends through skin into subcutaneous fat, muscle, tendon, or bone. Often seen with prolonged flame contact, high-voltage electrical injury, or industrial chemicals. Requires extensive debridement, complex reconstruction, and sometimes amputation."
+    },
+    {
+      "type": "Chemical burn",
+      "description": "Caused by acids, alkalis, or vesicants. Alkali burns penetrate deeper and progress longer than acid burns because of liquefactive necrosis. Damage continues until the agent is fully removed; copious irrigation for 30-60 minutes is the first priority before depth assessment."
+    },
+    {
+      "type": "Electrical burn",
+      "description": "Caused by current passing through the body. Skin entry and exit wounds often look small but conceal extensive deep muscle and vascular damage, rhabdomyolysis, cardiac arrhythmia, and compartment syndrome. High-voltage exposure (>1,000 V) demands cardiac monitoring for at least 24 hours."
+    },
+    {
+      "type": "Radiation burn",
+      "description": "Results from ionizing radiation (radiotherapy, industrial exposure) or non-ionizing ultraviolet (severe sunburn). Acute presentation may be delayed by hours to days; therapeutic radiation skin reactions are graded by the Radiation Therapy Oncology Group scale from mild erythema to moist desquamation and ulceration."
+    }
+  ],
+  "primarySymptoms": [
+    "Localized pain, with intensity that paradoxically correlates inversely with depth — superficial burns are exquisitely painful while full-thickness burns are often numb because dermal nerves are destroyed.",
+    "Skin color changes ranging from bright red (first and superficial second degree), through mottled red-and-white (deep second degree), to white, brown, leathery, or charred (third and fourth degree).",
+    "Blister formation within minutes to hours in partial-thickness burns, with clear fluid-filled bullae that may rupture spontaneously and increase infection risk.",
+    "Edema and tissue swelling that peaks at 24-48 hours after injury, particularly in burns over 15% total body surface area, and which can compromise airway, limb perfusion, or chest expansion.",
+    "Loss of normal skin texture and pliability in deeper burns — the burned area becomes dry, inelastic, and may form a constricting eschar that requires escharotomy.",
+    "Hypovolemia signs in major burns: tachycardia, hypotension, cool extremities, reduced urine output (under 0.5 mL/kg/hour in adults, under 1 mL/kg/hour in children), and altered mental status as plasma shifts into the burn wound.",
+    "Singed nasal hair, soot in the mouth or sputum, hoarseness, stridor, or carbonaceous sputum after enclosed-space fires — signs of inhalation injury that mandate early airway control.",
+    "Wound depth that may evolve over the first 48-72 hours — burns initially classified as partial-thickness can deepen with inadequate resuscitation or infection.",
+    "Systemic features in major burns: fever, hypermetabolism, weight loss, and immunosuppression that persist for weeks after the acute event.",
+    "Late wound changes including hypertrophic scarring, raised red itchy scars that develop in deep partial- and full-thickness burns over 3-12 months and can restrict joint movement."
+  ],
+  "earlyWarningSigns": [
+    "Skin pain or redness that persists more than 6 hours after a minor heat exposure suggests a deeper burn than initially apparent",
+    "Hoarseness, cough, or facial soot after a house fire or vehicle fire — early signs of inhalation injury requiring airway assessment before swelling closes the airway",
+    "Reduced urine output during the first 24 hours after a burn over 15% body surface area — earliest sign of under-resuscitation",
+    "Increasing pain, swelling, or pallor in a burned limb in the first 24-48 hours — possible early compartment syndrome",
+    "Fever, foul wound odor, or spreading redness around a healing burn beyond day 3 — suggests wound infection or invasive burn sepsis"
+  ],
+  "emergencySigns": [
+    "Burns covering 10% or more body surface area in adults, or 5% or more in children — call emergency services immediately and arrange transfer to a verified burn center",
+    "Any burn involving the face, hands, feet, genitalia, perineum, or major joints — high-risk for functional and cosmetic compromise; refer to a burn center",
+    "Suspected inhalation injury — hoarseness, stridor, soot in the airway, or burns sustained in a closed space — requires immediate airway evaluation and possible intubation",
+    "High-voltage electrical burn (over 1,000 V) or any electrical injury with loss of consciousness, arrhythmia, or visible exit wound — admit for cardiac monitoring and rhabdomyolysis screening",
+    "Circumferential full-thickness burn of a limb, neck, or chest — risk of compartment syndrome or restricted ventilation; emergency escharotomy may be needed",
+    "Chemical burn from a strong acid, alkali, hydrofluoric acid, or vesicant agent — irrigate immediately and contact poison control or a burn specialist"
+  ],
+  "causes": [
+    {
+      "cause": "Thermal injury from flames, hot liquids, steam, or hot surfaces",
+      "description": "Accounts for roughly 85% of burns presenting to emergency departments. Scalds from hot water dominate pediatric burns; flame burns from house fires, gasoline, and cooking accidents are the leading cause in adults. Contact burns occur with hot metal, irons, or vehicle exhaust."
+    },
+    {
+      "cause": "Chemical injury from acids, alkalis, or industrial agents",
+      "description": "Industrial accidents, household cleaners, battery acid, lime, cement, and hydrofluoric acid cause progressive tissue damage that continues until the agent is fully removed. Alkalis cause deeper, longer-lasting injury than acids because of liquefactive necrosis."
+    },
+    {
+      "cause": "Electrical injury from low- or high-voltage current",
+      "description": "Domestic current (110-240 V) typically causes localized burns and arrhythmia. High-voltage (>1,000 V) and lightning strikes produce deep muscle necrosis along the current path, rhabdomyolysis, cardiac arrest, and skeletal injury from violent muscle contraction or falls."
+    },
+    {
+      "cause": "Radiation exposure",
+      "description": "Ionizing radiation from radiotherapy, industrial accidents, or radiologic emergencies damages basal keratinocytes and dermal microvasculature with onset hours to weeks after exposure. Severe sunburn from ultraviolet B is the most common non-ionizing form and produces classic superficial burn injury."
+    },
+    {
+      "cause": "Friction or contact heat injury",
+      "description": "Motor vehicle crashes, treadmill accidents, rope burns, and industrial machinery can produce friction burns that combine thermal injury with abrasion. Depth depends on duration and pressure of contact."
+    },
+    {
+      "cause": "Inhalation injury from hot gases, steam, or toxic smoke",
+      "description": "A separate but commonly co-existing mechanism. Heat damages the upper airway; toxic smoke (carbon monoxide, hydrogen cyanide, particulates) damages the lower airway and impairs oxygen delivery. Inhalation injury raises mortality of a given burn size by roughly 20-30%."
+    },
+    {
+      "cause": "Non-accidental injury and assault",
+      "description": "Intentional scalds, contact burns from cigarettes or irons, and immersion injuries account for an estimated 10-20% of pediatric burn admissions globally. Patterned distribution, stocking-glove burns, or histories that do not fit the injury raise suspicion."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Age under 5 years",
+      "category": "non-modifiable",
+      "description": "Children have thinner skin that burns faster at lower temperatures and a higher body surface area to mass ratio, which amplifies fluid loss. Scalds from hot drinks and bath water are the dominant mechanism."
+    },
+    {
+      "factor": "Age over 60 years",
+      "category": "non-modifiable",
+      "description": "Reduced skin thickness, slower reaction time, impaired mobility, and coexisting cardiac and renal disease all increase burn risk and mortality. Older adults are over-represented in cooking and house-fire fatalities."
+    },
+    {
+      "factor": "Occupational exposure to flames, hot surfaces, electricity, or chemicals",
+      "category": "environmental",
+      "description": "Firefighters, electricians, welders, foundry workers, restaurant kitchen staff, and chemical-plant workers face elevated exposure. Adequate personal protective equipment reduces but does not eliminate risk."
+    },
+    {
+      "factor": "Low-income housing without smoke alarms or safe cooking facilities",
+      "category": "environmental",
+      "description": "Open cooking fires, kerosene stoves, faulty wiring, and absent smoke detectors drive most of the global burn burden; over 90% of fatal burns occur in low- and middle-income countries (WHO 2023)."
+    },
+    {
+      "factor": "Alcohol or substance intoxication",
+      "category": "modifiable",
+      "description": "Impaired judgment, delayed escape from fire, smoking in bed, and cooking while intoxicated are documented contributors to roughly 25-40% of adult flame-burn admissions in high-income countries."
+    },
+    {
+      "factor": "Epilepsy and other seizure disorders",
+      "category": "modifiable",
+      "description": "Loss of consciousness near cooking flames, hot water, or industrial equipment causes prolonged contact and deeper burns. People with poorly controlled epilepsy have 2-3 times the burn risk of the general population."
+    },
+    {
+      "factor": "Peripheral neuropathy (diabetes, alcohol-related, leprosy)",
+      "category": "modifiable",
+      "description": "Reduced pain sensation allows prolonged contact with hot surfaces, hot water bottles, or heating pads. Foot burns from hot floors or bath water are characteristic in diabetic neuropathy."
+    },
+    {
+      "factor": "Smoking and indoor open flames",
+      "category": "modifiable",
+      "description": "Smoking in bed remains a leading cause of residential fire fatalities. Candles, incense, and fireworks add seasonal peaks. Removing the ignition source and installing functioning smoke alarms reduce mortality by approximately 50%."
+    },
+    {
+      "factor": "Male sex",
+      "category": "non-modifiable",
+      "description": "Men account for two-thirds of burn admissions globally, reflecting occupational, military, and behavioral exposure patterns (American Burn Association 2023 Burn Repository)."
+    }
+  ],
+  "affectedDemographics": [
+    "Children under 5 account for roughly 30% of all burns globally; scalds from hot liquids dominate this group",
+    "Working-age men (20-59) make up the largest share of flame, electrical, and occupational burn admissions",
+    "Over 90% of fatal burns occur in low- and middle-income countries; women in South Asia and sub-Saharan Africa face elevated risk from open cooking fires and kerosene stoves (WHO 2023)",
+    "US burn center admissions: roughly 40,000 patients per year, with mean age 32 and mean burn size 10% body surface area (ABA 2023 National Burn Repository)",
+    "Older adults over 65 account for less than 15% of burn admissions but contribute over 25% of burn fatalities"
+  ],
+  "diagnosisOverview": "Burn assessment follows a structured Advanced Burn Life Support (ABLS) approach that runs in parallel with active resuscitation. After the airway, breathing, and circulation are secured, the clinician estimates total body surface area burned using the Lund-Browder chart in children or Wallace's rule of 9s in adults (head 9%, each arm 9%, each leg 18%, anterior trunk 18%, posterior trunk 18%, perineum 1%). Only partial- and full-thickness burns are counted; superficial first-degree burns are excluded. Depth is judged clinically by appearance, blanching, sensation, and capillary refill, recognizing that depth often evolves over the first 48-72 hours. The history establishes mechanism (flame, scald, chemical, electrical, radiation), duration of contact, enclosed-space exposure suggesting inhalation injury, and any associated trauma. Carboxyhemoglobin and arterial blood gases are obtained when smoke inhalation is suspected. Baseline laboratory work includes a complete blood count, electrolytes, creatinine, glucose, lactate, creatine kinase (for electrical injury), and a coagulation profile. ECG and continuous cardiac monitoring are mandatory after electrical exposure. Bronchoscopy is the gold standard for diagnosing inhalation injury and is performed within 24 hours when clinical suspicion is high. Imaging — chest radiograph, CT for associated trauma, and Doppler for limb perfusion in deep circumferential burns — is added selectively. The 2023 American Burn Association referral criteria identify which burns must be transferred to a verified burn center: partial-thickness burns over 10% body surface area, any full-thickness burn, burns of the face, hands, feet, genitalia, perineum, or major joints, electrical and chemical burns, inhalation injury, burns with significant comorbidity, and any pediatric burn at a facility without pediatric burn capability.",
+  "diagnosticTests": [
+    {
+      "test": "Total body surface area (TBSA) calculation using Lund-Browder chart or Wallace's rule of 9s",
+      "purpose": "Defines burn size, drives fluid resuscitation, predicts mortality, and determines burn center referral. Lund-Browder is used in children because head and limb proportions differ from adults.",
+      "whatToExpect": "The clinician maps burns onto a body diagram, calculates the percentage in each region, and totals only partial- and full-thickness burns. The estimate is repeated at 24 and 48 hours as burn depth evolves."
+    },
+    {
+      "test": "Carboxyhemoglobin and arterial blood gas",
+      "purpose": "Detects carbon monoxide poisoning and hypoxia after smoke inhalation. Carboxyhemoglobin over 10% confirms significant exposure; over 25% indicates severe poisoning and need for 100% oxygen or hyperbaric therapy.",
+      "whatToExpect": "A standard arterial blood draw, usually from the radial artery, returns results within 10-15 minutes in most emergency departments."
+    },
+    {
+      "test": "Fiberoptic bronchoscopy",
+      "purpose": "Gold standard for diagnosing lower-airway inhalation injury. Direct visualization grades airway erythema, edema, soot deposits, and mucosal sloughing.",
+      "whatToExpect": "Performed at the bedside under sedation within 24 hours of suspected inhalation injury. Takes 15-30 minutes; usually combined with airway clearance and bronchial sampling."
+    },
+    {
+      "test": "Serum creatine kinase and urine myoglobin",
+      "purpose": "Detects rhabdomyolysis after electrical or deep flame burns. Levels above 5,000 U/L identify patients needing aggressive fluid resuscitation to prevent acute kidney injury.",
+      "whatToExpect": "Routine venous and urine samples; results return within 1-2 hours. Repeated every 6-12 hours during the first 24 hours of admission."
+    },
+    {
+      "test": "12-lead ECG and continuous cardiac monitoring",
+      "purpose": "Required for any electrical injury or burn over 20% body surface area. Detects current-induced arrhythmias, conduction delays, and ischemic changes.",
+      "whatToExpect": "Standard ECG takes 5 minutes. Continuous telemetry is maintained for at least 24 hours after high-voltage exposure or until cardiac rhythm has been stable."
+    },
+    {
+      "test": "Wound depth assessment with laser Doppler imaging",
+      "purpose": "Quantifies dermal blood flow to predict whether a burn will heal within 21 days or require surgical excision. Used in burn centers to reduce unnecessary grafting and shorten time to definitive diagnosis.",
+      "whatToExpect": "A handheld or fixed scanner is passed over the burn surface 2-5 days after injury. The scan is painless, takes 5-10 minutes per region, and produces a color map of perfusion."
+    },
+    {
+      "test": "Wound swab and tissue biopsy for culture",
+      "purpose": "Detects bacterial colonization and invasive burn wound infection. Quantitative biopsy with greater than 100,000 organisms per gram of tissue confirms invasive infection requiring systemic antibiotics.",
+      "whatToExpect": "Surface swabs are painless. Punch biopsies are taken from suspect wound areas during dressing changes, often under existing analgesia or short procedural sedation."
+    },
+    {
+      "test": "Chest radiograph and trauma imaging as indicated",
+      "purpose": "Screens for associated thoracic trauma, pulmonary edema from over-resuscitation, and pneumonia in admitted burn patients.",
+      "whatToExpect": "Standard portable chest radiograph at admission and repeated as clinically indicated; CT imaging is reserved for suspected associated trauma."
+    }
+  ],
+  "treatmentOverview": "Burn treatment begins at the scene and runs along three parallel tracks: stop the burning process, support physiology, and treat the wound. First aid is to remove the patient from the heat or chemical source, cool partial-thickness burns with running water at 15-25°C for 20 minutes within the first 3 hours, remove constricting jewelry and burned clothing that is not adherent, and cover the burn with a clean dry dressing. In the emergency department, the airway is secured early if inhalation injury is suspected because edema can rapidly close the upper airway. Two large-bore intravenous lines are placed, preferably through unburned skin, and fluid resuscitation is started using the Parkland formula: 4 mL of lactated Ringer's per kilogram of body weight per percent total body surface area burned, with half delivered in the first 8 hours from the time of injury and the remainder over the next 16 hours. Urine output of 0.5 mL/kg/hour in adults and 1 mL/kg/hour in children titrates the rate. Analgesia uses intravenous opioids titrated to effect; oral or intramuscular routes are unreliable in major burns. Tetanus prophylaxis is updated. Patients meeting American Burn Association referral criteria are transferred to a verified burn center after initial stabilization. Wound management combines topical antimicrobials (silver sulfadiazine, mafenide, silver-impregnated dressings), early excision of full-thickness burns within 5 days of injury, and autologous split-thickness skin grafting. Cultured epithelial autografts and biosynthetic dermal templates extend coverage when donor sites are limited. Nutritional support is started early because burns drive an extreme hypermetabolic state — protein requirements rise to 1.5-2 g/kg/day and caloric needs to 1.3-1.5 times resting expenditure. Long-term care includes pressure-garment therapy, silicone scar management, range-of-motion physiotherapy, psychological support, and reconstructive surgery for hypertrophic scars and contractures.",
+  "medicalTreatments": [
+    {
+      "name": "Fluid resuscitation with lactated Ringer's (Parkland formula: 4 mL × weight kg × %TBSA over 24 hours)",
+      "description": "The cornerstone of major burn management. Half the calculated volume is given in the first 8 hours from time of injury, half over the next 16 hours. Adjustment is titrated to urine output rather than rigid adherence to the formula, with American Burn Association 2024 guidance recommending starting at 2 mL/kg/%TBSA and escalating as needed to avoid over-resuscitation.",
+      "effectiveness": "When started within 2 hours of injury, reduces burn shock mortality by roughly 50% compared to delayed or inadequate resuscitation in burns over 20% TBSA."
+    },
+    {
+      "name": "Topical silver sulfadiazine 1% cream",
+      "description": "Broad-spectrum antimicrobial applied to partial-thickness burns once or twice daily. Reduces wound colonization with Pseudomonas, Staphylococcus, and Candida. Avoided in pregnancy, in neonates under 2 months, and on the face. Now often replaced by silver-impregnated dressings that require fewer changes.",
+      "effectiveness": "Reduces wound infection rates by roughly 30-50% versus untreated controls in moderate partial-thickness burns."
+    },
+    {
+      "name": "Intravenous opioid analgesia (morphine, fentanyl, or hydromorphone titrated to effect)",
+      "description": "First-line for moderate to severe burn pain. Oral and intramuscular routes are unreliable during burn shock because of poor perfusion. Patient-controlled analgesia and procedural sedation with ketamine are used for dressing changes.",
+      "effectiveness": "Adequate analgesia is achieved in over 90% of patients when intravenous opioids are titrated and combined with non-opioid adjuncts."
+    },
+    {
+      "name": "Tetanus toxoid booster or tetanus immunoglobulin",
+      "description": "All burn patients receive tetanus prophylaxis on presentation if their last booster was more than 5 years ago. Tetanus immunoglobulin is added when immunization status is unknown or incomplete.",
+      "effectiveness": "Near-complete protection against tetanus when administered within 72 hours of injury."
+    },
+    {
+      "name": "Hyperbaric oxygen therapy for carbon monoxide poisoning",
+      "description": "Considered when carboxyhemoglobin is over 25%, in pregnancy with carboxyhemoglobin over 15%, or in any patient with neurological symptoms after carbon monoxide exposure. Reduces neurocognitive sequelae when delivered within 6 hours.",
+      "effectiveness": "Reduces late neurocognitive complications by roughly 40% in moderate to severe carbon monoxide exposure (Weaver 2002)."
+    },
+    {
+      "name": "Topical mafenide acetate",
+      "description": "Penetrates eschar better than silver sulfadiazine, useful on cartilage-rich areas such as the ear. Can cause metabolic acidosis through carbonic anhydrase inhibition; limits use to focal application.",
+      "effectiveness": "Effective against Pseudomonas and other Gram-negative organisms; reduces invasive infection of cartilaginous burns."
+    },
+    {
+      "name": "Calcium gluconate for hydrofluoric acid burns",
+      "description": "Hydrofluoric acid penetrates skin and chelates calcium, causing profound hypocalcemia and progressive necrosis. Topical 2.5% calcium gluconate gel is applied immediately, with subcutaneous or intra-arterial calcium gluconate for deeper injury. Cardiac monitoring is mandatory.",
+      "effectiveness": "Rapid local calcium administration prevents tissue progression and limits systemic hypocalcemia in over 80% of cases when started within 1 hour."
+    },
+    {
+      "name": "Early enteral nutrition (1.3-1.5 × resting energy expenditure; protein 1.5-2 g/kg/day)",
+      "description": "Started within 24 hours of admission. Burn hypermetabolism peaks at 7-12 days and persists for weeks to months. Adequate nutrition reduces infection rates, improves wound healing, and shortens hospital stay.",
+      "effectiveness": "Reduces wound infection by roughly 30% and shortens hospital stay by 3-5 days compared to delayed feeding (Wolf 2003)."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Escharotomy",
+      "description": "Emergency incision through full-thickness eschar of a limb, neck, or chest to relieve compartment pressure or restore ventilation. Performed at the bedside or operating theatre as soon as compromise is recognized, typically within the first 6-24 hours.",
+      "successRate": "Restores distal perfusion or ventilation in over 90% of cases when performed before irreversible ischemia develops."
+    },
+    {
+      "name": "Early tangential excision and split-thickness skin grafting",
+      "description": "Layer-by-layer removal of non-viable tissue followed by autologous skin graft from an unburned donor site. Performed within 3-5 days of injury for full-thickness and deep partial-thickness burns. Reduces infection, hospital stay, and mortality compared to delayed excision.",
+      "successRate": "Graft take rates exceed 90% in well-prepared wound beds; mortality reductions of 9-12% versus delayed excision in burns over 30% TBSA (Janzekovic technique)."
+    },
+    {
+      "name": "Cultured epithelial autografts and dermal substitutes",
+      "description": "Used when donor skin is insufficient in burns over 40% TBSA. Patient keratinocytes are expanded in laboratory culture over 2-3 weeks; biosynthetic dermal templates such as Integra provide a neodermis while autograft is prepared.",
+      "successRate": "Long-term coverage achieved in 60-75% of treated areas in massive burns; significantly improved outcomes versus repeated donor harvest alone."
+    },
+    {
+      "name": "Fasciotomy",
+      "description": "Surgical decompression of muscle compartments after high-voltage electrical injury or deep flame burn complicated by compartment syndrome. Performed when intracompartmental pressure exceeds 30 mmHg or distal pulses are lost.",
+      "successRate": "Limb salvage in 70-85% of cases when fasciotomy is performed within 6 hours of compartment pressure elevation."
+    },
+    {
+      "name": "Reconstructive scar release and contracture surgery",
+      "description": "Z-plasty, local flaps, full-thickness skin grafts, and tissue expansion used over months to years after wound closure to restore joint range, hand function, eyelid closure, and cosmetic appearance.",
+      "successRate": "Functional improvement in 75-90% of patients undergoing dedicated burn reconstruction at high-volume centers."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Honey-impregnated dressings for partial-thickness burns",
+      "description": "Medical-grade Manuka honey reduces wound bacterial load and accelerates re-epithelialization. A Cochrane review (Jull 2015) found shorter healing times for partial-thickness burns versus conventional dressings, though heterogeneity limits firm conclusions."
+    },
+    {
+      "name": "Aloe vera gel for superficial burns and minor sunburn",
+      "description": "Pooled randomized trial data suggest modestly shorter healing time for first-degree and small superficial second-degree burns versus topical bland emollients. Not a substitute for definitive wound care in deeper burns."
+    }
+  ],
+  "whySeeSpecialist": "Any burn meeting American Burn Association referral criteria — partial-thickness over 10% body surface area, any full-thickness burn, burns of the face, hands, feet, genitalia, perineum, or major joints, electrical or chemical burns, inhalation injury, or burns in patients with significant comorbidity — requires care at a verified burn center. These centers combine emergency physicians, plastic and reconstructive surgeons, intensivists, burn-trained nurses, respiratory therapists, dietitians, and psychologists in a single coordinated team. Outcomes including mortality, infection rate, and functional recovery are measurably better at high-volume burn centers than at general hospitals.",
+  "doctorSelectionGuide": "Look for a center verified by the American Burn Association (or its national equivalent — for example the International Society for Burn Injuries network). Ask whether the center performs early excision and grafting within 5 days of injury, whether dedicated burn intensive care is available, and whether long-term rehabilitation including pressure-garment therapy, scar management, and psychological support is integrated. For pediatric burns, choose a center with pediatric burn capability and child life specialists. Continuity through the acute, reconstructive, and rehabilitation phases matters more than proximity for major burns.",
+  "preventionStrategies": [
+    "Install and test smoke alarms on every level of the home; replace batteries annually — functioning smoke alarms reduce fire-related mortality by approximately 50%",
+    "Set water heater temperature below 49°C (120°F) — water at 60°C produces a full-thickness scald in adult skin within 5 seconds",
+    "Keep hot drinks, cooking pots, and electrical cords out of reach of children under 5; use back burners and turn handles inward",
+    "Use ground-fault circuit interrupters in kitchens, bathrooms, and outdoor outlets to reduce electrical burn risk",
+    "Store flammable liquids, household chemicals, and matches in locked cabinets away from children",
+    "Wear flame-resistant or non-flammable clothing when working near flames; replace synthetic loose-fitting garments that ignite easily"
+  ],
+  "lifestyleModifications": [
+    "Adhere to all scheduled dressing changes, antimicrobial applications, and follow-up appointments during the wound-healing phase",
+    "Maintain a high-protein, high-calorie diet during the first 6-12 months after a major burn to support tissue regeneration and counter persistent hypermetabolism",
+    "Wear custom pressure garments 23 hours per day for 12-18 months after deep partial-thickness or grafted burns to reduce hypertrophic scarring",
+    "Apply silicone gel sheets or gels to maturing scars for at least 12 hours per day for 6 months — evidence-based reduction in scar height, redness, and itch",
+    "Protect healing burn and grafted skin from ultraviolet exposure for at least 12 months with SPF 50+ sunscreen, hats, and protective clothing — pigment changes can be permanent",
+    "Attend daily range-of-motion physiotherapy and occupational therapy for burns crossing joints; passive and active stretching prevents contractures that limit function",
+    "Engage with psychological support early — post-traumatic stress, depression, and body-image distress affect roughly 30-40% of major burn survivors at 1 year",
+    "Avoid alcohol and tobacco during the acute and reconstructive phases; both impair wound healing and graft take"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "High-protein foods (lean meats, fish, eggs, dairy, legumes) — protein needs rise to 1.5-2 g/kg/day during burn hypermetabolism",
+      "Energy-dense whole foods (nuts, avocado, olive oil, whole grains) to meet 1.3-1.5 × resting energy expenditure",
+      "Vitamin C 500-1,000 mg daily and zinc 25-50 mg daily during wound healing to support collagen synthesis",
+      "Vitamin A and vitamin D supplementation to recommended daily allowance levels in patients with prolonged hospitalization",
+      "Adequate hydration with water and electrolyte-containing fluids, especially during the high-output phase after major burns",
+      "Oral nutrition supplements between meals when appetite is reduced — common for several weeks after major burn"
+    ],
+    "avoid": [
+      "Alcohol — impairs wound healing, graft survival, and immune function during the acute and reconstructive phases",
+      "Highly processed low-protein meals that do not meet elevated burn nutritional demand",
+      "Excessive simple sugars and refined carbohydrate that worsen burn-related hyperglycemia and infection risk",
+      "Unpasteurized dairy and undercooked meats while immunosuppressed in the acute admission phase",
+      "Restrictive or fad diets during recovery — caloric and protein deficit prolongs healing and weakens grafts",
+      "Smoking and nicotine products — reduce dermal blood flow and significantly impair graft take"
+    ]
+  },
+  "exerciseGuidelines": "Range-of-motion exercises start within 24-48 hours of admission for burns over joints, even before wound closure, to prevent contractures. After grafting, gentle stretching resumes once graft take is confirmed, typically at 5-7 days. Progressive resistance training and cardiovascular reconditioning begin once wounds are closed and the patient is medically stable, usually 2-6 weeks after major burn. Aquatic therapy is useful for severely deconditioned survivors but only after all wounds are fully epithelialized.",
+  "dailyManagement": [
+    "Inspect healing wounds and grafted skin daily for redness, increased drainage, foul odor, or warmth — early signs of infection",
+    "Moisturize all closed burn wounds twice daily with fragrance-free emollient to reduce dryness, itching, and friction blistering",
+    "Wear pressure garments and silicone scar dressings as prescribed; pressure must be sustained for 12-18 months to alter scar maturation",
+    "Perform stretching and range-of-motion exercises at least three times daily for burns crossing joints",
+    "Take a high-protein supplement or meal every 2-3 hours during the acute hypermetabolic phase to prevent muscle wasting",
+    "Track pain, itch, and mood — burn-related itch responds to oral antihistamines and gabapentin, and persistent low mood is treatable"
+  ],
+  "prognosis": "Survival in burn injury is determined by burn size, depth, age, presence of inhalation injury, and access to a verified burn center. With current treatment in high-resource settings, mortality is below 5% for adults with burns under 40% body surface area and below 10% for burns up to 60%. Beyond 80% TBSA, mortality rises sharply but survival remains possible — the largest published series report survivors of burns over 95% TBSA. Children and young adults have substantially better outcomes than older adults at any given burn size. Inhalation injury raises mortality of a given burn by roughly 20-30%. Long-term outcomes for survivors are dominated by hypertrophic scarring, contractures, chronic pain, itch, and psychological consequences including post-traumatic stress and depression. With early excision, modern wound care, pressure-garment therapy, structured rehabilitation, and psychological support, most adults return to work within 6-12 months after burns under 20% TBSA, and a majority of larger-burn survivors regain independence in activities of daily living within 1-2 years.",
+  "recoveryTimeline": "Superficial first-degree burns heal in 3-6 days without scarring. Superficial partial-thickness burns heal in 7-21 days, usually without significant scarring. Deep partial-thickness burns take more than 21 days and frequently leave hypertrophic scars; early grafting often shortens recovery. Grafted full-thickness burns achieve initial wound closure in 2-4 weeks after surgery, with graft maturation continuing for 6-12 months. Hypermetabolism, muscle loss, and immune suppression persist for weeks to months after major burns. Scar maturation continues for 12-24 months; pressure-garment and silicone therapy are most effective during this window. Return to school or work is typical within 4-12 weeks for moderate burns, 6-12 months for major burns, and longer when inhalation injury, amputation, or polytrauma complicates recovery.",
+  "complications": [
+    "Hypovolemic burn shock from massive plasma loss into burn tissue during the first 24-48 hours — prevented by early Parkland-guided fluid resuscitation",
+    "Inhalation injury and acute respiratory distress syndrome from smoke and hot gases — main driver of early mortality in house-fire victims",
+    "Invasive burn wound infection and sepsis, typically with Pseudomonas, Staphylococcus aureus, or Candida — leading cause of late mortality after the first week",
+    "Compartment syndrome from circumferential full-thickness burns or deep electrical injury — managed by emergency escharotomy or fasciotomy",
+    "Acute kidney injury from hypovolemia, rhabdomyolysis, and sepsis — incidence of 15-25% in major burns and associated with markedly higher mortality",
+    "Hypertrophic scarring and joint contractures developing over 3-12 months after deep burns, particularly across joints and on the face and hands",
+    "Post-traumatic stress disorder, depression, and chronic pain affecting roughly 30-40% of major burn survivors at 1 year",
+    "Long-term hypermetabolism, growth retardation in children, and persistent muscle catabolism for 12 months or more after major burn"
+  ],
+  "supportResources": [
+    {
+      "name": "American Burn Association — Patient and Family Resources",
+      "url": "https://ameriburn.org/resources/",
+      "description": "Patient education, burn center directory, and information on prevention from the US professional society that writes burn-center verification standards."
+    },
+    {
+      "name": "Phoenix Society for Burn Survivors",
+      "url": "https://www.phoenix-society.org/",
+      "description": "Peer support, family resources, and the SOAR (Survivors Offering Assistance in Recovery) program for adult and pediatric burn survivors."
+    },
+    {
+      "name": "World Health Organization — Burns Fact Sheet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/burns",
+      "description": "Global burden of burns, prevention strategies, and resources for low- and middle-income countries."
+    },
+    {
+      "name": "Children's Burn Trust (UK)",
+      "url": "https://www.cbtrust.org.uk/",
+      "description": "Family support, rehabilitation camps, and educational resources focused on child and adolescent burn survivors."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "chemical-burns-occupational",
+      "name": "Occupational Chemical Burn",
+      "keyDifference": "Occupational chemical burns are a specific subset of burn injury caused by workplace exposure to acids, alkalis, or vesicants. They share the depth classification system but require additional decontamination and may continue to progress until the agent is fully removed, unlike thermal burns where injury stops once heat is removed."
+    },
+    {
+      "slug": "burn-scar-contracture",
+      "name": "Burn Scar Contracture",
+      "keyDifference": "Burn scar contracture is a long-term complication of healed deep burns rather than the acute injury itself — fibrous tissue tightens across joints and limits range of motion. It develops months after the initial burn and is managed with pressure garments, splinting, and reconstructive surgery."
+    },
+    {
+      "slug": "pressure-ulcers-bedsores",
+      "name": "Pressure Ulcers (Bedsores)",
+      "keyDifference": "Pressure ulcers develop from sustained pressure over bony prominences in immobile patients and progress through their own staging system. Unlike burns, the injury is ischemic rather than thermal, occurs over days to weeks, and typically affects the sacrum, heels, and hips."
+    },
+    {
+      "slug": "allergic-contact-dermatitis",
+      "name": "Allergic Contact Dermatitis",
+      "keyDifference": "Contact dermatitis is an immune-mediated skin reaction with itching, erythema, and vesicles that develops 24-72 hours after exposure to an allergen. Unlike a chemical burn, there is no direct tissue destruction, the reaction is delayed, and the boundary often extends beyond the area of physical contact."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "ptsd",
+      "name": "Post-Traumatic Stress Disorder"
+    },
+    {
+      "slug": "acute-kidney-injury",
+      "name": "Acute Kidney Injury"
+    },
+    {
+      "slug": "chronic-pain-syndrome",
+      "name": "Chronic Pain Syndrome"
+    },
+    {
+      "slug": "anxiety",
+      "name": "Anxiety"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "burn-scar-contracture",
+      "name": "Burn Scar Contracture",
+      "relevance": "Common long-term sequel of deep partial- and full-thickness burns; managed by pressure garments, physiotherapy, and reconstructive surgery."
+    },
+    {
+      "slug": "chemical-burns-occupational",
+      "name": "Occupational Chemical Burn",
+      "relevance": "Specific mechanism subset of burn injury with overlapping management principles but additional decontamination requirements."
+    },
+    {
+      "slug": "keloid-treatment",
+      "name": "Keloid Scarring",
+      "relevance": "Pathologic scar response that can complicate burn wound healing, particularly in patients with darker skin types and burns over the chest or shoulders."
+    },
+    {
+      "slug": "ptsd",
+      "name": "Post-Traumatic Stress Disorder",
+      "relevance": "Affects roughly 30-40% of major burn survivors at one year; integrated psychological care is part of modern burn center practice."
+    },
+    {
+      "slug": "acute-kidney-injury",
+      "name": "Acute Kidney Injury",
+      "relevance": "Develops in 15-25% of major burns from hypovolemia, rhabdomyolysis, or sepsis; carries high mortality."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What are the different degrees of burns?",
+      "answer": "First-degree burns affect only the epidermis and look red and painful. Second-degree burns reach the dermis and blister. Third-degree burns destroy the full dermis and appear white, brown, or leathery. Fourth-degree burns extend into muscle, tendon, or bone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is burn size measured?",
+      "answer": "Burn size is recorded as a percentage of total body surface area. Adults use Wallace's rule of 9s: head 9%, each arm 9%, each leg 18%, front trunk 18%, back trunk 18%, perineum 1%. Children use the Lund-Browder chart because their head is proportionally larger.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Parkland formula for burn fluid resuscitation?",
+      "answer": "The Parkland formula calculates fluid for the first 24 hours after a major burn: 4 mL of lactated Ringer's per kg body weight per percent TBSA burned. Half is given in the first 8 hours from injury and half over the next 16 hours, titrated to urine output.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I go to a burn center instead of an ER?",
+      "answer": "American Burn Association criteria refer partial-thickness burns over 10% body surface area, any full-thickness burn, burns of the face, hands, feet, genitalia, perineum, or major joints, electrical or chemical burns, inhalation injury, and any pediatric burn.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the first aid for a thermal burn?",
+      "answer": "Remove the heat source, cool the burn under cool running water at 15-25°C for 20 minutes within 3 hours of injury, remove jewelry and non-adherent burned clothing, and cover with a clean dry dressing. Do not apply ice, butter, toothpaste, or home remedies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a chemical burn different from a thermal burn?",
+      "answer": "A chemical burn keeps damaging tissue until the agent is fully removed, while a thermal burn stops once the heat source is gone. The first step in a chemical burn is irrigation with running water for at least 20-30 minutes. Alkalis penetrate deeper than acids.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why are electrical burns more dangerous than they look?",
+      "answer": "Electrical burns often show only small skin entry and exit wounds but cause deep muscle damage along the current path. High-voltage exposure can produce rhabdomyolysis, cardiac arrhythmia, and compartment syndrome. High-voltage injury needs at least 24 hours of cardiac monitoring.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is inhalation injury and why does it matter?",
+      "answer": "Inhalation injury is damage to the airway from hot gases, steam, or toxic smoke. It can cause airway swelling, lower-airway burns, and carbon monoxide poisoning. Signs include hoarseness, singed nasal hair, and soot in the mouth. It raises mortality by 20-30%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a burn get deeper after the initial injury?",
+      "answer": "Yes. Burn depth often evolves over the first 48-72 hours, especially with inadequate fluid resuscitation, infection, or poor perfusion at the burn margins. Burns are reassessed at 24 and 48 hours, which is why specialist review matters even when the wound looks shallow.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do all burns need antibiotics?",
+      "answer": "No. Systemic antibiotics are not routine for burns because they do not prevent wound infection and may select resistant organisms. Topical antimicrobials like silver sulfadiazine or silver-impregnated dressings are used. Systemic antibiotics are reserved for confirmed sepsis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does a burn take to heal?",
+      "answer": "First-degree burns heal in 3-6 days. Superficial second-degree burns heal in 7-21 days. Deep second-degree burns take more than 21 days and often need grafting. Full-thickness burns will not heal without grafting. Scar maturation continues for 12-24 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hypertrophic scarring after a burn?",
+      "answer": "Hypertrophic scars are raised, red, itchy scars in deep partial- and full-thickness burns, developing over 3-12 months. They stay within the wound border, unlike keloids which spread beyond it. Pressure garments and silicone gel sheets reduce scar height.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need a skin graft?",
+      "answer": "Skin grafting is needed for burns that cannot heal within about 21 days, which includes most deep partial-thickness and all full-thickness burns. A thin layer of healthy skin is taken from an unburned donor site. Early grafting within 3-5 days improves outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a major burn cause kidney failure?",
+      "answer": "Yes. Acute kidney injury develops in 15-25% of major burns. Causes include hypovolemia during burn shock, rhabdomyolysis from electrical or deep flame burns, sepsis, and nephrotoxic drugs. Parkland-guided fluid resuscitation and prompt rhabdomyolysis treatment reduce risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is escharotomy?",
+      "answer": "Escharotomy is an emergency surgical incision through the thick eschar of a circumferential full-thickness burn. It is done when a burn around a limb, neck, or chest restricts blood flow or breathing. The incision is usually made at the bedside within 24 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How dangerous is a sunburn?",
+      "answer": "A typical sunburn is a superficial first-degree burn that heals in a few days. Severe sunburn can produce second-degree burns with blistering and dehydration. Repeated severe sunburn raises skin cancer risk, particularly melanoma. Sunscreen SPF 30+ and clothing prevent damage.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does a deep burn hurt less than a shallow one?",
+      "answer": "Pain comes from intact nerve endings in the dermis. Superficial second-degree burns expose these nerves and are intensely painful. Full-thickness burns destroy dermal nerves, so the burn itself can feel numb. Pain often returns as healing brings nerves back.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children be treated the same as adults for burns?",
+      "answer": "The principles are the same, but children need pediatric burn surface area charts (Lund-Browder), weight-based fluid resuscitation, and careful temperature management because they lose heat faster. Pediatric burn center transfer and child life specialist support are preferred.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are burns covered by health insurance?",
+      "answer": "Most health insurance plans cover acute burn care, surgery, and inpatient rehabilitation. Coverage for long-term pressure garments, scar management, and psychological services varies. Verified burn centers usually have social workers who help coordinate financial support.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is burn pain managed long-term?",
+      "answer": "Acute burn pain responds to intravenous opioids, sometimes combined with ketamine for procedures. Background pain, neuropathic pain, and itch during healing are managed with paracetamol, gabapentin or pregabalin, and antihistamines. A pain specialist is involved at 3 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a burn cause post-traumatic stress?",
+      "answer": "Yes. Post-traumatic stress disorder, depression, and anxiety affect roughly 30-40% of major burn survivors at one year. Risk is higher with disfigurement, prolonged hospital stay, and burns from interpersonal violence. Trauma-focused cognitive behavioral therapy improves outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When can I return to work or school after a burn?",
+      "answer": "For minor burns, most people return within 1-2 weeks. Moderate burns typically allow return in 4-12 weeks. Major burns may require 6-12 months, longer if inhalation injury, amputation, or polytrauma are present. Modified duties and graduated return programs help reintegration.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Burn Injury (skin and tissue damage from heat, chemicals, electricity, or radiation)",
+  "regionalNames": [
+    {
+      "name": "जलना (Jalna)",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Quemadura",
+      "region": "Spanish-speaking countries",
+      "language": "es"
+    },
+    {
+      "name": "Brûlure",
+      "region": "France",
+      "language": "fr"
+    }
+  ],
+  "searchTags": [
+    "burn",
+    "burn injury",
+    "thermal burn",
+    "chemical burn",
+    "electrical burn",
+    "radiation burn",
+    "first degree burn",
+    "second degree burn",
+    "third degree burn",
+    "fourth degree burn",
+    "Parkland formula",
+    "rule of 9s",
+    "Lund-Browder",
+    "burn center",
+    "skin graft",
+    "escharotomy"
+  ],
+  "symptomKeywords": [
+    "burned skin red painful",
+    "blister after burn",
+    "white leathery burn",
+    "charred skin",
+    "swelling after burn",
+    "burning pain skin",
+    "smoke inhalation hoarse",
+    "chemical splash skin"
+  ],
+  "metaTitle": "Burn Injury: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Burn injury: depth classification, rule of 9s, Parkland fluid resuscitation, burn center referral, wound care, and recovery — reviewed by our medical board.",
+  "keywords": [
+    "burn",
+    "burn injury",
+    "burn treatment",
+    "first degree burn",
+    "second degree burn",
+    "third degree burn",
+    "fourth degree burn",
+    "rule of 9s burn",
+    "Parkland formula",
+    "burn center referral",
+    "burn first aid",
+    "chemical burn",
+    "electrical burn",
+    "hypertrophic burn scar",
+    "skin graft burn"
+  ],
+  "lastReviewed": "2026-05-18",
+  "sources": [
+    {
+      "title": "American Burn Association. 2023 National Burn Repository Annual Report — Burn Incidence and Treatment in the United States.",
+      "url": "https://ameriburn.org/resources/burnincidence/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "World Health Organization. Burns Fact Sheet. WHO; 2023.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/burns",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "American Burn Association. Advanced Burn Life Support (ABLS) Provider Manual, 2018 Edition.",
+      "url": "https://ameriburn.org/education/abls-program/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Greenhalgh DG. Management of Burns. New England Journal of Medicine. 2019;380(24):2349-2359.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31189038/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Jeschke MG, van Baar ME, Choudhry MA, Chung KK, Gibran NS, Logsetty S. Burn Injury. Nature Reviews Disease Primers. 2020;6(1):11.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32054846/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Pham TN, Cancio LC, Gibran NS. American Burn Association Practice Guidelines: Burn Shock Resuscitation. Journal of Burn Care & Research. 2008;29(1):257-266.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18182930/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Saffle JR. Fluid Creep and Over-Resuscitation. Critical Care Clinics. 2016;32(4):587-598.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27600130/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "ISBI Practice Guidelines Committee. ISBI Practice Guidelines for Burn Care. Burns. 2016;42(5):953-1021.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27542292/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Jull AB, Cullum N, Dumville JC, Westby MJ, Deshpande S, Walker N. Honey as a topical treatment for wounds. Cochrane Database of Systematic Reviews. 2015;(3):CD005083.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25742878/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Weaver LK, Hopkins RO, Chan KJ, et al. Hyperbaric Oxygen for Acute Carbon Monoxide Poisoning. New England Journal of Medicine. 2002;347(14):1057-1067.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12362006/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Burn_Degree_Diagram.svg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Burn_Degree_Diagram.svg",
+      "altText": "Medical diagram showing the four degrees of burn injury and the skin layers affected by each, from epidermis-only first degree to full-thickness fourth degree involving muscle and bone",
+      "caption": "Cross-section diagram of burn depth — first, second, third, and fourth degree burns and the skin layers each affects.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons contributors",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "assetType": "anatomy",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wallace_rule_of_nines.svg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Wallace_rule_of_nines.svg",
+      "altText": "Diagram of Wallace's rule of nines for estimating total body surface area burned in adults, with head 9 percent, each arm 9 percent, each leg 18 percent, anterior and posterior trunk 18 percent each, perineum 1 percent",
+      "caption": "Wallace's rule of 9s for adult total body surface area estimation in burn injury.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons contributors",
+      "width": 800,
+      "height": 1000
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "symptoms",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Second_degree_burn.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Second_degree_burn.jpg",
+      "altText": "Clinical photograph of a second-degree partial-thickness burn showing blisters and red moist underlying dermis on the forearm",
+      "caption": "Second-degree partial-thickness burn — blisters and exposed red dermis are characteristic.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons contributors",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "complications",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Burn_scar_contracture.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Burn_scar_contracture.jpg",
+      "altText": "Clinical photograph of a hypertrophic burn scar contracture across an elbow joint showing raised red scar tissue limiting joint extension",
+      "caption": "Hypertrophic burn scar with joint contracture — a long-term complication of deep burns over joints.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons contributors",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "reviewer": {
+    "name": "Dr. Sarah Chen",
+    "slug": "dr-sarah-chen-burn-plastic-surgery"
+  }
+}

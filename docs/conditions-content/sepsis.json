@@ -1,0 +1,644 @@
+{
+  "_meta": {
+    "slug": "sepsis",
+    "tier": 1,
+    "headTerm": "sepsis",
+    "longTailKeywords": [
+      "sepsis symptoms",
+      "sepsis treatment",
+      "septic shock",
+      "sepsis-3 definition",
+      "qSOFA score",
+      "hour-1 sepsis bundle",
+      "sepsis vs septic shock",
+      "early signs of sepsis",
+      "sepsis mortality",
+      "sepsis antibiotics"
+    ],
+    "primarySpecialty": "Critical Care",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against the 2021 Surviving Sepsis Campaign guideline (PMID 34599691), Singer et al. Sepsis-3 (JAMA 2016; PMID 26903338), Rudd et al. Global Burden of Sepsis (Lancet 2020; PMID 31954465), CDC sepsis surveillance, and IDSA guidance. Drug doses and bundle elements verified against the SSC 2021 Hour-1 bundle."
+  },
+  "h1Title": "Sepsis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Critical Care",
+  "heroOverview": "Sepsis is life-threatening organ dysfunction caused by a dysregulated host response to infection — the Sepsis-3 definition adopted internationally in 2016. It affects roughly 49 million people worldwide each year and is implicated in 1 in 5 deaths globally (Rudd, Lancet 2020), with 30-day mortality around 25-30% for sepsis and 40% or higher for septic shock. The condition typically presents with fever or hypothermia, fast breathing, altered mental status, and a falling blood pressure, layered on top of an infection such as pneumonia, urinary tract infection, or an intra-abdominal source. Every hour of antibiotic delay in septic shock increases mortality by roughly 4-8%. Survival hinges on a tightly time-boxed Hour-1 bundle of lactate, blood cultures, broad-spectrum antibiotics, fluid resuscitation, and vasopressors.",
+  "keyStats": {
+    "prevalence": "~1.7 million US adult cases/year (CDC); ~49 million cases globally (Rudd, Lancet 2020)",
+    "demographics": "Highest risk at age >65, infants <1 year, immunocompromised, and patients with chronic comorbidities; men slightly higher incidence than women",
+    "avgAge": "Median age of adult sepsis hospitalization is 65-70 years",
+    "globalCases": "~49 million annually; ~11 million sepsis-related deaths (1 in 5 deaths worldwide)"
+  },
+  "definition": "Sepsis (ICD-10: A41.9) is defined by the 2016 Sepsis-3 consensus as life-threatening organ dysfunction caused by a dysregulated host response to infection. The clinical operationalization is a rise of two or more points in the Sequential Organ Failure Assessment (SOFA) score from baseline in the setting of suspected or confirmed infection. Septic shock is a subset — sepsis with circulatory and cellular metabolic abnormalities that profoundly increase mortality, defined as the persistent need for a vasopressor to maintain mean arterial pressure of 65 mmHg or higher together with a serum lactate above 2 mmol/L despite adequate fluid resuscitation. The pathophysiology involves an initial pro-inflammatory cascade (cytokine release, endothelial activation, coagulation dysregulation, microvascular failure) followed by a counter-regulatory immunosuppressive phase. Tissue oxygen delivery falls below demand, mitochondrial dysfunction sets in, and organs fail in a predictable sequence — commonly cardiovascular, respiratory, renal, hematologic, hepatic, and neurologic. Sepsis is managed in emergency departments, intensive care units, and step-down units; the lead specialties are critical care medicine, infectious disease, and emergency medicine, with hospital medicine, nephrology, pulmonology, and surgery often involved depending on the source and complications. The older terms severe sepsis and SIRS-based sepsis were retired in 2016 but remain in some coding and surveillance systems.",
+  "typesClassification": [
+    {
+      "type": "Sepsis (Sepsis-3)",
+      "description": "Infection plus an acute increase in SOFA score of 2 or more points reflecting organ dysfunction. Bedside screening uses qSOFA: respiratory rate ≥22/min, altered mental status (GCS <15), or systolic blood pressure ≤100 mmHg — two of three flags higher mortality."
+    },
+    {
+      "type": "Septic shock",
+      "description": "Sepsis with persistent hypotension requiring vasopressors to keep mean arterial pressure ≥65 mmHg AND serum lactate >2 mmol/L despite adequate fluid resuscitation. Hospital mortality is approximately 40% (Singer 2016)."
+    },
+    {
+      "type": "Bacteremia without sepsis",
+      "description": "Bloodstream infection that has not triggered organ dysfunction. Requires treatment but is not, by current definition, sepsis. Can progress to sepsis if untreated or in vulnerable hosts."
+    },
+    {
+      "type": "Neonatal and pediatric sepsis",
+      "description": "Sepsis in newborns and children, often with age-specific organisms (group B streptococcus, E. coli in neonates) and age-specific vital sign thresholds (Phoenix sepsis criteria, 2024). Managed under separate pediatric guidelines."
+    }
+  ],
+  "primarySymptoms": [
+    "Fever above 38.0°C or hypothermia below 36.0°C — either extreme is a warning, and elderly or immunosuppressed patients often present afebrile.",
+    "Tachycardia with heart rate persistently above 90-100 beats per minute, frequently the earliest objective sign in adults.",
+    "Tachypnea with respiratory rate at or above 22 breaths per minute — the single most predictive bedside vital sign on the qSOFA screen.",
+    "Altered mental status — new confusion, lethargy, disorientation, or unusual sleepiness; in older adults this is sometimes the only visible sign.",
+    "Hypotension with systolic blood pressure at or below 100 mmHg, or a drop of more than 40 mmHg from the patient's usual baseline.",
+    "Cool, mottled, or clammy skin, prolonged capillary refill (>3 seconds), and weak peripheral pulses indicating poor tissue perfusion.",
+    "Decreased urine output below 0.5 mL/kg/hour for more than 6 hours, reflecting acute kidney injury and falling renal perfusion.",
+    "Signs of the source infection — productive cough, dysuria, abdominal pain, painful red skin, an indwelling catheter or recent surgical wound, or new line site erythema.",
+    "Severe muscle pain, weakness, and a generalized feeling of being more unwell than any infection the patient has had before.",
+    "Petechiae, purpura, or a non-blanching rash in fulminant cases, particularly with meningococcal or staphylococcal sources."
+  ],
+  "earlyWarningSigns": [
+    "New shortness of breath with respiratory rate 22 or higher in a patient with any current infection",
+    "Sudden confusion, slurred speech, or unusual drowsiness in a febrile or recently ill patient",
+    "Rigors (shaking chills) with a documented fever, particularly after a recent procedure or in a patient with an indwelling device",
+    "Lactate above 2 mmol/L on a routine venous blood gas in a patient with suspected infection",
+    "A pre-existing infection (UTI, pneumonia, cellulitis) that is not improving after 48-72 hours of appropriate antibiotics"
+  ],
+  "emergencySigns": [
+    "Systolic blood pressure below 90 mmHg, or a drop of more than 40 mmHg from baseline, in a febrile patient — dial emergency services",
+    "New confusion, inability to stay awake, or unresponsiveness with signs of infection",
+    "Cold, mottled limbs with bluish lips or fingertips and capillary refill longer than 3 seconds",
+    "A non-blanching purpuric rash (presses don't fade under glass) — suspect meningococcal sepsis and seek emergency care",
+    "Severe shortness of breath at rest, oxygen saturation below 92% on room air, or new oxygen requirement",
+    "No urine for more than 12 hours despite normal fluid intake in a patient with infection"
+  ],
+  "causes": [
+    {
+      "cause": "Bacterial infection (Gram-negative)",
+      "description": "Escherichia coli, Klebsiella pneumoniae, Pseudomonas aeruginosa, and other Gram-negative rods cause a large share of sepsis, especially from urinary, intra-abdominal, and hospital-acquired sources. Endotoxin (lipopolysaccharide) is a major driver of the inflammatory cascade."
+    },
+    {
+      "cause": "Bacterial infection (Gram-positive)",
+      "description": "Staphylococcus aureus (including MRSA), Streptococcus pneumoniae, group A streptococcus, and enterococci are the dominant Gram-positive causes. Skin and soft tissue, line-associated bloodstream infections, and pneumonia are common entry points."
+    },
+    {
+      "cause": "Pneumonia",
+      "description": "Pneumonia is the single most common source of sepsis worldwide, accounting for roughly 35-50% of cases. Both community-acquired and hospital-acquired pneumonia can progress to sepsis, particularly in older adults and patients with chronic lung disease."
+    },
+    {
+      "cause": "Urinary tract infection",
+      "description": "Urosepsis accounts for 20-30% of cases, with obstructing stones, indwelling urinary catheters, and prostatic enlargement raising risk. E. coli is the most common organism. Pyelonephritis with bacteremia can decompensate within hours."
+    },
+    {
+      "cause": "Intra-abdominal infection",
+      "description": "Perforated viscus, acute cholangitis, diverticulitis, appendicitis, and postoperative leaks deliver polymicrobial flora (Gram-negative rods, anaerobes, enterococci) into the peritoneum or biliary tree. Source control by drainage or surgery is essential alongside antibiotics."
+    },
+    {
+      "cause": "Skin and soft tissue infection",
+      "description": "Cellulitis, necrotizing fasciitis, infected pressure injuries, and diabetic foot infections can seed bloodstream. Necrotizing soft tissue infection in particular requires emergent surgical debridement, not antibiotics alone."
+    },
+    {
+      "cause": "Catheter and device-related infection",
+      "description": "Central venous catheters, urinary catheters, dialysis catheters, prosthetic joints, pacemakers, and ventricular assist devices all create surfaces for biofilm formation. Staphylococcus aureus and coagulase-negative staphylococci predominate."
+    },
+    {
+      "cause": "Viral and fungal infection",
+      "description": "Severe influenza, SARS-CoV-2, dengue, and other systemic viral infections can produce a sepsis syndrome. Invasive candidiasis is increasingly common in ICU patients on broad-spectrum antibiotics, with central lines, or after abdominal surgery."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Age 65 or older",
+      "category": "non-modifiable",
+      "description": "Adults over 65 account for roughly two-thirds of US sepsis hospitalizations and have markedly higher case-fatality rates due to immune senescence and accumulated comorbidities."
+    },
+    {
+      "factor": "Infancy (under 1 year)",
+      "category": "non-modifiable",
+      "description": "Neonates have an immature immune system and limited physiologic reserve. Neonatal sepsis is a leading cause of under-5 mortality globally."
+    },
+    {
+      "factor": "Immunosuppression",
+      "category": "modifiable",
+      "description": "Chemotherapy, high-dose corticosteroids, biologic agents, post-transplant immunosuppression, HIV with CD4 <200, and primary immunodeficiency all blunt host defense and raise sepsis risk severalfold."
+    },
+    {
+      "factor": "Chronic medical comorbidities",
+      "category": "non-modifiable",
+      "description": "Diabetes mellitus, chronic kidney disease, cirrhosis, congestive heart failure, COPD, and active malignancy each independently raise sepsis incidence and mortality."
+    },
+    {
+      "factor": "Indwelling medical devices",
+      "category": "modifiable",
+      "description": "Central venous catheters, urinary catheters, endotracheal tubes, dialysis access, and prosthetic implants create direct portals for infection. Bundle adherence and timely removal reduce risk."
+    },
+    {
+      "factor": "Recent hospitalization or surgery",
+      "category": "modifiable",
+      "description": "Hospital-acquired infections, postoperative wound infections, and surgical-site complications account for a substantial fraction of severe sepsis cases. Risk is highest in the first 30 days after discharge."
+    },
+    {
+      "factor": "Burns and major trauma",
+      "category": "non-modifiable",
+      "description": "Loss of the skin barrier in burns and tissue injury in major trauma create extensive infection opportunities and an immunoparalysis-like state that increases late sepsis risk."
+    },
+    {
+      "factor": "Pregnancy and postpartum period",
+      "category": "non-modifiable",
+      "description": "Chorioamnionitis, endometritis, and septic abortion remain a global cause of maternal sepsis, especially in low-resource settings. Sepsis is among the top 5 causes of maternal mortality worldwide."
+    },
+    {
+      "factor": "Recent invasive procedures",
+      "category": "modifiable",
+      "description": "Endoscopy, urinary instrumentation, dental procedures in high-risk patients, and indwelling device placement can introduce pathogens directly into the bloodstream."
+    }
+  ],
+  "affectedDemographics": [
+    "US: ~1.7 million adult sepsis cases per year; ~350,000 deaths annually (CDC)",
+    "Global: ~49 million cases and ~11 million sepsis-related deaths per year — 1 in 5 of all global deaths (Rudd, Lancet 2020)",
+    "Children under 5 in low- and middle-income countries bear the highest sepsis burden; over 40% of global cases occur in this group",
+    "Black and Indigenous adults in the US have 2-3x higher sepsis incidence and worse outcomes, driven by comorbidity burden and access disparities",
+    "Maternal sepsis accounts for ~11% of maternal deaths globally (WHO)"
+  ],
+  "diagnosisOverview": "Sepsis diagnosis combines clinical suspicion of infection with objective evidence of organ dysfunction — there is no single confirmatory test. The 2016 Sepsis-3 framework operationalizes diagnosis as an acute rise of 2 or more points in the Sequential Organ Failure Assessment (SOFA) score in a patient with known or suspected infection. SOFA tracks six systems: respiratory (PaO2/FiO2), coagulation (platelets), liver (bilirubin), cardiovascular (mean arterial pressure or vasopressor use), CNS (Glasgow Coma Scale), and renal (creatinine or urine output). At the bedside, the simpler qSOFA score (respiratory rate ≥22, altered mental status, systolic BP ≤100 mmHg) is used outside the ICU to flag patients at risk of poor outcomes. Initial workup runs in parallel with resuscitation: serum lactate within 1 hour (a marker of tissue hypoperfusion; >2 mmol/L is abnormal, >4 mmol/L signals severe shock), at least two sets of blood cultures from separate sites drawn before antibiotics where this does not delay therapy, and a complete blood count, comprehensive metabolic panel, coagulation studies, arterial blood gas, and lactate trend. Source-directed studies follow: chest X-ray or CT for pulmonary sources, urinalysis and urine culture for urinary sources, abdominal CT or ultrasound for intra-abdominal sources, lumbar puncture if meningitis is suspected, and imaging plus aspiration of any abscess. Procalcitonin can support a bacterial diagnosis but is not used in isolation. Septic shock is confirmed when vasopressors are required to maintain mean arterial pressure ≥65 mmHg and lactate stays above 2 mmol/L after adequate fluid resuscitation.",
+  "diagnosticTests": [
+    {
+      "test": "Serum lactate (and serial measurements)",
+      "purpose": "A marker of tissue hypoperfusion and mitochondrial dysfunction. Levels above 2 mmol/L flag sepsis severity; above 4 mmol/L signals shock and predicts high mortality. Repeat in 2-4 hours to track resuscitation response — a falling lactate is a key endpoint.",
+      "whatToExpect": "A venous or arterial blood draw, results back within 15-30 minutes from a point-of-care or central lab. No special preparation needed."
+    },
+    {
+      "test": "Blood cultures (two sets from separate sites)",
+      "purpose": "Identifies the causative organism and guides antibiotic de-escalation. Drawn before antibiotics whenever this does not delay therapy by more than 45 minutes (SSC 2021).",
+      "whatToExpect": "Two separate venipunctures, each yielding 8-10 mL of blood split into aerobic and anaerobic bottles. Preliminary results in 24-48 hours; final sensitivities in 48-72 hours."
+    },
+    {
+      "test": "Complete blood count and comprehensive metabolic panel",
+      "purpose": "Tracks white cell count, platelets, electrolytes, creatinine, bilirubin, and liver enzymes — several feed directly into the SOFA score and reveal organ dysfunction.",
+      "whatToExpect": "Standard blood draw alongside other labs. Most parameters return within 30-60 minutes in an emergency department setting."
+    },
+    {
+      "test": "Coagulation studies (PT/INR, aPTT, fibrinogen, D-dimer)",
+      "purpose": "Detects disseminated intravascular coagulation (DIC), a common complication of sepsis. Falling fibrinogen with rising D-dimer and prolonged PT supports the diagnosis.",
+      "whatToExpect": "A single citrated blood tube drawn at the same time as the CBC. Results within 60 minutes."
+    },
+    {
+      "test": "Chest X-ray or chest CT",
+      "purpose": "Identifies pneumonia, empyema, ARDS, or pulmonary edema as both source and complication. CT is more sensitive for early or atypical pneumonia and complications.",
+      "whatToExpect": "Portable chest X-ray takes minutes at the bedside. CT requires transport but provides far more detail; both are routine in any sepsis workup with respiratory symptoms."
+    },
+    {
+      "test": "Urinalysis with culture",
+      "purpose": "Detects urinary source — leukocyte esterase, nitrites, and pyuria suggest infection; culture identifies organism and sensitivities.",
+      "whatToExpect": "Clean-catch midstream sample or catheter specimen. Dipstick results in minutes; full culture in 24-48 hours."
+    },
+    {
+      "test": "Procalcitonin",
+      "purpose": "An adjunct biomarker that rises in bacterial infections within 2-6 hours. Used to support diagnosis when uncertain and to guide antibiotic duration (SSC 2021 conditional recommendation).",
+      "whatToExpect": "Standard blood draw. Results within 1-2 hours. Not used in isolation — always interpreted alongside clinical picture."
+    },
+    {
+      "test": "Source-directed imaging (abdominal CT, ultrasound, MRI)",
+      "purpose": "Localizes intra-abdominal abscess, cholangitis, necrotizing soft tissue infection, or other sources amenable to drainage or surgery.",
+      "whatToExpect": "Depends on the study — abdominal CT with contrast takes about 10-15 minutes; bedside ultrasound is immediate. Used when the source is unclear or surgical source control is being considered."
+    }
+  ],
+  "treatmentOverview": "Sepsis is a time-dependent medical emergency. The 2021 Surviving Sepsis Campaign Hour-1 bundle defines the core actions to deliver within 60 minutes of recognition: measure lactate (and remeasure if initially elevated), obtain blood cultures before antibiotics where feasible, administer broad-spectrum antibiotics, start rapid intravenous crystalloid at 30 mL/kg for hypotension or lactate ≥4 mmol/L, and begin vasopressors during or after fluid resuscitation if mean arterial pressure remains below 65 mmHg. Empiric antibiotic choice should cover the most likely pathogens based on suspected source, local antibiogram, and prior cultures — commonly a broad-spectrum beta-lactam such as piperacillin-tazobactam, meropenem, or cefepime, with vancomycin added when MRSA risk is significant. Antifungal therapy is added in high-risk hosts. Source control — drainage of abscess, removal of infected device, surgical debridement, biliary decompression — must be pursued as early as the patient can tolerate, typically within 6-12 hours when feasible. Norepinephrine is the first-line vasopressor (titrate to a mean arterial pressure of at least 65 mmHg); vasopressin and epinephrine are added when norepinephrine alone is insufficient. Crystalloid (balanced salt solutions such as Ringer's lactate or Plasma-Lyte) is preferred over saline and over albumin for initial resuscitation. After initial fluids, further resuscitation is guided by dynamic measures (pulse pressure variation, passive leg raise, point-of-care echocardiography) rather than fixed volumes, to avoid fluid overload. Intravenous corticosteroids (hydrocortisone 200 mg/day) are added when vasopressor requirements remain high. Patients with sepsis-related ARDS receive lung-protective ventilation at 6 mL/kg of predicted body weight with plateau pressures below 30 cmH2O and prone positioning for severe cases. Renal replacement therapy is initiated for refractory acidosis, hyperkalemia, uremia, or volume overload. Antibiotic duration is typically 7-10 days for most sources, shorter for uncomplicated urinary or biliary sepsis with rapid source control, and procalcitonin-guided in selected patients.",
+  "medicalTreatments": [
+    {
+      "name": "Broad-spectrum empiric antibiotics within 1 hour (e.g., piperacillin-tazobactam 4.5 g IV every 6-8 h, meropenem 1 g IV every 8 h, or cefepime 2 g IV every 8 h; add vancomycin 25-30 mg/kg loading dose for MRSA risk)",
+      "description": "The single most time-sensitive intervention. SSC 2021 recommends antibiotics within 1 hour for septic shock and within 1-3 hours for sepsis without shock. Each hour of delay in septic shock raises mortality by approximately 4-8% (Kumar 2006).",
+      "effectiveness": "Early appropriate antibiotics reduce septic shock mortality by an absolute 7-10% compared with delayed therapy."
+    },
+    {
+      "name": "Intravenous fluid resuscitation — balanced crystalloid 30 mL/kg within the first 3 hours",
+      "description": "Restores intravascular volume and tissue perfusion. SSC 2021 strongly recommends balanced crystalloid (lactated Ringer's, Plasma-Lyte) over normal saline, which can cause hyperchloremic acidosis. Further fluids guided by dynamic assessment, not fixed volumes.",
+      "effectiveness": "Initial 30 mL/kg bolus is associated with improved 28-day mortality in shock when delivered within 3 hours; over-resuscitation increases pulmonary complications and death."
+    },
+    {
+      "name": "Norepinephrine (first-line vasopressor; start 0.05-0.1 mcg/kg/min, titrate to MAP ≥65 mmHg)",
+      "description": "Alpha-1 agonist that restores arterial tone. SSC 2021 strongly recommends norepinephrine over dopamine as first-line because dopamine increases arrhythmias and mortality.",
+      "effectiveness": "Reduces shock mortality compared with dopamine (~10% relative reduction; De Backer NEJM 2010). Most patients reach target MAP at 0.1-0.5 mcg/kg/min."
+    },
+    {
+      "name": "Vasopressin (0.03 units/min as a fixed infusion)",
+      "description": "Added when norepinephrine alone is insufficient. Reduces norepinephrine requirement and improves renal outcomes in selected patients (VANISH 2016).",
+      "effectiveness": "Catecholamine-sparing effect; modest renal protection in patients without baseline severe kidney injury."
+    },
+    {
+      "name": "Intravenous corticosteroids (hydrocortisone 200 mg/day, often as 50 mg every 6 h or continuous infusion)",
+      "description": "Added in septic shock when vasopressor requirements remain high (norepinephrine >0.25 mcg/kg/min or equivalent). Accelerates shock reversal; effect on mortality is modest and inconsistent across trials (ADRENAL, APROCCHSS).",
+      "effectiveness": "Faster shock reversal by 1-2 days; APROCCHSS showed a 90-day mortality reduction of about 6% in vasopressor-dependent shock."
+    },
+    {
+      "name": "Source control (drainage, surgical debridement, device removal)",
+      "description": "Antibiotics alone do not cure abscess, obstructed biliary or urinary tract, necrotizing soft tissue infection, or infected hardware. SSC 2021 recommends source control as soon as logistically feasible, usually within 6-12 hours.",
+      "effectiveness": "Failure to achieve source control within 6-12 hours doubles mortality in intra-abdominal sepsis."
+    },
+    {
+      "name": "Lung-protective mechanical ventilation for sepsis-related ARDS",
+      "description": "Tidal volume 6 mL/kg of predicted body weight, plateau pressure <30 cmH2O, and PEEP titrated to oxygenation. Prone positioning for at least 16 hours daily when PaO2/FiO2 falls below 150 mmHg.",
+      "effectiveness": "Lung-protective ventilation reduces ARDS mortality by an absolute 9% (ARMA 2000); prone positioning reduces severe ARDS mortality further (PROSEVA 2013)."
+    },
+    {
+      "name": "Renal replacement therapy (intermittent or continuous)",
+      "description": "Initiated for refractory acidosis, hyperkalemia, uremia, or volume overload. Continuous renal replacement is often preferred in hemodynamically unstable patients.",
+      "effectiveness": "No mortality benefit from early versus delayed initiation in the absence of urgent indications (AKIKI, IDEAL-ICU); supports survival when standard indications are met."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Emergency source-control surgery",
+      "description": "Indicated for necrotizing soft tissue infection, perforated viscus, infected necrotizing pancreatitis, obstructing biliary or urinary source not amenable to percutaneous drainage, and infected vascular grafts. Performed as soon as the patient is stable enough to transport.",
+      "successRate": "Outcome depends on timing; delays beyond 12 hours roughly double mortality in necrotizing fasciitis and intra-abdominal sepsis."
+    },
+    {
+      "name": "Percutaneous abscess drainage",
+      "description": "Image-guided drainage (ultrasound or CT) of an intra-abdominal, pelvic, or soft tissue abscess. Less invasive than open surgery; often the source-control modality of choice when anatomy permits.",
+      "successRate": "Effective in 70-90% of well-localized collections; reduces ICU length of stay versus open drainage."
+    },
+    {
+      "name": "Removal of infected indwelling devices",
+      "description": "Central venous catheters, urinary catheters, dialysis catheters, infected pacemakers, and infected prosthetic joints often require removal for source control. Replacement is delayed until bacteremia clears.",
+      "successRate": "Required for cure in most device-associated bacteremias; failure to remove infected devices is one of the most common sepsis treatment errors."
+    }
+  ],
+  "alternativeTreatments": [],
+  "whySeeSpecialist": "Sepsis is managed by emergency physicians and critical care intensivists, with infectious disease specialists guiding pathogen identification, antibiotic selection, and de-escalation. Surgical and interventional radiology teams are involved early for source control. Nephrology, pulmonology, hematology, and rehabilitation specialists join during and after the acute illness as organs recover. Patients with frequent infections, immunosuppression, or prior sepsis benefit from outpatient follow-up with both their primary care clinician and infectious disease.",
+  "doctorSelectionGuide": "For acute care, hospitals with formal sepsis protocols, an electronic early-warning system, and a closed or co-managed ICU achieve faster bundle compliance and lower mortality. After discharge, look for clinicians familiar with post-sepsis syndrome, including primary care, rehabilitation medicine, and a sepsis or critical care recovery clinic where available. Continuity matters — patients often need ongoing management of new cognitive, physical, and mental health symptoms for 6-12 months.",
+  "hospitalCriteria": [
+    "Documented sepsis protocol with Hour-1 bundle adherence tracking",
+    "24/7 access to blood cultures, lactate, and broad-spectrum IV antibiotics within minutes of order",
+    "Capability for emergency imaging (CT) and image-guided drainage at all hours",
+    "Closed or co-managed ICU with board-certified intensivists",
+    "Mechanical ventilation, renal replacement therapy, and vasopressor support available immediately"
+  ],
+  "keyFacilities": [
+    "Tertiary academic medical centers with dedicated medical ICU and surgical ICU services",
+    "Hospitals participating in the Surviving Sepsis Campaign quality programs",
+    "Centers with rapid molecular diagnostics (e.g., rapid blood culture identification panels)"
+  ],
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+  "preventionStrategies": [
+    "Vaccinate against pneumococcus, influenza, COVID-19, and — in eligible groups — meningococcus and Haemophilus influenzae type b, which together prevent a measurable share of sepsis cases",
+    "Treat infections early and complete prescribed antibiotic courses; do not stop antibiotics because you feel better after 48 hours of treatment for serious infections",
+    "Practice strict hand hygiene, wound care, and catheter care; remove indwelling urinary and central venous catheters as soon as they are no longer needed",
+    "Manage chronic conditions — diabetes, COPD, heart failure, kidney disease — to reduce baseline infection risk and improve reserve when infection occurs",
+    "Seek prompt medical care for high-risk infections: any fever in patients on chemotherapy or after splenectomy, any urinary tract infection with flank pain, any cellulitis spreading rapidly, any new confusion with fever"
+  ],
+  "lifestyleModifications": [
+    "Keep an up-to-date list of medications, allergies, vaccinations, and prior infections so that emergency teams can act quickly",
+    "Carry a medical alert if you are asplenic, on chronic immunosuppression, or have a history of severe sepsis — these change initial management",
+    "Quit smoking, manage weight, and treat sleep apnea — each lowers respiratory infection burden",
+    "Stay current on dental care and skin checks — dental abscesses and infected skin breaks are under-recognized sepsis sources",
+    "After discharge, follow rehabilitation plans — post-sepsis cognitive and physical recovery is meaningful but takes 6-12 months on average"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate protein intake (1.2-1.5 g/kg/day during recovery) to rebuild muscle lost during critical illness",
+      "Fluids titrated to maintain adequate urine output once the acute phase passes, unless restricted for heart or kidney disease",
+      "Mediterranean-style eating pattern with vegetables, whole grains, legumes, fish, and olive oil during recovery to support metabolic and immune function",
+      "Vitamin D supplementation in deficient patients, which is associated with lower infection rates in observational data",
+      "Enteral feeding within 24-48 hours of ICU admission when not contraindicated, as recommended by SSC 2021"
+    ],
+    "avoid": [
+      "Heavy alcohol intake during recovery — impairs immune function and liver synthesis of clotting factors",
+      "Prolonged fasting in critically ill patients without contraindication — worsens muscle loss and immune function",
+      "Unverified herbal immune boosters and high-dose supplements that can interact with antibiotics or anticoagulants",
+      "High-sodium ultra-processed foods during recovery, particularly in patients with heart failure or kidney injury"
+    ]
+  },
+  "exerciseGuidelines": "During acute sepsis, mobilization begins as soon as hemodynamics permit — sitting up, then standing, then walking with assistance, often within 24-48 hours of ICU admission. Early mobilization reduces ICU-acquired weakness and shortens length of stay. After discharge, structured rehabilitation (physical therapy, occupational therapy, exercise reconditioning) restores function over 3-12 months. Aim for gradual increases in activity tolerance rather than a fixed program.",
+  "dailyManagement": [
+    "Take all prescribed antibiotics on schedule and complete the full course unless the clinical team de-escalates",
+    "Monitor temperature, breathing rate, and mental status at home during recovery; return to care for any new fever, confusion, or shortness of breath",
+    "Attend post-sepsis follow-up appointments — within 1 week of discharge for medication reconciliation and within 4-6 weeks for cognitive and physical assessment",
+    "Maintain hydration and nutrition; report poor appetite or weight loss to the care team early",
+    "Track new cognitive or mood symptoms in a simple diary — post-sepsis depression, anxiety, and cognitive impairment affect over 30% of survivors and respond to treatment"
+  ],
+  "prognosis": "Outcomes are tied to timeliness of recognition and bundle delivery. Overall 30-day mortality for hospitalized sepsis is 25-30% across high-income systems; in-hospital mortality for septic shock approaches 40% and is higher in older adults and those with multiorgan failure. Each hour of antibiotic delay in septic shock raises mortality by an estimated 4-8% (Kumar, Crit Care Med 2006). Survivors face post-sepsis syndrome: roughly 30% develop new functional disability, 30% develop cognitive impairment comparable to mild Alzheimer disease on objective testing, and 25-30% have clinically significant depression or anxiety at 6-12 months (Iwashyna, JAMA 2010). Re-hospitalization within 90 days approaches 40%, often for new or recurrent infection. Best long-term outcomes are seen in younger patients without prior severe comorbidities, with rapid source control, and structured rehabilitation. Mortality has fallen by roughly 1-2% per year over the past two decades as protocolized care has spread, but absolute numbers remain high — sepsis is implicated in approximately 1 in 5 deaths globally.",
+  "recoveryTimeline": "ICU course typically runs 5-14 days in survivors, with mechanical ventilation, vasopressors, and renal replacement weaned as organs recover. Hospital length of stay averages 10-20 days; longer in patients with ARDS or surgical source control. Physical reconditioning after discharge takes 3-6 months for most patients and up to 12 months in those with severe ICU-acquired weakness. Cognitive recovery follows a similar arc, with the most improvement in the first 6 months. Return to work, if applicable, varies from a few weeks for mild sepsis to 6-12 months after septic shock.",
+  "complications": [
+    "Septic shock with refractory hypotension and multiorgan failure — the most lethal trajectory, requiring vasopressors, ventilation, and renal replacement",
+    "Acute respiratory distress syndrome (ARDS) — develops in 20-30% of severe sepsis cases; requires lung-protective ventilation and often prone positioning",
+    "Acute kidney injury — affects 40-50% of patients with sepsis; up to 25% require dialysis, and renal recovery may be incomplete",
+    "Disseminated intravascular coagulation (DIC) — paradoxical bleeding and microvascular thrombosis from consumption of clotting factors and platelets",
+    "ICU-acquired weakness and critical illness polyneuropathy — prolongs ventilator dependence and rehabilitation",
+    "Post-sepsis syndrome — new cognitive impairment, depression, anxiety, and functional disability lasting 6-12 months or longer in 30-50% of survivors"
+  ],
+  "supportResources": [
+    {
+      "name": "Sepsis Alliance (United States)",
+      "url": "https://www.sepsis.org/",
+      "description": "Patient education, family support, sepsis survivor community, and post-sepsis syndrome resources."
+    },
+    {
+      "name": "Global Sepsis Alliance",
+      "url": "https://www.global-sepsis-alliance.org/",
+      "description": "International advocacy organization; runs World Sepsis Day each September and publishes patient and family materials in multiple languages."
+    },
+    {
+      "name": "CDC Sepsis — Get Ahead of Sepsis",
+      "url": "https://www.cdc.gov/sepsis/",
+      "description": "US public health resource with prevention, recognition, and survivor information."
+    },
+    {
+      "name": "Surviving Sepsis Campaign — Patient and Family Resources",
+      "url": "https://www.sccm.org/SurvivingSepsisCampaign/Home",
+      "description": "Authoritative clinical guidelines plus patient-facing summaries from the Society of Critical Care Medicine and European Society of Intensive Care Medicine."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "anaphylaxis",
+      "name": "Anaphylaxis",
+      "keyDifference": "Anaphylaxis presents within minutes of exposure to an allergen and typically includes urticaria, angioedema, bronchospasm, and a clear trigger; sepsis evolves over hours to days, lacks acute hives, and has a documented or suspected infection driving the picture. Treatment is opposite at the outset — anaphylaxis requires immediate epinephrine, while sepsis hinges on antibiotics and crystalloid."
+    },
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia",
+      "keyDifference": "Pneumonia is the single most common source of sepsis but is not itself sepsis unless it has produced organ dysfunction (SOFA rise of ≥2 points). Many patients have pneumonia without sepsis; the distinction matters because severe pneumonia with sepsis requires Hour-1 bundle care rather than outpatient antibiotic therapy."
+    },
+    {
+      "slug": "acute-kidney-injury",
+      "name": "Acute Kidney Injury",
+      "keyDifference": "Acute kidney injury is often a complication of sepsis rather than a stand-alone diagnosis; sepsis-associated AKI is driven by hemodynamic, inflammatory, and microvascular changes from infection. Non-septic AKI (e.g., contrast nephropathy, obstructive uropathy, ischemic ATN without infection) lacks the systemic infection signature and is managed differently."
+    },
+    {
+      "slug": "anthrax-sepsis-a227",
+      "name": "Anthrax Sepsis",
+      "keyDifference": "Anthrax sepsis is a specific etiologic form of sepsis caused by Bacillus anthracis, with characteristic mediastinal widening, cutaneous eschar, or gastrointestinal involvement depending on the route of exposure. General sepsis (A41.9) covers all other unspecified organisms and presentations; treatment paradigms differ because anthrax requires specific antibiotic regimens and antitoxin therapy."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia"
+    },
+    {
+      "slug": "acute-kidney-injury",
+      "name": "Acute Kidney Injury"
+    },
+    {
+      "slug": "diabetes-type-2",
+      "name": "Type 2 Diabetes Mellitus"
+    },
+    {
+      "slug": "copd",
+      "name": "Chronic Obstructive Pulmonary Disease"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia",
+      "relevance": "The single most common source of sepsis; severe pneumonia with organ dysfunction is by definition sepsis."
+    },
+    {
+      "slug": "acute-kidney-injury",
+      "name": "Acute Kidney Injury",
+      "relevance": "Develops in 40-50% of sepsis patients; one of the defining organ dysfunctions in the SOFA score."
+    },
+    {
+      "slug": "anaphylaxis",
+      "name": "Anaphylaxis",
+      "relevance": "Key differential for a patient with acute hypotension; treatment paths diverge immediately."
+    },
+    {
+      "slug": "anthrax-sepsis-a227",
+      "name": "Anthrax Sepsis",
+      "relevance": "A specific etiologic form of sepsis with distinct antibiotic and antitoxin requirements."
+    },
+    {
+      "slug": "copd",
+      "name": "Chronic Obstructive Pulmonary Disease",
+      "relevance": "COPD exacerbations driven by pneumonia frequently progress to sepsis in older adults."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is sepsis in simple terms?",
+      "answer": "Sepsis is the body's overwhelming response to an infection, in which the immune system triggers widespread inflammation that injures the body's own organs. Without rapid treatment it can progress to septic shock and death. It often follows pneumonia, UTI, or skin infection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of sepsis?",
+      "answer": "Early signs include fever or unusually low temperature, fast heart rate, fast breathing (22 or more per minute), new confusion, falling blood pressure, mottled or cold skin, and low urine output. Anyone with an infection who feels much worse than expected should be evaluated urgently.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How fast does sepsis progress?",
+      "answer": "Sepsis can progress from mild illness to septic shock within hours. Mortality rises by an estimated 4-8% for each hour antibiotics are delayed in septic shock, which is why guidelines mandate an Hour-1 bundle of lactate, blood cultures, antibiotics, fluids, and vasopressors.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between sepsis and septic shock?",
+      "answer": "Sepsis is life-threatening organ dysfunction caused by infection. Septic shock is a subset with persistent need for a vasopressor to keep mean arterial pressure ≥65 mmHg plus a lactate above 2 mmol/L despite adequate fluids. Hospital mortality is ~25-30% for sepsis and ~40% for septic shock.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes sepsis?",
+      "answer": "Sepsis can follow any infection. The most common sources are pneumonia (35-50% of cases), urinary tract infections, intra-abdominal infections, and skin or soft tissue infections. Most cases are bacterial; severe influenza, SARS-CoV-2, and Candida can also trigger sepsis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is sepsis diagnosed?",
+      "answer": "Diagnosis combines suspected or confirmed infection with new organ dysfunction. Clinicians use the SOFA score and bedside qSOFA, plus lactate, blood cultures, complete blood count, chemistry panel, and source-directed imaging. There is no single confirmatory test — sepsis is a clinical diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Hour-1 sepsis bundle?",
+      "answer": "The Surviving Sepsis Campaign Hour-1 bundle includes five actions within 60 minutes: measure lactate, draw blood cultures before antibiotics, give broad-spectrum antibiotics, start 30 mL/kg of IV crystalloid for hypotension or lactate ≥4 mmol/L, and begin vasopressors if MAP stays below 65 mmHg.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What antibiotics are used for sepsis?",
+      "answer": "Initial therapy is broad-spectrum and targets the most likely organisms by source and local resistance. Common choices include piperacillin-tazobactam, meropenem, or cefepime, with vancomycin added for MRSA. Antibiotics are narrowed once cultures identify the organism in 48-72 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does it take to recover from sepsis?",
+      "answer": "Acute hospitalization typically lasts 10-20 days, with 5-14 of those in the ICU for severe cases. Physical reconditioning takes 3-6 months for most survivors and up to 12 months after septic shock. About 40% of survivors are re-hospitalized within 90 days of discharge.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can sepsis kill you?",
+      "answer": "Yes. Sepsis is implicated in roughly 1 in 5 deaths globally and causes about 11 million deaths each year (Rudd, Lancet 2020). Hospital mortality is 25-30% for sepsis and approaches 40% for septic shock. Rapid recognition and Hour-1 bundle delivery substantially reduce that mortality.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who is most at risk for sepsis?",
+      "answer": "Adults over 65, infants, pregnant and postpartum women, people with chronic illness (diabetes, kidney disease, cirrhosis, COPD, heart failure, cancer), those on chemotherapy or immunosuppression, and patients with indwelling catheters or recent surgery face the highest risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can sepsis be prevented?",
+      "answer": "Partially. Vaccination against pneumococcus, influenza, COVID-19, meningococcus, and Hib reduces risk. Hand hygiene, wound care, prompt treatment of infections, removal of unneeded catheters, and managing chronic conditions also lower risk. Early recognition is the strongest patient-side action.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-sepsis syndrome?",
+      "answer": "Post-sepsis syndrome is the cluster of new physical, cognitive, and psychological problems affecting up to half of survivors. Roughly 30% develop cognitive impairment, 30% functional disability, and 25-30% clinically significant depression or anxiety. Most symptoms improve over 6-12 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why are blood cultures drawn before antibiotics?",
+      "answer": "Antibiotics rapidly sterilize the bloodstream and can prevent identification of the causative organism. Two sets of blood cultures from separate sites before antibiotics improve yield and allow targeted therapy in 48-72 hours — provided this does not delay antibiotics over 45 minutes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is lactate measured in sepsis?",
+      "answer": "Lactate reflects tissue oxygen debt and mitochondrial dysfunction. A level above 2 mmol/L indicates significant hypoperfusion; above 4 mmol/L flags septic shock and predicts high mortality. Serial measurements every 2-4 hours track resuscitation — a falling lactate signals effective therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is sepsis contagious?",
+      "answer": "Sepsis itself is not contagious — it is the body's reaction to an infection. The underlying infection can be contagious depending on the organism (for example, flu or COVID-19 pneumonia leading to sepsis). Standard hygiene applies to the source; sepsis is not transmitted person to person.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get sepsis?",
+      "answer": "Yes. Pediatric sepsis is a major cause of childhood death worldwide, especially in infants and low- and middle-income countries. Neonatal sepsis often involves group B streptococcus or E. coli. It follows separate guidelines, including the 2024 Phoenix criteria with age-specific thresholds.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What vasopressor is first-line for septic shock?",
+      "answer": "Norepinephrine is the first-line vasopressor in septic shock, strongly recommended by the 2021 Surviving Sepsis Campaign guideline. It is started low (~0.05 mcg/kg/min) and titrated to maintain MAP ≥65 mmHg. Vasopressin, epinephrine, and steroids are added when norepinephrine alone is insufficient.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much IV fluid do sepsis patients need?",
+      "answer": "SSC 2021 recommends 30 mL/kg of balanced crystalloid in the first 3 hours for hypotension or a lactate ≥4 mmol/L. Further fluids are guided by dynamic assessment (pulse pressure variation, passive leg raise, point-of-care ultrasound) rather than fixed volumes. Over-resuscitation should be avoided.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does sepsis cause kidney failure?",
+      "answer": "Sepsis-associated acute kidney injury develops in 40-50% of patients with sepsis, and about a quarter require renal replacement therapy during the acute illness. Most survivors recover meaningful kidney function, but some are left with persistent chronic kidney disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is qSOFA?",
+      "answer": "The quick Sequential Organ Failure Assessment is a bedside screen for sepsis outside the ICU. It scores 3 items: respiratory rate ≥22, altered mental status (GCS below 15), and systolic blood pressure ≤100 mmHg. Two or more positive items in a patient with infection predict higher mortality.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do steroids help in septic shock?",
+      "answer": "IV hydrocortisone 200 mg per day is recommended in septic shock when vasopressor requirements remain high. Trials (ADRENAL, APROCCHSS) show faster shock reversal and a small reduction in 90-day mortality. Steroids are not routinely used in sepsis without shock or low-dose vasopressor needs.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Sepsis (blood infection causing organ damage)",
+  "regionalNames": [
+    {
+      "name": "Septicaemia",
+      "region": "United Kingdom",
+      "language": "en-GB"
+    },
+    {
+      "name": "Sepsis",
+      "region": "Global",
+      "language": "en"
+    },
+    {
+      "name": "रक्त संक्रमण (Rakta Sankraman)",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    }
+  ],
+  "searchTags": [
+    "sepsis",
+    "septic shock",
+    "septicaemia",
+    "blood infection",
+    "sepsis-3",
+    "qSOFA",
+    "SOFA score",
+    "hour-1 bundle",
+    "surviving sepsis campaign",
+    "bacteremia",
+    "systemic inflammatory response",
+    "critical care",
+    "ICU sepsis",
+    "neonatal sepsis"
+  ],
+  "symptomKeywords": [
+    "fever and confusion",
+    "fast breathing infection",
+    "low blood pressure with infection",
+    "cold mottled skin",
+    "extreme weakness infection",
+    "very fast heart rate infection",
+    "low urine output infection",
+    "non-blanching rash fever"
+  ],
+  "metaTitle": "Sepsis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Sepsis: life-threatening organ failure from infection. Sepsis-3 definition, qSOFA, Hour-1 bundle, antibiotics, and recovery reviewed by our medical board.",
+  "keywords": [
+    "sepsis",
+    "sepsis symptoms",
+    "sepsis treatment",
+    "septic shock",
+    "sepsis-3",
+    "qSOFA",
+    "hour-1 sepsis bundle",
+    "sepsis vs septic shock",
+    "sepsis mortality",
+    "sepsis antibiotics",
+    "early signs of sepsis",
+    "post-sepsis syndrome",
+    "neonatal sepsis"
+  ],
+  "lastReviewed": "2026-05-18",
+  "sources": [
+    {
+      "title": "Evans L, Rhodes A, Alhazzani W, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Critical Care Medicine. 2021;49(11):e1063-e1143.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Singer M, Deutschman CS, Seymour CW, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-810.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26903338/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Rudd KE, Johnson SC, Agesa KM, et al. Global, regional, and national sepsis incidence and mortality, 1990-2017: analysis for the Global Burden of Disease Study. Lancet. 2020;395(10219):200-211.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31954465/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Kumar A, Roberts D, Wood KE, et al. Duration of hypotension before initiation of effective antimicrobial therapy is the critical determinant of survival in human septic shock. Critical Care Medicine. 2006;34(6):1589-1596.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16625125/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Iwashyna TJ, Ely EW, Smith DM, Langa KM. Long-term cognitive impairment and functional disability among survivors of severe sepsis. JAMA. 2010;304(16):1787-1794.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20978258/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Sepsis: Data & Reports. CDC; 2024.",
+      "url": "https://www.cdc.gov/sepsis/data-reports/index.html",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Annane D, Renault A, Brun-Buisson C, et al. Hydrocortisone plus Fludrocortisone for Adults with Septic Shock (APROCCHSS). New England Journal of Medicine. 2018;378(9):809-818.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29490185/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Schlapbach LJ, Watson RS, Sorce LR, et al. International Consensus Criteria for Pediatric Sepsis and Septic Shock (Phoenix Criteria). JAMA. 2024;331(8):665-674.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38245889/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "AIHealz Medical Editorial Board",
+    "slug": "aihealz-medical-editorial-board"
+  }
+}

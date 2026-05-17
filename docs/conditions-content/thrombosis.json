@@ -1,0 +1,724 @@
+{
+  "_meta": {
+    "slug": "thrombosis",
+    "tier": 1,
+    "headTerm": "thrombosis",
+    "longTailKeywords": [
+      "thrombosis symptoms",
+      "thrombosis causes",
+      "venous vs arterial thrombosis",
+      "blood clot in leg",
+      "thrombosis treatment",
+      "DOAC for thrombosis",
+      "Factor V Leiden",
+      "antiphospholipid syndrome thrombosis",
+      "thrombosis vs cellulitis",
+      "thrombosis prevention"
+    ],
+    "primarySpecialty": "Hematology / Vascular Medicine",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against ASH 2018 VTE guideline, ACCP CHEST 2021, ESC 2019 PE guideline, Hokusai-VTE (NEJM 2013), AMPLIFY (NEJM 2013), RE-COVER (NEJM 2009). Virchow's triad framing per Bagot & Arya, BJH 2008. Inherited thrombophilia prevalence from Connors NEJM 2017 review."
+  },
+  "h1Title": "Thrombosis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Hematology / Vascular Medicine",
+  "heroOverview": "Thrombosis is the pathologic formation of a blood clot inside a vessel, blocking flow either in veins (venous thromboembolism, including deep vein thrombosis and pulmonary embolism) or in arteries (driving myocardial infarction, ischemic stroke, and limb ischemia). Venous thromboembolism alone affects roughly 900,000 Americans each year and causes an estimated 60,000 to 100,000 deaths, making it the third most common cardiovascular killer after heart attack and stroke. Most clots arise from a combination of slowed blood flow, vessel injury, and a hypercoagulable state — the classic Virchow's triad described in 1856 and still clinically central. Symptoms range from a swollen painful calf to sudden chest pain, breathlessness, paralysis, or collapse, depending on where the clot lodges. Anticoagulants prevent extension and recurrence; selected cases need thrombolysis or mechanical thrombectomy.",
+  "keyStats": {
+    "prevalence": "VTE incidence ~1-2 per 1,000 person-years; arterial thrombosis underlies most of the 1.5 million annual MIs and ~800,000 strokes in the US",
+    "demographics": "Risk doubles with each decade after age 40; cancer patients carry 4-7x risk; pregnancy raises risk 4-5x",
+    "avgAge": "First VTE typically age 60-70; arterial events cluster age 55-75",
+    "globalCases": "~10 million VTE events globally per year; cardiovascular thrombotic disease causes ~17 million deaths annually (WHO 2021)"
+  },
+  "definition": "Thrombosis (ICD-10: I82.90 for unspecified venous thrombosis; I74 for arterial embolism and thrombosis) is the in vivo formation of a solid mass from circulating blood inside a non-traumatized vessel. The process is driven by the three components of Virchow's triad: stasis of blood flow, endothelial injury, and a hypercoagulable state. The dominant mechanism distinguishes the two main families. Venous thrombi form mostly through stasis and hypercoagulability and are fibrin- and red-cell-rich; they include deep vein thrombosis of the legs or arms, pulmonary embolism, cerebral venous sinus thrombosis, portal vein thrombosis, mesenteric venous thrombosis, and renal vein thrombosis. Arterial thrombi form on a ruptured atherosclerotic plaque under high shear, are platelet-rich, and cause acute myocardial infarction, ischemic stroke, acute limb ischemia, and acute mesenteric ischemia. A third category, microvascular thrombosis, occurs in disseminated intravascular coagulation, thrombotic microangiopathies (TTP, HUS), heparin-induced thrombocytopenia, and antiphospholipid syndrome. Management spans hematology, vascular medicine, cardiology, neurology, interventional radiology, and emergency medicine, with anticoagulation guided by current ASH, ACCP CHEST, and ESC consensus.",
+  "typesClassification": [
+    {
+      "type": "Deep vein thrombosis (DVT)",
+      "description": "Clot in a deep vein, most commonly the popliteal, femoral, or iliac veins of the leg. Proximal DVT (above the knee) carries higher embolic risk than distal calf DVT. Upper-extremity DVT accounts for ~10% of cases and is often catheter-related."
+    },
+    {
+      "type": "Pulmonary embolism (PE)",
+      "description": "Venous clot — typically from a leg DVT — lodges in the pulmonary arteries. Stratified as massive (with hypotension), submassive (right-ventricular strain without hypotension), or low-risk. Acute mortality 5-15% overall, higher with hemodynamic instability."
+    },
+    {
+      "type": "Cerebral venous sinus thrombosis",
+      "description": "Clot in the dural venous sinuses or cortical veins. Presents with headache, seizures, focal deficits, or papilledema. Risk factors include oral contraceptives, pregnancy, infection, and thrombophilia. Imaging is by MR venography or CT venography."
+    },
+    {
+      "type": "Splanchnic vein thrombosis (portal, mesenteric, splenic, hepatic)",
+      "description": "Affects abdominal venous drainage. Causes include cirrhosis, myeloproliferative neoplasms (JAK2 mutation), and abdominal sepsis. Budd-Chiari syndrome is hepatic vein thrombosis with hepatic congestion."
+    },
+    {
+      "type": "Arterial thrombosis (coronary, cerebral, peripheral)",
+      "description": "Platelet-rich thrombus forming on a ruptured atherosclerotic plaque. Drives ST-elevation myocardial infarction, ischemic stroke, and acute limb ischemia. Antiplatelet therapy (aspirin, P2Y12 inhibitors) is the cornerstone, with anticoagulation in selected scenarios."
+    },
+    {
+      "type": "Microvascular and immune thrombosis",
+      "description": "Small-vessel thrombi seen in disseminated intravascular coagulation, heparin-induced thrombocytopenia, thrombotic thrombocytopenic purpura, antiphospholipid syndrome, and COVID-19. Requires syndrome-specific management beyond standard anticoagulation."
+    }
+  ],
+  "primarySymptoms": [
+    "Unilateral leg pain, swelling, and warmth with calf tenderness on palpation — the most common presentation of lower-limb deep vein thrombosis; the affected calf is often more than 3 cm larger than the contralateral side.",
+    "Sudden shortness of breath with pleuritic chest pain, tachycardia, and lightheadedness — the classic triad of acute pulmonary embolism; oxygen saturation may fall below 92% on room air.",
+    "Crushing central chest pain radiating to the left arm, jaw, or back with diaphoresis and nausea — the presentation of coronary artery thrombosis causing acute myocardial infarction.",
+    "Sudden focal neurological deficit such as facial droop, arm weakness, or slurred speech evolving over minutes — the hallmark of arterial thrombosis causing ischemic stroke; symptoms warrant emergency evaluation within the 4.5-hour thrombolysis window.",
+    "Severe acute headache with visual blurring, seizures, or vomiting — typical of cerebral venous sinus thrombosis; headache is often progressive over days rather than thunderclap.",
+    "Cold, pale, painful limb with absent pulses and reduced sensation — acute limb ischemia from arterial thrombosis, a six-hour emergency before irreversible tissue loss.",
+    "Abdominal pain out of proportion to examination findings, sometimes with bloody diarrhea — mesenteric venous or arterial thrombosis, carrying mortality above 50% if diagnosis is delayed.",
+    "Visible distension and dull aching in superficial veins with localized redness over a cord-like vein — superficial vein thrombosis, which extends to deep veins in up to 25% of cases.",
+    "Painful blue discoloration of an entire limb (phlegmasia cerulea dolens) — a limb-threatening massive iliofemoral DVT requiring urgent catheter-directed thrombolysis.",
+    "Pleural rub, hemoptysis (coughing up blood), and low-grade fever — features that point toward pulmonary infarction following segmental pulmonary embolism."
+  ],
+  "earlyWarningSigns": [
+    "Mild unilateral calf discomfort lasting more than 48 hours after a long flight, surgery, or immobilization — worth a same-day clinical assessment",
+    "Unexplained exertional dyspnea or tachycardia, particularly in someone with active cancer or recent surgery, can be the only herald of subsegmental pulmonary embolism",
+    "Brief transient ischemic attack symptoms (face/arm weakness or aphasia lasting minutes) precede ~15% of completed strokes",
+    "Recurrent first-trimester pregnancy losses or unexplained late fetal loss can be the presenting clue to antiphospholipid syndrome",
+    "Mild leg swelling that worsens with standing and resolves overnight may signal post-thrombotic syndrome from an old, unrecognized DVT"
+  ],
+  "emergencySigns": [
+    "Sudden severe chest pain with breathlessness, low blood pressure, or syncope — call emergency services; suspect massive pulmonary embolism or myocardial infarction",
+    "Acute facial droop, arm weakness, or speech disturbance — stroke until proven otherwise; the door-to-needle window for thrombolysis is 4.5 hours from symptom onset",
+    "Cold, pulseless, painful limb — acute limb ischemia; tissue damage becomes irreversible within 6 hours",
+    "Severe headache with seizures, papilledema, or focal deficit — cerebral venous sinus thrombosis or hemorrhagic complication",
+    "Sudden swelling of an entire leg with cyanosis (blue tinge) — phlegmasia cerulea dolens; risk of limb loss and shock"
+  ],
+  "causes": [
+    {
+      "cause": "Venous stasis (the first arm of Virchow's triad)",
+      "description": "Slow or static blood flow allows activated clotting factors to accumulate locally. Driven by prolonged immobilization, long-haul travel beyond 4 hours, hospital bed rest, lower-limb paralysis, pregnancy compression of pelvic veins, and right heart failure."
+    },
+    {
+      "cause": "Endothelial injury (the second arm of Virchow's triad)",
+      "description": "Damage to the vessel lining exposes subendothelial collagen and tissue factor, triggering platelet adhesion and coagulation. Causes include surgery, trauma, central venous catheters, smoking-induced endothelial dysfunction, vasculitis, and atherosclerotic plaque rupture."
+    },
+    {
+      "cause": "Hypercoagulability (the third arm of Virchow's triad)",
+      "description": "An imbalance between procoagulant and anticoagulant factors. Inherited causes include Factor V Leiden, prothrombin G20210A, protein C deficiency, protein S deficiency, and antithrombin deficiency. Acquired causes include cancer, pregnancy, estrogen-containing contraceptives, and antiphospholipid syndrome."
+    },
+    {
+      "cause": "Active malignancy and cancer treatment",
+      "description": "Cancer cells release tissue factor and other procoagulants. The risk of VTE is 4-7 times higher in patients with active cancer, especially adenocarcinoma of the pancreas, lung, stomach, and ovary. Chemotherapy and indwelling central catheters add further risk."
+    },
+    {
+      "cause": "Atherosclerotic plaque rupture",
+      "description": "The dominant mechanism of arterial thrombosis. A vulnerable plaque ruptures, exposing its lipid core to circulating platelets; a platelet-rich thrombus forms within minutes under high arterial shear, occluding the vessel and causing infarction downstream."
+    },
+    {
+      "cause": "Surgery, trauma, and prolonged hospitalization",
+      "description": "Major orthopedic surgery (hip or knee replacement) without prophylaxis carries a VTE risk above 40%. General surgery, trauma, and acute medical illness with reduced mobility each elevate risk for the following 90 days."
+    },
+    {
+      "cause": "Pregnancy, postpartum, and combined hormonal contraception",
+      "description": "Estrogen increases hepatic synthesis of clotting factors, while pregnancy also compresses pelvic veins and slows return flow. VTE risk rises 4-5 fold in pregnancy and peaks in the first six weeks postpartum."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Age over 60",
+      "category": "non-modifiable",
+      "description": "Incidence of VTE rises sharply with age: ~1 per 10,000 person-years under 40 versus ~1 per 100 person-years over 80. Arterial events also cluster in this range."
+    },
+    {
+      "factor": "Factor V Leiden mutation",
+      "category": "genetic",
+      "description": "Present in 3-8% of white Europeans and the most common inherited thrombophilia. Heterozygotes carry a 3-5 fold increased VTE risk; homozygotes 18 fold. Risk multiplies further with estrogen or pregnancy."
+    },
+    {
+      "factor": "Prothrombin G20210A mutation",
+      "category": "genetic",
+      "description": "A point mutation in the F2 gene raising prothrombin levels. Prevalence ~2% in European populations; heterozygotes have roughly 2-3 fold elevated VTE risk."
+    },
+    {
+      "factor": "Inherited deficiencies of protein C, protein S, or antithrombin",
+      "category": "genetic",
+      "description": "Rarer (<1% of population) but high-risk: antithrombin deficiency raises VTE risk 8-10 fold; protein C and S deficiencies 4-8 fold. First events often occur before age 40."
+    },
+    {
+      "factor": "Active cancer",
+      "category": "non-modifiable",
+      "description": "Adenocarcinomas of the pancreas, stomach, ovary, and lung carry the highest thrombotic risk. Cancer-associated thrombosis accounts for ~20% of all VTE cases."
+    },
+    {
+      "factor": "Antiphospholipid syndrome",
+      "category": "non-modifiable",
+      "description": "Acquired autoimmune thrombophilia defined by persistent antiphospholipid antibodies plus thrombosis or pregnancy morbidity. Confers high rates of both venous and arterial thrombosis; warfarin remains preferred over DOACs (TRAPS trial)."
+    },
+    {
+      "factor": "Recent major surgery, trauma, or hospitalization",
+      "category": "modifiable",
+      "description": "Orthopedic surgery without prophylaxis carries VTE rates above 40%; major abdominal surgery 15-30%. Risk persists for 90 days post-discharge."
+    },
+    {
+      "factor": "Combined estrogen-progestin contraceptives or hormone replacement therapy",
+      "category": "modifiable",
+      "description": "Combined oral contraceptives raise VTE risk 3-5 fold, with the highest risk in the first three months and with third- or fourth-generation progestins. Progestin-only preparations carry minimal added risk."
+    },
+    {
+      "factor": "Smoking, obesity, and metabolic syndrome",
+      "category": "modifiable",
+      "description": "Smoking promotes endothelial dysfunction and platelet activation; obesity (BMI ≥30) roughly doubles VTE risk and accelerates atherosclerosis driving arterial thrombosis."
+    },
+    {
+      "factor": "Prolonged immobility, including long-haul travel",
+      "category": "environmental",
+      "description": "Air travel beyond 4 hours increases VTE risk roughly 2-3 fold per long flight, with risk persisting for up to 4 weeks afterward. Hospital bed rest and lower-limb plaster casts carry similar mechanisms."
+    },
+    {
+      "factor": "Pregnancy and the postpartum period",
+      "category": "non-modifiable",
+      "description": "Pregnancy raises VTE risk 4-5 fold; postpartum risk peaks in the first six weeks. Left iliac vein compression makes left-sided DVT more common than right."
+    },
+    {
+      "factor": "Prior personal history of thrombosis",
+      "category": "non-modifiable",
+      "description": "Recurrence after a first unprovoked VTE is approximately 10% in the first year and 30% over five years if anticoagulation is stopped. Recurrence risk is a key driver of extended therapy decisions."
+    }
+  ],
+  "affectedDemographics": [
+    "US VTE incidence: 1-2 per 1,000 person-years; ~900,000 events annually with 60,000-100,000 deaths (CDC)",
+    "Black Americans have ~30-60% higher VTE incidence than white Americans at similar ages",
+    "Asian and Hispanic populations historically show lower VTE rates but rising incidence with westernization of risk factors",
+    "Factor V Leiden prevalence: 3-8% in white Europeans, <1% in African, East Asian, and Native American populations",
+    "Cancer accounts for ~20% of all VTE; antiphospholipid syndrome and inherited thrombophilias together explain another 10-15%"
+  ],
+  "diagnosisOverview": "Diagnostic workup for thrombosis is anchored by clinical pretest probability scoring, focused laboratory testing, and targeted imaging. For suspected DVT, the Wells score combined with a high-sensitivity D-dimer assay safely excludes thrombosis in low-probability patients; positive results trigger compression duplex ultrasound of the affected limb, which has approximately 95% sensitivity for proximal DVT. For suspected pulmonary embolism, the Wells or Geneva score guides next steps: low-probability patients with a negative D-dimer require no further imaging, while higher-probability or D-dimer-positive patients undergo CT pulmonary angiography (CTPA) — the test of choice per ESC 2019. Ventilation-perfusion (V/Q) scanning is reserved for patients in whom CT contrast is contraindicated, including pregnancy and severe renal impairment. Cerebral venous sinus thrombosis is best confirmed by MR venography or CT venography. For acute myocardial infarction, the diagnosis combines ECG (ST-elevation or new left bundle branch block), high-sensitivity troponin, and coronary angiography. Acute ischemic stroke is diagnosed by neurologic examination plus non-contrast CT (to exclude hemorrhage) followed by CT angiography or MRI to identify the occluded vessel. Thrombophilia screening (Factor V Leiden, prothrombin G20210A, antithrombin, protein C and S, antiphospholipid antibodies) is selectively offered for unprovoked VTE in young patients, recurrent events, unusual sites, or strong family history — testing during the acute event is unreliable and is deferred until anticoagulation is completed or paused.",
+  "diagnosticTests": [
+    {
+      "test": "D-dimer (high-sensitivity quantitative immunoassay)",
+      "purpose": "A fibrin degradation product elevated whenever clot is being formed and broken down. Highly sensitive but non-specific. A negative D-dimer in a low or intermediate-probability patient reliably excludes VTE; positives require imaging.",
+      "whatToExpect": "A standard blood draw with results within 1-2 hours in most emergency departments. Age-adjusted cutoffs (age × 10 µg/L in patients over 50) improve specificity without losing sensitivity."
+    },
+    {
+      "test": "Compression duplex ultrasound of the lower extremity",
+      "purpose": "First-line imaging for suspected DVT. Non-compressibility of a deep vein under probe pressure is the diagnostic criterion; ~95% sensitivity for proximal DVT, lower for isolated calf vein thrombosis.",
+      "whatToExpect": "A sonographer applies gel and a probe to the leg from the groin to the calf, taking 20-30 minutes. Painless and radiation-free. Results are usually available the same day."
+    },
+    {
+      "test": "Computed tomography pulmonary angiography (CTPA)",
+      "purpose": "Test of choice for pulmonary embolism per ESC 2019. Visualizes filling defects in pulmonary arteries down to the segmental level; sensitivity ~83%, specificity ~96%.",
+      "whatToExpect": "A CT scan with iodinated contrast injected through a peripheral IV. Total time in the scanner is under 10 minutes. Patients with severe renal impairment or contrast allergy receive V/Q scanning instead."
+    },
+    {
+      "test": "Ventilation-perfusion (V/Q) lung scan",
+      "purpose": "Alternative imaging for PE when CTPA is contraindicated — pregnancy, severe renal impairment, severe contrast allergy. Looks for ventilation-perfusion mismatch.",
+      "whatToExpect": "Patient inhales a radioactive aerosol and receives an IV radiotracer, then lies under a gamma camera for 30-45 minutes. Radiation dose to the fetus is lower than CTPA for pregnant women."
+    },
+    {
+      "test": "Magnetic resonance venography",
+      "purpose": "Detects cerebral venous sinus thrombosis, deep pelvic vein thrombosis, and upper extremity DVT in regions difficult to assess with ultrasound. No ionizing radiation.",
+      "whatToExpect": "MRI scan lasting 30-45 minutes. The patient lies still in the scanner; some sequences may use gadolinium contrast. Suitable when CT is contraindicated."
+    },
+    {
+      "test": "Thrombophilia panel (selectively)",
+      "purpose": "Tests for Factor V Leiden, prothrombin G20210A, protein C and S activity, antithrombin activity, and antiphospholipid antibodies (lupus anticoagulant, anticardiolipin, anti-β2-glycoprotein I). Performed after anticoagulation is completed or held, since acute thrombosis and anticoagulants alter levels.",
+      "whatToExpect": "A blood draw; many tests must be repeated at 12 weeks to confirm persistent antiphospholipid antibodies. Counseling about clinical implications is essential before testing."
+    },
+    {
+      "test": "Echocardiography",
+      "purpose": "Assesses right-ventricular strain in suspected pulmonary embolism and identifies intracardiac thrombus, patent foramen ovale, or atrial fibrillation as embolic sources for arterial events.",
+      "whatToExpect": "Transthoracic echo takes 20-30 minutes; the patient lies on their side while a probe is moved over the chest. Transesophageal echo is occasionally needed for better visualization of the left atrium."
+    }
+  ],
+  "treatmentOverview": "Thrombosis treatment is built on three goals: stop clot extension, restore blood flow, and prevent recurrence. The cornerstone of venous thromboembolism therapy is anticoagulation, with current ASH 2018 and ACCP CHEST guidelines recommending direct oral anticoagulants (apixaban, rivaroxaban, dabigatran, edoxaban) as first-line for most non-cancer VTE. Apixaban and rivaroxaban are started without the need for parenteral lead-in, while dabigatran and edoxaban require 5-10 days of low-molecular-weight heparin first (Hokusai-VTE, NEJM 2013; AMPLIFY, NEJM 2013; RE-COVER, NEJM 2009). Initial treatment runs at full dose for 3 months; beyond that, the decision to continue depends on whether the event was provoked, unprovoked, recurrent, or cancer-associated. Cancer-associated thrombosis is treated with low-molecular-weight heparin or a DOAC (apixaban or edoxaban, with caution for gastrointestinal cancers). Antiphospholipid syndrome with triple-positive serology requires warfarin rather than a DOAC after the TRAPS trial. For massive or hemodynamically unstable pulmonary embolism, systemic thrombolysis with tissue plasminogen activator is first-line; catheter-directed thrombolysis and surgical embolectomy are alternatives in selected centers. Acute limb ischemia and iliofemoral DVT may also benefit from catheter-directed thrombolysis or mechanical thrombectomy. Inferior vena cava filters are reserved for patients with contraindications to anticoagulation; they are retrievable in most cases. Arterial thrombosis (myocardial infarction, stroke) follows a different pathway centered on rapid revascularization — primary percutaneous coronary intervention for STEMI, intravenous thrombolysis or mechanical thrombectomy for ischemic stroke within tight time windows — plus dual antiplatelet therapy. Long-term prevention relies on appropriately dosed anticoagulants or antiplatelets, treatment of underlying risk factors, graduated compression stockings for post-thrombotic syndrome, and patient-specific decisions about extended therapy with apixaban 2.5 mg twice daily or rivaroxaban 10 mg daily for selected unprovoked VTE.",
+  "medicalTreatments": [
+    {
+      "name": "Apixaban (10 mg twice daily for 7 days, then 5 mg twice daily)",
+      "description": "Direct oral factor Xa inhibitor; first-line for acute VTE without need for parenteral lead-in. Lower major bleeding than warfarin in AMPLIFY (NEJM 2013). Extended therapy at 2.5 mg twice daily reduces recurrence by 80% with minimal bleeding penalty.",
+      "effectiveness": "Recurrent VTE in 2.3% vs 2.7% with warfarin at 6 months (AMPLIFY); major bleeding 0.6% vs 1.8% (NNT to avoid one major bleed ≈ 83)."
+    },
+    {
+      "name": "Rivaroxaban (15 mg twice daily for 21 days, then 20 mg daily)",
+      "description": "Oral factor Xa inhibitor; first-line for VTE and atrial fibrillation. Single-drug approach, no INR monitoring, food-with-dose requirement at higher doses. Reduced dose (10 mg daily) for extended secondary prevention.",
+      "effectiveness": "Non-inferior to enoxaparin-warfarin for VTE recurrence (2.1% vs 3.0%) with similar major bleeding (EINSTEIN program)."
+    },
+    {
+      "name": "Dabigatran (150 mg twice daily after 5-10 days of LMWH)",
+      "description": "Oral direct thrombin inhibitor. Requires renal adjustment; reversal available with idarucizumab. RE-COVER (NEJM 2009) established non-inferiority versus warfarin.",
+      "effectiveness": "Recurrent VTE 2.4% vs 2.1% with warfarin at 6 months; major bleeding 1.6% vs 1.9%."
+    },
+    {
+      "name": "Edoxaban (60 mg daily after 5-10 days of LMWH; 30 mg in CrCl 30-50 mL/min, body weight ≤60 kg, or strong P-gp inhibitors)",
+      "description": "Oral factor Xa inhibitor; Hokusai-VTE (NEJM 2013) demonstrated non-inferior efficacy with less major bleeding than warfarin. Preferred in patients needing once-daily dosing.",
+      "effectiveness": "Recurrent VTE 3.2% vs 3.5% with warfarin over 12 months; clinically relevant bleeding 8.5% vs 10.3%."
+    },
+    {
+      "name": "Low-molecular-weight heparin (enoxaparin 1 mg/kg twice daily or 1.5 mg/kg once daily)",
+      "description": "Subcutaneous anticoagulant. Preferred for pregnancy-associated VTE, severe renal impairment dose-adjusted, and many cancer-associated thromboses. Provides predictable anticoagulation without routine monitoring.",
+      "effectiveness": "Comparable efficacy to unfractionated heparin with less heparin-induced thrombocytopenia; the CLOT trial showed 50% lower recurrence than warfarin in cancer patients."
+    },
+    {
+      "name": "Warfarin (target INR 2.0-3.0; 2.5-3.5 in triple-positive antiphospholipid syndrome)",
+      "description": "Vitamin K antagonist. Mainstay before DOACs and still preferred in antiphospholipid syndrome, mechanical heart valves, severe renal failure, and where DOACs are unavailable. Requires INR monitoring and dietary consistency.",
+      "effectiveness": "Reduces VTE recurrence by ~90% during therapy; major bleeding 1-3% per year with well-controlled INR."
+    },
+    {
+      "name": "Systemic thrombolysis (alteplase 100 mg IV over 2 hours for PE; 0.9 mg/kg over 1 hour for stroke)",
+      "description": "Tissue plasminogen activator dissolves established clot. Indicated for massive PE with hemodynamic compromise and ischemic stroke within 4.5 hours of onset. Major bleeding rate ~10%, intracranial hemorrhage ~2-3%.",
+      "effectiveness": "Reduces mortality by ~50% in massive PE; in stroke, NNT to achieve functional independence at 3 months is ~7 when given within 90 minutes."
+    },
+    {
+      "name": "Catheter-directed thrombolysis and mechanical thrombectomy",
+      "description": "Endovascular procedure delivering low-dose thrombolytic directly into the clot, often combined with mechanical clot fragmentation or aspiration. Used for iliofemoral DVT with high post-thrombotic risk, intermediate-high-risk PE, and acute ischemic stroke with large-vessel occlusion.",
+      "effectiveness": "In large-vessel-occlusion stroke, mechanical thrombectomy raises functional independence by absolute 19% (NNT 5) per HERMES meta-analysis. In iliofemoral DVT, the ATTRACT trial showed reduced moderate-severe post-thrombotic syndrome."
+    },
+    {
+      "name": "Antiplatelet therapy for arterial thrombosis (aspirin 75-100 mg daily; clopidogrel, ticagrelor, or prasugrel)",
+      "description": "Platelet inhibition is the cornerstone of arterial thrombosis prevention. Dual antiplatelet therapy is used after acute coronary syndromes and coronary stenting for 6-12 months, followed by lifelong single antiplatelet.",
+      "effectiveness": "Aspirin reduces recurrent vascular events by ~25% after first MI or stroke; adding a P2Y12 inhibitor adds another 20% relative risk reduction in acute coronary syndrome."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Surgical or interventional pulmonary embolectomy",
+      "description": "Reserved for massive pulmonary embolism with contraindications to thrombolysis, or failure of thrombolytic therapy. Performed on cardiopulmonary bypass at high-volume centers.",
+      "successRate": "Survival 70-90% in modern series at experienced centers; better when performed before cardiac arrest."
+    },
+    {
+      "name": "Inferior vena cava (IVC) filter placement",
+      "description": "Retrievable filter inserted percutaneously into the IVC to catch leg or pelvic clots from reaching the lungs. Indicated only when anticoagulation is contraindicated, fails, or must be paused for surgery. Should be retrieved as soon as feasible.",
+      "successRate": "Reduces short-term PE by ~50% but increases recurrent DVT (PREPIC, PREPIC2 trials). Long-term benefit limited if filter is not retrieved."
+    },
+    {
+      "name": "Surgical thrombectomy for acute limb ischemia",
+      "description": "Open or hybrid procedure to remove an occluding arterial thrombus, usually via Fogarty balloon catheter through a femoral or popliteal arteriotomy. Combined with intraoperative angiography and treatment of underlying lesions.",
+      "successRate": "Limb salvage rates of 80-95% when performed within 6-12 hours of symptom onset; outcomes worsen sharply with delay."
+    },
+    {
+      "name": "Percutaneous coronary intervention with stenting",
+      "description": "Primary treatment for ST-elevation myocardial infarction. A guidewire, balloon, and drug-eluting stent restore coronary flow within minutes of catheter access. Door-to-balloon time target is 90 minutes.",
+      "successRate": "Reduces in-hospital mortality from STEMI to ~5% when delivered within target time; ~25% relative mortality benefit over thrombolysis."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Graduated compression stockings (knee-high, 20-30 mmHg or 30-40 mmHg)",
+      "description": "Worn after acute DVT to reduce edema and lower the risk of post-thrombotic syndrome. The SOX trial (Lancet 2014) did not show clear prevention of PTS, but symptomatic relief is consistent and stockings are recommended in current ACCP guidance for symptomatic patients."
+    },
+    {
+      "name": "Intermittent pneumatic compression devices",
+      "description": "Mechanical prophylaxis for hospitalized patients in whom pharmacologic anticoagulation is contraindicated. Reduces postoperative DVT incidence by approximately 60% in surgical patients."
+    }
+  ],
+  "whySeeSpecialist": "A hematologist or vascular medicine specialist should be involved for unprovoked VTE in patients under 50, recurrent thrombosis, thrombosis at unusual sites (cerebral, splanchnic, upper limb without catheter), suspected antiphospholipid syndrome, cancer-associated thrombosis with bleeding complications, and any patient considering thrombophilia testing. Interventional radiology or vascular surgery is needed for catheter-directed thrombolysis, mechanical thrombectomy, and IVC filter placement.",
+  "doctorSelectionGuide": "Look for board certification in hematology or vascular medicine, experience with DOAC management and bridging, comfort with thrombophilia interpretation, and access to a multidisciplinary thrombosis clinic that includes interventional radiology and anticoagulation pharmacy. For arterial events, choose centers that meet door-to-balloon and door-to-needle benchmarks (90 minutes for STEMI, 60 minutes for stroke thrombolysis).",
+  "preventionStrategies": [
+    "Receive pharmacologic VTE prophylaxis with low-molecular-weight heparin or a low-dose DOAC during hospital admission for medical illness, after major surgery, and for orthopedic procedures — these together prevent the majority of hospital-acquired thrombosis",
+    "Stay mobile during long-haul travel: walk every 1-2 hours, exercise calf muscles every 30 minutes, and wear knee-high compression stockings if you have prior VTE, cancer, or recent surgery",
+    "Discontinue combined hormonal contraception and replace with progestin-only or non-hormonal contraception if you carry a known high-risk thrombophilia or have had prior VTE",
+    "Address modifiable atherosclerotic risks — quit smoking, treat hypertension to target, statin therapy in indicated patients, glycemic control in diabetes, and weight loss to BMI under 30",
+    "Take prescribed antiplatelet therapy consistently after acute coronary syndrome or stroke; non-adherence within the first year doubles recurrent event risk"
+  ],
+  "lifestyleModifications": [
+    "Walk daily and maintain regular aerobic exercise — at least 150 minutes per week of moderate activity improves venous return, lowers blood pressure, and reduces both VTE and arterial event risk",
+    "Maintain a healthy weight; each unit increase in BMI above 25 raises VTE risk by approximately 5%",
+    "Stop smoking entirely; nicotine and combustion products accelerate atherosclerosis and endothelial injury, doubling MI risk",
+    "Limit alcohol to no more than one standard drink daily for women and two for men; heavy alcohol use disrupts coagulation balance and elevates blood pressure",
+    "Stay well-hydrated, particularly during illness, hot weather, and air travel — dehydration concentrates blood and slows venous return",
+    "Use a pillbox or smartphone reminder for anticoagulant doses — missing even one dose meaningfully raises recurrence risk during the first 3 months of treatment",
+    "Discuss any new medications or supplements with the prescribing clinician before starting; many interact with warfarin and several (including St. John's wort) interact with DOACs"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style eating pattern with vegetables, fruit, legumes, whole grains, fish, and olive oil — reduces cardiovascular events by 30% (PREDIMED trial)",
+      "Oily fish twice weekly (salmon, sardines, mackerel) for omega-3 fatty acids supporting endothelial function",
+      "Adequate hydration; 2 liters of water daily for most adults",
+      "Consistent vitamin K intake (leafy greens) if taking warfarin — the goal is steady intake, not avoidance",
+      "Whole grains and legumes for fiber and stable blood glucose"
+    ],
+    "avoid": [
+      "Trans fats and ultra-processed foods that promote inflammation and atherosclerosis",
+      "Excess sodium beyond 2 g daily, which raises blood pressure and arterial event risk",
+      "Grapefruit and grapefruit juice while on apixaban or rivaroxaban — inhibits CYP3A4 and raises drug levels",
+      "Erratic alcohol intake while on warfarin; bursts of heavy drinking destabilize the INR",
+      "Excessive cranberry juice with warfarin; case reports of raised INR and bleeding"
+    ]
+  },
+  "exerciseGuidelines": "Once an acute DVT is stable on anticoagulation (usually after 24-48 hours), gradual walking is encouraged and accelerates recovery; bed rest does not reduce embolization. After pulmonary embolism, return to exertion should be guided by oxygenation and symptom response. Aerobic exercise three to five times weekly is safe for patients on stable anticoagulation; contact sports and activities with high fall risk should be discussed with the prescribing clinician.",
+  "dailyManagement": [
+    "Take anticoagulant medication at the same time every day; for twice-daily DOACs, set 12-hour intervals to maintain steady levels",
+    "Carry a wallet card or wear a medical-alert bracelet listing the anticoagulant, indication, and prescribing clinician",
+    "Watch for and report signs of bleeding — black stools, blood in urine, severe headache, easy bruising, prolonged bleeding from minor cuts",
+    "Inform every clinician (including dentists) about anticoagulant use before any procedure; many can proceed without interruption",
+    "Recheck renal function annually on DOACs; warfarin patients need INR monitoring every 1-4 weeks once stable",
+    "Have a written plan for missed doses and for what to do if bleeding occurs; specific DOACs have specific instructions on how to handle a missed dose"
+  ],
+  "prognosis": "Outcomes depend heavily on the type and location of thrombosis and the timeliness of treatment. With prompt anticoagulation, in-hospital mortality for non-massive pulmonary embolism is 1-3%; massive PE mortality remains 25-50% even with thrombolysis. After a first DVT, the risk of recurrence is approximately 10% in the first year and 30% over five years if anticoagulation is stopped; cancer-associated and unprovoked events recur more often than surgery-provoked events. Post-thrombotic syndrome — chronic leg pain, swelling, and skin changes — develops in 20-50% of DVT survivors and is reduced by adequate initial anticoagulation and compression. After ST-elevation myocardial infarction treated by primary percutaneous coronary intervention, in-hospital mortality is 5-7% and 1-year mortality 8-10%. Ischemic stroke 90-day mortality is approximately 10-15%, with functional outcomes improved markedly by thrombolysis within 4.5 hours and mechanical thrombectomy within 24 hours for large-vessel occlusion. Lifelong cardiovascular and venous thrombotic risk persists after a first event; secondary prevention with anticoagulants, antiplatelets, statins, and risk-factor modification is decisive.",
+  "recoveryTimeline": "Symptoms of acute DVT typically improve over 1-2 weeks of anticoagulation, with most patients returning to normal activity within 4-6 weeks. Pulmonary embolism recovery follows a longer trajectory: dyspnea on exertion can persist for 3-6 months, and chronic thromboembolic pulmonary hypertension develops in 2-4% of PE survivors and requires specialist evaluation. Stroke recovery extends across 6-12 months with most measurable gains in the first 3 months. Myocardial infarction patients typically resume work within 4-6 weeks following uncomplicated revascularization, with cardiac rehabilitation across 8-12 weeks.",
+  "complications": [
+    "Pulmonary embolism arising from an untreated leg or pelvic DVT — occurs in up to 50% of untreated proximal DVT cases and is the most feared early complication",
+    "Post-thrombotic syndrome with chronic pain, swelling, hyperpigmentation, and ulceration of the affected limb — affects 20-50% of DVT patients and is reduced by adequate anticoagulation and compression",
+    "Chronic thromboembolic pulmonary hypertension after pulmonary embolism — occurs in 2-4% of survivors; requires lifelong anticoagulation and consideration of pulmonary endarterectomy",
+    "Major bleeding from anticoagulant therapy — 1-3% per year for DOACs and warfarin; intracranial hemorrhage is the most catastrophic, with case-fatality approaching 50%",
+    "Heparin-induced thrombocytopenia (HIT) — immune reaction 5-10 days after heparin exposure causing platelet drop and paradoxical thrombosis; requires immediate switch to a non-heparin anticoagulant",
+    "Recurrent thrombosis after anticoagulation is stopped — 10% in the first year, 30% by year five for unprovoked VTE; key driver of extended-therapy decisions"
+  ],
+  "supportResources": [
+    {
+      "name": "National Blood Clot Alliance — Stop The Clot",
+      "url": "https://www.stoptheclot.org/",
+      "description": "US-based patient organization with extensive resources on VTE, anticoagulation, and life after a clot."
+    },
+    {
+      "name": "Thrombosis UK",
+      "url": "https://thrombosisuk.org/",
+      "description": "UK charity offering patient information, helpline support, and clinician training."
+    },
+    {
+      "name": "CDC Blood Disorders — Venous Thromboembolism",
+      "url": "https://www.cdc.gov/ncbddd/dvt/index.html",
+      "description": "US Centers for Disease Control patient-facing information on DVT, PE, and prevention."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "lymphedema-rehab",
+      "name": "Lymphedema",
+      "keyDifference": "Lymphedema produces gradual, pitting then non-pitting swelling of a limb that is usually bilateral or follows lymph node surgery or radiation, without significant pain or warmth. DVT is acute, unilateral, painful, and warm with tenderness along the deep veins. Compression duplex ultrasound is normal in lymphedema."
+    },
+    {
+      "slug": "ankle-sprain-pod",
+      "name": "Muscle Strain or Calf Injury",
+      "keyDifference": "A muscle strain or calf tear typically follows a specific exertion event, produces localized tenderness over the muscle belly rather than along the deep veins, and lacks the diffuse warmth and unilateral swelling of DVT. Bruising tracking down the calf is common in muscle injuries and rare in DVT."
+    },
+    {
+      "slug": "muscle-contusion",
+      "name": "Cellulitis or Soft-Tissue Infection (mimic of DVT)",
+      "keyDifference": "Cellulitis presents with sharply demarcated redness, warmth, and tenderness of the skin, usually with a portal of entry (insect bite, fissure, ulcer), and is often accompanied by fever and rising white cell count. DVT swelling is deeper, involves the entire limb circumference, and lacks an inflammatory skin border. Both can coexist; duplex ultrasound is needed when either is suspected."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "antiphospholipid-syndrome",
+      "name": "Antiphospholipid Syndrome"
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation"
+    },
+    {
+      "slug": "polycythemia-vera",
+      "name": "Polycythemia Vera"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation",
+      "relevance": "A leading cardiac source of arterial embolism, causing ~15% of ischemic strokes; managed with long-term anticoagulation."
+    },
+    {
+      "slug": "antiphospholipid-syndrome",
+      "name": "Antiphospholipid Syndrome",
+      "relevance": "Acquired autoimmune thrombophilia that produces both venous and arterial thrombosis; warfarin is preferred over DOACs in triple-positive disease."
+    },
+    {
+      "slug": "coronary-artery-disease",
+      "name": "Coronary Artery Disease",
+      "relevance": "Atherosclerosis is the substrate for the platelet-rich thrombus that occludes a coronary artery during myocardial infarction."
+    },
+    {
+      "slug": "peripheral-artery-disease-surgical",
+      "name": "Peripheral Artery Disease",
+      "relevance": "Atherosclerotic narrowing of limb arteries provides the plaque substrate for acute limb thrombosis; shares risk factors with coronary disease."
+    },
+    {
+      "slug": "polycythemia-vera",
+      "name": "Polycythemia Vera",
+      "relevance": "Myeloproliferative neoplasm with elevated red cell mass; causes ~30% lifetime risk of arterial or venous thrombosis including splanchnic vein thrombosis."
+    },
+    {
+      "slug": "hypertension",
+      "name": "High Blood Pressure",
+      "relevance": "Major modifiable driver of atherosclerosis underlying arterial thrombosis; treatment to target lowers MI and stroke risk."
+    },
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure",
+      "relevance": "Reduced cardiac output produces venous stasis and atrial dilatation, raising both VTE and atrial-fibrillation-related embolic risk."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is the difference between venous and arterial thrombosis?",
+      "answer": "Venous thrombi form in slow flow and are fibrin and red-cell rich, causing DVT and pulmonary embolism. Arterial thrombi form on ruptured plaque under high shear and are platelet rich, causing heart attack, stroke, and limb ischemia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Virchow's triad?",
+      "answer": "Virchow's triad is the three-part framework for why clots form: venous stasis, endothelial injury, and hypercoagulability. Described by Rudolf Virchow in 1856, it still guides modern thrombosis diagnosis and prevention.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the warning signs of a blood clot?",
+      "answer": "DVT typically causes one-sided calf swelling, pain, and warmth. Pulmonary embolism causes sudden breathlessness, sharp chest pain, and fast heartbeat. Severe headache, slurred speech, or one-sided weakness suggests stroke. All warrant urgent medical evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is DVT life-threatening?",
+      "answer": "DVT itself is rarely fatal but can become life-threatening if part of the clot breaks free and reaches the lungs, causing pulmonary embolism. About 25% of untreated proximal DVTs progress to clinically significant PE. Prompt anticoagulation almost eliminates this risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long do I need to take anticoagulants after a blood clot?",
+      "answer": "Most people take anticoagulants for at least 3 months after a first VTE. Surgery-triggered clots usually stop at 3 months. Unprovoked or recurrent VTE and cancer-associated thrombosis often need extended low-dose DOAC therapy for years or indefinitely.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Which anticoagulant is best after a DVT or PE?",
+      "answer": "For most non-cancer patients without antiphospholipid syndrome, DOACs such as apixaban or rivaroxaban are first-line per ASH 2018 and ACCP CHEST guidelines. They match warfarin with less major bleeding and no INR monitoring. Pregnancy requires low-molecular-weight heparin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I fly after a DVT or PE?",
+      "answer": "Most patients can fly safely once anticoagulation is established and they have been stable for at least 2 weeks. Wear knee-high compression stockings, walk every 1-2 hours, stay well-hydrated, and avoid alcohol on flights longer than 4 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I get another blood clot?",
+      "answer": "Recurrence depends on cause. Surgery-provoked VTE has ~3% annual recurrence off anticoagulation, while unprovoked VTE has ~10% in year one and 30% over five years. Extended low-dose anticoagulation reduces recurrence by roughly 80%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I be tested for inherited thrombophilia?",
+      "answer": "Testing is selective, not routine. It is reasonable in unprovoked VTE before age 50, recurrent thrombosis, clots at unusual sites, strong family history, and women planning pregnancy. Testing during an acute event or on anticoagulants is unreliable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Factor V Leiden?",
+      "answer": "Factor V Leiden is the most common inherited thrombophilia, present in 3-8% of Europeans. The mutation makes factor V resistant to protein C inactivation. Heterozygotes have 3-5 fold higher VTE risk; homozygotes 18 fold. Most carriers never develop thrombosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can pregnancy cause blood clots?",
+      "answer": "Yes. Pregnancy raises VTE risk 4-5 fold, with the peak in the first six weeks postpartum. Estrogen elevates clotting factors and the uterus compresses pelvic veins. Women with prior VTE or thrombophilia often need prophylactic low-molecular-weight heparin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do birth control pills increase clot risk?",
+      "answer": "Combined estrogen-progestin oral contraceptives raise VTE risk 3-5 fold. Absolute risk in healthy women is still low (~6 per 10,000 user-years). Risk is highest in the first 3 months. Progestin-only pills, implants, and copper IUDs carry minimal added risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-thrombotic syndrome?",
+      "answer": "Post-thrombotic syndrome is the chronic leg pain, swelling, heaviness, hyperpigmentation, and sometimes ulceration that develops in 20-50% of patients after DVT. It is caused by venous valve damage and reduced by adequate anticoagulation and compression stockings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is thrombosis the same as a stroke or heart attack?",
+      "answer": "Yes, in large part. Most ischemic strokes and almost all ST-elevation heart attacks are caused by arterial thrombosis. A clot forms on a ruptured plaque inside a brain or coronary artery and blocks blood flow, killing tissue downstream.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is a stroke caused by a blood clot treated?",
+      "answer": "Acute ischemic stroke is treated with intravenous thrombolysis within 4.5 hours of symptom onset, and mechanical thrombectomy within 24 hours for large-vessel occlusion. After the acute phase, antiplatelets, blood pressure control, and statins reduce recurrence.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can blood clots happen in children?",
+      "answer": "Pediatric thrombosis is uncommon but rising, around 5 per 10,000 hospital admissions. Most cases involve central venous catheters in critically ill or oncology patients. Inherited thrombophilias can also present in adolescence with unprovoked clots.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the cost of treating a blood clot?",
+      "answer": "US hospital and imaging costs for DVT or PE average USD 10,000-25,000 per episode. Generic DOACs cost USD 30-450 per month depending on country; warfarin is a few dollars but needs INR monitoring. India offers widely affordable generic apixaban and rivaroxaban.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise while taking anticoagulants?",
+      "answer": "Aerobic exercise such as walking, cycling, and swimming is safe and encouraged on stable anticoagulation. Avoid contact sports and high fall-risk activities because of bleeding risk. After pulmonary embolism, build intensity gradually based on symptoms.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What food and drug interactions matter on anticoagulants?",
+      "answer": "Warfarin interacts with many foods (vitamin K) and drugs. DOACs are affected by strong CYP3A4 and P-glycoprotein modulators including rifampin, carbamazepine, ketoconazole, and St. John's wort. Grapefruit juice raises apixaban and rivaroxaban levels.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a clot dissolve on its own without treatment?",
+      "answer": "Small superficial and isolated calf vein clots can resolve through normal fibrinolysis. Proximal DVT and pulmonary embolism without anticoagulation extend in 30-50% of cases and carry embolic risk. Anticoagulation prevents extension while the body remodels the clot.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is thrombosis hereditary?",
+      "answer": "There is a clear inherited component in 30-50% of unprovoked VTE. Major contributors are Factor V Leiden, prothrombin G20210A, and deficiencies of protein C, S, and antithrombin. A first-degree relative with VTE under 50 raises personal risk 2-3 fold.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I go to the emergency room?",
+      "answer": "Call emergency services for sudden chest pain or breathlessness, severe headache, slurred speech, face or arm weakness, a cold pulseless limb, or rapid leg swelling with breathlessness. Anyone on anticoagulants with major bleeding or head injury also needs emergency care.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Thrombosis (blood clot formation in veins or arteries)",
+  "regionalNames": [
+    {
+      "name": "रक्त का थक्का (Rakt ka Thakka)",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Thrombose",
+      "region": "Germany / France",
+      "language": "de"
+    },
+    {
+      "name": "Trombosis",
+      "region": "Latin America / Spain",
+      "language": "es"
+    }
+  ],
+  "searchTags": [
+    "thrombosis",
+    "blood clot",
+    "deep vein thrombosis",
+    "DVT",
+    "pulmonary embolism",
+    "PE",
+    "venous thromboembolism",
+    "VTE",
+    "arterial thrombosis",
+    "Factor V Leiden",
+    "prothrombin mutation",
+    "antiphospholipid syndrome",
+    "apixaban",
+    "rivaroxaban",
+    "warfarin",
+    "anticoagulation"
+  ],
+  "symptomKeywords": [
+    "swollen painful calf",
+    "sudden shortness of breath",
+    "chest pain blood clot",
+    "leg pain and warmth",
+    "blue painful leg",
+    "cold pale arm",
+    "facial droop weakness",
+    "severe sudden headache"
+  ],
+  "metaTitle": "Thrombosis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Thrombosis: blood clots in veins or arteries causing DVT, PE, stroke, and heart attack. Causes, diagnosis, anticoagulants, and prevention reviewed by experts.",
+  "keywords": [
+    "thrombosis",
+    "thrombosis symptoms",
+    "thrombosis treatment",
+    "venous thromboembolism",
+    "deep vein thrombosis",
+    "pulmonary embolism",
+    "arterial thrombosis",
+    "Factor V Leiden",
+    "apixaban",
+    "rivaroxaban",
+    "warfarin",
+    "anticoagulants",
+    "blood clot prevention",
+    "Virchow's triad"
+  ],
+  "lastReviewed": "2026-05-18",
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deep_vein_thrombosis_of_the_right_leg.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Deep_vein_thrombosis_of_the_right_leg.jpg/1280px-Deep_vein_thrombosis_of_the_right_leg.jpg",
+      "altText": "Clinical photograph of a swollen and discolored right lower leg from acute deep vein thrombosis with visible asymmetry compared to the left leg",
+      "caption": "Acute deep vein thrombosis of the right leg with marked unilateral swelling and discoloration.",
+      "license": "CC BY 2.0",
+      "credit": "James Heilman, MD / Wikimedia Commons",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blausen_0290_DeepVeinThrombosis.png",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Blausen_0290_DeepVeinThrombosis.png/1280px-Blausen_0290_DeepVeinThrombosis.png",
+      "altText": "Illustration showing a deep vein thrombus inside a leg vein with cross-section detail of the clot and surrounding vessel wall",
+      "caption": "Anatomical diagram of a deep vein thrombus obstructing flow in a major leg vein.",
+      "license": "CC BY 3.0",
+      "credit": "BruceBlaus / Blausen Medical / Wikimedia Commons",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saddle_pulmonary_embolism.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Saddle_pulmonary_embolism.jpg/1024px-Saddle_pulmonary_embolism.jpg",
+      "altText": "CT pulmonary angiogram showing a saddle pulmonary embolism straddling the main pulmonary artery bifurcation, a large clot blocking blood flow to both lungs",
+      "caption": "CT pulmonary angiogram demonstrating a saddle embolus across the main pulmonary artery bifurcation.",
+      "license": "CC BY-SA 4.0",
+      "credit": "James Heilman, MD / Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "assetType": "anatomy",
+      "section": "causes",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Virchows_triad.svg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Virchows_triad.svg/1024px-Virchows_triad.svg.png",
+      "altText": "Diagram of Virchow's triad showing the three contributors to thrombosis: venous stasis, endothelial injury, and hypercoagulability",
+      "caption": "Virchow's triad — the three contributors to pathologic clot formation.",
+      "license": "CC BY-SA 3.0",
+      "credit": "Wikimedia Commons contributors",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Advances. 2020;4(19):4693-4738.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33007077/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Stevens SM, Woller SC, Kreuziger LB, et al. Antithrombotic Therapy for VTE Disease: Second Update of the CHEST Guideline and Expert Panel Report. Chest. 2021;160(6):e545-e608.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34352278/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). European Heart Journal. 2020;41(4):543-603.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31504429/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Hokusai-VTE Investigators (Büller HR, Décousus H, Grosso MA, et al.). Edoxaban versus warfarin for the treatment of symptomatic venous thromboembolism. New England Journal of Medicine. 2013;369(15):1406-1415.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23991658/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Agnelli G, Buller HR, Cohen A, et al. Oral apixaban for the treatment of acute venous thromboembolism (AMPLIFY). New England Journal of Medicine. 2013;369(9):799-808.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23808982/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Schulman S, Kearon C, Kakkar AK, et al. Dabigatran versus warfarin in the treatment of acute venous thromboembolism (RE-COVER). New England Journal of Medicine. 2009;361(24):2342-2352.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19966341/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Connors JM. Thrombophilia Testing and Venous Thrombosis. New England Journal of Medicine. 2017;377(12):1177-1187.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28930509/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Pengo V, Denas G, Zoppellaro G, et al. Rivaroxaban vs warfarin in high-risk patients with antiphospholipid syndrome (TRAPS trial). Blood. 2018;132(13):1365-1371.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30002145/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Heit JA. Epidemiology of venous thromboembolism. Nature Reviews Cardiology. 2015;12(8):464-474.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26076949/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Goyal M, Menon BK, van Zwam WH, et al. Endovascular thrombectomy after large-vessel ischaemic stroke: a meta-analysis of individual patient data from five randomised trials (HERMES). Lancet. 2016;387(10029):1723-1731.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26898852/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "Dr. Anita Verma",
+    "slug": "dr-anita-verma-hematology"
+  }
+}

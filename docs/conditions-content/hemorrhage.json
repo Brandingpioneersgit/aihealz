@@ -1,0 +1,659 @@
+{
+  "_meta": {
+    "slug": "hemorrhage",
+    "tier": 1,
+    "headTerm": "hemorrhage",
+    "longTailKeywords": [
+      "hemorrhage symptoms",
+      "hemorrhagic shock",
+      "internal bleeding",
+      "gi bleed treatment",
+      "intracranial hemorrhage",
+      "postpartum hemorrhage",
+      "massive transfusion protocol",
+      "tranexamic acid bleeding",
+      "ATLS shock classes",
+      "tourniquet for bleeding"
+    ],
+    "primarySpecialty": "Emergency Medicine / Trauma Surgery",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations verified against ATLS 10th ed, CRASH-2 (Lancet 2010, PMID 20554319), ESA bleeding guideline 2023, WHO 2017 PPH recommendations, AHA/ASA 2022 ICH guideline. Hgb transfusion thresholds checked against AABB 2023. MTP 1:1:1 from PROPPR trial (Holcomb 2015, PMID 25647203)."
+  },
+  "h1Title": "Hemorrhage: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Emergency Medicine / Trauma Surgery",
+  "heroOverview": "Hemorrhage is acute or chronic loss of blood from the vascular system, ranging from a minor nosebleed to massive traumatic exsanguination, and remains the leading preventable cause of death after injury worldwide. Severity is graded by the Advanced Trauma Life Support (ATLS) classes I through IV, based on percent blood volume lost: class I (<15%), class II (15-30%), class III (30-40%), and class IV (>40%, immediately life-threatening). Common sources include trauma, gastrointestinal ulcers and varices, intracranial bleeds from aneurysm or hypertension, and obstetric hemorrhage after delivery. Survival depends on stopping the bleeding, replacing blood and clotting factors in balanced ratios, and correcting coagulopathy within the first 'golden hour' of care.",
+  "keyStats": {
+    "prevalence": "Trauma hemorrhage causes ~1.9 million deaths globally each year (WHO, 2019); GI bleeding accounts for 100-200 hospitalizations per 100,000 adults annually in the US",
+    "demographics": "Trauma-related hemorrhage peaks in men aged 15-44; postpartum hemorrhage affects 1-5% of deliveries; intracranial hemorrhage rises sharply after age 65",
+    "avgAge": "Bimodal: young adults (trauma) and adults over 65 (GI, intracranial)",
+    "globalCases": "Hemorrhage causes roughly 30-40% of all trauma deaths worldwide and remains the top cause of maternal mortality"
+  },
+  "definition": "Hemorrhage (ICD-10: R58) is the escape of blood from a damaged blood vessel into surrounding tissues, body cavities, or out of the body, and is classified clinically by source, rate, and physiological impact rather than by a single mechanism. Acute hemorrhage describes rapid blood loss that overwhelms compensatory mechanisms, producing hypovolemic shock as preload, cardiac output, and oxygen delivery fall. Chronic hemorrhage, by contrast, occurs slowly enough that plasma volume expansion and erythropoiesis maintain near-normal vital signs while hemoglobin and iron stores drop, presenting as iron-deficiency anemia rather than shock. Internal hemorrhage is concealed within body cavities (thorax, abdomen, retroperitoneum, intracranial space, pelvis) and is harder to detect; external hemorrhage is visible from wounds, the gastrointestinal tract, the airway, the urinary tract, or the reproductive tract. The ATLS classification stratifies acute hemorrhagic shock by estimated blood loss: class I (up to 15%, ~750 mL in a 70 kg adult), class II (15-30%, 750-1500 mL with tachycardia and narrow pulse pressure), class III (30-40%, 1500-2000 mL with hypotension and altered mental status), and class IV (>40%, immediately life-threatening). The condition is managed by emergency physicians, trauma surgeons, interventional radiologists, gastroenterologists, neurosurgeons, and obstetricians depending on the source.",
+  "typesClassification": [
+    {
+      "type": "Traumatic hemorrhage",
+      "description": "External or internal blood loss from blunt or penetrating injury. Common sites: long-bone fractures, pelvic ring fractures, thoracic and abdominal organs, major vessels. Tourniquet-amenable extremity bleeding is a leading preventable trauma death."
+    },
+    {
+      "type": "Gastrointestinal hemorrhage",
+      "description": "Upper GI bleeding (UGIB) from peptic ulcers, esophageal varices, Mallory-Weiss tears, or malignancy presents as hematemesis or melena. Lower GI bleeding from diverticula, angiodysplasia, hemorrhoids, or colorectal cancer presents as hematochezia."
+    },
+    {
+      "type": "Intracranial hemorrhage",
+      "description": "Includes intracerebral hemorrhage (ICH) from hypertensive small-vessel disease, subarachnoid hemorrhage (SAH) from ruptured aneurysm, epidural and subdural hematomas from trauma. Mortality at 30 days is 30-50% for spontaneous ICH."
+    },
+    {
+      "type": "Postpartum hemorrhage (PPH)",
+      "description": "Blood loss >500 mL after vaginal delivery or >1000 mL after cesarean, or any volume causing hemodynamic instability. Uterine atony causes ~70% of PPH. Leading direct cause of maternal death globally."
+    },
+    {
+      "type": "Internal hemorrhage (occult)",
+      "description": "Concealed bleeding into the chest, peritoneum, retroperitoneum, pelvis, or thigh compartments. Often missed early because external signs are minimal; FAST ultrasound and CT identify most cases in stable patients."
+    }
+  ],
+  "primarySymptoms": [
+    "Visible blood loss from a wound, the nose (epistaxis), the mouth (hematemesis or hemoptysis), the rectum (melena or hematochezia), the urinary tract (hematuria), or the vagina that does not stop within minutes of direct pressure.",
+    "Pallor of the skin, lips, and conjunctivae, with cold and clammy peripheries reflecting peripheral vasoconstriction as the body shunts blood to vital organs.",
+    "Tachycardia above 100 beats per minute, often the earliest sign of class II hemorrhage and frequently the only abnormal vital sign in young, compensating patients.",
+    "Narrow pulse pressure (the gap between systolic and diastolic) before frank hypotension appears — a more sensitive early marker than systolic blood pressure alone.",
+    "Hypotension with systolic blood pressure below 90 mmHg, indicating class III-IV shock and the need for immediate resuscitation, blood products, and source control.",
+    "Altered mental status ranging from anxiety and confusion to obtundation, reflecting falling cerebral perfusion as blood loss progresses past 30% of circulating volume.",
+    "Tachypnea and air hunger as compensatory respiratory rate rises to deliver more oxygen against a falling hemoglobin and cardiac output.",
+    "Reduced urine output below 0.5 mL/kg/hour, indicating renal hypoperfusion and a useful resuscitation endpoint in critical care.",
+    "Sudden severe headache (the 'thunderclap' headache) with neck stiffness in subarachnoid hemorrhage, often with transient loss of consciousness.",
+    "Abdominal distension, rigidity, or bruising over the flank (Grey Turner sign) or umbilicus (Cullen sign) suggesting intra-abdominal or retroperitoneal hemorrhage."
+  ],
+  "earlyWarningSigns": [
+    "Resting heart rate over 100 bpm in a previously healthy adult, especially after trauma, delivery, or with melena",
+    "Postural dizziness or syncope on standing, often the first manifestation of 15-30% blood loss",
+    "Black tarry stool or coffee-ground vomiting indicating subacute upper GI bleeding",
+    "Unexplained fatigue, exertional breathlessness, or pallor in a patient with iron-deficiency anemia — suggests chronic occult hemorrhage",
+    "Worsening headache with nausea and vomiting in a hypertensive or anticoagulated patient — consider intracranial hemorrhage"
+  ],
+  "emergencySigns": [
+    "Bright red bleeding that soaks through dressings or pools on the floor — apply direct pressure and call emergency services immediately",
+    "Sudden severe headache described as 'the worst of my life' with vomiting or loss of consciousness — possible subarachnoid hemorrhage",
+    "Massive hematemesis, hematochezia, or melena with dizziness or fainting — active GI bleeding requiring resuscitation and endoscopy within 24 hours",
+    "Heavy vaginal bleeding within 24 hours of delivery, especially with a soft 'boggy' uterus — immediate obstetric emergency",
+    "Cold clammy skin, confusion, and a thready rapid pulse — signs of class III-IV hemorrhagic shock requiring blood transfusion"
+  ],
+  "causes": [
+    {
+      "cause": "Trauma (blunt and penetrating injury)",
+      "description": "Motor vehicle collisions, falls, gunshot wounds, stab wounds, and crush injuries damage blood vessels and solid organs. Pelvic ring fractures alone can sequester 2-3 liters of blood. Trauma accounts for the largest share of preventable hemorrhage deaths."
+    },
+    {
+      "cause": "Peptic ulcer disease and gastrointestinal lesions",
+      "description": "Duodenal and gastric ulcers, often related to Helicobacter pylori or NSAIDs, erode into submucosal vessels. Esophageal varices from portal hypertension, Mallory-Weiss tears, diverticulosis, and angiodysplasia are other common sources."
+    },
+    {
+      "cause": "Ruptured cerebral aneurysm or hypertensive small-vessel disease",
+      "description": "Saccular aneurysms at the circle of Willis rupture into the subarachnoid space; chronic hypertension weakens deep penetrating arteries, producing intracerebral hemorrhage in the basal ganglia, thalamus, pons, or cerebellum."
+    },
+    {
+      "cause": "Obstetric complications",
+      "description": "Uterine atony (failure of the uterus to contract after delivery), retained placental tissue, genital tract trauma, placental abruption, placenta previa or accreta, and uterine rupture cause postpartum hemorrhage. Atony alone accounts for ~70% of cases."
+    },
+    {
+      "cause": "Coagulopathy and anticoagulant medications",
+      "description": "Warfarin, direct oral anticoagulants (apixaban, rivaroxaban, dabigatran), antiplatelet drugs, inherited hemophilias, liver-disease coagulopathy, and disseminated intravascular coagulation (DIC) lower the threshold for spontaneous and trauma-related bleeding."
+    },
+    {
+      "cause": "Vascular malformations and aneurysms",
+      "description": "Aortic dissection and rupture, abdominal aortic aneurysm rupture, ectopic pregnancy rupture, ruptured ovarian cyst, and arteriovenous malformations cause catastrophic internal hemorrhage often without warning."
+    },
+    {
+      "cause": "Malignancy",
+      "description": "Tumors of the lung, GI tract, kidney, bladder, uterus, and head and neck region erode into vessels or bleed from friable neovasculature. Hemoptysis, hematuria, or rectal bleeding in patients over 50 warrants malignancy workup."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Anticoagulant or antiplatelet therapy",
+      "category": "modifiable",
+      "description": "Warfarin raises major bleeding risk by 2-3x; direct oral anticoagulants lower intracranial bleeding risk by ~50% versus warfarin but raise GI bleeding modestly. Dual antiplatelet therapy after stents adds 1-2% annual major bleeding risk."
+    },
+    {
+      "factor": "Advanced age (>65 years)",
+      "category": "non-modifiable",
+      "description": "Vascular fragility, polypharmacy, falls, and cerebral amyloid angiopathy combine to raise both spontaneous and trauma-related hemorrhage risk. Mortality after intracranial bleeding doubles after age 75."
+    },
+    {
+      "factor": "Uncontrolled hypertension",
+      "category": "modifiable",
+      "description": "Systolic blood pressure >140 mmHg sustained over years drives lipohyalinosis of small penetrating arteries, the dominant cause of spontaneous intracerebral hemorrhage. Each 10 mmHg reduction lowers ICH risk by ~30%."
+    },
+    {
+      "factor": "Chronic liver disease and portal hypertension",
+      "category": "modifiable",
+      "description": "Cirrhosis produces both varices (anatomic risk) and coagulopathy from impaired clotting factor synthesis. Variceal bleeding has 15-20% 6-week mortality even with modern therapy."
+    },
+    {
+      "factor": "Peptic ulcer disease and chronic NSAID use",
+      "category": "modifiable",
+      "description": "Daily NSAID use raises upper GI bleeding risk by 3-4x. Combining NSAIDs with anticoagulants or corticosteroids multiplies risk further. H. pylori infection independently doubles bleeding ulcer rates."
+    },
+    {
+      "factor": "Inherited bleeding disorders",
+      "category": "genetic",
+      "description": "Hemophilia A and B, von Willebrand disease, factor XI deficiency, and platelet function disorders raise lifetime risk of spontaneous and post-traumatic hemorrhage. Family history is the strongest screening signal."
+    },
+    {
+      "factor": "Pregnancy and recent delivery",
+      "category": "non-modifiable",
+      "description": "Uterine atony, retained placenta, abnormal placentation, and operative delivery raise postpartum hemorrhage risk. Prior cesarean, multiple gestation, prolonged labor, and chorioamnionitis are key modifiable contributors."
+    },
+    {
+      "factor": "Occupational and recreational injury exposure",
+      "category": "environmental",
+      "description": "Construction, agriculture, motor sports, military service, and combat raise trauma-hemorrhage risk. In conflict settings, extremity hemorrhage from blasts and gunshot wounds drives most preventable battlefield deaths."
+    },
+    {
+      "factor": "Heavy alcohol use",
+      "category": "modifiable",
+      "description": "Alcohol promotes gastric mucosal injury, Mallory-Weiss tears with vomiting, cirrhosis with varices, falls and head trauma, and impaired clotting — all converge on higher hemorrhage rates."
+    },
+    {
+      "factor": "Cerebral amyloid angiopathy",
+      "category": "non-modifiable",
+      "description": "Amyloid deposition in cortical and leptomeningeal vessels causes lobar intracerebral hemorrhage in older adults. Affects up to 50% of those over 80 and is strongly associated with recurrent ICH."
+    }
+  ],
+  "affectedDemographics": [
+    "Trauma hemorrhage: highest in men aged 15-44, where road traffic injury is the leading cause of death globally (WHO Global Status Report on Road Safety, 2018)",
+    "Postpartum hemorrhage: affects 1-5% of deliveries globally; rates and mortality are 10-20x higher in low- and middle-income countries than in high-income settings",
+    "Intracerebral hemorrhage: incidence rises from 10 per 100,000 under age 50 to over 200 per 100,000 after age 80; rates are 2x higher in Black, Hispanic, and East Asian populations",
+    "Upper GI bleeding: 50-150 hospitalizations per 100,000 adults annually in Western countries, with mortality of 5-10% despite modern endoscopic therapy",
+    "Hemophilia: affects roughly 1 in 5,000 male births globally; severe forms produce spontaneous joint and muscle hemorrhage from infancy"
+  ],
+  "diagnosisOverview": "Diagnosis of hemorrhage begins at the bedside with the ATLS primary survey: assess Airway, Breathing, Circulation, Disability, and Exposure while simultaneously controlling visible external bleeding with direct pressure or tourniquet. Heart rate, blood pressure, capillary refill, mental status, and skin color are graded to estimate the ATLS class of hemorrhage. Internal hemorrhage is identified by FAST ultrasound (focused assessment with sonography for trauma) in unstable trauma patients — a positive scan in a hypotensive patient mandates immediate laparotomy, while a stable patient with concerning mechanism proceeds to CT angiography of the head, chest, abdomen, and pelvis. Bloodwork on arrival includes full blood count, type and crossmatch, coagulation profile (PT/INR, aPTT, fibrinogen), lactate, base deficit, and a venous or arterial blood gas — lactate above 4 mmol/L or base deficit worse than -6 predict ongoing bleeding and mortality. Hemoglobin can be normal in the first 1-2 hours of acute hemorrhage because plasma and red cells are lost in proportion; serial measurements after fluid resuscitation reveal the true deficit. For suspected gastrointestinal hemorrhage, urgent upper endoscopy is performed within 24 hours (or sooner if unstable) to identify and treat the source. CT angiography of the abdomen and pelvis with contrast localizes active bleeding at rates as low as 0.3 mL/min and guides interventional radiology embolization. Suspected intracranial hemorrhage is diagnosed with non-contrast CT of the head, which has near 100% sensitivity within the first 6 hours of symptoms; lumbar puncture is performed if CT is negative but subarachnoid hemorrhage remains clinically suspected. Postpartum hemorrhage is recognized by quantitative blood loss measurement at delivery and assessment of uterine tone, retained tissue, lacerations, and clotting.",
+  "diagnosticTests": [
+    {
+      "test": "Focused Assessment with Sonography for Trauma (FAST)",
+      "purpose": "Bedside ultrasound to detect free fluid (blood) in the pericardial sac, perihepatic and perisplenic spaces, and pelvis. A positive FAST in a hypotensive trauma patient is an indication for emergency laparotomy without waiting for CT.",
+      "whatToExpect": "Performed at the bedside in the emergency department or trauma bay; takes 2-5 minutes. The clinician places gel and an ultrasound probe at four standard windows on the abdomen and chest. Painless and immediate."
+    },
+    {
+      "test": "CT angiography (head, chest, abdomen, pelvis)",
+      "purpose": "Gold standard imaging in hemodynamically stable patients to localize internal bleeding, identify vascular injury, and guide surgical or endovascular intervention. Detects active extravasation of contrast at very low bleeding rates.",
+      "whatToExpect": "Performed in the CT scanner with iodinated contrast through a peripheral IV. The scan takes 5-10 minutes; results are read by a radiologist within minutes. A brief warm sensation from the contrast is normal."
+    },
+    {
+      "test": "Complete blood count, coagulation panel, fibrinogen, lactate, base deficit",
+      "purpose": "Quantifies the degree of anemia, identifies coagulopathy, and gauges the severity of shock through markers of anaerobic metabolism. Guides product replacement and predicts mortality.",
+      "whatToExpect": "Standard blood draws sent to the lab on arrival and repeated every 1-4 hours during active resuscitation. Most results return within 30-60 minutes; bedside lactate is available in minutes."
+    },
+    {
+      "test": "Upper and lower gastrointestinal endoscopy",
+      "purpose": "Direct visualization of GI bleeding sources — ulcers, varices, Mallory-Weiss tears, diverticula, and malignancy. Endoscopy is also therapeutic: epinephrine injection, thermal coagulation, hemoclips, and banding stop bleeding in 90% of upper GI bleeds.",
+      "whatToExpect": "Performed under conscious sedation. The patient lies on their side while a flexible scope is passed through the mouth or rectum. Procedure lasts 20-45 minutes; most patients recover within an hour."
+    },
+    {
+      "test": "Non-contrast CT of the head",
+      "purpose": "First-line test for suspected intracranial hemorrhage. Near 100% sensitivity within 6 hours of onset; identifies intracerebral, subarachnoid, subdural, and epidural bleeds and quantifies hematoma volume.",
+      "whatToExpect": "Quick scan taking 1-2 minutes inside the CT machine. No contrast needed for the initial study. Results are read by a radiologist or stroke physician within minutes."
+    },
+    {
+      "test": "Type and crossmatch for blood products",
+      "purpose": "Confirms ABO and Rh group and identifies clinically significant antibodies so compatible packed red cells, plasma, platelets, and cryoprecipitate can be issued for transfusion.",
+      "whatToExpect": "A blood sample sent to the blood bank. Type-specific blood is available in 10-15 minutes; fully crossmatched units within 45-60 minutes. O-negative red cells are available immediately for life-threatening hemorrhage."
+    },
+    {
+      "test": "Viscoelastic testing (TEG or ROTEM)",
+      "purpose": "Whole-blood assays that characterize the global function of the coagulation system in real time — clot initiation, kinetics, strength, and fibrinolysis. Guides goal-directed product replacement in trauma and surgical hemorrhage.",
+      "whatToExpect": "A small blood sample is run on a bedside or near-patient analyzer; tracings appear within 5-15 minutes and direct specific product choices (plasma, platelets, fibrinogen, antifibrinolytics)."
+    }
+  ],
+  "treatmentOverview": "Hemorrhage management runs along three parallel tracks: stop the bleeding, replace what is lost, and correct coagulopathy. The first priority is source control. External extremity bleeding that cannot be stopped by direct pressure is controlled with a windlass tourniquet placed 5-7 cm proximal to the wound and tightened until bleeding stops — modern guidelines (TCCC, Stop the Bleed) emphasize this as a life-saving first step. Internal hemorrhage requires definitive intervention: laparotomy for intra-abdominal bleeding, thoracotomy for chest hemorrhage, endoscopic hemostasis for upper GI bleeds, interventional-radiology embolization for pelvic and visceral arterial bleeding, neurosurgical hematoma evacuation for selected intracranial hemorrhages, and uterine compression, balloon tamponade (Bakri), B-Lynch suture, or hysterectomy for refractory postpartum hemorrhage. Resuscitation has shifted from large-volume crystalloid to early balanced blood-product transfusion in fixed 1:1:1 ratios of packed red blood cells, plasma, and platelets, supported by the PROPPR trial (Holcomb 2015). Massive transfusion protocols (MTP) deliver these in pre-mixed coolers and reduce mortality from coagulopathy of trauma. Hemoglobin transfusion thresholds for stable patients are 7 g/dL in most settings (AABB 2023) and 8 g/dL in cardiovascular disease; active hemorrhage requires transfusion guided by ongoing losses rather than a single number. Tranexamic acid, an antifibrinolytic, reduces all-cause mortality in trauma when given within 3 hours of injury (CRASH-2 trial, Lancet 2010, n=20,211) and is now standard in trauma, postpartum hemorrhage (WOMAN trial), and many surgical settings. Reversal of anticoagulation is essential: 4-factor prothrombin complex concentrate for warfarin, idarucizumab for dabigatran, andexanet alfa for factor Xa inhibitors. Permissive hypotension (target systolic 80-90 mmHg) is used before definitive source control to limit clot disruption, except in traumatic brain injury where higher pressures preserve cerebral perfusion. Source-specific therapies include proton pump inhibitor infusion and endoscopic hemostasis for UGIB, blood pressure lowering to systolic 130-140 mmHg in spontaneous intracerebral hemorrhage (INTERACT-2, ATACH-II), and oxytocin 10-40 IU as first-line uterotonic for postpartum hemorrhage.",
+  "medicalTreatments": [
+    {
+      "name": "Direct pressure and tourniquet for external bleeding",
+      "description": "Firm direct pressure for 5-10 uninterrupted minutes stops most external bleeding. For extremity arterial bleeding that does not respond, a windlass tourniquet (e.g., CAT, SOFT-T) is applied 5-7 cm proximal to the wound and tightened until distal pulse is lost.",
+      "effectiveness": "Tourniquets stop limb arterial bleeding in over 90% of cases when properly applied; battlefield data (US military, Iraq/Afghanistan) show major reduction in extremity-bleeding deaths."
+    },
+    {
+      "name": "Tranexamic acid (1 g IV over 10 min, then 1 g over 8 hours)",
+      "description": "An antifibrinolytic lysine analog that stabilizes formed clot. Indicated in trauma within 3 hours of injury and in postpartum hemorrhage. Mechanism: competitive inhibition of plasminogen activation, preserving fibrin matrix.",
+      "effectiveness": "CRASH-2 (PMID 20554319, n=20,211) showed a 1.5% absolute reduction in all-cause mortality when given within 3 hours of trauma. WOMAN trial showed reduced death from bleeding in postpartum hemorrhage."
+    },
+    {
+      "name": "Massive transfusion protocol (MTP) at 1:1:1 ratio",
+      "description": "Pre-mixed transfusion of packed red blood cells, fresh frozen plasma, and platelets in equal units, replacing lost whole blood and correcting trauma-induced coagulopathy. Activated for predicted blood loss >10 units in 24 hours or 4 units in 1 hour.",
+      "effectiveness": "PROPPR RCT (PMID 25647203) showed reduced death from exsanguination at 24 hours versus 1:1:2 ratio; survival to discharge was similar but hemostasis was reached faster."
+    },
+    {
+      "name": "Proton pump inhibitor (pantoprazole 80 mg IV bolus then 8 mg/hr infusion)",
+      "description": "High-dose intravenous PPI stabilizes clot over peptic ulcers by raising gastric pH above 6, which favors platelet aggregation and fibrin formation. Started before endoscopy in suspected upper GI bleeding.",
+      "effectiveness": "Reduces rebleeding after endoscopic hemostasis from 22% to 7% (Lau 2007, NEJM); modest effect on mortality. Standard of care alongside endoscopy."
+    },
+    {
+      "name": "Endoscopic hemostasis (epinephrine injection, thermal coagulation, hemoclips, variceal banding)",
+      "description": "First-line definitive therapy for most upper GI bleeding. Combines mechanical, thermal, and pharmacologic methods. For esophageal varices, endoscopic band ligation is preferred; sclerotherapy is an alternative.",
+      "effectiveness": "Stops bleeding in 90% of nonvariceal upper GI bleeds; rebleeding in 10-25% within 72 hours. Variceal band ligation controls active variceal bleeding in 80-90%."
+    },
+    {
+      "name": "Oxytocin and second-line uterotonics for postpartum hemorrhage",
+      "description": "Oxytocin 10 IU IM or 10-40 IU in IV infusion is the WHO first-line uterotonic for active management of the third stage of labor and treatment of atonic postpartum hemorrhage. Carboprost, methylergometrine, and misoprostol are second-line agents.",
+      "effectiveness": "Active management of the third stage reduces postpartum hemorrhage by ~60% (Cochrane review). Oxytocin alone controls atonic PPH in 80-85% of cases."
+    },
+    {
+      "name": "Blood pressure control in spontaneous intracerebral hemorrhage",
+      "description": "Rapid lowering of systolic blood pressure to a target of 130-150 mmHg within the first 6 hours reduces hematoma expansion in selected patients. Intravenous nicardipine, labetalol, or clevidipine titrated to target.",
+      "effectiveness": "INTERACT-2 (Anderson 2013, NEJM, n=2,839) showed a trend toward improved functional outcome with intensive BP lowering; safe when systolic is not driven below 130 mmHg in the acute phase."
+    },
+    {
+      "name": "Reversal of anticoagulation",
+      "description": "Four-factor prothrombin complex concentrate (PCC) 25-50 IU/kg plus IV vitamin K 10 mg reverses warfarin; idarucizumab 5 g reverses dabigatran; andexanet alfa reverses apixaban and rivaroxaban; protamine reverses heparin.",
+      "effectiveness": "PCC normalizes INR within 30 minutes in over 90% of warfarin-related major bleeds; idarucizumab reverses dabigatran effect within minutes (RE-VERSE AD)."
+    },
+    {
+      "name": "Permissive hypotension and balanced resuscitation",
+      "description": "Before definitive source control in non-head-injured trauma patients, target systolic 80-90 mmHg or palpable radial pulse to avoid clot disruption and dilutional coagulopathy. Avoid large-volume crystalloid.",
+      "effectiveness": "Reduces blood product requirement and may improve survival in penetrating trauma (Bickell 1994, NEJM); modern protocols favor early blood-product resuscitation over crystalloid boluses."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Damage control laparotomy",
+      "description": "Abbreviated surgery focused on controlling bleeding (packing, vessel ligation, splenectomy) and contamination, followed by ICU resuscitation and planned re-operation 24-48 hours later. Used in physiologically exhausted trauma patients.",
+      "successRate": "Survival to discharge 50-70% in patients with class IV hemorrhage and the lethal triad of acidosis, hypothermia, and coagulopathy."
+    },
+    {
+      "name": "Interventional radiology embolization",
+      "description": "Endovascular catheter placement with selective coil, gelfoam, or particle embolization of bleeding vessels. Used for pelvic, splenic, hepatic, renal, and bronchial artery hemorrhage. Often spares operative morbidity.",
+      "successRate": "Initial hemorrhage control in 85-95% of pelvic and visceral bleeds; rebleeding in 5-15%, often managed by repeat embolization."
+    },
+    {
+      "name": "Surgical hemostasis for postpartum hemorrhage",
+      "description": "When uterotonics and balloon tamponade fail, options include B-Lynch compression suture, uterine and internal iliac artery ligation, and as last resort peripartum hysterectomy. Decisions are made within minutes of recognizing refractory bleeding.",
+      "successRate": "B-Lynch suture controls atonic PPH in 75-90% of cases; hysterectomy is definitive in over 95%."
+    },
+    {
+      "name": "Neurosurgical hematoma evacuation",
+      "description": "Craniotomy or minimally invasive evacuation for selected supratentorial ICH (lobar, accessible, deteriorating), cerebellar hemorrhages over 3 cm with brainstem compression, and acute subdural or epidural hematomas.",
+      "successRate": "Surgical evacuation of cerebellar hemorrhage >3 cm with brainstem compression reduces mortality from over 80% (medical alone) to 30-40%. Supratentorial ICH benefit is more selective (STICH-II, MISTIE III)."
+    },
+    {
+      "name": "Resuscitative endovascular balloon occlusion of the aorta (REBOA)",
+      "description": "Femoral artery catheter advanced with balloon inflation in the descending aorta to temporize non-compressible torso hemorrhage while patient is moved to definitive care. Selective use in trauma centers.",
+      "successRate": "Bridges to surgery or embolization in carefully selected patients; randomized trials (UK-REBOA, 2023) suggest no overall survival benefit and possible harm in unselected use."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Topical hemostatic dressings",
+      "description": "Kaolin-impregnated gauze (Combat Gauze) and chitosan dressings (Celox, HemCon) accelerate clot formation when packed into wounds. Used in prehospital trauma care and combat settings as an adjunct to direct pressure; carry strong observational evidence in military trauma."
+    },
+    {
+      "name": "Iron repletion for chronic occult bleeding",
+      "description": "Oral or intravenous iron (ferric carboxymaltose, iron sucrose) corrects the iron-deficiency anemia of chronic GI or menstrual hemorrhage. IV iron is preferred when oral iron is poorly tolerated or absorption is impaired."
+    }
+  ],
+  "whySeeSpecialist": "Hemorrhage of any significant volume requires immediate care in an emergency department, ideally a trauma or stroke center. Specialist input is essential when bleeding is internal or massive, when an anticoagulated patient bleeds, when bleeding does not stop with first-line measures, when there is unexplained chronic blood loss, or when the patient is pregnant or recently delivered. Trauma surgeons, interventional radiologists, gastroenterologists, neurosurgeons, and obstetricians each manage source-specific hemorrhage.",
+  "doctorSelectionGuide": "Choose hospitals verified as Level I or II trauma centers for major injury, stroke-ready or comprehensive stroke centers for intracranial hemorrhage, and centers with 24/7 endoscopy, interventional radiology, and on-site blood bank with massive transfusion protocols. For elective workup of chronic bleeding (heavy periods, occult GI loss), board-certified gastroenterologists, hematologists, and gynecologists provide the workup pathway.",
+  "preventionStrategies": [
+    "Treat hypertension to target (<130/80 mmHg in most adults) — the single largest modifiable risk factor for spontaneous intracerebral hemorrhage",
+    "Use the lowest effective dose of NSAIDs for the shortest necessary duration; co-prescribe a proton pump inhibitor if combined with anticoagulants or steroids",
+    "Test for and eradicate Helicobacter pylori in patients with peptic ulcer disease — reduces ulcer recurrence and bleeding by over 70%",
+    "Use seatbelts, helmets, and child restraints; enforce speed limits and drink-driving laws — globally these prevent millions of trauma hemorrhages annually",
+    "Carry out active management of the third stage of labor with prophylactic oxytocin at every birth (WHO 2017 recommendation) — reduces postpartum hemorrhage by approximately 60%",
+    "Screen and treat for esophageal varices in patients with cirrhosis using non-selective beta-blockers or endoscopic band ligation"
+  ],
+  "lifestyleModifications": [
+    "Take anticoagulants exactly as prescribed and attend INR or drug-level monitoring appointments; carry a medical alert card listing the drug, indication, and reversal agent",
+    "Avoid combining NSAIDs (ibuprofen, naproxen, diclofenac) with anticoagulants or steroids without specialist advice",
+    "Treat heavy menstrual bleeding early with tranexamic acid, hormonal therapy, or a levonorgestrel intrauterine system to prevent iron-deficiency anemia",
+    "Limit alcohol to within national low-risk guidelines; binge drinking raises ulcer, variceal, and trauma hemorrhage risk",
+    "Maintain a soft-toothbrush dental routine and shave with electric razors if you take anticoagulants or have a bleeding disorder",
+    "Keep a Stop the Bleed kit (tourniquet, pressure dressing, hemostatic gauze) at home, in the car, and at work in high-risk occupations"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Iron-rich foods (red meat in moderation, poultry, fish, beans, lentils, spinach) to replenish stores after blood loss",
+      "Vitamin C-rich foods alongside iron to enhance absorption (citrus, peppers, strawberries)",
+      "Adequate dietary protein (1.0-1.2 g/kg/day) during recovery from major hemorrhage",
+      "Vitamin K-rich foods (leafy greens) maintained at a consistent daily level for patients on warfarin — stability matters more than restriction",
+      "Plenty of water and fiber to prevent constipation and straining in hemorrhoid-related bleeding"
+    ],
+    "avoid": [
+      "Heavy alcohol consumption — raises ulcer, variceal, and trauma hemorrhage risk",
+      "Aspirin and ibuprofen for pain when safer alternatives (acetaminophen) are available, especially in patients with prior GI bleeding",
+      "Herbal supplements with antiplatelet effects (ginkgo, garlic in large doses, fish oil at high doses, ginseng) before planned surgery",
+      "Crash diets that exclude protein and iron during recovery from acute hemorrhage",
+      "Sudden large changes in vitamin K intake on warfarin therapy — destabilizes INR"
+    ]
+  },
+  "exerciseGuidelines": "After acute hemorrhage, gradual return to activity is guided by hemoglobin recovery and the underlying cause. For minor blood loss, normal activity resumes within days; for major hemorrhage requiring transfusion, structured rehabilitation over 4-12 weeks is typical. Avoid contact sports and heavy lifting for 6 weeks after splenectomy, abdominal surgery, or neurosurgical intervention. Patients on anticoagulants should avoid high-impact and collision sports unless specifically cleared.",
+  "dailyManagement": [
+    "Take anticoagulants and acid-suppressing medications at the same time each day; never stop them abruptly without medical advice",
+    "Monitor for warning signs at home: black or maroon stool, coffee-ground vomiting, sudden headache, unexplained bruising, bleeding gums, or nosebleeds lasting over 20 minutes",
+    "Check blood pressure regularly if you have a history of intracerebral hemorrhage or are at high risk — aim for the target set by your clinician",
+    "Keep an up-to-date medication list and emergency contact information; share it with any new clinician seen for unrelated complaints",
+    "Replace lost iron with the regimen prescribed (oral or IV) and complete the full course — stores take 3-6 months to refill after major blood loss"
+  ],
+  "prognosis": "Outcome after hemorrhage depends on source, volume, time to control, age, and comorbidities. Trauma patients reaching a trauma center alive have over 90% survival if hemorrhage is controlled within the 'golden hour'; mortality rises sharply with delay and with class IV shock. Upper gastrointestinal bleeding has overall mortality of 5-10% in modern series, falling to under 3% when endoscopy and PPI therapy are delivered within 24 hours. Spontaneous intracerebral hemorrhage carries the highest mortality of any stroke subtype at 30-50% at 30 days; survivors with smaller hematomas, younger age, and preserved consciousness on arrival have the best chance of independent recovery. Subarachnoid hemorrhage has roughly 40% mortality, with another third of survivors left with disability. Postpartum hemorrhage mortality in high-resource settings is under 1 per 100,000 deliveries but remains 10-20 times higher in low-resource settings where blood and uterotonics are scarce. Chronic occult hemorrhage from any source is reliably reversible with treatment of the source and iron replacement, with hemoglobin typically normalizing over 6-12 weeks.",
+  "recoveryTimeline": "Vital signs typically stabilize within hours of hemorrhage control and adequate transfusion. Hemoglobin recovers at roughly 1 g/dL per week with oral iron once bleeding has stopped, faster with IV iron. Most patients return to normal daily activity within 2-6 weeks after a controlled bleed without complications. Major trauma, neurosurgery, or ICU admission for shock typically requires 3-6 months of rehabilitation. Iron stores (ferritin) take 3-6 months to refill even after hemoglobin has normalized.",
+  "complications": [
+    "Hemorrhagic shock progressing to multi-organ failure if not corrected within hours — the 'lethal triad' of acidosis, hypothermia, and coagulopathy carries over 50% mortality",
+    "Acute kidney injury from prolonged hypoperfusion or pigment nephropathy after massive transfusion",
+    "Transfusion reactions, transfusion-related acute lung injury (TRALI), and transfusion-associated circulatory overload (TACO)",
+    "Permanent neurological deficits, including motor weakness, aphasia, and cognitive impairment after intracerebral or subarachnoid hemorrhage",
+    "Sheehan syndrome (postpartum pituitary necrosis) after severe postpartum hemorrhage, presenting with amenorrhea, failure to lactate, and adrenal insufficiency",
+    "Iron-deficiency anemia and chronic fatigue after repeated or prolonged occult bleeding, often missed for months until hemoglobin falls below 8 g/dL"
+  ],
+  "supportResources": [
+    {
+      "name": "Stop the Bleed — American College of Surgeons",
+      "url": "https://www.stopthebleed.org/",
+      "description": "Public training program teaching laypeople to control life-threatening external bleeding with pressure, packing, and tourniquets."
+    },
+    {
+      "name": "World Health Organization — Postpartum Hemorrhage",
+      "url": "https://www.who.int/teams/sexual-and-reproductive-health-and-research/areas-of-work/maternal-and-perinatal-health/postpartum-haemorrhage",
+      "description": "WHO recommendations, training materials, and country implementation tools on preventing and treating obstetric hemorrhage."
+    },
+    {
+      "name": "American Heart Association / American Stroke Association",
+      "url": "https://www.stroke.org/en/about-stroke/types-of-stroke/hemorrhagic-strokes-bleeds",
+      "description": "Patient and family resources on hemorrhagic stroke, including recovery, rehabilitation, and risk-factor management."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "anemia",
+      "name": "Anemia",
+      "keyDifference": "Anemia is a low hemoglobin or red cell mass from any cause and can be the consequence of chronic hemorrhage rather than a separate condition. Acute hemorrhage in the first hours often shows a normal hemoglobin because plasma and red cells are lost together; anemia from chronic blood loss develops over weeks to months and presents with fatigue and pallor rather than shock."
+    },
+    {
+      "slug": "cerebral-aneurysm",
+      "name": "Cerebral Aneurysm",
+      "keyDifference": "A cerebral aneurysm is a structural outpouching of an intracranial artery; intracranial hemorrhage is the event that occurs when an aneurysm ruptures. Many aneurysms are found incidentally and never bleed, while a subarachnoid hemorrhage is always a hemorrhagic event. Treatment of unruptured aneurysm (coiling, clipping) is preventive; treatment of ruptured aneurysm is emergent."
+    },
+    {
+      "slug": "peptic-ulcer",
+      "name": "Peptic Ulcer Disease",
+      "keyDifference": "Peptic ulcer disease is the underlying mucosal lesion; upper GI hemorrhage is the complication. Most ulcers cause epigastric pain without bleeding; only a minority erode into a submucosal vessel and bleed. The distinction matters because the workup and risk stratification differ when the presentation is pain versus hematemesis or melena."
+    },
+    {
+      "slug": "subdural-hematoma",
+      "name": "Subdural Hematoma",
+      "keyDifference": "A subdural hematoma is a specific type of intracranial hemorrhage in the space between the dura and arachnoid, usually from torn bridging veins after head trauma in older adults. Hemorrhage is the broader category; subdural hematoma is one anatomic subtype with its own clinical course (subacute deterioration, often without external head injury signs)."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "hypertension",
+      "name": "Hypertension"
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation"
+    },
+    {
+      "slug": "peptic-ulcer",
+      "name": "Peptic Ulcer Disease"
+    },
+    {
+      "slug": "anemia",
+      "name": "Anemia"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "anemia",
+      "name": "Anemia",
+      "relevance": "Anemia is the long-term consequence of unreplaced blood loss; chronic hemorrhage from any source is a leading cause of iron-deficiency anemia worldwide."
+    },
+    {
+      "slug": "hypertension",
+      "name": "Hypertension",
+      "relevance": "Uncontrolled hypertension is the dominant risk factor for spontaneous intracerebral hemorrhage and worsens bleeding from any vascular source."
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation",
+      "relevance": "Atrial fibrillation drives long-term anticoagulant use, which substantially raises hemorrhage risk; bleeding risk must be balanced against stroke prevention benefit."
+    },
+    {
+      "slug": "peptic-ulcer",
+      "name": "Peptic Ulcer Disease",
+      "relevance": "Peptic ulcer disease is the single most common cause of upper gastrointestinal hemorrhage in adults; NSAID and H. pylori control prevent most bleeding ulcers."
+    },
+    {
+      "slug": "cerebral-aneurysm",
+      "name": "Cerebral Aneurysm",
+      "relevance": "Ruptured cerebral aneurysms cause aneurysmal subarachnoid hemorrhage, a high-mortality form of intracranial bleed managed with coiling or clipping."
+    },
+    {
+      "slug": "epidural-hematoma",
+      "name": "Epidural Hematoma",
+      "relevance": "Epidural hematomas are a specific traumatic intracranial hemorrhage caused by arterial bleeding between skull and dura — a neurosurgical emergency requiring rapid evacuation."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is the difference between internal and external hemorrhage?",
+      "answer": "External hemorrhage is visible bleeding from a wound or body orifice. Internal hemorrhage is concealed bleeding into a body cavity such as the chest, abdomen, retroperitoneum, or skull. Internal bleeds usually need imaging (FAST ultrasound, CT) to diagnose.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much blood loss is considered serious?",
+      "answer": "ATLS classifies hemorrhage by blood volume lost: class I (under 15%) causes minimal change, class II (15-30%) causes tachycardia, class III (30-40%) causes hypotension and confusion, and class IV (over 40%) is immediately life-threatening. Adult blood volume is about 5 liters.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the first signs of internal bleeding?",
+      "answer": "Early signs include a fast heart rate, dizziness on standing, pallor, cold clammy skin, and a narrow pulse pressure. Site-specific clues include abdominal pain, sudden severe headache, flank bruising, or chest pain. After trauma or anticoagulation, any of these needs urgent care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can hemorrhage stop on its own?",
+      "answer": "Small bleeds from skin, gums, or minor mucosa usually stop within minutes with pressure and normal clotting. Larger arterial bleeds, varices, intracranial bleeds, and obstetric hemorrhage rarely stop without intervention. Apply firm direct pressure for 10 minutes while help is summoned.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should a tourniquet be used?",
+      "answer": "A tourniquet is used for life-threatening extremity bleeding that direct pressure cannot stop. Place it 5-7 cm above the wound (not on a joint), tighten until bleeding stops, and record the time. Stop the Bleed and military trauma evidence show tourniquets save lives.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the massive transfusion protocol (MTP)?",
+      "answer": "MTP is a pre-defined hospital pathway that rapidly delivers blood products in fixed 1:1:1 ratios of red cells, plasma, and platelets to patients with predicted massive blood loss. Pre-mixed coolers and clear activation criteria reduce delays and correct trauma coagulopathy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is tranexamic acid and when is it used?",
+      "answer": "Tranexamic acid is an antifibrinolytic that stabilizes clot. CRASH-2 showed it reduces death given within 3 hours of major trauma; WOMAN showed benefit in postpartum hemorrhage. Standard dose is 1 g IV over 10 minutes, then 1 g over 8 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What hemoglobin level requires a blood transfusion?",
+      "answer": "For stable hospitalized adults, AABB 2023 recommends transfusion at hemoglobin under 7 g/dL, or under 8 g/dL with cardiovascular disease. During active bleeding, transfusion is guided by ongoing losses rather than a single hemoglobin value.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes postpartum hemorrhage?",
+      "answer": "The 'four Ts' summarize the causes: Tone (uterine atony, ~70%), Trauma (lacerations or rupture), Tissue (retained placenta), and Thrombin (coagulopathy). Atonic bleeding is treated with uterine massage, oxytocin, and balloon tamponade or surgery if refractory.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a hemorrhagic stroke?",
+      "answer": "Hemorrhagic stroke is bleeding into or around the brain, usually intracerebral from hypertensive small-vessel disease or subarachnoid from a ruptured aneurysm. It accounts for 10-20% of strokes but has the highest mortality, with 30-day death rates of 30-50%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is upper GI bleeding treated?",
+      "answer": "Treatment starts with resuscitation, blood products if needed, and IV proton pump inhibitor. Endoscopy within 24 hours identifies the source and treats it with epinephrine, thermal coagulation, hemoclips, or variceal banding. Endoscopy stops about 90% of nonvariceal upper GI bleeds.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What anticoagulant reversal agents exist?",
+      "answer": "Warfarin is reversed with 4-factor PCC plus IV vitamin K. Dabigatran is reversed with idarucizumab. Apixaban and rivaroxaban are reversed with andexanet alfa or 4-factor PCC. Heparin is reversed with protamine sulfate. Each works within minutes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the 'golden hour' in trauma hemorrhage?",
+      "answer": "The 'golden hour' is the first 60 minutes after major injury, when prompt hemorrhage control, blood product resuscitation, and definitive surgical or endovascular care most strongly influence survival. Delays in this window measurably raise mortality.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can chronic bleeding cause anemia?",
+      "answer": "Yes. Slow blood loss from periods, peptic ulcers, colon polyps or cancer, hookworm, or hemorrhoids depletes iron and causes iron-deficiency anemia. Hemoglobin falls gradually until fatigue, breathlessness, and pallor appear. Workup includes endoscopy, colonoscopy, and iron studies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is intracerebral hemorrhage managed?",
+      "answer": "Acute care includes airway protection, lowering systolic blood pressure to 130-150 mmHg, reversing any anticoagulation, and admission to a stroke or neurocritical care unit. Selected large lobar or cerebellar hematomas benefit from neurosurgical evacuation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does aspirin cause hemorrhage?",
+      "answer": "Aspirin doubles upper GI bleeding risk and modestly raises intracranial bleeding through irreversible platelet inhibition. Long-term low-dose aspirin for secondary cardiovascular prevention usually outweighs the risk; for primary prevention in low-risk adults, bleeding risk often exceeds benefit.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hemorrhagic shock?",
+      "answer": "Hemorrhagic shock is inadequate tissue oxygen delivery from acute blood loss. It presents with tachycardia, hypotension, cold clammy skin, altered mental status, and low urine output. Treatment is rapid source control, balanced blood-product resuscitation, and correcting coagulopathy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is blood loss measured in postpartum hemorrhage?",
+      "answer": "Visual estimation underestimates blood loss by 30-50%. Quantitative measurement using calibrated drapes, weighed pads, and collection devices is now recommended. PPH is over 500 mL after vaginal delivery, over 1000 mL after cesarean, or any volume causing instability.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are nosebleeds (epistaxis) dangerous?",
+      "answer": "Most nosebleeds are anterior and self-limited; pinch the soft part of the nose for 10-15 minutes while leaning forward. Posterior bleeds, bleeding over 30 minutes despite pressure, anticoagulated patients, or bleeding with dizziness need emergency assessment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does recovery from major hemorrhage take?",
+      "answer": "Vital signs usually stabilize within hours of bleeding control and transfusion. Hemoglobin recovers about 1 g/dL per week with oral iron, faster with IV iron. Most patients resume activity in 2-6 weeks; major trauma or ICU stays may need 3-6 months of rehabilitation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get hemorrhage?",
+      "answer": "Yes. Children present with trauma hemorrhage, intracranial bleeds from birth injury or abuse, congenital bleeding disorders (hemophilia, von Willebrand disease), and intussusception with rectal bleeding. Pediatric blood volume is 70-80 mL/kg, so modest losses are proportionally large.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Hemorrhage (acute or chronic blood loss)",
+  "regionalNames": [
+    {
+      "name": "Haemorrhage",
+      "region": "UK / Commonwealth",
+      "language": "en-GB"
+    },
+    {
+      "name": "Rakta Srava",
+      "region": "India (Ayurveda)",
+      "language": "sa"
+    },
+    {
+      "name": "रक्तस्राव (Raktasrav)",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    }
+  ],
+  "searchTags": [
+    "hemorrhage",
+    "haemorrhage",
+    "bleeding",
+    "blood loss",
+    "internal bleeding",
+    "external bleeding",
+    "hemorrhagic shock",
+    "ATLS class",
+    "massive transfusion",
+    "tranexamic acid",
+    "CRASH-2",
+    "tourniquet",
+    "Stop the Bleed",
+    "GI bleed",
+    "intracranial hemorrhage",
+    "postpartum hemorrhage"
+  ],
+  "symptomKeywords": [
+    "heavy bleeding",
+    "blood in vomit",
+    "black tarry stool",
+    "bright red rectal bleeding",
+    "sudden severe headache",
+    "dizziness on standing",
+    "pale cold clammy skin",
+    "fast weak pulse"
+  ],
+  "metaTitle": "Hemorrhage: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Hemorrhage: acute or chronic blood loss from trauma, GI, intracranial, or postpartum sources. ATLS classes, transfusion, and treatment from our medical board.",
+  "keywords": [
+    "hemorrhage",
+    "haemorrhage",
+    "bleeding",
+    "internal bleeding",
+    "hemorrhagic shock",
+    "GI bleed",
+    "intracranial hemorrhage",
+    "postpartum hemorrhage",
+    "massive transfusion protocol",
+    "tranexamic acid",
+    "ATLS shock classes",
+    "tourniquet",
+    "Stop the Bleed",
+    "blood loss treatment"
+  ],
+  "lastReviewed": "2026-05-18",
+  "images": [],
+  "sources": [
+    {
+      "title": "American College of Surgeons Committee on Trauma. Advanced Trauma Life Support (ATLS) Student Course Manual, 10th Edition. Chicago: ACS; 2018.",
+      "url": "https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "CRASH-2 trial collaborators, Shakur H, Roberts I, et al. Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage: a randomised, placebo-controlled trial. Lancet. 2010;376(9734):23-32.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20554319/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Holcomb JB, Tilley BC, Baraniuk S, et al. Transfusion of Plasma, Platelets, and Red Blood Cells in a 1:1:1 vs a 1:1:2 Ratio and Mortality in Patients With Severe Trauma: The PROPPR Randomized Clinical Trial. JAMA. 2015;313(5):471-482.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25647203/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "WOMAN Trial Collaborators. Effect of early tranexamic acid administration on mortality, hysterectomy, and other morbidities in women with post-partum haemorrhage (WOMAN): an international, randomised, double-blind, placebo-controlled trial. Lancet. 2017;389(10084):2105-2116.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28456509/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Greenberg SM, Ziai WC, Cordonnier C, et al. 2022 Guideline for the Management of Patients With Spontaneous Intracerebral Hemorrhage: A Guideline From the American Heart Association/American Stroke Association. Stroke. 2022;53(7):e282-e361.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35579034/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "World Health Organization. WHO Recommendations on Prevention and Treatment of Postpartum Haemorrhage. Geneva: WHO; 2012 (updated 2017).",
+      "url": "https://www.who.int/publications/i/item/9789241548502",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Kozek-Langenecker SA, Ahmed AB, Afshari A, et al. Management of severe perioperative bleeding: guidelines from the European Society of Anaesthesiology and Intensive Care: First update 2022. European Journal of Anaesthesiology. 2023;40(4):226-304.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36855941/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Carson JL, Stanworth SJ, Dennis JA, et al. Transfusion thresholds for guiding red blood cell transfusion. Cochrane Database of Systematic Reviews. 2021;12:CD002042.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34932836/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Anderson CS, Heeley E, Huang Y, et al. Rapid blood-pressure lowering in patients with acute intracerebral hemorrhage (INTERACT-2). New England Journal of Medicine. 2013;368(25):2355-2365.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23713578/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "AIHealz Medical Editorial Board",
+    "slug": "aihealz-medical-editorial-board"
+  }
+}

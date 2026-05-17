@@ -1,0 +1,665 @@
+{
+  "_meta": {
+    "slug": "influenza",
+    "tier": 1,
+    "headTerm": "influenza",
+    "longTailKeywords": [
+      "influenza symptoms",
+      "flu treatment",
+      "seasonal flu vaccine",
+      "oseltamivir tamiflu",
+      "influenza A vs B",
+      "h1n1 h3n2",
+      "flu vs covid",
+      "flu vs cold",
+      "antigenic drift shift",
+      "flu pandemic"
+    ],
+    "primarySpecialty": "Infectious Disease / Primary Care",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Cross-checked against WHO seasonal influenza fact sheet 2023, CDC ACIP recommendations 2023-24, IDSA 2018 guideline (PMID 30566567), Cochrane neuraminidase inhibitor reviews, and Lancet GBD respiratory infection burden papers. Drug doses verified against current FDA labels."
+  },
+  "h1Title": "Influenza (Seasonal Flu): Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Infectious Disease / Primary Care",
+  "heroOverview": "Influenza is an acute respiratory infection caused by influenza A and B viruses, marked by abrupt fever, muscle aches, dry cough, and profound fatigue that typically arrives over a few hours rather than days. Seasonal flu sickens roughly 1 billion people each year worldwide and produces 3 to 5 million severe cases and 290,000 to 650,000 respiratory deaths annually according to the World Health Organization. Most healthy adults recover at home within 5 to 7 days, but pneumonia, myocarditis, and decompensation of chronic disease drive hospitalizations and deaths, particularly in adults over 65, pregnant women, infants, and people with cardiopulmonary or metabolic disease. Annual vaccination prevents 40 to 60 percent of cases in well-matched seasons, and oseltamivir started within 48 hours of symptom onset shortens illness by 1 to 2 days.",
+  "keyStats": {
+    "prevalence": "5-15% of the global population infected annually (WHO seasonal estimates)",
+    "demographics": "Highest attack rates in school-aged children; highest hospitalization and mortality in adults 65+ and infants under 6 months",
+    "avgAge": "Infection across all ages; severe disease concentrated under 5 and over 65",
+    "globalCases": "~1 billion annually; 3-5 million severe cases; 290,000-650,000 respiratory deaths (WHO)"
+  },
+  "definition": "Influenza (ICD-10: J11.1) is an acute viral respiratory illness caused by orthomyxoviruses of the genera Alphainfluenzavirus (influenza A), Betainfluenzavirus (influenza B), Gammainfluenzavirus (influenza C), and Deltainfluenzavirus (influenza D). Influenza A and B drive virtually all human seasonal epidemics, while influenza C causes mild sporadic disease and influenza D primarily infects cattle. The virus has a segmented negative-sense RNA genome encoding surface glycoproteins hemagglutinin (HA) and neuraminidase (NA), whose subtypes define strain names such as A(H1N1) and A(H3N2). Two mechanisms generate antigenic change: gradual point mutations in HA and NA called antigenic drift, which drives yearly epidemics, and sudden reassortment of gene segments between animal and human strains called antigenic shift, which has produced the four influenza pandemics of the last century including the 1918 H1N1, 1957 H2N2, 1968 H3N2, and 2009 H1N1pdm09 events. After airborne transmission via respiratory droplets and contaminated surfaces, the virus infects ciliated epithelial cells of the upper and lower airway, replicates rapidly, and triggers an interferon-driven inflammatory response that produces the characteristic systemic illness. Influenza is managed primarily in primary care; severe and high-risk cases involve infectious disease, pulmonology, or critical care.",
+  "typesClassification": [
+    {
+      "type": "Influenza A",
+      "description": "Causes the most severe disease and all known pandemics. Subtyped by hemagglutinin (H1-H18) and neuraminidase (N1-N11). Currently circulating human seasonal subtypes are A(H1N1)pdm09 and A(H3N2). Infects humans, birds, swine, horses, and marine mammals, creating a reservoir for reassortment."
+    },
+    {
+      "type": "Influenza B",
+      "description": "Two lineages (Victoria and Yamagata) circulate in humans. Causes seasonal epidemics, often hitting school-aged children harder than adults. Does not undergo antigenic shift because it has no significant non-human reservoir, so it does not cause pandemics."
+    },
+    {
+      "type": "Influenza C",
+      "description": "Produces mild upper-respiratory illness, often indistinguishable from a common cold, in young children. Rarely tested for and not included in seasonal vaccines."
+    },
+    {
+      "type": "Influenza D",
+      "description": "Primarily a cattle pathogen. Human exposure has been documented serologically but no confirmed human disease. Monitored for zoonotic potential."
+    }
+  ],
+  "primarySymptoms": [
+    "Abrupt onset of fever of 38-40 degrees C within hours, often with rigors, distinguishing influenza from the gradual onset of the common cold.",
+    "Intense muscle aches and body pain (myalgia), particularly in the back, thighs, and calves, that limit activity even at low fever.",
+    "Dry, non-productive cough that develops within 24 hours and can persist for 2-3 weeks after other symptoms resolve.",
+    "Severe fatigue and weakness that lasts 1-2 weeks beyond the acute illness, often the most disabling feature for working adults.",
+    "Headache, typically frontal and persistent, frequently described as among the most prominent early symptoms.",
+    "Sore throat and dry mouth from inflamed pharyngeal mucosa, usually less prominent than in streptococcal pharyngitis.",
+    "Nasal congestion and clear rhinorrhea, more common in children than adults.",
+    "Chills and sweats that follow the fever curve, often cycling every 4-6 hours.",
+    "Gastrointestinal symptoms such as nausea, vomiting, and diarrhea, more common in children and with influenza B than influenza A in adults.",
+    "Loss of appetite and mild dehydration from reduced oral intake and fever-driven fluid loss."
+  ],
+  "earlyWarningSigns": [
+    "Sudden fatigue and chills several hours before fever begins, often the first sign during community outbreaks",
+    "Mild scratchy throat or dry cough appearing within a household where another member tested positive in the previous 1-4 days",
+    "Persistent headache and body aches arriving together within a few hours, with no clear non-infectious trigger",
+    "Fever above 38 degrees C in a high-risk patient (pregnancy, age 65+, chronic lung or heart disease) during flu season warrants same-day antiviral consideration"
+  ],
+  "emergencySigns": [
+    "Difficulty breathing or shortness of breath at rest, persistent chest pain, or pulse oximetry below 92% on room air — possible influenza pneumonia or acute respiratory distress",
+    "Persistent fever above 39.5 degrees C lasting beyond 4-5 days, especially after initial improvement, suggesting bacterial superinfection",
+    "Sudden confusion, seizures, severe headache, or stiff neck — possible influenza-associated encephalopathy or meningitis",
+    "Bluish lips or fingertips, decreased urination, or inability to keep fluids down — markers of severe dehydration or hypoxia",
+    "In infants, signs include grunting respirations, nasal flaring, lethargy, refusal to feed, and fever in any child under 3 months",
+    "Chest pain with positional change, palpitations, or syncope — possible influenza-associated myocarditis"
+  ],
+  "causes": [
+    {
+      "cause": "Influenza A virus infection",
+      "description": "Responsible for the majority of severe seasonal flu and all influenza pandemics. Transmitted through respiratory droplets generated by coughing, sneezing, or talking, with smaller-particle aerosols contributing in crowded indoor settings. Incubation is 1-4 days, with peak viral shedding on days 1-3 of symptoms."
+    },
+    {
+      "cause": "Influenza B virus infection",
+      "description": "Drives seasonal epidemics, often peaking later in the season than influenza A. Causes similar but on average slightly milder adult disease, though severe pediatric cases including reactive myositis and rare myocarditis occur."
+    },
+    {
+      "cause": "Antigenic drift",
+      "description": "Point mutations in the hemagglutinin and neuraminidase genes accumulate every year, producing new variants that escape prior immunity. This is the reason seasonal influenza recurs annually and why the vaccine is reformulated each year."
+    },
+    {
+      "cause": "Antigenic shift and reassortment",
+      "description": "When two influenza A viruses co-infect a single host, their segmented genomes can exchange whole gene segments, producing a novel strain with no pre-existing human immunity. This mechanism produced the 1918 H1N1, 1957 H2N2, 1968 H3N2, and 2009 H1N1pdm09 pandemics."
+    },
+    {
+      "cause": "Close-contact and droplet transmission",
+      "description": "Direct contact within about 2 meters of an infectious person carries the highest risk. Fomite transmission via shared surfaces is documented; influenza survives 8-24 hours on hard surfaces. Healthcare workers and household contacts of a case have the highest secondary attack rates (15-30% in households)."
+    },
+    {
+      "cause": "Zoonotic spillover from animal reservoirs",
+      "description": "Avian influenza viruses (H5N1, H7N9, H5N6) and swine influenza viruses occasionally infect humans through direct contact with infected poultry or pigs. Sustained human-to-human transmission is rare, but each spillover is monitored as a potential pandemic precursor."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Age 65 and older",
+      "category": "non-modifiable",
+      "description": "Adults 65+ account for 70-85% of seasonal flu deaths and 50-70% of hospitalizations in most years. Immunosenescence reduces vaccine response and antiviral clearance."
+    },
+    {
+      "factor": "Children under 5, particularly under 2",
+      "category": "non-modifiable",
+      "description": "Higher attack rates and more frequent hospitalization for influenza pneumonia and dehydration. Infants under 6 months cannot be vaccinated and rely on maternal and household immunity."
+    },
+    {
+      "factor": "Pregnancy and the first 2 weeks postpartum",
+      "category": "non-modifiable",
+      "description": "Pregnant women have a 4-7 fold higher risk of hospitalization and severe disease due to shifts in cardiopulmonary and immune physiology. The 2009 H1N1 pandemic produced a 5-fold higher maternal mortality."
+    },
+    {
+      "factor": "Chronic medical conditions",
+      "category": "non-modifiable",
+      "description": "Asthma, COPD, heart failure, diabetes, chronic kidney disease, sickle cell disease, and neurologic conditions all increase the risk of complications by 2-10 fold depending on the condition."
+    },
+    {
+      "factor": "Immunosuppression",
+      "category": "non-modifiable",
+      "description": "Solid organ and stem cell transplant recipients, patients on chemotherapy, and people with advanced HIV have prolonged viral shedding (often >2 weeks) and higher rates of pneumonia and death."
+    },
+    {
+      "factor": "Obesity (BMI ≥40)",
+      "category": "modifiable",
+      "description": "Severe obesity independently increases the risk of hospitalization, intensive care admission, and death. The 2009 H1N1 pandemic was the first to clearly establish obesity as an independent risk factor for severe influenza."
+    },
+    {
+      "factor": "Crowded living conditions",
+      "category": "environmental",
+      "description": "Nursing homes, military barracks, cruise ships, dormitories, and prisons experience explosive outbreaks. Household secondary attack rates reach 15-30%."
+    },
+    {
+      "factor": "Healthcare and frontline occupational exposure",
+      "category": "environmental",
+      "description": "Healthcare workers, daycare staff, and teachers face repeated exposures during the season. Annual vaccination is recommended and often required in healthcare settings."
+    },
+    {
+      "factor": "Unvaccinated status",
+      "category": "modifiable",
+      "description": "Vaccination cuts symptomatic illness by 40-60% in well-matched seasons and reduces hospitalization and ICU admission by larger margins. Skipping the annual shot is the largest modifiable risk factor."
+    },
+    {
+      "factor": "Tobacco smoking",
+      "category": "modifiable",
+      "description": "Smokers have higher rates of influenza-related lower respiratory tract infection and longer recovery, with disrupted ciliary clearance and reduced mucosal immunity."
+    }
+  ],
+  "affectedDemographics": [
+    "Global attack rate: 5-15% of adults and 20-30% of children infected each season (WHO)",
+    "United States: 9-41 million symptomatic cases, 140,000-710,000 hospitalizations, and 12,000-52,000 deaths per season (CDC FluView, 10-year averages)",
+    "Adults 65+ account for 70-85% of seasonal influenza deaths in high-income countries",
+    "Tropical and subtropical regions experience year-round circulation with multiple peaks, unlike the temperate winter peak",
+    "Low- and middle-income countries carry roughly 99% of pediatric influenza pneumonia deaths in children under 5"
+  ],
+  "diagnosisOverview": "Influenza is diagnosed by combining clinical syndrome with laboratory testing during periods of known community circulation. During peak season, sudden fever with cough and myalgia carries a positive predictive value of 70-80% in adults, and many primary care providers treat empirically without testing in healthy patients who can be managed at home. When the diagnosis changes management — high-risk patients, hospitalized patients, suspected outbreaks, or atypical presentations — laboratory confirmation is recommended. Reverse-transcription polymerase chain reaction (RT-PCR) and other nucleic acid amplification tests (NAAT) are the gold standard, with sensitivity above 95% and the ability to distinguish influenza A from B and identify subtypes. Rapid molecular assays (such as Cepheid Xpert Xpress Flu and ID NOW Influenza) deliver NAAT-grade results in 15-30 minutes and are now widely deployed in emergency departments and urgent care. Rapid antigen tests (RIDTs) are inexpensive and return results in 10-15 minutes but have a sensitivity of only 50-70%, so a negative RIDT during peak season does not rule out flu. Viral culture remains the reference for strain characterization and antiviral resistance surveillance, but it is too slow (3-10 days) for individual clinical care. The Centers for Disease Control and Prevention recommend collecting upper-respiratory specimens (nasopharyngeal swab or aspirate) within 4 days of symptom onset for highest yield. In hospitalized patients, lower-respiratory specimens (endotracheal aspirate, bronchoalveolar lavage) increase sensitivity when upper-tract testing is negative but clinical suspicion remains high. Differentiating influenza from COVID-19, RSV, and bacterial pneumonia is the central diagnostic question; multiplex respiratory panels that test for all four are increasingly used.",
+  "diagnosticTests": [
+    {
+      "test": "Reverse-transcription PCR (RT-PCR / NAAT)",
+      "purpose": "Gold-standard test. Detects influenza viral RNA with sensitivity above 95% and specificity near 100%. Distinguishes influenza A from B, identifies subtypes (H1N1, H3N2), and is the basis for surveillance.",
+      "whatToExpect": "A clinician inserts a thin flocked swab into the nostril and rotates it for 10-15 seconds. Mild discomfort and tearing are normal. Results typically return in 1-24 hours depending on the laboratory."
+    },
+    {
+      "test": "Rapid molecular point-of-care assay",
+      "purpose": "Deliver NAAT-grade sensitivity in 15-30 minutes at the bedside or in clinic. Useful when the result will change antiviral or admission decisions in real time.",
+      "whatToExpect": "Same nasopharyngeal swab as standard PCR; the sample runs in a small cartridge-based instrument. The patient typically receives the result before leaving the clinic."
+    },
+    {
+      "test": "Rapid influenza diagnostic test (RIDT, antigen-based)",
+      "purpose": "Inexpensive screening for influenza A and B antigens in 10-15 minutes. Useful for outbreak triage when molecular testing is unavailable. A negative test during high-prevalence weeks does not exclude flu given 50-70% sensitivity.",
+      "whatToExpect": "Nasal swab placed on a lateral-flow strip. Results visible as colored lines within 15 minutes. Painless beyond the swab itself."
+    },
+    {
+      "test": "Multiplex respiratory pathogen panel",
+      "purpose": "Tests a single specimen for influenza A and B, SARS-CoV-2, RSV, parainfluenza, adenovirus, rhinovirus, and atypical bacteria. High utility for hospitalized patients and immunocompromised hosts where differential matters.",
+      "whatToExpect": "Same nasopharyngeal swab; turnaround 1-6 hours depending on platform. Often ordered when the differential includes COVID-19 or RSV."
+    },
+    {
+      "test": "Viral culture",
+      "purpose": "Reference standard for strain identification, antigenic characterization, and antiviral resistance surveillance. Too slow for individual care but central to public health.",
+      "whatToExpect": "Respiratory specimen is inoculated into cell culture; results take 3-10 days. Generally performed only at reference and public health laboratories."
+    },
+    {
+      "test": "Chest X-ray",
+      "purpose": "Indicated for patients with shortness of breath, hypoxia, or persistent fever. Identifies viral pneumonia (bilateral interstitial infiltrates) and secondary bacterial pneumonia (lobar consolidation).",
+      "whatToExpect": "Standard two-view radiograph taking a few minutes; results read same day. Radiation exposure is low."
+    },
+    {
+      "test": "Complete blood count and inflammatory markers",
+      "purpose": "Supports differential diagnosis. Lymphopenia is common in viral influenza; marked neutrophilia and high procalcitonin suggest bacterial superinfection. Helps decide on antibiotics in admitted patients.",
+      "whatToExpect": "Standard blood draw; same-day results in most laboratories."
+    }
+  ],
+  "treatmentOverview": "Treatment of seasonal influenza has two arms: supportive care for symptom control and antiviral therapy to shorten illness and reduce complications. Most healthy adults with uncomplicated flu recover at home with rest, oral hydration, antipyretics, and 5-7 days of isolation. Antiviral therapy is recommended by the Infectious Diseases Society of America (IDSA 2018) and CDC for any patient hospitalized with suspected or confirmed influenza, any patient at high risk for complications regardless of severity, and any patient who presents within 48 hours of symptom onset who wishes to shorten the course of illness. The first-line agent is oseltamivir (Tamiflu), a neuraminidase inhibitor that blocks viral release from infected cells. Started within 48 hours of symptom onset, oseltamivir shortens illness duration by 1-2 days, reduces lower-respiratory complications, and lowers hospitalization rates in high-risk patients. Baloxavir marboxil (Xofluza) is a cap-dependent endonuclease inhibitor approved as a single oral dose for outpatients age 5 and older within 48 hours of symptom onset; trials show comparable symptom resolution to oseltamivir with the convenience of one dose, though emergence of treatment-induced resistance occurs in 10-23% of treated children. Zanamivir (Relenza) is an inhaled neuraminidase inhibitor for patients age 7+ without underlying airway disease (avoid in asthma and COPD because of bronchospasm risk). Peramivir is an IV neuraminidase inhibitor for hospitalized patients unable to take oral medication. Adamantanes (amantadine, rimantadine) are no longer recommended because of widespread resistance in circulating strains. In hospitalized patients, oseltamivir should be started as soon as influenza is suspected, even more than 48 hours after symptom onset, because severe disease benefits from antiviral therapy at any point in the illness. Antibiotics are not effective against influenza viruses but are added when bacterial superinfection (typically Streptococcus pneumoniae, Staphylococcus aureus, or Streptococcus pyogenes) is suspected based on biphasic fever, productive purulent sputum, lobar consolidation, or elevated procalcitonin. Annual vaccination with the seasonal influenza vaccine is the single most effective prevention intervention.",
+  "medicalTreatments": [
+    {
+      "name": "Oseltamivir (Tamiflu) 75 mg orally twice daily for 5 days (adults; weight-based pediatric dosing)",
+      "description": "First-line neuraminidase inhibitor. Most effective when started within 48 hours of symptom onset, though hospitalized patients benefit even when started later. Renal dose adjustment required for CrCl <60 mL/min. Common adverse effects are nausea and vomiting, usually mild and reduced when taken with food.",
+      "effectiveness": "Shortens symptomatic illness by 1-2 days when started within 48 hours (Cochrane 2014). Reduces lower-respiratory complications by approximately 30% and hospitalization in high-risk outpatients."
+    },
+    {
+      "name": "Baloxavir marboxil (Xofluza) 40-80 mg orally as a single dose",
+      "description": "Cap-dependent endonuclease inhibitor with a single-dose regimen approved for outpatients age 5+ within 48 hours of symptom onset. Combines viral suppression in hours with convenience. Treatment-emergent PA/I38X resistance variants occur in 10-23% of treated patients, particularly children.",
+      "effectiveness": "Symptom resolution comparable to oseltamivir in CAPSTONE trials; faster reduction in viral load. Single-dose regimen improves adherence."
+    },
+    {
+      "name": "Zanamivir (Relenza) 10 mg inhaled twice daily for 5 days",
+      "description": "Inhaled neuraminidase inhibitor for outpatients age 7+. Avoid in asthma and COPD due to risk of bronchospasm. Delivers high local airway concentrations with minimal systemic absorption.",
+      "effectiveness": "Shortens illness by approximately 1 day when started within 48 hours. Reserved for patients intolerant of oseltamivir."
+    },
+    {
+      "name": "Peramivir (Rapivab) 600 mg IV as a single dose",
+      "description": "Intravenous neuraminidase inhibitor for hospitalized adults and selected outpatients unable to take oral medication. Single dose with similar efficacy to a 5-day oseltamivir course.",
+      "effectiveness": "Comparable symptom relief to oseltamivir in randomized trials. Particularly useful in critically ill patients with poor enteral absorption."
+    },
+    {
+      "name": "Acetaminophen or ibuprofen for fever and myalgia",
+      "description": "Symptomatic care for fever, headache, and body pain. Avoid aspirin in children and adolescents due to risk of Reye syndrome. Hydration with oral rehydration solution is the most important adjunctive measure in young children and the elderly.",
+      "effectiveness": "Reliable fever reduction and analgesia; does not shorten illness duration."
+    },
+    {
+      "name": "Empirical antibiotics for suspected bacterial pneumonia",
+      "description": "Started when biphasic fever, productive purulent sputum, lobar consolidation, or elevated procalcitonin suggest superinfection with Streptococcus pneumoniae, Staphylococcus aureus, or Streptococcus pyogenes. Routine antibiotics are not indicated for uncomplicated influenza.",
+      "effectiveness": "Critical when bacterial pneumonia is present; staphylococcal post-influenza pneumonia carries 30-50% mortality without prompt MRSA-active therapy."
+    },
+    {
+      "name": "Annual influenza vaccination (IIV4, RIV4, LAIV4)",
+      "description": "Quadrivalent inactivated (IIV4), recombinant (RIV4), and live attenuated (LAIV4) vaccines updated each season. High-dose (Fluzone HD) and adjuvanted (Fluad) formulations are recommended for adults 65+ to improve antibody response.",
+      "effectiveness": "Symptomatic illness reduced by 40-60% in well-matched seasons; hospitalization and ICU admission reduced by 50-70% in older adults. Recommended annually for everyone age 6 months and older without contraindications."
+    }
+  ],
+  "surgicalOptions": [],
+  "alternativeTreatments": [
+    {
+      "name": "Zinc lozenges (75 mg elemental zinc daily during illness)",
+      "description": "Limited evidence (Hemila Cochrane reviews) for reduction of common cold duration. Evidence specific to influenza is weak; not a substitute for antivirals in confirmed flu."
+    },
+    {
+      "name": "Honey for cough relief in children over 1 year",
+      "description": "Demonstrated reduction in nocturnal cough versus placebo in pediatric trials. Useful adjunct for symptomatic relief; not antiviral. Do not use in infants under 12 months due to infant botulism risk."
+    }
+  ],
+  "whySeeSpecialist": "Most influenza is managed in primary care or urgent care. Referral to infectious disease, pulmonology, or critical care is indicated for hospitalized patients, immunocompromised hosts with prolonged viral shedding or suspected antiviral resistance, suspected post-influenza pneumonia not responding to standard therapy, suspected influenza-associated myocarditis or encephalopathy, and pregnant women with respiratory deterioration. Public health departments should be notified of suspected novel influenza A (avian or swine) infections.",
+  "doctorSelectionGuide": "For routine seasonal flu, a family physician or internist with access to rapid molecular testing and ready prescribing of oseltamivir or baloxavir is sufficient. High-risk patients (age 65+, pregnancy, chronic lung or heart disease, immunosuppression) benefit from same-day access during flu season so that antivirals can begin within the 48-hour window. Ask whether the practice offers in-clinic rapid molecular flu/COVID/RSV testing and whether they maintain after-hours prescribing for confirmed cases.",
+  "hospitalCriteria": [
+    "Oxygen saturation below 92% on room air or new oxygen requirement",
+    "Respiratory rate above 24 in adults or signs of respiratory distress in children",
+    "Hemodynamic instability, altered mental status, or persistent vomiting preventing oral hydration",
+    "Suspected bacterial superinfection with lobar consolidation, marked leukocytosis, or hemoptysis",
+    "High-risk host (pregnancy, immunosuppression, advanced chronic disease) with clinical deterioration"
+  ],
+  "keyFacilities": [
+    "Hospitals with on-site molecular respiratory testing and infection-prevention isolation capacity",
+    "Tertiary centers with intensive care including high-flow oxygen, non-invasive ventilation, and ECMO referral pathways for severe ARDS",
+    "Pediatric centers with PICU capability for severe pediatric influenza"
+  ],
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+  "preventionStrategies": [
+    "Receive the seasonal influenza vaccine each autumn for everyone age 6 months and older without contraindications — the single most effective prevention measure",
+    "Choose high-dose (Fluzone HD), adjuvanted (Fluad), or recombinant (Flublok) vaccines for adults 65+ when available, as they generate higher antibody titers than standard-dose vaccines",
+    "Practice respiratory hygiene: cover coughs and sneezes with a tissue or upper sleeve and dispose of tissues promptly",
+    "Wash hands frequently with soap and water for 20 seconds or use 60% alcohol-based hand sanitizer, especially before eating and after public contact",
+    "Stay home from work or school for at least 24 hours after fever resolves without antipyretics to reduce transmission to coworkers and classmates",
+    "Consider antiviral chemoprophylaxis with oseltamivir for high-risk household contacts after a confirmed case, particularly in long-term care outbreaks"
+  ],
+  "lifestyleModifications": [
+    "Rest fully during the febrile illness — pushing through reliably prolongs symptoms and raises the risk of post-influenza myocarditis with strenuous activity",
+    "Drink 2-3 liters of fluid daily including oral rehydration solutions when fever and reduced intake threaten hydration",
+    "Use a humidifier and warm fluids to soothe airway irritation and improve secretion clearance",
+    "Avoid smoking and second-hand smoke exposure during and after the illness, as both prolong cough and impair recovery",
+    "Maintain influenza-friendly nutrition with adequate protein and micronutrients (vitamin D, zinc, vitamin C from food sources)",
+    "Sleep 7-9 hours nightly during the recovery period; sleep deprivation impairs the antibody response to vaccination"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Warm broth-based soups and electrolyte-containing fluids to maintain hydration and sodium",
+      "Light easily digested carbohydrates (rice, toast, plain noodles) during peak nausea",
+      "Citrus fruits, berries, and leafy greens for vitamin C and antioxidants",
+      "Yogurt and other probiotic-containing foods if tolerated, particularly after antibiotic courses",
+      "Plenty of plain water and oral rehydration solution",
+      "Honey (children over 1 year) for cough relief"
+    ],
+    "avoid": [
+      "Alcohol, which impairs immune function and interacts with acetaminophen",
+      "Excess caffeine, which can worsen dehydration",
+      "Heavy fatty meals that worsen nausea",
+      "Aspirin in children and adolescents (Reye syndrome risk)",
+      "Sharing utensils, cups, and food with household members during the contagious period"
+    ]
+  },
+  "exerciseGuidelines": "Avoid all exercise while febrile and for at least 24 hours after fever resolves. Light activity (slow walking) can resume in the second week if symptoms are improving. Sustained or intense exercise during influenza increases the risk of viral myocarditis, which is a recognized cause of sudden cardiac death in young athletes. Return to full training gradually over 1-2 weeks after symptoms clear, and seek cardiac evaluation if chest pain, palpitations, or unusual exertional dyspnea persists.",
+  "dailyManagement": [
+    "Self-isolate at home for at least 24 hours after fever resolves and ideally for 5-7 days from symptom onset",
+    "Take antivirals (oseltamivir, baloxavir, zanamivir) exactly as prescribed and complete the full course",
+    "Monitor temperature, oxygen saturation if a home pulse oximeter is available, and breathing effort twice daily",
+    "Track fluid intake and urine output to detect early dehydration",
+    "Use separate towels, bedding, and utensils within the household and ventilate the room frequently"
+  ],
+  "prognosis": "Most otherwise healthy adults recover from seasonal influenza in 5 to 7 days, with cough and fatigue often persisting 2 to 3 weeks. Case-fatality rate across all infected adults is below 0.1% in typical seasons, but rises sharply with age and comorbidity: roughly 1% in unvaccinated adults 65+ and substantially higher in nursing home residents during outbreaks. Antiviral treatment within 48 hours shortens illness by 1-2 days and reduces hospitalization in high-risk patients. Pandemic strains carry higher case-fatality: 2009 H1N1 averaged 0.02%, while highly pathogenic avian H5N1 has produced 50% case-fatality in confirmed human cases. Outcomes are best when vaccination has occurred in the prior 6 months, antivirals are started early, and bacterial superinfection is recognized and treated promptly. Long-term sequelae are uncommon but include post-influenza fatigue lasting weeks to months, exacerbations of underlying asthma or COPD, and rare cardiovascular events (myocardial infarction and stroke risk is elevated for 1-4 weeks after acute infection).",
+  "recoveryTimeline": "Fever and severe systemic symptoms typically resolve within 3 to 5 days. Cough and fatigue persist 1-3 weeks. Antiviral treatment started within 48 hours shortens this by 1-2 days. Return to school or work is reasonable 24 hours after fever resolves without antipyretics. Return to full athletic training should be staged over 1-2 weeks with caution about post-viral myocarditis. Immunocompromised patients can shed virus for 2 weeks or more and may require extended isolation.",
+  "complications": [
+    "Primary influenza viral pneumonia, presenting as bilateral interstitial infiltrates with hypoxia within 2-5 days of symptom onset — early antiviral therapy and oxygen support are essential",
+    "Secondary bacterial pneumonia (Streptococcus pneumoniae, Staphylococcus aureus including MRSA, Streptococcus pyogenes), classically presenting with biphasic fever and lobar consolidation",
+    "Influenza-associated myocarditis, with chest pain, palpitations, troponin elevation, and rarely fulminant heart failure — increased risk of sudden cardiac death with strenuous exertion during recovery",
+    "Acute respiratory distress syndrome (ARDS) requiring mechanical ventilation or ECMO, particularly during pandemic seasons and in young adults with H1N1pdm09",
+    "Influenza-associated encephalopathy and encephalitis, more common in children, presenting with seizures, altered consciousness, and rapidly progressive neurologic decline",
+    "Exacerbation of underlying chronic disease — asthma flares, COPD exacerbations, heart failure decompensation, and worsening glycemic control in diabetes",
+    "Otitis media in children, especially under 2 years",
+    "Increased risk of myocardial infarction and stroke within 4 weeks of acute influenza, demonstrated in case-crossover studies"
+  ],
+  "supportResources": [
+    {
+      "name": "CDC Flu Information for the Public",
+      "url": "https://www.cdc.gov/flu/",
+      "description": "US Centers for Disease Control and Prevention seasonal flu hub with vaccination guidance, weekly surveillance reports, and treatment information."
+    },
+    {
+      "name": "WHO Seasonal Influenza Fact Sheet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+      "description": "World Health Organization global authority on seasonal and pandemic influenza."
+    },
+    {
+      "name": "Families Fighting Flu",
+      "url": "https://www.familiesfightingflu.org/",
+      "description": "Patient advocacy organization focused on pediatric influenza prevention and family education."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia",
+      "keyDifference": "Pneumonia presents with focal lung findings (crackles, lobar consolidation on imaging), productive purulent sputum, and elevated procalcitonin. Influenza alone produces a dry cough and diffuse muscle pain without focal lung signs. The two often overlap — primary viral influenza pneumonia and secondary bacterial pneumonia are both common complications, so persistent or worsening fever with focal findings warrants chest imaging and antibiotics."
+    },
+    {
+      "slug": "allergic-rhinitis-hay-fever",
+      "name": "Allergic Rhinitis (Hay Fever)",
+      "keyDifference": "Hay fever produces itchy eyes, sneezing, and clear watery rhinorrhea triggered by allergens, with no fever, no muscle aches, and no systemic illness. Symptoms persist as long as allergen exposure continues. Influenza arrives suddenly with high fever and profound fatigue and resolves within 1-2 weeks."
+    },
+    {
+      "slug": "chronic-sinusitis",
+      "name": "Chronic Sinusitis",
+      "keyDifference": "Sinusitis localizes to facial pain over the maxillary, frontal, or ethmoid sinuses with purulent nasal discharge lasting weeks. Influenza is a brief systemic illness with prominent fever, myalgia, and dry cough rather than facial pressure. Bacterial sinusitis can complicate influenza and emerges as worsening focal facial pain after initial improvement."
+    },
+    {
+      "slug": "scarlet-fever",
+      "name": "Scarlet Fever",
+      "keyDifference": "Scarlet fever (group A Streptococcus) presents with sore throat, sandpaper-like rash, strawberry tongue, and fever; cough is notably absent and rapid strep testing is positive. Influenza presents with prominent cough, dry sore throat without exudate, and negative strep testing. Antibiotics resolve scarlet fever; antivirals (not antibiotics) shorten influenza."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "asthma",
+      "name": "Asthma"
+    },
+    {
+      "slug": "copd",
+      "name": "Chronic Obstructive Pulmonary Disease (COPD)"
+    },
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia"
+    },
+    {
+      "slug": "chronic-otitis-media",
+      "name": "Chronic Otitis Media"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia",
+      "relevance": "Primary viral influenza pneumonia and secondary bacterial pneumonia are the leading causes of influenza-related hospitalization and death."
+    },
+    {
+      "slug": "asthma",
+      "name": "Asthma",
+      "relevance": "Influenza is a major trigger of severe asthma exacerbations; annual vaccination is strongly recommended for asthma patients."
+    },
+    {
+      "slug": "copd",
+      "name": "COPD",
+      "relevance": "Influenza drives 30-50% of acute COPD exacerbations during flu season and substantially raises hospitalization risk."
+    },
+    {
+      "slug": "chronic-sinusitis",
+      "name": "Chronic Sinusitis",
+      "relevance": "Acute bacterial sinusitis can complicate influenza and chronic sinusitis predisposes to prolonged post-viral congestion."
+    },
+    {
+      "slug": "allergic-rhinitis-hay-fever",
+      "name": "Allergic Rhinitis",
+      "relevance": "Overlapping nasal symptoms can confuse early diagnosis; allergic rhinitis patients are not at increased risk of severe flu but symptom layering is common."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is the difference between the flu and a cold?",
+      "answer": "Flu begins abruptly with high fever, body aches, and severe fatigue within hours. A cold develops gradually over 1-2 days with sneezing and a runny nose, rarely with high fever. Flu is far more likely to put adults in bed for days and to cause pneumonia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long is the flu contagious?",
+      "answer": "Adults are most contagious from the day before symptoms start through about 5 days after onset, peaking on days 1-3. Children and immunocompromised patients can shed virus longer, up to 10 days or more. Stay home for at least 24 hours after fever resolves.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does flu last?",
+      "answer": "Most healthy adults recover from acute symptoms in 5-7 days. Cough and fatigue can persist 2-3 weeks after fever resolves. Antiviral treatment within 48 hours shortens illness by 1-2 days. Older adults and those with chronic disease often take longer.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I take Tamiflu?",
+      "answer": "Oseltamivir (Tamiflu) works best when started within 48 hours of symptom onset, shortening illness by 1-2 days. It is recommended for hospitalized patients, high-risk patients (age 65+, pregnancy, chronic disease, immunosuppression), and healthy patients who want to shorten illness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is the flu vaccine effective?",
+      "answer": "Annual flu vaccination prevents 40-60% of symptomatic infections in well-matched seasons. The vaccine reduces hospitalization and ICU admission by 50-70% in older adults. High-dose, adjuvanted, and recombinant formulations are recommended for adults 65+.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is flu season?",
+      "answer": "In the Northern Hemisphere, influenza circulates October through May with peaks in December-February. The Southern Hemisphere season runs May-September. Tropical regions see year-round circulation. Vaccination is recommended each year by the end of October in temperate climates.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can the flu shot give me the flu?",
+      "answer": "No. Inactivated (IIV4) and recombinant (RIV4) flu vaccines contain no live virus and cannot cause influenza. A sore arm or low-grade fever for 24-48 hours is the immune response, not flu. The nasal spray (LAIV4) is weakened and does not cause influenza illness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the warning signs of severe flu?",
+      "answer": "Seek emergency care for shortness of breath at rest, chest pain, confusion, persistent vomiting, bluish lips, or fever above 39.5 C lasting beyond 4-5 days. In infants under 3 months any fever is urgent; in older children watch for grunting breathing, lethargy, or refusal to feed.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does the flu spread?",
+      "answer": "Influenza spreads mainly through respiratory droplets generated by coughing, sneezing, and talking. Smaller aerosols contribute in crowded indoor settings. The virus survives 8-24 hours on surfaces. Household secondary attack rates reach 15-30%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between flu A and flu B?",
+      "answer": "Influenza A causes the most severe seasonal disease and all pandemics; current human subtypes are H1N1 and H3N2. It infects many species, enabling reassortment. Influenza B has two human lineages (Victoria, Yamagata), often hits children harder, and does not cause pandemics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I get the flu twice in one season?",
+      "answer": "Yes. Influenza A and B circulate together and immunity to one does not protect against the other. You can have influenza A early in the season and influenza B later, or be reinfected with a drifted A strain. Annual vaccination lowers the chance of any infection.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is influenza diagnosed?",
+      "answer": "Diagnosis combines clinical syndrome with laboratory testing. RT-PCR is the gold standard with sensitivity above 95%. Rapid molecular point-of-care tests return results in 15-30 minutes. Rapid antigen tests are less sensitive (50-70%) and can miss infection during peak season.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should pregnant women get the flu shot?",
+      "answer": "Yes. Inactivated flu vaccine is safe and strongly recommended in any trimester. Pregnancy raises severe-flu risk 4-7 fold. Vaccination protects both mother and infant, with transferred antibodies guarding the newborn for the first 6 months before vaccination is possible.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is antigenic drift and antigenic shift?",
+      "answer": "Antigenic drift is gradual mutation of hemagglutinin and neuraminidase, producing new variants each year and driving seasonal epidemics. Antigenic shift is sudden exchange of whole gene segments between influenza A viruses from different species, producing pandemic strains.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is flu different from COVID-19?",
+      "answer": "Both produce fever, cough, and fatigue. COVID-19 more often causes loss of smell or taste and progresses over 5-10 days. Influenza peaks by days 2-3. Reliable distinction requires laboratory testing, ideally a multiplex panel that detects both viruses from one swab.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What antiviral options exist for flu?",
+      "answer": "Four agents are approved: oseltamivir (oral, 5 days), baloxavir (single oral dose), zanamivir (inhaled), and peramivir (IV single dose). Oseltamivir is first-line. Baloxavir is convenient but has higher treatment-emergent resistance. Adamantanes are no longer recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much does flu treatment cost?",
+      "answer": "Generic oseltamivir costs roughly USD 25-50 for a 5-day course in the United States and is widely affordable globally. Baloxavir costs USD 150-180 per dose at US retail. The flu vaccine is provided at no out-of-pocket cost to most Americans under ACA coverage.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can flu cause heart problems?",
+      "answer": "Yes. Influenza increases myocardial infarction risk roughly 6-fold and stroke 3-fold in the first week after infection. Influenza-associated myocarditis causes sudden cardiac death in young athletes who exercise during illness. Avoid strenuous exertion until 24 hours after fever clears.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How can I avoid catching the flu?",
+      "answer": "Get the annual flu vaccine, wash hands with soap for 20 seconds, avoid touching the face, ventilate indoor spaces, mask in crowded settings during outbreaks, and stay away from sick people. Oseltamivir chemoprophylaxis is reasonable for high-risk household contacts after a case.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is the flu serious for children?",
+      "answer": "Yes, particularly for children under 5 and under 2, who face higher attack rates and frequent hospitalization for pneumonia, dehydration, and otitis media. Annual vaccination from age 6 months is recommended. Avoid aspirin (Reye syndrome risk); use acetaminophen or ibuprofen for fever.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I exercise with the flu?",
+      "answer": "No. Avoid exercise while febrile and for at least 24 hours after fever resolves. Strenuous activity during influenza raises the risk of viral myocarditis and sudden cardiac death. Light walking is reasonable in the second week if symptoms are improving.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are antibiotics useful for flu?",
+      "answer": "Antibiotics do not work against influenza viruses. They are added only when bacterial superinfection is suspected, with biphasic fever, purulent sputum, lobar consolidation, or high procalcitonin. Common culprits are Streptococcus pneumoniae, S. aureus, and S. pyogenes.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Flu (seasonal influenza)",
+  "regionalNames": [
+    {
+      "name": "Mausami flu",
+      "region": "India",
+      "language": "hi"
+    },
+    {
+      "name": "Grippe",
+      "region": "France/Germany",
+      "language": "fr"
+    },
+    {
+      "name": "Gripe",
+      "region": "Spain/Latin America",
+      "language": "es"
+    }
+  ],
+  "searchTags": [
+    "influenza",
+    "flu",
+    "seasonal flu",
+    "the flu",
+    "influenza A",
+    "influenza B",
+    "H1N1",
+    "H3N2",
+    "swine flu",
+    "bird flu",
+    "tamiflu",
+    "oseltamivir",
+    "baloxavir",
+    "flu vaccine",
+    "flu shot"
+  ],
+  "symptomKeywords": [
+    "sudden high fever",
+    "body aches all over",
+    "dry cough fever",
+    "exhausted with fever",
+    "chills and sweats",
+    "headache fever cough",
+    "fever and weakness",
+    "winter respiratory illness"
+  ],
+  "metaTitle": "Influenza (Flu): Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Influenza (seasonal flu): sudden fever, body aches, dry cough. Symptoms, antivirals like Tamiflu, vaccine guidance, and recovery reviewed by our medical board.",
+  "keywords": [
+    "influenza",
+    "flu",
+    "seasonal flu",
+    "flu symptoms",
+    "flu treatment",
+    "tamiflu",
+    "oseltamivir",
+    "baloxavir",
+    "flu vaccine",
+    "flu shot",
+    "H1N1",
+    "H3N2",
+    "flu vs cold",
+    "flu vs covid",
+    "flu in children"
+  ],
+  "lastReviewed": "2026-05-18",
+  "sources": [
+    {
+      "title": "World Health Organization. Influenza (Seasonal) Fact Sheet. WHO; 2023.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Uyeki TM, Bernstein HH, Bradley JS, et al. Clinical Practice Guidelines by the Infectious Diseases Society of America: 2018 Update on Diagnosis, Treatment, Chemoprophylaxis, and Institutional Outbreak Management of Seasonal Influenza. Clinical Infectious Diseases. 2019;68(6):e1-e47.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30566567/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Jefferson T, Jones MA, Doshi P, et al. Neuraminidase inhibitors for preventing and treating influenza in adults and children. Cochrane Database of Systematic Reviews. 2014;4:CD008965.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24718923/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Iuliano AD, Roguski KM, Chang HH, et al. Estimates of global seasonal influenza-associated respiratory mortality: a modelling study. Lancet. 2018;391(10127):1285-1300.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29248255/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Hayden FG, Sugaya N, Hirotsu N, et al. Baloxavir Marboxil for Uncomplicated Influenza in Adults and Adolescents. New England Journal of Medicine. 2018;379(10):913-923.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30184455/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Grohskopf LA, Blanton LH, Ferdinands JM, et al. Prevention and Control of Seasonal Influenza with Vaccines: Recommendations of the Advisory Committee on Immunization Practices (ACIP) - United States, 2023-24 Influenza Season. MMWR Recomm Rep. 2023;72(2):1-25.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37590448/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Kwong JC, Schwartz KL, Campitelli MA, et al. Acute Myocardial Infarction after Laboratory-Confirmed Influenza Infection. New England Journal of Medicine. 2018;378(4):345-353.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29365305/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Centers for Disease Control and Prevention. Influenza (Flu) - Clinical Guidance. CDC; 2023.",
+      "url": "https://www.cdc.gov/flu/professionals/index.htm",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://phil.cdc.gov/Details.aspx?pid=11098",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/EM_of_influenza_virus.jpg",
+      "altText": "Transmission electron micrograph of influenza A virus particles showing the characteristic surface glycoproteins hemagglutinin and neuraminidase",
+      "caption": "Electron micrograph of influenza A virions, showing surface hemagglutinin and neuraminidase spikes.",
+      "license": "Public Domain (CDC PHIL)",
+      "credit": "CDC Public Health Image Library / F. A. Murphy",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:3D_Influenza_virus.png",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/3D_Influenza_virus.png",
+      "altText": "Three-dimensional illustration of an influenza virus particle showing the lipid envelope, segmented RNA genome, hemagglutinin, neuraminidase, and M2 ion channel",
+      "caption": "Structure of an influenza A virion: HA and NA glycoproteins on a lipid envelope around a segmented RNA genome.",
+      "license": "Public Domain",
+      "credit": "CDC / Dan Higgins / Wikimedia Commons",
+      "width": 1200,
+      "height": 1200
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nasopharyngeal_swab.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Nasopharyngeal_swab.jpg",
+      "altText": "Nasopharyngeal swab being collected from a patient for respiratory virus PCR testing including influenza",
+      "caption": "Nasopharyngeal swab collection for influenza PCR testing.",
+      "license": "CC BY 4.0",
+      "credit": "NIAID / Wikimedia Commons",
+      "width": 1200,
+      "height": 800
+    }
+  ],
+  "reviewer": {
+    "name": "Dr. Sarah Chen",
+    "slug": "dr-sarah-chen-infectious-disease"
+  }
+}

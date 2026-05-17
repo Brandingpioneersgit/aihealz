@@ -1,0 +1,699 @@
+{
+  "_meta": {
+    "slug": "shock",
+    "tier": 1,
+    "headTerm": "shock",
+    "longTailKeywords": [
+      "shock symptoms",
+      "septic shock treatment",
+      "cardiogenic shock",
+      "hypovolemic shock",
+      "anaphylactic shock",
+      "obstructive shock",
+      "shock signs",
+      "shock vs sepsis",
+      "norepinephrine shock",
+      "lactate in shock"
+    ],
+    "primarySpecialty": "Emergency Medicine / Critical Care",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Cross-verified against Surviving Sepsis Campaign 2021 (Evans 2021, PMID 34599691), ESICM circulatory shock 2014 consensus (Cecconi 2014, PMID 24941053), ATLS 10th edition hemorrhagic shock classification, and AHA 2022 cardiogenic shock scientific statement. Lactate cutoffs, MAP targets, and vasopressor doses match current critical care practice."
+  },
+  "h1Title": "Shock: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Emergency Medicine / Critical Care",
+  "heroOverview": "Shock is acute circulatory failure in which tissue oxygen delivery falls below cellular demand, producing organ injury within minutes if untreated. It is an umbrella diagnosis with four physiologic categories: hypovolemic (bleeding or fluid loss), cardiogenic (pump failure), distributive (septic, anaphylactic, neurogenic, adrenal), and obstructive (massive pulmonary embolism, tension pneumothorax, cardiac tamponade). Patients present with tachycardia early, then hypotension, oliguria, altered mentation, mottled cool skin (or warm flushed skin in distributive shock), and a serum lactate above 2 mmol/L that often exceeds 4 mmol/L. Mortality runs 30-40% for septic shock and 40-50% for cardiogenic shock, with the first hour of resuscitation the single strongest predictor of survival. Treatment is class-specific: fluids, vasopressors, source control, epinephrine for anaphylaxis, and mechanical intervention for obstructive causes.",
+  "keyStats": {
+    "prevalence": "Septic shock affects ~1.7 million US hospitalizations yearly (CDC); cardiogenic shock complicates 5-10% of acute MI",
+    "demographics": "All ages, but mortality rises sharply after age 65; men slightly higher septic-shock incidence than women",
+    "avgAge": "Median 65-75 for septic and cardiogenic; younger in trauma-driven hypovolemic and anaphylactic shock",
+    "globalCases": "~48 million sepsis cases worldwide annually with 11 million deaths (WHO 2017 GBD)"
+  },
+  "definition": "Shock (ICD-10: R57.9) is a life-threatening, generalized form of acute circulatory failure that produces inadequate delivery of oxygen and nutrients to cells, leading to cellular hypoxia, anaerobic metabolism, and progressive organ dysfunction. The European Society of Intensive Care Medicine 2014 consensus defines shock by the combination of arterial hypotension (typically systolic blood pressure under 90 mmHg or mean arterial pressure under 65 mmHg), clinical signs of tissue hypoperfusion (mottled skin, oliguria, altered mental status), and biochemical evidence of inadequate oxygen delivery (serum lactate above 2 mmol/L). Physiologically, shock is classified into four mechanistic categories: hypovolemic shock from intravascular volume loss (hemorrhage, severe burns, diarrhea, third-spacing); cardiogenic shock from primary pump failure (acute myocardial infarction, decompensated heart failure, arrhythmia, severe valvular disease); distributive shock from pathologic vasodilation (sepsis, anaphylaxis, neurogenic shock after spinal cord injury, adrenal crisis); and obstructive shock from mechanical impediment to cardiac output (massive pulmonary embolism, tension pneumothorax, cardiac tamponade). Shock is managed by emergency physicians and intensivists, with cardiology, trauma surgery, infectious disease, and interventional radiology often involved depending on cause and stage.",
+  "typesClassification": [
+    {
+      "type": "Hypovolemic shock",
+      "description": "Caused by loss of intravascular volume. Hemorrhagic subtype follows trauma, gastrointestinal bleeding, ruptured aneurysm, or postpartum hemorrhage; non-hemorrhagic subtype follows burns, severe vomiting/diarrhea, diabetic ketoacidosis, or third-space losses. Hallmark: low cardiac output with high systemic vascular resistance and cool extremities."
+    },
+    {
+      "type": "Cardiogenic shock",
+      "description": "Primary pump failure with cardiac index typically below 1.8 L/min/m² and pulmonary capillary wedge pressure above 15 mmHg. Most common cause is acute myocardial infarction (especially anterior STEMI); other causes include acute decompensated heart failure, severe valvular disease, fulminant myocarditis, and sustained tachy- or bradyarrhythmias. Mortality 40-50%."
+    },
+    {
+      "type": "Distributive shock",
+      "description": "Pathologic vasodilation with low systemic vascular resistance and, initially, warm peripheries. Septic shock (Surviving Sepsis 2021) is the dominant subtype, defined as sepsis requiring vasopressors to maintain MAP ≥65 mmHg and lactate >2 mmol/L despite fluid resuscitation. Other subtypes: anaphylactic, neurogenic (after spinal cord injury), and adrenal crisis."
+    },
+    {
+      "type": "Obstructive shock",
+      "description": "Mechanical impediment to ventricular filling or output. Major causes include massive pulmonary embolism (right-ventricular outflow obstruction), tension pneumothorax (impaired venous return), cardiac tamponade (impaired filling), and constrictive pericarditis. Each demands rapid mechanical relief in addition to hemodynamic support."
+    }
+  ],
+  "primarySymptoms": [
+    "Persistent tachycardia is the earliest sign in adults, with heart rate above 100 beats per minute often appearing before blood pressure drops as the body compensates for falling cardiac output.",
+    "Hypotension defined as systolic blood pressure below 90 mmHg or a mean arterial pressure below 65 mmHg, often a late finding that signals failed compensation and impending organ injury.",
+    "Altered mental status ranges from anxiety and restlessness in early shock to confusion, agitation, and progressive obtundation as cerebral perfusion falls below the autoregulatory threshold.",
+    "Oliguria with urine output under 0.5 mL/kg per hour reflects renal hypoperfusion and is one of the most sensitive bedside markers of inadequate tissue oxygen delivery.",
+    "Cool, clammy, mottled skin with prolonged capillary refill above 3 seconds is typical of hypovolemic, cardiogenic, and obstructive shock; in early distributive (especially septic and anaphylactic) shock the skin may instead feel warm and flushed.",
+    "Tachypnea with respiratory rate above 22 breaths per minute compensates for metabolic acidosis from rising lactate and is an early warning that precedes overt hypotension.",
+    "Weak, thready peripheral pulses contrasting with bounding central pulses in distributive shock, or uniformly weak pulses with narrow pulse pressure in hypovolemic and cardiogenic shock.",
+    "Marked lactate elevation, typically above 2 mmol/L and frequently exceeding 4 mmol/L, reflecting anaerobic metabolism in hypoperfused tissues.",
+    "Nausea, vomiting, or diaphoresis accompany cardiogenic shock from acute myocardial infarction and contribute to further volume loss.",
+    "Cold, dusky, or cyanotic peripheries with delayed capillary refill at the knee and forearm signal severe peripheral vasoconstriction and impending decompensation."
+  ],
+  "earlyWarningSigns": [
+    "Resting tachycardia above 100 beats per minute with no obvious cause",
+    "New-onset tachypnea and a quiet sense of unease or anxiety in a previously well patient",
+    "Capillary refill time prolonged beyond 3 seconds at the fingertip or kneecap",
+    "Borderline blood pressure (systolic 90-110 mmHg) in a patient whose usual pressure runs higher, especially when accompanied by reduced urine output",
+    "Mild lactate elevation between 2 and 4 mmol/L on a venous or arterial blood gas in an acutely unwell patient"
+  ],
+  "emergencySigns": [
+    "Systolic blood pressure under 90 mmHg or a drop of more than 40 mmHg from baseline with altered mental status — call emergency services immediately",
+    "Mottled, cold extremities with capillary refill over 5 seconds and a barely palpable radial pulse",
+    "Urine output below 0.5 mL/kg/hour for more than 2 hours despite adequate intake",
+    "Lactate above 4 mmol/L or rising base deficit on blood gas — predicts high mortality if not addressed urgently",
+    "Sudden chest pain with hypotension, jugular venous distension, and tracheal deviation suggesting tension pneumothorax or massive pulmonary embolism"
+  ],
+  "causes": [
+    {
+      "cause": "Sepsis and septic shock",
+      "description": "Dysregulated host response to infection causes systemic vasodilation, capillary leak, and myocardial depression. Pneumonia, urinary tract infection, intra-abdominal infection, and bloodstream infection are the dominant sources. Septic shock accounts for the majority of shock deaths in non-trauma adults."
+    },
+    {
+      "cause": "Hemorrhage from trauma, gastrointestinal bleeding, or ruptured aneurysm",
+      "description": "Rapid loss of more than 15-20% of blood volume produces hypovolemic shock. ATLS classifies hemorrhage from Class I (under 15%) through Class IV (over 40%), with shock typically apparent at Class III and overt at Class IV. Bleeding sources include penetrating trauma, blunt solid-organ injury, ruptured ectopic pregnancy, and ruptured abdominal aortic aneurysm."
+    },
+    {
+      "cause": "Acute myocardial infarction with pump failure",
+      "description": "Loss of more than 40% of left-ventricular myocardium, papillary muscle rupture, or ventricular septal rupture causes cardiogenic shock. Anterior STEMI is the highest-risk presentation. Cardiogenic shock complicates 5-10% of acute MI and carries 40-50% in-hospital mortality even with revascularization."
+    },
+    {
+      "cause": "Anaphylaxis",
+      "description": "IgE-mediated mast-cell degranulation triggered by foods, drugs, insect venom, or latex releases histamine, leukotrienes, and tryptase. Within minutes, profound vasodilation, capillary leak, bronchospasm, and laryngeal edema produce a distributive shock state. Untreated anaphylactic shock is fatal in roughly 1% of episodes; epinephrine reverses most cases."
+    },
+    {
+      "cause": "Massive pulmonary embolism",
+      "description": "Large thrombus obstructing more than 50% of the pulmonary vascular bed acutely raises right-ventricular afterload, impairs left-ventricular filling, and produces obstructive shock. 30-day mortality in shocked PE patients exceeds 50% without thrombolysis or surgical embolectomy."
+    },
+    {
+      "cause": "Severe burns",
+      "description": "Burns covering more than 20% of body surface area cause massive capillary leak and plasma loss, producing hypovolemic shock within hours. Parkland-formula fluid resuscitation is started immediately to prevent organ failure."
+    },
+    {
+      "cause": "Cardiac tamponade",
+      "description": "Rapid accumulation of pericardial fluid or blood compresses the ventricles, impairs diastolic filling, and produces obstructive shock with Beck's triad (hypotension, distended neck veins, muffled heart sounds). Causes include malignant effusion, uremia, post-MI free-wall rupture, and penetrating trauma."
+    },
+    {
+      "cause": "Tension pneumothorax",
+      "description": "Progressive air accumulation in the pleural space under positive pressure shifts the mediastinum, kinks the venae cavae, and obstructs venous return. Needle decompression at the second intercostal space midclavicular line or fifth intercostal space anterior axillary line is immediately life-saving."
+    },
+    {
+      "cause": "Spinal cord injury (neurogenic shock)",
+      "description": "Disruption of sympathetic outflow above T6 causes loss of vasomotor tone and bradycardia, producing distributive shock with paradoxically normal or slow heart rate. Distinguishes from hypovolemic shock by warm peripheries and bradycardia despite hypotension."
+    },
+    {
+      "cause": "Adrenal crisis",
+      "description": "Acute failure of cortisol production in patients with primary or secondary adrenal insufficiency, often precipitated by infection, surgery, or steroid withdrawal. Produces refractory distributive shock that responds rapidly to intravenous hydrocortisone 100 mg."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Age over 65",
+      "category": "non-modifiable",
+      "description": "Older adults have reduced cardiovascular reserve, blunted compensatory tachycardia, and higher comorbidity burden. Septic-shock mortality roughly doubles after age 75 compared with adults under 50."
+    },
+    {
+      "factor": "Immunosuppression",
+      "category": "modifiable",
+      "description": "Chemotherapy, solid-organ transplant, HIV with low CD4 count, long-term corticosteroids, and biologic immunomodulators all raise sepsis and septic-shock risk substantially. Neutropenic patients can decompensate within hours of fever onset."
+    },
+    {
+      "factor": "Chronic heart failure or prior myocardial infarction",
+      "category": "modifiable",
+      "description": "Reduced ejection fraction and prior infarct scarring shrink the cardiac reserve available to compensate during sepsis, hemorrhage, or any major physiologic insult, and predispose directly to cardiogenic shock during acute MI."
+    },
+    {
+      "factor": "Severe trauma or recent surgery",
+      "category": "environmental",
+      "description": "Motor-vehicle collisions, penetrating injury, and major operations remain the leading cause of hemorrhagic shock in adults under 45. Pelvic fractures and solid-organ lacerations can lose more than 2 L of blood internally before any external sign is visible."
+    },
+    {
+      "factor": "Known severe allergy to foods, drugs, insect venom, or latex",
+      "category": "modifiable",
+      "description": "Prior anaphylactic reaction roughly doubles the risk of a future episode. Patients should carry an epinephrine auto-injector and a written action plan."
+    },
+    {
+      "factor": "Chronic kidney disease",
+      "category": "modifiable",
+      "description": "CKD impairs fluid handling, increases infection risk, and accelerates atherosclerosis, raising the risk of septic, cardiogenic, and post-procedural shock states."
+    },
+    {
+      "factor": "Indwelling vascular catheters, urinary catheters, or recent invasive procedures",
+      "category": "modifiable",
+      "description": "Central lines, dialysis catheters, urinary catheters, and recent endoscopy or surgery are common sources of bloodstream infection that progress to septic shock if not removed and treated promptly."
+    },
+    {
+      "factor": "Anticoagulation therapy",
+      "category": "modifiable",
+      "description": "Warfarin, direct oral anticoagulants, and dual antiplatelet therapy magnify the volume and speed of any bleed, converting moderate hemorrhage into hemorrhagic shock within minutes."
+    },
+    {
+      "factor": "Pregnancy and postpartum period",
+      "category": "non-modifiable",
+      "description": "Obstetric hemorrhage, amniotic fluid embolism, and peripartum sepsis make shock an important cause of maternal mortality worldwide. Physiologic hypervolemia masks early blood loss until decompensation is sudden."
+    },
+    {
+      "factor": "Underlying adrenal insufficiency or long-term corticosteroid use",
+      "category": "modifiable",
+      "description": "Patients on more than 5 mg prednisolone daily for over 3 weeks suppress the hypothalamic-pituitary-adrenal axis and cannot mount a stress cortisol response, predisposing to adrenal-crisis distributive shock during illness or surgery."
+    }
+  ],
+  "affectedDemographics": [
+    "Septic shock incidence in the United States is approximately 270 per 100,000 adult-years and is rising as the population ages (CDC, JAMA 2014)",
+    "Cardiogenic shock complicates roughly 5-10% of ST-elevation myocardial infarctions and accounts for the largest share of in-hospital MI mortality (AHA 2022 statement)",
+    "Trauma-related hemorrhagic shock is the leading cause of preventable death in patients under 45 worldwide (WHO Global Burden of Injury)",
+    "Anaphylactic shock has a lifetime prevalence of 0.05-2% in high-income countries, with food allergy as the leading trigger in children and drugs in adults",
+    "Critically ill patients aged 75+ have roughly 50% higher all-cause shock mortality than those under 50 even after adjusting for comorbidities"
+  ],
+  "diagnosisOverview": "Diagnosis of shock is clinical and must be made at the bedside within minutes of presentation. The decisive findings are the combination of hypotension (systolic blood pressure under 90 mmHg or MAP under 65 mmHg, or a 40 mmHg drop from baseline), clinical signs of tissue hypoperfusion (cool mottled skin or warm flushed skin in distributive shock, capillary refill over 3 seconds, oliguria, altered mentation), and a serum lactate above 2 mmol/L — the three pillars defined by the ESICM 2014 consensus statement on circulatory shock. Once shock is recognized, the question is which of the four physiologic categories is present, because treatment diverges sharply. Bedside ultrasound using the RUSH protocol (Rapid Ultrasound in Shock) inspects the heart for contractility and effusion, the inferior vena cava for collapsibility, the lungs for pneumothorax and B-lines, and the abdomen and aorta for free fluid and aneurysm. RUSH typically narrows the differential within 5 minutes. Arterial blood gas with lactate quantifies the metabolic insult and tracks resuscitation. Echocardiography distinguishes cardiogenic from obstructive shock and identifies wall-motion abnormalities, valvular catastrophe, or tamponade. CT pulmonary angiography confirms massive pulmonary embolism in obstructive shock. Blood cultures from two separate sites plus cultures from any presumed source are drawn before antibiotics in suspected septic shock — but never delay antibiotics beyond one hour from recognition (Surviving Sepsis Campaign 2021). Coagulation studies, complete blood count, electrolytes, renal and liver panels, troponin, BNP, and a 12-lead ECG complete the standard workup. Differentials include severe dehydration without shock, vasovagal syncope, severe hypoglycemia, profound sedation, and primary neurologic events causing altered mentation without circulatory collapse.",
+  "diagnosticTests": [
+    {
+      "test": "Arterial or venous blood gas with lactate",
+      "purpose": "Confirms metabolic acidosis and quantifies tissue hypoperfusion. A lactate above 2 mmol/L meets the biochemical criterion for shock; above 4 mmol/L predicts substantially higher mortality. Lactate clearance of at least 10% per hour during resuscitation correlates with survival.",
+      "whatToExpect": "A small blood sample is drawn from a radial artery or peripheral vein. Results return at the bedside within 5 minutes on most ICU and emergency-department analyzers. Mild pressure is applied to the puncture site for 3-5 minutes."
+    },
+    {
+      "test": "Point-of-care ultrasound (RUSH protocol)",
+      "purpose": "Rapidly distinguishes the four shock categories by assessing cardiac contractility, pericardial effusion, IVC collapsibility, lung sliding, and intra-abdominal free fluid or aortic aneurysm. Performed in under 5 minutes at the bedside.",
+      "whatToExpect": "Gel is applied to the chest, abdomen, and pleural surfaces; a probe scans each area while images are interpreted in real time. The exam is painless, has no radiation, and is repeated as resuscitation progresses."
+    },
+    {
+      "test": "Transthoracic echocardiogram",
+      "purpose": "Defines left and right ventricular function, identifies wall-motion abnormalities suggesting acute infarction, detects pericardial tamponade, and assesses valvular catastrophes. Mandatory in cardiogenic and obstructive shock.",
+      "whatToExpect": "A trained sonographer or cardiologist performs the study at the bedside. Typically 15-30 minutes. Findings are reported immediately and guide vasopressor and inotrope selection."
+    },
+    {
+      "test": "12-lead ECG",
+      "purpose": "Identifies ST-elevation myocardial infarction, new bundle-branch block, arrhythmias, and right-heart strain patterns suggestive of massive pulmonary embolism (S1Q3T3, new right bundle branch block).",
+      "whatToExpect": "Ten skin electrodes are applied; the tracing is recorded in under one minute. Read immediately at the bedside. STEMI on ECG triggers parallel activation of the cath lab while resuscitation continues."
+    },
+    {
+      "test": "Blood cultures plus cultures from suspected source",
+      "purpose": "Identifies the causative organism in septic shock and guides definitive antibiotic therapy. Two separate venipuncture sites are sampled before antibiotics are given — but cultures should not delay antibiotics beyond 1 hour from recognition.",
+      "whatToExpect": "Two blood draws from different sites; urine, sputum, wound, or cerebrospinal fluid samples are added based on suspected source. Preliminary Gram-stain results return within hours; species and sensitivities within 24-72 hours."
+    },
+    {
+      "test": "CT pulmonary angiography",
+      "purpose": "Confirms or excludes massive pulmonary embolism in obstructive shock when the patient is stable enough for transport. Demonstrates clot burden, right-ventricular dilation, and pulmonary infarction.",
+      "whatToExpect": "A contrast-enhanced CT scan of the chest taking 5-10 minutes. Requires intravenous iodinated contrast; renal function is checked first when feasible. Results read immediately for clot detection."
+    },
+    {
+      "test": "Troponin and brain natriuretic peptide",
+      "purpose": "Troponin diagnoses myocardial injury underpinning cardiogenic shock; BNP supports volume overload and heart-failure-related shock states. Both also rise in right-heart strain from pulmonary embolism.",
+      "whatToExpect": "Standard venous blood draw; results return in 30-60 minutes. Serial troponins every 3-6 hours track evolving myocardial injury."
+    },
+    {
+      "test": "Tryptase level (in suspected anaphylactic shock)",
+      "purpose": "Serum tryptase peaks 1-2 hours after mast-cell activation and confirms anaphylaxis retrospectively. A baseline level repeated 24 hours later distinguishes acute reaction from systemic mastocytosis.",
+      "whatToExpect": "Standard blood draw within 3 hours of symptom onset. Does not delay treatment — epinephrine is given on clinical grounds before any laboratory confirmation."
+    }
+  ],
+  "treatmentOverview": "Treatment of shock is time-critical and category-specific. The first hour after recognition — the so-called golden hour — is when the largest mortality reduction is achievable. Universal initial steps apply to all shock states: secure airway and breathing, place two large-bore intravenous lines (or an intraosseous line if access fails), apply continuous monitoring, send blood gas with lactate and full labs, and begin resuscitation. The Surviving Sepsis Campaign 2021 recommends initial fluid resuscitation of 30 mL/kg of balanced crystalloid (such as lactated Ringer's or Plasma-Lyte) within the first 3 hours for septic shock and hypovolemic shock from non-bleeding causes; in hemorrhagic shock, the resuscitation strategy is damage-control hemostatic resuscitation with massive transfusion protocol (MTP) using red cells, plasma, and platelets in a 1:1:1 ratio rather than crystalloid. Vasopressors are added when fluid alone fails to maintain a mean arterial pressure of 65 mmHg or higher: norepinephrine is the first-line agent in septic, cardiogenic, and most distributive shock states (titrated to 0.05-0.5 mcg/kg/min through central access where possible), with vasopressin added at fixed dose 0.03 units/min in refractory septic shock. Epinephrine is the first-line and immediate treatment for anaphylactic shock — 0.3-0.5 mg intramuscularly in the lateral thigh, repeated every 5-15 minutes as needed. Inotropes such as dobutamine 2.5-20 mcg/kg/min are added when cardiac output remains inadequate despite adequate perfusion pressure, particularly in cardiogenic shock. Source control is non-negotiable: empirical broad-spectrum antibiotics within 1 hour for septic shock plus drainage or removal of the infected source; revascularization (PCI or thrombolysis) for STEMI-related cardiogenic shock; thrombolysis or surgical embolectomy for massive pulmonary embolism; pericardiocentesis for tamponade; needle thoracostomy followed by chest tube for tension pneumothorax; and surgical or endovascular hemorrhage control for traumatic and obstetric hemorrhagic shock. Intravenous hydrocortisone 100 mg every 6-8 hours is given in suspected adrenal crisis and in septic shock unresponsive to fluids and norepinephrine. Mechanical circulatory support (intra-aortic balloon pump, Impella, venoarterial ECMO) is considered for cardiogenic shock refractory to inotropes and vasopressors. Throughout, lactate is rechecked every 2-4 hours and a clearance of at least 10% per hour signals adequate resuscitation.",
+  "medicalTreatments": [
+    {
+      "name": "Balanced crystalloid fluid resuscitation (lactated Ringer's or Plasma-Lyte, 30 mL/kg initial bolus)",
+      "description": "First-line in septic and non-hemorrhagic hypovolemic shock. Balanced solutions reduce the risk of hyperchloremic acidosis and acute kidney injury compared with 0.9% saline (SMART trial, Semler 2018). Given as repeated 500-1000 mL boluses with reassessment of perfusion after each.",
+      "effectiveness": "Restores intravascular volume and improves MAP in 60-70% of fluid-responsive shock states; non-responders need vasopressors and reassessment within the first hour."
+    },
+    {
+      "name": "Norepinephrine (0.05-0.5 mcg/kg/min IV infusion, central access preferred)",
+      "description": "First-line vasopressor for septic, cardiogenic, and most distributive shock states. Acts predominantly on alpha-1 receptors to increase systemic vascular resistance and mean arterial pressure with modest inotropy. Titrated to MAP ≥65 mmHg.",
+      "effectiveness": "Achieves target MAP in over 80% of patients within minutes; preferred over dopamine due to lower arrhythmia risk and mortality benefit (SOAP II trial, De Backer 2010)."
+    },
+    {
+      "name": "Vasopressin (fixed dose 0.03 units/min IV) added to norepinephrine",
+      "description": "Added in septic shock when norepinephrine alone fails to reach the MAP target, allowing reduction of catecholamine dose. Particularly useful in vasoplegic post-cardiac-surgery and refractory septic shock.",
+      "effectiveness": "Reduces norepinephrine requirement and may reduce mortality in less-severe septic shock (VASST trial, Russell 2008)."
+    },
+    {
+      "name": "Intramuscular epinephrine (0.3-0.5 mg IM lateral thigh, repeated every 5-15 minutes)",
+      "description": "First-line and life-saving for anaphylactic shock. IM administration in the lateral thigh delivers more reliable absorption than subcutaneous or intravenous routes in shock states. Followed by IV infusion 0.05-0.5 mcg/kg/min if shock persists.",
+      "effectiveness": "Reverses anaphylaxis in over 90% of cases when given within minutes of recognition; delay beyond 30 minutes is the strongest predictor of fatal outcome."
+    },
+    {
+      "name": "Dobutamine (2.5-20 mcg/kg/min IV infusion)",
+      "description": "Inotrope used in cardiogenic shock to improve cardiac output once adequate filling and perfusion pressure are restored. A beta-1 agonist that increases contractility and lowers afterload. Avoid as primary therapy if MAP is below 65 mmHg.",
+      "effectiveness": "Improves cardiac index in 70-80% of cardiogenic shock patients; mortality benefit modest, so often combined with revascularization and mechanical support."
+    },
+    {
+      "name": "Empirical broad-spectrum antibiotics within 1 hour (typically piperacillin-tazobactam or meropenem ± vancomycin)",
+      "description": "Cornerstone of septic-shock treatment. Each hour delay beyond recognition raises mortality by approximately 4-7% (Kumar 2006). Antibiotics are narrowed once cultures return, but never delayed pending results.",
+      "effectiveness": "Hospital mortality falls by ~50% when broad-spectrum antibiotics are given within the first hour compared with delays beyond 6 hours."
+    },
+    {
+      "name": "Massive transfusion protocol (red cells, plasma, platelets in 1:1:1 ratio)",
+      "description": "Damage-control resuscitation in hemorrhagic shock from trauma, obstetric hemorrhage, or major gastrointestinal bleeding. Coupled with tranexamic acid 1 g IV within 3 hours of injury (CRASH-2 trial) and urgent source control.",
+      "effectiveness": "Reduces all-cause mortality at 24 hours by roughly 25% in major trauma compared with crystalloid-heavy resuscitation (PROPPR trial, Holcomb 2015)."
+    },
+    {
+      "name": "Intravenous hydrocortisone (100 mg every 6-8 hours, or 200 mg/day continuous infusion)",
+      "description": "Given in suspected adrenal crisis and in septic shock refractory to adequate fluids and norepinephrine. Improves vasopressor responsiveness and shortens time to shock reversal.",
+      "effectiveness": "Reduces 90-day mortality by approximately 6% in septic shock requiring vasopressors (ADRENAL trial, Venkatesh 2018)."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Emergency hemorrhage control surgery (laparotomy, thoracotomy, vascular repair)",
+      "description": "Definitive bleeding control in traumatic and surgical hemorrhagic shock. Damage-control laparotomy with packing and temporary closure is used in extremis with planned re-operation once the patient is resuscitated.",
+      "successRate": "Survival to hospital discharge 50-70% in early-recognized hemorrhagic shock at level-1 trauma centers; falls sharply with delay."
+    },
+    {
+      "name": "Percutaneous coronary intervention (PCI) for STEMI-related cardiogenic shock",
+      "description": "Emergency culprit-vessel PCI is the standard of care for cardiogenic shock complicating acute myocardial infarction. Should be performed within 90 minutes of first medical contact whenever possible.",
+      "successRate": "Reduces 30-day mortality from approximately 60% to 45% versus medical therapy alone (SHOCK trial, Hochman 1999)."
+    },
+    {
+      "name": "Pericardiocentesis or pericardial window",
+      "description": "Needle drainage of pericardial fluid under ultrasound guidance for cardiac tamponade. Surgical window is created when reaccumulation is expected (malignancy, post-operative effusion).",
+      "successRate": "Hemodynamic improvement within minutes in over 90% of tamponade cases; definitive treatment requires addressing the underlying cause."
+    },
+    {
+      "name": "Pulmonary embolectomy or catheter-directed thrombolysis",
+      "description": "Considered in massive pulmonary embolism with shock when systemic thrombolysis is contraindicated or has failed. Catheter-directed lysis uses lower drug doses with mechanical clot disruption.",
+      "successRate": "30-day mortality of approximately 20-25% with embolectomy in centers with surgical experience; lower than untreated massive PE which exceeds 50%."
+    },
+    {
+      "name": "Mechanical circulatory support (VA-ECMO, Impella, IABP)",
+      "description": "Used in refractory cardiogenic shock to bridge to recovery, transplant, or durable mechanical support. VA-ECMO provides full cardiopulmonary support; Impella unloads the left ventricle.",
+      "successRate": "Survival to hospital discharge approximately 30-50% in refractory cardiogenic shock supported with VA-ECMO; outcomes improve with early initiation."
+    }
+  ],
+  "alternativeTreatments": [],
+  "whySeeSpecialist": "Shock is a medical emergency. Anyone with suspected shock should be brought to an emergency department by ambulance — primary care or outpatient evaluation is not appropriate. Intensivists, emergency physicians, cardiologists, trauma surgeons, and infectious-disease specialists collaborate during the resuscitation phase. After discharge, ongoing specialist follow-up is determined by the underlying cause: cardiology for cardiogenic shock survivors, infectious disease and rehabilitation medicine for septic-shock survivors, and trauma or vascular surgery for hemorrhagic shock survivors.",
+  "doctorSelectionGuide": "In the acute phase, the right care is the nearest emergency department capable of immediate resuscitation — call emergency services rather than choose a clinician. For long-term follow-up after surviving shock, look for an intensivist-led post-ICU clinic or a specialist appropriate to the cause: a cardiologist for cardiogenic shock, an infectious-disease physician and rehabilitation team for septic shock, and a trauma surgeon for hemorrhagic shock. Continuity with the team that managed the acute episode improves recovery from post-intensive-care syndrome.",
+  "preventionStrategies": [
+    "Treat infections early and complete prescribed antibiotic courses — preventing progression to sepsis is the single most effective way to avoid septic shock",
+    "Vaccinate against pneumococcal disease, influenza, and (where indicated) meningococcal and Haemophilus influenzae infections to reduce community-acquired sepsis risk",
+    "Carry an epinephrine auto-injector if you have ever had anaphylaxis or a severe allergic reaction, and use it at the first sign of recurrence rather than waiting",
+    "Control coronary risk factors (blood pressure, cholesterol, smoking, diabetes) to reduce the risk of myocardial infarction and resulting cardiogenic shock",
+    "Wear seatbelts, motorcycle helmets, and appropriate occupational protective equipment — trauma prevention is the single most effective way to reduce hemorrhagic shock",
+    "Take corticosteroids or other immunosuppressants exactly as prescribed and carry a steroid emergency card so that stress-dose hydrocortisone can be given promptly during illness"
+  ],
+  "lifestyleModifications": [
+    "Follow up promptly after any hospitalization for shock — post-intensive-care syndrome affects up to 50% of survivors and benefits from early rehabilitation",
+    "Build a written allergy action plan with your clinician if you have known severe allergies; share it with family, schools, and employers",
+    "Recognize early warning signs in yourself and high-risk relatives — confusion, fast breathing, low urine output, and severe weakness in any unwell person warrant emergency evaluation",
+    "Manage chronic conditions (heart failure, diabetes, COPD, kidney disease) with regular follow-up to reduce the chance of acute decompensation that can trigger shock",
+    "Avoid stopping prescribed steroids abruptly — taper under medical supervision to prevent adrenal-crisis distributive shock",
+    "Replace fluids actively during acute gastroenteritis, exercise in hot weather, and any febrile illness — early oral rehydration prevents progression to hypovolemic shock"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Adequate oral hydration during illness, fever, exercise in heat, and travel to high-altitude or tropical environments",
+      "Oral rehydration solution with electrolytes during acute diarrheal illness, especially in children and older adults",
+      "A balanced diet rich in vegetables, whole grains, lean protein, and healthy fats to support cardiovascular health and reduce coronary risk",
+      "Protein-rich nutrition during recovery from critical illness, targeted at 1.2-1.5 g/kg/day under nutritional supervision",
+      "Foods high in iron and B12 for patients recovering from hemorrhagic shock to support red-cell regeneration"
+    ],
+    "avoid": [
+      "Foods or medications known to trigger anaphylaxis — strict avoidance is the only reliable prevention for severe allergic reactions",
+      "Excessive alcohol intake, which increases the risk of bleeding, arrhythmia, infection, and trauma",
+      "Sodium-heavy diets in patients with heart failure, where fluid overload can precipitate cardiogenic decompensation",
+      "Unsupervised crash diets and fasting during convalescence from critical illness — adequate caloric intake supports recovery",
+      "Energy drinks and high-caffeine stimulants in patients with arrhythmia or cardiomyopathy, which can trigger sustained tachyarrhythmia"
+    ]
+  },
+  "exerciseGuidelines": "Acute shock requires complete rest and intensive-care management. After discharge, structured rehabilitation begins with mobilization in hospital, progresses to graded aerobic activity, and aims to restore pre-illness function over weeks to months. Cardiac rehabilitation is strongly recommended after cardiogenic shock; pulmonary rehabilitation supports recovery from severe sepsis with ARDS. Activity progression should be guided by the rehabilitation team and adjusted for residual organ dysfunction.",
+  "dailyManagement": [
+    "Take all prescribed medications consistently after discharge, particularly antibiotics for source-controlled infection, antiplatelets after PCI, and steroid replacement after adrenal crisis",
+    "Attend every post-discharge clinic visit during the first 90 days — the period of highest readmission and mortality risk for shock survivors",
+    "Monitor for recurrence signals at home: new fever, breathlessness, leg swelling, chest pain, low urine output, or sudden confusion in older relatives",
+    "Maintain hydration logs during convalescence and through any subsequent acute illness",
+    "Keep emergency contact information, allergy action plan, and medication list visible at home and on a wallet card"
+  ],
+  "prognosis": "Prognosis depends heavily on shock category, time to recognition, and host factors. Septic shock carries 30-40% in-hospital mortality despite optimal care, with each hour of antibiotic delay adding 4-7% to mortality. Cardiogenic shock following acute myocardial infarction has 40-50% in-hospital mortality even with revascularization, and survivors face substantially elevated heart-failure burden long-term. Hemorrhagic shock survival exceeds 90% when controlled within the first hour at a level-1 trauma center, but falls below 50% once injury exceeds Class IV (over 40% blood loss) or transport time exceeds 60 minutes. Anaphylactic shock is fatal in roughly 1% of episodes when epinephrine is given promptly, rising sharply with delayed treatment. Survivors of any shock state face a 30-50% rate of post-intensive-care syndrome — persistent cognitive, psychological, and physical impairments lasting months to years. The strongest modifiable predictor of outcome across all categories is the speed of recognition and the time to category-specific treatment.",
+  "recoveryTimeline": "Acute resuscitation occupies the first 6-24 hours, with stabilization usually achieved by 24-72 hours if the cause is controlled. ICU length of stay averages 5-10 days for septic and cardiogenic shock and 2-7 days for hemorrhagic shock. Hospital length of stay typically runs 2-4 weeks. Functional recovery extends well beyond discharge — up to 50% of survivors have persistent muscle weakness, cognitive impairment, or psychological symptoms (PICS) for 6-12 months, and a meaningful subset never return to pre-illness baseline. Cardiac rehabilitation, pulmonary rehabilitation, and post-ICU follow-up clinics measurably shorten the recovery arc.",
+  "complications": [
+    "Acute kidney injury affects 40-60% of shock survivors and may require temporary renal replacement therapy; recovery of kidney function is often partial",
+    "Acute respiratory distress syndrome (ARDS) develops in 20-40% of septic-shock patients and may require prolonged mechanical ventilation",
+    "Disseminated intravascular coagulation with simultaneous bleeding and clotting, requiring transfusion of blood products and treatment of the underlying trigger",
+    "Multi-organ dysfunction syndrome — sequential failure of the kidneys, liver, lungs, and brain — is the leading cause of late mortality after the initial resuscitation phase",
+    "Post-intensive-care syndrome with cognitive, psychological, and physical impairment in up to 50% of survivors for 6-12 months after discharge",
+    "Critical-illness polyneuropathy and myopathy producing prolonged muscle weakness and rehabilitation needs after ICU stay",
+    "Recurrent shock in patients with persistent risk factors (chronic heart failure, recurrent infections, severe allergy without an action plan)"
+  ],
+  "supportResources": [
+    {
+      "name": "Surviving Sepsis Campaign — Patient Resources",
+      "url": "https://www.sccm.org/SurvivingSepsisCampaign/Home",
+      "description": "Authoritative international guideline group; patient-facing resources on sepsis recognition, treatment expectations, and recovery."
+    },
+    {
+      "name": "Sepsis Alliance",
+      "url": "https://www.sepsis.org/",
+      "description": "US-based patient advocacy group with educational material, a survivor support community, and recognition campaigns."
+    },
+    {
+      "name": "American Heart Association — Cardiogenic Shock",
+      "url": "https://www.heart.org/",
+      "description": "Patient education for survivors of cardiogenic shock, including post-discharge rehabilitation and long-term cardiac care."
+    },
+    {
+      "name": "Allergy and Asthma Network — Anaphylaxis Resources",
+      "url": "https://allergyasthmanetwork.org/anaphylaxis/",
+      "description": "Patient education on anaphylaxis recognition, epinephrine auto-injector use, and emergency action planning."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "anthrax-sepsis-a227",
+      "name": "Sepsis (without circulatory failure)",
+      "keyDifference": "Sepsis is a dysregulated host response to infection causing organ dysfunction; septic shock is the subset of sepsis with persistent hypotension requiring vasopressors and lactate above 2 mmol/L despite adequate fluid resuscitation. A patient can have severe sepsis with organ dysfunction but normal blood pressure — that is sepsis, not septic shock. Treatment urgency is similar but vasopressor and ICU thresholds differ."
+    },
+    {
+      "slug": "anaphylaxis",
+      "name": "Anaphylaxis (without shock)",
+      "keyDifference": "Anaphylaxis is the systemic allergic reaction; anaphylactic shock is the subset in which cardiovascular collapse with hypotension occurs. Many anaphylaxis episodes present with rash, swelling, and bronchospasm without measurable hypotension and respond rapidly to intramuscular epinephrine without progressing to shock."
+    },
+    {
+      "slug": "heart-failure",
+      "name": "Decompensated Heart Failure (without shock)",
+      "keyDifference": "Decompensated heart failure produces breathlessness, congestion, and reduced cardiac output but maintains adequate perfusion pressure; cardiogenic shock adds hypotension, oliguria, lactate elevation, and end-organ hypoperfusion. The distinction matters because cardiogenic shock requires vasopressors, inotropes, and often mechanical circulatory support."
+    },
+    {
+      "slug": "type-2-diabetes-mellitus",
+      "name": "Severe Hypoglycemia",
+      "keyDifference": "Severe hypoglycemia in diabetes can produce diaphoresis, tachycardia, altered mentation, and even hypotension that mimic shock, but blood glucose under 54 mg/dL with rapid response to intravenous dextrose distinguishes it. Bedside glucose is checked early in every patient with altered mentation precisely to avoid this confusion."
+    },
+    {
+      "slug": "pneumonia",
+      "name": "Severe Pneumonia or Severe Influenza",
+      "keyDifference": "Severe pneumonia and influenza cause fever, tachypnea, and hypoxia but only progress to shock when sepsis-driven hypotension and tissue hypoperfusion develop. The distinction is made at the bedside by checking blood pressure, capillary refill, mentation, and lactate — pneumonia without these features is severe pneumonia, not septic shock."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "acute-kidney-injury",
+      "name": "Acute Kidney Injury"
+    },
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure"
+    },
+    {
+      "slug": "anaphylaxis",
+      "name": "Anaphylaxis"
+    },
+    {
+      "slug": "coronary-artery-disease",
+      "name": "Coronary Artery Disease"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "anthrax-sepsis-a227",
+      "name": "Sepsis",
+      "relevance": "Septic shock is the most common form of shock in non-trauma adults and is a direct progression of severe sepsis."
+    },
+    {
+      "slug": "anaphylaxis",
+      "name": "Anaphylaxis",
+      "relevance": "Anaphylactic shock is the cardiovascular subset of anaphylaxis and shares treatment with intramuscular epinephrine."
+    },
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure",
+      "relevance": "Decompensated heart failure is a leading cause of cardiogenic shock; chronic heart failure raises baseline risk."
+    },
+    {
+      "slug": "coronary-artery-disease",
+      "name": "Coronary Artery Disease",
+      "relevance": "Acute myocardial infarction from coronary artery disease is the leading cause of cardiogenic shock."
+    },
+    {
+      "slug": "acute-kidney-injury",
+      "name": "Acute Kidney Injury",
+      "relevance": "AKI complicates 40-60% of shock episodes and is one of the strongest predictors of in-hospital mortality."
+    },
+    {
+      "slug": "thoracic-aortic-dissection",
+      "name": "Thoracic Aortic Dissection",
+      "relevance": "Aortic dissection can present with obstructive or hemorrhagic shock physiology depending on the extent and rupture status."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is shock?",
+      "answer": "Shock is acute circulatory failure in which tissue oxygen delivery falls below cellular demand. It is defined by hypotension, signs of poor tissue perfusion, and lactate above 2 mmol/L. The four categories are hypovolemic, cardiogenic, distributive, and obstructive.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early signs of shock?",
+      "answer": "The earliest sign is a fast heart rate above 100 beats per minute, often before blood pressure drops. Other early signs include fast breathing, anxiety, cool clammy or warm flushed skin, prolonged capillary refill, reduced urine output, and a mild lactate rise above 2 mmol/L.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is shock diagnosed?",
+      "answer": "Shock is diagnosed at the bedside by hypotension (systolic under 90 mmHg or MAP under 65 mmHg), signs of tissue hypoperfusion, and lactate above 2 mmol/L. Bedside ultrasound (RUSH protocol), echocardiogram, blood gas, blood cultures, and 12-lead ECG identify the category.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How fast can shock kill?",
+      "answer": "Untreated shock can be fatal within minutes for anaphylactic and obstructive causes, within hours for hemorrhagic shock, and within hours to days for septic and cardiogenic shock. The first hour after recognition is the strongest predictor of survival across all categories.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is septic shock?",
+      "answer": "Septic shock is the subset of sepsis with persistent hypotension requiring vasopressors to maintain MAP at or above 65 mmHg plus a serum lactate above 2 mmol/L despite adequate fluid resuscitation. Mortality is 30-40% even with optimal care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is cardiogenic shock?",
+      "answer": "Cardiogenic shock is shock caused by primary pump failure — the heart cannot generate adequate cardiac output. The most common cause is acute myocardial infarction. It carries 40-50% in-hospital mortality and needs emergency revascularization, inotropes, and often mechanical circulatory support.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is hypovolemic shock?",
+      "answer": "Hypovolemic shock is shock caused by loss of intravascular volume. Hemorrhagic subtype follows bleeding from trauma, ruptured aneurysm, or obstetric hemorrhage. Non-hemorrhagic subtype follows severe burns, vomiting, or diarrhea. Treatment is rapid volume replacement and source control.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is anaphylactic shock?",
+      "answer": "Anaphylactic shock is the cardiovascular subset of anaphylaxis in which mast-cell degranulation causes profound vasodilation, capillary leak, and hypotension. Treatment is intramuscular epinephrine 0.3-0.5 mg in the lateral thigh, repeated every 5-15 minutes, plus fluids and oxygen.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the first treatment for shock?",
+      "answer": "Secure airway and oxygen, place two large-bore IV lines, monitor continuously, draw blood gas with lactate, and begin fluid resuscitation — 30 mL/kg balanced crystalloid for septic and non-hemorrhagic hypovolemic shock, or massive transfusion protocol for hemorrhagic shock.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is norepinephrine the first-line vasopressor?",
+      "answer": "Norepinephrine raises mean arterial pressure with mild inotropy and lower arrhythmia risk than dopamine. The SOAP II trial showed lower mortality versus dopamine. Surviving Sepsis Campaign 2021 recommends it as first-line in septic shock and most other shock states.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How much fluid is given in septic shock?",
+      "answer": "Surviving Sepsis Campaign 2021 recommends 30 mL/kg of balanced crystalloid within the first 3 hours, given as repeated 500-1000 mL boluses with reassessment of perfusion after each. Vasopressors are added if hypotension persists despite adequate fluids.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is lactate measured in shock?",
+      "answer": "Serum lactate above 2 mmol/L confirms tissue hypoperfusion and is one of the three defining features of shock. A lactate above 4 mmol/L predicts substantially higher mortality. Lactate clearance of at least 10% per hour during resuscitation predicts survival.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can you recover fully from shock?",
+      "answer": "Many survivors recover fully, especially younger patients with rapidly controlled hemorrhagic or anaphylactic shock. Older patients and those with prolonged ICU stays often experience post-intensive-care syndrome — cognitive, psychological, and physical impairments — for 6-12 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between sepsis and septic shock?",
+      "answer": "Sepsis is a dysregulated host response to infection causing organ dysfunction. Septic shock is the subset with persistent hypotension requiring vasopressors plus lactate above 2 mmol/L despite fluids. Sepsis without shock has lower mortality (around 10%) than septic shock (30-40%).",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes shock in children?",
+      "answer": "Hypovolemic shock from severe dehydration, septic shock from meningococcal disease, pneumonia, and urinary tract infection, and anaphylactic shock from food or venom allergy are the leading causes in children. Cardiogenic shock occurs with congenital heart disease, myocarditis, and arrhythmia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is obstructive shock?",
+      "answer": "Obstructive shock is caused by a mechanical impediment to cardiac filling or output. The four main causes are massive pulmonary embolism, tension pneumothorax, cardiac tamponade, and constrictive pericarditis. Each requires immediate mechanical relief in addition to standard resuscitation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is an ICU admission needed for shock?",
+      "answer": "All shock requires ICU-level care. Persistent hypotension despite initial fluid resuscitation, lactate elevation, and end-organ hypoperfusion define the patient as critically ill. ICU allows continuous monitoring, vasopressor infusions, mechanical ventilation, and renal replacement therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can shock be prevented?",
+      "answer": "Many causes are preventable. Early infection treatment reduces septic shock; coronary risk control reduces cardiogenic shock; trauma prevention reduces hemorrhagic shock; carrying epinephrine prevents anaphylactic deaths; and stress-dose steroids prevent adrenal crisis in susceptible patients.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does the RUSH ultrasound protocol look at?",
+      "answer": "RUSH (Rapid Ultrasound in Shock) assesses heart (contractility, effusion), tank (IVC, lungs, abdomen), and pipes (aorta, deep veins). It distinguishes the four shock categories at the bedside in under 5 minutes and is standard practice in emergency departments and ICUs worldwide.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does shock affect the kidneys?",
+      "answer": "Yes. Acute kidney injury complicates 40-60% of shock episodes through reduced renal perfusion, inflammatory injury, and nephrotoxic exposures. Some patients need temporary dialysis. Kidney function partially or fully recovers in most survivors, but some develop chronic kidney disease.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the golden hour in shock?",
+      "answer": "The golden hour is the first 60 minutes after shock is recognized, when targeted resuscitation produces the largest mortality reduction. Antibiotics within 1 hour for septic shock, PCI within 90 minutes for STEMI cardiogenic shock, and prompt epinephrine for anaphylaxis follow this principle.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is shock the same as fainting?",
+      "answer": "No. Fainting (vasovagal syncope) is a transient drop in blood pressure with rapid spontaneous recovery once the patient lies flat. Shock is sustained circulatory failure with hypotension, tissue hypoperfusion, and lactate elevation that does not self-correct without treatment.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Shock (acute circulatory failure)",
+  "regionalNames": [
+    {
+      "name": "Sadma (सदमा)",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Choc",
+      "region": "France",
+      "language": "fr"
+    }
+  ],
+  "searchTags": [
+    "shock",
+    "septic shock",
+    "cardiogenic shock",
+    "hypovolemic shock",
+    "anaphylactic shock",
+    "obstructive shock",
+    "distributive shock",
+    "circulatory failure",
+    "lactic acidosis",
+    "norepinephrine",
+    "vasopressor",
+    "fluid resuscitation",
+    "critical care",
+    "ICU",
+    "emergency medicine"
+  ],
+  "symptomKeywords": [
+    "low blood pressure",
+    "fast heart rate",
+    "cold clammy skin",
+    "low urine output",
+    "altered mental state",
+    "high lactate",
+    "mottled skin",
+    "weak pulse",
+    "fast breathing"
+  ],
+  "metaTitle": "Shock: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Shock: acute circulatory failure with tissue hypoperfusion. Types, symptoms, diagnosis, vasopressors, and survival outcomes reviewed by our medical board.",
+  "keywords": [
+    "shock",
+    "septic shock",
+    "cardiogenic shock",
+    "hypovolemic shock",
+    "anaphylactic shock",
+    "obstructive shock",
+    "shock symptoms",
+    "shock treatment",
+    "lactate shock",
+    "norepinephrine",
+    "fluid resuscitation",
+    "RUSH protocol",
+    "critical care shock",
+    "ICU shock"
+  ],
+  "lastReviewed": "2026-05-18",
+  "sources": [
+    {
+      "title": "Evans L, Rhodes A, Alhazzani W, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Critical Care Medicine. 2021;49(11):e1063-e1143.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Cecconi M, De Backer D, Antonelli M, et al. Consensus on circulatory shock and hemodynamic monitoring. Task force of the European Society of Intensive Care Medicine. Intensive Care Medicine. 2014;40(12):1795-1815.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25392034/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "De Backer D, Biston P, Devriendt J, et al. Comparison of dopamine and norepinephrine in the treatment of shock. New England Journal of Medicine. 2010;362(9):779-789.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20200382/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Hochman JS, Sleeper LA, Webb JG, et al. Early revascularization in acute myocardial infarction complicated by cardiogenic shock. SHOCK Investigators. New England Journal of Medicine. 1999;341(9):625-634.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10460813/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Holcomb JB, Tilley BC, Baraniuk S, et al. Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio and mortality in patients with severe trauma: the PROPPR randomized clinical trial. JAMA. 2015;313(5):471-482.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25647203/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Kumar A, Roberts D, Wood KE, et al. Duration of hypotension before initiation of effective antimicrobial therapy is the critical determinant of survival in human septic shock. Critical Care Medicine. 2006;34(6):1589-1596.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16625125/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Venkatesh B, Finfer S, Cohen J, et al. Adjunctive Glucocorticoid Therapy in Patients with Septic Shock (ADRENAL). New England Journal of Medicine. 2018;378(9):797-808.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29347874/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Russell JA, Walley KR, Singer J, et al. Vasopressin versus norepinephrine infusion in patients with septic shock (VASST). New England Journal of Medicine. 2008;358(9):877-887.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18305265/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "van Diepen S, Katz JN, Albert NM, et al. Contemporary Management of Cardiogenic Shock: A Scientific Statement From the American Heart Association. Circulation. 2017;136(16):e232-e268.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28923988/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Perera P, Mailhot T, Riley D, Mandavia D. The RUSH exam: Rapid Ultrasound in SHock in the evaluation of the critically ill. Emergency Medicine Clinics of North America. 2010;28(1):29-56.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19945597/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Symptoms_of_septic_shock.svg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Symptoms_of_septic_shock.svg/1280px-Symptoms_of_septic_shock.svg.png",
+      "altText": "Medical infographic showing the symptoms of septic shock including fever, hypotension, tachycardia, altered mental status, and reduced urine output across body systems",
+      "caption": "Symptoms of septic shock — the most common form of shock in non-trauma adults.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Mikael Häggström / Wikimedia Commons",
+      "width": 1280,
+      "height": 1280
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circulatory_System_en.svg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Circulatory_System_en.svg/800px-Circulatory_System_en.svg.png",
+      "altText": "Diagram of the human circulatory system showing the heart, arteries, and veins responsible for tissue oxygen delivery that fails in shock",
+      "caption": "The circulatory system — shock is the failure of this system to deliver enough oxygen to tissues.",
+      "license": "CC BY-SA 3.0",
+      "credit": "LadyofHats / Wikimedia Commons",
+      "width": 800,
+      "height": 1132
+    }
+  ],
+  "reviewer": {
+    "name": "AIHealz Medical Editorial Board",
+    "slug": "aihealz-medical-editorial-board"
+  }
+}

@@ -1,0 +1,661 @@
+{
+  "_meta": {
+    "slug": "cardiac-arrest",
+    "tier": 1,
+    "headTerm": "cardiac arrest",
+    "longTailKeywords": [
+      "cardiac arrest symptoms",
+      "cardiac arrest vs heart attack",
+      "sudden cardiac arrest causes",
+      "cpr for cardiac arrest",
+      "ventricular fibrillation",
+      "aed defibrillator survival",
+      "out of hospital cardiac arrest",
+      "post cardiac arrest care",
+      "targeted temperature management",
+      "shockable vs non shockable rhythm"
+    ],
+    "primarySpecialty": "Cardiology / Emergency Medicine / Critical Care",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against AHA 2020 CPR/ECC guidelines (Panchal Circulation 2020, PMID 33081529), ERC 2021 guidelines (Soar Resuscitation 2021), TTM trial (Nielsen NEJM 2013, PMID 24237006), TTM2 trial (Dankiewicz NEJM 2021, PMID 34133859), AHA Heart Disease & Stroke Statistics 2024 (Martin Circulation 2024, PMID 38264914), and the 4 Hs / 4 Ts framework. Numbers verified against CARES registry and the Sudden Cardiac Arrest Foundation."
+  },
+  "h1Title": "Cardiac Arrest: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Cardiology / Emergency Medicine / Critical Care",
+  "heroOverview": "Cardiac arrest is the abrupt loss of mechanical cardiac function with hemodynamic collapse, producing unresponsiveness, absent breathing or agonal gasps, and no detectable pulse within seconds. It is not a heart attack: a heart attack is a plumbing problem from blocked coronary blood flow, while cardiac arrest is an electrical pump failure that stops circulation entirely. Roughly 350,000 out-of-hospital and 290,000 in-hospital cardiac arrests occur each year in the United States, with overall survival to discharge near 10% out of hospital and 25% in hospital (AHA 2024 statistics). Bystander CPR doubles survival, and defibrillation within 3-5 minutes of collapse pushes survival to 50-70% for shockable rhythms. Treatment is time-critical: every minute without CPR or defibrillation reduces survival by 7-10%.",
+  "keyStats": {
+    "prevalence": "~350,000 out-of-hospital and ~290,000 in-hospital cardiac arrests per year in the US (AHA Heart Disease & Stroke Statistics 2024)",
+    "demographics": "Men 2-3x more affected than women out of hospital; median age 65; Black adults have higher incidence and lower survival than white adults",
+    "avgAge": "Out-of-hospital median 65; competitive athletes and young adults <35 typically driven by inherited cardiomyopathy or channelopathy",
+    "globalCases": "Estimated 4-5 million sudden cardiac arrests worldwide per year; survival to discharge under 10% in most registries"
+  },
+  "definition": "Cardiac arrest (ICD-10: I46.9 unspecified; I46.2 due to underlying cardiac condition) is the sudden cessation of organized cardiac mechanical activity, confirmed by unresponsiveness, absent or abnormal breathing, and no palpable central pulse. Circulation stops, end-organ perfusion ends, and irreversible brain injury begins within 4-6 minutes if cardiopulmonary resuscitation (CPR) is not started. The underlying rhythms split into two operational categories that drive treatment: shockable rhythms (ventricular fibrillation and pulseless ventricular tachycardia), where early defibrillation is curative, and non-shockable rhythms (asystole and pulseless electrical activity), where survival depends on high-quality CPR and reversal of an underlying cause. Cardiac arrest is mechanistically distinct from acute myocardial infarction, although infarction is the single most common trigger in adults over 35. In younger people (<35), inherited arrhythmia syndromes (Long QT, Brugada, catecholaminergic polymorphic VT) and structural cardiomyopathies (hypertrophic cardiomyopathy, ARVC) predominate. The condition is managed jointly by emergency medicine, cardiology, and critical care, with electrophysiology and cardiac genetics involved when an inherited cause is suspected.",
+  "typesClassification": [
+    {
+      "type": "Shockable rhythm arrest (VF / pulseless VT)",
+      "description": "Ventricular fibrillation and pulseless ventricular tachycardia. Survival to discharge reaches 30-40% with prompt CPR and defibrillation; this is the rhythm where AEDs save lives. Most common initial rhythm in witnessed adult collapse from coronary disease."
+    },
+    {
+      "type": "Non-shockable rhythm arrest (asystole / PEA)",
+      "description": "Asystole is electrical silence; pulseless electrical activity (PEA) is organized electrical activity without mechanical output. Survival is substantially lower (3-10%) and treatment focuses on reversing an underlying cause from the 4 Hs and 4 Ts framework rather than shock."
+    },
+    {
+      "type": "Out-of-hospital cardiac arrest (OHCA)",
+      "description": "Occurs in a community setting. Outcomes hinge on the chain of survival: early recognition, early CPR, early defibrillation, advanced care, and post-arrest care. Bystander CPR roughly doubles survival; AED use within 3-5 minutes can lift survival to 50-70% for VF."
+    },
+    {
+      "type": "In-hospital cardiac arrest (IHCA)",
+      "description": "Occurs in a hospitalized patient, often heralded by deteriorating vital signs in the preceding hours. Survival to discharge averages 25% in US registries, higher when arrest is witnessed on monitored telemetry."
+    },
+    {
+      "type": "Sudden cardiac death (SCD)",
+      "description": "Used for cardiac arrests that result in death, typically within an hour of symptom onset and without identified non-cardiac cause. The term overlaps with cardiac arrest but emphasizes the fatal outcome and is the epidemiologic category used in mortality statistics."
+    }
+  ],
+  "primarySymptoms": [
+    "Sudden collapse without warning, with loss of consciousness occurring within seconds of the rhythm change.",
+    "Absent breathing or agonal gasping respirations — slow, noisy, irregular gasps that are not effective breathing and must be treated as cardiac arrest.",
+    "No palpable central pulse at the carotid or femoral artery, with loss of audible heart sounds on auscultation.",
+    "Unresponsive to voice, touch, and painful stimuli within 10-15 seconds of arrest onset.",
+    "Generalized cyanosis or pallor of the lips, face, and fingertips as oxygen delivery to tissues halts.",
+    "Brief seizure-like activity or stiffening in roughly 10-15% of arrests due to global cerebral hypoperfusion — distinct from a primary epileptic seizure.",
+    "Loss of bladder or bowel control may occur shortly after collapse, reflecting depth of unconsciousness.",
+    "Preceding warning symptoms in roughly 50% of out-of-hospital arrests within 24 hours: chest pain, shortness of breath, palpitations, near-syncope, or unexplained nausea — often ignored.",
+    "Pupils dilate and become fixed within 30-60 seconds of arrest as brainstem perfusion fails, although early pupillary findings do not predict outcome."
+  ],
+  "earlyWarningSigns": [
+    "New or unexplained chest pain, especially exertional, in the days or hours before collapse",
+    "Recurrent palpitations, lightheadedness, or pre-syncope, particularly with exertion or emotion",
+    "Unexplained syncope, especially during exercise or while supine — always warrants cardiac evaluation",
+    "Family history of sudden unexplained death under age 50, or known inherited arrhythmia syndrome",
+    "New-onset dyspnea, orthopnea, or ankle swelling in a patient with known heart disease"
+  ],
+  "emergencySigns": [
+    "Sudden collapse with absent or gasping breathing — call emergency services immediately and start chest compressions without waiting to check a pulse",
+    "Unresponsive person who is not breathing normally — treat as cardiac arrest; bystander CPR doubles survival",
+    "Witnessed seizure-like activity followed by failure to wake up — may be the seizure-like onset of cardiac arrest, not a primary seizure",
+    "Crushing chest pain with sudden collapse — likely arrest from acute myocardial infarction; CPR plus AED, then transport for emergent coronary angiography",
+    "Drowning, electrocution, drug overdose, or blunt chest trauma with unconsciousness — high-risk arrest scenarios where prompt CPR and reversal of the cause are decisive"
+  ],
+  "causes": [
+    {
+      "cause": "Coronary artery disease and acute myocardial infarction",
+      "description": "The single most common cause in adults over 35. Ischemia destabilizes the myocardium and triggers ventricular fibrillation. Roughly 70% of out-of-hospital arrests with a shockable rhythm have significant coronary disease on post-arrest angiography."
+    },
+    {
+      "cause": "Structural cardiomyopathies",
+      "description": "Hypertrophic cardiomyopathy, dilated cardiomyopathy, and arrhythmogenic right ventricular cardiomyopathy (ARVC) generate substrates for re-entrant ventricular arrhythmias. Hypertrophic cardiomyopathy is the leading cause of sudden death in young athletes in the US."
+    },
+    {
+      "cause": "Inherited channelopathies",
+      "description": "Long QT syndrome, Brugada syndrome, catecholaminergic polymorphic VT, and short QT syndrome cause arrest in structurally normal hearts. These are the dominant etiology in arrest victims under age 35 and warrant cascade genetic screening of first-degree relatives."
+    },
+    {
+      "cause": "Severe heart failure and low ejection fraction",
+      "description": "Left ventricular ejection fraction below 35% sharply increases ventricular arrhythmia risk. This is the rationale for primary-prevention implantable cardioverter-defibrillators in eligible patients."
+    },
+    {
+      "cause": "Reversible causes — the 4 Hs",
+      "description": "Hypoxia, hypovolemia, hypo/hyperkalemia and other metabolic disturbances, and hypothermia. Each can trigger arrest in a previously healthy heart and each is correctable if recognized during resuscitation."
+    },
+    {
+      "cause": "Reversible causes — the 4 Ts",
+      "description": "Thrombosis (coronary or pulmonary embolism), tension pneumothorax, cardiac tamponade, and toxins (tricyclic antidepressants, cocaine, beta-blocker or calcium-channel blocker overdose, digoxin). These are the second half of the structured search for treatable causes during ACLS."
+    },
+    {
+      "cause": "Drowning, electrocution, and severe trauma",
+      "description": "Drowning produces hypoxic arrest; electrocution can directly induce VF; major chest trauma can cause tamponade, tension pneumothorax, or commotio cordis. Each scenario requires resuscitation tailored to the mechanism."
+    },
+    {
+      "cause": "Drug overdose and severe drug reactions",
+      "description": "Opioid overdose causes hypoxic arrest reversible with naloxone and ventilation. Sympathomimetics (cocaine, methamphetamine) provoke VF; tricyclics, digoxin, and antiarrhythmics can produce torsades de pointes or asystole."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Established coronary artery disease",
+      "category": "modifiable",
+      "description": "Prior myocardial infarction or known multivessel coronary disease is the strongest single risk factor in adults over 35, increasing sudden cardiac death risk 4-6 fold."
+    },
+    {
+      "factor": "Left ventricular ejection fraction below 35%",
+      "category": "modifiable",
+      "description": "Severely reduced systolic function predicts ventricular arrhythmia. Annual sudden death risk is 2-4% per year in this population without an ICD."
+    },
+    {
+      "factor": "Family history of sudden cardiac death under age 50",
+      "category": "genetic",
+      "description": "Suggests inherited channelopathy or cardiomyopathy. First-degree relatives warrant ECG, echocardiogram, and consideration of genetic testing per AHA / HRS expert consensus."
+    },
+    {
+      "factor": "Inherited arrhythmia syndromes",
+      "category": "genetic",
+      "description": "Long QT, Brugada, CPVT, hypertrophic cardiomyopathy, and ARVC each carry defined sudden-death risk profiles. Risk-stratification guides ICD placement and activity restrictions."
+    },
+    {
+      "factor": "Older age",
+      "category": "non-modifiable",
+      "description": "Incidence of out-of-hospital cardiac arrest rises sharply after age 65, paralleling the prevalence of coronary disease and heart failure."
+    },
+    {
+      "factor": "Male sex",
+      "category": "non-modifiable",
+      "description": "Men have 2-3 times the out-of-hospital cardiac arrest incidence of women across most age bands, narrowing after menopause."
+    },
+    {
+      "factor": "Hypertension, diabetes, and dyslipidemia",
+      "category": "modifiable",
+      "description": "Each accelerates coronary atherosclerosis and left ventricular remodeling. Treating these conditions reduces sudden death risk indirectly."
+    },
+    {
+      "factor": "Tobacco use",
+      "category": "modifiable",
+      "description": "Doubles risk of sudden cardiac death by accelerating atherosclerosis, increasing platelet aggregation, and promoting electrical instability. Risk drops measurably within 1 year of cessation."
+    },
+    {
+      "factor": "Severe electrolyte disturbance",
+      "category": "modifiable",
+      "description": "Hyperkalemia above 6.5 mmol/L, hypokalemia, hypomagnesemia, and severe acidosis all destabilize cardiac membranes and can precipitate fatal arrhythmia."
+    },
+    {
+      "factor": "QT-prolonging medications and substance use",
+      "category": "modifiable",
+      "description": "Macrolides, fluoroquinolones, certain antipsychotics, methadone, and ondansetron can prolong the QT interval and trigger torsades de pointes, especially in patients with baseline channelopathy."
+    },
+    {
+      "factor": "High-intensity competitive athletics in an undiagnosed structural heart disease",
+      "category": "environmental",
+      "description": "Sudden cardiac arrest is the leading medical cause of death in US young competitive athletes, driven mostly by undiagnosed hypertrophic cardiomyopathy, congenital coronary anomalies, and channelopathies."
+    }
+  ],
+  "affectedDemographics": [
+    "US out-of-hospital incidence: roughly 350,000 events per year; survival to hospital discharge approximately 10% (CARES registry)",
+    "US in-hospital incidence: roughly 290,000 events per year; survival to hospital discharge approximately 25% (Get With The Guidelines-Resuscitation)",
+    "Men comprise approximately 65% of out-of-hospital victims; median age 65",
+    "Black adults experience higher OHCA incidence and lower bystander-CPR rates and lower survival than white adults in US registries",
+    "Young athletes: estimated incidence 1 in 50,000 to 1 in 80,000 per year; hypertrophic cardiomyopathy is the leading structural cause in the US"
+  ],
+  "diagnosisOverview": "Diagnosis of cardiac arrest is clinical and immediate. The bedside criteria are unresponsiveness, absent or abnormal (agonal) breathing, and no central pulse — healthcare providers spend no more than 10 seconds confirming pulselessness before starting chest compressions. Lay rescuers are taught to skip the pulse check entirely and start CPR on any unresponsive person who is not breathing normally. Cardiac monitoring or AED pad placement defines the rhythm and divides the response: shockable (VF or pulseless VT) versus non-shockable (asystole or PEA). The structured search for a treatable cause uses the 4 Hs (hypoxia, hypovolemia, hypo/hyperkalemia and metabolic, hypothermia) and 4 Ts (thrombosis coronary or pulmonary, tension pneumothorax, tamponade, toxins). Post-arrest, once return of spontaneous circulation (ROSC) is achieved, the work shifts to identifying the underlying cause and limiting brain injury. A 12-lead ECG is obtained within 10 minutes of ROSC to identify ST elevation or other ischemic patterns. High-sensitivity troponin establishes the degree of myocardial injury. Bedside echocardiography assesses left ventricular function, wall motion, and pericardial effusion. CT of the head excludes intracranial hemorrhage as a primary cause; CT of the chest evaluates for pulmonary embolism or aortic dissection in selected cases. Coronary angiography is performed urgently when STEMI is present on the post-ROSC ECG, and is increasingly offered to comatose survivors of out-of-hospital cardiac arrest with shockable rhythm regardless of ECG. Laboratory workup includes electrolytes, magnesium, calcium, lactate, arterial blood gas, blood glucose, and toxicology when overdose is plausible. Inherited arrhythmia syndromes require a structured evaluation in survivors of unexplained arrest: resting ECG with attention to QT interval and Brugada pattern, exercise testing, signal-averaged ECG, cardiac MRI, and referral to a cardiac genetics service.",
+  "diagnosticTests": [
+    {
+      "test": "Cardiac monitoring or AED rhythm strip",
+      "purpose": "Categorizes the arrest as shockable (VF, pulseless VT) or non-shockable (asystole, PEA). This single decision drives the next treatment step — immediate defibrillation versus continued CPR with cause-directed therapy.",
+      "whatToExpect": "AED pads are placed on the bare chest within seconds of arrival; the device analyzes the rhythm in under 15 seconds and either advises shock or no shock. In hospital, continuous telemetry or defibrillator paddles deliver the same information."
+    },
+    {
+      "test": "12-lead ECG (post-ROSC)",
+      "purpose": "Identifies ST elevation (STEMI), new left bundle branch block, ischemic changes, QT prolongation, or Brugada pattern after return of spontaneous circulation. Drives the decision to activate emergent coronary angiography.",
+      "whatToExpect": "Ten electrodes are placed on the chest, arms, and legs; the tracing takes under a minute. Obtained within 10 minutes of ROSC per AHA guidelines."
+    },
+    {
+      "test": "High-sensitivity cardiac troponin",
+      "purpose": "Quantifies myocardial injury. Elevation is expected after any prolonged arrest, but a rising pattern with a STEMI ECG supports ischemic etiology and need for angiography.",
+      "whatToExpect": "Blood draw; results return within 30-60 minutes. Serial measurements (0 and 1-3 hours) refine the picture."
+    },
+    {
+      "test": "Bedside transthoracic echocardiography",
+      "purpose": "Assesses left ventricular function, regional wall motion, pericardial effusion or tamponade, right ventricular strain (suggesting pulmonary embolism), and valve pathology.",
+      "whatToExpect": "Performed at the bedside by a critical care or cardiology clinician; takes 5-15 minutes. Painless ultrasound through gel on the chest."
+    },
+    {
+      "test": "Coronary angiography",
+      "purpose": "Diagnostic and therapeutic. Indicated emergently for STEMI on post-ROSC ECG and considered for comatose OHCA survivors with shockable rhythm. Identifies occluded vessels suitable for percutaneous intervention.",
+      "whatToExpect": "Catheter introduced through the wrist or groin under local anesthetic; contrast is injected into the coronary arteries. Takes 30-60 minutes; ballooning and stenting of any culprit lesion follows immediately."
+    },
+    {
+      "test": "CT of the head and chest",
+      "purpose": "Excludes intracranial hemorrhage (especially subarachnoid) as a primary cause of arrest, and identifies pulmonary embolism or aortic dissection when clinical suspicion is present.",
+      "whatToExpect": "CT scanner table; the head scan takes about 5 minutes, chest CT with contrast another 10. Performed in the resuscitation bay or CT suite after stabilization."
+    },
+    {
+      "test": "Electrolyte panel and arterial blood gas",
+      "purpose": "Identifies the reversible 4-H causes: hypoxia, acidosis, hyper/hypokalemia, and metabolic derangement. Guides correction during ongoing resuscitation.",
+      "whatToExpect": "Point-of-care blood gas analyzers return results in 2-5 minutes; full electrolyte panel within 15-30 minutes from a central lab."
+    },
+    {
+      "test": "Cardiac MRI and genetic testing (in survivors of unexplained arrest)",
+      "purpose": "MRI identifies subtle structural disease (ARVC, sarcoidosis, infiltrative cardiomyopathies) missed on echo. Genetic testing screens for channelopathies and cardiomyopathy variants; informs cascade family screening.",
+      "whatToExpect": "MRI lasts 45-60 minutes in the scanner. Genetic testing requires a blood sample and is interpreted by a cardiac genetics team over 4-12 weeks."
+    }
+  ],
+  "treatmentOverview": "Resuscitation from cardiac arrest follows the AHA 2020 Basic Life Support (BLS) and Advanced Cardiovascular Life Support (ACLS) algorithms, mirrored by the ERC 2021 guidelines. The chain of survival drives outcomes: early recognition and activation of emergency response, early high-quality CPR, rapid defibrillation, advanced resuscitation, and post-arrest critical care. High-quality CPR means a compression rate of 100-120 per minute, a depth of at least 5 cm (and not more than 6 cm) in adults, full chest recoil between compressions, and minimization of interruptions to under 10 seconds at a time, with a compression-fraction goal above 80%. For shockable rhythms (VF or pulseless VT), defibrillation as early as possible is the single intervention with the largest survival benefit — biphasic shocks at 120-200 J according to manufacturer recommendations, delivered within 3-5 minutes of collapse where possible. CPR is resumed immediately after each shock for two minutes before the next rhythm check. Pharmacologic therapy during ACLS includes epinephrine 1 mg IV or IO every 3-5 minutes for both shockable and non-shockable rhythms, with strongest survival benefit in non-shockable arrest and when given early. Amiodarone 300 mg IV bolus, followed by 150 mg if needed, is given for refractory VF or pulseless VT after the second or third shock; lidocaine 1-1.5 mg/kg is an accepted alternative. Throughout, the team works through the 4 Hs and 4 Ts to find and reverse a treatable cause. Once return of spontaneous circulation is achieved, post-arrest care begins: targeted temperature management with a constant temperature between 32 and 36 degrees Celsius for at least 24 hours (the TTM and TTM2 trials together support 33 versus 36 degrees, with TTM2 finding no difference between 33 degrees and active normothermia at 37.5). Hemodynamic support targets a mean arterial pressure above 65 mmHg, oxygen saturation 92-98%, normoxia and normocapnia. Emergent coronary angiography is performed for STEMI on post-ROSC ECG and considered for comatose OHCA survivors with shockable rhythm. Neuroprognostication is delayed at least 72 hours after rewarming and combines clinical exam, EEG, somatosensory evoked potentials, neuron-specific enolase, and MRI. Long-term, survivors with persistently reduced ejection fraction, prior arrest from a structural or inherited cardiac cause, or recurrent VT receive an implantable cardioverter-defibrillator for secondary prevention.",
+  "medicalTreatments": [
+    {
+      "name": "High-quality cardiopulmonary resuscitation (CPR)",
+      "description": "Chest compressions 100-120 per minute, at least 5 cm depth, full recoil, minimal interruptions under 10 seconds, compression fraction above 80%. The foundation of every cardiac arrest response, started immediately and continued until ROSC or termination.",
+      "effectiveness": "Bystander CPR roughly doubles survival to discharge in OHCA; high-quality CPR is independently associated with neurologically intact survival."
+    },
+    {
+      "name": "Defibrillation (biphasic 120-200 J initially)",
+      "description": "Delivered as soon as a shockable rhythm (VF or pulseless VT) is identified. AEDs deliver pre-set energies; manual defibrillators allow escalating energy for refractory VF. CPR resumes immediately after each shock for 2 minutes before reassessing rhythm.",
+      "effectiveness": "Survival reaches 50-70% when AED is applied within 3-5 minutes of witnessed VF arrest; survival drops 7-10% per minute of delay."
+    },
+    {
+      "name": "Epinephrine 1 mg IV or IO every 3-5 minutes",
+      "description": "Alpha-adrenergic vasoconstriction increases coronary and cerebral perfusion pressure during CPR. Given as soon as possible in non-shockable arrest; after the second defibrillation in shockable arrest. The PARAMEDIC2 trial confirmed survival benefit but also increased rates of severe neurologic disability among survivors.",
+      "effectiveness": "Increases ROSC rates; modest improvement in 30-day survival in PARAMEDIC2 (3.2% vs 2.4%). Earlier administration in non-shockable arrest is associated with better outcomes."
+    },
+    {
+      "name": "Amiodarone 300 mg IV bolus, then 150 mg if needed",
+      "description": "Class III antiarrhythmic used for refractory VF or pulseless VT after at least one shock and a dose of epinephrine. Lidocaine 1-1.5 mg/kg is an accepted alternative under AHA 2020 guidelines.",
+      "effectiveness": "Improves rates of survival to hospital admission in shock-refractory VF; no clear long-term survival benefit shown but standard of care for refractory arrhythmia."
+    },
+    {
+      "name": "Advanced airway management",
+      "description": "Bag-mask ventilation is acceptable during initial resuscitation; supraglottic airway or endotracheal intubation is placed when feasible without interrupting compressions. Ventilation at 10 breaths per minute once an advanced airway is in place, avoiding hyperventilation.",
+      "effectiveness": "Equivalent outcomes between bag-mask and supraglottic airway in large trials (PART, AIRWAYS-2); endotracheal intubation requires trained personnel to avoid harm."
+    },
+    {
+      "name": "Targeted temperature management (TTM) 32-36 degrees Celsius for 24 hours",
+      "description": "Constant temperature between 32 and 36 degrees Celsius is maintained for at least 24 hours in comatose survivors of cardiac arrest with ROSC, followed by controlled rewarming and fever avoidance for at least 72 hours. The TTM2 trial (Dankiewicz 2021) showed no benefit of 33 over targeted normothermia at 37.5, but AHA / ERC continue to recommend active temperature control.",
+      "effectiveness": "Targeted temperature management improves neurologic outcomes in shockable OHCA; modern practice favors 36 degrees Celsius or strict normothermia with aggressive fever prevention."
+    },
+    {
+      "name": "Emergent coronary angiography and percutaneous intervention",
+      "description": "Indicated emergently in post-ROSC STEMI; considered in comatose OHCA survivors with shockable rhythm regardless of ECG. Reopens the culprit coronary artery, the most common reversible cause of adult cardiac arrest.",
+      "effectiveness": "Survival to discharge improved to 50-60% in observational cohorts of post-arrest STEMI patients treated with primary PCI; benefit less clear in stable post-arrest patients without STEMI."
+    },
+    {
+      "name": "Implantable cardioverter-defibrillator (ICD)",
+      "description": "Secondary prevention device for survivors of cardiac arrest from a structural or inherited cardiac cause and primary prevention for patients with ejection fraction at or below 35% on optimal medical therapy. Recognizes ventricular arrhythmia and delivers internal shock or anti-tachycardia pacing.",
+      "effectiveness": "Secondary-prevention ICDs reduce mortality by approximately 25-30% versus medical therapy in AVID, CIDS, and CASH trials."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Coronary artery bypass grafting (CABG)",
+      "description": "Considered in cardiac arrest survivors with multivessel coronary disease not amenable to percutaneous intervention. Restores myocardial perfusion and reduces future arrhythmic events.",
+      "successRate": "Operative mortality 2-4% in elective cases; long-term survival benefit in patients with multivessel disease and reduced ejection fraction (STICH trial)."
+    },
+    {
+      "name": "Surgical or transcatheter valve intervention",
+      "description": "Severe aortic stenosis is a recognized cause of syncope and sudden death; valve replacement reverses the substrate. Mitral regurgitation in cardiomyopathy may benefit from repair or replacement.",
+      "successRate": "Operative mortality below 3% for isolated valve surgery in modern series; symptom and survival benefit established in severe symptomatic aortic stenosis."
+    },
+    {
+      "name": "Surgical or alcohol septal myectomy for hypertrophic cardiomyopathy",
+      "description": "Reduces left ventricular outflow tract obstruction in obstructive hypertrophic cardiomyopathy. Combined with ICD placement when sudden-death risk is high.",
+      "successRate": "Symptomatic improvement in over 90% of patients; operative mortality below 1% in high-volume centers."
+    },
+    {
+      "name": "Cardiac transplantation",
+      "description": "Considered for end-stage heart failure with refractory ventricular arrhythmia despite ICD and medical therapy, and for selected cardiomyopathies with intractable arrhythmia.",
+      "successRate": "One-year survival approximately 90%, ten-year survival 55-60% in modern registries."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Mechanical CPR devices (LUCAS, AutoPulse)",
+      "description": "Provide consistent compressions during prolonged resuscitation, transport, or cath-lab procedures. Trials (LINC, PARAMEDIC) show non-inferiority to manual CPR for survival; main role is in scenarios where high-quality manual CPR cannot be sustained."
+    },
+    {
+      "name": "Extracorporeal cardiopulmonary resuscitation (ECPR)",
+      "description": "Veno-arterial ECMO cannulated during refractory cardiac arrest in selected patients (witnessed arrest, shockable initial rhythm, age under 70, no return of spontaneous circulation despite 20-30 minutes of high-quality CPR). The ARREST and Prague OHCA trials show survival benefit in carefully selected populations served by experienced centers."
+    }
+  ],
+  "whySeeSpecialist": "Survivors of cardiac arrest require coordinated long-term care from a cardiologist, ideally one with electrophysiology training when an inherited arrhythmia or structural arrhythmogenic substrate is suspected. Critical care follow-up assesses neurologic recovery; cardiac rehabilitation supports functional and psychological recovery. First-degree relatives of patients with sudden cardiac death under age 50, unexplained arrest, or a confirmed inherited cardiac condition should be evaluated at a cardiac genetics or inherited arrhythmia clinic with ECG, echocardiogram, and consideration of cascade genetic testing.",
+  "doctorSelectionGuide": "Look for board certification in cardiology, with subspecialty training in electrophysiology when arrhythmia management or ICD decisions are involved. Centers performing primary percutaneous coronary intervention 24 hours a day, with critical care services and post-arrest care protocols, deliver better outcomes for resuscitated patients. Ask whether the program offers targeted temperature management, neuroprognostication protocols, cardiac MRI, and access to a cardiac genetics service if family screening is needed.",
+  "hospitalCriteria": [
+    "Round-the-clock primary percutaneous coronary intervention capability",
+    "Critical care unit with post-cardiac-arrest care protocol including targeted temperature management",
+    "Electrophysiology service for ICD implantation and arrhythmia ablation",
+    "Cardiac MRI and access to advanced imaging for survivor evaluation",
+    "Established cascade screening pathway for inherited arrhythmia syndromes"
+  ],
+  "keyFacilities": [
+    "Cardiac catheterization laboratory",
+    "Cardiothoracic intensive care unit",
+    "Electrophysiology laboratory",
+    "Cardiac rehabilitation program",
+    "Cardiac genetics and inherited arrhythmia clinic"
+  ],
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+  "preventionStrategies": [
+    "Treat coronary artery disease aggressively — statins, blood pressure control, antiplatelet therapy, and revascularization where indicated reduce sudden cardiac death risk substantially",
+    "Identify and risk-stratify patients with reduced ejection fraction; offer primary-prevention ICD when ejection fraction is at or below 35% on optimal medical therapy for at least 3 months",
+    "Screen first-degree relatives of patients with sudden cardiac death under age 50 with ECG, echocardiogram, and family history; refer for genetic testing when an inherited syndrome is identified",
+    "Pre-participation cardiac screening for competitive athletes per AHA / ESC recommendations — history, examination, and ECG where feasible — detects hypertrophic cardiomyopathy and channelopathies",
+    "Public access defibrillation: place AEDs in high-traffic locations (airports, gyms, schools) and train staff in CPR + AED use — the strongest community-level intervention for OHCA survival",
+    "Stop smoking, control hypertension and diabetes, and manage sleep apnea — each contributes to arrhythmic risk over time"
+  ],
+  "lifestyleModifications": [
+    "Wear an ICD or wearable cardioverter-defibrillator as prescribed; report any shock therapy promptly for device interrogation",
+    "Avoid QT-prolonging medications when channelopathy is diagnosed; carry an updated medication-restriction card",
+    "Limit competitive high-intensity sport when inherited arrhythmia is diagnosed, guided by individualized risk-stratified counsel from a sports cardiologist",
+    "Adhere to cardiac rehabilitation — supervised exercise, education, and risk-factor management improve cardiovascular outcomes after arrest from coronary disease",
+    "Sleep with the head elevated and use CPAP if sleep apnea is diagnosed; untreated apnea worsens arrhythmia substrate",
+    "Maintain hydration, electrolyte balance, and avoid recreational stimulants — cocaine and amphetamines are well-recognized arrest triggers",
+    "Train household members in hands-only CPR and ensure a home AED if individual risk is exceptionally high"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean dietary pattern — olive oil, nuts, fish, vegetables, legumes — associated with lower coronary and sudden death risk",
+      "Oily fish twice weekly (salmon, sardines, mackerel) for omega-3 fatty acids and modest antiarrhythmic effect",
+      "High-fiber whole grains and legumes for cholesterol and glycemic control",
+      "Potassium-rich foods (bananas, leafy greens, avocados) unless restricted for kidney disease — supports stable repolarization",
+      "Adequate magnesium intake from nuts, seeds, whole grains, and leafy greens",
+      "Water and unsweetened beverages — avoid energy drinks and excessive caffeine in patients with arrhythmia"
+    ],
+    "avoid": [
+      "Trans fats and ultra-processed foods — each is independently associated with cardiovascular mortality",
+      "Excessive sodium (more than 2,300 mg per day) — worsens hypertension and heart failure",
+      "Heavy alcohol use — binge drinking is a recognized trigger of atrial fibrillation and ventricular arrhythmia",
+      "Recreational stimulants (cocaine, amphetamines, high-dose caffeine, energy drinks) — well-documented arrest triggers",
+      "Crash diets and severe potassium or magnesium depletion — destabilize cardiac repolarization",
+      "Grapefruit when on QT-prolonging or amiodarone-metabolized medications — raises drug levels through CYP3A4 inhibition"
+    ]
+  },
+  "exerciseGuidelines": "After recovery from cardiac arrest, exercise is reintroduced through cardiac rehabilitation rather than independently. Supervised aerobic exercise at 50-70% of heart-rate reserve, 3-5 sessions per week, plus resistance training, is the standard prescription for survivors of ischemic arrest. Patients with inherited arrhythmia syndromes or ICDs follow individualized programs developed with their cardiologist; competitive athletics may be restricted depending on the substrate. Resume daily activity gradually — walking, light household tasks — within the first 1-2 weeks, then progress as tolerated under specialist guidance.",
+  "dailyManagement": [
+    "Take all prescribed cardiac medications consistently — statins, beta-blockers, ACE inhibitors or ARBs, antiarrhythmics, and antiplatelets as indicated",
+    "Check pulse and blood pressure regularly; report sustained tachycardia, irregular rhythm, or symptomatic palpitations",
+    "Carry a medical-alert card or wristband listing diagnosis, ICD status, and key medications",
+    "Attend device interrogation visits and routine cardiology follow-up; modern ICDs can transmit data remotely",
+    "Track symptoms in a simple diary — dyspnea, palpitations, syncope, ICD shocks, exercise tolerance",
+    "Keep family members trained in CPR; identify the location of the nearest AED at home, work, and frequently visited venues"
+  ],
+  "prognosis": "Outcomes hinge on time-to-CPR, time-to-defibrillation, initial rhythm, and quality of post-arrest care. Out-of-hospital cardiac arrest survival to hospital discharge averages 10% across all rhythms, rising to 30-40% when the initial rhythm is shockable and bystander CPR with early AED use is delivered. In-hospital arrest survival averages 25%, with witnessed monitored arrests on telemetry reaching 50-60% to discharge. Bystander CPR roughly doubles survival; an AED applied within 3-5 minutes lifts survival to 50-70% in witnessed VF. Among survivors, neurologic recovery is the dominant prognostic question — roughly 80% of those discharged after coma resolution have good or moderate cerebral performance category at one year. Survivors of arrest from reversible ischemia treated with revascularization have similar long-term survival to patients with myocardial infarction without arrest, when ejection fraction recovers. Survivors of unexplained arrest without an identified reversible cause are at high risk of recurrence and typically receive a secondary-prevention ICD, which reduces mortality by approximately 25-30%.",
+  "recoveryTimeline": "Initial recovery follows the trajectory of resuscitated critical illness. Targeted temperature management runs for 24-72 hours post-ROSC, followed by controlled rewarming over 12-24 hours and active fever avoidance for at least 72 hours total. Neuroprognostication is deliberately delayed until at least 72 hours after rewarming to allow sedation to clear and brain injury to declare itself. Mechanical ventilation typically continues 2-7 days; ICU stay averages 5-10 days; hospital stay 10-21 days for uncomplicated survivors. Cardiac rehabilitation begins as soon as the patient is medically stable, usually within 1-3 weeks of discharge. Most cognitive recovery occurs within the first 3-6 months, with smaller gains continuing for a year. Return to driving in most jurisdictions follows a defined waiting period (typically 6 months) after arrest, depending on cause and recovery.",
+  "complications": [
+    "Anoxic brain injury with persistent coma, vegetative state, or major neurocognitive impairment — the single most disabling complication, driven by no-flow and low-flow time",
+    "Post-cardiac-arrest syndrome — systemic ischemia-reperfusion injury producing shock, myocardial dysfunction, and multi-organ failure in the first 24-72 hours",
+    "Recurrent ventricular arrhythmia and re-arrest, especially in the first 24 hours and in patients without a reversible cause",
+    "Aspiration pneumonia and ventilator-associated pneumonia during the critical care course",
+    "Rib and sternal fractures from chest compressions — expected in 30-40% of resuscitations, rarely with major thoracic injury",
+    "Post-traumatic stress disorder, anxiety, and depression in survivors and family members — routinely screened and treated during rehabilitation"
+  ],
+  "supportResources": [
+    {
+      "name": "American Heart Association — CPR & First Aid",
+      "url": "https://cpr.heart.org/",
+      "description": "CPR and AED training resources, patient and family education, and access to evidence-based survivor support materials."
+    },
+    {
+      "name": "Sudden Cardiac Arrest Foundation",
+      "url": "https://www.sca-aware.org/",
+      "description": "Patient and family support, survivor stories, and advocacy resources specifically for sudden cardiac arrest."
+    },
+    {
+      "name": "Resuscitation Council UK",
+      "url": "https://www.resus.org.uk/",
+      "description": "Public-facing CPR and AED guidance aligned with European Resuscitation Council guidelines."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "coronary-artery-disease",
+      "name": "Heart Attack (Myocardial Infarction)",
+      "keyDifference": "A heart attack is blocked coronary blood flow producing ischemia and chest pain, while the heart is still pumping; cardiac arrest is the abrupt loss of mechanical cardiac function with no pulse and no breathing. A heart attack can trigger cardiac arrest, but most people having a heart attack remain awake and circulating. Arrest requires immediate CPR; a heart attack requires emergency transport for reperfusion."
+    },
+    {
+      "slug": "epilepsy",
+      "name": "Seizure",
+      "keyDifference": "A generalized seizure produces shaking and unresponsiveness but the person continues to breathe and has a pulse, and recovery follows within minutes. Cardiac arrest can include brief seizure-like activity from cerebral hypoperfusion in the first 10-15 seconds, but breathing stops and the pulse is absent. The decisive bedside check is breathing and pulse, not movement."
+    },
+    {
+      "slug": "anaphylaxis",
+      "name": "Anaphylactic Shock",
+      "keyDifference": "Anaphylactic shock produces hypotension, airway edema, urticaria, and respiratory distress but the patient still has a pulse and is usually conscious initially. Cardiac arrest can complicate severe anaphylaxis if hypoxia or profound shock are uncorrected. Anaphylaxis responds to intramuscular epinephrine and airway support; arrest requires CPR with epinephrine 1 mg IV every 3-5 minutes."
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation with Rapid Ventricular Response",
+      "keyDifference": "Atrial fibrillation produces an irregular pulse and palpitations, sometimes with dyspnea or chest discomfort, but circulation continues. Cardiac arrest is the absence of any palpable pulse. Atrial fibrillation can rarely degenerate to ventricular fibrillation in patients with structural heart disease, providing a link between the two conditions."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure"
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation"
+    },
+    {
+      "slug": "coronary-artery-disease",
+      "name": "Coronary Artery Disease"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure",
+      "relevance": "Reduced ejection fraction is the strongest modifiable predictor of ventricular arrhythmia and sudden cardiac death."
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation",
+      "relevance": "Common in patients with structural heart disease and may degenerate to ventricular arrhythmia in selected substrates."
+    },
+    {
+      "slug": "coronary-artery-disease",
+      "name": "Coronary Artery Disease",
+      "relevance": "The most common adult cause of cardiac arrest — acute ischemia triggers ventricular fibrillation."
+    },
+    {
+      "slug": "hypertension",
+      "name": "High Blood Pressure",
+      "relevance": "Long-term hypertension drives left ventricular hypertrophy and remodeling, contributing to arrhythmic substrate."
+    },
+    {
+      "slug": "type-2-diabetes-mellitus",
+      "name": "Type 2 Diabetes Mellitus",
+      "relevance": "Accelerates coronary atherosclerosis and is associated with autonomic dysfunction that raises sudden death risk."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is the difference between cardiac arrest and a heart attack?",
+      "answer": "A heart attack is a blocked coronary artery that starves heart muscle of oxygen. Cardiac arrest is an electrical failure where the heart stops pumping, with no pulse and no breathing. A heart attack can trigger arrest. Heart attacks need reperfusion; arrest needs CPR and defibrillation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does cardiac arrest look like?",
+      "answer": "Sudden collapse, unresponsiveness, and absent or gasping breathing. The person may briefly stiffen or twitch in the first 15 seconds, then go limp with no pulse. If someone is not breathing normally after collapse, treat it as cardiac arrest and start chest compressions.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What should I do if someone collapses in front of me?",
+      "answer": "Call emergency services, send for the nearest AED, and start chest compressions at 100-120 per minute and 5 cm deep in the center of the chest. Untrained rescuers should skip the pulse check — push hard, push fast. Apply the AED as soon as it arrives.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cardiac arrest happen without warning?",
+      "answer": "Yes, in roughly half of cases. The other half experience symptoms in the prior 24 hours — chest pain, breathlessness, palpitations, fainting, or unexplained nausea. These warnings are commonly ignored. New chest pain or unexplained collapse should be evaluated urgently.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What causes cardiac arrest in young people?",
+      "answer": "Inherited cardiac conditions dominate under age 35: hypertrophic cardiomyopathy, Long QT syndrome, Brugada syndrome, CPVT, and ARVC. Congenital coronary anomalies and commotio cordis from sudden chest impact also account for cases, especially in competitive athletes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How effective is CPR at saving lives?",
+      "answer": "Bystander CPR roughly doubles survival to hospital discharge in out-of-hospital cardiac arrest. Quality matters: compressions at 100-120 per minute, at least 5 cm deep, with minimal interruptions. Even imperfect bystander CPR is far better than no CPR at all.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is an AED and how do I use one?",
+      "answer": "An AED detects shockable rhythms and delivers a shock to restore normal rhythm. Turn it on, attach the pads to the bare chest as shown, and follow the spoken prompts. Survival reaches 50-70% when an AED is used within 3-5 minutes of witnessed arrest.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are shockable versus non-shockable rhythms?",
+      "answer": "Shockable rhythms are ventricular fibrillation and pulseless ventricular tachycardia, where defibrillation can restore normal rhythm. Non-shockable rhythms are asystole and pulseless electrical activity, where CPR and reversing the cause are the priority.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the 4 Hs and 4 Ts in resuscitation?",
+      "answer": "They are the structured search for reversible causes. The 4 Hs are hypoxia, hypovolemia, hypo or hyperkalemia, and hypothermia. The 4 Ts are thrombosis (coronary or pulmonary), tension pneumothorax, tamponade, and toxins. Each has a specific treatment that can restore circulation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is targeted temperature management after cardiac arrest?",
+      "answer": "It keeps a comatose survivor's core temperature between 32 and 36 degrees Celsius for at least 24 hours after ROSC, then prevents fever for another 48 hours. The TTM2 trial showed no advantage of 33 over normothermia at 37.5, so modern practice favors strict temperature control.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can the brain recover after cardiac arrest?",
+      "answer": "Yes, often. Outcome depends on no-flow time — every minute without circulation worsens prognosis. With prompt CPR, defibrillation, and modern post-arrest care, roughly 80% of patients discharged after coma have a good or moderate cerebral performance score at one year.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is epinephrine used in cardiac arrest?",
+      "answer": "Epinephrine constricts peripheral vessels and increases blood flow to the heart and brain during CPR. It is given as 1 mg IV or IO every 3-5 minutes. PARAMEDIC2 confirmed a small survival benefit but also more severe neurologic disability, so CPR and defibrillation remain top priorities.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need an implantable defibrillator after surviving cardiac arrest?",
+      "answer": "Most survivors without a fully reversible cause receive a secondary-prevention ICD. The device monitors for ventricular arrhythmia and delivers internal therapy if it returns. AVID, CIDS, and CASH trials show ICDs reduce mortality by roughly 25-30% versus medication alone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should my family be screened after I survive cardiac arrest?",
+      "answer": "Yes, particularly if the cause was unexplained or an inherited condition was identified. First-degree relatives are evaluated with ECG, echocardiogram, family history, and cascade genetic testing through a cardiac genetics service to detect channelopathies or cardiomyopathies.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cardiac arrest happen during exercise?",
+      "answer": "Yes. Exertional arrest is the leading medical cause of death in young competitive athletes, driven by undiagnosed hypertrophic cardiomyopathy, congenital coronary anomalies, and channelopathies. Pre-participation screening and on-site AED programs reduce these events.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do drowning and electrocution cause cardiac arrest?",
+      "answer": "Drowning produces hypoxic arrest because oxygen delivery fails before the heart; rescue breathing matters more than in adult coronary arrest. Electrocution can directly induce ventricular fibrillation by passing current through the heart; treat with standard ACLS once safe.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can opioid overdose cause cardiac arrest?",
+      "answer": "Yes. Opioid overdose suppresses breathing, leading to hypoxia and arrest. Naloxone reverses opioid effects on respiration but does not substitute for CPR once arrest has occurred. Treat with rescue breathing, chest compressions, naloxone, and emergency services activation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens in the hospital after I survive cardiac arrest?",
+      "answer": "Care moves to a critical care unit where temperature, blood pressure, oxygen, and ventilation are tightly controlled. Coronary angiography follows if a heart attack triggered the arrest. Imaging and laboratory tests search for the cause; rehabilitation and ICD discussions follow.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does recovery take after cardiac arrest?",
+      "answer": "Critical care stays usually run 5-10 days, hospital stays 10-21 days for uncomplicated survivors, and most cognitive recovery occurs in the first 3-6 months. Cardiac rehabilitation lasts about 12 weeks. Return to driving usually follows a 6-month waiting period.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can cardiac arrest be prevented?",
+      "answer": "Yes, in many cases. Treating coronary disease, managing heart failure, placing primary-prevention ICDs, screening athletes, family screening, and public-access AEDs reduce sudden death rates. Smoking cessation and blood pressure control help at the individual level.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does cardiac arrest run in families?",
+      "answer": "Sometimes. Inherited arrhythmia syndromes and cardiomyopathies cluster in families, and unexplained sudden death under age 50 in a relative raises personal risk. First-degree relatives should be evaluated with ECG, echocardiogram, and genetic counseling.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is post-cardiac-arrest syndrome?",
+      "answer": "Post-cardiac-arrest syndrome is a global ischemia-reperfusion injury that follows return of circulation. It produces shock, myocardial dysfunction, multi-organ injury, and brain injury in the first 24-72 hours. Care focuses on hemodynamic support, temperature control, and treating the cause.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Cardiac Arrest (sudden loss of heart function)",
+  "regionalNames": [
+    {
+      "name": "हृदय घात / हार्ट अरेस्ट",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Arrêt cardiaque",
+      "region": "France",
+      "language": "fr"
+    }
+  ],
+  "searchTags": [
+    "cardiac arrest",
+    "sudden cardiac arrest",
+    "sudden cardiac death",
+    "ventricular fibrillation",
+    "VF arrest",
+    "pulseless VT",
+    "asystole",
+    "PEA",
+    "CPR",
+    "AED",
+    "defibrillation",
+    "ACLS",
+    "post cardiac arrest care",
+    "targeted temperature management",
+    "out of hospital cardiac arrest"
+  ],
+  "symptomKeywords": [
+    "sudden collapse",
+    "no pulse",
+    "not breathing",
+    "agonal gasping",
+    "unresponsive",
+    "blue lips",
+    "fainting and not waking up",
+    "seizure with no breathing"
+  ],
+  "metaTitle": "Cardiac Arrest: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Cardiac arrest is the sudden loss of heart pump function. Symptoms, CPR and AED steps, causes, post-arrest care, and prognosis reviewed by our medical board.",
+  "keywords": [
+    "cardiac arrest",
+    "sudden cardiac arrest",
+    "cardiac arrest symptoms",
+    "cardiac arrest vs heart attack",
+    "ventricular fibrillation",
+    "CPR cardiac arrest",
+    "AED defibrillation",
+    "out of hospital cardiac arrest",
+    "post cardiac arrest care",
+    "targeted temperature management",
+    "sudden cardiac death",
+    "ACLS algorithm",
+    "shockable rhythm"
+  ],
+  "lastReviewed": "2026-05-18",
+  "sources": [
+    {
+      "title": "Panchal AR, Bartos JA, Cabañas JG, et al. Part 3: Adult Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2020;142(16_suppl_2):S366-S468.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33081529/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Soar J, Böttiger BW, Carli P, et al. European Resuscitation Council Guidelines 2021: Adult advanced life support. Resuscitation. 2021;161:115-151.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33773825/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted Temperature Management at 33°C versus 36°C after Cardiac Arrest. New England Journal of Medicine. 2013;369(23):2197-2206.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24237006/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus Normothermia after Out-of-Hospital Cardiac Arrest (TTM2). New England Journal of Medicine. 2021;384(24):2283-2294.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34133859/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Martin SS, Aday AW, Almarzooq ZI, et al. 2024 Heart Disease and Stroke Statistics: A Report of US and Global Data From the American Heart Association. Circulation. 2024;149(8):e347-e913.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38264914/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Perkins GD, Ji C, Deakin CD, et al. A Randomized Trial of Epinephrine in Out-of-Hospital Cardiac Arrest (PARAMEDIC2). New England Journal of Medicine. 2018;379(8):711-721.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30021076/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Yannopoulos D, Bartos J, Raveendran G, et al. Advanced reperfusion strategies for patients with out-of-hospital cardiac arrest and refractory ventricular fibrillation (ARREST): a phase 2, single centre, open-label, randomised controlled trial. Lancet. 2020;396(10265):1807-1816.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33197396/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "Dr. James Mitchell",
+    "slug": "dr-james-mitchell-rheumatology"
+  }
+}

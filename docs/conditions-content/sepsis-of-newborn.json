@@ -1,0 +1,702 @@
+{
+  "_meta": {
+    "slug": "sepsis-of-newborn",
+    "tier": 1,
+    "headTerm": "neonatal sepsis",
+    "longTailKeywords": [
+      "neonatal sepsis symptoms",
+      "early-onset neonatal sepsis",
+      "late-onset neonatal sepsis",
+      "GBS sepsis newborn",
+      "sepsis of newborn treatment",
+      "neonatal sepsis blood culture",
+      "ampicillin gentamicin neonate",
+      "preterm sepsis risk",
+      "neonatal sepsis ICD-10 P36.9",
+      "I:T ratio neonatal sepsis"
+    ],
+    "primarySpecialty": "Neonatology",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Cross-verified against AAP Red Book 2024-2027, CDC 2019 GBS guidance (Verani PMID 31097658), AAP COFN 2018 EOS management (Puopolo PMID 30401738), Cochrane neonatal antibiotic reviews, and Stoll NRN cohort data. Drug doses cross-checked against NeoFax and Nelson Pediatric Antimicrobial Therapy 2024."
+  },
+  "h1Title": "Neonatal Sepsis (Sepsis of Newborn): Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neonatology",
+  "heroOverview": "Neonatal sepsis is a systemic bacterial, viral, or fungal infection of the bloodstream in the first 28 days of life, split clinically into early-onset (<72 hours, transmitted from mother during labor) and late-onset (3-28 days, usually hospital- or community-acquired). Incidence runs 1-5 per 1,000 live births for early-onset disease in high-income settings, climbing to 30-50 per 1,000 in very-low-birth-weight preterm infants where late-onset sepsis dominates. Babies present with nonspecific signs — temperature instability, tachypnea, poor feeding, lethargy, apnea — that demand empiric antibiotics within an hour of suspicion. Untreated, mortality reaches 30-50% in preterm neonates and 5-20% in term infants. Prompt blood culture sampling followed by empiric ampicillin plus gentamicin (early-onset) or vancomycin plus an aminoglycoside (late-onset) saves the majority of treated infants.",
+  "keyStats": {
+    "prevalence": "1-5 per 1,000 live births for early-onset sepsis in high-income countries; 30-50 per 1,000 in VLBW preterm infants for late-onset disease",
+    "demographics": "Disproportionately affects preterm (<37 weeks), very-low-birth-weight (<1,500 g), and male infants",
+    "avgAge": "Early-onset: presents within first 72 hours of life (median day 1); late-onset: day 3 to day 28, peaking around day 7-14 in NICU graduates",
+    "globalCases": "Approximately 1.3 million annual cases worldwide; 230,000-400,000 neonatal sepsis deaths each year (WHO 2022)"
+  },
+  "definition": "Neonatal sepsis (ICD-10: P36.9) is a clinical syndrome of systemic infection during the first 28 days of life, accompanied by signs of systemic inflammation and confirmed or strongly suspected bacteremia, fungemia, or viremia. Two operational categories drive management: early-onset sepsis (EOS) presenting within 72 hours of birth and overwhelmingly caused by pathogens acquired from the maternal genitourinary tract during labor, and late-onset sepsis (LOS) presenting from day 3 through day 28, more commonly hospital-acquired in NICU patients or community-acquired in healthy term infants. The dominant EOS pathogens in the United States are Group B Streptococcus (Streptococcus agalactiae, roughly 40% of cases since universal intrapartum prophylaxis), Escherichia coli (about 25%, now the leading cause in preterm infants), Listeria monocytogenes, viridans streptococci, and Haemophilus influenzae. LOS in NICU graduates is dominated by coagulase-negative staphylococci, Staphylococcus aureus including MRSA, gram-negative rods such as Klebsiella and Pseudomonas, and Candida species. Neonatal sepsis is managed by neonatologists in collaboration with pediatric infectious disease specialists; in low-resource settings it remains a leading cause of neonatal mortality.",
+  "typesClassification": [
+    {
+      "type": "Early-onset sepsis (EOS, <72 hours)",
+      "description": "Vertical transmission from the maternal genitourinary or gastrointestinal tract during labor or via ascending infection after rupture of membranes. Group B Streptococcus and Escherichia coli account for roughly 70% of cases. Presents with respiratory distress, temperature instability, and shock in the first three days of life."
+    },
+    {
+      "type": "Late-onset sepsis (LOS, 3-28 days)",
+      "description": "Postnatally acquired from caregivers, central venous catheters, ventilator circuits, or the community. Coagulase-negative staphylococci dominate in NICU graduates with central lines; community-acquired LOS in term infants is more often caused by Staphylococcus aureus, E. coli, or Group B Streptococcus."
+    },
+    {
+      "type": "Very-early-onset sepsis (<24 hours)",
+      "description": "A subset of EOS presenting in the first day of life, often with severe respiratory failure, persistent pulmonary hypertension, and shock. Mortality is highest in this group, particularly with E. coli sepsis in preterm infants."
+    },
+    {
+      "type": "Culture-negative clinical sepsis",
+      "description": "Clinical and laboratory picture consistent with sepsis but blood cultures remain sterile, often because of low blood-volume samples (<1 mL), prior maternal antibiotics, or fastidious organisms. Treated as proven sepsis when biomarkers and clinical course support the diagnosis."
+    },
+    {
+      "type": "Neonatal meningitis (sepsis subset)",
+      "description": "Occurs in 0.1-0.4 per 1,000 live births in EOS and at higher rates in LOS. Same pathogens as bloodstream infection but requires longer treatment (14-21 days) and adjusted antibiotic CSF penetration. Lumbar puncture is required whenever blood culture is positive or signs are suggestive."
+    }
+  ],
+  "primarySymptoms": [
+    "Temperature instability with hypothermia (rectal temperature below 36.0°C) more common than fever in neonates; intermittent low-grade fever above 38.0°C also raises suspicion, especially in term infants.",
+    "Tachypnea (respiratory rate over 60 breaths per minute), grunting, nasal flaring, and intercostal retractions reflecting pneumonia or sepsis-driven respiratory failure.",
+    "Apnea (pauses in breathing longer than 20 seconds, or shorter pauses with bradycardia or desaturation) — a common and often the only sign of sepsis in preterm infants.",
+    "Poor feeding, reduced suck strength, vomiting, abdominal distension, or new feeding intolerance with increased gastric residuals in NICU infants.",
+    "Lethargy and hypotonia with decreased spontaneous movement, weak cry, and reduced response to handling; some infants instead show irritability and a high-pitched cry.",
+    "Glucose dysregulation with either hypoglycemia (below 47 mg/dL after the first hours of life) or hyperglycemia (over 150 mg/dL in a fed neonate) due to stress-driven insulin resistance and impaired hepatic gluconeogenesis.",
+    "Skin mottling, pallor, cool peripheries, prolonged capillary refill (>3 seconds), and weak peripheral pulses signaling impaired perfusion and early septic shock.",
+    "Jaundice appearing within the first 24 hours of life or rising rapidly thereafter, often reflecting hemolysis or direct hyperbilirubinemia from cholestatic sepsis.",
+    "Tachycardia (heart rate persistently over 180 beats per minute when not crying) or bradycardia (below 100 beats per minute in a non-vagal context), both of which are red flags in a sick newborn.",
+    "Petechiae, purpura, or new bleeding from puncture sites suggesting sepsis-associated disseminated intravascular coagulation."
+  ],
+  "earlyWarningSigns": [
+    "Mother with intrapartum fever (≥38.0°C), confirmed chorioamnionitis, or prolonged rupture of membranes ≥18 hours — each independently raises baseline EOS risk",
+    "Subtle reduction in feeding volume or interest from the previous shift, especially in a previously well-feeding neonate",
+    "Rising or falling baseline heart-rate variability captured on continuous monitoring — abnormal heart-rate characteristics can precede clinical sepsis by 12-24 hours in preterm infants (HeRO score)",
+    "Persistent unexplained mild tachypnea (50-60 breaths/minute) or oxygen requirement creeping up by 5-10% over a shift",
+    "New thermal instability requiring frequent isolette temperature adjustments without environmental cause"
+  ],
+  "emergencySigns": [
+    "Apnea with bradycardia and desaturation requiring positive-pressure ventilation — transfer to an NICU and start empiric antibiotics within 60 minutes",
+    "Septic shock with mottled skin, prolonged capillary refill, weak pulses, lactate above 4 mmol/L, or hypotension — requires immediate fluid resuscitation and inotropic support",
+    "Bulging fontanelle, seizures, opisthotonus, or unexplained encephalopathy — mandates urgent lumbar puncture and meningitis-dose antibiotics",
+    "Petechiae or purpura with bleeding from venipuncture sites — suggests sepsis-associated DIC and requires blood products plus source control",
+    "Refractory hypoglycemia, persistent metabolic acidosis, or pulmonary hypertension in a sick newborn — escalation to ECMO consideration may be life-saving"
+  ],
+  "causes": [
+    {
+      "cause": "Group B Streptococcus (Streptococcus agalactiae)",
+      "description": "Remains the single most common EOS pathogen in the United States, responsible for approximately 40% of cases. Vertically transmitted from colonized maternal genital tract during labor. Universal late-pregnancy GBS screening and intrapartum antibiotic prophylaxis (penicillin, ampicillin, or cefazolin) have reduced EOS GBS incidence from 1.7 to 0.23 per 1,000 live births since the 1990s."
+    },
+    {
+      "cause": "Escherichia coli",
+      "description": "Accounts for approximately 25% of EOS in term infants and is now the leading EOS pathogen in preterm and very-low-birth-weight neonates, where it carries the highest mortality. Ampicillin resistance has risen markedly with intrapartum antibiotic use, shifting empiric coverage toward gentamicin-inclusive regimens."
+    },
+    {
+      "cause": "Listeria monocytogenes",
+      "description": "A gram-positive rod transmitted transplacentally or during delivery after maternal ingestion of contaminated soft cheeses, deli meats, or unpasteurized dairy. Causes granulomatosis infantiseptica with widespread micro-abscesses, often with severe respiratory and CNS disease. Coverage with ampicillin is the rationale for ampicillin in empiric EOS regimens."
+    },
+    {
+      "cause": "Coagulase-negative staphylococci (CoNS, primarily Staphylococcus epidermidis)",
+      "description": "Dominate late-onset sepsis in NICU patients with central venous catheters, accounting for 40-60% of LOS in very-low-birth-weight infants. Slow-growing but cause persistent bacteremia, line infections, and contribute to neurodevelopmental injury. Most isolates are methicillin-resistant and require vancomycin."
+    },
+    {
+      "cause": "Staphylococcus aureus (including MRSA)",
+      "description": "Responsible for 8-15% of LOS, more virulent than CoNS, and increasingly methicillin-resistant. Causes bloodstream infection, pneumonia, endocarditis, septic arthritis, and osteomyelitis in neonates. Empiric vancomycin coverage is standard until susceptibilities return."
+    },
+    {
+      "cause": "Gram-negative enteric rods (Klebsiella, Enterobacter, Pseudomonas, Serratia)",
+      "description": "Account for 10-20% of LOS, with higher rates in low-resource and outbreak settings. Often multidrug-resistant; empiric coverage uses an aminoglycoside or extended-spectrum cephalosporin, occasionally a carbapenem when local resistance demands it."
+    },
+    {
+      "cause": "Candida species (C. albicans, C. parapsilosis)",
+      "description": "Cause 5-10% of LOS in extremely-low-birth-weight infants on prolonged parenteral nutrition, broad-spectrum antibiotics, and central lines. Carry 30-40% mortality and high rates of neurodevelopmental impairment; fluconazole prophylaxis is recommended in NICUs with high baseline rates."
+    },
+    {
+      "cause": "Maternal chorioamnionitis and intrapartum risk factors",
+      "description": "Ascending infection from the maternal genital tract through ruptured membranes seeds amniotic fluid and the fetus. Confirmed chorioamnionitis raises EOS incidence roughly 4-fold; prolonged ROM ≥18 hours and intrapartum fever ≥38.0°C are independent contributors."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Prematurity (<37 weeks gestation)",
+      "category": "non-modifiable",
+      "description": "Preterm infants have immature innate immunity, low immunoglobulin levels, and longer NICU exposure. EOS rates are 3-10 times higher than in term infants, and LOS incidence in VLBW preterm infants reaches 21-26%."
+    },
+    {
+      "factor": "Low birth weight (<2,500 g) and especially very low birth weight (<1,500 g)",
+      "category": "non-modifiable",
+      "description": "Each 500-gram decrease in birth weight roughly doubles sepsis risk. VLBW infants carry the highest LOS rates due to central lines, mechanical ventilation, and prolonged parenteral nutrition."
+    },
+    {
+      "factor": "Maternal Group B Streptococcus colonization without adequate intrapartum prophylaxis",
+      "category": "modifiable",
+      "description": "Universal screening at 36-37 weeks plus penicillin given ≥4 hours before delivery reduces EOS GBS by approximately 80%. Inadequate prophylaxis (under 4 hours, wrong antibiotic, or no antibiotic in a colonized mother) is a leading driver of preventable EOS."
+    },
+    {
+      "factor": "Prolonged rupture of membranes (≥18 hours)",
+      "category": "modifiable",
+      "description": "Ascending colonization of amniotic fluid scales with ROM duration. EOS risk rises about 2-fold at 18 hours and 5-10 fold at 24 hours, modified by maternal antibiotic status and chorioamnionitis."
+    },
+    {
+      "factor": "Maternal chorioamnionitis or intrapartum fever ≥38.0°C",
+      "category": "modifiable",
+      "description": "Chorioamnionitis raises EOS risk 4-fold; intrapartum fever alone raises risk 2-3 fold. The Kaiser EOS risk calculator quantifies these factors to guide selective antibiotic use in well-appearing newborns ≥34 weeks."
+    },
+    {
+      "factor": "Prior sibling with invasive Group B Streptococcal disease",
+      "category": "non-modifiable",
+      "description": "Indicates persistent maternal colonization and an immunologic vulnerability; current ACOG guidance recommends intrapartum prophylaxis regardless of screening result in this scenario."
+    },
+    {
+      "factor": "Central venous catheter (CVC, PICC, umbilical catheter)",
+      "category": "modifiable",
+      "description": "The single largest driver of LOS in NICUs. Each additional CVC-day increases bloodstream infection risk; central-line bundle adherence reduces NICU CLABSI rates by 40-70%."
+    },
+    {
+      "factor": "Mechanical ventilation and endotracheal intubation",
+      "category": "modifiable",
+      "description": "Ventilator-associated pneumonia in neonates increases bloodstream infection risk, particularly with Pseudomonas, Klebsiella, and S. aureus. Each ventilator-day raises risk; early extubation reduces incidence."
+    },
+    {
+      "factor": "Prolonged parenteral nutrition (especially with lipid emulsions)",
+      "category": "modifiable",
+      "description": "Lipid emulsions promote coagulase-negative staphylococcal and Candida bloodstream infection. Cumulative lipid days are independently predictive of LOS in VLBW infants."
+    },
+    {
+      "factor": "Maternal urinary tract infection or bacteriuria at delivery",
+      "category": "modifiable",
+      "description": "Untreated maternal UTI doubles neonatal EOS risk via shared genitourinary pathogens, particularly E. coli."
+    },
+    {
+      "factor": "Male sex",
+      "category": "non-modifiable",
+      "description": "Male neonates have approximately 1.5-2 fold higher sepsis incidence and mortality across multiple cohorts, attributed to X-linked immune gene effects and differences in surfactant maturation."
+    }
+  ],
+  "affectedDemographics": [
+    "Preterm and very-low-birth-weight infants carry the highest burden — LOS incidence in VLBW preterm infants is 21-26% per NICHD NRN data, versus 0.1-0.4% in term infants",
+    "In low- and middle-income countries, neonatal sepsis accounts for an estimated 230,000-400,000 deaths annually and is a leading cause of under-5 mortality (WHO 2022)",
+    "United States EOS incidence has fallen from 1.7 to 0.5-0.8 per 1,000 live births since universal GBS intrapartum prophylaxis in the late 1990s (CDC ABCs surveillance)",
+    "Indigenous and South Asian populations carry higher rates of LBW prematurity, indirectly raising sepsis incidence; access to antenatal care moderates this disparity"
+  ],
+  "diagnosisOverview": "Diagnosis of neonatal sepsis hinges on a high-suspicion clinical assessment followed by prompt blood culture sampling and empiric antibiotic therapy, ideally within 60 minutes of recognition. The gold-standard test remains a single aerobic blood culture using at least 1 mL of blood collected before antibiotics begin, with most true-positive cultures flagging within 24-36 hours on modern automated systems; lower-volume cultures (<0.5 mL) miss up to 40% of true bacteremias. Anaerobic cultures are added when bowel pathology is suspected. Complete blood count with differential is supportive but not diagnostic: an immature-to-total neutrophil ratio (I:T) above 0.2, absolute neutrophil count below the lower limit for age (Manroe or Mouzinho curves), or platelet count below 150,000/µL raise the post-test probability of sepsis. Serial C-reactive protein measured at presentation and 12-24 hours later has a strong negative predictive value (97-99%) when both values stay below 1.0 mg/dL. Procalcitonin shows similar properties with age-adjusted normal ranges in the first 48 hours of life. A lumbar puncture is required when the blood culture grows a pathogen, when meningitis is clinically suspected, when the infant is sick enough to need fluid resuscitation, or in any infant being treated for proven LOS — neonatal meningitis incidence runs 0.1-0.4 per 1,000 in EOS and 1-2 per 1,000 in LOS preterm infants. Urine culture by suprapubic aspiration or catheter is added for LOS workup (yield is low in EOS). In intubated infants, tracheal aspirate Gram stain and culture help guide pneumonia coverage. Chest radiography is obtained for respiratory signs to identify pneumonia, surfactant deficiency, transient tachypnea, or pneumothorax. The Kaiser Permanente neonatal EOS risk calculator integrates maternal and infant factors to guide selective empiric antibiotics in well-appearing late-preterm and term newborns, reducing antibiotic exposure by 40-50% without missing sepsis when applied per AAP COFN 2018 guidance.",
+  "diagnosticTests": [
+    {
+      "test": "Blood culture (aerobic, ≥1 mL pre-antibiotic)",
+      "purpose": "Gold-standard confirmation of bacteremia or fungemia. Sensitivity rises sharply with sample volume; ≥1 mL captures roughly 90% of true bacteremias, while 0.5 mL misses up to 40%. Most true positives flag within 24-36 hours on automated continuous-monitoring systems.",
+      "whatToExpect": "A nurse or clinician disinfects the skin, draws blood by peripheral venipuncture or umbilical catheter at first sampling, and the lab incubates the bottle continuously. Preliminary growth and Gram stain results return within 24-48 hours; final identification and susceptibilities take 48-72 hours."
+    },
+    {
+      "test": "Complete blood count with differential (CBC w/ diff)",
+      "purpose": "Supportive testing. An I:T ratio above 0.2, ANC outside Manroe or Mouzinho age-specific ranges, neutropenia, or thrombocytopenia (<150,000/µL) raise sepsis probability and inform treatment decisions when cultures are pending.",
+      "whatToExpect": "Same blood draw as the culture in most workflows. Results return within 1-2 hours and are repeated 12-24 hours later to capture evolving trends."
+    },
+    {
+      "test": "Serial C-reactive protein (CRP)",
+      "purpose": "Acute-phase reactant with a strong negative predictive value (97-99%) when serial measurements at presentation and 12-24 hours both remain below 1.0 mg/dL. Rises in approximately 80% of bacteremic neonates by 24 hours of illness.",
+      "whatToExpect": "Single blood test at presentation, repeated 12-24 hours later. Results return within 1-2 hours."
+    },
+    {
+      "test": "Procalcitonin (PCT)",
+      "purpose": "Biomarker with age-adjusted normal range in the first 48 hours of life. Useful adjunct to CRP, with similar negative predictive value when serial measurements remain low; some centers use PCT-guided antibiotic discontinuation (NeoPInS trial).",
+      "whatToExpect": "Blood test obtained with initial sepsis workup; same sample as CRP in most labs. Results return same day."
+    },
+    {
+      "test": "Lumbar puncture with CSF cell count, protein, glucose, Gram stain, and culture",
+      "purpose": "Identifies meningitis, which occurs in 0.1-0.4 per 1,000 EOS and at higher rates in LOS preterm infants. Mandatory when blood culture is positive, when the infant has neurologic signs, or in proven LOS cases.",
+      "whatToExpect": "The clinician positions the infant, cleans the lower back, and inserts a small spinal needle between vertebrae to collect 1-2 mL of CSF. The procedure takes 5-15 minutes; mild discomfort and a transient bruise are normal."
+    },
+    {
+      "test": "Urine culture (suprapubic aspiration or catheter specimen)",
+      "purpose": "Adds yield in late-onset sepsis (3-15% of LOS workups in some cohorts); yield in EOS is too low to justify routinely. Identifies pyelonephritis as a sepsis source.",
+      "whatToExpect": "Urine collected sterilely either through a catheter or by suprapubic needle aspiration of the bladder. Results return in 24-48 hours."
+    },
+    {
+      "test": "Tracheal aspirate Gram stain and culture (intubated infants)",
+      "purpose": "Identifies pneumonia pathogens and guides empiric antibiotic adjustment in ventilator-associated infections.",
+      "whatToExpect": "Respiratory therapist passes a sterile suction catheter through the endotracheal tube and collects secretions for the lab. Results return in 24-72 hours."
+    },
+    {
+      "test": "Chest radiograph",
+      "purpose": "Identifies pneumonia, surfactant-deficiency lung disease, transient tachypnea of the newborn, pneumothorax, or congenital lung anomaly contributing to respiratory signs.",
+      "whatToExpect": "Bedside portable AP film. Takes a few minutes; results read same day."
+    }
+  ],
+  "treatmentOverview": "Empiric antibiotic therapy is started within an hour of sepsis suspicion, after blood cultures (and other appropriate cultures) have been drawn. For early-onset sepsis, the AAP-recommended first-line regimen is ampicillin plus gentamicin: ampicillin 50-100 mg/kg every 8-12 hours (higher meningitic dose if CNS infection is suspected) and gentamicin 4-5 mg/kg per dose with extended interval (24-48 hours) depending on gestational and postnatal age. This combination covers Group B Streptococcus, Listeria, most E. coli (despite rising ampicillin resistance, the synergy with gentamicin remains effective), and Streptococcus viridans. If meningitis is confirmed or strongly suspected, a third-generation cephalosporin (cefotaxime where available, ceftazidime if Pseudomonas is a concern) is added or substituted for CSF penetration. For late-onset sepsis in NICU infants with central lines, empiric therapy uses vancomycin (10-15 mg/kg per dose) plus an aminoglycoside (gentamicin or tobramycin) or an antipseudomonal cephalosporin (cefepime, ceftazidime) depending on local resistance patterns. Coverage narrows once pathogen identity and susceptibilities return, typically 48-72 hours after sampling. Treatment duration is 7-10 days for uncomplicated bacteremia, 14-21 days for meningitis, and longer for endocarditis or osteomyelitis. Empiric antifungal therapy (fluconazole or amphotericin B) is added when Candida is suspected (extremely-low-birth-weight infant on prolonged parenteral nutrition with deteriorating clinical course or thrombocytopenia). Supportive care is parallel and essential: respiratory support ranging from supplemental oxygen through high-flow nasal cannula, CPAP, conventional ventilation, and ECMO for refractory respiratory failure; fluid resuscitation with 10 mL/kg normal saline boluses (up to 40-60 mL/kg) for shock; vasoactive support starting with dopamine, advancing to dobutamine or epinephrine for refractory hypotension; hydrocortisone for catecholamine-resistant shock; correction of metabolic acidosis, glucose, and electrolyte derangements; and removal of infected central lines once they are confidently identified as the source. Daily reassessment determines duration, deescalation, and discharge planning. Two ongoing research areas — adjunctive intravenous immunoglobulin (Cochrane reviews have not shown a mortality benefit and IVIG is not routinely recommended) and recombinant lactoferrin — remain investigational.",
+  "medicalTreatments": [
+    {
+      "name": "Ampicillin plus gentamicin (first-line empiric for early-onset sepsis)",
+      "description": "Ampicillin 50-100 mg/kg every 8-12 hours covers Group B Streptococcus, Listeria monocytogenes, viridans streptococci, and ampicillin-susceptible E. coli. Gentamicin 4-5 mg/kg per extended interval dose provides synergistic gram-negative coverage. Meningitic doses of ampicillin (200-300 mg/kg/day divided) are used when CNS infection is suspected.",
+      "effectiveness": "Effective coverage of approximately 95% of EOS pathogens in the United States; mortality in treated culture-positive EOS is 5-10% in term infants and 25-35% in preterm infants."
+    },
+    {
+      "name": "Vancomycin plus aminoglycoside or cefepime (first-line empiric for late-onset sepsis in NICU)",
+      "description": "Vancomycin 10-15 mg/kg per dose at 8-24 hour intervals based on gestational and postnatal age covers methicillin-resistant Staphylococcus aureus and coagulase-negative staphylococci. The companion drug (gentamicin, tobramycin, or cefepime) extends gram-negative coverage including Pseudomonas in cefepime-based regimens.",
+      "effectiveness": "Adequate empiric coverage in 85-95% of LOS pathogens depending on local resistance; mortality 10-20% in treated term LOS and 20-40% in preterm LOS."
+    },
+    {
+      "name": "Cefotaxime or ceftazidime (for suspected or confirmed neonatal meningitis)",
+      "description": "Cefotaxime (50 mg/kg every 8-12 hours; 100 mg/kg/day where meningitis is confirmed) penetrates CSF well and covers gram-negative bacilli including most E. coli. Ceftazidime is preferred when Pseudomonas is plausible. Ceftriaxone is generally avoided in neonates due to biliary sludging and bilirubin displacement, especially in jaundiced or calcium-supplemented infants.",
+      "effectiveness": "Mortality from neonatal gram-negative meningitis remains 10-30% even with prompt cephalosporin therapy; surviving infants have 25-40% rates of neurodevelopmental impairment."
+    },
+    {
+      "name": "Fluconazole or amphotericin B (empiric or directed antifungal therapy)",
+      "description": "Fluconazole 12 mg/kg/day loading dose then 6-12 mg/kg/day for sensitive Candida species; liposomal amphotericin B 3-5 mg/kg/day or conventional amphotericin for resistant strains and CNS involvement. Empiric antifungals are added in ELBW infants with persistent clinical deterioration on antibacterial therapy.",
+      "effectiveness": "Candidemia mortality runs 30-40% in VLBW infants despite treatment; survivors have 30-40% rates of neurodevelopmental impairment. Fluconazole prophylaxis in high-incidence NICUs reduces invasive candidiasis by approximately 50%."
+    },
+    {
+      "name": "Fluid resuscitation with isotonic crystalloid (10 mL/kg boluses)",
+      "description": "Normal saline 10 mL/kg boluses delivered over 5-10 minutes, repeated to a total of 40-60 mL/kg in the first hour for septic shock, with reassessment after each bolus for hepatomegaly, rales, or worsening oxygenation. Lactated Ringer's is acceptable but normal saline is most commonly used.",
+      "effectiveness": "Restores perfusion in approximately 50% of neonates with fluid-responsive shock; the remainder require vasoactive support."
+    },
+    {
+      "name": "Vasoactive infusions (dopamine, dobutamine, epinephrine, norepinephrine)",
+      "description": "Dopamine 5-20 µg/kg/min as first-line vasoactive in fluid-refractory shock; dobutamine 5-20 µg/kg/min added for poor myocardial contractility; epinephrine 0.05-1 µg/kg/min for catecholamine-resistant shock; norepinephrine for distributive shock with low systemic vascular resistance. Choice individualizes to hemodynamic phenotype on echocardiogram-guided assessment.",
+      "effectiveness": "Restores blood pressure and perfusion in 60-80% of fluid-refractory septic shock; mortality in refractory neonatal shock approaches 50%."
+    },
+    {
+      "name": "Hydrocortisone (catecholamine-resistant septic shock)",
+      "description": "Hydrocortisone 1-2 mg/kg every 6-12 hours considered for shock unresponsive to fluids and two vasoactive agents, addressing relative adrenal insufficiency that develops in critical illness. Tapered as hemodynamics improve.",
+      "effectiveness": "Reverses shock in approximately 60-70% of catecholamine-resistant cases without changing overall mortality in randomized data; supportive evidence stronger in adults than in neonates."
+    },
+    {
+      "name": "Central line removal for confirmed line infection",
+      "description": "Removal of a colonized or infected central venous catheter is essential source control when blood cultures remain positive on appropriate antibiotics for 48-72 hours, when the organism is S. aureus, gram-negative rod, or Candida, or when there is hemodynamic instability. Replacement is delayed until cultures clear.",
+      "effectiveness": "Clears persistent bacteremia in 80-90% of cases when combined with appropriate antibiotics; mortality halved compared to retention strategies in Candida line infections."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Source control surgery (drainage of abscess, debridement of necrotizing enterocolitis, removal of infected hardware)",
+      "description": "Performed when sepsis arises from an identifiable surgical source such as necrotizing enterocolitis perforation, intra-abdominal abscess, septic arthritis, osteomyelitis with subperiosteal collection, or infected ventricular shunt. Coordinated with neonatology and pediatric surgery.",
+      "successRate": "Source control significantly improves survival in NEC-associated sepsis from approximately 30% (untreated perforation) to 60-70% with prompt surgical intervention."
+    },
+    {
+      "name": "Extracorporeal membrane oxygenation (ECMO) for refractory respiratory or cardiac failure",
+      "description": "Veno-arterial or veno-venous ECMO is offered to neonates ≥34 weeks gestation and ≥2 kg with reversible refractory cardiopulmonary failure from sepsis-associated pulmonary hypertension or septic shock. Strict eligibility and consultation with an ECMO center are required.",
+      "successRate": "Survival to discharge ranges 50-70% in sepsis ECMO cohorts depending on pathogen, organ dysfunction at cannulation, and center experience (ELSO Registry)."
+    }
+  ],
+  "alternativeTreatments": [],
+  "whySeeSpecialist": "A neonatologist should be involved in any newborn with suspected sepsis, particularly when the infant requires NICU admission, mechanical ventilation, vasoactive support, or central venous access. Pediatric infectious disease consultation is appropriate for persistent bacteremia, unusual pathogens, multidrug resistance, congenital infection workup, or treatment-duration questions in meningitis, endocarditis, or osteomyelitis. Late-preterm and term infants with isolated risk factors but reassuring physical examination can often be observed using the AAP-endorsed EOS risk calculator without antibiotics, but this pathway requires close monitoring in a unit comfortable with neonatal observation.",
+  "doctorSelectionGuide": "Choose a hospital with a neonatal intensive care unit at least level II for moderate-acuity sepsis and level III or IV for ventilator support, ECMO, and surgical capabilities. Look for board-certified neonatology coverage 24/7, access to pediatric infectious disease consultation, on-site laboratory turnaround for blood cultures within 24 hours, and adherence to AAP COFN 2018 EOS management guidance. Confirm the unit reports its CLABSI rate and uses central-line bundles. For maternal-fetal scenarios, prenatal counseling with a neonatologist is appropriate when preterm delivery, severe chorioamnionitis, or known maternal pathogens are expected.",
+  "hospitalCriteria": [
+    "Level III or IV NICU with 24/7 neonatology coverage and pediatric infectious disease consultation",
+    "On-site microbiology laboratory with continuous-monitoring blood culture systems and same-day Gram stain",
+    "Capability for mechanical ventilation, high-frequency oscillatory ventilation, inhaled nitric oxide, and ECMO (level IV)",
+    "Established central-line bundle and CLABSI surveillance with publicly reported rates",
+    "Maternal-fetal medicine and obstetric anesthesia for delivery of high-risk pregnancies"
+  ],
+  "keyFacilities": [
+    "Tertiary academic NICU with neonatology fellowship",
+    "ECMO-capable referral center for refractory cardiopulmonary failure",
+    "Pediatric infectious disease consult service",
+    "Pediatric surgery for source control in necrotizing enterocolitis or congenital anomalies"
+  ],
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+  "preventionStrategies": [
+    "Universal late-pregnancy GBS screening at 36-37 weeks gestation followed by intrapartum penicillin or ampicillin in colonized mothers — reduces EOS GBS by approximately 80%",
+    "Adherence to central-line bundle elements (hand hygiene, maximal sterile barrier, chlorhexidine skin antisepsis, daily line necessity review) — reduces NICU CLABSI by 40-70%",
+    "Early enteral feeding with breast milk in NICU graduates — reduces necrotizing enterocolitis and bacterial translocation",
+    "Targeted fluconazole prophylaxis in NICUs with baseline invasive candidiasis incidence above 2% — reduces Candida sepsis by approximately 50% in ELBW infants",
+    "Antenatal steroids for threatened preterm birth at 24-34 weeks — indirectly reduce sepsis by improving lung maturity and shortening ventilator exposure",
+    "Maternal Tdap and influenza vaccination in pregnancy and avoidance of high-Listeria foods (soft cheeses, deli meats, unpasteurized dairy)"
+  ],
+  "lifestyleModifications": [
+    "Strict hand hygiene by all visitors and caregivers before contact with a newborn",
+    "Exclusive breastfeeding for the first 6 months where feasible — reduces LOS and necrotizing enterocolitis through immunologic and microbiome effects",
+    "Limit non-essential visitors during the first 8 weeks of life, particularly anyone with respiratory illness",
+    "Keep routine immunizations up to date for household contacts (Tdap, influenza, COVID-19) to reduce pathogen exposure",
+    "Avoid kissing the newborn on the face by adults with active cold sores (HSV neonatal infection prevention)",
+    "Promptly address maternal mastitis and any maternal infections that might be transmitted by direct contact"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Breast milk — reduces LOS, NEC, and improves neurodevelopmental outcomes",
+      "Donor human milk where mother's own milk is unavailable, especially for VLBW preterm infants",
+      "Iron-fortified infant formula when breast milk is contraindicated or insufficient",
+      "Vitamin K prophylaxis at birth (standard practice; prevents hemorrhagic disease which complicates sepsis)"
+    ],
+    "avoid": [
+      "Honey before 12 months of age (botulism risk in infants)",
+      "Unpasteurized dairy and juice in households where mother is pregnant or breastfeeding",
+      "Excessive water supplementation in the first 6 months (hyponatremia risk)",
+      "Unhygienic preparation of formula (use boiled and cooled water for high-risk powdered formulas)"
+    ]
+  },
+  "exerciseGuidelines": "Not applicable to neonates. For mothers recovering from delivery, gentle mobilization within tolerance reduces postpartum complications and supports lactation. Encouragement to follow obstetric postpartum activity guidance.",
+  "dailyManagement": [
+    "Monitor temperature, heart rate, respiratory rate, perfusion, and feeding tolerance continuously in any infant being observed for sepsis risk",
+    "Document antibiotic timing precisely — first dose within 60 minutes of suspicion is associated with reduced mortality",
+    "Recheck CBC, CRP, and blood culture status daily during the first 48 hours of treatment",
+    "Maintain neutral thermal environment to minimize metabolic stress (incubator or radiant warmer set per gestational age)",
+    "Coordinate parental presence, kangaroo care, and lactation support — evidence-based interventions that improve outcomes",
+    "Review central-line necessity daily and remove the moment it is no longer essential"
+  ],
+  "prognosis": "Outcomes vary sharply by gestational age, pathogen, and time to antibiotics. In term infants with treated culture-positive early-onset sepsis, mortality is 5-10% and most survivors have normal neurodevelopment. In very-low-birth-weight preterm infants with EOS, mortality reaches 30-50%, climbing toward 50% with E. coli sepsis under 1,500 g (Stoll NICHD NRN data). Late-onset sepsis carries 10-30% mortality in NICU populations, with coagulase-negative staphylococcal LOS at the lower end and gram-negative or Candida LOS at the higher end. Survivors of meningitis or VLBW sepsis carry a 20-40% risk of neurodevelopmental impairment including cerebral palsy, sensorineural hearing loss, cognitive delay, and visual impairment, detected by structured follow-up at 18-24 months corrected age. Each hour of delay in antibiotic administration is associated with a measurable rise in mortality in observational data. The strongest prognostic determinants are gestational age, time to effective antibiotics, control of source (line removal, surgical drainage), avoidance of secondary infection, and access to high-quality neonatal intensive care.",
+  "recoveryTimeline": "An uncomplicated bacteremic neonatal sepsis course typically follows a defined arc: clinical improvement within 24-72 hours of effective antibiotics, blood cultures clearing by 48-72 hours, biomarkers (CRP, procalcitonin) trending down by day 3-4, completion of a 7-10 day course, and discharge home thereafter if feeding and weight gain are established. Meningitis adds 7-11 days of antibiotic treatment (total 14-21 days) and longer hospital stay. VLBW preterm infants with LOS often have a delayed trajectory, returning to baseline ventilator and feeding status over 1-2 weeks, with full NICU discharge timing dictated by gestational age and feeding maturity rather than the infection itself. Neurodevelopmental follow-up continues to 18-24 months corrected age and into school years for ELBW survivors.",
+  "complications": [
+    "Septic shock with multi-organ failure — mortality up to 50% in preterm infants with refractory shock; early recognition and protocolized fluid plus vasoactive therapy improves outcomes",
+    "Neonatal meningitis with seizures, hydrocephalus, ventriculitis, or brain abscess — occurs in 0.1-0.4 per 1,000 EOS and at higher rates in LOS; carries 20-40% long-term neurodevelopmental impairment",
+    "Disseminated intravascular coagulation (DIC) with thrombocytopenia, bleeding, and microvascular thrombosis — requires blood product support and source control",
+    "Persistent pulmonary hypertension of the newborn (PPHN) triggered by sepsis-associated lung injury — may require inhaled nitric oxide, high-frequency ventilation, or ECMO",
+    "Necrotizing enterocolitis (NEC) particularly in preterm infants with sepsis — carries 20-30% mortality and may require surgical resection and short-bowel sequelae",
+    "Sensorineural hearing loss, especially after gram-negative meningitis or gentamicin therapy with high trough levels — universal newborn hearing screening and high-risk follow-up are essential"
+  ],
+  "supportResources": [
+    {
+      "name": "American Academy of Pediatrics — Red Book Online",
+      "url": "https://publications.aap.org/redbook",
+      "description": "Authoritative US guidance on neonatal infectious disease management and immunizations."
+    },
+    {
+      "name": "CDC — Group B Strep (GBS) Resources for Clinicians and Parents",
+      "url": "https://www.cdc.gov/group-b-strep/about/index.html",
+      "description": "Patient and clinician information on screening, prevention, and recognizing neonatal GBS disease."
+    },
+    {
+      "name": "March of Dimes — Newborn Health",
+      "url": "https://www.marchofdimes.org/find-support/topics/birth/group-b-strep-infection-and-pregnancy",
+      "description": "Patient-facing resources on neonatal infection, prematurity, and follow-up care."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia (including congenital and neonatal pneumonia)",
+      "keyDifference": "Neonatal pneumonia and sepsis frequently overlap in early-onset disease and share organisms (GBS, E. coli), but pneumonia presents primarily with respiratory signs and a focal or diffuse infiltrate on chest radiograph rather than bloodstream-driven shock. Blood culture distinguishes bacteremia from isolated pneumonia, and treatment regimens overlap because empiric antibiotics for sepsis already cover the pathogens of neonatal pneumonia."
+    },
+    {
+      "slug": "listerial-meningitis",
+      "name": "Listerial Meningitis",
+      "keyDifference": "Listeria monocytogenes can cause both bloodstream and CNS infection in the newborn period, particularly after maternal exposure to contaminated soft cheeses or deli meats. Listerial meningitis is a specific CNS manifestation diagnosed by CSF culture, with the same first-line therapy (ampicillin plus gentamicin) but a longer treatment course of 14-21 days and a focus on CSF clearance."
+    },
+    {
+      "slug": "e-coli-infection",
+      "name": "Escherichia coli Infection",
+      "keyDifference": "E. coli is one of the dominant pathogens of neonatal sepsis (now the leading cause in preterm infants), but the slug refers to E. coli infection across age groups and body sites. In adults and older children, E. coli infection most often means urinary tract infection or foodborne diarrhea, whereas in newborns it presents as bacteremia, meningitis, or pneumonia and is managed with neonatal sepsis protocols."
+    },
+    {
+      "slug": "anthrax-sepsis-a227",
+      "name": "Anthrax Sepsis",
+      "keyDifference": "Anthrax sepsis is a rare adult-occupational bloodstream infection caused by Bacillus anthracis after cutaneous, inhalational, or gastrointestinal exposure. Neonatal sepsis is age-defined (within the first 28 days) and caused by perinatally acquired organisms; the conditions share the systemic-infection framework but differ entirely in pathogen, exposure, and management."
+    },
+    {
+      "slug": "congenital-syphilis",
+      "name": "Congenital Syphilis",
+      "keyDifference": "Congenital syphilis is a specific transplacental Treponema pallidum infection diagnosed by maternal serology, infant non-treponemal titers, long-bone radiographs, and CSF studies. It can mimic neonatal sepsis with hepatosplenomegaly, rash, and rhinitis, but treatment is intravenous penicillin G for 10 days rather than empiric ampicillin-gentamicin, and follow-up serology is mandatory."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia"
+    },
+    {
+      "slug": "listerial-meningitis",
+      "name": "Listerial Meningitis"
+    },
+    {
+      "slug": "e-coli-infection",
+      "name": "Escherichia coli Infection"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia",
+      "relevance": "Neonatal pneumonia is frequently a component of early-onset sepsis and shares both organisms and empiric antibiotic coverage."
+    },
+    {
+      "slug": "listerial-meningitis",
+      "name": "Listerial Meningitis",
+      "relevance": "Listeria is a classic cause of neonatal meningitis and a key reason ampicillin remains a component of empiric EOS coverage."
+    },
+    {
+      "slug": "e-coli-infection",
+      "name": "Escherichia coli Infection",
+      "relevance": "E. coli is now the leading EOS pathogen in preterm infants and a major contributor to neonatal meningitis."
+    },
+    {
+      "slug": "congenital-syphilis",
+      "name": "Congenital Syphilis",
+      "relevance": "Important differential and co-occurring perinatal infection; mandates separate serologic workup when neonatal sepsis is being evaluated."
+    },
+    {
+      "slug": "prenatal-care",
+      "name": "Prenatal Care",
+      "relevance": "Antenatal GBS screening, treatment of maternal UTI, and management of preterm labor are upstream determinants of neonatal sepsis risk."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is neonatal sepsis?",
+      "answer": "Neonatal sepsis is a systemic bloodstream infection in a baby during the first 28 days of life. It is split into early-onset (under 72 hours, usually from the mother) and late-onset (3-28 days, often hospital- or community-acquired) and is treated with prompt blood cultures and antibiotics.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between early-onset and late-onset sepsis?",
+      "answer": "Early-onset sepsis presents in the first 72 hours and is transmitted from the mother during labor, dominated by Group B Streptococcus and E. coli. Late-onset sepsis presents from day 3 to day 28 and is dominated by coagulase-negative staphylococci, Staph aureus, gram-negative rods, and Candida.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early symptoms of sepsis in a newborn?",
+      "answer": "Early signs include temperature instability (low temperature more common than fever), fast breathing, grunting, apnea, poor feeding, lethargy, mottled skin, and jaundice in the first 24 hours. Signs are nonspecific, so any sick-looking newborn needs urgent evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is neonatal sepsis diagnosed?",
+      "answer": "Diagnosis combines clinical suspicion with a blood culture (at least 1 mL pre-antibiotic), CBC with differential, serial CRP or procalcitonin, lumbar puncture when meningitis is suspected, urine culture in late-onset cases, and chest X-ray for respiratory signs. Blood culture is the gold standard.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What antibiotics treat early-onset neonatal sepsis?",
+      "answer": "First-line empiric therapy is ampicillin plus gentamicin, started within an hour of suspicion. Ampicillin covers GBS, Listeria, and many E. coli; gentamicin adds gram-negative synergy. Cefotaxime is added when meningitis is suspected.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What antibiotics treat late-onset neonatal sepsis?",
+      "answer": "Late-onset sepsis in a NICU infant with a central line is empirically treated with vancomycin plus an aminoglycoside or cefepime, narrowing once cultures return. Vancomycin covers MRSA and CoNS; the companion drug extends gram-negative coverage including Pseudomonas.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long is antibiotic treatment?",
+      "answer": "Uncomplicated bacteremic neonatal sepsis is treated for 7-10 days from the first negative blood culture. Meningitis needs 14-21 days, and endocarditis or osteomyelitis 4-6 weeks. Treatment stops at 36-48 hours if cultures are sterile and the infant is well.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the mortality rate of neonatal sepsis?",
+      "answer": "Mortality varies by gestational age and pathogen. In treated term infants with culture-positive sepsis it is 5-10%. In VLBW preterm infants it reaches 30-50%, highest with E. coli under 1,500 g. Every hour of delay in effective antibiotics raises mortality.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does Group B Strep matter for newborns?",
+      "answer": "GBS colonizes the genital and gut tract of 10-30% of pregnant women without symptoms, but can transmit during labor and cause early-onset sepsis, pneumonia, or meningitis. Screening at 36-37 weeks and intrapartum penicillin cut early-onset GBS disease by about 80%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the EOS risk calculator?",
+      "answer": "The Kaiser EOS risk calculator combines maternal factors (gestational age, ROM duration, intrapartum fever, GBS prophylaxis) with the infant's exam to estimate sepsis probability. AAP COFN endorses it for well-appearing late-preterm and term babies; it cuts antibiotic exposure 40-50%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is septic shock in a newborn managed?",
+      "answer": "Normal saline boluses of 10 mL/kg (up to 40-60 mL/kg in the first hour) restore perfusion in about half of cases. Fluid-refractory shock receives dopamine, then dobutamine or epinephrine, with hydrocortisone for catecholamine resistance. Refractory cases may need ECMO.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can neonatal sepsis be prevented?",
+      "answer": "Most early-onset GBS sepsis is preventable with late-pregnancy GBS screening and intrapartum antibiotics. NICU late-onset sepsis falls 40-70% with central-line bundles, hand hygiene, breast milk feeding, and early line removal. Treating maternal UTI also helps.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is a lumbar puncture needed?",
+      "answer": "Lumbar puncture is performed when a blood culture grows a pathogen, when neurologic signs are present, or in any proven late-onset sepsis. Neonatal meningitis occurs in 0.1-0.4 per 1,000 EOS and more often in LOS, and CSF can be positive when blood is negative.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does an I:T ratio above 0.2 mean?",
+      "answer": "The immature-to-total neutrophil ratio compares immature to total neutrophils on a smear. A value above 0.2 suggests an active bone-marrow response and raises sepsis probability, though it is not specific and can also rise with stress or asphyxia.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is fever or low temperature worse in a newborn?",
+      "answer": "Hypothermia (rectal below 36.0°C) is more common than fever in septic neonates and is at least as concerning. Term babies more often run a low-grade fever; preterm babies tend to drop their temperature. Either pattern warrants prompt evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do central lines cause neonatal sepsis?",
+      "answer": "Central catheters used for fluids, TPN, or medications get colonized by skin or gut organisms that then enter the bloodstream. CoNS, Staph aureus, gram-negative rods, and Candida dominate. Bundles, daily necessity review, and prompt removal cut rates 40-70%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What follow-up does a sepsis survivor need?",
+      "answer": "Preterm or meningitic survivors need structured neurodevelopmental follow-up at 18-24 months corrected age, hearing screening with audiologic follow-up, ophthalmologic review for retinopathy of prematurity, and routine pediatric care. Up to 20-40% show some impairment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are there biomarkers besides CRP?",
+      "answer": "Procalcitonin has age-adjusted normal ranges in the first 48 hours and offers similar negative predictive value to CRP, with evidence supporting PCT-guided antibiotic stoppage (NeoPInS). IL-6, IL-8, and presepsin are studied but not routine.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When can a baby with sepsis be discharged?",
+      "answer": "Discharge follows completion of antibiotics, sustained clinical improvement, full oral feeding with weight gain, stable temperature, parental education, and arranged pediatric follow-up. Preterm infants also need physiologic maturity in breathing, feeding, and thermoregulation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can a baby get sepsis after going home?",
+      "answer": "Yes. Community-acquired late-onset sepsis presents from day 3 to day 28 with fever, poor feeding, lethargy, breathing trouble, or seizures. Common causes include Staph aureus, E. coli, and GBS. Any febrile or lethargic newborn under 28 days needs emergency care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does IVIG help in neonatal sepsis?",
+      "answer": "Cochrane reviews of adjunctive intravenous immunoglobulin, including the INIS trial, have not shown a mortality benefit. IVIG is not routinely recommended for neonatal sepsis. Specific uses such as immune thrombocytopenia or some viral exposures are managed separately.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Sepsis of the Newborn (bloodstream infection in babies under 28 days)",
+  "regionalNames": [
+    {
+      "name": "Navjat Shishu mein Sepsis",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Sepsis néonatale",
+      "region": "France / Francophone Africa",
+      "language": "fr"
+    }
+  ],
+  "searchTags": [
+    "neonatal sepsis",
+    "sepsis of newborn",
+    "newborn sepsis",
+    "neonatal bloodstream infection",
+    "early-onset sepsis",
+    "EOS",
+    "late-onset sepsis",
+    "LOS",
+    "GBS sepsis",
+    "Group B Strep newborn",
+    "ampicillin gentamicin neonate",
+    "preterm sepsis",
+    "P36.9",
+    "NICU sepsis",
+    "neonatal meningitis"
+  ],
+  "symptomKeywords": [
+    "newborn breathing fast",
+    "newborn cold temperature",
+    "baby not feeding",
+    "newborn apnea",
+    "newborn lethargy",
+    "newborn jaundice early",
+    "newborn mottled skin",
+    "preterm baby infection",
+    "NICU baby infection"
+  ],
+  "metaTitle": "Neonatal Sepsis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Neonatal sepsis: early- and late-onset bloodstream infection in newborns under 28 days. Symptoms, antibiotics, and prognosis reviewed by our medical board.",
+  "keywords": [
+    "neonatal sepsis",
+    "sepsis of newborn",
+    "early-onset sepsis",
+    "late-onset sepsis",
+    "GBS sepsis newborn",
+    "ampicillin gentamicin",
+    "neonatal meningitis",
+    "preterm sepsis",
+    "newborn infection symptoms",
+    "I:T ratio",
+    "blood culture newborn",
+    "EOS risk calculator",
+    "NICU CLABSI"
+  ],
+  "lastReviewed": "2026-05-18",
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Premature_infant_with_ventilator.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Premature_infant_with_ventilator.jpg/1280px-Premature_infant_with_ventilator.jpg",
+      "altText": "Premature newborn on a ventilator in a neonatal intensive care unit, the population at highest risk for early- and late-onset sepsis",
+      "caption": "Premature newborn receiving mechanical ventilation in the NICU — the population at highest sepsis risk.",
+      "license": "CC BY-SA 3.0",
+      "credit": "Wikimedia Commons",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Streptococcus_agalactiae_01.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Streptococcus_agalactiae_01.jpg/1280px-Streptococcus_agalactiae_01.jpg",
+      "altText": "Microscopy image of Streptococcus agalactiae (Group B Streptococcus), the leading cause of early-onset neonatal sepsis",
+      "caption": "Streptococcus agalactiae (Group B Streptococcus) — the leading EOS pathogen in the United States.",
+      "license": "Public Domain",
+      "credit": "CDC PHIL / Wikimedia Commons",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "symptoms",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neonatal_jaundice.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Neonatal_jaundice.jpg/800px-Neonatal_jaundice.jpg",
+      "altText": "Newborn with visible jaundice, which when appearing within the first 24 hours of life raises concern for neonatal sepsis or hemolysis",
+      "caption": "Newborn jaundice — jaundice in the first 24 hours of life is a red flag for neonatal sepsis.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 800,
+      "height": 600
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blood_culture_bottle.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Blood_culture_bottle.jpg/800px-Blood_culture_bottle.jpg",
+      "altText": "Blood culture bottle used for diagnosis of neonatal sepsis, the gold-standard test requiring at least 1 mL of blood pre-antibiotic",
+      "caption": "Blood culture bottle — the gold-standard diagnostic test for neonatal sepsis.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 800,
+      "height": 1067
+    }
+  ],
+  "sources": [
+    {
+      "title": "Puopolo KM, Benitz WE, Zaoutis TE; AAP Committee on Fetus and Newborn; Committee on Infectious Diseases. Management of Neonates Born at ≥34 6/7 Weeks' Gestation With Suspected or Proven Early-Onset Bacterial Sepsis. Pediatrics. 2018;142(6):e20182894.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30425130/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Puopolo KM, Benitz WE, Zaoutis TE; AAP Committee on Fetus and Newborn; Committee on Infectious Diseases. Management of Neonates Born at ≤34 6/7 Weeks' Gestation With Suspected or Proven Early-Onset Bacterial Sepsis. Pediatrics. 2018;142(6):e20182896.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30425131/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Verani JR, McGee L, Schrag SJ; Division of Bacterial Diseases, National Center for Immunization and Respiratory Diseases, CDC. Prevention of Perinatal Group B Streptococcal Disease — Revised Guidelines From CDC, 2010. MMWR Recommendations and Reports. 2010;59(RR-10):1-36.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21088663/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "ACOG Committee Opinion No. 797: Prevention of Group B Streptococcal Early-Onset Disease in Newborns. Obstetrics & Gynecology. 2020;135(2):e51-e72.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31977795/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Stoll BJ, Hansen NI, Sánchez PJ, et al; Eunice Kennedy Shriver National Institute of Child Health and Human Development Neonatal Research Network. Early Onset Neonatal Sepsis: The Burden of Group B Streptococcal and E. coli Disease Continues. Pediatrics. 2011;127(5):817-826.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21518717/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Stoll BJ, Hansen N, Fanaroff AA, et al. Late-Onset Sepsis in Very Low Birth Weight Neonates: The Experience of the NICHD Neonatal Research Network. Pediatrics. 2002;110(2 Pt 1):285-291.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12165580/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Kuzniewicz MW, Puopolo KM, Fischer A, et al. A Quantitative, Risk-Based Approach to the Management of Neonatal Early-Onset Sepsis. JAMA Pediatrics. 2017;171(4):365-371.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28241253/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Stocker M, van Herk W, El Helou S, et al; NeoPInS Study Group. Procalcitonin-Guided Decision Making for Duration of Antibiotic Therapy in Neonates With Suspected Early-Onset Sepsis: A Multicentre, Randomised Controlled Trial (NeoPInS). Lancet. 2017;390(10097):871-881.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28711318/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "INIS Collaborative Group; Brocklehurst P, Farrell B, King A, et al. Treatment of Neonatal Sepsis With Intravenous Immune Globulin. New England Journal of Medicine. 2011;365(13):1201-1211.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21962214/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "World Health Organization. Newborn Mortality — Fact Sheet. Geneva: WHO; 2022.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail-newborn-mortality",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "AIHealz Medical Editorial Board",
+    "slug": "aihealz-medical-editorial-board"
+  }
+}

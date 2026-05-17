@@ -1,0 +1,678 @@
+{
+  "_meta": {
+    "slug": "neonatal-jaundice",
+    "tier": 1,
+    "headTerm": "neonatal jaundice",
+    "longTailKeywords": [
+      "neonatal jaundice symptoms",
+      "newborn jaundice treatment",
+      "physiologic vs pathologic jaundice",
+      "bilirubin levels newborn",
+      "phototherapy for jaundice",
+      "kernicterus prevention",
+      "breast milk jaundice",
+      "ABO incompatibility newborn",
+      "G6PD deficiency newborn",
+      "AAP 2022 hyperbilirubinemia guideline"
+    ],
+    "primarySpecialty": "Neonatology / Pediatrics",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Cross-verified against AAP 2022 Clinical Practice Guideline (PMID 35932375), NICE NG98 (jaundice in newborns <28 days), Cochrane phototherapy reviews, and WHO neonatal care standards. AAP 2022 nomogram thresholds and gestational-age-stratified phototherapy curves reflected throughout."
+  },
+  "h1Title": "Neonatal Jaundice: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neonatology / Pediatrics",
+  "heroOverview": "Neonatal jaundice is the yellow discoloration of a newborn's skin and sclera caused by unconjugated bilirubin accumulating faster than the immature liver can clear it. It develops in roughly 60% of term infants and 80% of preterm infants during the first week of life, making it the single most common reason for readmission after newborn discharge. Most cases are physiologic, peaking on day 3-5 and resolving by week 2 without intervention. A smaller share is pathologic — driven by hemolysis (ABO or Rh incompatibility, G6PD deficiency), sepsis, breast-milk jaundice, or biliary atresia — and can rise to neurotoxic levels. Untreated severe hyperbilirubinemia crosses the blood-brain barrier and causes kernicterus, a permanent movement and hearing disorder now occurring in only 1-2 per 100,000 US births thanks to universal AAP 2022 screening before discharge.",
+  "keyStats": {
+    "prevalence": "Visible jaundice in ~60% of term and ~80% of preterm newborns in the first week (AAP 2022)",
+    "demographics": "East Asian, Mediterranean, and South Asian ancestry carry higher G6PD-related risk; male infants slightly overrepresented",
+    "avgAge": "Onset day 2-4 for physiologic; <24 hours of life signals pathologic hemolytic disease",
+    "globalCases": "~24 million newborns worldwide develop significant hyperbilirubinemia each year; kernicterus rate 1-2 per 100,000 US births"
+  },
+  "definition": "Neonatal jaundice (ICD-10: P59) is the clinical sign of hyperbilirubinemia in a newborn, defined as a total serum bilirubin (TSB) above the 95th percentile on the hour-specific Bhutani nomogram or above gestational-age-stratified phototherapy thresholds in the 2022 American Academy of Pediatrics guideline. Bilirubin is the breakdown product of heme released from senescent red blood cells; the unconjugated (indirect) fraction is lipid-soluble and neurotoxic, while the conjugated (direct) fraction is water-soluble and excreted in bile. Newborns are uniquely prone to hyperbilirubinemia because of higher red-cell turnover (fetal hemoglobin lifespan ~70 days versus 120 in adults), immature hepatic UGT1A1 conjugation activity at birth, and enhanced enterohepatic recirculation through neonatal beta-glucuronidase. Yellowing becomes visible cephalocaudally — face first at TSB around 5 mg/dL, trunk by 10 mg/dL, soles by 15 mg/dL or higher. The condition is classified as physiologic (benign, peaks day 3-5), pathologic (onset <24 hours, rapid rise, or persistence beyond two weeks), and by bilirubin fraction (unconjugated versus conjugated cholestasis). Neonatologists and pediatricians manage the workup; hepatology and pediatric surgery enter the picture when conjugated hyperbilirubinemia or biliary atresia is suspected.",
+  "typesClassification": [
+    {
+      "type": "Physiologic jaundice",
+      "description": "Benign, self-limited rise in unconjugated bilirubin appearing after 24 hours of life, peaking at day 3-5 (term) or day 5-7 (preterm), and resolving by 1-2 weeks. Reflects hepatic immaturity and high fetal RBC turnover."
+    },
+    {
+      "type": "Pathologic jaundice",
+      "description": "Any jaundice presenting in the first 24 hours of life, TSB rising more than 5 mg/dL per day, TSB exceeding age-specific phototherapy thresholds, or jaundice persisting beyond 14 days (term) or 21 days (preterm). Requires workup for an underlying cause."
+    },
+    {
+      "type": "Breastfeeding (suboptimal-intake) jaundice",
+      "description": "Early-onset jaundice in the first week from inadequate milk intake, dehydration, and increased enterohepatic recirculation. Resolves with feeding support; not an indication to stop breastfeeding."
+    },
+    {
+      "type": "Breast-milk jaundice",
+      "description": "Prolonged unconjugated hyperbilirubinemia from week 2 to 12 in otherwise thriving breastfed infants. Attributed to glucuronidase-mediated bilirubin reabsorption from breast milk; benign and rarely requires treatment."
+    },
+    {
+      "type": "Conjugated (cholestatic) hyperbilirubinemia",
+      "description": "Direct bilirubin >1 mg/dL if TSB <5, or >20% of TSB. Always pathologic — biliary atresia, choledochal cyst, neonatal hepatitis, sepsis, or metabolic disease. Requires urgent evaluation by week 2-3 of life."
+    }
+  ],
+  "primarySymptoms": [
+    "Yellow discoloration of the skin and sclera appearing day 2-4 of life, first visible on the face when total serum bilirubin reaches roughly 5 mg/dL and progressing cephalocaudally to chest, abdomen, and soles as levels rise.",
+    "Poor feeding and reduced wet-diaper count (fewer than 4-6 per day after day 4), which can signal dehydration and accelerate bilirubin rise through enterohepatic recirculation.",
+    "Lethargy and difficulty waking for feeds — sleeping through scheduled feeding windows or remaining limp during handling beyond what is expected for a newborn.",
+    "High-pitched cry, hypotonia, or arching of the back and neck (opisthotonos) — late warning signs of acute bilirubin encephalopathy that demand emergency assessment.",
+    "Dark yellow or brown urine staining the diaper, indicating significant urinary urobilinogen excretion or, when accompanied by pale stools, conjugated hyperbilirubinemia.",
+    "Pale, chalky, or clay-colored stools persisting beyond the first week — a red flag for biliary atresia or other cholestatic disease that requires same-week pediatric evaluation.",
+    "Jaundice extending below the knees or onto the palms and soles, which clinically corresponds to TSB above 15 mg/dL and warrants laboratory confirmation regardless of feeding pattern.",
+    "Persistent jaundice beyond 14 days in a term infant or 21 days in a preterm infant, even if the baby looks well — needs fractionated bilirubin and thyroid screening.",
+    "Visible scalp swelling from cephalohematoma or extensive bruising from delivery, which releases hemoglobin and predictably increases bilirubin load over the first week.",
+    "Pallor, tachycardia, or hepatosplenomegaly in a jaundiced newborn — points toward hemolytic disease such as ABO/Rh incompatibility or hereditary spherocytosis."
+  ],
+  "earlyWarningSigns": [
+    "Visible jaundice within the first 24 hours of life — always pathologic and requires urgent fractionated bilirubin",
+    "Rapid rise in TSB greater than 0.2 mg/dL per hour or 5 mg/dL per day on serial measurements",
+    "Maternal blood group O or Rh-negative with a positive direct antiglobulin (Coombs) test in the newborn",
+    "Sibling history of neonatal jaundice requiring phototherapy or exchange transfusion",
+    "East Asian, Mediterranean, or South Asian ancestry combined with male sex (G6PD deficiency risk)",
+    "Cephalohematoma, bruising, or instrumented delivery noted on the newborn exam"
+  ],
+  "emergencySigns": [
+    "High-pitched cry, marked hypotonia, poor suck, or fever in a jaundiced newborn — early acute bilirubin encephalopathy, neonatal emergency",
+    "Arching of the neck and back (retrocollis-opisthotonos), seizures, or apnea in a jaundiced infant — intermediate to advanced bilirubin neurotoxicity",
+    "TSB approaching the AAP 2022 exchange-transfusion threshold (typically within 2 mg/dL of the curve for gestational age and hours of life)",
+    "Pale stools and dark urine in any infant beyond 14 days of life — possible biliary atresia, where surgical correction (Kasai portoenterostomy) before 60 days dramatically improves outcome",
+    "Severe pallor with jaundice and tachycardia — suggests acute hemolysis from ABO/Rh incompatibility or G6PD-triggered crisis"
+  ],
+  "causes": [
+    {
+      "cause": "Hepatic immaturity (physiologic)",
+      "description": "Newborn UGT1A1 conjugation activity is roughly 1% of adult levels at birth and reaches near-adult capacity only by week 14. Reduced conjugation leaves more unconjugated bilirubin in circulation during the first week."
+    },
+    {
+      "cause": "High neonatal red blood cell turnover (physiologic)",
+      "description": "Fetal hemoglobin has a shorter lifespan (~70 days) and the newborn has a higher hematocrit. Daily heme breakdown produces 8-10 mg/kg of bilirubin in a newborn versus 3-4 mg/kg in an adult, overwhelming an immature liver."
+    },
+    {
+      "cause": "Enhanced enterohepatic recirculation",
+      "description": "Newborn intestinal beta-glucuronidase deconjugates bilirubin in the gut, allowing reabsorption. Delayed feeding, low caloric intake, and meconium retention all amplify this loop and raise TSB."
+    },
+    {
+      "cause": "ABO and Rh hemolytic disease (isoimmune hemolysis)",
+      "description": "Maternal IgG antibodies cross the placenta and destroy fetal red cells when blood-group incompatibility exists (Rh-negative mother / Rh-positive infant, or O mother / A or B infant). Produces jaundice within the first 24 hours and a positive Coombs test."
+    },
+    {
+      "cause": "G6PD deficiency",
+      "description": "X-linked enzyme deficiency affecting ~400 million people globally, with high prevalence in Mediterranean, African, Middle Eastern, and South/East Asian populations. Triggers acute hemolysis and severe early-onset jaundice; remains the leading hemolytic cause of kernicterus in the US."
+    },
+    {
+      "cause": "Hereditary spherocytosis and other RBC membrane or enzyme defects",
+      "description": "Autosomal-dominant red-cell membrane defects produce shortened RBC lifespan and chronic hemolysis presenting from the newborn period. Family history is positive in about 75% of cases."
+    },
+    {
+      "cause": "Crigler-Najjar and Gilbert syndromes",
+      "description": "Inherited deficiencies of UGT1A1 conjugation. Crigler-Najjar type I is rare, severe, and lifelong; type II and Gilbert syndrome are milder. All present with unconjugated hyperbilirubinemia."
+    },
+    {
+      "cause": "Breastfeeding and breast-milk jaundice",
+      "description": "Suboptimal milk intake in week 1 (breastfeeding jaundice) raises bilirubin via dehydration and increased gut reabsorption. Prolonged jaundice in weeks 2-12 (breast-milk jaundice) reflects glucuronidase-rich milk; both are benign and rarely require stopping breastfeeding."
+    },
+    {
+      "cause": "Sepsis and infection",
+      "description": "Bacterial sepsis, UTI, and TORCH infections (toxoplasma, rubella, CMV, herpes, syphilis) cause both increased red-cell breakdown and hepatic dysfunction. Sepsis can produce a mixed unconjugated and conjugated rise."
+    },
+    {
+      "cause": "Biliary atresia and other cholestatic conditions",
+      "description": "Progressive fibroobliteration of the extrahepatic bile ducts presents at 2-8 weeks with persistent jaundice, pale stools, and conjugated hyperbilirubinemia. Kasai portoenterostomy before 60 days yields native-liver survival of 50-60%; after 90 days it falls below 20%."
+    },
+    {
+      "cause": "Cephalohematoma, extensive bruising, and polycythemia",
+      "description": "Sequestered blood from birth trauma or polycythemia (venous hematocrit >65%) provides extra heme that breaks down over days, predictably raising bilirubin between days 2 and 7."
+    },
+    {
+      "cause": "Congenital hypothyroidism and prematurity",
+      "description": "Hypothyroidism slows hepatic bilirubin conjugation; prematurity compounds every step (lower UGT1A1, lower albumin, more fragile blood-brain barrier). Both produce prolonged jaundice beyond two weeks."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Gestational age below 38 weeks",
+      "category": "non-modifiable",
+      "description": "Each week below 40 weeks roughly doubles the risk of significant hyperbilirubinemia; preterm infants are also more vulnerable to neurotoxicity at any given bilirubin level."
+    },
+    {
+      "factor": "ABO or Rh blood-group incompatibility with mother",
+      "category": "non-modifiable",
+      "description": "Most common cause of early severe jaundice. Maternal anti-A or anti-B IgG affects up to 15% of ABO-incompatible pairings; Rh disease is now rare in high-income settings due to anti-D prophylaxis but persists where antenatal care is limited."
+    },
+    {
+      "factor": "G6PD deficiency",
+      "category": "genetic",
+      "description": "Identified in ~21% of US kernicterus registry cases. X-linked, so males predominate. Universal newborn screening varies by state and country."
+    },
+    {
+      "factor": "Family history of neonatal jaundice requiring treatment",
+      "category": "genetic",
+      "description": "A previous sibling needing phototherapy multiplies risk roughly 2-3 fold; exchange-transfusion history in a sibling is a strong predictor."
+    },
+    {
+      "factor": "East Asian, Mediterranean, Middle Eastern, or South Asian ancestry",
+      "category": "genetic",
+      "description": "Higher prevalence of G6PD variants, UGT1A1 polymorphisms, and inherited red-cell defects in these populations raises baseline neonatal bilirubin trajectories."
+    },
+    {
+      "factor": "Cephalohematoma, instrumented delivery, or significant bruising",
+      "category": "environmental",
+      "description": "Resorption of sequestered blood produces a predictable bilirubin spike between days 2 and 7. Vacuum or forceps delivery raises risk roughly 2-fold."
+    },
+    {
+      "factor": "Exclusive breastfeeding with weight loss greater than 10%",
+      "category": "modifiable",
+      "description": "Inadequate intake concentrates bilirubin and amplifies enterohepatic recirculation. Active lactation support reduces both weight loss and bilirubin peaks."
+    },
+    {
+      "factor": "Male sex",
+      "category": "non-modifiable",
+      "description": "Male infants have roughly 1.5-fold higher rates of significant hyperbilirubinemia and a much higher share of severe cases when combined with G6PD deficiency."
+    },
+    {
+      "factor": "Maternal diabetes",
+      "category": "non-modifiable",
+      "description": "Infants of diabetic mothers carry higher hematocrits and macrosomia-related delivery trauma; both contribute to elevated bilirubin loads."
+    },
+    {
+      "factor": "Discharge before 72 hours without bilirubin screening",
+      "category": "modifiable",
+      "description": "TSB peaks on day 3-5, after most newborns leave the hospital. AAP 2022 recommends transcutaneous or serum screening before discharge plus a follow-up visit within 24-48 hours."
+    }
+  ],
+  "affectedDemographics": [
+    "Term newborns: visible jaundice in roughly 60%, with about 5-10% reaching phototherapy thresholds (AAP 2022)",
+    "Preterm newborns (<35 weeks): visible jaundice in 80%, with 20-30% receiving phototherapy",
+    "G6PD-deficient males of Mediterranean, African, or East Asian ancestry: severe hyperbilirubinemia risk roughly 5-10 fold higher than the general newborn population",
+    "Exclusively breastfed infants in week 1 have 2-3 fold higher rates of significant jaundice when feeding is suboptimal; rates normalize with proper lactation support",
+    "Kernicterus incidence in the US has fallen to roughly 1-2 per 100,000 births since universal screening; globally, rates remain 10-100 fold higher in low-resource settings"
+  ],
+  "diagnosisOverview": "Diagnosis begins with universal predischarge screening: AAP 2022 recommends a transcutaneous bilirubinometer (TcB) or total serum bilirubin (TSB) measurement before every newborn leaves the hospital, plotted on the hour-specific Bhutani nomogram or the AAP 2022 phototherapy curves stratified by gestational age and neurotoxicity risk factors. Jaundice within the first 24 hours of life is always pathologic and triggers urgent fractionated bilirubin, complete blood count, blood type and Rh on both mother and infant, direct antiglobulin (Coombs) test, peripheral smear, and reticulocyte count. The peripheral smear identifies spherocytes (ABO disease, hereditary spherocytosis), bite cells (G6PD hemolysis), and fragments (microangiopathy). G6PD enzyme assay is added in male infants, those of high-risk ancestry, or any case of unexplained severe hyperbilirubinemia — and may be falsely normal during acute hemolysis if reticulocyte counts are very high, so repeat testing at 3 months is sometimes required. Conjugated hyperbilirubinemia (direct bilirubin >1 mg/dL or >20% of TSB) shifts the workup toward biliary atresia: abdominal ultrasound, hepatobiliary scintigraphy, and pediatric hepatology referral within days, not weeks. Prolonged jaundice beyond 14 days in term infants prompts thyroid function, urine for reducing substances (galactosemia), urine culture, and fractionated bilirubin. Imaging is reserved for cholestasis or anatomic concerns. The Bhutani nomogram remains the single most useful clinical tool for predicting which infants will exceed phototherapy thresholds; combined with neurotoxicity risk factors (isoimmune hemolysis, G6PD deficiency, sepsis, asphyxia, albumin <3 g/dL), it determines both phototherapy and exchange-transfusion thresholds in the AAP 2022 guideline.",
+  "diagnosticTests": [
+    {
+      "test": "Transcutaneous bilirubinometer (TcB)",
+      "purpose": "Non-invasive screening before discharge and during follow-up. Correlates well with TSB up to about 15 mg/dL; values approaching phototherapy thresholds are confirmed with a serum draw.",
+      "whatToExpect": "A handheld probe is briefly placed on the infant's forehead or sternum. Result appears in seconds. No needles, no pain; widely used in nurseries and pediatric offices."
+    },
+    {
+      "test": "Total and direct (fractionated) serum bilirubin",
+      "purpose": "Gold-standard quantification of unconjugated and conjugated fractions. Drives every phototherapy and exchange-transfusion decision in the AAP 2022 nomogram.",
+      "whatToExpect": "Small heel-prick or venous sample. Results in 30-60 minutes at most hospital labs. Plotted on the hour-specific nomogram against gestational age and neurotoxicity risk factors."
+    },
+    {
+      "test": "Direct antiglobulin (Coombs) test, blood type, and Rh",
+      "purpose": "Identifies isoimmune hemolysis from ABO or Rh incompatibility. A positive direct Coombs in the newborn confirms maternal antibody-mediated hemolysis.",
+      "whatToExpect": "Performed on cord blood at delivery or peripheral blood thereafter. Results within hours. Drawn on both mother and infant when blood types differ."
+    },
+    {
+      "test": "Complete blood count, reticulocyte count, and peripheral smear",
+      "purpose": "Detects hemolysis (low hemoglobin, high reticulocytes), identifies spherocytes, bite cells, or fragments, and screens for sepsis (white-cell shifts).",
+      "whatToExpect": "Single blood draw; results in 1-2 hours. Smear review by a hematology pathologist follows within the same day at most centers."
+    },
+    {
+      "test": "G6PD enzyme assay",
+      "purpose": "Confirms glucose-6-phosphate dehydrogenase deficiency, the leading hemolytic cause of severe hyperbilirubinemia in the US. Recommended in all male infants of high-risk ancestry and any unexplained severe case.",
+      "whatToExpect": "Blood sample with results in 1-3 days. Can be falsely normal during acute hemolysis; repeat at 3 months if the index of suspicion remains high."
+    },
+    {
+      "test": "Bhutani hour-specific nomogram plotting",
+      "purpose": "Predicts which infants will exceed phototherapy or exchange thresholds. A reading above the 95th percentile on the nomogram identifies high-risk newborns before discharge.",
+      "whatToExpect": "No additional sampling — TSB or TcB is plotted on a chart based on hours of age. Drives whether the newborn goes home, returns in 24 hours, or starts phototherapy."
+    },
+    {
+      "test": "Abdominal ultrasound and hepatobiliary scintigraphy (HIDA scan)",
+      "purpose": "Reserved for conjugated hyperbilirubinemia. Ultrasound identifies choledochal cyst, gallbladder absence, and the triangular-cord sign of biliary atresia; HIDA assesses bile excretion into the bowel.",
+      "whatToExpect": "Ultrasound is painless and bedside-feasible. HIDA requires intravenous radiotracer and imaging over 24 hours; performed at pediatric centers. Both are ordered urgently when biliary atresia is suspected."
+    },
+    {
+      "test": "Thyroid function and metabolic screen",
+      "purpose": "Detects congenital hypothyroidism and galactosemia in prolonged jaundice beyond 14 days. Both are correctable causes with major long-term consequences if missed.",
+      "whatToExpect": "Heel-prick newborn screening is universal in most countries; targeted serum thyroid function tests and urine reducing substances are added if jaundice persists."
+    }
+  ],
+  "treatmentOverview": "Treatment is driven by the AAP 2022 nomogram, which raised phototherapy thresholds compared with the 2004 version by an average of 2-3 mg/dL — recognizing that the old thresholds led to overtreatment without measurable benefit in neurodevelopmental outcomes. The first-line therapy for any TSB at or above the gestational-age and risk-factor-stratified phototherapy curve is intensive blue LED phototherapy in the 460-490 nm wavelength range, which photoisomerizes unconjugated bilirubin in the skin to water-soluble lumirubin that the kidneys and bile excrete without prior conjugation. Effective phototherapy lowers TSB by roughly 30-50% within 24 hours. Adequate hydration, continued breastfeeding (or supplemental feeds if intake is poor), and treatment of any underlying cause — antibiotics for sepsis, levothyroxine for hypothyroidism, surgical referral for biliary atresia — run in parallel. Intravenous immunoglobulin (IVIG, 0.5-1 g/kg) is added for isoimmune hemolytic disease (ABO or Rh) when TSB approaches the exchange threshold despite intensive phototherapy; it reduces the need for exchange transfusion in this group by roughly 50% (Cochrane 2018). Exchange transfusion remains the rescue therapy when TSB approaches the bilirubin-induced neurotoxicity dysfunction (BIND) threshold on the AAP 2022 exchange curve, when intensive phototherapy fails to halt the rise, or when signs of acute bilirubin encephalopathy appear. A double-volume exchange removes 85% of the newborn's red cells and roughly 50% of circulating bilirubin and is performed under careful monitoring at a tertiary neonatal unit. Phenobarbital and other older agents are no longer routinely recommended. Prevention starts with universal predischarge screening, anti-D prophylaxis for Rh-negative mothers, early effective breastfeeding support, and a follow-up visit within 24-48 hours of discharge for infants discharged before 72 hours of age. The single most important system-level intervention shown to reduce kernicterus is the AAP-mandated screen-plus-follow-up bundle.",
+  "medicalTreatments": [
+    {
+      "name": "Intensive blue LED phototherapy (460-490 nm, irradiance ≥30 µW/cm²/nm)",
+      "description": "First-line treatment for TSB at or above the AAP 2022 phototherapy threshold. Light isomerizes bilirubin in the skin to lumirubin, which is excreted in urine and bile without requiring hepatic conjugation. The infant is undressed apart from a diaper, with eye shields, and exposed continuously except for short feeding breaks.",
+      "effectiveness": "Reduces TSB by 30-50% within the first 24 hours in most term infants; effective in 95% of cases at or just above the phototherapy threshold (Cochrane phototherapy reviews)."
+    },
+    {
+      "name": "Intravenous immunoglobulin (IVIG, 0.5-1 g/kg over 2 hours)",
+      "description": "Added for isoimmune hemolytic disease (positive Coombs, ABO or Rh) when TSB continues to rise within 2-3 mg/dL of the exchange threshold despite intensive phototherapy. IVIG blocks Fc receptors on reticuloendothelial macrophages, reducing antibody-mediated red-cell destruction.",
+      "effectiveness": "Reduces exchange-transfusion rates by roughly 50% in isoimmune hemolytic disease (Cochrane 2018, Louis et al.). Limited benefit outside isoimmune cases."
+    },
+    {
+      "name": "Double-volume exchange transfusion",
+      "description": "Two times the infant's blood volume (~170 mL/kg) is removed and replaced in small aliquots through an umbilical catheter, typically with reconstituted whole blood. Indicated when TSB reaches the AAP 2022 exchange threshold, when phototherapy fails to control rise, or when acute bilirubin encephalopathy signs appear.",
+      "effectiveness": "Removes ~85% of circulating red cells and ~50% of total bilirubin; halts neurotoxicity progression in the majority of cases when performed before advanced encephalopathy. Procedure-related complication rate 5-10%."
+    },
+    {
+      "name": "Optimized feeding and lactation support",
+      "description": "Frequent breastfeeding (8-12 times daily) or supplemental expressed milk/formula when intake is inadequate. Reduces enterohepatic recirculation of bilirubin and prevents dehydration-driven peaks. Stopping breastfeeding is not recommended outside rare circumstances.",
+      "effectiveness": "Active lactation support reduces excessive weight loss and the rate of hyperbilirubinemia requiring phototherapy by roughly 30-40% in observational data."
+    },
+    {
+      "name": "Treatment of the underlying cause",
+      "description": "Empirical antibiotics for suspected sepsis pending cultures; levothyroxine for congenital hypothyroidism; surgical referral (Kasai portoenterostomy) within 60 days for biliary atresia; avoidance of oxidant triggers in G6PD deficiency. Each etiology has a dedicated pathway alongside bilirubin control.",
+      "effectiveness": "Outcome-defining. Kasai before 60 days yields ~50-60% native-liver survival at 2 years; after 90 days it falls below 20% (Davenport 2018)."
+    },
+    {
+      "name": "Fiberoptic phototherapy blankets and home phototherapy",
+      "description": "Used for selected late-preterm or term infants near the threshold who are feeding well, when home monitoring infrastructure exists. Less effective than intensive overhead phototherapy but useful for mild-moderate cases and discharge step-down.",
+      "effectiveness": "Reduces TSB by 15-25% per 24 hours; about 60% as effective as in-hospital intensive phototherapy. Appropriate only for low-risk infants with reliable follow-up."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Kasai portoenterostomy (for biliary atresia)",
+      "description": "Surgical anastomosis of a Roux-en-Y jejunal loop to the porta hepatis, restoring bile flow when extrahepatic ducts are obliterated. Timing is decisive: performed before 60 days of age, native-liver survival at 2 years exceeds 50%; after 90 days it falls below 20%.",
+      "successRate": "Native-liver survival 50-60% at 2 years if done before 60 days; eventual liver transplantation needed in roughly 50-70% of patients over 20 years."
+    },
+    {
+      "name": "Pediatric liver transplantation",
+      "description": "Reserved for failed Kasai, decompensated cirrhosis from biliary atresia, or end-stage liver disease from other neonatal cholestatic conditions. Living-donor or deceased-donor options are routine at pediatric transplant centers.",
+      "successRate": "5-year graft survival 80-85% at high-volume pediatric centers; 1-year patient survival above 90%."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Sunlight exposure (filtered, supervised)",
+      "description": "Filtered sunlight phototherapy has been studied in low-resource settings where electric phototherapy is unavailable (Slusher et al. 2014, NEJM). Effective when delivered with appropriate filtering films and supervision, but not a substitute for in-hospital phototherapy in high-resource settings and not a safe DIY remedy."
+    }
+  ],
+  "whySeeSpecialist": "A neonatologist or pediatric hepatologist should be involved when jaundice appears in the first 24 hours, when TSB approaches the exchange threshold despite intensive phototherapy, when conjugated hyperbilirubinemia is detected, when the infant is preterm or has neurotoxicity risk factors (G6PD deficiency, isoimmune hemolysis, sepsis, asphyxia, albumin <3 g/dL), or when jaundice persists beyond 14 days. Most physiologic jaundice is managed by pediatricians and family physicians following the AAP 2022 algorithm.",
+  "doctorSelectionGuide": "Look for a pediatrician or neonatologist whose practice follows the AAP 2022 guideline, uses predischarge bilirubin screening universally, and offers a follow-up visit within 24-48 hours for infants discharged before 72 hours of age. Ask whether the practice has rapid access to fractionated bilirubin, can arrange home phototherapy when appropriate, and has clear referral pathways to a tertiary NICU and pediatric hepatology. For families with prior sibling history, prenatal counseling with a maternal-fetal medicine specialist is worth requesting.",
+  "preventionStrategies": [
+    "Universal predischarge transcutaneous or serum bilirubin screening on every newborn (AAP 2022) — the single largest driver of the fall in US kernicterus rates",
+    "Schedule a follow-up visit within 24-48 hours of discharge for any infant leaving the hospital before 72 hours of age, with repeat bilirubin and weight check",
+    "Anti-D immunoglobulin (RhoGAM 300 µg) for every Rh-negative pregnant patient at 28 weeks and within 72 hours of delivery to prevent Rh sensitization in future pregnancies",
+    "Active lactation support starting at delivery, with documented latch, intake, and weight monitoring on day 2-3 to prevent suboptimal-intake jaundice",
+    "Genetic counseling and G6PD screening in families with high-risk ancestry or a prior affected sibling",
+    "Identify and treat maternal-fetal isoimmunization antenatally with serial titers, middle-cerebral-artery Doppler, and intrauterine transfusion when indicated"
+  ],
+  "lifestyleModifications": [
+    "Feed the infant 8-12 times in 24 hours during the first week to support hydration and bowel emptying, which reduces enterohepatic bilirubin recirculation",
+    "Track wet and dirty diapers daily — at least 4-6 wet and 3-4 stool diapers by day 4 indicates adequate intake",
+    "Avoid mothballs (naphthalene), fava beans, and certain medications (sulfonamides, primaquine, nitrofurantoin) in G6PD-deficient infants and breastfeeding mothers",
+    "Continue breastfeeding through mild-to-moderate jaundice; interruption is rarely indicated and undermines long-term feeding success",
+    "Attend the 24-48 hour follow-up visit even if the baby looks well — peak bilirubin often occurs after hospital discharge",
+    "Report pale stools, dark urine, or persistent yellowing beyond 14 days promptly — early signs of cholestatic disease that benefit from rapid evaluation"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Frequent direct breastfeeding (8-12 times daily) during the first week to support bilirubin clearance via stooling",
+      "Expressed breast milk or donor human milk supplementation when direct latch is poor, before introducing formula",
+      "Pasteurized infant formula at adequate volumes (150-180 mL/kg/day by day 5) when breast milk is unavailable or insufficient",
+      "Maternal hydration and balanced nutrition to support milk supply",
+      "Vitamin K injection at birth for all newborns, which prevents hemorrhagic disease that can complicate jaundice workup"
+    ],
+    "avoid": [
+      "Water or glucose-water supplementation — increases enterohepatic recirculation and worsens jaundice (AAP discourages this practice)",
+      "Herbal teas and traditional remedies given to newborns — many contain compounds (camphor, naphthalene, methylene blue) that trigger hemolysis in G6PD-deficient infants",
+      "Maternal use of sulfa drugs, nitrofurantoin, or dapsone while breastfeeding a G6PD-deficient infant",
+      "Fava beans in the maternal diet when breastfeeding a G6PD-deficient infant",
+      "Discontinuation of breastfeeding unless specifically directed by a clinician for documented breast-milk jaundice with very high TSB"
+    ]
+  },
+  "exerciseGuidelines": "Not applicable in the newborn period. Skin-to-skin contact (kangaroo care) supports breastfeeding, thermoregulation, and bonding, and can resume during phototherapy breaks when bilirubin levels allow. Routine handling and feeding positions can continue around phototherapy units.",
+  "dailyManagement": [
+    "During phototherapy: feed every 2-3 hours, monitor temperature and hydration, protect the eyes with shields, and remove the infant only for feeds and diaper changes",
+    "Document daily TSB measurements until levels are below the phototherapy threshold by at least 2 mg/dL and falling",
+    "After discharge from phototherapy: clinical review and repeat TSB at 24 hours to confirm no rebound rise, especially in isoimmune hemolytic disease",
+    "For G6PD-deficient infants: provide the family a written list of triggers (drugs, foods, mothballs) to avoid lifelong",
+    "Maintain breastfeeding through and after phototherapy whenever possible; consult an IBCLC lactation specialist for ongoing support"
+  ],
+  "prognosis": "With timely AAP-guideline-driven care, the prognosis of neonatal jaundice is excellent. Physiologic jaundice resolves uneventfully in essentially 100% of cases by week 2-3. Pathologic hyperbilirubinemia treated with appropriate phototherapy, IVIG, or exchange transfusion before bilirubin reaches the BIND threshold also leaves no long-term neurodevelopmental deficit in the vast majority of infants. Severe untreated hyperbilirubinemia, however, can cause kernicterus — a permanent syndrome of choreoathetoid cerebral palsy, sensorineural hearing loss, oculomotor dysfunction, and dental enamel dysplasia. Universal predischarge screening has reduced US kernicterus incidence to roughly 1-2 per 100,000 live births. Outcomes in biliary atresia depend critically on age at Kasai portoenterostomy: native-liver survival at 2 years exceeds 50% if surgery occurs before 60 days, and falls below 20% after 90 days. Early recognition and adherence to the screen-plus-follow-up bundle is the single most important determinant of long-term outcome.",
+  "recoveryTimeline": "Physiologic jaundice peaks on day 3-5 in term infants (day 5-7 in preterm) and fully resolves by 1-2 weeks. With phototherapy, TSB typically falls 30-50% in the first 24 hours, and most infants are off treatment within 48-72 hours. Rebound bilirubin can occur in the 24 hours after stopping, particularly in isoimmune hemolytic disease, prompting a confirmatory measurement. Breast-milk jaundice may persist for up to 12 weeks but does not require treatment in a thriving infant. Kasai portoenterostomy recovery for biliary atresia involves a 1-2 week hospital stay and lifelong hepatology follow-up.",
+  "complications": [
+    "Acute bilirubin encephalopathy — early signs of lethargy and poor feeding progress to high-pitched cry, hypotonia, then opisthotonos and seizures if untreated; reversible only in the earliest phase",
+    "Kernicterus (chronic bilirubin encephalopathy) — permanent choreoathetoid cerebral palsy, sensorineural hearing loss, gaze palsy, and dental enamel dysplasia; incidence 1-2 per 100,000 US births",
+    "Sensorineural hearing loss without overt encephalopathy — auditory neuropathy can occur at TSB levels below the classic kernicterus threshold and warrants auditory brainstem response (ABR) screening after severe hyperbilirubinemia",
+    "Liver failure and need for transplantation in untreated biliary atresia or rare metabolic causes",
+    "Phototherapy-related complications — transient rash, hyperthermia, dehydration, and rare bronze baby syndrome in conjugated hyperbilirubinemia",
+    "Exchange-transfusion complications — thrombocytopenia, hypocalcemia, hypoglycemia, infection, and rare necrotizing enterocolitis, occurring in 5-10% of procedures",
+    "Adverse neurodevelopmental outcomes in preterm infants exposed to repeated near-threshold bilirubin spikes, even without classic kernicterus"
+  ],
+  "supportResources": [
+    {
+      "name": "American Academy of Pediatrics — Newborn Hyperbilirubinemia Guideline 2022",
+      "url": "https://publications.aap.org/pediatrics/article/150/3/e2022058859/188726",
+      "description": "Authoritative US guideline for screening and management of hyperbilirubinemia in infants 35 weeks and above."
+    },
+    {
+      "name": "NICE NG98 — Jaundice in Newborn Babies Under 28 Days",
+      "url": "https://www.nice.org.uk/guidance/cg98",
+      "description": "UK national clinical guideline used widely outside the US, freely accessible to families and clinicians."
+    },
+    {
+      "name": "PICK — Parents of Infants and Children with Kernicterus",
+      "url": "https://www.pickonline.org/",
+      "description": "Family-led organization providing support, advocacy, and resources for families affected by kernicterus and severe newborn jaundice."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "cholangitis",
+      "name": "Cholangitis and Neonatal Cholestasis",
+      "keyDifference": "Cholangitis and other cholestatic conditions produce conjugated (direct) hyperbilirubinemia with pale stools, dark urine, and persistent jaundice beyond 14 days. Neonatal jaundice is most often unconjugated; a fractionated bilirubin with direct >1 mg/dL or >20% of total flags cholestasis and triggers urgent biliary atresia workup."
+    },
+    {
+      "slug": "cholelithiasis",
+      "name": "Gallstone Disease (Cholelithiasis)",
+      "keyDifference": "Neonatal gallstones are rare but can produce obstructive jaundice with conjugated hyperbilirubinemia, often after prolonged TPN or hemolysis. Routine neonatal jaundice is unconjugated and presents within the first week; ultrasound distinguishes the two."
+    },
+    {
+      "slug": "anemia",
+      "name": "Neonatal Hemolytic Anemia",
+      "keyDifference": "Hemolytic anemia in the newborn (ABO/Rh disease, hereditary spherocytosis, G6PD deficiency) produces both pallor and jaundice, with low hemoglobin and high reticulocytes on the CBC. Pure physiologic jaundice has a normal hemoglobin and a negative Coombs test."
+    },
+    {
+      "slug": "hypothyroidism",
+      "name": "Congenital Hypothyroidism",
+      "keyDifference": "Congenital hypothyroidism causes prolonged unconjugated jaundice beyond 14 days, often with constipation, hypotonia, and large fontanelles. It is screened universally on the newborn heel-prick; treatment with levothyroxine resolves both the hormone deficiency and the jaundice."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "anemia",
+      "name": "Hemolytic Anemia of the Newborn"
+    },
+    {
+      "slug": "hypothyroidism",
+      "name": "Congenital Hypothyroidism"
+    },
+    {
+      "slug": "hepatitis-general",
+      "name": "Neonatal Hepatitis"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "anemia",
+      "name": "Anemia",
+      "relevance": "Hemolytic anemia from ABO/Rh disease, G6PD deficiency, or hereditary spherocytosis is the leading pathologic cause of severe neonatal jaundice."
+    },
+    {
+      "slug": "hypothyroidism",
+      "name": "Hypothyroidism",
+      "relevance": "Congenital hypothyroidism slows hepatic bilirubin conjugation and is a classic cause of prolonged neonatal jaundice beyond 14 days."
+    },
+    {
+      "slug": "hepatitis-general",
+      "name": "Hepatitis",
+      "relevance": "Neonatal hepatitis (viral, idiopathic, or metabolic) produces conjugated hyperbilirubinemia and is part of the cholestatic differential alongside biliary atresia."
+    },
+    {
+      "slug": "cholelithiasis",
+      "name": "Cholelithiasis",
+      "relevance": "Rare in newborns but a recognized cause of obstructive neonatal jaundice, especially after prolonged parenteral nutrition or significant hemolysis."
+    },
+    {
+      "slug": "cholangitis",
+      "name": "Cholangitis",
+      "relevance": "Ascending cholangitis can complicate biliary atresia and post-Kasai care, presenting with recurrent fever, conjugated hyperbilirubinemia, and the need for prolonged antibiotics."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "When does newborn jaundice usually appear?",
+      "answer": "Physiologic jaundice typically appears on day 2-4 of life, peaks on day 3-5 in term infants and day 5-7 in preterm infants, and resolves by 1-2 weeks. Jaundice within the first 24 hours of life or beyond 14 days is pathologic and needs evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What bilirubin level is dangerous in a newborn?",
+      "answer": "Danger depends on hours of life, gestational age, and risk factors. AAP 2022 phototherapy thresholds for a healthy 38-week infant at 48 hours sit near 15 mg/dL; exchange thresholds near 21-22 mg/dL. Preterm and sick infants have lower limits.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between physiologic and pathologic jaundice?",
+      "answer": "Physiologic jaundice appears after 24 hours, peaks on day 3-5, and resolves by 1-2 weeks. Pathologic jaundice starts in the first 24 hours, rises over 5 mg/dL per day, exceeds age-specific thresholds, or persists beyond 14 days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does breastfeeding cause jaundice?",
+      "answer": "Suboptimal-intake jaundice in week 1 reflects inadequate milk transfer and dehydration; the fix is feeding support, not stopping the breast. Breast-milk jaundice in weeks 2-12 is mild and benign. AAP recommends continuing breastfeeding through both.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How does phototherapy work?",
+      "answer": "Blue LED light at 460-490 nm passes through skin and converts unconjugated bilirubin into water-soluble lumirubin, which the kidneys and bile excrete without hepatic conjugation. Effective phototherapy lowers TSB by 30-50% within 24 hours.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is phototherapy safe?",
+      "answer": "Yes. Transient rash, mild hyperthermia, and dehydration are the most common effects and resolve when treatment ends. Long-term safety is confirmed in large cohort studies. Eye shields are mandatory to protect the retina during treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is kernicterus?",
+      "answer": "Kernicterus is permanent brain injury from severe untreated hyperbilirubinemia, producing choreoathetoid cerebral palsy, sensorineural hearing loss, and gaze palsy. US incidence has fallen to roughly 1-2 per 100,000 births with universal screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is neonatal jaundice diagnosed?",
+      "answer": "Every newborn is screened before discharge with a transcutaneous bilirubinometer or serum bilirubin plotted on the AAP 2022 nomogram. Pathologic features add fractionated bilirubin, CBC, reticulocytes, blood type, direct Coombs, and G6PD assay.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When does jaundice need treatment?",
+      "answer": "Treatment starts when TSB reaches the AAP 2022 phototherapy threshold for the infant's gestational age, hours of life, and neurotoxicity risk factors. Below threshold, observation and feeding support are sufficient; above threshold, blue LED phototherapy begins.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I still breastfeed during phototherapy?",
+      "answer": "Yes — breastfeeding should continue through phototherapy in almost every case. Feeding helps clear bilirubin via stooling and prevents dehydration. Brief breaks from the lights for feeds are standard practice and pose no harm to treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the Bhutani nomogram?",
+      "answer": "The Bhutani nomogram plots total serum bilirubin against age in hours to identify newborns at high risk of significant hyperbilirubinemia. A predischarge TSB above the 95th percentile flags infants who need close follow-up after discharge.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does G6PD deficiency cause newborn jaundice?",
+      "answer": "Yes. G6PD deficiency is the leading hemolytic cause of severe hyperbilirubinemia and kernicterus in US registries. It affects ~400 million people globally, with high prevalence in Mediterranean, African, Middle Eastern, and South/East Asian populations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is ABO incompatibility?",
+      "answer": "When a type-O mother carries a type-A or type-B infant, maternal anti-A/anti-B IgG can cross the placenta and destroy fetal red cells. Jaundice appears within 24 hours and the direct Coombs test is positive. Treatment is intensive phototherapy, with IVIG if rising fast.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is Rh disease still common?",
+      "answer": "Rh hemolytic disease is now rare in countries that give anti-D immunoglobulin (RhoGAM) routinely at 28 weeks and after delivery. Where antenatal care is limited, it remains a major cause of severe newborn anemia and jaundice requiring intensive treatment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is biliary atresia?",
+      "answer": "Biliary atresia is a progressive disease of the bile ducts presenting at 2-8 weeks with persistent jaundice, pale stools, and conjugated hyperbilirubinemia. Kasai portoenterostomy before 60 days yields ~50-60% native-liver survival at 2 years; later surgery does worse.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is exchange transfusion done?",
+      "answer": "Through an umbilical venous catheter, small aliquots of the infant's blood are removed and replaced with reconstituted whole blood, totaling about twice the blood volume (~170 mL/kg). This removes ~85% of red cells and ~50% of circulating bilirubin.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is sunlight not recommended for newborn jaundice?",
+      "answer": "Direct unfiltered sunlight risks sunburn, dehydration, and unsafe ultraviolet exposure and is unreliable for lowering bilirubin. Filtered sunlight has been studied where electric units are unavailable; otherwise blue LED phototherapy is the standard.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What follow-up does my baby need after discharge?",
+      "answer": "Infants discharged before 72 hours need a clinical visit within 24-48 hours, with weight and a bilirubin if the predischarge level was high-intermediate or high-risk on the Bhutani nomogram. Pale stools or jaundice beyond 14 days warrant prompt review.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can newborn jaundice cause hearing loss?",
+      "answer": "Yes. Bilirubin neurotoxicity preferentially damages auditory pathways, and sensorineural hearing loss or auditory neuropathy can occur even without overt kernicterus. Severe cases warrant an auditory brainstem response (ABR) test, not just OAE screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does jaundice come back after phototherapy?",
+      "answer": "Mild rebound is common in the 24 hours after stopping phototherapy and is usually below the treatment threshold. Larger rebounds occur in isoimmune hemolysis, G6PD deficiency, and prematurity. A follow-up bilirubin 24 hours after stopping is recommended.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is jaundice in a preterm baby more serious?",
+      "answer": "Yes. Preterm infants have lower UGT1A1 activity, lower albumin, and a more permeable blood-brain barrier, so neurotoxicity occurs at lower bilirubin levels. AAP 2022 phototherapy and exchange thresholds are stratified by gestational age accordingly.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What home care can I do if my baby has mild jaundice?",
+      "answer": "Feed 8-12 times in 24 hours, ensure 4-6 wet and 3-4 stool diapers per day after day 4, and watch for spreading yellowing, lethargy, or poor feeding. Avoid water or glucose-water supplements. Return for review if jaundice spreads to the legs or stools turn pale.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Newborn jaundice (high bilirubin in babies)",
+  "regionalNames": [
+    {
+      "name": "Pīliyā in newborn",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Ictericia neonatal",
+      "region": "Spanish-speaking countries",
+      "language": "es"
+    },
+    {
+      "name": "Ictère du nouveau-né",
+      "region": "France and francophone Africa",
+      "language": "fr"
+    }
+  ],
+  "searchTags": [
+    "neonatal jaundice",
+    "newborn jaundice",
+    "hyperbilirubinemia",
+    "bilirubin newborn",
+    "physiologic jaundice",
+    "pathologic jaundice",
+    "kernicterus",
+    "phototherapy newborn",
+    "ABO incompatibility",
+    "Rh hemolytic disease",
+    "G6PD deficiency newborn",
+    "breast milk jaundice",
+    "biliary atresia",
+    "Bhutani nomogram",
+    "AAP 2022 jaundice"
+  ],
+  "symptomKeywords": [
+    "yellow skin newborn",
+    "yellow eyes baby",
+    "jaundiced baby",
+    "high bilirubin newborn",
+    "pale stools newborn",
+    "dark urine baby",
+    "newborn not waking to feed",
+    "high pitched cry newborn"
+  ],
+  "metaTitle": "Neonatal Jaundice: Symptoms & Treatment | aihealz",
+  "metaDescription": "Neonatal jaundice: yellow skin from high bilirubin in newborns. Causes, AAP 2022 phototherapy thresholds, and prevention reviewed by our medical board.",
+  "keywords": [
+    "neonatal jaundice",
+    "newborn jaundice",
+    "hyperbilirubinemia",
+    "bilirubin in newborn",
+    "phototherapy",
+    "kernicterus",
+    "ABO incompatibility",
+    "Rh disease newborn",
+    "G6PD deficiency",
+    "breast milk jaundice",
+    "biliary atresia",
+    "Bhutani nomogram",
+    "AAP 2022 hyperbilirubinemia"
+  ],
+  "lastReviewed": "2026-05-18",
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jaundice08.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Jaundice08.jpg",
+      "altText": "Newborn infant with visible yellow discoloration of the face and sclera characteristic of neonatal jaundice",
+      "caption": "Visible neonatal jaundice — yellow discoloration of the face and sclera in the first week of life.",
+      "license": "CC BY-SA 3.0",
+      "credit": "Martin Pot / Wikimedia Commons",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "treatment",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Newborn_under_phototherapy_for_jaundice.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Newborn_under_phototherapy_for_jaundice.jpg",
+      "altText": "Newborn receiving blue LED phototherapy for hyperbilirubinemia with eye shields in place",
+      "caption": "Intensive blue LED phototherapy (460-490 nm) for neonatal hyperbilirubinemia, with eye protection.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "assetType": "anatomy",
+      "section": "definition",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bilirubin_metabolism.svg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Bilirubin_metabolism.svg",
+      "altText": "Diagram of bilirubin metabolism showing heme breakdown, hepatic conjugation by UGT1A1, biliary excretion, and enterohepatic recirculation",
+      "caption": "Bilirubin metabolism — heme breakdown to unconjugated bilirubin, hepatic UGT1A1 conjugation, and biliary excretion.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kemper AR, Newman TB, Slaughter JL, et al. Clinical Practice Guideline Revision: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics. 2022;150(3):e2022058859.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35932375/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "NICE Clinical Guideline CG98 / NG98: Jaundice in Newborn Babies Under 28 Days. National Institute for Health and Care Excellence; updated 2023.",
+      "url": "https://www.nice.org.uk/guidance/cg98",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Bhutani VK, Johnson L, Sivieri EM. Predictive ability of a predischarge hour-specific serum bilirubin for subsequent significant hyperbilirubinemia in healthy term and near-term newborns. Pediatrics. 1999;103(1):6-14.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9917432/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Maisels MJ, McDonagh AF. Phototherapy for Neonatal Jaundice. New England Journal of Medicine. 2008;358(9):920-928.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18305267/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Louis D, More K, Oberoi S, Shah PS. Intravenous immunoglobulin in isoimmune haemolytic disease of newborn: an updated systematic review and meta-analysis. Archives of Disease in Childhood Fetal and Neonatal Edition. 2014;99(4):F325-F331.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24514437/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Olusanya BO, Kaplan M, Hansen TWR. Neonatal hyperbilirubinaemia: a global perspective. Lancet Child & Adolescent Health. 2018;2(8):610-620.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30119720/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Slusher TM, Olusanya BO, Vreman HJ, et al. A randomized trial of phototherapy with filtered sunlight in African neonates. New England Journal of Medicine. 2015;373(12):1115-1124.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26376136/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Davenport M, Ong E, Sharif K, et al. Biliary atresia in England and Wales: results of centralization and new benchmark. Journal of Pediatric Surgery. 2011;46(9):1689-1694.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21929975/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "AIHealz Medical Editorial Board",
+    "slug": "aihealz-medical-editorial-board"
+  }
+}
