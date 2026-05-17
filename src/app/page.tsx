@@ -85,8 +85,8 @@ const TRENDING_SEARCHES: { label: string; href: string }[] = [
   { label: 'Hair transplant cost', href: '/india/en/hair-loss/cost' },
   { label: 'Knee replacement', href: '/india/en/knee-osteoarthritis/cost' },
   { label: 'IVF success rate', href: '/india/en/infertility' },
-  { label: 'TSH 6.8 meaning', href: '/conditions/hypothyroidism' },
-  { label: 'Statin alternatives', href: '/conditions/hyperlipidemia-family' },
+  { label: 'TSH 6.8 meaning', href: '/india/en/hypothyroidism' },
+  { label: 'Statin alternatives', href: '/india/en/hyperlipidemia-family' },
 ];
 
 function formatCount(n: number): string {
@@ -408,7 +408,7 @@ export default async function Home() {
                     analyzed in 38s
                   </span>
                   <Link
-                    href="/conditions/hypothyroidism"
+                    href="/india/en/hypothyroidism"
                     className="mono"
                     style={{
                       fontSize: 12,
@@ -445,9 +445,9 @@ export default async function Home() {
                 </div>
                 <div className="col gap-2" style={{ padding: '14px 18px' }}>
                   {[
-                    { n: '01', t: 'Hypothyroidism — the 5% nobody talks about', r: '5 min', href: '/conditions/hypothyroidism' },
-                    { n: '02', t: 'Statins at 40 — the new threshold', r: '7 min', href: '/conditions/hyperlipidemia-family' },
-                    { n: '03', t: 'When ferritin lies', r: '4 min', href: '/conditions/iron-deficiency-e611' },
+                    { n: '01', t: 'Hypothyroidism — the 5% nobody talks about', r: '5 min', href: '/india/en/hypothyroidism' },
+                    { n: '02', t: 'Statins at 40 — the new threshold', r: '7 min', href: '/india/en/hyperlipidemia-family' },
+                    { n: '03', t: 'When ferritin lies', r: '4 min', href: '/india/en/iron-deficiency-e611' },
                   ].map(({ n, t, r, href }) => (
                     <Link key={n} href={href} className="row gap-3 ai-baseline">
                       <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', minWidth: 18 }}>
