@@ -126,7 +126,10 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
         where: { slug: specialty, isActive: true },
         select: { slug: true },
     });
+    // TEMP DEBUG — remove once redirect is confirmed working
+    console.log(`[conditions/specialty] slug="${specialty}" conditionMatch=${JSON.stringify(conditionMatch)}`);
     if (conditionMatch) {
+        console.log(`[conditions/specialty] redirecting to /${country}/${lang}/${conditionMatch.slug}`);
         redirect(`/${country}/${lang}/${conditionMatch.slug}`);
     }
 
