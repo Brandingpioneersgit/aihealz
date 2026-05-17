@@ -123,7 +123,10 @@ jobs:
           cd "$DEPLOY_PATH"
           npm ci --production
           npx prisma generate
-          npx prisma migrate deploy
+          # Schema migrations are applied manually — see deploy.sh comment.
+          # The VPS keeps secrets in .env.production (not .env), so the Prisma
+          # CLI can't read DATABASE_URL here anyway. Re-enable when the project
+          # has a baselined prisma/migrations/ folder + a .env shim on the VPS.
           if pm2 describe aihealz > /dev/null 2>&1; then
             pm2 reload ecosystem.aihealz.config.js --update-env
           else
