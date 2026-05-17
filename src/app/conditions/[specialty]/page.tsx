@@ -1,7 +1,7 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 type PageParams = Promise<{ specialty: string }>;
 
@@ -114,6 +114,18 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
     // links go to /india/en/... which the country prefix resolver normalizes.
     const country = 'india';
     const lang = 'en';
+
+    // Many existing links (editorial cards, prior canonicals) point to
+    // /conditions/<condition-slug> instead of /conditions/<specialty>.
+    // If the slug is actually a condition, redirect to its canonical detail page
+    // so users don't land on an empty "no specialty matched" view.
+    const conditionMatch = await prisma.medicalCondition.findFirst({
+        where: { slug: specialty, isActive: true },
+        select: { slug: true },
+    });
+    if (conditionMatch) {
+        redirect(`/${country}/${lang}/${conditionMatch.slug}`);
+    }
 
     const rawConditions = await prisma.medicalCondition.findMany({
         where: {

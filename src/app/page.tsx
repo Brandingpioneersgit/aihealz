@@ -86,7 +86,7 @@ const TRENDING_SEARCHES: { label: string; href: string }[] = [
   { label: 'Knee replacement', href: '/india/en/knee-osteoarthritis/cost' },
   { label: 'IVF success rate', href: '/india/en/infertility' },
   { label: 'TSH 6.8 meaning', href: '/conditions/hypothyroidism' },
-  { label: 'Statin alternatives', href: '/conditions/high-cholesterol' },
+  { label: 'Statin alternatives', href: '/conditions/hyperlipidemia-family' },
 ];
 
 function formatCount(n: number): string {
@@ -446,8 +446,8 @@ export default async function Home() {
                 <div className="col gap-2" style={{ padding: '14px 18px' }}>
                   {[
                     { n: '01', t: 'Hypothyroidism — the 5% nobody talks about', r: '5 min', href: '/conditions/hypothyroidism' },
-                    { n: '02', t: 'Statins at 40 — the new threshold', r: '7 min', href: '/conditions/high-cholesterol' },
-                    { n: '03', t: 'When ferritin lies', r: '4 min', href: '/conditions/iron-deficiency' },
+                    { n: '02', t: 'Statins at 40 — the new threshold', r: '7 min', href: '/conditions/hyperlipidemia-family' },
+                    { n: '03', t: 'When ferritin lies', r: '4 min', href: '/conditions/iron-deficiency-e611' },
                   ].map(({ n, t, r, href }) => (
                     <Link key={n} href={href} className="row gap-3 ai-baseline">
                       <span className="mono" style={{ fontSize: 11, color: 'var(--cobalt)', minWidth: 18 }}>
