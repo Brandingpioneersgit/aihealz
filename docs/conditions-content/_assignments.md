@@ -431,7 +431,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | hemochromatosis-unspecified-e83119 | 1 | Endocrinology | (open) | — | open | Batch 007, 2 variants |
 | neonatal-encephalopathy-unspecified-p91819 | 1 | Neonatology | (open) | — | open | Batch 007, 2 variants |
 | cowpox-b08010 | 1 | Infectious Disease | (open) | — | open | Batch 007, 1 variant |
-| pouchitis-k91850 | 1 | Gastroenterology | (open) | — | open | Batch 007, 1 variant |
+| pouchitis-k91850 | 1 | Gastroenterology | claude-2026-05-17 | 2026-05-17 | done | EEAT page ~5k words, 20 FAQs, 8 sources, row id=1073 |
 | vulvodynia-unspecified-n94819 | 1 | Urology | (open) | — | open | Batch 007, 1 variant |
 | hypopyon-unspecified-eye-h20059 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
 | chalcosis-unspecified-eye-h44319 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |

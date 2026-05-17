@@ -269,9 +269,7 @@ export default async function Home() {
               {countryName && (
                 <>
                   {' · '}
-                  <Link href="/settings/location" style={{ color: 'var(--ink)', textTransform: 'none', letterSpacing: 0 }}>
-                    {cityDisplay ? `${cityDisplay}, ${countryName}` : countryName}
-                  </Link>
+                  {cityDisplay ? `${cityDisplay}, ${countryName}` : countryName}
                 </>
               )}
             </span>
@@ -1298,8 +1296,8 @@ export default async function Home() {
                     { label: 'For doctors', href: '/for-doctors' },
                     { label: 'Get the ethical badge ↗', href: 'https://mdrpedia.com', external: true, meta: 'mdrpedia' },
                     { label: 'Provider login', href: '/provider/login' },
-                    { label: 'Hospital portal', href: '/provider/hospital' },
-                    { label: 'Lab portal', href: '/provider/lab' },
+                    { label: 'Hospital portal', href: '/provider/hospital/dashboard' },
+                    { label: 'Lab portal', href: '/provider/lab/dashboard' },
                   ],
                 },
                 {

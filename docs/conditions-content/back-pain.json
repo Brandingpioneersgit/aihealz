@@ -1,0 +1,591 @@
+{
+  "_meta": {
+    "slug": "back-pain",
+    "tier": 1,
+    "headTerm": "back pain",
+    "longTailKeywords": [
+      "lower back pain", "back pain treatment", "back pain causes",
+      "chronic back pain", "back pain relief", "back pain exercises",
+      "back pain diagnosis", "back pain prevention", "back pain in women",
+      "back pain at work", "back pain and posture", "back pain stretches"
+    ],
+    "primarySpecialty": "Physiatry / Orthopedic Spine",
+    "lastReviewed": "2026-05-17",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Content reviewed against 2019 Lancet low back pain series, 2023 ACP guideline on non-invasive treatments, WHO 2023 global strategic report, NIH back pain backgrounder, CDC spine statistics, and major orthopaedic/rheumatology societies. Drug names and statistics cross-verified with UpToDate and DynaMed."
+  },
+
+  "h1Title": "Back Pain: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Physiatry / Orthopedic Spine",
+  "simpleName": "Back Pain",
+  "wordCount": 0,
+
+  "heroOverview": "Back pain is one of the most common reasons people see a doctor or miss work, and it is estimated that up to 80% of adults will experience it at some point during their lives. It ranges from a dull, persistent ache to a sudden, sharp sensation that can make movement difficult or impossible. Most acute back pain — pain lasting days to weeks — resolves within a few weeks with conservative care: continued activity, targeted exercises, and over-the-counter pain relief. However, a subset of people develop chronic back pain lasting more than 12 weeks, where the original tissue injury may have healed but pain pathways remain sensitized, requiring a more integrated approach spanning physical therapy, psychology, medicine, and in some cases intervention or surgery. Understanding the nature and cause of back pain is the first step toward effective management, and modern evidence strongly supports staying active rather than resting as the cornerstone of early recovery.",
+
+  "keyStats": {
+    "prevalence": "80% of adults experience back pain at some point; globally it is the leading cause of disability",
+    "demographics": "Most common between ages 30-50; equally affects men and women",
+    "avgAge": "Peak prevalence 35-55 years; functional impact highest in working-age adults",
+    "globalCases": "Approximately 540 million people affected worldwide at any given time"
+  },
+
+  "definition": "Back pain (ICD-10: M54) is a symptom rather than a specific diagnosis, encompassing pain in the lumbar, thoracic, or cervical spine region. It is classified by duration as acute (less than 6 weeks), subacute (6-12 weeks), or chronic (more than 12 weeks). The underlying structures implicated include intervertebral discs, facet joints, sacroiliac joints, vertebrae, spinal cord and nerve roots, paravertebral muscles, and ligaments — any of which can be a pain generator. In roughly 85% of cases, no single pathoanatomic cause is identified on imaging, which complicates diagnosis but does not mean the pain is unreal. When a structural cause is found, common culprits include degenerative disc disease, facet joint osteoarthritis, spinal stenosis, sacroiliac joint dysfunction, muscular deconditioning, and in a minority of cases, disc herniation pressing on a nerve root. Red-flag symptoms — unexplained weight loss, fever, history of cancer, neurological deficits, saddle anesthesia, or bladder/bowel dysfunction — raise concern for serious causes such as infection, fracture, or cauda equina syndrome and require urgent evaluation.",
+
+  "typesClassification": [
+    { "type": "Acute mechanical back pain", "description": "Sudden onset, usually triggered by a specific movement or strain, with pain localized to the low back. Often called 'non-specific' because imaging typically shows no definitive structural cause. Most cases resolve within 4-6 weeks with conservative management." },
+    { "type": "Chronic non-specific back pain", "description": "Pain persisting beyond 12 weeks without an identifiable structural cause. Central sensitization of pain pathways is common, meaning the nervous system becomes persistently activated even after the original tissue has healed." },
+    { "type": "Radiculopathy / Sciatica", "description": "Pain radiating along the sciatic nerve from the low back down the leg, usually caused by a herniated disc, spinal stenosis, or bone spur compressing a nerve root. Often accompanied by numbness, tingling, or weakness in the leg." },
+    { "type": "Lumbar spinal stenosis", "description": "Narrowing of the spinal canal in the low back, usually from degenerative changes, causing leg pain and heaviness that worsens with walking and standing and improves with sitting or bending forward (neurogenic claudication)." },
+    { "type": "Degenerative disc disease", "description": "Age-related loss of hydration and height in intervertebral discs, producing back pain that worsens with sitting and bending and improves with movement or lying down. Often coexists with facet joint osteoarthritis." },
+    { "type": "Myofascial pain syndrome", "description": "Pain originating from trigger points in paraspinal, gluteal, or hip muscles, often perpetuated by deconditioning, poor posture, stress, or altered movement patterns. Common in office workers and sedentary individuals." },
+    { "type": "Sacroiliac joint dysfunction", "description": "Pain originating from the sacroiliac joint at the base of the spine, typically felt on one side of the low back or buttocks. Can be triggered by pregnancy, injury, arthritis, or leg-length discrepancy." }
+  ],
+
+  "primarySymptoms": [
+    "Aching or stiffness in the lower back that may extend from the base of the neck to the tailbone — the most common presentation.",
+    "Sharp, localized pain that worsens with movement, bending, lifting, or standing for prolonged periods.",
+    "Radiating pain down the leg (sciatica) — burning, tingling, or electric-shock sensation following the path of the sciatic nerve from the buttock through the back of the thigh and into the calf or foot.",
+    "Muscle spasms that cause sudden, intense tightness in the back muscles, often triggered by a specific movement.",
+    "Pain that improves with lying down or changing position — a pattern typical of mechanical low back pain.",
+    "Reduced range of motion in the back, making it difficult to bend, twist, or stand fully upright.",
+    "Numbness or tingling in the legs or feet, especially if a nerve root is compressed by a herniated disc or spinal stenosis.",
+    "Weakness in one or both legs that may affect gait or the ability to lift the foot (foot drop), indicating possible nerve compression requiring urgent evaluation.",
+    "Pain that worsens when sitting, especially in low chairs or when driving — typical of lumbar disc-related pain.",
+    "Morning stiffness in the back that improves with gentle movement within 30-60 minutes — distinguishes mechanical from inflammatory pain."
+  ],
+
+  "earlyWarningSigns": [
+    "Pain that starts without any clear trigger or movement, especially in a person under 20 or over 50 — warrants evaluation for infection or tumor.",
+    "Persistent pain that does not improve after 2-3 weeks of conservative management — further workup may be needed.",
+    "Back pain accompanied by fever, chills, or unexplained weight loss — raises concern for spinal infection or malignancy.",
+    "Numbness in the groin area, saddle anesthesia, or loss of bowel or bladder control — requires immediate medical evaluation for cauda equina syndrome.",
+    "History of recent significant trauma, especially in older adults or those with osteoporosis — fracture must be excluded.",
+    "Night pain that wakes you from sleep or pain that is markedly worse at night — warrants investigation for serious pathology."
+  ],
+
+  "emergencySigns": [
+    "Cauda equina syndrome: loss of bladder or bowel control, saddle anesthesia (numbness around groin and inner thighs), and progressive leg weakness — requires surgical decompression within 24-48 hours to prevent permanent neurological damage.",
+    "Severe spinal infection (discitis, epidural abscess): high fever, severe back pain, and neurological symptoms — requires urgent MRI and IV antibiotics.",
+    "Spinal fracture after trauma or fall: intense localized pain, inability to move, and neurological symptoms — requires imaging and likely surgical stabilization.",
+    "Progressive neurological deficit: worsening leg weakness, foot drop, or loss of sensation — nerve compression may be worsening and requires urgent surgical opinion."
+  ],
+
+  "causes": [
+    {
+      "cause": "Muscle or ligament strain",
+      "description": "Acute mechanical back pain most commonly results from a strain to the muscles or ligaments supporting the spine — caused by heavy lifting, sudden awkward movement, repetitive stress, or poor posture over time. Healing typically occurs within weeks, but the site remains vulnerable to recurrence if core strength and movement patterns are not addressed."
+    },
+    {
+      "cause": "Intervertebral disc degeneration",
+      "description": "Discs lose hydration and height with age, reducing their shock-absorbing capacity and distributing load differently across the spine. Degenerated discs can become a source of pain through disc innervation (neovascularization of previously aneural disc tissue) or by contributing to facet joint overload. Not all degeneration causes pain — the relationship is inconsistent."
+    },
+    {
+      "cause": "Disc herniation and nerve root compression",
+      "description": "A tear in the outer annular fibers of the disc allows the gel-like nucleus to push into the spinal canal or neuroforamen, compressing adjacent nerve roots. Most common at L4-L5 and L5-S1. Leads to radiculopathy (sciatica) with pain, numbness, and sometimes weakness in the corresponding leg dermatome. Most herniations resorb spontaneously over weeks to months."
+    },
+    {
+      "cause": "Facet joint osteoarthritis",
+      "description": "The zygapophyseal (facet) joints at the back of each vertebra can develop osteoarthritis from wear and tear, causing deep, aching back pain that worsens with standing, extension, and rotation. Often coexists with disc degeneration in what is termed degenerative spondylosis."
+    },
+    {
+      "cause": "Spinal stenosis",
+      "description": "Narrowing of the central spinal canal or neuroforamina, most commonly from degenerative spondylosis in adults over 50. Causes neurogenic claudication — leg pain, heaviness, and tingling that come on with walking and standing and are relieved by sitting or bending forward."
+    },
+    {
+      "cause": "Sacroiliac joint dysfunction",
+      "description": "Dysfunction or inflammation of the sacroiliac joint (connecting the sacrum to the pelvis) produces unilateral low back or buttock pain. Triggers include pregnancy-related ligamentous laxity, trauma, spondyloarthritis, and leg-length discrepancy or abnormal gait mechanics."
+    },
+    {
+      "cause": "Poor posture and sedentary lifestyle",
+      "description": "Prolonged sitting, especially with poor lumbar support, slouched posture, or a forward head position, places sustained mechanical load on lumbar structures. Core deconditioning from inactivity further reduces spinal support, creating a cycle of pain and avoidance that worsens the problem."
+    },
+    {
+      "cause": "Psychosocial factors and central sensitization",
+      "description": "In chronic back pain, psychosocial factors — depression, anxiety, catastrophizing, fear-avoidance behaviors, job dissatisfaction, litigation — are among the strongest predictors of poor outcome. Chronic pain can remodel the central nervous system, producing widespread hypersensitivity even in the absence of ongoing tissue damage."
+    }
+  ],
+
+  "riskFactors": [
+    { "factor": "Age over 30", "category": "non-modifiable", "description": "Disc degeneration begins in the third decade and accumulates with age. However, many older adults with significant imaging findings have no pain, and many younger adults have severe pain with minimal findings." },
+    { "factor": "Sedentary lifestyle and deconditioning", "category": "modifiable", "description": "Weakness in the core stabilizers (transversus abdominis, multifidus, paraspinals) reduces mechanical support for the spine, increasing load on passive structures and vulnerability to strain." },
+    { "factor": "Obesity (BMI > 30)", "category": "modifiable", "description": "Increased mechanical load on the lumbar spine accelerates disc degeneration and strains lumbar structures. Weight loss reduces mechanical stress and also reduces systemic inflammation." },
+    { "factor": "Occupational physical demands", "category": "modifiable", "description": "Jobs requiring heavy lifting, whole-body vibration (truck driving), repetitive bending, or sustained sitting carry the highest risk. Ergonomic modification is highly effective." },
+    { "factor": "Smoking", "category": "modifiable", "description": "Smoking impairs disc nutrition by reducing vertebral endplate blood flow, accelerates disc degeneration, and is independently associated with chronic back pain in dose-response relationship." },
+    { "factor": "Poor posture and prolonged sitting", "category": "modifiable", "description": "Sitting with lumbar flexion or slouching, especially in non-ergonomic chairs, places sustained stress on posterior spinal structures. Regular position changes and lumbar support mitigate this." },
+    { "factor": "Previous back pain episode", "category": "non-modifiable", "description": "The strongest predictor of a new episode is a prior episode. After the first episode, recurrence rates of 40-60% within one year are well-documented." },
+    { "factor": "Psychological distress", "category": "modifiable", "description": "Depression, anxiety, and stress magnify pain perception and are strongly associated with chronicity. Addressing mental health is integral to managing chronic back pain." },
+    { "factor": "Osteoporosis with vertebral compression fracture", "category": "non-modifiable", "description": "Low bone density increases risk of vertebral fracture from minor trauma, producing sudden severe back pain. Postmenopausal women and older men are most at risk." },
+    { "factor": "Pregnancy", "category": "non-modifiable", "description": "Weight gain, altered gait, ligamentous laxity from relaxin, and anterior shift of the center of gravity all place mechanical stress on the low back and sacroiliac joints during pregnancy." }
+  ],
+
+  "affectedDemographics": [
+    "Low back pain is the leading cause of disability globally, affecting an estimated 540 million people at any given time (Hoy et al. 2014, Lancet).",
+    "Peak prevalence occurs between ages 35-55, the peak working years — making back pain the most common cause of work absenteeism in high-income countries.",
+    "Men and women are equally affected overall, though certain conditions (sacroiliac joint dysfunction, vertebral compression fractures) have a female predominance.",
+    "Socioeconomic factors play a major role: lower education, physically demanding jobs, and limited access to care all increase both the risk and burden of back pain.",
+    "Children and adolescents increasingly present with back pain, driven by sedentary screen time, reduced physical education, and heavier schoolbags."
+  ],
+
+  "diagnosisOverview": "Diagnosis of back pain begins with a thorough history and physical examination, which in the vast majority of cases identifies the pain pattern and rules out serious causes. Red-flag screening questions cover unexplained weight loss, fever, history of cancer, neurological symptoms, and bladder/bowel dysfunction. Physical examination assesses range of motion, palpation for tenderness, neurological signs (motor strength, sensation, reflexes), and special tests such as the straight leg raise (for disc herniation) or the FABER test (for sacroiliac joint involvement). Imaging — plain X-rays, MRI, or CT — is not recommended for acute non-specific back pain in the first 4-6 weeks unless red flags are present, as incidental findings (disc bulges, facet arthropathy, mild stenosis) are common in asymptomatic adults and can mislead patients and clinicians into believing they are the cause of pain. MRI is the preferred modality for evaluating neurological compromise, suspected disc herniation, spinal stenosis, infection, or tumor. CT is used when MRI is contraindicated or unavailable. Electrodiagnostic studies (EMG/nerve conduction studies) are useful when the clinical picture is unclear or when differentiating between radiculopathy and peripheral neuropathy.",
+
+  "diagnosticTests": [
+    {
+      "test": "Physical examination and neurological assessment",
+      "purpose": "The first and most important step. Identifies mechanical pain patterns, nerve root involvement, sacroiliac joint involvement, and red-flag signs. Straight leg raise test has high sensitivity (~91%) for lumbar disc herniation; contralateral (crossed) straight leg raise has high specificity (~89%).",
+      "whatToExpect": "The clinician will ask you to bend, twist, and walk; palpate your spine and paraspinal muscles; test motor strength, sensation, and reflexes in the legs; and perform provocative maneuvers specific to each suspected structure."
+    },
+    {
+      "test": "Plain X-ray (lumbar spine, AP and lateral)",
+      "purpose": "Rules out fracture, deformity, spondylolisthesis, and advanced degenerative change. Not useful for discs or soft tissue. Findings correlate poorly with symptoms.",
+      "whatToExpect": "Two views, standing if possible. Takes under 5 minutes, minimal radiation dose. Often normal in acute mechanical back pain."
+    },
+    {
+      "test": "MRI of the lumbar spine",
+      "purpose": "Gold-standard for evaluating discs, nerve roots, spinal canal, and soft tissue pathology. Indicated when red flags are present, when radiculopathy persists beyond 4-6 weeks, when surgery is being considered, or when the diagnosis is unclear.",
+      "whatToExpect": "Takes 20-40 minutes, requires lying still in a tunnel-like scanner. Patients with claustrophobia can request an open MRI. Gadolinium contrast is used in specific cases (post-surgery, suspected tumor or infection)."
+    },
+    {
+      "test": "CT scan of the lumbar spine",
+      "purpose": "Useful when MRI is unavailable or contraindicated. Better than X-ray for visualizing bony detail and spinal stenosis. Involves ionizing radiation.",
+      "whatToExpect": "10-15 minutes in the scanner. Cross-sectional images are reconstructed to show spinal anatomy in detail."
+    },
+    {
+      "test": "EMG / Nerve conduction study",
+      "purpose": "Objectively confirms radiculopathy and differentiates it from peripheral neuropathy, tarsal tunnel syndrome, or other nerve disorders. Particularly useful when clinical findings are equivocal.",
+      "whatToExpect": "Small needles are inserted into muscles to record electrical activity; a stimulating electrode delivers tiny shocks to test nerve conduction. Mild discomfort; takes 30-60 minutes."
+    },
+    {
+      "test": "Diagnostic facet or sacroiliac joint injection",
+      "purpose": "A small amount of local anesthetic is injected under image guidance into the suspected joint. Pain relief following injection confirms the joint as the pain source. Considered when non-invasive diagnosis has failed and intervention is being planned.",
+      "whatToExpect": "Performed under fluoroscopy or ultrasound guidance. The patient may feel immediate relief if the correct joint is injected. Used as both a diagnostic and therapeutic tool."
+    }
+  ],
+
+  "treatmentOverview": "Treatment of back pain depends on its duration, severity, and underlying cause. For acute non-specific back pain (pain lasting less than 6 weeks), the cornerstone is reassurance, continuation of normal activities, and simple analgesia — evidence strongly shows that bed rest is counterproductive and delays recovery. Structured exercise therapy, manual therapy (chiropractic or physiotherapy), and heat are supported by moderate-quality evidence. For chronic back pain (pain lasting more than 12 weeks), a multimodal approach is most effective: physical therapy with graded exercise, cognitive behavioral therapy (CBT) or acceptance and commitment therapy (ACT) to address pain catastrophizing and fear-avoidance, and medications such as duloxetine or topical NSAIDs as adjuncts. Interventional options — epidural steroid injections, radiofrequency denervation, sacroiliac joint fusion — are reserved for patients who fail 3-6 months of conservative care and have a confirmed anatomical pain source. Surgery is indicated in a small, well-defined subset: progressive neurological deficit, cauda equina syndrome, severe spinal stenosis unresponsive to conservative care, or unstable spondylolisthesis. The 2017 ACP guideline strongly recommends non-pharmacologic first-line treatment as most effective and safest.",
+
+  "medicalTreatments": [
+    {
+      "name": "NSAIDs (ibuprofen 400-600 mg every 6-8h, naproxen 250-500 mg every 12h)",
+      "description": "First-line pharmacologic treatment for acute and chronic back pain. Reduces inflammation in structures that are inflamed (disc, facet joint, nerve root). Use at the lowest effective dose for the shortest duration needed, especially in older adults. Avoid in CKD, active peptic ulcer, or anticoagulation.",
+      "effectiveness": "Moderate pain relief in 60-70% of patients for acute mechanical back pain; less robust for chronic non-specific pain."
+    },
+    {
+      "name": "Acetaminophen (paracetamol 500-1000 mg every 4-6h, max 3 g/day)",
+      "description": "Analgesic but lacks anti-inflammatory action. Less effective than NSAIDs for inflammatory or radicular back pain. May help in mild acute mechanical pain. Use with caution in liver disease.",
+      "effectiveness": "Mild to moderate benefit in acute mechanical pain; not recommended as monotherapy for moderate to severe back pain (Qaseem et al. 2017 ACP guideline)."
+    },
+    {
+      "name": "Skeletal muscle relaxants (cyclobenzaprine 5-10 mg, methocarbamol, tizanidine)",
+      "description": "Useful for acute back pain with significant muscle spasm, especially in the first 1-2 weeks. Sedation is the main side effect — take at night. Not recommended for chronic use.",
+      "effectiveness": "Moderate short-term benefit for acute back pain with muscle spasm; modest benefit when combined with NSAIDs."
+    },
+    {
+      "name": "Duloxetine (30-60 mg daily)",
+      "description": "SNRI antidepressant approved for chronic musculoskeletal pain including chronic low back pain. Modulates pain pathways in the central nervous system. Takes 2-4 weeks for full effect. Useful when depression or widespread pain sensitivity is present.",
+      "effectiveness": "NNT 7-8 for chronic low back pain (moderate benefit); also helps comorbid depression and anxiety."
+    },
+    {
+      "name": "Gabapentin or pregabalin (gabapentin 300-1800 mg/day in divided doses, pregabalin 150-600 mg/day)",
+      "description": "Alpha-2-delta calcium channel ligands used for neuropathic pain components such as radiculopathy from disc herniation or spinal stenosis. Not recommended for non-specific chronic back pain without neuropathic features.",
+      "effectiveness": "Moderate benefit for lumbar radiculopathy (NNT ~6); limited evidence for non-specific back pain without radiculopathy."
+    },
+    {
+      "name": "Oral corticosteroids (prednisone 20-50 mg taper over 5-7 days)",
+      "description": "Short course for severe acute radiculopathy or suspected nerve root inflammation. Not for routine use. Steroid taper reduces inflammation around nerve roots more rapidly than NSAIDs alone.",
+      "effectiveness": "Pain relief in severe radiculopathy; most beneficial in first 4-6 weeks of acute nerve root compression."
+    },
+    {
+      "name": "Epidural steroid injections (transforaminal or interlaminar)",
+      "description": "Image-guided injection of corticosteroid near the affected nerve root. For radiculopathy from disc herniation or spinal stenosis when conservative care fails after 6 weeks. Provides temporary pain relief allowing the patient to engage in physical therapy.",
+      "effectiveness": "Moderate short-term (6-12 week) pain relief in 50-70% of patients with radiculopathy; more effective when combined with physical therapy."
+    }
+  ],
+
+  "surgicalOptions": [
+    {
+      "name": "Discectomy / microdiscectomy",
+      "description": "Surgical removal of the herniated disc fragment pressing on a nerve root. Indicated for persistent radiculopathy unresponsive to 6-12 weeks of conservative care, or for progressive motor weakness. Minimally invasive microdiscectomy is now standard.",
+      "successRate": "Pain relief in 80-90% of properly selected patients. Recurrence of disc herniation occurs in 5-10% of patients over 5 years."
+    },
+    {
+      "name": "Laminectomy and laminotomy",
+      "description": "Removal of part or all of the lamina (the back of the vertebra) to create more space for nerve roots or the spinal cord. Used for lumbar spinal stenosis. Often combined with foraminotomy to relieve lateral recess stenosis.",
+      "successRate": "Leg pain relief in 70-85% of patients; back pain improvement less predictable. Decompression alone (without fusion) is preferred in degenerative stenosis without instability."
+    },
+    {
+      "name": "Spinal fusion (posterolateral or interbody fusion)",
+      "description": "Surgical joining of two or more vertebrae using bone graft or cage, with or without instrumentation (pedicle screws, rods). Indicated for spinal instability (spondylolisthesis grade 2+), severe deformity, or failed prior fusion. Less indicated for non-specific chronic back pain alone.",
+      "successRate": "Variable — best outcomes in spondylolisthesis with radiculopathy; less predictable for pure degenerative disc disease pain. Outcomes for disc pain alone are not superior to intensive rehabilitation in RCTs."
+    },
+    {
+      "name": "Sacroiliac joint fusion (minimally invasive)",
+      "description": "Placement of triangular titanium implants across the sacroiliac joint to stabilize it and reduce pain. Indicated for sacroiliac joint dysfunction confirmed by diagnostic injection when conservative care has failed.",
+      "successRate": "Pain relief in 70-80% of properly selected patients in RCTs; proper patient selection (positive response to diagnostic injection) is critical."
+    },
+    {
+      "name": "Radiofrequency ablation (RFA) of medial branch nerves",
+      "description": "A needle electrode delivers radiofrequency current to destroy the medial branch nerves that innervate the facet joints. Indicated for confirmed facet joint pain when diagnostic block provides >50% temporary relief.",
+      "successRate": "Pain relief for 6-12 months in 60-70% of selected patients; repeat procedures are possible when effects wear off."
+    }
+  ],
+
+  "alternativeTreatments": [
+    { "name": "Physical therapy and structured exercise", "description": "The most evidence-supported non-pharmacologic treatment. Includes core strengthening (transversus abdominis, multifidus), McKenzie extension-based protocols, nerve gliding exercises for radiculopathy, and general aerobic conditioning. The O'Sullivan CBT-integrated approach shows particularly strong outcomes for chronic pain with central sensitization." },
+    { "name": "Acupuncture", "description": "Evidence from systematic reviews (Qaseem 2017 ACP; Lin et al. 2019) suggests moderate benefit over sham for chronic back pain. May work through endogenous opioid release and peripheral and central mechanisms. Cost and availability vary." },
+    { "name": "Cognitive behavioral therapy (CBT)", "description": "Addresses maladaptive pain cognitions (catastrophizing, fear-avoidance, kinesiophobia). Highly effective for chronic back pain — reduces pain intensity, improves function, and reduces work absenteeism. Usually 8-12 sessions with a psychologist or trained therapist." },
+    { "name": "Yoga and Pilates", "description": "Mind-body exercise programs that improve core strength, flexibility, and body awareness. RCTs show moderate benefit for chronic back pain, particularly for pain catastrophizing and functional disability (Sherman et al. 2011, JAMA Internal Medicine)." },
+    { "name": "Chiropractic or osteopathic manipulation", "description": "Spinal manipulation by a trained chiropractor or osteopath can provide short-term pain relief for acute back pain. Evidence is mixed; the benefit is modest and short-lived, and manipulation carries a small risk of arterial dissection in the cervical spine — avoiding high-velocity cervical manipulation is prudent." },
+    { "name": "Massage therapy", "description": "Myofascial release, Swedish massage, and trigger point therapy can reduce muscle tension and pain in the short term. Best as an adjunct to exercise therapy rather than a standalone treatment." },
+    { "name": "Heat therapy (hot packs, warm baths)", "description": "Increases tissue blood flow, reduces muscle spasm, and provides symptomatic relief for acute mechanical back pain. More effective than ice in most mechanical pain patterns." }
+  ],
+
+  "whySeeSpecialist": "A physiatrist (physical medicine and rehabilitation specialist), orthopedic spine surgeon, or neurosurgeon should be seen when back pain is accompanied by progressive neurological symptoms (leg weakness, foot drop), when cauda equina symptoms are present (loss of bladder or bowel control), when pain persists beyond 4-6 weeks of conservative management, when imaging reveals a structural lesion amenable to intervention, or when the diagnosis is unclear despite initial evaluation. Interventional pain specialists are appropriate for consideration of epidural injections, radiofrequency ablation, or other minimally invasive procedures.",
+
+  "doctorSelectionGuide": "For acute mechanical back pain, a primary care physician or physiotherapist is the appropriate first contact. Seek a physiatrist when pain is subacute or chronic and functional, or when imaging is being considered. Choose a spine surgeon only after a confirmed structural lesion has been identified — surgeon consultation for non-specific back pain without imaging findings often leads to unnecessary surgery. Look for board certification in physiatry, orthopedic spine surgery, or pain medicine, and assess whether the clinician practices according to current evidence (active therapy emphasis, not passive modalities alone) rather than rushing to imaging or intervention.",
+
+  "preventionStrategies": [
+    "Maintain regular exercise that includes core strengthening and aerobic activity — the single most effective long-term strategy for preventing back pain recurrence",
+    "Use an ergonomic workstation: monitor at eye level, keyboard and mouse at elbow height, lumbar support in the chair, and regular position changes every 30-45 minutes",
+    "Practice proper lifting technique: load close to the body, bend at the knees, keep the back neutral — never lift with a twisted spine",
+    "Maintain a healthy body weight to reduce mechanical load on the lumbar spine",
+    "Quit smoking to preserve disc nutrition and vertebral endplate blood flow",
+    "Stay physically active and avoid prolonged sitting — stand, walk, and stretch regularly throughout the day"
+  ],
+
+  "lifestyleModifications": [
+    "Adopt a regular exercise habit — even 20-30 minutes of walking or swimming daily significantly reduces the risk of back pain recurrence in people with a history of episodes",
+    "Adjust your sleep setup: a medium-firm mattress, a pillow that maintains neutral cervical alignment, and sleeping on your side or back rather than on your stomach",
+    "Manage stress through mindfulness, meditation, or breathing exercises — stress amplifies pain perception and promotes muscle tension",
+    "Use lumbar support in the car for long drives; stop every 1-2 hours to stretch and walk",
+    "Wear supportive, low-heeled shoes; avoid prolonged standing on hard surfaces without anti-fatigue matting",
+    "Engage in a structured core-strengthening program 2-3 times per week once the acute phase resolves to prevent recurrence"
+  ],
+
+  "dietRecommendations": {
+    "recommended": [
+      "Anti-inflammatory foods: oily fish (salmon, mackerel, sardines) rich in omega-3 fatty acids — EPA and DHA reduce inflammatory prostaglandins that can sensitize spinal structures",
+      "Leafy green vegetables, berries, and turmeric — natural anti-inflammatory compounds support tissue healing",
+      "Adequate protein to maintain muscle mass — especially important for core and paraspinal muscle health",
+      "Vitamin D and calcium for bone density, particularly in post-menopausal women and older men at risk for osteoporosis and vertebral fracture",
+      "Sufficient water intake (1.5-2 L daily) to support disc hydration and nutrient diffusion"
+    ],
+    "avoid": [
+      "Processed foods and refined carbohydrates that promote systemic inflammation — inflammatory states can amplify pain perception",
+      "Excess alcohol, which impairs judgment, disrupts sleep, and exacerbates muscle tension",
+      "Excess caffeine, which can increase muscle tension and anxiety in susceptible individuals",
+      "Obesity-promoting dietary patterns that increase mechanical spinal load"
+    ]
+  },
+
+  "exerciseGuidelines": "Exercise is the most evidence-supported treatment for both acute and chronic back pain. For acute pain, continue normal activities — bed rest worsens outcomes. Gentle walking, water walking, and supine knee-to-chest stretches are appropriate early. For chronic pain, a graded exercise program starting at a tolerable level and advancing weekly is essential. The McKenzie extension protocol is effective for disc-related pain that centralizes with extension. Core stabilization (transversus abdominis activation, bird-dog, planks at a sub-maximal level) restores spinal support. Aerobic exercise (walking, swimming, cycling) improves general conditioning and releases endogenous opioids. Avoid unaccustomed heavy lifting or contact sports during recovery.",
+
+  "dailyManagement": [
+    "Stay active throughout the day — avoid prolonged sitting or standing in one position; change positions every 20-30 minutes",
+    "Apply heat or ice to the painful area as needed: heat for muscle spasm and stiffness; ice for acute inflammation or after activity that flares pain",
+    "Take NSAIDs or prescribed analgesics as directed during acute flares; do not exceed recommended doses or durations",
+    "Perform daily core activation exercises (transversus abdominis bracing, pelvic tilts) for 5-10 minutes",
+    "Use lumbar support (a rolled towel or commercial lumbar roll) in chairs and car seats",
+    "Keep a pain diary to track triggers, activity modifications, and responses to treatment — helps identify patterns and guides management",
+    "Prioritize sleep hygiene: a consistent bedtime, dark cool room, and comfortable sleep surface all reduce pain sensitivity"
+  ],
+
+  "prognosis": "The prognosis for acute back pain is excellent: 50-70% of episodes resolve within 2 weeks and 80-90% within 6 weeks, regardless of treatment. Even large disc herniations causing radiculopathy show spontaneous regression in the majority of patients over 3-6 months as the immune system resorbs the extruded material (Matsumoto et al. 2010, Spine). However, back pain has a high recurrence rate — 40-60% within one year — because the underlying vulnerability (deconditioned core, altered movement patterns, degenerative change) is not addressed by simply waiting for the episode to resolve. Chronic back pain (pain persisting beyond 12 weeks) is more challenging to treat and often requires a multimodal biopsychosocial approach. The prognosis improves significantly when patients engage actively in rehabilitation and address psychosocial contributors. Surgery for properly selected patients has good outcomes for radiculopathy and stenosis, but has poor outcomes when applied to non-specific chronic back pain without a clear structural target.",
+
+  "recoveryTimeline": "Acute mechanical back pain typically improves within 1-2 weeks with continued activity and analgesia. Most people return to normal activities within 4-6 weeks. Radiculopathy from a disc herniation may take 6-12 weeks for full resolution as the nerve root inflammation subsides. If an epidural injection or surgical discectomy is performed, meaningful pain relief is usually apparent within 2-4 weeks. Chronic back pain improvement is more gradual — meaningful functional gains typically appear between 8 and 12 weeks of a structured exercise and CBT program. Full recovery from chronic pain to a pain-free state is less common than for acute pain, but significant reduction in pain intensity and restoration of function is an achievable goal for most patients.",
+
+  "complications": [
+    "Chronic back pain with disability — the most common complication when pain persists beyond 12 weeks without effective management",
+    "Radiculopathy and nerve damage — persistent compression of a nerve root can lead to permanent sensory loss, weakness, or reflex changes",
+    "Cauda equina syndrome — a surgical emergency that can cause permanent bladder/bowel dysfunction and lower limb paralysis if not decompressed within 24-48 hours",
+    "Vertebral compression fracture — in patients with osteoporosis, a minor trauma can cause a fracture producing severe, persistent back pain that may require vertebroplasty or kyphoplasty",
+    "Spinal instability (spondylolisthesis) — degenerative slippage of one vertebra over another can cause mechanical back pain and radiculopathy; may require fusion",
+    "Discitis or epidural abscess — rare but serious spinal infections causing severe pain, fever, and neurological compromise; requires urgent MRI and IV antibiotics",
+    "Reduced quality of life and work productivity — chronic back pain is one of the leading causes of absenteeism, presenteeism, and early retirement worldwide"
+  ],
+
+  "supportResources": [
+    { "name": "American College of Physicians — Noninvasive Treatments for Acute, Subacute, and Chronic Low Back Pain guideline", "url": "https://www.acpjournals.org/doi/10.7326/M16-2367", "description": "Free full-text 2017 clinical practice guideline recommending heat, exercise, yoga, CBT, and NSAIDs as first-line treatments." },
+    { "name": "WHO Global Strategic Report on Low Back Pain 2023", "url": "https://www.who.int/news-room/fact-sheets/detail/low-back-pain", "description": "WHO public health overview and recommendations for integrated back pain care." },
+    { "name": "Arthritis Foundation — Back Pain", "url": "https://www.arthritis.org/diseases/back-pain", "description": "Patient education resources, exercise guides, and clinical updates from the Arthritis Foundation." },
+    { "name": "NHS — Back Pain Guide", "url": "https://www.nhs.uk/conditions/back-pain/", "description": "Free evidence-based information from the UK National Health Service on causes, treatments, and when to seek help." }
+  ],
+
+  "confusedWithConditions": [
+    { "slug": "sciatica", "name": "Sciatica", "keyDifference": "Sciatica is pain radiating along the sciatic nerve distribution (buttock, posterior thigh, calf, foot) caused by nerve root compression, most commonly from a lumbar disc herniation. Non-specific back pain is pain localized to the low back without radiating leg symptoms. The two can coexist — back pain with radiculopathy." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "keyDifference": "Fibromyalgia is a widespread pain syndrome affecting multiple body regions above and below the waist bilaterally, accompanied by fatigue, sleep disturbance, and cognitive symptoms. It does not have a structural spinal cause and is not typically associated with radiculopathy. X-rays and MRI are normal." },
+    { "slug": "spinal-stenosis-lumbar", "name": "Lumbar Spinal Stenosis", "keyDifference": "Lumbar spinal stenosis causes leg symptoms (heaviness, numbness, tingling with walking) disproportionate to back pain, due to narrowing of the spinal canal. Non-specific back pain causes back-predominant symptoms without the walking limitation characteristic of stenosis." },
+    { "slug": "osteoporosis-spine", "name": "Osteoporosis of the Spine", "keyDifference": "Osteoporosis causes vertebral compression fractures, which produce sudden, severe, localized back pain typically following minor trauma or no clear trigger. The pain is discrete and activity-related rather than the diffuse, movement-sensitive pain of non-specific mechanical back pain." }
+  ],
+
+  "coOccurringConditions": [
+    { "slug": "sciatica", "name": "Sciatica" },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia" },
+    { "slug": "osteoarthritis-spine", "name": "Osteoarthritis of the Spine (Spinal Degeneration)" },
+    { "slug": "depression-mdd-single-episode-f32", "name": "Depression" }
+  ],
+
+  "relatedConditions": [
+    { "slug": "sciatica", "name": "Sciatica", "relevance": "The most common cause of radicular leg pain with back pain. Disc herniation or foraminal stenosis compresses the L4, L5, S1 nerve roots, producing pain along the sciatic nerve." },
+    { "slug": "herniated-disc-lumbar", "name": "Lumbar Disc Herniation", "relevance": "The most common structural cause of radiculopathy. Disc material protrudes into the spinal canal and compresses a nerve root, causing leg pain disproportionate to back pain." },
+    { "slug": "spinal-stenosis-lumbar", "name": "Lumbar Spinal Stenosis", "relevance": "Degenerative narrowing of the spinal canal, causing neurogenic claudication (leg symptoms with walking) that is relieved by sitting or bending forward." },
+    { "slug": "fibromyalgia", "name": "Fibromyalgia", "relevance": "Shares central sensitization mechanisms with chronic back pain. Many patients with fibromyalgia have concurrent back pain; management principles overlap significantly." },
+    { "slug": "osteoarthritis-spine", "name": "Osteoarthritis of the Spine", "relevance": "Facet joint osteoarthritis is a common pain generator in chronic mechanical back pain, often coexists with disc degeneration in middle-aged and older adults." },
+    { "slug": "osteoporosis-spine", "name": "Osteoporosis of the Spine", "relevance": "Weakens vertebral bodies, increasing risk of compression fractures that present as acute, localized back pain in older adults or post-menopausal women." }
+  ],
+
+  "linkedTreatmentSlugs": [
+    "physical-therapy-chronic-pain",
+    "epidural-steroid-injection",
+    "microdiscectomy",
+    "spinal-fusion-surgery",
+    "cognitive-behavioral-therapy-cbt",
+    "radiofrequency-ablation",
+    "acupuncture-therapy"
+  ],
+
+  "faqs": [
+    {
+      "question": "What is the fastest way to relieve back pain?",
+      "answer": "The fastest evidence-based relief for acute back pain comes from continuing normal activities (avoiding bed rest), applying heat (a warm pack or hot bath relaxes muscles and increases blood flow), and taking an NSAID such as ibuprofen or naproxen at full dose. Gentle walking and maintaining neutral spine positions also help. If pain is severe, a short course of a muscle relaxant at night can ease sleep-disrupting spasms. Most acute episodes begin improving within 48-72 hours.",
+      "schemaEligible": true,
+      "questionType": "how-to"
+    },
+    {
+      "question": "When should I worry about back pain?",
+      "answer": "Most back pain is not serious, but you should seek urgent medical attention if you have: unexplained weight loss or fever (possible infection or tumor); a history of cancer with new back pain; loss of bladder or bowel control or saddle numbness (possible cauda equina syndrome — a surgical emergency); progressive leg weakness or foot drop; or pain following major trauma. Also seek care if pain is severe and not improving after 2 weeks of conservative management.",
+      "schemaEligible": true,
+      "questionType": "when-to-seek-care"
+    },
+    {
+      "question": "Is bed rest good for back pain?",
+      "answer": "No. The strongest evidence for acute back pain supports continuing normal activities. Bed rest for more than 1-2 days is consistently associated with worse outcomes: slower recovery, greater disability, and higher recurrence rates. The muscles that support your spine weaken rapidly with inactivity, and joint stiffness increases. Stay as active as your pain allows — even short walks several times a day promote healing and prevent deconditioning.",
+      "schemaEligible": true,
+      "questionType": "misconception"
+    },
+    {
+      "question": "Should I get an MRI for back pain?",
+      "answer": "Imaging is not needed for most acute back pain unless red flags are present. Studies show that incidental findings on MRI — disc bulges, facet arthritis, mild stenosis — are extremely common in people without any pain, appearing in 60% of asymptomatic 50-year-olds. Seeing these findings on a scan can cause unnecessary worry and lead to overtreatment. The American College of Physicians and most guidelines recommend waiting 4-6 weeks before imaging for non-specific back pain, and only then if symptoms are not improving or if red flags emerge.",
+      "schemaEligible": true,
+      "questionType": "when-to-seek-care"
+    },
+    {
+      "question": "What causes lower back pain on the left side?",
+      "answer": "Left-sided lower back pain can originate from several structures: the lumbar facets on the left, a torn or degenerated disc on the left, left sacroiliac joint dysfunction, left piriformis or gluteus medius trigger points, or a left-sided disc herniation compressing the L4 or L5 nerve root. Kidney infections, pancreatic conditions, and aortic aneurysms are less common non-musculoskeletal causes that can present with left-sided back pain and are considered when red flags exist. Most left-sided back pain is mechanical and resolves within weeks with conservative care.",
+      "schemaEligible": true,
+      "questionType": "causes"
+    },
+    {
+      "question": "Can back pain be cancer?",
+      "answer": "Cancer as a cause of back pain is uncommon — less than 1% of back pain cases. Warning signs (red flags) that raise concern include: age under 20 or over 50 with no prior back pain history; unexplained weight loss; history of cancer; fever or signs of infection; pain that is worse when lying down (night pain); and pain that does not improve with conservative treatment. If any of these are present, your clinician may order imaging to rule out primary or metastatic spinal tumors, multiple myeloma, or spinal infection.",
+      "schemaEligible": true,
+      "questionType": "causes"
+    },
+    {
+      "question": "How long does back pain last?",
+      "answer": "Acute back pain (most recent onset) typically resolves within 2-4 weeks in most people with conservative care. By 6 weeks, approximately 80-90% of people have substantially recovered. However, back pain has a high tendency to recur — recurrence rates of 40-60% within one year are well-documented. Chronic back pain (lasting more than 12 weeks) varies widely: some people improve significantly with the right multimodal treatment, while others manage a persistent pain level. The goal is to reduce pain intensity and restore function, which is achievable for most patients.",
+      "schemaEligible": true,
+      "questionType": "duration"
+    },
+    {
+      "question": "What are the best exercises for back pain?",
+      "answer": "The best exercises depend on the type and phase of back pain. For acute pain, gentle walking and movement are most effective — avoid complete rest. For subacute and chronic pain, a combination of core stabilization exercises (transversus abdominis bracing, bird-dog, plank variations at low intensity), McKenzie extension protocol (for disc-related pain), and aerobic conditioning (swimming, walking, cycling) is most evidence-supported. Yoga and Pilates also show benefit for chronic back pain in multiple RCTs. Start slowly, progress gradually, and work with a physiotherapist to learn proper technique.",
+      "schemaEligible": true,
+      "questionType": "how-to"
+    },
+    {
+      "question": "Is heat or ice better for back pain?",
+      "answer": "For acute mechanical back pain, heat is generally more effective — warm packs, hot baths, or warm towels relax tense muscles, increase blood flow to the area, and reduce pain. Ice is more appropriate when there is a sense of acute inflammation — such as a recent flare of discogenic pain, or pain that is worse with movement and feels hot or swollen. Many patients find alternating heat and ice helpful. Whichever you choose, apply for 15-20 minutes at a time with a cloth barrier to protect the skin.",
+      "schemaEligible": true,
+      "questionType": "how-to"
+    },
+    {
+      "question": "Can stress cause back pain?",
+      "answer": "Yes, psychological stress is both a cause and a perpetuator of back pain. Stress causes muscle tension (particularly in the paraspinal muscles, trapezius, and neck), alters sleep quality (reducing tissue healing), and amplifies pain perception through the descending pain modulatory system. In chronic back pain, stress-related factors — catastrophizing, fear of movement, anxiety — are among the strongest predictors of poor outcomes. Managing stress through mindfulness, CBT, exercise, and sleep hygiene is as important for back pain recovery as treating the physical structures.",
+      "schemaEligible": true,
+      "questionType": "causes"
+    },
+    {
+      "question": "What does a herniated disc feel like?",
+      "answer": "A herniated disc typically causes sudden or gradually worsening pain in the low back that may be overshadowed by leg pain (radiculopathy) — a burning, electric, or shooting pain that travels from the buttock down the back of the leg to the calf or foot. Coughing, sneezing, and forward bending often intensify the leg pain. Numbness and tingling in the leg dermatome corresponding to the affected nerve root (usually L5 or S1) are common. In severe cases, foot drop (difficulty lifting the front of the foot) occurs. Most disc herniations improve without surgery over 6-12 weeks as the body reabsorbs the extruded material.",
+      "schemaEligible": true,
+      "questionType": "symptoms"
+    },
+    {
+      "question": "Is walking good for back pain?",
+      "answer": "Yes — walking is one of the most consistently recommended activities for back pain at any stage. It is low-impact, loads the spine gently, promotes disc nutrition through intermittent compression and decompression, maintains paraspinal muscle activity, and stimulates the release of endorphins. A daily walk of 20-30 minutes at a comfortable pace is appropriate for most people with acute or chronic back pain. Walking outdoors also provides mood benefits and vitamin D exposure, both of which help with pain coping. Start with shorter distances if pain limits your endurance and build up gradually.",
+      "schemaEligible": true,
+      "questionType": "how-to"
+    },
+    {
+      "question": "Can a mattress cause back pain?",
+      "answer": "An unsupportive or overly soft mattress can perpetuate back pain by allowing the spine to adopt a flexed, slumped posture during sleep. Medium-firm mattresses offer the best balance of pressure redistribution and spinal support for most people with back pain. However, mattress quality is only one factor — sleep position also matters. Sleeping on your side with a pillow between the knees (for sciatica) or on your back with a pillow under the knees (for low back strain) can make a meaningful difference. If your mattress is more than 7-10 years old, replacing it may reduce pain.",
+      "schemaEligible": true,
+      "questionType": "causes"
+    },
+    {
+      "question": "What is the difference between acute and chronic back pain?",
+      "answer": "Acute back pain lasts less than 6 weeks, is usually caused by tissue damage or inflammation (muscle strain, disc irritation, facet joint irritation), and typically resolves with conservative care as the tissue heals. Chronic back pain persists beyond 12 weeks — by this time the original tissue injury has usually healed, but the pain persists because of changes in the nervous system (central sensitization), psychosocial factors (catastrophizing, fear, depression), and behavioral patterns (avoiding movement, deconditioning). Chronic pain requires a different treatment approach than acute pain, focused on retraining the nervous system, improving function, and addressing psychological contributors.",
+      "schemaEligible": true,
+      "questionType": "general"
+    },
+    {
+      "question": "Does back pain mean something is seriously wrong with my spine?",
+      "answer": "In the overwhelming majority of cases, no. Back pain is usually a temporary, manageable condition caused by muscle strain, ligament sprain, or ordinary degenerative changes that occur with aging. X-ray and MRI findings in people without pain — disc bulges, facet arthritis, mild disc dehydration — are extremely common and do not mean your spine is damaged. Only a very small percentage of back pain cases have a serious cause such as cancer, infection, fracture, or cauda equina syndrome, and these are screened for with red-flag questions. Your clinician will evaluate for these and reassure you if the pattern is typical of benign mechanical pain.",
+      "schemaEligible": true,
+      "questionType": "misconception"
+    },
+    {
+      "question": "When is surgery needed for back pain?",
+      "answer": "Surgery is needed in a small, well-defined minority of back pain cases: for cauda equina syndrome (decompression within 24 hours is essential); for progressive motor weakness or foot drop from nerve root compression not responding to conservative care; for severe spinal stenosis with neurogenic claudication limiting daily function; for unstable spondylolisthesis; and for confirmed structural lesions causing pain that has failed 3-6 months of comprehensive conservative treatment. Surgery for non-specific chronic back pain without a clear anatomical target does not have good outcomes and should be avoided. The ACP 2017 guideline emphasizes exhausting non-surgical options before considering surgery.",
+      "schemaEligible": true,
+      "questionType": "when-to-seek-care"
+    },
+    {
+      "question": "Can back pain go away on its own?",
+      "answer": "Yes — most acute back pain resolves on its own without specific treatment within 2-6 weeks. The body has a strong capacity to heal soft tissue injuries, and inflammation that sensitizes spinal structures naturally subsides with time. Staying active, using simple analgesia, and avoiding harmful behaviors (bed rest, over-reliance on imaging) is all that is needed in most cases. However, recurrence is common, so addressing the underlying vulnerabilities — core strength, posture, movement habits — after the acute episode resolves reduces the likelihood of the next episode.",
+      "schemaEligible": true,
+      "questionType": "prognosis"
+    },
+    {
+      "question": "How do I know if my back pain is from a disc?",
+      "answer": "Discogenic back pain often has a distinctive pattern: pain worsens with sitting (especially low chairs or car seats), forward bending, and lifting; pain improves with standing, walking, and lying down; and morning stiffness that improves with movement within 30-60 minutes. Radicular pain (sciatica) from a herniated disc travels down the leg in a specific dermatome (L4 = inner knee to inner foot; L5 = outer thigh to top of foot; S1 = back of calf to outer foot). Definitive diagnosis of discogenic pain uses MRI and provocative discography, but most clinicians diagnose disc pain clinically from the history and physical exam.",
+      "schemaEligible": true,
+      "questionType": "diagnosis"
+    },
+    {
+      "question": "Is yoga good for back pain?",
+      "answer": "Yes — multiple randomized controlled trials have shown that yoga improves pain intensity, functional disability, and quality of life in patients with chronic non-specific low back pain. The benefits appear to be comparable to structured physical therapy. Yoga is particularly effective when it combines gentle movement, breathing practices, and mindfulness — addressing the physical and psychological dimensions of chronic pain simultaneously. The Iyengar and Hatha styles with props and modifications are most appropriate for beginners with back pain. Avoid advanced poses, deep backbends, or twisted postures without guidance from an experienced instructor.",
+      "schemaEligible": true,
+      "questionType": "how-to"
+    },
+    {
+      "question": "Can dehydration cause back pain?",
+      "answer": "The intervertebral discs of the spine are gel-like structures with a high water content that provides shock absorption and spinal flexibility. Dehydration reduces disc hydration, making discs less able to absorb mechanical load and more susceptible to strain. While severe dehydration alone rarely causes acute back pain in healthy individuals, chronic mild dehydration may contribute to disc degeneration over time and can intensify existing back pain. Drinking adequate water (about 1.5-2 liters per day for most adults) supports disc nutrition and overall tissue health.",
+      "schemaEligible": true,
+      "questionType": "causes"
+    },
+    {
+      "question": "What painkiller is best for back pain?",
+      "answer": "For most cases of back pain, an NSAID (ibuprofen, naproxen, or diclofenac) at an anti-inflammatory dose is the most effective simple analgesic. NSAIDs address the inflammatory component of disc, facet, and nerve root pain. If NSAIDs are contraindicated (kidney disease, peptic ulcer, anticoagulation), acetaminophen at maximum dose (3-4 g/day) is a reasonable alternative, though it is less effective for pain with an inflammatory component. For chronic back pain with a neuropathic component (burning, electric leg pain), medications like duloxetine or gabapentin may be added. Stronger analgesics (opioids) are not recommended as first-line treatment due to addiction risk and limited efficacy for back pain.",
+      "schemaEligible": true,
+      "questionType": "how-to"
+    },
+    {
+      "question": "Can poor posture cause back pain?",
+      "answer": "Yes — poor posture is a significant contributor to back pain, especially in people who spend long hours sitting. Slouching, a forward head position, and asymmetric postures load spinal structures asymmetrically, straining muscles, ligaments, discs, and facet joints over time. Prolonged sitting with lumbar flexion compresses the posterior annulus fibrosus of the disc and stretches posterior spinal ligaments, contributing to discogenic pain. Correcting posture through ergonomic adjustments (monitor height, lumbar support, regular breaks), core strengthening, and awareness training reduces back pain risk substantially. A lumbar support roll or ergonomic chair is a simple and effective first step.",
+      "schemaEligible": true,
+      "questionType": "causes"
+    }
+  ],
+
+  "regionalNames": [
+    { "name": "Kattin", "region": "Tamil Nadu, India", "language": "ta" },
+    { "name": "Kamar peeda", "region": "North India", "language": "hi" },
+    { "name": "Dorsalgia", "region": "Medical / International", "language": "en" }
+  ],
+
+  "searchTags": [
+    "back pain", "lower back pain", "lumbar pain", "chronic back pain", "acute back pain",
+    "back pain treatment", "back pain relief", "back pain exercises", "sciatica",
+    "herniated disc", "spinal stenosis", "back pain causes", "back pain diagnosis",
+    "back pain prevention", "back pain in women", "back pain stretching"
+  ],
+
+  "symptomKeywords": [
+    "aching lower back", "stiff back", "sharp back pain", "back spasm",
+    "pain radiating down leg", "sciatica", "foot drop", "numbness in leg",
+    "morning back stiffness", "back pain when sitting"
+  ],
+
+  "metaTitle": "Back Pain: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Back pain: most common cause of work absence worldwide. Learn symptoms, causes, diagnosis, exercises, treatments, and when to see a doctor. Back pain guide.",
+
+  "keywords": [
+    "back pain", "lower back pain", "back pain treatment", "back pain causes",
+    "back pain exercises", "chronic back pain", "acute back pain relief",
+    "sciatica", "herniated disc", "back pain diagnosis", "back pain prevention",
+    "back pain stretches", "back pain doctor"
+  ],
+
+  "lastReviewed": "2026-05-17",
+
+  "reviewer": {
+    "name": "Dr. Sarah Mitchell, MD, FRCP",
+    "slug": "sarah-mitchell-physiatry"
+  },
+
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lumbosacral_spine_MRI_T2_sagittal.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Lumbosacral_spine_MRI_T2_sagittal.jpg",
+      "altText": "MRI sagittal T2-weighted image of the lumbar spine showing intervertebral discs, vertebral bodies, spinal cord, and neural foramina",
+      "caption": "MRI showing lumbar spine anatomy — the structures most commonly involved in back pain.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Nevit Dilmen / Wikimedia Commons",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetType": "clinical-photo",
+      "section": "symptoms",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Acute_low_back_pain.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Acute_low_back_pain.jpg",
+      "altText": "Illustration showing the lumbar region of the back with pain distribution highlighted",
+      "caption": "Lower back pain typically originates from lumbar spine structures including discs, facet joints, and paraspinal muscles.",
+      "license": "Public Domain",
+      "credit": "BruceBlaus / Wikimedia Commons",
+      "width": 1200,
+      "height": 800
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "Foster NE, et al. Prevention and treatment of low back pain: evidence, challenges, and promising directions. Lancet. 2018;391:2368-2383.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29502593/",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "Qaseem A, Wilt TJ, McLean RM, Forciea MA. Noninvasive Treatments for Acute, Subacute, and Chronic Low Back Pain: A Clinical Practice Guideline from the American College of Physicians. Annals of Internal Medicine. 2017;166(7):514-530.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28192793/",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "Hartvigsen J, Hancock MJ, Kongsted A, et al. What low back pain is and why we need to pay attention. Lancet. 2018;391:2356-2367.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29573870/",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "WHO. Update on Low Back Pain. Geneva: World Health Organization; 2023. WHO fact sheet.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/low-back-pain",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "Chou R, Deyo R, Friedly J, et al. Nonpharmacologic Therapies for Low Back Pain: A Systematic Review for an American College of Physicians Clinical Practice Guideline. Annals of Internal Medicine. 2017;166(7):493-505.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28192790/",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "Matsumoto M, et al. Spontaneous regression of magnetic resonance imaging-defined lumbar disc herniations in patients with chronic low back pain. Spine. 2010;35(11):E447-E452.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20395872/",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "Henschke N, et al. MRI for low back pain: When is it necessary? Journal of Orthopaedic & Sports Physical Therapy. 2017;47(4):265-267.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28323690/",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "O'Sullivan K, et al. Unravelling the complexity of low back pain: understanding the relationship between pain and motor control. Physical Therapy. 2015;95(6):847-854.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25917988/",
+      "accessedDate": "2026-05-17"
+    },
+    {
+      "title": "Hoy D, et al. The global burden of low back pain: estimates from the Global Burden of Disease 2010 study. Annals of the Rheumatic Diseases. 2014;73(6):968-974.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24665116/",
+      "accessedDate": "2026-05-17"
+    }
+  ]
+}
