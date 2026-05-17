@@ -1,0 +1,627 @@
+{
+  "_meta": {
+    "slug": "diabetes-type-2",
+    "tier": 1,
+    "headTerm": "type 2 diabetes",
+    "longTailKeywords": [
+      "type 2 diabetes symptoms",
+      "type 2 diabetes treatment",
+      "type 2 diabetes diet",
+      "type 2 diabetes vs type 1",
+      "hba1c target type 2 diabetes",
+      "metformin type 2 diabetes",
+      "sglt2 inhibitor type 2 diabetes",
+      "glp-1 type 2 diabetes",
+      "type 2 diabetes reversal",
+      "type 2 diabetes complications"
+    ],
+    "primarySpecialty": "Endocrinology",
+    "lastReviewed": "2026-05-13",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations verified against ADA Standards of Care 2024 (Diabetes Care 2024;47 Suppl 1), Davies et al. ADA/EASD consensus Diabetologia 2022 (PMID 36050397), UKPDS 33/34, DPP and DiRECT trials, EMPA-REG and LEADER cardiovascular outcome trials."
+  },
+  "h1Title": "Type 2 Diabetes Mellitus: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Endocrinology",
+  "heroOverview": "Type 2 diabetes mellitus is a metabolic disease driven by progressive insulin resistance and beta-cell dysfunction that leaves blood glucose persistently elevated. It affects roughly 38.4 million Americans (11.6% of the adult population, CDC 2024) and more than 537 million adults globally (IDF Atlas 10th edition), with prevalence rising fastest in South and East Asia. Most people are diagnosed in midlife with mild thirst, increased urination, fatigue, or simply an abnormal screening HbA1c, but up to 20% present with established complications. Untreated, it doubles the lifetime risk of myocardial infarction and stroke, causes 44% of new chronic kidney disease, and is the leading cause of adult blindness and non-traumatic lower-limb amputation. Modern treatment — anchored on metformin, SGLT2 inhibitors, GLP-1 receptor agonists, and lifestyle change — can normalize glucose, prevent complications, and in some patients induce remission.",
+  "keyStats": {
+    "prevalence": "11.6% of US adults; 38.4 million Americans (CDC 2024)",
+    "demographics": "South Asians, African Americans, Hispanic/Latino, Pacific Islanders, and Native Americans carry 1.5-2x risk versus white adults",
+    "avgAge": "Most diagnoses age 45-64; incidence rising in adolescents and young adults",
+    "globalCases": "537 million adults globally (IDF Atlas 2021); projected 783 million by 2045"
+  },
+  "definition": "Type 2 diabetes mellitus (ICD-10: E11) is a chronic disorder of glucose homeostasis defined by insulin resistance in liver, skeletal muscle, and adipose tissue combined with progressive failure of pancreatic beta cells to compensate. The American Diabetes Association 2024 Standards of Care diagnose diabetes when any of the following is confirmed on two occasions or paired with classical symptoms: fasting plasma glucose ≥126 mg/dL (7.0 mmol/L), 2-hour plasma glucose ≥200 mg/dL (11.1 mmol/L) on a 75-gram oral glucose tolerance test, HbA1c ≥6.5% (48 mmol/mol), or a random plasma glucose ≥200 mg/dL with classical symptoms of hyperglycemia. The disease intersects three organ axes simultaneously — atherosclerotic cardiovascular disease, heart failure, and chronic kidney disease — and is now framed by the ADA and EASD as a cardio-renal-metabolic syndrome rather than a glucose-centric disease. Management is delivered by endocrinologists, primary care physicians, diabetes specialist nurses, dietitians, podiatrists, and ophthalmologists in coordinated programs.",
+  "typesClassification": [
+    {
+      "type": "Prediabetes",
+      "description": "Fasting glucose 100-125 mg/dL, 2-h glucose 140-199 mg/dL, or HbA1c 5.7-6.4%. Roughly 1 in 3 US adults; 5-10% per year progress to overt diabetes without intervention."
+    },
+    {
+      "type": "Uncomplicated type 2 diabetes",
+      "description": "Diagnosed type 2 diabetes without overt micro- or macrovascular complications. HbA1c ≥6.5% on confirmatory testing."
+    },
+    {
+      "type": "Type 2 diabetes with cardiovascular disease",
+      "description": "Established atherosclerotic cardiovascular disease, heart failure, or high cardiovascular risk. ADA/EASD 2022 algorithm prioritizes SGLT2 inhibitors or GLP-1 receptor agonists with proven cardiovascular benefit regardless of HbA1c."
+    },
+    {
+      "type": "Type 2 diabetes with chronic kidney disease",
+      "description": "eGFR <60 mL/min/1.73 m2 or urine albumin-to-creatinine ratio ≥30 mg/g. SGLT2 inhibitors slow kidney function decline by roughly 39% (DAPA-CKD)."
+    },
+    {
+      "type": "Type 2 diabetes in remission",
+      "description": "HbA1c <6.5% maintained for at least 3 months without glucose-lowering medication. Achievable in roughly 46% of recently diagnosed patients on intensive weight loss (DiRECT trial)."
+    },
+    {
+      "type": "Latent autoimmune diabetes in adults (LADA)",
+      "description": "GAD-antibody-positive adult-onset diabetes that mimics type 2 initially but progresses to insulin dependence. Distinguished by autoantibody testing in atypical type 2 presentations."
+    }
+  ],
+  "primarySymptoms": [
+    "Increased thirst and frequent urination, especially overnight, occurring once blood glucose exceeds the renal threshold of roughly 180 mg/dL (10 mmol/L).",
+    "Unexplained fatigue and reduced exercise tolerance, often present months before diagnosis as cells fail to take up glucose efficiently.",
+    "Slow wound healing and recurrent skin infections — small cuts on the feet or hands persist for weeks rather than days.",
+    "Blurred vision from osmotic shifts in the lens, fluctuating with glucose levels and often resolving with treatment.",
+    "Recurrent vaginal or balanitis fungal infections driven by glucose in skin and mucosal secretions.",
+    "Unintended weight loss of 5-10% over 3-6 months in a minority of patients, especially when glucose is markedly elevated.",
+    "Numbness, tingling, or burning in the feet that worsens at night — early diabetic peripheral neuropathy can predate diagnosis by years.",
+    "Darkened velvety patches in skin folds (acanthosis nigricans) on the neck, axillae, or groin in insulin-resistant patients.",
+    "No symptoms at all in roughly 50% of newly diagnosed patients — discovered on routine screening or on workup of cardiovascular disease."
+  ],
+  "earlyWarningSigns": [
+    "Fasting plasma glucose 100-125 mg/dL or HbA1c 5.7-6.4% on routine screening (prediabetes)",
+    "Acanthosis nigricans in adolescents or young adults, especially with central obesity",
+    "Recurrent fungal infections (vulvovaginitis, balanitis, thrush) or slow-healing minor wounds",
+    "History of gestational diabetes — confers a 7-fold lifetime risk of type 2 diabetes",
+    "Strong family history of type 2 diabetes in a first-degree relative"
+  ],
+  "emergencySigns": [
+    "Marked hyperglycemia (glucose >300 mg/dL) with vomiting, abdominal pain, fruity breath, or rapid deep breathing — assess for diabetic ketoacidosis or hyperosmolar hyperglycemic state and seek emergency care",
+    "Confusion, drowsiness, or sweating with measured blood glucose under 54 mg/dL — symptomatic severe hypoglycemia requiring oral or parenteral glucose",
+    "New chest pain, breathlessness, or facial droop — diabetes doubles the lifetime risk of myocardial infarction and stroke",
+    "Sudden vision loss or new floaters — vitreous hemorrhage from proliferative diabetic retinopathy needs urgent ophthalmology",
+    "Foot ulcer with surrounding redness, fever, or systemic illness — diabetic foot infection can progress to limb-threatening sepsis within 24-48 hours"
+  ],
+  "causes": [
+    {
+      "cause": "Insulin resistance in muscle, liver, and adipose tissue",
+      "description": "Visceral adiposity, ectopic lipid deposition in muscle and liver, and chronic low-grade inflammation impair insulin signaling through the IRS-1/PI3K/Akt pathway. Glucose uptake into muscle falls, hepatic gluconeogenesis is unrestrained, and circulating glucose rises."
+    },
+    {
+      "cause": "Progressive beta-cell dysfunction",
+      "description": "Pancreatic beta cells initially compensate for insulin resistance by hypersecreting insulin. Over years, beta-cell function declines roughly 4% per year (UKPDS data), driven by glucolipotoxicity, amyloid deposition, and oxidative stress. Once beta-cell capacity falls below demand, fasting hyperglycemia emerges."
+    },
+    {
+      "cause": "Genetic susceptibility",
+      "description": "Over 400 genetic loci influence type 2 diabetes risk, with TCF7L2 the strongest single common variant. Heritability estimates from twin studies are 40-70%. South Asian, East Asian, African, Hispanic, and Native American ancestries carry higher polygenic risk and develop disease at lower BMI thresholds."
+    },
+    {
+      "cause": "Adiposity and ectopic fat deposition",
+      "description": "Excess visceral and intrahepatic fat drive insulin resistance more strongly than total adiposity. Each 5 kg/m2 increase in BMI roughly doubles diabetes risk; the Twin Cycle hypothesis (Taylor) implicates excess liver and pancreatic fat in beta-cell dysfunction reversible with weight loss."
+    },
+    {
+      "cause": "Physical inactivity",
+      "description": "Sedentary behavior independently raises diabetes risk by reducing skeletal muscle glucose uptake. Each additional 2 hours of daily sitting raises diabetes incidence by roughly 14% independent of BMI."
+    },
+    {
+      "cause": "Dietary patterns and ultra-processed foods",
+      "description": "High intake of refined carbohydrates, sugar-sweetened beverages, processed red meat, and ultra-processed foods raises diabetes risk. Two servings of sugar-sweetened beverages daily raise diabetes incidence by 26% in pooled meta-analyses."
+    },
+    {
+      "cause": "Gestational diabetes and PCOS",
+      "description": "Both reflect underlying insulin resistance. Women with prior gestational diabetes have a 7-fold lifetime risk of type 2 diabetes; women with PCOS have a 3-4 fold elevated risk. Both warrant lifelong surveillance."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Overweight or obesity (BMI ≥25, or ≥23 in Asian populations)",
+      "category": "modifiable",
+      "description": "The dominant modifiable risk factor. Each 5 kg/m2 increase in BMI roughly doubles diabetes incidence; intentional 5-10% weight loss reduces incidence by 58% (Diabetes Prevention Program)."
+    },
+    {
+      "factor": "Family history of type 2 diabetes",
+      "category": "genetic",
+      "description": "A first-degree relative with diabetes raises personal risk roughly 2-3 fold; heritability estimates 40-70%. Risk is multiplicative when combined with adiposity."
+    },
+    {
+      "factor": "Age over 45 (or younger in high-risk populations)",
+      "category": "non-modifiable",
+      "description": "Beta-cell function declines with age. ADA recommends universal screening from age 35 in average-risk adults and earlier in patients with overweight plus another risk factor."
+    },
+    {
+      "factor": "South Asian, East Asian, African, Hispanic, or Native American ancestry",
+      "category": "non-modifiable",
+      "description": "These populations develop diabetes at lower BMI thresholds and younger ages, reflecting both genetic susceptibility and altered fat distribution. Indian adults develop type 2 diabetes a decade earlier than European adults on average."
+    },
+    {
+      "factor": "History of gestational diabetes or polycystic ovary syndrome",
+      "category": "non-modifiable",
+      "description": "Gestational diabetes confers a 7-fold lifetime diabetes risk; PCOS a 3-4 fold risk. Annual screening is recommended."
+    },
+    {
+      "factor": "Hypertension and dyslipidemia",
+      "category": "modifiable",
+      "description": "Clustering of metabolic risk factors (metabolic syndrome) doubles diabetes incidence independent of BMI. Treating hypertension and dyslipidemia reduces cardiovascular events but does not directly prevent diabetes."
+    },
+    {
+      "factor": "Physical inactivity",
+      "category": "modifiable",
+      "description": "Less than 150 minutes weekly of moderate-intensity activity raises diabetes risk; structured exercise programs reduce incidence by roughly 30% independent of weight change."
+    },
+    {
+      "factor": "Sleep disturbance and obstructive sleep apnea",
+      "category": "modifiable",
+      "description": "Short sleep (<6 hours) and untreated obstructive sleep apnea each raise diabetes risk by roughly 30-40%. CPAP improves insulin sensitivity but does not consistently lower HbA1c."
+    }
+  ],
+  "affectedDemographics": [
+    "US: 38.4 million adults (11.6% prevalence); 8.7 million undiagnosed (CDC National Diabetes Statistics Report 2024)",
+    "India: 101 million adults; projected to lead global burden by 2030 (ICMR-INDIAB 2023)",
+    "China: 141 million adults (IDF Atlas 2021); highest absolute case count globally",
+    "Adolescent type 2 diabetes incidence in the US has nearly doubled in two decades, paralleling rising childhood obesity",
+    "South Asian adults develop type 2 diabetes at BMI thresholds 3-5 units lower than European adults"
+  ],
+  "diagnosisOverview": "Diagnosis follows the 2024 ADA Standards of Care. Type 2 diabetes is established by any of: fasting plasma glucose ≥126 mg/dL (7.0 mmol/L), 2-hour plasma glucose ≥200 mg/dL on a 75-gram oral glucose tolerance test, HbA1c ≥6.5% (48 mmol/mol), or a random plasma glucose ≥200 mg/dL with classical hyperglycemic symptoms. A single random plasma glucose ≥200 mg/dL with symptoms is diagnostic; all other criteria require confirmation on a separate day. HbA1c is the preferred test for asymptomatic screening because it does not require fasting, captures average glucose over 8-12 weeks, and predicts microvascular complications well. HbA1c is unreliable in hemoglobinopathies, hemolysis, recent transfusion, and severe iron deficiency — in these settings, fasting glucose or oral glucose tolerance testing is preferred. Initial workup at diagnosis includes lipid panel, urine albumin-to-creatinine ratio, serum creatinine with eGFR, liver function tests, dilated fundus examination by ophthalmology, comprehensive foot examination including monofilament and vibration testing, blood pressure, and cardiovascular risk assessment. Antibody testing (GAD, IA-2, ZnT8) is reserved for atypical presentations — lean adults, rapid progression to insulin requirement, or strong personal or family history of autoimmunity — to detect latent autoimmune diabetes in adults. C-peptide measurement helps distinguish residual beta-cell function in unclear cases. Screening adults from age 35 every 3 years, or earlier with risk factors, is recommended.",
+  "diagnosticTests": [
+    {
+      "test": "HbA1c (glycated hemoglobin)",
+      "purpose": "Measures average blood glucose over the prior 8-12 weeks. ≥6.5% diagnoses diabetes; 5.7-6.4% indicates prediabetes. Preferred for screening and treatment monitoring.",
+      "whatToExpect": "A standard blood draw with no fasting required. Results return within 1-2 days at most labs. Less reliable in hemoglobinopathies, recent transfusion, hemolysis, or severe iron deficiency."
+    },
+    {
+      "test": "Fasting plasma glucose",
+      "purpose": "Direct measure of overnight glucose homeostasis. ≥126 mg/dL on two occasions diagnoses diabetes; 100-125 mg/dL indicates prediabetes.",
+      "whatToExpect": "Fast for at least 8 hours (typically overnight); only water permitted. Blood is drawn in the morning. Results are usually available the same day."
+    },
+    {
+      "test": "75-gram oral glucose tolerance test",
+      "purpose": "Sensitive test of glucose handling. 2-hour glucose ≥200 mg/dL diagnoses diabetes; 140-199 mg/dL indicates impaired glucose tolerance. Standard during pregnancy and in atypical adult cases.",
+      "whatToExpect": "Fasting blood draw, then a 75-gram glucose drink, followed by a second blood draw at 2 hours. The visit takes 2.5-3 hours; nausea after the drink is common."
+    },
+    {
+      "test": "Urine albumin-to-creatinine ratio (UACR)",
+      "purpose": "Detects early diabetic kidney disease. ≥30 mg/g indicates albuminuria; results guide ACE inhibitor or ARB initiation and SGLT2 inhibitor selection.",
+      "whatToExpect": "A single spot urine sample at any time of day. No preparation needed. Annual screening from diagnosis is recommended."
+    },
+    {
+      "test": "Serum creatinine and estimated GFR",
+      "purpose": "Assesses kidney function. eGFR <60 mL/min/1.73 m2 indicates chronic kidney disease; influences metformin and SGLT2 inhibitor dosing.",
+      "whatToExpect": "Standard blood test. Drawn at the same time as other diabetes laboratory tests."
+    },
+    {
+      "test": "Lipid panel (LDL, HDL, triglycerides)",
+      "purpose": "Cardiovascular risk stratification. Most patients with type 2 diabetes warrant statin therapy regardless of LDL.",
+      "whatToExpect": "Fasting lipid panel preferred but non-fasting is acceptable. Standard blood draw with results in 1-2 days."
+    },
+    {
+      "test": "Comprehensive foot and eye examination",
+      "purpose": "Detects subclinical neuropathy and retinopathy. ADA recommends annual dilated fundus examination from diagnosis and annual foot examination with 10-g monofilament and vibration testing.",
+      "whatToExpect": "Foot examination takes 5-10 minutes at the office visit. Dilated eye examination requires drops for pupil dilation; visual blurring lasts 4-6 hours after the exam."
+    },
+    {
+      "test": "GAD antibodies and C-peptide (selected cases)",
+      "purpose": "Distinguishes type 2 from latent autoimmune diabetes (LADA) and from type 1 diabetes in atypical presentations.",
+      "whatToExpect": "Standard blood draws. Results typically return within 5-7 working days. Reserved for atypical adults: lean phenotype, rapid insulin requirement, or strong autoimmune history."
+    }
+  ],
+  "treatmentOverview": "Treatment follows the 2024 ADA Standards of Care and the joint ADA/EASD consensus algorithm (Davies Diabetologia 2022), which has reframed type 2 diabetes management around three intersecting axes: glycemic control, cardiovascular-renal protection, and weight management. For all patients, lifestyle change is foundational — the Diabetes Prevention Program showed that 7% weight loss plus 150 minutes weekly of moderate-intensity activity reduced progression from prediabetes by 58%, outperforming metformin. The HbA1c target is individualized: under 7% for most adults, under 6.5% for selected younger patients without cardiovascular disease, and 7.5-8% for older adults with limited life expectancy or hypoglycemia risk. Metformin remains first-line glucose-lowering therapy for most patients due to efficacy, low cost, neutral weight effect, and long safety record. The major change since 2020 is that SGLT2 inhibitors (empagliflozin, dapagliflozin, canagliflozin) and GLP-1 receptor agonists (semaglutide, liraglutide, tirzepatide) are prioritized — independent of HbA1c — when established atherosclerotic cardiovascular disease, heart failure, or chronic kidney disease is present. SGLT2 inhibitors reduce cardiovascular mortality by 14% and worsening heart failure by 32% (EMPA-REG OUTCOME). GLP-1 receptor agonists reduce major adverse cardiovascular events by 14% in established atherosclerotic disease (LEADER, SUSTAIN-6) and produce 10-15% weight loss with semaglutide and 15-20% with tirzepatide. Sulfonylureas, thiazolidinediones, DPP-4 inhibitors, and basal insulin remain in the armamentarium but are positioned later in the algorithm. Comprehensive cardiovascular risk reduction includes statin therapy, ACE inhibitor or ARB for hypertension or albuminuria, low-dose aspirin in selected secondary-prevention patients, and smoking cessation. Bariatric and metabolic surgery is recommended in patients with type 2 diabetes and BMI ≥35, achieving diabetes remission rates of 30-60% at 5 years.",
+  "medicalTreatments": [
+    {
+      "name": "Metformin (start 500 mg once or twice daily with meals; titrate to 1000 mg twice daily)",
+      "description": "First-line glucose-lowering therapy. Reduces hepatic gluconeogenesis and improves insulin sensitivity. Weight-neutral, low hypoglycemia risk, and inexpensive. Avoid in eGFR <30 mL/min/1.73 m2; reduce dose if eGFR 30-45.",
+      "effectiveness": "Lowers HbA1c by 1.0-1.5% as monotherapy. UKPDS 34 showed reduced diabetes-related death and myocardial infarction in overweight patients."
+    },
+    {
+      "name": "SGLT2 inhibitors (empagliflozin 10-25 mg, dapagliflozin 10 mg, canagliflozin 100-300 mg daily)",
+      "description": "Block renal glucose reabsorption, causing urinary glucose loss. Prioritized in patients with established cardiovascular disease, heart failure, or chronic kidney disease regardless of HbA1c. Side effects include genital mycotic infections and rare euglycemic ketoacidosis.",
+      "effectiveness": "HbA1c reduction 0.5-1.0%; weight loss 2-3 kg; 14% reduction in cardiovascular mortality and 32% reduction in heart failure hospitalization (EMPA-REG OUTCOME)."
+    },
+    {
+      "name": "GLP-1 receptor agonists (semaglutide 0.5-2 mg weekly SC, liraglutide 1.2-1.8 mg daily SC, tirzepatide dual GIP/GLP-1 5-15 mg weekly SC)",
+      "description": "Augment glucose-dependent insulin release, suppress glucagon, slow gastric emptying, and promote satiety. Reduce major adverse cardiovascular events in established cardiovascular disease (LEADER, SUSTAIN-6). Gastrointestinal side effects most common.",
+      "effectiveness": "HbA1c reduction 1.0-2.0%; weight loss 5-10% with semaglutide, 15-20% with tirzepatide (SURPASS trials). 14% reduction in MACE (LEADER trial)."
+    },
+    {
+      "name": "Sulfonylureas (gliclazide 30-120 mg, glimepiride 1-4 mg daily)",
+      "description": "Stimulate pancreatic insulin release. Inexpensive and effective but carry hypoglycemia and modest weight gain. Useful where access to newer agents is limited; reserve for selected second-line use in cardiovascular-disease-low-risk patients.",
+      "effectiveness": "HbA1c reduction 1.0-1.5%; durability inferior to metformin, SGLT2 inhibitors, and GLP-1 agonists in ADOPT and GRADE trials."
+    },
+    {
+      "name": "DPP-4 inhibitors (sitagliptin 100 mg, linagliptin 5 mg, alogliptin 25 mg daily)",
+      "description": "Increase endogenous GLP-1 by inhibiting its breakdown. Weight-neutral, low hypoglycemia risk, but smaller glucose-lowering effect than GLP-1 agonists. Saxagliptin and alogliptin show increased heart failure hospitalization; linagliptin and sitagliptin are heart failure-neutral.",
+      "effectiveness": "HbA1c reduction 0.5-0.8%; no cardiovascular benefit demonstrated."
+    },
+    {
+      "name": "Basal insulin (glargine, detemir, degludec; start 10 units or 0.1-0.2 units/kg nightly)",
+      "description": "Provides background insulin to suppress overnight hepatic glucose output. Titrated against fasting glucose. Modern long-acting analogs (degludec, glargine U-300) cause less nocturnal hypoglycemia than NPH or glargine U-100.",
+      "effectiveness": "HbA1c reduction 1.5-3.0% depending on baseline; primary safety concern is hypoglycemia and weight gain."
+    },
+    {
+      "name": "Pioglitazone (15-45 mg daily)",
+      "description": "Activates PPAR-gamma, reducing insulin resistance. Improves NAFLD/MASH and reduces stroke recurrence in insulin-resistant patients (IRIS trial). Side effects include weight gain, edema, heart failure exacerbation, fracture risk, and rare bladder cancer concern.",
+      "effectiveness": "HbA1c reduction 0.8-1.2%; durable glucose lowering; 16% reduction in stroke or MI in insulin-resistant patients (IRIS)."
+    },
+    {
+      "name": "Tirzepatide (dual GIP/GLP-1 agonist, 5-15 mg weekly SC)",
+      "description": "First-in-class dual GIP and GLP-1 receptor agonist. Approved for type 2 diabetes and obesity. Largest weight-loss and HbA1c-lowering effect of any non-insulin agent to date.",
+      "effectiveness": "HbA1c reduction up to 2.5% and weight loss 15-22% over 72 weeks (SURPASS and SURMOUNT trials)."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Roux-en-Y gastric bypass",
+      "description": "Restrictive and malabsorptive bariatric procedure. Recommended for type 2 diabetes with BMI ≥35, especially when glycemic control or weight loss goals are not met with medical therapy. Combines gastric restriction with intestinal rearrangement.",
+      "successRate": "Diabetes remission in roughly 60% at 5 years; durable weight loss of 25-30% of baseline body weight."
+    },
+    {
+      "name": "Sleeve gastrectomy",
+      "description": "Restrictive bariatric procedure that removes 70-80% of the stomach. Less complex than gastric bypass and has become the most common bariatric operation worldwide.",
+      "successRate": "Diabetes remission in 30-50% at 5 years; weight loss of 20-25% of baseline body weight."
+    },
+    {
+      "name": "Pancreas or islet transplantation (selected cases)",
+      "description": "Reserved for selected patients with type 1 diabetes or severe insulin-dependent type 2 diabetes with kidney transplantation. Not routinely offered in type 2 diabetes outside specialist centers.",
+      "successRate": "Five-year graft survival 73% for simultaneous pancreas-kidney transplantation."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Mediterranean dietary pattern",
+      "description": "PREDIMED extension and meta-analyses show lower diabetes incidence and HbA1c reduction equivalent to many oral agents in early disease (Salas-Salvado Ann Intern Med 2014)."
+    },
+    {
+      "name": "Structured weight-loss programs (DiRECT-style)",
+      "description": "Total diet replacement at 800-900 kcal daily for 12-20 weeks induced diabetes remission in 46% of recently diagnosed patients at one year and 36% at two years (DiRECT trial, Lean Lancet 2018)."
+    }
+  ],
+  "whySeeSpecialist": "An endocrinologist or diabetologist should be involved when HbA1c remains above target despite metformin plus two additional agents, when insulin is being initiated or titrated, when complications such as diabetic kidney disease, severe neuropathy, or recurrent hypoglycemia emerge, in suspected LADA or unusual phenotypes, in pregnancy or pre-pregnancy counseling, and when bariatric or metabolic surgery is being considered. Primary care manages most uncomplicated type 2 diabetes effectively if treat-to-target is followed.",
+  "doctorSelectionGuide": "Look for endocrinology board certification, structured diabetes education programs at the practice (registered dietitians, diabetes educators, podiatry), access to continuous glucose monitoring and insulin-pump training, comfort with newer GLP-1 and SGLT2 regimens, and integrated care for cardiovascular and renal complications. Continuity matters more than prestige — diabetes management is a multi-decade relationship.",
+  "preventionStrategies": [
+    "Achieve and maintain 5-10% weight loss in prediabetic adults — reduces diabetes incidence by 58% over 3 years (Diabetes Prevention Program)",
+    "Accumulate at least 150 minutes weekly of moderate-intensity aerobic activity plus 2 weekly resistance sessions",
+    "Adopt a Mediterranean or DASH dietary pattern — independently lowers diabetes incidence by 20-30%",
+    "Limit sugar-sweetened beverages, refined carbohydrates, and ultra-processed foods",
+    "Screen adults from age 35 every 3 years with HbA1c or fasting glucose, and earlier in patients with overweight plus another risk factor",
+    "Treat obstructive sleep apnea with CPAP if confirmed on polysomnography — improves insulin sensitivity"
+  ],
+  "lifestyleModifications": [
+    "Engage with a structured diabetes self-management education program at diagnosis and refresh annually",
+    "Monitor blood glucose patterns with self-monitoring or continuous glucose monitoring as agreed with the care team",
+    "Examine feet daily for cuts, blisters, redness, or temperature change — early detection prevents ulcers",
+    "Schedule annual dilated eye examinations and biennial assessments thereafter if stable",
+    "Maintain blood pressure under 130/80 mmHg and LDL under 70 mg/dL if cardiovascular disease is established",
+    "Stop smoking — doubles cardiovascular and microvascular risk in diabetes",
+    "Limit alcohol to less than 1 drink daily for women and 2 for men; alcohol potentiates hypoglycemia in insulin or sulfonylurea users"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean dietary pattern emphasizing vegetables, legumes, whole grains, nuts, olive oil, and fish",
+      "DASH dietary pattern for combined hypertension and diabetes",
+      "High-fiber foods (25-35 g daily) — slows postprandial glucose rise and lowers LDL",
+      "Lean protein sources including fish, poultry, eggs, dairy, and plant proteins",
+      "Non-starchy vegetables filling half the plate at most meals",
+      "Water, unsweetened coffee, and tea as primary beverages"
+    ],
+    "avoid": [
+      "Sugar-sweetened beverages and fruit juices — raise diabetes incidence and worsen glycemic control",
+      "Ultra-processed foods, refined carbohydrates, and added sugars",
+      "Excess saturated and trans fats — raise cardiovascular risk in an already elevated baseline",
+      "Frequent snacking and large evening meals — disrupt glycemic patterns",
+      "Excess alcohol — risks hypoglycemia, weight gain, and worsens triglycerides"
+    ]
+  },
+  "exerciseGuidelines": "Aim for 150-300 minutes weekly of moderate-intensity aerobic activity spread over at least three days, with no more than two consecutive days without exercise. Add 2-3 resistance training sessions weekly targeting major muscle groups. Break up prolonged sitting every 30 minutes with light activity. Patients on insulin or sulfonylureas should monitor glucose around exercise and have rapid carbohydrate available.",
+  "dailyManagement": [
+    "Take medications at the same time daily — adherence is the strongest predictor of glycemic control",
+    "Self-monitor blood glucose or use continuous glucose monitoring as agreed with the team; adjust food and activity around readings",
+    "Examine feet daily for cuts, blisters, redness, or warmth — small wounds escalate quickly in diabetes",
+    "Track HbA1c every 3-6 months until at target, then every 6 months once stable",
+    "Carry rapid-acting carbohydrate (glucose tablets) if on insulin or sulfonylureas",
+    "Hydrate adequately, especially in warm weather and during exercise"
+  ],
+  "prognosis": "With contemporary therapy, the prognosis of type 2 diabetes has improved substantially. Maintaining HbA1c under 7%, blood pressure under 130/80 mmHg, and LDL under 70 mg/dL with appropriate ACE inhibitor or ARB, statin, and SGLT2 inhibitor or GLP-1 agonist therapy reduces cardiovascular events by 50% versus standard care (Steno-2 trial). Recently diagnosed patients who achieve and sustain substantial weight loss can enter diabetes remission — 46% at one year and 36% at two years in the DiRECT trial. Without treatment, type 2 diabetes doubles cardiovascular mortality, causes 44% of new chronic kidney disease, and is the leading cause of adult blindness and non-traumatic lower-limb amputation. Median life expectancy is reduced by 4-6 years in middle-aged adults at diagnosis, narrowing substantially with modern multifactorial care. The decisive prognostic factors are early intensive treatment, sustained weight management, smoking status, and adherence to long-term cardiovascular-protective therapy.",
+  "recoveryTimeline": "Glycemic improvement begins within 1-2 weeks of metformin or lifestyle change; full HbA1c response is seen at 3 months. Weight loss with GLP-1 agonists plateaus at 12-18 months. Diabetic retinopathy and nephropathy progression is measurably slowed within 1-2 years of tight glycemic and blood pressure control. Remission from intensive weight loss is most likely within 6 years of diagnosis; the longer the disease duration, the lower the remission probability.",
+  "complications": [
+    "Diabetic retinopathy — leading cause of working-age adult blindness; annual dilated fundus exam essential",
+    "Diabetic nephropathy — albuminuria progressing to chronic kidney disease and end-stage kidney failure; 44% of new CKD",
+    "Diabetic peripheral neuropathy — symmetric distal sensory loss; underpins diabetic foot ulcers and amputation risk",
+    "Atherosclerotic cardiovascular disease — doubled lifetime risk of myocardial infarction and stroke",
+    "Heart failure — particularly with preserved ejection fraction; SGLT2 inhibitors reduce hospitalization by 32%",
+    "Diabetic ketoacidosis or hyperosmolar hyperglycemic state — acute decompensations, especially during illness or with SGLT2 inhibitor use",
+    "Severe hypoglycemia — especially with insulin or sulfonylureas; associated with cardiovascular events and dementia"
+  ],
+  "supportResources": [
+    {
+      "name": "American Diabetes Association",
+      "url": "https://diabetes.org/",
+      "description": "US patient organization providing education, advocacy, and access to the latest guidelines."
+    },
+    {
+      "name": "Diabetes UK",
+      "url": "https://www.diabetes.org.uk/",
+      "description": "UK charity offering patient support, helplines, and structured education programs."
+    },
+    {
+      "name": "International Diabetes Federation",
+      "url": "https://idf.org/",
+      "description": "Global federation providing the IDF Atlas and resources across more than 160 countries."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "type-1-diabetes",
+      "name": "Type 1 Diabetes",
+      "keyDifference": "Type 1 diabetes is an autoimmune destruction of pancreatic beta cells, usually presenting in children or young adults with rapid onset of polyuria, polydipsia, and weight loss often progressing to diabetic ketoacidosis. Autoantibodies (GAD, IA-2, ZnT8) are positive and C-peptide is low or undetectable. Type 2 diabetes develops gradually in adults with insulin resistance, retained C-peptide, and negative autoantibodies."
+    },
+    {
+      "slug": "diabetes-insipidus-e232",
+      "name": "Diabetes Insipidus",
+      "keyDifference": "Diabetes insipidus shares the name 'diabetes' (Greek for 'siphon') but is unrelated to glucose. It results from antidiuretic hormone deficiency or renal resistance, producing massive dilute urine output with normal blood glucose. Distinguished by water-deprivation testing and serum sodium."
+    },
+    {
+      "slug": "hypertension",
+      "name": "Hypertension (Essential)",
+      "keyDifference": "Hypertension can coexist with type 2 diabetes as part of metabolic syndrome but is a distinct entity. Blood pressure ≥130/80 mmHg defines hypertension; diabetes is diagnosed by HbA1c, fasting glucose, or oral glucose tolerance test. Both share risk factors and frequently occur together."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "hypertension",
+      "name": "High Blood Pressure"
+    },
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure"
+    },
+    {
+      "slug": "coronary-artery-disease",
+      "name": "Coronary Artery Disease"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "hypertension",
+      "name": "High Blood Pressure",
+      "relevance": "Coexists in 60-70% of type 2 diabetes patients; tight blood pressure control reduces cardiovascular and microvascular events."
+    },
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure",
+      "relevance": "Diabetes doubles heart failure risk; SGLT2 inhibitors reduce heart failure hospitalization by 32% (EMPA-REG OUTCOME)."
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation",
+      "relevance": "Diabetes increases atrial fibrillation incidence and stroke risk; anticoagulation thresholds account for diabetes (CHA2DS2-VASc)."
+    },
+    {
+      "slug": "anemia",
+      "name": "Anemia",
+      "relevance": "Common in diabetic kidney disease; treating anemia improves quality of life and may slow CKD progression."
+    },
+    {
+      "slug": "alcohol-use-disorder",
+      "name": "Alcohol Use Disorder",
+      "relevance": "Excess alcohol worsens glycemic control, raises hypoglycemia risk in insulin or sulfonylurea users, and accelerates fatty liver and pancreatitis."
+    },
+    {
+      "slug": "diabetic-retinopathy",
+      "name": "Diabetic Retinopathy",
+      "relevance": "A leading microvascular complication and the most common cause of working-age adult blindness; annual dilated fundus exam is essential."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is type 2 diabetes?",
+      "answer": "Type 2 diabetes is a chronic metabolic disease in which the body becomes resistant to insulin and pancreatic beta cells fail to keep up, leaving blood glucose persistently elevated. It affects 11.6% of US adults and over 537 million people worldwide. Most patients are diagnosed in midlife and managed with lifestyle change, metformin, and newer agents like SGLT2 inhibitors and GLP-1 agonists.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a normal HbA1c?",
+      "answer": "Normal HbA1c is below 5.7%. Prediabetes is 5.7-6.4%. Diabetes is diagnosed at 6.5% or higher on confirmatory testing. Most adults with type 2 diabetes target an HbA1c under 7%, with stricter or looser targets based on age, complications, and hypoglycemia risk.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the early signs of type 2 diabetes?",
+      "answer": "Early signs include increased thirst, frequent urination especially overnight, fatigue, blurred vision, slow-healing wounds, recurrent yeast infections, and darkened skin patches in folds (acanthosis nigricans). Many patients have no symptoms and are diagnosed on routine screening.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can type 2 diabetes be reversed?",
+      "answer": "Type 2 diabetes can enter remission in roughly 46% of recently diagnosed patients who achieve substantial weight loss (DiRECT trial). Remission means HbA1c under 6.5% sustained for at least 3 months without glucose-lowering medication. The underlying tendency persists and can return with weight regain, so long-term lifestyle support is required.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best diet for type 2 diabetes?",
+      "answer": "Mediterranean and DASH dietary patterns have the strongest evidence for glycemic improvement and cardiovascular risk reduction. Both emphasize vegetables, legumes, whole grains, nuts, olive oil, and fish, while limiting sugar-sweetened beverages, refined carbohydrates, and ultra-processed foods. No single diet suits all patients; sustainability matters more than precise macronutrient ratios.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is type 2 diabetes diagnosed?",
+      "answer": "Type 2 diabetes is diagnosed by HbA1c at or above 6.5%, fasting plasma glucose at or above 126 mg/dL, 2-hour plasma glucose at or above 200 mg/dL during an oral glucose tolerance test, or a random plasma glucose at or above 200 mg/dL with classical symptoms. Any non-symptomatic result needs confirmation on a separate day.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between type 1 and type 2 diabetes?",
+      "answer": "Type 1 diabetes is autoimmune destruction of pancreatic beta cells, usually presenting in children or young adults with rapid onset and a need for insulin from diagnosis. Type 2 diabetes develops gradually in adults with insulin resistance and progressive beta-cell decline, often manageable initially without insulin. Autoantibody testing and C-peptide help distinguish them.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is metformin still first-line for type 2 diabetes?",
+      "answer": "Yes for most patients. Metformin is effective, weight-neutral, low-cost, and has decades of safety evidence. In patients with established cardiovascular disease, heart failure, or chronic kidney disease, SGLT2 inhibitors or GLP-1 receptor agonists are added or used in parallel regardless of HbA1c per the 2024 ADA Standards of Care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are SGLT2 inhibitors?",
+      "answer": "SGLT2 inhibitors (empagliflozin, dapagliflozin, canagliflozin) block kidney glucose reabsorption, lower HbA1c, induce 2-3 kg weight loss, and reduce cardiovascular mortality by 14% and heart failure hospitalization by 32% (EMPA-REG OUTCOME). Side effects include genital fungal infections and rare euglycemic ketoacidosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are GLP-1 receptor agonists?",
+      "answer": "GLP-1 receptor agonists (semaglutide, liraglutide, tirzepatide) enhance glucose-dependent insulin release, suppress glucagon, slow gastric emptying, and reduce appetite. They lower HbA1c by 1-2%, produce 10-20% weight loss, and reduce major cardiovascular events by 14% in established disease (LEADER, SUSTAIN-6).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will I need insulin for type 2 diabetes?",
+      "answer": "Most patients with type 2 diabetes are managed without insulin, particularly in the first decade. Insulin is added when HbA1c remains above target despite metformin plus two or three other agents, in severe symptomatic hyperglycemia, in pregnancy, or when other agents are contraindicated. Modern long-acting analogs cause less hypoglycemia than older insulins.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get type 2 diabetes?",
+      "answer": "Yes. Adolescent type 2 diabetes incidence in the US has nearly doubled in two decades, paralleling rising childhood obesity. Type 2 diabetes in youth tends to progress more rapidly and develops complications earlier than adult-onset disease. Screening is recommended in overweight children with additional risk factors from age 10.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What are the long-term complications of type 2 diabetes?",
+      "answer": "Untreated type 2 diabetes causes diabetic retinopathy (leading cause of working-age blindness), kidney disease (44% of new CKD), peripheral neuropathy and foot ulcers, doubled cardiovascular mortality, heart failure, and increased dementia risk. Modern multifactorial treatment substantially reduces all of these.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How often should I check my blood sugar?",
+      "answer": "Frequency depends on therapy. Patients on lifestyle plus metformin often need infrequent home monitoring. Insulin users typically check 2-4 times daily or wear continuous glucose monitors. Discuss a personalized monitoring plan with your care team. HbA1c is checked every 3 months until target is reached, then every 6 months.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is prediabetes?",
+      "answer": "Prediabetes is an HbA1c of 5.7-6.4%, fasting glucose 100-125 mg/dL, or 2-hour glucose 140-199 mg/dL. It affects roughly 1 in 3 US adults and progresses to type 2 diabetes at 5-10% per year without intervention. The Diabetes Prevention Program showed 7% weight loss plus 150 minutes weekly of activity reduces progression by 58%.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is type 2 diabetes hereditary?",
+      "answer": "There is a strong genetic component — heritability is estimated at 40-70%. Over 400 genetic loci influence risk, with TCF7L2 the strongest single common variant. A first-degree relative with diabetes raises personal risk roughly 2-3 fold. Lifestyle modifies the expression of this genetic predisposition substantially.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can exercise alone control type 2 diabetes?",
+      "answer": "Regular exercise improves insulin sensitivity and lowers HbA1c by roughly 0.5-0.7% as monotherapy. Combined with weight loss and dietary change, exercise can normalize glucose in early disease. Most patients with established type 2 diabetes still need medication, but exercise is foundational for everyone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should I take aspirin if I have type 2 diabetes?",
+      "answer": "Low-dose aspirin is recommended for secondary prevention after established cardiovascular disease. Primary prevention with aspirin is selective in diabetes — the 2024 ADA guideline reserves it for patients with high cardiovascular risk and low bleeding risk because the absolute benefit is modest. Discuss with your physician.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the cost of type 2 diabetes treatment?",
+      "answer": "Costs vary widely. Metformin is inexpensive (under USD 10 per month generic). SGLT2 inhibitors and GLP-1 agonists cost USD 400-1000 monthly in the US without insurance but are widely covered. In India and other markets, generic metformin, sulfonylureas, and increasingly generic SGLT2 inhibitors are affordable.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I see an endocrinologist for type 2 diabetes?",
+      "answer": "See an endocrinologist if HbA1c remains above target despite metformin plus two other agents, when initiating or titrating insulin, when severe complications emerge, in suspected LADA or atypical presentations, in pregnancy or pre-pregnancy planning, and when bariatric or metabolic surgery is being considered.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is bariatric surgery recommended for type 2 diabetes?",
+      "answer": "Bariatric or metabolic surgery is recommended for patients with type 2 diabetes and BMI 35 or above, and considered in those with BMI 30-34.9 when glycemic control is inadequate. Roux-en-Y gastric bypass and sleeve gastrectomy achieve diabetes remission in 30-60% at 5 years with durable weight loss.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Type 2 Diabetes (insulin-resistance diabetes)",
+  "regionalNames": [
+    {
+      "name": "टाइप 2 मधुमेह",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Type 2 Diabète",
+      "region": "France",
+      "language": "fr"
+    },
+    {
+      "name": "Diabetes Tipo 2",
+      "region": "Spain / Latin America",
+      "language": "es"
+    }
+  ],
+  "searchTags": [
+    "type 2 diabetes",
+    "T2DM",
+    "non-insulin-dependent diabetes",
+    "adult onset diabetes",
+    "insulin resistance",
+    "hyperglycemia",
+    "HbA1c",
+    "metformin",
+    "SGLT2 inhibitor",
+    "GLP-1 agonist",
+    "semaglutide",
+    "tirzepatide",
+    "diabetes prevention",
+    "prediabetes",
+    "diabetic complications",
+    "diabetes remission"
+  ],
+  "symptomKeywords": [
+    "frequent urination",
+    "increased thirst",
+    "blurred vision",
+    "fatigue",
+    "slow healing wounds",
+    "recurrent infections",
+    "tingling feet",
+    "unintended weight loss"
+  ],
+  "metaTitle": "Type 2 Diabetes: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Type 2 diabetes: high blood sugar from insulin resistance. Symptoms, HbA1c targets, metformin, SGLT2 and GLP-1 therapy, reviewed by our medical board.",
+  "keywords": [
+    "type 2 diabetes",
+    "type 2 diabetes symptoms",
+    "type 2 diabetes treatment",
+    "HbA1c target",
+    "metformin",
+    "SGLT2 inhibitor",
+    "GLP-1 agonist",
+    "semaglutide",
+    "type 2 diabetes diet",
+    "prediabetes",
+    "type 2 diabetes complications",
+    "type 2 diabetes remission",
+    "insulin resistance"
+  ],
+  "lastReviewed": "2026-05-13",
+  "images": [],
+  "sources": [
+    {
+      "title": "American Diabetes Association. Standards of Care in Diabetes — 2024. Diabetes Care. 2024;47(Suppl 1):S1-S321.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38078589/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Davies MJ, Aroda VR, Collins BS, et al. Management of Hyperglycemia in Type 2 Diabetes, 2022. A Consensus Report by the American Diabetes Association and the European Association for the Study of Diabetes. Diabetologia. 2022;65(12):1925-1966.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36050397/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "UK Prospective Diabetes Study (UKPDS) Group. Effect of intensive blood-glucose control with metformin on complications in overweight patients with type 2 diabetes (UKPDS 34). Lancet. 1998;352(9131):854-865.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9742977/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Knowler WC, Barrett-Connor E, Fowler SE, et al. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin (Diabetes Prevention Program). New England Journal of Medicine. 2002;346(6):393-403.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11832527/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Zinman B, Wanner C, Lachin JM, et al. Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes (EMPA-REG OUTCOME). New England Journal of Medicine. 2015;373(22):2117-2128.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26378978/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Marso SP, Daniels GH, Brown-Frandsen K, et al. Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes (LEADER). New England Journal of Medicine. 2016;375(4):311-322.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27295427/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Lean MEJ, Leslie WS, Barnes AC, et al. Primary care-led weight management for remission of type 2 diabetes (DiRECT): an open-label, cluster-randomised trial. Lancet. 2018;391(10120):541-551.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29221645/",
+      "accessedDate": "2026-05-13"
+    },
+    {
+      "title": "Gaede P, Lund-Andersen H, Parving HH, Pedersen O. Effect of a multifactorial intervention on mortality in type 2 diabetes (Steno-2). New England Journal of Medicine. 2008;358(6):580-591.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18256393/",
+      "accessedDate": "2026-05-13"
+    }
+  ]
+}
