@@ -54,37 +54,39 @@ const COUNTRY_NAMES: Record<string, string> = {
 };
 
 // Cost-mapped section — illustrative averages across the procedures we support.
-// Numbers are deliberately rounded; the real cost-compare lives on individual
-// /<country>/<lang>/<treatment>/cost pages.
+// Numbers are deliberately rounded; pinned links point to real treatment pages
+// (/treatments/<slug>) which carry per-country cost data. The earlier
+// /[country]/[lang]/<condition>/cost links pointed at slugs that did not exist
+// in medical_conditions and rendered an empty body in production.
 const COST_PROCEDURES: { proc: string; costs: string[]; pinnedHref?: string }[] = [
   {
     proc: 'Knee replacement',
     costs: ['$38,000', '£14,200', '$3,400', '$8,500', '$6,200', '$7,800', '$11,000'],
-    pinnedHref: '/india/en/knee-osteoarthritis/cost',
+    pinnedHref: '/treatments/total-knee-replacement',
   },
   {
     proc: 'Hair transplant',
     costs: ['$15,000', '£6,400', '$1,200', '$3,200', '$2,800', '$2,400', '$4,200'],
-    pinnedHref: '/india/en/hair-loss/cost',
+    pinnedHref: '/treatments/hair-transplant',
   },
   {
     proc: 'IVF cycle',
     costs: ['$23,500', '£8,200', '$2,400', '$5,200', '$4,800', '$3,900', '$6,800'],
-    pinnedHref: '/india/en/infertility/cost',
+    pinnedHref: '/treatments/ivf-cycle',
   },
   {
     proc: 'Bariatric surgery',
     costs: ['$22,000', '£11,000', '$5,500', '$9,800', '$7,200', '$8,400', '$13,200'],
-    pinnedHref: '/india/en/obesity/cost',
+    pinnedHref: '/treatments/bariatric-surgery',
   },
 ];
 const COST_COUNTRIES = ['USA', 'UK', 'India', 'Thailand', 'Mexico', 'Turkey', 'UAE'] as const;
 const PINNED_COL = COST_COUNTRIES.indexOf('India');
 
 const TRENDING_SEARCHES: { label: string; href: string }[] = [
-  { label: 'Hair transplant cost', href: '/india/en/hair-loss/cost' },
-  { label: 'Knee replacement', href: '/india/en/knee-osteoarthritis/cost' },
-  { label: 'IVF success rate', href: '/india/en/infertility' },
+  { label: 'Hair transplant cost', href: '/treatments/hair-transplant' },
+  { label: 'Knee replacement', href: '/treatments/total-knee-replacement' },
+  { label: 'IVF success rate', href: '/treatments/ivf-cycle' },
   { label: 'TSH 6.8 meaning', href: '/india/en/hypothyroidism' },
   { label: 'Statin alternatives', href: '/india/en/hyperlipidemia-family' },
 ];
