@@ -945,9 +945,9 @@ Severity tags where present: `[CRIT]` exploitable / production-broken, `[HIGH]` 
 ### 6.1 [CRIT] Secrets / credential hygiene
 
 681. [CRIT] `.env.production` Live secrets on disk: Stripe LIVE secret, OpenRouter, Sarvam, Resend, Cloudflare token, DataForSEO basic-auth, IndexNow key, two FULL Google service-account private keys (Drive + GSC), Google Maps API key, admin API key, session salt. Delete file, rotate every value.
-682. [CRIT] `.env.production:22-23` Admin plaintext password `BPtools@54321` written in comment next to hash. Rotate, remove comment.
+682. [CRIT] `.env.production:22-23` Admin plaintext password `<REDACTED-ROTATE>` written in comment next to hash. Rotate, remove comment.
 683. [CRIT] `.env.production:23` `ADMIN_PASSWORD_HASH` is SHA-256, not bcrypt. Auth route silently accepts SHA-256.
-684. [CRIT] `.env.production:24` `ADMIN_API_KEY="sk-aihealz-admin-2024-xK9mP2vL8nQ5"` human-guessable.
+684. [CRIT] `.env.production:24` `ADMIN_API_KEY="<REDACTED-COMPROMISED-ROTATE-IN-PROD>"` human-guessable (literal value scrubbed from this audit doc; remains in git history — rotate live key on the server so the historical leak no longer grants access).
 685. [HIGH] `.env` `DATABASE_URL` uses `taps:taps` trivial credential.
 686. [HIGH] `.gitignore:48` `.env*` blanket-ignores both real and example templates.
 687. [HIGH] `secrets/` directory exists locally; verify no deploy script `rsync`s it.

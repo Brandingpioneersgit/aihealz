@@ -59,3 +59,13 @@ next-env.d.ts
 
 # local vault upload directory (vault upload route)
 .vault-local/
+
+# Claude Code per-machine state (NEVER commit — may contain auto-allowed Bash patterns with literal creds)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/worktrees/
+
+# orchestrator state used while running multi-wave generation
+docs/conditions-content/_priority_queue.json
+tasks/agent-instructions.md
+tasks/seo-1000-plan.md
