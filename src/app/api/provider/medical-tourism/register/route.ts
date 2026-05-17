@@ -99,7 +99,10 @@ export async function POST(req: NextRequest) {
             data: {
                 slug,
                 name: data.companyName,
-                providerType: data.providerType === 'agency' ? 'agency' : 'hospital',
+                // DiagnosticProvider table is the only provider storage available; its enum doesn't
+                // include 'agency', so map both inputs to 'hospital'. The agency/hospital
+                // distinction stays in description + operatingHours.providerType below.
+                providerType: 'hospital',
                 description: `Medical Tourism Provider - ${data.providerType}. Services: ${data.servicesOffered.join(', ')}`,
                 geographyId,
                 address: `${data.address}${data.state ? `, ${data.state}` : ''}`,
