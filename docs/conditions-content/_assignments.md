@@ -15,7 +15,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | psoriasis | 1 | Dermatology | claude-2026-05-12 | 2026-05-12 | done | 5,290 words, 21 FAQs, 8 sources; row 481 |
 | sleep-apnea | 1 | Neurology/Pulmonology | claude-2026-05-12 | 2026-05-12 | done | 5,912 words, 23 FAQs, 7 sources; row 496 |
 | crohns-disease | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | done | 6,521 words, 21 FAQs, 8 sources; row 500 |
-| bipolar-disorder | 1 | Psychiatry | (open) | — | open | Tier-1 head term, 2 variants |
+| bipolar-disorder | 1 | Psychiatry | (open) | — | done | Tier-1 head term, 2 variants |
 | celiac-disease | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | done | 5,413 words, 22 FAQs, 8 sources; row 501 |
 | osteoarthritis | 1 | Orthopedics | claude-2026-05-12 | 2026-05-12 | done | 6,286 words, 22 FAQs, 8 sources; row 492 |
 | rheumatoid-arthritis | 1 | Rheumatology | claude-2026-05-12 | 2026-05-12 | done | 6,018 words, 21 FAQs, 8 sources; row 495 |
@@ -23,7 +23,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | migraine | 1 | Neurology | (already exists, needs upgrade) | — | open | In seed-99; needs EEAT upgrade to v2 spec |
 | hypertension | 1 | Cardiology | (already exists, needs upgrade) | — | open | In seed-99 (slug=hypertension, name "High Blood Pressure"); needs EEAT upgrade |
 | back-pain | 1 | Orthopedics | (already exists, needs upgrade) | — | open | In seed-99; needs EEAT upgrade |
-| diabetes-type-2 | 1 | Endocrinology | claude-2026-05-12 | 2026-05-12 | drafting | Tier-1 head term (`diabetes` → canonical slug `diabetes-type-2`); type-1-diabetes is a separate page |
+| diabetes-type-2 | 1 | Endocrinology | claude-2026-05-12 | 2026-05-12 | done | Tier-1 head term (diabetes); ~6,078 words, 21 FAQs, 8 sources; row 502 Tier-1 head term (`diabetes` → canonical slug `diabetes-type-2`); type-1-diabetes is a separate page |
 | asthma | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | done | 6,222 words, 21 FAQs, 8 sources; row 479 |
 | eczema | 1 | Dermatology | claude-2026-05-12 | 2026-05-12 | done | 5,884 words, 21 FAQs, 8 sources; row 487 |
 | depression | 1 | Psychiatry | claude-2026-05-12 | 2026-05-12 | done | 5,629 words, 21 FAQs, 8 sources; row 480 |
@@ -47,16 +47,16 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | erectile-dysfunction | 1 | Urology | claude-2026-05-12 | 2026-05-12 | done | 6,614 words, 22 FAQs, 9 sources; row 510 |
 | sensorineural-hearing-loss | 1 | Ophthalmology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | acne | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | done | 6,953 words, 21 FAQs, 9 sources, 3 images; row 503 |
-| rosacea | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| vitiligo | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| rosacea | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
+| vitiligo | 1 | Dermatologist | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | scoliosis | 1 | Orthopedic Surgeon | claude-2026-05-12 | 2026-05-12 | done | 6,677 words, 22 FAQs, 10 sources; row 518 |
 | sarcopenia | 1 | Geriatrics | claude-2026-05-12 | 2026-05-12 | done | 6,235 words, 22 FAQs, 10 sources; row 517 |
 | lymphedema-rehab | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | mesothelioma | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,284 words, 21 FAQs (all schemaEligible), 8 sources; row 586 |
 | otosclerosis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | 4,740 words, 21 FAQs (all schemaEligible), 8 sources; row 584 |
-| lyme-disease | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| lyme-disease | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | yellow-fever | 1 | Infectious Disease | claude-2026-05-14 | 2026-05-14 | done | 4,732 words, 21 FAQs (all schemaEligible), 8 sources; row 582 |
-| schizophrenia | 1 | Psychiatrist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| schizophrenia | 1 | Psychiatrist | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | leishmaniasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 5,248 words, 21 FAQs (all schemaEligible), 8 sources; row 580 |
 | leptospirosis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | 4,665 words, 21 FAQs (all schemaEligible), 8 sources; row 581 |
 | cholesteatoma | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
@@ -66,50 +66,50 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | alport-syndrome | 1 | Nephrology | claude-2026-05-14 | 2026-05-14 | done | 5,112 words, 21 FAQs (all schemaEligible), 8 sources; row 587 |
 | alopecia | 1 | Dermatology | claude-2026-05-14 | 2026-05-14 | done | 5,453 words, 21 FAQs (all schemaEligible), 8 sources; row 577 |
 | strongyloidiasis | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| bipolar-disorder | 1 | Psychiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| plantar-fasciitis | 1 | Podiatrist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| chronic-sinusitis | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| multiple-sclerosis | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| bipolar-disorder | 1 | Psychiatry | claude-2026-05-12 | 2026-05-17 | done | EEAT page ~6k words, 20 FAQs, 8 sources, row id=509 |
+| bipolar-disorder | 1 | Psychiatry | claude-2026-05-12 | 2026-05-12 | done | EEAT page ~6k words, 20 FAQs, 8 sources, row id=509 |
+| chronic-sinusitis | 1 | Pulmonology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
+| multiple-sclerosis | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | cushings-syndrome | 1 | Endocrinology | claude-2026-05-14 | 2026-05-14 | done | 5,103 words, 21 FAQs (all schemaEligible), 8 sources; row 578 |
-| ulcerative-colitis | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| ulcerative-colitis | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | ebola-virus-disease | 1 | Infectious Disease | claude-2026-05-14 | 2026-05-14 | done | 5,127 words, 21 FAQs (all schemaEligible), 8 sources; row 579 |
-| parkinsons-disease | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| alzheimers-disease | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| atrial-fibrillation | 1 | Cardiology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| trigeminal-neuralgia | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
-| macular-degeneration | 1 | Ophthalmology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| parkinsons-disease | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
+| alzheimers-disease | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
+| atrial-fibrillation | 1 | Cardiology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
+| trigeminal-neuralgia | 1 | Neurology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
+| macular-degeneration | 1 | Ophthalmology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | central-pain-syndrome | 1 | Neurology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | chronic-pain-syndrome | 1 | Neurology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | deviated-nasal-septum | 1 | Pulmonology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | peritonsillar-abscess | 1 | Pulmonology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| carpal-tunnel | 1 | Orthopedic Surgeon | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| carpal-tunnel | 1 | Orthopedic Surgeon | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | polymyalgia-rheumatica | 1 | Orthopedics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| eosinophilic-esophagitis | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 2 variants |
+| eosinophilic-esophagitis | 1 | Gastroenterology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 2 variants |
 | antiphospholipid-syndrome | 1 | Hematology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | common-variable-immunodeficiency | 1 | Hematology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | abpa | 1 | Infectious Disease | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| lupus | 1 | Rheumatologist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| vertigo | 1 | ENT Specialist | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
-| hiv-aids | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| lupus | 1 | Rheumatologist | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
+| vertigo | 1 | ENT Specialist | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
+| hiv-aids | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | done | 6,686 words, 22 FAQs (all schemaEligible), 7 sources; row 511 Batch 002, 1 variant |
 | acl-tear | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | silicosis | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | heel-spur | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | parotitis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | angioedema-allergy | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| meningioma | 1 | Neurosurgery | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| meningioma | 1 | Neurosurgery | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 | groin-pull | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | asbestosis | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | zika-virus | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | hammer-toe | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| anaphylaxis | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| anaphylaxis | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 | chikungunya | 1 | Tropical Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| tuberculosis | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| tuberculosis | 1 | Infectious Disease | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 | dengue-fever | 1 | Infectious Disease | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| food-allergy | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| food-allergy | 1 | Allergy & Immunology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 | drug-allergy | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | shin-splints | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | ankle-sprain-pod | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| nasal-polyps | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| nasal-polyps | 1 | ENT | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 | epiglottitis | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | polymyositis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | charcot-foot | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
@@ -125,18 +125,18 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | whiplash-injury | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | allergic-asthma | 1 | Allergy & Immunology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | ingrown-toenail | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| meniere-disease | 1 | ENT | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| meniere-disease | 1 | ENT | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 | dermatomyositis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | frailty-syndrome | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | falls-in-elderly | 1 | Geriatrics | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
-| neuropathic-pain | 1 | Pain Medicine & Palliative Care | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| neuropathic-pain | 1 | Pain Medicine & Palliative Care | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 | hamstring-strain | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | muscle-contusion | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | burnout-syndrome | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | mortons-neuroma | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | done | 6,135 words, 22 FAQs, 10 sources; row 520. ⚠ link-check pending (cited from training data, not live-verified) |
-| gout-podiatric | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| gout-podiatric | 1 | Podiatry | claude-2026-05-12 | 2026-05-12 | done | 7,088 words, 24 FAQs (all schemaEligible), 8 sources; row 1111 | Batch 002, 1 variant |
 | laryngeal-cancer | 1 | ENT | claude-2026-05-12 | 2026-05-12 | done | 6,932 words, 22 FAQs, 9 sources; row 519. ⚠ link-check pending (cited from training data, not live-verified) |
-| sjogren-syndrome | 1 | Rheumatology | claude-2026-05-12 | 2026-05-12 | claimed | Batch 002, 1 variant |
+| sjogren-syndrome | 1 | Rheumatology | claude-2026-05-12 | 2026-05-12 | done | Batch 002, 1 variant |
 
 
 
@@ -194,15 +194,15 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | cervical-radiculopathy | 1 | Physical Medicine & Rehabilitation | claude-2026-05-14 | 2026-05-14 | done | EEAT tier-1 page, ~5k words, 20-21 FAQs, 8 sources (parallel batch 2026-05-14) |
 | cancer-pain-management | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | postherpetic-neuralgia | 1 | Pain Medicine & Palliative Care | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| labral-tear-shoulder | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |
+| labral-tear-shoulder | 1 | Sports Medicine | (open) | — | done | Batch 003, 1 variant |
 | bunion-hallux-valgus | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | flat-feet-pes-planus | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | tarsal-tunnel-syndrome | 1 | Podiatry | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | chronic-otitis-media | 1 | ENT | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | ankylosing-spondylitis | 1 | Rheumatology | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
 | achilles-tendon-rupture | 1 | Sports Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
-| exercise-induced-asthma | 1 | Sports Medicine | (open) | — | open | Batch 003, 1 variant |
-| occupational-dermatitis | 1 | Occupational Medicine | claude-2026-05-14 | 2026-05-14 | done | EEAT page ~4-5k words, 15 FAQs, 6-8 sources (fast parallel batch 2026-05-14) |
+| exercise-induced-asthma | 1 | Sports Medicine | (open) | — | done | Batch 003, 1 variant |
+| exercise-induced-asthma | 1 | Sports Medicine | claude-2026-05-17 | 2026-05-17 | done | EEAT page ~4.6k words, 20 FAQs, 8 sources, row id=888 |
 | chronic-kidney-disease-stage-1 | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
 | chronic-kidney-disease-stage-2 | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
 | chronic-kidney-disease-stage-3 | 2 | Nephrology | (open) | — | open | Batch 003, 1 variant |
@@ -446,7 +446,7 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | hyperacusis-unspecified-ear-h93239 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
 | iridoschisis-unspecified-eye-h21259 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
 | symblepharon-unspecified-eye-h11239 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
-| castleman-disease-d47z2 | 1 | Hematology | (open) | — | open | Batch 007, 1 variant |
+| castleman-disease-d47z2 | 1 | Hematology | claude-2026-05-17 | 2026-05-17 | done | Batch 007, 1 variant |
 | keratomalacia-unspecified-eye-h18449 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
 | descemetocele-unspecified-eye-h18739 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
 | iridodialysis-unspecified-eye-h21539 | 1 | Ophthalmology | (open) | — | open | Batch 007, 1 variant |
@@ -840,19 +840,19 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 
 
 <!-- BATCH 011 (parent-injection) — 13 parent concepts, 132 subtypes rescued -->
-| syphilis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 47 subtypes |
-| gonorrhea | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 19 subtypes |
-| congenital-syphilis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 13 subtypes |
-| salmonella-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 8 subtypes |
-| typhoid-fever | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 8 subtypes |
-| chlamydia-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 7 subtypes |
-| herpes-simplex-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 6 subtypes |
-| amebiasis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 5 subtypes |
-| foodborne-illness | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 5 subtypes |
-| trichomoniasis | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 4 subtypes |
+| syphilis | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 47 subtypes |
+| gonorrhea | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 19 subtypes |
+| congenital-syphilis | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 13 subtypes |
+| salmonella-infection | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 8 subtypes |
+| typhoid-fever | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 8 subtypes |
+| chlamydia-infection | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 7 subtypes |
+| herpes-simplex-infection | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 6 subtypes |
+| amebiasis | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 5 subtypes |
+| foodborne-illness | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 5 subtypes |
+| trichomoniasis | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 4 subtypes |
 | e-coli-infection | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 4 subtypes |
 | paratyphoid-fever | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 3 subtypes |
-| yaws | 1 | Infectious Disease | (open) | — | open | Batch 011 (parent-injection), rescues 3 subtypes |
+| yaws | 1 | Infectious Disease | (open) | — | done | Batch 011 (parent-injection), rescues 3 subtypes |
 
 
 
@@ -959,21 +959,21 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | opioid-abuse-with-intoxication-delirium-f11121 | 2 | Psychiatry | (open) | — | open | Batch 012, 1 variant |
 
 <!-- BATCH 013 — 15 conditions, generated 2026-05-12 -->
-| alcohol-use-disorder | 1 | Psychiatry | (open) | — | open | Batch 013, 24 variants |
-| opioid-use-disorder | 1 | Psychiatry | (open) | — | open | Batch 013, 21 variants |
-| goiter | 1 | Endocrinology | (open) | — | open | Batch 013, 8 variants |
+| alcohol-use-disorder | 1 | Psychiatry | (open) | — | done | Batch 013, 24 variants |
+| opioid-use-disorder | 1 | Psychiatry | (open) | — | done | Batch 013, 21 variants |
+| goiter | 1 | Endocrinology | (open) | — | done | Batch 013, 8 variants |
 | leprosy | 1 | Infectious Disease | (open) | — | open | Batch 013, 7 variants |
 | kaposi-sarcoma | 1 | Oncology | (open) | — | open | Batch 013, 6 variants |
-| tularemia | 1 | Infectious Disease | (open) | — | open | Batch 013, 5 variants |
-| plague | 1 | Infectious Disease | (open) | — | open | Batch 013, 5 variants |
-| thyroiditis | 1 | Endocrinology | (open) | — | open | Batch 013, 5 variants |
-| basal-cell-carcinoma | 1 | Oncology | (open) | — | open | Batch 013, 5 variants |
+| tularemia | 1 | Infectious Disease | (open) | — | done | Batch 013, 5 variants |
+| plague | 1 | Infectious Disease | (open) | — | done | Batch 013, 5 variants |
+| thyroiditis | 1 | Endocrinology | (open) | — | done | Batch 013, 5 variants |
+| basal-cell-carcinoma | 1 | Oncology | (open) | — | done | Batch 013, 5 variants |
 | squamous-cell-carcinoma | 1 | Oncology | (open) | — | open | Batch 013, 5 variants |
 | anthrax | 1 | Infectious Disease | (open) | — | open | Batch 013, 4 variants |
-| thyrotoxicosis | 1 | Endocrinology | (open) | — | open | Batch 013, 4 variants |
-| merkel-cell-carcinoma | 1 | Oncology | (open) | — | open | Batch 013, 4 variants |
-| melioidosis | 1 | Infectious Disease | (open) | — | open | Batch 013, 2 variants |
-| atypical-mycobacterial-infection | 1 | Infectious Disease | (open) | — | open | Batch 013, 2 variants |
+| thyrotoxicosis | 1 | Endocrinology | (open) | — | done | Batch 013, 4 variants |
+| merkel-cell-carcinoma | 1 | Oncology | (open) | — | done | Batch 013, 4 variants |
+| melioidosis | 1 | Infectious Disease | (open) | — | done | Batch 013, 2 variants |
+| atypical-mycobacterial-infection | 1 | Infectious Disease | (open) | — | done | Batch 013, 2 variants |
 
 <!-- BATCH 014 — 100 conditions, generated 2026-05-12 -->
 | hurler-s-syndrome-e7601 | 2 | Endocrinology | (open) | — | open | Batch 014, 1 variant |
@@ -1080,12 +1080,12 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 
 
 <!-- BATCH 015 (parent-injection) — 8 parent concepts, 50 subtypes rescued -->
-| carcinoma-in-situ | 1 | Oncology | (open) | — | open | Batch 015 (parent-injection), rescues 27 subtypes |
-| hepatitis-general | 1 | Infectious Disease | (open) | — | open | Batch 015 (parent-injection), rescues 6 subtypes |
-| mesothelioma-general | 1 | Oncology | (open) | — | open | Batch 015 (parent-injection), rescues 5 subtypes |
-| type-2-diabetes-mellitus | 1 | Endocrinology | (open) | — | open | Batch 015 (parent-injection), rescues 3 subtypes |
-| melanoma-in-situ | 1 | Oncology | (open) | — | open | Batch 015 (parent-injection), rescues 3 subtypes |
-| pituitary-disorders | 1 | Endocrinology | (open) | — | open | Batch 015 (parent-injection), rescues 2 subtypes |
+| carcinoma-in-situ | 1 | Oncology | (open) | — | done | Batch 015 (parent-injection), rescues 27 subtypes |
+| hepatitis-general | 1 | Infectious Disease | (open) | — | done | Batch 015 (parent-injection), rescues 6 subtypes |
+| mesothelioma-general | 1 | Oncology | (open) | — | done | Batch 015 (parent-injection), rescues 5 subtypes |
+| type-2-diabetes-mellitus | 1 | Endocrinology | (open) | — | done | Batch 015 (parent-injection), rescues 3 subtypes |
+| melanoma-in-situ | 1 | Oncology | (open) | — | done | Batch 015 (parent-injection), rescues 3 subtypes |
+| pituitary-disorders | 1 | Endocrinology | (open) | — | done | Batch 015 (parent-injection), rescues 2 subtypes |
 | mood-disorder | 1 | Psychiatry | (open) | — | open | Batch 015 (parent-injection), rescues 2 subtypes |
 | panic-disorder | 1 | Psychiatry | (open) | — | open | Batch 015 (parent-injection), rescues 2 subtypes |
 
@@ -1192,6 +1192,60 @@ Status values: `open` → `claimed` → `drafting` → `validating` → `pr-open
 | onchocerciasis-with-glaucoma-b7302 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
 | lesch-nyhan-syndrome-e791 | 2 | Endocrinology | (open) | — | open | Batch 016, 1 variant |
 | human-herpesvirus-6-encephalitis-b1001 | 2 | Infectious Disease | (open) | — | open | Batch 016, 1 variant |
+
+
+
+<!-- BATCH 019 — 50 conditions, generated 2026-05-16 -->
+| pulmonary-paracoccidioidomycosis-b410 | 2 | Infectious Disease | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| type-2-diabetes-mellitus-with-ketoacidosis-without-coma-e1110 | 2 | Endocrinology | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| pompe-disease-e7402 | 2 | Endocrinology | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| drug-induced-folate-deficiency-anemia-d521 | 2 | Hematology | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| eosinophilia-d721 | 2 | Hematology | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| polycythemia-vera-d45 | 2 | Hematology | (open) | — | open | Batch 019, 1 variant |
+| visceral-leishmaniasis-b550 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| dicroceliasis-b662 | 2 | Infectious Disease | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| vit-b12-defic-anemia-d-t-slctv-vit-b12-malabsorp-w-protein-d511 | 2 | Hematology | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| ancylostomiasis-b760 | 2 | Infectious Disease | claude-2026-05-17 | 2026-05-17 | done | Batch 019, 1 variant |
+| hemophilus-influenzae-as-the-cause-of-diseases-classd-elswhr-b963 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| nodular-lymphocyte-predom-hodgkin-lymphoma-intra-abd-nodes-c8103 | 2 | Oncology | (open) | — | open | Batch 019, 1 variant |
+| pulmonary-sporotrichosis-b420 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| neoplasm-of-uncertain-behavior-of-cranial-nerves-d433 | 2 | Hematology | (open) | — | open | Batch 019, 1 variant |
+| idiopathic-aplastic-anemia-d613 | 2 | Hematology | (open) | — | open | Batch 019, 1 variant |
+| acute-megakaryoblastic-leukemia-not-achieve-remission-c9420 | 2 | Oncology | (open) | — | open | Batch 019, 1 variant |
+| sylvatic-rabies-a820 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| dracunculiasis-b72 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| opioid-abuse-w-opioid-induced-psychotic-disorder-w-delusions-f11150 | 2 | Psychiatry | (open) | — | open | Batch 019, 1 variant |
+| tonsillar-aspergillosis-b442 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| cannabis-abuse-uncomplicated-f1210 | 2 | Psychiatry | (open) | — | open | Batch 019, 1 variant |
+| scarlet-fever-uncomplicated-a389 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| secondary-polycythemia-d751 | 2 | Hematology | (open) | — | open | Batch 019, 1 variant |
+| neoplasm-of-uncertain-behavior-of-lip-d3701 | 2 | Hematology | (open) | — | open | Batch 019, 1 variant |
+| plasmodium-malariae-malaria-with-nephropathy-b520 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| anthrax-sepsis-a227 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| chronic-pulmonary-coccidioidomycosis-b381 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| glucocorticoid-remediable-aldosteronism-e2602 | 2 | Endocrinology | (open) | — | open | Batch 019, 1 variant |
+| cutaneous-blastomycosis-b403 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| deficiency-of-vitamin-k-e561 | 2 | Endocrinology | (open) | — | open | Batch 019, 1 variant |
+| inhalant-abuse-in-remission-f1811 | 2 | Psychiatry | (open) | — | open | Batch 019, 1 variant |
+| myositis-in-cysticercosis-b6981 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| myeloid-sarcoma-in-relapse-c9232 | 2 | Oncology | (open) | — | open | Batch 019, 1 variant |
+| malignant-carcinoid-tumor-of-the-duodenum-c7a010 | 2 | Oncology | (open) | — | open | Batch 019, 1 variant |
+| follicular-lymphoma-grade-i-intra-abdominal-lymph-nodes-c8203 | 2 | Oncology | (open) | — | open | Batch 019, 1 variant |
+| kyasanur-forest-disease-a982 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| mucolipidosis-iv-e7511 | 2 | Endocrinology | (open) | — | open | Batch 019, 1 variant |
+| tungiasis-sandflea-infestation-b881 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| listerial-meningitis-a3211 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| autoimmune-polyglandular-failure-e310 | 2 | Endocrinology | (open) | — | open | Batch 019, 1 variant |
+| neoplasm-of-uncertain-behavior-of-bone-artic-cartl-d480 | 2 | Hematology | (open) | — | open | Batch 019, 1 variant |
+| cyclic-neutropenia-d704 | 2 | Hematology | (open) | — | open | Batch 019, 1 variant |
+| late-lesions-of-pinta-a672 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| junin-hemorrhagic-fever-a960 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| rickets-active-e550 | 2 | Endocrinology | (open) | — | open | Batch 019, 1 variant |
+| secondary-malignant-neoplasm-of-pleura-c782 | 2 | Oncology | (open) | — | open | Batch 019, 1 variant |
+| defects-in-post-translational-mod-of-lysosomal-enzymes-e770 | 2 | Endocrinology | (open) | — | open | Batch 019, 1 variant |
+| enteroviral-encephalitis-a850 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| borderline-tuberculoid-leprosy-a302 | 2 | Infectious Disease | (open) | — | open | Batch 019, 1 variant |
+| hypopituitarism-e230 | 2 | Endocrinology | (open) | — | open | Batch 019, 1 variant |
 
 ## Rules
 
