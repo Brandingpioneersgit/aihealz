@@ -103,7 +103,10 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
     };
 }
 
-export const revalidate = 3600;
+// Page does a slug-vs-specialty lookup against the DB and conditionally
+// redirects, so it must run per-request. `force-dynamic` avoids the
+// DYNAMIC_SERVER_USAGE errors that broke the route under ISR caching.
+export const dynamic = 'force-dynamic';
 
 export default async function SpecialtyConditionsPage({ params }: { params: PageParams }) {
     const { specialty } = await params;
