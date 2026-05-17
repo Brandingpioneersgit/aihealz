@@ -1,7 +1,7 @@
 import prisma from '@/lib/db';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 
 type PageParams = Promise<{ specialty: string }>;
 
@@ -126,11 +126,8 @@ export default async function SpecialtyConditionsPage({ params }: { params: Page
         where: { slug: specialty, isActive: true },
         select: { slug: true },
     });
-    // TEMP DEBUG — remove once redirect is confirmed working
-    console.log(`[conditions/specialty] slug="${specialty}" conditionMatch=${JSON.stringify(conditionMatch)}`);
     if (conditionMatch) {
-        console.log(`[conditions/specialty] redirecting to /${country}/${lang}/${conditionMatch.slug}`);
-        redirect(`/${country}/${lang}/${conditionMatch.slug}`);
+        permanentRedirect(`/${country}/${lang}/${conditionMatch.slug}`);
     }
 
     const rawConditions = await prisma.medicalCondition.findMany({
