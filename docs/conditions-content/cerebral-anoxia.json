@@ -1,0 +1,677 @@
+{
+  "_meta": {
+    "slug": "cerebral-anoxia",
+    "tier": 1,
+    "headTerm": "cerebral anoxia",
+    "longTailKeywords": [
+      "anoxic brain injury",
+      "hypoxic-ischemic brain injury",
+      "cerebral anoxia symptoms",
+      "brain damage from lack of oxygen",
+      "post-cardiac arrest brain injury",
+      "anoxic brain injury recovery",
+      "targeted temperature management",
+      "neuroprognostication after cardiac arrest",
+      "Lance-Adams syndrome",
+      "anoxic encephalopathy"
+    ],
+    "primarySpecialty": "Neurology / Critical Care",
+    "lastReviewed": "2026-05-18",
+    "version": "v2-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against 2020 AHA Post-Cardiac Arrest Care guideline, 2017 AAN neuroprognostication update, TTM2 trial (NEJM 2021, PMID 34133859), and 2021 ILCOR consensus. Drug doses verified against UpToDate Lexicomp."
+  },
+  "h1Title": "Cerebral Anoxia: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Neurology / Critical Care",
+  "heroOverview": "Cerebral anoxia is brain injury caused by inadequate oxygen delivery to brain tissue. Neurons begin to die within 4-6 minutes of total oxygen deprivation, making this one of the most time-sensitive injuries in medicine. The most common trigger in adults is out-of-hospital cardiac arrest, which strikes more than 350,000 people in the United States each year; only about 10% survive to hospital discharge, and of those, roughly 80% achieve a good neurological outcome when bystander CPR, early defibrillation, and targeted temperature management are delivered together. Cerebral anoxia ranges from transient confusion through coma, persistent vegetative state, and brain death. Survivors often live with long-term cognitive, motor, or behavioral deficits that require months to years of structured rehabilitation.",
+  "keyStats": {
+    "prevalence": "Out-of-hospital cardiac arrest causes >350,000 US events annually; ~10% survive to discharge",
+    "demographics": "Median age 65 in OHCA cohorts; men outnumber women roughly 2:1",
+    "avgAge": "Adult OHCA peaks age 60-75; pediatric anoxia often follows drowning, choking, or birth asphyxia",
+    "globalCases": "Global cardiac arrest incidence estimated 50-60 per 100,000 person-years; drowning kills ~236,000 globally per year (WHO)"
+  },
+  "definition": "Cerebral anoxia (ICD-10: G93.1, anoxic brain damage not elsewhere classified) is a clinical syndrome of brain injury produced when oxygen delivery to neurons falls below the level required to sustain aerobic metabolism. The term encompasses pure anoxia (complete absence of oxygen reaching the brain, as in drowning, choking, suffocation, or hanging), hypoxic injury (low arterial oxygen content from respiratory failure, severe anemia, or carbon monoxide poisoning), and ischemic injury (loss of cerebral blood flow, most often during cardiac arrest or profound shock). In practice these mechanisms overlap, and the combined entity is now usually called hypoxic-ischemic brain injury or HIBI. The pathophysiology unfolds in two waves: an immediate energy-failure phase that depletes ATP within seconds and triggers excitotoxic glutamate release within minutes, followed over hours to days by a secondary injury phase driven by reperfusion oxidative stress, calcium overload, mitochondrial dysfunction, and delayed apoptotic cell death. Cortical neurons, hippocampal CA1 neurons, cerebellar Purkinje cells, and watershed border zones are the most vulnerable populations. Severity ranges from mild transient cognitive impairment through coma, persistent vegetative state, minimally conscious state, and brain death.",
+  "typesClassification": [
+    {
+      "type": "Anoxic injury (complete oxygen deprivation)",
+      "description": "No oxygen reaches the brain despite preserved blood flow initially. Causes include drowning, choking, suffocation, hanging, and breathing oxygen-free gas. Damage progresses fastest with this mechanism."
+    },
+    {
+      "type": "Hypoxic injury (low arterial oxygen)",
+      "description": "Blood flow is preserved but arterial oxygen content is reduced. Seen in severe respiratory failure, high-altitude exposure, carbon monoxide poisoning, and severe anemia. Onset is slower and partial recovery is more common."
+    },
+    {
+      "type": "Ischemic injury (loss of cerebral blood flow)",
+      "description": "Oxygenated blood is present but cannot reach the brain. Cardiac arrest is the dominant cause; profound shock, asphyxiation by external cardiac compression, and aortic dissection are others. This is the most common mechanism in adults."
+    },
+    {
+      "type": "Hypoxic-ischemic brain injury (HIBI)",
+      "description": "Combined oxygen and blood-flow failure, typical of the cardiac arrest and post-resuscitation course. This is the dominant clinical entity managed in intensive care after return of spontaneous circulation."
+    }
+  ],
+  "primarySymptoms": [
+    "Impaired consciousness ranging from mild confusion to deep coma, depending on the duration and completeness of oxygen deprivation.",
+    "Generalized or focal seizures occurring within hours of the event, with myoclonic status epilepticus signalling a particularly poor prognosis.",
+    "Posthypoxic myoclonus, including the chronic action-induced jerks of Lance-Adams syndrome that appear in survivors after they regain consciousness.",
+    "Absent or diminished brainstem reflexes (pupillary, corneal, cough, gag) in severe cases, indicating widespread cortical and brainstem injury.",
+    "Persistent vegetative state with preserved sleep-wake cycles but no awareness of self or environment, sometimes lasting weeks to months before any meaningful recovery.",
+    "Minimally conscious state with inconsistent but reproducible signs of awareness such as visual tracking, command following, or purposeful movement.",
+    "Long-term memory deficits, especially short-term and working memory loss tied to hippocampal CA1 vulnerability.",
+    "Executive dysfunction including impaired attention, planning, and decision-making that interferes with returning to work or independent living.",
+    "Movement disorders such as parkinsonism, dystonia, or chorea following injury to the basal ganglia and watershed zones.",
+    "Behavioral and mood changes including depression, anxiety, apathy, irritability, and personality change reported by 40-50% of survivors."
+  ],
+  "earlyWarningSigns": [
+    "Witnessed loss of consciousness with absent breathing or only agonal gasps — start CPR immediately and call emergency services",
+    "Persistent confusion, slurred speech, or unsteady gait after a near-drowning, choking, or carbon monoxide exposure",
+    "Failure to wake within minutes after return of spontaneous circulation following cardiac arrest",
+    "New-onset twitching, jerking, or seizures in the hours after a hypoxic event"
+  ],
+  "emergencySigns": [
+    "Sudden collapse with no pulse and no breathing — call emergency services and start chest compressions without delay",
+    "Coma persisting more than 10 minutes after a witnessed near-drowning, hanging, or choking event",
+    "Status myoclonus (continuous jerking) within 24 hours of cardiac arrest — indicates severe brain injury and requires neurology evaluation",
+    "Fixed dilated pupils, absent corneal reflex, or no motor response to pain after the first 72 hours off sedation"
+  ],
+  "causes": [
+    {
+      "cause": "Out-of-hospital cardiac arrest",
+      "description": "The single largest cause of cerebral anoxia in adults. More than 350,000 US events per year; brain injury severity correlates with the no-flow time before CPR and the low-flow time during resuscitation. Survival to discharge averages 10%, and brain injury is the leading cause of death among initial survivors."
+    },
+    {
+      "cause": "Drowning and near-drowning",
+      "description": "Submersion causes immediate hypoxia and, with aspiration, secondary lung injury that worsens oxygenation. Cold-water drowning has occasional remarkable recoveries due to hypothermia-induced neuroprotection; warm-water drowning more often leaves severe deficits."
+    },
+    {
+      "cause": "Choking, suffocation, and hanging",
+      "description": "Mechanical obstruction of the airway produces pure anoxia. Hanging combines anoxia with possible cervical spine injury and venous outflow obstruction. Time to relief is the dominant prognostic variable."
+    },
+    {
+      "cause": "Severe respiratory failure",
+      "description": "Acute respiratory distress syndrome, status asthmaticus, severe pneumonia, and opioid overdose can drop arterial oxygen low enough to injure brain tissue, particularly when accompanied by hypotension or cardiac arrhythmia."
+    },
+    {
+      "cause": "Carbon monoxide and cyanide poisoning",
+      "description": "Carbon monoxide binds hemoglobin with 200-fold greater affinity than oxygen, blocking oxygen delivery despite normal lung function. Cyanide disables mitochondrial cytochrome oxidase, preventing oxygen use even when delivery is normal. Both produce severe hypoxic-anoxic brain injury."
+    },
+    {
+      "cause": "Anesthesia and procedural complications",
+      "description": "Failed intubation, esophageal intubation, anaphylaxis with airway loss, and accidental ventilator disconnection can cause sudden severe anoxia in operating rooms and intensive care units. Modern monitoring has substantially reduced but not eliminated these events."
+    },
+    {
+      "cause": "Traumatic brain injury with hypoperfusion",
+      "description": "Major trauma with shock, intracranial hypertension, or aspiration combines mechanical injury with ischemic-hypoxic insult. The hypoxic component frequently outweighs the primary trauma in driving long-term disability."
+    },
+    {
+      "cause": "Profound shock and post-cardiac-surgery embolic events",
+      "description": "Septic shock, hemorrhagic shock, and embolic complications of cardiopulmonary bypass can reduce cerebral perfusion below the threshold required to sustain aerobic metabolism, producing watershed infarction and diffuse anoxic injury."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Pre-existing coronary artery disease",
+      "category": "modifiable",
+      "description": "Ischemic heart disease is the leading cause of ventricular fibrillation and sudden cardiac arrest in adults, and therefore the single largest upstream risk factor for cerebral anoxia."
+    },
+    {
+      "factor": "Age over 60",
+      "category": "non-modifiable",
+      "description": "Cardiac arrest incidence rises sharply with age; older brains also tolerate ischemia poorly because of reduced cerebrovascular reserve and pre-existing white-matter disease."
+    },
+    {
+      "factor": "Heart failure or known arrhythmia",
+      "category": "non-modifiable",
+      "description": "Reduced ejection fraction, prior myocardial infarction, prolonged QT syndrome, and Brugada pattern all raise sudden cardiac death risk and the consequent anoxia exposure."
+    },
+    {
+      "factor": "Obstructive sleep apnea",
+      "category": "modifiable",
+      "description": "Untreated OSA produces nocturnal hypoxemia and is independently associated with cardiac arrest and stroke. CPAP therapy reduces this risk."
+    },
+    {
+      "factor": "Substance use including opioids, cocaine, and methamphetamine",
+      "category": "modifiable",
+      "description": "Opioid overdose causes respiratory arrest leading to anoxic injury; stimulants precipitate ventricular arrhythmia and myocardial infarction. The US opioid epidemic has driven a sustained rise in anoxic brain injury admissions."
+    },
+    {
+      "factor": "Occupations with drowning or asphyxiation exposure",
+      "category": "environmental",
+      "description": "Commercial divers, swimming pool workers, fishing crews, confined-space industrial workers, and miners face elevated risk and benefit from dedicated rescue and oxygen protocols."
+    },
+    {
+      "factor": "Pediatric setting with unsupervised water access",
+      "category": "environmental",
+      "description": "Drowning is a leading cause of pediatric anoxic injury globally. Pool fencing, swim instruction, and adult supervision are the dominant preventive measures."
+    },
+    {
+      "factor": "Familial sudden cardiac death syndromes",
+      "category": "genetic",
+      "description": "Long QT syndrome, hypertrophic cardiomyopathy, Brugada syndrome, and catecholaminergic polymorphic ventricular tachycardia raise sudden death risk in young adults and warrant cardiology screening of relatives."
+    },
+    {
+      "factor": "Home or industrial carbon monoxide exposure",
+      "category": "environmental",
+      "description": "Faulty heaters, blocked flues, indoor generator use, and house fires are common CO sources. CO detectors substantially reduce risk."
+    },
+    {
+      "factor": "Prior cardiac arrest survivor without implantable defibrillator",
+      "category": "modifiable",
+      "description": "Recurrent arrest risk is high in survivors with ongoing structural heart disease; ICD placement reduces this risk substantially."
+    }
+  ],
+  "affectedDemographics": [
+    "Adult OHCA cohorts: median age 65, men outnumber women roughly 2:1",
+    "Pediatric anoxia: drowning, choking, and child abuse with suffocation are the dominant mechanisms under age 5",
+    "Lower socioeconomic status communities have worse bystander CPR rates and slower EMS response, producing worse neurological outcomes",
+    "Black and Hispanic adults in the United States have lower rates of bystander CPR and AED use, contributing to outcome disparities (AHA registries)"
+  ],
+  "diagnosisOverview": "Cerebral anoxia is a clinical diagnosis confirmed and prognosticated through a structured multimodal workup. In the immediate post-arrest period the diagnosis is usually self-evident from the history (witnessed cardiac arrest, drowning, hanging, or asphyxia). The harder task is neuroprognostication — predicting which comatose survivors will recover meaningful function and which will not. The 2017 American Academy of Neurology update and 2021 European Resuscitation Council guidelines both insist that prognostication wait at least 72 hours after return of spontaneous circulation, with the patient fully off sedation and rewarmed from any temperature management, before any conclusions are drawn. Multimodal assessment combines the structured clinical neurological exam (pupillary light reflex, corneal reflex, motor response to pain), continuous EEG to look for status myoclonus, burst-suppression pattern, and reactivity, somatosensory evoked potentials with the bilateral absence of the N20 cortical response carrying close to 100% specificity for poor outcome, serum biomarkers (neuron-specific enolase above 60 micrograms per liter at 48-72 hours predicts poor outcome with high specificity), and MRI brain showing extensive diffusion restriction in cortex and basal ganglia. Early CT often shows loss of gray-white differentiation in severe injury. No single test is reliable in isolation; concordance of two or more markers is required before withdrawing care, and false positives have been documented for every single marker used alone.",
+  "diagnosticTests": [
+    {
+      "test": "Structured neurological examination",
+      "purpose": "Assesses level of consciousness, brainstem reflexes (pupillary, corneal, cough, gag), and motor response to pain. Performed daily and especially at 72 hours off sedation. Bilaterally absent pupillary and corneal reflexes at 72 hours strongly predict poor outcome.",
+      "whatToExpect": "A neurologist or intensivist performs a 10-15 minute bedside examination. Sedation must be off long enough to clear (typically 24-48 hours), and core temperature must be normal. The exam is repeated to confirm findings."
+    },
+    {
+      "test": "Continuous electroencephalography (EEG)",
+      "purpose": "Detects nonconvulsive seizures, status myoclonus, and prognostically important patterns such as burst-suppression and electrographic seizure activity. Reactivity to stimulation is a favorable sign; an unreactive, suppressed background carries a poor prognosis.",
+      "whatToExpect": "Scalp electrodes are placed and remain in position for 24-72 hours of continuous recording. Painless and routine in modern intensive care units. Results are interpreted by a neurophysiologist."
+    },
+    {
+      "test": "Somatosensory evoked potentials (SSEPs)",
+      "purpose": "Bilateral absence of the N20 cortical response after median nerve stimulation at 24-72 hours predicts poor neurological outcome with close to 100% specificity in patients managed with targeted temperature management. One of the most reliable single prognostic tests available.",
+      "whatToExpect": "Painless electrical stimulation of the wrists with scalp recording. Takes about 30-45 minutes. Performed at the bedside by a neurophysiology technician."
+    },
+    {
+      "test": "MRI brain with diffusion-weighted imaging",
+      "purpose": "Shows the anatomic distribution of anoxic injury. Restricted diffusion in more than 20-30% of cortex, in the basal ganglia, or in widespread watershed territories at 3-5 days predicts a poor outcome.",
+      "whatToExpect": "A 30-45 minute MRI scan, usually performed after hemodynamic stability is achieved (commonly day 3-7). Transport from the intensive care unit requires careful coordination."
+    },
+    {
+      "test": "Serum neuron-specific enolase (NSE)",
+      "purpose": "A biomarker released by injured neurons. Levels above 60 micrograms per liter at 48-72 hours, or a rising trajectory between 24 and 48 hours, predict poor outcome with high specificity. Hemolysis can produce falsely high values.",
+      "whatToExpect": "Standard blood draws at 24, 48, and 72 hours after the cardiac arrest. The lab must be aware not to use hemolyzed samples."
+    },
+    {
+      "test": "CT brain (non-contrast)",
+      "purpose": "Excludes intracranial hemorrhage as the cause of cardiac arrest and assesses for early signs of severe anoxic injury such as loss of gray-white matter differentiation and cerebral edema.",
+      "whatToExpect": "A 5-10 minute CT scan performed soon after admission. Repeat imaging is often performed at 24-72 hours to assess for evolving edema."
+    },
+    {
+      "test": "Cerebral perfusion monitoring (regional oximetry, transcranial Doppler)",
+      "purpose": "Bedside tools that estimate cerebral oxygen saturation or cerebral blood flow velocity. Useful adjuncts in the intensive care unit to detect ongoing secondary injury and guide blood pressure targets.",
+      "whatToExpect": "Non-invasive sensors placed on the forehead or temporal windows. Painless and continuous during the intensive care stay."
+    }
+  ],
+  "treatmentOverview": "Treatment of cerebral anoxia begins before any specialist sees the patient: high-quality bystander CPR and early defibrillation are the single largest determinants of brain survival, doubling the chance of meaningful recovery according to American Heart Association registry data. Once the patient reaches hospital with return of spontaneous circulation, care shifts to the post-cardiac-arrest care bundle outlined in the 2020 AHA guidelines and the 2021 European Resuscitation Council update. The four core elements are targeted temperature management, hemodynamic optimization, controlled ventilation, and aggressive seizure surveillance. Targeted temperature management (TTM) holds core temperature between 32 and 36 degrees Celsius for 24 hours and then rewarms slowly at 0.25-0.5 degrees Celsius per hour. The TTM2 trial published in the New England Journal of Medicine in 2021 (PMID 34133859) showed that maintaining normothermia at 36 degrees Celsius was non-inferior to 33 degrees Celsius for adults with out-of-hospital cardiac arrest of presumed cardiac cause, and most centres now use 36 degrees Celsius with strict fever avoidance. Mean arterial pressure is kept above 65-80 mmHg with vasopressors as needed; arterial oxygen saturation is held in the normoxic range (94-98%) because hyperoxia worsens reperfusion injury; carbon dioxide is held at 35-45 mmHg to avoid the cerebral vasoconstriction of hypocapnia and the cerebral hyperemia of hypercapnia. Seizures are treated with levetiracetam or valproate; myoclonic status epilepticus is notoriously refractory and often signals catastrophic injury. The Lance-Adams form of chronic posthypoxic action myoclonus responds to clonazepam, levetiracetam, valproate, and piracetam in selected patients. Rehabilitation is started early and continues for months: cognitive therapy, occupational therapy, physiotherapy, speech-language pathology, and neuropsychology each address specific deficit domains.",
+  "medicalTreatments": [
+    {
+      "name": "Targeted temperature management (32-36°C for 24 hours, AHA 2020 / TTM2 protocol)",
+      "description": "Core temperature is cooled with surface or intravascular devices and held in the target range for 24 hours after return of spontaneous circulation, followed by controlled rewarming and strict fever avoidance for 72 hours. Most adult units now use 36°C following the TTM2 trial; pediatric units still commonly use 32-34°C.",
+      "effectiveness": "Reduces mortality and improves neurological outcomes in shockable cardiac arrest; absolute benefit roughly 8-14% in landmark trials. TTM2 (PMID 34133859) found 36°C non-inferior to 33°C."
+    },
+    {
+      "name": "Hemodynamic optimization with vasopressors and fluids",
+      "description": "Mean arterial pressure is targeted at >65-80 mmHg using norepinephrine or epinephrine and judicious fluid resuscitation. Higher targets are considered in patients with pre-existing hypertension. The goal is to restore cerebral perfusion without driving myocardial demand excessively.",
+      "effectiveness": "Observational data link higher achieved MAP to better neurological outcomes after cardiac arrest; randomized targets are still under study."
+    },
+    {
+      "name": "Controlled mechanical ventilation (normoxia and normocapnia)",
+      "description": "Oxygen saturation is held at 94-98% to avoid hyperoxia, and arterial CO2 is held at 35-45 mmHg. Both extremes worsen secondary brain injury through oxidative stress and altered cerebral blood flow.",
+      "effectiveness": "Avoidance of hyperoxia in the first 24 hours is associated with lower mortality in registry studies; the effect size is modest but consistent."
+    },
+    {
+      "name": "Antiseizure medication (levetiracetam, valproate, lacosamide)",
+      "description": "First-line agents for post-anoxic seizures and electrographic status epilepticus. Levetiracetam 1500-3000 mg per day is typically started early and titrated based on EEG response. Refractory status requires escalation to anesthetic infusions.",
+      "effectiveness": "Suppresses electrographic seizures in 60-75% of patients; myoclonic status epilepticus remains the most treatment-resistant form."
+    },
+    {
+      "name": "Treatment of Lance-Adams action myoclonus (clonazepam, levetiracetam, valproate, piracetam)",
+      "description": "Chronic posthypoxic action myoclonus develops after the acute period and persists for months to years. Combination therapy with clonazepam plus one of levetiracetam, valproate, or piracetam is the standard approach.",
+      "effectiveness": "Substantial symptomatic improvement in 50-70% of patients, though complete suppression is uncommon."
+    },
+    {
+      "name": "Hyperbaric oxygen therapy for carbon monoxide poisoning",
+      "description": "100% oxygen at 2.4-3.0 atmospheres administered in a hyperbaric chamber accelerates dissociation of carbon monoxide from hemoglobin and may reduce delayed neuropsychiatric sequelae when given within 6-12 hours of severe poisoning.",
+      "effectiveness": "Randomized data are mixed; the Weaver 2002 trial (NEJM) showed reduced cognitive sequelae at 6 weeks and 12 months with hyperbaric versus normobaric oxygen in selected patients."
+    },
+    {
+      "name": "Coronary angiography and revascularization for ischemic cause",
+      "description": "Patients with ST-elevation on post-resuscitation ECG or strong clinical suspicion of acute coronary syndrome undergo emergent coronary angiography. Restoring coronary blood flow prevents recurrent arrest and improves overall survival.",
+      "effectiveness": "Improves both survival and neurological outcome in registry data when the arrest cause is acute coronary occlusion."
+    },
+    {
+      "name": "Structured neurorehabilitation (cognitive, physical, occupational, speech, neuropsychology)",
+      "description": "Multidisciplinary inpatient and outpatient rehabilitation tailored to the surviving deficit pattern. Programs typically last 3-12 months and combine motor retraining, cognitive remediation, vocational support, and family education.",
+      "effectiveness": "Improves functional independence measures by 20-40% over the first 6-12 months in survivors with moderate to severe deficits."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Decompressive craniectomy for massive cerebral edema",
+      "description": "Surgical removal of a portion of the skull to allow swollen brain tissue to expand without compressing the brainstem. Considered selectively when malignant cerebral edema complicates severe anoxic injury, particularly in younger patients.",
+      "successRate": "Reduces mortality in malignant edema; long-term functional outcomes remain limited because the underlying anoxic injury is unchanged."
+    },
+    {
+      "name": "Tracheostomy for prolonged ventilator dependence",
+      "description": "Performed in survivors who cannot be weaned from mechanical ventilation within 7-14 days. Facilitates secretion management, weaning, and transition to rehabilitation.",
+      "successRate": "Improves comfort and weaning success in prolonged intensive care stays; most survivors are decannulated within 3-6 months if they recover sufficient consciousness."
+    },
+    {
+      "name": "Implantable cardioverter-defibrillator (ICD) placement",
+      "description": "For cardiac arrest survivors with structural heart disease or unexplained ventricular arrhythmia, an ICD is implanted to terminate future arrhythmias before they reproduce anoxic injury.",
+      "successRate": "Reduces sudden cardiac death recurrence by approximately 30-50% in appropriate candidates."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Music therapy and structured sensory stimulation",
+      "description": "Used in disorders of consciousness rehabilitation to provide consistent multi-modal stimulation. Small studies suggest modest improvements in arousal and orientation scores; not a substitute for standard rehabilitation."
+    },
+    {
+      "name": "Amantadine for prolonged disorders of consciousness",
+      "description": "An NMDA antagonist with dopaminergic activity. In traumatic brain injury, amantadine accelerated recovery in the Giacino 2012 NEJM trial; anoxic injury data are weaker but the drug is sometimes used off-label."
+    }
+  ],
+  "whySeeSpecialist": "A neurologist and a critical-care physician should both be involved in the early management of every comatose post-arrest patient. After the acute phase, a physiatrist (rehabilitation medicine specialist) and neuropsychologist lead the long-term recovery program. Cardiology evaluates the underlying arrhythmia or structural heart disease and decides on ICD placement. Survivors with persistent disorders of consciousness benefit from referral to a specialized disorders-of-consciousness unit, where serial assessment with the Coma Recovery Scale-Revised can detect signs of recovery that bedside examination misses.",
+  "doctorSelectionGuide": "Look for a center with a written post-cardiac-arrest care bundle, 24/7 access to targeted temperature management, continuous EEG monitoring, and same-day cardiac catheterization. A dedicated neurocritical care unit or a neurology consultation service experienced in neuroprognostication is essential; multimodal prognostication delivered too early or by inexperienced teams leads to premature withdrawal of life-sustaining therapy. Once stable, transfer to a brain injury rehabilitation program accredited by CARF (Commission on Accreditation of Rehabilitation Facilities) substantially improves long-term outcomes.",
+  "preventionStrategies": [
+    "Learn hands-only CPR — bystander CPR doubles survival from out-of-hospital cardiac arrest and is the single largest preventable factor in cerebral anoxia outcomes",
+    "Install and maintain working carbon monoxide detectors in homes with combustion appliances, garages, or wood heating",
+    "Use approved pool fencing, life jackets, and adult supervision around water; never swim alone after alcohol use",
+    "Treat obstructive sleep apnea with CPAP — untreated severe OSA raises sudden cardiac death risk independently of conventional factors",
+    "Carry naloxone if you live with someone using opioids; rapid reversal prevents progression to anoxic injury",
+    "Accept ICD placement if cardiology recommends it after a survived arrhythmic event — secondary prevention substantially reduces recurrent arrest"
+  ],
+  "lifestyleModifications": [
+    "Follow cardiology recommendations for cholesterol, blood pressure, and diabetes control after an ischemic event — recurrent arrest is most often driven by the same underlying coronary disease",
+    "Engage with structured cardiac rehabilitation programs after hospitalization; participation reduces mortality and improves cognitive recovery",
+    "Avoid alcohol and recreational drugs after anoxic injury — both worsen cognitive recovery and raise re-arrest risk",
+    "Use a daily medication organizer or smartphone reminder; memory and executive deficits make adherence harder, and missed antiarrhythmic or antiseizure doses can be catastrophic",
+    "Tell family members and close contacts where automated external defibrillators (AEDs) are located in your home, workplace, and frequently visited venues",
+    "Pace cognitive and physical activity in the first 6-12 months; structured rest breaks reduce fatigue-related deficit worsening"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Mediterranean-style diet with vegetables, fish, olive oil, and whole grains — reduces recurrent cardiovascular events",
+      "Adequate protein intake (1.0-1.5 g/kg/day) during early rehabilitation to preserve muscle mass",
+      "Tube-fed nutrition guided by a dietitian during the period of impaired swallowing or consciousness",
+      "Vitamin B-complex and antioxidant-rich foods to support neuronal recovery (evidence is supportive rather than definitive)",
+      "Adequate hydration to support blood pressure targets and renal clearance of medications"
+    ],
+    "avoid": [
+      "Excessive alcohol — worsens cognitive recovery and interacts with antiseizure and cardiac medications",
+      "High-sodium processed foods if hypertension contributed to the underlying cardiac disease",
+      "Stimulant supplements and energy drinks during recovery — can precipitate arrhythmia in a vulnerable heart",
+      "Grapefruit juice if taking certain antiarrhythmics or statins (drug interaction)",
+      "Solid foods until a formal swallowing assessment confirms safe swallowing — aspiration pneumonia is a major recovery setback"
+    ]
+  },
+  "exerciseGuidelines": "Exercise during recovery is supervised and progressive. Bedside range-of-motion and positioning begin in intensive care to prevent contractures. Cardiac rehabilitation typically begins 2-6 weeks after the acute event in survivors of cardiac arrest. Aerobic training builds gradually toward 30 minutes of moderate activity five days per week as tolerated. Patients with movement disorders or balance impairment use parallel bars and assistive devices until stable. High-intensity exercise is avoided in the early weeks because of arrhythmia recurrence risk; clearance from cardiology is required before unrestricted activity.",
+  "dailyManagement": [
+    "Take antiarrhythmic, antiplatelet, and antiseizure medications at the same time each day with reminders set on a phone or pill organizer",
+    "Attend all scheduled cardiology, neurology, and rehabilitation appointments — early intervention catches treatable complications",
+    "Track symptoms in a simple diary including mood, sleep, cognitive lapses, and physical fatigue; share with the clinical team",
+    "Maintain consistent sleep and rest schedules — sleep is critical for memory consolidation during recovery",
+    "Identify a primary caregiver who attends appointments and supports decision-making, especially in the first 6 months when executive function may be impaired"
+  ],
+  "prognosis": "Prognosis after cerebral anoxia depends heavily on the duration of oxygen deprivation, the cause, age, and the quality of post-resuscitation care. Bystander CPR doubles the chance of survival with good neurological recovery, and the combined bundle of high-quality CPR, early defibrillation, targeted temperature management, and modern post-arrest care now produces a good neurological outcome in roughly 80% of patients who survive to hospital discharge after out-of-hospital cardiac arrest. The flip side is that only about 10% of out-of-hospital cardiac arrest victims survive to discharge at all, so the population-level prognosis remains sobering. Among long-term survivors, cumulative cognitive impairment affects 40-50%, with memory and executive function most affected. Recovery is fastest in the first 3-6 months and continues at a slower pace through 12-18 months. Persistent vegetative state at 3 months after anoxia has a poor outlook for meaningful recovery, but the minimally conscious state has a wider range of trajectories and warrants serial reassessment.",
+  "recoveryTimeline": "The first 72 hours establish whether the patient is going to wake at all, and most prognostic decisions are made at this point. Patients who follow commands by day 7 have a substantially better outlook than those who remain comatose. Cognitive recovery occurs most rapidly in the first 3 months and continues at a slower rate through 12-18 months. Motor recovery follows a similar arc, with the steepest gains in the first 6 months. Posthypoxic myoclonus often improves over 6-24 months with combination therapy. Vocational outcomes are typically reassessed at 6-12 months; roughly 30-40% of working-age survivors return to some form of work, though often with accommodations or in a different role.",
+  "complications": [
+    "Persistent vegetative state or minimally conscious state, sometimes lasting months to years before any meaningful recovery",
+    "Posthypoxic myoclonus and Lance-Adams syndrome, with disabling action-induced jerking that interferes with daily activities",
+    "Cognitive impairment including memory, attention, and executive dysfunction in 40-50% of long-term survivors",
+    "Refractory seizures and epilepsy developing after anoxic injury to vulnerable cortical and hippocampal neurons",
+    "Movement disorders such as parkinsonism, dystonia, and chorea following basal ganglia injury",
+    "Recurrent cardiac arrest in patients with untreated structural heart disease",
+    "Aspiration pneumonia from impaired swallowing during the recovery period",
+    "Mood disorders including depression, anxiety, and post-traumatic stress in both patients and family members"
+  ],
+  "supportResources": [
+    {
+      "name": "American Heart Association — Sudden Cardiac Arrest",
+      "url": "https://www.heart.org/en/health-topics/cardiac-arrest",
+      "description": "Patient and family resources on cardiac arrest, CPR training, and survivor support."
+    },
+    {
+      "name": "Brain Injury Association of America",
+      "url": "https://www.biausa.org",
+      "description": "Advocacy, education, and support for survivors of anoxic and traumatic brain injury and their families."
+    },
+    {
+      "name": "Sudden Cardiac Arrest Foundation",
+      "url": "https://www.sca-aware.org",
+      "description": "Survivor community, awareness campaigns, and resources on AED access and CPR training."
+    },
+    {
+      "name": "Resuscitation Academy",
+      "url": "https://www.resuscitationacademy.org",
+      "description": "Free training resources for community CPR and AED programs, including the 10 steps to improve cardiac arrest survival."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "post-stroke-rehabilitation",
+      "name": "Stroke and Post-Stroke Recovery",
+      "keyDifference": "Stroke is a focal vascular event affecting one brain territory, producing focal deficits such as one-sided weakness or aphasia. Cerebral anoxia is a diffuse insult affecting watershed zones, cortex, basal ganglia, and hippocampus bilaterally — deficits are global rather than focal, with prominent memory and cognitive impairment."
+    },
+    {
+      "slug": "tbi-rehabilitation",
+      "name": "Traumatic Brain Injury",
+      "keyDifference": "TBI is caused by mechanical force (impact, acceleration-deceleration, penetrating injury) and shows focal contusions, hemorrhages, and diffuse axonal injury on imaging. Anoxia produces watershed and cortical-laminar injury without trauma. The two often coexist, but the prognosis and rehabilitation strategies differ."
+    },
+    {
+      "slug": "alzheimers-disease",
+      "name": "Alzheimer's Disease",
+      "keyDifference": "Alzheimer's develops gradually over years with progressive memory loss tied to amyloid and tau pathology in an awake patient. Cerebral anoxia produces sudden cognitive impairment after a discrete hypoxic event, with imaging and history that anchor the diagnosis. Both can cause memory loss but the time course and cause differ."
+    },
+    {
+      "slug": "epilepsy",
+      "name": "Epilepsy",
+      "keyDifference": "Epilepsy is a chronic tendency to recurrent unprovoked seizures and exists as its own diagnosis. Anoxia commonly causes post-injury seizures and sometimes evolves into structural epilepsy, but the seizures are a consequence of the anoxic event, not the primary condition."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure"
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation"
+    },
+    {
+      "slug": "epilepsy",
+      "name": "Epilepsy"
+    },
+    {
+      "slug": "delirium-in-elderly",
+      "name": "Delirium"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "heart-failure",
+      "name": "Heart Failure",
+      "relevance": "Severe heart failure precipitates many of the cardiac arrests that cause cerebral anoxia; recovery planning often combines cardiac and neurological rehabilitation."
+    },
+    {
+      "slug": "atrial-fibrillation",
+      "name": "Atrial Fibrillation",
+      "relevance": "AF with rapid ventricular response can degenerate into ventricular arrhythmia and cardiac arrest, producing anoxic brain injury."
+    },
+    {
+      "slug": "post-stroke-rehabilitation",
+      "name": "Post-Stroke Rehabilitation",
+      "relevance": "Many of the cognitive and motor rehabilitation strategies overlap; survivors are often managed in combined brain-injury rehabilitation units."
+    },
+    {
+      "slug": "tbi-rehabilitation",
+      "name": "Traumatic Brain Injury Rehabilitation",
+      "relevance": "Mixed anoxic-traumatic injury is common after major trauma with shock; the rehabilitation pathways converge."
+    },
+    {
+      "slug": "epilepsy",
+      "name": "Epilepsy",
+      "relevance": "Post-anoxic epilepsy develops in a subset of survivors and requires long-term antiseizure therapy."
+    },
+    {
+      "slug": "delirium-in-elderly",
+      "name": "Delirium",
+      "relevance": "Delirium frequently complicates the intensive-care course after cardiac arrest and overlaps with the cognitive features of early anoxic injury."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "How long can the brain survive without oxygen?",
+      "answer": "Brain cells begin to die within 4-6 minutes of complete oxygen loss. After 10 minutes without CPR, severe injury is almost universal. Cold-water drowning is the main exception because hypothermia lowers metabolic demand. Time is the dominant variable in outcome.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between anoxia and hypoxia?",
+      "answer": "Anoxia is complete absence of oxygen reaching the brain (drowning, choking, hanging). Hypoxia is reduced but not absent oxygen, as in severe respiratory failure. Both cause similar brain injury patterns, and the combined term hypoxic-ischemic brain injury is used in cardiac arrest care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can someone recover fully from cerebral anoxia?",
+      "answer": "Full recovery is possible when oxygen deprivation was brief and CPR with rapid defibrillation was delivered. About 80% of cardiac arrest survivors receiving the full post-arrest care bundle achieve a good neurological outcome. Beyond 10 minutes without CPR, full recovery becomes much less likely.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is targeted temperature management?",
+      "answer": "Targeted temperature management cools the body to 32-36°C for 24 hours after cardiac arrest, then rewarms slowly. Cooling reduces brain metabolic demand and limits reperfusion injury. The TTM2 trial found 36°C non-inferior to 33°C, and most adult centres now use 36°C with fever avoidance.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do doctors wait 72 hours before predicting outcome?",
+      "answer": "Sedatives, opioids, and temperature management mask brain function for 24-48 hours after arrest. The AAN and European Resuscitation Council require at least 72 hours off sedation at normal temperature, because earlier exams produce false predictions of poor outcome.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is a persistent vegetative state?",
+      "answer": "Persistent vegetative state has preserved sleep-wake cycles and basic reflexes but no awareness of self or environment. Eyes open and close, but there are no consistent responses to commands or recognition of family. After three months, recovery from anoxic vegetative state is unlikely.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the minimally conscious state?",
+      "answer": "Minimally conscious state shows inconsistent but reproducible signs of awareness such as visual tracking, occasional command following, or emotional response. Recovery rates exceed those of vegetative state, and consciousness can change over months, so serial Coma Recovery Scale assessment matters.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is Lance-Adams syndrome?",
+      "answer": "Lance-Adams is chronic action-induced myoclonus that develops after consciousness returns following severe anoxic injury. Reaching, walking, or speaking triggers sudden involuntary jerks. Treatment combines clonazepam, levetiracetam, valproate, and piracetam, with partial improvement in most.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does carbon monoxide poisoning cause anoxic brain injury?",
+      "answer": "Yes. Carbon monoxide binds hemoglobin 200 times more tightly than oxygen, blocking oxygen delivery even when breathing seems normal. Severe poisoning causes coma, seizures, and delayed neuropsychiatric sequelae. Treatment is high-flow oxygen, with hyperbaric oxygen for severe or symptomatic cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How important is bystander CPR?",
+      "answer": "Bystander CPR doubles survival with intact brain function after out-of-hospital cardiac arrest. Hands-only CPR at 100-120 compressions per minute and 5-6 cm depth is effective. AHA data show survival drops about 10% per minute of delay, making bystander response the largest determinant of outcome.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the prognosis after a 10-minute cardiac arrest?",
+      "answer": "Outcome depends on what happened during those 10 minutes. With bystander CPR, early defibrillation, and post-arrest care, many patients recover with good neurological function. Without CPR for the same interval, severe brain injury is almost universal and most patients die or remain dependent.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does an MRI show after anoxic brain injury?",
+      "answer": "MRI typically shows restricted diffusion in cortex, basal ganglia, hippocampus, and watershed regions between major arterial territories. The extent correlates with outcome — diffusion restriction in more than 20-30% of cortex at 3-5 days predicts poor neurological recovery.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can seizures after cardiac arrest be controlled?",
+      "answer": "Many post-anoxic seizures respond to levetiracetam, valproate, or lacosamide, with electrographic suppression in 60-75% of patients. Myoclonic status epilepticus is the most resistant form and often signals catastrophic injury, though some with reactive EEG backgrounds recover meaningfully.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What kind of rehabilitation is available?",
+      "answer": "Rehabilitation includes physiotherapy for strength and balance, occupational therapy for daily living, speech-language pathology for swallowing and communication, neuropsychology for memory and executive function, and psychiatric support. Programs last 3-12 months and start during inpatient stay.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Will family members know if recovery is happening?",
+      "answer": "Subtle signs of awareness — visual tracking of family, command-following at quiet moments, emotional responses to familiar voices — often appear before formal tests detect them. Families should report consistent changes to the clinical team for structured Coma Recovery Scale assessment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Are there long-term cognitive effects in survivors?",
+      "answer": "About 40-50% of survivors have persistent cognitive impairment, most often in short-term memory, attention, and executive function. Many deficits improve over the first 12-18 months with rehabilitation. A neuropsychological evaluation at 3-6 months helps tailor cognitive remediation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can someone return to work after anoxic brain injury?",
+      "answer": "Roughly 30-40% of working-age survivors return to paid work, often with accommodations or in a different role. Cognitive demands, fatigue tolerance, and seizure risk shape the plan. Graded return supervised by occupational therapy and a vocational counselor improves success rates.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the role of EEG monitoring?",
+      "answer": "Continuous EEG detects nonconvulsive seizures, status myoclonus, and prognostic background patterns. A reactive, continuous background carries a better outlook than a flat or burst-suppression pattern. EEG is now a routine component of post-cardiac-arrest neurological monitoring.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is hyperbaric oxygen useful for cerebral anoxia?",
+      "answer": "Hyperbaric oxygen is established treatment for severe carbon monoxide poisoning and accelerates removal of CO from hemoglobin. For other causes of anoxic brain injury, evidence is mixed, and hyperbaric oxygen is not part of standard post-cardiac-arrest care.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children recover better than adults?",
+      "answer": "Children have greater neuroplasticity but are equally vulnerable to severe deficits when anoxia is prolonged. Cold-water drowning in children produces occasional dramatic recoveries because hypothermia lowers metabolic demand. Pediatric rehab combines intensive therapy with family education.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What questions should family ask the medical team?",
+      "answer": "Useful questions: how long was the no-flow time, what does the latest neurological exam show, what are the EEG and imaging findings, when will the 72-hour prognostication occur, what is the expected rehabilitation pathway, and who leads long-term follow-up. Serial updates avoid surprises.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Cerebral anoxia (brain injury from low oxygen)",
+  "regionalNames": [
+    {
+      "name": "मस्तिष्क की ऑक्सीजन की कमी (Mastishk ki Oxygen ki Kami)",
+      "region": "India (Hindi-speaking regions)",
+      "language": "hi"
+    },
+    {
+      "name": "Anoxie cérébrale",
+      "region": "France",
+      "language": "fr"
+    },
+    {
+      "name": "Anoxia cerebral",
+      "region": "Spain / Latin America",
+      "language": "es"
+    }
+  ],
+  "searchTags": [
+    "cerebral anoxia",
+    "anoxic brain injury",
+    "hypoxic-ischemic brain injury",
+    "HIBI",
+    "post-cardiac arrest brain injury",
+    "anoxic encephalopathy",
+    "Lance-Adams syndrome",
+    "targeted temperature management",
+    "TTM",
+    "neuroprognostication",
+    "persistent vegetative state",
+    "minimally conscious state",
+    "neurology",
+    "critical care"
+  ],
+  "symptomKeywords": [
+    "coma after cardiac arrest",
+    "brain damage from lack of oxygen",
+    "anoxic seizures",
+    "myoclonic jerks after CPR",
+    "memory loss after cardiac arrest",
+    "persistent vegetative state",
+    "anoxic encephalopathy symptoms",
+    "Lance-Adams syndrome"
+  ],
+  "metaTitle": "Cerebral Anoxia: Symptoms & Treatment | aihealz",
+  "metaDescription": "Cerebral anoxia: brain injury from lack of oxygen after cardiac arrest, drowning, or choking. Symptoms, diagnosis, prognosis, and post-arrest care.",
+  "keywords": [
+    "cerebral anoxia",
+    "anoxic brain injury",
+    "hypoxic-ischemic brain injury",
+    "anoxic encephalopathy",
+    "post-cardiac arrest brain injury",
+    "targeted temperature management",
+    "Lance-Adams syndrome",
+    "neuroprognostication",
+    "persistent vegetative state",
+    "anoxia symptoms",
+    "anoxia treatment",
+    "brain damage from drowning",
+    "carbon monoxide brain injury"
+  ],
+  "lastReviewed": "2026-05-18",
+  "images": [
+    {
+      "assetType": "feature",
+      "section": "hero",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:CPR_training-04.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/CPR_training-04.jpg",
+      "altText": "Bystander performing chest compressions on a CPR training manikin, illustrating the lifesaving response to cardiac arrest that prevents cerebral anoxia",
+      "caption": "High-quality bystander CPR doubles survival with intact brain function after out-of-hospital cardiac arrest.",
+      "license": "CC BY 2.0",
+      "credit": "Rama / Wikimedia Commons",
+      "width": 1920,
+      "height": 1280
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "diagnosis",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:MRI_brain_axial_T2_FLAIR.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/MRI_brain_axial_T2_FLAIR.jpg/1024px-MRI_brain_axial_T2_FLAIR.jpg",
+      "altText": "Axial T2 FLAIR MRI of the brain, the imaging modality used to assess cortical and basal ganglia injury after cerebral anoxia",
+      "caption": "MRI is central to assessing the extent of cortical, basal ganglia, and watershed injury after anoxic brain injury.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "assetType": "diagnostic",
+      "section": "treatment",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Defibrillator_Monitor_ZOLL_R-series.jpg",
+      "cdnUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Defibrillator_Monitor_ZOLL_R-series.jpg/1024px-Defibrillator_Monitor_ZOLL_R-series.jpg",
+      "altText": "Hospital defibrillator monitor used during cardiac arrest resuscitation, a key step in preventing cerebral anoxia",
+      "caption": "Early defibrillation, alongside CPR and post-arrest care, is one of the strongest determinants of neurological outcome.",
+      "license": "CC BY-SA 4.0",
+      "credit": "Wikimedia Commons",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "sources": [
+    {
+      "title": "Panchal AR, Bartos JA, Cabañas JG, et al. Part 3: Adult Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2020;142(16_suppl_2):S366-S468.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33081529/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus Normothermia after Out-of-Hospital Cardiac Arrest (TTM2 Trial). New England Journal of Medicine. 2021;384(24):2283-2294.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34133859/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Geocadin RG, Callaway CW, Fink EL, et al. Standards for Studies of Neurological Prognostication in Comatose Survivors of Cardiac Arrest: A Scientific Statement from the American Heart Association. Circulation. 2019;140(9):e517-e542.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31291775/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Nolan JP, Sandroni C, Böttiger BW, et al. European Resuscitation Council and European Society of Intensive Care Medicine Guidelines 2021: Post-resuscitation care. Resuscitation. 2021;161:220-269.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33773827/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Virani SS, Alonso A, Aparicio HJ, et al. Heart Disease and Stroke Statistics-2021 Update: A Report From the American Heart Association. Circulation. 2021;143(8):e254-e743.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33501848/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Weaver LK, Hopkins RO, Chan KJ, et al. Hyperbaric oxygen for acute carbon monoxide poisoning. New England Journal of Medicine. 2002;347(14):1057-1067.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12362006/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "World Health Organization. Drowning Fact Sheet.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/drowning",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "American Heart Association Cardiac Arrest Statistics.",
+      "url": "https://cpr.heart.org/en/resources/cpr-facts-and-stats",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "Dr. Anita Sharma",
+    "slug": "dr-anita-sharma-neurology"
+  }
+}

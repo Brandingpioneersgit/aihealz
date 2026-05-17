@@ -1,0 +1,616 @@
+{
+  "_meta": {
+    "slug": "acute-bronchiolitis",
+    "tier": 1,
+    "headTerm": "acute bronchiolitis",
+    "longTailKeywords": [
+      "bronchiolitis symptoms",
+      "RSV bronchiolitis",
+      "bronchiolitis treatment",
+      "bronchiolitis in infants",
+      "bronchiolitis vs pneumonia",
+      "bronchiolitis vs asthma",
+      "nirsevimab RSV",
+      "palivizumab high-risk infants",
+      "when to hospitalize bronchiolitis",
+      "viral wheeze infant"
+    ],
+    "primarySpecialty": "Pediatric Pulmonology / Infectious Disease",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Cross-checked against AAP 2014 clinical practice guideline (Ralston SL et al., PMID 25349312), 2023 ACIP nirsevimab recommendations, NICE NG9 bronchiolitis in children, Cochrane reviews on bronchodilators (Gadomski 2014) and hypertonic saline (Zhang 2017), and Hall 2009 NEJM RSV hospitalization burden data."
+  },
+  "h1Title": "Acute Bronchiolitis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Pediatric Pulmonology / Infectious Disease",
+  "heroOverview": "Acute bronchiolitis is the leading cause of infant hospitalization in high-income countries, driven by viral infection of the small airways in children under two years old. Respiratory syncytial virus (RSV) accounts for 60-80% of cases, with peak incidence between 2 and 6 months of age. The illness starts as a runny nose and cough, then progresses over 2-3 days to wheezing, fast breathing, chest retractions, and feeding difficulty as mucus plugging and airway edema trap air in the lungs. Most infants recover at home over 7-14 days, but roughly 2-3% require hospitalization for oxygen, hydration, or respiratory support. Treatment is supportive — nasal suction, fluids, supplemental oxygen — because bronchodilators, steroids, and antibiotics do not change the disease course.",
+  "keyStats": {
+    "prevalence": "Affects ~90% of children before age 2; ~2-3% of all infants hospitalized annually in the US",
+    "demographics": "Peak age 2-6 months; 90% of cases occur under age 2; slight male predominance",
+    "avgAge": "Median hospitalization age 2-3 months; preterm and infants under 12 weeks at highest risk",
+    "globalCases": "~33 million RSV lower respiratory infections per year worldwide; ~99,000 child deaths globally (Shi 2017 Lancet)"
+  },
+  "definition": "Acute bronchiolitis (ICD-10: J21.9) is a viral lower respiratory tract infection of infants and young children characterized by inflammation, necrosis, and obstruction of the bronchioles — the small airways less than 2 mm in diameter. Respiratory syncytial virus causes 60-80% of cases; rhinovirus accounts for roughly 20%, with parainfluenza, human metapneumovirus, adenovirus, influenza, and SARS-CoV-2 making up the remainder. The virus infects ciliated airway epithelial cells, triggering necrosis, peribronchial lymphocytic infiltration, submucosal edema, and mucus plugging. The result is heterogeneous narrowing of small airways with regional air trapping, ventilation-perfusion mismatch, and increased work of breathing. The diagnosis is reserved for the first wheezing illness in a child under 24 months following a viral upper respiratory prodrome, distinguishing it from recurrent viral-induced wheeze and early asthma. The American Academy of Pediatrics 2014 clinical practice guideline defines the diagnostic, supportive, and prevention framework most pediatric services follow. Pediatric pulmonology, general pediatrics, and pediatric infectious disease share management; severe cases requiring high-flow nasal cannula, CPAP, or intubation are escalated to pediatric intensive care.",
+  "typesClassification": [
+    {
+      "type": "Mild bronchiolitis",
+      "description": "Cough, mild wheeze, normal feeding, oxygen saturation above 92% in room air, no significant respiratory distress. Managed at home with nasal saline, suction, and small frequent feeds."
+    },
+    {
+      "type": "Moderate bronchiolitis",
+      "description": "Tachypnea (respiratory rate 60-70/min), moderate retractions, oxygen saturation 90-92%, reduced feeding to 50-75% of normal volume. Often warrants emergency evaluation; some require admission for hydration or oxygen."
+    },
+    {
+      "type": "Severe bronchiolitis",
+      "description": "Respiratory rate above 70/min, marked retractions or grunting, oxygen saturation below 90%, apnea, or inability to feed. Requires hospital admission with oxygen, often high-flow nasal cannula, IV or nasogastric fluids, and close monitoring."
+    },
+    {
+      "type": "RSV bronchiolitis vs non-RSV bronchiolitis",
+      "description": "RSV cases (60-80%) tend to be more severe and prolonged. Rhinovirus bronchiolitis is shorter on average but associated with higher subsequent risk of recurrent wheeze and asthma development in childhood."
+    }
+  ],
+  "primarySymptoms": [
+    "Runny nose and mild cough lasting 2-3 days as the initial upper respiratory prodrome before lower airway symptoms appear.",
+    "Persistent dry or wet cough that worsens over days 3-5 of illness, often interrupting sleep and feeding.",
+    "Audible wheeze or whistling on expiration, with fine inspiratory crackles heard throughout both lungs on examination.",
+    "Tachypnea, with respiratory rates above 50-60 per minute in infants under 12 months and above 40 per minute in older toddlers.",
+    "Chest wall retractions — subcostal, intercostal, or suprasternal — and nasal flaring as work of breathing increases.",
+    "Feeding difficulty with reduced intake (under 50-75% of usual volume), prolonged feed times, and breathing pauses while sucking.",
+    "Low-grade fever in roughly 50% of cases, usually under 39 degrees Celsius; high fever is uncommon and suggests bacterial co-infection.",
+    "Irritability or unusual sleepiness as oxygenation drops and work of breathing rises.",
+    "Apnea — brief breathing pauses — in young infants under 6 weeks, preterm infants, and those with bronchopulmonary dysplasia (10-25% of admitted cases under 1 month).",
+    "Cyanosis around the lips or fingertips in severe disease, signaling oxygen saturation below 88-90%."
+  ],
+  "earlyWarningSigns": [
+    "Sustained respiratory rate above 60 per minute in an infant at rest",
+    "Visible subcostal or intercostal retractions even between feeds",
+    "Feeding less than 50% of normal volume over 24 hours or refusing the breast or bottle",
+    "Fewer wet diapers (under 4-6 in 24 hours) signaling dehydration",
+    "Lethargy or marked drop in usual activity and responsiveness"
+  ],
+  "emergencySigns": [
+    "Oxygen saturation below 90% on room air or visible cyanosis around the lips, tongue, or fingertips",
+    "Apneic spells lasting more than 15-20 seconds or any apnea in an infant under 6 weeks or born preterm",
+    "Severe respiratory distress with grunting, head bobbing, or use of accessory neck muscles",
+    "Inability to feed or take fluids, signs of dehydration (no wet diaper for 8 hours, sunken fontanelle, dry mouth)",
+    "Altered consciousness, floppy tone, or unresponsiveness — call emergency services immediately"
+  ],
+  "causes": [
+    {
+      "cause": "Respiratory syncytial virus (RSV)",
+      "description": "The dominant pathogen, causing 60-80% of bronchiolitis cases and the majority of hospitalizations. RSV circulates in seasonal waves (November-March in the Northern Hemisphere) and infects ciliated airway epithelium, producing the characteristic small-airway necrosis and mucus plugging."
+    },
+    {
+      "cause": "Rhinovirus",
+      "description": "Accounts for roughly 20% of bronchiolitis cases and circulates year-round. Rhinovirus bronchiolitis is on average shorter than RSV illness but is more strongly linked to subsequent recurrent wheeze and childhood asthma in cohort studies."
+    },
+    {
+      "cause": "Human metapneumovirus, parainfluenza, and influenza",
+      "description": "Together cause 10-15% of cases. Human metapneumovirus shares biology with RSV and produces clinically indistinguishable illness; parainfluenza more often causes croup but can produce bronchiolitis in infants."
+    },
+    {
+      "cause": "Adenovirus and SARS-CoV-2",
+      "description": "Adenovirus bronchiolitis is less common but can cause severe necrotizing illness and long-term sequelae such as bronchiolitis obliterans. SARS-CoV-2 typically produces mild bronchiolitis in infants but emerged as a recognizable cause from 2020 onward."
+    },
+    {
+      "cause": "Mixed viral co-infection",
+      "description": "Detected in 15-30% of admitted children, especially RSV-rhinovirus combinations. Co-infection is associated with longer hospital length of stay and higher oxygen requirements in several cohort studies."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Age under 12 weeks",
+      "category": "non-modifiable",
+      "description": "Small airway caliber and immature immunity sharply raise hospitalization risk. Infants under 3 months account for the largest share of bronchiolitis admissions and intensive care escalation."
+    },
+    {
+      "factor": "Prematurity, especially under 32 weeks gestation",
+      "category": "non-modifiable",
+      "description": "Preterm infants have narrower airways, less surfactant reserve, and immature immune responses. Bronchiolitis hospitalization rates are 2-3 times higher than in term infants."
+    },
+    {
+      "factor": "Bronchopulmonary dysplasia or chronic lung disease of prematurity",
+      "category": "non-modifiable",
+      "description": "Pre-existing airway and parenchymal injury sharply raise risk of severe RSV disease and the need for mechanical ventilation."
+    },
+    {
+      "factor": "Hemodynamically significant congenital heart disease",
+      "category": "non-modifiable",
+      "description": "Left-to-right shunts and pulmonary hypertension reduce respiratory reserve. Mortality and prolonged ICU stay are higher; palivizumab prophylaxis is specifically recommended for these infants."
+    },
+    {
+      "factor": "Tobacco smoke exposure",
+      "category": "environmental",
+      "description": "Maternal smoking during pregnancy and household smoke exposure roughly double bronchiolitis hospitalization risk by impairing mucociliary clearance and lower airway development."
+    },
+    {
+      "factor": "Daycare attendance and older siblings at home",
+      "category": "environmental",
+      "description": "Both significantly increase exposure to circulating respiratory viruses. Infants in group childcare during their first RSV season have 2-fold higher incidence of severe bronchiolitis."
+    },
+    {
+      "factor": "Lack of breastfeeding",
+      "category": "modifiable",
+      "description": "Exclusive breastfeeding for 4-6 months reduces bronchiolitis admission risk by approximately 25-50% through transfer of secretory IgA and lactoferrin."
+    },
+    {
+      "factor": "Immunodeficiency",
+      "category": "non-modifiable",
+      "description": "Primary immunodeficiencies and severe combined immunodeficiency increase risk of severe and prolonged RSV bronchiolitis, sometimes with viral shedding for months."
+    },
+    {
+      "factor": "Cystic fibrosis and neuromuscular disease",
+      "category": "genetic",
+      "description": "Underlying impaired airway clearance or weak cough magnifies the severity of any small-airway viral infection."
+    },
+    {
+      "factor": "Indigenous and Pacific Islander populations",
+      "category": "non-modifiable",
+      "description": "Alaska Native, Indigenous Australian, and Pacific Islander infants experience RSV hospitalization rates 5-10 times higher than the general population, reflecting crowding, environmental exposures, and access barriers."
+    }
+  ],
+  "affectedDemographics": [
+    "Roughly 90% of children experience at least one episode of bronchiolitis before age 2 (AAP 2014)",
+    "RSV alone causes approximately 100,000 US infant hospitalizations annually and over 2 million outpatient encounters (CDC 2023)",
+    "Global RSV burden: 33 million acute lower respiratory infections in children under 5, ~3.6 million hospitalizations, ~99,000 deaths per year (Shi 2017 Lancet)",
+    "Mortality in high-income countries is under 0.1%; in low- and middle-income settings, RSV mortality is up to 50 times higher due to limited oxygen and intensive care access"
+  ],
+  "diagnosisOverview": "Bronchiolitis is a clinical diagnosis. The American Academy of Pediatrics 2014 guideline explicitly recommends against routine virologic testing, chest radiographs, or laboratory studies in typical cases, because none of these change management for the otherwise well infant. The clinician identifies the first lower-respiratory wheeze in a child under 24 months who has had a viral upper-respiratory prodrome of 1-3 days, with examination findings of tachypnea, wheeze, fine crackles, retractions, or nasal flaring. Severity is graded by feeding adequacy, work of breathing, mental status, and pulse oximetry. The AAP recommends supplemental oxygen when SpO2 is sustained below 90%, and most guidelines accept that transient dips above this threshold do not require hospitalization in an otherwise well-feeding infant. Chest X-ray is reserved for atypical course, suspected pneumonia, focal findings, or hospitalized infants whose disease progresses unexpectedly — routine films lead to overuse of antibiotics without improving outcomes. RSV PCR testing is not required for routine care but can be useful for cohorting hospitalized infants, guiding palivizumab interruption, or in immunocompromised hosts. The critical differentials are bacterial pneumonia (focal exam, persistent high fever, lobar infiltrate), asthma in older toddlers (recurrent wheeze, family or atopic history), foreign body aspiration (sudden choking, unilateral wheeze), and heart failure (gallop, hepatomegaly, failure to thrive). When the presentation is atypical or recurrent, referral to pediatric pulmonology and broader workup are appropriate.",
+  "diagnosticTests": [
+    {
+      "test": "Clinical examination with vital signs and pulse oximetry",
+      "purpose": "The diagnostic foundation. Confirms tachypnea, retractions, wheeze, and crackles consistent with bronchiolitis; pulse oximetry below 90% on room air guides oxygen and admission decisions per AAP and NICE thresholds.",
+      "whatToExpect": "A clinician counts the resting respiratory rate for a full minute, observes the chest for retractions, listens to all lung fields, and clips a small probe to the foot or finger to measure oxygen saturation. The exam takes 5-10 minutes and is painless."
+    },
+    {
+      "test": "Severity scoring (Wang, Tal, or local protocol score)",
+      "purpose": "Standardizes assessment of disease severity and guides admission, monitoring frequency, and escalation to higher levels of care. Scores combine respiratory rate, retractions, wheeze, and oxygen saturation.",
+      "whatToExpect": "The clinician calculates a score during examination; no separate test is required. Re-scoring at intervals helps detect deterioration or response to treatment."
+    },
+    {
+      "test": "Nasopharyngeal viral PCR (RSV, rhinovirus, influenza, hMPV, SARS-CoV-2)",
+      "purpose": "Not routinely required for typical cases per AAP 2014 but useful for hospital cohorting, immunocompromised infants, atypical presentations, or apnea evaluation in young infants.",
+      "whatToExpect": "A small flexible swab is briefly inserted into the back of the nose. The procedure is uncomfortable for about 5 seconds; results return within 1-24 hours depending on the lab."
+    },
+    {
+      "test": "Chest radiograph (X-ray)",
+      "purpose": "Reserved for atypical features, focal exam findings, suspected complication (pneumonia, pneumothorax), or unexpected clinical worsening. AAP and NICE both recommend against routine films.",
+      "whatToExpect": "A frontal and sometimes lateral X-ray of the chest is taken with the infant briefly held in position. The exposure is a few seconds; lead shielding is used where appropriate."
+    },
+    {
+      "test": "Capillary or venous blood gas",
+      "purpose": "Useful in severe respiratory distress to assess for hypercapnia (rising CO2) and respiratory failure, which can be present despite reasonable oxygen saturation.",
+      "whatToExpect": "A small heel-stick or finger-stick sample, or a venous draw. Mild discomfort lasting seconds; results return within minutes in hospital settings."
+    },
+    {
+      "test": "Urinalysis and full septic workup (selected cases)",
+      "purpose": "In febrile infants under 60-90 days with bronchiolitis, occult urinary tract infection rate is roughly 1-3%; serious bacterial infection is otherwise uncommon. Local protocols guide selective testing.",
+      "whatToExpect": "A catheter or bag urine sample, with blood and sometimes cerebrospinal fluid testing in the youngest infants. Decisions are individualized by age, fever pattern, and overall appearance."
+    }
+  ],
+  "treatmentOverview": "Bronchiolitis treatment is supportive. The American Academy of Pediatrics 2014 guideline, NICE NG9, and the Canadian Paediatric Society all converge on the same core message: no medication shortens the disease course in otherwise healthy infants, and routine pharmacology should be avoided. The cornerstones are nasal saline drops with bulb or mechanical suction to clear secretions, small frequent feeds or nasogastric/IV hydration if oral intake drops below 50-75% of normal, supplemental oxygen to maintain saturation at or above 90%, and antipyretics for comfort. Admission criteria include sustained SpO2 under 90%, severe work of breathing, dehydration, apnea, or social factors that prevent safe home monitoring. For hospitalized infants with moderate to severe disease, heated humidified high-flow nasal cannula (HFNC) delivered at 1-2 L/kg/min reduces escalation to intubation compared with standard oxygen (Franklin 2018 NEJM). Continuous positive airway pressure (CPAP) is the next step, with mechanical ventilation reserved for impending respiratory failure or recurrent apnea. The AAP 2014 guideline strongly recommends against routine bronchodilators (Cochrane review showed no benefit on hospitalization or duration of illness), against systemic corticosteroids (no benefit, possible harm including prolonged viral shedding), against routine antibiotics (only indicated for proven bacterial co-infection such as otitis media or pneumonia), and against chest physiotherapy. Nebulized 3% hypertonic saline has shown small reductions in length of stay in some inpatient cohorts (mean reduction roughly 0.4-0.5 days) but does not change outpatient outcomes. Ribavirin is no longer recommended outside narrow immunocompromised cases. Prevention sits at the center of modern strategy: nirsevimab, a long-acting monoclonal antibody approved in 2023, is recommended by ACIP/CDC for all infants under 8 months entering their first RSV season, with roughly 80% efficacy against medically attended RSV; palivizumab remains an option for the highest-risk infants (severe prematurity, chronic lung disease on therapy, hemodynamically significant congenital heart disease) where nirsevimab is unavailable.",
+  "medicalTreatments": [
+    {
+      "name": "Nasal saline drops and suction",
+      "description": "Saline drops loosen secretions and suction (bulb syringe at home, mechanical wall suction in hospital) clears the nasal passages — the primary airway in infants. Performed before feeds and sleep to reduce work of breathing and improve oral intake.",
+      "effectiveness": "Improves feeding and reduces respiratory distress symptomatically; no impact on disease duration but recommended by AAP, NICE, and CPS as first-line supportive care."
+    },
+    {
+      "name": "Supplemental oxygen via nasal cannula or mask",
+      "description": "Started when SpO2 falls sustainably below 90% in an otherwise unwell infant. Flow rates of 0.5-2 L/min via low-flow nasal cannula are typical; titrated to maintain saturation at 90-94% per AAP 2014.",
+      "effectiveness": "Effective in correcting hypoxemia in nearly 100% of cases; primary indication for hospital admission in moderate disease."
+    },
+    {
+      "name": "Heated humidified high-flow nasal cannula (HFNC) at 1-2 L/kg/min",
+      "description": "Provides warmed, humidified oxygen-air blend at high flows that generate modest positive airway pressure and reduce work of breathing. Used for infants failing standard oxygen or with significant respiratory distress.",
+      "effectiveness": "Reduces escalation to intubation by roughly 50% compared with standard oxygen (Franklin 2018 NEJM PARIS trial); now standard of care in pediatric inpatient bronchiolitis."
+    },
+    {
+      "name": "Nasogastric or intravenous fluid hydration",
+      "description": "Indicated when oral intake falls below 50-75% of normal or when respiratory rate is too high for safe feeding. Nasogastric feeds are usually preferred over IV in stable infants; isotonic fluids prevent hyponatremia.",
+      "effectiveness": "Maintains hydration and reduces hypoglycemia and prolonged hospitalization risk; no direct impact on lung disease course."
+    },
+    {
+      "name": "Continuous positive airway pressure (CPAP) or non-invasive ventilation",
+      "description": "Used in severe bronchiolitis with rising CO2, persistent apnea, or escalation despite HFNC. Provides constant distending pressure that stents open small airways and reduces work of breathing.",
+      "effectiveness": "Avoids intubation in roughly 60-75% of infants who fail HFNC in PICU cohorts."
+    },
+    {
+      "name": "Nebulized hypertonic saline 3%",
+      "description": "Inpatient adjunct that may modestly shorten length of stay by drawing fluid into the airway and improving mucus clearance. Not recommended for outpatient management or in the emergency department per AAP 2014.",
+      "effectiveness": "Mean length-of-stay reduction of 0.4-0.5 days in Cochrane meta-analysis (Zhang 2017); effect inconsistent across trials."
+    },
+    {
+      "name": "Antipyretics (paracetamol/acetaminophen, ibuprofen if over 6 months)",
+      "description": "Used for comfort when fever or discomfort interferes with feeding or sleep. Do not change disease course. Avoid ibuprofen in infants under 6 months.",
+      "effectiveness": "Symptomatic relief in over 80% of children when used appropriately for fever above 38.5 degrees Celsius."
+    },
+    {
+      "name": "Nirsevimab single intramuscular dose (50-100 mg depending on weight)",
+      "description": "Long-acting RSV monoclonal antibody recommended by ACIP and CDC since 2023 for all infants under 8 months entering their first RSV season and high-risk children 8-19 months entering their second season. Given once before or during RSV season.",
+      "effectiveness": "Approximately 80% efficacy against medically attended RSV lower respiratory tract infection and ~75-80% against RSV hospitalization (MELODY trial, Hammitt 2022 NEJM)."
+    },
+    {
+      "name": "Palivizumab monthly IM injections during RSV season",
+      "description": "Short-acting RSV monoclonal antibody reserved for high-risk infants: born under 29 weeks, with chronic lung disease of prematurity on therapy in the first 24 months, or with hemodynamically significant congenital heart disease. Largely supplanted by nirsevimab where available.",
+      "effectiveness": "Reduces RSV hospitalization by roughly 55% in high-risk infants (IMpact-RSV trial)."
+    }
+  ],
+  "surgicalOptions": [],
+  "alternativeTreatments": [],
+  "linkedTreatmentSlugs": [],
+  "whySeeSpecialist": "Most cases of bronchiolitis are managed by general pediatricians, family physicians, and emergency clinicians. Pediatric pulmonology referral is appropriate when bronchiolitis recurs repeatedly in the same season, when an underlying condition (cystic fibrosis, primary ciliary dyskinesia, immunodeficiency, congenital airway anomaly) is suspected, when an infant required mechanical ventilation, or when persistent wheeze or oxygen need continues beyond 4-6 weeks after the acute illness. Severe disease requiring HFNC, CPAP, or intubation is managed jointly by pediatric intensive care and pediatric pulmonology.",
+  "doctorSelectionGuide": "For acute care, the priority is timely access — a pediatric emergency department or pediatrician with pulse oximetry and the ability to escalate. For prevention, choose a primary care practice that stocks nirsevimab and counsels on RSV season timing. For complex or recurrent cases, look for a board-certified pediatric pulmonologist with access to bronchoscopy, sweat chloride testing, and immunology workup. Continuity with the same primary care team across an infant's first two RSV seasons matters more than location.",
+  "hospitalCriteria": [
+    "Sustained pulse oximetry below 90-92% on room air",
+    "Severe respiratory distress (respiratory rate above 70/min, grunting, marked retractions, head bobbing)",
+    "Apneic episodes, particularly in infants under 6 weeks or with prematurity",
+    "Inability to maintain oral intake above 50-75% of normal volume or clinical dehydration",
+    "Toxic appearance, lethargy, or social factors preventing safe home monitoring"
+  ],
+  "keyFacilities": [
+    "Pediatric emergency department with pulse oximetry, high-flow nasal cannula, and nebulizer capability",
+    "Inpatient pediatric ward with oxygen and continuous cardiorespiratory monitoring",
+    "Pediatric intensive care unit for HFNC failure, CPAP, mechanical ventilation, and apnea management",
+    "Outpatient pediatric pulmonology clinic for recurrent or atypical disease workup"
+  ],
+  "costBreakdown": null,
+  "insuranceGuide": null,
+  "financialAssistance": null,
+  "preventionStrategies": [
+    "Administer nirsevimab to every infant under 8 months entering their first RSV season — single IM dose, ~80% efficacy against medically attended RSV (ACIP/CDC 2023)",
+    "Offer palivizumab monthly through RSV season to high-risk infants (under 29 weeks gestation, chronic lung disease on therapy, hemodynamically significant CHD) where nirsevimab is unavailable",
+    "Vaccinate pregnant women between 32 and 36 weeks' gestation with maternal RSV vaccine (RSVpreF) during RSV season to provide passive transplacental antibodies",
+    "Practice rigorous hand hygiene with soap-and-water or alcohol-based sanitizer in households with infants, especially during RSV season (November-March)",
+    "Avoid tobacco smoke exposure during pregnancy and after birth — household smoke roughly doubles bronchiolitis hospitalization risk",
+    "Encourage exclusive breastfeeding for at least 4-6 months — reduces bronchiolitis admission risk by 25-50%"
+  ],
+  "lifestyleModifications": [
+    "Keep the infant upright during and 20-30 minutes after feeds to ease breathing and reduce reflux",
+    "Offer smaller volumes more frequently when the child is congested (every 2 hours instead of every 3-4) to maintain hydration",
+    "Run a cool-mist humidifier in the sleep area and clean it daily to prevent mold colonization",
+    "Use saline drops and a bulb syringe or mechanical nasal aspirator before each feed and at bedtime",
+    "Avoid taking the infant into crowded indoor spaces and limit contact with people who have cold symptoms during the first RSV season",
+    "Wash the hands of all household members before holding the infant, and ask older siblings to wash hands after school or daycare"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Breast milk or standard infant formula on demand — the primary hydration and nutrition source",
+      "Small, frequent feeds of 60-90 mL every 2-3 hours when the infant is congested",
+      "Oral rehydration solution between feeds if the child is over 6 months and intake is reduced",
+      "Soft, easy-to-swallow purees and pieces for infants who have started complementary feeding",
+      "Maternal hydration (for breastfeeding mothers) to maintain milk supply"
+    ],
+    "avoid": [
+      "Force-feeding a distressed, tachypneic infant — aspiration risk rises with respiratory rate above 60",
+      "Cow's milk or honey for infants under 12 months",
+      "Cough and cold over-the-counter syrups for infants and toddlers — banned by the FDA in children under 4 and ineffective",
+      "Caffeinated drinks (tea, coffee) in toddlers",
+      "Sugary fluids that displace breast milk or formula"
+    ]
+  },
+  "exerciseGuidelines": "Active play is appropriate as soon as the infant or toddler is comfortable, feeding well, and free of significant respiratory distress. There is no need to limit movement after recovery from acute bronchiolitis, and gentle activity supports lung clearance. Watch for return of cough or wheeze during exertion in the weeks following the acute illness, especially in children with recurrent wheeze risk.",
+  "dailyManagement": [
+    "Clear the nose with saline drops and gentle suction before every feed and before sleep",
+    "Track wet diapers (aim for at least 4-6 per 24 hours) as the simplest hydration marker",
+    "Monitor breathing rate at rest twice daily — over 60/min in infants under 12 months warrants reassessment",
+    "Keep the head of the cot or sleep surface flat per safe-sleep guidelines; do not use pillows or wedges",
+    "Maintain a smoke-free environment, including avoiding clothes worn while smoking",
+    "Document and share daily progress with the pediatric clinic by phone or portal during the worst 2-3 days"
+  ],
+  "prognosis": "Most healthy term infants with bronchiolitis recover fully within 7-14 days. Cough can linger for 3-4 weeks. Mortality in high-income countries is under 0.1%, concentrated in infants with prematurity, congenital heart disease, immunodeficiency, or neuromuscular disease. Hospitalization rates run at 2-3% of all infants with RSV bronchiolitis, with median hospital length of stay of 2-3 days; roughly 3-7% of admitted infants require pediatric intensive care. Globally, RSV remains a major cause of childhood mortality, with an estimated 99,000 deaths per year in children under 5, the majority in low- and middle-income countries where access to oxygen and intensive care is limited. Severe RSV bronchiolitis in infancy is associated with a 2-3 fold higher risk of recurrent wheeze through age 5-6, and a smaller increase in childhood asthma risk; whether this is causal or shared susceptibility remains debated. Nirsevimab uptake is projected to significantly reduce both acute hospitalization and downstream wheeze trajectories.",
+  "recoveryTimeline": "Symptoms typically peak between days 3 and 5 of illness. Respiratory distress usually resolves within 7-10 days, although cough and intermittent wheeze can persist for 2-4 weeks. Hospitalized infants are usually weaned off oxygen within 24-72 hours and discharged when feeding is adequate and saturations remain above 90% in room air. Full return to baseline feeding and activity is expected within 14 days. Persistent oxygen need or wheeze beyond 4-6 weeks warrants pediatric pulmonology assessment.",
+  "complications": [
+    "Apnea, particularly in infants under 6 weeks or preterm, occurring in 10-25% of admitted young infants and sometimes the first presenting feature",
+    "Respiratory failure requiring high-flow nasal cannula, CPAP, or mechanical ventilation in roughly 3-7% of hospitalized infants",
+    "Secondary bacterial pneumonia, otitis media (in 30-60% of admitted infants), or urinary tract infection in young febrile infants",
+    "Dehydration from poor feeding and increased insensible losses through tachypnea",
+    "Recurrent wheeze and increased risk of childhood asthma after severe RSV or rhinovirus bronchiolitis",
+    "Bronchiolitis obliterans following adenovirus infection — rare but serious chronic small-airway scarring"
+  ],
+  "supportResources": [
+    {
+      "name": "American Academy of Pediatrics — Bronchiolitis Clinical Practice Guideline",
+      "url": "https://publications.aap.org/pediatrics/article/134/5/e1474/74021/",
+      "description": "The 2014 AAP guideline that defines US standard of care for diagnosis, management, and prevention of bronchiolitis in infants and young children."
+    },
+    {
+      "name": "CDC — Respiratory Syncytial Virus (RSV) Information for Parents",
+      "url": "https://www.cdc.gov/rsv/about/index.html",
+      "description": "Plain-language CDC patient information on RSV symptoms, prevention, nirsevimab, and maternal vaccination."
+    },
+    {
+      "name": "NICE NG9 — Bronchiolitis in Children: Diagnosis and Management",
+      "url": "https://www.nice.org.uk/guidance/ng9",
+      "description": "UK clinical guideline freely available, useful for families comparing local management with evidence-based recommendations."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia",
+      "keyDifference": "Pneumonia produces focal lung findings (localized crackles, dullness to percussion), persistently high fever above 39 degrees Celsius, and a lobar or segmental infiltrate on chest X-ray. Bronchiolitis is bilateral and diffuse with widespread wheeze and fine crackles, low-grade fever, and either a normal X-ray or hyperinflation. Antibiotics are central to bacterial pneumonia and unhelpful in bronchiolitis."
+    },
+    {
+      "slug": "asthma",
+      "name": "Asthma",
+      "keyDifference": "Asthma usually presents in toddlers and older children with recurrent wheezing episodes triggered by viruses, allergens, or exercise, often with a personal or family history of atopy (eczema, allergic rhinitis). Bronchiolitis is the first wheeze in a child under 24 months following a clear viral cold prodrome. Bronchodilators help asthma but show no consistent benefit in bronchiolitis per Cochrane evidence."
+    },
+    {
+      "slug": "allergic-asthma",
+      "name": "Allergic Asthma",
+      "keyDifference": "Allergic asthma features recurrent wheeze with documented IgE sensitization to common allergens and clear response to inhaled corticosteroids and bronchodilators. Bronchiolitis is a one-off viral illness without atopic features and does not respond to inhaled steroids."
+    },
+    {
+      "slug": "chronic-otitis-media",
+      "name": "Chronic Otitis Media",
+      "keyDifference": "Otitis media presents with ear pain, ear tugging, and a bulging tympanic membrane on otoscopy. It can complicate bronchiolitis in 30-60% of admitted infants but does not cause wheezing or respiratory distress on its own."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "asthma",
+      "name": "Asthma"
+    },
+    {
+      "slug": "chronic-otitis-media",
+      "name": "Chronic Otitis Media"
+    },
+    {
+      "slug": "gerd",
+      "name": "Gastroesophageal Reflux Disease"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "pneumonia",
+      "name": "Pneumonia",
+      "relevance": "Both are lower respiratory tract infections in children; bronchiolitis can occasionally be complicated by secondary bacterial pneumonia."
+    },
+    {
+      "slug": "asthma",
+      "name": "Asthma",
+      "relevance": "Severe RSV or rhinovirus bronchiolitis in infancy is associated with a 2-3 fold higher risk of recurrent wheeze and subsequent asthma."
+    },
+    {
+      "slug": "allergic-asthma",
+      "name": "Allergic Asthma",
+      "relevance": "Shares small-airway inflammation and wheeze phenotype; rhinovirus bronchiolitis particularly increases later atopic asthma risk."
+    },
+    {
+      "slug": "well-child-visits",
+      "name": "Well-Child Visits",
+      "relevance": "RSV prevention with nirsevimab, vaccination, and growth monitoring are delivered through routine pediatric well-child visits."
+    },
+    {
+      "slug": "gerd",
+      "name": "Gastroesophageal Reflux Disease",
+      "relevance": "Reflux can mimic or coexist with bronchiolitis-related feeding difficulty in infants."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is acute bronchiolitis?",
+      "answer": "Acute bronchiolitis is a viral infection of the small airways in infants under 2 years. It starts as a cold and progresses over 2-3 days to wheeze, fast breathing, and feeding difficulty. RSV causes 60-80% of cases. Most children recover at home over 7-14 days.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is bronchiolitis different from a regular cold?",
+      "answer": "A cold stays in the upper airway with runny nose and mild cough. Bronchiolitis adds lower airway involvement: wheeze, fine crackles, fast breathing above 50-60 per minute, chest retractions, and feeding difficulty. Progression from cold to lower airway symptoms over 2-3 days is the key clue.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is RSV the same as bronchiolitis?",
+      "answer": "RSV is a virus; bronchiolitis is the syndrome it most commonly causes in infants. RSV causes 60-80% of cases, but rhinovirus, parainfluenza, hMPV, influenza, adenovirus, and SARS-CoV-2 also cause bronchiolitis. RSV can also cause milder cold-like illness in older children and adults.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When should I take my baby to the emergency room for bronchiolitis?",
+      "answer": "Seek emergency care for blue lips, breathing pauses over 15 seconds, severe chest retractions or grunting, inability to feed, fewer than four wet diapers in 24 hours, or lethargy. Any infant under 3 months with breathing difficulty needs urgent assessment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does bronchiolitis last?",
+      "answer": "Symptoms typically peak on days 3-5 and resolve over 7-14 days. Cough can linger for up to 4 weeks. Hospitalized infants are usually discharged within 2-3 days once feeding and oxygen saturations are stable. Persistent wheeze or oxygen need beyond 4-6 weeks warrants pediatric pulmonology review.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do antibiotics help bronchiolitis?",
+      "answer": "No. Bronchiolitis is viral, and AAP 2014 recommends against routine antibiotics. They are reserved for proven bacterial co-infections such as otitis media or pneumonia. Inappropriate antibiotic use drives resistance and side effects without shortening the illness.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should my baby use an inhaler for bronchiolitis?",
+      "answer": "Routine bronchodilators (albuterol, salbutamol) are not recommended. Cochrane reviews show no consistent benefit on hospitalization or symptom duration in bronchiolitis. Inhalers may be tried in older toddlers when asthma is suspected, but should be stopped if no clear improvement is seen.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does nirsevimab do for RSV?",
+      "answer": "Nirsevimab is a long-acting monoclonal antibody that gives infants passive protection against RSV. A single dose before or during RSV season reduces medically attended RSV by about 80% and hospitalization by 75-80%. CDC recommends it for all infants under 8 months entering their first RSV season.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Who should get palivizumab?",
+      "answer": "Palivizumab is reserved for high-risk infants where nirsevimab is unavailable: born under 29 weeks, with chronic lung disease of prematurity on therapy in the first 24 months, or with hemodynamically significant congenital heart disease. It is given monthly through RSV season.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can adults get RSV bronchiolitis?",
+      "answer": "Adults can get RSV, but bronchiolitis as a syndrome is defined in children under 2. In adults, RSV usually causes upper respiratory infection or, in older or immunocompromised adults, pneumonia. RSV vaccines are now licensed for adults over 60 and during pregnancy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is bronchiolitis the same as asthma?",
+      "answer": "No. Bronchiolitis is the first lower-respiratory wheeze in a child under 2, triggered by a virus. Asthma is recurrent wheeze in older children, often with atopic features and clear response to inhaled steroids. Severe bronchiolitis raises later asthma risk but is not asthma itself.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Do steroids help bronchiolitis?",
+      "answer": "No. Systemic corticosteroids do not shorten bronchiolitis duration or reduce hospitalization in randomized trials and may prolong viral shedding. AAP 2014 and NICE NG9 both recommend against their routine use in bronchiolitis, including dexamethasone and prednisolone.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does hypertonic saline help bronchiolitis?",
+      "answer": "Nebulized 3% hypertonic saline may shorten hospital length of stay by 0.4-0.5 days in some inpatient trials but does not improve outpatient outcomes. AAP 2014 supports it for admitted infants expected to stay over 3 days; it is not recommended in the emergency department.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can my baby get bronchiolitis again?",
+      "answer": "Yes. Children can have repeated viral lower respiratory infections in their first two years. After severe RSV or rhinovirus bronchiolitis, recurrent wheeze is 2-3 times more common than in unaffected children. Repeated severe episodes warrant pediatric pulmonology assessment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is bronchiolitis contagious?",
+      "answer": "Yes. RSV and the other viruses that cause bronchiolitis spread through respiratory droplets and contaminated surfaces. RSV is contagious for 3-8 days, sometimes longer in young or immunocompromised infants. Hand hygiene and avoiding crowded indoor spaces during RSV season reduce transmission.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the best way to clear my baby's nose?",
+      "answer": "Use 2-3 drops of normal saline in each nostril, wait 30 seconds, and then gently suction with a bulb syringe or soft mechanical aspirator. Do this before feeds and before sleep. Avoid deep or forceful suction, which can injure the nasal lining and worsen swelling.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does bronchiolitis cause asthma later?",
+      "answer": "Severe RSV or rhinovirus bronchiolitis in infancy is linked with a 2-3 fold higher rate of recurrent wheeze through age 5-6 and a smaller rise in asthma diagnosis. Whether bronchiolitis causes asthma or unmasks pre-existing susceptibility remains debated.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What home care helps a baby with bronchiolitis?",
+      "answer": "Use saline nose drops and gentle suction before feeds, offer smaller frequent feeds, keep the baby upright after feeds, monitor wet diapers and breathing rate, and keep the environment smoke-free. Paracetamol can be used for fever. Watch closely for warning signs of dehydration.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is bronchiolitis worse in young infants?",
+      "answer": "Infants under 3 months have narrower airways that block easily with mucus, less respiratory reserve, immature immunity, and higher apnea risk. They are obligate nose-breathers, so nasal congestion alone raises work of breathing. This age group accounts for most hospitalizations.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is high-flow nasal cannula better than regular oxygen for bronchiolitis?",
+      "answer": "For infants with moderate to severe bronchiolitis failing standard oxygen, heated humidified high-flow nasal cannula at 1-2 L/kg/min reduces escalation to intubation by about 50% (Franklin 2018 NEJM PARIS trial). It is now standard inpatient practice in most pediatric units.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can breastfeeding prevent bronchiolitis?",
+      "answer": "Breastfeeding does not prevent infection but reduces severity and hospitalization. Exclusive breastfeeding for 4-6 months lowers bronchiolitis admission risk by 25-50% through secretory IgA, lactoferrin, and other protective factors. Mixed feeding still confers some benefit.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Should pregnant women get the RSV vaccine?",
+      "answer": "ACIP recommends a single dose of the maternal RSV vaccine (RSVpreF) between 32 and 36 weeks of pregnancy during RSV season. It produces transplacental antibodies that protect the newborn for the first 6 months and reduces severe RSV illness in infancy by about 70-80% in randomized trial data.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Bronchiolitis (viral lung infection of infants)",
+  "regionalNames": [
+    {
+      "name": "Bronquiolitis",
+      "region": "Spain / Latin America",
+      "language": "es"
+    },
+    {
+      "name": "Bronchiolite",
+      "region": "France",
+      "language": "fr"
+    },
+    {
+      "name": "बच्चों में फेफड़े का वायरल संक्रमण (Bachchon mein phephde ka viral sankraman)",
+      "region": "India",
+      "language": "hi"
+    }
+  ],
+  "searchTags": [
+    "bronchiolitis",
+    "acute bronchiolitis",
+    "viral bronchiolitis",
+    "RSV",
+    "respiratory syncytial virus",
+    "infant wheeze",
+    "baby wheezing",
+    "nirsevimab",
+    "palivizumab",
+    "high flow nasal cannula bronchiolitis",
+    "hypertonic saline",
+    "infant cough",
+    "pediatric pulmonology",
+    "RSV season"
+  ],
+  "symptomKeywords": [
+    "baby wheezing",
+    "infant fast breathing",
+    "baby retractions",
+    "infant cough cold",
+    "baby not feeding",
+    "wheeze first time",
+    "baby blue lips",
+    "infant breathing pauses"
+  ],
+  "metaTitle": "Acute Bronchiolitis: Symptoms & Treatment | aihealz",
+  "metaDescription": "Acute bronchiolitis: viral infant lung infection with wheeze, fast breathing, and feeding trouble. RSV causes most cases. Symptoms, care, and RSV prevention.",
+  "keywords": [
+    "acute bronchiolitis",
+    "bronchiolitis symptoms",
+    "bronchiolitis treatment",
+    "RSV bronchiolitis",
+    "infant wheeze",
+    "nirsevimab",
+    "palivizumab",
+    "bronchiolitis vs pneumonia",
+    "bronchiolitis vs asthma",
+    "high flow nasal cannula bronchiolitis",
+    "hypertonic saline bronchiolitis",
+    "RSV prevention infants",
+    "bronchiolitis hospital admission"
+  ],
+  "lastReviewed": "2026-05-18",
+  "sources": [
+    {
+      "title": "Ralston SL, Lieberthal AS, Meissner HC, et al. Clinical Practice Guideline: The Diagnosis, Management, and Prevention of Bronchiolitis. Pediatrics. 2014;134(5):e1474-e1502.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25349312/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Jones JM, Fleming-Dutra KE, Prill MM, et al. Use of Nirsevimab for the Prevention of Respiratory Syncytial Virus Disease Among Infants and Young Children: Recommendations of the Advisory Committee on Immunization Practices — United States, 2023. MMWR Morb Mortal Wkly Rep. 2023;72(34):920-925.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37616235/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Hammitt LL, Dagan R, Yuan Y, et al. Nirsevimab for Prevention of RSV in Healthy Late-Preterm and Term Infants. New England Journal of Medicine. 2022;386(9):837-846.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35235726/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Franklin D, Babl FE, Schlapbach LJ, et al. A Randomized Trial of High-Flow Oxygen Therapy in Infants with Bronchiolitis. New England Journal of Medicine. 2018;378(12):1121-1131.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29562151/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Gadomski AM, Scribani MB. Bronchodilators for bronchiolitis. Cochrane Database of Systematic Reviews. 2014;(6):CD001266.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24937099/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Zhang L, Mendoza-Sassi RA, Wainwright C, Klassen TP. Nebulised hypertonic saline solution for acute bronchiolitis in infants. Cochrane Database of Systematic Reviews. 2017;(12):CD006458.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29265171/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Shi T, McAllister DA, O'Brien KL, et al. Global, regional, and national disease burden estimates of acute lower respiratory infections due to respiratory syncytial virus in young children in 2015: a systematic review and modelling study. Lancet. 2017;390(10098):946-958.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28689664/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "NICE Guideline NG9: Bronchiolitis in Children — Diagnosis and Management. National Institute for Health and Care Excellence; 2015 (updated 2021).",
+      "url": "https://www.nice.org.uk/guidance/ng9",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Hall CB, Weinberg GA, Iwane MK, et al. The Burden of Respiratory Syncytial Virus Infection in Young Children. New England Journal of Medicine. 2009;360(6):588-598.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19196675/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "images": [],
+  "reviewer": {
+    "name": "AIHealz Medical Editorial Board",
+    "slug": "aihealz-medical-editorial-board"
+  }
+}

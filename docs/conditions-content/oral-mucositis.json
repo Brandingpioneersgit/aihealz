@@ -1,0 +1,616 @@
+{
+  "_meta": {
+    "slug": "oral-mucositis",
+    "tier": 2,
+    "headTerm": "oral mucositis",
+    "longTailKeywords": [
+      "oral mucositis treatment",
+      "chemotherapy mouth sores",
+      "radiation mucositis",
+      "mucositis grading WHO",
+      "oral cryotherapy mucositis",
+      "photobiomodulation mucositis",
+      "magic mouthwash",
+      "MASCC ISOO guideline",
+      "5-FU mouth sores",
+      "head neck cancer mouth pain"
+    ],
+    "primarySpecialty": "Oncology / Oral Medicine",
+    "lastReviewed": "2026-05-18",
+    "version": "v1-hand-written-eeat",
+    "authoringNotes": "Citations cross-verified against MASCC/ISOO 2020 clinical practice guideline (Elad et al., Cancer), Sonis 2004 mucositis pathobiology review (Nat Rev Cancer), Cochrane reviews on oral cryotherapy and photobiomodulation, and NCI CTCAE v5. Drug names and doses checked against NCCN palliative care guidelines."
+  },
+  "h1Title": "Oral Mucositis: Symptoms, Causes, Diagnosis, and Treatment",
+  "specialistType": "Oncology / Oral Medicine",
+  "heroOverview": "Oral mucositis is acute inflammation and ulceration of the lining of the mouth and oropharynx caused by cytotoxic cancer therapy. It develops in 90-100% of patients receiving head and neck radiation, 60-80% of those receiving high-dose conditioning chemotherapy before hematopoietic stem cell transplant, and 40% of patients on standard chemotherapy. Lesions begin as erythema 3-5 days into treatment, progress to confluent ulcers by day 7-14, and cause severe pain, eating difficulty, and dehydration. Mucositis is the most common dose-limiting toxicity of head and neck radiotherapy and a leading cause of unplanned treatment breaks, which worsen cancer outcomes. Evidence-based prevention (oral cryotherapy, low-level laser, benzydamine) and structured pain control reduce severity and protect the treatment schedule.",
+  "keyStats": {
+    "prevalence": "Affects 90-100% of head and neck radiation patients; 60-80% of HSCT conditioning; 20-40% of standard chemotherapy regimens",
+    "demographics": "Adults receiving cytotoxic cancer therapy of any sex; pediatric oncology patients have higher per-cycle rates",
+    "avgAge": "Most cases occur in adults 45-75 with head and neck, hematologic, or solid tumors; pediatric peaks at 5-15 years",
+    "globalCases": "Estimated 400,000-500,000 new cases annually in the US alone given 1.9 million new cancer diagnoses"
+  },
+  "definition": "Oral mucositis (ICD-10: K12.30) is acute inflammatory and ulcerative injury of the oral and oropharyngeal mucosa triggered by chemotherapy, radiotherapy, or targeted cancer therapy. The Sonis five-stage model defines its pathobiology: initiation (DNA damage and reactive oxygen species generation in basal epithelial cells), upregulation (NF-kB activation), signal amplification (release of TNF-alpha, IL-1 beta, and IL-6 with positive feedback), ulceration (loss of mucosal integrity, bacterial colonization, severe pain), and healing (re-epithelialization once cytotoxic exposure ends). Severity is graded by the World Health Organization scale (0 to IV, combining objective lesions with functional ability) and the NCI Common Terminology Criteria for Adverse Events version 5. Grade III-IV mucositis involves confluent ulcers, inability to eat solids, and need for parenteral nutrition or hospitalization. The condition is managed jointly by medical oncology, radiation oncology, oral medicine, and supportive-care services according to the 2020 Multinational Association of Supportive Care in Cancer and International Society of Oral Oncology (MASCC/ISOO) clinical practice guidelines.",
+  "typesClassification": [
+    {
+      "type": "Chemotherapy-induced oral mucositis",
+      "description": "Develops 5-10 days after high-dose 5-fluorouracil, methotrexate, melphalan, cytarabine, or doxorubicin. Diffuse involvement of non-keratinized mucosa (buccal, ventral tongue, soft palate, floor of mouth). Resolves with bone marrow recovery."
+    },
+    {
+      "type": "Radiation-induced oral mucositis",
+      "description": "Begins at cumulative dose of 15-20 Gy (week 2 of head and neck radiotherapy), peaks at 50-60 Gy, and persists 2-4 weeks after treatment ends. Confined to the radiation field; severity correlates with dose, fraction size, and concurrent chemotherapy."
+    },
+    {
+      "type": "Conditioning-regimen mucositis (HSCT)",
+      "description": "Affects 60-80% of allogeneic stem cell transplant recipients after total body irradiation or high-dose melphalan, busulfan, or cyclophosphamide. Onset day +3 to +7; the most severe acute mucosal toxicity in oncology."
+    },
+    {
+      "type": "Targeted therapy and immunotherapy mucositis",
+      "description": "EGFR inhibitors (cetuximab, erlotinib), mTOR inhibitors (everolimus, temsirolimus), and immune checkpoint inhibitors produce a distinct pattern: discrete aphthous-like ulcers, more limited inflammation, often without the diffuse erythema seen with cytotoxic agents."
+    }
+  ],
+  "primarySymptoms": [
+    "Burning oral discomfort starting 3-5 days into chemotherapy or after 15-20 Gy of head and neck radiation, often before any visible lesion appears.",
+    "Diffuse erythema of the buccal mucosa, ventral tongue, soft palate, and floor of mouth that blanches with pressure and progresses to white pseudomembrane within days.",
+    "Painful confluent ulcerations covered by a yellow-grey fibrinous exudate, most prominent on non-keratinized mucosal surfaces.",
+    "Severe pain rated 7-10 on a visual analogue scale at peak, often requiring opioid analgesia and patient-controlled analgesia in HSCT and head and neck cancer settings.",
+    "Difficulty swallowing solids then liquids, with weight loss of 5-10% in untreated severe cases due to inadequate oral intake.",
+    "Reduced or thickened saliva (radiation-induced xerostomia in head and neck cases), worsening pain and mucosal trauma.",
+    "Altered or absent taste (dysgeusia) reported in 60-80% of head and neck radiation patients, persisting weeks after mucositis resolves.",
+    "Spontaneous bleeding from ulcerated mucosa, especially in thrombocytopenic HSCT patients with platelet counts below 20,000/microL.",
+    "Difficulty speaking and impaired sleep due to constant oral pain, contributing to fatigue and depression scores on validated cancer-symptom scales.",
+    "Secondary candidiasis with white pseudomembranous plaques superimposed on ulcerated mucosa in 30-40% of severe cases, particularly in steroid-exposed or neutropenic patients."
+  ],
+  "earlyWarningSigns": [
+    "Subtle burning or tingling of the buccal mucosa or tongue without visible lesions, typically 3-5 days after chemotherapy starts",
+    "Mild erythema of the soft palate, ventral tongue, or floor of mouth detected on routine oral assessment",
+    "Sensitivity to spicy, acidic, or hot foods that the patient previously tolerated",
+    "Pinpoint white spots or shallow erosions on non-keratinized mucosa visible only on careful oral examination with a light",
+    "Rising pain score from baseline 0 to 2-3 on a standardized oral assessment guide used during chemotherapy cycles"
+  ],
+  "emergencySigns": [
+    "Inability to swallow saliva with drooling and dehydration signs (urine output below 0.5 mL/kg/hour, dry mucous membranes) - requires inpatient parenteral hydration",
+    "Fever above 38.3 degrees Celsius in a neutropenic patient (absolute neutrophil count below 500/microL) with oral ulceration - mucosal bacteremia possible, requires immediate empiric broad-spectrum antibiotics",
+    "Active bleeding from oral ulcers in a thrombocytopenic patient - platelet transfusion may be indicated",
+    "Stridor, drooling with respiratory distress, or inability to manage secretions - airway compromise from severe pharyngeal mucositis requires urgent ENT and anesthesia evaluation",
+    "Confluent white pseudomembranes with systemic symptoms suggesting invasive candidiasis - blood cultures and systemic antifungal therapy needed"
+  ],
+  "causes": [
+    {
+      "cause": "Direct cytotoxic injury to basal epithelial cells",
+      "description": "Chemotherapy and ionizing radiation damage DNA in the rapidly dividing basal layer of oral epithelium. Cell death exceeds replacement capacity, the mucosal barrier thins, and ulceration follows within 7-14 days as the surface sloughs."
+    },
+    {
+      "cause": "Reactive oxygen species and oxidative stress",
+      "description": "Cytotoxic therapy generates free radicals that damage cell membranes, DNA, and connective tissue in the submucosa. Oxidative injury triggers signaling cascades that amplify inflammation independently of direct epithelial cell death."
+    },
+    {
+      "cause": "NF-kB activation and pro-inflammatory cytokine release",
+      "description": "Damaged tissue activates NF-kB in submucosal cells, releasing TNF-alpha, IL-1 beta, and IL-6. These cytokines drive further tissue injury, recruit neutrophils, and create a positive feedback loop that sustains ulceration (Sonis 5-stage model)."
+    },
+    {
+      "cause": "Bacterial colonization of ulcerated mucosa",
+      "description": "Once the epithelial barrier breaks, the oral microbiome (including gram-negative bacteria and Candida species) colonizes ulcer beds. Bacterial cell wall components further activate inflammation and increase the risk of systemic bacteremia in neutropenic patients."
+    },
+    {
+      "cause": "Concurrent chemoradiotherapy",
+      "description": "Adding cisplatin, cetuximab, or 5-FU to radiotherapy doubles the rate of severe (grade III-IV) mucositis compared with radiotherapy alone, by combining direct cytotoxicity with reduced epithelial repair capacity."
+    },
+    {
+      "cause": "Cumulative radiation dose",
+      "description": "Mucositis severity rises sharply once cumulative dose exceeds 50 Gy, with most head and neck radiation patients reaching grade III by week 4-5 of standard fractionation. Hyperfractionation increases peak severity further."
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "High-dose conditioning chemotherapy for HSCT",
+      "category": "modifiable",
+      "description": "Melphalan 200 mg/m2, busulfan-cyclophosphamide, and total body irradiation conditioning produce grade III-IV mucositis in 60-80% of recipients. Regimen choice is the single largest modifiable risk factor."
+    },
+    {
+      "factor": "Head and neck radiotherapy above 50 Gy",
+      "category": "modifiable",
+      "description": "Cumulative radiation dose strongly predicts severity. IMRT and proton therapy reduce dose to non-target mucosa and lower grade III-IV mucositis rates by 20-30% compared with conventional 3D conformal techniques."
+    },
+    {
+      "factor": "Concurrent platinum-based or 5-FU chemotherapy",
+      "category": "modifiable",
+      "description": "Adding cisplatin or 5-FU to head and neck radiation doubles severe mucositis incidence. Bolus 5-FU is the highest-risk schedule and is the specific indication for prophylactic oral cryotherapy."
+    },
+    {
+      "factor": "Pre-existing periodontal disease or poor oral hygiene",
+      "category": "modifiable",
+      "description": "Untreated dental disease increases bacterial load, prolongs ulcer healing, and elevates the risk of secondary infection. Pre-treatment dental evaluation and extraction of non-restorable teeth are standard of care before head and neck radiation."
+    },
+    {
+      "factor": "Active smoking and alcohol use during therapy",
+      "category": "modifiable",
+      "description": "Smoking impairs mucosal blood flow and re-epithelialization; alcohol directly irritates damaged mucosa. Continued smoking during radiation worsens grade III-IV rates by 30-40% and reduces tumor response."
+    },
+    {
+      "factor": "Pre-treatment malnutrition or low body mass index",
+      "category": "modifiable",
+      "description": "Patients entering treatment with serum albumin below 3.5 g/dL or BMI under 20 develop more severe mucositis and recover slower. Prophylactic gastrostomy is considered in high-risk head and neck patients."
+    },
+    {
+      "factor": "Female sex (for 5-FU regimens)",
+      "category": "non-modifiable",
+      "description": "Women metabolize 5-FU more slowly than men due to lower dihydropyrimidine dehydrogenase activity and have 1.5-2 times higher mucositis rates at equivalent doses."
+    },
+    {
+      "factor": "DPYD gene variants",
+      "category": "genetic",
+      "description": "Patients with DPYD variants (DPYD*2A, c.1679T>G, c.2846A>T) have severely reduced 5-FU clearance and 4-5 times higher rates of grade III-IV mucositis. Pre-emptive DPYD testing is now recommended in EU oncology guidelines."
+    },
+    {
+      "factor": "Younger age (pediatric patients)",
+      "category": "non-modifiable",
+      "description": "Children have higher epithelial turnover than adults and develop mucositis more frequently per chemotherapy cycle, though severity is often shorter-lived."
+    },
+    {
+      "factor": "Combined EGFR inhibitor and checkpoint inhibitor therapy",
+      "category": "environmental",
+      "description": "Cetuximab plus radiation, or PD-1 inhibitors combined with targeted agents, produce distinct mucosal toxicity patterns. Combination immune therapy regimens have 20-30% mucositis rates in trial data."
+    }
+  ],
+  "affectedDemographics": [
+    "Head and neck cancer patients on radiation: 90-100% develop some mucositis, 50-60% reach grade III-IV severity",
+    "Hematopoietic stem cell transplant recipients: 60-80% with high-dose melphalan, busulfan, or TBI conditioning",
+    "Standard chemotherapy patients: 20-40% incidence with 5-FU, methotrexate, doxorubicin, taxanes",
+    "Pediatric oncology patients: higher per-cycle incidence than adults, particularly with methotrexate-based ALL regimens",
+    "Patients with DPYD enzyme deficiency: 50% lifetime risk of severe mucositis on any 5-FU-containing regimen"
+  ],
+  "diagnosisOverview": "Diagnosis of oral mucositis is clinical and rests on the timing of mucosal injury relative to cytotoxic therapy combined with a systematic oral examination. The 2020 MASCC/ISOO guidelines recommend daily oral assessment using a validated tool such as the WHO Oral Mucositis Scale, the NCI CTCAE version 5, or the Oral Assessment Guide (OAG) from the start of any high-risk regimen. The WHO scale grades severity from 0 (none) to IV (oral intake not possible, parenteral nutrition required) based on combining objective lesions with functional ability to eat. CTCAE separates the clinical exam grade (mucosal erythema and ulceration) from the functional grade (oral intake), which is useful for clinical trials. Examination includes inspection under good light with a tongue depressor, documenting the location, size, and character of lesions on the buccal mucosa, ventral and lateral tongue, floor of mouth, soft palate, and oropharynx. Pain is recorded separately on a visual analogue scale because pain severity often exceeds visible lesion severity, particularly with radiation mucositis. Differential diagnosis includes herpes simplex reactivation (cluster vesicles or punched-out ulcers, often on keratinized mucosa), oral candidiasis (removable white plaques), aphthous ulcers (round, well-demarcated, often pre-dating treatment), graft-versus-host disease in HSCT recipients (lichenoid changes, often with skin and GI involvement), and direct tumor extension. Cultures, viral PCR, or biopsy are considered when lesions are atypical, persist beyond the expected recovery window, or fail to respond to standard care.",
+  "diagnosticTests": [
+    {
+      "test": "WHO Oral Mucositis Scale assessment",
+      "purpose": "Standardized severity grading (0-IV) combining mucosal findings and functional ability. Repeated daily during high-risk regimens to track progression and trigger interventions at grade II.",
+      "whatToExpect": "A clinician or trained nurse inspects the mouth under good light, asks about ability to eat solids, soft foods, and liquids, and assigns a single grade. Takes 2-3 minutes."
+    },
+    {
+      "test": "NCI CTCAE v5 oral mucositis grading",
+      "purpose": "Separates clinical exam (erythema, ulceration) from functional impact (oral intake) - the standard for clinical trials and dose-modification decisions.",
+      "whatToExpect": "Same brief oral inspection as WHO scoring, with a separate question about whether oral intake is normal, modified, or impossible. Documented in the chemotherapy chart at every visit."
+    },
+    {
+      "test": "Oral Assessment Guide (OAG)",
+      "purpose": "Eight-item nursing tool covering voice, swallow, lips, tongue, saliva, mucous membranes, gingiva, and teeth. Sensitive to early changes that precede WHO grade I.",
+      "whatToExpect": "Nurse-led structured exam taking about 5 minutes; scores from 8 (normal) to 24 (severe). Used in inpatient HSCT and head and neck radiation units."
+    },
+    {
+      "test": "Pain assessment with visual analogue scale",
+      "purpose": "Quantifies subjective pain on a 0-10 scale, often disproportionate to visible lesion severity. Drives analgesic escalation, including transition to opioid PCA in severe cases.",
+      "whatToExpect": "Patient marks pain intensity on a 10 cm line or numeric scale. Recorded at every nursing assessment, often four times daily during peak mucositis."
+    },
+    {
+      "test": "Herpes simplex virus PCR or culture from ulcer",
+      "purpose": "Distinguishes treatment-induced mucositis from HSV reactivation, particularly when ulcers appear on keratinized mucosa (gingiva, hard palate) or persist past expected recovery.",
+      "whatToExpect": "A cotton swab of the ulcer base, sent to virology. PCR results return within 24-48 hours; positive HSV is treated with acyclovir or valacyclovir."
+    },
+    {
+      "test": "Fungal culture or KOH preparation",
+      "purpose": "Identifies superimposed Candida infection presenting as removable white pseudomembranes. Common in steroid-treated and neutropenic patients.",
+      "whatToExpect": "Surface scraping of a pseudomembrane onto a slide or culture medium. Results within 1-3 days; positive findings guide topical or systemic antifungal therapy."
+    },
+    {
+      "test": "Complete blood count with differential",
+      "purpose": "Documents neutropenia (ANC below 500/microL) and thrombocytopenia (platelets below 50,000/microL), both of which raise the risk of infection and bleeding from mucositis ulcers.",
+      "whatToExpect": "Standard venous blood draw; results in 1-2 hours in most cancer centers."
+    }
+  ],
+  "treatmentOverview": "Oral mucositis management is divided into prevention, symptom control, and treatment of complications, all framed by the 2020 MASCC/ISOO clinical practice guidelines. Prevention starts before cytotoxic therapy: pre-treatment dental evaluation, periodontal cleaning, and extraction of non-restorable teeth at least 14 days before head and neck radiation. Patient-controlled oral cryotherapy (sucking ice chips 5 minutes before, during, and 30 minutes after bolus 5-FU) is a level I recommendation that reduces mucositis incidence by roughly 50% for that specific regimen. Low-level laser therapy or photobiomodulation at 660-830 nm, delivered intraorally three times weekly during head and neck radiation or HSCT conditioning, is also level I and cuts grade III-IV mucositis rates by 30-50%. Benzydamine 0.15% oral rinse four times daily is recommended for prevention in moderate-dose head and neck radiation (up to 50 Gy). Palifermin (recombinant keratinocyte growth factor), given as IV doses before and after autologous HSCT conditioning, reduces severe mucositis duration but is restricted to that indication. Magic mouthwash formulations (diphenhydramine, lidocaine, antacid, sometimes with steroid or nystatin) provide symptomatic relief but lack consistent trial support; MASCC/ISOO does not recommend it as a preventive standard. Pain control follows a stepwise approach: topical agents (2% viscous lidocaine, doxepin rinse 0.5%) for grade I-II, systemic opioids for grade II-III, and patient-controlled analgesia with intravenous morphine or fentanyl for grade III-IV. Severe mucositis with grade III-IV oral intake compromise requires nasogastric or gastrostomy feeding, parenteral nutrition, and inpatient monitoring. Alcohol-containing and chlorhexidine mouthwashes are avoided in many regimens because they worsen mucosal injury. Treatment interruptions to allow mucositis healing are kept to a minimum because they reduce tumor control rates.",
+  "medicalTreatments": [
+    {
+      "name": "Oral cryotherapy (sucking ice chips 5 minutes before, during, and 30 minutes after bolus 5-FU)",
+      "description": "Vasoconstriction reduces drug delivery to oral mucosa during the brief peak blood concentration of bolus 5-FU. MASCC/ISOO level I recommendation for this specific indication. Not effective for continuous-infusion 5-FU or non-bolus regimens.",
+      "effectiveness": "Reduces overall mucositis incidence by approximately 50% and severe mucositis by 60% in Cochrane meta-analysis of bolus 5-FU studies."
+    },
+    {
+      "name": "Photobiomodulation therapy (low-level laser, 660-830 nm, intraoral, 3 times weekly)",
+      "description": "Low-energy red or near-infrared light reduces inflammation, stimulates mitochondrial activity, and accelerates re-epithelialization. MASCC/ISOO level I recommendation for HSCT conditioning and head and neck radiation. Requires trained operator and specific device parameters.",
+      "effectiveness": "Reduces grade III-IV mucositis incidence by 30-50% across multiple RCTs in HSCT and head and neck cancer populations."
+    },
+    {
+      "name": "Benzydamine 0.15% oral rinse (4 times daily during radiotherapy)",
+      "description": "Non-steroidal anti-inflammatory mouthwash with local anesthetic activity. MASCC/ISOO recommends for prevention during moderate-dose head and neck radiotherapy up to 50 Gy. Not effective for chemotherapy or HSCT mucositis.",
+      "effectiveness": "Reduces severe mucositis incidence by approximately 30% during radiation up to 50 Gy in pivotal Epstein 2001 trial."
+    },
+    {
+      "name": "Palifermin (recombinant keratinocyte growth factor, 60 microg/kg IV daily for 3 days before and 3 days after conditioning)",
+      "description": "Stimulates basal epithelial proliferation and re-epithelialization. FDA-approved and MASCC/ISOO-recommended for autologous HSCT with total body irradiation conditioning only. Cost and access limit use.",
+      "effectiveness": "Reduces grade III-IV mucositis duration by 3-4 days and severity by approximately 30% in autologous HSCT (Spielberger 2004 NEJM)."
+    },
+    {
+      "name": "Doxepin 0.5% oral rinse or 2% viscous lidocaine for topical pain control",
+      "description": "Doxepin (tricyclic antidepressant with local anesthetic action) and lidocaine reduce pain through different mechanisms. Used 4-6 times daily for grade I-II mucositis pain before opioids are required.",
+      "effectiveness": "Doxepin reduced pain by 1.2 points on a 10-point scale vs placebo in N09C6 RCT; lidocaine effect is shorter (20-30 minutes) but useful before meals."
+    },
+    {
+      "name": "Patient-controlled analgesia with IV morphine or fentanyl for grade III-IV pain",
+      "description": "Inpatient PCA delivers immediate, patient-titrated opioid dosing for the severe pain of HSCT and head and neck radiation mucositis. Transitions to long-acting oral or transdermal opioids as recovery begins.",
+      "effectiveness": "Reduces pain scores by 60-70% in HSCT mucositis and is the standard of care for grade III-IV severity."
+    },
+    {
+      "name": "Acyclovir or valacyclovir for HSV reactivation prophylaxis",
+      "description": "Indicated in HSV-seropositive HSCT recipients and head and neck radiation patients with prior recurrences. Reduces the herpes-superimposed component of mucositis that can otherwise extend healing.",
+      "effectiveness": "Reduces HSV reactivation by over 80% during conditioning; eliminates HSV-related mucositis extension in seropositive HSCT recipients."
+    },
+    {
+      "name": "Nutritional support with enteral or parenteral nutrition",
+      "description": "Nasogastric tube, percutaneous gastrostomy (often placed prophylactically before high-risk head and neck radiation), or total parenteral nutrition when oral intake is impossible. Preserves weight, treatment tolerance, and immune function.",
+      "effectiveness": "Prevents weight loss above 5% in roughly 80% of head and neck radiation patients when used proactively."
+    }
+  ],
+  "surgicalOptions": [
+    {
+      "name": "Prophylactic percutaneous endoscopic gastrostomy (PEG)",
+      "description": "Placed before starting high-dose head and neck radiation in patients with predicted grade III-IV mucositis, allowing enteral feeding through the most intense weeks of treatment. Avoids the higher complication rate of emergency placement during severe mucositis.",
+      "successRate": "Maintains nutritional status in 85-90% of head and neck radiation patients and reduces unplanned treatment interruptions by 50%."
+    },
+    {
+      "name": "Dental extractions and pre-radiation oral surgery",
+      "description": "Non-restorable teeth and periodontally compromised teeth are extracted 14-21 days before head and neck radiation begins to allow healing and reduce risk of osteoradionecrosis and severe mucositis around infected sites.",
+      "successRate": "Reduces the incidence of osteoradionecrosis from approximately 8-10% down to under 2% in modern protocols."
+    }
+  ],
+  "alternativeTreatments": [
+    {
+      "name": "Honey rinses (manuka or unprocessed)",
+      "description": "Multiple small RCTs and a Cochrane review suggest topical honey reduces mucositis severity in head and neck radiation. MASCC/ISOO 2020 issued a conditional suggestion in favor for this setting. Adjunctive only - does not replace evidence-based prevention."
+    },
+    {
+      "name": "Zinc supplementation (50-90 mg elemental daily during radiotherapy)",
+      "description": "Several RCTs in head and neck cancer suggest reduced mucositis severity and pain with oral zinc during radiotherapy. Effect size is modest; mechanism likely involves antioxidant activity and supporting epithelial repair."
+    },
+    {
+      "name": "Glutamine oral rinse",
+      "description": "Small studies suggest reduced mucositis severity in chemotherapy and radiotherapy with topical glutamine. MASCC/ISOO does not yet recommend due to inconsistent trial data, but it remains in the supportive-care research pipeline."
+    }
+  ],
+  "whySeeSpecialist": "Oral mucositis is managed by the medical or radiation oncologist directing the cancer therapy, with input from oral medicine, dental oncology, supportive care, palliative care, and pain management as severity rises. An oral medicine specialist should be involved when lesions are atypical, when pain control is inadequate on standard regimens, when fungal or viral superinfection is suspected, or when mucositis persists beyond the expected 2-4 week post-treatment window.",
+  "doctorSelectionGuide": "Choose a cancer center where oral mucositis is managed by a multidisciplinary supportive-care team familiar with the 2020 MASCC/ISOO guidelines. Ask whether the center offers oral cryotherapy protocols for 5-FU regimens, photobiomodulation for HSCT and head and neck radiation, and prophylactic PEG placement when indicated. Continuity with the same nursing team and rapid access to pain management improves outcomes more than facility prestige alone.",
+  "preventionStrategies": [
+    "Complete a comprehensive dental evaluation and treat active dental disease at least 14 days before starting head and neck radiation or HSCT conditioning",
+    "Use patient-controlled oral cryotherapy (ice chips for 30 minutes) during bolus 5-FU infusions - a level I recommendation that halves mucositis incidence",
+    "Schedule intraoral photobiomodulation 3 times weekly during head and neck radiotherapy and HSCT conditioning when available",
+    "Maintain meticulous oral hygiene with a soft toothbrush, fluoride toothpaste, and bland saline or sodium bicarbonate rinses every 2-4 hours",
+    "Stop smoking and avoid alcohol throughout active cancer treatment - both directly worsen mucosal injury and reduce treatment tolerance",
+    "Screen for DPYD enzyme variants before any 5-FU-containing regimen if local guidelines support pre-emptive genotyping"
+  ],
+  "lifestyleModifications": [
+    "Rinse the mouth with bland saline or sodium bicarbonate solution (one teaspoon of salt or baking soda in a cup of warm water) 4-6 times daily, especially after meals",
+    "Use a soft pediatric toothbrush and unwaxed dental floss; avoid alcohol-containing mouthwashes and any product with chlorhexidine unless specifically prescribed",
+    "Eat soft, bland, room-temperature foods - avoid acidic (citrus, tomato), spicy, crunchy, or very hot foods that mechanically and chemically irritate damaged mucosa",
+    "Stay well-hydrated with 2-3 liters of cool fluids daily; use sugar-free ice pops and ice chips for both hydration and topical cooling",
+    "Use lip balm or petroleum jelly to prevent the lips from cracking, especially in head and neck radiation patients with reduced saliva",
+    "Sleep with the head elevated to reduce nighttime pooling of saliva and gentle aspiration into damaged pharyngeal mucosa"
+  ],
+  "dietRecommendations": {
+    "recommended": [
+      "Smoothies, yogurt, kefir, and milkshakes made with cool ingredients",
+      "Cooked oatmeal, cream of wheat, mashed potatoes, and well-cooked pasta",
+      "Scrambled eggs, custards, puddings, and soft tofu",
+      "Pureed soups served at room temperature or slightly cool",
+      "Bananas, applesauce, melons, and other low-acid soft fruits",
+      "Nutritional supplement drinks (Ensure, Boost, Fortisip) when oral intake is reduced"
+    ],
+    "avoid": [
+      "Citrus fruits and juices, tomato-based sauces, and acidic dressings",
+      "Spicy foods including pepper, chili, hot sauce, and strong curry",
+      "Crunchy or sharp foods (toast, crackers, crisps, raw vegetables) that mechanically traumatize ulcers",
+      "Alcohol of any kind, including alcohol-containing mouthwashes",
+      "Very hot foods and drinks - serve at room temperature or cooler",
+      "Tobacco in all forms - smoking and chewing both worsen mucositis and reduce treatment efficacy"
+    ]
+  },
+  "exerciseGuidelines": "Gentle daily activity such as walking 15-30 minutes is encouraged when energy allows; it maintains muscle mass, improves mood, and supports treatment tolerance. During grade III-IV mucositis with severe pain and reduced oral intake, rest is appropriate. Vigorous exercise increases hydration needs and is best deferred until the worst of the mucositis resolves.",
+  "dailyManagement": [
+    "Perform structured oral assessment and grading (WHO or CTCAE) at least once daily during high-risk treatment cycles",
+    "Use bland mouth rinses every 2-4 hours and a soft toothbrush after every meal",
+    "Take prescribed analgesics on a scheduled basis rather than only when pain peaks - reactive dosing leads to worse pain control",
+    "Track oral intake, weight, and pain scores in a simple daily log shared with the oncology team",
+    "Apply topical anesthetic (2% viscous lidocaine or doxepin rinse) 10-15 minutes before meals to make eating tolerable",
+    "Report fever, bleeding, inability to swallow saliva, or pain not controlled by current analgesia to the oncology team within hours rather than waiting for the next appointment"
+  ],
+  "prognosis": "Oral mucositis is self-limited once cytotoxic therapy ends in the vast majority of patients. With chemotherapy, mucositis typically resolves 7-14 days after the last cycle as bone marrow and epithelial proliferation recover. After head and neck radiotherapy, mucositis peaks at 4-6 weeks of treatment and resolves over 2-4 weeks after radiation completes, with full mucosal healing in 95% of patients within 8 weeks. HSCT mucositis resolves with engraftment, typically by day +21 to +28. Long-term sequelae are uncommon but include persistent xerostomia (40-60% of head and neck radiation patients), altered taste, and an elevated risk of dental caries. The mortality from mucositis itself is low but indirect: severe mucositis is the leading reason for unplanned breaks in radiotherapy, and every week of treatment interruption reduces tumor control by 1-1.5% in head and neck cancer. In HSCT, severe mucositis raises infection-related mortality by 2-4 fold through bacterial and fungal translocation. Aggressive prevention and pain control therefore protect cancer outcomes, not just patient comfort.",
+  "recoveryTimeline": "Chemotherapy mucositis: onset day 5-10, peak day 10-14, resolution 7-14 days after the last dose. Head and neck radiation mucositis: onset week 2 (cumulative dose 15-20 Gy), peak week 5-6 (dose 50-60 Gy), resolution 2-4 weeks after treatment ends. HSCT conditioning mucositis: onset day +3 to +7, peak day +10 to +14, resolution by day +21 to +28 with engraftment. Targeted therapy mucositis: variable, often relapsing as long as the drug is continued.",
+  "complications": [
+    "Severe dehydration and electrolyte disturbance from inability to swallow saliva and fluids - one of the most common reasons for hospitalization during chemoradiotherapy",
+    "Malnutrition and weight loss above 5%, leading to reduced treatment tolerance, lymphopenia, and prolonged recovery",
+    "Unplanned interruption of radiotherapy, which reduces tumor control rates by 1-1.5% per week in head and neck cancer",
+    "Bacteremia and sepsis from mucosal bacterial translocation in neutropenic patients - the leading cause of mucositis-related mortality in HSCT",
+    "Superimposed candidiasis presenting as removable white plaques on ulcerated mucosa, requiring topical or systemic antifungal therapy",
+    "Herpes simplex virus reactivation, extending the duration and severity of mucosal ulceration if not recognized and treated with antivirals"
+  ],
+  "supportResources": [
+    {
+      "name": "MASCC/ISOO Clinical Practice Guidelines for Mucositis",
+      "url": "https://www.mascc.org/mucositis-guidelines",
+      "description": "Authoritative international guidelines for the prevention and treatment of cancer therapy-induced mucositis, updated 2020."
+    },
+    {
+      "name": "National Cancer Institute - Oral Complications of Chemotherapy and Head and Neck Radiation (PDQ)",
+      "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/mouth-throat/oral-complications-hp-pdq",
+      "description": "Comprehensive evidence-based summary from the US National Cancer Institute for clinicians and patients."
+    },
+    {
+      "name": "Oral Cancer Foundation - Mucositis Resources",
+      "url": "https://oralcancerfoundation.org/complications/mucositis/",
+      "description": "Patient-facing education and community support for oral mucositis and other oral oncology complications."
+    }
+  ],
+  "confusedWithConditions": [
+    {
+      "slug": "herpes-simplex-infection",
+      "name": "Oral Herpes Simplex Virus Reactivation",
+      "keyDifference": "HSV typically produces clustered vesicles that rupture into shallow punched-out ulcers on keratinized mucosa (hard palate, gingiva, lip), while mucositis ulcers are diffuse, confluent, and concentrated on non-keratinized surfaces. HSV PCR or culture is positive; mucositis is culture-negative. The two can coexist and HSV reactivation can extend mucositis duration."
+    },
+    {
+      "slug": "oral-cancer",
+      "name": "Oral Cavity Cancer or Local Tumor Extension",
+      "keyDifference": "Oral cancer presents as a persistent, indurated, often unilateral ulcer or mass that predates cancer therapy or persists beyond expected mucositis recovery (>8 weeks after treatment ends). Biopsy is required when ulcers are atypical, indurated, or fail to heal. Mucositis is diffuse, time-locked to therapy, and self-limited."
+    },
+    {
+      "slug": "dental-abscess",
+      "name": "Dental Abscess or Periodontal Infection",
+      "keyDifference": "Dental abscess produces a localized swelling, often with a sinus tract or pus, traceable to a specific tooth on examination and X-ray. Mucositis is diffuse, time-locked to chemotherapy or radiation, and lacks tooth-source pain. Both can coexist in patients with untreated dental disease and warrant pre-treatment dental clearance."
+    }
+  ],
+  "coOccurringConditions": [
+    {
+      "slug": "oral-cancer",
+      "name": "Oral Cavity Cancer"
+    },
+    {
+      "slug": "hodgkin-lymphoma",
+      "name": "Hodgkin Lymphoma"
+    },
+    {
+      "slug": "leukemia",
+      "name": "Leukemia"
+    },
+    {
+      "slug": "geriatric-malnutrition",
+      "name": "Treatment-Related Malnutrition"
+    }
+  ],
+  "relatedConditions": [
+    {
+      "slug": "oral-cancer",
+      "name": "Oral Cavity Cancer",
+      "relevance": "Head and neck cancers including oral cavity tumors are the most common cause of severe radiation-induced oral mucositis."
+    },
+    {
+      "slug": "herpes-simplex-infection",
+      "name": "Oral Herpes Simplex Virus Infection",
+      "relevance": "HSV reactivation extends mucositis duration in seropositive HSCT recipients and head and neck radiation patients; prophylactic acyclovir is standard."
+    },
+    {
+      "slug": "leukemia",
+      "name": "Leukemia",
+      "relevance": "Induction chemotherapy and HSCT conditioning for leukemia produce some of the highest rates of severe oral mucositis in oncology."
+    },
+    {
+      "slug": "hodgkin-lymphoma",
+      "name": "Hodgkin Lymphoma",
+      "relevance": "Multi-agent chemotherapy and autologous HSCT for relapsed disease are common settings for chemotherapy-induced mucositis."
+    },
+    {
+      "slug": "geriatric-malnutrition",
+      "name": "Cancer Treatment-Related Malnutrition",
+      "relevance": "Mucositis-driven reduction in oral intake is a leading contributor to malnutrition during head and neck cancer therapy."
+    }
+  ],
+  "linkedTreatmentSlugs": [],
+  "faqs": [
+    {
+      "question": "What is oral mucositis?",
+      "answer": "Oral mucositis is inflammation and ulceration of the mouth and throat lining caused by cancer treatment. It develops in nearly all head and neck radiation patients and 60-80% of those on high-dose chemotherapy before bone marrow transplant. It causes severe pain and resolves once treatment ends.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What does oral mucositis look like?",
+      "answer": "Mucositis begins as redness inside the cheeks, tongue, and palate, then progresses to painful ulcers covered with a yellow-grey film. Ulcers are often confluent on non-chewing surfaces. Severe cases involve the entire mouth and throat and prevent normal eating or drinking.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How long does oral mucositis last?",
+      "answer": "Chemotherapy mucositis peaks 10-14 days after each cycle and resolves within 1-2 weeks of the last dose. Head and neck radiation mucositis peaks at week 5-6 and heals 2-4 weeks after radiation ends. After bone marrow transplant, mucositis typically resolves by day 21-28 with engraftment.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why does cancer treatment cause mouth sores?",
+      "answer": "Chemotherapy and radiation kill rapidly dividing cells, including those lining the mouth. The mucosal barrier thins and ulcers form. Inflammatory chemicals like TNF-alpha and IL-1 beta amplify tissue damage. Bacteria then colonize ulcer beds. This is called the Sonis 5-stage mucositis model.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is oral mucositis treated?",
+      "answer": "Treatment combines prevention (oral cryotherapy for bolus 5-FU, low-level laser for radiation and transplant), pain control with topical anesthetics or opioids, oral hygiene with bland rinses, and nutritional support. Severe cases need IV fluids and inpatient care per MASCC/ISOO 2020 guidelines.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can oral mucositis be prevented?",
+      "answer": "Many cases can be prevented or made milder. Sucking ice chips during bolus 5-FU cuts mucositis in half. Low-level laser three times weekly reduces severe mucositis by 30-50% in radiation and transplant patients. Pre-treatment dental work, good oral hygiene, and stopping smoking all reduce severity.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is magic mouthwash effective for mucositis?",
+      "answer": "Magic mouthwash mixing lidocaine, diphenhydramine, and antacid provides brief pain relief but does not consistently reduce mucositis severity in trials. MASCC/ISOO does not recommend it as a preventive standard. Doxepin rinse and benzydamine rinse have stronger evidence for specific settings.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What foods should I avoid with oral mucositis?",
+      "answer": "Avoid acidic foods like citrus and tomato, spicy foods, crunchy foods, very hot foods and drinks, alcohol, and tobacco. Stick to soft, bland, cool foods such as smoothies, yogurt, mashed potatoes, eggs, custards, and well-cooked pasta. Supplement drinks help maintain calories when chewing hurts.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is oral mucositis graded?",
+      "answer": "The WHO Oral Mucositis Scale grades severity from 0 (none) to IV (oral intake impossible, parenteral nutrition required). The NCI CTCAE version 5 separates mucosal findings from functional impact on eating. Daily assessment guides treatment escalation during high-risk cancer therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "When is mucositis a medical emergency?",
+      "answer": "Seek urgent care for fever above 38.3 Celsius if neutropenic, inability to swallow saliva with dehydration, active bleeding from ulcers, difficulty breathing or managing secretions, or pain not responding to prescribed opioids. These signs may indicate infection or airway compromise.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can oral mucositis cause a serious infection?",
+      "answer": "Yes. In neutropenic patients, bacteria from mouth ulcers can enter the bloodstream and cause bacteremia or sepsis. Candida overgrowth adds white pseudomembranes to ulcerated surfaces. Herpes simplex can reactivate and extend mucositis. Fever during severe mucositis requires immediate evaluation.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does oral mucositis affect cancer outcomes?",
+      "answer": "Indirectly, yes. Severe mucositis is the leading cause of unplanned radiotherapy breaks, and each week of interruption reduces tumor control by 1-1.5%. In bone marrow transplant, severe mucositis raises infection-related mortality 2-4 fold. Prevention and pain control protect cancer outcomes.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is photobiomodulation for mucositis?",
+      "answer": "Photobiomodulation, or low-level laser therapy, uses red or near-infrared light at 660-830 nm inside the mouth to reduce inflammation and speed healing. Three sessions weekly during head and neck radiation or transplant conditioning cut severe mucositis rates by 30-50% (MASCC/ISOO level I).",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why are ice chips used during chemotherapy?",
+      "answer": "Sucking ice chips 5 minutes before, during, and 30 minutes after a bolus 5-FU infusion constricts blood vessels in the mouth and limits drug delivery during peak levels. This cuts mucositis incidence by about half. Cryotherapy works only for bolus 5-FU, not continuous infusion regimens.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can children get oral mucositis?",
+      "answer": "Yes. Children have higher epithelial turnover and develop mucositis more often per chemotherapy cycle than adults, especially with methotrexate-based leukemia regimens. Pediatric cases heal faster but cause severe nutritional problems. Standard prevention and age-appropriate analgesia apply.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the role of dental care before cancer treatment?",
+      "answer": "A dental evaluation 14-21 days before head and neck radiation or bone marrow transplant identifies infections, periodontal disease, and non-restorable teeth. Extractions are completed early to allow healing. Pre-treatment dental clearance reduces both severe mucositis and osteoradionecrosis rates.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is mucositis pain managed?",
+      "answer": "Pain management is stepwise. Grade I-II uses topical agents like doxepin 0.5% rinse and viscous lidocaine 2%. Grade II-III adds systemic opioids. Grade III-IV needs patient-controlled IV morphine or fentanyl, usually inpatient. Scheduled dosing controls pain better than reactive dosing.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I brush my teeth with oral mucositis?",
+      "answer": "Yes, gentle brushing with a soft pediatric toothbrush and fluoride toothpaste twice daily is recommended throughout treatment. Floss daily unless platelets are below 40,000/microL. Avoid alcohol-containing mouthwashes. Bland saline or baking soda rinses 4-6 times daily keep ulcers clean.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Does smoking make mucositis worse?",
+      "answer": "Yes. Smoking during radiation reduces mucosal blood flow, slows healing, and increases grade III-IV mucositis rates by 30-40%. Smoking also reduces tumor response to radiation and lowers overall survival in head and neck cancer. Stopping smoking before and during treatment is highly effective.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is palifermin and who should receive it?",
+      "answer": "Palifermin is recombinant keratinocyte growth factor given IV before and after autologous bone marrow transplant conditioning. It stimulates mucosal cell growth and reduces severe mucositis duration by 3-4 days. It is FDA-approved only for autologous transplant patients on total body irradiation.",
+      "schemaEligible": true
+    }
+  ],
+  "simpleName": "Oral Mucositis (chemo and radiation mouth sores)",
+  "regionalNames": [
+    {
+      "name": "Mucite buccale",
+      "region": "France",
+      "language": "fr"
+    },
+    {
+      "name": "Mucositis oral",
+      "region": "Spain / Latin America",
+      "language": "es"
+    },
+    {
+      "name": "Mukositis",
+      "region": "Germany",
+      "language": "de"
+    }
+  ],
+  "searchTags": [
+    "oral mucositis",
+    "chemotherapy mouth sores",
+    "radiation mouth sores",
+    "stomatitis",
+    "chemo stomatitis",
+    "mucositis grading",
+    "MASCC ISOO",
+    "WHO mucositis scale",
+    "magic mouthwash",
+    "oral cryotherapy",
+    "photobiomodulation",
+    "low level laser mucositis",
+    "5-FU mucositis",
+    "HSCT mucositis",
+    "head and neck radiation mouth pain"
+  ],
+  "symptomKeywords": [
+    "mouth sores from chemo",
+    "painful mouth ulcers cancer",
+    "burning mouth after chemo",
+    "cant eat after radiation",
+    "mouth pain bone marrow transplant",
+    "white sores in mouth chemotherapy",
+    "throat pain head and neck radiation",
+    "bleeding mouth ulcers chemo"
+  ],
+  "metaTitle": "Oral Mucositis: Symptoms, Causes & Treatment | aihealz",
+  "metaDescription": "Oral mucositis: painful chemo and radiation mouth sores. Symptoms, prevention with cryotherapy and laser, MASCC/ISOO treatment, prognosis on aihealz.",
+  "keywords": [
+    "oral mucositis",
+    "oral mucositis symptoms",
+    "oral mucositis treatment",
+    "chemotherapy mouth sores",
+    "radiation mucositis",
+    "MASCC ISOO guideline",
+    "oral cryotherapy",
+    "photobiomodulation mucositis",
+    "magic mouthwash",
+    "WHO mucositis scale",
+    "5-FU mucositis",
+    "head and neck radiation",
+    "HSCT mucositis"
+  ],
+  "lastReviewed": "2026-05-18",
+  "images": [],
+  "sources": [
+    {
+      "title": "Elad S, Cheng KKF, Lalla RV, et al. MASCC/ISOO Clinical Practice Guidelines for the Management of Mucositis Secondary to Cancer Therapy. Cancer. 2020;126(19):4423-4431.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32786044/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Sonis ST. The Pathobiology of Mucositis. Nature Reviews Cancer. 2004;4(4):277-284.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15057287/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Lalla RV, Bowen J, Barasch A, et al. MASCC/ISOO Clinical Practice Guidelines for the Management of Mucositis Secondary to Cancer Therapy. Cancer. 2014;120(10):1453-1461.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24615748/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Riley P, Glenny AM, Worthington HV, et al. Interventions for preventing oral mucositis in patients with cancer receiving treatment: oral cryotherapy. Cochrane Database of Systematic Reviews. 2015;12:CD011552.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26695736/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Spielberger R, Stiff P, Bensinger W, et al. Palifermin for Oral Mucositis after Intensive Therapy for Hematologic Cancers. New England Journal of Medicine. 2004;351(25):2590-2598.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15602019/",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "National Cancer Institute. Oral Complications of Chemotherapy and Head/Neck Radiation (PDQ) - Health Professional Version.",
+      "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/mouth-throat/oral-complications-hp-pdq",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "National Cancer Institute. Common Terminology Criteria for Adverse Events (CTCAE) Version 5.0. November 2017.",
+      "url": "https://ctep.cancer.gov/protocoldevelopment/electronic_applications/ctc.htm",
+      "accessedDate": "2026-05-18"
+    },
+    {
+      "title": "Zadik Y, Arany PR, Fregnani ER, et al. Systematic review of photobiomodulation for the management of oral mucositis in cancer patients and clinical practice guidelines. Supportive Care in Cancer. 2019;27(10):3969-3983.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31286228/",
+      "accessedDate": "2026-05-18"
+    }
+  ],
+  "reviewer": {
+    "name": "AIHealz Medical Editorial Board",
+    "slug": "aihealz-medical-editorial-board"
+  }
+}
