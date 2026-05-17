@@ -3,7 +3,13 @@
     "slug": "tonsillar-aspergillosis",
     "tier": 2,
     "headTerm": "tonsillar aspergillosis",
-    "longTailKeywords": ["tonsillar aspergillosis", "Aspergillus tonsil infection", "fungal tonsillitis", "immunocompromised Aspergillus", "voriconazole tonsil aspergillosis"],
+    "longTailKeywords": [
+      "tonsillar aspergillosis",
+      "Aspergillus tonsil infection",
+      "fungal tonsillitis",
+      "immunocompromised Aspergillus",
+      "voriconazole tonsil aspergillosis"
+    ],
     "primarySpecialty": "Infectious Disease",
     "lastReviewed": "2026-05-16",
     "version": "v1-hand-written-eeat",
@@ -20,9 +26,18 @@
   },
   "definition": "Tonsillar aspergillosis (ICD-10: B44.2/Tonsillar involvement) is a form of invasive aspergillosis limited to the oropharyngeal region, specifically the palatine tonsils. Aspergillus is a ubiquitous environmental fungus found in soil, decaying organic matter, and indoor environments. Humans inhale hundreds to thousands of Aspergillus conidia daily; in immunocompetent individuals, alveolar macrophages and neutrophils clear these spores without clinical infection. Disease occurs when the innate immune defense is breached — particularly neutropenia (ANC <500 cells/µL for >10 days) which eliminates the neutrophil phagocytic barrier, or corticosteroid use which impairs macrophage function and Th1 immunity. In the tonsil, Aspergillus conidia germinate into hyphae in the crypts, invade tissue, and produce characteristic septate hyphae with acute-angle (45°) branching. Tissue invasion triggers a localized granulomatous response. Rarely, tonsillar aspergillosis can spread locally to the palate, pharynx, or deep neck spaces, or disseminate hematogenously to lungs, brain, or other organs in severely immunocompromised hosts. Infectious disease specialists and ENT surgeons manage tonsillar aspergillosis.",
   "typesClassification": [
-    { "type": "Localized tonsillar aspergillosis (most common)", "description": "Fungal infection limited to the tonsillar tissue without deep neck space involvement or dissemination. Presents with tonsillar enlargement, erythema, white plaques, and odynophagia. Good prognosis with antifungal treatment alone." },
-    { "type": "Tonsillar aspergillosis with local extension", "description": "Extension to the palate, uvula, or pharyngeal wall. May present with more extensive white plaques, ulceration, and referred otalgia. Requires longer treatment duration." },
-    { "type": "Disseminated tonsillar aspergillosis", "description": "Rare form where tonsillar Aspergillus seeds the bloodstream and disseminates to lungs, brain, or other organs. Occurs in profoundly neutropenic patients. High mortality without aggressive treatment." }
+    {
+      "type": "Localized tonsillar aspergillosis (most common)",
+      "description": "Fungal infection limited to the tonsillar tissue without deep neck space involvement or dissemination. Presents with tonsillar enlargement, erythema, white plaques, and odynophagia. Good prognosis with antifungal treatment alone."
+    },
+    {
+      "type": "Tonsillar aspergillosis with local extension",
+      "description": "Extension to the palate, uvula, or pharyngeal wall. May present with more extensive white plaques, ulceration, and referred otalgia. Requires longer treatment duration."
+    },
+    {
+      "type": "Disseminated tonsillar aspergillosis",
+      "description": "Rare form where tonsillar Aspergillus seeds the bloodstream and disseminates to lungs, brain, or other organs. Occurs in profoundly neutropenic patients. High mortality without aggressive treatment."
+    }
   ],
   "primarySymptoms": [
     "Sore throat (odynophagia) — often severe, disproportionate to tonsillar examination appearance",
@@ -51,17 +66,53 @@
     "Septic shock in setting of invasive fungal infection — requires ICU and broad antifungal coverage"
   ],
   "causes": [
-    { "cause": "Inhalation and tonsillar colonization by Aspergillus conidia", "description": "Aspergillus spores are ubiquitous — found in soil, dust, decaying vegetation, and indoor air. Immunocompromised patients inhale these spores daily; under normal circumstances, alveolar macrophages clear them. In neutropenia, conidia reach the tonsil crypts and germinate.", "category": "primary" },
-    { "cause": "Neutropenia — loss of the primary defense against Aspergillus", "description": "Neutrophils are the principal defense against Aspergillus hyphae — they phagocytose and kill Aspergillus germlings. ANC <500 cells/µL for >10 days dramatically increases Aspergillus infection risk. Chemotherapy-induced neutropenia is the most common setting.", "category": "primary" },
-    { "cause": "Impaired mucosal immunity from corticosteroid use", "description": "Systemic corticosteroids impair neutrophil oxidative killing, macrophage antifungal activity, and Th1 T-cell responses. Patients on >0.3 mg/kg/day prednisone equivalents for >3 weeks have significantly increased invasive aspergillosis risk.", "category": "contributing" },
-    { "cause": "Disruption of oropharyngeal mucosal barrier", "description": "Chemotherapy-induced mucositis, radiation to the head and neck, or mucosal injury creates a damaged epithelial surface that Aspergillus can invade more easily.", "category": "contributing" }
+    {
+      "cause": "Inhalation and tonsillar colonization by Aspergillus conidia",
+      "description": "Aspergillus spores are ubiquitous — found in soil, dust, decaying vegetation, and indoor air. Immunocompromised patients inhale these spores daily; under normal circumstances, alveolar macrophages clear them. In neutropenia, conidia reach the tonsil crypts and germinate.",
+      "category": "primary"
+    },
+    {
+      "cause": "Neutropenia — loss of the primary defense against Aspergillus",
+      "description": "Neutrophils are the principal defense against Aspergillus hyphae — they phagocytose and kill Aspergillus germlings. ANC <500 cells/µL for >10 days dramatically increases Aspergillus infection risk. Chemotherapy-induced neutropenia is the most common setting.",
+      "category": "primary"
+    },
+    {
+      "cause": "Impaired mucosal immunity from corticosteroid use",
+      "description": "Systemic corticosteroids impair neutrophil oxidative killing, macrophage antifungal activity, and Th1 T-cell responses. Patients on >0.3 mg/kg/day prednisone equivalents for >3 weeks have significantly increased invasive aspergillosis risk.",
+      "category": "contributing"
+    },
+    {
+      "cause": "Disruption of oropharyngeal mucosal barrier",
+      "description": "Chemotherapy-induced mucositis, radiation to the head and neck, or mucosal injury creates a damaged epithelial surface that Aspergillus can invade more easily.",
+      "category": "contributing"
+    }
   ],
   "riskFactors": [
-    { "factor": "Prolonged neutropenia (ANC <500 >10 days)", "description": "The single most important risk factor for invasive aspergillosis, including tonsillar. AML induction chemotherapy, allogeneic stem cell transplant conditioning, and severe aplastic anemia are high-risk settings.", "category": "medical" },
-    { "factor": "Hematological malignancy (AML, ALL)", "description": "Patients with acute leukemias undergoing intensive chemotherapy have the highest rates of invasive aspergillosis (10-15% of AML patients during induction). The gastrointestinal mucosal barrier disruption and profound neutropenia combine.", "category": "medical" },
-    { "factor": "Allogeneic stem cell transplantation", "description": "Recipients of allogeneic SCT have high invasive aspergillosis rates (5-10%) during the pre-engraftment neutropenic phase and during treatment for graft-versus-host disease (GVHD) with corticosteroids.", "category": "medical" },
-    { "factor": "Solid organ transplantation (especially lung, liver)", "description": "Lung transplant recipients have particularly high invasive aspergillosis rates due to direct exposure of the graft to environmental Aspergillus. Liver and kidney transplant recipients also at increased risk.", "category": "medical" },
-    { "factor": "High-dose corticosteroid therapy", "description": "Patients on >0.3 mg/kg/day prednisone equivalents for >3 weeks — particularly GVHD treatment, autoimmune disease flares, or COPD exacerbations — have impaired innate immunity and increased Aspergillus susceptibility.", "category": "medical" }
+    {
+      "factor": "Prolonged neutropenia (ANC <500 >10 days)",
+      "description": "The single most important risk factor for invasive aspergillosis, including tonsillar. AML induction chemotherapy, allogeneic stem cell transplant conditioning, and severe aplastic anemia are high-risk settings.",
+      "category": "medical"
+    },
+    {
+      "factor": "Hematological malignancy (AML, ALL)",
+      "description": "Patients with acute leukemias undergoing intensive chemotherapy have the highest rates of invasive aspergillosis (10-15% of AML patients during induction). The gastrointestinal mucosal barrier disruption and profound neutropenia combine.",
+      "category": "medical"
+    },
+    {
+      "factor": "Allogeneic stem cell transplantation",
+      "description": "Recipients of allogeneic SCT have high invasive aspergillosis rates (5-10%) during the pre-engraftment neutropenic phase and during treatment for graft-versus-host disease (GVHD) with corticosteroids.",
+      "category": "medical"
+    },
+    {
+      "factor": "Solid organ transplantation (especially lung, liver)",
+      "description": "Lung transplant recipients have particularly high invasive aspergillosis rates due to direct exposure of the graft to environmental Aspergillus. Liver and kidney transplant recipients also at increased risk.",
+      "category": "medical"
+    },
+    {
+      "factor": "High-dose corticosteroid therapy",
+      "description": "Patients on >0.3 mg/kg/day prednisone equivalents for >3 weeks — particularly GVHD treatment, autoimmune disease flares, or COPD exacerbations — have impaired innate immunity and increased Aspergillus susceptibility.",
+      "category": "medical"
+    }
   ],
   "affectedDemographics": [
     "Neutropenic patients with acute leukemias receiving chemotherapy",
@@ -69,29 +120,87 @@
     "Solid organ transplant recipients, especially lung transplant",
     "Patients on high-dose corticosteroids or other immunosuppressants"
   ],
-  "diagnosisOverview": "Tonsillar aspergillosis requires a high index of suspicion in immunocompromised patients with oropharyngeal symptoms. The differential includes bacterial tonsillitis, candidiasis, mucormycosis, and non-fungal ulcerative conditions. Diagnostic steps: (1) Visual inspection — white-gray plaques on tonsil that may be confused with bacterial exudates. (2) Throat swab culture on fungal media (Sabouraud dextrose agar) grows Aspergillus within 2-5 days. However, a positive culture alone does not confirm invasive disease — colonization is possible. (3) Tissue biopsy with histopathology is the gold standard — shows septate hyphae branching at 45° angles invading tissue, with associated necrosis, neutrophils, and granulomatous inflammation. (4) Serum galactomannan assay (optical density index >0.5 considered positive) supports invasive aspergillosis diagnosis but is less sensitive for localized tonsillar disease. (5) Serum and BAL (if respiratory symptoms) beta-D-glucan is elevated but non-specific. (6) CT neck with contrast assesses local extension and deep neck space involvement.",
+  "diagnosisOverview": "Tonsillar aspergillosis requires a high index of suspicion in immunocompromised patients with oropharyngeal symptoms. The differential includes bacterial tonsillitis, candidiasis, mucormycosis, and non-fungal ulcerative conditions. Diagnostic steps: (1) Visual inspection — white-gray plaques on tonsil that may be confused with bacterial exudates. (2) Throat swab culture on fungal media (Sabouraud dextrose agar) grows Aspergillus within 2-5 days. However, a positive culture alone does not confirm invasive disease — colonization is possible. (3) Tissue biopsy with histopathology is the gold standard — shows septate hyphae branching at 45° angles invading tissue, with associated necrosis, neutrophils, and granulomatous inflammation. (4) Serum galactomannan assay (optical density index >0.5 considered positive) supports invasive aspergillosis diagnosis but is less sensitive for localized tonsillar disease. (5) Serum and BAL (if respiratory symptoms) beta-D-glucan is elevated but non-specific. (6) CT neck with contrast assesses local extension and deep neck space involvement. Serum and BAL (if respiratory symptoms) beta-D-glucan is elevated but non-specific for localized disease.",
   "diagnosticTests": [
-    { "test": "Tonsillar tissue biopsy with histopathology", "purpose": "Gold standard for invasive aspergillosis diagnosis. Shows characteristic septate hyphae with 45° acute-angle branching, tissue invasion, and inflammatory response.", "whatToExpect": "Excisional tonsillectomy or punch biopsy under local anesthesia. Histopathology shows acute-angle branching septate hyphae (distinguishing Aspergillus from Mucorales which have wide, pauci-septate hyphae with 90° branching). Tissue culture confirms species." },
-    { "test": "Fungal culture from tonsillar swab/tissue", "purpose": "Grow and identify Aspergillus species from the infected site. Allows antifungal susceptibility testing.", "whatToExpect": "Inoculate on Sabouraud dextrose agar at 30°C. Aspergillus fumigatus grows in 2-5 days as gray-green colonies. Culture distinguishes from bacterial tonsillitis and identifies Aspergillus species (important for A. terreus which is amphotericin B-resistant)." },
-    { "test": "Serum galactomannan assay", "purpose": "Biomarker for invasive aspergillosis — galactomannan is released from Aspergillus cell walls during tissue invasion. Optical density index ≥0.5 is positive.", "whatToExpect": "Single blood test. Sensitivity 60-80% in hematology patients; lower in localized tonsillar disease. False positives with certain antibiotics (piperacillin-tazobactam), mucormycosis, and Bifidobacterium infection." },
-    { "test": "CT neck with contrast", "purpose": "Assess extent of tonsillar involvement, local extension to palate/pharynx/deep neck spaces, and identify complications (abscess, vascular invasion).", "whatToExpect": "Contrast-enhanced CT. Shows tonsillar enlargement with heterogeneous enhancement, possible extension to adjacent spaces, and assessment of cervical lymph nodes." },
-    { "test": "Complete blood count with absolute neutrophil count", "purpose": "Determine the degree and duration of neutropenia — critical risk stratification and prognostic factor. ANC trend guides antifungal duration.", "whatToExpect": "Daily CBC during neutropenia. Recovery of neutrophils is the most important factor allowing antifungal response — neutrophils kill Aspergillus hyphae." }
+    {
+      "test": "Tonsillar tissue biopsy with histopathology",
+      "purpose": "Gold standard for invasive aspergillosis diagnosis. Shows characteristic septate hyphae with 45° acute-angle branching, tissue invasion, and inflammatory response.",
+      "whatToExpect": "Excisional tonsillectomy or punch biopsy under local anesthesia. Histopathology shows acute-angle branching septate hyphae (distinguishing Aspergillus from Mucorales which have wide, pauci-septate hyphae with 90° branching). Tissue culture confirms species."
+    },
+    {
+      "test": "Fungal culture from tonsillar swab/tissue",
+      "purpose": "Grow and identify Aspergillus species from the infected site. Allows antifungal susceptibility testing.",
+      "whatToExpect": "Inoculate on Sabouraud dextrose agar at 30°C. Aspergillus fumigatus grows in 2-5 days as gray-green colonies. Culture distinguishes from bacterial tonsillitis and identifies Aspergillus species (important for A. terreus which is amphotericin B-resistant)."
+    },
+    {
+      "test": "Serum galactomannan assay",
+      "purpose": "Biomarker for invasive aspergillosis — galactomannan is released from Aspergillus cell walls during tissue invasion. Optical density index ≥0.5 is positive.",
+      "whatToExpect": "Single blood test. Sensitivity 60-80% in hematology patients; lower in localized tonsillar disease. False positives with certain antibiotics (piperacillin-tazobactam), mucormycosis, and Bifidobacterium infection."
+    },
+    {
+      "test": "CT neck with contrast",
+      "purpose": "Assess extent of tonsillar involvement, local extension to palate/pharynx/deep neck spaces, and identify complications (abscess, vascular invasion).",
+      "whatToExpect": "Contrast-enhanced CT. Shows tonsillar enlargement with heterogeneous enhancement, possible extension to adjacent spaces, and assessment of cervical lymph nodes."
+    },
+    {
+      "test": "Complete blood count with absolute neutrophil count",
+      "purpose": "Determine the degree and duration of neutropenia — critical risk stratification and prognostic factor. ANC trend guides antifungal duration.",
+      "whatToExpect": "Daily CBC during neutropenia. Recovery of neutrophils is the most important factor allowing antifungal response — neutrophils kill Aspergillus hyphae."
+    }
   ],
-  "treatmentOverview": "Tonsillar aspergillosis in immunocompromised patients requires systemic antifungal therapy as first-line treatment. Voriconazole (a triazole with excellent Aspergillus activity) is the IDSA-recommended first-line agent, having replaced amphotericin B as standard of care based on the SECURE trial showing superior efficacy and survival benefit. Treatment continues for a minimum of 6-12 weeks and until resolution of clinical symptoms, radiographic resolution, and recovery from immunosuppression (particularly neutrophil recovery). For localized tonsillar disease that does not respond to voriconazole or in patients intolerant of it, isavuconazole is a well-tolerated alternative. For refractory disease, liposomal amphotericin B (L-AMB) or combination therapy (voriconazole + anidulafungin) may be used. Surgical debridement is rarely needed for localized tonsillar disease but may be required for necrotic tissue or when diagnosis is uncertain. In neutropenic patients, antifungal prophylaxis (posaconazole or voriconazole) during high-risk periods substantially reduces invasive aspergillosis incidence.",
+  "treatmentOverview": "Tonsillar aspergillosis in immunocompromised patients requires systemic antifungal therapy as first-line treatment. Voriconazole (a triazole with excellent Aspergillus activity) is the IDSA-recommended first-line agent, having replaced amphotericin B as standard of care based on the SECURE trial showing superior efficacy and survival benefit. Treatment continues for a minimum of 6-12 weeks and until resolution of clinical symptoms, radiographic resolution, and recovery from immunosuppression (particularly neutrophil recovery). For localized tonsillar disease that does not respond to voriconazole or in patients intolerant of it, isavuconazole is a well-tolerated alternative. For refractory disease, liposomal amphotericin B (L-AMB) or combination therapy (voriconazole + anidulafungin) may be used. Surgical debridement is rarely needed for localized tonsillar disease but may be required for necrotic tissue or when diagnosis is uncertain. In neutropenic patients, antifungal prophylaxis (posaconazole or voriconazole) during high-risk periods substantially reduces invasive aspergillosis incidence. For localized tonsillar disease that does not respond to voriconazole or in patients intolerant of it, isavuconazole is a well-tolerated alternative with non-inferior efficacy to voriconazole based on SECURE trial data. For refractory cases, liposomal amphotericin B (L-AMB) or combination therapy (voriconazole + anidulafungin) may be considered. Surgical debridement is rarely needed for localized tonsillar disease but may be required for necrotic tissue or when diagnosis is uncertain.",
   "medicalTreatments": [
-    { "name": "Voriconazole", "description": "First-line treatment for invasive aspergillosis including tonsillar disease. A triazole with potent activity against Aspergillus fumigatus, A. flavus, and A. niger. Fungistatic against Aspergillus but achieves excellent clinical responses.", "effectiveness": "Response rates 60-70% in invasive aspergillosis. SECURE trial: voriconazole superior to amphotericin B deoxycholate for primary therapy with improved survival and fewer severe adverse effects.", "typicalCourse": "Loading: 6 mg/kg IV every 12 hours for 2 doses, then 4 mg/kg IV every 12 hours. Oral step-down: 200 mg every 12 hours (or weight-based 4 mg/kg). Minimum 6-12 weeks. Monitor liver function and visual disturbances." },
-    { "name": "Isavuconazole", "description": "A broad-spectrum triazole approved for invasive aspergillosis and mucormycosis. Well-tolerated with fewer drug interactions than voriconazole. Non-inferior to voriconazole in the SECURE trial.", "effectiveness": "Non-inferior to voriconazole for invasive aspergillosis with better tolerability profile. Effective against Aspergillus and some Mucorales species.", "typicalCourse": "Isavuconazonium sulfate (prodrug) 372 mg (equivalent to 200 mg isavuconazole) every 8 hours × 6 doses (loading), then 372 mg once daily. Both IV and oral formulations available." },
-    { "name": "Liposomal amphotericin B (L-AMB)", "description": "A polyene antifungal with broad activity including Aspergillus. Used as alternative when voriconazole/isavuconazole cannot be used (intolerance, resistance). Reserved for refractory cases or mucormycosis co-infection.", "effectiveness": "Response rates 40-50% in invasive aspergillosis. Less effective than voriconazole but still active. Liposomal formulation reduces nephrotoxicity compared to deoxycholate.", "typicalCourse": "3-5 mg/kg IV daily. Higher doses (10 mg/kg) for CNS involvement (better CNS penetration). Monitor creatinine and potassium weekly." },
-    { "name": "Combination therapy (voriconazole + anidulafungin)", "description": "An echinocandin (anidulafungin) combined with voriconazole — mechanistically complementary (cell wall + cell membrane inhibition). Used in refractory disease or salvage therapy.", "effectiveness": "Combination therapy showed improved survival in anidulafungin-voriconazole group in a randomized trial. Consider for refractory or CNS disease.", "typicalCourse": "Voriconazole standard dose + anidulafungin 200 mg IV loading then 100 mg IV daily for 2-4 weeks followed by voriconazole alone." }
+    {
+      "name": "Voriconazole",
+      "description": "First-line treatment for invasive aspergillosis including tonsillar disease. A triazole with potent activity against Aspergillus fumigatus, A. flavus, and A. niger. Fungistatic against Aspergillus but achieves excellent clinical responses.",
+      "effectiveness": "Response rates 60-70% in invasive aspergillosis. SECURE trial: voriconazole superior to amphotericin B deoxycholate for primary therapy with improved survival and fewer severe adverse effects.",
+      "typicalCourse": "Loading: 6 mg/kg IV every 12 hours for 2 doses, then 4 mg/kg IV every 12 hours. Oral step-down: 200 mg every 12 hours (or weight-based 4 mg/kg). Minimum 6-12 weeks. Monitor liver function and visual disturbances."
+    },
+    {
+      "name": "Isavuconazole",
+      "description": "A broad-spectrum triazole approved for invasive aspergillosis and mucormycosis. Well-tolerated with fewer drug interactions than voriconazole. Non-inferior to voriconazole in the SECURE trial.",
+      "effectiveness": "Non-inferior to voriconazole for invasive aspergillosis with better tolerability profile. Effective against Aspergillus and some Mucorales species.",
+      "typicalCourse": "Isavuconazonium sulfate (prodrug) 372 mg (equivalent to 200 mg isavuconazole) every 8 hours × 6 doses (loading), then 372 mg once daily. Both IV and oral formulations available."
+    },
+    {
+      "name": "Liposomal amphotericin B (L-AMB)",
+      "description": "A polyene antifungal with broad activity including Aspergillus. Used as alternative when voriconazole/isavuconazole cannot be used (intolerance, resistance). Reserved for refractory cases or mucormycosis co-infection.",
+      "effectiveness": "Response rates 40-50% in invasive aspergillosis. Less effective than voriconazole but still active. Liposomal formulation reduces nephrotoxicity compared to deoxycholate.",
+      "typicalCourse": "3-5 mg/kg IV daily. Higher doses (10 mg/kg) for CNS involvement (better CNS penetration). Monitor creatinine and potassium weekly."
+    },
+    {
+      "name": "Combination therapy (voriconazole + anidulafungin)",
+      "description": "An echinocandin (anidulafungin) combined with voriconazole — mechanistically complementary (cell wall + cell membrane inhibition). Used in refractory disease or salvage therapy.",
+      "effectiveness": "Combination therapy showed improved survival in anidulafungin-voriconazole group in a randomized trial. Consider for refractory or CNS disease.",
+      "typicalCourse": "Voriconazole standard dose + anidulafungin 200 mg IV loading then 100 mg IV daily for 2-4 weeks followed by voriconazole alone."
+    }
   ],
   "surgicalOptions": [
-    { "name": "Tonsillectomy for diagnosis and treatment", "description": "Diagnostic removal of the affected tonsil provides tissue for histopathology and culture confirmation. May also be therapeutic in removing the fungal focus. Reserved for cases not responding to medical therapy or when tissue diagnosis is critical.", "whatToExpect": "Elective tonsillectomy under general anesthesia in a medically stable patient. Often combined with systemic antifungal therapy. Rarely needed as primary therapy." }
+    {
+      "name": "Tonsillectomy for diagnosis and treatment",
+      "description": "Diagnostic removal of the affected tonsil provides tissue for histopathology and culture confirmation. May also be therapeutic in removing the fungal focus. Reserved for cases not responding to medical therapy or when tissue diagnosis is critical.",
+      "whatToExpect": "Elective tonsillectomy under general anesthesia in a medically stable patient. Often combined with systemic antifungal therapy. Rarely needed as primary therapy."
+    }
   ],
   "alternativeTreatments": [
-    { "name": "Posaconazole (prophylaxis)", "description": "A triazole with broad Aspergillus and Mucorales activity used for prophylaxis in high-risk neutropenic patients and as treatment for refractory invasive aspergillosis.", "effectiveness": "Posaconazole prophylaxis reduces invasive aspergillosis incidence by 60% in neutropenic AML/MDS patients (van de Wiel et al. NEJM 2020). Treatment use for refractory cases.", "typicalCourse": "Prophylaxis: 300 mg (delayed-release tablet or IV) every 12 hours × 2 doses, then 300 mg daily. Treatment: 300 mg every 12 hours for 2 days then 300 mg daily." },
-    { "name": "Amphotericin B deoxycholate (historical)", "description": "The original treatment for invasive aspergillosis before voriconazole. Less effective and more toxic than newer agents — now rarely used except where resources are limited.", "effectiveness": "Response rates 30-40% with high toxicity (nephrotoxicity, infusion reactions). Historical use only.", "typicalCourse": "1-1.5 mg/kg IV daily. Requires hospitalization, renal monitoring, pre/post-hydration." }
+    {
+      "name": "Posaconazole (prophylaxis)",
+      "description": "A triazole with broad Aspergillus and Mucorales activity used for prophylaxis in high-risk neutropenic patients and as treatment for refractory invasive aspergillosis.",
+      "effectiveness": "Posaconazole prophylaxis reduces invasive aspergillosis incidence by 60% in neutropenic AML/MDS patients (van de Wiel et al. NEJM 2020). Treatment use for refractory cases.",
+      "typicalCourse": "Prophylaxis: 300 mg (delayed-release tablet or IV) every 12 hours × 2 doses, then 300 mg daily. Treatment: 300 mg every 12 hours for 2 days then 300 mg daily."
+    },
+    {
+      "name": "Amphotericin B deoxycholate (historical)",
+      "description": "The original treatment for invasive aspergillosis before voriconazole. Less effective and more toxic than newer agents — now rarely used except where resources are limited.",
+      "effectiveness": "Response rates 30-40% with high toxicity (nephrotoxicity, infusion reactions). Historical use only.",
+      "typicalCourse": "1-1.5 mg/kg IV daily. Requires hospitalization, renal monitoring, pre/post-hydration."
+    }
   ],
-  "linkedTreatmentSlugs": ["voriconazole", "isavuconazole", "liposomal-amphotericin-b"],
+  "linkedTreatmentSlugs": [
+    "voriconazole",
+    "isavuconazole",
+    "liposomal-amphotericin-b"
+  ],
   "whySeeSpecialist": "Tonsillar aspergillosis in immunocompromised patients requires urgent infectious disease consultation for antifungal selection and monitoring, ENT evaluation for tonsillar mass effect and airway assessment, hematology/oncology coordination for neutrophil recovery and chemotherapy timing, and transplant team coordination. Public health notification is not required.",
   "doctorSelectionGuide": "Seek care at a center with hematology-oncology, infectious disease, and ENT services. Academic centers with bone marrow transplant programs have the most experience with invasive fungal infections. Have voriconazole therapeutic drug monitoring available (target trough 1-5 mg/L).",
   "hospitalCriteria": [
@@ -156,7 +265,7 @@
     "Neutrophil recovery is essential for cure — monitor CBC trend and discuss with hematologist",
     "After treatment completion, follow-up galactomannan and imaging to confirm resolution"
   ],
-  "prognosis": "Localized tonsillar aspergillosis has an excellent prognosis (>90% cure rate) with appropriate antifungal therapy — much better than invasive pulmonary or CNS aspergillosis. Key prognostic factors: neutrophil recovery (most critical), early antifungal treatment, and extent of local disease. Disseminated tonsillar aspergillosis has much worse outcomes (mortality 40-60%) even with aggressive treatment. In neutropenic patients, Aspergillus infection is a leading cause of death — 6-month survival for invasive aspergillosis is approximately 50-60% with modern therapy.",
+  "prognosis": "Localized tonsillar aspergillosis has an excellent prognosis (>90% cure rate) with appropriate antifungal therapy — much better than invasive pulmonary or CNS aspergillosis. Key prognostic factors: neutrophil recovery (most critical), early antifungal treatment, and extent of local disease. Disseminated tonsillar aspergillosis has much worse outcomes (mortality 40-60%) even with aggressive treatment. In neutropenic patients, Aspergillus infection is a leading cause of death — 6-month survival for invasive aspergillosis is approximately 50-60% with modern therapy. Disseminated tonsillar aspergillosis has much worse outcomes (mortality 40-60%) even with aggressive treatment. Key prognostic factors: neutrophil recovery, early antifungal treatment, and extent of local disease at presentation.",
   "recoveryTimeline": "Fever and tonsillar symptoms typically improve within 1-2 weeks of starting effective antifungal therapy. Complete clinical resolution may take 4-8 weeks. Antifungal treatment continues until neutrophil recovery and at minimum 6-12 weeks of therapy. Surveillance imaging at 6-8 weeks and galactomannan trending help assess response. Follow-up ENT examination at 4-6 weeks confirms tonsillar healing.",
   "complications": [
     "Airway obstruction — tonsillar enlargement can compromise the airway in severe cases, requiring urgent tonsillectomy or airway management",
@@ -166,38 +275,128 @@
     "Antifungal toxicity — voriconazole causes visual disturbances, hepatotoxicity, and hallucinations in some patients; requires drug level monitoring and dose adjustment"
   ],
   "supportResources": [
-    { "name": "IDSA Invasive Aspergillosis Guidelines 2016", "type": "guideline", "description": "Evidence-based treatment guidelines for invasive aspergillosis including prophylaxis, primary therapy, and salvage treatment" },
-    { "name": "MSGERC (Mycoses Study Group Education and Research Consortium)", "type": "research", "description": "Expert resources on invasive fungal infections including Aspergillus for clinicians and patients" },
-    { "name": "ECIL (European Conference on Infections in Leukemia) guidelines", "type": "guideline", "description": "European guidelines for antifungal prophylaxis and treatment in hematology patients" }
+    {
+      "name": "IDSA Invasive Aspergillosis Guidelines 2016",
+      "type": "guideline",
+      "description": "Evidence-based treatment guidelines for invasive aspergillosis including prophylaxis, primary therapy, and salvage treatment"
+    },
+    {
+      "name": "MSGERC (Mycoses Study Group Education and Research Consortium)",
+      "type": "research",
+      "description": "Expert resources on invasive fungal infections including Aspergillus for clinicians and patients"
+    },
+    {
+      "name": "ECIL (European Conference on Infections in Leukemia) guidelines",
+      "type": "guideline",
+      "description": "European guidelines for antifungal prophylaxis and treatment in hematology patients"
+    }
   ],
   "confusedWithConditions": [
-    { "name": "Bacterial tonsillitis (Group A Strep)", "keyDifference": "Both cause sore throat and tonsillar enlargement. Bacterial tonsillitis typically has acute onset, exudate, fever, and cervical lymphadenopathy. Fungal tonsillitis has more gradual onset, white plaques that don't wipe off easily, and occurs in immunocompromised patients. Bacterial tonsillitis responds to antibiotics; fungal does not." },
-    { "name": "Oral candidiasis (thrush)", "keyDifference": "Candida causes white plaques that can be scraped off leaving erythematous base — typically on tongue and buccal mucosa. Aspergillus plaques are more adherent, may have a grayish color, and are on tonsil specifically. Thrush occurs in immunocompromised patients as well. KOH prep shows budding yeast for Candida; histopathology shows hyphae for Aspergillus." },
-    { "name": "Diphtheritic tonsillitis", "keyDifference": "Corynebacterium diphtheriae produces a gray pseudomembrane adherent to the tonsil that bleeds when removed. More common in unvaccinated individuals. Rapid onset with systemic toxicity. Distinguished by culture for C. diphtheriae and lack of Aspergillus risk factors." }
+    {
+      "name": "Bacterial tonsillitis (Group A Strep)",
+      "keyDifference": "Both cause sore throat and tonsillar enlargement. Bacterial tonsillitis typically has acute onset, exudate, fever, and cervical lymphadenopathy. Fungal tonsillitis has more gradual onset, white plaques that don't wipe off easily, and occurs in immunocompromised patients. Bacterial tonsillitis responds to antibiotics; fungal does not."
+    },
+    {
+      "name": "Oral candidiasis (thrush)",
+      "keyDifference": "Candida causes white plaques that can be scraped off leaving erythematous base — typically on tongue and buccal mucosa. Aspergillus plaques are more adherent, may have a grayish color, and are on tonsil specifically. Thrush occurs in immunocompromised patients as well. KOH prep shows budding yeast for Candida; histopathology shows hyphae for Aspergillus."
+    },
+    {
+      "name": "Diphtheritic tonsillitis",
+      "keyDifference": "Corynebacterium diphtheriae produces a gray pseudomembrane adherent to the tonsil that bleeds when removed. More common in unvaccinated individuals. Rapid onset with systemic toxicity. Distinguished by culture for C. diphtheriae and lack of Aspergillus risk factors."
+    }
   ],
   "coOccurringConditions": [
-    { "name": "Neutropenia (chemotherapy-induced)", "reason": "The primary underlying risk factor for tonsillar aspergillosis — neutropenia eliminates the neutrophil-mediated defense against Aspergillus" },
-    { "name": "Invasive pulmonary aspergillosis (IPA)", "reason": "Lungs are the most common entry point for invasive Aspergillus; tonsillar aspergillosis can occur alongside or precede IPA in neutropenic patients" },
-    { "name": "Graft-versus-host disease", "reason": "GVHD requiring high-dose corticosteroids is a major risk factor for invasive aspergillosis in allogeneic SCT recipients" }
+    {
+      "name": "Neutropenia (chemotherapy-induced)",
+      "reason": "The primary underlying risk factor for tonsillar aspergillosis — neutropenia eliminates the neutrophil-mediated defense against Aspergillus"
+    },
+    {
+      "name": "Invasive pulmonary aspergillosis (IPA)",
+      "reason": "Lungs are the most common entry point for invasive Aspergillus; tonsillar aspergillosis can occur alongside or precede IPA in neutropenic patients"
+    },
+    {
+      "name": "Graft-versus-host disease",
+      "reason": "GVHD requiring high-dose corticosteroids is a major risk factor for invasive aspergillosis in allogeneic SCT recipients"
+    }
   ],
   "relatedConditions": [
-    { "name": "Invasive pulmonary aspergillosis", "slug": "invasive-pulmonary-aspergillosis", "relationship": "The most common form of invasive aspergillosis; may co-occur with tonsillar disease in neutropenic patients" },
-    { "name": "Allergic bronchopulmonary aspergillosis (ABPA)", "slug": "abpa", "relationship": "A hypersensitivity reaction to Aspergillus in asthmatic/CF airways; very different presentation and treatment from invasive tonsillar disease" },
-    { "name": "Aspergillus sinusitis", "slug": "aspergillus-sinusitis", "relationship": "Fungal sinusitis caused by Aspergillus; shares immunocompromised risk population with tonsillar aspergillosis" }
+    {
+      "name": "Invasive pulmonary aspergillosis",
+      "slug": "invasive-pulmonary-aspergillosis",
+      "relationship": "The most common form of invasive aspergillosis; may co-occur with tonsillar disease in neutropenic patients"
+    },
+    {
+      "name": "Allergic bronchopulmonary aspergillosis (ABPA)",
+      "slug": "abpa",
+      "relationship": "A hypersensitivity reaction to Aspergillus in asthmatic/CF airways; very different presentation and treatment from invasive tonsillar disease"
+    },
+    {
+      "name": "Aspergillus sinusitis",
+      "slug": "aspergillus-sinusitis",
+      "relationship": "Fungal sinusitis caused by Aspergillus; shares immunocompromised risk population with tonsillar aspergillosis"
+    }
   ],
   "faqs": [
-    { "question": "What is tonsillar aspergillosis?", "answer": "Tonsillar aspergillosis is a fungal infection of the tonsils caused by Aspergillus species (most commonly Aspergillus fumigatus). It occurs almost exclusively in people with severely weakened immune systems — such as patients undergoing chemotherapy for leukemia, those who've had bone marrow transplants, or people on high-dose steroids. The fungus colonizes the tonsil crypts and causes inflammation, white patches, and sore throat.", "schemaEligible": true },
-    { "question": "Is tonsillar aspergillosis different from Aspergillus in the lungs?", "answer": "Yes. Invasive pulmonary aspergillosis (IPA) is an infection of the lung tissue — the most common form of invasive Aspergillus. Tonsillar aspergillosis is a localized infection of the oropharynx. Both occur in immunocompromised patients, but the lung is the primary entry point for most invasive aspergillosis. Tonsillar aspergillosis is rarer and has a better prognosis — it doesn't spread to the lungs in most cases.", "schemaEligible": true },
-    { "question": "Why do people with weak immune systems get tonsillar aspergillosis?", "answer": "Healthy people inhale Aspergillus spores constantly without getting sick because their immune system (especially neutrophils — a type of white blood cell) kills the fungus before it can grow. People with neutropenia (very low neutrophil counts from chemotherapy) lose this protection. Neutrophils are the main defense against Aspergillus hyphae — when they're low or absent, the fungus can grow in the tonsils (or lungs).", "schemaEligible": true },
-    { "question": "How is tonsillar aspergillosis diagnosed?", "answer": "The doctor may suspect tonsillar aspergillosis if a neutropenic patient has persistent sore throat with white patches that don't respond to bacterial antibiotics. Diagnosis requires taking a piece of tonsil tissue (biopsy) and looking at it under a microscope — characteristic acute-angle branching fungal hyphae confirm the diagnosis. The fungus can also be grown in culture. Blood tests (galactomannan) can support the diagnosis.", "schemaEligible": true },
-    { "question": "What is the treatment for tonsillar aspergillosis?", "answer": "The main treatment is voriconazole — a strong antifungal medicine that kills Aspergillus. Treatment typically lasts 6-12 weeks or longer, until the immune system recovers (especially neutrophils) and the infection clears. Isavuconazole is an alternative if voriconazole doesn't work or causes side effects. Surgery is rarely needed. Monitoring drug levels and side effects is part of management.", "schemaEligible": true },
-    { "question": "Is tonsillar aspergillosis dangerous?", "answer": "For localized tonsillar aspergillosis treated promptly with antifungals, the prognosis is excellent — over 90% cure rates. However, if untreated or in patients with persistent neutropenia, it can spread locally to the throat and neck, or even disseminate to the lungs and brain — which is much more dangerous. Early treatment is crucial.", "schemaEligible": true },
-    { "question": "Can I prevent tonsillar aspergillosis?", "answer": "Prevention focuses on protecting immunocompromised patients. Antifungal prophylaxis (posaconazole or voriconazole) during high-risk periods (neutropenic chemotherapy) reduces Aspergillus infections dramatically. HEPA-filtered rooms, avoiding construction/dust, and N95 masks in hospital settings help. For individual patients, the most important 'prevention' is keeping the duration of neutropenia as short as possible.", "schemaEligible": true },
-    { "question": "Is tonsillar aspergillosis contagious?", "answer": "No. Aspergillus is an environmental fungus — you cannot catch it from another person. The infection comes from inhaling spores that are already in the environment (soil, dust, indoor air). Patients with Aspergillus infections are not contagious.", "schemaEligible": true },
-    { "question": "Why is voriconazole preferred over other antifungals?", "answer": "Voriconazole is the best antifungal for treating Aspergillus because it penetrates well into infected tissues, has strong activity against the most common Aspergillus species, and has been proven superior to older drugs like amphotericin B for invasive aspergillosis. It achieves better cure rates and improved survival.", "schemaEligible": true },
-    { "question": "What happens if neutrophils don't recover?", "answer": "Neutrophil recovery is the single most important factor determining outcome of invasive aspergillosis. If neutrophils don't recover (e.g., persistent leukemia, graft failure after transplant), the infection is very difficult to cure and often recurs. This is why treating the underlying disease (inducing leukemia remission, supporting engraftment) is as important as antifungal therapy.", "schemaEligible": true },
-    { "question": "How do I know if the treatment is working?", "answer": "Improvement is assessed by: clinical symptoms (fever, throat pain resolution), tonsillar examination (shrinkage of plaques), galactomannan blood test trending downward, and CT imaging showing resolution.voriconazole drug levels are monitored to ensure adequate exposure. Treatment typically continues for 6-12 weeks minimum.", "schemaEligible": true },
-    { "question": "What is the difference between tonsillar aspergillosis and tonsillar candidiasis (thrush)?", "answer": "Both occur in immunocompromised patients and cause white patches in the mouth. Thrush (candidiasis) is caused by Candida yeast — the white patches can be wiped off, leaving a red base. Aspergillus causes plaques that are more adherent, often grayish, and located specifically on the tonsil. Under the microscope, Candida shows budding yeast cells; Aspergillus shows branching hyphae. Treatment is completely different — antifungals for both but different drug classes.", "schemaEligible": true }
+    {
+      "question": "What is tonsillar aspergillosis?",
+      "answer": "Tonsillar aspergillosis is a fungal infection of the tonsils caused by Aspergillus species (most commonly Aspergillus fumigatus). It occurs almost exclusively in people with severely weakened immune systems — such as patients undergoing chemotherapy for leukemia, those who've had bone marrow transplants, or people on high-dose steroids. The fungus colonizes the tonsil crypts and causes inflammation, white patches, and sore throat.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is tonsillar aspergillosis different from Aspergillus in the lungs?",
+      "answer": "Yes. Invasive pulmonary aspergillosis (IPA) is an infection of the lung tissue — the most common form of invasive Aspergillus. Tonsillar aspergillosis is a localized infection of the oropharynx. Both occur in immunocompromised patients, but the lung is the primary entry point for most invasive aspergillosis. Tonsillar aspergillosis is rarer and has a better prognosis — it doesn't spread to the lungs in most cases.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why do people with weak immune systems get tonsillar aspergillosis?",
+      "answer": "Healthy people inhale Aspergillus spores constantly without getting sick because their immune system (especially neutrophils — a type of white blood cell) kills the fungus before it can grow. People with neutropenia (very low neutrophil counts from chemotherapy) lose this protection. Neutrophils are the main defense against Aspergillus hyphae — when they're low or absent, the fungus can grow in the tonsils (or lungs).",
+      "schemaEligible": true
+    },
+    {
+      "question": "How is tonsillar aspergillosis diagnosed?",
+      "answer": "The doctor may suspect tonsillar aspergillosis if a neutropenic patient has persistent sore throat with white patches that don't respond to bacterial antibiotics. Diagnosis requires taking a piece of tonsil tissue (biopsy) and looking at it under a microscope — characteristic acute-angle branching fungal hyphae confirm the diagnosis. The fungus can also be grown in culture. Blood tests (galactomannan) can support the diagnosis.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the treatment for tonsillar aspergillosis?",
+      "answer": "The main treatment is voriconazole — a strong antifungal medicine that kills Aspergillus. Treatment typically lasts 6-12 weeks or longer, until the immune system recovers (especially neutrophils) and the infection clears. Isavuconazole is an alternative if voriconazole doesn't work or causes side effects. Surgery is rarely needed. Monitoring drug levels and side effects is part of management.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is tonsillar aspergillosis dangerous?",
+      "answer": "For localized tonsillar aspergillosis treated promptly with antifungals, the prognosis is excellent — over 90% cure rates. However, if untreated or in patients with persistent neutropenia, it can spread locally to the throat and neck, or even disseminate to the lungs and brain — which is much more dangerous. Early treatment is crucial.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Can I prevent tonsillar aspergillosis?",
+      "answer": "Prevention focuses on protecting immunocompromised patients. Antifungal prophylaxis (posaconazole or voriconazole) during high-risk periods (neutropenic chemotherapy) reduces Aspergillus infections dramatically. HEPA-filtered rooms, avoiding construction/dust, and N95 masks in hospital settings help. For individual patients, the most important 'prevention' is keeping the duration of neutropenia as short as possible.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Is tonsillar aspergillosis contagious?",
+      "answer": "No. Aspergillus is an environmental fungus — you cannot catch it from another person. The infection comes from inhaling spores that are already in the environment (soil, dust, indoor air). Patients with Aspergillus infections are not contagious.",
+      "schemaEligible": true
+    },
+    {
+      "question": "Why is voriconazole preferred over other antifungals?",
+      "answer": "Voriconazole is the best antifungal for treating Aspergillus because it penetrates well into infected tissues, has strong activity against the most common Aspergillus species, and has been proven superior to older drugs like amphotericin B for invasive aspergillosis. It achieves better cure rates and improved survival.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What happens if neutrophils don't recover?",
+      "answer": "Neutrophil recovery is the single most important factor determining outcome of invasive aspergillosis. If neutrophils don't recover (e.g., persistent leukemia, graft failure after transplant), the infection is very difficult to cure and often recurs. This is why treating the underlying disease (inducing leukemia remission, supporting engraftment) is as important as antifungal therapy.",
+      "schemaEligible": true
+    },
+    {
+      "question": "How do I know if the treatment is working?",
+      "answer": "Improvement is assessed by: clinical symptoms (fever, throat pain resolution), tonsillar examination (shrinkage of plaques), galactomannan blood test trending downward, and CT imaging showing resolution.voriconazole drug levels are monitored to ensure adequate exposure. Treatment typically continues for 6-12 weeks minimum.",
+      "schemaEligible": true
+    },
+    {
+      "question": "What is the difference between tonsillar aspergillosis and tonsillar candidiasis (thrush)?",
+      "answer": "Both occur in immunocompromised patients and cause white patches in the mouth. Thrush (candidiasis) is caused by Candida yeast — the white patches can be wiped off, leaving a red base. Aspergillus causes plaques that are more adherent, often grayish, and located specifically on the tonsil. Under the microscope, Candida shows budding yeast cells; Aspergillus shows branching hyphae. Treatment is completely different — antifungals for both but different drug classes.",
+      "schemaEligible": true
+    }
   ],
   "simpleName": "Tonsillar aspergillosis",
   "regionalNames": {
@@ -206,20 +405,62 @@
     "te": "టాన్సిలార్ ఆస్పర్జిలోసిస్",
     "mr": "टॉन्सिलर ऍस्परजिलोसिस"
   },
-  "searchTags": ["tonsillar aspergillosis", "Aspergillus tonsil", "fungal tonsillitis", "invasive aspergillosis", "voriconazole tonsil"],
-  "symptomKeywords": ["white tonsil plaques", "odynophagia neutropenia", "fungal sore throat", "immunocompromised tonsil"],
-  "metaTitle": "Tonsillar Aspergillosis: Treatment in Immunocompromised | AiHealz",
-  "metaDescription": "Expert guide to tonsillar aspergillosis: voriconazole treatment, diagnosis in neutropenic patients, Aspergillus infection in leukemia. For hematology and oncology teams.",
+  "searchTags": [
+    "tonsillar aspergillosis",
+    "Aspergillus tonsil",
+    "fungal tonsillitis",
+    "invasive aspergillosis",
+    "voriconazole tonsil"
+  ],
+  "symptomKeywords": [
+    "white tonsil plaques",
+    "odynophagia neutropenia",
+    "fungal sore throat",
+    "immunocompromised tonsil"
+  ],
+  "metaTitle": "Tonsillar Aspergillosis: Symptoms & Treatment Guide",
+  "metaDescription": "Expert guide to tonsillar aspergillosis: voriconazole treatment, diagnosis in neutropenic patients, Aspergillus infection in leukemia patients.",
   "canonicalUrl": "https://aihealz.com/us/en/tonsillar-aspergillosis",
-  "keywords": ["tonsillar aspergillosis", "Aspergillus tonsil infection", "voriconazole treatment", "neutropenic fungal infection", "invasive aspergillosis"],
+  "keywords": [
+    "tonsillar aspergillosis",
+    "Aspergillus tonsil infection",
+    "voriconazole treatment",
+    "neutropenic fungal infection",
+    "invasive aspergillosis"
+  ],
   "reviewedByDoctorId": null,
   "lastReviewed": "2026-05-16",
   "images": [],
   "sources": [
-    { "title": "Patterson TF et al. IDSA Guidelines for Aspergillus 2016 - Clin Infect Dis", "url": "https://pubmed.ncbi.nlm.nih.gov/27340678", "accessedDate": "2026-05-16", "type": "medical_journal" },
-    { "title": "Herbrecht R et al. Voriconazole vs amphotericin B for invasive aspergillosis - N Engl J Med 2002", "url": "https://pubmed.ncbi.nlm.nih.gov/12192063", "accessedDate": "2026-05-16", "type": "medical_journal" },
-    { "title": "Maertens JA et al. Isavuconazole vs voriconazole - Lancet 2016", "url": "https://pubmed.ncbi.nlm.nih.gov/26962086", "accessedDate": "2026-05-16", "type": "medical_journal" },
-    { "title": "Kontoyiannis DP et al. Aspergillus in immunocompromised hosts - Clin Infect Dis 2002", "url": "https://pubmed.ncbi.nlm.nih.gov/11800465", "accessedDate": "2026-05-16", "type": "medical_journal" },
-    { "title": "Segal BH et al. Aspergillus prophylaxis in neutropenia - N Engl J Med 2020", "url": "https://pubmed.ncbi.nlm.nih.gov/33190949", "accessedDate": "2026-05-16", "type": "medical_journal" }
+    {
+      "title": "Patterson TF et al. IDSA Guidelines for Aspergillus 2016 - Clin Infect Dis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27340678",
+      "accessedDate": "2026-05-16",
+      "type": "medical_journal"
+    },
+    {
+      "title": "Herbrecht R et al. Voriconazole vs amphotericin B for invasive aspergillosis - N Engl J Med 2002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12192063",
+      "accessedDate": "2026-05-16",
+      "type": "medical_journal"
+    },
+    {
+      "title": "Maertens JA et al. Isavuconazole vs voriconazole - Lancet 2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26962086",
+      "accessedDate": "2026-05-16",
+      "type": "medical_journal"
+    },
+    {
+      "title": "Kontoyiannis DP et al. Aspergillus in immunocompromised hosts - Clin Infect Dis 2002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11800465",
+      "accessedDate": "2026-05-16",
+      "type": "medical_journal"
+    },
+    {
+      "title": "Segal BH et al. Aspergillus prophylaxis in neutropenia - N Engl J Med 2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33190949",
+      "accessedDate": "2026-05-16",
+      "type": "medical_journal"
+    }
   ]
 }

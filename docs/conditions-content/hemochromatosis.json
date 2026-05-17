@@ -19,29 +19,42 @@
     "version": "v2",
     "authoringNotes": "Medical content reviewed against 2022 AASLD hemochromatosis guideline, UpToDate, and Iron Disorders Institute resources. Ferritin and transferrin saturation thresholds verified against AASLD/AIC recommendations."
   },
-
   "h1Title": "Hereditary Hemochromatosis: Symptoms, Causes, Diagnosis, and Treatment",
   "specialistType": "Endocrinology/Hematology",
-
   "heroOverview": "Hereditary hemochromatosis is an autosomal recessive iron overload disorder caused by mutations in the HFE gene — most commonly C282Y homozygosity, found in approximately 1 in 200–400 individuals of Northern European descent. Excess iron deposits progressively in the liver (causing cirrhosis), pancreas (causing diabetes), heart (causing cardiomyopathy), joints (causing arthritis), and skin (causing hyperpigmentation), with the liver bearing the greatest burden of disease. The condition is diagnosed by elevated serum ferritin and transferrin saturation above 45 percent, confirmed by HFE genetic testing. Treatment by regular phlebotomy restores normal life expectancy when initiated before cirrhosis develops.",
-
   "keyStats": {
     "prevalence": "1 in 200–400 people of Northern European descent carry C282Y homozygosity; penetrance (clinical disease) is approximately 25–50% in men and 10–25% in women",
     "demographics": "90% of cases in people of Northern European ancestry; symptoms typically appear in men aged 40–60 and post-menopausal women",
     "avgAge": "Clinical manifestations usually appear after age 40 in men; women present 10–15 years later due to iron loss through menstruation",
     "globalCases": "Estimated 1 in 200–400 individuals of European descent are homozygous for C282Y"
   },
-
   "definition": "Hereditary hemochromatosis (ICD-10: E83.1) is an autosomal recessive disorder of iron metabolism leading to excessive intestinal iron absorption and progressive iron accumulation in organs and tissues. The HFE protein normally regulates iron absorption by interacting with transferrin receptor 1 on enterocytes; mutations — most commonly C282Y (a cysteine-to-tyrosine substitution at position 282) and less frequently H63D — disrupt this regulatory interaction, causing unregulated iron uptake from the gut. Iron accumulates first in the liver (hepatocytes), then spreads to the pancreas, heart, joints, pituitary, and skin over decades. The liver bears the highest iron burden and is the first organ to show clinical injury — fibrosis, cirrhosis, and eventually hepatocellular carcinoma, which is the major cause of death in untreated patients. The disease follows a predictable staging model: genetic susceptibility plus elevated iron stores, progressing to tissue injury, and finally to clinical disease affecting specific organs. Penetrance is incomplete and sex-modified — estrogen-mediated iron loss in premenopausal women explains why women develop disease a decade or more later than men on average.",
   "typesClassification": [
-    { "type": "Type 1 (HFE-related classic hemochromatosis)", "description": "C282Y homozygosity — the most common form, responsible for roughly 80–90% of clinical cases in populations of Northern European descent. Presents with the classic triad of liver disease, diabetes, and skin bronzing." },
-    { "type": "Type 2A (Juvenile hemochromatosis, HAMP mutations)", "description": "Mutation in the hepcidin gene (HAMP) on chromosome 19, causing severe iron overload in children and young adults under 30 — faster progression than HFE-related disease with prominent cardiac and endocrine involvement." },
-    { "type": "Type 2B (Juvenile hemochromatosis, HJV mutations)", "description": "Mutation in hemojuvelin (HJV), a co-receptor for bone morphogenetic proteins involved in hepcidin regulation. Produces the same juvenile phenotype as HAMP mutations, with severe iron overload before age 30." },
-    { "type": "Type 3 (Transferrin receptor 2 mutations)", "description": "Mutation in TFR2, a protein expressed on hepatocytes that normally senses iron levels and regulates hepcidin production. Causes moderate iron overload with hepatic and endocrine involvement in mid-adulthood." },
-    { "type": "Type 4 (Ferroportin disease, SLC40A1 mutations)", "description": "Mutation in ferroportin, the iron export protein on enterocytes and macrophages. Two forms: loss-of-function (autosomal dominant iron accumulation primarily in macrophages, lower ferritin, no transferrin saturation rise) and gain-of-function (hepcidin-resistant, similar to HFE disease phenotype)." },
-    { "type": "Non-HFE iron overload", "description": "Includes mutations in genes beyond HFE — such as transferrin receptor 2, ferroportin, hepcidin, and hemojuvelin — that cause iron overload without the classic C282Y genotype. Account for approximately 5–10% of iron overload cases." }
+    {
+      "type": "Type 1 (HFE-related classic hemochromatosis)",
+      "description": "C282Y homozygosity — the most common form, responsible for roughly 80–90% of clinical cases in populations of Northern European descent. Presents with the classic triad of liver disease, diabetes, and skin bronzing."
+    },
+    {
+      "type": "Type 2A (Juvenile hemochromatosis, HAMP mutations)",
+      "description": "Mutation in the hepcidin gene (HAMP) on chromosome 19, causing severe iron overload in children and young adults under 30 — faster progression than HFE-related disease with prominent cardiac and endocrine involvement."
+    },
+    {
+      "type": "Type 2B (Juvenile hemochromatosis, HJV mutations)",
+      "description": "Mutation in hemojuvelin (HJV), a co-receptor for bone morphogenetic proteins involved in hepcidin regulation. Produces the same juvenile phenotype as HAMP mutations, with severe iron overload before age 30."
+    },
+    {
+      "type": "Type 3 (Transferrin receptor 2 mutations)",
+      "description": "Mutation in TFR2, a protein expressed on hepatocytes that normally senses iron levels and regulates hepcidin production. Causes moderate iron overload with hepatic and endocrine involvement in mid-adulthood."
+    },
+    {
+      "type": "Type 4 (Ferroportin disease, SLC40A1 mutations)",
+      "description": "Mutation in ferroportin, the iron export protein on enterocytes and macrophages. Two forms: loss-of-function (autosomal dominant iron accumulation primarily in macrophages, lower ferritin, no transferrin saturation rise) and gain-of-function (hepcidin-resistant, similar to HFE disease phenotype)."
+    },
+    {
+      "type": "Non-HFE iron overload",
+      "description": "Includes mutations in genes beyond HFE — such as transferrin receptor 2, ferroportin, hepcidin, and hemojuvelin — that cause iron overload without the classic C282Y genotype. Account for approximately 5–10% of iron overload cases."
+    }
   ],
-
   "primarySymptoms": [
     "Fatigue and generalized weakness, often the earliest and most common presenting symptom — reported by 75–85% of symptomatic patients.",
     "Joint pain and arthritis, most commonly affecting the second and third metacarpophalangeal joints bilaterally (MCP 2 and 3) and the wrists, mimicking pseudogout — present in 20–50% of patients.",
@@ -54,7 +67,6 @@
     "Ascites, jaundice, or upper gastrointestinal bleeding from portal hypertension in patients who have progressed to cirrhosis — indicating advanced disease.",
     "Spider nevi, palmar erythema, and other signs of chronic liver disease in patients with established cirrhosis."
   ],
-
   "earlyWarningSigns": [
     "Unexplained elevation in serum ferritin or transferrin saturation above 45% on routine blood work, even without symptoms",
     "Family history of hemochromatosis or unexplained liver cirrhosis in a first-degree relative",
@@ -62,7 +74,6 @@
     "Unexplained diabetes or insulin resistance in a patient under 50, especially in someone of Northern European ancestry",
     "Fatigue and loss of libido in a middle-aged man with elevated liver enzymes — the combination is suggestive enough to warrant iron studies"
   ],
-
   "emergencySigns": [
     "Acute onset of confusion, drowsiness, or asterixis (liver flap) — possible hepatic encephalopathy from decompensated cirrhosis",
     "Sudden upper gastrointestinal bleeding from esophageal varices — a life-threatening complication of portal hypertension in cirrhosis",
@@ -70,7 +81,6 @@
     "New onset of rapid irregular heartbeat or acute heart failure symptoms — iron-induced cardiac arrhythmia or decompensated cardiomyopathy",
     "Deep jaundice (bilirubin >3 mg/dL) with coagulopathy (INR >1.5) — possible acute-on-chronic liver failure"
   ],
-
   "causes": [
     {
       "cause": "HFE gene mutation (C282Y homozygosity)",
@@ -101,29 +111,65 @@
       "description": "Disorders with high red cell turnover and ineffective erythropoiesis (certain thalassemias, myelodysplastic syndromes) drive iron accumulation through both increased gut absorption (mediated by suppressed hepcidin) and transfusion dependence."
     }
   ],
-
   "riskFactors": [
-    { "factor": "Northern European ancestry", "category": "non-modifiable", "description": "C282Y homozygosity frequency is highest in Northern European populations — approximately 1 in 200–400 in the UK, Ireland, Scandinavia, and their diaspora. The variant is rare or absent in East Asian, African, and South Asian populations." },
-    { "factor": "Male sex", "category": "non-modifiable", "description": "Men develop clinical hemochromatosis 2–5 times more frequently than women at a given iron load, largely because women lose iron through menstruation, pregnancy, and lactation throughout their reproductive years." },
-    { "factor": "Age over 40 (men) or post-menopausal (women)", "category": "non-modifiable", "description": "Iron accumulates over decades before reaching the organ injury threshold; clinical disease manifests most often after age 40 in men and after menopause in women." },
-    { "factor": "Alcohol consumption above 2 drinks daily", "category": "modifiable", "description": "Alcohol synergizes with iron to accelerate hepatic fibrosis and cirrhosis. Patients with hemochromatosis who consume more than 60 g of alcohol daily (roughly 4–5 standard drinks) have a dramatically elevated risk of cirrhosis." },
-    { "factor": "Hepatitis B or C co-infection", "category": "modifiable", "description": "Concurrent viral hepatitis dramatically accelerates progression to cirrhosis in hemochromatosis patients — the combination of iron overload and viral hepatitis is multiplicative in causing liver injury." },
-    { "factor": "Obesity and NAFLD", "category": "modifiable", "description": "Non-alcoholic fatty liver disease and iron overload share pathogenic overlap; NAFLD patients with elevated ferritin have worse fibrosis scores, and iron may worsen metabolic liver disease progression." },
-    { "factor": "High iron diet (fortified cereals, red meat, iron supplements)", "category": "modifiable", "description": "Excessive iron intake — particularly from supplements or iron-fortified foods — accelerates iron loading in patients with the C282Y genotype, though dietary iron is a smaller contributor than genetic susceptibility." },
-    { "factor": "Vitamin C excess supplementation", "category": "modifiable", "description": "High-dose vitamin C (above 500 mg daily) enhances non-heme iron absorption in the gut and can mobilize iron from stores, potentially increasing oxidative stress in iron-loaded organs. Patients with hemochromatosis should avoid high-dose vitamin C supplements." },
-    { "factor": "Type 2 diabetes", "category": "modifiable", "description": "Iron deposition in the pancreas directly causes beta-cell failure and diabetes — poorly controlled diabetes accelerates organ damage, while diabetes from hemochromatosis improves substantially with iron removal." },
-    { "factor": "Family history of hemochromatosis or unexplained cirrhosis", "category": "genetic", "description": "First-degree relatives of an affected individual should undergo HFE genetic testing and iron studies, as approximately 25% of siblings of a C282Y homozygote are also homozygous." }
+    {
+      "factor": "Northern European ancestry",
+      "category": "non-modifiable",
+      "description": "C282Y homozygosity frequency is highest in Northern European populations — approximately 1 in 200–400 in the UK, Ireland, Scandinavia, and their diaspora. The variant is rare or absent in East Asian, African, and South Asian populations."
+    },
+    {
+      "factor": "Male sex",
+      "category": "non-modifiable",
+      "description": "Men develop clinical hemochromatosis 2–5 times more frequently than women at a given iron load, largely because women lose iron through menstruation, pregnancy, and lactation throughout their reproductive years."
+    },
+    {
+      "factor": "Age over 40 (men) or post-menopausal (women)",
+      "category": "non-modifiable",
+      "description": "Iron accumulates over decades before reaching the organ injury threshold; clinical disease manifests most often after age 40 in men and after menopause in women."
+    },
+    {
+      "factor": "Alcohol consumption above 2 drinks daily",
+      "category": "modifiable",
+      "description": "Alcohol synergizes with iron to accelerate hepatic fibrosis and cirrhosis. Patients with hemochromatosis who consume more than 60 g of alcohol daily (roughly 4–5 standard drinks) have a dramatically elevated risk of cirrhosis."
+    },
+    {
+      "factor": "Hepatitis B or C co-infection",
+      "category": "modifiable",
+      "description": "Concurrent viral hepatitis dramatically accelerates progression to cirrhosis in hemochromatosis patients — the combination of iron overload and viral hepatitis is multiplicative in causing liver injury."
+    },
+    {
+      "factor": "Obesity and NAFLD",
+      "category": "modifiable",
+      "description": "Non-alcoholic fatty liver disease and iron overload share pathogenic overlap; NAFLD patients with elevated ferritin have worse fibrosis scores, and iron may worsen metabolic liver disease progression."
+    },
+    {
+      "factor": "High iron diet (fortified cereals, red meat, iron supplements)",
+      "category": "modifiable",
+      "description": "Excessive iron intake — particularly from supplements or iron-fortified foods — accelerates iron loading in patients with the C282Y genotype, though dietary iron is a smaller contributor than genetic susceptibility."
+    },
+    {
+      "factor": "Vitamin C excess supplementation",
+      "category": "modifiable",
+      "description": "High-dose vitamin C (above 500 mg daily) enhances non-heme iron absorption in the gut and can mobilize iron from stores, potentially increasing oxidative stress in iron-loaded organs. Patients with hemochromatosis should avoid high-dose vitamin C supplements."
+    },
+    {
+      "factor": "Type 2 diabetes",
+      "category": "modifiable",
+      "description": "Iron deposition in the pancreas directly causes beta-cell failure and diabetes — poorly controlled diabetes accelerates organ damage, while diabetes from hemochromatosis improves substantially with iron removal."
+    },
+    {
+      "factor": "Family history of hemochromatosis or unexplained cirrhosis",
+      "category": "genetic",
+      "description": "First-degree relatives of an affected individual should undergo HFE genetic testing and iron studies, as approximately 25% of siblings of a C282Y homozygote are also homozygous."
+    }
   ],
-
   "affectedDemographics": [
     "C282Y homozygosity prevalence is highest in Ireland (1 in 83), followed by Norway (1 in 134), Sweden (1 in 200), France (1 in 300), and the United States (1 in 300–400 for people of European descent)",
     "African, East Asian, and South Asian populations carry very low C282Y prevalence but may have non-HFE iron overload disorders",
     "Juvenile hemochromatosis (HJV/HAMP mutations) occurs worldwide regardless of ancestry and typically presents before age 30",
     "Women represent roughly 30% of clinically symptomatic hemochromatosis cases, with symptoms usually appearing 10–15 years after menopause"
   ],
-
   "diagnosisOverview": "Diagnosis of hereditary hemochromatosis follows a stepwise approach that begins with iron studies, proceeds to genetic testing, and may require liver biopsy in selected cases. The first-line screening test is a combination of serum ferritin and transferrin saturation (calculated as serum iron divided by total iron-binding capacity, expressed as a percentage). Transferrin saturation above 45% is the most sensitive single marker for HFE hemochromatosis; ferritin is elevated in many conditions and less specific. In a patient of Northern European ancestry with transferrin saturation above 45%, the next step is HFE gene testing for C282Y and H63D variants. C282Y homozygosity confirms the diagnosis and no further testing is needed in most patients. Liver biopsy to quantitate hepatic iron concentration and assess fibrosis is reserved for patients with ferritin above 1000 ng/mL, elevated liver enzymes, or clinical signs of liver disease — it is not required in uncomplicated early cases. The hepatic iron index (hepatic iron concentration divided by age) greater than 1.9 supports the diagnosis. MRI with iron-sensitive sequences can non-invasively quantify liver and cardiac iron content and is increasingly used instead of biopsy in many centers. Once the diagnosis is established, first-degree relatives should be offered HFE testing and iron studies. The American College of Gastroenterology and AASLD recommend against population screening for HFE mutations in the general population — targeted testing in at-risk individuals (Northern European ancestry, unexplained elevated ferritin, family history) is the current standard.",
-
   "diagnosticTests": [
     {
       "test": "Transferrin saturation (serum iron ÷ TIBC × 100)",
@@ -161,9 +207,7 @@
       "whatToExpect": "A non-invasive ultrasound of the heart lasting 30–45 minutes. Measures ejection fraction, wall thickness, and diastolic function — all of which may be impaired by iron deposition."
     }
   ],
-
   "treatmentOverview": "Treatment of hereditary hemochromatosis has two components: iron removal to reverse organ damage, and surveillance for complications that have already developed. The primary and most effective treatment is therapeutic phlebotomy — weekly removal of 500 mL of blood (equivalent to 200–250 mg of iron) until ferritin falls to the target range of 50–100 ng/mL. For most patients with significant iron overload, this requires 50–100 phlebotomies over 1–2 years. Once iron stores are depleted, a maintenance schedule (typically every 3–4 months) keeps ferritin in the target range for life. Phlebotomy reverses fatigue, improves skin pigmentation, normalizes liver enzymes, and can halt or partially reverse early cardiomyopathy and diabetes — the earlier it starts, the more complete the reversal. Patients who have developed cirrhosis before treatment starts have a significantly worse prognosis; cirrhosis is not fully reversible. Liver transplant is the definitive treatment for end-stage hemochromatosis liver disease and is the only intervention that can cure both the cirrhosis and the iron overload. Patients with established cirrhosis require hepatocellular carcinoma surveillance (ultrasound every 6 months) given their elevated cancer risk. Iron chelation therapy (deferasirox, deferoxamine, deferiprone) is reserved for patients who cannot tolerate phlebotomy — primarily those with severe anemia, heart failure, or transfusion-dependent secondary iron overload. Dietary modifications (avoiding iron supplements, vitamin C excess, raw shellfish) are adjunctive but do not replace phlebotomy.",
-
   "medicalTreatments": [
     {
       "name": "Therapeutic phlebotomy (500 mL weekly)",
@@ -196,7 +240,6 @@
       "effectiveness": "Removes roughly twice the iron per session compared to standard phlebotomy; useful in patients who cannot tolerate large volume blood loss, such as those with cardiac disease."
     }
   ],
-
   "surgicalOptions": [
     {
       "name": "Liver transplantation",
@@ -209,16 +252,18 @@
       "successRate": "Beneficial in iron-loaded cardiomyopathy when standard heart failure criteria are met; cardiac iron removal must accompany device placement to prevent progressive deterioration."
     }
   ],
-
   "alternativeTreatments": [
-    { "name": "Green tea extract (EGCG)", "description": "Polyphenols in green tea have modest iron-chelating properties in vitro and may reduce intestinal iron absorption. Not a substitute for phlebotomy but potentially useful as an adjunct in early-stage disease." },
-    { "name": "Turmeric (curcumin)", "description": "Animal studies suggest curcumin may reduce hepatic iron accumulation and fibrosis through antioxidant and anti-inflammatory mechanisms. No robust human trial data; not a substitute for established therapy." }
+    {
+      "name": "Green tea extract (EGCG)",
+      "description": "Polyphenols in green tea have modest iron-chelating properties in vitro and may reduce intestinal iron absorption. Not a substitute for phlebotomy but potentially useful as an adjunct in early-stage disease."
+    },
+    {
+      "name": "Turmeric (curcumin)",
+      "description": "Animal studies suggest curcumin may reduce hepatic iron accumulation and fibrosis through antioxidant and anti-inflammatory mechanisms. No robust human trial data; not a substitute for established therapy."
+    }
   ],
-
   "whySeeSpecialist": "A hepatologist or gastroenterologist should manage hemochromatosis in patients with elevated ferritin, liver enzyme abnormalities, or cirrhosis, in coordination with a hematologist for phlebotomy management. An endocrinologist is appropriate for diabetes and hypogonadism management. A cardiologist should evaluate patients with cardiac symptoms or ferritin above 1000 ng/mL. Genetic counseling is recommended for patients and their family members.",
-
   "doctorSelectionGuide": "Look for a hepatologist or gastroenterologist experienced in iron overload disorders. Ask whether they use transferrin saturation and ferritin as first-line screening, offer HFE genetic testing, and have a structured phlebotomy protocol. Centers specializing in hemoglobinopathies or hematology often have the most experience with iron overload. For family screening, a clinical geneticist can coordinate cascade testing.",
-
   "preventionStrategies": [
     "First-degree relatives of a patient with confirmed HFE hemochromatosis should undergo HFE genetic testing and iron studies, regardless of symptoms — approximately 25% of siblings will be affected",
     "Avoid iron supplements, high-dose vitamin C (above 500 mg daily), and excessive red meat intake — modest contributors to iron loading in susceptible individuals",
@@ -226,7 +271,6 @@
     "Maintain a healthy weight and manage NAFLD aggressively if present — metabolic liver disease compounds iron-related liver injury",
     "Screen for and treat hepatitis B and C co-infection — viral hepatitis dramatically accelerates cirrhosis in iron-loaded livers"
   ],
-
   "lifestyleModifications": [
     "Donate blood regularly once hemochromatosis is diagnosed and under treatment — therapeutic blood donation is as effective as physician-administered phlebotomy for many patients, and donated blood can help others",
     "Avoid raw or undercooked shellfish — patients with liver disease are at increased risk of Vibrio vulnificus infection, which thrives in warm seawater and can cause fatal sepsis in cirrhotic patients",
@@ -235,7 +279,6 @@
     "Maintain up-to-date vaccinations against hepatitis A and B — chronic hepatitis co-infection dramatically worsens outcomes in hemochromatosis",
     "Exercise regularly but avoid extreme endurance activities that dramatically increase iron需求 through sweat losses — moderate aerobic exercise is beneficial for cardiovascular and metabolic health"
   ],
-
   "dietRecommendations": {
     "recommended": [
       "Tea (black or green) with meals — tannins reduce non-heme iron absorption by up to 50%; drinking tea with iron-rich meals is one of the most evidence-based dietary interventions",
@@ -253,9 +296,7 @@
       "Alcohol above 1–2 standard drinks daily — alcohol accelerates hepatic fibrosis progression in iron-loaded livers"
     ]
   },
-
   "exerciseGuidelines": "Regular moderate aerobic exercise (150 minutes per week of walking, cycling, or swimming) is safe and beneficial in hemochromatosis patients without advanced cardiomyopathy. Exercise improves insulin sensitivity, cardiovascular health, and fatigue. Avoid extreme endurance events (ultramarathons, ironman distance triathlons) due to significant iron losses through sweat and GI blood loss, which can mask the need for phlebotomy adjustments. In patients with established cardiomyopathy, exercise prescription should be individualized by a cardiologist.",
-
   "dailyManagement": [
     "Schedule and keep regular phlebotomy appointments — adherence is the single most important factor in treatment success",
     "Monitor ferritin every 3 months during the iron depletion phase and every 6–12 months in the maintenance phase",
@@ -264,11 +305,8 @@
     "Avoid raw shellfish and ensure all fish and shellfish is thoroughly cooked — cirrhotic patients are at risk for serious bacterial infection",
     "Inform all clinicians (including dentists) of the hemochromatosis diagnosis and the need to avoid iron supplements — this prevents inadvertent iatrogenic iron loading"
   ],
-
   "prognosis": "The prognosis of hereditary hemochromatosis is fundamentally determined by the stage at which treatment begins. Patients diagnosed and treated with phlebotomy before cirrhosis develops have a normal life expectancy — iron removal prevents further organ damage and reverses most established complications (diabetes, cardiomyopathy, arthropathy, skin changes). Liver enzymes normalize, fibrosis can regress, and quality of life improves dramatically with treatment. Once cirrhosis has developed before treatment starts, the prognosis diverges significantly: patients with established cirrhosis carry an approximately 200-fold increased risk of hepatocellular carcinoma, require lifelong surveillance with imaging every 6 months, and have reduced survival even after iron depletion. Liver transplant can rescue patients with end-stage cirrhosis and provides a cure, with 5-year survival of approximately 70–80%. The leading causes of death in treated hemochromatosis are hepatocellular carcinoma (30–45% of deaths in cirrhotic patients) and cirrhosis complications. The key message is that early detection — before symptoms or cirrhosis appear — transforms the prognosis from a serious disease to a fully manageable one.",
-
   "recoveryTimeline": "Ferritin typically falls by 30–50 ng/mL per phlebotomy session in the depletion phase. Most patients achieve target ferritin (50–100 ng/mL) within 12–24 months of weekly phlebotomy (50–100 sessions total), after which maintenance phlebotomy every 3–4 months is required indefinitely. Symptom improvement is gradual: fatigue often improves within 3 months, skin bronzing fades over 1–2 years, diabetes and cardiomyopathy improve substantially over 12–24 months in patients without advanced organ damage. Arthropathy is the least reversible complication — joint symptoms often stabilize but may not fully resolve even with iron depletion. Cirrhosis, once established, is not reversible, though iron removal stops further progression and reduces HCC risk.",
-
   "complications": [
     "Hepatocellular carcinoma — the most serious complication of hemochromatosis cirrhosis; risk is approximately 200-fold elevated compared to the general population; occurs even after iron depletion in cirrhotic patients; requires surveillance imaging every 6 months",
     "Cirrhosis and portal hypertension — irreversible scarring of the liver from decades of iron overload; leads to ascites, esophageal varices, hepatic encephalopathy, and liver failure",
@@ -276,36 +314,87 @@
     "Cardiomyopathy and heart failure — iron infiltration of the myocardium causes restrictive or dilated cardiomyopathy; early treatment can reverse dysfunction, but advanced cardiac iron causes irreversible damage and is the leading cause of death in juvenile hemochromatosis",
     "Hypogonadotropic hypogonadism — iron deposition in the anterior pituitary suppresses gonadotropin secretion, causing testosterone deficiency in men and hypogonadism in both sexes; may not fully reverse with iron removal but testosterone replacement improves symptoms"
   ],
-
   "supportResources": [
-    { "name": "Iron Disorders Institute — Hemochromatosis", "url": "https://www.irondisorders.org/Disorders/Hemochromatosis", "description": "Patient-focused education on iron overload disorders, including a hemochromatosis diet guide and physician finder." },
-    { "name": "American Hemochromatosis Society", "url": "https://www.americanhs.org", "description": "Advocacy organization providing genetic testing resources, physician education, and patient support." },
-    { "name": "AASLD Hemochromatosis Guideline 2022", "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/10.1002/hep4.1894", "description": "Evidence-based clinical practice guideline on hemochromatosis from the American Association for the Study of Liver Diseases." }
+    {
+      "name": "Iron Disorders Institute — Hemochromatosis",
+      "url": "https://www.irondisorders.org/Disorders/Hemochromatosis",
+      "description": "Patient-focused education on iron overload disorders, including a hemochromatosis diet guide and physician finder."
+    },
+    {
+      "name": "American Hemochromatosis Society",
+      "url": "https://www.americanhs.org",
+      "description": "Advocacy organization providing genetic testing resources, physician education, and patient support."
+    },
+    {
+      "name": "AASLD Hemochromatosis Guideline 2022",
+      "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/10.1002/hep4.1894",
+      "description": "Evidence-based clinical practice guideline on hemochromatosis from the American Association for the Study of Liver Diseases."
+    }
   ],
-
   "confusedWithConditions": [
-    { "slug": "fatty-liver-disease-nafld", "name": "Non-Alcoholic Fatty Liver Disease (NAFLD)", "keyDifference": "NAFLD causes elevated ferritin in 20–30% of patients through inflammation (ferritin is an acute-phase reactant), but transferrin saturation is usually normal or only mildly elevated, not above 45%. NAFLD does not cause the clinical triad of bronzed skin, diabetes, and hepatomegaly, and HFE genetic testing is negative." },
-    { "slug": "alcoholic-liver-disease", "name": "Alcoholic Liver Disease", "keyDifference": "Alcoholic liver disease causes elevated ferritin and can cause cirrhosis, but HFE genetic testing is negative, transferrin saturation is usually less elevated than in HFE hemochromatosis, and the skin bronzing and arthropathy pattern of hemochromatosis is absent." },
-    { "slug": "iron-deficiency-anemia", "name": "Iron Deficiency Anemia", "keyDifference": "Iron deficiency causes low ferritin (the body's iron store is depleted) and elevated transferrin (more unsaturated transferrin in circulation), the opposite pattern from hemochromatosis. Patients with iron deficiency feel fatigue, have low hemoglobin, and lack the skin and organ manifestations of hemochromatosis." },
-    { "slug": "chronic-hepatitis-c", "name": "Chronic Hepatitis C", "keyDifference": "Hepatitis C can cause cirrhosis and elevated ferritin, but HFE genetic testing is negative, transferrin saturation is usually not elevated above 45%, and the systemic features of hemochromatosis (bronzing, diabetes, arthropathy) are absent. The two can co-exist, and iron overload worsens hepatitis C outcomes." }
+    {
+      "slug": "fatty-liver-disease-nafld",
+      "name": "Non-Alcoholic Fatty Liver Disease (NAFLD)",
+      "keyDifference": "NAFLD causes elevated ferritin in 20–30% of patients through inflammation (ferritin is an acute-phase reactant), but transferrin saturation is usually normal or only mildly elevated, not above 45%. NAFLD does not cause the clinical triad of bronzed skin, diabetes, and hepatomegaly, and HFE genetic testing is negative."
+    },
+    {
+      "slug": "alcoholic-liver-disease",
+      "name": "Alcoholic Liver Disease",
+      "keyDifference": "Alcoholic liver disease causes elevated ferritin and can cause cirrhosis, but HFE genetic testing is negative, transferrin saturation is usually less elevated than in HFE hemochromatosis, and the skin bronzing and arthropathy pattern of hemochromatosis is absent."
+    },
+    {
+      "slug": "iron-deficiency-anemia",
+      "name": "Iron Deficiency Anemia",
+      "keyDifference": "Iron deficiency causes low ferritin (the body's iron store is depleted) and elevated transferrin (more unsaturated transferrin in circulation), the opposite pattern from hemochromatosis. Patients with iron deficiency feel fatigue, have low hemoglobin, and lack the skin and organ manifestations of hemochromatosis."
+    },
+    {
+      "slug": "chronic-hepatitis-c",
+      "name": "Chronic Hepatitis C",
+      "keyDifference": "Hepatitis C can cause cirrhosis and elevated ferritin, but HFE genetic testing is negative, transferrin saturation is usually not elevated above 45%, and the systemic features of hemochromatosis (bronzing, diabetes, arthropathy) are absent. The two can co-exist, and iron overload worsens hepatitis C outcomes."
+    }
   ],
-
   "coOccurringConditions": [
-    { "slug": "type-2-diabetes-m2011", "name": "Type 2 Diabetes Mellitus" },
-    { "slug": "cirrhosis-of-liver-n183", "name": "Cirrhosis" },
-    { "slug": "cardiomyopathy-n183", "name": "Cardiomyopathy" }
+    {
+      "slug": "type-2-diabetes-m2011",
+      "name": "Type 2 Diabetes Mellitus"
+    },
+    {
+      "slug": "cirrhosis-of-liver-n183",
+      "name": "Cirrhosis"
+    },
+    {
+      "slug": "cardiomyopathy-n183",
+      "name": "Cardiomyopathy"
+    }
   ],
-
   "relatedConditions": [
-    { "slug": "fatty-liver-disease-nafld", "name": "Non-Alcoholic Fatty Liver Disease", "relevance": "NAFLD and hemochromatosis frequently coexist, particularly in patients with metabolic syndrome; iron overload accelerates fibrosis progression in NAFLD, and both require management." },
-    { "slug": "alcoholic-liver-disease", "name": "Alcoholic Liver Disease", "relevance": "Alcohol consumption potentiates iron hepatotoxicity; the combination of HFE hemochromatosis and heavy alcohol use causes cirrhosis at a younger age and more severe fibrosis." },
-    { "slug": "chronic-hepatitis-c", "name": "Chronic Hepatitis C", "relevance": "Hepatitis C and iron overload synergistically worsen liver fibrosis; iron depletion improves treatment response in some hepatitis C patients; both should be treated when present." },
-    { "slug": "cirrhosis-of-liver-n183", "name": "Cirrhosis", "relevance": "The primary driver of morbidity and mortality in untreated hemochromatosis; iron accumulation in hepatocytes over decades causes fibrosis, cirrhosis, and hepatocellular carcinoma." },
-    { "slug": "type-2-diabetes-m2011", "name": "Type 2 Diabetes Mellitus", "relevance": "Iron deposition in pancreatic beta cells causes insulin deficiency; diabetes in hemochromatosis often partially reverses with iron removal, distinguishing it from typical type 2 diabetes." }
+    {
+      "slug": "fatty-liver-disease-nafld",
+      "name": "Non-Alcoholic Fatty Liver Disease",
+      "relevance": "NAFLD and hemochromatosis frequently coexist, particularly in patients with metabolic syndrome; iron overload accelerates fibrosis progression in NAFLD, and both require management."
+    },
+    {
+      "slug": "alcoholic-liver-disease",
+      "name": "Alcoholic Liver Disease",
+      "relevance": "Alcohol consumption potentiates iron hepatotoxicity; the combination of HFE hemochromatosis and heavy alcohol use causes cirrhosis at a younger age and more severe fibrosis."
+    },
+    {
+      "slug": "chronic-hepatitis-c",
+      "name": "Chronic Hepatitis C",
+      "relevance": "Hepatitis C and iron overload synergistically worsen liver fibrosis; iron depletion improves treatment response in some hepatitis C patients; both should be treated when present."
+    },
+    {
+      "slug": "cirrhosis-of-liver-n183",
+      "name": "Cirrhosis",
+      "relevance": "The primary driver of morbidity and mortality in untreated hemochromatosis; iron accumulation in hepatocytes over decades causes fibrosis, cirrhosis, and hepatocellular carcinoma."
+    },
+    {
+      "slug": "type-2-diabetes-m2011",
+      "name": "Type 2 Diabetes Mellitus",
+      "relevance": "Iron deposition in pancreatic beta cells causes insulin deficiency; diabetes in hemochromatosis often partially reverses with iron removal, distinguishing it from typical type 2 diabetes."
+    }
   ],
-
   "linkedTreatmentSlugs": [],
-
   "faqs": [
     {
       "question": "Is hemochromatosis curable?",
@@ -408,37 +497,61 @@
       "schemaEligible": true
     }
   ],
-
   "simpleName": "Hereditary Hemochromatosis (iron overload disorder)",
-
   "regionalNames": [
-    { "name": "Bronze diabetes", "region": "Historical (global)", "language": "en" },
-    { "name": "Iron overload disease", "region": "General usage", "language": "en" }
+    {
+      "name": "Bronze diabetes",
+      "region": "Historical (global)",
+      "language": "en"
+    },
+    {
+      "name": "Iron overload disease",
+      "region": "General usage",
+      "language": "en"
+    }
   ],
-
   "searchTags": [
-    "hemochromatosis", "iron overload", "HFE gene", "C282Y", "phlebotomy", "hereditary hemochromatosis",
-    "iron saturation", "ferritin elevated", "bronze diabetes", "liver iron", "HFE mutation",
-    "transferrin saturation", "hepatic iron index", "iron chelation"
+    "hemochromatosis",
+    "iron overload",
+    "HFE gene",
+    "C282Y",
+    "phlebotomy",
+    "hereditary hemochromatosis",
+    "iron saturation",
+    "ferritin elevated",
+    "bronze diabetes",
+    "liver iron",
+    "HFE mutation",
+    "transferrin saturation",
+    "hepatic iron index",
+    "iron chelation"
   ],
-
   "symptomKeywords": [
-    "fatigue joint pain", "bronze skin", "diabetes liver", "elevated ferritin",
-    "liver cirrhosis hemochromatosis", "iron overload symptoms", "MCP joint arthritis",
-    "hepatomegaly bronze skin", "hypogonadism hemochromatosis"
+    "fatigue joint pain",
+    "bronze skin",
+    "diabetes liver",
+    "elevated ferritin",
+    "liver cirrhosis hemochromatosis",
+    "iron overload symptoms",
+    "MCP joint arthritis",
+    "hepatomegaly bronze skin",
+    "hypogonadism hemochromatosis"
   ],
-
-  "metaTitle": "Hereditary Hemochromatosis: Symptoms, Causes & Treatment | aihealz",
-  "metaDescription": "Hereditary hemochromatosis: iron overload disorder causing liver cirrhosis, diabetes, heart problems, and bronze skin. Phlebotomy treatment and prognosis explained.",
-
+  "metaTitle": "Hereditary Hemochromatosis: Symptoms & Treatment",
+  "metaDescription": "Hereditary hemochromatosis: iron overload causing liver cirrhosis, diabetes, heart problems. Phlebotomy treatment and prognosis for patients.",
   "keywords": [
-    "hereditary hemochromatosis", "iron overload", "hemochromatosis symptoms",
-    "hemochromatosis treatment", "phlebotomy", "HFE gene", "C282Y",
-    "transferrin saturation", "iron overload liver", "bronze diabetes"
+    "hereditary hemochromatosis",
+    "iron overload",
+    "hemochromatosis symptoms",
+    "hemochromatosis treatment",
+    "phlebotomy",
+    "HFE gene",
+    "C282Y",
+    "transferrin saturation",
+    "iron overload liver",
+    "bronze diabetes"
   ],
-
   "lastReviewed": "2026-05-16",
-
   "images": [
     {
       "assetType": "feature",
@@ -465,7 +578,6 @@
       "height": 768
     }
   ],
-
   "sources": [
     {
       "title": "Kowdley KV, et al. ACG Clinical Guideline: Hereditary Hemochromatosis. American Journal of Gastroenterology. 2022;117(4):598-617.",
